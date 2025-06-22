@@ -3,9 +3,9 @@
 /* harmony export (immutable) */
 export default handleAction;
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_0_invariant__ from "external/invariant-crWv";
+import * as __WEBPACK_IMPORTED_MODULE_0_invariant__ from "invariant";
 /* harmony import */
-import __WEBPACK_IMPORTED_MODULE_0_invariant___default from "external/invariant-crWv";
+import __WEBPACK_IMPORTED_MODULE_0_invariant___default from "invariant";
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_1__utils_isFunction__ from "./utils/isFunction-mYNI";
 /* harmony import */

@@ -38,7 +38,11 @@ async function main(): Promise<void> {
         "just/curry/it": "just-curry-it",
         "intl/": "intl",
         "axios": "axios",
-        "shortid": "shortid"
+        "shortid": "shortid",
+        "redux/index": "redux",
+        "classnames": "classnames",
+        "build/three/module/js": "three",
+        "invariant": "invariant"
     }
     Object.assign(modules, await loadModulesFromFile(
         path.resolve(distPath, "commons.45126324b4177c062c0e.js")
@@ -68,7 +72,7 @@ function loadModulesFromAST(AST: Node): Modules {
     traverse(AST, {
         ObjectProperty(path: NodePath<ObjectProperty>): void {
             const key: NodePath = path.get("key")
-            if (!key.isStringLiteral()) {
+            if (!key.isStringLiteral() && !key.isNumericLiteral()) {
                 return
             }
             const value: NodePath = path.get("value")
@@ -82,7 +86,7 @@ function loadModulesFromAST(AST: Node): Modules {
             )) {
                 return
             }
-            modules[key.node.value] = loadModuleFromNodePath(key.node.value, value.get("body"))
+            modules[String(key.node.value)] = loadModuleFromNodePath(String(key.node.value), value.get("body"))
         }
     })
     return modules
@@ -153,7 +157,7 @@ function parseModulesImport(modules: Modules): void {
                 }
                 const importedModuleKey: NodePath = path.get("arguments")[0]!
                 if (
-                    !importedModuleKey.isNumberLiteralTypeAnnotation() &&
+                    !importedModuleKey.isNumericLiteral() &&
                     !importedModuleKey.isStringLiteral()
                 ) {
                     return
@@ -179,7 +183,7 @@ function setModulesPath(modules: Modules): void {
                 .filter(Boolean)
         }
     }
-    modules["qMEF"]!.path = ["index"]
+    modules["0"]!.path = ["index"]
 }
 
 
@@ -499,7 +503,7 @@ function transformModulesImport(modules: Modules): void {
                 }
                 const importedModuleKey: NodePath = path.get("arguments")[0]!
                 if (
-                    !importedModuleKey.isNumberLiteralTypeAnnotation() &&
+                    !importedModuleKey.isNumericLiteral() &&
                     !importedModuleKey.isStringLiteral()
                 ) {
                     return

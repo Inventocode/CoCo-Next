@@ -7,9 +7,9 @@ import * as __WEBPACK_IMPORTED_MODULE_0_react__ from "react";
 /* harmony import */
 import __WEBPACK_IMPORTED_MODULE_0_react___default from "react";
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_1_classnames__ from "external/classnames-HW6M";
+import * as __WEBPACK_IMPORTED_MODULE_1_classnames__ from "classnames";
 /* harmony import */
-import __WEBPACK_IMPORTED_MODULE_1_classnames___default from "external/classnames-HW6M";
+import __WEBPACK_IMPORTED_MODULE_1_classnames___default from "classnames";
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_2_antd__ from "antd";
 /* harmony import */

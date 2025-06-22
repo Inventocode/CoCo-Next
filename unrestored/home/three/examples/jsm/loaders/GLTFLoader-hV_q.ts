@@ -3,7 +3,7 @@
 /* harmony export (binding) */
 export { GLTFLoader };
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__ from "external/build/three/module/js-Ml+6";
+import * as __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__ from "three";
 var GLTFLoader = function () {
   function GLTFLoader(manager) {
     __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__.Loader.call(this, manager);

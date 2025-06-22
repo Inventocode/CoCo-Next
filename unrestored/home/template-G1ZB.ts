@@ -19,9 +19,9 @@ import * as __WEBPACK_IMPORTED_MODULE_3__crc_catui2_dist_components_application_
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_4_antd__ from "antd";
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_5_classnames__ from "external/classnames-HW6M";
+import * as __WEBPACK_IMPORTED_MODULE_5_classnames__ from "classnames";
 /* harmony import */
-import __WEBPACK_IMPORTED_MODULE_5_classnames___default from "external/classnames-HW6M";
+import __WEBPACK_IMPORTED_MODULE_5_classnames___default from "classnames";
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_6__IconFont__ from "./IconFont-zVV7";
 /* harmony import */

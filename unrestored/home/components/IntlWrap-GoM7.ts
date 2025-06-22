@@ -13,7 +13,7 @@ import __WEBPACK_IMPORTED_MODULE_1_react___default from "react";
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_2_react_redux__ from "react";
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_3_redux__ from "external/redux/index-2KeS";
+import * as __WEBPACK_IMPORTED_MODULE_3_redux__ from "redux";
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_4_react_intl__ from "react";
 /* harmony import */

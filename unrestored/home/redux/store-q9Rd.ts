@@ -7,7 +7,7 @@ import * as __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator__ from "@babel
 /* harmony import */
 import __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default from "@babel/runtime/regenerator";
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_1_redux__ from "external/redux/index-2KeS";
+import * as __WEBPACK_IMPORTED_MODULE_1_redux__ from "redux";
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_2_redux_saga__ from "../redux/saga-igqX";
 /* harmony import */

@@ -4,7 +4,7 @@
 export { OrbitControls };
 /* unused harmony export MapControls */
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__ from "external/build/three/module/js-Ml+6"; // This set of controls performs orbiting, dollying (zooming), and panning.
+import * as __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__ from "three"; // This set of controls performs orbiting, dollying (zooming), and panning.
 // Unlike TrackballControls, it maintains the "up" direction object.up (+Y by default).
 //
 //    Orbit - left mouse / touch: one-finger move
