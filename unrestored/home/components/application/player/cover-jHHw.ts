@@ -1,0 +1,61 @@
+"use strict";
+
+/* unused harmony export PlayerCover */
+/* harmony import */
+import * as __WEBPACK_IMPORTED_MODULE_0_react__ from "react";
+/* harmony import */
+import __WEBPACK_IMPORTED_MODULE_0_react___default from "react";
+/* harmony import */
+import * as __WEBPACK_IMPORTED_MODULE_1__style_module_css__ from "../../../style/module/css-fR+1";
+/* harmony import */
+import __WEBPACK_IMPORTED_MODULE_1__style_module_css___default from "../../../style/module/css-fR+1";
+var PlayerCover = function PlayerCover(props) {
+  var children = props.children,
+    imgSrc = props.imgSrc,
+    onPlayBtnClick = props.onPlayBtnClick,
+    onSignInBtnClick = props.onSignInBtnClick,
+    userInfo = props.userInfo,
+    _props$signInBtnText = props.signInBtnText,
+    signInBtnText = _props$signInBtnText === void 0 ? '立即登录' : _props$signInBtnText,
+    _props$signInTipText = props.signInTipText,
+    signInTipText = _props$signInTipText === void 0 ? '你还未登录，登录后体验更棒哦～' : _props$signInTipText,
+    _props$playBtnTipText = props.playBtnTipText,
+    playBtnTipText = _props$playBtnTipText === void 0 ? '' : _props$playBtnTipText,
+    _props$showSignInBtn = props.showSignInBtn,
+    showSignInBtn = _props$showSignInBtn === void 0 ? true : _props$showSignInBtn,
+    _props$showPlayBtn = props.showPlayBtn,
+    showPlayBtn = _props$showPlayBtn === void 0 ? true : _props$showPlayBtn,
+    _props$showUserInfo = props.showUserInfo,
+    showUserInfo = _props$showUserInfo === void 0 ? true : _props$showUserInfo,
+    style = props.style;
+  var Style = Object.assign({
+    backgroundImage: "url(".concat(imgSrc, ")")
+  }, style);
+  return /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react___default.createElement("div", {
+    className: "CUI-player-cover-container",
+    style: Style
+  }, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react___default.createElement("div", {
+    className: "CUI-player-cover-mask"
+  }, showPlayBtn && /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react___default.createElement(__WEBPACK_IMPORTED_MODULE_0_react___default.Fragment, null, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react___default.createElement("div", {
+    className: "CUI-player-cover-play-btn",
+    onClick: onPlayBtnClick
+  }, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react___default.createElement("img", {
+    src: require("../../../unnamed-D4iX")
+  })), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react___default.createElement("div", {
+    className: "CUI-player-cover-play-btn-text"
+  }, playBtnTipText)), children, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react___default.createElement("div", {
+    className: "CUI-player-cover-user-info-bar"
+  }, userInfo ? showUserInfo && /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react___default.createElement("div", {
+    className: "CUI-player-cover-user-info"
+  }, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react___default.createElement("img", {
+    className: "CUI-player-cover-avatar",
+    src: userInfo.avatar
+  }), " ", userInfo.nickname) : showSignInBtn && /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react___default.createElement(__WEBPACK_IMPORTED_MODULE_0_react___default.Fragment, null, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react___default.createElement("div", {
+    className: "CUI-player-cover-sign-in-tip"
+  }, signInTipText), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react___default.createElement("div", {
+    className: "CUI-player-cover-sign-in-btn",
+    onClick: onSignInBtnClick
+  }, signInBtnText)))));
+};
+
+/***/

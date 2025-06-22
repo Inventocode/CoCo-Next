@@ -1,0 +1,41 @@
+{
+  "name": "coco-source-code-plan",
+  "version": "1.21.7",
+  "description": "还原 CoCo 编辑器、CoCo Player 等的代码。",
+  "private": true,
+  "scripts": {
+    "unpack:home": "npm run build:scripts && node ./dist/scripts/unpack-home.js",
+    "build:scripts": "tsc -p tsconfig.scripts.json"
+  },
+  "devDependencies": {
+    "@babel/generator": "^7.0.0",
+    "@babel/parser": "^7.0.0",
+    "@babel/traverse": "^7.0.0",
+    "@babel/types": "^7.0.0",
+    "@types/babel__generator": "^7.0.0",
+    "@types/babel__traverse": "^7.0.0",
+    "@types/intl": "^1.0.0",
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.0.0",
+    "@types/to-camel-case": "^1.0.0",
+    "@types/video-react": "^0.15.0",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^6.0.0",
+    "@ant-design/react-slick": "^1.0.0",
+    "@babel/runtime": "^7.0.0",
+    "antd": "^5.0.0",
+    "axios": "^1.0.0",
+    "babel-plugin-react-css-modules": "^5.0.0",
+    "babel-polyfill": "^6.0.0",
+    "intl": "^1.0.0",
+    "just-curry-it": "^5.0.0",
+    "lodash": "^4.0.0",
+    "react": "^18.0.0",
+    "sa-sdk-javascript": "^1.0.0",
+    "shortid": "^2.0.0",
+    "to-camel-case": "^1.0.0",
+    "video-react": "^0.16.0"
+  }
+}
