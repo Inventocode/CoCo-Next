@@ -8,7 +8,7 @@ import * as __WEBPACK_IMPORTED_MODULE_1_react__ from "react";
 /* harmony import */
 import __WEBPACK_IMPORTED_MODULE_1_react___default from "react";
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_2_react_three_fiber__ from "react";
+import * as __WEBPACK_IMPORTED_MODULE_2_react_three_fiber__ from "@react-three/fiber";
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_3__Camera__ from "../../Camera-jG9v";
 /* harmony import */

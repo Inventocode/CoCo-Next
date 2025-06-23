@@ -9,7 +9,7 @@ import * as __WEBPACK_IMPORTED_MODULE_1_react__ from "react";
 /* harmony import */
 import __WEBPACK_IMPORTED_MODULE_1_react___default from "react";
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_2__IconFont__ from "./IconFont-zVV7";
+import * as __WEBPACK_IMPORTED_MODULE_2__IconFont__ from "./components/IconFont-zVV7";
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_3__style_scss__ from "./style/scss-1mrc";
 /* harmony import */

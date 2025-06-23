@@ -11,13 +11,13 @@ import * as __WEBPACK_IMPORTED_MODULE_1_classnames__ from "classnames";
 /* harmony import */
 import __WEBPACK_IMPORTED_MODULE_1_classnames___default from "classnames";
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_2_react_css_modules__ from "react";
+import * as __WEBPACK_IMPORTED_MODULE_2_react_css_modules__ from "react-css-modules";
 /* harmony import */
-import __WEBPACK_IMPORTED_MODULE_2_react_css_modules___default from "react";
+import __WEBPACK_IMPORTED_MODULE_2_react_css_modules___default from "react-css-modules";
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_3_react_router_dom__ from "react";
+import * as __WEBPACK_IMPORTED_MODULE_3_react_router_dom__ from "react-router-dom";
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_4__IconFont__ from "./IconFont-zVV7";
+import * as __WEBPACK_IMPORTED_MODULE_4__IconFont__ from "./components/IconFont-zVV7";
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_5__cfg__ from "./cfg-dpNx";
 var _createClass = function () {

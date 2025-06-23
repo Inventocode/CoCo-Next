@@ -1,7 +1,7 @@
 "use strict";
 
 /* harmony export (binding) */
-export { PlayerMenuItem as a };
+export { PlayerMenuItem };
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_0_babel_plugin_react_css_modules_dist_browser_getClassName__ from "babel-plugin-react-css-modules/dist/browser/getClassName";
 /* harmony import */

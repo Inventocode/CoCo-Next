@@ -3,7 +3,7 @@
 /* unused harmony export getWorkBcmUrl */
 /* unused harmony export getWorkBcmJson */
 /* harmony export (immutable) */
-export { workSaga as a };
+export { workSaga };
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator__ from "@babel/runtime/regenerator";
 /* harmony import */
@@ -21,7 +21,7 @@ import * as __WEBPACK_IMPORTED_MODULE_4_axios__ from "axios";
 /* harmony import */
 import __WEBPACK_IMPORTED_MODULE_4_axios___default from "axios";
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_5__actions__ from "./routes/Work/model/actions-HXaG";
+import * as __WEBPACK_IMPORTED_MODULE_5__actions__ from "./model/actions-HXaG";
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_6__redux_main_actions__ from "./redux/main/actions-_FmP";
 /* harmony import */
@@ -31,7 +31,7 @@ import * as __WEBPACK_IMPORTED_MODULE_8__utils__ from "./utils-jnIn";
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_9__utils_uploader__ from "./utils/uploader-inl5";
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_10__interface__ from "./routes/Work/model/interface-hC2z";
+import * as __WEBPACK_IMPORTED_MODULE_10__interface__ from "./model/interface-hC2z";
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_11__Home_model_actions__ from "./routes/Home/model/actions-twBc";
 var _marked = /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.mark(handleGetCreateWorkList),

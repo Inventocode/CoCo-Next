@@ -1,7 +1,7 @@
 "use strict";
 
 /* harmony export (binding) */
-export { RegisterContainer as a };
+export { RegisterContainer as RegisterPageContainer };
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__ from "@babel/runtime/helpers/esm/asyncToGenerator";
 /* harmony import */

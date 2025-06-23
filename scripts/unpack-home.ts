@@ -3,7 +3,7 @@ import { promises as fs } from "fs"
 import { parse } from "@babel/parser"
 import traverse, { NodePath } from "@babel/traverse"
 import generate from "@babel/generator"
-import type { BlockStatement, CallExpression, Comment, Expression, ExpressionStatement, File, LVal, MemberExpression, Node, ObjectProperty, OptionalMemberExpression, PrivateName, VariableDeclaration } from "@babel/types"
+import type { BlockStatement, CallExpression, Comment, Expression, ExpressionStatement, File, Identifier, LVal, MemberExpression, Node, ObjectProperty, OptionalMemberExpression, PrivateName, Statement, VariableDeclaration } from "@babel/types"
 
 interface Module {
     key: string
@@ -11,46 +11,66 @@ interface Module {
     external?: string | null | undefined
     AST: File
     hasJSX: boolean
-    importedModules: Modules
+    dependency: Modules
+    reference: Modules
     importsNameMap: Record<string, string>
+    importsNameToModuleMap: Record<string, Module>
     exportsNameMap: Record<string, string>
 }
 
 type Modules = Record<string, Module>
 
-type Externals = Record<string, string>
+type Externals = Map<RegExp, string>
 
 async function main(): Promise<void> {
     const distPath: string = path.resolve("public", "creation.codemao.cn", "coco", "home", "dist")
     const modules: Modules = {}
-    const externals: Externals = {
-        "react/": "react",
-        "lodash/": "lodash",
-        "ant/design/icons/": "@ant-design/icons",
-        "ant/design/react/": "@ant-design/react-slick",
-        "antd/": "antd",
-        "babel/runtime/": "@babel/runtime/*",
-        "babel/plugin/react/css/modules/": "babel-plugin-react-css-modules/*",
-        "babel/polyfill": "babel-polyfill",
-        "video/react": "video-react",
-        "to/camel/case": "to-camel-case",
-        "sa/sdk/javascript": "sa-sdk-javascript",
-        "just/curry/it": "just-curry-it",
-        "intl/": "intl",
-        "axios": "axios",
-        "shortid": "shortid",
-        "redux/index": "redux",
-        "classnames": "classnames",
-        "build/three/module/js": "three",
-        "invariant": "invariant"
-    }
+    const externals: Externals = new Map([
+        [/^react\/index$/, "react"],
+        [/^react\/dom$/, "react-dom"],
+        [/^react\/redux$/, "react-redux"],
+        [/^react\/intl\/index$/, "react-intl"],
+        [/^react\/draggable$/, "react-draggable"],
+        [/^react\/three\/fiber$/, "@react-three/fiber"],
+        [/^react\/router\/index$/, "react-router"],
+        [/^react\/router\/dom$/, "react-router-dom"],
+        [/^react\/loadable$/, "react-loadable"],
+        [/^react\/css\/modules$/, "react-css-modules"],
+        [/^lodash\/.*$/, "lodash"],
+        [/^ant\/design\/icons\/.*$/, "@ant-design/icons"],
+        [/^ant\/design\/react\/.*$/, "@ant-design/react-slick"],
+        [/^antd\/.*$/, "antd"],
+        [/^babel\/runtime\//, "@babel/runtime/"],
+        [/^babel\/plugin\/react\/css\/modules\//, "babel-plugin-react-css-modules/"],
+        [/^babel\/polyfill.*$/, "babel-polyfill"],
+        [/^video\/react$/, "video-react"],
+        [/^to\/camel\/case$/, "to-camel-case"],
+        [/^sa\/sdk\/javascript$/, "sa-sdk-javascript"],
+        [/^just\/curry\/it$/, "just-curry-it"],
+        [/^intl\/.*$/, "intl"],
+        [/^axios$/, "axios"],
+        [/^shortid$/, "shortid"],
+        [/^redux\/index$/, "redux"],
+        [/^classnames$/, "classnames"],
+        [/^build\/three\/module\/js$/, "three"],
+        [/^invariant$/, "invariant"]
+    ])
     Object.assign(modules, await loadModulesFromFile(
         path.resolve(distPath, "commons.45126324b4177c062c0e.js")
     ))
     Object.assign(modules, await loadModulesFromFile(
         path.resolve(distPath, "coco.e05e13740860acc49eec.js")
     ))
-    parseModulesImport(modules)
+    Object.assign(modules, await loadModulesFromFile(
+        path.resolve(distPath, "work.f8567516d16b8c00ab38.js")
+    ))
+    Object.assign(modules, await loadModulesFromFile(
+        path.resolve(distPath, "1.035cad6653e8655c2224.js")
+    ))
+    Object.assign(modules, await loadModulesFromFile(
+        path.resolve(distPath, "2.33ab4423f02dd74059fb.js")
+    ))
+    buildModulesDependency(modules)
     setModulesPath(modules)
     const dirsPath: Set<string> = getAllDirsPath(modules)
     addIndexToModulesPath(modules, dirsPath)
@@ -107,22 +127,24 @@ function loadModuleFromNodePath(key: string, path: NodePath<BlockStatement>): Mo
             }
         },
         hasJSX: false,
-        importedModules: {},
+        dependency: {},
+        reference: {},
         importsNameMap: {},
+        importsNameToModuleMap: {},
         exportsNameMap: {}
     }
 }
 
-function parseModulesImport(modules: Modules): void {
-    console.log("parsing imports of modules")
+/**
+ * 构建模块的依赖关系
+ */
+function buildModulesDependency(modules: Modules): void {
+    console.log("building dependencies of modules")
     for (const module of Object.values(modules)) {
         function addImports(key: string): void {
-            const importedModule: Module | undefined = modules[key]
-            if (importedModule == null) {
-                console.warn(`module (key: ${key}) not found!`)
-                return
-            }
-            module.importedModules[key] = importedModule
+            const importedModule: Module | undefined = getModuleByKey(modules, key)
+            module.dependency[key] = importedModule
+            importedModule.reference[module.key] = module
         }
         traverse(module.AST, {
             VariableDeclaration(path: NodePath<VariableDeclaration>): void {
@@ -132,19 +154,96 @@ function parseModulesImport(modules: Modules): void {
                     return
                 }
                 for (const declaration of path.get("declarations")) {
-                    const id: NodePath = declaration.get("id")
-                    id.assertIdentifier()
-                    if (id.node.name.endsWith("_default")) {
+                    const localNameNodePath: NodePath = declaration.get("id")
+                    localNameNodePath.assertIdentifier()
+                    if (localNameNodePath.node.name.endsWith("_default")) {
                         continue
                     }
+                    const localName: string = localNameNodePath.node.name
                     const init: NodePath<Node | null | undefined> = declaration.get("init")
                     init.assertCallExpression()
                     for (const argument of init.get("arguments")) {
                         if (!argument.isStringLiteral()) {
                             continue
                         }
-                        module.importsNameMap[argument.node.value] = id.node.name
-                        addImports(argument.node.value)
+                        const importedModuleKey: string = argument.node.value
+                        module.importsNameMap[importedModuleKey] = localName
+                        addImports(importedModuleKey)
+                        const importedModule: Module = getModuleByKey(modules, importedModuleKey)
+                        traverse(module.AST, {
+                            MemberExpression(path: NodePath<MemberExpression>): void {
+                                if (!path.get("object").isIdentifier({
+                                    name: localName
+                                })) {
+                                    return
+                                }
+                                const property: NodePath<PrivateName | Expression> = path.get("property")
+                                if (!property.isStringLiteral()) {
+                                    return
+                                }
+                                const oldName: string = property.node.value
+                                const newName: string | undefined = property.node.trailingComments?.[0]?.value.trim()
+                                property.replaceWith({
+                                    type: "Identifier",
+                                    name: newName ?? oldName
+                                })
+                                path.node.computed = false
+                                if (newName == undefined) {
+                                    return
+                                }
+                                property.node.trailingComments = []
+                                Object.defineProperty(importedModule.exportsNameMap, oldName, {
+                                    value: newName,
+                                    writable: true,
+                                    enumerable: true,
+                                    configurable: true
+                                })
+                            },
+                            ExpressionStatement(path: NodePath<ExpressionStatement>): void {
+                                if (!path.node.leadingComments?.some((comment: Comment): boolean => {
+                                    return [
+                                        " harmony reexport (binding) ",
+                                        " harmony namespace reexport (by used) "
+                                    ].includes(comment.value)
+                                })) {
+                                    return
+                                }
+                                const reexportCallNodePath: NodePath<Expression> = path.get("expression")
+                                reexportCallNodePath.assertCallExpression()
+                                const args: NodePath[] = reexportCallNodePath.get("arguments")
+                                const exportedNameNodePath: NodePath = args[1]!
+                                exportedNameNodePath.assertStringLiteral()
+                                const exportedName: string = exportedNameNodePath.node.value
+                                const bindingFunctionNodePath: NodePath =  args[2]!
+                                bindingFunctionNodePath.assertFunctionExpression()
+                                const returnStatement: NodePath<Statement> = bindingFunctionNodePath.get("body.body")[0]!
+                                returnStatement.assertReturnStatement()
+                                const localNodePath: NodePath<Expression | null | undefined> = returnStatement.get("argument")
+                                localNodePath.assertMemberExpression()
+                                if ((localNodePath.node.object as Identifier).name != localName) {
+                                    return
+                                }
+                                const localItemNameNodePath: NodePath<Expression | PrivateName> = localNodePath.get("property")
+                                let localItemName: string = "unknown"
+                                if (localItemNameNodePath.isIdentifier()) {
+                                    localItemName = localItemNameNodePath.node.name
+                                } else if (localItemNameNodePath.isStringLiteral()) {
+                                    localItemName = localItemNameNodePath.node.value
+                                }
+                                if (!Object.hasOwn(importedModule.exportsNameMap, localItemName)) {
+                                    Object.defineProperty(importedModule.exportsNameMap, localItemName, {
+                                        get(): string | undefined {
+                                            return module.exportsNameMap[exportedName]
+                                        },
+                                        set(value: string): void {
+                                            module.exportsNameMap[exportedName] = value
+                                        },
+                                        configurable: true,
+                                        enumerable: true
+                                    })
+                                }
+                            }
+                        })
                     }
                 }
             },
@@ -172,11 +271,7 @@ function setModulesPath(modules: Modules): void {
     console.log("setting paths of modules")
     for (const module of Object.values(modules)) {
         for (const [key, name] of Object.entries(module.importsNameMap)) {
-            const importedModule: Module | undefined = modules[key]
-            if (importedModule == undefined) {
-                console.warn(`module (key: ${key}) not found!`)
-                continue
-            }
+            const importedModule: Module | undefined = getModuleByKey(modules, key)
             importedModule.path = name
                 .replace(/^__WEBPACK_IMPORTED_MODULE_[0-9]+_/, "")
                 .split("_")
@@ -219,15 +314,11 @@ function addIndexToModulesPath(modules: Modules, dirsPath: Set<string>): void {
  */
 function markExternals(modules: Modules, externals: Externals): void {
     console.log("marking externals")
-    for (const [externalPath, externalName] of Object.entries(externals)) {
+    for (const [externalTest, externalName] of externals.entries()) {
         for (const module of Object.values(modules)) {
-            if (module.path.join("/").startsWith(externalPath)) {
-                if (externalName.endsWith("*")) {
-                    module.external = module.path.join("/").replace(externalPath, externalName.slice(0, -1))
-                } else {
-                    module.external = externalName
-                }
-                for (const importedModule of Object.values(module.importedModules)) {
+            if (externalTest.test(module.path.join("/"))) {
+                module.external = module.path.join("/").replace(externalTest, externalName)
+                for (const importedModule of Object.values(module.dependency)) {
                     recursiveMarkExternal(importedModule)
                 }
             }
@@ -384,19 +475,20 @@ function recursiveMarkExternal(module: Module): void {
         return
     }
     module.external = "external/" + module.path.join("/") + "-" + module.key
-    for (const importedModule of Object.values(module.importedModules)) {
+    for (const importedModule of Object.values(module.dependency)) {
         recursiveMarkExternal(importedModule)
     }
 }
 
 /**
- * 将模块的导入转换为 ESModule 或 CommonJS 格式，并将它们链接到正确的位置
+ * 将模块的导入转换为 ESModule 或 CommonJS 格式，将它们链接到正确的位置，并构建导出映射
  */
 function transformModulesImport(modules: Modules): void {
     console.log("transforming imports of modules")
     for (const module of Object.values(modules)) {
         let importedModuleKey: string = ""
         traverse(module.AST, {
+            // ESModule 导入
             VariableDeclaration(path: NodePath<VariableDeclaration>): void {
                 if (!path.node.leadingComments?.some((comment: Comment): boolean => {
                     return comment.value == " harmony import "
@@ -405,8 +497,9 @@ function transformModulesImport(modules: Modules): void {
                 }
                 path.skip()
                 for (const declaration of path.get("declarations")) {
-                    const id: NodePath = declaration.get("id")
-                    id.assertIdentifier()
+                    const localNameNodePath: NodePath = declaration.get("id")
+                    localNameNodePath.assertIdentifier()
+                    const localName: string = localNameNodePath.node.name
                     const init: NodePath<Node | null | undefined> = declaration.get("init")
                     init.assertCallExpression()
                     for (const argument of init.get("arguments")) {
@@ -415,15 +508,19 @@ function transformModulesImport(modules: Modules): void {
                         }
                         importedModuleKey = argument.node.value
                     }
-                    const importedModule: Module | undefined = modules[importedModuleKey]
-                    const importPath: string = getImportPath(module, importedModuleKey, importedModule)
-                    if (id.node.name.endsWith("_default")) {
+                    if (importedModuleKey == "") {
+                        continue
+                    }
+                    const importedModule: Module = getModuleByKey(modules, importedModuleKey)
+                    const importPath: string = getImportPath(module, importedModule)
+                    module.importsNameToModuleMap[localName] = importedModule
+                    if (localName.endsWith("_default")) {
                         path.replaceWith({
                             type: "ImportDeclaration",
                             specifiers: [
                                 {
                                     type: "ImportDefaultSpecifier",
-                                    local: id.node
+                                    local: localNameNodePath.node
                                 }
                             ],
                             importKind: "value",
@@ -436,21 +533,21 @@ function transformModulesImport(modules: Modules): void {
                         traverse(module.AST, {
                             CallExpression(path: NodePath<CallExpression>): void {
                                 if (path.get("callee").isIdentifier({
-                                    name: id.node.name
+                                    name: localNameNodePath.node.name
                                 })) {
-                                    path.replaceWith(id.node)
+                                    path.replaceWith(localNameNodePath.node)
                                 }
                             },
                             MemberExpression(path: NodePath<MemberExpression>): void {
                                 if (
                                     path.get("object").isIdentifier({
-                                        name: id.node.name
+                                        name: localNameNodePath.node.name
                                     }) &&
                                     path.get("property").isIdentifier({
                                         name: "a"
                                     })
                                 ) {
-                                    path.replaceWith(id.node)
+                                    path.replaceWith(localNameNodePath.node)
                                 }
                             }
                         })
@@ -460,7 +557,7 @@ function transformModulesImport(modules: Modules): void {
                             specifiers: [
                                 {
                                     type: "ImportNamespaceSpecifier",
-                                    local: id.node
+                                    local: localNameNodePath.node
                                 }
                             ],
                             importKind: "value",
@@ -470,30 +567,64 @@ function transformModulesImport(modules: Modules): void {
                             },
                             assertions: []
                         })
-                        traverse(module.AST, {
-                            MemberExpression(path: NodePath<MemberExpression>): void {
-                                if (!path.get("object").isIdentifier({
-                                    name: id.node.name
-                                })) {
-                                    return
-                                }
-                                const property: NodePath<PrivateName | Expression> = path.get("property")
-                                if (!property.isStringLiteral()) {
-                                    return
-                                }
-                                const newName: string = property.node.trailingComments?.[0]?.value.trim() ?? property.node.value
-                                property.node.trailingComments = []
-                                importedModule!.exportsNameMap[property.node.value] = newName
-                                property.replaceWith({
+                    }
+                }
+            },
+            // 动态导入
+            MemberExpression(path: NodePath<MemberExpression>): void {
+                if (path.node.trailingComments?.some((comment: Comment): boolean => {
+                    return comment.value == " import() "
+                })) {
+                    const rootNodePath: NodePath = path!.parentPath!.parentPath!.parentPath!
+                    rootNodePath.assertCallExpression()
+                    const thenArgumentNodePath: NodePath = rootNodePath.get("arguments")[0]!
+                    thenArgumentNodePath.assertCallExpression()
+                    const importedModuleKeyNodePath: NodePath = thenArgumentNodePath.get("arguments")[1]!
+                    importedModuleKeyNodePath.assertStringLiteral()
+                    const importedModuleKey: string = importedModuleKeyNodePath.node.value
+                    try {
+                        const importedModule: Module = getModuleByKey(modules, importedModuleKey)
+                        rootNodePath.replaceWith({
+                            type: "CallExpression",
+                            callee: {
+                                type: "Import"
+                            },
+                            arguments: [{
+                                type: "StringLiteral",
+                                value: getImportPath(module, importedModule)
+                            }]
+                        })
+                    } catch (error) {
+                        rootNodePath.replaceWith({
+                            type: "CallExpression",
+                            callee: {
+                                type: "MemberExpression",
+                                object: {
                                     type: "Identifier",
-                                    name: newName
-                                })
-                                path.node.computed = false
-                            }
+                                    name: "Promise"
+                                },
+                                computed: false,
+                                property: {
+                                    type: "Identifier",
+                                    name: "reject"
+                                }
+                            },
+                            arguments: [{
+                                type: "NewExpression",
+                                callee: {
+                                    type: "Identifier",
+                                    name: "Error"
+                                },
+                                arguments: [{
+                                    type: "StringLiteral",
+                                    value: error instanceof Error ? error.message : JSON.stringify(error)
+                                }]
+                            }]
                         })
                     }
                 }
             },
+            // CommonJS 导入
             CallExpression(path: NodePath<CallExpression>): void {
                 const callee: NodePath = path.get("callee")
                 if (!callee.isIdentifier({
@@ -501,15 +632,16 @@ function transformModulesImport(modules: Modules): void {
                 })) {
                     return
                 }
-                const importedModuleKey: NodePath = path.get("arguments")[0]!
+                const importedModuleKeyNodePath: NodePath = path.get("arguments")[0]!
                 if (
-                    !importedModuleKey.isNumericLiteral() &&
-                    !importedModuleKey.isStringLiteral()
+                    !importedModuleKeyNodePath.isNumericLiteral() &&
+                    !importedModuleKeyNodePath.isStringLiteral()
                 ) {
                     return
                 }
-                const importedModule: Module | undefined = modules[importedModuleKey.node.value]
-                const importPath: string = getImportPath(module, String(importedModuleKey.node.value), importedModule)
+                const importedModuleKey: string = String(importedModuleKeyNodePath.node.value)
+                const importedModule: Module | undefined = getModuleByKey(modules, importedModuleKey)
+                const importPath: string = getImportPath(module, importedModule)
                 path.replaceWith({
                     type: "CallExpression",
                     callee: {
@@ -524,25 +656,6 @@ function transformModulesImport(modules: Modules): void {
             }
         })
     }
-}
-
-/**
- * 获取导入路径
- */
-function getImportPath(context: Module, key: string, imported?: Module): string {
-    if (imported == undefined) {
-        return key
-    }
-    if (imported.external != null) {
-        return imported.external
-    }
-    let rootPath: string
-    if (context.path.length == 1) {
-        rootPath = "./"
-    } else {
-        rootPath = "../".repeat(context.path.length - 1)
-    }
-    return rootPath + imported.path.join("/") + "-" + imported.key
 }
 
 /**
@@ -594,6 +707,55 @@ function transformModulesExport(modules: Modules): void {
                     localName.assertIdentifier()
                     exported = exportedName.node.value
                     local = localName.node.name
+                } else if (path.node.leadingComments?.some((comment: Comment): boolean => {
+                    return [
+                        " harmony reexport (binding) ",
+                        " harmony namespace reexport (by used) "
+                    ].includes(comment.value)
+                })) {
+                    const reexportCallNodePath: NodePath<Expression> = path.get("expression")
+                    reexportCallNodePath.assertCallExpression()
+                    const args: NodePath[] = reexportCallNodePath.get("arguments")
+                    const exportedNameNodePath: NodePath = args[1]!
+                    exportedNameNodePath.assertStringLiteral()
+                    const exportedName: string = exportedNameNodePath.node.value
+                    const bindingFunctionNodePath: NodePath =  args[2]!
+                    bindingFunctionNodePath.assertFunctionExpression()
+                    const returnStatement: NodePath<Statement> = bindingFunctionNodePath.get("body.body")[0]!
+                    returnStatement.assertReturnStatement()
+                    const localNodePath: NodePath<Expression | null | undefined> = returnStatement.get("argument")
+                    localNodePath.assertMemberExpression()
+                    const localName: string = (localNodePath.node.object as Identifier).name
+                    const importedModule: Module | undefined = module.importsNameToModuleMap[localName]
+                    if (importedModule == undefined) {
+                        return
+                    }
+                    const localItemNameNodePath: NodePath<Expression | PrivateName> = localNodePath.get("property")
+                    let localItemName: string = "unknown"
+                    if (localItemNameNodePath.isIdentifier()) {
+                        localItemName = localItemNameNodePath.node.name
+                    } else if (localItemNameNodePath.isStringLiteral()) {
+                        localItemName = localItemNameNodePath.node.value
+                    }
+                    path.replaceWith({
+                        type: "ExportNamedDeclaration",
+                        specifiers: [{
+                            type: "ExportSpecifier",
+                            local: {
+                                type: "Identifier",
+                                name: importedModule.exportsNameMap[localItemName] ?? localItemName
+                            },
+                            exported: {
+                                type: "Identifier",
+                                name: module.exportsNameMap[exportedName] ?? exportedName
+                            }
+                        }],
+                        source: {
+                            type: "StringLiteral",
+                            value: getImportPath(module, importedModule)
+                        }
+                    })
+                    return
                 }
                 if (exported != null && local != null) {
                     exported = module.exportsNameMap[exported] ?? exported
@@ -627,6 +789,22 @@ function transformModulesExport(modules: Modules): void {
     }
 }
 
+/**
+ * 获取导入路径
+ */
+function getImportPath(context: Module, imported: Module): string {
+    if (imported.external != null) {
+        return imported.external
+    }
+    let rootPath: string
+    if (context.path.length == 1) {
+        rootPath = "./"
+    } else {
+        rootPath = "../".repeat(context.path.length - 1)
+    }
+    return rootPath + imported.path.join("/") + "-" + imported.key
+}
+
 async function writeModules(basePath: string, modules: Modules): Promise<void> {
     console.log(`writing modules to ${path.relative(process.cwd(), basePath)}`)
     await fs.rm(basePath, { recursive: true })
@@ -643,6 +821,14 @@ async function writeModules(basePath: string, modules: Modules): Promise<void> {
         })())
     }
     await Promise.all(promises)
+}
+
+function getModuleByKey(modules: Modules, key: string): Module {
+    const module: Module | undefined = modules[key]
+    if (module == undefined) {
+        throw new Error(`module (key: ${key}) not found!`)
+    }
+    return module
 }
 
 main()

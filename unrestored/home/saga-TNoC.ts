@@ -1,7 +1,7 @@
 "use strict";
 
 /* harmony export (immutable) */
-export { homeSaga as a };
+export { homeSaga };
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator__ from "@babel/runtime/regenerator";
 /* harmony import */

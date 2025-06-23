@@ -9,11 +9,11 @@ import * as __WEBPACK_IMPORTED_MODULE_1_react__ from "react";
 /* harmony import */
 import __WEBPACK_IMPORTED_MODULE_1_react___default from "react";
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_2_react_dom__ from "react";
+import * as __WEBPACK_IMPORTED_MODULE_2_react_dom__ from "react-dom";
 /* harmony import */
-import __WEBPACK_IMPORTED_MODULE_2_react_dom___default from "react";
+import __WEBPACK_IMPORTED_MODULE_2_react_dom___default from "react-dom";
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_3__IconFont__ from "../IconFont-zVV7";
+import * as __WEBPACK_IMPORTED_MODULE_3__IconFont__ from "../components/IconFont-zVV7";
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_4__style_scss__ from "../style/scss-A8ak";
 /* harmony import */

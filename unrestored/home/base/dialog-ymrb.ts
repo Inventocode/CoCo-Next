@@ -25,9 +25,9 @@ import * as __WEBPACK_IMPORTED_MODULE_8_react__ from "react";
 /* harmony import */
 import __WEBPACK_IMPORTED_MODULE_8_react___default from "react";
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_9_react_dom__ from "react";
+import * as __WEBPACK_IMPORTED_MODULE_9_react_dom__ from "react-dom";
 /* harmony import */
-import __WEBPACK_IMPORTED_MODULE_9_react_dom___default from "react";
+import __WEBPACK_IMPORTED_MODULE_9_react_dom___default from "react-dom";
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_10__button__ from "../button-sg+3";
 /* harmony import */

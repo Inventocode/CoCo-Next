@@ -1,7 +1,7 @@
 "use strict";
 
 /* harmony export (immutable) */
-export { update_state as a };
+export { update_state };
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_0_lodash_assign__ from "lodash";
 /* harmony import */

@@ -29,7 +29,7 @@ import __WEBPACK_IMPORTED_MODULE_8__style_module_css___default from "./style/mod
 var __HAS_IMPORT_ICON__ = false;
 (function () {
   if (!__HAS_IMPORT_ICON__ && typeof window !== 'undefined') {
-    __webpack_require__.e /* import() */(1).then(__webpack_require__.bind(null, "pzzL"));
+    import("./unnamed-pzzL");
     __HAS_IMPORT_ICON__ = true;
   }
 })();

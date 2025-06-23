@@ -9,11 +9,11 @@ import * as __WEBPACK_IMPORTED_MODULE_1_classnames__ from "classnames";
 /* harmony import */
 import __WEBPACK_IMPORTED_MODULE_1_classnames___default from "classnames";
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_2__IconFont__ from "./IconFont-zVV7";
+import * as __WEBPACK_IMPORTED_MODULE_2__IconFont__ from "../components/IconFont-zVV7";
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_3__style_scss__ from "./style/scss-IzpB";
+import * as __WEBPACK_IMPORTED_MODULE_3__style_scss__ from "../style/scss-IzpB";
 /* harmony import */
-import __WEBPACK_IMPORTED_MODULE_3__style_scss___default from "./style/scss-IzpB";
+import __WEBPACK_IMPORTED_MODULE_3__style_scss___default from "../style/scss-IzpB";
 var _slicedToArray = function () {
   function sliceIterator(arr, i) {
     var _arr = [];

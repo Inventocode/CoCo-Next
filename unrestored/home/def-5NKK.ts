@@ -1,7 +1,7 @@
 "use strict";
 
 /* harmony export (binding) */
-export { AuthType as b };
+export { AuthType };
 /* harmony export (binding) */
 export { AuthErrorType };
 var AuthType;

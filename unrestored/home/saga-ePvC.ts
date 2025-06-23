@@ -1,7 +1,7 @@
 "use strict";
 
 /* harmony export (immutable) */
-export { mainSaga as a };
+export { mainSaga };
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator__ from "@babel/runtime/regenerator";
 /* harmony import */
@@ -19,7 +19,7 @@ import * as __WEBPACK_IMPORTED_MODULE_4__actions__ from "./redux/main/actions-_F
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_5__utils__ from "./utils-jnIn";
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_6__routes_Work_model_actions__ from "./routes/Work/model/actions-HXaG";
+import * as __WEBPACK_IMPORTED_MODULE_6__routes_Work_model_actions__ from "./model/actions-HXaG";
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_7__routes_Home_model_actions__ from "./routes/Home/model/actions-twBc";
 var _marked = /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.mark(handleIsNewUser),

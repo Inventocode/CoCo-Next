@@ -24,9 +24,7 @@ import __WEBPACK_IMPORTED_MODULE_3__interface___default from "../interface-faTg"
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_4__saga__ from "../saga-ePvC";
 /* harmony reexport (binding) */
-__webpack_require__.d(__webpack_exports__, "a", function () {
-  return __WEBPACK_IMPORTED_MODULE_4__saga__.a;
-});
+export { mainSaga } from "../saga-ePvC";
 var _handleActions;
 function _defineProperty(obj, key, value) {
   if (key in obj) {

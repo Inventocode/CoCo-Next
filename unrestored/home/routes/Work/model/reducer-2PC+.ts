@@ -16,16 +16,14 @@ import * as __WEBPACK_IMPORTED_MODULE_0_redux_actions__ from "../../../redux/act
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_1__utils__ from "../../../utils-jnIn";
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_2__actions__ from "../../../routes/Work/model/actions-HXaG";
+import * as __WEBPACK_IMPORTED_MODULE_2__actions__ from "../../../model/actions-HXaG";
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_3__interface__ from "../../../routes/Work/model/interface-hC2z";
+import * as __WEBPACK_IMPORTED_MODULE_3__interface__ from "../../../model/interface-hC2z";
 /* unused harmony reexport WorkReducerState */
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_4__saga__ from "../../../saga-BmOz";
 /* harmony reexport (binding) */
-__webpack_require__.d(__webpack_exports__, "b", function () {
-  return __WEBPACK_IMPORTED_MODULE_4__saga__.a;
-});
+export { workSaga } from "../../../saga-BmOz";
 var _handleActions;
 function _defineProperty(obj, key, value) {
   if (key in obj) {

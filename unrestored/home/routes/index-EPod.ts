@@ -7,11 +7,11 @@ import * as __WEBPACK_IMPORTED_MODULE_0_react__ from "react";
 /* harmony import */
 import __WEBPACK_IMPORTED_MODULE_0_react___default from "react";
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_1_react_redux__ from "react";
+import * as __WEBPACK_IMPORTED_MODULE_1_react_redux__ from "react-redux";
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_2_redux__ from "redux";
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_3_react_router_dom__ from "react";
+import * as __WEBPACK_IMPORTED_MODULE_3_react_router_dom__ from "react-router-dom";
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_4__template__ from "../template-Y_qu";
 /* harmony import */

@@ -30,9 +30,9 @@ import __WEBPACK_IMPORTED_MODULE_8_react___default from "react";
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_9_re_resizable__ from "../../../../re/resizable-iV4c";
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_10_react_draggable__ from "react";
+import * as __WEBPACK_IMPORTED_MODULE_10_react_draggable__ from "react-draggable";
 /* harmony import */
-import __WEBPACK_IMPORTED_MODULE_10_react_draggable___default from "react";
+import __WEBPACK_IMPORTED_MODULE_10_react_draggable___default from "react-draggable";
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_11_video_react__ from "video-react";
 /* harmony import */

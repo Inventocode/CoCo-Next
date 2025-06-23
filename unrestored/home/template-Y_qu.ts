@@ -7,7 +7,7 @@ import * as __WEBPACK_IMPORTED_MODULE_0_react__ from "react";
 /* harmony import */
 import __WEBPACK_IMPORTED_MODULE_0_react___default from "react";
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_1_react_router_dom__ from "react";
+import * as __WEBPACK_IMPORTED_MODULE_1_react_router_dom__ from "react-router-dom";
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_2__components_Header__ from "./components/Header-sEiI";
 /* harmony import */
@@ -29,9 +29,9 @@ import * as __WEBPACK_IMPORTED_MODULE_10__components_ConfirmDialog__ from "./com
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_11__Home__ from "./Home-hCpk";
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_12_react_loadable__ from "react";
+import * as __WEBPACK_IMPORTED_MODULE_12_react_loadable__ from "react-loadable";
 /* harmony import */
-import __WEBPACK_IMPORTED_MODULE_12_react_loadable___default from "react";
+import __WEBPACK_IMPORTED_MODULE_12_react_loadable___default from "react-loadable";
 var _createClass = function () {
   function defineProperties(target, props) {
     for (var i = 0; i < props.length; i++) {
@@ -75,7 +75,7 @@ function _inherits(subClass, superClass) {
 }
 var Work = __WEBPACK_IMPORTED_MODULE_12_react_loadable__({
   loader: function loader() {
-    return __webpack_require__.e /* import() */(0).then(__webpack_require__.bind(null, "Pv6Z"));
+    return import("./unnamed-Pv6Z");
   },
   loading: function loading() {
     return __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {

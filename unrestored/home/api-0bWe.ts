@@ -1,19 +1,19 @@
 "use strict";
 
 /* harmony export (immutable) */
-export { handleLoginByPassword as b };
+export { handleLoginByPassword };
 /* harmony export (immutable) */
-export { handleLoginBySms as c };
+export { handleLoginBySms };
 /* harmony export (immutable) */
-export { handleSendSmsCode as g };
+export { handleSendSmsCode };
 /* harmony export (immutable) */
-export { handleRegister as d };
+export { handleRegister };
 /* harmony export (immutable) */
-export { handleResetPwdToken as f };
+export { handleResetPwdToken };
 /* harmony export (immutable) */
-export { handleResetPwd as e };
+export { handleResetPwd };
 /* harmony export (immutable) */
-export { handleBindPhone as a };
+export { handleBindPhone };
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__ from "@babel/runtime/helpers/esm/asyncToGenerator";
 /* harmony import */

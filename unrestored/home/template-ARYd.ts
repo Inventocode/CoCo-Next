@@ -21,9 +21,9 @@ import __WEBPACK_IMPORTED_MODULE_4__crc_catui2_dist_themes_violet_index_css___de
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_5__crc_catui2_dist_themes__ from "./crc/catui2/dist/themes/index-P22Q";
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_6_react_css_modules__ from "react";
+import * as __WEBPACK_IMPORTED_MODULE_6_react_css_modules__ from "react-css-modules";
 /* harmony import */
-import __WEBPACK_IMPORTED_MODULE_6_react_css_modules___default from "react";
+import __WEBPACK_IMPORTED_MODULE_6_react_css_modules___default from "react-css-modules";
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_7__cfg__ from "./cfg-dpNx";
 /* harmony import */

@@ -43,7 +43,7 @@ export { setDeleteWorkIsLoadedAction };
 /* harmony export (binding) */
 export { GET_DELETE_WORK_LIST_ACTION };
 /* harmony export (binding) */
-export { getDeleteWorkListAction as x };
+export { getDeleteWorkListAction };
 /* harmony export (binding) */
 export { SET_DELETE_WORK_LIST_ACTION };
 /* harmony export (binding) */
@@ -71,9 +71,9 @@ export { againDeleteWorkAction };
 /* harmony export (binding) */
 export { CLEAR_DELETED_WORK_ACTION };
 /* harmony export (binding) */
-export { clearDeletedWorkAction as t };
+export { clearDeletedWorkAction };
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_0_redux_actions__ from "../../../redux/actions-sTbe"; // 我创建的
+import * as __WEBPACK_IMPORTED_MODULE_0_redux_actions__ from "../redux/actions-sTbe"; // 我创建的
 var SET_CREATE_WORK_OFFSET_ACTION = 'work/set_create_work_offset';
 var setCreateWorkOffsetAction = Object(__WEBPACK_IMPORTED_MODULE_0_redux_actions__.createAction)(SET_CREATE_WORK_OFFSET_ACTION);
 var SET_CREATE_WORK_IS_LOADED_ACTION = 'work/set_create_work_is_loaded';

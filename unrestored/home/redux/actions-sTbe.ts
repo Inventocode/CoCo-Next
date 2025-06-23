@@ -14,15 +14,10 @@ import * as __WEBPACK_IMPORTED_MODULE_4__handleAction__ from "../handleAction-ex
 import * as __WEBPACK_IMPORTED_MODULE_5__handleActions__ from "../handleActions-TAv9";
 /* unused harmony reexport combineActions */
 /* harmony reexport (binding) */
-__webpack_require__.d(__webpack_exports__, "a", function () {
-  return __WEBPACK_IMPORTED_MODULE_1__createAction__.a;
-});
+export { default as createAction } from "../createAction-tQF+";
 /* unused harmony reexport createActions */
 /* unused harmony reexport createCurriedAction */
 /* unused harmony reexport handleAction */
 /* harmony reexport (binding) */
-__webpack_require__.d(__webpack_exports__, "b", function () {
-  return __WEBPACK_IMPORTED_MODULE_5__handleActions__.a;
-});
-
+export { handleActions } from "../handleActions-TAv9";
 /***/

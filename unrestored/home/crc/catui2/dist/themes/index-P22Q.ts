@@ -22,13 +22,9 @@ import * as __WEBPACK_IMPORTED_MODULE_3__supColor__ from "../../../../supColor-q
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_4__greyColor__ from "../../../../greyColor-UhM9";
 /* harmony namespace reexport (by used) */
-__webpack_require__.d(__webpack_exports__, "a", function () {
-  return __WEBPACK_IMPORTED_MODULE_1__defs__.a;
-});
+export { ColorEnum } from "../../../../defs-nq58";
 /* harmony namespace reexport (by used) */
-__webpack_require__.d(__webpack_exports__, "b", function () {
-  return __WEBPACK_IMPORTED_MODULE_1__defs__.c;
-});
+export { ThemeTypeEnum } from "../../../../defs-nq58";
 function setTheme(theme) {
   if (typeof window !== 'undefined') {
     document.body.setAttribute('data-theme', "".concat(__WEBPACK_IMPORTED_MODULE_1__defs__.THEME_PREFIX).concat(theme));

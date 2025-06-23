@@ -17,9 +17,7 @@ import * as __WEBPACK_IMPORTED_MODULE_3__internal_buffers__ from "../buffers-cXw
 import * as __WEBPACK_IMPORTED_MODULE_4__internal_sagaHelpers__ from "../internal/sagaHelpers-2iFZ";
 /* unused harmony reexport takeEvery */
 /* harmony reexport (binding) */
-__webpack_require__.d(__webpack_exports__, "b", function () {
-  return __WEBPACK_IMPORTED_MODULE_4__internal_sagaHelpers__.b;
-});
+export { takeLatest } from "../internal/sagaHelpers-2iFZ";
 /* unused harmony reexport throttle */
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_5__internal_utils__ from "../utils-Vr3j";

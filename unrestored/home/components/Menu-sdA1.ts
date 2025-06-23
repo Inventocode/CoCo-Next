@@ -5,9 +5,9 @@ export { Menu };
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_0_redux__ from "redux";
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_1_react_redux__ from "react";
+import * as __WEBPACK_IMPORTED_MODULE_1_react_redux__ from "react-redux";
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_2_react_router__ from "react";
+import * as __WEBPACK_IMPORTED_MODULE_2_react_router__ from "react-router";
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_3__template__ from "../template-My5k";
 /* harmony import */

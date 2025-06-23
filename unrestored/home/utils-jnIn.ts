@@ -14,9 +14,7 @@ import * as __WEBPACK_IMPORTED_MODULE_0__cfg__ from "./cfg-dpNx";
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_1__redux_utils__ from "./redux/utils-MrMw";
 /* harmony reexport (binding) */
-__webpack_require__.d(__webpack_exports__, "d", function () {
-  return __WEBPACK_IMPORTED_MODULE_1__redux_utils__.a;
-});
+export { update_state } from "./redux/utils-MrMw";
 function validate_password(input) {
   return /^[0-9a-zA-Z]{6,}$/.test(input);
 }

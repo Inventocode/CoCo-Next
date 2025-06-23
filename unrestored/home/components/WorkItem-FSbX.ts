@@ -3,11 +3,11 @@
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_0_redux__ from "redux";
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_1_react_redux__ from "react";
+import * as __WEBPACK_IMPORTED_MODULE_1_react_redux__ from "react-redux";
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_2__template__ from "../template-P9xH";
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_3__routes_Work_model_actions__ from "../routes/Work/model/actions-HXaG";
+import * as __WEBPACK_IMPORTED_MODULE_3__routes_Work_model_actions__ from "../model/actions-HXaG";
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_4__redux_main_actions__ from "../redux/main/actions-_FmP";
 var mapStateToProps = function mapStateToProps(state, ownProps) {

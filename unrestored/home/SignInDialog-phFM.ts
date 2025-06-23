@@ -1,7 +1,7 @@
 "use strict";
 
 /* harmony export (binding) */
-export { SignInDialog as a };
+export { SignInDialog };
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__ from "@babel/runtime/helpers/esm/slicedToArray";
 /* harmony import */

@@ -9,7 +9,7 @@ import * as __WEBPACK_IMPORTED_MODULE_1_react__ from "react";
 /* harmony import */
 import __WEBPACK_IMPORTED_MODULE_1_react___default from "react";
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_2_react_three_fiber__ from "react";
+import * as __WEBPACK_IMPORTED_MODULE_2_react_three_fiber__ from "@react-three/fiber";
 var Camera = function Camera(props) {
   var ref = Object(__WEBPACK_IMPORTED_MODULE_1_react__.useRef)();
   var _useThree = Object(__WEBPACK_IMPORTED_MODULE_2_react_three_fiber__.useThree)(),

@@ -13,19 +13,19 @@ import * as __WEBPACK_IMPORTED_MODULE_2_classnames__ from "classnames";
 /* harmony import */
 import __WEBPACK_IMPORTED_MODULE_2_classnames___default from "classnames";
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_3_react_css_modules__ from "react";
+import * as __WEBPACK_IMPORTED_MODULE_3_react_css_modules__ from "react-css-modules";
 /* harmony import */
-import __WEBPACK_IMPORTED_MODULE_3_react_css_modules___default from "react";
+import __WEBPACK_IMPORTED_MODULE_3_react_css_modules___default from "react-css-modules";
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_4__cfg__ from "./cfg-dpNx";
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_5__IconFont__ from "./IconFont-zVV7";
+import * as __WEBPACK_IMPORTED_MODULE_5__IconFont__ from "./components/IconFont-zVV7";
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_6__utils__ from "./utils-jnIn";
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_7__Input__ from "./Input-YqO9";
+import * as __WEBPACK_IMPORTED_MODULE_7__Input__ from "./components/Input-YqO9";
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_8__routes_Work_model_interface__ from "./routes/Work/model/interface-hC2z";
+import * as __WEBPACK_IMPORTED_MODULE_8__routes_Work_model_interface__ from "./model/interface-hC2z";
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_9__sensorsData__ from "./sensorsData-yI2H";
 var _createClass = function () {

@@ -1,7 +1,7 @@
 "use strict";
 
 /* harmony export (immutable) */
-export { handleActions as a };
+export { handleActions };
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_0_reduce_reducers__ from "./reduce/reducers-Hhcr";
 /* harmony import */

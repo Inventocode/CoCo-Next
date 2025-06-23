@@ -7,12 +7,12 @@
 /* unused harmony export handleGetUserInfo */
 /* unused harmony export checkAuthLogin */
 /* harmony export (immutable) */
-export { handleLoginByEmail as a };
+export { handleLoginByEmail };
 /* unused harmony export handleLogout */
 /* harmony export (immutable) */
-export { handleRegisterByEmail as b };
+export { handleRegisterByEmail };
 /* harmony export (immutable) */
-export { handleResetPwd as c };
+export { handleResetPwd };
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__ from "@babel/runtime/helpers/esm/asyncToGenerator";
 /* harmony import */

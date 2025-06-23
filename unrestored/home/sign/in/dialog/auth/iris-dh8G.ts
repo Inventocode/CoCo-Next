@@ -140,7 +140,7 @@ var AuthModule = /*#__PURE__*/function () {
             switch (_context2.prev = _context2.next) {
               case 0:
                 _context2.next = 2;
-                return __webpack_require__.e /* import() */(2).then(__webpack_require__.bind(null, "v9Ep"));
+                return import("../../../../unnamed-v9Ep");
               case 2:
                 module = _context2.sent;
                 this.iris = module;

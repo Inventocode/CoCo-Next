@@ -5,7 +5,7 @@ export { Header };
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_0_redux__ from "redux";
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_1_react_redux__ from "react";
+import * as __WEBPACK_IMPORTED_MODULE_1_react_redux__ from "react-redux";
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_2__template__ from "../template-G1ZB";
 /* harmony import */

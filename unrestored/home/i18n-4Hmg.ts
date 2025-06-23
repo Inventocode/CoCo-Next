@@ -4,15 +4,15 @@
 /* harmony export (binding) */
 export { language_list };
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_0_react_intl__ from "react";
+import * as __WEBPACK_IMPORTED_MODULE_0_react_intl__ from "react-intl";
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_1_react_intl_locale_data_en__ from "react";
+import * as __WEBPACK_IMPORTED_MODULE_1_react_intl_locale_data_en__ from "./react/intl/locale/data/en-TCl6";
 /* harmony import */
-import __WEBPACK_IMPORTED_MODULE_1_react_intl_locale_data_en___default from "react";
+import __WEBPACK_IMPORTED_MODULE_1_react_intl_locale_data_en___default from "./react/intl/locale/data/en-TCl6";
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_2_react_intl_locale_data_zh__ from "react";
+import * as __WEBPACK_IMPORTED_MODULE_2_react_intl_locale_data_zh__ from "./react/intl/locale/data/zh-BDH0";
 /* harmony import */
-import __WEBPACK_IMPORTED_MODULE_2_react_intl_locale_data_zh___default from "react";
+import __WEBPACK_IMPORTED_MODULE_2_react_intl_locale_data_zh___default from "./react/intl/locale/data/zh-BDH0";
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_3__zh_CN__ from "./zh/CN-C38k";
 /* harmony import */

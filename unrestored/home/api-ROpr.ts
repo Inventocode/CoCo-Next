@@ -6,16 +6,16 @@
 /* unused harmony export getErrorMsgAndType */
 /* unused harmony export checkAuthLogin */
 /* harmony export (immutable) */
-export { handleLoginByEmail as b };
+export { handleLoginByEmail };
 /* unused harmony export handleLogout */
 /* harmony export (immutable) */
-export { handleResetPwd as c };
+export { handleResetPwd };
 /* harmony export (immutable) */
-export { sendEmail as e };
+export { sendEmail };
 /* harmony export (immutable) */
-export { checkRegisterEmail as a };
+export { checkRegisterEmail };
 /* harmony export (immutable) */
-export { register as d };
+export { register };
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__ from "@babel/runtime/helpers/esm/asyncToGenerator";
 /* harmony import */

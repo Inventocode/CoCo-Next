@@ -5,7 +5,7 @@
 export { take };
 /* unused harmony export takem */
 /* harmony export (immutable) */
-export { put as f };
+export { put };
 /* unused harmony export all */
 /* unused harmony export race */
 /* harmony export (immutable) */
@@ -19,7 +19,7 @@ export { fork };
 /* harmony export (immutable) */
 export { cancel };
 /* harmony export (immutable) */
-export { select as g };
+export { select };
 /* harmony export (immutable) */
 export { actionChannel };
 /* unused harmony export cancelled */

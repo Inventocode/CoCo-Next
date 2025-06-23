@@ -24,9 +24,7 @@ import __WEBPACK_IMPORTED_MODULE_3__interface___default from "../../../interface
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_4__saga__ from "../../../saga-TNoC";
 /* harmony reexport (binding) */
-__webpack_require__.d(__webpack_exports__, "b", function () {
-  return __WEBPACK_IMPORTED_MODULE_4__saga__.a;
-});
+export { homeSaga } from "../../../saga-TNoC";
 var _handleActions;
 function _defineProperty(obj, key, value) {
   if (key in obj) {

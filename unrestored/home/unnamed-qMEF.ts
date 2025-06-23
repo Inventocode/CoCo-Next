@@ -12,11 +12,11 @@ import * as __WEBPACK_IMPORTED_MODULE_1_react__ from "react";
 /* harmony import */
 import __WEBPACK_IMPORTED_MODULE_1_react___default from "react";
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_2_react_dom__ from "react";
+import * as __WEBPACK_IMPORTED_MODULE_2_react_dom__ from "react-dom";
 /* harmony import */
-import __WEBPACK_IMPORTED_MODULE_2_react_dom___default from "react";
+import __WEBPACK_IMPORTED_MODULE_2_react_dom___default from "react-dom";
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_3_react_redux__ from "react";
+import * as __WEBPACK_IMPORTED_MODULE_3_react_redux__ from "react-redux";
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_4__routes__ from "./routes/index-EPod";
 /* harmony import */

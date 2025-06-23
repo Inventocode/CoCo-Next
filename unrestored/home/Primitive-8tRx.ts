@@ -11,7 +11,7 @@ import * as __WEBPACK_IMPORTED_MODULE_2_react__ from "react";
 /* harmony import */
 import __WEBPACK_IMPORTED_MODULE_2_react___default from "react";
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_3_react_three_fiber__ from "react";
+import * as __WEBPACK_IMPORTED_MODULE_3_react_three_fiber__ from "@react-three/fiber";
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_4_three_examples_jsm_loaders_GLTFLoader__ from "./three/examples/jsm/loaders/GLTFLoader-hV_q";
 /* harmony import */
