@@ -18,7 +18,7 @@ import __WEBPACK_IMPORTED_MODULE_2_react_dom___default from "react-dom";
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_3_react_redux__ from "react-redux";
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_4__routes__ from "./routes/index-EPod";
+import * as __WEBPACK_IMPORTED_MODULE_4__routes__ from "./routes-EPod";
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_5__components_IntlWrap__ from "./components/IntlWrap-GoM7";
 /* harmony import */

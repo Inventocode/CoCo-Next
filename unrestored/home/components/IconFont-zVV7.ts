@@ -9,9 +9,9 @@ import * as __WEBPACK_IMPORTED_MODULE_1_classnames__ from "classnames";
 /* harmony import */
 import __WEBPACK_IMPORTED_MODULE_1_classnames___default from "classnames";
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_2__IconFont_scss__ from "../IconFont/scss-ULrM";
+import * as __WEBPACK_IMPORTED_MODULE_2__IconFont_scss__ from "./IconFont/scss-ULrM";
 /* harmony import */
-import __WEBPACK_IMPORTED_MODULE_2__IconFont_scss___default from "../IconFont/scss-ULrM";
+import __WEBPACK_IMPORTED_MODULE_2__IconFont_scss___default from "./IconFont/scss-ULrM";
 var IconFont = function IconFont(props) {
   var type = props.type,
     className = props.className,

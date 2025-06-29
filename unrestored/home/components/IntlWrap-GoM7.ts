@@ -17,7 +17,7 @@ import * as __WEBPACK_IMPORTED_MODULE_3_redux__ from "redux";
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_4_react_intl__ from "react-intl";
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_5__i18n__ from "../i18n-4Hmg";
+import * as __WEBPACK_IMPORTED_MODULE_5__i18n__ from "./i18n-4Hmg";
 var _createClass = function () {
   function defineProperties(target, props) {
     for (var i = 0; i < props.length; i++) {

@@ -15,7 +15,7 @@ import * as __WEBPACK_IMPORTED_MODULE_2_classnames__ from "classnames";
 /* harmony import */
 import __WEBPACK_IMPORTED_MODULE_2_classnames___default from "classnames";
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_3__model_interface__ from "./model/interface-hC2z";
+import * as __WEBPACK_IMPORTED_MODULE_3__model_interface__ from "./Work/model/interface-hC2z";
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_4__components_WorkItem__ from "./components/WorkItem-FSbX";
 /* harmony import */

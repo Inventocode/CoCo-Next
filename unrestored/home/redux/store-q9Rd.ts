@@ -9,15 +9,15 @@ import __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default from "@ba
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_1_redux__ from "redux";
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_2_redux_saga__ from "../redux/saga-igqX";
+import * as __WEBPACK_IMPORTED_MODULE_2_redux_saga__ from "redux-saga";
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_3_redux_saga_effects__ from "../redux/saga/effects-egdi";
+import * as __WEBPACK_IMPORTED_MODULE_3_redux_saga_effects__ from "redux-saga/effects";
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_4__routes_Home_model_reducer__ from "../routes/Home/model/reducer-eHP9";
+import * as __WEBPACK_IMPORTED_MODULE_4__routes_Home_model_reducer__ from "./routes/Home/model/reducer-eHP9";
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_5__routes_Work_model_reducer__ from "../routes/Work/model/reducer-2PC+";
+import * as __WEBPACK_IMPORTED_MODULE_5__routes_Work_model_reducer__ from "./routes/Work/model/reducer-2PC+";
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_6__main_reducer__ from "../main/reducer-KBfb";
+import * as __WEBPACK_IMPORTED_MODULE_6__main_reducer__ from "./main/reducer-KBfb";
 var _createClass = function () {
   function defineProperties(target, props) {
     for (var i = 0; i < props.length; i++) {

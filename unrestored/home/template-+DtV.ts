@@ -25,7 +25,7 @@ import * as __WEBPACK_IMPORTED_MODULE_6__components_WorkItem__ from "./component
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_7__components_IconFont__ from "./components/IconFont-zVV7";
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_8__Work_model_interface__ from "./model/interface-hC2z";
+import * as __WEBPACK_IMPORTED_MODULE_8__Work_model_interface__ from "./Work/model/interface-hC2z";
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_9__sensorsData__ from "./sensorsData-yI2H";
 var _createClass = function () {

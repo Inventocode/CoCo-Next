@@ -27,7 +27,7 @@ import * as __WEBPACK_IMPORTED_MODULE_9__components_CommonToast__ from "./compon
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_10__components_ConfirmDialog__ from "./components/ConfirmDialog-kwR3";
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_11__Home__ from "./Home-hCpk";
+import * as __WEBPACK_IMPORTED_MODULE_11__Home__ from "./Home/index-hCpk";
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_12_react_loadable__ from "react-loadable";
 /* harmony import */
@@ -75,7 +75,7 @@ function _inherits(subClass, superClass) {
 }
 var Work = __WEBPACK_IMPORTED_MODULE_12_react_loadable__({
   loader: function loader() {
-    return import("./unnamed-Pv6Z");
+    return import("./index-Pv6Z");
   },
   loading: function loading() {
     return __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {

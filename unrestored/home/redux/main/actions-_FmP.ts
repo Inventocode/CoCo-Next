@@ -40,7 +40,7 @@ export { SET_CONFIRM_DIALOG_INFO_ACTION };
 /* harmony export (binding) */
 export { setConfirmDialogInfoAction };
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_0_redux_actions__ from "../../redux/actions-sTbe";
+import * as __WEBPACK_IMPORTED_MODULE_0_redux_actions__ from "redux-actions";
 var ACTION_CHANGE_LANGUAGE = 'main/change_language';
 var changeLanguageAction = Object(__WEBPACK_IMPORTED_MODULE_0_redux_actions__.createAction)(ACTION_CHANGE_LANGUAGE);
 var SET_SIGN_DIALOG_VISIBLE_ACTION = 'main/set_sign_dialog_visible';

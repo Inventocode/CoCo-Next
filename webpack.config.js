@@ -15,7 +15,7 @@ const config = {
     },
     output: {
         path: path.resolve(__dirname, "dist"),
-        filename: "[name]/index.js"
+        filename: "static/scripts/[name].[fullhash].js"
     },
     devtool: "eval-source-map",
     module: {
@@ -32,9 +32,19 @@ const config = {
     plugins: [
         new webpack.ProgressPlugin(),
         new HtmlWebpackPlugin({
-            title: "CoCo - 让世界没有难做的APP",
-            filename: "[name]/index.html",
-            template: "src/home/index.html"
+            filename: "index.html",
+            template: "src/home/index.html",
+            chunks: ["home"]
+        }),
+        new HtmlWebpackPlugin({
+            filename: "home/index.html",
+            template: "src/home/index.html",
+            chunks: ["home"]
+        }),
+        new HtmlWebpackPlugin({
+            filename: "work/index.html",
+            template: "src/home/index.html",
+            chunks: ["home"]
         })
     ]
 }
