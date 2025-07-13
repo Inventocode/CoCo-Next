@@ -1,0 +1,1 @@
+module.exports = n.p + "static/media/sms.eaf81dc0.svg";

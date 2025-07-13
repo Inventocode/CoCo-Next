@@ -25,13 +25,16 @@ var _styleModuleImportMap = {
   }
 };
 var Slider = function Slider(props) {
-  var _props$width, _props$step;
-  var _useState = Object(__WEBPACK_IMPORTED_MODULE_2_react__.useState)(''),
-    _useState2 = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default)(_useState, 2),
-    state = _useState2[0],
-    setState = _useState2[1];
+  var _props$width;
+  var _props$step;
+  var _useState = Object(__WEBPACK_IMPORTED_MODULE_2_react__.useState)('');
+  var _useState2 = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default)(_useState, 2);
+  var state = _useState2[0];
+  var setState = _useState2[1];
   var handleChange = function handleChange(e) {
-    props.onChange && props.onChange(Number(e.target.value));
+    if (props.onChange) {
+      props.onChange(Number(e.target.value));
+    }
   };
   var handleMouseDown = function handleMouseDown() {
     return setState('sliding');
@@ -40,11 +43,11 @@ var Slider = function Slider(props) {
     return setState('');
   };
   var getPercentage = function getPercentage() {
-    var value = props.value,
-      _props$min = props.min,
-      min = _props$min === void 0 ? 0 : _props$min,
-      _props$max = props.max,
-      max = _props$max === void 0 ? 100 : _props$max;
+    var value = props.value;
+    var _props$min = props.min;
+    var min = _props$min === void 0 ? 0 : _props$min;
+    var _props$max = props.max;
+    var max = _props$max === void 0 ? 100 : _props$max;
     return (value - min) / (max - min) * 100;
   };
   var percentage = getPercentage();

@@ -78,31 +78,31 @@ var _styleModuleImportMap = {
     "text-second": "CUI-sign-in-dialog-text-second"
   }
 };
-var useState = __WEBPACK_IMPORTED_MODULE_4_react__.useState,
-  useEffect = __WEBPACK_IMPORTED_MODULE_4_react__.useEffect,
-  useCallback = __WEBPACK_IMPORTED_MODULE_4_react__.useCallback,
-  Fragment = __WEBPACK_IMPORTED_MODULE_4_react__.Fragment,
-  useRef = __WEBPACK_IMPORTED_MODULE_4_react__.useRef;
+var useState = __WEBPACK_IMPORTED_MODULE_4_react__.useState;
+var useEffect = __WEBPACK_IMPORTED_MODULE_4_react__.useEffect;
+var useCallback = __WEBPACK_IMPORTED_MODULE_4_react__.useCallback;
+var Fragment = __WEBPACK_IMPORTED_MODULE_4_react__.Fragment;
+var useRef = __WEBPACK_IMPORTED_MODULE_4_react__.useRef;
 var phoneInputEl;
 var codeInputEl;
 var VerifyPhoneComponent = function VerifyPhoneComponent(props) {
-  var smsTimeStamp = props.smsTimeStamp,
-    setSmsTimeStamp = props.setSmsTimeStamp,
-    isRequesting = props.isRequesting,
-    setIsRequesting = props.setIsRequesting,
-    onSuccess = props.onSuccess;
-  var _useState = useState(true),
-    _useState2 = Object(__WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default)(_useState, 2),
-    disableNext = _useState2[0],
-    setDisableNext = _useState2[1];
-  var _useState3 = useState(0),
-    _useState4 = Object(__WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default)(_useState3, 2),
-    smsCountDown = _useState4[0],
-    setSmsCountDown = _useState4[1];
-  var _useState5 = useState(undefined),
-    _useState6 = Object(__WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default)(_useState5, 2),
-    error = _useState6[0],
-    setError = _useState6[1];
+  var smsTimeStamp = props.smsTimeStamp;
+  var setSmsTimeStamp = props.setSmsTimeStamp;
+  var isRequesting = props.isRequesting;
+  var setIsRequesting = props.setIsRequesting;
+  var onSuccess = props.onSuccess;
+  var _useState = useState(true);
+  var _useState2 = Object(__WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default)(_useState, 2);
+  var disableNext = _useState2[0];
+  var setDisableNext = _useState2[1];
+  var _useState3 = useState(0);
+  var _useState4 = Object(__WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default)(_useState3, 2);
+  var smsCountDown = _useState4[0];
+  var setSmsCountDown = _useState4[1];
+  var _useState5 = useState(undefined);
+  var _useState6 = Object(__WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default)(_useState5, 2);
+  var error = _useState6[0];
+  var setError = _useState6[1];
   var isDestory = useRef(false);
   var isPhoneErr = useCallback(function () {
     return error && error.type === __WEBPACK_IMPORTED_MODULE_9__auth__.AuthErrorType.PHONE;
@@ -145,7 +145,9 @@ var VerifyPhoneComponent = function VerifyPhoneComponent(props) {
   }, [isPhoneErr, isSmsCodeErr, smsTimeStamp]);
   var onNextClick = /*#__PURE__*/function () {
     var _ref = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default)(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_3__babel_runtime_regenerator___default.mark(function _callee() {
-      var phone, code, e;
+      var phone;
+      var code;
+      var e;
       return __WEBPACK_IMPORTED_MODULE_3__babel_runtime_regenerator___default.wrap(function _callee$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
@@ -192,7 +194,9 @@ var VerifyPhoneComponent = function VerifyPhoneComponent(props) {
                 if (typeof e !== 'string') {
                   setError(e);
                 } else {
-                  onSuccess && onSuccess(e);
+                  if (onSuccess) {
+                    onSuccess(e);
+                  }
                 }
               }
             case 16:
@@ -214,7 +218,8 @@ var VerifyPhoneComponent = function VerifyPhoneComponent(props) {
   };
   var onGetCodeClick = /*#__PURE__*/function () {
     var _ref2 = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default)(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_3__babel_runtime_regenerator___default.mark(function _callee2() {
-      var phone, e;
+      var phone;
+      var e;
       return __WEBPACK_IMPORTED_MODULE_3__babel_runtime_regenerator___default.wrap(function _callee2$(_context2) {
         while (1) {
           switch (_context2.prev = _context2.next) {
@@ -281,7 +286,9 @@ var VerifyPhoneComponent = function VerifyPhoneComponent(props) {
     isError: isPhoneErr(),
     onChange: function onChange() {
       updateBindBtn();
-      isPhoneErr() && setError(undefined);
+      if (isPhoneErr()) {
+        setError(undefined);
+      }
     },
     label: Object(__WEBPACK_IMPORTED_MODULE_11__i18n__.getLanguage)('sign_in_dialog/placeholder/mobile_phone'),
     autoComplete: "on",
@@ -289,7 +296,9 @@ var VerifyPhoneComponent = function VerifyPhoneComponent(props) {
       phoneInputEl = el;
     },
     onBlur: function onBlur() {
-      props.reportMethod && props.reportMethod('用户信息-绑定手机号');
+      if (props.reportMethod) {
+        props.reportMethod('用户信息-绑定手机号');
+      }
     }
   }), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_4_react__.createElement("div", {
     className: "CUI-sign-in-dialog-input-error"
@@ -303,13 +312,17 @@ var VerifyPhoneComponent = function VerifyPhoneComponent(props) {
     isError: isSmsCodeErr(),
     onChange: function onChange() {
       updateBindBtn();
-      isSmsCodeErr() && setError(undefined);
+      if (isSmsCodeErr()) {
+        setError(undefined);
+      }
     },
     label: Object(__WEBPACK_IMPORTED_MODULE_11__i18n__.getLanguage)('sign_in_dialog/placeholder/code'),
     autoComplete: "off",
     maxLength: 10,
     getInputEl: function getInputEl(el) {
-      el && (codeInputEl = el);
+      if (el) {
+        codeInputEl = el;
+      }
     },
     iconsSuffix: renderGetCode()
   }), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_4_react__.createElement("div", {

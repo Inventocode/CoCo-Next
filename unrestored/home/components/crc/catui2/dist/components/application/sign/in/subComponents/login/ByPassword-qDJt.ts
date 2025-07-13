@@ -30,31 +30,31 @@ import * as __WEBPACK_IMPORTED_MODULE_9__style_module_css__ from "../../style.mo
 import __WEBPACK_IMPORTED_MODULE_9__style_module_css___default from "../../style.module.css-VPet";
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_10__agreement__ from "../register/agreement-q2lc";
-var useState = __WEBPACK_IMPORTED_MODULE_3_react__.useState,
-  useEffect = __WEBPACK_IMPORTED_MODULE_3_react__.useEffect,
-  useCallback = __WEBPACK_IMPORTED_MODULE_3_react__.useCallback,
-  Fragment = __WEBPACK_IMPORTED_MODULE_3_react__.Fragment,
-  useRef = __WEBPACK_IMPORTED_MODULE_3_react__.useRef;
+var useState = __WEBPACK_IMPORTED_MODULE_3_react__.useState;
+var useEffect = __WEBPACK_IMPORTED_MODULE_3_react__.useEffect;
+var useCallback = __WEBPACK_IMPORTED_MODULE_3_react__.useCallback;
+var Fragment = __WEBPACK_IMPORTED_MODULE_3_react__.Fragment;
+var useRef = __WEBPACK_IMPORTED_MODULE_3_react__.useRef;
 var phoneInputEl;
 var passwordInputEl;
 var clearPasswordInput;
 var ByPasswordComponent = function ByPasswordComponent(props) {
-  var isRequesting = props.isRequesting,
-    setIsRequesting = props.setIsRequesting,
-    handleAgreementChange = props.handleAgreementChange;
-  var _useState = useState(true),
-    _useState2 = Object(__WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default)(_useState, 2),
-    disableLogin = _useState2[0],
-    setDisableLogin = _useState2[1];
-  var _useState3 = useState(undefined),
-    _useState4 = Object(__WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default)(_useState3, 2),
-    error = _useState4[0],
-    setError = _useState4[1];
+  var isRequesting = props.isRequesting;
+  var setIsRequesting = props.setIsRequesting;
+  var handleAgreementChange = props.handleAgreementChange;
+  var _useState = useState(true);
+  var _useState2 = Object(__WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default)(_useState, 2);
+  var disableLogin = _useState2[0];
+  var setDisableLogin = _useState2[1];
+  var _useState3 = useState(undefined);
+  var _useState4 = Object(__WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default)(_useState3, 2);
+  var error = _useState4[0];
+  var setError = _useState4[1];
   var isDestory = useRef(false);
-  var _useState5 = useState(false),
-    _useState6 = Object(__WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default)(_useState5, 2),
-    agreementChecked = _useState6[0],
-    setAgreementChecked = _useState6[1];
+  var _useState5 = useState(false);
+  var _useState6 = Object(__WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default)(_useState5, 2);
+  var agreementChecked = _useState6[0];
+  var setAgreementChecked = _useState6[1];
   var isPhoneErr = useCallback(function () {
     return error && error.type === __WEBPACK_IMPORTED_MODULE_7__auth__.AuthErrorType.PHONE;
   }, [error]);
@@ -72,14 +72,18 @@ var ByPasswordComponent = function ByPasswordComponent(props) {
   });
   useEffect(function () {
     updateLoginBtn();
-    handleAgreementChange && handleAgreementChange(agreementChecked);
+    if (handleAgreementChange) {
+      handleAgreementChange(agreementChecked);
+    }
   }, [agreementChecked]);
   useEffect(function () {
     if (isPhoneErr()) {
       phoneInputEl.focus();
     }
     if (isPasswordErr() || error && error.msg === Object(__WEBPACK_IMPORTED_MODULE_8__i18n__.getLanguage)('sign_in_dialog/error/other/acc_or_pwd')) {
-      clearPasswordInput && clearPasswordInput();
+      if (clearPasswordInput) {
+        clearPasswordInput();
+      }
     }
   }, [error, isPasswordErr, isPhoneErr]);
   var getCaptchaFallback = function getCaptchaFallback() {
@@ -87,7 +91,9 @@ var ByPasswordComponent = function ByPasswordComponent(props) {
   };
   var onLoginClick = /*#__PURE__*/function () {
     var _ref = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default)(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_2__babel_runtime_regenerator___default.mark(function _callee() {
-      var username, password, result;
+      var username;
+      var password;
+      var result;
       return __WEBPACK_IMPORTED_MODULE_2__babel_runtime_regenerator___default.wrap(function _callee$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
@@ -132,18 +138,22 @@ var ByPasswordComponent = function ByPasswordComponent(props) {
               setError(result.error);
               throw result.error;
             case 19:
-              props.onPasswordLoginSuccess && props.onPasswordLoginSuccess(result.authInfo);
+              if (props.onPasswordLoginSuccess) {
+                props.onPasswordLoginSuccess(result.authInfo);
+              }
             case 20:
               _context.next = 25;
               break;
             case 22:
               _context.prev = 22;
               _context.t0 = _context["catch"](8);
-              props.onPasswordLoginFailure && props.onPasswordLoginFailure({
-                source: 'pwd-login',
-                isSuccess: false,
-                error: _context.t0
-              });
+              if (props.onPasswordLoginFailure) {
+                props.onPasswordLoginFailure({
+                  source: 'pwd-login',
+                  isSuccess: false,
+                  error: _context.t0
+                });
+              }
             case 25:
             case "end":
               return _context.stop();
@@ -171,7 +181,9 @@ var ByPasswordComponent = function ByPasswordComponent(props) {
     isError: isPhoneErr(),
     onChange: function onChange() {
       updateLoginBtn();
-      isPhoneErr() && setError(undefined);
+      if (isPhoneErr()) {
+        setError(undefined);
+      }
     },
     label: Object(__WEBPACK_IMPORTED_MODULE_8__i18n__.getLanguage)('sign_in_dialog/placeholder/username'),
     autoComplete: "on",
@@ -180,7 +192,9 @@ var ByPasswordComponent = function ByPasswordComponent(props) {
       phoneInputEl.focus();
     },
     onBlur: function onBlur() {
-      props.reportMethod && props.reportMethod('用户信息-输入账号');
+      if (props.reportMethod) {
+        props.reportMethod('用户信息-输入账号');
+      }
     }
   }), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_3_react__.createElement("div", {
     className: "CUI-sign-in-dialog-input-error"
@@ -195,7 +209,9 @@ var ByPasswordComponent = function ByPasswordComponent(props) {
     isError: isPasswordErr(),
     onChange: function onChange() {
       updateLoginBtn();
-      isPasswordErr() && passwordInputEl.value && setError(undefined);
+      if (isPasswordErr() && passwordInputEl.value) {
+        setError(undefined);
+      }
     },
     type: "password",
     label: Object(__WEBPACK_IMPORTED_MODULE_8__i18n__.getLanguage)('sign_in_dialog/placeholder/password'),
@@ -207,7 +223,9 @@ var ByPasswordComponent = function ByPasswordComponent(props) {
       return clearPasswordInput = fn;
     },
     onBlur: function onBlur() {
-      props.reportMethod && props.reportMethod('用户信息-输入账号密码');
+      if (props.reportMethod) {
+        props.reportMethod('用户信息-输入账号密码');
+      }
     }
   }), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_3_react__.createElement("div", {
     className: "CUI-sign-in-dialog-input-error"

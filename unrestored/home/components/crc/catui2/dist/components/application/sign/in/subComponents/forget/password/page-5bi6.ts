@@ -70,20 +70,20 @@ var _styleModuleImportMap = {
   }
 };
 var ForgetPasswordPageContainer = function ForgetPasswordPageContainer(props) {
-  var smsTimeStamp = props.smsTimeStamp,
-    setSmsTimeStamp = props.setSmsTimeStamp,
-    isRequesting = props.isRequesting,
-    setIsRequesting = props.setIsRequesting,
-    switchView = props.switchView,
-    reportMethod = props.reportMethod;
-  var _useState = Object(__WEBPACK_IMPORTED_MODULE_2_react__.useState)(undefined),
-    _useState2 = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default)(_useState, 2),
-    ticket = _useState2[0],
-    setTicket = _useState2[1];
-  var _useState3 = Object(__WEBPACK_IMPORTED_MODULE_2_react__.useState)(false),
-    _useState4 = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default)(_useState3, 2),
-    resetSuccess = _useState4[0],
-    setResetSuccess = _useState4[1];
+  var smsTimeStamp = props.smsTimeStamp;
+  var setSmsTimeStamp = props.setSmsTimeStamp;
+  var isRequesting = props.isRequesting;
+  var setIsRequesting = props.setIsRequesting;
+  var switchView = props.switchView;
+  var reportMethod = props.reportMethod;
+  var _useState = Object(__WEBPACK_IMPORTED_MODULE_2_react__.useState)(undefined);
+  var _useState2 = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default)(_useState, 2);
+  var ticket = _useState2[0];
+  var setTicket = _useState2[1];
+  var _useState3 = Object(__WEBPACK_IMPORTED_MODULE_2_react__.useState)(false);
+  var _useState4 = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default)(_useState3, 2);
+  var resetSuccess = _useState4[0];
+  var setResetSuccess = _useState4[1];
   return /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_2_react__.createElement(__WEBPACK_IMPORTED_MODULE_2_react__.Fragment, null, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_2_react__.createElement("div", {
     className: __WEBPACK_IMPORTED_MODULE_1_babel_plugin_react_css_modules_dist_browser_getClassName___default(resetSuccess ? 'fully-content' : 'content', _styleModuleImportMap, {
       "autoResolveMultipleImports": true,

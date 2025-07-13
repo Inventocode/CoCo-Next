@@ -1,0 +1,1 @@
+module.exports = "object" == typeof self ? self.FormData : window.FormData;

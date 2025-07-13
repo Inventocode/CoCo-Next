@@ -1,0 +1,1 @@
+module.exports = n.p + "static/media/disconnected.8f5ec4b8.svg";

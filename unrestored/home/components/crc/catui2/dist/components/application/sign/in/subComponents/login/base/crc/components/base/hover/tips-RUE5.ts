@@ -27,8 +27,8 @@ import __WEBPACK_IMPORTED_MODULE_8__index_css___default from "./index/css-+aGI";
 function _createSuper(Derived) {
   var hasNativeReflectConstruct = _isNativeReflectConstruct();
   return function _createSuperInternal() {
-    var Super = Object(__WEBPACK_IMPORTED_MODULE_5__babel_runtime_helpers_esm_getPrototypeOf__.default)(Derived),
-      result;
+    var Super = Object(__WEBPACK_IMPORTED_MODULE_5__babel_runtime_helpers_esm_getPrototypeOf__.default)(Derived);
+    var result;
     if (hasNativeReflectConstruct) {
       var NewTarget = Object(__WEBPACK_IMPORTED_MODULE_5__babel_runtime_helpers_esm_getPrototypeOf__.default)(this).constructor;
       result = Reflect.construct(Super, arguments, NewTarget);
@@ -39,9 +39,15 @@ function _createSuper(Derived) {
   };
 }
 function _isNativeReflectConstruct() {
-  if (typeof Reflect === "undefined" || !Reflect.construct) return false;
-  if (Reflect.construct.sham) return false;
-  if (typeof Proxy === "function") return true;
+  if (typeof Reflect === "undefined" || !Reflect.construct) {
+    return false;
+  }
+  if (Reflect.construct.sham) {
+    return false;
+  }
+  if (typeof Proxy === "function") {
+    return true;
+  }
   try {
     Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {}));
     return true;

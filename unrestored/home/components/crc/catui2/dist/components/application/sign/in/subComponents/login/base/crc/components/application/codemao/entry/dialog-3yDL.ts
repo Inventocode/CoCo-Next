@@ -17,14 +17,14 @@ import * as __WEBPACK_IMPORTED_MODULE_4__style_module_css__ from "./style.module
 /* harmony import */
 import __WEBPACK_IMPORTED_MODULE_4__style_module_css___default from "./style.module.css-mGwM";
 var EntryDialog = function EntryDialog(props) {
-  var children = props.children,
-    onClose = props.onClose,
-    onNextClick = props.onNextClick,
-    entryDialogText = props.entryDialogText;
-  var _useState = Object(__WEBPACK_IMPORTED_MODULE_1_react__.useState)(true),
-    _useState2 = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default)(_useState, 2),
-    show = _useState2[0],
-    setShow = _useState2[1];
+  var children = props.children;
+  var onClose = props.onClose;
+  var onNextClick = props.onNextClick;
+  var entryDialogText = props.entryDialogText;
+  var _useState = Object(__WEBPACK_IMPORTED_MODULE_1_react__.useState)(true);
+  var _useState2 = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default)(_useState, 2);
+  var show = _useState2[0];
+  var setShow = _useState2[1];
   return /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1_react___default.createElement(__WEBPACK_IMPORTED_MODULE_2__base_dialog__.Dialog, {
     show: show,
     closeBtn: true,

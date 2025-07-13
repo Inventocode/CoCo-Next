@@ -84,34 +84,34 @@ var _styleModuleImportMap = {
 var phoneInputEl;
 var passwordInputEl;
 var smsCodeInputEl;
-var useState = __WEBPACK_IMPORTED_MODULE_4_react__.useState,
-  useEffect = __WEBPACK_IMPORTED_MODULE_4_react__.useEffect,
-  useCallback = __WEBPACK_IMPORTED_MODULE_4_react__.useCallback,
-  useRef = __WEBPACK_IMPORTED_MODULE_4_react__.useRef;
+var useState = __WEBPACK_IMPORTED_MODULE_4_react__.useState;
+var useEffect = __WEBPACK_IMPORTED_MODULE_4_react__.useEffect;
+var useCallback = __WEBPACK_IMPORTED_MODULE_4_react__.useCallback;
+var useRef = __WEBPACK_IMPORTED_MODULE_4_react__.useRef;
 var RegisterContainer = function RegisterContainer(props) {
-  var isRequesting = props.isRequesting,
-    setIsRequesting = props.setIsRequesting,
-    smsTimeStamp = props.smsTimeStamp,
-    setSmsTimeStamp = props.setSmsTimeStamp,
-    switchView = props.switchView,
-    setResetSuccess = props.setResetSuccess;
-  var _useState = useState(true),
-    _useState2 = Object(__WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default)(_useState, 2),
-    disableRegister = _useState2[0],
-    setDisableRegister = _useState2[1];
-  var _useState3 = useState(0),
-    _useState4 = Object(__WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default)(_useState3, 2),
-    smsCountDown = _useState4[0],
-    setSmsCountDown = _useState4[1];
-  var _useState5 = useState(undefined),
-    _useState6 = Object(__WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default)(_useState5, 2),
-    error = _useState6[0],
-    setError = _useState6[1];
+  var isRequesting = props.isRequesting;
+  var setIsRequesting = props.setIsRequesting;
+  var smsTimeStamp = props.smsTimeStamp;
+  var setSmsTimeStamp = props.setSmsTimeStamp;
+  var switchView = props.switchView;
+  var setResetSuccess = props.setResetSuccess;
+  var _useState = useState(true);
+  var _useState2 = Object(__WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default)(_useState, 2);
+  var disableRegister = _useState2[0];
+  var setDisableRegister = _useState2[1];
+  var _useState3 = useState(0);
+  var _useState4 = Object(__WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default)(_useState3, 2);
+  var smsCountDown = _useState4[0];
+  var setSmsCountDown = _useState4[1];
+  var _useState5 = useState(undefined);
+  var _useState6 = Object(__WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default)(_useState5, 2);
+  var error = _useState6[0];
+  var setError = _useState6[1];
   var isDestory = useRef(false);
-  var _useState7 = useState(false),
-    _useState8 = Object(__WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default)(_useState7, 2),
-    agreementChecked = _useState8[0],
-    setAgreementChecked = _useState8[1];
+  var _useState7 = useState(false);
+  var _useState8 = Object(__WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default)(_useState7, 2);
+  var agreementChecked = _useState8[0];
+  var setAgreementChecked = _useState8[1];
   var isPhoneErr = useCallback(function () {
     return error && error.type === __WEBPACK_IMPORTED_MODULE_9__auth__.AuthErrorType.PHONE;
   }, [error]);
@@ -162,7 +162,10 @@ var RegisterContainer = function RegisterContainer(props) {
   };
   var onRegisterClick = /*#__PURE__*/function () {
     var _ref = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default)(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_3__babel_runtime_regenerator___default.mark(function _callee() {
-      var phone, code, password, result;
+      var phone;
+      var code;
+      var password;
+      var result;
       return __WEBPACK_IMPORTED_MODULE_3__babel_runtime_regenerator___default.wrap(function _callee$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
@@ -219,7 +222,9 @@ var RegisterContainer = function RegisterContainer(props) {
               setError(result.error);
               throw result.error;
             case 24:
-              props.onRegisterSuccess && props.onRegisterSuccess(result.authInfo);
+              if (props.onRegisterSuccess) {
+                props.onRegisterSuccess(result.authInfo);
+              }
               setResetSuccess(true);
             case 26:
               _context.next = 31;
@@ -227,11 +232,13 @@ var RegisterContainer = function RegisterContainer(props) {
             case 28:
               _context.prev = 28;
               _context.t0 = _context["catch"](13);
-              props.onRegisterFailure && props.onRegisterFailure({
-                source: 'register',
-                isSuccess: false,
-                error: _context.t0
-              });
+              if (props.onRegisterFailure) {
+                props.onRegisterFailure({
+                  source: 'register',
+                  isSuccess: false,
+                  error: _context.t0
+                });
+              }
             case 31:
             case "end":
               return _context.stop();
@@ -248,7 +255,8 @@ var RegisterContainer = function RegisterContainer(props) {
   };
   var onGetCodeClick = /*#__PURE__*/function () {
     var _ref2 = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default)(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_3__babel_runtime_regenerator___default.mark(function _callee2() {
-      var phone, e;
+      var phone;
+      var e;
       return __WEBPACK_IMPORTED_MODULE_3__babel_runtime_regenerator___default.wrap(function _callee2$(_context2) {
         while (1) {
           switch (_context2.prev = _context2.next) {
@@ -321,7 +329,9 @@ var RegisterContainer = function RegisterContainer(props) {
     isError: isPhoneErr(),
     onChange: function onChange() {
       updateRegisterBtn();
-      isPhoneErr() && setError(undefined);
+      if (isPhoneErr()) {
+        setError(undefined);
+      }
     },
     label: Object(__WEBPACK_IMPORTED_MODULE_11__i18n__.getLanguage)('sign_in_dialog/placeholder/mobile_phone'),
     autoComplete: "on",
@@ -329,7 +339,9 @@ var RegisterContainer = function RegisterContainer(props) {
       phoneInputEl = el;
     },
     onBlur: function onBlur() {
-      props.reportMethod && props.reportMethod('用户信息-注册手机号');
+      if (props.reportMethod) {
+        props.reportMethod('用户信息-注册手机号');
+      }
     }
   }), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_4_react__.createElement("div", {
     className: "CUI-sign-in-dialog-input-error"
@@ -347,7 +359,9 @@ var RegisterContainer = function RegisterContainer(props) {
     isError: isPasswordCodeErr(),
     onChange: function onChange() {
       updateRegisterBtn();
-      isPasswordCodeErr() && passwordInputEl.value && setError(undefined);
+      if (isPasswordCodeErr() && passwordInputEl.value) {
+        setError(undefined);
+      }
     },
     type: "password",
     label: Object(__WEBPACK_IMPORTED_MODULE_11__i18n__.getLanguage)('sign_in_dialog/placeholder/password_n_tip'),
@@ -362,7 +376,9 @@ var RegisterContainer = function RegisterContainer(props) {
           msg: Object(__WEBPACK_IMPORTED_MODULE_11__i18n__.getLanguage)('sign_in_dialog/error/password/format')
         });
       }
-      props.reportMethod && props.reportMethod('用户信息-注册设置密码');
+      if (props.reportMethod) {
+        props.reportMethod('用户信息-注册设置密码');
+      }
     }
   }), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_4_react__.createElement("div", {
     className: "CUI-sign-in-dialog-input-error"
@@ -376,17 +392,23 @@ var RegisterContainer = function RegisterContainer(props) {
     isError: isSmsCodeErr(),
     onChange: function onChange() {
       updateRegisterBtn();
-      isSmsCodeErr() && setError(undefined);
+      if (isSmsCodeErr()) {
+        setError(undefined);
+      }
     },
     label: Object(__WEBPACK_IMPORTED_MODULE_11__i18n__.getLanguage)('sign_in_dialog/placeholder/code'),
     autoComplete: "off",
     maxLength: 10,
     getInputEl: function getInputEl(el) {
-      el && (smsCodeInputEl = el);
+      if (el) {
+        smsCodeInputEl = el;
+      }
     },
     iconsSuffix: renderGetCode(),
     onBlur: function onBlur() {
-      props.reportMethod && props.reportMethod('用户信息-注册验证码');
+      if (props.reportMethod) {
+        props.reportMethod('用户信息-注册验证码');
+      }
     }
   }), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_4_react__.createElement("div", {
     className: "CUI-sign-in-dialog-input-error"

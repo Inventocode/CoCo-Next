@@ -1,0 +1,1 @@
+module.exports = JSON.parse('{"a":"1.22.0-0"}');

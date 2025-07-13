@@ -28,18 +28,18 @@ import * as __WEBPACK_IMPORTED_MODULE_8__style_module_css__ from "./style.module
 import __WEBPACK_IMPORTED_MODULE_8__style_module_css___default from "./style.module.css-SxYT";
 var isRequesting = false;
 var SignAgreementDialog = function SignAgreementDialog(props) {
-  var children = props.children,
-    onClose = props.onClose,
-    onSignSuccess = props.onSignSuccess,
-    onSignError = props.onSignError;
-  var _useState = Object(__WEBPACK_IMPORTED_MODULE_3_react__.useState)(false),
-    _useState2 = Object(__WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default)(_useState, 2),
-    isAgreed = _useState2[0],
-    setIsAgreed = _useState2[1];
-  var _useState3 = Object(__WEBPACK_IMPORTED_MODULE_3_react__.useState)(true),
-    _useState4 = Object(__WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default)(_useState3, 2),
-    show = _useState4[0],
-    setShow = _useState4[1];
+  var children = props.children;
+  var onClose = props.onClose;
+  var onSignSuccess = props.onSignSuccess;
+  var onSignError = props.onSignError;
+  var _useState = Object(__WEBPACK_IMPORTED_MODULE_3_react__.useState)(false);
+  var _useState2 = Object(__WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default)(_useState, 2);
+  var isAgreed = _useState2[0];
+  var setIsAgreed = _useState2[1];
+  var _useState3 = Object(__WEBPACK_IMPORTED_MODULE_3_react__.useState)(true);
+  var _useState4 = Object(__WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default)(_useState3, 2);
+  var show = _useState4[0];
+  var setShow = _useState4[1];
   return /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_3_react___default.createElement(__WEBPACK_IMPORTED_MODULE_4__base_dialog__.Dialog, {
     show: show,
     closeBtn: {
@@ -115,7 +115,9 @@ var SignAgreementDialog = function SignAgreementDialog(props) {
               _context.t0 = _context["catch"](0);
               console.error(_context.t0);
               isRequesting = false;
-              onSignError && onSignError(_context.t0);
+              if (onSignError) {
+                onSignError(_context.t0);
+              }
             case 16:
             case "end":
               return _context.stop();

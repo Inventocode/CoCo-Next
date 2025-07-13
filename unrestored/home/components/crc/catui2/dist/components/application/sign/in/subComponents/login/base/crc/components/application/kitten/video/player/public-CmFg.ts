@@ -40,9 +40,7 @@ var kittenVideoPlayer = {
               return _context.abrupt("return");
             case 2:
               KittenVideoPlayer = /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_3_react___default.lazy(function () {
-                return new Promise(function (resolve) {
-                  resolve();
-                }).then(__webpack_require__.bind(null, "fL6I")).then(function (module) {
+                return import("../player-fL6I").then(function (module) {
                   return {
                     default: module.KittenVideoPlayer
                   };
@@ -77,14 +75,15 @@ var kittenVideoPlayer = {
    */
   close: function close(options) {
     return new Promise(function (resolve, reject) {
-      var _closeAnimationPos, _closeAnimationPos2;
+      var _closeAnimationPos;
+      var _closeAnimationPos2;
       var draggableRef = document.getElementsByClassName('CUI-kitten-video-player-draggable')[0];
       if (!draggableRef) {
         return;
       }
-      var _draggableRef$getBoun = draggableRef.getBoundingClientRect(),
-        width = _draggableRef$getBoun.width,
-        height = _draggableRef$getBoun.height;
+      var _draggableRef$getBoun = draggableRef.getBoundingClientRect();
+      var width = _draggableRef$getBoun.width;
+      var height = _draggableRef$getBoun.height;
       draggableRef.style.transform += ' scale(1)';
       var closeAnimationPos = {
         x: 0,
@@ -120,7 +119,11 @@ var kittenVideoPlayer = {
     if (!videoPlayerContainer) {
       return;
     }
-    (_player = player) === null || _player === void 0 ? void 0 : _player.pause();
+    if ((_player = player) === null || _player === void 0) {
+      void 0;
+    } else {
+      _player.pause();
+    }
     var videoPlayerElem = videoPlayerContainer.children[0];
     videoPlayerElem.style.display = 'none';
   },

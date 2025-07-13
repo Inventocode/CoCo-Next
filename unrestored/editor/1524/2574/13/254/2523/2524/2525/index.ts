@@ -1,0 +1,1 @@
+module.exports = require("./2526/index");

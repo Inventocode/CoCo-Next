@@ -1,0 +1,19 @@
+"use strict";
+
+function r(e) {
+  return function (t, n) {
+    var r;
+    var i = n || {};
+    if ("formatting" === (i.context ? String(i.context) : "standalone") && e.formattingValues) {
+      var o = e.defaultFormattingWidth || e.defaultWidth;
+      var a = i.width ? String(i.width) : o;
+      r = e.formattingValues[a] || e.formattingValues[o];
+    } else {
+      var s = e.defaultWidth;
+      var c = i.width ? String(i.width) : e.defaultWidth;
+      r = e.values[c] || e.values[s];
+    }
+    return r[e.argumentCallback ? e.argumentCallback(t) : t];
+  };
+}
+export { r as a };

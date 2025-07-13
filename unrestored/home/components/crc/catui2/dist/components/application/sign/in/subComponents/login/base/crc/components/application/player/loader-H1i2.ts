@@ -53,15 +53,15 @@ var CLOUDS_MAP = {
   'cloud-5-copy': 1.3157
 };
 var PlayerLoader = function PlayerLoader(props) {
-  var percent = props.percent,
-    promptText = props.promptText,
-    style = props.style;
+  var percent = props.percent;
+  var promptText = props.promptText;
+  var style = props.style;
   var status = props.status ? props.status : 'loading';
   var loader = Object(__WEBPACK_IMPORTED_MODULE_2_react__.useRef)(null);
-  var _useState = Object(__WEBPACK_IMPORTED_MODULE_2_react__.useState)(1),
-    _useState2 = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default)(_useState, 2),
-    animationDurRatio = _useState2[0],
-    setAnimationDurRatio = _useState2[1];
+  var _useState = Object(__WEBPACK_IMPORTED_MODULE_2_react__.useState)(1);
+  var _useState2 = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default)(_useState, 2);
+  var animationDurRatio = _useState2[0];
+  var setAnimationDurRatio = _useState2[1];
   Object(__WEBPACK_IMPORTED_MODULE_2_react__.useEffect)(function () {
     var loaderEl = loader.current;
     var updateAnimationDur = function updateAnimationDur() {
@@ -69,7 +69,9 @@ var PlayerLoader = function PlayerLoader(props) {
         return;
       }
       var ratio = loaderEl.getBoundingClientRect().width / 375;
-      ratio !== animationDurRatio && setAnimationDurRatio(ratio);
+      if (ratio !== animationDurRatio) {
+        setAnimationDurRatio(ratio);
+      }
     };
     updateAnimationDur();
     window.addEventListener('resize', updateAnimationDur);

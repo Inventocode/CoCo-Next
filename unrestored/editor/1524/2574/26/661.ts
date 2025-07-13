@@ -1,0 +1,1 @@
+module.exports = n.p + "static/media/pedometer.08b217ab.svg";

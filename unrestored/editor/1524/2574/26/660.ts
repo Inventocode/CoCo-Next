@@ -1,0 +1,1 @@
+module.exports = n.p + "static/media/tab.906ad81b.svg";

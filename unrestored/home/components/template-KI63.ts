@@ -20,13 +20,19 @@ var _createClass = function () {
       var descriptor = props[i];
       descriptor.enumerable = descriptor.enumerable || false;
       descriptor.configurable = true;
-      if ("value" in descriptor) descriptor.writable = true;
+      if ("value" in descriptor) {
+        descriptor.writable = true;
+      }
       Object.defineProperty(target, descriptor.key, descriptor);
     }
   }
   return function (Constructor, protoProps, staticProps) {
-    if (protoProps) defineProperties(Constructor.prototype, protoProps);
-    if (staticProps) defineProperties(Constructor, staticProps);
+    if (protoProps) {
+      defineProperties(Constructor.prototype, protoProps);
+    }
+    if (staticProps) {
+      defineProperties(Constructor, staticProps);
+    }
     return Constructor;
   };
 }();
@@ -58,18 +64,33 @@ function _inherits(subClass, superClass) {
       configurable: true
     }
   });
-  if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
+  if (superClass) {
+    if (Object.setPrototypeOf) {
+      Object.setPrototypeOf(subClass, superClass);
+    } else {
+      subClass.__proto__ = superClass;
+    }
+  }
 }
 var __decorate = this && this.__decorate || function (decorators, target, key, desc) {
-  var c = arguments.length,
-    r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
-    d;
-  if ((typeof Reflect === "undefined" ? "undefined" : _typeof(Reflect)) === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) {
-    if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+  var c = arguments.length;
+  var r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc;
+  var d;
+  if ((typeof Reflect === "undefined" ? "undefined" : _typeof(Reflect)) === "object" && typeof Reflect.decorate === "function") {
+    r = Reflect.decorate(decorators, target, key, desc);
+  } else {
+    for (var i = decorators.length - 1; i >= 0; i--) {
+      if (d = decorators[i]) {
+        r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+      }
+    }
   }
-  return c > 3 && r && Object.defineProperty(target, key, r), r;
+  if (c > 3 && r) {
+    Object.defineProperty(target, key, r);
+  }
+  return r;
 };
-var styles = require("./unnamed-RQs1");
+import * as styles from "./styles-RQs1";
 var TemplateItemView = function (_React$Component) {
   _inherits(TemplateItemView, _React$Component);
   function TemplateItemView(props) {
@@ -91,8 +112,8 @@ var TemplateItemView = function (_React$Component) {
       Object(__WEBPACK_IMPORTED_MODULE_3__sensorsData__.sensorsCustomReport)('TemplateClick', {
         template_name: name
       });
-      var _config = Object(__WEBPACK_IMPORTED_MODULE_2__cfg__.config)(),
-        cocoEditorUrl = _config.cocoEditorUrl;
+      var _config = Object(__WEBPACK_IMPORTED_MODULE_2__cfg__.config)();
+      var cocoEditorUrl = _config.cocoEditorUrl;
       window.open(cocoEditorUrl + "?templateId=" + id, Date.now().toString());
     }
   }, {

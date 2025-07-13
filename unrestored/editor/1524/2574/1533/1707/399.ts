@@ -1,0 +1,53 @@
+import * as r from "../1250/632";
+import * as o from "../1562/813";
+import * as i from "../1623/309";
+import * as a from "../1728/257";
+import * as s from "../1550/820/index";
+var c = [].push;
+var l = function (e) {
+  var t = 1 == e;
+  var n = 2 == e;
+  var l = 3 == e;
+  var u = 4 == e;
+  var d = 6 == e;
+  var p = 7 == e;
+  var f = 5 == e || d;
+  return function (h, m, g, _) {
+    for (var v, b, y = i(h), E = o(y), O = r(m, g, 3), w = a(E.length), C = 0, T = _ || s, S = t ? T(h, w) : n || p ? T(h, 0) : void 0; w > C; C++) {
+      if ((f || C in E) && (b = O(v = E[C], C, y), e)) {
+        if (t) {
+          S[C] = b;
+        } else if (b) {
+          switch (e) {
+            case 3:
+              return !0;
+            case 5:
+              return v;
+            case 6:
+              return C;
+            case 2:
+              c.call(S, v);
+          }
+        } else {
+          switch (e) {
+            case 4:
+              return !1;
+            case 7:
+              c.call(S, v);
+          }
+        }
+      }
+    }
+    return d ? -1 : l || u ? u : S;
+  };
+};
+module.exports = {
+  forEach: l(0),
+  map: l(1),
+  filter: l(2),
+  some: l(3),
+  every: l(4),
+  find: l(5),
+  findIndex: l(6),
+  filterReject: l(7)
+};

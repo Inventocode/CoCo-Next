@@ -81,38 +81,38 @@ var _styleModuleImportMap = {
     "text-second": "CUI-sign-in-dialog-text-second"
   }
 };
-var useState = __WEBPACK_IMPORTED_MODULE_4_react__.useState,
-  useEffect = __WEBPACK_IMPORTED_MODULE_4_react__.useEffect,
-  useCallback = __WEBPACK_IMPORTED_MODULE_4_react__.useCallback,
-  Fragment = __WEBPACK_IMPORTED_MODULE_4_react__.Fragment,
-  useRef = __WEBPACK_IMPORTED_MODULE_4_react__.useRef;
+var useState = __WEBPACK_IMPORTED_MODULE_4_react__.useState;
+var useEffect = __WEBPACK_IMPORTED_MODULE_4_react__.useEffect;
+var useCallback = __WEBPACK_IMPORTED_MODULE_4_react__.useCallback;
+var Fragment = __WEBPACK_IMPORTED_MODULE_4_react__.Fragment;
+var useRef = __WEBPACK_IMPORTED_MODULE_4_react__.useRef;
 var phoneInputEl;
 var codeInputEl;
 var BySMSComponent = function BySMSComponent(props) {
-  var isRequesting = props.isRequesting,
-    setIsRequesting = props.setIsRequesting,
-    switchView = props.switchView,
-    setSmsTimeStamp = props.setSmsTimeStamp,
-    smsTimeStamp = props.smsTimeStamp,
-    onlyLogin = props.onlyLogin,
-    handleAgreementChange = props.handleAgreementChange;
-  var _useState = useState(true),
-    _useState2 = Object(__WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default)(_useState, 2),
-    disableLogin = _useState2[0],
-    setDisableLogin = _useState2[1];
-  var _useState3 = useState(0),
-    _useState4 = Object(__WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default)(_useState3, 2),
-    smsCountDown = _useState4[0],
-    setSmsCountDown = _useState4[1];
-  var _useState5 = useState(undefined),
-    _useState6 = Object(__WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default)(_useState5, 2),
-    error = _useState6[0],
-    setError = _useState6[1];
+  var isRequesting = props.isRequesting;
+  var setIsRequesting = props.setIsRequesting;
+  var switchView = props.switchView;
+  var setSmsTimeStamp = props.setSmsTimeStamp;
+  var smsTimeStamp = props.smsTimeStamp;
+  var onlyLogin = props.onlyLogin;
+  var handleAgreementChange = props.handleAgreementChange;
+  var _useState = useState(true);
+  var _useState2 = Object(__WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default)(_useState, 2);
+  var disableLogin = _useState2[0];
+  var setDisableLogin = _useState2[1];
+  var _useState3 = useState(0);
+  var _useState4 = Object(__WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default)(_useState3, 2);
+  var smsCountDown = _useState4[0];
+  var setSmsCountDown = _useState4[1];
+  var _useState5 = useState(undefined);
+  var _useState6 = Object(__WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default)(_useState5, 2);
+  var error = _useState6[0];
+  var setError = _useState6[1];
   var isDestory = useRef(false);
-  var _useState7 = useState(false),
-    _useState8 = Object(__WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default)(_useState7, 2),
-    agreementChecked = _useState8[0],
-    setAgreementChecked = _useState8[1];
+  var _useState7 = useState(false);
+  var _useState8 = Object(__WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default)(_useState7, 2);
+  var agreementChecked = _useState8[0];
+  var setAgreementChecked = _useState8[1];
   var isPhoneErr = useCallback(function () {
     return error && error.type === __WEBPACK_IMPORTED_MODULE_10__auth__.AuthErrorType.PHONE;
   }, [error]);
@@ -130,7 +130,9 @@ var BySMSComponent = function BySMSComponent(props) {
   });
   useEffect(function () {
     updateLoginBtn();
-    handleAgreementChange && handleAgreementChange(agreementChecked);
+    if (handleAgreementChange) {
+      handleAgreementChange(agreementChecked);
+    }
   }, [agreementChecked]);
   useEffect(function () {
     if (isPhoneErr()) {
@@ -158,7 +160,9 @@ var BySMSComponent = function BySMSComponent(props) {
   }, [isPhoneErr, isSmsCodeErr, smsTimeStamp]);
   var onLoginClick = /*#__PURE__*/function () {
     var _ref = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default)(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_3__babel_runtime_regenerator___default.mark(function _callee() {
-      var phone, code, result;
+      var phone;
+      var code;
+      var result;
       return __WEBPACK_IMPORTED_MODULE_3__babel_runtime_regenerator___default.wrap(function _callee$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
@@ -213,18 +217,22 @@ var BySMSComponent = function BySMSComponent(props) {
               setError(result.error);
               throw result.error;
             case 23:
-              props.onSmsLoginSuccess && props.onSmsLoginSuccess(result.authInfo);
+              if (props.onSmsLoginSuccess) {
+                props.onSmsLoginSuccess(result.authInfo);
+              }
             case 24:
               _context.next = 29;
               break;
             case 26:
               _context.prev = 26;
               _context.t0 = _context["catch"](12);
-              props.onSmsLoginFailure && props.onSmsLoginFailure({
-                source: 'sms-login',
-                isSuccess: false,
-                error: _context.t0
-              });
+              if (props.onSmsLoginFailure) {
+                props.onSmsLoginFailure({
+                  source: 'sms-login',
+                  isSuccess: false,
+                  error: _context.t0
+                });
+              }
             case 29:
             case "end":
               return _context.stop();
@@ -241,7 +249,8 @@ var BySMSComponent = function BySMSComponent(props) {
   };
   var onGetCodeClick = /*#__PURE__*/function () {
     var _ref2 = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default)(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_3__babel_runtime_regenerator___default.mark(function _callee2() {
-      var phone, e;
+      var phone;
+      var e;
       return __WEBPACK_IMPORTED_MODULE_3__babel_runtime_regenerator___default.wrap(function _callee2$(_context2) {
         while (1) {
           switch (_context2.prev = _context2.next) {
@@ -309,15 +318,21 @@ var BySMSComponent = function BySMSComponent(props) {
     isError: isPhoneErr(),
     onChange: function onChange() {
       updateLoginBtn();
-      isPhoneErr() && setError(undefined);
+      if (isPhoneErr()) {
+        setError(undefined);
+      }
     },
     label: Object(__WEBPACK_IMPORTED_MODULE_11__i18n__.getLanguage)('sign_in_dialog/placeholder/mobile_phone'),
     autoComplete: "on",
     getInputEl: function getInputEl(el) {
-      el && (phoneInputEl = el);
+      if (el) {
+        phoneInputEl = el;
+      }
     },
     onBlur: function onBlur() {
-      props.reportMethod && props.reportMethod('用户信息-输入手机号');
+      if (props.reportMethod) {
+        props.reportMethod('用户信息-输入手机号');
+      }
     }
   }), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_4_react__.createElement("div", {
     className: "CUI-sign-in-dialog-input-error"
@@ -334,13 +349,17 @@ var BySMSComponent = function BySMSComponent(props) {
     isError: isSmsCodeErr(),
     onChange: function onChange() {
       updateLoginBtn();
-      isSmsCodeErr() && setError(undefined);
+      if (isSmsCodeErr()) {
+        setError(undefined);
+      }
     },
     label: Object(__WEBPACK_IMPORTED_MODULE_11__i18n__.getLanguage)('sign_in_dialog/placeholder/code'),
     autoComplete: "off",
     maxLength: 10,
     getInputEl: function getInputEl(el) {
-      el && (codeInputEl = el);
+      if (el) {
+        codeInputEl = el;
+      }
     },
     iconsSuffix: renderGetCode()
   }), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_4_react__.createElement("div", {

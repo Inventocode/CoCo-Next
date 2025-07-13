@@ -1,8 +1,5 @@
 "use strict";
 
-Object.defineProperty(__webpack_exports__, "__esModule", {
-  value: true
-});
 /* harmony export (binding) */
 export { CodemaoAgreement };
 /* harmony import */
@@ -22,18 +19,20 @@ var SignStatus;
   SignStatus[SignStatus["CLOSED"] = 2] = "CLOSED";
 })(SignStatus || (SignStatus = {}));
 var CodemaoAgreement = function CodemaoAgreement(props) {
-  var children = props.children,
-    onClose = props.onClose,
-    _onSignSuccess = props.onSignSuccess,
-    onSignError = props.onSignError,
-    entryDialogText = props.entryDialogText;
-  var _useState = Object(__WEBPACK_IMPORTED_MODULE_1_react__.useState)(SignStatus.ENTRY),
-    _useState2 = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default)(_useState, 2),
-    status = _useState2[0],
-    setStatus = _useState2[1];
+  var children = props.children;
+  var onClose = props.onClose;
+  var _onSignSuccess = props.onSignSuccess;
+  var onSignError = props.onSignError;
+  var entryDialogText = props.entryDialogText;
+  var _useState = Object(__WEBPACK_IMPORTED_MODULE_1_react__.useState)(SignStatus.ENTRY);
+  var _useState2 = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default)(_useState, 2);
+  var status = _useState2[0];
+  var setStatus = _useState2[1];
   var onDialogClose = function onDialogClose() {
     setStatus(SignStatus.CLOSED);
-    onClose && onClose();
+    if (onClose) {
+      onClose();
+    }
   };
   return /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1_react___default.createElement(__WEBPACK_IMPORTED_MODULE_1_react___default.Fragment, null, status === SignStatus.ENTRY && /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1_react___default.createElement(__WEBPACK_IMPORTED_MODULE_2__entry_dialog__.EntryDialog, {
     onNextClick: function onNextClick() {

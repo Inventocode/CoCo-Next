@@ -34,13 +34,19 @@ var _createClass = function () {
       var descriptor = props[i];
       descriptor.enumerable = descriptor.enumerable || false;
       descriptor.configurable = true;
-      if ("value" in descriptor) descriptor.writable = true;
+      if ("value" in descriptor) {
+        descriptor.writable = true;
+      }
       Object.defineProperty(target, descriptor.key, descriptor);
     }
   }
   return function (Constructor, protoProps, staticProps) {
-    if (protoProps) defineProperties(Constructor.prototype, protoProps);
-    if (staticProps) defineProperties(Constructor, staticProps);
+    if (protoProps) {
+      defineProperties(Constructor.prototype, protoProps);
+    }
+    if (staticProps) {
+      defineProperties(Constructor, staticProps);
+    }
     return Constructor;
   };
 }();
@@ -72,19 +78,34 @@ function _inherits(subClass, superClass) {
       configurable: true
     }
   });
-  if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
+  if (superClass) {
+    if (Object.setPrototypeOf) {
+      Object.setPrototypeOf(subClass, superClass);
+    } else {
+      subClass.__proto__ = superClass;
+    }
+  }
 }
 var __decorate = this && this.__decorate || function (decorators, target, key, desc) {
-  var c = arguments.length,
-    r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
-    d;
-  if ((typeof Reflect === "undefined" ? "undefined" : _typeof(Reflect)) === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) {
-    if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+  var c = arguments.length;
+  var r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc;
+  var d;
+  if ((typeof Reflect === "undefined" ? "undefined" : _typeof(Reflect)) === "object" && typeof Reflect.decorate === "function") {
+    r = Reflect.decorate(decorators, target, key, desc);
+  } else {
+    for (var i = decorators.length - 1; i >= 0; i--) {
+      if (d = decorators[i]) {
+        r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+      }
+    }
   }
-  return c > 3 && r && Object.defineProperty(target, key, r), r;
+  if (c > 3 && r) {
+    Object.defineProperty(target, key, r);
+  }
+  return r;
 };
 var projectNameRegEx = /^[a-zA-Z0-9\u4E00-\u9FFF ()（）\-_']*$/;
-var styles = require("./unnamed-Goqg");
+import * as styles from "./styles-Goqg";
 var WorkItemView = function (_React$Component) {
   _inherits(WorkItemView, _React$Component);
   function WorkItemView(props) {
@@ -117,8 +138,8 @@ var WorkItemView = function (_React$Component) {
     key: "handleSelfOpenWork",
     value: function handleSelfOpenWork() {
       if (this.props.workType !== __WEBPACK_IMPORTED_MODULE_8__routes_Work_model_interface__.EWorkType.DELETE) {
-        var _config = Object(__WEBPACK_IMPORTED_MODULE_4__cfg__.config)(),
-          cocoEditorUrl = _config.cocoEditorUrl;
+        var _config = Object(__WEBPACK_IMPORTED_MODULE_4__cfg__.config)();
+        var cocoEditorUrl = _config.cocoEditorUrl;
         var id = this.props.item.work_id;
         var role = this.props.item.role;
         // 打开作品埋点
@@ -136,8 +157,8 @@ var WorkItemView = function (_React$Component) {
   }, {
     key: "handleOpenWork",
     value: function handleOpenWork() {
-      var _config2 = Object(__WEBPACK_IMPORTED_MODULE_4__cfg__.config)(),
-        cocoEditorUrl = _config2.cocoEditorUrl;
+      var _config2 = Object(__WEBPACK_IMPORTED_MODULE_4__cfg__.config)();
+      var cocoEditorUrl = _config2.cocoEditorUrl;
       this.setState({
         dropdownVisible: false
       });
@@ -176,9 +197,9 @@ var WorkItemView = function (_React$Component) {
     value: function handleQuitCollWork() {
       var _this3 = this;
       var id = this.props.item.work_id;
-      var _props = this.props,
-        userInfo = _props.userInfo,
-        workType = _props.workType;
+      var _props = this.props;
+      var userInfo = _props.userInfo;
+      var workType = _props.workType;
       if (userInfo) {
         this.props.setConfirmDialogInfoAction({
           visible: true,
@@ -265,12 +286,12 @@ var WorkItemView = function (_React$Component) {
     key: "render",
     value: function render() {
       var _this5 = this;
-      var _state = this.state,
-        dropdownVisible = _state.dropdownVisible,
-        inputVisible = _state.inputVisible;
-      var _props2 = this.props,
-        item = _props2.item,
-        workType = _props2.workType;
+      var _state = this.state;
+      var dropdownVisible = _state.dropdownVisible;
+      var inputVisible = _state.inputVisible;
+      var _props2 = this.props;
+      var item = _props2.item;
+      var workType = _props2.workType;
       return __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
         styleName: 'workItem'
       }, __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {

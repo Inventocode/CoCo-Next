@@ -1,16 +1,25 @@
 !function (e, a) {
-  true ? module.exports = a() : "function" == typeof define && define.amd ? define(a) : (e.ReactIntlLocaleData = e.ReactIntlLocaleData || {}, e.ReactIntlLocaleData.en = a());
+  if (true) {
+    module.exports = a();
+  } else {
+    if ("function" == typeof define && define.amd) {
+      define(a);
+    } else {
+      e.ReactIntlLocaleData = e.ReactIntlLocaleData || {};
+      e.ReactIntlLocaleData.en = a();
+    }
+  }
 }(this, function () {
   "use strict";
 
   return [{
     locale: "en",
     pluralRuleFunction: function (e, a) {
-      var t = String(e).split("."),
-        o = !t[1],
-        n = Number(t[0]) == e,
-        r = n && t[0].slice(-1),
-        i = n && t[0].slice(-2);
+      var t = String(e).split(".");
+      var o = !t[1];
+      var n = Number(t[0]) == e;
+      var r = n && t[0].slice(-1);
+      var i = n && t[0].slice(-2);
       return a ? 1 == r && 11 != i ? "one" : 2 == r && 12 != i ? "two" : 3 == r && 13 != i ? "few" : "other" : 1 == e && o ? "one" : "other";
     },
     fields: {

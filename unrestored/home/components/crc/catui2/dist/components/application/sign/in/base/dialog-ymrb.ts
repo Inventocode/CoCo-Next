@@ -46,20 +46,31 @@ function ownKeys(object, enumerableOnly) {
   var keys = Object.keys(object);
   if (Object.getOwnPropertySymbols) {
     var symbols = Object.getOwnPropertySymbols(object);
-    enumerableOnly && (symbols = symbols.filter(function (sym) {
-      return Object.getOwnPropertyDescriptor(object, sym).enumerable;
-    })), keys.push.apply(keys, symbols);
+    if (enumerableOnly) {
+      symbols = symbols.filter(function (sym) {
+        return Object.getOwnPropertyDescriptor(object, sym).enumerable;
+      });
+    }
+    keys.push.apply(keys, symbols);
   }
   return keys;
 }
 function _objectSpread(target) {
   for (var i = 1; i < arguments.length; i++) {
     var source = null != arguments[i] ? arguments[i] : {};
-    i % 2 ? ownKeys(Object(source), !0).forEach(function (key) {
-      Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(target, key, source[key]);
-    }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) {
-      Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
-    });
+    if (i % 2) {
+      ownKeys(Object(source), !0).forEach(function (key) {
+        Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(target, key, source[key]);
+      });
+    } else {
+      if (Object.getOwnPropertyDescriptors) {
+        Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
+      } else {
+        ownKeys(Object(source)).forEach(function (key) {
+          Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
+        });
+      }
+    }
   }
   return target;
 }
@@ -84,8 +95,8 @@ var _styleModuleImportMap = {
 function _createSuper(Derived) {
   var hasNativeReflectConstruct = _isNativeReflectConstruct();
   return function _createSuperInternal() {
-    var Super = Object(__WEBPACK_IMPORTED_MODULE_5__babel_runtime_helpers_esm_getPrototypeOf__.default)(Derived),
-      result;
+    var Super = Object(__WEBPACK_IMPORTED_MODULE_5__babel_runtime_helpers_esm_getPrototypeOf__.default)(Derived);
+    var result;
     if (hasNativeReflectConstruct) {
       var NewTarget = Object(__WEBPACK_IMPORTED_MODULE_5__babel_runtime_helpers_esm_getPrototypeOf__.default)(this).constructor;
       result = Reflect.construct(Super, arguments, NewTarget);
@@ -96,9 +107,15 @@ function _createSuper(Derived) {
   };
 }
 function _isNativeReflectConstruct() {
-  if (typeof Reflect === "undefined" || !Reflect.construct) return false;
-  if (Reflect.construct.sham) return false;
-  if (typeof Proxy === "function") return true;
+  if (typeof Reflect === "undefined" || !Reflect.construct) {
+    return false;
+  }
+  if (Reflect.construct.sham) {
+    return false;
+  }
+  if (typeof Proxy === "function") {
+    return true;
+  }
   try {
     Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {}));
     return true;
@@ -160,19 +177,27 @@ var Dialog = /*#__PURE__*/function (_React$Component) {
         return;
       }
       if (animationType === 'open') {
-        _this.props.onOpen && _this.props.onOpen();
+        if (_this.props.onOpen) {
+          _this.props.onOpen();
+        }
       } else {
         // close
         // 只触发默认按钮上的 onOk、onCancel事件，因为有可能默认按钮和自定义组件混用
         switch (_this.triggerBtn) {
           case 'ok':
-            _this.props.onOk && _this.props.onOk();
+            if (_this.props.onOk) {
+              _this.props.onOk();
+            }
             break;
           case 'cancel':
-            _this.props.onCancel && _this.props.onCancel();
+            if (_this.props.onCancel) {
+              _this.props.onCancel();
+            }
             break;
         }
-        _this.props.onClose && _this.props.onClose();
+        if (_this.props.onClose) {
+          _this.props.onClose();
+        }
       }
       _this.triggerBtn = '';
       _this.setState({
@@ -189,7 +214,8 @@ var Dialog = /*#__PURE__*/function (_React$Component) {
       _this.closeDialog();
     });
     Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Object(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default)(_this), "renderCloseBtn", function () {
-      var _ref, _ref2;
+      var _ref;
+      var _ref2;
       var closeBtn = _this.props.closeBtn;
       if (/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_8_react___default.isValidElement(closeBtn)) {
         return closeBtn;
@@ -221,10 +247,10 @@ var Dialog = /*#__PURE__*/function (_React$Component) {
       }, _this.props.header, _this.renderCloseBtn());
     });
     Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Object(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default)(_this), "renderFooter", function () {
-      var _this$props = _this.props,
-        footer = _this$props.footer,
-        cancelText = _this$props.cancelText,
-        okText = _this$props.okText; // null 渲染 null
+      var _this$props = _this.props;
+      var footer = _this$props.footer;
+      var cancelText = _this$props.cancelText;
+      var okText = _this$props.okText; // null 渲染 null
       if (footer === null) {
         return null;
       }
@@ -256,8 +282,8 @@ var Dialog = /*#__PURE__*/function (_React$Component) {
       }, okText ? okText : '确定'));
     });
     Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Object(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default)(_this), "getTOPos", function () {
-      var _this$props$top = _this.props.top,
-        top = _this$props$top === void 0 ? '20%' : _this$props$top; // 不规则值，返回 undefined，居中出现
+      var _this$props$top = _this.props.top;
+      var top = _this$props$top === void 0 ? '20%' : _this$props$top; // 不规则值，返回 undefined，居中出现
       if (top === 'center' || !/px$/.test(top) && !/%$/.test(top)) {
         return;
       }
@@ -276,7 +302,9 @@ var Dialog = /*#__PURE__*/function (_React$Component) {
       mask: !!props.mask,
       animationType: null
     };
-    !hasInitMouseEvnet && initMouseListener();
+    if (!hasInitMouseEvnet) {
+      initMouseListener();
+    }
     return _this;
   }
   Object(__WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_createClass__.default)(Dialog, [{
@@ -295,10 +323,12 @@ var Dialog = /*#__PURE__*/function (_React$Component) {
     value: function componentDidUpdate(prevProps) {
       var curShow = this.props.show; // 从隐藏到显示
       if (prevProps.show !== curShow && curShow) {
-        openPos && (this.animationPos = {
-          x: openPos.x,
-          y: openPos.y
-        });
+        if (openPos) {
+          this.animationPos = {
+            x: openPos.x,
+            y: openPos.y
+          };
+        }
         this.setState({
           _show: true,
           mask: true,
@@ -314,30 +344,32 @@ var Dialog = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "componentWillUnmount",
     value: function componentWillUnmount() {
-      this.props.show && this.closeDialog();
+      if (this.props.show) {
+        this.closeDialog();
+      }
     }
   }, {
     key: "render",
     value: function render() {
-      var _this2 = this,
-        _ref3;
+      var _this2 = this;
+      var _ref3;
       if (!this.hadInitShowUp) {
         return null;
       }
-      var _this$state = this.state,
-        mask = _this$state.mask,
-        animationType = _this$state.animationType,
-        _show = _this$state._show;
-      var _this$props2 = this.props,
-        children = _this$props2.children,
-        maskClose = _this$props2.maskClose,
-        centerShowUp = _this$props2.centerShowUp,
-        contentStyle = _this$props2.contentStyle,
-        top = _this$props2.top,
-        container = _this$props2.container,
-        className = _this$props2.className,
-        wrapClassName = _this$props2.wrapClassName,
-        layout = _this$props2.layout;
+      var _this$state = this.state;
+      var mask = _this$state.mask;
+      var animationType = _this$state.animationType;
+      var _show = _this$state._show;
+      var _this$props2 = this.props;
+      var children = _this$props2.children;
+      var maskClose = _this$props2.maskClose;
+      var centerShowUp = _this$props2.centerShowUp;
+      var contentStyle = _this$props2.contentStyle;
+      var top = _this$props2.top;
+      var container = _this$props2.container;
+      var className = _this$props2.className;
+      var wrapClassName = _this$props2.wrapClassName;
+      var layout = _this$props2.layout;
       return typeof window !== 'undefined' ? /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_9_react_dom___default.createPortal(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_8_react___default.createElement("div", {
         style: {
           display: _show ? 'flex' : 'none',
@@ -395,7 +427,9 @@ Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.d
 Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Dialog, "warning", __WEBPACK_IMPORTED_MODULE_13__WarningDialog__.createWarning);
 Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Dialog, "info", __WEBPACK_IMPORTED_MODULE_14__InfoDialog__.createInfo);
 function isDOM(elm) {
-  if (!elm) return false;
+  if (!elm) {
+    return false;
+  }
   return elm.current === undefined;
 }
 

@@ -20,11 +20,11 @@ import * as __WEBPACK_IMPORTED_MODULE_5__style_module_css__ from "../../style.mo
 import __WEBPACK_IMPORTED_MODULE_5__style_module_css___default from "../../style.module.css-YMKY";
 var _this = this;
 var LoginPageContainer = function LoginPageContainer(props) {
-  var isRequesting = props.isRequesting,
-    setIsRequesting = props.setIsRequesting,
-    switchView = props.switchView,
-    onEmailLoginSuccess = props.onEmailLoginSuccess,
-    reportMethod = props.reportMethod;
+  var isRequesting = props.isRequesting;
+  var setIsRequesting = props.setIsRequesting;
+  var switchView = props.switchView;
+  var onEmailLoginSuccess = props.onEmailLoginSuccess;
+  var reportMethod = props.reportMethod;
   return /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_0_react__.Fragment, null, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
     className: "CUI-oversea-sign-in-dialog-content"
   }, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_4__ByEmail__.ByEmailComponent, {

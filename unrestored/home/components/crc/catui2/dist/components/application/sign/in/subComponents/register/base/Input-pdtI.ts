@@ -60,8 +60,8 @@ var _styleModuleImportMap = {
 function _createSuper(Derived) {
   var hasNativeReflectConstruct = _isNativeReflectConstruct();
   return function _createSuperInternal() {
-    var Super = Object(__WEBPACK_IMPORTED_MODULE_5__babel_runtime_helpers_esm_getPrototypeOf__.default)(Derived),
-      result;
+    var Super = Object(__WEBPACK_IMPORTED_MODULE_5__babel_runtime_helpers_esm_getPrototypeOf__.default)(Derived);
+    var result;
     if (hasNativeReflectConstruct) {
       var NewTarget = Object(__WEBPACK_IMPORTED_MODULE_5__babel_runtime_helpers_esm_getPrototypeOf__.default)(this).constructor;
       result = Reflect.construct(Super, arguments, NewTarget);
@@ -72,9 +72,15 @@ function _createSuper(Derived) {
   };
 }
 function _isNativeReflectConstruct() {
-  if (typeof Reflect === "undefined" || !Reflect.construct) return false;
-  if (Reflect.construct.sham) return false;
-  if (typeof Proxy === "function") return true;
+  if (typeof Reflect === "undefined" || !Reflect.construct) {
+    return false;
+  }
+  if (Reflect.construct.sham) {
+    return false;
+  }
+  if (typeof Proxy === "function") {
+    return true;
+  }
   try {
     Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {}));
     return true;
@@ -87,7 +93,8 @@ var Input = /*#__PURE__*/function (_React$Component) {
   Object(__WEBPACK_IMPORTED_MODULE_3__babel_runtime_helpers_esm_inherits__.default)(Input, _React$Component);
   var _super = _createSuper(Input);
   function Input(props) {
-    var _this$props$value$toS, _this$props$value;
+    var _this$props$value$toS;
+    var _this$props$value;
     var _this;
     Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_classCallCheck__.default)(this, Input);
     _this = _super.call(this, props);
@@ -165,9 +172,9 @@ var Input = /*#__PURE__*/function (_React$Component) {
         if (!_this.hint) {
           return;
         }
-        var _this$mousePos = _this.mousePos,
-          left = _this$mousePos.left,
-          top = _this$mousePos.top;
+        var _this$mousePos = _this.mousePos;
+        var left = _this$mousePos.left;
+        var top = _this$mousePos.top;
         _this.hint.style.left = "".concat(left, "px");
         _this.hint.style.top = "".concat(top, "px");
         _this.hint.style.visibility = 'visible';
@@ -204,10 +211,10 @@ var Input = /*#__PURE__*/function (_React$Component) {
       if (_this.isOnComposition) {
         return;
       }
-      var _this$props = _this.props,
-        onChange = _this$props.onChange,
-        lintTrigger = _this$props.lintTrigger,
-        clearBtn = _this$props.clearBtn;
+      var _this$props = _this.props;
+      var onChange = _this$props.onChange;
+      var lintTrigger = _this$props.lintTrigger;
+      var clearBtn = _this$props.clearBtn;
       var lintState = true;
       if (lintTrigger === 'change' && value) {
         lintState = _this.lintValue(value);
@@ -216,7 +223,9 @@ var Input = /*#__PURE__*/function (_React$Component) {
         lintState: lintState ? 'pass' : 'error',
         showClearBtn: clearBtn ? value !== '' : false
       });
-      onChange && onChange(e, lintState);
+      if (onChange) {
+        onChange(e, lintState);
+      }
     });
     Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Object(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default)(_this), "onFocus", function (e) {
       _this.valueBeforeFocus = e.target.value;
@@ -224,15 +233,21 @@ var Input = /*#__PURE__*/function (_React$Component) {
         inputStatus: 'focus',
         showLabel: true
       });
-      _this.props.onFocus && _this.props.onFocus(e);
+      if (_this.props.onFocus) {
+        _this.props.onFocus(e);
+      }
     });
     Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Object(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default)(_this), "onBlur", function (e) {
       _this.setState({
         inputStatus: '',
         showLabel: e.target.value === ''
       });
-      _this.props.lintTrigger === 'blur' && _this.lintValue(e.target.value);
-      _this.props.onBlur && _this.props.onBlur(e, _this.valueBeforeFocus);
+      if (_this.props.lintTrigger === 'blur') {
+        _this.lintValue(e.target.value);
+      }
+      if (_this.props.onBlur) {
+        _this.props.onBlur(e, _this.valueBeforeFocus);
+      }
     });
     Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Object(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default)(_this), "onComposition", function (e) {
       e.persist();
@@ -248,9 +263,9 @@ var Input = /*#__PURE__*/function (_React$Component) {
       }
     });
     Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Object(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default)(_this), "getLabelTO", function () {
-      var _this$props2 = _this.props,
-        inputStyle = _this$props2.inputStyle,
-        size = _this$props2.size;
+      var _this$props2 = _this.props;
+      var inputStyle = _this$props2.inputStyle;
+      var size = _this$props2.size;
       var offsetY = (inputStyle === null || inputStyle === void 0 ? void 0 : inputStyle.height) && parseInt(inputStyle.height) || size === 'lg' && 44 || size === 'md' && 36 || size === 'sm' && 28 || 36; // * 2 + 12 较为居中
       return "28px ".concat(-offsetY * 2 + 12, "px");
     });
@@ -259,26 +274,30 @@ var Input = /*#__PURE__*/function (_React$Component) {
       if (linter && !linter(value)) {
         var _this$inputWrap;
         // 设置 lint 的目的主要就是为了这个动画
-        (_this$inputWrap = _this.inputWrap) === null || _this$inputWrap === void 0 ? void 0 : _this$inputWrap.animate([{
-          backgroundColor: 'rgba(255,239,237,0)',
-          boxShadow: '0 0 0 1px rgba(255,124,107,0)'
-        }, {
-          backgroundColor: 'rgba(255,239,237,1)',
-          boxShadow: '0 0 0 1px rgba(255,124,107,1)'
-        }, {
-          backgroundColor: 'rgba(255,239,237,0)',
-          boxShadow: '0 0 0 1px rgba(255,124,107,0)'
-        }, {
-          backgroundColor: 'rgba(255,239,237,1)',
-          boxShadow: '0 0 0 1px rgba(255,124,107,1)'
-        }, {
-          backgroundColor: 'rgba(255,239,237,0)',
-          boxShadow: '0 0 0 1px rgba(255,124,107,0)'
-        }], {
-          // timing options
-          duration: 750,
-          easing: 'cubic-bezier(0.2, 0, 0.2, 1)'
-        });
+        if ((_this$inputWrap = _this.inputWrap) === null || _this$inputWrap === void 0) {
+          void 0;
+        } else {
+          _this$inputWrap.animate([{
+            backgroundColor: 'rgba(255,239,237,0)',
+            boxShadow: '0 0 0 1px rgba(255,124,107,0)'
+          }, {
+            backgroundColor: 'rgba(255,239,237,1)',
+            boxShadow: '0 0 0 1px rgba(255,124,107,1)'
+          }, {
+            backgroundColor: 'rgba(255,239,237,0)',
+            boxShadow: '0 0 0 1px rgba(255,124,107,0)'
+          }, {
+            backgroundColor: 'rgba(255,239,237,1)',
+            boxShadow: '0 0 0 1px rgba(255,124,107,1)'
+          }, {
+            backgroundColor: 'rgba(255,239,237,0)',
+            boxShadow: '0 0 0 1px rgba(255,124,107,0)'
+          }], {
+            // timing options
+            duration: 750,
+            easing: 'cubic-bezier(0.2, 0, 0.2, 1)'
+          });
+        }
         _this.setState({
           lintState: 'error'
         });
@@ -298,11 +317,15 @@ var Input = /*#__PURE__*/function (_React$Component) {
   Object(__WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_createClass__.default)(Input, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      var _this$props3 = this.props,
-        getInputEl = _this$props3.getInputEl,
-        getClearInputFn = _this$props3.getClearInputFn;
-      getInputEl && getInputEl(this.input);
-      getClearInputFn && getClearInputFn(this.clearInput);
+      var _this$props3 = this.props;
+      var getInputEl = _this$props3.getInputEl;
+      var getClearInputFn = _this$props3.getClearInputFn;
+      if (getInputEl) {
+        getInputEl(this.input);
+      }
+      if (getClearInputFn) {
+        getClearInputFn(this.clearInput);
+      }
     }
   }, {
     key: "componentDidUpdate",
@@ -321,28 +344,28 @@ var Input = /*#__PURE__*/function (_React$Component) {
     key: "render",
     value: function render() {
       var _this2 = this;
-      var _this$props4 = this.props,
-        placeholder = _this$props4.placeholder,
-        onEnterDown = _this$props4.onEnterDown,
-        autofocus = _this$props4.autofocus,
-        clearBtn = _this$props4.clearBtn,
-        inputStyle = _this$props4.inputStyle,
-        disable = _this$props4.disable,
-        type = _this$props4.type,
-        autoComplete = _this$props4.autoComplete,
-        maxLength = _this$props4.maxLength,
-        label = _this$props4.label,
-        topLabel = _this$props4.topLabel,
-        isError = _this$props4.isError,
-        className = _this$props4.className,
-        size = _this$props4.size,
-        placeholderSize = _this$props4.placeholderSize,
-        iconsSuffix = _this$props4.iconsSuffix,
-        align = _this$props4.align;
-      var _this$state = this.state,
-        inputStatus = _this$state.inputStatus,
-        lintState = _this$state.lintState,
-        _value = _this$state._value;
+      var _this$props4 = this.props;
+      var placeholder = _this$props4.placeholder;
+      var onEnterDown = _this$props4.onEnterDown;
+      var autofocus = _this$props4.autofocus;
+      var clearBtn = _this$props4.clearBtn;
+      var inputStyle = _this$props4.inputStyle;
+      var disable = _this$props4.disable;
+      var type = _this$props4.type;
+      var autoComplete = _this$props4.autoComplete;
+      var maxLength = _this$props4.maxLength;
+      var label = _this$props4.label;
+      var topLabel = _this$props4.topLabel;
+      var isError = _this$props4.isError;
+      var className = _this$props4.className;
+      var size = _this$props4.size;
+      var placeholderSize = _this$props4.placeholderSize;
+      var iconsSuffix = _this$props4.iconsSuffix;
+      var align = _this$props4.align;
+      var _this$state = this.state;
+      var inputStatus = _this$state.inputStatus;
+      var lintState = _this$state.lintState;
+      var _value = _this$state._value;
       var hintPrefix = this.props.valuePrefix ? "".concat(this.props.valuePrefix) : '';
       return /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_8_react___default.createElement(__WEBPACK_IMPORTED_MODULE_8_react___default.Fragment, null, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_8_react___default.createElement("div", {
         tabIndex: -1,
@@ -486,7 +509,15 @@ function fireChangeEvent(input, value) {
   var evt = new Event('change', {
     bubbles: true
   });
-  input === null || input === void 0 ? void 0 : (_valueTracker = input._valueTracker) === null || _valueTracker === void 0 ? void 0 : _valueTracker.setValue(lastValue);
+  if (input === null || input === void 0) {
+    void 0;
+  } else {
+    if ((_valueTracker = input._valueTracker) === null || _valueTracker === void 0) {
+      void 0;
+    } else {
+      _valueTracker.setValue(lastValue);
+    }
+  }
   input.dispatchEvent(evt);
 }
 

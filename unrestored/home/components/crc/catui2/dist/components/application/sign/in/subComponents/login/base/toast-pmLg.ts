@@ -61,14 +61,18 @@ function toastFactory(type, config) {
     return undefined;
   };
   var _onClose = function _onClose() {
-    config.onClose && config.onClose();
+    if (config.onClose) {
+      config.onClose();
+    }
     ToastManager.remove(id);
   };
   var toast = /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1_react___default.createElement(__WEBPACK_IMPORTED_MODULE_3__Toast__.Toast, Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_extends__.default)({}, config, {
     key: "toast-".concat(id),
     type: type,
     getToastDOM: function getToastDOM(ref) {
-      config.getToastDOM && config.getToastDOM(ref);
+      if (config.getToastDOM) {
+        config.getToastDOM(ref);
+      }
       if (ref) {
         destroy = function destroy() {
           // 销毁之后 DOM 也不存在了，就不需要取消事件了
@@ -128,7 +132,9 @@ var message = {
     var target = ToastManager.toastList.find(function (toastTuple) {
       return toastTuple[0] === id;
     });
-    target && target[2]();
+    if (target) {
+      target[2]();
+    }
   },
   destroyAll: function destroyAll() {
     return ToastManager.clear();

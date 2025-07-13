@@ -86,7 +86,8 @@ function requestUserInfo() {
 }
 function _requestUserInfo() {
   _requestUserInfo = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default)(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.mark(function _callee3() {
-    var url, requestConfig;
+    var url;
+    var requestConfig;
     return __WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.wrap(function _callee3$(_context3) {
       while (1) {
         switch (_context3.prev = _context3.next) {
@@ -158,7 +159,8 @@ function requestLoginByEmail(_x) {
 }
 function _requestLoginByEmail() {
   _requestLoginByEmail = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default)(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.mark(function _callee6(loginData) {
-    var url, requestConfig;
+    var url;
+    var requestConfig;
     return __WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.wrap(function _callee6$(_context6) {
       while (1) {
         switch (_context6.prev = _context6.next) {
@@ -235,7 +237,9 @@ function requestRegisterByEmail(_x2) {
 }
 function _requestRegisterByEmail() {
   _requestRegisterByEmail = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default)(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.mark(function _callee9(registerData) {
-    var url, pid, requestConfig;
+    var url;
+    var pid;
+    var requestConfig;
     return __WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.wrap(function _callee9$(_context9) {
       while (1) {
         switch (_context9.prev = _context9.next) {
@@ -316,7 +320,8 @@ function requestResetPwd(_x3) {
 }
 function _requestResetPwd() {
   _requestResetPwd = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default)(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.mark(function _callee12(email) {
-    var url, requestConfig;
+    var url;
+    var requestConfig;
     return __WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.wrap(function _callee12$(_context12) {
       while (1) {
         switch (_context12.prev = _context12.next) {
@@ -394,7 +399,8 @@ function requestLogout() {
 }
 function _requestLogout() {
   _requestLogout = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default)(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.mark(function _callee15() {
-    var url, requestConfig;
+    var url;
+    var requestConfig;
     return __WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.wrap(function _callee15$(_context15) {
       while (1) {
         switch (_context15.prev = _context15.next) {
@@ -407,7 +413,8 @@ function _requestLogout() {
             };
             return _context15.abrupt("return", __WEBPACK_IMPORTED_MODULE_2_axios___default(requestConfig).then(/*#__PURE__*/function () {
               var _ref9 = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default)(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.mark(function _callee13(res) {
-                var data, statusText;
+                var data;
+                var statusText;
                 return __WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.wrap(function _callee13$(_context13) {
                   while (1) {
                     switch (_context13.prev = _context13.next) {
@@ -461,7 +468,10 @@ function handleGetUserInfo() {
 }
 function _handleGetUserInfo() {
   _handleGetUserInfo = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default)(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.mark(function _callee16() {
-    var authInfo, nickname, id, avatarUrl;
+    var authInfo;
+    var nickname;
+    var id;
+    var avatarUrl;
     return __WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.wrap(function _callee16$(_context16) {
       while (1) {
         switch (_context16.prev = _context16.next) {
@@ -471,7 +481,9 @@ function _handleGetUserInfo() {
             return requestUserInfo();
           case 3:
             authInfo = _context16.sent;
-            nickname = authInfo.nickname, id = authInfo.id, avatarUrl = authInfo.avatar_url;
+            nickname = authInfo.nickname;
+            id = authInfo.id;
+            avatarUrl = authInfo.avatar_url;
             return _context16.abrupt("return", {
               isSuccess: true,
               authInfo: {
@@ -524,7 +536,10 @@ function handleLoginByEmail(_x4) {
 }
 function _handleLoginByEmail() {
   _handleLoginByEmail = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default)(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.mark(function _callee18(loginData) {
-    var authInfo, nickname, id, avatarUrl;
+    var authInfo;
+    var nickname;
+    var id;
+    var avatarUrl;
     return __WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.wrap(function _callee18$(_context18) {
       while (1) {
         switch (_context18.prev = _context18.next) {
@@ -534,7 +549,9 @@ function _handleLoginByEmail() {
             return requestLoginByEmail(loginData);
           case 3:
             authInfo = _context18.sent;
-            nickname = authInfo.nickname, id = authInfo.id, avatarUrl = authInfo.avatar_url;
+            nickname = authInfo.nickname;
+            id = authInfo.id;
+            avatarUrl = authInfo.avatar_url;
             return _context18.abrupt("return", {
               isSuccess: true,
               authInfo: {

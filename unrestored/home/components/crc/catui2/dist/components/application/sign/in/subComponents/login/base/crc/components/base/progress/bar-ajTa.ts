@@ -7,7 +7,7 @@ import * as __WEBPACK_IMPORTED_MODULE_0_react__ from "react";
 /* harmony import */
 import __WEBPACK_IMPORTED_MODULE_0_react___default from "react";
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_1__themes__ from "../../../../../../../../../../../themes/index-P22Q";
+import * as __WEBPACK_IMPORTED_MODULE_1__themes__ from "../../../../../../../../../../../themes-P22Q";
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_2__style_module_css__ from "./style.module.css-mqD4";
 /* harmony import */
@@ -22,13 +22,13 @@ var getLegalnumber = function getLegalnumber(num, max) {
   return num;
 };
 var ProgressBar = function ProgressBar(props) {
-  var percentage = props.percentage,
-    width = props.width,
-    height = props.height,
-    noText = props.noText,
-    barColor = props.barColor,
-    barBorderStyle = props.barBorderStyle,
-    strokeColor = props.strokeColor;
+  var percentage = props.percentage;
+  var width = props.width;
+  var height = props.height;
+  var noText = props.noText;
+  var barColor = props.barColor;
+  var barBorderStyle = props.barBorderStyle;
+  var strokeColor = props.strokeColor;
   var legalHeight = getLegalnumber(height);
   var underpainting = Object(__WEBPACK_IMPORTED_MODULE_1__themes__.getColor)(Object(__WEBPACK_IMPORTED_MODULE_1__themes__.getTheme)(), __WEBPACK_IMPORTED_MODULE_1__themes__.ColorEnum.TC7, '16');
   var mainColor = Object(__WEBPACK_IMPORTED_MODULE_1__themes__.getColor)(Object(__WEBPACK_IMPORTED_MODULE_1__themes__.getTheme)(), __WEBPACK_IMPORTED_MODULE_1__themes__.ColorEnum.TC0, '16');

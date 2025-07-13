@@ -9,7 +9,7 @@ import * as __WEBPACK_IMPORTED_MODULE_1_react__ from "react";
 /* harmony import */
 import __WEBPACK_IMPORTED_MODULE_1_react___default from "react";
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_2__themes__ from "../../../../../../../themes/index-P22Q";
+import * as __WEBPACK_IMPORTED_MODULE_2__themes__ from "../../../../../../../themes-P22Q";
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_3__utils__ from "./utils-DnTb";
 /* harmony import */
@@ -17,20 +17,20 @@ import * as __WEBPACK_IMPORTED_MODULE_4__style_module_css__ from "./style.module
 /* harmony import */
 import __WEBPACK_IMPORTED_MODULE_4__style_module_css___default from "./style.module.css-cHub";
 var Spinner = function Spinner(props) {
-  var stroke = props.stroke,
-    themeColor = props.themeColor,
-    strokeWidth = props.strokeWidth,
-    size = props.size,
-    margin = props.margin;
+  var stroke = props.stroke;
+  var themeColor = props.themeColor;
+  var strokeWidth = props.strokeWidth;
+  var size = props.size;
+  var margin = props.margin;
   var strokeColor = stroke || 'white';
   var currentTheme = Object(__WEBPACK_IMPORTED_MODULE_2__themes__.getTheme)();
   if (themeColor) {
     if (typeof themeColor === 'string') {
       strokeColor = Object(__WEBPACK_IMPORTED_MODULE_2__themes__.getColor)(currentTheme, Object(__WEBPACK_IMPORTED_MODULE_3__utils__.getNewThemeColorName)(themeColor), '16');
     } else {
-      var _themeColor = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default)(themeColor, 2),
-        dark = _themeColor[0],
-        light = _themeColor[1];
+      var _themeColor = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default)(themeColor, 2);
+      var dark = _themeColor[0];
+      var light = _themeColor[1];
       if (currentTheme === __WEBPACK_IMPORTED_MODULE_2__themes__.ThemeTypeEnum.Yellow) {
         strokeColor = Object(__WEBPACK_IMPORTED_MODULE_2__themes__.getColor)(currentTheme, Object(__WEBPACK_IMPORTED_MODULE_3__utils__.getNewThemeColorName)(light), '16');
       } else {

@@ -19,24 +19,24 @@ import * as __WEBPACK_IMPORTED_MODULE_5__i18n__ from "./i18n-FsOf";
 import * as __WEBPACK_IMPORTED_MODULE_6__style_module_css__ from "./style.module.css-VPet";
 /* harmony import */
 import __WEBPACK_IMPORTED_MODULE_6__style_module_css___default from "./style.module.css-VPet";
-var useState = __WEBPACK_IMPORTED_MODULE_1_react__.useState,
-  useEffect = __WEBPACK_IMPORTED_MODULE_1_react__.useEffect;
+var useState = __WEBPACK_IMPORTED_MODULE_1_react__.useState;
+var useEffect = __WEBPACK_IMPORTED_MODULE_1_react__.useEffect;
 var PhoneBindDialog = function PhoneBindDialog(props) {
-  var _useState = useState(false),
-    _useState2 = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default)(_useState, 2),
-    isRequesting = _useState2[0],
-    setIsrequesting = _useState2[1];
-  var _useState3 = useState(0),
-    _useState4 = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default)(_useState3, 2),
-    smsTimeStamp = _useState4[0],
-    setSmsTimeStamp = _useState4[1];
-  var _useState5 = useState(props.show),
-    _useState6 = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default)(_useState5, 2),
-    show = _useState6[0],
-    setShow = _useState6[1];
-  var onCloseAnimationEnd = props.onCloseAnimationEnd,
-    reportMethod = props.reportMethod,
-    onSuccess = props.onSuccess;
+  var _useState = useState(false);
+  var _useState2 = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default)(_useState, 2);
+  var isRequesting = _useState2[0];
+  var setIsrequesting = _useState2[1];
+  var _useState3 = useState(0);
+  var _useState4 = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default)(_useState3, 2);
+  var smsTimeStamp = _useState4[0];
+  var setSmsTimeStamp = _useState4[1];
+  var _useState5 = useState(props.show);
+  var _useState6 = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default)(_useState5, 2);
+  var show = _useState6[0];
+  var setShow = _useState6[1];
+  var onCloseAnimationEnd = props.onCloseAnimationEnd;
+  var reportMethod = props.reportMethod;
+  var onSuccess = props.onSuccess;
   Object(__WEBPACK_IMPORTED_MODULE_5__i18n__.setLanguage)(props.language || '');
   useEffect(function () {
     setShow(props.show);

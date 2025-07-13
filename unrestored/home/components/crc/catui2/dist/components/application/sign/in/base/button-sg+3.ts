@@ -49,8 +49,8 @@ var _styleModuleImportMap = {
 function _createSuper(Derived) {
   var hasNativeReflectConstruct = _isNativeReflectConstruct();
   return function _createSuperInternal() {
-    var Super = Object(__WEBPACK_IMPORTED_MODULE_5__babel_runtime_helpers_esm_getPrototypeOf__.default)(Derived),
-      result;
+    var Super = Object(__WEBPACK_IMPORTED_MODULE_5__babel_runtime_helpers_esm_getPrototypeOf__.default)(Derived);
+    var result;
     if (hasNativeReflectConstruct) {
       var NewTarget = Object(__WEBPACK_IMPORTED_MODULE_5__babel_runtime_helpers_esm_getPrototypeOf__.default)(this).constructor;
       result = Reflect.construct(Super, arguments, NewTarget);
@@ -61,9 +61,15 @@ function _createSuper(Derived) {
   };
 }
 function _isNativeReflectConstruct() {
-  if (typeof Reflect === "undefined" || !Reflect.construct) return false;
-  if (Reflect.construct.sham) return false;
-  if (typeof Proxy === "function") return true;
+  if (typeof Reflect === "undefined" || !Reflect.construct) {
+    return false;
+  }
+  if (Reflect.construct.sham) {
+    return false;
+  }
+  if (typeof Proxy === "function") {
+    return true;
+  }
   try {
     Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {}));
     return true;
@@ -82,11 +88,11 @@ var Button = /*#__PURE__*/function (_React$Component) {
     }
     _this = _super.call.apply(_super, [this].concat(args));
     Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Object(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default)(_this), "setClass", function () {
-      var _this$props = _this.props,
-        _this$props$type = _this$props.type,
-        type = _this$props$type === void 0 ? 'transparent' : _this$props$type,
-        _this$props$size = _this$props.size,
-        size = _this$props$size === void 0 ? 'md' : _this$props$size;
+      var _this$props = _this.props;
+      var _this$props$type = _this$props.type;
+      var type = _this$props$type === void 0 ? 'transparent' : _this$props$type;
+      var _this$props$size = _this$props.size;
+      var size = _this$props$size === void 0 ? 'md' : _this$props$size;
       return "".concat(type, " size-").concat(size);
     });
     Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Object(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default)(_this), "preventMouseEventWhenDisable", function (type) {
@@ -94,11 +100,11 @@ var Button = /*#__PURE__*/function (_React$Component) {
         if (_this.props.disable) {
           return;
         }
-        var _this$props2 = _this.props,
-          onClick = _this$props2.onClick,
-          onContextMenu = _this$props2.onContextMenu,
-          onMouseEnter = _this$props2.onMouseEnter,
-          onMouseLeave = _this$props2.onMouseLeave;
+        var _this$props2 = _this.props;
+        var onClick = _this$props2.onClick;
+        var onContextMenu = _this$props2.onContextMenu;
+        var onMouseEnter = _this$props2.onMouseEnter;
+        var onMouseLeave = _this$props2.onMouseLeave;
         if (type === 'click' && onClick) {
           onClick(e);
           return;
@@ -129,19 +135,19 @@ var Button = /*#__PURE__*/function (_React$Component) {
   Object(__WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_createClass__.default)(Button, [{
     key: "render",
     value: function render() {
-      var _this$props3 = this.props,
-        bgColor = _this$props3.bgColor,
-        tooltip = _this$props3.tooltip,
-        width = _this$props3.width,
-        height = _this$props3.height,
-        dataReport = _this$props3.dataReport,
-        margin = _this$props3.margin,
-        isSelected = _this$props3.isSelected,
-        borderRadius = _this$props3.borderRadius,
-        disable = _this$props3.disable,
-        className = _this$props3.className,
-        padding = _this$props3.padding,
-        wrapClassName = _this$props3.wrapClassName;
+      var _this$props3 = this.props;
+      var bgColor = _this$props3.bgColor;
+      var tooltip = _this$props3.tooltip;
+      var width = _this$props3.width;
+      var height = _this$props3.height;
+      var dataReport = _this$props3.dataReport;
+      var margin = _this$props3.margin;
+      var isSelected = _this$props3.isSelected;
+      var borderRadius = _this$props3.borderRadius;
+      var disable = _this$props3.disable;
+      var className = _this$props3.className;
+      var padding = _this$props3.padding;
+      var wrapClassName = _this$props3.wrapClassName;
       return /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_8_react___default.createElement("div", {
         className: (wrapClassName ? wrapClassName + " " : "") + "CUI-button-btn-wrap",
         style: {

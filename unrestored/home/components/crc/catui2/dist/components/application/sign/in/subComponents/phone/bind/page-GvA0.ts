@@ -61,12 +61,12 @@ var _styleModuleImportMap = {
   }
 };
 var PhoneBindPageContainer = function PhoneBindPageContainer(props) {
-  var smsTimeStamp = props.smsTimeStamp,
-    setSmsTimeStamp = props.setSmsTimeStamp,
-    isRequesting = props.isRequesting,
-    setIsRequesting = props.setIsRequesting,
-    reportMethod = props.reportMethod,
-    onSuccess = props.onSuccess;
+  var smsTimeStamp = props.smsTimeStamp;
+  var setSmsTimeStamp = props.setSmsTimeStamp;
+  var isRequesting = props.isRequesting;
+  var setIsRequesting = props.setIsRequesting;
+  var reportMethod = props.reportMethod;
+  var onSuccess = props.onSuccess;
   return /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1_react__.createElement(__WEBPACK_IMPORTED_MODULE_1_react__.Fragment, null, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1_react__.createElement("div", {
     className: __WEBPACK_IMPORTED_MODULE_0_babel_plugin_react_css_modules_dist_browser_getClassName___default('content', _styleModuleImportMap, {
       "autoResolveMultipleImports": true,

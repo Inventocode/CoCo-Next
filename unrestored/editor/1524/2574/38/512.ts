@@ -1,0 +1,1 @@
+module.exports = n.p + "static/media/big-logo.06b80465.png";

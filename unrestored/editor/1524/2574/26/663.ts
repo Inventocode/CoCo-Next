@@ -1,0 +1,1 @@
+module.exports = n.p + "static/media/dict.e1b9d957.svg";

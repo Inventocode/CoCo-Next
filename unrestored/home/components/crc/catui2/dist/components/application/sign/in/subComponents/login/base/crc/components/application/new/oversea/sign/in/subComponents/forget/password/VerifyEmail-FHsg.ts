@@ -78,27 +78,27 @@ var _styleModuleImportMap = {
     "text-second": "CUI-new-oversea-sign-in-dialog-text-second"
   }
 };
-var useState = __WEBPACK_IMPORTED_MODULE_4_react__.useState,
-  useEffect = __WEBPACK_IMPORTED_MODULE_4_react__.useEffect,
-  useCallback = __WEBPACK_IMPORTED_MODULE_4_react__.useCallback,
-  Fragment = __WEBPACK_IMPORTED_MODULE_4_react__.Fragment,
-  useRef = __WEBPACK_IMPORTED_MODULE_4_react__.useRef;
+var useState = __WEBPACK_IMPORTED_MODULE_4_react__.useState;
+var useEffect = __WEBPACK_IMPORTED_MODULE_4_react__.useEffect;
+var useCallback = __WEBPACK_IMPORTED_MODULE_4_react__.useCallback;
+var Fragment = __WEBPACK_IMPORTED_MODULE_4_react__.Fragment;
+var useRef = __WEBPACK_IMPORTED_MODULE_4_react__.useRef;
 var emailInputEl;
 var codeInputEl;
 var passwordInputEl;
 var VerifyEmailComponent = function VerifyEmailComponent(props) {
-  var switchView = props.switchView,
-    isRequesting = props.isRequesting,
-    setIsRequesting = props.setIsRequesting,
-    setResetSuccess = props.setResetSuccess;
-  var _useState = useState(true),
-    _useState2 = Object(__WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default)(_useState, 2),
-    disableReset = _useState2[0],
-    setDisableReset = _useState2[1];
-  var _useState3 = useState(undefined),
-    _useState4 = Object(__WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default)(_useState3, 2),
-    error = _useState4[0],
-    setError = _useState4[1];
+  var switchView = props.switchView;
+  var isRequesting = props.isRequesting;
+  var setIsRequesting = props.setIsRequesting;
+  var setResetSuccess = props.setResetSuccess;
+  var _useState = useState(true);
+  var _useState2 = Object(__WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default)(_useState, 2);
+  var disableReset = _useState2[0];
+  var setDisableReset = _useState2[1];
+  var _useState3 = useState(undefined);
+  var _useState4 = Object(__WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default)(_useState3, 2);
+  var error = _useState4[0];
+  var setError = _useState4[1];
   var isDestroy = useRef(false);
   var isEmailErr = useCallback(function () {
     return error && error.type === __WEBPACK_IMPORTED_MODULE_9__auth__.AuthErrorType.EMAIL;
@@ -109,14 +109,14 @@ var VerifyEmailComponent = function VerifyEmailComponent(props) {
   var isPasswordErr = useCallback(function () {
     return error && error.type === __WEBPACK_IMPORTED_MODULE_9__auth__.AuthErrorType.PWD;
   }, [error]);
-  var _useState5 = useState(0),
-    _useState6 = Object(__WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default)(_useState5, 2),
-    smsTimeStamp = _useState6[0],
-    setSmsTimeStamp = _useState6[1];
-  var _useState7 = useState(0),
-    _useState8 = Object(__WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default)(_useState7, 2),
-    smsCountDown = _useState8[0],
-    setSmsCountDown = _useState8[1];
+  var _useState5 = useState(0);
+  var _useState6 = Object(__WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default)(_useState5, 2);
+  var smsTimeStamp = _useState6[0];
+  var setSmsTimeStamp = _useState6[1];
+  var _useState7 = useState(0);
+  var _useState8 = Object(__WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default)(_useState7, 2);
+  var smsCountDown = _useState8[0];
+  var setSmsCountDown = _useState8[1];
   var isOtherErr = function isOtherErr() {
     return error && error.type === __WEBPACK_IMPORTED_MODULE_9__auth__.AuthErrorType.OTHER;
   };
@@ -155,7 +155,10 @@ var VerifyEmailComponent = function VerifyEmailComponent(props) {
   }, [isEmailErr, isCodeErr, isPasswordErr, smsTimeStamp]);
   var onResetClick = /*#__PURE__*/function () {
     var _ref = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default)(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_3__babel_runtime_regenerator___default.mark(function _callee() {
-      var email, code, password, result;
+      var email;
+      var code;
+      var password;
+      var result;
       return __WEBPACK_IMPORTED_MODULE_3__babel_runtime_regenerator___default.wrap(function _callee$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
@@ -224,7 +227,8 @@ var VerifyEmailComponent = function VerifyEmailComponent(props) {
   }();
   var onGetCodeClick = /*#__PURE__*/function () {
     var _ref2 = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default)(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_3__babel_runtime_regenerator___default.mark(function _callee2() {
-      var email, result;
+      var email;
+      var result;
       return __WEBPACK_IMPORTED_MODULE_3__babel_runtime_regenerator___default.wrap(function _callee2$(_context2) {
         while (1) {
           switch (_context2.prev = _context2.next) {
@@ -298,7 +302,9 @@ var VerifyEmailComponent = function VerifyEmailComponent(props) {
     isError: isEmailErr(),
     onChange: function onChange() {
       updateResetBtn();
-      isEmailErr() && setError(undefined);
+      if (isEmailErr()) {
+        setError(undefined);
+      }
     },
     label: Object(__WEBPACK_IMPORTED_MODULE_11__i18n__.getLanguage)('sign_in_dialog/placeholder/email'),
     autoComplete: "on",
@@ -306,7 +312,9 @@ var VerifyEmailComponent = function VerifyEmailComponent(props) {
       emailInputEl = el;
     },
     onBlur: function onBlur() {
-      props.reportMethod && props.reportMethod('用户信息-重置邮箱密码');
+      if (props.reportMethod) {
+        props.reportMethod('用户信息-重置邮箱密码');
+      }
     }
   }), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_4_react__.createElement("div", {
     className: "CUI-new-oversea-sign-in-dialog-input-error"
@@ -319,13 +327,17 @@ var VerifyEmailComponent = function VerifyEmailComponent(props) {
     isError: isCodeErr(),
     onChange: function onChange() {
       updateResetBtn();
-      isCodeErr() && setError(undefined);
+      if (isCodeErr()) {
+        setError(undefined);
+      }
     },
     label: Object(__WEBPACK_IMPORTED_MODULE_11__i18n__.getLanguage)('sign_in_dialog/placeholder/code'),
     autoComplete: "off",
     maxLength: 10,
     getInputEl: function getInputEl(el) {
-      el && (codeInputEl = el);
+      if (el) {
+        codeInputEl = el;
+      }
     },
     iconsSuffix: renderGetCode()
   }), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_4_react__.createElement("div", {
@@ -342,7 +354,9 @@ var VerifyEmailComponent = function VerifyEmailComponent(props) {
     onEnterDown: onResetClick,
     onChange: function onChange() {
       updateResetBtn();
-      isPasswordErr() && passwordInputEl.value && setError(undefined);
+      if (isPasswordErr() && passwordInputEl.value) {
+        setError(undefined);
+      }
     },
     type: "new-password",
     label: Object(__WEBPACK_IMPORTED_MODULE_11__i18n__.getLanguage)('sign_in_dialog/placeholder/password'),

@@ -18,8 +18,8 @@ import __WEBPACK_IMPORTED_MODULE_2__style_module_css___default from "./style.mod
  * - 其他: 使用filter blur实现虚化（X5内核对backdrop不支持）
  */
 var PlayerBlurBackground = function PlayerBlurBackground(props) {
-  var imgSrc = props.imgSrc,
-    style = props.style;
+  var imgSrc = props.imgSrc;
+  var style = props.style;
   var outterStyle = Object.assign({
     backgroundImage: __WEBPACK_IMPORTED_MODULE_1__common_util__.isIos ? "url(".concat(imgSrc, ")") : '',
     backgroundColor: __WEBPACK_IMPORTED_MODULE_1__common_util__.isCssFilterBlurCompatible ? 'black' : ''

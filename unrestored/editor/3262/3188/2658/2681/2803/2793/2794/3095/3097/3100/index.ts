@@ -1,0 +1,1 @@
+e.exports.browserVersions = require("./3101");

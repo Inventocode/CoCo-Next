@@ -1,0 +1,1 @@
+module.exports = n.p + "static/media/phoneShake.110aec77.svg";

@@ -34,16 +34,16 @@ var Fragment = __WEBPACK_IMPORTED_MODULE_3_react__.Fragment;
 var passwordInputEl;
 var rePasswordInputEl;
 var SetPasswordComponent = function SetPasswordComponent(props) {
-  var isRequesting = props.isRequesting,
-    captchaTicket = props.captchaTicket,
-    setIsRequesting = props.setIsRequesting,
-    reportMethod = props.reportMethod,
-    onRegisterSuccess = props.onRegisterSuccess,
-    setIsRegisterSuccess = props.setIsRegisterSuccess;
-  var _useState = Object(__WEBPACK_IMPORTED_MODULE_3_react__.useState)(undefined),
-    _useState2 = Object(__WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default)(_useState, 2),
-    error = _useState2[0],
-    setError = _useState2[1];
+  var isRequesting = props.isRequesting;
+  var captchaTicket = props.captchaTicket;
+  var setIsRequesting = props.setIsRequesting;
+  var reportMethod = props.reportMethod;
+  var onRegisterSuccess = props.onRegisterSuccess;
+  var setIsRegisterSuccess = props.setIsRegisterSuccess;
+  var _useState = Object(__WEBPACK_IMPORTED_MODULE_3_react__.useState)(undefined);
+  var _useState2 = Object(__WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default)(_useState, 2);
+  var error = _useState2[0];
+  var setError = _useState2[1];
   var isPasswordErr = Object(__WEBPACK_IMPORTED_MODULE_3_react__.useCallback)(function () {
     return error && error.type === __WEBPACK_IMPORTED_MODULE_7__auth__.AuthErrorType.PWD;
   }, [error]);
@@ -53,10 +53,10 @@ var SetPasswordComponent = function SetPasswordComponent(props) {
   var isOtherErr = function isOtherErr() {
     return error && error.type === __WEBPACK_IMPORTED_MODULE_7__auth__.AuthErrorType.OTHER;
   };
-  var _useState3 = Object(__WEBPACK_IMPORTED_MODULE_3_react__.useState)(true),
-    _useState4 = Object(__WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default)(_useState3, 2),
-    disableRegister = _useState4[0],
-    setDisableRegister = _useState4[1];
+  var _useState3 = Object(__WEBPACK_IMPORTED_MODULE_3_react__.useState)(true);
+  var _useState4 = Object(__WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default)(_useState3, 2);
+  var disableRegister = _useState4[0];
+  var setDisableRegister = _useState4[1];
   var updateRegisterBtn = function updateRegisterBtn() {
     setDisableRegister(passwordInputEl.value.length < 6 || rePasswordInputEl.value.length < 6);
   };
@@ -107,7 +107,9 @@ var SetPasswordComponent = function SetPasswordComponent(props) {
               if (!result.isSuccess) {
                 setError(result.error);
               } else {
-                onRegisterSuccess && onRegisterSuccess(result.authInfo, true);
+                if (onRegisterSuccess) {
+                  onRegisterSuccess(result.authInfo, true);
+                }
                 setIsRegisterSuccess();
               }
             case 15:
@@ -135,7 +137,9 @@ var SetPasswordComponent = function SetPasswordComponent(props) {
     isError: isPasswordErr(),
     onChange: function onChange() {
       updateRegisterBtn();
-      isPasswordErr() && passwordInputEl.value && setError(undefined);
+      if (isPasswordErr() && passwordInputEl.value) {
+        setError(undefined);
+      }
     },
     type: "password",
     label: Object(__WEBPACK_IMPORTED_MODULE_8__i18n__.getLanguage)('sign_in_dialog/placeholder/password'),
@@ -145,7 +149,9 @@ var SetPasswordComponent = function SetPasswordComponent(props) {
       passwordInputEl = el;
     },
     onBlur: function onBlur() {
-      reportMethod && reportMethod('用户信息-注册设置密码');
+      if (reportMethod) {
+        reportMethod('用户信息-注册设置密码');
+      }
     }
   }), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_3_react__.createElement("div", {
     className: "CUI-new-oversea-sign-in-dialog-input-error"
@@ -163,7 +169,9 @@ var SetPasswordComponent = function SetPasswordComponent(props) {
     isError: isRePasswordErr(),
     onChange: function onChange() {
       updateRegisterBtn();
-      isRePasswordErr() && rePasswordInputEl.value && setError(undefined);
+      if (isRePasswordErr() && rePasswordInputEl.value) {
+        setError(undefined);
+      }
     },
     type: "password",
     label: Object(__WEBPACK_IMPORTED_MODULE_8__i18n__.getLanguage)('sign_in_dialog/confirm_password'),
@@ -173,7 +181,9 @@ var SetPasswordComponent = function SetPasswordComponent(props) {
       rePasswordInputEl = el;
     },
     onBlur: function onBlur() {
-      props.reportMethod && props.reportMethod('用户信息-注册确认密码');
+      if (props.reportMethod) {
+        props.reportMethod('用户信息-注册确认密码');
+      }
     }
   }), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_3_react__.createElement("div", {
     className: "CUI-new-oversea-sign-in-dialog-input-error"

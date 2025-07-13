@@ -55,8 +55,8 @@ var _styleModuleImportMap = {
 function _createSuper(Derived) {
   var hasNativeReflectConstruct = _isNativeReflectConstruct();
   return function _createSuperInternal() {
-    var Super = Object(__WEBPACK_IMPORTED_MODULE_5__babel_runtime_helpers_esm_getPrototypeOf__.default)(Derived),
-      result;
+    var Super = Object(__WEBPACK_IMPORTED_MODULE_5__babel_runtime_helpers_esm_getPrototypeOf__.default)(Derived);
+    var result;
     if (hasNativeReflectConstruct) {
       var NewTarget = Object(__WEBPACK_IMPORTED_MODULE_5__babel_runtime_helpers_esm_getPrototypeOf__.default)(this).constructor;
       result = Reflect.construct(Super, arguments, NewTarget);
@@ -67,9 +67,15 @@ function _createSuper(Derived) {
   };
 }
 function _isNativeReflectConstruct() {
-  if (typeof Reflect === "undefined" || !Reflect.construct) return false;
-  if (Reflect.construct.sham) return false;
-  if (typeof Proxy === "function") return true;
+  if (typeof Reflect === "undefined" || !Reflect.construct) {
+    return false;
+  }
+  if (Reflect.construct.sham) {
+    return false;
+  }
+  if (typeof Proxy === "function") {
+    return true;
+  }
   try {
     Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {}));
     return true;
@@ -93,10 +99,14 @@ var Menu = /*#__PURE__*/function (_React$Component) {
     Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Object(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default)(_this), "menu", null);
     Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Object(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default)(_this), "subMenuHideParent", void 0);
     Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Object(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default)(_this), "showMenu", function () {
-      _this.menu && (_this.menu.style.display = 'block');
+      if (_this.menu) {
+        _this.menu.style.display = 'block';
+      }
     });
     Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Object(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default)(_this), "hideMenu", function () {
-      _this.menu && (_this.menu.style.display = 'none');
+      if (_this.menu) {
+        _this.menu.style.display = 'none';
+      }
     });
     Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Object(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default)(_this), "registerListeners", function (show) {
       var hideMenu = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
@@ -104,12 +114,16 @@ var Menu = /*#__PURE__*/function (_React$Component) {
         return;
       }
       if (show === MenuListShowType.HOVER || show === 'subMenu') {
-        hideMenu && _this.hideMenu();
+        if (hideMenu) {
+          _this.hideMenu();
+        }
         _this.menu.parentElement.addEventListener('mouseenter', _this.showMenu);
         _this.menu.parentElement.addEventListener('mouseleave', _this.hideMenu);
       }
       if (show === MenuListShowType.CLICK) {
-        hideMenu && _this.hideMenu();
+        if (hideMenu) {
+          _this.hideMenu();
+        }
         _this.menu.parentElement.addEventListener('click', _this.showMenu);
         _this.menu.parentElement.addEventListener('mouseleave', _this.hideMenu);
       }
@@ -118,7 +132,9 @@ var Menu = /*#__PURE__*/function (_React$Component) {
       if (!reportContent) {
         return;
       }
-      _this.props.reportEvent && _this.props.reportEvent(reportContent);
+      if (_this.props.reportEvent) {
+        _this.props.reportEvent(reportContent);
+      }
     });
     Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Object(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default)(_this), "unregisterListeners", function (show) {
       var _this$menu;
@@ -126,10 +142,24 @@ var Menu = /*#__PURE__*/function (_React$Component) {
         return;
       }
       if (show === MenuListShowType.HOVER || show === MenuListShowType.CLICK || show === 'subMenu') {
-        var _this$menu2, _this$menu3, _this$menu4;
-        (_this$menu2 = _this.menu) === null || _this$menu2 === void 0 ? void 0 : _this$menu2.parentElement.removeEventListener('mouseenter', _this.showMenu);
-        (_this$menu3 = _this.menu) === null || _this$menu3 === void 0 ? void 0 : _this$menu3.parentElement.removeEventListener('mouseleave', _this.hideMenu);
-        (_this$menu4 = _this.menu) === null || _this$menu4 === void 0 ? void 0 : _this$menu4.parentElement.removeEventListener('click', _this.showMenu);
+        var _this$menu2;
+        var _this$menu3;
+        var _this$menu4;
+        if ((_this$menu2 = _this.menu) === null || _this$menu2 === void 0) {
+          void 0;
+        } else {
+          _this$menu2.parentElement.removeEventListener('mouseenter', _this.showMenu);
+        }
+        if ((_this$menu3 = _this.menu) === null || _this$menu3 === void 0) {
+          void 0;
+        } else {
+          _this$menu3.parentElement.removeEventListener('mouseleave', _this.hideMenu);
+        }
+        if ((_this$menu4 = _this.menu) === null || _this$menu4 === void 0) {
+          void 0;
+        } else {
+          _this$menu4.parentElement.removeEventListener('click', _this.showMenu);
+        }
       }
     });
     if (_this.props.show === 'subMenu') {
@@ -189,7 +219,9 @@ var Menu = /*#__PURE__*/function (_React$Component) {
       if (item.disable) {
         return;
       }
-      item.onClick && item.onClick(e);
+      if (item.onClick) {
+        item.onClick(e);
+      }
       if (this.props.show === 'subMenu' && this.props.subMenuHideParent) {
         this.props.subMenuHideParent();
       }
@@ -201,12 +233,12 @@ var Menu = /*#__PURE__*/function (_React$Component) {
     key: "render",
     value: function render() {
       var _this3 = this;
-      var _this$props = this.props,
-        items = _this$props.items,
-        position = _this$props.position,
-        mask = _this$props.mask,
-        show = _this$props.show,
-        checkedStyle = _this$props.checkedStyle;
+      var _this$props = this.props;
+      var items = _this$props.items;
+      var position = _this$props.position;
+      var mask = _this$props.mask;
+      var show = _this$props.show;
+      var checkedStyle = _this$props.checkedStyle;
       var isOneOption = items.length === 1 ? true : false;
       var dividerNumber = 0;
       return /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_8_react___default.createElement("div", {

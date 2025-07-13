@@ -18,9 +18,9 @@ Object(__WEBPACK_IMPORTED_MODULE_1_react_three_fiber__.extend)({
 var Controls = function Controls(_ref) {
   var onDeviceOrientation = _ref.onDeviceOrientation;
   var ref = __WEBPACK_IMPORTED_MODULE_0_react__.useRef();
-  var _useThree = Object(__WEBPACK_IMPORTED_MODULE_1_react_three_fiber__.useThree)(),
-    camera = _useThree.camera,
-    gl = _useThree.gl;
+  var _useThree = Object(__WEBPACK_IMPORTED_MODULE_1_react_three_fiber__.useThree)();
+  var camera = _useThree.camera;
+  var gl = _useThree.gl;
   Object(__WEBPACK_IMPORTED_MODULE_0_react__.useEffect)(function () {
     gl.domElement.style.outline = 'none';
     var orbitControls = ref.current;
@@ -34,7 +34,11 @@ var Controls = function Controls(_ref) {
   }, [camera, gl]);
   Object(__WEBPACK_IMPORTED_MODULE_1_react_three_fiber__.useFrame)(function () {
     var _ref$current;
-    (_ref$current = ref.current) === null || _ref$current === void 0 ? void 0 : _ref$current.update();
+    if ((_ref$current = ref.current) === null || _ref$current === void 0) {
+      void 0;
+    } else {
+      _ref$current.update();
+    }
     if (!onDeviceOrientation) {
       return;
     }

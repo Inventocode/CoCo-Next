@@ -15,7 +15,10 @@ import * as __WEBPACK_IMPORTED_MODULE_2__button__ from "./button-sg+3";
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_3____ from "./dialog-ymrb";
 var createWarning = function createWarning(config) {
-  var _config$cancelText, _config$okText, _config$closeBtn, _config$maskClose;
+  var _config$cancelText;
+  var _config$okText;
+  var _config$closeBtn;
+  var _config$maskClose;
   var btn = /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react___default.createElement(__WEBPACK_IMPORTED_MODULE_0_react___default.Fragment, null, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react___default.createElement(__WEBPACK_IMPORTED_MODULE_2__button__.Button, {
     width: 110,
     height: 36,

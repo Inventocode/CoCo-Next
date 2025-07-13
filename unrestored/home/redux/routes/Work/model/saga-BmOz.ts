@@ -13,7 +13,7 @@ import * as __WEBPACK_IMPORTED_MODULE_1_lodash_cloneDeep__ from "lodash/cloneDee
 /* harmony import */
 import __WEBPACK_IMPORTED_MODULE_1_lodash_cloneDeep___default from "lodash/cloneDeep";
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_2_redux_saga__ from "redux-saga/effects";
+import * as __WEBPACK_IMPORTED_MODULE_2_redux_saga__ from "redux-saga";
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_3_redux_saga_effects__ from "redux-saga/effects";
 /* harmony import */
@@ -34,16 +34,16 @@ import * as __WEBPACK_IMPORTED_MODULE_9__utils_uploader__ from "./utils/uploader
 import * as __WEBPACK_IMPORTED_MODULE_10__interface__ from "../../../../Work/model/interface-hC2z";
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_11__Home_model_actions__ from "../../../../Home/model/actions-twBc";
-var _marked = /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.mark(handleGetCreateWorkList),
-  _marked2 = /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.mark(handleGetCollWorkList),
-  _marked3 = /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.mark(handleGetDeleteWorkList),
-  _marked4 = /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.mark(handleQuitCollWork),
-  _marked5 = /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.mark(handleDeleteWork),
-  _marked6 = /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.mark(handleRecoverDeleteWork),
-  _marked7 = /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.mark(handleAgainDeleteWork),
-  _marked8 = /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.mark(handleClearDeleteWork),
-  _marked9 = /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.mark(handleRenameWork),
-  _marked10 = /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.mark(workSaga);
+var _marked = /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.mark(handleGetCreateWorkList);
+var _marked2 = /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.mark(handleGetCollWorkList);
+var _marked3 = /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.mark(handleGetDeleteWorkList);
+var _marked4 = /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.mark(handleQuitCollWork);
+var _marked5 = /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.mark(handleDeleteWork);
+var _marked6 = /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.mark(handleRecoverDeleteWork);
+var _marked7 = /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.mark(handleAgainDeleteWork);
+var _marked8 = /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.mark(handleClearDeleteWork);
+var _marked9 = /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.mark(handleRenameWork);
+var _marked10 = /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.mark(workSaga);
 var __awaiter = this && this.__awaiter || function (thisArg, _arguments, P, generator) {
   return new (P || (P = Promise))(function (resolve, reject) {
     function fulfilled(value) {
@@ -61,9 +61,13 @@ var __awaiter = this && this.__awaiter || function (thisArg, _arguments, P, gene
       }
     }
     function step(result) {
-      result.done ? resolve(result.value) : new P(function (resolve) {
+      if (result.done) {
         resolve(result.value);
-      }).then(fulfilled, rejected);
+      } else {
+        new P(function (resolve) {
+          resolve(result.value);
+        }).then(fulfilled, rejected);
+      }
     }
     step((generator = generator.apply(thisArg, _arguments || [])).next());
   });
@@ -71,12 +75,20 @@ var __awaiter = this && this.__awaiter || function (thisArg, _arguments, P, gene
 var LIMIT = 40;
 // 我创建的作品
 function handleGetCreateWorkList(action) {
-  var _action$payload, name, offset, url, result, data, createWorkList;
+  var _action$payload;
+  var name;
+  var offset;
+  var url;
+  var result;
+  var data;
+  var createWorkList;
   return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.wrap(function handleGetCreateWorkList$(_context) {
     while (1) {
       switch (_context.prev = _context.next) {
         case 0:
-          _action$payload = action.payload, name = _action$payload.name, offset = _action$payload.offset;
+          _action$payload = action.payload;
+          name = _action$payload.name;
+          offset = _action$payload.offset;
           url = Object(__WEBPACK_IMPORTED_MODULE_8__utils__.get_api_prefix)() + '/coconut/web/work/list?status=1&offset=' + offset * LIMIT + '&limit=' + LIMIT;
           if (name) {
             url += '&name=' + name;
@@ -88,7 +100,9 @@ function handleGetCreateWorkList(action) {
           }).then(function (res) {
             return res.data;
           }).catch(function (err) {
-            false && console.log('fetch create work list failed, detail:', err);
+            if (false) {
+              console.log('fetch create work list failed, detail:', err);
+            }
             throw err;
           });
         case 6:
@@ -143,7 +157,9 @@ function handleGetCreateWorkList(action) {
         case 33:
           _context.prev = 33;
           _context.t2 = _context['catch'](3);
-          false && console.log('fetch create work list error, detail', _context.t2);
+          if (false) {
+            console.log('fetch create work list error, detail', _context.t2);
+          }
         case 36:
         case 'end':
           return _context.stop();
@@ -153,18 +169,24 @@ function handleGetCreateWorkList(action) {
 }
 // 我参与的作品
 function handleGetCollWorkList(action) {
-  var _action$payload2, name, offset, url, result, data, collWorkList;
+  var _action$payload2;
+  var name;
+  var offset;
+  var url;
+  var result;
+  var data;
+  var collWorkList;
   return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.wrap(function handleGetCollWorkList$(_context2) {
     while (1) {
       switch (_context2.prev = _context2.next) {
         case 0:
-          _action$payload2 = action.payload, name = _action$payload2.name, offset = _action$payload2.offset;
-          // let url = `${get_api_prefix()}/coconut/web/work/list/coll_works?offset=${offset}&limit=${LIMIT}`;
+          _action$payload2 = action.payload;
+          name = _action$payload2.name;
+          offset = _action$payload2.offset; // let url = `${get_api_prefix()}/coconut/web/work/list/coll_works?offset=${offset}&limit=${LIMIT}`;
           // if (name) {
           //   url += `&name=${name}`;
           // }
           // TODO 我参与的 暂时用老接口
-
           url = Object(__WEBPACK_IMPORTED_MODULE_8__utils__.get_coll_prefix)() + '/coll/coco/coll_works?current_page=' + offset + '&page_size=' + LIMIT;
           _context2.prev = 2;
           _context2.next = 5;
@@ -173,7 +195,9 @@ function handleGetCollWorkList(action) {
           }).then(function (res) {
             return res.data;
           }).catch(function (err) {
-            false && console.log('fetch coll work list failed, detail:', err);
+            if (false) {
+              console.log('fetch coll work list failed, detail:', err);
+            }
             throw err;
           });
         case 5:
@@ -228,7 +252,9 @@ function handleGetCollWorkList(action) {
         case 32:
           _context2.prev = 32;
           _context2.t2 = _context2['catch'](2);
-          false && console.log('fetch coll work list error, detail', _context2.t2);
+          if (false) {
+            console.log('fetch coll work list error, detail', _context2.t2);
+          }
         case 35:
         case 'end':
           return _context2.stop();
@@ -238,7 +264,11 @@ function handleGetCollWorkList(action) {
 }
 // 回收站作品
 function handleGetDeleteWorkList(action) {
-  var offset, url, result, data, deleteWorkList;
+  var offset;
+  var url;
+  var result;
+  var data;
+  var deleteWorkList;
   return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.wrap(function handleGetDeleteWorkList$(_context3) {
     while (1) {
       switch (_context3.prev = _context3.next) {
@@ -252,7 +282,9 @@ function handleGetDeleteWorkList(action) {
           }).then(function (res) {
             return res.data;
           }).catch(function (err) {
-            false && console.log('fetch delete work list failed, detail:', err);
+            if (false) {
+              console.log('fetch delete work list failed, detail:', err);
+            }
             throw err;
           });
         case 5:
@@ -307,7 +339,9 @@ function handleGetDeleteWorkList(action) {
         case 32:
           _context3.prev = 32;
           _context3.t2 = _context3['catch'](2);
-          false && console.log('fetch delete work list error, detail', _context3.t2);
+          if (false) {
+            console.log('fetch delete work list error, detail', _context3.t2);
+          }
         case 35:
         case 'end':
           return _context3.stop();
@@ -317,12 +351,24 @@ function handleGetDeleteWorkList(action) {
 }
 // 退出协作
 function handleQuitCollWork(action) {
-  var _action$payload3, id, userId, workType, url, result, homeWorkList, list, collWorkList, _list;
+  var _action$payload3;
+  var id;
+  var userId;
+  var workType;
+  var url;
+  var result;
+  var homeWorkList;
+  var list;
+  var collWorkList;
+  var _list;
   return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.wrap(function handleQuitCollWork$(_context4) {
     while (1) {
       switch (_context4.prev = _context4.next) {
         case 0:
-          _action$payload3 = action.payload, id = _action$payload3.id, userId = _action$payload3.userId, workType = _action$payload3.workType;
+          _action$payload3 = action.payload;
+          id = _action$payload3.id;
+          userId = _action$payload3.userId;
+          workType = _action$payload3.workType;
           url = Object(__WEBPACK_IMPORTED_MODULE_8__utils__.get_coll_prefix)() + '/coll/coco/collaborator/' + id + '?work_id=' + id + '&coll_user_id=' + userId;
           _context4.prev = 2;
           _context4.next = 5;
@@ -331,7 +377,9 @@ function handleQuitCollWork(action) {
           }).then(function (res) {
             return res.data;
           }).catch(function (err) {
-            false && console.log('fetch quit coll work failed, detail:', err);
+            if (false) {
+              console.log('fetch quit coll work failed, detail:', err);
+            }
             throw err;
           });
         case 5:
@@ -377,7 +425,9 @@ function handleQuitCollWork(action) {
         case 27:
           _context4.prev = 27;
           _context4.t4 = _context4['catch'](2);
-          false && console.log('fetch quit coll work error, detail', _context4.t4);
+          if (false) {
+            console.log('fetch quit coll work error, detail', _context4.t4);
+          }
         case 30:
         case 'end':
           return _context4.stop();
@@ -387,12 +437,26 @@ function handleQuitCollWork(action) {
 }
 // 删除作品到回收站
 function handleDeleteWork(action) {
-  var _action$payload4, id, workType, callback, url, result, homeWorkList, list, createWorkList, _list2, collWorkList, _list3;
+  var _action$payload4;
+  var id;
+  var workType;
+  var callback;
+  var url;
+  var result;
+  var homeWorkList;
+  var list;
+  var createWorkList;
+  var _list2;
+  var collWorkList;
+  var _list3;
   return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.wrap(function handleDeleteWork$(_context5) {
     while (1) {
       switch (_context5.prev = _context5.next) {
         case 0:
-          _action$payload4 = action.payload, id = _action$payload4.id, workType = _action$payload4.workType, callback = _action$payload4.callback;
+          _action$payload4 = action.payload;
+          id = _action$payload4.id;
+          workType = _action$payload4.workType;
+          callback = _action$payload4.callback;
           url = Object(__WEBPACK_IMPORTED_MODULE_8__utils__.get_api_prefix)() + '/coconut/web/work/' + id;
           _context5.prev = 2;
           _context5.next = 5;
@@ -401,7 +465,9 @@ function handleDeleteWork(action) {
           }).then(function (res) {
             return res.data;
           }).catch(function (err) {
-            false && console.log('fetch delete work failed, detail:', err);
+            if (false) {
+              console.log('fetch delete work failed, detail:', err);
+            }
             throw err;
           });
         case 5:
@@ -481,7 +547,9 @@ function handleDeleteWork(action) {
         case 42:
           _context5.prev = 42;
           _context5.t6 = _context5['catch'](2);
-          false && console.log('fetch delete work error, detail', _context5.t6);
+          if (false) {
+            console.log('fetch delete work error, detail', _context5.t6);
+          }
           _context5.next = 47;
           return Object(__WEBPACK_IMPORTED_MODULE_3_redux_saga_effects__.put)(Object(__WEBPACK_IMPORTED_MODULE_6__redux_main_actions__.setCommonToastAction)({
             visible: true,
@@ -496,12 +564,20 @@ function handleDeleteWork(action) {
 }
 // 从回收站恢复作品
 function handleRecoverDeleteWork(action) {
-  var _action$payload5, id, callback, url, result, deleteWorkList, list;
+  var _action$payload5;
+  var id;
+  var callback;
+  var url;
+  var result;
+  var deleteWorkList;
+  var list;
   return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.wrap(function handleRecoverDeleteWork$(_context6) {
     while (1) {
       switch (_context6.prev = _context6.next) {
         case 0:
-          _action$payload5 = action.payload, id = _action$payload5.id, callback = _action$payload5.callback;
+          _action$payload5 = action.payload;
+          id = _action$payload5.id;
+          callback = _action$payload5.callback;
           url = Object(__WEBPACK_IMPORTED_MODULE_8__utils__.get_api_prefix)() + '/coconut/web/work/' + id + '/recover';
           _context6.prev = 2;
           _context6.next = 5;
@@ -510,7 +586,9 @@ function handleRecoverDeleteWork(action) {
           }).then(function (res) {
             return res.data;
           }).catch(function (err) {
-            false && console.log('fetch delete work failed, detail:', err);
+            if (false) {
+              console.log('fetch delete work failed, detail:', err);
+            }
             throw err;
           });
         case 5:
@@ -531,7 +609,9 @@ function handleRecoverDeleteWork(action) {
           _context6.next = 15;
           return Object(__WEBPACK_IMPORTED_MODULE_3_redux_saga_effects__.put)(__WEBPACK_IMPORTED_MODULE_5__actions__.setDeleteWorkListAction(list));
         case 15:
-          callback && callback();
+          if (callback) {
+            callback();
+          }
           _context6.next = 18;
           return Object(__WEBPACK_IMPORTED_MODULE_3_redux_saga_effects__.put)(Object(__WEBPACK_IMPORTED_MODULE_6__redux_main_actions__.setCommonToastAction)({
             visible: true,
@@ -543,7 +623,9 @@ function handleRecoverDeleteWork(action) {
         case 20:
           _context6.prev = 20;
           _context6.t2 = _context6['catch'](2);
-          false && console.log('fetch delete work error, detail', _context6.t2);
+          if (false) {
+            console.log('fetch delete work error, detail', _context6.t2);
+          }
         case 23:
         case 'end':
           return _context6.stop();
@@ -553,7 +635,11 @@ function handleRecoverDeleteWork(action) {
 }
 // 彻底删除作品
 function handleAgainDeleteWork(action) {
-  var id, url, result, deleteWorkList, list;
+  var id;
+  var url;
+  var result;
+  var deleteWorkList;
+  var list;
   return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.wrap(function handleAgainDeleteWork$(_context7) {
     while (1) {
       switch (_context7.prev = _context7.next) {
@@ -567,7 +653,9 @@ function handleAgainDeleteWork(action) {
           }).then(function (res) {
             return res.data;
           }).catch(function (err) {
-            false && console.log('fetch delete work failed, detail:', err);
+            if (false) {
+              console.log('fetch delete work failed, detail:', err);
+            }
             throw err;
           });
         case 5:
@@ -599,7 +687,9 @@ function handleAgainDeleteWork(action) {
         case 19:
           _context7.prev = 19;
           _context7.t2 = _context7['catch'](2);
-          false && console.log('fetch delete work error, detail', _context7.t2);
+          if (false) {
+            console.log('fetch delete work error, detail', _context7.t2);
+          }
         case 22:
         case 'end':
           return _context7.stop();
@@ -609,7 +699,8 @@ function handleAgainDeleteWork(action) {
 }
 // 清空回收站
 function handleClearDeleteWork() {
-  var url, result;
+  var url;
+  var result;
   return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.wrap(function handleClearDeleteWork$(_context8) {
     while (1) {
       switch (_context8.prev = _context8.next) {
@@ -622,7 +713,9 @@ function handleClearDeleteWork() {
           }).then(function (res) {
             return res.data;
           }).catch(function (err) {
-            false && console.log('fetch clear delete work failed, detail:', err);
+            if (false) {
+              console.log('fetch clear delete work failed, detail:', err);
+            }
             throw err;
           });
         case 4:
@@ -639,7 +732,9 @@ function handleClearDeleteWork() {
         case 10:
           _context8.prev = 10;
           _context8.t0 = _context8['catch'](1);
-          false && console.log('fetch clear delete work error, detail', _context8.t0);
+          if (false) {
+            console.log('fetch clear delete work error, detail', _context8.t0);
+          }
         case 13:
         case 'end':
           return _context8.stop();
@@ -649,12 +744,26 @@ function handleClearDeleteWork() {
 }
 // rename
 function handleRenameWork(action) {
-  var _action$payload6, id, name, workType, callback, url, result, homeWorkList, createWorkList, bcmUrl, json;
+  var _action$payload6;
+  var id;
+  var name;
+  var workType;
+  var callback;
+  var url;
+  var result;
+  var homeWorkList;
+  var createWorkList;
+  var bcmUrl;
+  var json;
   return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.wrap(function handleRenameWork$(_context9) {
     while (1) {
       switch (_context9.prev = _context9.next) {
         case 0:
-          _action$payload6 = action.payload, id = _action$payload6.id, name = _action$payload6.name, workType = _action$payload6.workType, callback = _action$payload6.callback;
+          _action$payload6 = action.payload;
+          id = _action$payload6.id;
+          name = _action$payload6.name;
+          workType = _action$payload6.workType;
+          callback = _action$payload6.callback;
           _context9.prev = 1;
           url = Object(__WEBPACK_IMPORTED_MODULE_8__utils__.get_api_prefix)() + '/work/works/' + id + '/rename';
           _context9.next = 5;
@@ -666,7 +775,9 @@ function handleRenameWork(action) {
           }).then(function (res) {
             return res.data;
           }).catch(function (err) {
-            false && console.log('fetch rename work failed, detail:', err);
+            if (false) {
+              console.log('fetch rename work failed, detail:', err);
+            }
             throw err;
           });
         case 5:
@@ -744,7 +855,9 @@ function handleRenameWork(action) {
         case 40:
           _context9.prev = 40;
           _context9.t4 = _context9['catch'](1);
-          false && console.log('fetch rename work error, detail', _context9.t4);
+          if (false) {
+            console.log('fetch rename work error, detail', _context9.t4);
+          }
         case 43:
         case 'end':
           return _context9.stop();
@@ -754,7 +867,8 @@ function handleRenameWork(action) {
 }
 function getWorkBcmUrl(id) {
   return __awaiter(this, void 0, void 0, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.mark(function _callee() {
-    var url, result;
+    var url;
+    var result;
     return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.wrap(function _callee$(_context10) {
       while (1) {
         switch (_context10.prev = _context10.next) {
@@ -767,7 +881,9 @@ function getWorkBcmUrl(id) {
             }).then(function (res) {
               return res.data;
             }).catch(function (err) {
-              false && console.log('fetch delete work list failed, detail:', err);
+              if (false) {
+                console.log('fetch delete work list failed, detail:', err);
+              }
               throw err;
             });
           case 4:
@@ -783,7 +899,9 @@ function getWorkBcmUrl(id) {
           case 9:
             _context10.prev = 9;
             _context10.t0 = _context10['catch'](1);
-            false && console.log('fetch delete work list error, detail', _context10.t0);
+            if (false) {
+              console.log('fetch delete work list error, detail', _context10.t0);
+            }
           case 12:
           case 'end':
             return _context10.stop();
@@ -794,7 +912,8 @@ function getWorkBcmUrl(id) {
 }
 function getWorkBcmJson(bcmUrl) {
   return __awaiter(this, void 0, void 0, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.mark(function _callee2() {
-    var bcmRes, json;
+    var bcmRes;
+    var json;
     return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.wrap(function _callee2$(_context11) {
       while (1) {
         switch (_context11.prev = _context11.next) {
@@ -818,12 +937,18 @@ function getWorkBcmJson(bcmUrl) {
 }
 function updateProject(params) {
   return __awaiter(this, void 0, void 0, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.mark(function _callee3() {
-    var name, content, id, bcmUrl, result;
+    var name;
+    var content;
+    var id;
+    var bcmUrl;
+    var result;
     return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.wrap(function _callee3$(_context12) {
       while (1) {
         switch (_context12.prev = _context12.next) {
           case 0:
-            name = params.name, content = params.content, id = params.id;
+            name = params.name;
+            content = params.content;
+            id = params.id;
             _context12.prev = 1;
             _context12.next = 4;
             return Object(__WEBPACK_IMPORTED_MODULE_9__utils_uploader__.uploadProjectJsonToCdn)(JSON.stringify(content));

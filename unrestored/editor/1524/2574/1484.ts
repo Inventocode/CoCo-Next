@@ -1,0 +1,1 @@
+module.exports = n.p + "static/media/left-side.503b68d2.png";

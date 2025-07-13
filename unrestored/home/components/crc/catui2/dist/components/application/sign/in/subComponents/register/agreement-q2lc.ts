@@ -61,12 +61,12 @@ var _styleModuleImportMap = {
   }
 };
 var AgreementContainer = function AgreementContainer(props) {
-  var onCheckChange = props.onCheckChange,
-    style = props.style;
-  var _useState = Object(__WEBPACK_IMPORTED_MODULE_2_react__.useState)(false),
-    _useState2 = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default)(_useState, 2),
-    agreementChecked = _useState2[0],
-    setAgreementChecked = _useState2[1];
+  var onCheckChange = props.onCheckChange;
+  var style = props.style;
+  var _useState = Object(__WEBPACK_IMPORTED_MODULE_2_react__.useState)(false);
+  var _useState2 = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default)(_useState, 2);
+  var agreementChecked = _useState2[0];
+  var setAgreementChecked = _useState2[1];
   var handleCheckChange = function handleCheckChange() {
     setAgreementChecked(!agreementChecked);
     onCheckChange(!agreementChecked);

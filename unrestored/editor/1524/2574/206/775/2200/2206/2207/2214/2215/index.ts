@@ -1,0 +1,32 @@
+"use strict";
+
+module.exports = {
+  $ref: require("./2216"),
+  allOf: require("./2217"),
+  anyOf: require("./2218"),
+  $comment: require("./2219"),
+  const: require("./2220"),
+  contains: require("./2221"),
+  dependencies: require("./2222"),
+  enum: require("./2223"),
+  format: require("./2224"),
+  if: require("./2225"),
+  items: require("./2226"),
+  maximum: require("./1331"),
+  minimum: require("./1331"),
+  maxItems: require("./1332"),
+  minItems: require("./1332"),
+  maxLength: require("./1333"),
+  minLength: require("./1333"),
+  maxProperties: require("./1334"),
+  minProperties: require("./1334"),
+  multipleOf: require("./2227"),
+  not: require("./2228"),
+  oneOf: require("./2229"),
+  pattern: require("./2230"),
+  properties: require("./2231"),
+  propertyNames: require("./2232"),
+  required: require("./2233"),
+  uniqueItems: require("./2234"),
+  validate: require("../../2208/1330")
+};

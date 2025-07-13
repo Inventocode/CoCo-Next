@@ -41,7 +41,13 @@ function _inherits(subClass, superClass) {
       configurable: true
     }
   });
-  if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
+  if (superClass) {
+    if (Object.setPrototypeOf) {
+      Object.setPrototypeOf(subClass, superClass);
+    } else {
+      subClass.__proto__ = superClass;
+    }
+  }
 }
 var __awaiter = this && this.__awaiter || function (thisArg, _arguments, P, generator) {
   return new (P || (P = Promise))(function (resolve, reject) {
@@ -60,9 +66,13 @@ var __awaiter = this && this.__awaiter || function (thisArg, _arguments, P, gene
       }
     }
     function step(result) {
-      result.done ? resolve(result.value) : new P(function (resolve) {
+      if (result.done) {
         resolve(result.value);
-      }).then(fulfilled, rejected);
+      } else {
+        new P(function (resolve) {
+          resolve(result.value);
+        }).then(fulfilled, rejected);
+      }
     }
     step((generator = generator.apply(thisArg, _arguments || [])).next());
   });
@@ -101,7 +111,8 @@ function getFileExtension(fileName) {
 function uploadFileToCdn(file) {
   var fileType = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'IMAGE';
   return __awaiter(this, void 0, void 0, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.mark(function _callee() {
-    var fileName, result;
+    var fileName;
+    var result;
     return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.wrap(function _callee$(_context) {
       while (1) {
         switch (_context.prev = _context.next) {
@@ -137,7 +148,9 @@ function uploadFileToCdn(file) {
 }
 function uploadProjectJsonToCdn(content) {
   return __awaiter(this, void 0, void 0, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.mark(function _callee2() {
-    var blob, file, result;
+    var blob;
+    var file;
+    var result;
     return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.wrap(function _callee2$(_context2) {
       while (1) {
         switch (_context2.prev = _context2.next) {

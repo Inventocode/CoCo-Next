@@ -1,8 +1,5 @@
 "use strict";
 
-Object.defineProperty(__webpack_exports__, "__esModule", {
-  value: true
-});
 /* harmony export (binding) */
 export { KittenVideoPlayer };
 /* harmony import */
@@ -71,8 +68,8 @@ var _styleModuleImportMap = {
 function _createSuper(Derived) {
   var hasNativeReflectConstruct = _isNativeReflectConstruct();
   return function _createSuperInternal() {
-    var Super = Object(__WEBPACK_IMPORTED_MODULE_5__babel_runtime_helpers_esm_getPrototypeOf__.default)(Derived),
-      result;
+    var Super = Object(__WEBPACK_IMPORTED_MODULE_5__babel_runtime_helpers_esm_getPrototypeOf__.default)(Derived);
+    var result;
     if (hasNativeReflectConstruct) {
       var NewTarget = Object(__WEBPACK_IMPORTED_MODULE_5__babel_runtime_helpers_esm_getPrototypeOf__.default)(this).constructor;
       result = Reflect.construct(Super, arguments, NewTarget);
@@ -83,9 +80,15 @@ function _createSuper(Derived) {
   };
 }
 function _isNativeReflectConstruct() {
-  if (typeof Reflect === "undefined" || !Reflect.construct) return false;
-  if (Reflect.construct.sham) return false;
-  if (typeof Proxy === "function") return true;
+  if (typeof Reflect === "undefined" || !Reflect.construct) {
+    return false;
+  }
+  if (Reflect.construct.sham) {
+    return false;
+  }
+  if (typeof Proxy === "function") {
+    return true;
+  }
   try {
     Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {}));
     return true;
@@ -127,14 +130,16 @@ var KittenVideoPlayer = /*#__PURE__*/function (_React$Component) {
       var resizableBoxBottomOffset = element.getBoundingClientRect().bottom;
       var resizableBoxWidth = element.offsetWidth;
       var resizableBoxHeight = element.offsetHeight;
-      var _element$getBoundingC = element.getBoundingClientRect(),
-        top = _element$getBoundingC.top,
-        bottom = _element$getBoundingC.bottom,
-        left = _element$getBoundingC.left,
-        right = _element$getBoundingC.right,
-        height = _element$getBoundingC.height,
-        width = _element$getBoundingC.width;
-      _this.setResizableBoxOriginData && _this.setResizableBoxOriginData(resizableBoxRightOffset, resizableBoxBottomOffset, resizableBoxWidth, resizableBoxHeight);
+      var _element$getBoundingC = element.getBoundingClientRect();
+      var top = _element$getBoundingC.top;
+      var bottom = _element$getBoundingC.bottom;
+      var left = _element$getBoundingC.left;
+      var right = _element$getBoundingC.right;
+      var height = _element$getBoundingC.height;
+      var width = _element$getBoundingC.width;
+      if (_this.setResizableBoxOriginData) {
+        _this.setResizableBoxOriginData(resizableBoxRightOffset, resizableBoxBottomOffset, resizableBoxWidth, resizableBoxHeight);
+      }
       if (direction === 'top' || direction === 'topLeft') {
         _this.lockResizableBox(height + top, width + left);
         return;
@@ -153,11 +158,17 @@ var KittenVideoPlayer = /*#__PURE__*/function (_React$Component) {
       }
     });
     Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Object(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default)(_this), "onResize", function (event, direction, element, delta) {
-      _this.setResizableBoxPosition && _this.setResizableBoxPosition(direction, delta);
+      if (_this.setResizableBoxPosition) {
+        _this.setResizableBoxPosition(direction, delta);
+      }
     });
     Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Object(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default)(_this), "onReplayClick", function () {
       var _this$player;
-      (_this$player = _this.player) === null || _this$player === void 0 ? void 0 : _this$player.play();
+      if ((_this$player = _this.player) === null || _this$player === void 0) {
+        void 0;
+      } else {
+        _this$player.play();
+      }
     });
     Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Object(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default)(_this), "setDraggablePosition", function (event, data) {
       _this.setState({
@@ -168,38 +179,52 @@ var KittenVideoPlayer = /*#__PURE__*/function (_React$Component) {
       });
     });
     Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Object(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default)(_this), "handleMiniPlayer", function () {
-      _this.props.onMinimizeBtnClick && _this.props.onMinimizeBtnClick(_this.player);
+      if (_this.props.onMinimizeBtnClick) {
+        _this.props.onMinimizeBtnClick(_this.player);
+      }
     });
     Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Object(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default)(_this), "closeSelf", function () {
-      var _this$props = _this.props,
-        onClose = _this$props.onClose,
-        reportMaxWatchTimeRepo = _this$props.reportMaxWatchTimeRepo;
-      reportMaxWatchTimeRepo && reportMaxWatchTimeRepo(_this.maxWatchTime);
-      onClose && onClose(_this.player);
+      var _this$props = _this.props;
+      var onClose = _this$props.onClose;
+      var reportMaxWatchTimeRepo = _this$props.reportMaxWatchTimeRepo;
+      if (reportMaxWatchTimeRepo) {
+        reportMaxWatchTimeRepo(_this.maxWatchTime);
+      }
+      if (onClose) {
+        onClose(_this.player);
+      }
     });
     Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Object(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default)(_this), "handleClosePlayer", function () {
-      var _this$player2, _this$player3;
+      var _this$player2;
+      var _this$player3;
       var useConfirmMask = _this.props.useConfirmMask;
       var player = (_this$player2 = _this.player) === null || _this$player2 === void 0 ? void 0 : _this$player2.getState().player;
       if (!player || _this.state.closingConfirm || !useConfirmMask || _this.props.confirmPercent != null && player.currentTime / player.duration > _this.props.confirmPercent) {
         _this.closeSelf();
         return;
       }
-      _this.props.onConfirmMaskShow && _this.props.onConfirmMaskShow();
-      (_this$player3 = _this.player) === null || _this$player3 === void 0 ? void 0 : _this$player3.pause();
+      if (_this.props.onConfirmMaskShow) {
+        _this.props.onConfirmMaskShow();
+      }
+      if ((_this$player3 = _this.player) === null || _this$player3 === void 0) {
+        void 0;
+      } else {
+        _this$player3.pause();
+      }
       _this.setState({
         closingConfirm: true
       });
     });
     Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Object(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default)(_this), "getRemainPercent", function () {
       try {
-        var _this$player4, _this$player4$getStat;
+        var _this$player4;
+        var _this$player4$getStat;
         var state = (_this$player4 = _this.player) === null || _this$player4 === void 0 ? void 0 : (_this$player4$getStat = _this$player4.getState()) === null || _this$player4$getStat === void 0 ? void 0 : _this$player4$getStat.player;
         if (!state) {
           return;
         }
-        var currentTime = state.currentTime,
-          duration = state.duration;
+        var currentTime = state.currentTime;
+        var duration = state.duration;
         return Math.round((duration - currentTime) / duration * 100);
       } catch (err) {
         return 0;
@@ -241,8 +266,14 @@ var KittenVideoPlayer = /*#__PURE__*/function (_React$Component) {
     key: "componentDidMount",
     value: function componentDidMount() {
       var _this$player5;
-      this.props.getPlayerRef && this.props.getPlayerRef(this.player);
-      (_this$player5 = this.player) === null || _this$player5 === void 0 ? void 0 : _this$player5.subscribeToStateChange(this.handleStateChange.bind(this));
+      if (this.props.getPlayerRef) {
+        this.props.getPlayerRef(this.player);
+      }
+      if ((_this$player5 = this.player) === null || _this$player5 === void 0) {
+        void 0;
+      } else {
+        _this$player5.subscribeToStateChange(this.handleStateChange.bind(this));
+      }
       this.setState({
         boundWidth: document.body.clientWidth,
         boundHeight: document.body.clientHeight
@@ -252,16 +283,29 @@ var KittenVideoPlayer = /*#__PURE__*/function (_React$Component) {
       this.videoElem.addEventListener('mouseleave', this.hideControlbar);
       this.videoElem.addEventListener('mouseenter', this.showControllber);
       this.hideControlbar();
-      this.props.onPlayerInit && this.props.onPlayerInit();
+      if (this.props.onPlayerInit) {
+        this.props.onPlayerInit();
+      }
     }
   }, {
     key: "componentWillUnmount",
     value: function componentWillUnmount() {
-      var _this$videoElem, _this$videoElem2;
+      var _this$videoElem;
+      var _this$videoElem2;
       var boundElem = document.getElementById(BOUND_ELEM_ID);
-      boundElem && document.body.removeChild(boundElem);
-      (_this$videoElem = this.videoElem) === null || _this$videoElem === void 0 ? void 0 : _this$videoElem.removeEventListener('mouseleave', this.hideControlbar);
-      (_this$videoElem2 = this.videoElem) === null || _this$videoElem2 === void 0 ? void 0 : _this$videoElem2.removeEventListener('mouseenter', this.showControllber);
+      if (boundElem) {
+        document.body.removeChild(boundElem);
+      }
+      if ((_this$videoElem = this.videoElem) === null || _this$videoElem === void 0) {
+        void 0;
+      } else {
+        _this$videoElem.removeEventListener('mouseleave', this.hideControlbar);
+      }
+      if ((_this$videoElem2 = this.videoElem) === null || _this$videoElem2 === void 0) {
+        void 0;
+      } else {
+        _this$videoElem2.removeEventListener('mouseenter', this.showControllber);
+      }
     }
   }, {
     key: "handleStateChange",
@@ -307,7 +351,11 @@ var KittenVideoPlayer = /*#__PURE__*/function (_React$Component) {
     key: "clickMask",
     value: function clickMask() {
       var _this$player6;
-      (_this$player6 = this.player) === null || _this$player6 === void 0 ? void 0 : _this$player6.play();
+      if ((_this$player6 = this.player) === null || _this$player6 === void 0) {
+        void 0;
+      } else {
+        _this$player6.play();
+      }
     }
   }, {
     key: "lockResizableBox",
@@ -368,10 +416,10 @@ var KittenVideoPlayer = /*#__PURE__*/function (_React$Component) {
     key: "render",
     value: function render() {
       var _this2 = this;
-      var _this$props2 = this.props,
-        reportMiniClick = _this$props2.reportMiniClick,
-        reportCloseClick = _this$props2.reportCloseClick,
-        reportReplayClick = _this$props2.reportReplayClick;
+      var _this$props2 = this.props;
+      var reportMiniClick = _this$props2.reportMiniClick;
+      var reportCloseClick = _this$props2.reportCloseClick;
+      var reportReplayClick = _this$props2.reportReplayClick;
       return /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_8_react__.createElement("div", {
         className: "CUI-kitten-video-player-video_container",
         style: {
@@ -471,11 +519,17 @@ var KittenVideoPlayer = /*#__PURE__*/function (_React$Component) {
         type: "primary",
         onClick: function onClick() {
           var _this2$player;
-          _this2.props.onConfirmCancel && _this2.props.onConfirmCancel();
+          if (_this2.props.onConfirmCancel) {
+            _this2.props.onConfirmCancel();
+          }
           _this2.setState({
             closingConfirm: false
           });
-          (_this2$player = _this2.player) === null || _this2$player === void 0 ? void 0 : _this2$player.play();
+          if ((_this2$player = _this2.player) === null || _this2$player === void 0) {
+            void 0;
+          } else {
+            _this2$player.play();
+          }
         }
       }, "\u7EE7\u7EED\u5B66\u4E60"))) : /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_8_react__.createElement("div", {
         onClick: this.clickMask.bind(this),

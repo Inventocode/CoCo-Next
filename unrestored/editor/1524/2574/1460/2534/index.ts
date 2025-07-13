@@ -1,0 +1,199 @@
+"use strict";
+
+var r = i(require("../../0/index"));
+var o = i(require("./2535/index"));
+function i(e) {
+  return e && e.__esModule ? e : {
+    default: e
+  };
+}
+function a(e) {
+  return (a = "function" === typeof Symbol && "symbol" === typeof Symbol.iterator ? function (e) {
+    return typeof e;
+  } : function (e) {
+    return e && "function" === typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype ? "symbol" : typeof e;
+  })(e);
+}
+function s(e, t) {
+  var n = Object.keys(e);
+  if (Object.getOwnPropertySymbols) {
+    var r = Object.getOwnPropertySymbols(e);
+    if (t) {
+      r = r.filter(function (t) {
+        return Object.getOwnPropertyDescriptor(e, t).enumerable;
+      });
+    }
+    n.push.apply(n, r);
+  }
+  return n;
+}
+function c(e, t) {
+  if (null == e) {
+    return {};
+  }
+  var n;
+  var r;
+  var o = function (e, t) {
+    if (null == e) {
+      return {};
+    }
+    var n;
+    var r;
+    var o = {};
+    var i = Object.keys(e);
+    for (r = 0; r < i.length; r++) {
+      n = i[r];
+      if (!(t.indexOf(n) >= 0)) {
+        o[n] = e[n];
+      }
+    }
+    return o;
+  }(e, t);
+  if (Object.getOwnPropertySymbols) {
+    var i = Object.getOwnPropertySymbols(e);
+    for (r = 0; r < i.length; r++) {
+      n = i[r];
+      if (!(t.indexOf(n) >= 0)) {
+        if (Object.prototype.propertyIsEnumerable.call(e, n)) {
+          o[n] = e[n];
+        }
+      }
+    }
+  }
+  return o;
+}
+function l(e, t) {
+  if (!(e instanceof t)) {
+    throw new TypeError("Cannot call a class as a function");
+  }
+}
+function u(e, t) {
+  for (var n = 0; n < t.length; n++) {
+    var r = t[n];
+    r.enumerable = r.enumerable || !1;
+    r.configurable = !0;
+    if ("value" in r) {
+      r.writable = !0;
+    }
+    Object.defineProperty(e, r.key, r);
+  }
+}
+function d(e, t) {
+  return !t || "object" !== a(t) && "function" !== typeof t ? f(e) : t;
+}
+function p(e) {
+  return (p = Object.setPrototypeOf ? Object.getPrototypeOf : function (e) {
+    return e.__proto__ || Object.getPrototypeOf(e);
+  })(e);
+}
+function f(e) {
+  if (void 0 === e) {
+    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+  }
+  return e;
+}
+function h(e, t) {
+  return (h = Object.setPrototypeOf || function (e, t) {
+    e.__proto__ = t;
+    return e;
+  })(e, t);
+}
+function m(e, t, n) {
+  if (t in e) {
+    Object.defineProperty(e, t, {
+      value: n,
+      enumerable: !0,
+      configurable: !0,
+      writable: !0
+    });
+  } else {
+    e[t] = n;
+  }
+  return e;
+}
+var g = function (e) {
+  function t() {
+    var e;
+    var n;
+    l(this, t);
+    for (var i = arguments.length, a = new Array(i), s = 0; s < i; s++) {
+      a[s] = arguments[s];
+    }
+    m(f(n = d(this, (e = p(t)).call.apply(e, [this].concat(a)))), "onClick", function (e) {
+      var t = n.props;
+      var i = t.text;
+      var a = t.onCopy;
+      var s = t.children;
+      var c = t.options;
+      var l = r.default.Children.only(s);
+      var u = (0, o.default)(i, c);
+      if (a) {
+        a(i, u);
+      }
+      if (l && l.props && "function" === typeof l.props.onClick) {
+        l.props.onClick(e);
+      }
+    });
+    return n;
+  }
+  var n;
+  var i;
+  var a;
+  (function (e, t) {
+    if ("function" !== typeof t && null !== t) {
+      throw new TypeError("Super expression must either be null or a function");
+    }
+    e.prototype = Object.create(t && t.prototype, {
+      constructor: {
+        value: e,
+        writable: !0,
+        configurable: !0
+      }
+    });
+    if (t) {
+      h(e, t);
+    }
+  })(t, e);
+  n = t;
+  if (i = [{
+    key: "render",
+    value: function () {
+      var e = this.props;
+      var t = (e.text, e.onCopy, e.options, e.children);
+      var n = c(e, ["text", "onCopy", "options", "children"]);
+      var o = r.default.Children.only(t);
+      return r.default.cloneElement(o, function (e) {
+        for (var t = 1; t < arguments.length; t++) {
+          var n = null != arguments[t] ? arguments[t] : {};
+          if (t % 2) {
+            s(n, !0).forEach(function (t) {
+              m(e, t, n[t]);
+            });
+          } else {
+            if (Object.getOwnPropertyDescriptors) {
+              Object.defineProperties(e, Object.getOwnPropertyDescriptors(n));
+            } else {
+              s(n).forEach(function (t) {
+                Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(n, t));
+              });
+            }
+          }
+        }
+        return e;
+      }({}, n, {
+        onClick: this.onClick
+      }));
+    }
+  }]) {
+    u(n.prototype, i);
+  }
+  if (a) {
+    u(n, a);
+  }
+  return t;
+}(r.default.PureComponent);
+export { g as CopyToClipboard };
+m(g, "defaultProps", {
+  onCopy: void 0,
+  options: void 0
+});

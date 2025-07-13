@@ -29,13 +29,25 @@ function handleLoginByPassword(_x) {
 }
 function _handleLoginByPassword() {
   _handleLoginByPassword = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default)(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.mark(function _callee2(param) {
-    var username, password, getCaptchaFallback, e, ticket, _yield$getAuthModule$, data, _data$user_info, nickname, id, avatarUrl;
+    var username;
+    var password;
+    var getCaptchaFallback;
+    var e;
+    var ticket;
+    var _yield$getAuthModule$;
+    var data;
+    var _data$user_info;
+    var nickname;
+    var id;
+    var avatarUrl;
     return __WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.wrap(function _callee2$(_context2) {
       while (1) {
         switch (_context2.prev = _context2.next) {
           case 0:
             _context2.prev = 0;
-            username = param.username, password = param.password, getCaptchaFallback = param.getCaptchaFallback;
+            username = param.username;
+            password = param.password;
+            getCaptchaFallback = param.getCaptchaFallback;
             _context2.next = 4;
             return new Promise(function (resolve) {
               try {
@@ -75,7 +87,10 @@ function _handleLoginByPassword() {
           case 9:
             _yield$getAuthModule$ = _context2.sent;
             data = _yield$getAuthModule$.data;
-            _data$user_info = data.user_info, nickname = _data$user_info.nickname, id = _data$user_info.id, avatarUrl = _data$user_info.avatar_url;
+            _data$user_info = data.user_info;
+            nickname = _data$user_info.nickname;
+            id = _data$user_info.id;
+            avatarUrl = _data$user_info.avatar_url;
             return _context2.abrupt("return", {
               isSuccess: true,
               authInfo: {
@@ -106,19 +121,30 @@ function handleLoginBySms(_x2) {
 }
 function _handleLoginBySms() {
   _handleLoginBySms = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default)(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.mark(function _callee3(param) {
-    var phone, code, _yield$getAuthModule$2, data, _data$user_info2, nickname, id, avatarUrl;
+    var phone;
+    var code;
+    var _yield$getAuthModule$2;
+    var data;
+    var _data$user_info2;
+    var nickname;
+    var id;
+    var avatarUrl;
     return __WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.wrap(function _callee3$(_context3) {
       while (1) {
         switch (_context3.prev = _context3.next) {
           case 0:
             _context3.prev = 0;
-            phone = param.phone, code = param.code;
+            phone = param.phone;
+            code = param.code;
             _context3.next = 4;
             return Object(__WEBPACK_IMPORTED_MODULE_2__iris__.getAuthModule)().getAuth().login_phone(phone, code);
           case 4:
             _yield$getAuthModule$2 = _context3.sent;
             data = _yield$getAuthModule$2.data;
-            _data$user_info2 = data.user_info, nickname = _data$user_info2.nickname, id = _data$user_info2.id, avatarUrl = _data$user_info2.avatar_url;
+            _data$user_info2 = data.user_info;
+            nickname = _data$user_info2.nickname;
+            id = _data$user_info2.id;
+            avatarUrl = _data$user_info2.avatar_url;
             return _context3.abrupt("return", {
               isSuccess: true,
               authInfo: {
@@ -149,7 +175,9 @@ function handleSendSmsCode(_x3, _x4, _x5) {
 }
 function _handleSendSmsCode() {
   _handleSendSmsCode = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default)(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.mark(function _callee4(phone, type, getCaptchaFallback) {
-    var pid, e, ticket;
+    var pid;
+    var e;
+    var ticket;
     return __WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.wrap(function _callee4$(_context4) {
       while (1) {
         switch (_context4.prev = _context4.next) {
@@ -223,12 +251,23 @@ function handleRegister(_x6) {
 }
 function _handleRegister() {
   _handleRegister = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default)(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.mark(function _callee5(param) {
-    var phone, password, code, agreementIds, _yield$getAuthModule$3, data, _data$user_info3, nickname, id, avatarUrl;
+    var phone;
+    var password;
+    var code;
+    var agreementIds;
+    var _yield$getAuthModule$3;
+    var data;
+    var _data$user_info3;
+    var nickname;
+    var id;
+    var avatarUrl;
     return __WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.wrap(function _callee5$(_context5) {
       while (1) {
         switch (_context5.prev = _context5.next) {
           case 0:
-            phone = param.phone, password = param.password, code = param.code;
+            phone = param.phone;
+            password = param.password;
+            code = param.code;
             _context5.prev = 1;
             _context5.next = 4;
             return Object(__WEBPACK_IMPORTED_MODULE_2__iris__.getAuthModule)().getAgreements();
@@ -253,7 +292,10 @@ function _handleRegister() {
           case 9:
             _yield$getAuthModule$3 = _context5.sent;
             data = _yield$getAuthModule$3.data;
-            _data$user_info3 = data.user_info, nickname = _data$user_info3.nickname, id = _data$user_info3.id, avatarUrl = _data$user_info3.avatar_url;
+            _data$user_info3 = data.user_info;
+            nickname = _data$user_info3.nickname;
+            id = _data$user_info3.id;
+            avatarUrl = _data$user_info3.avatar_url;
             return _context5.abrupt("return", {
               isSuccess: true,
               authInfo: {
@@ -284,13 +326,18 @@ function handleResetPwdToken(_x7) {
 }
 function _handleResetPwdToken() {
   _handleResetPwdToken = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default)(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.mark(function _callee6(param) {
-    var phone, code, _yield$getAuthModule$4, data, ticket;
+    var phone;
+    var code;
+    var _yield$getAuthModule$4;
+    var data;
+    var ticket;
     return __WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.wrap(function _callee6$(_context6) {
       while (1) {
         switch (_context6.prev = _context6.next) {
           case 0:
             _context6.prev = 0;
-            phone = param.phone, code = param.code;
+            phone = param.phone;
+            code = param.code;
             _context6.next = 4;
             return Object(__WEBPACK_IMPORTED_MODULE_2__iris__.getAuthModule)().getAuth().reset_pwd_token(phone, code);
           case 4:
@@ -316,13 +363,17 @@ function handleResetPwd(_x8) {
 }
 function _handleResetPwd() {
   _handleResetPwd = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default)(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.mark(function _callee7(param) {
-    var password, passwordConfirm, ticket;
+    var password;
+    var passwordConfirm;
+    var ticket;
     return __WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.wrap(function _callee7$(_context7) {
       while (1) {
         switch (_context7.prev = _context7.next) {
           case 0:
             _context7.prev = 0;
-            password = param.password, passwordConfirm = param.passwordConfirm, ticket = param.ticket;
+            password = param.password;
+            passwordConfirm = param.passwordConfirm;
+            ticket = param.ticket;
             _context7.next = 4;
             return Object(__WEBPACK_IMPORTED_MODULE_2__iris__.getAuthModule)().getAuth().reset_pwd(ticket, password, passwordConfirm);
           case 4:
@@ -350,13 +401,16 @@ function handleBindPhone(_x9) {
 }
 function _handleBindPhone() {
   _handleBindPhone = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default)(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.mark(function _callee8(param) {
-    var phone, code, result;
+    var phone;
+    var code;
+    var result;
     return __WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.wrap(function _callee8$(_context8) {
       while (1) {
         switch (_context8.prev = _context8.next) {
           case 0:
             _context8.prev = 0;
-            phone = param.phone, code = param.code;
+            phone = param.phone;
+            code = param.code;
             _context8.next = 4;
             return Object(__WEBPACK_IMPORTED_MODULE_2__iris__.getAuthModule)().getAuth().bind_phone(phone, code);
           case 4:

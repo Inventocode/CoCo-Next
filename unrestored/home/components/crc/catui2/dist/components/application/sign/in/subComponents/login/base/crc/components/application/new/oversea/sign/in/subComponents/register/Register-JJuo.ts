@@ -84,44 +84,44 @@ var _styleModuleImportMap = {
 };
 var emailInputEl;
 var codeInputEl;
-var useState = __WEBPACK_IMPORTED_MODULE_4_react__.useState,
-  useEffect = __WEBPACK_IMPORTED_MODULE_4_react__.useEffect,
-  useCallback = __WEBPACK_IMPORTED_MODULE_4_react__.useCallback,
-  useRef = __WEBPACK_IMPORTED_MODULE_4_react__.useRef;
+var useState = __WEBPACK_IMPORTED_MODULE_4_react__.useState;
+var useEffect = __WEBPACK_IMPORTED_MODULE_4_react__.useEffect;
+var useCallback = __WEBPACK_IMPORTED_MODULE_4_react__.useCallback;
+var useRef = __WEBPACK_IMPORTED_MODULE_4_react__.useRef;
 var RegisterContainer = function RegisterContainer(props) {
-  var isRequesting = props.isRequesting,
-    setIsRequesting = props.setIsRequesting,
-    switchView = props.switchView,
-    onRegisterSuccess = props.onRegisterSuccess,
-    handleClose = props.handleClose;
-  var _useState = useState(true),
-    _useState2 = Object(__WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default)(_useState, 2),
-    disableCheck = _useState2[0],
-    setDisableCheck = _useState2[1];
-  var _useState3 = useState(undefined),
-    _useState4 = Object(__WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default)(_useState3, 2),
-    error = _useState4[0],
-    setError = _useState4[1];
-  var _useState5 = useState(0),
-    _useState6 = Object(__WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default)(_useState5, 2),
-    smsCountDown = _useState6[0],
-    setSmsCountDown = _useState6[1];
-  var _useState7 = useState(0),
-    _useState8 = Object(__WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default)(_useState7, 2),
-    smsTimeStamp = _useState8[0],
-    setSmsTimeStamp = _useState8[1];
-  var _useState9 = useState(''),
-    _useState10 = Object(__WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default)(_useState9, 2),
-    captchaTicket = _useState10[0],
-    setCaptchaTicket = _useState10[1];
-  var _useState11 = useState(false),
-    _useState12 = Object(__WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default)(_useState11, 2),
-    isRegisterSuccess = _useState12[0],
-    setIsRegisterSuccess = _useState12[1];
-  var _useState13 = useState(3),
-    _useState14 = Object(__WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default)(_useState13, 2),
-    second = _useState14[0],
-    setSecond = _useState14[1];
+  var isRequesting = props.isRequesting;
+  var setIsRequesting = props.setIsRequesting;
+  var switchView = props.switchView;
+  var onRegisterSuccess = props.onRegisterSuccess;
+  var handleClose = props.handleClose;
+  var _useState = useState(true);
+  var _useState2 = Object(__WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default)(_useState, 2);
+  var disableCheck = _useState2[0];
+  var setDisableCheck = _useState2[1];
+  var _useState3 = useState(undefined);
+  var _useState4 = Object(__WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default)(_useState3, 2);
+  var error = _useState4[0];
+  var setError = _useState4[1];
+  var _useState5 = useState(0);
+  var _useState6 = Object(__WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default)(_useState5, 2);
+  var smsCountDown = _useState6[0];
+  var setSmsCountDown = _useState6[1];
+  var _useState7 = useState(0);
+  var _useState8 = Object(__WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default)(_useState7, 2);
+  var smsTimeStamp = _useState8[0];
+  var setSmsTimeStamp = _useState8[1];
+  var _useState9 = useState('');
+  var _useState10 = Object(__WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default)(_useState9, 2);
+  var captchaTicket = _useState10[0];
+  var setCaptchaTicket = _useState10[1];
+  var _useState11 = useState(false);
+  var _useState12 = Object(__WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default)(_useState11, 2);
+  var isRegisterSuccess = _useState12[0];
+  var setIsRegisterSuccess = _useState12[1];
+  var _useState13 = useState(3);
+  var _useState14 = Object(__WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default)(_useState13, 2);
+  var second = _useState14[0];
+  var setSecond = _useState14[1];
   var isDestroy = useRef(false);
   var isEmailErr = useCallback(function () {
     return error && error.type === __WEBPACK_IMPORTED_MODULE_9__auth__.AuthErrorType.EMAIL;
@@ -167,7 +167,8 @@ var RegisterContainer = function RegisterContainer(props) {
   };
   var onGetCodeClick = /*#__PURE__*/function () {
     var _ref = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default)(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_3__babel_runtime_regenerator___default.mark(function _callee() {
-      var email, result;
+      var email;
+      var result;
       return __WEBPACK_IMPORTED_MODULE_3__babel_runtime_regenerator___default.wrap(function _callee$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
@@ -214,7 +215,9 @@ var RegisterContainer = function RegisterContainer(props) {
   }();
   var onCheckCodeClick = /*#__PURE__*/function () {
     var _ref2 = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default)(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_3__babel_runtime_regenerator___default.mark(function _callee2() {
-      var email, code, result;
+      var email;
+      var code;
+      var result;
       return __WEBPACK_IMPORTED_MODULE_3__babel_runtime_regenerator___default.wrap(function _callee2$(_context2) {
         while (1) {
           switch (_context2.prev = _context2.next) {
@@ -314,7 +317,9 @@ var RegisterContainer = function RegisterContainer(props) {
     isError: isEmailErr(),
     onChange: function onChange() {
       updateCheckBtn();
-      isEmailErr() && setError(undefined);
+      if (isEmailErr()) {
+        setError(undefined);
+      }
     },
     label: Object(__WEBPACK_IMPORTED_MODULE_11__i18n__.getLanguage)('sign_in_dialog/placeholder/email'),
     autoComplete: "on",
@@ -322,7 +327,9 @@ var RegisterContainer = function RegisterContainer(props) {
       emailInputEl = el;
     },
     onBlur: function onBlur() {
-      props.reportMethod && props.reportMethod('用户信息-邮箱');
+      if (props.reportMethod) {
+        props.reportMethod('用户信息-邮箱');
+      }
     }
   }), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_4_react__.createElement("div", {
     className: "CUI-new-oversea-sign-in-dialog-input-error"
@@ -336,13 +343,17 @@ var RegisterContainer = function RegisterContainer(props) {
     isError: isCodeErr(),
     onChange: function onChange() {
       updateCheckBtn();
-      isCodeErr() && setError(undefined);
+      if (isCodeErr()) {
+        setError(undefined);
+      }
     },
     label: Object(__WEBPACK_IMPORTED_MODULE_11__i18n__.getLanguage)('sign_in_dialog/placeholder/code'),
     autoComplete: "off",
     maxLength: 10,
     getInputEl: function getInputEl(el) {
-      el && (codeInputEl = el);
+      if (el) {
+        codeInputEl = el;
+      }
     },
     iconsSuffix: renderGetCode()
   }), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_4_react__.createElement("div", {

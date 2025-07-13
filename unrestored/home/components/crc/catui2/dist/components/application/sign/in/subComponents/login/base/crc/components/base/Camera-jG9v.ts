@@ -12,8 +12,8 @@ import __WEBPACK_IMPORTED_MODULE_1_react___default from "react";
 import * as __WEBPACK_IMPORTED_MODULE_2_react_three_fiber__ from "@react-three/fiber";
 var Camera = function Camera(props) {
   var ref = Object(__WEBPACK_IMPORTED_MODULE_1_react__.useRef)();
-  var _useThree = Object(__WEBPACK_IMPORTED_MODULE_2_react_three_fiber__.useThree)(),
-    setDefaultCamera = _useThree.setDefaultCamera; // Make the camera known to the system
+  var _useThree = Object(__WEBPACK_IMPORTED_MODULE_2_react_three_fiber__.useThree)();
+  var setDefaultCamera = _useThree.setDefaultCamera; // Make the camera known to the system
   Object(__WEBPACK_IMPORTED_MODULE_1_react__.useEffect)(function () {
     if (ref.current) {
       setDefaultCamera(ref.current);

@@ -1,8 +1,5 @@
 "use strict";
 
-Object.defineProperty(__webpack_exports__, "__esModule", {
-  value: true
-});
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_0_babel_polyfill__ from "babel-polyfill";
 /* harmony import */

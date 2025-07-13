@@ -15,17 +15,17 @@ import * as __WEBPACK_IMPORTED_MODULE_3__style_scss__ from "./style/scss-1mrc";
 /* harmony import */
 import __WEBPACK_IMPORTED_MODULE_3__style_scss___default from "./style/scss-1mrc";
 var Button = function Button(props) {
-  var type = props.type,
-    icon = props.icon,
-    onClick = props.onClick,
-    disabled = props.disabled,
-    _props$style = props.style,
-    style = _props$style === undefined ? {} : _props$style,
-    className = props.className,
-    danger = props.danger,
-    children = props.children,
-    _props$shape = props.shape,
-    shape = _props$shape === undefined ? 'circle' : _props$shape;
+  var type = props.type;
+  var icon = props.icon;
+  var onClick = props.onClick;
+  var disabled = props.disabled;
+  var _props$style = props.style;
+  var style = _props$style === undefined ? {} : _props$style;
+  var className = props.className;
+  var danger = props.danger;
+  var children = props.children;
+  var _props$shape = props.shape;
+  var shape = _props$shape === undefined ? 'circle' : _props$shape;
   var generateClassName = function generateClassName() {
     var basic = 'coco-button-';
     var typeClass = type ? basic + type : '';

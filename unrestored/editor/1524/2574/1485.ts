@@ -1,0 +1,1 @@
+module.exports = n.p + "static/media/loading.35f947ee.gif";

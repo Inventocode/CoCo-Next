@@ -20,7 +20,9 @@ var Fragment = __WEBPACK_IMPORTED_MODULE_0_react__.Fragment;
 var ConfirmComponent = function ConfirmComponent(props) {
   var onRegisterConfirm = props.onRegisterConfirm;
   var onCompleteClick = function onCompleteClick() {
-    onRegisterConfirm && onRegisterConfirm();
+    if (onRegisterConfirm) {
+      onRegisterConfirm();
+    }
   };
   return /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react__.createElement(Fragment, null, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_2__base_icon__.Icon, {
     id: "#cui_iconicon_chenggong",

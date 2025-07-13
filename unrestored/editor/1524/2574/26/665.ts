@@ -1,0 +1,1 @@
+module.exports = n.p + "static/media/cloudTable.db6e918a.svg";

@@ -21,20 +21,31 @@ function ownKeys(object, enumerableOnly) {
   var keys = Object.keys(object);
   if (Object.getOwnPropertySymbols) {
     var symbols = Object.getOwnPropertySymbols(object);
-    enumerableOnly && (symbols = symbols.filter(function (sym) {
-      return Object.getOwnPropertyDescriptor(object, sym).enumerable;
-    })), keys.push.apply(keys, symbols);
+    if (enumerableOnly) {
+      symbols = symbols.filter(function (sym) {
+        return Object.getOwnPropertyDescriptor(object, sym).enumerable;
+      });
+    }
+    keys.push.apply(keys, symbols);
   }
   return keys;
 }
 function _objectSpread(target) {
   for (var i = 1; i < arguments.length; i++) {
     var source = null != arguments[i] ? arguments[i] : {};
-    i % 2 ? ownKeys(Object(source), !0).forEach(function (key) {
-      Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_defineProperty__.default)(target, key, source[key]);
-    }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) {
-      Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
-    });
+    if (i % 2) {
+      ownKeys(Object(source), !0).forEach(function (key) {
+        Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_defineProperty__.default)(target, key, source[key]);
+      });
+    } else {
+      if (Object.getOwnPropertyDescriptors) {
+        Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
+      } else {
+        ownKeys(Object(source)).forEach(function (key) {
+          Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
+        });
+      }
+    }
   }
   return target;
 }
@@ -49,22 +60,22 @@ var _styleModuleImportMap = {
   }
 };
 var Tooltip = function Tooltip(props) {
-  var _useState = Object(__WEBPACK_IMPORTED_MODULE_3_react__.useState)(false),
-    _useState2 = Object(__WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default)(_useState, 2),
-    visible = _useState2[0],
-    setVisible = _useState2[1];
+  var _useState = Object(__WEBPACK_IMPORTED_MODULE_3_react__.useState)(false);
+  var _useState2 = Object(__WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default)(_useState, 2);
+  var visible = _useState2[0];
+  var setVisible = _useState2[1];
   var tooltipRef = Object(__WEBPACK_IMPORTED_MODULE_3_react__.useRef)(null);
   var getRenderPos = function getRenderPos() {
     if (!tooltipRef.current) {
       return {};
     }
-    var _getBoundingClientRec = tooltipRef.current.firstElementChild.getBoundingClientRect(),
-      top = _getBoundingClientRec.top,
-      left = _getBoundingClientRec.left,
-      bottom = _getBoundingClientRec.bottom,
-      right = _getBoundingClientRec.right,
-      width = _getBoundingClientRec.width,
-      height = _getBoundingClientRec.height;
+    var _getBoundingClientRec = tooltipRef.current.firstElementChild.getBoundingClientRect();
+    var top = _getBoundingClientRec.top;
+    var left = _getBoundingClientRec.left;
+    var bottom = _getBoundingClientRec.bottom;
+    var right = _getBoundingClientRec.right;
+    var width = _getBoundingClientRec.width;
+    var height = _getBoundingClientRec.height;
     if (props.placement === 'up') {
       return {
         top: "".concat(top, "px"),

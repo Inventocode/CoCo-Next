@@ -26,38 +26,38 @@ import * as __WEBPACK_IMPORTED_MODULE_8__i18n__ from "./i18n-FsOf";
 import * as __WEBPACK_IMPORTED_MODULE_9__style_module_css__ from "./style.module.css-VPet";
 /* harmony import */
 import __WEBPACK_IMPORTED_MODULE_9__style_module_css___default from "./style.module.css-VPet";
-var useState = __WEBPACK_IMPORTED_MODULE_1_react__.useState,
-  useEffect = __WEBPACK_IMPORTED_MODULE_1_react__.useEffect;
+var useState = __WEBPACK_IMPORTED_MODULE_1_react__.useState;
+var useEffect = __WEBPACK_IMPORTED_MODULE_1_react__.useEffect;
 var SignInDialog = function SignInDialog(props) {
-  var _useState = useState(__WEBPACK_IMPORTED_MODULE_4__def__.ContentView.LOGIN),
-    _useState2 = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default)(_useState, 2),
-    contentView = _useState2[0],
-    setContentView = _useState2[1];
-  var _useState3 = useState(false),
-    _useState4 = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default)(_useState3, 2),
-    isRequesting = _useState4[0],
-    setIsrequesting = _useState4[1];
-  var _useState5 = useState(0),
-    _useState6 = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default)(_useState5, 2),
-    smsTimeStamp = _useState6[0],
-    setSmsTimeStamp = _useState6[1];
-  var _useState7 = useState(props.show),
-    _useState8 = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default)(_useState7, 2),
-    show = _useState8[0],
-    setShow = _useState8[1];
-  var onlyLogin = props.onlyLogin,
-    onPasswordLoginSuccess = props.onPasswordLoginSuccess,
-    onPasswordLoginFailure = props.onPasswordLoginFailure,
-    onSmsLoginSuccess = props.onSmsLoginSuccess,
-    onSmsLoginFailure = props.onSmsLoginFailure,
-    onThirdPartyLoginSuccess = props.onThirdPartyLoginSuccess,
-    onThirdPartyLoginFailure = props.onThirdPartyLoginFailure,
-    onRegisterSuccess = props.onRegisterSuccess,
-    onRegisterFailure = props.onRegisterFailure,
-    onRegisterConfirm = props.onRegisterConfirm,
-    onCloseAnimationEnd = props.onCloseAnimationEnd,
-    reportMethod = props.reportMethod,
-    disableThirdParty = props.disableThirdParty;
+  var _useState = useState(__WEBPACK_IMPORTED_MODULE_4__def__.ContentView.LOGIN);
+  var _useState2 = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default)(_useState, 2);
+  var contentView = _useState2[0];
+  var setContentView = _useState2[1];
+  var _useState3 = useState(false);
+  var _useState4 = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default)(_useState3, 2);
+  var isRequesting = _useState4[0];
+  var setIsrequesting = _useState4[1];
+  var _useState5 = useState(0);
+  var _useState6 = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default)(_useState5, 2);
+  var smsTimeStamp = _useState6[0];
+  var setSmsTimeStamp = _useState6[1];
+  var _useState7 = useState(props.show);
+  var _useState8 = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default)(_useState7, 2);
+  var show = _useState8[0];
+  var setShow = _useState8[1];
+  var onlyLogin = props.onlyLogin;
+  var onPasswordLoginSuccess = props.onPasswordLoginSuccess;
+  var onPasswordLoginFailure = props.onPasswordLoginFailure;
+  var onSmsLoginSuccess = props.onSmsLoginSuccess;
+  var onSmsLoginFailure = props.onSmsLoginFailure;
+  var onThirdPartyLoginSuccess = props.onThirdPartyLoginSuccess;
+  var onThirdPartyLoginFailure = props.onThirdPartyLoginFailure;
+  var onRegisterSuccess = props.onRegisterSuccess;
+  var onRegisterFailure = props.onRegisterFailure;
+  var onRegisterConfirm = props.onRegisterConfirm;
+  var onCloseAnimationEnd = props.onCloseAnimationEnd;
+  var reportMethod = props.reportMethod;
+  var disableThirdParty = props.disableThirdParty;
   Object(__WEBPACK_IMPORTED_MODULE_8__i18n__.setLanguage)(props.language || '');
   useEffect(function () {
     setShow(props.show);

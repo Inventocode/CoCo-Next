@@ -88,26 +88,26 @@ var LoginMethod;
   LoginMethod[LoginMethod["BY_SMS"] = 1] = "BY_SMS";
 })(LoginMethod || (LoginMethod = {}));
 var LoginPageContainer = function LoginPageContainer(props) {
-  var isRequesting = props.isRequesting,
-    setIsRequesting = props.setIsRequesting,
-    switchView = props.switchView,
-    smsTimeStamp = props.smsTimeStamp,
-    setSmsTimeStamp = props.setSmsTimeStamp,
-    onlyLogin = props.onlyLogin,
-    onSmsLoginSuccess = props.onSmsLoginSuccess,
-    onSmsLoginFailure = props.onSmsLoginFailure,
-    onPasswordLoginSuccess = props.onPasswordLoginSuccess,
-    onPasswordLoginFailure = props.onPasswordLoginFailure,
-    reportMethod = props.reportMethod,
-    disableThirdParty = props.disableThirdParty;
-  var _useState = useState(LoginMethod.BY_PASSWORD),
-    _useState2 = Object(__WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default)(_useState, 2),
-    loginMethod = _useState2[0],
-    setLoginMethod = _useState2[1];
-  var _useState3 = useState(false),
-    _useState4 = Object(__WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default)(_useState3, 2),
-    agreementChecked = _useState4[0],
-    setAgreementChecked = _useState4[1];
+  var isRequesting = props.isRequesting;
+  var setIsRequesting = props.setIsRequesting;
+  var switchView = props.switchView;
+  var smsTimeStamp = props.smsTimeStamp;
+  var setSmsTimeStamp = props.setSmsTimeStamp;
+  var onlyLogin = props.onlyLogin;
+  var onSmsLoginSuccess = props.onSmsLoginSuccess;
+  var onSmsLoginFailure = props.onSmsLoginFailure;
+  var onPasswordLoginSuccess = props.onPasswordLoginSuccess;
+  var onPasswordLoginFailure = props.onPasswordLoginFailure;
+  var reportMethod = props.reportMethod;
+  var disableThirdParty = props.disableThirdParty;
+  var _useState = useState(LoginMethod.BY_PASSWORD);
+  var _useState2 = Object(__WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default)(_useState, 2);
+  var loginMethod = _useState2[0];
+  var setLoginMethod = _useState2[1];
+  var _useState3 = useState(false);
+  var _useState4 = Object(__WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default)(_useState3, 2);
+  var agreementChecked = _useState4[0];
+  var setAgreementChecked = _useState4[1];
   var onTabClick = function onTabClick(nextLoginMethod) {
     if (loginMethod === nextLoginMethod) {
       return;
@@ -140,7 +140,12 @@ var LoginPageContainer = function LoginPageContainer(props) {
   };
   var signinByThirdParty = /*#__PURE__*/function () {
     var _ref = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default)(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_3__babel_runtime_regenerator___default.mark(function _callee3(loginMethod) {
-      var prefix, redirectUrl, url, appid, pid, messageListener;
+      var prefix;
+      var redirectUrl;
+      var url;
+      var appid;
+      var pid;
+      var messageListener;
       return __WEBPACK_IMPORTED_MODULE_3__babel_runtime_regenerator___default.wrap(function _callee3$(_context3) {
         while (1) {
           switch (_context3.prev = _context3.next) {
@@ -161,7 +166,8 @@ var LoginPageContainer = function LoginPageContainer(props) {
               window.open(url, 'newwindow', 'height=580, width=600, top=200, left=300, toolbar=no,' + 'menubar=no, scrollbars=no, resizable=no,location=no, status=no'); // 监听message事件
               messageListener = /*#__PURE__*/function () {
                 var _ref2 = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default)(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_3__babel_runtime_regenerator___default.mark(function _callee2(e) {
-                  var data, _data;
+                  var data;
+                  var _data;
                   return __WEBPACK_IMPORTED_MODULE_3__babel_runtime_regenerator___default.wrap(function _callee2$(_context2) {
                     while (1) {
                       switch (_context2.prev = _context2.next) {
@@ -191,13 +197,15 @@ var LoginPageContainer = function LoginPageContainer(props) {
                                     return _context.sent.data;
                                   case 4:
                                     data = _context.sent;
-                                    props.onThirdPartyLoginSuccess && props.onThirdPartyLoginSuccess({
-                                      nickname: data.nickname,
-                                      userId: data.id.toString(),
-                                      avatar: data.avatar_url,
-                                      authType: __WEBPACK_IMPORTED_MODULE_8__auth__.AuthType.CODEMAO,
-                                      source: loginMethod === 'qq' ? 'qq-login' : 'wc-login'
-                                    });
+                                    if (props.onThirdPartyLoginSuccess) {
+                                      props.onThirdPartyLoginSuccess({
+                                        nickname: data.nickname,
+                                        userId: data.id.toString(),
+                                        avatar: data.avatar_url,
+                                        authType: __WEBPACK_IMPORTED_MODULE_8__auth__.AuthType.CODEMAO,
+                                        source: loginMethod === 'qq' ? 'qq-login' : 'wc-login'
+                                      });
+                                    }
                                     window.removeEventListener('message', messageListener);
                                   case 7:
                                   case "end":
@@ -207,11 +215,13 @@ var LoginPageContainer = function LoginPageContainer(props) {
                             }, _callee);
                           }))).catch(function (e) {
                             console.error(e);
-                            props.onThirdPartyLoginFailure && props.onThirdPartyLoginFailure({
-                              source: loginMethod === 'qq' ? 'qq-login' : 'wc-login',
-                              isSuccess: false,
-                              error: e
-                            });
+                            if (props.onThirdPartyLoginFailure) {
+                              props.onThirdPartyLoginFailure({
+                                source: loginMethod === 'qq' ? 'qq-login' : 'wc-login',
+                                isSuccess: false,
+                                error: e
+                              });
+                            }
                           });
                           _context2.next = 21;
                           break;
@@ -224,24 +234,28 @@ var LoginPageContainer = function LoginPageContainer(props) {
                           return _context2.sent.data;
                         case 13:
                           _data = _context2.sent;
-                          props.onThirdPartyLoginSuccess && props.onThirdPartyLoginSuccess({
-                            nickname: _data.nickname,
-                            userId: _data.id.toString(),
-                            avatar: _data.avatar_url,
-                            authType: __WEBPACK_IMPORTED_MODULE_8__auth__.AuthType.CODEMAO,
-                            source: loginMethod === 'qq' ? 'qq-login' : 'wc-login'
-                          });
+                          if (props.onThirdPartyLoginSuccess) {
+                            props.onThirdPartyLoginSuccess({
+                              nickname: _data.nickname,
+                              userId: _data.id.toString(),
+                              avatar: _data.avatar_url,
+                              authType: __WEBPACK_IMPORTED_MODULE_8__auth__.AuthType.CODEMAO,
+                              source: loginMethod === 'qq' ? 'qq-login' : 'wc-login'
+                            });
+                          }
                           window.removeEventListener('message', messageListener);
                           _context2.next = 21;
                           break;
                         case 18:
                           _context2.prev = 18;
                           _context2.t0 = _context2["catch"](8);
-                          props.onThirdPartyLoginFailure && props.onThirdPartyLoginFailure({
-                            source: loginMethod === 'qq' ? 'qq-login' : 'wc-login',
-                            isSuccess: false,
-                            error: _context2.t0
-                          });
+                          if (props.onThirdPartyLoginFailure) {
+                            props.onThirdPartyLoginFailure({
+                              source: loginMethod === 'qq' ? 'qq-login' : 'wc-login',
+                              isSuccess: false,
+                              error: _context2.t0
+                            });
+                          }
                         case 21:
                         case "end":
                           return _context2.stop();

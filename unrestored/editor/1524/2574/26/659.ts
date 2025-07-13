@@ -1,0 +1,1 @@
+module.exports = n.p + "static/media/phone.acdd3d45.svg";

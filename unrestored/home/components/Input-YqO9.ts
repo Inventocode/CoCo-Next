@@ -23,16 +23,22 @@ var _slicedToArray = function () {
     try {
       for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {
         _arr.push(_s.value);
-        if (i && _arr.length === i) break;
+        if (i && _arr.length === i) {
+          break;
+        }
       }
     } catch (err) {
       _d = true;
       _e = err;
     } finally {
       try {
-        if (!_n && _i["return"]) _i["return"]();
+        if (!_n && _i["return"]) {
+          _i["return"]();
+        }
       } finally {
-        if (_d) throw _e;
+        if (_d) {
+          throw _e;
+        }
       }
     }
     return _arr;
@@ -191,51 +197,50 @@ var formatOnChangeEvent = function formatOnChangeEvent(value, oldInputValueRef, 
 };
 var animationTimeId = void 0;
 var Input = function Input(props, ref) {
-  var warning = props.warning,
-    placeholder = props.placeholder,
-    value = props.value,
-    defaultValue = props.defaultValue,
-    onChange = props.onChange,
-    onBlur = props.onBlur,
-    onClick = props.onClick,
-    onMouseDown = props.onMouseDown,
-    onKeyDown = props.onKeyDown,
-    onFocus = props.onFocus,
-    onCompositionStart = props.onCompositionStart,
-    onCompositionEnd = props.onCompositionEnd,
-    onClearCallback = props.onClearCallback,
-    before = props.before,
-    after = props.after,
-    style = props.style,
-    className = props.className,
-    max = props.max,
-    min = props.min,
-    maxLength = props.maxLength,
-    disabled = props.disabled,
-    _props$type = props.type,
-    type = _props$type === undefined ? 'text' : _props$type,
-    dependency = props.dependency,
-    rules = props.rules,
-    _props$readOnly = props.readOnly,
-    readOnly = _props$readOnly === undefined ? false : _props$readOnly,
-    _props$isTrimmed = props.isTrimmed,
-    isTrimmed = _props$isTrimmed === undefined ? false : _props$isTrimmed,
-    clearButtonVisible = props.clearButtonVisible;
-  var _useState = Object(__WEBPACK_IMPORTED_MODULE_0_react__.useState)(false),
-    _useState2 = _slicedToArray(_useState, 2),
-    isFocused = _useState2[0],
-    setIsFocused = _useState2[1];
-  var _useState3 = Object(__WEBPACK_IMPORTED_MODULE_0_react__.useState)(false),
-    _useState4 = _slicedToArray(_useState3, 2),
-    isWarningAnimation = _useState4[0],
-    setWarningAnimation = _useState4[1];
+  var warning = props.warning;
+  var placeholder = props.placeholder;
+  var value = props.value;
+  var defaultValue = props.defaultValue;
+  var onChange = props.onChange;
+  var onBlur = props.onBlur;
+  var onClick = props.onClick;
+  var onMouseDown = props.onMouseDown;
+  var onKeyDown = props.onKeyDown;
+  var onFocus = props.onFocus;
+  var onCompositionStart = props.onCompositionStart;
+  var onCompositionEnd = props.onCompositionEnd;
+  var onClearCallback = props.onClearCallback;
+  var before = props.before;
+  var after = props.after;
+  var style = props.style;
+  var className = props.className;
+  var max = props.max;
+  var min = props.min;
+  var maxLength = props.maxLength;
+  var disabled = props.disabled;
+  var _props$type = props.type;
+  var type = _props$type === undefined ? 'text' : _props$type;
+  var dependency = props.dependency;
+  var rules = props.rules;
+  var _props$readOnly = props.readOnly;
+  var readOnly = _props$readOnly === undefined ? false : _props$readOnly;
+  var _props$isTrimmed = props.isTrimmed;
+  var isTrimmed = _props$isTrimmed === undefined ? false : _props$isTrimmed;
+  var clearButtonVisible = props.clearButtonVisible;
+  var _useState = Object(__WEBPACK_IMPORTED_MODULE_0_react__.useState)(false);
+  var _useState2 = _slicedToArray(_useState, 2);
+  var isFocused = _useState2[0];
+  var setIsFocused = _useState2[1];
+  var _useState3 = Object(__WEBPACK_IMPORTED_MODULE_0_react__.useState)(false);
+  var _useState4 = _slicedToArray(_useState3, 2);
+  var isWarningAnimation = _useState4[0];
+  var setWarningAnimation = _useState4[1];
   var inputRef = Object(__WEBPACK_IMPORTED_MODULE_0_react__.useRef)(null);
   var oldInputValueRef = Object(__WEBPACK_IMPORTED_MODULE_0_react__.useRef)(''); // 记录input 框改变前的value
-
-  var _useState5 = Object(__WEBPACK_IMPORTED_MODULE_0_react__.useState)(!!defaultValue || !!value),
-    _useState6 = _slicedToArray(_useState5, 2),
-    isEmptyValue = _useState6[0],
-    setIsEmptyValue = _useState6[1];
+  var _useState5 = Object(__WEBPACK_IMPORTED_MODULE_0_react__.useState)(!!defaultValue || !!value);
+  var _useState6 = _slicedToArray(_useState5, 2);
+  var isEmptyValue = _useState6[0];
+  var setIsEmptyValue = _useState6[1];
   var isCompositionEnd = Object(__WEBPACK_IMPORTED_MODULE_0_react__.useRef)(true);
   // 记录上一次输入框数据
   // NOTE: reset input value when dependency changed
@@ -302,11 +307,15 @@ var Input = function Input(props, ref) {
     if (min && Number(formatResult.value) < min) {
       return;
     }
-    onChange && onChange(formatResult.value || '0', e);
+    if (onChange) {
+      onChange(formatResult.value || '0', e);
+    }
   };
   var handleChangeWhenTextType = function handleChangeWhenTextType(e) {
     var resultValue = handleFormarTextResult();
-    resultValue !== undefined && onChange && onChange(resultValue, e);
+    if (resultValue !== undefined && onChange) {
+      onChange(resultValue, e);
+    }
   };
   var handleFormarTextResult = function handleFormarTextResult() {
     var inputEL = inputRef.current;
@@ -347,7 +356,9 @@ var Input = function Input(props, ref) {
   };
   var handleFocus = Object(__WEBPACK_IMPORTED_MODULE_0_react__.useCallback)(function (e) {
     setIsFocused(true);
-    onFocus && onFocus(e);
+    if (onFocus) {
+      onFocus(e);
+    }
   }, [onFocus]);
   var handleBlur = Object(__WEBPACK_IMPORTED_MODULE_0_react__.useCallback)(function (e) {
     setIsFocused(false);
@@ -364,8 +375,12 @@ var Input = function Input(props, ref) {
       lastV = lastV.trim();
     }
     inputEL.value = lastV;
-    onBlur && onBlur(lastV, e);
-    lastV !== previousV && onChange && onChange(lastV, e);
+    if (onBlur) {
+      onBlur(lastV, e);
+    }
+    if (lastV !== previousV && onChange) {
+      onChange(lastV, e);
+    }
   }, [inputRef, type, isTrimmed, onBlur, onChange, max, min]);
   var handleKeydown = function handleKeydown(e) {
     var inputEL = inputRef.current;
@@ -375,7 +390,9 @@ var Input = function Input(props, ref) {
     if (e.keyCode === 13) {
       inputEL.blur();
     }
-    onKeyDown && onKeyDown(e);
+    if (onKeyDown) {
+      onKeyDown(e);
+    }
   };
   var handleClearButtonMouseDown = function handleClearButtonMouseDown(e) {
     var inputEl = inputRef.current;
@@ -385,17 +402,23 @@ var Input = function Input(props, ref) {
       inputEl.value = '';
       inputEl.focus();
       setIsEmptyValue(true);
-      onClearCallback && onClearCallback();
+      if (onClearCallback) {
+        onClearCallback();
+      }
     }
   };
   var handleCompositionStart = function handleCompositionStart() {
     isCompositionEnd.current = false;
-    onCompositionStart && onCompositionStart();
+    if (onCompositionStart) {
+      onCompositionStart();
+    }
   };
   var handleCompositionEnd = function handleCompositionEnd(e) {
     isCompositionEnd.current = true;
     handleFormarTextResult();
-    onCompositionEnd && onCompositionEnd(e);
+    if (onCompositionEnd) {
+      onCompositionEnd(e);
+    }
   };
   var otherProps = {
     disabled: disabled,

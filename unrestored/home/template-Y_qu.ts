@@ -27,7 +27,7 @@ import * as __WEBPACK_IMPORTED_MODULE_9__components_CommonToast__ from "./compon
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_10__components_ConfirmDialog__ from "./components/ConfirmDialog-kwR3";
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_11__Home__ from "./Home/index-hCpk";
+import * as __WEBPACK_IMPORTED_MODULE_11__Home__ from "./Home-hCpk";
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_12_react_loadable__ from "react-loadable";
 /* harmony import */
@@ -38,13 +38,19 @@ var _createClass = function () {
       var descriptor = props[i];
       descriptor.enumerable = descriptor.enumerable || false;
       descriptor.configurable = true;
-      if ("value" in descriptor) descriptor.writable = true;
+      if ("value" in descriptor) {
+        descriptor.writable = true;
+      }
       Object.defineProperty(target, descriptor.key, descriptor);
     }
   }
   return function (Constructor, protoProps, staticProps) {
-    if (protoProps) defineProperties(Constructor.prototype, protoProps);
-    if (staticProps) defineProperties(Constructor, staticProps);
+    if (protoProps) {
+      defineProperties(Constructor.prototype, protoProps);
+    }
+    if (staticProps) {
+      defineProperties(Constructor, staticProps);
+    }
     return Constructor;
   };
 }();
@@ -71,11 +77,17 @@ function _inherits(subClass, superClass) {
       configurable: true
     }
   });
-  if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
+  if (superClass) {
+    if (Object.setPrototypeOf) {
+      Object.setPrototypeOf(subClass, superClass);
+    } else {
+      subClass.__proto__ = superClass;
+    }
+  }
 }
 var Work = __WEBPACK_IMPORTED_MODULE_12_react_loadable__({
   loader: function loader() {
-    return import("./index-Pv6Z");
+    return import("./unnamed-Pv6Z");
   },
   loading: function loading() {
     return __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
@@ -100,9 +112,9 @@ var ViewRouterComponent = function (_React$Component) {
   }, {
     key: 'render',
     value: function render() {
-      var _props = this.props,
-        playCourseInfo = _props.playCourseInfo,
-        courseDialogVisible = _props.courseDialogVisible;
+      var _props = this.props;
+      var playCourseInfo = _props.playCourseInfo;
+      var courseDialogVisible = _props.courseDialogVisible;
       return __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
         style: {
           minWidth: '990px'

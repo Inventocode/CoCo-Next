@@ -19,7 +19,7 @@ import * as __WEBPACK_IMPORTED_MODULE_4__crc_catui2_dist_themes_violet_index_css
 /* harmony import */
 import __WEBPACK_IMPORTED_MODULE_4__crc_catui2_dist_themes_violet_index_css___default from "./crc/catui2/dist/themes/violet/index/css-ASuZ";
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_5__crc_catui2_dist_themes__ from "./crc/catui2/dist/themes/index-P22Q";
+import * as __WEBPACK_IMPORTED_MODULE_5__crc_catui2_dist_themes__ from "./crc/catui2/dist/themes-P22Q";
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_6_react_css_modules__ from "react-css-modules";
 /* harmony import */
@@ -34,13 +34,19 @@ var _createClass = function () {
       var descriptor = props[i];
       descriptor.enumerable = descriptor.enumerable || false;
       descriptor.configurable = true;
-      if ("value" in descriptor) descriptor.writable = true;
+      if ("value" in descriptor) {
+        descriptor.writable = true;
+      }
       Object.defineProperty(target, descriptor.key, descriptor);
     }
   }
   return function (Constructor, protoProps, staticProps) {
-    if (protoProps) defineProperties(Constructor.prototype, protoProps);
-    if (staticProps) defineProperties(Constructor, staticProps);
+    if (protoProps) {
+      defineProperties(Constructor.prototype, protoProps);
+    }
+    if (staticProps) {
+      defineProperties(Constructor, staticProps);
+    }
     return Constructor;
   };
 }();
@@ -72,16 +78,31 @@ function _inherits(subClass, superClass) {
       configurable: true
     }
   });
-  if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
+  if (superClass) {
+    if (Object.setPrototypeOf) {
+      Object.setPrototypeOf(subClass, superClass);
+    } else {
+      subClass.__proto__ = superClass;
+    }
+  }
 }
 var __decorate = this && this.__decorate || function (decorators, target, key, desc) {
-  var c = arguments.length,
-    r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
-    d;
-  if ((typeof Reflect === "undefined" ? "undefined" : _typeof(Reflect)) === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) {
-    if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+  var c = arguments.length;
+  var r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc;
+  var d;
+  if ((typeof Reflect === "undefined" ? "undefined" : _typeof(Reflect)) === "object" && typeof Reflect.decorate === "function") {
+    r = Reflect.decorate(decorators, target, key, desc);
+  } else {
+    for (var i = decorators.length - 1; i >= 0; i--) {
+      if (d = decorators[i]) {
+        r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+      }
+    }
   }
-  return c > 3 && r && Object.defineProperty(target, key, r), r;
+  if (c > 3 && r) {
+    Object.defineProperty(target, key, r);
+  }
+  return r;
 };
 var __awaiter = this && this.__awaiter || function (thisArg, _arguments, P, generator) {
   return new (P || (P = Promise))(function (resolve, reject) {
@@ -100,17 +121,20 @@ var __awaiter = this && this.__awaiter || function (thisArg, _arguments, P, gene
       }
     }
     function step(result) {
-      result.done ? resolve(result.value) : new P(function (resolve) {
+      if (result.done) {
         resolve(result.value);
-      }).then(fulfilled, rejected);
+      } else {
+        new P(function (resolve) {
+          resolve(result.value);
+        }).then(fulfilled, rejected);
+      }
     }
     step((generator = generator.apply(thisArg, _arguments || [])).next());
   });
 };
 
 // import '@crc/catui2/dist/components/application/sign-in-dialog/style_module.css';
-
-var styles = require("./unnamed-xr0F");
+import * as styles from "./styles-xr0F";
 function detectCatLanguage(language) {
   switch (language) {
     case 'zh':
@@ -168,7 +192,9 @@ var SignInDialogView = function (_React$Component) {
       var closeDialogFirst = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : true;
       var loginMethod = arguments[1];
       return __awaiter(this, void 0, void 0, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.mark(function _callee() {
-        var auth, response, data;
+        var auth;
+        var response;
+        var data;
         return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {

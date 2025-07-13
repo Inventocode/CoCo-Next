@@ -22,13 +22,13 @@ function is_connecting() {
   return navigator.onLine;
 }
 function get_api_prefix() {
-  var _config = Object(__WEBPACK_IMPORTED_MODULE_0__cfg__.config)(),
-    backendHost = _config.backendHost;
+  var _config = Object(__WEBPACK_IMPORTED_MODULE_0__cfg__.config)();
+  var backendHost = _config.backendHost;
   return backendHost;
 }
 function get_coll_prefix() {
-  var _config2 = Object(__WEBPACK_IMPORTED_MODULE_0__cfg__.config)(),
-    oTServerHost = _config2.oTServerHost;
+  var _config2 = Object(__WEBPACK_IMPORTED_MODULE_0__cfg__.config)();
+  var oTServerHost = _config2.oTServerHost;
   return oTServerHost;
 }
 function formatTimestamp(timestamp) {

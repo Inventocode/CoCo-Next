@@ -15,13 +15,19 @@ var createClass = function () {
       var descriptor = props[i];
       descriptor.enumerable = descriptor.enumerable || false;
       descriptor.configurable = true;
-      if ("value" in descriptor) descriptor.writable = true;
+      if ("value" in descriptor) {
+        descriptor.writable = true;
+      }
       Object.defineProperty(target, descriptor.key, descriptor);
     }
   }
   return function (Constructor, protoProps, staticProps) {
-    if (protoProps) defineProperties(Constructor.prototype, protoProps);
-    if (staticProps) defineProperties(Constructor, staticProps);
+    if (protoProps) {
+      defineProperties(Constructor.prototype, protoProps);
+    }
+    if (staticProps) {
+      defineProperties(Constructor, staticProps);
+    }
     return Constructor;
   };
 }();
@@ -48,7 +54,13 @@ var inherits = function (subClass, superClass) {
       configurable: true
     }
   });
-  if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
+  if (superClass) {
+    if (Object.setPrototypeOf) {
+      Object.setPrototypeOf(subClass, superClass);
+    } else {
+      subClass.__proto__ = superClass;
+    }
+  }
 };
 var possibleConstructorReturn = function (self, call) {
   if (!self) {
@@ -162,13 +174,27 @@ var endsWith = function endsWith(str, searchStr) {
   return str.substr(str.length - searchStr.length, searchStr.length) === searchStr;
 };
 var getStringSize = function getStringSize(n) {
-  if (n.toString() === 'auto') return n.toString();
-  if (endsWith(n.toString(), 'px')) return n.toString();
-  if (endsWith(n.toString(), '%')) return n.toString();
-  if (endsWith(n.toString(), 'vh')) return n.toString();
-  if (endsWith(n.toString(), 'vw')) return n.toString();
-  if (endsWith(n.toString(), 'vmax')) return n.toString();
-  if (endsWith(n.toString(), 'vmin')) return n.toString();
+  if (n.toString() === 'auto') {
+    return n.toString();
+  }
+  if (endsWith(n.toString(), 'px')) {
+    return n.toString();
+  }
+  if (endsWith(n.toString(), '%')) {
+    return n.toString();
+  }
+  if (endsWith(n.toString(), 'vh')) {
+    return n.toString();
+  }
+  if (endsWith(n.toString(), 'vw')) {
+    return n.toString();
+  }
+  if (endsWith(n.toString(), 'vmax')) {
+    return n.toString();
+  }
+  if (endsWith(n.toString(), 'vmin')) {
+    return n.toString();
+  }
   return n + 'px';
 };
 var definedProps = ['style', 'className', 'grid', 'snap', 'bounds', 'size', 'defaultSize', 'minWidth', 'minHeight', 'maxWidth', 'maxHeight', 'lockAspectRatio', 'lockAspectRatioExtraWidth', 'lockAspectRatioExtraHeight', 'enable', 'handleStyles', 'handleClasses', 'handleWrapperStyle', 'handleWrapperClass', 'children', 'onResizeStart', 'onResize', 'onResizeStop', 'handleComponent', 'scale', 'resizeRatio'];
@@ -208,7 +234,9 @@ var Resizable = function (_React$Component) {
     key: 'updateExtendsProps',
     value: function updateExtendsProps(props) {
       this.extendsProps = Object.keys(props).reduce(function (acc, key) {
-        if (definedProps.indexOf(key) !== -1) return acc;
+        if (definedProps.indexOf(key) !== -1) {
+          return acc;
+        }
         acc[key] = props[key];
         return acc;
       }, {});
@@ -217,10 +245,12 @@ var Resizable = function (_React$Component) {
     key: 'getParentSize',
     value: function getParentSize() {
       var base = this.base;
-      if (!base) return {
-        width: window.innerWidth,
-        height: window.innerHeight
-      };
+      if (!base) {
+        return {
+          width: window.innerWidth,
+          height: window.innerHeight
+        };
+      }
       // INFO: To calculate parent width with flex layout
       var wrapChanged = false;
       var wrap = this.parentNode.style.flexWrap;
@@ -237,7 +267,9 @@ var Resizable = function (_React$Component) {
         height: base.offsetHeight
       };
       base.style.position = 'absolute';
-      if (wrapChanged) this.parentNode.style.flexWrap = wrap;
+      if (wrapChanged) {
+        this.parentNode.style.flexWrap = wrap;
+      }
       base.style.minWidth = minWidth;
       return size;
     }
@@ -250,8 +282,12 @@ var Resizable = function (_React$Component) {
         height: this.state.height || size.height
       });
       var parent = this.parentNode;
-      if (!(parent instanceof HTMLElement)) return;
-      if (this.base) return;
+      if (!(parent instanceof HTMLElement)) {
+        return;
+      }
+      if (this.base) {
+        return;
+      }
       var element = document.createElement('div');
       element.style.width = '100%';
       element.style.height = '100%';
@@ -282,8 +318,12 @@ var Resizable = function (_React$Component) {
         window.removeEventListener('touchend', this.onMouseUp);
         var parent = this.parentNode;
         var base = this.base;
-        if (!base || !parent) return;
-        if (!(parent instanceof HTMLElement) || !(base instanceof Node)) return;
+        if (!base || !parent) {
+          return;
+        }
+        if (!(parent instanceof HTMLElement) || !(base instanceof Node)) {
+          return;
+        }
         parent.removeChild(base);
       }
     }
@@ -344,24 +384,26 @@ var Resizable = function (_React$Component) {
   }, {
     key: 'onMouseMove',
     value: function onMouseMove(event) {
-      if (!this.state.isResizing) return;
+      if (!this.state.isResizing) {
+        return;
+      }
       var clientX = event instanceof MouseEvent ? event.clientX : event.touches[0].clientX;
       var clientY = event instanceof MouseEvent ? event.clientY : event.touches[0].clientY;
-      var _state = this.state,
-        direction = _state.direction,
-        original = _state.original,
-        width = _state.width,
-        height = _state.height;
-      var _props = this.props,
-        lockAspectRatio = _props.lockAspectRatio,
-        lockAspectRatioExtraHeight = _props.lockAspectRatioExtraHeight,
-        lockAspectRatioExtraWidth = _props.lockAspectRatioExtraWidth;
+      var _state = this.state;
+      var direction = _state.direction;
+      var original = _state.original;
+      var width = _state.width;
+      var height = _state.height;
+      var _props = this.props;
+      var lockAspectRatio = _props.lockAspectRatio;
+      var lockAspectRatioExtraHeight = _props.lockAspectRatioExtraHeight;
+      var lockAspectRatioExtraWidth = _props.lockAspectRatioExtraWidth;
       var scale = this.props.scale || 1;
-      var _props2 = this.props,
-        maxWidth = _props2.maxWidth,
-        maxHeight = _props2.maxHeight,
-        minWidth = _props2.minWidth,
-        minHeight = _props2.minHeight;
+      var _props2 = this.props;
+      var maxWidth = _props2.maxWidth;
+      var maxHeight = _props2.maxHeight;
+      var minWidth = _props2.minWidth;
+      var minHeight = _props2.minHeight;
       var resizeRatio = this.props.resizeRatio || 1;
 
       // TODO: refactor
@@ -391,19 +433,27 @@ var Resizable = function (_React$Component) {
       var newHeight = original.height;
       if (/right/i.test(direction)) {
         newWidth = original.width + (clientX - original.x) * resizeRatio / scale;
-        if (lockAspectRatio) newHeight = (newWidth - lockAspectRatioExtraWidth) / ratio + lockAspectRatioExtraHeight;
+        if (lockAspectRatio) {
+          newHeight = (newWidth - lockAspectRatioExtraWidth) / ratio + lockAspectRatioExtraHeight;
+        }
       }
       if (/left/i.test(direction)) {
         newWidth = original.width - (clientX - original.x) * resizeRatio / scale;
-        if (lockAspectRatio) newHeight = (newWidth - lockAspectRatioExtraWidth) / ratio + lockAspectRatioExtraHeight;
+        if (lockAspectRatio) {
+          newHeight = (newWidth - lockAspectRatioExtraWidth) / ratio + lockAspectRatioExtraHeight;
+        }
       }
       if (/bottom/i.test(direction)) {
         newHeight = original.height + (clientY - original.y) * resizeRatio / scale;
-        if (lockAspectRatio) newWidth = (newHeight - lockAspectRatioExtraHeight) * ratio + lockAspectRatioExtraWidth;
+        if (lockAspectRatio) {
+          newWidth = (newHeight - lockAspectRatioExtraHeight) * ratio + lockAspectRatioExtraWidth;
+        }
       }
       if (/top/i.test(direction)) {
         newHeight = original.height - (clientY - original.y) * resizeRatio / scale;
-        if (lockAspectRatio) newWidth = (newHeight - lockAspectRatioExtraHeight) * ratio + lockAspectRatioExtraWidth;
+        if (lockAspectRatio) {
+          newWidth = (newHeight - lockAspectRatioExtraHeight) * ratio + lockAspectRatioExtraWidth;
+        }
       }
       if (this.props.bounds === 'parent') {
         var parent = this.parentNode;
@@ -411,9 +461,9 @@ var Resizable = function (_React$Component) {
           var parentRect = parent.getBoundingClientRect();
           var parentLeft = parentRect.left;
           var parentTop = parentRect.top;
-          var _resizable$getBoundin = this.resizable.getBoundingClientRect(),
-            _left = _resizable$getBoundin.left,
-            _top = _resizable$getBoundin.top;
+          var _resizable$getBoundin = this.resizable.getBoundingClientRect();
+          var _left = _resizable$getBoundin.left;
+          var _top = _resizable$getBoundin.top;
           var boundWidth = parent.offsetWidth + (parentLeft - _left);
           var boundHeight = parent.offsetHeight + (parentTop - _top);
           maxWidth = maxWidth && maxWidth < boundWidth ? maxWidth : boundWidth;
@@ -421,9 +471,9 @@ var Resizable = function (_React$Component) {
         }
       } else if (this.props.bounds === 'window') {
         if (typeof window !== 'undefined') {
-          var _resizable$getBoundin2 = this.resizable.getBoundingClientRect(),
-            _left2 = _resizable$getBoundin2.left,
-            _top2 = _resizable$getBoundin2.top;
+          var _resizable$getBoundin2 = this.resizable.getBoundingClientRect();
+          var _left2 = _resizable$getBoundin2.left;
+          var _top2 = _resizable$getBoundin2.top;
           var _boundWidth = window.innerWidth - _left2;
           var _boundHeight = window.innerHeight - _top2;
           maxWidth = maxWidth && maxWidth < _boundWidth ? maxWidth : _boundWidth;
@@ -433,10 +483,12 @@ var Resizable = function (_React$Component) {
         var targetRect = this.props.bounds.getBoundingClientRect();
         var targetLeft = targetRect.left;
         var targetTop = targetRect.top;
-        var _resizable$getBoundin3 = this.resizable.getBoundingClientRect(),
-          _left3 = _resizable$getBoundin3.left,
-          _top3 = _resizable$getBoundin3.top;
-        if (!(this.props.bounds instanceof HTMLElement)) return;
+        var _resizable$getBoundin3 = this.resizable.getBoundingClientRect();
+        var _left3 = _resizable$getBoundin3.left;
+        var _top3 = _resizable$getBoundin3.top;
+        if (!(this.props.bounds instanceof HTMLElement)) {
+          return;
+        }
         var _boundWidth2 = this.props.bounds.offsetWidth + (targetLeft - _left3);
         var _boundHeight2 = this.props.bounds.offsetHeight + (targetTop - _top3);
         maxWidth = maxWidth && maxWidth < _boundWidth2 ? maxWidth : _boundWidth2;
@@ -496,11 +548,13 @@ var Resizable = function (_React$Component) {
   }, {
     key: 'onMouseUp',
     value: function onMouseUp(event) {
-      var _state2 = this.state,
-        isResizing = _state2.isResizing,
-        direction = _state2.direction,
-        original = _state2.original;
-      if (!isResizing) return;
+      var _state2 = this.state;
+      var isResizing = _state2.isResizing;
+      var direction = _state2.direction;
+      var original = _state2.original;
+      if (!isResizing) {
+        return;
+      }
       var delta = {
         width: this.size.width - original.width,
         height: this.size.height - original.height
@@ -528,14 +582,16 @@ var Resizable = function (_React$Component) {
     key: 'renderResizer',
     value: function renderResizer() {
       var _this2 = this;
-      var _props3 = this.props,
-        enable = _props3.enable,
-        handleStyles = _props3.handleStyles,
-        handleClasses = _props3.handleClasses,
-        handleWrapperStyle = _props3.handleWrapperStyle,
-        handleWrapperClass = _props3.handleWrapperClass,
-        handleComponent = _props3.handleComponent;
-      if (!enable) return null;
+      var _props3 = this.props;
+      var enable = _props3.enable;
+      var handleStyles = _props3.handleStyles;
+      var handleClasses = _props3.handleClasses;
+      var handleWrapperStyle = _props3.handleWrapperStyle;
+      var handleWrapperClass = _props3.handleWrapperClass;
+      var handleComponent = _props3.handleComponent;
+      if (!enable) {
+        return null;
+      }
       var resizers = Object.keys(enable).map(function (dir) {
         if (enable[dir] !== false) {
           return Object(__WEBPACK_IMPORTED_MODULE_0_react__.createElement)(Resizer, {
@@ -605,7 +661,9 @@ var Resizable = function (_React$Component) {
     key: 'base',
     get: function get$$1() {
       var parent = this.parentNode;
-      if (!parent) return undefined;
+      if (!parent) {
+        return undefined;
+      }
       var children = [].slice.call(parent.children);
       for (var i = 0; i < children.length; i += 1) {
         var n = children[i];
@@ -648,9 +706,13 @@ var Resizable = function (_React$Component) {
       var _this4 = this;
       var size = this.props.size;
       var getSize = function getSize(key) {
-        if (typeof _this4.state[key] === 'undefined' || _this4.state[key] === 'auto') return 'auto';
+        if (typeof _this4.state[key] === 'undefined' || _this4.state[key] === 'auto') {
+          return 'auto';
+        }
         if (_this4.propsSize && _this4.propsSize[key] && endsWith(_this4.propsSize[key].toString(), '%')) {
-          if (endsWith(_this4.state[key].toString(), '%')) return _this4.state[key].toString();
+          if (endsWith(_this4.state[key].toString(), '%')) {
+            return _this4.state[key].toString();
+          }
           var parentSize = _this4.getParentSize();
           var value = Number(_this4.state[key].toString().replace('px', ''));
           var percent = value / parentSize[key] * 100;

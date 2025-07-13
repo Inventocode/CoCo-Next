@@ -1,0 +1,1 @@
+module.exports = n.p + "static/media/busy.d4d74505.svg";

@@ -7,7 +7,7 @@ import * as __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator__ from "@babel
 /* harmony import */
 import __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default from "@babel/runtime/regenerator";
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_1_redux_saga__ from "redux-saga/effects";
+import * as __WEBPACK_IMPORTED_MODULE_1_redux_saga__ from "redux-saga";
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_2_redux_saga_effects__ from "redux-saga/effects";
 /* harmony import */
@@ -18,14 +18,15 @@ import __WEBPACK_IMPORTED_MODULE_3_axios___default from "axios";
 import * as __WEBPACK_IMPORTED_MODULE_4__actions__ from "../../../../Home/model/actions-twBc";
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_5__utils__ from "../../../../components/utils-jnIn";
-var _marked = /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.mark(handleGetBannerList),
-  _marked2 = /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.mark(handleGetTopicList),
-  _marked3 = /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.mark(handleGetCourseList),
-  _marked4 = /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.mark(handleGetTemplateList),
-  _marked5 = /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.mark(handleGetWorkList),
-  _marked6 = /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.mark(homeSaga);
+var _marked = /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.mark(handleGetBannerList);
+var _marked2 = /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.mark(handleGetTopicList);
+var _marked3 = /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.mark(handleGetCourseList);
+var _marked4 = /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.mark(handleGetTemplateList);
+var _marked5 = /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.mark(handleGetWorkList);
+var _marked6 = /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.mark(homeSaga);
 function handleGetBannerList() {
-  var url, result;
+  var url;
+  var result;
   return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.wrap(function handleGetBannerList$(_context) {
     while (1) {
       switch (_context.prev = _context.next) {
@@ -38,7 +39,9 @@ function handleGetBannerList() {
           }).then(function (res) {
             return res.data;
           }).catch(function (err) {
-            false && console.log('fetch banner list failed, detail:', err);
+            if (false) {
+              console.log('fetch banner list failed, detail:', err);
+            }
             throw err;
           });
         case 4:
@@ -55,7 +58,9 @@ function handleGetBannerList() {
         case 10:
           _context.prev = 10;
           _context.t0 = _context['catch'](1);
-          false && console.log('fetch banner list error, detail', _context.t0);
+          if (false) {
+            console.log('fetch banner list error, detail', _context.t0);
+          }
         case 13:
         case 'end':
           return _context.stop();
@@ -64,7 +69,8 @@ function handleGetBannerList() {
   }, _marked, this, [[1, 10]]);
 }
 function handleGetTopicList() {
-  var url, result;
+  var url;
+  var result;
   return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.wrap(function handleGetTopicList$(_context2) {
     while (1) {
       switch (_context2.prev = _context2.next) {
@@ -77,7 +83,9 @@ function handleGetTopicList() {
           }).then(function (res) {
             return res.data;
           }).catch(function (err) {
-            false && console.log('fetch topic list failed, detail:', err);
+            if (false) {
+              console.log('fetch topic list failed, detail:', err);
+            }
             throw err;
           });
         case 4:
@@ -94,7 +102,9 @@ function handleGetTopicList() {
         case 10:
           _context2.prev = 10;
           _context2.t0 = _context2['catch'](1);
-          false && console.log('fetch topic list error, detail', _context2.t0);
+          if (false) {
+            console.log('fetch topic list error, detail', _context2.t0);
+          }
         case 13:
         case 'end':
           return _context2.stop();
@@ -103,7 +113,8 @@ function handleGetTopicList() {
   }, _marked2, this, [[1, 10]]);
 }
 function handleGetCourseList() {
-  var url, result;
+  var url;
+  var result;
   return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.wrap(function handleGetCourseList$(_context3) {
     while (1) {
       switch (_context3.prev = _context3.next) {
@@ -116,7 +127,9 @@ function handleGetCourseList() {
           }).then(function (res) {
             return res.data;
           }).catch(function (err) {
-            false && console.log('fetch course list failed, detail:', err);
+            if (false) {
+              console.log('fetch course list failed, detail:', err);
+            }
             throw err;
           });
         case 4:
@@ -133,7 +146,9 @@ function handleGetCourseList() {
         case 10:
           _context3.prev = 10;
           _context3.t0 = _context3['catch'](1);
-          false && console.log('fetch course list error, detail', _context3.t0);
+          if (false) {
+            console.log('fetch course list error, detail', _context3.t0);
+          }
         case 13:
         case 'end':
           return _context3.stop();
@@ -142,7 +157,9 @@ function handleGetCourseList() {
   }, _marked3, this, [[1, 10]]);
 }
 function handleGetTemplateList() {
-  var url, result, list;
+  var url;
+  var result;
+  var list;
   return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.wrap(function handleGetTemplateList$(_context4) {
     while (1) {
       switch (_context4.prev = _context4.next) {
@@ -155,7 +172,9 @@ function handleGetTemplateList() {
           }).then(function (res) {
             return res.data;
           }).catch(function (err) {
-            false && console.log('fetch template list failed, detail:', err);
+            if (false) {
+              console.log('fetch template list failed, detail:', err);
+            }
             throw err;
           });
         case 4:
@@ -178,7 +197,9 @@ function handleGetTemplateList() {
         case 12:
           _context4.prev = 12;
           _context4.t0 = _context4['catch'](1);
-          false && console.log('fetch template list error, detail', _context4.t0);
+          if (false) {
+            console.log('fetch template list error, detail', _context4.t0);
+          }
         case 15:
         case 'end':
           return _context4.stop();
@@ -187,7 +208,8 @@ function handleGetTemplateList() {
   }, _marked4, this, [[1, 12]]);
 }
 function handleGetWorkList() {
-  var url, result;
+  var url;
+  var result;
   return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.wrap(function handleGetWorkList$(_context5) {
     while (1) {
       switch (_context5.prev = _context5.next) {
@@ -200,7 +222,9 @@ function handleGetWorkList() {
           }).then(function (res) {
             return res.data;
           }).catch(function (err) {
-            false && console.log('fetch work list failed, detail:', err);
+            if (false) {
+              console.log('fetch work list failed, detail:', err);
+            }
             throw err;
           });
         case 4:
@@ -222,7 +246,9 @@ function handleGetWorkList() {
         case 11:
           _context5.prev = 11;
           _context5.t0 = _context5['catch'](1);
-          false && console.log('fetch work list error, detail', _context5.t0);
+          if (false) {
+            console.log('fetch work list error, detail', _context5.t0);
+          }
         case 14:
         case 'end':
           return _context5.stop();

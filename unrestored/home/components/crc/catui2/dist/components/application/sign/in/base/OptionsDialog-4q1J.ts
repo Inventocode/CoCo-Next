@@ -19,7 +19,11 @@ import * as __WEBPACK_IMPORTED_MODULE_4__optDialog_module_css__ from "./optDialo
 /* harmony import */
 import __WEBPACK_IMPORTED_MODULE_4__optDialog_module_css___default from "./optDialog.module.css-9DgP";
 var createOptions = function createOptions(config) {
-  var _config$cancelText, _config$secondaryText, _config$primaryText, _config$closeBtn, _config$maskClose;
+  var _config$cancelText;
+  var _config$secondaryText;
+  var _config$primaryText;
+  var _config$closeBtn;
+  var _config$maskClose;
   var btn = /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react___default.createElement("div", {
     className: "CUI-dialog-option-btn"
   }, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react___default.createElement(__WEBPACK_IMPORTED_MODULE_2__button__.Button, {

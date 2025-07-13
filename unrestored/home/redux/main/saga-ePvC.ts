@@ -7,7 +7,7 @@ import * as __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator__ from "@babel
 /* harmony import */
 import __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default from "@babel/runtime/regenerator";
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_1_redux_saga__ from "redux-saga/effects";
+import * as __WEBPACK_IMPORTED_MODULE_1_redux_saga__ from "redux-saga";
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_2_redux_saga_effects__ from "redux-saga/effects";
 /* harmony import */
@@ -22,11 +22,12 @@ import * as __WEBPACK_IMPORTED_MODULE_5__utils__ from "../../components/utils-jn
 import * as __WEBPACK_IMPORTED_MODULE_6__routes_Work_model_actions__ from "../../model/actions-HXaG";
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_7__routes_Home_model_actions__ from "../../Home/model/actions-twBc";
-var _marked = /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.mark(handleIsNewUser),
-  _marked2 = /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.mark(handleAsyncSetUserInfo),
-  _marked3 = /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.mark(mainSaga);
+var _marked = /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.mark(handleIsNewUser);
+var _marked2 = /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.mark(handleAsyncSetUserInfo);
+var _marked3 = /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.mark(mainSaga);
 function handleIsNewUser() {
-  var url, result;
+  var url;
+  var result;
   return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.wrap(function handleIsNewUser$(_context) {
     while (1) {
       switch (_context.prev = _context.next) {
@@ -39,7 +40,9 @@ function handleIsNewUser() {
           }).then(function (res) {
             return res.data;
           }).catch(function (err) {
-            false && console.log('fetch is new user failed, detail:', err);
+            if (false) {
+              console.log('fetch is new user failed, detail:', err);
+            }
             throw err;
           });
         case 4:
@@ -52,7 +55,9 @@ function handleIsNewUser() {
         case 9:
           _context.prev = 9;
           _context.t0 = _context['catch'](1);
-          false && console.log('fetch is new user error, detail', _context.t0);
+          if (false) {
+            console.log('fetch is new user error, detail', _context.t0);
+          }
         case 12:
         case 'end':
           return _context.stop();

@@ -39,17 +39,17 @@ var _styleModuleImportMap = {
 };
 var DEFAULT_TIMEOUT = 3000;
 var Toast = function Toast(props) {
-  var content = props.content,
-    onClose = props.onClose,
-    duration = props.duration;
-  var _useState = Object(__WEBPACK_IMPORTED_MODULE_2_react__.useState)(false),
-    _useState2 = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default)(_useState, 2),
-    isClosing = _useState2[0],
-    setIsClosing = _useState2[1];
-  var _useState3 = Object(__WEBPACK_IMPORTED_MODULE_2_react__.useState)(),
-    _useState4 = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default)(_useState3, 2),
-    clickType = _useState4[0],
-    setClickType = _useState4[1];
+  var content = props.content;
+  var onClose = props.onClose;
+  var duration = props.duration;
+  var _useState = Object(__WEBPACK_IMPORTED_MODULE_2_react__.useState)(false);
+  var _useState2 = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default)(_useState, 2);
+  var isClosing = _useState2[0];
+  var setIsClosing = _useState2[1];
+  var _useState3 = Object(__WEBPACK_IMPORTED_MODULE_2_react__.useState)();
+  var _useState4 = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default)(_useState3, 2);
+  var clickType = _useState4[0];
+  var setClickType = _useState4[1];
   var toastRef = Object(__WEBPACK_IMPORTED_MODULE_2_react__.useRef)(null);
   var timer = Object(__WEBPACK_IMPORTED_MODULE_2_react__.useRef)();
   Object(__WEBPACK_IMPORTED_MODULE_2_react__.useEffect)(function () {
@@ -67,33 +67,43 @@ var Toast = function Toast(props) {
       }, duration !== null && duration !== void 0 ? duration : DEFAULT_TIMEOUT);
     }
     return function () {
-      toastEl && onClose && toastEl.removeEventListener('animationend', onClose);
+      if (toastEl && onClose) {
+        toastEl.removeEventListener('animationend', onClose);
+      }
     };
   }, [duration]);
   Object(__WEBPACK_IMPORTED_MODULE_2_react__.useEffect)(function () {
     var toastEl = toastRef.current;
-    isClosing && toastEl && onClose && toastEl.addEventListener('animationend', onClose);
+    if (isClosing && toastEl && onClose) {
+      toastEl.addEventListener('animationend', onClose);
+    }
   }, [isClosing, onClose]);
   var handleClickBtn = function handleClickBtn(type) {
     return function () {
       setClickType(type);
-      var onCancel = props.onCancel,
-        onRetry = props.onRetry,
-        onIgnore = props.onIgnore;
+      var onCancel = props.onCancel;
+      var onRetry = props.onRetry;
+      var onIgnore = props.onIgnore;
       switch (clickType) {
         case 'retry':
           {
-            onRetry && onRetry();
+            if (onRetry) {
+              onRetry();
+            }
             break;
           }
         case 'ignore':
           {
-            onIgnore && onIgnore();
+            if (onIgnore) {
+              onIgnore();
+            }
             break;
           }
         case 'cancel':
           {
-            onCancel && onCancel();
+            if (onCancel) {
+              onCancel();
+            }
             break;
           }
         default:
@@ -145,7 +155,10 @@ var Toast = function Toast(props) {
       }, props.btn);
     }
     if (Array.isArray(props.btn)) {
-      var _props$btn, _props$btn2, _props$btn3, _props$btn4;
+      var _props$btn;
+      var _props$btn2;
+      var _props$btn3;
+      var _props$btn4;
       var btns = [];
       if ((_props$btn = props.btn) !== null && _props$btn !== void 0 && _props$btn.includes('retry')) {
         var retry = /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_2_react___default.createElement("span", {

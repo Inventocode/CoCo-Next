@@ -19,8 +19,8 @@ import * as __WEBPACK_IMPORTED_MODULE_5__Asset__ from "./Asset-J02Q";
 import * as __WEBPACK_IMPORTED_MODULE_6__Light__ from "./Light-6PrI";
 var _excluded = ["onDeviceOrientation"];
 var CellPhone = function CellPhone(_ref) {
-  var onDeviceOrientation = _ref.onDeviceOrientation,
-    props = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_objectWithoutProperties__.default)(_ref, _excluded);
+  var onDeviceOrientation = _ref.onDeviceOrientation;
+  var props = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_objectWithoutProperties__.default)(_ref, _excluded);
   return /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1_react___default.createElement("div", props, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1_react___default.createElement(__WEBPACK_IMPORTED_MODULE_2_react_three_fiber__.Canvas, {
     shadowMap: true
   }, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1_react___default.createElement(__WEBPACK_IMPORTED_MODULE_6__Light__.Light, {

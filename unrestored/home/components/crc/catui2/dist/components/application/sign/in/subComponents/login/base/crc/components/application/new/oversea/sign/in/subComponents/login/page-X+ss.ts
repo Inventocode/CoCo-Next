@@ -65,11 +65,11 @@ var _styleModuleImportMap = {
   }
 };
 var LoginPageContainer = function LoginPageContainer(props) {
-  var isRequesting = props.isRequesting,
-    setIsRequesting = props.setIsRequesting,
-    switchView = props.switchView,
-    onEmailLoginSuccess = props.onEmailLoginSuccess,
-    reportMethod = props.reportMethod;
+  var isRequesting = props.isRequesting;
+  var setIsRequesting = props.setIsRequesting;
+  var switchView = props.switchView;
+  var onEmailLoginSuccess = props.onEmailLoginSuccess;
+  var reportMethod = props.reportMethod;
   return /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1_react__.createElement(__WEBPACK_IMPORTED_MODULE_1_react__.Fragment, null, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1_react__.createElement("div", {
     className: "CUI-new-oversea-sign-in-dialog-content"
   }, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1_react__.createElement(__WEBPACK_IMPORTED_MODULE_5__ByEmail__.ByEmailComponent, {

@@ -13,12 +13,12 @@ import * as __WEBPACK_IMPORTED_MODULE_2__IconFont_scss__ from "./IconFont/scss-U
 /* harmony import */
 import __WEBPACK_IMPORTED_MODULE_2__IconFont_scss___default from "./IconFont/scss-ULrM";
 var IconFont = function IconFont(props) {
-  var type = props.type,
-    className = props.className,
-    spinning = props.spinning,
-    subColor = props.subColor,
-    subClassName = props.subClassName,
-    twoTone = props.twoTone;
+  var type = props.type;
+  var className = props.className;
+  var spinning = props.spinning;
+  var subColor = props.subColor;
+  var subClassName = props.subClassName;
+  var twoTone = props.twoTone;
   var content = __WEBPACK_IMPORTED_MODULE_0_react___default.createElement("use", {
     xlinkHref: '#' + type
   });

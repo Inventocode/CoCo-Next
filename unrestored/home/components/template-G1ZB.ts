@@ -34,13 +34,19 @@ var _createClass = function () {
       var descriptor = props[i];
       descriptor.enumerable = descriptor.enumerable || false;
       descriptor.configurable = true;
-      if ("value" in descriptor) descriptor.writable = true;
+      if ("value" in descriptor) {
+        descriptor.writable = true;
+      }
       Object.defineProperty(target, descriptor.key, descriptor);
     }
   }
   return function (Constructor, protoProps, staticProps) {
-    if (protoProps) defineProperties(Constructor.prototype, protoProps);
-    if (staticProps) defineProperties(Constructor, staticProps);
+    if (protoProps) {
+      defineProperties(Constructor.prototype, protoProps);
+    }
+    if (staticProps) {
+      defineProperties(Constructor, staticProps);
+    }
     return Constructor;
   };
 }();
@@ -72,16 +78,31 @@ function _inherits(subClass, superClass) {
       configurable: true
     }
   });
-  if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
+  if (superClass) {
+    if (Object.setPrototypeOf) {
+      Object.setPrototypeOf(subClass, superClass);
+    } else {
+      subClass.__proto__ = superClass;
+    }
+  }
 }
 var __decorate = this && this.__decorate || function (decorators, target, key, desc) {
-  var c = arguments.length,
-    r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
-    d;
-  if ((typeof Reflect === "undefined" ? "undefined" : _typeof(Reflect)) === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) {
-    if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+  var c = arguments.length;
+  var r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc;
+  var d;
+  if ((typeof Reflect === "undefined" ? "undefined" : _typeof(Reflect)) === "object" && typeof Reflect.decorate === "function") {
+    r = Reflect.decorate(decorators, target, key, desc);
+  } else {
+    for (var i = decorators.length - 1; i >= 0; i--) {
+      if (d = decorators[i]) {
+        r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+      }
+    }
   }
-  return c > 3 && r && Object.defineProperty(target, key, r), r;
+  if (c > 3 && r) {
+    Object.defineProperty(target, key, r);
+  }
+  return r;
 };
 var __awaiter = this && this.__awaiter || function (thisArg, _arguments, P, generator) {
   return new (P || (P = Promise))(function (resolve, reject) {
@@ -100,14 +121,18 @@ var __awaiter = this && this.__awaiter || function (thisArg, _arguments, P, gene
       }
     }
     function step(result) {
-      result.done ? resolve(result.value) : new P(function (resolve) {
+      if (result.done) {
         resolve(result.value);
-      }).then(fulfilled, rejected);
+      } else {
+        new P(function (resolve) {
+          resolve(result.value);
+        }).then(fulfilled, rejected);
+      }
     }
     step((generator = generator.apply(thisArg, _arguments || [])).next());
   });
 };
-var styles = require("./unnamed-ZbQe");
+import * as styles from "./styles-ZbQe";
 var serviceAgreementList = [{
   label: '用户协议',
   link: 'https://static-platform.codemao.cn/926/protocols/7KeVbBdw_userserviceProtocol.html'
@@ -188,9 +213,9 @@ var HeaderView = function (_React$Component) {
   }, {
     key: "handleShowCourse",
     value: function handleShowCourse() {
-      var _props = this.props,
-        courseListVisible = _props.courseListVisible,
-        userInfo = _props.userInfo;
+      var _props = this.props;
+      var courseListVisible = _props.courseListVisible;
+      var userInfo = _props.userInfo;
       if (!userInfo || userInfo.isNewUser || courseListVisible) {
         return;
       }
@@ -263,9 +288,9 @@ var HeaderView = function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      var _props2 = this.props,
-        courseListVisible = _props2.courseListVisible,
-        userInfo = _props2.userInfo;
+      var _props2 = this.props;
+      var courseListVisible = _props2.courseListVisible;
+      var userInfo = _props2.userInfo;
       var helpDropdownVisible = this.state.helpDropdownVisible;
       return __WEBPACK_IMPORTED_MODULE_1_react__.createElement("div", {
         styleName: 'header'

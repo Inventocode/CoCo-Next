@@ -16,10 +16,10 @@ import __WEBPACK_IMPORTED_MODULE_3__style_module_css___default from "./style.mod
 var _excluded = ["text", "img", "timeout"];
 ;
 var Hint = function Hint(_ref) {
-  var text = _ref.text,
-    img = _ref.img,
-    timeout = _ref.timeout,
-    props = Object(__WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_objectWithoutProperties__.default)(_ref, _excluded);
+  var text = _ref.text;
+  var img = _ref.img;
+  var timeout = _ref.timeout;
+  var props = Object(__WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_objectWithoutProperties__.default)(_ref, _excluded);
   var ref = Object(__WEBPACK_IMPORTED_MODULE_2_react__.useRef)(null);
   Object(__WEBPACK_IMPORTED_MODULE_2_react__.useEffect)(function () {
     ref.current.style.visibility = 'visible';

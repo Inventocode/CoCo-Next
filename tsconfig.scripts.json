@@ -1,7 +1,7 @@
 {
     "extends": "./tsconfig",
     "compilerOptions": {
-        "outDir": "dist/scripts",
+        "outDir": "out/scripts",
         "target": "ESNext",
         "module": "commonjs",
         "moduleResolution": "node"

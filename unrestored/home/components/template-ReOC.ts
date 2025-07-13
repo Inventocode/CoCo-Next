@@ -22,13 +22,19 @@ var _createClass = function () {
       var descriptor = props[i];
       descriptor.enumerable = descriptor.enumerable || false;
       descriptor.configurable = true;
-      if ("value" in descriptor) descriptor.writable = true;
+      if ("value" in descriptor) {
+        descriptor.writable = true;
+      }
       Object.defineProperty(target, descriptor.key, descriptor);
     }
   }
   return function (Constructor, protoProps, staticProps) {
-    if (protoProps) defineProperties(Constructor.prototype, protoProps);
-    if (staticProps) defineProperties(Constructor, staticProps);
+    if (protoProps) {
+      defineProperties(Constructor.prototype, protoProps);
+    }
+    if (staticProps) {
+      defineProperties(Constructor, staticProps);
+    }
     return Constructor;
   };
 }();
@@ -60,18 +66,33 @@ function _inherits(subClass, superClass) {
       configurable: true
     }
   });
-  if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
+  if (superClass) {
+    if (Object.setPrototypeOf) {
+      Object.setPrototypeOf(subClass, superClass);
+    } else {
+      subClass.__proto__ = superClass;
+    }
+  }
 }
 var __decorate = this && this.__decorate || function (decorators, target, key, desc) {
-  var c = arguments.length,
-    r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
-    d;
-  if ((typeof Reflect === "undefined" ? "undefined" : _typeof(Reflect)) === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) {
-    if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+  var c = arguments.length;
+  var r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc;
+  var d;
+  if ((typeof Reflect === "undefined" ? "undefined" : _typeof(Reflect)) === "object" && typeof Reflect.decorate === "function") {
+    r = Reflect.decorate(decorators, target, key, desc);
+  } else {
+    for (var i = decorators.length - 1; i >= 0; i--) {
+      if (d = decorators[i]) {
+        r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+      }
+    }
   }
-  return c > 3 && r && Object.defineProperty(target, key, r), r;
+  if (c > 3 && r) {
+    Object.defineProperty(target, key, r);
+  }
+  return r;
 };
-var styles = require("./unnamed-V8ar");
+import * as styles from "./styles-V8ar";
 var PlayCourseVideoView = function (_React$Component) {
   _inherits(PlayCourseVideoView, _React$Component);
   function PlayCourseVideoView(props) {
@@ -105,8 +126,8 @@ var PlayCourseVideoView = function (_React$Component) {
   }, {
     key: "openCourseInEditor",
     value: function openCourseInEditor(id) {
-      var _config = Object(__WEBPACK_IMPORTED_MODULE_2__cfg__.config)(),
-        cocoEditorUrl = _config.cocoEditorUrl;
+      var _config = Object(__WEBPACK_IMPORTED_MODULE_2__cfg__.config)();
+      var cocoEditorUrl = _config.cocoEditorUrl;
       window.open(cocoEditorUrl + "?courseId=" + id, Date.now().toString());
       this.quitPlayCourse();
     }
@@ -118,9 +139,9 @@ var PlayCourseVideoView = function (_React$Component) {
   }, {
     key: "handleNextCourse",
     value: function handleNextCourse() {
-      var _props = this.props,
-        playCourseInfo = _props.playCourseInfo,
-        courseList = _props.courseList;
+      var _props = this.props;
+      var playCourseInfo = _props.playCourseInfo;
+      var courseList = _props.courseList;
       var index = courseList.findIndex(function (item) {
         return item.id === playCourseInfo.id;
       });
@@ -165,12 +186,12 @@ var PlayCourseVideoView = function (_React$Component) {
     key: "render",
     value: function render() {
       var _this2 = this;
-      var _state = this.state,
-        isPause = _state.isPause,
-        isEnd = _state.isEnd;
-      var _props2 = this.props,
-        playCourseInfo = _props2.playCourseInfo,
-        courseList = _props2.courseList;
+      var _state = this.state;
+      var isPause = _state.isPause;
+      var isEnd = _state.isEnd;
+      var _props2 = this.props;
+      var playCourseInfo = _props2.playCourseInfo;
+      var courseList = _props2.courseList;
       var course = courseList.find(function (item) {
         return item.id === playCourseInfo.id;
       });

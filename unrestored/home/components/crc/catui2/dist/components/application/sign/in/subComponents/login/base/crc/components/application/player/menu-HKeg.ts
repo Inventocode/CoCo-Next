@@ -29,17 +29,17 @@ var _styleModuleImportMap = {
   }
 };
 var PlayerMenu = function PlayerMenu(props) {
-  var initMenuOn = props.initMenuOn,
-    children = props.children,
-    style = props.style;
+  var initMenuOn = props.initMenuOn;
+  var children = props.children;
+  var style = props.style;
   var menuHeight = props.menuHeight ? props.menuHeight : 44;
   var itemHeight = props.itemHeight ? props.itemHeight : 36;
   var spaceBettwen = props.spaceBettwen ? props.spaceBettwen : 20;
   var circleHeight = itemHeight;
-  var _useState = Object(__WEBPACK_IMPORTED_MODULE_2_react__.useState)(initMenuOn),
-    _useState2 = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default)(_useState, 2),
-    isMenuOn = _useState2[0],
-    setMenuOn = _useState2[1];
+  var _useState = Object(__WEBPACK_IMPORTED_MODULE_2_react__.useState)(initMenuOn);
+  var _useState2 = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default)(_useState, 2);
+  var isMenuOn = _useState2[0];
+  var setMenuOn = _useState2[1];
   var legalChildNum = 0;
   var TOTALCHILDNUM = __WEBPACK_IMPORTED_MODULE_2_react___default.Children.count(children);
   var TRANSITIONDURATION = 0.5;

@@ -18,15 +18,15 @@ import * as __WEBPACK_IMPORTED_MODULE_3__Confirm__ from "./Confirm-Gjqo";
 import * as __WEBPACK_IMPORTED_MODULE_4__Register__ from "./Register-MRah";
 var useState = __WEBPACK_IMPORTED_MODULE_1_react__.useState;
 var RegisterPageContainer = function RegisterPageContainer(props) {
-  var isRequesting = props.isRequesting,
-    setIsRequesting = props.setIsRequesting,
-    switchView = props.switchView,
-    reportMethod = props.reportMethod,
-    handleClose = props.handleClose;
-  var _useState = useState(false),
-    _useState2 = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default)(_useState, 2),
-    resetSuccess = _useState2[0],
-    setResetSuccess = _useState2[1];
+  var isRequesting = props.isRequesting;
+  var setIsRequesting = props.setIsRequesting;
+  var switchView = props.switchView;
+  var reportMethod = props.reportMethod;
+  var handleClose = props.handleClose;
+  var _useState = useState(false);
+  var _useState2 = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default)(_useState, 2);
+  var resetSuccess = _useState2[0];
+  var setResetSuccess = _useState2[1];
   return /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1_react__.createElement(__WEBPACK_IMPORTED_MODULE_1_react__.Fragment, null, resetSuccess ? /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1_react__.createElement(__WEBPACK_IMPORTED_MODULE_3__Confirm__.ConfirmComponent, {
     handleClose: handleClose
   }) : /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1_react__.createElement(__WEBPACK_IMPORTED_MODULE_4__Register__.RegisterContainer, {

@@ -18,13 +18,19 @@ var _createClass = function () {
       var descriptor = props[i];
       descriptor.enumerable = descriptor.enumerable || false;
       descriptor.configurable = true;
-      if ("value" in descriptor) descriptor.writable = true;
+      if ("value" in descriptor) {
+        descriptor.writable = true;
+      }
       Object.defineProperty(target, descriptor.key, descriptor);
     }
   }
   return function (Constructor, protoProps, staticProps) {
-    if (protoProps) defineProperties(Constructor.prototype, protoProps);
-    if (staticProps) defineProperties(Constructor, staticProps);
+    if (protoProps) {
+      defineProperties(Constructor.prototype, protoProps);
+    }
+    if (staticProps) {
+      defineProperties(Constructor, staticProps);
+    }
     return Constructor;
   };
 }();
@@ -56,18 +62,33 @@ function _inherits(subClass, superClass) {
       configurable: true
     }
   });
-  if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
+  if (superClass) {
+    if (Object.setPrototypeOf) {
+      Object.setPrototypeOf(subClass, superClass);
+    } else {
+      subClass.__proto__ = superClass;
+    }
+  }
 }
 var __decorate = this && this.__decorate || function (decorators, target, key, desc) {
-  var c = arguments.length,
-    r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
-    d;
-  if ((typeof Reflect === "undefined" ? "undefined" : _typeof(Reflect)) === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) {
-    if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+  var c = arguments.length;
+  var r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc;
+  var d;
+  if ((typeof Reflect === "undefined" ? "undefined" : _typeof(Reflect)) === "object" && typeof Reflect.decorate === "function") {
+    r = Reflect.decorate(decorators, target, key, desc);
+  } else {
+    for (var i = decorators.length - 1; i >= 0; i--) {
+      if (d = decorators[i]) {
+        r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+      }
+    }
   }
-  return c > 3 && r && Object.defineProperty(target, key, r), r;
+  if (c > 3 && r) {
+    Object.defineProperty(target, key, r);
+  }
+  return r;
 };
-var styles = require("./unnamed-nlA+");
+import * as styles from "./styles-nlA+";
 var timeId = void 0;
 var CommonToastView = function (_React$Component) {
   _inherits(CommonToastView, _React$Component);
@@ -86,7 +107,9 @@ var CommonToastView = function (_React$Component) {
     key: "handleClose",
     value: function handleClose() {
       var onClose = this.props.commonToastInfo.onClose;
-      onClose && onClose();
+      if (onClose) {
+        onClose();
+      }
       this.props.setCommonToastAction({
         visible: false
       });
@@ -95,12 +118,14 @@ var CommonToastView = function (_React$Component) {
     key: "componentWillReceiveProps",
     value: function componentWillReceiveProps(nextProps) {
       var _this2 = this;
-      var _nextProps$commonToas = nextProps.commonToastInfo,
-        visible = _nextProps$commonToas.visible,
-        _nextProps$commonToas2 = _nextProps$commonToas.duration,
-        duration = _nextProps$commonToas2 === undefined ? 2000 : _nextProps$commonToas2;
+      var _nextProps$commonToas = nextProps.commonToastInfo;
+      var visible = _nextProps$commonToas.visible;
+      var _nextProps$commonToas2 = _nextProps$commonToas.duration;
+      var duration = _nextProps$commonToas2 === undefined ? 2000 : _nextProps$commonToas2;
       if (visible && duration) {
-        timeId && window.clearTimeout(timeId);
+        if (timeId) {
+          window.clearTimeout(timeId);
+        }
         timeId = setTimeout(function () {
           _this2.handleClose();
         }, duration);
@@ -109,12 +134,12 @@ var CommonToastView = function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      var _props$commonToastInf = this.props.commonToastInfo,
-        visible = _props$commonToastInf.visible,
-        type = _props$commonToastInf.type,
-        message = _props$commonToastInf.message,
-        showCloseIcon = _props$commonToastInf.showCloseIcon,
-        showPrefixIcon = _props$commonToastInf.showPrefixIcon;
+      var _props$commonToastInf = this.props.commonToastInfo;
+      var visible = _props$commonToastInf.visible;
+      var type = _props$commonToastInf.type;
+      var message = _props$commonToastInf.message;
+      var showCloseIcon = _props$commonToastInf.showCloseIcon;
+      var showPrefixIcon = _props$commonToastInf.showPrefixIcon;
       return __WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_2__Alert__.default, {
         visible: visible,
         type: type,

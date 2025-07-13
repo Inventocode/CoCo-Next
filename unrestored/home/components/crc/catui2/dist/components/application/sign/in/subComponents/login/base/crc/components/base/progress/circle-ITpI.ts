@@ -18,33 +18,44 @@ import * as __WEBPACK_IMPORTED_MODULE_6_react__ from "react";
 /* harmony import */
 import __WEBPACK_IMPORTED_MODULE_6_react___default from "react";
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_7__themes__ from "../../../../../../../../../../../themes/index-P22Q";
+import * as __WEBPACK_IMPORTED_MODULE_7__themes__ from "../../../../../../../../../../../themes-P22Q";
 function ownKeys(object, enumerableOnly) {
   var keys = Object.keys(object);
   if (Object.getOwnPropertySymbols) {
     var symbols = Object.getOwnPropertySymbols(object);
-    enumerableOnly && (symbols = symbols.filter(function (sym) {
-      return Object.getOwnPropertyDescriptor(object, sym).enumerable;
-    })), keys.push.apply(keys, symbols);
+    if (enumerableOnly) {
+      symbols = symbols.filter(function (sym) {
+        return Object.getOwnPropertyDescriptor(object, sym).enumerable;
+      });
+    }
+    keys.push.apply(keys, symbols);
   }
   return keys;
 }
 function _objectSpread(target) {
   for (var i = 1; i < arguments.length; i++) {
     var source = null != arguments[i] ? arguments[i] : {};
-    i % 2 ? ownKeys(Object(source), !0).forEach(function (key) {
-      Object(__WEBPACK_IMPORTED_MODULE_5__babel_runtime_helpers_esm_defineProperty__.default)(target, key, source[key]);
-    }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) {
-      Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
-    });
+    if (i % 2) {
+      ownKeys(Object(source), !0).forEach(function (key) {
+        Object(__WEBPACK_IMPORTED_MODULE_5__babel_runtime_helpers_esm_defineProperty__.default)(target, key, source[key]);
+      });
+    } else {
+      if (Object.getOwnPropertyDescriptors) {
+        Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
+      } else {
+        ownKeys(Object(source)).forEach(function (key) {
+          Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
+        });
+      }
+    }
   }
   return target;
 }
 function _createSuper(Derived) {
   var hasNativeReflectConstruct = _isNativeReflectConstruct();
   return function _createSuperInternal() {
-    var Super = Object(__WEBPACK_IMPORTED_MODULE_4__babel_runtime_helpers_esm_getPrototypeOf__.default)(Derived),
-      result;
+    var Super = Object(__WEBPACK_IMPORTED_MODULE_4__babel_runtime_helpers_esm_getPrototypeOf__.default)(Derived);
+    var result;
     if (hasNativeReflectConstruct) {
       var NewTarget = Object(__WEBPACK_IMPORTED_MODULE_4__babel_runtime_helpers_esm_getPrototypeOf__.default)(this).constructor;
       result = Reflect.construct(Super, arguments, NewTarget);
@@ -55,9 +66,15 @@ function _createSuper(Derived) {
   };
 }
 function _isNativeReflectConstruct() {
-  if (typeof Reflect === "undefined" || !Reflect.construct) return false;
-  if (Reflect.construct.sham) return false;
-  if (typeof Proxy === "function") return true;
+  if (typeof Reflect === "undefined" || !Reflect.construct) {
+    return false;
+  }
+  if (Reflect.construct.sham) {
+    return false;
+  }
+  if (typeof Proxy === "function") {
+    return true;
+  }
   try {
     Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {}));
     return true;
@@ -87,14 +104,16 @@ var ProgressCircle = /*#__PURE__*/function (_React$Component) {
   Object(__WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_createClass__.default)(ProgressCircle, [{
     key: "text",
     get: function get() {
-      var _this$props = this.props,
-        progress = _this$props.progress,
-        showPercentage = _this$props.showPercentage,
-        textColor = _this$props.textColor,
-        textStyle = _this$props.textStyle,
-        percentSpacing = _this$props.percentSpacing,
-        showPercentageSymbol = _this$props.showPercentageSymbol;
-      if (!showPercentage) return;
+      var _this$props = this.props;
+      var progress = _this$props.progress;
+      var showPercentage = _this$props.showPercentage;
+      var textColor = _this$props.textColor;
+      var textStyle = _this$props.textStyle;
+      var percentSpacing = _this$props.percentSpacing;
+      var showPercentageSymbol = _this$props.showPercentageSymbol;
+      if (!showPercentage) {
+        return;
+      }
       return /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_6_react___default.createElement("text", {
         style: _objectSpread({}, textStyle),
         fill: textColor,
@@ -110,18 +129,18 @@ var ProgressCircle = /*#__PURE__*/function (_React$Component) {
     key: "render",
     value: function render() {
       var text = this.text;
-      var _this$props2 = this.props,
-        svgStyle = _this$props2.svgStyle,
-        progress = _this$props2.progress,
-        size = _this$props2.size,
-        bgColor = _this$props2.bgColor,
-        progressColor = _this$props2.progressColor,
-        lineWidth = _this$props2.lineWidth,
-        animate = _this$props2.animate,
-        animationDuration = _this$props2.animationDuration,
-        roundedStroke = _this$props2.roundedStroke,
-        responsive = _this$props2.responsive,
-        onAnimationEnd = _this$props2.onAnimationEnd;
+      var _this$props2 = this.props;
+      var svgStyle = _this$props2.svgStyle;
+      var progress = _this$props2.progress;
+      var size = _this$props2.size;
+      var bgColor = _this$props2.bgColor;
+      var progressColor = _this$props2.progressColor;
+      var lineWidth = _this$props2.lineWidth;
+      var animate = _this$props2.animate;
+      var animationDuration = _this$props2.animationDuration;
+      var roundedStroke = _this$props2.roundedStroke;
+      var responsive = _this$props2.responsive;
+      var onAnimationEnd = _this$props2.onAnimationEnd;
       var strokeDashoffset = getOffset(progress);
       var transition = animate ? "stroke-dashoffset ".concat(animationDuration, " ease-out") : undefined;
       var strokeLinecap = roundedStroke ? 'round' : 'butt';

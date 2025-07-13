@@ -18,13 +18,13 @@ import * as __WEBPACK_IMPORTED_MODULE_4_three_examples_jsm_loaders_GLTFLoader__ 
 import * as __WEBPACK_IMPORTED_MODULE_5__common_hooks_useEventListener__ from "./common/hooks/useEventListener-I2hg";
 var _excluded = ["url", "position"];
 function Primitive(_ref) {
-  var url = _ref.url,
-    position = _ref.position,
-    props = Object(__WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_objectWithoutProperties__.default)(_ref, _excluded);
+  var url = _ref.url;
+  var position = _ref.position;
+  var props = Object(__WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_objectWithoutProperties__.default)(_ref, _excluded);
   var gltf = Object(__WEBPACK_IMPORTED_MODULE_3_react_three_fiber__.useLoader)(__WEBPACK_IMPORTED_MODULE_4_three_examples_jsm_loaders_GLTFLoader__.GLTFLoader, url);
-  var _useGraph = Object(__WEBPACK_IMPORTED_MODULE_3_react_three_fiber__.useGraph)(gltf.scene),
-    nodes = _useGraph.nodes,
-    materials = _useGraph.materials;
+  var _useGraph = Object(__WEBPACK_IMPORTED_MODULE_3_react_three_fiber__.useGraph)(gltf.scene);
+  var nodes = _useGraph.nodes;
+  var materials = _useGraph.materials;
   var grabbing = Object(__WEBPACK_IMPORTED_MODULE_2_react__.useRef)(false);
   Object(__WEBPACK_IMPORTED_MODULE_5__common_hooks_useEventListener__.useEventListener)(document, 'pointerup', function () {
     if (!grabbing.current) {

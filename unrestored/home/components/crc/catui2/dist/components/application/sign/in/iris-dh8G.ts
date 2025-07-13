@@ -70,7 +70,9 @@ var AuthModule = /*#__PURE__*/function () {
                 _context.next = 9;
                 return captcha.init();
               case 9:
-                show && captcha.show();
+                if (show) {
+                  captcha.show();
+                }
                 return _context.abrupt("return", captcha);
               case 11:
               case "end":
@@ -87,8 +89,8 @@ var AuthModule = /*#__PURE__*/function () {
       if (!_this.iris) {
         throw Error('Iris is not initialized.');
       }
-      var errorCode = error.error_code,
-        message = error.message;
+      var errorCode = error.error_code;
+      var message = error.message;
       var ERROR = _this.iris.ERROR;
       console.error(Error("@frontend/iris API error code: ".concat(errorCode, "\n").concat(message)));
       var msg;
@@ -140,7 +142,7 @@ var AuthModule = /*#__PURE__*/function () {
             switch (_context2.prev = _context2.next) {
               case 0:
                 _context2.next = 2;
-                return import("../../../../../../../../index-v9Ep");
+                return import("./unnamed-v9Ep");
               case 2:
                 module = _context2.sent;
                 this.iris = module;
@@ -263,7 +265,8 @@ var AuthModule = /*#__PURE__*/function () {
     key: "checkAuthLogin",
     value: function () {
       var _checkAuthLogin = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default)(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_4__babel_runtime_regenerator___default.mark(function _callee5() {
-        var errorCode, message;
+        var errorCode;
+        var message;
         return __WEBPACK_IMPORTED_MODULE_4__babel_runtime_regenerator___default.wrap(function _callee5$(_context5) {
           while (1) {
             switch (_context5.prev = _context5.next) {
@@ -282,7 +285,8 @@ var AuthModule = /*#__PURE__*/function () {
               case 8:
                 _context5.prev = 8;
                 _context5.t0 = _context5["catch"](2);
-                errorCode = _context5.t0.error_code, message = _context5.t0.message;
+                errorCode = _context5.t0.error_code;
+                message = _context5.t0.message;
                 if (!(errorCode === this.iris.ERROR.NO_TOKEN || errorCode === 'E_0' || message === NOT_LOGIN_MSG)) {
                   _context5.next = 13;
                   break;
@@ -306,7 +310,9 @@ var AuthModule = /*#__PURE__*/function () {
     key: "getAgreements",
     value: function () {
       var _getAgreements = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default)(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_4__babel_runtime_regenerator___default.mark(function _callee6() {
-        var agreementsData, idsData, agreementIds;
+        var agreementsData;
+        var idsData;
+        var agreementIds;
         return __WEBPACK_IMPORTED_MODULE_4__babel_runtime_regenerator___default.wrap(function _callee6$(_context6) {
           while (1) {
             switch (_context6.prev = _context6.next) {

@@ -23,14 +23,14 @@ var _styleModuleImportMap = {
   }
 };
 var PlayerMenuItem = function PlayerMenuItem(props) {
-  var _onClick = props.onClick,
-    _props$iconSrc = props.iconSrc,
-    iconSrc = _props$iconSrc === void 0 ? '' : _props$iconSrc,
-    iconSrcActive = props.iconSrcActive,
-    iconSrcDisabled = props.iconSrcDisabled,
-    disabled = props.disabled,
-    active = props.active,
-    children = props.children;
+  var _onClick = props.onClick;
+  var _props$iconSrc = props.iconSrc;
+  var iconSrc = _props$iconSrc === void 0 ? '' : _props$iconSrc;
+  var iconSrcActive = props.iconSrcActive;
+  var iconSrcDisabled = props.iconSrcDisabled;
+  var disabled = props.disabled;
+  var active = props.active;
+  var children = props.children;
   var displayIcon = (disabled ? iconSrcDisabled : active ? iconSrcActive : iconSrc) || iconSrc;
   var styleName = disabled ? 'disabled' : active ? 'active' : 'normal';
   return /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1_react___default.createElement("div", {
@@ -38,7 +38,9 @@ var PlayerMenuItem = function PlayerMenuItem(props) {
       if (disabled) {
         return;
       }
-      _onClick && _onClick(e);
+      if (_onClick) {
+        _onClick(e);
+      }
     },
     style: {
       backgroundImage: "url(".concat(displayIcon, ")")

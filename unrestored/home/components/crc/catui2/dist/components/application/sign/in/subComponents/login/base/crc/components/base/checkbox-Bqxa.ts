@@ -24,21 +24,25 @@ var _styleModuleImportMap = {
   }
 };
 var Checkbox = function Checkbox(props) {
-  var children = props.children,
-    checked = props.checked,
-    onChange = props.onChange,
-    style = props.style;
-  var _useState = Object(__WEBPACK_IMPORTED_MODULE_2_react__.useState)(false),
-    _useState2 = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default)(_useState, 2),
-    stateChecked = _useState2[0],
-    setStateChecked = _useState2[1];
+  var children = props.children;
+  var checked = props.checked;
+  var onChange = props.onChange;
+  var style = props.style;
+  var _useState = Object(__WEBPACK_IMPORTED_MODULE_2_react__.useState)(false);
+  var _useState2 = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default)(_useState, 2);
+  var stateChecked = _useState2[0];
+  var setStateChecked = _useState2[1];
   var isUncontrolled = checked === undefined;
   var isActualChecked = isUncontrolled ? stateChecked : checked;
   return /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_2_react___default.createElement("div", {
     onClick: function onClick() {
       var nextCheckStatus = !isActualChecked;
-      isUncontrolled && setStateChecked(nextCheckStatus);
-      onChange && onChange(nextCheckStatus);
+      if (isUncontrolled) {
+        setStateChecked(nextCheckStatus);
+      }
+      if (onChange) {
+        onChange(nextCheckStatus);
+      }
     },
     style: style,
     className: __WEBPACK_IMPORTED_MODULE_1_babel_plugin_react_css_modules_dist_browser_getClassName___default("container ".concat(isActualChecked ? 'checked' : ''), _styleModuleImportMap, {

@@ -1,0 +1,352 @@
+"use strict";
+
+import * as r from "./1121";
+var i = function (e) {
+  if (!Array.isArray(e)) {
+    throw Error("Op must be an array of components");
+  }
+  for (var n = null, r = 0; r < e.length; r++) {
+    var i = e[r];
+    switch (typeof i) {
+      case "object":
+        if ("number" !== typeof i.d && "string" !== typeof i.d) {
+          throw Error("Delete must be number or string");
+        }
+        if (t.dlen(i.d) <= 0) {
+          throw Error("Deletes must not be empty");
+        }
+        break;
+      case "string":
+        if (!(i.length > 0)) {
+          throw Error("Inserts cannot be empty");
+        }
+        break;
+      case "number":
+        if (!(i > 0)) {
+          throw Error("Skip components must be >0");
+        }
+        if ("number" === typeof n) {
+          throw Error("Adjacent skip components should be combined");
+        }
+    }
+    n = i;
+  }
+  if ("number" === typeof n) {
+    throw Error("Op has a trailing skip");
+  }
+};
+function o(e, n) {
+  for (var i = 0, o = 0, a = 0; a < e.length; a++) {
+    var s = e[a];
+    switch (n(s, i, o), typeof s) {
+      case "object":
+        i += t.dlen(s.d);
+        break;
+      case "string":
+        o += r.strPosToUni(s);
+        break;
+      case "number":
+        i += s;
+        o += s;
+    }
+  }
+}
+function a(e, t) {
+  var n = [];
+  var r = u(n);
+  o(e, function (e, n, i) {
+    r(t(e, n, i));
+  });
+  return d(n);
+}
+export { o as eachOp };
+var s = function (e) {
+  return e;
+};
+var c = function (e) {
+  return a(e, s);
+};
+exports.dlen = function (e) {
+  return "number" === typeof e ? e : r.strPosToUni(e);
+};
+var u = function (e) {
+  return function (n) {
+    if (n && 0 !== n.d && "" !== n.d) {
+      if (0 === e.length) {
+        e.push(n);
+      } else if (typeof n === typeof e[e.length - 1]) {
+        if ("object" === typeof n) {
+          var r = e[e.length - 1];
+          r.d = "string" === typeof r.d && "string" === typeof n.d ? r.d + n.d : t.dlen(r.d) + t.dlen(n.d);
+        } else {
+          e[e.length - 1] += n;
+        }
+      } else {
+        e.push(n);
+      }
+    } else {
+      ;
+    }
+  };
+};
+var l = function (e) {
+  return "number" === typeof e ? e : "string" === typeof e ? r.strPosToUni(e) : "number" === typeof e.d ? e.d : r.strPosToUni(e.d);
+};
+exports.uniSlice = function (e, t, n) {
+  var i = r.uniToStrPos(e, t);
+  var o = null == n ? 1 / 0 : r.uniToStrPos(e, n);
+  return e.slice(i, o);
+};
+var f = function (e, n, r) {
+  return "number" === typeof e ? null == r ? e - n : Math.min(e, r) - n : t.uniSlice(e, n, r);
+};
+var h = function (e) {
+  var n = 0;
+  var i = 0;
+  return {
+    take: function (o, a) {
+      if (n === e.length) {
+        return -1 === o ? null : o;
+      }
+      var s;
+      var c = e[n];
+      if ("number" === typeof c) {
+        return -1 === o || c - i <= o ? (s = c - i, ++n, i = 0, s) : (i += o, o);
+      }
+      if ("string" === typeof c) {
+        if (-1 === o || "i" === a || r.strPosToUni(c.slice(i)) <= o) {
+          s = c.slice(i);
+          ++n;
+          i = 0;
+          return s;
+        }
+        var u = i + r.uniToStrPos(c.slice(i), o);
+        s = c.slice(i, u);
+        i = u;
+        return s;
+      }
+      if (-1 === o || "d" === a || t.dlen(c.d) - i <= o) {
+        s = {
+          d: f(c.d, i)
+        };
+        ++n;
+        i = 0;
+        return s;
+      }
+      var l = f(c.d, i, i + o);
+      i += o;
+      return {
+        d: l
+      };
+    },
+    peek: function () {
+      return e[n];
+    }
+  };
+};
+var d = function (e) {
+  if (e.length > 0 && "number" === typeof e[e.length - 1]) {
+    e.pop();
+  }
+  return e;
+};
+function p(e, n, o) {
+  if ("left" !== o && "right" !== o) {
+    throw Error("side (" + o + ") must be 'left' or 'right'");
+  }
+  i(e);
+  i(n);
+  for (var a, s = [], c = u(s), f = h(e), p = f.take, _ = f.peek, A = 0; A < n.length; A++) {
+    var g = n[A];
+    var v = void 0;
+    var m = void 0;
+    switch (typeof g) {
+      case "number":
+        for (v = g; v > 0;) {
+          c(m = p(v, "i"));
+          if ("string" !== typeof m) {
+            v -= l(m);
+          }
+        }
+        break;
+      case "string":
+        if ("left" === o && "string" === typeof _()) {
+          c(p(-1));
+        }
+        c(r.strPosToUni(g));
+        break;
+      case "object":
+        for (v = t.dlen(g.d); v > 0;) {
+          switch (typeof (m = p(v, "i"))) {
+            case "number":
+              v -= m;
+              break;
+            case "string":
+              c(m);
+              break;
+            case "object":
+              v -= t.dlen(m.d);
+          }
+        }
+    }
+  }
+  for (; a = p(-1);) {
+    c(a);
+  }
+  return d(s);
+}
+function _(e, n) {
+  i(e);
+  i(n);
+  for (var o, a = [], s = u(a), c = h(e).take, p = 0; p < n.length; p++) {
+    var _ = n[p];
+    var A = void 0;
+    var g = void 0;
+    switch (typeof _) {
+      case "number":
+        for (A = _; A > 0;) {
+          s(g = c(A, "d"));
+          if ("object" !== typeof g) {
+            A -= l(g);
+          }
+        }
+        break;
+      case "string":
+        s(_);
+        break;
+      case "object":
+        A = t.dlen(_.d);
+        for (var v = 0; v < A;) {
+          switch (typeof (g = c(A - v, "d"))) {
+            case "number":
+              s({
+                d: f(_.d, v, v + g)
+              });
+              v += g;
+              break;
+            case "string":
+              v += r.strPosToUni(g);
+              break;
+            case "object":
+              s(g);
+          }
+        }
+    }
+  }
+  for (; o = c(-1);) {
+    s(o);
+  }
+  return d(a);
+}
+var A = function (e, n) {
+  for (var i = 0, o = 0; o < n.length && e > i; o++) {
+    var a = n[o];
+    switch (typeof a) {
+      case "number":
+        i += a;
+        break;
+      case "string":
+        var s = r.strPosToUni(a);
+        i += s;
+        e += s;
+        break;
+      case "object":
+        e -= Math.min(t.dlen(a.d), e - i);
+    }
+  }
+  return e;
+};
+var g = function (e, t) {
+  return "number" === typeof e ? A(e, t) : e.map(function (e) {
+    return A(e, t);
+  });
+};
+function v(e, t, n) {
+  return a(e, function (e, r) {
+    return "object" === typeof e && "number" === typeof e.d ? {
+      d: n.slice(t, r, r + e.d)
+    } : e;
+  });
+}
+function m(e) {
+  return a(e, function (e) {
+    switch (typeof e) {
+      case "object":
+        if ("number" === typeof e.d) {
+          throw Error("Cannot invert text op: Deleted characters missing from operation. makeInvertible must be called first.");
+        }
+        return e.d;
+      case "string":
+        return {
+          d: e
+        };
+      case "number":
+        return e;
+    }
+  });
+}
+function y(e) {
+  return a(e, function (e) {
+    return "object" === typeof e && "string" === typeof e.d ? {
+      d: r.strPosToUni(e.d)
+    } : e;
+  });
+}
+function b(e) {
+  var t = !0;
+  o(e, function (e) {
+    if ("object" === typeof e && "number" === typeof e.d) {
+      t = !1;
+    }
+  });
+  return t;
+}
+export default (function (e) {
+  return {
+    name: "text-unicode",
+    uri: "http://sharejs.org/types/text-unicode",
+    trim: d,
+    normalize: c,
+    checkOp: i,
+    create: function () {
+      var t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
+      if ("string" !== typeof t) {
+        throw Error("Initial data must be a string");
+      }
+      return e.create(t);
+    },
+    apply: function (n, r) {
+      i(r);
+      for (var o = e.builder(n), a = 0; a < r.length; a++) {
+        var s = r[a];
+        switch (typeof s) {
+          case "number":
+            o.skip(s);
+            break;
+          case "string":
+            o.append(s);
+            break;
+          case "object":
+            o.del(t.dlen(s.d));
+        }
+      }
+      return o.build();
+    },
+    transform: p,
+    compose: _,
+    transformPosition: A,
+    transformSelection: g,
+    isInvertible: b,
+    makeInvertible: function (t, n) {
+      return v(t, n, e);
+    },
+    stripInvertible: y,
+    invert: m,
+    invertWithDoc: function (t, n) {
+      return m(v(t, n, e));
+    },
+    isNoop: function (e) {
+      return 0 === e.length;
+    }
+  };
+});

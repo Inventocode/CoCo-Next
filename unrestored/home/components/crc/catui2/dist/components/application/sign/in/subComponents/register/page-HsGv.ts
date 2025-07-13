@@ -69,19 +69,19 @@ var _styleModuleImportMap = {
 };
 var useState = __WEBPACK_IMPORTED_MODULE_2_react__.useState;
 var RegisterPageContainer = function RegisterPageContainer(props) {
-  var isRequesting = props.isRequesting,
-    setIsRequesting = props.setIsRequesting,
-    smsTimeStamp = props.smsTimeStamp,
-    setSmsTimeStamp = props.setSmsTimeStamp,
-    switchView = props.switchView,
-    onRegisterSuccess = props.onRegisterSuccess,
-    onRegisterFailure = props.onRegisterFailure,
-    onRegisterConfirm = props.onRegisterConfirm,
-    reportMethod = props.reportMethod;
-  var _useState = useState(false),
-    _useState2 = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default)(_useState, 2),
-    resetSuccess = _useState2[0],
-    setResetSuccess = _useState2[1];
+  var isRequesting = props.isRequesting;
+  var setIsRequesting = props.setIsRequesting;
+  var smsTimeStamp = props.smsTimeStamp;
+  var setSmsTimeStamp = props.setSmsTimeStamp;
+  var switchView = props.switchView;
+  var onRegisterSuccess = props.onRegisterSuccess;
+  var onRegisterFailure = props.onRegisterFailure;
+  var onRegisterConfirm = props.onRegisterConfirm;
+  var reportMethod = props.reportMethod;
+  var _useState = useState(false);
+  var _useState2 = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default)(_useState, 2);
+  var resetSuccess = _useState2[0];
+  var setResetSuccess = _useState2[1];
   return /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_2_react__.createElement(__WEBPACK_IMPORTED_MODULE_2_react__.Fragment, null, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_2_react__.createElement("div", {
     className: __WEBPACK_IMPORTED_MODULE_1_babel_plugin_react_css_modules_dist_browser_getClassName___default(resetSuccess ? 'fully-content' : 'content', _styleModuleImportMap, {
       "autoResolveMultipleImports": true,

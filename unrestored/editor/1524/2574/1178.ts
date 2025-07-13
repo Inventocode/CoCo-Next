@@ -1,0 +1,1 @@
+module.exports = n.p + "static/media/step0.30321404.png";

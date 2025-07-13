@@ -1,0 +1,53 @@
+"use strict";
+
+function r(e) {
+  switch (Object.prototype.toString.call(e)) {
+    case "[object Error]":
+    case "[object Exception]":
+    case "[object DOMException]":
+      return !0;
+    default:
+      return h(e, Error);
+  }
+}
+function i(e) {
+  return "[object String]" === Object.prototype.toString.call(e);
+}
+function o(e) {
+  return null === e || "object" !== typeof e && "function" !== typeof e;
+}
+function a(e) {
+  return "[object Object]" === Object.prototype.toString.call(e);
+}
+function s(e) {
+  return "undefined" !== typeof Event && h(e, Event);
+}
+function c(e) {
+  return "undefined" !== typeof Element && h(e, Element);
+}
+function u(e) {
+  return "[object RegExp]" === Object.prototype.toString.call(e);
+}
+function l(e) {
+  return Boolean(e && e.then && "function" === typeof e.then);
+}
+function f(e) {
+  return a(e) && "nativeEvent" in e && "preventDefault" in e && "stopPropagation" in e;
+}
+function h(e, t) {
+  try {
+    return e instanceof t;
+  } catch (n) {
+    return !1;
+  }
+}
+export { r as b };
+export { i as h };
+export { o as f };
+export { a as e };
+export { s as c };
+export { c as a };
+export { u as g };
+export { l as j };
+export { f as i };
+export { h as d };

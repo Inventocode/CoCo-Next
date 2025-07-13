@@ -27,16 +27,22 @@ var _slicedToArray = function () {
     try {
       for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {
         _arr.push(_s.value);
-        if (i && _arr.length === i) break;
+        if (i && _arr.length === i) {
+          break;
+        }
       }
     } catch (err) {
       _d = true;
       _e = err;
     } finally {
       try {
-        if (!_n && _i["return"]) _i["return"]();
+        if (!_n && _i["return"]) {
+          _i["return"]();
+        }
       } finally {
-        if (_d) throw _e;
+        if (_d) {
+          throw _e;
+        }
       }
     }
     return _arr;
@@ -53,27 +59,25 @@ var _slicedToArray = function () {
 }();
 var DIALOG_CONTAINER_ID = '_cocoDialogContainer';
 var Dialog = function Dialog(props) {
-  var className = props.className,
-    style = props.style,
-    visible = props.visible,
-    _props$maskClosable = props.maskClosable,
-    maskClosable = _props$maskClosable === undefined ? false : _props$maskClosable,
-    _props$mask = props.mask,
-    mask = _props$mask === undefined ? true : _props$mask,
-    onClose = props.onClose,
-    children = props.children,
-    _props$showCloseButto = props.showCloseButton,
-    showCloseButton = _props$showCloseButto === undefined ? true : _props$showCloseButto,
-    _props$withPortal = props.withPortal,
-    withPortal = _props$withPortal === undefined ? false : _props$withPortal,
-    title = props.title,
-    footer = props.footer;
-  var _useState = Object(__WEBPACK_IMPORTED_MODULE_1_react__.useState)(false),
-    _useState2 = _slicedToArray(_useState, 2),
-    display = _useState2[0],
-    setDisplay = _useState2[1];
-  // 创建一个放置 dialog 的容器
-
+  var className = props.className;
+  var style = props.style;
+  var visible = props.visible;
+  var _props$maskClosable = props.maskClosable;
+  var maskClosable = _props$maskClosable === undefined ? false : _props$maskClosable;
+  var _props$mask = props.mask;
+  var mask = _props$mask === undefined ? true : _props$mask;
+  var onClose = props.onClose;
+  var children = props.children;
+  var _props$showCloseButto = props.showCloseButton;
+  var showCloseButton = _props$showCloseButto === undefined ? true : _props$showCloseButto;
+  var _props$withPortal = props.withPortal;
+  var withPortal = _props$withPortal === undefined ? false : _props$withPortal;
+  var title = props.title;
+  var footer = props.footer;
+  var _useState = Object(__WEBPACK_IMPORTED_MODULE_1_react__.useState)(false);
+  var _useState2 = _slicedToArray(_useState, 2);
+  var display = _useState2[0];
+  var setDisplay = _useState2[1]; // 创建一个放置 dialog 的容器
   var container = document.getElementById(DIALOG_CONTAINER_ID);
   if (!container) {
     container = document.createElement('div');
@@ -81,10 +85,14 @@ var Dialog = function Dialog(props) {
     document.body.appendChild(container);
   }
   var handleClickClose = Object(__WEBPACK_IMPORTED_MODULE_1_react__.useCallback)(function () {
-    onClose && onClose();
+    if (onClose) {
+      onClose();
+    }
   }, [onClose]);
   var handleMaskClick = Object(__WEBPACK_IMPORTED_MODULE_1_react__.useCallback)(function () {
-    maskClosable && handleClickClose();
+    if (maskClosable) {
+      handleClickClose();
+    }
   }, [handleClickClose, maskClosable]);
   Object(__WEBPACK_IMPORTED_MODULE_1_react__.useEffect)(function () {
     if (visible) {

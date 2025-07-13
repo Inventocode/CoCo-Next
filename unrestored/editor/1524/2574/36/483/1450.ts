@@ -1,0 +1,1 @@
+module.exports = n.p + "static/media/spin.f1032cee.svg";

@@ -25,24 +25,24 @@ import * as __WEBPACK_IMPORTED_MODULE_8__i18n__ from "./i18n-4U0O";
 import * as __WEBPACK_IMPORTED_MODULE_9__style_module_css__ from "./style.module.css-YMKY";
 /* harmony import */
 import __WEBPACK_IMPORTED_MODULE_9__style_module_css___default from "./style.module.css-YMKY";
-var useState = __WEBPACK_IMPORTED_MODULE_1_react__.useState,
-  useEffect = __WEBPACK_IMPORTED_MODULE_1_react__.useEffect;
+var useState = __WEBPACK_IMPORTED_MODULE_1_react__.useState;
+var useEffect = __WEBPACK_IMPORTED_MODULE_1_react__.useEffect;
 var OverseaSignInDialog = function OverseaSignInDialog(props) {
-  var _useState = useState(__WEBPACK_IMPORTED_MODULE_4__def__.ContentView.LOGIN),
-    _useState2 = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default)(_useState, 2),
-    contentView = _useState2[0],
-    setContentView = _useState2[1];
-  var _useState3 = useState(false),
-    _useState4 = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default)(_useState3, 2),
-    isRequesting = _useState4[0],
-    setIsrequesting = _useState4[1];
-  var _useState5 = useState(props.show),
-    _useState6 = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default)(_useState5, 2),
-    show = _useState6[0],
-    setShow = _useState6[1];
-  var onEmailLoginSuccess = props.onEmailLoginSuccess,
-    onCloseAnimationEnd = props.onCloseAnimationEnd,
-    reportMethod = props.reportMethod;
+  var _useState = useState(__WEBPACK_IMPORTED_MODULE_4__def__.ContentView.LOGIN);
+  var _useState2 = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default)(_useState, 2);
+  var contentView = _useState2[0];
+  var setContentView = _useState2[1];
+  var _useState3 = useState(false);
+  var _useState4 = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default)(_useState3, 2);
+  var isRequesting = _useState4[0];
+  var setIsrequesting = _useState4[1];
+  var _useState5 = useState(props.show);
+  var _useState6 = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default)(_useState5, 2);
+  var show = _useState6[0];
+  var setShow = _useState6[1];
+  var onEmailLoginSuccess = props.onEmailLoginSuccess;
+  var onCloseAnimationEnd = props.onCloseAnimationEnd;
+  var reportMethod = props.reportMethod;
   Object(__WEBPACK_IMPORTED_MODULE_8__i18n__.setLanguage)(props.language || '');
   useEffect(function () {
     setShow(props.show);

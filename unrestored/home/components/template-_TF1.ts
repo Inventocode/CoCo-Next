@@ -24,13 +24,19 @@ var _createClass = function () {
       var descriptor = props[i];
       descriptor.enumerable = descriptor.enumerable || false;
       descriptor.configurable = true;
-      if ("value" in descriptor) descriptor.writable = true;
+      if ("value" in descriptor) {
+        descriptor.writable = true;
+      }
       Object.defineProperty(target, descriptor.key, descriptor);
     }
   }
   return function (Constructor, protoProps, staticProps) {
-    if (protoProps) defineProperties(Constructor.prototype, protoProps);
-    if (staticProps) defineProperties(Constructor, staticProps);
+    if (protoProps) {
+      defineProperties(Constructor.prototype, protoProps);
+    }
+    if (staticProps) {
+      defineProperties(Constructor, staticProps);
+    }
     return Constructor;
   };
 }();
@@ -62,18 +68,33 @@ function _inherits(subClass, superClass) {
       configurable: true
     }
   });
-  if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
+  if (superClass) {
+    if (Object.setPrototypeOf) {
+      Object.setPrototypeOf(subClass, superClass);
+    } else {
+      subClass.__proto__ = superClass;
+    }
+  }
 }
 var __decorate = this && this.__decorate || function (decorators, target, key, desc) {
-  var c = arguments.length,
-    r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
-    d;
-  if ((typeof Reflect === "undefined" ? "undefined" : _typeof(Reflect)) === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) {
-    if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+  var c = arguments.length;
+  var r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc;
+  var d;
+  if ((typeof Reflect === "undefined" ? "undefined" : _typeof(Reflect)) === "object" && typeof Reflect.decorate === "function") {
+    r = Reflect.decorate(decorators, target, key, desc);
+  } else {
+    for (var i = decorators.length - 1; i >= 0; i--) {
+      if (d = decorators[i]) {
+        r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+      }
+    }
   }
-  return c > 3 && r && Object.defineProperty(target, key, r), r;
+  if (c > 3 && r) {
+    Object.defineProperty(target, key, r);
+  }
+  return r;
 };
-var styles = require("./unnamed-JPI0");
+import * as styles from "./styles-JPI0";
 var ConfirmDialogView = function (_React$Component) {
   _inherits(ConfirmDialogView, _React$Component);
   function ConfirmDialogView(props) {
@@ -92,28 +113,36 @@ var ConfirmDialogView = function (_React$Component) {
     key: "handleDeny",
     value: function handleDeny() {
       var onDeny = this.props.confirmDialogInfo.onDeny;
-      onDeny && onDeny();
+      if (onDeny) {
+        onDeny();
+      }
       this.handleCloseDialog();
     }
   }, {
     key: "handleConfirm",
     value: function handleConfirm() {
       var onConfirm = this.props.confirmDialogInfo.onConfirm;
-      onConfirm && onConfirm();
+      if (onConfirm) {
+        onConfirm();
+      }
       this.handleCloseDialog();
     }
   }, {
     key: "handleCancel",
     value: function handleCancel() {
       var onCancel = this.props.confirmDialogInfo.onCancel;
-      onCancel && onCancel();
+      if (onCancel) {
+        onCancel();
+      }
       this.handleCloseDialog();
     }
   }, {
     key: "handleCloseDialog",
     value: function handleCloseDialog() {
       var onClose = this.props.confirmDialogInfo.onClose;
-      onClose && onClose();
+      if (onClose) {
+        onClose();
+      }
       this.props.setConfirmDialogInfoAction({
         visible: false
       });
@@ -121,21 +150,21 @@ var ConfirmDialogView = function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      var _props$confirmDialogI = this.props.confirmDialogInfo,
-        visible = _props$confirmDialogI.visible,
-        title = _props$confirmDialogI.title,
-        content = _props$confirmDialogI.content,
-        className = _props$confirmDialogI.className,
-        isDangerous = _props$confirmDialogI.isDangerous,
-        _props$confirmDialogI2 = _props$confirmDialogI.cancelText,
-        cancelText = _props$confirmDialogI2 === undefined ? '取消' : _props$confirmDialogI2,
-        _props$confirmDialogI3 = _props$confirmDialogI.allowText,
-        allowText = _props$confirmDialogI3 === undefined ? '确认' : _props$confirmDialogI3,
-        denyText = _props$confirmDialogI.denyText,
-        _props$confirmDialogI4 = _props$confirmDialogI.cancelBtnVisible,
-        cancelBtnVisible = _props$confirmDialogI4 === undefined ? true : _props$confirmDialogI4,
-        _props$confirmDialogI5 = _props$confirmDialogI.confirmBtnVisible,
-        confirmBtnVisible = _props$confirmDialogI5 === undefined ? true : _props$confirmDialogI5;
+      var _props$confirmDialogI = this.props.confirmDialogInfo;
+      var visible = _props$confirmDialogI.visible;
+      var title = _props$confirmDialogI.title;
+      var content = _props$confirmDialogI.content;
+      var className = _props$confirmDialogI.className;
+      var isDangerous = _props$confirmDialogI.isDangerous;
+      var _props$confirmDialogI2 = _props$confirmDialogI.cancelText;
+      var cancelText = _props$confirmDialogI2 === undefined ? '取消' : _props$confirmDialogI2;
+      var _props$confirmDialogI3 = _props$confirmDialogI.allowText;
+      var allowText = _props$confirmDialogI3 === undefined ? '确认' : _props$confirmDialogI3;
+      var denyText = _props$confirmDialogI.denyText;
+      var _props$confirmDialogI4 = _props$confirmDialogI.cancelBtnVisible;
+      var cancelBtnVisible = _props$confirmDialogI4 === undefined ? true : _props$confirmDialogI4;
+      var _props$confirmDialogI5 = _props$confirmDialogI.confirmBtnVisible;
+      var confirmBtnVisible = _props$confirmDialogI5 === undefined ? true : _props$confirmDialogI5;
       return __WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_3__Dialog__.default, {
         visible: visible,
         showCloseButton: false,

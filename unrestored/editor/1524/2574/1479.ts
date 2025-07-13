@@ -1,0 +1,1 @@
+module.exports = n.p + "static/media/illegalFormat.3d7fe9b9.svg";

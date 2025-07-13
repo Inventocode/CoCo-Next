@@ -12,9 +12,9 @@
 
 | 模块 | 抓取 | 拆包 | 语法升级 | JSX 反向转换 | 反混淆 |
 |:-:|:-:|:-:|:-:|:-:|:-:|
-| CoCo Home | ✅ | ✅ | ❌ | ❌ | / |
-| CoCo Editor | ✅ | ❌ | ❌ | ❌ | ❌ |
-| CoCo Editor Player | ❌ | ❌ | ❌ | ❌ | ❌ |
+| CoCo Home | ✅ | 75% | ❌ | ❌ | / |
+| CoCo Editor | ✅ | 50% | ❌ | ❌ | ❌ |
+| CoCo Editor Player | ✅ | ❌ | ❌ | ❌ | ❌ |
 | CoCo Editor ServiceWorker | ✅ | ❌ | ❌ | ❌ | ❌ |
 | CoCo Player | ✅ | ❌ | ❌ | ❌ | ❌ |
 

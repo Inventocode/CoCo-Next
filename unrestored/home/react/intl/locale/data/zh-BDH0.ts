@@ -1,5 +1,14 @@
 !function (e, t) {
-  true ? module.exports = t() : "function" == typeof define && define.amd ? define(t) : (e.ReactIntlLocaleData = e.ReactIntlLocaleData || {}, e.ReactIntlLocaleData.zh = t());
+  if (true) {
+    module.exports = t();
+  } else {
+    if ("function" == typeof define && define.amd) {
+      define(t);
+    } else {
+      e.ReactIntlLocaleData = e.ReactIntlLocaleData || {};
+      e.ReactIntlLocaleData.zh = t();
+    }
+  }
 }(this, function () {
   "use strict";
 

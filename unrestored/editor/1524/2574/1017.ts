@@ -1,0 +1,1 @@
+module.exports = n.p + "static/media/empty-data.b2fff31f.svg";

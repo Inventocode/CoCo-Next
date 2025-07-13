@@ -1,0 +1,1 @@
+module.exports = "undefined" !== typeof self ? self : "undefined" !== typeof window ? window : Function("return this")();

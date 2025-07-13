@@ -126,7 +126,8 @@ function requestUserInfo() {
 }
 function _requestUserInfo() {
   _requestUserInfo = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default)(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.mark(function _callee3() {
-    var url, requestConfig;
+    var url;
+    var requestConfig;
     return __WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.wrap(function _callee3$(_context3) {
       while (1) {
         switch (_context3.prev = _context3.next) {
@@ -198,7 +199,8 @@ function requestLoginByEmail(_x) {
 }
 function _requestLoginByEmail() {
   _requestLoginByEmail = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default)(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.mark(function _callee6(loginData) {
-    var url, requestConfig;
+    var url;
+    var requestConfig;
     return __WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.wrap(function _callee6$(_context6) {
       while (1) {
         switch (_context6.prev = _context6.next) {
@@ -269,7 +271,8 @@ function requestLogout() {
 }
 function _requestLogout() {
   _requestLogout = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default)(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.mark(function _callee9() {
-    var url, requestConfig;
+    var url;
+    var requestConfig;
     return __WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.wrap(function _callee9$(_context9) {
       while (1) {
         switch (_context9.prev = _context9.next) {
@@ -282,7 +285,8 @@ function _requestLogout() {
             };
             return _context9.abrupt("return", __WEBPACK_IMPORTED_MODULE_2_axios___default(requestConfig).then(/*#__PURE__*/function () {
               var _ref5 = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default)(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.mark(function _callee7(res) {
-                var data, statusText;
+                var data;
+                var statusText;
                 return __WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.wrap(function _callee7$(_context7) {
                   while (1) {
                     switch (_context7.prev = _context7.next) {
@@ -358,7 +362,10 @@ function handleLoginByEmail(_x2) {
 }
 function _handleLoginByEmail() {
   _handleLoginByEmail = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default)(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.mark(function _callee11(loginData) {
-    var authInfo, nickname, id, avatarUrl;
+    var authInfo;
+    var nickname;
+    var id;
+    var avatarUrl;
     return __WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.wrap(function _callee11$(_context11) {
       while (1) {
         switch (_context11.prev = _context11.next) {
@@ -368,7 +375,9 @@ function _handleLoginByEmail() {
             return requestLoginByEmail(loginData);
           case 3:
             authInfo = _context11.sent;
-            nickname = authInfo.nickname, id = authInfo.id, avatarUrl = authInfo.avatar_url;
+            nickname = authInfo.nickname;
+            id = authInfo.id;
+            avatarUrl = authInfo.avatar_url;
             return _context11.abrupt("return", {
               isSuccess: true,
               authInfo: {
@@ -431,7 +440,8 @@ function handleResetPwd(_x3) {
 }
 function _handleResetPwd() {
   _handleResetPwd = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default)(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.mark(function _callee15(resetData) {
-    var url, requestConfig;
+    var url;
+    var requestConfig;
     return __WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.wrap(function _callee15$(_context15) {
       while (1) {
         switch (_context15.prev = _context15.next) {
@@ -504,7 +514,9 @@ function sendEmail(_x4, _x5, _x6) {
 }
 function _sendEmail() {
   _sendEmail = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default)(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.mark(function _callee19(email, type, callBack) {
-    var e, ticket, requestConfig;
+    var e;
+    var ticket;
+    var requestConfig;
     return __WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.wrap(function _callee19$(_context19) {
       while (1) {
         switch (_context19.prev = _context19.next) {
@@ -706,7 +718,10 @@ function _register() {
               }
             }).then(/*#__PURE__*/function () {
               var _ref14 = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default)(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.mark(function _callee23(res) {
-                var _res$data$user_info, nickname, id, avatar_url;
+                var _res$data$user_info;
+                var nickname;
+                var id;
+                var avatar_url;
                 return __WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.wrap(function _callee23$(_context23) {
                   while (1) {
                     switch (_context23.prev = _context23.next) {
@@ -715,7 +730,10 @@ function _register() {
                           _context23.next = 3;
                           break;
                         }
-                        _res$data$user_info = res.data.user_info, nickname = _res$data$user_info.nickname, id = _res$data$user_info.id, avatar_url = _res$data$user_info.avatar_url;
+                        _res$data$user_info = res.data.user_info;
+                        nickname = _res$data$user_info.nickname;
+                        id = _res$data$user_info.id;
+                        avatar_url = _res$data$user_info.avatar_url;
                         return _context23.abrupt("return", {
                           isSuccess: true,
                           authInfo: {

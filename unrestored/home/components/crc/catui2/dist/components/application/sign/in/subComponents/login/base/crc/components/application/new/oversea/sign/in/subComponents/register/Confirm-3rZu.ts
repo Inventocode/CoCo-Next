@@ -16,10 +16,10 @@ import * as __WEBPACK_IMPORTED_MODULE_3__style_module_css__ from "../../style.mo
 import __WEBPACK_IMPORTED_MODULE_3__style_module_css___default from "../../style.module.css-idDZ";
 var Fragment = __WEBPACK_IMPORTED_MODULE_0_react__.Fragment;
 var ConfirmComponent = function ConfirmComponent(props) {
-  var handleConfirm = props.handleConfirm,
-    successText = props.successText,
-    buttonText = props.buttonText,
-    second = props.second;
+  var handleConfirm = props.handleConfirm;
+  var successText = props.successText;
+  var buttonText = props.buttonText;
+  var second = props.second;
   return /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react__.createElement(Fragment, null, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
     className: "CUI-new-oversea-sign-in-dialog-fully-content"
   }, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", null, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react__.createElement("img", {

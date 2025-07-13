@@ -12,7 +12,9 @@ function getUrlSearchParams(queryString) {
   var key = 'inviteCode';
   var value = searchParams.get(key);
   // inviteCode字段内带有空格和描述型文字，在这里去掉
-  value && searchParams.set(key, value.split(' ')[0]);
+  if (value) {
+    searchParams.set(key, value.split(' ')[0]);
+  }
   return searchParams;
 }
 function getUrlParams(url) {

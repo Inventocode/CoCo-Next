@@ -1,0 +1,1 @@
+module.exports = n.p + "static/media/cloudDict.811724d4.svg";

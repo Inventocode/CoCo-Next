@@ -1,0 +1,1 @@
+module.exports = n.p + "static/media/fail-web-view.dc0a9364.svg";
