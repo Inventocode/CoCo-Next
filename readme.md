@@ -6,6 +6,7 @@
 
 > [!IMPORTANT]
 > 停更通知：
+>
 > 该项目唯一的核心维护者 SLIGHTNING 由于学业繁忙，将无法维护该项目。预计将于 2026 年 6 月 17 日后恢复更新。
 
 ## 一、进度
@@ -33,7 +34,41 @@
 - `/`：不需要；
 - `xx%`：完成比例（估计值，可能不准确）。
 
-## 二、目录结构说明
+## 二、构建和运行
+
+### 1. 克隆仓库到本地
+
+```sh
+git clone https://github.com/glacier-studio/CoCo-Source-Code-Plan.git
+# 或从 Gitee 克隆：
+# git clone https://gitee.com/glacier-studio/CoCo-Source-Code-Plan.git
+```
+
+### 2. 添加 Host 解析规则
+
+在 Host 文件中添加：
+
+```host
+127.0.0.1	coco.localhost
+```
+
+### 3. 安装依赖
+
+```sh
+$ npm install --legacy-peer-deps
+```
+
+### 4. 启动开发服务
+
+```sh
+$ npm run start
+```
+
+### 5. 在浏览器中打开
+
+在本机浏览器中打开 <http://coco.localhost:7090/>
+
+## 三、目录结构说明
 
 ### 1.公开文件（/public）
 
