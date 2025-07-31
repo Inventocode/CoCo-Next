@@ -1,8 +1,8 @@
 "use strict";
 
 export { a };
-import * as r from "../../../../19";
-import * as i from "../../../../108";
+var r = require("../../../../19");
+var i = require("../../../../108");
 function o(e) {
   return e && "object" === Object(i.a)(e) && e.constructor === Object;
 }
@@ -24,3 +24,4 @@ function a(e, t) {
   }
   return i;
 }
+export default a;

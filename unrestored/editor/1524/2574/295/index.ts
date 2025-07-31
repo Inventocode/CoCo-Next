@@ -1,15 +1,39 @@
 "use strict";
 
 var r;
-import * as o from "../10/index";
-import * as i from "../47";
-import * as a from "../0/index";
-import * as s from "../0/index";
-import * as c from "../8";
-import * as l from "../8";
-import * as u from "../53";
-var d = (require("./828"), require("../94/index"));
-exports.a = s.a.memo(s.a.forwardRef(function (e, t) {
+var o = require("../10/index");
+var i = require("../47");
+var a = require("../0/index");
+var s = (module => {
+  var defaultExport = module && module.__esModule ? function () {
+    return module.default;
+  } : function () {
+    return module;
+  };
+  Object.defineProperty(defaultExport, "a", {
+    enumerable: true,
+    get: defaultExport
+  });
+  return defaultExport;
+})(a);
+var c = require("../8");
+var l = (module => {
+  var defaultExport = module && module.__esModule ? function () {
+    return module.default;
+  } : function () {
+    return module;
+  };
+  Object.defineProperty(defaultExport, "a", {
+    enumerable: true,
+    get: defaultExport
+  });
+  return defaultExport;
+})(c);
+var u = require("../53");
+require("./828");
+var d = require("../94/index");
+var _a;
+_a = s.a.memo(s.a.forwardRef(function (e, t) {
   var n = e.warning;
   var c = e.placeholder;
   var p = e.value;
@@ -351,3 +375,5 @@ exports.a = s.a.memo(s.a.forwardRef(function (e, t) {
     type: "icon-close"
   })), C);
 }));
+export { _a as a };
+export default _a;

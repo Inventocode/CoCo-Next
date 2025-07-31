@@ -1,5 +1,5 @@
-import * as r from "../759/index";
-import * as i from "./1128";
+var r = require("../759/index");
+var i = require("./1128");
 function o(e) {
   this.path = e.path;
   this.hostname = e.hostname;

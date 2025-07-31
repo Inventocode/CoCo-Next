@@ -1,9 +1,9 @@
 "use strict";
 
 export { a };
-import * as r from "../301/203";
-import * as i from "../57/770";
-import * as o from "../36/461";
+var r = require("../301/203");
+var i = require("../57/770");
+var o = require("../36/461");
 function a(e) {
   var t = "function" === typeof Map ? new Map() : void 0;
   return (a = function (e) {
@@ -34,3 +34,4 @@ function a(e) {
     return Object(i.a)(a, e);
   })(e);
 }
+export default a;

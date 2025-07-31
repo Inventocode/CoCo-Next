@@ -36,3 +36,4 @@ function r(e, t) {
   return i;
 }
 export { r as a };
+export default r;

@@ -1,8 +1,19 @@
 "use strict";
 
 export { o as a };
-import * as r from "../../75/index";
-import * as i from "../../75/index";
+var r = require("../../75/index");
+var i = (module => {
+  var defaultExport = module && module.__esModule ? function () {
+    return module.default;
+  } : function () {
+    return module;
+  };
+  Object.defineProperty(defaultExport, "a", {
+    enumerable: true,
+    get: defaultExport
+  });
+  return defaultExport;
+})(r);
 function o(e, t, n, r) {
   var o = i.a.unstable_batchedUpdates ? function (e) {
     i.a.unstable_batchedUpdates(n, e);
@@ -18,3 +29,4 @@ function o(e, t, n, r) {
     }
   };
 }
+export default o;

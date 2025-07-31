@@ -18,3 +18,4 @@ function r() {
   }
 }
 export { r as a };
+export default r;

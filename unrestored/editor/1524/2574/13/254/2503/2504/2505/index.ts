@@ -1,10 +1,10 @@
-import * as r from "./972/index";
-import * as i from "./1411/index";
-import * as o from "./1384/index";
-import * as a from "./2506/index";
-import * as s from "../../../2518/2519/475";
-import * as c from "./852/index";
-import * as u from "./1412";
+var r = require("./972/index");
+var i = require("./1411/index");
+var o = require("./1384/index");
+var a = require("./2506/index");
+var s = require("../../../2518/2519/475");
+var c = require("./852/index");
+var u = require("./1412");
 module.exports = function e(t, n, l, f, h) {
   if (t !== n) {
     o(n, function (o, c) {

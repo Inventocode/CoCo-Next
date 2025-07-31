@@ -1,6 +1,6 @@
 "use strict";
 
-import * as r from "./2215/index";
+var r = require("./2215/index");
 var i = require("../757/index").toHash;
 module.exports = function () {
   var e = [{

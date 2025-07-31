@@ -1,7 +1,10 @@
 "use strict";
 
-export default (function (e) {
-  return (0, r.isFunctionDeclaration)(e) || (0, r.isClassDeclaration)(e) || (0, a.default)(e);
+Object.defineProperty(exports, "__esModule", {
+  value: !0
 });
-import * as r from "./2628";
-import * as a from "./2845";
+exports.default = function (e) {
+  return (0, r.isFunctionDeclaration)(e) || (0, r.isClassDeclaration)(e) || (0, a.default)(e);
+};
+var r = require("./2628");
+var a = require("./2845");

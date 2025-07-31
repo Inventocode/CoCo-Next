@@ -1,7 +1,7 @@
 "use strict";
 
-import * as r from "../../../../683/34/763";
-import * as o from "../../../../0/index";
+var r = require("../../../../683/34/763");
+var o = require("../../../../0/index");
 function i(e) {
   for (var t = "https://reactjs.org/docs/error-decoder.html?invariant=" + e, n = 1; n < arguments.length; n++) {
     t += "&args[]=" + encodeURIComponent(arguments[n]);

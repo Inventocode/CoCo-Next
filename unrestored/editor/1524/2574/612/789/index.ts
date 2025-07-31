@@ -1,17 +1,39 @@
 "use strict";
 
 export { I as a };
-import * as r from "../../19";
-import * as i from "../../28";
-import * as o from "../../33/index";
-import * as a from "../../108";
-import * as s from "../../0/index";
-import * as c from "../../0/index";
-import * as u from "../../8";
-import * as l from "../../8";
-import * as f from "../../482";
-import * as h from "../../788";
-import * as d from "../../95";
+var r = require("../../19");
+var i = require("../../28");
+var o = require("../../33/index");
+var a = require("../../108");
+var s = require("../../0/index");
+var c = (module => {
+  var defaultExport = module && module.__esModule ? function () {
+    return module.default;
+  } : function () {
+    return module;
+  };
+  Object.defineProperty(defaultExport, "a", {
+    enumerable: true,
+    get: defaultExport
+  });
+  return defaultExport;
+})(s);
+var u = require("../../8");
+var l = (module => {
+  var defaultExport = module && module.__esModule ? function () {
+    return module.default;
+  } : function () {
+    return module;
+  };
+  Object.defineProperty(defaultExport, "a", {
+    enumerable: true,
+    get: defaultExport
+  });
+  return defaultExport;
+})(u);
+var f = require("../../482");
+var h = require("../../788");
+var d = require("../../95");
 var p = function e(t) {
   Object(d.a)(this, e);
   this.error = new Error("unreachable case: ".concat(JSON.stringify(t)));
@@ -61,12 +83,12 @@ var A = function (e) {
     }));
   });
 };
-import * as g from "../../1025/index";
-import * as v from "../../610";
-import * as m from "../../363/index";
-import * as y from "../../514";
-import * as b from "./684";
-import * as w from "../../606";
+var g = require("../../1025/index");
+var v = require("../../610");
+var m = require("../../363/index");
+var y = require("../../514");
+var b = require("./684");
+var w = require("../../606");
 var E = function () {
   return {
     width: 0,
@@ -108,7 +130,7 @@ var C = function (e) {
     }));
   });
 };
-import * as O from "../../314";
+var O = require("../../314");
 var S = function (e, t) {
   var n = {};
   for (var r in e) if (Object.prototype.hasOwnProperty.call(e, r) && t.indexOf(r) < 0) {
@@ -285,3 +307,4 @@ R.displayName = "Button";
 R.Group = A;
 R.__ANT_BUTTON = !0;
 export { R as b };
+export default I;

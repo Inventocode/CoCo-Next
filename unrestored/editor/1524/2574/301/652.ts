@@ -1,10 +1,14 @@
 "use strict";
 
-import * as r from "../1000/93";
-import * as i from "../1000/134/index";
-import * as o from "../125/294";
-import * as a from "../125/index";
-import * as s from "../125/474";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.FieldLabel = void 0;
+var r = require("../1000/93");
+var i = require("../1000/134/index");
+var o = require("../125/294");
+var a = require("../125/index");
+var s = require("../125/474");
 var c = function (e) {
   function t(t) {
     var n = e.call(this, t.text) || this;
@@ -50,4 +54,4 @@ var c = function (e) {
   };
   return t = (0, r.__decorate)([(0, i.injectable)()], t);
 }(require("./500").Field);
-export { c as FieldLabel };
+exports.FieldLabel = c;

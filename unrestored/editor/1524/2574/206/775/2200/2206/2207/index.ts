@@ -1,14 +1,14 @@
 "use strict";
 
-import * as r from "./2208/index";
-import * as i from "./1112/index";
-import * as o from "./2212";
-import * as a from "./1328";
-import * as s from "./1329";
-import * as c from "./2213";
-import * as u from "./2214/index";
-import * as l from "./2235";
-import * as f from "./757/index";
+var r = require("./2208/index");
+var i = require("./1112/index");
+var o = require("./2212");
+var a = require("./1328");
+var s = require("./1329");
+var c = require("./2213");
+var u = require("./2214/index");
+var l = require("./2235");
+var f = require("./757/index");
 module.exports = g;
 g.prototype.validate = function (e, t) {
   var n;
@@ -233,12 +233,12 @@ g.prototype._compile = function (e, t) {
   }
 };
 g.prototype.compileAsync = require("./2236");
-import * as h from "./2237/index";
+var h = require("./2237/index");
 g.prototype.addKeyword = h.add;
 g.prototype.getKeyword = h.get;
 g.prototype.removeKeyword = h.remove;
 g.prototype.validateKeyword = h.validate;
-import * as d from "./1114";
+var d = require("./1114");
 g.ValidationError = d.Validation;
 g.MissingRefError = d.MissingRef;
 g.$dataMetaSchema = l;

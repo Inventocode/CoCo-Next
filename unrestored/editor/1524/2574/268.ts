@@ -8,3 +8,4 @@ export { r as a };
   e.QUERY = "QUERY";
   e.CLEAR = "CLEAR";
 })(r || (r = {}));
+export default r;

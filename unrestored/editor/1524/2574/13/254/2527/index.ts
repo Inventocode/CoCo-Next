@@ -1,5 +1,9 @@
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.Swatch = void 0;
 var r = Object.assign || function (e) {
   for (var t = 1; t < arguments.length; t++) {
     var n = arguments[t];
@@ -11,7 +15,7 @@ var r = Object.assign || function (e) {
 };
 var i = c(require("../../../0/index"));
 var o = c(require("../../784/104/index"));
-import * as a from "./2528";
+var a = require("./2528");
 var s = c(require("../1155/index"));
 function c(e) {
   return e && e.__esModule ? e : {
@@ -64,4 +68,4 @@ var u = exports.Swatch = function (e) {
     boxShadow: "inset 0 0 0 1px rgba(0,0,0,0.1)"
   }));
 };
-export default (0, a.handleFocus)(u);
+exports.default = (0, a.handleFocus)(u);

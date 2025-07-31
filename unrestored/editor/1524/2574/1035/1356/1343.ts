@@ -1,6 +1,9 @@
 "use strict";
 
-export default (function e(t) {
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.default = function e(t) {
   if (null === t) {
     return null;
   }
@@ -13,4 +16,4 @@ export default (function e(t) {
     return n;
   }
   return t;
-});
+};

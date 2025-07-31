@@ -1,13 +1,17 @@
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.decompressFrames = exports.decompressFrame = exports.parseGIF = void 0;
 var r;
 var o = (r = require("./2563")) && r.__esModule ? r : {
   default: r
 };
-import * as i from "./1425";
-import * as a from "./1426";
-import * as s from "./2564";
-import * as c from "./2565";
+var i = require("./1425");
+var a = require("./1426");
+var s = require("./2564");
+var c = require("./2565");
 exports.parseGIF = function (e) {
   var t = new Uint8Array(e);
   return (0, i.parse)((0, a.buildStream)(t), o.default);
@@ -59,7 +63,7 @@ var l = function (e, t, n) {
   }
   console.warn("gif frame does not have associated image.");
 };
-export { l as decompressFrame };
+exports.decompressFrame = l;
 exports.decompressFrames = function (e, t) {
   return e.frames.filter(function (e) {
     return e.image;

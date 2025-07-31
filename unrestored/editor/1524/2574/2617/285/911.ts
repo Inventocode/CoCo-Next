@@ -151,3 +151,4 @@ var r = {
   yellow: "#ffff00",
   yellowgreen: "#9acd32"
 };
+export default r;

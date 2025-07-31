@@ -1,6 +1,10 @@
 "use strict";
 
-import * as r from "../../301/173";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.register_procedure_json_generator = void 0;
+var r = require("../../301/173");
 exports.register_procedure_json_generator = function (e) {
   e.register(r.PROCEDURE_BLOCK_TYPES.DEF, function (t, n) {
     var i = t.blocks[n];

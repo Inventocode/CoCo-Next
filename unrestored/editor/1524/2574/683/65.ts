@@ -23,8 +23,8 @@ export { x as e };
 export { C as a };
 export { O as w };
 export { S as n };
-import * as r from "./34/index";
-import * as i from "../107";
+var r = require("./34/index");
+var i = require("../107");
 function o(e) {
   return {
     width: Math.floor(.7 * e.width),
@@ -204,3 +204,4 @@ function S(e, t) {
   var r = t.height / 2;
   return !(e.x < -n || e.x > n || e.y < -r || e.y > r);
 }
+export default C;

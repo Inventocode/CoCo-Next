@@ -1,6 +1,9 @@
 "use strict";
 
-export default (function (e, t, n, r, i, a, s) {
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.default = function (e, t, n, r, i, a, s) {
   var l = new Set();
   var u = {
     compatData: e,
@@ -26,12 +29,12 @@ export default (function (e, t, n, r, i, a, s) {
     });
   }
   return l;
-});
-export { o as isRequired };
-export { s as targetsSupported };
-import * as r from "../../../../../2691/2657";
-import * as i from "./3112/index";
-import * as a from "../2705";
+};
+exports.isRequired = o;
+exports.targetsSupported = s;
+var r = require("../../../../../2691/2657");
+var i = require("./3112/index");
+var a = require("../2705");
 function s(e, t) {
   var n = Object.keys(e);
   return 0 !== n.length && 0 === n.filter(function (n) {

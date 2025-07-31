@@ -1,5 +1,5 @@
-import * as r from "./1363";
-import * as i from "./1364";
+var r = require("./1363");
+var i = require("./1364");
 module.exports = function (e, t, n) {
   var o = t && n || 0;
   if ("string" == typeof e) {

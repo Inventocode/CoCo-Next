@@ -1,7 +1,10 @@
 "use strict";
 
-export default (function (e) {
-  return (0, r.isVariableDeclaration)(e) && ("var" !== e.kind || e[i.BLOCK_SCOPED_SYMBOL]);
+Object.defineProperty(exports, "__esModule", {
+  value: !0
 });
-import * as r from "./2625";
-import * as i from "./2647";
+exports.default = function (e) {
+  return (0, r.isVariableDeclaration)(e) && ("var" !== e.kind || e[i.BLOCK_SCOPED_SYMBOL]);
+};
+var r = require("./2625");
+var i = require("./2647");

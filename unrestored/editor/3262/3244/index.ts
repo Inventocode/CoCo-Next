@@ -1,6 +1,19 @@
 "use strict";
 
-export { OptionValidator } from "./3245";
-export { findSuggestion } from "./2846";
-import * as r from "./3245";
-import * as a from "./2846";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+Object.defineProperty(exports, "OptionValidator", {
+  enumerable: !0,
+  get: function () {
+    return r.OptionValidator;
+  }
+});
+Object.defineProperty(exports, "findSuggestion", {
+  enumerable: !0,
+  get: function () {
+    return a.findSuggestion;
+  }
+});
+var r = require("./3245");
+var a = require("./2846");

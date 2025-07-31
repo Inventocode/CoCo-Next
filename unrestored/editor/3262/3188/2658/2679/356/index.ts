@@ -1,4 +1,4 @@
-import * as r from "./1098";
+var r = require("./1098");
 module.exports = function (e, t) {
   if ("function" !== typeof t && null !== t) {
     throw new TypeError("Super expression must either be null or a function");

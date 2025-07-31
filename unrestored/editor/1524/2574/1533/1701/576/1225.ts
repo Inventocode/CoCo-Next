@@ -1,5 +1,5 @@
-import * as r from "../../1556/473";
-import * as o from "../../1728/257";
+var r = require("../../1556/473");
+var o = require("../../1728/257");
 module.exports = function (e) {
   if (void 0 === e) {
     return 0;

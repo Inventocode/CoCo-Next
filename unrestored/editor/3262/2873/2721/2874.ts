@@ -1,5 +1,9 @@
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.default = void 0;
 var r = (0, require("../../2690").declare)(function (e) {
   e.assertVersion(7);
   return {
@@ -13,4 +17,4 @@ var r = (0, require("../../2690").declare)(function (e) {
     }
   };
 });
-export default r;
+exports.default = r;

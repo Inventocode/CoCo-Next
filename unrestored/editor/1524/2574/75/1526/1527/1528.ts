@@ -11,7 +11,7 @@ if ("undefined" === typeof window || "function" !== typeof MessageChannel) {
   var l = function e() {
     if (null !== c) {
       try {
-        var n = t.unstable_now();
+        var n = exports.unstable_now();
         c(!0, n);
         c = null;
       } catch (r) {
@@ -71,7 +71,7 @@ if ("undefined" === typeof window || "function" !== typeof MessageChannel) {
   var b = 5;
   var w = 0;
   a = function () {
-    return t.unstable_now() >= w;
+    return exports.unstable_now() >= w;
   };
   s = function () {};
   exports.unstable_forceFrameRate = function (e) {
@@ -85,7 +85,7 @@ if ("undefined" === typeof window || "function" !== typeof MessageChannel) {
   var x = E.port2;
   E.port1.onmessage = function () {
     if (null !== m) {
-      var e = t.unstable_now();
+      var e = exports.unstable_now();
       w = e + b;
       try {
         if (m(!0, e)) {
@@ -110,7 +110,7 @@ if ("undefined" === typeof window || "function" !== typeof MessageChannel) {
   };
   i = function (e, n) {
     y = p(function () {
-      e(t.unstable_now());
+      e(exports.unstable_now());
     }, n);
   };
   o = function () {
@@ -225,7 +225,7 @@ function L(e, n) {
         I.callback = null;
         F = I.priorityLevel;
         var c = s(I.expirationTime <= n);
-        n = t.unstable_now();
+        n = exports.unstable_now();
         if ("function" === typeof c) {
           I.callback = c;
         } else {
@@ -310,7 +310,7 @@ exports.unstable_next = function (e) {
   }
 };
 exports.unstable_pauseExecution = function () {};
-export { H as unstable_requestPaint };
+exports.unstable_requestPaint = H;
 exports.unstable_runWithPriority = function (e, t) {
   switch (e) {
     case 1:
@@ -331,7 +331,7 @@ exports.unstable_runWithPriority = function (e, t) {
   }
 };
 exports.unstable_scheduleCallback = function (e, n, a) {
-  var s = t.unstable_now();
+  var s = exports.unstable_now();
   if ("object" === typeof a && null !== a) {
     var c = a.delay;
     c = "number" === typeof c && 0 < c ? s + c : s;
@@ -370,7 +370,7 @@ exports.unstable_scheduleCallback = function (e, n, a) {
   return e;
 };
 exports.unstable_shouldYield = function () {
-  var e = t.unstable_now();
+  var e = exports.unstable_now();
   M(e);
   var n = O(T);
   return n !== I && null !== I && null !== n && null !== n.callback && n.startTime <= e && n.expirationTime < I.expirationTime || a();

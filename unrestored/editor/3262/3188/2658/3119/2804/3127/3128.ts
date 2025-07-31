@@ -1,6 +1,6 @@
 "use strict";
 
-import * as r from "../../../../../3190/494";
+var r = require("../../../../../3190/494");
 function i() {
   var e = require("../../../3093/2702/3035/2780/index");
   i = function () {
@@ -72,7 +72,10 @@ function s(e) {
     sources: Array.from(r.values())
   };
 }
-export default (function (e, t) {
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.default = function (e, t) {
   var n;
   var o = s(e);
   var l = s(t);
@@ -248,4 +251,4 @@ export default (function (e, t) {
     T.sourceRoot = o.sourceRoot;
   }
   return T;
-});
+};

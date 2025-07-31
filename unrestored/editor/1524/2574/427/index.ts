@@ -72,7 +72,7 @@ function o(e) {
 }
 var a;
 var s;
-import * as c from "../31/index";
+var c = require("../31/index");
 function u(e, t) {
   if (a) {
     a({
@@ -111,7 +111,7 @@ function A() {
 function g() {
   return "android" === p();
 }
-import * as v from "./1455";
+var v = require("./1455");
 function m() {
   var e;
   var t;
@@ -476,7 +476,7 @@ var S = function (e, t) {
     };
   }
 };
-var k = (function () {
+(function () {
   function e(e) {
     this.stream = void 0;
     this.audio_context = void 0;
@@ -702,7 +702,8 @@ var k = (function () {
       throw e;
     });
   };
-}(), function (e, t, n, r) {
+})();
+var k = function (e, t, n, r) {
   return new (n || (n = Promise))(function (i, o) {
     function a(e) {
       try {
@@ -729,7 +730,7 @@ var k = (function () {
     }
     c((r = r.apply(e, t || [])).next());
   });
-});
+};
 var T = function (e, t) {
   var n;
   var r;
@@ -914,8 +915,8 @@ function R() {
     });
   });
 }
-import * as P from "./778";
-import * as N from "./516/index";
+var P = require("./778");
+var N = require("./516/index");
 var M = {};
 var j = {};
 var L = {};
@@ -1585,3 +1586,4 @@ var Ae = {
   start_volume_measuring: F,
   stop_volume_measuring: R
 };
+export default Ae;

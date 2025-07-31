@@ -1,5 +1,9 @@
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.CopyToClipboard = void 0;
 var r = i(require("../../0/index"));
 var o = i(require("./2535/index"));
 function i(e) {
@@ -159,7 +163,10 @@ var g = function (e) {
     key: "render",
     value: function () {
       var e = this.props;
-      var t = (e.text, e.onCopy, e.options, e.children);
+      e.text;
+      e.onCopy;
+      e.options;
+      var t = e.children;
       var n = c(e, ["text", "onCopy", "options", "children"]);
       var o = r.default.Children.only(t);
       return r.default.cloneElement(o, function (e) {
@@ -192,7 +199,7 @@ var g = function (e) {
   }
   return t;
 }(r.default.PureComponent);
-export { g as CopyToClipboard };
+exports.CopyToClipboard = g;
 m(g, "defaultProps", {
   onCopy: void 0,
   options: void 0

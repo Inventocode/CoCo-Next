@@ -1,6 +1,6 @@
 "use strict";
 
-import * as r from "../../442";
+var r = require("../../442");
 module.exports = r.isStandardBrowserEnv() ? function () {
   var e;
   var t = /(msie|trident)/i.test(navigator.userAgent);

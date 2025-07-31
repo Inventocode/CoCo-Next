@@ -1,8 +1,8 @@
 "use strict";
 
-import * as r from "./2376/index";
-import * as i from "../2383/1381";
-import * as o from "../1138";
+var r = require("./2376/index");
+var i = require("../2383/1381");
+var o = require("../1138");
 var a = Object.prototype.hasOwnProperty;
 var s = {
   brackets: function (e) {

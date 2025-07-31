@@ -9,10 +9,10 @@ var r = {
     backgroundColor: "\u80cc\u666f\u989c\u8272"
   }
 };
-import * as o from "./6";
-import * as i from "./5";
-import * as a from "./35/index";
-import * as s from "./245";
+var o = require("./6");
+var i = require("./5");
+var a = require("./35/index");
+var s = require("./245");
 var c = {
   type: i.f,
   icon: "icon-widget-canvas",

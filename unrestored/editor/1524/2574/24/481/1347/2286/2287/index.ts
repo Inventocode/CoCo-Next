@@ -1,10 +1,10 @@
-import * as r from "./1348/index";
-import * as i from "./1128";
+var r = require("./1348/index");
+var i = require("./1128");
 var o = require("./967/index")("engine.io-client:socket");
-import * as a from "../../1352";
-import * as s from "../759/index";
-import * as c from "../../../2282/1345";
-import * as u from "../../../1353/965";
+var a = require("../../1352");
+var s = require("../759/index");
+var c = require("../../../2282/1345");
+var u = require("../../../1353/965");
 function l(e, t) {
   if (!(this instanceof l)) {
     return new l(e, t);

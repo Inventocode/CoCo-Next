@@ -80,3 +80,4 @@ var o = {
     targetOffset: i
   }
 };
+export default o;

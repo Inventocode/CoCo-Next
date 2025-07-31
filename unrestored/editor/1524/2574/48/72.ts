@@ -140,3 +140,4 @@ var S = function (e) {
     type: l
   };
 };
+export default y;

@@ -1,7 +1,7 @@
-import * as r from "../../1738/272";
-import * as o from "./1205";
-import * as i from "../../1659/241";
-import * as a from "../628";
+var r = require("../../1738/272");
+var o = require("./1205");
+var i = require("../../1659/241");
+var a = require("../628");
 var s = Object.defineProperty;
 exports.f = r ? s : function (e, t, n) {
   if (i(e), t = a(t), i(n), o) {

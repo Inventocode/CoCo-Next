@@ -14,7 +14,7 @@ export { h as b };
 export { m as a };
 export { g as f };
 export { _ as n };
-import * as r from "./5";
+var r = require("./5");
 var o = "icon-widget-list-viewer";
 var i = 360;
 var a = 500;
@@ -247,3 +247,4 @@ var _ = {
     }
   }
 };
+export default m;

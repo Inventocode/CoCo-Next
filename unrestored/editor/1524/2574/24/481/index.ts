@@ -1,8 +1,8 @@
-import * as r from "./2282/index";
-import * as i from "./1123/index";
-import * as o from "./1347/index";
+var r = require("./2282/index");
+var i = require("./1123/index");
+var o = require("./1347/index");
 var a = require("./844/index")("socket.io-client");
-module.exports = t = c;
+module.exports = exports = c;
 var s = exports.managers = {};
 function c(e, t) {
   if ("object" === typeof e) {
@@ -32,6 +32,6 @@ function c(e, t) {
   return n.socket(i.path, t);
 }
 exports.protocol = i.protocol;
-export { c as connect };
+exports.connect = c;
 exports.Manager = require("./1347/index");
 exports.Socket = require("./1353/index");

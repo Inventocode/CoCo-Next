@@ -1,9 +1,13 @@
 "use strict";
 
-import * as r from "../../../../../1000/93";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.GlobalCommentPlugin = void 0;
+var r = require("../../../../../1000/93");
 var i = (0, r.__importStar)(require("../../../../../17/533"));
-import * as o from "../../../../../17/640/index";
-import * as a from "../../../../../17/642";
+var o = require("../../../../../17/640/index");
+var a = require("../../../../../17/642");
 var s = function (e) {
   function t() {
     return null !== e && e.apply(this, arguments) || this;
@@ -41,4 +45,4 @@ var s = function (e) {
   (0, r.__decorate)([(0, o.lazy_inject)(a.BINDING.json)], t.prototype, "json", void 0);
   return t;
 }(require("../../../728/1132").BasePlugin);
-export { s as GlobalCommentPlugin };
+exports.GlobalCommentPlugin = s;

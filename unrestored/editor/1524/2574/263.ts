@@ -10,3 +10,4 @@ var o = 40;
 var i = 40;
 var a = !1;
 var s = !1;
+export default r;

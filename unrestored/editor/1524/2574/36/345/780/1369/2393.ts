@@ -141,8 +141,12 @@ var o = this && this.__generator || function (e, t) {
     };
   }
 };
-import * as a from "./969/index";
-import * as s from "./index";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.isBrowser = exports.mergeConfig = exports.QPSController = exports.getResourceId = exports.chunks = exports.wait = void 0;
+var a = require("./969/index");
+var s = require("./index");
 exports.wait = function (e) {
   return new Promise(function (t) {
     setTimeout(function () {
@@ -185,13 +189,13 @@ exports.QPSController = function (e, n) {
       return o(this, function (o) {
         switch (o.label) {
           case 0:
-            return (i = t.getResourceId(r.url)) ? (a = new Date().getTime(), c = s.Vika.QPSMap.get(i) || {
+            return (i = exports.getResourceId(r.url)) ? (a = new Date().getTime(), c = s.Vika.QPSMap.get(i) || {
               count: 1,
               lastReqTimestamp: a
             }, u = c.count, l = c.lastReqTimestamp, Math.floor(a / 1e3) <= Math.floor(l / 1e3) ? u < e ? u++ : (l = 1e3 * (Math.floor(l / 1e3) + 1), u = 1) : (l = a, u = 1), s.Vika.QPSMap.set(i, {
               count: u,
               lastReqTimestamp: l
-            }), f = (f = l - a) > 0 ? f + n : 0, [4, t.wait(f)]) : [2, r];
+            }), f = (f = l - a) > 0 ? f + n : 0, [4, exports.wait(f)]) : [2, r];
           case 1:
             o.sent();
             return [2, r];

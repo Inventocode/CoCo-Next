@@ -1,11 +1,14 @@
 "use strict";
 
 var r;
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
 (function (e) {
   e.IdentityCheck = "IdentityCheck";
   e.DeepValueCheck = "DeepValueCheck";
   e.NoCheck = "NoCheck";
-})(r = t.ChangeDetectionStrategyType || (exports.ChangeDetectionStrategyType = {}));
+})(r = exports.ChangeDetectionStrategyType || (exports.ChangeDetectionStrategyType = {}));
 var o = function () {
   function e() {
     var e;
@@ -20,7 +23,7 @@ var o = function () {
   };
   return e;
 }();
-export { o as ChangeDetectionService };
+exports.ChangeDetectionService = o;
 var i = function () {
   function e(e) {
     this.strategy = e;

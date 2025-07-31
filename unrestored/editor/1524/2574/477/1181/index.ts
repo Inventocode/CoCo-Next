@@ -13,7 +13,7 @@ Object.defineProperty(r, "InboundFilters", {
   }
 });
 var i;
-import * as o from "../../36/483/39";
+var o = require("../../36/483/39");
 var a = function () {
   function e() {
     this.name = e.id;
@@ -31,11 +31,11 @@ var a = function () {
   e.id = "FunctionToString";
   return e;
 }();
-import * as s from "./1026";
-import * as c from "./2582";
-import * as u from "./904";
-import * as l from "./394";
-import * as f from "./737";
+var s = require("./1026");
+var c = require("./2582");
+var u = require("./904");
+var l = require("./394");
+var f = require("./737");
 var h = [/^Script error\.?$/, /^Javascript error: Script error\.? on line 0$/];
 var d = function () {
   function e(t) {
@@ -162,10 +162,10 @@ var d = function () {
   e.id = "InboundFilters";
   return e;
 }();
-import * as p from "./914";
-import * as _ from "./306";
-import * as A from "./561/index";
-import * as g from "./986";
+var p = require("./914");
+var _ = require("./306");
+var A = require("./561/index");
+var g = require("./986");
 function v() {
   if (!("fetch" in Object(l.e)())) {
     return !1;
@@ -599,7 +599,7 @@ function I(e, t) {
 }
 var F = null;
 var R = null;
-import * as P from "./2610";
+var P = require("./2610");
 var N = Object.setPrototypeOf || ({
   __proto__: []
 } instanceof Array ? function (e, t) {
@@ -708,7 +708,7 @@ var L = function () {
   };
   return e;
 }();
-import * as U from "./2577/index";
+var U = require("./2577/index");
 var H = [];
 function V(e) {
   return e.reduce(function (e, t) {
@@ -1695,7 +1695,9 @@ var Ae = function () {
           var d = parseInt(h[0], 10);
           var p = 1e3 * (isNaN(d) ? 60 : d);
           try {
-            for (var _ = (r = void 0, Object(o.g)(h[1].split(";"))), A = _.next(); !A.done; A = _.next()) {
+            for (r = void 0, _ = Object(o.g)(h[1].split(";")), A = _.next(), void 0; !A.done; A = _.next()) {
+              var _;
+              var A;
               var g = A.value;
               this._rateLimits[g || "all"] = new Date(a + p);
             }
@@ -1912,7 +1914,7 @@ var me = function (e) {
   };
   return t;
 }(X);
-import * as ye from "../340";
+var ye = require("../340");
 var be = 0;
 function we() {
   return be > 0;
@@ -2013,7 +2015,7 @@ function Ce(e) {
     u.a.error("Missing eventId option in showReportDialog call");
   }
 }
-import * as Oe from "./1166";
+var Oe = require("./1166");
 var Se = function () {
   function e(t) {
     this.name = e.id;
@@ -2766,3 +2768,4 @@ function je(e) {
   };
   Me(e);
 }
+export default je;

@@ -167,7 +167,7 @@ var r;
   }
   if (!(void 0 === (r = function () {
     return v;
-  }.call(t, n, t, e)))) {
+  }.call(exports, require, exports, module)))) {
     module.exports = r;
   }
 }();

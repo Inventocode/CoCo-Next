@@ -1,7 +1,11 @@
 "use strict";
 
-import * as r from "../../../../../3190/624/index";
-import * as i from "../../../../../3190/494";
+var r = require("../../../../../3190/624/index");
+var i = require("../../../../../3190/494");
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.assumptionsNames = void 0;
 exports.checkNoUnwrappedItemOptionPairs = function (e, t, n, r) {
   if (0 === t) {
     return;
@@ -18,9 +22,9 @@ exports.validate = function (e, t) {
     source: e
   }, t);
 };
-import "../2682";
-import * as a from "./3114";
-import * as s from "./2801";
+require("../2682");
+var a = require("./3114");
+var s = require("./2801");
 var o = {
   cwd: s.assertString,
   root: s.assertString,
@@ -181,4 +185,4 @@ function d(e) {
 function h(e, t) {
   return Object.prototype.hasOwnProperty.call(e, t);
 }
-export { p as assumptionsNames };
+exports.assumptionsNames = p;

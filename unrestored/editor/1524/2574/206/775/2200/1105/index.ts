@@ -50,7 +50,7 @@
     }
     if ("undefined" === typeof e) {
       return function () {
-        return t.deprecate(n, r).apply(this, arguments);
+        return exports.deprecate(n, r).apply(this, arguments);
       };
     }
     var i = !1;
@@ -86,7 +86,7 @@
       r.showHidden = n;
     } else {
       if (n) {
-        t._extend(r, n);
+        exports._extend(r, n);
       }
     }
     if (v(r.showHidden)) {
@@ -114,7 +114,7 @@
     return e;
   }
   function l(e, n, r) {
-    if (e.customInspect && n && E(n.inspect) && n.inspect !== t.inspect && (!n.constructor || n.constructor.prototype !== n)) {
+    if (e.customInspect && n && E(n.inspect) && n.inspect !== exports.inspect && (!n.constructor || n.constructor.prototype !== n)) {
       var i = n.inspect(r, e);
       if (!g(i)) {
         i = l(e, i, r);
@@ -289,7 +289,7 @@
       if (new RegExp("\\b" + n + "\\b", "i").test(o)) {
         var r = e.pid;
         a[n] = function () {
-          var e = t.format.apply(t, arguments);
+          var e = exports.format.apply(exports, arguments);
           console.error("%s %d: %s", n, r, e);
         };
       } else {
@@ -355,7 +355,7 @@
     return Object.prototype.hasOwnProperty.call(e, t);
   }
   exports.log = function () {
-    console.log("%s - %s", S(), t.format.apply(t, arguments));
+    console.log("%s - %s", S(), exports.format.apply(exports, arguments));
   };
   exports.inherits = require("./2181");
   exports._extend = function (e, t) {
@@ -425,7 +425,7 @@
     }
     return Object.defineProperties(t, r(e));
   };
-  t.promisify.custom = T;
+  exports.promisify.custom = T;
   exports.callbackify = function (t) {
     if ("function" !== typeof t) {
       throw new TypeError('The "original" argument must be of type Function');

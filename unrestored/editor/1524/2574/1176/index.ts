@@ -1,15 +1,24 @@
 "use strict";
 
-import * as r from "./1312";
-import * as o from "./2538";
-import * as i from "./1419";
-import * as a from "./2539";
-import * as s from "./2540/index";
-import * as c from "./2541";
-import * as l from "./2542";
-import * as u from "./2543/index";
-import * as d from "./2544";
-export { init_extensions } from "./2544";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.init_data_blocks = exports.init_tell_blocks = exports.init_basic_blocks = exports.init_extensions = void 0;
+var r = require("./1312");
+var o = require("./2538");
+var i = require("./1419");
+var a = require("./2539");
+var s = require("./2540/index");
+var c = require("./2541");
+var l = require("./2542");
+var u = require("./2543/index");
+var d = require("./2544");
+Object.defineProperty(exports, "init_extensions", {
+  enumerable: !0,
+  get: function () {
+    return d.init_extensions;
+  }
+});
 exports.init_basic_blocks = function (e) {
   (0, r.init_shadows)(e);
   (0, o.init_events_blocks)(e);
@@ -20,7 +29,17 @@ exports.init_basic_blocks = function (e) {
   (0, l.init_text_blocks)(e);
   (0, u.init_color_blocks)(e);
 };
-import * as p from "./1419";
-export { init_tell_blocks } from "./1419";
-import * as f from "./2545";
-export { init_data_blocks } from "./2545";
+var p = require("./1419");
+Object.defineProperty(exports, "init_tell_blocks", {
+  enumerable: !0,
+  get: function () {
+    return p.init_tell_blocks;
+  }
+});
+var f = require("./2545");
+Object.defineProperty(exports, "init_data_blocks", {
+  enumerable: !0,
+  get: function () {
+    return f.init_data_blocks;
+  }
+});

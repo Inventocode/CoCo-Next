@@ -1,14 +1,14 @@
 "use strict";
 
 export { f as a };
-import * as r from "../../19";
-import * as i from "../../95";
-import * as o from "../../96";
-import * as a from "../../120";
-import * as s from "../../140";
-import * as c from "../../0/index";
+var r = require("../../19");
+var i = require("../../95");
+var o = require("../../96");
+var a = require("../../120");
+var s = require("../../140");
+var c = require("../../0/index");
 var u = require("../605").a;
-import * as l from "./909";
+var l = require("./909");
 var f = function (e) {
   Object(a.a)(n, e);
   var t = Object(s.a)(n);
@@ -45,3 +45,4 @@ f.defaultProps = {
   componentName: "global"
 };
 f.contextType = l.a;
+export default f;

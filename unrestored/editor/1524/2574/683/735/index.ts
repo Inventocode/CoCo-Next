@@ -1,6 +1,6 @@
 "use strict";
 
-import * as r from "./912";
+var r = require("./912");
 function i(e, t) {
   return function (e, t, n) {
     var i;
@@ -47,6 +47,6 @@ function i(e, t) {
     return -1;
   }(t, e, 0) >= 0;
 }
-import * as o from "./518";
+var o = require("./518");
 var a = Object(o.a)(i);
-export { a };
+exports.a = a;

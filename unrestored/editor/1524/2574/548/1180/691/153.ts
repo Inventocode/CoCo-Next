@@ -1,14 +1,37 @@
 "use strict";
 
-import * as r from "../../../19";
-import * as i from "../../../54";
-import * as o from "../../../0/index";
-import * as a from "../../../0/index";
-var s = (require("../../../50/index"), require("../../../16/687"));
-import * as c from "../../../0/index";
-import * as u from "../701/2581";
-import * as l from "../../../549/1183/315/2620/2614";
-import * as f from "../../../549/1183/682/2583";
+var r = require("../../../19");
+var i = require("../../../54");
+var o = require("../../../0/index");
+var a = (module => {
+  var defaultExport = module && module.__esModule ? function () {
+    return module.default;
+  } : function () {
+    return module;
+  };
+  Object.defineProperty(defaultExport, "a", {
+    enumerable: true,
+    get: defaultExport
+  });
+  return defaultExport;
+})(o);
+require("../../../50/index");
+var s = require("../../../16/687");
+var c = (module => {
+  var defaultExport = module && module.__esModule ? function () {
+    return module.default;
+  } : function () {
+    return module;
+  };
+  Object.defineProperty(defaultExport, "a", {
+    enumerable: true,
+    get: defaultExport
+  });
+  return defaultExport;
+})(s);
+var u = require("../701/2581");
+var l = require("../../../549/1183/315/2620/2614");
+var f = require("../../../549/1183/682/2583");
 var h = function (e) {
   var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
   return function (n) {
@@ -53,9 +76,12 @@ var h = function (e) {
     return g;
   };
 };
-import * as d from "../../../549/1183/682/785/index";
-exports.a = function (e, t) {
+var d = require("../../../549/1183/682/785/index");
+var _a;
+_a = function (e, t) {
   return h(e, Object(r.a)({
     defaultTheme: d.a
   }, t));
 };
+export { _a as a };
+export default _a;

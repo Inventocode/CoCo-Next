@@ -15,3 +15,4 @@ function r() {
   }, function () {});
 }
 export { r as a };
+export default r;

@@ -1,8 +1,11 @@
 "use strict";
 
-import * as r from "./805/index";
-import * as a from "../../3190/494";
-export default (function (e) {
+var r = require("./805/index");
+var a = require("../../3190/494");
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.default = function (e) {
   var t = e.name;
   var n = e.development;
   return (0, o.declare)(function (e, o) {
@@ -463,12 +466,12 @@ export default (function (e) {
       return 1 === f.length && s.types.isSpreadElement(f[0]) ? f[0].argument : f.length > 0 ? s.types.objectExpression(f) : s.types.nullLiteral();
     }
   });
-});
-import * as i from "./2874";
-import * as o from "../../2690";
-import * as s from "../../3188/2658/index";
-import * as u from "./3132/index";
-import * as l from "./3185/index";
+};
+var i = require("./2874");
+var o = require("../../2690");
+var s = require("../../3188/2658/index");
+var u = require("./3132/index");
+var l = require("./3185/index");
 var p = "react";
 var f = "React.createElement";
 var d = "React.Fragment";

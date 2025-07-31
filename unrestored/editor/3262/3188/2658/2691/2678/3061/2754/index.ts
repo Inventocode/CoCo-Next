@@ -180,6 +180,6 @@
   }
   Object.defineProperties(d.prototype, p);
   module.exports = d();
-  e.exports.supportsColor = s;
-  e.exports.default = e.exports;
+  module.exports.supportsColor = s;
+  module.exports.default = module.exports;
 }).call(this, require("../../../../../1184/368"));

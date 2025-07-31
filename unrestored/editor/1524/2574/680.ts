@@ -14,4 +14,4 @@ var r = {
     onPedometerPermissionFail: "\u8bf7\u6c42\u6743\u9650\u5931\u8d25"
   }
 };
-import * as o from "./539";
+var o = require("./539");

@@ -1,10 +1,14 @@
 "use strict";
 
-import * as r from "../../../1000/93";
-import * as i from "../../../1000/134/index";
-import * as o from "../../../125/195/index";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.CreateEvent = void 0;
+var r = require("../../../1000/93");
+var i = require("../../../1000/134/index");
+var o = require("../../../125/195/index");
 var a = (0, r.__importStar)(require("../../497/index"));
-import * as s from "../../../4/127";
+var s = require("../../../4/127");
 var c = function (e) {
   function t(t) {
     var n = e.call(this, t.block) || this;
@@ -69,4 +73,4 @@ var c = function (e) {
   (0, r.__decorate)([(0, s.lazy_inject)(s.BINDING.xml)], t.prototype, "xml", void 0);
   return t = (0, r.__decorate)([(0, i.injectable)()], t);
 }(require("./643").BlockEvent);
-export { c as CreateEvent };
+exports.CreateEvent = c;

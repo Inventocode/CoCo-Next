@@ -1,4 +1,4 @@
-import * as r from "../../../../../../254/2518/2519/475";
+var r = require("../../../../../../254/2518/2519/475");
 var i = Object.create;
 var o = function () {
   function e() {}

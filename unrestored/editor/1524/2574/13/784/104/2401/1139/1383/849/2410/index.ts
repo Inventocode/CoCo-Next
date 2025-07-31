@@ -1,5 +1,5 @@
-import * as r from "../../../../../../../254/2503/2504/2505/852/2478/1146";
-import * as i from "./2411";
+var r = require("../../../../../../../254/2503/2504/2505/852/2478/1146");
+var i = require("./2411");
 var o = Object.prototype.hasOwnProperty;
 module.exports = function (e) {
   if (!r(e)) {

@@ -1,6 +1,9 @@
 "use strict";
 
-export { w as ArrayExpression };
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.ArrayExpression = w;
 exports.AssignmentExpression = function () {
   return this.get("right").getTypeAnnotation();
 };
@@ -44,10 +47,15 @@ exports.ConditionalExpression = function () {
   }
   return m(e);
 };
-exports.ClassDeclaration = t.ClassExpression = t.FunctionDeclaration = t.ArrowFunctionExpression = t.FunctionExpression = function () {
+exports.ClassDeclaration = exports.ClassExpression = exports.FunctionDeclaration = exports.ArrowFunctionExpression = exports.FunctionExpression = function () {
   return v(g("Function"));
 };
-export { default as Identifier } from "./3059";
+Object.defineProperty(exports, "Identifier", {
+  enumerable: !0,
+  get: function () {
+    return i.default;
+  }
+});
 exports.LogicalExpression = function () {
   var e = [this.get("left").getTypeAnnotation(), this.get("right").getTypeAnnotation()];
   if (T(e[0]) && y) {
@@ -78,7 +86,7 @@ exports.ParenthesizedExpression = function () {
 exports.RegExpLiteral = function () {
   return v(g("RegExp"));
 };
-export { O as RestElement };
+exports.RestElement = O;
 exports.SequenceExpression = function () {
   return this.get("expressions").pop().getTypeAnnotation();
 };
@@ -91,7 +99,7 @@ exports.TaggedTemplateExpression = function () {
 exports.TemplateLiteral = function () {
   return E();
 };
-export { k as TypeCastExpression };
+exports.TypeCastExpression = k;
 exports.UnaryExpression = function (e) {
   var t = e.operator;
   if ("void" === t) {
@@ -127,8 +135,8 @@ exports.VariableDeclarator = function () {
   }
   return n;
 };
-import * as r from "../../../../2623/index";
-import * as i from "./3059";
+var r = require("../../../../2623/index");
+var i = require("./3059");
 var a = r.BOOLEAN_BINARY_OPERATORS;
 var s = r.BOOLEAN_UNARY_OPERATORS;
 var o = r.NUMBER_BINARY_OPERATORS;

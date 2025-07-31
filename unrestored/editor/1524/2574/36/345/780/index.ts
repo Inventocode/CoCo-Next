@@ -21,8 +21,17 @@ var i = this && this.__exportStar || function (e, t) {
     r(t, e, n);
   }
 };
-import * as o from "./1369/index";
-export { Vika } from "./1369/index";
-i(require("./2394/index"), t);
-i(require("./2400"), t);
-export default o.Vika;
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.Vika = void 0;
+var o = require("./1369/index");
+Object.defineProperty(exports, "Vika", {
+  enumerable: !0,
+  get: function () {
+    return o.Vika;
+  }
+});
+i(require("./2394/index"), exports);
+i(require("./2400"), exports);
+exports.default = o.Vika;

@@ -1,6 +1,9 @@
 "use strict";
 
-export default (function (e, t) {
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.default = function (e, t) {
   if (null == e || !e.length) {
     return;
   }
@@ -14,5 +17,5 @@ export default (function (e, t) {
     t.push(o);
   }
   return i;
-});
-import * as r from "./3016";
+};
+var r = require("./3016");

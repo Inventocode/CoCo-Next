@@ -12,3 +12,4 @@ function r() {
   }).apply(this, arguments);
 }
 export { r as a };
+export default r;

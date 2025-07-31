@@ -1,10 +1,14 @@
 "use strict";
 
-export { o as getPrefix };
-export { i as browserPrefixToKey };
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.getPrefix = o;
+exports.browserPrefixToKey = i;
 exports.browserPrefixToStyle = function (e, t) {
   return t ? "-".concat(t.toLowerCase(), "-").concat(e) : e;
 };
+exports.default = void 0;
 var r = ["Moz", "Webkit", "O", "ms"];
 function o() {
   var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "transform";
@@ -40,4 +44,4 @@ function i(e, t) {
   }(e)) : e;
 }
 var a = o();
-export default a;
+exports.default = a;

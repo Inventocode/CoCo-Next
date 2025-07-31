@@ -1,6 +1,10 @@
 "use strict";
 
-import * as r from "../../../../../../3190/624/index";
+var r = require("../../../../../../3190/624/index");
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.statements = exports.statement = exports.smart = exports.program = exports.expression = void 0;
 var i = require("../../2624/index").assertExpressionStatement;
 function a(e) {
   return {
@@ -16,11 +20,11 @@ function a(e) {
 var s = a(function (e) {
   return e.length > 1 ? e : e[0];
 });
-export { s as smart };
+exports.smart = s;
 var o = a(function (e) {
   return e;
 });
-export { o as statements };
+exports.statements = o;
 var l = a(function (e) {
   if (0 === e.length) {
     throw new Error("Found nothing to return.");
@@ -30,7 +34,7 @@ var l = a(function (e) {
   }
   return e[0];
 });
-export { l as statement };
+exports.statement = l;
 var u = {
   code: function (e) {
     return "(\n".concat(e, "\n)");
@@ -50,7 +54,7 @@ var u = {
     return n.expression;
   }
 };
-export { u as expression };
+exports.expression = u;
 exports.program = {
   code: function (e) {
     return e;

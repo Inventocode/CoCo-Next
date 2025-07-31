@@ -1,16 +1,16 @@
 "use strict";
 
 var r = require("../1534/300/index").f;
-import * as o from "../1250/575";
-import * as i from "../1731/752";
-import * as a from "../1250/632";
-import * as s from "../1738/635";
-import * as c from "../1639/826/index";
-import * as l from "../935/1065/index";
-import * as u from "../1660/751";
-import * as d from "../1738/272";
+var o = require("../1250/575");
+var i = require("../1731/752");
+var a = require("../1250/632");
+var s = require("../1738/635");
+var c = require("../1639/826/index");
+var l = require("../935/1065/index");
+var u = require("../1660/751");
+var d = require("../1738/272");
 var p = require("../1731/709").fastKey;
-import * as f from "../1738/423/index";
+var f = require("../1738/423/index");
 var h = f.set;
 var m = f.getterFor;
 module.exports = {

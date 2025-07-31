@@ -2,14 +2,14 @@
 
 var r = require("./3098/index").browsers;
 var i = require("./3100/index").browserVersions;
-import * as a from "./3102";
+var a = require("./3102");
 function s(e) {
   return Object.keys(e).reduce(function (t, n) {
     t[i[n]] = e[n];
     return t;
   }, {});
 }
-e.exports.agents = Object.keys(a).reduce(function (e, t) {
+module.exports.agents = Object.keys(a).reduce(function (e, t) {
   var n = a[t];
   e[r[t]] = Object.keys(n).reduce(function (e, t) {
     if ("A" === t) {

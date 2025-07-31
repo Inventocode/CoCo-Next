@@ -3,7 +3,7 @@
 export { i as c };
 export { o as b };
 export { a };
-import * as r from "./316";
+var r = require("./316");
 function i(e, t) {
   if (void 0 === t) {
     t = 0;
@@ -42,3 +42,4 @@ function o(e, t) {
 function a(e, t) {
   return !!Object(r.h)(e) && (Object(r.g)(t) ? t.test(e) : "string" === typeof t && -1 !== e.indexOf(t));
 }
+export default a;

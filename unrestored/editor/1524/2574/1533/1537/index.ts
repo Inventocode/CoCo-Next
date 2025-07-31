@@ -1,12 +1,12 @@
 "use strict";
 
-import * as r from "../1626/86/index";
-import * as o from "../1738/272";
-import * as i from "../1738/194";
-import * as a from "../1738/332";
-import * as s from "../1626/231";
+var r = require("../1626/86/index");
+var o = require("../1738/272");
+var i = require("../1738/194");
+var a = require("../1738/332");
+var s = require("../1626/231");
 var c = require("../1534/300/index").f;
-import * as l from "./1207";
+var l = require("./1207");
 var u = i.Symbol;
 if (o && "function" == typeof u && (!("description" in u.prototype) || void 0 !== u().description)) {
   var d = {};

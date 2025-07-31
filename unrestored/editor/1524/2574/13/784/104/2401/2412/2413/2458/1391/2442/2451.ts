@@ -1,4 +1,4 @@
-import * as r from "../../../../../../2473/2474/2475/1394";
+var r = require("../../../../../../2473/2474/2475/1394");
 var i = Object.prototype.hasOwnProperty;
 module.exports = function (e, t, n, o, a, s) {
   var c = 1 & n;

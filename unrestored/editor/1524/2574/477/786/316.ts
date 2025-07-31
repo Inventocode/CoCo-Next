@@ -51,3 +51,4 @@ export { u as g };
 export { l as j };
 export { f as i };
 export { h as d };
+export default c;

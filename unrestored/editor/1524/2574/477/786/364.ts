@@ -5,7 +5,8 @@
   exports.c = a;
   exports.a = s;
   var r = require("./521");
-  var i = (require("./736"), {});
+  require("./736");
+  var i = {};
   function o() {
     return Object(r.b)() ? e : "undefined" !== typeof window ? window : "undefined" !== typeof self ? self : i;
   }

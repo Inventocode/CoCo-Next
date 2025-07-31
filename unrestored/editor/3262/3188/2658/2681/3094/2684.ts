@@ -1,10 +1,10 @@
 "use strict";
 
-import * as r from "../../../../3190/624/index";
-import * as i from "../../220";
-import * as a from "../../230";
-import * as s from "../../../../3190/494";
-import * as o from "../../../../../1524/2574/1/index";
+var r = require("../../../../3190/624/index");
+var i = require("../../220");
+var a = require("../../230");
+var s = require("../../../../3190/494");
+var o = require("../../../../../1524/2574/1/index");
 var l = o.mark(y);
 var u = o.mark(T);
 var c = o.mark(b);
@@ -15,17 +15,20 @@ function p() {
   };
   return e;
 }
-export { P as assertSimpleType };
-export { v as makeStrongCache };
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.assertSimpleType = P;
+exports.makeStrongCache = v;
 exports.makeStrongCacheSync = function (e) {
   return h(v(e));
 };
-export { m as makeWeakCache };
+exports.makeWeakCache = m;
 exports.makeWeakCacheSync = function (e) {
   return h(m(e));
 };
-import * as f from "./2791";
-import * as d from "./2704";
+var f = require("./2791");
+var d = require("./2704");
 var h = function (e) {
   return p()(e).sync;
 };

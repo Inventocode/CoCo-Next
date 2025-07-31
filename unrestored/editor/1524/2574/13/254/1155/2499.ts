@@ -1,5 +1,8 @@
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
 var r = {};
 var i = exports.render = function (e, t, n, r) {
   if ("undefined" === typeof document && !r) {

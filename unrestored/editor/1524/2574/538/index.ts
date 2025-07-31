@@ -1,12 +1,35 @@
 "use strict";
 
-import * as r from "../10/index";
-import * as o from "../0/index";
-import * as i from "../0/index";
-import * as a from "../8";
-import * as s from "../8";
-import "./865";
-exports.a = Object(o.memo)(function (e) {
+var r = require("../10/index");
+var o = require("../0/index");
+var i = (module => {
+  var defaultExport = module && module.__esModule ? function () {
+    return module.default;
+  } : function () {
+    return module;
+  };
+  Object.defineProperty(defaultExport, "a", {
+    enumerable: true,
+    get: defaultExport
+  });
+  return defaultExport;
+})(o);
+var a = require("../8");
+var s = (module => {
+  var defaultExport = module && module.__esModule ? function () {
+    return module.default;
+  } : function () {
+    return module;
+  };
+  Object.defineProperty(defaultExport, "a", {
+    enumerable: true,
+    get: defaultExport
+  });
+  return defaultExport;
+})(a);
+require("./865");
+var _a;
+_a = Object(o.memo)(function (e) {
   var t = e.onChange;
   var n = e.checked;
   var a = Object(o.useState)(n);
@@ -28,3 +51,5 @@ exports.a = Object(o.memo)(function (e) {
     className: s()("coco-switch-handle", l && "coco-switch-handle-checked")
   }));
 });
+export { _a as a };
+export default _a;

@@ -1,12 +1,12 @@
 "use strict";
 
-import * as r from "./1626/86/index";
-import * as o from "./1728/706";
-import * as i from "./1556/473";
-import * as a from "./1728/257";
-import * as s from "./1623/309";
-import * as c from "./1550/820/index";
-import * as l from "./1550/707";
+var r = require("./1626/86/index");
+var o = require("./1728/706");
+var i = require("./1556/473");
+var a = require("./1728/257");
+var s = require("./1623/309");
+var c = require("./1550/820/index");
+var l = require("./1550/707");
 var u = require("./1550/821")("splice");
 var d = Math.max;
 var p = Math.min;

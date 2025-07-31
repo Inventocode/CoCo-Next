@@ -1,6 +1,9 @@
 "use strict";
 
-import * as r from "../../715";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+var r = require("../../715");
 var i = function () {
   function e(e, t, n, i, o) {
     this.id = r.id();
@@ -19,4 +22,4 @@ var i = function () {
   };
   return e;
 }();
-export { i as Request };
+exports.Request = i;

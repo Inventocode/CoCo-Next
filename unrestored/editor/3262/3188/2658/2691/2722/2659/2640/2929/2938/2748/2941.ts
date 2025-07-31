@@ -1,5 +1,8 @@
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
 exports.ArrowFunctionExpression = function (e, t) {
   return y(t) || te(e, t);
 };
@@ -37,7 +40,7 @@ exports.ClassExpression = function (e, t, n) {
     exportDefault: !0
   });
 };
-export { te as ConditionalExpression };
+exports.ConditionalExpression = te;
 exports.DoExpression = function (e, t, n) {
   return !e.async && ne(n, {
     expressionStatement: !0
@@ -97,7 +100,7 @@ exports.OptionalIndexedAccessType = function (e, t) {
     objectType: e
   });
 };
-exports.OptionalCallExpression = t.OptionalMemberExpression = function (e, t) {
+exports.OptionalCallExpression = exports.OptionalMemberExpression = function (e, t) {
   return c(t, {
     callee: e
   }) || k(t, {
@@ -119,20 +122,20 @@ exports.TSInferType = function (e, t) {
 exports.TSTypeAssertion = function () {
   return !0;
 };
-exports.TSIntersectionType = t.TSUnionType = function (e, t) {
+exports.TSIntersectionType = exports.TSUnionType = function (e, t) {
   return L(t) || R(t) || B(t) || V(t) || U(t);
 };
-export { ee as UnaryLike };
-exports.IntersectionTypeAnnotation = t.UnionTypeAnnotation = function (e, t) {
+exports.UnaryLike = ee;
+exports.IntersectionTypeAnnotation = exports.UnionTypeAnnotation = function (e, t) {
   return i(t) || O(t) || P(t) || J(t);
 };
 exports.UpdateExpression = function (e, t) {
   return Z(e, t) || Q(e, t);
 };
-exports.AwaitExpression = t.YieldExpression = function (e, t) {
+exports.AwaitExpression = exports.YieldExpression = function (e, t) {
   return l(t) || q(t) || Z(e, t) || o(t) && z(e) || h(t) && e === t.test || Q(e, t);
 };
-import * as r from "../../../../../2624/index";
+var r = require("../../../../../2624/index");
 var i = r.isArrayTypeAnnotation;
 var a = r.isArrowFunctionExpression;
 var s = r.isAssignmentExpression;

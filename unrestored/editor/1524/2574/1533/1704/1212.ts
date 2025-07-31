@@ -1,8 +1,8 @@
 "use strict";
 
-import * as r from "../1623/309";
-import * as o from "../1728/706";
-import * as i from "../1728/257";
+var r = require("../1623/309");
+var o = require("../1728/706");
+var i = require("../1728/257");
 var a = Math.min;
 module.exports = [].copyWithin || function (e, t) {
   var n = r(this);

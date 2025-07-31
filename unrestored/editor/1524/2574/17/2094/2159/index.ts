@@ -1,14 +1,18 @@
 "use strict";
 
-import * as r from "../../../1000/93";
-import * as i from "../../../125/259";
-import * as o from "../../../125/195/index";
-import * as a from "../../../125/534";
-import * as s from "../../../1000/213/index";
-import * as c from "./2160";
-import * as u from "./2161";
-import * as l from "./1317";
-import * as f from "./1104";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.block_render_svg = void 0;
+var r = require("../../../1000/93");
+var i = require("../../../125/259");
+var o = require("../../../125/195/index");
+var a = require("../../../125/534");
+var s = require("../../../1000/213/index");
+var c = require("./2160");
+var u = require("./2161");
+var l = require("./1317");
+var f = require("./1104");
 exports.block_render_svg = function (e) {
   return function (e) {
     function t() {

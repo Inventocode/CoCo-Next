@@ -1,9 +1,9 @@
 "use strict";
 
 export { a };
-import * as r from "./266";
-import * as i from "../../2617/285/911";
-import * as o from "../../2617/285/210";
+var r = require("./266");
+var i = require("../../2617/285/911");
+var o = require("../../2617/285/210");
 function a(e) {
   var t = {
     r: 0,
@@ -172,3 +172,4 @@ var l = {
 function f(e) {
   return Boolean(l.CSS_UNIT.exec(String(e)));
 }
+export default a;

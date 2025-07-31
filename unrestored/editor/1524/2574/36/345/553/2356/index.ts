@@ -1,4 +1,4 @@
-import * as r from "./1368";
+var r = require("./1368");
 function i(e, t) {
   var n = e.a / 255;
   var r = t + '="' + e.hex + '"';

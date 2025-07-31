@@ -1,6 +1,10 @@
 "use strict";
 
-import * as r from "../../2623/index";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.Var = exports.User = exports.Statement = exports.SpreadProperty = exports.Scope = exports.RestProperty = exports.ReferencedMemberExpression = exports.ReferencedIdentifier = exports.Referenced = exports.Pure = exports.NumericLiteralTypeAnnotation = exports.Generated = exports.ForAwaitStatement = exports.Flow = exports.Expression = exports.ExistentialTypeParam = exports.BlockScoped = exports.BindingIdentifier = void 0;
+var r = require("../../2623/index");
 var i = r.isBinding;
 var a = r.isBlockScoped;
 var s = r.isExportDeclaration;
@@ -36,7 +40,7 @@ var x = {
     return v(n, r, e.parentPath.parent);
   }
 };
-export { x as ReferencedIdentifier };
+exports.ReferencedIdentifier = x;
 var P = {
   types: ["MemberExpression"],
   checkPath: function (e) {
@@ -45,7 +49,7 @@ var P = {
     return m(t) && v(t, n);
   }
 };
-export { P as ReferencedMemberExpression };
+exports.ReferencedMemberExpression = P;
 var A = {
   types: ["Identifier"],
   checkPath: function (e) {
@@ -55,7 +59,7 @@ var A = {
     return p(t) && i(t, n, r);
   }
 };
-export { A as BindingIdentifier };
+exports.BindingIdentifier = A;
 var k = {
   types: ["Statement"],
   checkPath: function (e) {
@@ -79,40 +83,40 @@ var k = {
     return !1;
   }
 };
-export { k as Statement };
+exports.Statement = k;
 var w = {
   types: ["Expression"],
   checkPath: function (e) {
     return e.isIdentifier() ? e.isReferencedIdentifier() : o(e.node);
   }
 };
-export { w as Expression };
+exports.Expression = w;
 var O = {
   types: ["Scopable", "Pattern"],
   checkPath: function (e) {
     return g(e.node, e.parent);
   }
 };
-export { O as Scope };
+exports.Scope = O;
 var C = {
   checkPath: function (e) {
     return v(e.node, e.parent);
   }
 };
-export { C as Referenced };
+exports.Referenced = C;
 var I = {
   checkPath: function (e) {
     return a(e.node);
   }
 };
-export { I as BlockScoped };
+exports.BlockScoped = I;
 var N = {
   types: ["VariableDeclaration"],
   checkPath: function (e) {
     return b(e.node);
   }
 };
-export { N as Var };
+exports.Var = N;
 exports.User = {
   checkPath: function (e) {
     return e.node && !!e.node.loc;
@@ -135,7 +139,7 @@ var _ = {
     return !!l(t) || (f(t) ? "type" === t.importKind || "typeof" === t.importKind : s(t) ? "type" === t.exportKind : !!d(t) && ("type" === t.importKind || "typeof" === t.importKind));
   }
 };
-export { _ as Flow };
+exports.Flow = _;
 exports.RestProperty = {
   types: ["RestElement"],
   checkPath: function (e) {

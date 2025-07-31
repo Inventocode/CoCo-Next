@@ -8,3 +8,4 @@ function r(e) {
     return "<anonymous>";
   }
 }
+export default r;

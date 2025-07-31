@@ -20,4 +20,4 @@ var r = {
     smsContentMinLength: "\u77ed\u4fe1\u5185\u5bb9\u957f\u5ea6\u592a\u77ed\uff0c\u5f53\u524d\u503c{inputValue}\uff0c\u6700\u5c0f\u957f\u5ea6{ruleValue}"
   }
 };
-import * as o from "./360";
+var o = require("./360");

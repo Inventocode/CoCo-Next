@@ -1,9 +1,9 @@
-import * as r from "../1623/309";
-import * as o from "../1728/257";
-import * as i from "../1250/933";
-import * as a from "../1250/823";
-import * as s from "../1738/1214/1063";
-import * as c from "../1250/632";
+var r = require("../1623/309");
+var o = require("../1728/257");
+var i = require("../1250/933");
+var a = require("../1250/823");
+var s = require("../1738/1214/1063");
+var c = require("../1250/632");
 var l = require("../1707/258/index").aTypedArrayConstructor;
 module.exports = function (e) {
   var t;

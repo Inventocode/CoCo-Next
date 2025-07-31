@@ -1,6 +1,10 @@
 "use strict";
 
 var r;
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.AllUIEvents = exports.UIEventType = void 0;
 (function (e) {
   e.SELECTED = "selected";
   e.COMMENT_OPEN = "commentOpen";
@@ -18,7 +22,7 @@ var r;
   e.SIMPLIFIED_COMMENT_SELECT = "simplifiedCommentSelect";
   e.FIELD_FOCUS_CHANGE = "FieldFocusChange";
   e.CONTEXT_MENU_OPEN = "contextMenuOpen";
-})(r = t.UIEventType || (exports.UIEventType = {}));
+})(r = exports.UIEventType || (exports.UIEventType = {}));
 exports.AllUIEvents = Object.keys(r).map(function (e) {
   return r[e];
 });

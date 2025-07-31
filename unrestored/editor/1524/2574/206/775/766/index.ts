@@ -1,8 +1,8 @@
 "use strict";
 
 var r;
-import * as i from "../../../../../3262/3190/494";
-import * as o from "./2190";
+var i = require("../../../../../3262/3190/494");
+var o = require("./2190");
 var a = Object.freeze(Object.keys(o));
 var s = i(a);
 try {

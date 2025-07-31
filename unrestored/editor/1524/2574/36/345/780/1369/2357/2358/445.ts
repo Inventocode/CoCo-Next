@@ -1,6 +1,6 @@
 "use strict";
 
-import * as r from "./1370";
+var r = require("./1370");
 var i = Object.prototype.toString;
 function o(e) {
   return "[object Array]" === i.call(e);

@@ -1,5 +1,8 @@
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
 var r = {
   react: !0,
   assertNode: !0,
@@ -59,71 +62,352 @@ var r = {
   validate: !0,
   buildMatchMemberExpression: !0
 };
-export { default as addComment } from "./3007";
-export { default as addComments } from "./2766";
-export { default as appendToMemberExpression } from "./3019";
-export { default as assertNode } from "./2996";
-export { default as buildMatchMemberExpression } from "./2759";
-export { default as clone } from "./3003";
-export { default as cloneDeep } from "./3004";
-export { default as cloneDeepWithoutLoc } from "./3005";
-export { default as cloneNode } from "./2650";
-export { default as cloneWithoutLoc } from "./3006";
-export { default as createFlowUnionType } from "./2999";
-export { default as createTSUnionType } from "./3000/index";
-export { default as createTypeAnnotationBasedOnTypeof } from "./2998";
-export { default as createUnionTypeAnnotation } from "./2999";
-export { default as ensureBlock } from "./3010";
-export { default as getBindingIdentifiers } from "./2677";
-export { default as getOuterBindingIdentifiers } from "./3022";
-export { default as inheritInnerComments } from "./2767/index";
-export { default as inheritLeadingComments } from "./2768";
-export { default as inheritTrailingComments } from "./2770";
-export { default as inherits } from "./3020";
-export { default as inheritsComments } from "./2769";
-export { default as is } from "./2663";
-export { default as isBinding } from "./3024";
-export { default as isBlockScoped } from "./3025";
-export { default as isImmutable } from "./3026";
-export { default as isLet } from "./2776";
-export { default as isNode } from "./2764";
-export { default as isNodesEquivalent } from "./3027";
-export { default as isPlaceholderType } from "./2762";
-export { default as isReferenced } from "./3028";
-export { default as isScope } from "./3029";
-export { default as isSpecifierDefault } from "./3030";
-export { default as isType } from "./2699";
-export { default as isValidES3Identifier } from "./3031";
-export { default as isValidIdentifier } from "./2664/index";
-export { default as isVar } from "./3032";
-export { default as matchesPattern } from "./2760";
-export { default as prependToMemberExpression } from "./3021";
-export { default as removeComments } from "./3008";
-export { default as removeProperties } from "./2775";
-export { default as removePropertiesDeep } from "./2773";
-export { default as removeTypeDuplicates } from "./2765";
-export { default as shallowEqual } from "./2698";
-export { default as toBindingIdentifierName } from "./3011";
-export { default as toBlock } from "./2771";
-export { default as toComputedKey } from "./3012";
-export { default as toExpression } from "./3013";
-export { default as toIdentifier } from "./2772";
-export { default as toKeyAlias } from "./3014";
-export { default as toSequenceExpression } from "./3015/index";
-export { default as toStatement } from "./3017";
-export { default as traverse } from "./3023";
-export { default as traverseFast } from "./2774";
-export { default as validate } from "./2700";
-export { default as valueToNode } from "./3018";
-import * as i from "./2984";
-import * as a from "./2985";
-import * as s from "./2986/index";
-import * as o from "./2996";
-import * as l from "./2997";
+Object.defineProperty(exports, "addComment", {
+  enumerable: !0,
+  get: function () {
+    return T.default;
+  }
+});
+Object.defineProperty(exports, "addComments", {
+  enumerable: !0,
+  get: function () {
+    return b.default;
+  }
+});
+Object.defineProperty(exports, "appendToMemberExpression", {
+  enumerable: !0,
+  get: function () {
+    return R.default;
+  }
+});
+Object.defineProperty(exports, "assertNode", {
+  enumerable: !0,
+  get: function () {
+    return o.default;
+  }
+});
+Object.defineProperty(exports, "buildMatchMemberExpression", {
+  enumerable: !0,
+  get: function () {
+    return de.default;
+  }
+});
+Object.defineProperty(exports, "clone", {
+  enumerable: !0,
+  get: function () {
+    return y.default;
+  }
+});
+Object.defineProperty(exports, "cloneDeep", {
+  enumerable: !0,
+  get: function () {
+    return m.default;
+  }
+});
+Object.defineProperty(exports, "cloneDeepWithoutLoc", {
+  enumerable: !0,
+  get: function () {
+    return v.default;
+  }
+});
+Object.defineProperty(exports, "cloneNode", {
+  enumerable: !0,
+  get: function () {
+    return h.default;
+  }
+});
+Object.defineProperty(exports, "cloneWithoutLoc", {
+  enumerable: !0,
+  get: function () {
+    return g.default;
+  }
+});
+Object.defineProperty(exports, "createFlowUnionType", {
+  enumerable: !0,
+  get: function () {
+    return c.default;
+  }
+});
+Object.defineProperty(exports, "createTSUnionType", {
+  enumerable: !0,
+  get: function () {
+    return p.default;
+  }
+});
+Object.defineProperty(exports, "createTypeAnnotationBasedOnTypeof", {
+  enumerable: !0,
+  get: function () {
+    return u.default;
+  }
+});
+Object.defineProperty(exports, "createUnionTypeAnnotation", {
+  enumerable: !0,
+  get: function () {
+    return c.default;
+  }
+});
+Object.defineProperty(exports, "ensureBlock", {
+  enumerable: !0,
+  get: function () {
+    return O.default;
+  }
+});
+Object.defineProperty(exports, "getBindingIdentifiers", {
+  enumerable: !0,
+  get: function () {
+    return H.default;
+  }
+});
+Object.defineProperty(exports, "getOuterBindingIdentifiers", {
+  enumerable: !0,
+  get: function () {
+    return q.default;
+  }
+});
+Object.defineProperty(exports, "inheritInnerComments", {
+  enumerable: !0,
+  get: function () {
+    return S.default;
+  }
+});
+Object.defineProperty(exports, "inheritLeadingComments", {
+  enumerable: !0,
+  get: function () {
+    return E.default;
+  }
+});
+Object.defineProperty(exports, "inheritTrailingComments", {
+  enumerable: !0,
+  get: function () {
+    return P.default;
+  }
+});
+Object.defineProperty(exports, "inherits", {
+  enumerable: !0,
+  get: function () {
+    return U.default;
+  }
+});
+Object.defineProperty(exports, "inheritsComments", {
+  enumerable: !0,
+  get: function () {
+    return x.default;
+  }
+});
+Object.defineProperty(exports, "is", {
+  enumerable: !0,
+  get: function () {
+    return z.default;
+  }
+});
+Object.defineProperty(exports, "isBinding", {
+  enumerable: !0,
+  get: function () {
+    return $.default;
+  }
+});
+Object.defineProperty(exports, "isBlockScoped", {
+  enumerable: !0,
+  get: function () {
+    return Q.default;
+  }
+});
+Object.defineProperty(exports, "isImmutable", {
+  enumerable: !0,
+  get: function () {
+    return Z.default;
+  }
+});
+Object.defineProperty(exports, "isLet", {
+  enumerable: !0,
+  get: function () {
+    return ee.default;
+  }
+});
+Object.defineProperty(exports, "isNode", {
+  enumerable: !0,
+  get: function () {
+    return te.default;
+  }
+});
+Object.defineProperty(exports, "isNodesEquivalent", {
+  enumerable: !0,
+  get: function () {
+    return ne.default;
+  }
+});
+Object.defineProperty(exports, "isPlaceholderType", {
+  enumerable: !0,
+  get: function () {
+    return re.default;
+  }
+});
+Object.defineProperty(exports, "isReferenced", {
+  enumerable: !0,
+  get: function () {
+    return ie.default;
+  }
+});
+Object.defineProperty(exports, "isScope", {
+  enumerable: !0,
+  get: function () {
+    return ae.default;
+  }
+});
+Object.defineProperty(exports, "isSpecifierDefault", {
+  enumerable: !0,
+  get: function () {
+    return se.default;
+  }
+});
+Object.defineProperty(exports, "isType", {
+  enumerable: !0,
+  get: function () {
+    return oe.default;
+  }
+});
+Object.defineProperty(exports, "isValidES3Identifier", {
+  enumerable: !0,
+  get: function () {
+    return le.default;
+  }
+});
+Object.defineProperty(exports, "isValidIdentifier", {
+  enumerable: !0,
+  get: function () {
+    return ue.default;
+  }
+});
+Object.defineProperty(exports, "isVar", {
+  enumerable: !0,
+  get: function () {
+    return ce.default;
+  }
+});
+Object.defineProperty(exports, "matchesPattern", {
+  enumerable: !0,
+  get: function () {
+    return pe.default;
+  }
+});
+Object.defineProperty(exports, "prependToMemberExpression", {
+  enumerable: !0,
+  get: function () {
+    return K.default;
+  }
+});
+exports.react = void 0;
+Object.defineProperty(exports, "removeComments", {
+  enumerable: !0,
+  get: function () {
+    return A.default;
+  }
+});
+Object.defineProperty(exports, "removeProperties", {
+  enumerable: !0,
+  get: function () {
+    return V.default;
+  }
+});
+Object.defineProperty(exports, "removePropertiesDeep", {
+  enumerable: !0,
+  get: function () {
+    return W.default;
+  }
+});
+Object.defineProperty(exports, "removeTypeDuplicates", {
+  enumerable: !0,
+  get: function () {
+    return Y.default;
+  }
+});
+Object.defineProperty(exports, "shallowEqual", {
+  enumerable: !0,
+  get: function () {
+    return G.default;
+  }
+});
+Object.defineProperty(exports, "toBindingIdentifierName", {
+  enumerable: !0,
+  get: function () {
+    return C.default;
+  }
+});
+Object.defineProperty(exports, "toBlock", {
+  enumerable: !0,
+  get: function () {
+    return I.default;
+  }
+});
+Object.defineProperty(exports, "toComputedKey", {
+  enumerable: !0,
+  get: function () {
+    return N.default;
+  }
+});
+Object.defineProperty(exports, "toExpression", {
+  enumerable: !0,
+  get: function () {
+    return _.default;
+  }
+});
+Object.defineProperty(exports, "toIdentifier", {
+  enumerable: !0,
+  get: function () {
+    return D.default;
+  }
+});
+Object.defineProperty(exports, "toKeyAlias", {
+  enumerable: !0,
+  get: function () {
+    return j.default;
+  }
+});
+Object.defineProperty(exports, "toSequenceExpression", {
+  enumerable: !0,
+  get: function () {
+    return L.default;
+  }
+});
+Object.defineProperty(exports, "toStatement", {
+  enumerable: !0,
+  get: function () {
+    return M.default;
+  }
+});
+Object.defineProperty(exports, "traverse", {
+  enumerable: !0,
+  get: function () {
+    return J.default;
+  }
+});
+Object.defineProperty(exports, "traverseFast", {
+  enumerable: !0,
+  get: function () {
+    return X.default;
+  }
+});
+Object.defineProperty(exports, "validate", {
+  enumerable: !0,
+  get: function () {
+    return fe.default;
+  }
+});
+Object.defineProperty(exports, "valueToNode", {
+  enumerable: !0,
+  get: function () {
+    return B.default;
+  }
+});
+var i = require("./2984");
+var a = require("./2985");
+var s = require("./2986/index");
+var o = require("./2996");
+var l = require("./2997");
 Object.keys(l).forEach(function (e) {
   if ("default" !== e && "__esModule" !== e) {
-    if (!(Object.prototype.hasOwnProperty.call(r, e) || e in t && t[e] === l[e])) {
-      Object.defineProperty(t, e, {
+    if (!(Object.prototype.hasOwnProperty.call(r, e) || e in exports && exports[e] === l[e])) {
+      Object.defineProperty(exports, e, {
         enumerable: !0,
         get: function () {
           return l[e];
@@ -132,14 +416,14 @@ Object.keys(l).forEach(function (e) {
     }
   }
 });
-import * as u from "./2998";
-import * as c from "./2999";
-import * as p from "./3000/index";
-import * as f from "./2630/index";
+var u = require("./2998");
+var c = require("./2999");
+var p = require("./3000/index");
+var f = require("./2630/index");
 Object.keys(f).forEach(function (e) {
   if ("default" !== e && "__esModule" !== e) {
-    if (!(Object.prototype.hasOwnProperty.call(r, e) || e in t && t[e] === f[e])) {
-      Object.defineProperty(t, e, {
+    if (!(Object.prototype.hasOwnProperty.call(r, e) || e in exports && exports[e] === f[e])) {
+      Object.defineProperty(exports, e, {
         enumerable: !0,
         get: function () {
           return f[e];
@@ -148,11 +432,11 @@ Object.keys(f).forEach(function (e) {
     }
   }
 });
-import * as d from "./3002";
+var d = require("./3002");
 Object.keys(d).forEach(function (e) {
   if ("default" !== e && "__esModule" !== e) {
-    if (!(Object.prototype.hasOwnProperty.call(r, e) || e in t && t[e] === d[e])) {
-      Object.defineProperty(t, e, {
+    if (!(Object.prototype.hasOwnProperty.call(r, e) || e in exports && exports[e] === d[e])) {
+      Object.defineProperty(exports, e, {
         enumerable: !0,
         get: function () {
           return d[e];
@@ -161,23 +445,23 @@ Object.keys(d).forEach(function (e) {
     }
   }
 });
-import * as h from "./2650";
-import * as y from "./3003";
-import * as m from "./3004";
-import * as v from "./3005";
-import * as g from "./3006";
-import * as T from "./3007";
-import * as b from "./2766";
-import * as S from "./2767/index";
-import * as E from "./2768";
-import * as x from "./2769";
-import * as P from "./2770";
-import * as A from "./3008";
-import * as k from "./3009";
+var h = require("./2650");
+var y = require("./3003");
+var m = require("./3004");
+var v = require("./3005");
+var g = require("./3006");
+var T = require("./3007");
+var b = require("./2766");
+var S = require("./2767/index");
+var E = require("./2768");
+var x = require("./2769");
+var P = require("./2770");
+var A = require("./3008");
+var k = require("./3009");
 Object.keys(k).forEach(function (e) {
   if ("default" !== e && "__esModule" !== e) {
-    if (!(Object.prototype.hasOwnProperty.call(r, e) || e in t && t[e] === k[e])) {
-      Object.defineProperty(t, e, {
+    if (!(Object.prototype.hasOwnProperty.call(r, e) || e in exports && exports[e] === k[e])) {
+      Object.defineProperty(exports, e, {
         enumerable: !0,
         get: function () {
           return k[e];
@@ -186,11 +470,11 @@ Object.keys(k).forEach(function (e) {
     }
   }
 });
-import * as w from "./2649";
+var w = require("./2649");
 Object.keys(w).forEach(function (e) {
   if ("default" !== e && "__esModule" !== e) {
-    if (!(Object.prototype.hasOwnProperty.call(r, e) || e in t && t[e] === w[e])) {
-      Object.defineProperty(t, e, {
+    if (!(Object.prototype.hasOwnProperty.call(r, e) || e in exports && exports[e] === w[e])) {
+      Object.defineProperty(exports, e, {
         enumerable: !0,
         get: function () {
           return w[e];
@@ -199,21 +483,21 @@ Object.keys(w).forEach(function (e) {
     }
   }
 });
-import * as O from "./3010";
-import * as C from "./3011";
-import * as I from "./2771";
-import * as N from "./3012";
-import * as _ from "./3013";
-import * as D from "./2772";
-import * as j from "./3014";
-import * as L from "./3015/index";
-import * as M from "./3017";
-import * as B from "./3018";
-import * as F from "./2634/index";
+var O = require("./3010");
+var C = require("./3011");
+var I = require("./2771");
+var N = require("./3012");
+var _ = require("./3013");
+var D = require("./2772");
+var j = require("./3014");
+var L = require("./3015/index");
+var M = require("./3017");
+var B = require("./3018");
+var F = require("./2634/index");
 Object.keys(F).forEach(function (e) {
   if ("default" !== e && "__esModule" !== e) {
-    if (!(Object.prototype.hasOwnProperty.call(r, e) || e in t && t[e] === F[e])) {
-      Object.defineProperty(t, e, {
+    if (!(Object.prototype.hasOwnProperty.call(r, e) || e in exports && exports[e] === F[e])) {
+      Object.defineProperty(exports, e, {
         enumerable: !0,
         get: function () {
           return F[e];
@@ -222,19 +506,19 @@ Object.keys(F).forEach(function (e) {
     }
   }
 });
-import * as R from "./3019";
-import * as U from "./3020";
-import * as K from "./3021";
-import * as V from "./2775";
-import * as W from "./2773";
-import * as Y from "./2765";
-import * as H from "./2677";
-import * as q from "./3022";
-import * as J from "./3023";
+var R = require("./3019");
+var U = require("./3020");
+var K = require("./3021");
+var V = require("./2775");
+var W = require("./2773");
+var Y = require("./2765");
+var H = require("./2677");
+var q = require("./3022");
+var J = require("./3023");
 Object.keys(J).forEach(function (e) {
   if ("default" !== e && "__esModule" !== e) {
-    if (!(Object.prototype.hasOwnProperty.call(r, e) || e in t && t[e] === J[e])) {
-      Object.defineProperty(t, e, {
+    if (!(Object.prototype.hasOwnProperty.call(r, e) || e in exports && exports[e] === J[e])) {
+      Object.defineProperty(exports, e, {
         enumerable: !0,
         get: function () {
           return J[e];
@@ -243,31 +527,31 @@ Object.keys(J).forEach(function (e) {
     }
   }
 });
-import * as X from "./2774";
-import * as G from "./2698";
-import * as z from "./2663";
-import * as $ from "./3024";
-import * as Q from "./3025";
-import * as Z from "./3026";
-import * as ee from "./2776";
-import * as te from "./2764";
-import * as ne from "./3027";
-import * as re from "./2762";
-import * as ie from "./3028";
-import * as ae from "./3029";
-import * as se from "./3030";
-import * as oe from "./2699";
-import * as le from "./3031";
-import * as ue from "./2664/index";
-import * as ce from "./3032";
-import * as pe from "./2760";
-import * as fe from "./2700";
-import * as de from "./2759";
-import * as he from "./2626";
+var X = require("./2774");
+var G = require("./2698");
+var z = require("./2663");
+var $ = require("./3024");
+var Q = require("./3025");
+var Z = require("./3026");
+var ee = require("./2776");
+var te = require("./2764");
+var ne = require("./3027");
+var re = require("./2762");
+var ie = require("./3028");
+var ae = require("./3029");
+var se = require("./3030");
+var oe = require("./2699");
+var le = require("./3031");
+var ue = require("./2664/index");
+var ce = require("./3032");
+var pe = require("./2760");
+var fe = require("./2700");
+var de = require("./2759");
+var he = require("./2626");
 Object.keys(he).forEach(function (e) {
   if ("default" !== e && "__esModule" !== e) {
-    if (!(Object.prototype.hasOwnProperty.call(r, e) || e in t && t[e] === he[e])) {
-      Object.defineProperty(t, e, {
+    if (!(Object.prototype.hasOwnProperty.call(r, e) || e in exports && exports[e] === he[e])) {
+      Object.defineProperty(exports, e, {
         enumerable: !0,
         get: function () {
           return he[e];
@@ -276,11 +560,11 @@ Object.keys(he).forEach(function (e) {
     }
   }
 });
-import * as ye from "./3033";
+var ye = require("./3033");
 Object.keys(ye).forEach(function (e) {
   if ("default" !== e && "__esModule" !== e) {
-    if (!(Object.prototype.hasOwnProperty.call(r, e) || e in t && t[e] === ye[e])) {
-      Object.defineProperty(t, e, {
+    if (!(Object.prototype.hasOwnProperty.call(r, e) || e in exports && exports[e] === ye[e])) {
+      Object.defineProperty(exports, e, {
         enumerable: !0,
         get: function () {
           return ye[e];
@@ -294,4 +578,4 @@ var me = {
   isCompatTag: a.default,
   buildChildren: s.default
 };
-export { me as react };
+exports.react = me;

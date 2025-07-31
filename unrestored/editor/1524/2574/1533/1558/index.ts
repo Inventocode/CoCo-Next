@@ -1,5 +1,5 @@
-import * as r from "../1626/86/index";
-import * as o from "../1738/1214/index";
+var r = require("../1626/86/index");
+var o = require("../1738/1214/index");
 r({
   target: "Array",
   stat: !0,

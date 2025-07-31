@@ -1,8 +1,8 @@
 "use strict";
 
-import * as r from "./168";
-import * as i from "./111";
-import * as o from "./106";
+var r = require("./168");
+var i = require("./111");
+var o = require("./106");
 function a(e, t) {
   Object(o.a)(2, arguments);
   var n = Object(i.a)(e);
@@ -129,7 +129,7 @@ var d = {
     other: "almost {{count}} years"
   }
 };
-import * as p from "./692";
+var p = require("./692");
 var _ = {
   date: Object(p.a)({
     formats: {
@@ -167,7 +167,7 @@ var A = {
   nextWeek: "eeee 'at' p",
   other: "P"
 };
-import * as g from "./489";
+var g = require("./489");
 var v = {
   ordinalNumber: function (e, t) {
     var n = Number(e);
@@ -289,8 +289,8 @@ var v = {
     defaultFormattingWidth: "wide"
   })
 };
-import * as m from "./1003";
-import * as y from "./490";
+var m = require("./1003");
+var y = require("./490");
 var b = {
   code: "en-US",
   formatDistance: function (e, t, n) {
@@ -494,7 +494,7 @@ function T(e) {
   var n = O(t).getTime() - k(t).getTime();
   return Math.round(n / 6048e5) + 1;
 }
-import * as B from "./432";
+var B = require("./432");
 function D(e, t) {
   Object(o.a)(1, arguments);
   var n = Object(i.a)(e, t);
@@ -2989,4 +2989,4 @@ var ot = function () {
   };
   return e;
 }();
-export { ot as a };
+exports.a = ot;

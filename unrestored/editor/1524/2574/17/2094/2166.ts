@@ -1,12 +1,16 @@
 "use strict";
 
-import * as r from "../../1000/93";
-import * as i from "../../1000/134/index";
-import * as o from "../../1000/213/index";
-import * as a from "../../125/474";
-import * as s from "../640/index";
-import * as c from "../642";
-import * as u from "../../125/195/index";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.Options = void 0;
+var r = require("../../1000/93");
+var i = require("../../1000/134/index");
+var o = require("../../1000/213/index");
+var a = require("../../125/474");
+var s = require("../640/index");
+var c = require("../642");
+var u = require("../../125/195/index");
 var l = function () {
   function e(e) {
     this.disabledPatternId = "";
@@ -227,4 +231,4 @@ var l = function () {
   };
   return e = (0, r.__decorate)([(0, i.injectable)()], e);
 }();
-export { l as Options };
+exports.Options = l;

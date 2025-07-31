@@ -21,9 +21,27 @@ var i = this && this.__exportStar || function (e, t) {
     r(t, e, n);
   }
 };
-i(require("./2280"), t);
-import * as o from "../1356/1119";
-export { ReadCursor } from "../1356/1119";
-export { WriteCursor } from "../1356/1119";
-import * as a from "../1356/1120";
-export { ConflictType } from "../1356/1120";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+i(require("./2280"), exports);
+var o = require("../1356/1119");
+Object.defineProperty(exports, "ReadCursor", {
+  enumerable: !0,
+  get: function () {
+    return o.ReadCursor;
+  }
+});
+Object.defineProperty(exports, "WriteCursor", {
+  enumerable: !0,
+  get: function () {
+    return o.WriteCursor;
+  }
+});
+var a = require("../1356/1120");
+Object.defineProperty(exports, "ConflictType", {
+  enumerable: !0,
+  get: function () {
+    return a.ConflictType;
+  }
+});

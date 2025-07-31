@@ -1,13 +1,16 @@
 "use strict";
 
-export default (function (e, t) {
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.default = function (e, t) {
   e.traverse(d, {
     scope: e.scope,
     bindingNames: t,
     seen: new WeakSet()
   });
-});
-import * as r from "../../../2623/index";
+};
+var r = require("../../../2623/index");
 var i = r.LOGICAL_OPERATORS;
 var a = r.assignmentExpression;
 var s = r.binaryExpression;

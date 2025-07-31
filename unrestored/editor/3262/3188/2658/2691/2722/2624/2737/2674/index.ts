@@ -1,12 +1,55 @@
 "use strict";
 
-export { isIdentifierName } from "./2881";
-export { isIdentifierChar } from "./2881";
-export { isIdentifierStart } from "./2881";
-export { isReservedWord } from "./2882";
-export { isStrictBindOnlyReservedWord } from "./2882";
-export { isStrictBindReservedWord } from "./2882";
-export { isStrictReservedWord } from "./2882";
-export { isKeyword } from "./2882";
-import * as r from "./2881";
-import * as i from "./2882";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+Object.defineProperty(exports, "isIdentifierName", {
+  enumerable: !0,
+  get: function () {
+    return r.isIdentifierName;
+  }
+});
+Object.defineProperty(exports, "isIdentifierChar", {
+  enumerable: !0,
+  get: function () {
+    return r.isIdentifierChar;
+  }
+});
+Object.defineProperty(exports, "isIdentifierStart", {
+  enumerable: !0,
+  get: function () {
+    return r.isIdentifierStart;
+  }
+});
+Object.defineProperty(exports, "isReservedWord", {
+  enumerable: !0,
+  get: function () {
+    return i.isReservedWord;
+  }
+});
+Object.defineProperty(exports, "isStrictBindOnlyReservedWord", {
+  enumerable: !0,
+  get: function () {
+    return i.isStrictBindOnlyReservedWord;
+  }
+});
+Object.defineProperty(exports, "isStrictBindReservedWord", {
+  enumerable: !0,
+  get: function () {
+    return i.isStrictBindReservedWord;
+  }
+});
+Object.defineProperty(exports, "isStrictReservedWord", {
+  enumerable: !0,
+  get: function () {
+    return i.isStrictReservedWord;
+  }
+});
+Object.defineProperty(exports, "isKeyword", {
+  enumerable: !0,
+  get: function () {
+    return i.isKeyword;
+  }
+});
+var r = require("./2881");
+var i = require("./2882");

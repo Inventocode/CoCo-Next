@@ -1,11 +1,11 @@
 "use strict";
 
 export { d as a };
-import * as r from "./6";
-import * as o from "./23";
-import * as i from "./21/index";
-import * as a from "./206/29/index";
-import * as s from "./55";
+var r = require("./6");
+var o = require("./23");
+var i = require("./21/index");
+var a = require("./206/29/index");
+var s = require("./55");
 var c = {};
 function l(e, t) {
   c[e] = t;
@@ -126,3 +126,4 @@ var d = {
   },
   log: u
 };
+export default d;

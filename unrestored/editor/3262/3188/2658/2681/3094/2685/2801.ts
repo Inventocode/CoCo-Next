@@ -7,8 +7,11 @@ function r() {
   };
   return e;
 }
-export { s as access };
-export { u as assertArray };
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.access = s;
+exports.assertArray = u;
 exports.assertAssumptions = function (e, t) {
   if (void 0 === t) {
     return;
@@ -50,7 +53,7 @@ exports.assertBabelrcSearch = function (e, t) {
   }
   return t;
 };
-export { o as assertBoolean };
+exports.assertBoolean = o;
 exports.assertCallerMetadata = function (e, t) {
   var n = l(e, t);
   if (n) {
@@ -121,7 +124,7 @@ exports.assertInputSourceMap = function (e, t) {
   }
   return t;
 };
-export { l as assertObject };
+exports.assertObject = l;
 exports.assertPluginList = function (e, t) {
   var n = u(e, t);
   if (n) {
@@ -208,8 +211,8 @@ exports.assertTargets = function (e, t) {
   }
   return t;
 };
-export { a as msg };
-import * as i from "./index";
+exports.msg = a;
+var i = require("./index");
 function a(e) {
   switch (e.type) {
     case "root":

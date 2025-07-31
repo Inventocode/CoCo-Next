@@ -1,5 +1,5 @@
-import * as r from "../1626/86/index";
-import * as o from "./939";
+var r = require("../1626/86/index");
+var o = require("./939");
 var i = Math.cosh;
 var a = Math.abs;
 var s = Math.E;

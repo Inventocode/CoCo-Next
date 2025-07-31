@@ -1,7 +1,10 @@
 "use strict";
 
-import * as r from "../../../3190/494";
-export { u as explode };
+var r = require("../../../3190/494");
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.explode = u;
 exports.merge = function (e) {
   for (var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [], n = arguments.length > 2 ? arguments[2] : void 0, r = {}, i = 0; i < e.length; i++) {
     var a = e[i];
@@ -19,9 +22,9 @@ exports.merge = function (e) {
   }
   return r;
 };
-export { c as verify };
-import * as i from "./2642/2758";
-import * as a from "../2623/index";
+exports.verify = c;
+var i = require("./2642/2758");
+var a = require("../2623/index");
 var s = a.DEPRECATED_KEYS;
 var o = a.FLIPPED_ALIAS_KEYS;
 var l = a.TYPES;

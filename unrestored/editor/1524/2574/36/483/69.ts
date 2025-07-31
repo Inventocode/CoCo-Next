@@ -30,13 +30,13 @@ var r;
     }
     return e.join(" ");
   }
-  if (e.exports) {
+  if (module.exports) {
     i.default = i;
     module.exports = i;
   } else {
     if (!(void 0 === (r = function () {
       return i;
-    }.apply(t, [])))) {
+    }.apply(exports, [])))) {
       module.exports = r;
     }
   }

@@ -1,4 +1,4 @@
-import * as r from "./1417";
+var r = require("./1417");
 function o(e, t) {
   if (void 0 == e.length) {
     throw new Error(e.length + "/" + t);

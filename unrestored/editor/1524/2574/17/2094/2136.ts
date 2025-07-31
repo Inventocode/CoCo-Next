@@ -1,9 +1,13 @@
 "use strict";
 
-import * as r from "../../1000/93";
-import * as i from "../../1000/134/index";
-import * as o from "../../125/index";
-import * as a from "../../125/714";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.WidgetDiv = void 0;
+var r = require("../../1000/93");
+var i = require("../../1000/134/index");
+var o = require("../../125/index");
+var a = require("../../125/714");
 var s = function () {
   function e() {
     this.dispose_ = void 0;
@@ -94,4 +98,4 @@ var s = function () {
   };
   return e = (0, r.__decorate)([(0, i.injectable)()], e);
 }();
-export { s as WidgetDiv };
+exports.WidgetDiv = s;

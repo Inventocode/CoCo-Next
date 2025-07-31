@@ -3,12 +3,12 @@
 var r;
 var o;
 var i;
-import * as a from "../../1626/167";
-import * as s from "../../1623/495";
-import * as c from "../../1735/422";
-import * as l from "../../1738/332";
-import * as u from "../../1735/247/index";
-import * as d from "../../1534/530";
+var a = require("../../1626/167");
+var s = require("../../1623/495");
+var c = require("../../1735/422");
+var l = require("../../1738/332");
+var u = require("../../1735/247/index");
+var d = require("../../1534/530");
 var p = u("iterator");
 var f = !1;
 if ([].keys) {

@@ -1,7 +1,7 @@
-import * as r from "../../../1/index";
-import * as o from "../../../../../3262/3188/2658/220";
-import * as i from "../../../../../3262/3188/2658/230";
-import * as a from "./756/index";
+var r = require("../../../1/index");
+var o = require("../../../../../3262/3188/2658/220");
+var i = require("../../../../../3262/3188/2658/230");
+var a = require("./756/index");
 var s = function () {
   "use strict";
 

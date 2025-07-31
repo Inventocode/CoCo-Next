@@ -109,7 +109,7 @@
     var Qe = "object" == typeof e && e && e.Object === Object && e;
     var We = "object" == typeof self && self && self.Object === Object && self;
     var Ke = Qe || We || Function("return this")();
-    var Xe = t && !t.nodeType && t;
+    var Xe = exports && !exports.nodeType && exports;
     var Ye = Xe && "object" == typeof r && r && !r.nodeType && r;
     var qe = Ye && Ye.exports === Xe;
     var $e = qe && Qe.process;
@@ -4873,8 +4873,8 @@
     Ke._ = Xt;
     if (!(void 0 === (i = function () {
       return Xt;
-    }.call(t, n, t, r)))) {
+    }.call(exports, require, exports, r)))) {
       r.exports = i;
     }
   }).call(this);
-}).call(this, require("./251"), require("./571")(e));
+}).call(this, require("./251"), require("./571")(module));

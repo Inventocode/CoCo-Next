@@ -1,7 +1,10 @@
 "use strict";
 
-import * as r from "../../../../../2873/2721/805/index";
-export default (function (e, t) {
+var r = require("../../../../../2873/2721/805/index");
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.default = function (e, t) {
   var n = s(e.ast);
   if (t) {
     e.placeholders.forEach(function (e) {
@@ -99,8 +102,8 @@ export default (function (e, t) {
     }
   });
   return n;
-});
-import * as i from "../../../2623/index";
+};
+var i = require("../../../2623/index");
 var a = i.blockStatement;
 var s = i.cloneNode;
 var o = i.emptyStatement;

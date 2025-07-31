@@ -1,5 +1,8 @@
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
 exports.BlockStatement = function (e) {
   var t;
   this.token("{");

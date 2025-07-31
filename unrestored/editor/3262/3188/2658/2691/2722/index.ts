@@ -1,22 +1,27 @@
 "use strict";
 
-import * as r from "../../../../3190/494";
+var r = require("../../../../3190/494");
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.default = void 0;
 exports.ensure = function (e, t) {
   if (!y) {
     y = t;
   }
   v(e);
 };
-export { g as get };
+exports.get = g;
 exports.getDependencies = function (e) {
   return Array.from(v(e).dependencies.values());
 };
+exports.list = void 0;
 exports.minVersion = function (e) {
   return v(e).minVersion();
 };
-import * as i from "./2659/index";
-import * as a from "./2624/index";
-import * as s from "./2981/index";
+var i = require("./2659/index");
+var a = require("./2624/index");
+var s = require("./2981/index");
 var o = a.assignmentExpression;
 var l = a.cloneNode;
 var u = a.expressionStatement;
@@ -261,6 +266,6 @@ function g(e, t, n, r) {
 var T = Object.keys(s.default).map(function (e) {
   return e.replace(/^_/, "");
 });
-export { T as list };
+exports.list = T;
 var b = g;
-export default b;
+exports.default = b;

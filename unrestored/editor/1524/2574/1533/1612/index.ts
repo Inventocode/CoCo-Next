@@ -1,10 +1,10 @@
 "use strict";
 
-import * as r from "../1626/86/index";
-import * as o from "../1556/473";
-import * as i from "./1613";
-import * as a from "../1672/1070";
-import * as s from "../1626/167";
+var r = require("../1626/86/index");
+var o = require("../1556/473");
+var i = require("./1613");
+var a = require("../1672/1070");
+var s = require("../1626/167");
 var c = 1..toFixed;
 var l = Math.floor;
 var u = function e(t, n, r) {

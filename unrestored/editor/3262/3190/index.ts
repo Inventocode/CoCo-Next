@@ -1,10 +1,14 @@
 "use strict";
 
-import * as r from "./624/index";
-import * as a from "./494";
-import * as i from "./3191";
-import * as o from "./3192/index";
-import * as s from "../3188/2658/index";
+var r = require("./624/index");
+var a = require("./494");
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.default = void 0;
+var i = require("./3191");
+var o = require("./3192/index");
+var s = require("../3188/2658/index");
 var u = new Map([["react", ["cloneElement", "createContext", "createElement", "createFactory", "createRef", "forwardRef", "isValidElement", "memo", "lazy"]], ["react-dom", ["createPortal"]]]);
 var l = (0, i.declare)(function (e) {
   e.assertVersion(7);
@@ -85,4 +89,4 @@ var l = (0, i.declare)(function (e) {
     }
   };
 });
-export default l;
+exports.default = l;

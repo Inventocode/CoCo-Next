@@ -1,8 +1,8 @@
 "use strict";
 
-import * as r from "./2377/index";
-import * as i from "./2380/index";
-import * as o from "./2382/index";
+var r = require("./2377/index");
+var i = require("./2380/index");
+var o = require("./2382/index");
 var a = r("%TypeError%");
 var s = r("%WeakMap%", !0);
 var c = r("%Map%", !0);

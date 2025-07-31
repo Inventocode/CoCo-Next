@@ -42,3 +42,4 @@ c.cancel = function (e) {
   s(t);
   return i(t);
 };
+export default c;

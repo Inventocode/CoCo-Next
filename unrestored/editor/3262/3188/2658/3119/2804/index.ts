@@ -1,8 +1,8 @@
 "use strict";
 
-import * as r from "../../../../3190/624/index";
-import * as i from "../../../../3190/494";
-import * as a from "../../../../../1524/2574/1/index";
+var r = require("../../../../3190/624/index");
+var i = require("../../../../3190/494");
+var a = require("../../../../../1524/2574/1/index");
 var s = a.mark(h);
 var o = a.mark(y);
 function l() {
@@ -12,12 +12,15 @@ function l() {
   };
   return e;
 }
-export { h as run };
-import * as u from "./3120";
-import * as c from "./3121";
-import * as p from "../../3131/2805";
-import * as f from "./3122/index";
-import * as d from "./3127/index";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.run = h;
+var u = require("./3120");
+var c = require("./3121");
+var p = require("../../3131/2805");
+var f = require("./3122/index");
+var d = require("./3127/index");
 function h(e, t, n) {
   var r;
   var i;

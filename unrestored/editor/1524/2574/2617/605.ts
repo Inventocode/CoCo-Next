@@ -1,6 +1,6 @@
 "use strict";
 
-import * as r from "../19";
+var r = require("../19");
 var i = {
   locale: "en_US",
   today: "Today",
@@ -186,4 +186,4 @@ var c = {
     preview: "Preview"
   }
 };
-export { c as a };
+exports.a = c;

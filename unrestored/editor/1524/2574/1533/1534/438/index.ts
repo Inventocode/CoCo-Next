@@ -1,6 +1,6 @@
-import * as r from "./1535";
-import * as o from "../../1738/332";
-import * as i from "../1211";
+var r = require("./1535");
+var o = require("../../1738/332");
+var i = require("../1211");
 var a = require("../300/index").f;
 module.exports = function (e) {
   var t = r.Symbol || (r.Symbol = {});

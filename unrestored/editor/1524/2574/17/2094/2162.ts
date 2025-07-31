@@ -1,12 +1,16 @@
 "use strict";
 
-import * as r from "../../1000/93";
-import * as i from "../../1000/134/index";
-import * as o from "../../125/259";
-import * as a from "../../125/195/index";
-import * as s from "../../206/725/387";
-import * as c from "../../1000/213/index";
-import * as u from "../497/644";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.BlockGroup = void 0;
+var r = require("../../1000/93");
+var i = require("../../1000/134/index");
+var o = require("../../125/259");
+var a = require("../../125/195/index");
+var s = require("../../206/725/387");
+var c = require("../../1000/213/index");
+var u = require("../497/644");
 var l = function (e) {
   function t(t) {
     var n = e.call(this, {
@@ -237,4 +241,4 @@ var l = function (e) {
   };
   return t = (0, r.__decorate)([(0, i.injectable)()], t);
 }(require("./1318").BlockSvg);
-export { l as BlockGroup };
+exports.BlockGroup = l;

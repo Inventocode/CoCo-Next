@@ -1,7 +1,7 @@
-import * as r from "../../../../../835/1085/index";
-import * as i from "./1786/index";
-import * as o from "../../../../../../1436/1830/638";
-import * as a from "../../../../../../1435/1772/959/1258";
+var r = require("../../../../../835/1085/index");
+var i = require("./1786/index");
+var o = require("../../../../../../1436/1830/638");
+var a = require("../../../../../../1435/1772/959/1258");
 var s = /^\[object .+?Constructor\]$/;
 var c = Function.prototype;
 var u = Object.prototype;

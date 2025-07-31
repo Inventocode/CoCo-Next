@@ -12,7 +12,7 @@ function r(e) {
       for (var a = new Array(arguments.length), s = 0; s < a.length; s++) {
         a[s] = arguments[s];
       }
-      a[0] = t.coerce(a[0]);
+      a[0] = exports.coerce(a[0]);
       if ("string" !== typeof a[0]) {
         a.unshift("%O");
       }
@@ -22,7 +22,7 @@ function r(e) {
           return n;
         }
         c++;
-        var i = t.formatters[r];
+        var i = exports.formatters[r];
         if ("function" === typeof i) {
           var o = a[c];
           n = i.call(e, o);
@@ -31,14 +31,14 @@ function r(e) {
         }
         return n;
       });
-      t.formatArgs.call(e, a);
-      var u = r.log || t.log || console.log.bind(console);
+      exports.formatArgs.call(e, a);
+      var u = r.log || exports.log || console.log.bind(console);
       u.apply(e, a);
     }
   }
   r.namespace = e;
-  r.enabled = t.enabled(e);
-  r.useColors = t.useColors();
+  r.enabled = exports.enabled(e);
+  r.useColors = exports.useColors();
   r.color = function (e) {
     var n;
     var r = 0;
@@ -46,28 +46,28 @@ function r(e) {
       r = (r << 5) - r + e.charCodeAt(n);
       r |= 0;
     }
-    return t.colors[Math.abs(r) % t.colors.length];
+    return exports.colors[Math.abs(r) % exports.colors.length];
   }(e);
   r.destroy = i;
-  if ("function" === typeof t.init) {
-    t.init(r);
+  if ("function" === typeof exports.init) {
+    exports.init(r);
   }
-  t.instances.push(r);
+  exports.instances.push(r);
   return r;
 }
 function i() {
-  var e = t.instances.indexOf(this);
-  return -1 !== e && (t.instances.splice(e, 1), !0);
+  var e = exports.instances.indexOf(this);
+  return -1 !== e && (exports.instances.splice(e, 1), !0);
 }
-(t = module.exports = r.debug = r.default = r).coerce = function (e) {
+(exports = module.exports = r.debug = r.default = r).coerce = function (e) {
   return e instanceof Error ? e.stack || e.message : e;
 };
 exports.disable = function () {
-  t.enable("");
+  exports.enable("");
 };
 exports.enable = function (e) {
   var n;
-  t.save(e);
+  exports.save(e);
   exports.names = [];
   exports.skips = [];
   var r = ("string" === typeof e ? e : "").split(/[\s,]+/);
@@ -75,15 +75,15 @@ exports.enable = function (e) {
   for (n = 0; n < i; n++) {
     if (r[n]) {
       if ("-" === (e = r[n].replace(/\*/g, ".*?"))[0]) {
-        t.skips.push(new RegExp("^" + e.substr(1) + "$"));
+        exports.skips.push(new RegExp("^" + e.substr(1) + "$"));
       } else {
-        t.names.push(new RegExp("^" + e + "$"));
+        exports.names.push(new RegExp("^" + e + "$"));
       }
     }
   }
-  for (n = 0; n < t.instances.length; n++) {
-    var o = t.instances[n];
-    o.enabled = t.enabled(o.namespace);
+  for (n = 0; n < exports.instances.length; n++) {
+    var o = exports.instances[n];
+    o.enabled = exports.enabled(o.namespace);
   }
 };
 exports.enabled = function (e) {
@@ -92,13 +92,13 @@ exports.enabled = function (e) {
   }
   var n;
   var r;
-  for (n = 0, r = t.skips.length; n < r; n++) {
-    if (t.skips[n].test(e)) {
+  for (n = 0, r = exports.skips.length; n < r; n++) {
+    if (exports.skips[n].test(e)) {
       return !1;
     }
   }
-  for (n = 0, r = t.names.length; n < r; n++) {
-    if (t.names[n].test(e)) {
+  for (n = 0, r = exports.names.length; n < r; n++) {
+    if (exports.names[n].test(e)) {
       return !0;
     }
   }

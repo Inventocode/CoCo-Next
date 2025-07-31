@@ -1,5 +1,9 @@
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.NodeType = void 0;
 (function (e) {
   e[e.ELEMENT = 1] = "ELEMENT";
   e[e.ATTRIBUTE = 2] = "ATTRIBUTE";
@@ -13,4 +17,4 @@
   e[e.DOCUMENT_TYPE = 10] = "DOCUMENT_TYPE";
   e[e.DOCUMENT_FRAGMENT = 11] = "DOCUMENT_FRAGMENT";
   e[e.NOTATION = 12] = "NOTATION";
-})(t.NodeType || (exports.NodeType = {}));
+})(exports.NodeType || (exports.NodeType = {}));

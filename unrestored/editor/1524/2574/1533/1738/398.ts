@@ -1,9 +1,9 @@
-import * as r from "./194";
-import * as o from "../1735/422";
-import * as i from "./332";
-import * as a from "../1626/86/1055";
-import * as s from "../1639/1057";
-import * as c from "./423/index";
+var r = require("./194");
+var o = require("../1735/422");
+var i = require("./332");
+var a = require("../1626/86/1055");
+var s = require("../1639/1057");
+var c = require("./423/index");
 var l = c.get;
 var u = c.enforce;
 var d = String(String).split("String");

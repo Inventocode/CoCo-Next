@@ -1,21 +1,22 @@
 "use strict";
 
-import * as r from "../../../19";
-import * as i from "../../../54";
-import * as o from "../../../0/index";
-var a = (require("../../../50/index"), require("../../../75/index"));
-import * as s from "../../../548/1180/270/1007";
-import * as c from "../../../548/1180/100";
-import * as u from "../../../548/1180/270/390";
-import * as l from "./2620/1005";
-import * as f from "./2620/908";
-import * as h from "../../../548/1180/691/153";
-import * as d from "./2620/index";
-import * as p from "../../../33/index";
-import * as _ from "../../../548/1180/691/1498/index";
-import * as A from "../682/index";
-import * as g from "./693";
-import * as v from "./288";
+var r = require("../../../19");
+var i = require("../../../54");
+var o = require("../../../0/index");
+require("../../../50/index");
+var a = require("../../../75/index");
+var s = require("../../../548/1180/270/1007");
+var c = require("../../../548/1180/100");
+var u = require("../../../548/1180/270/390");
+var l = require("./2620/1005");
+var f = require("./2620/908");
+var h = require("../../../548/1180/691/153");
+var d = require("./2620/index");
+var p = require("../../../33/index");
+var _ = require("../../../548/1180/691/1498/index");
+var A = require("../682/index");
+var g = require("./693");
+var v = require("./288");
 function m(e) {
   return "scale(".concat(e, ", ").concat(Math.pow(e, 2), ")");
 }
@@ -164,7 +165,7 @@ var b = o.forwardRef(function (e, t) {
 });
 b.muiSupportAuto = !0;
 var w = b;
-import * as E from "./2613";
+var E = require("./2613");
 function x(e, t) {
   var n = 0;
   if ("number" === typeof t) {

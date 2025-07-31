@@ -1,5 +1,5 @@
-import * as r from "../1562/813";
-import * as o from "../1676/421";
+var r = require("../1562/813");
+var o = require("../1676/421");
 module.exports = function (e) {
   return r(o(e));
 };

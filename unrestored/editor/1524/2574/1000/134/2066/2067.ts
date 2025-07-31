@@ -1,7 +1,11 @@
 "use strict";
 
-import * as r from "../578";
-import * as i from "../713";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.Binding = void 0;
+var r = require("../578");
+var i = require("../713");
 var o = function () {
   function e(e, t) {
     this.id = i.id();
@@ -35,4 +39,4 @@ var o = function () {
   };
   return e;
 }();
-export { o as Binding };
+exports.Binding = o;

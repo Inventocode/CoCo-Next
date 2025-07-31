@@ -1,5 +1,9 @@
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.zh_hans = void 0;
 exports.zh_hans = {
   DUPLICATE_BLOCK: "\u590d\u5236",
   COPY_ALL: "\u590d\u5236\u6240\u6709\u79ef\u6728\uff08 %1 \u5757\uff09",

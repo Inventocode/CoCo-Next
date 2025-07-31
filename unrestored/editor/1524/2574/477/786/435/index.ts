@@ -4,7 +4,8 @@
   exports.b = o;
   exports.a = a;
   var r = require("../../../36/483/39");
-  var i = (require("../1165"), require("../316"));
+  require("../1165");
+  var i = require("../316");
   require("./1428");
   require("../1501/985");
   require("../736");

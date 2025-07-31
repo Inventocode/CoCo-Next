@@ -1,4 +1,4 @@
-import * as r from "./1974/index";
+var r = require("./1974/index");
 r.prototype.formulaEval = function () {
   "use strict";
 

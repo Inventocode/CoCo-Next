@@ -1,8 +1,8 @@
 "use strict";
 
-import * as r from "../841";
-import * as i from "../../../../../3262/3190/624/index";
-import * as o from "./2197/index";
+var r = require("../841");
+var i = require("../../../../../3262/3190/624/index");
+var o = require("./2197/index");
 var a = function (e, t) {
   for (var n = {}, r = 0, o = Object.entries(e); r < o.length; r++) {
     var a = i(o[r], 2);

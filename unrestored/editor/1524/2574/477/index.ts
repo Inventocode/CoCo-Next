@@ -2,11 +2,11 @@
 
 export { c as a };
 export { l as b };
-import * as r from "./1181/index";
-import * as o from "./340";
-import * as i from "./786/index";
-import * as a from "./650";
-import * as s from "../59/index";
+var r = require("./1181/index");
+var o = require("./340");
+var i = require("./786/index");
+var a = require("./650");
+var s = require("../59/index");
 function c(e, t) {
   o.b({
     id: e,
@@ -27,3 +27,4 @@ try {
 } catch (u) {
   console.error(u);
 }
+export default c;

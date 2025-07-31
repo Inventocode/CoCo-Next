@@ -1,7 +1,10 @@
 "use strict";
 
-import * as r from "../../../../3190/494";
-export default (function (e) {
+var r = require("../../../../3190/494");
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.default = function (e) {
   var t;
   var n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
   var a = n.preserveComments ? i : o;
@@ -37,7 +40,7 @@ export default (function (e) {
   } finally {
     y.f();
   }
-});
-import * as a from "./2651";
+};
+var a = require("./2651");
 var i = ["tokens", "start", "end", "loc", "raw", "rawValue"];
 var o = a.COMMENT_KEYS.concat(["comments"]).concat(i);

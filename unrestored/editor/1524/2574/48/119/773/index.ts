@@ -408,7 +408,7 @@
       if (AMD) {
         __WEBPACK_AMD_DEFINE_RESULT__ = function () {
           return exports;
-        }.call(exports, __webpack_require__, exports, module);
+        }.call(exports, require, exports, module);
         if (!(void 0 === __WEBPACK_AMD_DEFINE_RESULT__)) {
           module.exports = __WEBPACK_AMD_DEFINE_RESULT__;
         }

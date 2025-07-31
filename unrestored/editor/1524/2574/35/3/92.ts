@@ -47,10 +47,10 @@ export { h as R };
 export { S };
 export { E as T };
 export { w as U };
-import * as r from "./229";
-import * as i from "../../19";
-import * as o from "./179";
-import * as a from "./981";
+var r = require("./229");
+var i = require("../../19");
+var o = require("./179");
+var a = require("./981");
 var s = function (e) {
   return function () {
     return e;
@@ -388,3 +388,4 @@ function ie(e, t) {
   });
 }
 var oe = ee.bind(null, a.a);
+export default P;

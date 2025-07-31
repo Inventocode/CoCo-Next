@@ -1,5 +1,5 @@
-import * as r from "./530";
-import * as o from "../1738/423/1054";
+var r = require("./530");
+var o = require("../1738/423/1054");
 (module.exports = function (e, t) {
   return o[e] || (o[e] = void 0 !== t ? t : {});
 })("versions", []).push({

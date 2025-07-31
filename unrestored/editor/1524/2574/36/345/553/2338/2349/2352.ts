@@ -1,5 +1,5 @@
-import * as r from "../761";
-import * as i from "../717";
+var r = require("../761");
+var i = require("../717");
 function o(e) {
   this.mode = i.BYTE;
   this.data = r.from(e);

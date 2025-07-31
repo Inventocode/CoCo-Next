@@ -1,12 +1,12 @@
-import * as r from "./2286/index";
-import * as i from "../1353/index";
-import * as o from "./1124";
-import * as a from "../1123/index";
-import * as s from "./1354";
-import * as c from "./1355";
+var r = require("./2286/index");
+var i = require("../1353/index");
+var o = require("./1124");
+var a = require("../1123/index");
+var s = require("./1354");
+var c = require("./1355");
 var u = require("../844/index")("socket.io-client:manager");
-import * as l from "./1352";
-import * as f from "./2301";
+var l = require("./1352");
+var f = require("./2301");
 var h = Object.prototype.hasOwnProperty;
 function d(e, t) {
   if (!(this instanceof d)) {

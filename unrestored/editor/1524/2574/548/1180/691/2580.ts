@@ -1,13 +1,14 @@
 "use strict";
 
-import * as r from "../../../19";
-import * as i from "../../../54";
-import * as o from "../../../0/index";
-var a = (require("../../../50/index"), require("../100"));
-import * as s from "./153";
-import * as c from "../270/395";
-import * as u from "../../../549/1183/315/2615/1500";
-import * as l from "./234";
+var r = require("../../../19");
+var i = require("../../../54");
+var o = require("../../../0/index");
+require("../../../50/index");
+var a = require("../100");
+var s = require("./153");
+var c = require("../270/395");
+var u = require("../../../549/1183/315/2615/1500");
+var l = require("./234");
 var f = o.forwardRef(function (e, t) {
   var n = e.edge;
   var s = void 0 !== n && n;

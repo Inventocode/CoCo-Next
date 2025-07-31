@@ -1,6 +1,9 @@
 "use strict";
 
-export default i;
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.default = i;
 var r = i;
 function i(e, t) {
   var n = e.filename;
@@ -28,7 +31,7 @@ function i(e, t) {
   d = d.replace(/\\/g, "/");
   return c && c(d) || d;
 }
-export default i = function (e, t) {
+exports.default = i = function (e, t) {
   var n;
   var i;
   var a;

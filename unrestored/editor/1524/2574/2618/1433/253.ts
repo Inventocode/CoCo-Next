@@ -62,3 +62,4 @@ export { _ as d };
   e[e.number = 0] = "number";
   e[e.dateTime = 1] = "dateTime";
 })(i || (i = {}));
+export default r;

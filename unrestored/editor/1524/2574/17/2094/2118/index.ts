@@ -1,12 +1,16 @@
 "use strict";
 
-import * as r from "../../../1000/93";
-import * as i from "../../../1000/134/index";
-import * as o from "../../../1176/1312";
-import * as a from "../2133/1313";
-import * as s from "./2119/index";
-import * as c from "../../640/index";
-import * as u from "../../../4/127";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.Blink = void 0;
+var r = require("../../../1000/93");
+var i = require("../../../1000/134/index");
+var o = require("../../../1176/1312");
+var a = require("../2133/1313");
+var s = require("./2119/index");
+var c = require("../../640/index");
+var u = require("../../../4/127");
 var l = function () {
   function e() {
     this.Blocks = Object.create(null);
@@ -78,4 +82,4 @@ var l = function () {
   (0, r.__decorate)([(0, u.lazy_inject)(u.BINDING.utils)], e.prototype, "utils", void 0);
   return e = (0, r.__decorate)([(0, i.injectable)()], e);
 }();
-export { l as Blink };
+exports.Blink = l;

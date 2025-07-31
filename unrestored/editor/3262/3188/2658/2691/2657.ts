@@ -1,6 +1,6 @@
 (function (n) {
   var r;
-  t = module.exports = f;
+  exports = module.exports = f;
   r = "object" === typeof n && Object({
     NODE_ENV: "production",
     PUBLIC_URL: "",
@@ -496,12 +496,12 @@
   };
   exports.sort = function (e, n) {
     return e.sort(function (e, r) {
-      return t.compareBuild(e, r, n);
+      return exports.compareBuild(e, r, n);
     });
   };
   exports.rsort = function (e, n) {
     return e.sort(function (e, r) {
-      return t.compareBuild(r, e, n);
+      return exports.compareBuild(r, e, n);
     });
   };
   exports.gt = m;

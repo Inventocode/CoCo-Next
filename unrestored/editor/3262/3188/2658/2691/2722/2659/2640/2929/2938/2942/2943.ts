@@ -1,5 +1,8 @@
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
 exports.TaggedTemplateExpression = function (e) {
   this.print(e.tag, e);
   this.print(e.typeParameters, e);

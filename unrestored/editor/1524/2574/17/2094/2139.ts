@@ -1,9 +1,13 @@
 "use strict";
 
-import * as r from "../../1000/93";
-import * as i from "../../1000/134/index";
-import * as o from "../../125/294";
-import * as a from "../../1000/577";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.SliderController = void 0;
+var r = require("../../1000/93");
+var i = require("../../1000/134/index");
+var o = require("../../125/294");
+var a = require("../../1000/577");
 var s = function (e) {
   function t() {
     var t = e.call(this) || this;
@@ -149,4 +153,4 @@ var s = function (e) {
   };
   return t = (0, r.__decorate)([(0, i.injectable)()], t);
 }(require("./2142/1103").Controller);
-export { s as SliderController };
+exports.SliderController = s;

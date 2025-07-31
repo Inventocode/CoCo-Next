@@ -14,21 +14,21 @@ var i = 40;
 var o = 10;
 function a(e, n, r) {
   switch (e) {
-    case t.Patterns.PATTERN000:
+    case exports.Patterns.PATTERN000:
       return (n + r) % 2 === 0;
-    case t.Patterns.PATTERN001:
+    case exports.Patterns.PATTERN001:
       return n % 2 === 0;
-    case t.Patterns.PATTERN010:
+    case exports.Patterns.PATTERN010:
       return r % 3 === 0;
-    case t.Patterns.PATTERN011:
+    case exports.Patterns.PATTERN011:
       return (n + r) % 3 === 0;
-    case t.Patterns.PATTERN100:
+    case exports.Patterns.PATTERN100:
       return (Math.floor(n / 2) + Math.floor(r / 3)) % 2 === 0;
-    case t.Patterns.PATTERN101:
+    case exports.Patterns.PATTERN101:
       return n * r % 2 + n * r % 3 === 0;
-    case t.Patterns.PATTERN110:
+    case exports.Patterns.PATTERN110:
       return (n * r % 2 + n * r % 3) % 2 === 0;
-    case t.Patterns.PATTERN111:
+    case exports.Patterns.PATTERN111:
       return (n * r % 3 + (n + r) % 2) % 2 === 0;
     default:
       throw new Error("bad maskPattern:" + e);
@@ -38,7 +38,7 @@ exports.isValid = function (e) {
   return null != e && "" !== e && !isNaN(e) && e >= 0 && e <= 7;
 };
 exports.from = function (e) {
-  return t.isValid(e) ? parseInt(e, 10) : void 0;
+  return exports.isValid(e) ? parseInt(e, 10) : void 0;
 };
 exports.getPenaltyN1 = function (e) {
   for (var t = e.size, r = 0, i = 0, o = 0, a = null, s = null, c = 0; c < t; c++) {
@@ -117,11 +117,11 @@ exports.applyMask = function (e, t) {
   }
 };
 exports.getBestMask = function (e, n) {
-  for (var r = Object.keys(t.Patterns).length, i = 0, o = 1 / 0, a = 0; a < r; a++) {
+  for (var r = Object.keys(exports.Patterns).length, i = 0, o = 1 / 0, a = 0; a < r; a++) {
     n(a);
-    t.applyMask(a, e);
-    var s = t.getPenaltyN1(e) + t.getPenaltyN2(e) + t.getPenaltyN3(e) + t.getPenaltyN4(e);
-    t.applyMask(a, e);
+    exports.applyMask(a, e);
+    var s = exports.getPenaltyN1(e) + exports.getPenaltyN2(e) + exports.getPenaltyN3(e) + exports.getPenaltyN4(e);
+    exports.applyMask(a, e);
     if (s < o) {
       o = s;
       i = a;

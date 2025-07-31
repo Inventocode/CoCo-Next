@@ -1,7 +1,7 @@
 "use strict";
 
 export { i as a };
-import * as r from "../../../19";
+var r = require("../../../19");
 function i() {
   var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
   var t = e.baseClasses;
@@ -18,3 +18,4 @@ function i() {
   });
   return i;
 }
+export default i;

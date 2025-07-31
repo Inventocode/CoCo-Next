@@ -1,7 +1,7 @@
 "use strict";
 
-import * as r from "./1979";
-import * as i from "./1980";
+var r = require("./1979");
+var i = require("./1980");
 function o() {
   this.protocol = null;
   this.slashes = null;
@@ -16,7 +16,7 @@ function o() {
   this.path = null;
   this.href = null;
 }
-export { m as parse };
+exports.parse = m;
 exports.resolve = function (e, t) {
   return m(e, !1, !0).resolve(t);
 };
@@ -29,7 +29,7 @@ exports.format = function (e) {
   }
   return e instanceof o ? e.format() : o.prototype.format.call(e);
 };
-export { o as Url };
+exports.Url = o;
 var a = /^([a-z0-9.+-]+:)/i;
 var s = /:[0-9]*$/;
 var c = /^(\/\/?(?!\/)[^\?\s]*)(\?[^\s]*)?$/;
@@ -59,7 +59,7 @@ var g = {
   "gopher:": !0,
   "file:": !0
 };
-import * as v from "./1981/index";
+var v = require("./1981/index");
 function m(e, t, n) {
   if (e && i.isObject(e) && e instanceof o) {
     return e;
@@ -135,7 +135,9 @@ o.prototype.parse = function (e, t, n) {
     this.hostname = this.hostname || "";
     var T = "[" === this.hostname[0] && "]" === this.hostname[this.hostname.length - 1];
     if (!T) {
-      for (var B = this.hostname.split(/\./), D = (S = 0, B.length); S < D; S++) {
+      for (S = 0, B = this.hostname.split(/\./), D = B.length, void 0; S < D; S++) {
+        var B;
+        var D;
         var I = B[S];
         if (I && !I.match(d)) {
           for (var F = "", R = 0, P = I.length; R < P; R++) {
@@ -328,7 +330,8 @@ o.prototype.resolveObject = function (e) {
   var b = y || m || n.host && e.pathname;
   var w = b;
   var E = n.pathname && n.pathname.split("/") || [];
-  var x = (p = e.pathname && e.pathname.split("/") || [], n.protocol && !g[n.protocol]);
+  p = e.pathname && e.pathname.split("/") || [];
+  var x = n.protocol && !g[n.protocol];
   if (x && (n.hostname = "", n.port = null, n.host && ("" === E[0] ? E[0] = n.host : E.unshift(n.host)), n.host = "", e.protocol && (e.hostname = null, e.port = null, e.host && ("" === p[0] ? p[0] = e.host : p.unshift(e.host)), e.host = null), b = b && ("" === p[0] || "" === E[0])), y) {
     n.host = e.host || "" === e.host ? e.host : n.host;
     n.hostname = e.hostname || "" === e.hostname ? e.hostname : n.hostname;

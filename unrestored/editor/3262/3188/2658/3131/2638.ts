@@ -1,7 +1,7 @@
 "use strict";
 
-import * as r from "../../../../1524/2574/1/index";
-import * as i from "../../../2873/2721/805/index";
+var r = require("../../../../1524/2574/1/index");
+var i = require("../../../2873/2721/805/index");
 var a = Symbol.for("gensync:v1:start");
 var s = Symbol.for("gensync:v1:suspend");
 function o(e, t, n, r) {

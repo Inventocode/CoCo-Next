@@ -1,4 +1,4 @@
-import * as r from "../1738/194";
+var r = require("../1738/194");
 module.exports = function (e, t) {
   var n = r.console;
   if (n && n.error) {

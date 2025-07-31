@@ -1,14 +1,18 @@
 "use strict";
 
-import * as r from "../../1000/93";
-import * as i from "../../1000/134/index";
-import * as o from "../../125/259";
-import * as a from "../../125/195/index";
-import * as s from "../../4/127";
-import * as c from "../../1000/213/index";
-import * as u from "../497/1102";
-import * as l from "../497/840";
-import * as f from "../../125/474";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.Gesture = void 0;
+var r = require("../../1000/93");
+var i = require("../../1000/134/index");
+var o = require("../../125/259");
+var a = require("../../125/195/index");
+var s = require("../../4/127");
+var c = require("../../1000/213/index");
+var u = require("../497/1102");
+var l = require("../497/840");
+var f = require("../../125/474");
 var h = function () {
   function e(e) {
     this.mouse_down_xy = o.vec2.create();
@@ -449,4 +453,4 @@ var h = function () {
   (0, r.__decorate)([(0, s.lazy_inject)(s.BINDING.WorkspaceDragger)], e.prototype, "workspace_dragger_factory", void 0);
   return e = (0, r.__decorate)([(0, i.injectable)()], e);
 }();
-export { h as Gesture };
+exports.Gesture = h;

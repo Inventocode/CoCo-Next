@@ -3507,7 +3507,7 @@
     if ("undefined" !== typeof JSZipSync) {
       se = JSZipSync;
     }
-    if (e.exports && "undefined" === typeof se) {
+    if (module.exports && "undefined" === typeof se) {
       se = require("./1762");
     }
     var ve = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\r\n';
@@ -28248,5 +28248,5 @@
     if ("undefined" !== typeof j) {
       t.CFB = j;
     }
-  })(t);
+  })(exports);
 }).call(this, require("../../31/251"), require("../../616/570/index").Buffer, require("../../../../3262/3188/1184/368"));

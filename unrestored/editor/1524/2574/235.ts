@@ -24,3 +24,4 @@ var d = "#111111ff";
 var p = "#e4f5ffff";
 var f = !1;
 var h = !1;
+export default p;

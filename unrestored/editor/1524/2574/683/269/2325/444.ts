@@ -1,5 +1,8 @@
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
 exports.DUPLICATED_INJECTABLE_DECORATOR = "Cannot apply @injectable decorator multiple times.";
 exports.DUPLICATED_METADATA = "Metadata key was used more than once in a parameter:";
 exports.NULL_ARGUMENT = "NULL argument";

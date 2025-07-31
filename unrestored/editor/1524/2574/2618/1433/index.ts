@@ -3,8 +3,8 @@
 export { a as b };
 export { s as a };
 var r;
-import * as i from "./253";
-import * as o from "../795";
+var i = require("./253");
+var o = require("../795");
 function a(e) {
   return "function" === typeof e;
 }
@@ -124,3 +124,4 @@ function s(e, t, n, r, c, u, l) {
   e[e.literal = 0] = "literal";
   e[e.object = 1] = "object";
 }(r || (r = {}));
+export default s;

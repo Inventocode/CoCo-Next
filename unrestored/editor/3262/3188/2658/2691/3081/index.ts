@@ -13,10 +13,13 @@ var f;
 var d;
 var h;
 var y;
-import * as m from "../../../../3190/624/index";
-import * as v from "../../3093/2676";
-import * as g from "../../../../3190/494";
-import * as T from "../../../../2873/2721/805/index";
+var m = require("../../../../3190/624/index");
+var v = require("../../3093/2676");
+var g = require("../../../../3190/494");
+var T = require("../../../../2873/2721/805/index");
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
 exports.buildNamespaceInitStatements = function (e, t) {
   var n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
   var s = [];
@@ -72,10 +75,30 @@ exports.ensureStatementsHoisted = function (e) {
     e._blockHoist = 3;
   });
 };
-export { default as getModuleName } from "./3092";
-export { hasExports } from "./3091/index";
-export { isModule } from "./3082/index";
-export { isSideEffectImport } from "./3091/index";
+Object.defineProperty(exports, "getModuleName", {
+  enumerable: !0,
+  get: function () {
+    return w.default;
+  }
+});
+Object.defineProperty(exports, "hasExports", {
+  enumerable: !0,
+  get: function () {
+    return k.hasExports;
+  }
+});
+Object.defineProperty(exports, "isModule", {
+  enumerable: !0,
+  get: function () {
+    return x.isModule;
+  }
+});
+Object.defineProperty(exports, "isSideEffectImport", {
+  enumerable: !0,
+  get: function () {
+    return k.isSideEffectImport;
+  }
+});
 exports.rewriteModuleStatementsAndPrepareHeader = function (e, t) {
   var n = t.loose;
   var r = t.exportName;
@@ -307,7 +330,12 @@ exports.rewriteModuleStatementsAndPrepareHeader = function (e, t) {
     headers: I
   };
 };
-export { default as rewriteThis } from "./3085/index";
+Object.defineProperty(exports, "rewriteThis", {
+  enumerable: !0,
+  get: function () {
+    return P.default;
+  }
+});
 exports.wrapInterop = function (e, t, n) {
   if ("none" === n) {
     return null;
@@ -329,14 +357,14 @@ exports.wrapInterop = function (e, t, n) {
   }
   return C(e.hub.addHelper(r), [t]);
 };
-import * as b from "../../../../../1524/2574/1035/1356/569";
-import * as S from "../../2623/index";
-import * as E from "../../2667/index";
-import * as x from "./3082/index";
-import * as P from "./3085/index";
-import * as A from "./3089/index";
-import * as k from "./3091/index";
-import * as w from "./3092";
+var b = require("../../../../../1524/2574/1035/1356/569");
+var S = require("../../2623/index");
+var E = require("../../2667/index");
+var x = require("./3082/index");
+var P = require("./3085/index");
+var A = require("./3089/index");
+var k = require("./3091/index");
+var w = require("./3092");
 var O = S.booleanLiteral;
 var C = S.callExpression;
 var I = S.cloneNode;

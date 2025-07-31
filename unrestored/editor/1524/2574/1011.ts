@@ -42,3 +42,4 @@ function o(e, t) {
   };
   return r;
 }
+export default o;

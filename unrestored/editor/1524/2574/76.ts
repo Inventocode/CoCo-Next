@@ -10,3 +10,4 @@ var o = 640;
 var i = "#ffffffff";
 var a = 10 * r;
 var s = 10 * o;
+export default a;

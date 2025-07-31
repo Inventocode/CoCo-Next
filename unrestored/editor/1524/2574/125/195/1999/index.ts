@@ -1,6 +1,9 @@
 "use strict";
 
-import * as r from "../../../1000/93";
-(0, r.__exportStar)(require("./2000"), t);
-(0, r.__exportStar)(require("./2001"), t);
-(0, r.__exportStar)(require("./2002"), t);
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+var r = require("../../../1000/93");
+(0, r.__exportStar)(require("./2000"), exports);
+(0, r.__exportStar)(require("./2001"), exports);
+(0, r.__exportStar)(require("./2002"), exports);

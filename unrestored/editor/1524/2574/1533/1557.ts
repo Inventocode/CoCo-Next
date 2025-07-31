@@ -1,11 +1,11 @@
 "use strict";
 
-import * as r from "./1626/86/index";
-import * as o from "./1556/1213";
-import * as i from "./1623/309";
-import * as a from "./1728/257";
-import * as s from "./1727/439";
-import * as c from "./1550/820/index";
+var r = require("./1626/86/index");
+var o = require("./1556/1213");
+var i = require("./1623/309");
+var a = require("./1728/257");
+var s = require("./1727/439");
+var c = require("./1550/820/index");
 r({
   target: "Array",
   proto: !0

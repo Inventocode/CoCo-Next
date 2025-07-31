@@ -35,10 +35,13 @@ var o = this && this.__rest || function (e, t) {
   }
   return n;
 };
-import * as i from "../../0/index";
-import * as a from "../../0/index";
-import * as s from "../../50/index";
-import * as c from "./871";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+var i = require("../../0/index");
+var a = require("../../0/index");
+var s = require("../../50/index");
+var c = require("./871");
 var l = function (e) {
   function t(t) {
     var n = e.call(this, t) || this;
@@ -72,7 +75,7 @@ function u(e, t) {
     l[e] = t;
   });
 }
-export { l as AgGridColumn };
+exports.AgGridColumn = l;
 u(c.ColDefUtil.BOOLEAN_PROPERTIES, s.bool);
 u(c.ColDefUtil.STRING_PROPERTIES, s.string);
 u(c.ColDefUtil.OBJECT_PROPERTIES, s.object);

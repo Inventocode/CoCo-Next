@@ -555,7 +555,7 @@
   };
   c.prototype.inspect = function () {
     var e = "";
-    var n = t.INSPECT_MAX_BYTES;
+    var n = exports.INSPECT_MAX_BYTES;
     if (this.length > 0) {
       e = this.toString("hex", 0, n).match(/.{2}/g).join(" ");
       if (this.length > n) {

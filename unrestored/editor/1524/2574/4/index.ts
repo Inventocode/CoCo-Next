@@ -20,9 +20,9 @@ export { w as q };
 export { C as c };
 export { T as b };
 export { S as t };
-import * as r from "../10/index";
-import * as o from "../17/index";
-import * as i from "./127";
+var r = require("../10/index");
+var o = require("../17/index");
+var i = require("./127");
 function a(e) {
   var t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
   return {
@@ -187,3 +187,4 @@ function S(e, t, n) {
     this.rendered = d;
   }
 }
+export default E;

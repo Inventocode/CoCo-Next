@@ -1,15 +1,19 @@
 "use strict";
 
 var r;
-import * as i from "../../../../220";
-import * as a from "../../../../230";
-import * as s from "../../../../../../../1524/2574/206/775/1049";
-import * as o from "../../../../../../3190/494";
-export { P as skipAllButComputedKey };
-import * as l from "../../../../2637/index";
-import * as u from "./3087";
-import * as c from "./3088";
-import * as p from "../../../../2623/index";
+var i = require("../../../../220");
+var a = require("../../../../230");
+var s = require("../../../../../../../1524/2574/206/775/1049");
+var o = require("../../../../../../3190/494");
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.environmentVisitor = exports.default = void 0;
+exports.skipAllButComputedKey = P;
+var l = require("../../../../2637/index");
+var u = require("./3087");
+var c = require("./3088");
+var p = require("../../../../2623/index");
 var f = p.VISITOR_KEYS;
 var d = p.assignmentExpression;
 var h = p.booleanLiteral;
@@ -47,16 +51,19 @@ function P(e) {
     e.skip();
   }
 }
-var A = (s(r = {}, "".concat(b ? "StaticBlock|" : "", "ClassPrivateProperty|TypeAnnotation"), function (e) {
+s(r = {}, "".concat(b ? "StaticBlock|" : "", "ClassPrivateProperty|TypeAnnotation"), function (e) {
   e.skip();
-}), s(r, "Function", function (e) {
+});
+s(r, "Function", function (e) {
   if (!(e.isMethod() || e.isArrowFunctionExpression())) {
     e.skip();
   }
-}), s(r, "Method|ClassProperty", function (e) {
+});
+s(r, "Method|ClassProperty", function (e) {
   P(e);
-}), r);
-export { A as environmentVisitor };
+});
+var A = r;
+exports.environmentVisitor = A;
 var k = l.default.visitors.merge([A, {
   Super: function (e, t) {
     var n = e.node;
@@ -217,4 +224,4 @@ var I = function () {
   }]);
   return e;
 }();
-export default I;
+exports.default = I;

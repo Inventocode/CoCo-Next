@@ -1,7 +1,7 @@
 "use strict";
 
-import * as r from "../../../../../31/index";
-import * as i from "./2202/index";
+var r = require("../../../../../31/index");
+var i = require("./2202/index");
 function o(e) {
   return !e.reachable;
 }

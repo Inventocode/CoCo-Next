@@ -1,6 +1,6 @@
-import * as r from "../../../../../../../../../../254/2503/2504/2505/972/2425/1150/index";
-import * as i from "./2444";
-import * as o from "./2445";
+var r = require("../../../../../../../../../../254/2503/2504/2505/972/2425/1150/index");
+var i = require("./2444");
+var o = require("./2445");
 function a(e) {
   var t = -1;
   var n = null == e ? 0 : e.length;

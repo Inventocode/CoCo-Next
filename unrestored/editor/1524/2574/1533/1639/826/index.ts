@@ -1,10 +1,10 @@
-import * as r from "../../1659/241";
-import * as o from "../../1738/1214/1063";
-import * as i from "../../1728/257";
-import * as a from "../../1250/632";
-import * as s from "../../1250/933";
-import * as c from "../../1250/823";
-import * as l from "./1215";
+var r = require("../../1659/241");
+var o = require("../../1738/1214/1063");
+var i = require("../../1728/257");
+var a = require("../../1250/632");
+var s = require("../../1250/933");
+var c = require("../../1250/823");
+var l = require("./1215");
 var u = function (e, t) {
   this.stopped = e;
   this.result = t;

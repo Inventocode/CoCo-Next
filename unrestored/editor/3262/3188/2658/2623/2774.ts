@@ -1,7 +1,10 @@
 "use strict";
 
-import * as r from "../../../3190/494";
-export default (function e(t, n, a) {
+var r = require("../../../3190/494");
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.default = function e(t, n, a) {
   if (!t) {
     return;
   }
@@ -38,5 +41,5 @@ export default (function e(t, n, a) {
   } finally {
     l.f();
   }
-});
-import * as i from "./2634/index";
+};
+var i = require("./2634/index");

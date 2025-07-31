@@ -5,10 +5,10 @@ export { c as b };
 export { l as e };
 export { u as d };
 export { d as a };
-import * as r from "../11";
-import * as o from "../23";
-import * as i from "../38/index";
-import * as a from "../79";
+var r = require("../11");
+var o = require("../23");
+var i = require("../38/index");
+var a = require("../79");
 function s(e) {
   return "".concat(e, ".__widgetName");
 }
@@ -50,3 +50,4 @@ function d(e, t, n) {
   var s = Object(i.b)();
   return Object(o.c)(s, r, n);
 }
+export default d;

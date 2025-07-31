@@ -1,5 +1,9 @@
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.default = void 0;
 var r = function (e) {
   if (e && e.__esModule) {
     return e;
@@ -31,9 +35,9 @@ var r = function (e) {
 }(require("../../0/index"));
 var o = u(require("../../50/index"));
 var i = u(require("../../75/index"));
-import * as a from "./1048/index";
-import * as s from "./1186";
-import * as c from "./927";
+var a = require("./1048/index");
+var s = require("./1186");
+var c = require("./927");
 var l = u(require("./1187"));
 function u(e) {
   return e && e.__esModule ? e : {
@@ -412,7 +416,7 @@ var S = function (e) {
   }
   return u;
 }(r.Component);
-export default S;
+exports.default = S;
 O(S, "displayName", "DraggableCore");
 O(S, "propTypes", {
   allowAnyClick: o.default.bool,

@@ -1,9 +1,12 @@
 "use strict";
 
-import * as r from "../../../../../../1524/2574/206/775/1049";
-export default (function (e) {
-  return JSON.parse(JSON.stringify(e, a), s);
+var r = require("../../../../../../1524/2574/206/775/1049");
+Object.defineProperty(exports, "__esModule", {
+  value: !0
 });
+exports.default = function (e) {
+  return JSON.parse(JSON.stringify(e, a), s);
+};
 var i = "$$ babel internal serialized type" + Math.random();
 function a(e, t) {
   var n;

@@ -1,6 +1,6 @@
 "use strict";
 
-import * as r from "./2644";
+var r = require("./2644");
 (0, r.default)("ArgumentPlaceholder", {});
 (0, r.default)("BindExpression", {
   visitor: ["object", "callee"],

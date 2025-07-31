@@ -1,6 +1,6 @@
-import * as r from "./952/index";
-import * as i from "../../../989/1086/1789/1084";
-import * as o from "../../../989/1086/index";
+var r = require("./952/index");
+var i = require("../../../989/1086/1789/1084");
+var o = require("../../../989/1086/index");
 module.exports = function (e, t) {
   var n = this.__data__;
   if (n instanceof r) {

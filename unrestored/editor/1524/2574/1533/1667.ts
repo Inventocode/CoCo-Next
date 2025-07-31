@@ -1,9 +1,9 @@
 "use strict";
 
-import * as r from "./1626/86/index";
-import * as o from "./1677/1074";
-import * as i from "./1676/421";
-import * as a from "./1738/310";
+var r = require("./1626/86/index");
+var o = require("./1677/1074");
+var i = require("./1676/421");
+var a = require("./1738/310");
 r({
   target: "String",
   proto: !0,

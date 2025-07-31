@@ -48,7 +48,7 @@ function a(e) {
     }
     n = r.path;
   }
-  for (var a, s = t.isAbsolute(n), c = n.split(/\/+/), u = 0, l = c.length - 1; l >= 0; l--) {
+  for (var a, s = exports.isAbsolute(n), c = n.split(/\/+/), u = 0, l = c.length - 1; l >= 0; l--) {
     if ("." === (a = c[l])) {
       c.splice(l, 1);
     } else {
@@ -97,10 +97,10 @@ function s(e, t) {
   var c = "/" === t.charAt(0) ? t : a(e.replace(/\/+$/, "") + "/" + t);
   return s ? (s.path = c, o(s)) : c;
 }
-export { i as urlParse };
-export { o as urlGenerate };
-export { a as normalize };
-export { s as join };
+exports.urlParse = i;
+exports.urlGenerate = o;
+exports.normalize = a;
+exports.join = s;
 exports.isAbsolute = function (e) {
   return "/" === e.charAt(0) || n.test(e);
 };

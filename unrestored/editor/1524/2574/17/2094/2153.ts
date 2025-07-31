@@ -1,7 +1,11 @@
 "use strict";
 
-import * as r from "../../1000/93";
-import * as i from "../../1000/134/index";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.FieldLabelSerializable = void 0;
+var r = require("../../1000/93");
+var i = require("../../1000/134/index");
 var o = function (e) {
   function t(t) {
     var n = e.call(this, t) || this;
@@ -19,4 +23,4 @@ var o = function (e) {
   };
   return t = (0, r.__decorate)([(0, i.injectable)()], t);
 }(require("../../301/652").FieldLabel);
-export { o as FieldLabelSerializable };
+exports.FieldLabelSerializable = o;

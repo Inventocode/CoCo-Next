@@ -1,4 +1,4 @@
-import * as r from "./711/index";
+var r = require("./711/index");
 var i = function () {
   try {
     var e = r(Object, "defineProperty");

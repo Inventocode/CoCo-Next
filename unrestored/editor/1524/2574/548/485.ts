@@ -63,7 +63,7 @@ var r = {
     other: "\u5c06\u8fd1 {{count}} \u5e74"
   }
 };
-import * as i from "./484/692";
+var i = require("./484/692");
 var o = {
   date: Object(i.a)({
     formats: {
@@ -93,8 +93,8 @@ var o = {
     defaultWidth: "full"
   })
 };
-import * as a from "./484/432";
-import * as s from "./484/106";
+var a = require("./484/432");
+var s = require("./484/106");
 function c(e, t, n, r) {
   return function (e, t, n) {
     Object(s.a)(2, arguments);
@@ -111,7 +111,7 @@ var u = {
   nextWeek: c,
   other: "PP p"
 };
-import * as l from "./484/489";
+var l = require("./484/489");
 var f = {
   ordinalNumber: function (e, t) {
     var n = Number(e);
@@ -233,8 +233,8 @@ var f = {
     defaultFormattingWidth: "wide"
   })
 };
-import * as h from "./484/1003";
-import * as d from "./484/490";
+var h = require("./484/1003");
+var d = require("./484/490");
 var p = {
   code: "zh-CN",
   formatDistance: function (e, t, n) {
@@ -335,4 +335,4 @@ var p = {
     firstWeekContainsDate: 4
   }
 };
-export { p as a };
+exports.a = p;

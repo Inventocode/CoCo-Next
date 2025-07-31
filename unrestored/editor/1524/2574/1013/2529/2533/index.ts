@@ -1,6 +1,6 @@
-import * as r from "./1414";
-import * as o from "../1416/index";
-import * as i from "../1416/1417";
+var r = require("./1414");
+var o = require("../1416/index");
+var i = require("../1416/1417");
 var a = 0;
 var s = 1;
 var c = 2;

@@ -32,3 +32,4 @@ var r = function () {
   };
   return e;
 }();
+export default r;

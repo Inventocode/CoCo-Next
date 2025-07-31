@@ -1,8 +1,8 @@
 "use strict";
 
 export { A as a };
-import * as r from "./183";
-import * as i from "../1433/253";
+var r = require("./183");
+var i = require("../1433/253");
 var o = /(?:[Eec]{1,6}|G{1,5}|[Qq]{1,5}|(?:[yYur]+|U{1,5})|[ML]{1,5}|d{1,2}|D{1,3}|F{1}|[abB]{1,5}|[hkHK]{1,2}|w{1,2}|W{1}|m{1,2}|s{1,2}|[zZOvVxX]{1,4})(?=([^']*'[^']*')*[^']*$)/g;
 function a(e) {
   var t = {};
@@ -404,7 +404,8 @@ var p = function (e, t) {
   var Z = Se("optional whitespace");
   var ee = Se("number");
   var te = Ce("-", !1);
-  var ne = (Se("apostrophe"), Se("double apostrophes"));
+  Se("apostrophe");
+  var ne = Se("double apostrophes");
   var re = Ce("''", !1);
   var ie = function (e) {
     return "<" !== e && "{" !== e && !(ot() && "#" === e) && !(it.length > 1 && "}" === e);
@@ -2406,3 +2407,4 @@ function A(e, t) {
   }
   return n;
 }
+export default A;

@@ -1,4 +1,4 @@
-import * as r from "../1626/167";
+var r = require("../1626/167");
 var o = /#|\.prototype\./;
 var i = function (e, t) {
   var n = s[a(e)];

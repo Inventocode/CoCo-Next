@@ -1,5 +1,9 @@
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.en = void 0;
 exports.en = {
   DUPLICATE_BLOCK: "Copy",
   COPY_ALL: "Copy %1 Blocks",

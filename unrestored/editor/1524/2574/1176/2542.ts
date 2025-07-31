@@ -1,10 +1,14 @@
 "use strict";
 
-import * as r from "../4/127";
-import * as o from "../125/534";
-import * as i from "../125/294";
-import * as a from "../125/index";
-import * as s from "./2540/579";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.init_text_blocks = void 0;
+var r = require("../4/127");
+var o = require("../125/534");
+var i = require("../125/294");
+var a = require("../125/index");
+var s = require("./2540/579");
 exports.init_text_blocks = function (e) {
   e.define_blocks_with_json_array([{
     type: "text_select",

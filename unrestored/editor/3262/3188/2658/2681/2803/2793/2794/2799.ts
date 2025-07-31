@@ -1,5 +1,8 @@
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
 exports.prettifyTargets = function (e) {
   return Object.keys(e).reduce(function (t, n) {
     var r = e[n];
@@ -11,9 +14,9 @@ exports.prettifyTargets = function (e) {
     return t;
   }, {});
 };
-export { a as prettifyVersion };
-import * as r from "../../../../2691/2657";
-import * as i from "./2706";
+exports.prettifyVersion = a;
+var r = require("../../../../2691/2657");
+var i = require("./2706");
 function a(e) {
   if ("string" !== typeof e) {
     return e;

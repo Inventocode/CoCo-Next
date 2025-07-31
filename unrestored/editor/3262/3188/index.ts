@@ -1,8 +1,12 @@
 "use strict";
 
-import * as r from "./3189";
-import * as a from "./1184/index";
-import * as i from "./2658/index";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.default = void 0;
+var r = require("./3189");
+var a = require("./1184/index");
+var i = require("./2658/index");
 var o = (0, r.declare)(function (e) {
   function t(e, t) {
     for (var n = t.arguments[0].properties, r = !0, a = 0; a < n.length; a++) {
@@ -80,4 +84,4 @@ var o = (0, r.declare)(function (e) {
     }
   };
 });
-export default o;
+exports.default = o;

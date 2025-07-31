@@ -1,16 +1,16 @@
 "use strict";
 
-import * as r from "../1626/86/index";
-import * as o from "../1626/167";
-import * as i from "../1534/818";
-import * as a from "../1626/231";
-import * as s from "../1623/309";
-import * as c from "../1728/257";
-import * as l from "./707";
-import * as u from "./820/index";
-import * as d from "./821";
-import * as p from "../1735/247/index";
-import * as f from "../1727/629";
+var r = require("../1626/86/index");
+var o = require("../1626/167");
+var i = require("../1534/818");
+var a = require("../1626/231");
+var s = require("../1623/309");
+var c = require("../1728/257");
+var l = require("./707");
+var u = require("./820/index");
+var d = require("./821");
+var p = require("../1735/247/index");
+var f = require("../1727/629");
 var h = p("isConcatSpreadable");
 var m = f >= 51 || !o(function () {
   var e = [];

@@ -1,13 +1,13 @@
 "use strict";
 
-import * as r from "../1626/86/index";
-import * as o from "../1534/530";
-import * as i from "./1233";
-import * as a from "../1626/167";
-import * as s from "../1250/472";
-import * as c from "../1676/942";
-import * as l from "./1236";
-import * as u from "../1738/398";
+var r = require("../1626/86/index");
+var o = require("../1534/530");
+var i = require("./1233");
+var a = require("../1626/167");
+var s = require("../1250/472");
+var c = require("../1676/942");
+var l = require("./1236");
+var u = require("../1738/398");
 if (r({
   target: "Promise",
   proto: !0,

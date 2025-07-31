@@ -1,7 +1,7 @@
-import * as r from "./837";
-import * as i from "./1970";
+var r = require("./837");
+var i = require("./1970");
 var o = require("./1299").ArraySet;
-import * as a from "./1298/index";
+var a = require("./1298/index");
 var s = require("./1971").quickSort;
 function c(e, t) {
   var n = e;
@@ -185,7 +185,7 @@ c.prototype.allGeneratedPositionsFor = function (e) {
   }
   return o;
 };
-export { c as SourceMapConsumer };
+exports.SourceMapConsumer = c;
 u.prototype = Object.create(c.prototype);
 u.prototype.consumer = c;
 u.prototype._findSourceIndex = function (e) {
@@ -407,7 +407,7 @@ u.prototype.generatedPositionFor = function (e) {
     lastColumn: null
   };
 };
-export { u as BasicSourceMapConsumer };
+exports.BasicSourceMapConsumer = u;
 f.prototype = Object.create(c.prototype);
 f.prototype.constructor = c;
 f.prototype._version = 3;
@@ -510,4 +510,4 @@ f.prototype._parseMappings = function (e, t) {
   s(this.__generatedMappings, r.compareByGeneratedPositionsDeflated);
   s(this.__originalMappings, r.compareByOriginalPositions);
 };
-export { f as IndexedSourceMapConsumer };
+exports.IndexedSourceMapConsumer = f;

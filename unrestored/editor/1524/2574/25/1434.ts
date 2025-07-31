@@ -6,3 +6,4 @@ function r(e) {
   }
 }
 export { r as a };
+export default r;

@@ -22,17 +22,17 @@ Object.defineProperty(r, "Mongo", {
     return G;
   }
 });
-import * as i from "../../36/483/39";
-import * as o from "./265";
-import * as a from "./364";
-import * as s from "./720/index";
-import * as c from "./764/index";
-import * as u from "./350";
-import * as l from "./218";
+var i = require("../../36/483/39");
+var o = require("./265");
+var a = require("./364");
+var s = require("./720/index");
+var c = require("./764/index");
+var u = require("./350");
+var l = require("./218");
 var f = Object(a.b)();
-import * as h from "./521";
-import * as d from "./925";
-import * as p from "./1165";
+var h = require("./521");
+var d = require("./925");
+var p = require("./1165");
 var _ = function (e, t, n) {
   var r;
   return function (i) {
@@ -543,9 +543,9 @@ function C(e, t) {
 function O(e) {
   return "number" === typeof e && isFinite(e);
 }
-import * as S from "./736";
-import * as k from "./1501/index";
-import * as T from "./316";
+var S = require("./736");
+var k = require("./1501/index");
+var T = require("./316");
 var B = {
   traceFetch: !0,
   traceXHR: !0,
@@ -909,7 +909,7 @@ function M(e, t) {
     }) : e;
   });
 }
-import * as j from "./435/index";
+var j = require("./435/index");
 var L = function () {
   function e(t) {
     if (void 0 === t) {
@@ -1129,3 +1129,4 @@ var z = Object(i.a)(Object(i.a)({}, r), {
   BrowserTracing: R
 });
 Object(s.a)();
+export default z;

@@ -1,11 +1,11 @@
-import * as r from "../../../1436/1830/1083/index";
-import * as i from "./1283/index";
-import * as o from "./1876/index";
-import * as a from "./1879";
-import * as s from "../../../1435/1772/959/index";
-import * as c from "../../../1435/1772/834";
-import * as u from "../../../1435/1772/957/index";
-import * as l from "../../../1436/1830/1833/1089/index";
+var r = require("../../../1436/1830/1083/index");
+var i = require("./1283/index");
+var o = require("./1876/index");
+var a = require("./1879");
+var s = require("../../../1435/1772/959/index");
+var c = require("../../../1435/1772/834");
+var u = require("../../../1435/1772/957/index");
+var l = require("../../../1436/1830/1833/1089/index");
 var f = "[object Object]";
 var h = Object.prototype.hasOwnProperty;
 module.exports = function (e, t, n, d, p, _) {

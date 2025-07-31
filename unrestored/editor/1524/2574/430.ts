@@ -6,3 +6,4 @@ function r(e, t) {
   e.__proto__ = t;
 }
 export { r as a };
+export default r;

@@ -191,10 +191,10 @@ Object.defineProperty(f, "setBlockGroupSnippet", {
     return ve;
   }
 });
-import * as h from "../25/index";
-import * as m from "../17/index";
-import * as g from "../9";
-import * as _ from "../4/index";
+var h = require("../25/index");
+var m = require("../17/index");
+var g = require("../9");
+var _ = require("../4/index");
 function v(e) {
   e.insertBlockProfile("phone_vibrate", {
     type: "phone_vibrate",
@@ -285,7 +285,7 @@ function y(e) {
   });
 }
 var E;
-import * as O from "../46/index";
+var O = require("../46/index");
 function w(e, t) {
   var n = "%{BKY_BLOCK_TAB_ICON}";
   e.insertBlockProfile("screen_on_open", {
@@ -986,7 +986,7 @@ var L;
 var P;
 var B;
 var F;
-import * as G from "../323";
+var G = require("../323");
 var U = '<shadow type="math_number"><field name="NUM" constraints="1,,1">1</field></shadow>';
 function W(e, t) {
   function n(e) {
@@ -2420,7 +2420,7 @@ function ne(e) {
   e.GREATER_THAN = "GT";
   e.GREATER_THAN_OR_EQUAL = "GTE";
 })(F || (F = {}));
-import * as re from "./173";
+var re = require("./173");
 function oe(e) {
   e.insertBlockProfile("procedures_2_param_block", {
     type: "procedures_2_param_block",
@@ -2588,10 +2588,10 @@ function ce(e) {
     return a && r && o ? Object(_.s)("getDateOperation", [r, o, Object(_.o)(a)]) : "";
   });
 }
-import * as le from "../36/index";
-import * as ue from "../121/index";
-import * as de from "../15/index";
-import * as pe from "../35/85";
+var le = require("../36/index");
+var ue = require("../121/index");
+var de = require("../15/index");
+var pe = require("../35/85");
 function fe(e, t) {
   var n;
   if (Array.isArray(e)) {
@@ -2651,8 +2651,8 @@ function he(e, t) {
     }] : [n, String(t.value)];
   });
 }
-import * as me from "./541";
-import * as ge from "./652";
+var me = require("./541");
+var ge = require("./652");
 function _e(e, t) {
   !function (e, t) {
     var n = {
@@ -4405,16 +4405,16 @@ var be = {
     CLOUD_TABLE_CLEAR_ALL_TOOLTIP: "\u6e05\u7a7a\u4e91\u6570\u636e\u8868\u6240\u6709\u6570\u636e\uff0c\u4e0d\u53ef\u64a4\u9500\u3002"
   }
 };
-import * as ye from "../6";
-import * as Ee from "../27";
-import * as Oe from "../40";
-import * as we from "./224";
-import * as Ce from "./203";
-import * as Te from "../57/index";
-import * as Se from "../58/index";
-import * as Ie from "./326";
-import * as Ae from "../125/index";
-import * as je from "./480";
+var ye = require("../6");
+var Ee = require("../27");
+var Oe = require("../40");
+var we = require("./224");
+var Ce = require("./203");
+var Te = require("../57/index");
+var Se = require("../58/index");
+var Ie = require("./326");
+var Ae = require("../125/index");
+var je = require("./480");
 var Ne = function (e) {
   Object(Te.a)(n, e);
   var t = Object(Se.a)(n);
@@ -4603,7 +4603,7 @@ var Ne = function (e) {
   return n;
 }(Ie.FieldNumber);
 Ne.field_type = "field_coco_number_dropdown";
-import * as Re from "../135";
+var Re = require("../135");
 var ke = Ie.FieldNumber.prototype.show_editor;
 Ie.FieldNumber.prototype.show_editor = function () {
   var e = this;
@@ -4662,10 +4662,10 @@ Ie.FieldNumber.prototype.set_value = function (e) {
     });
   }
 };
-import * as De from "./374";
-import * as Me from "./500";
-import * as Le from "../38/index";
-import * as Pe from "../2/index";
+var De = require("./374");
+var Me = require("./500");
+var Le = require("../38/index");
+var Pe = require("../2/index");
 var Be = De.FieldTextInput.prototype.show_editor;
 De.FieldTextInput.prototype.show_editor = function () {
   var e;
@@ -4692,7 +4692,7 @@ De.FieldTextInput.prototype.get_display_text = function () {
   }
   return Me.Field.prototype.get_display_text.call(this);
 };
-import * as Fe from "./726";
+var Fe = require("./726");
 Fe.FieldColour.prototype.show_editor = function () {
   var e;
   var t = this;
@@ -4730,7 +4730,7 @@ Fe.FieldColour.prototype.show_editor = function () {
   Object(O.c)().dispatchAction(d);
 };
 var Ge;
-import * as Ue from "../21/index";
+var Ue = require("../21/index");
 function We() {
   var e = this;
   this.set_on_block_change(function (t) {

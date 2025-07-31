@@ -1,5 +1,8 @@
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
 exports.assertAnyTypeAnnotation = function (e, t) {
   i("AnyTypeAnnotation", e, t);
 };
@@ -898,7 +901,7 @@ exports.assertWithStatement = function (e, t) {
 exports.assertYieldExpression = function (e, t) {
   i("YieldExpression", e, t);
 };
-import * as r from "./2660";
+var r = require("./2660");
 function i(e, t, n) {
   if (!(0, r.default)(e, t, n)) {
     throw new Error('Expected type "'.concat(e, '" with option ').concat(JSON.stringify(n), ", ") + 'but instead got "'.concat(t.type, '".'));

@@ -67,9 +67,6 @@ unpack({
             searchPath: /^video\/react$/,
             replace: "video-react"
         }, {
-            searchPath: /^to\/camel\/case$/,
-            replace: "to-camel-case"
-        }, {
             searchPath: /^sa\/sdk\/javascript$/,
             replace: "sa-sdk-javascript"
         }, {

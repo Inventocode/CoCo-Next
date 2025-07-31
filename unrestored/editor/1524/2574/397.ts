@@ -17,6 +17,9 @@ function a(e, t, n) {
 function s(e, t) {
   a(i, e, t);
 }
-exports.a = function (e, t) {
+var _a;
+_a = function (e, t) {
   a(o, e, t);
 };
+export { _a as a };
+export default _a;

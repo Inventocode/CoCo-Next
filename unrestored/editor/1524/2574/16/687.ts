@@ -1,6 +1,6 @@
 "use strict";
 
-import * as r from "../242/index";
+var r = require("../242/index");
 var i = {
   childContextTypes: !0,
   contextType: !0,

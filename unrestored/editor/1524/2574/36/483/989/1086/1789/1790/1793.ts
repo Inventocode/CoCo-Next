@@ -1,4 +1,4 @@
-import * as r from "./1791/955";
+var r = require("./1791/955");
 var i = Object.prototype.hasOwnProperty;
 module.exports = function (e) {
   var t = this.__data__;

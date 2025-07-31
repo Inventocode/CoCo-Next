@@ -1,13 +1,17 @@
 "use strict";
 
-import * as r from "./2644";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.PLACEHOLDERS_FLIPPED_ALIAS = exports.PLACEHOLDERS_ALIAS = exports.PLACEHOLDERS = void 0;
+var r = require("./2644");
 var a = ["Identifier", "StringLiteral", "Expression", "Statement", "Declaration", "BlockStatement", "ClassBody", "Pattern"];
-export { a as PLACEHOLDERS };
+exports.PLACEHOLDERS = a;
 var i = {
   Declaration: ["Statement"],
   Pattern: ["PatternLike", "LVal"]
 };
-export { i as PLACEHOLDERS_ALIAS };
+exports.PLACEHOLDERS_ALIAS = i;
 for (var o = 0, s = a; o < s.length; o++) {
   var u = s[o];
   var l = r.ALIAS_KEYS[u];
@@ -16,7 +20,7 @@ for (var o = 0, s = a; o < s.length; o++) {
   }
 }
 var p = {};
-export { p as PLACEHOLDERS_FLIPPED_ALIAS };
+exports.PLACEHOLDERS_FLIPPED_ALIAS = p;
 Object.keys(i).forEach(function (e) {
   i[e].forEach(function (t) {
     if (!Object.hasOwnProperty.call(p, t)) {

@@ -1,10 +1,33 @@
 "use strict";
 
-import * as r from "../0/index";
-import * as o from "../0/index";
-import * as i from "../8";
-import * as a from "../8";
-var s = (require("./829"), function (e) {
+var r = require("../0/index");
+var o = (module => {
+  var defaultExport = module && module.__esModule ? function () {
+    return module.default;
+  } : function () {
+    return module;
+  };
+  Object.defineProperty(defaultExport, "a", {
+    enumerable: true,
+    get: defaultExport
+  });
+  return defaultExport;
+})(r);
+var i = require("../8");
+var a = (module => {
+  var defaultExport = module && module.__esModule ? function () {
+    return module.default;
+  } : function () {
+    return module;
+  };
+  Object.defineProperty(defaultExport, "a", {
+    enumerable: true,
+    get: defaultExport
+  });
+  return defaultExport;
+})(i);
+require("./829");
+var s = function (e) {
   var t = e.type;
   var n = e.className;
   var r = e.spinning;
@@ -42,6 +65,7 @@ var s = (require("./829"), function (e) {
     "aria-hidden": "true",
     focusable: "false"
   }, l));
-});
+};
 s.displayName = "IconFont";
 export { s as a };
+export default s;

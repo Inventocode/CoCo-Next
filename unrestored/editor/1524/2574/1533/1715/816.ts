@@ -1,6 +1,6 @@
-import * as r from "../935/437";
-import * as o from "../1728/257";
-import * as i from "../1728/706";
+var r = require("../935/437");
+var o = require("../1728/257");
+var i = require("../1728/706");
 var a = function (e) {
   return function (t, n, a) {
     var s;

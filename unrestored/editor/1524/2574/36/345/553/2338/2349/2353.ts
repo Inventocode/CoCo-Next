@@ -1,5 +1,5 @@
-import * as r from "../717";
-import * as i from "../716";
+var r = require("../717");
+var i = require("../716");
 function o(e) {
   this.mode = r.KANJI;
   this.data = e;

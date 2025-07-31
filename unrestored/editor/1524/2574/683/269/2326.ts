@@ -1,7 +1,10 @@
 "use strict";
 
-import * as r from "./2330/498";
-import * as i from "./645";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+var r = require("./2330/498");
+var i = require("./645");
 exports.tagged = function (e, t) {
   return function (n, o, a) {
     var s = new r.Metadata(e, t);

@@ -1,8 +1,12 @@
 "use strict";
 
-import * as r from "./387";
-import * as i from "../../301/173";
-import * as o from "../../1035/754";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.rename_procedures_in_json = exports.delete_from_json = exports.load_from_json = void 0;
+var r = require("./387");
+var i = require("../../301/173");
+var o = require("../../1035/754");
 function a(e, t) {
   return e.fields[t];
 }
@@ -192,4 +196,4 @@ exports.delete_from_json = function (e, t) {
   });
   return n;
 };
-export { c as rename_procedures_in_json };
+exports.rename_procedures_in_json = c;

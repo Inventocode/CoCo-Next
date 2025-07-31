@@ -1,7 +1,11 @@
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.init_extensions = void 0;
 var r = (0, require("../1000/93").__importStar)(require("../17/533"));
-import * as o from "../17/497/644";
+var o = require("../17/497/644");
 exports.init_extensions = function (e) {
   e.extensions.register("parent_tooltip_when_inline", function () {
     var e = this;

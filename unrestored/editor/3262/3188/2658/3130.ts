@@ -1,6 +1,6 @@
 "use strict";
 
-import * as r from "../../../1524/2574/1/index";
+var r = require("../../../1524/2574/1/index");
 function i() {
   var e = require("./3131/2638");
   i = function () {
@@ -8,8 +8,12 @@ function i() {
   };
   return e;
 }
-import * as a from "./2681/index";
-import * as s from "./3119/2804/index";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.transformFromAstSync = exports.transformFromAstAsync = exports.transformFromAst = void 0;
+var a = require("./2681/index");
+var s = require("./3119/2804/index");
 var o = i()(r.mark(function e(t, n, i) {
   var o;
   return r.wrap(function (e) {
@@ -47,6 +51,6 @@ exports.transformFromAst = function (e, t, n, r) {
   o.errback(e, t, n, r);
 };
 var l = o.sync;
-export { l as transformFromAstSync };
+exports.transformFromAstSync = l;
 var u = o.async;
-export { u as transformFromAstAsync };
+exports.transformFromAstAsync = u;

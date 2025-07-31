@@ -1,5 +1,5 @@
-import * as r from "./1813";
-import * as i from "./1267";
+var r = require("./1813");
+var i = require("./1267");
 var o = Object.prototype.propertyIsEnumerable;
 var a = Object.getOwnPropertySymbols;
 var s = a ? function (e) {

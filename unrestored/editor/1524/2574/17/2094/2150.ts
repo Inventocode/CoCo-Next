@@ -1,16 +1,20 @@
 "use strict";
 
-import * as r from "../../1000/93";
-import * as i from "../../1000/134/index";
-import * as o from "../../125/259";
-import * as a from "../../4/127";
-import * as s from "../../125/195/index";
-import * as c from "../497/644";
-import * as u from "../../125/294";
-import * as l from "../../125/index";
-import * as f from "../497/960";
-import * as h from "../../1000/213/index";
-import * as d from "../../125/474";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.WorkspaceSvg = void 0;
+var r = require("../../1000/93");
+var i = require("../../1000/134/index");
+var o = require("../../125/259");
+var a = require("../../4/127");
+var s = require("../../125/195/index");
+var c = require("../497/644");
+var u = require("../../125/294");
+var l = require("../../125/index");
+var f = require("../497/960");
+var h = require("../../1000/213/index");
+var d = require("../../125/474");
 var p = function () {
   function e(e, t, n, r) {
     this.connectionDBList = [];
@@ -593,7 +597,11 @@ var p = function () {
         y: 0
       };
     }
-    for (var c = a(e[0]), u = t.x - c.x, f = t.y - c.y, h = (o = 1, e.length); o < h; o++) {
+    for (o = 1, c = a(e[0]), u = t.x - c.x, f = t.y - c.y, h = e.length, void 0; o < h; o++) {
+      var c;
+      var u;
+      var f;
+      var h;
       var d = e[o];
       var p = a(e[o]);
       var _ = {
@@ -1615,4 +1623,4 @@ var p = function () {
   (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.Grid)], e.prototype, "grid_factory", void 0);
   return e = t = (0, r.__decorate)([(0, i.injectable)()], e);
 }();
-export { p as WorkspaceSvg };
+exports.WorkspaceSvg = p;

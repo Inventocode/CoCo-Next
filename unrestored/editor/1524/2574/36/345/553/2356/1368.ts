@@ -49,11 +49,11 @@ exports.getScale = function (e, t) {
   return t.width && t.width >= e + 2 * t.margin ? t.width / (e + 2 * t.margin) : t.scale;
 };
 exports.getImageWidth = function (e, n) {
-  var r = t.getScale(e, n);
+  var r = exports.getScale(e, n);
   return Math.floor((e + 2 * n.margin) * r);
 };
 exports.qrToImageData = function (e, n, r) {
-  for (var i = n.modules.size, o = n.modules.data, a = t.getScale(i, r), s = Math.floor((i + 2 * r.margin) * a), c = r.margin * a, u = [r.color.light, r.color.dark], l = 0; l < s; l++) {
+  for (var i = n.modules.size, o = n.modules.data, a = exports.getScale(i, r), s = Math.floor((i + 2 * r.margin) * a), c = r.margin * a, u = [r.color.light, r.color.dark], l = 0; l < s; l++) {
     for (var f = 0; f < s; f++) {
       var h = 4 * (l * s + f);
       var d = r.color.light;

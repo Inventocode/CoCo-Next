@@ -1,6 +1,6 @@
 "use strict";
 
-import * as r from "../1138";
+var r = require("../1138");
 var i = Object.prototype.hasOwnProperty;
 var o = Array.isArray;
 var a = function () {

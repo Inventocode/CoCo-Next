@@ -86,7 +86,8 @@ module.exports = function (e, t, n) {
         for (var B, D = -1, I = T.length - 1; D < I;) {
           B = T[D += 1];
           var F = e.util.getProperty(B);
-          var R = (O = e.util.escapeQuotes(B), l + F);
+          O = e.util.escapeQuotes(B);
+          var R = l + F;
           if (e.opts._errorDataPathProperty) {
             e.errorPath = e.util.getPath(y, B, e.opts.jsonPointers);
           }

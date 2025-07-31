@@ -1,11 +1,15 @@
 "use strict";
 
-Object.defineProperty(t, "DraggableCore", {
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+Object.defineProperty(exports, "DraggableCore", {
   enumerable: !0,
   get: function () {
     return u.default;
   }
 });
+exports.default = void 0;
 var r = function (e) {
   if (e && e.__esModule) {
     return e;
@@ -38,9 +42,9 @@ var r = function (e) {
 var o = p(require("../../50/index"));
 var i = p(require("../../75/index"));
 var a = p(require("../../8"));
-import * as s from "./1048/index";
-import * as c from "./1186";
-import * as l from "./927";
+var s = require("./1048/index");
+var c = require("./1186");
+var l = require("./927");
 var u = p(require("./1509"));
 var d = p(require("./1187"));
 function p(e) {
@@ -431,14 +435,17 @@ var j = function (e) {
     value: function () {
       var e;
       var t = this.props;
-      var n = (t.axis, t.bounds, t.children);
+      t.axis;
+      t.bounds;
+      var n = t.children;
       var o = t.defaultPosition;
       var i = t.defaultClassName;
       var l = t.defaultClassNameDragging;
       var d = t.defaultClassNameDragged;
       var p = t.position;
       var f = t.positionOffset;
-      var h = (t.scale, g(t, ["axis", "bounds", "children", "defaultPosition", "defaultClassName", "defaultClassNameDragging", "defaultClassNameDragged", "position", "positionOffset", "scale"]));
+      t.scale;
+      var h = g(t, ["axis", "bounds", "children", "defaultPosition", "defaultClassName", "defaultClassNameDragging", "defaultClassNameDragged", "position", "positionOffset", "scale"]);
       var _ = {};
       var v = null;
       var b = !Boolean(p) || this.state.dragging;
@@ -466,7 +473,7 @@ var j = function (e) {
   }]);
   return n;
 }(r.Component);
-export default j;
+exports.default = j;
 A(j, "displayName", "Draggable");
 A(j, "propTypes", y(y({}, u.default.propTypes), {}, {
   axis: o.default.oneOf(["both", "x", "y", "none"]),

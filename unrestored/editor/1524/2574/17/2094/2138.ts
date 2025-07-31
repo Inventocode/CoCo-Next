@@ -1,13 +1,17 @@
 "use strict";
 
-import * as r from "../../1000/93";
-import * as i from "../../1000/134/index";
-import * as o from "../../125/259";
-import * as a from "../../125/195/index";
-import * as s from "../../4/127";
-import * as c from "../../1000/213/index";
-import * as u from "../../206/725/387";
-import * as l from "../../125/294";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.Xml = void 0;
+var r = require("../../1000/93");
+var i = require("../../1000/134/index");
+var o = require("../../125/259");
+var a = require("../../125/195/index");
+var s = require("../../4/127");
+var c = require("../../1000/213/index");
+var u = require("../../206/725/387");
+var l = require("../../125/294");
 var f = (0, r.__importStar)(require("../../125/index"));
 var h = function () {
   function e() {
@@ -659,4 +663,4 @@ var h = function () {
   (0, r.__decorate)([(0, s.lazy_inject)(s.BINDING.CreateEvent)], e.prototype, "create_event_factory", void 0);
   return e = (0, r.__decorate)([(0, i.injectable)()], e);
 }();
-export { h as Xml };
+exports.Xml = h;

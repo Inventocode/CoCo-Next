@@ -1,5 +1,8 @@
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
 var r = function () {
   function e(e, t) {
     for (var n = 0; n < t.length; n++) {
@@ -164,5 +167,5 @@ var s = function () {
   return e;
 }();
 s.MiniSignalBinding = o;
-export default s;
-module.exports = t.default;
+exports.default = s;
+module.exports = exports.default;

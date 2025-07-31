@@ -1,5 +1,9 @@
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.Saturation = void 0;
 var r = function () {
   function e(e, t) {
     for (var n = 0; n < t.length; n++) {
@@ -22,7 +26,7 @@ var r = function () {
     return t;
   };
 }();
-import * as i from "../../../0/index";
+var i = require("../../../0/index");
 var o = u(i);
 var a = u(require("../../784/104/index"));
 var s = u(require("./2519/index"));
@@ -191,4 +195,4 @@ var l = exports.Saturation = function (e) {
   }]);
   return t;
 }(i.PureComponent || i.Component);
-export default l;
+exports.default = l;

@@ -28,3 +28,4 @@ function c(e, t) {
   }
   return n;
 }
+export default r;

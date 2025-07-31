@@ -1,13 +1,17 @@
 "use strict";
 
-import * as r from "../1000/93";
-import * as i from "../1000/134/index";
-import * as o from "../4/127";
-import * as a from "../125/195/index";
-import * as s from "../125/534";
-import * as c from "../125/294";
-import * as u from "../125/index";
-import * as l from "../17/497/index";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.FieldNumber = void 0;
+var r = require("../1000/93");
+var i = require("../1000/134/index");
+var o = require("../4/127");
+var a = require("../125/195/index");
+var s = require("../125/534");
+var c = require("../125/294");
+var u = require("../125/index");
+var l = require("../17/497/index");
 var f = function (e) {
   function t(t) {
     var n = e.call(this, {
@@ -277,4 +281,4 @@ var f = function (e) {
   (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.color_controller)], t.prototype, "color_controller", void 0);
   return t = n = (0, r.__decorate)([(0, i.injectable)()], t);
 }(require("./374").FieldTextInput);
-export { f as FieldNumber };
+exports.FieldNumber = f;

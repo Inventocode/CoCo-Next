@@ -26,7 +26,7 @@ module.exports = {
     }
   },
   isErrorSeverity: function (t) {
-    return 2 === e.exports.getRuleSeverity(t);
+    return 2 === module.exports.getRuleSeverity(t);
   },
   isValidSeverity: function (e) {
     var t = Array.isArray(e) ? e[0] : e;

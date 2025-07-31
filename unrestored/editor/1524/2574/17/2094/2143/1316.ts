@@ -1,6 +1,10 @@
 "use strict";
 
-import * as r from "../../../125/index";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.BaseNode = void 0;
+var r = require("../../../125/index");
 var i = function () {
   function e(e) {
     this.children_ = [];
@@ -109,4 +113,4 @@ var i = function () {
   };
   return e;
 }();
-export { i as BaseNode };
+exports.BaseNode = i;

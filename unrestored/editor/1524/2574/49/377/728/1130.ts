@@ -6,37 +6,41 @@ var o;
 var a;
 var s;
 var c;
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.EventType = exports.is_drop_op = exports.is_pick_op = exports.is_drop_operation = exports.is_pick_operation = exports.is_path_5 = exports.is_path_4 = exports.is_path_3 = exports.is_path_2 = exports.is_path_5_array = exports.is_path_4_array = exports.is_path_3_array = exports.is_path_2_array = exports.PathParams5 = exports.PathParams4 = exports.PathParams3 = exports.PathParams2 = exports.Field_Type = exports.Target_Type = void 0;
 (function (e) {
   e[e.blocks = 0] = "blocks";
   e[e.connections = 1] = "connections";
   e[e.comments = 2] = "comments";
-})(r = t.Target_Type || (exports.Target_Type = {}));
+})(r = exports.Target_Type || (exports.Target_Type = {}));
 (function (e) {
   e[e.shadows = 0] = "shadows";
   e[e.fields = 1] = "fields";
-})(i = t.Field_Type || (exports.Field_Type = {}));
+})(i = exports.Field_Type || (exports.Field_Type = {}));
 (function (e) {
   e[e.TARGET = 0] = "TARGET";
   e[e.ID = 1] = "ID";
-})(o = t.PathParams2 || (exports.PathParams2 = {}));
+})(o = exports.PathParams2 || (exports.PathParams2 = {}));
 (function (e) {
   e[e.TARGET = 0] = "TARGET";
   e[e.ID = 1] = "ID";
   e[e.PROPERTY = 2] = "PROPERTY";
-})(a = t.PathParams3 || (exports.PathParams3 = {}));
+})(a = exports.PathParams3 || (exports.PathParams3 = {}));
 (function (e) {
   e[e.BLOCK = 0] = "BLOCK";
   e[e.ID = 1] = "ID";
   e[e.PROPERTY = 2] = "PROPERTY";
   e[e.PROPERTY_NAME = 3] = "PROPERTY_NAME";
-})(s = t.PathParams4 || (exports.PathParams4 = {}));
+})(s = exports.PathParams4 || (exports.PathParams4 = {}));
 (function (e) {
   e[e.BLOCK = 0] = "BLOCK";
   e[e.ID = 1] = "ID";
   e[e.PROPERTY = 2] = "PROPERTY";
   e[e.PROPERTY_NAME = 3] = "PROPERTY_NAME";
   e[e.FIELD_ATTR = 4] = "FIELD_ATTR";
-})(c = t.PathParams5 || (exports.PathParams5 = {}));
+})(c = exports.PathParams5 || (exports.PathParams5 = {}));
 exports.is_path_2_array = function (e) {
   return 2 === e.length && e[o.TARGET] in r && "string" === typeof e[o.ID];
 };
@@ -93,4 +97,4 @@ exports.is_drop_op = function (e) {
   e.EDIT_COMMENT = "edit_comment";
   e.CHANGE_COMMENT_COLOR = "change_comment_color";
   e.RESIZE_COMMENT = "resize_comment";
-})(t.EventType || (exports.EventType = {}));
+})(exports.EventType || (exports.EventType = {}));

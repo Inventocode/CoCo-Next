@@ -1,7 +1,7 @@
 "use strict";
 
 export { s as a };
-import * as r from "./394";
+var r = require("./394");
 var i = Object(r.e)();
 var o = "Sentry Logger ";
 var a = function () {
@@ -48,3 +48,4 @@ var a = function () {
 }();
 i.__SENTRY__ = i.__SENTRY__ || {};
 var s = i.__SENTRY__.logger || (i.__SENTRY__.logger = new a());
+export default s;

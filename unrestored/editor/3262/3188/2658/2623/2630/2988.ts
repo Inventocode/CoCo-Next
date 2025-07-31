@@ -1,6 +1,9 @@
 "use strict";
 
-export default (function () {
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.default = function () {
   var e = this;
   var t = r.BUILDER_KEYS[e];
   var n = arguments.length;
@@ -23,6 +26,6 @@ export default (function () {
   }
   for (var c in a) (0, i.default)(a, c, a[c]);
   return a;
-});
-import * as r from "../2634/index";
-import * as i from "../2700";
+};
+var r = require("../2634/index");
+var i = require("../2700");

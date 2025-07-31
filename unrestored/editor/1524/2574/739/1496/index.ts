@@ -1,25 +1,36 @@
 "use strict";
 
-import * as r from "../../19";
-import * as i from "../../108";
-import * as o from "../../20";
-import * as a from "../../54";
-import * as s from "../../0/index";
-import * as c from "../../95";
-import * as u from "../../96";
-import * as l from "../../103";
-import * as f from "../../120";
-import * as h from "../../140";
-import * as d from "../../75/index";
-import * as p from "../../75/index";
-import * as _ from "../../1025/413";
+var r = require("../../19");
+var i = require("../../108");
+var o = require("../../20");
+var a = require("../../54");
+var s = require("../../0/index");
+var c = require("../../95");
+var u = require("../../96");
+var l = require("../../103");
+var f = require("../../120");
+var h = require("../../140");
+var d = require("../../75/index");
+var p = (module => {
+  var defaultExport = module && module.__esModule ? function () {
+    return module.default;
+  } : function () {
+    return module;
+  };
+  Object.defineProperty(defaultExport, "a", {
+    enumerable: true,
+    get: defaultExport
+  });
+  return defaultExport;
+})(d);
+var _ = require("../../1025/413");
 function A(e, t) {
   return !!e && e.contains(t);
 }
-import * as g from "./1008";
-import * as v from "../../1025/690";
-import * as m from "./915";
-import * as y from "../../2617/462";
+var g = require("./1008");
+var v = require("../../1025/690");
+var m = require("./915");
+var y = require("../../2617/462");
 var b = Object(s.forwardRef)(function (e, t) {
   var n = e.didUpdate;
   var r = e.getContainer;
@@ -49,13 +60,24 @@ var b = Object(s.forwardRef)(function (e, t) {
   }, []);
   return o.current ? p.a.createPortal(i, o.current) : null;
 });
-import * as w from "../../8";
-import * as E from "../../8";
+var w = require("../../8");
+var E = (module => {
+  var defaultExport = module && module.__esModule ? function () {
+    return module.default;
+  } : function () {
+    return module;
+  };
+  Object.defineProperty(defaultExport, "a", {
+    enumerable: true,
+    get: defaultExport
+  });
+  return defaultExport;
+})(w);
 function x(e, t, n) {
   return n ? e[0] === t[0] : e[0] === t[0] && e[1] === t[1];
 }
-import * as C from "../../33/index";
-import * as O from "../../612/789/684";
+var C = require("../../33/index");
+var O = require("../../612/789/684");
 function S(e) {
   var t = e.prefixCls;
   var n = e.motion;
@@ -102,10 +124,21 @@ function k(e) {
     });
   });
 }
-import * as T from "../../1493/555/index";
-import * as B from "../../110";
-import * as D from "../../110";
-import * as I from "../../171";
+var T = require("../../1493/555/index");
+var B = require("../../110");
+var D = (module => {
+  var defaultExport = module && module.__esModule ? function () {
+    return module.default;
+  } : function () {
+    return module;
+  };
+  Object.defineProperty(defaultExport, "a", {
+    enumerable: true,
+    get: defaultExport
+  });
+  return defaultExport;
+})(B);
+var I = require("../../171");
 var F = ["measure", "align", null, "motion"];
 var R = s.forwardRef(function (e, t) {
   var n = e.visible;
@@ -1042,7 +1075,7 @@ var W = function (e) {
   };
   return t;
 }(b);
-import * as K from "../1009";
+var K = require("../1009");
 var X = function (e) {
   var t = e.overlay;
   var n = e.prefixCls;
@@ -1139,3 +1172,4 @@ var Y = function (e, t) {
 };
 var q = Object(s.forwardRef)(Y);
 export { q as a };
+export default q;

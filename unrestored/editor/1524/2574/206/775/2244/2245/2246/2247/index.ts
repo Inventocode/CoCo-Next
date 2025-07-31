@@ -1,14 +1,14 @@
 "use strict";
 
-import * as r from "../../../../../../../../3262/3188/2658/220";
-import * as i from "../../../../../../../../3262/3188/2658/230";
-import * as o from "./2248";
-import * as a from "./2249";
-import * as s from "./2250";
-import * as c from "./2251";
-import * as u from "../1116/index";
-import * as l from "./2252";
-import * as f from "./2253/index";
+var r = require("../../../../../../../../3262/3188/2658/220");
+var i = require("../../../../../../../../3262/3188/2658/230");
+var o = require("./2248");
+var a = require("./2249");
+var s = require("./2250");
+var c = require("./2251");
+var u = require("../1116/index");
+var l = require("./2252");
+var f = require("./2253/index");
 var h = function () {
   function e(t, n) {
     r(this, e);

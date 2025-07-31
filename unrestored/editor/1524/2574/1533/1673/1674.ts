@@ -1,4 +1,4 @@
-import * as r from "../1623/309";
+var r = require("../1623/309");
 var o = Math.floor;
 var i = "".replace;
 var a = /\$([$&'`]|\d{1,2}|<[^>]*>)/g;

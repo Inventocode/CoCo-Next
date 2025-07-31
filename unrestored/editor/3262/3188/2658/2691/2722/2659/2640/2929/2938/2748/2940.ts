@@ -1,7 +1,11 @@
 "use strict";
 
-import * as r from "../../../../../../../../../3190/624/index";
-import * as i from "../../../../../2624/index";
+var r = require("../../../../../../../../../3190/624/index");
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.nodes = exports.list = void 0;
+var i = require("../../../../../2624/index");
 var a = i.FLIPPED_ALIAS_KEYS;
 var s = i.isArrayExpression;
 var o = i.isAssignmentExpression;
@@ -121,7 +125,7 @@ var E = {
     }
   }
 };
-export { E as nodes };
+exports.nodes = E;
 E.ObjectProperty = E.ObjectTypeProperty = E.ObjectMethod = function (e, t) {
   if (t.properties[0] === e) {
     return {

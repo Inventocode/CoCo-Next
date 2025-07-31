@@ -1,11 +1,11 @@
-import * as r from "../1123/index";
-import * as i from "../1347/1124";
-import * as o from "./2300";
-import * as a from "../1347/1354";
-import * as s from "../1347/1355";
+var r = require("../1123/index");
+var i = require("../1347/1124");
+var o = require("./2300");
+var a = require("../1347/1354");
+var s = require("../1347/1355");
 var c = require("../844/index")("socket.io-client:socket");
-import * as u from "./965";
-import * as l from "./1350";
+var u = require("./965");
+var l = require("./1350");
 module.exports = d;
 var f = {
   connect: 1,

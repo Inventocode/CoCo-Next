@@ -1223,4 +1223,4 @@ ne.penner = _;
 ne.random = function (e, t) {
   return Math.floor(Math.random() * (t - e + 1)) + e;
 };
-export default ne;
+exports.default = ne;

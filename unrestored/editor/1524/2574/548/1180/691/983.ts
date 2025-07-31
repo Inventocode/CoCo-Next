@@ -1,12 +1,13 @@
 "use strict";
 
-import * as r from "../../../0/index";
-var i = (require("../../../50/index"), require("../100"));
-import * as o from "../../../19";
-import * as a from "../../../54";
-import * as s from "./1042";
-import * as c from "../701/index";
-import * as u from "./2580";
+var r = require("../../../0/index");
+require("../../../50/index");
+var i = require("../100");
+var o = require("../../../19");
+var a = require("../../../54");
+var s = require("./1042");
+var c = require("../701/index");
+var u = require("./2580");
 var l = Object(c.a)(function (e) {
   return {
     day: {
@@ -66,4 +67,4 @@ f.defaultProps = {
   current: !1,
   selected: !1
 };
-export { f as a };
+exports.a = f;

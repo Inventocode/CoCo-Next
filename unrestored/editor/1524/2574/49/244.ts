@@ -7,9 +7,9 @@ export { l as d };
 export { u as g };
 export { d as c };
 export { p as a };
-import * as r from "../11";
-import * as o from "../25/index";
-import * as i from "../1035/32/index";
+var r = require("../11");
+var o = require("../25/index");
+var i = require("../1035/32/index");
 function a(e) {
   for (var t = [], n = [], i = [], a = [{
       path: [],
@@ -92,3 +92,4 @@ function p() {
     return i.type.compose(e, t);
   }) : t[0];
 }
+export default p;

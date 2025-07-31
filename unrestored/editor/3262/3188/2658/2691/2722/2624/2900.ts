@@ -1,9 +1,12 @@
 "use strict";
 
-export default (function (e) {
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.default = function (e) {
   r.COMMENT_KEYS.forEach(function (t) {
     e[t] = null;
   });
   return e;
-});
-import * as r from "./2647";
+};
+var r = require("./2647");

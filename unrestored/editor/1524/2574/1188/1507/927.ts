@@ -1,5 +1,8 @@
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
 exports.findInArray = function (e, t) {
   for (var n = 0, r = e.length; n < r; n++) {
     if (t.apply(t, [e[n], n, e])) {

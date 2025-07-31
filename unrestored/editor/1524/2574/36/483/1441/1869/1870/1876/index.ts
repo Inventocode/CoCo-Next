@@ -1,9 +1,9 @@
-import * as r from "./954";
-import * as i from "./1272";
-import * as o from "../../../../1437/1087/831";
-import * as a from "../1283/index";
-import * as s from "./1877";
-import * as c from "./1878";
+var r = require("./954");
+var i = require("./1272");
+var o = require("../../../../1437/1087/831");
+var a = require("../1283/index");
+var s = require("./1877");
+var c = require("./1878");
 var u = r ? r.prototype : void 0;
 var l = u ? u.valueOf : void 0;
 module.exports = function (e, t, n, r, u, f, h) {

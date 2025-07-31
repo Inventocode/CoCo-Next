@@ -1,6 +1,9 @@
 "use strict";
 
-export default (function e(t, n) {
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.default = function e(t, n) {
   if ("object" !== typeof t || "object" !== typeof n || null == t || null == n) {
     return t === n;
   }
@@ -43,5 +46,5 @@ export default (function e(t, n) {
     }
   }
   return !0;
-});
-import * as r from "./2634/index";
+};
+var r = require("./2634/index");

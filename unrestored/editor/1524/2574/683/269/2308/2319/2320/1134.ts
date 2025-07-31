@@ -1,7 +1,10 @@
 "use strict";
 
-import * as r from "./1133";
-import * as i from "../../../1362";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+var r = require("./1133");
+var i = require("../../../1362");
 var o = function () {
   function e(e) {
     this._binding = e;
@@ -92,4 +95,4 @@ var o = function () {
   };
   return e;
 }();
-export { o as BindingWhenSyntax };
+exports.BindingWhenSyntax = o;

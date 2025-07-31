@@ -1,5 +1,5 @@
-import * as r from "../1676/421";
-import * as o from "../1738/310";
+var r = require("../1676/421");
+var o = require("../1738/310");
 var i = "[" + require("./1077/940") + "]";
 var a = RegExp("^" + i + i + "*");
 var s = RegExp(i + i + "*$");

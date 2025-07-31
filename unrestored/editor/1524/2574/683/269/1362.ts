@@ -1,7 +1,10 @@
 "use strict";
 
-import * as r from "./359";
-import * as i from "./2330/498";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+var r = require("./359");
+var i = require("./2330/498");
 exports.traverseAncerstors = function e(t, n) {
   var r = t.parentRequest;
   return null !== r && (!!n(r) || e(r, n));
@@ -15,9 +18,9 @@ var o = function (e) {
     return n;
   };
 };
-export { o as taggedConstraint };
+exports.taggedConstraint = o;
 var a = o(r.NAMED_TAG);
-export { a as namedConstraint };
+exports.namedConstraint = a;
 exports.typeConstraint = function (e) {
   return function (t) {
     var n = null;

@@ -1,6 +1,6 @@
 "use strict";
 
-import * as r from "./229";
+var r = require("./229");
 exports.a = function (e, t) {
   var n;
   if (void 0 === t) {

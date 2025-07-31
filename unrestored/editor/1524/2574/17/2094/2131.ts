@@ -1,11 +1,15 @@
 "use strict";
 
-import * as r from "../../1000/93";
-import * as i from "../../1000/134/index";
-import * as o from "../../4/127";
-import * as a from "../../125/index";
-import * as s from "../../1000/213/index";
-import * as c from "../497/840";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.Tooltip = void 0;
+var r = require("../../1000/93");
+var i = require("../../1000/134/index");
+var o = require("../../4/127");
+var a = require("../../125/index");
+var s = require("../../1000/213/index");
+var c = require("../497/840");
 var u = function () {
   function e() {
     this.visible = !1;
@@ -132,4 +136,4 @@ var u = function () {
   (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.widget_div)], e.prototype, "widget_div", void 0);
   return e = (0, r.__decorate)([(0, i.injectable)()], e);
 }();
-export { u as Tooltip };
+exports.Tooltip = u;

@@ -1,7 +1,7 @@
 "use strict";
 
 export { o as a };
-import * as r from "./28";
+var r = require("./28");
 function i(e, t) {
   var n = Object.keys(e);
   if (Object.getOwnPropertySymbols) {
@@ -34,3 +34,4 @@ function o(e) {
   }
   return e;
 }
+export default o;

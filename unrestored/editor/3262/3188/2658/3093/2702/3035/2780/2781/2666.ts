@@ -48,7 +48,7 @@ function s(e) {
     }
     n = r.path;
   }
-  for (var s, o = t.isAbsolute(n), l = n.split(/\/+/), u = 0, c = l.length - 1; c >= 0; c--) {
+  for (var s, o = exports.isAbsolute(n), l = n.split(/\/+/), u = 0, c = l.length - 1; c >= 0; c--) {
     if ("." === (s = l[c])) {
       l.splice(c, 1);
     } else {
@@ -72,9 +72,9 @@ function s(e) {
   }
   return r ? (r.path = n, a(r)) : n;
 }
-export { i as urlParse };
-export { a as urlGenerate };
-export { s as normalize };
+exports.urlParse = i;
+exports.urlGenerate = a;
+exports.normalize = s;
 exports.join = function (e, t) {
   if ("" === e) {
     e = ".";

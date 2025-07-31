@@ -1,6 +1,9 @@
 "use strict";
 
-import * as r from "../../../../../../../2873/2721/805/index";
+var r = require("../../../../../../../2873/2721/805/index");
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
 exports.findSuggestion = function (e, t) {
   var n = t.map(function (t) {
     return function (e, t) {

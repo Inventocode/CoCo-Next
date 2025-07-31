@@ -1,13 +1,16 @@
 "use strict";
 
-export default (function (e) {
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.default = function (e) {
   (0, i.default)(e.node, Object.assign({}, l, {
     noScope: !0
   }));
-});
-import * as r from "./3086/index";
-import * as i from "../../../2637/index";
-import * as a from "../../../2623/index";
+};
+var r = require("./3086/index");
+var i = require("../../../2637/index");
+var a = require("../../../2623/index");
 var s = a.numericLiteral;
 var o = a.unaryExpression;
 var l = i.default.visitors.merge([r.environmentVisitor, {

@@ -1,15 +1,25 @@
 "use strict";
 
 export { A as a };
-import * as r from "../../28";
-import * as i from "../../0/index";
-var o = (require("../../50/index"), require("../280"));
-import * as a from "./100";
-var s = (require("../../19"), require("../../54"), require("./701/index"));
-import * as c from "./270/index";
-import * as u from "./691/index";
-var l = (require("./982"), require("../../33/index"), require("./777/index"));
-var f = (require("../../95"), require("../../96"), require("../../322"), require("../../273"), require("../../120"), Object(s.a)({
+var r = require("../../28");
+var i = require("../../0/index");
+require("../../50/index");
+var o = require("../280");
+var a = require("./100");
+require("../../19");
+require("../../54");
+var s = require("./701/index");
+var c = require("./270/index");
+var u = require("./691/index");
+require("./982");
+require("../../33/index");
+var l = require("./777/index");
+require("../../95");
+require("../../96");
+require("../../322");
+require("../../273");
+require("../../120");
+var f = Object(s.a)({
   toolbar: {
     flexDirection: "column",
     alignItems: "flex-start"
@@ -22,7 +32,7 @@ var f = (require("../../95"), require("../../96"), require("../../322"), require
   }
 }, {
   name: "MuiPickersDatePickerRoot"
-}));
+});
 var h = function (e) {
   var t = e.date;
   var n = e.views;
@@ -122,3 +132,4 @@ var g = Object(c.g)({
 });
 A.defaultProps = p;
 g.defaultProps = p;
+export default A;

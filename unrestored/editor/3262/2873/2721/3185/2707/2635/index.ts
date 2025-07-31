@@ -1,24 +1,78 @@
 "use strict";
 
-export { ALIAS_KEYS } from "./2644";
-export { BUILDER_KEYS } from "./2644";
-export { DEPRECATED_KEYS } from "./2644";
-export { FLIPPED_ALIAS_KEYS } from "./2644";
-export { NODE_FIELDS } from "./2644";
-export { NODE_PARENT_VALIDATIONS } from "./2644";
-export { PLACEHOLDERS } from "./2813";
-export { PLACEHOLDERS_ALIAS } from "./2813";
-export { PLACEHOLDERS_FLIPPED_ALIAS } from "./2813";
-export { VISITOR_KEYS } from "./2644";
-import * as r from "../../../../../3188/2658/2623/2634/2673";
-import "./2811";
-import "./3141";
-import "./3142";
-import "./3143";
-import "./3144";
-import "./3145";
-import * as a from "./2644";
-import * as i from "./2813";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+Object.defineProperty(exports, "ALIAS_KEYS", {
+  enumerable: !0,
+  get: function () {
+    return a.ALIAS_KEYS;
+  }
+});
+Object.defineProperty(exports, "BUILDER_KEYS", {
+  enumerable: !0,
+  get: function () {
+    return a.BUILDER_KEYS;
+  }
+});
+Object.defineProperty(exports, "DEPRECATED_KEYS", {
+  enumerable: !0,
+  get: function () {
+    return a.DEPRECATED_KEYS;
+  }
+});
+Object.defineProperty(exports, "FLIPPED_ALIAS_KEYS", {
+  enumerable: !0,
+  get: function () {
+    return a.FLIPPED_ALIAS_KEYS;
+  }
+});
+Object.defineProperty(exports, "NODE_FIELDS", {
+  enumerable: !0,
+  get: function () {
+    return a.NODE_FIELDS;
+  }
+});
+Object.defineProperty(exports, "NODE_PARENT_VALIDATIONS", {
+  enumerable: !0,
+  get: function () {
+    return a.NODE_PARENT_VALIDATIONS;
+  }
+});
+Object.defineProperty(exports, "PLACEHOLDERS", {
+  enumerable: !0,
+  get: function () {
+    return i.PLACEHOLDERS;
+  }
+});
+Object.defineProperty(exports, "PLACEHOLDERS_ALIAS", {
+  enumerable: !0,
+  get: function () {
+    return i.PLACEHOLDERS_ALIAS;
+  }
+});
+Object.defineProperty(exports, "PLACEHOLDERS_FLIPPED_ALIAS", {
+  enumerable: !0,
+  get: function () {
+    return i.PLACEHOLDERS_FLIPPED_ALIAS;
+  }
+});
+exports.TYPES = void 0;
+Object.defineProperty(exports, "VISITOR_KEYS", {
+  enumerable: !0,
+  get: function () {
+    return a.VISITOR_KEYS;
+  }
+});
+var r = require("../../../../../3188/2658/2623/2634/2673");
+require("./2811");
+require("./3141");
+require("./3142");
+require("./3143");
+require("./3144");
+require("./3145");
+var a = require("./2644");
+var i = require("./2813");
 r(a.VISITOR_KEYS);
 r(a.ALIAS_KEYS);
 r(a.FLIPPED_ALIAS_KEYS);
@@ -28,4 +82,4 @@ r(a.DEPRECATED_KEYS);
 r(i.PLACEHOLDERS_ALIAS);
 r(i.PLACEHOLDERS_FLIPPED_ALIAS);
 var o = [].concat(Object.keys(a.VISITOR_KEYS), Object.keys(a.FLIPPED_ALIAS_KEYS), Object.keys(a.DEPRECATED_KEYS));
-export { o as TYPES };
+exports.TYPES = o;

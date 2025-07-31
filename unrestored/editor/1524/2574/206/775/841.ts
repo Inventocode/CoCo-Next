@@ -1,4 +1,4 @@
-import * as r from "./1049";
+var r = require("./1049");
 function i(e, t) {
   var n = Object.keys(e);
   if (Object.getOwnPropertySymbols) {

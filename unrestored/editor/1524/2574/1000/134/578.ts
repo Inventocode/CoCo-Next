@@ -1,5 +1,9 @@
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.TargetTypeEnum = exports.BindingTypeEnum = exports.BindingScopeEnum = void 0;
 exports.BindingScopeEnum = {
   Request: "Request",
   Singleton: "Singleton",

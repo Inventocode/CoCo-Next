@@ -4,7 +4,8 @@ module.exports = function (e, t, n) {
   var r = " ";
   var i = e.schema[t];
   var o = e.errSchemaPath + "/" + t;
-  var a = (e.opts.allErrors, e.util.toQuotedString(i));
+  e.opts.allErrors;
+  var a = e.util.toQuotedString(i);
   if (!0 === e.opts.$comment) {
     r += " console.log(" + a + ");";
   } else {

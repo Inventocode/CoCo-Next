@@ -1,6 +1,6 @@
-import * as r from "../1626/167";
-import * as o from "../1735/247/index";
-import * as i from "../1534/530";
+var r = require("../1626/167");
+var o = require("../1735/247/index");
+var i = require("../1534/530");
 var a = o("iterator");
 module.exports = !r(function () {
   var e = new URL("b?a=1&b=2&c=3", "http://a");

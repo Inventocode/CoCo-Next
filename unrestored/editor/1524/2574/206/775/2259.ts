@@ -1,7 +1,7 @@
 "use strict";
 
-import * as r from "../../../../3262/3190/494";
-import * as i from "../../31/index";
+var r = require("../../../../3262/3190/494");
+var i = require("../../31/index");
 function o(e, t) {
   return e.line - t.line || e.column - t.column;
 }

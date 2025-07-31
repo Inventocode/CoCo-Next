@@ -1,4 +1,4 @@
-import * as r from "./1695";
+var r = require("./1695");
 module.exports = function (e, t) {
   var n = r(e);
   if (n % t) {

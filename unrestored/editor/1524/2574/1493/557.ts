@@ -1,13 +1,24 @@
 "use strict";
 
-import * as r from "../19";
-import * as o from "../20";
-import * as i from "../33/index";
-import * as a from "../54";
-import * as s from "../0/index";
-import * as c from "../8";
-import * as l from "../8";
-import * as u from "../1497/787";
+var r = require("../19");
+var o = require("../20");
+var i = require("../33/index");
+var a = require("../54");
+var s = require("../0/index");
+var c = require("../8");
+var l = (module => {
+  var defaultExport = module && module.__esModule ? function () {
+    return module.default;
+  } : function () {
+    return module;
+  };
+  Object.defineProperty(defaultExport, "a", {
+    enumerable: true,
+    get: defaultExport
+  });
+  return defaultExport;
+})(c);
+var u = require("../1497/787");
 function d(e, t) {
   var n = e.prefixCls;
   var i = e.invalidate;
@@ -392,3 +403,4 @@ S.RESPONSIVE = "responsive";
 S.INVALIDATE = "invalidate";
 var I = S;
 export { I as a };
+export default I;

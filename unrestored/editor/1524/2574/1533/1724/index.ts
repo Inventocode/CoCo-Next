@@ -1,10 +1,10 @@
 "use strict";
 
-import * as r from "../1707/258/index";
-import * as o from "../1728/257";
-import * as i from "./1245/index";
-import * as a from "../1623/309";
-import * as s from "../1626/167";
+var r = require("../1707/258/index");
+var o = require("../1728/257");
+var i = require("./1245/index");
+var a = require("../1623/309");
+var s = require("../1626/167");
 var c = r.aTypedArray;
 (0, r.exportTypedArrayMethod)("set", function (e) {
   c(this);

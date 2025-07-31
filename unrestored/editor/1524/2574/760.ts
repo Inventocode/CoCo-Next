@@ -1,9 +1,9 @@
 "use strict";
 
-import * as r from "./683/34/index";
-import * as o from "./683/318";
-import * as i from "./683/517";
-import * as a from "./683/65";
+var r = require("./683/34/index");
+var o = require("./683/318");
+var i = require("./683/517");
+var a = require("./683/65");
 i.a.prototype.set_flipped = function (e) {
   switch (e) {
     case "vertical":

@@ -1,5 +1,5 @@
 var r = require("./2781/index").SourceMapGenerator;
-import * as i from "./2781/2666";
+var i = require("./2781/2666");
 var a = /(\r?\n)/;
 var s = "$$$isSourceNode$$$";
 function o(e, t, n, r, i) {
@@ -251,4 +251,4 @@ o.prototype.toStringWithSourceMap = function (e) {
     map: n
   };
 };
-export { o as SourceNode };
+exports.SourceNode = o;

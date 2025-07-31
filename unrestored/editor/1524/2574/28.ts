@@ -14,3 +14,4 @@ function r(e, t, n) {
   return e;
 }
 export { r as a };
+export default r;

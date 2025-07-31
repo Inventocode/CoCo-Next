@@ -1,8 +1,12 @@
 "use strict";
 
-import * as r from "../725/387";
-import * as i from "../../301/173";
-import * as o from "../../1035/754";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.delete_from_xml = exports.rename_procedures_in_xml = exports.load_from_xml = void 0;
+var r = require("../725/387");
+var i = require("../../301/173");
+var o = require("../../1035/754");
 function a(e, t) {
   var n = function (e) {
     if ("block" === e.tagName.toLowerCase()) {
@@ -134,7 +138,7 @@ exports.load_from_xml = function (e, t, n) {
   });
   return 0 === Object.keys(l).length ? t : a(t, l);
 };
-export { a as rename_procedures_in_xml };
+exports.rename_procedures_in_xml = a;
 exports.delete_from_xml = function (e, t) {
   var n = [];
   var o = function (t) {

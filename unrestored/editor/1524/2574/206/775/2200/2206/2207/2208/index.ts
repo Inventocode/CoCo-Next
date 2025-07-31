@@ -1,12 +1,12 @@
 "use strict";
 
-import * as r from "../1112/index";
-import * as i from "../757/index";
-import * as o from "../1114";
-import * as a from "../1329";
-import * as s from "./1330";
+var r = require("../1112/index");
+var i = require("../757/index");
+var o = require("../1114");
+var a = require("../1329");
+var s = require("./1330");
 var c = i.ucs2length;
-import * as u from "../757/1113";
+var u = require("../757/1113");
 var l = o.Validation;
 function f(e, t, n) {
   var r = d.call(this, e, t, n);

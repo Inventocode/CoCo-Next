@@ -1,7 +1,7 @@
-import * as r from "../1626/86/index";
-import * as o from "./241";
-import * as i from "./1218";
-import * as a from "./634";
+var r = require("../1626/86/index");
+var o = require("./241");
+var i = require("./1218");
+var a = require("./634");
 if (a) {
   r({
     target: "Reflect",

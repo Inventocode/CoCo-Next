@@ -1,10 +1,10 @@
 "use strict";
 
-import * as r from "./42/index";
+var r = require("./42/index");
 export { g as dc } from "./42/index";
-import * as o from "./448/index";
+var o = require("./448/index");
 export { a as A } from "./448/index";
-import * as i from "./35/index";
+var i = require("./35/index");
 export { a } from "./35/index";
 export { b } from "./35/index";
 export { c } from "./35/index";
@@ -100,7 +100,7 @@ export { ac as Zb } from "./35/index";
 export { bc as ac } from "./35/index";
 export { cc as bc } from "./35/index";
 export { dc as cc } from "./35/index";
-import * as a from "./61";
+var a = require("./61");
 export { a as f } from "./61";
 export { b as g } from "./61";
 export { c as h } from "./61";

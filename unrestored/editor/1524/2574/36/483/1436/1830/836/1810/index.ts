@@ -1,6 +1,6 @@
-import * as r from "../../638";
-import * as i from "../../../../1437/958";
-import * as o from "./1811";
+var r = require("../../638");
+var i = require("../../../../1437/958");
+var o = require("./1811");
 var a = Object.prototype.hasOwnProperty;
 module.exports = function (e) {
   if (!r(e)) {

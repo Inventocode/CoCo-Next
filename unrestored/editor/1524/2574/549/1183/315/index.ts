@@ -8,14 +8,15 @@ export { M as e };
 export { N as f };
 export { z as g };
 export { G as h };
-import * as r from "../../../0/index";
-var i = (require("../../../50/index"), require("../../../548/1180/100"));
-import * as o from "../../../19";
-import * as a from "../../../54";
-import * as s from "../../../548/1180/701/index";
-import * as c from "../365/1502";
-import * as u from "../../../548/1180/691/153";
-import * as l from "./2615/index";
+var r = require("../../../0/index");
+require("../../../50/index");
+var i = require("../../../548/1180/100");
+var o = require("../../../19");
+var a = require("../../../54");
+var s = require("../../../548/1180/701/index");
+var c = require("../365/1502");
+var u = require("../../../548/1180/691/153");
+var l = require("./2615/index");
 var f = r.forwardRef(function (e, t) {
   var n = e.disableSpacing;
   var s = void 0 !== n && n;
@@ -74,15 +75,15 @@ var p = Object(u.a)(function (e) {
 }, {
   name: "MuiDialogContent"
 })(d);
-import * as _ from "../../../28";
-import * as A from "../../../548/1180/691/234";
-import * as g from "./2620/index";
-import * as v from "../../../33/index";
-import * as m from "../../../548/1180/691/1498/index";
-import * as y from "./688";
-import * as b from "../682/index";
-import * as w from "./693";
-import * as E from "./288";
+var _ = require("../../../28");
+var A = require("../../../548/1180/691/234");
+var g = require("./2620/index");
+var v = require("../../../33/index");
+var m = require("../../../548/1180/691/1498/index");
+var y = require("./688");
+var b = require("../682/index");
+var w = require("./693");
+var E = require("./288");
 var x = {
   entering: {
     opacity: 1
@@ -224,7 +225,7 @@ var k = Object(u.a)({
 }, {
   name: "MuiBackdrop"
 })(S);
-import * as T from "./2613";
+var T = require("./2613");
 var B = {
   enter: y.b.enteringScreen,
   exit: y.b.leavingScreen
@@ -422,7 +423,7 @@ var I = Object(u.a)(function (e) {
 }, {
   name: "MuiDialog"
 })(D);
-import * as F from "./2622";
+var F = require("./2622");
 function R(e, t) {
   return Array.isArray(t) ? t.every(function (t) {
     return -1 !== e.indexOf(t);
@@ -465,7 +466,8 @@ var U = function (e) {
   var g = e.todayLabel;
   var v = e.clearable;
   var m = e.showTodayButton;
-  var y = (e.showTabs, e.wider);
+  e.showTabs;
+  var y = e.wider;
   var b = Object(a.a)(e, ["children", "classes", "onAccept", "onDismiss", "onClear", "onSetToday", "okLabel", "cancelLabel", "clearLabel", "todayLabel", "clearable", "showTodayButton", "showTabs", "wider"]);
   return Object(r.createElement)(I, Object(o.a)({
     role: "dialog",
@@ -589,11 +591,15 @@ W.defaultProps = {
 };
 var K = function (e) {
   var t = e.open;
-  var n = (e.wider, e.children);
+  e.wider;
+  var n = e.children;
   var i = e.PopoverProps;
-  var s = (e.onClear, e.onDismiss);
-  var c = (e.onSetToday, e.onAccept);
-  var u = (e.showTabs, e.DateInputProps);
+  e.onClear;
+  var s = e.onDismiss;
+  e.onSetToday;
+  var c = e.onAccept;
+  e.showTabs;
+  var u = e.DateInputProps;
   var l = e.InputComponent;
   var f = Object(a.a)(e, ["open", "wider", "children", "PopoverProps", "onClear", "onDismiss", "onSetToday", "onAccept", "showTabs", "DateInputProps", "InputComponent"]);
   var h = Object(r.useRef)();
@@ -635,3 +641,4 @@ var Y = function (e) {
     value: t || "dialog"
   }, Object(r.createElement)(i, n));
 };
+export default P;

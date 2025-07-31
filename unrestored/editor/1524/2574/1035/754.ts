@@ -1,6 +1,10 @@
 "use strict";
 
-import * as r from "../301/173";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.find_caller_blocks = exports.add_procedure_and_generate_rename_map = exports.get_legal_procedure_name = void 0;
+var r = require("../301/173");
 function i(e) {
   if (e.length > 15) {
     var t = parseInt(e.substring(0, 15), 10);
@@ -25,7 +29,7 @@ function o(e, t) {
   }
   return e;
 }
-export { o as get_legal_procedure_name };
+exports.get_legal_procedure_name = o;
 exports.add_procedure_and_generate_rename_map = function (e) {
   var t = e.procedure_manager;
   var n = e.procedure_to_add;

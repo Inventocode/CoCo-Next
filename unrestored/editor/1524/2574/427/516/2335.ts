@@ -1,7 +1,7 @@
 var r;
 var i;
-import * as o from "./2336/1363";
-import * as a from "./2336/1364";
+var o = require("./2336/1363");
+var a = require("./2336/1364");
 var s = 0;
 var c = 0;
 module.exports = function (e, t, n) {

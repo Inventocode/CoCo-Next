@@ -918,12 +918,12 @@ var r;
   function H(e) {
     return !!U.CSS_UNIT.exec(e);
   }
-  if (e.exports) {
+  if (module.exports) {
     module.exports = h;
   } else {
     if (!(void 0 === (r = function () {
       return h;
-    }.call(t, n, t, e)))) {
+    }.call(exports, require, exports, module)))) {
       module.exports = r;
     }
   }

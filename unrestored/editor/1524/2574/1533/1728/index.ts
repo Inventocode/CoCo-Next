@@ -1,9 +1,9 @@
 "use strict";
 
-import * as r from "../1707/258/index";
-import * as o from "./257";
-import * as i from "./706";
-import * as a from "./948";
+var r = require("../1707/258/index");
+var o = require("./257");
+var i = require("./706");
+var a = require("./948");
 var s = r.aTypedArray;
 (0, r.exportTypedArrayMethod)("subarray", function (e, t) {
   var n = s(this);

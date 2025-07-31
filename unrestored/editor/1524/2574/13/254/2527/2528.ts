@@ -1,5 +1,9 @@
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.handleFocus = void 0;
 var r;
 var i = Object.assign || function (e) {
   for (var t = 1; t < arguments.length; t++) {
@@ -32,7 +36,7 @@ var o = function () {
     return t;
   };
 }();
-import * as a from "../../../0/index";
+var a = require("../../../0/index");
 var s = (r = a) && r.__esModule ? r : {
   default: r
 };

@@ -27,16 +27,16 @@ export { tt as r };
 export { nt as w };
 export { rt as s };
 var r;
-import * as o from "../227/262";
-import * as i from "../25/index";
-import * as a from "../27";
-import * as s from "../40";
-import * as c from "../17/index";
-import * as l from "../9";
-import * as u from "../23";
-import * as d from "../301/index";
-import * as p from "../5";
-import * as f from "../15/index";
+var o = require("../227/262");
+var i = require("../25/index");
+var a = require("../27");
+var s = require("../40");
+var c = require("../17/index");
+var l = require("../9");
+var u = require("../23");
+var d = require("../301/index");
+var p = require("../5");
+var f = require("../15/index");
 var h = new (function () {
   function e() {
     Object(a.a)(this, e);
@@ -353,32 +353,175 @@ var h = new (function () {
   }]);
   return e;
 }())();
-import * as m from "./653";
-import * as g from "./653";
-import * as _ from "./654";
-import * as v from "./654";
-import * as b from "./655";
-import * as y from "./655";
-import * as E from "./656";
-import * as O from "./656";
-import * as w from "./657";
-import * as C from "./657";
-import * as T from "./658";
-import * as S from "./658";
-import * as I from "./659";
-import * as A from "./659";
-import * as j from "./660";
-import * as N from "./660";
-import * as R from "./661";
-import * as k from "./661";
-import * as x from "./662";
-import * as D from "./662";
-import * as M from "./663";
-import * as L from "./663";
-import * as P from "./664";
-import * as B from "./664";
-import * as F from "./665";
-import * as G from "./665";
+var m = require("./653");
+var g = (module => {
+  var defaultExport = module && module.__esModule ? function () {
+    return module.default;
+  } : function () {
+    return module;
+  };
+  Object.defineProperty(defaultExport, "a", {
+    enumerable: true,
+    get: defaultExport
+  });
+  return defaultExport;
+})(m);
+var _ = require("./654");
+var v = (module => {
+  var defaultExport = module && module.__esModule ? function () {
+    return module.default;
+  } : function () {
+    return module;
+  };
+  Object.defineProperty(defaultExport, "a", {
+    enumerable: true,
+    get: defaultExport
+  });
+  return defaultExport;
+})(_);
+var b = require("./655");
+var y = (module => {
+  var defaultExport = module && module.__esModule ? function () {
+    return module.default;
+  } : function () {
+    return module;
+  };
+  Object.defineProperty(defaultExport, "a", {
+    enumerable: true,
+    get: defaultExport
+  });
+  return defaultExport;
+})(b);
+var E = require("./656");
+var O = (module => {
+  var defaultExport = module && module.__esModule ? function () {
+    return module.default;
+  } : function () {
+    return module;
+  };
+  Object.defineProperty(defaultExport, "a", {
+    enumerable: true,
+    get: defaultExport
+  });
+  return defaultExport;
+})(E);
+var w = require("./657");
+var C = (module => {
+  var defaultExport = module && module.__esModule ? function () {
+    return module.default;
+  } : function () {
+    return module;
+  };
+  Object.defineProperty(defaultExport, "a", {
+    enumerable: true,
+    get: defaultExport
+  });
+  return defaultExport;
+})(w);
+var T = require("./658");
+var S = (module => {
+  var defaultExport = module && module.__esModule ? function () {
+    return module.default;
+  } : function () {
+    return module;
+  };
+  Object.defineProperty(defaultExport, "a", {
+    enumerable: true,
+    get: defaultExport
+  });
+  return defaultExport;
+})(T);
+var I = require("./659");
+var A = (module => {
+  var defaultExport = module && module.__esModule ? function () {
+    return module.default;
+  } : function () {
+    return module;
+  };
+  Object.defineProperty(defaultExport, "a", {
+    enumerable: true,
+    get: defaultExport
+  });
+  return defaultExport;
+})(I);
+var j = require("./660");
+var N = (module => {
+  var defaultExport = module && module.__esModule ? function () {
+    return module.default;
+  } : function () {
+    return module;
+  };
+  Object.defineProperty(defaultExport, "a", {
+    enumerable: true,
+    get: defaultExport
+  });
+  return defaultExport;
+})(j);
+var R = require("./661");
+var k = (module => {
+  var defaultExport = module && module.__esModule ? function () {
+    return module.default;
+  } : function () {
+    return module;
+  };
+  Object.defineProperty(defaultExport, "a", {
+    enumerable: true,
+    get: defaultExport
+  });
+  return defaultExport;
+})(R);
+var x = require("./662");
+var D = (module => {
+  var defaultExport = module && module.__esModule ? function () {
+    return module.default;
+  } : function () {
+    return module;
+  };
+  Object.defineProperty(defaultExport, "a", {
+    enumerable: true,
+    get: defaultExport
+  });
+  return defaultExport;
+})(x);
+var M = require("./663");
+var L = (module => {
+  var defaultExport = module && module.__esModule ? function () {
+    return module.default;
+  } : function () {
+    return module;
+  };
+  Object.defineProperty(defaultExport, "a", {
+    enumerable: true,
+    get: defaultExport
+  });
+  return defaultExport;
+})(M);
+var P = require("./664");
+var B = (module => {
+  var defaultExport = module && module.__esModule ? function () {
+    return module.default;
+  } : function () {
+    return module;
+  };
+  Object.defineProperty(defaultExport, "a", {
+    enumerable: true,
+    get: defaultExport
+  });
+  return defaultExport;
+})(P);
+var F = require("./665");
+var G = (module => {
+  var defaultExport = module && module.__esModule ? function () {
+    return module.default;
+  } : function () {
+    return module;
+  };
+  Object.defineProperty(defaultExport, "a", {
+    enumerable: true,
+    get: defaultExport
+  });
+  return defaultExport;
+})(F);
 var U = {
   BLOCK_CLOUD_ICON: g.a,
   BLOCK_CLOUD_VARIABLE_ICON: v.a,
@@ -397,16 +540,27 @@ var U = {
 var W = function () {
   for (var e in U) c.Blink.Msg[e] = U[e];
 };
-import * as H from "../6";
-import * as V from "../1/index";
-import * as z from "../1/index";
-import * as Y from "../7";
-import * as K from "../206/208/index";
-import * as q from "../38/index";
-import * as X from "../53";
-import * as Q from "../47";
-import * as Z from "../4/127";
-import * as J from "../2/index";
+var H = require("../6");
+var V = require("../1/index");
+var z = (module => {
+  var defaultExport = module && module.__esModule ? function () {
+    return module.default;
+  } : function () {
+    return module;
+  };
+  Object.defineProperty(defaultExport, "a", {
+    enumerable: true,
+    get: defaultExport
+  });
+  return defaultExport;
+})(V);
+var Y = require("../7");
+var K = require("../206/208/index");
+var q = require("../38/index");
+var X = require("../53");
+var Q = require("../47");
+var Z = require("../4/127");
+var J = require("../2/index");
 !function (e) {
   e.PNG = "dataurl+png";
   e.SVG_ASCII = "dataurl+ascii";
@@ -686,9 +840,9 @@ if (window.location.href.toLowerCase().includes(se)) {
     }
   });
 }
-import * as de from "../227/index";
-import * as pe from "../206/index";
-import * as fe from "../206/426";
+var de = require("../227/index");
+var pe = require("../206/index");
+var fe = require("../206/426");
 var he = X.d;
 var me = .5 * he;
 var ge = 2 * he;
@@ -858,8 +1012,8 @@ function ye(e, t) {
   return n;
 }
 var Ee = new pe.b();
-import * as Oe from "../125/index";
-import * as we from "../49/index";
+var Oe = require("../125/index");
+var we = require("../49/index");
 var Ce = -20;
 var Te = -4;
 var Se = [-12, -16];
@@ -1060,7 +1214,8 @@ function Fe(e) {
   var n = e.area;
   var r = e.is_in;
   var o = e.get_block_id();
-  var i = (t = o, c.Blink.mainWorkspace.get_block_by_id(t));
+  t = o;
+  var i = c.Blink.mainWorkspace.get_block_by_id(t);
   if (!c.BU.base.is_workspace_comment(i) || !i.get_parent_block()) {
     switch (n) {
       case c.I.DragArea.INJECTION_DIV:
@@ -1107,7 +1262,7 @@ function Ue() {
   }
 }
 var We;
-import * as He from "../11";
+var He = require("../11");
 !function (e) {
   e.PRIMITIVE = "PRIMITIVE";
   e.ARRAY = "ARRAY";

@@ -1,16 +1,16 @@
 "use strict";
 
 export { k as animated };
-import * as r from "../../../40";
-import * as i from "../../../10/index";
-import * as o from "../../../27";
-import * as a from "../../../57/index";
-import * as s from "../../../58/index";
-import * as c from "./980/index";
+var r = require("../../../40");
+var i = require("../../../10/index");
+var o = require("../../../27");
+var a = require("../../../57/index");
+var s = require("../../../58/index");
+var c = require("./980/index");
 export { useSpring } from "./980/index";
-import * as u from "../../../75/index";
-import * as l from "./44";
-import * as f from "./307";
+var u = require("../../../75/index");
+var l = require("./44");
+var f = require("./307");
 function h(e, t) {
   if (null == e) {
     return {};

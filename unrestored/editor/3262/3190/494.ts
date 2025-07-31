@@ -1,4 +1,4 @@
-import * as r from "./624/1097/index";
+var r = require("./624/1097/index");
 module.exports = function (e) {
   if ("undefined" === typeof Symbol || null == e[Symbol.iterator]) {
     if (Array.isArray(e) || (e = r(e))) {

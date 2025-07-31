@@ -1,12 +1,12 @@
-import * as r from "../1626/86/index";
-import * as o from "../1659/241";
-import * as i from "../1626/231";
-import * as a from "./1238";
-import * as s from "../1626/167";
-import * as c from "../1534/300/index";
-import * as l from "../1534/386";
-import * as u from "../1623/495";
-import * as d from "../1250/627";
+var r = require("../1626/86/index");
+var o = require("../1659/241");
+var i = require("../1626/231");
+var a = require("./1238");
+var s = require("../1626/167");
+var c = require("../1534/300/index");
+var l = require("../1534/386");
+var u = require("../1623/495");
+var d = require("../1250/627");
 r({
   target: "Reflect",
   stat: !0,

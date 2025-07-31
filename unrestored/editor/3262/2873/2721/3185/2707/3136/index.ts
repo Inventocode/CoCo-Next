@@ -1,6 +1,9 @@
 "use strict";
 
-export default (function (e) {
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.default = function (e) {
   for (var t = [], n = 0; n < e.children.length; n++) {
     var i = e.children[n];
     if ((0, r.isJSXText)(i)) {
@@ -15,6 +18,6 @@ export default (function (e) {
     }
   }
   return t;
-});
-import * as r from "../2627";
-import * as a from "./3137";
+};
+var r = require("../2627");
+var a = require("./3137");

@@ -1,6 +1,6 @@
 "use strict";
 
-import * as r from "./445";
+var r = require("./445");
 module.exports = function (e, t) {
   t = t || {};
   var n = {};

@@ -1,6 +1,6 @@
 "use strict";
 
-import * as r from "./1112/index";
+var r = require("./1112/index");
 function i(e, t, n) {
   this.message = n || i.message(e, t);
   this.missingRef = r.url(e, t);

@@ -1,8 +1,8 @@
 "use strict";
 
-import * as r from "../../../../2873/2721/805/index";
-import * as i from "./2643";
-import * as a from "./2763";
+var r = require("../../../../2873/2721/805/index");
+var i = require("./2643");
+var a = require("./2763");
 var s = (0, i.defineAliasedType)("Miscellaneous");
 s("Noop", {
   visitor: []

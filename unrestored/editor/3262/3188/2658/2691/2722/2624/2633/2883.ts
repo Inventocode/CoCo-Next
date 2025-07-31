@@ -1,6 +1,6 @@
 "use strict";
 
-import * as r from "./2641";
+var r = require("./2641");
 var i = (0, r.defineAliasedType)("Flow");
 var a = function (e) {
   var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "TypeParameterDeclaration";

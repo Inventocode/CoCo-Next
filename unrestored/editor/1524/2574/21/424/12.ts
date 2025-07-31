@@ -12,10 +12,10 @@ export { m as j };
 export { g as k };
 export { _ as l };
 export { v as i };
-import * as r from "../../6";
-import * as o from "../../48/index";
-import * as i from "../../48/72";
-import * as a from "../../14";
+var r = require("../../6");
+var o = require("../../48/index");
+var i = require("../../48/72");
+var a = require("../../14");
 function s(e) {
   return Object(o.a)().getState().widgetMap.get(e);
 }
@@ -156,3 +156,4 @@ function v(e, t) {
     })));
   }
 }
+export default c;

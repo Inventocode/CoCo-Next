@@ -1,13 +1,13 @@
 "use strict";
 
-import * as r from "./19";
-import * as i from "./0/index";
-import * as o from "./739/index";
-import * as a from "./788";
+var r = require("./19");
+var i = require("./0/index");
+var o = require("./739/index");
+var a = require("./788");
 var s = function (e) {
   return e ? "function" === typeof e ? e() : e : null;
 };
-import * as c from "./431";
+var c = require("./431");
 var u = function (e, t) {
   var n = {};
   for (var r in e) if (Object.prototype.hasOwnProperty.call(e, r) && t.indexOf(r) < 0) {
@@ -52,4 +52,4 @@ l.defaultProps = {
   mouseLeaveDelay: .1,
   overlayStyle: {}
 };
-export { l as a };
+exports.a = l;

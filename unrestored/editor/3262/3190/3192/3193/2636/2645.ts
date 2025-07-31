@@ -1,10 +1,14 @@
 "use strict";
 
-import * as r from "../../../494";
-import * as a from "../../../../2873/2721/805/index";
-export { S as arrayOf };
-export { E as arrayOfType };
-export { b as assertEach };
+var r = require("../../../494");
+var a = require("../../../../2873/2721/805/index");
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.VISITOR_KEYS = exports.NODE_PARENT_VALIDATIONS = exports.NODE_FIELDS = exports.FLIPPED_ALIAS_KEYS = exports.DEPRECATED_KEYS = exports.BUILDER_KEYS = exports.ALIAS_KEYS = void 0;
+exports.arrayOf = S;
+exports.arrayOfType = E;
+exports.assertEach = b;
 exports.assertNodeOrValueType = function () {
   for (var e = arguments.length, t = new Array(e), n = 0; n < e; n++) {
     t[n] = arguments[n];
@@ -29,7 +33,7 @@ exports.assertNodeOrValueType = function () {
   a.oneOfNodeOrValueTypes = t;
   return a;
 };
-export { v as assertNodeType };
+exports.assertNodeType = v;
 exports.assertOneOf = function () {
   for (var e = arguments.length, t = new Array(e), n = 0; n < e; n++) {
     t[n] = arguments[n];
@@ -85,9 +89,9 @@ exports.assertShape = function (e) {
   t.shapeOf = e;
   return t;
 };
-export { P as assertValueType };
-export { O as chain };
-export default x;
+exports.assertValueType = P;
+exports.chain = O;
+exports.default = x;
 exports.defineAliasedType = function () {
   for (var e = arguments.length, t = new Array(e), n = 0; n < e; n++) {
     t[n] = arguments[n];
@@ -113,8 +117,8 @@ exports.defineAliasedType = function () {
     return x(e, i);
   };
 };
-export { m as typeIs };
-export { T as validate };
+exports.typeIs = m;
+exports.validate = T;
 exports.validateArrayOfType = function (e) {
   return T(E(e));
 };
@@ -133,20 +137,20 @@ exports.validateOptionalType = function (e) {
 exports.validateType = function (e) {
   return T(m(e));
 };
-import * as i from "../2670";
-import * as o from "../2716";
+var i = require("../2670");
+var o = require("../2716");
 var s = {};
-export { s as VISITOR_KEYS };
+exports.VISITOR_KEYS = s;
 var u = {};
-export { u as ALIAS_KEYS };
+exports.ALIAS_KEYS = u;
 var l = {};
-export { l as FLIPPED_ALIAS_KEYS };
+exports.FLIPPED_ALIAS_KEYS = l;
 var p = {};
-export { p as NODE_FIELDS };
+exports.NODE_FIELDS = p;
 var f = {};
-export { f as BUILDER_KEYS };
+exports.BUILDER_KEYS = f;
 var d = {};
-export { d as DEPRECATED_KEYS };
+exports.DEPRECATED_KEYS = d;
 var c = {};
 function y(e) {
   return Array.isArray(e) ? "array" : null === e ? "null" : typeof e;
@@ -243,7 +247,7 @@ function O() {
   }
   return a;
 }
-export { c as NODE_PARENT_VALIDATIONS };
+exports.NODE_PARENT_VALIDATIONS = c;
 var A = ["aliases", "builder", "deprecatedAlias", "fields", "inherits", "visitor", "validate"];
 var g = ["default", "optional", "validate"];
 function x(e) {

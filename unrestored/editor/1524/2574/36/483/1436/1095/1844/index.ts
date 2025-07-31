@@ -1,7 +1,7 @@
-import * as r from "../../../1437/1087/831";
-import * as i from "../../../1437/835/index";
-import * as o from "./1262";
-import * as a from "../../1830/638";
+var r = require("../../../1437/1087/831");
+var i = require("../../../1437/835/index");
+var o = require("./1262");
+var a = require("../../1830/638");
 module.exports = function (e, t, n) {
   if (!a(n)) {
     return !1;

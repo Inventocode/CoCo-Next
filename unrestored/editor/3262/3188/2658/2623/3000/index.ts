@@ -1,11 +1,14 @@
 "use strict";
 
-export default (function (e) {
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.default = function (e) {
   var t = e.map(function (e) {
     return e.typeAnnotation;
   });
   var n = (0, i.default)(t);
   return 1 === n.length ? n[0] : (0, r.tsUnionType)(n);
-});
-import * as r from "../2630/index";
-import * as i from "./3001";
+};
+var r = require("../2630/index");
+var i = require("./3001");

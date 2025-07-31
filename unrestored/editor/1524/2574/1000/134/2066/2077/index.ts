@@ -1,9 +1,13 @@
 "use strict";
 
-import * as r from "../../838/443";
-import * as i from "../../578";
-import * as o from "./2078/index";
-import * as a from "./1307/index";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.BindingToSyntax = void 0;
+var r = require("../../838/443");
+var i = require("../../578");
+var o = require("./2078/index");
+var a = require("./1307/index");
 var s = function () {
   function e(e) {
     this._binding = e;
@@ -79,4 +83,4 @@ var s = function () {
   };
   return e;
 }();
-export { s as BindingToSyntax };
+exports.BindingToSyntax = s;

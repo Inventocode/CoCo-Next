@@ -7,3 +7,4 @@ function r(e, t) {
   })(e, t);
 }
 export { r as a };
+export default r;

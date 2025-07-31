@@ -1,8 +1,8 @@
-import * as r from "./1789/index";
-import * as i from "./1796";
-import * as o from "./1798";
-import * as a from "./1799";
-import * as s from "./1800/index";
+var r = require("./1789/index");
+var i = require("./1796");
+var o = require("./1798");
+var a = require("./1799");
+var s = require("./1800/index");
 function c(e) {
   var t = -1;
   var n = null == e ? 0 : e.length;

@@ -1,9 +1,9 @@
-import * as r from "../../1738/194";
-import * as o from "../../1534/931";
-import * as i from "../../1738/332";
-import * as a from "../../1534/814";
-import * as s from "../../1534/1053";
-import * as c from "./1203";
+var r = require("../../1738/194");
+var o = require("../../1534/931");
+var i = require("../../1738/332");
+var a = require("../../1534/814");
+var s = require("../../1534/1053");
+var c = require("./1203");
 var l = o("wks");
 var u = r.Symbol;
 var d = c ? u : u && u.withoutSetter || a;

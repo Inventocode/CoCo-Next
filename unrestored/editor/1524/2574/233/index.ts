@@ -3,7 +3,7 @@
 export { i as a };
 export { a as b };
 export { s as c };
-import * as r from "./324";
+var r = require("./324");
 var o = {
   window: void 0,
   document: {
@@ -38,3 +38,4 @@ var o = {
 var i = ["parent.location", "top.location", "WebSocket", "XMLHttpRequest", ".fetch", "socketcv.codemao.cn"];
 var a = Object.keys(o);
 var s = Object.values(o);
+export default i;

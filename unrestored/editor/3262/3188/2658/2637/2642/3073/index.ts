@@ -1,6 +1,9 @@
 "use strict";
 
-import * as r from "../../../../../3190/494";
+var r = require("../../../../../3190/494");
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
 exports._assertUnremoved = function () {
   if (this.removed) {
     throw this.buildCodeFrameError("NodePath has been removed so is read-only.");
@@ -57,6 +60,6 @@ exports.remove = function () {
   this._remove();
   this._markRemoved();
 };
-import * as i from "./3074";
-import * as a from "../../2656";
-import * as s from "../index";
+var i = require("./3074");
+var a = require("../../2656");
+var s = require("../index");

@@ -1,11 +1,11 @@
-import * as r from "../1626/86/index";
-import * as o from "../1250/472";
-import * as i from "../1727/439";
-import * as a from "../1659/241";
-import * as s from "../1626/231";
-import * as c from "../1250/575";
-import * as l from "./1648";
-import * as u from "../1626/167";
+var r = require("../1626/86/index");
+var o = require("../1250/472");
+var i = require("../1727/439");
+var a = require("../1659/241");
+var s = require("../1626/231");
+var c = require("../1250/575");
+var l = require("./1648");
+var u = require("../1626/167");
 var d = o("Reflect", "construct");
 var p = u(function () {
   function e() {}

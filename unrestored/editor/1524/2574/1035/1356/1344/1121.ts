@@ -1,5 +1,9 @@
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.uniToStrPos = exports.strPosToUni = void 0;
 exports.strPosToUni = function (e) {
   for (var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : e.length, n = 0, r = 0; r < t; r++) {
     var i = e.charCodeAt(r);

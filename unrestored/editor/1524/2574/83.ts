@@ -23,3 +23,4 @@ export { i as c };
   e.LARGE = "LARGE";
   e.HUGE = "HUGE";
 })(i || (i = {}));
+export default r;

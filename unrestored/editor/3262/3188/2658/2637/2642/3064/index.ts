@@ -1,5 +1,8 @@
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
 exports.arrowFunctionToExpression = function () {
   var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
   var t = e.allowInsertArrow;
@@ -88,8 +91,8 @@ exports.unwrapFunctionEnvironment = function () {
   }
   w(this);
 };
-import * as r from "../../../2623/index";
-import * as i from "./3065/index";
+var r = require("../../../2623/index");
+var i = require("./3065/index");
 var a = r.arrowFunctionExpression;
 var s = r.assignmentExpression;
 var o = r.binaryExpression;

@@ -4,6 +4,7 @@ import { parse } from "@babel/parser"
 import traverse, { NodePath } from "@babel/traverse"
 import generate from "@babel/generator"
 import * as t from "@babel/types"
+import * as template from "@babel/template"
 import PriorityQueue from "js-priority-queue"
 import cliProgress from "cli-progress"
 
@@ -13,7 +14,9 @@ export interface UnpackConfig {
     output: {
         path: string
     }
-    setPath: SetPath
+    setPath: SetPath,
+    publicPath?: string | null | undefined
+    useESImport?: boolean | null | undefined
 }
 
 export interface External {
@@ -66,7 +69,7 @@ export async function unpack(config: UnpackConfig): Promise<void> {
     const dirsPath: Set<string> = getAllDirsPath(modules)
     addIndexToModulesPath(modules, dirsPath)
     markExternals(modules, config.externals)
-    transformModulesImport(modules)
+    transformModulesImport(modules, config)
     transformModulesExport(modules)
     await writeModules(config.output.path, modules)
 }
@@ -146,7 +149,7 @@ function loadModuleFromModuleFunctionExpression(key: ModuleKey, node: t.Function
         key,
         path: ["unnamed"],
         args: node.params.map((param: t.Node): string => (t.assertIdentifier(param), param.name)),
-        AST: t.file(t.program(node.body.body, node.body.directives, "module")),
+        AST: t.file(t.program(node.body.body, node.body.directives, "script")),
         isEntry: true,
         hasJSX: false,
         dependency: {},
@@ -248,6 +251,18 @@ function unminimize(modules: ModuleMap): void {
                         return t.variableDeclaration(node.kind, [declaration])
                     }
                 ))
+            },
+            VariableDeclarator(path: NodePath<t.VariableDeclarator>): void {
+                const initPath: NodePath<t.Expression | null | undefined> = path.get("init")
+                if (initPath.isSequenceExpression()) {
+                    const { node: sequenceExpression } = initPath
+                    const lastExpression: t.Expression | undefined = sequenceExpression.expressions.pop()
+                    if (lastExpression == undefined) {
+                        return
+                    }
+                    initPath.replaceWith(lastExpression)
+                    path.parentPath.insertBefore(sequenceExpression.expressions.map(t.expressionStatement))
+                }
             }
         })
         bar.increment()
@@ -297,6 +312,16 @@ function buildModulesDependency(modules: ModuleMap): void {
                     const init: NodePath<t.Node | null | undefined> = declaration.get("init")
                     if (!init.isCallExpression()) {
                         continue
+                    }
+                    if (
+                        t.isMemberExpression(init.node.callee, { computed: false }) &&
+                        t.isIdentifier(init.node.callee.object) &&
+                        init.node.callee.object.name == module.args[2] &&
+                        init.scope.getBinding(init.node.callee.object.name) == null &&
+                        t.isIdentifier(init.node.callee.property) &&
+                        init.node.callee.property.name == "n"
+                    ) {
+                        module.AST.program.sourceType = "module"
                     }
                     if (!(
                         t.isIdentifier(init.node.callee) &&
@@ -427,6 +452,7 @@ function buildModulesDependency(modules: ModuleMap): void {
                 bindingFunctionNodePath.assertFunctionExpression()
                 const returnStatement: NodePath<t.Statement> = bindingFunctionNodePath.get("body.body")[0]!
                 returnStatement.assertReturnStatement()
+                module.AST.program.sourceType = "module"
                 const localNodePath: NodePath<t.Expression | null | undefined> = returnStatement.get("argument")
                 if (!localNodePath.isMemberExpression()) {
                     return
@@ -677,15 +703,19 @@ function recursiveMarkExternal(module: Module): void {
 /**
  * 将模块的导入转换为 ESModule 或 CommonJS 格式，将它们链接到正确的位置，并构建导出映射
  */
-function transformModulesImport(modules: ModuleMap): void {
+function transformModulesImport(modules: ModuleMap, config: UnpackConfig): void {
     console.log("transforming imports of modules")
     const bar = new cliProgress.SingleBar({}, cliProgress.Presets.shades_classic)
     bar.start(Object.keys(modules).length, 0)
     for (const module of Object.values(modules)) {
         let importedModuleKey: ModuleKey | null = null
+        const defaultImportIdentifiers: t.Identifier[] = []
         traverse(module.AST, {
-            // ESModule 静态导入
+            // 静态导入
             VariableDeclaration(path: NodePath<t.VariableDeclaration>): void {
+                if (!(config.useESImport ?? true)) {
+                    return
+                }
                 if (!path.parentPath.isProgram() || path.node.declarations.length != 1) {
                     return
                 }
@@ -694,24 +724,24 @@ function transformModulesImport(modules: ModuleMap): void {
                     if (!localNameNodePath.isIdentifier()) {
                         continue
                     }
-                    const localName: string = localNameNodePath.node.name
                     const init: NodePath<t.Node | null | undefined> = declaration.get("init")
                     if (!init.isCallExpression()) {
                         continue
                     }
-                    if (!(
-                        (
-                            t.isIdentifier(init.node.callee) &&
-                            init.node.callee.name == module.args[2] &&
-                            init.scope.getBinding(init.node.callee.name) == null
-                        ) || (
-                            t.isMemberExpression(init.node.callee, { computed: false }) &&
-                            t.isIdentifier(init.node.callee.object) &&
-                            init.node.callee.object.name == module.args[2] &&
-                            init.scope.getBinding(init.node.callee.object.name) == null &&
-                            t.isIdentifier(init.node.callee.property) &&
-                            init.node.callee.property.name == "n"
-                        )
+                    let isDefault: boolean = false
+                    if (
+                        t.isMemberExpression(init.node.callee, { computed: false }) &&
+                        t.isIdentifier(init.node.callee.object) &&
+                        init.node.callee.object.name == module.args[2] &&
+                        init.scope.getBinding(init.node.callee.object.name) == null &&
+                        t.isIdentifier(init.node.callee.property) &&
+                        init.node.callee.property.name == "n"
+                    ) {
+                        isDefault = true
+                    } else if (!(
+                        t.isIdentifier(init.node.callee) &&
+                        init.node.callee.name == module.args[2] &&
+                        init.scope.getBinding(init.node.callee.name) == null
                     )) {
                         continue
                     }
@@ -728,37 +758,30 @@ function transformModulesImport(modules: ModuleMap): void {
                     try {
                         const importedModule: Module = getModuleByKey(modules, importedModuleKey)
                         const importPath: string = getImportPath(module, importedModule)
-                        if (localName.endsWith("_default")) {
+                        if (isDefault) {
                             path.replaceWith(t.importDeclaration(
                                 [t.importDefaultSpecifier(localNameNodePath.node)],
                                 t.stringLiteral(importPath)
                             ))
-                            traverse(module.AST, {
-                                CallExpression(path: NodePath<t.CallExpression>): void {
-                                    if (path.get("callee").isIdentifier({
-                                        name: localNameNodePath.node.name
-                                    })) {
-                                        path.replaceWith(localNameNodePath.node)
-                                    }
-                                },
-                                MemberExpression(path: NodePath<t.MemberExpression>): void {
-                                    if (
-                                        path.get("object").isIdentifier({
-                                            name: localNameNodePath.node.name
-                                        }) &&
-                                        path.get("property").isIdentifier({
-                                            name: "a"
-                                        })
-                                    ) {
-                                        path.replaceWith(localNameNodePath.node)
-                                    }
-                                }
-                            })
-                        } else {
+                            defaultImportIdentifiers.push(localNameNodePath.node)
+                        } else if (module.AST.program.sourceType == "module") {
                             path.replaceWith(t.importDeclaration(
                                 [t.importNamespaceSpecifier(localNameNodePath.node)],
                                 t.stringLiteral(importPath)
                             ))
+                        } else {
+                            path.replaceWith(
+                                t.variableDeclaration(
+                                    "var",
+                                    [t.variableDeclarator(
+                                        localNameNodePath.node,
+                                        t.callExpression(
+                                            t.identifier("require"),
+                                            [t.stringLiteral(importPath)]
+                                        )
+                                    )]
+                                )
+                            )
                         }
                     } catch (error) {
                         path.replaceWith(t.throwStatement(t.newExpression(
@@ -786,8 +809,12 @@ function transformModulesImport(modules: ModuleMap): void {
                         const importedModuleKey: ModuleKey = importedModuleKeyNodePath.node.value
                         const importedModule: Module | undefined = getModuleByKey(modules, importedModuleKey)
                         const importPath: string = getImportPath(module, importedModule)
-                        if (path.parentPath.parentPath?.isProgram()) {
-                            path.parentPath.replaceWith(t.importDeclaration([],t.stringLiteral(importPath)))
+                        if (
+                            (config.useESImport ?? true) &&
+                            module.AST.program.sourceType == "module" &&
+                            path.parentPath.parentPath?.isProgram()
+                        ) {
+                            path.parentPath.replaceWith(t.importDeclaration([], t.stringLiteral(importPath)))
                         } else {
                             path.replaceWith(t.callExpression(
                                 t.identifier("require"),
@@ -822,10 +849,25 @@ function transformModulesImport(modules: ModuleMap): void {
                     const importedModuleKey: ModuleKey = importedModuleKeyNodePath.node.value
                     if (!(
                         bindCallCalleeNodePath.isMemberExpression({ computed: false }) &&
-                        t.isIdentifier(bindCallCalleeNodePath.node.object, {
-                            name: module.args[2]!
-                        }) &&
-                        bindCallCalleeNodePath.scope.getBinding(bindCallCalleeNodePath.node.object.name) == null &&
+                        (
+                            (
+                                t.isIdentifier(bindCallCalleeNodePath.node.object, {
+                                    name: module.args[2]!
+                                }) &&
+                                bindCallCalleeNodePath.scope.getBinding(bindCallCalleeNodePath.node.object.name) == null
+                            ) || (
+                                t.isMemberExpression(bindCallCalleeNodePath.node.object, {
+                                    computed: false
+                                }) &&
+                                t.isIdentifier(bindCallCalleeNodePath.node.object.object, {
+                                    name: module.args[2]!
+                                }) &&
+                                bindCallCalleeNodePath.scope.getBinding(bindCallCalleeNodePath.node.object.object.name) == null &&
+                                t.isIdentifier(bindCallCalleeNodePath.node.object.property, {
+                                    name: "t"
+                                })
+                            )
+                        ) &&
                         bindCallCalleeNodePath.get("property").isIdentifier({ name: "bind" })
                     )) {
                         return
@@ -846,12 +888,68 @@ function transformModulesImport(modules: ModuleMap): void {
                         ))
                     }
                 }
+            },
+            MemberExpression(memberExpressionPath: NodePath<t.MemberExpression>): void {
+                const objectPath: NodePath<t.Expression> = memberExpressionPath.get("object")
+                const propertyPath: NodePath<t.PrivateName | t.Expression> = memberExpressionPath.get("property")
+                if (
+                    memberExpressionPath.node.computed ||
+                    !objectPath.isIdentifier({ name: module.args[2] }) ||
+                    (module.args[2] != undefined && objectPath.scope.getBinding(module.args[2]) != null)
+                ) {
+                    return
+                }
+                if (propertyPath.isIdentifier({ name: "n" })) {
+                    memberExpressionPath.replaceWith(RequireDefaultTemplate())
+                } else if (propertyPath.isIdentifier({ name: "p" })) {
+                    memberExpressionPath.replaceWith(
+                        config.publicPath == null ?
+                        PublicPathTemplate() :
+                        t.stringLiteral(config.publicPath)
+                    )
+                }
+            }
+        })
+        traverse(module.AST, {
+            CallExpression(callExpressionPath: NodePath<t.CallExpression>): void {
+                const calleePath: NodePath = callExpressionPath.get("callee")
+                if (calleePath.isIdentifier() && defaultImportIdentifiers.includes(calleePath.scope.getBinding(calleePath.node.name)?.identifier ?? t.identifier(""))) {
+                    callExpressionPath.replaceWith(calleePath)
+                }
+            },
+            MemberExpression(memberExpressionPath: NodePath<t.MemberExpression>): void {
+                const objectPath: NodePath<t.Expression> = memberExpressionPath.get("object")
+                if (
+                    objectPath.isIdentifier() &&
+                    defaultImportIdentifiers.includes(objectPath.scope.getBinding(objectPath.node.name)?.identifier ?? t.identifier("")) &&
+                    memberExpressionPath.get("property").isIdentifier({ name: "a" })
+                ) {
+                    memberExpressionPath.replaceWith(objectPath)
+                }
             }
         })
         bar.increment()
     }
     bar.stop()
 }
+
+const PublicPathTemplate: (arg?: template.PublicReplacements) => t.Expression = template.expression(`
+    location.origin + location.pathname + "/"
+`)
+const RequireDefaultTemplate: (arg?: template.PublicReplacements) => t.Expression = template.expression(`
+    ${((module: { __esModule?: boolean, default?: unknown }): unknown => {
+        var defaultExport: () => unknown = module && module.__esModule ? function(): unknown {
+            return module.default
+        } : function(): unknown {
+            return module
+        }
+        Object.defineProperty(defaultExport, "a", {
+            enumerable: true,
+            get: defaultExport
+        })
+        return defaultExport
+    }).toString()}
+`)
 
 /**
  * 将模块的导出转换为 ESModule 或 CommonJS 格式，并根据模块导出映射替换导出名称
@@ -870,31 +968,49 @@ function transformModulesExport(modules: ModuleMap): void {
             if (typeof exported != "string") {
                 exported = arguments[1]
             }
-            if (path.parentPath?.isExpressionStatement()) {
-                path = path.parentPath
-                path.skip()
-                let deepLocal: t.Expression = local
+            const parentPath: NodePath = path.parentPath!
+            let deepLocal: t.Expression = local
+            while (
+                t.isAssignmentExpression(deepLocal, { operator: "=" }) &&
+                t.isMemberExpression(deepLocal.left) &&
+                t.isIdentifier(deepLocal.left.object, { name: module.args[1] ?? "" })
+            ) {
+                deepLocal = deepLocal.right
+            }
+            if (module.AST.program.sourceType == "module") {
+                parentPath.skip()
+                let deepParentPath: NodePath = parentPath
                 while (
-                    t.isAssignmentExpression(deepLocal, { operator: "=" }) &&
-                    t.isMemberExpression(deepLocal.left) &&
-                    t.isIdentifier(deepLocal.left.object, { name: module.args[1] ?? "" })
+                    deepParentPath.parentPath != null &&
+                    !deepParentPath.parentPath.isProgram() &&
+                    !deepParentPath.parentPath.isBlockStatement()
                 ) {
-                    deepLocal = deepLocal.right
+                    deepParentPath = deepParentPath.parentPath
                 }
-                if (path.parentPath?.isProgram() && t.isUnaryExpression(deepLocal, {
-                    operator: "void",
-                    prefix: true
-                })) {
-                    path.remove()
-                } else if (path.parentPath?.isProgram() && exported == "default") {
-                    path.replaceWith(t.exportDefaultDeclaration(
-                        typeof local == "string" ? t.identifier(local) : local
-                    ))
-                } else if (path.parentPath?.isProgram() && t.isIdentifier(local)) {
-                    path.replaceWith(t.exportNamedDeclaration(
+                if (parentPath.parentPath?.isProgram() && exported == "default") {
+                    parentPath.replaceWith(t.exportDefaultDeclaration(local))
+                } else if (deepParentPath.parentPath?.isProgram()) {
+                    let newLocal: t.Identifier
+                    if (t.isIdentifier(local)) {
+                        newLocal = local
+                    } else {
+                        newLocal = deepParentPath.parentPath.scope.generateUidIdentifier(exported)
+                        deepParentPath.insertBefore(
+                            t.variableDeclaration("var", [t.variableDeclarator(newLocal)])
+                        )
+                        path.replaceWith(t.assignmentExpression("=", newLocal, local))
+                    }
+                    deepParentPath.insertAfter(t.exportNamedDeclaration(
                         null,
-                        [t.exportSpecifier(local, t.identifier(exported))]
+                        [t.exportSpecifier(newLocal, t.identifier(exported))]
                     ))
+                    if (newLocal == local) {
+                        if (parentPath.parentPath?.isProgram()) {
+                            parentPath.remove()
+                        } else {
+                            path.replaceWith(local)
+                        }
+                    }
                 } else {
                     path.replaceWith(t.assignmentExpression(
                         "=",
@@ -904,16 +1020,11 @@ function transformModulesExport(modules: ModuleMap): void {
                 }
             } else {
                 path.skip()
-                try {
-                    path.replaceWith(t.assignmentExpression(
-                        "=",
-                        t.memberExpression(t.identifier("exports"), t.identifier(exported)),
-                        local
-                    ))
-                } catch (error) {
-                    console.log(path.toString())
-                    throw error
-                }
+                path.replaceWith(t.assignmentExpression(
+                    "=",
+                    t.memberExpression(t.identifier("exports"), t.identifier(exported)),
+                    local
+                ))
             }
         }
         traverse(module.AST, {
@@ -924,14 +1035,6 @@ function transformModulesExport(modules: ModuleMap): void {
                 }
                 const calleeObject: NodePath = callee.get("object")
                 const calleeProperty: NodePath = callee.get("property")
-                if (
-                    calleeObject.isIdentifier({ name: "Object" }) &&
-                    calleeProperty.isIdentifier({ name: "defineProperty" }) &&
-                    t.isStringLiteral(path.node.arguments[1], { value: "__esModule" })
-                ) {
-                    path.remove()
-                    return
-                }
                 if (
                     calleeObject.isIdentifier({ name: module.args[2] }) &&
                     calleeObject.scope.getBinding(calleeObject.node.name) == null &&
@@ -946,24 +1049,6 @@ function transformModulesExport(modules: ModuleMap): void {
                     calleeProperty.isIdentifier({ name: "d" })
                 ) {
                     [exportVar, exportedName, exportedFunction] = path.get("arguments")
-                } else if (
-                    calleeObject.isIdentifier({ name: "Object" }) &&
-                    calleeProperty.isIdentifier({ name: "defineProperty" })
-                ) {
-                    let propertyDescriptor
-                    [exportVar, exportedName, propertyDescriptor] = path.get("arguments")
-                    if (!exportVar?.isIdentifier({ name: module.args[1] })) {
-                        return
-                    }
-                    if (!propertyDescriptor?.isObjectExpression()) {
-                        return
-                    }
-                    exportedFunction = propertyDescriptor.get("properties").find(
-                        (property: NodePath): property is NodePath<t.ObjectProperty> => {
-                            return property.isObjectProperty({ computed: false }) &&
-                                t.isIdentifier(property.node.key, { name: "get" })
-                        }
-                    )?.get("value")
                 } else {
                     return
                 }
@@ -1020,19 +1105,13 @@ function transformModulesExport(modules: ModuleMap): void {
                 }
             },
             AssignmentExpression(path: NodePath<t.AssignmentExpression>): void {
+                if (module.AST.program.sourceType == "script") {
+                    return
+                }
                 if (path.node.operator != "=") {
                     return
                 }
                 const memberExpression: NodePath = path.get("left")
-                if (
-                    memberExpression.isMemberExpression() &&
-                    t.isIdentifier(memberExpression.node.object, { name: module.args[0]! }) &&
-                    path.scope.getBinding(memberExpression.node.object.name) == null &&
-                    t.isIdentifier(memberExpression.node.property, { name: "exports" })
-                ) {
-                    memberExpression.node.object.name = "module"
-                    return
-                }
                 if (!(
                     memberExpression.isMemberExpression() &&
                     t.isIdentifier(memberExpression.node.object, { name: module.args[1]! }) &&
@@ -1074,8 +1153,63 @@ function transformModulesExport(modules: ModuleMap): void {
                 ) {
                     path.replaceWithMultiple(consequent.node.body)
                 }
+            },
+            Identifier(identifierPath: NodePath<t.Identifier>): void {
+                const { parentPath, node: identifier } = identifierPath
+                if (
+                    parentPath.isImportSpecifier() ||
+                    parentPath.isExportSpecifier()
+                ) {
+                    return
+                }
+                if (
+                    parentPath.isMemberExpression({ property: identifier, computed: false }) ||
+                    parentPath.isObjectProperty({ key: identifier, computed: false }) ||
+                    parentPath.isObjectMethod({ key: identifier, computed: false }) ||
+                    parentPath.isClassProperty({ key: identifier, computed: false }) ||
+                    parentPath.isClassMethod({ key: identifier, computed: false })
+                ) {
+                    return
+                }
+                if (
+                    identifier.name == module.args[0] &&
+                    identifierPath.scope.getBinding(identifier.name) == null
+                ) {
+                    identifier.name = "module"
+                } else if (
+                    identifier.name == module.args[1] &&
+                    identifierPath.scope.getBinding(identifier.name) == null
+                ) {
+                    identifier.name = "exports"
+                } else if (
+                    identifier.name == module.args[2] &&
+                    identifierPath.scope.getBinding(identifier.name) == null
+                ) {
+                    identifier.name = "require"
+                }
             }
         })
+        const { body } = module.AST.program
+        if (
+            module.AST.program.sourceType == "module" &&
+            body.every((statement: t.Statement): boolean => {
+                return !t.isExportDefaultDeclaration(statement)
+            })
+        ) {
+            for (const statement of body) {
+                if (
+                    t.isExportNamedDeclaration(statement) &&
+                    t.isExportSpecifier(statement.specifiers[0]) &&
+                    t.isIdentifier(statement.specifiers[0].exported, { name: "a" })
+                ) {
+                    if (statement.source != null) {
+                        break
+                    }
+                    body.push(t.exportDefaultDeclaration(statement.specifiers[0].local))
+                    break
+                }
+            }
+        }
         bar.increment()
     }
     bar.stop()

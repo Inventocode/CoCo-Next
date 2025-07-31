@@ -37,3 +37,4 @@ var s = function (e, t, n) {
   return void 0 !== n ? n : "".concat(e, "-").concat(t);
 };
 export { a };
+export default a;

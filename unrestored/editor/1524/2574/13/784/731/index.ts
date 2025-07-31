@@ -8,4 +8,4 @@
   var s = a && a.exports === o ? r.a.Buffer : void 0;
   var c = (s ? s.isBuffer : void 0) || i.a;
   exports.a = c;
-}).call(this, require("../../../155/1164/574")(e));
+}).call(this, require("../../../155/1164/574")(module));

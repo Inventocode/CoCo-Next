@@ -1,7 +1,10 @@
 "use strict";
 
-export default (function (e, t) {
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.default = function (e, t) {
   e.object = (0, r.memberExpression)(t, e.object);
   return e;
-});
-import * as r from "./2630/index";
+};
+var r = require("./2630/index");

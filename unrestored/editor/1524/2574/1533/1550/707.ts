@@ -1,8 +1,8 @@
 "use strict";
 
-import * as r from "../1534/628";
-import * as o from "../1534/300/index";
-import * as i from "../1250/627";
+var r = require("../1534/628");
+var o = require("../1534/300/index");
+var i = require("../1250/627");
 module.exports = function (e, t, n) {
   var a = r(t);
   if (a in e) {

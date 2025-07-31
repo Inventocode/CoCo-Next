@@ -1,10 +1,10 @@
 "use strict";
 
-import * as r from "./1626/86/index";
+var r = require("./1626/86/index");
 var o = require("./1722/936").left;
-import * as i from "./1561/708";
-import * as a from "./1727/629";
-import * as s from "./1737/750";
+var i = require("./1561/708");
+var a = require("./1727/629");
+var s = require("./1737/750");
 r({
   target: "Array",
   proto: !0,

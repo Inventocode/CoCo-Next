@@ -1,5 +1,9 @@
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.load_json_js_generator_math = void 0;
 exports.load_json_js_generator_math = function (e) {
   e.register("random", function (t, n) {
     var r = e.value_to_code(t, n, "a", e.ORDER_COMMA) || "0";

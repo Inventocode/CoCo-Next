@@ -1,4 +1,4 @@
-import * as r from "./2932";
+var r = require("./2932");
 exports.encode = function (e) {
   var t;
   var n = "";

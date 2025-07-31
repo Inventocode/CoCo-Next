@@ -1,8 +1,8 @@
 "use strict";
 
-import * as r from "./393";
-import * as i from "../735/518";
-import * as o from "./293";
+var r = require("./393");
+var i = require("../735/518");
+var o = require("./293");
 function a(e) {
   return function t(n, a, s) {
     switch (arguments.length) {
@@ -43,4 +43,4 @@ var s = a(function (e, t, n) {
   }
   return n < e ? e : n > t ? t : n;
 });
-export { s as a };
+exports.a = s;

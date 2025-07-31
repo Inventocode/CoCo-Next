@@ -1,6 +1,6 @@
-import * as r from "../529";
-import * as i from "./1295";
-import * as o from "./1961/index";
+var r = require("../529");
+var i = require("./1295");
+var o = require("./1961/index");
 module.exports = function (e) {
   return function () {
     var t;

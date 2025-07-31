@@ -1,9 +1,9 @@
 "use strict";
 
-import * as r from "../1626/86/index";
-import * as o from "./813";
-import * as i from "../935/437";
-import * as a from "../1561/708";
+var r = require("../1626/86/index");
+var o = require("./813");
+var i = require("../935/437");
+var a = require("../1561/708");
 var s = [].join;
 var c = o != Object;
 var l = a("join", ",");

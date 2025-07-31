@@ -27,4 +27,7 @@ function r(e, t) {
     return !0;
   }(e, t));
 }
-export default r;
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.default = r;

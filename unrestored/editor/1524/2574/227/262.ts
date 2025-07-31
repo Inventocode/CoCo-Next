@@ -6,8 +6,8 @@ export { s as c };
 export { c as f };
 export { l as e };
 export { u as d };
-import * as r from "../9";
-import * as o from "../301/index";
+var r = require("../9");
+var o = require("../301/index");
 var i = {
   PRIMITIVE: "PRIMITIVE",
   ARRAY: "ARRAY",
@@ -105,3 +105,4 @@ var u = function (e) {
   }
   return t ? Object(o.b)()[t.slice(6, -1)] : "";
 };
+export default a;

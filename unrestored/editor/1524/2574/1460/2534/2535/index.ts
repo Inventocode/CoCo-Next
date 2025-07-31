@@ -1,6 +1,6 @@
 "use strict";
 
-import * as r from "./2536";
+var r = require("./2536");
 var o = {
   "text/plain": "Text",
   "text/html": "Url",

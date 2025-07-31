@@ -1,5 +1,5 @@
-import * as r from "./2347/1366";
-import * as i from "./2349/1367";
+var r = require("./2347/1366");
+var i = require("./2349/1367");
 exports.NUMERIC = {
   id: "Numeric",
   bit: 1,
@@ -33,7 +33,7 @@ exports.getCharCountIndicator = function (e, t) {
   return t >= 1 && t < 10 ? e.ccBits[0] : t < 27 ? e.ccBits[1] : e.ccBits[2];
 };
 exports.getBestModeForData = function (e) {
-  return i.testNumeric(e) ? t.NUMERIC : i.testAlphanumeric(e) ? t.ALPHANUMERIC : i.testKanji(e) ? t.KANJI : t.BYTE;
+  return i.testNumeric(e) ? exports.NUMERIC : i.testAlphanumeric(e) ? exports.ALPHANUMERIC : i.testKanji(e) ? exports.KANJI : exports.BYTE;
 };
 exports.toString = function (e) {
   if (e && e.id) {
@@ -45,7 +45,7 @@ exports.isValid = function (e) {
   return e && e.bit && e.ccBits;
 };
 exports.from = function (e, n) {
-  if (t.isValid(e)) {
+  if (exports.isValid(e)) {
     return e;
   }
   try {
@@ -55,13 +55,13 @@ exports.from = function (e, n) {
       }
       switch (e.toLowerCase()) {
         case "numeric":
-          return t.NUMERIC;
+          return exports.NUMERIC;
         case "alphanumeric":
-          return t.ALPHANUMERIC;
+          return exports.ALPHANUMERIC;
         case "kanji":
-          return t.KANJI;
+          return exports.KANJI;
         case "byte":
-          return t.BYTE;
+          return exports.BYTE;
         default:
           throw new Error("Unknown mode: " + e);
       }

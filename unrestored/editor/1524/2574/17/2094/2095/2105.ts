@@ -1,10 +1,14 @@
 "use strict";
 
-import * as r from "../../../1000/93";
-import * as i from "../../../125/259";
-import * as o from "../../../1000/134/index";
-import * as a from "../../../125/195/index";
-import * as s from "../../../1000/213/index";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.MoveEvent = void 0;
+var r = require("../../../1000/93");
+var i = require("../../../125/259");
+var o = require("../../../1000/134/index");
+var a = require("../../../125/195/index");
+var s = require("../../../1000/213/index");
 var c = function (e) {
   function t(t) {
     var n = e.call(this, t.block) || this;
@@ -158,4 +162,4 @@ var c = function (e) {
   };
   return t = (0, r.__decorate)([(0, o.injectable)()], t);
 }(require("./643").BlockEvent);
-export { c as MoveEvent };
+exports.MoveEvent = c;

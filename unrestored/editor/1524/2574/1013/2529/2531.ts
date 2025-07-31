@@ -1,4 +1,4 @@
-import * as r from "../1415";
+var r = require("../1415");
 function o(e, t) {
   this.totalCount = e;
   this.dataCount = t;

@@ -1,28 +1,118 @@
 "use strict";
 
-import * as r from "./220";
-import * as i from "./230";
-export { default as File } from "./2691/index";
+var r = require("./220");
+var i = require("./230");
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.DEFAULT_EXTENSIONS = void 0;
+Object.defineProperty(exports, "File", {
+  enumerable: !0,
+  get: function () {
+    return a.default;
+  }
+});
+exports.OptionManager = void 0;
 exports.Plugin = function (e) {
   throw new Error("The (".concat(e, ") Babel 5 plugin is being run with an unsupported Babel version."));
 };
-export { default as buildExternalHelpers } from "./3093/index";
-export { createConfigItem } from "./2681/index";
-export { createConfigItemAsync } from "./2681/index";
-export { createConfigItemSync } from "./2681/index";
-export { getEnv } from "./2790";
-export { loadOptions } from "./2681/index";
-export { loadOptionsAsync } from "./2681/index";
-export { loadOptionsSync } from "./2681/index";
-export { loadPartialConfig } from "./2681/index";
-export { loadPartialConfigAsync } from "./2681/index";
-export { loadPartialConfigSync } from "./2681/index";
-export { parse } from "./3131/index";
-export { parseAsync } from "./3131/index";
-export { parseSync } from "./3131/index";
-export { resolvePlugin } from "./2680";
-export { resolvePreset } from "./2680";
-Object.defineProperty(t, "template", {
+Object.defineProperty(exports, "buildExternalHelpers", {
+  enumerable: !0,
+  get: function () {
+    return s.default;
+  }
+});
+Object.defineProperty(exports, "createConfigItem", {
+  enumerable: !0,
+  get: function () {
+    return c.createConfigItem;
+  }
+});
+Object.defineProperty(exports, "createConfigItemAsync", {
+  enumerable: !0,
+  get: function () {
+    return c.createConfigItemAsync;
+  }
+});
+Object.defineProperty(exports, "createConfigItemSync", {
+  enumerable: !0,
+  get: function () {
+    return c.createConfigItemSync;
+  }
+});
+Object.defineProperty(exports, "getEnv", {
+  enumerable: !0,
+  get: function () {
+    return l.getEnv;
+  }
+});
+Object.defineProperty(exports, "loadOptions", {
+  enumerable: !0,
+  get: function () {
+    return c.loadOptions;
+  }
+});
+Object.defineProperty(exports, "loadOptionsAsync", {
+  enumerable: !0,
+  get: function () {
+    return c.loadOptionsAsync;
+  }
+});
+Object.defineProperty(exports, "loadOptionsSync", {
+  enumerable: !0,
+  get: function () {
+    return c.loadOptionsSync;
+  }
+});
+Object.defineProperty(exports, "loadPartialConfig", {
+  enumerable: !0,
+  get: function () {
+    return c.loadPartialConfig;
+  }
+});
+Object.defineProperty(exports, "loadPartialConfigAsync", {
+  enumerable: !0,
+  get: function () {
+    return c.loadPartialConfigAsync;
+  }
+});
+Object.defineProperty(exports, "loadPartialConfigSync", {
+  enumerable: !0,
+  get: function () {
+    return c.loadPartialConfigSync;
+  }
+});
+Object.defineProperty(exports, "parse", {
+  enumerable: !0,
+  get: function () {
+    return h.parse;
+  }
+});
+Object.defineProperty(exports, "parseAsync", {
+  enumerable: !0,
+  get: function () {
+    return h.parseAsync;
+  }
+});
+Object.defineProperty(exports, "parseSync", {
+  enumerable: !0,
+  get: function () {
+    return h.parseSync;
+  }
+});
+Object.defineProperty(exports, "resolvePlugin", {
+  enumerable: !0,
+  get: function () {
+    return o.resolvePlugin;
+  }
+});
+Object.defineProperty(exports, "resolvePreset", {
+  enumerable: !0,
+  get: function () {
+    return o.resolvePreset;
+  }
+});
+Object.defineProperty(exports, "template", {
   enumerable: !0,
   get: function () {
     return function () {
@@ -34,7 +124,7 @@ Object.defineProperty(t, "template", {
     }().default;
   }
 });
-Object.defineProperty(t, "tokTypes", {
+Object.defineProperty(exports, "tokTypes", {
   enumerable: !0,
   get: function () {
     return function () {
@@ -46,16 +136,61 @@ Object.defineProperty(t, "tokTypes", {
     }().tokTypes;
   }
 });
-export { transform } from "./3119/index";
-export { transformAsync } from "./3119/index";
-export { transformFile } from "./3129";
-export { transformFileAsync } from "./3129";
-export { transformFileSync } from "./3129";
-export { transformFromAst } from "./3130";
-export { transformFromAstAsync } from "./3130";
-export { transformFromAstSync } from "./3130";
-export { transformSync } from "./3119/index";
-Object.defineProperty(t, "traverse", {
+Object.defineProperty(exports, "transform", {
+  enumerable: !0,
+  get: function () {
+    return p.transform;
+  }
+});
+Object.defineProperty(exports, "transformAsync", {
+  enumerable: !0,
+  get: function () {
+    return p.transformAsync;
+  }
+});
+Object.defineProperty(exports, "transformFile", {
+  enumerable: !0,
+  get: function () {
+    return f.transformFile;
+  }
+});
+Object.defineProperty(exports, "transformFileAsync", {
+  enumerable: !0,
+  get: function () {
+    return f.transformFileAsync;
+  }
+});
+Object.defineProperty(exports, "transformFileSync", {
+  enumerable: !0,
+  get: function () {
+    return f.transformFileSync;
+  }
+});
+Object.defineProperty(exports, "transformFromAst", {
+  enumerable: !0,
+  get: function () {
+    return d.transformFromAst;
+  }
+});
+Object.defineProperty(exports, "transformFromAstAsync", {
+  enumerable: !0,
+  get: function () {
+    return d.transformFromAstAsync;
+  }
+});
+Object.defineProperty(exports, "transformFromAstSync", {
+  enumerable: !0,
+  get: function () {
+    return d.transformFromAstSync;
+  }
+});
+Object.defineProperty(exports, "transformSync", {
+  enumerable: !0,
+  get: function () {
+    return p.transformSync;
+  }
+});
+Object.defineProperty(exports, "traverse", {
   enumerable: !0,
   get: function () {
     return function () {
@@ -67,10 +202,11 @@ Object.defineProperty(t, "traverse", {
     }().default;
   }
 });
-import * as a from "./2691/index";
-import * as s from "./3093/index";
-import * as o from "./2680";
-import * as l from "./2790";
+exports.version = exports.types = void 0;
+var a = require("./2691/index");
+var s = require("./3093/index");
+var o = require("./2680");
+var l = require("./2790");
 function u() {
   var e = require("./2623/index");
   u = function () {
@@ -78,20 +214,20 @@ function u() {
   };
   return e;
 }
-Object.defineProperty(t, "types", {
+Object.defineProperty(exports, "types", {
   enumerable: !0,
   get: function () {
     return u();
   }
 });
-import * as c from "./2681/index";
-import * as p from "./3119/index";
-import * as f from "./3129";
-import * as d from "./3130";
-import * as h from "./3131/index";
+var c = require("./2681/index");
+var p = require("./3119/index");
+var f = require("./3129");
+var d = require("./3130");
+var h = require("./3131/index");
 exports.version = "7.16.0";
 var y = Object.freeze([".js", ".jsx", ".es6", ".es", ".mjs", ".cjs"]);
-export { y as DEFAULT_EXTENSIONS };
+exports.DEFAULT_EXTENSIONS = y;
 var m = function () {
   function e() {
     r(this, e);
@@ -104,4 +240,4 @@ var m = function () {
   }]);
   return e;
 }();
-export { m as OptionManager };
+exports.OptionManager = m;

@@ -1,9 +1,9 @@
-import * as r from "./2406";
-import * as i from "../../2506/1140/index";
-import * as o from "../../../../../../784/104/2401/2412/446";
-import * as a from "../../../../../../784/104/2473/2474/2475/970/index";
-import * as s from "../../../2509/2517/1141";
-import * as c from "../../2506/1142/index";
+var r = require("./2406");
+var i = require("../../2506/1140/index");
+var o = require("../../../../../../784/104/2401/2412/446");
+var a = require("../../../../../../784/104/2473/2474/2475/970/index");
+var s = require("../../../2509/2517/1141");
+var c = require("../../2506/1142/index");
 var u = Object.prototype.hasOwnProperty;
 module.exports = function (e, t) {
   var n = o(e);

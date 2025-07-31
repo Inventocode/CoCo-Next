@@ -1,5 +1,5 @@
-import * as r from "../../../2518/2519/475";
-import * as i from "./978";
+var r = require("../../../2518/2519/475");
+var i = require("./978");
 var o = /^\s+|\s+$/g;
 var a = /^[-+]0x[0-9a-f]+$/i;
 var s = /^0b[01]+$/i;

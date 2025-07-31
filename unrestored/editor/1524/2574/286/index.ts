@@ -1,18 +1,41 @@
 "use strict";
 
 export { g as a };
-import * as r from "../95";
-import * as o from "../96";
-import * as i from "../103";
-import * as a from "../120";
-import * as s from "../322";
-import * as c from "../273";
-import * as l from "../28";
-import * as u from "../232/index";
-import * as d from "../232/index";
-import * as p from "../0/index";
-import * as f from "../0/index";
-var h = (require("./1506"), {
+var r = require("../95");
+var o = require("../96");
+var i = require("../103");
+var a = require("../120");
+var s = require("../322");
+var c = require("../273");
+var l = require("../28");
+var u = require("../232/index");
+var d = (module => {
+  var defaultExport = module && module.__esModule ? function () {
+    return module.default;
+  } : function () {
+    return module;
+  };
+  Object.defineProperty(defaultExport, "a", {
+    enumerable: true,
+    get: defaultExport
+  });
+  return defaultExport;
+})(u);
+var p = require("../0/index");
+var f = (module => {
+  var defaultExport = module && module.__esModule ? function () {
+    return module.default;
+  } : function () {
+    return module;
+  };
+  Object.defineProperty(defaultExport, "a", {
+    enumerable: true,
+    get: defaultExport
+  });
+  return defaultExport;
+})(p);
+require("./1506");
+var h = {
   "./style_module.css": {
     "btn-wrap": "CUI-button-btn-wrap",
     "btn-tooltip": "CUI-button-btn-tooltip",
@@ -29,7 +52,7 @@ var h = (require("./1506"), {
     transparent: "CUI-button-transparent",
     "transparent-fb": "CUI-button-transparent-fb"
   }
-});
+};
 function m(e) {
   var t = function () {
     if ("undefined" === typeof Reflect || !Reflect.construct) {
@@ -161,3 +184,4 @@ Object(l.a)(g, "defaultProps", {
   type: "transparent",
   size: "md"
 });
+export default g;

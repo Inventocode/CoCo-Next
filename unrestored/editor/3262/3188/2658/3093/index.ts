@@ -1,8 +1,8 @@
 "use strict";
 
 var r;
-import * as i from "../../../2873/2721/805/index";
-import * as a from "./2676";
+var i = require("../../../2873/2721/805/index");
+var a = require("./2676");
 function s() {
   var e = require("../2691/2722/index");
   s = function () {
@@ -31,7 +31,10 @@ function u() {
   };
   return e;
 }
-export default (function (e) {
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.default = function (e) {
   var t;
   var n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "global";
   var r = {
@@ -45,8 +48,8 @@ export default (function (e) {
   }
   t = r(e);
   return (0, o().default)(t).code;
-});
-import * as c from "../2691/index";
+};
+var c = require("../2691/index");
 var p = u();
 var f = p.arrayExpression;
 var d = p.assignmentExpression;

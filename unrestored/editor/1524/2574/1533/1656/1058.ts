@@ -1,7 +1,7 @@
-import * as r from "../1250/472";
-import * as o from "../1534/631";
-import * as i from "../1534/1060";
-import * as a from "../1659/241";
+var r = require("../1250/472");
+var o = require("../1534/631");
+var i = require("../1534/1060");
+var a = require("../1659/241");
 module.exports = r("Reflect", "ownKeys") || function (e) {
   var t = o.f(a(e));
   var n = i.f;

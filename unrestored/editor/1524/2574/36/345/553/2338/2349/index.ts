@@ -1,11 +1,11 @@
-import * as r from "../717";
-import * as i from "./2350";
-import * as o from "./2351";
-import * as a from "./2352";
-import * as s from "./2353";
-import * as c from "./1367";
-import * as u from "../716";
-import * as l from "./2354";
+var r = require("../717");
+var i = require("./2350");
+var o = require("./2351");
+var a = require("./2352");
+var s = require("./2353");
+var c = require("./1367");
+var u = require("../716");
+var l = require("./2354");
 function f(e) {
   return unescape(encodeURIComponent(e)).length;
 }
@@ -160,7 +160,7 @@ exports.fromString = function (e, n) {
     }(d(e, u.isKanjiModeEnabled())), n), o = l.find_path(i.map, "start", "end"), a = [], s = 1; s < o.length - 1; s++) {
     a.push(i.table[o[s]].node);
   }
-  return t.fromArray(function (e) {
+  return exports.fromArray(function (e) {
     return e.reduce(function (e, t) {
       var n = e.length - 1 >= 0 ? e[e.length - 1] : null;
       return n && n.mode === t.mode ? (e[e.length - 1].data += t.data, e) : (e.push(t), e);
@@ -168,5 +168,5 @@ exports.fromString = function (e, n) {
   }(a));
 };
 exports.rawSplit = function (e) {
-  return t.fromArray(d(e, u.isKanjiModeEnabled()));
+  return exports.fromArray(d(e, u.isKanjiModeEnabled()));
 };

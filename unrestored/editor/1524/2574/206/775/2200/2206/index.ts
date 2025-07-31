@@ -1,8 +1,8 @@
 "use strict";
 
-import * as r from "../../841";
-import * as i from "./2207/index";
-import * as o from "./2241";
+var r = require("../../841");
+var i = require("./2207/index");
+var o = require("./2241");
 module.exports = function () {
   var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
   var t = new i(r({

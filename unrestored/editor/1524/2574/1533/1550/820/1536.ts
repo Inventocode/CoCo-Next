@@ -1,5 +1,5 @@
-import * as r from "../../1626/231";
-import * as o from "../../1534/818";
+var r = require("../../1626/231");
+var o = require("../../1534/818");
 var i = require("../../1735/247/index")("species");
 module.exports = function (e) {
   var t;

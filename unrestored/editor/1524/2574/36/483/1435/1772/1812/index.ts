@@ -1,5 +1,5 @@
-import * as r from "../../../1437/712";
-import * as i from "./1092/index";
+var r = require("../../../1437/712");
+var i = require("./1092/index");
 module.exports = function (e, t) {
   return r(e, i(e), t);
 };

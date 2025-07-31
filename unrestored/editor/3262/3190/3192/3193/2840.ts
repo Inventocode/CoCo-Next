@@ -1,6 +1,9 @@
 "use strict";
 
-export default (function (e, t) {
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.default = function (e, t) {
   if ((0, r.isBlockStatement)(e)) {
     return e;
   }
@@ -14,6 +17,6 @@ export default (function (e, t) {
     n = [e];
   }
   return (0, a.blockStatement)(n);
-});
-import * as r from "./2628";
-import * as a from "./2632/index";
+};
+var r = require("./2628");
+var a = require("./2632/index");

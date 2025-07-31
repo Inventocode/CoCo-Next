@@ -1,5 +1,9 @@
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.DragArea = exports.BlockEventType = void 0;
 (function (e) {
   e.CREATE = "create";
   e.DELETE = "delete";
@@ -10,9 +14,9 @@
   e.START_DRAG = "start_drag";
   e.UI = "ui";
   e.CONTEXT_MENU_OPTION = "context_menu_option";
-})(t.BlockEventType || (exports.BlockEventType = {}));
+})(exports.BlockEventType || (exports.BlockEventType = {}));
 (function (e) {
   e.DELETE_AREA = "delete_area";
   e.INJECTION_DIV = "injection_div";
   e.WORKSPACE = "workspace";
-})(t.DragArea || (exports.DragArea = {}));
+})(exports.DragArea || (exports.DragArea = {}));

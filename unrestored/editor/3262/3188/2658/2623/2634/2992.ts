@@ -1,6 +1,6 @@
 "use strict";
 
-import * as r from "./2643";
+var r = require("./2643");
 var i = (0, r.defineAliasedType)("JSX");
 i("JSXAttribute", {
   visitor: ["name", "value"],

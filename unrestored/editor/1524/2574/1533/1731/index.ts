@@ -1,14 +1,14 @@
 "use strict";
 
 var r;
-import * as o from "../1738/194";
-import * as i from "./752";
-import * as a from "./709";
-import * as s from "./937";
-import * as c from "./1247";
-import * as l from "../1626/231";
+var o = require("../1738/194");
+var i = require("./752");
+var a = require("./709");
+var s = require("./937");
+var c = require("./1247");
+var l = require("../1626/231");
 var u = require("../1738/423/index").enforce;
-import * as d from "./1206";
+var d = require("./1206");
 var p = !o.ActiveXObject && "ActiveXObject" in o;
 var f = Object.isExtensible;
 var h = function (e) {

@@ -1,47 +1,176 @@
 "use strict";
 
-import * as r from "./358";
-export { r as METADATA_KEY };
-import * as i from "./2066/index";
-export { Container } from "./2066/index";
-import * as o from "./578";
-export { BindingScopeEnum } from "./578";
-export { BindingTypeEnum } from "./578";
-export { TargetTypeEnum } from "./578";
-import * as a from "./2082";
-export { AsyncContainerModule } from "./2082";
-export { ContainerModule } from "./2082";
-import * as s from "./2083";
-export { injectable } from "./2083";
-import * as c from "./2084";
-export { tagged } from "./2084";
-import * as u from "./2085";
-export { named } from "./2085";
-import * as l from "./1305";
-export { inject } from "./1305";
-export { LazyServiceIdentifer } from "./1305";
-import * as f from "./2086";
-export { optional } from "./2086";
-import * as h from "./2087";
-export { unmanaged } from "./2087";
-import * as d from "./2088/index";
-export { multiInject } from "./2088/index";
-import * as p from "./2089";
-export { targetName } from "./2089";
-import * as _ from "./2090";
-export { postConstruct } from "./2090";
-import * as A from "./1303";
-export { MetadataReader } from "./1303";
-import * as g from "./713";
-export { id } from "./713";
-import * as v from "./641";
-export { decorate } from "./641";
-import * as m from "./1308";
-export { traverseAncerstors } from "./1308";
-export { taggedConstraint } from "./1308";
-export { namedConstraint } from "./1308";
-export { typeConstraint } from "./1308";
-import * as y from "./838/index";
-export { getServiceIdentifierAsString } from "./838/index";
-import * as b from "./2091";
-export { multiBindToService } from "./2091";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.multiBindToService = exports.getServiceIdentifierAsString = exports.typeConstraint = exports.namedConstraint = exports.taggedConstraint = exports.traverseAncerstors = exports.decorate = exports.id = exports.MetadataReader = exports.postConstruct = exports.targetName = exports.multiInject = exports.unmanaged = exports.optional = exports.LazyServiceIdentifer = exports.inject = exports.named = exports.tagged = exports.injectable = exports.ContainerModule = exports.AsyncContainerModule = exports.TargetTypeEnum = exports.BindingTypeEnum = exports.BindingScopeEnum = exports.Container = exports.METADATA_KEY = void 0;
+var r = require("./358");
+exports.METADATA_KEY = r;
+var i = require("./2066/index");
+Object.defineProperty(exports, "Container", {
+  enumerable: !0,
+  get: function () {
+    return i.Container;
+  }
+});
+var o = require("./578");
+Object.defineProperty(exports, "BindingScopeEnum", {
+  enumerable: !0,
+  get: function () {
+    return o.BindingScopeEnum;
+  }
+});
+Object.defineProperty(exports, "BindingTypeEnum", {
+  enumerable: !0,
+  get: function () {
+    return o.BindingTypeEnum;
+  }
+});
+Object.defineProperty(exports, "TargetTypeEnum", {
+  enumerable: !0,
+  get: function () {
+    return o.TargetTypeEnum;
+  }
+});
+var a = require("./2082");
+Object.defineProperty(exports, "AsyncContainerModule", {
+  enumerable: !0,
+  get: function () {
+    return a.AsyncContainerModule;
+  }
+});
+Object.defineProperty(exports, "ContainerModule", {
+  enumerable: !0,
+  get: function () {
+    return a.ContainerModule;
+  }
+});
+var s = require("./2083");
+Object.defineProperty(exports, "injectable", {
+  enumerable: !0,
+  get: function () {
+    return s.injectable;
+  }
+});
+var c = require("./2084");
+Object.defineProperty(exports, "tagged", {
+  enumerable: !0,
+  get: function () {
+    return c.tagged;
+  }
+});
+var u = require("./2085");
+Object.defineProperty(exports, "named", {
+  enumerable: !0,
+  get: function () {
+    return u.named;
+  }
+});
+var l = require("./1305");
+Object.defineProperty(exports, "inject", {
+  enumerable: !0,
+  get: function () {
+    return l.inject;
+  }
+});
+Object.defineProperty(exports, "LazyServiceIdentifer", {
+  enumerable: !0,
+  get: function () {
+    return l.LazyServiceIdentifer;
+  }
+});
+var f = require("./2086");
+Object.defineProperty(exports, "optional", {
+  enumerable: !0,
+  get: function () {
+    return f.optional;
+  }
+});
+var h = require("./2087");
+Object.defineProperty(exports, "unmanaged", {
+  enumerable: !0,
+  get: function () {
+    return h.unmanaged;
+  }
+});
+var d = require("./2088/index");
+Object.defineProperty(exports, "multiInject", {
+  enumerable: !0,
+  get: function () {
+    return d.multiInject;
+  }
+});
+var p = require("./2089");
+Object.defineProperty(exports, "targetName", {
+  enumerable: !0,
+  get: function () {
+    return p.targetName;
+  }
+});
+var _ = require("./2090");
+Object.defineProperty(exports, "postConstruct", {
+  enumerable: !0,
+  get: function () {
+    return _.postConstruct;
+  }
+});
+var A = require("./1303");
+Object.defineProperty(exports, "MetadataReader", {
+  enumerable: !0,
+  get: function () {
+    return A.MetadataReader;
+  }
+});
+var g = require("./713");
+Object.defineProperty(exports, "id", {
+  enumerable: !0,
+  get: function () {
+    return g.id;
+  }
+});
+var v = require("./641");
+Object.defineProperty(exports, "decorate", {
+  enumerable: !0,
+  get: function () {
+    return v.decorate;
+  }
+});
+var m = require("./1308");
+Object.defineProperty(exports, "traverseAncerstors", {
+  enumerable: !0,
+  get: function () {
+    return m.traverseAncerstors;
+  }
+});
+Object.defineProperty(exports, "taggedConstraint", {
+  enumerable: !0,
+  get: function () {
+    return m.taggedConstraint;
+  }
+});
+Object.defineProperty(exports, "namedConstraint", {
+  enumerable: !0,
+  get: function () {
+    return m.namedConstraint;
+  }
+});
+Object.defineProperty(exports, "typeConstraint", {
+  enumerable: !0,
+  get: function () {
+    return m.typeConstraint;
+  }
+});
+var y = require("./838/index");
+Object.defineProperty(exports, "getServiceIdentifierAsString", {
+  enumerable: !0,
+  get: function () {
+    return y.getServiceIdentifierAsString;
+  }
+});
+var b = require("./2091");
+Object.defineProperty(exports, "multiBindToService", {
+  enumerable: !0,
+  get: function () {
+    return b.multiBindToService;
+  }
+});

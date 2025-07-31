@@ -1,8 +1,8 @@
 "use strict";
 
-import * as r from "../../220";
-import * as i from "../../230";
-import * as a from "../../../../../1524/2574/1/index";
+var r = require("../../220");
+var i = require("../../230");
+var a = require("../../../../../1524/2574/1/index");
 var s = a.mark(b);
 function o() {
   var e = require("../../../1184/index");
@@ -18,15 +18,19 @@ function l() {
   };
   return e;
 }
-export default b;
-import * as u from "../3094/2682";
-import * as c from "../3094/2704";
-import * as p from "../2683/index";
-import * as f from "../3094/2800/index";
-import * as d from "../../2790";
-import * as h from "../3094/2685/index";
-import * as y from "../../2680";
-import * as m from "./2793/index";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.default = b;
+exports.loadPartialConfig = void 0;
+var u = require("../3094/2682");
+var c = require("../3094/2704");
+var p = require("../2683/index");
+var f = require("../3094/2800/index");
+var d = require("../../2790");
+var h = require("../3094/2685/index");
+var y = require("../../2680");
+var m = require("./2793/index");
 var v = ["showIgnoredFiles"];
 function g(e, t) {
   if (null == e) {
@@ -216,7 +220,7 @@ var S = l()(a.mark(function e(t) {
     }
   }, e);
 }));
-export { S as loadPartialConfig };
+exports.loadPartialConfig = S;
 var E = function () {
   function e(t, n, i, a, s, o) {
     r(this, e);

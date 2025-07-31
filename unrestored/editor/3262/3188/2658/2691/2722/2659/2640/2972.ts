@@ -1,6 +1,9 @@
 "use strict";
 
-import * as r from "../../../../../../3190/494";
+var r = require("../../../../../../3190/494");
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
 exports._call = function (e) {
   if (!e) {
     return !1;
@@ -98,7 +101,7 @@ exports.call = function (e) {
   }
   return !1;
 };
-exports.isBlacklisted = t.isDenylisted = function () {
+exports.isBlacklisted = exports.isDenylisted = function () {
   var e;
   var t = null != (e = this.opts.denylist) ? e : this.opts.blacklist;
   return t && t.indexOf(this.node.type) > -1;
@@ -222,8 +225,8 @@ exports.visit = function () {
   this.call("exit");
   return this.shouldStop;
 };
-import * as i from "../index";
-import * as a from "./index";
+var i = require("../index");
+var a = require("./index");
 function s(e, t) {
   if (e.context !== t) {
     e.context = t;

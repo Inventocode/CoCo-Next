@@ -2,8 +2,8 @@
 
 export { i as a };
 export { a as b };
-import * as r from "./68";
-import * as o from "./206/29/index";
+var r = require("./68");
+var o = require("./206/29/index");
 function i(e) {
   return (Object(o.e)() ? window.parent : window).postMessage(e, window.location.origin);
 }
@@ -18,3 +18,4 @@ function a(e, t, n, o) {
     }
   });
 }
+export default i;

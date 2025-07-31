@@ -1,13 +1,13 @@
 "use strict";
 
-import * as r from "./2807";
-import * as i from "../../../../../1184/index";
-import * as a from "./3124";
+var r = require("./2807");
+var i = require("../../../../../1184/index");
+var a = require("./3124");
 function s(e, n) {
   var s;
   if ((n = n || {}).isFileComment) {
     e = function (e, n) {
-      var a = t.mapFileCommentRegex.exec(e);
+      var a = exports.mapFileCommentRegex.exec(e);
       var s = a[1] || a[2];
       var o = i.resolve(n, s);
       try {
@@ -31,12 +31,12 @@ function s(e, n) {
   }
   this.sourcemap = e;
 }
-Object.defineProperty(t, "commentRegex", {
+Object.defineProperty(exports, "commentRegex", {
   get: function () {
     return /^\s*\/(?:\/|\*)[@#]\s+sourceMappingURL=data:(?:application|text)\/json;(?:charset[:=]\S+?;)?base64,(?:.*)$/gm;
   }
 });
-Object.defineProperty(t, "mapFileCommentRegex", {
+Object.defineProperty(exports, "mapFileCommentRegex", {
   get: function () {
     return /(?:\/\/[@#][ \t]+sourceMappingURL=([^\s'"`]+?)[ \t]*$)|(?:\/\*[@#][ \t]+sourceMappingURL=([^\*]+?)[ \t]*(?:\*\/){1}[ \t]*$)/gm;
   }
@@ -95,18 +95,18 @@ exports.fromMapFileComment = function (e, t) {
   });
 };
 exports.fromSource = function (e) {
-  var n = e.match(t.commentRegex);
-  return n ? t.fromComment(n.pop()) : null;
+  var n = e.match(exports.commentRegex);
+  return n ? exports.fromComment(n.pop()) : null;
 };
 exports.fromMapFileSource = function (e, n) {
-  var r = e.match(t.mapFileCommentRegex);
-  return r ? t.fromMapFileComment(r.pop(), n) : null;
+  var r = e.match(exports.mapFileCommentRegex);
+  return r ? exports.fromMapFileComment(r.pop(), n) : null;
 };
 exports.removeComments = function (e) {
-  return e.replace(t.commentRegex, "");
+  return e.replace(exports.commentRegex, "");
 };
 exports.removeMapFileComments = function (e) {
-  return e.replace(t.mapFileCommentRegex, "");
+  return e.replace(exports.mapFileCommentRegex, "");
 };
 exports.generateMapFileComment = function (e, t) {
   var n = "sourceMappingURL=" + e;

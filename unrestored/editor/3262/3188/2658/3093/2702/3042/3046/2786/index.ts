@@ -1,9 +1,12 @@
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
 exports.ArgumentPlaceholder = function () {
   this.token("?");
 };
-exports.ArrayPattern = t.ArrayExpression = function (e) {
+exports.ArrayPattern = exports.ArrayExpression = function (e) {
   var t = e.elements;
   var n = t.length;
   this.token("[");
@@ -68,7 +71,7 @@ exports.NumericLiteral = function (e) {
     }
   }
 };
-exports.ObjectPattern = t.ObjectExpression = function (e) {
+exports.ObjectPattern = exports.ObjectExpression = function (e) {
   var t = e.properties;
   this.token("{");
   this.printInnerComments(e);
@@ -143,7 +146,7 @@ exports.RecordExpression = function (e) {
 exports.RegExpLiteral = function (e) {
   this.word("/".concat(e.pattern, "/").concat(e.flags));
 };
-exports.SpreadElement = t.RestElement = function (e) {
+exports.SpreadElement = exports.RestElement = function (e) {
   this.token("...");
   this.print(e.argument, e);
 };
@@ -199,8 +202,8 @@ exports.TupleExpression = function (e) {
   }
   this.token(n);
 };
-import * as r from "../../../../../2623/index";
-import * as i from "./2751";
+var r = require("../../../../../2623/index");
+var i = require("./2751");
 var a = r.isAssignmentPattern;
 var s = r.isIdentifier;
 var o = new Set(["^", "%", "#"]);

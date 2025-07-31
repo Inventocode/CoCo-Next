@@ -1,7 +1,11 @@
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.autoprefix = void 0;
 var r;
-import * as i from "./2401/1139/index";
+var i = require("./2401/1139/index");
 var o = (r = i) && r.__esModule ? r : {
   default: r
 };
@@ -115,4 +119,4 @@ var c = exports.autoprefix = function (e) {
   });
   return t;
 };
-export default c;
+exports.default = c;

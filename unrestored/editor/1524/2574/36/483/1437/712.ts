@@ -1,5 +1,5 @@
-import * as r from "./1087/index";
-import * as i from "./1087/1088/index";
+var r = require("./1087/index");
+var i = require("./1087/1088/index");
 module.exports = function (e, t, n, o) {
   var a = !n;
   if (!n) {

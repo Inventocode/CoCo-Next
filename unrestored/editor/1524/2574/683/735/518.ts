@@ -1,8 +1,8 @@
 "use strict";
 
 export { o as a };
-import * as r from "../215/393";
-import * as i from "../215/293";
+var r = require("../215/393");
+var i = require("../215/293");
 function o(e) {
   return function t(n, o) {
     switch (arguments.length) {
@@ -21,3 +21,4 @@ function o(e) {
     }
   };
 }
+export default o;

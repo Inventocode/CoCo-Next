@@ -1,6 +1,10 @@
 "use strict";
 
-import * as r from "../../713";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.Context = void 0;
+var r = require("../../713");
 var i = function () {
   function e(e) {
     this.id = r.id();
@@ -14,4 +18,4 @@ var i = function () {
   };
   return e;
 }();
-export { i as Context };
+exports.Context = i;

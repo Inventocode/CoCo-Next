@@ -1,6 +1,9 @@
 "use strict";
 
-export default (function (e, t) {
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.default = function (e, t) {
   for (var n = e.value.split(/\r\n|\n|\r/), a = 0, i = 0; i < n.length; i++) {
     if (n[i].match(/[^ \t]/)) {
       a = i;
@@ -28,5 +31,5 @@ export default (function (e, t) {
   if (o) {
     t.push((0, r.stringLiteral)(o));
   }
-});
-import * as r from "../2631/index";
+};
+var r = require("../2631/index");

@@ -1470,7 +1470,7 @@
         Howler: o,
         Howl: a
       };
-    }.apply(t, [])))) {
+    }.apply(exports, [])))) {
       module.exports = r;
     }
     exports.Howler = o;

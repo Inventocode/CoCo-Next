@@ -1,4 +1,4 @@
-import * as r from "./2356/1368";
+var r = require("./2356/1368");
 exports.render = function (e, t, n) {
   var i = n;
   var o = t;
@@ -42,7 +42,7 @@ exports.renderToDataURL = function (e, n, r) {
   if (!i) {
     i = {};
   }
-  var o = t.render(e, n, i);
+  var o = exports.render(e, n, i);
   var a = i.type || "image/png";
   var s = i.rendererOpts || {};
   return o.toDataURL(a, s.quality);

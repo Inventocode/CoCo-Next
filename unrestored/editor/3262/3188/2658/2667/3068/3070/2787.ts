@@ -1,6 +1,9 @@
 "use strict";
 
-export default (function (e, t, n) {
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.default = function (e, t, n) {
   var r = n.placeholderWhitelist;
   var s = n.placeholderPattern;
   var o = n.preserveComments;
@@ -52,10 +55,10 @@ export default (function (e, t, n) {
   return Object.assign({
     ast: u
   }, f.value ? p : c);
-});
-import * as r from "../../../2623/index";
-import * as i from "../../../2679/index";
-import * as a from "../../../2691/2678/index";
+};
+var r = require("../../../2623/index");
+var i = require("../../../2679/index");
+var a = require("../../../2691/2678/index");
 var s = r.isCallExpression;
 var o = r.isExpressionStatement;
 var l = r.isFunction;

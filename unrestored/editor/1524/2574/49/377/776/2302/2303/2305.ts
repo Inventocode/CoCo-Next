@@ -1,11 +1,15 @@
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.ConflictResolver = void 0;
 var r;
-import * as i from "../../../../../1000/93";
-import * as o from "../../../../../17/640/index";
-import * as a from "../../../../../17/642";
+var i = require("../../../../../1000/93");
+var o = require("../../../../../17/640/index");
+var a = require("../../../../../17/642");
 var s = (0, i.__importStar)(require("../../../../../17/533"));
-import * as c from "../../../../../1000/213/index";
+var c = require("../../../../../1000/213/index");
 var u = function (e) {
   function t() {
     return null !== e && e.apply(this, arguments) || this;
@@ -140,7 +144,7 @@ var u = function (e) {
   (0, i.__decorate)([(0, o.lazy_inject)(a.BINDING.GroupEvent)], t.prototype, "group_event_factory", void 0);
   return t;
 }(require("../../../728/1132").BasePlugin);
-export { u as ConflictResolver };
+exports.ConflictResolver = u;
 (function (e) {
   e.Gesture = "Gesture";
   e.EditField = "EditField";

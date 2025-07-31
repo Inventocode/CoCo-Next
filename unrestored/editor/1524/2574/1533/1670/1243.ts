@@ -1,7 +1,7 @@
-import * as r from "../1728/257";
-import * as o from "../1738/310";
-import * as i from "../1672/1070";
-import * as a from "../1676/421";
+var r = require("../1728/257");
+var o = require("../1738/310");
+var i = require("../1672/1070");
+var a = require("../1676/421");
 var s = Math.ceil;
 var c = function (e) {
   return function (t, n, c) {

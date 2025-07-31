@@ -1,7 +1,11 @@
 "use strict";
 
-import * as r from "../../../1000/93";
-import * as i from "../../../125/index";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.HeadBlockRenderer = void 0;
+var r = require("../../../1000/93");
+var i = require("../../../125/index");
 var o = function (e) {
   function t(t) {
     var n = e.call(this, t) || this;
@@ -41,4 +45,4 @@ var o = function (e) {
   };
   return t;
 }(require("./1104").BlockRenderer);
-export { o as HeadBlockRenderer };
+exports.HeadBlockRenderer = o;

@@ -8,16 +8,17 @@ export { u as e } from "./92";
 export { x as f } from "./92";
 export { f as g };
 export { h };
-import "./229";
-import "../../19";
-import * as r from "./179";
-import * as i from "./92";
-var o = (require("./981"), function (e) {
+require("./229");
+require("../../19");
+var r = require("./179");
+var i = require("./92");
+require("./981");
+var o = function (e) {
   return {
     done: !0,
     value: e
   };
-});
+};
 var a = {};
 function s(e) {
   return Object(r.b)(e) ? "channel" : Object(r.l)(e) ? String(e) : Object(r.d)(e) ? e.name : String(e);

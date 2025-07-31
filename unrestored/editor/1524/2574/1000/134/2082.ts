@@ -1,13 +1,17 @@
 "use strict";
 
-import * as r from "./713";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.AsyncContainerModule = exports.ContainerModule = void 0;
+var r = require("./713");
 var i = function (e) {
   this.id = r.id();
   this.registry = e;
 };
-export { i as ContainerModule };
+exports.ContainerModule = i;
 var o = function (e) {
   this.id = r.id();
   this.registry = e;
 };
-export { o as AsyncContainerModule };
+exports.AsyncContainerModule = o;

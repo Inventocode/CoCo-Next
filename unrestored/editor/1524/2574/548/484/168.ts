@@ -8,3 +8,4 @@ function r(e) {
   return isNaN(t) ? t : t < 0 ? Math.ceil(t) : Math.floor(t);
 }
 export { r as a };
+export default r;

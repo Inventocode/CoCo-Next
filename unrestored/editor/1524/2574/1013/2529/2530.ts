@@ -1,4 +1,4 @@
-import * as r from "./2533/1414";
+var r = require("./2533/1414");
 function o(e) {
   this.mode = r.MODE_8BIT_BYTE;
   this.data = e;

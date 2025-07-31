@@ -1,7 +1,7 @@
 "use strict";
 
 export { i as a };
-import * as r from "./203";
+var r = require("./203");
 function i(e, t, n) {
   return (i = "undefined" !== typeof Reflect && Reflect.get ? Reflect.get : function (e, t, n) {
     var i = function (e, t) {
@@ -16,3 +16,4 @@ function i(e, t, n) {
     }
   })(e, t, n || e);
 }
+export default i;

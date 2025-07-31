@@ -26,11 +26,11 @@ Object.defineProperty(o, "applyServerOp", {
     return m;
   }
 });
-import * as i from "./776/index";
-import * as a from "./728/index";
-import * as s from "../../1035/32/index";
-import * as c from "../../24/index";
-import * as l from "../../43";
+var i = require("./776/index");
+var a = require("./728/index");
+var s = require("../../1035/32/index");
+var c = require("../../24/index");
+var l = require("../../43");
 function u() {
   var e = Object(l.a)();
   var t = c.a.getDoc();
@@ -69,8 +69,8 @@ function p(e, t) {
     c.a.applyClient(n);
   }
 }
-import * as f from "../../26/index";
-import * as h from "../244";
+var f = require("../../26/index");
+var h = require("../244");
 function m(e) {
   var t = c.a.getDoc();
   var n = Object(l.a)();

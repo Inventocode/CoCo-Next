@@ -1,1 +1,1 @@
-e.exports.browserVersions = require("./3101");
+module.exports.browserVersions = require("./3101");

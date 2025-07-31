@@ -1,8 +1,12 @@
 "use strict";
 
-import * as r from "../125/259";
-import * as i from "../125/index";
-import * as o from "../125/714";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.draw_arrow = exports.position_dropdown = void 0;
+var r = require("../125/259");
+var i = require("../125/index");
+var o = require("../125/714");
 exports.position_dropdown = function (e, t) {
   var n = t.get_svg_root();
   if (!t.source_block || !n) {

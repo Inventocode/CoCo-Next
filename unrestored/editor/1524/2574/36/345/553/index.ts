@@ -1,7 +1,7 @@
-import * as r from "./2337";
-import * as i from "./2338/index";
-import * as o from "./2355";
-import * as a from "./2356/index";
+var r = require("./2337");
+var i = require("./2338/index");
+var o = require("./2355");
+var a = require("./2356/index");
 function s(e, t, n, o, a) {
   var s = [].slice.call(arguments, 1);
   var c = s.length;

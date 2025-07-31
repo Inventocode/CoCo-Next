@@ -11,7 +11,8 @@
   exports.f = h;
   exports.g = d;
   var r = require("./2577/903");
-  var i = (require("./737"), {});
+  require("./737");
+  var i = {};
   function o() {
     return Object(r.b)() ? e : "undefined" !== typeof window ? window : "undefined" !== typeof self ? self : i;
   }

@@ -1,6 +1,9 @@
 "use strict";
 
-export default (function (e, t, n) {
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.default = function (e, t, n) {
   var o = function (e, t, n) {
     var r;
     var a;
@@ -44,10 +47,10 @@ export default (function (e, t, n) {
       return e.unwrap((0, a.default)(l, i ? Object.assign(i, n) : n));
     };
   };
-});
-import * as r from "../2703";
-import * as i from "./2787";
-import * as a from "./2788";
+};
+var r = require("../2703");
+var i = require("./2787");
+var a = require("./2788");
 function s(e, t) {
   for (var n = [], r = e[0], i = 1; i < e.length; i++) {
     var a = "".concat(t).concat(i - 1);

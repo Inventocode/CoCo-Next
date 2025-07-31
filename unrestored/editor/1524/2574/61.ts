@@ -12,14 +12,14 @@ export { O as f };
 export { w as g };
 export { C as k };
 export { T as l };
-import * as r from "./6";
-import * as o from "./25/index";
-import * as i from "./98";
-import * as a from "./36/index";
-import * as s from "./5";
-import * as c from "./76";
-import * as l from "./4/index";
-import * as u from "./46/index";
+var r = require("./6");
+var o = require("./25/index");
+var i = require("./98");
+var a = require("./36/index");
+var s = require("./5");
+var c = require("./76");
+var l = require("./4/index");
+var u = require("./46/index");
 var d = {
   type: s.D,
   category: {
@@ -360,7 +360,7 @@ var d = {
   },
   topBlocks: ["screen_on_open_get_param", "screen_on_open", "screen_on_press", "app_on_switch_background", "broadcast_on_receive", "widget_event"]
 };
-import * as p from "./35/index";
+var p = require("./35/index");
 var f = '<sep gap="'.concat(45, '"></sep>');
 var h = "DROPDOWN_PLACEHOLDER_OPTION_VALUE";
 var m = "?";
@@ -487,3 +487,4 @@ function T(e, t, n) {
     }
   }(e, o, r, i);
 }
+export default g;

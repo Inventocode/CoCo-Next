@@ -1,6 +1,6 @@
 "use strict";
 
-import * as r from "./219/index";
+var r = require("./219/index");
 export { i as a } from "./219/index";
 export { j as b } from "./219/index";
 export { l as c } from "./219/index";

@@ -1,7 +1,11 @@
 "use strict";
 
-import * as r from "./2626";
-import * as i from "./2630/index";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.default = void 0;
+var r = require("./2626");
+var i = require("./2630/index");
 var a = function (e, t) {
   if ((0, r.isStatement)(e)) {
     return e;
@@ -29,4 +33,4 @@ var a = function (e, t) {
   e.type = n;
   return e;
 };
-export default a;
+exports.default = a;

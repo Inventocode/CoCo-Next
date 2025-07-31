@@ -1,8 +1,8 @@
 "use strict";
 
-import * as r from "../../../3190/494";
-import * as i from "../220";
-import * as a from "../230";
+var r = require("../../../3190/494");
+var i = require("../220");
+var a = require("../230");
 function s() {
   var e = require("./2722/index");
   s = function () {
@@ -45,6 +45,10 @@ function p() {
   };
   return e;
 }
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.default = void 0;
 var f = u();
 var d = f.cloneNode;
 var h = f.interpreterDirective;
@@ -244,4 +248,4 @@ var m = function () {
   }]);
   return e;
 }();
-export default m;
+exports.default = m;

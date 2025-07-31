@@ -1,8 +1,8 @@
 "use strict";
 
-import * as r from "./1626/86/index";
+var r = require("./1626/86/index");
 var o = require("./1715/816").includes;
-import * as i from "./935/633";
+var i = require("./935/633");
 r({
   target: "Array",
   proto: !0

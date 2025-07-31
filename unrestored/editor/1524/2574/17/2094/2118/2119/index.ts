@@ -1,16 +1,20 @@
 "use strict";
 
-import * as r from "../../../../1000/93";
-import * as i from "../../../../125/259";
-import * as o from "../../../../4/127";
-import * as a from "../../../../125/195/index";
-import * as s from "../../2164/755";
-import * as c from "../../2140/1314";
-import * as u from "../../../../1000/213/index";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.onKeyDown_ = exports.Inject = void 0;
+var r = require("../../../../1000/93");
+var i = require("../../../../125/259");
+var o = require("../../../../4/127");
+var a = require("../../../../125/195/index");
+var s = require("../../2164/755");
+var c = require("../../2140/1314");
+var u = require("../../../../1000/213/index");
 var l = (0, r.__importStar)(require("../../../../125/index"));
-import * as f from "./2120";
-import * as h from "../../../497/index";
-import * as d from "../../../497/644";
+var f = require("./2120");
+var h = require("../../../497/index");
+var d = require("../../../497/644");
 exports.Inject = function (e, t) {
   if ((0, u.is_string)(e) && (e = document.getElementById(e) || document.querySelector(e) || void 0), (0, u.is_nil)(e) || !l.contains(document, e)) {
     throw new ReferenceError("Error: container is not in current document.");
@@ -429,4 +433,4 @@ function v(e) {
     }
   }
 }
-export { v as onKeyDown_ };
+exports.onKeyDown_ = v;

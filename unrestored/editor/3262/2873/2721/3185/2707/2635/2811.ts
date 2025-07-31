@@ -1,12 +1,16 @@
 "use strict";
 
-import * as r from "../../../../../3190/624/index";
-import * as a from "../../../805/index";
-import * as i from "../2668";
-import * as o from "../2669/index";
-import * as s from "../2669/2710/index";
-import * as u from "../2651";
-import * as l from "./2644";
+var r = require("../../../../../3190/624/index");
+var a = require("../../../805/index");
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.patternLikeCommon = exports.functionTypeAnnotationCommon = exports.functionDeclarationCommon = exports.functionCommon = exports.classMethodOrPropertyCommon = exports.classMethodOrDeclareMethodCommon = void 0;
+var i = require("../2668");
+var o = require("../2669/index");
+var s = require("../2669/2710/index");
+var u = require("../2651");
+var l = require("./2644");
 var p = (0, l.defineAliasedType)("Standardized");
 p("ArrayExpression", {
   fields: {
@@ -314,7 +318,7 @@ var f = {
     default: !1
   }
 };
-export { f as functionCommon };
+exports.functionCommon = f;
 var d = {
   returnType: {
     validate: (0, l.assertNodeType)("TypeAnnotation", "TSTypeAnnotation", "Noop"),
@@ -325,7 +329,7 @@ var d = {
     optional: !0
   }
 };
-export { d as functionTypeAnnotationCommon };
+exports.functionTypeAnnotationCommon = d;
 var c = Object.assign({}, f, {
   declare: {
     validate: (0, l.assertValueType)("boolean"),
@@ -336,7 +340,7 @@ var c = Object.assign({}, f, {
     optional: !0
   }
 });
-export { c as functionDeclarationCommon };
+exports.functionDeclarationCommon = c;
 p("FunctionDeclaration", {
   builder: ["id", "params", "body", "generator", "async"],
   visitor: ["id", "params", "body", "returnType", "typeParameters"],
@@ -386,7 +390,7 @@ var y = {
     validate: (0, l.chain)((0, l.assertValueType)("array"), (0, l.assertEach)((0, l.assertNodeType)("Decorator")))
   }
 };
-export { y as patternLikeCommon };
+exports.patternLikeCommon = y;
 p("Identifier", {
   builder: ["name"],
   visitor: ["typeAnnotation", "decorators"],
@@ -1433,7 +1437,7 @@ var T = {
     }(), (0, l.assertNodeType)("Identifier", "StringLiteral", "NumericLiteral", "Expression"))
   }
 };
-export { T as classMethodOrPropertyCommon };
+exports.classMethodOrPropertyCommon = T;
 var m = Object.assign({}, f, T, {
   params: {
     validate: (0, l.chain)((0, l.assertValueType)("array"), (0, l.assertEach)((0, l.assertNodeType)("Identifier", "Pattern", "RestElement", "TSParameterProperty")))
@@ -1451,7 +1455,7 @@ var m = Object.assign({}, f, T, {
     optional: !0
   }
 });
-export { m as classMethodOrDeclareMethodCommon };
+exports.classMethodOrDeclareMethodCommon = m;
 p("ClassMethod", {
   aliases: ["Function", "Scopable", "BlockParent", "FunctionParent", "Method"],
   builder: ["kind", "key", "params", "body", "computed", "static", "generator", "async"],

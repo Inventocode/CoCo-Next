@@ -11,7 +11,7 @@
   exports.setInterval = function () {
     return new o(i.call(setInterval, r, arguments), clearInterval);
   };
-  exports.clearTimeout = t.clearInterval = function (e) {
+  exports.clearTimeout = exports.clearInterval = function (e) {
     if (e) {
       e.close();
     }
@@ -28,7 +28,7 @@
     clearTimeout(e._idleTimeoutId);
     e._idleTimeout = -1;
   };
-  exports._unrefActive = t.active = function (e) {
+  exports._unrefActive = exports.active = function (e) {
     clearTimeout(e._idleTimeoutId);
     var t = e._idleTimeout;
     if (t >= 0) {

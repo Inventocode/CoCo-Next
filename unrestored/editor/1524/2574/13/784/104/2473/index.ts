@@ -1,5 +1,9 @@
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.mergeClasses = void 0;
 var r = a(require("../2401/1139/index"));
 var i = a(require("./2474/index"));
 var o = Object.assign || function (e) {
@@ -33,4 +37,4 @@ var s = exports.mergeClasses = function (e) {
   });
   return n;
 };
-export default s;
+exports.default = s;

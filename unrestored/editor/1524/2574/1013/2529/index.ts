@@ -1,8 +1,8 @@
-import * as r from "./2530";
-import * as o from "./2531";
-import * as i from "./2532";
-import * as a from "./2533/index";
-import * as s from "./1416/index";
+var r = require("./2530");
+var o = require("./2531");
+var i = require("./2532");
+var a = require("./2533/index");
+var s = require("./1416/index");
 function c(e, t) {
   this.typeNumber = e;
   this.errorCorrectLevel = t;

@@ -1,13 +1,13 @@
 "use strict";
 
-import * as r from "./1626/86/index";
-import * as o from "./1626/231";
-import * as i from "./1534/818";
-import * as a from "./1728/706";
-import * as s from "./1728/257";
-import * as c from "./935/437";
-import * as l from "./1550/707";
-import * as u from "./1735/247/index";
+var r = require("./1626/86/index");
+var o = require("./1626/231");
+var i = require("./1534/818");
+var a = require("./1728/706");
+var s = require("./1728/257");
+var c = require("./935/437");
+var l = require("./1550/707");
+var u = require("./1735/247/index");
 var d = require("./1550/821")("slice");
 var p = u("species");
 var f = [].slice;

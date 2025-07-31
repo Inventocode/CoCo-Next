@@ -2,12 +2,12 @@
 
 export { u as a };
 export { f as b };
-import * as r from "../../../36/483/39";
-import * as i from "../925";
-import * as o from "../265";
-import * as a from "./722";
-import * as s from "../350";
-import * as c from "./765";
+var r = require("../../../36/483/39");
+var i = require("../925");
+var o = require("../265");
+var a = require("./722");
+var s = require("../350");
+var c = require("./765");
 var u = 1e3;
 var l = function (e) {
   function t(t, n, r, i) {
@@ -199,3 +199,4 @@ function h(e) {
     }
   }
 }
+export default u;

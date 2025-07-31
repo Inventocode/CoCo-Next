@@ -33,5 +33,7 @@ unpack({
     output: {
         path: path.resolve("unrestored", "editor")
     },
-    setPath: SetPath.BY_DEPENDENCY
+    setPath: SetPath.BY_DEPENDENCY,
+    publicPath: "https://creation.codemao.cn/coconut/web/1.22.0-0/",
+    useESImport: false
 })

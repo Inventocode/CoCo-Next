@@ -1,9 +1,13 @@
 "use strict";
 
-import * as r from "../4/127";
-import * as o from "../206/725/387";
-import * as i from "../1000/213/index";
-import * as a from "./2540/579";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.init_tell_blocks = exports.is_controls_if = exports.init_control_blocks = void 0;
+var r = require("../4/127");
+var o = require("../206/725/387");
+var i = require("../1000/213/index");
+var a = require("./2540/579");
 var s = ["Boolean"];
 exports.init_control_blocks = function (e) {
   var t = [{

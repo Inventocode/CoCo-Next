@@ -1,7 +1,7 @@
 "use strict";
 
-import * as r from "./20";
-import * as i from "./0/index";
+var r = require("./20");
+var i = require("./0/index");
 var o = {
   icon: {
     tag: "svg",
@@ -19,7 +19,7 @@ var o = {
   name: "close",
   theme: "outlined"
 };
-import * as a from "./223/index";
+var a = require("./223/index");
 var s = function (e, t) {
   return i.createElement(a.a, Object(r.a)(Object(r.a)({}, e), {}, {
     ref: t,

@@ -1,9 +1,13 @@
 "use strict";
 
-import * as r from "../../../1000/93";
-import * as i from "../../../125/259";
-import * as o from "../../../4/127";
-import * as a from "../../../125/195/index";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.ElementDragger = void 0;
+var r = require("../../../1000/93");
+var i = require("../../../125/259");
+var o = require("../../../4/127");
+var a = require("../../../125/195/index");
 var s = function () {
   function e(e, t) {
     this.parent_before_drag = void 0;
@@ -167,4 +171,4 @@ var s = function () {
   (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.StartDragEvent)], e.prototype, "start_drag_event_factory", void 0);
   return e;
 }();
-export { s as ElementDragger };
+exports.ElementDragger = s;

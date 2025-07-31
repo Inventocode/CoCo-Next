@@ -1,12 +1,12 @@
 "use strict";
 
-import * as r from "../../../../../../3262/3188/2658/220";
-import * as i from "../../../../../../3262/3188/2658/230";
-import * as o from "../../../../../../3262/3188/2658/2679/703/index";
-import * as a from "../../../../../../3262/3188/2658/2679/529";
-import * as s from "../../../../../../3262/3188/2658/2679/356/index";
-import * as c from "../../../../../../3262/3188/2658/2679/357/index";
-import * as u from "./2192";
+var r = require("../../../../../../3262/3188/2658/220");
+var i = require("../../../../../../3262/3188/2658/230");
+var o = require("../../../../../../3262/3188/2658/2679/703/index");
+var a = require("../../../../../../3262/3188/2658/2679/529");
+var s = require("../../../../../../3262/3188/2658/2679/356/index");
+var c = require("../../../../../../3262/3188/2658/2679/357/index");
+var u = require("./2192");
 var l = /^[\da-fA-F]+$/;
 var f = /^\d+$/;
 var h = new WeakMap();
@@ -430,7 +430,7 @@ module.exports = function (e) {
     }, t);
   };
 };
-Object.defineProperty(e.exports, "tokTypes", {
+Object.defineProperty(module.exports, "tokTypes", {
   get: function () {
     return d(require("../1108")).tokTypes;
   },

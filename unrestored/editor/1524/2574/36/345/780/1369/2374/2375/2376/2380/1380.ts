@@ -157,8 +157,8 @@ var g = {
   "%WeakMapPrototype%": ["WeakMap", "prototype"],
   "%WeakSetPrototype%": ["WeakSet", "prototype"]
 };
-import * as v from "../2377/968/index";
-import * as m from "../2377/1379";
+var v = require("../2377/968/index");
+var m = require("../2377/1379");
 var y = v.call(Function.call, Array.prototype.concat);
 var b = v.call(Function.apply, Array.prototype.splice);
 var w = v.call(Function.call, String.prototype.replace);

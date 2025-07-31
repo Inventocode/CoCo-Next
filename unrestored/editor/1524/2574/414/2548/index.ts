@@ -43,14 +43,17 @@ var i = this && this.__spreadArrays || function () {
   }
   return r;
 };
-import * as a from "../../0/index";
-import * as s from "../../0/index";
-import * as c from "../../50/index";
-import * as l from "../1420/871";
-import * as u from "../1420/index";
-import * as d from "../1421";
-import * as p from "./2549/index";
-import * as f from "./2552";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+var a = require("../../0/index");
+var s = require("../../0/index");
+var c = require("../../50/index");
+var l = require("../1420/871");
+var u = require("../1420/index");
+var d = require("../1421");
+var p = require("./2549/index");
+var f = require("./2552");
 var h = function (e) {
   function t(t) {
     var n = e.call(this, t) || this;
@@ -273,7 +276,7 @@ function m(e, t) {
     h[e] = t;
   });
 }
-export { h as AgGridReact };
+exports.AgGridReact = h;
 h.propTypes = {
   gridOptions: c.object
 };

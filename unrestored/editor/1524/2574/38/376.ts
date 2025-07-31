@@ -22,3 +22,4 @@ function s(e, t, n) {
     viewBox: n
   };
 }
+export default a;

@@ -1,11 +1,15 @@
 "use strict";
 
-import * as r from "../../1000/93";
-import * as i from "../../125/259";
-import * as o from "../../4/127";
-import * as a from "../../125/195/index";
-import * as s from "../../125/index";
-import * as c from "./2164/755";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.WorkspaceElement = void 0;
+var r = require("../../1000/93");
+var i = require("../../125/259");
+var o = require("../../4/127");
+var a = require("../../125/195/index");
+var s = require("../../125/index");
+var c = require("./2164/755");
 var u = function () {
   function e(e) {
     this.id = "";
@@ -321,4 +325,4 @@ var u = function () {
   (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.UIEvent)], e.prototype, "ui_event_factory", void 0);
   return e;
 }();
-export { u as WorkspaceElement };
+exports.WorkspaceElement = u;

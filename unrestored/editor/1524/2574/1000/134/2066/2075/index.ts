@@ -1,10 +1,14 @@
 "use strict";
 
-import * as r from "../../838/443";
-import * as i from "../../578";
-import * as o from "../2068/1304";
-import * as a from "../../838/index";
-import * as s from "./2076";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.resolve = void 0;
+var r = require("../../838/443");
+var i = require("../../578");
+var o = require("../2068/1304");
+var a = require("../../838/index");
+var s = require("./2076");
 var c = function (e, t, n) {
   try {
     return n();

@@ -1,6 +1,6 @@
 "use strict";
 
-import * as r from "../../445";
+var r = require("../../445");
 var i = ["age", "authorization", "content-length", "content-type", "etag", "expires", "from", "host", "if-modified-since", "if-unmodified-since", "last-modified", "location", "max-forwards", "proxy-authorization", "referer", "retry-after", "user-agent"];
 module.exports = function (e) {
   var t;

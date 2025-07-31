@@ -1,8 +1,12 @@
 "use strict";
 
-import * as r from "../../../1000/93";
-import * as i from "../../../125/195/index";
-import * as o from "../../../125/index";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.OutputBlockRenderer = void 0;
+var r = require("../../../1000/93");
+var i = require("../../../125/195/index");
+var o = require("../../../125/index");
 var a = function (e) {
   function t(t) {
     var n = e.call(this, t) || this;
@@ -169,4 +173,4 @@ var a = function (e) {
   };
   return t;
 }(require("./1104").BlockRenderer);
-export { a as OutputBlockRenderer };
+exports.OutputBlockRenderer = a;

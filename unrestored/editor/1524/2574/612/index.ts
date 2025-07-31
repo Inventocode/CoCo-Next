@@ -1,4 +1,4 @@
 "use strict";
 
-import * as r from "./789/index";
+var r = require("./789/index");
 exports.a = r.b;

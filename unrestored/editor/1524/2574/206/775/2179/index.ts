@@ -1,10 +1,10 @@
 "use strict";
 
-import * as r from "../../../1035/1356/569";
-import * as i from "./2182";
-import * as o from "./2185/index";
-import * as a from "./1107";
-import * as s from "./963";
+var r = require("../../../1035/1356/569");
+var i = require("./2182");
+var o = require("./2185/index");
+var a = require("./1107");
+var s = require("./963");
 var c = require("./1321").Scope;
 var u = require("./2189").version;
 module.exports = {

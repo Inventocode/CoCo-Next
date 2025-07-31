@@ -1,6 +1,9 @@
 "use strict";
 
-export default (function (e, t, n) {
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.default = function (e, t, n) {
   if (!t) {
     return !1;
   }
@@ -8,8 +11,8 @@ export default (function (e, t, n) {
     return !n && "Placeholder" === t.type && e in s.FLIPPED_ALIAS_KEYS && (0, a.default)(t.expectedNode, e);
   }
   return "undefined" === typeof n || (0, r.default)(t, n);
-});
-import * as r from "./2698";
-import * as i from "./2699";
-import * as a from "./2762";
-import * as s from "./2634/index";
+};
+var r = require("./2698");
+var i = require("./2699");
+var a = require("./2762");
+var s = require("./2634/index");

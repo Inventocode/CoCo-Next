@@ -1332,7 +1332,7 @@ var r;
   ("undefined" !== typeof i ? i : "undefined" !== typeof self ? self : {}).Hammer = Oe;
   if (!(void 0 === (r = function () {
     return Oe;
-  }.call(t, n, t, e)))) {
+  }.call(exports, require, exports, module)))) {
     module.exports = r;
   }
 }(window, document);

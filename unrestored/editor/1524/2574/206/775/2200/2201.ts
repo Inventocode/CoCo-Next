@@ -1,6 +1,6 @@
 "use strict";
 
-import * as r from "../841";
+var r = require("../841");
 var i = {
   $schema: {
     type: "string"

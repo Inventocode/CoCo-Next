@@ -1,10 +1,10 @@
-import * as r from "./1816";
-import * as i from "../../../989/1086/1789/1084";
-import * as o from "./1817";
-import * as a from "./1818";
-import * as s from "./1819";
-import * as c from "../../../1437/835/1085/832/index";
-import * as u from "./1258";
+var r = require("./1816");
+var i = require("../../../989/1086/1789/1084");
+var o = require("./1817");
+var a = require("./1818");
+var s = require("./1819");
+var c = require("../../../1437/835/1085/832/index");
+var u = require("./1258");
 var l = u(r);
 var f = u(i);
 var h = u(o);

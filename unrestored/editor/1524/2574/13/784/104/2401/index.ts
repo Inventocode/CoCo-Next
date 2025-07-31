@@ -1,5 +1,9 @@
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.flattenNames = void 0;
 var r = s(require("./2402"));
 var i = s(require("./1139/index"));
 var o = s(require("./1388/index"));
@@ -34,4 +38,4 @@ var c = exports.flattenNames = function e() {
   });
   return n;
 };
-export default c;
+exports.default = c;

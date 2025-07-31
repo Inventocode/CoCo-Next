@@ -1,15 +1,19 @@
 "use strict";
 
-import * as r from "../../../../1000/93";
-import * as i from "../../../../17/497/961";
-import * as o from "../../../../301/173";
-import * as a from "../../../../4/127";
-import * as s from "../../../../125/195/2003/1099";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.TransformToIde = void 0;
+var r = require("../../../../1000/93");
+var i = require("../../../../17/497/961");
+var o = require("../../../../301/173");
+var a = require("../../../../4/127");
+var s = require("../../../../125/195/2003/1099");
 var c = (0, r.__importStar)(require("../../../../17/533"));
-import * as u from "../../../../1000/213/index";
+var u = require("../../../../1000/213/index");
 var l = (0, r.__importStar)(require("../../728/1130"));
 var f = (0, r.__importStar)(require("../../728/1131"));
-import * as h from "./2303/index";
+var h = require("./2303/index");
 var d = function () {
   function e() {
     this.plugins = new Set();
@@ -846,4 +850,4 @@ var d = function () {
   (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.ChangeEvent)], e.prototype, "change_event_factory", void 0);
   return e;
 }();
-export { d as TransformToIde };
+exports.TransformToIde = d;

@@ -1,4 +1,4 @@
-import * as r from "./2796";
+var r = require("./2796");
 function i() {}
 module.exports = {
   loadQueries: function () {

@@ -1,8 +1,8 @@
 "use strict";
 
-import * as r from "../../../../../3190/494";
-import * as i from "../../../../../2873/2721/805/index";
-import * as a from "../../../../../../1524/2574/1/index";
+var r = require("../../../../../3190/494");
+var i = require("../../../../../2873/2721/805/index");
+var a = require("../../../../../../1524/2574/1/index");
 var s = a.mark(b);
 var o = a.mark(k);
 var l = a.mark(D);
@@ -22,14 +22,18 @@ function f() {
   };
   return e;
 }
-export { b as buildPresetChain };
-export { k as buildRootChain };
-import * as d from "../2685/index";
-import * as h from "./3115";
-import * as y from "./3116";
-import * as m from "../../../2680";
-import * as v from "../2684";
-import * as g from "../../2683/2792";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.buildPresetChain = b;
+exports.buildPresetChainWalker = void 0;
+exports.buildRootChain = k;
+var d = require("../2685/index");
+var h = require("./3115");
+var y = require("./3116");
+var m = require("../../../2680");
+var v = require("../2684");
+var g = require("../../2683/2792");
 var T = f()("babel:config:config-chain");
 function b(e, t) {
   var n;
@@ -77,7 +81,7 @@ var S = V({
     return function () {};
   }
 });
-export { S as buildPresetChainWalker };
+exports.buildPresetChainWalker = S;
 var E = (0, v.makeWeakCacheSync)(function (e) {
   return F(e, e.alias, g.createUncachedDescriptors);
 });

@@ -57,3 +57,4 @@ var o = {
     }
   }]
 };
+export default r;

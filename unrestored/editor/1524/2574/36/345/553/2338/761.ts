@@ -1,6 +1,6 @@
 "use strict";
 
-import * as r from "../../../../24/481/1123/758";
+var r = require("../../../../24/481/1123/758");
 o.TYPED_ARRAY_SUPPORT = function () {
   try {
     var e = new Uint8Array(1);
@@ -318,11 +318,11 @@ o.prototype._isBuffer = !0;
 o.isBuffer = function (e) {
   return !(null == e || !e._isBuffer);
 };
-e.exports.alloc = function (e) {
+module.exports.alloc = function (e) {
   var t = new o(e);
   t.fill(0);
   return t;
 };
-e.exports.from = function (e) {
+module.exports.from = function (e) {
   return new o(e);
 };

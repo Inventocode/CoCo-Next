@@ -1,4 +1,4 @@
-import * as r from "./1405";
+var r = require("./1405");
 module.exports = function (e, t, n) {
   if ("__proto__" == t && r) {
     r(e, t, {

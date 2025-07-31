@@ -1,5 +1,5 @@
-import * as r from "../1601/705";
-import * as o from "../1241/944";
+var r = require("../1601/705");
+var o = require("../1241/944");
 module.exports = function (e, t) {
   var n = e.exec;
   if ("function" === typeof n) {

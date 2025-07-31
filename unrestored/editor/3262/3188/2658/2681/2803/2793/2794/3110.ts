@@ -1,5 +1,8 @@
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
 exports.getInclusionReasons = function (e, t, n) {
   var s = n[e] || {};
   return Object.keys(t).reduce(function (e, n) {
@@ -16,6 +19,6 @@ exports.getInclusionReasons = function (e, t, n) {
     return e;
   }, {});
 };
-import * as r from "../../../../2691/2657";
-import * as i from "./2799";
-import * as a from "./2705";
+var r = require("../../../../2691/2657");
+var i = require("./2799");
+var a = require("./2705");

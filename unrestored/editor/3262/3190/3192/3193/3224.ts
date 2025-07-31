@@ -1,9 +1,12 @@
 "use strict";
 
-export default o;
-import * as r from "./2628";
-import * as a from "./2654";
-import * as i from "./2842";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.default = o;
+var r = require("./2628");
+var a = require("./2654");
+var i = require("./2842");
 function o(e) {
   var t;
   var n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : e.key;

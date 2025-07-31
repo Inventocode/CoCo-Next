@@ -1,6 +1,10 @@
 "use strict";
 
-import * as r from "./2629/index";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.default = void 0;
+var r = require("./2629/index");
 var i = function (e) {
   switch (e) {
     case "string":
@@ -22,4 +26,4 @@ var i = function (e) {
   }
   throw new Error("Invalid typeof value: " + e);
 };
-export default i;
+exports.default = i;

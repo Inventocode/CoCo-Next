@@ -1,9 +1,9 @@
-import * as r from "./1087/index";
-import * as i from "./712";
-import * as o from "../1436/1095/index";
-import * as a from "./835/index";
-import * as s from "./958";
-import * as c from "./833/index";
+var r = require("./1087/index");
+var i = require("./712");
+var o = require("../1436/1095/index");
+var a = require("./835/index");
+var s = require("./958");
+var c = require("./833/index");
 var u = Object.prototype.hasOwnProperty;
 var l = o(function (e, t) {
   if (s(t) || a(t)) {

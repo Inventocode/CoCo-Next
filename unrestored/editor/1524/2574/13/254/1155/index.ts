@@ -1,5 +1,9 @@
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.Checkboard = void 0;
 var r = Object.assign || function (e) {
   for (var t = 1; t < arguments.length; t++) {
     var n = arguments[t];
@@ -9,7 +13,7 @@ var r = Object.assign || function (e) {
   }
   return e;
 };
-import * as i from "../../../0/index";
+var i = require("../../../0/index");
 var o = c(i);
 var a = c(require("../../784/104/index"));
 var s = function (e) {
@@ -60,4 +64,4 @@ u.defaultProps = {
   grey: "rgba(0,0,0,.08)",
   renderers: {}
 };
-export default u;
+exports.default = u;

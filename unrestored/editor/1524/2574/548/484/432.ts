@@ -1,9 +1,9 @@
 "use strict";
 
 export { a };
-import * as r from "./168";
-import * as i from "./111";
-import * as o from "./106";
+var r = require("./168");
+var i = require("./111");
+var o = require("./106");
 function a(e, t) {
   Object(o.a)(1, arguments);
   var n = t || {};
@@ -21,3 +21,4 @@ function a(e, t) {
   l.setUTCHours(0, 0, 0, 0);
   return l;
 }
+export default a;

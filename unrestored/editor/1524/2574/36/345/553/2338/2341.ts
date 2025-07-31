@@ -10,7 +10,7 @@ exports.getRowColCoords = function (e) {
   return o.reverse();
 };
 exports.getPositions = function (e) {
-  for (var n = [], r = t.getRowColCoords(e), i = r.length, o = 0; o < i; o++) {
+  for (var n = [], r = exports.getRowColCoords(e), i = r.length, o = 0; o < i; o++) {
     for (var a = 0; a < i; a++) {
       if (!(0 === o && 0 === a || 0 === o && a === i - 1 || o === i - 1 && 0 === a)) {
         n.push([r[o], r[a]]);

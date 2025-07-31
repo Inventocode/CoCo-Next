@@ -1,9 +1,21 @@
 "use strict";
 
-import * as r from "./0/index";
-import * as o from "./8";
-import * as i from "./8";
-exports.a = function (e) {
+var r = require("./0/index");
+var o = require("./8");
+var i = (module => {
+  var defaultExport = module && module.__esModule ? function () {
+    return module.default;
+  } : function () {
+    return module;
+  };
+  Object.defineProperty(defaultExport, "a", {
+    enumerable: true,
+    get: defaultExport
+  });
+  return defaultExport;
+})(o);
+var _a;
+_a = function (e) {
   var t;
   var n = e.className;
   var o = e.customizeIcon;
@@ -33,3 +45,5 @@ exports.a = function (e) {
     }))
   }, l));
 };
+export { _a as a };
+export default _a;

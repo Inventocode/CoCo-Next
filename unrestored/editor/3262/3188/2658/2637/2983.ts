@@ -1,9 +1,13 @@
 "use strict";
 
-import * as r from "../../../3190/494";
-import * as i from "../220";
-import * as a from "../230";
-import * as s from "./2642/index";
+var r = require("../../../3190/494");
+var i = require("../220");
+var a = require("../230");
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.default = void 0;
+var s = require("./2642/index");
 var o = require("../2623/index").VISITOR_KEYS;
 var l = function () {
   function e(t, n, r, a) {
@@ -138,4 +142,4 @@ var l = function () {
   }]);
   return e;
 }();
-export default l;
+exports.default = l;

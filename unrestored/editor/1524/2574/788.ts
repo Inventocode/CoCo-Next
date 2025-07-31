@@ -2,12 +2,23 @@
 
 export { g as b };
 export { v as a };
-import * as r from "./19";
-import * as i from "./0/index";
-import * as o from "./28";
-import * as a from "./8";
-import * as s from "./8";
-import * as c from "./2617/686/index";
+var r = require("./19");
+var i = require("./0/index");
+var o = require("./28");
+var a = require("./8");
+var s = (module => {
+  var defaultExport = module && module.__esModule ? function () {
+    return module.default;
+  } : function () {
+    return module;
+  };
+  Object.defineProperty(defaultExport, "a", {
+    enumerable: true,
+    get: defaultExport
+  });
+  return defaultExport;
+})(a);
+var c = require("./2617/686/index");
 var u = function () {
   var e = (0, i.useContext(g).getPrefixCls)("empty-img-default");
   return i.createElement("svg", {
@@ -169,3 +180,4 @@ var g = i.createContext({
   renderEmpty: A
 });
 var v = g.Consumer;
+export default v;

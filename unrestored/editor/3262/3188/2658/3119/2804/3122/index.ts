@@ -1,7 +1,7 @@
 "use strict";
 
-import * as r from "../../../../../3190/624/index";
-import * as i from "../../../../../../1524/2574/1/index";
+var r = require("../../../../../3190/624/index");
+var i = require("../../../../../../1524/2574/1/index");
 var a = i.mark(g);
 function s() {
   var e = require("./3123");
@@ -38,10 +38,13 @@ function c() {
   };
   return e;
 }
-export default g;
-import * as p from "../../../2691/index";
-import * as f from "../../../3131/2808/index";
-import * as d from "./3126";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.default = g;
+var p = require("../../../2691/index");
+var f = require("../../../3131/2808/index");
+var d = require("./3126");
 var h = u();
 var y = h.file;
 var m = h.traverseFast;

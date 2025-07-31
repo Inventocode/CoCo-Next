@@ -1,8 +1,12 @@
 "use strict";
 
-import * as r from "./838/443";
-import * as i from "./358";
-import * as o from "./2088/496";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.postConstruct = void 0;
+var r = require("./838/443");
+var i = require("./358");
+var o = require("./2088/496");
 exports.postConstruct = function () {
   return function (e, t, n) {
     var a = new o.Metadata(i.POST_CONSTRUCT, t);

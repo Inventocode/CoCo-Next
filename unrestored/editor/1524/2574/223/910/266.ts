@@ -10,7 +10,7 @@ export { f as j };
 export { d as a };
 export { p as e };
 export { _ as d };
-import * as r from "../../2617/285/210";
+var r = require("../../2617/285/210");
 function i(e, t, n) {
   return {
     r: 255 * Object(r.a)(e, 255),
@@ -151,3 +151,4 @@ function _(e) {
     b: 255 & e
   };
 }
+export default d;

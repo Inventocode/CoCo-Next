@@ -10,8 +10,8 @@ export { d as b };
 export { p as d };
 export { f as a };
 export { h as j };
-import * as r from "./47";
-import * as o from "./547";
+var r = require("./47");
+var o = require("./547");
 var i = "STYLE_DEFAULT_STYLE_ID";
 var a = {
   id: i,
@@ -56,3 +56,4 @@ function h(e, t) {
   }
   return n || a;
 }
+export default f;

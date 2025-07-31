@@ -27,3 +27,4 @@ var c = function (e) {
     type: s
   };
 };
+export default r;

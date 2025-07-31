@@ -1,7 +1,7 @@
 "use strict";
 
 export { o as a };
-import * as r from "./10/index";
+var r = require("./10/index");
 function o(e) {
   for (var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
       line: 1,
@@ -40,3 +40,4 @@ function o(e) {
   }
   return l;
 }
+export default o;

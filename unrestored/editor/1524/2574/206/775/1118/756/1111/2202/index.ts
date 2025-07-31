@@ -1,10 +1,10 @@
 "use strict";
 
-import * as r from "../../../../../../../../3262/3190/494";
-import * as i from "./2203/index";
-import * as o from "../../../../1324/index";
-import * as a from "../../../../../../31/index";
-import * as s from "../../../../964";
+var r = require("../../../../../../../../3262/3190/494");
+var i = require("./2203/index");
+var o = require("../../../../1324/index");
+var a = require("../../../../../../31/index");
+var s = require("../../../../964");
 var c = s.breakableTypePattern;
 var u = s.createGlobalLinebreakMatcher;
 var l = s.lineBreakPattern;
@@ -45,7 +45,7 @@ function S(e) {
   return Boolean(e && d.test(e.type));
 }
 function k(t) {
-  return e.exports.isNullLiteral(t) || "Identifier" === t.type && "undefined" === t.name || "UnaryExpression" === t.type && "void" === t.operator;
+  return module.exports.isNullLiteral(t) || "Identifier" === t.type && "undefined" === t.name || "UnaryExpression" === t.type && "void" === t.operator;
 }
 function T(e) {
   return "CallExpression" === e.parent.type && e.parent.callee === e;
@@ -322,7 +322,7 @@ module.exports = {
     return Boolean(e && "BlockStatement" === e.type && 0 === e.body.length);
   },
   isEmptyFunction: function (t) {
-    return O(t) && e.exports.isEmptyBlock(t.body);
+    return O(t) && module.exports.isEmptyBlock(t.body);
   },
   getStaticPropertyName: function (e) {
     var t;
@@ -401,7 +401,7 @@ module.exports = {
     if (t.id) {
       r.push("'".concat(t.id.name, "'"));
     } else {
-      var i = e.exports.getStaticPropertyName(n);
+      var i = module.exports.getStaticPropertyName(n);
       if (null !== i) {
         r.push("'".concat(i, "'"));
       }
@@ -450,14 +450,14 @@ module.exports = {
       case "AwaitExpression":
         return !0;
       case "AssignmentExpression":
-        return e.exports.couldBeError(t.right);
+        return module.exports.couldBeError(t.right);
       case "SequenceExpression":
         var n = t.expressions;
-        return 0 !== n.length && e.exports.couldBeError(n[n.length - 1]);
+        return 0 !== n.length && module.exports.couldBeError(n[n.length - 1]);
       case "LogicalExpression":
-        return e.exports.couldBeError(t.left) || e.exports.couldBeError(t.right);
+        return module.exports.couldBeError(t.left) || module.exports.couldBeError(t.right);
       case "ConditionalExpression":
-        return e.exports.couldBeError(t.consequent) || e.exports.couldBeError(t.alternate);
+        return module.exports.couldBeError(t.consequent) || module.exports.couldBeError(t.alternate);
       default:
         return !1;
     }

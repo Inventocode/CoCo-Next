@@ -1,8 +1,8 @@
-import * as r from "./1626/86/index";
-import * as o from "./1626/231";
+var r = require("./1626/86/index");
+var o = require("./1626/231");
 var i = require("./1731/709").onFreeze;
-import * as a from "./1631/825";
-import * as s from "./1626/167";
+var a = require("./1631/825");
+var s = require("./1626/167");
 var c = Object.seal;
 r({
   target: "Object",

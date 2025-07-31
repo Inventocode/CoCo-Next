@@ -1,5 +1,9 @@
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.load_json_js_generators_data = void 0;
 exports.load_json_js_generators_data = function (e, t) {
   var n = function (e, n) {
     var r;

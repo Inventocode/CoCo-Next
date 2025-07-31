@@ -1,6 +1,10 @@
 "use strict";
 
-import * as r from "./2540/579";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.init_sensing_blocks = void 0;
+var r = require("./2540/579");
 exports.init_sensing_blocks = function (e) {
   var t = [{
     type: "get_time",

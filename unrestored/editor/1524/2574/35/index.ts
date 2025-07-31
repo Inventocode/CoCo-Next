@@ -109,27 +109,38 @@ export { Ft as xb };
 export { Gt as eb };
 export { Ut as o };
 var r;
-import * as o from "../1/index";
-import * as i from "../1/index";
-import * as a from "../7";
-import * as s from "../10/index";
-import * as c from "../11";
-import * as l from "../6";
-import * as u from "../25/index";
-import * as d from "../47";
-import * as p from "../42/index";
-import * as f from "../5";
-import * as h from "../64";
-import * as m from "../15/index";
-import * as g from "../83";
-import * as _ from "../313";
-import * as v from "../97";
-import * as b from "../190";
-import * as y from "../133";
-import * as E from "../76";
-import * as O from "../38/index";
-import * as w from "../26/index";
-import * as C from "../53";
+var o = require("../1/index");
+var i = (module => {
+  var defaultExport = module && module.__esModule ? function () {
+    return module.default;
+  } : function () {
+    return module;
+  };
+  Object.defineProperty(defaultExport, "a", {
+    enumerable: true,
+    get: defaultExport
+  });
+  return defaultExport;
+})(o);
+var a = require("../7");
+var s = require("../10/index");
+var c = require("../11");
+var l = require("../6");
+var u = require("../25/index");
+var d = require("../47");
+var p = require("../42/index");
+var f = require("../5");
+var h = require("../64");
+var m = require("../15/index");
+var g = require("../83");
+var _ = require("../313");
+var v = require("../97");
+var b = require("../190");
+var y = require("../133");
+var E = require("../76");
+var O = require("../38/index");
+var w = require("../26/index");
+var C = require("../53");
 !function (e) {
   e[e.UI = 0] = "UI";
   e[e.STAGE = 1] = "STAGE";
@@ -262,9 +273,9 @@ function U(e) {
   var t = Se(e);
   return t && t.type === f.j ? t.attributes.cloudDictId : null;
 }
-import * as W from "../17/index";
-import * as H from "../60";
-import * as V from "./85";
+var W = require("../17/index");
+var H = require("../60");
+var V = require("./85");
 var z = ["Size", "Coordinate", "VisibleSwitch", "WidgetOpacity"];
 var Y = ["size", "position", "visible", "opacity"];
 var K = {
@@ -389,9 +400,9 @@ function $(e) {
   }], t);
   return '<label type="'.concat(o, '"></label>');
 }
-import * as ee from "../31/index";
-import * as te from "./3/index";
-import * as ne from "./22";
+var ee = require("../31/index");
+var te = require("./3/index");
+var ne = require("./22");
 var re = i.a.mark(_e);
 var oe = i.a.mark(ve);
 var ie = i.a.mark(be);
@@ -872,7 +883,8 @@ function Ke(e) {
   var t = [];
   Array.from(p.g).forEach(function (n) {
     var r = Object(s.a)(n, 2);
-    var o = (r[0], r[1]);
+    r[0];
+    var o = r[1];
     if (o.type === f.a && o.attributes.actionList.some(function (t) {
       return t.styleList.some(function (t) {
         return t.source === e;
@@ -1469,3 +1481,4 @@ function Ut(e, t) {
   var n = rt(t);
   return (null === n || void 0 === n ? void 0 : n.groupId) === e;
 }
+export default pe;

@@ -1,4 +1,4 @@
-import * as r from "./2666";
+var r = require("./2666");
 var i = Object.prototype.hasOwnProperty;
 var a = "undefined" !== typeof Map;
 function s() {
@@ -59,4 +59,4 @@ s.prototype.at = function (e) {
 s.prototype.toArray = function () {
   return this._array.slice();
 };
-export { s as ArraySet };
+exports.ArraySet = s;

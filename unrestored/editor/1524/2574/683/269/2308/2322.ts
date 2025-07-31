@@ -1,5 +1,8 @@
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
 var r = function () {
   function e() {}
   e.of = function (t, n) {
@@ -10,4 +13,4 @@ var r = function () {
   };
   return e;
 }();
-export { r as ContainerSnapshot };
+exports.ContainerSnapshot = r;

@@ -222,3 +222,4 @@ var i = {
     params: []
   }]
 };
+export default o;

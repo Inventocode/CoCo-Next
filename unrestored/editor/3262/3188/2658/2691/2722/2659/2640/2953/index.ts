@@ -1,6 +1,9 @@
 "use strict";
 
-import * as r from "../../../../../../../3190/494";
+var r = require("../../../../../../../3190/494");
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
 exports._getTypeAnnotation = function () {
   var e = this.node;
   if (!e) {
@@ -82,8 +85,8 @@ exports.isGenericType = function (e) {
     name: e
   });
 };
-import * as i from "./2954/index";
-import * as a from "../../../2624/index";
+var i = require("./2954/index");
+var a = require("../../../2624/index");
 var s = a.anyTypeAnnotation;
 var o = a.isAnyTypeAnnotation;
 var l = a.isBooleanTypeAnnotation;

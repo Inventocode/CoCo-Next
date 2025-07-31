@@ -1,26 +1,26 @@
 "use strict";
 
-import * as r from "./951/index";
-import * as i from "./1765/index";
-import * as o from "./1769";
+var r = require("./951/index");
+var i = require("./1765/index");
+var o = require("./1769");
 var a = require("./1770") || 0;
 function s() {
   return i(a);
 }
 module.exports = s;
-e.exports.generate = s;
-e.exports.seed = function (t) {
+module.exports.generate = s;
+module.exports.seed = function (t) {
   r.seed(t);
-  return e.exports;
+  return module.exports;
 };
-e.exports.worker = function (t) {
+module.exports.worker = function (t) {
   a = t;
-  return e.exports;
+  return module.exports;
 };
-e.exports.characters = function (e) {
+module.exports.characters = function (e) {
   if (void 0 !== e) {
     r.characters(e);
   }
   return r.shuffled();
 };
-e.exports.isValid = o;
+module.exports.isValid = o;

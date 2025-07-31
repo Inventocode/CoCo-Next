@@ -1,5 +1,9 @@
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.load_json_js_generator_tell = exports.load_json_js_generators_control = void 0;
 exports.load_json_js_generators_control = function (e) {
   e.register("repeat_forever", function (t, n) {
     return "while(true) {\n" + e.statement_to_code(t, n, "DO") + "}\n";

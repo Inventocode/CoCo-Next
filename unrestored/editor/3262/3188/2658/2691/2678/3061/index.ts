@@ -1,8 +1,11 @@
 "use strict";
 
-import * as r from "../../../../../3190/494";
-import * as i from "../../../../../../1524/2574/1/index";
-export default (function (e) {
+var r = require("../../../../../3190/494");
+var i = require("../../../../../../1524/2574/1/index");
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.default = function (e) {
   var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
   if (m(t)) {
     var n = v(t);
@@ -10,12 +13,12 @@ export default (function (e) {
     return y(r, e);
   }
   return e;
-});
-export { v as getChalk };
-export { m as shouldHighlight };
-import * as a from "./2753";
-import * as s from "../../../2623/2664/2665/index";
-import * as o from "./2754/index";
+};
+exports.getChalk = v;
+exports.shouldHighlight = m;
+var a = require("./2753");
+var s = require("../../../2623/2664/2665/index");
+var o = require("./2754/index");
 var l = new Set(["as", "async", "from", "get", "of", "set"]);
 function u(e) {
   return {

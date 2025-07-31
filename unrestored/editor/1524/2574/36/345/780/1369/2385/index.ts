@@ -21,4 +21,7 @@ var i = this && this.__exportStar || function (e, t) {
     r(t, e, n);
   }
 };
-i(require("./2386/index"), t);
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+i(require("./2386/index"), exports);

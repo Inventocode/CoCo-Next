@@ -1,6 +1,6 @@
 "use strict";
 
-import * as r from "./907";
+var r = require("./907");
 function i(e, t, n, o) {
   var a;
   var s = function (r) {
@@ -27,8 +27,8 @@ function i(e, t, n, o) {
       return e;
   }
 }
-import * as o from "../215/393";
+var o = require("../215/393");
 var a = Object(o.a)(function (e) {
   return null != e && "function" === typeof e.clone ? e.clone() : i(e, [], [], !0);
 });
-export { a };
+exports.a = a;

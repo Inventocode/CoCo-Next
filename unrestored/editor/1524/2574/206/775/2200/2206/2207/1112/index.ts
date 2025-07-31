@@ -1,10 +1,10 @@
 "use strict";
 
-import * as r from "./2209";
-import * as i from "../757/1113";
-import * as o from "../757/index";
-import * as a from "../1328";
-import * as s from "./2211";
+var r = require("./2209");
+var i = require("../757/1113");
+var o = require("../757/index");
+var a = require("../1328");
+var s = require("./2211");
 function c(e, t, n) {
   var r = this._refs[n];
   if ("string" == typeof r) {

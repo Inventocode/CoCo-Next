@@ -1,6 +1,9 @@
 "use strict";
 
-export default (function (e, t, n) {
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.default = function (e, t, n) {
   if (!e) {
     return;
   }
@@ -11,10 +14,10 @@ export default (function (e, t, n) {
   var o = s[t];
   i(e, t, n, o);
   a(e, t, n);
-});
-export { a as validateChild };
-export { i as validateField };
-import * as r from "./2633/index";
+};
+exports.validateChild = a;
+exports.validateField = i;
+var r = require("./2633/index");
 function i(e, t, n, r) {
   if (null != r && r.validate) {
     if (!(r.optional && null == n)) {

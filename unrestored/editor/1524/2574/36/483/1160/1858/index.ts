@@ -1,6 +1,6 @@
-import * as r from "./1859/index";
-import * as i from "../../1440/1096";
-import * as o from "./1861/index";
+var r = require("./1859/index");
+var i = require("../../1440/1096");
+var o = require("./1861/index");
 var a = /^[-+]0x[0-9a-f]+$/i;
 var s = /^0b[01]+$/i;
 var c = /^0o[0-7]+$/i;

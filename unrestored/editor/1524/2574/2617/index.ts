@@ -1,23 +1,34 @@
 "use strict";
 
-import * as r from "../28";
-import * as i from "../19";
-import * as o from "../0/index";
-import * as a from "./1494";
-import * as s from "../8";
-import * as c from "../8";
-import * as u from "../790";
-import * as l from "./611";
-import * as f from "../612/index";
-import * as h from "../612/789/index";
-import * as d from "./686/index";
-import * as p from "../788";
-import * as _ from "./462";
+var r = require("../28");
+var i = require("../19");
+var o = require("../0/index");
+var a = require("./1494");
+var s = require("../8");
+var c = (module => {
+  var defaultExport = module && module.__esModule ? function () {
+    return module.default;
+  } : function () {
+    return module;
+  };
+  Object.defineProperty(defaultExport, "a", {
+    enumerable: true,
+    get: defaultExport
+  });
+  return defaultExport;
+})(s);
+var u = require("../790");
+var l = require("./611");
+var f = require("../612/index");
+var h = require("../612/789/index");
+var d = require("./686/index");
+var p = require("../788");
+var _ = require("./462");
 var A;
 var g = function () {
   return Object(_.a)() && window.document.documentElement;
 };
-import * as v from "../431";
+var v = require("../431");
 var m = function (e, t) {
   var n = {};
   for (var r in e) if (Object.prototype.hasOwnProperty.call(e, r) && t.indexOf(r) < 0) {
@@ -117,12 +128,12 @@ y.defaultProps = {
   okType: "primary"
 };
 var b = y;
-import * as w from "../75/index";
-import * as E from "./1023";
-import * as x from "./1022";
-import * as C from "./1024";
-import * as O from "./913";
-import * as S from "../33/index";
+var w = require("../75/index");
+var E = require("./1023");
+var x = require("./1022");
+var C = require("./1024");
+var O = require("./913");
+var S = require("../33/index");
 function k(e) {
   return !(!e || !e.then);
 }
@@ -195,8 +206,8 @@ var T = function (e) {
     ref: n
   }), l);
 };
-import * as B from "../363/index";
-import * as D from "./285/index";
+var B = require("../363/index");
+var D = require("./285/index");
 var I = function (e) {
   var t = e.icon;
   var n = e.onCancel;
@@ -419,8 +430,8 @@ function H(e) {
     type: "confirm"
   });
 }
-import * as V from "../80/index";
-import * as G from "./605";
+var V = require("../80/index");
+var G = require("./605");
 var z = function (e, t) {
   var n = e.afterClose;
   var r = e.config;
@@ -614,3 +625,4 @@ Y.config = function (e) {
   P = t;
 };
 export { Y as a };
+export default Y;

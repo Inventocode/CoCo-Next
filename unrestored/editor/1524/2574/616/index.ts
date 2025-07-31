@@ -47,6 +47,9 @@
     }([function (e, t, n) {
       "use strict";
 
+      Object.defineProperty(t, "__esModule", {
+        value: !0
+      });
       var r = n(17);
       var o = n(18);
       var i = n(19);
@@ -103,6 +106,9 @@
           t.prototype = null === n ? Object.create(n) : (r.prototype = n.prototype, new r());
         };
       }();
+      Object.defineProperty(t, "__esModule", {
+        value: !0
+      });
       var o = function (e) {
         function t(t) {
           var n = this;
@@ -596,6 +602,9 @@
     }, function (e, t, n) {
       "use strict";
 
+      Object.defineProperty(t, "__esModule", {
+        value: !0
+      });
       t.default = t.BlockEmbed = t.bubbleFormats = void 0;
       var r = function () {
         function e(e, t) {
@@ -853,6 +862,9 @@
     }, function (e, t, n) {
       "use strict";
 
+      Object.defineProperty(t, "__esModule", {
+        value: !0
+      });
       t.default = t.overload = t.expandConfig = void 0;
       var r = "function" === typeof Symbol && "symbol" === typeof Symbol.iterator ? function (e) {
         return typeof e;
@@ -1530,6 +1542,9 @@
     }, function (e, t, n) {
       "use strict";
 
+      Object.defineProperty(t, "__esModule", {
+        value: !0
+      });
       var r = function () {
         function e(e, t) {
           for (var n = 0; n < t.length; n++) {
@@ -1647,6 +1662,9 @@
     }, function (e, t, n) {
       "use strict";
 
+      Object.defineProperty(t, "__esModule", {
+        value: !0
+      });
       var r;
       var o = n(0);
       function i(e, t) {
@@ -1693,6 +1711,9 @@
     }, function (e, t, n) {
       "use strict";
 
+      Object.defineProperty(t, "__esModule", {
+        value: !0
+      });
       var r = function () {
         function e(e, t) {
           for (var n = 0; n < t.length; n++) {
@@ -1843,6 +1864,9 @@
           throw new TypeError("Cannot call a class as a function");
         }
       }
+      Object.defineProperty(t, "__esModule", {
+        value: !0
+      });
       var o = function e(t) {
         var n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
         r(this, e);
@@ -1854,6 +1878,9 @@
     }, function (e, t, n) {
       "use strict";
 
+      Object.defineProperty(t, "__esModule", {
+        value: !0
+      });
       var r = ["error", "warn", "log", "info"];
       var o = "warn";
       function i(e) {
@@ -1939,6 +1966,9 @@
     }, function (e, t, n) {
       "use strict";
 
+      Object.defineProperty(t, "__esModule", {
+        value: !0
+      });
       var r = n(1);
       var o = function () {
         function e(e, t, n) {
@@ -1981,6 +2011,9 @@
     }, function (e, t, n) {
       "use strict";
 
+      Object.defineProperty(t, "__esModule", {
+        value: !0
+      });
       t.default = t.Code = void 0;
       var r = function (e, t) {
         if (Array.isArray(e)) {
@@ -2231,6 +2264,9 @@
     }, function (e, t, n) {
       "use strict";
 
+      Object.defineProperty(t, "__esModule", {
+        value: !0
+      });
       var r = "function" === typeof Symbol && "symbol" === typeof Symbol.iterator ? function (e) {
         return typeof e;
       } : function (e) {
@@ -2596,6 +2632,9 @@
     }, function (e, t, n) {
       "use strict";
 
+      Object.defineProperty(t, "__esModule", {
+        value: !0
+      });
       t.default = t.Range = void 0;
       var r = function (e, t) {
         if (Array.isArray(e)) {
@@ -3080,6 +3119,9 @@
     }, function (e, t, n) {
       "use strict";
 
+      Object.defineProperty(t, "__esModule", {
+        value: !0
+      });
       var r;
       var o = function () {
         function e(e, t) {
@@ -3205,6 +3247,9 @@
           t.prototype = null === n ? Object.create(n) : (r.prototype = n.prototype, new r());
         };
       }();
+      Object.defineProperty(t, "__esModule", {
+        value: !0
+      });
       var o = n(44);
       var i = n(30);
       var a = n(1);
@@ -3444,6 +3489,9 @@
           t.prototype = null === n ? Object.create(n) : (r.prototype = n.prototype, new r());
         };
       }();
+      Object.defineProperty(t, "__esModule", {
+        value: !0
+      });
       var o = n(12);
       var i = n(31);
       var a = n(17);
@@ -3523,6 +3571,9 @@
           t.prototype = null === n ? Object.create(n) : (r.prototype = n.prototype, new r());
         };
       }();
+      Object.defineProperty(t, "__esModule", {
+        value: !0
+      });
       var o = n(30);
       var i = n(1);
       var a = function (e) {
@@ -3869,6 +3920,9 @@
     }, function (e, t, n) {
       "use strict";
 
+      Object.defineProperty(t, "__esModule", {
+        value: !0
+      });
       var r = function (e, t) {
         if (Array.isArray(e)) {
           return e;
@@ -4167,6 +4221,9 @@
     }, function (e, t, n) {
       "use strict";
 
+      Object.defineProperty(t, "__esModule", {
+        value: !0
+      });
       t.SHORTKEY = t.default = void 0;
       var r = "function" === typeof Symbol && "symbol" === typeof Symbol.iterator ? function (e) {
         return typeof e;
@@ -4835,6 +4892,9 @@
     }, function (e, t, n) {
       "use strict";
 
+      Object.defineProperty(t, "__esModule", {
+        value: !0
+      });
       var r = function (e, t) {
         if (Array.isArray(e)) {
           return e;
@@ -5076,6 +5136,9 @@
     }, function (e, t, n) {
       "use strict";
 
+      Object.defineProperty(t, "__esModule", {
+        value: !0
+      });
       var r = a(n(0));
       var o = n(4);
       var i = a(o);
@@ -5127,6 +5190,9 @@
     }, function (e, t, n) {
       "use strict";
 
+      Object.defineProperty(t, "__esModule", {
+        value: !0
+      });
       t.ColorStyle = t.ColorClass = t.ColorAttributor = void 0;
       var r;
       var o = function () {
@@ -5228,6 +5294,9 @@
     }, function (e, t, n) {
       "use strict";
 
+      Object.defineProperty(t, "__esModule", {
+        value: !0
+      });
       t.sanitize = t.default = void 0;
       var r;
       var o = function () {
@@ -5353,6 +5422,9 @@
     }, function (e, t, n) {
       "use strict";
 
+      Object.defineProperty(t, "__esModule", {
+        value: !0
+      });
       var r = "function" === typeof Symbol && "symbol" === typeof Symbol.iterator ? function (e) {
         return typeof e;
       } : function (e) {
@@ -5553,6 +5625,9 @@
     }, function (e, t, n) {
       "use strict";
 
+      Object.defineProperty(t, "__esModule", {
+        value: !0
+      });
       var r = _(n(0));
       var o = _(n(5));
       var i = n(4);
@@ -5591,6 +5666,9 @@
     }, function (e, t, n) {
       "use strict";
 
+      Object.defineProperty(t, "__esModule", {
+        value: !0
+      });
       var r = n(1);
       var o = function () {
         function e(e) {
@@ -5733,6 +5811,9 @@
     }, function (e, t, n) {
       "use strict";
 
+      Object.defineProperty(t, "__esModule", {
+        value: !0
+      });
       var r = n(12);
       var o = n(32);
       var i = n(33);
@@ -5821,6 +5902,9 @@
           return 0 === e.indexOf(t + "-");
         });
       }
+      Object.defineProperty(t, "__esModule", {
+        value: !0
+      });
       var i = function (e) {
         function t() {
           return null !== e && e.apply(this, arguments) || this;
@@ -5877,6 +5961,9 @@
         }).join("");
         return t[0] + n;
       }
+      Object.defineProperty(t, "__esModule", {
+        value: !0
+      });
       var i = function (e) {
         function t() {
           return null !== e && e.apply(this, arguments) || this;
@@ -5906,6 +5993,9 @@
     }, function (e, t, n) {
       "use strict";
 
+      Object.defineProperty(t, "__esModule", {
+        value: !0
+      });
       var r = function () {
         function e(e, t) {
           for (var n = 0; n < t.length; n++) {
@@ -5969,6 +6059,9 @@
     }, function (e, t, n) {
       "use strict";
 
+      Object.defineProperty(t, "__esModule", {
+        value: !0
+      });
       var r = function () {
         function e(e, t) {
           for (var n = 0; n < t.length; n++) {
@@ -6123,6 +6216,9 @@
     }, function (e, t, n) {
       "use strict";
 
+      Object.defineProperty(t, "__esModule", {
+        value: !0
+      });
       t.AlignStyle = t.AlignClass = t.AlignAttribute = void 0;
       var r;
       var o = n(0);
@@ -6142,6 +6238,9 @@
     }, function (e, t, n) {
       "use strict";
 
+      Object.defineProperty(t, "__esModule", {
+        value: !0
+      });
       t.BackgroundStyle = t.BackgroundClass = void 0;
       var r;
       var o = n(0);
@@ -6160,6 +6259,9 @@
     }, function (e, t, n) {
       "use strict";
 
+      Object.defineProperty(t, "__esModule", {
+        value: !0
+      });
       t.DirectionStyle = t.DirectionClass = t.DirectionAttribute = void 0;
       var r;
       var o = n(0);
@@ -6179,6 +6281,9 @@
     }, function (e, t, n) {
       "use strict";
 
+      Object.defineProperty(t, "__esModule", {
+        value: !0
+      });
       t.FontClass = t.FontStyle = void 0;
       var r;
       var o = function () {
@@ -6275,6 +6380,9 @@
     }, function (e, t, n) {
       "use strict";
 
+      Object.defineProperty(t, "__esModule", {
+        value: !0
+      });
       t.SizeStyle = t.SizeClass = void 0;
       var r;
       var o = n(0);
@@ -6346,6 +6454,9 @@
     }, function (e, t, n) {
       "use strict";
 
+      Object.defineProperty(t, "__esModule", {
+        value: !0
+      });
       t.getLastChangeIndex = t.default = void 0;
       var r = function () {
         function e(e, t) {
@@ -6538,6 +6649,9 @@
     }, function (e, t, n) {
       "use strict";
 
+      Object.defineProperty(t, "__esModule", {
+        value: !0
+      });
       t.default = t.BaseTooltip = void 0;
       var r = function () {
         function e(e, t) {
@@ -6871,6 +6985,9 @@
     }, function (e, t, n) {
       "use strict";
 
+      Object.defineProperty(t, "__esModule", {
+        value: !0
+      });
       var r = function () {
         function e() {
           this.head = this.tail = null;
@@ -7024,6 +7141,9 @@
           t.prototype = null === n ? Object.create(n) : (r.prototype = n.prototype, new r());
         };
       }();
+      Object.defineProperty(t, "__esModule", {
+        value: !0
+      });
       var o = n(17);
       var i = n(1);
       var a = {
@@ -7176,6 +7296,9 @@
           t.prototype = null === n ? Object.create(n) : (r.prototype = n.prototype, new r());
         };
       }();
+      Object.defineProperty(t, "__esModule", {
+        value: !0
+      });
       var o = n(18);
       var i = n(1);
       var a = function (e) {
@@ -7256,6 +7379,9 @@
           t.prototype = null === n ? Object.create(n) : (r.prototype = n.prototype, new r());
         };
       }();
+      Object.defineProperty(t, "__esModule", {
+        value: !0
+      });
       var o = n(18);
       var i = n(1);
       var a = function (e) {
@@ -7328,6 +7454,9 @@
           t.prototype = null === n ? Object.create(n) : (r.prototype = n.prototype, new r());
         };
       }();
+      Object.defineProperty(t, "__esModule", {
+        value: !0
+      });
       var o = function (e) {
         function t() {
           return null !== e && e.apply(this, arguments) || this;
@@ -7371,6 +7500,9 @@
           t.prototype = null === n ? Object.create(n) : (r.prototype = n.prototype, new r());
         };
       }();
+      Object.defineProperty(t, "__esModule", {
+        value: !0
+      });
       var o = n(19);
       var i = n(1);
       var a = function (e) {
@@ -8085,6 +8217,9 @@
     }, function (e, t, n) {
       "use strict";
 
+      Object.defineProperty(t, "__esModule", {
+        value: !0
+      });
       t.matchText = t.matchSpacing = t.matchNewline = t.matchBlot = t.matchAttributor = t.default = void 0;
       var r = "function" === typeof Symbol && "symbol" === typeof Symbol.iterator ? function (e) {
         return typeof e;
@@ -8500,6 +8635,9 @@
     }, function (e, t, n) {
       "use strict";
 
+      Object.defineProperty(t, "__esModule", {
+        value: !0
+      });
       var r;
       var o = function () {
         function e(e, t) {
@@ -8604,6 +8742,9 @@
     }, function (e, t, n) {
       "use strict";
 
+      Object.defineProperty(t, "__esModule", {
+        value: !0
+      });
       t.addControls = t.default = void 0;
       var r = function (e, t) {
         if (Array.isArray(e)) {
@@ -8950,6 +9091,9 @@
     }, function (e, t, n) {
       "use strict";
 
+      Object.defineProperty(t, "__esModule", {
+        value: !0
+      });
       var r;
       var o = function () {
         function e(e, t) {
@@ -9059,6 +9203,9 @@
     }, function (e, t, n) {
       "use strict";
 
+      Object.defineProperty(t, "__esModule", {
+        value: !0
+      });
       var r;
       var o = function () {
         function e(e, t) {
@@ -9154,6 +9301,9 @@
     }, function (e, t, n) {
       "use strict";
 
+      Object.defineProperty(t, "__esModule", {
+        value: !0
+      });
       var r = function () {
         function e(e, t) {
           for (var n = 0; n < t.length; n++) {
@@ -9232,6 +9382,9 @@
     }, function (e, t, n) {
       "use strict";
 
+      Object.defineProperty(t, "__esModule", {
+        value: !0
+      });
       var r = function (e, t) {
         if (Array.isArray(e)) {
           return e;
@@ -9472,6 +9625,9 @@
     }, function (e, t, n) {
       "use strict";
 
+      Object.defineProperty(t, "__esModule", {
+        value: !0
+      });
       var r = M(n(29));
       var o = n(36);
       var i = n(38);
@@ -9561,6 +9717,9 @@
     }, function (e, t, n) {
       "use strict";
 
+      Object.defineProperty(t, "__esModule", {
+        value: !0
+      });
       t.IndentClass = void 0;
       var r;
       var o = function () {
@@ -9669,6 +9828,9 @@
     }, function (e, t, n) {
       "use strict";
 
+      Object.defineProperty(t, "__esModule", {
+        value: !0
+      });
       var r;
       var o = n(4);
       function i(e, t) {
@@ -9717,6 +9879,9 @@
     }, function (e, t, n) {
       "use strict";
 
+      Object.defineProperty(t, "__esModule", {
+        value: !0
+      });
       var r;
       var o = function () {
         function e(e, t) {
@@ -9793,6 +9958,9 @@
     }, function (e, t, n) {
       "use strict";
 
+      Object.defineProperty(t, "__esModule", {
+        value: !0
+      });
       t.default = t.ListItem = void 0;
       var r = function () {
         function e(e, t) {
@@ -10016,6 +10184,9 @@
     }, function (e, t, n) {
       "use strict";
 
+      Object.defineProperty(t, "__esModule", {
+        value: !0
+      });
       var r;
       var o = n(56);
       function i(e, t) {
@@ -10064,6 +10235,9 @@
     }, function (e, t, n) {
       "use strict";
 
+      Object.defineProperty(t, "__esModule", {
+        value: !0
+      });
       var r;
       var o = function () {
         function e(e, t) {
@@ -10159,6 +10333,9 @@
     }, function (e, t, n) {
       "use strict";
 
+      Object.defineProperty(t, "__esModule", {
+        value: !0
+      });
       var r;
       var o = n(6);
       function i(e, t) {
@@ -10207,6 +10384,9 @@
     }, function (e, t, n) {
       "use strict";
 
+      Object.defineProperty(t, "__esModule", {
+        value: !0
+      });
       var r;
       var o = n(6);
       function i(e, t) {
@@ -10255,6 +10435,9 @@
     }, function (e, t, n) {
       "use strict";
 
+      Object.defineProperty(t, "__esModule", {
+        value: !0
+      });
       var r;
       var o = function () {
         function e(e, t) {
@@ -10391,6 +10574,9 @@
     }, function (e, t, n) {
       "use strict";
 
+      Object.defineProperty(t, "__esModule", {
+        value: !0
+      });
       var r;
       var o = function () {
         function e(e, t) {
@@ -10523,6 +10709,9 @@
     }, function (e, t, n) {
       "use strict";
 
+      Object.defineProperty(t, "__esModule", {
+        value: !0
+      });
       t.default = t.FormulaBlot = void 0;
       var r = function () {
         function e(e, t) {
@@ -10652,6 +10841,9 @@
     }, function (e, t, n) {
       "use strict";
 
+      Object.defineProperty(t, "__esModule", {
+        value: !0
+      });
       t.default = t.CodeToken = t.CodeBlock = void 0;
       var r = function () {
         function e(e, t) {
@@ -10882,6 +11074,9 @@
     }, function (e, t, n) {
       "use strict";
 
+      Object.defineProperty(t, "__esModule", {
+        value: !0
+      });
       t.default = t.BubbleTooltip = void 0;
       var r = function e(t, n, r) {
         if (null === t) {

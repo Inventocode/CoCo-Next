@@ -1,6 +1,6 @@
 "use strict";
 
-import * as r from "../../../../3262/3190/494";
+var r = require("../../../../3262/3190/494");
 var i = require("./806/index")("eslint:source-code-fixer");
 function o(e, t) {
   return e.fix.range[0] - t.fix.range[0] || e.fix.range[1] - t.fix.range[1];

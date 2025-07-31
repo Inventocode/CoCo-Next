@@ -1,16 +1,16 @@
 "use strict";
 
-import * as r from "../../../../../../3262/3188/2658/220";
-import * as i from "../../../../../../3262/3188/2658/230";
-import * as o from "../../../../../../3262/3188/2658/2679/356/index";
-import * as a from "../../../../../../3262/3188/2658/2679/357/index";
+var r = require("../../../../../../3262/3188/2658/220");
+var i = require("../../../../../../3262/3188/2658/230");
+var o = require("../../../../../../3262/3188/2658/2679/356/index");
+var a = require("../../../../../../3262/3188/2658/2679/357/index");
 var s = require("./1106/index").Syntax;
-import * as c from "./1323/index";
-import * as u from "../1107";
-import * as l from "../963";
-import * as f from "./2188";
-import * as h from "./1322";
-import * as d from "../../../../1035/1356/569";
+var c = require("./1323/index");
+var u = require("../1107");
+var l = require("../963");
+var f = require("./2188");
+var h = require("./1322");
+var d = require("../../../../1035/1356/569");
 var p = h.ParameterDefinition;
 var _ = h.Definition;
 var A = function (e) {

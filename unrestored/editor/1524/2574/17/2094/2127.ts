@@ -1,11 +1,15 @@
 "use strict";
 
-import * as r from "../../1000/93";
-import * as i from "../../1000/134/index";
-import * as o from "../../4/127";
-import * as a from "../../125/195/index";
-import * as s from "../497/840";
-import * as c from "../../1000/213/index";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.Extensions = void 0;
+var r = require("../../1000/93");
+var i = require("../../1000/134/index");
+var o = require("../../4/127");
+var a = require("../../125/195/index");
+var s = require("../497/840");
+var c = require("../../1000/213/index");
 var u = function () {
   function e() {
     this.extensions = {};
@@ -166,4 +170,4 @@ var u = function () {
   (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.utils)], e.prototype, "utils", void 0);
   return e = (0, r.__decorate)([(0, i.injectable)()], e);
 }();
-export { u as Extensions };
+exports.Extensions = u;

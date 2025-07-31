@@ -1,6 +1,6 @@
 "use strict";
 
-import * as r from "./1626/86/index";
+var r = require("./1626/86/index");
 var o = require("./1670/1243").end;
 r({
   target: "String",

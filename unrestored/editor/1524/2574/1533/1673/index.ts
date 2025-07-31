@@ -1,15 +1,15 @@
 "use strict";
 
-import * as r from "../1676/946";
-import * as o from "../1626/167";
-import * as i from "../1659/241";
-import * as a from "../1556/473";
-import * as s from "../1728/257";
-import * as c from "../1738/310";
-import * as l from "../1676/421";
-import * as u from "../1676/1076";
-import * as d from "./1674";
-import * as p from "../1676/947";
+var r = require("../1676/946");
+var o = require("../1626/167");
+var i = require("../1659/241");
+var a = require("../1556/473");
+var s = require("../1728/257");
+var c = require("../1738/310");
+var l = require("../1676/421");
+var u = require("../1676/1076");
+var d = require("./1674");
+var p = require("../1676/947");
 var f = require("../1735/247/index")("replace");
 var h = Math.max;
 var m = Math.min;

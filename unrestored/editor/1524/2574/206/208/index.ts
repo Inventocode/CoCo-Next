@@ -1,23 +1,52 @@
 "use strict";
 
-import * as r from "../../1000/93";
-import * as i from "../../4/127";
-import * as o from "../725/387";
-import * as a from "../../227/723";
-import * as s from "../../301/173";
-import * as c from "../../227/724";
-import * as u from "./1309";
-import * as l from "../725/index";
-import * as f from "../../1035/754";
-(0, r.__exportStar)(require("./2098"), t);
-import * as h from "../../301/173";
-export { PROCEDURE_BLOCK_TYPES } from "../../301/173";
-export { PROCEDURE_BLOCK_INPUT_NAMES } from "../../301/173";
-export { PROCEDURE_BLOCK_FIELD_NAMES } from "../../301/173";
-import * as d from "./2099";
-export { register_procedure_generator } from "./2099";
-import * as p from "./2100";
-export { register_procedure_json_generator } from "./2100";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.ProcedureManager = exports.register_procedure_json_generator = exports.register_procedure_generator = exports.PROCEDURE_BLOCK_FIELD_NAMES = exports.PROCEDURE_BLOCK_INPUT_NAMES = exports.PROCEDURE_BLOCK_TYPES = void 0;
+var r = require("../../1000/93");
+var i = require("../../4/127");
+var o = require("../725/387");
+var a = require("../../227/723");
+var s = require("../../301/173");
+var c = require("../../227/724");
+var u = require("./1309");
+var l = require("../725/index");
+var f = require("../../1035/754");
+(0, r.__exportStar)(require("./2098"), exports);
+var h = require("../../301/173");
+Object.defineProperty(exports, "PROCEDURE_BLOCK_TYPES", {
+  enumerable: !0,
+  get: function () {
+    return h.PROCEDURE_BLOCK_TYPES;
+  }
+});
+Object.defineProperty(exports, "PROCEDURE_BLOCK_INPUT_NAMES", {
+  enumerable: !0,
+  get: function () {
+    return h.PROCEDURE_BLOCK_INPUT_NAMES;
+  }
+});
+Object.defineProperty(exports, "PROCEDURE_BLOCK_FIELD_NAMES", {
+  enumerable: !0,
+  get: function () {
+    return h.PROCEDURE_BLOCK_FIELD_NAMES;
+  }
+});
+var d = require("./2099");
+Object.defineProperty(exports, "register_procedure_generator", {
+  enumerable: !0,
+  get: function () {
+    return d.register_procedure_generator;
+  }
+});
+var p = require("./2100");
+Object.defineProperty(exports, "register_procedure_json_generator", {
+  enumerable: !0,
+  get: function () {
+    return p.register_procedure_json_generator;
+  }
+});
 var _ = function () {
   function e(e, t, n) {
     var r = this;
@@ -406,4 +435,4 @@ var _ = function () {
   };
   return e;
 }();
-export { _ as ProcedureManager };
+exports.ProcedureManager = _;

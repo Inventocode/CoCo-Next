@@ -42,7 +42,11 @@ var a = this && this.__importDefault || function (e) {
     default: e
   };
 };
-import * as s from "./1121";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.type = exports.remove = exports.insert = void 0;
+var s = require("./1121");
 var c = o(require("./1122"));
 var u = a(require("./2281"));
 var l = {
@@ -83,7 +87,7 @@ var f = c.default(l);
 var h = Object.assign(Object.assign({}, f), {
   api: u.default
 });
-export { h as type };
+exports.type = h;
 exports.insert = function (e, t) {
   return 0 === t.length ? [] : 0 === e ? [t] : [e, t];
 };
@@ -94,5 +98,10 @@ exports.remove = function (e, t) {
     d: t
   }];
 };
-import * as d from "./1122";
-export { default as makeType } from "./1122";
+var d = require("./1122");
+Object.defineProperty(exports, "makeType", {
+  enumerable: !0,
+  get: function () {
+    return d.default;
+  }
+});

@@ -131,6 +131,10 @@ var i = this && this.__generator || function (e, t) {
     };
   }
 };
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.SpaceManager = void 0;
 var o = function () {
   function e(e) {
     this.vika = e;
@@ -147,4 +151,4 @@ var o = function () {
   };
   return e;
 }();
-export { o as SpaceManager };
+exports.SpaceManager = o;

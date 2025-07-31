@@ -1,7 +1,7 @@
 "use strict";
 
-import * as r from "./1741/index";
-import * as i from "./1510/index";
+var r = require("./1741/index");
+var i = require("./1510/index");
 var o = [].slice;
 var a = ["keyword", "gray", "hex"];
 var s = {};

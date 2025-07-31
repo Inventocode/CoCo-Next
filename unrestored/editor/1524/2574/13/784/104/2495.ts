@@ -1,5 +1,9 @@
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.active = void 0;
 var r;
 var i = Object.assign || function (e) {
   for (var t = 1; t < arguments.length; t++) {
@@ -10,7 +14,7 @@ var i = Object.assign || function (e) {
   }
   return e;
 };
-import * as o from "../../../0/index";
+var o = require("../../../0/index");
 var a = (r = o) && r.__esModule ? r : {
   default: r
 };
@@ -82,4 +86,4 @@ var l = exports.active = function (e) {
     return r;
   }(a.default.Component);
 };
-export default l;
+exports.default = l;

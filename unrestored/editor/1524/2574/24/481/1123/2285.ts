@@ -1,5 +1,5 @@
-import * as r from "./758";
-import * as i from "./1346";
+var r = require("./758");
+var i = require("./1346");
 var o = Object.prototype.toString;
 var a = "function" === typeof Blob || "undefined" !== typeof Blob && "[object BlobConstructor]" === o.call(Blob);
 var s = "function" === typeof File || "undefined" !== typeof File && "[object FileConstructor]" === o.call(File);

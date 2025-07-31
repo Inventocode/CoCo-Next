@@ -1,12 +1,12 @@
 "use strict";
 
-import * as r from "./272";
-import * as o from "../1626/167";
-import * as i from "../1534/819/index";
-import * as a from "../1534/1060";
-import * as s from "../1534/930";
-import * as c from "../1623/309";
-import * as l from "../1562/813";
+var r = require("./272");
+var o = require("../1626/167");
+var i = require("../1534/819/index");
+var a = require("../1534/1060");
+var s = require("../1534/930");
+var c = require("../1623/309");
+var l = require("../1562/813");
 var u = Object.assign;
 var d = Object.defineProperty;
 module.exports = !u || o(function () {

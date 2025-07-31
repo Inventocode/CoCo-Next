@@ -1,9 +1,13 @@
 "use strict";
 
-import * as r from "../../../1000/93";
-import * as i from "../../../4/127";
-import * as o from "../../../1000/213/index";
-import * as a from "../../../125/index";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.TreeNode = void 0;
+var r = require("../../../1000/93");
+var i = require("../../../4/127");
+var o = require("../../../1000/213/index");
+var a = require("../../../125/index");
 var s = function (e) {
   function t(n) {
     var r = e.call(this) || this;
@@ -174,4 +178,4 @@ var s = function (e) {
   (0, r.__decorate)([(0, i.lazy_inject)(i.BINDING.utils)], t.prototype, "utils", void 0);
   return t;
 }(require("./1316").BaseNode);
-export { s as TreeNode };
+exports.TreeNode = s;

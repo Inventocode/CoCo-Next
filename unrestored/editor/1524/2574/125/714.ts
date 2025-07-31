@@ -1,8 +1,12 @@
 "use strict";
 
-import * as r from "./259";
-import * as i from "./index";
-import * as o from "./474";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.adjust_bboxes_for_rtl = exports.get_computed_style = exports.get_style = exports.get_size = exports.get_viewport_page_offset = void 0;
+var r = require("./259");
+var i = require("./index");
+var o = require("./474");
 function a(e) {
   var t = e.offsetWidth;
   var n = e.offsetHeight;
@@ -60,8 +64,8 @@ exports.get_size = function (e) {
     return a;
   }(a, e);
 };
-export { s as get_style };
-export { c as get_computed_style };
+exports.get_style = s;
+exports.get_computed_style = c;
 exports.adjust_bboxes_for_rtl = function (e, t, n) {
   t.left += n.width;
   t.right += n.width;

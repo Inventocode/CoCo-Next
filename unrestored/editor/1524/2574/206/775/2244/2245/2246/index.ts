@@ -1,13 +1,13 @@
 "use strict";
 
-import * as r from "../../../../../../../3262/3188/2658/220";
-import * as i from "../../../../../../../3262/3188/2658/230";
-import * as o from "../../../../../1035/1356/569";
+var r = require("../../../../../../../3262/3188/2658/220");
+var i = require("../../../../../../../3262/3188/2658/230");
+var o = require("../../../../../1035/1356/569");
 var a = require("../1337").isCommentToken;
-import * as s from "./2247/index";
-import * as c from "./1116/index";
-import * as u from "./2254";
-import * as l from "./843";
+var s = require("./2247/index");
+var c = require("./1116/index");
+var u = require("./2254");
+var l = require("./843");
 var f = Symbol("tokens");
 var h = Symbol("comments");
 var d = Symbol("indexMap");

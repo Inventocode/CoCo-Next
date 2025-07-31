@@ -1,8 +1,8 @@
 "use strict";
 
 export { i as a };
-import * as r from "./33/index";
-import * as o from "./0/index";
+var r = require("./33/index");
+var o = require("./0/index");
 function i(e, t) {
   var n = t || {};
   var i = n.defaultValue;
@@ -36,3 +36,4 @@ function i(e, t) {
     }
   }];
 }
+export default i;

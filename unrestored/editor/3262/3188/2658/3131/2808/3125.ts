@@ -1,6 +1,9 @@
 "use strict";
 
-export default (function (e, t, n) {
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.default = function (e, t, n) {
   var a = "Support for the experimental syntax '".concat(e, "' isn't currently enabled ") + "(".concat(t.line, ":").concat(t.column + 1, "):\n\n") + n;
   var s = r[e];
   if (s) {
@@ -18,7 +21,7 @@ export default (function (e, t, n) {
     }
   }
   return a;
-});
+};
 var r = {
   asyncDoExpressions: {
     syntax: {

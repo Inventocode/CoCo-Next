@@ -1,5 +1,8 @@
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
 exports.addComment = function (e, t, n) {
   i(this.node, e, t, n);
 };
@@ -31,6 +34,6 @@ exports.shareCommentsWithSiblings = function () {
     }
   }
 };
-import * as r from "../../2624/index";
+var r = require("../../2624/index");
 var i = r.addComment;
 var a = r.addComments;

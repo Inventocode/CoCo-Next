@@ -7,8 +7,8 @@ export { u as g };
 export { d as e };
 export { p as d };
 export { f as c };
-import * as r from "./9";
-import * as o from "./79";
+var r = require("./9");
+var o = require("./79");
 var i = new Map();
 var a = new Map();
 function s(e) {
@@ -57,3 +57,4 @@ function f() {
   });
   i.clear();
 }
+export default c;

@@ -1,6 +1,6 @@
 "use strict";
 
-import * as r from "../442";
+var r = require("../442");
 function i() {
   this.handlers = [];
 }

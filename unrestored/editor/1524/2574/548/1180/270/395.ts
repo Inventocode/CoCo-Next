@@ -5,7 +5,7 @@ export { u as c };
 export { l as a };
 export { f as b };
 export { h as e };
-import * as r from "./1499";
+var r = require("./1499");
 function i(e) {
   var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
   var n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
@@ -122,3 +122,4 @@ function h(e, t) {
   }
   return a(e);
 }
+export default l;

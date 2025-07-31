@@ -8,7 +8,7 @@
     } else if ("undefined" == typeof DO_NOT_EXPORT_JSZIP) {
       JSZipSync = n();
       o = [];
-      if (!(void 0 === (a = "function" === typeof (i = n) ? i.apply(t, o) : i))) {
+      if (!(void 0 === (a = "function" === typeof (i = n) ? i.apply(exports, o) : i))) {
         module.exports = a;
       }
     } else {

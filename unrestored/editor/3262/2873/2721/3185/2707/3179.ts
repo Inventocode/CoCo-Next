@@ -1,6 +1,9 @@
 "use strict";
 
-export default (function (e, t) {
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.default = function (e, t) {
   if ((0, r.isBlockStatement)(e) && ((0, r.isFunction)(t) || (0, r.isCatchClause)(t))) {
     return !1;
   }
@@ -8,5 +11,5 @@ export default (function (e, t) {
     return !0;
   }
   return (0, r.isScopable)(e);
-});
-import * as r from "./2627";
+};
+var r = require("./2627");

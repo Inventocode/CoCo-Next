@@ -1,5 +1,8 @@
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
 exports.ArrowFunctionExpression = function (e) {
   if (e.async) {
     this.word("async");
@@ -21,7 +24,7 @@ exports.ArrowFunctionExpression = function (e) {
   this.space();
   this.print(e.body, e);
 };
-exports.FunctionDeclaration = t.FunctionExpression = function (e) {
+exports.FunctionDeclaration = exports.FunctionExpression = function (e) {
   this._functionHead(e);
   this.space();
   this.print(e.body, e);

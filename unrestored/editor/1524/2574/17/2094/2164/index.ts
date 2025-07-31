@@ -1,16 +1,20 @@
 "use strict";
 
-import * as r from "../../../1000/93";
-import * as i from "../../../1000/134/index";
-import * as o from "../../../125/259";
-import * as a from "../../../4/127";
-import * as s from "../../../125/195/index";
-import * as c from "./755";
-import * as u from "../../../125/534";
-import * as l from "../../../125/index";
-import * as f from "../../../125/294";
-import * as h from "../../../1000/213/index";
-import * as d from "../962";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.WorkspaceComment = void 0;
+var r = require("../../../1000/93");
+var i = require("../../../1000/134/index");
+var o = require("../../../125/259");
+var a = require("../../../4/127");
+var s = require("../../../125/195/index");
+var c = require("./755");
+var u = require("../../../125/534");
+var l = require("../../../125/index");
+var f = require("../../../125/294");
+var h = require("../../../1000/213/index");
+var d = require("../962");
 var p = [214, 126];
 var _ = [140, 68];
 var A = [40, 40];
@@ -706,4 +710,4 @@ var g = function (e) {
   (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.ChangeEvent)], t.prototype, "change_event_factory", void 0);
   return t = (0, r.__decorate)([(0, i.injectable)()], t);
 }(d.WorkspaceElement);
-export { g as WorkspaceComment };
+exports.WorkspaceComment = g;

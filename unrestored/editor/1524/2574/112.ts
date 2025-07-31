@@ -2,7 +2,7 @@
 
 export { o as a };
 export { a as b };
-import * as r from "./6";
+var r = require("./6");
 function o(e, t) {
   var n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
   var o = Object(r.a)({
@@ -82,3 +82,4 @@ var i = {
 function a(e) {
   return i[e] ? i[e] : i.DEFAULT;
 }
+export default o;

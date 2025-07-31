@@ -1,10 +1,14 @@
 "use strict";
 
-import * as r from "../../1000/93";
-import * as i from "../../1000/134/index";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.RuntimeData = void 0;
+var r = require("../../1000/93");
+var i = require("../../1000/134/index");
 var o = (0, r.__importStar)(require("../../683/559"));
-import * as a from "../../4/127";
-import * as s from "../../125/index";
+var a = require("../../4/127");
+var s = require("../../125/index");
 var c = function () {
   function e() {
     var e = this;
@@ -91,7 +95,7 @@ var c = function () {
   (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.workspace_db)], e.prototype, "workspace_db", void 0);
   return e = (0, r.__decorate)([(0, i.injectable)()], e);
 }();
-export { c as RuntimeData };
+exports.RuntimeData = c;
 var u = function () {
   function e() {}
   e.prototype.get_content = function () {

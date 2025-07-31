@@ -1,5 +1,9 @@
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.ViewType = exports.RollUpFuncType = exports.FieldType = void 0;
 (function (e) {
   e.Text = "Text";
   e.Number = "Number";
@@ -24,7 +28,7 @@
   e.LastModifiedTime = "LastModifiedTime";
   e.CreatedBy = "CreatedBy";
   e.LastModifiedBy = "LastModifiedBy";
-})(t.FieldType || (exports.FieldType = {}));
+})(exports.FieldType || (exports.FieldType = {}));
 (function (e) {
   e.VALUES = "VALUES";
   e.AVERAGE = "AVERAGE";
@@ -41,10 +45,10 @@
   e.ARRAYJOIN = "ARRAYJOIN";
   e.ARRAYUNIQUE = "ARRAYUNIQUE";
   e.ARRAYCOMPACT = "ARRAYCOMPACT";
-})(t.RollUpFuncType || (exports.RollUpFuncType = {}));
+})(exports.RollUpFuncType || (exports.RollUpFuncType = {}));
 (function (e) {
   e.Grid = "Grid";
   e.Gallery = "Gallery";
   e.Kanban = "Kanban";
   e.Gantt = "Gantt";
-})(t.ViewType || (exports.ViewType = {}));
+})(exports.ViewType || (exports.ViewType = {}));

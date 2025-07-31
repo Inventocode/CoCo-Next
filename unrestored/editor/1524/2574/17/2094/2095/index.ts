@@ -1,18 +1,62 @@
 "use strict";
 
-import * as r from "./643";
-export { BlockEvent } from "./643";
-import * as i from "./2096";
-export { CreateEvent } from "./2096";
-import * as o from "./2101";
-export { ChangeEvent } from "./2101";
-import * as a from "./2102";
-export { DeleteEvent } from "./2102";
-import * as s from "./2103";
-export { DragAreaChangeEvent } from "./2103";
-import * as c from "./2104";
-export { EndDragEvent } from "./2104";
-import * as u from "./2105";
-export { MoveEvent } from "./2105";
-import * as l from "./2106";
-export { StartDragEvent } from "./2106";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.StartDragEvent = exports.MoveEvent = exports.EndDragEvent = exports.DragAreaChangeEvent = exports.DeleteEvent = exports.ChangeEvent = exports.CreateEvent = exports.BlockEvent = void 0;
+var r = require("./643");
+Object.defineProperty(exports, "BlockEvent", {
+  enumerable: !0,
+  get: function () {
+    return r.BlockEvent;
+  }
+});
+var i = require("./2096");
+Object.defineProperty(exports, "CreateEvent", {
+  enumerable: !0,
+  get: function () {
+    return i.CreateEvent;
+  }
+});
+var o = require("./2101");
+Object.defineProperty(exports, "ChangeEvent", {
+  enumerable: !0,
+  get: function () {
+    return o.ChangeEvent;
+  }
+});
+var a = require("./2102");
+Object.defineProperty(exports, "DeleteEvent", {
+  enumerable: !0,
+  get: function () {
+    return a.DeleteEvent;
+  }
+});
+var s = require("./2103");
+Object.defineProperty(exports, "DragAreaChangeEvent", {
+  enumerable: !0,
+  get: function () {
+    return s.DragAreaChangeEvent;
+  }
+});
+var c = require("./2104");
+Object.defineProperty(exports, "EndDragEvent", {
+  enumerable: !0,
+  get: function () {
+    return c.EndDragEvent;
+  }
+});
+var u = require("./2105");
+Object.defineProperty(exports, "MoveEvent", {
+  enumerable: !0,
+  get: function () {
+    return u.MoveEvent;
+  }
+});
+var l = require("./2106");
+Object.defineProperty(exports, "StartDragEvent", {
+  enumerable: !0,
+  get: function () {
+    return l.StartDragEvent;
+  }
+});

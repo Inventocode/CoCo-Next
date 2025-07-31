@@ -1,5 +1,8 @@
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
 exports.getHighestUnreleased = function (e, t, n) {
   return u(e, t, n) === e ? t : e;
 };
@@ -10,12 +13,12 @@ exports.getLowestImplementedVersion = function (e, t) {
   }
   return n;
 };
-export { u as getLowestUnreleased };
+exports.getLowestUnreleased = u;
 exports.isUnreleasedVersion = function (e, t) {
   var n = a.unreleasedLabels[t];
   return !!n && n === e.toString().toLowerCase();
 };
-export { l as semverMin };
+exports.semverMin = l;
 exports.semverify = function (e) {
   if ("string" === typeof e && r.valid(e)) {
     return e;
@@ -27,9 +30,9 @@ exports.semverify = function (e) {
   }
   return t.join(".");
 };
-import * as r from "../../../../2691/2657";
-import * as i from "./2797/index";
-import * as a from "./2706";
+var r = require("../../../../2691/2657");
+var i = require("./2797/index");
+var a = require("./2706");
 var s = /^(\d+|\d+.\d+)$/;
 var o = new i.OptionValidator("@babel/helper-compilation-targets");
 function l(e, t) {

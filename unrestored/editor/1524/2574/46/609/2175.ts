@@ -1,5 +1,9 @@
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.load_json_js_generator_events = void 0;
 exports.load_json_js_generator_events = function (e) {
   var t = function (t, n) {
     for (var r = "", i = e.find_next_block(t, n); i;) {

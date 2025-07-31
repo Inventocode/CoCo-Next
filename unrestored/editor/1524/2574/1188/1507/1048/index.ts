@@ -7,7 +7,10 @@ function r(e) {
     return e && "function" === typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype ? "symbol" : typeof e;
   })(e);
 }
-export { d as matchesSelector };
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.matchesSelector = d;
 exports.matchesSelectorAndParentsTo = function (e, t, n) {
   var r = e;
   do {
@@ -98,7 +101,7 @@ exports.createCSSTransform = function (e, t) {
 exports.createSVGTransform = function (e, t) {
   return p(e, t, "");
 };
-export { p as getTranslation };
+exports.getTranslation = p;
 exports.getTouch = function (e, t) {
   return e.targetTouches && (0, o.findInArray)(e.targetTouches, function (e) {
     return t === e.identifier;
@@ -145,9 +148,9 @@ exports.removeUserSelectStyles = function (e) {
     }
   } catch (n) {}
 };
-export { f as addClassName };
-export { h as removeClassName };
-import * as o from "../927";
+exports.addClassName = f;
+exports.removeClassName = h;
+var o = require("../927");
 var i = function (e) {
   if (e && e.__esModule) {
     return e;

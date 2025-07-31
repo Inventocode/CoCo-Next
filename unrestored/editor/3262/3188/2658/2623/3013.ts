@@ -1,6 +1,10 @@
 "use strict";
 
-import * as r from "./2626";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.default = void 0;
+var r = require("./2626");
 var i = function (e) {
   if ((0, r.isExpressionStatement)(e)) {
     e = e.expression;
@@ -20,4 +24,4 @@ var i = function (e) {
   }
   return e;
 };
-export default i;
+exports.default = i;

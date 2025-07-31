@@ -1,8 +1,8 @@
 "use strict";
 
-import * as r from "./2375/index";
-import * as i from "./2383/index";
-import * as o from "./1138";
+var r = require("./2375/index");
+var i = require("./2383/index");
+var o = require("./1138");
 module.exports = {
   formats: o,
   parse: i,

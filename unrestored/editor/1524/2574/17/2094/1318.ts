@@ -1,19 +1,23 @@
 "use strict";
 
-import * as r from "../../1000/93";
-import * as i from "../../125/259";
-import * as o from "../../4/127";
-import * as a from "../../125/195/index";
-import * as s from "../../125/534";
-import * as c from "../../206/725/387";
-import * as u from "../../125/294";
-import * as l from "../../125/index";
-import * as f from "../../1000/213/index";
-import * as h from "../../1000/577";
-import * as d from "../../125/474";
-import * as p from "../497/960";
-import * as _ from "../497/840";
-import * as A from "./2164/755";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.BlockSvg = void 0;
+var r = require("../../1000/93");
+var i = require("../../125/259");
+var o = require("../../4/127");
+var a = require("../../125/195/index");
+var s = require("../../125/534");
+var c = require("../../206/725/387");
+var u = require("../../125/294");
+var l = require("../../125/index");
+var f = require("../../1000/213/index");
+var h = require("../../1000/577");
+var d = require("../../125/474");
+var p = require("../497/960");
+var _ = require("../497/840");
+var A = require("./2164/755");
 var g = function (e) {
   function t(t) {
     var n;
@@ -2340,4 +2344,4 @@ var g = function (e) {
   (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.BlockGroup)], t.prototype, "block_group_factory", void 0);
   return t;
 }(require("./962").WorkspaceElement);
-export { g as BlockSvg };
+exports.BlockSvg = g;

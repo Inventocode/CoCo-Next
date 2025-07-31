@@ -1,6 +1,6 @@
 "use strict";
 
-import * as r from "./1707/258/index";
+var r = require("./1707/258/index");
 var o = require("./1707/399").find;
 var i = r.aTypedArray;
 (0, r.exportTypedArrayMethod)("find", function (e) {

@@ -146,13 +146,17 @@ var a = this && this.__importDefault || function (e) {
     default: e
   };
 };
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.Vika = void 0;
 var s = a(require("./2357/index"));
 var c = a(require("./2374/index"));
-import * as u from "./969/index";
-import * as l from "./2385/index";
-import * as f from "./2391";
-import * as h from "./2392";
-import * as d from "./2393";
+var u = require("./969/index");
+var l = require("./2385/index");
+var f = require("./2391");
+var h = require("./2392");
+var d = require("./2393");
 var p = function () {
   function e(e) {
     if (!(null === e || void 0 === e ? void 0 : e.token)) {
@@ -264,4 +268,4 @@ var p = function () {
   e.QPSMap = new Map();
   return e;
 }();
-export { p as Vika };
+exports.Vika = p;

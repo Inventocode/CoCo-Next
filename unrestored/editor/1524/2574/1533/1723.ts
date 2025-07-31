@@ -1,6 +1,6 @@
 "use strict";
 
-import * as r from "./1707/258/index";
+var r = require("./1707/258/index");
 var o = r.aTypedArray;
 var i = r.exportTypedArrayMethod;
 var a = Math.floor;

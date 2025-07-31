@@ -1,5 +1,5 @@
-import * as r from "../1626/86/index";
-import * as o from "./1068";
+var r = require("../1626/86/index");
+var o = require("./1068");
 var i = Math.abs;
 var a = Math.pow;
 r({

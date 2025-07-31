@@ -7,6 +7,9 @@ function r() {
   };
   return e;
 }
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
 exports.resolveBrowserslistConfigFile = function (e, t) {
   return;
 };

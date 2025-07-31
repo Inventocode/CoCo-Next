@@ -1,15 +1,19 @@
 "use strict";
 
-import * as r from "../../220";
-import * as i from "../../230";
-import * as a from "../../2679/703/index";
-import * as s from "../../2679/529";
-import * as o from "../../2679/356/index";
-import * as l from "../../2679/357/index";
-export default (function (e, t, n) {
-  return new c(e, t, n).generate();
+var r = require("../../220");
+var i = require("../../230");
+var a = require("../../2679/703/index");
+var s = require("../../2679/529");
+var o = require("../../2679/356/index");
+var l = require("../../2679/357/index");
+Object.defineProperty(exports, "__esModule", {
+  value: !0
 });
-import * as u from "./3035/index";
+exports.CodeGenerator = void 0;
+exports.default = function (e, t, n) {
+  return new c(e, t, n).generate();
+};
+var u = require("./3035/index");
 var c = function (e) {
   o(n, e);
   var t = l(n);
@@ -93,4 +97,4 @@ var f = function () {
   }]);
   return e;
 }();
-export { f as CodeGenerator };
+exports.CodeGenerator = f;

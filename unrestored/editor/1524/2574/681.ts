@@ -14,4 +14,4 @@ var r = {
     errorMsg: "\u5931\u8d25\u539f\u56e0"
   }
 };
-import * as o from "./540";
+var o = require("./540");

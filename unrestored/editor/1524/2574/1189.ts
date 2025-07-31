@@ -1,6 +1,6 @@
 "use strict";
 
-import * as r from "./0/index";
+var r = require("./0/index");
 var o = function () {
   function e(e, t) {
     for (var n = 0; n < t.length; n++) {
@@ -660,4 +660,4 @@ g.defaultProps = {
   scale: 1,
   resizeRatio: 1
 };
-export { g as a };
+exports.a = g;

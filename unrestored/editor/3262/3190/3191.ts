@@ -1,5 +1,8 @@
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
 exports.declare = function (e) {
   return function (t, n, i) {
     for (var o, s, u = 0, l = Object.keys(r); u < l.length; u++) {

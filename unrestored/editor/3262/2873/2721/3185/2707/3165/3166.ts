@@ -1,7 +1,10 @@
 "use strict";
 
-import * as r from "../../../../../3190/494";
-export default (function e(t, n, u) {
+var r = require("../../../../../3190/494");
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.default = function e(t, n, u) {
   var l;
   var p = [];
   var f = !0;
@@ -69,8 +72,8 @@ export default (function e(t, n, u) {
     p.push(n.buildUndefinedNode());
   }
   return 1 === p.length ? p[0] : (0, o.sequenceExpression)(p);
-});
-import * as a from "../2686";
-import * as i from "../2627";
-import * as o from "../2631/index";
-import * as s from "../2652";
+};
+var a = require("../2686");
+var i = require("../2627");
+var o = require("../2631/index");
+var s = require("../2652");

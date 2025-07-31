@@ -12,3 +12,4 @@ var i = !0;
 var a = !0;
 var s = 10;
 var c = "https://codemao.yuque.com/kzbwh0/coco_guide/ako277is0gzrm4ig";
+export default a;

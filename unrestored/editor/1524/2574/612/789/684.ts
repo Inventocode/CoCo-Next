@@ -1,15 +1,26 @@
 "use strict";
 
-import * as r from "../../28";
-import * as i from "../../20";
-import * as o from "../../33/index";
-import * as a from "../../108";
-import * as s from "../../0/index";
-import * as c from "../../739/1496/1008";
-import * as u from "../../1025/690";
-import * as l from "../../8";
-import * as f from "../../8";
-import * as h from "../../2617/462";
+var r = require("../../28");
+var i = require("../../20");
+var o = require("../../33/index");
+var a = require("../../108");
+var s = require("../../0/index");
+var c = require("../../739/1496/1008");
+var u = require("../../1025/690");
+var l = require("../../8");
+var f = (module => {
+  var defaultExport = module && module.__esModule ? function () {
+    return module.default;
+  } : function () {
+    return module;
+  };
+  Object.defineProperty(defaultExport, "a", {
+    enumerable: true,
+    get: defaultExport
+  });
+  return defaultExport;
+})(l);
+var h = require("../../2617/462");
 function d(e, t) {
   var n = {};
   n[e.toLowerCase()] = t.toLowerCase();
@@ -84,7 +95,7 @@ function C(e) {
   }];
 }
 var O = Object(h.a)() ? s.useLayoutEffect : s.useEffect;
-import * as S from "../../1025/413";
+var S = require("../../1025/413");
 var k = ["prepare", "start", "active", "end"];
 function T(e) {
   return "active" === e || "end" === e;
@@ -349,10 +360,10 @@ function D(e, t, n, a) {
   }
   return [H, ae, ce, null !== M && void 0 !== M ? M : t];
 }
-import * as I from "../../95";
-import * as F from "../../96";
-import * as R from "../../120";
-import * as P from "../../140";
+var I = require("../../95");
+var F = require("../../96");
+var R = require("../../120");
+var P = require("../../140");
 var N = function (e) {
   Object(R.a)(n, e);
   var t = Object(P.a)(n);
@@ -453,8 +464,8 @@ var M = function (e) {
   l.displayName = "CSSMotion";
   return l;
 }(b);
-import * as j from "../../19";
-import * as L from "../../54";
+var j = require("../../19");
+var L = require("../../54");
 function U(e) {
   var t;
   t = e && "object" === Object(a.a)(e) && "key" in e ? e : {
@@ -617,3 +628,4 @@ var G = ["eventProps", "visible", "children", "motionName", "motionAppear", "mot
   };
 })(b);
 export { M as a };
+export default M;

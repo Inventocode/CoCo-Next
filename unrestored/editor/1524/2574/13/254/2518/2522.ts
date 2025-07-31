@@ -1,5 +1,8 @@
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
 exports.calculateChange = function (e, t, n) {
   var r = n.getBoundingClientRect();
   var i = r.width;

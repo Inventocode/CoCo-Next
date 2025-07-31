@@ -42,3 +42,4 @@ var y = {
   cdnUrl: "https://ocean.codemao.cn/appcraft/resource/icon/\u793e\u4ea4/\u6536\u85cf.svg",
   source: ""
 };
+export default o;

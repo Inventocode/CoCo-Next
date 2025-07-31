@@ -1,5 +1,8 @@
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
 exports.anyTypeAnnotation = function () {
   return r.default.apply("AnyTypeAnnotation", arguments);
 };
@@ -270,49 +273,49 @@ exports.interpreterDirective = function (e) {
 exports.intersectionTypeAnnotation = function (e) {
   return r.default.apply("IntersectionTypeAnnotation", arguments);
 };
-exports.jSXAttribute = t.jsxAttribute = function (e, t) {
+exports.jSXAttribute = exports.jsxAttribute = function (e, t) {
   return r.default.apply("JSXAttribute", arguments);
 };
-exports.jSXClosingElement = t.jsxClosingElement = function (e) {
+exports.jSXClosingElement = exports.jsxClosingElement = function (e) {
   return r.default.apply("JSXClosingElement", arguments);
 };
-exports.jSXClosingFragment = t.jsxClosingFragment = function () {
+exports.jSXClosingFragment = exports.jsxClosingFragment = function () {
   return r.default.apply("JSXClosingFragment", arguments);
 };
-exports.jSXElement = t.jsxElement = function (e, t, n, a) {
+exports.jSXElement = exports.jsxElement = function (e, t, n, a) {
   return r.default.apply("JSXElement", arguments);
 };
-exports.jSXEmptyExpression = t.jsxEmptyExpression = function () {
+exports.jSXEmptyExpression = exports.jsxEmptyExpression = function () {
   return r.default.apply("JSXEmptyExpression", arguments);
 };
-exports.jSXExpressionContainer = t.jsxExpressionContainer = function (e) {
+exports.jSXExpressionContainer = exports.jsxExpressionContainer = function (e) {
   return r.default.apply("JSXExpressionContainer", arguments);
 };
-exports.jSXFragment = t.jsxFragment = function (e, t, n) {
+exports.jSXFragment = exports.jsxFragment = function (e, t, n) {
   return r.default.apply("JSXFragment", arguments);
 };
-exports.jSXIdentifier = t.jsxIdentifier = function (e) {
+exports.jSXIdentifier = exports.jsxIdentifier = function (e) {
   return r.default.apply("JSXIdentifier", arguments);
 };
-exports.jSXMemberExpression = t.jsxMemberExpression = function (e, t) {
+exports.jSXMemberExpression = exports.jsxMemberExpression = function (e, t) {
   return r.default.apply("JSXMemberExpression", arguments);
 };
-exports.jSXNamespacedName = t.jsxNamespacedName = function (e, t) {
+exports.jSXNamespacedName = exports.jsxNamespacedName = function (e, t) {
   return r.default.apply("JSXNamespacedName", arguments);
 };
-exports.jSXOpeningElement = t.jsxOpeningElement = function (e, t, n) {
+exports.jSXOpeningElement = exports.jsxOpeningElement = function (e, t, n) {
   return r.default.apply("JSXOpeningElement", arguments);
 };
-exports.jSXOpeningFragment = t.jsxOpeningFragment = function () {
+exports.jSXOpeningFragment = exports.jsxOpeningFragment = function () {
   return r.default.apply("JSXOpeningFragment", arguments);
 };
-exports.jSXSpreadAttribute = t.jsxSpreadAttribute = function (e) {
+exports.jSXSpreadAttribute = exports.jsxSpreadAttribute = function (e) {
   return r.default.apply("JSXSpreadAttribute", arguments);
 };
-exports.jSXSpreadChild = t.jsxSpreadChild = function (e) {
+exports.jSXSpreadChild = exports.jsxSpreadChild = function (e) {
   return r.default.apply("JSXSpreadChild", arguments);
 };
-exports.jSXText = t.jsxText = function (e) {
+exports.jSXText = exports.jsxText = function (e) {
   return r.default.apply("JSXText", arguments);
 };
 exports.labeledStatement = function (e, t) {
@@ -505,193 +508,193 @@ exports.topicReference = function () {
 exports.tryStatement = function (e, t, n) {
   return r.default.apply("TryStatement", arguments);
 };
-exports.tSAnyKeyword = t.tsAnyKeyword = function () {
+exports.tSAnyKeyword = exports.tsAnyKeyword = function () {
   return r.default.apply("TSAnyKeyword", arguments);
 };
-exports.tSArrayType = t.tsArrayType = function (e) {
+exports.tSArrayType = exports.tsArrayType = function (e) {
   return r.default.apply("TSArrayType", arguments);
 };
-exports.tSAsExpression = t.tsAsExpression = function (e, t) {
+exports.tSAsExpression = exports.tsAsExpression = function (e, t) {
   return r.default.apply("TSAsExpression", arguments);
 };
-exports.tSBigIntKeyword = t.tsBigIntKeyword = function () {
+exports.tSBigIntKeyword = exports.tsBigIntKeyword = function () {
   return r.default.apply("TSBigIntKeyword", arguments);
 };
-exports.tSBooleanKeyword = t.tsBooleanKeyword = function () {
+exports.tSBooleanKeyword = exports.tsBooleanKeyword = function () {
   return r.default.apply("TSBooleanKeyword", arguments);
 };
-exports.tSCallSignatureDeclaration = t.tsCallSignatureDeclaration = function (e, t, n) {
+exports.tSCallSignatureDeclaration = exports.tsCallSignatureDeclaration = function (e, t, n) {
   return r.default.apply("TSCallSignatureDeclaration", arguments);
 };
-exports.tSConditionalType = t.tsConditionalType = function (e, t, n, a) {
+exports.tSConditionalType = exports.tsConditionalType = function (e, t, n, a) {
   return r.default.apply("TSConditionalType", arguments);
 };
-exports.tSConstructSignatureDeclaration = t.tsConstructSignatureDeclaration = function (e, t, n) {
+exports.tSConstructSignatureDeclaration = exports.tsConstructSignatureDeclaration = function (e, t, n) {
   return r.default.apply("TSConstructSignatureDeclaration", arguments);
 };
-exports.tSConstructorType = t.tsConstructorType = function (e, t, n) {
+exports.tSConstructorType = exports.tsConstructorType = function (e, t, n) {
   return r.default.apply("TSConstructorType", arguments);
 };
-exports.tSDeclareFunction = t.tsDeclareFunction = function (e, t, n, a) {
+exports.tSDeclareFunction = exports.tsDeclareFunction = function (e, t, n, a) {
   return r.default.apply("TSDeclareFunction", arguments);
 };
-exports.tSDeclareMethod = t.tsDeclareMethod = function (e, t, n, a, i) {
+exports.tSDeclareMethod = exports.tsDeclareMethod = function (e, t, n, a, i) {
   return r.default.apply("TSDeclareMethod", arguments);
 };
-exports.tSEnumDeclaration = t.tsEnumDeclaration = function (e, t) {
+exports.tSEnumDeclaration = exports.tsEnumDeclaration = function (e, t) {
   return r.default.apply("TSEnumDeclaration", arguments);
 };
-exports.tSEnumMember = t.tsEnumMember = function (e, t) {
+exports.tSEnumMember = exports.tsEnumMember = function (e, t) {
   return r.default.apply("TSEnumMember", arguments);
 };
-exports.tSExportAssignment = t.tsExportAssignment = function (e) {
+exports.tSExportAssignment = exports.tsExportAssignment = function (e) {
   return r.default.apply("TSExportAssignment", arguments);
 };
-exports.tSExpressionWithTypeArguments = t.tsExpressionWithTypeArguments = function (e, t) {
+exports.tSExpressionWithTypeArguments = exports.tsExpressionWithTypeArguments = function (e, t) {
   return r.default.apply("TSExpressionWithTypeArguments", arguments);
 };
-exports.tSExternalModuleReference = t.tsExternalModuleReference = function (e) {
+exports.tSExternalModuleReference = exports.tsExternalModuleReference = function (e) {
   return r.default.apply("TSExternalModuleReference", arguments);
 };
-exports.tSFunctionType = t.tsFunctionType = function (e, t, n) {
+exports.tSFunctionType = exports.tsFunctionType = function (e, t, n) {
   return r.default.apply("TSFunctionType", arguments);
 };
-exports.tSImportEqualsDeclaration = t.tsImportEqualsDeclaration = function (e, t) {
+exports.tSImportEqualsDeclaration = exports.tsImportEqualsDeclaration = function (e, t) {
   return r.default.apply("TSImportEqualsDeclaration", arguments);
 };
-exports.tSImportType = t.tsImportType = function (e, t, n) {
+exports.tSImportType = exports.tsImportType = function (e, t, n) {
   return r.default.apply("TSImportType", arguments);
 };
-exports.tSIndexSignature = t.tsIndexSignature = function (e, t) {
+exports.tSIndexSignature = exports.tsIndexSignature = function (e, t) {
   return r.default.apply("TSIndexSignature", arguments);
 };
-exports.tSIndexedAccessType = t.tsIndexedAccessType = function (e, t) {
+exports.tSIndexedAccessType = exports.tsIndexedAccessType = function (e, t) {
   return r.default.apply("TSIndexedAccessType", arguments);
 };
-exports.tSInferType = t.tsInferType = function (e) {
+exports.tSInferType = exports.tsInferType = function (e) {
   return r.default.apply("TSInferType", arguments);
 };
-exports.tSInterfaceBody = t.tsInterfaceBody = function (e) {
+exports.tSInterfaceBody = exports.tsInterfaceBody = function (e) {
   return r.default.apply("TSInterfaceBody", arguments);
 };
-exports.tSInterfaceDeclaration = t.tsInterfaceDeclaration = function (e, t, n, a) {
+exports.tSInterfaceDeclaration = exports.tsInterfaceDeclaration = function (e, t, n, a) {
   return r.default.apply("TSInterfaceDeclaration", arguments);
 };
-exports.tSIntersectionType = t.tsIntersectionType = function (e) {
+exports.tSIntersectionType = exports.tsIntersectionType = function (e) {
   return r.default.apply("TSIntersectionType", arguments);
 };
-exports.tSIntrinsicKeyword = t.tsIntrinsicKeyword = function () {
+exports.tSIntrinsicKeyword = exports.tsIntrinsicKeyword = function () {
   return r.default.apply("TSIntrinsicKeyword", arguments);
 };
-exports.tSLiteralType = t.tsLiteralType = function (e) {
+exports.tSLiteralType = exports.tsLiteralType = function (e) {
   return r.default.apply("TSLiteralType", arguments);
 };
-exports.tSMappedType = t.tsMappedType = function (e, t, n) {
+exports.tSMappedType = exports.tsMappedType = function (e, t, n) {
   return r.default.apply("TSMappedType", arguments);
 };
-exports.tSMethodSignature = t.tsMethodSignature = function (e, t, n, a) {
+exports.tSMethodSignature = exports.tsMethodSignature = function (e, t, n, a) {
   return r.default.apply("TSMethodSignature", arguments);
 };
-exports.tSModuleBlock = t.tsModuleBlock = function (e) {
+exports.tSModuleBlock = exports.tsModuleBlock = function (e) {
   return r.default.apply("TSModuleBlock", arguments);
 };
-exports.tSModuleDeclaration = t.tsModuleDeclaration = function (e, t) {
+exports.tSModuleDeclaration = exports.tsModuleDeclaration = function (e, t) {
   return r.default.apply("TSModuleDeclaration", arguments);
 };
-exports.tSNamedTupleMember = t.tsNamedTupleMember = function (e, t, n) {
+exports.tSNamedTupleMember = exports.tsNamedTupleMember = function (e, t, n) {
   return r.default.apply("TSNamedTupleMember", arguments);
 };
-exports.tSNamespaceExportDeclaration = t.tsNamespaceExportDeclaration = function (e) {
+exports.tSNamespaceExportDeclaration = exports.tsNamespaceExportDeclaration = function (e) {
   return r.default.apply("TSNamespaceExportDeclaration", arguments);
 };
-exports.tSNeverKeyword = t.tsNeverKeyword = function () {
+exports.tSNeverKeyword = exports.tsNeverKeyword = function () {
   return r.default.apply("TSNeverKeyword", arguments);
 };
-exports.tSNonNullExpression = t.tsNonNullExpression = function (e) {
+exports.tSNonNullExpression = exports.tsNonNullExpression = function (e) {
   return r.default.apply("TSNonNullExpression", arguments);
 };
-exports.tSNullKeyword = t.tsNullKeyword = function () {
+exports.tSNullKeyword = exports.tsNullKeyword = function () {
   return r.default.apply("TSNullKeyword", arguments);
 };
-exports.tSNumberKeyword = t.tsNumberKeyword = function () {
+exports.tSNumberKeyword = exports.tsNumberKeyword = function () {
   return r.default.apply("TSNumberKeyword", arguments);
 };
-exports.tSObjectKeyword = t.tsObjectKeyword = function () {
+exports.tSObjectKeyword = exports.tsObjectKeyword = function () {
   return r.default.apply("TSObjectKeyword", arguments);
 };
-exports.tSOptionalType = t.tsOptionalType = function (e) {
+exports.tSOptionalType = exports.tsOptionalType = function (e) {
   return r.default.apply("TSOptionalType", arguments);
 };
-exports.tSParameterProperty = t.tsParameterProperty = function (e) {
+exports.tSParameterProperty = exports.tsParameterProperty = function (e) {
   return r.default.apply("TSParameterProperty", arguments);
 };
-exports.tSParenthesizedType = t.tsParenthesizedType = function (e) {
+exports.tSParenthesizedType = exports.tsParenthesizedType = function (e) {
   return r.default.apply("TSParenthesizedType", arguments);
 };
-exports.tSPropertySignature = t.tsPropertySignature = function (e, t, n) {
+exports.tSPropertySignature = exports.tsPropertySignature = function (e, t, n) {
   return r.default.apply("TSPropertySignature", arguments);
 };
-exports.tSQualifiedName = t.tsQualifiedName = function (e, t) {
+exports.tSQualifiedName = exports.tsQualifiedName = function (e, t) {
   return r.default.apply("TSQualifiedName", arguments);
 };
-exports.tSRestType = t.tsRestType = function (e) {
+exports.tSRestType = exports.tsRestType = function (e) {
   return r.default.apply("TSRestType", arguments);
 };
-exports.tSStringKeyword = t.tsStringKeyword = function () {
+exports.tSStringKeyword = exports.tsStringKeyword = function () {
   return r.default.apply("TSStringKeyword", arguments);
 };
-exports.tSSymbolKeyword = t.tsSymbolKeyword = function () {
+exports.tSSymbolKeyword = exports.tsSymbolKeyword = function () {
   return r.default.apply("TSSymbolKeyword", arguments);
 };
-exports.tSThisType = t.tsThisType = function () {
+exports.tSThisType = exports.tsThisType = function () {
   return r.default.apply("TSThisType", arguments);
 };
-exports.tSTupleType = t.tsTupleType = function (e) {
+exports.tSTupleType = exports.tsTupleType = function (e) {
   return r.default.apply("TSTupleType", arguments);
 };
-exports.tSTypeAliasDeclaration = t.tsTypeAliasDeclaration = function (e, t, n) {
+exports.tSTypeAliasDeclaration = exports.tsTypeAliasDeclaration = function (e, t, n) {
   return r.default.apply("TSTypeAliasDeclaration", arguments);
 };
-exports.tSTypeAnnotation = t.tsTypeAnnotation = function (e) {
+exports.tSTypeAnnotation = exports.tsTypeAnnotation = function (e) {
   return r.default.apply("TSTypeAnnotation", arguments);
 };
-exports.tSTypeAssertion = t.tsTypeAssertion = function (e, t) {
+exports.tSTypeAssertion = exports.tsTypeAssertion = function (e, t) {
   return r.default.apply("TSTypeAssertion", arguments);
 };
-exports.tSTypeLiteral = t.tsTypeLiteral = function (e) {
+exports.tSTypeLiteral = exports.tsTypeLiteral = function (e) {
   return r.default.apply("TSTypeLiteral", arguments);
 };
-exports.tSTypeOperator = t.tsTypeOperator = function (e) {
+exports.tSTypeOperator = exports.tsTypeOperator = function (e) {
   return r.default.apply("TSTypeOperator", arguments);
 };
-exports.tSTypeParameter = t.tsTypeParameter = function (e, t, n) {
+exports.tSTypeParameter = exports.tsTypeParameter = function (e, t, n) {
   return r.default.apply("TSTypeParameter", arguments);
 };
-exports.tSTypeParameterDeclaration = t.tsTypeParameterDeclaration = function (e) {
+exports.tSTypeParameterDeclaration = exports.tsTypeParameterDeclaration = function (e) {
   return r.default.apply("TSTypeParameterDeclaration", arguments);
 };
-exports.tSTypeParameterInstantiation = t.tsTypeParameterInstantiation = function (e) {
+exports.tSTypeParameterInstantiation = exports.tsTypeParameterInstantiation = function (e) {
   return r.default.apply("TSTypeParameterInstantiation", arguments);
 };
-exports.tSTypePredicate = t.tsTypePredicate = function (e, t, n) {
+exports.tSTypePredicate = exports.tsTypePredicate = function (e, t, n) {
   return r.default.apply("TSTypePredicate", arguments);
 };
-exports.tSTypeQuery = t.tsTypeQuery = function (e) {
+exports.tSTypeQuery = exports.tsTypeQuery = function (e) {
   return r.default.apply("TSTypeQuery", arguments);
 };
-exports.tSTypeReference = t.tsTypeReference = function (e, t) {
+exports.tSTypeReference = exports.tsTypeReference = function (e, t) {
   return r.default.apply("TSTypeReference", arguments);
 };
-exports.tSUndefinedKeyword = t.tsUndefinedKeyword = function () {
+exports.tSUndefinedKeyword = exports.tsUndefinedKeyword = function () {
   return r.default.apply("TSUndefinedKeyword", arguments);
 };
-exports.tSUnionType = t.tsUnionType = function (e) {
+exports.tSUnionType = exports.tsUnionType = function (e) {
   return r.default.apply("TSUnionType", arguments);
 };
-exports.tSUnknownKeyword = t.tsUnknownKeyword = function () {
+exports.tSUnknownKeyword = exports.tsUnknownKeyword = function () {
   return r.default.apply("TSUnknownKeyword", arguments);
 };
-exports.tSVoidKeyword = t.tsVoidKeyword = function () {
+exports.tSVoidKeyword = exports.tsVoidKeyword = function () {
   return r.default.apply("TSVoidKeyword", arguments);
 };
 exports.tupleExpression = function (e) {
@@ -754,4 +757,4 @@ exports.withStatement = function (e, t) {
 exports.yieldExpression = function (e, t) {
   return r.default.apply("YieldExpression", arguments);
 };
-import * as r from "./3138";
+var r = require("./3138");

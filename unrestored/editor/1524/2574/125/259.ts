@@ -32,6 +32,9 @@ module.exports = function (e) {
         value: "Module"
       });
     }
+    Object.defineProperty(e, "__esModule", {
+      value: !0
+    });
   };
   n.t = function (e, t) {
     if (1 & t && (e = n(e)), 8 & t) {
@@ -68,6 +71,9 @@ module.exports = function (e) {
 }([function (e, t, n) {
   "use strict";
 
+  Object.defineProperty(t, "__esModule", {
+    value: !0
+  });
   t.vec2 = void 0;
   var r = function (e) {
     if (e && e.__esModule) {
@@ -86,6 +92,9 @@ module.exports = function (e) {
 }, function (e, t, n) {
   "use strict";
 
+  Object.defineProperty(t, "__esModule", {
+    value: !0
+  });
   t.forEach = t.sqrLen = t.sqrDist = t.dist = t.div = t.mul = t.sub = t.len = void 0;
   t.create = i;
   t.clone = function (e) {
@@ -348,6 +357,9 @@ module.exports = function (e) {
 }, function (e, t, n) {
   "use strict";
 
+  Object.defineProperty(t, "__esModule", {
+    value: !0
+  });
   t.setMatrixArrayType = function (e) {
     t.ARRAY_TYPE = e;
   };

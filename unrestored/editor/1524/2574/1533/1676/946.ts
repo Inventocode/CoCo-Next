@@ -1,11 +1,11 @@
 "use strict";
 
-import "../1241/index";
-import * as r from "../1738/398";
-import * as o from "../1241/944";
-import * as i from "../1626/167";
-import * as a from "../1735/247/index";
-import * as s from "../1735/422";
+require("../1241/index");
+var r = require("../1738/398");
+var o = require("../1241/944");
+var i = require("../1626/167");
+var a = require("../1735/247/index");
+var s = require("../1735/422");
 var c = a("species");
 var l = RegExp.prototype;
 module.exports = function (e, t, n, u) {

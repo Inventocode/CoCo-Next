@@ -2,24 +2,35 @@
 
 export { P as a };
 export { W as b };
-import * as r from "../1/index";
-import * as o from "../1/index";
-import * as i from "../7";
-import * as a from "../27";
-import * as s from "../40";
-import * as c from "../17/index";
-import * as l from "./208/index";
-import * as u from "../4/index";
-import * as d from "../301/index";
-import * as p from "./426";
-import * as f from "../15/index";
-import * as h from "../9";
-import * as m from "./139";
-import * as g from "../47";
-import * as _ from "../25/index";
-import * as v from "../6";
-import * as b from "../11";
-import * as y from "./775/index";
+var r = require("../1/index");
+var o = (module => {
+  var defaultExport = module && module.__esModule ? function () {
+    return module.default;
+  } : function () {
+    return module;
+  };
+  Object.defineProperty(defaultExport, "a", {
+    enumerable: true,
+    get: defaultExport
+  });
+  return defaultExport;
+})(r);
+var i = require("../7");
+var a = require("../27");
+var s = require("../40");
+var c = require("../17/index");
+var l = require("./208/index");
+var u = require("../4/index");
+var d = require("../301/index");
+var p = require("./426");
+var f = require("../15/index");
+var h = require("../9");
+var m = require("./139");
+var g = require("../47");
+var _ = require("../25/index");
+var v = require("../6");
+var b = require("../11");
+var y = require("./775/index");
 var E = ["loopFinitely", "loopConditionally", "loopInfinitely", "loopStep", "loopStepClosedRange", "listForEach"];
 var O = ["breakLoop", "continueLoop"];
 var w = {
@@ -132,9 +143,9 @@ function A(e, t, n, r) {
     }
   });
 }
-import * as j from "../323";
-import * as N from "../55";
-import * as R from "./29/index";
+var j = require("../323");
+var N = require("../55");
+var R = require("./29/index");
 var k = ["Coco", "AsyncScheduler", "asyncScheduler"];
 function x(e) {
   var t = /Expected to return a value at the end of async function '(.+)'./.exec(e);
@@ -231,7 +242,7 @@ function L(e, t, n, r, o, i) {
   }
 }
 var P;
-import * as B from "./725/index";
+var B = require("./725/index");
 var F = function () {
   function e(t, n, r, o, i, s) {
     Object(a.a)(this, e);
@@ -1055,3 +1066,4 @@ var W = function () {
   }]);
   return e;
 }();
+export default P;

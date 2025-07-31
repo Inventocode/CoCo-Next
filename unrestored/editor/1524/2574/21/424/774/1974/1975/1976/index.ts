@@ -1,6 +1,6 @@
 "use strict";
 
-import * as r from "./1977";
+var r = require("./1977");
 function i(e, t) {
   for (var n = 0; n < e.length; n++) {
     e[n] += t;

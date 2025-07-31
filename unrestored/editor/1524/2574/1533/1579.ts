@@ -1,4 +1,4 @@
-import * as r from "./1738/272";
+var r = require("./1738/272");
 var o = require("./1534/300/index").f;
 var i = Function.prototype;
 var a = i.toString;

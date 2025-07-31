@@ -1,9 +1,9 @@
 "use strict";
 
-import * as r from "../935/437";
-import * as o from "../1556/473";
-import * as i from "../1728/257";
-import * as a from "../1561/708";
+var r = require("../935/437");
+var o = require("../1556/473");
+var i = require("../1728/257");
+var a = require("../1561/708");
 var s = Math.min;
 var c = [].lastIndexOf;
 var l = !!c && 1 / [1].lastIndexOf(1, -0) < 0;

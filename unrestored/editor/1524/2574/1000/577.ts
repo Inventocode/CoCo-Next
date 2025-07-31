@@ -1,6 +1,10 @@
 "use strict";
 
-import * as r from "../125/294";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.hsva_to_rgba = exports.rgba_to_hex = exports.hsv_to_rgb = exports.rgb_to_hsv = exports.darken = exports.Color = void 0;
+var r = require("../125/294");
 var i = function () {
   function e(e, t, n) {
     this.r = 0;
@@ -82,7 +86,7 @@ var i = function () {
   };
   return e;
 }();
-export { i as Color };
+exports.Color = i;
 var o = new i("#000");
 exports.darken = function (e, t, n) {
   o.a = (0, r.clamp)(t, 0, 1);

@@ -1,4 +1,4 @@
-import * as r from "./1086/index";
+var r = require("./1086/index");
 function i(e, t) {
   if ("function" != typeof e || null != t && "function" != typeof t) {
     throw new TypeError("Expected a function");

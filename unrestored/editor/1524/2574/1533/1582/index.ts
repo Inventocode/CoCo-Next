@@ -1,5 +1,5 @@
-import * as r from "../1626/86/index";
-import * as o from "./1227";
+var r = require("../1626/86/index");
+var o = require("./1227");
 var i = Math.acosh;
 var a = Math.log;
 var s = Math.sqrt;

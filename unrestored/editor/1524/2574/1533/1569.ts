@@ -1,17 +1,17 @@
 "use strict";
 
-import * as r from "./1626/86/index";
-import * as o from "./1727/439";
-import * as i from "./1623/309";
-import * as a from "./1728/257";
-import * as s from "./1738/310";
-import * as c from "./1626/167";
-import * as l from "./1727/1220";
-import * as u from "./1561/708";
-import * as d from "./1727/1221";
-import * as p from "./1727/1222";
-import * as f from "./1727/629";
-import * as h from "./1727/1067/index";
+var r = require("./1626/86/index");
+var o = require("./1727/439");
+var i = require("./1623/309");
+var a = require("./1728/257");
+var s = require("./1738/310");
+var c = require("./1626/167");
+var l = require("./1727/1220");
+var u = require("./1561/708");
+var d = require("./1727/1221");
+var p = require("./1727/1222");
+var f = require("./1727/629");
+var h = require("./1727/1067/index");
 var m = [];
 var g = m.sort;
 var _ = c(function () {

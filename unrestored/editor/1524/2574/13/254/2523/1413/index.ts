@@ -1,6 +1,6 @@
-import * as r from "../../2518/2519/475";
-import * as i from "./2520/index";
-import * as o from "./2521/index";
+var r = require("../../2518/2519/475");
+var i = require("./2520/index");
+var o = require("./2521/index");
 var a = Math.max;
 var s = Math.min;
 module.exports = function (e, t, n) {

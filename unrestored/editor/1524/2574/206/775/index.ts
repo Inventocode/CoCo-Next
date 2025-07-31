@@ -508,11 +508,13 @@
           o.ecmaVersion = (r = o.ecmaVersion) >= 2015 ? r - 2009 : r;
           return o;
         }(0, o.parserOptions || {}, E);
-        var O = (f = o.globals || {}, g = E, Object.assign.apply(Object, [{}].concat(u(g.filter(function (e) {
+        f = o.globals || {};
+        g = E;
+        var O = Object.assign.apply(Object, [{}].concat(u(g.filter(function (e) {
           return e.globals;
         }).map(function (e) {
           return e.globals;
-        })), [f])));
+        })), [f]));
         var S = o.settings || {};
         if (i.lastSourceCode) {
           if (!i.lastSourceCode.scopeManager) {

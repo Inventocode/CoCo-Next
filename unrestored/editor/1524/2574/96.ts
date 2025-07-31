@@ -21,3 +21,4 @@ function i(e, t, n) {
   return e;
 }
 export { i as a };
+export default i;

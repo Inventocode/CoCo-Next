@@ -5,7 +5,7 @@ export { a };
 export { s as b };
 export { c as d };
 export { u as e };
-import * as r from "./720/804";
+var r = require("./720/804");
 var i = new RegExp("^[ \\t]*([0-9a-f]{32})?-?([0-9a-f]{16})?-?([01])?[ \\t]*$");
 function o(e) {
   var t;
@@ -46,3 +46,4 @@ function c(e) {
 function u(e) {
   return 1e3 * e;
 }
+export default a;

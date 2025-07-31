@@ -1,13 +1,24 @@
 "use strict";
 
-import * as r from "../28";
-import * as i from "../33/index";
-import * as o from "../19";
-import * as a from "../0/index";
-import * as s from "./1496/index";
-import * as c from "../8";
-import * as u from "../8";
-import * as l from "./1009";
+var r = require("../28");
+var i = require("../33/index");
+var o = require("../19");
+var a = require("../0/index");
+var s = require("./1496/index");
+var c = require("../8");
+var u = (module => {
+  var defaultExport = module && module.__esModule ? function () {
+    return module.default;
+  } : function () {
+    return module;
+  };
+  Object.defineProperty(defaultExport, "a", {
+    enumerable: true,
+    get: defaultExport
+  });
+  return defaultExport;
+})(c);
+var l = require("./1009");
 var f = {
   adjustX: 1,
   adjustY: 1
@@ -20,11 +31,12 @@ var d = [0, 0];
 function p(e) {
   return "boolean" === typeof e ? e ? f : h : Object(o.a)(Object(o.a)({}, h), e);
 }
-import * as _ from "../314";
-import * as A from "../788";
-import * as g from "../610";
-var v = (Object(g.a)("success", "processing", "error", "default", "warning"), Object(g.a)("pink", "red", "yellow", "orange", "cyan", "green", "blue", "purple", "geekblue", "magenta", "volcano", "gold", "lime"));
-import * as m from "../431";
+var _ = require("../314");
+var A = require("../788");
+var g = require("../610");
+Object(g.a)("success", "processing", "error", "default", "warning");
+var v = Object(g.a)("pink", "red", "yellow", "orange", "cyan", "green", "blue", "purple", "geekblue", "magenta", "volcano", "gold", "lime");
+var m = require("../431");
 var y = function (e, t) {
   var n = {};
   for (var r in e) if (Object.prototype.hasOwnProperty.call(e, r) && t.indexOf(r) < 0) {
@@ -305,3 +317,4 @@ E.defaultProps = {
   autoAdjustOverflow: !0
 };
 export { E as a };
+export default E;

@@ -1,9 +1,9 @@
 "use strict";
 
 export { a };
-import * as r from "./906";
-import * as i from "./994";
-import * as o from "./771";
+var r = require("./906");
+var i = require("./994");
+var o = require("./771");
 function a(e) {
   return function (e) {
     if (Array.isArray(e)) {
@@ -13,3 +13,4 @@ function a(e) {
     throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
   }();
 }
+export default a;

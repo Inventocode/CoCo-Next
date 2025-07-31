@@ -1,5 +1,5 @@
-import * as r from "./2288";
-import * as i from "../2289/1126";
+var r = require("./2288");
+var i = require("../2289/1126");
 module.exports = function (e) {
   var t = e.xdomain;
   var n = e.xscheme;

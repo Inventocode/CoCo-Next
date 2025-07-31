@@ -18,7 +18,12 @@ module.exports = function () {
       var o;
       var a;
       var s = i(this);
-      var c = (n = this.isoWeekYear(), a = 4 - (o = (this.$u ? r.utc : r)().year(n).startOf("year")).isoWeekday(), o.isoWeekday() > 4 && (a += 7), o.add(a, e));
+      n = this.isoWeekYear();
+      a = 4 - (o = (this.$u ? r.utc : r)().year(n).startOf("year")).isoWeekday();
+      if (o.isoWeekday() > 4) {
+        a += 7;
+      }
+      var c = o.add(a, e);
       return s.diff(c, "week") + 1;
     };
     o.isoWeekday = function (e) {

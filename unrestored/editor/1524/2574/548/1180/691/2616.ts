@@ -1,11 +1,12 @@
 "use strict";
 
-import * as r from "../../../19";
-import * as i from "../../../54";
-import * as o from "../../../0/index";
-var a = (require("../../../50/index"), require("../100"));
-import * as s from "./153";
-import * as c from "./234";
+var r = require("../../../19");
+var i = require("../../../54");
+var o = require("../../../0/index");
+require("../../../50/index");
+var a = require("../100");
+var s = require("./153");
+var c = require("./234");
 var u = o.forwardRef(function (e, t) {
   var n = e.children;
   var s = e.classes;

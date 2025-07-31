@@ -2,11 +2,24 @@
 
 export { s as b };
 export { c as a };
-import * as r from "../0/index";
-import * as i from "../16/687";
-import * as o from "../16/687";
-import "./275";
+var r = require("../0/index");
+var i = require("../16/687");
+var o = (module => {
+  var defaultExport = module && module.__esModule ? function () {
+    return module.default;
+  } : function () {
+    return module;
+  };
+  Object.defineProperty(defaultExport, "a", {
+    enumerable: true,
+    get: defaultExport
+  });
+  return defaultExport;
+})(i);
+require("./275");
 o.a;
 var a = r.createContext(null);
-var s = (a.Consumer, a.Provider);
+a.Consumer;
+var s = a.Provider;
 var c = a;
+export default c;

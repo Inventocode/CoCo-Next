@@ -1,13 +1,13 @@
 "use strict";
 
-import * as r from "../../442";
-import * as i from "./1944";
-import * as o from "./1946";
-import * as a from "../../1939/1287";
-import * as s from "./1947/index";
-import * as c from "./1950";
-import * as u from "./1951";
-import * as l from "./1291/index";
+var r = require("../../442");
+var i = require("./1944");
+var o = require("./1946");
+var a = require("../../1939/1287");
+var s = require("./1947/index");
+var c = require("./1950");
+var u = require("./1951");
+var l = require("./1291/index");
 module.exports = function (e) {
   return new Promise(function (t, n) {
     var f = e.data;

@@ -1,5 +1,5 @@
-import * as r from "./1251";
-import * as i from "./1742/index";
+var r = require("./1251");
+var i = require("./1742/index");
 var o = {};
 for (var a in r) if (r.hasOwnProperty(a)) {
   o[r[a]] = a;

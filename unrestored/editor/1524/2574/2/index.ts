@@ -521,7 +521,7 @@ export { j as Cb } from "../161";
 export { I as Bg } from "../161";
 export { l as Eb } from "../161";
 export { K as Eg } from "../161";
-import * as r from "../6";
+var r = require("../6");
 var o = "SET_APP_LANGUAGE";
 var i = "UPDATE_EDIT_AREA";
 var a = function () {
@@ -2656,5 +2656,6 @@ var oc = function (e) {
     type: rc
   };
 };
-import * as ic from "./341";
-import * as ac from "../161";
+var ic = require("./341");
+var ac = require("../161");
+export default Bo;

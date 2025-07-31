@@ -5,18 +5,51 @@ export { Q as b };
 export { Yt as c };
 export { Kt as a };
 export { qt as f };
-import * as r from "../19";
-import * as o from "../28";
-import * as i from "../20";
-import * as a from "../80/index";
-import * as s from "../33/index";
-import * as c from "../54";
-import * as l from "../0/index";
-import * as u from "../0/index";
-import * as d from "../8";
-import * as p from "../8";
-import * as f from "./1018";
-import * as h from "./1018";
+var r = require("../19");
+var o = require("../28");
+var i = require("../20");
+var a = require("../80/index");
+var s = require("../33/index");
+var c = require("../54");
+var l = require("../0/index");
+var u = (module => {
+  var defaultExport = module && module.__esModule ? function () {
+    return module.default;
+  } : function () {
+    return module;
+  };
+  Object.defineProperty(defaultExport, "a", {
+    enumerable: true,
+    get: defaultExport
+  });
+  return defaultExport;
+})(l);
+var d = require("../8");
+var p = (module => {
+  var defaultExport = module && module.__esModule ? function () {
+    return module.default;
+  } : function () {
+    return module;
+  };
+  Object.defineProperty(defaultExport, "a", {
+    enumerable: true,
+    get: defaultExport
+  });
+  return defaultExport;
+})(d);
+var f = require("./1018");
+var h = (module => {
+  var defaultExport = module && module.__esModule ? function () {
+    return module.default;
+  } : function () {
+    return module;
+  };
+  Object.defineProperty(defaultExport, "a", {
+    enumerable: true,
+    get: defaultExport
+  });
+  return defaultExport;
+})(f);
 function m(e, t) {
   var n = t || {};
   var r = n.defaultValue;
@@ -63,11 +96,11 @@ function v(e, t, n) {
 var b = function (e, t) {
   v(_, e, t);
 };
-import * as y from "../1493/557";
-import * as E from "../95";
-import * as O from "../96";
-import * as w from "../120";
-import * as C from "../140";
+var y = require("../1493/557");
+var E = require("../95");
+var O = require("../96");
+var w = require("../120");
+var C = require("../140");
 var T = {
   MAC_ENTER: 3,
   BACKSPACE: 8,
@@ -402,7 +435,8 @@ var X = function (e) {
   var n = e.style;
   var s = e.className;
   var u = e.eventKey;
-  var d = (e.warnKey, e.disabled);
+  e.warnKey;
+  var d = e.disabled;
   var f = e.itemIcon;
   var h = e.children;
   var m = e.role;
@@ -500,7 +534,7 @@ var Q = function (e) {
   }, [r]);
   return n ? null : l.createElement(X, e);
 };
-import * as Z from "../242/index";
+var Z = require("../242/index");
 function J(e, t) {
   return function e(t) {
     var n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
@@ -567,9 +601,20 @@ var te = function (e, t) {
 var ne = l.forwardRef(te);
 ne.displayName = "SubMenuList";
 var re = ne;
-import * as oe from "../103";
-import * as ie from "../75/index";
-import * as ae from "../75/index";
+var oe = require("../103");
+var ie = require("../75/index");
+var ae = (module => {
+  var defaultExport = module && module.__esModule ? function () {
+    return module.default;
+  } : function () {
+    return module;
+  };
+  Object.defineProperty(defaultExport, "a", {
+    enumerable: true,
+    get: defaultExport
+  });
+  return defaultExport;
+})(ie);
 var se = function (e) {
   return +setTimeout(e, 16);
 };
@@ -617,7 +662,7 @@ pe.cancel = function (e) {
   de(t);
   return ce(t);
 };
-import * as me from "../108";
+var me = require("../108");
 function ge(e, t) {
   if ("function" === typeof e) {
     e(t);
@@ -1323,10 +1368,21 @@ function Ke(e) {
     });
   });
 }
-import * as qe from "../1493/555/index";
-import * as Xe from "../110";
-import * as Qe from "../110";
-import * as Ze from "../171";
+var qe = require("../1493/555/index");
+var Xe = require("../110");
+var Qe = (module => {
+  var defaultExport = module && module.__esModule ? function () {
+    return module.default;
+  } : function () {
+    return module;
+  };
+  Object.defineProperty(defaultExport, "a", {
+    enumerable: true,
+    get: defaultExport
+  });
+  return defaultExport;
+})(Xe);
+var Ze = require("../171");
 var Je = ["measure", "align", null, "motion"];
 var $e = l.forwardRef(function (e, t) {
   var n = e.visible;
@@ -2456,7 +2512,8 @@ var Et = function (e) {
   var a = e.className;
   var u = e.title;
   var d = e.eventKey;
-  var f = (e.warnKey, e.disabled);
+  e.warnKey;
+  var f = e.disabled;
   var h = e.internalPopupClose;
   var m = e.children;
   var g = e.itemIcon;
@@ -2774,9 +2831,24 @@ function Mt(e, t, n, r, i, a, s, c, u, d) {
             inlineTrigger: !0
           };
         }
-        var l = (i = {}, Object(o.a)(i, At, "prev"), Object(o.a)(i, jt, "next"), i);
-        var u = (a = {}, Object(o.a)(a, St, n ? "next" : "prev"), Object(o.a)(a, It, n ? "prev" : "next"), Object(o.a)(a, jt, "children"), Object(o.a)(a, Nt, "children"), a);
-        var d = (s = {}, Object(o.a)(s, At, "prev"), Object(o.a)(s, jt, "next"), Object(o.a)(s, Nt, "children"), Object(o.a)(s, Rt, "parent"), Object(o.a)(s, St, n ? "children" : "parent"), Object(o.a)(s, It, n ? "parent" : "children"), s);
+        i = {};
+        Object(o.a)(i, At, "prev");
+        Object(o.a)(i, jt, "next");
+        var l = i;
+        a = {};
+        Object(o.a)(a, St, n ? "next" : "prev");
+        Object(o.a)(a, It, n ? "prev" : "next");
+        Object(o.a)(a, jt, "children");
+        Object(o.a)(a, Nt, "children");
+        var u = a;
+        s = {};
+        Object(o.a)(s, At, "prev");
+        Object(o.a)(s, jt, "next");
+        Object(o.a)(s, Nt, "children");
+        Object(o.a)(s, Rt, "parent");
+        Object(o.a)(s, St, n ? "children" : "parent");
+        Object(o.a)(s, It, n ? "parent" : "children");
+        var d = s;
         switch (null === (c = {
           inline: l,
           horizontal: u,
@@ -2959,7 +3031,8 @@ var Vt = ["children"];
 var zt = function (e) {
   var t = e.className;
   var n = e.title;
-  var o = (e.eventKey, e.children);
+  e.eventKey;
+  var o = e.children;
   var i = Object(c.a)(e, Ht);
   var a = l.useContext(j).prefixCls;
   var s = "".concat(a, "-item-group");
@@ -3041,7 +3114,9 @@ var Xt = function (e) {
   var pe = e.onClick;
   var fe = e.onOpenChange;
   var he = e.onKeyDown;
-  var me = (e.openAnimation, e.openTransitionName, Object(c.a)(e, Ut));
+  e.openAnimation;
+  e.openTransitionName;
+  var me = Object(c.a)(e, Ut);
   var ge = J(b, Wt);
   var _e = l.useState(!1);
   var ve = Object(s.a)(_e, 2);
@@ -3292,3 +3367,4 @@ Xt.SubMenu = Ot;
 Xt.ItemGroup = Yt;
 Xt.Divider = Kt;
 export { Xt as e };
+export default Kt;

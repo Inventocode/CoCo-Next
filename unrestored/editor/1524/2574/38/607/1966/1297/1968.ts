@@ -1,4 +1,4 @@
-import * as r from "../1969/837";
+var r = require("../1969/837");
 function i() {
   this._array = [];
   this._sorted = !0;
@@ -32,4 +32,4 @@ i.prototype.toArray = function () {
   }
   return this._array;
 };
-export { i as MappingList };
+exports.MappingList = i;

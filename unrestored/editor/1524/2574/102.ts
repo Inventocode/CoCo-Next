@@ -119,3 +119,4 @@ var C = function () {
     payload: void 0
   };
 };
+export default m;

@@ -3791,7 +3791,8 @@ Be.readNumber = function (e) {
     this.raise(this.pos, "Identifier directly after number");
   }
   var o;
-  var a = (o = this.input.slice(t, this.pos), n ? parseInt(o, 8) : parseFloat(o.replace(/_/g, "")));
+  o = this.input.slice(t, this.pos);
+  var a = n ? parseInt(o, 8) : parseFloat(o.replace(/_/g, ""));
   return this.finishToken(w.num, a);
 };
 Be.readCodePoint = function () {

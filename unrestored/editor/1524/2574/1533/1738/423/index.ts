@@ -1,14 +1,14 @@
 var r;
 var o;
 var i;
-import * as a from "../../1731/1206";
-import * as s from "../194";
-import * as c from "../../1626/231";
-import * as l from "../../1735/422";
-import * as u from "../332";
-import * as d from "./1054";
-import * as p from "../../1534/932";
-import * as f from "../../1534/815";
+var a = require("../../1731/1206");
+var s = require("../194");
+var c = require("../../1626/231");
+var l = require("../../1735/422");
+var u = require("../332");
+var d = require("./1054");
+var p = require("../../1534/932");
+var f = require("../../1534/815");
 var h = s.WeakMap;
 if (a || d.state) {
   var m = d.state || (d.state = new h());

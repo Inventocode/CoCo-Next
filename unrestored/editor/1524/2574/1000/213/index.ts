@@ -1,7 +1,11 @@
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.merge_deep = exports.debounce = exports.throttle = exports.is_workspace = exports.is_old_dropdown_option = exports.is_comment_theme = exports.is_field_mutation = exports.is_field_dropdown = exports.is_field_default_value = exports.is_field_text_input = exports.is_field_number = exports.is_workspace_comment = exports.is_block_group = exports.is_block_svg = exports.is_valid_color = exports.parse_attr_deep = exports.clone_deep = exports.obj_for_each = exports.unique_id = exports.is_array_like = exports.is_number = exports.is_nil = exports.is_array = exports.is_object = exports.is_func = exports.is_string = exports.BrowserFeature = void 0;
 var r = (0, require("../93").__importStar)(require("./2097"));
-import * as i from "../../125/195/index";
+var i = require("../../125/195/index");
 function o(e) {
   return e && "[object Function]" === {}.toString.call(e);
 }
@@ -18,9 +22,9 @@ exports.BrowserFeature = {
 exports.is_string = function (e) {
   return "string" == typeof e || e instanceof String;
 };
-export { o as is_func };
-export { a as is_object };
-export { s as is_array };
+exports.is_func = o;
+exports.is_object = a;
+exports.is_array = s;
 exports.is_nil = function (e) {
   return void 0 === e || null === e;
 };
@@ -49,7 +53,7 @@ exports.obj_for_each = function (e, t) {
     t(e[i], i);
   }
 };
-export { u as clone_deep };
+exports.clone_deep = u;
 exports.parse_attr_deep = function e(t, n) {
   if (!n) {
     return t;

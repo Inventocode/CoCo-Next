@@ -1,12 +1,16 @@
 "use strict";
 
-import * as r from "../../1000/93";
-import * as o from "../../1000/577";
-import * as i from "../../301/480";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.init_color_blocks = void 0;
+var r = require("../../1000/93");
+var o = require("../../1000/577");
+var i = require("../../301/480");
 var a = (0, r.__importStar)(require("../../17/533"));
-import * as s from "../../4/127";
-import * as c from "../2540/579";
-import * as l from "./1418";
+var s = require("../../4/127");
+var c = require("../2540/579");
+var l = require("./1418");
 function u(e, t) {
   var n;
   var r;

@@ -1,9 +1,13 @@
 "use strict";
 
-import * as r from "../../1000/93";
-import * as i from "../../1000/134/index";
-import * as o from "../../125/259";
-import * as a from "../../4/127";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.WorkspaceDragger = void 0;
+var r = require("../../1000/93");
+var i = require("../../1000/134/index");
+var o = require("../../125/259");
+var a = require("../../4/127");
 var s = function () {
   function e(e) {
     this.start_scroll_xy_ = o.vec2.create();
@@ -45,4 +49,4 @@ var s = function () {
   (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.runtime_data)], e.prototype, "runtime_data", void 0);
   return e = (0, r.__decorate)([(0, i.injectable)()], e);
 }();
-export { s as WorkspaceDragger };
+exports.WorkspaceDragger = s;

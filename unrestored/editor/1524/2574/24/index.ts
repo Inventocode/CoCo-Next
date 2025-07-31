@@ -2,26 +2,37 @@
 
 var r;
 var o;
-import * as i from "../1/index";
-import * as a from "../1/index";
-import * as s from "../7";
-import * as c from "../27";
-import * as l from "../40";
-import * as u from "../1035/32/index";
-import * as d from "../15/index";
-import * as p from "../729/66";
-import * as f from "../31/index";
-import * as h from "../389";
-import * as m from "../23";
-import * as g from "../2/index";
-import * as _ from "../102";
-import * as v from "../18";
-import * as b from "../10/index";
-import * as y from "../25/index";
-import * as E from "../49/304";
-import * as O from "../49/index";
-import * as w from "../43";
-import * as C from "../49/244";
+var i = require("../1/index");
+var a = (module => {
+  var defaultExport = module && module.__esModule ? function () {
+    return module.default;
+  } : function () {
+    return module;
+  };
+  Object.defineProperty(defaultExport, "a", {
+    enumerable: true,
+    get: defaultExport
+  });
+  return defaultExport;
+})(i);
+var s = require("../7");
+var c = require("../27");
+var l = require("../40");
+var u = require("../1035/32/index");
+var d = require("../15/index");
+var p = require("../729/66");
+var f = require("../31/index");
+var h = require("../389");
+var m = require("../23");
+var g = require("../2/index");
+var _ = require("../102");
+var v = require("../18");
+var b = require("../10/index");
+var y = require("../25/index");
+var E = require("../49/304");
+var O = require("../49/index");
+var w = require("../43");
+var C = require("../49/244");
 var T = function () {
   function e() {
     Object(c.a)(this, e);
@@ -144,9 +155,20 @@ var F = "set_doc_relay";
 var G = "user_focus_on_pos";
 var U = "user_focus_on_pos_ack";
 var W = "user_focus_on_pos_relay";
-import * as H from "../38/index";
-import * as V from "./481/index";
-import * as z from "./481/index";
+var H = require("../38/index");
+var V = require("./481/index");
+var z = (module => {
+  var defaultExport = module && module.__esModule ? function () {
+    return module.default;
+  } : function () {
+    return module;
+  };
+  Object.defineProperty(defaultExport, "a", {
+    enumerable: true,
+    get: defaultExport
+  });
+  return defaultExport;
+})(V);
 var Y = require("../59/index").a.oTSocketHost;
 var K = function () {
   function e(t, n) {
@@ -688,7 +710,7 @@ var Z = function () {
   }]);
   return e;
 }();
-import * as J from "../49/377/index";
+var J = require("../49/377/index");
 var $ = new (function () {
   function e() {
     Object(c.a)(this, e);
@@ -811,3 +833,4 @@ var $ = new (function () {
 window.oT = $;
 window.json = u;
 export { $ as a };
+export default $;

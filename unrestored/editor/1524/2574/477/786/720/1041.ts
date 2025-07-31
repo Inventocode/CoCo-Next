@@ -8,3 +8,4 @@ export { r as a };
   e.Rate = "client_rate";
   e.Inheritance = "inheritance";
 })(r || (r = {}));
+export default r;

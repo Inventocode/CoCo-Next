@@ -1,6 +1,6 @@
 "use strict";
 
-import * as r from "./1626/86/index";
+var r = require("./1626/86/index");
 var o = require("./1707/399").filter;
 r({
   target: "Array",

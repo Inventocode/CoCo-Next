@@ -1,18 +1,41 @@
 "use strict";
 
 export { f as a };
-import * as r from "../0/index";
-import * as o from "../0/index";
-import * as i from "../16/index";
-import * as a from "../623";
-import * as s from "../702";
-import * as c from "../739/index";
-import * as l from "../13/index";
-import * as u from "../2/index";
-import * as d from "./513";
-import * as p from "./513";
+var r = require("../0/index");
+var o = (module => {
+  var defaultExport = module && module.__esModule ? function () {
+    return module.default;
+  } : function () {
+    return module;
+  };
+  Object.defineProperty(defaultExport, "a", {
+    enumerable: true,
+    get: defaultExport
+  });
+  return defaultExport;
+})(r);
+var i = require("../16/index");
+var a = require("../623");
+var s = require("../702");
+var c = require("../739/index");
+var l = require("../13/index");
+var u = require("../2/index");
+var d = require("./513");
+var p = (module => {
+  var defaultExport = module && module.__esModule ? function () {
+    return module.default;
+  } : function () {
+    return module;
+  };
+  Object.defineProperty(defaultExport, "a", {
+    enumerable: true,
+    get: defaultExport
+  });
+  return defaultExport;
+})(d);
 var f = "COURSE_ICON_NAME";
-exports.b = Object(r.memo)(function () {
+var _b;
+_b = Object(r.memo)(function () {
   var e = Object(i.d)();
   var t = Object(s.a)().formatMessage;
   return o.a.createElement(c.a, {
@@ -46,3 +69,5 @@ exports.b = Object(r.memo)(function () {
     type: "icon-close"
   }))));
 });
+export { _b as b };
+export default f;

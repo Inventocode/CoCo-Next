@@ -86,6 +86,10 @@ function a(e, t) {
   }
   return n.join("");
 }
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.wrap = exports.string_trim = exports.string_is_empty_or_whitespace = exports.case_insensitive_equals = exports.case_insensitive_compare = void 0;
 exports.case_insensitive_compare = function (e, t) {
   var n = String(e).toLowerCase();
   var r = String(t).toLowerCase();

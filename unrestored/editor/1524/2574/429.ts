@@ -2,7 +2,7 @@
 
 export { o as b };
 export { i as a };
-import * as r from "./205";
+var r = require("./205");
 function o(e) {
   switch (e) {
     case r.a.CONTAIN:
@@ -27,3 +27,4 @@ function i(e) {
       return "cover";
   }
 }
+export default i;

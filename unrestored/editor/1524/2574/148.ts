@@ -14,3 +14,4 @@ var a = !1;
 var s = "https://static.codemao.cn/coco/image/slider_default_handle_image.png?v=2";
 var c = "https://static.codemao.cn/coco/image/slider_default_background_image.png?v=2";
 var l = "https://static.codemao.cn/coco/image/slider_default_track_image.png?v=2";
+export default c;

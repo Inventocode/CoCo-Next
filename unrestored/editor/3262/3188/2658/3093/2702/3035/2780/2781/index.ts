@@ -1,5 +1,5 @@
-import * as r from "./2782/index";
-import * as i from "./2666";
+var r = require("./2782/index");
+var i = require("./2666");
 var a = require("./2783").ArraySet;
 var s = require("./3037").MappingList;
 function o(e) {
@@ -237,4 +237,4 @@ o.prototype.toJSON = function () {
 o.prototype.toString = function () {
   return JSON.stringify(this.toJSON());
 };
-export { o as SourceMapGenerator };
+exports.SourceMapGenerator = o;

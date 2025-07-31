@@ -1,8 +1,8 @@
 "use strict";
 
 export { h as a };
-import * as r from "./266";
-import * as i from "./740";
+var r = require("./266");
+var i = require("./740");
 var o = [{
   index: 7,
   opacity: .15
@@ -146,3 +146,4 @@ p.geekblue;
 p.purple;
 p.magenta;
 p.grey;
+export default h;

@@ -1,7 +1,7 @@
-import * as r from "../2781/2666";
-import * as i from "./3039";
+var r = require("../2781/2666");
+var i = require("./3039");
 var a = require("../2781/2783").ArraySet;
-import * as s from "../2781/2782/index";
+var s = require("../2781/2782/index");
 var o = require("./3040").quickSort;
 function l(e) {
   var t = e;
@@ -178,7 +178,7 @@ l.prototype.allGeneratedPositionsFor = function (e) {
   }
   return a;
 };
-export { l as SourceMapConsumer };
+exports.SourceMapConsumer = l;
 u.prototype = Object.create(l.prototype);
 u.prototype.consumer = l;
 u.fromSourceMap = function (e) {
@@ -385,7 +385,7 @@ u.prototype.generatedPositionFor = function (e) {
     lastColumn: null
   };
 };
-export { u as BasicSourceMapConsumer };
+exports.BasicSourceMapConsumer = u;
 p.prototype = Object.create(l.prototype);
 p.prototype.constructor = l;
 p.prototype._version = 3;
@@ -487,4 +487,4 @@ p.prototype._parseMappings = function (e, t) {
   o(this.__generatedMappings, r.compareByGeneratedPositionsDeflated);
   o(this.__originalMappings, r.compareByOriginalPositions);
 };
-export { p as IndexedSourceMapConsumer };
+exports.IndexedSourceMapConsumer = p;

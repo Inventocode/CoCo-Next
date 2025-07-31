@@ -1,7 +1,7 @@
-import * as r from "../1626/86/index";
-import * as o from "../1738/194";
-import * as i from "./1235/index";
-import * as a from "./750";
+var r = require("../1626/86/index");
+var o = require("../1738/194");
+var i = require("./1235/index");
+var a = require("./750");
 var s = o.process;
 r({
   global: !0,

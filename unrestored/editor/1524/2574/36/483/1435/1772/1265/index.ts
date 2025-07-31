@@ -1,6 +1,6 @@
 (function (e) {
   var r = require("./532");
-  var i = t && !t.nodeType && t;
+  var i = exports && !exports.nodeType && exports;
   var o = i && "object" == typeof e && e && !e.nodeType && e;
   var a = o && o.exports === i ? r.Buffer : void 0;
   var s = a ? a.allocUnsafe : void 0;
@@ -13,4 +13,4 @@
     e.copy(r);
     return r;
   };
-}).call(this, require("../../../../../31/571")(e));
+}).call(this, require("../../../../../31/571")(module));

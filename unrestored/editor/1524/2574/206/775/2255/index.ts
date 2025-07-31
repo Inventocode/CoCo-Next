@@ -1,13 +1,13 @@
 "use strict";
 
-import * as r from "../../../../../3262/3188/2658/220";
-import * as i from "../../../../../3262/3188/2658/230";
-import * as o from "../../../1035/1356/569";
+var r = require("../../../../../3262/3188/2658/220");
+var i = require("../../../../../3262/3188/2658/230");
+var o = require("../../../1035/1356/569");
 var a = require("../964").breakableTypePattern;
-import * as s from "./2256/index";
-import * as c from "./1117";
-import * as u from "./1339";
-import * as l from "./1338";
+var s = require("./2256/index");
+var c = require("./1117");
+var u = require("./1339");
+var l = require("./1338");
 function f(e) {
   return Boolean(e.test);
 }

@@ -1,7 +1,10 @@
 "use strict";
 
-export { c as isIdentifierStart };
-export { p as isIdentifierChar };
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.isIdentifierStart = c;
+exports.isIdentifierChar = p;
 exports.isIdentifierName = function (e) {
   for (var t = !0, n = 0; n < e.length; n++) {
     var r = e.charCodeAt(n);

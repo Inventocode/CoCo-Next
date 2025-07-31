@@ -1,7 +1,7 @@
 "use strict";
 
-import * as r from "../2377/968/index";
-import * as i from "./1380";
+var r = require("../2377/968/index");
+var i = require("./1380");
 var o = i("%Function.prototype.apply%");
 var a = i("%Function.prototype.call%");
 var s = i("%Reflect.apply%", !0) || r.call(a, o);
@@ -22,9 +22,9 @@ var u = function () {
   return s(r, o, arguments);
 };
 if (c) {
-  c(e.exports, "apply", {
+  c(module.exports, "apply", {
     value: u
   });
 } else {
-  e.exports.apply = u;
+  module.exports.apply = u;
 }

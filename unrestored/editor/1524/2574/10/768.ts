@@ -1,7 +1,7 @@
 "use strict";
 
 export { i as a };
-import * as r from "../25/905";
+var r = require("../25/905");
 function i(e, t) {
   if (e) {
     if ("string" === typeof e) {
@@ -14,3 +14,4 @@ function i(e, t) {
     return "Map" === n || "Set" === n ? Array.from(n) : "Arguments" === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n) ? Object(r.a)(e, t) : void 0;
   }
 }
+export default i;

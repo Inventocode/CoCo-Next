@@ -1,8 +1,12 @@
 "use strict";
 
-import * as r from "../../1000/93";
-import * as i from "../../1000/134/index";
-import * as o from "../../125/index";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.MutationRemoveButton = exports.MutationAddButton = void 0;
+var r = require("../../1000/93");
+var i = require("../../1000/134/index");
+var o = require("../../125/index");
 var a = function (e) {
   function t(t, n, r) {
     if (void 0 === r) {
@@ -124,7 +128,7 @@ var s = function (e) {
   (0, r.__extends)(t, e);
   return t = (0, r.__decorate)([(0, i.injectable)()], t);
 }(a);
-export { s as MutationAddButton };
+exports.MutationAddButton = s;
 var c = function (e) {
   function t(t) {
     if (void 0 === t) {
@@ -135,4 +139,4 @@ var c = function (e) {
   (0, r.__extends)(t, e);
   return t = (0, r.__decorate)([(0, i.injectable)()], t);
 }(a);
-export { c as MutationRemoveButton };
+exports.MutationRemoveButton = c;

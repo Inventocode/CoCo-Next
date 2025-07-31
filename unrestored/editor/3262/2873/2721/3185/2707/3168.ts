@@ -1,7 +1,11 @@
 "use strict";
 
-import * as r from "./2669/index";
-import * as a from "./2631/index";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.default = void 0;
+var r = require("./2669/index");
+var a = require("./2631/index");
 var i = function e(t) {
   if (void 0 === t) {
     return (0, a.identifier)("undefined");
@@ -56,5 +60,5 @@ var i = function e(t) {
   }
   throw new Error("don't know how to turn this value into a node");
 };
-export default i;
+exports.default = i;
 var o = Function.call.bind(Object.prototype.toString);

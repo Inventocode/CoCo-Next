@@ -1,7 +1,7 @@
-import * as r from "./1626/86/index";
-import * as o from "./935/437";
-import * as i from "./1728/257";
-import * as a from "./1738/310";
+var r = require("./1626/86/index");
+var o = require("./935/437");
+var i = require("./1728/257");
+var a = require("./1738/310");
 r({
   target: "String",
   stat: !0

@@ -1,5 +1,9 @@
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.hooks = void 0;
 exports.hooks = [function (e, t) {
   if ("test" === e.key && (t.isWhile() || t.isSwitchCase()) || "declaration" === e.key && t.isExportDeclaration() || "body" === e.key && t.isLabeledStatement() || "declarations" === e.listKey && t.isVariableDeclaration() && 1 === t.node.declarations.length || "expression" === e.key && t.isExpressionStatement()) {
     t.remove();

@@ -1,13 +1,25 @@
 "use strict";
 
-import * as r from "../0/index";
-import * as o from "../0/index";
-import * as i from "../16/index";
-var a = (require("../710"), require("../155/index"));
-import * as s from "../6";
-import * as c from "./66";
-import * as l from "./62";
-import * as u from "../676/70";
+var r = require("../0/index");
+var o = (module => {
+  var defaultExport = module && module.__esModule ? function () {
+    return module.default;
+  } : function () {
+    return module;
+  };
+  Object.defineProperty(defaultExport, "a", {
+    enumerable: true,
+    get: defaultExport
+  });
+  return defaultExport;
+})(r);
+var i = require("../16/index");
+require("../710");
+var a = require("../155/index");
+var s = require("../6");
+var c = require("./66");
+var l = require("./62");
+var u = require("../676/70");
 var d = function (e) {
   return {
     type: "SET_ROTATION",
@@ -159,12 +171,23 @@ var I = function () {
   }
 };
 var A = Object(a.createStore)(I);
-import * as j from "../8";
-import * as N from "../8";
-import * as R from "../2618/index";
-import * as k from "../23";
-import * as x from "../10/index";
-import * as D from "./1020";
+var j = require("../8");
+var N = (module => {
+  var defaultExport = module && module.__esModule ? function () {
+    return module.default;
+  } : function () {
+    return module;
+  };
+  Object.defineProperty(defaultExport, "a", {
+    enumerable: true,
+    get: defaultExport
+  });
+  return defaultExport;
+})(j);
+var R = require("../2618/index");
+var k = require("../23");
+var x = require("../10/index");
+var D = require("./1020");
 var M = function (e) {
   var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : .001;
   return Math.abs(e.x) <= t && Math.abs(e.y) <= t && Math.abs(e.z) <= t;
@@ -325,9 +348,9 @@ function P() {
     id: "emulatorCanvasWrapper"
   });
 }
-import * as B from "../11";
-import * as F from "../13/index";
-import * as G from "../94/index";
+var B = require("../11");
+var F = require("../13/index");
+var G = require("../94/index");
 var U = {
   rotation: [{
     title: "X \u65cb\u8f6c",
@@ -503,7 +526,7 @@ var V = function () {
     style: t("SHAKE")
   }));
 };
-import * as z from "../702";
+var z = require("../702");
 var Y = [{
   type: "SHAKE",
   icon: "icon-phone-shake",
@@ -610,9 +633,20 @@ var q = o.a.memo(function () {
     }));
   })));
 });
-import * as X from "./302";
-import * as Q from "./115";
-import * as Z from "./115";
+var X = require("./302");
+var Q = require("./115");
+var Z = (module => {
+  var defaultExport = module && module.__esModule ? function () {
+    return module.default;
+  } : function () {
+    return module;
+  };
+  Object.defineProperty(defaultExport, "a", {
+    enumerable: true,
+    get: defaultExport
+  });
+  return defaultExport;
+})(Q);
 var J = function () {
   var e = Object(i.d)();
   var t = Object(z.a)().formatMessage;
@@ -951,7 +985,8 @@ var ne = function (e) {
     className: "emulator-contentWrapper"
   }, a && te.includes(a) && o.a.createElement(P, null), o.a.createElement(V, null), "DIAL_CALL" === a && o.a.createElement(J, null), "RECEIVE_CALL" === a && o.a.createElement($, null), "RECEIVE_SMS" === a && o.a.createElement(ee, null)))));
 };
-var re = (require("./1156"), function () {
+require("./1156");
+var re = function () {
   return o.a.createElement("svg", {
     "aria-hidden": "true",
     width: "0",
@@ -1135,8 +1170,9 @@ var re = (require("./1156"), function () {
   }), o.a.createElement("path", {
     d: "M815.808 607.232l-581.76 257.728a32 32 0 0 1-44.992-29.248V577.984a32 32 0 0 1 32-32h581.824c34.56 0 44.608 47.232 12.928 61.248z m-164.288 2.816H253.056v176.512l398.464-176.512z"
   })));
-});
-exports.a = o.a.memo(function (e) {
+};
+var _a;
+_a = o.a.memo(function (e) {
   var t = e.messageWindow;
   return o.a.createElement(i.a, {
     store: A
@@ -1144,3 +1180,5 @@ exports.a = o.a.memo(function (e) {
     messageWindow: t
   }));
 });
+export { _a as a };
+export default _a;

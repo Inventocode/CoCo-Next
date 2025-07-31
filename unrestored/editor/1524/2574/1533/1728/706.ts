@@ -1,4 +1,4 @@
-import * as r from "../1556/473";
+var r = require("../1556/473");
 var o = Math.max;
 var i = Math.min;
 module.exports = function (e, t) {

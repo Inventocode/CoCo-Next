@@ -54,4 +54,4 @@ var r = {
   r.apiOverseaServiceHost = "https://".concat(e, "oversea-api.code.game");
   r.env = t;
 }();
-export { r as a };
+exports.a = r;

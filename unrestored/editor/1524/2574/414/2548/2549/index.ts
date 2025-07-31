@@ -20,12 +20,15 @@ var r = this && this.__extends || function () {
     t.prototype = null === n ? Object.create(n) : (r.prototype = n.prototype, new r());
   };
 }();
-import * as o from "../../../0/index";
-import * as i from "../../../75/index";
-import * as a from "../../1420/871";
-import * as s from "./1422/index";
-import * as c from "./1423";
-import * as l from "./1424/index";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+var o = require("../../../0/index");
+var i = require("../../../75/index");
+var a = require("../../1420/871");
+var s = require("./1422/index");
+var c = require("./1423");
+var l = require("./1424/index");
 var u = function (e) {
   function t() {
     var t = null !== e && e.apply(this, arguments) || this;
@@ -119,4 +122,4 @@ var u = function (e) {
   t.SLOW_RENDERERING_THRESHOLD = 3;
   return t;
 }(s.ReactComponent);
-export { u as LegacyReactComponent };
+exports.LegacyReactComponent = u;

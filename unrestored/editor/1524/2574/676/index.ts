@@ -21,4 +21,4 @@ var r = {
     dialNumberRepeat: "\u4e0d\u80fd\u8c03\u7528\u591a\u4e2a\u62e8\u53f7\u754c\u9762\u79ef\u6728\uff0c\u4ec5\u6267\u884c\u6700\u540e\u4e00\u4e2a"
   }
 };
-import * as o from "./70";
+var o = require("./70");

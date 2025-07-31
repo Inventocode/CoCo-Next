@@ -1,9 +1,20 @@
 "use strict";
 
 export { a };
-import * as r from "../../0/index";
-import * as i from "../../0/index";
-import * as o from "../../242/index";
+var r = require("../../0/index");
+var i = (module => {
+  var defaultExport = module && module.__esModule ? function () {
+    return module.default;
+  } : function () {
+    return module;
+  };
+  Object.defineProperty(defaultExport, "a", {
+    enumerable: true,
+    get: defaultExport
+  });
+  return defaultExport;
+})(r);
+var o = require("../../242/index");
 function a(e) {
   var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
   var n = [];
@@ -22,3 +33,4 @@ function a(e) {
   });
   return n;
 }
+export default a;

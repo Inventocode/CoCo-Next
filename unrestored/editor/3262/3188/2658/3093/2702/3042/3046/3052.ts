@@ -1,7 +1,10 @@
 "use strict";
 
-import * as r from "../../../../../../2873/2721/805/index";
-import * as i from "../../../../../../3190/494";
+var r = require("../../../../../../2873/2721/805/index");
+var i = require("../../../../../../3190/494");
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
 exports.AnyTypeAnnotation = function () {
   this.word("any");
 };
@@ -210,7 +213,7 @@ exports.InterfaceDeclaration = function (e) {
   this.space();
   this._interfaceish(e);
 };
-exports.GenericTypeAnnotation = t.ClassImplements = t.InterfaceExtends = function (e) {
+exports.GenericTypeAnnotation = exports.ClassImplements = exports.InterfaceExtends = function (e) {
   this.print(e.id, e);
   this.print(e.typeParameters, e);
 };
@@ -240,7 +243,12 @@ exports.NullableTypeAnnotation = function (e) {
   this.token("?");
   this.print(e.typeAnnotation, e);
 };
-export { NumericLiteral as NumberLiteralTypeAnnotation } from "./2786/index";
+Object.defineProperty(exports, "NumberLiteralTypeAnnotation", {
+  enumerable: !0,
+  get: function () {
+    return o.NumericLiteral;
+  }
+});
 exports.NumberTypeAnnotation = function () {
   this.word("number");
 };
@@ -391,7 +399,12 @@ exports.QualifiedTypeIdentifier = function (e) {
   this.token(".");
   this.print(e.id, e);
 };
-export { StringLiteral as StringLiteralTypeAnnotation } from "./2786/index";
+Object.defineProperty(exports, "StringLiteralTypeAnnotation", {
+  enumerable: !0,
+  get: function () {
+    return o.StringLiteral;
+  }
+});
 exports.StringTypeAnnotation = function () {
   this.word("string");
 };
@@ -444,7 +457,7 @@ exports.TypeParameter = function (e) {
     this.print(e.default, e);
   }
 };
-exports.TypeParameterDeclaration = t.TypeParameterInstantiation = function (e) {
+exports.TypeParameterDeclaration = exports.TypeParameterInstantiation = function (e) {
   this.token("<");
   this.printList(e.params, e, {});
   this.token(">");
@@ -505,9 +518,9 @@ exports._variance = function (e) {
     }
   }
 };
-import * as a from "../../../../2623/index";
-import * as s from "./2785";
-import * as o from "./2786/index";
+var a = require("../../../../2623/index");
+var s = require("./2785");
+var o = require("./2786/index");
 var l = a.isDeclareExportDeclaration;
 var u = a.isStatement;
 function c(e, t, n) {

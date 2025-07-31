@@ -1,5 +1,5 @@
-import * as r from "./2407";
-import * as i from "../../../../../../784/104/2401/1388/535";
+var r = require("./2407");
+var i = require("../../../../../../784/104/2401/1388/535");
 var o = Object.prototype;
 var a = o.hasOwnProperty;
 var s = o.propertyIsEnumerable;

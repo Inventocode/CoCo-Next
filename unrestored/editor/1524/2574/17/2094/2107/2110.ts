@@ -1,11 +1,15 @@
 "use strict";
 
-import * as r from "../../../1000/93";
-import * as i from "../../../1000/134/index";
-import * as o from "../../../206/208/index";
-import * as a from "../../../4/127";
-import * as s from "../../../125/195/index";
-import * as c from "../../497/644";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.GroupEvent = void 0;
+var r = require("../../../1000/93");
+var i = require("../../../1000/134/index");
+var o = require("../../../206/208/index");
+var a = require("../../../4/127");
+var s = require("../../../125/195/index");
+var c = require("../../497/644");
 var u = function (e) {
   function t(t) {
     var n = e.call(this) || this;
@@ -67,4 +71,4 @@ var u = function (e) {
   (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.Blink)], t.prototype, "Blink", void 0);
   return t = (0, r.__decorate)([(0, i.injectable)()], t);
 }(require("./839").BaseEvent);
-export { u as GroupEvent };
+exports.GroupEvent = u;

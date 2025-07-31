@@ -1,9 +1,20 @@
 "use strict";
 
-import * as r from "../0/index";
-import * as o from "../8";
-import * as i from "../8";
-import * as a from "./787";
+var r = require("../0/index");
+var o = require("../8");
+var i = (module => {
+  var defaultExport = module && module.__esModule ? function () {
+    return module.default;
+  } : function () {
+    return module;
+  };
+  Object.defineProperty(defaultExport, "a", {
+    enumerable: true,
+    get: defaultExport
+  });
+  return defaultExport;
+})(o);
+var a = require("./787");
 function s(e, t) {
   var n = Object.keys(e);
   if (Object.getOwnPropertySymbols) {
@@ -90,7 +101,7 @@ var u = r.forwardRef(function (e, t) {
 });
 u.displayName = "Filler";
 var d = u;
-import * as p from "./228";
+var p = require("./228");
 function f(e) {
   return (f = "function" === typeof Symbol && "symbol" === typeof Symbol.iterator ? function (e) {
     return typeof e;
@@ -398,7 +409,7 @@ function w(e) {
     ref: o
   });
 }
-import * as C from "./478";
+var C = require("./478");
 function T(e, t) {
   for (var n = 0; n < t.length; n++) {
     var r = t[n];
@@ -1254,3 +1265,4 @@ var K = r.forwardRef(Y);
 K.displayName = "List";
 var q = K;
 export { q as a };
+export default q;

@@ -13,6 +13,9 @@ function r() {
     console.log(o + s.map(i).join(" "));
   }
 }
-export default r;
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.default = r;
 r.quiet = !0;
 r.prefix = 0;

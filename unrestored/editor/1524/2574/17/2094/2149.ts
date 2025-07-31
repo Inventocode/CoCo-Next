@@ -1,10 +1,14 @@
 "use strict";
 
-import * as r from "../../1000/93";
-import * as i from "../../1000/134/index";
-import * as o from "../../4/127";
-import * as a from "../../125/index";
-import * as s from "../../125/534";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.WorkspaceDragSurfaceSvg = void 0;
+var r = require("../../1000/93");
+var i = require("../../1000/134/index");
+var o = require("../../4/127");
+var a = require("../../125/index");
+var s = require("../../125/534");
 var c = function () {
   function e(e, t) {
     this.previous_sibling_ = void 0;
@@ -82,4 +86,4 @@ var c = function () {
   (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.utils)], e.prototype, "utils", void 0);
   return e = (0, r.__decorate)([(0, i.injectable)()], e);
 }();
-export { c as WorkspaceDragSurfaceSvg };
+exports.WorkspaceDragSurfaceSvg = c;

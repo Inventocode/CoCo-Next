@@ -1,10 +1,14 @@
 "use strict";
 
-import * as r from "../../1000/93";
-import * as i from "../../1000/134/index";
-import * as o from "../../125/259";
-import * as a from "../../4/127";
-import * as s from "../../125/index";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.FlyoutButton = void 0;
+var r = require("../../1000/93");
+var i = require("../../1000/134/index");
+var o = require("../../125/259");
+var a = require("../../4/127");
+var s = require("../../125/index");
 var c = function () {
   function e(e) {
     var t = this;
@@ -267,4 +271,4 @@ var c = function () {
   (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.events)], e.prototype, "event", void 0);
   return e = (0, r.__decorate)([(0, i.injectable)()], e);
 }();
-export { c as FlyoutButton };
+exports.FlyoutButton = c;

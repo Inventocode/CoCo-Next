@@ -1,5 +1,8 @@
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
 exports.NAMED_TAG = "named";
 exports.NAME_TAG = "name";
 exports.UNMANAGED_TAG = "unmanaged";

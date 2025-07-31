@@ -1,5 +1,8 @@
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
 exports.merge = function (e, t) {
   var n = t.placeholderWhitelist;
   var r = void 0 === n ? e.placeholderWhitelist : n;

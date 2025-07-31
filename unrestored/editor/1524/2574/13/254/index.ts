@@ -1,61 +1,64 @@
 "use strict";
 
-import * as r from "./2497/index";
-Object.defineProperty(t, "Alpha", {
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+var r = require("./2497/index");
+Object.defineProperty(exports, "Alpha", {
   enumerable: !0,
   get: function () {
     return f(r).default;
   }
 });
-import * as i from "./1155/index";
-Object.defineProperty(t, "Checkboard", {
+var i = require("./1155/index");
+Object.defineProperty(exports, "Checkboard", {
   enumerable: !0,
   get: function () {
     return f(i).default;
   }
 });
-import * as o from "./2500";
-Object.defineProperty(t, "EditableInput", {
+var o = require("./2500");
+Object.defineProperty(exports, "EditableInput", {
   enumerable: !0,
   get: function () {
     return f(o).default;
   }
 });
-import * as a from "./2501/index";
-Object.defineProperty(t, "Hue", {
+var a = require("./2501/index");
+Object.defineProperty(exports, "Hue", {
   enumerable: !0,
   get: function () {
     return f(a).default;
   }
 });
-import * as s from "./2503/index";
-Object.defineProperty(t, "Raised", {
+var s = require("./2503/index");
+Object.defineProperty(exports, "Raised", {
   enumerable: !0,
   get: function () {
     return f(s).default;
   }
 });
-import * as c from "./2518/index";
-Object.defineProperty(t, "Saturation", {
+var c = require("./2518/index");
+Object.defineProperty(exports, "Saturation", {
   enumerable: !0,
   get: function () {
     return f(c).default;
   }
 });
-import * as u from "./2523/index";
-Object.defineProperty(t, "ColorWrap", {
+var u = require("./2523/index");
+Object.defineProperty(exports, "ColorWrap", {
   enumerable: !0,
   get: function () {
     return f(u).default;
   }
 });
-import * as l from "./2527/index";
+var l = require("./2527/index");
 function f(e) {
   return e && e.__esModule ? e : {
     default: e
   };
 }
-Object.defineProperty(t, "Swatch", {
+Object.defineProperty(exports, "Swatch", {
   enumerable: !0,
   get: function () {
     return f(l).default;

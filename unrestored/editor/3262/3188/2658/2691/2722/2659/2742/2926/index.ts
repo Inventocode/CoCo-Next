@@ -1,13 +1,22 @@
 "use strict";
 
-import * as r from "../../../../../../../3190/494";
-import * as i from "../../../../../220";
-import * as a from "../../../../../230";
-import "../2743";
-import * as s from "./2927";
-import * as o from "../../../2624/index";
+var r = require("../../../../../../../3190/494");
+var i = require("../../../../../220");
+var a = require("../../../../../230");
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.default = void 0;
+require("../2743");
+var s = require("./2927");
+var o = require("../../../2624/index");
 var l = o.VISITOR_KEYS;
-var u = (o.assignmentExpression, o.identifier, o.toExpression, o.variableDeclaration, o.variableDeclarator, {
+o.assignmentExpression;
+o.identifier;
+o.toExpression;
+o.variableDeclaration;
+o.variableDeclarator;
+var u = {
   ReferencedIdentifier: function (e, t) {
     var n = e.node;
     if (n.name === t.oldName) {
@@ -46,7 +55,7 @@ var u = (o.assignmentExpression, o.identifier, o.toExpression, o.variableDeclara
       }
     }
   }
-});
+};
 var c = function () {
   function e(t, n, r) {
     i(this, e);
@@ -107,4 +116,4 @@ var c = function () {
   }]);
   return e;
 }();
-export default c;
+exports.default = c;

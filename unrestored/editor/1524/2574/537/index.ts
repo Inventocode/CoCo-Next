@@ -1,15 +1,50 @@
 "use strict";
 
-import * as r from "../6";
-import * as o from "../10/index";
-import * as i from "../8";
-import * as a from "../8";
-import * as s from "../0/index";
-import * as c from "../0/index";
-import * as l from "../75/index";
-import * as u from "../75/index";
-var d = (require("./855"), require("../94/index"));
-exports.a = Object(s.memo)(function (e) {
+var r = require("../6");
+var o = require("../10/index");
+var i = require("../8");
+var a = (module => {
+  var defaultExport = module && module.__esModule ? function () {
+    return module.default;
+  } : function () {
+    return module;
+  };
+  Object.defineProperty(defaultExport, "a", {
+    enumerable: true,
+    get: defaultExport
+  });
+  return defaultExport;
+})(i);
+var s = require("../0/index");
+var c = (module => {
+  var defaultExport = module && module.__esModule ? function () {
+    return module.default;
+  } : function () {
+    return module;
+  };
+  Object.defineProperty(defaultExport, "a", {
+    enumerable: true,
+    get: defaultExport
+  });
+  return defaultExport;
+})(s);
+var l = require("../75/index");
+var u = (module => {
+  var defaultExport = module && module.__esModule ? function () {
+    return module.default;
+  } : function () {
+    return module;
+  };
+  Object.defineProperty(defaultExport, "a", {
+    enumerable: true,
+    get: defaultExport
+  });
+  return defaultExport;
+})(l);
+require("./855");
+var d = require("../94/index");
+var _a;
+_a = Object(s.memo)(function (e) {
   var t = e.className;
   var n = e.style;
   var i = e.visible;
@@ -29,7 +64,8 @@ exports.a = Object(s.memo)(function (e) {
   var C = Object(s.useRef)(null);
   var T = Object(s.useState)(!1);
   var S = Object(o.a)(T, 2);
-  var I = (S[0], S[1]);
+  S[0];
+  var I = S[1];
   var A = document.getElementById("_cocoDialogContainer");
   if (!A) {
     (A = document.createElement("div")).id = "_cocoDialogContainer";
@@ -102,3 +138,5 @@ exports.a = Object(s.memo)(function (e) {
   }, O))));
   return y ? u.a.createPortal(R, A) : R;
 });
+export { _a as a };
+export default _a;

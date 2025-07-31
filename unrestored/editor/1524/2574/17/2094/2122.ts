@@ -1,12 +1,16 @@
 "use strict";
 
-import * as r from "../../1000/93";
-import * as i from "../../1000/134/index";
-import * as o from "../../4/127";
-import * as a from "../../125/195/index";
-import * as s from "../../125/index";
-import * as c from "../../125/714";
-import * as u from "../497/1102";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.ContextMenu = void 0;
+var r = require("../../1000/93");
+var i = require("../../1000/134/index");
+var o = require("../../4/127");
+var a = require("../../125/195/index");
+var s = require("../../125/index");
+var c = require("../../125/714");
+var u = require("../497/1102");
 var l = function () {
   function e() {
     this.current_block = void 0;
@@ -151,4 +155,4 @@ var l = function () {
   (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.UIEvent)], e.prototype, "ui_event_factory", void 0);
   return e = (0, r.__decorate)([(0, i.injectable)()], e);
 }();
-export { l as ContextMenu };
+exports.ContextMenu = l;

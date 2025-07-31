@@ -1,10 +1,14 @@
 "use strict";
 
-import * as r from "./32/index";
-import * as o from "./1356/index";
-import * as i from "../4/127";
-import * as a from "../301/173";
-import * as s from "./754";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.effect_of_update_disabled = exports.effect_of_update_param = exports.effect_of_rename_proc = exports.update_after_set_disabled = exports.update_after_set_field_value = exports.update_after_mutation = void 0;
+var r = require("./32/index");
+var o = require("./1356/index");
+var i = require("../4/127");
+var a = require("../301/173");
+var s = require("./754");
 function c(e, t, n, a, s, c) {
   var l;
   var u;
@@ -136,9 +140,9 @@ function u(e, t) {
   var n = ["blocks", e.id, "disabled"];
   return (0, r.replaceOp)(n, null, t);
 }
-export { c as update_after_mutation };
-export { l as update_after_set_field_value };
-export { u as update_after_set_disabled };
+exports.update_after_mutation = c;
+exports.update_after_set_field_value = l;
+exports.update_after_set_disabled = u;
 exports.effect_of_rename_proc = function (e, t, n) {
   for (var r = Object.keys(n.blocks), i = e, c = 0; c < r.length; c++) {
     var u = n.blocks[r[c]];

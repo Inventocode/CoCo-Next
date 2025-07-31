@@ -1,12 +1,16 @@
 "use strict";
 
-import * as r from "../1000/93";
-import * as i from "../1000/134/index";
-import * as o from "../4/127";
-import * as a from "../125/index";
-import * as s from "../1000/213/index";
-import * as c from "../125/714";
-import * as u from "../125/294";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.FieldColour = void 0;
+var r = require("../1000/93");
+var i = require("../1000/134/index");
+var o = require("../4/127");
+var a = require("../125/index");
+var s = require("../1000/213/index");
+var c = require("../125/714");
+var u = require("../125/294");
 var l = function (e) {
   function t(t) {
     var r = e.call(this, t.colour, t.opt_validator) || this;
@@ -154,4 +158,4 @@ var l = function (e) {
   (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.widget_div)], t.prototype, "widget_div", void 0);
   return t = n = (0, r.__decorate)([(0, i.injectable)()], t);
 }(require("./500").Field);
-export { l as FieldColour };
+exports.FieldColour = l;

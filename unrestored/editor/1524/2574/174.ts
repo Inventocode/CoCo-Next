@@ -1,10 +1,21 @@
 "use strict";
 
-import * as r from "./1/index";
-import * as o from "./1/index";
-import * as i from "./7";
-import * as a from "./27";
-import * as s from "./40";
+var r = require("./1/index");
+var o = (module => {
+  var defaultExport = module && module.__esModule ? function () {
+    return module.default;
+  } : function () {
+    return module;
+  };
+  Object.defineProperty(defaultExport, "a", {
+    enumerable: true,
+    get: defaultExport
+  });
+  return defaultExport;
+})(r);
+var i = require("./7");
+var a = require("./27");
+var s = require("./40");
 var c = function () {
   function e() {
     var t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "appCraft";
@@ -219,3 +230,4 @@ var l = window.location.search.split("?")[1];
 var u = new URLSearchParams(l).get("archiveId");
 var d = u ? new c(u) : new c();
 export { d as a };
+export default d;

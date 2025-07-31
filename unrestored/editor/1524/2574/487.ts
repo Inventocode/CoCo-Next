@@ -6,7 +6,7 @@ export { a as f };
 export { s as c };
 export { c as b };
 export { u as a };
-import * as r from "./80/index";
+var r = require("./80/index");
 function o(e) {
   return Array.isArray(e) ? e : void 0 !== e ? [e] : [];
 }
@@ -79,3 +79,4 @@ function u() {
   }
   return e;
 }
+export default u;

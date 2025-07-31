@@ -6,7 +6,7 @@ export { a as d };
 export { c as b };
 export { l as c };
 export { u as e };
-import * as r from "./31/index";
+var r = require("./31/index");
 function o(e) {
   var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 10;
   return e.substr(0, t) + (e.length > t ? "..." : "");
@@ -82,3 +82,4 @@ function u(e) {
   };
   return "object" !== typeof e ? e.toString() : Array.isArray(e) ? t ? s(e, void 0, void 0, n).replace(/"([^"]+)"/g, "$1") : s(e, void 0, void 0, n) : s(e, void 0, void 0, n).replace(/([^"]+):"([^"]+)"/g, "$1:$2").replaceAll('"[...]"', "[...]").replaceAll('"{...}"', "{...}");
 }
+export default i;

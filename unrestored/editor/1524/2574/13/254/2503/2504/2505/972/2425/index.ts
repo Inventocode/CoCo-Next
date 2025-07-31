@@ -1,6 +1,6 @@
-import * as r from "../973/index";
-import * as i from "./1149";
-import * as o from "./1150/index";
+var r = require("../973/index");
+var i = require("./1149");
+var o = require("./1150/index");
 module.exports = function (e, t) {
   var n = this.__data__;
   if (n instanceof r) {

@@ -1,9 +1,9 @@
 "use strict";
 
 var r = require("./1738/945").charAt;
-import * as o from "./1738/310";
-import * as i from "./1738/423/index";
-import * as a from "./935/1065/index";
+var o = require("./1738/310");
+var i = require("./1738/423/index");
+var a = require("./935/1065/index");
 var s = i.set;
 var c = i.getterFor("String Iterator");
 a(String, "String", function (e) {

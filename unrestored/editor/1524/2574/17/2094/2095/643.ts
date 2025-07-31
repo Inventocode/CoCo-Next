@@ -1,6 +1,10 @@
 "use strict";
 
-import * as r from "../../../1000/93";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.BlockEvent = void 0;
+var r = require("../../../1000/93");
 var i = function (e) {
   function t(t) {
     var n = e.call(this) || this;
@@ -14,4 +18,4 @@ var i = function (e) {
   };
   return t;
 }(require("../2107/839").BaseEvent);
-export { i as BlockEvent };
+exports.BlockEvent = i;

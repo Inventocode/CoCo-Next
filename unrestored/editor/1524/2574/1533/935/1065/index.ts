@@ -1,16 +1,16 @@
 "use strict";
 
-import * as r from "../../1626/86/index";
-import * as o from "../../1250/1216";
-import * as i from "../../1623/495";
-import * as a from "../../1659/634";
-import * as s from "../../1738/531";
-import * as c from "../../1735/422";
-import * as l from "../../1738/398";
-import * as u from "../../1735/247/index";
-import * as d from "../../1534/530";
-import * as p from "../822";
-import * as f from "./1217";
+var r = require("../../1626/86/index");
+var o = require("../../1250/1216");
+var i = require("../../1623/495");
+var a = require("../../1659/634");
+var s = require("../../1738/531");
+var c = require("../../1735/422");
+var l = require("../../1738/398");
+var u = require("../../1735/247/index");
+var d = require("../../1534/530");
+var p = require("../822");
+var f = require("./1217");
 var h = f.IteratorPrototype;
 var m = f.BUGGY_SAFARI_ITERATORS;
 var g = u("iterator");

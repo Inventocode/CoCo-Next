@@ -1,11 +1,14 @@
 "use strict";
 
 var r;
-import * as i from "../../../3093/2676";
-import * as a from "../../../../../3190/624/index";
-import * as s from "../../../../../2873/2721/805/index";
-import * as o from "../../../../../3190/494";
-export default (function (e, t) {
+var i = require("../../../3093/2676");
+var a = require("../../../../../3190/624/index");
+var s = require("../../../../../2873/2721/805/index");
+var o = require("../../../../../3190/494");
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.default = function (e, t) {
   var n;
   var r = new Map();
   var i = new Map();
@@ -106,11 +109,11 @@ export default (function (e, t) {
     }
   };
   e.traverse(N, M);
-});
-import * as l from "../../../../../../1524/2574/1035/1356/569";
-import * as u from "../../../2623/index";
-import * as c from "../../../2667/index";
-import * as p from "./3090";
+};
+var l = require("../../../../../../1524/2574/1035/1356/569");
+var u = require("../../../2623/index");
+var c = require("../../../2667/index");
+var p = require("./3090");
 var f = u.assignmentExpression;
 var d = u.callExpression;
 var h = u.cloneNode;

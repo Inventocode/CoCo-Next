@@ -4,10 +4,10 @@ export { s as d };
 export { c as b };
 export { l as c };
 export { u as a };
-import * as r from "../../47";
-import * as o from "../../9";
-import * as i from "../../15/index";
-import * as a from "../../48/index";
+var r = require("../../47");
+var o = require("../../9");
+var i = require("../../15/index");
+var a = require("../../48/index");
 function s(e) {
   return void 0 !== c(e);
 }
@@ -86,3 +86,4 @@ function u(e) {
     } : p;
   }
 }
+export default u;

@@ -1,8 +1,12 @@
 "use strict";
 
-import * as r from "../../../../../220";
-import * as i from "../../../../../230";
-import * as a from "./2798";
+var r = require("../../../../../220");
+var i = require("../../../../../230");
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.OptionValidator = void 0;
+var a = require("./2798");
 var s = function () {
   function e(t) {
     r(this, e);
@@ -43,4 +47,4 @@ var s = function () {
   }]);
   return e;
 }();
-export { s as OptionValidator };
+exports.OptionValidator = s;

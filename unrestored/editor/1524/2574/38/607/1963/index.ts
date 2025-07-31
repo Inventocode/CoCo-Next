@@ -1,7 +1,7 @@
-import * as r from "../../../../../3262/3188/2658/2679/529";
-import * as i from "../../../../../3262/3188/2658/2679/356/1098";
-import * as o from "./1964";
-import * as a from "./1965";
+var r = require("../../../../../3262/3188/2658/2679/529");
+var i = require("../../../../../3262/3188/2658/2679/356/1098");
+var o = require("./1964");
+var a = require("./1965");
 function s(t) {
   var n = "function" === typeof Map ? new Map() : void 0;
   module.exports = s = function (e) {

@@ -1,10 +1,10 @@
-import * as r from "../../1738/194";
+var r = require("../../1738/194");
 var o = require("../../1534/386").f;
-import * as i from "../../1735/422";
-import * as a from "../../1738/398";
-import * as s from "./1055";
-import * as c from "../../1537/1207";
-import * as l from "../../1660/817";
+var i = require("../../1735/422");
+var a = require("../../1738/398");
+var s = require("./1055");
+var c = require("../../1537/1207");
+var l = require("../../1660/817");
 module.exports = function (e, t) {
   var n;
   var u;

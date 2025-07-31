@@ -1,7 +1,7 @@
-import * as r from "./850";
-import * as i from "../../../../../784/104/2401/2412/2471/762/index";
-import * as o from "./1141";
-import * as a from "../../../../2518/2519/475";
+var r = require("./850");
+var i = require("../../../../../784/104/2401/2412/2471/762/index");
+var o = require("./1141");
+var a = require("../../../../2518/2519/475");
 module.exports = function (e, t, n) {
   if (!a(n)) {
     return !1;

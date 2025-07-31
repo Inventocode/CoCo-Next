@@ -1,6 +1,6 @@
 "use strict";
 
-import * as r from "../../../../../31/index";
+var r = require("../../../../../31/index");
 function i(e) {
   return e.range[0];
 }

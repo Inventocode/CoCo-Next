@@ -1,9 +1,9 @@
-import * as r from "../1125/index";
-import * as i from "./1349";
-import * as o from "../../1128";
-import * as a from "./966";
+var r = require("../1125/index");
+var i = require("./1349");
+var o = require("../../1128");
+var a = require("./966");
 var s = require("../../967/index")("engine.io-client:polling-xhr");
-import * as c from "./1126";
+var c = require("./1126");
 function u() {}
 function l(e) {
   if (i.call(this, e), this.requestTimeout = e.requestTimeout, this.extraHeaders = e.extraHeaders, "undefined" !== typeof location) {
@@ -39,7 +39,7 @@ function f(e) {
   this.extraHeaders = e.extraHeaders;
   this.create();
 }
-if (module.exports = l, e.exports.Request = f, a(l, i), l.prototype.supportsBinary = !0, l.prototype.request = function (e) {
+if (module.exports = l, module.exports.Request = f, a(l, i), l.prototype.supportsBinary = !0, l.prototype.request = function (e) {
   (e = e || {}).uri = this.uri();
   e.xd = this.xd;
   e.xs = this.xs;

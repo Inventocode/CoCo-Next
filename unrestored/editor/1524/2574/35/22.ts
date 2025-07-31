@@ -151,3 +151,4 @@ var B = function (e) {
 var F = function (e) {
   return e.common.editAreaUpdatedAt;
 };
+export default B;

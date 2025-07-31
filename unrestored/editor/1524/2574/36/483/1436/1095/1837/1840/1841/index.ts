@@ -1,6 +1,6 @@
-import * as r from "./1842";
-import * as i from "../../../../../1437/1087/1088/1259/index";
-import * as o from "../../1277";
+var r = require("./1842");
+var i = require("../../../../../1437/1087/1088/1259/index");
+var o = require("../../1277");
 var a = i ? function (e, t) {
   return i(e, "toString", {
     configurable: !0,

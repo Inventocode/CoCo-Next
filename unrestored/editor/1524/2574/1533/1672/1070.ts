@@ -1,8 +1,8 @@
 "use strict";
 
-import * as r from "../1556/473";
-import * as o from "../1738/310";
-import * as i from "../1676/421";
+var r = require("../1556/473");
+var o = require("../1738/310");
+var i = require("../1676/421");
 module.exports = function (e) {
   var t = o(i(this));
   var n = "";

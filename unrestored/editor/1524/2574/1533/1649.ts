@@ -1,8 +1,8 @@
-import * as r from "./1626/86/index";
-import * as o from "./1738/272";
-import * as i from "./1659/241";
-import * as a from "./1534/628";
-import * as s from "./1534/300/index";
+var r = require("./1626/86/index");
+var o = require("./1738/272");
+var i = require("./1659/241");
+var a = require("./1534/628");
+var s = require("./1534/300/index");
 r({
   target: "Reflect",
   stat: !0,

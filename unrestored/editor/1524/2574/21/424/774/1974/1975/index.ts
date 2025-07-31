@@ -1,4 +1,4 @@
-import * as r from "./1976/index";
+var r = require("./1976/index");
 r.prototype.toPostfix = function () {
   "use strict";
 

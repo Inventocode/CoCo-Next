@@ -548,17 +548,28 @@ Object.defineProperty(V, "oTHelper", {
     return In;
   }
 });
-import * as z from "../27";
-import * as Y from "../40";
-import * as K from "../1/index";
-import * as q from "../1/index";
-import * as X from "../25/index";
-import * as Q from "../7";
-import * as Z from "./304";
-import * as J from "../1035/32/index";
-import * as $ from "../24/index";
-import * as ee from "./244";
-import * as te from "../10/index";
+var z = require("../27");
+var Y = require("../40");
+var K = require("../1/index");
+var q = (module => {
+  var defaultExport = module && module.__esModule ? function () {
+    return module.default;
+  } : function () {
+    return module;
+  };
+  Object.defineProperty(defaultExport, "a", {
+    enumerable: true,
+    get: defaultExport
+  });
+  return defaultExport;
+})(K);
+var X = require("../25/index");
+var Q = require("../7");
+var Z = require("./304");
+var J = require("../1035/32/index");
+var $ = require("../24/index");
+var ee = require("./244");
+var te = require("../10/index");
 function ne(e) {
   var t;
   var n = $.a.getDoc();
@@ -723,13 +734,13 @@ function ve(e, t, n) {
   var r = Object(J.moveOp)(Object(X.a)(ie(e, t)), Object(X.a)(ie(e, n)));
   $.a.applyClient(r);
 }
-import * as be from "../2/index";
-import * as ye from "../9";
-import * as Ee from "../38/index";
-import * as Oe from "../43";
-import * as we from "../79";
-import * as Ce from "../23";
-import * as Te from "../36/index";
+var be = require("../2/index");
+var ye = require("../9");
+var Ee = require("../38/index");
+var Oe = require("../43");
+var we = require("../79");
+var Ce = require("../23");
+var Te = require("../36/index");
 function Se(e) {
   if (ce(e.path)) {
     (function (e) {
@@ -887,8 +898,8 @@ function Re(e, t) {
     })(e);
   }
 }
-import * as ke from "./377/index";
-import * as xe from "../99";
+var ke = require("./377/index");
+var xe = require("../99");
 function De(e) {
   return 2 === e.length && "screens" === e[0];
 }
@@ -935,7 +946,8 @@ function Ge(e, t) {
       var n = e.op.i;
       Object.entries(n.widgets).forEach(function (e) {
         var t = Object(te.a)(e, 2);
-        var n = (t[0], t[1]);
+        t[0];
+        var n = t[1];
         Object(ye.Ub)(n.id, n);
       });
       var r = Object(xe.d)(n);
@@ -968,7 +980,7 @@ function Ge(e, t) {
     })(e);
   }
 }
-import * as Ue from "../31/index";
+var Ue = require("../31/index");
 function We(e) {
   return He.apply(this, arguments);
 }
@@ -1144,7 +1156,7 @@ function et(e, t) {
     $.a.applyClient(i);
   }
 }
-import * as tt from "../26/index";
+var tt = require("../26/index");
 function nt(e) {
   return 2 === e.length && "soundFileList" === e[0];
 }
@@ -1330,7 +1342,7 @@ function ft(e) {
     })(e);
   }
 }
-import * as ht from "../18";
+var ht = require("../18");
 function mt(e, t) {
   for (var n = arguments.length, r = new Array(n > 2 ? n - 2 : 0), o = 2; o < n; o++) {
     r[o - 2] = arguments[o];
@@ -1864,7 +1876,7 @@ function Ht(e) {
 }
 var Vt;
 var zt;
-import * as Yt from "../6";
+var Yt = require("../6");
 function Kt(e, t) {
   var n;
   var r = Object(Oe.e)();
@@ -1961,7 +1973,7 @@ function Qt(e, t, n, r) {
     });
   }
 }
-import * as Zt from "../102";
+var Zt = require("../102");
 function Jt(e) {
   if (e.type === Vt.USER_COLORS) {
     Object(Oe.h)(Object(Zt.t)(e.data));
@@ -2056,8 +2068,8 @@ function sn(e, t, n) {
   }
   $.a.applyClient(r);
 }
-import * as cn from "../5";
-import * as ln from "../112";
+var cn = require("../5");
+var ln = require("../112");
 function un(e) {
   if (nn(e.path)) {
     (function (e) {
@@ -2281,7 +2293,7 @@ function gn() {
     }, e);
   }))).apply(this, arguments);
 }
-import * as _n from "../98";
+var _n = require("../98");
 function vn(e) {
   var t;
   if (2 === (t = e.path).length && "unsafeExtensionWidgetList" === t[0]) {

@@ -1,4 +1,4 @@
-import * as r from "../1585/1068";
+var r = require("../1585/1068");
 var o = Math.abs;
 var i = Math.pow;
 var a = i(2, -52);

@@ -1,5 +1,8 @@
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
 exports.validatePluginObject = function (e) {
   var t = {
     type: "root",
@@ -19,7 +22,7 @@ exports.validatePluginObject = function (e) {
   });
   return e;
 };
-import * as r from "./2685/2801";
+var r = require("./2685/2801");
 var i = {
   name: r.assertString,
   manipulateOptions: r.assertFunction,

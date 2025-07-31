@@ -1,6 +1,6 @@
 "use strict";
 
-import * as r from "../683/34/763";
+var r = require("../683/34/763");
 var i = "function" === typeof Symbol && Symbol.for;
 var o = i ? Symbol.for("react.element") : 60103;
 var a = i ? Symbol.for("react.portal") : 60106;
@@ -279,13 +279,13 @@ exports.Children = {
     return e;
   }
 };
-export { y as Component };
-export { s as Fragment };
-export { u as Profiler };
-export { w as PureComponent };
-export { c as StrictMode };
-export { d as Suspense };
-export { U as __SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED };
+exports.Component = y;
+exports.Fragment = s;
+exports.Profiler = u;
+exports.PureComponent = w;
+exports.StrictMode = c;
+exports.Suspense = d;
+exports.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED = U;
 exports.cloneElement = function (e, t, n) {
   if (null === e || void 0 === e) {
     throw Error(g(267, e));
@@ -339,7 +339,7 @@ exports.createContext = function (e, t) {
   };
   return e.Consumer = e;
 };
-export { S as createElement };
+exports.createElement = S;
 exports.createFactory = function (e) {
   var t = S.bind(null, e);
   t.type = e;
@@ -356,7 +356,7 @@ exports.forwardRef = function (e) {
     render: e
   };
 };
-export { k as isValidElement };
+exports.isValidElement = k;
 exports.lazy = function (e) {
   return {
     $$typeof: _,

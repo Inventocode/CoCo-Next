@@ -1,6 +1,9 @@
 "use strict";
 
-import * as r from "../2325/444";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+var r = require("../2325/444");
 var i = function () {
   function e() {
     this._map = new Map();
@@ -76,4 +79,4 @@ var i = function () {
   };
   return e;
 }();
-export { i as Lookup };
+exports.Lookup = i;

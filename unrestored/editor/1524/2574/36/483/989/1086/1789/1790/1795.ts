@@ -1,4 +1,4 @@
-import * as r from "./1791/955";
+var r = require("./1791/955");
 module.exports = function (e, t) {
   var n = this.__data__;
   this.size += this.has(e) ? 0 : 1;

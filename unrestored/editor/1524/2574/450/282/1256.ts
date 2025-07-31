@@ -3184,7 +3184,7 @@
       dec: t
     };
   }();
-  if (e.exports && "undefined" === typeof DO_NOT_EXPORT_CODEPAGE) {
+  if (module.exports && "undefined" === typeof DO_NOT_EXPORT_CODEPAGE) {
     module.exports = n;
   }
   (function (t, r) {
@@ -3192,7 +3192,7 @@
 
     if ("undefined" === typeof n) {
       var i = n;
-      if (e.exports && "undefined" === typeof DO_NOT_EXPORT_CODEPAGE) {
+      if (module.exports && "undefined" === typeof DO_NOT_EXPORT_CODEPAGE) {
         module.exports = r(i);
       } else {
         t.cptable = r(i);

@@ -1,6 +1,9 @@
 "use strict";
 
-export default (function (e) {
-  return (0, r.default)(e);
+Object.defineProperty(exports, "__esModule", {
+  value: !0
 });
-import * as r from "./2650";
+exports.default = function (e) {
+  return (0, r.default)(e);
+};
+var r = require("./2650");

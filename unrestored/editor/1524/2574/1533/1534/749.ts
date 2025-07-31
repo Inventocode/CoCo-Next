@@ -1,5 +1,5 @@
-import * as r from "../1250/472";
-import * as o from "../1735/247/1203";
+var r = require("../1250/472");
+var o = require("../1735/247/1203");
 module.exports = o ? function (e) {
   return "symbol" == typeof e;
 } : function (e) {

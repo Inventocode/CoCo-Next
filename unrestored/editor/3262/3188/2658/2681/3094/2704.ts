@@ -9,6 +9,9 @@ function r(e, t) {
     }
   }
 }
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
 exports.isIterableIterator = function (e) {
   return !!e && "function" === typeof e.next && "function" === typeof e[Symbol.iterator];
 };

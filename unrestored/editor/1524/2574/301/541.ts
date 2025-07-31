@@ -1,10 +1,14 @@
 "use strict";
 
-import * as r from "../1000/93";
-import * as i from "../1000/134/index";
-import * as o from "../1000/213/index";
-import * as a from "../125/294";
-import * as s from "../125/index";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.FieldImage = void 0;
+var r = require("../1000/93");
+var i = require("../1000/134/index");
+var o = require("../1000/213/index");
+var a = require("../125/294");
+var s = require("../125/index");
 var c = function (e) {
   function t(t) {
     var r = e.call(this, t.opt_alt) || this;
@@ -84,4 +88,4 @@ var c = function (e) {
   t.DEFAULT_WIDTH = 20;
   return t = n = (0, r.__decorate)([(0, i.injectable)()], t);
 }(require("./500").Field);
-export { c as FieldImage };
+exports.FieldImage = c;

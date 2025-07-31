@@ -146,11 +146,15 @@ var a = this && this.__importDefault || function (e) {
     default: e
   };
 };
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.Datasheet = void 0;
 var s = a(require("./2387"));
-import * as c from "../../969/index";
-import * as u from "./2388";
-import * as l from "./2389";
-import * as f from "./2390";
+var c = require("../../969/index");
+var u = require("./2388");
+var l = require("./2389");
+var f = require("./2390");
 var h = function () {
   function e(e, t) {
     this.datasheetId = e;
@@ -205,4 +209,4 @@ var h = function () {
   };
   return e;
 }();
-export { h as Datasheet };
+exports.Datasheet = h;

@@ -1,4 +1,4 @@
-import * as r from "./1252";
+var r = require("./1252");
 function i(e) {
   var t = function () {
     for (var e = {}, t = Object.keys(r), n = t.length, i = 0; i < n; i++) {

@@ -1,14 +1,14 @@
 "use strict";
 
-import * as r from "./752";
+var r = require("./752");
 var o = require("./709").getWeakData;
-import * as i from "../1659/241";
-import * as a from "../1626/231";
-import * as s from "../1738/635";
-import * as c from "../1639/826/index";
-import * as l from "../1707/399";
-import * as u from "../1738/332";
-import * as d from "../1738/423/index";
+var i = require("../1659/241");
+var a = require("../1626/231");
+var s = require("../1738/635");
+var c = require("../1639/826/index");
+var l = require("../1707/399");
+var u = require("../1738/332");
+var d = require("../1738/423/index");
 var p = d.set;
 var f = d.getterFor;
 var h = l.find;

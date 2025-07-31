@@ -1,8 +1,8 @@
 "use strict";
 
-import * as r from "./1707/258/index";
-import * as o from "./1728/948";
-import * as i from "./1626/167";
+var r = require("./1707/258/index");
+var o = require("./1728/948");
+var i = require("./1626/167");
 var a = r.aTypedArray;
 var s = r.exportTypedArrayMethod;
 var c = [].slice;

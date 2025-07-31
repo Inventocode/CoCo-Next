@@ -676,9 +676,10 @@ var O = function () {
   };
   return t;
 }();
-var b = (new O(), new O({
+new O();
+var b = new O({
   hostType: "platform"
-}));
+});
 function R(t, e) {
   if (t) {
     Object.keys(t).map(function (t) {
@@ -3017,7 +3018,11 @@ var Ot = Object.freeze({
 function bt(t) {
   var e = t.env;
   var n = t.domain;
-  var r = (t.auth_version, t.pid, t.client_id, t.requestTimeout, t.host);
+  t.auth_version;
+  t.pid;
+  t.client_id;
+  t.requestTimeout;
+  var r = t.host;
   if (e) {
     if (o[e]) {
       (function (t) {

@@ -1,6 +1,6 @@
 "use strict";
 
-import * as r from "../../../../../1524/2574/1/index";
+var r = require("../../../../../1524/2574/1/index");
 function i() {
   var e = require("../../3131/2638");
   i = function () {
@@ -8,6 +8,9 @@ function i() {
   };
   return e;
 }
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
 exports.forwardAsync = function (e, t) {
   var n = i()(e);
   return l(function (e) {
@@ -15,7 +18,8 @@ exports.forwardAsync = function (e, t) {
     return t(r);
   });
 };
-export { p as isThenable };
+exports.isAsync = void 0;
+exports.isThenable = p;
 exports.maybeAsync = function (e, t) {
   return i()({
     sync: function () {
@@ -36,6 +40,7 @@ exports.maybeAsync = function (e, t) {
     }
   });
 };
+exports.waitFor = exports.onFirstPause = void 0;
 var a = function (e) {
   return e;
 };
@@ -62,7 +67,7 @@ var o = i()({
     return e(null, !0);
   }
 });
-export { o as isAsync };
+exports.isAsync = o;
 var l = i()({
   sync: function (e) {
     return e("sync");
@@ -88,7 +93,7 @@ var u = i()({
     }
   }
 });
-export { u as onFirstPause };
+exports.onFirstPause = u;
 var c = i()({
   sync: a,
   async: a
@@ -96,4 +101,4 @@ var c = i()({
 function p(e) {
   return !!e && ("object" === typeof e || "function" === typeof e) && !!e.then && "function" === typeof e.then;
 }
-export { c as waitFor };
+exports.waitFor = c;

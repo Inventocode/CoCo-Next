@@ -1,8 +1,8 @@
 "use strict";
 
-import * as r from "../../0/index";
-import * as i from "../../683/34/763";
-import * as o from "./1527/index";
+var r = require("../../0/index");
+var i = require("../../683/34/763");
+var o = require("./1527/index");
 function a(e) {
   for (var t = "https://reactjs.org/docs/error-decoder.html?invariant=" + e, n = 1; n < arguments.length; n++) {
     t += "&args[]=" + encodeURIComponent(arguments[n]);
@@ -7701,8 +7701,8 @@ var Wc = {
   version: "16.13.1",
   rendererPackageName: "react-dom"
 });
-export { Wc as __SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED };
-export { Qc as createPortal };
+exports.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED = Wc;
+exports.createPortal = Qc;
 exports.findDOMNode = function (e) {
   if (null == e) {
     return null;
@@ -7755,7 +7755,7 @@ exports.unmountComponentAtNode = function (e) {
     });
   }), !0);
 };
-export { tc as unstable_batchedUpdates };
+exports.unstable_batchedUpdates = tc;
 exports.unstable_createPortal = function (e, t) {
   return Qc(e, t, 2 < arguments.length && void 0 !== arguments[2] ? arguments[2] : null);
 };

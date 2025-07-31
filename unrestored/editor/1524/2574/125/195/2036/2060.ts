@@ -1,6 +1,10 @@
 "use strict";
 
-import * as r from "../../../1000/577";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.THEME_COLOR_MAP = void 0;
+var r = require("../../../1000/577");
 exports.THEME_COLOR_MAP = {
   RED: new r.Color("#FF604B"),
   BLUE: new r.Color("#3882FF"),

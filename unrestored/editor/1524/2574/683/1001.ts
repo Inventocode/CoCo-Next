@@ -1,10 +1,10 @@
 "use strict";
 
 export { s as a };
-import * as r from "./215/index";
-import * as i from "./34/index";
-import * as o from "./65";
-import * as a from "./122";
+var r = require("./215/index");
+var i = require("./34/index");
+var o = require("./65");
+var a = require("./122");
 var s = function () {
   function e(e, t) {
     var n = this;
@@ -291,3 +291,4 @@ var s = function () {
   };
   return e;
 }();
+export default s;

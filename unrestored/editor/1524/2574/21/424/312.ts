@@ -14,14 +14,14 @@ export { w as k };
 export { C as n };
 export { T as b };
 export { S as a };
-import * as r from "../../16/index";
-import * as o from "../../48/index";
-import * as i from "../../206/29/index";
-import * as a from "../../48/72";
-import * as s from "../../91";
-import * as c from "../../14";
-import * as l from "../../15/index";
-import * as u from "../../36/345/114";
+var r = require("../../16/index");
+var o = require("../../48/index");
+var i = require("../../206/29/index");
+var a = require("../../48/72");
+var s = require("../../91");
+var c = require("../../14");
+var l = require("../../15/index");
+var u = require("../../36/345/114");
 function d(e, t) {
   var n = Object(o.a)().getState().screenList;
   if ("string" === typeof e || "number" === typeof e) {
@@ -154,3 +154,4 @@ function T() {
 function S(e) {
   return O.has(e);
 }
+export default S;

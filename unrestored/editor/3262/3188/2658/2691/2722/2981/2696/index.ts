@@ -1,17 +1,21 @@
 "use strict";
 
-import * as r from "./2967";
-import * as i from "./2968/index";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.statements = exports.statement = exports.smart = exports.program = exports.expression = exports.default = void 0;
+var r = require("./2967");
+var i = require("./2968/index");
 var a = (0, i.default)(r.smart);
-export { a as smart };
+exports.smart = a;
 var s = (0, i.default)(r.statement);
-export { s as statement };
+exports.statement = s;
 var o = (0, i.default)(r.statements);
-export { o as statements };
+exports.statements = o;
 var l = (0, i.default)(r.expression);
-export { l as expression };
+exports.expression = l;
 var u = (0, i.default)(r.program);
-export { u as program };
+exports.program = u;
 var c = Object.assign(a.bind(void 0), {
   smart: a,
   statement: s,
@@ -20,4 +24,4 @@ var c = Object.assign(a.bind(void 0), {
   program: u,
   ast: a.ast
 });
-export default c;
+exports.default = c;

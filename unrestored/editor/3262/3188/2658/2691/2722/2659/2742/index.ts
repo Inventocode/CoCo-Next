@@ -1,15 +1,19 @@
 "use strict";
 
-import * as r from "../../../../../../3190/624/index";
-import * as i from "../../../../220";
-import * as a from "../../../../230";
-import * as s from "../../../../../../3190/494";
-import * as o from "./2926/index";
-import * as l from "../index";
-import * as u from "./2743";
-import * as c from "../../../../2637/2777/2744/index";
-import * as p from "../../2624/index";
-import * as f from "../2655";
+var r = require("../../../../../../3190/624/index");
+var i = require("../../../../220");
+var a = require("../../../../230");
+var s = require("../../../../../../3190/494");
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.default = void 0;
+var o = require("./2926/index");
+var l = require("../index");
+var u = require("./2743");
+var c = require("../../../../2637/2777/2744/index");
+var p = require("../../2624/index");
+var f = require("../2655");
 var d = p.NOT_LOCAL_BINDING;
 var h = p.callExpression;
 var y = p.cloneNode;
@@ -1083,6 +1087,6 @@ var $ = function () {
   }]);
   return e;
 }();
-export default $;
+exports.default = $;
 $.globals = Object.keys(c.builtin);
 $.contextVariables = ["arguments", "undefined", "Infinity", "NaN"];

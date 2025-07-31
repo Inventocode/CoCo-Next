@@ -1,8 +1,8 @@
-import * as r from "./2432/index";
-import * as i from "./2433";
-import * as o from "./2434";
-import * as a from "./2435";
-import * as s from "./2436";
+var r = require("./2432/index");
+var i = require("./2433");
+var o = require("./2434");
+var a = require("./2435");
+var s = require("./2436");
 function c(e) {
   var t = -1;
   var n = null == e ? 0 : e.length;

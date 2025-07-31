@@ -1,4 +1,4 @@
-import * as r from "../1738/194";
+var r = require("../1738/194");
 var o = function (e) {
   return "function" == typeof e ? e : void 0;
 };

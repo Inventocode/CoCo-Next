@@ -1,5 +1,9 @@
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.default = void 0;
 var r;
 var o = (r = require("./1505")) && r.__esModule ? r : {
   default: r
@@ -13,7 +17,7 @@ var i = function (e, t) {
   }
   return null;
 };
-export default (function (e, t, n) {
+exports.default = function (e, t, n) {
   var r = Object.keys(t);
   var a = n || {};
   var s = a.handleMissingStyleName;
@@ -59,4 +63,4 @@ export default (function (e, t, n) {
   }).filter(function (e) {
     return e;
   }).join(" ") : "";
-});
+};

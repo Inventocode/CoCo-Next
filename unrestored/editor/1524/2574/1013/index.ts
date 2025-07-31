@@ -158,9 +158,10 @@ function g(e, t, n) {
   }
   return e;
 }
-import * as _ from "../0/index";
-var v = (require("../50/index"), require("./2529/index"));
-import * as b from "./1415";
+var _ = require("../0/index");
+require("../50/index");
+var v = require("./2529/index");
+var b = require("./1415");
 function y(e) {
   for (var t = "", n = 0; n < e.length; n++) {
     var r = e.charCodeAt(n);
@@ -373,9 +374,14 @@ var S = function (e) {
     value: function () {
       var e = this;
       var t = this.props;
-      var n = (t.value, t.size);
-      var r = (t.level, t.bgColor, t.fgColor, t.style);
-      var i = (t.includeMargin, t.imageSettings);
+      t.value;
+      var n = t.size;
+      t.level;
+      t.bgColor;
+      t.fgColor;
+      var r = t.style;
+      t.includeMargin;
+      var i = t.imageSettings;
       var c = s(t, ["value", "size", "level", "bgColor", "fgColor", "style", "includeMargin", "imageSettings"]);
       var l = a({
         height: n,

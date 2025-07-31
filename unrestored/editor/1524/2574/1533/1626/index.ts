@@ -1,6 +1,6 @@
-import * as r from "./86/index";
-import * as o from "./167";
-import * as i from "./231";
+var r = require("./86/index");
+var o = require("./167");
+var i = require("./231");
 var a = Object.isFrozen;
 r({
   target: "Object",

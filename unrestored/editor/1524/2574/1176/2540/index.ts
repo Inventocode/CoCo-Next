@@ -1,7 +1,11 @@
 "use strict";
 
-import * as r from "../../4/127";
-import * as o from "./579";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.init_math_blocks = void 0;
+var r = require("../../4/127");
+var o = require("./579");
 exports.init_math_blocks = function (e) {
   var t = e.Blocks;
   e.define_blocks_with_json_array([{

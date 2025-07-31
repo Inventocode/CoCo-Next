@@ -1,9 +1,9 @@
 "use strict";
 
 export { u as a };
-import * as r from "./215/index";
-import * as i from "./34/index";
-import * as o from "./65";
+var r = require("./215/index");
+var i = require("./34/index");
+var o = require("./65");
 var a = function () {
   var e = function (t, n) {
     return (e = Object.setPrototypeOf || {
@@ -302,3 +302,4 @@ var u = function (e) {
   };
   return t;
 }(i.f);
+export default u;

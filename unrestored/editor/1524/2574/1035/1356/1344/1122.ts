@@ -1,6 +1,10 @@
 "use strict";
 
-import * as r from "./1121";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.uniSlice = exports.dlen = exports.eachOp = void 0;
+var r = require("./1121");
 var i = function (e) {
   if (!Array.isArray(e)) {
     throw Error("Op must be an array of components");
@@ -12,7 +16,7 @@ var i = function (e) {
         if ("number" !== typeof i.d && "string" !== typeof i.d) {
           throw Error("Delete must be number or string");
         }
-        if (t.dlen(i.d) <= 0) {
+        if (exports.dlen(i.d) <= 0) {
           throw Error("Deletes must not be empty");
         }
         break;
@@ -40,7 +44,7 @@ function o(e, n) {
     var s = e[a];
     switch (n(s, i, o), typeof s) {
       case "object":
-        i += t.dlen(s.d);
+        i += exports.dlen(s.d);
         break;
       case "string":
         o += r.strPosToUni(s);
@@ -59,7 +63,7 @@ function a(e, t) {
   });
   return d(n);
 }
-export { o as eachOp };
+exports.eachOp = o;
 var s = function (e) {
   return e;
 };
@@ -77,7 +81,7 @@ var u = function (e) {
       } else if (typeof n === typeof e[e.length - 1]) {
         if ("object" === typeof n) {
           var r = e[e.length - 1];
-          r.d = "string" === typeof r.d && "string" === typeof n.d ? r.d + n.d : t.dlen(r.d) + t.dlen(n.d);
+          r.d = "string" === typeof r.d && "string" === typeof n.d ? r.d + n.d : exports.dlen(r.d) + exports.dlen(n.d);
         } else {
           e[e.length - 1] += n;
         }
@@ -98,7 +102,7 @@ exports.uniSlice = function (e, t, n) {
   return e.slice(i, o);
 };
 var f = function (e, n, r) {
-  return "number" === typeof e ? null == r ? e - n : Math.min(e, r) - n : t.uniSlice(e, n, r);
+  return "number" === typeof e ? null == r ? e - n : Math.min(e, r) - n : exports.uniSlice(e, n, r);
 };
 var h = function (e) {
   var n = 0;
@@ -125,7 +129,7 @@ var h = function (e) {
         i = u;
         return s;
       }
-      if (-1 === o || "d" === a || t.dlen(c.d) - i <= o) {
+      if (-1 === o || "d" === a || exports.dlen(c.d) - i <= o) {
         s = {
           d: f(c.d, i)
         };
@@ -176,7 +180,7 @@ function p(e, n, o) {
         c(r.strPosToUni(g));
         break;
       case "object":
-        for (v = t.dlen(g.d); v > 0;) {
+        for (v = exports.dlen(g.d); v > 0;) {
           switch (typeof (m = p(v, "i"))) {
             case "number":
               v -= m;
@@ -185,7 +189,7 @@ function p(e, n, o) {
               c(m);
               break;
             case "object":
-              v -= t.dlen(m.d);
+              v -= exports.dlen(m.d);
           }
         }
     }
@@ -215,7 +219,7 @@ function _(e, n) {
         s(_);
         break;
       case "object":
-        A = t.dlen(_.d);
+        A = exports.dlen(_.d);
         for (var v = 0; v < A;) {
           switch (typeof (g = c(A - v, "d"))) {
             case "number":
@@ -251,7 +255,7 @@ var A = function (e, n) {
         e += s;
         break;
       case "object":
-        e -= Math.min(t.dlen(a.d), e - i);
+        e -= Math.min(exports.dlen(a.d), e - i);
     }
   }
   return e;
@@ -301,7 +305,7 @@ function b(e) {
   });
   return t;
 }
-export default (function (e) {
+exports.default = function (e) {
   return {
     name: "text-unicode",
     uri: "http://sharejs.org/types/text-unicode",
@@ -327,7 +331,7 @@ export default (function (e) {
             o.append(s);
             break;
           case "object":
-            o.del(t.dlen(s.d));
+            o.del(exports.dlen(s.d));
         }
       }
       return o.build();
@@ -349,4 +353,4 @@ export default (function (e) {
       return 0 === e.length;
     }
   };
-});
+};

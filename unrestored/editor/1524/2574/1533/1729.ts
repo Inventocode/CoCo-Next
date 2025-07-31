@@ -1,8 +1,8 @@
 "use strict";
 
-import * as r from "./1738/194";
-import * as o from "./1707/258/index";
-import * as i from "./1626/167";
+var r = require("./1738/194");
+var o = require("./1707/258/index");
+var i = require("./1626/167");
 var a = r.Int8Array;
 var s = o.aTypedArray;
 var c = o.exportTypedArrayMethod;

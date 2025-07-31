@@ -1,11 +1,15 @@
 "use strict";
 
-import * as r from "../../1000/93";
-import * as i from "../../1000/134/index";
-import * as o from "../../125/259";
-import * as a from "../../4/127";
-import * as s from "../../125/195/index";
-import * as c from "../../125/index";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.ScrollbarPair = exports.Scrollbar = void 0;
+var r = require("../../1000/93");
+var i = require("../../1000/134/index");
+var o = require("../../125/259");
+var a = require("../../4/127");
+var s = require("../../125/195/index");
+var c = require("../../125/index");
 var u = function () {
   function e(e, n, r, i, a) {
     if (void 0 === r) {
@@ -348,7 +352,7 @@ var u = function () {
   (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.UIEvent)], e.prototype, "ui_event_factory", void 0);
   return e = t = (0, r.__decorate)([(0, i.injectable)()], e);
 }();
-export { u as Scrollbar };
+exports.Scrollbar = u;
 var l = function () {
   function e(e, t) {
     if (void 0 === t) {
@@ -478,4 +482,4 @@ var l = function () {
   (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.UIEvent)], e.prototype, "ui_event_factory", void 0);
   return e = (0, r.__decorate)([(0, i.injectable)()], e);
 }();
-export { l as ScrollbarPair };
+exports.ScrollbarPair = l;

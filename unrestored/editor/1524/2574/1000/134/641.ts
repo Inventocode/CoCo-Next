@@ -1,7 +1,11 @@
 "use strict";
 
-import * as r from "./838/443";
-import * as i from "./358";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.tagProperty = exports.tagParameter = exports.decorate = void 0;
+var r = require("./838/443");
+var i = require("./358");
 function o(e, t, n, i, o) {
   var a = {};
   var s = "number" === typeof o;

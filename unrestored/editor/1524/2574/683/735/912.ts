@@ -1,6 +1,6 @@
 "use strict";
 
-import * as r from "./518";
+var r = require("./518");
 function i(e) {
   for (var t, n = []; !(t = e.next()).done;) {
     n.push(t.value);
@@ -22,7 +22,7 @@ function a(e, t) {
 var s = "function" === typeof Object.is ? Object.is : function (e, t) {
   return e === t ? 0 !== e || 1 / e === 1 / t : e !== e && t !== t;
 };
-import * as c from "../215/393";
+var c = require("../215/393");
 var u = Object.prototype.toString;
 var l = function () {
   return "[object Arguments]" === u.call(arguments) ? function (e) {
@@ -70,7 +70,7 @@ var _ = "function" !== typeof Object.keys || d ? Object(c.a)(function (e) {
 }) : Object(c.a)(function (e) {
   return Object(e) !== e ? [] : Object.keys(e);
 });
-import * as A from "../520/907";
+var A = require("../520/907");
 function g(e, t, n, r) {
   var a = i(e);
   function s(e, t) {
@@ -179,4 +179,4 @@ function v(e, t, n, r) {
 var m = Object(r.a)(function (e, t) {
   return v(e, t, [], []);
 });
-export { m as a };
+exports.a = m;

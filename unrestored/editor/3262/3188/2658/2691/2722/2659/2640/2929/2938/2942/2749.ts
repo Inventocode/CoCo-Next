@@ -1,5 +1,8 @@
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
 exports.ExportAllDeclaration = function (e) {
   this.word("export");
   this.space();
@@ -127,7 +130,7 @@ exports.ImportSpecifier = function (e) {
     this.print(e.local, e);
   }
 };
-import * as r from "../../../../../2624/index";
+var r = require("../../../../../2624/index");
 var i = r.isClassDeclaration;
 var a = r.isExportDefaultSpecifier;
 var s = r.isExportNamespaceSpecifier;

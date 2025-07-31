@@ -1,17 +1,17 @@
 "use strict";
 
-import * as r from "../1626/86/index";
-import * as o from "../1738/194";
-import * as i from "../1660/817";
-import * as a from "../1738/398";
-import * as s from "./709";
-import * as c from "../1639/826/index";
-import * as l from "../1738/635";
-import * as u from "../1626/231";
-import * as d from "../1626/167";
-import * as p from "../1558/934";
-import * as f from "../1738/531";
-import * as h from "../1660/938";
+var r = require("../1626/86/index");
+var o = require("../1738/194");
+var i = require("../1660/817");
+var a = require("../1738/398");
+var s = require("./709");
+var c = require("../1639/826/index");
+var l = require("../1738/635");
+var u = require("../1626/231");
+var d = require("../1626/167");
+var p = require("../1558/934");
+var f = require("../1738/531");
+var h = require("../1660/938");
 module.exports = function (e, t, n) {
   var m = -1 !== e.indexOf("Map");
   var g = -1 !== e.indexOf("Weak");

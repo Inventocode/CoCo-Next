@@ -1,6 +1,9 @@
 "use strict";
 
-import * as r from "../../../../3190/494";
+var r = require("../../../../3190/494");
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
 exports.find = function (e) {
   var t = this;
   do {
@@ -148,5 +151,6 @@ exports.isDescendant = function (e) {
     return t === e;
   });
 };
-import * as i from "../../2623/index";
-var a = (require("./index"), i.VISITOR_KEYS);
+var i = require("../../2623/index");
+require("./index");
+var a = i.VISITOR_KEYS;

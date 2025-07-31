@@ -1,7 +1,11 @@
 "use strict";
 
-import * as r from "./2302/index";
-import * as i from "./2306";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.OTAdapter = void 0;
+var r = require("./2302/index");
+var i = require("./2306");
 var o = function () {
   function e(e, t) {
     this.transform_to_op = new i.TransformToOp(e, t);
@@ -32,4 +36,4 @@ var o = function () {
   };
   return e;
 }();
-export { o as OTAdapter };
+exports.OTAdapter = o;

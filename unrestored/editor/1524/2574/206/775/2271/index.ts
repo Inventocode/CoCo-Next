@@ -1,10 +1,10 @@
 "use strict";
 
-import * as r from "../../../../../3262/3188/2658/220";
-import * as i from "../../../../../3262/3188/2658/230";
-import * as o from "../../../../../3262/2873/2721/805/index";
-import * as a from "./2272";
-import * as s from "../../../31/index";
+var r = require("../../../../../3262/3188/2658/220");
+var i = require("../../../../../3262/3188/2658/230");
+var o = require("../../../../../3262/2873/2721/805/index");
+var a = require("./2272");
+var s = require("../../../31/index");
 function c(e) {
   switch (e.type) {
     case "identifier":

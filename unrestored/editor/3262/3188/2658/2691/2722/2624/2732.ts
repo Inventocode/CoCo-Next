@@ -1,6 +1,9 @@
 "use strict";
 
-export default (function (e, t) {
-  (0, r.default)("innerComments", e, t);
+Object.defineProperty(exports, "__esModule", {
+  value: !0
 });
-import * as r from "./2733/2695";
+exports.default = function (e, t) {
+  (0, r.default)("innerComments", e, t);
+};
+var r = require("./2733/2695");

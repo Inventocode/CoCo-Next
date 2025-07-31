@@ -169,7 +169,8 @@ module.exports = function (e, t, n) {
         var J = a[Y = X[q += 1]];
         if (e.opts.strictKeywords ? "object" == typeof J && Object.keys(J).length > 0 || !1 === J : e.util.schemaHasRules(J, e.RULES.all)) {
           var Z = e.util.getProperty(Y);
-          var ee = (Q = l + Z, K && void 0 !== J.default);
+          Q = l + Z;
+          var ee = K && void 0 !== J.default;
           h.schema = J;
           h.schemaPath = s + Z;
           h.errSchemaPath = c + "/" + e.util.escapeFragment(Y);

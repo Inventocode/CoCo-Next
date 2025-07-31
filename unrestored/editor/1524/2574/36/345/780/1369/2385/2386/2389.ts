@@ -196,7 +196,11 @@ var s = this && this.__asyncGenerator || function (e, t, n) {
     }
   }
 };
-import * as c from "../../969/index";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.RecordManager = void 0;
+var c = require("../../969/index");
 var u = function () {
   function e(e) {
     this.datasheet = e;
@@ -365,4 +369,4 @@ var u = function () {
   };
   return e;
 }();
-export { u as RecordManager };
+exports.RecordManager = u;

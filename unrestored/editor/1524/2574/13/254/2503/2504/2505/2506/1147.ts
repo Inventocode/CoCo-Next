@@ -1,5 +1,5 @@
-import * as r from "../../../../../784/104/2401/1388/718/index";
-import * as i from "../../../../2518/2519/475";
+var r = require("../../../../../784/104/2401/1388/718/index");
+var i = require("../../../../2518/2519/475");
 module.exports = function (e) {
   if (!i(e)) {
     return !1;

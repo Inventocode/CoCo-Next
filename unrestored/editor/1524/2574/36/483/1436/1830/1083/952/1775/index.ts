@@ -1,4 +1,4 @@
-import * as r from "./953";
+var r = require("./953");
 module.exports = function (e) {
   var t = this.__data__;
   var n = r(t, e);

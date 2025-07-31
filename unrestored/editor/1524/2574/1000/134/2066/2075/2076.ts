@@ -6,9 +6,13 @@ var r = this && this.__spreadArray || function (e, t) {
   }
   return e;
 };
-import * as i from "../../838/443";
-import * as o from "../../578";
-import * as a from "../../358";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.resolveInstance = void 0;
+var i = require("../../838/443");
+var o = require("../../578");
+var a = require("../../358");
 exports.resolveInstance = function (e, t, n) {
   var s;
   var c;

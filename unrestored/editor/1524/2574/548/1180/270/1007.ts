@@ -20,3 +20,4 @@ function r(e) {
   return r;
 }
 export { r as a };
+export default r;

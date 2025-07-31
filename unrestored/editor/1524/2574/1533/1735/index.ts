@@ -1,8 +1,8 @@
-import * as r from "../1738/194";
-import * as o from "./1248";
-import * as i from "../935/index";
-import * as a from "./422";
-import * as s from "./247/index";
+var r = require("../1738/194");
+var o = require("./1248");
+var i = require("../935/index");
+var a = require("./422");
+var s = require("./247/index");
 var c = s("iterator");
 var l = s("toStringTag");
 var u = i.values;

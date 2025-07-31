@@ -1,7 +1,7 @@
 "use strict";
 
-import * as r from "../../220";
-import * as i from "../../../../../1524/2574/1/index";
+var r = require("../../220");
+var i = require("../../../../../1524/2574/1/index");
 var a = i.mark(u);
 function s() {
   var e = require("../../../1184/index");
@@ -10,15 +10,18 @@ function s() {
   };
   return e;
 }
-export { u as createConfigItem };
-export { l as createItemFromDescriptor };
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.createConfigItem = u;
+exports.createItemFromDescriptor = l;
 exports.getItemDescriptor = function (e) {
   if (null != e && e[c]) {
     return e._descriptor;
   }
   return;
 };
-import * as o from "./2792";
+var o = require("./2792");
 function l(e) {
   return new p(e);
 }

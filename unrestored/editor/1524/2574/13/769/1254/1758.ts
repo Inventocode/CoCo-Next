@@ -1,5 +1,9 @@
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.default = void 0;
 var r = {
   MAC_ENTER: 3,
   BACKSPACE: 8,
@@ -178,4 +182,4 @@ var r = {
   }
 };
 var i = r;
-export default i;
+exports.default = i;

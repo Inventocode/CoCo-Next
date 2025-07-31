@@ -1,6 +1,6 @@
 "use strict";
 
-import * as r from "./1532";
+var r = require("./1532");
 var i = function (e) {
   return r({
     exact: !0

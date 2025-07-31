@@ -1,5 +1,5 @@
-import * as r from "./241";
-import * as o from "./1218";
+var r = require("./241");
+var o = require("./1218");
 module.exports = Object.setPrototypeOf || ("__proto__" in {} ? function () {
   var e;
   var t = !1;

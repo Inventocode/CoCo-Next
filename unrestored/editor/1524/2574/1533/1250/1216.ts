@@ -1,10 +1,10 @@
 "use strict";
 
 var r = require("../935/1065/1217").IteratorPrototype;
-import * as o from "./575";
-import * as i from "./627";
-import * as a from "../1738/531";
-import * as s from "../935/822";
+var o = require("./575");
+var i = require("./627");
+var a = require("../1738/531");
+var s = require("../935/822");
 var c = function () {
   return this;
 };

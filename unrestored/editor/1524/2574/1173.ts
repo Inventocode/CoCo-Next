@@ -177,4 +177,4 @@ var r = {
     }
   }
 };
-export { r as a };
+exports.a = r;

@@ -3381,7 +3381,8 @@ module.exports = function () {
           if ("v-track-mode" === e.data.type) {
             if (e.data.data && e.data.data.isVtrack) {
               if (n.sessionStorage.isSupport() && sessionStorage.setItem("sensors-visual-mode", "true"), e.data.data.userURL && location.search.match(/sa-visual-mode=true/)) {
-                var i = (o = e.data.data.userURL, n.secCheck.isHttpUrl(o) ? n.secCheck.removeScriptProtocol(o) : (t.log("\u53ef\u89c6\u5316\u6a21\u5f0f\u68c0\u6d4b URL \u5931\u8d25"), !1));
+                o = e.data.data.userURL;
+                var i = n.secCheck.isHttpUrl(o) ? n.secCheck.removeScriptProtocol(o) : (t.log("\u53ef\u89c6\u5316\u6a21\u5f0f\u68c0\u6d4b URL \u5931\u8d25"), !1);
                 if (i) {
                   window.location.href = i;
                 }
@@ -5261,7 +5262,8 @@ module.exports = function () {
       },
       clickCustomPropMaker: function (e, r, i) {
         var o = this;
-        var a = (i = i || this.filterConfig(e, r, t.vtrackcollect.url_info.page_url), {});
+        i = i || this.filterConfig(e, r, t.vtrackcollect.url_info.page_url);
+        var a = {};
         return i.length ? (n.each(i, function (t) {
           if (n.isArray(t.properties) && t.properties.length > 0) {
             n.each(t.properties, function (t) {

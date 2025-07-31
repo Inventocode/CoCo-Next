@@ -7,3 +7,4 @@ export { r as a };
   e.COVER = "cover";
   e.STRETCH = "stretch";
 })(r || (r = {}));
+export default r;

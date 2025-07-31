@@ -1,6 +1,9 @@
 "use strict";
 
-import * as r from "../568";
+var r = require("../568");
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
 exports.isEventFromHandle = function (e, t) {
   try {
     return Object.keys(t).some(function (n) {
@@ -18,8 +21,8 @@ exports.isValueOutOfRange = function (e, t) {
 exports.isNotTouchEvent = function (e) {
   return e.touches.length > 1 || "touchend" === e.type.toLowerCase() && e.touches.length > 0;
 };
-export { s as getClosestPoint };
-export { c as getPrecision };
+exports.getClosestPoint = s;
+exports.getPrecision = c;
 exports.getMousePosition = function (e, t) {
   return e ? t.clientY : t.pageX;
 };
@@ -50,7 +53,7 @@ exports.pauseEvent = function (e) {
   e.stopPropagation();
   e.preventDefault();
 };
-export { u as calculateNextValue };
+exports.calculateNextValue = u;
 exports.getKeyboardValueMutator = function (e, t, n) {
   var r = "increase";
   switch (e.keyCode) {
@@ -90,7 +93,7 @@ exports.getKeyboardValueMutator = function (e, t, n) {
   };
 };
 var i = r(require("./1504/index"));
-import * as o from "../../../75/index";
+var o = require("../../../75/index");
 var a = r(require("./1758"));
 function s(e, t) {
   var n = t.marks;

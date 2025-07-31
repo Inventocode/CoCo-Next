@@ -5,7 +5,7 @@ export { v as c };
 export { y as b };
 var r;
 var i;
-import * as o from "../../../36/483/39";
+var o = require("../../../36/483/39");
 !function (e) {
   e.Ok = "ok";
   e.Exited = "exited";
@@ -18,11 +18,11 @@ import * as o from "../../../36/483/39";
   e.Crashed = "crashed";
 })(i || (i = {}));
 var a;
-import * as s from "../364";
-import * as c from "../925";
-import * as u from "../265";
-import * as l from "../521";
-import * as f from "../316";
+var s = require("../364");
+var c = require("../925");
+var u = require("../265");
+var l = require("../521");
+var f = require("../316");
 !function (e) {
   e.PENDING = "PENDING";
   e.RESOLVED = "RESOLVED";
@@ -453,7 +453,7 @@ function p() {
   e.__SENTRY__.globalEventProcessors = e.__SENTRY__.globalEventProcessors || [];
   return e.__SENTRY__.globalEventProcessors;
 }
-import * as _ from "../435/index";
+var _ = require("../435/index");
 var A = function () {
   function e(e) {
     this.errors = 0;
@@ -868,3 +868,4 @@ function w(e) {
 function E(e, t) {
   return !!e && (e.__SENTRY__ = e.__SENTRY__ || {}, e.__SENTRY__.hub = t, !0);
 }
+export default g;

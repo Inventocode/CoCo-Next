@@ -1,16 +1,16 @@
 "use strict";
 
-import * as r from "../../../../../3262/3188/2658/2679/703/index";
-import * as i from "../../../../../3262/3188/2658/2679/529";
-import * as o from "../../../../../3262/3188/2658/2679/356/index";
-import * as a from "../../../../../3262/3188/2658/2679/357/index";
-import * as s from "../../../../../3262/3188/2658/220";
-import * as c from "../../../../../3262/3188/2658/230";
+var r = require("../../../../../3262/3188/2658/2679/703/index");
+var i = require("../../../../../3262/3188/2658/2679/529");
+var o = require("../../../../../3262/3188/2658/2679/356/index");
+var a = require("../../../../../3262/3188/2658/2679/357/index");
+var s = require("../../../../../3262/3188/2658/220");
+var c = require("../../../../../3262/3188/2658/230");
 var u = require("./2185/1106/index").Syntax;
-import * as l from "./1107";
-import * as f from "./963";
+var l = require("./1107");
+var f = require("./963");
 var h = require("./2185/1322").Definition;
-import * as d from "../../../1035/1356/569";
+var d = require("../../../1035/1356/569");
 function p(e) {
   return e.type === f.ClassName || e.type === f.Variable && "var" !== e.parent.kind;
 }

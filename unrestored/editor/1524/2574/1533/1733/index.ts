@@ -1,7 +1,7 @@
-import * as r from "../1738/194";
-import * as o from "../1735/1248";
-import * as i from "./1734";
-import * as a from "../1735/422";
+var r = require("../1738/194");
+var o = require("../1735/1248");
+var i = require("./1734");
+var a = require("../1735/422");
 for (var s in o) {
   var c = r[s];
   var l = c && c.prototype;

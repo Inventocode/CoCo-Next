@@ -1,14 +1,17 @@
 "use strict";
 
-import * as r from "../../../../../../../3190/494";
-export default (function (e, t) {
+var r = require("../../../../../../../3190/494");
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.default = function (e, t) {
   var n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "var";
   e.traverse(l, {
     kind: n,
     emit: t
   });
-});
-import * as i from "../../../2624/index";
+};
+var i = require("../../../2624/index");
 var a = i.assignmentExpression;
 var s = i.expressionStatement;
 var o = i.identifier;

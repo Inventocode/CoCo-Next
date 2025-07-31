@@ -13,7 +13,7 @@
   var h = "object" == typeof e && e && e.Object === Object && e;
   var d = "object" == typeof self && self && self.Object === Object && self;
   var p = h || d || Function("return this")();
-  var _ = t && !t.nodeType && t;
+  var _ = exports && !exports.nodeType && exports;
   var A = _ && "object" == typeof n && n && !n.nodeType && n;
   var g = A && A.exports === _;
   function v(e, t) {
@@ -510,4 +510,4 @@
   n.exports = function (e) {
     return le(e, !0, !0);
   };
-}).call(this, require("../../31/251"), require("../../31/571")(e));
+}).call(this, require("../../31/251"), require("../../31/571")(module));

@@ -214,9 +214,20 @@ Object.defineProperty(r, "url", {
     return ge;
   }
 });
-import * as i from "./1452/index";
-import * as o from "./763";
-import * as a from "./763";
+var i = require("./1452/index");
+var o = require("./763");
+var a = (module => {
+  var defaultExport = module && module.__esModule ? function () {
+    return module.default;
+  } : function () {
+    return module;
+  };
+  Object.defineProperty(defaultExport, "a", {
+    enumerable: true,
+    get: defaultExport
+  });
+  return defaultExport;
+})(o);
 if (!self.Promise) {
   self.Promise = i.a;
 }
@@ -616,11 +627,33 @@ var fe = {
   CREATE_IMAGE_BITMAP: !1,
   ROUND_PIXELS: !1
 };
-import * as he from "./1300";
-import * as de from "./1300";
-import * as pe from "./1301";
-import * as _e from "./1301";
-import * as Ae from "./1027/index";
+var he = require("./1300");
+var de = (module => {
+  var defaultExport = module && module.__esModule ? function () {
+    return module.default;
+  } : function () {
+    return module;
+  };
+  Object.defineProperty(defaultExport, "a", {
+    enumerable: true,
+    get: defaultExport
+  });
+  return defaultExport;
+})(he);
+var pe = require("./1301");
+var _e = (module => {
+  var defaultExport = module && module.__esModule ? function () {
+    return module.default;
+  } : function () {
+    return module;
+  };
+  Object.defineProperty(defaultExport, "a", {
+    enumerable: true,
+    get: defaultExport
+  });
+  return defaultExport;
+})(pe);
+var Ae = require("./1027/index");
 !function (e) {
   e[e.WEBGL_LEGACY = 0] = "WEBGL_LEGACY";
   e[e.WEBGL = 1] = "WEBGL";
@@ -10166,10 +10199,32 @@ var ai = function () {
   };
   return e;
 }();
-import * as si from "./1169";
-import * as ci from "./1169";
-import * as ui from "./562";
-import * as li from "./562";
+var si = require("./1169");
+var ci = (module => {
+  var defaultExport = module && module.__esModule ? function () {
+    return module.default;
+  } : function () {
+    return module;
+  };
+  Object.defineProperty(defaultExport, "a", {
+    enumerable: true,
+    get: defaultExport
+  });
+  return defaultExport;
+})(si);
+var ui = require("./562");
+var li = (module => {
+  var defaultExport = module && module.__esModule ? function () {
+    return module.default;
+  } : function () {
+    return module;
+  };
+  Object.defineProperty(defaultExport, "a", {
+    enumerable: true,
+    get: defaultExport
+  });
+  return defaultExport;
+})(ui);
 function fi() {}
 function hi(e, t, n, r) {
   var i = 0;
@@ -13091,7 +13146,12 @@ var Eo = function () {
   };
   return e;
 }();
-var xo = ((vo = {})[it.POLY] = co, vo[it.CIRC] = uo, vo[it.ELIP] = uo, vo[it.RECT] = lo, vo[it.RREC] = po, vo);
+(vo = {})[it.POLY] = co;
+vo[it.CIRC] = uo;
+vo[it.ELIP] = uo;
+vo[it.RECT] = lo;
+vo[it.RREC] = po;
+var xo = vo;
 var Co = [];
 var Oo = [];
 var So = function () {
@@ -16624,7 +16684,8 @@ var ga = function (e) {
   });
   return t;
 }(mr);
-var va = (require("../984"), function () {
+require("../984");
+var va = function () {
   var e = function (t, n) {
     return (e = Object.setPrototypeOf || {
       __proto__: []
@@ -16643,7 +16704,7 @@ var va = (require("../984"), function () {
     e(t, n);
     t.prototype = null === n ? Object.create(n) : (r.prototype = n.prototype, new r());
   };
-}());
+}();
 var ma = function (e) {
   function t(t, n) {
     return e.call(this, t ? Math.floor(t) : t, n ? Math.floor(n) : n) || this;
@@ -16698,3 +16759,4 @@ Nn.prototype.push = function (e, t) {
   o.bind(i.renderTexture, i.sourceFrame, d);
   n.framebuffer.clear(0, 0, 0, 0);
 };
+export default ra;

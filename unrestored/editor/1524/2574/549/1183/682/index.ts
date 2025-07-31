@@ -1,8 +1,10 @@
 "use strict";
 
 export { o as a };
-import * as r from "./2583";
-var i = (require("../../../0/index"), require("./785/index"));
+var r = require("./2583");
+require("../../../0/index");
+var i = require("./785/index");
 function o() {
   return Object(r.a)() || i.a;
 }
+export default o;

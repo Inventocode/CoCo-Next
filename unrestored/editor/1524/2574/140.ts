@@ -1,8 +1,8 @@
 "use strict";
 
 export { o as a };
-import * as r from "./273";
-import * as i from "./322";
+var r = require("./273");
+var i = require("./322");
 function o(e) {
   var t = function () {
     if ("undefined" === typeof Reflect || !Reflect.construct) {
@@ -33,3 +33,4 @@ function o(e) {
     return Object(i.a)(this, n);
   };
 }
+export default o;

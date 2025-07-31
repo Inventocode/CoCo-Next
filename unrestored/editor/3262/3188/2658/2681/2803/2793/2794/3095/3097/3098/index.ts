@@ -1,1 +1,1 @@
-e.exports.browsers = require("./3099");
+module.exports.browsers = require("./3099");

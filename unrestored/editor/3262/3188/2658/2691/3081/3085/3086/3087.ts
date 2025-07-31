@@ -1,8 +1,8 @@
 "use strict";
 
-import * as r from "../../../../../../2873/2721/805/index";
-import * as i from "../../../../220";
-import * as a from "../../../../230";
+var r = require("../../../../../../2873/2721/805/index");
+var i = require("../../../../220");
+var a = require("../../../../230");
 function s(e) {
   if (e && e.__esModule) {
     return e;
@@ -24,6 +24,9 @@ function s(e) {
   t.default = e;
   return Object.freeze(t);
 }
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
 var o = s(require("../../../../2623/index"));
 var l = o.LOGICAL_OPERATORS;
 var u = o.arrowFunctionExpression;
@@ -307,8 +310,8 @@ var N = {
     }
   }
 };
-export default (function (e, t, n) {
+exports.default = function (e, t, n) {
   e.traverse(t, Object.assign({}, N, n, {
     memoiser: new C()
   }));
-});
+};

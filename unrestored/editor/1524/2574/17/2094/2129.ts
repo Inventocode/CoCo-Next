@@ -1,7 +1,11 @@
 "use strict";
 
-import * as r from "../../1000/93";
-import * as i from "../../1000/134/index";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.Registry = void 0;
+var r = require("../../1000/93");
+var i = require("../../1000/134/index");
 var o = function () {
   function e() {
     this.field_map = {};
@@ -27,4 +31,4 @@ var a = function () {
   }
   return e = (0, r.__decorate)([(0, i.injectable)()], e);
 }();
-export { a as Registry };
+exports.Registry = a;

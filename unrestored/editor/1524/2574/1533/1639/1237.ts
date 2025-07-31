@@ -1,6 +1,6 @@
 "use strict";
 
-import * as r from "../1727/439";
+var r = require("../1727/439");
 var o = function (e) {
   var t;
   var n;
@@ -14,6 +14,6 @@ var o = function (e) {
   this.resolve = r(t);
   this.reject = r(n);
 };
-e.exports.f = function (e) {
+module.exports.f = function (e) {
   return new o(e);
 };

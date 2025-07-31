@@ -1,7 +1,10 @@
 "use strict";
 
-import * as r from "../../../../../../3190/494";
-import * as i from "../../../../../../2873/2721/805/index";
+var r = require("../../../../../../3190/494");
+var i = require("../../../../../../2873/2721/805/index");
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
 exports._getKey = function (e, t) {
   var n = this;
   var r = this.node;
@@ -157,8 +160,8 @@ exports.getSibling = function (e) {
     key: e
   }).setContext(this.context);
 };
-import * as a from "./index";
-import * as s from "../../2624/index";
+var a = require("./index");
+var s = require("../../2624/index");
 var o = s.getBindingIdentifiers;
 var l = s.getOuterBindingIdentifiers;
 var u = s.isDeclaration;

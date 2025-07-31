@@ -1,5 +1,5 @@
-import * as r from "../../761";
-import * as i from "./2346";
+var r = require("../../761");
+var i = require("./2346");
 exports.mul = function (e, t) {
   for (var n = r.alloc(e.length + t.length - 1), o = 0; o < e.length; o++) {
     for (var a = 0; a < t.length; a++) {
@@ -22,7 +22,7 @@ exports.mod = function (e, t) {
 };
 exports.generateECPolynomial = function (e) {
   for (var n = r.from([1]), o = 0; o < e; o++) {
-    n = t.mul(n, [1, i.exp(o)]);
+    n = exports.mul(n, [1, i.exp(o)]);
   }
   return n;
 };

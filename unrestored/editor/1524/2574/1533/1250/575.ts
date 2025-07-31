@@ -1,11 +1,11 @@
 var r;
-import * as o from "../1659/241";
-import * as i from "../1738/1209";
-import * as a from "../1534/819/1059";
-import * as s from "../1534/815";
-import * as c from "../1736/1071/1210";
-import * as l from "../1736/1071/1056";
-import * as u from "../1534/932";
+var o = require("../1659/241");
+var i = require("../1738/1209");
+var a = require("../1534/819/1059");
+var s = require("../1534/815");
+var c = require("../1736/1071/1210");
+var l = require("../1736/1071/1056");
+var u = require("../1534/932");
 var d = u("IE_PROTO");
 var p = function () {};
 var f = function (e) {

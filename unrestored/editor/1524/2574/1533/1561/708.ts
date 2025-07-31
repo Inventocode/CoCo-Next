@@ -1,6 +1,6 @@
 "use strict";
 
-import * as r from "../1626/167";
+var r = require("../1626/167");
 module.exports = function (e, t) {
   var n = [][e];
   return !!n && r(function () {

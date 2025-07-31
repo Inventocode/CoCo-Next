@@ -1,7 +1,7 @@
 "use strict";
 
-import * as r from "./0/index";
-import * as o from "./50/index";
+var r = require("./0/index");
+var o = require("./50/index");
 var i = function (e, t) {
   return (i = Object.setPrototypeOf || {
     __proto__: []
@@ -45,11 +45,21 @@ var d;
 var p;
 var f;
 var h;
-var m = ((u = {})[s.VERTICAL] = "scrollTop", u[s.HORIZONTAL] = "scrollLeft", u);
-var g = ((d = {})[s.VERTICAL] = "height", d[s.HORIZONTAL] = "width", d);
-var _ = ((p = {})[s.VERTICAL] = "top", p[s.HORIZONTAL] = "left", p);
-var v = ((f = {})[s.VERTICAL] = "marginTop", f[s.HORIZONTAL] = "marginLeft", f);
-var b = ((h = {})[s.VERTICAL] = "marginBottom", h[s.HORIZONTAL] = "marginRight", h);
+(u = {})[s.VERTICAL] = "scrollTop";
+u[s.HORIZONTAL] = "scrollLeft";
+var m = u;
+(d = {})[s.VERTICAL] = "height";
+d[s.HORIZONTAL] = "width";
+var g = d;
+(p = {})[s.VERTICAL] = "top";
+p[s.HORIZONTAL] = "left";
+var _ = p;
+(f = {})[s.VERTICAL] = "marginTop";
+f[s.HORIZONTAL] = "marginLeft";
+var v = f;
+(h = {})[s.VERTICAL] = "marginBottom";
+h[s.HORIZONTAL] = "marginRight";
+var b = h;
 var y = function () {
   function e(e) {
     var t = e.itemCount;
@@ -372,14 +382,21 @@ var T = function (e) {
     var e;
     var t = this;
     var n = this.props;
-    var o = (n.estimatedItemSize, n.height);
+    n.estimatedItemSize;
+    var o = n.height;
     var i = n.overscanCount;
     var a = void 0 === i ? 3 : i;
     var c = n.renderItem;
-    var u = (n.itemCount, n.itemSize, n.onItemsRendered);
-    var d = (n.onScroll, n.scrollDirection);
+    n.itemCount;
+    n.itemSize;
+    var u = n.onItemsRendered;
+    n.onScroll;
+    var d = n.scrollDirection;
     var p = void 0 === d ? s.VERTICAL : d;
-    var f = (n.scrollOffset, n.scrollToIndex, n.scrollToAlignment, n.stickyIndices);
+    n.scrollOffset;
+    n.scrollToIndex;
+    n.scrollToAlignment;
+    var f = n.stickyIndices;
     var h = n.style;
     var m = n.width;
     var _ = function (e, t) {
@@ -492,4 +509,4 @@ var T = function (e) {
   };
   return t;
 }(r.PureComponent);
-export { T as a };
+exports.a = T;

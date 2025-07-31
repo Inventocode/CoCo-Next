@@ -46,3 +46,4 @@ function a() {
   return r;
 }
 Object.create;
+export default o;

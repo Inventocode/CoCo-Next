@@ -1,4 +1,4 @@
-import * as r from "./761";
+var r = require("./761");
 function i(e) {
   if (!e || e < 1) {
     throw new Error("BitMatrix size must be defined and greater than 0");

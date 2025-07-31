@@ -34,4 +34,4 @@ var r = {
     buttonText: "\u6309\u94ae\u6587\u6848"
   }
 };
-import * as o from "./189";
+var o = require("./189");

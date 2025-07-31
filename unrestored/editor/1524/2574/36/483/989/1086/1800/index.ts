@@ -1,4 +1,4 @@
-import * as r from "./956/index";
+var r = require("./956/index");
 module.exports = function (e, t) {
   var n = r(this, e);
   var i = n.size;

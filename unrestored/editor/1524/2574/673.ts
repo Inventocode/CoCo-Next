@@ -13,10 +13,10 @@ var r = {
     backgroundColor: "\u80cc\u666f\u989c\u8272"
   }
 };
-import * as o from "./6";
-import * as i from "./133";
-import * as a from "./5";
-import * as s from "./35/index";
+var o = require("./6");
+var i = require("./133");
+var a = require("./5");
+var s = require("./35/index");
 var c = {
   type: a.v,
   icon: i.a,

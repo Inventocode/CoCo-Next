@@ -50,7 +50,7 @@
     }), !i).join("/")) || ".";
   };
   exports.normalize = function (e) {
-    var o = t.isAbsolute(e);
+    var o = exports.isAbsolute(e);
     var a = "/" === i(e, -1);
     if (!((e = n(r(e.split("/"), function (e) {
       return !!e;
@@ -67,7 +67,7 @@
   };
   exports.join = function () {
     var e = Array.prototype.slice.call(arguments, 0);
-    return t.normalize(r(e, function (e, t) {
+    return exports.normalize(r(e, function (e, t) {
       if ("string" !== typeof e) {
         throw new TypeError("Arguments to path.join must be strings");
       }
@@ -84,8 +84,8 @@
       }
       return t > n ? [] : e.slice(t, n - t + 1);
     }
-    e = t.resolve(e).substr(1);
-    n = t.resolve(n).substr(1);
+    e = exports.resolve(e).substr(1);
+    n = exports.resolve(n).substr(1);
     for (var i = r(e.split("/")), o = r(n.split("/")), a = Math.min(i.length, o.length), s = a, c = 0; c < a; c++) {
       if (i[c] !== o[c]) {
         s = c;

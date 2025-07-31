@@ -1,10 +1,10 @@
 "use strict";
 
 export { W as a };
-import * as r from "../0/index";
-import * as i from "./987";
-import * as o from "./275";
-import * as a from "./277";
+var r = require("../0/index");
+var i = require("./987");
+var o = require("./275");
+var a = require("./277");
 var s = ["localeMatcher", "style", "currency", "currencyDisplay", "unit", "unitDisplay", "useGrouping", "minimumIntegerDigits", "minimumFractionDigits", "maximumFractionDigits", "minimumSignificantDigits", "maximumSignificantDigits", "compactDisplay", "currencyDisplay", "currencySign", "notation", "signDisplay", "unit", "unitDisplay"];
 function c(e, t, n) {
   var r = e.locale;
@@ -39,7 +39,7 @@ function l(e, t, n, r) {
   }
   return [];
 }
-import * as f from "./795";
+var f = require("./795");
 var h = ["numeric", "style"];
 function d(e, t, n, r, i) {
   if (void 0 === i) {
@@ -168,9 +168,9 @@ function w(e, t, n, r) {
 }
 var E;
 var x;
-import * as C from "./2578";
-import * as O from "./2579/index";
-import * as S from "./1433/index";
+var C = require("./2578");
+var O = require("./2579/index");
+var S = require("./1433/index");
 !function (e) {
   e[e.literal = 0] = "literal";
   e[e.argument = 1] = "argument";
@@ -295,8 +295,19 @@ function R(e, t, n, r) {
   }
   return g || _ || A;
 }
-import * as P from "./1167";
-import * as N from "./1167";
+var P = require("./1167");
+var N = (module => {
+  var defaultExport = module && module.__esModule ? function () {
+    return module.default;
+  } : function () {
+    return module;
+  };
+  Object.defineProperty(defaultExport, "a", {
+    enumerable: true,
+    get: defaultExport
+  });
+  return defaultExport;
+})(P);
 var M = ["localeMatcher", "type", "style"];
 var j = Date.now();
 function L(e, t, n, r) {
@@ -467,3 +478,4 @@ var K = function (e) {
   return t;
 }(r.PureComponent);
 export { K as b };
+export default W;

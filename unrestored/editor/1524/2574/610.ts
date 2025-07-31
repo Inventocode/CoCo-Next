@@ -7,3 +7,4 @@ var r = function () {
   }
   return t;
 };
+export default r;

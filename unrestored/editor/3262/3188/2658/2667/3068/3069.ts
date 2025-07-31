@@ -1,6 +1,9 @@
 "use strict";
 
-export default (function (e, t, n) {
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.default = function (e, t, n) {
   var s;
   t = e.code(t);
   return function (o) {
@@ -10,7 +13,7 @@ export default (function (e, t, n) {
     }
     return e.unwrap((0, a.default)(s, l));
   };
-});
-import * as r from "./2703";
-import * as i from "./3070/2787";
-import * as a from "./3070/2788";
+};
+var r = require("./2703");
+var i = require("./3070/2787");
+var a = require("./3070/2788");

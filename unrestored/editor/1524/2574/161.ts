@@ -245,3 +245,4 @@ var Q = function (e, t) {
     type: X
   };
 };
+export default h;

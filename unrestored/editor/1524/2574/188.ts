@@ -3,10 +3,21 @@
 export { d as b };
 export { p as a };
 var r;
-import * as o from "./27";
-import * as i from "./40";
-import * as a from "./0/index";
-import * as s from "./0/index";
+var o = require("./27");
+var i = require("./40");
+var a = require("./0/index");
+var s = (module => {
+  var defaultExport = module && module.__esModule ? function () {
+    return module.default;
+  } : function () {
+    return module;
+  };
+  Object.defineProperty(defaultExport, "a", {
+    enumerable: true,
+    get: defaultExport
+  });
+  return defaultExport;
+})(a);
 if (navigator.platform.match("Mac")) {
   r = "osx";
 } else {
@@ -129,3 +140,4 @@ function p(e) {
     value: o.current
   }, t);
 }
+export default p;

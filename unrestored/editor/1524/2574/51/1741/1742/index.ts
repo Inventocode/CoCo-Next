@@ -1,6 +1,6 @@
 "use strict";
 
-import * as r from "./1743";
+var r = require("./1743");
 var i = Array.prototype.concat;
 var o = Array.prototype.slice;
 var a = module.exports = function (e) {

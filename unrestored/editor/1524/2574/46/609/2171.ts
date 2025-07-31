@@ -1,5 +1,9 @@
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.load_json_js_generator_logic = void 0;
 exports.load_json_js_generator_logic = function (e) {
   e.register("logic_negate", function (t, n) {
     var r = e.ORDER_LOGICAL_NOT;

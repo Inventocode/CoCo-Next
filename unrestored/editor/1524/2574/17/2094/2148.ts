@@ -1,10 +1,14 @@
 "use strict";
 
-import * as r from "../../1000/93";
-import * as i from "../../1000/134/index";
-import * as o from "../../125/index";
-import * as a from "../../125/474";
-import * as s from "../../4/127";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.WorkspaceAudio = void 0;
+var r = require("../../1000/93");
+var i = require("../../1000/134/index");
+var o = require("../../125/index");
+var a = require("../../125/474");
+var s = require("../../4/127");
 var c = function () {
   function e(e) {
     this.last_sound_ = void 0;
@@ -66,4 +70,4 @@ var c = function () {
   (0, r.__decorate)([(0, s.lazy_inject)(s.BINDING.theme)], e.prototype, "theme", void 0);
   return e = (0, r.__decorate)([(0, i.injectable)()], e);
 }();
-export { c as WorkspaceAudio };
+exports.WorkspaceAudio = c;

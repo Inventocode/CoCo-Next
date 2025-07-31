@@ -1,8 +1,8 @@
 "use strict";
 
-import * as r from "./1626/86/index";
+var r = require("./1626/86/index");
 var o = require("./1707/399").find;
-import * as i from "./935/633";
+var i = require("./935/633");
 var a = !0;
 if ("find" in []) {
   Array(1).find(function () {

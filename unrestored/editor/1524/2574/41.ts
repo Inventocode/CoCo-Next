@@ -1,10 +1,21 @@
 "use strict";
 
-import * as r from "./186/index";
-import * as o from "./186/index";
-import * as i from "./23";
-import * as a from "./38/index";
-import * as s from "./2/index";
+var r = require("./186/index");
+var o = (module => {
+  var defaultExport = module && module.__esModule ? function () {
+    return module.default;
+  } : function () {
+    return module;
+  };
+  Object.defineProperty(defaultExport, "a", {
+    enumerable: true,
+    get: defaultExport
+  });
+  return defaultExport;
+})(r);
+var i = require("./23");
+var a = require("./38/index");
+var s = require("./2/index");
 var c = o.a.create({
   timeout: 2e4,
   withCredentials: !0
@@ -29,3 +40,4 @@ c.interceptors.response.use(function (e) {
   return Promise.reject(e);
 });
 export { c as a };
+export default c;

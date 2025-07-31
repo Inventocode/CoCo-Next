@@ -1,7 +1,11 @@
 "use strict";
 
-import * as r from "./2540/579";
-import * as o from "./2543/1418";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.init_events_blocks = void 0;
+var r = require("./2540/579");
+var o = require("./2543/1418");
 exports.init_events_blocks = function (e) {
   var t = [{
     type: "start_on_click",

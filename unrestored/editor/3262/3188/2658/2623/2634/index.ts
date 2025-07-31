@@ -1,24 +1,78 @@
 "use strict";
 
-export { ALIAS_KEYS } from "./2643";
-export { BUILDER_KEYS } from "./2643";
-export { DEPRECATED_KEYS } from "./2643";
-export { FLIPPED_ALIAS_KEYS } from "./2643";
-export { NODE_FIELDS } from "./2643";
-export { NODE_PARENT_VALIDATIONS } from "./2643";
-export { PLACEHOLDERS } from "./2763";
-export { PLACEHOLDERS_ALIAS } from "./2763";
-export { PLACEHOLDERS_FLIPPED_ALIAS } from "./2763";
-export { VISITOR_KEYS } from "./2643";
-import * as r from "./2673";
-import "./2761";
-import "./2991";
-import "./2992";
-import "./2993";
-import "./2994";
-import "./2995";
-import * as i from "./2643";
-import * as a from "./2763";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+Object.defineProperty(exports, "ALIAS_KEYS", {
+  enumerable: !0,
+  get: function () {
+    return i.ALIAS_KEYS;
+  }
+});
+Object.defineProperty(exports, "BUILDER_KEYS", {
+  enumerable: !0,
+  get: function () {
+    return i.BUILDER_KEYS;
+  }
+});
+Object.defineProperty(exports, "DEPRECATED_KEYS", {
+  enumerable: !0,
+  get: function () {
+    return i.DEPRECATED_KEYS;
+  }
+});
+Object.defineProperty(exports, "FLIPPED_ALIAS_KEYS", {
+  enumerable: !0,
+  get: function () {
+    return i.FLIPPED_ALIAS_KEYS;
+  }
+});
+Object.defineProperty(exports, "NODE_FIELDS", {
+  enumerable: !0,
+  get: function () {
+    return i.NODE_FIELDS;
+  }
+});
+Object.defineProperty(exports, "NODE_PARENT_VALIDATIONS", {
+  enumerable: !0,
+  get: function () {
+    return i.NODE_PARENT_VALIDATIONS;
+  }
+});
+Object.defineProperty(exports, "PLACEHOLDERS", {
+  enumerable: !0,
+  get: function () {
+    return a.PLACEHOLDERS;
+  }
+});
+Object.defineProperty(exports, "PLACEHOLDERS_ALIAS", {
+  enumerable: !0,
+  get: function () {
+    return a.PLACEHOLDERS_ALIAS;
+  }
+});
+Object.defineProperty(exports, "PLACEHOLDERS_FLIPPED_ALIAS", {
+  enumerable: !0,
+  get: function () {
+    return a.PLACEHOLDERS_FLIPPED_ALIAS;
+  }
+});
+exports.TYPES = void 0;
+Object.defineProperty(exports, "VISITOR_KEYS", {
+  enumerable: !0,
+  get: function () {
+    return i.VISITOR_KEYS;
+  }
+});
+var r = require("./2673");
+require("./2761");
+require("./2991");
+require("./2992");
+require("./2993");
+require("./2994");
+require("./2995");
+var i = require("./2643");
+var a = require("./2763");
 r(i.VISITOR_KEYS);
 r(i.ALIAS_KEYS);
 r(i.FLIPPED_ALIAS_KEYS);
@@ -28,4 +82,4 @@ r(i.DEPRECATED_KEYS);
 r(a.PLACEHOLDERS_ALIAS);
 r(a.PLACEHOLDERS_FLIPPED_ALIAS);
 var s = [].concat(Object.keys(i.VISITOR_KEYS), Object.keys(i.FLIPPED_ALIAS_KEYS), Object.keys(i.DEPRECATED_KEYS));
-export { s as TYPES };
+exports.TYPES = s;

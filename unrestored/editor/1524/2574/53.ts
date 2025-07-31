@@ -106,7 +106,7 @@ var h = /^[^-]{0,}$/i;
 function m(e) {
   return new RegExp("^[\\d-]{0,".concat(e, "}$"), "i");
 }
-import * as g from "./60";
+var g = require("./60");
 var _ = 20;
 var v = 40;
 var b = "1.21.7";
@@ -115,3 +115,4 @@ var E = 320;
 var O = .8;
 var w = "http://www.w3.org/2000/svg";
 var C = 3;
+export default r;

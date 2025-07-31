@@ -1,9 +1,12 @@
 "use strict";
 
-export default (function (e, t, n, i) {
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.default = function (e, t, n, i) {
   return (0, r.default)(e, t, [{
     type: i ? "CommentLine" : "CommentBlock",
     value: n
   }]);
-});
-import * as r from "./2766";
+};
+var r = require("./2766");

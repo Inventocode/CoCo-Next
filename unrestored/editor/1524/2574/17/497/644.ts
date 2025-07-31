@@ -1,9 +1,13 @@
 "use strict";
 
-import * as r from "../../206/208/index";
-import * as i from "../../125/195/index";
-import * as o from "../../206/725/387";
-import * as a from "../../1000/213/index";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.get_nested_blocks_with_comment = exports.get_outer_block = exports.has_context = exports.is_valid_context = exports.cal_num_blocks = exports.fire_block_onchange = exports.update_disable_status = void 0;
+var r = require("../../206/208/index");
+var i = require("../../125/195/index");
+var o = require("../../206/725/387");
+var a = require("../../1000/213/index");
 function s(e) {
   var t = e.previous_connection || e.output_connection;
   return !(!t || !t.context || t.source_block.is_shadow());
@@ -83,7 +87,7 @@ exports.is_valid_context = function (e) {
   }
   return !1;
 };
-export { s as has_context };
+exports.has_context = s;
 exports.get_outer_block = function (e) {
   var t = e;
   if (!t.is_output_block()) {

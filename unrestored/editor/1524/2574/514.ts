@@ -1,7 +1,7 @@
 "use strict";
 
 export { o as a };
-import * as r from "./0/index";
+var r = require("./0/index");
 var i = r.createContext(void 0);
 var o = function (e) {
   var t = e.children;
@@ -13,3 +13,4 @@ var o = function (e) {
   });
 };
 export { i as b };
+export default o;

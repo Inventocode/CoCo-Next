@@ -1,8 +1,8 @@
 "use strict";
 
 export { o as a };
-import * as r from "../57/770";
-import * as i from "../58/988";
+var r = require("../57/770");
+var i = require("../58/988");
 function o(e, t, n) {
   return (o = Object(i.a)() ? Reflect.construct : function (e, t, n) {
     var i = [null];
@@ -14,3 +14,4 @@ function o(e, t, n) {
     return o;
   }).apply(null, arguments);
 }
+export default o;

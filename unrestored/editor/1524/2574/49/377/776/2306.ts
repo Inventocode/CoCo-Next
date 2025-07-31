@@ -1,13 +1,17 @@
 "use strict";
 
-import * as r from "../../../1000/93";
-import * as i from "../../../1035/32/index";
-import * as o from "../../../1035/1356/index";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.TransformToOp = void 0;
+var r = require("../../../1000/93");
+var i = require("../../../1035/32/index");
+var o = require("../../../1035/1356/index");
 var a = (0, r.__importStar)(require("../../../17/533"));
-import * as s from "../../../4/127";
-import * as c from "../../../125/294";
-import * as u from "../../../17/497/961";
-import * as l from "../728/1131";
+var s = require("../../../4/127");
+var c = require("../../../125/294");
+var u = require("../../../17/497/961");
+var l = require("../728/1131");
 var f = function () {
   function e(e, t) {
     var n = this;
@@ -695,4 +699,4 @@ var f = function () {
   (0, r.__decorate)([(0, s.lazy_inject)(s.BINDING.Blink)], e.prototype, "Blink", void 0);
   return e;
 }();
-export { f as TransformToOp };
+exports.TransformToOp = f;

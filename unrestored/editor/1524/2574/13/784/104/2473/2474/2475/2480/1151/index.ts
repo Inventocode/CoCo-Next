@@ -1,5 +1,5 @@
-import * as r from "./2452";
-import * as i from "../../2481/1408/1397";
+var r = require("./2452");
+var i = require("../../2481/1408/1397");
 var o = Object.prototype.propertyIsEnumerable;
 var a = Object.getOwnPropertySymbols;
 var s = a ? function (e) {

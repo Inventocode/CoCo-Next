@@ -1,5 +1,8 @@
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
 var r;
 var i = Object.assign || function (e) {
   for (var t = 1; t < arguments.length; t++) {
@@ -10,11 +13,11 @@ var i = Object.assign || function (e) {
   }
   return e;
 };
-import * as o from "../../0/index";
+var o = require("../../0/index");
 var a = (r = o) && r.__esModule ? r : {
   default: r
 };
-export default (function (e) {
+exports.default = function (e) {
   var t = e.fill;
   var n = void 0 === t ? "currentColor" : t;
   var r = e.width;
@@ -42,4 +45,4 @@ export default (function (e) {
   }, f), a.default.createElement("path", {
     d: "M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"
   }));
-});
+};

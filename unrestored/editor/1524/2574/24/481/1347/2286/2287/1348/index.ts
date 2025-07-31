@@ -1,7 +1,7 @@
-import * as r from "./1125/index";
-import * as i from "./2289/index";
-import * as o from "./2298";
-import * as a from "./2299/index";
+var r = require("./1125/index");
+var i = require("./2289/index");
+var o = require("./2298");
+var a = require("./2299/index");
 exports.polling = function (e) {
   var t = !1;
   var n = !1;
@@ -23,4 +23,4 @@ exports.polling = function (e) {
   }
   return new o(e);
 };
-export { a as websocket };
+exports.websocket = a;

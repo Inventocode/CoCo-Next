@@ -1,6 +1,10 @@
 "use strict";
 
-import * as r from "../../1000/213/index";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.shortest_string_length = exports.equals = exports.remove = void 0;
+var r = require("../../1000/213/index");
 exports.remove = function (e, t) {
   var n = e.indexOf(t);
   var r = n >= 0;

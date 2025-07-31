@@ -1,7 +1,7 @@
 "use strict";
 
-import * as r from "../1727/439";
-import * as o from "../1626/231";
+var r = require("../1727/439");
+var o = require("../1626/231");
 var i = [].slice;
 var a = {};
 var s = function (e, t, n) {

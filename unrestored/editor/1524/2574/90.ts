@@ -6,3 +6,4 @@ export { i as a };
 var r = "coco-unmovable";
 var o = "coco-selectable";
 var i = "coco-editable";
+export default i;

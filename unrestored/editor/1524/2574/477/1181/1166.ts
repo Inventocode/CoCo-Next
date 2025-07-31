@@ -1,7 +1,7 @@
 "use strict";
 
 export { i as a };
-import * as r from "./306";
+var r = require("./306");
 function i(e, t) {
   try {
     for (var n = e, r = [], i = 0, a = 0, s = " > ".length, c = void 0; n && i++ < 5 && !("html" === (c = o(n, t)) || i > 1 && a + r.length * s + c.length >= 80);) {
@@ -51,3 +51,4 @@ function o(e, t) {
   }
   return f.join("");
 }
+export default i;

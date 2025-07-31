@@ -1,9 +1,13 @@
 "use strict";
 
-import * as r from "../../1000/93";
-import * as i from "../../1000/134/index";
-import * as o from "../../125/259";
-import * as a from "../../4/127";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.BlockDragger = void 0;
+var r = require("../../1000/93");
+var i = require("../../1000/134/index");
+var o = require("../../125/259");
+var a = require("../../4/127");
 var s = function (e) {
   function t(t) {
     var n = e.call(this, t.target, t.workspace) || this;
@@ -126,4 +130,4 @@ var s = function (e) {
   (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.dragged_connection_manager)], t.prototype, "dragged_connection_manager", void 0);
   return t = (0, r.__decorate)([(0, i.injectable)()], t);
 }(require("./2117/1310").ElementDragger);
-export { s as BlockDragger };
+exports.BlockDragger = s;

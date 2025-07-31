@@ -1,9 +1,9 @@
 "use strict";
 
 export { a };
-import * as r from "./995";
-import * as i from "../80/771";
-import * as o from "./996";
+var r = require("./995");
+var i = require("../80/771");
+var o = require("./996");
 function a(e, t) {
   return Object(r.a)(e) || function (e, t) {
     if ("undefined" !== typeof Symbol && Symbol.iterator in Object(e)) {
@@ -33,3 +33,4 @@ function a(e, t) {
     }
   }(e, t) || Object(i.a)(e, t) || Object(o.a)();
 }
+export default a;

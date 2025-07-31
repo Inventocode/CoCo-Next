@@ -1,5 +1,8 @@
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
 exports.getEnv = function () {
   return Object({
     NODE_ENV: "production",

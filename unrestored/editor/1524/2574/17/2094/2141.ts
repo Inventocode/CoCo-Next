@@ -1,12 +1,16 @@
 "use strict";
 
-import * as r from "../../1000/93";
-import * as i from "../../1000/134/index";
-import * as o from "../../4/127";
-import * as a from "../497/644";
-import * as s from "../../1000/213/index";
-import * as c from "../../125/195/index";
-import * as u from "../../125/index";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.SimplifiedCommentBubble = void 0;
+var r = require("../../1000/93");
+var i = require("../../1000/134/index");
+var o = require("../../4/127");
+var a = require("../497/644");
+var s = require("../../1000/213/index");
+var c = require("../../125/195/index");
+var u = require("../../125/index");
 var l = function () {
   function e() {
     this.is_showing = !1;
@@ -334,4 +338,4 @@ var l = function () {
   (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.Msg)], e.prototype, "Msg", void 0);
   return e = (0, r.__decorate)([(0, i.injectable)()], e);
 }();
-export { l as SimplifiedCommentBubble };
+exports.SimplifiedCommentBubble = l;

@@ -1,5 +1,5 @@
-import * as r from "./2510/index";
-import * as i from "./2517/index";
+var r = require("./2510/index");
+var i = require("./2517/index");
 module.exports = function (e) {
   return r(function (t, n) {
     var r = -1;

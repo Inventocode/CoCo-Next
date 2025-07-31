@@ -1,6 +1,6 @@
 "use strict";
 
-import * as r from "./1451";
+var r = require("./1451");
 var i = function () {
   return (i = Object.assign || function (e) {
     for (var t, n = 1, r = arguments.length; n < r; n++) {
@@ -608,4 +608,4 @@ var v = function () {
   };
   return e;
 }();
-export { v as a };
+exports.a = v;

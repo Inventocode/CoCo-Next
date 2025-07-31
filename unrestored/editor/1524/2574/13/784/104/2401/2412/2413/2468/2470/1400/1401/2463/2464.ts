@@ -1,7 +1,7 @@
-import * as r from "../../../../../../../1388/718/848";
-import * as i from "../../../../../../1389";
-import * as o from "../../../../../../446";
-import * as a from "../../../../../../../../../../254/2523/1413/2521/978";
+var r = require("../../../../../../../1388/718/848");
+var i = require("../../../../../../1389");
+var o = require("../../../../../../446");
+var a = require("../../../../../../../../../../254/2523/1413/2521/978");
 var s = r ? r.prototype : void 0;
 var c = s ? s.toString : void 0;
 module.exports = function e(t) {

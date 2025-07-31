@@ -1,7 +1,10 @@
 "use strict";
 
-import * as r from "../../../../../../3190/494";
-export default (function (e) {
+var r = require("../../../../../../3190/494");
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.default = function (e) {
   if (!this.isReferenced()) {
     return;
   }
@@ -100,8 +103,8 @@ export default (function (e) {
     return p();
   }
   e.name;
-});
-import * as i from "../../../../2623/index";
+};
+var i = require("../../../../2623/index");
 var a = i.BOOLEAN_NUMBER_BINARY_OPERATORS;
 var s = i.createFlowUnionType;
 var o = i.createTSUnionType;

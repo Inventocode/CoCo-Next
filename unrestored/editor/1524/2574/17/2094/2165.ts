@@ -1,15 +1,19 @@
 "use strict";
 
-import * as r from "../../1000/93";
-import * as i from "../../1000/134/index";
-import * as o from "../../125/259";
-import * as a from "../../4/127";
-import * as s from "../../125/195/index";
-import * as c from "../../125/index";
-import * as u from "../../1000/213/index";
-import * as l from "../../125/294";
-import * as f from "../497/644";
-import * as h from "./2164/755";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.SimplifiedWorkspaceComment = void 0;
+var r = require("../../1000/93");
+var i = require("../../1000/134/index");
+var o = require("../../125/259");
+var a = require("../../4/127");
+var s = require("../../125/195/index");
+var c = require("../../125/index");
+var u = require("../../1000/213/index");
+var l = require("../../125/294");
+var f = require("../497/644");
+var h = require("./2164/755");
 var d = function (e) {
   function t(t, n, r, i) {
     var a = e.call(this, t) || this;
@@ -324,4 +328,4 @@ var d = function (e) {
   (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.SimplifiedCommentBubble)], t.prototype, "comment_bubble", void 0);
   return t = (0, r.__decorate)([(0, i.injectable)()], t);
 }(require("./962").WorkspaceElement);
-export { d as SimplifiedWorkspaceComment };
+exports.SimplifiedWorkspaceComment = d;

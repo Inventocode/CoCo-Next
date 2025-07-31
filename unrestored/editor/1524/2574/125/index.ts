@@ -1,23 +1,27 @@
 "use strict";
 
-import * as r from "../1000/93";
-import * as i from "./259";
-import * as o from "./195/index";
-import * as a from "./534";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.get_num_g = exports.reset_all_block_id = exports.insert_before = exports.insert_after = exports.clone_node = exports.get_size_attr = exports.get_translate = exports.update_visibility_class = exports.add_class_if_necessary = exports.remove_class_if_necessary = exports.is_in_same_shadow = exports.is_inside_shadow = exports.is_parent = exports.xmlstr_to_dom = exports.contains = exports.has_class = exports.get_owner_document = exports.get_viewport_bbox = exports.get_viewport_size = exports.get_document_scroll = exports.remove_children = exports.create_dom = exports.get_page_offset = exports.parse_to_SVG = exports.parse_to_DOM = exports.remove_class = exports.add_class = exports.create_font_icon = exports.create_div_element = exports.create_svg_element = exports.set_css_transform = exports.remove_attribute = exports.remove_node = exports.XLINK_NS = exports.SVG_NS = void 0;
+var r = require("../1000/93");
+var i = require("./259");
+var o = require("./195/index");
+var a = require("./534");
 var s = (0, r.__importStar)(require("./714"));
 var c = (0, r.__importStar)(require("./294"));
 var u = (0, r.__importStar)(require("../1000/213/index"));
-import * as l from "./474";
+var l = require("./474");
 exports.SVG_NS = "http://www.w3.org/2000/svg";
 exports.XLINK_NS = "http://www.w3.org/1999/xlink";
 function f(e, n, r) {
   if (void 0 === n) {
     n = {};
   }
-  var i = document.createElementNS(t.SVG_NS, e);
+  var i = document.createElementNS(exports.SVG_NS, e);
   for (var o in n) if (0 === o.indexOf("xlink:")) {
     var a = o.slice("xlink:".length);
-    i.setAttributeNS(t.XLINK_NS, a, n[o]);
+    i.setAttributeNS(exports.XLINK_NS, a, n[o]);
   } else {
     i.setAttribute(o, n[o]);
   }
@@ -81,7 +85,7 @@ exports.set_css_transform = function (e, t) {
   e.style.transform = t;
   e.style.webkitTransform = t;
 };
-export { f as create_svg_element };
+exports.create_svg_element = f;
 exports.create_div_element = function (e) {
   var t = document.createElement("div");
   if (e) {
@@ -129,8 +133,8 @@ exports.parse_to_DOM = function (e) {
   return t.firstElementChild;
 };
 exports.parse_to_SVG = function (e) {
-  var n = document.createElementNS(t.SVG_NS, "div");
-  n.innerHTML = "<svg xmlns=" + t.SVG_NS + ">" + e + "</svg>";
+  var n = document.createElementNS(exports.SVG_NS, "div");
+  n.innerHTML = "<svg xmlns=" + exports.SVG_NS + ">" + e + "</svg>";
   for (var r = document.createDocumentFragment(); n.firstChild && n.firstChild.firstChild;) {
     r.appendChild(n.firstChild.firstChild);
   }
@@ -203,7 +207,7 @@ exports.get_document_scroll = function () {
   var t = document.defaultView;
   return i.vec2.fromValues(t.pageXOffset || e.scrollLeft, t.pageYOffset || e.scrollTop);
 };
-export { p as get_viewport_size };
+exports.get_viewport_size = p;
 exports.get_viewport_bbox = function () {
   var e = p();
   var t = s.get_viewport_page_offset(document);
@@ -241,7 +245,7 @@ exports.contains = function (e, t) {
 exports.xmlstr_to_dom = function (e) {
   return new DOMParser().parseFromString(e, "text/xml").firstChild;
 };
-export { _ as is_parent };
+exports.is_parent = _;
 exports.is_inside_shadow = function (e) {
   for (var t = null === e || void 0 === e ? void 0 : e.parentElement; t;) {
     if (t.classList.contains("blocklyShadow")) {
@@ -263,8 +267,8 @@ exports.is_in_same_shadow = function (e, t) {
   }
   return _(n, t);
 };
-export { A as remove_class_if_necessary };
-export { g as add_class_if_necessary };
+exports.remove_class_if_necessary = A;
+exports.add_class_if_necessary = g;
 exports.update_visibility_class = function (e, t) {
   switch (t) {
     case o.BlockVisibility.VISIBLE:

@@ -1,6 +1,10 @@
 "use strict";
 
-import * as r from "./443";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.circularDependencyToException = exports.listMetadataForTarget = exports.listRegisteredBindingsForServiceIdentifier = exports.getServiceIdentifierAsString = exports.getFunctionName = void 0;
+var r = require("./443");
 function i(e) {
   return "function" === typeof e ? e.name : "symbol" === typeof e ? e.toString() : e;
 }
@@ -12,7 +16,7 @@ function o(e) {
   var n = t.match(/^function\s*([^\s(]+)/);
   return n ? n[1] : "Anonymous function: " + t;
 }
-export { i as getServiceIdentifierAsString };
+exports.getServiceIdentifierAsString = i;
 exports.listRegisteredBindingsForServiceIdentifier = function (e, t, n) {
   var r = "";
   var i = n(e, t);
@@ -68,4 +72,4 @@ exports.listMetadataForTarget = function (e, t) {
   }
   return " " + e;
 };
-export { o as getFunctionName };
+exports.getFunctionName = o;

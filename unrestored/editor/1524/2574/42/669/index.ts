@@ -2,9 +2,21 @@
 
 (function (e) {
   var r = require("../../0/index");
-  var o = n.n(r);
+  var o = (module => {
+    var defaultExport = module && module.__esModule ? function () {
+      return module.default;
+    } : function () {
+      return module;
+    };
+    Object.defineProperty(defaultExport, "a", {
+      enumerable: true,
+      get: defaultExport
+    });
+    return defaultExport;
+  })(r);
   var i = require("../../458");
-  var a = (require("./847"), require("../../16/index"));
+  require("./847");
+  var a = require("../../16/index");
   var s = require("../../5");
   var c = require("../../64");
   var l = require("../../15/index");

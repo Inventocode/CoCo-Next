@@ -1,6 +1,10 @@
 "use strict";
 
-import * as r from "../../../1000/93";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.JsonJavaScriptGenerator = void 0;
+var r = require("../../../1000/93");
 var i = function (e) {
   function t() {
     var t = e.call(this, "Javascript") || this;
@@ -51,4 +55,4 @@ var i = function (e) {
   };
   return t;
 }(require("./1319").JsonGenerator);
-export { i as JsonJavaScriptGenerator };
+exports.JsonJavaScriptGenerator = i;

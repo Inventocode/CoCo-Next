@@ -7,7 +7,10 @@ function r() {
   };
   return e;
 }
-export { s as makeConfigAPI };
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.makeConfigAPI = s;
 exports.makePluginAPI = function (e) {
   return Object.assign({}, o(e), {
     assumption: function (t) {
@@ -17,10 +20,10 @@ exports.makePluginAPI = function (e) {
     }
   });
 };
-export { o as makePresetAPI };
-import * as i from "../../index";
-import * as a from "./2684";
-import "./2802";
+exports.makePresetAPI = o;
+var i = require("../../index");
+var a = require("./2684");
+require("./2802");
 function s(e) {
   return {
     version: i.version,

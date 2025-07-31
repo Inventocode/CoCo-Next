@@ -1,10 +1,10 @@
 "use strict";
 
 export { s as a };
-import * as r from "../1501/index";
-import * as i from "../265";
-import * as o from "../350";
-import * as a from "../218";
+var r = require("../1501/index");
+var i = require("../265");
+var o = require("../350");
+var a = require("../218");
 function s() {
   Object(r.a)({
     callback: c,
@@ -22,3 +22,4 @@ function c() {
     e.setStatus(o.a.InternalError);
   }
 }
+export default s;

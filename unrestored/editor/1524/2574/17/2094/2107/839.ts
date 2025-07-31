@@ -1,7 +1,11 @@
 "use strict";
 
-import * as r from "../../../1000/93";
-import * as i from "../../../4/127";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.BaseEvent = void 0;
+var r = require("../../../1000/93");
+var i = require("../../../4/127");
 var o = function () {
   function e() {
     this._workspace_id = "";
@@ -40,4 +44,4 @@ var o = function () {
   (0, r.__decorate)([(0, i.lazy_inject)(i.BINDING.workspace_db)], e.prototype, "workspace_db", void 0);
   return e;
 }();
-export { o as BaseEvent };
+exports.BaseEvent = o;

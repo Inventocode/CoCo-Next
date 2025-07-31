@@ -36,3 +36,4 @@ var p = 10;
 var _ = 1;
 var A = .1;
 var g = 0;
+export default c;

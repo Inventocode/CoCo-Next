@@ -1,9 +1,9 @@
-import * as r from "./952/index";
-import * as i from "./1778";
-import * as o from "./1779";
-import * as a from "./1780";
-import * as s from "./1781";
-import * as c from "./1782";
+var r = require("./952/index");
+var i = require("./1778");
+var o = require("./1779");
+var a = require("./1780");
+var s = require("./1781");
+var c = require("./1782");
 function u(e) {
   var t = this.__data__ = new r(e);
   this.size = t.size;

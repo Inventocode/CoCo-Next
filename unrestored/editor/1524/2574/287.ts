@@ -7,3 +7,4 @@ export { r as a };
   e.CIRCLE = "CIRCLE";
   e.NONE = "NONE";
 })(r || (r = {}));
+export default r;

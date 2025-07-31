@@ -1,6 +1,9 @@
 "use strict";
 
-import * as r from "../../../../../3190/494";
+var r = require("../../../../../3190/494");
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
 exports._replaceWith = function (e) {
   var t;
   if (!this.container) {
@@ -172,13 +175,13 @@ exports.replaceWithSourceString = function (e) {
   a.default.removeProperties(e);
   return this.replaceWith(e);
 };
-import * as i from "../../../2691/2678/index";
-import * as a from "../../index";
-import * as s from "../index";
-import * as o from "../../2656";
-import * as l from "../../../2679/index";
-import * as u from "../../../2623/index";
-import * as c from "./3062";
+var i = require("../../../2691/2678/index");
+var a = require("../../index");
+var s = require("../index");
+var o = require("../../2656");
+var l = require("../../../2679/index");
+var u = require("../../../2623/index");
+var c = require("./3062");
 var p = u.FUNCTION_TYPES;
 var f = u.arrowFunctionExpression;
 var d = u.assignmentExpression;

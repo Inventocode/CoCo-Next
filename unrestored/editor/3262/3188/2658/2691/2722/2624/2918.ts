@@ -1,6 +1,9 @@
 "use strict";
 
-export default (function (e) {
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.default = function (e) {
   if ((0, r.default)(e.type, "Immutable")) {
     return !0;
   }
@@ -8,6 +11,6 @@ export default (function (e) {
     return "undefined" === e.name;
   }
   return !1;
-});
-import * as r from "./2693";
-import * as i from "./2625";
+};
+var r = require("./2693");
+var i = require("./2625");

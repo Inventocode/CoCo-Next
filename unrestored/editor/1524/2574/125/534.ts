@@ -1,5 +1,9 @@
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.ICON = exports.VISIBILITY_CLASSNAME = exports.NEED_COLLAPSE_CHILDREN_BLOCKS = exports.SPECIAL_CONNECTION_INPUT_NAME = exports.COLLAPSED_INPUT_NAME = exports.HTML_NS = exports.SVG_NS = void 0;
 exports.SVG_NS = "http://www.w3.org/2000/svg";
 exports.HTML_NS = "http://www.w3.org/1999/xhtml";
 exports.COLLAPSED_INPUT_NAME = "_TEMP_COLLAPSED_INPUT";

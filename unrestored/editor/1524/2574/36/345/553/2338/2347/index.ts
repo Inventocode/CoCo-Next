@@ -1,9 +1,9 @@
-import * as r from "../716";
-import * as i from "../1365";
-import * as o from "../1136";
-import * as a from "../717";
-import * as s from "./1366";
-import * as c from "../../../../../24/481/1123/758";
+var r = require("../716");
+var i = require("../1365");
+var o = require("../1136");
+var a = require("../717");
+var s = require("./1366");
+var c = require("../../../../../24/481/1123/758");
 var u = r.getBCHDigit(7973);
 function l(e, t) {
   return a.getCharCountIndicator(e, t) + 4;
@@ -50,7 +50,7 @@ exports.getBestVersionForData = function (e, n) {
     if (e.length > 1) {
       return function (e, n) {
         for (var r = 1; r <= 40; r++) {
-          if (f(e, r) <= t.getCapacity(r, n, a.MIXED)) {
+          if (f(e, r) <= exports.getCapacity(r, n, a.MIXED)) {
             return r;
           }
         }
@@ -65,7 +65,7 @@ exports.getBestVersionForData = function (e, n) {
   }
   return function (e, n, r) {
     for (var i = 1; i <= 40; i++) {
-      if (n <= t.getCapacity(i, r, e)) {
+      if (n <= exports.getCapacity(i, r, e)) {
         return i;
       }
     }

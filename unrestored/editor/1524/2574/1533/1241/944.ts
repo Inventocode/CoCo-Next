@@ -1,13 +1,13 @@
 "use strict";
 
-import * as r from "../1738/310";
-import * as o from "../1660/943";
-import * as i from "../1660/1073";
-import * as a from "../1534/931";
-import * as s from "../1250/575";
+var r = require("../1738/310");
+var o = require("../1660/943");
+var i = require("../1660/1073");
+var a = require("../1534/931");
+var s = require("../1250/575");
 var c = require("../1738/423/index").get;
-import * as l from "../1660/1239";
-import * as u from "../1660/1240";
+var l = require("../1660/1239");
+var u = require("../1660/1240");
 var d = RegExp.prototype.exec;
 var p = a("native-string-replace", String.prototype.replace);
 var f = d;

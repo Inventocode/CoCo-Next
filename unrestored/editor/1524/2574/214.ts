@@ -13,3 +13,4 @@ function i(e, t) {
 function a(e) {
   r.delete(e);
 }
+export default a;

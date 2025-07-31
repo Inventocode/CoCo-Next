@@ -1,7 +1,10 @@
 "use strict";
 
-import * as r from "./444";
-import * as i from "../359";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+var r = require("./444");
+var i = require("../359");
 exports.injectable = function () {
   return function (e) {
     if (Reflect.hasOwnMetadata(i.PARAM_TYPES, e)) {

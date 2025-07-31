@@ -1,11 +1,11 @@
 "use strict";
 
-import * as r from "../35/3/229";
-import * as i from "../19";
-import * as o from "../337";
-import * as a from "../35/3/179";
-import * as s from "../35/3/92";
-import * as c from "../155/index";
+var r = require("../35/3/229");
+var i = require("../19");
+var o = require("../337");
+var a = require("../35/3/179");
+var s = require("../35/3/92");
+var c = require("../155/index");
 function u() {
   var e = {};
   e.promise = new Promise(function (t, n) {
@@ -15,7 +15,8 @@ function u() {
   return e;
 }
 var l = u;
-var f = (require("../35/3/981"), []);
+require("../35/3/981");
+var f = [];
 var h = 0;
 function d(e) {
   try {
@@ -223,7 +224,7 @@ function F(e) {
     e.cancel();
   }
 }
-var R = ((B = {})[s.r] = function (e, t, n) {
+(B = {})[s.r] = function (e, t, n) {
   var i = t.channel;
   var o = void 0 === i ? e.channel : i;
   var s = t.pattern;
@@ -245,7 +246,8 @@ var R = ((B = {})[s.r] = function (e, t, n) {
     return void n(l, !0);
   }
   n.cancel = u.cancel;
-}, B[s.n] = function (e, t, n) {
+};
+B[s.n] = function (e, t, n) {
   var r = t.channel;
   var i = t.action;
   var o = t.resolve;
@@ -262,7 +264,8 @@ var R = ((B = {})[s.r] = function (e, t, n) {
       n(t);
     }
   });
-}, B[s.a] = function (e, t, n, r) {
+};
+B[s.a] = function (e, t, n, r) {
   var i = r.digestEffect;
   var o = D;
   var c = Object.keys(t);
@@ -274,7 +277,8 @@ var R = ((B = {})[s.r] = function (e, t, n) {
   } else {
     n(Object(a.a)(t) ? [] : {});
   }
-}, B[s.p] = function (e, t, n, r) {
+};
+B[s.p] = function (e, t, n, r) {
   var i = r.digestEffect;
   var o = D;
   var c = Object.keys(t);
@@ -311,7 +315,8 @@ var R = ((B = {})[s.r] = function (e, t, n) {
       i(t[e], o, l[e], e);
     }
   });
-}, B[s.c] = function (e, t, n, r) {
+};
+B[s.c] = function (e, t, n, r) {
   var i = t.context;
   var o = t.fn;
   var c = t.args;
@@ -328,7 +333,8 @@ var R = ((B = {})[s.r] = function (e, t, n) {
   } catch (f) {
     n(f, !0);
   }
-}, B[s.w] = function (e, t, n) {
+};
+B[s.w] = function (e, t, n) {
   var r = t.context;
   var i = t.fn;
   var o = t.args;
@@ -347,7 +353,8 @@ var R = ((B = {})[s.r] = function (e, t, n) {
   } catch (c) {
     n(c, !0);
   }
-}, B[s.f] = function (e, t, n, r) {
+};
+B[s.f] = function (e, t, n, r) {
   var i = t.context;
   var o = t.fn;
   var c = t.args;
@@ -404,7 +411,8 @@ var R = ((B = {})[s.r] = function (e, t, n) {
       }
     }
   });
-}, B[s.h] = function (e, t, n, r) {
+};
+B[s.h] = function (e, t, n, r) {
   var i = r.task;
   var o = function (e, t) {
     if (e.isRunning()) {
@@ -435,7 +443,8 @@ var R = ((B = {})[s.r] = function (e, t, n) {
   } else {
     o(t, n);
   }
-}, B[s.y] = function (e, t, n, i) {
+};
+B[s.y] = function (e, t, n, i) {
   var o = i.task;
   if (t === r.h) {
     F(o);
@@ -447,7 +456,8 @@ var R = ((B = {})[s.r] = function (e, t, n) {
     }
   }
   n();
-}, B[s.q] = function (e, t, n) {
+};
+B[s.q] = function (e, t, n) {
   var r = t.selector;
   var i = t.args;
   try {
@@ -455,7 +465,8 @@ var R = ((B = {})[s.r] = function (e, t, n) {
   } catch (o) {
     n(o, !0);
   }
-}, B[s.A] = function (e, t, n) {
+};
+B[s.A] = function (e, t, n) {
   var r = t.pattern;
   var i = S(t.buffer);
   var o = x(r);
@@ -472,17 +483,22 @@ var R = ((B = {})[s.r] = function (e, t, n) {
   };
   e.channel.take(a, o);
   n(i);
-}, B[s.C] = function (e, t, n, r) {
+};
+B[s.C] = function (e, t, n, r) {
   n(r.task.isCancelled());
-}, B[s.D] = function (e, t, n) {
+};
+B[s.D] = function (e, t, n) {
   t.flush(n);
-}, B[s.g] = function (e, t, n, r) {
+};
+B[s.g] = function (e, t, n, r) {
   n(r.task.context[t]);
-}, B[s.E] = function (e, t, n, r) {
+};
+B[s.E] = function (e, t, n, r) {
   var i = r.task;
   Object(s.M)(i.context, t);
   n();
-}, B);
+};
+var R = B;
 function P(e, t) {
   return e + "?" + t;
 }
@@ -614,15 +630,26 @@ function V(e, t, n, i, o, a, c) {
     });
     m.joiners = null;
   }
-  var m = ((u = {})[r.i] = !0, u.id = i, u.meta = o, u.isRoot = a, u.context = A, u.joiners = [], u.queue = g, u.cancel = function () {
+  (u = {})[r.i] = !0;
+  u.id = i;
+  u.meta = o;
+  u.isRoot = a;
+  u.context = A;
+  u.joiners = [];
+  u.queue = g;
+  u.cancel = function () {
     if (0 === d) {
       d = 1;
       g.cancelAll();
       v(r.j, !1);
     }
-  }, u.cont = c, u.end = v, u.setContext = function (e) {
+  };
+  u.cont = c;
+  u.end = v;
+  u.setContext = function (e) {
     Object(s.M)(A, e);
-  }, u.toPromise = function () {
+  };
+  u.toPromise = function () {
     if (!p) {
       p = l();
       if (2 === d) {
@@ -634,17 +661,23 @@ function V(e, t, n, i, o, a, c) {
       }
     }
     return p.promise;
-  }, u.isRunning = function () {
+  };
+  u.isRunning = function () {
     return 0 === d;
-  }, u.isCancelled = function () {
+  };
+  u.isCancelled = function () {
     return 1 === d || 0 === d && 1 === t.status;
-  }, u.isAborted = function () {
+  };
+  u.isAborted = function () {
     return 2 === d;
-  }, u.result = function () {
+  };
+  u.result = function () {
     return f;
-  }, u.error = function () {
+  };
+  u.error = function () {
     return h;
-  }, u);
+  };
+  var m = u;
   return m;
 }
 function G(e, t, n, i, o, c, u) {
@@ -850,4 +883,4 @@ var Q = function (e) {
   };
   return h;
 };
-export { Q as a };
+exports.a = Q;

@@ -1,6 +1,6 @@
-import * as r from "./2289/1349";
-import * as i from "./2289/966";
-import * as o from "./2289/1126";
+var r = require("./2289/1349");
+var i = require("./2289/966");
+var o = require("./2289/1126");
 module.exports = l;
 var a;
 var s = /\n/g;

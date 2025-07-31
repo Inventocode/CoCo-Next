@@ -1,10 +1,10 @@
 "use strict";
 
-import * as r from "../../../../../3262/3190/624/index";
-import * as i from "../../../../../3262/3188/2658/220";
-import * as o from "../../../../../3262/3188/2658/230";
-import * as a from "./2261/index";
-import * as s from "../1109";
+var r = require("../../../../../3262/3190/624/index");
+var i = require("../../../../../3262/3188/2658/220");
+var o = require("../../../../../3262/3188/2658/230");
+var a = require("./2261/index");
+var s = require("../1109");
 var c = require("../806/index")("eslint:config-comment-parser");
 module.exports = function () {
   function e() {

@@ -1,7 +1,11 @@
 "use strict";
 
-import * as r from "./1425";
-import * as o from "./1426";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.default = void 0;
+var r = require("./1425");
+var o = require("./1426");
 var i = {
   blocks: function (e) {
     for (var t = [], n = e.data.length, r = 0, i = (0, o.readByte)()(e); 0 !== i && i; i = (0, o.readByte)()(e)) {
@@ -182,4 +186,4 @@ var d = [{
     return 33 === t || 44 === t;
   })
 }];
-export default d;
+exports.default = d;

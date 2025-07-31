@@ -6,7 +6,7 @@ export { f as bindActionCreators };
 export { u as combineReducers };
 export { _ as compose };
 export { s as createStore };
-import * as r from "./1164/index";
+var r = require("./1164/index");
 var i = function () {
   return Math.random().toString(36).substring(7).split("").join(".");
 };

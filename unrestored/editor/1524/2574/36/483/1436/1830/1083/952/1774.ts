@@ -1,4 +1,4 @@
-import * as r from "./1775/953";
+var r = require("./1775/953");
 var i = Array.prototype.splice;
 module.exports = function (e) {
   var t = this.__data__;

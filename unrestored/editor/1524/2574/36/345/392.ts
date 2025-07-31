@@ -1,6 +1,6 @@
 "use strict";
 
-import * as r from "../../206/29/index";
+var r = require("../../206/29/index");
 var o = function () {};
 var i = {
   start: function (e, t, n) {
@@ -54,4 +54,4 @@ var i = {
     }
   }
 };
-export default i;
+exports.default = i;

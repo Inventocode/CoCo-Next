@@ -1,12 +1,23 @@
 "use strict";
 
 var r;
-import * as i from "../../33/index";
-import * as o from "../../108";
-import * as a from "../../0/index";
-import * as s from "../../0/index";
-import * as c from "../../1495/428";
-import * as u from "./1449";
+var i = require("../../33/index");
+var o = require("../../108");
+var a = require("../../0/index");
+var s = (module => {
+  var defaultExport = module && module.__esModule ? function () {
+    return module.default;
+  } : function () {
+    return module;
+  };
+  Object.defineProperty(defaultExport, "a", {
+    enumerable: true,
+    get: defaultExport
+  });
+  return defaultExport;
+})(a);
+var c = require("../../1495/428");
+var u = require("./1449");
 function l(e) {
   return (l = "function" === typeof Symbol && "symbol" === typeof Symbol.iterator ? function (e) {
     return typeof e;
@@ -336,7 +347,8 @@ function G(e, t, n) {
   }
   var i = "width" === t ? ["Left", "Right"] : ["Top", "Bottom"];
   var o = "width" === t ? e.getBoundingClientRect().width : e.getBoundingClientRect().height;
-  var a = (m(e), j(e));
+  m(e);
+  var a = j(e);
   var s = 0;
   if (null === o || void 0 === o || o <= 0) {
     o = void 0;
@@ -816,9 +828,9 @@ function ue(e, t, n) {
 }
 ce.__getOffsetParent = Y;
 ce.__getVisibleRectForElement = $;
-import * as le from "../../1495/488";
-import * as fe from "../../458";
-import * as he from "../../1495/558";
+var le = require("../../1495/488");
+var fe = require("../../458");
+var he = require("../../1495/558");
 function de(e, t) {
   var n = null;
   var r = null;
@@ -1005,3 +1017,4 @@ var Ae = s.a.forwardRef(function (e, t) {
 Ae.displayName = "Align";
 var ge = Ae;
 export { ge as a };
+export default ge;

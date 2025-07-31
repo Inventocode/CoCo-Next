@@ -1,6 +1,10 @@
 "use strict";
 
-import * as r from "../../../../../../../../../3190/494";
+var r = require("../../../../../../../../../3190/494");
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.BreakStatement = void 0;
 exports.CatchClause = function (e) {
   this.word("catch");
   this.space();
@@ -13,6 +17,7 @@ exports.CatchClause = function (e) {
   }
   this.print(e.body, e);
 };
+exports.ContinueStatement = void 0;
 exports.DebuggerStatement = function () {
   this.word("debugger");
   this.semicolon();
@@ -29,6 +34,7 @@ exports.DoWhileStatement = function (e) {
   this.token(")");
   this.semicolon();
 };
+exports.ForOfStatement = exports.ForInStatement = void 0;
 exports.ForStatement = function (e) {
   this.word("for");
   this.space();
@@ -85,6 +91,7 @@ exports.LabeledStatement = function (e) {
   this.space();
   this.print(e.body, e);
 };
+exports.ReturnStatement = void 0;
 exports.SwitchCase = function (e) {
   if (e.test) {
     this.word("case");
@@ -120,6 +127,7 @@ exports.SwitchStatement = function (e) {
   });
   this.token("}");
 };
+exports.ThrowStatement = void 0;
 exports.TryStatement = function (e) {
   this.word("try");
   this.space();
@@ -206,7 +214,7 @@ exports.WithStatement = function (e) {
   this.token(")");
   this.printBlock(e);
 };
-import * as i from "../../../../../2624/index";
+var i = require("../../../../../2624/index");
 var a = i.isFor;
 var s = i.isForStatement;
 var o = i.isIfStatement;
@@ -230,7 +238,7 @@ var u = function (e) {
   };
 };
 var c = u("in");
-export { c as ForInStatement };
+exports.ForInStatement = c;
 var p = u("of");
 function f(e) {
   var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "label";
@@ -247,13 +255,13 @@ function f(e) {
     this.semicolon();
   };
 }
-export { p as ForOfStatement };
+exports.ForOfStatement = p;
 var d = f("continue");
-export { d as ContinueStatement };
+exports.ContinueStatement = d;
 var h = f("return", "argument");
-export { h as ReturnStatement };
+exports.ReturnStatement = h;
 var y = f("break");
-export { y as BreakStatement };
+exports.BreakStatement = y;
 var m = f("throw", "argument");
 function v() {
   if (this.token(","), this.newline(), this.endsWith(10)) {
@@ -269,4 +277,4 @@ function g() {
     }
   }
 }
-export { m as ThrowStatement };
+exports.ThrowStatement = m;

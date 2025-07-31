@@ -1,6 +1,9 @@
 "use strict";
 
-export default (function (e, t, n) {
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.default = function (e, t, n) {
   switch (t.type) {
     case "MemberExpression":
     case "OptionalMemberExpression":
@@ -62,4 +65,4 @@ export default (function (e, t, n) {
       return t.key !== e || !!t.computed;
   }
   return !0;
-});
+};

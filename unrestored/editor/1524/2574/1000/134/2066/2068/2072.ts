@@ -6,13 +6,22 @@ var r = this && this.__spreadArray || function (e, t) {
   }
   return e;
 };
-import * as i from "../../1305";
-import * as o from "../../838/443";
-import * as a from "../../578";
-import * as s from "../../358";
-import * as c from "../../838/index";
-export { getFunctionName } from "../../838/index";
-import * as u from "./1306/index";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.getFunctionName = exports.getBaseClassDependencyCount = exports.getDependencies = void 0;
+var i = require("../../1305");
+var o = require("../../838/443");
+var a = require("../../578");
+var s = require("../../358");
+var c = require("../../838/index");
+Object.defineProperty(exports, "getFunctionName", {
+  enumerable: !0,
+  get: function () {
+    return c.getFunctionName;
+  }
+});
+var u = require("./1306/index");
 function l(e, t, n, i) {
   var s = e.getConstructorMetadata(n);
   var c = s.compilerGeneratedMetadata;

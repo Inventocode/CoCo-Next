@@ -1,4 +1,4 @@
-import * as r from "../../../../../../../1524/2574/616/570/index";
+var r = require("../../../../../../../1524/2574/616/570/index");
 var i = r.Buffer;
 function a(e, t) {
   for (var n in e) t[n] = e[n];
@@ -9,7 +9,7 @@ function s(e, t, n) {
 if (i.from && i.alloc && i.allocUnsafe && i.allocUnsafeSlow) {
   module.exports = r;
 } else {
-  a(r, t);
+  a(r, exports);
   exports.Buffer = s;
 }
 a(i, s);

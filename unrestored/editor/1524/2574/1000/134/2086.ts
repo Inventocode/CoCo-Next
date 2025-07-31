@@ -1,8 +1,12 @@
 "use strict";
 
-import * as r from "./358";
-import * as i from "./2088/496";
-import * as o from "./641";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.optional = void 0;
+var r = require("./358");
+var i = require("./2088/496");
+var o = require("./641");
 exports.optional = function () {
   return function (e, t, n) {
     var a = new i.Metadata(r.OPTIONAL_TAG, !0);

@@ -1,15 +1,15 @@
 "use strict";
 
 export { y as a };
-import * as r from "../95";
-import * as i from "../96";
-import * as o from "../103";
-import * as a from "../120";
-import * as s from "../140";
-import * as c from "../0/index";
-import * as u from "./1010";
-import * as l from "./690";
-import * as f from "./413";
+var r = require("../95");
+var i = require("../96");
+var o = require("../103");
+var a = require("../120");
+var s = require("../140");
+var c = require("../0/index");
+var u = require("./1010");
+var l = require("./690");
+var f = require("./413");
 var h = 0;
 var d = {};
 function p(e) {
@@ -35,8 +35,8 @@ p.cancel = function (e) {
 };
 p.ids = d;
 var _;
-import * as A from "../788";
-import * as g from "../314";
+var A = require("../788");
+var g = require("../314");
 function v(e) {
   return !e || null === e.offsetParent || e.hidden;
 }
@@ -190,3 +190,4 @@ var y = function (e) {
   return n;
 }(c.Component);
 y.contextType = A.b;
+export default y;

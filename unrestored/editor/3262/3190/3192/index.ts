@@ -1,6 +1,9 @@
 "use strict";
 
-export default (function (e) {
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.default = function (e) {
   var t = e.node || e;
   if (function (e) {
     var t = e.leadingComments;
@@ -11,5 +14,5 @@ export default (function (e) {
     return;
   }
   r(t, "leading", "#__PURE__");
-});
+};
 var r = require("./3193/index").addComment;

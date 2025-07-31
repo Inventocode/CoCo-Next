@@ -1,7 +1,10 @@
 "use strict";
 
-export default a;
-import * as r from "./2627";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.default = a;
+var r = require("./2627");
 function a(e, t, n) {
   for (var i = [].concat(e), o = Object.create(null); i.length;) {
     var s = i.shift();

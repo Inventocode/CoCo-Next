@@ -1,6 +1,6 @@
-import * as r from "./1871/index";
-import * as i from "./1874";
-import * as o from "./1875";
+var r = require("./1871/index");
+var i = require("./1874");
+var o = require("./1875");
 module.exports = function (e, t, n, a, s, c) {
   var u = 1 & n;
   var l = e.length;

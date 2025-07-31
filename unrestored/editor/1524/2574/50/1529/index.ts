@@ -1,6 +1,6 @@
 "use strict";
 
-import * as r from "./1530";
+var r = require("./1530");
 function i() {}
 function o() {}
 o.resetWarningCache = i;

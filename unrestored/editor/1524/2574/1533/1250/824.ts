@@ -1,5 +1,5 @@
-import * as r from "../1634/1064";
-import * as o from "../1601/705";
+var r = require("../1634/1064");
+var o = require("../1601/705");
 var i = require("../1735/247/index")("toStringTag");
 var a = "Arguments" == o(function () {
   return arguments;

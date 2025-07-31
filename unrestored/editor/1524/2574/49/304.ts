@@ -642,3 +642,4 @@ g.prototype.vm = {
     return s(Function, l(n).concat([c])).apply(void 0, l(i));
   }
 };
+export default g;

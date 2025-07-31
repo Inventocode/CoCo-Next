@@ -1,7 +1,7 @@
 "use strict";
 
-import * as r from "../1626/86/index";
-import * as o from "./440";
+var r = require("../1626/86/index");
+var o = require("./440");
 r({
   target: "String",
   proto: !0,

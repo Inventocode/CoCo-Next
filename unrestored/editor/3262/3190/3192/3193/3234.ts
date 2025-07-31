@@ -1,6 +1,9 @@
 "use strict";
 
-export default (function (e, t, n) {
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.default = function (e, t, n) {
   if (n && "Identifier" === e.type && "ObjectProperty" === t.type && "ObjectExpression" === n.type) {
     return !1;
   }
@@ -19,5 +22,5 @@ export default (function (e, t, n) {
     }
   }
   return !1;
-});
-import * as r from "./2687";
+};
+var r = require("./2687");

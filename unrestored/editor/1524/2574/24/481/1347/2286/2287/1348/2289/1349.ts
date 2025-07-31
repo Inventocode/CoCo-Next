@@ -1,8 +1,8 @@
-import * as r from "../../1127";
-import * as i from "../../../../../1353/965";
-import * as o from "../../../759/index";
-import * as a from "./966";
-import * as s from "../2299/1351";
+var r = require("../../1127");
+var i = require("../../../../../1353/965");
+var o = require("../../../759/index");
+var a = require("./966");
+var s = require("../2299/1351");
 var c = require("../../967/index")("engine.io-client:polling");
 module.exports = l;
 var u = null != new (require("../1125/index"))({

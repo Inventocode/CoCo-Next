@@ -42,12 +42,12 @@ var r = {
     outOfRange: "\u5d4c\u5165\u79ef\u6728\u6570\u503c\u8d85\u8fc7\u53d6\u503c\u8303\u56f4"
   }
 };
-import * as o from "./6";
-import * as i from "./5";
-import * as a from "./60";
-import * as s from "./82";
-import * as c from "./116";
-import * as l from "./9";
+var o = require("./6");
+var i = require("./5");
+var a = require("./60");
+var s = require("./82");
+var c = require("./116");
+var l = require("./9");
 var u = {
   type: i.z,
   icon: s.g,

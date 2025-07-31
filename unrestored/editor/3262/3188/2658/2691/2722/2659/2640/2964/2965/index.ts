@@ -1,6 +1,9 @@
 "use strict";
 
-export default (function (e) {
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.default = function (e) {
   var t;
   var n = e.node;
   var r = e.parent;
@@ -45,10 +48,10 @@ export default (function (e) {
   (a = l(t))[s] = !0;
   var m = A(n, t, i);
   return P(m, n, a, i) || n;
-});
-import * as r from "./2966";
-import * as i from "../../../../2981/2696/index";
-import * as a from "../../../../2624/index";
+};
+var r = require("./2966");
+var i = require("../../../../2981/2696/index");
+var a = require("../../../../2624/index");
 var s = a.NOT_LOCAL_BINDING;
 var o = a.cloneNode;
 var l = a.identifier;

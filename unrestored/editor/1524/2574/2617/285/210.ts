@@ -36,3 +36,4 @@ export { i as c };
 export { o as b };
 export { a as d };
 export { s as e };
+export default r;

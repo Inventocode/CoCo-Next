@@ -1,9 +1,9 @@
 "use strict";
 
 export { a };
-import * as r from "../301/203";
-import * as i from "./988";
-import * as o from "./685";
+var r = require("../301/203");
+var i = require("./988");
+var o = require("./685");
 function a(e) {
   return function () {
     var t;
@@ -17,3 +17,4 @@ function a(e) {
     return Object(o.a)(this, t);
   };
 }
+export default a;

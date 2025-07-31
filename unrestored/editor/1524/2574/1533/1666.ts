@@ -1,5 +1,5 @@
-import * as r from "./1626/86/index";
-import * as o from "./1728/706";
+var r = require("./1626/86/index");
+var o = require("./1728/706");
 var i = String.fromCharCode;
 var a = String.fromCodePoint;
 r({

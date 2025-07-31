@@ -1,14 +1,17 @@
 "use strict";
 
-import * as r from "../../../3190/494";
-import * as i from "../../../3190/624/index";
-import * as a from "./703/index";
-import * as s from "./529";
-import * as o from "./356/index";
-import * as l from "./357/index";
-import * as u from "../../../2873/2721/805/index";
-import * as c from "../230";
-import * as p from "../220";
+var r = require("../../../3190/494");
+var i = require("../../../3190/624/index");
+var a = require("./703/index");
+var s = require("./529");
+var o = require("./356/index");
+var l = require("./357/index");
+var u = require("../../../2873/2721/805/index");
+var c = require("../230");
+var p = require("../220");
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
 var f = /\r\n?|[\n\u2028\u2029]/;
 var d = new RegExp(f.source, "g");
 function h(e) {
@@ -13279,4 +13282,4 @@ exports.parseExpression = function (e, t) {
   }
   return n.getExpression();
 };
-export { Ct as tokTypes };
+exports.tokTypes = Ct;

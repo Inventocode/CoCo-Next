@@ -1,5 +1,8 @@
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
 exports.getBoundPosition = function (e, t, n) {
   if (!e.props.bounds) {
     return [t, n];
@@ -98,8 +101,8 @@ exports.createDraggableData = function (e, t) {
     lastY: e.state.y
   };
 };
-import * as r from "./927";
-import * as o from "./1048/index";
+var r = require("./927");
+var o = require("./1048/index");
 function i(e) {
   var t = e.findDOMNode();
   if (!t) {

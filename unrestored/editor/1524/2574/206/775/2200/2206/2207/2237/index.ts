@@ -1,8 +1,8 @@
 "use strict";
 
 var r = /^[a-z_$][a-z0-9_$-]*$/i;
-import * as i from "./2238";
-import * as o from "./2239";
+var i = require("./2238");
+var o = require("./2239");
 module.exports = {
   add: function (e, t) {
     var n = this.RULES;

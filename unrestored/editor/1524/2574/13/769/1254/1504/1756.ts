@@ -1,4 +1,4 @@
-import * as r from "./1754/1255";
+var r = require("./1754/1255");
 module.exports = function (e, t) {
   if (e) {
     if ("string" === typeof e) {

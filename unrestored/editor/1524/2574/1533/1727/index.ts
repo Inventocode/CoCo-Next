@@ -1,15 +1,15 @@
 "use strict";
 
-import * as r from "../1707/258/index";
-import * as o from "../1738/194";
-import * as i from "../1626/167";
-import * as a from "./439";
-import * as s from "../1728/257";
-import * as c from "./1220";
-import * as l from "./1221";
-import * as u from "./1222";
-import * as d from "./629";
-import * as p from "./1067/index";
+var r = require("../1707/258/index");
+var o = require("../1738/194");
+var i = require("../1626/167");
+var a = require("./439");
+var s = require("../1728/257");
+var c = require("./1220");
+var l = require("./1221");
+var u = require("./1222");
+var d = require("./629");
+var p = require("./1067/index");
 var f = r.aTypedArray;
 var h = r.exportTypedArrayMethod;
 var m = o.Uint16Array;

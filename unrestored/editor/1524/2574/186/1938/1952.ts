@@ -1,6 +1,6 @@
 "use strict";
 
-import * as r from "./1293";
+var r = require("./1293");
 function i(e) {
   if ("function" !== typeof e) {
     throw new TypeError("executor must be a function.");

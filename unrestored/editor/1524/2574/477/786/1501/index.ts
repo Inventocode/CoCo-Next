@@ -1,12 +1,12 @@
 "use strict";
 
 export { A as a };
-import * as r from "../../../36/483/39";
-import * as i from "../316";
-import * as o from "../265";
-import * as a from "../364";
-import * as s from "../435/index";
-import * as c from "./985";
+var r = require("../../../36/483/39");
+var i = require("../316");
+var o = require("../265");
+var a = require("../364");
+var s = require("../435/index");
+var c = require("./985");
 function u() {
   if (!("fetch" in Object(a.b)())) {
     return !1;
@@ -427,3 +427,4 @@ function w(e, t) {
 }
 var E = null;
 var x = null;
+export default A;

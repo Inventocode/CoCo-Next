@@ -1,6 +1,10 @@
 "use strict";
 
-import * as r from "./358";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.MetadataReader = void 0;
+var r = require("./358");
 var i = function () {
   function e() {}
   e.prototype.getConstructorMetadata = function (e) {
@@ -14,4 +18,4 @@ var i = function () {
   };
   return e;
 }();
-export { i as MetadataReader };
+exports.MetadataReader = i;

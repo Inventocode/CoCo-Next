@@ -29,12 +29,12 @@ var r = {
     set: "\u8bbe\u7f6e"
   }
 };
-import * as o from "./6";
-import * as i from "./97";
-import * as a from "./5";
-import * as s from "./35/index";
-import * as c from "./77";
-import * as l from "./60";
+var o = require("./6");
+var i = require("./97");
+var a = require("./5");
+var s = require("./35/index");
+var c = require("./77");
+var l = require("./60");
 var u = {
   type: a.w,
   icon: i.b,

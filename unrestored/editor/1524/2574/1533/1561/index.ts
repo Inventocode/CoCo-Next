@@ -1,8 +1,8 @@
 "use strict";
 
-import * as r from "../1626/86/index";
+var r = require("../1626/86/index");
 var o = require("../1715/816").indexOf;
-import * as i from "./708";
+var i = require("./708");
 var a = [].indexOf;
 var s = !!a && 1 / [1].indexOf(1, -0) < 0;
 var c = i("indexOf");

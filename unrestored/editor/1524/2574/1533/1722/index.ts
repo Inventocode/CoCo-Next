@@ -1,6 +1,6 @@
 "use strict";
 
-import * as r from "../1707/258/index";
+var r = require("../1707/258/index");
 var o = require("./936").right;
 var i = r.aTypedArray;
 (0, r.exportTypedArrayMethod)("reduceRight", function (e) {

@@ -1,6 +1,6 @@
-import * as r from "./1626/86/index";
-import * as o from "./1626/167";
-import * as i from "./1626/231";
+var r = require("./1626/86/index");
+var o = require("./1626/167");
+var i = require("./1626/231");
 var a = Object.isSealed;
 r({
   target: "Object",

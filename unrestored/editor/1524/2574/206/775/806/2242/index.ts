@@ -1,4 +1,4 @@
-import * as r from "../../../../../../3262/2873/2721/805/index";
+var r = require("../../../../../../3262/2873/2721/805/index");
 module.exports = function (e) {
   function t(e) {
     for (var t = 0, n = 0; n < e.length; n++) {

@@ -1,6 +1,9 @@
 "use strict";
 
-export default (function (e, t, n) {
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.default = function (e, t, n) {
   if (!(0, r.isMemberExpression)(e)) {
     return !1;
   }
@@ -34,5 +37,5 @@ export default (function (e, t, n) {
     }
   }
   return !0;
-});
-import * as r from "./2628";
+};
+var r = require("./2628");

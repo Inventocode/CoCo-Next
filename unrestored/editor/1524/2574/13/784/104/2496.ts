@@ -1,6 +1,9 @@
 "use strict";
 
-export default (function (e, t) {
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.default = function (e, t) {
   var n = {};
   var r = function (e) {
     var t = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
@@ -20,4 +23,4 @@ export default (function (e, t) {
   }
   r("nth-child", e);
   return n;
-});
+};

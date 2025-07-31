@@ -1,7 +1,7 @@
-import * as r from "../1738/194";
-import * as o from "../1738/310";
+var r = require("../1738/194");
+var o = require("../1738/310");
 var i = require("../1679/753").trim;
-import * as a from "../1679/1077/940";
+var a = require("../1679/1077/940");
 var s = r.parseInt;
 var c = /^[+-]?0[Xx]/;
 var l = 8 !== s(a + "08") || 22 !== s(a + "0x16");

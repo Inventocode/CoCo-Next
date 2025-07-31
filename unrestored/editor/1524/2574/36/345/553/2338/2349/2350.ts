@@ -1,4 +1,4 @@
-import * as r from "../717";
+var r = require("../717");
 function i(e) {
   this.mode = r.NUMERIC;
   this.data = e.toString();

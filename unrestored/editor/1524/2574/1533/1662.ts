@@ -1,10 +1,10 @@
 "use strict";
 
-import * as r from "./1738/398";
-import * as o from "./1659/241";
-import * as i from "./1738/310";
-import * as a from "./1626/167";
-import * as s from "./1660/943";
+var r = require("./1738/398");
+var o = require("./1659/241");
+var i = require("./1738/310");
+var a = require("./1626/167");
+var s = require("./1660/943");
 var c = RegExp.prototype;
 var l = c.toString;
 var u = a(function () {

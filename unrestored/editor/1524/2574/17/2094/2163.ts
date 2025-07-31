@@ -1,14 +1,18 @@
 "use strict";
 
-import * as r from "../../1000/93";
-import * as i from "../../1000/134/index";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.RenderedConnection = void 0;
+var r = require("../../1000/93");
+var i = require("../../1000/134/index");
 var o = (0, r.__importDefault)(require("../../204"));
-import * as a from "../../125/259";
-import * as s from "../../4/127";
-import * as c from "../../125/195/index";
-import * as u from "../../1000/213/index";
-import * as l from "../../125/index";
-import * as f from "../../125/534";
+var a = require("../../125/259");
+var s = require("../../4/127");
+var c = require("../../125/195/index");
+var u = require("../../1000/213/index");
+var l = require("../../125/index");
+var f = require("../../125/534");
 var h = function () {
   function e(e) {
     var t = this;
@@ -705,4 +709,4 @@ var h = function () {
   (0, r.__decorate)([(0, s.lazy_inject)(s.BINDING.MoveEvent)], e.prototype, "move_event_factory", void 0);
   return e = t = (0, r.__decorate)([(0, i.injectable)()], e);
 }();
-export { h as RenderedConnection };
+exports.RenderedConnection = h;

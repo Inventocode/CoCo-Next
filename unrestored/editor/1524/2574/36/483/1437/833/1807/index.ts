@@ -1,5 +1,5 @@
-import * as r from "../../958";
-import * as i from "./1808";
+var r = require("../../958");
+var i = require("./1808");
 var o = Object.prototype.hasOwnProperty;
 module.exports = function (e) {
   if (!r(e)) {

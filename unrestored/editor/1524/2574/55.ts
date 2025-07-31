@@ -2,13 +2,13 @@
 
 export { u as a };
 export { d as b };
-import * as r from "./6";
-import * as o from "./27";
-import * as i from "./40";
-import * as a from "./68";
-import * as s from "./206/29/index";
-import * as c from "./21/index";
-import * as l from "./91";
+var r = require("./6");
+var o = require("./27");
+var i = require("./40");
+var a = require("./68");
+var s = require("./206/29/index");
+var c = require("./21/index");
+var l = require("./91");
 var u = "EXTENSION_WIDGET_MESSAGE_TYPE";
 var d = new (function () {
   function e() {
@@ -126,3 +126,4 @@ var d = new (function () {
   }]);
   return e;
 }())();
+export default u;

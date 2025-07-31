@@ -7,3 +7,4 @@ function r(e) {
   return "Minified Material-UI error #" + e + "; visit " + t + " for the full message.";
 }
 export { r as a };
+export default r;

@@ -1,5 +1,9 @@
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.BasePlugin = void 0;
 var r = function () {
   function e() {}
   e.prototype.before_handle_event_group = function (e) {};
@@ -25,4 +29,4 @@ var r = function () {
   e.prototype.after_transform_op_to_event = function (e) {};
   return e;
 }();
-export { r as BasePlugin };
+exports.BasePlugin = r;

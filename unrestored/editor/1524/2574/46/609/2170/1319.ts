@@ -1,6 +1,10 @@
 "use strict";
 
-import * as r from "../../../125/195/2003/1099";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.JsonGenerator = void 0;
+var r = require("../../../125/195/2003/1099");
 function i(e) {
   return "string" == typeof e || e instanceof String;
 }
@@ -192,4 +196,4 @@ var o = function () {
   };
   return e;
 }();
-export { o as JsonGenerator };
+exports.JsonGenerator = o;

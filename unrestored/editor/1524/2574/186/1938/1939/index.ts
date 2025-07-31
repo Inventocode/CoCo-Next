@@ -1,10 +1,10 @@
 "use strict";
 
-import * as r from "../442";
-import * as i from "./1287";
-import * as o from "./1940";
-import * as a from "./1941/index";
-import * as s from "../1292";
+var r = require("../442");
+var i = require("./1287");
+var o = require("./1940");
+var a = require("./1941/index");
+var s = require("../1292");
 function c(e) {
   this.defaults = e;
   this.interceptors = {

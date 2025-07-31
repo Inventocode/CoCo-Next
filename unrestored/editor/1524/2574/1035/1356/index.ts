@@ -1,16 +1,20 @@
 "use strict";
 
-import * as r from "../../../../3262/3190/494";
-import * as i from "../../../../3262/3190/624/index";
+var r = require("../../../../3262/3190/494");
+var i = require("../../../../3262/3190/624/index");
 var o = this && this.__importDefault || function (e) {
   return e && e.__esModule ? e : {
     default: e
   };
 };
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.editOp = exports.replaceOp = exports.insertOp = exports.moveOp = exports.removeOp = exports.type = void 0;
 var a = o(require("./1342"));
 var s = o(require("./1343"));
-import * as c from "./1119";
-import * as u from "./1120";
+var c = require("./1119");
+var u = require("./1120");
 var l = Object({
   NODE_ENV: "production",
   PUBLIC_URL: "",
@@ -257,7 +261,7 @@ exports.type = {
     }, e, t, n);
   },
   typeAllowingConflictsPred: function (e) {
-    return Object.assign(Object.assign({}, t.type), {
+    return Object.assign(Object.assign({}, exports.type), {
       transform: function (t, n, r) {
         return K(e, t, n, r);
       }
@@ -1306,8 +1310,8 @@ function H(e, n, i) {
             if (null == m) {
               m = {
                 type: u.ConflictType.RM_UNEXPECTED_CONTENT,
-                op1: t.removeOp(h.getPath()),
-                op2: t.moveOp(i.getPath(), a.getPath())
+                op1: exports.removeOp(h.getPath()),
+                op2: exports.moveOp(i.getPath(), a.getPath())
               };
             }
           }
@@ -1322,8 +1326,8 @@ function H(e, n, i) {
             if (null == m) {
               m = {
                 type: u.ConflictType.RM_UNEXPECTED_CONTENT,
-                op1: t.removeOp(h.getPath()),
-                op2: t.insertOp(a.getPath(), _.i)
+                op1: exports.removeOp(h.getPath()),
+                op2: exports.insertOp(a.getPath(), _.i)
               };
             }
           }
@@ -1348,8 +1352,8 @@ function H(e, n, i) {
       if (null == m) {
         m = {
           type: u.ConflictType.RM_UNEXPECTED_CONTENT,
-          op1: t.removeOp(h.getPath()),
-          op2: t.editOp(a.getPath(), y, T(_), !0)
+          op1: exports.removeOp(h.getPath()),
+          op2: exports.editOp(a.getPath(), y, T(_), !0)
         };
       }
     }
@@ -1548,7 +1552,7 @@ function H(e, n, i) {
     var M = p(x);
     var U = !1;
     var H = function (e, n, r) {
-      return e ? t.moveOp(e.getPath(), n.getPath()) : t.insertOp(n.getPath(), r.i);
+      return e ? exports.moveOp(e.getPath(), n.getPath()) : exports.insertOp(n.getPath(), r.i);
     };
     if (v(R)) {
       var G = R.d;
@@ -1580,7 +1584,7 @@ function H(e, n, i) {
               m = {
                 type: u.ConflictType.RM_UNEXPECTED_CONTENT,
                 op1: H(null != G ? y[G] : null, d, R),
-                op2: t.removeOp(F.getPath())
+                op2: exports.removeOp(F.getPath())
               };
             }
           } else {
@@ -1665,8 +1669,8 @@ function H(e, n, i) {
         if (null == m) {
           m = {
             type: u.ConflictType.RM_UNEXPECTED_CONTENT,
-            op1: t.editOp(d.getPath(), ee, te, !0),
-            op2: t.removeOp(F.getPath())
+            op1: exports.editOp(d.getPath(), ee, te, !0),
+            op2: exports.removeOp(F.getPath())
           };
         }
       } else {

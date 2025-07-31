@@ -1,5 +1,9 @@
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.is = void 0;
 var r = function () {
   function e() {
     this.userAgent = (navigator && navigator.userAgent || "").toLowerCase();

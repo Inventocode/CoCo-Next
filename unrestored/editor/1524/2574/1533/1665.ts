@@ -1,13 +1,13 @@
 "use strict";
 
-import * as r from "./1626/86/index";
+var r = require("./1626/86/index");
 var o = require("./1534/386").f;
-import * as i from "./1728/257";
-import * as a from "./1738/310";
-import * as s from "./1677/1074";
-import * as c from "./1676/421";
-import * as l from "./1677/1075";
-import * as u from "./1534/530";
+var i = require("./1728/257");
+var a = require("./1738/310");
+var s = require("./1677/1074");
+var c = require("./1676/421");
+var l = require("./1677/1075");
+var u = require("./1534/530");
 var d = "".endsWith;
 var p = Math.min;
 var f = l("endsWith");

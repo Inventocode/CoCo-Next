@@ -1,6 +1,9 @@
 "use strict";
 
-export default (function (e) {
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.default = function (e) {
   if (!e.isExportDeclaration()) {
     throw new Error("Only export declarations can be split.");
   }
@@ -39,8 +42,8 @@ export default (function (e) {
   e.insertAfter(g);
   e.replaceWith(n.node);
   return e;
-});
-import * as r from "../../../2623/index";
+};
+var r = require("../../../2623/index");
 var i = r.cloneNode;
 var a = r.exportNamedDeclaration;
 var s = r.exportSpecifier;

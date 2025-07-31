@@ -4,15 +4,15 @@ export { xl as d };
 export { Dl as c };
 export { Ml as a };
 export { Ll as b };
-import * as r from "../155/index";
-import * as o from "./486";
-import * as i from "../25/index";
-import * as a from "../6";
-import * as s from "../729/66";
-import * as c from "../2/index";
-import * as l from "../18";
-import * as u from "../79";
-import * as d from "../78";
+var r = require("../155/index");
+var o = require("./486");
+var i = require("../25/index");
+var a = require("../6");
+var s = require("../729/66");
+var c = require("../2/index");
+var l = require("../18");
+var u = require("../79");
+var d = require("../78");
 var p = window.localStorage.getItem("LANGUAGE") || navigator.language;
 var f = {
   visible: !1,
@@ -495,9 +495,9 @@ var F = function () {
       return e;
   }
 };
-import * as G from "../31/index";
-import * as U from "../60";
-import * as W from "../53";
+var G = require("../31/index");
+var U = require("../60");
+var W = require("../53");
 var H = s.a.Record({
   position: {
     x: 0,
@@ -1288,7 +1288,7 @@ var Ae = function () {
       return e;
   }
 };
-import * as je from "../47";
+var je = require("../47");
 var Ne = s.a.Record({
   configs: {},
   variableList: s.a.List([]),
@@ -1394,7 +1394,7 @@ var Pe = function () {
       return e;
   }
 };
-import * as Be from "../102";
+var Be = require("../102");
 var Fe = s.a.Record({
   editorInviteUrl: "",
   readOnlyInviteUrl: "",
@@ -1593,7 +1593,7 @@ var et = function () {
       return e;
   }
 };
-import * as tt from "../2/341";
+var tt = require("../2/341");
 var nt = s.a.Record({
   header: {
     logo: l.j.Show,
@@ -1646,7 +1646,7 @@ var rt = function () {
       return e;
   }
 };
-import * as ot from "../161";
+var ot = require("../161");
 var it = s.a.Record({
   cloudDictList: [],
   cloudTableList: [],
@@ -1804,18 +1804,29 @@ var Ot = Object(r.combineReducers)({
   uiConfig: rt,
   cloudSpace: Et
 });
-import * as wt from "../1/index";
-import * as Ct from "../1/index";
-import * as Tt from "../35/3/index";
-import * as St from "../7";
-import * as It from "../10/index";
-import * as At from "../11";
-import * as jt from "../2617/index";
-import * as Nt from "./607/index";
-import * as Rt from "../623";
-import * as kt from "../14";
-import * as xt from "../41";
-import * as Dt from "../59/index";
+var wt = require("../1/index");
+var Ct = (module => {
+  var defaultExport = module && module.__esModule ? function () {
+    return module.default;
+  } : function () {
+    return module;
+  };
+  Object.defineProperty(defaultExport, "a", {
+    enumerable: true,
+    get: defaultExport
+  });
+  return defaultExport;
+})(wt);
+var Tt = require("../35/3/index");
+var St = require("../7");
+var It = require("../10/index");
+var At = require("../11");
+var jt = require("../2617/index");
+var Nt = require("./607/index");
+var Rt = require("../623");
+var kt = require("../14");
+var xt = require("../41");
+var Dt = require("../59/index");
 var Mt = "".concat(Dt.a.serverHost, "/coconut");
 function Lt(e) {
   return Pt.apply(this, arguments);
@@ -2114,25 +2125,25 @@ function Xt() {
     }, e);
   }))).apply(this, arguments);
 }
-import * as Qt from "../177";
-import * as Zt from "../298";
-import * as Jt from "../26/index";
-import * as $t from "../206/139";
-import * as en from "../197/index";
-import * as tn from "../141/index";
-import * as nn from "../550/index";
-import * as rn from "../327";
-import * as on from "../9";
-import * as an from "../214";
-import * as sn from "../305";
-import * as cn from "../5";
-import * as ln from "../64";
-import * as un from "../23";
-import * as dn from "../24/index";
-import * as pn from "../49/index";
-import * as fn from "../15/index";
-import * as hn from "../99";
-import * as mn from "../144";
+var Qt = require("../177");
+var Zt = require("../298");
+var Jt = require("../26/index");
+var $t = require("../206/139");
+var en = require("../197/index");
+var tn = require("../141/index");
+var nn = require("../550/index");
+var rn = require("../327");
+var on = require("../9");
+var an = require("../214");
+var sn = require("../305");
+var cn = require("../5");
+var ln = require("../64");
+var un = require("../23");
+var dn = require("../24/index");
+var pn = require("../49/index");
+var fn = require("../15/index");
+var hn = require("../99");
+var mn = require("../144");
 function gn(e) {
   window.localStorage.removeItem("@__INITIALIZED__".concat(e));
   var t = "@".concat(e, "_DOCUMENT");
@@ -2142,25 +2153,36 @@ function gn(e) {
     }
   });
 }
-import * as _n from "../129";
-import * as vn from "../36/index";
-import * as bn from "../98";
-import * as yn from "../182";
-import * as En from "./376";
-import * as On from "./217/index";
-import * as wn from "../146";
-import * as Cn from "./512";
-import * as Tn from "./512";
-import * as Sn from "../407";
-import * as In from "./343";
-import * as An from "./375";
-import * as jn from "../233/index";
-import * as Nn from "../143";
-import * as Rn from "../391/index";
-import * as kn from "../21/index";
-import * as xn from "../174";
-import * as Dn from "./142";
-import * as Mn from "../112";
+var _n = require("../129");
+var vn = require("../36/index");
+var bn = require("../98");
+var yn = require("../182");
+var En = require("./376");
+var On = require("./217/index");
+var wn = require("../146");
+var Cn = require("./512");
+var Tn = (module => {
+  var defaultExport = module && module.__esModule ? function () {
+    return module.default;
+  } : function () {
+    return module;
+  };
+  Object.defineProperty(defaultExport, "a", {
+    enumerable: true,
+    get: defaultExport
+  });
+  return defaultExport;
+})(Cn);
+var Sn = require("../407");
+var In = require("./343");
+var An = require("./375");
+var jn = require("../233/index");
+var Nn = require("../143");
+var Rn = require("../391/index");
+var kn = require("../21/index");
+var xn = require("../174");
+var Dn = require("./142");
+var Mn = require("../112");
 function Ln() {
   var e;
   var t = xl.getState();
@@ -2337,9 +2359,9 @@ function Gn() {
   var e = Ln();
   return Dn.a.removeItem(e);
 }
-import * as Un from "../42/index";
-import * as Wn from "./113";
-import * as Hn from "../278";
+var Un = require("../42/index");
+var Wn = require("./113");
+var Hn = require("../278");
 var Vn = Ct.a.mark(Yn);
 var zn = Ct.a.mark(Kn);
 function Yn(e, t) {
@@ -2423,10 +2445,21 @@ function qn(e) {
 }
 var Xn;
 var Qn;
-import * as Zn from "../35/index";
-import * as Jn from "./668/index";
-import * as $n from "./668/index";
-import * as er from "./2619";
+var Zn = require("../35/index");
+var Jn = require("./668/index");
+var $n = (module => {
+  var defaultExport = module && module.__esModule ? function () {
+    return module.default;
+  } : function () {
+    return module;
+  };
+  Object.defineProperty(defaultExport, "a", {
+    enumerable: true,
+    get: defaultExport
+  });
+  return defaultExport;
+})(Jn);
+var er = require("./2619");
 var tr = [];
 var nr = !1;
 var rr = !1;
@@ -2444,7 +2477,7 @@ function ir() {
               break;
             }
             e.next = 4;
-            return n.e(18).then(n.t.bind(null, 3264, 7));
+            return Promise.reject(new Error("module (key: 3264) not found!"));
           case 4:
             Qn = e.sent;
             nr = !0;
@@ -2757,7 +2790,7 @@ function mr(e) {
   e.callback(e.file);
 }
 var gr;
-import * as _r from "../35/22";
+var _r = require("../35/22");
 var vr = Ct.a.mark(Fr);
 var br = Ct.a.mark(Gr);
 var yr = Ct.a.mark(Hr);
@@ -4024,7 +4057,22 @@ function uo(e) {
     }
   }, Pr);
 }
-var po = (gr = {}, Object(At.a)(gr, c.X, Fr), Object(At.a)(gr, c.Y, Gr), Object(At.a)(gr, c.s, Hr), Object(At.a)(gr, c.A, zr), Object(At.a)(gr, c.J, Vr), Object(At.a)(gr, c.Z, Yr), Object(At.a)(gr, c.w, qr), Object(At.a)(gr, c.v, Kr), Object(At.a)(gr, c.ob, eo), Object(At.a)(gr, c.qb, to), Object(At.a)(gr, c.q, no), Object(At.a)(gr, c.r, ro), Object(At.a)(gr, c.mb, co), Object(At.a)(gr, c.pb, lo), gr);
+gr = {};
+Object(At.a)(gr, c.X, Fr);
+Object(At.a)(gr, c.Y, Gr);
+Object(At.a)(gr, c.s, Hr);
+Object(At.a)(gr, c.A, zr);
+Object(At.a)(gr, c.J, Vr);
+Object(At.a)(gr, c.Z, Yr);
+Object(At.a)(gr, c.w, qr);
+Object(At.a)(gr, c.v, Kr);
+Object(At.a)(gr, c.ob, eo);
+Object(At.a)(gr, c.qb, to);
+Object(At.a)(gr, c.q, no);
+Object(At.a)(gr, c.r, ro);
+Object(At.a)(gr, c.mb, co);
+Object(At.a)(gr, c.pb, lo);
+var po = gr;
 var fo = qn(po);
 function ho() {
   return Ct.a.wrap(function (e) {
@@ -4212,18 +4260,62 @@ function go() {
   }, mo, null, [[35, 45, 48, 51]]);
 }
 var _o;
-import * as vo from "../0/index";
-import * as bo from "../0/index";
-import * as yo from "../27";
-import * as Eo from "../40";
-import * as Oo from "../75/index";
-import * as wo from "../75/index";
-import * as Co from "../8";
-import * as To from "../8";
-import * as So from "../13/index";
-import * as Io from "../267";
-import * as Ao from "../267";
-import * as jo from "../188";
+var vo = require("../0/index");
+var bo = (module => {
+  var defaultExport = module && module.__esModule ? function () {
+    return module.default;
+  } : function () {
+    return module;
+  };
+  Object.defineProperty(defaultExport, "a", {
+    enumerable: true,
+    get: defaultExport
+  });
+  return defaultExport;
+})(vo);
+var yo = require("../27");
+var Eo = require("../40");
+var Oo = require("../75/index");
+var wo = (module => {
+  var defaultExport = module && module.__esModule ? function () {
+    return module.default;
+  } : function () {
+    return module;
+  };
+  Object.defineProperty(defaultExport, "a", {
+    enumerable: true,
+    get: defaultExport
+  });
+  return defaultExport;
+})(Oo);
+var Co = require("../8");
+var To = (module => {
+  var defaultExport = module && module.__esModule ? function () {
+    return module.default;
+  } : function () {
+    return module;
+  };
+  Object.defineProperty(defaultExport, "a", {
+    enumerable: true,
+    get: defaultExport
+  });
+  return defaultExport;
+})(Co);
+var So = require("../13/index");
+var Io = require("../267");
+var Ao = (module => {
+  var defaultExport = module && module.__esModule ? function () {
+    return module.default;
+  } : function () {
+    return module;
+  };
+  Object.defineProperty(defaultExport, "a", {
+    enumerable: true,
+    get: defaultExport
+  });
+  return defaultExport;
+})(Io);
+var jo = require("../188");
 var No = function (e) {
   var t = e.title;
   var n = e.onConfirm;
@@ -5824,7 +5916,17 @@ function Oi(e) {
   }, $o);
 }
 var wi;
-var Ci = (_o = {}, Object(At.a)(_o, c.cb, ui), Object(At.a)(_o, c.C, ci), Object(At.a)(_o, c.O, hi), Object(At.a)(_o, c.Bb, mi), Object(At.a)(_o, c.Q, _i), Object(At.a)(_o, c.Db, bi), Object(At.a)(_o, c.R, yi), Object(At.a)(_o, c.Cb, Ei), Object(At.a)(_o, c.Eb, Oi), _o);
+_o = {};
+Object(At.a)(_o, c.cb, ui);
+Object(At.a)(_o, c.C, ci);
+Object(At.a)(_o, c.O, hi);
+Object(At.a)(_o, c.Bb, mi);
+Object(At.a)(_o, c.Q, _i);
+Object(At.a)(_o, c.Db, bi);
+Object(At.a)(_o, c.R, yi);
+Object(At.a)(_o, c.Cb, Ei);
+Object(At.a)(_o, c.Eb, Oi);
+var Ci = _o;
 var Ti = qn(Ci);
 function Si() {
   return Ct.a.wrap(function (e) {
@@ -11599,7 +11701,51 @@ function yc(e) {
     }
   }, Ka);
 }
-var Ec = (wi = {}, Object(At.a)(wi, c.H, Qa), Object(At.a)(wi, c.M, ds), Object(At.a)(wi, c.gb, ms), Object(At.a)(wi, c.lb, gs), Object(At.a)(wi, c.jb, Cs), Object(At.a)(wi, c.Jb, Ss), Object(At.a)(wi, c.kb, As), Object(At.a)(wi, c.Mb, zs), Object(At.a)(wi, c.Lb, Ys), Object(At.a)(wi, c.Ob, Zs), Object(At.a)(wi, c.db, Js), Object(At.a)(wi, c.nb, os), Object(At.a)(wi, c.D, is), Object(At.a)(wi, c.N, Ds), Object(At.a)(wi, c.G, $a), Object(At.a)(wi, c.F, es), Object(At.a)(wi, c.U, Ja), Object(At.a)(wi, c.vb, Xa), Object(At.a)(wi, c.E, $s), Object(At.a)(wi, c.fb, nc), Object(At.a)(wi, c.eb, rc), Object(At.a)(wi, c.tb, Us), Object(At.a)(wi, c.Ib, Vs), Object(At.a)(wi, c.hb, oc), Object(At.a)(wi, c.y, Hs), Object(At.a)(wi, c.xb, ic), Object(At.a)(wi, c.Kb, ac), Object(At.a)(wi, c.Bc, ns), Object(At.a)(wi, c.Nb, lc), Object(At.a)(wi, c.ub, sc), Object(At.a)(wi, c.B, cc), Object(At.a)(wi, c.T, uc), Object(At.a)(wi, c.x, dc), Object(At.a)(wi, c.ab, fc), Object(At.a)(wi, c.zb, mc), Object(At.a)(wi, c.Kc, ks), Object(At.a)(wi, c.Lc, xs), Object(At.a)(wi, c.z, ys), Object(At.a)(wi, c.rb, Es), Object(At.a)(wi, c.sb, _c), Object(At.a)(wi, c.dc, bc), Object(At.a)(wi, c.bb, hc), Object(At.a)(wi, c.V, yc), wi);
+wi = {};
+Object(At.a)(wi, c.H, Qa);
+Object(At.a)(wi, c.M, ds);
+Object(At.a)(wi, c.gb, ms);
+Object(At.a)(wi, c.lb, gs);
+Object(At.a)(wi, c.jb, Cs);
+Object(At.a)(wi, c.Jb, Ss);
+Object(At.a)(wi, c.kb, As);
+Object(At.a)(wi, c.Mb, zs);
+Object(At.a)(wi, c.Lb, Ys);
+Object(At.a)(wi, c.Ob, Zs);
+Object(At.a)(wi, c.db, Js);
+Object(At.a)(wi, c.nb, os);
+Object(At.a)(wi, c.D, is);
+Object(At.a)(wi, c.N, Ds);
+Object(At.a)(wi, c.G, $a);
+Object(At.a)(wi, c.F, es);
+Object(At.a)(wi, c.U, Ja);
+Object(At.a)(wi, c.vb, Xa);
+Object(At.a)(wi, c.E, $s);
+Object(At.a)(wi, c.fb, nc);
+Object(At.a)(wi, c.eb, rc);
+Object(At.a)(wi, c.tb, Us);
+Object(At.a)(wi, c.Ib, Vs);
+Object(At.a)(wi, c.hb, oc);
+Object(At.a)(wi, c.y, Hs);
+Object(At.a)(wi, c.xb, ic);
+Object(At.a)(wi, c.Kb, ac);
+Object(At.a)(wi, c.Bc, ns);
+Object(At.a)(wi, c.Nb, lc);
+Object(At.a)(wi, c.ub, sc);
+Object(At.a)(wi, c.B, cc);
+Object(At.a)(wi, c.T, uc);
+Object(At.a)(wi, c.x, dc);
+Object(At.a)(wi, c.ab, fc);
+Object(At.a)(wi, c.zb, mc);
+Object(At.a)(wi, c.Kc, ks);
+Object(At.a)(wi, c.Lc, xs);
+Object(At.a)(wi, c.z, ys);
+Object(At.a)(wi, c.rb, Es);
+Object(At.a)(wi, c.sb, _c);
+Object(At.a)(wi, c.dc, bc);
+Object(At.a)(wi, c.bb, hc);
+Object(At.a)(wi, c.V, yc);
+var Ec = wi;
 var Oc = qn(Ec);
 function wc() {
   return Ct.a.wrap(function (e) {
@@ -11616,7 +11762,7 @@ function wc() {
   }, qa);
 }
 var Cc;
-import * as Tc from "../296";
+var Tc = require("../296");
 var Sc = Ct.a.mark(Hc);
 var Ic = Ct.a.mark(Vc);
 var Ac = Ct.a.mark(zc);
@@ -12371,7 +12517,21 @@ function il(e) {
     }
   }, Uc);
 }
-var al = (Cc = {}, Object(At.a)(Cc, c.Fb, el), Object(At.a)(Cc, c.ib, Hc), Object(At.a)(Cc, c.u, Vc), Object(At.a)(Cc, c.o, zc), Object(At.a)(Cc, c.t, Yc), Object(At.a)(Cc, c.L, tl), Object(At.a)(Cc, c.I, nl), Object(At.a)(Cc, c.K, rl), Object(At.a)(Cc, c.p, ol), Object(At.a)(Cc, c.Hb, qc), Object(At.a)(Cc, c.yb, Xc), Object(At.a)(Cc, c.Gb, Jc), Object(At.a)(Cc, c.Ab, il), Cc);
+Cc = {};
+Object(At.a)(Cc, c.Fb, el);
+Object(At.a)(Cc, c.ib, Hc);
+Object(At.a)(Cc, c.u, Vc);
+Object(At.a)(Cc, c.o, zc);
+Object(At.a)(Cc, c.t, Yc);
+Object(At.a)(Cc, c.L, tl);
+Object(At.a)(Cc, c.I, nl);
+Object(At.a)(Cc, c.K, rl);
+Object(At.a)(Cc, c.p, ol);
+Object(At.a)(Cc, c.Hb, qc);
+Object(At.a)(Cc, c.yb, Xc);
+Object(At.a)(Cc, c.Gb, Jc);
+Object(At.a)(Cc, c.Ab, il);
+var al = Cc;
 var sl = qn(al);
 function cl() {
   return Ct.a.wrap(function (e) {
@@ -12388,8 +12548,8 @@ function cl() {
   }, Wc);
 }
 var ll;
-import * as ul from "../477/index";
-import * as dl from "../463";
+var ul = require("../477/index");
+var dl = require("../463");
 var pl = Ct.a.mark(gl);
 var fl = Ct.a.mark(_l);
 var hl = Ct.a.mark(vl);
@@ -12554,7 +12714,10 @@ function Sl(e) {
     }
   }, wl);
 }
-var Il = (bl = {}, Object(At.a)(bl, Be.a, Tl), Object(At.a)(bl, Be.b, Sl), bl);
+bl = {};
+Object(At.a)(bl, Be.a, Tl);
+Object(At.a)(bl, Be.b, Sl);
+var Il = bl;
 var Al = qn(Il);
 function jl() {
   return Ct.a.wrap(function (e) {
@@ -12600,3 +12763,4 @@ var Ml = function (e) {
 function Ll() {
   return xl.getState().common.language;
 }
+export default Ml;

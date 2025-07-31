@@ -1,8 +1,11 @@
 "use strict";
 
-import * as r from "../1045/index";
-import * as i from "../568";
-export default (function (e) {
+var r = require("../1045/index");
+var i = require("../568");
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.default = function (e) {
   var t;
   (t = function (e) {
     (0, l.default)(n, e);
@@ -354,7 +357,7 @@ export default (function (e) {
     activeDotStyle: {}
   });
   return t;
-});
+};
 var o = i(require("./1185/index"));
 var a = i(require("../746"));
 var s = i(require("../1043"));

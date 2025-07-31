@@ -1,7 +1,7 @@
 "use strict";
 
 var r = require("./1707/258/index").exportTypedArrayMethod;
-import * as o from "./1626/167";
+var o = require("./1626/167");
 var i = require("./1738/194").Uint8Array;
 var a = i && i.prototype || {};
 var s = [].toString;

@@ -1,5 +1,9 @@
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.Msg = void 0;
 exports.Msg = {
   MATH_ADDITION_SYMBOL: "+",
   MATH_SUBTRACTION_SYMBOL: "-",

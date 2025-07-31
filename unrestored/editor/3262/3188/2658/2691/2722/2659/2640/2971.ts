@@ -1,6 +1,9 @@
 "use strict";
 
-import * as r from "../../../../../../3190/494";
+var r = require("../../../../../../3190/494");
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
 exports._guessExecutionStatusRelativeTo = function (e) {
   var t = {
     this: m(this),
@@ -191,7 +194,8 @@ exports.getSource = function () {
   }
   return "";
 };
-export { h as has };
+exports.has = h;
+exports.is = void 0;
 exports.isCompletionRecord = function (e) {
   var t = this;
   var n = !0;
@@ -315,7 +319,7 @@ exports.resolve = function (e, t) {
 exports.willIMaybeExecuteBefore = function (e) {
   return "after" !== this._guessExecutionStatusRelativeTo(e);
 };
-import * as i from "../../2624/index";
+var i = require("../../2624/index");
 var a = i.STATEMENT_OR_BLOCK_KEYS;
 var s = i.VISITOR_KEYS;
 var o = i.isBlockStatement;
@@ -370,5 +374,5 @@ function g(e, t) {
   }
   return !1;
 }
-export { y as is };
+exports.is = y;
 var T = new WeakSet();

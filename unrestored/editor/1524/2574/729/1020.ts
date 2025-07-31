@@ -1,7 +1,7 @@
 "use strict";
 
 export { j as a };
-import * as r from "./62";
+var r = require("./62");
 var i = {};
 var a = i;
 function o(e, t) {
@@ -2961,3 +2961,4 @@ var j = function () {
   }
   return i;
 }();
+export default j;

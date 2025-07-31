@@ -7,16 +7,19 @@ export { f as d };
 var r;
 var o;
 var i;
-import * as a from "./11";
-import * as s from "./64";
+var a = require("./11");
+var s = require("./64");
 var c = "icon-widget-table-data";
 var l = Object(s.a)("COLUMN");
 var u = Object(s.a)("COLUMN");
-var d = (r = {}, Object(a.a)(r, l, {
+r = {};
+Object(a.a)(r, l, {
   field: "\u7b2c1\u5217"
-}), Object(a.a)(r, u, {
+});
+Object(a.a)(r, u, {
   field: "\u7b2c2\u5217"
-}), r);
+});
+var d = r;
 var p = [(o = {
   rowId: Object(s.a)("ROW")
 }, Object(a.a)(o, l, ""), Object(a.a)(o, u, ""), o), (i = {
@@ -43,3 +46,4 @@ function f() {
     }, Object(a.a)(n, r, ""), Object(a.a)(n, o, ""), n)]
   };
 }
+export default c;

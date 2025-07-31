@@ -48,9 +48,9 @@ const config = {
     },
     output: {
         path: path.resolve(__dirname, "dist", "coco.codemao.cn"),
-        filename: "static/scripts/[name].[fullhash].js"
+        filename: "static/scripts/[name].[fullhash].js",
+        clean: true
     },
-    devtool: "eval-source-map",
     module: {
         rules: [
             {

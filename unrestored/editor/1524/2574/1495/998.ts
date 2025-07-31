@@ -1,9 +1,20 @@
 "use strict";
 
-import * as r from "../0/index";
-import * as i from "../75/index";
-import * as o from "../75/index";
-import * as a from "./378";
+var r = require("../0/index");
+var i = require("../75/index");
+var o = (module => {
+  var defaultExport = module && module.__esModule ? function () {
+    return module.default;
+  } : function () {
+    return module;
+  };
+  Object.defineProperty(defaultExport, "a", {
+    enumerable: true,
+    get: defaultExport
+  });
+  return defaultExport;
+})(i);
+var a = require("./378");
 var s = Object(r.forwardRef)(function (e, t) {
   var n = e.didUpdate;
   var i = e.getContainer;
@@ -34,3 +45,4 @@ var s = Object(r.forwardRef)(function (e, t) {
   return c.current ? o.a.createPortal(s, c.current) : null;
 });
 export { s as a };
+export default s;

@@ -1,11 +1,33 @@
 "use strict";
 
 export { c as a };
-import * as r from "../1/index";
-import * as o from "../1/index";
-import * as i from "../7";
-import * as a from "./411";
-import * as s from "./411";
+var r = require("../1/index");
+var o = (module => {
+  var defaultExport = module && module.__esModule ? function () {
+    return module.default;
+  } : function () {
+    return module;
+  };
+  Object.defineProperty(defaultExport, "a", {
+    enumerable: true,
+    get: defaultExport
+  });
+  return defaultExport;
+})(r);
+var i = require("../7");
+var a = require("./411");
+var s = (module => {
+  var defaultExport = module && module.__esModule ? function () {
+    return module.default;
+  } : function () {
+    return module;
+  };
+  Object.defineProperty(defaultExport, "a", {
+    enumerable: true,
+    get: defaultExport
+  });
+  return defaultExport;
+})(a);
 function c(e, t) {
   return l.apply(this, arguments);
 }
@@ -52,3 +74,4 @@ function l() {
     }, e);
   }))).apply(this, arguments);
 }
+export default c;

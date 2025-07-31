@@ -1,6 +1,9 @@
 "use strict";
 
-export default (function e(t) {
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.default = function e(t) {
   for (var n = {}, a = {}, s = new Set(), o = [], l = 0; l < t.length; l++) {
     var u = t[l];
     if (u && !(o.indexOf(u) >= 0)) {
@@ -42,8 +45,8 @@ export default (function e(t) {
     o.push(n[v]);
   }
   return o;
-});
-import * as r from "./2625";
+};
+var r = require("./2625");
 function i(e) {
   return (0, r.isIdentifier)(e) ? e.name : "".concat(e.id.name, ".").concat(i(e.qualification));
 }

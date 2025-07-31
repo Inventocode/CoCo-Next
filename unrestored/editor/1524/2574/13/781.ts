@@ -703,8 +703,29 @@ module.exports = function (e, t) {
       key: "render",
       value: function () {
         var e = this.props;
-        var t = (e.scale, e.rotate, e.image, e.border, e.borderRadius, e.width, e.height, e.position, e.color, e.backgroundColor, e.style);
-        var n = (e.crossOrigin, e.onLoadFailure, e.onLoadSuccess, e.onImageReady, e.onImageChange, e.onMouseUp, e.onMouseMove, e.onPositionChange, e.disableBoundaryChecks, e.disableHiDPIScaling, e.disableCanvasRotation, function (e, t) {
+        e.scale;
+        e.rotate;
+        e.image;
+        e.border;
+        e.borderRadius;
+        e.width;
+        e.height;
+        e.position;
+        e.color;
+        e.backgroundColor;
+        var t = e.style;
+        e.crossOrigin;
+        e.onLoadFailure;
+        e.onLoadSuccess;
+        e.onImageReady;
+        e.onImageChange;
+        e.onMouseUp;
+        e.onMouseMove;
+        e.onPositionChange;
+        e.disableBoundaryChecks;
+        e.disableHiDPIScaling;
+        e.disableCanvasRotation;
+        var n = function (e, t) {
           if (null == e) {
             return {};
           }
@@ -732,7 +753,7 @@ module.exports = function (e, t) {
             }
           }
           return r;
-        }(e, ["scale", "rotate", "image", "border", "borderRadius", "width", "height", "position", "color", "backgroundColor", "style", "crossOrigin", "onLoadFailure", "onLoadSuccess", "onImageReady", "onImageChange", "onMouseUp", "onMouseMove", "onPositionChange", "disableBoundaryChecks", "disableHiDPIScaling", "disableCanvasRotation"]));
+        }(e, ["scale", "rotate", "image", "border", "borderRadius", "width", "height", "position", "color", "backgroundColor", "style", "crossOrigin", "onLoadFailure", "onLoadSuccess", "onImageReady", "onImageChange", "onMouseUp", "onMouseMove", "onPositionChange", "disableBoundaryChecks", "disableHiDPIScaling", "disableCanvasRotation"]);
         var r = this.getDimensions();
         var o = {
           width: r.canvas.width,

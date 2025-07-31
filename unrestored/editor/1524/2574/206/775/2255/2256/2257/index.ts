@@ -1,9 +1,9 @@
 "use strict";
 
-import * as r from "../../../../../../../3262/3188/2658/220";
-import * as i from "../../../../../../../3262/3188/2658/230";
-import * as o from "../../1117";
-import * as a from "./2258";
+var r = require("../../../../../../../3262/3188/2658/220");
+var i = require("../../../../../../../3262/3188/2658/230");
+var o = require("../../1117");
+var a = require("./2258");
 function s(e, t, n, r) {
   for (var i = 0; i < r.length; ++i) {
     var o = r[i];

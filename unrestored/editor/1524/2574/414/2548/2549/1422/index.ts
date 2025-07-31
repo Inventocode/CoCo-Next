@@ -20,8 +20,11 @@ var r = this && this.__extends || function () {
     t.prototype = null === n ? Object.create(n) : (r.prototype = n.prototype, new r());
   };
 }();
-import * as o from "../../../1420/871";
-import * as i from "./2550";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+var o = require("../../../1420/871");
+var i = require("./2550");
 var a = function (e) {
   function t(t, n, r) {
     var o = e.call(this) || this;
@@ -102,4 +105,4 @@ var a = function (e) {
   };
   return t;
 }(function () {});
-export { a as ReactComponent };
+exports.ReactComponent = a;

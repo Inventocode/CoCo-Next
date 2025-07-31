@@ -1,8 +1,8 @@
 "use strict";
 
 export { o as a };
-import * as r from "../../430";
-import * as i from "../../0/index";
+var r = require("../../430");
+var i = require("../../0/index");
 var o = function (e) {
   function t(t) {
     var n;
@@ -103,3 +103,4 @@ var o = function (e) {
   };
   return t;
 }(i.Component);
+export default o;

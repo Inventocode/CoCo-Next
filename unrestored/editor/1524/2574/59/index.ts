@@ -1,8 +1,19 @@
 "use strict";
 
 export { a as b };
-import * as r from "./767/index";
-import * as o from "./767/index";
+var r = require("./767/index");
+var o = (module => {
+  var defaultExport = module && module.__esModule ? function () {
+    return module.default;
+  } : function () {
+    return module;
+  };
+  Object.defineProperty(defaultExport, "a", {
+    enumerable: true,
+    get: defaultExport
+  });
+  return defaultExport;
+})(r);
 var i = {
   openServiceHost: "https://dev-open-service.codemao.cn",
   serverHost: "https://backend-dev.codemao.cn",
@@ -64,3 +75,4 @@ function a() {
   i.env = n;
 }();
 export { i as a };
+export default i;

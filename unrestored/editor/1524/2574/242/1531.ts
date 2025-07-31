@@ -52,23 +52,23 @@ function w(e) {
 function E(e) {
   return w(e) === h;
 }
-export { f as AsyncMode };
-export { h as ConcurrentMode };
-export { l as ContextConsumer };
-export { u as ContextProvider };
-export { i as Element };
-export { d as ForwardRef };
-export { a as Fragment };
-export { g as Lazy };
-export { A as Memo };
-export { o as Portal };
-export { c as Profiler };
-export { s as StrictMode };
-export { p as Suspense };
+exports.AsyncMode = f;
+exports.ConcurrentMode = h;
+exports.ContextConsumer = l;
+exports.ContextProvider = u;
+exports.Element = i;
+exports.ForwardRef = d;
+exports.Fragment = a;
+exports.Lazy = g;
+exports.Memo = A;
+exports.Portal = o;
+exports.Profiler = c;
+exports.StrictMode = s;
+exports.Suspense = p;
 exports.isAsyncMode = function (e) {
   return E(e) || w(e) === f;
 };
-export { E as isConcurrentMode };
+exports.isConcurrentMode = E;
 exports.isContextConsumer = function (e) {
   return w(e) === l;
 };
@@ -105,4 +105,4 @@ exports.isSuspense = function (e) {
 exports.isValidElementType = function (e) {
   return "string" === typeof e || "function" === typeof e || e === a || e === h || e === c || e === s || e === p || e === _ || "object" === typeof e && null !== e && (e.$$typeof === g || e.$$typeof === A || e.$$typeof === u || e.$$typeof === l || e.$$typeof === d || e.$$typeof === m || e.$$typeof === y || e.$$typeof === b || e.$$typeof === v);
 };
-export { w as typeOf };
+exports.typeOf = w;

@@ -3,10 +3,10 @@
 export { r as a };
 export { c as b };
 var r;
-import * as o from "../27";
-import * as i from "../57/index";
-import * as a from "../58/index";
-import * as s from "../197/276";
+var o = require("../27");
+var i = require("../57/index");
+var a = require("../58/index");
+var s = require("../197/276");
 !function (e) {
   e.NO_UNDEF = "NO_UNDEF";
   e.NO_RETURN_FUNCTION = "NO_RETURN_FUNCTION";
@@ -37,3 +37,4 @@ var c = function (e) {
   }
   return n;
 }(Object(s.a)(Error));
+export default r;

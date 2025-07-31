@@ -1463,7 +1463,10 @@ module.exports = function () {
     }
     if (4 === n.length) {
       var s = n.map(rt);
-      var c = (i = s[0], o = s[1], a = s[2], s[3]);
+      i = s[0];
+      o = s[1];
+      a = s[2];
+      var c = s[3];
       return nt(i, o, a, c);
     }
     return 0;
@@ -4496,7 +4499,8 @@ module.exports = function () {
                 }
               } else if ("counters" === t.name) {
                 var d = t.values.filter(je);
-                var p = (u = d[0], d[1]);
+                u = d[0];
+                var p = d[1];
                 if (l = d[2], u && Re(u)) {
                   var _ = i.counters.getCounterValues(u.value);
                   var A = l && Re(l) ? un.parse(i.context, l.value) : 3;
@@ -6104,7 +6108,12 @@ module.exports = function () {
                 var a;
                 var s = co(e.curves);
                 var c = t.inset ? 0 : 1e4;
-                var u = (n = s, r = -c + (t.inset ? 1 : -1) * t.spread.number, i = (t.inset ? 1 : -1) * t.spread.number, o = t.spread.number * (t.inset ? -2 : 2), a = t.spread.number * (t.inset ? -2 : 2), n.map(function (e, t) {
+                n = s;
+                r = -c + (t.inset ? 1 : -1) * t.spread.number;
+                i = (t.inset ? 1 : -1) * t.spread.number;
+                o = t.spread.number * (t.inset ? -2 : 2);
+                a = t.spread.number * (t.inset ? -2 : 2);
+                var u = n.map(function (e, t) {
                   switch (t) {
                     case 0:
                       return e.add(r, i);
@@ -6116,7 +6125,7 @@ module.exports = function () {
                       return e.add(r, i + a);
                   }
                   return e;
-                }));
+                });
                 if (t.inset) {
                   l.path(s);
                   l.ctx.clip();

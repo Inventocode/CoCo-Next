@@ -20,3 +20,4 @@ export { i as c };
   e.CONTAIN = "contain";
   e.STRETCH = "stretch";
 })(i || (i = {}));
+export default o;

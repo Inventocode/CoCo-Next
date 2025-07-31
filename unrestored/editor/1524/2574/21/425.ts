@@ -2,14 +2,25 @@
 
 export { m as a };
 var r;
-import * as o from "../1/index";
-import * as i from "../1/index";
-import * as a from "../7";
-import * as s from "../27";
-import * as c from "../40";
-import * as l from "../57/index";
-import * as u from "../58/index";
-import * as d from "../197/276";
+var o = require("../1/index");
+var i = (module => {
+  var defaultExport = module && module.__esModule ? function () {
+    return module.default;
+  } : function () {
+    return module;
+  };
+  Object.defineProperty(defaultExport, "a", {
+    enumerable: true,
+    get: defaultExport
+  });
+  return defaultExport;
+})(o);
+var a = require("../7");
+var s = require("../27");
+var c = require("../40");
+var l = require("../57/index");
+var u = require("../58/index");
+var d = require("../197/276");
 !function (e) {
   e.BREAK = "BREAK";
   e.CONTINUE = "CONTINUE";
@@ -535,3 +546,4 @@ var m = function () {
 }();
 m.DEFAULT_SLEEP_DURATION = 10;
 m.MAX_TIMEOUT = Math.pow(2, 31) - 1;
+export default m;

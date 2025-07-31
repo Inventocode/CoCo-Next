@@ -10,3 +10,4 @@ function r(e, t) {
   return r;
 }
 export { r as a };
+export default r;

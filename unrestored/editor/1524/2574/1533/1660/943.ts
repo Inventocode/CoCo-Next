@@ -1,6 +1,6 @@
 "use strict";
 
-import * as r from "../1659/241";
+var r = require("../1659/241");
 module.exports = function () {
   var e = r(this);
   var t = "";

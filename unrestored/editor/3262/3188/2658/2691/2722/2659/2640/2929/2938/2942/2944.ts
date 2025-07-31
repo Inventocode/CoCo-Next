@@ -1,6 +1,9 @@
 "use strict";
 
-exports.LogicalExpression = t.BinaryExpression = t.AssignmentExpression = function (e, t) {
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.LogicalExpression = exports.BinaryExpression = exports.AssignmentExpression = function (e, t) {
   var n = this.inForStatementInitCounter && "in" === e.operator && !i.needsParens(e, t);
   if (n) {
     this.token("(");
@@ -29,6 +32,7 @@ exports.AssignmentPattern = function (e) {
   this.space();
   this.print(e.right, e);
 };
+exports.AwaitExpression = void 0;
 exports.BindExpression = function (e) {
   this.print(e.object, e);
   this.token("::");
@@ -203,8 +207,9 @@ exports.V8IntrinsicIdentifier = function (e) {
   this.token("%");
   this.word(e.name);
 };
-import * as r from "../../../../../2624/index";
-import * as i from "../2748/index";
+exports.YieldExpression = void 0;
+var r = require("../../../../../2624/index");
+var i = require("../2748/index");
 var a = r.isCallExpression;
 var s = r.isLiteral;
 var o = r.isMemberExpression;
@@ -220,6 +225,6 @@ function u(e) {
   };
 }
 var c = u("yield");
-export { c as YieldExpression };
+exports.YieldExpression = c;
 var p = u("await");
-export { p as AwaitExpression };
+exports.AwaitExpression = p;

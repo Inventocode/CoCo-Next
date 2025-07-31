@@ -1,5 +1,8 @@
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
 var r = Symbol.for("INJECTION");
 function i(e, t, n, i) {
   Object.defineProperty(e, t, {

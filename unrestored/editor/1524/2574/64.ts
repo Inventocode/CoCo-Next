@@ -3,8 +3,19 @@
 export { i as a };
 export { a as b };
 export { s as c };
-import * as r from "./13/303/index";
-import * as o from "./13/303/index";
+var r = require("./13/303/index");
+var o = (module => {
+  var defaultExport = module && module.__esModule ? function () {
+    return module.default;
+  } : function () {
+    return module;
+  };
+  Object.defineProperty(defaultExport, "a", {
+    enumerable: true,
+    get: defaultExport
+  });
+  return defaultExport;
+})(r);
 function i(e) {
   return e + "_" + o.a.generate();
 }
@@ -28,3 +39,4 @@ function s(e) {
   }
 }
 o.a.characters("0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-_");
+export default i;

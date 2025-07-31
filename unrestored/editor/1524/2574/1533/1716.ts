@@ -1,8 +1,8 @@
 "use strict";
 
-import * as r from "./1738/194";
-import * as o from "./1707/258/index";
-import * as i from "./935/index";
+var r = require("./1738/194");
+var o = require("./1707/258/index");
+var i = require("./935/index");
 var a = require("./1735/247/index")("iterator");
 var s = r.Uint8Array;
 var c = i.values;

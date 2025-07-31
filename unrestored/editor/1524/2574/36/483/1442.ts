@@ -1,1 +1,1 @@
-module.exports = n.p + "static/media/empty-icon.a16d61c9.svg";
+module.exports = "https://creation.codemao.cn/coconut/web/1.22.0-0/" + "static/media/empty-icon.a16d61c9.svg";

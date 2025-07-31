@@ -1,16 +1,38 @@
 "use strict";
 
-import * as r from "../20";
-import * as i from "../33/index";
-import * as o from "../28";
-import * as a from "../54";
-import * as s from "../0/index";
-import * as c from "../0/index";
-import * as u from "../8";
-import * as l from "../8";
-import * as f from "./779";
-import * as h from "../108";
-import * as d from "./910/index";
+var r = require("../20");
+var i = require("../33/index");
+var o = require("../28");
+var a = require("../54");
+var s = require("../0/index");
+var c = (module => {
+  var defaultExport = module && module.__esModule ? function () {
+    return module.default;
+  } : function () {
+    return module;
+  };
+  Object.defineProperty(defaultExport, "a", {
+    enumerable: true,
+    get: defaultExport
+  });
+  return defaultExport;
+})(s);
+var u = require("../8");
+var l = (module => {
+  var defaultExport = module && module.__esModule ? function () {
+    return module.default;
+  } : function () {
+    return module;
+  };
+  Object.defineProperty(defaultExport, "a", {
+    enumerable: true,
+    get: defaultExport
+  });
+  return defaultExport;
+})(u);
+var f = require("./779");
+var h = require("../108");
+var d = require("./910/index");
 var p = {};
 function _(e, t) {
   0;
@@ -240,3 +262,4 @@ R.getTwoToneColor = function () {
 };
 R.setTwoToneColor = I;
 export { R as a };
+export default R;

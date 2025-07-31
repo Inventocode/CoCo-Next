@@ -1,7 +1,11 @@
 "use strict";
 
-import * as r from "../../13/769/568";
-import * as i from "../../13/769/1045/index";
+var r = require("../../13/769/568");
+var i = require("../../13/769/1045/index");
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.default = exports.HOOK_MARK = void 0;
 var o = i(require("../../0/index"));
 var a = r(require("../../13/769/949"));
 exports.HOOK_MARK = "RC_FORM_INTERNAL_HOOKS";
@@ -39,4 +43,4 @@ var c = o.createContext({
     };
   }
 });
-export default c;
+exports.default = c;

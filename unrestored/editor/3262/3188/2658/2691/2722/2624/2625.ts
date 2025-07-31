@@ -1,5 +1,8 @@
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
 exports.isAnyTypeAnnotation = function (e, t) {
   if (!e) {
     return !1;
@@ -2730,4 +2733,4 @@ exports.isYieldExpression = function (e, t) {
   }
   return !1;
 };
-import * as r from "./2692";
+var r = require("./2692");

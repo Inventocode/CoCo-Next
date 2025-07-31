@@ -1,9 +1,9 @@
 "use strict";
 
-import * as r from "../../442";
-import * as i from "./1942";
-import * as o from "../../1288";
-import * as a from "../../1289/index";
+var r = require("../../442");
+var i = require("./1942");
+var o = require("../../1288");
+var a = require("../../1289/index");
 function s(e) {
   if (e.cancelToken) {
     e.cancelToken.throwIfRequested();

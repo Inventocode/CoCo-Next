@@ -1,6 +1,14 @@
 "use strict";
 
-export { default as ImportInjector } from "./3083/index";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+Object.defineProperty(exports, "ImportInjector", {
+  enumerable: !0,
+  get: function () {
+    return r.default;
+  }
+});
 exports.addDefault = function (e, t, n) {
   return new r.default(e).addDefault(t, n);
 };
@@ -13,6 +21,11 @@ exports.addNamespace = function (e, t, n) {
 exports.addSideEffect = function (e, t, n) {
   return new r.default(e).addSideEffect(t, n);
 };
-export { default as isModule } from "./2789";
-import * as r from "./3083/index";
-import * as i from "./2789";
+Object.defineProperty(exports, "isModule", {
+  enumerable: !0,
+  get: function () {
+    return i.default;
+  }
+});
+var r = require("./3083/index");
+var i = require("./2789");

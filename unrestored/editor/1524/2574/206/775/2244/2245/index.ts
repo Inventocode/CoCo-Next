@@ -1,16 +1,16 @@
 "use strict";
 
-import * as r from "../../../../../../3262/3188/2658/220";
-import * as i from "../../../../../../3262/3188/2658/230";
-import * as o from "./1296";
-import * as a from "../../../../../../3262/3188/2658/2679/356/index";
-import * as s from "../../../../../../3262/3188/2658/2679/357/index";
-import * as c from "../../../../../../3262/3190/624/index";
+var r = require("../../../../../../3262/3188/2658/220");
+var i = require("../../../../../../3262/3188/2658/230");
+var o = require("./1296");
+var a = require("../../../../../../3262/3188/2658/2679/356/index");
+var s = require("../../../../../../3262/3188/2658/2679/357/index");
+var c = require("../../../../../../3262/3190/624/index");
 var u = require("./1337").isCommentToken;
-import * as l from "./2246/index";
-import * as f from "../../964";
-import * as h from "../../1336";
-import * as d from "../../../../31/index";
+var l = require("./2246/index");
+var f = require("../../964");
+var h = require("../../1336");
+var d = require("../../../../31/index");
 function p(e, t, n, r) {
   if (function (e, t) {
     return e.range[0] <= t.range[0] && e.range[1] >= t.range[0] || t.range[0] <= e.range[0] && t.range[1] >= e.range[0];

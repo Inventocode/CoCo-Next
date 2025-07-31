@@ -1,4 +1,4 @@
-import * as r from "../../../../1441/1869/1870/1876/954";
+var r = require("../../../../1441/1869/1870/1876/954");
 var i = Object.prototype;
 var o = i.hasOwnProperty;
 var a = i.toString;

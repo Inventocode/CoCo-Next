@@ -1,9 +1,9 @@
 "use strict";
 
-import * as r from "./442";
-import * as i from "./1286";
-import * as o from "./1939/index";
-import * as a from "./1292";
+var r = require("./442");
+var i = require("./1286");
+var o = require("./1939/index");
+var a = require("./1292");
 function s(e) {
   var t = new o(e);
   var n = i(o.prototype.request, t);
@@ -25,4 +25,4 @@ c.all = function (e) {
 c.spread = require("./1953");
 c.isAxiosError = require("./1954");
 module.exports = c;
-e.exports.default = c;
+module.exports.default = c;

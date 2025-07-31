@@ -1,6 +1,9 @@
 "use strict";
 
-export default (function (e, t) {
-  (0, r.default)("leadingComments", e, t);
+Object.defineProperty(exports, "__esModule", {
+  value: !0
 });
-import * as r from "./2839/2717";
+exports.default = function (e, t) {
+  (0, r.default)("leadingComments", e, t);
+};
+var r = require("./2839/2717");

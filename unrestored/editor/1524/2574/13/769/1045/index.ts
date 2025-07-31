@@ -1,4 +1,4 @@
-import * as r from "./1080";
+var r = require("./1080");
 function i() {
   if ("function" !== typeof WeakMap) {
     return null;

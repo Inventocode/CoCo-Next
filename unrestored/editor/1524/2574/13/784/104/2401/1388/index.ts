@@ -1,6 +1,6 @@
-import * as r from "./718/index";
-import * as i from "./1148/index";
-import * as o from "./535";
+var r = require("./718/index");
+var i = require("./1148/index");
+var o = require("./535");
 var a = Function.prototype;
 var s = Object.prototype;
 var c = a.toString;

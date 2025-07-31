@@ -2,12 +2,23 @@
 
 export { c as useDrag };
 export { l as useGesture };
-import * as r from "./329/index";
-import * as i from "../../../0/index";
-import * as o from "../../../0/index";
-import * as a from "./1168";
-import "./1284";
-import "./1285";
+var r = require("./329/index");
+var i = require("../../../0/index");
+var o = (module => {
+  var defaultExport = module && module.__esModule ? function () {
+    return module.default;
+  } : function () {
+    return module;
+  };
+  Object.defineProperty(defaultExport, "a", {
+    enumerable: true,
+    get: defaultExport
+  });
+  return defaultExport;
+})(i);
+var a = require("./1168");
+require("./1284");
+require("./1285");
 function s(e) {
   var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
   var n = arguments.length > 2 ? arguments[2] : void 0;

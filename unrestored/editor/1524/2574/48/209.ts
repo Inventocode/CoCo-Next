@@ -1,7 +1,18 @@
 "use strict";
 
-import * as r from "../186/index";
-var o = n.n(r).a.create({
+var r = require("../186/index");
+var o = (module => {
+  var defaultExport = module && module.__esModule ? function () {
+    return module.default;
+  } : function () {
+    return module;
+  };
+  Object.defineProperty(defaultExport, "a", {
+    enumerable: true,
+    get: defaultExport
+  });
+  return defaultExport;
+})(r).a.create({
   timeout: 5e3,
   withCredentials: !0
 });
@@ -16,4 +27,4 @@ o.interceptors.response.use(function (e) {
   e.response;
   return Promise.reject(e);
 });
-export { o as a };
+exports.a = o;

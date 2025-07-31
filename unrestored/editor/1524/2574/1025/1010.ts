@@ -1,7 +1,7 @@
 "use strict";
 
 export { s as a };
-import * as r from "../2617/462";
+var r = require("../2617/462");
 function i(e) {
   return e.attachTo ? e.attachTo : document.querySelector("head") || document.body;
 }
@@ -59,3 +59,4 @@ function s(e, t) {
   d["rc-util-key"] = t;
   return d;
 }
+export default s;

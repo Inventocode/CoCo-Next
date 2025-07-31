@@ -52,7 +52,7 @@ module.exports = function (e, t) {
     serializer: r
   });
 };
-e.exports.strategies = {
+module.exports.strategies = {
   variadic: function (e, t) {
     return i(e, this, r, t.cache.create(), t.serializer);
   },

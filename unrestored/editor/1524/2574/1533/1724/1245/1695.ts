@@ -1,4 +1,4 @@
-import * as r from "../../1556/473";
+var r = require("../../1556/473");
 module.exports = function (e) {
   var t = r(e);
   if (t < 0) {

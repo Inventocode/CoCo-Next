@@ -1,6 +1,9 @@
 "use strict";
 
-export default (function (e) {
-  return !(!e || !r.VISITOR_KEYS[e.type]);
+Object.defineProperty(exports, "__esModule", {
+  value: !0
 });
-import * as r from "./2636/index";
+exports.default = function (e) {
+  return !(!e || !r.VISITOR_KEYS[e.type]);
+};
+var r = require("./2636/index");

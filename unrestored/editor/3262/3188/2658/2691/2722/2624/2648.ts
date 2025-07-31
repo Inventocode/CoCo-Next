@@ -1,8 +1,11 @@
 "use strict";
 
-export default l;
-import * as r from "./2633/index";
-import * as i from "./2625";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.default = l;
+var r = require("./2633/index");
+var i = require("./2625");
 var a = Function.call.bind(Object.prototype.hasOwnProperty);
 function s(e, t, n) {
   return e && "string" === typeof e.type ? l(e, t, n) : e;

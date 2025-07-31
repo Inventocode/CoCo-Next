@@ -1,7 +1,7 @@
 "use strict";
 
-import * as r from "../../../../../3262/3188/2658/220";
-import * as i from "../../../../../3262/3188/2658/230";
+var r = require("../../../../../3262/3188/2658/220");
+var i = require("../../../../../3262/3188/2658/230");
 var o = function () {
   function e(t) {
     r(this, e);

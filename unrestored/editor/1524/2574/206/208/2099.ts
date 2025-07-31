@@ -1,7 +1,11 @@
 "use strict";
 
-import * as r from "../725/387";
-import * as i from "../../301/173";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.register_procedure_generator = void 0;
+var r = require("../725/387");
+var i = require("../../301/173");
 exports.register_procedure_generator = function (e) {
   e.register(i.PROCEDURE_BLOCK_TYPES.DEF, function (t) {
     var n = t.get_field_value("NAME");

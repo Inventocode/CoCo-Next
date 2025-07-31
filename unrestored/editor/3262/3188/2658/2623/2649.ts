@@ -1,44 +1,48 @@
 "use strict";
 
-import * as r from "../../../2873/2721/805/index";
+var r = require("../../../2873/2721/805/index");
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.UPDATE_OPERATORS = exports.UNARY_OPERATORS = exports.STRING_UNARY_OPERATORS = exports.STATEMENT_OR_BLOCK_KEYS = exports.NUMBER_UNARY_OPERATORS = exports.NUMBER_BINARY_OPERATORS = exports.NOT_LOCAL_BINDING = exports.LOGICAL_OPERATORS = exports.INHERIT_KEYS = exports.FOR_INIT_KEYS = exports.FLATTENABLE_KEYS = exports.EQUALITY_BINARY_OPERATORS = exports.COMPARISON_BINARY_OPERATORS = exports.COMMENT_KEYS = exports.BOOLEAN_UNARY_OPERATORS = exports.BOOLEAN_NUMBER_BINARY_OPERATORS = exports.BOOLEAN_BINARY_OPERATORS = exports.BLOCK_SCOPED_SYMBOL = exports.BINARY_OPERATORS = exports.ASSIGNMENT_OPERATORS = void 0;
 exports.STATEMENT_OR_BLOCK_KEYS = ["consequent", "body", "alternate"];
 exports.FLATTENABLE_KEYS = ["body", "expressions"];
 exports.FOR_INIT_KEYS = ["left", "init"];
 exports.COMMENT_KEYS = ["leadingComments", "trailingComments", "innerComments"];
 var i = ["||", "&&", "??"];
-export { i as LOGICAL_OPERATORS };
+exports.LOGICAL_OPERATORS = i;
 exports.UPDATE_OPERATORS = ["++", "--"];
 var a = [">", "<", ">=", "<="];
-export { a as BOOLEAN_NUMBER_BINARY_OPERATORS };
+exports.BOOLEAN_NUMBER_BINARY_OPERATORS = a;
 var s = ["==", "===", "!=", "!=="];
-export { s as EQUALITY_BINARY_OPERATORS };
+exports.EQUALITY_BINARY_OPERATORS = s;
 var o = [].concat(s, ["in", "instanceof"]);
-export { o as COMPARISON_BINARY_OPERATORS };
+exports.COMPARISON_BINARY_OPERATORS = o;
 var l = [].concat(r(o), a);
-export { l as BOOLEAN_BINARY_OPERATORS };
+exports.BOOLEAN_BINARY_OPERATORS = l;
 var u = ["-", "/", "%", "*", "**", "&", "|", ">>", ">>>", "<<", "^"];
-export { u as NUMBER_BINARY_OPERATORS };
+exports.NUMBER_BINARY_OPERATORS = u;
 var c = ["+"].concat(u, r(l));
-export { c as BINARY_OPERATORS };
+exports.BINARY_OPERATORS = c;
 var p = ["=", "+="].concat(r(u.map(function (e) {
   return e + "=";
 })), r(i.map(function (e) {
   return e + "=";
 })));
-export { p as ASSIGNMENT_OPERATORS };
+exports.ASSIGNMENT_OPERATORS = p;
 var f = ["delete", "!"];
-export { f as BOOLEAN_UNARY_OPERATORS };
+exports.BOOLEAN_UNARY_OPERATORS = f;
 var d = ["+", "-", "~"];
-export { d as NUMBER_UNARY_OPERATORS };
+exports.NUMBER_UNARY_OPERATORS = d;
 var h = ["typeof"];
-export { h as STRING_UNARY_OPERATORS };
+exports.STRING_UNARY_OPERATORS = h;
 var y = ["void", "throw"].concat(f, d, h);
-export { y as UNARY_OPERATORS };
+exports.UNARY_OPERATORS = y;
 exports.INHERIT_KEYS = {
   optional: ["typeAnnotation", "typeParameters", "returnType"],
   force: ["start", "loc", "end"]
 };
 var m = Symbol.for("var used to be block scoped");
-export { m as BLOCK_SCOPED_SYMBOL };
+exports.BLOCK_SCOPED_SYMBOL = m;
 var v = Symbol.for("should not be considered a local binding");
-export { v as NOT_LOCAL_BINDING };
+exports.NOT_LOCAL_BINDING = v;

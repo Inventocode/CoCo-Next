@@ -2,8 +2,9 @@
 
 export { o as a };
 export { a as b };
-import * as r from "../0/index";
-var i = (require("../50/index"), Object(r.createContext)(null));
+var r = require("../0/index");
+require("../50/index");
+var i = Object(r.createContext)(null);
 var o = function (e) {
   var t = e.utils;
   var n = e.children;
@@ -29,3 +30,4 @@ function a() {
   })(e);
   return e;
 }
+export default o;

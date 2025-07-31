@@ -1,8 +1,11 @@
 "use strict";
 
-import * as r from "../../../../../3190/624/index";
-import * as i from "../../../../../3190/494";
-export default (function (e, t, n) {
+var r = require("../../../../../3190/624/index");
+var i = require("../../../../../3190/494");
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.default = function (e, t, n) {
   var s = n.importInterop;
   var u = n.initializeReexports;
   var d = void 0 !== u && u;
@@ -354,15 +357,15 @@ export default (function (e, t, n) {
     source: S,
     stringSpecifiers: g
   };
-});
+};
 exports.hasExports = function (e) {
   return e.hasExports;
 };
-export { l as isSideEffectImport };
-export { u as validateImportInteropOption };
-import * as a from "../../../../1184/index";
-import * as s from "../../../2623/2664/2665/index";
-import * as o from "./2779";
+exports.isSideEffectImport = l;
+exports.validateImportInteropOption = u;
+var a = require("../../../../1184/index");
+var s = require("../../../2623/2664/2665/index");
+var o = require("./2779");
 function l(e) {
   return 0 === e.imports.size && 0 === e.importsNamespace.size && 0 === e.reexports.size && 0 === e.reexportNamespace.size && !e.reexportAll;
 }

@@ -15,4 +15,4 @@ var r = {
     onContactPickerSelected: "\u5b8c\u6210\u9009\u62e9"
   }
 };
-import * as o from "./476";
+var o = require("./476");

@@ -1,4 +1,4 @@
-import * as r from "./1775/953";
+var r = require("./1775/953");
 module.exports = function (e, t) {
   var n = this.__data__;
   var i = r(n, e);

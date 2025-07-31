@@ -2,7 +2,7 @@
 
 export { o as a };
 var r;
-import * as i from "./306";
+var i = require("./306");
 !function (e) {
   e.PENDING = "PENDING";
   e.RESOLVED = "RESOLVED";
@@ -155,3 +155,4 @@ var o = function () {
   };
   return e;
 }();
+export default o;

@@ -14443,7 +14443,8 @@
               throw new Error("Invalid regex source " + s);
             }
             var u = i(c, 3);
-            var l = (u[0], u[1]);
+            u[0];
+            var l = u[1];
             var f = u[2];
             n.value = {
               source: l,
@@ -15203,5 +15204,5 @@
     t.reserve_quoted_keys = bi;
     t.string_template = C;
     t.to_ascii = xi;
-  }(t, require("./1966/index"));
+  }(exports, require("./1966/index"));
 }).call(this, require("../../31/251"), require("../../616/570/index").Buffer);

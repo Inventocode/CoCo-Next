@@ -1,8 +1,8 @@
 "use strict";
 
-import * as r from "./2644";
-import * as a from "./2811";
-import * as i from "../2668";
+var r = require("./2644");
+var a = require("./2811");
+var i = require("../2668");
 var o = (0, r.defineAliasedType)("TypeScript");
 var s = (0, r.assertValueType)("boolean");
 var u = {

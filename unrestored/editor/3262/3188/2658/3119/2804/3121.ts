@@ -1,6 +1,6 @@
 "use strict";
 
-import * as r from "../../../../3190/494";
+var r = require("../../../../3190/494");
 function i() {
   var e = require("../../2637/index");
   i = function () {
@@ -8,16 +8,19 @@ function i() {
   };
   return e;
 }
-export default (function () {
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.default = function () {
   if (!a) {
     a = new s.default(Object.assign({}, l, {
       visitor: i().default.explode(l.visitor)
     }), {});
   }
   return a;
-});
+};
 var a;
-import * as s from "../../2681/3094/2682";
+var s = require("../../2681/3094/2682");
 function o(e) {
   var t = null == e ? void 0 : e._blockHoist;
   return null == t ? 1 : !0 === t ? 2 : t;

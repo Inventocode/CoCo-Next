@@ -425,7 +425,7 @@ var r = function (e) {
     }
   };
   return e;
-}(e.exports);
+}(module.exports);
 try {
   regeneratorRuntime = r;
 } catch (i) {

@@ -1,8 +1,8 @@
 "use strict";
 
-import * as r from "./1626/86/index";
-import * as o from "./1626/167";
-import * as i from "./1550/707";
+var r = require("./1626/86/index");
+var o = require("./1626/167");
+var i = require("./1550/707");
 r({
   target: "Array",
   stat: !0,

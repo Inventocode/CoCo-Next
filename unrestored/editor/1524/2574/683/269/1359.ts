@@ -1,9 +1,12 @@
 "use strict";
 
-import * as r from "./2325/444";
-import * as i from "./359";
-import * as o from "./2330/498";
-import * as a from "./645";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+var r = require("./2325/444");
+var i = require("./359");
+var o = require("./2330/498");
+var a = require("./645");
 var s = function () {
   function e(e) {
     this._cb = e;
@@ -13,7 +16,7 @@ var s = function () {
   };
   return e;
 }();
-export { s as LazyServiceIdentifer };
+exports.LazyServiceIdentifer = s;
 exports.inject = function (e) {
   return function (t, n, s) {
     if (void 0 === e) {

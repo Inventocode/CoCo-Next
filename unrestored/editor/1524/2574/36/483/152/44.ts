@@ -30,9 +30,9 @@ export { qe as A };
 export { Xe as B };
 export { ze as C };
 export { Ye as D };
-import * as r from "../../../10/index";
-import * as i from "../../../27";
-import * as o from "../../../25/index";
+var r = require("../../../10/index");
+var i = require("../../../27");
+var o = require("../../../25/index");
 var a = w();
 var s = function (e) {
   return v(e, a);
@@ -212,7 +212,7 @@ function E(e, t) {
     }
   });
 }
-import * as x from "../../../0/index";
+var x = require("../../../0/index");
 function C() {}
 var O = function (e, t, n) {
   return Object.defineProperty(e, t, {
@@ -944,3 +944,4 @@ function Ye(e) {
   return t.current;
 }
 var qe = "undefined" !== typeof window && window.document && window.document.createElement ? x.useLayoutEffect : x.useEffect;
+export default we;

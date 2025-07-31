@@ -14,7 +14,7 @@ exports.isValid = function (e) {
   return e && "undefined" !== typeof e.bit && e.bit >= 0 && e.bit < 4;
 };
 exports.from = function (e, n) {
-  if (t.isValid(e)) {
+  if (exports.isValid(e)) {
     return e;
   }
   try {
@@ -25,16 +25,16 @@ exports.from = function (e, n) {
       switch (e.toLowerCase()) {
         case "l":
         case "low":
-          return t.L;
+          return exports.L;
         case "m":
         case "medium":
-          return t.M;
+          return exports.M;
         case "q":
         case "quartile":
-          return t.Q;
+          return exports.Q;
         case "h":
         case "high":
-          return t.H;
+          return exports.H;
         default:
           throw new Error("Unknown EC Level: " + e);
       }

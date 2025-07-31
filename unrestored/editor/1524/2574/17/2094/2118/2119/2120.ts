@@ -1,5 +1,9 @@
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.TimerHandler = void 0;
 var r = function () {
   function e() {
     this.timers = [];
@@ -50,4 +54,4 @@ var r = function () {
   };
   return e;
 }();
-export { r as TimerHandler };
+exports.TimerHandler = r;

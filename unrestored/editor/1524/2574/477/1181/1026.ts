@@ -2,11 +2,11 @@
 
 export { c as a };
 export { l as b };
-import * as r from "../../36/483/39";
-import * as i from "./306";
-import * as o from "./2577/index";
-import * as a from "./914";
-import * as s from "./394";
+var r = require("../../36/483/39");
+var i = require("./306");
+var o = require("./2577/index");
+var a = require("./914");
+var s = require("./394");
 var c = function () {
   function e() {
     this._notifyingListeners = !1;
@@ -288,3 +288,4 @@ function u() {
 function l(e) {
   u().push(e);
 }
+export default c;

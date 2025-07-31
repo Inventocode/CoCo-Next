@@ -1,10 +1,10 @@
 "use strict";
 
-import * as r from "./437";
-import * as o from "./633";
-import * as i from "./822";
-import * as a from "../1738/423/index";
-import * as s from "./1065/index";
+var r = require("./437");
+var o = require("./633");
+var i = require("./822");
+var a = require("../1738/423/index");
+var s = require("./1065/index");
 var c = a.set;
 var l = a.getterFor("Array Iterator");
 module.exports = s(Array, "Array", function (e, t) {

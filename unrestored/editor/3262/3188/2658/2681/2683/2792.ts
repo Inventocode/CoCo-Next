@@ -1,8 +1,8 @@
 "use strict";
 
-import * as r from "../../../../3190/494";
-import * as i from "../../../../3190/624/index";
-import * as a from "../../../../../1524/2574/1/index";
+var r = require("../../../../3190/494");
+var i = require("../../../../3190/624/index");
+var a = require("../../../../../1524/2574/1/index");
 var s = a.mark(m);
 var o = a.mark(P);
 var l = a.mark(A);
@@ -15,6 +15,9 @@ function p() {
   };
   return e;
 }
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
 exports.createCachedDescriptors = function (e, t, n) {
   var r = t.plugins;
   var i = t.presets;
@@ -33,7 +36,7 @@ exports.createCachedDescriptors = function (e, t, n) {
     }
   };
 };
-export { w as createDescriptor };
+exports.createDescriptor = w;
 exports.createUncachedDescriptors = function (e, t, n) {
   var r;
   var i;
@@ -83,10 +86,10 @@ exports.createUncachedDescriptors = function (e, t, n) {
     })
   };
 };
-import * as f from "../../2680";
-import * as d from "./index";
-import * as h from "../3094/2684";
-import * as y from "../2803/2793/index";
+var f = require("../../2680");
+var d = require("./index");
+var h = require("../3094/2684");
+var y = require("../2803/2793/index");
 function m(e) {
   return a.wrap(function (t) {
     for (;;) {

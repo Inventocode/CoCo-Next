@@ -1,7 +1,7 @@
 "use strict";
 
 export { o as b };
-import * as r from "../../../54";
+var r = require("../../../54");
 var i = {
   easeInOut: "cubic-bezier(0.4, 0, 0.2, 1)",
   easeOut: "cubic-bezier(0.0, 0, 0.2, 1)",
@@ -20,7 +20,8 @@ var o = {
 function a(e) {
   return "".concat(Math.round(e), "ms");
 }
-exports.a = {
+var _a;
+_a = {
   easing: i,
   duration: o,
   create: function () {
@@ -45,3 +46,5 @@ exports.a = {
     return Math.round(10 * (4 + 15 * Math.pow(t, .25) + t / 5));
   }
 };
+export { _a as a };
+export default _a;

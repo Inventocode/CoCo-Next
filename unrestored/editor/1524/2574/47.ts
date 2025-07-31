@@ -1,7 +1,7 @@
 "use strict";
 
 export { i as a };
-import * as r from "./10/768";
+var r = require("./10/768");
 function i(e) {
   if ("undefined" === typeof Symbol || null == e[Symbol.iterator]) {
     if (Array.isArray(e) || (e = Object(r.a)(e))) {
@@ -55,3 +55,4 @@ function i(e) {
     }
   };
 }
+export default i;

@@ -1,17 +1,36 @@
 "use strict";
 
-import * as r from "../../../3190/494";
-export { default as Hub } from "./3080";
-export { default as NodePath } from "./2642/index";
-export { default as Scope } from "./2777/index";
-import * as i from "./2983";
-import * as a from "./3079";
-export { a as visitors };
-import * as s from "../2623/index";
-import * as o from "./2656";
-import * as l from "./2642/index";
-import * as u from "./2777/index";
-import * as c from "./3080";
+var r = require("../../../3190/494");
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+Object.defineProperty(exports, "Hub", {
+  enumerable: !0,
+  get: function () {
+    return c.default;
+  }
+});
+Object.defineProperty(exports, "NodePath", {
+  enumerable: !0,
+  get: function () {
+    return l.default;
+  }
+});
+Object.defineProperty(exports, "Scope", {
+  enumerable: !0,
+  get: function () {
+    return u.default;
+  }
+});
+exports.visitors = exports.default = void 0;
+var i = require("./2983");
+var a = require("./3079");
+exports.visitors = a;
+var s = require("../2623/index");
+var o = require("./2656");
+var l = require("./2642/index");
+var u = require("./2777/index");
+var c = require("./3080");
 var p = s.VISITOR_KEYS;
 var f = s.removeProperties;
 var d = s.traverseFast;
@@ -37,7 +56,7 @@ function m(e, t) {
     e.stop();
   }
 }
-export default y;
+exports.default = y;
 h.visitors = a;
 h.verify = a.verify;
 h.explode = a.explode;

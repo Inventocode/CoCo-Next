@@ -30,3 +30,4 @@ function i(e) {
   };
 }
 export { i as a };
+export default i;

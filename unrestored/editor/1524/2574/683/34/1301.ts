@@ -425,7 +425,7 @@ function k(e, t, n, r) {
   return i;
 }
 module.exports = r;
-e.exports.default = r;
+module.exports.default = r;
 r.deviation = function (e, t, n, r) {
   var i = t && t.length;
   var o = i ? t[0] * n : e.length;

@@ -1,4 +1,4 @@
-import * as r from "../762/index";
+var r = require("../762/index");
 module.exports = function (e, t) {
   return function (n, i) {
     if (null == n) {

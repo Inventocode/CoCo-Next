@@ -1,4 +1,4 @@
-import * as r from "./2183";
+var r = require("./2183");
 function i(t, n, o) {
   if ("undefined" !== typeof Reflect && Reflect.get) {
     module.exports = i = Reflect.get;

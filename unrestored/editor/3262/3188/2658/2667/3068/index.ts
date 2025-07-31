@@ -1,6 +1,9 @@
 "use strict";
 
-export default (function e(t, n) {
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.default = function e(t, n) {
   var l = new WeakMap();
   var u = new WeakMap();
   var c = n || (0, r.validate)(null);
@@ -51,10 +54,10 @@ export default (function e(t, n) {
       throw new Error("Unexpected template param ".concat(typeof e));
     }
   });
-});
-import * as r from "./2703";
-import * as i from "./3069";
-import * as a from "./3070/index";
+};
+var r = require("./2703");
+var i = require("./3069");
+var a = require("./3070/index");
 var s = (0, r.validate)({
   placeholderPattern: !1
 });

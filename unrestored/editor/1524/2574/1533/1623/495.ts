@@ -1,7 +1,7 @@
-import * as r from "../1738/332";
-import * as o from "./309";
-import * as i from "../1534/932";
-import * as a from "./1066";
+var r = require("../1738/332");
+var o = require("./309");
+var i = require("../1534/932");
+var a = require("./1066");
 var s = i("IE_PROTO");
 var c = Object.prototype;
 module.exports = a ? Object.getPrototypeOf : function (e) {

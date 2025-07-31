@@ -1,8 +1,8 @@
 var r = require("../844/index")("socket.io-parser");
-import * as i from "../1347/1124";
-import * as o from "./2285";
-import * as a from "./758";
-import * as s from "./1346";
+var i = require("../1347/1124");
+var o = require("./2285");
+var a = require("./758");
+var s = require("./1346");
 function c() {}
 exports.protocol = 4;
 exports.types = ["CONNECT", "DISCONNECT", "EVENT", "ACK", "ERROR", "BINARY_EVENT", "BINARY_ACK"];
@@ -13,12 +13,12 @@ exports.ACK = 3;
 exports.ERROR = 4;
 exports.BINARY_EVENT = 5;
 exports.BINARY_ACK = 6;
-export { c as Encoder };
-export { f as Decoder };
-var u = t.ERROR + '"encode error"';
+exports.Encoder = c;
+exports.Decoder = f;
+var u = exports.ERROR + '"encode error"';
 function l(e) {
   var n = "" + e.type;
-  if (t.BINARY_EVENT !== e.type && t.BINARY_ACK !== e.type || (n += e.attachments + "-"), e.nsp && "/" !== e.nsp && (n += e.nsp + ","), null != e.id && (n += e.id), null != e.data) {
+  if (exports.BINARY_EVENT !== e.type && exports.BINARY_ACK !== e.type || (n += e.attachments + "-"), e.nsp && "/" !== e.nsp && (n += e.nsp + ","), null != e.id && (n += e.id), null != e.data) {
     var i = function (e) {
       try {
         return JSON.stringify(e);
@@ -43,12 +43,12 @@ function h(e) {
 }
 function d(e) {
   return {
-    type: t.ERROR,
+    type: exports.ERROR,
     data: "parser error: " + e
   };
 }
 c.prototype.encode = function (e, n) {
-  if (r("encoding packet %j", e), t.BINARY_EVENT === e.type || t.BINARY_ACK === e.type) {
+  if (r("encoding packet %j", e), exports.BINARY_EVENT === e.type || exports.BINARY_ACK === e.type) {
     (function (e, t) {
       o.removeBlobs(e, function (e) {
         var n = o.deconstructPacket(e);
@@ -71,10 +71,10 @@ f.prototype.add = function (e) {
       var i = {
         type: Number(e.charAt(0))
       };
-      if (null == t.types[i.type]) {
+      if (null == exports.types[i.type]) {
         return d("unknown packet type " + i.type);
       }
-      if (t.BINARY_EVENT === i.type || t.BINARY_ACK === i.type) {
+      if (exports.BINARY_EVENT === i.type || exports.BINARY_ACK === i.type) {
         for (var o = n + 1; "-" !== e.charAt(++n) && n != e.length;) {
           ;
         }
@@ -119,7 +119,7 @@ f.prototype.add = function (e) {
             return !1;
           }
         }(e.substr(n));
-        if (!(!1 !== l && (i.type === t.ERROR || a(l)))) {
+        if (!(!1 !== l && (i.type === exports.ERROR || a(l)))) {
           return d("invalid payload");
         }
         i.data = l;
@@ -127,7 +127,7 @@ f.prototype.add = function (e) {
       r("decoded %s as %j", e, i);
       return i;
     }(e);
-    if (t.BINARY_EVENT === n.type || t.BINARY_ACK === n.type) {
+    if (exports.BINARY_EVENT === n.type || exports.BINARY_ACK === n.type) {
       this.reconstructor = new h(n);
       if (0 === this.reconstructor.reconPack.attachments) {
         this.emit("decoded", n);

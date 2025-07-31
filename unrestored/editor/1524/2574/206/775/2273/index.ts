@@ -1,10 +1,10 @@
 "use strict";
 
-import * as r from "../841";
-import * as i from "../../../../../3262/3190/494";
-import * as o from "../../../1035/1356/569";
-import * as a from "./2274";
-import * as s from "./2275";
+var r = require("../841");
+var i = require("../../../../../3262/3190/494");
+var o = require("../../../1035/1356/569");
+var a = require("./2274");
+var s = require("./2275");
 function c() {
   return 1 === arguments.length ? Object.assign({}, arguments.length <= 0 ? void 0 : arguments[0]) : "string" === typeof (arguments.length <= 1 ? void 0 : arguments[1]) ? {
     node: arguments.length <= 0 ? void 0 : arguments[0],

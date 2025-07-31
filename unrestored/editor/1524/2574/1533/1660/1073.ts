@@ -1,4 +1,4 @@
-import * as r from "../1626/167";
+var r = require("../1626/167");
 var o = require("../1738/194").RegExp;
 exports.UNSUPPORTED_Y = r(function () {
   var e = o("a", "y");

@@ -1,6 +1,6 @@
 "use strict";
 
-import * as r from "../../../1524/2574/1/index";
+var r = require("../../../1524/2574/1/index");
 var i = r.mark(u);
 var a = r.mark(c);
 var s = r.mark(p);
@@ -79,13 +79,17 @@ function d(e) {
     }
   }, l);
 }
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.ROOT_CONFIG_FILENAMES = void 0;
 exports.findConfigUpwards = function (e) {
   return null;
 };
-export { u as findPackageData };
-export { c as findRelativeConfig };
-export { p as findRootConfig };
-export { f as loadConfig };
+exports.findPackageData = u;
+exports.findRelativeConfig = c;
+exports.findRootConfig = p;
+exports.loadConfig = f;
 exports.loadPlugin = function (e, t) {
   throw new Error("Cannot load plugin ".concat(e, " relative to ").concat(t, " in a browser"));
 };
@@ -98,5 +102,5 @@ exports.resolvePlugin = function (e, t) {
 exports.resolvePreset = function (e, t) {
   return null;
 };
-export { d as resolveShowConfigPath };
+exports.resolveShowConfigPath = d;
 exports.ROOT_CONFIG_FILENAMES = [];

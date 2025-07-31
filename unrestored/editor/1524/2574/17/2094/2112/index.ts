@@ -1,12 +1,16 @@
 "use strict";
 
-import * as r from "../../../1000/93";
-import * as i from "../../../1000/134/index";
-import * as o from "../../../125/259";
-import * as a from "../../../125/195/index";
-import * as s from "../../../125/index";
-import * as c from "../../../1000/213/index";
-import * as u from "../../../125/294";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.VerticalFlyout = void 0;
+var r = require("../../../1000/93");
+var i = require("../../../1000/134/index");
+var o = require("../../../125/259");
+var a = require("../../../125/195/index");
+var s = require("../../../125/index");
+var c = require("../../../1000/213/index");
+var u = require("../../../125/294");
 var l = function (e) {
   function t(t) {
     var n = e.call(this, t) || this;
@@ -382,4 +386,4 @@ var l = function (e) {
   };
   return t = (0, r.__decorate)([(0, i.injectable)()], t);
 }(require("./2113").Flyout);
-export { l as VerticalFlyout };
+exports.VerticalFlyout = l;

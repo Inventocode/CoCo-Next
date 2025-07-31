@@ -30,12 +30,15 @@ var o = this && this.__assign || function () {
     return e;
   }).apply(this, arguments);
 };
-import * as i from "../../0/index";
-import * as a from "../../75/index";
-import * as s from "../1420/871";
-import * as c from "./2549/1422/index";
-import * as l from "./2549/1423";
-import * as u from "./2549/1424/index";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+var i = require("../../0/index");
+var a = require("../../75/index");
+var s = require("../1420/871");
+var c = require("./2549/1422/index");
+var l = require("./2549/1423");
+var u = require("./2549/1424/index");
 var d = function (e) {
   function t(t, n, r) {
     var o = e.call(this, t, n, r) || this;
@@ -107,4 +110,4 @@ var d = function (e) {
   };
   return t;
 }(c.ReactComponent);
-export { d as NewReactComponent };
+exports.NewReactComponent = d;

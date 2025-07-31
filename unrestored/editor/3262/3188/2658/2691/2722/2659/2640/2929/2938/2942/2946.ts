@@ -1,5 +1,8 @@
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
 exports.ClassBody = function (e) {
   this.token("{");
   this.printInnerComments(e);
@@ -16,7 +19,7 @@ exports.ClassBody = function (e) {
     this.rightBrace();
   }
 };
-exports.ClassExpression = t.ClassDeclaration = function (e, t) {
+exports.ClassExpression = exports.ClassDeclaration = function (e, t) {
   if (!(this.format.decoratorsBeforeExport && (i(t) || a(t)))) {
     this.printJoin(e.decorators, e);
   }
@@ -124,6 +127,6 @@ exports._classMethodHead = function (e) {
   this.tsPrintClassMemberModifiers(e, !1);
   this._methodHead(e);
 };
-import * as r from "../../../../../2624/index";
+var r = require("../../../../../2624/index");
 var i = r.isExportDefaultDeclaration;
 var a = r.isExportNamedDeclaration;

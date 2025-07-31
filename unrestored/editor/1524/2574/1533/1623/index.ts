@@ -1,8 +1,8 @@
-import * as r from "../1626/86/index";
-import * as o from "../1626/167";
-import * as i from "./309";
-import * as a from "./495";
-import * as s from "./1066";
+var r = require("../1626/86/index");
+var o = require("../1626/167");
+var i = require("./309");
+var a = require("./495");
+var s = require("./1066");
 r({
   target: "Object",
   stat: !0,

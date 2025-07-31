@@ -3,7 +3,7 @@
 export { i as getBrightness };
 export { a as setBrightness };
 export { s as setKeepScreenOn };
-import * as r from "../../206/29/index";
+var r = require("../../206/29/index");
 var o = 1;
 function i() {
   if (Object(r.d)()) {

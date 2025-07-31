@@ -45,16 +45,16 @@ export { A as P };
 export { To as Q };
 export { di as R };
 export { m as S };
-import "../58/685";
+require("../58/685");
 var r;
-import * as i from "../301/224";
-import * as a from "../301/203";
-import * as o from "../11";
-import * as s from "../292";
-import * as l from "../57/index";
-import * as c from "../58/index";
-import * as u from "../27";
-import * as h from "../40";
+var i = require("../301/224");
+var a = require("../301/203");
+var o = require("../11");
+var s = require("../292");
+var l = require("../57/index");
+var c = require("../58/index");
+var u = require("../27");
+var h = require("../40");
 var d = 303;
 var p = 1e3;
 var f = 1001;
@@ -11614,7 +11614,11 @@ function ii(e, t, n) {
   V(1);
   U(2884);
   G(0);
-  var z = (r = {}, Object(o.a)(r, 100, 32774), Object(o.a)(r, 101, 32778), Object(o.a)(r, 102, 32779), r);
+  r = {};
+  Object(o.a)(r, 100, 32774);
+  Object(o.a)(r, 101, 32778);
+  Object(o.a)(r, 102, 32779);
+  var z = r;
   if (a) {
     z[103] = 32775;
     z[104] = 32776;
@@ -11625,7 +11629,19 @@ function ii(e, t, n) {
       z[104] = F.MAX_EXT;
     }
   }
-  var H = (i = {}, Object(o.a)(i, 200, 0), Object(o.a)(i, 201, 1), Object(o.a)(i, 202, 768), Object(o.a)(i, 204, 770), Object(o.a)(i, 210, 776), Object(o.a)(i, 208, 774), Object(o.a)(i, 206, 772), Object(o.a)(i, 203, 769), Object(o.a)(i, 205, 771), Object(o.a)(i, 209, 775), Object(o.a)(i, 207, 773), i);
+  i = {};
+  Object(o.a)(i, 200, 0);
+  Object(o.a)(i, 201, 1);
+  Object(o.a)(i, 202, 768);
+  Object(o.a)(i, 204, 770);
+  Object(o.a)(i, 210, 776);
+  Object(o.a)(i, 208, 774);
+  Object(o.a)(i, 206, 772);
+  Object(o.a)(i, 203, 769);
+  Object(o.a)(i, 205, 771);
+  Object(o.a)(i, 209, 775);
+  Object(o.a)(i, 207, 773);
+  var H = i;
   function G(t, n, r, i, a, o, s, l) {
     if (0 !== t) {
       if (d || (U(3042), d = !0), 5 === t) {
@@ -12130,8 +12146,19 @@ function ai(e, t, n, r, i, a, s) {
       n.bindTexture(34067, o.__webglTexture);
     }
   }
-  var O = (l = {}, Object(o.a)(l, p, 10497), Object(o.a)(l, f, 33071), Object(o.a)(l, 1002, 33648), l);
-  var k = (c = {}, Object(o.a)(c, 1003, 9728), Object(o.a)(c, 1004, 9984), Object(o.a)(c, 1005, 9986), Object(o.a)(c, 1006, 9729), Object(o.a)(c, 1007, 9985), Object(o.a)(c, 1008, 9987), c);
+  l = {};
+  Object(o.a)(l, p, 10497);
+  Object(o.a)(l, f, 33071);
+  Object(o.a)(l, 1002, 33648);
+  var O = l;
+  c = {};
+  Object(o.a)(c, 1003, 9728);
+  Object(o.a)(c, 1004, 9984);
+  Object(o.a)(c, 1005, 9986);
+  Object(o.a)(c, 1006, 9729);
+  Object(o.a)(c, 1007, 9985);
+  Object(o.a)(c, 1008, 9987);
+  var k = c;
   function N(n, a, o) {
     if (o) {
       e.texParameteri(n, 10242, O[a.wrapS]);
@@ -23723,7 +23750,15 @@ var yl = function (e) {
 Math.pow(2, 8);
 var xl = [.125, .215, .35, .446, .526, .582];
 var bl = 5 + xl.length;
-var _l = (r = {}, Object(o.a)(r, 3e3, 0), Object(o.a)(r, m, 1), Object(o.a)(r, 3002, 2), Object(o.a)(r, 3004, 3), Object(o.a)(r, 3005, 4), Object(o.a)(r, 3006, 5), Object(o.a)(r, 3007, 6), wl());
+r = {};
+Object(o.a)(r, 3e3, 0);
+Object(o.a)(r, m, 1);
+Object(o.a)(r, 3002, 2);
+Object(o.a)(r, 3004, 3);
+Object(o.a)(r, 3005, 4);
+Object(o.a)(r, 3006, 5);
+Object(o.a)(r, 3007, 6);
+var _l = wl();
 _l._lodPlanes;
 _l._sizeLods;
 _l._sigmas;
@@ -24886,3 +24921,4 @@ if ("undefined" !== typeof __THREE_DEVTOOLS__) {
     }
   }));
 }
+export default xs;

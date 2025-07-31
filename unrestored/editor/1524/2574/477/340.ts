@@ -3,8 +3,8 @@
 export { a };
 export { s as b };
 export { c };
-import * as r from "../36/483/39";
-import * as i from "./1181/2582";
+var r = require("../36/483/39");
+var i = require("./1181/2582");
 function o(e) {
   for (var t = [], n = 1; n < arguments.length; n++) {
     t[n - 1] = arguments[n];
@@ -34,3 +34,4 @@ function s(e) {
 function c(e) {
   o("withScope", e);
 }
+export default a;

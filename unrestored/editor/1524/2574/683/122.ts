@@ -34,3 +34,4 @@ var i = function () {
   e.log_enabled = !1;
   return e;
 }();
+export default i;

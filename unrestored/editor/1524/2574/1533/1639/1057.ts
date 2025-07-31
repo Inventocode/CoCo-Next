@@ -1,4 +1,4 @@
-import * as r from "../1738/423/1054";
+var r = require("../1738/423/1054");
 var o = Function.toString;
 if ("function" != typeof r.inspectSource) {
   r.inspectSource = function (e) {

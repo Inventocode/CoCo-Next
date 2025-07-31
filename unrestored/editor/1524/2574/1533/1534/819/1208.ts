@@ -1,7 +1,7 @@
-import * as r from "../../1738/332";
-import * as o from "../../935/437";
+var r = require("../../1738/332");
+var o = require("../../935/437");
 var i = require("../../1715/816").indexOf;
-import * as a from "../815";
+var a = require("../815");
 module.exports = function (e, t) {
   var n;
   var s = o(e);

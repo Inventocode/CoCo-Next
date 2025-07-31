@@ -1,7 +1,7 @@
-import * as r from "./1269";
-import * as i from "../../1274/1093/index";
-import * as o from "../../1812/1092/index";
-import * as a from "../../1812/1092/1267";
+var r = require("./1269");
+var i = require("../../1274/1093/index");
+var o = require("../../1812/1092/index");
+var a = require("../../1812/1092/1267");
 var s = Object.getOwnPropertySymbols ? function (e) {
   for (var t = []; e;) {
     r(t, o(e));

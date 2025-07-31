@@ -1,8 +1,8 @@
 "use strict";
 
 export { o as a };
-import * as r from "../../../0/index";
-import * as i from "../../../548/1180/270/689";
+var r = require("../../../0/index");
+var i = require("../../../548/1180/270/689");
 function o(e, t) {
   return r.useMemo(function () {
     return null == e && null == t ? null : function (n) {
@@ -11,3 +11,4 @@ function o(e, t) {
     };
   }, [e, t]);
 }
+export default o;

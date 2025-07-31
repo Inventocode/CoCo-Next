@@ -1,9 +1,12 @@
 "use strict";
 
-import * as r from "../../../../../../../../../3190/494";
+var r = require("../../../../../../../../../3190/494");
 function i() {
   this.space();
 }
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
 exports.JSXAttribute = function (e) {
   this.print(e.name, e);
   if (e.value) {

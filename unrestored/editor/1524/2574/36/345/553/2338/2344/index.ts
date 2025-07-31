@@ -1,5 +1,5 @@
-import * as r from "../761";
-import * as i from "./2345/index";
+var r = require("../761");
+var i = require("./2345/index");
 var o = require("../../../../../616/570/index").Buffer;
 function a(e) {
   this.genPoly = void 0;

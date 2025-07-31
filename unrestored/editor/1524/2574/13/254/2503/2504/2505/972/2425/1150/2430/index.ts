@@ -1,6 +1,6 @@
-import * as r from "./2431/index";
-import * as i from "../../../973/index";
-import * as o from "../../1149";
+var r = require("./2431/index");
+var i = require("../../../973/index");
+var o = require("../../1149");
 module.exports = function () {
   this.size = 0;
   this.__data__ = {

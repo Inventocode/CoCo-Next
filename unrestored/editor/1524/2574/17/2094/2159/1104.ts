@@ -1,9 +1,13 @@
 "use strict";
 
-import * as r from "../../../1000/93";
-import * as i from "../../../125/195/index";
-import * as o from "../../../4/127";
-import * as a from "../../../125/index";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.BlockRenderer = void 0;
+var r = require("../../../1000/93");
+var i = require("../../../125/195/index");
+var o = require("../../../4/127");
+var a = require("../../../125/index");
 var s = function () {
   function e(e) {
     this.edge_width = this.theme.renderer.BLOCK_EDGE_WIDTH;
@@ -117,4 +121,4 @@ var s = function () {
   (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.theme)], e.prototype, "theme", void 0);
   return e;
 }();
-export { s as BlockRenderer };
+exports.BlockRenderer = s;

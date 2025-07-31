@@ -1,7 +1,7 @@
 var r;
 var o;
-import * as i from "../1738/194";
-import * as a from "./1067/630";
+var i = require("../1738/194");
+var a = require("./1067/630");
 var s = i.process;
 var c = i.Deno;
 var l = s && s.versions || c && c.version;

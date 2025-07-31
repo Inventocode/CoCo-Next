@@ -1,7 +1,7 @@
-import * as r from "./1738/272";
-import * as o from "./1534/300/index";
-import * as i from "./1660/943";
-import * as a from "./1626/167";
+var r = require("./1738/272");
+var o = require("./1534/300/index");
+var i = require("./1660/943");
+var a = require("./1626/167");
 if (r && a(function () {
   return "sy" !== Object.getOwnPropertyDescriptor(RegExp.prototype, "flags").get.call({
     dotAll: !0,

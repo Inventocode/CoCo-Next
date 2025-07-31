@@ -1,8 +1,8 @@
-import * as r from "../1250/632";
-import * as o from "../1562/813";
-import * as i from "../1623/309";
-import * as a from "../1728/257";
-import * as s from "../1550/820/index";
+var r = require("../1250/632");
+var o = require("../1562/813");
+var i = require("../1623/309");
+var a = require("../1728/257");
+var s = require("../1550/820/index");
 var c = [].push;
 var l = function (e) {
   var t = 1 == e;

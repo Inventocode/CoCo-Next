@@ -1,9 +1,9 @@
 "use strict";
 
-import * as r from "../1250/472";
-import * as o from "../1534/300/index";
-import * as i from "../1735/247/index";
-import * as a from "../1738/272";
+var r = require("../1250/472");
+var o = require("../1534/300/index");
+var i = require("../1735/247/index");
+var a = require("../1738/272");
 var s = i("species");
 module.exports = function (e) {
   var t = r(e);

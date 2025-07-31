@@ -1,8 +1,12 @@
 "use strict";
 
-import * as r from "../../1000/93";
-import * as i from "../../1000/134/index";
-import * as o from "../../4/127";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.Css = void 0;
+var r = require("../../1000/93");
+var i = require("../../1000/134/index");
+var o = require("../../4/127");
 var a = function () {
   function e() {
     this.style_sheet = void 0;
@@ -51,4 +55,4 @@ var a = function () {
   (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.css_content)], e.prototype, "CONTENT", void 0);
   return e = (0, r.__decorate)([(0, i.injectable)()], e);
 }();
-export { a as Css };
+exports.Css = a;

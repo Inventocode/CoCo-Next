@@ -1,9 +1,9 @@
 "use strict";
 
-import * as r from "./445";
-import * as i from "./1370";
-import * as o from "./2359/index";
-import * as a from "./1376";
+var r = require("./445");
+var i = require("./1370");
+var o = require("./2359/index");
+var a = require("./1376");
 function s(e) {
   var t = new o(e);
   var n = i(o.prototype.request, t);
@@ -24,4 +24,4 @@ c.all = function (e) {
 };
 c.spread = require("./2373");
 module.exports = c;
-e.exports.default = c;
+module.exports.default = c;

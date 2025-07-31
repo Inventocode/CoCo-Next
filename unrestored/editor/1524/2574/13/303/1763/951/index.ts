@@ -3,7 +3,7 @@
 var r;
 var i;
 var o;
-import * as a from "./1764";
+var a = require("./1764");
 var s = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_-";
 function c() {
   o = !1;

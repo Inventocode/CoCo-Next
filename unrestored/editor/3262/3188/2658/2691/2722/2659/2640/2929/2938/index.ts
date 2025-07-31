@@ -1,12 +1,16 @@
 "use strict";
 
-import * as r from "../../../../../../../../3190/494";
-import * as i from "../../../../../../220";
-import * as a from "../../../../../../230";
-import * as s from "./2939";
-import * as o from "./2748/index";
-import * as l from "../../../../2624/index";
-import * as u from "./2942/index";
+var r = require("../../../../../../../../3190/494");
+var i = require("../../../../../../220");
+var a = require("../../../../../../230");
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.default = void 0;
+var s = require("./2939");
+var o = require("./2748/index");
+var l = require("../../../../2624/index");
+var u = require("./2942/index");
 var c = l.isProgram;
 var p = l.isFile;
 var f = l.isEmptyStatement;
@@ -553,4 +557,4 @@ function E() {
   this.token(",");
   this.space();
 }
-export default S;
+exports.default = S;

@@ -1,13 +1,13 @@
 "use strict";
 
-import * as r from "../19";
-import * as i from "../33/index";
-import * as o from "../0/index";
-import * as a from "../95";
-import * as s from "../96";
-import * as c from "../120";
-import * as u from "../140";
-import * as l from "../108";
+var r = require("../19");
+var i = require("../33/index");
+var o = require("../0/index");
+var a = require("../95");
+var s = require("../96");
+var c = require("../120");
+var u = require("../140");
+var l = require("../108");
 var f = function (e) {
   return +setTimeout(e, 16);
 };
@@ -49,8 +49,19 @@ A.cancel = function (e) {
   _(t);
   return h(t);
 };
-import * as g from "../75/index";
-import * as v from "../75/index";
+var g = require("../75/index");
+var v = (module => {
+  var defaultExport = module && module.__esModule ? function () {
+    return module.default;
+  } : function () {
+    return module;
+  };
+  Object.defineProperty(defaultExport, "a", {
+    enumerable: true,
+    get: defaultExport
+  });
+  return defaultExport;
+})(g);
 function m() {
   return !("undefined" === typeof window || !window.document || !window.document.createElement);
 }
@@ -155,7 +166,7 @@ var C = function (e) {
     }
   }
 };
-import * as O from "../80/index";
+var O = require("../80/index");
 var S = [];
 var k = new RegExp("".concat("ant-scrolling-effect"), "g");
 var T = 0;
@@ -416,9 +427,20 @@ var N = function (e) {
   }]);
   return n;
 }(o.Component);
-import * as M from "../20";
-import * as j from "../8";
-import * as L from "../8";
+var M = require("../20");
+var j = require("../8");
+var L = (module => {
+  var defaultExport = module && module.__esModule ? function () {
+    return module.default;
+  } : function () {
+    return module;
+  };
+  Object.defineProperty(defaultExport, "a", {
+    enumerable: true,
+    get: defaultExport
+  });
+  return defaultExport;
+})(j);
 var U = {
   MAC_ENTER: 3,
   BACKSPACE: 8,
@@ -601,8 +623,8 @@ var V = "".concat("accept acceptCharset accessKey action allowFullScreen allowTr
 function G(e, t) {
   return 0 === e.indexOf(t);
 }
-import * as z from "../28";
-import "../242/index";
+var z = require("../28");
+require("../242/index");
 function Q(e, t) {
   if ("function" === typeof e) {
     e(t);
@@ -1051,7 +1073,7 @@ var fe = function (e) {
   r.displayName = "CSSMotion";
   return r;
 }(ee);
-import * as he from "../54";
+var he = require("../54");
 function de(e) {
   var t;
   t = e && "object" === Object(l.a)(e) && "key" in e ? e : {
@@ -1617,3 +1639,4 @@ var Se = function (e) {
 Se.displayName = "Dialog";
 var ke = Se;
 export { ke as a };
+export default ke;

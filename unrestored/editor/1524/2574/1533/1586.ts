@@ -1,4 +1,4 @@
-import * as r from "./1626/86/index";
+var r = require("./1626/86/index");
 var o = Math.floor;
 var i = Math.log;
 var a = Math.LOG2E;

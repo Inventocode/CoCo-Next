@@ -1,13 +1,17 @@
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
 exports.clear = function () {
   a();
   s();
 };
-export { a as clearPath };
-export { s as clearScope };
+exports.clearPath = a;
+exports.clearScope = s;
+exports.scope = exports.path = void 0;
 var r = new WeakMap();
-export { r as path };
+exports.path = r;
 var i = new WeakMap();
 function a() {
   exports.path = r = new WeakMap();
@@ -15,4 +19,4 @@ function a() {
 function s() {
   exports.scope = i = new WeakMap();
 }
-export { i as scope };
+exports.scope = i;

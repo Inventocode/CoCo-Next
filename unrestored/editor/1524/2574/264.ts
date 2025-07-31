@@ -9,3 +9,4 @@ export { r as a };
   e.QUERY = "CLOUD_TABLE_QUERY";
   e.CLEAR = "CLOUD_TABLE_CLEAR";
 })(r || (r = {}));
+export default r;

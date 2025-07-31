@@ -1,8 +1,8 @@
-import * as r from "./1154/index";
-import * as i from "./2485";
-import * as o from "./2486";
-import * as a from "./2487";
-import * as s from "../../../../../../254/2503/2504/2505/2506/1409";
+var r = require("./1154/index");
+var i = require("./2485");
+var o = require("./2486");
+var a = require("./2487");
+var s = require("../../../../../../254/2503/2504/2505/2506/1409");
 module.exports = function (e, t, n) {
   var c = e.constructor;
   switch (t) {

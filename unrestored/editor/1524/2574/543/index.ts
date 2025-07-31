@@ -1,22 +1,67 @@
 "use strict";
 
-import * as r from "../6";
-import * as o from "../11";
-import * as i from "../0/index";
-import * as a from "../0/index";
-import * as s from "../51/index";
-import * as c from "../51/index";
-import * as l from "../8";
-import * as u from "../8";
-import * as d from "../5";
-import * as p from "../15/index";
-import * as f from "../35/index";
-import * as h from "../90";
-import * as m from "../321";
-import * as g from "../83";
-import * as _ from "./380";
-import * as v from "./380";
-exports.a = function (e) {
+var r = require("../6");
+var o = require("../11");
+var i = require("../0/index");
+var a = (module => {
+  var defaultExport = module && module.__esModule ? function () {
+    return module.default;
+  } : function () {
+    return module;
+  };
+  Object.defineProperty(defaultExport, "a", {
+    enumerable: true,
+    get: defaultExport
+  });
+  return defaultExport;
+})(i);
+var s = require("../51/index");
+var c = (module => {
+  var defaultExport = module && module.__esModule ? function () {
+    return module.default;
+  } : function () {
+    return module;
+  };
+  Object.defineProperty(defaultExport, "a", {
+    enumerable: true,
+    get: defaultExport
+  });
+  return defaultExport;
+})(s);
+var l = require("../8");
+var u = (module => {
+  var defaultExport = module && module.__esModule ? function () {
+    return module.default;
+  } : function () {
+    return module;
+  };
+  Object.defineProperty(defaultExport, "a", {
+    enumerable: true,
+    get: defaultExport
+  });
+  return defaultExport;
+})(l);
+var d = require("../5");
+var p = require("../15/index");
+var f = require("../35/index");
+var h = require("../90");
+var m = require("../321");
+var g = require("../83");
+var _ = require("./380");
+var v = (module => {
+  var defaultExport = module && module.__esModule ? function () {
+    return module.default;
+  } : function () {
+    return module;
+  };
+  Object.defineProperty(defaultExport, "a", {
+    enumerable: true,
+    get: defaultExport
+  });
+  return defaultExport;
+})(_);
+var _a;
+_a = function (e) {
   var t = e.position;
   var n = e.size;
   var s = e.id;
@@ -134,3 +179,5 @@ exports.a = function (e) {
     ref: R
   }, I)));
 };
+export { _a as a };
+export default _a;

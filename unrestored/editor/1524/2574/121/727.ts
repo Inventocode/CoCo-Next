@@ -1,17 +1,21 @@
 "use strict";
 
-import * as r from "../1000/93";
-import * as i from "../1000/134/index";
-import * as o from "../4/127";
-import * as a from "../125/195/index";
-import * as s from "../125/index";
-import * as c from "../125/474";
-import * as u from "../1000/213/index";
-import * as l from "../206/725/387";
-import * as f from "../125/714";
-import * as h from "../125/294";
-import * as d from "../301/500";
-import * as p from "../301/480";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.FieldDropdown = void 0;
+var r = require("../1000/93");
+var i = require("../1000/134/index");
+var o = require("../4/127");
+var a = require("../125/195/index");
+var s = require("../125/index");
+var c = require("../125/474");
+var u = require("../1000/213/index");
+var l = require("../206/725/387");
+var f = require("../125/714");
+var h = require("../125/294");
+var d = require("../301/500");
+var p = require("../301/480");
 var _ = function (e) {
   function t(t) {
     var n = e.call(this, void 0, t.opt_validator) || this;
@@ -595,4 +599,4 @@ var _ = function (e) {
   (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.widget_div)], t.prototype, "widget_div", void 0);
   return t = (0, r.__decorate)([(0, i.injectable)()], t);
 }(d.Field);
-export { _ as FieldDropdown };
+exports.FieldDropdown = _;

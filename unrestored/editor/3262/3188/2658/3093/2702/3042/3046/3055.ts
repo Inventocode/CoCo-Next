@@ -1,11 +1,14 @@
 "use strict";
 
-import * as r from "../../../../../../3190/494";
+var r = require("../../../../../../3190/494");
 function i(e, t) {
   if (!0 !== t) {
     e.token(t);
   }
 }
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
 exports.TSAnyKeyword = function () {
   this.word("any");
 };
@@ -444,7 +447,7 @@ exports.TSTypeParameter = function (e) {
     this.print(e.default, e);
   }
 };
-exports.TSTypeParameterDeclaration = t.TSTypeParameterInstantiation = function (e) {
+exports.TSTypeParameterDeclaration = exports.TSTypeParameterInstantiation = function (e) {
   this.token("<");
   this.printList(e.params, e, {});
   this.token(">");

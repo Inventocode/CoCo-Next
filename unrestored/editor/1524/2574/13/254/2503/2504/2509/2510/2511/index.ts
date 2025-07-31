@@ -1,4 +1,4 @@
-import * as r from "./2512";
+var r = require("./2512");
 var i = Math.max;
 module.exports = function (e, t, n) {
   t = i(void 0 === t ? e.length - 1 : t, 0);

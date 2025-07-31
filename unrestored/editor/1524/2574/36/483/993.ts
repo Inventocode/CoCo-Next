@@ -5,6 +5,9 @@ var r = this && this.__importDefault || function (e) {
     default: e
   };
 };
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
 var i = r(require("../../0/index"));
 function o(e) {
   return "function" === typeof e ? i.default.createElement(a, {

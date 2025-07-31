@@ -1,4 +1,4 @@
-import * as r from "../../../1436/1830/638";
+var r = require("../../../1436/1830/638");
 var i = Object.create;
 var o = function () {
   function e() {}

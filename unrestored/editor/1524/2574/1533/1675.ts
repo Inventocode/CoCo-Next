@@ -1,11 +1,11 @@
 "use strict";
 
-import * as r from "./1676/946";
-import * as o from "./1659/241";
-import * as i from "./1676/421";
-import * as a from "./1624/1232";
-import * as s from "./1738/310";
-import * as c from "./1676/947";
+var r = require("./1676/946");
+var o = require("./1659/241");
+var i = require("./1676/421");
+var a = require("./1624/1232");
+var s = require("./1738/310");
+var c = require("./1676/947");
 r("search", function (e, t, n) {
   return [function (t) {
     var n = i(this);

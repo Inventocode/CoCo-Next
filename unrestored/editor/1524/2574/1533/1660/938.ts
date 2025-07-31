@@ -1,5 +1,5 @@
-import * as r from "../1626/231";
-import * as o from "../1659/634";
+var r = require("../1626/231");
+var o = require("../1659/634");
 module.exports = function (e, t, n) {
   var i;
   var a;

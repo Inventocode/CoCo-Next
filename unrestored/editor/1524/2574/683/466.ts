@@ -6,3 +6,4 @@ export { r as a };
   e[e.NORMAL = 0] = "NORMAL";
   e[e.ELASTIC = 1] = "ELASTIC";
 })(r || (r = {}));
+export default r;

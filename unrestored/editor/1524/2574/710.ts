@@ -304,7 +304,8 @@
           }
           function a() {
             var e;
-            var t = (e = 16, "function" === typeof Uint8Array ? "undefined" !== typeof crypto ? crypto.getRandomValues(new Uint8Array(e)) : "undefined" !== typeof msCrypto ? msCrypto.getRandomValues(new Uint8Array(e)) : o(new Uint8Array(e), e) : o(new Array(e), e));
+            e = 16;
+            var t = "function" === typeof Uint8Array ? "undefined" !== typeof crypto ? crypto.getRandomValues(new Uint8Array(e)) : "undefined" !== typeof msCrypto ? msCrypto.getRandomValues(new Uint8Array(e)) : o(new Uint8Array(e), e) : o(new Array(e), e);
             t[6] = 79 & t[6] | 64;
             t[8] = 191 & t[8] | 128;
             for (var n = "", r = 0; r < 16; ++r) {

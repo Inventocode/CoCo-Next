@@ -1,10 +1,14 @@
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.is_valid_number = exports.lerp = exports.to_radians = exports.clamp = exports.gen_uid = exports.contains = exports.Rect = exports.Size = void 0;
 var r = function (e, t) {
   this.width = e;
   this.height = t;
 };
-export { r as Size };
+exports.Size = r;
 var i = function () {
   function e(e, t, n, r) {
     this.left = e;
@@ -17,7 +21,7 @@ var i = function () {
   };
   return e;
 }();
-export { i as Rect };
+exports.Rect = i;
 exports.contains = function (e, t) {
   return e.left < t[0] && e.right > t[0] && e.top < t[1] && e.bottom > t[1];
 };

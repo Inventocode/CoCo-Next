@@ -16,3 +16,4 @@ var s = 50;
 var c = !0;
 var l = !1;
 var u = "audio/aac, audio/ogg, audio/mpeg, audio/wave, audio/wav, audio/x-wav, audio/webm";
+export default l;

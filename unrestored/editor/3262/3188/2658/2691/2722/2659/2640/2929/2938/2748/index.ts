@@ -1,6 +1,9 @@
 "use strict";
 
-import * as r from "../../../../../../../../../3190/494";
+var r = require("../../../../../../../../../3190/494");
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
 exports.needsParens = function (e, t, n) {
   if (!t) {
     return !1;
@@ -15,16 +18,16 @@ exports.needsParens = function (e, t, n) {
   }
   return m(d, e, t, n);
 };
-export { v as needsWhitespace };
+exports.needsWhitespace = v;
 exports.needsWhitespaceAfter = function (e, t) {
   return v(e, t, "after");
 };
 exports.needsWhitespaceBefore = function (e, t) {
   return v(e, t, "before");
 };
-import * as i from "./2940";
-import * as a from "./2941";
-import * as s from "../../../../../2624/index";
+var i = require("./2940");
+var a = require("./2941");
+var s = require("../../../../../2624/index");
 var o = s.FLIPPED_ALIAS_KEYS;
 var l = s.isCallExpression;
 var u = s.isExpressionStatement;

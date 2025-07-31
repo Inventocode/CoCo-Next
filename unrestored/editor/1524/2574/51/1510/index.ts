@@ -1,5 +1,5 @@
-import * as r from "./1252";
-import * as i from "./1744";
+var r = require("./1252");
+var i = require("./1744");
 var o = {};
 Object.keys(r).forEach(function (e) {
   o[e] = {};

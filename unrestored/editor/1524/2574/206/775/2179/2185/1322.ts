@@ -1,9 +1,9 @@
 "use strict";
 
-import * as r from "../../../../../../3262/3188/2658/2679/356/index";
-import * as i from "../../../../../../3262/3188/2658/2679/357/index";
-import * as o from "../../../../../../3262/3188/2658/220";
-import * as a from "../963";
+var r = require("../../../../../../3262/3188/2658/2679/356/index");
+var i = require("../../../../../../3262/3188/2658/2679/357/index");
+var o = require("../../../../../../3262/3188/2658/220");
+var a = require("../963");
 var s = function e(t, n, r, i, a, s) {
   o(this, e);
   this.type = t;

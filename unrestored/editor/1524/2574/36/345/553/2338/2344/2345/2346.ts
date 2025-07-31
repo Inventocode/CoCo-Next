@@ -1,4 +1,4 @@
-import * as r from "../../761";
+var r = require("../../761");
 var i = r.alloc(512);
 var o = r.alloc(256);
 !function () {

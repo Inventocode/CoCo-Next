@@ -1,15 +1,19 @@
 "use strict";
 
-import * as r from "../../../1000/93";
-import * as i from "../../../1000/134/index";
-import * as o from "../../../4/127";
-import * as a from "../../../125/195/index";
-import * as s from "../../../206/725/387";
-import * as c from "../../../125/index";
-import * as u from "../../../1000/213/index";
-import * as l from "../../../125/294";
-import * as f from "./1316";
-import * as h from "./2144";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.Toolbox = void 0;
+var r = require("../../../1000/93");
+var i = require("../../../1000/134/index");
+var o = require("../../../4/127");
+var a = require("../../../125/195/index");
+var s = require("../../../206/725/387");
+var c = require("../../../125/index");
+var u = require("../../../1000/213/index");
+var l = require("../../../125/294");
+var f = require("./1316");
+var h = require("./2144");
 var d = function (e) {
   function t(t) {
     var n = e.call(this) || this;
@@ -351,4 +355,4 @@ var d = function (e) {
   (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.UIEvent)], t.prototype, "ui_event_factory", void 0);
   return t = (0, r.__decorate)([(0, i.injectable)()], t);
 }(f.BaseNode);
-export { d as Toolbox };
+exports.Toolbox = d;

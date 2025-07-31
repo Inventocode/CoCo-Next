@@ -2,9 +2,9 @@
 
 export { ii as a };
 var r;
-import * as i from "./269/index";
-import * as o from "./559";
-import * as a from "./34/index";
+var i = require("./269/index");
+var o = require("./559");
+var a = require("./34/index");
 var s = {
   App: Symbol("App"),
   Data: Symbol("Data"),
@@ -19,8 +19,8 @@ var s = {
   StageAnimation: Symbol("StageAnimation"),
   Physics: Symbol("Physics")
 };
-import * as c from "./65";
-import * as u from "./122";
+var c = require("./65");
+var u = require("./122");
 var l = function (e, t, n, r) {
   var i;
   var o = arguments.length;
@@ -420,7 +420,7 @@ var _ = function () {
   };
   return e = l([Object(i.injectable)(), h(0, Object(i.inject)(s.Events)), f("design:paramtypes", [Object])], e);
 }();
-import * as A from "./735/index";
+var A = require("./735/index");
 var g = function (e, t) {
   var n = "function" === typeof Symbol && e[Symbol.iterator];
   if (!n) {
@@ -569,7 +569,7 @@ function b(e, t) {
   e[e.MOVE_RIGHT = 3] = "MOVE_RIGHT";
   e[e.SKIP = 4] = "SKIP";
 }(r || (r = {}));
-import * as w from "./520/index";
+var w = require("./520/index");
 function E(e, t) {
   var n = function (e) {
     for (var t = [], n = 0, r = 0, i = 0, o = 0; o < e.length; o++) {
@@ -931,7 +931,9 @@ var M = function () {
         if (Object(c.m)(h) && s(h)) {
           var d = h.get_actor_container().children;
           try {
-            for (var p = (i = void 0, N(d)), _ = p.next(); !_.done; _ = p.next()) {
+            for (i = void 0, p = N(d), _ = p.next(), void 0; !_.done; _ = p.next()) {
+              var p;
+              var _;
               var g = _.value;
               if (Object(c.k)(g) && g.id === e) {
                 var v = g.get_actor();
@@ -1142,8 +1144,19 @@ var L = function () {
   };
   return e = j([Object(i.injectable)()], e);
 }();
-import * as U from "../186/index";
-import * as H from "../186/index";
+var U = require("../186/index");
+var H = (module => {
+  var defaultExport = module && module.__esModule ? function () {
+    return module.default;
+  } : function () {
+    return module;
+  };
+  Object.defineProperty(defaultExport, "a", {
+    enumerable: true,
+    get: defaultExport
+  });
+  return defaultExport;
+})(U);
 var V = function (e, t, n, r) {
   return new (n || (n = Promise))(function (i, o) {
     function a(e) {
@@ -1836,8 +1849,8 @@ var Z = function () {
   };
   return e;
 }();
-import * as ee from "../107";
-import * as te from "./1001";
+var ee = require("../107");
+var te = require("./1001");
 var ne = function () {
   var e = function (t, n) {
     return (e = Object.setPrototypeOf || {
@@ -2201,7 +2214,7 @@ var ie = function (e) {
   };
   return t;
 }(re);
-var oe = (function (e) {
+(function (e) {
   function t(t, n, r, i, o, a, s, c, u) {
     var l = e.call(this, t, n, r, i, o, a, s, c, u) || this;
     l.update_transform = function (e) {
@@ -2264,7 +2277,8 @@ var oe = (function (e) {
     this.events.remove_listener("stage:resize", this.update_transform);
     e.prototype.destroy.call(this);
   };
-}(re), function () {
+})(re);
+var oe = function () {
   var e = function (t, n) {
     return (e = Object.setPrototypeOf || {
       __proto__: []
@@ -2283,7 +2297,7 @@ var oe = (function (e) {
     e(t, n);
     t.prototype = null === n ? Object.create(n) : (r.prototype = n.prototype, new r());
   };
-}());
+}();
 var ae = function (e) {
   function t(t, n, r, i, o, s) {
     var c = e.call(this) || this;
@@ -2599,7 +2613,7 @@ var se = function () {
   };
   return e;
 }();
-import * as ce from "./517";
+var ce = require("./517");
 var ue = function () {
   function e(e, t, n) {
     this.app = e;
@@ -2685,7 +2699,7 @@ var ue = function () {
   };
   return e;
 }();
-import * as le from "./215/index";
+var le = require("./215/index");
 var fe = function (e, t, n, r) {
   var i;
   var o = arguments.length;
@@ -3353,9 +3367,9 @@ var we = function () {
   };
   return e;
 }();
-import * as Ee from "./466";
-import * as xe from "./184";
-import * as Ce from "./984";
+var Ee = require("./466");
+var xe = require("./184");
+var Ce = require("./984");
 var Oe = function () {
   var e = function (t, n) {
     return (e = Object.setPrototypeOf || {
@@ -4994,8 +5008,8 @@ var je = function () {
   };
   return e;
 }();
-import * as Le from "./128";
-var Ue = (function () {
+var Le = require("./128");
+(function () {
   function e(e, t) {
     this.actor_dialogs = new Map();
     this.dialog_containers = new Map();
@@ -5066,7 +5080,8 @@ var Ue = (function () {
     }
     e.destroy();
   };
-}(), function () {
+})();
+var Ue = function () {
   function e(e, t, n) {
     var r = this;
     this.actor_dialog = new a.j();
@@ -5152,7 +5167,7 @@ var Ue = (function () {
     return this.actor_dialog;
   };
   return e;
-}());
+}();
 var He = function () {
   var e = function (t, n) {
     return (e = Object.setPrototypeOf || {
@@ -7071,7 +7086,7 @@ var cn = function (e) {
   };
   return t;
 }(a.j);
-import * as un from "./1002";
+var un = require("./1002");
 var ln = function () {
   var e = function (t, n) {
     return (e = Object.setPrototypeOf || {
@@ -9266,7 +9281,7 @@ var Rr = function (e) {
   };
   return t;
 }(a.j);
-import * as Pr from "./467";
+var Pr = require("./467");
 var Nr = function () {
   var e = function (t, n) {
     return (e = Object.setPrototypeOf || {
@@ -9389,7 +9404,7 @@ var Mr = function (e) {
   };
   return t;
 }(a.t);
-import * as jr from "./318";
+var jr = require("./318");
 var Lr = function () {
   var e = function (t, n) {
     return (e = Object.setPrototypeOf || {
@@ -10206,3 +10221,4 @@ function ii() {
   }(qr.KittenStage);
 }
 console.log("%cWelcome to \u2764 Codemao Stage - v" + ri + " \u2764 for Kitten o(*\uffe3\u25bd\uffe3*)\u30d6", "\n  color: #BC2424;\n  text-shadow: 0 1px 0 #8D1B1B;");
+export default ii;

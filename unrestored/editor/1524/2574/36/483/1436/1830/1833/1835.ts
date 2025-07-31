@@ -1,6 +1,6 @@
-import * as r from "../../../1437/835/1085/832/index";
-import * as i from "../../../1435/1772/1274/1093/index";
-import * as o from "../../../1441/1869/639";
+var r = require("../../../1437/835/1085/832/index");
+var i = require("../../../1435/1772/1274/1093/index");
+var o = require("../../../1441/1869/639");
 var a = Function.prototype;
 var s = Object.prototype;
 var c = a.toString;

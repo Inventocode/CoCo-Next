@@ -1,6 +1,6 @@
 "use strict";
 
-import * as r from "../1335";
+var r = require("../1335");
 module.exports = {
   $id: "https://github.com/ajv-validator/ajv/blob/master/lib/definition_schema.js",
   definitions: {

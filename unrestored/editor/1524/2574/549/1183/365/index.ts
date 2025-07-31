@@ -5,15 +5,16 @@ export { d as b };
 export { E as c };
 export { w as d };
 var r;
-import * as i from "../../../0/index";
-var o = (require("../../../50/index"), require("../../../548/1180/100"));
-import * as a from "./1502";
-import * as s from "../../../548/1180/691/153";
-import * as c from "../../../95";
-import * as u from "../../../96";
-import * as l from "../../../322";
-import * as f from "../../../273";
-import * as h from "../../../120";
+var i = require("../../../0/index");
+require("../../../50/index");
+var o = require("../../../548/1180/100");
+var a = require("./1502");
+var s = require("../../../548/1180/691/153");
+var c = require("../../../95");
+var u = require("../../../96");
+var l = require("../../../322");
+var f = require("../../../273");
+var h = require("../../../120");
 !function (e) {
   e.HOURS = "hours";
   e.MINUTES = "minutes";
@@ -291,3 +292,4 @@ var C = Object(s.a)(function (e) {
 }, {
   name: "MuiPickersClock"
 })(x);
+export default C;

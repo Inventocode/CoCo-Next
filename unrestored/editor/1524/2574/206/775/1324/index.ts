@@ -1,10 +1,10 @@
 "use strict";
 
-import * as r from "./1108";
-import * as i from "./2191/index";
-import * as o from "./2193";
-import * as a from "./2194/index";
-import * as s from "./1325";
+var r = require("./1108");
+var i = require("./2191/index");
+var o = require("./2193");
+var a = require("./2194/index");
+var s = require("./1325");
 var c = s.getLatestEcmaVersion;
 var u = s.getSupportedEcmaVersions;
 var l = {

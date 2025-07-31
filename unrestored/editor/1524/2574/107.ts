@@ -13,7 +13,7 @@ var a;
 var s;
 var c;
 var u;
-import * as l from "./683/559";
+var l = require("./683/559");
 !function (e) {
   e.Actor = "actor";
   e.Scene = "scene";
@@ -50,3 +50,4 @@ import * as l from "./683/559";
   e.COVER = "cover";
   e.STRETCH = "stretch";
 })(u || (u = {}));
+export default u;

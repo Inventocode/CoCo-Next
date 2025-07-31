@@ -1,7 +1,10 @@
 "use strict";
 
-import * as r from "./1122";
-import * as i from "./1121";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+var r = require("./1122");
+var i = require("./1121");
 function o(e, t) {
   return {
     get: e,
@@ -39,7 +42,7 @@ function o(e, t) {
     onRemove: null
   };
 }
-export default o;
+exports.default = o;
 o.provides = {
   text: !0
 };

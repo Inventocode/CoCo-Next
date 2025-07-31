@@ -1,4 +1,4 @@
-import * as r from "./1345";
+var r = require("./1345");
 var i = require("../844/index")("socket.io-client:url");
 module.exports = function (e, t) {
   var n = e;

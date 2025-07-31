@@ -1,8 +1,27 @@
 "use strict";
 
-import * as r from "../../../728/index";
-export { ProcedurePlugin } from "../../../728/index";
-import * as i from "./2304";
-export { GlobalCommentPlugin } from "./2304";
-import * as o from "./2305";
-export { ConflictResolver } from "./2305";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.ConflictResolver = exports.GlobalCommentPlugin = exports.ProcedurePlugin = void 0;
+var r = require("../../../728/index");
+Object.defineProperty(exports, "ProcedurePlugin", {
+  enumerable: !0,
+  get: function () {
+    return r.ProcedurePlugin;
+  }
+});
+var i = require("./2304");
+Object.defineProperty(exports, "GlobalCommentPlugin", {
+  enumerable: !0,
+  get: function () {
+    return i.GlobalCommentPlugin;
+  }
+});
+var o = require("./2305");
+Object.defineProperty(exports, "ConflictResolver", {
+  enumerable: !0,
+  get: function () {
+    return o.ConflictResolver;
+  }
+});

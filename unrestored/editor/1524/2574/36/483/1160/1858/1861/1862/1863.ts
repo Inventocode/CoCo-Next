@@ -1,4 +1,4 @@
-import * as r from "./1282";
+var r = require("./1282");
 var i = Object.prototype;
 var o = i.hasOwnProperty;
 var a = i.toString;

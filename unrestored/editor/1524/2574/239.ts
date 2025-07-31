@@ -5,8 +5,8 @@ export { a as e };
 export { s as b };
 export { c };
 export { l as a };
-import * as r from "./16/index";
-import * as o from "./9";
+var r = require("./16/index");
+var o = require("./9");
 function i() {
   return Object(r.e)(function (e) {
     var t = e.project;
@@ -54,3 +54,4 @@ function l() {
   }
   return t;
 }
+export default l;

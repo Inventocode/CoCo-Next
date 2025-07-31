@@ -1,5 +1,9 @@
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.QueryableString = void 0;
 var r = function () {
   function e(e) {
     this.str = e;
@@ -26,4 +30,4 @@ var r = function () {
   };
   return e;
 }();
-export { r as QueryableString };
+exports.QueryableString = r;

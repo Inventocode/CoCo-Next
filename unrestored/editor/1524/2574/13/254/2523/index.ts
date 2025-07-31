@@ -1,5 +1,9 @@
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.ColorWrap = void 0;
 var r = Object.assign || function (e) {
   for (var t = 1; t < arguments.length; t++) {
     var n = arguments[t];
@@ -31,7 +35,7 @@ var i = function () {
     return t;
   };
 }();
-import * as o from "../../../0/index";
+var o = require("../../../0/index");
 var a = u(o);
 var s = u(require("./1413/index"));
 var c = function (e) {
@@ -142,4 +146,4 @@ var l = exports.ColorWrap = function (e) {
   });
   return t;
 };
-export default l;
+exports.default = l;

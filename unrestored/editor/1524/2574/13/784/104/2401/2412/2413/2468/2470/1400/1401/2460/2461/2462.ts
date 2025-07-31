@@ -1,4 +1,4 @@
-import * as r from "../../../../../../../../../../../254/2503/2504/2505/972/2425/1150/index";
+var r = require("../../../../../../../../../../../254/2503/2504/2505/972/2425/1150/index");
 function i(e, t) {
   if ("function" != typeof e || null != t && "function" != typeof t) {
     throw new TypeError("Expected a function");

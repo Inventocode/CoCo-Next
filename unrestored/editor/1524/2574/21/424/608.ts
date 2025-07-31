@@ -932,7 +932,7 @@ var r;
   o = new a(1);
   if (!(void 0 === (r = function () {
     return a;
-  }.call(t, n, t, e)))) {
+  }.call(exports, require, exports, module)))) {
     module.exports = r;
   }
 }();

@@ -1,8 +1,11 @@
 "use strict";
 
-export { l as isReservedWord };
-export { u as isStrictReservedWord };
-export { c as isStrictBindOnlyReservedWord };
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.isReservedWord = l;
+exports.isStrictReservedWord = u;
+exports.isStrictBindOnlyReservedWord = c;
 exports.isStrictBindReservedWord = function (e, t) {
   return u(e, t) || c(e);
 };

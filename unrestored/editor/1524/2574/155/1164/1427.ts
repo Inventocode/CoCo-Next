@@ -16,3 +16,4 @@ function r(e) {
   return t;
 }
 export { r as a };
+export default r;

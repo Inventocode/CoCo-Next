@@ -2,7 +2,7 @@
 
 export { o as a };
 export { c as b };
-import * as r from "../../../../../10/index";
+var r = require("../../../../../10/index");
 function i(e, t, n) {
   return Math.max(t, Math.min(e, n));
 }
@@ -51,3 +51,4 @@ function c(e, t, n) {
   var g = _[1];
   return [s(o, d, p, u), s(a, A, g, l)];
 }
+export default o;

@@ -1,4 +1,4 @@
-import * as r from "./1259/index";
+var r = require("./1259/index");
 module.exports = function (e, t, n) {
   if ("__proto__" == t && r) {
     r(e, t, {

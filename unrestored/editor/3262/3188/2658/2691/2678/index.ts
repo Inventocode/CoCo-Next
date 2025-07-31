@@ -1,6 +1,9 @@
 "use strict";
 
 (function (e) {
+  Object.defineProperty(exports, "__esModule", {
+    value: !0
+  });
   exports.codeFrameColumns = l;
   exports.default = function (t, n, r) {
     var a = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};

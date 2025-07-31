@@ -25,3 +25,4 @@ var f = r("TASK");
 var h = r("TASK_CANCEL");
 var d = r("TERMINATE");
 var p = r("LOCATION");
+export default i;

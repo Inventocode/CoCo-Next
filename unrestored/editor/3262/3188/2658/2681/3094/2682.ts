@@ -1,7 +1,11 @@
 "use strict";
 
-import * as r from "../../220";
-export default (function e(t, n, i) {
+var r = require("../../220");
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.default = void 0;
+exports.default = function e(t, n, i) {
   r(this, e);
   this.key = void 0;
   this.manipulateOptions = void 0;
@@ -19,4 +23,4 @@ export default (function e(t, n, i) {
   this.parserOverride = t.parserOverride;
   this.generatorOverride = t.generatorOverride;
   this.options = n;
-});
+};

@@ -1,12 +1,12 @@
 "use strict";
 
 export { u as a };
-import * as r from "../../../36/483/39";
-import * as i from "../720/804";
-import * as o from "../316";
-import * as a from "../265";
-import * as s from "../435/index";
-import * as c from "./722";
+var r = require("../../../36/483/39");
+var i = require("../720/804");
+var o = require("../316");
+var a = require("../265");
+var s = require("../435/index");
+var c = require("./722");
 var u = function (e) {
   function t(t, n) {
     var r = e.call(this, t) || this;
@@ -90,3 +90,4 @@ var u = function (e) {
   };
   return t;
 }(c.a);
+export default u;

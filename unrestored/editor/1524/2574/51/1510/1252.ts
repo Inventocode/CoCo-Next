@@ -1,4 +1,4 @@
-import * as r from "../1741/1251";
+var r = require("../1741/1251");
 var i = {};
 for (var o in r) if (r.hasOwnProperty(o)) {
   i[r[o]] = o;
@@ -182,7 +182,9 @@ a.rgb.keyword = function (e) {
   var s = 1 / 0;
   for (var c in r) if (r.hasOwnProperty(c)) {
     var u = r[c];
-    var l = (o = e, a = u, Math.pow(o[0] - a[0], 2) + Math.pow(o[1] - a[1], 2) + Math.pow(o[2] - a[2], 2));
+    o = e;
+    a = u;
+    var l = Math.pow(o[0] - a[0], 2) + Math.pow(o[1] - a[1], 2) + Math.pow(o[2] - a[2], 2);
     if (l < s) {
       s = l;
       n = c;

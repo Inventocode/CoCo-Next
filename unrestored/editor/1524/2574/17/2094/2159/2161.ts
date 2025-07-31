@@ -1,8 +1,12 @@
 "use strict";
 
-import * as r from "../../../1000/93";
-import * as i from "../../../125/195/index";
-import * as o from "../../../1000/213/index";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.ShadowBlockRenderer = void 0;
+var r = require("../../../1000/93");
+var i = require("../../../125/195/index");
+var o = require("../../../1000/213/index");
 var a = function (e) {
   function t(t) {
     var n = e.call(this, t) || this;
@@ -45,4 +49,4 @@ var a = function (e) {
   };
   return t;
 }(require("./1317").OutputBlockRenderer);
-export { a as ShadowBlockRenderer };
+exports.ShadowBlockRenderer = a;

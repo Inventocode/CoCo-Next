@@ -1,8 +1,8 @@
 "use strict";
 
-import * as r from "./1626/231";
-import * as o from "./1534/300/index";
-import * as i from "./1623/495";
+var r = require("./1626/231");
+var o = require("./1534/300/index");
+var i = require("./1623/495");
 var a = require("./1735/247/index")("hasInstance");
 var s = Function.prototype;
 if (!(a in s)) {

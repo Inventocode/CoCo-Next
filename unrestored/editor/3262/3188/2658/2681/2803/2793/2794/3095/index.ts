@@ -1,10 +1,10 @@
-import * as r from "./3096";
+var r = require("./3096");
 var i = require("./3097/index").agents;
-import * as a from "./3103";
-import * as s from "./2795";
-import * as o from "./3104";
-import * as l from "./2796";
-import * as u from "./3105";
+var a = require("./3103");
+var s = require("./2795");
+var o = require("./3104");
+var l = require("./2796");
+var u = require("./3105");
 function c(e, t) {
   return 0 === (e + ".").indexOf(t + ".");
 }

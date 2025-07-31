@@ -7,14 +7,17 @@
     "unpack:home": "npm run build:scripts && node ./out/scripts/unpack-home.js",
     "unpack:editor": "npm run build:scripts && node ./out/scripts/unpack-editor.js",
     "build:scripts": "tsc -p tsconfig.scripts.json",
-    "start": "webpack serve --config webpack.config.js"
+    "start": "webpack serve --config webpack.config.js",
+    "build:dev": "webpack --config webpack.config.js"
   },
   "devDependencies": {
     "@babel/generator": "^7.0.0",
     "@babel/parser": "^7.0.0",
+    "@babel/template": "^7.27.2",
     "@babel/traverse": "^7.0.0",
     "@babel/types": "^7.0.0",
     "@types/babel__generator": "^7.0.0",
+    "@types/babel__template": "^7.4.4",
     "@types/babel__traverse": "^7.0.0",
     "@types/cli-progress": "^3.11.6",
     "@types/intl": "^1.0.0",
@@ -29,7 +32,6 @@
     "@types/react-loadable": "^5.0.0",
     "@types/redux-actions": "^2.0.0",
     "@types/three": "^0.136.0",
-    "@types/to-camel-case": "^1.0.0",
     "@types/video-react": "~0.15.0",
     "cli-progress": "^3.12.0",
     "copy-webpack-plugin": "^13.0.0",
@@ -39,7 +41,7 @@
     "style-loader": "^4.0.0",
     "ts-loader": "^9.0.0",
     "typescript": "^5.0.0",
-    "webpack": "^5.0.9",
+    "webpack": "^5.0.0",
     "webpack-cli": "^6.0.0",
     "webpack-dev-server": "^5.0.0"
   },
@@ -72,7 +74,6 @@
     "sa-sdk-javascript": "^1.0.0",
     "shortid": "^2.0.0",
     "three": "~0.136.0",
-    "to-camel-case": "^1.0.0",
     "video-react": "~0.16.0"
   }
 }

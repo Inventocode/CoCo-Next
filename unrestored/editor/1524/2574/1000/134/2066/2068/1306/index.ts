@@ -1,9 +1,13 @@
 "use strict";
 
-import * as r from "../../../358";
-import * as i from "../../../713";
-import * as o from "../../../2088/496";
-import * as a from "./2073";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.Target = void 0;
+var r = require("../../../358");
+var i = require("../../../713");
+var o = require("../../../2088/496");
+var a = require("./2073");
 var s = function () {
   function e(e, t, n, s) {
     this.id = i.id();
@@ -79,4 +83,4 @@ var s = function () {
   };
   return e;
 }();
-export { s as Target };
+exports.Target = s;

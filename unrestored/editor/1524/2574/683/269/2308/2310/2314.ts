@@ -1,12 +1,15 @@
 "use strict";
 
-import * as r from "../../1359";
-import * as i from "../../2325/444";
-import * as o from "../../580";
-import * as a from "../../359";
-import * as s from "../../845";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+var r = require("../../1359");
+var i = require("../../2325/444");
+var o = require("../../580");
+var a = require("../../359");
+var s = require("../../845");
 exports.getFunctionName = s.getFunctionName;
-import * as c from "./1360/index";
+var c = require("./1360/index");
 function u(e, t, n, r) {
   var a = e.getConstructorMetadata(n);
   var s = a.compilerGeneratedMetadata;

@@ -14,3 +14,4 @@ function i(e, t) {
     delay: i.transitionDelay
   };
 }
+export default i;

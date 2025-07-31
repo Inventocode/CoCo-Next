@@ -1,11 +1,15 @@
 "use strict";
 
-import * as r from "../../../1000/93";
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.ProcedurePlugin = void 0;
+var r = require("../../../1000/93");
 var i = (0, r.__importStar)(require("../../../17/533"));
-import * as o from "../../../301/173";
-import * as a from "../../../17/640/index";
-import * as s from "../../../17/642";
-import * as c from "../../../206/725/387";
+var o = require("../../../301/173");
+var a = require("../../../17/640/index");
+var s = require("../../../17/642");
+var c = require("../../../206/725/387");
 var u = (0, r.__importStar)(require("./1131"));
 var l = (0, r.__importStar)(require("./1130"));
 var f = function (e) {
@@ -265,4 +269,4 @@ var f = function (e) {
   (0, r.__decorate)([(0, a.lazy_inject)(s.BINDING.json)], t.prototype, "json", void 0);
   return t;
 }(require("./1132").BasePlugin);
-export { f as ProcedurePlugin };
+exports.ProcedurePlugin = f;

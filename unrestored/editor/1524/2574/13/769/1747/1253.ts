@@ -1,7 +1,10 @@
 "use strict";
 
-import * as r from "../568";
-export default (function (e, t, n, r) {
+var r = require("../568");
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+});
+exports.default = function (e, t, n, r) {
   var o = i.default.unstable_batchedUpdates ? function (e) {
     i.default.unstable_batchedUpdates(n, e);
   } : n;
@@ -15,5 +18,5 @@ export default (function (e, t, n, r) {
       }
     }
   };
-});
+};
 var i = r(require("../../../75/index"));

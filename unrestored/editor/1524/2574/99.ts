@@ -7,19 +7,30 @@ export { j as f };
 export { N as d };
 export { R as e };
 export { k as a };
-import * as r from "./1/index";
-import * as o from "./1/index";
-import * as i from "./10/index";
-import * as a from "./6";
-import * as s from "./25/index";
-import * as c from "./7";
-import * as l from "./31/index";
-import * as u from "./38/index";
-import * as d from "./9";
-import * as p from "./26/index";
-import * as f from "./5";
-import * as h from "./98";
-import * as m from "./38/375";
+var r = require("./1/index");
+var o = (module => {
+  var defaultExport = module && module.__esModule ? function () {
+    return module.default;
+  } : function () {
+    return module;
+  };
+  Object.defineProperty(defaultExport, "a", {
+    enumerable: true,
+    get: defaultExport
+  });
+  return defaultExport;
+})(r);
+var i = require("./10/index");
+var a = require("./6");
+var s = require("./25/index");
+var c = require("./7");
+var l = require("./31/index");
+var u = require("./38/index");
+var d = require("./9");
+var p = require("./26/index");
+var f = require("./5");
+var h = require("./98");
+var m = require("./38/375");
 function g(e) {
   return _.apply(this, arguments);
 }
@@ -383,7 +394,8 @@ function j(e) {
   var t = {};
   Object.entries(e).forEach(function (e) {
     var n = Object(i.a)(e, 2);
-    var r = (n[0], n[1]);
+    n[0];
+    var r = n[1];
     t = Object(a.a)(Object(a.a)({}, t), r.widgets);
   });
   return t;
@@ -404,3 +416,4 @@ function R(e, t) {
 function k(e) {
   return !e.startsWith("PROJECT");
 }
+export default k;
