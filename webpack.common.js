@@ -1,56 +1,11 @@
 const path = require("path")
 const webpack = require("webpack")
-const webpackDevServer = require("webpack-dev-server")
 const CopyPlugin = require("copy-webpack-plugin")
 const HtmlWebpackPlugin = require("html-webpack-plugin")
 
 /** @type {webpack.Configuration} */
 const config = {
-    mode: "development",
     stats: "minimal",
-    devServer: {
-        port: 7090,
-        static: false,
-        // open: "http://coco.localhost:7090",
-        proxy: [
-            ...[
-                "https://api-creation.codemao.cn",
-                "https://api.codemao.cn",
-                "https://socketcoll.codemao.cn",
-                "https://open-service.codemao.cn",
-                "https://shence-data.codemao.cn",
-                "wss://socketcv.codemao.cn:9096"
-            ].map(target => /** @type {webpackDevServer.ProxyConfigArrayItem} */({
-                context: "/proxy/" + target,
-                target,
-                ws: target.startsWith("wss:"),
-                headers: {
-                    "Origin": "https://coco.codemao.cn",
-                    "Referer": "https://coco.codemao.cn/"
-                },
-                pathRewrite(path) { return path.replace("/proxy/" + target, "") },
-                changeOrigin: true,
-                onProxyRes(response) {
-                    const setCookie = response.headers["set-cookie"]
-                    if (setCookie != null) {
-                        for (let i = 0; i < setCookie.length; i++) {
-                            setCookie[i] = setCookie[i]
-                                .replace(/codemao\.cn/g, "coco.localhost")
-                        }
-                    }
-                }
-            })),
-            {
-                context: pathname => /\/editor\/player\/[0-9]+/.test(pathname),
-                target: "http://localhost:7090",
-                headers: {
-                    "Origin": "https://coco.codemao.cn",
-                    "Referer": "https://coco.codemao.cn/"
-                },
-                pathRewrite(__path) { return "/editor/player/" }
-            }
-        ]
-    },
     entry: {
         "proxy": path.resolve(__dirname, "helper", "proxy"),
         "home": path.resolve(__dirname, "src", "home", "index"),
@@ -64,16 +19,12 @@ const config = {
     },
     output: {
         path: path.resolve(__dirname, "dist", "coco.codemao.cn"),
-        filename: "static/scripts/[name].[fullhash].js",
+        filename: "static/scripts/[name].js",
         clean: true
     },
     module: {
         rules: [
             {
-                test: /\.css$/,
-                exclude: /node_modules/,
-                use: ["style-loader", "css-loader"]
-            }, {
                 test: /\.tsx?$/,
                 exclude: /node_modules/,
                 use: {
