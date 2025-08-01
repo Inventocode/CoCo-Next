@@ -13,11 +13,11 @@
 ## 一、进度
 
 | 模块 | 抓取 | 拆包 | 语法升级 | JSX 反向转换 | 反压缩 |
-|:-:|:-:|:-:|:-:|:-:|:-:|
+| :-: | :-: | :-: | :-: | :-: | :-: |
 | CoCo Home | ✅ | 75% | ❌ | ❌ | / |
-| CoCo Editor | ✅ | 50% | ❌ | ❌ | ❌ |
-| CoCo Editor Player | ✅ | ❌ | ❌ | ❌ | ❌ |
-| CoCo Editor ServiceWorker | ✅ | ❌ | ❌ | ❌ | ❌ |
+| CoCo Editor | ✅ | 75% | ❌ | ❌ | ❌ |
+| CoCo Editor Player | ✅ | 75% | ❌ | ❌ | ❌ |
+| CoCo Editor ServiceWorker | ✅ | ✅ | ❌ | / | ❌ |
 | CoCo Player | ✅ | ❌ | ❌ | ❌ | ❌ |
 
 过程说明：
@@ -55,18 +55,26 @@ $ npm install --legacy-peer-deps
 
 ### 2.解包代码
 
-仓库中已包含解包后的代码，你也可以重新解包代码。
+仓库中已包含解包后的代码，无需解包即可使用。
 
-设备性能要求：
+当然你也可以重新解包代码。
 
-- 有 4GiB 的空闲运行内存。
+解包代码的设备性能要求：
+
+- 有 4GiB 的行运行内存可用。
 
 提示：如果设备内存不多，Node.js 的内存限制会比较小，可以通过设置环境变量 `NODE_OPTIONS = "--max_old_space_size=4096"` 来调大内存限制。
 
 ```sh
 $ npm run unpack:home
+$ npm run unpack:shared
 $ npm run unpack:editor
+$ npm run unpack:editor-service-worker
+$ npm run unpack:player
+$ npm run unpack:editor-player
 ```
+
+解包后有些代码有些小问题，请自行解决。
 
 ### 3.以开发模式打包运行解包后的代码
 
@@ -121,7 +129,8 @@ $ npm run start
 请安如下步骤进行：
 
 1.把目标代码移动到 `/src` 目录中恰当的位置；
-2.重命名给模块名称、代码中的量的名称等重新设置一个有意义的名称。
+2.在相应的解包程序中添加移动规则；
+3.重命名给模块名称、代码中的量的名称等重新设置一个有意义的名称。
 
 ### 2.间接贡献
 
@@ -129,4 +138,10 @@ $ npm run start
 
 对于本项目成果的使用同样是对本项目的贡献。
 
-你可以使用本项目还原出来的代码制作其他功能，如：制作绕审核 Player。
+你可以使用本项目还原出来的代码制作其他功能，如：制作绕审核 Player、CoCo Pro。
+
+> [!WARNING]
+>
+> 但是请注意：
+>
+> 请不要更改未还原的代码（位于 /unrestored 中的代码），这些代码可能经常变更！

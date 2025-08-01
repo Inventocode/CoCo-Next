@@ -1,5 +1,0 @@
-var r = require("../../../1437/835/index");
-var i = require("../../../1441/1869/639");
-module.exports = function (e) {
-  return i(e) && r(e);
-};

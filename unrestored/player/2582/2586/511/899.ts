@@ -1,0 +1,1 @@
+module.exports = "https://creation.codemao.cn/coconut/web/1.22.0-0/" + "static/media/ic_back.10af9149.svg";

@@ -10,13 +10,29 @@ import cliProgress from "cli-progress"
 
 export interface UnpackConfig {
     entry: string[]
-    externals: Externals
+    /**
+     * 排除外部依赖。
+     */
+    externals?: Externals | null | undefined
     output: {
         path: string
+        /**
+         * 生成模块路径映射表。
+         */
+        pathMap?: false | string | null | undefined
     }
     setPath: SetPath,
     publicPath?: string | null | undefined
+    /**
+     * 是否使用 ESModule 的导入方式。
+     *
+     * 部分代码使用 ESModule 的导入方式可能会导致异常。
+     */
     useESImport?: boolean | null | undefined
+    /**
+     * 移动模块，标识模块被移动到了指定位置，被移动的模块不会被处理。
+     */
+    move?: Record<ModuleKey, string> | null | undefined
 }
 
 export interface External {
@@ -56,6 +72,14 @@ export async function unpack(config: UnpackConfig): Promise<void> {
     for (const entryItem of config.entry) {
         Object.assign(modules, await loadModulesFromFile(entryItem))
     }
+    for (const [key, movedPath] of Object.entries(config.move ?? {})) {
+        const module: Module | undefined = modules[key]
+        if (module == undefined) {
+            continue
+        }
+        module.external = movedPath
+        module.path = movedPath.split("/")
+    }
     unminimize(modules)
     buildModulesDependency(modules)
     switch (config.setPath) {
@@ -68,10 +92,21 @@ export async function unpack(config: UnpackConfig): Promise<void> {
     }
     const dirsPath: Set<string> = getAllDirsPath(modules)
     addIndexToModulesPath(modules, dirsPath)
-    markExternals(modules, config.externals)
+    markExternals(modules, config.externals ?? [])
     transformModulesImport(modules, config)
     transformModulesExport(modules)
     await writeModules(config.output.path, modules)
+    const { pathMap: pathMapPath } = config.output
+    if (pathMapPath) {
+        const pathMap: Record<ModuleKey, string> = {}
+        for (const module of Object.values(modules)) {
+            pathMap[module.key] = module.path.join("/")
+        }
+        await fs.writeFile(
+            path.resolve(config.output.path, pathMapPath),
+            JSON.stringify(pathMap, null, 4)
+        )
+    }
 }
 
 async function loadModulesFromFile(filePath: string): Promise<ModuleMap> {
@@ -93,16 +128,27 @@ function loadModulesFromAST(AST?: t.Node | null | undefined): ModuleMap {
     if (t.isExpressionStatement(AST)) {
         AST = AST.expression
     }
+    if (t.isUnaryExpression(AST, { operator: "!" })) {
+        AST = AST.argument
+    }
     if (!t.isCallExpression(AST)) {
         throw new Error("No modules found!")
     }
     let modulesExpression: t.ObjectExpression | t.ArrayExpression | null = null
     let arg0: t.Node | null | undefined, arg1: t.Node | null | undefined
     [arg0, arg1] = AST.arguments
-    if (t.isArrayExpression(arg0) && (arg0.elements.length == 2 || arg0.elements.length == 3)) {
+    if (
+        t.isArrayExpression(arg0) && (
+            t.isObjectExpression(arg0.elements[0]) ||
+            t.isArrayExpression(arg0.elements[0])
+        ) && (
+            arg0.elements.length == 2 ||
+            arg0.elements.length == 3
+        )
+    ) {
         [arg0, arg1] = arg0.elements
     }
-    if (t.isObjectExpression(arg0)) {
+    if (t.isObjectExpression(arg0) || t.isArrayExpression(arg0)) {
         modulesExpression = arg0
     }
     if (t.isObjectExpression(arg1) || t.isArrayExpression(arg1)) {
@@ -165,6 +211,10 @@ function unminimize(modules: ModuleMap): void {
     const bar = new cliProgress.SingleBar({}, cliProgress.Presets.shades_classic)
     bar.start(Object.keys(modules).length, 0)
     for (const module of Object.values(modules)) {
+        if (module.external != null) {
+            bar.increment()
+            continue
+        }
         traverse(module.AST, {
             ExpressionStatement(path: NodePath<t.ExpressionStatement>): void {
                 const expression: t.Expression = path.node.expression
@@ -278,6 +328,10 @@ function buildModulesDependency(modules: ModuleMap): void {
     const bar = new cliProgress.SingleBar({}, cliProgress.Presets.shades_classic)
     bar.start(Object.keys(modules).length, 0)
     for (const module of Object.values(modules)) {
+        if (module.external != null) {
+            bar.increment()
+            continue
+        }
         function addImports(key: ModuleKey, name: string): void {
             if (
                 /^__WEBPACK_IMPORTED_MODULE_[0-9]+_/.test(name) ||
@@ -559,6 +613,9 @@ function setModulesPathByImportName(modules: ModuleMap): void {
         (module: Module): boolean => module.isEntry
     )
     for (const module of entryModules) {
+        if (module.external != null) {
+            continue
+        }
         module.path = ["index"]
     }
     const queue = new PriorityQueue<Module>({
@@ -570,6 +627,9 @@ function setModulesPathByImportName(modules: ModuleMap): void {
     const visited: Record<ModuleKey, number> = {}
     while (queue.length > 0) {
         const module = queue.dequeue()
+        if (module.external != null) {
+            continue
+        }
         for (const [key, name] of Object.entries(module.importsNameMap)) {
             const importedModule: Module = getModuleByKey(modules, key)
             if (/^__WEBPACK_IMPORTED_MODULE_[0-9]+_(?!_)/.test(name)) {
@@ -620,6 +680,9 @@ function setModulesPathByDependency(modules: ModuleMap): void {
         (module: Module): boolean => module.isEntry
     )
     for (const module of entryModules) {
+        if (module.external != null) {
+            continue
+        }
         module.path = [String(module.key).replace(/\//g, "")]
     }
     const queue = new PriorityQueue<Module>({
@@ -632,7 +695,7 @@ function setModulesPathByDependency(modules: ModuleMap): void {
     while (queue.length > 0) {
         const module = queue.dequeue()
         for (const [key, importedModule] of Object.entries(module.dependency)) {
-            if (visited[key]) {
+            if (importedModule.external != null || visited[key]) {
                 continue
             }
             visited[key] = true
@@ -708,6 +771,10 @@ function transformModulesImport(modules: ModuleMap, config: UnpackConfig): void 
     const bar = new cliProgress.SingleBar({}, cliProgress.Presets.shades_classic)
     bar.start(Object.keys(modules).length, 0)
     for (const module of Object.values(modules)) {
+        if (module.external != null) {
+            bar.increment()
+            continue
+        }
         let importedModuleKey: ModuleKey | null = null
         const defaultImportIdentifiers: t.Identifier[] = []
         traverse(module.AST, {
@@ -959,6 +1026,10 @@ function transformModulesExport(modules: ModuleMap): void {
     const bar = new cliProgress.SingleBar({}, cliProgress.Presets.shades_classic)
     bar.start(Object.keys(modules).length, 0)
     for (const module of Object.values(modules)) {
+        if (module.external != null) {
+            bar.increment()
+            continue
+        }
         function replace(
             path: NodePath,
             exported: string,
@@ -1142,8 +1213,8 @@ function transformModulesExport(modules: ModuleMap): void {
                 if (!callee.isMemberExpression({ computed: false })) {
                     return
                 }
-                const consequent: NodePath = path.get("consequent")
-                if (!consequent.isBlockStatement()) {
+                const consequentPath: NodePath = path.get("consequent")
+                if (!consequentPath.isBlockStatement()) {
                     return
                 }
                 if (
@@ -1151,7 +1222,7 @@ function transformModulesExport(modules: ModuleMap): void {
                     callee.scope.getBinding(module.args[2]!) == null &&
                     callee.get("property").isIdentifier({ name: "o" })
                 ) {
-                    path.replaceWithMultiple(consequent.node.body)
+                    path.replaceWithMultiple(consequentPath.node.body)
                 }
             },
             Identifier(identifierPath: NodePath<t.Identifier>): void {
@@ -1219,7 +1290,7 @@ function transformModulesExport(modules: ModuleMap): void {
  * 获取导入路径
  */
 function getImportPath(context: Module, imported: Module): string {
-    if (imported.external != null) {
+    if (imported.external != null && !imported.external.startsWith(".")) {
         return imported.external
     }
     const contextPath: string[] = context.path.slice()

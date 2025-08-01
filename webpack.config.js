@@ -18,6 +18,7 @@ const config = {
                 "https://api.codemao.cn",
                 "https://socketcoll.codemao.cn",
                 "https://open-service.codemao.cn",
+                "https://shence-data.codemao.cn",
                 "wss://socketcv.codemao.cn:9096"
             ].map(target => /** @type {webpackDevServer.ProxyConfigArrayItem} */({
                 context: "/proxy/" + target,
@@ -38,13 +39,28 @@ const config = {
                         }
                     }
                 }
-            }))
+            })),
+            {
+                context: pathname => /\/editor\/player\/[0-9]+/.test(pathname),
+                target: "http://localhost:7090",
+                headers: {
+                    "Origin": "https://coco.codemao.cn",
+                    "Referer": "https://coco.codemao.cn/"
+                },
+                pathRewrite(__path) { return "/editor/player/" }
+            }
         ]
     },
     entry: {
         "proxy": path.resolve(__dirname, "helper", "proxy"),
         "home": path.resolve(__dirname, "src", "home", "index"),
-        "editor": path.resolve(__dirname, "src", "editor", "index")
+        "editor": path.resolve(__dirname, "src", "editor", "index"),
+        "editor-service-worker": {
+            import: path.resolve(__dirname, "src", "editor-service-worker", "index"),
+            filename: "editor/main.sw.js"
+        },
+        "editor-player": path.resolve(__dirname, "src", "editor-player", "index"),
+        "player": path.resolve(__dirname, "src", "player", "index")
     },
     output: {
         path: path.resolve(__dirname, "dist", "coco.codemao.cn"),
@@ -98,6 +114,16 @@ const config = {
             filename: "editor/index.html",
             template: "src/editor/index.html",
             chunks: ["proxy", "editor"]
+        }),
+        new HtmlWebpackPlugin({
+            filename: "editor/editor-player.html",
+            template: "src/editor-player/index.html",
+            chunks: ["proxy", "editor-player"]
+        }),
+        new HtmlWebpackPlugin({
+            filename: "editor/player/index.html",
+            template: "src/player/index.html",
+            chunks: ["proxy", "player"]
         })
     ]
 }
