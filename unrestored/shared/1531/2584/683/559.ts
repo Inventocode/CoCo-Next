@@ -474,7 +474,10 @@ var r;
   y(ne, U, {
     handler: function (e) {
       var t = te[e.type];
-      if (1 === t && (this.started = !0), this.started) {
+      if (1 === t) {
+        this.started = !0;
+      }
+      if (this.started) {
         var n = re.call(this, e, t);
         if (12 & t && n[0].length - n[1].length === 0) {
           this.started = !1;
@@ -511,9 +514,10 @@ var r;
     var a = B(e.changedTouches);
     var s = [];
     var c = this.target;
-    if (o = n.filter(function (e) {
+    o = n.filter(function (e) {
       return O(e.target, c);
-    }), 1 === t) {
+    });
+    if (1 === t) {
       for (i = 0; i < o.length;) {
         r[o[i].identifier] = !0;
         i++;
@@ -952,7 +956,8 @@ var r;
       var n = e.pointers.length === t.pointers;
       var r = e.distance < t.threshold;
       var i = e.deltaTime > t.time;
-      if (this._input = e, !r || !n || 12 & e.eventType && !i) {
+      this._input = e;
+      if (!r || !n || 12 & e.eventType && !i) {
         this.reset();
       } else if (1 & e.eventType) {
         this.reset();
@@ -1045,7 +1050,8 @@ var r;
       var n = e.pointers.length === t.pointers;
       var r = e.distance < t.threshold;
       var i = e.deltaTime < t.time;
-      if (this.reset(), 1 & e.eventType && 0 === this.count) {
+      this.reset();
+      if (1 & e.eventType && 0 === this.count) {
         return this.failTimeout();
       }
       if (r && i && n) {
@@ -1054,7 +1060,15 @@ var r;
         }
         var o = !this.pTime || e.timeStamp - this.pTime < t.interval;
         var a = !this.pCenter || W(this.pCenter, e.center) < t.posThreshold;
-        if (this.pTime = e.timeStamp, this.pCenter = e.center, a && o ? this.count += 1 : this.count = 1, this._input = e, 0 === this.count % t.taps) {
+        this.pTime = e.timeStamp;
+        this.pCenter = e.center;
+        if (a && o) {
+          this.count += 1;
+        } else {
+          this.count = 1;
+        }
+        this._input = e;
+        if (0 === this.count % t.taps) {
           return this.hasRequireFailures() ? (this._timer = p(function () {
             this.state = 8;
             this.tryEmit();

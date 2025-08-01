@@ -21,14 +21,9 @@ async function main(): Promise<void> {
             path.resolve(distPath, "2.590ea185.chunk.js"),
             path.resolve(distPath, "10.adabbe91.chunk.js"),
             path.resolve(distPath, "13.ee5dfd72.chunk.js"),
-            path.resolve(distPath, "17.9f2e40be.chunk.js"),
-            path.resolve(distPath, "20.7f439965.chunk.js"),
-            path.resolve(distPath, "21.0649168c.chunk.js"),
-            path.resolve(distPath, "11.fcc4a658.chunk.js"),
-            path.resolve(distPath, "index.bb6e8892.5c6ff67a.chunk.js")
+            path.resolve(distPath, "index.fbac8067.6a5d1e07.chunk.js")
         ],
-        externals: [
-        ],
+        externals: [],
         output: {
             path: path.resolve("unrestored", "player")
         },

@@ -307,7 +307,10 @@ function E(e) {
     var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 500;
     var n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 300;
     var r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 700;
-    if (!(e = Object(a.a)({}, e)).main && e[t] && (e.main = e[t]), !e.main) {
+    if (!(e = Object(a.a)({}, e)).main && e[t]) {
+      e.main = e[t];
+    }
+    if (!e.main) {
       throw new Error(Object(l.a)(4, t));
     }
     if ("string" !== typeof e.main) {

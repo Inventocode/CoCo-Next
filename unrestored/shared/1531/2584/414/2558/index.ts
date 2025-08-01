@@ -103,7 +103,10 @@ var h = function (e) {
   };
   t.prototype.waitForInstance = function (e, n, r) {
     var o = this;
-    if (void 0 === r && (r = Date.now()), this.destroyed) {
+    if (void 0 === r) {
+      r = Date.now();
+    }
+    if (this.destroyed) {
       n(null);
     } else if (e.rendered()) {
       n(e);

@@ -268,8 +268,13 @@ function R(e, t, n, r) {
       return t;
     }, {});
   }(r);
-  if (s = I(s, d), l = I(l, d), !g) {
-    if ((!_ || i && i.toLowerCase() !== u.toLowerCase()) && f(new a.d(n, i)), _) {
+  s = I(s, d);
+  l = I(l, d);
+  if (!g) {
+    if (!_ || i && i.toLowerCase() !== u.toLowerCase()) {
+      f(new a.d(n, i));
+    }
+    if (_) {
       try {
         return F(t.getMessageFormat(_, u, l).format(v), h);
       } catch (m) {
@@ -296,7 +301,7 @@ function R(e, t, n, r) {
   return g || _ || A;
 }
 var P = require("./1170");
-var N = (module => {
+var N = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -307,7 +312,7 @@ var N = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(P);
+}(P);
 var M = ["localeMatcher", "type", "style"];
 var j = Date.now();
 function L(e, t, n, r) {

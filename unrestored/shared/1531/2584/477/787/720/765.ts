@@ -43,7 +43,12 @@ var u = function (e) {
   t.prototype.finish = function (t) {
     var n = this;
     if (void 0 === this.endTimestamp) {
-      if (this.name || (a.a.warn("Transaction has no name, falling back to `<unlabeled transaction>`."), this.name = "<unlabeled transaction>"), e.prototype.finish.call(this, t), !0 === this.sampled) {
+      if (!this.name) {
+        a.a.warn("Transaction has no name, falling back to `<unlabeled transaction>`.");
+        this.name = "<unlabeled transaction>";
+      }
+      e.prototype.finish.call(this, t);
+      if (!0 === this.sampled) {
         var r = this.spanRecorder ? this.spanRecorder.spans.filter(function (e) {
           return e !== n && e.endTimestamp;
         }) : [];

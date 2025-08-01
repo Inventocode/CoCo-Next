@@ -17,7 +17,8 @@ exports.default = function (e) {
     kind: "method"
   }) || r.computed && !f(r.key)) {
     if (g(r)) {
-      if (a = r.id, p(a) && !c) {
+      a = r.id;
+      if (p(a) && !c) {
         var d = i.parent.getBinding(a.name);
         if (d && d.constant && i.getBinding(a.name) === d) {
           n.id = o(a);

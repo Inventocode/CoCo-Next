@@ -4,7 +4,7 @@ export { hn as a };
 var r = require("../../../../54");
 var i = require("../../../../19");
 var o = require("../../../../0/index");
-var a = (module => {
+var a = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -15,7 +15,7 @@ var a = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(o);
+}(o);
 var s = "function" === typeof Symbol && "symbol" === typeof Symbol.iterator ? function (e) {
   return typeof e;
 } : function (e) {
@@ -60,7 +60,10 @@ var A = function (e, t) {
   return n;
 };
 var g = function (e, t) {
-  if (void 0 === t && (t = !1), !Array.isArray(e)) {
+  if (void 0 === t) {
+    t = !1;
+  }
+  if (!Array.isArray(e)) {
     return e;
   }
   var n = "";
@@ -96,7 +99,10 @@ function m(e, t, n) {
   var i = n.indent;
   var o = void 0 === i ? 0 : i;
   var a = t.fallbacks;
-  if (e && o++, a) {
+  if (e) {
+    o++;
+  }
+  if (a) {
     if (Array.isArray(a)) {
       for (var s = 0; s < a.length; s++) {
         var c = a[s];
@@ -178,7 +184,12 @@ var E = function () {
       return this;
     }
     var s = o && a;
-    if (s ? delete this.style[e] : this.style[e] = i, this.renderable && this.renderer) {
+    if (s) {
+      delete this.style[e];
+    } else {
+      this.style[e] = i;
+    }
+    if (this.renderable && this.renderer) {
       if (s) {
         this.renderer.removeProperty(this.renderable, e);
       } else {
@@ -304,7 +315,16 @@ var S = function () {
     return r ? (this.options.jss.plugins.onProcessRule(r), r) : null;
   };
   t.toString = function (e) {
-    if (void 0 === e && (e = O), null == e.indent && (e.indent = O.indent), null == e.children && (e.children = O.children), !1 === e.children) {
+    if (void 0 === e) {
+      e = O;
+    }
+    if (null == e.indent) {
+      e.indent = O.indent;
+    }
+    if (null == e.children) {
+      e.children = O.children;
+    }
+    if (!1 === e.children) {
       return this.query + " {}";
     }
     var t = this.rules.toString(e);
@@ -353,7 +373,16 @@ var F = function () {
     this.rules.process();
   }
   e.prototype.toString = function (e) {
-    if (void 0 === e && (e = D), null == e.indent && (e.indent = D.indent), null == e.children && (e.children = D.children), !1 === e.children) {
+    if (void 0 === e) {
+      e = D;
+    }
+    if (null == e.indent) {
+      e.indent = D.indent;
+    }
+    if (null == e.children) {
+      e.children = D.children;
+    }
+    if (!1 === e.children) {
       return this.at + " " + this.id + " {}";
     }
     var t = this.rules.toString(e);
@@ -615,7 +644,16 @@ var $ = function () {
     var e;
     var t;
     var n;
-    if ("string" === typeof (arguments.length <= 0 ? void 0 : arguments[0]) ? (e = arguments.length <= 0 ? void 0 : arguments[0], t = arguments.length <= 1 ? void 0 : arguments[1], n = arguments.length <= 2 ? void 0 : arguments[2]) : (t = arguments.length <= 0 ? void 0 : arguments[0], n = arguments.length <= 1 ? void 0 : arguments[1], e = null), e) {
+    if ("string" === typeof (arguments.length <= 0 ? void 0 : arguments[0])) {
+      e = arguments.length <= 0 ? void 0 : arguments[0];
+      t = arguments.length <= 1 ? void 0 : arguments[1];
+      n = arguments.length <= 2 ? void 0 : arguments[2];
+    } else {
+      t = arguments.length <= 0 ? void 0 : arguments[0];
+      n = arguments.length <= 1 ? void 0 : arguments[1];
+      e = null;
+    }
+    if (e) {
       this.updateOne(this.map[e], t, n);
     } else {
       for (var r = 0; r < this.index.length; r++) {
@@ -635,7 +673,8 @@ var $ = function () {
     } else {
       var s = t;
       var c = s.style;
-      if (o.onUpdate(n, t, a, r), r.process && c && c !== s.style) {
+      o.onUpdate(n, t, a, r);
+      if (r.process && c && c !== s.style) {
         for (var u in o.onProcessStyle(s.style, s, a), s.style) {
           var l = s.style[u];
           if (l !== c[u]) {
@@ -1105,7 +1144,10 @@ var _e = function () {
     }
   };
   t.insertRule = function (e, t, n) {
-    if (void 0 === n && (n = this.element.sheet), e.rules) {
+    if (void 0 === n) {
+      n = this.element.sheet;
+    }
+    if (e.rules) {
       var r = e;
       var i = n;
       if ("conditional" === e.type || "keyframes" === e.type) {
@@ -1224,7 +1266,13 @@ var ge = function () {
     return this;
   };
   t.createRule = function (e, t, n) {
-    if (void 0 === t && (t = {}), void 0 === n && (n = {}), "object" === typeof e) {
+    if (void 0 === t) {
+      t = {};
+    }
+    if (void 0 === n) {
+      n = {};
+    }
+    if ("object" === typeof e) {
       return this.createRule(void 0, e, t);
     }
     var r = Object(i.a)({}, n, {
@@ -1482,7 +1530,8 @@ var je = function () {
         var d = -1 !== f.indexOf("&");
         var h = "@" === f[0];
         if (d || h) {
-          if (s = n(u, l, s), d) {
+          s = n(u, l, s);
+          if (d) {
             var p = t(f, u.selector);
             if (!c) {
               c = e(l, a);
@@ -1947,7 +1996,10 @@ if (c) {
   });
 }
 function Gt(e, t) {
-  if (void 0 === t && (t = {}), !mt) {
+  if (void 0 === t) {
+    t = {};
+  }
+  if (!mt) {
     return e;
   }
   if (null != Ut[e]) {

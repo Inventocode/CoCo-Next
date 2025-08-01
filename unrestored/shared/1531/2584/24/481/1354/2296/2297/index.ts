@@ -205,7 +205,10 @@ l.prototype.probe = function (e) {
       t.once("packet", function (i) {
         if (!n) {
           if ("pong" === i.type && "probe" === i.data) {
-            if (o('probe transport "%s" pong', e), r.upgrading = !0, r.emit("upgrading", t), !t) {
+            o('probe transport "%s" pong', e);
+            r.upgrading = !0;
+            r.emit("upgrading", t);
+            if (!t) {
               return;
             }
             l.priorWebsocketSuccess = "websocket" === t.name;
@@ -279,7 +282,12 @@ l.prototype.probe = function (e) {
   t.open();
 };
 l.prototype.onOpen = function () {
-  if (o("socket open"), this.readyState = "open", l.priorWebsocketSuccess = "websocket" === this.transport.name, this.emit("open"), this.flush(), "open" === this.readyState && this.upgrade && this.transport.pause) {
+  o("socket open");
+  this.readyState = "open";
+  l.priorWebsocketSuccess = "websocket" === this.transport.name;
+  this.emit("open");
+  this.flush();
+  if ("open" === this.readyState && this.upgrade && this.transport.pause) {
     o("starting upgrade probes");
     for (var e = 0, t = this.upgrades.length; e < t; e++) {
       this.probe(this.upgrades[e]);
@@ -369,7 +377,15 @@ l.prototype.write = l.prototype.send = function (e, t, n) {
   return this;
 };
 l.prototype.sendPacket = function (e, t, n, r) {
-  if ("function" === typeof t && (r = t, t = void 0), "function" === typeof n && (r = n, n = null), "closing" !== this.readyState && "closed" !== this.readyState) {
+  if ("function" === typeof t) {
+    r = t;
+    t = void 0;
+  }
+  if ("function" === typeof n) {
+    r = n;
+    n = null;
+  }
+  if ("closing" !== this.readyState && "closed" !== this.readyState) {
     (n = n || {}).compress = !1 !== n.compress;
     var i = {
       type: e,

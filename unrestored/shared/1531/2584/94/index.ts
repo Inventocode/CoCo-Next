@@ -1,7 +1,7 @@
 "use strict";
 
 var r = require("../0/index");
-var o = (module => {
+var o = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -12,9 +12,9 @@ var o = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(r);
+}(r);
 var i = require("../8");
-var a = (module => {
+var a = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -25,7 +25,7 @@ var a = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(i);
+}(i);
 require("./830");
 var s = function (e) {
   var t = e.type;

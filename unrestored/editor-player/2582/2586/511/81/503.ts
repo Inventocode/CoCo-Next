@@ -236,7 +236,8 @@ var l = function (t) {
       }
     }
     var D = A - m;
-    if (A = r.getNextUnset(A), !r.isRange(A, Math.min(r.getSize(), A + (A - m) / 2), !1)) {
+    A = r.getNextUnset(A);
+    if (!r.isRange(A, Math.min(r.getSize(), A + (A - m) / 2), !1)) {
       throw new u.a();
     }
     if ((S -= T * C) % 103 !== C) {

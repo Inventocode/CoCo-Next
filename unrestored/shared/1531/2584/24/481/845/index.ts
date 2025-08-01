@@ -20,7 +20,8 @@
   };
   exports.formatArgs = function (e) {
     var n = this.useColors;
-    if (e[0] = (n ? "%c" : "") + this.namespace + (n ? " %c" : " ") + e[0] + (n ? "%c " : " ") + "+" + exports.humanize(this.diff), !n) {
+    e[0] = (n ? "%c" : "") + this.namespace + (n ? " %c" : " ") + e[0] + (n ? "%c " : " ") + "+" + exports.humanize(this.diff);
+    if (!n) {
       return;
     }
     var r = "color: " + this.color;

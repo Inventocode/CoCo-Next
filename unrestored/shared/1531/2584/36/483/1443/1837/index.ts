@@ -8,7 +8,10 @@ var u = require("./1279");
 module.exports = function e(t, n, l, f, d) {
   if (t !== n) {
     o(n, function (o, c) {
-      if (d || (d = new r()), s(o)) {
+      if (!d) {
+        d = new r();
+      }
+      if (s(o)) {
         a(t, n, c, l, e, f, d);
       } else {
         var h = f ? f(u(t, c), o, c + "", t, n, d) : void 0;

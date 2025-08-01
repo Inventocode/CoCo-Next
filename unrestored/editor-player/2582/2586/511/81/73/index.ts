@@ -33,7 +33,22 @@ var i = function () {
     var o = this.distance(t[0], t[1]);
     var i = this.distance(t[1], t[2]);
     var a = this.distance(t[0], t[2]);
-    if (i >= o && i >= a ? (r = t[0], e = t[1], n = t[2]) : a >= i && a >= o ? (r = t[1], e = t[0], n = t[2]) : (r = t[2], e = t[0], n = t[1]), this.crossProductZ(e, r, n) < 0) {
+    if (i >= o && i >= a) {
+      r = t[0];
+      e = t[1];
+      n = t[2];
+    } else {
+      if (a >= i && a >= o) {
+        r = t[1];
+        e = t[0];
+        n = t[2];
+      } else {
+        r = t[2];
+        e = t[0];
+        n = t[1];
+      }
+    }
+    if (this.crossProductZ(e, r, n) < 0) {
       var u = e;
       e = n;
       n = u;

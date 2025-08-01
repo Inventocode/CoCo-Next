@@ -160,7 +160,8 @@ r.lex = function (e, t) {
             }
           }
         }
-        if (d += t.length - 1, "" === t) {
+        d += t.length - 1;
+        if ("" === t) {
           throw new r.Exception("Can't understand after " + e.slice(d));
         }
         var h = o.indexOf(t);
@@ -201,12 +202,20 @@ r.lex = function (e, t) {
       if (!0 !== x[F]) {
         throw new r.Exception(I + " is not allowed after " + k);
       }
-      if (!0 === O[F] && (F = 2, R = r.math.mul, N = "&times;", P = 3, n -= I.length), S = {
+      if (!0 === O[F]) {
+        F = 2;
+        R = r.math.mul;
+        N = "&times;";
+        P = 3;
+        n -= I.length;
+      }
+      S = {
         value: R,
         type: F,
         pre: P,
         show: N
-      }, 0 === F) {
+      };
+      if (0 === F) {
         x = l;
         O = h;
         i(w, 2).push(2);

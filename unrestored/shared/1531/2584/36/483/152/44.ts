@@ -735,7 +735,10 @@ function be(e, t) {
   }
 }
 var we = function e(t) {
-  if (Object(i.a)(this, e), this[Ae] = void 0, this[ge] = void 0, !t && !(t = this.get)) {
+  Object(i.a)(this, e);
+  this[Ae] = void 0;
+  this[ge] = void 0;
+  if (!t && !(t = this.get)) {
     throw Error("Unknown getter");
   }
   Ee(this, t);

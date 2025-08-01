@@ -25,7 +25,34 @@ var f = function () {
     }
   }
   e.prototype.update = function (e) {
-    if (void 0 === e && (e = {}), e.user && (!this.ipAddress && e.user.ip_address && (this.ipAddress = e.user.ip_address), this.did || e.did || (this.did = e.user.id || e.user.email || e.user.username)), this.timestamp = e.timestamp || Object(a.b)(), e.ignoreDuration && (this.ignoreDuration = e.ignoreDuration), e.sid && (this.sid = 32 === e.sid.length ? e.sid : Object(o.i)()), void 0 !== e.init && (this.init = e.init), !this.did && e.did && (this.did = "" + e.did), "number" === typeof e.started && (this.started = e.started), this.ignoreDuration) {
+    if (void 0 === e) {
+      e = {};
+    }
+    if (e.user) {
+      if (!this.ipAddress && e.user.ip_address) {
+        this.ipAddress = e.user.ip_address;
+      }
+      if (!(this.did || e.did)) {
+        this.did = e.user.id || e.user.email || e.user.username;
+      }
+    }
+    this.timestamp = e.timestamp || Object(a.b)();
+    if (e.ignoreDuration) {
+      this.ignoreDuration = e.ignoreDuration;
+    }
+    if (e.sid) {
+      this.sid = 32 === e.sid.length ? e.sid : Object(o.i)();
+    }
+    if (void 0 !== e.init) {
+      this.init = e.init;
+    }
+    if (!this.did && e.did) {
+      this.did = "" + e.did;
+    }
+    if ("number" === typeof e.started) {
+      this.started = e.started;
+    }
+    if (this.ignoreDuration) {
       this.duration = void 0;
     } else if ("number" === typeof e.duration) {
       this.duration = e.duration;
@@ -290,7 +317,10 @@ var d = function () {
     return this._callExtensionMethod("traceHeaders");
   };
   e.prototype.captureSession = function (e) {
-    if (void 0 === e && (e = !1), e) {
+    if (void 0 === e) {
+      e = !1;
+    }
+    if (e) {
       return this.endSession();
     }
     this._sendSessionUpdate();

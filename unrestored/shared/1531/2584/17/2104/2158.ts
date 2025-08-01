@@ -62,7 +62,8 @@ var c = function () {
   };
   e.prototype.preload = function () {
     for (var e in this.SOUNDS_) {
-      if (this.SOUNDS_[e].volume = .01, a.is.ipad() || a.is.iphone()) {
+      this.SOUNDS_[e].volume = .01;
+      if (a.is.ipad() || a.is.iphone()) {
         break;
       }
     }

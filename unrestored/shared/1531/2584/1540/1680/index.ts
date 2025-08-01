@@ -44,7 +44,8 @@ r("replace", function (e, t, n) {
       if (null === E) {
         break;
       }
-      if (y.push(E), !v) {
+      y.push(E);
+      if (!v) {
         break;
       }
       if ("" === c(E[0])) {

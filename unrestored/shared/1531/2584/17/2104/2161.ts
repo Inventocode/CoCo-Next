@@ -30,31 +30,49 @@ var c = function (e) {
   t.prototype.init = function () {
     var e = this;
     if (!this.field_group) {
-      if (this.field_group = (0, a.create_svg_element)("g", {
+      this.field_group = (0, a.create_svg_element)("g", {
         class: "fieldButton",
         cursor: "default"
-      }, void 0), this.visible_ || (this.field_group.style.display = "none"), this.has_circle && (this.circle_element = (0, a.create_svg_element)("rect", {
-        width: this.width_,
-        height: this.height_,
-        rx: this.width_ / 2,
-        ry: this.width_ / 2,
-        stroke: "rgba(0, 0, 0, .15)",
-        fill: "rgba(255, 255, 255, .15)"
-      }, this.field_group), this.events.bind_event_with_checks(this.field_group, "mousedown", this, function () {
-        if (e.circle_element) {
-          e.circle_element.style.fill = "rgba(0, 0, 0, .15)";
-        }
-      })), "string" === typeof this.src_ ? (this.image_element = (0, a.create_svg_element)("image", {
-        height: this.image_height + "px",
-        width: this.image_width + "px"
-      }, this.field_group), this.set_value(this.src_)) : (this.image_element = (0, a.create_svg_element)("g", {
-        height: this.height_ + "px",
-        width: this.width_ + "px"
-      }, this.field_group), this.image_element.appendChild(this.src_)), s.is.firefox() && (this.rect_element = (0, a.create_svg_element)("rect", {
-        height: this.height_ + "px",
-        width: this.width_ + "px",
-        "fill-opacity": 0
-      }, this.field_group)), void 0 == this.source_block) {
+      }, void 0);
+      if (!this.visible_) {
+        this.field_group.style.display = "none";
+      }
+      if (this.has_circle) {
+        this.circle_element = (0, a.create_svg_element)("rect", {
+          width: this.width_,
+          height: this.height_,
+          rx: this.width_ / 2,
+          ry: this.width_ / 2,
+          stroke: "rgba(0, 0, 0, .15)",
+          fill: "rgba(255, 255, 255, .15)"
+        }, this.field_group);
+        this.events.bind_event_with_checks(this.field_group, "mousedown", this, function () {
+          if (e.circle_element) {
+            e.circle_element.style.fill = "rgba(0, 0, 0, .15)";
+          }
+        });
+      }
+      if ("string" === typeof this.src_) {
+        this.image_element = (0, a.create_svg_element)("image", {
+          height: this.image_height + "px",
+          width: this.image_width + "px"
+        }, this.field_group);
+        this.set_value(this.src_);
+      } else {
+        this.image_element = (0, a.create_svg_element)("g", {
+          height: this.height_ + "px",
+          width: this.width_ + "px"
+        }, this.field_group);
+        this.image_element.appendChild(this.src_);
+      }
+      if (s.is.firefox()) {
+        this.rect_element = (0, a.create_svg_element)("rect", {
+          height: this.height_ + "px",
+          width: this.width_ + "px",
+          "fill-opacity": 0
+        }, this.field_group);
+      }
+      if (void 0 == this.source_block) {
         throw new ReferenceError("Field should have source block when init.");
       }
       this.source_block.get_svg_root().appendChild(this.field_group);

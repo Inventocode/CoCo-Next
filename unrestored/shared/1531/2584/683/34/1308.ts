@@ -16,26 +16,29 @@ function r(e, t, n) {
   if (!g || g.next === g.prev) {
     return v;
   }
-  if (p && (g = function (e, t, n, r) {
-    var o;
-    var a;
-    var s;
-    var c;
-    var u;
-    var l = [];
-    for (o = 0, a = t.length; o < a; o++) {
-      s = t[o] * r;
-      c = o < a - 1 ? t[o + 1] * r : e.length;
-      if ((u = i(e, s, c, r, !1)) === u.next) {
-        u.steiner = !0;
+  if (p) {
+    g = function (e, t, n, r) {
+      var o;
+      var a;
+      var s;
+      var c;
+      var u;
+      var l = [];
+      for (o = 0, a = t.length; o < a; o++) {
+        s = t[o] * r;
+        c = o < a - 1 ? t[o + 1] * r : e.length;
+        if ((u = i(e, s, c, r, !1)) === u.next) {
+          u.steiner = !0;
+        }
+        l.push(_(u));
       }
-      l.push(_(u));
-    }
-    for (l.sort(f), o = 0; o < l.length; o++) {
-      n = d(l[o], n);
-    }
-    return n;
-  }(e, t, g, n)), e.length > 80 * n) {
+      for (l.sort(f), o = 0; o < l.length; o++) {
+        n = d(l[o], n);
+      }
+      return n;
+    }(e, t, g, n);
+  }
+  if (e.length > 80 * n) {
     r = s = e[0];
     o = c = e[1];
     for (var m = n; m < A; m += n) {
@@ -85,10 +88,12 @@ function o(e, t) {
   var n;
   var r = e;
   do {
-    if (n = !1, r.steiner || !m(r, r.next) && 0 !== v(r.prev, r, r.next)) {
+    n = !1;
+    if (r.steiner || !m(r, r.next) && 0 !== v(r.prev, r, r.next)) {
       r = r.next;
     } else {
-      if (O(r), (r = t = r.prev) === r.next) {
+      O(r);
+      if ((r = t = r.prev) === r.next) {
         break;
       }
       n = !0;
@@ -153,7 +158,9 @@ function a(e, t, n, r, i, f, d) {
       })(e, r, i, f);
     }
     for (var h, _, A = e; e.prev !== e.next;) {
-      if (h = e.prev, _ = e.next, f ? c(e, r, i, f) : s(e)) {
+      h = e.prev;
+      _ = e.next;
+      if (f ? c(e, r, i, f) : s(e)) {
         t.push(h.i / n | 0);
         t.push(e.i / n | 0);
         t.push(_.i / n | 0);
@@ -203,7 +210,8 @@ function c(e, t, n, r) {
     if (w.x >= h && w.x <= g && w.y >= _ && w.y <= m && w !== i && w !== a && A(s, l, c, f, u, d, w.x, w.y) && v(w.prev, w, w.next) >= 0) {
       return !1;
     }
-    if (w = w.prevZ, E.x >= h && E.x <= g && E.y >= _ && E.y <= m && E !== i && E !== a && A(s, l, c, f, u, d, E.x, E.y) && v(E.prev, E, E.next) >= 0) {
+    w = w.prevZ;
+    if (E.x >= h && E.x <= g && E.y >= _ && E.y <= m && E !== i && E !== a && A(s, l, c, f, u, d, E.x, E.y) && v(E.prev, E, E.next) >= 0) {
       return !1;
     }
     E = E.nextZ;

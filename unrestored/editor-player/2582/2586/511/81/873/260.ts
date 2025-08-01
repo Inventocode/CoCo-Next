@@ -73,7 +73,8 @@ var l = function (t, e) {
         }
         for (; a;) {
           try {
-            if (r = 1, n && (o = 2 & i[0] ? n.return : i[0] ? n.throw || ((o = n.return) && o.call(n), 0) : n.next) && !(o = o.call(n, i[1])).done) {
+            r = 1;
+            if (n && (o = 2 & i[0] ? n.return : i[0] ? n.throw || ((o = n.return) && o.call(n), 0) : n.next) && !(o = o.call(n, i[1])).done) {
               return o;
             }
             switch (n = 0, o && (i = [2 & i[0], o.value]), i[0]) {

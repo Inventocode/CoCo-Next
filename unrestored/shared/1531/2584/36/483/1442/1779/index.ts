@@ -28,7 +28,10 @@ module.exports = function e(t, n, O, k, S, T) {
   var D = 1 & n;
   var I = 2 & n;
   var F = 4 & n;
-  if (O && (B = S ? O(t, k, S, T) : O(t)), void 0 !== B) {
+  if (O) {
+    B = S ? O(t, k, S, T) : O(t);
+  }
+  if (void 0 !== B) {
     return B;
   }
   if (!b(t)) {
@@ -36,7 +39,8 @@ module.exports = function e(t, n, O, k, S, T) {
   }
   var R = v(t);
   if (R) {
-    if (B = _(t), !D) {
+    B = _(t);
+    if (!D) {
       return u(t, B);
     }
   } else {
@@ -46,7 +50,8 @@ module.exports = function e(t, n, O, k, S, T) {
       return c(t, D);
     }
     if ("[object Object]" == P || "[object Arguments]" == P || N && !S) {
-      if (B = I || N ? {} : g(t), !D) {
+      B = I || N ? {} : g(t);
+      if (!D) {
         return I ? f(t, s(B, t)) : l(t, a(B, t));
       }
     } else {

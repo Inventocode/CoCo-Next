@@ -243,7 +243,8 @@ var C = o.forwardRef(function (e, t) {
     });
   }, [E]);
   var O = o.useCallback(function (e, t) {
-    if (clearTimeout(g.current), "touchend" === e.type && v.current) {
+    clearTimeout(g.current);
+    if ("touchend" === e.type && v.current) {
       e.persist();
       v.current();
       v.current = null;

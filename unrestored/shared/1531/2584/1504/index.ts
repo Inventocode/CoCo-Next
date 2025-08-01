@@ -2,7 +2,7 @@
 
 var r = require("../0/index");
 var o = require("../8");
-var i = (module => {
+var i = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -13,7 +13,7 @@ var i = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(o);
+}(o);
 var a = require("./788");
 function s(e, t) {
   var n = Object.keys(e);
@@ -283,7 +283,8 @@ var O = function (e) {
       var o = n.pageY;
       var i = n.startTop;
       var a = e.props.onScroll;
-      if (p.a.cancel(e.moveRaf), r) {
+      p.a.cancel(e.moveRaf);
+      if (r) {
         var s = i + (E(t) - o);
         var c = e.getEnableScrollRange();
         var l = e.getEnableHeightRange();
@@ -1119,7 +1120,8 @@ function Y(e, t) {
     var l = r.useRef();
     return function (r) {
       if (null !== r && void 0 !== r) {
-        if (p.a.cancel(l.current), "number" === typeof r) {
+        p.a.cancel(l.current);
+        if ("number" === typeof r) {
           s(r);
         } else if (r && "object" === j(r)) {
           var u;

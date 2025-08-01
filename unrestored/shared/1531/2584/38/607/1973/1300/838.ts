@@ -81,7 +81,10 @@ function s(e, t) {
   }
   var n = i(t);
   var s = i(e);
-  if (s && (e = s.path || "/"), n && !n.scheme) {
+  if (s) {
+    e = s.path || "/";
+  }
+  if (n && !n.scheme) {
     if (s) {
       n.scheme = s.scheme;
     }
@@ -168,7 +171,14 @@ exports.parseSourceMapInput = function (e) {
   return JSON.parse(e.replace(/^\)]}'[^\n]*\n/, ""));
 };
 exports.computeSourceURL = function (e, t, n) {
-  if (t = t || "", e && ("/" !== e[e.length - 1] && "/" !== t[0] && (e += "/"), t = e + t), n) {
+  t = t || "";
+  if (e) {
+    if ("/" !== e[e.length - 1] && "/" !== t[0]) {
+      e += "/";
+    }
+    t = e + t;
+  }
+  if (n) {
     var r = i(n);
     if (!r) {
       throw new Error("sourceMapURL could not be parsed");

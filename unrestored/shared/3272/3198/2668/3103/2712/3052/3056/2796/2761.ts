@@ -73,7 +73,10 @@
     var w = "octal" == n.numbers;
     var O = "decimal" == n.numbers;
     var C = "hexadecimal" == n.numbers;
-    if (y && t && "function" == typeof t.toJSON && (t = t.toJSON()), !function (e) {
+    if (y && t && "function" == typeof t.toJSON) {
+      t = t.toJSON();
+    }
+    if (!function (e) {
       return "string" == typeof e || "[object String]" == a.call(e);
     }(t)) {
       if (function (e) {

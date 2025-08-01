@@ -43,7 +43,8 @@ var u = function (e, t, n, r) {
       l.push(u);
     }
     for (var f = 0; n.depth > 0 && null !== (s = a.exec(o)) && f < n.depth;) {
-      if (f += 1, !n.plainObjects && i.call(Object.prototype, s[1].slice(1, -1)) && !n.allowPrototypes) {
+      f += 1;
+      if (!n.plainObjects && i.call(Object.prototype, s[1].slice(1, -1)) && !n.allowPrototypes) {
         return;
       }
       l.push(s[1]);

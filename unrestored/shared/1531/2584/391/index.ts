@@ -2,7 +2,7 @@
 
 export { f as a };
 var r = require("../0/index");
-var o = (module => {
+var o = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -13,7 +13,7 @@ var o = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(r);
+}(r);
 var i = require("../16/index");
 var a = require("../623");
 var s = require("../702");
@@ -21,7 +21,7 @@ var c = require("../739/index");
 var l = require("../13/index");
 var u = require("../2/index");
 var d = require("./513");
-var p = (module => {
+var p = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -32,7 +32,7 @@ var p = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(d);
+}(d);
 var f = "COURSE_ICON_NAME";
 var _b;
 _b = Object(r.memo)(function () {

@@ -80,7 +80,9 @@ var s = function () {
         return l[e.id] || u.isLoopedPrevSegment(e);
       }
       for (; f.length > 0;) {
-        if (a = f[f.length - 1], u = a[0], 0 === (s = a[1])) {
+        a = f[f.length - 1];
+        u = a[0];
+        if (0 === (s = a[1])) {
           if (l[u.id]) {
             f.pop();
             continue;
@@ -89,7 +91,11 @@ var s = function () {
             f.pop();
             continue;
           }
-          if (d && -1 !== u.prevSegments.indexOf(d) && (d = null), l[u.id] = !0, !d && (r.call(this, u, p), u === o && p.skip(), h)) {
+          if (d && -1 !== u.prevSegments.indexOf(d)) {
+            d = null;
+          }
+          l[u.id] = !0;
+          if (!d && (r.call(this, u, p), u === o && p.skip(), h)) {
             break;
           }
         }

@@ -120,12 +120,13 @@ var V = function () {
   var l = arguments.length > 0 ? arguments[0] : void 0;
   var u = this;
   var f = [];
-  if (A(u, {
+  A(u, {
     type: "URLSearchParams",
     entries: f,
     updateURL: function () {},
     updateSearchParams: U
-  }), void 0 !== l) {
+  });
+  if (void 0 !== l) {
     if (g(l)) {
       if ("function" === typeof (e = E(l))) {
         for (n = (t = y(l, e)).next; !(r = n.call(t)).done;) {
@@ -151,7 +152,7 @@ var V = function () {
   }
 };
 var z = V.prototype;
-if (s(z, {
+s(z, {
   append: function (e, t) {
     W(arguments.length, 2);
     var n = j(this);
@@ -255,7 +256,9 @@ if (s(z, {
   }
 }, {
   enumerable: !0
-}), a(z, I, z.entries), a(z, "toString", function () {
+});
+a(z, I, z.entries);
+a(z, "toString", function () {
   for (var e, t = j(this).entries, n = [], r = 0; r < t.length;) {
     e = t[r++];
     n.push(F(e.key) + "=" + F(e.value));
@@ -263,12 +266,15 @@ if (s(z, {
   return n.join("&");
 }, {
   enumerable: !0
-}), c(V, "URLSearchParams"), r({
+});
+c(V, "URLSearchParams");
+r({
   global: !0,
   forced: !i
 }, {
   URLSearchParams: V
-}), !i && "function" == typeof S) {
+});
+if (!i && "function" == typeof S) {
   var Y = function (e) {
     if (g(e)) {
       var t;
@@ -285,15 +291,18 @@ if (s(z, {
     }
     return e;
   };
-  if ("function" == typeof w && r({
-    global: !0,
-    enumerable: !0,
-    forced: !0
-  }, {
-    fetch: function (e) {
-      return w(e, arguments.length > 1 ? Y(arguments[1]) : {});
-    }
-  }), "function" == typeof C) {
+  if ("function" == typeof w) {
+    r({
+      global: !0,
+      enumerable: !0,
+      forced: !0
+    }, {
+      fetch: function (e) {
+        return w(e, arguments.length > 1 ? Y(arguments[1]) : {});
+      }
+    });
+  }
+  if ("function" == typeof C) {
     var K = function (e) {
       d(this, K, "Request");
       return new C(e, arguments.length > 1 ? Y(arguments[1]) : {});

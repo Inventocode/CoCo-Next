@@ -179,7 +179,10 @@ var w = function () {
       var a = t.container;
       var s = t.listKey;
       var o = t.key;
-      if (!n && r && (n = r.hub), !i) {
+      if (!n && r) {
+        n = r.hub;
+      }
+      if (!i) {
         throw new Error("To get a node path the parent needs to exist");
       }
       var l = a[o];

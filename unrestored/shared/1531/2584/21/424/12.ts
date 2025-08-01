@@ -105,7 +105,8 @@ function g(e, t) {
       })) {
         return;
       }
-      if (t.height = Math.round(t.height), t.height < 0) {
+      t.height = Math.round(t.height);
+      if (t.height < 0) {
         return void a.a.log({
           type: "warning",
           widgetId: e,
@@ -124,7 +125,8 @@ function g(e, t) {
       })) {
         return;
       }
-      if (t.width = Math.round(t.width), t.width < 0) {
+      t.width = Math.round(t.width);
+      if (t.width < 0) {
         return void a.a.log({
           type: "warning",
           widgetId: e,

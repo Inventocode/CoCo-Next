@@ -380,7 +380,16 @@ module.exports = {
   getFunctionNameWithKind: function (t) {
     var n = t.parent;
     var r = [];
-    if ("MethodDefinition" === n.type && n.static && r.push("static"), t.async && r.push("async"), t.generator && r.push("generator"), "ArrowFunctionExpression" === t.type) {
+    if ("MethodDefinition" === n.type && n.static) {
+      r.push("static");
+    }
+    if (t.async) {
+      r.push("async");
+    }
+    if (t.generator) {
+      r.push("generator");
+    }
+    if ("ArrowFunctionExpression" === t.type) {
       r.push("arrow", "function");
     } else if ("Property" === n.type || "MethodDefinition" === n.type) {
       if ("constructor" === n.kind) {

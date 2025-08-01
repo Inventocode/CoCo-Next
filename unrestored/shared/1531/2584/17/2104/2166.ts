@@ -55,7 +55,14 @@ var c = function (e) {
   t.prototype.render_arrow = function () {
     var e = this;
     if (this.field_group && this.source_block) {
-      if (this.arrow || (this.arrow = (0, s.draw_arrow)(this.source_block.workspace.options.dropdown.arrow_type), this.field_group.appendChild(this.arrow)), this.size_.width += this.source_block.workspace.options.dropdown.padding, this.arrow.setAttribute("transform", "translate(" + this.size_.width + ", " + (this.size_.height / 2 - 7) + ")"), this.size_.width += 12 + this.source_block.workspace.options.dropdown.padding, this.source_block.is_shadow()) {
+      if (!this.arrow) {
+        this.arrow = (0, s.draw_arrow)(this.source_block.workspace.options.dropdown.arrow_type);
+        this.field_group.appendChild(this.arrow);
+      }
+      this.size_.width += this.source_block.workspace.options.dropdown.padding;
+      this.arrow.setAttribute("transform", "translate(" + this.size_.width + ", " + (this.size_.height / 2 - 7) + ")");
+      this.size_.width += 12 + this.source_block.workspace.options.dropdown.padding;
+      if (this.source_block.is_shadow()) {
         var t = function () {
           var t;
           var n = null === (t = e.source_block) || void 0 === t ? void 0 : t.get_parent();

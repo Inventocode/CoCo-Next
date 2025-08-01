@@ -142,7 +142,8 @@ var u = function () {
   };
   e.prototype.set_group = function (e) {
     var t = this.group_;
-    if (this.group_ = "boolean" == typeof e ? e ? (0, c.gen_uid)() : "" : e, t && t !== this.group_ && this.is_enabled()) {
+    this.group_ = "boolean" == typeof e ? e ? (0, c.gen_uid)() : "" : e;
+    if (t && t !== this.group_ && this.is_enabled()) {
       var n = this.group_event_factory({
         type: s.GroupEventType.GroupEnd,
         group: t
@@ -276,7 +277,11 @@ var u = function () {
     };
     if (t in this.touch_manager.TOUCH_MAP) {
       for (var u = function (e) {
-          if (s(e), c.original && a.unbind_original(c), !o) {
+          s(e);
+          if (c.original) {
+            a.unbind_original(c);
+          }
+          if (!o) {
             if (0 == e.cancelable) {
               return;
             }

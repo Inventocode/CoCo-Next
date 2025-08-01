@@ -466,7 +466,10 @@ var m = function (t) {
       }
       n.a.increment(this.getOddCounts(), this.getOddRoundingErrors());
     }
-    if (a && n.a.decrement(this.getOddCounts(), this.getOddRoundingErrors()), u) {
+    if (a) {
+      n.a.decrement(this.getOddCounts(), this.getOddRoundingErrors());
+    }
+    if (u) {
       if (s) {
         throw new c.a();
       }

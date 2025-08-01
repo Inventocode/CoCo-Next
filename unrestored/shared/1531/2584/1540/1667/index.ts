@@ -45,64 +45,98 @@ if (i("RegExp", N)) {
       if (!f && h && m && e.constructor === R) {
         return e;
       }
-      if ((h || e instanceof R) && (e = e.source, m && (t = "flags" in b ? b.flags : p.call(b))), e = void 0 === e ? "" : d(e), t = void 0 === t ? "" : d(t), b = e, y && "dotAll" in S && (r = !!t && t.indexOf("s") > -1) && (t = t.replace(/s/g, "")), n = t, j && "sticky" in S && (o = !!t && t.indexOf("y") > -1) && (t = t.replace(/y/g, "")), E && (e = (i = function (e) {
-        for (var t, n = e.length, r = 0, o = "", i = [], a = {}, s = !1, c = !1, l = 0, u = ""; r <= n; r++) {
-          if ("\\" === (t = e.charAt(r))) {
-            t += e.charAt(++r);
-          } else if ("]" === t) {
-            s = !1;
-          } else if (!s) {
-            switch (!0) {
-              case "[" === t:
-                s = !0;
-                break;
-              case "(" === t:
-                if (T.test(e.slice(r + 1))) {
-                  r += 2;
-                  c = !0;
-                }
-                o += t;
-                l++;
-                continue;
-              case ">" === t && c:
-                if ("" === u || g(a, u)) {
-                  throw new SyntaxError("Invalid capture group name");
-                }
-                a[u] = !0;
-                i.push([u, l]);
-                c = !1;
-                u = "";
-                continue;
-            }
-          }
-          if (c) {
-            u += t;
-          } else {
-            o += t;
-          }
+      if (h || e instanceof R) {
+        e = e.source;
+        if (m) {
+          t = "flags" in b ? b.flags : p.call(b);
         }
-        return [o, i];
-      }(e))[0], v = i[1]), c = a(w(e, t), f ? this : C, R), (r || o || v.length) && (l = _(c), r && (l.dotAll = !0, l.raw = R(function (e) {
-        for (var t, n = e.length, r = 0, o = "", i = !1; r <= n; r++) {
-          if ("\\" !== (t = e.charAt(r))) {
-            if (i || "." !== t) {
-              if ("[" === t) {
-                i = !0;
-              } else {
-                if ("]" === t) {
-                  i = !1;
-                }
+      }
+      e = void 0 === e ? "" : d(e);
+      t = void 0 === t ? "" : d(t);
+      b = e;
+      if (y && "dotAll" in S && (r = !!t && t.indexOf("s") > -1)) {
+        t = t.replace(/s/g, "");
+      }
+      n = t;
+      if (j && "sticky" in S && (o = !!t && t.indexOf("y") > -1)) {
+        t = t.replace(/y/g, "");
+      }
+      if (E) {
+        e = (i = function (e) {
+          for (var t, n = e.length, r = 0, o = "", i = [], a = {}, s = !1, c = !1, l = 0, u = ""; r <= n; r++) {
+            if ("\\" === (t = e.charAt(r))) {
+              t += e.charAt(++r);
+            } else if ("]" === t) {
+              s = !1;
+            } else if (!s) {
+              switch (!0) {
+                case "[" === t:
+                  s = !0;
+                  break;
+                case "(" === t:
+                  if (T.test(e.slice(r + 1))) {
+                    r += 2;
+                    c = !0;
+                  }
+                  o += t;
+                  l++;
+                  continue;
+                case ">" === t && c:
+                  if ("" === u || g(a, u)) {
+                    throw new SyntaxError("Invalid capture group name");
+                  }
+                  a[u] = !0;
+                  i.push([u, l]);
+                  c = !1;
+                  u = "";
+                  continue;
               }
-              o += t;
-            } else {
-              o += "[\\s\\S]";
             }
-          } else {
-            o += t + e.charAt(++r);
+            if (c) {
+              u += t;
+            } else {
+              o += t;
+            }
           }
+          return [o, i];
+        }(e))[0];
+        v = i[1];
+      }
+      c = a(w(e, t), f ? this : C, R);
+      if (r || o || v.length) {
+        l = _(c);
+        if (r) {
+          l.dotAll = !0;
+          l.raw = R(function (e) {
+            for (var t, n = e.length, r = 0, o = "", i = !1; r <= n; r++) {
+              if ("\\" !== (t = e.charAt(r))) {
+                if (i || "." !== t) {
+                  if ("[" === t) {
+                    i = !0;
+                  } else {
+                    if ("]" === t) {
+                      i = !1;
+                    }
+                  }
+                  o += t;
+                } else {
+                  o += "[\\s\\S]";
+                }
+              } else {
+                o += t + e.charAt(++r);
+              }
+            }
+            return o;
+          }(e), n);
         }
-        return o;
-      }(e), n)), o && (l.sticky = !0), v.length && (l.groups = v)), e !== b) {
+        if (o) {
+          l.sticky = !0;
+        }
+        if (v.length) {
+          l.groups = v;
+        }
+      }
+      if (e !== b) {
         try {
           s(c, "source", "" === b ? "(?:)" : b);
         } catch (O) {}

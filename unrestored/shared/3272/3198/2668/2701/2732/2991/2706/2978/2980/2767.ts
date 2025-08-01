@@ -38,7 +38,10 @@ exports.default = function (e, t) {
         var y = i.key;
         var m = i.index;
         if ("string" === e.type) {
-          if ("string" === typeof n && (n = f(n)), !n || !p(n)) {
+          if ("string" === typeof n) {
+            n = f(n);
+          }
+          if (!n || !p(n)) {
             throw new Error("Expected string substitution");
           }
         } else if ("statement" === e.type) {
@@ -69,7 +72,10 @@ exports.default = function (e, t) {
             }
           }
         } else if ("param" === e.type) {
-          if ("string" === typeof n && (n = u(n)), void 0 === m) {
+          if ("string" === typeof n) {
+            n = u(n);
+          }
+          if (void 0 === m) {
             throw new Error("Assertion failure.");
           }
         } else if ("string" === typeof n && (n = u(n)), Array.isArray(n)) {

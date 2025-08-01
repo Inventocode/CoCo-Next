@@ -109,7 +109,8 @@ var g = function (t) {
       e = 32;
     }
     var r = t.call(this) || this;
-    if (r.count = 0, e < 0) {
+    r.count = 0;
+    if (e < 0) {
       throw new f.a("Negative initial size: " + e);
     }
     r.buf = new Uint8Array(e);
@@ -123,7 +124,10 @@ var g = function (t) {
   };
   e.prototype.grow = function (t) {
     var e = this.buf.length << 1;
-    if (e - t < 0 && (e = t), e < 0) {
+    if (e - t < 0) {
+      e = t;
+    }
+    if (e < 0) {
       if (t < 0) {
         throw new l();
       }

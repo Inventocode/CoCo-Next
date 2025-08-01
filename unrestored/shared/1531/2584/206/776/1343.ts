@@ -53,7 +53,10 @@ var c = function () {
     value: function (e, t) {
       if (null !== (n = e) && "object" === typeof n && "string" === typeof n.type) {
         var n;
-        if (this._current = e, this._skipped = !1, this._enter(e, t), !this._skipped && !this._broken) {
+        this._current = e;
+        this._skipped = !1;
+        this._enter(e, t);
+        if (!this._skipped && !this._broken) {
           var r = function (e, t) {
             var n = e[t.type];
             if (!n) {

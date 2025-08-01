@@ -7,7 +7,15 @@ var a = require("./109");
 var u = require("./63");
 var s = function () {
   function t(t, e, r, n) {
-    if (this.width = t, this.height = e, this.rowSize = r, this.bits = n, void 0 !== e && null !== e || (e = t), this.height = e, t < 1 || e < 1) {
+    this.width = t;
+    this.height = e;
+    this.rowSize = r;
+    this.bits = n;
+    if (!(void 0 !== e && null !== e)) {
+      e = t;
+    }
+    this.height = e;
+    if (t < 1 || e < 1) {
       throw new u.a("Both dimensions must be greater than 0");
     }
     if (!(void 0 !== r && null !== r)) {
@@ -150,7 +158,13 @@ var s = function () {
       for (var c = 0; c < r; c++) {
         var f = n[s * r + c];
         if (0 !== f) {
-          if (s < i && (i = s), s > u && (u = s), 32 * c < o) {
+          if (s < i) {
+            i = s;
+          }
+          if (s > u) {
+            u = s;
+          }
+          if (32 * c < o) {
             for (var h = 0; 0 === (f << 31 - h & 4294967295);) {
               h++;
             }

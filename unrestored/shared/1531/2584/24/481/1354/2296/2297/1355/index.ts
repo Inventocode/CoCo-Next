@@ -15,7 +15,9 @@ exports.polling = function (e) {
     t = e.hostname !== location.hostname || c !== e.port;
     n = e.secure !== s;
   }
-  if (e.xdomain = t, e.xscheme = n, "open" in new r(e) && !e.forceJSONP) {
+  e.xdomain = t;
+  e.xscheme = n;
+  if ("open" in new r(e) && !e.forceJSONP) {
     return new i(e);
   }
   if (!a) {

@@ -11,7 +11,7 @@ export { tt as h };
 export { at as i };
 var r = require("../../../29");
 var i = require("../../../0/index");
-var o = (module => {
+var o = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -22,7 +22,7 @@ var o = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(i);
+}(i);
 require("../../../50/index");
 var a = require("../../../548/280");
 var s = require("../100");
@@ -1776,7 +1776,10 @@ var Ee = i.forwardRef(function (e, t) {
   var ue = function (e) {
     return function (t) {
       var n;
-      if (b || se(!1, t), b) {
+      if (!b) {
+        se(!1, t);
+      }
+      if (b) {
         n = Array.isArray(G) ? G.slice() : [];
         var r = G.indexOf(e.props.value);
         if (-1 === r) {

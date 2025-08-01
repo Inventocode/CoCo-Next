@@ -2,7 +2,7 @@
 
 var r = require("../0/index");
 var i = require("../75/index");
-var o = (module => {
+var o = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -13,7 +13,7 @@ var o = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(i);
+}(i);
 var a = require("./378");
 var s = Object(r.forwardRef)(function (e, t) {
   var n = e.didUpdate;

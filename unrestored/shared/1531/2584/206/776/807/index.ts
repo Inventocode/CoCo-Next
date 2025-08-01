@@ -4,7 +4,8 @@
     return "object" === typeof console && console.log && (e = console).log.apply(e, arguments);
   };
   exports.formatArgs = function (t) {
-    if (t[0] = (this.useColors ? "%c" : "") + this.namespace + (this.useColors ? " %c" : " ") + t[0] + (this.useColors ? "%c " : " ") + "+" + module.exports.humanize(this.diff), !this.useColors) {
+    t[0] = (this.useColors ? "%c" : "") + this.namespace + (this.useColors ? " %c" : " ") + t[0] + (this.useColors ? "%c " : " ") + "+" + module.exports.humanize(this.diff);
+    if (!this.useColors) {
       return;
     }
     var n = "color: " + this.color;

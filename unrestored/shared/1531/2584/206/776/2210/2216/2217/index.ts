@@ -259,7 +259,10 @@ function g(e) {
         error: x
       };
     } else {
-      if (void 0 === t && (t = console), !("object" == typeof t && t.log && t.warn && t.error)) {
+      if (void 0 === t) {
+        t = console;
+      }
+      if (!("object" == typeof t && t.log && t.warn && t.error)) {
         throw new Error("logger must implement log, warn and error methods");
       }
       e.logger = t;

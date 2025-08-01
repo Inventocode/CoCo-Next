@@ -9,7 +9,7 @@ var s = require("../322");
 var c = require("../273");
 var l = require("../29");
 var u = require("../232/index");
-var d = (module => {
+var d = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -20,9 +20,9 @@ var d = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(u);
+}(u);
 var p = require("../0/index");
-var f = (module => {
+var f = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -33,7 +33,7 @@ var f = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(p);
+}(p);
 require("./1513");
 var h = {
   "./style_module.css": {

@@ -73,7 +73,10 @@ var a = function (e) {
   };
   t.prototype.get_layered_value_descendants = function (e, t) {
     var n;
-    if (void 0 === t && (t = !0), !e.output_connection) {
+    if (void 0 === t) {
+      t = !0;
+    }
+    if (!e.output_connection) {
       return [];
     }
     for (var r = [], o = 0; o < e.inputList.length; o++) {

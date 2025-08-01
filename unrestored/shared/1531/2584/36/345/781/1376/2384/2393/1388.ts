@@ -79,7 +79,14 @@ module.exports = {
       return e;
     }
     var s = e;
-    if ("symbol" === typeof e ? s = Symbol.prototype.toString.call(e) : "string" !== typeof e && (s = String(e)), "iso-8859-1" === n) {
+    if ("symbol" === typeof e) {
+      s = Symbol.prototype.toString.call(e);
+    } else {
+      if ("string" !== typeof e) {
+        s = String(e);
+      }
+    }
+    if ("iso-8859-1" === n) {
       return escape(s).replace(/%u[0-9a-f]{4}/gi, function (e) {
         return "%26%23" + parseInt(e.slice(2), 16) + "%3B";
       });

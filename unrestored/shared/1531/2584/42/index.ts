@@ -9,7 +9,7 @@ export { C as d };
 export { T as e };
 var r = require("../6");
 var o = require("../0/index");
-var i = (module => {
+var i = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -20,9 +20,9 @@ var i = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(o);
+}(o);
 var a = require("../8");
-var s = (module => {
+var s = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -33,7 +33,7 @@ var s = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(a);
+}(a);
 var c = require("../36/index");
 var l = require("../15/index");
 var u = require("../5");
@@ -180,7 +180,14 @@ function T(e, t, n, o) {
     return null;
   }
   var d = c;
-  if (d.attributes.disabled && s.type === u.H && (["titleSlot"].includes(t) ? s.attributes.color = "#7C7C7C" : s.attributes.color = "#CACACA"), void 0 === n) {
+  if (d.attributes.disabled && s.type === u.H) {
+    if (["titleSlot"].includes(t)) {
+      s.attributes.color = "#7C7C7C";
+    } else {
+      s.attributes.color = "#CACACA";
+    }
+  }
+  if (void 0 === n) {
     return O({
       widget: s,
       forceRender: !0

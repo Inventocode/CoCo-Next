@@ -12,7 +12,7 @@ var a = require("../80/index");
 var s = require("../33/index");
 var c = require("../54");
 var l = require("../0/index");
-var u = (module => {
+var u = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -23,9 +23,9 @@ var u = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(l);
+}(l);
 var d = require("../8");
-var p = (module => {
+var p = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -36,9 +36,9 @@ var p = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(d);
+}(d);
 var f = require("./1019");
-var h = (module => {
+var h = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -49,7 +49,7 @@ var h = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(f);
+}(f);
 function m(e, t) {
   var n = t || {};
   var r = n.defaultValue;
@@ -499,7 +499,10 @@ var X = function (e) {
       }
     },
     onKeyDown: function (e) {
-      if (null === b || void 0 === b || b(e), e.which === S.ENTER) {
+      if (!(null === b || void 0 === b)) {
+        b(e);
+      }
+      if (e.which === S.ENTER) {
         var t = H(e);
         if (!(null === v || void 0 === v)) {
           v(x(t));
@@ -603,7 +606,7 @@ ne.displayName = "SubMenuList";
 var re = ne;
 var oe = require("../103");
 var ie = require("../75/index");
-var ae = (module => {
+var ae = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -614,7 +617,7 @@ var ae = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(ie);
+}(ie);
 var se = function (e) {
   return +setTimeout(e, 16);
 };
@@ -1018,7 +1021,8 @@ function Be(e, t, n, r) {
     k(t);
     var n;
     var r = U.current;
-    if (U.current = !0, e) {
+    U.current = !0;
+    if (e) {
       if (!r && t && d) {
         n = "appear";
       }
@@ -1370,7 +1374,7 @@ function Ke(e) {
 }
 var qe = require("./555/index");
 var Xe = require("../110");
-var Qe = (module => {
+var Qe = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -1381,7 +1385,7 @@ var Qe = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(Xe);
+}(Xe);
 var Ze = require("../171");
 var Je = ["measure", "align", null, "motion"];
 var $e = l.forwardRef(function (e, t) {
@@ -1801,9 +1805,21 @@ var dt = function (e) {
         }
       };
       t.onClick = function (e) {
-        if (t.fireEvents("onClick", e), t.focusTime) {
+        t.fireEvents("onClick", e);
+        if (t.focusTime) {
           var n;
-          if (t.preClickTime && t.preTouchTime ? n = Math.min(t.preClickTime, t.preTouchTime) : t.preClickTime ? n = t.preClickTime : t.preTouchTime && (n = t.preTouchTime), Math.abs(n - t.focusTime) < 20) {
+          if (t.preClickTime && t.preTouchTime) {
+            n = Math.min(t.preClickTime, t.preTouchTime);
+          } else {
+            if (t.preClickTime) {
+              n = t.preClickTime;
+            } else {
+              if (t.preTouchTime) {
+                n = t.preTouchTime;
+              }
+            }
+          }
+          if (Math.abs(n - t.focusTime) < 20) {
             return;
           }
           t.focusTime = 0;
@@ -1820,9 +1836,12 @@ var dt = function (e) {
       };
       t.onPopupMouseDown = function () {
         var e;
-        if (t.hasPopupMouseDown = !0, clearTimeout(t.mouseDownTimeout), t.mouseDownTimeout = window.setTimeout(function () {
+        t.hasPopupMouseDown = !0;
+        clearTimeout(t.mouseDownTimeout);
+        t.mouseDownTimeout = window.setTimeout(function () {
           t.hasPopupMouseDown = !1;
-        }, 0), t.context) {
+        }, 0);
+        if (t.context) {
           (e = t.context).onPopupMouseDown.apply(e, arguments);
         }
       };
@@ -2070,7 +2089,8 @@ var dt = function (e) {
       value: function (e, t, n) {
         var r = this;
         var o = 1e3 * t;
-        if (this.clearDelayTimer(), o) {
+        this.clearDelayTimer();
+        if (o) {
           var i = n ? {
             pageX: n.pageX,
             pageY: n.pageY
@@ -2613,7 +2633,10 @@ var Et = function (e) {
     className: "".concat(ee, "-arrow")
   })));
   var we = l.useRef(P);
-  if ("inline" !== P && (we.current = J.length > 1 ? "vertical" : P), !W) {
+  if ("inline" !== P) {
+    we.current = J.length > 1 ? "vertical" : P;
+  }
+  if (!W) {
     var Ce = we.current;
     Oe = l.createElement(_t, {
       mode: Ce,

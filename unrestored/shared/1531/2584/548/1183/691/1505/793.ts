@@ -1,7 +1,7 @@
 "use strict";
 
 var r = require("../../../../0/index");
-var i = (module => {
+var i = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -12,7 +12,7 @@ var i = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(r);
+}(r);
 var _a;
 _a = i.a.createContext(null);
 export { _a as a };

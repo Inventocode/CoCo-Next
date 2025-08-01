@@ -46,7 +46,8 @@ var d = function () {
     var y = h.a.truncDivision(g.getSize() * r, 100) + 11;
     var w = g.getSize() + y;
     if (n !== t.DEFAULT_AZTEC_LAYERS) {
-      if (s = (n < 0), (c = Math.abs(n)) > (s ? t.MAX_NB_BITS_COMPACT : t.MAX_NB_BITS)) {
+      s = n < 0;
+      if ((c = Math.abs(n)) > (s ? t.MAX_NB_BITS_COMPACT : t.MAX_NB_BITS)) {
         throw new o.a(i.a.format("Illegal value %s for layers", n));
       }
       var v = (l = t.totalBitsInLayer(c, s)) - l % (d = t.WORD_SIZE[c]);
@@ -63,7 +64,8 @@ var d = function () {
         if (_ > t.MAX_NB_BITS) {
           throw new o.a("Data too large for an Aztec code");
         }
-        if (c = (s = _ <= 3) ? _ + 1 : _, !(w > (l = t.totalBitsInLayer(c, s)))) {
+        c = (s = _ <= 3) ? _ + 1 : _;
+        if (!(w > (l = t.totalBitsInLayer(c, s)))) {
           if (!(null != p && d === t.WORD_SIZE[c])) {
             d = t.WORD_SIZE[c];
             p = t.stuffBits(g, d);
@@ -117,7 +119,8 @@ var d = function () {
       }
       N += 8 * D;
     }
-    if (t.drawModeMessage(R, s, m, C), s) {
+    t.drawModeMessage(R, s, m, C);
+    if (s) {
       t.drawBullsEye(R, h.a.truncDivision(m, 2), 5);
     } else {
       t.drawBullsEye(R, h.a.truncDivision(m, 2), 7);

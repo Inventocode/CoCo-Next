@@ -198,7 +198,9 @@ function M(e) {
   }
 }
 function j(e) {
-  if (N = !1, M(e), !P) {
+  N = !1;
+  M(e);
+  if (!P) {
     if (null !== O(T)) {
       P = !0;
       r(L);

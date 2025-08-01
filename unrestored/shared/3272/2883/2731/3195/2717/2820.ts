@@ -13,7 +13,8 @@ exports.default = function (e, t, n) {
   for (a = e; (0, r.isMemberExpression)(a); a = a.object) {
     o.push(a.property);
   }
-  if (o.push(a), o.length < i.length) {
+  o.push(a);
+  if (o.length < i.length) {
     return !1;
   }
   if (!n && o.length > i.length) {

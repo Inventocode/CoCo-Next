@@ -88,7 +88,10 @@ function p(e, t, n, r) {
 }
 function f(e, t, n, r) {
   var o = "await ".concat(e, "(");
-  if (t && (o += "async function(".concat(c(r), ") {\n").concat(t, "}")), n) {
+  if (t) {
+    o += "async function(".concat(c(r), ") {\n").concat(t, "}");
+  }
+  if (n) {
     o += "".concat(t ? ", " : "").concat(c(n));
   }
   return o + ");\n";
@@ -139,13 +142,30 @@ function T(e, t, n, r) {
     var i = this.rendered;
     this.rendered = !1;
     var a = t();
-    if (i && (this.inputList.forEach(function (e) {
-      return e.init();
-    }), this.render(!0)), this.rendered && (this.cacheId[e] = this.cacheId[e] || o.Blink.utils.gen_uid()), this.cacheId[e]) {
+    if (i) {
+      this.inputList.forEach(function (e) {
+        return e.init();
+      });
+      this.render(!0);
+    }
+    if (this.rendered) {
+      this.cacheId[e] = this.cacheId[e] || o.Blink.utils.gen_uid();
+    }
+    if (this.cacheId[e]) {
       var s;
       var c;
       var l = o.Blink.utils.string_to_dom(n);
-      if (l.setAttribute("id", this.cacheId[e]), void 0 !== r && l.firstElementChild && (l.firstElementChild.textContent = r), null === (s = a.connection) || void 0 === s || s.set_shadow_dom(l), null === (c = a.connection) || void 0 === c || c.respawn_shadow(), o.Blink.events.is_enabled()) {
+      l.setAttribute("id", this.cacheId[e]);
+      if (void 0 !== r && l.firstElementChild) {
+        l.firstElementChild.textContent = r;
+      }
+      if (!(null === (s = a.connection) || void 0 === s)) {
+        s.set_shadow_dom(l);
+      }
+      if (!(null === (c = a.connection) || void 0 === c)) {
+        c.respawn_shadow();
+      }
+      if (o.Blink.events.is_enabled()) {
         var u = C("mutation", {
           block: this,
           old_value: void 0,
@@ -174,9 +194,15 @@ function S(e, t, n) {
       a = (null === u || void 0 === u || null === (l = u.querySelector('field[name="'.concat(t, '"]'))) || void 0 === l ? void 0 : l.textContent) || "1";
     }
     var d = this.rendered;
-    if (this.rendered = !1, n(), d && (this.inputList.forEach(function (e) {
-      return e.init();
-    }), this.render(!0)), o.Blink.events.is_enabled()) {
+    this.rendered = !1;
+    n();
+    if (d) {
+      this.inputList.forEach(function (e) {
+        return e.init();
+      });
+      this.render(!0);
+    }
+    if (o.Blink.events.is_enabled()) {
       var p = C("mutation", {
         block: this,
         old_value: a,

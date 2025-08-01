@@ -150,7 +150,10 @@
       });
       return t;
     }(a);
-    if (e.showHidden && (a = Object.getOwnPropertyNames(n)), w(n) && (a.indexOf("message") >= 0 || a.indexOf("description") >= 0)) {
+    if (e.showHidden) {
+      a = Object.getOwnPropertyNames(n);
+    }
+    if (w(n) && (a.indexOf("message") >= 0 || a.indexOf("description") >= 0)) {
       return f(n);
     }
     if (0 === a.length) {
@@ -172,7 +175,11 @@
     var y = "";
     var x = !1;
     var C = ["{", "}"];
-    if (h(n) && (x = !0, C = ["[", "]"]), E(n)) {
+    if (h(n)) {
+      x = !0;
+      C = ["[", "]"];
+    }
+    if (E(n)) {
       y = " [Function" + (n.name ? ": " + n.name : "") + "]";
     }
     if (m(n)) {
@@ -221,11 +228,30 @@
     var c;
     if ((c = Object.getOwnPropertyDescriptor(t, i) || {
       value: t[i]
-    }).get ? s = c.set ? e.stylize("[Getter/Setter]", "special") : e.stylize("[Getter]", "special") : c.set && (s = e.stylize("[Setter]", "special")), S(r, i) || (a = "[" + i + "]"), s || (e.seen.indexOf(c.value) < 0 ? (s = _(n) ? l(e, c.value, null) : l(e, c.value, n - 1)).indexOf("\n") > -1 && (s = o ? s.split("\n").map(function (e) {
-      return "  " + e;
-    }).join("\n").substr(2) : "\n" + s.split("\n").map(function (e) {
-      return "   " + e;
-    }).join("\n")) : s = e.stylize("[Circular]", "special")), v(a)) {
+    }).get) {
+      s = c.set ? e.stylize("[Getter/Setter]", "special") : e.stylize("[Getter]", "special");
+    } else {
+      if (c.set) {
+        s = e.stylize("[Setter]", "special");
+      }
+    }
+    if (!S(r, i)) {
+      a = "[" + i + "]";
+    }
+    if (!s) {
+      if (e.seen.indexOf(c.value) < 0) {
+        if ((s = _(n) ? l(e, c.value, null) : l(e, c.value, n - 1)).indexOf("\n") > -1) {
+          s = o ? s.split("\n").map(function (e) {
+            return "  " + e;
+          }).join("\n").substr(2) : "\n" + s.split("\n").map(function (e) {
+            return "   " + e;
+          }).join("\n");
+        }
+      } else {
+        s = e.stylize("[Circular]", "special");
+      }
+    }
+    if (v(a)) {
       if (o && i.match(/^\d+$/)) {
         return s;
       }
@@ -279,13 +305,17 @@
     return e < 10 ? "0" + e.toString(10) : e.toString(10);
   }
   exports.debuglog = function (n) {
-    if (v(o) && (o = Object({
-      NODE_ENV: "production",
-      PUBLIC_URL: "",
-      WDS_SOCKET_HOST: void 0,
-      WDS_SOCKET_PATH: void 0,
-      WDS_SOCKET_PORT: void 0
-    }).NODE_DEBUG || ""), n = n.toUpperCase(), !a[n]) {
+    if (v(o)) {
+      o = Object({
+        NODE_ENV: "production",
+        PUBLIC_URL: "",
+        WDS_SOCKET_HOST: void 0,
+        WDS_SOCKET_PATH: void 0,
+        WDS_SOCKET_PORT: void 0
+      }).NODE_DEBUG || "";
+    }
+    n = n.toUpperCase();
+    if (!a[n]) {
       if (new RegExp("\\b" + n + "\\b", "i").test(o)) {
         var r = e.pid;
         a[n] = function () {

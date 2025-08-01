@@ -128,7 +128,10 @@
       var l = {};
       function u(e, t) {
         var n;
-        if (void 0 === t && (t = i.ANY), "string" === typeof e) {
+        if (void 0 === t) {
+          t = i.ANY;
+        }
+        if ("string" === typeof e) {
           n = l[e] || a[e];
         } else if (e instanceof Text || e.nodeType === Node.TEXT_NODE) {
           n = l.text;
@@ -195,7 +198,8 @@
         if ("abstract" === r.blotName) {
           throw new o("Cannot register abstract class");
         }
-        if (l[r.blotName || r.attrName] = r, "string" === typeof r.keyName) {
+        l[r.blotName || r.attrName] = r;
+        if ("string" === typeof r.keyName) {
           a[r.keyName] = r;
         } else if (null != r.className && (s[r.className] = r), null != r.tagName) {
           if (Array.isArray(r.tagName)) {
@@ -255,7 +259,8 @@
       c.prototype.push = function (e) {
         var t = this.ops.length;
         var n = this.ops[t - 1];
-        if (e = i(!0, {}, e), "object" === typeof n) {
+        e = i(!0, {}, e);
+        if ("object" === typeof n) {
           if ("number" === typeof e.delete && "number" === typeof n.delete) {
             this.ops[t - 1] = {
               delete: n.delete + e.delete
@@ -379,7 +384,11 @@
                 f.insert = d.insert;
               }
               var h = a.attributes.compose(d.attributes, p.attributes, "number" === typeof d.retain);
-              if (h && (f.attributes = h), l.push(f), !n.hasNext() && o(l.ops[l.ops.length - 1], f)) {
+              if (h) {
+                f.attributes = h;
+              }
+              l.push(f);
+              if (!n.hasNext() && o(l.ops[l.ops.length - 1], f)) {
                 var m = new c(t.rest());
                 return l.concat(m).chop();
               }
@@ -468,7 +477,8 @@
         }
       };
       c.prototype.transform = function (e, t) {
-        if (t = !!t, "number" === typeof e) {
+        t = !!t;
+        if ("number" === typeof e) {
           return this.transformPosition(e, t);
         }
         for (var n = a.iterator(this.ops), r = a.iterator(e.ops), o = new c(); n.hasNext() || r.hasNext();) {
@@ -965,7 +975,10 @@
         function e(t) {
           var n = this;
           var r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-          if (v(this, e), this.options = E(t, r), this.container = this.options.container, null == this.container) {
+          v(this, e);
+          this.options = E(t, r);
+          this.container = this.options.container;
+          if (null == this.container) {
             return b.error("Invalid Quill container", t);
           }
           if (this.options.debug) {
@@ -1396,7 +1409,8 @@
             history: !0
           }
         }, t)).theme && t.theme !== y.DEFAULTS.theme) {
-          if (t.theme = y.import("themes/" + t.theme), null == t.theme) {
+          t.theme = y.import("themes/" + t.theme);
+          if (null == t.theme) {
             throw new Error("Invalid theme " + t.theme + ". Did you register it?");
           }
         } else {
@@ -1448,7 +1462,20 @@
         var o = null == n ? null : this.getSelection();
         var i = this.editor.delta;
         var s = e();
-        if (null != o && (!0 === n && (n = o.index), null == r ? o = C(o, s, t) : 0 !== r && (o = C(o, n, r, t)), this.setSelection(o, c.default.sources.SILENT)), s.length() > 0) {
+        if (null != o) {
+          if (!0 === n) {
+            n = o.index;
+          }
+          if (null == r) {
+            o = C(o, s, t);
+          } else {
+            if (0 !== r) {
+              o = C(o, n, r, t);
+            }
+          }
+          this.setSelection(o, c.default.sources.SILENT);
+        }
+        if (s.length() > 0) {
           var l;
           var u;
           var d = [c.default.events.TEXT_CHANGE, s, i, t];
@@ -1640,7 +1667,8 @@
         }, {
           key: "optimize",
           value: function (e) {
-            if (o(t.prototype.__proto__ || Object.getPrototypeOf(t.prototype), "optimize", this).call(this, e), this.parent instanceof t && t.compare(this.statics.blotName, this.parent.statics.blotName) > 0) {
+            o(t.prototype.__proto__ || Object.getPrototypeOf(t.prototype), "optimize", this).call(this, e);
+            if (this.parent instanceof t && t.compare(this.statics.blotName, this.parent.statics.blotName) > 0) {
               var n = this.parent.isolate(this.offset(), this.length());
               this.moveChildren(n);
               n.wrap(this);
@@ -1950,7 +1978,8 @@
             }
           }
           for (l = d.length - 1; l >= 0; l--) {
-            if (u = d[l], !a(e[u], t[u], n)) {
+            u = d[l];
+            if (!a(e[u], t[u], n)) {
               return !1;
             }
           }
@@ -2371,7 +2400,15 @@
                     image: t.attributes.image
                   }, n);
                 }
-                if (null == t.attributes || !0 !== t.attributes.list && !0 !== t.attributes.bullet || ((t = (0, h.default)(t)).attributes.list ? t.attributes.list = "ordered" : (t.attributes.list = "bullet", delete t.attributes.bullet)), "string" === typeof t.insert) {
+                if (!(null == t.attributes || !0 !== t.attributes.list && !0 !== t.attributes.bullet)) {
+                  if ((t = (0, h.default)(t)).attributes.list) {
+                    t.attributes.list = "ordered";
+                  } else {
+                    t.attributes.list = "bullet";
+                    delete t.attributes.bullet;
+                  }
+                }
+                if ("string" === typeof t.insert) {
                   var r = t.insert.replace(/\r\n/g, "\n").replace(/\r/g, "\n");
                   return e.insert(r, t.attributes);
                 }
@@ -2776,7 +2813,8 @@
               e.composing = !0;
             });
             this.root.addEventListener("compositionend", function () {
-              if (e.composing = !1, e.cursor.parent) {
+              e.composing = !1;
+              if (e.cursor.parent) {
                 var t = e.cursor.restore();
                 if (!t) {
                   return;
@@ -2858,7 +2896,9 @@
               d.setStart(o, c);
               var p = this.scroll.leaf(e + t);
               var f = r(p, 2);
-              if (s = f[0], c = f[1], null == s) {
+              s = f[0];
+              c = f[1];
+              if (null == s) {
                 return null;
               }
               var h = s.position(c, !0);
@@ -3034,7 +3074,8 @@
             var n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : e;
             var r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : t;
             var o = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-            if (p.info("setNativeRange", e, t, n, r), null == e || null != this.root.parentNode && null != e.parentNode && null != n.parentNode) {
+            p.info("setNativeRange", e, t, n, r);
+            if (null == e || null != this.root.parentNode && null != e.parentNode && null != n.parentNode) {
               var i = document.getSelection();
               if (null != i) {
                 if (null != e) {
@@ -3070,7 +3111,12 @@
           value: function (e) {
             var t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
             var n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : c.default.sources.API;
-            if ("string" === typeof t && (n = t, t = !1), p.info("setRange", e), null != e) {
+            if ("string" === typeof t) {
+              n = t;
+              t = !1;
+            }
+            p.info("setRange", e);
+            if (null != e) {
               var r = this.rangeToNative(e);
               this.setNativeRange.apply(this, u(r).concat([t]));
             } else {
@@ -3087,7 +3133,11 @@
             var o = r(n, 2);
             var i = o[0];
             var l = o[1];
-            if (this.lastRange = i, null != this.lastRange && (this.savedRange = this.lastRange), !(0, s.default)(t, this.lastRange)) {
+            this.lastRange = i;
+            if (null != this.lastRange) {
+              this.savedRange = this.lastRange;
+            }
+            if (!(0, s.default)(t, this.lastRange)) {
               var u;
               if (!this.composing && null != l && l.native.collapsed && l.start.node !== this.cursor.textNode) {
                 this.cursor.restore();
@@ -3359,7 +3409,8 @@
           });
         };
         t.prototype.optimize = function (t) {
-          if (e.prototype.optimize.call(this, t), 0 === this.children.length) {
+          e.prototype.optimize.call(this, t);
+          if (0 === this.children.length) {
             if (null != this.statics.defaultChild) {
               var n = a.create(this.statics.defaultChild);
               this.appendChild(n);
@@ -3389,7 +3440,10 @@
           e.prototype.replace.call(this, n);
         };
         t.prototype.split = function (e, t) {
-          if (void 0 === t && (t = !1), !t) {
+          if (void 0 === t) {
+            t = !1;
+          }
+          if (!t) {
             if (0 === e) {
               return this;
             }
@@ -3682,7 +3736,14 @@
         if (t) {
           var n = this.offset;
           var r = i.length(t);
-          if (e >= r - n ? (e = r - n, this.index += 1, this.offset = 0) : this.offset += e, "number" === typeof t.delete) {
+          if (e >= r - n) {
+            e = r - n;
+            this.index += 1;
+            this.offset = 0;
+          } else {
+            this.offset += e;
+          }
+          if ("number" === typeof t.delete) {
             return {
               delete: e
             };
@@ -4073,7 +4134,8 @@
             var l = a[1];
             var p = this.line(e + n);
             var f = r(p, 1)[0];
-            if (i(t.prototype.__proto__ || Object.getPrototypeOf(t.prototype), "deleteAt", this).call(this, e, n), null != f && s !== f && l > 0) {
+            i(t.prototype.__proto__ || Object.getPrototypeOf(t.prototype), "deleteAt", this).call(this, e, n);
+            if (null != f && s !== f && l > 0) {
               if (s instanceof c.BlockEmbed || f instanceof c.BlockEmbed) {
                 return void this.optimize();
               }
@@ -4677,7 +4739,10 @@
             key: e
           });
         }
-        if ("object" === ("undefined" === typeof e ? "undefined" : r(e)) && (e = (0, a.default)(e, !1)), "string" === typeof e.key) {
+        if ("object" === ("undefined" === typeof e ? "undefined" : r(e))) {
+          e = (0, a.default)(e, !1);
+        }
+        if ("string" === typeof e.key) {
           if (null != b.keys[e.key.toUpperCase()]) {
             e.key = b.keys[e.key.toUpperCase()];
           } else {
@@ -5091,7 +5156,8 @@
                   this.domNode.appendChild(this.textNode);
                 }
               }
-              if (this.remove(), null != i) {
+              this.remove();
+              if (null != i) {
                 var d = [i, c].map(function (e) {
                   return Math.max(0, Math.min(o.data.length, e - 1));
                 });
@@ -7558,7 +7624,10 @@
           return [this.domNode, e];
         };
         t.prototype.split = function (e, t) {
-          if (void 0 === t && (t = !1), !t) {
+          if (void 0 === t) {
+            t = !1;
+          }
+          if (!t) {
             if (0 === e) {
               return this;
             }
@@ -7591,7 +7660,8 @@
       "use strict";
 
       var r = document.createElement("div");
-      if (r.classList.toggle("test-class", !1), r.classList.contains("test-class")) {
+      r.classList.toggle("test-class", !1);
+      if (r.classList.contains("test-class")) {
         var o = DOMTokenList.prototype.toggle;
         DOMTokenList.prototype.toggle = function (e, t) {
           return arguments.length > 1 && !this.contains(e) === !t ? t : o.call(this, e);
@@ -7624,7 +7694,8 @@
               throw new TypeError("predicate must be a function");
             }
             for (var t, n = Object(this), r = n.length >>> 0, o = arguments[1], i = 0; i < r; i++) {
-              if (t = n[i], e.call(o, t, i, n)) {
+              t = n[i];
+              if (e.call(o, t, i, n)) {
                 return t;
               }
             }
@@ -7736,7 +7807,8 @@
                   T++;
                   y++;
                 }
-                if (c[b] = T, T > n) {
+                c[b] = T;
+                if (T > n) {
                   h += 2;
                 } else if (y > o) {
                   f += 2;
@@ -7752,13 +7824,15 @@
                   E++;
                   C++;
                 }
-                if (l[w] = E, E > n) {
+                l[w] = E;
+                if (E > n) {
                   g += 2;
                 } else if (C > o) {
                   m += 2;
                 } else if (!p && (b = a + d - O) >= 0 && b < s && -1 != c[b]) {
                   var T = c[b];
-                  if (y = a + T - b, T >= (E = n - E)) {
+                  y = a + T - b;
+                  if (T >= (E = n - E)) {
                     return r(e, t, T, y);
                   }
                 }
@@ -8884,7 +8958,11 @@
               return 0 === e.indexOf("ql-");
             });
             if (n) {
-              if (n = n.slice("ql-".length), "BUTTON" === e.tagName && e.setAttribute("type", "button"), null == this.handlers[n]) {
+              n = n.slice("ql-".length);
+              if ("BUTTON" === e.tagName) {
+                e.setAttribute("type", "button");
+              }
+              if (null == this.handlers[n]) {
                 if (null != this.quill.scroll.whitelist && null == this.quill.scroll.whitelist[n]) {
                   return void p.warn("ignoring attaching to disabled format", n, e);
                 }
@@ -9361,7 +9439,15 @@
             var r = this.boundsContainer.getBoundingClientRect();
             var o = this.root.getBoundingClientRect();
             var i = 0;
-            if (o.right > r.right && (i = r.right - o.right, this.root.style.left = t + i + "px"), o.left < r.left && (i = r.left - o.left, this.root.style.left = t + i + "px"), o.bottom > r.bottom) {
+            if (o.right > r.right) {
+              i = r.right - o.right;
+              this.root.style.left = t + i + "px";
+            }
+            if (o.left < r.left) {
+              i = r.left - o.left;
+              this.root.style.left = t + i + "px";
+            }
+            if (o.bottom > r.bottom) {
               var a = o.bottom - o.top;
               var s = e.bottom - e.top + a;
               this.root.style.top = n - s + "px";
@@ -11257,7 +11343,8 @@
           value: function (e) {
             var n = r(t.prototype.__proto__ || Object.getPrototypeOf(t.prototype), "position", this).call(this, e);
             var o = this.root.querySelector(".ql-tooltip-arrow");
-            if (o.style.marginLeft = "", 0 === n) {
+            o.style.marginLeft = "";
+            if (0 === n) {
               return n;
             }
             o.style.marginLeft = -1 * n - o.offsetWidth / 2 + "px";

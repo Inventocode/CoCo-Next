@@ -115,7 +115,7 @@ function u(e) {
   return /^[\u4E00-\u9FA5A-Za-z][\u4E00-\u9FA5A-Za-z0-9_]*$/.test(e);
 }
 var d = require("../51/index");
-var p = (module => {
+var p = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -126,10 +126,10 @@ var p = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(d);
+}(d);
 var f = require("../31/index");
 var h = require("../13/225");
-var m = (module => {
+var m = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -140,7 +140,7 @@ var m = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(h);
+}(h);
 var g = "#B3B3B3";
 var _ = function (e) {
   return "#00000000" === e || "rgba(0,0,0,0)" === e || "transparent" === e;
@@ -253,7 +253,7 @@ function D(e) {
   return "".concat(t, ":").concat(n);
 }
 var M = require("../1/index");
-var L = (module => {
+var L = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -264,7 +264,7 @@ var L = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(M);
+}(M);
 var P = require("../7");
 var B = {};
 function F(e, t) {
@@ -293,7 +293,10 @@ function G() {
 function U(e, t, n) {
   var r = null;
   return n ? function () {
-    if (r && window.clearTimeout(r), !r) {
+    if (r) {
+      window.clearTimeout(r);
+    }
+    if (!r) {
       for (var n = arguments.length, o = new Array(n), i = 0; i < n; i++) {
         o[i] = arguments[i];
       }

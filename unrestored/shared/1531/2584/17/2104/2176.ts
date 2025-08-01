@@ -62,7 +62,10 @@ var l = function () {
     var _;
     var A = !!e.rtl;
     var g = e.horizontalLayout;
-    if (void 0 == g && (g = !1), "number" === typeof e.toolboxPosition) {
+    if (void 0 == g) {
+      g = !1;
+    }
+    if ("number" === typeof e.toolboxPosition) {
       f = e.toolboxPosition;
     } else {
       var v = "end" !== e.toolboxPosition;

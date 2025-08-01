@@ -26,7 +26,12 @@ var c = function () {
 }();
 var u = function () {
   function e(e) {
-    if (this.traceId = Object(i.c)(), this.spanId = Object(i.c)().substring(16), this.startTimestamp = Object(o.d)(), this.tags = {}, this.data = {}, !e) {
+    this.traceId = Object(i.c)();
+    this.spanId = Object(i.c)().substring(16);
+    this.startTimestamp = Object(o.d)();
+    this.tags = {};
+    this.data = {};
+    if (!e) {
       return this;
     }
     if (e.traceId) {

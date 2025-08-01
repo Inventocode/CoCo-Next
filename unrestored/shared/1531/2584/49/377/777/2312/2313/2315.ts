@@ -89,7 +89,8 @@ var u = function (e) {
   };
   t.prototype.interrupt_edit_field = function (e) {
     var t;
-    if (this.Blink.events.disable(), this.Blink.runtime_data.editing === e) {
+    this.Blink.events.disable();
+    if (this.Blink.runtime_data.editing === e) {
       var n = e.value_before_editing;
       if (void 0 !== n) {
         e.set_value(n);

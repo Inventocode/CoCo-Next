@@ -149,7 +149,12 @@ var f = function (e) {
         return "\xa0";
       }
       for (var t = "", n = 0, r = 0; r < e.length; r++) {
-        if (e.charCodeAt(r) > 127 ? n += 2 : n += 1, n > 14) {
+        if (e.charCodeAt(r) > 127) {
+          n += 2;
+        } else {
+          n += 1;
+        }
+        if (n > 14) {
           t += "\u2026";
           break;
         }

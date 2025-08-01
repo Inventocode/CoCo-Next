@@ -37,9 +37,15 @@ module.exports = function (e, t, n) {
   function F(e) {
     return "__proto__" !== e;
   }
-  if (r += "var " + f + " = errors;var " + p + " = true;", T && (r += " var " + m + " = undefined;"), S) {
-    if (r += T ? " " + m + " = " + m + " || Object.keys(" + l + "); for (var " + A + "=0; " + A + "<" + m + ".length; " + A + "++) { var " + _ + " = " + m + "[" + A + "]; " : " for (var " + _ + " in " + l + ") { ", x) {
-      if (r += " var isAdditional" + i + " = !(false ", y.length) {
+  r += "var " + f + " = errors;var " + p + " = true;";
+  if (T) {
+    r += " var " + m + " = undefined;";
+  }
+  if (S) {
+    r += T ? " " + m + " = " + m + " || Object.keys(" + l + "); for (var " + A + "=0; " + A + "<" + m + ".length; " + A + "++) { var " + _ + " = " + m + "[" + A + "]; " : " for (var " + _ + " in " + l + ") { ";
+    if (x) {
+      r += " var isAdditional" + i + " = !(false ";
+      if (y.length) {
         if (y.length > 8) {
           r += " || validate.schema" + s + ".hasOwnProperty(" + _ + ") ";
         } else {
@@ -68,7 +74,10 @@ module.exports = function (e, t, n) {
     } else {
       var U = e.errorPath;
       var H = "' + " + _ + " + '";
-      if (e.opts._errorDataPathProperty && (e.errorPath = e.util.getPathExpr(e.errorPath, _, e.opts.jsonPointers)), C) {
+      if (e.opts._errorDataPathProperty) {
+        e.errorPath = e.util.getPathExpr(e.errorPath, _, e.opts.jsonPointers);
+      }
+      if (C) {
         if (k) {
           r += " delete " + l + "[" + _ + "]; ";
         } else {
@@ -177,7 +186,8 @@ module.exports = function (e, t, n) {
           d.errorPath = e.util.getPath(e.errorPath, Y, e.opts.jsonPointers);
           d.dataPathArr[g] = e.util.toQuotedString(Y);
           W = e.validate(d);
-          if (d.baseId = B, e.util.varOccurences(W, v) < 2) {
+          d.baseId = B;
+          if (e.util.varOccurences(W, v) < 2) {
             W = e.util.varReplace(W, v, Q);
             var te = Q;
           } else {

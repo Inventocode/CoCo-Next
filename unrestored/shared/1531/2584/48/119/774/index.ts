@@ -206,7 +206,12 @@
           t = !0;
         }
         for (var r, i, o = 0, a = e.length, s = this.blocks; o < a;) {
-          if (this.hashed && (this.hashed = !1, s[0] = this.block, s[16] = s[1] = s[2] = s[3] = s[4] = s[5] = s[6] = s[7] = s[8] = s[9] = s[10] = s[11] = s[12] = s[13] = s[14] = s[15] = 0), t) {
+          if (this.hashed) {
+            this.hashed = !1;
+            s[0] = this.block;
+            s[16] = s[1] = s[2] = s[3] = s[4] = s[5] = s[6] = s[7] = s[8] = s[9] = s[10] = s[11] = s[12] = s[13] = s[14] = s[15] = 0;
+          }
+          if (t) {
             for (i = this.start; o < a && i < 64; ++o) {
               s[i >> 2] |= e[o] << SHIFT[3 & i++];
             }
@@ -386,7 +391,8 @@
     };
     HmacSha256.prototype = new Sha256();
     HmacSha256.prototype.finalize = function () {
-      if (Sha256.prototype.finalize.call(this), this.inner) {
+      Sha256.prototype.finalize.call(this);
+      if (this.inner) {
         this.inner = !1;
         var e = this.array();
         Sha256.call(this, this.is224, this.sharedMemory);

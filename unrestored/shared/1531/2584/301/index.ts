@@ -2708,18 +2708,25 @@ function _e(e, t) {
           m.set_value(t.utils.replace_message_references(s.icon));
         }
         var g = Object(le.i)(this.widgetType, c);
-        if (this.append_statement_input("DO", void 0, g), i ? (this.set_field_value(l, "EVENT"), i.forEach(function (t) {
-          var n = t.key;
-          var r = t.dropdown;
-          var o = "PARAM_".concat(n);
-          var i = new ue.a({
-            type: "field_coco_dropdown",
-            name: o,
-            custom: !0,
-            options: he(e.widgetType, r)
+        this.append_statement_input("DO", void 0, g);
+        if (i) {
+          this.set_field_value(l, "EVENT");
+          i.forEach(function (t) {
+            var n = t.key;
+            var r = t.dropdown;
+            var o = "PARAM_".concat(n);
+            var i = new ue.a({
+              type: "field_coco_dropdown",
+              name: o,
+              custom: !0,
+              options: he(e.widgetType, r)
+            });
+            e.append_dummy_input("", "DO").append_field(i, o);
           });
-          e.append_dummy_input("", "DO").append_field(i, o);
-        })) : this.set_field_value(l + t.Msg.WIDGET_EVENT_SUFFIX, "EVENT"), o.forEach(function (t) {
+        } else {
+          this.set_field_value(l + t.Msg.WIDGET_EVENT_SUFFIX, "EVENT");
+        }
+        o.forEach(function (t) {
           var n = t.key;
           var r = t.label;
           var o = t.dropdown;
@@ -2740,7 +2747,8 @@ function _e(e, t) {
           } else {
             e.append_shadow_input(i, '<shadow type="widget_event_param">\n              <field name="PARAM_NAME">'.concat(a, '</field>\n              <mutation widget_type="').concat(e.widgetType, '" event="').concat(e.event, '" param="').concat(n, '"></mutation>\n            </shadow>'), "DO");
           }
-        }), this.isAnyWidget) {
+        });
+        if (this.isAnyWidget) {
           var _ = le.a;
           var v = "PARAM_".concat(_);
           var b = le.b;
@@ -2859,7 +2867,8 @@ function _e(e, t) {
         var l = r.blockOptions;
         var u = void 0 === l ? {} : l;
         var d = Object(pe.a)(this.widgetType, a);
-        if (this.set_field_value(t.Msg.WIDGET_OF, "PROPERTY"), this.isAnyWidget) {
+        this.set_field_value(t.Msg.WIDGET_OF, "PROPERTY");
+        if (this.isAnyWidget) {
           var p;
           var f = Object(le.k)(this.widgetType);
           if (!(null === (p = this.get_input("WIDGET_ID_CONTAINER")) || void 0 === p)) {
@@ -2929,7 +2938,8 @@ function _e(e, t) {
             }
         }
         var _ = Object(le.g)(s);
-        if (this.set_output(!0, _), c) {
+        this.set_output(!0, _);
+        if (c) {
           var v = Object(pe.a)(this.widgetType, c);
           this.set_tooltip(v);
         }
@@ -3004,7 +3014,10 @@ function _e(e, t) {
           o = Object(le.p)(E);
           i = Object(le.n)(E);
         }
-        if ("__position" !== r.key && "__size" !== r.key || (y = !0), "__visible" !== r.key && "__disabled" !== r.key) {
+        if (!("__position" !== r.key && "__size" !== r.key)) {
+          y = !0;
+        }
+        if ("__visible" !== r.key && "__disabled" !== r.key) {
           if (!(null === (a = this.get_input("WIDGET_ID_CONTAINER")) || void 0 === a)) {
             a.insert_field_at(0, t.Msg.WIDGET_SET);
           }
@@ -3069,7 +3082,8 @@ function _e(e, t) {
                 var i;
                 var a = n.get_shadow_field("VALUE", r);
                 if (a) {
-                  if (a.set_value(String(t.defaultValue)), "number" === t.valueType) {
+                  a.set_value(String(t.defaultValue));
+                  if ("number" === t.valueType) {
                     if (t.validators) {
                       o = Object(le.p)(t.validators);
                       i = Object(le.n)(t.validators);
@@ -3224,7 +3238,11 @@ function _e(e, t) {
         var r = this.get_input("WIDGET_ID_CONTAINER");
         if (this.isAnyWidget) {
           var o = Object(le.k)(this.widgetType);
-          if (null === r || void 0 === r || r.append_field(o), this.append_shadow_input("WIDGET_ID", '<empty type="widget_any_id"></empty>'), "__setVisible" === n.key) {
+          if (!(null === r || void 0 === r)) {
+            r.append_field(o);
+          }
+          this.append_shadow_input("WIDGET_ID", '<empty type="widget_any_id"></empty>');
+          if ("__setVisible" === n.key) {
             var i = new ue.a({
               type: "field_coco_dropdown",
               name: "DISPLAY",
@@ -3283,14 +3301,20 @@ function _e(e, t) {
           });
           this.append_dummy_input("ICON_CONTAINER", "WIDGET_ID_CONTAINER").append_field(y);
         }
-        if (f.color && this.set_colour(f.color), h) {
+        if (f.color) {
+          this.set_colour(f.color);
+        }
+        if (h) {
           this.set_next_statement(!1);
           this.set_previous_statement(!1);
           var E = Object(le.g)(h);
           this.set_output(!0, E);
         }
         var w = Object(pe.a)(this.widgetType, l);
-        if (w && this.append_dummy_input().append_field(w, "METHOD"), d) {
+        if (w) {
+          this.append_dummy_input().append_field(w, "METHOD");
+        }
+        if (d) {
           var C = Object(pe.a)(this.widgetType, d);
           this.set_tooltip(C);
         }
@@ -3324,7 +3348,11 @@ function _e(e, t) {
             var h = fe(o, a);
             var g = e.append_shadow_input(d, h);
             var _ = Object(le.f)(o, i);
-            if (g.set_check(_), u && g.insert_field_at(0, u, "".concat(d, "_LABEL")), "number" === o && l) {
+            g.set_check(_);
+            if (u) {
+              g.insert_field_at(0, u, "".concat(d, "_LABEL"));
+            }
+            if ("number" === o && l) {
               var v = e.get_shadow_field(d);
               if (!(null === v || void 0 === v)) {
                 v.set_constraints(l.min, l.max, 1);
@@ -3629,7 +3657,7 @@ function ve(e) {
     var p = l.params;
     var f = l.valueType;
     var h = [];
-    if (p.forEach(function (o) {
+    p.forEach(function (o) {
       var i = o.key;
       var a = o.dropdown;
       var s = "PARAM_".concat(i);
@@ -3644,7 +3672,8 @@ function ve(e) {
       }
       u.push(c);
       h.push(c);
-    }), "__setVisible" === l.key) {
+    });
+    if ("__setVisible" === l.key) {
       var g = "show" === e.getFieldValue(r, "DISPLAY");
       return Object(_.l)(Object(_.n)("setWidgetVisible", [d, g]), r, e);
     }
@@ -4451,7 +4480,14 @@ var Ne = function (e) {
     value: function () {
       var e = this;
       if (this.field_group && this.source_block) {
-        if (this.arrow || (this.arrow = Object(je.draw_arrow)(this.source_block.workspace.options.dropdown.arrow_type), this.field_group.appendChild(this.arrow)), this.size_.width += this.source_block.workspace.options.dropdown.padding, this.arrow.setAttribute("transform", "translate(".concat(this.size_.width, ", ").concat(this.size_.height / 2 - 7, ")")), this.size_.width += this.source_block.workspace.options.dropdown.padding - 2, this.source_block.is_shadow()) {
+        if (!this.arrow) {
+          this.arrow = Object(je.draw_arrow)(this.source_block.workspace.options.dropdown.arrow_type);
+          this.field_group.appendChild(this.arrow);
+        }
+        this.size_.width += this.source_block.workspace.options.dropdown.padding;
+        this.arrow.setAttribute("transform", "translate(".concat(this.size_.width, ", ").concat(this.size_.height / 2 - 7, ")"));
+        this.size_.width += this.source_block.workspace.options.dropdown.padding - 2;
+        if (this.source_block.is_shadow()) {
           var t = function () {
             var t;
             var n = null === (t = e.source_block) || void 0 === t ? void 0 : t.get_parent();
@@ -4485,7 +4521,8 @@ var Ne = function (e) {
   }, {
     key: "on_html_input_change",
     value: function () {
-      if (Object(we.a)(Object(Ce.a)(n.prototype), "on_html_input_change", this).call(this), this.html_input) {
+      Object(we.a)(Object(Ce.a)(n.prototype), "on_html_input_change", this).call(this);
+      if (this.html_input) {
         var e;
         var t = (null === (e = this.workspace_) || void 0 === e ? void 0 : e.get_scale()) || 1;
         this.html_input.style.paddingLeft = "".concat((this.padding_x + this.text_margin) * t, "px");
@@ -4650,7 +4687,8 @@ Ie.FieldNumber.prototype.show_editor = function () {
 };
 var xe = Ie.FieldNumber.prototype.set_value;
 Ie.FieldNumber.prototype.set_value = function (e) {
-  if (xe.call(this, e), Object(O.c)().getSliderVisible()) {
+  xe.call(this, e);
+  if (Object(O.c)().getSliderVisible()) {
     if (!e || isNaN(Number(e))) {
       return;
     }

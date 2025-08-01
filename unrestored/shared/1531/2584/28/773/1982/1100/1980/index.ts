@@ -27,7 +27,21 @@ a.prototype.process = function (e) {
   return i(e, function (e, t, i, c, u) {
     var l = n[i];
     var f = !1;
-    if (!0 === l ? f = l : "function" === typeof l ? f = l(c) : l instanceof RegExp && (f = l.test(c)), !0 !== f && (f = !1), c = s(i, c)) {
+    if (!0 === l) {
+      f = l;
+    } else {
+      if ("function" === typeof l) {
+        f = l(c);
+      } else {
+        if (l instanceof RegExp) {
+          f = l.test(c);
+        }
+      }
+    }
+    if (!0 !== f) {
+      f = !1;
+    }
+    if (c = s(i, c)) {
       var d;
       var h = {
         position: t,

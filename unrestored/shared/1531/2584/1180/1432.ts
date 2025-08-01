@@ -35,7 +35,8 @@ exports.loop = function (e, t) {
   return function (n, r, o, i) {
     for (var a = [], s = n.pos; t(n, r, o);) {
       var c = {};
-      if (i(n, e, r, c), n.pos === s) {
+      i(n, e, r, c);
+      if (n.pos === s) {
         break;
       }
       s = n.pos;

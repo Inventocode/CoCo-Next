@@ -145,7 +145,8 @@ var u = function () {
     }
     var o = i.vec2.create();
     do {
-      if (i.vec2.add(o, o, this.utils.get_relative_xy(r)), this.use_drag_surface && (null === (t = this.workspace.get_block_drag_surface()) || void 0 === t ? void 0 : t.get_current_block()) == r) {
+      i.vec2.add(o, o, this.utils.get_relative_xy(r));
+      if (this.use_drag_surface && (null === (t = this.workspace.get_block_drag_surface()) || void 0 === t ? void 0 : t.get_current_block()) == r) {
         var a = this.workspace.get_block_drag_surface().get_surface_translation();
         i.vec2.add(o, o, [a[0], a[1]]);
       }

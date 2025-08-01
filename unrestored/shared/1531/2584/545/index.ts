@@ -2,7 +2,7 @@
 
 var r = require("../11");
 var o = require("../0/index");
-var i = (module => {
+var i = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -13,9 +13,9 @@ var i = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(o);
+}(o);
 var a = require("../51/index");
-var s = (module => {
+var s = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -26,9 +26,9 @@ var s = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(a);
+}(a);
 var c = require("../8");
-var l = (module => {
+var l = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -39,7 +39,7 @@ var l = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(c);
+}(c);
 var u = require("../5");
 var d = require("../90");
 var p = require("../131");
@@ -48,7 +48,7 @@ var h = require("../9");
 var m = require("../53");
 var g = require("../162");
 var _ = require("./201");
-var v = (module => {
+var v = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -59,7 +59,7 @@ var v = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(_);
+}(_);
 var _a;
 _a = function (e) {
   var t = e.id;
@@ -164,7 +164,10 @@ _a = function (e) {
     },
     onClick: function (t) {
       if (!C) {
-        if (b && b(!T), S === g.a.TEMPLATE) {
+        if (b) {
+          b(!T);
+        }
+        if (S === g.a.TEMPLATE) {
           var n;
           if (!(null === (n = N.current) || void 0 === n)) {
             n.classList.add(v.a.leftAnimation);

@@ -15,7 +15,9 @@ exports.arrowFunctionToExpression = function () {
     throw this.buildCodeFrameError("Cannot convert non-arrow function to a function expression.");
   }
   var l = w(this, o, n);
-  if (this.ensureBlock(), this.node.type = "FunctionExpression", !o) {
+  this.ensureBlock();
+  this.node.type = "FunctionExpression";
+  if (!o) {
     var c = l ? null : this.parentPath.scope.generateUidIdentifier("arrowCheckId");
     if (c) {
       this.parentPath.scope.push({
@@ -201,7 +203,10 @@ function w(e) {
       });
       var a = _(r, n, t);
       var s = [];
-      if (e.node.computed && s.push(e.get("property").node), n) {
+      if (e.node.computed) {
+        s.push(e.get("property").node);
+      }
+      if (n) {
         var o = e.parentPath.node.right;
         s.push(o);
       }
@@ -239,7 +244,8 @@ function O(e) {
     var t = e.parentPath;
     var n = t.node.operator.slice(0, -1);
     var r = t.node.right;
-    if (t.node.operator = "=", e.node.computed) {
+    t.node.operator = "=";
+    if (e.node.computed) {
       var i = e.scope.generateDeclaredUidIdentifier("tmp");
       t.get("left").replaceWith(y(e.node.object, s("=", i, e.node.property), !0));
       t.get("right").replaceWith(o(n, y(e.node.object, f(i.name), !0), r));

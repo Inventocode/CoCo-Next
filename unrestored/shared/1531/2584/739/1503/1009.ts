@@ -2,7 +2,7 @@
 
 export { o as a };
 var r = require("../../75/index");
-var i = (module => {
+var i = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -13,7 +13,7 @@ var i = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(r);
+}(r);
 function o(e) {
   return e instanceof HTMLElement ? e : i.a.findDOMNode(e);
 }

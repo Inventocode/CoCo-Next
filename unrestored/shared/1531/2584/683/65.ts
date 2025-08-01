@@ -134,7 +134,8 @@ function v(e, t, n) {
     var r;
     var i;
     var o;
-    if (e /= 360, 0 === t) {
+    e /= 360;
+    if (0 === t) {
       r = i = o = n;
     } else {
       var a = function (e, t, n) {

@@ -19,7 +19,8 @@ var l = function () {
     var t = e.get_workspace();
     var n = e.get_svg_root();
     var r = t.get_injection_div();
-    if (t.get_audio_manager().play("delete"), n && r) {
+    t.get_audio_manager().play("delete");
+    if (n && r) {
       var i = this.utils.get_injection_div_xy(n);
       var o = t.get_scale();
       var a = (0, s.create_svg_element)("svg", {
@@ -54,7 +55,8 @@ var l = function () {
       throw new ReferenceError("Cannot connect ui effect to block without svg root.");
     }
     var n = e.get_workspace();
-    if (n.get_audio_manager().play("click"), !(n.get_scale() < 1)) {
+    n.get_audio_manager().play("click");
+    if (!(n.get_scale() < 1)) {
       var r = n.get_svg_xy(t);
       if (e.output_connection) {
         o.vec2.add(r, r, [-3 * n.get_scale(), 13 * n.get_scale()]);
@@ -141,7 +143,10 @@ var l = function () {
         calcMode: "spline",
         keySplines: "0.25,0.1,0.25,1;0.25,0.1,0.25,1"
       });
-      if (null === (n = e.svg_path) || void 0 === n || n.removeAttribute("fill"), e.is_starting_block()) {
+      if (!(null === (n = e.svg_path) || void 0 === n)) {
+        n.removeAttribute("fill");
+      }
+      if (e.is_starting_block()) {
         if (y = e.get_svg_root().querySelector(".blockly_head_icon_wrapper")) {
           y.removeAttribute("fill");
         }
@@ -167,7 +172,10 @@ var l = function () {
     }
     var y;
     var b = e.get_colour().toString();
-    if (null === (a = e.svg_path) || void 0 === a || a.setAttribute("fill", b), e.is_starting_block()) {
+    if (!(null === (a = e.svg_path) || void 0 === a)) {
+      a.setAttribute("fill", b);
+    }
+    if (e.is_starting_block()) {
       if (y = e.get_svg_root().querySelector(".blockly_head_icon_wrapper")) {
         y.setAttribute("fill", b);
         y.removeAttribute("filter");

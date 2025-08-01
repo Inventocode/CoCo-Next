@@ -1,5 +1,15 @@
 "use strict";
 
+(function __defineESModule(exports) {
+  if (typeof Symbol != "undefined" && Symbol.toStringTag) {
+    Object.defineProperty(exports, Symbol.toStringTag, {
+      value: "Module"
+    });
+  }
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+})(exports);
 var r = {
   update: null,
   begin: null,
@@ -589,7 +599,10 @@ function z(e) {
 }
 function Q(e, t) {
   var n = w(t);
-  if (/^spring/.test(n.easing) && (n.duration = d(n.easing)), l.arr(e)) {
+  if (/^spring/.test(n.easing)) {
+    n.duration = d(n.easing);
+  }
+  if (l.arr(e)) {
     var r = e.length;
     if (2 === r && !l.obj(e[0])) {
       e = {
@@ -710,7 +723,8 @@ var X = {
     return e[t] = n;
   },
   transform: function (e, t, n, r, i) {
-    if (r.list.set(t, n), t === r.last || i) {
+    r.list.set(t, n);
+    if (t === r.last || i) {
       var o = "";
       r.list.forEach(function (e, t) {
         o += t + "(" + e + ") ";
@@ -1142,7 +1156,16 @@ ne.stagger = function (e, t) {
   var g = [];
   var v = 0;
   return function (e, t, l) {
-    if (s && (a = 0), c && (a = (l - 1) / 2), u && (a = l - 1), !g.length) {
+    if (s) {
+      a = 0;
+    }
+    if (c) {
+      a = (l - 1) / 2;
+    }
+    if (u) {
+      a = l - 1;
+    }
+    if (!g.length) {
       for (var A = 0; A < l; A++) {
         if (i) {
           var m = c ? (i[0] - 1) / 2 : a % i[0];

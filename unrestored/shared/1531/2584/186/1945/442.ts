@@ -23,7 +23,10 @@ function u(e) {
 }
 function l(e, t) {
   if (null !== e && "undefined" !== typeof e) {
-    if ("object" !== typeof e && (e = [e]), o(e)) {
+    if ("object" !== typeof e) {
+      e = [e];
+    }
+    if (o(e)) {
       for (var n = 0, r = e.length; n < r; n++) {
         t.call(null, e[n], n, e);
       }

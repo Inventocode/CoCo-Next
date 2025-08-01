@@ -5,7 +5,7 @@ var i = require("../33/index");
 var o = require("../29");
 var a = require("../54");
 var s = require("../0/index");
-var c = (module => {
+var c = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -16,9 +16,9 @@ var c = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(s);
+}(s);
 var u = require("../8");
-var l = (module => {
+var l = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -29,7 +29,7 @@ var l = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(u);
+}(u);
 var f = require("./780");
 var d = require("../108");
 var h = require("./911/index");
@@ -148,10 +148,13 @@ var B = function (e) {
   var h = e.secondaryColor;
   var p = Object(a.a)(e, S);
   var _ = T;
-  if (d && (_ = {
-    primaryColor: d,
-    secondaryColor: h || C(d)
-  }), function () {
+  if (d) {
+    _ = {
+      primaryColor: d,
+      secondaryColor: h || C(d)
+    };
+  }
+  (function () {
     var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : k;
     var t = Object(s.useContext)(f.a);
     var n = t.csp;
@@ -161,7 +164,11 @@ var B = function (e) {
         csp: n
       });
     }, []);
-  }(), t = E(i), n = "icon should be icon definiton, but got ".concat(i), g(t, "[@ant-design/icons] ".concat(n)), !E(i)) {
+  })();
+  t = E(i);
+  n = "icon should be icon definiton, but got ".concat(i);
+  g(t, "[@ant-design/icons] ".concat(n));
+  if (!E(i)) {
     return null;
   }
   var A = i;

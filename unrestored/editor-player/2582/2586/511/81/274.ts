@@ -142,7 +142,15 @@ var a = function () {
     for (var t = "", e = this.getDegree(); e >= 0; e--) {
       var r = this.getCoefficient(e);
       if (0 !== r) {
-        if (r < 0 ? (t += " - ", r = -r) : t.length > 0 && (t += " + "), 0 === e || 1 !== r) {
+        if (r < 0) {
+          t += " - ";
+          r = -r;
+        } else {
+          if (t.length > 0) {
+            t += " + ";
+          }
+        }
+        if (0 === e || 1 !== r) {
           var n = this.field.log(r);
           if (0 === n) {
             t += "1";

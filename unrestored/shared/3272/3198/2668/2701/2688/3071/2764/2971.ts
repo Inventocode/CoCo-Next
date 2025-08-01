@@ -89,7 +89,7 @@ module.exports = function (e, t) {
   var n = [];
   var r = [];
   var a = [];
-  if (t.replace(i, function (t, i, s, o, l, c) {
+  t.replace(i, function (t, i, s, o, l, c) {
     if (i) {
       a.push(u(i));
     } else if (o) {
@@ -110,7 +110,9 @@ module.exports = function (e, t) {
     } else {
       a.push(c);
     }
-  }), r.push(a.join("")), n.length > 0) {
+  });
+  r.push(a.join(""));
+  if (n.length > 0) {
     var s = "Chalk template literal is missing ".concat(n.length, " closing bracket").concat(1 === n.length ? "" : "s", " (`}`)");
     throw new Error(s);
   }

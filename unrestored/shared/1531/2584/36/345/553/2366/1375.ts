@@ -1,5 +1,8 @@
 function n(e) {
-  if ("number" === typeof e && (e = e.toString()), "string" !== typeof e) {
+  if ("number" === typeof e) {
+    e = e.toString();
+  }
+  if ("string" !== typeof e) {
     throw new Error("Color should be defined as hex string");
   }
   var t = e.slice().replace("#", "").split("");

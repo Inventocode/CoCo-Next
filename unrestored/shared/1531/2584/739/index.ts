@@ -6,7 +6,7 @@ var o = require("../19");
 var a = require("../0/index");
 var s = require("./1503/index");
 var c = require("../8");
-var u = (module => {
+var u = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -17,7 +17,7 @@ var u = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(c);
+}(c);
 var l = require("./1010");
 var f = {
   adjustX: 1,

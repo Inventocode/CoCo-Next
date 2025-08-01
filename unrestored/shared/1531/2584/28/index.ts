@@ -20,7 +20,7 @@ require("../51/index");
 var r = require("./773/index");
 var o = require("../31/index");
 var i = require("./303/index");
-var a = (module => {
+var a = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -31,7 +31,7 @@ var a = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(i);
+}(i);
 var s = require("./651");
 function c(e) {
   return e + "_" + a.a.generate();

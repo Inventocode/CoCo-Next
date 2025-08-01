@@ -90,7 +90,8 @@ var y = function () {
         if (!this.isCompatibleScope(e)) {
           break;
         }
-        if (this.scopes.push(e), this.breakOnScopePaths.indexOf(e.path) >= 0) {
+        this.scopes.push(e);
+        if (this.breakOnScopePaths.indexOf(e.path) >= 0) {
           break;
         }
       } while (e = e.parent);
@@ -101,7 +102,10 @@ var y = function () {
       var e = this._getAttachmentPath();
       if (e) {
         var t = e.scope;
-        if (t.path === e && (t = e.scope.parent), t.path.isProgram() || t.path.isFunction()) {
+        if (t.path === e) {
+          t = e.scope.parent;
+        }
+        if (t.path.isProgram() || t.path.isFunction()) {
           for (var n = 0, r = Object.keys(this.bindings); n < r.length; n++) {
             var i = r[n];
             if (t.hasOwnBinding(i)) {
@@ -188,7 +192,8 @@ var y = function () {
   }, {
     key: "run",
     value: function () {
-      if (this.path.traverse(h, this), !this.mutableBinding) {
+      this.path.traverse(h, this);
+      if (!this.mutableBinding) {
         this.getCompatibleScopes();
         var e = this.getAttachmentPath();
         if (e && e.getFunctionParent() !== this.path.getFunctionParent()) {

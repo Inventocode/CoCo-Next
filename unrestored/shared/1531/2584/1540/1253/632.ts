@@ -1,6 +1,7 @@
 var r = require("../1734/439");
 module.exports = function (e, t, n) {
-  if (r(e), void 0 === t) {
+  r(e);
+  if (void 0 === t) {
     return e;
   }
   switch (n) {

@@ -18,7 +18,11 @@ var a = function () {
       o = e.getHeight() / 2 | 0;
     }
     var a = r / 2 | 0;
-    if (this.leftInit = n - a, this.rightInit = n + a, this.upInit = o - a, this.downInit = o + a, this.upInit < 0 || this.leftInit < 0 || this.downInit >= this.height || this.rightInit >= this.width) {
+    this.leftInit = n - a;
+    this.rightInit = n + a;
+    this.upInit = o - a;
+    this.downInit = o + a;
+    if (this.upInit < 0 || this.leftInit < 0 || this.downInit >= this.height || this.rightInit >= this.width) {
       throw new i.a();
     }
   }

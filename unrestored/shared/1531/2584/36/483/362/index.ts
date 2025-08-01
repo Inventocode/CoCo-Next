@@ -4,7 +4,7 @@ export { c as useDrag };
 export { l as useGesture };
 var r = require("./329");
 var i = require("../../../0/index");
-var o = (module => {
+var o = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -15,7 +15,7 @@ var o = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(i);
+}(i);
 var a = require("./1171/index");
 require("./1287");
 require("./1288");
@@ -26,9 +26,13 @@ function s(e) {
   var i = o.a.useMemo(function () {
     return new a.a(e);
   }, []);
-  if (i.applyHandlers(e, r), i.applyConfig(t, n), o.a.useEffect(i.effect.bind(i)), o.a.useEffect(function () {
+  i.applyHandlers(e, r);
+  i.applyConfig(t, n);
+  o.a.useEffect(i.effect.bind(i));
+  o.a.useEffect(function () {
     return i.clean.bind(i);
-  }, []), void 0 === t.target) {
+  }, []);
+  if (void 0 === t.target) {
     return i.bind.bind(i);
   }
 }

@@ -189,7 +189,8 @@ exports.onIgnoreTag = function (e, t, n) {};
 exports.onTagAttr = function (e, t, n) {};
 exports.onIgnoreTagAttr = function (e, t, n) {};
 exports.safeAttrValue = function (e, t, n, r) {
-  if (n = x(n), "href" === t || "src" === t) {
+  n = x(n);
+  if ("href" === t || "src" === t) {
     if ("#" === (n = o.trim(n))) {
       return "#";
     }
@@ -197,14 +198,17 @@ exports.safeAttrValue = function (e, t, n, r) {
       return "";
     }
   } else if ("background" === t) {
-    if (A.lastIndex = 0, A.test(n)) {
+    A.lastIndex = 0;
+    if (A.test(n)) {
       return "";
     }
   } else if ("style" === t) {
-    if (g.lastIndex = 0, g.test(n)) {
+    g.lastIndex = 0;
+    if (g.test(n)) {
       return "";
     }
-    if (v.lastIndex = 0, v.test(n) && (A.lastIndex = 0, A.test(n))) {
+    v.lastIndex = 0;
+    if (v.test(n) && (A.lastIndex = 0, A.test(n))) {
       return "";
     }
     if (!1 !== r) {

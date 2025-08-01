@@ -61,7 +61,13 @@ var g = function (e) {
         a.translate(o.vec2.fromValues(r.x, r.y));
       }
     }
-    if (t.workspace_comment_db.set(a.id, a), n || t.add_top_comment(a), a.init_events(), a.events.enable(), a.events.is_enabled()) {
+    t.workspace_comment_db.set(a.id, a);
+    if (!n) {
+      t.add_top_comment(a);
+    }
+    a.init_events();
+    a.events.enable();
+    if (a.events.is_enabled()) {
       if (a.parent_block_) {
         var l = a.change_event_factory("comment", {
           block: a.parent_block_,
@@ -286,12 +292,23 @@ var g = function (e) {
         this.color_theme = e;
         var i;
         var o = s.THEME_COLOR_MAP[this.color_theme];
-        if (this.svg_line_ && (this.svg_line_.style.stroke = o.toString()), this.bubble_ && (this.bubble_.style.background = "linear-gradient(to bottom, " + o + " 4px, #fff 4px)", this.expanded_ && !t && this.empty_border && (this.empty_border.classList.add("blocklyCommentBorder"), this.empty_border.style.backgroundColor = r.toString(), this.empty_border.addEventListener("animationend", function () {
-          if (n.empty_border) {
-            n.empty_border.classList.remove("blocklyCommentBorder");
-            n.empty_border.style.backgroundColor = "transparent";
+        if (this.svg_line_) {
+          this.svg_line_.style.stroke = o.toString();
+        }
+        if (this.bubble_) {
+          this.bubble_.style.background = "linear-gradient(to bottom, " + o + " 4px, #fff 4px)";
+          if (this.expanded_ && !t && this.empty_border) {
+            this.empty_border.classList.add("blocklyCommentBorder");
+            this.empty_border.style.backgroundColor = r.toString();
+            this.empty_border.addEventListener("animationend", function () {
+              if (n.empty_border) {
+                n.empty_border.classList.remove("blocklyCommentBorder");
+                n.empty_border.style.backgroundColor = "transparent";
+              }
+            });
           }
-        }))), this.svg_icon) {
+        }
+        if (this.svg_icon) {
           if (i = this.svg_icon.querySelector("circle")) {
             i.setAttribute("fill", "url(#CommentLinearGradient-" + this.color_theme + ")");
           }
@@ -448,7 +465,11 @@ var g = function (e) {
   };
   t.prototype.show_editor = function () {
     var e = this;
-    if (this.svg_icon && (0, l.remove_node)(this.svg_icon), this.left_top_offset = [-20, -20], !this.bubble_ || !this.bubble_shadow_) {
+    if (this.svg_icon) {
+      (0, l.remove_node)(this.svg_icon);
+    }
+    this.left_top_offset = [-20, -20];
+    if (!this.bubble_ || !this.bubble_shadow_) {
       this.bubble_ = (0, l.create_svg_element)("foreignObject", {
         width: this.bubble_width_,
         height: this.bubble_height_,
@@ -650,7 +671,8 @@ var g = function (e) {
   t.prototype.focus = function () {
     var e;
     var t;
-    if (this.set_expanded(!0), this.textarea_) {
+    this.set_expanded(!0);
+    if (this.textarea_) {
       var n = (0, l.get_viewport_size)();
       if (this.textarea_.getBoundingClientRect().left >= n.width) {
         var r = this.get_relative_to_surface_xy()[0] + this.left_top_offset[0];

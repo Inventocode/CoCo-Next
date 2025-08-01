@@ -19,7 +19,8 @@ module.exports = function (e, t, n) {
   var g = h.dataLevel = e.dataLevel + 1;
   var v = "data" + g;
   var m = e.baseId;
-  if (r += "var " + d + " = errors;var " + f + ";", Array.isArray(a)) {
+  r += "var " + d + " = errors;var " + f + ";";
+  if (Array.isArray(a)) {
     var y = e.schema.additionalItems;
     if (!1 === y) {
       r += " " + f + " = " + l + ".length <= " + a.length + "; ";
@@ -62,7 +63,8 @@ module.exports = function (e, t, n) {
     var x = a;
     if (x) {
       for (var C, O = -1, k = x.length - 1; O < k;) {
-        if (C = x[O += 1], e.opts.strictKeywords ? "object" == typeof C && Object.keys(C).length > 0 || !1 === C : e.util.schemaHasRules(C, e.RULES.all)) {
+        C = x[O += 1];
+        if (e.opts.strictKeywords ? "object" == typeof C && Object.keys(C).length > 0 || !1 === C : e.util.schemaHasRules(C, e.RULES.all)) {
           r += " " + _ + " = true; if (" + l + ".length > " + O + ") { ";
           var S = l + "[" + O + "]";
           h.schema = C;

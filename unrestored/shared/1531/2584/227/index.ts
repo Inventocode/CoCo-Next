@@ -6,7 +6,7 @@ export { v as b };
 export { E as a };
 export { O as e };
 var r = require("../1/index");
-var o = (module => {
+var o = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -17,7 +17,7 @@ var o = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(r);
+}(r);
 var i = require("../7");
 var a = require("../17/index");
 var s = require("./724");
@@ -73,7 +73,8 @@ function v(e) {
                       return "emptyProcedureName";
                     }
                     var t = i.get_occupied_procedure_names();
-                    if (t.splice(t.indexOf(s), 1), t.includes(e)) {
+                    t.splice(t.indexOf(s), 1);
+                    if (t.includes(e)) {
                       return "procedureNameExists";
                     }
                     if (e[0].match(/[0-9_]/)) {

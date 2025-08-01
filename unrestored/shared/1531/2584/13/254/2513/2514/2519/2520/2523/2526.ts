@@ -5,7 +5,8 @@ module.exports = function (e) {
   return function () {
     var i = n();
     var o = 16 - (i - r);
-    if (r = i, o > 0) {
+    r = i;
+    if (o > 0) {
       if (++t >= 800) {
         return arguments[0];
       }

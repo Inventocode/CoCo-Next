@@ -42,7 +42,7 @@ exports.load_from_xml = function (e, t, n) {
   }
   var c = {};
   var u = {};
-  if (s.forEach(function (t) {
+  s.forEach(function (t) {
     var o = t.getAttribute("type");
     if (o === i.PROCEDURE_BLOCK_TYPES.DEF) {
       var a = t.getAttribute("id");
@@ -128,7 +128,8 @@ exports.load_from_xml = function (e, t, n) {
       };
       return void _.callers_id.push(a);
     }
-  }), !n) {
+  });
+  if (!n) {
     return t;
   }
   var l = (0, o.add_procedure_and_generate_rename_map)({

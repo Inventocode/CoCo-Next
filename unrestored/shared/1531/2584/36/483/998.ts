@@ -81,7 +81,12 @@
       return o(r, e);
     })(e);
   }
-  exports.a = k;
+  Object.defineProperty(exports, "a", {
+    get: function () {
+      return k;
+    },
+    enumerable: true
+  });
   var u = /%[sdj%]/g;
   var l = function () {};
   function f(e) {
@@ -205,7 +210,8 @@
     var l = [];
     var d = new Promise(function (t, o) {
       var d = function (e) {
-        if (l.push.apply(l, e), ++u === c) {
+        l.push.apply(l, e);
+        if (++u === c) {
           r(l);
           return l.length ? o(new _(l, f(l))) : t(i);
         }
@@ -358,7 +364,18 @@
       var l = "number" === typeof t;
       var f = "string" === typeof t;
       var h = Array.isArray(t);
-      if (l ? u = "number" : f ? u = "string" : h && (u = "array"), !u) {
+      if (l) {
+        u = "number";
+      } else {
+        if (f) {
+          u = "string";
+        } else {
+          if (h) {
+            u = "array";
+          }
+        }
+      }
+      if (!u) {
         return !1;
       }
       if (h) {
@@ -455,7 +472,10 @@
     number: function (e, t, n, r, i) {
       var o = [];
       if (e.required || !e.required && r.hasOwnProperty(e.field)) {
-        if ("" === t && (t = void 0), h(t) && !e.required) {
+        if ("" === t) {
+          t = void 0;
+        }
+        if (h(t) && !e.required) {
           return n();
         }
         w.required(e, t, r, o, i);
@@ -580,7 +600,8 @@
           return n();
         }
         var a;
-        if (w.required(e, t, r, o, i), !h(t, "date")) {
+        w.required(e, t, r, o, i);
+        if (!h(t, "date")) {
           a = t instanceof Date ? t : new Date(t);
           w.type(e, a, r, o, i);
           if (a) {
@@ -703,7 +724,11 @@
       var a = t;
       var s = n;
       var c = i;
-      if ("function" === typeof s && (c = s, s = {}), !this.rules || 0 === Object.keys(this.rules).length) {
+      if ("function" === typeof s) {
+        c = s;
+        s = {};
+      }
+      if (!this.rules || 0 === Object.keys(this.rules).length) {
         if (c) {
           c(null, a);
         }
@@ -874,7 +899,10 @@
       }, a);
     };
     t.getType = function (e) {
-      if (void 0 === e.type && e.pattern instanceof RegExp && (e.type = "pattern"), "function" !== typeof e.validator && e.type && !x.hasOwnProperty(e.type)) {
+      if (void 0 === e.type && e.pattern instanceof RegExp) {
+        e.type = "pattern";
+      }
+      if ("function" !== typeof e.validator && e.type && !x.hasOwnProperty(e.type)) {
         throw new Error(d("Unknown rule type %s", e.type));
       }
       return e.type || "string";

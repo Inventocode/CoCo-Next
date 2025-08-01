@@ -87,7 +87,8 @@ module.exports = {
     if (r(t)) {
       return !0;
     }
-    if (e.errors = r.errors, n) {
+    e.errors = r.errors;
+    if (n) {
       throw new Error("custom keyword definition is invalid: " + this.errorsText(r.errors));
     }
     return !1;

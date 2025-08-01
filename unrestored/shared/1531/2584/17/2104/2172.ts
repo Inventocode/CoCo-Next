@@ -60,17 +60,20 @@ var l = function (e) {
         n.group_type = a.BlockGroupType.EXECUTION;
         n.init_execution_group();
       } finally {
-        if (n.origin_block.get_svg_root().style.display = "none", n.origin_block.get_descendants(!1, !0).forEach(function (e) {
+        n.origin_block.get_svg_root().style.display = "none";
+        n.origin_block.get_descendants(!1, !0).forEach(function (e) {
           return e.set_comment_visible(!1);
-        }), "simplified" === n.workspace.get_options().comment_type) {
-          if ((0, u.get_nested_blocks_with_comment)(n.origin_block).forEach(function (e) {
+        });
+        if ("simplified" === n.workspace.get_options().comment_type) {
+          (0, u.get_nested_blocks_with_comment)(n.origin_block).forEach(function (e) {
             var t;
             if ((0, c.is_block_group)(e)) {
               (t = n.nested_blocks_with_comment).push.apply(t, e.nested_blocks_with_comment);
             } else {
               n.nested_blocks_with_comment.push(e);
             }
-          }), n.nested_blocks_with_comment.length) {
+          });
+          if (n.nested_blocks_with_comment.length) {
             var s = null === (e = n.nested_blocks_with_comment[0].comment) || void 0 === e ? void 0 : e.get_text();
             n.set_comment_text(s);
             if (!(null === (t = n.comment) || void 0 === t)) {
@@ -174,7 +177,12 @@ var l = function (e) {
     var n;
     if (this.workspace) {
       var r = this.events.get_group();
-      if (this.events.set_group(r || !0), t && this.rendered && this.block_animations.dispose_ui_effect(this), this.release(), null === (n = this.origin_block) || void 0 === n ? void 0 : n.workspace) {
+      this.events.set_group(r || !0);
+      if (t && this.rendered) {
+        this.block_animations.dispose_ui_effect(this);
+      }
+      this.release();
+      if (null === (n = this.origin_block) || void 0 === n ? void 0 : n.workspace) {
         var i = this.origin_block.get_descendants(!0, !0);
         if (i) {
           for (var o = 0; o < i.length; o++) {

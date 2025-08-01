@@ -2,7 +2,7 @@
 
 (function (e) {
   var r = require("../../0/index");
-  var o = (module => {
+  var o = function __importDefault(module) {
     var defaultExport = module && module.__esModule ? function () {
       return module.default;
     } : function () {
@@ -13,7 +13,7 @@
       get: defaultExport
     });
     return defaultExport;
-  })(r);
+  }(r);
   var i = require("../../458");
   require("./848");
   var a = require("../../16/index");

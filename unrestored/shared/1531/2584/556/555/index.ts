@@ -4,7 +4,7 @@ var r;
 var i = require("../../33/index");
 var o = require("../../108");
 var a = require("../../0/index");
-var s = (module => {
+var s = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -15,7 +15,7 @@ var s = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(a);
+}(a);
 var c = require("../../1502/428");
 var u = require("./1456");
 function l(e) {
@@ -546,7 +546,16 @@ function $(e, t) {
   var p = s.scrollWidth;
   var _ = s.scrollHeight;
   var A = window.getComputedStyle(a);
-  if ("hidden" === A.overflowX && (p = o.innerWidth), "hidden" === A.overflowY && (_ = o.innerHeight), e.style && (e.style.position = u), t || function (e) {
+  if ("hidden" === A.overflowX) {
+    p = o.innerWidth;
+  }
+  if ("hidden" === A.overflowY) {
+    _ = o.innerHeight;
+  }
+  if (e.style) {
+    e.style.position = u;
+  }
+  if (t || function (e) {
     if (K.isWindow(e) || 9 === e.nodeType) {
       return !1;
     }

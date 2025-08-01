@@ -25,7 +25,8 @@ exports.typeConstraint = function (e) {
   return function (t) {
     var n = null;
     if (null !== t) {
-      if (n = t.bindings[0], "string" === typeof e) {
+      n = t.bindings[0];
+      if ("string" === typeof e) {
         return n.serviceIdentifier === e;
       }
       var r = t.bindings[0].implementationType;

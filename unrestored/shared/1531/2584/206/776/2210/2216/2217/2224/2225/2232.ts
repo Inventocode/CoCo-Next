@@ -25,7 +25,11 @@ module.exports = function (e, t, n) {
   r += "var " + f + " = errors;";
   var y = e.errorPath;
   for (var b in r += "var missing" + i + ";", A) if ((m = A[b]).length) {
-    if (r += " if ( " + l + e.util.getProperty(b) + " !== undefined ", g && (r += " && Object.prototype.hasOwnProperty.call(" + l + ", '" + e.util.escapeQuotes(b) + "') "), u) {
+    r += " if ( " + l + e.util.getProperty(b) + " !== undefined ";
+    if (g) {
+      r += " && Object.prototype.hasOwnProperty.call(" + l + ", '" + e.util.escapeQuotes(b) + "') ";
+    }
+    if (u) {
       r += " && ( ";
       var w = m;
       if (w) {

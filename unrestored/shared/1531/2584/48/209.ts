@@ -1,7 +1,7 @@
 "use strict";
 
 var r = require("../186/index");
-var o = (module => {
+var o = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -12,7 +12,7 @@ var o = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(r).a.create({
+}(r).a.create({
   timeout: 5e3,
   withCredentials: !0
 });

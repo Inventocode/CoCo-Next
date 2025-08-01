@@ -143,7 +143,7 @@ var f = Object(o.combineReducers)({
   }
 });
 var h = require("../1/index");
-var m = (module => {
+var m = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -154,7 +154,7 @@ var m = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(h);
+}(h);
 var g = require("../35/3/index");
 var _ = require("../7");
 var v = require("./209");

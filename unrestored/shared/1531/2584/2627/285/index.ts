@@ -3,7 +3,7 @@
 export { Cn as b };
 var r = require("../../19");
 var i = require("../../0/index");
-var o = (module => {
+var o = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -14,7 +14,7 @@ var o = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(i);
+}(i);
 var a = require("../../223/780");
 var s = require("../../54");
 var c = require("../../29");
@@ -78,7 +78,7 @@ function x(e) {
   return void 0 === e || null === e ? [] : Array.isArray(e) ? e : [e];
 }
 var C = require("../../110");
-var O = (module => {
+var O = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -89,7 +89,7 @@ var O = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(C);
+}(C);
 var k = require("../../171");
 var S = require("../../36/483/998");
 var T = "'${name}' is not a valid ${type}";
@@ -485,9 +485,19 @@ var re = function (e) {
   var t = Object(_.a)(n);
   function n(e) {
     var r;
-    if (Object(f.a)(this, n), (r = t.call(this, e)).state = {
+    Object(f.a)(this, n);
+    (r = t.call(this, e)).state = {
       resetCount: 0
-    }, r.cancelRegisterFunc = null, r.mounted = !1, r.touched = !1, r.dirty = !1, r.validatePromise = null, r.prevValidating = void 0, r.errors = te, r.warnings = te, r.cancelRegister = function () {
+    };
+    r.cancelRegisterFunc = null;
+    r.mounted = !1;
+    r.touched = !1;
+    r.dirty = !1;
+    r.validatePromise = null;
+    r.prevValidating = void 0;
+    r.errors = te;
+    r.warnings = te;
+    r.cancelRegister = function () {
       var e = r.props;
       var t = e.preserve;
       var n = e.isListField;
@@ -496,13 +506,15 @@ var re = function (e) {
         r.cancelRegisterFunc(n, t, N(i));
       }
       r.cancelRegisterFunc = null;
-    }, r.getNamePath = function () {
+    };
+    r.getNamePath = function () {
       var e = r.props;
       var t = e.name;
       var n = e.fieldContext.prefixName;
       var i = void 0 === n ? [] : n;
       return void 0 !== t ? [].concat(Object(l.a)(i), Object(l.a)(t)) : [];
-    }, r.getRules = function () {
+    };
+    r.getRules = function () {
       var e = r.props;
       var t = e.rules;
       var n = void 0 === t ? [] : t;
@@ -510,7 +522,8 @@ var re = function (e) {
       return n.map(function (e) {
         return "function" === typeof e ? e(i) : e;
       });
-    }, r.refresh = function () {
+    };
+    r.refresh = function () {
       if (r.mounted) {
         r.setState(function (e) {
           return {
@@ -518,14 +531,16 @@ var re = function (e) {
           };
         });
       }
-    }, r.triggerMetaEvent = function (e) {
+    };
+    r.triggerMetaEvent = function (e) {
       var t = r.props.onMetaChange;
       if (!(null === t || void 0 === t)) {
         t(Object(u.a)(Object(u.a)({}, r.getMeta()), {}, {
           destroy: e
         }));
       }
-    }, r.onStoreChange = function (e, t, n) {
+    };
+    r.onStoreChange = function (e, t, n) {
       var i = r.props;
       var o = i.shouldUpdate;
       var a = i.dependencies;
@@ -589,7 +604,8 @@ var re = function (e) {
       if (!0 === o) {
         r.reRender();
       }
-    }, r.validateRules = function (e) {
+    };
+    r.validateRules = function (e) {
       var t = r.getNamePath();
       var n = r.getValue();
       var i = Promise.resolve().then(function () {
@@ -642,23 +658,32 @@ var re = function (e) {
       r.triggerMetaEvent();
       r.reRender();
       return i;
-    }, r.isFieldValidating = function () {
+    };
+    r.isFieldValidating = function () {
       return !!r.validatePromise;
-    }, r.isFieldTouched = function () {
+    };
+    r.isFieldTouched = function () {
       return r.touched;
-    }, r.isFieldDirty = function () {
+    };
+    r.isFieldDirty = function () {
       return !(!r.dirty && void 0 === r.props.initialValue) || void 0 !== (0, r.props.fieldContext.getInternalHooks(b).getInitialValue)(r.getNamePath());
-    }, r.getErrors = function () {
+    };
+    r.getErrors = function () {
       return r.errors;
-    }, r.getWarnings = function () {
+    };
+    r.getWarnings = function () {
       return r.warnings;
-    }, r.isListField = function () {
+    };
+    r.isListField = function () {
       return r.props.isListField;
-    }, r.isList = function () {
+    };
+    r.isList = function () {
       return r.props.isList;
-    }, r.isPreserve = function () {
+    };
+    r.isPreserve = function () {
       return r.props.preserve;
-    }, r.getMeta = function () {
+    };
+    r.getMeta = function () {
       r.prevValidating = r.isFieldValidating();
       return {
         touched: r.isFieldTouched(),
@@ -667,7 +692,8 @@ var re = function (e) {
         warnings: r.warnings,
         name: r.getNamePath()
       };
-    }, r.getOnlyChild = function (e) {
+    };
+    r.getOnlyChild = function (e) {
       if ("function" === typeof e) {
         var t = r.getMeta();
         return Object(u.a)(Object(u.a)({}, r.getOnlyChild(e(r.getControlled(), t, r.props.fieldContext))), {}, {
@@ -699,11 +725,13 @@ var re = function (e) {
         child: n,
         isFunction: !1
       };
-    }, r.getValue = function (e) {
+    };
+    r.getValue = function (e) {
       var t = r.props.fieldContext.getFieldsValue;
       var n = r.getNamePath();
       return M(e || t(!0), n);
-    }, r.getControlled = function () {
+    };
+    r.getControlled = function () {
       var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
       var t = r.props;
       var n = t.trigger;
@@ -764,7 +792,8 @@ var re = function (e) {
         };
       });
       return w;
-    }, e.fieldContext) {
+    };
+    if (e.fieldContext) {
       (0, (0, e.fieldContext.getInternalHooks)(b).initEntityValue)(Object(h.a)(r));
     }
     return r;
@@ -775,7 +804,8 @@ var re = function (e) {
       var e = this.props;
       var t = e.shouldUpdate;
       var n = e.fieldContext;
-      if (this.mounted = !0, n) {
+      this.mounted = !0;
+      if (n) {
         var r = (0, n.getInternalHooks)(b).registerField;
         this.cancelRegisterFunc = r(this);
       }
@@ -1106,7 +1136,8 @@ var fe = function e(t) {
     });
   };
   this.getFieldsValue = function (e, t) {
-    if (n.warningUnhooked(), !0 === e && !t) {
+    n.warningUnhooked();
+    if (!0 === e && !t) {
       return n.store;
     }
     var r = n.getFieldEntitiesForNamePathList(Array.isArray(e) ? e : null);
@@ -1354,7 +1385,8 @@ var fe = function e(t) {
     }
   };
   this.registerField = function (e) {
-    if (n.fieldEntities.push(e), void 0 !== e.props.initialValue) {
+    n.fieldEntities.push(e);
+    if (void 0 !== e.props.initialValue) {
       var t = n.store;
       n.resetWithFieldInitialValue({
         entities: [e],
@@ -1497,7 +1529,10 @@ var fe = function e(t) {
     var i = r ? e.map(N) : [];
     var o = [];
     n.getFieldEntities(!0).forEach(function (a) {
-      if (r || i.push(a.getNamePath()), (null === t || void 0 === t ? void 0 : t.recursive) && r) {
+      if (!r) {
+        i.push(a.getNamePath());
+      }
+      if ((null === t || void 0 === t ? void 0 : t.recursive) && r) {
         var s = a.getNamePath();
         if (s.every(function (t, n) {
           return e[n] === t || void 0 === e[n];
@@ -1719,7 +1754,8 @@ var ge = function (e, t) {
   I({
     onValuesChange: v,
     onFieldsChange: function (e) {
-      if (C.triggerFormChange(n, e), m) {
+      C.triggerFormChange(n, e);
+      if (m) {
         for (var t = arguments.length, r = new Array(t > 1 ? t - 1 : 0), i = 1; i < t; i++) {
           r[i - 1] = arguments[i];
         }
@@ -1858,7 +1894,7 @@ var xe = require("../686/index");
 var Ce = require("../../789");
 var Oe = require("../../514");
 var ke = require("../../8");
-var Se = (module => {
+var Se = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -1869,9 +1905,9 @@ var Se = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(ke);
+}(ke);
 var Te = require("../../75/index");
-var Be = (module => {
+var Be = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -1882,7 +1918,7 @@ var Be = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(Te);
+}(Te);
 var De = require("../../1504/478");
 var Ie = require("../../1502/428");
 var Fe = require("../../1502/378");
@@ -2183,7 +2219,8 @@ function Je(e, t, n, r) {
     D(t);
     var n;
     var r = U.current;
-    if (U.current = !0, e) {
+    U.current = !0;
+    if (e) {
       if (!r && t && l) {
         n = "appear";
       }
@@ -3429,7 +3466,13 @@ var _n = require("./210");
 var An = function () {
   function e(t, n) {
     var r;
-    if (void 0 === t && (t = ""), void 0 === n && (n = {}), t instanceof e) {
+    if (void 0 === t) {
+      t = "";
+    }
+    if (void 0 === n) {
+      n = {};
+    }
+    if (t instanceof e) {
       return t;
     }
     if ("number" === typeof t) {

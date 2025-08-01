@@ -12,7 +12,13 @@ module.exports = function (e, t, n) {
   var f = "data" + (a || "");
   var d = "valid" + o;
   var h = e.opts.$data && s && s.$data;
-  if (h ? (i += " var schema" + o + " = " + e.util.getData(s.$data, a, e.dataPathArr) + "; ", r = "schema" + o) : r = s, (s || h) && !1 !== e.opts.uniqueItems) {
+  if (h) {
+    i += " var schema" + o + " = " + e.util.getData(s.$data, a, e.dataPathArr) + "; ";
+    r = "schema" + o;
+  } else {
+    r = s;
+  }
+  if ((s || h) && !1 !== e.opts.uniqueItems) {
     if (h) {
       i += " var " + d + "; if (" + r + " === false || " + r + " === undefined) " + d + " = true; else if (typeof " + r + " != 'boolean') " + d + " = false; else { ";
     }

@@ -26,7 +26,10 @@ module.exports = function (e, t) {
   });
   var o = [];
   return function e(t) {
-    if (t && t.toJSON && "function" === typeof t.toJSON && (t = t.toJSON()), void 0 !== t) {
+    if (t && t.toJSON && "function" === typeof t.toJSON) {
+      t = t.toJSON();
+    }
+    if (void 0 !== t) {
       if ("number" == typeof t) {
         return isFinite(t) ? "" + t : "null";
       }

@@ -79,21 +79,40 @@ var f = function () {
     return this.text_;
   };
   e.prototype.init = function (e, t) {
-    if (void 0 === e && (e = !0), !this.field_group && this.source_block) {
-      if (this.field_group = (0, u.create_svg_element)("g", {}), this.visible_ || (this.field_group.style.display = "none"), this.source_block.is_shadow() || (this.border_rect = (0, u.create_svg_element)("rect", {
-        rx: 4,
-        ry: 4
-      }, this.field_group)), e && (this.input_element = (0, u.create_svg_element)("g", {
-        class: "blocklyInputElement"
-      }, this.field_group), l.is.safari() || l.is.mobile() ? this.text_element = (0, u.create_svg_element)("text", {
-        class: "blocklyText",
-        dy: ".4em",
-        "font-size": this.theme.font.SIZE
-      }, this.input_element) : this.text_element = (0, u.create_svg_element)("text", {
-        class: "blocklyText",
-        "dominant-baseline": "central",
-        "font-size": this.theme.font.SIZE
-      }, this.input_element)), this.update_editable(), void 0 != this.source_block) {
+    if (void 0 === e) {
+      e = !0;
+    }
+    if (!this.field_group && this.source_block) {
+      this.field_group = (0, u.create_svg_element)("g", {});
+      if (!this.visible_) {
+        this.field_group.style.display = "none";
+      }
+      if (!this.source_block.is_shadow()) {
+        this.border_rect = (0, u.create_svg_element)("rect", {
+          rx: 4,
+          ry: 4
+        }, this.field_group);
+      }
+      if (e) {
+        this.input_element = (0, u.create_svg_element)("g", {
+          class: "blocklyInputElement"
+        }, this.field_group);
+        if (l.is.safari() || l.is.mobile()) {
+          this.text_element = (0, u.create_svg_element)("text", {
+            class: "blocklyText",
+            dy: ".4em",
+            "font-size": this.theme.font.SIZE
+          }, this.input_element);
+        } else {
+          this.text_element = (0, u.create_svg_element)("text", {
+            class: "blocklyText",
+            "dominant-baseline": "central",
+            "font-size": this.theme.font.SIZE
+          }, this.input_element);
+        }
+      }
+      this.update_editable();
+      if (void 0 != this.source_block) {
         var n = this.source_block.get_svg_root();
         if (void 0 == n) {
           throw new ReferenceError("Field should have svg root when init.");
@@ -283,7 +302,10 @@ var f = function () {
     }
   };
   e.prototype.focus = function (e) {
-    if (void 0 === e && (e = !0), this.source_block) {
+    if (void 0 === e) {
+      e = !0;
+    }
+    if (this.source_block) {
       var t = this.runtime_data.editing;
       if (e) {
         this.value_before_editing = this.get_value();

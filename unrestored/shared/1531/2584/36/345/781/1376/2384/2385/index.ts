@@ -46,7 +46,8 @@ var _ = {};
 var A = function e(t, n, o, a, s, l, d, h, A, g, v, m, y, b, w) {
   for (var E, x = t, C = w, O = 0, k = !1; void 0 !== (C = C.get(_)) && !k;) {
     var S = C.get(t);
-    if (O += 1, "undefined" !== typeof S) {
+    O += 1;
+    if ("undefined" !== typeof S) {
       if (S === O) {
         throw new RangeError("Cyclic object value");
       }
@@ -56,9 +57,20 @@ var A = function e(t, n, o, a, s, l, d, h, A, g, v, m, y, b, w) {
       O = 0;
     }
   }
-  if ("function" === typeof d ? x = d(n, x) : x instanceof Date ? x = g(x) : "comma" === o && c(x) && (x = i.maybeMap(x, function (e) {
-    return e instanceof Date ? g(e) : e;
-  })), null === x) {
+  if ("function" === typeof d) {
+    x = d(n, x);
+  } else {
+    if (x instanceof Date) {
+      x = g(x);
+    } else {
+      if ("comma" === o && c(x)) {
+        x = i.maybeMap(x, function (e) {
+          return e instanceof Date ? g(e) : e;
+        });
+      }
+    }
+  }
+  if (null === x) {
     if (a) {
       return l && !y ? l(n, p.encoder, b, "key", v) : n;
     }

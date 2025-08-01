@@ -63,7 +63,8 @@ var r = function (e) {
           r = "executing";
           var c = u(e, t, n);
           if ("normal" === c.type) {
-            if (r = n.done ? "completed" : "suspendedYield", c.arg === l) {
+            r = n.done ? "completed" : "suspendedYield";
+            if (c.arg === l) {
               continue;
             }
             return {
@@ -147,7 +148,8 @@ var r = function (e) {
   function y(e, t) {
     var n = e.iterator[t.method];
     if (void 0 === n) {
-      if (t.delegate = null, "throw" === t.method) {
+      t.delegate = null;
+      if ("throw" === t.method) {
         if (e.iterator.return && (t.method = "return", t.arg = void 0, y(e, t), "throw" === t.method)) {
           return l;
         }
@@ -293,7 +295,15 @@ var r = function (e) {
   E.prototype = {
     constructor: E,
     reset: function (e) {
-      if (this.prev = 0, this.next = 0, this.sent = this._sent = void 0, this.done = !1, this.delegate = null, this.method = "next", this.arg = void 0, this.tryEntries.forEach(w), !e) {
+      this.prev = 0;
+      this.next = 0;
+      this.sent = this._sent = void 0;
+      this.done = !1;
+      this.delegate = null;
+      this.method = "next";
+      this.arg = void 0;
+      this.tryEntries.forEach(w);
+      if (!e) {
         for (var t in this) if ("t" === t.charAt(0) && n.call(this, t) && !isNaN(+t.slice(1))) {
           this[t] = void 0;
         }

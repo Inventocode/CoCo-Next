@@ -6,7 +6,10 @@ var s = require("../968/index")("engine.io-client:polling-xhr");
 var c = require("./2308/1129");
 function u() {}
 function l(e) {
-  if (i.call(this, e), this.requestTimeout = e.requestTimeout, this.extraHeaders = e.extraHeaders, "undefined" !== typeof location) {
+  i.call(this, e);
+  this.requestTimeout = e.requestTimeout;
+  this.extraHeaders = e.extraHeaders;
+  if ("undefined" !== typeof location) {
     var t = "https:" === location.protocol;
     var n = location.port;
     if (!n) {
@@ -39,7 +42,11 @@ function f(e) {
   this.extraHeaders = e.extraHeaders;
   this.create();
 }
-if (module.exports = l, module.exports.Request = f, a(l, i), l.prototype.supportsBinary = !0, l.prototype.request = function (e) {
+module.exports = l;
+module.exports.Request = f;
+a(l, i);
+l.prototype.supportsBinary = !0;
+l.prototype.request = function (e) {
   (e = e || {}).uri = this.uri();
   e.xd = this.xd;
   e.xs = this.xs;
@@ -57,7 +64,8 @@ if (module.exports = l, module.exports.Request = f, a(l, i), l.prototype.support
   e.requestTimeout = this.requestTimeout;
   e.extraHeaders = this.extraHeaders;
   return new f(e);
-}, l.prototype.doWrite = function (e, t) {
+};
+l.prototype.doWrite = function (e, t) {
   var n = "string" !== typeof e && void 0 !== e;
   var r = this.request({
     method: "POST",
@@ -70,7 +78,8 @@ if (module.exports = l, module.exports.Request = f, a(l, i), l.prototype.support
     i.onError("xhr post error", e);
   });
   this.sendXhr = r;
-}, l.prototype.doPoll = function () {
+};
+l.prototype.doPoll = function () {
   s("xhr poll");
   var e = this.request();
   var t = this;
@@ -81,7 +90,9 @@ if (module.exports = l, module.exports.Request = f, a(l, i), l.prototype.support
     t.onError("xhr poll error", e);
   });
   this.pollXhr = e;
-}, o(f.prototype), f.prototype.create = function () {
+};
+o(f.prototype);
+f.prototype.create = function () {
   var e = {
     agent: this.agent,
     xdomain: this.xd,
@@ -164,18 +175,27 @@ if (module.exports = l, module.exports.Request = f, a(l, i), l.prototype.support
     this.index = f.requestsCount++;
     f.requests[this.index] = this;
   }
-}, f.prototype.onSuccess = function () {
+};
+f.prototype.onSuccess = function () {
   this.emit("success");
   this.cleanup();
-}, f.prototype.onData = function (e) {
+};
+f.prototype.onData = function (e) {
   this.emit("data", e);
   this.onSuccess();
-}, f.prototype.onError = function (e) {
+};
+f.prototype.onError = function (e) {
   this.emit("error", e);
   this.cleanup(!0);
-}, f.prototype.cleanup = function (e) {
+};
+f.prototype.cleanup = function (e) {
   if ("undefined" !== typeof this.xhr && null !== this.xhr) {
-    if (this.hasXDR() ? this.xhr.onload = this.xhr.onerror = u : this.xhr.onreadystatechange = u, e) {
+    if (this.hasXDR()) {
+      this.xhr.onload = this.xhr.onerror = u;
+    } else {
+      this.xhr.onreadystatechange = u;
+    }
+    if (e) {
       try {
         this.xhr.abort();
       } catch (t) {}
@@ -185,7 +205,8 @@ if (module.exports = l, module.exports.Request = f, a(l, i), l.prototype.support
     }
     this.xhr = null;
   }
-}, f.prototype.onLoad = function () {
+};
+f.prototype.onLoad = function () {
   var e;
   try {
     var t;
@@ -199,11 +220,16 @@ if (module.exports = l, module.exports.Request = f, a(l, i), l.prototype.support
   if (null != e) {
     this.onData(e);
   }
-}, f.prototype.hasXDR = function () {
+};
+f.prototype.hasXDR = function () {
   return "undefined" !== typeof XDomainRequest && !this.xs && this.enablesXDR;
-}, f.prototype.abort = function () {
+};
+f.prototype.abort = function () {
   this.cleanup();
-}, f.requestsCount = 0, f.requests = {}, "undefined" !== typeof document) {
+};
+f.requestsCount = 0;
+f.requests = {};
+if ("undefined" !== typeof document) {
   if ("function" === typeof attachEvent) {
     attachEvent("onunload", d);
   } else if ("function" === typeof addEventListener) {

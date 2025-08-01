@@ -18,7 +18,12 @@ var c = function (e) {
     n.source = t.source || "other";
     var r = t.block;
     var i = r.get_workspace();
-    if (void 0 != i && i.rendered ? n._xml = n.xml.workspace_element_to_dom_with_xy(r) : n._xml = n.xml.workspace_element_to_dom(r), a.base.is_block_svg(r)) {
+    if (void 0 != i && i.rendered) {
+      n._xml = n.xml.workspace_element_to_dom_with_xy(r);
+    } else {
+      n._xml = n.xml.workspace_element_to_dom(r);
+    }
+    if (a.base.is_block_svg(r)) {
       n.ids = r.get_descendant_ids();
       n.is_shadow = r.is_shadow();
       n._element_json = n.json.block_to_json(r);

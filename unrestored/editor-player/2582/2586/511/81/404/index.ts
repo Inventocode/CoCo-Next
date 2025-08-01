@@ -61,7 +61,9 @@ var y = function () {
     for (var n, o, i = new Array(), a = 0, u = 0, s = !1; a < r.getHeight();) {
       var c = t.findVertices(r, a, u);
       if (null != c[0] || null != c[3]) {
-        if (s = !0, i.push(c), !e) {
+        s = !0;
+        i.push(c);
+        if (!e) {
           break;
         }
         if (null != c[2]) {
@@ -1259,7 +1261,13 @@ var x = function () {
   function t() {}
   t.decode = function (e, r, n, o, i, u, s) {
     for (var c, f = new _(e, r, n, o, i), h = null, l = null, d = !0;; d = !1) {
-      if (null != r && (h = t.getRowIndicatorColumn(e, f, r, !0, u, s)), null != o && (l = t.getRowIndicatorColumn(e, f, o, !1, u, s)), null == (c = t.merge(h, l))) {
+      if (null != r) {
+        h = t.getRowIndicatorColumn(e, f, r, !0, u, s);
+      }
+      if (null != o) {
+        l = t.getRowIndicatorColumn(e, f, o, !1, u, s);
+      }
+      if (null == (c = t.merge(h, l))) {
         throw a.a.getNotFoundInstance();
       }
       var p = c.getBoundingBox();
@@ -1323,7 +1331,8 @@ var x = function () {
     try {
       for (var u = F(o), s = u.next(); !s.done; s = u.next()) {
         var c = s.value;
-        if (a += i - c, c > 0) {
+        a += i - c;
+        if (c > 0) {
           break;
         }
       }
@@ -1454,7 +1463,8 @@ var x = function () {
           u[c]++;
           break;
         }
-        if (u[c] = 0, c === u.length - 1) {
+        u[c] = 0;
+        if (c === u.length - 1) {
           throw o.a.getChecksumInstance();
         }
       }
@@ -1534,13 +1544,19 @@ var x = function () {
     var a;
     var u = o ? 1 : -1;
     var s = null;
-    if (t.isValidBarcodeColumn(e, r - u) && (s = e.getDetectionResultColumn(r - u).getCodeword(n)), null != s) {
+    if (t.isValidBarcodeColumn(e, r - u)) {
+      s = e.getDetectionResultColumn(r - u).getCodeword(n);
+    }
+    if (null != s) {
       return o ? s.getEndX() : s.getStartX();
     }
     if (null != (s = e.getDetectionResultColumn(r).getCodewordNearby(n))) {
       return o ? s.getStartX() : s.getEndX();
     }
-    if (t.isValidBarcodeColumn(e, r - u) && (s = e.getDetectionResultColumn(r - u).getCodewordNearby(n)), null != s) {
+    if (t.isValidBarcodeColumn(e, r - u)) {
+      s = e.getDetectionResultColumn(r - u).getCodewordNearby(n);
+    }
+    if (null != s) {
       return o ? s.getEndX() : s.getStartX();
     }
     for (var c = 0; t.isValidBarcodeColumn(e, r - u);) {

@@ -9,7 +9,9 @@ function i(e, t) {
     return !1;
   }
   for (var n = 0; n < e.length; n++) {
-    if (i = e[n], o = t[n], !(i === o || r(i) && r(o))) {
+    i = e[n];
+    o = t[n];
+    if (!(i === o || r(i) && r(o))) {
       return !1;
     }
   }

@@ -221,7 +221,10 @@ var u = function () {
     this.listeners_.push(this.events.bind_event_with_checks(e, "mousedown", void 0, this.block_mouse_down(t)));
   };
   e.prototype.xml_to_flyout_dom = function (e, t, n, r) {
-    if (void 0 === r && (r = this.workspace_), !this.targetWorkspace_) {
+    if (void 0 === r) {
+      r = this.workspace_;
+    }
+    if (!this.targetWorkspace_) {
       throw new Error("Trying to construct flyout dom before setting target workspace. ");
     }
     var i = e.tagName.toUpperCase();
@@ -285,7 +288,11 @@ var u = function () {
     var t = this;
     if (this.workspace_ && this.svg_group) {
       var n;
-      if (this.events.disable(), this.workspace_.set_resizes_enabled(!1), this.hide(), this.clear_old_blocks(), "string" == typeof e) {
+      this.events.disable();
+      this.workspace_.set_resizes_enabled(!1);
+      this.hide();
+      this.clear_old_blocks();
+      if ("string" == typeof e) {
         var r = this.workspace_.get_target_workspace();
         if (!r) {
           return void console.error("Workspace has no target workspace.");
@@ -372,7 +379,12 @@ var u = function () {
     }
   };
   e.prototype.position_at = function (e, t, n, r) {
-    if (this.svg_group && (this.svg_group.setAttribute("width", e.toString()), this.svg_group.setAttribute("height", t.toString()), this.utils.set_transform_style(this.svg_group, n, r)), this.scrollbar_) {
+    if (this.svg_group) {
+      this.svg_group.setAttribute("width", e.toString());
+      this.svg_group.setAttribute("height", t.toString());
+      this.utils.set_transform_style(this.svg_group, n, r);
+    }
+    if (this.scrollbar_) {
       var i = o.vec2.fromValues(n, r);
       this.scrollbar_.set_origin(i);
       this.scrollbar_.resize();
@@ -381,7 +393,8 @@ var u = function () {
   e.prototype.set_container_visible = function (e) {
     if (this.svg_group) {
       var t = e != this.containerVisible_;
-      if (this.containerVisible_ = e, t) {
+      this.containerVisible_ = e;
+      if (t) {
         var n = this.update_display();
         this.svg_group.style.display = n ? "block" : "none";
       }
@@ -427,7 +440,8 @@ var u = function () {
     return r;
   };
   e.prototype.init = function (e) {
-    if (this.targetWorkspace_ = e, !this.workspace_) {
+    this.targetWorkspace_ = e;
+    if (!this.workspace_) {
       throw new Error("this.workspace_ can not be undefined");
     }
     this.workspace_.set_target_workspace(e);

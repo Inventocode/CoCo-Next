@@ -52,7 +52,8 @@ var u = function () {
     }
   };
   e.prototype.set_scale = function (e) {
-    if (this.scale_ = e, this.drag_group_) {
+    this.scale_ = e;
+    if (this.drag_group_) {
       var t = this.drag_group_.getAttribute("transform");
       var n = "scale(" + e + ")";
       this.drag_group_.setAttribute("transform", t ? t.replace(/scale\([0-9\.]+\)/, n) : n);

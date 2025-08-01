@@ -34,7 +34,10 @@ exports.default = function (e, t, n) {
         if (e.isImportDeclaration()) {
           n = "import";
         } else {
-          if (e.isExportDefaultDeclaration() && (e = e.get("declaration")), e.isExportNamedDeclaration()) {
+          if (e.isExportDefaultDeclaration()) {
+            e = e.get("declaration");
+          }
+          if (e.isExportNamedDeclaration()) {
             if (e.node.declaration) {
               e = e.get("declaration");
             } else if (t && e.node.source && e.get("source").isStringLiteral()) {
@@ -194,7 +197,8 @@ exports.default = function (e, t, n) {
           f(e);
           var t = p(e.get("local"), n);
           var r = p(e.get("exported"), n);
-          if (i.reexports.set(r, t), "__esModule" === r) {
+          i.reexports.set(r, t);
+          if ("__esModule" === r) {
             throw e.get("exported").buildCodeFrameError('Illegal export "__esModule".');
           }
         });

@@ -242,7 +242,8 @@ function E() {
       n.f();
     }
   }
-  if (i.chainOf = t, t.length >= 2 && "type" in t[0] && "array" === t[0].type && !("each" in t[1])) {
+  i.chainOf = t;
+  if (t.length >= 2 && "type" in t[0] && "array" === t[0].type && !("each" in t[1])) {
     throw new Error('An assertValueType("array") validator can only be followed by an assertEach(...) validator.');
   }
   return i;

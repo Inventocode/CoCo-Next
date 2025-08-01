@@ -39,7 +39,8 @@ var h = function () {
           break;
         }
         var s = t.readCode(e, u, 5);
-        if (u += 5, 0 === s) {
+        u += 5;
+        if (0 === s) {
           if (r - u < 11) {
             break;
           }

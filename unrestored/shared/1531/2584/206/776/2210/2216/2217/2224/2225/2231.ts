@@ -19,7 +19,8 @@ module.exports = function (e, t, n) {
   var g = "data" + A;
   var v = e.baseId;
   var m = e.opts.strictKeywords ? "object" == typeof a && Object.keys(a).length > 0 || !1 === a : e.util.schemaHasRules(a, e.RULES.all);
-  if (r += "var " + d + " = errors;var " + f + ";", m) {
+  r += "var " + d + " = errors;var " + f + ";";
+  if (m) {
     var y = e.compositeRule;
     e.compositeRule = h.compositeRule = !0;
     h.schema = a;

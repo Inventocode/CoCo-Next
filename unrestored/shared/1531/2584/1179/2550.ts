@@ -196,7 +196,8 @@ exports.init_math_blocks = function (e) {
     },
     removeMutation: function () {
       var t = e.di_container.get(r.BINDING.events);
-      if (this.remove_input("DEGREES"), t.is_enabled()) {
+      this.remove_input("DEGREES");
+      if (t.is_enabled()) {
         var n = e.di_container.get(r.BINDING.ChangeEvent);
         t.fire(n("mutation", {
           block: this,

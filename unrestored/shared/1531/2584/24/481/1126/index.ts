@@ -18,7 +18,16 @@ exports.Decoder = f;
 var u = exports.ERROR + '"encode error"';
 function l(e) {
   var n = "" + e.type;
-  if (exports.BINARY_EVENT !== e.type && exports.BINARY_ACK !== e.type || (n += e.attachments + "-"), e.nsp && "/" !== e.nsp && (n += e.nsp + ","), null != e.id && (n += e.id), null != e.data) {
+  if (!(exports.BINARY_EVENT !== e.type && exports.BINARY_ACK !== e.type)) {
+    n += e.attachments + "-";
+  }
+  if (e.nsp && "/" !== e.nsp) {
+    n += e.nsp + ",";
+  }
+  if (null != e.id) {
+    n += e.id;
+  }
+  if (null != e.data) {
     var i = function (e) {
       try {
         return JSON.stringify(e);
@@ -48,7 +57,8 @@ function h(e) {
   };
 }
 c.prototype.encode = function (e, n) {
-  if (r("encoding packet %j", e), exports.BINARY_EVENT === e.type || exports.BINARY_ACK === e.type) {
+  r("encoding packet %j", e);
+  if (exports.BINARY_EVENT === e.type || exports.BINARY_ACK === e.type) {
     (function (e, t) {
       o.removeBlobs(e, function (e) {
         var n = o.deconstructPacket(e);
@@ -154,7 +164,8 @@ f.prototype.destroy = function () {
   }
 };
 d.prototype.takeBinaryData = function (e) {
-  if (this.buffers.push(e), this.buffers.length === this.reconPack.attachments) {
+  this.buffers.push(e);
+  if (this.buffers.length === this.reconPack.attachments) {
     var t = o.reconstructPacket(this.reconPack, this.buffers);
     this.finishedReconstruction();
     return t;

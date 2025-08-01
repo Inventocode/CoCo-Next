@@ -127,7 +127,22 @@ var l = function (e) {
       }
       var n = 0;
       var r = t / i.workspace_.get_scale();
-      if (void 0 !== e.left ? n = e.left : void 0 !== e.right ? n = r - e.right - e.width : "center" === e.align ? n = (r - e.width) / 2 : "right" === e.align && (n = r - i.padding_right - e.margin_right - e.width), s) {
+      if (void 0 !== e.left) {
+        n = e.left;
+      } else {
+        if (void 0 !== e.right) {
+          n = r - e.right - e.width;
+        } else {
+          if ("center" === e.align) {
+            n = (r - e.width) / 2;
+          } else {
+            if ("right" === e.align) {
+              n = r - i.padding_right - e.margin_right - e.width;
+            }
+          }
+        }
+      }
+      if (s) {
         return {
           x: n,
           y: a
@@ -172,11 +187,14 @@ var l = function (e) {
     }
     if (e.inline || this.current_item_line) {
       (function () {
-        if (i.current_item_line || (i.current_item_line = {
-          offset_left: o,
-          offset_right: i.padding_right,
-          height: e.height
-        }), "center" === e.align) {
+        if (!i.current_item_line) {
+          i.current_item_line = {
+            offset_left: o,
+            offset_right: i.padding_right,
+            height: e.height
+          };
+        }
+        if ("center" === e.align) {
           i.init_flyout_button(e);
           i.excute_after_next_reflow.push(function (t) {
             var n = t / i.workspace_.get_scale();
@@ -341,7 +359,8 @@ var l = function (e) {
       if (this.svg_background_ && this.svg_group) {
         var e = this.targetWorkspace_.get_metrics();
         if (e) {
-          if (this.height_ = e.viewHeight, this.is_visible()) {
+          this.height_ = e.viewHeight;
+          if (this.is_visible()) {
             var t = this.compute_background_path(this.width_, this.height_);
             this.svg_background_.setAttribute("d", t);
           } else {

@@ -430,7 +430,10 @@ var C = function () {
     for (var n = 255 & this.text[e], o = A[t.getMode()][n] > 0, i = null, a = 0; a <= 4; a++) {
       var u = A[a][n];
       if (u > 0) {
-        if (null == i && (i = t.endBinaryShift(e)), !o || a === t.getMode() || 2 === a) {
+        if (null == i) {
+          i = t.endBinaryShift(e);
+        }
+        if (!o || a === t.getMode() || 2 === a) {
           var s = i.latchAndAppend(a, u);
           r.push(s);
         }
@@ -473,7 +476,11 @@ var C = function () {
   };
   t.updateStateForPair = function (t, e, r, n) {
     var o = t.endBinaryShift(e);
-    if (n.push(o.latchAndAppend(4, r)), 4 !== t.getMode() && n.push(o.shiftAndAppend(4, r)), 3 === r || 4 === r) {
+    n.push(o.latchAndAppend(4, r));
+    if (4 !== t.getMode()) {
+      n.push(o.shiftAndAppend(4, r));
+    }
+    if (3 === r || 4 === r) {
       var i = o.latchAndAppend(2, 16 - r).latchAndAppend(2, 1);
       n.push(i);
     }

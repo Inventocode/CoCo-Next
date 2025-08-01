@@ -63,7 +63,10 @@ function proxyOpen(): void {
         if (typeof url == "string") {
             url = new URL(url, location.href)
         }
-        if (url?.hostname.endsWith("coco.codemao.cn")) {
+        if (
+            url?.hostname.endsWith("coco.codemao.cn") ||
+            url?.hostname == location.hostname
+        ) {
             url.protocol = location.protocol
             url.host = location.host
         }

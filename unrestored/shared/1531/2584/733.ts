@@ -2,7 +2,7 @@
 
 var r = require("./0/index");
 var o = require("./8");
-var i = (module => {
+var i = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -13,7 +13,7 @@ var i = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(o);
+}(o);
 var _a;
 _a = function (e) {
   var t;

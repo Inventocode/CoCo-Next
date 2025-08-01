@@ -38,7 +38,10 @@ exports.lzw = function (e, t, n) {
         v++;
         continue;
       }
-      if (u = f & i, f >>= a, h -= a, u > r || u == s) {
+      u = f & i;
+      f >>= a;
+      h -= a;
+      if (u > r || u == s) {
         break;
       }
       if (u == o) {

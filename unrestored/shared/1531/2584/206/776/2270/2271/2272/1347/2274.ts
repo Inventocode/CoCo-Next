@@ -669,7 +669,8 @@ he = me(function (e, t) {
   var r;
   var i;
   for (n = 0, r = t.length; n < r; ++n) {
-    if (i = n, t[n] === e) {
+    i = n;
+    if (t[n] === e) {
       return i;
     }
   }
@@ -692,7 +693,8 @@ _e = me(function (e, t) {
   var r;
   var i;
   for (n = 0, r = t.length; n < r; ++n) {
-    if (i = n, e(t[n])) {
+    i = n;
+    if (e(t[n])) {
       return i;
     }
   }

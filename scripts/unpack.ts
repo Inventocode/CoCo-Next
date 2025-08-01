@@ -268,6 +268,28 @@ function unminimize(modules: ModuleMap): void {
                     t.returnStatement(expressions.slice(-1)[0])
                 ])
             },
+            IfStatement(path: NodePath<t.IfStatement>): void {
+                const { parentPath } = path
+                const { test } = path.node
+                if (
+                    !parentPath.isProgram() &&
+                    !parentPath.isBlockStatement()
+                ) {
+                    return
+                }
+                if (!t.isSequenceExpression(test)) {
+                    return
+                }
+                const { expressions } = test
+                path.replaceWithMultiple([
+                    ...expressions.slice(0, -1).map(t.expressionStatement),
+                    {
+                        ...path.node,
+                        test: expressions.slice(-1)[0]!
+                    }
+                ])
+
+            },
             Statement(path: NodePath<t.Statement>): void {
                 if (path.isBlockStatement()) {
                     return
@@ -1004,7 +1026,7 @@ const PublicPathTemplate: (arg?: template.PublicReplacements) => t.Expression = 
     location.origin + location.pathname + "/"
 `)
 const RequireDefaultTemplate: (arg?: template.PublicReplacements) => t.Expression = template.expression(`
-    ${((module: { __esModule?: boolean, default?: unknown }): unknown => {
+    ${(function __importDefault(module: { __esModule?: boolean, default?: unknown }): unknown {
         var defaultExport: () => unknown = module && module.__esModule ? function(): unknown {
             return module.default
         } : function(): unknown {
@@ -1033,7 +1055,8 @@ function transformModulesExport(modules: ModuleMap): void {
         function replace(
             path: NodePath,
             exported: string,
-            local: t.Expression
+            local: t.Expression,
+            dynamic: boolean
         ): void {
             exported = module.exportsNameMap[exported] ?? exported
             if (typeof exported != "string") {
@@ -1082,6 +1105,11 @@ function transformModulesExport(modules: ModuleMap): void {
                             path.replaceWith(local)
                         }
                     }
+                } else if (dynamic) {
+                    path.replaceWith(DynamicExportTemplate({
+                        LOCAL: local,
+                        EXPORTED: t.stringLiteral(exported)
+                    }))
                 } else {
                     path.replaceWith(t.assignmentExpression(
                         "=",
@@ -1091,27 +1119,38 @@ function transformModulesExport(modules: ModuleMap): void {
                 }
             } else {
                 path.skip()
-                path.replaceWith(t.assignmentExpression(
-                    "=",
-                    t.memberExpression(t.identifier("exports"), t.identifier(exported)),
-                    local
-                ))
+                if (dynamic) {
+                    path.replaceWith(DynamicExportTemplate({
+                        LOCAL: local,
+                        EXPORTED: t.stringLiteral(exported)
+                    }))
+                } else {
+                    path.replaceWith(t.assignmentExpression(
+                        "=",
+                        t.memberExpression(t.identifier("exports"), t.identifier(exported)),
+                        local
+                    ))
+                }
             }
         }
         traverse(module.AST, {
             CallExpression(path: NodePath<t.CallExpression>): void {
-                const callee: NodePath = path.get("callee")
-                if (!callee.isMemberExpression({ computed: false })) {
+                const calleePath: NodePath = path.get("callee")
+                if (!calleePath.isMemberExpression({ computed: false })) {
                     return
                 }
-                const calleeObject: NodePath = callee.get("object")
-                const calleeProperty: NodePath = callee.get("property")
+                const calleeObject: NodePath = calleePath.get("object")
+                const calleeProperty: NodePath = calleePath.get("property")
                 if (
                     calleeObject.isIdentifier({ name: module.args[2] }) &&
                     calleeObject.scope.getBinding(calleeObject.node.name) == null &&
                     calleeProperty.isIdentifier({ name: "r" })
                 ) {
-                    path.remove()
+                    if (module.AST.program.sourceType == "module") {
+                        path.remove()
+                    } else {
+                        calleePath.replaceWith(DefineESModuleTemplate())
+                    }
                     return
                 }
                 let exportVar, exportedName, exportedFunction
@@ -1146,9 +1185,7 @@ function transformModulesExport(modules: ModuleMap): void {
                     ))
                     return
                 }
-                if (localName.isIdentifier()) {
-                    replace(path, exportedName.node.value, localName.node)
-                } else if (localName.isMemberExpression()) {
+                if (localName.isMemberExpression()) {
                     const localModuleName: NodePath = localName.get("object")
                     if (!localModuleName.isIdentifier()) {
                         return
@@ -1173,6 +1210,8 @@ function transformModulesExport(modules: ModuleMap): void {
                         )],
                         t.stringLiteral(getImportPath(module, importedModule))
                     ))
+                } else if (localName.node != null) {
+                    replace(path, exportedName.node.value, localName.node, true)
                 }
             },
             AssignmentExpression(path: NodePath<t.AssignmentExpression>): void {
@@ -1202,7 +1241,7 @@ function transformModulesExport(modules: ModuleMap): void {
                     return
                 }
                 const local: NodePath<t.Expression> = path.get("right")
-                replace(path, exported, local.node)
+                replace(path, exported, local.node, false)
             },
             IfStatement(path: NodePath<t.IfStatement>): void {
                 const test: NodePath<t.Expression> = path.get("test")
@@ -1285,6 +1324,27 @@ function transformModulesExport(modules: ModuleMap): void {
     }
     bar.stop()
 }
+
+const DynamicExportTemplate: (arg?: template.PublicReplacements) => t.Expression = template.expression(`
+    Object.defineProperty(exports, EXPORTED, {
+        get: function () {
+            return LOCAL
+        },
+        enumerable: true
+    })
+`)
+const DefineESModuleTemplate: (arg?: template.PublicReplacements) => t.Expression = template.expression(`
+    ${(function __defineESModule(exports: unknown): void {
+        if (typeof Symbol != "undefined" && Symbol.toStringTag) {
+            Object.defineProperty(exports, Symbol.toStringTag, {
+                value: "Module"
+            })
+        }
+        Object.defineProperty(exports, "__esModule", {
+            value: true
+        })
+    }).toString()}
+`)
 
 /**
  * 获取导入路径

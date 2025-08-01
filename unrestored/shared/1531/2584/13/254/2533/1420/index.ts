@@ -50,7 +50,10 @@ module.exports = function (e, t, n) {
   function E() {
     var e = i();
     var n = y(e);
-    if (c = arguments, u = this, h = e, n) {
+    c = arguments;
+    u = this;
+    h = e;
+    if (n) {
       if (void 0 === d) {
         return m(h);
       }

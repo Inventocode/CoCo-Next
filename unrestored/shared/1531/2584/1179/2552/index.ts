@@ -121,7 +121,11 @@ exports.init_text_blocks = function (e) {
       var l = this.shadow_ids[this.itemCount_] || (0, i.gen_uid)();
       this.shadow_ids[this.itemCount_] = l;
       var u = t || "";
-      if (null === (n = this.append_value_input(c, "TITLE_TAIL", void 0, (0, s.text_shadow)(u, l)).connection) || void 0 === n || n.respawn_shadow(), this.itemCount_++, this.itemCount_ > 2) {
+      if (!(null === (n = this.append_value_input(c, "TITLE_TAIL", void 0, (0, s.text_shadow)(u, l)).connection) || void 0 === n)) {
+        n.respawn_shadow();
+      }
+      this.itemCount_++;
+      if (this.itemCount_ > 2) {
         var d = this.get_input("MUTATE_BUTTON");
         if (d && !d.get_field("REMOVE")) {
           var p = e.di_container.get(r.BINDING.MutationRemoveButton);
@@ -145,7 +149,8 @@ exports.init_text_blocks = function (e) {
       var n = this.itemCount_ - 1;
       var o = "ADD" + n;
       var a = this.get_input(o);
-      if (this.itemCount_--, this.itemCount_ <= 2) {
+      this.itemCount_--;
+      if (this.itemCount_ <= 2) {
         var s = this.get_input("MUTATE_BUTTON");
         if (s && s.get_field("REMOVE")) {
           s.remove_field("REMOVE");
@@ -167,7 +172,8 @@ exports.init_text_blocks = function (e) {
           this.shadow_ids[n] = (null === p || void 0 === p ? void 0 : p.getAttribute("id")) || (0, i.gen_uid)();
           c = (null === (t = null === p || void 0 === p ? void 0 : p.firstChild) || void 0 === t ? void 0 : t.textContent) || "";
         }
-        if (this.remove_input(o), l.is_enabled()) {
+        this.remove_input(o);
+        if (l.is_enabled()) {
           var f = e.di_container.get(r.BINDING.ChangeEvent);
           l.fire(f("mutation", {
             block: this,
@@ -194,7 +200,8 @@ exports.init_text_blocks = function (e) {
       for (var o = 0; o < this.itemCount_; o++) {
         if (!this.get_input("ADD" + o)) {
           var a = (0, i.gen_uid)();
-          if (this.shadow_ids[o] = a, 0 == o) {
+          this.shadow_ids[o] = a;
+          if (0 == o) {
             this.append_shadow_input("ADD" + o, (0, s.text_shadow)("ab", a));
             continue;
           }

@@ -9,7 +9,11 @@ module.exports = function (e, t) {
   var n;
   var s = e[a];
   if (void 0 !== s) {
-    if (void 0 === t && (t = "default"), n = s.call(e, t), !r(n) || o(n)) {
+    if (void 0 === t) {
+      t = "default";
+    }
+    n = s.call(e, t);
+    if (!r(n) || o(n)) {
       return n;
     }
     throw TypeError("Can't convert object to primitive value");

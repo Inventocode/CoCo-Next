@@ -133,7 +133,11 @@ var G = {
   },
   BlockScoped: function (e) {
     var t = e.scope;
-    if (t.path === e && (t = t.parent), t.getBlockParent().registerDeclaration(e), e.isClassDeclaration() && e.node.id) {
+    if (t.path === e) {
+      t = t.parent;
+    }
+    t.getBlockParent().registerDeclaration(e);
+    if (e.isClassDeclaration() && e.node.id) {
       var n = e.node.id.name;
       e.scope.bindings[n] = e.scope.parent.getBinding(n);
     }
@@ -821,7 +825,8 @@ var $ = function () {
           constantViolations: [],
           assignments: []
         };
-        if (this.crawling = !0, "Program" !== e.type && G._exploded) {
+        this.crawling = !0;
+        if ("Program" !== e.type && G._exploded) {
           var r;
           var i = s(G.enter);
           try {

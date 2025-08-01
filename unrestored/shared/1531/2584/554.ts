@@ -195,7 +195,8 @@ var y = function () {
   };
   e.prototype.binarySearch = function (e) {
     for (var t = e.low, n = e.high, r = e.offset, o = 0, i = 0; t <= n;) {
-      if (o = t + Math.floor((n - t) / 2), (i = this.getSizeAndPositionForIndex(o).offset) === r) {
+      o = t + Math.floor((n - t) / 2);
+      if ((i = this.getSizeAndPositionForIndex(o).offset) === r) {
         return o;
       }
       if (i < r) {
@@ -428,12 +429,18 @@ var T = function (e) {
       width: m
     });
     var S = l({}, O, ((e = {})[g[p]] = this.sizeAndPositionManager.getTotalSize(), e));
-    if (null != f && 0 !== f.length && (f.forEach(function (e) {
-      return C.push(c({
-        index: e,
-        style: t.getStyle(e, !0)
-      }));
-    }), p === s.HORIZONTAL && (S.display = "flex")), "undefined" !== typeof y && "undefined" !== typeof w) {
+    if (null != f && 0 !== f.length) {
+      f.forEach(function (e) {
+        return C.push(c({
+          index: e,
+          style: t.getStyle(e, !0)
+        }));
+      });
+      if (p === s.HORIZONTAL) {
+        S.display = "flex";
+      }
+    }
+    if ("undefined" !== typeof y && "undefined" !== typeof w) {
       for (var I = y; I <= w; I++) {
         if (!(null != f && f.includes(I))) {
           C.push(c({

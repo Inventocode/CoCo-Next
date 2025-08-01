@@ -458,9 +458,10 @@ var Q = Object.freeze({
       var o = e.quasi.quasis.map(function (e) {
         return e.value.cooked;
       });
-      if (o.raw = e.quasi.quasis.map(function (e) {
+      o.raw = e.quasi.quasis.map(function (e) {
         return e.value.raw;
-      }), i === String.raw) {
+      });
+      if (i === String.raw) {
         return {
           value: i.apply(void 0, [o].concat(Object(c.a)(r)))
         };
@@ -555,7 +556,16 @@ function Y(e, t) {
 function q(e) {
   var t = e.parent;
   var n = [];
-  if ("MethodDefinition" === t.type && t.static && n.push("static"), e.async && n.push("async"), e.generator && n.push("generator"), "ArrowFunctionExpression" === e.type) {
+  if ("MethodDefinition" === t.type && t.static) {
+    n.push("static");
+  }
+  if (e.async) {
+    n.push("async");
+  }
+  if (e.generator) {
+    n.push("generator");
+  }
+  if ("ArrowFunctionExpression" === e.type) {
     n.push("arrow", "function");
   } else if ("Property" === t.type || "MethodDefinition" === t.type) {
     if ("constructor" === t.kind) {
@@ -705,7 +715,9 @@ function ne(e, t, n) {
   var a;
   var s;
   if ("number" === typeof e) {
-    if (i = t, o = n, !((r = 0 | e) >= 1)) {
+    i = t;
+    o = n;
+    if (!((r = 0 | e) >= 1)) {
       throw new TypeError("'times' should be a positive integer.");
     }
   } else {
@@ -736,7 +748,8 @@ var ae = function () {
     var n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
     var r = n.escaped;
     var i = void 0 !== r && r;
-    if (Object(o.a)(this, e), !(t instanceof RegExp)) {
+    Object(o.a)(this, e);
+    if (!(t instanceof RegExp)) {
       throw new TypeError("'pattern' should be a RegExp instance.");
     }
     if (!t.flags.includes("g")) {

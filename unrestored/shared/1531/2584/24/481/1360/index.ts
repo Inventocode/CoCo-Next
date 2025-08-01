@@ -97,7 +97,8 @@ h.prototype.packet = function (e) {
   this.io.packet(e);
 };
 h.prototype.onopen = function () {
-  if (c("transport is open - connecting"), "/" !== this.nsp) {
+  c("transport is open - connecting");
+  if ("/" !== this.nsp) {
     if (this.query) {
       var e = "object" === typeof this.query ? u.encode(this.query) : this.query;
       c("sending connect packet with query %s", e);

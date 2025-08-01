@@ -42,7 +42,13 @@
     }
     var r = null == e;
     var o = null == t;
-    if (e && e.toNumber && (e = e.toNumber()), t && t.toNumber && (t = t.toNumber()), r && o) {
+    if (e && e.toNumber) {
+      e = e.toNumber();
+    }
+    if (t && t.toNumber) {
+      t = t.toNumber();
+    }
+    if (r && o) {
       return 0;
     }
     if (r) {
@@ -139,7 +145,22 @@
       e = a(e);
       for (var n = 0;;) {
         var r = void 0;
-        if (e ? (r = e, 0 !== n && (r += "_" + n)) : t ? (r = t, 0 !== n && (r += "_" + n)) : r = "" + n, !this.existingKeys[r]) {
+        if (e) {
+          r = e;
+          if (0 !== n) {
+            r += "_" + n;
+          }
+        } else {
+          if (t) {
+            r = t;
+            if (0 !== n) {
+              r += "_" + n;
+            }
+          } else {
+            r = "" + n;
+          }
+        }
+        if (!this.existingKeys[r]) {
           this.existingKeys[r] = !0;
           return r;
         }
@@ -697,7 +718,9 @@
   });
   var se = function () {
     function e(e, t) {
-      if (this.beanWrappers = {}, this.destroyed = !1, e && e.beanClasses) {
+      this.beanWrappers = {};
+      this.destroyed = !1;
+      if (e && e.beanClasses) {
         this.contextParams = e;
         this.logger = t;
         this.logger.log(">> creating ag-Application Context");
@@ -815,7 +838,10 @@
       return r;
     };
     e.prototype.lookupBeanInstance = function (e, t, n) {
-      if (void 0 === n && (n = !1), "context" === t) {
+      if (void 0 === n) {
+        n = !1;
+      }
+      if ("context" === t) {
         return this;
       }
       if (this.contextParams.providedBeanInstances && this.contextParams.providedBeanInstances.hasOwnProperty(t)) {
@@ -995,7 +1021,12 @@
       this.firedEvents = {};
     }
     e.prototype.setBeans = function (e, t, n, r) {
-      if (void 0 === r && (r = null), this.logger = e.create("EventService"), this.frameworkOverrides = n, r) {
+      if (void 0 === r) {
+        r = null;
+      }
+      this.logger = e.create("EventService");
+      this.frameworkOverrides = n;
+      if (r) {
         var o = t.useAsyncEvents();
         this.addGlobalListener(r, o);
       }
@@ -1386,7 +1417,21 @@
           }
         });
       }
-      if (Oe.isRegistered(exports.ModuleNames.RichSelectModule) || "agRichSelect" !== this.colDef.cellEditor && "agRichSelectCellEditor" !== this.colDef.cellEditor || (Oe.isPackageBased() ? n("AG Grid: " + this.colDef.cellEditor + " can only be used with ag-grid-enterprise", "ColumnRichSelectMissing") : n("AG Grid: " + this.colDef.cellEditor + " can only be used with AG Grid Enterprise Module " + exports.ModuleNames.RichSelectModule, "ColumnRichSelectMissing")), Oe.isRegistered(exports.ModuleNames.DateTimeCellEditorModule) || "agRichSelect" !== this.colDef.cellEditor && "agDateTimeCellEditor" !== this.colDef.cellEditor || (Oe.isPackageBased() ? n("AG Grid: " + this.colDef.cellEditor + " can only be used with ag-grid-enterprise", "ColumnDateTimeMissing") : n("AG Grid: " + this.colDef.cellEditor + " can only be used with AG Grid Enterprise Module " + exports.ModuleNames.DateTimeCellEditorModule, "ColumnDateTimeMissing")), this.gridOptionsWrapper.isTreeData()) {
+      if (!(Oe.isRegistered(exports.ModuleNames.RichSelectModule) || "agRichSelect" !== this.colDef.cellEditor && "agRichSelectCellEditor" !== this.colDef.cellEditor)) {
+        if (Oe.isPackageBased()) {
+          n("AG Grid: " + this.colDef.cellEditor + " can only be used with ag-grid-enterprise", "ColumnRichSelectMissing");
+        } else {
+          n("AG Grid: " + this.colDef.cellEditor + " can only be used with AG Grid Enterprise Module " + exports.ModuleNames.RichSelectModule, "ColumnRichSelectMissing");
+        }
+      }
+      if (!(Oe.isRegistered(exports.ModuleNames.DateTimeCellEditorModule) || "agRichSelect" !== this.colDef.cellEditor && "agDateTimeCellEditor" !== this.colDef.cellEditor)) {
+        if (Oe.isPackageBased()) {
+          n("AG Grid: " + this.colDef.cellEditor + " can only be used with ag-grid-enterprise", "ColumnDateTimeMissing");
+        } else {
+          n("AG Grid: " + this.colDef.cellEditor + " can only be used with AG Grid Enterprise Module " + exports.ModuleNames.DateTimeCellEditorModule, "ColumnDateTimeMissing");
+        }
+      }
+      if (this.gridOptionsWrapper.isTreeData()) {
         ["rowGroup", "rowGroupIndex", "pivot", "pivotIndex"].forEach(function (t) {
           if (r(e[t])) {
             n("AG Grid: " + t + " is not possible when doing tree data, your column definition should not have " + t, "TreeDataCannotRowGroup");
@@ -1850,11 +1895,12 @@
       });
     };
     e.prototype.checkLeft = function () {
-      if (this.displayedChildren.forEach(function (t) {
+      this.displayedChildren.forEach(function (t) {
         if (t instanceof e) {
           t.checkLeft();
         }
-      }), this.displayedChildren.length > 0) {
+      });
+      if (this.displayedChildren.length > 0) {
         if (this.gridOptionsWrapper.isEnableRtl()) {
           var t = m(this.displayedChildren).getLeft();
           this.setLeft(t);
@@ -2553,7 +2599,8 @@
             }
           }
           if (l && u) {
-            if (o.push(l), e.some(function (e) {
+            o.push(l);
+            if (e.some(function (e) {
               return e instanceof Ie;
             })) {
               u.setChildren([a]);
@@ -2625,7 +2672,10 @@
     };
     t.prototype.applyColumnState = function (e, t) {
       var n = s(t.flex);
-      if (void 0 !== n && e.setFlex(n), e.getFlex() <= 0) {
+      if (void 0 !== n) {
+        e.setFlex(n);
+      }
+      if (e.getFlex() <= 0) {
         var r = s(t.width);
         if (null != r) {
           e.setActualWidth(r);
@@ -2874,7 +2924,8 @@
     "'": "&#39;"
   };
   function Ze(e, t) {
-    if (t = Math.floor(t), 0 === e.length || 0 === t) {
+    t = Math.floor(t);
+    if (0 === e.length || 0 === t) {
       return "";
     }
     var n = e.length * t;
@@ -3185,7 +3236,8 @@
         var e = this.viewportColumns.map(function (e) {
           return e.getId();
         }).join("#");
-        if (this.extractViewport(), e !== this.viewportColumns.map(function (e) {
+        this.extractViewport();
+        if (e !== this.viewportColumns.map(function (e) {
           return e.getId();
         }).join("#")) {
           var t = {
@@ -3215,7 +3267,10 @@
       return !e || !this.gridOptionsWrapper.isTreeData() || (console.warn("AG Grid: Pivot mode not available in conjunction Tree Data i.e. 'gridOptions.treeData: true'"), !1);
     };
     t.prototype.setPivotMode = function (e, t) {
-      if (void 0 === t && (t = "api"), e !== this.pivotMode && this.isPivotSettingAllowed(this.pivotMode)) {
+      if (void 0 === t) {
+        t = "api";
+      }
+      if (e !== this.pivotMode && this.isPivotSettingAllowed(this.pivotMode)) {
         this.pivotMode = e;
         this.autoGroupsNeedBuilding = !0;
         this.updateGridColumns();
@@ -3288,7 +3343,10 @@
       this.fireColumnResizedEvent(o, !0, "autosizeColumns");
     };
     t.prototype.fireColumnResizedEvent = function (e, t, n, r) {
-      if (void 0 === r && (r = null), e && e.length) {
+      if (void 0 === r) {
+        r = null;
+      }
+      if (e && e.length) {
         var o = {
           type: Ke.EVENT_COLUMN_RESIZED,
           columns: e,
@@ -3379,11 +3437,17 @@
             }
             s += f;
           }
-          if (n ? (c = !1, p.forEach(function (e) {
-            if (n(e)) {
-              c = !0;
-            }
-          })) : c = !0, c) {
+          if (n) {
+            c = !1;
+            p.forEach(function (e) {
+              if (n(e)) {
+                c = !0;
+              }
+            });
+          } else {
+            c = !0;
+          }
+          if (c) {
             if (0 === i.length && a) {
               if (!!r && r(l)) {
                 i.push(a);
@@ -3428,9 +3492,12 @@
     };
     t.prototype.updatePrimaryColumnList = function (e, t, n, r, o, a) {
       var s = this;
-      if (void 0 === a && (a = "api"), e && !i(e)) {
+      if (void 0 === a) {
+        a = "api";
+      }
+      if (e && !i(e)) {
         var c = !1;
-        if (e.forEach(function (e) {
+        e.forEach(function (e) {
           var o = s.getPrimaryColumn(e);
           if (o) {
             if (n) {
@@ -3447,7 +3514,8 @@
             r(o);
             c = !0;
           }
-        }), c) {
+        });
+        if (c) {
           if (this.autoGroupsNeedBuilding) {
             this.updateGridColumns();
           }
@@ -3754,7 +3822,10 @@
       }
     };
     t.prototype.setColumnAggFunc = function (e, t, n) {
-      if (void 0 === n && (n = "api"), e) {
+      if (void 0 === n) {
+        n = "api";
+      }
+      if (e) {
         var r = this.getPrimaryColumn(e);
         if (r) {
           r.setAggFunc(t);
@@ -3791,7 +3862,11 @@
       this.eventService.dispatchEvent(o);
     };
     t.prototype.moveColumns = function (e, t, n) {
-      if (void 0 === n && (n = "api"), this.columnAnimationService.start(), t > this.gridColumns.length - e.length) {
+      if (void 0 === n) {
+        n = "api";
+      }
+      this.columnAnimationService.start();
+      if (t > this.gridColumns.length - e.length) {
         console.warn("AG Grid: tried to insert columns in invalid location, toIndex = " + t);
         return void console.warn("AG Grid: remember that you should not count the moving columns when calculating the new index");
       }
@@ -3909,7 +3984,8 @@
       var e = this.getWidthOfColsInList(this.displayedColumnsCenter);
       var t = this.getWidthOfColsInList(this.displayedColumnsLeft);
       var n = this.getWidthOfColsInList(this.displayedColumnsRight);
-      if (this.bodyWidthDirty = this.bodyWidth !== e, this.bodyWidth !== e || this.leftWidth !== t || this.rightWidth !== n) {
+      this.bodyWidthDirty = this.bodyWidth !== e;
+      if (this.bodyWidth !== e || this.leftWidth !== t || this.rightWidth !== n) {
         this.bodyWidth = e;
         this.leftWidth = t;
         this.rightWidth = n;
@@ -4011,7 +4087,10 @@
     t.prototype.setColumnsPinned = function (e, t, n) {
       var r;
       var o = this;
-      if (void 0 === n && (n = "api"), "print" !== this.gridOptionsWrapper.getDomLayout()) {
+      if (void 0 === n) {
+        n = "api";
+      }
+      if ("print" !== this.gridOptionsWrapper.getDomLayout()) {
         this.columnAnimationService.start();
         r = !0 === t || t === Ee.PINNED_LEFT ? Ee.PINNED_LEFT : t === Ee.PINNED_RIGHT ? Ee.PINNED_RIGHT : null;
         this.actionOnGridColumns(e, function (e) {
@@ -4036,14 +4115,15 @@
       var a = this;
       if (!i(e)) {
         var s = [];
-        if (e.forEach(function (e) {
+        e.forEach(function (e) {
           var n = a.getGridColumn(e);
           if (n) {
             if (!1 !== t(n)) {
               s.push(n);
             }
           }
-        }), s.length && (this.updateDisplayedColumns(n), r(o) && o)) {
+        });
+        if (s.length && (this.updateDisplayedColumns(n), r(o) && o)) {
           var c = o();
           c.columns = s;
           c.column = 1 === s.length ? s[0] : null;
@@ -4214,7 +4294,10 @@
     };
     t.prototype.applyColumnState = function (e, t) {
       var n = this;
-      if (void 0 === t && (t = "api"), i(this.primaryColumns)) {
+      if (void 0 === t) {
+        t = "api";
+      }
+      if (i(this.primaryColumns)) {
         return !1;
       }
       if (e && e.state && !e.state.forEach) {
@@ -4455,7 +4538,7 @@
         return i[e.colId];
       });
       var c = [];
-      if (s.forEach(function (e, t) {
+      s.forEach(function (e, t) {
         var r = a && a[t];
         if (r && r.colId !== e.colId) {
           var o = n.getGridColumn(r.colId);
@@ -4463,7 +4546,8 @@
             c.push(o);
           }
         }
-      }), c.length) {
+      });
+      if (c.length) {
         var l = {
           type: Ke.EVENT_COLUMN_MOVED,
           columns: c,
@@ -4515,7 +4599,10 @@
         }
         var d = this.gridOptionsWrapper.getMinColWidth();
         var p = c("flex").value1;
-        if (void 0 !== p && e.setFlex(p), e.getFlex() <= 0) {
+        if (void 0 !== p) {
+          e.setFlex(p);
+        }
+        if (e.getFlex() <= 0) {
           var f = c("width").value1;
           if (null != f && d && f >= d) {
             e.setActualWidth(f, s);
@@ -4530,7 +4617,10 @@
           }
         }
         var m = c("sortIndex").value1;
-        if (void 0 !== m && e.setSortIndex(m), !a) {
+        if (void 0 !== m) {
+          e.setSortIndex(m);
+        }
+        if (!a) {
           var g = c("aggFunc").value1;
           if (void 0 !== g) {
             if ("string" === typeof g) {
@@ -4649,7 +4739,10 @@
       return n || r || o;
     };
     t.prototype.getDisplayNameForColumn = function (e, t, n) {
-      if (void 0 === n && (n = !1), !e) {
+      if (void 0 === n) {
+        n = !1;
+      }
+      if (!e) {
         return null;
       }
       var r = this.getHeaderName(e.getColDef(), e, null, null, t);
@@ -5059,11 +5152,12 @@
           return [e, t];
         }));
         var t = !0;
-        if (this.gridColumns.forEach(function (n) {
+        this.gridColumns.forEach(function (n) {
           if (e.has(n)) {
             t = !1;
           }
-        }), !t) {
+        });
+        if (!t) {
           var n = at(this.gridColumns.map(function (e) {
             return [e, !0];
           }));
@@ -5127,7 +5221,8 @@
       return t.concat(n);
     };
     t.prototype.addAutoGroupToGridColumns = function () {
-      if (this.createGroupAutoColumnsIfNeeded(), !o(this.groupAutoColumns)) {
+      this.createGroupAutoColumnsIfNeeded();
+      if (!o(this.groupAutoColumns)) {
         this.gridColumns = this.groupAutoColumns ? this.groupAutoColumns.concat(this.gridColumns) : this.gridColumns;
         var e = this.columnFactory.createForAutoGroups(this.groupAutoColumns, this.gridBalancedTree);
         this.gridBalancedTree = e.concat(this.gridBalancedTree);
@@ -5290,7 +5385,10 @@
         e = {};
       }
       var n = e.source ? e.source : "flex";
-      if (null != e.viewportWidth && (this.flexViewportWidth = e.viewportWidth), !this.flexViewportWidth) {
+      if (null != e.viewportWidth) {
+        this.flexViewportWidth = e.viewportWidth;
+      }
+      if (!this.flexViewportWidth) {
         return [];
       }
       var o = -1;
@@ -5329,7 +5427,14 @@
           var m = 0;
           var g = f.getMinWidth();
           var _ = f.getMaxWidth();
-          if (r(g) && h < g ? m = g : r(_) && h > _ && (m = _), m) {
+          if (r(g) && h < g) {
+            m = g;
+          } else {
+            if (r(_) && h > _) {
+              m = _;
+            }
+          }
+          if (m) {
             f.setActualWidth(m, n);
             v(s, f);
             c.push(f);
@@ -5810,7 +5915,8 @@
     t.prototype.setupParentsIntoColumns = function (e, t) {
       var n = this;
       e.forEach(function (e) {
-        if (e.setParent(t), e instanceof Se) {
+        e.setParent(t);
+        if (e instanceof Se) {
           var r = e;
           n.setupParentsIntoColumns(r.getChildren(), r);
         }
@@ -6046,7 +6152,8 @@
     var n = document.createElement("div");
     for (document.body.appendChild(n);;) {
       var r = 2 * e;
-      if (n.style.height = r + "px", r > t || n.clientHeight !== r) {
+      n.style.height = r + "px";
+      if (r > t || n.clientHeight !== r) {
         break;
       }
       e = r;
@@ -6115,7 +6222,10 @@
         return "-" + e + "-overflow-scrolling: touch";
       }).concat("overflow-scrolling: touch").join(";"));
       var r = window.getComputedStyle(t);
-      if ("touch" === r.overflowScrolling && (n = !0), !n) {
+      if ("touch" === r.overflowScrolling) {
+        n = !0;
+      }
+      if (!n) {
         for (var o = 0, i = e; o < i.length; o++) {
           if ("touch" === r[i[o] + "OverflowScrolling"]) {
             n = !0;
@@ -6217,7 +6327,8 @@
       if ($t(e, t)) {
         return !0;
       }
-      if (e = e.parentElement, n && ++r > n) {
+      e = e.parentElement;
+      if (n && ++r > n) {
         break;
       }
     }
@@ -7134,7 +7245,8 @@
             n[c][l] = "";
           }
         };
-        if (h(), '"' === p) {
+        h();
+        if ('"' === p) {
           if (o) {
             if ('"' === f) {
               n[c][l] += '"';
@@ -7253,7 +7365,8 @@
     message: function (e) {
       var t = document.createElement("div");
       var n = document.querySelector("#__ag__message");
-      if (t.innerHTML = e, !n) {
+      t.innerHTML = e;
+      if (!n) {
         n = _n('<div id="__ag__message" style="display: inline-block; position: absolute; top: 0px; left: 0px; color: white; background-color: black; z-index: 20; padding: 2px; border: 1px solid darkred; height: 200px; overflow-y: auto;"></div>');
         if (document.body) {
           document.body.appendChild(n);
@@ -7370,7 +7483,13 @@
     setAriaChecked: Er
   });
   function wr(e, t, n) {
-    if (void 0 === t && (t = !0), void 0 === n && (n = "-"), !e) {
+    if (void 0 === t) {
+      t = !0;
+    }
+    if (void 0 === n) {
+      n = "-";
+    }
+    if (!e) {
       return null;
     }
     var r = [e.getFullYear(), e.getMonth() + 1, e.getDate()].map(function (e) {
@@ -7585,7 +7704,10 @@
   function Dr(e, t, n, r) {
     var o = null;
     var i = n && n.getColDef().icons;
-    if (i && (o = i[e]), t && !o) {
+    if (i) {
+      o = i[e];
+    }
+    if (t && !o) {
       var a = t.getIcons();
       if (a) {
         o = a[e];
@@ -8289,7 +8411,8 @@
     };
     t.prototype.addAnnotatedGuiEventListeners = function () {
       var e = this;
-      if (this.removeAnnotatedGuiEventListeners(), this.eGui) {
+      this.removeAnnotatedGuiEventListeners();
+      if (this.eGui) {
         var t = this.getAgComponentMetaData("guiListenerMethods");
         if (t) {
           if (!this.annotatedGuiListeners) {
@@ -8361,7 +8484,10 @@
       return this.eGui.querySelector(e);
     };
     t.prototype.appendChild = function (e, t) {
-      if (t || (t = this.eGui), null != e) {
+      if (!t) {
+        t = this.eGui;
+      }
+      if (null != e) {
         if (kn(e)) {
           t.appendChild(e);
         } else {
@@ -8637,7 +8763,8 @@
     t.prototype.afterGuiAttached = function () {
       var e = this.gridOptionsWrapper.getLocaleTextFunc();
       var t = this.eInput;
-      if (t.setInputAriaLabel(e("ariaInputEditor", "Input Editor")), this.focusAfterAttached) {
+      t.setInputAriaLabel(e("ariaInputEditor", "Input Editor"));
+      if (this.focusAfterAttached) {
         if (!Pt()) {
           t.getFocusableElement().focus();
         }
@@ -8924,7 +9051,10 @@
       }
     };
     t.prototype.forceFocusOutOfContainer = function (e) {
-      if (void 0 === e && (e = !1), this.isFocusableContainer) {
+      if (void 0 === e) {
+        e = !1;
+      }
+      if (this.isFocusableContainer) {
         this.activateTabGuards();
         this.skipTabGuardFocus = !0;
         var t = e ? this.topTabGuard : this.bottomTabGuard;
@@ -9100,7 +9230,9 @@
       });
     };
     t.prototype.setParams = function (e) {
-      if (t.checkForDeprecatedParams(e), this.providedFilterParams = e, "keep" === e.newRowsAction) {
+      t.checkForDeprecatedParams(e);
+      this.providedFilterParams = e;
+      if ("keep" === e.newRowsAction) {
         this.newRowsActionKeep = !0;
       } else if ("clear" === e.newRowsAction) {
         this.newRowsActionKeep = !1;
@@ -9278,7 +9410,12 @@
       return this.newRowsActionKeep;
     };
     t.prototype.onUiChanged = function (e, t) {
-      if (void 0 === e && (e = !1), this.updateUiVisibility(), this.providedFilterParams.filterModifiedCallback(), this.applyActive) {
+      if (void 0 === e) {
+        e = !1;
+      }
+      this.updateUiVisibility();
+      this.providedFilterParams.filterModifiedCallback();
+      if (this.applyActive) {
         var n = this.isModelValid(this.getModelFromUi());
         rn(this.getRefElement("applyFilterButton"), !n);
       }
@@ -10111,7 +10248,8 @@
     t.prototype.setMenu = function () {
       var e = this;
       if (this.eMenu) {
-        if (this.currentShowMenu = this.workOutShowMenu(), this.currentShowMenu) {
+        this.currentShowMenu = this.workOutShowMenu();
+        if (this.currentShowMenu) {
           var t = this.gridOptionsWrapper.isSuppressMenuHide();
           this.addManagedListener(this.eMenu, "click", function () {
             return e.showMenu(e.eMenu);
@@ -10139,7 +10277,8 @@
     };
     t.prototype.setupSort = function () {
       var e = this;
-      if (this.currentSort = this.params.enableSorting, this.currentSort) {
+      this.currentSort = this.params.enableSorting;
+      if (this.currentSort) {
         var t = this.gridOptionsWrapper.isMultiSortKeyCtrl();
         this.addManagedListener(this.params.column, Ce.EVENT_MOVING_CHANGED, function () {
           e.lastMovingChanged = new Date().getTime();
@@ -10163,7 +10302,16 @@
       }
     };
     t.prototype.onSortChanged = function () {
-      if (Jt(this.getGui(), "ag-header-cell-sorted-asc", this.params.column.isSortAscending()), Jt(this.getGui(), "ag-header-cell-sorted-desc", this.params.column.isSortDescending()), Jt(this.getGui(), "ag-header-cell-sorted-none", this.params.column.isSortNone()), this.eSortAsc && Jt(this.eSortAsc, "ag-hidden", !this.params.column.isSortAscending()), this.eSortDesc && Jt(this.eSortDesc, "ag-hidden", !this.params.column.isSortDescending()), this.eSortNone) {
+      Jt(this.getGui(), "ag-header-cell-sorted-asc", this.params.column.isSortAscending());
+      Jt(this.getGui(), "ag-header-cell-sorted-desc", this.params.column.isSortDescending());
+      Jt(this.getGui(), "ag-header-cell-sorted-none", this.params.column.isSortNone());
+      if (this.eSortAsc) {
+        Jt(this.eSortAsc, "ag-hidden", !this.params.column.isSortAscending());
+      }
+      if (this.eSortDesc) {
+        Jt(this.eSortDesc, "ag-hidden", !this.params.column.isSortDescending());
+      }
+      if (this.eSortNone) {
         var e = !this.params.column.getColDef().unSortIcon && !this.gridOptionsWrapper.isUnSortIcon();
         Jt(this.eSortNone, "ag-hidden", e || !this.params.column.isSortNone());
       }
@@ -10750,8 +10898,14 @@
           u++;
         }
       }
-      if (t && this.group && (u += this.selectChildNodes(n, a)), !o) {
-        if (n && (r || !this.gridOptionsWrapper.isRowSelectionMulti()) && (u += this.selectionController.clearOtherNodes(this)), u > 0) {
+      if (t && this.group) {
+        u += this.selectChildNodes(n, a);
+      }
+      if (!o) {
+        if (n && (r || !this.gridOptionsWrapper.isRowSelectionMulti())) {
+          u += this.selectionController.clearOtherNodes(this);
+        }
+        if (u > 0) {
           this.selectionController.updateGroupsFromChildrenSelections();
           var d = {
             type: Ke.EVENT_SELECTION_CHANGED,
@@ -10995,11 +11149,16 @@
     };
     t.prototype.init = function (e) {
       var t = this;
-      if (this.rowNode = e.rowNode, this.column = e.column, this.onSelectionChanged(), this.addGuiEventListener("click", function (e) {
+      this.rowNode = e.rowNode;
+      this.column = e.column;
+      this.onSelectionChanged();
+      this.addGuiEventListener("click", function (e) {
         return Re(e);
-      }), this.addGuiEventListener("dblclick", function (e) {
+      });
+      this.addGuiEventListener("dblclick", function (e) {
         return Re(e);
-      }), this.addManagedListener(this.eCheckbox.getInputElement(), "click", function (e) {
+      });
+      this.addManagedListener(this.eCheckbox.getInputElement(), "click", function (e) {
         var n = t.eCheckbox.getValue();
         if (void 0 === t.eCheckbox.getPreviousValue()) {
           if (0 === t.onUncheckedClicked(e || {})) {
@@ -11012,7 +11171,11 @@
             t.onUncheckedClicked(e || {});
           }
         }
-      }), this.addManagedListener(this.rowNode, Ko.EVENT_ROW_SELECTED, this.onSelectionChanged.bind(this)), this.addManagedListener(this.rowNode, Ko.EVENT_DATA_CHANGED, this.onDataChanged.bind(this)), this.addManagedListener(this.rowNode, Ko.EVENT_SELECTABLE_CHANGED, this.onSelectableChanged.bind(this)), this.gridOptionsWrapper.getIsRowSelectableFunc() || this.checkboxCallbackExists()) {
+      });
+      this.addManagedListener(this.rowNode, Ko.EVENT_ROW_SELECTED, this.onSelectionChanged.bind(this));
+      this.addManagedListener(this.rowNode, Ko.EVENT_DATA_CHANGED, this.onDataChanged.bind(this));
+      this.addManagedListener(this.rowNode, Ko.EVENT_SELECTABLE_CHANGED, this.onSelectableChanged.bind(this));
+      if (this.gridOptionsWrapper.getIsRowSelectableFunc() || this.checkboxCallbackExists()) {
         var n = this.showOrHideSelect.bind(this);
         this.addManagedListener(this.eventService, Ke.EVENT_DISPLAYED_COLUMNS_CHANGED, n);
         this.addManagedListener(this.rowNode, Ko.EVENT_DATA_CHANGED, n);
@@ -11388,7 +11551,8 @@
       };
     };
     t.prototype.initComponent = function (e, t) {
-      if (this.context.createBean(e), null != e.init) {
+      this.context.createBean(e);
+      if (null != e.init) {
         return e.init(t);
       }
     };
@@ -11517,7 +11681,12 @@
       this.createGhost();
     };
     n.prototype.onDragStop = function (e) {
-      if (this.eventLastTime = null, this.dragging = !1, this.dragSource.onDragStopped && this.dragSource.onDragStopped(), this.lastDropTarget && this.lastDropTarget.onDragStop) {
+      this.eventLastTime = null;
+      this.dragging = !1;
+      if (this.dragSource.onDragStopped) {
+        this.dragSource.onDragStopped();
+      }
+      if (this.lastDropTarget && this.lastDropTarget.onDragStop) {
         var t = this.createDropTargetEvent(this.lastDropTarget, e, null, null, !1);
         this.lastDropTarget.onDragStop(t);
       }
@@ -11536,14 +11705,17 @@
       });
       var a = i.length;
       var s = null;
-      if (a > 0 && (s = 1 === a ? i[0] : i.reduce(function (e, t) {
-        if (!e) {
-          return t;
-        }
-        var n = e.getContainer();
-        var r = t.getContainer();
-        return n.contains(r) ? t : e;
-      })), s !== this.lastDropTarget) {
+      if (a > 0) {
+        s = 1 === a ? i[0] : i.reduce(function (e, t) {
+          if (!e) {
+            return t;
+          }
+          var n = e.getContainer();
+          var r = t.getContainer();
+          return n.contains(r) ? t : e;
+        });
+      }
+      if (s !== this.lastDropTarget) {
         this.leaveLastTargetIfExists(e, r, o, t);
         this.enterDragTargetIfExists(s, e, r, o, t);
         this.lastDropTarget = s;
@@ -12445,7 +12617,16 @@
       if (t === this.lastValue) {
         return !1;
       }
-      if (r(e.valueFormatted) ? this.eValue.innerHTML = e.valueFormatted : r(e.value) ? this.eValue.innerHTML = t : hn(this.eValue), this.filterManager.isSuppressFlashingCellsBecauseFiltering()) {
+      if (r(e.valueFormatted)) {
+        this.eValue.innerHTML = e.valueFormatted;
+      } else {
+        if (r(e.value)) {
+          this.eValue.innerHTML = t;
+        } else {
+          hn(this.eValue);
+        }
+      }
+      if (this.filterManager.isSuppressFlashingCellsBecauseFiltering()) {
         return !1;
       }
       if ("number" === typeof t && "number" === typeof this.lastValue) {
@@ -12661,7 +12842,8 @@
     Fi(t, e);
     t.prototype.init = function (e) {
       var t = this;
-      if (this.focusAfterAttached = e.cellStartedEdit, o(e.values)) {
+      this.focusAfterAttached = e.cellStartedEdit;
+      if (o(e.values)) {
         console.warn("AG Grid: no values found for select cellEditor");
       } else {
         this.startedByEnter = e.keyPress === _o.ENTER;
@@ -13392,7 +13574,8 @@
       if (!this.isEventFromFloatingFilter(n)) {
         e.prototype.setLastTypeFromModel.call(this, t);
         var r = this.canWeEditAfterModelFromParentFilter(t);
-        if (this.setEditable(r), r) {
+        this.setEditable(r);
+        if (r) {
           if (t) {
             var o = t;
             this.dateComp.setDate(Cr(o.dateFrom));
@@ -14131,7 +14314,22 @@
         this.gridOptions.sideBar = Ta.parse(this.gridOptions.sideBar);
       }
       var n = this.useAsyncEvents();
-      if (this.eventService.addGlobalListener(this.globalEventHandler.bind(this), n), this.isGroupSelectsChildren() && this.isSuppressParentsInRowNodes() && console.warn("AG Grid: 'groupSelectsChildren' does not work with 'suppressParentsInRowNodes', this selection method needs the part in rowNode to work"), this.isGroupSelectsChildren() && (this.isRowSelectionMulti() || console.warn("AG Grid: rowSelection must be 'multiple' for groupSelectsChildren to make sense"), this.isRowModelServerSide() && console.warn("AG Grid: group selects children is NOT support for Server Side Row Model. This is because the rows are lazy loaded, so selecting a group is not possible asthe grid has no way of knowing what the children are.")), this.isGroupRemoveSingleChildren() && this.isGroupHideOpenParents() && console.warn("AG Grid: groupRemoveSingleChildren and groupHideOpenParents do not work with each other, you need to pick one. And don't ask us how to us these together on our support forum either you will get the same answer!"), this.isRowModelServerSide()) {
+      this.eventService.addGlobalListener(this.globalEventHandler.bind(this), n);
+      if (this.isGroupSelectsChildren() && this.isSuppressParentsInRowNodes()) {
+        console.warn("AG Grid: 'groupSelectsChildren' does not work with 'suppressParentsInRowNodes', this selection method needs the part in rowNode to work");
+      }
+      if (this.isGroupSelectsChildren()) {
+        if (!this.isRowSelectionMulti()) {
+          console.warn("AG Grid: rowSelection must be 'multiple' for groupSelectsChildren to make sense");
+        }
+        if (this.isRowModelServerSide()) {
+          console.warn("AG Grid: group selects children is NOT support for Server Side Row Model. This is because the rows are lazy loaded, so selecting a group is not possible asthe grid has no way of knowing what the children are.");
+        }
+      }
+      if (this.isGroupRemoveSingleChildren() && this.isGroupHideOpenParents()) {
+        console.warn("AG Grid: groupRemoveSingleChildren and groupHideOpenParents do not work with each other, you need to pick one. And don't ask us how to us these together on our support forum either you will get the same answer!");
+      }
+      if (this.isRowModelServerSide()) {
         var o = function (e) {
           return "AG Grid: '" + e + "' is not supported on the Server-Side Row Model";
         };
@@ -15031,7 +15229,13 @@
           }
         }
       };
-      if (t("batchUpdateWaitMillis", "asyncTransactionWaitMillis", "23.1.x"), t("deltaRowDataMode", "immutableData", "23.1.x"), (e.immutableColumns || e.deltaColumnMode) && console.warn("AG Grid: since v24.0, immutableColumns and deltaColumnMode properties are gone. The grid now works like this as default. To keep column order maintained, set grid property applyColumnDefOrder=true"), t("suppressSetColumnStateEvents", "suppressColumnStateEvents", "24.0.x"), e.groupRowInnerRenderer || e.groupRowInnerRendererParams || e.groupRowInnerRendererFramework) {
+      t("batchUpdateWaitMillis", "asyncTransactionWaitMillis", "23.1.x");
+      t("deltaRowDataMode", "immutableData", "23.1.x");
+      if (e.immutableColumns || e.deltaColumnMode) {
+        console.warn("AG Grid: since v24.0, immutableColumns and deltaColumnMode properties are gone. The grid now works like this as default. To keep column order maintained, set grid property applyColumnDefOrder=true");
+      }
+      t("suppressSetColumnStateEvents", "suppressColumnStateEvents", "24.0.x");
+      if (e.groupRowInnerRenderer || e.groupRowInnerRendererParams || e.groupRowInnerRendererFramework) {
         console.warn("AG Grid: since v24.0, grid properties groupRowInnerRenderer, groupRowInnerRendererFramework and groupRowInnerRendererParams are no longer used.");
         console.warn("  Instead use the grid properties groupRowRendererParams.innerRenderer, groupRowRendererParams.innerRendererFramework and groupRowRendererParams.innerRendererParams.");
         console.warn("  For example instead of this:");
@@ -15122,7 +15326,10 @@
       return !this.gridOptions.rowHeight || o(this.gridOptions.rowHeight) ? this.getDefaultRowHeight() : this.gridOptions.rowHeight && this.isNumeric(this.gridOptions.rowHeight) ? this.gridOptions.rowHeight : (console.warn("AG Grid row height must be a number if not using standard row model"), this.getDefaultRowHeight());
     };
     e.prototype.getRowHeightForNode = function (e, t) {
-      if (void 0 === t && (t = !1), "function" === typeof this.gridOptions.getRowHeight) {
+      if (void 0 === t) {
+        t = !1;
+      }
+      if ("function" === typeof this.gridOptions.getRowHeight) {
         if (t) {
           return {
             height: this.getDefaultRowHeight(),
@@ -15610,7 +15817,10 @@
       this.eventService.dispatchEvent(r);
     };
     t.prototype.selectAllRowNodes = function (e) {
-      if (void 0 === e && (e = !1), this.rowModel.getType() !== Ee.ROW_MODEL_TYPE_CLIENT_SIDE) {
+      if (void 0 === e) {
+        e = !1;
+      }
+      if (this.rowModel.getType() !== Ee.ROW_MODEL_TYPE_CLIENT_SIDE) {
         throw new Error("selectAll only available with normal row model, ie not " + this.rowModel.getType());
       }
       var t = this.rowModel;
@@ -16413,7 +16623,8 @@
       }
     };
     t.prototype.onRowMouseDown = function (e) {
-      if (this.lastMouseDownOnDragger = on(e.target, "ag-row-drag", 3), this.isFullWidth()) {
+      this.lastMouseDownOnDragger = on(e.target, "ag-row-drag", 3);
+      if (this.isFullWidth()) {
         var t = this.rowNode;
         var n = this.beans.columnController;
         this.beans.focusController.setFocusedCell(t.rowIndex, n.getAllDisplayedColumns()[0], t.rowPinned, !0);
@@ -16506,7 +16717,10 @@
       };
     };
     t.prototype.addFullWidthRowDragging = function (e, t, n) {
-      if (void 0 === n && (n = ""), this.isFullWidth()) {
+      if (void 0 === n) {
+        n = "";
+      }
+      if (this.isFullWidth()) {
         var r = new wi(function () {
           return n;
         }, this.rowNode, void 0, e, t);
@@ -16549,9 +16763,13 @@
       }
     };
     t.prototype.stopEditing = function (e) {
-      if (void 0 === e && (e = !1), this.forEachCellComp(function (t) {
+      if (void 0 === e) {
+        e = !1;
+      }
+      this.forEachCellComp(function (t) {
         t.stopEditing(e);
-      }), this.editingRow) {
+      });
+      if (this.editingRow) {
         if (!e) {
           var t = this.createRowEvent(Ke.EVENT_ROW_VALUE_CHANGED);
           this.beans.eventService.dispatchEvent(t);
@@ -17086,7 +17304,27 @@
   var rs = function (e) {
     function n(t, n, r, o, i, a, s, c, l) {
       var u = e.call(this) || this;
-      if (u.hasChartRange = !1, u.editingCell = !1, u.suppressRefreshCell = !1, u.tooltipFeatureEnabled = !1, u.scope = null, u.cellEditorVersion = 0, u.cellRendererVersion = 0, u.scope = t, u.beans = n, u.column = r, u.rowNode = o, u.rowComp = i, u.autoHeightCell = a, u.printLayout = s, u.eRow = c, u.createGridCellVo(), u.rangeSelectionEnabled = u.beans.rangeController && n.gridOptionsWrapper.isEnableRangeSelection(), u.cellFocused = u.beans.focusController.isCellFocused(u.cellPosition), u.firstRightPinned = u.column.isFirstRightPinned(), u.lastLeftPinned = u.column.isLastLeftPinned(), u.rangeSelectionEnabled && u.beans.rangeController) {
+      u.hasChartRange = !1;
+      u.editingCell = !1;
+      u.suppressRefreshCell = !1;
+      u.tooltipFeatureEnabled = !1;
+      u.scope = null;
+      u.cellEditorVersion = 0;
+      u.cellRendererVersion = 0;
+      u.scope = t;
+      u.beans = n;
+      u.column = r;
+      u.rowNode = o;
+      u.rowComp = i;
+      u.autoHeightCell = a;
+      u.printLayout = s;
+      u.eRow = c;
+      u.createGridCellVo();
+      u.rangeSelectionEnabled = u.beans.rangeController && n.gridOptionsWrapper.isEnableRangeSelection();
+      u.cellFocused = u.beans.focusController.isCellFocused(u.cellPosition);
+      u.firstRightPinned = u.column.isFirstRightPinned();
+      u.lastLeftPinned = u.column.isLastLeftPinned();
+      if (u.rangeSelectionEnabled && u.beans.rangeController) {
         var d = u.beans.rangeController;
         u.rangeCount = d.getCellRangeCount(u.cellPosition);
         u.hasChartRange = u.getHasChartRange();
@@ -17574,7 +17812,10 @@
     };
     n.prototype.createCellRendererInstance = function (e) {
       var t = this;
-      if (void 0 === e && (e = !1), this.usingCellRenderer) {
+      if (void 0 === e) {
+        e = !1;
+      }
+      if (this.usingCellRenderer) {
         var r = this.beans.gridOptionsWrapper.isAngularCompileRows();
         var o = this.beans.gridOptionsWrapper.isSuppressAnimationFrame();
         if (r || o || this.autoHeightCell) {
@@ -17746,7 +17987,16 @@
       return this.column.isCellEditable(this.rowNode);
     };
     n.prototype.startEditingIfEnabled = function (e, t, n) {
-      if (void 0 === e && (e = null), void 0 === t && (t = null), void 0 === n && (n = !1), this.isCellEditable() && !this.editingCell) {
+      if (void 0 === e) {
+        e = null;
+      }
+      if (void 0 === t) {
+        t = null;
+      }
+      if (void 0 === n) {
+        n = !1;
+      }
+      if (this.isCellEditable() && !this.editingCell) {
         this.editingCell = !0;
         this.cellEditorVersion++;
         var r = this.afterCellEditorCreated.bind(this, this.cellEditorVersion);
@@ -18241,7 +18491,11 @@
         e.push("ag-cell-range-chart");
       }
       var t = Math.min(this.rangeCount, 4);
-      if (e.push("ag-cell-range-selected-" + t), this.isSingleCell() && e.push("ag-cell-range-single-cell"), this.rangeCount > 0) {
+      e.push("ag-cell-range-selected-" + t);
+      if (this.isSingleCell()) {
+        e.push("ag-cell-range-single-cell");
+      }
+      if (this.rangeCount > 0) {
         var n = this.getRangeBorders();
         if (n.top) {
           e.push("ag-cell-range-top");
@@ -18507,7 +18761,10 @@
       }
     };
     n.prototype.stopEditing = function (e) {
-      if (void 0 === e && (e = !1), this.editingCell) {
+      if (void 0 === e) {
+        e = !1;
+      }
+      if (this.editingCell) {
         if (this.cellEditor) {
           var t;
           var n = this.getValue();
@@ -18518,7 +18775,10 @@
               r = !0;
             }
           }
-          if (this.editingCell = !1, this.beans.context.destroyBean(this.cellEditor), this.cellEditor = null, this.cellEditorInPopup && this.hideEditorPopup) {
+          this.editingCell = !1;
+          this.beans.context.destroyBean(this.cellEditor);
+          this.cellEditor = null;
+          if (this.cellEditorInPopup && this.hideEditorPopup) {
             this.hideEditorPopup();
             this.hideEditorPopup = null;
           } else {
@@ -19190,9 +19450,14 @@
       this.rowContainerHeightService.updateOffset();
       this.workOutFirstAndLastRowsToRender();
       var i = this.calculateIndexesToDraw(e);
-      if (this.removeRowCompsNotToDraw(i), this.printLayout && (t = !1), i.forEach(function (i) {
+      this.removeRowCompsNotToDraw(i);
+      if (this.printLayout) {
+        t = !1;
+      }
+      i.forEach(function (i) {
         r(o.createOrUpdateRowCon(i, e, t, n));
-      }), e) {
+      });
+      if (e) {
         if (n && !this.gridOptionsWrapper.isSuppressAnimationFrame() && !this.printLayout) {
           this.beans.taskQueue.addDestroyTask(function () {
             o.destroyRowCons(e, t);
@@ -19266,8 +19531,17 @@
     t.prototype.createOrUpdateRowCon = function (e, t, n, o) {
       var i = null;
       var a = this.rowConsByRowIndex[e];
-      if (a || r(i = this.paginationProxy.getRow(e)) && r(t) && t[i.id] && i.alreadyRendered && (a = t[i.id], t[i.id] = null), !a) {
-        if (i || (i = this.paginationProxy.getRow(e)), !r(i)) {
+      if (!a) {
+        if (r(i = this.paginationProxy.getRow(e)) && r(t) && t[i.id] && i.alreadyRendered) {
+          a = t[i.id];
+          t[i.id] = null;
+        }
+      }
+      if (!a) {
+        if (!i) {
+          i = this.paginationProxy.getRow(e);
+        }
+        if (!r(i)) {
           return;
         }
         a = this.createRowCon(i, n, o);
@@ -19432,11 +19706,14 @@
         }
         s = o(a = this.cellNavigationService.getNextCellToFocus(t, a));
       }
-      if (s && e && e.keyCode === _o.UP && (a = {
-        rowIndex: -1,
-        rowPinned: null,
-        column: n.column
-      }), i) {
+      if (s && e && e.keyCode === _o.UP) {
+        a = {
+          rowIndex: -1,
+          rowPinned: null,
+          column: n.column
+        };
+      }
+      if (i) {
         var c = this.gridOptionsWrapper.getNavigateToNextCellFunc();
         if (r(c)) {
           var l = c({
@@ -19962,7 +20239,10 @@
     };
     t.prototype.setLeft = function (e) {
       var t;
-      if (r(e) && (this.eCell.style.left = e + "px"), this.columnOrGroup instanceof Ce) {
+      if (r(e)) {
+        this.eCell.style.left = e + "px";
+      }
+      if (this.columnOrGroup instanceof Ce) {
         t = this.columnOrGroup;
       } else {
         var n = this.columnOrGroup.getLeafColumns();
@@ -20987,14 +21267,16 @@
           t = s;
           i();
           (function () {
-            if (tn(n.eResize, e), e) {
+            tn(n.eResize, e);
+            if (e) {
               var r = n.horizontalResizeService.addResizeBar({
                 eResizeBar: n.eResize,
                 onResizeStart: n.onResizeStart.bind(n),
                 onResizing: n.onResizing.bind(n, !1),
                 onResizeEnd: n.onResizing.bind(n, !0)
               });
-              if (o.push(r), t) {
+              o.push(r);
+              if (t) {
                 var i = n.gridOptionsWrapper.isSkipHeaderOnAutoSize();
                 var a = function () {
                   n.columnController.autoSizeColumn(n.column, i, "uiColumnResized");
@@ -21351,14 +21633,16 @@
     };
     n.prototype.setupResize = function () {
       var e = this;
-      if (this.eHeaderCellResize = this.getRefElement("agResize"), this.column.isResizable()) {
+      this.eHeaderCellResize = this.getRefElement("agResize");
+      if (this.column.isResizable()) {
         var t = this.horizontalResizeService.addResizeBar({
           eResizeBar: this.eHeaderCellResize,
           onResizeStart: this.onResizeStart.bind(this),
           onResizing: this.onResizing.bind(this, !1),
           onResizeEnd: this.onResizing.bind(this, !0)
         });
-        if (this.addDestroyFunc(t), !this.gridOptionsWrapper.isSuppressAutoSize()) {
+        this.addDestroyFunc(t);
+        if (!this.gridOptionsWrapper.isSuppressAutoSize()) {
           var n = this.gridOptionsWrapper.isSkipHeaderOnAutoSize();
           this.eHeaderCellResize.addEventListener("dblclick", function (t) {
             var r = [];
@@ -21391,7 +21675,10 @@
         return t.resizeRatios.push(e.getActualWidth() / t.resizeStartWidth);
       });
       var r = null;
-      if (e && (r = this.columnController.getDisplayedGroupAfter(this.column)), r) {
+      if (e) {
+        r = this.columnController.getDisplayedGroupAfter(this.column);
+      }
+      if (r) {
         var o = r.getDisplayedLeafColumns();
         this.resizeTakeFromCols = o.filter(function (e) {
           return e.isResizable();
@@ -21966,7 +22253,12 @@
           var o = r.getUniqueId();
           var i = e.getGui();
           var a = e.headerComps[o];
-          if (a && a.getColumn() != r && (e.destroyChildComponents([o]), v(t, o), a = void 0), a) {
+          if (a && a.getColumn() != r) {
+            e.destroyChildComponents([o]);
+            v(t, o);
+            a = void 0;
+          }
+          if (a) {
             v(t, o);
           } else {
             var s = e.createHeaderComp(r);
@@ -21976,13 +22268,15 @@
           n.push(o);
         }
       });
-      if (t.filter(function (t) {
+      t.filter(function (t) {
         var n = e.headerComps[t];
         return !!e.focusController.isHeaderWrapperFocused(n) && e.columnController.isDisplayed(n.getColumn());
       }).forEach(function (e) {
         v(t, e);
         n.push(e);
-      }), this.destroyChildComponents(t), this.gridOptionsWrapper.isEnsureDomOrder()) {
+      });
+      this.destroyChildComponents(t);
+      if (this.gridOptionsWrapper.isEnsureDomOrder()) {
         var r = n.map(function (t) {
           return e.headerComps[t].getGui();
         });
@@ -22072,7 +22366,10 @@
       this.ensureIntervalCleared();
     };
     e.prototype.setColumnsVisible = function (e, t, n) {
-      if (void 0 === n && (n = "api"), e) {
+      if (void 0 === n) {
+        n = "api";
+      }
+      if (e) {
         var r = e.filter(function (e) {
           return !e.getColDef().lockVisible;
         });
@@ -22080,7 +22377,10 @@
       }
     };
     e.prototype.setColumnsPinned = function (e, t, n) {
-      if (void 0 === n && (n = "api"), e) {
+      if (void 0 === n) {
+        n = "api";
+      }
+      if (e) {
         var r = e.filter(function (e) {
           return !e.getColDef().lockPinned;
         });
@@ -22119,7 +22419,11 @@
     };
     e.prototype.onDragging = function (e, t) {
       var n = this;
-      if (void 0 === t && (t = !1), this.lastDraggingEvent = e, !o(e.hDirection)) {
+      if (void 0 === t) {
+        t = !1;
+      }
+      this.lastDraggingEvent = e;
+      if (!o(e.hDirection)) {
         var r = this.normaliseX(e.x);
         if (!t) {
           this.checkCenterForScrolling(r);
@@ -22164,7 +22468,10 @@
       if (0 !== l.length) {
         var d = l[0];
         var p = null !== u && !i;
-        if (e == exports.DragSourceType.HeaderCell && (p = null !== u), p) {
+        if (e == exports.DragSourceType.HeaderCell) {
+          p = null !== u;
+        }
+        if (p) {
           if (a && d >= u) {
             return;
           }
@@ -22281,7 +22588,14 @@
       }
       var t = null;
       var n = this.gridBodyCon.getScrollFeature();
-      if (this.needToMoveLeft ? t = n.scrollHorizontally(-e) : this.needToMoveRight && (t = n.scrollHorizontally(e)), 0 !== t) {
+      if (this.needToMoveLeft) {
+        t = n.scrollHorizontally(-e);
+      } else {
+        if (this.needToMoveRight) {
+          t = n.scrollHorizontally(e);
+        }
+      }
+      if (0 !== t) {
         this.onDragging(this.lastDraggingEvent);
         this.failedMoveAttempts = 0;
       } else {
@@ -22331,7 +22645,8 @@
     }
     e.prototype.onDragEnter = function (e) {
       var t = this;
-      if (this.clearColumnsList(), !this.gridOptionsWrapper.isFunctionsReadOnly()) {
+      this.clearColumnsList();
+      if (!this.gridOptionsWrapper.isFunctionsReadOnly()) {
         var n = e.dragItem.columns;
         if (n) {
           n.forEach(function (e) {
@@ -22770,7 +23085,10 @@
       return this.headerRoot.getHeaderContainers().get(e);
     };
     n.prototype.navigateVertically = function (e, n, r) {
-      if (n || (n = this.focusController.getFocusedHeader()), !n) {
+      if (!n) {
+        n = this.focusController.getFocusedHeader();
+      }
+      if (!n) {
         return !1;
       }
       var o = n.headerRowIndex;
@@ -22840,7 +23158,10 @@
       return this.focusController.focusHeaderPosition(i, t, !0, !0, n);
     };
     n.prototype.scrollToColumn = function (e, t) {
-      if (void 0 === t && (t = "After"), !e.getPinned()) {
+      if (void 0 === t) {
+        t = "After";
+      }
+      if (!e.getPinned()) {
         var n;
         if (e instanceof Se) {
           var r = e.getDisplayedLeafColumns();
@@ -23452,7 +23773,10 @@
       };
     };
     n.prototype.getFilterComponent = function (e, t, n) {
-      if (void 0 === n && (n = !0), n) {
+      if (void 0 === n) {
+        n = !0;
+      }
+      if (n) {
         return this.getOrCreateFilterWrapper(e, t).filterPromise;
       }
       var r = this.cachedFilter(e);
@@ -23554,7 +23878,14 @@
       e.guiPromise = new Zr(function (i) {
         e.filterPromise.then(function (a) {
           var s = a.getGui();
-          if (r(s) || console.warn("getGui method from filter returned " + s + ", it should be a DOM element or an HTML template string."), "string" === typeof s && (s = _n(s)), o.appendChild(s), e.scope) {
+          if (!r(s)) {
+            console.warn("getGui method from filter returned " + s + ", it should be a DOM element or an HTML template string.");
+          }
+          if ("string" === typeof s) {
+            s = _n(s);
+          }
+          o.appendChild(s);
+          if (e.scope) {
             var c = n.$compile(o)(e.scope);
             e.compiledElement = c;
             window.setTimeout(function () {
@@ -23682,7 +24013,16 @@
       this.initialised = !0;
     };
     t.prototype.getValue = function (e, t, n, r) {
-      if (void 0 === n && (n = !1), void 0 === r && (r = !1), this.initialised || this.init(), t) {
+      if (void 0 === n) {
+        n = !1;
+      }
+      if (void 0 === r) {
+        r = !1;
+      }
+      if (!this.initialised) {
+        this.init();
+      }
+      if (t) {
         var o;
         var i = e.getColDef();
         var a = i.field;
@@ -23690,7 +24030,38 @@
         var c = t.data;
         var l = t.groupData && void 0 !== t.groupData[s];
         var u = !r && t.aggData && void 0 !== t.aggData[s];
-        if (n && i.filterValueGetter ? o = this.executeFilterValueGetter(i.filterValueGetter, c, e, t) : this.gridOptionsWrapper.isTreeData() && u ? o = t.aggData[s] : this.gridOptionsWrapper.isTreeData() && i.valueGetter ? o = this.executeValueGetter(i.valueGetter, c, e, t) : this.gridOptionsWrapper.isTreeData() && a && c ? o = W(c, a, e.isFieldContainsDots()) : l ? o = t.groupData[s] : u ? o = t.aggData[s] : i.valueGetter ? o = this.executeValueGetter(i.valueGetter, c, e, t) : a && c && (o = W(c, a, e.isFieldContainsDots())), this.cellExpressions && "string" === typeof o && 0 === o.indexOf("=")) {
+        if (n && i.filterValueGetter) {
+          o = this.executeFilterValueGetter(i.filterValueGetter, c, e, t);
+        } else {
+          if (this.gridOptionsWrapper.isTreeData() && u) {
+            o = t.aggData[s];
+          } else {
+            if (this.gridOptionsWrapper.isTreeData() && i.valueGetter) {
+              o = this.executeValueGetter(i.valueGetter, c, e, t);
+            } else {
+              if (this.gridOptionsWrapper.isTreeData() && a && c) {
+                o = W(c, a, e.isFieldContainsDots());
+              } else {
+                if (l) {
+                  o = t.groupData[s];
+                } else {
+                  if (u) {
+                    o = t.aggData[s];
+                  } else {
+                    if (i.valueGetter) {
+                      o = this.executeValueGetter(i.valueGetter, c, e, t);
+                    } else {
+                      if (a && c) {
+                        o = W(c, a, e.isFieldContainsDots());
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        if (this.cellExpressions && "string" === typeof o && 0 === o.indexOf("=")) {
           var d = o.substring(1);
           o = this.executeValueGetter(d, c, e, t);
         }
@@ -23738,7 +24109,11 @@
             columnApi: this.gridOptionsWrapper.getColumnApi(),
             context: this.gridOptionsWrapper.getContext()
           };
-          if (p.newValue = n, void 0 === (d = l && r(l) ? l(p) : r(u) ? this.expressionService.evaluate(u, p) : this.setValueUsingField(e.data, c, n, a.isFieldContainsDots())) && (d = !0), d) {
+          p.newValue = n;
+          if (void 0 === (d = l && r(l) ? l(p) : r(u) ? this.expressionService.evaluate(u, p) : this.setValueUsingField(e.data, c, n, a.isFieldContainsDots()))) {
+            d = !0;
+          }
+          if (d) {
             e.resetQuickFilterAggregateText();
             this.valueCache.onDataChanged();
             p.newValue = this.getValue(a, e);
@@ -24049,7 +24424,10 @@
       this.onHorizontalViewportChanged();
     };
     t.prototype.shouldBlockScrollUpdate = function (e, t, n) {
-      if (void 0 === n && (n = !1), n && !Gt()) {
+      if (void 0 === n) {
+        n = !1;
+      }
+      if (n && !Gt()) {
         return !1;
       }
       if ("vertical" === e) {
@@ -26335,7 +26713,10 @@
         sort: exports.ClientSideRowModelSteps.SORT,
         pivot: exports.ClientSideRowModelSteps.PIVOT
       };
-      if (r(e) && (n = i[e]), o(n)) {
+      if (r(e)) {
+        n = i[e];
+      }
+      if (o(n)) {
         console.error("AG Grid: invalid step " + e + ", available steps are " + Object.keys(i).join(", "));
       } else {
         var a = {
@@ -27745,7 +28126,16 @@
       };
     };
     t.prototype.focusHeaderPosition = function (e, t, n, r, o) {
-      if (void 0 === t && (t = null), void 0 === n && (n = !1), void 0 === r && (r = !1), r) {
+      if (void 0 === t) {
+        t = null;
+      }
+      if (void 0 === n) {
+        n = !1;
+      }
+      if (void 0 === r) {
+        r = !1;
+      }
+      if (r) {
         var i;
         var a = this.gridOptionsWrapper;
         var s = this.getFocusedHeader();
@@ -27881,14 +28271,19 @@
       var o = r.rowIndex;
       var i = r.rowPinned;
       var a = this.getFocusedHeader();
-      if (!e && a && (e = a.column), null == o || !e) {
+      if (!e && a) {
+        e = a.column;
+      }
+      if (null == o || !e) {
         return !1;
       }
-      if (this.rowRenderer.ensureCellVisible({
+      this.rowRenderer.ensureCellVisible({
         rowIndex: o,
         column: e,
         rowPinned: i
-      }), this.setFocusedCell(o, e, n(i), !0), this.rangeController) {
+      });
+      this.setFocusedCell(o, e, n(i), !0);
+      if (this.rangeController) {
         var s = {
           rowIndex: o,
           rowPinned: i,
@@ -28383,7 +28778,14 @@
       var n = e.mouseEvent;
       var r = e.touchEvent;
       var o = null;
-      if (n ? o = n : r && (o = r.touches[0]), o && t) {
+      if (n) {
+        o = n;
+      } else {
+        if (r) {
+          o = r.touches[0];
+        }
+      }
+      if (o && t) {
         var i = n ? n.screenX : 0;
         var a = n ? n.screenY : 0;
         var s = Math.abs(t.screenX - i) < 5;
@@ -29070,7 +29472,10 @@
         closedCallback: function (t) {
           e.setMenuVisible(!1, "contextMenu");
           var r = t instanceof KeyboardEvent;
-          if (o.tabListener && (o.tabListener = o.tabListener()), r && n && gn(n)) {
+          if (o.tabListener) {
+            o.tabListener = o.tabListener();
+          }
+          if (r && n && gn(n)) {
             var i = o.focusController.findTabbableParent(n);
             if (i) {
               i.focus();
@@ -29166,7 +29571,8 @@
     t.prototype.removeListener = function (e) {
       var t = e.dragSource.eElement;
       var n = e.mouseDownListener;
-      if (t.removeEventListener("mousedown", n), e.touchEnabled) {
+      t.removeEventListener("mousedown", n);
+      if (e.touchEnabled) {
         var r = e.touchStartListener;
         t.removeEventListener("touchstart", r, {
           passive: !0
@@ -29503,7 +29909,8 @@
     };
     t.prototype.getNextSortDirection = function (e) {
       var t;
-      if (t = e.getColDef().sortingOrder ? e.getColDef().sortingOrder : this.gridOptionsWrapper.getSortingOrder() ? this.gridOptionsWrapper.getSortingOrder() : n.DEFAULT_SORTING_ORDER, !Array.isArray(t) || t.length <= 0) {
+      t = e.getColDef().sortingOrder ? e.getColDef().sortingOrder : this.gridOptionsWrapper.getSortingOrder() ? this.gridOptionsWrapper.getSortingOrder() : n.DEFAULT_SORTING_ORDER;
+      if (!Array.isArray(t) || t.length <= 0) {
         console.warn("ag-grid: sortingOrder must be an array with at least one element, currently it's " + t);
         return null;
       }
@@ -29627,7 +30034,14 @@
       var n;
       var r = this.gridOptionsWrapper.getDomLayout() === Ee.DOM_LAYOUT_NORMAL;
       var o = e;
-      if (null != o.clientX || null != o.clientY ? (t = o.clientX, n = o.clientY) : (t = o.x, n = o.y), r) {
+      if (null != o.clientX || null != o.clientY) {
+        t = o.clientX;
+        n = o.clientY;
+      } else {
+        t = o.x;
+        n = o.y;
+      }
+      if (r) {
         var i = this.controllersService.getGridBodyController();
         var a = i.getScrollFeature().getVScrollPosition();
         t += i.getScrollFeature().getHScrollPosition().left;
@@ -29931,7 +30345,14 @@
       var a;
       var s = null;
       var c = e.getColDef();
-      if (o ? a = o : i && (a = t && t.rowPinned && c.pinnedRowValueFormatter ? c.pinnedRowValueFormatter : c.valueFormatter), a) {
+      if (o) {
+        a = o;
+      } else {
+        if (i) {
+          a = t && t.rowPinned && c.pinnedRowValueFormatter ? c.pinnedRowValueFormatter : c.valueFormatter;
+        }
+      }
+      if (a) {
         var l = {
           value: r,
           node: t,
@@ -30464,7 +30885,10 @@
       var n = {
         headerName: this.gridOptionsWrapper.getLocaleTextFunc()("group", "Group")
       };
-      if (t && (t.cellRenderer || t.cellRendererFramework || t.cellRendererSelector) || (n.cellRenderer = "agGroupCellRenderer"), e) {
+      if (!(t && (t.cellRenderer || t.cellRendererFramework || t.cellRendererSelector))) {
+        n.cellRenderer = "agGroupCellRenderer";
+      }
+      if (e) {
         var r = e.getColDef();
         G(n, {
           headerName: this.columnController.getDisplayNameForColumn(e, "header"),
@@ -30727,7 +31151,8 @@
       this.totalPages = 0;
     };
     t.prototype.calculatePagesMasterRowsOnly = function () {
-      if (this.masterRowCount = this.rowModel.getTopLevelRowCount(), this.masterRowCount <= 0) {
+      this.masterRowCount = this.rowModel.getTopLevelRowCount();
+      if (this.masterRowCount <= 0) {
         this.setZeroRows();
       } else {
         var e = this.masterRowCount - 1;
@@ -30740,7 +31165,11 @@
         }
         var t = this.pageSize * this.currentPage;
         var n = this.pageSize * (this.currentPage + 1) - 1;
-        if (n > e && (n = e), this.topDisplayedRowIndex = this.rowModel.getTopLevelRowDisplayedIndex(t), n === e) {
+        if (n > e) {
+          n = e;
+        }
+        this.topDisplayedRowIndex = this.rowModel.getTopLevelRowDisplayedIndex(t);
+        if (n === e) {
           this.bottomDisplayedRowIndex = this.rowModel.getRowCount() - 1;
         } else {
           var r = this.rowModel.getTopLevelRowDisplayedIndex(n + 1);
@@ -30752,7 +31181,8 @@
       return this.masterRowCount;
     };
     t.prototype.calculatePagesAllRows = function () {
-      if (this.masterRowCount = this.rowModel.getRowCount(), 0 !== this.masterRowCount) {
+      this.masterRowCount = this.rowModel.getRowCount();
+      if (0 !== this.masterRowCount) {
         var e = this.masterRowCount - 1;
         this.totalPages = Math.floor(e / this.pageSize) + 1;
         if (this.currentPage >= this.totalPages) {
@@ -31161,7 +31591,10 @@
       var t = this;
       var n = e.column;
       var r = null;
-      if (n && (r = this.columnController.getPrimaryColumn(n.getColId())), !n || r) {
+      if (n) {
+        r = this.columnController.getPrimaryColumn(n.getColId());
+      }
+      if (!n || r) {
         var o = this.getMasterColumns(e);
         switch (e.type) {
           case Ke.EVENT_COLUMN_MOVED:
@@ -31953,7 +32386,15 @@
       var o = e.scrollColumn;
       var i = e.focusIndex;
       var a = e.focusColumn;
-      if (r(o) && this.gridBodyCon.getScrollFeature().ensureColumnVisible(o), r(t) && this.gridBodyCon.getScrollFeature().ensureIndexVisible(t, n), this.animationFrameService.flushAllFrames(), this.focusController.setFocusedCell(i, a, null, !0), this.rangeController) {
+      if (r(o)) {
+        this.gridBodyCon.getScrollFeature().ensureColumnVisible(o);
+      }
+      if (r(t)) {
+        this.gridBodyCon.getScrollFeature().ensureIndexVisible(t, n);
+      }
+      this.animationFrameService.flushAllFrames();
+      this.focusController.setFocusedCell(i, a, null, !0);
+      if (this.rangeController) {
         var s = {
           rowIndex: i,
           rowPinned: null,
@@ -32284,7 +32725,10 @@
         e.forEach(function (e) {
           if (e.group) {
             var o;
-            if (e.hasChildren() && n.recurseDown(t(e), t), n.groupSelectsChildren) {
+            if (e.hasChildren()) {
+              n.recurseDown(t(e), t);
+            }
+            if (n.groupSelectsChildren) {
               o = r(u(t(e), "selectable", !0));
             } else {
               o = !!n.isRowSelectableFunc && n.isRowSelectableFunc(e);
@@ -33308,7 +33752,10 @@
       this.offsetElement(t, n);
     };
     t.prototype.setClosable = function (e) {
-      if (e !== this.closable && (this.closable = e), e) {
+      if (e !== this.closable) {
+        this.closable = e;
+      }
+      if (e) {
         var n = this.closeButtonComp = new so(t.CLOSE_BTN_TEMPLATE);
         this.getContext().createBean(n);
         (r = n.getGui()).appendChild(Qt(Dr("close", this.gridOptionsWrapper), "ag-panel-title-bar-button-icon"));
@@ -34242,11 +34689,12 @@
         }
       };
       var o = this.getGui();
-      if (this.addManagedListener(o, "mousedown", function (e) {
+      this.addManagedListener(o, "mousedown", function (e) {
         if (!t.skipClick && t.pickerComponent && t.pickerComponent.isAlive() && gn(t.pickerComponent.getGui()) && o.contains(e.target)) {
           t.skipClick = !0;
         }
-      }), this.addManagedListener(o, "keydown", function (e) {
+      });
+      this.addManagedListener(o, "keydown", function (e) {
         switch (e.keyCode) {
           case _o.UP:
           case _o.DOWN:
@@ -34258,7 +34706,10 @@
               e.preventDefault();
             }
         }
-      }), this.addManagedListener(this.eWrapper, "click", r), this.addManagedListener(this.eLabel, "click", r), this.pickerIcon) {
+      });
+      this.addManagedListener(this.eWrapper, "click", r);
+      this.addManagedListener(this.eLabel, "click", r);
+      if (this.pickerIcon) {
         var i = Dr(this.pickerIcon, this.gridOptionsWrapper);
         if (i) {
           this.eIcon.appendChild(i);
@@ -35849,7 +36300,8 @@
         e.isCellEditing = !0;
       });
       this.addManagedListener(this.eventService, Ke.EVENT_CELL_EDITING_STOPPED, function () {
-        if (e.isCellEditing = !1, !e.isRowEditing && !e.isPasting && !e.isFilling) {
+        e.isCellEditing = !1;
+        if (!e.isRowEditing && !e.isPasting && !e.isFilling) {
           var t = new xp(e.cellValueChanges);
           e.pushActionsToUndoStack(t);
         }
@@ -36008,7 +36460,14 @@
       var n;
       var r;
       var o;
-      if (e.column instanceof Se ? (r = "getDisplayedGroup" + t, n = this.columnController[r](e.column)) : (o = "getDisplayedCol" + t, n = this.columnController[o](e.column)), n) {
+      if (e.column instanceof Se) {
+        r = "getDisplayedGroup" + t;
+        n = this.columnController[r](e.column);
+      } else {
+        o = "getDisplayedCol" + t;
+        n = this.columnController[o](e.column);
+      }
+      if (n) {
         return {
           column: n,
           headerRowIndex: e.headerRowIndex
@@ -36427,7 +36886,8 @@
     };
     t.prototype.performCheckBlocksToLoad = function () {
       if (this.active) {
-        if (this.printCacheStatus(), null != this.maxConcurrentRequests && this.activeBlockLoadsCount >= this.maxConcurrentRequests) {
+        this.printCacheStatus();
+        if (null != this.maxConcurrentRequests && this.activeBlockLoadsCount >= this.maxConcurrentRequests) {
           this.logger.log("checkBlockToLoad: max loads exceeded");
         } else {
           var e = null;
@@ -36567,7 +37027,8 @@
     }
     rf(t, e);
     t.prototype.checkReady = function () {
-      if (this.ready = null != this.gridCompCon && null != this.gridBodyCon && null != this.centerRowContainerCon && null != this.leftRowContainerCon && null != this.rightRowContainerCon && null != this.bottomCenterRowContainerCon && null != this.bottomLeftRowContainerCon && null != this.bottomRightRowContainerCon && null != this.topCenterRowContainerCon && null != this.topLeftRowContainerCon && null != this.topRightRowContainerCon && null != this.fakeHScrollCon && null != this.headerRootComp, this.ready) {
+      this.ready = null != this.gridCompCon && null != this.gridBodyCon && null != this.centerRowContainerCon && null != this.leftRowContainerCon && null != this.rightRowContainerCon && null != this.bottomCenterRowContainerCon && null != this.bottomLeftRowContainerCon && null != this.bottomRightRowContainerCon && null != this.topCenterRowContainerCon && null != this.topLeftRowContainerCon && null != this.topRightRowContainerCon && null != this.fakeHScrollCon && null != this.headerRootComp;
+      if (this.ready) {
         var e = this.createReadyParams();
         this.readyCallbacks.forEach(function (t) {
           return t(e);
@@ -37746,7 +38207,8 @@
         var r = this.eBody;
         var o = this.activeItem;
         var i = document.activeElement;
-        if (e.preventDefault(), n.contains(i)) {
+        e.preventDefault();
+        if (n.contains(i)) {
           t.focusInto(r, e.shiftKey);
         } else if (t.isFocusUnderManagedComponent(r)) {
           o.eHeaderButton.focus();
@@ -38065,7 +38527,13 @@
       var t = this;
       var n = this.model.getRow(e);
       var r = document.createElement("div");
-      if (Qt(r, "ag-virtual-list-item"), Qt(r, "ag-" + this.cssIdentifier + "-virtual-list-item"), r.setAttribute("role", "tree" === this.ariaRole ? "treeitem" : "option"), ur(r, this.model.getRowCount()), dr(r, e + 1), r.setAttribute("tabindex", "-1"), "function" === typeof this.model.isRowSelected) {
+      Qt(r, "ag-virtual-list-item");
+      Qt(r, "ag-" + this.cssIdentifier + "-virtual-list-item");
+      r.setAttribute("role", "tree" === this.ariaRole ? "treeitem" : "option");
+      ur(r, this.model.getRowCount());
+      dr(r, e + 1);
+      r.setAttribute("tabindex", "-1");
+      if ("function" === typeof this.model.isRowSelected) {
         var o = this.model.isRowSelected(e);
         yr(r, !!o);
         Er(r, o);
@@ -38223,7 +38691,14 @@
       return this.allNodesMap[e];
     };
     e.prototype.setRowData = function (t) {
-      if (this.rootNode.childrenAfterFilter = null, this.rootNode.childrenAfterGroup = null, this.rootNode.childrenAfterSort = null, this.rootNode.childrenMapped = null, this.rootNode.updateHasChildren(), this.nextId = 0, this.allNodesMap = {}, !t) {
+      this.rootNode.childrenAfterFilter = null;
+      this.rootNode.childrenAfterGroup = null;
+      this.rootNode.childrenAfterSort = null;
+      this.rootNode.childrenMapped = null;
+      this.rootNode.updateHasChildren();
+      this.nextId = 0;
+      this.allNodesMap = {};
+      if (!t) {
         this.rootNode.allLeafChildren = [];
         return void (this.rootNode.childrenAfterGroup = []);
       }
@@ -38247,9 +38722,13 @@
     };
     e.prototype.updateSelection = function (e) {
       var t = e.length > 0;
-      if (t && e.forEach(function (e) {
-        e.setSelected(!1, !1, !0);
-      }), this.selectionController.updateGroupsFromChildrenSelections(), t) {
+      if (t) {
+        e.forEach(function (e) {
+          e.setSelected(!1, !1, !0);
+        });
+      }
+      this.selectionController.updateGroupsFromChildrenSelections();
+      if (t) {
         var n = {
           type: Ke.EVENT_SELECTION_CHANGED,
           api: this.gridApi,
@@ -38516,7 +38995,10 @@
         }
       };
       !function t(r) {
-        if (n(r), n(r.detailNode), n(r.sibling), r.hasChildren() && r.childrenAfterGroup) {
+        n(r);
+        n(r.detailNode);
+        n(r.sibling);
+        if (r.hasChildren() && r.childrenAfterGroup) {
           var o = -1 == r.level;
           if (!(e.isActive() && !o && !r.expanded)) {
             r.childrenAfterGroup.forEach(t);
@@ -38725,7 +39207,10 @@
       var a = this.gridOptionsWrapper.isGroupSelectsChildren();
       this.forEachNodeAfterFilterAndSort(function (s) {
         var c = r && !o;
-        if (r || s !== t && s !== e || (r = !0), !(s.group && a)) {
+        if (!(r || s !== t && s !== e)) {
+          r = !0;
+        }
+        if (!(s.group && a)) {
           var l = r && !o;
           var u = s.isParentOfNode(n);
           if (l || u) {
@@ -38813,7 +39298,8 @@
       }
       for (var o = 0; o < e.length; o++) {
         var i = e[o];
-        if (t(i, r++), i.hasChildren()) {
+        t(i, r++);
+        if (i.hasChildren()) {
           var a = null;
           switch (n) {
             case Bf.Normal:
@@ -38992,20 +39478,27 @@
       var t = [];
       var n = [];
       var r = !1;
-      if (this.rowDataTransactionBatch && this.rowDataTransactionBatch.forEach(function (o) {
-        var i = e.nodeManager.updateRowData(o.rowDataTransaction, void 0);
-        n.push(i);
-        if (o.callback) {
-          t.push(o.callback.bind(null, i));
-        }
-        if ("number" === typeof o.rowDataTransaction.addIndex) {
-          r = !0;
-        }
-      }), this.commonUpdateRowData(n, void 0, r), t.length > 0 && window.setTimeout(function () {
-        t.forEach(function (e) {
-          return e();
+      if (this.rowDataTransactionBatch) {
+        this.rowDataTransactionBatch.forEach(function (o) {
+          var i = e.nodeManager.updateRowData(o.rowDataTransaction, void 0);
+          n.push(i);
+          if (o.callback) {
+            t.push(o.callback.bind(null, i));
+          }
+          if ("number" === typeof o.rowDataTransaction.addIndex) {
+            r = !0;
+          }
         });
-      }, 0), n.length > 0) {
+      }
+      this.commonUpdateRowData(n, void 0, r);
+      if (t.length > 0) {
+        window.setTimeout(function () {
+          t.forEach(function (e) {
+            return e();
+          });
+        }, 0);
+      }
+      if (n.length > 0) {
         var o = {
           api: this.gridOptionsWrapper.getApi(),
           columnApi: this.gridOptionsWrapper.getColumnApi(),
@@ -39293,7 +39786,10 @@
           var f = s && u && l.leafGroup && 1 === l.childrenAfterGroup.length;
           var h = r && l.leafGroup;
           var m = i && l.expanded && !h;
-          if (!d && !m && !p && !f && this.addRowNodeToRowsToDisplay(l, t, n, o), !r || !l.leafGroup) {
+          if (!d && !m && !p && !f) {
+            this.addRowNodeToRowsToDisplay(l, t, n, o);
+          }
+          if (!r || !l.leafGroup) {
             if (u) {
               var g = p || f;
               if (l.expanded || g) {
@@ -39705,7 +40201,10 @@
             e.forEach(function (e, i) {
               var a = t(e);
               var s = r[a];
-              if (o && (o[a] = i), s) {
+              if (o) {
+                o[a] = i;
+              }
+              if (s) {
                 if (s.data !== e) {
                   n.update.push(e);
                 }
@@ -40830,9 +41329,10 @@
         context: a
       })) {
         var g = e.onNewBodyRow();
-        if (n.forEach(function (e, t) {
+        n.forEach(function (e, t) {
           g.onColumn(e, t, r);
-        }), t.getCustomContentBelowRow) {
+        });
+        if (t.getCustomContentBelowRow) {
           var _ = t.getCustomContentBelowRow({
             node: r,
             api: s,
@@ -41381,7 +41881,8 @@
     });
   };
   exports.initialiseAgGridWithWebComponents = function () {
-    if (console.warn("ag-grid: initialiseAgGridWithWebComponents is deprecated. Please use the ag-grid-webcomponent dependency instead. "), !Tf) {
+    console.warn("ag-grid: initialiseAgGridWithWebComponents is deprecated. Please use the ag-grid-webcomponent dependency instead. ");
+    if (!Tf) {
       Tf = !0;
       if (!("undefined" !== typeof document && document.registerElement)) {
         console.error("AG Grid: unable to find document.registerElement() function, unable to initialise AG Grid as a Web Component");

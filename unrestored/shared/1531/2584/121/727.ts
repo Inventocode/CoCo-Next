@@ -161,7 +161,8 @@ var _ = function (e) {
   };
   t.prototype.render_image_element = function () {
     var e;
-    if ((0, l.assert)(this.field_group), this.image_json && !(null === (e = this.image_json) || void 0 === e ? void 0 : e.is_hide)) {
+    (0, l.assert)(this.field_group);
+    if (this.image_json && !(null === (e = this.image_json) || void 0 === e ? void 0 : e.is_hide)) {
       this.image_element = this.create_image(this.image_json);
       this.field_group.appendChild(this.image_element);
       this.image_element.setAttribute("x", "" + this.size_.width);
@@ -401,12 +402,24 @@ var _ = function (e) {
         if (e !== this.value_ || n !== this.text_) {
           var r;
           var i = this.events.get_group();
-          if (this.source_block && (this.events.is_enabled() && (!i && this.events.set_group(!0), r = this.change_event_factory("field", {
-            block: this.source_block,
-            old_value: this.value_,
-            new_value: e,
-            name: this.name
-          })), this.onchange && this.onchange(e)), this.value_ = e, t) {
+          if (this.source_block) {
+            if (this.events.is_enabled()) {
+              if (!i) {
+                this.events.set_group(!0);
+              }
+              r = this.change_event_factory("field", {
+                block: this.source_block,
+                old_value: this.value_,
+                new_value: e,
+                name: this.name
+              });
+            }
+            if (this.onchange) {
+              this.onchange(e);
+            }
+          }
+          this.value_ = e;
+          if (t) {
             var o = this.get_option_icon(t);
             if (!(o === this.image_json && n === this.text_)) {
               this.image_json = o;
@@ -440,7 +453,9 @@ var _ = function (e) {
     }
   };
   t.prototype.trim_options = function () {
-    if (this.prefix_field = void 0, this.suffix_field = void 0, !this.is_dynamic()) {
+    this.prefix_field = void 0;
+    this.suffix_field = void 0;
+    if (!this.is_dynamic()) {
       for (var e = this.get_options(), t = !1, n = 0; n < e.length; n++) {
         var r = e[n][0];
         if ("string" == typeof r) {

@@ -26,7 +26,8 @@
     var c;
     var u;
     if (null != t) {
-      if (n = t.type || e.Syntax.Property, !(i = this.__childVisitorKeys[n])) {
+      n = t.type || e.Syntax.Property;
+      if (!(i = this.__childVisitorKeys[n])) {
         if (!this.__fallback) {
           throw new Error("Unknown node type " + n + ".");
         }

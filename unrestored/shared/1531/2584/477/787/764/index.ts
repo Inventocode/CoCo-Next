@@ -72,7 +72,12 @@ var f = function (e) {
     var n;
     var a;
     var c = this;
-    if (void 0 === t && (t = Object(i.d)()), this._finished = !0, this.activities = {}, this.spanRecorder) {
+    if (void 0 === t) {
+      t = Object(i.d)();
+    }
+    this._finished = !0;
+    this.activities = {};
+    if (this.spanRecorder) {
       o.a.log("[Tracing] finishing IdleTransaction", new Date(1e3 * t).toISOString(), this.op);
       try {
         for (var u = Object(r.g)(this._beforeFinishCallbacks), l = u.next(); !l.done; l = u.next()) {
@@ -148,7 +153,12 @@ var f = function (e) {
   };
   t.prototype._popActivity = function (e) {
     var t = this;
-    if (this.activities[e] && (o.a.log("[Tracing] popActivity " + e), delete this.activities[e], o.a.log("[Tracing] new activities count", Object.keys(this.activities).length)), 0 === Object.keys(this.activities).length) {
+    if (this.activities[e]) {
+      o.a.log("[Tracing] popActivity " + e);
+      delete this.activities[e];
+      o.a.log("[Tracing] new activities count", Object.keys(this.activities).length);
+    }
+    if (0 === Object.keys(this.activities).length) {
       var n = this._idleTimeout;
       var r = Object(i.d)() + n / 1e3;
       setTimeout(function () {
@@ -159,7 +169,8 @@ var f = function (e) {
     }
   };
   t.prototype._beat = function () {
-    if (clearTimeout(this._heartbeatTimer), !this._finished) {
+    clearTimeout(this._heartbeatTimer);
+    if (!this._finished) {
       var e = Object.keys(this.activities);
       var t = e.length ? e.reduce(function (e, t) {
         return e + t;

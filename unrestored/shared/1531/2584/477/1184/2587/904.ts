@@ -7,6 +7,16 @@
   function o(e, t) {
     return e.require(t);
   }
-  exports.b = i;
-  exports.a = o;
+  Object.defineProperty(exports, "b", {
+    get: function () {
+      return i;
+    },
+    enumerable: true
+  });
+  Object.defineProperty(exports, "a", {
+    get: function () {
+      return o;
+    },
+    enumerable: true
+  });
 }).call(this, require("../../../../../3272/3198/1187/368"), require("../../../155/1167/574")(module));

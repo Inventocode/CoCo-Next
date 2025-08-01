@@ -32,7 +32,8 @@ var c = function () {
       var c = t.TYPE_INFO_COORDINATES[a];
       var f = c[0];
       var h = c[1];
-      if (o.setBoolean(f, h, s), a < 8) {
+      o.setBoolean(f, h, s);
+      if (a < 8) {
         var l = o.getWidth() - a - 1;
         var d = 8;
         o.setBoolean(l, d, s);
@@ -107,14 +108,17 @@ var c = function () {
     var s = t.calculateBCHCode(a, t.TYPE_INFO_POLY);
     o.appendBits(s, 10);
     var c = new n.a();
-    if (c.appendBits(t.TYPE_INFO_MASK_PATTERN, 15), o.xor(c), 15 !== o.getSize()) {
+    c.appendBits(t.TYPE_INFO_MASK_PATTERN, 15);
+    o.xor(c);
+    if (15 !== o.getSize()) {
       throw new u.a("should not happen but we got: " + o.getSize());
     }
   };
   t.makeVersionInfoBits = function (e, r) {
     r.appendBits(e.getVersionNumber(), 6);
     var n = t.calculateBCHCode(e.getVersionNumber(), t.VERSION_INFO_POLY);
-    if (r.appendBits(n, 12), 18 !== r.getSize()) {
+    r.appendBits(n, 12);
+    if (18 !== r.getSize()) {
       throw new u.a("should not happen but we got: " + r.getSize());
     }
   };

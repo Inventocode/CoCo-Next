@@ -29,8 +29,13 @@
       },
       volume: function (e) {
         var t = this || o;
-        if (e = parseFloat(e), t.ctx || h(), "undefined" !== typeof e && e >= 0 && e <= 1) {
-          if (t._volume = e, t._muted) {
+        e = parseFloat(e);
+        if (!t.ctx) {
+          h();
+        }
+        if ("undefined" !== typeof e && e >= 0 && e <= 1) {
+          t._volume = e;
+          if (t._muted) {
             return t;
           }
           if (t.usingWebAudio) {
@@ -93,7 +98,9 @@
       },
       _setup: function () {
         var e = this || o;
-        if (e.state = e.ctx && e.ctx.state || "suspended", e._autoSuspend(), !e.usingWebAudio) {
+        e.state = e.ctx && e.ctx.state || "suspended";
+        e._autoSuspend();
+        if (!e.usingWebAudio) {
           if ("undefined" !== typeof Audio) {
             try {
               if ("undefined" === typeof new Audio().oncanplaythrough) {
@@ -409,7 +416,10 @@
                 n = n[1].toLowerCase();
               }
             }
-            if (n || console.warn('No file extension was found. Consider using the "format" property or specify an extension.'), n && o.codecs(n)) {
+            if (!n) {
+              console.warn('No file extension was found. Consider using the "format" property or specify an extension.');
+            }
+            if (n && o.codecs(n)) {
               e = this._src[t];
               break;
             }
@@ -458,7 +468,10 @@
         if (!s) {
           return null;
         }
-        if (r && !e && (e = s._sprite || "__default"), "loaded" !== n._state) {
+        if (r && !e) {
+          e = s._sprite || "__default";
+        }
+        if ("loaded" !== n._state) {
           s._sprite = e;
           s._ended = !1;
           var c = s._id;
@@ -541,19 +554,32 @@
               _.playbackRate = s._rate;
               try {
                 var r = _.play();
-                if (r && "undefined" !== typeof Promise && (r instanceof Promise || "function" === typeof r.then) ? (n._playLock = !0, p(), r.then(function () {
-                  n._playLock = !1;
-                  _._unlocked = !0;
+                if (r && "undefined" !== typeof Promise && (r instanceof Promise || "function" === typeof r.then)) {
+                  n._playLock = !0;
+                  p();
+                  r.then(function () {
+                    n._playLock = !1;
+                    _._unlocked = !0;
+                    if (!t) {
+                      n._emit("play", s._id);
+                      n._loadQueue();
+                    }
+                  }).catch(function () {
+                    n._playLock = !1;
+                    n._emit("playerror", s._id, "Playback was unable to start. This is most commonly an issue on mobile devices and Chrome where playback was not within a user interaction.");
+                    s._ended = !0;
+                    s._paused = !0;
+                  });
+                } else {
                   if (!t) {
+                    n._playLock = !1;
+                    p();
                     n._emit("play", s._id);
                     n._loadQueue();
                   }
-                }).catch(function () {
-                  n._playLock = !1;
-                  n._emit("playerror", s._id, "Playback was unable to start. This is most commonly an issue on mobile devices and Chrome where playback was not within a user interaction.");
-                  s._ended = !0;
-                  s._paused = !0;
-                })) : t || (n._playLock = !1, p(), n._emit("play", s._id), n._loadQueue()), _.playbackRate = s._rate, _.paused) {
+                }
+                _.playbackRate = s._rate;
+                if (_.paused) {
                   return void n._emit("playerror", s._id, "Playback was unable to start. This is most commonly an issue on mobile devices and Chrome where playback was not within a user interaction.");
                 }
                 if ("__default" !== e || s._loop) {
@@ -780,7 +806,10 @@
         for (var a = i._getSoundIds(r), s = 0; s < a.length; s++) {
           var c = i._soundById(a[s]);
           if (c) {
-            if (r || i._stopFade(a[s]), i._webAudio && !c._muted) {
+            if (!r) {
+              i._stopFade(a[s]);
+            }
+            if (i._webAudio && !c._muted) {
               var u = o.ctx.currentTime;
               var l = u + n / 1e3;
               c._volume = e;
@@ -1082,7 +1111,11 @@
       off: function (e, t, n) {
         var r = this["_on" + e];
         var i = 0;
-        if ("number" === typeof t && (n = t, t = null), t || n) {
+        if ("number" === typeof t) {
+          n = t;
+          t = null;
+        }
+        if (t || n) {
           for (i = 0; i < r.length; i++) {
             var o = n === r[i].id;
             if (t === r[i].fn && o || !t && o) {
@@ -1140,7 +1173,11 @@
           return this;
         }
         var n = !(!e._loop && !this._sprite[t][2]);
-        if (this._emit("end", e._id), !this._webAudio && n && this.stop(e._id, !0).play(e._id), this._webAudio && n) {
+        this._emit("end", e._id);
+        if (!this._webAudio && n) {
+          this.stop(e._id, !0).play(e._id);
+        }
+        if (this._webAudio && n) {
           this._emit("play", e._id);
           e._seek = e._start || 0;
           e._rateSeek = 0;
@@ -1610,7 +1647,9 @@
         });
         return o;
       }
-      if (n = "number" !== typeof n ? 0 : n, r = "number" !== typeof r ? -.5 : r, "undefined" === typeof i) {
+      n = "number" !== typeof n ? 0 : n;
+      r = "number" !== typeof r ? -.5 : r;
+      if ("undefined" === typeof i) {
         if ("number" !== typeof e) {
           return o._pos;
         }
@@ -1654,7 +1693,9 @@
         });
         return o;
       }
-      if (n = "number" !== typeof n ? o._orientation[1] : n, r = "number" !== typeof r ? o._orientation[2] : r, "undefined" === typeof i) {
+      n = "number" !== typeof n ? o._orientation[1] : n;
+      r = "number" !== typeof r ? o._orientation[2] : r;
+      if ("undefined" === typeof i) {
         if ("number" !== typeof e) {
           return o._orientation;
         }

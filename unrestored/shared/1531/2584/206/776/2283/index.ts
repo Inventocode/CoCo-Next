@@ -137,7 +137,8 @@ module.exports = function (e) {
     var t;
     var n = c.apply(void 0, arguments);
     var r = e.messageIds;
-    if (u(n), n.messageId) {
+    u(n);
+    if (n.messageId) {
       if (!r) {
         throw new TypeError("context.report() called with a messageId, but no messages were present in the rule metadata.");
       }

@@ -58,7 +58,8 @@ var s = function () {
     value: function (e) {
       var t;
       if (!e.internal.used) {
-        if (e.internal.used = !0, e.reachable) {
+        e.internal.used = !0;
+        if (e.reachable) {
           for (t = 0; t < e.allPrevSegments.length; ++t) {
             var n = e.allPrevSegments[t];
             n.allNextSegments.push(e);

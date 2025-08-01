@@ -196,7 +196,9 @@ var k = function () {
         return -1 !== t.modals.indexOf(e);
       });
       var r = this.containers[n];
-      if (r.modals.splice(r.modals.indexOf(e), 1), this.modals.splice(t, 1), 0 === r.modals.length) {
+      r.modals.splice(r.modals.indexOf(e), 1);
+      this.modals.splice(t, 1);
+      if (0 === r.modals.length) {
         if (r.restore) {
           r.restore();
         }
@@ -429,11 +431,12 @@ var I = o.forwardRef(function (e, t) {
   var he = o.useCallback(function () {
     W.remove(ce());
   }, [W]);
-  if (o.useEffect(function () {
+  o.useEffect(function () {
     return function () {
       he();
     };
-  }, [he]), o.useEffect(function () {
+  }, [he]);
+  o.useEffect(function () {
     if ($) {
       le();
     } else {
@@ -441,7 +444,8 @@ var I = o.forwardRef(function (e, t) {
         he();
       }
     }
-  }, [$, he, ae, b, le]), !z && !$ && (!ae || ee)) {
+  }, [$, he, ae, b, le]);
+  if (!z && !$ && (!ae || ee)) {
     return null;
   }
   var pe = function (e) {

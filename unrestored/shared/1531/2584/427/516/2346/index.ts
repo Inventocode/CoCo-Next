@@ -7,7 +7,9 @@ module.exports = function (e, t, n) {
     e = null;
   }
   var a = (e = e || {}).random || (e.rng || r)();
-  if (a[6] = 15 & a[6] | 64, a[8] = 63 & a[8] | 128, t) {
+  a[6] = 15 & a[6] | 64;
+  a[8] = 63 & a[8] | 128;
+  if (t) {
     for (var s = 0; s < 16; ++s) {
       t[o + s] = a[s];
     }

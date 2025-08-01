@@ -22,7 +22,8 @@ r.prototype.once = function (e, t) {
   return this;
 };
 r.prototype.off = r.prototype.removeListener = r.prototype.removeAllListeners = r.prototype.removeEventListener = function (e, t) {
-  if (this._callbacks = this._callbacks || {}, 0 == arguments.length) {
+  this._callbacks = this._callbacks || {};
+  if (0 == arguments.length) {
     this._callbacks = {};
     return this;
   }

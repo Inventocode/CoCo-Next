@@ -596,10 +596,13 @@ function V(e, t, n, i, o, a, c) {
   }, v);
   function v(t, n) {
     if (n) {
-      if (h = 2, (a = {
+      h = 2;
+      (a = {
         meta: o,
         cancelledTasks: _
-      }).crashedEffect = j, L.push(a), m.isRoot) {
+      }).crashedEffect = j;
+      L.push(a);
+      if (m.isRoot) {
         var i = H();
         U();
         e.onError(t, {
@@ -813,11 +816,20 @@ function z(e, t) {
   var v = t.apply(void 0, A);
   var m;
   var y = I();
-  if (l && (l.rootSagaStarted = l.rootSagaStarted || s.Q, l.effectTriggered = l.effectTriggered || s.Q, l.effectResolved = l.effectResolved || s.Q, l.effectRejected = l.effectRejected || s.Q, l.effectCancelled = l.effectCancelled || s.Q, l.actionDispatched = l.actionDispatched || s.Q, l.rootSagaStarted({
-    effectId: y,
-    saga: t,
-    args: A
-  })), f) {
+  if (l) {
+    l.rootSagaStarted = l.rootSagaStarted || s.Q;
+    l.effectTriggered = l.effectTriggered || s.Q;
+    l.effectResolved = l.effectResolved || s.Q;
+    l.effectRejected = l.effectRejected || s.Q;
+    l.effectCancelled = l.effectCancelled || s.Q;
+    l.actionDispatched = l.actionDispatched || s.Q;
+    l.rootSagaStarted({
+      effectId: y,
+      saga: t,
+      args: A
+    });
+  }
+  if (f) {
     var b = c.compose.apply(void 0, f);
     m = function (e) {
       return function (t, n, r) {

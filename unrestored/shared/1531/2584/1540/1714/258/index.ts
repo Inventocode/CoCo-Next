@@ -71,7 +71,10 @@ if ((!N || !C || C === T) && (C = w.prototype, N)) {
     g(c[r].prototype, C);
   }
 }
-if (N && m(O) !== C && g(O, C), s && !u(C, I)) {
+if (N && m(O) !== C) {
+  g(O, C);
+}
+if (s && !u(C, I)) {
   for (r in R = !0, h(C, I, {
     get: function () {
       return l(this) ? this[A] : void 0;

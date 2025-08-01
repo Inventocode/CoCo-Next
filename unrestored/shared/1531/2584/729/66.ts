@@ -1109,7 +1109,10 @@ function Oe(e, t, n) {
         var e = o.next();
         if (!1 === e.done) {
           var c = e.value;
-          if (2 === r && (c = c[1]), t && !(a.length < t) || !p(c)) {
+          if (2 === r) {
+            c = c[1];
+          }
+          if (t && !(a.length < t) || !p(c)) {
             return n ? e : B(r, s++, c, e);
           }
           a.push(o);
@@ -1145,7 +1148,10 @@ function ke(e, t, n) {
   return r ? L(o) : A(e) ? U(o) : H(o);
 }
 function Se(e, t, n) {
-  if (t || (t = Ne), n) {
+  if (!t) {
+    t = Ne;
+  }
+  if (n) {
     var r = e.toSeq().map(function (t, r) {
       return [t, n(t, r, e)];
     }).reduce(function (e, n) {
@@ -1598,7 +1604,11 @@ vt.prototype.update = function (e, t, n, a, s, c, u) {
   if (p ? f[d][1] === s : l) {
     return this;
   }
-  if (i(u), (l || !p) && i(c), !l || 1 !== f.length) {
+  i(u);
+  if (l || !p) {
+    i(c);
+  }
+  if (!l || 1 !== f.length) {
     if (!p && !l && f.length >= Pt) {
       return function (e, t, n, r) {
         if (!e) {
@@ -1785,7 +1795,11 @@ bt.prototype.update = function (e, t, n, o, a, s, c) {
   if (h ? l[f][1] === a : u) {
     return this;
   }
-  if (i(c), (u || !h) && i(s), u && 2 === d) {
+  i(c);
+  if (u || !h) {
+    i(s);
+  }
+  if (u && 2 === d) {
     return new wt(e, this.keyHash, l[1 ^ f]);
   }
   var p = e && e === this.ownerID;
@@ -1912,7 +1926,8 @@ function Tt(e, t, n) {
     var s = {
       value: !1
     };
-    if (i = Bt(e._root, e.__ownerID, 0, void 0, t, n, a, s), !s.value) {
+    i = Bt(e._root, e.__ownerID, 0, void 0, t, n, a, s);
+    if (!s.value) {
       return e;
     }
     o = e.size + (a.value ? n === r ? -1 : 1 : 0);
@@ -2331,7 +2346,10 @@ function qt(e, t, n) {
     }
     A.array[d >>> 5 & 31] = p;
   }
-  if (c < a && (_ = _ && _.removeAfter(r, 0, c)), s >= h) {
+  if (c < a) {
+    _ = _ && _.removeAfter(r, 0, c);
+  }
+  if (s >= h) {
     s -= h;
     c -= h;
     u = 5;
@@ -2882,7 +2900,20 @@ var wn = function (e) {
     if (!(this instanceof t)) {
       return new t(e, n, r);
     }
-    if (je(0 !== r, "Cannot step a Range by 0"), e = e || 0, void 0 === n && (n = 1 / 0), r = void 0 === r ? 1 : Math.abs(r), n < e && (r = -r), this._start = e, this._end = n, this._step = r, this.size = Math.max(0, Math.ceil((n - e) / r - 1) + 1), 0 === this.size) {
+    je(0 !== r, "Cannot step a Range by 0");
+    e = e || 0;
+    if (void 0 === n) {
+      n = 1 / 0;
+    }
+    r = void 0 === r ? 1 : Math.abs(r);
+    if (n < e) {
+      r = -r;
+    }
+    this._start = e;
+    this._end = n;
+    this._step = r;
+    this.size = Math.max(0, Math.ceil((n - e) / r - 1) + 1);
+    if (0 === this.size) {
       if (bn) {
         return bn;
       }
@@ -3412,7 +3443,8 @@ hn(y, {
   },
   splice: function (e, t) {
     var n = arguments.length;
-    if (t = Math.max(t || 0, 0), 0 === n || 2 === n && !t) {
+    t = Math.max(t || 0, 0);
+    if (0 === n || 2 === n && !t) {
       return this;
     }
     e = l(e, e < 0 ? this.count() : this.size);
@@ -3774,7 +3806,9 @@ var $n = {
       if (!(this instanceof t)) {
         return new t(e, n);
       }
-      if (this._value = e, this.size = void 0 === n ? 1 / 0 : Math.max(0, n), 0 === this.size) {
+      this._value = e;
+      this.size = void 0 === n ? 1 / 0 : Math.max(0, n);
+      if (0 === this.size) {
         if (zn) {
           return zn;
         }

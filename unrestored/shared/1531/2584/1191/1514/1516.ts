@@ -247,7 +247,8 @@ var S = function (e) {
     });
     O(y(e), "mounted", !1);
     O(y(e), "handleDragStart", function (t) {
-      if (e.props.onMouseDown(t), !e.props.allowAnyClick && "number" === typeof t.button && 0 !== t.button) {
+      e.props.onMouseDown(t);
+      if (!e.props.allowAnyClick && "number" === typeof t.button && 0 !== t.button) {
         return !1;
       }
       var n = e.findDOMNode();
@@ -294,14 +295,17 @@ var S = function (e) {
           var i = r - e.state.lastX;
           var a = o - e.state.lastY;
           var c = f((0, s.snapToGrid)(e.props.grid, i, a), 2);
-          if (i = c[0], a = c[1], !i && !a) {
+          i = c[0];
+          a = c[1];
+          if (!i && !a) {
             return;
           }
           r = e.state.lastX + i;
           o = e.state.lastY + a;
         }
         var u = (0, s.createCoreData)(y(e), r, o);
-        if ((0, l.default)("DraggableCore: handleDrag: %j", u), !1 !== e.props.onDrag(t, u) && !1 !== e.mounted) {
+        (0, l.default)("DraggableCore: handleDrag: %j", u);
+        if (!1 !== e.props.onDrag(t, u) && !1 !== e.mounted) {
           e.setState({
             lastX: r,
             lastY: o

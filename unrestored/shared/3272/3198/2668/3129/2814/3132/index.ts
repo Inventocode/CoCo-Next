@@ -88,7 +88,10 @@ function g(e, t, n, r) {
           r = i.t0;
         case 13:
           if (l = null, !1 !== t.inputSourceMap) {
-            if ("object" === typeof t.inputSourceMap && (l = c().fromObject(t.inputSourceMap)), !l && (u = E(T, r))) {
+            if ("object" === typeof t.inputSourceMap) {
+              l = c().fromObject(t.inputSourceMap);
+            }
+            if (!l && (u = E(T, r))) {
               try {
                 l = c().fromComment(u);
               } catch (a) {
@@ -96,7 +99,8 @@ function g(e, t, n, r) {
               }
             }
             if (!l) {
-              if (h = E(b, r), "string" === typeof t.filename && h) {
+              h = E(b, r);
+              if ("string" === typeof t.filename && h) {
                 try {
                   m = b.exec(h);
                   if ((g = s().readFileSync(o().resolve(o().dirname(t.filename), m[1]))).length > 1e6) {

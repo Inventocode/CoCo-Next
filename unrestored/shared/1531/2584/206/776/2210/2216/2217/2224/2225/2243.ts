@@ -37,7 +37,8 @@ module.exports = function (e, t, n) {
     var b = d || p.length >= e.opts.loopRequired;
     var w = e.opts.ownProperties;
     if (u) {
-      if (r += " var missing" + i + "; ", b) {
+      r += " var missing" + i + "; ";
+      if (b) {
         if (!d) {
           r += " var " + h + " = validate.schema" + s + "; ";
         }

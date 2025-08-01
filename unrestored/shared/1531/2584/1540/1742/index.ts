@@ -17,7 +17,10 @@ for (var d in o) {
         f[c] = u;
       }
     }
-    if (f[l] || a(f, l, d), o[d]) {
+    if (!f[l]) {
+      a(f, l, d);
+    }
+    if (o[d]) {
       for (var h in i) if (f[h] !== i[h]) {
         try {
           a(f, h, i[h]);

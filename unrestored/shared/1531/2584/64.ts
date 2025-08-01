@@ -4,7 +4,7 @@ export { i as a };
 export { a as b };
 export { s as c };
 var r = require("./28/303/index");
-var o = (module => {
+var o = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -15,7 +15,7 @@ var o = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(r);
+}(r);
 function i(e) {
   return e + "_" + o.a.generate();
 }

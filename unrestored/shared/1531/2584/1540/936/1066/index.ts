@@ -47,14 +47,41 @@ module.exports = function (e, t, n, u, f, v, b) {
   var I = S[g] || S["@@iterator"] || f && S[f];
   var A = !m && I || w(f);
   var j = "Array" == t && S.entries || I;
-  if (j && (y = i(j.call(new e())), h !== Object.prototype && y.next && (d || i(y) === h || (a ? a(y, h) : "function" != typeof y[g] && c(y, g, _)), s(y, C, !0, !0), d && (p[C] = _))), "values" == f && I && "values" !== I.name && (T = !0, A = function () {
-    return I.call(this);
-  }), d && !b || S[g] === A || c(S, g, A), p[t] = A, f) {
-    if (E = {
+  if (j) {
+    y = i(j.call(new e()));
+    if (h !== Object.prototype && y.next) {
+      if (!(d || i(y) === h)) {
+        if (a) {
+          a(y, h);
+        } else {
+          if ("function" != typeof y[g]) {
+            c(y, g, _);
+          }
+        }
+      }
+      s(y, C, !0, !0);
+      if (d) {
+        p[C] = _;
+      }
+    }
+  }
+  if ("values" == f && I && "values" !== I.name) {
+    T = !0;
+    A = function () {
+      return I.call(this);
+    };
+  }
+  if (!(d && !b || S[g] === A)) {
+    c(S, g, A);
+  }
+  p[t] = A;
+  if (f) {
+    E = {
       values: w("values"),
       keys: v ? A : w("keys"),
       entries: w("entries")
-    }, b) {
+    };
+    if (b) {
       for (O in E) if (m || T || !(O in S)) {
         l(S, O, E[O]);
       }

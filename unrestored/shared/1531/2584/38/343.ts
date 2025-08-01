@@ -13,7 +13,10 @@ function l(e, t) {
   for (var n in e) {
     var r = e[n];
     if (1 === t) {
-      if (r.type === o.v && "" === r.attributes.fileId && (r.attributes.fileId = "https://creation.codemao.cn/coconut/web/1.10.0/static/media/defaultImage.8392642c.svg"), r.type !== o.H || r.parentId) {
+      if (r.type === o.v && "" === r.attributes.fileId) {
+        r.attributes.fileId = "https://creation.codemao.cn/coconut/web/1.10.0/static/media/defaultImage.8392642c.svg";
+      }
+      if (r.type !== o.H || r.parentId) {
         if (r.type === o.w) {
           var c = r.attributes.sizeType;
           if (c) {

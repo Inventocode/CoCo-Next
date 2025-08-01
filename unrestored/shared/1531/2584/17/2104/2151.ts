@@ -146,13 +146,19 @@ var l = function () {
           if (o) {
             t.selected_comment = "";
             var a = t.comments.get(o);
-            if (null === (e = null === a || void 0 === a ? void 0 : a.parentElement) || void 0 === e || e.classList.remove("blocklySimplifiedCommentTextActive"), t.events.is_enabled() && t.events.fire(t.ui_event_factory({
-              type: c.UIEventType.SIMPLIFIED_COMMENT_SELECT,
-              workspace_id: n.workspace.id,
-              old_value: !0,
-              new_value: !1,
-              block_id: o
-            })), o !== n.id) {
+            if (!(null === (e = null === a || void 0 === a ? void 0 : a.parentElement) || void 0 === e)) {
+              e.classList.remove("blocklySimplifiedCommentTextActive");
+            }
+            if (t.events.is_enabled()) {
+              t.events.fire(t.ui_event_factory({
+                type: c.UIEventType.SIMPLIFIED_COMMENT_SELECT,
+                workspace_id: n.workspace.id,
+                old_value: !0,
+                new_value: !1,
+                block_id: o
+              }));
+            }
+            if (o !== n.id) {
               t.selected_comment = n.id;
               var u = t.comments.get(n.id);
               if (!(null === (r = null === u || void 0 === u ? void 0 : u.parentElement) || void 0 === r)) {
@@ -231,7 +237,12 @@ var l = function () {
         if (!p) {
           var u;
           var _;
-          if (p = !0, s() && (u = t.selected_comment, t.selected_comment = n.id), u && u !== n.id) {
+          p = !0;
+          if (s()) {
+            u = t.selected_comment;
+            t.selected_comment = n.id;
+          }
+          if (u && u !== n.id) {
             if (t.events.is_enabled()) {
               if (!(null === (e = null === (_ = t.comments.get(u)) || void 0 === _ ? void 0 : _.parentElement) || void 0 === e)) {
                 e.classList.remove("blocklySimplifiedCommentTextActive");

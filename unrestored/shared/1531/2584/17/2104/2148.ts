@@ -49,7 +49,18 @@ var d = function () {
         var u = e.childNodes[s];
         var l = u.nodeName.toLowerCase();
         var f = void 0;
-        if ("block" == l || "shadow" == l && !this.events.is_record_undo() || "empty" == l && !this.events.is_record_undo() ? f = this.dom_to_block(u, t) : "shadow" === l || "empty" === l ? console.error("Shadow block cannot be a top-level block.") : "comment" === l && (f = this.dom_to_workspace_comment(u, t)), f) {
+        if ("block" == l || "shadow" == l && !this.events.is_record_undo() || "empty" == l && !this.events.is_record_undo()) {
+          f = this.dom_to_block(u, t);
+        } else {
+          if ("shadow" === l || "empty" === l) {
+            console.error("Shadow block cannot be a top-level block.");
+          } else {
+            if ("comment" === l) {
+              f = this.dom_to_workspace_comment(u, t);
+            }
+          }
+        }
+        if (f) {
           n.push(f.id);
           var d = parseInt(u.getAttribute("x") || "0", 10);
           var h = parseInt(u.getAttribute("y") || "0", 10);
@@ -82,7 +93,10 @@ var d = function () {
     if ((0, c.is_block_group)(e)) {
       i = this.block_to_dom(e.origin_block, t);
       var s = e.get_field_value(a.BLOCK_GROUP_NAME_FIELD_NAME);
-      if ((0, u.assert)("string" === typeof s), i.setAttribute(a.BLOCK_GROUP_NAME_XML_TAG, s), i.setAttribute(a.BLOCK_GROUP_ID_XML_TAG, e.id), e.group_type !== a.BlockGroupType.EXECUTION) {
+      (0, u.assert)("string" === typeof s);
+      i.setAttribute(a.BLOCK_GROUP_NAME_XML_TAG, s);
+      i.setAttribute(a.BLOCK_GROUP_ID_XML_TAG, e.id);
+      if (e.group_type !== a.BlockGroupType.EXECUTION) {
         return i;
       }
       var l = null === (n = e.next_connection) || void 0 === n ? void 0 : n.targetBlock();
@@ -99,7 +113,11 @@ var d = function () {
       }
       return i;
     }
-    if ((i = e.is_shadow() ? e.is_editable() ? f.create_dom("shadow") : f.create_dom("empty") : f.create_dom("block")).setAttribute("type", e.type), t || i.setAttribute("id", e.id), e.mutationToDom) {
+    (i = e.is_shadow() ? e.is_editable() ? f.create_dom("shadow") : f.create_dom("empty") : f.create_dom("block")).setAttribute("type", e.type);
+    if (!t) {
+      i.setAttribute("id", e.id);
+    }
+    if (e.mutationToDom) {
       var p = e.mutationToDom();
       if (p && (p.hasChildNodes() || p.hasAttributes())) {
         i.appendChild(p);
@@ -111,7 +129,18 @@ var d = function () {
         this.field_to_dom(v, i);
       }
     }
-    if (e.parent_group ? (e.parent_group.comment && i.appendChild(this.comment_to_dom(e.parent_group.comment)), i.setAttribute("visible", e.parent_group.visibility_)) : (e.comment && i.appendChild(this.comment_to_dom(e.comment)), i.setAttribute("visible", e.visibility_)), e.data) {
+    if (e.parent_group) {
+      if (e.parent_group.comment) {
+        i.appendChild(this.comment_to_dom(e.parent_group.comment));
+      }
+      i.setAttribute("visible", e.parent_group.visibility_);
+    } else {
+      if (e.comment) {
+        i.appendChild(this.comment_to_dom(e.comment));
+      }
+      i.setAttribute("visible", e.visibility_);
+    }
+    if (e.data) {
       var m = f.create_dom("data", void 0, e.data);
       i.appendChild(m);
     }
@@ -199,7 +228,8 @@ var d = function () {
   };
   e.prototype.field_number_to_dom = function (e, t) {
     var n = [e.min_, e.max_, e.precision_, e.mod_].join(",");
-    if (t.setAttribute("constraints", n), void 0 != e.exceptions) {
+    t.setAttribute("constraints", n);
+    if (void 0 != e.exceptions) {
       var r = e.exceptions.join(",");
       t.setAttribute("exceptions", r);
     }
@@ -453,7 +483,13 @@ var d = function () {
   };
   e.prototype.parse_connection = function (e, t, n, r) {
     var i;
-    if (n && ((null === (i = t.targetBlock()) || void 0 === i ? void 0 : i.is_shadow()) && t.remove_shadow(), t.set_shadow_dom(n)), r) {
+    if (n) {
+      if (null === (i = t.targetBlock()) || void 0 === i ? void 0 : i.is_shadow()) {
+        t.remove_shadow();
+      }
+      t.set_shadow_dom(n);
+    }
+    if (r) {
       var o = this.dom_to_block_headless(r, e, void 0);
       var a = o.output_connection || o.previous_connection;
       if (a) {

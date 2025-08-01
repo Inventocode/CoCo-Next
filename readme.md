@@ -18,7 +18,7 @@
 | CoCo Editor | ✅ | 75% | ❌ | ❌ | ❌ |
 | CoCo Editor Player | ✅ | 75% | ❌ | ❌ | ❌ |
 | CoCo Editor ServiceWorker | ✅ | ✅ | ❌ | / | ❌ |
-| CoCo Player | ✅ | ❌ | ❌ | ❌ | ❌ |
+| CoCo Player | ✅ | 75% | ❌ | ❌ | ❌ |
 
 过程说明：
 
@@ -70,8 +70,8 @@ $ npm run unpack:home
 $ npm run unpack:shared
 $ npm run unpack:editor
 $ npm run unpack:editor-service-worker
-$ npm run unpack:player
 $ npm run unpack:editor-player
+$ npm run unpack:player
 ```
 
 解包后有些代码有些小问题，请自行解决。

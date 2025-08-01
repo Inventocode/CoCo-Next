@@ -51,7 +51,10 @@ var o = function () {
       var p = void 0;
       for (p = 1, h |= 1 << d; p < e[d]; p++, h &= ~(1 << d)) {
         var g = t.combins(u - p - 1, l - d - 2);
-        if (o && 0 === h && u - p - (l - d - 1) >= l - d - 1 && (g -= t.combins(u - p - (l - d), l - d - 2)), l - d - 1 > 1) {
+        if (o && 0 === h && u - p - (l - d - 1) >= l - d - 1) {
+          g -= t.combins(u - p - (l - d), l - d - 2);
+        }
+        if (l - d - 1 > 1) {
           for (var y = 0, w = u - p - (l - d - 2); w > r; w--) {
             y += t.combins(u - p - w - 1, l - d - 3);
           }

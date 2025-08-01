@@ -36,7 +36,8 @@ module.exports = function () {
       c("Parsing JSON config");
       var n = {};
       try {
-        if (n = a.parse("Object", e) || {}, s.isEverySeverityValid(n)) {
+        n = a.parse("Object", e) || {};
+        if (s.isEverySeverityValid(n)) {
           return {
             success: !0,
             config: n

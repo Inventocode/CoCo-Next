@@ -19,9 +19,24 @@ module.exports = function (e, t) {
   }
   n = t.debug || !1;
   try {
-    if (a = r(), s = document.createRange(), c = document.getSelection(), (l = document.createElement("span")).textContent = e, l.style.all = "unset", l.style.position = "fixed", l.style.top = 0, l.style.clip = "rect(0, 0, 0, 0)", l.style.whiteSpace = "pre", l.style.webkitUserSelect = "text", l.style.MozUserSelect = "text", l.style.msUserSelect = "text", l.style.userSelect = "text", l.addEventListener("copy", function (r) {
-      if (r.stopPropagation(), t.format) {
-        if (r.preventDefault(), "undefined" === typeof r.clipboardData) {
+    a = r();
+    s = document.createRange();
+    c = document.getSelection();
+    (l = document.createElement("span")).textContent = e;
+    l.style.all = "unset";
+    l.style.position = "fixed";
+    l.style.top = 0;
+    l.style.clip = "rect(0, 0, 0, 0)";
+    l.style.whiteSpace = "pre";
+    l.style.webkitUserSelect = "text";
+    l.style.MozUserSelect = "text";
+    l.style.msUserSelect = "text";
+    l.style.userSelect = "text";
+    l.addEventListener("copy", function (r) {
+      r.stopPropagation();
+      if (t.format) {
+        r.preventDefault();
+        if ("undefined" === typeof r.clipboardData) {
           if (n) {
             console.warn("unable to use e.clipboardData");
           }
@@ -40,7 +55,11 @@ module.exports = function (e, t) {
         r.preventDefault();
         t.onCopy(r.clipboardData);
       }
-    }), document.body.appendChild(l), s.selectNodeContents(l), c.addRange(s), !document.execCommand("copy")) {
+    });
+    document.body.appendChild(l);
+    s.selectNodeContents(l);
+    c.addRange(s);
+    if (!document.execCommand("copy")) {
       throw new Error("copy command was unsuccessful");
     }
     u = !0;

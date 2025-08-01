@@ -311,7 +311,10 @@
       try {
         for (var I, F = e[Symbol.iterator](); !(T = (I = F.next()).done); T = !0) {
           var R = I.value;
-          if (R < r && ++i > u && A("overflow"), R == r) {
+          if (R < r && ++i > u) {
+            A("overflow");
+          }
+          if (R == r) {
             for (var P = i, N = 36;; N += 36) {
               var M = N <= o ? 1 : N >= o + 26 ? 26 : N - o;
               if (P < M) {
@@ -592,7 +595,10 @@
     var n = t.iri ? s : a;
     var r = [];
     var i = C[(t.scheme || e.scheme || "").toLowerCase()];
-    if (i && i.serialize && i.serialize(e, t), e.host) {
+    if (i && i.serialize) {
+      i.serialize(e, t);
+    }
+    if (e.host) {
       if (n.IPV6ADDRESS.test(e.host)) {
         ;
       } else if (t.domainHost || i && i.domainHost) {
@@ -609,7 +615,16 @@
       r.push(":");
     }
     var o = P(e, t);
-    if (void 0 !== o && ("suffix" !== t.reference && r.push("//"), r.push(o), e.path && "/" !== e.path.charAt(0) && r.push("/")), void 0 !== e.path) {
+    if (void 0 !== o) {
+      if ("suffix" !== t.reference) {
+        r.push("//");
+      }
+      r.push(o);
+      if (e.path && "/" !== e.path.charAt(0)) {
+        r.push("/");
+      }
+    }
+    if (void 0 !== e.path) {
       var c = e.path;
       if (!(t.absolutePath || i && i.absolutePath)) {
         c = U(c);
@@ -729,7 +744,14 @@
       return n;
     },
     serialize: function (e, t) {
-      if (e.port !== (W(e) ? 443 : 80) && "" !== e.port || (e.port = void 0), "boolean" === typeof e.secure && (e.scheme = e.secure ? "wss" : "ws", e.secure = void 0), e.resourceName) {
+      if (!(e.port !== (W(e) ? 443 : 80) && "" !== e.port)) {
+        e.port = void 0;
+      }
+      if ("boolean" === typeof e.secure) {
+        e.scheme = e.secure ? "wss" : "ws";
+        e.secure = void 0;
+      }
+      if (e.resourceName) {
         var n = e.resourceName.split("?");
         var r = c(n, 2);
         var i = r[0];
@@ -767,7 +789,8 @@
     parse: function (e, t) {
       var n = e;
       var r = n.to = n.path ? n.path.split(",") : [];
-      if (n.path = void 0, n.query) {
+      n.path = void 0;
+      if (n.query) {
         for (var i = !1, o = {}, a = n.query.split("&"), s = 0, c = a.length; s < c; ++s) {
           var u = a[s].split("=");
           switch (u[0]) {
@@ -794,7 +817,8 @@
       n.query = void 0;
       for (var h = 0, p = r.length; h < p; ++h) {
         var _ = r[h].split("@");
-        if (_[0] = G(_[0]), t.unicodeSupport) {
+        _[0] = G(_[0]);
+        if (t.unicodeSupport) {
           _[1] = G(_[1], t).toLowerCase();
         } else {
           try {

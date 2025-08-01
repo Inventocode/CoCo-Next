@@ -24,7 +24,9 @@ var l = function (e) {
 };
 exports.a = function (e, t, n) {
   var r = (e = e || {}).random || (e.rng || o)();
-  if (r[6] = 15 & r[6] | 64, r[8] = 63 & r[8] | 128, t) {
+  r[6] = 15 & r[6] | 64;
+  r[8] = 63 & r[8] | 128;
+  if (t) {
     n = n || 0;
     for (var i = 0; i < 16; ++i) {
       t[n + i] = r[i];

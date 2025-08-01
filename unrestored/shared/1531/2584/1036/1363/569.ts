@@ -120,7 +120,8 @@
           }
         }
         for (u = l.length - 1; u >= 0; u--) {
-          if (s = l[u], !m(e[s], t[s], n, r)) {
+          s = l[u];
+          if (!m(e[s], t[s], n, r)) {
             return !1;
           }
         }
@@ -170,7 +171,10 @@
     }
     var o = "string" === typeof r;
     var s = !e && i && !n;
-    if ((!e && a.isError(i) && o && b(i, n) || s) && g(i, n, "Got unwanted exception" + r), e && i && n && !b(i, n) || !e && i) {
+    if (!e && a.isError(i) && o && b(i, n) || s) {
+      g(i, n, "Got unwanted exception" + r);
+    }
+    if (e && i && n && !b(i, n) || !e && i) {
       throw i;
     }
   }

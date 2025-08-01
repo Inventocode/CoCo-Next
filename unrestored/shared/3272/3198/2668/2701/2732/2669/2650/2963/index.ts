@@ -27,7 +27,8 @@ exports._getTypeAnnotation = function () {
     if (a) {
       return a.call(this, e);
     }
-    if (a = i[this.parentPath.type], null != (r = a) && r.validParent) {
+    a = i[this.parentPath.type];
+    if (null != (r = a) && r.validParent) {
       return this.parentPath.getTypeAnnotation();
     }
   } finally {

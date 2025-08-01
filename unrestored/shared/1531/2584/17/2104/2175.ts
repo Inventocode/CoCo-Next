@@ -130,7 +130,14 @@ var h = function (e) {
         var h = this.icon_offset * (s - u);
         d.setAttribute("transform", "translate(" + (this.left_top_offset[0] - h) + ", " + this.left_top_offset[1] + ")");
       }
-      if (this.events.bind_event_with_checks(this.svg_icon, "mouseup", this, this.on_icon_click), this.reposition(), this.rendered = !0, null === (n = this.workspace.get_canvas()) || void 0 === n || n.appendChild(this.svg_group), this.update_visibility(), this.events.is_record_undo() && this.events.is_enabled() && !e && 1 === this.svg_icon.childElementCount) {
+      this.events.bind_event_with_checks(this.svg_icon, "mouseup", this, this.on_icon_click);
+      this.reposition();
+      this.rendered = !0;
+      if (!(null === (n = this.workspace.get_canvas()) || void 0 === n)) {
+        n.appendChild(this.svg_group);
+      }
+      this.update_visibility();
+      if (this.events.is_record_undo() && this.events.is_enabled() && !e && 1 === this.svg_icon.childElementCount) {
         var p = this.svg_icon.firstElementChild;
         p.style.opacity = "0";
         setTimeout(this.comment_bubble.animate_once.bind(this, p, "createCommentAnimation", function () {

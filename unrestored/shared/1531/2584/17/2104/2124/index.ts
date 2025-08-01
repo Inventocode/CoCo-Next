@@ -90,8 +90,12 @@ var s = function (e) {
     }
     var a = this.pixels_to_workspace_units(t);
     var s = o.vec2.add(o.vec2.create(), this._start_xy, a);
-    if (this._dragging_block.move_off_drag_surface(s), this._dragging_block.bring_to_front(), !this.maybe_delete_block()) {
-      if (this._dragging_block.move_connections(a), this._dragging_block.set_dragging(!1), this.events.is_enabled()) {
+    this._dragging_block.move_off_drag_surface(s);
+    this._dragging_block.bring_to_front();
+    if (!this.maybe_delete_block()) {
+      this._dragging_block.move_connections(a);
+      this._dragging_block.set_dragging(!1);
+      if (this.events.is_enabled()) {
         var c = this.move_event_factory({
           block: this._dragging_block
         });

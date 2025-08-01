@@ -3,7 +3,7 @@
 export { P as a };
 export { W as b };
 var r = require("../1/index");
-var o = (module => {
+var o = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -14,7 +14,7 @@ var o = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(r);
+}(r);
 var i = require("../7");
 var a = require("../27");
 var s = require("../40");
@@ -226,7 +226,7 @@ function L(e, t, n, r, o, i) {
   }
   var C = [];
   var T = [];
-  if (r.forEach(function (e, t) {
+  r.forEach(function (e, t) {
     if (e.hasReturn) {
       if (!e.consistentReturn) {
         C.push(t);
@@ -234,7 +234,8 @@ function L(e, t, n, r, o, i) {
     } else {
       T.push(t);
     }
-  }), u = M(T, a)) {
+  });
+  if (u = M(T, a)) {
     throw new m.b(m.a.NO_RETURN_FUNCTION, c, u, "noReturnFunction");
   }
   if (u = M(C, a)) {

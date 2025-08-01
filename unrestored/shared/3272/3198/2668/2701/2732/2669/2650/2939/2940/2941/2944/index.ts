@@ -148,7 +148,10 @@ l.prototype.allGeneratedPositionsFor = function (e) {
     originalLine: t,
     originalColumn: r.getArg(e, "column", 0)
   };
-  if (null != this.sourceRoot && (n.source = r.relative(this.sourceRoot, n.source)), !this._sources.has(n.source)) {
+  if (null != this.sourceRoot) {
+    n.source = r.relative(this.sourceRoot, n.source);
+  }
+  if (!this._sources.has(n.source)) {
     return [];
   }
   n.source = this._sources.indexOf(n.source);
@@ -336,7 +339,10 @@ u.prototype.sourceContentFor = function (e, t) {
   if (!this.sourcesContent) {
     return null;
   }
-  if (null != this.sourceRoot && (e = r.relative(this.sourceRoot, e)), this._sources.has(e)) {
+  if (null != this.sourceRoot) {
+    e = r.relative(this.sourceRoot, e);
+  }
+  if (this._sources.has(e)) {
     return this.sourcesContent[this._sources.indexOf(e)];
   }
   var n;
@@ -356,7 +362,10 @@ u.prototype.sourceContentFor = function (e, t) {
 };
 u.prototype.generatedPositionFor = function (e) {
   var t = r.getArg(e, "source");
-  if (null != this.sourceRoot && (t = r.relative(this.sourceRoot, t)), !this._sources.has(t)) {
+  if (null != this.sourceRoot) {
+    t = r.relative(this.sourceRoot, t);
+  }
+  if (!this._sources.has(t)) {
     return {
       line: null,
       column: null,

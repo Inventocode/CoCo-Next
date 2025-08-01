@@ -53,7 +53,10 @@ function u(e, t) {
       if (!((c = this._schemas[s]) instanceof a)) {
         return;
       }
-      if (c.validate || this._compile(c), s == v(t)) {
+      if (!c.validate) {
+        this._compile(c);
+      }
+      if (s == v(t)) {
         return {
           schema: c,
           root: e,
@@ -103,10 +106,16 @@ c.ids = function (e) {
       var p = u._getId(e);
       var _ = n[l];
       var A = a[l] + "/" + f;
-      if (void 0 !== h && (A += "/" + ("number" == typeof h ? h : o.escapeFragment(h))), "string" == typeof p) {
+      if (void 0 !== h) {
+        A += "/" + ("number" == typeof h ? h : o.escapeFragment(h));
+      }
+      if ("string" == typeof p) {
         p = _ = v(_ ? r.resolve(_, p) : p);
         var g = u._refs[p];
-        if ("string" == typeof g && (g = u._refs[g]), g && g.schema) {
+        if ("string" == typeof g) {
+          g = u._refs[g];
+        }
+        if (g && g.schema) {
           if (!i(e, g.schema)) {
             throw new Error('id "' + p + '" resolves to more than one schema');
           }
@@ -131,7 +140,8 @@ c.inlineRef = p;
 c.schema = u;
 var f = o.toHash(["properties", "patternProperties", "enum", "dependencies", "definitions"]);
 function d(e, t, n, r) {
-  if (e.fragment = e.fragment || "", "/" == e.fragment.slice(0, 1)) {
+  e.fragment = e.fragment || "";
+  if ("/" == e.fragment.slice(0, 1)) {
     for (var i = e.fragment.split("/"), a = 1; a < i.length; a++) {
       var s = i[a];
       if (s) {
@@ -183,7 +193,10 @@ function p(e, t) {
     var r = 0;
     if (Array.isArray(t)) {
       for (var i = 0; i < t.length; i++) {
-        if ("object" == typeof (n = t[i]) && (r += e(n)), r == 1 / 0) {
+        if ("object" == typeof (n = t[i])) {
+          r += e(n);
+        }
+        if (r == 1 / 0) {
           return 1 / 0;
         }
       }

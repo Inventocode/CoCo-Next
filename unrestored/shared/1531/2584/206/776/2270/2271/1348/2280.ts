@@ -26,7 +26,8 @@
             r++;
           }
           for (a in o = 0, s = t.of) {
-            if (c = s[a], !d(e[a], c)) {
+            c = s[a];
+            if (!d(e[a], c)) {
               return !1;
             }
             if (n[a]) {
@@ -49,7 +50,8 @@
           var o;
           var a;
           for (n = 0, r = 0, o = (i = t.of).length; r < o; ++r) {
-            if (a = i[r], !d(e[n], a)) {
+            a = i[r];
+            if (!d(e[n], a)) {
               return !1;
             }
             n++;
@@ -63,7 +65,9 @@
     var r;
     var i;
     var o;
-    if (n = t.type, r = t.structure, n) {
+    n = t.type;
+    r = t.structure;
+    if (n) {
       return "*" === n || ((i = c[n] || a[n]) ? i.typeOf === u.call(e).slice(8, -1) && i.validate(e) : n === u.call(e).slice(8, -1) && (!r || l(e, t)));
     }
     if (r) {

@@ -19,7 +19,10 @@ var s = function () {
     }
   };
   e.prototype.show = function (e, t) {
-    if (this.hide(), this.owner_ = e, this.dispose_ = t, void 0 != this.DIV) {
+    this.hide();
+    this.owner_ = e;
+    this.dispose_ = t;
+    if (void 0 != this.DIV) {
       var n = (0, a.get_viewport_page_offset)(document);
       this.DIV.style.top = n[1] + "px";
       this.DIV.style.direction = "ltr";

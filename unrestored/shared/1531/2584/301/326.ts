@@ -83,7 +83,10 @@ var f = function (e) {
       return this.allow_text ? e : "";
     }
     var t = parseFloat(e);
-    if (this.precision_ && (t = Math.round(t / Number(this.precision_)) * Number(this.precision_)), !this.exceptions || -1 === this.exceptions.indexOf(t)) {
+    if (this.precision_) {
+      t = Math.round(t / Number(this.precision_)) * Number(this.precision_);
+    }
+    if (!this.exceptions || -1 === this.exceptions.indexOf(t)) {
       if (void 0 != this.mod_ && t !== 1 / 0 && t !== -1 / 0) {
         var n = Number(this.max_);
         var r = Number(this.min_);
@@ -245,7 +248,7 @@ var f = function (e) {
       throw new ReferenceError("source_block is undefined");
     }
     this.workspace_ = this.source_block.get_workspace();
-    if (this.widget_div.show(this, function () {
+    this.widget_div.show(this, function () {
       n.focus(!1);
       if (n.runtime_data.editing === n) {
         n.focus(!1);
@@ -254,7 +257,8 @@ var f = function (e) {
         t();
       }
       n.widget_dispose()();
-    }), void 0 == this.widget_div.DIV) {
+    });
+    if (void 0 == this.widget_div.DIV) {
       throw new Error("DIV is undefined");
     }
     this.html_input = this.widget_create();

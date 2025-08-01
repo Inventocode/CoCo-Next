@@ -54,7 +54,10 @@ function l(e, t, n, a, s) {
   var d = !0 !== l.unmanaged;
   var h = a[e];
   var p = l.inject || l.multiInject;
-  if ((h = p || h) instanceof r.LazyServiceIdentifer && (h = h.unwrap()), d) {
+  if ((h = p || h) instanceof r.LazyServiceIdentifer) {
+    h = h.unwrap();
+  }
+  if (d) {
     if (!t && (h === Object || h === Function || void 0 === h)) {
       var _ = i.MISSING_INJECT_ANNOTATION + " argument " + e + " in class " + n + ".";
       throw new Error(_);

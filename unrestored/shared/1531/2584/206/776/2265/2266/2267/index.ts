@@ -300,7 +300,8 @@ var h = function () {
     key: "popTryContext",
     value: function () {
       var e = this.tryContext;
-      if (this.tryContext = e.upper, "catch" !== e.position) {
+      this.tryContext = e.upper;
+      if ("catch" !== e.position) {
         var t = e.returnedForkContext;
         var n = e.thrownForkContext;
         if (!t.empty || !n.empty) {
@@ -346,7 +347,15 @@ var h = function () {
       var n = e.returnedForkContext;
       var r = e.thrownForkContext;
       var i = t.head;
-      if ("catch" === e.position ? (this.popForkContext(), t = this.forkContext, e.lastOfCatchIsReachable = t.reachable) : e.lastOfTryIsReachable = t.reachable, e.position = "finally", !n.empty || !r.empty) {
+      if ("catch" === e.position) {
+        this.popForkContext();
+        t = this.forkContext;
+        e.lastOfCatchIsReachable = t.reachable;
+      } else {
+        e.lastOfTryIsReachable = t.reachable;
+      }
+      e.position = "finally";
+      if (!n.empty || !r.empty) {
         for (var a = t.makeNext(-1, -1), s = 0; s < t.count; ++s) {
           for (var c = [i[s]], u = 0; u < n.segmentsList.length; ++u) {
             c.push(n.segmentsList[u][s]);
@@ -513,7 +522,8 @@ var h = function () {
     value: function (e) {
       var t = this.loopContext;
       var n = this.forkContext;
-      if (t.test = e, !t.continueForkContext.empty) {
+      t.test = e;
+      if (!t.continueForkContext.empty) {
         t.continueForkContext.add(n.head);
         var r = t.continueForkContext.makeNext(0, -1);
         n.replaceHead(r);
@@ -625,7 +635,8 @@ var h = function () {
     value: function () {
       var e = this.breakContext;
       var t = this.forkContext;
-      if (this.breakContext = e.upper, !e.breakable) {
+      this.breakContext = e.upper;
+      if (!e.breakable) {
         var n = e.brokenForkContext;
         if (!n.empty) {
           n.add(t.head);

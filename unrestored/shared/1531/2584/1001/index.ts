@@ -31,7 +31,8 @@ var c = function () {
     this.theme_list[e] = n;
   };
   e.prototype.apply = function (e) {
-    if (this._apply(e), this.Blink.mainWorkspace) {
+    this._apply(e);
+    if (this.Blink.mainWorkspace) {
       this.Blink.events.disable();
       var t = this.Blink.xml.workspace_to_dom(this.Blink.mainWorkspace);
       this.Blink.mainWorkspace.clear();
@@ -64,7 +65,9 @@ var c = function () {
       var i = new s.Color();
       var o = new s.Color();
       if (i.set(e.block_color[r].fill) && o.set(e.block_color[r].border)) {
-        if (e.block_color[r].fill = i, e.block_color[r].border = o, e.block_color[r].layer) {
+        e.block_color[r].fill = i;
+        e.block_color[r].border = o;
+        if (e.block_color[r].layer) {
           if (!new s.Color().set(e.block_color[r].layer)) {
             console.warn("Illegal layer color " + e.block_color[r].layer + " of " + r + " deleted.");
             delete e.block_color[r].layer;

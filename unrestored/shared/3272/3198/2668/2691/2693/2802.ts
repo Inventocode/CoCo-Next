@@ -175,7 +175,11 @@ function x(e, t) {
     e.set(n, a);
   }
   var s = a.get(i);
-  if (s || (s = [], a.set(i, s)), -1 === s.indexOf(t)) {
+  if (!s) {
+    s = [];
+    a.set(i, s);
+  }
+  if (-1 === s.indexOf(t)) {
     var o = s.filter(function (e) {
       r = t;
       return (n = e).name === r.name && n.value === r.value && n.options === r.options && n.dirname === r.dirname && n.alias === r.alias && n.ownPass === r.ownPass && (n.file && n.file.request) === (r.file && r.file.request) && (n.file && n.file.resolved) === (r.file && r.file.resolved);
@@ -348,7 +352,11 @@ function O(e) {
         return "continue";
       }
       var i = n.get(r.value);
-      if (i || (i = new Set(), n.set(r.value, i)), i.has(r.name)) {
+      if (!i) {
+        i = new Set();
+        n.set(r.value, i);
+      }
+      if (i.has(r.name)) {
         var a = e.filter(function (e) {
           return e.value === r.value;
         });

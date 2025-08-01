@@ -73,7 +73,8 @@ var v = function () {
     this.appendModeInfo(p, g);
     var v;
     var _ = new o.a();
-    if (this.appendBytes(e, p, _, u), null !== a && void 0 !== a.get(n.a.QR_VERSION)) {
+    this.appendBytes(e, p, _, u);
+    if (null !== a && void 0 !== a.get(n.a.QR_VERSION)) {
       var m = Number.parseInt(a.get(n.a.QR_VERSION).toString(), 10);
       v = c.a.getVersionForNumber(m);
       var A = this.calculateBitsNeeded(p, g, _, v);
@@ -117,7 +118,10 @@ var v = function () {
     return e < t.ALPHANUMERIC_TABLE.length ? t.ALPHANUMERIC_TABLE[e] : -1;
   };
   t.chooseMode = function (e, r) {
-    if (void 0 === r && (r = null), i.a.SJIS.getName() === r && this.isOnlyDoubleByteKanji(e)) {
+    if (void 0 === r) {
+      r = null;
+    }
+    if (i.a.SJIS.getName() === r && this.isOnlyDoubleByteKanji(e)) {
       return s.a.KANJI;
     }
     for (var n = !1, o = !1, a = 0, u = e.length; a < u; ++a) {
@@ -411,7 +415,14 @@ var v = function () {
     for (var n = r.length, o = 0; o < n; o += 2) {
       var a = (255 & r[o]) << 8 & 4294967295 | 255 & r[o + 1];
       var u = -1;
-      if (a >= 33088 && a <= 40956 ? u = a - 33088 : a >= 57408 && a <= 60351 && (u = a - 49472), -1 === u) {
+      if (a >= 33088 && a <= 40956) {
+        u = a - 33088;
+      } else {
+        if (a >= 57408 && a <= 60351) {
+          u = a - 49472;
+        }
+      }
+      if (-1 === u) {
         throw new y.a("Invalid byte sequence");
       }
       var s = 192 * (u >> 8) + (255 & u);

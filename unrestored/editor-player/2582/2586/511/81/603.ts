@@ -381,7 +381,8 @@ var g = function () {
     for (var i = t, a = e, u = this.field.getZero(), s = this.field.getOne(); a.getDegree() >= Math.round(r / 2);) {
       var c = i;
       var f = u;
-      if (u = s, (i = a).isZero()) {
+      u = s;
+      if ((i = a).isZero()) {
         throw n.a.getChecksumInstance();
       }
       a = c;

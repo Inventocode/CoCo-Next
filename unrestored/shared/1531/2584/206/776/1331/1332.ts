@@ -9,7 +9,10 @@ module.exports = {
         throw new Error("ecmaVersion must be a number. Received value of type ".concat(typeof e, " instead."));
       }
       var t = e;
-      if (t >= 2015 && (t -= 2009), !r.includes(t)) {
+      if (t >= 2015) {
+        t -= 2009;
+      }
+      if (!r.includes(t)) {
         throw new Error("Invalid ecmaVersion.");
       }
       return t;

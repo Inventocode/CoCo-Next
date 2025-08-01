@@ -287,10 +287,12 @@ function _(e) {
             }
             var r = d.location.href;
             var i = f;
-            if (f = r, g("history", {
+            f = r;
+            g("history", {
               from: i,
               to: r
-            }), e) {
+            });
+            if (e) {
               try {
                 return e.apply(this, t);
               } catch (o) {}

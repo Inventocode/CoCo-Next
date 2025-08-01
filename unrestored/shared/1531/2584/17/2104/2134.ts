@@ -36,7 +36,8 @@ var s = function () {
   };
   e.prototype.apply_connections = function () {
     if (this.closest_connection && this.local_connection) {
-      if (this.local_connection.connect(this.closest_connection), this.top_block && this.top_block.rendered) {
+      this.local_connection.connect(this.closest_connection);
+      if (this.top_block && this.top_block.rendered) {
         var e = this.local_connection.is_superior() ? this.closest_connection : this.local_connection;
         this.block_animations.connection_ui_effect(e.get_source_block());
         this.connection_effect();

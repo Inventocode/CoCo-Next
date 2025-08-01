@@ -324,22 +324,39 @@ var R = function () {
       var r = this.shared;
       t.args = this.args;
       var i = 0;
-      if (e && (t.event = e, n.preventDefault && e.cancelable && t.event.preventDefault(), t.type = e.type, r.touches = this.ctrl.pointerIds.size || this.ctrl.touchIds.size, r.locked = !!document.pointerLockElement, Object.assign(r, function (e) {
-        var t = {};
-        if ("buttons" in e && (t.buttons = e.buttons), "shiftKey" in e) {
-          var n = e.shiftKey;
-          var r = e.altKey;
-          var i = e.metaKey;
-          var o = e.ctrlKey;
-          Object.assign(t, {
-            shiftKey: n,
-            altKey: r,
-            metaKey: i,
-            ctrlKey: o
-          });
+      if (e) {
+        t.event = e;
+        if (n.preventDefault && e.cancelable) {
+          t.event.preventDefault();
         }
-        return t;
-      }(e)), r.down = r.pressed = r.buttons % 2 === 1 || r.touches > 0, i = e.timeStamp - t.timeStamp, t.timeStamp = e.timeStamp, t.elapsedTime = t.timeStamp - t.startTime), t._active) {
+        t.type = e.type;
+        r.touches = this.ctrl.pointerIds.size || this.ctrl.touchIds.size;
+        r.locked = !!document.pointerLockElement;
+        Object.assign(r, function (e) {
+          var t = {};
+          if ("buttons" in e) {
+            t.buttons = e.buttons;
+          }
+          if ("shiftKey" in e) {
+            var n = e.shiftKey;
+            var r = e.altKey;
+            var i = e.metaKey;
+            var o = e.ctrlKey;
+            Object.assign(t, {
+              shiftKey: n,
+              altKey: r,
+              metaKey: i,
+              ctrlKey: o
+            });
+          }
+          return t;
+        }(e));
+        r.down = r.pressed = r.buttons % 2 === 1 || r.touches > 0;
+        i = e.timeStamp - t.timeStamp;
+        t.timeStamp = e.timeStamp;
+        t.elapsedTime = t.timeStamp - t.startTime;
+      }
+      if (t._active) {
         var o = t._delta.map(Math.abs);
         p.a.addTo(t._distance, o);
       }
@@ -351,7 +368,23 @@ var R = function () {
       var f = u[1];
       var d = t._step;
       var _ = t.values;
-      if (n.hasCustomTransform ? (!1 === d[0] && (d[0] = Math.abs(s) >= l && _[0]), !1 === d[1] && (d[1] = Math.abs(c) >= f && _[1])) : (!1 === d[0] && (d[0] = Math.abs(s) >= l && Math.sign(s) * l), !1 === d[1] && (d[1] = Math.abs(c) >= f && Math.sign(c) * f)), t.intentional = !1 !== d[0] || !1 !== d[1], t.intentional) {
+      if (n.hasCustomTransform) {
+        if (!1 === d[0]) {
+          d[0] = Math.abs(s) >= l && _[0];
+        }
+        if (!1 === d[1]) {
+          d[1] = Math.abs(c) >= f && _[1];
+        }
+      } else {
+        if (!1 === d[0]) {
+          d[0] = Math.abs(s) >= l && Math.sign(s) * l;
+        }
+        if (!1 === d[1]) {
+          d[1] = Math.abs(c) >= f && Math.sign(c) * f;
+        }
+      }
+      t.intentional = !1 !== d[0] || !1 !== d[1];
+      if (t.intentional) {
         var A = [0, 0];
         if (n.hasCustomTransform) {
           var g = Object(h.a)(_, 2);
@@ -363,7 +396,10 @@ var R = function () {
           A[0] = !1 !== d[0] ? s - d[0] : 0;
           A[1] = !1 !== d[1] ? c - d[1] : 0;
         }
-        if (this.intent && this.intent(A), (t._active && !t._blocked || t.active) && (t.first = t._active && !t.active, t.last = !t._active && t.active, t.active = r[this.ingKey] = t._active, e)) {
+        if (this.intent) {
+          this.intent(A);
+        }
+        if ((t._active && !t._blocked || t.active) && (t.first = t._active && !t.active, t.last = !t._active && t.active, t.active = r[this.ingKey] = t._active, e)) {
           if (t.first) {
             if ("bounds" in n) {
               t._bounds = B(n.bounds, t);
@@ -374,7 +410,8 @@ var R = function () {
           }
           t.movement = A;
           var y = t.offset;
-          if (this.computeOffset(), !t.last || i > 32) {
+          this.computeOffset();
+          if (!t.last || i > 32) {
             t.delta = p.a.sub(t.offset, y);
             var b = t.delta.map(Math.abs);
             p.a.addTo(t.distance, b);
@@ -395,7 +432,10 @@ var R = function () {
       var e = this.state;
       var t = this.shared;
       var n = this.config;
-      if (e._active || this.clean(), !e._blocked && e.intentional || e._force || n.triggerAllEvents) {
+      if (!e._active) {
+        this.clean();
+      }
+      if (!e._blocked && e.intentional || e._force || n.triggerAllEvents) {
         var r = this.handler(g(g(g({}, t), e), {}, Object(u.a)({}, this.aliasKey, e.values)));
         if (void 0 !== r) {
           e.memo = r;
@@ -516,7 +556,8 @@ var M = {
 var j = g(g({}, M), {}, {
   axis: function (e, t, n) {
     var r = n.axis;
-    if (this.lockDirection = "lock" === r, !this.lockDirection) {
+    this.lockDirection = "lock" === r;
+    if (!this.lockDirection) {
       return r;
     }
   },
@@ -717,7 +758,8 @@ var U = function (e) {
           var i = Object(h.a)(t._distance, 2);
           var o = i[0];
           var a = i[1];
-          if (t.tap = o <= 3 && a <= 3, t.tap && n.filterTaps) {
+          t.tap = o <= 3 && a <= 3;
+          if (t.tap && n.filterTaps) {
             t._force = !0;
           } else {
             var s = Object(h.a)(t.direction, 2);
@@ -1080,7 +1122,10 @@ var Q = function (e) {
     key: "pointerMove",
     value: function (e) {
       var t = this.state._pointerEvents;
-      if (t.has(e.pointerId) && t.set(e.pointerId, e), this.state._active) {
+      if (t.has(e.pointerId)) {
+        t.set(e.pointerId, e);
+      }
+      if (this.state._active) {
         var n = x.apply(void 0, Object(r.a)(Array.from(t.values())));
         this.pinchMove(e, n);
       }
@@ -1150,7 +1195,10 @@ var Q = function (e) {
   }, {
     key: "gestureMove",
     value: function (e) {
-      if (e.cancelable && e.preventDefault(), this.state._active) {
+      if (e.cancelable) {
+        e.preventDefault();
+      }
+      if (this.state._active) {
         var t = this.state;
         this.computeValues([e.scale, e.rotation]);
         t.origin = [e.clientX, e.clientY];

@@ -30,7 +30,14 @@ function d(e, t, n, d) {
     h.attributes = Object(r.a)(Object(r.a)({}, h.attributes), _[g]);
   }
   var v = m;
-  if (v.attributes.disabled && h.type === o.H && (["titleSlot"].includes(t) ? h.attributes.color = "#7C7C7C" : h.attributes.color = "#CACACA"), void 0 === n) {
+  if (v.attributes.disabled && h.type === o.H) {
+    if (["titleSlot"].includes(t)) {
+      h.attributes.color = "#7C7C7C";
+    } else {
+      h.attributes.color = "#CACACA";
+    }
+  }
+  if (void 0 === n) {
     return Object(c.c)({
       widget: h,
       forceRender: !0

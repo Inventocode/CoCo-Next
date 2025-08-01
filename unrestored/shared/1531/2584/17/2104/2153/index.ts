@@ -289,7 +289,11 @@ var h = function (e) {
         r.unselect();
       }
       var i = [];
-      if (e && (e.select(), i = e.get_blocks(!0)), e && i && i.length > 0) {
+      if (e) {
+        e.select();
+        i = e.get_blocks(!0);
+      }
+      if (e && i && i.length > 0) {
         var o = e.get_flyout_background_color();
         if (o) {
           var s = this.flyout.get_background();

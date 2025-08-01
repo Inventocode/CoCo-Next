@@ -127,7 +127,8 @@ exports.rewriteModuleStatementsAndPrepareHeader = function (e, t) {
   if (!a) {
     (0, P.default)(e);
   }
-  if ((0, A.default)(e, C), !1 !== s) {
+  (0, A.default)(e, C);
+  if (!1 !== s) {
     if (!e.node.directives.some(function (e) {
       return "use strict" === e.value.value;
     })) {

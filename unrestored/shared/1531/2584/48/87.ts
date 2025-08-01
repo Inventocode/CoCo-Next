@@ -9,7 +9,7 @@ export { v as f };
 export { y as e };
 var r;
 var o = require("../1/index");
-var i = (module => {
+var i = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -20,7 +20,7 @@ var i = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(o);
+}(o);
 var a = require("../6");
 var s = require("../7");
 var c = require("../41");

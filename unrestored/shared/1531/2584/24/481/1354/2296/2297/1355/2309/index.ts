@@ -7,7 +7,14 @@
   var c = require("../2308/967");
   var u = require("./1358");
   var l = require("../../968/index")("engine.io-client:websocket");
-  if ("undefined" !== typeof WebSocket ? r = WebSocket : "undefined" !== typeof self && (r = self.WebSocket || self.MozWebSocket), "undefined" === typeof window) {
+  if ("undefined" !== typeof WebSocket) {
+    r = WebSocket;
+  } else {
+    if ("undefined" !== typeof self) {
+      r = self.WebSocket || self.MozWebSocket;
+    }
+  }
+  if ("undefined" === typeof window) {
     try {
       i = require("./1132");
     } catch (h) {}
@@ -91,7 +98,10 @@
         a.encodePacket(e, n.supportsBinary, function (i) {
           if (!n.usingBrowserWebSocket) {
             var o = {};
-            if (e.options && (o.compress = e.options.compress), n.perMessageDeflate) {
+            if (e.options) {
+              o.compress = e.options.compress;
+            }
+            if (n.perMessageDeflate) {
               if (("string" === typeof i ? t.byteLength(i) : i.length) < n.perMessageDeflate.threshold) {
                 o.compress = !1;
               }

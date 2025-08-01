@@ -49,7 +49,19 @@ module.exports = function (e, t, n) {
   if (S && !e.async) {
     throw new Error("async keyword in sync schema");
   }
-  if (g || v || (o += C + " = null;"), o += "var " + p + " = errors;var " + h + ";", _ && w.$data && (E += "}", o += " if (" + i + " === undefined) { " + h + " = true; } else { ", x && (E += "}", o += " " + h + " = " + b + ".validateSchema(" + i + "); if (" + h + ") { ")), g) {
+  if (!(g || v)) {
+    o += C + " = null;";
+  }
+  o += "var " + p + " = errors;var " + h + ";";
+  if (_ && w.$data) {
+    E += "}";
+    o += " if (" + i + " === undefined) { " + h + " = true; } else { ";
+    if (x) {
+      E += "}";
+      o += " " + h + " = " + b + ".validateSchema(" + i + "); if (" + h + ") { ";
+    }
+  }
+  if (g) {
     if (w.statements) {
       o += " " + m.validate + " ";
     } else {
@@ -99,7 +111,11 @@ module.exports = function (e, t, n) {
       o += S ? " var " + (C = "customErrors" + a) + " = null; try { " + h + " = await " + P + "; } catch (e) { " + h + " = false; if (e instanceof ValidationError) " + C + " = e.errors; else throw e; } " : " " + C + " = null; " + h + " = " + P + "; ";
     }
   }
-  if (w.modifying && (o += " if (" + F + ") " + d + " = " + F + "[" + R + "];"), o += "" + E, w.valid) {
+  if (w.modifying) {
+    o += " if (" + F + ") " + d + " = " + F + "[" + R + "];";
+  }
+  o += "" + E;
+  if (w.valid) {
     if (f) {
       o += " if (true) { ";
     }

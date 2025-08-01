@@ -101,10 +101,17 @@ var l = function () {
       try {
         for (a.s(); !(t = a.n()).done;) {
           var s = t.value;
-          if (s.resync(), 0 !== s.contexts.length && s.contexts[s.contexts.length - 1] === this || s.pushContext(this), null !== s.key) {
+          s.resync();
+          if (!(0 !== s.contexts.length && s.contexts[s.contexts.length - 1] === this)) {
+            s.pushContext(this);
+          }
+          if (null !== s.key) {
             var o = s.node;
             if (!n.has(o)) {
-              if (o && n.add(o), s.visit()) {
+              if (o) {
+                n.add(o);
+              }
+              if (s.visit()) {
                 i = !0;
                 break;
               }

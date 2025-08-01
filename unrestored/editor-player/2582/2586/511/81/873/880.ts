@@ -8,7 +8,10 @@ var u = require("../221");
 !function () {
   function t() {}
   t.prototype.write = function (e, r, u, s) {
-    if (void 0 === s && (s = null), 0 === e.length) {
+    if (void 0 === s) {
+      s = null;
+    }
+    if (0 === e.length) {
       throw new a.a("Found empty contents");
     }
     if (r < 0 || u < 0) {

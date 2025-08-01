@@ -489,7 +489,23 @@
           }
           return "n" === o ? (s = !0, !0) : H.test(o);
         });
-        if (e && (u = e + u), G.test(u) && T.has_directive("use strict") && _("Legacy octal literals are not allowed in strict mode"), c && (u.endsWith("_") ? _("Numeric separators are not allowed at the end of numeric literals") : u.includes("__") && _("Only one underscore is allowed as numeric separator"), u = u.replace(/_/g, "")), u.endsWith("n")) {
+        if (e) {
+          u = e + u;
+        }
+        if (G.test(u) && T.has_directive("use strict")) {
+          _("Legacy octal literals are not allowed in strict mode");
+        }
+        if (c) {
+          if (u.endsWith("_")) {
+            _("Numeric separators are not allowed at the end of numeric literals");
+          } else {
+            if (u.includes("__")) {
+              _("Only one underscore is allowed as numeric separator");
+            }
+          }
+          u = u.replace(/_/g, "");
+        }
+        if (u.endsWith("n")) {
           var l = u.slice(0, -1);
           var f = ue(l, V.test(l));
           if (!i && K.test(u) && !isNaN(f)) {
@@ -603,7 +619,8 @@
             (n = h(e ? "template_head" : "template_substitution", r)).raw = s;
             return n;
           }
-          if (s += t, "\\" == t) {
+          s += t;
+          if ("\\" == t) {
             var c = i.pos;
             t = v(!0, !(d && ("name" === d.type || "punc" === d.type && (")" === d.value || "]" === d.value))), !0);
             s += i.text.substr(c, i.pos - c);
@@ -763,7 +780,9 @@
           return C(e);
         }
         for (r && 0 == i.pos && c("#!") && (l(), s(2), w("comment5"));;) {
-          if (p(), l(), n) {
+          p();
+          l();
+          if (n) {
             if (c("\x3c!--")) {
               s(4);
               w("comment3");
@@ -1141,7 +1160,10 @@
                     n = i("keyword", "var") ? (a(), N(!0)) : i("keyword", "let") ? (a(), M(!0)) : i("keyword", "const") ? (a(), L(!0)) : be(!0, !0);
                     var o = i("operator", "in");
                     var s = i("name", "of");
-                    if (t && !s && l(t, e), o || s) {
+                    if (t && !s) {
+                      l(t, e);
+                    }
+                    if (o || s) {
                       if (n instanceof vt) {
                         if (n.definitions.length > 1) {
                           l(n.start, "Only one variable declaration allowed in for..in loop");
@@ -1266,7 +1288,8 @@
                   var n = null;
                   if (i("keyword", "catch")) {
                     var o = r.token;
-                    if (a(), i("punc", "{")) {
+                    a();
+                    if (i("punc", "{")) {
                       var c = null;
                     } else {
                       h("(");
@@ -1569,9 +1592,24 @@
         var l = !0;
         var d = !1;
         var p = r.token;
-        if (void 0 === e && (e = S(!1, r.input.has_directive("use strict"))), t = void 0 === t ? rn : t, i("punc", "[")) {
+        if (void 0 === e) {
+          e = S(!1, r.input.has_directive("use strict"));
+        }
+        t = void 0 === t ? rn : t;
+        if (i("punc", "[")) {
           for (a(); !i("punc", "]");) {
-            if (l ? l = !1 : h(","), i("expand", "...") && (d = !0, n = r.token, e.mark_spread(r.token), a()), i("punc")) {
+            if (l) {
+              l = !1;
+            } else {
+              h(",");
+            }
+            if (i("expand", "...")) {
+              d = !0;
+              n = r.token;
+              e.mark_spread(r.token);
+              a();
+            }
+            if (i("punc")) {
               switch (r.token.value) {
                 case ",":
                   c.push(new Bn({
@@ -1627,7 +1665,18 @@
         }
         if (i("punc", "{")) {
           for (a(); !i("punc", "}");) {
-            if (l ? l = !1 : h(","), i("expand", "...") && (d = !0, n = r.token, e.mark_spread(r.token), a()), i("name") && (de(o(), "punc") || de(o(), "operator")) && [",", "}", "="].includes(o().value)) {
+            if (l) {
+              l = !1;
+            } else {
+              h(",");
+            }
+            if (i("expand", "...")) {
+              d = !0;
+              n = r.token;
+              e.mark_spread(r.token);
+              a();
+            }
+            if (i("name") && (de(o(), "punc") || de(o(), "operator")) && [",", "}", "="].includes(o().value)) {
               e.add_parameter(r.token);
               var _ = s();
               var A = re(t);
@@ -1715,16 +1764,38 @@
         var l = r.labels;
         var d = r.in_generator;
         var p = r.in_async;
-        if (++r.in_function, n && (r.in_generator = r.in_function), o && (r.in_async = r.in_function), c && function (e) {
-          var n = S(!0, r.input.has_directive("use strict"));
-          for (h("("); !i("punc", ")");) {
-            var o = T(n);
-            if (e.push(o), i("punc", ")") || (h(","), i("punc", ")") && t.ecma < 2017 && f()), o instanceof Qe) {
-              break;
+        ++r.in_function;
+        if (n) {
+          r.in_generator = r.in_function;
+        }
+        if (o) {
+          r.in_async = r.in_function;
+        }
+        if (c) {
+          (function (e) {
+            var n = S(!0, r.input.has_directive("use strict"));
+            for (h("("); !i("punc", ")");) {
+              var o = T(n);
+              e.push(o);
+              if (!i("punc", ")")) {
+                h(",");
+                if (i("punc", ")") && t.ecma < 2017) {
+                  f();
+                }
+              }
+              if (o instanceof Qe) {
+                break;
+              }
             }
-          }
-          a();
-        }(c), e && (r.in_directives = !0), r.in_loop = 0, r.labels = [], e) {
+            a();
+          })(c);
+        }
+        if (e) {
+          r.in_directives = !0;
+        }
+        r.in_loop = 0;
+        r.labels = [];
+        if (e) {
           r.input.push_directives_stack();
           var _ = I();
           if (s) {
@@ -1805,17 +1876,25 @@
       function R(e, t) {
         for (var n, o = [];;) {
           var c = "var" === t ? Zt : "const" === t ? tn : "let" === t ? nn : null;
-          if (i("punc", "{") || i("punc", "[") ? n = new wt({
-            start: r.token,
-            name: B(void 0, c),
-            value: i("operator", "=") ? (d("operator", "="), be(!1, e)) : null,
-            end: s()
-          }) : "import" == (n = new wt({
-            start: r.token,
-            name: re(c),
-            value: i("operator", "=") ? (a(), be(!1, e)) : e || "const" !== t ? null : u("Missing initializer in const declaration"),
-            end: s()
-          })).name.name && u("Unexpected token: import"), o.push(n), !i("punc", ",")) {
+          if (i("punc", "{") || i("punc", "[")) {
+            n = new wt({
+              start: r.token,
+              name: B(void 0, c),
+              value: i("operator", "=") ? (d("operator", "="), be(!1, e)) : null,
+              end: s()
+            });
+          } else {
+            if ("import" == (n = new wt({
+              start: r.token,
+              name: re(c),
+              value: i("operator", "=") ? (a(), be(!1, e)) : e || "const" !== t ? null : u("Missing initializer in const declaration"),
+              end: s()
+            })).name.name) {
+              u("Unexpected token: import");
+            }
+          }
+          o.push(n);
+          if (!i("punc", ",")) {
             break;
           }
           a();
@@ -1934,7 +2013,8 @@
         if (i("operator", "new")) {
           return function (n) {
             var o = r.token;
-            if (d("operator", "new"), i("punc", ".")) {
+            d("operator", "new");
+            if (i("punc", ".")) {
               a();
               d("name", "target");
               return oe(new $t({
@@ -2029,7 +2109,10 @@
               if (m.start) {
                 var y;
                 var b = A.comments_before.length;
-                if (n.set(A, b), (y = m.start.comments_before).unshift.apply(y, c(A.comments_before)), A.comments_before = m.start.comments_before, 0 == b && A.comments_before.length > 0) {
+                n.set(A, b);
+                (y = m.start.comments_before).unshift.apply(y, c(A.comments_before));
+                A.comments_before = m.start.comments_before;
+                if (0 == b && A.comments_before.length > 0) {
                   var w = A.comments_before[0];
                   if (!w.nlb) {
                     w.nlb = A.nlb;
@@ -2242,7 +2325,24 @@
         var u = !1;
         var l = !1;
         var d = t;
-        if (n && "static" === e && !i("punc", "(") && (u = !0, d = r.token, e = ee()), "async" !== e || i("punc", "(") || i("punc", ",") || i("punc", "}") || i("operator", "=") || (c = !0, d = r.token, e = ee()), null === e && (l = !0, d = r.token, null === (e = ee()) && f()), i("punc", "(")) {
+        if (n && "static" === e && !i("punc", "(")) {
+          u = !0;
+          d = r.token;
+          e = ee();
+        }
+        if (!("async" !== e || i("punc", "(") || i("punc", ",") || i("punc", "}") || i("operator", "="))) {
+          c = !0;
+          d = r.token;
+          e = ee();
+        }
+        if (null === e) {
+          l = !0;
+          d = r.token;
+          if (null === (e = ee())) {
+            f();
+          }
+        }
+        if (i("punc", "(")) {
           e = o(e, t);
           return new Qt({
             start: t,
@@ -2783,7 +2883,22 @@
       o += "this.flags = 0;";
       o += "}";
       var c = new Function(o)();
-      if (s && (c.prototype = s, c.BASE = r), r && r.SUBCLASSES.push(c), c.prototype.CTOR = c, c.prototype.constructor = c, c.PROPS = t || null, c.SELF_PROPS = i, c.SUBCLASSES = [], e && (c.prototype.TYPE = c.TYPE = e), n) {
+      if (s) {
+        c.prototype = s;
+        c.BASE = r;
+      }
+      if (r) {
+        r.SUBCLASSES.push(c);
+      }
+      c.prototype.CTOR = c;
+      c.prototype.constructor = c;
+      c.PROPS = t || null;
+      c.SELF_PROPS = i;
+      c.SUBCLASSES = [];
+      if (e) {
+        c.prototype.TYPE = c.TYPE = e;
+      }
+      if (n) {
         for (a in n) if (B(n, a)) {
           if ("$" === a[0]) {
             c[a.substr(1)] = n[a];
@@ -3534,7 +3649,8 @@
         });
       },
       _children_backwards: function (e) {
-        if (e(this.module_name), this.imported_names) {
+        e(this.module_name);
+        if (this.imported_names) {
           for (var t = this.imported_names.length; t--;) {
             e(this.imported_names[t]);
           }
@@ -3572,7 +3688,10 @@
         });
       },
       _children_backwards: function (e) {
-        if (this.module_name && e(this.module_name), this.exported_names) {
+        if (this.module_name) {
+          e(this.module_name);
+        }
+        if (this.exported_names) {
           for (var t = this.exported_names.length; t--;) {
             e(this.exported_names[t]);
           }
@@ -4345,7 +4464,11 @@
     function zn(e, t) {
       e.DEFMETHOD("transform", function (e, n) {
         var r = void 0;
-        if (e.push(this), e.before && (r = e.before(this, t, n)), void 0 === r && (t(r = this, e), e.after)) {
+        e.push(this);
+        if (e.before) {
+          r = e.before(this, t, n);
+        }
+        if (void 0 === r && (t(r = this, e), e.after)) {
           var i = e.after(r, n);
           if (void 0 !== i) {
             r = i;
@@ -4662,7 +4785,7 @@
           function a() {
             return '"' + t.replace(/\x22/g, '\\"') + '"';
           }
-          if (t = t.replace(/[\\\b\f\n\r\v\t\x22\x27\u2028\u2029\0\ufeff]/g, function (n, o) {
+          t = t.replace(/[\\\b\f\n\r\v\t\x22\x27\u2028\u2029\0\ufeff]/g, function (n, o) {
             switch (n) {
               case '"':
                 ++r;
@@ -4694,7 +4817,9 @@
                 return /[0-9]/.test(te(t, o + 1)) ? "\\x00" : "\\0";
             }
             return n;
-          }), t = f(t), "`" === n) {
+          });
+          t = f(t);
+          if ("`" === n) {
             return "`" + t.replace(/`/g, "\\`") + "`";
           }
           switch (e.quote_style) {
@@ -5024,7 +5149,11 @@
               r.comments_before = [];
             }
             var a = r.comments_before;
-            if (a || (a = r.comments_before = []), i.add(a), o) {
+            if (!a) {
+              a = r.comments_before = [];
+            }
+            i.add(a);
+            if (o) {
               var s = new jn(function (e) {
                 var t = s.parent();
                 if (!(t instanceof nt || t instanceof Pt && t.left === e || "Call" == t.TYPE && t.expression === e || t instanceof Nt && t.condition === e || t instanceof Bt && t.expression === e || t instanceof St && t.expressions[0] === e || t instanceof Dt && t.expression === e || t instanceof Rt)) {
@@ -5056,7 +5185,19 @@
             })).length) {
               var l = H();
               a.forEach(function (e, t) {
-                if (i.add(e), l || (e.nlb ? (I("\n"), R(), l = !0) : t > 0 && F()), /comment[134]/.test(e.type)) {
+                i.add(e);
+                if (!l) {
+                  if (e.nlb) {
+                    I("\n");
+                    R();
+                    l = !0;
+                  } else {
+                    if (t > 0) {
+                      F();
+                    }
+                  }
+                }
+                if (/comment[134]/.test(e.type)) {
                   if (n = V(e.value)) {
                     I("//" + n + "\n");
                     R();
@@ -5093,7 +5234,23 @@
               var a = u.length;
               o.filter(n, e).forEach(function (e, n) {
                 if (!i.has(e)) {
-                  if (i.add(e), x = !1, E ? (I("\n"), R(), E = !1) : e.nlb && (n > 0 || !H()) ? (I("\n"), R()) : (n > 0 || !t) && F(), /comment[134]/.test(e.type)) {
+                  i.add(e);
+                  x = !1;
+                  if (E) {
+                    I("\n");
+                    R();
+                    E = !1;
+                  } else {
+                    if (e.nlb && (n > 0 || !H())) {
+                      I("\n");
+                      R();
+                    } else {
+                      if (n > 0 || !t) {
+                        F();
+                      }
+                    }
+                  }
+                  if (/comment[134]/.test(e.type)) {
                     var r = V(e.value);
                     if (r) {
                       I("//" + r);
@@ -5568,7 +5725,8 @@
         }
       });
       nt.DEFMETHOD("_do_print", function (e, t) {
-        if (e.print(t), this.value) {
+        e.print(t);
+        if (this.value) {
           e.space();
           var n = this.value.start.comments_before;
           if (n && n.length && !e.printed_comments.has(n)) {
@@ -5814,7 +5972,13 @@
         }
       });
       e(Ct, function (e, t) {
-        if (t.print("export"), t.space(), e.is_default && (t.print("default"), t.space()), e.exported_names) {
+        t.print("export");
+        t.space();
+        if (e.is_default) {
+          t.print("default");
+          t.space();
+        }
+        if (e.exported_names) {
           if (1 === e.exported_names.length && "*" === e.exported_names[0].name.name) {
             e.exported_names[0].print(t);
           } else {
@@ -5845,7 +6009,8 @@
         }
       });
       e(wt, function (e, t) {
-        if (e.name.print(t), e.value) {
+        e.name.print(t);
+        if (e.value) {
           t.space();
           t.print("=");
           t.space();
@@ -5993,7 +6158,13 @@
         }
       });
       e(Wt, function (e, t) {
-        if (t.print("class"), t.space(), e.name && (e.name.print(t), t.space()), e.extends) {
+        t.print("class");
+        t.space();
+        if (e.name) {
+          e.name.print(t);
+          t.space();
+        }
+        if (e.extends) {
           var n = !(e.extends instanceof _n || e.extends instanceof Tt || e.extends instanceof Yt || e.extends instanceof Xe);
           t.print("extends");
           if (n) {
@@ -6496,11 +6667,12 @@
       var r = void 0 === n ? null : n;
       var i = t.toplevel;
       var o = void 0 === i ? this : i;
-      if (e = A(e, {
+      e = A(e, {
         cache: null,
         ie8: !1,
         safari10: !1
-      }), !(o instanceof ze)) {
+      });
+      if (!(o instanceof ze)) {
         throw new Error("Invalid toplevel scope");
       }
       var s = this.parent_scope = r;
@@ -6514,7 +6686,13 @@
           t.block_scope = s = new Ge(t);
           s._block_scope = !0;
           var i = t instanceof At ? r.parent_scope : r;
-          if (s.init_scope_vars(i), s.uses_with = r.uses_with, s.uses_eval = r.uses_eval, e.safari10 && (t instanceof Le || t instanceof Ue) && f.push(s), t instanceof ft) {
+          s.init_scope_vars(i);
+          s.uses_with = r.uses_with;
+          s.uses_eval = r.uses_eval;
+          if (e.safari10 && (t instanceof Le || t instanceof Ue)) {
+            f.push(s);
+          }
+          if (t instanceof ft) {
             var o = s;
             s = r;
             t.expression.walk(d);
@@ -6563,7 +6741,14 @@
             m.uses_with = !0;
           }
         } else {
-          if (t instanceof qt && (t.scope = s), t instanceof pn && (t.thedef = t, t.references = []), t instanceof cn) {
+          if (t instanceof qt) {
+            t.scope = s;
+          }
+          if (t instanceof pn) {
+            t.thedef = t;
+            t.references = [];
+          }
+          if (t instanceof cn) {
             u.def_function(t, "arguments" == t.name ? void 0 : u);
           } else if (t instanceof on) {
             h((t.scope = u.parent_scope.get_defun_scope()).def_function(t, u), 1);
@@ -6574,9 +6759,15 @@
           } else if (t instanceof un) {
             h((t.scope = u.parent_scope).def_function(t, u), 1);
           } else if (t instanceof Zt || t instanceof nn || t instanceof tn || t instanceof fn) {
-            if ((y = t instanceof en ? s.def_variable(t, null) : u.def_variable(t, "SymbolVar" == t.TYPE ? null : void 0)).orig.every(function (e) {
+            if (!(y = t instanceof en ? s.def_variable(t, null) : u.def_variable(t, "SymbolVar" == t.TYPE ? null : void 0)).orig.every(function (e) {
               return e === t || (t instanceof en ? e instanceof cn : !(e instanceof nn || e instanceof tn));
-            }) || fe('"'.concat(t.name, '" is redeclared'), t.start.file, t.start.line, t.start.col, t.start.pos), t instanceof rn || h(y, 2), u !== s) {
+            })) {
+              fe('"'.concat(t.name, '" is redeclared'), t.start.file, t.start.line, t.start.col, t.start.pos);
+            }
+            if (!(t instanceof rn)) {
+              h(y, 2);
+            }
+            if (u !== s) {
               t.mark_enclosed();
               var y = s.find_variable(t);
               if (t.thedef !== y) {
@@ -6615,7 +6806,11 @@
           }
         }
       }
-      if (this.walk(d), this instanceof ze && (this.globals = new Map()), d = new jn(function (e) {
+      this.walk(d);
+      if (this instanceof ze) {
+        this.globals = new Map();
+      }
+      d = new jn(function (e) {
         if (e instanceof ot && e.label) {
           e.label.thedef.references.push(e);
           return !0;
@@ -6651,21 +6846,26 @@
             r = r.parent_scope;
           }
         }
-      }), this.walk(d), (e.ie8 || e.safari10) && Pn(this, function (e) {
-        if (e instanceof fn) {
-          var t = e.name;
-          var n = e.thedef.references;
-          var r = e.scope.get_defun_scope();
-          var i = r.find_variable(t) || o.globals.get(t) || r.def_variable(e);
-          n.forEach(function (e) {
+      });
+      this.walk(d);
+      if (e.ie8 || e.safari10) {
+        Pn(this, function (e) {
+          if (e instanceof fn) {
+            var t = e.name;
+            var n = e.thedef.references;
+            var r = e.scope.get_defun_scope();
+            var i = r.find_variable(t) || o.globals.get(t) || r.def_variable(e);
+            n.forEach(function (e) {
+              e.thedef = i;
+              e.reference();
+            });
             e.thedef = i;
             e.reference();
-          });
-          e.thedef = i;
-          e.reference();
-          return !0;
-        }
-      }), e.safari10) {
+            return !0;
+          }
+        });
+      }
+      if (e.safari10) {
         var p;
         var _ = a(f);
         try {
@@ -7598,9 +7798,11 @@
               ie8: this.option("ie8")
             }, a = 0; a < n && (e.figure_out_scope(o), 0 === a && this.option("drop_console") && (e = e.drop_console()), (a > 0 || this.option("reduce_vars")) && e.reset_opt_flags(this), e = e.transform(this), !(n > 1 && "break" === function () {
             var n = 0;
-            if (Pn(e, function () {
+            Pn(e, function () {
               n++;
-            }), t.info("pass " + a + ": last_count: " + r + ", count: " + n), n < r) {
+            });
+            t.info("pass " + a + ": last_count: " + r + ", count: " + n);
+            if (n < r) {
               r = n;
               i = !1;
             } else {
@@ -7903,7 +8105,9 @@
           if (!$n(a, s)) {
             return !1;
           }
-          if (a._children_backwards(i), s._children_backwards(o), n.length !== r.length) {
+          a._children_backwards(i);
+          s._children_backwards(o);
+          if (n.length !== r.length) {
             return !1;
           }
         }
@@ -8086,7 +8290,8 @@
           if (i instanceof _n) {
             var o = i.definition();
             var s = c(e, o, i.scope, r.right);
-            if (o.assignments++, s) {
+            o.assignments++;
+            if (s) {
               var f = o.fixed;
               if (f || "=" == r.operator) {
                 var d = "=" == r.operator;
@@ -8320,7 +8525,8 @@
           if (n instanceof _n) {
             var r = n.definition();
             var i = c(e, r, n.scope, !0);
-            if (r.assignments++, i) {
+            r.assignments++;
+            if (i) {
               var o = r.fixed;
               if (o) {
                 r.references.push(n);
@@ -8382,7 +8588,8 @@
       var t = this;
       var n = e.option("reduce_vars");
       var r = new jn(function (i, o) {
-        if (Ar(i, 1792), n) {
+        Ar(i, 1792);
+        if (n) {
           if (e.top_retain && i instanceof qe && r.parent() === t) {
             _r(i, 1024);
           }
@@ -8477,7 +8684,10 @@
               S = !0;
               return e;
             }
-            if (g || y && x || !(a instanceof Pt && zr.has(a.operator) && a.left !== e || a instanceof Nt && a.condition !== e || a instanceof lt && a.condition !== e) || (g = a), B && !(e instanceof Jt) && v.equivalent_to(e)) {
+            if (!(g || y && x || !(a instanceof Pt && zr.has(a.operator) && a.left !== e || a instanceof Nt && a.condition !== e || a instanceof lt && a.condition !== e))) {
+              g = a;
+            }
+            if (B && !(e instanceof Jt) && v.equivalent_to(e)) {
               if (g) {
                 S = !0;
                 return e;
@@ -8488,15 +8698,18 @@
                 }
                 return e;
               }
-              if (T++, _ && h instanceof wt) {
+              T++;
+              if (_ && h instanceof wt) {
                 return e;
               }
-              if (o = S = !0, t.info("Collapsing {name} [{file}:{line},{col}]", {
+              o = S = !0;
+              t.info("Collapsing {name} [{file}:{line},{col}]", {
                 name: e.print_to_string(),
                 file: e.start.file,
                 line: e.start.line,
                 col: e.start.col
-              }), h instanceof Rt) {
+              });
+              if (h instanceof Rt) {
                 return E(Ft, h, h);
               }
               if (h instanceof wt) {
@@ -8632,7 +8845,8 @@
                   }
                   d++;
                 }
-                if (r.expression = r.expression.transform(u), !x) {
+                r.expression = r.expression.transform(u);
+                if (!x) {
                   break;
                 }
               }
@@ -8703,7 +8917,8 @@
                 name: u,
                 value: l
               })), !o.has(u.name))) {
-                if (o.add(u.name), u instanceof Qe) {
+                o.add(u.name);
+                if (u instanceof Qe) {
                   var d = e.args.slice(c);
                   if (d.every(function (e) {
                     return !N(n, e, r);
@@ -8735,7 +8950,8 @@
           }
         }
         function j(e) {
-          if (f.push(e), e instanceof Mt) {
+          f.push(e);
+          if (e instanceof Mt) {
             if (!e.left.has_side_effects(t)) {
               s.push(f.slice());
             }
@@ -9214,9 +9430,40 @@
         }
         for (var r, i = 0, a = 0; a < e.length; a++) {
           var s = e[a];
-          if (r && (s instanceof nt ? s.value = n(s.value || E(Tn, s).transform(t)) : s instanceof Le ? s.init instanceof vt || Pn(r.body, function (e) {
-            return e instanceof Ge || (e instanceof Pt && "in" === e.operator ? Mn : void 0);
-          }) || (s.init ? s.init = n(s.init) : (s.init = r.body, i--, o = !0)) : s instanceof Ue ? s.init instanceof bt || s.init instanceof yt || (s.object = n(s.object)) : s instanceof lt ? s.condition = n(s.condition) : (s instanceof ft || s instanceof Ve) && (s.expression = n(s.expression))), t.option("conditionals") && s instanceof lt) {
+          if (r) {
+            if (s instanceof nt) {
+              s.value = n(s.value || E(Tn, s).transform(t));
+            } else {
+              if (s instanceof Le) {
+                if (!(s.init instanceof vt || Pn(r.body, function (e) {
+                  return e instanceof Ge || (e instanceof Pt && "in" === e.operator ? Mn : void 0);
+                }))) {
+                  if (s.init) {
+                    s.init = n(s.init);
+                  } else {
+                    s.init = r.body;
+                    i--;
+                    o = !0;
+                  }
+                }
+              } else {
+                if (s instanceof Ue) {
+                  if (!(s.init instanceof bt || s.init instanceof yt)) {
+                    s.object = n(s.object);
+                  }
+                } else {
+                  if (s instanceof lt) {
+                    s.condition = n(s.condition);
+                  } else {
+                    if (s instanceof ft || s instanceof Ve) {
+                      s.expression = n(s.expression);
+                    }
+                  }
+                }
+              }
+            }
+          }
+          if (t.option("conditionals") && s instanceof lt) {
             var c = [];
             var u = _(s.body, c);
             var l = _(s.alternative, c);
@@ -9269,7 +9516,10 @@
                 break;
               }
               var u = s.left.property;
-              if (u instanceof Ee && (u = u.evaluate(t)), u instanceof Ee) {
+              if (u instanceof Ee) {
+                u = u.evaluate(t);
+              }
+              if (u instanceof Ee) {
                 break;
               }
               u = "" + u;
@@ -9353,7 +9603,8 @@
           } else if (a instanceof ke) {
             var c;
             if (c = g(s, a.body)) {
-              if (o = !0, !c.length) {
+              o = !0;
+              if (!c.length) {
                 continue;
               }
               a.body = Or(a.body, c);
@@ -9728,7 +9979,10 @@
         if (e.option("typeofs") && "typeof" == this.operator && (r instanceof We || r instanceof _n && r.fixed_value() instanceof We)) {
           return "function";
         }
-        if (n.has(this.operator) || t++, (r = r._eval(e, t)) === this.expression) {
+        if (!n.has(this.operator)) {
+          t++;
+        }
+        if ((r = r._eval(e, t)) === this.expression) {
           return this;
         }
         switch (this.operator) {
@@ -9854,7 +10108,10 @@
         if (B(r, "_eval")) {
           n = r._eval();
         } else {
-          if (this._eval = y, n = r._eval(e, t), delete this._eval, n === r) {
+          this._eval = y;
+          n = r._eval(e, t);
+          delete this._eval;
+          if (n === r) {
             return this;
           }
           r._eval = function () {
@@ -10493,17 +10750,23 @@
           var u = new Map();
           var l = this;
           var f = new jn(function (i, d) {
-            if (i instanceof We && i.uses_arguments && !f.has_directive("use strict") && i.argnames.forEach(function (e) {
-              if (e instanceof Jt) {
-                var t = e.definition();
-                if (!o.has(t.id)) {
-                  o.set(t.id, t);
+            if (i instanceof We && i.uses_arguments && !f.has_directive("use strict")) {
+              i.argnames.forEach(function (e) {
+                if (e instanceof Jt) {
+                  var t = e.definition();
+                  if (!o.has(t.id)) {
+                    o.set(t.id, t);
+                  }
                 }
-              }
-            }), i !== t) {
+              });
+            }
+            if (i !== t) {
               if (i instanceof qe || i instanceof Xt) {
                 var p = i.name.definition();
-                if ((f.parent() instanceof Ct || !n && l === t) && p.global && !o.has(p.id) && o.set(p.id, p), i instanceof Xt) {
+                if ((f.parent() instanceof Ct || !n && l === t) && p.global && !o.has(p.id)) {
+                  o.set(p.id, p);
+                }
+                if (i instanceof Xt) {
                   if (i.extends && (i.extends.has_side_effects(e) || i.extends.may_throw(e))) {
                     i.extends.walk(f);
                   }
@@ -10525,17 +10788,26 @@
                 T(u, p.id, i);
                 return !0;
               }
-              if (i instanceof rn && l === t && T(c, i.definition().id, i), i instanceof vt && l === t) {
+              if (i instanceof rn && l === t) {
+                T(c, i.definition().id, i);
+              }
+              if (i instanceof vt && l === t) {
                 var v = f.parent() instanceof Ct;
                 i.definitions.forEach(function (t) {
-                  if (t.name instanceof Zt && T(c, t.name.definition().id, t), !v && r || Pn(t.name, function (e) {
-                    if (e instanceof Jt) {
-                      var t = e.definition();
-                      if (!(!v && !t.global || o.has(t.id))) {
-                        o.set(t.id, t);
+                  if (t.name instanceof Zt) {
+                    T(c, t.name.definition().id, t);
+                  }
+                  if (!(!v && r)) {
+                    Pn(t.name, function (e) {
+                      if (e instanceof Jt) {
+                        var t = e.definition();
+                        if (!(!v && !t.global || o.has(t.id))) {
+                          o.set(t.id, t);
+                        }
                       }
-                    }
-                  }), t.value) {
+                    });
+                  }
+                  if (t.value) {
                     if (t.name instanceof $e) {
                       t.walk(f);
                     } else {
@@ -10584,7 +10856,10 @@
               }
             }
             if (l === t) {
-              if (a.name && (a instanceof Yt && !D(e.option("keep_classnames"), (_ = a.name.definition()).name) || a instanceof Xe && !D(e.option("keep_fnames"), (_ = a.name.definition()).name)) && (!o.has(_.id) || _.orig.length > 1) && (a.name = null), a instanceof We && !(a instanceof Ke)) {
+              if (a.name && (a instanceof Yt && !D(e.option("keep_classnames"), (_ = a.name.definition()).name) || a instanceof Xe && !D(e.option("keep_fnames"), (_ = a.name.definition()).name)) && (!o.has(_.id) || _.orig.length > 1)) {
+                a.name = null;
+              }
+              if (a instanceof We && !(a instanceof Ke)) {
                 for (var g = !e.option("keep_fargs"), v = a.argnames, m = v.length; --m >= 0;) {
                   var y = v[m];
                   if (y instanceof Qe) {
@@ -10607,7 +10882,9 @@
               if ((a instanceof qe || a instanceof Xt) && a !== t) {
                 var b = a.name.definition();
                 if (!(b.global && !n || o.has(b.id))) {
-                  if (e[a.name.unreferenced() ? "warn" : "info"]("Dropping unused function {name} [{file}:{line},{col}]", R(a.name)), b.eliminated++, a instanceof Xt) {
+                  e[a.name.unreferenced() ? "warn" : "info"]("Dropping unused function {name} [{file}:{line},{col}]", R(a.name));
+                  b.eliminated++;
+                  if (a instanceof Xt) {
                     var x = a.drop_side_effect_free(e);
                     if (x) {
                       return E(ke, a, {
@@ -10636,10 +10913,14 @@
                     return T.push(t);
                   }
                   if (!r && !C || n && (t.name.names.length || t.name.is_array || 1 != e.option("pure_getters")) || o.has(i.id)) {
-                    if (t.value && s.has(i.id) && s.get(i.id) !== t && (t.value = t.value.drop_side_effect_free(e)), t.name instanceof Zt) {
+                    if (t.value && s.has(i.id) && s.get(i.id) !== t) {
+                      t.value = t.value.drop_side_effect_free(e);
+                    }
+                    if (t.name instanceof Zt) {
                       var u = c.get(i.id);
                       if (u.length > 1 && (!t.value || i.orig.indexOf(t.name) > i.eliminated)) {
-                        if (e.warn("Dropping duplicated definition of variable {name} [{file}:{line},{col}]", R(t.name)), t.value) {
+                        e.warn("Dropping duplicated definition of variable {name} [{file}:{line},{col}]", R(t.name));
+                        if (t.value) {
                           var l = E(_n, t.name, t.name);
                           i.references.push(l);
                           var f = E(Mt, t, {
@@ -10722,7 +11003,8 @@
                 return I ? f ? w.splice(I.body) : I : a;
               }
               if (a instanceof Re && a.body instanceof Le) {
-                if (u(a, this), a.body instanceof De) {
+                u(a, this);
+                if (a.body instanceof De) {
                   var I = a.body;
                   a.body = I.body.pop();
                   I.body.push(a);
@@ -10767,7 +11049,8 @@
           return !0;
         }
         if (e instanceof _n) {
-          if (r = e.definition(), !o.has(r.id) && (o.set(r.id, r), r.orig[0] instanceof fn)) {
+          r = e.definition();
+          if (!o.has(r.id) && (o.set(r.id, r), r.orig[0] instanceof fn)) {
             var c = r.scope.is_block_scope() && r.scope.get_defun_scope().variables.get(r.name);
             if (c) {
               o.set(c.id, c);
@@ -10839,11 +11122,12 @@
             }
           }
         });
-        if (t = t.transform(u), s > 0) {
+        t = t.transform(u);
+        if (s > 0) {
           var l = [];
           var f = t instanceof We;
           var d = f ? t.args_as_names() : null;
-          if (a.forEach(function (e, t) {
+          a.forEach(function (e, t) {
             if (f && d.some(function (t) {
               return t.name === e.name.name;
             })) {
@@ -10853,7 +11137,8 @@
               l.push(e);
               a.set(t, e);
             }
-          }), l.length > 0) {
+          });
+          if (l.length > 0) {
             for (var h = 0; h < t.body.length;) {
               if (t.body[h] instanceof ke) {
                 var p;
@@ -11211,7 +11496,10 @@
       if (!t.option("loops")) {
         return e;
       }
-      if (t.option("side_effects") && e.init && (e.init = e.init.drop_side_effect_free(t)), e.condition) {
+      if (t.option("side_effects") && e.init) {
+        e.init = e.init.drop_side_effect_free(t);
+      }
+      if (e.condition) {
         var n = e.condition.evaluate(t);
         if (!(n instanceof Ee)) {
           if (n) {
@@ -11312,7 +11600,10 @@
       }(e, t);
     });
     vr(lt, function (e, t) {
-      if (Dr(e.alternative) && (e.alternative = null), !t.option("conditionals")) {
+      if (Dr(e.alternative)) {
+        e.alternative = null;
+      }
+      if (!t.option("conditionals")) {
         return e;
       }
       var n = e.condition.evaluate(t);
@@ -11322,7 +11613,10 @@
         e.condition = Kr(e.condition.transform(t), r);
       }
       if (t.option("dead_code")) {
-        if (n instanceof Ee && (n = e.condition.tail_node().evaluate(t)), !n) {
+        if (n instanceof Ee) {
+          n = e.condition.tail_node().evaluate(t);
+        }
+        if (!n) {
           t.warn("Condition always false [{file}:{line},{col}]", e.condition.start);
           var i = [];
           Hr(t, e.body, i);
@@ -11411,15 +11705,18 @@
           }).transform(t)
         }).optimize(t);
       }
-      if (e.body instanceof lt && !e.body.alternative && !e.alternative && (e = E(lt, e, {
-        condition: E(Pt, e.condition, {
-          operator: "&&",
-          left: e.condition,
-          right: e.body.condition
-        }),
-        body: e.body.body,
-        alternative: null
-      })), ni(e.body) && e.alternative) {
+      if (e.body instanceof lt && !e.body.alternative && !e.alternative) {
+        e = E(lt, e, {
+          condition: E(Pt, e.condition, {
+            operator: "&&",
+            left: e.condition,
+            right: e.body.condition
+          }),
+          body: e.body.body,
+          alternative: null
+        });
+      }
+      if (ni(e.body) && e.alternative) {
         var l = e.alternative;
         e.alternative = null;
         return E(De, e, {
@@ -11459,7 +11756,10 @@
             v(n, c[c.length - 1]);
             continue;
           }
-          if (A instanceof Ee && (A = n.expression.tail_node().evaluate(t)), A === r && (a = n, o)) {
+          if (A instanceof Ee) {
+            A = n.expression.tail_node().evaluate(t);
+          }
+          if (A === r && (a = n, o)) {
             var f = c.indexOf(o);
             c.splice(f, 1);
             v(o, c[f - 1]);
@@ -11479,7 +11779,10 @@
       }
       for (c.length > 0 && (c[0].body = s.concat(c[0].body)), e.body = c; n = c[c.length - 1];) {
         var h = n.body[n.body.length - 1];
-        if (h instanceof at && t.loopcontrol_target(h) === e && n.body.pop(), n.body.length || n instanceof pt && (o || n.expression.has_side_effects(t))) {
+        if (h instanceof at && t.loopcontrol_target(h) === e) {
+          n.body.pop();
+        }
+        if (n.body.length || n instanceof pt && (o || n.expression.has_side_effects(t))) {
           break;
         }
         if (c.pop() === o) {
@@ -11503,7 +11806,8 @@
             p = !0;
           }
         });
-        if (e.walk(_), !p) {
+        e.walk(_);
+        if (!p) {
           var A;
           var g = c[0].body.slice();
           if (A = c[0].expression) {
@@ -11529,7 +11833,11 @@
       }
     });
     vr(_t, function (e, t) {
-      if (Ur(e.body, t), e.bcatch && e.bfinally && e.bfinally.body.every(Dr) && (e.bfinally = null), t.option("dead_code") && e.body.every(Dr)) {
+      Ur(e.body, t);
+      if (e.bcatch && e.bfinally && e.bfinally.body.every(Dr)) {
+        e.bfinally = null;
+      }
+      if (t.option("dead_code") && e.body.every(Dr)) {
         var n = [];
         if (e.bcatch) {
           Hr(t, e.bcatch, n);
@@ -11952,9 +12260,12 @@
         }(N)) && (n === r || R(e, Hn) || t.option("unused") && 1 == (z = n.definition()).references.length && !ui(t, z) && r.is_constant_expression(n.scope)) && !R(e, Un | Vn) && !r.contains_this() && function () {
           var n = new Set();
           do {
-            if ((V = t.parent(++K)).is_block_scope() && V.block_scope && V.block_scope.variables.forEach(function (e) {
-              n.add(e.name);
-            }), V instanceof At) {
+            if ((V = t.parent(++K)).is_block_scope() && V.block_scope) {
+              V.block_scope.variables.forEach(function (e) {
+                n.add(e.name);
+              });
+            }
+            if (V instanceof At) {
               if (V.argname) {
                 n.add(V.argname.name);
               }
@@ -12069,7 +12380,7 @@
           return Or(e, function (n) {
             var i = [];
             var o = [];
-            if (function (t, n) {
+            (function (t, n) {
               for (var i = r.argnames.length, o = e.args.length; --o >= i;) {
                 n.push(e.args[o]);
               }
@@ -12091,14 +12402,16 @@
               }
               t.reverse();
               n.reverse();
-            }(i, o), function (e, t) {
+            })(i, o);
+            (function (e, t) {
               for (var n = t.length, i = 0, o = r.body.length; i < o; i++) {
                 var a = r.body[i];
                 if (a instanceof mt) {
                   for (var s = 0, c = a.definitions.length; s < c; s++) {
                     var u = a.definitions[s];
                     var l = u.name;
-                    if ($(e, t, l, u.value), G && r.argnames.every(function (e) {
+                    $(e, t, l, u.value);
+                    if (G && r.argnames.every(function (e) {
                       return e.name != l.name;
                     })) {
                       var f = r.variables.get(l.name);
@@ -12113,7 +12426,9 @@
                   }
                 }
               }
-            }(i, o), o.push(n), i.length) {
+            })(i, o);
+            o.push(n);
+            if (i.length) {
               var a = V.body.indexOf(t.parent(K - 1)) + 1;
               V.body.splice(a, 0, E(mt, r, {
                 definitions: i
@@ -12243,7 +12558,10 @@
             return (n instanceof _n ? E(Rn, e) : Or(e, [n, E(Rn, e)])).optimize(t);
         }
       }
-      if ("-" == e.operator && n instanceof Dn && (n = n.transform(t)), n instanceof Pt && ("+" == e.operator || "-" == e.operator) && ("*" == n.operator || "/" == n.operator || "%" == n.operator)) {
+      if ("-" == e.operator && n instanceof Dn) {
+        n = n.transform(t);
+      }
+      if (n instanceof Pt && ("+" == e.operator || "-" == e.operator) && ("*" == n.operator || "/" == n.operator || "%" == n.operator)) {
         return E(Pt, e, {
           operator: n.operator,
           left: E(Ft, n.left, {
@@ -12356,7 +12674,13 @@
           e.right = r;
         }
       }
-      if (ci.has(e.operator) && e.right.is_constant() && !e.left.is_constant() && (e.left instanceof Pt && ve[e.left.operator] >= ve[e.operator] || r()), e = e.lift_sequences(t), t.option("comparisons")) {
+      if (ci.has(e.operator) && e.right.is_constant() && !e.left.is_constant()) {
+        if (!(e.left instanceof Pt && ve[e.left.operator] >= ve[e.operator])) {
+          r();
+        }
+      }
+      e = e.lift_sequences(t);
+      if (t.option("comparisons")) {
         switch (e.operator) {
           case "===":
           case "!==":
@@ -12745,10 +13069,21 @@
           var s = xr(t);
           o = r.scope === e.scope && !li(s, i) || n instanceof Ot && n.expression === e && !li(s, i);
         }
-        if (o && i instanceof Wt && (o = (!i.extends || !i.extends.may_throw(t) && !i.extends.has_side_effects(t)) && !i.properties.some(function (e) {
-          return e.may_throw(t) || e.has_side_effects(t);
-        })), o && i) {
-          if (i instanceof Xt && (_r(i, 256), i = E(Yt, i, i)), i instanceof qe && (_r(i, 256), i = E(Xe, i, i)), r.recursive_refs > 0 && i.name instanceof on) {
+        if (o && i instanceof Wt) {
+          o = (!i.extends || !i.extends.may_throw(t) && !i.extends.has_side_effects(t)) && !i.properties.some(function (e) {
+            return e.may_throw(t) || e.has_side_effects(t);
+          });
+        }
+        if (o && i) {
+          if (i instanceof Xt) {
+            _r(i, 256);
+            i = E(Yt, i, i);
+          }
+          if (i instanceof qe) {
+            _r(i, 256);
+            i = E(Xe, i, i);
+          }
+          if (r.recursive_refs > 0 && i.name instanceof on) {
             var c = i.name.definition();
             var u = i.variables.get(i.name.name);
             var l = u && u.orig[0];
@@ -12918,7 +13253,8 @@
         var i = 0;
         var o = e;
         do {
-          if (r = o, (o = t.parent(i++)) instanceof nt) {
+          r = o;
+          if ((o = t.parent(i++)) instanceof nt) {
             if (a(i, o)) {
               break;
             }
@@ -13505,7 +13841,8 @@
         }
         n.push(i);
       }
-      if (e.segments = n, 1 == n.length) {
+      e.segments = n;
+      if (1 == n.length) {
         return E(wn, e, n[0]);
       }
       if (3 === n.length && n[1] instanceof Ee) {
@@ -13535,7 +13872,8 @@
     });
     vr(Ht, mi);
     vr(Qt, function (e, t) {
-      if (mi(e, t), t.option("arrows") && t.parent() instanceof Ut && !e.is_generator && !e.value.uses_arguments && !e.value.pinned() && 1 == e.value.body.length && e.value.body[0] instanceof rt && e.value.body[0].value && !e.value.contains_this()) {
+      mi(e, t);
+      if (t.option("arrows") && t.parent() instanceof Ut && !e.is_generator && !e.value.uses_arguments && !e.value.pinned() && 1 == e.value.body.length && e.value.body[0] instanceof rt && e.value.body[0].value && !e.value.contains_this()) {
         var n = E(Ye, e.value, e.value);
         n.async = e.async;
         n.is_generator = e.is_generator;
@@ -13927,9 +14265,15 @@
         }
         var c;
         var u = [];
-        if (t.warnings && !Ee.warn_function && (Ee.warn_function = function (e) {
-          u.push(e);
-        }), s && (s.parse = Date.now()), e instanceof ze) {
+        if (t.warnings && !Ee.warn_function) {
+          Ee.warn_function = function (e) {
+            u.push(e);
+          };
+        }
+        if (s) {
+          s.parse = Date.now();
+        }
+        if (e instanceof ze) {
           c = e;
         } else {
           for (var l in "string" == typeof e && (e = [e]), t.parse = t.parse || {}, t.parse.toplevel = null, e) if (B(e, l) && (t.parse.filename = l, t.parse.toplevel = ye(e[l], t.parse), t.sourceMap && "inline" == t.sourceMap.content)) {
@@ -13982,7 +14326,10 @@
           s.output = Date.now();
         }
         var f = {};
-        if (t.output.ast && (f.ast = c), !B(t.output, "code") || t.output.code) {
+        if (t.output.ast) {
+          f.ast = c;
+        }
+        if (!B(t.output, "code") || t.output.code) {
           if (t.sourceMap && ("string" == typeof t.sourceMap.content && (t.sourceMap.content = JSON.parse(t.sourceMap.content)), t.output.source_map = function (e) {
             e = A(e, {
               file: null,
@@ -14054,8 +14401,15 @@
           delete t.output.ast;
           delete t.output.code;
           var d = qn(t.output);
-          if (c.print(d), f.code = d.get(), t.sourceMap) {
-            if (t.sourceMap.asObject ? f.map = t.output.source_map.get().toJSON() : f.map = t.output.source_map.toString(), "inline" == t.sourceMap.url) {
+          c.print(d);
+          f.code = d.get();
+          if (t.sourceMap) {
+            if (t.sourceMap.asObject) {
+              f.map = t.output.source_map.get().toJSON();
+            } else {
+              f.map = t.output.source_map.toString();
+            }
+            if ("inline" == t.sourceMap.url) {
               var h = "object" == typeof f.map ? JSON.stringify(f.map) : f.map;
               f.code += "\n//# sourceMappingURL=data:application/json;charset=utf-8;base64," + Ci(h);
             } else if (t.sourceMap.url) {

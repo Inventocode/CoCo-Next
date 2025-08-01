@@ -102,7 +102,10 @@ var p = function (t) {
         }
       }
     }
-    if (!_ && v > m && (_ = !0), !_) {
+    if (!_ && v > m) {
+      _ = !0;
+    }
+    if (!_) {
       throw new i.a();
     }
     var I = [new s.a(l[1], t), new s.a(p[0], t)];

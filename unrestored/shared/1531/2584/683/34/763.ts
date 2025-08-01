@@ -15,7 +15,8 @@ module.exports = function () {
       return !1;
     }
     var e = new String("abc");
-    if (e[5] = "de", "5" === Object.getOwnPropertyNames(e)[0]) {
+    e[5] = "de";
+    if ("5" === Object.getOwnPropertyNames(e)[0]) {
       return !1;
     }
     for (var t = {}, n = 0; n < 10; n++) {

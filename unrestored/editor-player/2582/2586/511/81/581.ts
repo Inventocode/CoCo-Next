@@ -3,7 +3,8 @@
 var n = require("./63");
 var o = function () {
   function t(t) {
-    if (this.binarizer = t, null === t) {
+    this.binarizer = t;
+    if (null === t) {
       throw new n.a("Binarizer must be non-null.");
     }
   }

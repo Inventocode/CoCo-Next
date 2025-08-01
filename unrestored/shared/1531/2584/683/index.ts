@@ -113,7 +113,8 @@ var p = function (e, t) {
         }
         for (; a;) {
           try {
-            if (n = 1, r && (i = 2 & o[0] ? r.return : o[0] ? r.throw || ((i = r.return) && i.call(r), 0) : r.next) && !(i = i.call(r, o[1])).done) {
+            n = 1;
+            if (r && (i = 2 & o[0] ? r.return : o[0] ? r.throw || ((i = r.return) && i.call(r), 0) : r.next) && !(i = i.call(r, o[1])).done) {
               return i;
             }
             switch (r = 0, i && (o = [2 & o[0], i.value]), o[0]) {
@@ -403,15 +404,18 @@ var _ = function () {
           });
         }
     }
-    if (n.name && this.events.fire(t, {
-      target_id: n.name,
-      data: {
-        position: {
-          x: i,
-          y: -o
+    if (n.name) {
+      this.events.fire(t, {
+        target_id: n.name,
+        data: {
+          position: {
+            x: i,
+            y: -o
+          }
         }
-      }
-    }), this.cancel_multi_touch) {
+      });
+    }
+    if (this.cancel_multi_touch) {
       var a = e.data.originalEvent;
       if (Object(c.o)(a) && a.touches.length > 1) {
         this.events.emit_break_event();
@@ -580,7 +584,8 @@ function E(e, t) {
         t.push(a);
       } else {
         var s = void 0;
-        if (s = e[o - 1].x === e[o].x ? 1 / 0 : (e[o - 1].y - e[o].y) / (e[o - 1].x - e[o].x), n === s || Math.abs(n - s) < .001) {
+        s = e[o - 1].x === e[o].x ? 1 / 0 : (e[o - 1].y - e[o].y) / (e[o - 1].x - e[o].x);
+        if (n === s || Math.abs(n - s) < .001) {
           continue;
         }
         n = s;
@@ -817,7 +822,11 @@ var M = function () {
           return r >= 0 && i >= 0 && r < t && i < n && e[i * t + r] >>> 24 > 0;
         };
         for (o = 0, s = 0; s < n; o += r) {
-          if (o > t && (o = 0, s += r), !(s > n)) {
+          if (o > t) {
+            o = 0;
+            s += r;
+          }
+          if (!(s > n)) {
             var d = i ? (Math.random() - .5) * i + o : o;
             var h = i ? (Math.random() - .5) * i + s : s;
             if (f((c = d) - 1, (u = h) - 1) && f(c, u - 1) && f(c - 1, u) && f(c, u)) {
@@ -1145,7 +1154,7 @@ var L = function () {
   return e = j([Object(i.injectable)()], e);
 }();
 var U = require("../186/index");
-var H = (module => {
+var H = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -1156,7 +1165,7 @@ var H = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(U);
+}(U);
 var V = function (e, t, n, r) {
   return new (n || (n = Promise))(function (i, o) {
     function a(e) {
@@ -1221,7 +1230,8 @@ var G = function (e, t) {
         }
         for (; a;) {
           try {
-            if (n = 1, r && (i = 2 & o[0] ? r.return : o[0] ? r.throw || ((i = r.return) && i.call(r), 0) : r.next) && !(i = i.call(r, o[1])).done) {
+            n = 1;
+            if (r && (i = 2 & o[0] ? r.return : o[0] ? r.throw || ((i = r.return) && i.call(r), 0) : r.next) && !(i = i.call(r, o[1])).done) {
               return i;
             }
             switch (r = 0, i && (o = [2 & o[0], i.value]), o[0]) {
@@ -1642,12 +1652,14 @@ var Z = function () {
   e.prototype.on_complete = function () {};
   e.prototype.set_transition = function (e, t, n, r) {
     var i = this;
-    if (this.clear_tl(t, n), this.on_complete = function () {
+    this.clear_tl(t, n);
+    this.on_complete = function () {
       i.reset_scenes(t, n);
       if (r) {
         r();
       }
-    }, "none" !== e) {
+    };
+    if ("none" !== e) {
       switch (this.tl.set_complete_handler(this.on_complete), this.scene_destroy_handler = function () {
         i.clear_tl(t, n);
         i.scene_destroy_handler = void 0;
@@ -2792,7 +2804,8 @@ var _e = function (e, t) {
         }
         for (; a;) {
           try {
-            if (n = 1, r && (i = 2 & o[0] ? r.return : o[0] ? r.throw || ((i = r.return) && i.call(r), 0) : r.next) && !(i = i.call(r, o[1])).done) {
+            n = 1;
+            if (r && (i = 2 & o[0] ? r.return : o[0] ? r.throw || ((i = r.return) && i.call(r), 0) : r.next) && !(i = i.call(r, o[1])).done) {
               return i;
             }
             switch (r = 0, i && (o = [2 & o[0], i.value]), o[0]) {
@@ -2906,9 +2919,10 @@ var Ae = function () {
       width: o,
       height: s
     }));
-    if (this.app.get_app().renderer.render(this.app.get_app().stage, {
+    this.app.get_app().renderer.render(this.app.get_app().stage, {
       renderTexture: c
-    }), this.app.get_renderer_type() === a.p.WEBGL) {
+    });
+    if (this.app.get_renderer_type() === a.p.WEBGL) {
       c.frame = this.get_render_texture_frame(e, t, n, r);
       return this.app.get_extract_module().pixels(c);
     }
@@ -3037,7 +3051,8 @@ var me = function (e, t) {
         }
         for (; a;) {
           try {
-            if (n = 1, r && (i = 2 & o[0] ? r.return : o[0] ? r.throw || ((i = r.return) && i.call(r), 0) : r.next) && !(i = i.call(r, o[1])).done) {
+            n = 1;
+            if (r && (i = 2 & o[0] ? r.return : o[0] ? r.throw || ((i = r.return) && i.call(r), 0) : r.next) && !(i = i.call(r, o[1])).done) {
               return i;
             }
             switch (r = 0, i && (o = [2 & o[0], i.value]), o[0]) {
@@ -3392,7 +3407,17 @@ var Oe = function () {
 }();
 var ke = function () {
   function e(e, t, n, r, i, o) {
-    if (this.app = e, this.data = t, this.box2d = n, this.scene_world = r, this.actor = i, this.get_strength = o, this.type = Ee.a.ELASTIC, this.position_cache = new this.box2d.Vec2(), this.particle_system = this.scene_world.world.m_particleSystemList, this.start_rotation = this.actor.rotation, !this.particle_system) {
+    this.app = e;
+    this.data = t;
+    this.box2d = n;
+    this.scene_world = r;
+    this.actor = i;
+    this.get_strength = o;
+    this.type = Ee.a.ELASTIC;
+    this.position_cache = new this.box2d.Vec2();
+    this.particle_system = this.scene_world.world.m_particleSystemList;
+    this.start_rotation = this.actor.rotation;
+    if (!this.particle_system) {
       throw Error("Trying to init elastic body before particle system initialized. ");
     }
   }
@@ -4105,7 +4130,8 @@ var Te = function () {
   e.prototype.update_body_state = function () {
     var e;
     var t = this.is_enabled();
-    if (this.physics_body.set_enabled(t), t) {
+    this.physics_body.set_enabled(t);
+    if (t) {
       if (this.should_recreate_body) {
         this.physics_body.init(this.convert_pixi_to_physics_position(this.actor.position), null === (e = this.actor.get_current_style()) || void 0 === e ? void 0 : e.texture_id);
         this.should_recreate_body = !1;
@@ -4692,7 +4718,8 @@ var Fe = function (e, t) {
         }
         for (; a;) {
           try {
-            if (n = 1, r && (i = 2 & o[0] ? r.return : o[0] ? r.throw || ((i = r.return) && i.call(r), 0) : r.next) && !(i = i.call(r, o[1])).done) {
+            n = 1;
+            if (r && (i = 2 & o[0] ? r.return : o[0] ? r.throw || ((i = r.return) && i.call(r), 0) : r.next) && !(i = i.call(r, o[1])).done) {
               return i;
             }
             switch (r = 0, i && (o = [2 & o[0], i.value]), o[0]) {
@@ -7218,7 +7245,7 @@ var hn = new a.x({
 var pn = function (e) {
   function t(t, n, r) {
     var i = e.call(this, "timer", t, n, r) || this;
-    if (i.drag_move_scale_btn = function (e) {
+    i.drag_move_scale_btn = function (e) {
       var t = i.background.scale.x;
       if (i.is_resizing && !i.is_mouse_out_of_stage(e) && 0 !== t) {
         var n = e.data.getLocalPosition(i);
@@ -7228,20 +7255,33 @@ var pn = function (e) {
         i.set_scale_btn_position();
         i.app.render();
       }
-    }, i.time = new a.v("0.00"), i.unit = new a.v("\u79d2"), i.time.style = Object.assign({}, hn, {
+    };
+    i.time = new a.v("0.00");
+    i.unit = new a.v("\u79d2");
+    i.time.style = Object.assign({}, hn, {
       fontSize: 30
-    }), i.unit.style = Object.assign({}, hn, {
+    });
+    i.unit.style = Object.assign({}, hn, {
       fontSize: 18
-    }), i.background = new a.j(), i.draw_background(), i.set_resizable_part(i.background), i.set_scale_btn_position(), i.scale_btn.addListener("mousemove", Object(c.w)(i.drag_move_scale_btn, c.a)), i.scale_btn.addListener("touchmove", Object(c.w)(i.drag_move_scale_btn, c.a)), i.add_resizable_event_listener("scale_btn_drag_end", function (e) {
+    });
+    i.background = new a.j();
+    i.draw_background();
+    i.set_resizable_part(i.background);
+    i.set_scale_btn_position();
+    i.scale_btn.addListener("mousemove", Object(c.w)(i.drag_move_scale_btn, c.a));
+    i.scale_btn.addListener("touchmove", Object(c.w)(i.drag_move_scale_btn, c.a));
+    i.add_resizable_event_listener("scale_btn_drag_end", function (e) {
       i.events.fire("timer_scale_btn:drag_end", e);
-    }), i.add_listener("drag_end", function () {
+    });
+    i.add_listener("drag_end", function () {
       i.events.fire("timer:drag_end", {
         position: {
           x: i.get_position().x,
           y: i.get_position().y
         }
       });
-    }), i.app.get_renderer_type() === a.p.WEBGL) {
+    });
+    if (i.app.get_renderer_type() === a.p.WEBGL) {
       var o = new a.h({
         rotation: 0,
         distance: 1,
@@ -7855,7 +7895,8 @@ var cr = function (e) {
   }
   sr(t, e);
   t.prototype.update_wrap = function () {
-    if (this.text = this.content_string, void 0 !== this.word_wrap_width) {
+    this.text = this.content_string;
+    if (void 0 !== this.word_wrap_width) {
       if (this.width <= this.word_wrap_width) {
         this.is_wrapped = !1;
       } else {
@@ -7864,7 +7905,8 @@ var cr = function (e) {
         var t = "";
         this.text = "";
         for (var n = 0; n < this.content_string.length; n++) {
-          if (this.text += this.content_string[n], this.width + e > this.word_wrap_width) {
+          this.text += this.content_string[n];
+          if (this.width + e > this.word_wrap_width) {
             this.is_wrapped = !0;
             this.text = t + "...";
             break;
@@ -8193,7 +8235,14 @@ var gr = function (e) {
   }
   pr(t, e);
   t.prototype.repaint = function (e, t, n, r, i) {
-    if ((n || r) && this.draw_body(e, t), n && (this.update_cur_items_width(e), this.update_scrollbar_position_x(e)), r) {
+    if (n || r) {
+      this.draw_body(e, t);
+    }
+    if (n) {
+      this.update_cur_items_width(e);
+      this.update_scrollbar_position_x(e);
+    }
+    if (r) {
       this.scroll_range = t - qn - Zn;
       var o = this.scroll_range / (this.value_length - this.available_item_num);
       this.scroll_step = Number.isNaN(o) ? 0 : Math.max(0, o);
@@ -8619,10 +8668,12 @@ var wr = function (e) {
     var t = e || this.get_values();
     var n = t.length ? _n.NON_BLANK : _n.BLANK;
     if (this.status !== n) {
-      if (this.status = n, this.prev_size = {
+      this.status = n;
+      this.prev_size = {
         width: 0,
         height: 0
-      }, this.status === _n.BLANK) {
+      };
+      if (this.status === _n.BLANK) {
         this.blank_painter.mount();
         this.non_blank_painter.dismount();
       } else {
@@ -9699,7 +9750,8 @@ var Wr = function (e, t) {
         }
         for (; a;) {
           try {
-            if (n = 1, r && (i = 2 & o[0] ? r.return : o[0] ? r.throw || ((i = r.return) && i.call(r), 0) : r.next) && !(i = i.call(r, o[1])).done) {
+            n = 1;
+            if (r && (i = 2 & o[0] ? r.return : o[0] ? r.throw || ((i = r.return) && i.call(r), 0) : r.next) && !(i = i.call(r, o[1])).done) {
               return i;
             }
             switch (r = 0, i && (o = [2 & o[0], i.value]), o[0]) {
@@ -9989,7 +10041,35 @@ var Yr = function () {
   e.prototype.init = function (e) {
     var t;
     var n = this;
-    if (!this.editor && e.editor && (this.editor = new jr.a(e.editor, this.app, this.data, this.events, this.loader), this.components_z_index_array[Le.c.EDITOR] = this.editor.set_parent), !this.grid && e.grid && (this.grid = new on(this.app, this.events), this.components_z_index_array[Le.c.GRID] = this.grid.set_parent), !this.draggable_container && e.draggable_container && (this.draggable_container = new Cr(this.app, this.events, this.data), this.components_z_index_array[Le.c.DRAGGABLE_CONTAINER] = this.draggable_container.set_parent), !this.voice_dialog && e.voice_dialog && (this.voice_dialog = new Wt(e.voice_dialog, this.app, this.loader, this.events), this.components_z_index_array[Le.c.VOICE_DIALOG] = this.voice_dialog.set_parent), !this.stage_dialog && e.stage_dialog && (this.stage_dialog = new Jt(this.app, this.data, this.loader, e.stage_dialog, this.events), this.components_z_index_array[Le.c.STAGE_DIALOG] = this.stage_dialog.set_parent), !this.selection_dialog && e.selection_dialog && (this.selection_dialog = new cn(this.app, this.events), this.components_z_index_array[Le.c.SELECTION_DIALOG] = this.selection_dialog.set_parent), !this.translate_dialog && e.translate_dialog && (this.translate_dialog = new Rr(this.app, this.loader, this.events, e.translate_dialog), this.components_z_index_array[Le.c.TRANSLATE_DIALOG] = this.translate_dialog.set_parent), !this.playable_manager && e.playable_manager) {
+    if (!this.editor && e.editor) {
+      this.editor = new jr.a(e.editor, this.app, this.data, this.events, this.loader);
+      this.components_z_index_array[Le.c.EDITOR] = this.editor.set_parent;
+    }
+    if (!this.grid && e.grid) {
+      this.grid = new on(this.app, this.events);
+      this.components_z_index_array[Le.c.GRID] = this.grid.set_parent;
+    }
+    if (!this.draggable_container && e.draggable_container) {
+      this.draggable_container = new Cr(this.app, this.events, this.data);
+      this.components_z_index_array[Le.c.DRAGGABLE_CONTAINER] = this.draggable_container.set_parent;
+    }
+    if (!this.voice_dialog && e.voice_dialog) {
+      this.voice_dialog = new Wt(e.voice_dialog, this.app, this.loader, this.events);
+      this.components_z_index_array[Le.c.VOICE_DIALOG] = this.voice_dialog.set_parent;
+    }
+    if (!this.stage_dialog && e.stage_dialog) {
+      this.stage_dialog = new Jt(this.app, this.data, this.loader, e.stage_dialog, this.events);
+      this.components_z_index_array[Le.c.STAGE_DIALOG] = this.stage_dialog.set_parent;
+    }
+    if (!this.selection_dialog && e.selection_dialog) {
+      this.selection_dialog = new cn(this.app, this.events);
+      this.components_z_index_array[Le.c.SELECTION_DIALOG] = this.selection_dialog.set_parent;
+    }
+    if (!this.translate_dialog && e.translate_dialog) {
+      this.translate_dialog = new Rr(this.app, this.loader, this.events, e.translate_dialog);
+      this.components_z_index_array[Le.c.TRANSLATE_DIALOG] = this.translate_dialog.set_parent;
+    }
+    if (!this.playable_manager && e.playable_manager) {
       this.playable_manager = new Pr.a(this.app, this.data, this.events, this.destroy_scene_children_container);
       this.scene_children_container_children_z_index_array[Le.g.PLAYABLE_CONTAINER] = this.playable_manager.set_video_container_parent;
       if (t = e.playable_manager.parent_scene_id) {

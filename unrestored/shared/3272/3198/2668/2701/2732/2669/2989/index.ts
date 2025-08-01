@@ -79,7 +79,8 @@ function u(e) {
           var P = x[E];
           S[P] = h(b, S[P]);
         }
-        if (delete e[T], b.types) {
+        delete e[T];
+        if (b.types) {
           var A;
           var k = r(b.types);
           try {
@@ -108,7 +109,11 @@ function u(e) {
       var N = e[I];
       var _ = o[I];
       var D = s[I];
-      if (D && (console.trace("Visitor defined for ".concat(I, " but it has been renamed to ").concat(D)), _ = [D]), _) {
+      if (D) {
+        console.trace("Visitor defined for ".concat(I, " but it has been renamed to ").concat(D));
+        _ = [D];
+      }
+      if (_) {
         delete e[I];
         var j;
         var L = r(_);
@@ -145,7 +150,10 @@ function c(e) {
     }
     for (var t = 0, n = Object.keys(e); t < n.length; t++) {
       var r = n[t];
-      if ("enter" !== r && "exit" !== r || p(r, e[r]), !y(r)) {
+      if (!("enter" !== r && "exit" !== r)) {
+        p(r, e[r]);
+      }
+      if (!y(r)) {
         if (l.indexOf(r) < 0) {
           throw new Error("You gave us a visitor for the node type ".concat(r, " but it's not a valid type"));
         }

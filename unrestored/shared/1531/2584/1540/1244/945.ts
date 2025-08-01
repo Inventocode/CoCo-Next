@@ -45,13 +45,49 @@ if (h || g || m || l || u) {
     var T = v.source;
     var S = 0;
     var I = y;
-    if (w && (-1 === (C = C.replace("y", "")).indexOf("g") && (C += "g"), I = y.slice(v.lastIndex), v.lastIndex > 0 && (!v.multiline || v.multiline && "\n" !== y.charAt(v.lastIndex - 1)) && (T = "(?: " + T + ")", I = " " + I, S++), n = new RegExp("^(?:" + T + ")", C)), g && (n = new RegExp("^" + T + "$(?!\\s)", C)), h && (i = v.lastIndex), a = d.call(w ? n : v, I), w ? a ? (a.input = a.input.slice(S), a[0] = a[0].slice(S), a.index = v.lastIndex, v.lastIndex += a[0].length) : v.lastIndex = 0 : h && a && (v.lastIndex = v.global ? a.index + a[0].length : i), g && a && a.length > 1 && p.call(a[0], n, function () {
-      for (l = 1; l < arguments.length - 2; l++) {
-        if (void 0 === arguments[l]) {
-          a[l] = void 0;
-        }
+    if (w) {
+      if (-1 === (C = C.replace("y", "")).indexOf("g")) {
+        C += "g";
       }
-    }), a && O) {
+      I = y.slice(v.lastIndex);
+      if (v.lastIndex > 0 && (!v.multiline || v.multiline && "\n" !== y.charAt(v.lastIndex - 1))) {
+        T = "(?: " + T + ")";
+        I = " " + I;
+        S++;
+      }
+      n = new RegExp("^(?:" + T + ")", C);
+    }
+    if (g) {
+      n = new RegExp("^" + T + "$(?!\\s)", C);
+    }
+    if (h) {
+      i = v.lastIndex;
+    }
+    a = d.call(w ? n : v, I);
+    if (w) {
+      if (a) {
+        a.input = a.input.slice(S);
+        a[0] = a[0].slice(S);
+        a.index = v.lastIndex;
+        v.lastIndex += a[0].length;
+      } else {
+        v.lastIndex = 0;
+      }
+    } else {
+      if (h && a) {
+        v.lastIndex = v.global ? a.index + a[0].length : i;
+      }
+    }
+    if (g && a && a.length > 1) {
+      p.call(a[0], n, function () {
+        for (l = 1; l < arguments.length - 2; l++) {
+          if (void 0 === arguments[l]) {
+            a[l] = void 0;
+          }
+        }
+      });
+    }
+    if (a && O) {
       for (a.groups = u = s(null), l = 0; l < O.length; l++) {
         u[(_ = O[l])[0]] = a[_[1]];
       }

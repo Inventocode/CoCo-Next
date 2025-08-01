@@ -130,7 +130,8 @@ var g = function (e) {
   }, {
     key: "nextSibling",
     value: function () {
-      if (d(this.parents.length === this.indexes.length / 2), this.idx > 0 || 0 === this.parents.length) {
+      d(this.parents.length === this.indexes.length / 2);
+      if (this.idx > 0 || 0 === this.parents.length) {
         return !1;
       }
       var e = this.indexes[this.indexes.length - 1] + 1;
@@ -250,7 +251,11 @@ var v = function (e) {
       for (var e = 0; e < this.pendingDescent.length; e++) {
         var t = this.pendingDescent[e];
         var n = this.idx + 1;
-        if (n < this.container.length && h(this.container[n]) && n++, d(n === this.container.length || !h(this.container[n])), n === this.container.length) {
+        if (n < this.container.length && h(this.container[n])) {
+          n++;
+        }
+        d(n === this.container.length || !h(this.container[n]));
+        if (n === this.container.length) {
           this.container.push(t);
           this.idx = n;
         } else if (this.container[n] === t) {
@@ -266,7 +271,9 @@ var v = function (e) {
           for (this.indexes.push(this.idx), this.parents.push(this.container), -1 !== this.lcIdx && (d(p(t, this.container[this.lcIdx][0])), n = this.lcIdx + 1, this.lcIdx = -1); n < this.container.length && p(t, this.container[n][0]);) {
             n++;
           }
-          if (this.indexes.push(n), this.idx = 0, n < this.container.length && this.container[n][0] === t) {
+          this.indexes.push(n);
+          this.idx = 0;
+          if (n < this.container.length && this.container[n][0] === t) {
             this.container = this.container[n];
           } else {
             var i = [t];
@@ -335,7 +342,8 @@ var v = function (e) {
     value: function (e) {
       var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : _;
       if (null !== e) {
-        if (d(Array.isArray(e)), e === this._op) {
+        d(Array.isArray(e));
+        if (e === this._op) {
           throw Error("Cannot merge into my own tree");
         }
         for (var n = this.lcIdx, r = this.parents.length, i = 0, o = 0; o < e.length; o++) {
@@ -410,7 +418,11 @@ exports.advancer = function (e, t, n) {
       var a = o = e.getKey();
       if (null != r) {
         var s = !1;
-        if (t && "number" === typeof a && (o = t(a, e.getComponent())) < 0 && (o = ~o, s = !0), p(o, r)) {
+        if (t && "number" === typeof a && (o = t(a, e.getComponent())) < 0) {
+          o = ~o;
+          s = !0;
+        }
+        if (p(o, r)) {
           return null;
         }
         if (o === r && !s) {

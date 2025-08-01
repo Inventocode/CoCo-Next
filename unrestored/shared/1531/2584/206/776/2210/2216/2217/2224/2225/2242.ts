@@ -13,7 +13,8 @@ module.exports = function (e, t, n) {
   var d = e.util.copy(e);
   d.level++;
   var h = "valid" + d.level;
-  if (r += "var " + f + " = errors;", e.opts.strictKeywords ? "object" == typeof a && Object.keys(a).length > 0 || !1 === a : e.util.schemaHasRules(a, e.RULES.all)) {
+  r += "var " + f + " = errors;";
+  if (e.opts.strictKeywords ? "object" == typeof a && Object.keys(a).length > 0 || !1 === a : e.util.schemaHasRules(a, e.RULES.all)) {
     d.schema = a;
     d.schemaPath = s;
     d.errSchemaPath = c;

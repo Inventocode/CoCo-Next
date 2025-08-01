@@ -160,7 +160,10 @@
   }
   function le(e, t, n, u, l, d, h) {
     var p;
-    if (u && (p = d ? u(e, l, d, h) : u(e)), void 0 !== p) {
+    if (u) {
+      p = d ? u(e, l, d, h) : u(e);
+    }
+    if (void 0 !== p) {
       return p;
     }
     if (!Oe(e)) {
@@ -168,7 +171,7 @@
     }
     var _ = we(e);
     if (_) {
-      if (p = function (e) {
+      p = function (e) {
         var t = e.length;
         var n = e.constructor(t);
         if (t && "string" == typeof e[0] && D.call(e, "index")) {
@@ -176,7 +179,8 @@
           n.input = e.input;
         }
         return n;
-      }(e), !t) {
+      }(e);
+      if (!t) {
         return function (e, t) {
           var n = -1;
           var r = e.length;
@@ -206,10 +210,11 @@
         if (b(e)) {
           return d ? e : {};
         }
-        if (p = function (e) {
+        p = function (e) {
           return "function" != typeof e.constructor || me(e) ? {} : (t = M(e), Oe(t) ? j(t) : {});
           var t;
-        }(g ? {} : e), !t) {
+        }(g ? {} : e);
+        if (!t) {
           return function (e, t) {
             return he(e, Ae(e), t);
           }(e, function (e, t) {
@@ -278,7 +283,8 @@
     if (E) {
       return E;
     }
-    if (h.set(e, p), !_) {
+    h.set(e, p);
+    if (!_) {
       var C = n ? function (e) {
         return function (e, t, n) {
           var r = t(e);

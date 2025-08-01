@@ -11,7 +11,7 @@ var u = require("../../../../57/index");
 var l = require("../../../../58/index");
 var f = require("../../../../197/276");
 var d = require("../../../../1/index");
-var h = (module => {
+var h = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -22,7 +22,7 @@ var h = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(d);
+}(d);
 var p = require("../../../../7");
 var _ = require("../../../../27");
 var A = require("../../../../47");
@@ -125,12 +125,13 @@ function T(e) {
   var t = function (e) {
     var t = {};
     var n = 0;
-    if (Object(g.l)(e, function (e, r) {
+    Object(g.l)(e, function (e, r) {
       if (!S[r]) {
         t[r] = e;
         n++;
       }
-    }), n) {
+    });
+    if (n) {
       return t;
     }
   }(e);
@@ -762,13 +763,23 @@ var ue = function (e) {
   var t = Object(l.a)(n);
   function n(e, r) {
     var i;
-    if (Object(_.a)(this, n), (i = t.call(this)).key = void 0, i.animation = new z(), i.queue = void 0, i.defaultProps = {}, i._state = {
+    Object(_.a)(this, n);
+    (i = t.call(this)).key = void 0;
+    i.animation = new z();
+    i.queue = void 0;
+    i.defaultProps = {};
+    i._state = {
       paused: !1,
       delayed: !1,
       pauseQueue: new Set(),
       resumeQueue: new Set(),
       timeouts: new Set()
-    }, i._pendingCalls = new Set(), i._lastCallId = 0, i._lastToId = 0, i._memoizedDuration = 0, !g.s.und(e) || !g.s.und(r)) {
+    };
+    i._pendingCalls = new Set();
+    i._lastCallId = 0;
+    i._lastToId = 0;
+    i._memoizedDuration = 0;
+    if (!g.s.und(e) || !g.s.und(r)) {
       var o = g.s.obj(e) ? y({}, e) : y({}, r, {
         from: e
       });
@@ -836,7 +847,8 @@ var ue = function (e) {
           var f = i.immediate;
           var d = l;
           if (!f) {
-            if (d = c.lastPosition, o.tension <= 0) {
+            d = c.lastPosition;
+            if (o.tension <= 0) {
               return void (c.done = !0);
             }
             var h;
@@ -1122,7 +1134,10 @@ var ue = function (e) {
       var d = void 0 === f ? u : f;
       var h = e.from;
       var p = void 0 === h ? l : h;
-      if (!o || i || t.default && !g.s.und(d) || (d = p), t.reverse) {
+      if (!(!o || i || t.default && !g.s.und(d))) {
+        d = p;
+      }
+      if (t.reverse) {
         var _ = [p, d];
         d = _[0];
         p = _[1];
@@ -1193,7 +1208,16 @@ var ue = function (e) {
           M = !0;
         }
       }
-      if (j && oe(this) && (c.changed && !S ? M = !0 : M || this._stop(u)), !E && ((M || Object(g.r)(u)) && (c.values = k.getPayload(), c.toValues = Object(g.r)(d) ? null : N == m.b ? [1] : Object(g.y)(D)), c.immediate != R && (c.immediate = R, R || S || this._set(u)), M)) {
+      if (j && oe(this)) {
+        if (c.changed && !S) {
+          M = !0;
+        } else {
+          if (!M) {
+            this._stop(u);
+          }
+        }
+      }
+      if (!E && ((M || Object(g.r)(u)) && (c.values = k.getPayload(), c.toValues = Object(g.r)(d) ? null : N == m.b ? [1] : Object(g.y)(D)), c.immediate != R && (c.immediate = R, R || S || this._set(u)), M)) {
         var H = c.onRest;
         Object(g.k)(_e, function (e) {
           return Ae(r, t, e);
@@ -1522,7 +1546,10 @@ var ye = function () {
   }, {
     key: "stop",
     value: function (e, t) {
-      if (e !== !!e && (t = e), t) {
+      if (e !== !!e) {
+        t = e;
+      }
+      if (t) {
         var n = this.springs;
         Object(g.k)(Object(g.y)(t), function (t) {
           return n[t].stop(!!e);

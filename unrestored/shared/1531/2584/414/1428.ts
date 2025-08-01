@@ -62,7 +62,9 @@ var a = function () {
     return Number.isNaN ? Number.isNaN(e) : "number" === typeof e && isNaN(e);
   };
   e.areEquivalent = function (t, n) {
-    if (t = e.unwrapStringOrNumber(t), n = e.unwrapStringOrNumber(n), t === n) {
+    t = e.unwrapStringOrNumber(t);
+    n = e.unwrapStringOrNumber(n);
+    if (t === n) {
       return !0;
     }
     if (null === t || null === n || typeof t !== typeof n) {

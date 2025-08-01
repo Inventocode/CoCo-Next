@@ -112,7 +112,8 @@ c.prototype.k = function () {
         switch (this.i) {
           case u:
             for (; i + o > r.length;) {
-              if (o -= d = c - i, s) {
+              o -= d = c - i;
+              if (s) {
                 r.set(t.subarray(n, n + d), i);
                 i += d;
                 n += d;
@@ -340,7 +341,9 @@ c.prototype.e = function () {
       n[e] = i[e + 32768];
     }
   }
-  if (this.g.push(n), this.l += n.length, s) {
+  this.g.push(n);
+  this.l += n.length;
+  if (s) {
     i.set(i.subarray(r, r + 32768));
   } else {
     for (e = 0; 32768 > e; ++e) {
@@ -422,7 +425,9 @@ O.prototype.k = function () {
   var e;
   var t;
   var n = this.input;
-  if (e = this.q.k(), this.a = this.q.a, this.A) {
+  e = this.q.k();
+  this.a = this.q.a;
+  if (this.A) {
     t = (n[this.a++] << 24 | n[this.a++] << 16 | n[this.a++] << 8 | n[this.a++]) >>> 0;
     var r = e;
     if ("string" === typeof r) {
@@ -826,7 +831,8 @@ var j = function () {
         var r = e.Objects.Video;
         for (var i in r) {
           var a = r[i];
-          if (t[c = parseInt(i)] = a.RelativeFilename || a.Filename, "Content" in a) {
+          t[c = parseInt(i)] = a.RelativeFilename || a.Filename;
+          if ("Content" in a) {
             var o = a.Content instanceof ArrayBuffer && a.Content.byteLength > 0;
             var s = "string" === typeof a.Content && "" !== a.Content;
             if (o || s) {
@@ -901,7 +907,9 @@ var j = function () {
       var a = e.WrapModeV;
       var o = void 0 !== i ? i.value : 0;
       var s = void 0 !== a ? a.value : 0;
-      if (n.wrapS = 0 === o ? r.G : r.f, n.wrapT = 0 === s ? r.G : r.f, "Scaling" in e) {
+      n.wrapS = 0 === o ? r.G : r.f;
+      n.wrapT = 0 === s ? r.G : r.f;
+      if ("Scaling" in e) {
         var l = e.Scaling.value;
         n.repeat.x = l[0];
         n.repeat.y = l[1];
@@ -953,7 +961,10 @@ var j = function () {
       var i = e.id;
       var a = e.attrName;
       var o = e.ShadingModel;
-      if ("object" === typeof o && (o = o.value), !t.has(i)) {
+      if ("object" === typeof o) {
+        o = o.value;
+      }
+      if (!t.has(i)) {
         return null;
       }
       var s;
@@ -1250,12 +1261,13 @@ var j = function () {
     createCamera: function (t) {
       var n;
       var i;
-      if (t.children.forEach(function (t) {
+      t.children.forEach(function (t) {
         var n = e.Objects.NodeAttribute[t.ID];
         if (void 0 !== n) {
           i = n;
         }
-      }), void 0 === i) {
+      });
+      if (void 0 === i) {
         n = new r.z();
       } else {
         var a = 0;
@@ -1302,12 +1314,13 @@ var j = function () {
     createLight: function (t) {
       var n;
       var i;
-      if (t.children.forEach(function (t) {
+      t.children.forEach(function (t) {
         var n = e.Objects.NodeAttribute[t.ID];
         if (void 0 !== n) {
           i = n;
         }
-      }), void 0 === i) {
+      });
+      if (void 0 === i) {
         n = new r.z();
       } else {
         var a;
@@ -1522,7 +1535,7 @@ var j = function () {
       var i = e.uuid;
       var a = t.uuid;
       var o = !1;
-      if (n.traverse(function (e) {
+      n.traverse(function (e) {
         if (e.isMesh) {
           if (Array.isArray(e.material)) {
             e.material.forEach(function (t) {
@@ -1536,7 +1549,8 @@ var j = function () {
             }
           }
         }
-      }), !0 === o) {
+      });
+      if (!0 === o) {
         var s = t.clone();
         s.morphTargets = !0;
         if (void 0 === r) {
@@ -1618,28 +1632,40 @@ var j = function () {
       var o = this.parseGeoNode(e, t);
       var s = this.genBuffers(o);
       var l = new r.m(s.vertex, 3);
-      if (l.applyMatrix4(i), a.setAttribute("position", l), s.colors.length > 0 && a.setAttribute("color", new r.m(s.colors, 3)), t && (a.setAttribute("skinIndex", new r.N(s.weightsIndices, 4)), a.setAttribute("skinWeight", new r.m(s.vertexWeights, 4)), a.FBX_Deformer = t), s.normal.length > 0) {
+      l.applyMatrix4(i);
+      a.setAttribute("position", l);
+      if (s.colors.length > 0) {
+        a.setAttribute("color", new r.m(s.colors, 3));
+      }
+      if (t) {
+        a.setAttribute("skinIndex", new r.N(s.weightsIndices, 4));
+        a.setAttribute("skinWeight", new r.m(s.vertexWeights, 4));
+        a.FBX_Deformer = t;
+      }
+      if (s.normal.length > 0) {
         var c = new r.t().getNormalMatrix(i);
         var u = new r.m(s.normal, 3);
         u.applyNormalMatrix(c);
         a.setAttribute("normal", u);
       }
-      if (s.uvs.forEach(function (e, t) {
+      s.uvs.forEach(function (e, t) {
         var n = "uv" + (t + 1).toString();
         if (0 === t) {
           n = "uv";
         }
         a.setAttribute(n, new r.m(s.uvs[t], 2));
-      }), o.material && "AllSame" !== o.material.mappingType) {
+      });
+      if (o.material && "AllSame" !== o.material.mappingType) {
         var h = s.materialIndex[0];
         var d = 0;
-        if (s.materialIndex.forEach(function (e, t) {
+        s.materialIndex.forEach(function (e, t) {
           if (e !== h) {
             a.addGroup(d, t - d, h);
             h = e;
             d = t;
           }
-        }), a.groups.length > 0) {
+        });
+        if (a.groups.length > 0) {
           var p = a.groups[a.groups.length - 1];
           var f = p.start + p.count;
           if (f !== s.materialIndex.length) {
@@ -1655,7 +1681,18 @@ var j = function () {
     },
     parseGeoNode: function (e, t) {
       var n = {};
-      if (n.vertexPositions = void 0 !== e.Vertices ? e.Vertices.a : [], n.vertexIndices = void 0 !== e.PolygonVertexIndex ? e.PolygonVertexIndex.a : [], e.LayerElementColor && (n.color = this.parseVertexColors(e.LayerElementColor[0])), e.LayerElementMaterial && (n.material = this.parseMaterialIndices(e.LayerElementMaterial[0])), e.LayerElementNormal && (n.normal = this.parseNormals(e.LayerElementNormal[0])), e.LayerElementUV) {
+      n.vertexPositions = void 0 !== e.Vertices ? e.Vertices.a : [];
+      n.vertexIndices = void 0 !== e.PolygonVertexIndex ? e.PolygonVertexIndex.a : [];
+      if (e.LayerElementColor) {
+        n.color = this.parseVertexColors(e.LayerElementColor[0]);
+      }
+      if (e.LayerElementMaterial) {
+        n.material = this.parseMaterialIndices(e.LayerElementMaterial[0]);
+      }
+      if (e.LayerElementNormal) {
+        n.normal = this.parseNormals(e.LayerElementNormal[0]);
+      }
+      if (e.LayerElementUV) {
         n.uv = [];
         for (var r = 0; e.LayerElementUV[r];) {
           if (e.LayerElementUV[r].UV) {
@@ -1709,15 +1746,19 @@ var j = function () {
         }
         var v = [];
         var g = [];
-        if (a.push(3 * d, 3 * d + 1, 3 * d + 2), e.color) {
+        a.push(3 * d, 3 * d + 1, 3 * d + 2);
+        if (e.color) {
           var y = m(p, n, d, e.color);
           s.push(y[0], y[1], y[2]);
         }
         if (e.skeleton) {
-          if (void 0 !== e.weightTable[d] && e.weightTable[d].forEach(function (e) {
-            g.push(e.weight);
-            v.push(e.id);
-          }), g.length > 4) {
+          if (void 0 !== e.weightTable[d]) {
+            e.weightTable[d].forEach(function (e) {
+              g.push(e.weight);
+              v.push(e.id);
+            });
+          }
+          if (g.length > 4) {
             if (!i) {
               console.warn("THREE.FBXLoader: Vertex has more than 4 skinning weights assigned to vertex. Deleting additional weights.");
               i = !0;
@@ -2170,7 +2211,13 @@ var j = function () {
       var n = new r.O();
       var i = new r.E();
       var a = new r.O();
-      if (e.transform && e.transform.decompose(n, i, a), n = n.toArray(), i = new r.k().setFromQuaternion(i, e.eulerOrder).toArray(), a = a.toArray(), void 0 !== e.T && Object.keys(e.T.curves).length > 0) {
+      if (e.transform) {
+        e.transform.decompose(n, i, a);
+      }
+      n = n.toArray();
+      i = new r.k().setFromQuaternion(i, e.eulerOrder).toArray();
+      a = a.toArray();
+      if (void 0 !== e.T && Object.keys(e.T.curves).length > 0) {
         var o = this.generateVectorTrack(e.modelName, e.T.curves, n, "position");
         if (void 0 !== o) {
           t.push(o);
@@ -2271,7 +2318,16 @@ var j = function () {
       var o = -1;
       var s = -1;
       e.forEach(function (e) {
-        if (t.x && (a = t.x.times.indexOf(e)), t.y && (o = t.y.times.indexOf(e)), t.z && (s = t.z.times.indexOf(e)), -1 !== a) {
+        if (t.x) {
+          a = t.x.times.indexOf(e);
+        }
+        if (t.y) {
+          o = t.y.times.indexOf(e);
+        }
+        if (t.z) {
+          s = t.z.times.indexOf(e);
+        }
+        if (-1 !== a) {
           var n = t.x.values[a];
           i.push(n);
           r[0] = n;
@@ -2883,7 +2939,10 @@ var j = function () {
     var d = new r.u();
     var p = new r.u();
     var f = e.inheritType ? e.inheritType : 0;
-    if (e.translation && n.setPosition(g.fromArray(e.translation)), e.preRotation) {
+    if (e.translation) {
+      n.setPosition(g.fromArray(e.translation));
+    }
+    if (e.preRotation) {
       (t = e.preRotation.map(r.s.degToRad)).push(e.eulerOrder);
       i.makeRotationFromEuler(v.fromArray(t));
     }

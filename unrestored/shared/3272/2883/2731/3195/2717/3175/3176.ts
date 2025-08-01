@@ -12,7 +12,10 @@ exports.default = function e(t, n, u) {
   try {
     for (d.s(); !(l = d.n()).done;) {
       var c = l.value;
-      if ((0, i.isEmptyStatement)(c) || (f = !1), (0, i.isExpression)(c)) {
+      if (!(0, i.isEmptyStatement)(c)) {
+        f = !1;
+      }
+      if ((0, i.isExpression)(c)) {
         p.push(c);
       } else if ((0, i.isExpressionStatement)(c)) {
         p.push(c.expression);

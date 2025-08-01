@@ -459,10 +459,12 @@ function C(e) {
             }
             var r = w.location.href;
             var i = b;
-            if (b = r, k("history", {
+            b = r;
+            k("history", {
               from: i,
               to: r
-            }), e) {
+            });
+            if (e) {
               try {
                 return e.apply(this, t);
               } catch (o) {}
@@ -661,7 +663,11 @@ var L = function () {
     var f = "";
     var d = n[5];
     var h = d.split("/");
-    if (h.length > 1 && (f = h.slice(0, -1).join("/"), d = h.pop()), d) {
+    if (h.length > 1) {
+      f = h.slice(0, -1).join("/");
+      d = h.pop();
+    }
+    if (d) {
       var p = d.match(/^\d+/);
       if (p) {
         d = p[0];
@@ -692,11 +698,12 @@ var L = function () {
   };
   e.prototype._validate = function () {
     var e = this;
-    if (["protocol", "publicKey", "host", "projectId"].forEach(function (t) {
+    ["protocol", "publicKey", "host", "projectId"].forEach(function (t) {
       if (!e[t]) {
         throw new M("Invalid Dsn: " + t + " missing");
       }
-    }), !this.projectId.match(/^\d+$/)) {
+    });
+    if (!this.projectId.match(/^\d+$/)) {
       throw new M("Invalid Dsn: Invalid projectId " + this.projectId);
     }
     if ("http" !== this.protocol && "https" !== this.protocol) {
@@ -1376,7 +1383,10 @@ function ae(e) {
 }
 function se(e, t, n) {
   var r;
-  if (void 0 === n && (n = {}), Object(_.e)(e) && e.error) {
+  if (void 0 === n) {
+    n = {};
+  }
+  if (Object(_.e)(e) && e.error) {
     return r = oe(te(e = e.error));
   }
   if (Object(_.a)(e) || Object(_.b)(e)) {
@@ -1926,7 +1936,10 @@ function Ee() {
   });
 }
 function xe(e, t, n) {
-  if (void 0 === t && (t = {}), "function" !== typeof e) {
+  if (void 0 === t) {
+    t = {};
+  }
+  if ("function" !== typeof e) {
     return e;
   }
   try {
@@ -1999,7 +2012,10 @@ function xe(e, t, n) {
   return r;
 }
 function Ce(e) {
-  if (void 0 === e && (e = {}), e.eventId) {
+  if (void 0 === e) {
+    e = {};
+  }
+  if (e.eventId) {
     if (e.dsn) {
       var t = document.createElement("script");
       t.async = !0;
@@ -2281,7 +2297,19 @@ var Be = function () {
   }
   e.prototype.setupOnce = function () {
     var e = Object(l.e)();
-    if (this._options.setTimeout && Object(A.c)(e, "setTimeout", this._wrapTimeFunction.bind(this)), this._options.setInterval && Object(A.c)(e, "setInterval", this._wrapTimeFunction.bind(this)), this._options.requestAnimationFrame && Object(A.c)(e, "requestAnimationFrame", this._wrapRAF.bind(this)), this._options.XMLHttpRequest && "XMLHttpRequest" in e && Object(A.c)(XMLHttpRequest.prototype, "send", this._wrapXHR.bind(this)), this._options.eventTarget) {
+    if (this._options.setTimeout) {
+      Object(A.c)(e, "setTimeout", this._wrapTimeFunction.bind(this));
+    }
+    if (this._options.setInterval) {
+      Object(A.c)(e, "setInterval", this._wrapTimeFunction.bind(this));
+    }
+    if (this._options.requestAnimationFrame) {
+      Object(A.c)(e, "requestAnimationFrame", this._wrapRAF.bind(this));
+    }
+    if (this._options.XMLHttpRequest && "XMLHttpRequest" in e) {
+      Object(A.c)(XMLHttpRequest.prototype, "send", this._wrapXHR.bind(this));
+    }
+    if (this._options.eventTarget) {
       (Array.isArray(this._options.eventTarget) ? this._options.eventTarget : Te).forEach(this._wrapEventTarget.bind(this));
     }
   };
@@ -2568,7 +2596,10 @@ var Ie = function () {
     return e;
   };
   e.prototype._walkErrorTree = function (e, t, n) {
-    if (void 0 === n && (n = []), !Object(_.g)(e[t], Error) || n.length + 1 >= this._limit) {
+    if (void 0 === n) {
+      n = [];
+    }
+    if (!Object(_.g)(e[t], Error) || n.length + 1 >= this._limit) {
       return n;
     }
     var r = ie(te(e[t]));
@@ -2627,7 +2658,8 @@ var Fe = function () {
     if (n && !r || !n && r) {
       return !1;
     }
-    if (n = n, (r = r).length !== n.length) {
+    n = n;
+    if ((r = r).length !== n.length) {
       return !1;
     }
     for (var i = 0; i < r.length; i++) {
@@ -2706,7 +2738,13 @@ var Pe = function () {
 }();
 var Ne = [new r.InboundFilters(), new r.FunctionToString(), new Be(), new ke(), new De(), new Ie(), new Fe(), new Pe()];
 function Me(e) {
-  if (void 0 === e && (e = {}), void 0 === e.defaultIntegrations && (e.defaultIntegrations = Ne), void 0 === e.release) {
+  if (void 0 === e) {
+    e = {};
+  }
+  if (void 0 === e.defaultIntegrations) {
+    e.defaultIntegrations = Ne;
+  }
+  if (void 0 === e.release) {
     var t = Object(l.e)();
     if (t.SENTRY_RELEASE && t.SENTRY_RELEASE.id) {
       e.release = t.SENTRY_RELEASE.id;

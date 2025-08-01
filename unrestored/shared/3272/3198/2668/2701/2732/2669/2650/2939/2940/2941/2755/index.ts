@@ -173,7 +173,8 @@ o.prototype._validateMapping = function (e, t, n, r) {
 };
 o.prototype._serializeMappings = function () {
   for (var e, t, n, a, s = 0, o = 1, l = 0, u = 0, c = 0, p = 0, f = "", d = this._mappings.toArray(), h = 0, y = d.length; h < y; h++) {
-    if (e = "", (t = d[h]).generatedLine !== o) {
+    e = "";
+    if ((t = d[h]).generatedLine !== o) {
       for (s = 0; t.generatedLine !== o;) {
         e += ";";
         o++;

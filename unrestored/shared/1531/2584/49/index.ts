@@ -551,7 +551,7 @@ Object.defineProperty(V, "oTHelper", {
 var z = require("../27");
 var Y = require("../40");
 var K = require("../1/index");
-var q = (module => {
+var q = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -562,7 +562,7 @@ var q = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(K);
+}(K);
 var X = require("../25/index");
 var Q = require("../7");
 var Z = require("./304");
@@ -1198,7 +1198,10 @@ function ot(e) {
       var s = o.i;
       var c = null === (t = $.a.getPreviousDoc()) || void 0 === t || null === (n = t.soundFileList) || void 0 === n ? void 0 : n[i];
       if (c) {
-        if ("cdnUrl" === a && Object(Oe.h)(Object(be.Rg)(c.id, s)), "name" === a) {
+        if ("cdnUrl" === a) {
+          Object(Oe.h)(Object(be.Rg)(c.id, s));
+        }
+        if ("name" === a) {
           var l = c.name;
           Object(Oe.h)(Object(be.Ph)(c.id, s));
           tt.z.replaceTextValue("audio_sound_file_list_dropdown", "SOUND_FILE_ID", l, s);

@@ -516,7 +516,8 @@ var l = function () {
     return this.is_dragging_actor || this.is_dragging_scale_btn || this.is_dragging_rotate_btn || this.is_dragging_rotate_center;
   };
   e.prototype.draw_rotate_center = function (e) {
-    if (this.rotation_center.clear(), "default" !== e) {
+    this.rotation_center.clear();
+    if ("default" !== e) {
       var t = u[e];
       this.rotation_center.lineStyle(t.out_line_w, t.shadow_color, t.shadow_alpha);
       this.rotation_center.drawCircle(0, 0, t.inner_r + 2 * t.shadow_line_w + t.out_line_w);
@@ -543,7 +544,9 @@ var l = function () {
     this.editor.rotation = e.rotation;
     var t = Math.max(e.width, this.MIN_EDITOR_BOX);
     var n = Math.max(e.height, this.MIN_EDITOR_BOX);
-    if (this.editor_box_border1.clear(), this.editor_box_border2.clear(), this.app.get_app().renderer.type === r.p.CANVAS) {
+    this.editor_box_border1.clear();
+    this.editor_box_border2.clear();
+    if (this.app.get_app().renderer.type === r.p.CANVAS) {
       var i = t / 2;
       var o = n / 2;
       var a = 1;
@@ -694,7 +697,9 @@ var l = function () {
   };
   e.prototype.drag_move_rotate_center = function (e) {
     var t = e.data.getLocalPosition(this.editor);
-    if (this.rotation_center.position.set(this.rotation_center.x + t.x - this.old_mouse_pos.x, this.rotation_center.y + t.y - this.old_mouse_pos.y), this.old_mouse_pos.set(t.x, t.y), Object(o.l)(this.target)) {
+    this.rotation_center.position.set(this.rotation_center.x + t.x - this.old_mouse_pos.x, this.rotation_center.y + t.y - this.old_mouse_pos.y);
+    this.old_mouse_pos.set(t.x, t.y);
+    if (Object(o.l)(this.target)) {
       var n = this.app.get_app().stage.toLocal(this.rotation_center.position, this.editor);
       this.target.set_pivot_by_stage_point(n.x, -n.y);
       this.events.fire("actor:update", {

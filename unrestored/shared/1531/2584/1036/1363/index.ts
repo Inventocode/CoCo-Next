@@ -59,7 +59,8 @@ exports.type = {
       f("op", t);
       f("repro: apply(".concat(JSON.stringify(e), ", ").concat(JSON.stringify(t), ")"));
     }
-    if (F(t), null === t) {
+    F(t);
+    if (null === t) {
       return e;
     }
     var n = [];
@@ -156,7 +157,19 @@ exports.type = {
     for (var n, r, i = c.readCursor(t), o = !1, a = [], s = function (t) {
         var s = e[t];
         var u = i.getComponent();
-        if (f("pick phase", t, ":", s, u), u && (void 0 !== u.r ? o = !0 : null != u.p && (o = !1, n = u.p, r = t)), t >= e.length) {
+        f("pick phase", t, ":", s, u);
+        if (u) {
+          if (void 0 !== u.r) {
+            o = !0;
+          } else {
+            if (null != u.p) {
+              o = !1;
+              n = u.p;
+              r = t;
+            }
+          }
+        }
+        if (t >= e.length) {
           return "break";
         }
         var l = 0;
@@ -176,9 +189,12 @@ exports.type = {
         break;
       }
     }
-    if (a.forEach(function (e) {
+    a.forEach(function (e) {
       return e.end();
-    }), N(), f("after pick phase. Remove", o, "pi", r, "pas", n, "po", e), o) {
+    });
+    N();
+    f("after pick phase. Remove", o, "pi", r, "pas", n, "po", e);
+    if (o) {
       f("item removed. Bailing!");
       return null;
     }
@@ -216,7 +232,10 @@ exports.type = {
             s++;
           }
         })(n);
-        if ("number" === typeof n && (e[t] += s), !u) {
+        if ("number" === typeof n) {
+          e[t] += s;
+        }
+        if (!u) {
           return "break";
         }
       }; t < e.length; t++) {
@@ -417,7 +436,9 @@ function F(e) {
       var i = !1;
       for (var o in e) {
         var a = e[o];
-        if (r = !1, d("p" === o || "r" === o || "d" === o || "i" === o || "e" === o || "es" === o || "ena" === o || "et" === o, "Invalid component item '" + o + "'"), "p" === o) {
+        r = !1;
+        d("p" === o || "r" === o || "d" === o || "i" === o || "e" === o || "es" === o || "ena" === o || "et" === o, "Invalid component item '" + o + "'");
+        if ("p" === o) {
           D(a);
           d(!t.has(a));
           t.add(a);
@@ -451,7 +472,8 @@ function F(e) {
       }
       for (var o = 1, a = 0, s = 0, u = 0; u < t.length; u++) {
         var l = t[u];
-        if (d(null != l), Array.isArray(l)) {
+        d(null != l);
+        if (Array.isArray(l)) {
           var f = e(l, !1, i);
           if (a) {
             var h = typeof s;
@@ -519,7 +541,14 @@ var N = function () {
   }
 };
 function M(e, t) {
-  if (h && !l && (f("composing:"), f("  op1:", e), f("  op2:", t)), F(e), F(t), null == e) {
+  if (h && !l) {
+    f("composing:");
+    f("  op1:", e);
+    f("  op2:", t);
+  }
+  F(e);
+  F(t);
+  if (null == e) {
     return t;
   }
   if (null == t) {
@@ -594,7 +623,10 @@ function M(e, t) {
     var j;
     var L = p(o);
     if (null != I) {
-      if (f("teleporting via c1 drop1Slot", I), t = u[I], x = a[I] = new c.WriteCursor(), R) {
+      f("teleporting via c1 drop1Slot", I);
+      t = u[I];
+      x = a[I] = new c.WriteCursor();
+      if (R) {
         f("Cancelling op1 move", I, "rmParent", b, "rmHere", k);
         if (b && !k) {
           x.write("r", !0);
@@ -628,7 +660,8 @@ function M(e, t) {
       f("litOut", j);
     }
     var V = (null == F ? !D || b || k : void 0 === j) ? null : E.getComponent();
-    if (f(V ? "insComponent" : "no insComponent - this insert will be discarded", D && !b && !k && null == F, null != F && void 0 !== j), null != F) {
+    f(V ? "insComponent" : "no insComponent - this insert will be discarded", D && !b && !k && null == F, null != F && void 0 !== j);
+    if (null != F) {
       if (void 0 !== h || D) {
         ;
       } else {
@@ -645,7 +678,11 @@ function M(e, t) {
     }
     var z = R ? null : S(C);
     var Q = S(L);
-    if (f("components", C, L), (z || Q) && f("types", z && z.name, Q && Q.name), z && Q) {
+    f("components", C, L);
+    if (z || Q) {
+      f("types", z && z.name, Q && Q.name);
+    }
+    if (z && Q) {
       d(z === Q);
       var W = T(C);
       var K = T(L);
@@ -684,7 +721,7 @@ function M(e, t) {
         $++;
       }
     });
-    if (c.eachChildOf(r, i, function (t, n, r) {
+    c.eachChildOf(r, i, function (t, n, r) {
       var i;
       var o;
       var a = t;
@@ -762,7 +799,11 @@ function M(e, t) {
       }
       E.ascend();
       x.ascend();
-    }), re.end(), ne.end(), N(), null != V) {
+    });
+    re.end();
+    ne.end();
+    N();
+    if (null != V) {
       V.i = j;
     } else if (!b && !k && null == F) {
       return j;
@@ -834,7 +875,8 @@ function j(e) {
   var i = new c.WriteCursor();
   var o = [];
   var a = [];
-  if (f("inverting", e), function e(n, i, a) {
+  f("inverting", e);
+  (function e(n, i, a) {
     if (!l) {
       f("invertSimple", n.getPath(), a);
     }
@@ -885,8 +927,13 @@ function j(e) {
           p++;
         }
         var b = e(n, i, y);
-        if (f("key", g, "raw", m, y, b, "subdoc", a), void 0 !== a && void 0 !== b) {
-          if (u || (u = !0, a = A(a)), !w(a, m)) {
+        f("key", g, "raw", m, y, b, "subdoc", a);
+        if (void 0 !== a && void 0 !== b) {
+          if (!u) {
+            u = !0;
+            a = A(a);
+          }
+          if (!w(a, m)) {
             throw Error("Cannot modify child - invalid operation");
           }
           a[m] = b;
@@ -898,11 +945,16 @@ function j(e) {
     } finally {
       _.f();
     }
-    if (N(), void 0 === s) {
+    N();
+    if (void 0 === s) {
       return u ? a : void 0;
     }
     i.write("r", a);
-  }(n, i, void 0), l || f("invert after pass 1", i.get()), t) {
+  })(n, i, void 0);
+  if (!l) {
+    f("invert after pass 1", i.get());
+  }
+  if (t) {
     i.reset();
     (function e(n, i, s) {
       if (!l) {
@@ -912,7 +964,12 @@ function j(e) {
       var u = i.getComponent();
       if (u) {
         var d = u.d;
-        if (null != d && (f("teleporting to drop slot", d), n = o[d], s = a[d] = c.writeCursor()), t.has(u)) {
+        if (null != d) {
+          f("teleporting to drop slot", d);
+          n = o[d];
+          s = a[d] = c.writeCursor();
+        }
+        if (t.has(u)) {
           var h = S(u);
           if (!h.invert) {
             throw Error("Cannot invert subtype ".concat(h.name));
@@ -993,7 +1050,8 @@ function j(e) {
   return s;
 }
 function L(e, t) {
-  if (f("makeInvertible", e, t), null == e || !function e(t, n) {
+  f("makeInvertible", e, t);
+  if (null == e || !function e(t, n) {
     return t.some(function (t) {
       return "object" === typeof t && (Array.isArray(t) ? e(t, n) : n(t));
     });
@@ -1008,7 +1066,7 @@ function L(e, t) {
   var o = !1;
   var a = [];
   var u = [];
-  if (function e(t, n, i) {
+  (function e(t, n, i) {
     if (!l) {
       f("traversePick", t.getPath(), i);
     }
@@ -1023,7 +1081,13 @@ function L(e, t) {
         n.write("i", c.i);
       }
       var p = c.p;
-      if (null != p && (a[p] = t.clone(), d(void 0 !== i, "Operation picks up at an invalid key"), u[p] = i, n.write("p", c.p)), void 0 !== c.r && void 0 === i) {
+      if (null != p) {
+        a[p] = t.clone();
+        d(void 0 !== i, "Operation picks up at an invalid key");
+        u[p] = i;
+        n.write("p", c.p);
+      }
+      if (void 0 !== c.r && void 0 === i) {
         throw Error("Invalid doc / op in makeInvertible: removed item missing from doc");
       }
       var _ = S(c);
@@ -1082,7 +1146,9 @@ function L(e, t) {
     f("tp returning", i);
     N();
     return i;
-  }(n, i, t), f("after traversePick", i.get()), o) {
+  })(n, i, t);
+  f("after traversePick", i.get());
+  if (o) {
     i.reset();
     (function e(t, n, i, o, s) {
       if (!l) {
@@ -1174,7 +1240,9 @@ var U = function e(t) {
 function H(e, n, i) {
   d("left" === i || "right" === i, "Direction must be left or right");
   var o = "left" === i ? 0 : 1;
-  if (f.quiet = !h, f.prefix = 0, null == n) {
+  f.quiet = !h;
+  f.prefix = 0;
+  if (null == n) {
     return {
       ok: !0,
       result: e
@@ -1225,7 +1293,7 @@ function H(e, n, i) {
   var G = c.readCursor(e);
   var z = c.readCursor(n);
   var Q = c.writeCursor();
-  if (function e(t) {
+  (function e(t) {
     var n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
     var i = arguments.length > 2 ? arguments[2] : void 0;
     if (!l) {
@@ -1274,9 +1342,15 @@ function H(e, n, i) {
     }
     d.end();
     N();
-  }(z, G, null), l || (f("op1PickAtOp2Pick", L), f("cancelledOp2", I), f("held op2 pick", C.map(function (e) {
-    return !!e;
-  }))), function e(n, i, a, s, d) {
+  })(z, G, null);
+  if (!l) {
+    f("op1PickAtOp2Pick", L);
+    f("cancelledOp2", I);
+    f("held op2 pick", C.map(function (e) {
+      return !!e;
+    }));
+  }
+  (function e(n, i, a, s, d) {
     if (!l) {
       f("scanOp2Drop", "r1Pick", n && n.getPath(), i && i.getPath(), "r2Drop", a.getPath(), "pickSlot1", s, "removed:", d && d.getPath());
     }
@@ -1372,7 +1446,8 @@ function H(e, n, i) {
     try {
       for (F.s(); !(b = F.n()).done;) {
         var M = b.value;
-        if (f("key ->", M), "number" === typeof M) {
+        f("key ->", M);
+        if ("number" === typeof M) {
           var j = M - O;
           f("p2Mid", j);
           var U = k(j);
@@ -1397,9 +1472,11 @@ function H(e, n, i) {
     B.end();
     N();
     return A;
-  }(G, z, z.clone(), null, null), f("held op2 drop", E.map(function (e) {
+  })(G, z, z.clone(), null, null);
+  f("held op2 drop", E.map(function (e) {
     return e && e.get();
-  })), m) {
+  }));
+  if (m) {
     f("returning conflict 4", m);
     return {
       ok: !1,
@@ -1493,13 +1570,15 @@ function H(e, n, i) {
         f("r2Drop++", x, e, t);
       }
     });
-    if (f("children", "2p", !!n, "2d", !!i), t) {
+    f("children", "2p", !!n, "2d", !!i);
+    if (t) {
       var T;
       var B = r(t);
       try {
         for (B.s(); !(T = B.n()).done;) {
           var D = T.value;
-          if (f("-> k", D), "string" === typeof D) {
+          f("-> k", D);
+          if ("string" === typeof D) {
             var I = C(D);
             var F = S(D);
             a.descend(D);
@@ -1542,7 +1621,8 @@ function H(e, n, i) {
     f("pc", W);
   }
   var X = [];
-  if (f("----- drop -----"), function e(n, h, _, x, D, F) {
+  f("----- drop -----");
+  (function e(n, h, _, x, D, F) {
     d(h);
     var R = h.getComponent();
     if (!l) {
@@ -1711,7 +1791,8 @@ function H(e, n, i) {
     try {
       for (ge.s(); !(Ae = ge.n()).done;) {
         var ve = Ae.value;
-        if (f("-> p1Drop looking at child", ve), "number" === typeof ve) {
+        f("-> p1Drop looking at child", ve);
+        if ("number" === typeof ve) {
           var me = void 0;
           f("p1DropEachChild k:", ve, "p1d:", ae, "p1p:", oe, "raw: -", "p2p:", se, "p2d:", ce, "op:", ue, "od:", le);
           var ye = v(h.getComponent());
@@ -1721,7 +1802,8 @@ function H(e, n, i) {
             we += oe;
             var Ee = n.getComponent();
             var xe = g(Ee);
-            if (f("p1k", we, "k1mid", be, "hp", xe), we > be || we === be && (!xe || 0 === o && ye)) {
+            f("p1k", we, "k1mid", be, "hp", xe);
+            if (we > be || we === be && (!xe || 0 === o && ye)) {
               break;
             }
             if (xe) {
@@ -1752,7 +1834,8 @@ function H(e, n, i) {
             De = Be - ce;
             var Ie = x.getComponent();
             var Fe = v(Ie);
-            if (f("p2d looking at child", Be, Ie, "at op2mid", De, "target", Se, "  / raw", Oe, ce, Fe, ye), De > Se) {
+            f("p2d looking at child", Be, Ie, "at op2mid", De, "target", Se, "  / raw", Oe, ce, Fe, ye);
+            if (De > Se) {
               break;
             }
             if (De === Se) {
@@ -1829,7 +1912,8 @@ function H(e, n, i) {
     }
     N();
     return U;
-  }(G, G.clone(), z, z.clone(), Q, null), m) {
+  })(G, G.clone(), z, z.clone(), Q, null);
+  if (m) {
     f("returning conflict 3", m);
     return {
       ok: !1,
@@ -1877,17 +1961,23 @@ function H(e, n, i) {
       }));
     }
     var J = c.readCursor(U(Q.get()));
-    if (Y(J, null, function (e, t) {
+    Y(J, null, function (e, t) {
       q[e] = t.clone();
-    }), j.forEach(function (e) {
+    });
+    j.forEach(function (e) {
       if (e) {
         Y(c.readCursor(e.get()), null, function (e, t) {
           q[e] = t.clone();
         });
       }
-    }), l || (f("merging writes into", J.get()), f("heldOutDropRead", q.map(function (e) {
-      return e && e.getPath();
-    }))), function e(t, n, i, o, a, s) {
+    });
+    if (!l) {
+      f("merging writes into", J.get());
+      f("heldOutDropRead", q.map(function (e) {
+        return e && e.getPath();
+      }));
+    }
+    (function e(t, n, i, o, a, s) {
       if (!l) {
         f("writeHeldOp2Drop", "p2Drop", t.getPath(), "outPick", n && n.getPath(), "outDrop", i && i.getPath(), "pc", a, "rm out", s);
       }
@@ -1968,27 +2058,34 @@ function H(e, n, i) {
       N();
       E.end();
       x.end();
-    }(z, J, J.clone(), Q, null, !1), Q.reset(), m) {
+    })(z, J, J.clone(), Q, null, !1);
+    Q.reset();
+    if (m) {
       f("-> xf returning conflict 2", m);
       return {
         ok: !1,
         conflict: m
       };
     }
-    if (f("-- after writeHeldOp2Drop", Q.get()), l || f("held output writes", $.map(function (e) {
-      return e.get();
-    })), $.length) {
+    f("-- after writeHeldOp2Drop", Q.get());
+    if (!l) {
+      f("held output writes", $.map(function (e) {
+        return e.get();
+      }));
+    }
+    if ($.length) {
       var Z = $.map(function (e) {
         return e ? e.get() : null;
       });
       var ee = c.readCursor(U(Q.get()));
-      if (Y(ee, Q, function (e, t, n) {
+      Y(ee, Q, function (e, t, n) {
         var r = Z[e];
         if (r) {
           n.mergeTree(r);
           Z[e] = null;
         }
-      }), Z.find(function (e) {
+      });
+      if (Z.find(function (e) {
         return e;
       })) {
         f("BLACKHOLE");
@@ -2100,7 +2197,11 @@ function K(e, t, n, r) {
       return M(o, s.result);
     }
     var c = s.conflict;
-    if (f("detected conflict", c), e(c) || V(c), !l && c.type === u.ConflictType.BLACKHOLE) {
+    f("detected conflict", c);
+    if (!e(c)) {
+      V(c);
+    }
+    if (!l && c.type === u.ConflictType.BLACKHOLE) {
       var h = H(n, t, "left" === r ? "right" : "left");
       d(!h.ok);
       try {

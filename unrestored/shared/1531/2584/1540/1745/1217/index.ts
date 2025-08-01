@@ -22,7 +22,10 @@ module.exports = function (e) {
   var b = void 0 !== v;
   var y = u(m);
   var E = 0;
-  if (b && (v = r(v, _ > 2 ? arguments[2] : void 0, 2)), void 0 == y || g == Array && a(y)) {
+  if (b) {
+    v = r(v, _ > 2 ? arguments[2] : void 0, 2);
+  }
+  if (void 0 == y || g == Array && a(y)) {
     for (n = new g(t = s(m.length)); t > E; E++) {
       h = b ? v(m[E], E) : m[E];
       c(n, E, h);

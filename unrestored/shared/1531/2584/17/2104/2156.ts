@@ -90,7 +90,9 @@ var o = function () {
       }
       return a < t;
     }
-    if (o = s, a = s, i.length) {
+    o = s;
+    a = s;
+    if (i.length) {
       for (; o >= 0 && u(o);) {
         o--;
       }

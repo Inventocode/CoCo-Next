@@ -55,8 +55,13 @@ exports.register_default_procedure_events = function (e, t) {
     var v = e.get_block_by_id(_);
     (0, a.assert)(v);
     var m = d.get_procedure_by_def(_);
-    if ((0, a.assert)(m), n.disable(), "undefined" === typeof g && "object" === typeof A) {
-      if (null === (o = v.addMutation) || void 0 === o || o.call(v, A.param_name), void 0 !== A.default_value) {
+    (0, a.assert)(m);
+    n.disable();
+    if ("undefined" === typeof g && "object" === typeof A) {
+      if (!(null === (o = v.addMutation) || void 0 === o)) {
+        o.call(v, A.param_name);
+      }
+      if (void 0 !== A.default_value) {
         var y = m.params.length;
         var b = null === (l = null === (u = v.get_input("" + c.PROCEDURE_BLOCK_INPUT_NAMES.PARAM_PREFIX + y)) || void 0 === u ? void 0 : u.connection) || void 0 === l ? void 0 : l.targetBlock();
         (0, a.assert)(b);
@@ -256,7 +261,8 @@ exports.register_default_procedure_events = function (e, t) {
                 var f = n.get_old_value();
                 var d = n.get_new_value();
                 l = i.get_procedure_by_def(n.get_block_id());
-                if ((0, a.assert)(l, "Trying to edit param on in-existing procedure"), "object" === typeof d && "undefined" === typeof f) {
+                (0, a.assert)(l, "Trying to edit param on in-existing procedure");
+                if ("object" === typeof d && "undefined" === typeof f) {
                   var h = d;
                   i.add_param(l.name, h.param_name, h.default_value);
                   i.update_params(e, l.name, "increase", h);

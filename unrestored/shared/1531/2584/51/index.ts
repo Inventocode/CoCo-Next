@@ -13,7 +13,10 @@ function u(e, t) {
   if (!(this instanceof u)) {
     return new u(e, t);
   }
-  if (t && t in a && (t = null), t && !(t in i)) {
+  if (t && t in a) {
+    t = null;
+  }
+  if (t && !(t in i)) {
     throw new Error("Unknown model: " + t);
   }
   var n;

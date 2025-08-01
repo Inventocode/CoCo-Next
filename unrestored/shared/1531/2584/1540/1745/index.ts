@@ -49,7 +49,8 @@ var B = function (e, t) {
     }
     e.host = n;
   } else if (q(e)) {
-    if (t = m(t), D.test(t)) {
+    t = m(t);
+    if (D.test(t)) {
       return "Invalid host";
     }
     if (null === (n = F(t))) {
@@ -75,14 +76,22 @@ var F = function (e) {
   var a;
   var s;
   var c = e.split(".");
-  if (c.length && "" == c[c.length - 1] && c.pop(), (t = c.length) > 4) {
+  if (c.length && "" == c[c.length - 1]) {
+    c.pop();
+  }
+  if ((t = c.length) > 4) {
     return e;
   }
   for (n = [], r = 0; r < t; r++) {
     if ("" == (o = c[r])) {
       return e;
     }
-    if (i = 10, o.length > 1 && "0" == o.charAt(0) && (i = N.test(o) ? 16 : 8, o = o.slice(8 == i ? 1 : 2)), "" === o) {
+    i = 10;
+    if (o.length > 1 && "0" == o.charAt(0)) {
+      i = N.test(o) ? 16 : 8;
+      o = o.slice(8 == i ? 1 : 2);
+    }
+    if ("" === o) {
       a = 0;
     } else {
       if (!(10 == i ? k : 8 == i ? R : x).test(o)) {
@@ -93,7 +102,8 @@ var F = function (e) {
     n.push(a);
   }
   for (r = 0; r < t; r++) {
-    if (a = n[r], r == t - 1) {
+    a = n[r];
+    if (r == t - 1) {
       if (a >= S(256, 5 - t)) {
         return null;
       }
@@ -142,11 +152,13 @@ var G = function (e) {
         if (0 == n) {
           return;
         }
-        if (d -= n, l > 6) {
+        d -= n;
+        if (l > 6) {
           return;
         }
         for (r = 0; p();) {
-          if (o = null, r > 0) {
+          o = null;
+          if (r > 0) {
             if (!("." == p() && r < 4)) {
               return;
             }
@@ -156,7 +168,8 @@ var G = function (e) {
             return;
           }
           for (; j.test(p());) {
-            if (i = parseInt(p(), 10), null === o) {
+            i = parseInt(p(), 10);
+            if (null === o) {
               o = i;
             } else {
               if (0 == o) {
@@ -180,7 +193,8 @@ var G = function (e) {
         break;
       }
       if (":" == p()) {
-        if (d++, !p()) {
+        d++;
+        if (!p()) {
           return;
         }
       } else if (p()) {
@@ -387,7 +401,8 @@ var Oe = function (e, t, n, o) {
           if (n && (q(e) != d(K, h) || "file" == h && (X(e) || null !== e.port) || "file" == e.scheme && !e.host)) {
             return;
           }
-          if (e.scheme = h, n) {
+          e.scheme = h;
+          if (n) {
             return void (q(e) && K[e.scheme] == e.port && (e.port = null));
           }
           h = "";
@@ -558,7 +573,9 @@ var Oe = function (e, t, n, o) {
             if (c = B(e, h)) {
               return c;
             }
-            if (h = "", u = _e, n) {
+            h = "";
+            u = _e;
+            if (n) {
               return;
             }
             continue;
@@ -578,7 +595,9 @@ var Oe = function (e, t, n, o) {
           if (c = B(e, h)) {
             return c;
           }
-          if (h = "", u = fe, n == pe) {
+          h = "";
+          u = fe;
+          if (n == pe) {
             return;
           }
         }
@@ -658,7 +677,8 @@ var Oe = function (e, t, n, o) {
           if (!n && Z(h)) {
             u = ve;
           } else if ("" == h) {
-            if (e.host = "", n) {
+            e.host = "";
+            if (n) {
               return;
             }
             u = _e;
@@ -666,7 +686,10 @@ var Oe = function (e, t, n, o) {
             if (c = B(e, h)) {
               return c;
             }
-            if ("localhost" == e.host && (e.host = ""), n) {
+            if ("localhost" == e.host) {
+              e.host = "";
+            }
+            if (n) {
               return;
             }
             h = "";
@@ -678,7 +701,8 @@ var Oe = function (e, t, n, o) {
         break;
       case _e:
         if (q(e)) {
-          if (u = ve, "/" != a && "\\" != a) {
+          u = ve;
+          if ("/" != a && "\\" != a) {
             continue;
           }
         } else if (n || "?" != a) {
@@ -697,7 +721,28 @@ var Oe = function (e, t, n, o) {
         break;
       case ve:
         if (a == r || "/" == a || "\\" == a && q(e) || !n && ("?" == a || "#" == a)) {
-          if (".." === (l = (l = h).toLowerCase()) || "%2e." === l || ".%2e" === l || "%2e%2e" === l ? ($(e), "/" == a || "\\" == a && q(e) || e.path.push("")) : ee(h) ? "/" == a || "\\" == a && q(e) || e.path.push("") : ("file" == e.scheme && !e.path.length && Z(h) && (e.host && (e.host = ""), h = h.charAt(0) + ":"), e.path.push(h)), h = "", "file" == e.scheme && (a == r || "?" == a || "#" == a)) {
+          if (".." === (l = (l = h).toLowerCase()) || "%2e." === l || ".%2e" === l || "%2e%2e" === l) {
+            $(e);
+            if (!("/" == a || "\\" == a && q(e))) {
+              e.path.push("");
+            }
+          } else {
+            if (ee(h)) {
+              if (!("/" == a || "\\" == a && q(e))) {
+                e.path.push("");
+              }
+            } else {
+              if ("file" == e.scheme && !e.path.length && Z(h)) {
+                if (e.host) {
+                  e.host = "";
+                }
+                h = h.charAt(0) + ":";
+              }
+              e.path.push(h);
+            }
+          }
+          h = "";
+          if ("file" == e.scheme && (a == r || "?" == a || "#" == a)) {
             for (; e.path.length > 1 && "" === e.path[0];) {
               e.path.shift();
             }
@@ -887,105 +932,110 @@ var Pe = function (e, t) {
     enumerable: !0
   };
 };
-if (i && c(Ce, {
-  href: Pe(Te, function (e) {
-    var t = C(this);
-    var n = g(e);
-    var r = Oe(t, n);
-    if (r) {
-      throw TypeError(r);
-    }
-    O(t.searchParams).updateSearchParams(t.query);
-  }),
-  origin: Pe(Se),
-  protocol: Pe(Ie, function (e) {
-    var t = C(this);
-    Oe(t, g(e) + ":", te);
-  }),
-  username: Pe(Ae, function (e) {
-    var t = C(this);
-    var n = f(g(e));
-    if (!Q(t)) {
-      t.username = "";
-      for (var r = 0; r < n.length; r++) {
-        t.username += Y(n[r], z);
+if (i) {
+  c(Ce, {
+    href: Pe(Te, function (e) {
+      var t = C(this);
+      var n = g(e);
+      var r = Oe(t, n);
+      if (r) {
+        throw TypeError(r);
       }
-    }
-  }),
-  password: Pe(je, function (e) {
-    var t = C(this);
-    var n = f(g(e));
-    if (!Q(t)) {
-      t.password = "";
-      for (var r = 0; r < n.length; r++) {
-        t.password += Y(n[r], z);
+      O(t.searchParams).updateSearchParams(t.query);
+    }),
+    origin: Pe(Se),
+    protocol: Pe(Ie, function (e) {
+      var t = C(this);
+      Oe(t, g(e) + ":", te);
+    }),
+    username: Pe(Ae, function (e) {
+      var t = C(this);
+      var n = f(g(e));
+      if (!Q(t)) {
+        t.username = "";
+        for (var r = 0; r < n.length; r++) {
+          t.username += Y(n[r], z);
+        }
       }
-    }
-  }),
-  host: Pe(Ne, function (e) {
-    var t = C(this);
-    if (!t.cannotBeABaseURL) {
-      Oe(t, g(e), de);
-    }
-  }),
-  hostname: Pe(Re, function (e) {
-    var t = C(this);
-    if (!t.cannotBeABaseURL) {
-      Oe(t, g(e), pe);
-    }
-  }),
-  port: Pe(ke, function (e) {
-    var t = C(this);
-    if (!Q(t)) {
+    }),
+    password: Pe(je, function (e) {
+      var t = C(this);
+      var n = f(g(e));
+      if (!Q(t)) {
+        t.password = "";
+        for (var r = 0; r < n.length; r++) {
+          t.password += Y(n[r], z);
+        }
+      }
+    }),
+    host: Pe(Ne, function (e) {
+      var t = C(this);
+      if (!t.cannotBeABaseURL) {
+        Oe(t, g(e), de);
+      }
+    }),
+    hostname: Pe(Re, function (e) {
+      var t = C(this);
+      if (!t.cannotBeABaseURL) {
+        Oe(t, g(e), pe);
+      }
+    }),
+    port: Pe(ke, function (e) {
+      var t = C(this);
+      if (!Q(t)) {
+        if ("" == (e = g(e))) {
+          t.port = null;
+        } else {
+          Oe(t, e, fe);
+        }
+      }
+    }),
+    pathname: Pe(xe, function (e) {
+      var t = C(this);
+      if (!t.cannotBeABaseURL) {
+        t.path = [];
+        Oe(t, g(e), _e);
+      }
+    }),
+    search: Pe(De, function (e) {
+      var t = C(this);
       if ("" == (e = g(e))) {
-        t.port = null;
+        t.query = null;
       } else {
-        Oe(t, e, fe);
+        if ("?" == e.charAt(0)) {
+          e = e.slice(1);
+        }
+        t.query = "";
+        Oe(t, e, ye);
       }
-    }
-  }),
-  pathname: Pe(xe, function (e) {
-    var t = C(this);
-    if (!t.cannotBeABaseURL) {
-      t.path = [];
-      Oe(t, g(e), _e);
-    }
-  }),
-  search: Pe(De, function (e) {
-    var t = C(this);
-    if ("" == (e = g(e))) {
-      t.query = null;
-    } else {
-      if ("?" == e.charAt(0)) {
-        e = e.slice(1);
+      O(t.searchParams).updateSearchParams(t.query);
+    }),
+    searchParams: Pe(Me),
+    hash: Pe(Le, function (e) {
+      var t = C(this);
+      if ("" != (e = g(e))) {
+        if ("#" == e.charAt(0)) {
+          e = e.slice(1);
+        }
+        t.fragment = "";
+        Oe(t, e, Ee);
+      } else {
+        t.fragment = null;
       }
-      t.query = "";
-      Oe(t, e, ye);
-    }
-    O(t.searchParams).updateSearchParams(t.query);
-  }),
-  searchParams: Pe(Me),
-  hash: Pe(Le, function (e) {
-    var t = C(this);
-    if ("" != (e = g(e))) {
-      if ("#" == e.charAt(0)) {
-        e = e.slice(1);
-      }
-      t.fragment = "";
-      Oe(t, e, Ee);
-    } else {
-      t.fragment = null;
-    }
-  })
-}), l(Ce, "toJSON", function () {
+    })
+  });
+}
+l(Ce, "toJSON", function () {
   return Te.call(this);
 }, {
   enumerable: !0
-}), l(Ce, "toString", function () {
+});
+l(Ce, "toString", function () {
   return Te.call(this);
 }, {
   enumerable: !0
-}), y) {
+});
+if (y) {
   var Be = y.createObjectURL;
   var Fe = y.revokeObjectURL;
   if (Be) {

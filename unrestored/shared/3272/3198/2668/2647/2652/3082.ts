@@ -93,7 +93,8 @@ exports._resyncRemoved = function () {
 };
 exports.call = function (e) {
   var t = this.opts;
-  if (this.debug(e), this.node && this._call(t[e])) {
+  this.debug(e);
+  if (this.node && this._call(t[e])) {
     return !0;
   }
   if (this.node) {

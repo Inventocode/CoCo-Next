@@ -11,7 +11,13 @@ module.exports = function (e, t, n) {
   var l = !e.opts.allErrors;
   var f = "data" + (a || "");
   var d = e.opts.$data && s && s.$data;
-  if (d ? (i += " var schema" + o + " = " + e.util.getData(s.$data, a, e.dataPathArr) + "; ", r = "schema" + o) : r = s, !d && "number" != typeof s) {
+  if (d) {
+    i += " var schema" + o + " = " + e.util.getData(s.$data, a, e.dataPathArr) + "; ";
+    r = "schema" + o;
+  } else {
+    r = s;
+  }
+  if (!d && "number" != typeof s) {
     throw new Error(t + " must be number");
   }
   var h = "maxLength" == t ? ">" : "<";

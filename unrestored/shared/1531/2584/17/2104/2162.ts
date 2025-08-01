@@ -39,24 +39,30 @@ var c = function (e) {
         this.field_group.style.display = "none";
       }
       var e = this.theme.renderer.HEAD_ICON_WRAP_WIDTH / 2;
-      if ((0, o.create_svg_element)("circle", {
+      (0, o.create_svg_element)("circle", {
         cx: e,
         cy: e,
         r: e,
         fill: void 0 != this.source_block ? this.source_block.get_colour() : "",
         stroke: void 0 != this.source_block ? this.source_block.get_border_colour() : this.theme.block_color.DEFAULT.border,
         class: "blockly_head_icon_wrapper"
-      }, this.field_group), this.image_element = (0, o.create_svg_element)("image", {
+      }, this.field_group);
+      this.image_element = (0, o.create_svg_element)("image", {
         height: this.height_ + "px",
         width: this.width_ + "px",
         x: e - this.width_ / 2,
         y: e - this.height_ / 2,
         class: "blockly_head_icon"
-      }, this.field_group), this.set_value(this.src_), a.is.Gecko() && (0, o.create_svg_element)("rect", {
-        height: this.height_ + "px",
-        width: this.width_ + "px",
-        "fill-opacity": 0
-      }, this.field_group), void 0 == this.source_block) {
+      }, this.field_group);
+      this.set_value(this.src_);
+      if (a.is.Gecko()) {
+        (0, o.create_svg_element)("rect", {
+          height: this.height_ + "px",
+          width: this.width_ + "px",
+          "fill-opacity": 0
+        }, this.field_group);
+      }
+      if (void 0 == this.source_block) {
         throw new ReferenceError("Field should have source block when init.");
       }
       var t = this.source_block.get_svg_root();

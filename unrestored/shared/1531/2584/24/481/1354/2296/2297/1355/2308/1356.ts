@@ -27,7 +27,8 @@ l.prototype.pause = function (e) {
     t.readyState = "paused";
     e();
   }
-  if (this.readyState = "pausing", this.polling || !this.writable) {
+  this.readyState = "pausing";
+  if (this.polling || !this.writable) {
     var r = 0;
     if (this.polling) {
       c("we are currently polling - waiting to pause");
@@ -63,7 +64,10 @@ l.prototype.onData = function (e) {
   var t = this;
   c("polling got data %s", e);
   o.decodePayload(e, this.socket.binaryType, function (e, n, r) {
-    if ("opening" === t.readyState && "open" === e.type && t.onOpen(), "close" === e.type) {
+    if ("opening" === t.readyState && "open" === e.type) {
+      t.onOpen();
+    }
+    if ("close" === e.type) {
       t.onClose();
       return !1;
     }

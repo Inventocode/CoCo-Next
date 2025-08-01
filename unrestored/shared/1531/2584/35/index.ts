@@ -110,7 +110,7 @@ export { Gt as eb };
 export { Ut as o };
 var r;
 var o = require("../1/index");
-var i = (module => {
+var i = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -121,7 +121,7 @@ var i = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(o);
+}(o);
 var a = require("../7");
 var s = require("../10/index");
 var c = require("../11");
@@ -734,7 +734,8 @@ function Pe(e) {
     var a = i(o);
     r.push(a);
     var s = Object(h.a)(o.type);
-    if (a.id = s, o.title) {
+    a.id = s;
+    if (o.title) {
       var c = vt(o.type, Me(o.type), o.title);
       a.title = c;
     } else if (o.contentTitle) {
@@ -798,7 +799,15 @@ function Be(e, t, n) {
       var i = Object(h.a)(r.type);
       o.id = i;
       var a = t.indexOf(e);
-      if (a > -1 ? t.splice(a, 1, o.id) : console.error("copy screen error"), n && (o.parentId = n), r.type === f.f) {
+      if (a > -1) {
+        t.splice(a, 1, o.id);
+      } else {
+        console.error("copy screen error");
+      }
+      if (n) {
+        o.parentId = n;
+      }
+      if (r.type === f.f) {
         var s = o;
         s.widgetIds = [];
         r.widgetIds.forEach(function (e) {

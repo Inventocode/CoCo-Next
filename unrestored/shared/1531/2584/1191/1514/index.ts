@@ -317,7 +317,8 @@ var j = function (e) {
       }
     })(this, n);
     A(S(r = t.call(this, e)), "onDragStart", function (e, t) {
-      if ((0, d.default)("Draggable: onDragStart: %j", t), !1 === r.props.onStart(e, (0, c.createDraggableData)(S(r), t))) {
+      (0, d.default)("Draggable: onDragStart: %j", t);
+      if (!1 === r.props.onStart(e, (0, c.createDraggableData)(S(r), t))) {
         return !1;
       }
       r.setState({

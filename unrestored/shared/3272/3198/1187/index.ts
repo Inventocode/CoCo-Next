@@ -101,7 +101,10 @@
   exports.sep = "/";
   exports.delimiter = ":";
   exports.dirname = function (e) {
-    if ("string" !== typeof e && (e += ""), 0 === e.length) {
+    if ("string" !== typeof e) {
+      e += "";
+    }
+    if (0 === e.length) {
       return ".";
     }
     for (var t = e.charCodeAt(0), n = 47 === t, r = -1, i = !0, o = e.length - 1; o >= 1; --o) {

@@ -8,7 +8,7 @@ var s = require("../1253/472");
 var c = require("../1683/943");
 var l = require("./1239");
 var u = require("../1745/398");
-if (r({
+r({
   target: "Promise",
   proto: !0,
   real: !0,
@@ -31,7 +31,8 @@ if (r({
       });
     } : e);
   }
-}), !o && "function" == typeof i) {
+});
+if (!o && "function" == typeof i) {
   var d = s("Promise").prototype.finally;
   if (i.prototype.finally !== d) {
     u(i.prototype, "finally", d, {

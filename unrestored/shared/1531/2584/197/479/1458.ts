@@ -148,7 +148,10 @@ module.exports = function (e) {
   var o = n(29);
   var a = Object.defineProperty;
   t.f = n(4) ? Object.defineProperty : function (e, t, n) {
-    if (r(e), t = o(t, !0), r(n), i) {
+    r(e);
+    t = o(t, !0);
+    r(n);
+    if (i) {
       try {
         return a(e, t, n);
       } catch (e) {}
@@ -519,7 +522,8 @@ module.exports = function (e) {
 }, function (e, t, n) {
   var r = n(20);
   e.exports = function (e, t, n) {
-    if (r(e), void 0 === t) {
+    r(e);
+    if (void 0 === t) {
       return e;
     }
     switch (n) {
@@ -782,14 +786,30 @@ module.exports = function (e) {
     var k = O || b(_);
     var S = _ ? E ? b("entries") : k : void 0;
     var T = "Array" == t && C.entries || O;
-    if (T && (y = l(T.call(new e()))) !== Object.prototype && y.next && (u(y, w, !0), r || "function" == typeof y[f] || a(y, f, h)), E && O && "values" !== O.name && (x = !0, k = function () {
-      return O.call(this);
-    }), r && !g || !d && !x && C[f] || a(C, f, k), s[t] = k, s[w] = h, _) {
-      if (v = {
+    if (T && (y = l(T.call(new e()))) !== Object.prototype && y.next) {
+      u(y, w, !0);
+      if (!(r || "function" == typeof y[f])) {
+        a(y, f, h);
+      }
+    }
+    if (E && O && "values" !== O.name) {
+      x = !0;
+      k = function () {
+        return O.call(this);
+      };
+    }
+    if (!(r && !g || !d && !x && C[f])) {
+      a(C, f, k);
+    }
+    s[t] = k;
+    s[w] = h;
+    if (_) {
+      v = {
         values: E ? k : b("values"),
         keys: A ? k : b("keys"),
         entries: S
-      }, g) {
+      };
+      if (g) {
         for (m in v) if (!(m in C)) {
           o(C, m, v[m]);
         }
@@ -1006,7 +1026,8 @@ module.exports = function (e) {
   var i = n(8);
   var o = n(33);
   e.exports = function (e, t) {
-    if (r(e), i(t) && t.constructor === e) {
+    r(e);
+    if (i(t) && t.constructor === e) {
       return t;
     }
     var n = o.f(e);
@@ -1411,22 +1432,27 @@ module.exports = function (e) {
       var r;
       var i = e._v;
       var o = P(e);
-      if (o && (t = y(function () {
-        if (S) {
-          x.emit("unhandledRejection", i, e);
-        } else {
-          if (n = c.onunhandledrejection) {
-            n({
-              promise: e,
-              reason: i
-            });
+      if (o) {
+        t = y(function () {
+          if (S) {
+            x.emit("unhandledRejection", i, e);
           } else {
-            if ((r = c.console) && r.error) {
-              r.error("Unhandled promise rejection", i);
+            if (n = c.onunhandledrejection) {
+              n({
+                promise: e,
+                reason: i
+              });
+            } else {
+              if ((r = c.console) && r.error) {
+                r.error("Unhandled promise rejection", i);
+              }
             }
           }
-        }
-      }), e._h = S || P(e) ? 2 : 1), e._a = void 0, o && t.e) {
+        });
+        e._h = S || P(e) ? 2 : 1;
+      }
+      e._a = void 0;
+      if (o && t.e) {
         throw t.v;
       }
     });
@@ -2005,7 +2031,8 @@ module.exports = function (e) {
       for (i = (e = e.substring(r - 64)).length, o = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], r = 0; r < i; r += 1) {
         o[r >> 2] |= e.charCodeAt(r) << (r % 4 << 3);
       }
-      if (o[r >> 2] |= 128 << (r % 4 << 3), r > 55) {
+      o[r >> 2] |= 128 << (r % 4 << 3);
+      if (r > 55) {
         for (t(l, o), r = 0; r < 16; r += 1) {
           o[r] = 0;
         }
@@ -2134,7 +2161,8 @@ module.exports = function (e) {
       var i;
       var o;
       var a = n;
-      if (e[a >> 2] |= 128 << (a % 4 << 3), a > 55) {
+      e[a >> 2] |= 128 << (a % 4 << 3);
+      if (a > 55) {
         for (t(this._hash, e), a = 0; a < 16; a += 1) {
           e[a] = 0;
         }
@@ -2232,7 +2260,8 @@ module.exports = function (e) {
         for (i = (e = n - 64 < u ? e.subarray(n - 64) : new Uint8Array(0)).length, o = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], n = 0; n < i; n += 1) {
           o[n >> 2] |= e[n] << (n % 4 << 3);
         }
-        if (o[n >> 2] |= 128 << (n % 4 << 3), n > 55) {
+        o[n >> 2] |= 128 << (n % 4 << 3);
+        if (n > 55) {
           for (t(l, o), n = 0; n < 16; n += 1) {
             o[n] = 0;
           }
@@ -2301,7 +2330,11 @@ module.exports = function (e) {
     }
     e.prototype.putFile = function () {
       var e = this;
-      if (this.aborted = !1, this.putExtra.fname || (this.putExtra.fname = this.file.name), !this.putExtra.mimeType || !this.putExtra.mimeType.length || (0, s.isContainFileMimeType)(this.file.type, this.putExtra.mimeType)) {
+      this.aborted = !1;
+      if (!this.putExtra.fname) {
+        this.putExtra.fname = this.file.name;
+      }
+      if (!this.putExtra.mimeType || !this.putExtra.mimeType.length || (0, s.isContainFileMimeType)(this.file.type, this.putExtra.mimeType)) {
         var t = (0, s.getUploadUrl)(this.config, this.token).then(function (t) {
           e.uploadUrl = t;
           e.uploadAt = new Date().getTime();
@@ -2313,7 +2346,8 @@ module.exports = function (e) {
             e.sendLog(t.reqId, 200);
           }
         }, function (t) {
-          if (e.clear(), t.isRequestError && !e.config.disableStatisticsReport) {
+          e.clear();
+          if (t.isRequestError && !e.config.disableStatisticsReport) {
             var n = e.aborted ? "" : t.reqId;
             var r = e.aborted ? -2 : t.code;
             e.sendLog(n, r);
@@ -2947,7 +2981,9 @@ module.exports = function (e) {
     return !(this === V && i(U, e) && !i(H, e)) && (!(t || !i(this, e) || !i(U, e) || i(this, N) && this[N][e]) || t);
   };
   var J = function (e, t) {
-    if (e = b(e), t = w(t, !0), e !== V || !i(U, t) || i(H, t)) {
+    e = b(e);
+    t = w(t, !0);
+    if (e !== V || !i(U, t) || i(H, t)) {
       var n = B(e, t);
       if (!(!n || !i(U, t) || i(e, N) && e[N][t])) {
         n.enumerable = !0;
@@ -3065,10 +3101,14 @@ module.exports = function (e) {
         for (var t, n, r = [e], i = 1; arguments.length > i;) {
           r.push(arguments[i++]);
         }
-        if (n = t = r[1], (m(t) || void 0 !== e) && !X(e)) {
+        n = t = r[1];
+        if ((m(t) || void 0 !== e) && !X(e)) {
           if (!g(t)) {
             t = function (e, t) {
-              if ("function" == typeof n && (t = n.call(this, e, t)), !X(t)) {
+              if ("function" == typeof n) {
+                t = n.call(this, e, t);
+              }
+              if (!X(t)) {
                 return t;
               }
             };
@@ -3186,7 +3226,9 @@ module.exports = function (e) {
   var c = n(43);
   var u = Object.getOwnPropertyDescriptor;
   t.f = n(4) ? u : function (e, t) {
-    if (e = o(e), t = a(t, !0), c) {
+    e = o(e);
+    t = a(t, !0);
+    if (c) {
       try {
         return u(e, t);
       } catch (e) {}
@@ -3414,7 +3456,10 @@ module.exports = function (e) {
         e.exifdata = r || {};
         var i = function (e) {
           var t = new DataView(e);
-          if (p && console.log("Got file of length " + e.byteLength), 255 != t.getUint8(0) || 216 != t.getUint8(1)) {
+          if (p) {
+            console.log("Got file of length " + e.byteLength);
+          }
+          if (255 != t.getUint8(0) || 216 != t.getUint8(1)) {
             if (p) {
               console.log("Not a valid JPEG");
             }
@@ -3436,11 +3481,15 @@ module.exports = function (e) {
             n++;
           }
         }(n);
-        if (e.iptcdata = i || {}, _.isXmpEnabled) {
+        e.iptcdata = i || {};
+        if (_.isXmpEnabled) {
           var o = function (e) {
             if ("DOMParser" in self) {
               var t = new DataView(e);
-              if (p && console.log("Got file of length " + e.byteLength), 255 != t.getUint8(0) || 216 != t.getUint8(1)) {
+              if (p) {
+                console.log("Got file of length " + e.byteLength);
+              }
+              if (255 != t.getUint8(0) || 216 != t.getUint8(1)) {
                 if (p) {
                   console.log("Not a valid JPEG");
                 }
@@ -3519,7 +3568,10 @@ module.exports = function (e) {
     }
     function a(e) {
       var t = new DataView(e);
-      if (p && console.log("Got file of length " + e.byteLength), 255 != t.getUint8(0) || 216 != t.getUint8(1)) {
+      if (p) {
+        console.log("Got file of length " + e.byteLength);
+      }
+      if (255 != t.getUint8(0) || 216 != t.getUint8(1)) {
         if (p) {
           console.log("Not a valid JPEG");
         }
@@ -3532,7 +3584,11 @@ module.exports = function (e) {
           }
           return !1;
         }
-        if (n = t.getUint8(r + 1), p && console.log(n), 225 == n) {
+        n = t.getUint8(r + 1);
+        if (p) {
+          console.log(n);
+        }
+        if (225 == n) {
           if (p) {
             console.log("Found 0xFFE1 marker");
           }

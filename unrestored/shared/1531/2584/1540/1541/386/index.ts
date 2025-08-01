@@ -7,7 +7,9 @@ var c = require("../../1745/332");
 var l = require("./1208");
 var u = Object.getOwnPropertyDescriptor;
 exports.f = r ? u : function (e, t) {
-  if (e = a(e), t = s(t), l) {
+  e = a(e);
+  t = s(t);
+  if (l) {
     try {
       return u(e, t);
     } catch (n) {}

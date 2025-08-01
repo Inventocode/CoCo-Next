@@ -64,7 +64,8 @@ var y = function (e) {
         var l = e.context.getPrefixCls;
         c.className = "".concat(l(""), "-click-animating-node");
         var f = e.getAttributeName();
-        if (t.setAttribute(f, "true"), n && "#ffffff" !== n && "rgb(255, 255, 255)" !== n && m(n) && !/rgba\((?:\d*, ){3}0\)/.test(n) && "transparent" !== n) {
+        t.setAttribute(f, "true");
+        if (n && "#ffffff" !== n && "rgb(255, 255, 255)" !== n && m(n) && !/rgba\((?:\d*, ){3}0\)/.test(n) && "transparent" !== n) {
           c.style.borderColor = n;
           var d = (null === (r = t.getRootNode) || void 0 === r ? void 0 : r.call(t)) || t.ownerDocument;
           var h = d instanceof Document ? d.body : null !== (i = d.firstChild) && void 0 !== i ? i : d;
@@ -122,7 +123,8 @@ var y = function (e) {
     e.renderWave = function (t) {
       var n = t.csp;
       var r = e.props.children;
-      if (e.csp = n, !c.isValidElement(r)) {
+      e.csp = n;
+      if (!c.isValidElement(r)) {
         return r;
       }
       var i = e.containerRef;

@@ -39,7 +39,8 @@ var i = function () {
     return !1;
   };
   e.prototype.normalize_hexa = function (e) {
-    if (e = "0x" == e.substring(0, 2) ? "#" + e.substring(2) : e, /^#(?:[0-9a-f]{3}){1,2}$/i.test(e) || /^#(?:[0-9a-f]{4}){1,2}$/i.test(e)) {
+    e = "0x" == e.substring(0, 2) ? "#" + e.substring(2) : e;
+    if (/^#(?:[0-9a-f]{3}){1,2}$/i.test(e) || /^#(?:[0-9a-f]{4}){1,2}$/i.test(e)) {
       if (5 === e.length) {
         e = e.replace(/#(.)(.)(.)(.)/, "#$1$1$2$2$3$3$4$4");
       }

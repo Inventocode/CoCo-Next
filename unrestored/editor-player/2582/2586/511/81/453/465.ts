@@ -338,7 +338,11 @@ var w = function () {
     for (var r = e, n = null;;) {
       var o = this.decodeGeneralPurposeField(r, n);
       var i = y.parseFieldsInGeneralPurpose(o.getNewString());
-      if (null != i && t.append(i), n = o.isRemaining() ? "" + o.getRemainingValue() : null, r === o.getNewPosition()) {
+      if (null != i) {
+        t.append(i);
+      }
+      n = o.isRemaining() ? "" + o.getRemainingValue() : null;
+      if (r === o.getNewPosition()) {
         break;
       }
       r = o.getNewPosition();
@@ -389,7 +393,8 @@ var w = function () {
     var e;
     do {
       var r = this.current.getPosition();
-      if (t = this.current.isAlpha() ? (e = this.parseAlphaBlock()).isFinished() : this.current.isIsoIec646() ? (e = this.parseIsoIec646Block()).isFinished() : (e = this.parseNumericBlock()).isFinished(), !(r !== this.current.getPosition()) && !t) {
+      t = this.current.isAlpha() ? (e = this.parseAlphaBlock()).isFinished() : this.current.isIsoIec646() ? (e = this.parseIsoIec646Block()).isFinished() : (e = this.parseNumericBlock()).isFinished();
+      if (!(r !== this.current.getPosition()) && !t) {
         break;
       }
     } while (!t);
@@ -398,12 +403,14 @@ var w = function () {
   t.prototype.parseNumericBlock = function () {
     for (; this.isStillNumeric(this.current.getPosition());) {
       var t = this.decodeNumeric(this.current.getPosition());
-      if (this.current.setPosition(t.getNewPosition()), t.isFirstDigitFNC1()) {
+      this.current.setPosition(t.getNewPosition());
+      if (t.isFirstDigitFNC1()) {
         var e = void 0;
         e = t.isSecondDigitFNC1() ? new h(this.current.getPosition(), this.buffer.toString()) : new h(this.current.getPosition(), this.buffer.toString(), t.getSecondDigit());
         return new a(!0, e);
       }
-      if (this.buffer.append(t.getFirstDigit()), t.isSecondDigitFNC1()) {
+      this.buffer.append(t.getFirstDigit());
+      if (t.isSecondDigitFNC1()) {
         e = new h(this.current.getPosition(), this.buffer.toString());
         return new a(!0, e);
       }
@@ -418,7 +425,8 @@ var w = function () {
   t.prototype.parseIsoIec646Block = function () {
     for (; this.isStillIsoIec646(this.current.getPosition());) {
       var t = this.decodeIsoIec646(this.current.getPosition());
-      if (this.current.setPosition(t.getNewPosition()), t.isFNC1()) {
+      this.current.setPosition(t.getNewPosition());
+      if (t.isFNC1()) {
         var e = new h(this.current.getPosition(), this.buffer.toString());
         return new a(!0, e);
       }
@@ -442,7 +450,8 @@ var w = function () {
   t.prototype.parseAlphaBlock = function () {
     for (; this.isStillAlpha(this.current.getPosition());) {
       var t = this.decodeAlphanumeric(this.current.getPosition());
-      if (this.current.setPosition(t.getNewPosition()), t.isFNC1()) {
+      this.current.setPosition(t.getNewPosition());
+      if (t.isFNC1()) {
         var e = new h(this.current.getPosition(), this.buffer.toString());
         return new a(!0, e);
       }

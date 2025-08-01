@@ -41,10 +41,21 @@ var c = function (e) {
   };
   t.prototype.init = function () {
     if (!this.field_group) {
-      if (this.field_group = (0, s.create_svg_element)("g", {}), this.visible_ || (this.field_group.style.display = "none"), "string" === typeof this.src_ ? (this.image_element = (0, s.create_svg_element)("image", {
-        height: this.height_ + "px",
-        width: this.width_ + "px"
-      }, this.field_group), this.set_value(this.src_)) : (this.image_element = this.src_, this.field_group.appendChild(this.image_element)), void 0 == this.source_block) {
+      this.field_group = (0, s.create_svg_element)("g", {});
+      if (!this.visible_) {
+        this.field_group.style.display = "none";
+      }
+      if ("string" === typeof this.src_) {
+        this.image_element = (0, s.create_svg_element)("image", {
+          height: this.height_ + "px",
+          width: this.width_ + "px"
+        }, this.field_group);
+        this.set_value(this.src_);
+      } else {
+        this.image_element = this.src_;
+        this.field_group.appendChild(this.image_element);
+      }
+      if (void 0 == this.source_block) {
         throw new ReferenceError("Field should have source block before init.");
       }
       if (void 0 != this.source_block) {
@@ -75,7 +86,9 @@ var c = function (e) {
     return 1;
   };
   t.prototype.on_mouse_down = function (e) {
-    if (e.preventDefault(), e.stopPropagation(), this.source_block && this.source_block.get_workspace() && !this.source_block.is_in_flyout) {
+    e.preventDefault();
+    e.stopPropagation();
+    if (this.source_block && this.source_block.get_workspace() && !this.source_block.is_in_flyout) {
       if (this.tooltip) {
         this.tooltip.hide();
       }

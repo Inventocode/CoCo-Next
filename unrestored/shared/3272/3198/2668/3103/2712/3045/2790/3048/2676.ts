@@ -84,7 +84,10 @@ exports.join = function (e, t) {
   }
   var n = i(t);
   var o = i(e);
-  if (o && (e = o.path || "/"), n && !n.scheme) {
+  if (o) {
+    e = o.path || "/";
+  }
+  if (n && !n.scheme) {
     if (o) {
       n.scheme = o.scheme;
     }

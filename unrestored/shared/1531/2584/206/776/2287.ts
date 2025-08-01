@@ -12,7 +12,8 @@ function s() {
   Object.freeze(this);
 }
 s.applyFixes = function (e, t, n) {
-  if (i("Applying fixes"), !1 === n) {
+  i("Applying fixes");
+  if (!1 === n) {
     i("shouldFix parameter was false, not attempting fixes");
     return {
       fixed: !1,
@@ -32,13 +33,14 @@ s.applyFixes = function (e, t, n) {
     var r = t.range[1];
     return f >= n || n > r ? (s.push(e), !1) : ((n < 0 && r >= 0 || 0 === n && t.text.startsWith("\ufeff")) && (d = ""), d += l.slice(Math.max(0, f), Math.max(0, n)), d += t.text, f = r, !0);
   }
-  if (t.forEach(function (e) {
+  t.forEach(function (e) {
     if (Object.prototype.hasOwnProperty.call(e, "fix")) {
       c.push(e);
     } else {
       s.push(e);
     }
-  }), c.length) {
+  });
+  if (c.length) {
     i("Found fixes to apply");
     var p;
     var _ = !1;

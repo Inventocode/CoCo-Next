@@ -169,7 +169,10 @@
             return !1;
           })) {
             var o = this._monitoringUnsubscribes[n];
-            if (this._monitoringDocuments.splice(n, 1), this._monitoringUnsubscribes.splice(n, 1), o(), t != r) {
+            this._monitoringDocuments.splice(n, 1);
+            this._monitoringUnsubscribes.splice(n, 1);
+            o();
+            if (t != r) {
               var a = i(t);
               if (a) {
                 this._unmonitorIntersections(a.ownerDocument);
@@ -253,7 +256,8 @@
               return null;
             }
             if (s == this.root || 9 == s.nodeType) {
-              if (c = !0, s == this.root || s == e) {
+              c = !0;
+              if (s == this.root || s == e) {
                 if (n && !this.root) {
                   if (!r || 0 == r.width && 0 == r.height) {
                     s = null;
@@ -283,7 +287,10 @@
                 f = l(s);
               }
             }
-            if (f && (a = u(f, a)), !a) {
+            if (f) {
+              a = u(f, a);
+            }
+            if (!a) {
               break;
             }
             s = s && p(s);

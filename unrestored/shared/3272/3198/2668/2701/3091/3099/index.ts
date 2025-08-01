@@ -101,7 +101,10 @@ exports.default = function (e, t) {
         return n;
       }
       var u = v(l.name);
-      if (l.lazy && (u = d(u, [])), "default" === s && "node-default" === l.interop) {
+      if (l.lazy) {
+        u = d(u, []);
+      }
+      if ("default" === s && "node-default" === l.interop) {
         return u;
       }
       var c = t.stringSpecifiers.has(s);
@@ -210,7 +213,8 @@ var N = {
           return;
         }
         var u = n(o, e.node);
-        if (u.loc = e.node.loc, (e.parentPath.isCallExpression({
+        u.loc = e.node.loc;
+        if ((e.parentPath.isCallExpression({
           callee: e.node
         }) || e.parentPath.isOptionalCallExpression({
           callee: e.node
@@ -272,12 +276,13 @@ var N = {
               e.node.right = P([e.node.right, I(g)]);
             }
             var T = [];
-            if (m.forEach(function (e) {
+            m.forEach(function (e) {
               var n = a.get(e) || [];
               if (n.length > 0) {
                 T.push(C(t.metadata, n, v(e)));
               }
-            }), T.length > 0) {
+            });
+            if (T.length > 0) {
               var b = P(T);
               if (e.parentPath.isExpressionStatement()) {
                 (b = y(b))._blockHoist = e.parentPath.node._blockHoist;

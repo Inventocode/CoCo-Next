@@ -509,7 +509,10 @@
               e.compression = e.compression.toUpperCase();
             }
             return e;
-          }(n)).createFolders && (r = w(e)) && E.call(this, r, !0), n.dir || null === t || "undefined" === typeof t) {
+          }(n)).createFolders && (r = w(e))) {
+            E.call(this, r, !0);
+          }
+          if (n.dir || null === t || "undefined" === typeof t) {
             n.base64 = !1;
             n.binary = !1;
             t = null;
@@ -518,7 +521,9 @@
               t = i.string2binary(t);
             }
           } else {
-            if (n.base64 = !1, n.binary = !0, !o && !(t instanceof l)) {
+            n.base64 = !1;
+            n.binary = !0;
+            if (!o && !(t instanceof l)) {
               throw new Error("The data of '" + e + "' is in an unsupported format !");
             }
             if ("arraybuffer" === o) {
@@ -685,7 +690,13 @@
           remove: function (e) {
             e = this.root + e;
             var t = this.files[e];
-            if (t || ("/" != e.slice(-1) && (e += "/"), t = this.files[e]), t && !t.dir) {
+            if (!t) {
+              if ("/" != e.slice(-1)) {
+                e += "/";
+              }
+              t = this.files[e];
+            }
+            if (t && !t.dir) {
               delete this.files[e];
             } else {
               for (var n = this.filter(function (t, n) {
@@ -838,7 +849,13 @@
         (function (e) {
           "use strict";
 
-          if (r.base64 = !0, r.array = !0, r.string = !0, r.arraybuffer = "undefined" !== typeof ArrayBuffer && "undefined" !== typeof Uint8Array, r.nodebuffer = "undefined" !== typeof e, r.uint8array = "undefined" !== typeof Uint8Array, "undefined" === typeof ArrayBuffer) {
+          r.base64 = !0;
+          r.array = !0;
+          r.string = !0;
+          r.arraybuffer = "undefined" !== typeof ArrayBuffer && "undefined" !== typeof Uint8Array;
+          r.nodebuffer = "undefined" !== typeof e;
+          r.uint8array = "undefined" !== typeof Uint8Array;
+          if ("undefined" === typeof ArrayBuffer) {
             r.blob = !1;
           } else {
             var t = new ArrayBuffer(0);
@@ -882,7 +899,8 @@
           return -1;
         };
         i.prototype.readData = function (e) {
-          if (this.checkOffset(e), 0 === e) {
+          this.checkOffset(e);
+          if (0 === e) {
             return new Uint8Array(0);
           }
           var t = this.data.subarray(this.index, this.index + e);
@@ -1188,7 +1206,10 @@
           nodebuffer: a
         };
         n.transformTo = function (e, t) {
-          if (t || (t = ""), !e) {
+          if (!t) {
+            t = "";
+          }
+          if (!e) {
             return t;
           }
           n.checkSupport(e);
@@ -1287,7 +1308,10 @@
             }
           },
           readBlockZip64EndOfCentralLocator: function () {
-            if (this.diskWithZip64CentralDirStart = this.reader.readInt(4), this.relativeOffsetEndOfZip64CentralDir = this.reader.readInt(8), this.disksCount = this.reader.readInt(4), this.disksCount > 1) {
+            this.diskWithZip64CentralDirStart = this.reader.readInt(4);
+            this.relativeOffsetEndOfZip64CentralDir = this.reader.readInt(8);
+            this.disksCount = this.reader.readInt(4);
+            if (this.disksCount > 1) {
               throw new Error("Multi-volumes zip are not supported");
             }
           },
@@ -1316,8 +1340,12 @@
             if (-1 === e) {
               throw new Error("Corrupted zip : can't find end of central directory");
             }
-            if (this.reader.setIndex(e), this.checkSignature(s.CENTRAL_DIRECTORY_END), this.readBlockEndOfCentral(), this.diskNumber === a.MAX_VALUE_16BITS || this.diskWithCentralDirStart === a.MAX_VALUE_16BITS || this.centralDirRecordsOnThisDisk === a.MAX_VALUE_16BITS || this.centralDirRecords === a.MAX_VALUE_16BITS || this.centralDirSize === a.MAX_VALUE_32BITS || this.centralDirOffset === a.MAX_VALUE_32BITS) {
-              if (this.zip64 = !0, -1 === (e = this.reader.lastIndexOfSignature(s.ZIP64_CENTRAL_DIRECTORY_LOCATOR))) {
+            this.reader.setIndex(e);
+            this.checkSignature(s.CENTRAL_DIRECTORY_END);
+            this.readBlockEndOfCentral();
+            if (this.diskNumber === a.MAX_VALUE_16BITS || this.diskWithCentralDirStart === a.MAX_VALUE_16BITS || this.centralDirRecordsOnThisDisk === a.MAX_VALUE_16BITS || this.centralDirRecords === a.MAX_VALUE_16BITS || this.centralDirSize === a.MAX_VALUE_32BITS || this.centralDirOffset === a.MAX_VALUE_32BITS) {
+              this.zip64 = !0;
+              if (-1 === (e = this.reader.lastIndexOfSignature(s.ZIP64_CENTRAL_DIRECTORY_LOCATOR))) {
                 throw new Error("Corrupted zip : can't find the ZIP64 end of central directory locator");
               }
               this.reader.setIndex(e);
@@ -1394,18 +1422,45 @@
           readLocalPart: function (e) {
             var t;
             var n;
-            if (e.skip(22), this.fileNameLength = e.readInt(2), n = e.readInt(2), this.fileName = e.readString(this.fileNameLength), e.skip(n), -1 == this.compressedSize || -1 == this.uncompressedSize) {
+            e.skip(22);
+            this.fileNameLength = e.readInt(2);
+            n = e.readInt(2);
+            this.fileName = e.readString(this.fileNameLength);
+            e.skip(n);
+            if (-1 == this.compressedSize || -1 == this.uncompressedSize) {
               throw new Error("Bug or corrupted zip : didn't get enough informations from the central directory (compressedSize == -1 || uncompressedSize == -1)");
             }
             if (null === (t = i.findCompression(this.compressionMethod))) {
               throw new Error("Corrupted zip : compression " + i.pretty(this.compressionMethod) + " unknown (inner file : " + this.fileName + ")");
             }
-            if (this.decompressed = new o(), this.decompressed.compressedSize = this.compressedSize, this.decompressed.uncompressedSize = this.uncompressedSize, this.decompressed.crc32 = this.crc32, this.decompressed.compressionMethod = this.compressionMethod, this.decompressed.getCompressedContent = this.prepareCompressedContent(e, e.index, this.compressedSize, t), this.decompressed.getContent = this.prepareContent(e, e.index, this.compressedSize, t, this.uncompressedSize), this.loadOptions.checkCRC32 && (this.decompressed = i.transformTo("string", this.decompressed.getContent()), a.crc32(this.decompressed) !== this.crc32)) {
+            this.decompressed = new o();
+            this.decompressed.compressedSize = this.compressedSize;
+            this.decompressed.uncompressedSize = this.uncompressedSize;
+            this.decompressed.crc32 = this.crc32;
+            this.decompressed.compressionMethod = this.compressionMethod;
+            this.decompressed.getCompressedContent = this.prepareCompressedContent(e, e.index, this.compressedSize, t);
+            this.decompressed.getContent = this.prepareContent(e, e.index, this.compressedSize, t, this.uncompressedSize);
+            if (this.loadOptions.checkCRC32 && (this.decompressed = i.transformTo("string", this.decompressed.getContent()), a.crc32(this.decompressed) !== this.crc32)) {
               throw new Error("Corrupted zip : CRC32 mismatch");
             }
           },
           readCentralPart: function (e) {
-            if (this.versionMadeBy = e.readString(2), this.versionNeeded = e.readInt(2), this.bitFlag = e.readInt(2), this.compressionMethod = e.readString(2), this.date = e.readDate(), this.crc32 = e.readInt(4), this.compressedSize = e.readInt(4), this.uncompressedSize = e.readInt(4), this.fileNameLength = e.readInt(2), this.extraFieldsLength = e.readInt(2), this.fileCommentLength = e.readInt(2), this.diskNumberStart = e.readInt(2), this.internalFileAttributes = e.readInt(2), this.externalFileAttributes = e.readInt(4), this.localHeaderOffset = e.readInt(4), this.isEncrypted()) {
+            this.versionMadeBy = e.readString(2);
+            this.versionNeeded = e.readInt(2);
+            this.bitFlag = e.readInt(2);
+            this.compressionMethod = e.readString(2);
+            this.date = e.readDate();
+            this.crc32 = e.readInt(4);
+            this.compressedSize = e.readInt(4);
+            this.uncompressedSize = e.readInt(4);
+            this.fileNameLength = e.readInt(2);
+            this.extraFieldsLength = e.readInt(2);
+            this.fileCommentLength = e.readInt(2);
+            this.diskNumberStart = e.readInt(2);
+            this.internalFileAttributes = e.readInt(2);
+            this.externalFileAttributes = e.readInt(4);
+            this.localHeaderOffset = e.readInt(4);
+            if (this.isEncrypted()) {
               throw new Error("Encrypted zip are not supported");
             }
             this.fileName = e.readString(this.fileNameLength);
@@ -1540,7 +1595,8 @@
         };
         function u(e, t) {
           var n = new c(t);
-          if (n.push(e, !0), n.err) {
+          n.push(e, !0);
+          if (n.err) {
             throw n.msg;
           }
           return n.result;
@@ -1558,7 +1614,12 @@
           s.next_in = 0;
           s.avail_in = s.input.length;
           do {
-            if (0 === s.avail_out && (s.output = new i.Buf8(c), s.next_out = 0, s.avail_out = c), 1 !== (n = r.deflate(s, a)) && 0 !== n) {
+            if (0 === s.avail_out) {
+              s.output = new i.Buf8(c);
+              s.next_out = 0;
+              s.avail_out = c;
+            }
+            if (1 !== (n = r.deflate(s, a)) && 0 !== n) {
               this.onEnd(n);
               this.ended = !0;
               return !1;
@@ -1649,7 +1710,8 @@
         };
         function f(e, t) {
           var n = new l(t);
-          if (n.push(e, !0), n.err) {
+          n.push(e, !0);
+          if (n.err) {
             throw n.msg;
           }
           return n.result;
@@ -1670,7 +1732,12 @@
           f.next_in = 0;
           f.avail_in = f.input.length;
           do {
-            if (0 === f.avail_out && (f.output = new i.Buf8(d), f.next_out = 0, f.avail_out = d), (n = r.inflate(f, a.Z_NO_FLUSH)) !== a.Z_STREAM_END && n !== a.Z_OK) {
+            if (0 === f.avail_out) {
+              f.output = new i.Buf8(d);
+              f.next_out = 0;
+              f.avail_out = d;
+            }
+            if ((n = r.inflate(f, a.Z_NO_FLUSH)) !== a.Z_STREAM_END && n !== a.Z_OK) {
               this.onEnd(n);
               this.ended = !0;
               return !1;
@@ -2075,8 +2142,12 @@
               o += 2;
               n++;
               do {} while (u[++o] === u[++n] && u[++o] === u[++n] && u[++o] === u[++n] && u[++o] === u[++n] && u[++o] === u[++n] && u[++o] === u[++n] && u[++o] === u[++n] && u[++o] === u[++n] && o < d);
-              if (r = 258 - (d - o), o = d - 258, r > a) {
-                if (e.match_start = t, a = r, r >= s) {
+              r = 258 - (d - o);
+              o = d - 258;
+              if (r > a) {
+                e.match_start = t;
+                a = r;
+                if (r >= s) {
                   break;
                 }
                 h = u[o + a - 1];
@@ -2094,7 +2165,8 @@
           var a;
           var s = e.w_size;
           do {
-            if (o = e.window_size - e.lookahead - e.strstart, e.strstart >= s + (s - 262)) {
+            o = e.window_size - e.lookahead - e.strstart;
+            if (e.strstart >= s + (s - 262)) {
               r.arraySet(e.window, e.window, s, s, 0);
               e.match_start -= s;
               e.strstart -= s;
@@ -2114,7 +2186,9 @@
             if (0 === e.strm.avail_in) {
               break;
             }
-            if (n = _(e.strm, e.window, e.strstart + e.lookahead, o), e.lookahead += n, e.lookahead + e.insert >= 3) {
+            n = _(e.strm, e.window, e.strstart + e.lookahead, o);
+            e.lookahead += n;
+            if (e.lookahead + e.insert >= 3) {
               for (a = e.strstart - e.insert, e.ins_h = e.window[a], e.ins_h = (e.ins_h << e.hash_shift ^ e.window[a + 1]) & e.hash_mask; e.insert && (e.ins_h = (e.ins_h << e.hash_shift ^ e.window[a + 3 - 1]) & e.hash_mask, e.prev[a & e.w_mask] = e.head[e.ins_h], e.head[e.ins_h] = a, a++, e.insert--, !(e.lookahead + e.insert < 3));) {
                 ;
               }
@@ -2124,15 +2198,27 @@
         function v(e, t) {
           for (var n, r;;) {
             if (e.lookahead < 262) {
-              if (g(e), e.lookahead < 262 && 0 === t) {
+              g(e);
+              if (e.lookahead < 262 && 0 === t) {
                 return 1;
               }
               if (0 === e.lookahead) {
                 break;
               }
             }
-            if (n = 0, e.lookahead >= 3 && (e.ins_h = (e.ins_h << e.hash_shift ^ e.window[e.strstart + 3 - 1]) & e.hash_mask, n = e.prev[e.strstart & e.w_mask] = e.head[e.ins_h], e.head[e.ins_h] = e.strstart), 0 !== n && e.strstart - n <= e.w_size - 262 && (e.match_length = A(e, n)), e.match_length >= 3) {
-              if (r = i._tr_tally(e, e.strstart - e.match_start, e.match_length - 3), e.lookahead -= e.match_length, e.match_length <= e.max_lazy_match && e.lookahead >= 3) {
+            n = 0;
+            if (e.lookahead >= 3) {
+              e.ins_h = (e.ins_h << e.hash_shift ^ e.window[e.strstart + 3 - 1]) & e.hash_mask;
+              n = e.prev[e.strstart & e.w_mask] = e.head[e.ins_h];
+              e.head[e.ins_h] = e.strstart;
+            }
+            if (0 !== n && e.strstart - n <= e.w_size - 262) {
+              e.match_length = A(e, n);
+            }
+            if (e.match_length >= 3) {
+              r = i._tr_tally(e, e.strstart - e.match_start, e.match_length - 3);
+              e.lookahead -= e.match_length;
+              if (e.match_length <= e.max_lazy_match && e.lookahead >= 3) {
                 e.match_length--;
                 do {
                   e.strstart++;
@@ -2162,14 +2248,30 @@
         function m(e, t) {
           for (var n, r, o;;) {
             if (e.lookahead < 262) {
-              if (g(e), e.lookahead < 262 && 0 === t) {
+              g(e);
+              if (e.lookahead < 262 && 0 === t) {
                 return 1;
               }
               if (0 === e.lookahead) {
                 break;
               }
             }
-            if (n = 0, e.lookahead >= 3 && (e.ins_h = (e.ins_h << e.hash_shift ^ e.window[e.strstart + 3 - 1]) & e.hash_mask, n = e.prev[e.strstart & e.w_mask] = e.head[e.ins_h], e.head[e.ins_h] = e.strstart), e.prev_length = e.match_length, e.prev_match = e.match_start, e.match_length = 2, 0 !== n && e.prev_length < e.max_lazy_match && e.strstart - n <= e.w_size - 262 && (e.match_length = A(e, n), e.match_length <= 5 && (1 === e.strategy || 3 === e.match_length && e.strstart - e.match_start > 4096) && (e.match_length = 2)), e.prev_length >= 3 && e.match_length <= e.prev_length) {
+            n = 0;
+            if (e.lookahead >= 3) {
+              e.ins_h = (e.ins_h << e.hash_shift ^ e.window[e.strstart + 3 - 1]) & e.hash_mask;
+              n = e.prev[e.strstart & e.w_mask] = e.head[e.ins_h];
+              e.head[e.ins_h] = e.strstart;
+            }
+            e.prev_length = e.match_length;
+            e.prev_match = e.match_start;
+            e.match_length = 2;
+            if (0 !== n && e.prev_length < e.max_lazy_match && e.strstart - n <= e.w_size - 262) {
+              e.match_length = A(e, n);
+              if (e.match_length <= 5 && (1 === e.strategy || 3 === e.match_length && e.strstart - e.match_start > 4096)) {
+                e.match_length = 2;
+              }
+            }
+            if (e.prev_length >= 3 && e.match_length <= e.prev_length) {
               o = e.strstart + e.lookahead - 3;
               r = i._tr_tally(e, e.strstart - 1 - e.prev_match, e.prev_length - 3);
               e.lookahead -= e.prev_length - 1;
@@ -2181,11 +2283,19 @@
                   e.head[e.ins_h] = e.strstart;
                 }
               } while (0 !== --e.prev_length);
-              if (e.match_available = 0, e.match_length = 2, e.strstart++, r && (d(e, !1), 0 === e.strm.avail_out)) {
+              e.match_available = 0;
+              e.match_length = 2;
+              e.strstart++;
+              if (r && (d(e, !1), 0 === e.strm.avail_out)) {
                 return 1;
               }
             } else if (e.match_available) {
-              if ((r = i._tr_tally(e, 0, e.window[e.strstart - 1])) && d(e, !1), e.strstart++, e.lookahead--, 0 === e.strm.avail_out) {
+              if (r = i._tr_tally(e, 0, e.window[e.strstart - 1])) {
+                d(e, !1);
+              }
+              e.strstart++;
+              e.lookahead--;
+              if (0 === e.strm.avail_out) {
                 return 1;
               }
             } else {
@@ -2303,7 +2413,19 @@
             return -2;
           }
           var s = 1;
-          if (-1 === t && (t = 6), i < 0 ? (s = 0, i = -i) : i > 15 && (s = 2, i -= 16), o < 1 || o > 9 || 8 !== n || i < 8 || i > 15 || t < 0 || t > 9 || a < 0 || a > 4) {
+          if (-1 === t) {
+            t = 6;
+          }
+          if (i < 0) {
+            s = 0;
+            i = -i;
+          } else {
+            if (i > 15) {
+              s = 2;
+              i -= 16;
+            }
+          }
+          if (o < 1 || o > 9 || 8 !== n || i < 8 || i > 15 || t < 0 || t > 9 || a < 0 || a > 4) {
             return c(e, -2);
           }
           if (8 === i) {
@@ -2338,7 +2460,8 @@
           var n = 65535;
           for (n > e.pending_buf_size - 5 && (n = e.pending_buf_size - 5);;) {
             if (e.lookahead <= 1) {
-              if (g(e), 0 === e.lookahead && 0 === t) {
+              g(e);
+              if (0 === e.lookahead && 0 === t) {
                 return 1;
               }
               if (0 === e.lookahead) {
@@ -2375,10 +2498,14 @@
           if (!e || !e.state || t > 5 || t < 0) {
             return e ? c(e, -2) : -2;
           }
-          if (r = e.state, !e.output || !e.input && 0 !== e.avail_in || 666 === r.status && 4 !== t) {
+          r = e.state;
+          if (!e.output || !e.input && 0 !== e.avail_in || 666 === r.status && 4 !== t) {
             return c(e, 0 === e.avail_out ? -5 : -2);
           }
-          if (r.strm = e, n = r.last_flush, r.last_flush = t, 42 === r.status) {
+          r.strm = e;
+          n = r.last_flush;
+          r.last_flush = t;
+          if (42 === r.status) {
             if (2 === r.wrap) {
               e.adler = 0;
               h(r, 31);
@@ -2487,8 +2614,24 @@
               r.status = 103;
             }
           }
-          if (103 === r.status && (r.gzhead.hcrc ? (r.pending + 2 > r.pending_buf_size && f(e), r.pending + 2 <= r.pending_buf_size && (h(r, 255 & e.adler), h(r, e.adler >> 8 & 255), e.adler = 0, r.status = 113)) : r.status = 113), 0 !== r.pending) {
-            if (f(e), 0 === e.avail_out) {
+          if (103 === r.status) {
+            if (r.gzhead.hcrc) {
+              if (r.pending + 2 > r.pending_buf_size) {
+                f(e);
+              }
+              if (r.pending + 2 <= r.pending_buf_size) {
+                h(r, 255 & e.adler);
+                h(r, e.adler >> 8 & 255);
+                e.adler = 0;
+                r.status = 113;
+              }
+            } else {
+              r.status = 113;
+            }
+          }
+          if (0 !== r.pending) {
+            f(e);
+            if (0 === e.avail_out) {
               r.last_flush = -1;
               return 0;
             }
@@ -2507,7 +2650,11 @@
                   }
                   break;
                 }
-                if (e.match_length = 0, n = i._tr_tally(e, 0, e.window[e.strstart]), e.lookahead--, e.strstart++, n && (d(e, !1), 0 === e.strm.avail_out)) {
+                e.match_length = 0;
+                n = i._tr_tally(e, 0, e.window[e.strstart]);
+                e.lookahead--;
+                e.strstart++;
+                if (n && (d(e, !1), 0 === e.strm.avail_out)) {
                   return 1;
                 }
               }
@@ -2516,14 +2663,16 @@
             }(r, t) : 3 === r.strategy ? function (e, t) {
               for (var n, r, o, a, s = e.window;;) {
                 if (e.lookahead <= 258) {
-                  if (g(e), e.lookahead <= 258 && 0 === t) {
+                  g(e);
+                  if (e.lookahead <= 258 && 0 === t) {
                     return 1;
                   }
                   if (0 === e.lookahead) {
                     break;
                   }
                 }
-                if (e.match_length = 0, e.lookahead >= 3 && e.strstart > 0 && (r = s[o = e.strstart - 1]) === s[++o] && r === s[++o] && r === s[++o]) {
+                e.match_length = 0;
+                if (e.lookahead >= 3 && e.strstart > 0 && (r = s[o = e.strstart - 1]) === s[++o] && r === s[++o] && r === s[++o]) {
                   a = e.strstart + 258;
                   do {} while (r === s[++o] && r === s[++o] && r === s[++o] && r === s[++o] && r === s[++o] && r === s[++o] && r === s[++o] && r === s[++o] && o < a);
                   e.match_length = 258 - (a - o);
@@ -2531,14 +2680,27 @@
                     e.match_length = e.lookahead;
                   }
                 }
-                if (e.match_length >= 3 ? (n = i._tr_tally(e, 1, e.match_length - 3), e.lookahead -= e.match_length, e.strstart += e.match_length, e.match_length = 0) : (n = i._tr_tally(e, 0, e.window[e.strstart]), e.lookahead--, e.strstart++), n && (d(e, !1), 0 === e.strm.avail_out)) {
+                if (e.match_length >= 3) {
+                  n = i._tr_tally(e, 1, e.match_length - 3);
+                  e.lookahead -= e.match_length;
+                  e.strstart += e.match_length;
+                  e.match_length = 0;
+                } else {
+                  n = i._tr_tally(e, 0, e.window[e.strstart]);
+                  e.lookahead--;
+                  e.strstart++;
+                }
+                if (n && (d(e, !1), 0 === e.strm.avail_out)) {
                   return 1;
                 }
               }
               e.insert = 0;
               return 4 === t ? (d(e, !0), 0 === e.strm.avail_out ? 3 : 4) : e.last_lit && (d(e, !1), 0 === e.strm.avail_out) ? 1 : 2;
             }(r, t) : y[r.level].func(r, t);
-            if (3 !== A && 4 !== A || (r.status = 666), 1 === A || 3 === A) {
+            if (!(3 !== A && 4 !== A)) {
+              r.status = 666;
+            }
+            if (1 === A || 3 === A) {
               if (0 === e.avail_out) {
                 r.last_flush = -1;
               }
@@ -2636,7 +2798,9 @@
             }
             m = _[h & g];
             t: for (;;) {
-              if (h >>>= y = m >>> 24, p -= y, 0 === (y = m >>> 16 & 255)) {
+              h >>>= y = m >>> 24;
+              p -= y;
+              if (0 === (y = m >>> 16 & 255)) {
                 O[o++] = 65535 & m;
               } else {
                 if (!(16 & y)) {
@@ -2670,7 +2834,9 @@
                 }
                 m = A[h & v];
                 n: for (;;) {
-                  if (h >>>= y = m >>> 24, p -= y, !(16 & (y = m >>> 16 & 255))) {
+                  h >>>= y = m >>> 24;
+                  p -= y;
+                  if (!(16 & (y = m >>> 16 & 255))) {
                     if (0 === (64 & y)) {
                       m = A[(65535 & m) + (h & (1 << y) - 1)];
                       continue n;
@@ -2679,19 +2845,32 @@
                     n.mode = 30;
                     break e;
                   }
-                  if (w = 65535 & m, p < (y &= 15) && (h += C[r++] << p, (p += 8) < y && (h += C[r++] << p, p += 8)), (w += h & (1 << y) - 1) > c) {
+                  w = 65535 & m;
+                  if (p < (y &= 15)) {
+                    h += C[r++] << p;
+                    if ((p += 8) < y) {
+                      h += C[r++] << p;
+                      p += 8;
+                    }
+                  }
+                  if ((w += h & (1 << y) - 1) > c) {
                     e.msg = "invalid distance too far back";
                     n.mode = 30;
                     break e;
                   }
-                  if (h >>>= y, p -= y, w > (y = o - a)) {
+                  h >>>= y;
+                  p -= y;
+                  if (w > (y = o - a)) {
                     if ((y = w - y) > l && n.sane) {
                       e.msg = "invalid distance too far back";
                       n.mode = 30;
                       break e;
                     }
-                    if (E = 0, x = d, 0 === f) {
-                      if (E += u - y, y < b) {
+                    E = 0;
+                    x = d;
+                    if (0 === f) {
+                      E += u - y;
+                      if (y < b) {
                         b -= y;
                         do {
                           O[o++] = d[E++];
@@ -2700,12 +2879,14 @@
                         x = O;
                       }
                     } else if (f < y) {
-                      if (E += u + f - y, (y -= f) < b) {
+                      E += u + f - y;
+                      if ((y -= f) < b) {
                         b -= y;
                         do {
                           O[o++] = d[E++];
                         } while (--y);
-                        if (E = 0, f < b) {
+                        E = 0;
+                        if (f < b) {
                           b -= y = f;
                           do {
                             O[o++] = d[E++];
@@ -3080,7 +3261,12 @@
                       n.head.name += String.fromCharCode(T);
                     }
                   } while (T && y < h);
-                  if (512 & n.flags && (n.check = o(n.check, u, y, f)), h -= y, f += y, T) {
+                  if (512 & n.flags) {
+                    n.check = o(n.check, u, y, f);
+                  }
+                  h -= y;
+                  f += y;
+                  if (T) {
                     break e;
                   }
                 } else if (n.head) {
@@ -3100,7 +3286,12 @@
                       n.head.comment += String.fromCharCode(T);
                     }
                   } while (T && y < h);
-                  if (512 & n.flags && (n.check = o(n.check, u, y, f)), h -= y, f += y, T) {
+                  if (512 & n.flags) {
+                    n.check = o(n.check, u, y, f);
+                  }
+                  h -= y;
+                  f += y;
+                  if (T) {
                     break e;
                   }
                 } else if (n.head) {
@@ -3218,7 +3409,13 @@
                 n.mode = 16;
               case 16:
                 if (y = n.length) {
-                  if (y > h && (y = h), y > p && (y = p), 0 === y) {
+                  if (y > h) {
+                    y = h;
+                  }
+                  if (y > p) {
+                    y = p;
+                  }
+                  if (0 === y) {
                     break e;
                   }
                   r.arraySet(l, u, f, y, d);
@@ -3297,7 +3494,9 @@
                         _ += u[f++] << A;
                         A += 8;
                       }
-                      if (_ >>>= E, A -= E, 0 === n.have) {
+                      _ >>>= E;
+                      A -= E;
+                      if (0 === n.have) {
                         e.msg = "invalid bit length repeat";
                         n.mode = 30;
                         break;
@@ -3554,7 +3753,14 @@
                     _ |= u[f++] << A;
                     A += 8;
                   }
-                  if (m -= p, e.total_out += m, n.total += m, m && (e.adler = n.check = n.flags ? o(n.check, l, m, d - m) : i(n.check, l, m, d - m)), m = p, (n.flags ? _ : c(_)) !== n.check) {
+                  m -= p;
+                  e.total_out += m;
+                  n.total += m;
+                  if (m) {
+                    e.adler = n.check = n.flags ? o(n.check, l, m, d - m) : i(n.check, l, m, d - m);
+                  }
+                  m = p;
+                  if ((n.flags ? _ : c(_)) !== n.check) {
                     e.msg = "incorrect data check";
                     n.mode = 30;
                     break;
@@ -3703,7 +3909,10 @@
           for (k = w, O = 15; O >= 1 && 0 === P[O]; O--) {
             ;
           }
-          if (k > O && (k = O), 0 === O) {
+          if (k > O) {
+            k = O;
+          }
+          if (0 === O) {
             u[l++] = 20971520;
             u[l++] = 20971520;
             d.bits = 1;
@@ -3713,7 +3922,8 @@
             ;
           }
           for (k < C && (k = C), B = 1, E = 1; E <= 15; E++) {
-            if (B <<= 1, (B -= P[E]) < 0) {
+            B <<= 1;
+            if ((B -= P[E]) < 0) {
               return -1;
             }
           }
@@ -3728,7 +3938,31 @@
               f[N[t[n + x]]++] = x;
             }
           }
-          if (0 === e ? (F = M = f, v = 19) : 1 === e ? (F = i, R -= 257, M = o, j -= 257, v = 256) : (F = a, M = s, v = -1), I = 0, x = 0, E = C, g = l, S = k, T = 0, _ = -1, A = (D = 1 << k) - 1, 1 === e && D > 852 || 2 === e && D > 592) {
+          if (0 === e) {
+            F = M = f;
+            v = 19;
+          } else {
+            if (1 === e) {
+              F = i;
+              R -= 257;
+              M = o;
+              j -= 257;
+              v = 256;
+            } else {
+              F = a;
+              M = s;
+              v = -1;
+            }
+          }
+          I = 0;
+          x = 0;
+          E = C;
+          g = l;
+          S = k;
+          T = 0;
+          _ = -1;
+          A = (D = 1 << k) - 1;
+          if (1 === e && D > 852 || 2 === e && D > 592) {
             return 1;
           }
           for (;;) {
@@ -3753,7 +3987,14 @@
             for (h = 1 << E - 1; I & h;) {
               h >>= 1;
             }
-            if (0 !== h ? (I &= h - 1, I += h) : I = 0, x++, 0 === --P[E]) {
+            if (0 !== h) {
+              I &= h - 1;
+              I += h;
+            } else {
+              I = 0;
+            }
+            x++;
+            if (0 === --P[E]) {
               if (E === O) {
                 break;
               }
@@ -3764,7 +4005,8 @@
                 S++;
                 B <<= 1;
               }
-              if (D += 1 << S, 1 === e && D > 852 || 2 === e && D > 592) {
+              D += 1 << S;
+              if (1 === e && D > 852 || 2 === e && D > 592) {
                 return 1;
               }
               u[_ = I & A] = k << 24 | S << 16 | g - l | 0;
@@ -4105,7 +4347,9 @@
           var c = 7;
           var u = 4;
           for (0 === a && (c = 138, u = 3), r = 0; r <= n; r++) {
-            if (i = a, a = t[2 * (r + 1) + 1], !(++s < c && i === a)) {
+            i = a;
+            a = t[2 * (r + 1) + 1];
+            if (!(++s < c && i === a)) {
               if (s < u) {
                 do {
                   E(e, i, e.bl_tree);

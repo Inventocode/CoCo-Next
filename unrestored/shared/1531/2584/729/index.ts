@@ -1,7 +1,7 @@
 "use strict";
 
 var r = require("../0/index");
-var o = (module => {
+var o = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -12,7 +12,7 @@ var o = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(r);
+}(r);
 var i = require("../16/index");
 require("../710");
 var a = require("../155/index");
@@ -172,7 +172,7 @@ var I = function () {
 };
 var A = Object(a.createStore)(I);
 var j = require("../8");
-var N = (module => {
+var N = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -183,7 +183,7 @@ var N = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(j);
+}(j);
 var R = require("../2628/index");
 var k = require("../23");
 var x = require("../10/index");
@@ -295,7 +295,11 @@ function P() {
       var N = j.x;
       var R = j.y;
       var k = j.z;
-      if (u.position.set(l.s.lerp(S, N, p), l.s.lerp(I, R, p), l.s.lerp(A, k, p)), a.clear(!0, !0, !0), a.render(s, c), t.current -= r, t.current < 0) {
+      u.position.set(l.s.lerp(S, N, p), l.s.lerp(I, R, p), l.s.lerp(A, k, p));
+      a.clear(!0, !0, !0);
+      a.render(s, c);
+      t.current -= r;
+      if (t.current < 0) {
         var x = g.subVectors(u.position, g).divideScalar(r * r);
         if (M(x)) {
           if (!M(i.additionalAcceleration, 0)) {
@@ -635,7 +639,7 @@ var q = o.a.memo(function () {
 });
 var X = require("./302");
 var Q = require("./115");
-var Z = (module => {
+var Z = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -646,7 +650,7 @@ var Z = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(Q);
+}(Q);
 var J = function () {
   var e = Object(i.d)();
   var t = Object(z.a)().formatMessage;

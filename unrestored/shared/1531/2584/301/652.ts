@@ -22,15 +22,26 @@ var c = function (e) {
   (0, r.__extends)(t, e);
   t.prototype.init = function () {
     if (!this.text_element) {
-      if (s.is.safari() || s.is.mobile() ? this.text_element = (0, a.create_svg_element)("text", {
-        class: "blocklyText",
-        "font-size": this.theme.font.SIZE,
-        dy: ".4em"
-      }) : this.text_element = (0, a.create_svg_element)("text", {
-        class: "blocklyText",
-        "font-size": this.theme.font.SIZE,
-        "dominant-baseline": "central"
-      }), this.class_ && (0, a.add_class)(this.text_element, this.class_), this.visible_ || (this.text_element.style.display = "none"), void 0 == this.source_block) {
+      if (s.is.safari() || s.is.mobile()) {
+        this.text_element = (0, a.create_svg_element)("text", {
+          class: "blocklyText",
+          "font-size": this.theme.font.SIZE,
+          dy: ".4em"
+        });
+      } else {
+        this.text_element = (0, a.create_svg_element)("text", {
+          class: "blocklyText",
+          "font-size": this.theme.font.SIZE,
+          "dominant-baseline": "central"
+        });
+      }
+      if (this.class_) {
+        (0, a.add_class)(this.text_element, this.class_);
+      }
+      if (!this.visible_) {
+        this.text_element.style.display = "none";
+      }
+      if (void 0 == this.source_block) {
         throw new ReferenceError("Field should have source block when init.");
       }
       if (void 0 != this.source_block) {

@@ -8,7 +8,7 @@ var s = require("../../0/index");
 var c = require("../../739/1503/1009");
 var u = require("../../1026/690");
 var l = require("../../8");
-var f = (module => {
+var f = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -19,7 +19,7 @@ var f = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(l);
+}(l);
 var d = require("../../2627/462");
 function h(e, t) {
   var n = {};
@@ -318,7 +318,8 @@ function D(e, t, n, a) {
     j(t);
     var n;
     var r = K.current;
-    if (K.current = !0, e) {
+    K.current = !0;
+    if (e) {
       if (!r && t && f) {
         n = "appear";
       }

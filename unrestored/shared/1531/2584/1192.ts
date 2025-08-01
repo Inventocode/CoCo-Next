@@ -302,7 +302,9 @@ var g = function (e) {
       var n = 0;
       var r = 0;
       if (e.nativeEvent instanceof MouseEvent) {
-        if (n = e.nativeEvent.clientX, r = e.nativeEvent.clientY, 3 === e.nativeEvent.which) {
+        n = e.nativeEvent.clientX;
+        r = e.nativeEvent.clientY;
+        if (3 === e.nativeEvent.which) {
           return;
         }
       } else if (e.nativeEvent instanceof TouchEvent) {
@@ -382,7 +384,31 @@ var g = function (e) {
         var A = "number" === typeof l ? l : i.width / i.height;
         var j = i.width;
         var N = i.height;
-        if (/right/i.test(o) && (j = i.width + (t - i.x) * O / g, l && (N = (j - m) / A + h)), /left/i.test(o) && (j = i.width - (t - i.x) * O / g, l && (N = (j - m) / A + h)), /bottom/i.test(o) && (N = i.height + (n - i.y) * O / g, l && (j = (N - h) * A + m)), /top/i.test(o) && (N = i.height - (n - i.y) * O / g, l && (j = (N - h) * A + m)), "parent" === this.props.bounds) {
+        if (/right/i.test(o)) {
+          j = i.width + (t - i.x) * O / g;
+          if (l) {
+            N = (j - m) / A + h;
+          }
+        }
+        if (/left/i.test(o)) {
+          j = i.width - (t - i.x) * O / g;
+          if (l) {
+            N = (j - m) / A + h;
+          }
+        }
+        if (/bottom/i.test(o)) {
+          N = i.height + (n - i.y) * O / g;
+          if (l) {
+            j = (N - h) * A + m;
+          }
+        }
+        if (/top/i.test(o)) {
+          N = i.height - (n - i.y) * O / g;
+          if (l) {
+            j = (N - h) * A + m;
+          }
+        }
+        if ("parent" === this.props.bounds) {
           var R = this.parentNode;
           if (R instanceof HTMLElement) {
             var k = R.getBoundingClientRect();

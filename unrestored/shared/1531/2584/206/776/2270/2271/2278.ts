@@ -50,7 +50,9 @@
     var u;
     var l;
     var f;
-    if (s = t.type, u = t.structure, s) {
+    s = t.type;
+    u = t.structure;
+    if (s) {
       if (!(l = (null != (f = n.customTypes[s]) ? f.cast : void 0) || r[s])) {
         throw new Error("Type not defined: " + s + ".");
       }
@@ -100,7 +102,9 @@
     var u;
     var l;
     for (i = 0, o = n.length; i < o; ++i) {
-      if (u = (c = s(e, a = n[i], r)).type, l = c.value, "Nothing" !== u && t([a], l, {
+      u = (c = s(e, a = n[i], r)).type;
+      l = c.value;
+      if ("Nothing" !== u && t([a], l, {
         customTypes: r.customTypes
       })) {
         return l;

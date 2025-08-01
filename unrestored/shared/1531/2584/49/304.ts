@@ -191,9 +191,21 @@ function g(e, t, n, i, o) {
     e = null;
   }
   var a = e && "object" === r(e);
-  if (e = e || {}, this.json = e.json || n, this.path = e.path || t, this.resultType = e.resultType || "value", this.flatten = e.flatten || !1, this.wrap = !h.call(e, "wrap") || e.wrap, this.sandbox = e.sandbox || {}, this.preventEval = e.preventEval || !1, this.parent = e.parent || null, this.parentProperty = e.parentProperty || null, this.callback = e.callback || i || null, this.otherTypeCallback = e.otherTypeCallback || o || function () {
+  e = e || {};
+  this.json = e.json || n;
+  this.path = e.path || t;
+  this.resultType = e.resultType || "value";
+  this.flatten = e.flatten || !1;
+  this.wrap = !h.call(e, "wrap") || e.wrap;
+  this.sandbox = e.sandbox || {};
+  this.preventEval = e.preventEval || !1;
+  this.parent = e.parent || null;
+  this.parentProperty = e.parentProperty || null;
+  this.callback = e.callback || i || null;
+  this.otherTypeCallback = e.otherTypeCallback || o || function () {
     throw new TypeError("You must supply an otherTypeCallback callback option with the @other() operator.");
-  }, !1 !== e.autostart) {
+  };
+  if (!1 !== e.autostart) {
     var s = {
       path: a ? e.path : t
     };
@@ -217,7 +229,13 @@ g.prototype.evaluate = function (e, t, n, i) {
   var s = this.parentProperty;
   var c = this.flatten;
   var u = this.wrap;
-  if (this.currResultType = this.resultType, this.currPreventEval = this.preventEval, this.currSandbox = this.sandbox, n = n || this.callback, this.currOtherTypeCallback = i || this.otherTypeCallback, t = t || this.json, (e = e || this.path) && "object" === r(e) && !Array.isArray(e)) {
+  this.currResultType = this.resultType;
+  this.currPreventEval = this.preventEval;
+  this.currSandbox = this.sandbox;
+  n = n || this.callback;
+  this.currOtherTypeCallback = i || this.otherTypeCallback;
+  t = t || this.json;
+  if ((e = e || this.path) && "object" === r(e) && !Array.isArray(e)) {
     if (!e.path && "" !== e.path) {
       throw new TypeError('You must supply a "path" property when providing an object argument to JSONPath.evaluate().');
     }
@@ -236,7 +254,12 @@ g.prototype.evaluate = function (e, t, n, i) {
     s = h.call(e, "parentProperty") ? e.parentProperty : s;
     e = e.path;
   }
-  if (a = a || null, s = s || null, Array.isArray(e) && (e = g.toPathString(e)), (e || "" === e) && t) {
+  a = a || null;
+  s = s || null;
+  if (Array.isArray(e)) {
+    e = g.toPathString(e);
+  }
+  if ((e || "" === e) && t) {
     var l = g.toPathArray(e);
     if ("$" === l[0] && l.length > 1) {
       l.shift();

@@ -45,7 +45,11 @@ var o = i()(r.mark(function e(t, n, i) {
   }, e);
 }));
 exports.transformFromAst = function (e, t, n, r) {
-  if ("function" === typeof n && (r = n, n = void 0), void 0 === r) {
+  if ("function" === typeof n) {
+    r = n;
+    n = void 0;
+  }
+  if (void 0 === r) {
     return o.sync(e, t, n);
   }
   o.errback(e, t, n, r);

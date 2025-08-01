@@ -31,7 +31,11 @@ function s(e, t, n) {
   if ("function" === typeof t && "function" === typeof n || "function" === typeof n && "function" === typeof arguments[3]) {
     throw new Error("It looks like you are passing several store enhancers to createStore(). This is not supported. Instead, compose them together to a single function.");
   }
-  if ("function" === typeof t && "undefined" === typeof n && (n = t, t = void 0), "undefined" !== typeof n) {
+  if ("function" === typeof t && "undefined" === typeof n) {
+    n = t;
+    t = void 0;
+  }
+  if ("undefined" !== typeof n) {
     if ("function" !== typeof n) {
       throw new Error("Expected the enhancer to be a function.");
     }
@@ -177,7 +181,10 @@ function u(e) {
     a = u;
   }
   return function (e, t) {
-    if (void 0 === e && (e = {}), a) {
+    if (void 0 === e) {
+      e = {};
+    }
+    if (a) {
       throw a;
     }
     for (var r = !1, i = {}, o = 0; o < s.length; o++) {

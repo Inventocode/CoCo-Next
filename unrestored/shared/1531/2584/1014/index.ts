@@ -330,7 +330,9 @@ var S = function (e) {
       var a = e.includeMargin;
       var s = e.imageSettings;
       var c = new v(-1, b[r]);
-      if (c.addData(y(t)), c.make(), null != this._canvas) {
+      c.addData(y(t));
+      c.make();
+      if (null != this._canvas) {
         var l = this._canvas;
         var u = l.getContext("2d");
         if (!u) {

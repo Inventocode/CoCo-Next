@@ -182,7 +182,8 @@ exports.register_procedure_blocks = function (e, n, u, l) {
       this.set_colour(e.theme.block_color.ORANGE_7.fill);
       this.on_mouse_down = function (n) {
         var r = e.events.get_group();
-        if (e.events.set_group(r || !0), 0 === n.button) {
+        e.events.set_group(r || !0);
+        if (0 === n.button) {
           var i = t.workspace.get_gesture(n);
           if (i) {
             var o = i.handle_move.bind(i);

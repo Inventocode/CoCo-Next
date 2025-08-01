@@ -324,13 +324,17 @@
     for (this.__initialize(e, t), v = {}, n = this.__worklist, r = this.__leavelist, n.push(new f(e, null, null, null)), r.push(new f(null, null, null, null)); n.length;) {
       if ((i = n.pop()) !== v) {
         if (i.node) {
-          if (u = this.__execute(t.enter, i), this.__state === a || u === a) {
+          u = this.__execute(t.enter, i);
+          if (this.__state === a || u === a) {
             return;
           }
-          if (n.push(v), r.push(i), this.__state === s || u === s) {
+          n.push(v);
+          r.push(i);
+          if (this.__state === s || u === s) {
             continue;
           }
-          if (c = (o = i.node).type || i.wrap, !(A = this.__keys[c])) {
+          c = (o = i.node).type || i.wrap;
+          if (!(A = this.__keys[c])) {
             if (!this.__fallback) {
               throw new Error("Unknown node type " + c + ".");
             }
@@ -397,11 +401,20 @@
       root: e
     }, "root")), n.push(d), r.push(d); n.length;) {
       if ((d = n.pop()) !== m) {
-        if (void 0 !== (u = this.__execute(t.enter, d)) && u !== a && u !== s && u !== c && (d.ref.replace(u), d.node = u), this.__state !== c && u !== c || (w(d), d.node = null), this.__state === a || u === a) {
+        if (void 0 !== (u = this.__execute(t.enter, d)) && u !== a && u !== s && u !== c) {
+          d.ref.replace(u);
+          d.node = u;
+        }
+        if (!(this.__state !== c && u !== c)) {
+          w(d);
+          d.node = null;
+        }
+        if (this.__state === a || u === a) {
           return y.root;
         }
         if ((i = d.node) && (n.push(m), r.push(d), this.__state !== s && u !== s)) {
-          if (o = i.type || d.wrap, !(g = this.__keys[o])) {
+          o = i.type || d.wrap;
+          if (!(g = this.__keys[o])) {
             if (!this.__fallback) {
               throw new Error("Unknown node type " + o + ".");
             }

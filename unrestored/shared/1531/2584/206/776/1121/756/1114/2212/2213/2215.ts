@@ -57,11 +57,13 @@
     if (0 === e.length) {
       return !1;
     }
-    if (i = e.charCodeAt(0), !t.isIdentifierStartES5(i)) {
+    i = e.charCodeAt(0);
+    if (!t.isIdentifierStartES5(i)) {
       return !1;
     }
     for (n = 1, r = e.length; n < r; ++n) {
-      if (i = e.charCodeAt(n), !t.isIdentifierPartES5(i)) {
+      i = e.charCodeAt(n);
+      if (!t.isIdentifierPartES5(i)) {
         return !1;
       }
     }

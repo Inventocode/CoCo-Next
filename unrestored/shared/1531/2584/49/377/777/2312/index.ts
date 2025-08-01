@@ -142,11 +142,13 @@ var h = function () {
         }
         var i = f.analyze_path("drop", e.path);
         if (void 0 !== i) {
-          if (r.drop_ops.push({
+          r.drop_ops.push({
             event_type: i.event_type,
             normalized_path: i.normalized_path,
             operation: e.operation
-          }), n.push(i.normalized_path.target_id), i.event_type === l.EventType.CONNECT) {
+          });
+          n.push(i.normalized_path.target_id);
+          if (i.event_type === l.EventType.CONNECT) {
             if (!l.is_path_3(i.normalized_path)) {
               return;
             }
@@ -598,8 +600,13 @@ var h = function () {
           id: y,
           group: ""
         };
-        if ("next" === V.type && (S.new_parent_id = L), "input" === V.type) {
-          if (S.new_parent_id = L, S.new_input_name = V.input_name, !H) {
+        if ("next" === V.type) {
+          S.new_parent_id = L;
+        }
+        if ("input" === V.type) {
+          S.new_parent_id = L;
+          S.new_input_name = V.input_name;
+          if (!H) {
             return void A("Invalid block " + y + ". ");
           }
           if (!(z = H.get_input(V.input_name))) {
@@ -618,7 +625,10 @@ var h = function () {
         } finally {
           this.Blink.events.enable();
         }
-        if (this.param_block_ids.includes(y) && this.redo_param_connect.push(e), !U.is_shadow()) {
+        if (this.param_block_ids.includes(y)) {
+          this.redo_param_connect.push(e);
+        }
+        if (!U.is_shadow()) {
           return;
         }
         for (var G = 0; G < U.inputList.length; G++) {

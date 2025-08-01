@@ -144,51 +144,69 @@ var de = function (e) {
   });
   return r;
 };
-if (c || (j((z = function () {
-  if (this instanceof z) {
-    throw TypeError("Symbol is not a constructor");
-  }
-  var e = arguments.length && void 0 !== arguments[0] ? v(arguments[0]) : void 0;
-  var t = x(e);
-  var n = function e(n) {
-    if (this === V) {
-      e.call(J, n);
+if (!c) {
+  j((z = function () {
+    if (this instanceof z) {
+      throw TypeError("Symbol is not a constructor");
     }
-    if (u(this, G) && u(this[G], t)) {
-      this[G][t] = !1;
+    var e = arguments.length && void 0 !== arguments[0] ? v(arguments[0]) : void 0;
+    var t = x(e);
+    var n = function e(n) {
+      if (this === V) {
+        e.call(J, n);
+      }
+      if (u(this, G) && u(this[G], t)) {
+        this[G][t] = !1;
+      }
+      oe(this, t, b(1, n));
+    };
+    if (s && re) {
+      oe(V, t, {
+        configurable: !0,
+        set: n
+      });
     }
-    oe(this, t, b(1, n));
+    return ie(t, e);
+  }).prototype, "toString", function () {
+    return H(this).tag;
+  });
+  j(z, "withoutSetter", function (e) {
+    return ie(x(e), e);
+  });
+  I.f = ce;
+  S.f = ae;
+  T.f = le;
+  O.f = w.f = ue;
+  C.f = de;
+  M.f = function (e) {
+    return ie(D(e), e);
   };
-  if (s && re) {
-    oe(V, t, {
+  if (s) {
+    q(z.prototype, "description", {
       configurable: !0,
-      set: n
+      get: function () {
+        return H(this).description;
+      }
     });
+    if (!a) {
+      j(V, "propertyIsEnumerable", ce, {
+        unsafe: !0
+      });
+    }
   }
-  return ie(t, e);
-}).prototype, "toString", function () {
-  return H(this).tag;
-}), j(z, "withoutSetter", function (e) {
-  return ie(x(e), e);
-}), I.f = ce, S.f = ae, T.f = le, O.f = w.f = ue, C.f = de, M.f = function (e) {
-  return ie(D(e), e);
-}, s && (q(z.prototype, "description", {
-  configurable: !0,
-  get: function () {
-    return H(this).description;
-  }
-}), a || j(V, "propertyIsEnumerable", ce, {
-  unsafe: !0
-}))), r({
+}
+r({
   global: !0,
   wrap: !0,
   forced: !c,
   sham: !c
 }, {
   Symbol: z
-}), F(E(te), function (e) {
+});
+F(E(te), function (e) {
   L(e);
-}), r({
+});
+r({
   target: "Symbol",
   stat: !0,
   forced: !c
@@ -217,7 +235,8 @@ if (c || (j((z = function () {
   useSimple: function () {
     re = !1;
   }
-}), r({
+});
+r({
   target: "Object",
   stat: !0,
   forced: !c,
@@ -229,14 +248,16 @@ if (c || (j((z = function () {
   defineProperty: ae,
   defineProperties: se,
   getOwnPropertyDescriptor: le
-}), r({
+});
+r({
   target: "Object",
   stat: !0,
   forced: !c
 }, {
   getOwnPropertyNames: ue,
   getOwnPropertySymbols: de
-}), r({
+});
+r({
   target: "Object",
   stat: !0,
   forced: l(function () {
@@ -246,7 +267,8 @@ if (c || (j((z = function () {
   getOwnPropertySymbols: function (e) {
     return C.f(m(e));
   }
-}), Y) {
+});
+if (Y) {
   r({
     target: "JSON",
     stat: !0,
@@ -261,10 +283,14 @@ if (c || (j((z = function () {
       for (var r, o = [e], i = 1; arguments.length > i;) {
         o.push(arguments[i++]);
       }
-      if (r = t, (p(t) || void 0 !== e) && !f(e)) {
+      r = t;
+      if ((p(t) || void 0 !== e) && !f(e)) {
         if (!d(t)) {
           t = function (e, t) {
-            if ("function" == typeof r && (t = r.call(this, e, t)), !f(t)) {
+            if ("function" == typeof r) {
+              t = r.call(this, e, t);
+            }
+            if (!f(t)) {
               return t;
             }
           };

@@ -11,7 +11,7 @@ var l = require("../../103");
 var f = require("../../120");
 var d = require("../../140");
 var h = require("../../75/index");
-var p = (module => {
+var p = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -22,7 +22,7 @@ var p = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(h);
+}(h);
 var _ = require("../../1026/413");
 function A(e, t) {
   return !!e && e.contains(t);
@@ -61,7 +61,7 @@ var b = Object(s.forwardRef)(function (e, t) {
   return o.current ? p.a.createPortal(i, o.current) : null;
 });
 var w = require("../../8");
-var E = (module => {
+var E = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -72,7 +72,7 @@ var E = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(w);
+}(w);
 function x(e, t, n) {
   return n ? e[0] === t[0] : e[0] === t[0] && e[1] === t[1];
 }
@@ -126,7 +126,7 @@ function S(e) {
 }
 var T = require("../../556/555/index");
 var B = require("../../110");
-var D = (module => {
+var D = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -137,7 +137,7 @@ var D = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(B);
+}(B);
 var I = require("../../171");
 var F = ["measure", "align", null, "motion"];
 var R = s.forwardRef(function (e, t) {
@@ -557,9 +557,21 @@ var W = function (e) {
         }
       };
       t.onClick = function (e) {
-        if (t.fireEvents("onClick", e), t.focusTime) {
+        t.fireEvents("onClick", e);
+        if (t.focusTime) {
           var n;
-          if (t.preClickTime && t.preTouchTime ? n = Math.min(t.preClickTime, t.preTouchTime) : t.preClickTime ? n = t.preClickTime : t.preTouchTime && (n = t.preTouchTime), Math.abs(n - t.focusTime) < 20) {
+          if (t.preClickTime && t.preTouchTime) {
+            n = Math.min(t.preClickTime, t.preTouchTime);
+          } else {
+            if (t.preClickTime) {
+              n = t.preClickTime;
+            } else {
+              if (t.preTouchTime) {
+                n = t.preTouchTime;
+              }
+            }
+          }
+          if (Math.abs(n - t.focusTime) < 20) {
             return;
           }
           t.focusTime = 0;
@@ -576,9 +588,12 @@ var W = function (e) {
       };
       t.onPopupMouseDown = function () {
         var e;
-        if (t.hasPopupMouseDown = !0, clearTimeout(t.mouseDownTimeout), t.mouseDownTimeout = window.setTimeout(function () {
+        t.hasPopupMouseDown = !0;
+        clearTimeout(t.mouseDownTimeout);
+        t.mouseDownTimeout = window.setTimeout(function () {
           t.hasPopupMouseDown = !1;
-        }, 0), t.context) {
+        }, 0);
+        if (t.context) {
           (e = t.context).onPopupMouseDown.apply(e, arguments);
         }
       };
@@ -826,7 +841,8 @@ var W = function (e) {
       value: function (e, t, n) {
         var r = this;
         var i = 1e3 * t;
-        if (this.clearDelayTimer(), i) {
+        this.clearDelayTimer();
+        if (i) {
           var o = n ? {
             pageX: n.pageX,
             pageY: n.pageY

@@ -123,7 +123,8 @@ var C = function (e) {
           return [e, "" === e];
         });
       } else if (y.test(t)) {
-        if (delete c[t], l.s.und(e)) {
+        delete c[t];
+        if (l.s.und(e)) {
           return;
         }
         var n = b.test(t) ? "px" : w.test(t) ? "deg" : "";

@@ -97,7 +97,7 @@ function c(e, t) {
 exports.load_from_json = function (e, t, n) {
   var u = {};
   var l = {};
-  if (Object.keys(t.blocks).forEach(function (o) {
+  Object.keys(t.blocks).forEach(function (o) {
     s({
       procedure_manager: e,
       procedure_to_add: u,
@@ -118,13 +118,16 @@ exports.load_from_json = function (e, t, n) {
         (0, r.assert)(f);
         var d = l.mutation.match(/<procedures_2_parameter_shadow[^>]+><\/procedures_2_parameter_shadow>/g);
         var h = [];
-        if (d && (h = Array.from(d).map(function (e) {
-          var t = e.match(/ name="([^"]+)"/);
-          (0, r.assert)(t && 2 === t.length, "Trying to extract param name from invalid procedures_2_parameter_shadow: " + e);
-          return {
-            param_name: t[1]
-          };
-        })), o) {
+        if (d) {
+          h = Array.from(d).map(function (e) {
+            var t = e.match(/ name="([^"]+)"/);
+            (0, r.assert)(t && 2 === t.length, "Trying to extract param name from invalid procedures_2_parameter_shadow: " + e);
+            return {
+              param_name: t[1]
+            };
+          });
+        }
+        if (o) {
           var p = c[f];
           if (!p) {
             var _ = l.mutation.match(/def_id="([^"]+)"/);
@@ -165,7 +168,8 @@ exports.load_from_json = function (e, t, n) {
       should_rename: n,
       callers_to_add: l
     });
-  }), !n) {
+  });
+  if (!n) {
     return t;
   }
   var f = (0, o.add_procedure_and_generate_rename_map)({

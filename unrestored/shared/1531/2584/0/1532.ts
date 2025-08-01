@@ -160,7 +160,9 @@ function F(e, t, n) {
       r(i, t, "" === n ? "." + R(t, 0) : n);
       return 1;
     }
-    if (c = 0, n = "" === n ? "." : n + ":", Array.isArray(t)) {
+    c = 0;
+    n = "" === n ? "." : n + ":";
+    if (Array.isArray(t)) {
       for (var u = 0; u < t.length; u++) {
         var l = n + R(s = t[u], u);
         c += e(s, l, r, i);
@@ -295,7 +297,14 @@ exports.cloneElement = function (e, t, n) {
   var s = e.ref;
   var c = e._owner;
   if (null != t) {
-    if (void 0 !== t.ref && (s = t.ref, c = x.current), void 0 !== t.key && (a = "" + t.key), e.type && e.type.defaultProps) {
+    if (void 0 !== t.ref) {
+      s = t.ref;
+      c = x.current;
+    }
+    if (void 0 !== t.key) {
+      a = "" + t.key;
+    }
+    if (e.type && e.type.defaultProps) {
       var u = e.type.defaultProps;
     }
     for (l in t) if (C.call(t, l) && !O.hasOwnProperty(l)) {

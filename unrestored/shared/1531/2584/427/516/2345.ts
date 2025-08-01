@@ -21,7 +21,13 @@ module.exports = function (e, t, n) {
   var p = void 0 !== e.msecs ? e.msecs : new Date().getTime();
   var _ = void 0 !== e.nsecs ? e.nsecs : c + 1;
   var A = p - s + (_ - c) / 1e4;
-  if (A < 0 && void 0 === e.clockseq && (d = d + 1 & 16383), (A < 0 || p > s) && void 0 === e.nsecs && (_ = 0), _ >= 1e4) {
+  if (A < 0 && void 0 === e.clockseq) {
+    d = d + 1 & 16383;
+  }
+  if ((A < 0 || p > s) && void 0 === e.nsecs) {
+    _ = 0;
+  }
+  if (_ >= 1e4) {
     throw new Error("uuid.v1(): Can't create more than 10M uuids/sec");
   }
   s = p;

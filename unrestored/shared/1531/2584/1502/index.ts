@@ -12,7 +12,7 @@ var d = require("../103");
 var p = require("../120");
 var f = require("../140");
 var h = require("../75/index");
-var m = (module => {
+var m = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -23,7 +23,7 @@ var m = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(h);
+}(h);
 var g = require("../1504/228");
 var _ = require("./558");
 var v = require("../1504/478");
@@ -31,7 +31,7 @@ var b = require("./428");
 var y = require("./488");
 var E = require("./999");
 var O = require("../8");
-var w = (module => {
+var w = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -42,7 +42,7 @@ var w = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(O);
+}(O);
 function C(e, t, n) {
   return n ? e[0] === t[0] : e[0] === t[0] && e[1] === t[1];
 }
@@ -345,7 +345,8 @@ function z(e, t, n, i) {
     k(t);
     var n;
     var r = K.current;
-    if (K.current = !0, e) {
+    K.current = !0;
+    if (e) {
       if (!r && t && d) {
         n = "appear";
       }
@@ -697,7 +698,7 @@ function ee(e) {
 }
 var te = require("../556/555/index");
 var ne = require("../110");
-var re = (module => {
+var re = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -708,7 +709,7 @@ var re = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(ne);
+}(ne);
 var oe = require("../171");
 var ie = ["measure", "align", null, "motion"];
 var ae = a.forwardRef(function (e, t) {
@@ -1122,9 +1123,21 @@ var ve = function (e) {
         }
       };
       t.onClick = function (e) {
-        if (t.fireEvents("onClick", e), t.focusTime) {
+        t.fireEvents("onClick", e);
+        if (t.focusTime) {
           var n;
-          if (t.preClickTime && t.preTouchTime ? n = Math.min(t.preClickTime, t.preTouchTime) : t.preClickTime ? n = t.preClickTime : t.preTouchTime && (n = t.preTouchTime), Math.abs(n - t.focusTime) < 20) {
+          if (t.preClickTime && t.preTouchTime) {
+            n = Math.min(t.preClickTime, t.preTouchTime);
+          } else {
+            if (t.preClickTime) {
+              n = t.preClickTime;
+            } else {
+              if (t.preTouchTime) {
+                n = t.preTouchTime;
+              }
+            }
+          }
+          if (Math.abs(n - t.focusTime) < 20) {
             return;
           }
           t.focusTime = 0;
@@ -1141,9 +1154,12 @@ var ve = function (e) {
       };
       t.onPopupMouseDown = function () {
         var e;
-        if (t.hasPopupMouseDown = !0, clearTimeout(t.mouseDownTimeout), t.mouseDownTimeout = window.setTimeout(function () {
+        t.hasPopupMouseDown = !0;
+        clearTimeout(t.mouseDownTimeout);
+        t.mouseDownTimeout = window.setTimeout(function () {
           t.hasPopupMouseDown = !1;
-        }, 0), t.context) {
+        }, 0);
+        if (t.context) {
           (e = t.context).onPopupMouseDown.apply(e, arguments);
         }
       };
@@ -1391,7 +1407,8 @@ var ve = function (e) {
       value: function (e, t, n) {
         var r = this;
         var o = 1e3 * t;
-        if (this.clearDelayTimer(), o) {
+        this.clearDelayTimer();
+        if (o) {
           var i = n ? {
             pageX: n.pageX,
             pageY: n.pageY

@@ -3321,7 +3321,11 @@
           var n = e.length;
           var r = 0;
           var o = 0;
-          if (2 * n > _ && (_ = 2 * n, A = t.allocUnsafe(_)), t.isBuffer(e)) {
+          if (2 * n > _) {
+            _ = 2 * n;
+            A = t.allocUnsafe(_);
+          }
+          if (t.isBuffer(e)) {
             for (r = 0; r < n; r++) {
               o = 2 * e[r];
               A[2 * r] = i[o];
@@ -3649,7 +3653,12 @@
         var y = "";
         if (m && (s = m.dec)) {
           for (_ = 0; _ < u; _ += A) {
-            if (A = 2, (h = s[(o[_] << 8) + o[_ + 1]]) || (A = 1, h = s[o[_]]), !h) {
+            A = 2;
+            if (!(h = s[(o[_] << 8) + o[_ + 1]])) {
+              A = 1;
+              h = s[o[_]];
+            }
+            if (!h) {
               throw new Error("Unrecognized code: " + o[_] + " " + o[_ + A - 1] + " " + _ + " " + A + " " + s[o[_]]);
             }
             l[g++] = h;
@@ -3733,7 +3742,8 @@
             case "utf7":
               for (u >= 4 && 43 == o[0] && 47 == o[1] && 118 == o[2] && (u >= 5 && 56 == o[3] && 45 == o[4] ? _ = 5 : 56 != o[3] && 57 != o[3] && 43 != o[3] && 47 != o[3] || (_ = 4)); _ < u; _ += A) {
                 if (43 === o[_]) {
-                  if (A = 1, 45 !== o[_ + 1]) {
+                  A = 1;
+                  if (45 !== o[_ + 1]) {
                     for (; String.fromCharCode(o[_ + A]).match(/[A-Za-z0-9+\/]/);) {
                       A++;
                     }

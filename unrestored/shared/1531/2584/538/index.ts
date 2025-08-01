@@ -2,7 +2,7 @@
 
 var r = require("../10/index");
 var o = require("../0/index");
-var i = (module => {
+var i = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -13,9 +13,9 @@ var i = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(o);
+}(o);
 var a = require("../8");
-var s = (module => {
+var s = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -26,7 +26,7 @@ var s = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(a);
+}(a);
 require("./866");
 var _a;
 _a = Object(o.memo)(function (e) {

@@ -40,7 +40,11 @@ var l = i()(r.mark(function e(t, n) {
   }, e);
 }));
 exports.parse = function (e, t, n) {
-  if ("function" === typeof t && (n = t, t = void 0), void 0 === n) {
+  if ("function" === typeof t) {
+    n = t;
+    t = void 0;
+  }
+  if (void 0 === n) {
     return l.sync(e, t);
   }
   l.errback(e, t, n);

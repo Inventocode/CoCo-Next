@@ -24,10 +24,17 @@ var l = function () {
     var i;
     var o;
     if (!this.disabled) {
-      if (this.widget_div.show(this, void 0), null === (r = this.tooltip) || void 0 === r || r.hide(), Array.isArray(t) && (t = {
-        source: "",
-        options: t
-      }), t.options.length) {
+      this.widget_div.show(this, void 0);
+      if (!(null === (r = this.tooltip) || void 0 === r)) {
+        r.hide();
+      }
+      if (Array.isArray(t)) {
+        t = {
+          source: "",
+          options: t
+        };
+      }
+      if (t.options.length) {
         var s = this.populate_(t);
         this.position_(s, e, n);
         if (this.events.is_enabled()) {
@@ -55,7 +62,15 @@ var l = function () {
     for (var r = e.options, i = function (i) {
         var o = r[i];
         var a = document.createElement("div");
-        if (a.classList.add("menu-item"), a.setAttribute("name", o.name), !o.enabled && a.classList.add("menu_item_disable"), o.enabled && a.classList.add("menu_item_enable"), o.icon) {
+        a.classList.add("menu-item");
+        a.setAttribute("name", o.name);
+        if (!o.enabled) {
+          a.classList.add("menu_item_disable");
+        }
+        if (o.enabled) {
+          a.classList.add("menu_item_enable");
+        }
+        if (o.icon) {
           var c = void 0;
           if ("string" === typeof o.icon) {
             (c = new Image()).src = o.icon;

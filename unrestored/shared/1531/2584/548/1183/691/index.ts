@@ -5,7 +5,7 @@ export { R as b };
 export { P as c };
 export { F as d };
 var r = require("../../../0/index");
-var i = (module => {
+var i = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -16,7 +16,7 @@ var i = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(r);
+}(r);
 require("../../../50/index");
 var o = require("../../280");
 var a = require("../../../549/1186/100");
@@ -550,10 +550,11 @@ var V = function (e) {
       });
     };
     n.handleChangeMonth = function (e, t) {
-      if (n.setState({
+      n.setState({
         currentMonth: e,
         slideDirection: t
-      }), n.props.onMonthChange) {
+      });
+      if (n.props.onMonthChange) {
         var r = n.props.onMonthChange(e);
         if (r) {
           n.pushToLoadingQueue();
@@ -703,7 +704,13 @@ var V = function (e) {
           var u = t;
           var l = t;
           for (n.isBefore(t, r) && (u = n.date(r), l = null), n.isAfter(t, i) && (l && (l = n.date(i)), u = null); u || l;) {
-            if (u && n.isAfter(u, i) && (u = null), l && n.isBefore(l, r) && (l = null), u) {
+            if (u && n.isAfter(u, i)) {
+              u = null;
+            }
+            if (l && n.isBefore(l, r)) {
+              l = null;
+            }
+            if (u) {
               if (!s(u)) {
                 return u;
               }

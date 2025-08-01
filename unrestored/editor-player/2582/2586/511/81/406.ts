@@ -653,7 +653,8 @@ var R = function () {
   t.prototype.detect = function () {
     var e = this.rectangleDetector.detect();
     var r = this.detectSolid1(e);
-    if ((r = this.detectSolid2(r))[3] = this.correctTopRight(r), !r[3]) {
+    (r = this.detectSolid2(r))[3] = this.correctTopRight(r);
+    if (!r[3]) {
       throw new a.a();
     }
     var n = (r = this.shiftToModuleCenter(r))[0];
@@ -817,7 +818,11 @@ var R = function () {
     }
     for (var s = Math.abs(o - r), c = Math.abs(i - n), f = -s / 2, h = n < i ? 1 : -1, l = r < o ? 1 : -1, d = 0, p = this.image.get(a ? n : r, a ? r : n), g = r, y = n; g !== o; g += l) {
       var w = this.image.get(a ? y : g, a ? g : y);
-      if (w !== p && (d++, p = w), (f += c) > 0) {
+      if (w !== p) {
+        d++;
+        p = w;
+      }
+      if ((f += c) > 0) {
         if (y === i) {
           break;
         }
@@ -836,7 +841,10 @@ var N = function () {
   t.prototype.decode = function (e, r) {
     var o;
     var a;
-    if (void 0 === r && (r = null), null != r && r.has(i.a.PURE_BARCODE)) {
+    if (void 0 === r) {
+      r = null;
+    }
+    if (null != r && r.has(i.a.PURE_BARCODE)) {
       var f = t.extractPureBits(e.getBlackMatrix());
       o = this.decoder.decode(f);
       a = t.NO_POINTS;

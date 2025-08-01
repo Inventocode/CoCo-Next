@@ -148,7 +148,8 @@ exports.default = function (e) {
                 x.f();
               }
             }
-            if (E(t, "runtime", i), "classic" === i) {
+            E(t, "runtime", i);
+            if ("classic" === i) {
               if (P) {
                 throw e.buildCodeFrameError("importSource cannot be set when runtime is classic.");
               }

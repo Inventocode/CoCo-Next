@@ -221,7 +221,25 @@ var c = function () {
   };
   e.prototype.applyToEvent = function (e, t) {
     var n;
-    if (this._extra && Object.keys(this._extra).length && (e.extra = Object(r.a)(Object(r.a)({}, this._extra), e.extra)), this._tags && Object.keys(this._tags).length && (e.tags = Object(r.a)(Object(r.a)({}, this._tags), e.tags)), this._user && Object.keys(this._user).length && (e.user = Object(r.a)(Object(r.a)({}, this._user), e.user)), this._contexts && Object.keys(this._contexts).length && (e.contexts = Object(r.a)(Object(r.a)({}, this._contexts), e.contexts)), this._level && (e.level = this._level), this._transactionName && (e.transaction = this._transactionName), this._span) {
+    if (this._extra && Object.keys(this._extra).length) {
+      e.extra = Object(r.a)(Object(r.a)({}, this._extra), e.extra);
+    }
+    if (this._tags && Object.keys(this._tags).length) {
+      e.tags = Object(r.a)(Object(r.a)({}, this._tags), e.tags);
+    }
+    if (this._user && Object.keys(this._user).length) {
+      e.user = Object(r.a)(Object(r.a)({}, this._user), e.user);
+    }
+    if (this._contexts && Object.keys(this._contexts).length) {
+      e.contexts = Object(r.a)(Object(r.a)({}, this._contexts), e.contexts);
+    }
+    if (this._level) {
+      e.level = this._level;
+    }
+    if (this._transactionName) {
+      e.transaction = this._transactionName;
+    }
+    if (this._span) {
       e.contexts = Object(r.a)({
         trace: this._span.getTraceContext()
       }, e.contexts);

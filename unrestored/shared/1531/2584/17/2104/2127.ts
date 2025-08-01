@@ -43,7 +43,9 @@ var s = function (e) {
     this._dragging_block.set_mouse_through_style(!1);
     var i = this.pixels_to_workspace_units(t);
     var a = o.vec2.add(o.vec2.create(), this._start_xy, i);
-    if (this._dragging_block.move_off_drag_surface(a), this._dragging_block.bring_to_front(), !this.maybe_delete_block() && (this._dragging_block.set_dragging(!1), this.events.is_enabled())) {
+    this._dragging_block.move_off_drag_surface(a);
+    this._dragging_block.bring_to_front();
+    if (!this.maybe_delete_block() && (this._dragging_block.set_dragging(!1), this.events.is_enabled())) {
       var s = this.move_event_factory({
         block: this._dragging_block
       });
@@ -51,7 +53,8 @@ var s = function (e) {
       s.record_new();
       this.events.fire(s);
     }
-    if (this._workspace.set_resizes_enabled(!0), this._dragging_block.is_deletable()) {
+    this._workspace.set_resizes_enabled(!0);
+    if (this._dragging_block.is_deletable()) {
       var c = this._workspace.get_toolbox();
       if (void 0 != c) {
         c.remove_delete_style();

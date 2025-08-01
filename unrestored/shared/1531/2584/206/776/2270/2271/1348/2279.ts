@@ -10,7 +10,8 @@
   }
   function i(e) {
     var n;
-    if (n = r(e), !t.test(n)) {
+    n = r(e);
+    if (!t.test(n)) {
       throw new Error("Expected text, got '" + n + "' instead.");
     }
     return e.shift();
@@ -36,7 +37,8 @@
       case "[":
         return function (e) {
           var t;
-          if (o(e, "["), "]" === r(e)) {
+          o(e, "[");
+          if ("]" === r(e)) {
             throw new Error("Must specify type of Array - eg. [Type], got [] instead.");
           }
           t = l(e);
@@ -49,7 +51,9 @@
       case "(":
         return function (e) {
           var t;
-          if (t = [], o(e, "("), ")" === r(e)) {
+          t = [];
+          o(e, "(");
+          if (")" === r(e)) {
             throw new Error("Tuple must be of at least length 1 - eg. (Type), got () instead.");
           }
           for (; t.push(l(e)), a(e, ","), ")" !== r(e);) {
@@ -73,7 +77,11 @@
               n = !0;
               break;
             }
-            if (c = (i = s(e))[0], u = i[1], t[c] = u, a(e, ","), "}" === r(e)) {
+            c = (i = s(e))[0];
+            u = i[1];
+            t[c] = u;
+            a(e, ",");
+            if ("}" === r(e)) {
               break;
             }
           }

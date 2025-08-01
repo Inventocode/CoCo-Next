@@ -40,7 +40,18 @@ exports.position_dropdown = function (e, t) {
     return e.fieldRow.indexOf(t) > -1;
   });
   var g = ((((null === A || void 0 === A ? void 0 : A.height) || f.first_row_height) + 2) * u - l.height) / 2;
-  if (c[1] <= a.height / 2 + s[1] ? (c[1] += l.height + g, e.classList.add("lower"), _.classList.add("lower")) : (c[1] -= p.height + g, e.classList.add("upper"), _.classList.add("upper"), _.style.top = p.height + "px"), (0, i.insert_before)(_, e), "first" === d.menu.align) {
+  if (c[1] <= a.height / 2 + s[1]) {
+    c[1] += l.height + g;
+    e.classList.add("lower");
+    _.classList.add("lower");
+  } else {
+    c[1] -= p.height + g;
+    e.classList.add("upper");
+    _.classList.add("upper");
+    _.style.top = p.height + "px";
+  }
+  (0, i.insert_before)(_, e);
+  if ("first" === d.menu.align) {
     var v = t.image_element ? Number(t.image_element.getAttribute("x")) : t.text_element ? Number(t.text_element.getAttribute("x")) : NaN;
     v = isNaN(v) ? d.padding : v;
     var m = e.firstElementChild ? parseFloat((0, o.get_computed_style)(e.firstElementChild, "padding-left")) : -v * u;

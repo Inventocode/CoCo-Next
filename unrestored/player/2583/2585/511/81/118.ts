@@ -1,0 +1,21 @@
+"use strict";
+
+var r = function () {
+  function t() {}
+  t.round = function (t) {
+    return NaN === t ? 0 : t <= Number.MIN_SAFE_INTEGER ? Number.MIN_SAFE_INTEGER : t >= Number.MAX_SAFE_INTEGER ? Number.MAX_SAFE_INTEGER : t + (t < 0 ? -.5 : .5) | 0;
+  };
+  t.distance = function (t, e, n, r) {
+    var i = t - n;
+    var o = e - r;
+    return Math.sqrt(i * i + o * o);
+  };
+  t.sum = function (t) {
+    for (var e = 0, n = 0, r = t.length; n !== r; n++) {
+      e += t[n];
+    }
+    return e;
+  };
+  return t;
+}();
+exports.a = r;

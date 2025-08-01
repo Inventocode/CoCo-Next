@@ -20,7 +20,8 @@ module.exports = function (e) {
     key: "moveNext",
     value: function () {
       for (; this.count > 0;) {
-        if (this.count -= 1, !o(a(n.prototype), "moveNext", this).call(this)) {
+        this.count -= 1;
+        if (!o(a(n.prototype), "moveNext", this).call(this)) {
           return !1;
         }
       }

@@ -134,7 +134,7 @@ var E = function () {
           }
         }
       }
-      if (w.performance.getEntries().slice(this._performanceCursor).forEach(function (u) {
+      w.performance.getEntries().slice(this._performanceCursor).forEach(function (u) {
         var f = Object(l.d)(u.startTime);
         var d = Object(l.d)(u.duration);
         if (!("navigation" === e.op && c + f < e.startTimestamp)) {
@@ -282,12 +282,18 @@ var E = function () {
               }
           }
         }
-      }), void 0 !== r && void 0 !== i && C(e, {
-        description: "evaluation",
-        endTimestamp: i,
-        op: "script",
-        startTimestamp: r
-      }), this._performanceCursor = Math.max(performance.getEntries().length - 1, 0), this._trackNavigator(e), "pageload" === e.op) {
+      });
+      if (void 0 !== r && void 0 !== i) {
+        C(e, {
+          description: "evaluation",
+          endTimestamp: i,
+          op: "script",
+          startTimestamp: r
+        });
+      }
+      this._performanceCursor = Math.max(performance.getEntries().length - 1, 0);
+      this._trackNavigator(e);
+      if ("pageload" === e.op) {
         var f = Object(l.d)(h.a);
         if ("number" === typeof a) {
           o.a.log("[Measurements] Adding TTFB");
@@ -646,7 +652,9 @@ function D(e) {
               description: a.method + " " + a.url,
               op: "http.client"
             });
-            if (e.xhr.__sentry_xhr_span_id__ = c.spanId, n[e.xhr.__sentry_xhr_span_id__] = c, e.xhr.setRequestHeader) {
+            e.xhr.__sentry_xhr_span_id__ = c.spanId;
+            n[e.xhr.__sentry_xhr_span_id__] = c;
+            if (e.xhr.setRequestHeader) {
               try {
                 e.xhr.setRequestHeader("sentry-trace", c.toTraceparent());
               } catch (u) {}
@@ -664,7 +672,13 @@ var F = Object(i.a)({
   markBackgroundTransactions: !0,
   maxTransactionDuration: 600,
   routingInstrumentation: function (e, t, n) {
-    if (void 0 === t && (t = !0), void 0 === n && (n = !0), I && I.location) {
+    if (void 0 === t) {
+      t = !0;
+    }
+    if (void 0 === n) {
+      n = !0;
+    }
+    if (I && I.location) {
       var r;
       var i = I.location.href;
       if (t) {

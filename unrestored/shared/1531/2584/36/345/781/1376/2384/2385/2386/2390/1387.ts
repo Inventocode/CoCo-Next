@@ -174,7 +174,10 @@ var C = function (e) {
 var O = function (e, t) {
   var n;
   var i = e;
-  if (m(g, i) && (i = "%" + (n = g[i])[0] + "%"), m(A, i)) {
+  if (m(g, i)) {
+    i = "%" + (n = g[i])[0] + "%";
+  }
+  if (m(A, i)) {
     var a = A[i];
     if ("undefined" === typeof a && !t) {
       throw new o("intrinsic " + e + " exists, but is not available. Please file an issue!");
@@ -207,12 +210,16 @@ module.exports = function (e, t) {
   }
   for (var f = 1, d = !0; f < n.length; f += 1) {
     var h = n[f];
-    if ("constructor" !== h && d || (u = !0), m(A, a = "%" + (r += "." + h) + "%")) {
+    if (!("constructor" !== h && d)) {
+      u = !0;
+    }
+    if (m(A, a = "%" + (r += "." + h) + "%")) {
       c = A[a];
     } else if (null != c) {
       if (s && f + 1 >= n.length) {
         var p = s(c, h);
-        if (d = !!p, !t && !(h in c)) {
+        d = !!p;
+        if (!t && !(h in c)) {
           throw new o("base intrinsic for " + e + " exists, but the property is not available.");
         }
         c = d && "get" in p && !("originalValue" in p.get) ? p.get : c[h];

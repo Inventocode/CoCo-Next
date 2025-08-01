@@ -208,7 +208,11 @@ exports.decodePayload = function (e, n, r) {
     return exports.decodePayloadAsBinary(e, n, r);
   }
   var i;
-  if ("function" === typeof n && (r = n, n = null), "" === e) {
+  if ("function" === typeof n) {
+    r = n;
+    n = null;
+  }
+  if ("" === e) {
     return r(p, 0, 1);
   }
   for (var o, a, s = "", c = 0, u = e.length; c < u; c++) {
@@ -221,7 +225,8 @@ exports.decodePayload = function (e, n, r) {
         return r(p, 0, 1);
       }
       if (a.length) {
-        if (i = exports.decodePacket(a, n, !1), p.type === i.type && p.data === i.data) {
+        i = exports.decodePacket(a, n, !1);
+        if (p.type === i.type && p.data === i.data) {
           return r(p, 0, 1);
         }
         if (!1 === r(i, c + o, u)) {
@@ -277,7 +282,8 @@ exports.encodePayloadAsBlob = function (e, n) {
   A(e, function (e, n) {
     exports.encodePacket(e, !0, !0, function (e) {
       var t = new Uint8Array(1);
-      if (t[0] = 1, "string" === typeof e) {
+      t[0] = 1;
+      if ("string" === typeof e) {
         for (var r = new Uint8Array(e.length), i = 0; i < e.length; i++) {
           r[i] = e.charCodeAt(i);
         }
@@ -289,7 +295,8 @@ exports.encodePayloadAsBlob = function (e, n) {
       for (i = 0; i < o.length; i++) {
         a[i] = parseInt(o[i]);
       }
-      if (a[o.length] = 255, _) {
+      a[o.length] = 255;
+      if (_) {
         var s = new _([t.buffer, a.buffer, e]);
         n(null, s);
       }

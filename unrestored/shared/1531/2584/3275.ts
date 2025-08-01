@@ -288,7 +288,8 @@ function l(t, e) {
         }
         for (; c;) {
           try {
-            if (n = 1, r && (o = 2 & i[0] ? r.return : i[0] ? r.throw || ((o = r.return) && o.call(r), 0) : r.next) && !(o = o.call(r, i[1])).done) {
+            n = 1;
+            if (r && (o = 2 & i[0] ? r.return : i[0] ? r.throw || ((o = r.return) && o.call(r), 0) : r.next) && !(o = o.call(r, i[1])).done) {
               return o;
             }
             switch (r = 0, o && (i = [2 & i[0], o.value]), i[0]) {
@@ -2063,7 +2064,10 @@ var it = function () {
 var ct = Object.freeze({
   __proto__: null,
   init: function (t) {
-    if (t.appid || (t.appid = ""), function (t) {
+    if (!t.appid) {
+      t.appid = "";
+    }
+    (function (t) {
       if (!t) {
         throw new Error("you should specify a config to init Iris auth module");
       }
@@ -2085,7 +2089,9 @@ var ct = Object.freeze({
           }
         }
       });
-    }(t), E = t, ["pid", "appid", "product_code", "platform"].every(function (t) {
+    })(t);
+    E = t;
+    if (["pid", "appid", "product_code", "platform"].every(function (t) {
       return Z(t, g());
     })) {
       return tt = new it();
@@ -2949,7 +2955,10 @@ var It = function () {
             return [4, this.get_rule_from_server(n, o)];
           case 1:
             if (s = d.sent()) {
-              if (a = s.rule, u = s.appid, _ = s.ticket, !Object.keys(at).includes(a)) {
+              a = s.rule;
+              u = s.appid;
+              _ = s.ticket;
+              if (!Object.keys(at).includes(a)) {
                 return [2, new Ct(_, i, c)];
               }
               if (u) {

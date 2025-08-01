@@ -172,9 +172,10 @@ exports.VariableDeclaration = function (e, t) {
   if (i) {
     n = "const" === e.kind ? g : v;
   }
-  if (this.printList(e.declarations, e, {
+  this.printList(e.declarations, e, {
     separator: n
-  }), a(t)) {
+  });
+  if (a(t)) {
     if (s(t)) {
       if (t.init === e) {
         return;
@@ -264,14 +265,18 @@ var y = f("break");
 exports.BreakStatement = y;
 var m = f("throw", "argument");
 function v() {
-  if (this.token(","), this.newline(), this.endsWith(10)) {
+  this.token(",");
+  this.newline();
+  if (this.endsWith(10)) {
     for (var e = 0; e < 4; e++) {
       this.space(!0);
     }
   }
 }
 function g() {
-  if (this.token(","), this.newline(), this.endsWith(10)) {
+  this.token(",");
+  this.newline();
+  if (this.endsWith(10)) {
     for (var e = 0; e < 6; e++) {
       this.space(!0);
     }

@@ -53,7 +53,22 @@ exports._verifyNodeList = function (e) {
   for (var t = 0; t < e.length; t++) {
     var n = e[t];
     var r = void 0;
-    if (n ? "object" !== typeof n ? r = "contains a non-object node" : n.type ? n instanceof l.default && (r = "has a NodePath when it expected a raw object") : r = "without a type" : r = "has falsy node", r) {
+    if (n) {
+      if ("object" !== typeof n) {
+        r = "contains a non-object node";
+      } else {
+        if (n.type) {
+          if (n instanceof l.default) {
+            r = "has a NodePath when it expected a raw object";
+          }
+        } else {
+          r = "without a type";
+        }
+      }
+    } else {
+      r = "has falsy node";
+    }
+    if (r) {
       var i = Array.isArray(n) ? "array" : typeof n;
       throw new Error("Node list ".concat(r, " with the index of ").concat(t, " and type of ").concat(i));
     }

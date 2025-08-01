@@ -282,7 +282,9 @@ var h = new (function () {
   }, {
     key: "changeSelectWidgetCategoryStyle",
     value: function (e) {
-      if (this.clearLastSelectWidgetCategoryStyle(), this.lastSelectedWidgetCategoryName = e, e) {
+      this.clearLastSelectWidgetCategoryStyle();
+      this.lastSelectedWidgetCategoryName = e;
+      if (e) {
         var t;
         var n = e;
         var r = Object(l.qb)(e);
@@ -354,7 +356,7 @@ var h = new (function () {
   return e;
 }())();
 var m = require("./653");
-var g = (module => {
+var g = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -365,9 +367,9 @@ var g = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(m);
+}(m);
 var _ = require("./654");
-var v = (module => {
+var v = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -378,9 +380,9 @@ var v = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(_);
+}(_);
 var b = require("./655");
-var y = (module => {
+var y = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -391,9 +393,9 @@ var y = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(b);
+}(b);
 var E = require("./656");
-var O = (module => {
+var O = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -404,9 +406,9 @@ var O = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(E);
+}(E);
 var w = require("./657");
-var C = (module => {
+var C = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -417,9 +419,9 @@ var C = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(w);
+}(w);
 var T = require("./658");
-var S = (module => {
+var S = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -430,9 +432,9 @@ var S = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(T);
+}(T);
 var I = require("./659");
-var A = (module => {
+var A = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -443,9 +445,9 @@ var A = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(I);
+}(I);
 var j = require("./660");
-var N = (module => {
+var N = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -456,9 +458,9 @@ var N = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(j);
+}(j);
 var R = require("./661");
-var k = (module => {
+var k = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -469,9 +471,9 @@ var k = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(R);
+}(R);
 var x = require("./662");
-var D = (module => {
+var D = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -482,9 +484,9 @@ var D = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(x);
+}(x);
 var M = require("./663");
-var L = (module => {
+var L = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -495,9 +497,9 @@ var L = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(M);
+}(M);
 var P = require("./664");
-var B = (module => {
+var B = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -508,9 +510,9 @@ var B = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(P);
+}(P);
 var F = require("./665");
-var G = (module => {
+var G = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -521,7 +523,7 @@ var G = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(F);
+}(F);
 var U = {
   BLOCK_CLOUD_ICON: g.a,
   BLOCK_CLOUD_VARIABLE_ICON: v.a,
@@ -542,7 +544,7 @@ var W = function () {
 };
 var H = require("../6");
 var V = require("../1/index");
-var z = (module => {
+var z = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -553,7 +555,7 @@ var z = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(V);
+}(V);
 var Y = require("../7");
 var K = require("../206/208/index");
 var q = require("../38/index");
@@ -639,7 +641,8 @@ function oe() {
                 var r = t;
                 var i = t.type;
                 var a = t.widgetType || "";
-                if (a = a.toLowerCase(), "widget_event" === o) {
+                a = a.toLowerCase();
+                if ("widget_event" === o) {
                   var s = r.event;
                   i = "".concat(a, "_event_").concat(s);
                 } else if ("widget_get" === o) {
@@ -1446,7 +1449,9 @@ function Ke() {
             }
             return void (o || (null === s || void 0 === s || s.set_value(l.h), null === s || void 0 === s || s.set_text(l.g)));
           }
-          if (n.set_value(i.id), n.set_text(i.name), a) {
+          n.set_value(i.id);
+          n.set_text(i.name);
+          if (a) {
             var u = a.get_value();
             var d = i.styleList.findIndex(function (e) {
               return e.id === u;

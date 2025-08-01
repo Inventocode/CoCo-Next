@@ -27,7 +27,12 @@ var u = function () {
 !function (t) {
   function e(e, r, n, o, i, u, s, c) {
     var f = t.call(this, u, s) || this;
-    if (f.yuvData = e, f.dataWidth = r, f.dataHeight = n, f.left = o, f.top = i, o + u > r || i + s > n) {
+    f.yuvData = e;
+    f.dataWidth = r;
+    f.dataHeight = n;
+    f.left = o;
+    f.top = i;
+    if (o + u > r || i + s > n) {
       throw new a.a("Crop rectangle does not fit within image data.");
     }
     if (c) {

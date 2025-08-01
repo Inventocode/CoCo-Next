@@ -25,7 +25,8 @@ exports.JSXClosingFragment = function () {
 };
 exports.JSXElement = function (e) {
   var t = e.openingElement;
-  if (this.print(t, e), t.selfClosing) {
+  this.print(t, e);
+  if (t.selfClosing) {
     return;
   }
   this.indent();

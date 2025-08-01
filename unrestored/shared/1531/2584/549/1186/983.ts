@@ -22,13 +22,14 @@ var o = function (e) {
         var e = i.selectionStart;
         var c = n.props.refuse || /[^\d]+/g;
         var u = r.substr(0, e).replace(c, "");
-        if (n._state = {
+        n._state = {
           input: i,
           before: u,
           op: o,
           di: a && s,
           del: a
-        }, n.props.replace && n.props.replace(t) && o && !s) {
+        };
+        if (n.props.replace && n.props.replace(t) && o && !s) {
           for (var l = -1, f = 0; f !== u.length; ++f) {
             l = Math.max(l, r.toLowerCase().indexOf(u[f].toLowerCase(), l + 1));
           }

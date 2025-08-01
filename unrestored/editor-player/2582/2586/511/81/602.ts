@@ -201,7 +201,9 @@ var _ = function (t) {
     if (this.checkChecksum()) {
       return this.pairs;
     }
-    if (r = !!this.rows.length, this.storeRow(t, !1), r) {
+    r = !!this.rows.length;
+    this.storeRow(t, !1);
+    if (r) {
       var o = this.checkRowsBoolean(!1);
       if (null != o) {
         return o;
@@ -258,7 +260,8 @@ var _ = function (t) {
           }
         }
       }
-      if (this.pairs.push(u.getPairs()), e.isValidSequence(this.pairs)) {
+      this.pairs.push(u.getPairs());
+      if (e.isValidSequence(this.pairs)) {
         if (this.checkChecksum()) {
           return this.pairs;
         }
@@ -585,7 +588,10 @@ var _ = function (t) {
         o[f]++;
       } else {
         if (3 == f) {
-          if (s && e.reverseCounters(o), e.isFinderPattern(o)) {
+          if (s) {
+            e.reverseCounters(o);
+          }
+          if (e.isFinderPattern(o)) {
             this.startEnd[0] = h;
             return void (this.startEnd[1] = l);
           }
@@ -793,7 +799,10 @@ var _ = function (t) {
       }
       e.increment(this.getOddCounts(), this.getOddRoundingErrors());
     }
-    if (u && e.decrement(this.getOddCounts(), this.getOddRoundingErrors()), s) {
+    if (u) {
+      e.decrement(this.getOddCounts(), this.getOddRoundingErrors());
+    }
+    if (s) {
       if (c) {
         throw new i.a();
       }

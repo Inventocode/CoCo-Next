@@ -15,7 +15,18 @@ module.exports = function (e, t, n) {
       e.logger.warn(c);
     }
   }
-  if (e.isTop && (r += " var validate = ", i && (e.async = !0, r += "async "), r += "function(data, dataPath, parentData, parentDataProperty, rootData) { 'use strict'; ", a && (e.opts.sourceCode || e.opts.processCode) && (r += " /*# sourceURL=" + a + " */ ")), "boolean" == typeof e.schema || !o && !e.schema.$ref) {
+  if (e.isTop) {
+    r += " var validate = ";
+    if (i) {
+      e.async = !0;
+      r += "async ";
+    }
+    r += "function(data, dataPath, parentData, parentDataProperty, rootData) { 'use strict'; ";
+    if (a && (e.opts.sourceCode || e.opts.processCode)) {
+      r += " /*# sourceURL=" + a + " */ ";
+    }
+  }
+  if ("boolean" == typeof e.schema || !o && !e.schema.$ref) {
     var u = e.level;
     var l = e.dataLevel;
     var f = e.schema["false schema"];
@@ -70,7 +81,11 @@ module.exports = function (e, t, n) {
     u = e.level = 0;
     l = e.dataLevel = 0;
     _ = "data";
-    if (e.rootId = e.resolve.fullPath(e.self._getId(e.root.schema)), e.baseId = e.baseId || e.rootId, delete e.isTop, e.dataPathArr = [""], void 0 !== e.schema.default && e.opts.useDefaults && e.opts.strictDefaults) {
+    e.rootId = e.resolve.fullPath(e.self._getId(e.root.schema));
+    e.baseId = e.baseId || e.rootId;
+    delete e.isTop;
+    e.dataPathArr = [""];
+    if (void 0 !== e.schema.default && e.opts.useDefaults && e.opts.strictDefaults) {
       var m = "default is ignored in the schema root";
       if ("log" !== e.opts.strictDefaults) {
         throw new Error(m);
@@ -83,7 +98,10 @@ module.exports = function (e, t, n) {
   } else {
     u = e.level;
     _ = "data" + ((l = e.dataLevel) || "");
-    if (a && (e.baseId = e.resolve.url(e.baseId, a)), i && !e.async) {
+    if (a) {
+      e.baseId = e.resolve.url(e.baseId, a);
+    }
+    if (i && !e.async) {
       throw new Error("async schema in sync schema");
     }
     r += " var errs_" + u + " = errors;";
@@ -94,7 +112,23 @@ module.exports = function (e, t, n) {
   var b = "";
   var w = e.schema.type;
   var E = Array.isArray(w);
-  if (w && e.opts.nullable && !0 === e.schema.nullable && (E ? -1 == w.indexOf("null") && (w = w.concat("null")) : "null" != w && (w = [w, "null"], E = !0)), E && 1 == w.length && (w = w[0], E = !1), e.schema.$ref && o) {
+  if (w && e.opts.nullable && !0 === e.schema.nullable) {
+    if (E) {
+      if (-1 == w.indexOf("null")) {
+        w = w.concat("null");
+      }
+    } else {
+      if ("null" != w) {
+        w = [w, "null"];
+        E = !0;
+      }
+    }
+  }
+  if (E && 1 == w.length) {
+    w = w[0];
+    E = !1;
+  }
+  if (e.schema.$ref && o) {
     if ("fail" == e.opts.extendRefs) {
       throw new Error('$ref: validation keywords used in schema at path "' + e.errSchemaPath + '" (see option extendRefs)');
     }
@@ -103,7 +137,10 @@ module.exports = function (e, t, n) {
       e.logger.warn('$ref: keywords ignored in schema at path "' + e.errSchemaPath + '"');
     }
   }
-  if (e.schema.$comment && e.opts.$comment && (r += " " + e.RULES.all.$comment.code(e, "$comment")), w) {
+  if (e.schema.$comment && e.opts.$comment) {
+    r += " " + e.RULES.all.$comment.code(e, "$comment");
+  }
+  if (w) {
     if (e.opts.coerceTypes) {
       var x = e.util.coerceToTypes(e.opts.coerceTypes, w);
     }
@@ -114,7 +151,8 @@ module.exports = function (e, t, n) {
       d = e.schemaPath + ".type";
       h = e.errSchemaPath + "/type";
       var O = E ? "checkDataTypes" : "checkDataType";
-      if (r += " if (" + e.util[O](w, _, e.opts.strictNumbers, !0) + ") { ", x) {
+      r += " if (" + e.util[O](w, _, e.opts.strictNumbers, !0) + ") { ";
+      if (x) {
         var k = "dataType" + u;
         var S = "coerced" + u;
         r += " var " + k + " = typeof " + _ + "; var " + S + " = undefined; ";
@@ -234,7 +272,10 @@ module.exports = function (e, t, n) {
     if (R) {
       for (var P = -1, N = R.length - 1; P < N;) {
         if ($(C = R[P += 1])) {
-          if (C.type && (r += " if (" + e.util.checkDataType(C.type, _, e.opts.strictNumbers) + ") { "), e.opts.useDefaults) {
+          if (C.type) {
+            r += " if (" + e.util.checkDataType(C.type, _, e.opts.strictNumbers) + ") { ";
+          }
+          if (e.opts.useDefaults) {
             if ("object" == C.type && e.schema.properties) {
               f = e.schema.properties;
               var M = Object.keys(f);
@@ -313,7 +354,11 @@ module.exports = function (e, t, n) {
               }
             }
           }
-          if (p && (r += " " + y + " ", y = ""), C.type && (r += " } ", w && w === C.type && !x)) {
+          if (p) {
+            r += " " + y + " ";
+            y = "";
+          }
+          if (C.type && (r += " } ", w && w === C.type && !x)) {
             r += " else { ";
             var q;
             d = e.schemaPath + ".type";

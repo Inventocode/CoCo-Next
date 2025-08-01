@@ -157,7 +157,8 @@ module.exports = function () {
         value: function (e) {
           var t = "Unexpected token";
           if (null !== e && void 0 !== e) {
-            if (this.pos = e, this.options.locations) {
+            this.pos = e;
+            if (this.options.locations) {
               for (; this.pos < this.lineStart;) {
                 this.lineStart = this.input.lastIndexOf("\n", this.lineStart - 2) + 1;
                 --this.curLine;

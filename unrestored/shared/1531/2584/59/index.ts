@@ -2,7 +2,7 @@
 
 export { a as b };
 var r = require("./767/index");
-var o = (module => {
+var o = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -13,7 +13,7 @@ var o = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(r);
+}(r);
 var i = {
   openServiceHost: "https://dev-open-service.codemao.cn",
   serverHost: "https://backend-dev.codemao.cn",

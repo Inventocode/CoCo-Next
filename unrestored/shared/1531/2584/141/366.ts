@@ -117,9 +117,11 @@ module.exports = function () {
           }
           return m[e] = !!t;
         }
-        if (g(function () {
+        g(function () {
           v = -109252 == v.getUTCFullYear() && 0 === v.getUTCMonth() && 1 === v.getUTCDate() && 10 == v.getUTCHours() && 37 == v.getUTCMinutes() && 6 == v.getUTCSeconds() && 708 == v.getUTCMilliseconds();
-        }), m["bug-string-char-index"] = m["date-serialization"] = m.json = m["json-stringify"] = m["json-parse"] = null, !m("json")) {
+        });
+        m["bug-string-char-index"] = m["date-serialization"] = m.json = m["json-stringify"] = m["json-parse"] = null;
+        if (!m("json")) {
           var y = m("bug-string-char-index");
           var b = function (t, n) {
             var r;
@@ -259,9 +261,22 @@ module.exports = function () {
                 var m;
                 var y;
                 var w;
-                if (g(function () {
+                g(function () {
                   u = n[t];
-                }), "object" == typeof u && u && (u.getUTCFullYear && "[object Date]" == _.call(u) && u.toJSON === c.prototype.toJSON ? u = x(u) : "function" == typeof u.toJSON && (u = u.toJSON(t))), r && (u = r.call(n, t, u)), u == h) {
+                });
+                if ("object" == typeof u && u) {
+                  if (u.getUTCFullYear && "[object Date]" == _.call(u) && u.toJSON === c.prototype.toJSON) {
+                    u = x(u);
+                  } else {
+                    if ("function" == typeof u.toJSON) {
+                      u = u.toJSON(t);
+                    }
+                  }
+                }
+                if (r) {
+                  u = r.call(n, t, u);
+                }
+                if (u == h) {
                   return u === h ? u : "null";
                 }
                 switch ("object" == (f = typeof u) && (d = _.call(u)), d || f) {
@@ -281,7 +296,11 @@ module.exports = function () {
                       throw l();
                     }
                   }
-                  if (s.push(u), p = [], y = a, a += o, "[object Array]" == d) {
+                  s.push(u);
+                  p = [];
+                  y = a;
+                  a += o;
+                  if ("[object Array]" == d) {
                     for (v = 0, m = u.length; v < m; v++) {
                       A = e(v, u, r, i, o, a, s);
                       p.push(A === h ? "null" : A);
@@ -489,7 +508,10 @@ module.exports = function () {
               n = function e(t) {
                 var n;
                 var r;
-                if ("$" == t && P(), "string" == typeof t) {
+                if ("$" == t) {
+                  P();
+                }
+                if ("string" == typeof t) {
                   if ("@" == (y ? t.charAt(0) : t[0])) {
                     return t.slice(1);
                   }
@@ -918,7 +940,14 @@ module.exports = function () {
     n.getRandom = function () {
       if ("function" == typeof Uint32Array) {
         var e = "";
-        if ("undefined" != typeof crypto ? e = crypto : "undefined" != typeof msCrypto && (e = msCrypto), n.isObject(e) && e.getRandomValues) {
+        if ("undefined" != typeof crypto) {
+          e = crypto;
+        } else {
+          if ("undefined" != typeof msCrypto) {
+            e = msCrypto;
+          }
+        }
+        if (n.isObject(e) && e.getRandomValues) {
           var t = new Uint32Array(1);
           return e.getRandomValues(t)[0] / Math.pow(2, 32);
         }
@@ -1199,7 +1228,10 @@ module.exports = function () {
       };
       (function (e, i, o) {
         var a = !(!n.isObject(t.para.heatmap) || !t.para.heatmap.useCapture);
-        if (n.isObject(t.para.heatmap) && "undefined" == typeof t.para.heatmap.useCapture && "click" === i && (a = !0), e && e.addEventListener) {
+        if (n.isObject(t.para.heatmap) && "undefined" == typeof t.para.heatmap.useCapture && "click" === i) {
+          a = !0;
+        }
+        if (e && e.addEventListener) {
           e.addEventListener(i, function (e) {
             e._getPath = r._getPath;
             o.call(this, e);
@@ -1268,7 +1300,8 @@ module.exports = function () {
         var a = "";
         var s = "";
         var c = "";
-        if (i = null == i ? 73e3 : i, o = void 0 === o ? t.para.cross_subdomain : o) {
+        i = null == i ? 73e3 : i;
+        if (o = void 0 === o ? t.para.cross_subdomain : o) {
           var u = n.getCurrentDomain(location.href);
           if ("url\u89e3\u6790\u5931\u8d25" === u) {
             u = "";
@@ -1325,7 +1358,8 @@ module.exports = function () {
       },
       getCookieName: function (e, r) {
         var i = "";
-        if (r = r || location.href, !1 === t.para.cross_subdomain) {
+        r = r || location.href;
+        if (!1 === t.para.cross_subdomain) {
           try {
             i = n.URL(r).hostname;
           } catch (a) {
@@ -1717,7 +1751,9 @@ module.exports = function () {
       var r = t.split(".");
       if (n.isArray(r) && r.length >= 2 && !/^(\d+\.)+\d+$/.test(t)) {
         for (var i = "." + r.splice(r.length - 1, 1); r.length > 0;) {
-          if (i = "." + r.splice(r.length - 1, 1) + i, document.cookie = "sensorsdata_domain_test=true; path=/; domain=" + i, -1 !== document.cookie.indexOf("sensorsdata_domain_test=true")) {
+          i = "." + r.splice(r.length - 1, 1) + i;
+          document.cookie = "sensorsdata_domain_test=true; path=/; domain=" + i;
+          if (-1 !== document.cookie.indexOf("sensorsdata_domain_test=true")) {
             var o = new Date();
             o.setTime(o.getTime() - 1e3);
             document.cookie = "sensorsdata_domain_test=true; expires=" + o.toGMTString() + "; path=/; domain=" + i;
@@ -1805,7 +1841,10 @@ module.exports = function () {
           return t;
         }
         var r = null;
-        if ("function" == typeof window.getMatchedCSSRules && (r = getMatchedCSSRules(this.ele)), !r || !n.isArray(r)) {
+        if ("function" == typeof window.getMatchedCSSRules) {
+          r = getMatchedCSSRules(this.ele);
+        }
+        if (!r || !n.isArray(r)) {
           return null;
         }
         for (var i = r.length - 1; i >= 0; i--) {
@@ -1884,7 +1923,8 @@ module.exports = function () {
           }
           var a = null;
           for (var s in r) if (i === s && "object" == typeof o) {
-            if (a = r[s], n.isArray(a)) {
+            a = r[s];
+            if (n.isArray(a)) {
               for (s = 0; s < a.length; s++) {
                 var c = o[a[s]];
                 if (c) {
@@ -2055,7 +2095,14 @@ module.exports = function () {
     };
     n.trackLink = function (e, r, i) {
       var o = null;
-      if ((e = e || {}).ele && (o = e.ele), e.event && (o = e.target ? e.target : e.event.target), i = i || {}, !o || "object" != typeof o) {
+      if ((e = e || {}).ele) {
+        o = e.ele;
+      }
+      if (e.event) {
+        o = e.target ? e.target : e.event.target;
+      }
+      i = i || {};
+      if (!o || "object" != typeof o) {
         return !1;
       }
       if (!o.href || /^javascript/.test(o.href) || o.target || o.download || o.onclick) {
@@ -2295,18 +2342,22 @@ module.exports = function () {
       var i = document.getElementsByTagName("head")[0];
       var o = null;
       var a = !1;
-      if (i.appendChild(r), n.isNumber(e.timeout) && (o = setTimeout(function () {
-        if (a) {
-          return !1;
-        }
-        e.error("timeout");
-        window[e.callbackName] = function () {
-          t.log("call jsonp error");
-        };
-        o = null;
-        i.removeChild(r);
-        a = !0;
-      }, e.timeout)), window[e.callbackName] = function () {
+      i.appendChild(r);
+      if (n.isNumber(e.timeout)) {
+        o = setTimeout(function () {
+          if (a) {
+            return !1;
+          }
+          e.error("timeout");
+          window[e.callbackName] = function () {
+            t.log("call jsonp error");
+          };
+          o = null;
+          i.removeChild(r);
+          a = !0;
+        }, e.timeout);
+      }
+      window[e.callbackName] = function () {
         clearTimeout(o);
         o = null;
         e.success.apply(null, arguments);
@@ -2314,7 +2365,13 @@ module.exports = function () {
           t.log("call jsonp error");
         };
         i.removeChild(r);
-      }, e.url.indexOf("?") > -1 ? e.url += "&callbackName=" + e.callbackName : e.url += "?callbackName=" + e.callbackName, n.isObject(e.data)) {
+      };
+      if (e.url.indexOf("?") > -1) {
+        e.url += "&callbackName=" + e.callbackName;
+      } else {
+        e.url += "?callbackName=" + e.callbackName;
+      }
+      if (n.isObject(e.data)) {
         var s = [];
         n.each(e.data, function (e, t) {
           s.push(t + "=" + e);
@@ -2563,7 +2620,10 @@ module.exports = function () {
         t.para.source_type.keyword = n.isObject(t.para.source_type.keyword) ? n.extend(l, t.para.source_type.keyword) : l;
       }
       var f = ["mark", "/mark", "strong", "b", "em", "i", "u", "abbr", "ins", "del", "s", "sup"];
-      if (t.para.heatmap && !n.isObject(t.para.heatmap) && (t.para.heatmap = {}), n.isObject(t.para.heatmap)) {
+      if (t.para.heatmap && !n.isObject(t.para.heatmap)) {
+        t.para.heatmap = {};
+      }
+      if (n.isObject(t.para.heatmap)) {
         t.para.heatmap.clickmap = t.para.heatmap.clickmap || "default";
         t.para.heatmap.scroll_notice_map = t.para.heatmap.scroll_notice_map || "default";
         t.para.heatmap.scroll_delay_time = t.para.heatmap.scroll_delay_time || 4e3;
@@ -3239,7 +3299,10 @@ module.exports = function () {
       }
     };
     t.login = function (e, n) {
-      if ("number" == typeof e && (e = String(e)), s.check({
+      if ("number" == typeof e) {
+        e = String(e);
+      }
+      if (s.check({
         distinct_id: e
       })) {
         var r = c.getFirstId();
@@ -3264,7 +3327,8 @@ module.exports = function () {
     t.logout = function (e) {
       var r = c.getFirstId();
       if (r) {
-        if (c.set("first_id", ""), !0 === e) {
+        c.set("first_id", "");
+        if (!0 === e) {
           var i = n.UUID();
           c.set("distinct_id", i);
         } else {
@@ -3380,7 +3444,10 @@ module.exports = function () {
           }
           if ("v-track-mode" === e.data.type) {
             if (e.data.data && e.data.data.isVtrack) {
-              if (n.sessionStorage.isSupport() && sessionStorage.setItem("sensors-visual-mode", "true"), e.data.data.userURL && location.search.match(/sa-visual-mode=true/)) {
+              if (n.sessionStorage.isSupport()) {
+                sessionStorage.setItem("sensors-visual-mode", "true");
+              }
+              if (e.data.data.userURL && location.search.match(/sa-visual-mode=true/)) {
                 o = e.data.data.userURL;
                 var i = n.secCheck.isHttpUrl(o) ? n.secCheck.removeScriptProtocol(o) : (t.log("\u53ef\u89c6\u5316\u6a21\u5f0f\u68c0\u6d4b URL \u5931\u8d25"), !1);
                 if (i) {
@@ -3919,7 +3986,8 @@ module.exports = function () {
         config: r,
         callback: i
       };
-      if (t.events.tempAdd("send", o), !t.para.app_js_bridge && t.para.batch_send && localStorage.length < 200) {
+      t.events.tempAdd("send", o);
+      if (!t.para.app_js_bridge && t.para.batch_send && localStorage.length < 200) {
         t.log(o);
         t.batchSend.add(a.data);
         return !1;
@@ -4152,7 +4220,9 @@ module.exports = function () {
       toState: function (e) {
         var r = null;
         if (null != e && n.isJSONString(e)) {
-          if (r = JSON.parse(e), this._state = n.extend(r), r.distinct_id) {
+          r = JSON.parse(e);
+          this._state = n.extend(r);
+          if (r.distinct_id) {
             if ("object" == typeof r.props) {
               for (var i in r.props) if ("string" == typeof r.props[i]) {
                 r.props[i] = r.props[i].slice(0, t.para.max_referrer_string_length);
@@ -4222,7 +4292,8 @@ module.exports = function () {
         this.set("props", t);
       },
       clearAllProps: function (e) {
-        if (this._sessionState = {}, n.isArray(e) && e.length > 0) {
+        this._sessionState = {};
+        if (n.isArray(e) && e.length > 0) {
           for (var t = 0; t < e.length; t++) {
             if (n.isString(e[t]) && -1 === e[t].indexOf("latest_") && e[t] in this._state.props) {
               delete this._state.props[e[t]];
@@ -4358,11 +4429,15 @@ module.exports = function () {
         }
         c.setProps(i, !0);
         var a = {};
-        if ("" === e && (e = "url\u89e3\u6790\u5931\u8d25"), n.each(t.para.preset_properties, function (r, i) {
+        if ("" === e) {
+          e = "url\u89e3\u6790\u5931\u8d25";
+        }
+        n.each(t.para.preset_properties, function (r, i) {
           if (-1 === i.indexOf("latest_")) {
             return !1;
           }
-          if (i = i.slice(7), r) {
+          i = i.slice(7);
+          if (r) {
             if ("wx_ad_click_id" === i && "not_collect" === r) {
               return !1;
             }
@@ -4410,7 +4485,9 @@ module.exports = function () {
               });
             }
           }
-        }), t.register(a), t.para.preset_properties.latest_utm) {
+        });
+        t.register(a);
+        if (t.para.preset_properties.latest_utm) {
           var s = n.info.campaignParamsStandard("$latest_", "_latest_");
           var u = s.$utms;
           var l = s.otherUtms;
@@ -4715,7 +4792,7 @@ module.exports = function () {
           }(t);
         };
         t.getAppStatus = function (t) {
-          if (function () {
+          (function () {
             if (/iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream) {
               var e = document.createElement("iframe");
               e.setAttribute("src", "sensorsanalytics://getAppInfo");
@@ -4723,7 +4800,14 @@ module.exports = function () {
               e.parentNode.removeChild(e);
               e = null;
             }
-          }(), "object" == typeof window.SensorsData_APP_JS_Bridge && window.SensorsData_APP_JS_Bridge.sensorsdata_call_app && (e = SensorsData_APP_JS_Bridge.sensorsdata_call_app(), n.isJSONString(e) && (e = JSON.parse(e))), !t) {
+          })();
+          if ("object" == typeof window.SensorsData_APP_JS_Bridge && window.SensorsData_APP_JS_Bridge.sensorsdata_call_app) {
+            e = SensorsData_APP_JS_Bridge.sensorsdata_call_app();
+            if (n.isJSONString(e)) {
+              e = JSON.parse(e);
+            }
+          }
+          if (!t) {
             return e;
           }
           if (null === e) {
@@ -4796,7 +4880,8 @@ module.exports = function () {
         callType: this.type,
         data: i
       };
-      if (a.data.message_id = o, window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.sensorsdataNativeTracker && window.webkit.messageHandlers.sensorsdataNativeTracker.postMessage) {
+      a.data.message_id = o;
+      if (window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.sensorsdataNativeTracker && window.webkit.messageHandlers.sensorsdataNativeTracker.postMessage) {
         window.webkit.messageHandlers.sensorsdataNativeTracker.postMessage(JSON.stringify(a));
       } else {
         if (!n.isObject(window.SensorsData_APP_New_H5_Bridge) || !window.SensorsData_APP_New_H5_Bridge.sensorsdata_js_call_app) {
@@ -4932,7 +5017,8 @@ module.exports = function () {
           }
         }
         return function (e) {
-          if (e.tagName.toLowerCase(), !e.parentNode) {
+          e.tagName.toLowerCase();
+          if (!e.parentNode) {
             return "";
           }
           if (1 === n.ry(e).getSameTypeSiblings().length) {
@@ -5218,7 +5304,7 @@ module.exports = function () {
         })));
       }
     };
-    if (t.unlimitedDiv = {
+    t.unlimitedDiv = {
       events: [],
       init: function () {
         this.filterWebClickEvents();
@@ -5240,7 +5326,8 @@ module.exports = function () {
         }
         return !1;
       }
-    }, t.customProp = {
+    };
+    t.customProp = {
       events: [],
       configSwitch: !1,
       collectAble: function () {
@@ -5381,7 +5468,8 @@ module.exports = function () {
         }
         return o;
       }
-    }, t.vtrackcollect = {
+    };
+    t.vtrackcollect = {
       unlimitedDiv: t.unlimitedDiv,
       config: {},
       storageEnable: !0,
@@ -5444,7 +5532,10 @@ module.exports = function () {
         if (!n.isObject(t.para.heatmap) || !t.para.heatmap.get_vtrack_config) {
           return !1;
         }
-        if (n.localStorage.isSupport() || (this.storageEnable = !1), !this.initUrl()) {
+        if (!n.localStorage.isSupport()) {
+          this.storageEnable = !1;
+        }
+        if (!this.initUrl()) {
           t.log("----vtrackcustom----\u521d\u59cb\u5316\u5931\u8d25\uff0curl\u4fe1\u606f\u89e3\u6790\u5931\u8d25");
           return !1;
         }
@@ -5636,7 +5727,8 @@ module.exports = function () {
         }
         return !0;
       }
-    }, t.init = function (e) {
+    };
+    t.init = function (e) {
       if (t.readyState && t.readyState.state && t.readyState.state >= 2) {
         return !1;
       }
@@ -5653,7 +5745,8 @@ module.exports = function () {
           t._.setCssStyle("[" + t.para.heatmap.track_attr.join("], [") + "] { cursor: pointer; -webkit-tap-highlight-color: rgba(0,0,0,0); }");
         }
       }
-    }, n.each(["getAppStatus", "track", "quick", "register", "registerPage", "registerOnce", "trackSignup", "setProfile", "setOnceProfile", "appendProfile", "incrementProfile", "deleteProfile", "unsetProfile", "identify", "login", "logout", "trackLink", "clearAllRegister", "clearPageRegister"], function (e) {
+    };
+    n.each(["getAppStatus", "track", "quick", "register", "registerPage", "registerOnce", "trackSignup", "setProfile", "setOnceProfile", "appendProfile", "incrementProfile", "deleteProfile", "unsetProfile", "identify", "login", "logout", "trackLink", "clearAllRegister", "clearPageRegister"], function (e) {
       var r = t[e];
       t[e] = function () {
         if (t.readyState.state < 3) {
@@ -5672,7 +5765,8 @@ module.exports = function () {
           t.log(i);
         }
       };
-    }), t.modules.Amp = function () {
+    });
+    t.modules.Amp = function () {
       "use strict";
 
       var e = {
@@ -5681,7 +5775,8 @@ module.exports = function () {
           if (this.sd) {
             return !1;
           }
-          if (this.sd = e, !this.sd || !this.sd._) {
+          this.sd = e;
+          if (!this.sd || !this.sd._) {
             return !1;
           }
           var t = this.sd._.cookie.get("sensors_amp_id");
@@ -5730,7 +5825,8 @@ module.exports = function () {
         };
       }
       return e;
-    }(), t.modules.Channel = function () {
+    }();
+    t.modules.Channel = function () {
       "use strict";
 
       var t;
@@ -5872,7 +5968,8 @@ module.exports = function () {
         };
       }
       return r;
-    }(), t.modules.Deeplink = function () {
+    }();
+    t.modules.Deeplink = function () {
       "use strict";
 
       /micromessenger\/([\d.]+)/i.test(navigator.userAgent || "");
@@ -5924,16 +6021,32 @@ module.exports = function () {
             this.log("deeplink\u5df2\u7ecf\u521d\u59cb\u5316");
             return !1;
           }
-          if (o(sensorsDataAnalytic201505) && (this.sd = sensorsDataAnalytic201505), this.log("init()"), null === this.sd) {
+          if (o(sensorsDataAnalytic201505)) {
+            this.sd = sensorsDataAnalytic201505;
+          }
+          this.log("init()");
+          if (null === this.sd) {
             this.log("\u795e\u7b56JS SDK\u672a\u6210\u529f\u5f15\u5165");
             return !1;
           }
           var e = {};
-          if (arguments.length > 0 && (1 === arguments.length && o(arguments[0]) ? e = arguments[0] : arguments.length >= 2 && o(arguments[1]) && (e = arguments[1])), !r.hasOwnProperty(i)) {
+          if (arguments.length > 0) {
+            if (1 === arguments.length && o(arguments[0])) {
+              e = arguments[0];
+            } else {
+              if (arguments.length >= 2 && o(arguments[1])) {
+                e = arguments[1];
+              }
+            }
+          }
+          if (!r.hasOwnProperty(i)) {
             this.log("\u4e0d\u652f\u6301\u5f53\u524d\u7cfb\u7edf\uff0c\u76ee\u524d\u53ea\u652f\u6301Android\u548ciOS");
             return !1;
           }
-          if (o(e) && this.sd._.isNumber(e.timeout) && e.timeout >= 2500 && (this.timeout = e.timeout), !this.sd.para.server_url) {
+          if (o(e) && this.sd._.isNumber(e.timeout) && e.timeout >= 2500) {
+            this.timeout = e.timeout;
+          }
+          if (!this.sd.para.server_url) {
             this.log("\u795e\u7b56JS SDK\u914d\u7f6e\u9879server_url\u672a\u6b63\u786e\u914d\u7f6e");
             return !1;
           }
@@ -5984,7 +6097,8 @@ module.exports = function () {
           this.addListeners();
         },
         openDeepLink: function () {
-          if (this.log("openDeeplink()"), !this.data) {
+          this.log("openDeeplink()");
+          if (!this.data) {
             this.log("\u6ca1\u6709Deep link\u6570\u636e!");
             return !1;
           }
@@ -6015,7 +6129,8 @@ module.exports = function () {
               window.location = o;
               t.timer = setTimeout(function () {
                 var r = n();
-                if (t.log("hide:" + e + ":" + document[e]), r) {
+                t.log("hide:" + e + ":" + document[e]);
+                if (r) {
                   t.log("The page is hidden, stop navigating to download page");
                   return !1;
                 }
@@ -6057,7 +6172,8 @@ module.exports = function () {
         };
       }
       return a;
-    }(), t.modules.SiteLinker = function () {
+    }();
+    t.modules.SiteLinker = function () {
       "use strict";
 
       var e = {
@@ -6221,7 +6337,8 @@ module.exports = function () {
         };
       }
       return e;
-    }(), "string" != typeof window.sensorsDataAnalytic201505) {
+    }();
+    if ("string" != typeof window.sensorsDataAnalytic201505) {
       return "undefined" == typeof window.sensorsDataAnalytic201505 ? (window.sensorsDataAnalytic201505 = t, t) : window.sensorsDataAnalytic201505;
     }
     t.setPreConfig(window[sensorsDataAnalytic201505]);

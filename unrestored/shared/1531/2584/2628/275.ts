@@ -10,7 +10,7 @@ export { m as b };
 var r = require("../0/index");
 var i = require("./2589/index");
 var o = require("./2589/792");
-var a = (module => {
+var a = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -21,7 +21,7 @@ var a = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(o);
+}(o);
 var s = require("./2588");
 var c = require("./277");
 var u = function () {
@@ -195,7 +195,10 @@ function g(e) {
 function v(e, t, n, r) {
   var i;
   var o = e && e[t];
-  if (o && (i = o[n]), i) {
+  if (o) {
+    i = o[n];
+  }
+  if (i) {
     return i;
   }
   r(new c.f("No " + t + " format named: " + n));

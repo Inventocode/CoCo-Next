@@ -94,7 +94,8 @@ var m = function () {
     for (var n = 0, r = this.runtime_data.hide_chaff_effects; n < r.length; n++) {
       (0, r[n])();
     }
-    if (this.widget_div.hide(t), !e) {
+    this.widget_div.hide(t);
+    if (!e) {
       var i = this.workspace_db.current;
       var o = i && i.get_toolbox();
       if (o && o.flyout && o.flyout.is_auto_close()) {
@@ -259,7 +260,8 @@ var m = function () {
     for (var t = o.vec2.create(), n = e; n instanceof Element;) {
       var r = this.get_relative_xy(n);
       var i = this.get_scale(n);
-      if (o.vec2.scaleAndAdd(t, r, t, i), -1 != (" " + (n.getAttribute("class") || "") + " ").indexOf(" injectionDiv ")) {
+      o.vec2.scaleAndAdd(t, r, t, i);
+      if (-1 != (" " + (n.getAttribute("class") || "") + " ").indexOf(" injectionDiv ")) {
         break;
       }
       n = n.parentNode;

@@ -1,12 +1,42 @@
 "use strict";
 
 (function (e) {
-  exports.c = u;
-  exports.f = l;
-  exports.e = h;
-  exports.d = A;
-  exports.b = g;
-  exports.a = v;
+  Object.defineProperty(exports, "c", {
+    get: function () {
+      return u;
+    },
+    enumerable: true
+  });
+  Object.defineProperty(exports, "f", {
+    get: function () {
+      return l;
+    },
+    enumerable: true
+  });
+  Object.defineProperty(exports, "e", {
+    get: function () {
+      return h;
+    },
+    enumerable: true
+  });
+  Object.defineProperty(exports, "d", {
+    get: function () {
+      return A;
+    },
+    enumerable: true
+  });
+  Object.defineProperty(exports, "b", {
+    get: function () {
+      return g;
+    },
+    enumerable: true
+  });
+  Object.defineProperty(exports, "a", {
+    get: function () {
+      return v;
+    },
+    enumerable: true
+  });
   var r = require("../../../36/483/39");
   var i = require("../1169");
   var o = require("../306");
@@ -89,7 +119,13 @@
     return "domain" === n && t && "object" === typeof t && t._events ? "[Domain]" : "domainEmitter" === n ? "[DomainEmitter]" : "undefined" !== typeof e && t === e ? "[Global]" : "undefined" !== typeof window && t === window ? "[Window]" : "undefined" !== typeof document && t === document ? "[Document]" : Object(o.l)(t) ? "[SyntheticEvent]" : "number" === typeof t && t !== t ? "[NaN]" : void 0 === t ? "[undefined]" : "function" === typeof t ? "[Function: " + Object(s.a)(t) + "]" : "symbol" === typeof t ? "[" + String(t) + "]" : "bigint" === typeof t ? "[BigInt: " + String(t) + "]" : t;
   }
   function _(e, t, n, r) {
-    if (void 0 === n && (n = 1 / 0), void 0 === r && (r = new a.a()), 0 === n) {
+    if (void 0 === n) {
+      n = 1 / 0;
+    }
+    if (void 0 === r) {
+      r = new a.a();
+    }
+    if (0 === n) {
       return function (e) {
         var t = Object.prototype.toString.call(e);
         if ("string" === typeof e) {
@@ -137,7 +173,8 @@
       t = 40;
     }
     var n = Object.keys(f(e));
-    if (n.sort(), !n.length) {
+    n.sort();
+    if (!n.length) {
       return "[object has no keys]";
     }
     if (n[0].length >= t) {

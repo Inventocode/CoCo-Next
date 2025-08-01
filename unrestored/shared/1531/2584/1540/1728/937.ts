@@ -17,7 +17,8 @@ var s = function (e) {
           p += f;
           break;
         }
-        if (p += f, e ? p < 0 : d <= p) {
+        p += f;
+        if (e ? p < 0 : d <= p) {
           throw TypeError("Reduce of empty array with no initial value");
         }
       }

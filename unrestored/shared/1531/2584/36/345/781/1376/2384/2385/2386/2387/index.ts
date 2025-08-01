@@ -181,30 +181,36 @@ var x = function (e) {
 var C = function (e, t) {
   var n;
   var i = e;
-  if (g(_, i) && (i = "%" + (n = _[i])[0] + "%"), g(p, i)) {
+  if (g(_, i)) {
+    i = "%" + (n = _[i])[0] + "%";
+  }
+  if (g(p, i)) {
     var s = p[i];
-    if (s === d && (s = function e(t) {
-      var n;
-      if ("%AsyncFunction%" === t) {
-        n = a("async function () {}");
-      } else if ("%GeneratorFunction%" === t) {
-        n = a("function* () {}");
-      } else if ("%AsyncGeneratorFunction%" === t) {
-        n = a("async function* () {}");
-      } else if ("%AsyncGenerator%" === t) {
-        var r = e("%AsyncGeneratorFunction%");
-        if (r) {
-          n = r.prototype;
+    if (s === d) {
+      s = function e(t) {
+        var n;
+        if ("%AsyncFunction%" === t) {
+          n = a("async function () {}");
+        } else if ("%GeneratorFunction%" === t) {
+          n = a("function* () {}");
+        } else if ("%AsyncGeneratorFunction%" === t) {
+          n = a("async function* () {}");
+        } else if ("%AsyncGenerator%" === t) {
+          var r = e("%AsyncGeneratorFunction%");
+          if (r) {
+            n = r.prototype;
+          }
+        } else if ("%AsyncIteratorPrototype%" === t) {
+          var i = e("%AsyncGenerator%");
+          if (i) {
+            n = f(i.prototype);
+          }
         }
-      } else if ("%AsyncIteratorPrototype%" === t) {
-        var i = e("%AsyncGenerator%");
-        if (i) {
-          n = f(i.prototype);
-        }
-      }
-      p[t] = n;
-      return n;
-    }(i)), "undefined" === typeof s && !t) {
+        p[t] = n;
+        return n;
+      }(i);
+    }
+    if ("undefined" === typeof s && !t) {
       throw new o("intrinsic " + e + " exists, but is not available. Please file an issue!");
     }
     return {
@@ -240,7 +246,10 @@ module.exports = function (e, t) {
     if (('"' === A || "'" === A || "`" === A || '"' === y || "'" === y || "`" === y) && A !== y) {
       throw new r("property names with quotes must have matching quotes");
     }
-    if ("constructor" !== _ && h || (l = !0), g(p, c = "%" + (i += "." + _) + "%")) {
+    if (!("constructor" !== _ && h)) {
+      l = !0;
+    }
+    if (g(p, c = "%" + (i += "." + _) + "%")) {
       u = p[c];
     } else if (null != u) {
       if (!(_ in u)) {

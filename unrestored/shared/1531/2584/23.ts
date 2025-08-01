@@ -8,7 +8,7 @@ export { g as f };
 export { _ as d };
 var r = require("./6");
 var o = require("./0/index");
-var i = (module => {
+var i = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -19,7 +19,7 @@ var i = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(o);
+}(o);
 var a = require("./2628/index");
 var s = require("./10/index");
 var c = {

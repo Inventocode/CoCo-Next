@@ -150,7 +150,8 @@ var f = function () {
     }
     var t = this.Blink.events.filter(this.cached_events, !0);
     var n = (0, l.filter_events)(t);
-    if (this.cached_events = [], n && 0 !== n.length) {
+    this.cached_events = [];
+    if (n && 0 !== n.length) {
       if (this.cached_json) {
         this.error("Handle event group", "Handling multi event groups at a time. ");
         this.cached_json = void 0;
@@ -276,7 +277,10 @@ var f = function () {
         }
         c.push(this.generate_disconnect_op(r, i.parent_id, u ? i.input_name : void 0));
       }
-      if (s.coordinate && c.push(this.generate_move_op("blocks", r, i.coordinate, s.coordinate)), s.parent_id) {
+      if (s.coordinate) {
+        c.push(this.generate_move_op("blocks", r, i.coordinate, s.coordinate));
+      }
+      if (s.parent_id) {
         u = !0;
         if (s.input_name) {
           for (l = t - 1; l >= 0; l--) {
@@ -347,7 +351,8 @@ var f = function () {
     try {
       var s = [];
       var c = ["blocks", e, "parent_id"];
-      if (s.push((0, i.replaceOp)(c, !0, t)), !n) {
+      s.push((0, i.replaceOp)(c, !0, t));
+      if (!n) {
         var u = ["connections", t, e];
         var l = {
           type: "next"

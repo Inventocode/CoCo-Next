@@ -4,7 +4,10 @@ var i = require("../1666/241");
 var a = require("./628");
 var s = Object.defineProperty;
 exports.f = r ? s : function (e, t, n) {
-  if (i(e), t = a(t), i(n), o) {
+  i(e);
+  t = a(t);
+  i(n);
+  if (o) {
     try {
       return s(e, t, n);
     } catch (r) {}

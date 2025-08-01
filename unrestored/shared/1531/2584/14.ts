@@ -19,7 +19,10 @@ function u(e) {
   var l = void 0 === c ? "" : c;
   var u = Object(i.currentContext)();
   var d = r;
-  if (n && (d = Object(a.o)(n)), !d) {
+  if (n) {
+    d = Object(a.o)(n);
+  }
+  if (!d) {
     throw new Error("message not set");
   }
   s.b.push({

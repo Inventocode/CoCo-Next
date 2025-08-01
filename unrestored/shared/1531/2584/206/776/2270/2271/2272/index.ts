@@ -75,7 +75,10 @@
   i = RegExp("(\"(?:\\\\\"|[^\"])*\")|('(?:\\\\'|[^'])*')|(/(?:\\\\/|[^/])*/[a-zA-Z]*)|(#.*#)|([" + r + "])|([^\\s" + r + "](?:\\s*[^\\s" + r + "]+)*)|\\s*");
   module.exports = function (e, n, r) {
     var o;
-    if (null == r && (r = {}), !r.explicit && 1 === e.length && "String" === e[0].type) {
+    if (null == r) {
+      r = {};
+    }
+    if (!r.explicit && 1 === e.length && "String" === e[0].type) {
       return "'" + n.replace(/\\'/g, "\\\\'") + "'";
     }
     if (!(o = function (e, t, n) {

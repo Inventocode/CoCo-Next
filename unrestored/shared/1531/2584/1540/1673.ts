@@ -9,7 +9,8 @@ r({
 }, {
   fromCodePoint: function (e) {
     for (var t, n = [], r = arguments.length, a = 0; r > a;) {
-      if (t = +arguments[a++], o(t, 1114111) !== t) {
+      t = +arguments[a++];
+      if (o(t, 1114111) !== t) {
         throw RangeError(t + " is not a valid code point");
       }
       n.push(t < 65536 ? i(t) : i(55296 + ((t -= 65536) >> 10), t % 1024 + 56320));

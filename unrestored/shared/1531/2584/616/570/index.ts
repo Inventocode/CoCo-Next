@@ -38,7 +38,8 @@
       throw new TypeError('"value" argument must not be a number');
     }
     return "undefined" !== typeof ArrayBuffer && t instanceof ArrayBuffer ? function (e, t, n, r) {
-      if (t.byteLength, n < 0 || t.byteLength < n) {
+      t.byteLength;
+      if (n < 0 || t.byteLength < n) {
         throw new RangeError("'offset' is out of bounds");
       }
       if (t.byteLength < n + (r || 0)) {
@@ -93,7 +94,9 @@
     }
   }
   function f(e, t) {
-    if (l(t), e = s(e, t < 0 ? 0 : 0 | h(t)), !c.TYPED_ARRAY_SUPPORT) {
+    l(t);
+    e = s(e, t < 0 ? 0 : 0 | h(t));
+    if (!c.TYPED_ARRAY_SUPPORT) {
       for (var n = 0; n < t; ++n) {
         e[n] = 0;
       }
@@ -158,10 +161,16 @@
   }
   function _(e, t, n) {
     var r = !1;
-    if ((void 0 === t || t < 0) && (t = 0), t > this.length) {
+    if (void 0 === t || t < 0) {
+      t = 0;
+    }
+    if (t > this.length) {
       return "";
     }
-    if ((void 0 === n || n > this.length) && (n = this.length), n <= 0) {
+    if (void 0 === n || n > this.length) {
+      n = this.length;
+    }
+    if (n <= 0) {
       return "";
     }
     if ((n >>>= 0) <= (t >>>= 0)) {
@@ -204,7 +213,26 @@
     if (0 === e.length) {
       return -1;
     }
-    if ("string" === typeof n ? (r = n, n = 0) : n > 2147483647 ? n = 2147483647 : n < -2147483648 && (n = -2147483648), n = +n, isNaN(n) && (n = i ? 0 : e.length - 1), n < 0 && (n = e.length + n), n >= e.length) {
+    if ("string" === typeof n) {
+      r = n;
+      n = 0;
+    } else {
+      if (n > 2147483647) {
+        n = 2147483647;
+      } else {
+        if (n < -2147483648) {
+          n = -2147483648;
+        }
+      }
+    }
+    n = +n;
+    if (isNaN(n)) {
+      n = i ? 0 : e.length - 1;
+    }
+    if (n < 0) {
+      n = e.length + n;
+    }
+    if (n >= e.length) {
       if (i) {
         return -1;
       }
@@ -215,7 +243,10 @@
       }
       n = 0;
     }
-    if ("string" === typeof t && (t = c.from(t, r)), c.isBuffer(t)) {
+    if ("string" === typeof t) {
+      t = c.from(t, r);
+    }
+    if (c.isBuffer(t)) {
       return 0 === t.length ? -1 : v(e, t, n, r, i);
     }
     if ("number" === typeof t) {
@@ -245,7 +276,10 @@
       var l = -1;
       for (o = n; o < s; o++) {
         if (u(e, o) === u(t, -1 === l ? 0 : o - l)) {
-          if (-1 === l && (l = o), o - l + 1 === c) {
+          if (-1 === l) {
+            l = o;
+          }
+          if (o - l + 1 === c) {
             return l * a;
           }
         } else {
@@ -568,7 +602,19 @@
     if (!c.isBuffer(e)) {
       throw new TypeError("Argument must be a Buffer");
     }
-    if (void 0 === t && (t = 0), void 0 === n && (n = e ? e.length : 0), void 0 === r && (r = 0), void 0 === i && (i = this.length), t < 0 || n > e.length || r < 0 || i > this.length) {
+    if (void 0 === t) {
+      t = 0;
+    }
+    if (void 0 === n) {
+      n = e ? e.length : 0;
+    }
+    if (void 0 === r) {
+      r = 0;
+    }
+    if (void 0 === i) {
+      i = this.length;
+    }
+    if (t < 0 || n > e.length || r < 0 || i > this.length) {
       throw new RangeError("out of range index");
     }
     if (r >= i && t >= n) {
@@ -626,7 +672,10 @@
       }
     }
     var i = this.length - t;
-    if ((void 0 === n || n > i) && (n = i), e.length > 0 && (n < 0 || t < 0) || t > this.length) {
+    if (void 0 === n || n > i) {
+      n = i;
+    }
+    if (e.length > 0 && (n < 0 || t < 0) || t > this.length) {
       throw new RangeError("Attempt to write outside buffer bounds");
     }
     if (!r) {
@@ -761,7 +810,28 @@
   c.prototype.slice = function (e, t) {
     var n;
     var r = this.length;
-    if ((e = ~~e) < 0 ? (e += r) < 0 && (e = 0) : e > r && (e = r), (t = void 0 === t ? r : ~~t) < 0 ? (t += r) < 0 && (t = 0) : t > r && (t = r), t < e && (t = e), c.TYPED_ARRAY_SUPPORT) {
+    if ((e = ~~e) < 0) {
+      if ((e += r) < 0) {
+        e = 0;
+      }
+    } else {
+      if (e > r) {
+        e = r;
+      }
+    }
+    if ((t = void 0 === t ? r : ~~t) < 0) {
+      if ((t += r) < 0) {
+        t = 0;
+      }
+    } else {
+      if (t > r) {
+        t = r;
+      }
+    }
+    if (t < e) {
+      t = e;
+    }
+    if (c.TYPED_ARRAY_SUPPORT) {
       (n = this.subarray(e, t)).__proto__ = c.prototype;
     } else {
       var i = t - e;
@@ -1003,7 +1073,9 @@
     return t + 4;
   };
   c.prototype.writeIntLE = function (e, t, n, r) {
-    if (e = +e, t |= 0, !r) {
+    e = +e;
+    t |= 0;
+    if (!r) {
       var i = Math.pow(2, 8 * n - 1);
       I(this, e, t, n, i - 1, -i);
     }
@@ -1019,7 +1091,9 @@
     return t + n;
   };
   c.prototype.writeIntBE = function (e, t, n, r) {
-    if (e = +e, t |= 0, !r) {
+    e = +e;
+    t |= 0;
+    if (!r) {
       var i = Math.pow(2, 8 * n - 1);
       I(this, e, t, n, i - 1, -i);
     }
@@ -1125,7 +1199,22 @@
     return M(this, e, t, !1, n);
   };
   c.prototype.copy = function (e, t, n, r) {
-    if (n || (n = 0), r || 0 === r || (r = this.length), t >= e.length && (t = e.length), t || (t = 0), r > 0 && r < n && (r = n), r === n) {
+    if (!n) {
+      n = 0;
+    }
+    if (!(r || 0 === r)) {
+      r = this.length;
+    }
+    if (t >= e.length) {
+      t = e.length;
+    }
+    if (!t) {
+      t = 0;
+    }
+    if (r > 0 && r < n) {
+      r = n;
+    }
+    if (r === n) {
       return 0;
     }
     if (0 === e.length || 0 === this.length) {
@@ -1163,7 +1252,17 @@
   };
   c.prototype.fill = function (e, t, n, r) {
     if ("string" === typeof e) {
-      if ("string" === typeof t ? (r = t, t = 0, n = this.length) : "string" === typeof n && (r = n, n = this.length), 1 === e.length) {
+      if ("string" === typeof t) {
+        r = t;
+        t = 0;
+        n = this.length;
+      } else {
+        if ("string" === typeof n) {
+          r = n;
+          n = this.length;
+        }
+      }
+      if (1 === e.length) {
         var i = e.charCodeAt(0);
         if (i < 256) {
           e = i;
@@ -1185,7 +1284,12 @@
       return this;
     }
     var o;
-    if (t >>>= 0, n = void 0 === n ? this.length : n >>> 0, e || (e = 0), "number" === typeof e) {
+    t >>>= 0;
+    n = void 0 === n ? this.length : n >>> 0;
+    if (!e) {
+      e = 0;
+    }
+    if ("number" === typeof e) {
       for (o = t; o < n; ++o) {
         this[o] = e;
       }
@@ -1234,7 +1338,8 @@
       } else if (i && (t -= 3) > -1) {
         o.push(239, 191, 189);
       }
-      if (i = null, n < 128) {
+      i = null;
+      if (n < 128) {
         if ((t -= 1) < 0) {
           break;
         }

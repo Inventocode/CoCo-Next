@@ -66,7 +66,33 @@ var s = function (e) {
     return this.config_.secondary_color;
   };
   t.prototype.init = function () {
-    if (this.html_div = document.createElement("div"), this.html_div.className = "blocklyTreeNode", this.element_ = document.createElement("div"), this.element_.id = this.config_.name, this.element_.setAttribute("role", "treeitem"), this.element_.setAttribute("name", this.config_.name), this.icon_el = document.createElement("div"), this.icon_el.className = "blocklyTreeIcon", this.config_.icon.font_id ? (0, a.create_font_icon)(this.config_.icon.font_id, this.icon_el) : this.config_.icon.html && (this.icon_el.innerHTML = this.config_.icon.html), this.config_.icon.style && this.icon_el.setAttribute("style", this.config_.icon.style), this.element_.appendChild(this.icon_el), this.config_.color && (this.element_.style.color = this.config_.color, this.element_.dataset.color = this.config_.color), this.config_.element.style && this.element_.setAttribute("style", this.config_.element.style), void 0 != this.config_.text) {
+    this.html_div = document.createElement("div");
+    this.html_div.className = "blocklyTreeNode";
+    this.element_ = document.createElement("div");
+    this.element_.id = this.config_.name;
+    this.element_.setAttribute("role", "treeitem");
+    this.element_.setAttribute("name", this.config_.name);
+    this.icon_el = document.createElement("div");
+    this.icon_el.className = "blocklyTreeIcon";
+    if (this.config_.icon.font_id) {
+      (0, a.create_font_icon)(this.config_.icon.font_id, this.icon_el);
+    } else {
+      if (this.config_.icon.html) {
+        this.icon_el.innerHTML = this.config_.icon.html;
+      }
+    }
+    if (this.config_.icon.style) {
+      this.icon_el.setAttribute("style", this.config_.icon.style);
+    }
+    this.element_.appendChild(this.icon_el);
+    if (this.config_.color) {
+      this.element_.style.color = this.config_.color;
+      this.element_.dataset.color = this.config_.color;
+    }
+    if (this.config_.element.style) {
+      this.element_.setAttribute("style", this.config_.element.style);
+    }
+    if (void 0 != this.config_.text) {
       var e = document.createElement("div");
       e.classList.add("blocklyTreeLabel");
       e.textContent = this.config_.text;
@@ -115,7 +141,8 @@ var s = function (e) {
     return this.disabled_ ? "\n        " + this.DEFAULT_CLASSNAMES.NORMAL + "\n        " + this.DEFAULT_CLASSNAMES.DISABLED + "\n        " + this.config_.element.disabled_classname + "\n      " : this.is_selected() ? "\n        " + this.DEFAULT_CLASSNAMES.NORMAL + "\n        " + this.DEFAULT_CLASSNAMES.SELECTED + "\n        " + this.config_.element.selected_classname + "\n      " : "\n      " + this.DEFAULT_CLASSNAMES.NORMAL + "\n      " + this.config_.element.unselected_classname + "\n    ";
   };
   t.prototype.update_node = function () {
-    if (this.element_.className = this.get_node_classname(), this.is_selected()) {
+    this.element_.className = this.get_node_classname();
+    if (this.is_selected()) {
       this.element_.style.backgroundColor = this.get_color();
       if (this.config_.element.selected_style) {
         this.element_.setAttribute("style", this.config_.element.selected_style);

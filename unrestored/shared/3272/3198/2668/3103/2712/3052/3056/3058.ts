@@ -82,7 +82,8 @@ exports.Import = function () {
   this.word("import");
 };
 exports.MemberExpression = function (e) {
-  if (this.print(e.object, e), !e.computed && o(e.property)) {
+  this.print(e.object, e);
+  if (!e.computed && o(e.property)) {
     throw new TypeError("Got a MemberExpression for MemberExpression property");
   }
   var t = e.computed;
@@ -118,7 +119,10 @@ exports.ModuleExpression = function (e) {
   }
 };
 exports.NewExpression = function (e, t) {
-  if (this.word("new"), this.space(), this.print(e.callee, e), this.format.minified && 0 === e.arguments.length && !e.optional && !a(t, {
+  this.word("new");
+  this.space();
+  this.print(e.callee, e);
+  if (this.format.minified && 0 === e.arguments.length && !e.optional && !a(t, {
     callee: e
   }) && !o(t) && !l(t)) {
     return;
@@ -144,7 +148,8 @@ exports.OptionalCallExpression = function (e) {
   this.token(")");
 };
 exports.OptionalMemberExpression = function (e) {
-  if (this.print(e.object, e), !e.computed && o(e.property)) {
+  this.print(e.object, e);
+  if (!e.computed && o(e.property)) {
     throw new TypeError("Got a MemberExpression for MemberExpression property");
   }
   var t = e.computed;
@@ -216,7 +221,11 @@ var o = r.isMemberExpression;
 var l = r.isNewExpression;
 function u(e) {
   return function (t) {
-    if (this.word(e), t.delegate && this.token("*"), t.argument) {
+    this.word(e);
+    if (t.delegate) {
+      this.token("*");
+    }
+    if (t.argument) {
       this.space();
       var n = this.startTerminatorless();
       this.print(t.argument, t);

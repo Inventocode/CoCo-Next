@@ -4,7 +4,7 @@ var r;
 var o = require("../11");
 var i = require("../10/index");
 var a = require("../0/index");
-var s = (module => {
+var s = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -15,9 +15,9 @@ var s = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(a);
+}(a);
 var c = require("../51/index");
-var l = (module => {
+var l = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -28,9 +28,9 @@ var l = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(c);
+}(c);
 var u = require("../8");
-var d = (module => {
+var d = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -41,14 +41,14 @@ var d = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(u);
+}(u);
 var p = require("../5");
 var f = require("../90");
 var h = require("../15/index");
 var m = require("../28/index");
 var g = require("../78");
 var _ = require("./158");
-var v = (module => {
+var v = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -59,7 +59,7 @@ var v = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(_);
+}(_);
 !function (e) {
   e[e.DOWN = 0] = "DOWN";
   e[e.UP = 1] = "UP";
@@ -178,7 +178,10 @@ _a = function (e) {
   }, [L]);
   Object(a.useEffect)(function () {
     var e = E.height;
-    if (D === g.b.VERTICAL && (e = E.width), L === g.d.IMAGE) {
+    if (D === g.b.VERTICAL) {
+      e = E.width;
+    }
+    if (L === g.d.IMAGE) {
       oe(e * B);
       ce(e * B);
       pe(0);

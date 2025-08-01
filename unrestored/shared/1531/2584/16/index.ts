@@ -7,7 +7,7 @@ export { W as d };
 export { q as e };
 export { z as f };
 var r = require("../0/index");
-var i = (module => {
+var i = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -18,7 +18,7 @@ var i = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(r);
+}(r);
 require("../50/index");
 var o = i.a.createContext(null);
 var a = function (e) {
@@ -155,7 +155,7 @@ var l = function (e) {
 var f = require("../19");
 var d = require("../337");
 var h = require("./687");
-var p = (module => {
+var p = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -166,7 +166,7 @@ var p = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(h);
+}(h);
 var _ = require("../242/index");
 var A = "undefined" !== typeof window && "undefined" !== typeof window.document && "undefined" !== typeof window.document.createElement ? r.useLayoutEffect : r.useEffect;
 var g = [];
@@ -228,7 +228,10 @@ function w(e, t, n, r, i, o, a, s, c, u) {
     n.trySubscribe();
     d();
     return function () {
-      if (l = !0, n.tryUnsubscribe(), n.onStateChange = null, f) {
+      l = !0;
+      n.tryUnsubscribe();
+      n.onStateChange = null;
+      if (f) {
         throw f;
       }
     };
@@ -343,7 +346,9 @@ function x(e, t) {
       }, [p, H, D]);
     }
     var O = c ? i.a.memo(x) : x;
-    if (O.WrappedComponent = t, O.displayName = o, T) {
+    O.WrappedComponent = t;
+    O.displayName = o;
+    if (T) {
       var S = i.a.forwardRef(function (e, t) {
         return i.a.createElement(O, Object(f.a)({}, e, {
           reactReduxForwardedRef: t

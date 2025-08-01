@@ -85,7 +85,8 @@ exports.replaceExpressionWithStatements = function (e) {
   return A.get("body.body");
 };
 exports.replaceInline = function (e) {
-  if (this.resync(), Array.isArray(e)) {
+  this.resync();
+  if (Array.isArray(e)) {
     if (Array.isArray(this.container)) {
       e = this._verifyNodeList(e);
       var t = this._containerInsertAfter(e);
@@ -97,7 +98,8 @@ exports.replaceInline = function (e) {
   return this.replaceWith(e);
 };
 exports.replaceWith = function (e) {
-  if (this.resync(), this.removed) {
+  this.resync();
+  if (this.removed) {
     throw new Error("You can't replace this node, we've already removed it");
   }
   if (e instanceof s.default) {

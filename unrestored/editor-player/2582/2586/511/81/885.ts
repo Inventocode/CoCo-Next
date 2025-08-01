@@ -27,7 +27,11 @@ var u = function () {
 !function (t) {
   function e(e, r, n, o, i, u, s) {
     var c = t.call(this, r, n) || this;
-    if (c.dataWidth = o, c.dataHeight = i, c.left = u, c.top = s, 4 === e.BYTES_PER_ELEMENT) {
+    c.dataWidth = o;
+    c.dataHeight = i;
+    c.left = u;
+    c.top = s;
+    if (4 === e.BYTES_PER_ELEMENT) {
       for (var f = r * n, h = new Uint8ClampedArray(f), l = 0; l < f; l++) {
         var d = e[l];
         var p = d >> 16 & 255;
@@ -39,7 +43,19 @@ var u = function () {
     } else {
       c.luminances = e;
     }
-    if (void 0 === o && (c.dataWidth = r), void 0 === i && (c.dataHeight = n), void 0 === u && (c.left = 0), void 0 === s && (c.top = 0), c.left + r > c.dataWidth || c.top + n > c.dataHeight) {
+    if (void 0 === o) {
+      c.dataWidth = r;
+    }
+    if (void 0 === i) {
+      c.dataHeight = n;
+    }
+    if (void 0 === u) {
+      c.left = 0;
+    }
+    if (void 0 === s) {
+      c.top = 0;
+    }
+    if (c.left + r > c.dataWidth || c.top + n > c.dataHeight) {
       throw new a.a("Crop rectangle does not fit within image data.");
     }
     return c;

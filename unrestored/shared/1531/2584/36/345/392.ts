@@ -1,5 +1,15 @@
 "use strict";
 
+(function __defineESModule(exports) {
+  if (typeof Symbol != "undefined" && Symbol.toStringTag) {
+    Object.defineProperty(exports, Symbol.toStringTag, {
+      value: "Module"
+    });
+  }
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+})(exports);
 var r = require("../../28/index");
 var o = function () {};
 var i = {

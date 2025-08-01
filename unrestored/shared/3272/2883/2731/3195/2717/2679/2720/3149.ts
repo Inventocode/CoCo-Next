@@ -15,7 +15,8 @@ exports.isIdentifierName = function (e) {
       }
     }
     if (t) {
-      if (t = !1, !p(r)) {
+      t = !1;
+      if (!p(r)) {
         return !1;
       }
     } else if (!f(r)) {

@@ -207,7 +207,19 @@ exports.init_control_blocks = function (e) {
         var u = l.get(r.BINDING.Msg);
         var d = l.get(r.BINDING.MutationAddButton);
         var p = l.get(r.BINDING.MutationRemoveButton);
-        if (this.prevElseCount_ !== this.elseCount_ && (this.prevElseCount_ < this.elseCount_ ? (this.remove_input("EXTRA_ADD_ELSE"), this.append_dummy_input("ELSE_TEXT").append_field(u.CONTROLS_IF_MSG_ELSE).append_field(p(1), "REMOVE_ELSE").append_field(d(), "ADD_ELSE_IF"), this.append_statement_input("ELSE")) : (this.remove_input("ELSE"), this.remove_input("ELSE_TEXT"), this.append_dummy_input("EXTRA_ADD_ELSE").append_field(d(), "ADD_ELSE_IF")), this.prevElseCount_ = this.elseCount_), this.prevElseifCount_ !== this.elseifCount_) {
+        if (this.prevElseCount_ !== this.elseCount_) {
+          if (this.prevElseCount_ < this.elseCount_) {
+            this.remove_input("EXTRA_ADD_ELSE");
+            this.append_dummy_input("ELSE_TEXT").append_field(u.CONTROLS_IF_MSG_ELSE).append_field(p(1), "REMOVE_ELSE").append_field(d(), "ADD_ELSE_IF");
+            this.append_statement_input("ELSE");
+          } else {
+            this.remove_input("ELSE");
+            this.remove_input("ELSE_TEXT");
+            this.append_dummy_input("EXTRA_ADD_ELSE").append_field(d(), "ADD_ELSE_IF");
+          }
+          this.prevElseCount_ = this.elseCount_;
+        }
+        if (this.prevElseifCount_ !== this.elseifCount_) {
           var f = l.get(r.BINDING.events);
           if (this.elseifCount_ > this.prevElseifCount_) {
             if (this.elseifCount_ > 0) {

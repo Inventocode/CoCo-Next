@@ -38,7 +38,7 @@ function m() {
   };
 }
 var g = require("../8");
-var _ = (module => {
+var _ = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -49,7 +49,7 @@ var _ = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(g);
+}(g);
 function v(e, t) {
   var n = t || {};
   var r = n.defaultValue;
@@ -547,7 +547,7 @@ var L = require("../103");
 var P = require("../120");
 var B = require("../140");
 var F = require("../75/index");
-var G = (module => {
+var G = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -558,7 +558,7 @@ var G = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(F);
+}(F);
 var U = function (e) {
   return +setTimeout(e, 16);
 };
@@ -952,7 +952,8 @@ function ge(e, t, n, r) {
     k(t);
     var n;
     var r = U.current;
-    if (U.current = !0, e) {
+    U.current = !0;
+    if (e) {
       if (!r && t && d) {
         n = "appear";
       }
@@ -1304,7 +1305,7 @@ function Te(e) {
 }
 var Se = require("../556/555/index");
 var Ie = require("../110");
-var Ae = (module => {
+var Ae = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -1315,7 +1316,7 @@ var Ae = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(Ie);
+}(Ie);
 var je = require("../171");
 var Ne = ["measure", "align", null, "motion"];
 var Re = l.forwardRef(function (e, t) {
@@ -1729,9 +1730,21 @@ var He = function (e) {
         }
       };
       t.onClick = function (e) {
-        if (t.fireEvents("onClick", e), t.focusTime) {
+        t.fireEvents("onClick", e);
+        if (t.focusTime) {
           var n;
-          if (t.preClickTime && t.preTouchTime ? n = Math.min(t.preClickTime, t.preTouchTime) : t.preClickTime ? n = t.preClickTime : t.preTouchTime && (n = t.preTouchTime), Math.abs(n - t.focusTime) < 20) {
+          if (t.preClickTime && t.preTouchTime) {
+            n = Math.min(t.preClickTime, t.preTouchTime);
+          } else {
+            if (t.preClickTime) {
+              n = t.preClickTime;
+            } else {
+              if (t.preTouchTime) {
+                n = t.preTouchTime;
+              }
+            }
+          }
+          if (Math.abs(n - t.focusTime) < 20) {
             return;
           }
           t.focusTime = 0;
@@ -1748,9 +1761,12 @@ var He = function (e) {
       };
       t.onPopupMouseDown = function () {
         var e;
-        if (t.hasPopupMouseDown = !0, clearTimeout(t.mouseDownTimeout), t.mouseDownTimeout = window.setTimeout(function () {
+        t.hasPopupMouseDown = !0;
+        clearTimeout(t.mouseDownTimeout);
+        t.mouseDownTimeout = window.setTimeout(function () {
           t.hasPopupMouseDown = !1;
-        }, 0), t.context) {
+        }, 0);
+        if (t.context) {
           (e = t.context).onPopupMouseDown.apply(e, arguments);
         }
       };
@@ -1998,7 +2014,8 @@ var He = function (e) {
       value: function (e, t, n) {
         var r = this;
         var o = 1e3 * t;
-        if (this.clearDelayTimer(), o) {
+        this.clearDelayTimer();
+        if (o) {
           var i = n ? {
             pageX: n.pageX,
             pageY: n.pageY
@@ -3055,7 +3072,16 @@ function Je(e) {
         var t;
         var n = mn();
         var r = e.which;
-        if (r === u.a.ENTER && ("combobox" !== B && e.preventDefault(), sn || dn(!0)), gn(!!Gt), r === u.a.BACKSPACE && !n && gt && !Gt && jt.length) {
+        if (r === u.a.ENTER) {
+          if ("combobox" !== B) {
+            e.preventDefault();
+          }
+          if (!sn) {
+            dn(!0);
+          }
+        }
+        gn(!!Gt);
+        if (r === u.a.BACKSPACE && !n && gt && !Gt && jt.length) {
           var o = Object(T.c)(Yt, jt);
           if (null !== o.removedValue) {
             Jt(o.values);

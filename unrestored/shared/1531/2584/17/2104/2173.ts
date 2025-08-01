@@ -210,7 +210,8 @@ var d = function () {
       throw new ReferenceError("Target connection not found.");
     }
     var e = this.target_connection.get_xy();
-    if (a.vec2.sub(e, e, [this.x_, this.y_]), 0 !== e[0] || 0 !== e[1]) {
+    a.vec2.sub(e, e, [this.x_, this.y_]);
+    if (0 !== e[0] || 0 !== e[1]) {
       var t = this.targetBlock();
       var n = t.get_svg_root();
       var r = this.utils.get_relative_xy(n);
@@ -251,7 +252,8 @@ var d = function () {
       if (o.is_connected()) {
         var l = o.targetBlock();
         var f = o.get_shadow_dom();
-        if (o.set_shadow_dom(void 0), l && l.is_shadow()) {
+        o.set_shadow_dom(void 0);
+        if (l && l.is_shadow()) {
           this.events.disable();
           f = s.is_shadow() ? this.xml.block_to_dom(s) : this.xml.block_to_dom(l);
           l.dispose();
@@ -367,7 +369,9 @@ var d = function () {
     if (t.get_workspace() && !this.is_connected() && n) {
       this.events.disable();
       var r = "color_picker" === n.getAttribute("type") ? this.xml.dom_to_block(n, t.get_workspace()) : this.xml.dom_to_block_headless(n, t.get_workspace());
-      if (n.setAttribute("id", r.id), this.set_shadow_dom(n), r.output_connection) {
+      n.setAttribute("id", r.id);
+      this.set_shadow_dom(n);
+      if (r.output_connection) {
         this.connect(r.output_connection);
       } else {
         if (!r.previous_connection) {
@@ -461,7 +465,8 @@ var d = function () {
   };
   e.prototype.hide_all = function () {
     var e;
-    if (this.set_hidden(!0), this.target_connection) {
+    this.set_hidden(!0);
+    if (this.target_connection) {
       var t = this.targetBlock();
       if (void 0 == t) {
         throw new Error("target_block should not be undefined");
@@ -547,7 +552,10 @@ var d = function () {
     this.shadow_dom = e;
   };
   e.prototype.connect = function (e, t) {
-    if (void 0 === t && (t = !1), this.target_connection == e) {
+    if (void 0 === t) {
+      t = !1;
+    }
+    if (this.target_connection == e) {
       return !1;
     }
     var n = !0;

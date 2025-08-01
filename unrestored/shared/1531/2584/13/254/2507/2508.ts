@@ -12,7 +12,8 @@ exports.calculateChange = function (e, t, n, r, i) {
   var l = c - (i.getBoundingClientRect().top + window.pageYOffset);
   if ("vertical" === n) {
     var f = void 0;
-    if (f = l < 0 ? 0 : l > a ? 1 : Math.round(100 * l / a) / 100, t.a !== f) {
+    f = l < 0 ? 0 : l > a ? 1 : Math.round(100 * l / a) / 100;
+    if (t.a !== f) {
       return {
         h: t.h,
         s: t.s,

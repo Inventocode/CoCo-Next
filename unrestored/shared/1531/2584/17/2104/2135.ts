@@ -269,8 +269,21 @@ var s = function () {
     if (void 0 == this.top_block) {
       throw new ReferenceError("Top block not found when applying connections.");
     }
-    if (this.highlighting_block && this.highlighted_block ? this.closest_connection = (null === (e = this.highlighted_block.output_connection) || void 0 === e ? void 0 : e.target_connection) || (null === (t = this.highlighted_block.previous_connection) || void 0 === t ? void 0 : t.target_connection) : this.marker_connection && (this.closest_connection = this.marker_connection.target_connection), this.closest_connection) {
-      if (this.events.disable(), this.hide_preview(), this.events.enable(), this.local_connection && this.local_connection.connect(this.closest_connection), this.top_block.is_rendered()) {
+    if (this.highlighting_block && this.highlighted_block) {
+      this.closest_connection = (null === (e = this.highlighted_block.output_connection) || void 0 === e ? void 0 : e.target_connection) || (null === (t = this.highlighted_block.previous_connection) || void 0 === t ? void 0 : t.target_connection);
+    } else {
+      if (this.marker_connection) {
+        this.closest_connection = this.marker_connection.target_connection;
+      }
+    }
+    if (this.closest_connection) {
+      this.events.disable();
+      this.hide_preview();
+      this.events.enable();
+      if (this.local_connection) {
+        this.local_connection.connect(this.closest_connection);
+      }
+      if (this.top_block.is_rendered()) {
         if (this.local_connection) {
           var n = this.local_connection.is_superior() ? this.closest_connection : this.local_connection;
           this.block_animations.connection_ui_effect(n.get_source_block());

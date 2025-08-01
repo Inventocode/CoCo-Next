@@ -57,7 +57,8 @@ exports.is_valid_context = function (e) {
     return !0;
   }
   for (var c = a.target_connection, u = function () {
-      if ((0, o.assert)(c.is_superior()), c.context === a.context) {
+      (0, o.assert)(c.is_superior());
+      if (c.context === a.context) {
         if (e.type === r.PROCEDURE_BLOCK_TYPES.PARAM) {
           var s = !1;
           var u = e.get_field_value("param_name") || "";

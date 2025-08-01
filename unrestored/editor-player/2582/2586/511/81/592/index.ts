@@ -26,7 +26,10 @@
     throw new Error("Can't search globals for BigInt!");
   }
   function y(t) {
-    if ("undefined" === typeof o && (o = g()), null === o) {
+    if ("undefined" === typeof o) {
+      o = g();
+    }
+    if (null === o) {
       throw new Error("BigInt is not supported!");
     }
     return o(t);
@@ -403,7 +406,10 @@
     t.numericCompaction = function (e, r, n) {
       for (var o = 0, i = !1, a = new Int32Array(t.MAX_NUMERIC_CODEWORDS); r < e[0] && !i;) {
         var u = e[r++];
-        if (r === e[0] && (i = !0), u < t.TEXT_COMPACTION_MODE_LATCH) {
+        if (r === e[0]) {
+          i = !0;
+        }
+        if (u < t.TEXT_COMPACTION_MODE_LATCH) {
           a[o] = u;
           o++;
         } else {

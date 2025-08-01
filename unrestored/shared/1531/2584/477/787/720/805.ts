@@ -389,7 +389,25 @@ var h = function () {
   };
   e.prototype.applyToEvent = function (e, t) {
     var n;
-    if (this._extra && Object.keys(this._extra).length && (e.extra = Object(o.a)(Object(o.a)({}, this._extra), e.extra)), this._tags && Object.keys(this._tags).length && (e.tags = Object(o.a)(Object(o.a)({}, this._tags), e.tags)), this._user && Object.keys(this._user).length && (e.user = Object(o.a)(Object(o.a)({}, this._user), e.user)), this._contexts && Object.keys(this._contexts).length && (e.contexts = Object(o.a)(Object(o.a)({}, this._contexts), e.contexts)), this._level && (e.level = this._level), this._transactionName && (e.transaction = this._transactionName), this._span) {
+    if (this._extra && Object.keys(this._extra).length) {
+      e.extra = Object(o.a)(Object(o.a)({}, this._extra), e.extra);
+    }
+    if (this._tags && Object.keys(this._tags).length) {
+      e.tags = Object(o.a)(Object(o.a)({}, this._tags), e.tags);
+    }
+    if (this._user && Object.keys(this._user).length) {
+      e.user = Object(o.a)(Object(o.a)({}, this._user), e.user);
+    }
+    if (this._contexts && Object.keys(this._contexts).length) {
+      e.contexts = Object(o.a)(Object(o.a)({}, this._contexts), e.contexts);
+    }
+    if (this._level) {
+      e.level = this._level;
+    }
+    if (this._transactionName) {
+      e.transaction = this._transactionName;
+    }
+    if (this._span) {
       e.contexts = Object(o.a)({
         trace: this._span.getTraceContext()
       }, e.contexts);
@@ -470,7 +488,34 @@ var A = function () {
     }
   }
   e.prototype.update = function (e) {
-    if (void 0 === e && (e = {}), e.user && (!this.ipAddress && e.user.ip_address && (this.ipAddress = e.user.ip_address), this.did || e.did || (this.did = e.user.id || e.user.email || e.user.username)), this.timestamp = e.timestamp || Object(c.c)(), e.ignoreDuration && (this.ignoreDuration = e.ignoreDuration), e.sid && (this.sid = 32 === e.sid.length ? e.sid : Object(s.c)()), void 0 !== e.init && (this.init = e.init), !this.did && e.did && (this.did = "" + e.did), "number" === typeof e.started && (this.started = e.started), this.ignoreDuration) {
+    if (void 0 === e) {
+      e = {};
+    }
+    if (e.user) {
+      if (!this.ipAddress && e.user.ip_address) {
+        this.ipAddress = e.user.ip_address;
+      }
+      if (!(this.did || e.did)) {
+        this.did = e.user.id || e.user.email || e.user.username;
+      }
+    }
+    this.timestamp = e.timestamp || Object(c.c)();
+    if (e.ignoreDuration) {
+      this.ignoreDuration = e.ignoreDuration;
+    }
+    if (e.sid) {
+      this.sid = 32 === e.sid.length ? e.sid : Object(s.c)();
+    }
+    if (void 0 !== e.init) {
+      this.init = e.init;
+    }
+    if (!this.did && e.did) {
+      this.did = "" + e.did;
+    }
+    if ("number" === typeof e.started) {
+      this.started = e.started;
+    }
+    if (this.ignoreDuration) {
       this.duration = void 0;
     } else if ("number" === typeof e.duration) {
       this.duration = e.duration;
@@ -735,7 +780,10 @@ var g = function () {
     return this._callExtensionMethod("traceHeaders");
   };
   e.prototype.captureSession = function (e) {
-    if (void 0 === e && (e = !1), e) {
+    if (void 0 === e) {
+      e = !1;
+    }
+    if (e) {
       return this.endSession();
     }
     this._sendSessionUpdate();

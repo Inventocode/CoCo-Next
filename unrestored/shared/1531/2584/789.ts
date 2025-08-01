@@ -6,7 +6,7 @@ var r = require("./19");
 var i = require("./0/index");
 var o = require("./29");
 var a = require("./8");
-var s = (module => {
+var s = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -17,7 +17,7 @@ var s = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(a);
+}(a);
 var c = require("./2627/686/index");
 var u = function () {
   var e = (0, i.useContext(g).getPrefixCls)("empty-img-default");

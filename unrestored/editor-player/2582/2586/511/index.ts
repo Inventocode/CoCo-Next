@@ -5,7 +5,7 @@ var i;
 var o = require("../../../../shared/1531/2584/25/index");
 var a = require("../../../../shared/1531/2584/296");
 var s = require("../../../../shared/1531/2584/1/index");
-var u = (module => {
+var u = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -16,12 +16,12 @@ var u = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(s);
+}(s);
 var c = require("../../../../shared/1531/2584/10/index");
 var l = require("../../../../shared/1531/2584/6");
 var d = require("../../../../shared/1531/2584/7");
 var f = require("../../../../shared/1531/2584/0/index");
-var h = (module => {
+var h = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -32,11 +32,11 @@ var h = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(f);
+}(f);
 var p = require("../../../../shared/1531/2584/16/index");
 var m = require("../../../../shared/1531/2584/38/2629");
 var b = require("../../../../shared/1531/2584/186/index");
-var g = (module => {
+var g = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -47,7 +47,7 @@ var g = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(b);
+}(b);
 require("../../../../shared/1531/2584/710");
 var v = require("../../../../shared/1531/2584/36/index");
 var _ = require("../../../../shared/1531/2584/79");
@@ -412,7 +412,7 @@ var G = function (t) {
 }(v.c);
 var Y = require("../../../../shared/1531/2584/679");
 var z = require("../../../../shared/1531/2584/75/index");
-var K = (module => {
+var K = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -423,9 +423,9 @@ var K = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(z);
+}(z);
 var q = require("../../../../shared/1531/2584/8");
-var X = (module => {
+var X = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -436,9 +436,9 @@ var X = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(q);
+}(q);
 var J = require("../../../../shared/1531/2584/51/index");
-var Z = (module => {
+var Z = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -449,7 +449,7 @@ var Z = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(J);
+}(J);
 var Q = require("../../../../shared/1531/2584/189");
 var $ = require("../../../../shared/1531/2584/204");
 function tt(t, e) {
@@ -472,7 +472,7 @@ function tt(t, e) {
 var et;
 var nt = require("../../../../shared/1531/2584/233/324");
 var rt = require("./138");
-var it = (module => {
+var it = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -483,7 +483,7 @@ var it = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(rt);
+}(rt);
 var ot = "COCO_PLAYER_DIALOG";
 !function (t) {
   t.MESSAGE = "MESSAGE";
@@ -497,7 +497,9 @@ var at = {
   dialogPropMap: new Map(),
   addDialog: function (t) {
     var e = m.a();
-    if (this.dialogArr.push(e), this.dialogPropMap.set(e, t), 1 === this.dialogArr.length) {
+    this.dialogArr.push(e);
+    this.dialogPropMap.set(e, t);
+    if (1 === this.dialogArr.length) {
       var n = this.dialogArr[0];
       this.showDialog(n);
     } else {
@@ -845,7 +847,7 @@ var lt = function (t) {
 }(v.c);
 var dt = require("../../../../shared/1531/2584/671");
 var ft = require("../../../../shared/1531/2584/36/345/553/index");
-var ht = (module => {
+var ht = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -856,7 +858,7 @@ var ht = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(ft);
+}(ft);
 var pt = {
   "7%": "L",
   "15%": "M",
@@ -1001,7 +1003,7 @@ function Et() {
 var Tt;
 var jt = require("../../../../shared/1531/2584/23");
 var St = require("./249");
-var At = (module => {
+var At = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -1012,7 +1014,7 @@ var At = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(St);
+}(St);
 function kt(t) {
   switch (t) {
     case Tt.UNEXPECTED_ERROR:
@@ -1052,7 +1054,7 @@ function kt(t) {
   t[t.NOT_FOUND = 9] = "NOT_FOUND";
 }(Tt || (Tt = {}));
 var It = require("./898");
-var Mt = (module => {
+var Mt = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -1063,9 +1065,9 @@ var Mt = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(It);
+}(It);
 var Ct = require("./899");
-var xt = (module => {
+var xt = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -1076,9 +1078,9 @@ var xt = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(Ct);
+}(Ct);
 var Rt = require("./900");
-var Nt = (module => {
+var Nt = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -1089,9 +1091,9 @@ var Nt = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(Rt);
+}(Rt);
 var Lt = require("./613");
-var Dt = (module => {
+var Dt = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -1102,9 +1104,9 @@ var Dt = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(Lt);
+}(Lt);
 var Bt = require("./901");
-var Pt = (module => {
+var Pt = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -1115,9 +1117,9 @@ var Pt = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(Bt);
+}(Bt);
 var Ut = require("./902");
-var Wt = (module => {
+var Wt = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -1128,7 +1130,7 @@ var Wt = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(Ut);
+}(Ut);
 var Ht = function (t) {
   Object(j.a)(n, t);
   var e = Object(S.a)(n);
@@ -1549,7 +1551,7 @@ require("./1162");
 var he = require("../../../../shared/1531/2584/2628/index");
 var pe = require("../../../../shared/1531/2584/13/index");
 var me = require("./71");
-var be = (module => {
+var be = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -1560,7 +1562,7 @@ var be = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(me);
+}(me);
 var ge = [{
   number: 1,
   letter: ""
@@ -1686,7 +1688,10 @@ var ye = Object(f.memo)(function () {
   var o = i[0];
   var a = i[1];
   Object(f.useEffect)(function () {
-    if (ce && clearInterval(ce), n.callingPageVisible && n.callStatus === N.b.OFFHOOK) {
+    if (ce) {
+      clearInterval(ce);
+    }
+    if (n.callingPageVisible && n.callStatus === N.b.OFFHOOK) {
       var t = 0;
       ce = setInterval(function () {
         t++;

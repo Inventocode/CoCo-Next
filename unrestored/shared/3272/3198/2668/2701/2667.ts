@@ -119,10 +119,13 @@
     }
   }
   function p(e, t) {
-    if (t && "object" === typeof t || (t = {
-      loose: !!t,
-      includePrerelease: !1
-    }), e instanceof f) {
+    if (!(t && "object" === typeof t)) {
+      t = {
+        loose: !!t,
+        includePrerelease: !1
+      };
+    }
+    if (e instanceof f) {
       return e;
     }
     if ("string" !== typeof e) {
@@ -141,10 +144,13 @@
     }
   }
   function f(e, t) {
-    if (t && "object" === typeof t || (t = {
-      loose: !!t,
-      includePrerelease: !1
-    }), e instanceof f) {
+    if (!(t && "object" === typeof t)) {
+      t = {
+        loose: !!t,
+        includePrerelease: !1
+      };
+    }
+    if (e instanceof f) {
       if (e.loose === t.loose) {
         return e;
       }
@@ -165,7 +171,11 @@
     if (!n) {
       throw new TypeError("Invalid Version: " + e);
     }
-    if (this.raw = e, this.major = +n[1], this.minor = +n[2], this.patch = +n[3], this.major > i || this.major < 0) {
+    this.raw = e;
+    this.major = +n[1];
+    this.minor = +n[2];
+    this.patch = +n[3];
+    if (this.major > i || this.major < 0) {
       throw new TypeError("Invalid major version");
     }
     if (this.minor > i || this.minor < 0) {
@@ -224,7 +234,10 @@
     return h(this.major, e.major) || h(this.minor, e.minor) || h(this.patch, e.patch);
   };
   f.prototype.comparePre = function (e) {
-    if (e instanceof f || (e = new f(e, this.options)), this.prerelease.length && !e.prerelease.length) {
+    if (!(e instanceof f)) {
+      e = new f(e, this.options);
+    }
+    if (this.prerelease.length && !e.prerelease.length) {
       return -1;
     }
     if (!this.prerelease.length && e.prerelease.length) {
@@ -237,7 +250,8 @@
     do {
       var n = this.prerelease[t];
       var i = e.prerelease[t];
-      if (r("prerelease compare", t, n, i), void 0 === n && void 0 === i) {
+      r("prerelease compare", t, n, i);
+      if (void 0 === n && void 0 === i) {
         return 0;
       }
       if (void 0 === i) {
@@ -259,7 +273,8 @@
     do {
       var n = this.build[t];
       var i = e.build[t];
-      if (r("prerelease compare", t, n, i), void 0 === n && void 0 === i) {
+      r("prerelease compare", t, n, i);
+      if (void 0 === n && void 0 === i) {
         return 0;
       }
       if (void 0 === i) {
@@ -447,10 +462,13 @@
     }
   }
   function x(e, t) {
-    if (t && "object" === typeof t || (t = {
-      loose: !!t,
-      includePrerelease: !1
-    }), e instanceof x) {
+    if (!(t && "object" === typeof t)) {
+      t = {
+        loose: !!t,
+        includePrerelease: !1
+      };
+    }
+    if (e instanceof x) {
       if (e.loose === !!t.loose) {
         return e;
       }
@@ -514,10 +532,13 @@
   exports.Comparator = x;
   var P = {};
   function A(e, t) {
-    if (t && "object" === typeof t || (t = {
-      loose: !!t,
-      includePrerelease: !1
-    }), e instanceof A) {
+    if (!(t && "object" === typeof t)) {
+      t = {
+        loose: !!t,
+        includePrerelease: !1
+      };
+    }
+    if (e instanceof A) {
       return e.loose === !!t.loose && e.includePrerelease === !!t.includePrerelease ? e : new A(e.raw, t);
     }
     if (e instanceof x) {
@@ -526,11 +547,16 @@
     if (!(this instanceof A)) {
       return new A(e, t);
     }
-    if (this.options = t, this.loose = !!t.loose, this.includePrerelease = !!t.includePrerelease, this.raw = e, this.set = e.split(/\s*\|\|\s*/).map(function (e) {
+    this.options = t;
+    this.loose = !!t.loose;
+    this.includePrerelease = !!t.includePrerelease;
+    this.raw = e;
+    this.set = e.split(/\s*\|\|\s*/).map(function (e) {
       return this.parseRange(e.trim());
     }, this).filter(function (e) {
       return e.length;
-    }), !this.set.length) {
+    });
+    if (!this.set.length) {
       throw new TypeError("Invalid SemVer Range: " + e);
     }
     this.format();
@@ -558,7 +584,8 @@
     }
     if (t.prerelease.length && !n.includePrerelease) {
       for (i = 0; i < e.length; i++) {
-        if (r(e[i].semver), e[i].semver !== P && e[i].semver.prerelease.length > 0) {
+        r(e[i].semver);
+        if (e[i].semver !== P && e[i].semver.prerelease.length > 0) {
           var a = e[i].semver;
           if (a.major === t.major && a.minor === t.minor && a.patch === t.patch) {
             return !0;
@@ -608,7 +635,7 @@
       var c = t.set[u];
       var p = null;
       var d = null;
-      if (c.forEach(function (e) {
+      c.forEach(function (e) {
         if (e.semver === P) {
           e = new x(">=0.0.0");
         }
@@ -621,7 +648,8 @@
             d = e;
           }
         }
-      }), p.operator === o || p.operator === l) {
+      });
+      if (p.operator === o || p.operator === l) {
         return !1;
       }
       if ((!d.operator || d.operator === o) && a(e, d.semver)) {
@@ -653,7 +681,8 @@
     return this.value;
   };
   x.prototype.test = function (e) {
-    if (r("Comparator.test", e, this.options.loose), this.semver === P || e === P) {
+    r("Comparator.test", e, this.options.loose);
+    if (this.semver === P || e === P) {
       return !0;
     }
     if ("string" === typeof e) {
@@ -670,10 +699,13 @@
       throw new TypeError("a Comparator is required");
     }
     var n;
-    if (t && "object" === typeof t || (t = {
-      loose: !!t,
-      includePrerelease: !1
-    }), "" === this.operator) {
+    if (!(t && "object" === typeof t)) {
+      t = {
+        loose: !!t,
+        includePrerelease: !1
+      };
+    }
+    if ("" === this.operator) {
       return "" === this.value || (n = new A(e.value, t), I(this.value, n, t));
     }
     if ("" === e.operator) {
@@ -935,7 +967,8 @@
     if (e.test(n)) {
       return n;
     }
-    if (n = new f("0.0.0-0"), e.test(n)) {
+    n = new f("0.0.0-0");
+    if (e.test(n)) {
       return n;
     }
     n = null;

@@ -137,7 +137,8 @@ exports.assertPluginList = function (e, t) {
           if (t.length > 3) {
             throw new Error("".concat(a(e), " may only be a two-tuple or three-tuple"));
           }
-          if (p(s(e, 0), t[0]), t.length > 1) {
+          p(s(e, 0), t[0]);
+          if (t.length > 1) {
             var n = t[1];
             if (void 0 !== n && !1 !== n && ("object" !== typeof n || Array.isArray(n) || null === n)) {
               throw new Error("".concat(a(s(e, 1)), " must be an object, false, or undefined"));

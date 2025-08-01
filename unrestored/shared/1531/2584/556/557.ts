@@ -6,7 +6,7 @@ var i = require("../33/index");
 var a = require("../54");
 var s = require("../0/index");
 var c = require("../8");
-var l = (module => {
+var l = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -17,7 +17,7 @@ var l = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(c);
+}(c);
 var u = require("../1504/788");
 function d(e, t) {
   var n = e.prefixCls;
@@ -299,7 +299,8 @@ function T(e, t) {
           Te(r - 1, !0);
           break;
         }
-        if (e += o, 0 === n && e <= G || r === n - 1 && e + Ie(n) <= G) {
+        e += o;
+        if (0 === n && e <= G || r === n - 1 && e + Ie(n) <= G) {
           Te(n);
           ae(null);
           break;

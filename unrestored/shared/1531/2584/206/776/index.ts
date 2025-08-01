@@ -643,7 +643,10 @@
             return Q(i, e);
           }, C, s, k, a.filename, a.disableFixes, i.cwd);
         } catch (N) {
-          if (N.message += "\nOccurred while linting ".concat(a.filename), F("An error occurred while traversing"), F("Filename:", a.filename), N.currentNode) {
+          N.message += "\nOccurred while linting ".concat(a.filename);
+          F("An error occurred while traversing");
+          F("Filename:", a.filename);
+          if (N.currentNode) {
             var P = N.currentNode.loc.start.line;
             F("Line:", P);
             N.message += ":".concat(P);
@@ -706,7 +709,8 @@
         };
         var h = f.extname(a);
         return l(u(c, s).map(function (e, s) {
-          if (F("A code block was found: %o", e.filename || "(unnamed)"), "string" === typeof e) {
+          F("A code block was found: %o", e.filename || "(unnamed)");
+          if ("string" === typeof e) {
             return o._verifyWithoutProcessors(e, t, n);
           }
           var c = e.text;
@@ -778,7 +782,12 @@
         var c = n && n.filename || "".concat(e.slice(0, 10), "...");
         var u = !n || "undefined" === typeof n.fix || n.fix;
         do {
-          if (a++, F("Linting code for ".concat(c, " (pass ").concat(a, ")")), i = this.verify(s, t, n), F("Generating fixed text for ".concat(c, " (pass ").concat(a, ")")), r = B.applyFixes(s, i, u), 1 === i.length && i[0].fatal) {
+          a++;
+          F("Linting code for ".concat(c, " (pass ").concat(a, ")"));
+          i = this.verify(s, t, n);
+          F("Generating fixed text for ".concat(c, " (pass ").concat(a, ")"));
+          r = B.applyFixes(s, i, u);
+          if (1 === i.length && i[0].fatal) {
             break;
           }
           o = o || r.fixed;

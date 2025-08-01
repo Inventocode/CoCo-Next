@@ -122,7 +122,8 @@ module.exports = {
       if (!(a = e.match(d))) {
         throw new Error("Invalid JSON-pointer: " + e);
       }
-      if (r = +a[1], "#" == (i = a[2])) {
+      r = +a[1];
+      if ("#" == (i = a[2])) {
         if (r >= t) {
           throw new Error("Cannot access property/index " + r + " levels up, current level is " + t);
         }
@@ -131,7 +132,8 @@ module.exports = {
       if (r > t) {
         throw new Error("Cannot access data " + r + " levels up, current level is " + t);
       }
-      if (o = "data" + (t - r || ""), !i) {
+      o = "data" + (t - r || "");
+      if (!i) {
         return o;
       }
     }

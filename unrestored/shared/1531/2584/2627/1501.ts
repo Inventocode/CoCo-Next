@@ -50,7 +50,7 @@ A.cancel = function (e) {
   return d(t);
 };
 var g = require("../75/index");
-var v = (module => {
+var v = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -61,7 +61,7 @@ var v = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(g);
+}(g);
 function m() {
   return !("undefined" === typeof window || !window.document || !window.document.createElement);
 }
@@ -218,14 +218,17 @@ var D = function e(t) {
           var t;
           var r = e.options;
           return (null === r || void 0 === r ? void 0 : r.container) === (null === (t = n.options) || void 0 === t ? void 0 : t.container);
-        }).length && B.set(r, E({
-          width: 0 !== t ? "calc(100% - ".concat(t, "px)") : void 0,
-          overflow: "hidden",
-          overflowX: "hidden",
-          overflowY: "hidden"
-        }, {
-          element: r
-        })), !S.test(i)) {
+        }).length) {
+          B.set(r, E({
+            width: 0 !== t ? "calc(100% - ".concat(t, "px)") : void 0,
+            overflow: "hidden",
+            overflowX: "hidden",
+            overflowY: "hidden"
+          }, {
+            element: r
+          }));
+        }
+        if (!S.test(i)) {
           var o = "".concat(i, " ").concat("ant-scrolling-effect");
           r.className = o.trim();
         }
@@ -241,9 +244,10 @@ var D = function e(t) {
     var t = k.find(function (e) {
       return e.target === n.lockTarget;
     });
-    if (k = k.filter(function (e) {
+    k = k.filter(function (e) {
       return e.target !== n.lockTarget;
-    }), t && !k.some(function (e) {
+    });
+    if (t && !k.some(function (e) {
       var n;
       var r = e.options;
       return (null === r || void 0 === r ? void 0 : r.container) === (null === (n = t.options) || void 0 === n ? void 0 : n.container);
@@ -429,7 +433,7 @@ var N = function (e) {
 }(o.Component);
 var M = require("../20");
 var j = require("../8");
-var L = (module => {
+var L = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -440,7 +444,7 @@ var L = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(j);
+}(j);
 var U = {
   MAC_ENTER: 3,
   BACKSPACE: 8,
@@ -930,7 +934,8 @@ function ue(e, t, n, r) {
     B(t);
     var n;
     var r = U.current;
-    if (U.current = !0, e) {
+    U.current = !0;
+    if (e) {
       if (!r && t && u) {
         n = "appear";
       }
@@ -1582,7 +1587,8 @@ function Oe(e) {
           }
         }
       } else {
-        if (U(!1), C && I.current && d) {
+        U(!1);
+        if (C && I.current && d) {
           try {
             I.current.focus({
               preventScroll: !0

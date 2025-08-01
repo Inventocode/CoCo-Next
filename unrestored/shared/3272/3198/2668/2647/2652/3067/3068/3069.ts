@@ -133,9 +133,16 @@ function h(e, t) {
   var u = t.get("left").resolve();
   if (u.isIdentifier({
     name: e
-  }) ? n = o : o.isIdentifier({
-    name: e
-  }) && (n = u), n) {
+  })) {
+    n = o;
+  } else {
+    if (o.isIdentifier({
+      name: e
+    })) {
+      n = u;
+    }
+  }
+  if (n) {
     return "===" === s ? n.getTypeAnnotation() : a.indexOf(s) >= 0 ? p() : void 0;
   }
   if (("===" === s || "==" === s) && (u.isUnaryExpression({

@@ -282,7 +282,8 @@ exports.TSModuleDeclaration = function (e) {
     this.word("Identifier" === n.type ? "namespace" : "module");
     this.space();
   }
-  if (this.print(n, e), !e.body) {
+  this.print(n, e);
+  if (!e.body) {
     return void this.token(";");
   }
   var r = e.body;
@@ -487,7 +488,8 @@ exports.TSVoidKeyword = function () {
   this.word("void");
 };
 exports.tsPrintBraced = function (e, t) {
-  if (this.token("{"), e.length) {
+  this.token("{");
+  if (e.length) {
     this.indent();
     this.newline();
     var n;

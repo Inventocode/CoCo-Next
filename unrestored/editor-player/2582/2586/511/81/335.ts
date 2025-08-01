@@ -41,7 +41,8 @@ var u = function () {
     for (var o = this.field, u = t, s = e, c = o.getZero(), f = o.getOne(); s.getDegree() >= (r / 2 | 0);) {
       var h = u;
       var l = c;
-      if (c = f, (u = s).isZero()) {
+      c = f;
+      if ((u = s).isZero()) {
         throw new i.a("r_{i-1} was zero");
       }
       s = h;
@@ -51,7 +52,8 @@ var u = function () {
         d = d.addOrSubtract(o.buildMonomial(y, w));
         s = s.addOrSubtract(u.multiplyByMonomial(y, w));
       }
-      if (f = d.multiply(c).addOrSubtract(l), s.getDegree() >= u.getDegree()) {
+      f = d.multiply(c).addOrSubtract(l);
+      if (s.getDegree() >= u.getDegree()) {
         throw new a.a("Division algorithm failed to reduce polynomial?");
       }
     }

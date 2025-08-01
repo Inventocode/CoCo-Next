@@ -118,7 +118,9 @@ function k(e) {
   };
 }
 function w(e, t) {
-  if (e = e.toLowerCase(), e = j.aliases[e] || e, t.mobileToDesktop && j.desktopNames[e]) {
+  e = e.toLowerCase();
+  e = j.aliases[e] || e;
+  if (t.mobileToDesktop && j.desktopNames[e]) {
     var n = j.data[j.desktopNames[e]];
     if ("android" === e) {
       i = k(j.data[e]);
@@ -225,7 +227,13 @@ function _(e, t) {
 }
 var D = {};
 function j(e, t) {
-  if ("undefined" === typeof t && (t = {}), "undefined" === typeof t.path && (t.path = s.resolve ? s.resolve(".") : "."), "undefined" === typeof e || null === e) {
+  if ("undefined" === typeof t) {
+    t = {};
+  }
+  if ("undefined" === typeof t.path) {
+    t.path = s.resolve ? s.resolve(".") : ".";
+  }
+  if ("undefined" === typeof e || null === e) {
     var n = j.loadConfig(t);
     e = n || j.defaults;
   }
@@ -249,7 +257,9 @@ function j(e, t) {
     return D[o];
   }
   var c = m(_(e, r)).sort(function (e, t) {
-    if (e = e.split(" "), t = t.split(" "), e[0] === t[0]) {
+    e = e.split(" ");
+    t = t.split(" ");
+    if (e[0] === t[0]) {
       var n = e[1].split("-")[0];
       return S(t[1].split("-")[0].split("."), n.split("."));
     }
@@ -542,7 +552,8 @@ var U = [{
 }, {
   regexp: /^(>=?|<=?)\s*(\d+|\d+\.\d+|\.\d+)%\s+in\s+my\s+stats$/,
   select: function (e, t, n) {
-    if (n = parseFloat(n), !e.customUsage) {
+    n = parseFloat(n);
+    if (!e.customUsage) {
       throw new l("Custom usage statistics was not provided");
     }
     var r = e.customUsage;

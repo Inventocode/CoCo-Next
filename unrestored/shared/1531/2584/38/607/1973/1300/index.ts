@@ -180,7 +180,8 @@ s.prototype._validateMapping = function (e, t, n, r) {
 };
 s.prototype._serializeMappings = function () {
   for (var e, t, n, o, a = 0, s = 1, c = 0, u = 0, l = 0, f = 0, d = "", h = this._mappings.toArray(), p = 0, _ = h.length; p < _; p++) {
-    if (e = "", (t = h[p]).generatedLine !== s) {
+    e = "";
+    if ((t = h[p]).generatedLine !== s) {
       for (a = 0; t.generatedLine !== s;) {
         e += ";";
         s++;

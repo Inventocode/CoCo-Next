@@ -17,7 +17,8 @@ module.exports = function (e) {
     }, c = Math.max(0, t.length - a.length), u = [], l = 0; l < c; l++) {
     u.push("$" + l);
   }
-  if (n = Function("binder", "return function (" + u.join(",") + "){ return binder.apply(this,arguments); }")(s), t.prototype) {
+  n = Function("binder", "return function (" + u.join(",") + "){ return binder.apply(this,arguments); }")(s);
+  if (t.prototype) {
     var f = function () {};
     f.prototype = t.prototype;
     n.prototype = new f();

@@ -118,7 +118,8 @@ exports.parseAttr = function (e, t) {
     if (!1 !== f || "=" !== A) {
       if (!1 === f || p !== i) {
         if (/\s|\n|\t/.test(A)) {
-          if (e = e.replace(/\s|\n|\t/g, " "), !1 === f) {
+          e = e.replace(/\s|\n|\t/g, " ");
+          if (!1 === f) {
             if (-1 === (_ = s(e, p))) {
               h(r.trim(e.slice(n, p)));
               f = !1;

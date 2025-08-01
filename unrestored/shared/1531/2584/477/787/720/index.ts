@@ -1,8 +1,18 @@
 "use strict";
 
 (function (e) {
-  exports.b = _;
-  exports.a = A;
+  Object.defineProperty(exports, "b", {
+    get: function () {
+      return _;
+    },
+    enumerable: true
+  });
+  Object.defineProperty(exports, "a", {
+    get: function () {
+      return A;
+    },
+    enumerable: true
+  });
   var r = require("../../../36/483/39");
   var i = require("./805");
   var o = require("./1042");

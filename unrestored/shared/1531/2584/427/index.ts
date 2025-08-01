@@ -335,7 +335,8 @@ var C = function () {
     });
   };
   e.prototype.export_wav = function (e, t) {
-    if (t = t || this.config.mime_type, !(e = e || this.config.callback)) {
+    t = t || this.config.mime_type;
+    if (!(e = e || this.config.callback)) {
       throw new Error("Callback not set");
     }
     this.callbacks.exportWAV.push(e);
@@ -409,7 +410,8 @@ var k = function (e, t) {
         }
         for (; a;) {
           try {
-            if (n = 1, r && (i = 2 & o[0] ? r.return : o[0] ? r.throw || ((i = r.return) && i.call(r), 0) : r.next) && !(i = i.call(r, o[1])).done) {
+            n = 1;
+            if (r && (i = 2 & o[0] ? r.return : o[0] ? r.throw || ((i = r.return) && i.call(r), 0) : r.next) && !(i = i.call(r, o[1])).done) {
               return i;
             }
             switch (r = 0, i && (o = [2 & o[0], i.value]), o[0]) {
@@ -539,7 +541,8 @@ var k = function (e, t) {
   e.prototype.create_recorder = function (e, t) {
     var n;
     var r = this;
-    if (this.stream = e, "undefined" === typeof MediaRecorder || this.sample_rate || this.num_channels) {
+    this.stream = e;
+    if ("undefined" === typeof MediaRecorder || this.sample_rate || this.num_channels) {
       if (__DEV__) {
         console.log("Use fallback recorder.");
       }
@@ -766,7 +769,8 @@ var T = function (e, t) {
         }
         for (; a;) {
           try {
-            if (n = 1, r && (i = 2 & o[0] ? r.return : o[0] ? r.throw || ((i = r.return) && i.call(r), 0) : r.next) && !(i = i.call(r, o[1])).done) {
+            n = 1;
+            if (r && (i = 2 & o[0] ? r.return : o[0] ? r.throw || ((i = r.return) && i.call(r), 0) : r.next) && !(i = i.call(r, o[1])).done) {
               return i;
             }
             switch (r = 0, i && (o = [2 & o[0], i.value]), o[0]) {

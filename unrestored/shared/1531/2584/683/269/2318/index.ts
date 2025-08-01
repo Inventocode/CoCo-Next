@@ -63,7 +63,8 @@ var i = this && this.__generator || function (e, t) {
         }
         for (; a;) {
           try {
-            if (n = 1, r && (i = r[2 & o[0] ? "return" : o[0] ? "throw" : "next"]) && !(i = i.call(r, o[1])).done) {
+            n = 1;
+            if (r && (i = r[2 & o[0] ? "return" : o[0] ? "throw" : "next"]) && !(i = i.call(r, o[1])).done) {
               return i;
             }
             switch (r = 0, i && (o = [0, i.value]), o[0]) {

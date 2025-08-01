@@ -136,7 +136,9 @@ function v(e) {
           }
         }
       };
-      if ((0, i.default)(e.ast, p, e.scope), (0, i.default)(e.ast, f, e.scope), !n) {
+      (0, i.default)(e.ast, p, e.scope);
+      (0, i.default)(e.ast, f, e.scope);
+      if (!n) {
         throw new Error("Helpers must default-export something.");
       }
       l.reverse();

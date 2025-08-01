@@ -26,7 +26,7 @@ export { me as a };
 export { ge as b };
 var r;
 var o = require("../1/index");
-var i = (module => {
+var i = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -37,7 +37,7 @@ var i = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(o);
+}(o);
 var a = require("../27");
 var s = require("./461");
 var c = require("../25/index");
@@ -45,7 +45,7 @@ var l = require("../7");
 var u = require("../6");
 var d = require("./483/index");
 var p = require("../51/index");
-var f = (module => {
+var f = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -56,9 +56,9 @@ var f = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(p);
+}(p);
 var h = require("../0/index");
-var m = (module => {
+var m = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -69,7 +69,7 @@ var m = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(h);
+}(h);
 var g = require("../31/index");
 var _ = require("../41");
 var v = require("../227/index");
@@ -326,7 +326,19 @@ var B = function (e, t, n, o) {
     var h = n.blockOptions;
     var m = void 0 === h ? {} : h;
     var g = !0;
-    if (f && (g = !1), "boolean" === typeof m.generateBlock && (g = m.generateBlock), m.setter && (g = !0), !1 === (null === (i = m.setter) || void 0 === i ? void 0 : i.generateBlock) && (g = !1), g) {
+    if (f) {
+      g = !1;
+    }
+    if ("boolean" === typeof m.generateBlock) {
+      g = m.generateBlock;
+    }
+    if (m.setter) {
+      g = !0;
+    }
+    if (!1 === (null === (i = m.setter) || void 0 === i ? void 0 : i.generateBlock)) {
+      g = !1;
+    }
+    if (g) {
       var _ = (null === (a = m.setter) || void 0 === a ? void 0 : a.order) || r.SETORDER + s.length + 1;
       var v = "";
       if (null === (l = m.setter) || void 0 === l ? void 0 : l.line) {
@@ -441,7 +453,7 @@ function G(e, t) {
   };
   var g = [I.s, I.o];
   var _ = [I.q, I.m];
-  if (i.forEach(function (e) {
+  i.forEach(function (e) {
     var t = e.defaultValue;
     var n = e.valueType;
     var o = e.editorType;
@@ -452,9 +464,12 @@ function G(e, t) {
     var l = e.label;
     var u = e.unit;
     var d = e.validators;
-    if ("__disabled" === a && h.push({
-      type: "DisabledSwitch"
-    }), "__width" === a) {
+    if ("__disabled" === a) {
+      h.push({
+        type: "DisabledSwitch"
+      });
+    }
+    if ("__width" === a) {
       m.width = t;
       var v = d;
       if (void 0 !== (null === v || void 0 === v ? void 0 : v.greaterThan)) {
@@ -472,7 +487,8 @@ function G(e, t) {
     }
     var y;
     if (!["__position", "__size", "__opacity", "__visible", "__disabled"].includes(a)) {
-      if (p[a] = t, y = o || (c ? "Select" : function (e, t) {
+      p[a] = t;
+      if (y = o || (c ? "Select" : function (e, t) {
         var n;
         var r = "";
         if (Array.isArray(e)) {
@@ -524,18 +540,24 @@ function G(e, t) {
         console.error("Property type ".concat(n, " is not supported."));
       }
     }
-  }), l || (f.push({
-    type: "WidgetOpacity"
-  }), f.push({
-    type: "Size",
-    label: "",
-    key: "size",
-    sizeRange: [g, _]
-  }), f.push({
-    type: "Coordinate",
-    label: "",
-    key: "position"
-  })), null === (n = e.docs) || void 0 === n ? void 0 : n.url) {
+  });
+  if (!l) {
+    f.push({
+      type: "WidgetOpacity"
+    });
+    f.push({
+      type: "Size",
+      label: "",
+      key: "size",
+      sizeRange: [g, _]
+    });
+    f.push({
+      type: "Coordinate",
+      label: "",
+      key: "position"
+    });
+  }
+  if (null === (n = e.docs) || void 0 === n ? void 0 : n.url) {
     var v = e.docs.url;
     f.push({
       type: "HelpUrl",
@@ -895,11 +917,12 @@ function Q(e) {
     throw new Error("file getElementsByClassName(*readonly*) not allow");
   }
   var t = [];
-  if (j.a.forEach(function (n) {
+  j.a.forEach(function (n) {
     if (e.includes(n)) {
       t.push(n);
     }
-  }), t.length > 0) {
+  });
+  if (t.length > 0) {
     throw Object(C.a)(Object(T.zh)({
       allowText: Object(E.c)(E.b, "cloudDb.know").toString(),
       title: "error",

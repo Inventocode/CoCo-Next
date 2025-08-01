@@ -77,7 +77,8 @@ o.prototype.parse = function (e, t, n) {
   var u = e.split(s);
   u[0] = u[0].replace(/\\/g, "/");
   var m = e = u.join(s);
-  if (m = m.trim(), !n && 1 === e.split("#").length) {
+  m = m.trim();
+  if (!n && 1 === e.split("#").length) {
     var y = c.exec(m);
     if (y) {
       this.path = m;
@@ -201,7 +202,26 @@ o.prototype.parse = function (e, t, n) {
     m = m.slice(0, G);
   }
   var z = m.indexOf("?");
-  if (-1 !== z ? (this.search = m.substr(z), this.query = m.substr(z + 1), t && (this.query = v.parse(this.query)), m = m.slice(0, z)) : t && (this.search = "", this.query = {}), m && (this.pathname = m), g[w] && this.hostname && !this.pathname && (this.pathname = "/"), this.pathname || this.search) {
+  if (-1 !== z) {
+    this.search = m.substr(z);
+    this.query = m.substr(z + 1);
+    if (t) {
+      this.query = v.parse(this.query);
+    }
+    m = m.slice(0, z);
+  } else {
+    if (t) {
+      this.search = "";
+      this.query = {};
+    }
+  }
+  if (m) {
+    this.pathname = m;
+  }
+  if (g[w] && this.hostname && !this.pathname) {
+    this.pathname = "/";
+  }
+  if (this.pathname || this.search) {
     L = this.pathname || "";
     var Q = this.search || "";
     this.path = L + Q;
@@ -270,7 +290,8 @@ o.prototype.resolveObject = function (e) {
     var s = r[a];
     n[s] = this[s];
   }
-  if (n.hash = e.hash, "" === e.href) {
+  n.hash = e.hash;
+  if ("" === e.href) {
     n.href = n.format();
     return n;
   }
@@ -296,7 +317,8 @@ o.prototype.resolveObject = function (e) {
       n.href = n.format();
       return n;
     }
-    if (n.protocol = e.protocol, e.host || A[e.protocol]) {
+    n.protocol = e.protocol;
+    if (e.host || A[e.protocol]) {
       n.pathname = e.pathname;
     } else {
       for (var p = (e.pathname || "").split("/"); p.length && !(e.host = p.shift());) {
@@ -316,7 +338,13 @@ o.prototype.resolveObject = function (e) {
       }
       n.pathname = p.join("/");
     }
-    if (n.search = e.search, n.query = e.query, n.host = e.host || "", n.auth = e.auth, n.hostname = e.hostname || e.host, n.port = e.port, n.pathname || n.search) {
+    n.search = e.search;
+    n.query = e.query;
+    n.host = e.host || "";
+    n.auth = e.auth;
+    n.hostname = e.hostname || e.host;
+    n.port = e.port;
+    if (n.pathname || n.search) {
       var _ = n.pathname || "";
       var v = n.search || "";
       n.path = _ + v;
@@ -332,7 +360,32 @@ o.prototype.resolveObject = function (e) {
   var E = n.pathname && n.pathname.split("/") || [];
   p = e.pathname && e.pathname.split("/") || [];
   var x = n.protocol && !g[n.protocol];
-  if (x && (n.hostname = "", n.port = null, n.host && ("" === E[0] ? E[0] = n.host : E.unshift(n.host)), n.host = "", e.protocol && (e.hostname = null, e.port = null, e.host && ("" === p[0] ? p[0] = e.host : p.unshift(e.host)), e.host = null), b = b && ("" === p[0] || "" === E[0])), y) {
+  if (x) {
+    n.hostname = "";
+    n.port = null;
+    if (n.host) {
+      if ("" === E[0]) {
+        E[0] = n.host;
+      } else {
+        E.unshift(n.host);
+      }
+    }
+    n.host = "";
+    if (e.protocol) {
+      e.hostname = null;
+      e.port = null;
+      if (e.host) {
+        if ("" === p[0]) {
+          p[0] = e.host;
+        } else {
+          p.unshift(e.host);
+        }
+      }
+      e.host = null;
+    }
+    b = b && ("" === p[0] || "" === E[0]);
+  }
+  if (y) {
     n.host = e.host || "" === e.host ? e.host : n.host;
     n.hostname = e.hostname || "" === e.hostname ? e.hostname : n.hostname;
     n.search = e.search;

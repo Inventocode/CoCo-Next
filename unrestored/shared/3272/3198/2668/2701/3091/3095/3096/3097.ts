@@ -242,7 +242,14 @@ var N = {
       var J;
       var X;
       var G = L ? c("=", h(M), h(j)) : h(M);
-      if (E ? (J = t ? p("!=", G, x()) : S("&&", p("!==", G, x()), p("!==", h(M), s.buildUndefinedNode())), q.replaceWith(S("&&", J, K))) : (X = t ? p("==", G, x()) : S("||", p("===", G, x()), p("===", h(M), s.buildUndefinedNode())), q.replaceWith(y(X, N ? f(!0) : s.buildUndefinedNode(), K))), U) {
+      if (E) {
+        J = t ? p("!=", G, x()) : S("&&", p("!==", G, x()), p("!==", h(M), s.buildUndefinedNode()));
+        q.replaceWith(S("&&", J, K));
+      } else {
+        X = t ? p("==", G, x()) : S("||", p("===", G, x()), p("===", h(M), s.buildUndefinedNode()));
+        q.replaceWith(y(X, N ? f(!0) : s.buildUndefinedNode(), K));
+      }
+      if (U) {
         var z = Y.node;
         Y.replaceWith(A(k(z.callee, m("call"), !1, !0), [h(U)].concat(r(z.arguments)), !1));
       }

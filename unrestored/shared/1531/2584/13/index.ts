@@ -30,7 +30,7 @@ export { We as c };
 export { a as z } from "../321";
 var r = require("../10/index");
 var o = require("../8");
-var i = (module => {
+var i = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -41,9 +41,9 @@ var i = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(o);
+}(o);
 var a = require("../0/index");
-var s = (module => {
+var s = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -54,7 +54,7 @@ var s = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(a);
+}(a);
 require("./828");
 var c = a.createContext(null);
 var l = c.Provider;
@@ -166,7 +166,7 @@ var g = Object(a.memo)(function (e) {
 var _ = require("../536");
 require("./1080");
 var v = require("./769/index");
-var b = (module => {
+var b = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -177,7 +177,7 @@ var b = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(v);
+}(v);
 require("./831");
 var y = Object(a.memo)(function (e) {
   var t = e.step;
@@ -371,7 +371,7 @@ var C = Object(a.memo)(function (e) {
   }, s.a.createElement("p", null, t), n));
 });
 var T = require("../1/index");
-var S = (module => {
+var S = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -382,13 +382,13 @@ var S = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(T);
+}(T);
 var I = require("../7");
 var A = require("../16/index");
 var j = require("../702");
 var N = require("../1185");
 var R = require("../51/index");
-var k = (module => {
+var k = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -399,7 +399,7 @@ var k = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(R);
+}(R);
 var x = require("../2/index");
 var D = require("./342");
 var M = require("../15/index");
@@ -436,7 +436,7 @@ var B = Object(a.memo)(function (e) {
 var F = require("./785/index");
 var G = require("./254/index");
 var U = require("./225");
-var W = (module => {
+var W = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -447,7 +447,7 @@ var W = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(U);
+}(U);
 !function (e) {
   e.HEX = "HEX";
   e.HSVA = "HSVA";
@@ -735,7 +735,11 @@ var X = Object(a.memo)(Object(a.forwardRef)(function (e, t) {
       var r = h.current;
       var o = m.current;
       if ((!r || !r.contains(n)) && (!o || !o.contains(n))) {
-        if (l && l(O), _(Object(x.hh)()), H) {
+        if (l) {
+          l(O);
+        }
+        _(Object(x.hh)());
+        if (H) {
           var i = q.indexOf(H);
           if (i > -1) {
             q.splice(i, 1);
@@ -1353,7 +1357,8 @@ var _e = function (e) {
       r._setMouseCursor("initial");
     };
     r.handleMouseMove = function (e) {
-      if (r._setScrollOffset(), !r._mousemoveTimeId) {
+      r._setScrollOffset();
+      if (!r._mousemoveTimeId) {
         r._mousemoveTimeId = setTimeout(function () {
           r._mousemoveTimeId = null;
         }, 60);
@@ -1560,7 +1565,7 @@ var Ce = Object(a.memo)(function (e) {
   }, t);
 });
 var Te = require("./317");
-var Se = (module => {
+var Se = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -1571,7 +1576,7 @@ var Se = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(Te);
+}(Te);
 var Ie = Object(a.memo)(function (e) {
   var t;
   var n = e.value;
@@ -1847,7 +1852,7 @@ var ke = Object(a.memo)(s.a.forwardRef(function (e, t) {
 }));
 require("../538/index");
 var xe = require("../28/303/index");
-var De = (module => {
+var De = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -1858,7 +1863,7 @@ var De = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(xe);
+}(xe);
 require("./867");
 var Me = "@__EMPTY_ADVANCE_TEXT_TIP_ID__@";
 var Le = function () {
@@ -1940,7 +1945,7 @@ var Fe = function (e) {
   }, t);
 };
 var Ge = require("./782");
-var Ue = (module => {
+var Ue = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -1951,7 +1956,7 @@ var Ue = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(Ge);
+}(Ge);
 require("./869");
 var We = Object(a.memo)(Object(a.forwardRef)(function (e, t) {
   var o = e.sourceImage;

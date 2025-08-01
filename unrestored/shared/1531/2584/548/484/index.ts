@@ -2722,7 +2722,14 @@ var ot = function () {
           if (C.match($e)) {
             throw new RangeError("Format string contains an unescaped latin alphabet character `" + C + "`");
           }
-          if ("''" === x ? x = "'" : "'" === C && (x = Ze(x)), 0 !== s.indexOf(x)) {
+          if ("''" === x) {
+            x = "'";
+          } else {
+            if ("'" === C) {
+              x = Ze(x);
+            }
+          }
+          if (0 !== s.indexOf(x)) {
             return new Date(NaN);
           }
           s = s.slice(x.length);

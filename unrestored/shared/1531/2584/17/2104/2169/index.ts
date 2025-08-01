@@ -52,7 +52,12 @@ exports.block_render_svg = function (e) {
         t = this.warning.render_icon(t, this.block_renderer);
       }
       var n = this._render_compute(t);
-      if (this.render_draw_(n), this.render_move_connections_(), this.comment && this.comment.reposition(), !1 !== e) {
+      this.render_draw_(n);
+      this.render_move_connections_();
+      if (this.comment) {
+        this.comment.reposition();
+      }
+      if (!1 !== e) {
         var r = this.get_parent();
         if (r) {
           r.render(!0);
@@ -123,7 +128,9 @@ exports.block_render_svg = function (e) {
             u.field_width += f.render_sep + d.width;
             u.field_height = Math.max(u.field_height, d.height);
           }
-          if (u.render_width = 0, u.render_height = 0, u.connection) {
+          u.render_width = 0;
+          u.render_height = 0;
+          if (u.connection) {
             var h = u.connection.targetBlock();
             if (h) {
               var p = h.get_height_width();
@@ -191,7 +198,8 @@ exports.block_render_svg = function (e) {
       }
     };
     t.prototype.render_draw_top_ = function (e) {
-      if (this.block_renderer.render_path_start(e, this), void 0 != this.previous_connection) {
+      this.block_renderer.render_path_start(e, this);
+      if (void 0 != this.previous_connection) {
         var t = 0;
         if (this.is_render_notch()) {
           t = this.theme.renderer.NOTCH_WIDTH + this.theme.renderer.NTOCH_START_PADDING;
@@ -222,7 +230,16 @@ exports.block_render_svg = function (e) {
         r = n[0];
         c = f.height;
       }
-      if (0 === t.length && (n[0] = t.right_edge, e.push("H", "" + n[0]), this.block_renderer.render_edge_shape_right(e, this, this.inputs_inline, n, c), this.width = Math.max(this.width, n[0] + this.block_renderer.padding_r), this.svg_path_width = Math.max(this.width, n[0] + this.block_renderer.padding_r), n[1] = this.block_renderer.min_height), this.height = n[1], t[t.length - 1] && t[t.length - 1][0].name === a.COLLAPSED_INPUT_NAME) {
+      if (0 === t.length) {
+        n[0] = t.right_edge;
+        e.push("H", "" + n[0]);
+        this.block_renderer.render_edge_shape_right(e, this, this.inputs_inline, n, c);
+        this.width = Math.max(this.width, n[0] + this.block_renderer.padding_r);
+        this.svg_path_width = Math.max(this.width, n[0] + this.block_renderer.padding_r);
+        n[1] = this.block_renderer.min_height;
+      }
+      this.height = n[1];
+      if (t[t.length - 1] && t[t.length - 1][0].name === a.COLLAPSED_INPUT_NAME) {
         this.block_renderer.render_edge_shape_collapsed_right(e, this);
         return n;
       }
@@ -245,7 +262,8 @@ exports.block_render_svg = function (e) {
     t.prototype.render_row_inline_ = function (e, t, n, r, i, a) {
       for (var s = r[n], c = 0; c < s.length; c++) {
         var u = s[c];
-        if (t = this.render_fields_(u.fieldRow, t, s.height || 0), u.type == o.InputType.VALUE) {
+        t = this.render_fields_(u.fieldRow, t, s.height || 0);
+        if (u.type == o.InputType.VALUE) {
           t[0] += 0 === u.fieldRow.length && 0 === c ? 0 : u.margin_left;
           var l = u.connection;
           var f = l.targetBlock();
@@ -300,10 +318,20 @@ exports.block_render_svg = function (e) {
         }
       }
       var c = t[0];
-      if (this.is_render_notch() && (this.is_starting_block() ? a.SPECIAL_CONNECTION_INPUT_NAME.includes(s.name) && (c = this.theme.renderer.NTOCH_START_PADDING + this.theme.renderer.NOTCH_WIDTH) : c = this.theme.renderer.NTOCH_START_PADDING + this.theme.renderer.NOTCH_WIDTH + this.theme.renderer.STATEMENT_MIN_WIDTH), !s.connection) {
+      if (this.is_render_notch()) {
+        if (this.is_starting_block()) {
+          if (a.SPECIAL_CONNECTION_INPUT_NAME.includes(s.name)) {
+            c = this.theme.renderer.NTOCH_START_PADDING + this.theme.renderer.NOTCH_WIDTH;
+          }
+        } else {
+          c = this.theme.renderer.NTOCH_START_PADDING + this.theme.renderer.NOTCH_WIDTH + this.theme.renderer.STATEMENT_MIN_WIDTH;
+        }
+      }
+      if (!s.connection) {
         throw new Error("Statement connection should be renderable.");
       }
-      if (s.connection.set_offset_in_block(c, t[1]), r == i.length - 1 || i[r + 1].type == o.InputType.STATEMENT) {
+      s.connection.set_offset_in_block(c, t[1]);
+      if (r == i.length - 1 || i[r + 1].type == o.InputType.STATEMENT) {
         if (this.is_starting_block()) {
           return;
         }

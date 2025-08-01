@@ -11,12 +11,15 @@ var a = require("../../../1001/213/index");
 var s = function (e) {
   function t(t, n) {
     var r = e.call(this, n.block) || this;
-    if (r.type = o.BlockEventType.CHANGE, r.element = t, r._data = {
+    r.type = o.BlockEventType.CHANGE;
+    r.element = t;
+    r._data = {
       block: n.block,
       name: n.name,
       old_value: n.old_value,
       new_value: n.new_value
-    }, (0, a.is_block_svg)(n.block)) {
+    };
+    if ((0, a.is_block_svg)(n.block)) {
       if (r.is("mutation", r._data) || r.is("change_procedure_param", r._data)) {
         r._new_json = r.json.block_to_json(n.block);
         return r;

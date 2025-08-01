@@ -304,9 +304,12 @@ function J(e, t) {
   return "function" === typeof t ? t(e) : t;
 }
 function $(e, t, n) {
-  if (U = q(), H = Q(), V) {
+  U = q();
+  H = Q();
+  if (V) {
     var r = H.queue;
-    if (t = r.dispatch, null !== Y && void 0 !== (n = Y.get(r))) {
+    t = r.dispatch;
+    if (null !== Y && void 0 !== (n = Y.get(r))) {
       Y.delete(r);
       r = H.memoizedState;
       do {
@@ -331,10 +334,15 @@ function ee(e, t, n) {
     throw Error(i(301));
   }
   if (e === U) {
-    if (z = !0, e = {
+    z = !0;
+    e = {
       action: n,
       next: null
-    }, null === Y && (Y = new Map()), void 0 === (n = Y.get(t))) {
+    };
+    if (null === Y) {
+      Y = new Map();
+    }
+    if (void 0 === (n = Y.get(t))) {
       Y.set(t, e);
     } else {
       for (t = n; null !== t.next;) {
@@ -359,7 +367,9 @@ var re = {
     return e[t];
   },
   useMemo: function (e, t) {
-    if (U = q(), t = void 0 === t ? null : t, null !== (H = Q())) {
+    U = q();
+    t = void 0 === t ? null : t;
+    if (null !== (H = Q())) {
       var n = H.memoizedState;
       if (null !== n && null !== t) {
         e: {
@@ -565,7 +575,8 @@ function Ee(e, t, n) {
       }
     };
     if (s) {
-      if (s = new a(o.props, c, d), "function" === typeof a.getDerivedStateFromProps) {
+      s = new a(o.props, c, d);
+      if ("function" === typeof a.getDerivedStateFromProps) {
         var p = a.getDerivedStateFromProps.call(null, o.props, s.state);
         if (null != p) {
           s.state = r({}, s.state, p);
@@ -574,11 +585,25 @@ function Ee(e, t, n) {
     } else if (U = {}, s = a(o.props, c, d), null == (s = Z(a, o.props, s, c)) || null == s.render) {
       return void ye(e = s, a);
     }
-    if (s.props = o.props, s.context = c, s.updater = d, void 0 === (d = s.state) && (s.state = d = null), "function" === typeof s.UNSAFE_componentWillMount || "function" === typeof s.componentWillMount) {
-      if ("function" === typeof s.componentWillMount && "function" !== typeof a.getDerivedStateFromProps && s.componentWillMount(), "function" === typeof s.UNSAFE_componentWillMount && "function" !== typeof a.getDerivedStateFromProps && s.UNSAFE_componentWillMount(), l.length) {
+    s.props = o.props;
+    s.context = c;
+    s.updater = d;
+    if (void 0 === (d = s.state)) {
+      s.state = d = null;
+    }
+    if ("function" === typeof s.UNSAFE_componentWillMount || "function" === typeof s.componentWillMount) {
+      if ("function" === typeof s.componentWillMount && "function" !== typeof a.getDerivedStateFromProps) {
+        s.componentWillMount();
+      }
+      if ("function" === typeof s.UNSAFE_componentWillMount && "function" !== typeof a.getDerivedStateFromProps) {
+        s.UNSAFE_componentWillMount();
+      }
+      if (l.length) {
         d = l;
         var f = u;
-        if (l = null, u = !1, f && 1 === d.length) {
+        l = null;
+        u = !1;
+        if (f && 1 === d.length) {
           s.state = d[0];
         } else {
           p = f ? d[0] : s.state;
@@ -600,7 +625,8 @@ function Ee(e, t, n) {
         l = null;
       }
     }
-    if (ye(e = s.render(), a), "function" === typeof s.getChildContext && "object" === typeof (o = a.childContextTypes)) {
+    ye(e = s.render(), a);
+    if ("function" === typeof s.getChildContext && "object" === typeof (o = a.childContextTypes)) {
       var g = s.getChildContext();
       for (var _ in g) if (!(_ in o)) {
         throw Error(i(108, O(a) || "Unknown", _));
@@ -723,7 +749,11 @@ var Oe = function () {
         var s = this.stack[this.stack.length - 1];
         if (o || s.childIndex >= s.children.length) {
           var c = s.footer;
-          if ("" !== c && (this.previousWasTextNode = !1), this.stack.pop(), "select" === s.type) {
+          if ("" !== c) {
+            this.previousWasTextNode = !1;
+          }
+          this.stack.pop();
+          if ("select" === s.type) {
             this.currentSelectValue = null;
           } else if (null != s.type && null != s.type.type && s.type.type.$$typeof === d) {
             this.popProvider(s.type);
@@ -770,7 +800,9 @@ var Oe = function () {
     if ("string" === typeof e || "number" === typeof e) {
       return "" === (n = "" + e) ? "" : this.makeStaticMarkup ? B(n) : this.previousWasTextNode ? "\x3c!-- --\x3e" + B(n) : (this.previousWasTextNode = !0, B(n));
     }
-    if (e = (t = Ee(e, t, this.threadID)).child, t = t.context, null === e || !1 === e) {
+    e = (t = Ee(e, t, this.threadID)).child;
+    t = t.context;
+    if (null === e || !1 === e) {
       return "";
     }
     if (!o.isValidElement(e)) {
@@ -919,7 +951,10 @@ var Oe = function () {
   };
   t.renderDOM = function (e, t, n) {
     var a = e.type.toLowerCase();
-    if (n === oe && ie(a), !ge.hasOwnProperty(a)) {
+    if (n === oe) {
+      ie(a);
+    }
+    if (!ge.hasOwnProperty(a)) {
       if (!me.test(a)) {
         throw Error(i(65, a));
       }
@@ -981,7 +1016,8 @@ var Oe = function () {
       }(s.children);
       if (null != l) {
         var d = null != s.value ? s.value + "" : u;
-        if (c = !1, Array.isArray(l)) {
+        c = !1;
+        if (Array.isArray(l)) {
           for (var p = 0; p < l.length; p++) {
             if ("" + l[p] === d) {
               c = !0;

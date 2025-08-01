@@ -6,7 +6,7 @@ var o = require("../../../103");
 var a = require("../../../430");
 require("../../../50/index");
 var s = require("../../../0/index");
-var c = (module => {
+var c = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -17,7 +17,7 @@ var c = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(s);
+}(s);
 var u = require("./1505/793");
 function l(e, t) {
   var n = Object.create(null);

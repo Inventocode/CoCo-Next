@@ -92,7 +92,8 @@ exports.ObjectMethod = function (e) {
   this.print(e.body, e);
 };
 exports.ObjectProperty = function (e) {
-  if (this.printJoin(e.decorators, e), e.computed) {
+  this.printJoin(e.decorators, e);
+  if (e.computed) {
     this.token("[");
     this.print(e.key, e);
     this.token("]");
@@ -100,7 +101,8 @@ exports.ObjectProperty = function (e) {
     if (a(e.value) && s(e.key) && e.key.name === e.value.left.name) {
       return void this.print(e.value, e);
     }
-    if (this.print(e.key, e), e.shorthand && s(e.key) && s(e.value) && e.key.name === e.value.name) {
+    this.print(e.key, e);
+    if (e.shorthand && s(e.key) && s(e.value) && e.key.name === e.value.name) {
       return;
     }
   }

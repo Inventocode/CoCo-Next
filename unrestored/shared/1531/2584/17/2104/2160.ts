@@ -249,9 +249,12 @@ var p = function () {
     var n = this.top_blocks_.filter(function (e) {
       return !e.parent_group;
     });
-    if (t && (n = n.filter(function (e) {
-      return e.get_visibility() === s.BlockVisibility.VISIBLE;
-    })), e && n.length > 1) {
+    if (t) {
+      n = n.filter(function (e) {
+        return e.get_visibility() === s.BlockVisibility.VISIBLE;
+      });
+    }
+    if (e && n.length > 1) {
       var r = Math.sin((0, u.to_radians)(this.SCAN_ANGLE));
       if (this.RTL) {
         r *= -1;
@@ -279,9 +282,12 @@ var p = function () {
       t = !1;
     }
     var n = this.top_comments.slice();
-    if (t && (n = n.filter(function (e) {
-      return e.get_visibility() === s.BlockVisibility.VISIBLE;
-    })), e && n.length > 1) {
+    if (t) {
+      n = n.filter(function (e) {
+        return e.get_visibility() === s.BlockVisibility.VISIBLE;
+      });
+    }
+    if (e && n.length > 1) {
       var r = Math.sin((0, u.to_radians)(this.SCAN_ANGLE));
       if (this.RTL) {
         r *= -1;
@@ -299,11 +305,15 @@ var p = function () {
       t = !1;
     }
     var n = this.top_comments.slice();
-    if (n = n.concat(this.top_blocks_.filter(function (e) {
+    n = n.concat(this.top_blocks_.filter(function (e) {
       return !e.parent_group;
-    })), t && (n = n.filter(function (e) {
-      return e.get_visibility() === s.BlockVisibility.VISIBLE;
-    })), e && n.length > 1) {
+    }));
+    if (t) {
+      n = n.filter(function (e) {
+        return e.get_visibility() === s.BlockVisibility.VISIBLE;
+      });
+    }
+    if (e && n.length > 1) {
       var r = Math.sin((0, u.to_radians)(this.SCAN_ANGLE));
       if (this.RTL) {
         r *= -1;
@@ -343,7 +353,10 @@ var p = function () {
       r(e);
     }
     var i = this.event_dict.get(e.type);
-    if (i && i(e), s.AllUIEvents.includes(e.type)) {
+    if (i) {
+      i(e);
+    }
+    if (s.AllUIEvents.includes(e.type)) {
       var o = this.event_dict.get(s.BlockEventType.UI);
       if (o) {
         o(e);
@@ -459,7 +472,11 @@ var p = function () {
         y: 0
       };
       try {
-        if (u = this.xml.dom_to_workspace_element(e, this), (0, d.is_block_svg)(u) && (u = u.parent_group || u), !u) {
+        u = this.xml.dom_to_workspace_element(e, this);
+        if ((0, d.is_block_svg)(u)) {
+          u = u.parent_group || u;
+        }
+        if (!u) {
           return;
         }
         var f = void 0;
@@ -626,7 +643,8 @@ var p = function () {
     return e;
   };
   e.prototype.record_delete_areas = function () {
-    if (this.is_flyout_rect_dirty_ = !0, "none" === this.get_options().delete_area) {
+    this.is_flyout_rect_dirty_ = !0;
+    if ("none" === this.get_options().delete_area) {
       this.delete_area_toolbox_ = void 0;
       return void (this.delete_area_flyout = void 0);
     }
@@ -661,7 +679,10 @@ var p = function () {
     return this.gestures_enabled;
   };
   e.prototype.on_wheel_scroll = function (e) {
-    if (this.current_gesture_ && this.current_gesture_.cancel(), this.gestures_enabled) {
+    if (this.current_gesture_) {
+      this.current_gesture_.cancel();
+    }
+    if (this.gestures_enabled) {
       var t = 1 === e.deltaMode ? 15 : 1;
       if (e.ctrlKey) {
         var n = h.is.mac() ? 50 : 100;
@@ -1061,9 +1082,10 @@ var p = function () {
   };
   e.prototype.get_blocks_bounding_box = function () {
     var e = this.get_top_blocks(!1);
-    if (this.workspace_comment_db.forEach(function (t) {
+    this.workspace_comment_db.forEach(function (t) {
       e.push(t);
-    }), !e.length) {
+    });
+    if (!e.length) {
       return {
         x: 0,
         y: 0,
@@ -1173,7 +1195,39 @@ var p = function () {
   };
   e.prototype.dispose = function () {
     var e;
-    if (this.rendered = !1, this.current_gesture_ && this.current_gesture_.cancel(), this.listeners_.length = 0, this.clear(), this.workspace_db.remove(this), this.svg_group && ((0, l.remove_node)(this.svg_group), this.svg_group = void 0), this.svg_block_canvas_ = void 0, this.svg_bubble_canvas_ = void 0, this.toolbox_ && (this.toolbox_.dispose(), this.toolbox_ = void 0), this.flyout_ && (this.flyout_.dispose(), this.flyout_ = void 0), this._scrollbar && (this._scrollbar.dispose(), delete this._scrollbar), null === (e = this.grid_) || void 0 === e || e.dispose(), this.grid_ = void 0, this.toolbox_category_callbacks_ = {}, this.flyout_button_callbacks_ = {}, this.custom_flyout_buttons.clear(), !this.options.parentWorkspace) {
+    this.rendered = !1;
+    if (this.current_gesture_) {
+      this.current_gesture_.cancel();
+    }
+    this.listeners_.length = 0;
+    this.clear();
+    this.workspace_db.remove(this);
+    if (this.svg_group) {
+      (0, l.remove_node)(this.svg_group);
+      this.svg_group = void 0;
+    }
+    this.svg_block_canvas_ = void 0;
+    this.svg_bubble_canvas_ = void 0;
+    if (this.toolbox_) {
+      this.toolbox_.dispose();
+      this.toolbox_ = void 0;
+    }
+    if (this.flyout_) {
+      this.flyout_.dispose();
+      this.flyout_ = void 0;
+    }
+    if (this._scrollbar) {
+      this._scrollbar.dispose();
+      delete this._scrollbar;
+    }
+    if (!(null === (e = this.grid_) || void 0 === e)) {
+      e.dispose();
+    }
+    this.grid_ = void 0;
+    this.toolbox_category_callbacks_ = {};
+    this.flyout_button_callbacks_ = {};
+    this.custom_flyout_buttons.clear();
+    if (!this.options.parentWorkspace) {
       var t = this.get_parent_svg();
       if (void 0 == t) {
         throw new ReferenceError();
@@ -1200,7 +1254,11 @@ var p = function () {
     if (void 0 == n) {
       throw new ReferenceError("Workspace may not been init.");
     }
-    if (n.style.display = e ? "block" : "none", this.toolbox_ && (this.toolbox_.html_div.style.display = e ? "block" : "none"), e) {
+    n.style.display = e ? "block" : "none";
+    if (this.toolbox_) {
+      this.toolbox_.html_div.style.display = e ? "block" : "none";
+    }
+    if (e) {
       for (var r = this.get_all_blocks(), i = r.length - 1; i >= 0; i--) {
         r[i].render(!1);
       }
@@ -1259,7 +1317,8 @@ var p = function () {
     var r = this.options.zoomOptions.scaleSpeed;
     var i = Math.pow(r, n);
     var a = Math.max(this.options.zoomOptions.minScale, Math.min(this.scale * i, this.options.zoomOptions.maxScale));
-    if (i = a / this.scale, this.scale != a) {
+    i = a / this.scale;
+    if (this.scale != a) {
       if (this._scrollbar && this.svg_block_canvas_) {
         var s = this.svg_block_canvas_.getCTM();
         if (!s) {

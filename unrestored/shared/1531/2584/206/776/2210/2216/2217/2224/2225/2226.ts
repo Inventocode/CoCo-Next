@@ -92,7 +92,8 @@ module.exports = function (e, t, n) {
       o += " + " + e.errorPath;
     }
     var m = o += " , " + (s ? "data" + (s - 1 || "") : "parentData") + " , " + (s ? e.dataPathArr[s] : "parentDataProperty") + ", rootData)  ";
-    if (o = v.pop(), r) {
+    o = v.pop();
+    if (r) {
       if (!e.async) {
         throw new Error("async schema referenced by sync schema");
       }

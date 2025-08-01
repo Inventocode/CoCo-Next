@@ -16,7 +16,10 @@ var f = require("./2130");
 var d = require("../../../497/index");
 var h = require("../../../497/644");
 exports.Inject = function (e, t) {
-  if ((0, u.is_string)(e) && (e = document.getElementById(e) || document.querySelector(e) || void 0), (0, u.is_nil)(e) || !l.contains(document, e)) {
+  if ((0, u.is_string)(e)) {
+    e = document.getElementById(e) || document.querySelector(e) || void 0;
+  }
+  if ((0, u.is_nil)(e) || !l.contains(document, e)) {
     throw new ReferenceError("Error: container is not in current document.");
   }
   var n = (0, o.get_instance)();
@@ -32,7 +35,8 @@ exports.Inject = function (e, t) {
     if (void 0 != t.zoomOptions.startScale) {
       u.set_scale(t.zoomOptions.startScale);
     }
-    if (e.appendChild(u.create_dom("blocklyMainBackground")), !t.has_categories && t.toolbox_config) {
+    e.appendChild(u.create_dom("blocklyMainBackground"));
+    if (!t.has_categories && t.toolbox_config) {
       var d = u.add_flyout("svg");
       if (void 0 == d) {
         throw new Error("Add flyout failed.");
@@ -40,7 +44,9 @@ exports.Inject = function (e, t) {
       l.insert_after(d, e);
     }
     var p = c.get(o.BINDING.Blink);
-    if (u.translate(0, 0), p.mainWorkspace = u, !t.readOnly && !t.ws_scrollable) {
+    u.translate(0, 0);
+    p.mainWorkspace = u;
+    if (!t.readOnly && !t.ws_scrollable) {
       u.add_change_listener(function (e) {
         var n = e.type === a.BlockEventType.MOVE || e.type === a.BlockEventType.CREATE && "flyout:drag" !== e.source || e.type === a.UIEventType.FLYOUT_SHOW;
         if (!u.is_dragging() && n) {
@@ -395,7 +401,8 @@ function v(e) {
     if (27 == e.keyCode) {
       this.utils.hide_chaff();
     } else if (8 == e.keyCode || 46 == e.keyCode) {
-      if (e.preventDefault(), this.mainWorkspace.is_dragging()) {
+      e.preventDefault();
+      if (this.mainWorkspace.is_dragging()) {
         return;
       }
       if (this.runtime_data.selected && this.runtime_data.selected.is_deletable()) {
@@ -405,7 +412,18 @@ function v(e) {
       if (this.mainWorkspace.is_dragging()) {
         return;
       }
-      if (this.runtime_data.selected && this.runtime_data.selected.is_deletable() && this.runtime_data.selected.is_movable() && (67 == e.keyCode ? (this.utils.hide_chaff(), this.runtime_data.clipboard.copy(this.runtime_data.selected)) : 88 == e.keyCode && (this.runtime_data.clipboard.copy(this.runtime_data.selected), t = !0)), 86 == e.keyCode) {
+      if (this.runtime_data.selected && this.runtime_data.selected.is_deletable() && this.runtime_data.selected.is_movable()) {
+        if (67 == e.keyCode) {
+          this.utils.hide_chaff();
+          this.runtime_data.clipboard.copy(this.runtime_data.selected);
+        } else {
+          if (88 == e.keyCode) {
+            this.runtime_data.clipboard.copy(this.runtime_data.selected);
+            t = !0;
+          }
+        }
+      }
+      if (86 == e.keyCode) {
         var n = this.runtime_data.clipboard.get_content();
         if (n) {
           var r = this.events.get_group();

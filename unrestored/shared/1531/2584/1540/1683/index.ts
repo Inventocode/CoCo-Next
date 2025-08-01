@@ -74,11 +74,13 @@ r("split", function (e, t, n) {
       if (null === T || (C = _(l(b.lastIndex + (m ? O : 0)), p.length)) === E) {
         O = c(p, O, g);
       } else {
-        if (w.push(p.slice(E, O)), w.length === y) {
+        w.push(p.slice(E, O));
+        if (w.length === y) {
           return w;
         }
         for (var S = 1; S <= T.length - 1; S++) {
-          if (w.push(T[S]), w.length === y) {
+          w.push(T[S]);
+          if (w.length === y) {
             return w;
           }
         }

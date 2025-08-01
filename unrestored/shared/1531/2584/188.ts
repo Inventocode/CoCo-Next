@@ -6,7 +6,7 @@ var r;
 var o = require("./27");
 var i = require("./40");
 var a = require("./0/index");
-var s = (module => {
+var s = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -17,7 +17,7 @@ var s = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(a);
+}(a);
 if (navigator.platform.match("Mac")) {
   r = "osx";
 } else {

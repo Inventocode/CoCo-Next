@@ -27,7 +27,14 @@ var m = function (e) {
       var i = n.data;
       if ("EMULATOR" === r) {
         Object.keys(i).forEach(function (t) {
-          if (e.emit(t, i[t]), "onPhoneCallConnect" !== t && "onReceivePhoneCall" !== t && "onPhoneCallEnd" !== t && "onReceiveSms" !== t || Object(d.a)().dispatch(Object(u.s)(Object(o.a)({}, i[t]))), "onReceivePhoneCall" === t && Object(h.emitWidgetEventType)(p.c, t), "onPhoneCallEnd" === t) {
+          e.emit(t, i[t]);
+          if (!("onPhoneCallConnect" !== t && "onReceivePhoneCall" !== t && "onPhoneCallEnd" !== t && "onReceiveSms" !== t)) {
+            Object(d.a)().dispatch(Object(u.s)(Object(o.a)({}, i[t])));
+          }
+          if ("onReceivePhoneCall" === t) {
+            Object(h.emitWidgetEventType)(p.c, t);
+          }
+          if ("onPhoneCallEnd" === t) {
             var n;
             var r = p.a.DIAL_OUT_CALL_END;
             if ("incomingCall" === (null === (n = i[t]) || void 0 === n ? void 0 : n.callType)) {

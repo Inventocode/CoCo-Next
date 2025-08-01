@@ -3,7 +3,8 @@
   function r(e, r) {
     var i;
     var o = this;
-    if (r = r || {}, n) {
+    r = r || {};
+    if (n) {
       i = e.toString().trim().match(/^function\s*\w*\s*\([\w\s,]*\)\s*{([\w\W]*?)}$/)[1];
       return new t.Worker(t.URL.createObjectURL(new t.Blob([i], {
         type: "text/javascript"

@@ -81,7 +81,10 @@ var _ = function () {
           c.setAttribute("name", i);
           a.appendChild(c);
           var u = document.createElement("field");
-          if (u.setAttribute("name", "NAME"), u.textContent = i, a.appendChild(u), o.forEach(function (e) {
+          u.setAttribute("name", "NAME");
+          u.textContent = i;
+          a.appendChild(u);
+          o.forEach(function (e) {
             var t = document.createElement("procedures_2_parameter_shadow");
             t.setAttribute("name", e.param_name);
             if (void 0 !== e.default_value) {
@@ -90,7 +93,9 @@ var _ = function () {
               t.setAttribute("value", "0");
             }
             c.appendChild(t);
-          }), e.push(a), n.return_count > 0) {
+          });
+          e.push(a);
+          if (n.return_count > 0) {
             var l = a.cloneNode(!0);
             l.setAttribute("type", s.PROCEDURE_BLOCK_TYPES.CALL_RETURN);
             e.push(l);
@@ -190,7 +195,8 @@ var _ = function () {
         a.set_value(n);
         var c = i.get_collapsed_surround_parent();
         if (c) {
-          if (i.update_collapsed(!0), c === i || u.includes(c.id)) {
+          i.update_collapsed(!0);
+          if (c === i || u.includes(c.id)) {
             return;
           }
           u.push(c.id);
@@ -240,7 +246,13 @@ var _ = function () {
   };
   e.prototype.add_caller = function (e, t, n) {
     var r = this.get_procedure_by_name(e) || this.get_procedure_by_def(e);
-    if (r || (r = this.add_procedure(e)), r.valid || this.soft_recover(r), this.callers[t]) {
+    if (!r) {
+      r = this.add_procedure(e);
+    }
+    if (!r.valid) {
+      this.soft_recover(r);
+    }
+    if (this.callers[t]) {
       this.callers[t].disabled = !1;
       return this.callers[t];
     }

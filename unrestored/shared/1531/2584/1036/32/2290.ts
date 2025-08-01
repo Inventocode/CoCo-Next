@@ -41,7 +41,9 @@ exports.type = {
   checkValidOp: D,
   normalize: I,
   apply: function (e, t) {
-    if (l.quiet = !d, D(t), null === t) {
+    l.quiet = !d;
+    D(t);
+    if (null === t) {
       return e;
     }
     var n = [];
@@ -130,7 +132,18 @@ exports.type = {
     for (var n, r, i = c.readCursor(t), o = !1, a = [], s = function (t) {
         var s = e[t];
         var u = i.getComponent();
-        if (u && (void 0 !== u.r ? o = !0 : null != u.p && (o = !1, n = u.p, r = t)), t >= e.length) {
+        if (u) {
+          if (void 0 !== u.r) {
+            o = !0;
+          } else {
+            if (null != u.p) {
+              o = !1;
+              n = u.p;
+              r = t;
+            }
+          }
+        }
+        if (t >= e.length) {
           return "break";
         }
         var l = 0;
@@ -150,9 +163,10 @@ exports.type = {
         break;
       }
     }
-    if (a.forEach(function (e) {
+    a.forEach(function (e) {
       return e.end();
-    }), o) {
+    });
+    if (o) {
       return null;
     }
     var l = function () {
@@ -181,7 +195,10 @@ exports.type = {
             s++;
           }
         })(n);
-        if ("number" == typeof n && (e[t] += s), !u) {
+        if ("number" == typeof n) {
+          e[t] += s;
+        }
+        if (!u) {
           return "break";
         }
       }; t < e.length; t++) {
@@ -376,7 +393,9 @@ function D(e) {
       var i = !1;
       for (var o in e) {
         var a = e[o];
-        if (r = !1, f("p" === o || "r" === o || "d" === o || "i" === o || "e" === o || "es" === o || "ena" === o || "et" === o, "Invalid component item '" + o + "'"), "p" === o) {
+        r = !1;
+        f("p" === o || "r" === o || "d" === o || "i" === o || "e" === o || "es" === o || "ena" === o || "et" === o, "Invalid component item '" + o + "'");
+        if ("p" === o) {
           T(a);
           f(!t.has(a));
           t.add(a);
@@ -410,7 +429,8 @@ function D(e) {
       }
       for (var o = 1, a = 0, s = 0, u = 0; u < t.length; u++) {
         var l = t[u];
-        if (f(null != l), Array.isArray(l)) {
+        f(null != l);
+        if (Array.isArray(l)) {
           var d = e(l, !1, i);
           if (a) {
             var h = typeof s;
@@ -468,7 +488,9 @@ function I(e) {
   return r.get();
 }
 function F(e, t) {
-  if (D(e), D(t), null == e) {
+  D(e);
+  D(t);
+  if (null == e) {
     return t;
   }
   if (null == t) {
@@ -519,7 +541,9 @@ function F(e, t) {
     var F;
     var R = h(o);
     if (null != T) {
-      if (t = u[T], b = a[T] = new c.WriteCursor(), D) {
+      t = u[T];
+      b = a[T] = new c.WriteCursor();
+      if (D) {
         if (m && !x) {
           b.write("r", !0);
         }
@@ -558,7 +582,15 @@ function F(e, t) {
     }
     var L = D ? null : O(w);
     var U = O(R);
-    if ((L || U) && (L && L.name, U && U.name), L && U) {
+    if (L || U) {
+      if (L) {
+        L.name;
+      }
+      if (U) {
+        U.name;
+      }
+    }
+    if (L && U) {
       f(L === U);
       var H = k(w);
       var V = k(R);
@@ -594,7 +626,7 @@ function F(e, t) {
         W++;
       }
     });
-    if (c.eachChildOf(r, i, function (t, n, r) {
+    c.eachChildOf(r, i, function (t, n, r) {
       var i;
       var o;
       var a = t;
@@ -664,7 +696,10 @@ function F(e, t) {
       }
       y.ascend();
       b.ascend();
-    }), J.end(), $.end(), null != M) {
+    });
+    J.end();
+    $.end();
+    if (null != M) {
       M.i = F;
     } else if (!m && !x && null == B) {
       return F;
@@ -777,7 +812,11 @@ function R(e) {
         }
         var m = e(n, i, v);
         if (void 0 !== a && void 0 !== m) {
-          if (u || (u = !0, a = _(a)), !y(a, A)) {
+          if (!u) {
+            u = !0;
+            a = _(a);
+          }
+          if (!y(a, A)) {
             throw Error("Cannot modify child - invalid operation");
           }
           a[A] = m;
@@ -800,7 +839,11 @@ function R(e) {
       var u = i.getComponent();
       if (u) {
         var l = u.d;
-        if (null != l && (n = o[l], s = a[l] = c.writeCursor()), t.has(u)) {
+        if (null != l) {
+          n = o[l];
+          s = a[l] = c.writeCursor();
+        }
+        if (t.has(u)) {
           var f = O(u);
           if (!f.invert) {
             throw Error("Cannot invert subtype ".concat(f.name));
@@ -890,7 +933,13 @@ function P(e, t) {
         n.write("i", c.i);
       }
       var d = c.p;
-      if (null != d && (a[d] = t.clone(), f(void 0 !== i, "Operation picks up at an invalid key"), u[d] = i, n.write("p", c.p)), void 0 !== c.r && void 0 === i) {
+      if (null != d) {
+        a[d] = t.clone();
+        f(void 0 !== i, "Operation picks up at an invalid key");
+        u[d] = i;
+        n.write("p", c.p);
+      }
+      if (void 0 !== c.r && void 0 === i) {
         throw Error("Invalid doc / op in makeInvertible: removed item missing from doc");
       }
       var h = O(c);
@@ -1024,7 +1073,9 @@ var N = function e(t) {
 function M(e, n, i) {
   f("left" === i || "right" === i, "Direction must be left or right");
   var o = "left" === i ? 0 : 1;
-  if (l.quiet = !d, l.prefix = 0, null == n) {
+  l.quiet = !d;
+  l.prefix = 0;
+  if (null == n) {
     return {
       ok: !0,
       result: e
@@ -1052,7 +1103,7 @@ function M(e, n, i) {
   var j = c.readCursor(e);
   var L = c.readCursor(n);
   var U = c.writeCursor();
-  if (function e(t) {
+  (function e(t) {
     var n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
     var i = arguments.length > 2 ? arguments[2] : void 0;
     var o = h(n);
@@ -1093,7 +1144,8 @@ function M(e, n, i) {
       f.f();
     }
     l.end();
-  }(L, j, null), function e(n, i, a, s, l) {
+  })(L, j, null);
+  (function e(n, i, a, s, l) {
     var f;
     var d = a.getComponent();
     var _ = !1;
@@ -1192,9 +1244,11 @@ function M(e, n, i) {
     S.end();
     D.end();
     return _;
-  }(j, L, L.clone(), null, null), y.map(function (e) {
+  })(j, L, L.clone(), null, null);
+  y.map(function (e) {
     return e && e.get();
-  }), p) {
+  });
+  if (p) {
     return {
       ok: !1,
       conflict: p
@@ -1296,7 +1350,7 @@ function M(e, n, i) {
   }(j, L, L.clone(), U, null);
   U.reset();
   var G = [];
-  if (function e(n, l, d, b, C, B) {
+  (function e(n, l, d, b, C, B) {
     f(l);
     var D = l.getComponent();
     var I = h(b);
@@ -1529,7 +1583,8 @@ function M(e, n, i) {
       b.ascend();
     }
     return P;
-  }(j, j.clone(), L, L.clone(), U, null), p) {
+  })(j, j.clone(), L, L.clone(), U, null);
+  if (p) {
     return {
       ok: !1,
       conflict: p
@@ -1558,15 +1613,17 @@ function M(e, n, i) {
   var W = [];
   if ((F.length || T.length) && !p) {
     var K = c.readCursor(N(U.get()));
-    if (z(K, null, function (e, t) {
+    z(K, null, function (e, t) {
       Q[e] = t.clone();
-    }), F.forEach(function (e) {
+    });
+    F.forEach(function (e) {
       if (e) {
         z(c.readCursor(e.get()), null, function (e, t) {
           Q[e] = t.clone();
         });
       }
-    }), function e(t, n, i, o, a, s) {
+    });
+    (function e(t, n, i, o, a, s) {
       l.prefix++;
       var u = h(n);
       if (u && A(u)) {
@@ -1633,24 +1690,28 @@ function M(e, n, i) {
       }
       b.end();
       w.end();
-    }(L, K, K.clone(), U, null, !1), U.reset(), p) {
+    })(L, K, K.clone(), U, null, !1);
+    U.reset();
+    if (p) {
       return {
         ok: !1,
         conflict: p
       };
     }
-    if (U.get(), W.length) {
+    U.get();
+    if (W.length) {
       var X = W.map(function (e) {
         return e ? e.get() : null;
       });
       var Y = c.readCursor(N(U.get()));
-      if (z(Y, U, function (e, t, n) {
+      z(Y, U, function (e, t, n) {
         var r = X[e];
         if (r) {
           n.mergeTree(r);
           X[e] = null;
         }
-      }), X.find(function (e) {
+      });
+      if (X.find(function (e) {
         return e;
       })) {
         var q = c.writeCursor();

@@ -248,7 +248,10 @@ var u = function () {
     if (!this.workspace_ || !this.svg_handle_) {
       throw new Error("this.workspace_ is undefined");
     }
-    if (this.workspace_.mark_focused(), this.touch_manager.clear_touch_identifier(), this.clean_up(), this.utils.is_right_button(e)) {
+    this.workspace_.mark_focused();
+    this.touch_manager.clear_touch_identifier();
+    this.clean_up();
+    if (this.utils.is_right_button(e)) {
       e.stopPropagation();
     } else {
       var t = this.utils.mouse_to_svg(e, this.workspace_.get_parent_svg(), this.workspace_.get_inverse_screen_ctm());
@@ -314,7 +317,14 @@ var u = function () {
       var t = this.workspace_.content_offset_by_view[this.horizontal_ ? 0 : 1];
       var n = {};
       var r = this.workspace_.get_metrics();
-      if (this.horizontal_ ? (e = this.constrain_target_pos(-r.contentLeft - e), n.x = e) : (e = this.constrain_target_pos(-r.contentTop - e), n.y = e), e !== t) {
+      if (this.horizontal_) {
+        e = this.constrain_target_pos(-r.contentLeft - e);
+        n.x = e;
+      } else {
+        e = this.constrain_target_pos(-r.contentTop - e);
+        n.y = e;
+      }
+      if (e !== t) {
         this.workspace_.set_metrics(n);
         var i = this.workspace_.content_offset_by_view;
         if (this.horizontal_) {

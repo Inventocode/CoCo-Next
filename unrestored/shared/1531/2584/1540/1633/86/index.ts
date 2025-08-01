@@ -16,7 +16,9 @@ module.exports = function (e, t) {
   var g = e.stat;
   if (n = m ? r : g ? r[h] || s(h, {}) : (r[h] || {}).prototype) {
     for (u in t) {
-      if (p = t[u], d = e.noTargetGet ? (f = o(n, u)) && f.value : n[u], !l(m ? u : h + (g ? "." : "#") + u, e.forced) && void 0 !== d) {
+      p = t[u];
+      d = e.noTargetGet ? (f = o(n, u)) && f.value : n[u];
+      if (!l(m ? u : h + (g ? "." : "#") + u, e.forced) && void 0 !== d) {
         if (typeof p === typeof d) {
           continue;
         }

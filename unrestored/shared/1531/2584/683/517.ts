@@ -514,7 +514,8 @@ var v = function (e) {
           return;
         }
         var s = new a.o(n.position.x + e.x - n.drag_data.old_pos.x, n.position.y + e.y - n.drag_data.old_pos.y);
-        if (n.drag_data.old_pos = e, n.has_drag_protection) {
+        n.drag_data.old_pos = e;
+        if (n.has_drag_protection) {
           var u = Object(c.d)(n, s);
           s.set(Object(r.a)(-i / 2, i / 2, u.x), Object(r.a)(-o / 2, o / 2, u.y));
         }
@@ -1037,7 +1038,8 @@ var v = function (e) {
       }, i = new a.o(0, 0), o = 0, s = r.left; s < r.right; s += 2) {
       i.x = s;
       for (var c = r.top; c > r.bottom; c -= 2) {
-        if (i.y = c, this.is_touching(i) && e.is_touching(i) && (o++, this.is_tiny_sprite(this) || this.is_tiny_sprite(e))) {
+        i.y = c;
+        if (this.is_touching(i) && e.is_touching(i) && (o++, this.is_tiny_sprite(this) || this.is_tiny_sprite(e))) {
           return !0;
         }
         if (o === this.min_points_for_collision) {
@@ -1286,11 +1288,15 @@ var v = function (e) {
     if (!r) {
       return new u.a("Cannot find actor " + e);
     }
-    if (this.current_rotate_around_actor && this.current_rotate_around_actor.actor_id === e || (this.current_rotate_around_actor = {
-      actor_id: e,
-      offset: new a.o(this.get_position().x - r.get_position().x, this.get_position().y - r.get_position().y),
-      is_rotating: !0
-    }), this.current_rotate_around_actor.is_rotating = !0, this.id === (null === (n = r.current_rotate_around_actor) || void 0 === n ? void 0 : n.actor_id)) {
+    if (!(this.current_rotate_around_actor && this.current_rotate_around_actor.actor_id === e)) {
+      this.current_rotate_around_actor = {
+        actor_id: e,
+        offset: new a.o(this.get_position().x - r.get_position().x, this.get_position().y - r.get_position().y),
+        is_rotating: !0
+      };
+    }
+    this.current_rotate_around_actor.is_rotating = !0;
+    if (this.id === (null === (n = r.current_rotate_around_actor) || void 0 === n ? void 0 : n.actor_id)) {
       var i = Object(c.p)(this.get_position(), r.get_position(), t);
       var o = i.x;
       var s = i.y;

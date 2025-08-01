@@ -4,7 +4,7 @@ export { f as a };
 var r = require("./183");
 var i = require("./1166");
 var o = require("./792");
-var a = (module => {
+var a = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -15,7 +15,7 @@ var a = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(o);
+}(o);
 var s = require("../1440/index");
 function c(e, t) {
   return t ? Object.keys(e).reduce(function (n, i) {
@@ -50,11 +50,15 @@ var f = function () {
   function e(t, n, i, o) {
     var a;
     var f = this;
-    if (void 0 === n && (n = e.defaultLocale), this.formatterCache = {
+    if (void 0 === n) {
+      n = e.defaultLocale;
+    }
+    this.formatterCache = {
       number: {},
       dateTime: {},
       pluralRules: {}
-    }, this.format = function (e) {
+    };
+    this.format = function (e) {
       var t = f.formatToParts(e);
       if (1 === t.length) {
         return t[0].value;
@@ -68,16 +72,21 @@ var f = function () {
         return e;
       }, []);
       return n.length <= 1 ? n[0] || "" : n;
-    }, this.formatToParts = function (e) {
+    };
+    this.formatToParts = function (e) {
       return Object(s.a)(f.ast, f.locales, f.formatters, f.formats, e, void 0, f.message);
-    }, this.resolvedOptions = function () {
+    };
+    this.resolvedOptions = function () {
       return {
         locale: Intl.NumberFormat.supportedLocalesOf(f.locales)[0]
       };
-    }, this.getAst = function () {
+    };
+    this.getAst = function () {
       return f.ast;
-    }, "string" === typeof t) {
-      if (this.message = t, !e.__parse) {
+    };
+    if ("string" === typeof t) {
+      this.message = t;
+      if (!e.__parse) {
         throw new TypeError("IntlMessageFormat.__parse must be set to process `message` of type `string`");
       }
       this.ast = e.__parse(t, {

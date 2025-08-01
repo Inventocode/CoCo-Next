@@ -67,7 +67,8 @@ var d = function () {
     this.most_recent_event = e;
   };
   e.prototype.update_drag_delta = function (e) {
-    if (o.vec2.sub(this.current_drag_delta_xy, e, this.mouse_down_xy), !this.has_exceeded_drag_radius) {
+    o.vec2.sub(this.current_drag_delta_xy, e, this.mouse_down_xy);
+    if (!this.has_exceeded_drag_radius) {
       var t = o.vec2.sqrLen(this.current_drag_delta_xy);
       var n = this.flyout_ ? this.theme.blink_params.FLYOUT_DRAG_RADIUS : this.theme.blink_params.DRAG_RADIUS;
       this.has_exceeded_drag_radius = t > n;
@@ -164,7 +165,8 @@ var d = function () {
         return void this.handle_up(e);
       }
     }
-    if (this.update_from_event(e), this.is_dragging_workspace) {
+    this.update_from_event(e);
+    if (this.is_dragging_workspace) {
       if (void 0 == this.workspace_dragger) {
         return void console.error("Trying to drag workspace without dragger.");
       }
@@ -182,7 +184,9 @@ var d = function () {
     if (!this.is_ending) {
       this.is_ending = !0;
       try {
-        if (this.update_from_event(e), this.touch_manager.long_stop(), this.is_dragging_block) {
+        this.update_from_event(e);
+        this.touch_manager.long_stop();
+        if (this.is_dragging_block) {
           if (void 0 == this.block_dragger) {
             return void console.error("Trying to drag block without dragger.");
           }
@@ -218,7 +222,8 @@ var d = function () {
     if (!this.is_ending) {
       this.is_ending = !0;
       try {
-        if (this.touch_manager.long_stop(), this.is_dragging_block) {
+        this.touch_manager.long_stop();
+        if (this.is_dragging_block) {
           if (void 0 == this.block_dragger) {
             return void console.error("Trying to drag block without dragger.");
           }

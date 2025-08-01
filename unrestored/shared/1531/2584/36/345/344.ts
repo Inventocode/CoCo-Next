@@ -27,7 +27,9 @@ function i() {
   return Promise.resolve(t);
 }
 function a(e) {
-  if (e = Math.min(100, Math.max(0, e)), e /= 100, Object(r.d)()) {
+  e = Math.min(100, Math.max(0, e));
+  e /= 100;
+  if (Object(r.d)()) {
     window.cordova.plugins.brightness.setBrightness(e, function () {
       console.info("setBrightness success", e);
     }, function (e) {

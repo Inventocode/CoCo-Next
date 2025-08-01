@@ -835,7 +835,10 @@
         var s = 1 & t;
         var u = 2 & t;
         var d = 4 & t;
-        if (n && (a = i ? n(e, r, i, o) : n(e)), void 0 !== a) {
+        if (n) {
+          a = i ? n(e, r, i, o) : n(e);
+        }
+        if (void 0 !== a) {
           return a;
         }
         if (!Va(e)) {
@@ -843,7 +846,7 @@
         }
         var w = Ia(e);
         if (w) {
-          if (a = function (e) {
+          a = function (e) {
             var t = e.length;
             var n = new e.constructor(t);
             if (t && "string" == typeof e[0] && Ee.call(e, "index")) {
@@ -851,7 +854,8 @@
               n.input = e.input;
             }
             return n;
-          }(e), !s) {
+          }(e);
+          if (!s) {
             return Ai(e, a);
           }
         } else {
@@ -861,7 +865,8 @@
             return li(e, s);
           }
           if (F == g || F == c || R && !i) {
-            if (a = u || R ? {} : ro(e), !s) {
+            a = u || R ? {} : ro(e);
+            if (!s) {
               return u ? function (e, t) {
                 return gi(e, eo(e), t);
               }(e, function (e, t) {
@@ -995,7 +1000,8 @@
         e: for (; ++i < s;) {
           var l = e[i];
           var f = null == n ? l : n(l);
-          if (l = r || 0 !== l ? l : 0, a && f === f) {
+          l = r || 0 !== l ? l : 0;
+          if (a && f === f) {
             for (var d = u; d--;) {
               if (t[d] === f) {
                 continue e;
@@ -1258,7 +1264,8 @@
         e: for (; ++d < o && l.length < u;) {
           var p = f[d];
           var _ = t ? t(p) : p;
-          if (p = r || 0 !== p ? p : 0, !(h ? It(h, _) : i(l, _, r))) {
+          p = r || 0 !== p ? p : 0;
+          if (!(h ? It(h, _) : i(l, _, r))) {
             for (s = a; --s;) {
               var A = c[s];
               if (!(A ? It(A, _) : i(e[s], _, r))) {
@@ -1506,7 +1513,10 @@
       function Tr(e, t, n, r, i) {
         if (e !== t) {
           or(t, function (o, a) {
-            if (i || (i = new Nn()), Va(o)) {
+            if (!i) {
+              i = new Nn();
+            }
+            if (Va(o)) {
               !function (e, t, n, r, i, o, a) {
                 var s = go(e, n);
                 var c = go(t, n);
@@ -1842,7 +1852,8 @@
         e: for (; ++r < o;) {
           var l = e[r];
           var f = t ? t(l) : l;
-          if (l = n || 0 !== l ? l : 0, a && f === f) {
+          l = n || 0 !== l ? l : 0;
+          if (a && f === f) {
             for (var d = c.length; d--;) {
               if (c[d] === f) {
                 continue e;
@@ -2160,7 +2171,14 @@
             var b = Xi(g);
             var w = Pt(m, b);
           }
-          if (i && (m = pi(m, i, o, p)), a && (m = _i(m, a, s, p)), v -= w, p && v < l) {
+          if (i) {
+            m = pi(m, i, o, p);
+          }
+          if (a) {
+            m = _i(m, a, s, p);
+          }
+          v -= w;
+          if (p && v < l) {
             var E = Vt(m, b);
             return Ri(e, t, ki, g.placeholder, r, m, E, c, u, l - v);
           }
@@ -2199,7 +2217,10 @@
           if (void 0 === n && void 0 === r) {
             return t;
           }
-          if (void 0 !== n && (i = n), void 0 !== r) {
+          if (void 0 !== n) {
+            i = n;
+          }
+          if (void 0 !== r) {
             if (void 0 === i) {
               return r;
             }
@@ -2281,7 +2302,8 @@
       function Pi(e) {
         var t = he[e];
         return function (e, n) {
-          if (e = is(e), (n = null == n ? 0 : an(ns(n), 292)) && tn(e)) {
+          e = is(e);
+          if ((n = null == n ? 0 : an(ns(n), 292)) && tn(e)) {
             var r = (as(e) + "e").split("e");
             return +((r = (as(t(r[0] + "e" + (+r[1] + n))) + "e").split("e"))[0] + "e" + (+r[1] - n));
           }
@@ -2307,49 +2329,67 @@
           throw new ge(o);
         }
         var d = i ? i.length : 0;
-        if (d || (t &= -97, i = s = void 0), u = void 0 === u ? u : on(ns(u), 0), l = void 0 === l ? l : ns(l), d -= s ? s.length : 0, 64 & t) {
+        if (!d) {
+          t &= -97;
+          i = s = void 0;
+        }
+        u = void 0 === u ? u : on(ns(u), 0);
+        l = void 0 === l ? l : ns(l);
+        d -= s ? s.length : 0;
+        if (64 & t) {
           var h = i;
           var p = s;
           i = s = void 0;
         }
         var _ = f ? void 0 : Wi(e);
         var A = [e, t, r, i, s, h, p, c, u, l];
-        if (_ && function (e, t) {
-          var n = e[1];
-          var r = t[1];
-          var i = n | r;
-          var o = i < 131;
-          var s = 128 == r && 8 == n || 128 == r && 256 == n && e[7].length <= t[8] || 384 == r && t[7].length <= t[8] && 8 == n;
-          if (!o && !s) {
-            return e;
-          }
-          if (1 & r) {
-            e[2] = t[2];
-            i |= 1 & n ? 0 : 4;
-          }
-          var c = t[3];
-          if (c) {
-            var u = e[3];
-            e[3] = u ? pi(u, c, t[4]) : c;
-            e[4] = u ? Vt(e[3], a) : t[4];
-          }
-          if (c = t[5]) {
-            u = e[5];
-            e[5] = u ? _i(u, c, t[6]) : c;
-            e[6] = u ? Vt(e[5], a) : t[6];
-          }
-          if (c = t[7]) {
-            e[7] = c;
-          }
-          if (128 & r) {
-            e[8] = null == e[8] ? t[8] : an(e[8], t[8]);
-          }
-          if (null == e[9]) {
-            e[9] = t[9];
-          }
-          e[0] = t[0];
-          e[1] = i;
-        }(A, _), e = A[0], t = A[1], r = A[2], i = A[3], s = A[4], !(l = A[9] = void 0 === A[9] ? f ? 0 : e.length : on(A[9] - d, 0)) && 24 & t && (t &= -25), t && 1 != t) {
+        if (_) {
+          (function (e, t) {
+            var n = e[1];
+            var r = t[1];
+            var i = n | r;
+            var o = i < 131;
+            var s = 128 == r && 8 == n || 128 == r && 256 == n && e[7].length <= t[8] || 384 == r && t[7].length <= t[8] && 8 == n;
+            if (!o && !s) {
+              return e;
+            }
+            if (1 & r) {
+              e[2] = t[2];
+              i |= 1 & n ? 0 : 4;
+            }
+            var c = t[3];
+            if (c) {
+              var u = e[3];
+              e[3] = u ? pi(u, c, t[4]) : c;
+              e[4] = u ? Vt(e[3], a) : t[4];
+            }
+            if (c = t[5]) {
+              u = e[5];
+              e[5] = u ? _i(u, c, t[6]) : c;
+              e[6] = u ? Vt(e[5], a) : t[6];
+            }
+            if (c = t[7]) {
+              e[7] = c;
+            }
+            if (128 & r) {
+              e[8] = null == e[8] ? t[8] : an(e[8], t[8]);
+            }
+            if (null == e[9]) {
+              e[9] = t[9];
+            }
+            e[0] = t[0];
+            e[1] = i;
+          })(A, _);
+        }
+        e = A[0];
+        t = A[1];
+        r = A[2];
+        i = A[3];
+        s = A[4];
+        if (!(l = A[9] = void 0 === A[9] ? f ? 0 : e.length : on(A[9] - d, 0)) && 24 & t) {
+          t &= -25;
+        }
+        if (t && 1 != t) {
           g = 8 == t || 16 == t ? function (e, t, r) {
             var i = xi(e);
             return function o() {
@@ -2657,7 +2697,8 @@
         return function () {
           var r = sn();
           var i = 16 - (r - n);
-          if (n = r, i > 0) {
+          n = r;
+          if (i > 0) {
             if (++t >= 800) {
               return arguments[0];
             }
@@ -3046,7 +3087,10 @@
         function m() {
           var e = pa();
           var n = A(e);
-          if (r = arguments, i = this, u = e, n) {
+          r = arguments;
+          i = this;
+          u = e;
+          if (n) {
             if (void 0 === c) {
               return _(u);
             }
@@ -3925,7 +3969,8 @@
       kn.transform = function (e, t, n) {
         var r = Ia(e);
         var i = r || Na(e) || $a(e);
-        if (t = Yi(t, 4), null == n) {
+        t = Yi(t, 4);
+        if (null == n) {
           var o = e && e.constructor;
           n = i ? r ? new o() : [] : Va(e) && La(o) ? Sn(Ve(e)) : {};
         }
@@ -4301,7 +4346,33 @@
         return cn(as(e).replace(Y, ""), t || 0);
       };
       kn.random = function (e, t, n) {
-        if (n && "boolean" != typeof n && ao(e, t, n) && (t = n = void 0), void 0 === n && ("boolean" == typeof t ? (n = t, t = void 0) : "boolean" == typeof e && (n = e, e = void 0)), void 0 === e && void 0 === t ? (e = 0, t = 1) : (e = ts(e), void 0 === t ? (t = e, e = 0) : t = ts(t)), e > t) {
+        if (n && "boolean" != typeof n && ao(e, t, n)) {
+          t = n = void 0;
+        }
+        if (void 0 === n) {
+          if ("boolean" == typeof t) {
+            n = t;
+            t = void 0;
+          } else {
+            if ("boolean" == typeof e) {
+              n = e;
+              e = void 0;
+            }
+          }
+        }
+        if (void 0 === e && void 0 === t) {
+          e = 0;
+          t = 1;
+        } else {
+          e = ts(e);
+          if (void 0 === t) {
+            t = e;
+            e = 0;
+          } else {
+            t = ts(t);
+          }
+        }
+        if (e > t) {
           var r = e;
           e = t;
           t = r;
@@ -4458,7 +4529,8 @@
         var _ = Us(function () {
           return de(s, h + "return " + f).apply(void 0, c);
         });
-        if (_.source = f, ja(_)) {
+        _.source = f;
+        if (ja(_)) {
           throw _;
         }
         return _;
@@ -4544,7 +4616,10 @@
         if (void 0 === i) {
           return c + r;
         }
-        if (a && (s += c.length - s), Ka(i)) {
+        if (a) {
+          s += c.length - s;
+        }
+        if (Ka(i)) {
           if (e.slice(s).search(i)) {
             var u;
             var l = c;

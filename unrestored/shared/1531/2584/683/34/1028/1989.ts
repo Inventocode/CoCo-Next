@@ -145,7 +145,10 @@
           }
         }
         for (s - t > h((c - n) / (g = r + 1)) && _("overflow"), n += (s - t) * g, t = s, a = 0; a < A; ++a) {
-          if ((d = e[a]) < t && ++n > c && _("overflow"), d == t) {
+          if ((d = e[a]) < t && ++n > c) {
+            _("overflow");
+          }
+          if (d == t) {
             for (u = n, l = 36; !(u < (f = l <= o ? 1 : l >= o + 26 ? 26 : l - o)); l += 36) {
               w = u - f;
               m = 36 - f;

@@ -50,7 +50,10 @@ var v = !!g && !i(function () {
   }
 });
 h("sort", function (e) {
-  if (void 0 !== e && a(e), v) {
+  if (void 0 !== e) {
+    a(e);
+  }
+  if (v) {
     return g.call(this, e);
   }
   f(this);

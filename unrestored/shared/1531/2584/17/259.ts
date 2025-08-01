@@ -37,17 +37,22 @@ module.exports = function (e) {
     });
   };
   n.t = function (e, t) {
-    if (1 & t && (e = n(e)), 8 & t) {
+    if (1 & t) {
+      e = n(e);
+    }
+    if (8 & t) {
       return e;
     }
     if (4 & t && "object" == typeof e && e && e.__esModule) {
       return e;
     }
     var r = Object.create(null);
-    if (n.r(r), Object.defineProperty(r, "default", {
+    n.r(r);
+    Object.defineProperty(r, "default", {
       enumerable: !0,
       value: e
-    }), 2 & t && "string" != typeof e) {
+    });
+    if (2 & t && "string" != typeof e) {
       for (var i in e) n.d(r, i, function (t) {
         return e[t];
       }.bind(null, i));

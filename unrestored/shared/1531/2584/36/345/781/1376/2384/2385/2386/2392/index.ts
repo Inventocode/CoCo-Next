@@ -72,7 +72,10 @@ module.exports = function e(t, n, r, i) {
     return String(t) + "n";
   }
   var p = "undefined" === typeof s.depth ? 5 : s.depth;
-  if ("undefined" === typeof r && (r = 0), r >= p && p > 0 && "object" === typeof t) {
+  if ("undefined" === typeof r) {
+    r = 0;
+  }
+  if (r >= p && p > 0 && "object" === typeof t) {
     return O(t) ? "[Array]" : "[Object]";
   }
   var v = function (e, t) {
@@ -96,7 +99,10 @@ module.exports = function e(t, n, r, i) {
     return "[Circular]";
   }
   function b(t, n, o) {
-    if (n && (i = i.slice()).push(n), o) {
+    if (n) {
+      (i = i.slice()).push(n);
+    }
+    if (o) {
       var a = {
         depth: s.depth
       };

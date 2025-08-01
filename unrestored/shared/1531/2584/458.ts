@@ -1,5 +1,15 @@
 "use strict";
 
+(function __defineESModule(exports) {
+  if (typeof Symbol != "undefined" && Symbol.toStringTag) {
+    Object.defineProperty(exports, Symbol.toStringTag, {
+      value: "Module"
+    });
+  }
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+})(exports);
 (function (e) {
   var n = function () {
     if ("undefined" !== typeof Map) {
@@ -241,7 +251,15 @@
     var a = i.top + i.bottom;
     var s = d(r.width);
     var c = d(r.height);
-    if ("border-box" === r.boxSizing && (Math.round(s + o) !== t && (s -= h(r, "left", "right") + o), Math.round(c + a) !== n && (c -= h(r, "top", "bottom") + a)), !function (e) {
+    if ("border-box" === r.boxSizing) {
+      if (Math.round(s + o) !== t) {
+        s -= h(r, "left", "right") + o;
+      }
+      if (Math.round(c + a) !== n) {
+        c -= h(r, "top", "bottom") + a;
+      }
+    }
+    if (!function (e) {
       return e === l(e).document.documentElement;
     }(e)) {
       var u = Math.round(s + o) - t;
@@ -321,7 +339,9 @@
   };
   var y = function () {
     function e(e, t, r) {
-      if (this.activeObservations_ = [], this.observations_ = new n(), "function" !== typeof e) {
+      this.activeObservations_ = [];
+      this.observations_ = new n();
+      if ("function" !== typeof e) {
         throw new TypeError("The callback provided as parameter 1 is not a function.");
       }
       this.callback_ = e;

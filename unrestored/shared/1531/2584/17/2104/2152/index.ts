@@ -287,7 +287,8 @@ var u = function (e) {
   };
   t.prototype.bind_color_event = function (e) {
     var t = this;
-    if (e.preventDefault(), this.current_color_panel_element) {
+    e.preventDefault();
+    if (this.current_color_panel_element) {
       this.current_color_panel_item_left = this.current_color_panel_element.getBoundingClientRect().left;
       var n = this.move_color_handle.bind(this);
       document.addEventListener("mousemove", n);

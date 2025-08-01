@@ -96,7 +96,11 @@ var a = function (e) {
       if (r && r.is_dragging_block) {
         r.handle_up(e);
       } else if (!this.source_block.is_in_flyout && !this.utils.is_right_button(e)) {
-        if (r && (r.update_is_mutation_click(!0), r.handle_up(e)), !this.events.is_enabled()) {
+        if (r) {
+          r.update_is_mutation_click(!0);
+          r.handle_up(e);
+        }
+        if (!this.events.is_enabled()) {
           return;
         }
         var i = this.events.get_group();

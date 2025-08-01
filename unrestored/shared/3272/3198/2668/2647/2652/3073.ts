@@ -274,10 +274,17 @@
         var K;
         var V;
         var W = t.get("callee");
-        if (W.isIdentifier() && !t.scope.getBinding(W.node.name) && i.indexOf(W.node.name) >= 0 && (V = e[W.node.name]), W.isMemberExpression()) {
+        if (W.isIdentifier() && !t.scope.getBinding(W.node.name) && i.indexOf(W.node.name) >= 0) {
+          V = e[W.node.name];
+        }
+        if (W.isMemberExpression()) {
           var Y = W.get("object");
           var H = W.get("property");
-          if (Y.isIdentifier() && H.isIdentifier() && i.indexOf(Y.node.name) >= 0 && a.indexOf(H.node.name) < 0 && (K = e[Y.node.name], V = K[H.node.name]), Y.isLiteral() && H.isIdentifier()) {
+          if (Y.isIdentifier() && H.isIdentifier() && i.indexOf(Y.node.name) >= 0 && a.indexOf(H.node.name) < 0) {
+            K = e[Y.node.name];
+            V = K[H.node.name];
+          }
+          if (Y.isLiteral() && H.isIdentifier()) {
             var q = typeof Y.node.value;
             if (!("string" !== q && "number" !== q)) {
               K = Y.node.value;

@@ -103,7 +103,9 @@ function l(e, t) {
   return a(e);
 }
 function f(e, t) {
-  if (e = o(e), t = i(t), -1 !== e.type.indexOf("hsl")) {
+  e = o(e);
+  t = i(t);
+  if (-1 !== e.type.indexOf("hsl")) {
     e.values[2] *= 1 - t;
   } else if (-1 !== e.type.indexOf("rgb")) {
     for (var n = 0; n < 3; n += 1) {
@@ -113,7 +115,9 @@ function f(e, t) {
   return a(e);
 }
 function d(e, t) {
-  if (e = o(e), t = i(t), -1 !== e.type.indexOf("hsl")) {
+  e = o(e);
+  t = i(t);
+  if (-1 !== e.type.indexOf("hsl")) {
     e.values[2] += (100 - e.values[2]) * t;
   } else if (-1 !== e.type.indexOf("rgb")) {
     for (var n = 0; n < 3; n += 1) {

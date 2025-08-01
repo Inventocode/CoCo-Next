@@ -60,13 +60,14 @@ var u = function (e) {
       throw new ReferenceError("source_block is undefined");
     }
     this.workspace_ = this.source_block.get_workspace();
-    if (this.widget_div.show(this, function () {
+    this.widget_div.show(this, function () {
       n.focus(!1);
       if (t) {
         t();
       }
       n.widget_dispose()();
-    }), void 0 == this.widget_div.DIV) {
+    });
+    if (void 0 == this.widget_div.DIV) {
       throw new Error("DIV is undefined");
     }
     this.html_input = this.widget_create();
@@ -227,7 +228,15 @@ var u = function (e) {
       throw new Error("Trying to create a field editor without a source block.");
     }
     var o = (0, s.create_dom)(e, t);
-    if (o.setAttribute("spellcheck", String(this.spellcheck_)), o.style.fontSize = n.FONTSIZE + "pt", o.value = o.defaultValue = this.text_, o.oldValue_ = void 0, o.style.webkitAppearance = "none", i.appendChild(o), this.resize_editor(), this.validate_(), "dark" === this.source_block.workspace.options.theme) {
+    o.setAttribute("spellcheck", String(this.spellcheck_));
+    o.style.fontSize = n.FONTSIZE + "pt";
+    o.value = o.defaultValue = this.text_;
+    o.oldValue_ = void 0;
+    o.style.webkitAppearance = "none";
+    i.appendChild(o);
+    this.resize_editor();
+    this.validate_();
+    if ("dark" === this.source_block.workspace.options.theme) {
       return o;
     }
     if (this.source_block.is_shadow()) {

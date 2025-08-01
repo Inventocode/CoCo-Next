@@ -137,7 +137,8 @@ function l(e, t) {
     } else if (i && (t -= 3) > -1) {
       o.push(239, 191, 189);
     }
-    if (i = null, n < 128) {
+    i = null;
+    if (n < 128) {
       if ((t -= 1) < 0) {
         break;
       }
@@ -194,7 +195,10 @@ o.prototype.write = function (e, t, n) {
     }
   }
   var r = this.length - t;
-  if ((void 0 === n || n > r) && (n = r), e.length > 0 && (n < 0 || t < 0) || t > this.length) {
+  if (void 0 === n || n > r) {
+    n = r;
+  }
+  if (e.length > 0 && (n < 0 || t < 0) || t > this.length) {
     throw new RangeError("Attempt to write outside buffer bounds");
   }
   return function (e, t, n, r) {
@@ -209,7 +213,28 @@ o.prototype.write = function (e, t, n) {
 o.prototype.slice = function (e, t) {
   var n;
   var r = this.length;
-  if ((e = ~~e) < 0 ? (e += r) < 0 && (e = 0) : e > r && (e = r), (t = void 0 === t ? r : ~~t) < 0 ? (t += r) < 0 && (t = 0) : t > r && (t = r), t < e && (t = e), o.TYPED_ARRAY_SUPPORT) {
+  if ((e = ~~e) < 0) {
+    if ((e += r) < 0) {
+      e = 0;
+    }
+  } else {
+    if (e > r) {
+      e = r;
+    }
+  }
+  if ((t = void 0 === t ? r : ~~t) < 0) {
+    if ((t += r) < 0) {
+      t = 0;
+    }
+  } else {
+    if (t > r) {
+      t = r;
+    }
+  }
+  if (t < e) {
+    t = e;
+  }
+  if (o.TYPED_ARRAY_SUPPORT) {
     (n = this.subarray(e, t)).__proto__ = o.prototype;
   } else {
     var i = t - e;
@@ -221,7 +246,22 @@ o.prototype.slice = function (e, t) {
   return n;
 };
 o.prototype.copy = function (e, t, n, r) {
-  if (n || (n = 0), r || 0 === r || (r = this.length), t >= e.length && (t = e.length), t || (t = 0), r > 0 && r < n && (r = n), r === n) {
+  if (!n) {
+    n = 0;
+  }
+  if (!(r || 0 === r)) {
+    r = this.length;
+  }
+  if (t >= e.length) {
+    t = e.length;
+  }
+  if (!t) {
+    t = 0;
+  }
+  if (r > 0 && r < n) {
+    r = n;
+  }
+  if (r === n) {
     return 0;
   }
   if (0 === e.length || 0 === this.length) {
@@ -259,7 +299,15 @@ o.prototype.copy = function (e, t, n, r) {
 };
 o.prototype.fill = function (e, t, n) {
   if ("string" === typeof e) {
-    if ("string" === typeof t ? (t = 0, n = this.length) : "string" === typeof n && (n = this.length), 1 === e.length) {
+    if ("string" === typeof t) {
+      t = 0;
+      n = this.length;
+    } else {
+      if ("string" === typeof n) {
+        n = this.length;
+      }
+    }
+    if (1 === e.length) {
       var r = e.charCodeAt(0);
       if (r < 256) {
         e = r;
@@ -275,7 +323,12 @@ o.prototype.fill = function (e, t, n) {
     return this;
   }
   var i;
-  if (t >>>= 0, n = void 0 === n ? this.length : n >>> 0, e || (e = 0), "number" === typeof e) {
+  t >>>= 0;
+  n = void 0 === n ? this.length : n >>> 0;
+  if (!e) {
+    e = 0;
+  }
+  if ("number" === typeof e) {
     for (i = t; i < n; ++i) {
       this[i] = e;
     }

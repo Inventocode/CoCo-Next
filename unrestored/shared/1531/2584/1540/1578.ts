@@ -26,7 +26,18 @@ r({
     var _ = a(g.length);
     var v = o(e, _);
     var b = arguments.length;
-    if (0 === b ? n = r = 0 : 1 === b ? (n = 0, r = _ - v) : (n = b - 2, r = p(d(i(t), 0), _ - v)), _ + n - r > 9007199254740991) {
+    if (0 === b) {
+      n = r = 0;
+    } else {
+      if (1 === b) {
+        n = 0;
+        r = _ - v;
+      } else {
+        n = b - 2;
+        r = p(d(i(t), 0), _ - v);
+      }
+    }
+    if (_ + n - r > 9007199254740991) {
       throw TypeError("Maximum allowed length exceeded");
     }
     for (u = c(g, r), f = 0; f < r; f++) {
@@ -34,7 +45,8 @@ r({
         l(u, f, g[h]);
       }
     }
-    if (u.length = r, n < r) {
+    u.length = r;
+    if (n < r) {
       for (f = v; f < _ - r; f++) {
         m = f + n;
         if ((h = f + r) in g) {

@@ -96,7 +96,8 @@ module.exports = function () {
           }
           for (; a;) {
             try {
-              if (n = 1, r && (i = 2 & o[0] ? r.return : o[0] ? r.throw || ((i = r.return) && i.call(r), 0) : r.next) && !(i = i.call(r, o[1])).done) {
+              n = 1;
+              if (r && (i = 2 & o[0] ? r.return : o[0] ? r.throw || ((i = r.return) && i.call(r), 0) : r.next) && !(i = i.call(r, o[1])).done) {
                 return i;
               }
               switch (r = 0, i && (o = [2 & o[0], i.value]), o[0]) {
@@ -557,7 +558,13 @@ module.exports = function () {
       var i = [];
       e.forEach(function (e, o) {
         var a = U.get(e);
-        if (a > 50 ? (i.push(!0), a -= 50) : i.push(!1), -1 !== ["normal", "auto", "loose"].indexOf(t) && -1 !== [8208, 8211, 12316, 12448].indexOf(e)) {
+        if (a > 50) {
+          i.push(!0);
+          a -= 50;
+        } else {
+          i.push(!1);
+        }
+        if (-1 !== ["normal", "auto", "loose"].indexOf(t) && -1 !== [8208, 8211, 12316, 12448].indexOf(e)) {
           r.push(o);
           return n.push(16);
         }
@@ -967,7 +974,8 @@ module.exports = function () {
     };
     e.prototype.consumeUrlToken = function () {
       var e = [];
-      if (this.consumeWhiteSpace(), -1 === this.peekCodePoint(0)) {
+      this.consumeWhiteSpace();
+      if (-1 === this.peekCodePoint(0)) {
         return {
           type: 22,
           value: ""
@@ -1804,59 +1812,66 @@ module.exports = function () {
     var o = [];
     Le(t).forEach(function (t, a) {
       var s = !0;
-      if (0 === a ? s = t.reduce(function (e, t) {
-        if (Re(t)) {
-          switch (t.value) {
-            case "center":
-              o.push(Qe);
-              return !1;
-            case "top":
-            case "left":
-              o.push(ze);
-              return !1;
-            case "right":
-            case "bottom":
-              o.push(We);
-              return !1;
+      if (0 === a) {
+        s = t.reduce(function (e, t) {
+          if (Re(t)) {
+            switch (t.value) {
+              case "center":
+                o.push(Qe);
+                return !1;
+              case "top":
+              case "left":
+                o.push(ze);
+                return !1;
+              case "right":
+              case "bottom":
+                o.push(We);
+                return !1;
+            }
+          } else if (Ve(t) || He(t)) {
+            o.push(t);
+            return !1;
           }
-        } else if (Ve(t) || He(t)) {
-          o.push(t);
-          return !1;
+          return e;
+        }, s);
+      } else {
+        if (1 === a) {
+          s = t.reduce(function (e, t) {
+            if (Re(t)) {
+              switch (t.value) {
+                case "circle":
+                  n = 0;
+                  return !1;
+                case "ellipse":
+                  n = 1;
+                  return !1;
+                case "contain":
+                case "closest-side":
+                  r = 0;
+                  return !1;
+                case "farthest-side":
+                  r = 1;
+                  return !1;
+                case "closest-corner":
+                  r = 2;
+                  return !1;
+                case "cover":
+                case "farthest-corner":
+                  r = 3;
+                  return !1;
+              }
+            } else if (He(t) || Ve(t)) {
+              if (!Array.isArray(r)) {
+                r = [];
+              }
+              r.push(t);
+              return !1;
+            }
+            return e;
+          }, s);
         }
-        return e;
-      }, s) : 1 === a && (s = t.reduce(function (e, t) {
-        if (Re(t)) {
-          switch (t.value) {
-            case "circle":
-              n = 0;
-              return !1;
-            case "ellipse":
-              n = 1;
-              return !1;
-            case "contain":
-            case "closest-side":
-              r = 0;
-              return !1;
-            case "farthest-side":
-              r = 1;
-              return !1;
-            case "closest-corner":
-              r = 2;
-              return !1;
-            case "cover":
-            case "farthest-corner":
-              r = 3;
-              return !1;
-          }
-        } else if (He(t) || Ve(t)) {
-          if (!Array.isArray(r)) {
-            r = [];
-          }
-          r.push(t);
-          return !1;
-        }
-        return e;
-      }, s)), s) {
+      }
+      if (s) {
         var c = ht(e, t);
         i.push(c);
       }
@@ -3551,7 +3566,8 @@ module.exports = function () {
             t.selectNode(n);
             var r = t.getBoundingClientRect();
             var i = Math.round(r.height);
-            if (e.body.removeChild(n), 123 === i) {
+            e.body.removeChild(n);
+            if (123 === i) {
               return !0;
             }
           }
@@ -3960,7 +3976,8 @@ module.exports = function () {
     n.flags |= 4;
     (function e(t, n, r, i) {
       for (var o = n.firstChild, a = void 0; o; o = a) {
-        if (a = o.nextSibling, ri(o) && o.data.trim().length > 0) {
+        a = o.nextSibling;
+        if (ri(o) && o.data.trim().length > 0) {
           r.textNodes.push(new Nr(t, o, r.styles));
         } else if (ii(o)) {
           if (mi(o) && o.assignedNodes) {
@@ -4287,7 +4304,13 @@ module.exports = function () {
   };
   var Di = function () {
     function e(e, t, n) {
-      if (this.context = e, this.options = n, this.scrolledElements = [], this.referenceElement = t, this.counters = new yi(), this.quoteDepth = 0, !t.ownerDocument) {
+      this.context = e;
+      this.options = n;
+      this.scrolledElements = [];
+      this.referenceElement = t;
+      this.counters = new yi();
+      this.quoteDepth = 0;
+      if (!t.ownerDocument) {
         throw new Error("Cloned element does not have an owner document");
       }
       this.documentElement = this.cloneNode(t.ownerDocument.documentElement);
@@ -4345,7 +4368,8 @@ module.exports = function () {
       return l;
     };
     e.prototype.createElementClone = function (e) {
-      if (ir(e, 2), di(e)) {
+      ir(e, 2);
+      if (di(e)) {
         return this.createCanvasClone(e);
       }
       if (_i(e)) {
@@ -4375,7 +4399,8 @@ module.exports = function () {
           return r;
         }
       } catch (i) {
-        if (this.context.logger.error("Unable to access cssRules property", i), "SecurityError" !== i.name) {
+        this.context.logger.error("Unable to access cssRules property", i);
+        if ("SecurityError" !== i.name) {
           throw i;
         }
       }
@@ -4501,7 +4526,8 @@ module.exports = function () {
                 var h = t.values.filter(je);
                 u = h[0];
                 var p = h[1];
-                if (l = h[2], u && Re(u)) {
+                l = h[2];
+                if (u && Re(u)) {
                   var _ = i.counters.getCounterValues(u.value);
                   var A = l && Re(l) ? un.parse(i.context, l.value) : 3;
                   var g = p && 0 === p.type ? p.value : "";
@@ -4761,7 +4787,11 @@ module.exports = function () {
         };
         s.onerror = o;
         var c = n.indexOf("?") > -1 ? "&" : "?";
-        if (s.open("GET", "" + n + c + "url=" + encodeURIComponent(e) + "&responseType=" + a), "text" !== a && s instanceof XMLHttpRequest && (s.responseType = a), t._options.imageTimeout) {
+        s.open("GET", "" + n + c + "url=" + encodeURIComponent(e) + "&responseType=" + a);
+        if ("text" !== a && s instanceof XMLHttpRequest) {
+          s.responseType = a;
+        }
+        if (t._options.imageTimeout) {
           var u = t._options.imageTimeout;
           s.timeout = u;
           s.ontimeout = function () {
@@ -4968,7 +4998,14 @@ module.exports = function () {
   };
   var go = function () {
     function e(e, t) {
-      if (this.container = e, this.parent = t, this.effects = [], this.curves = new ao(this.container), this.container.styles.opacity < 1 && this.effects.push(new ho(this.container.styles.opacity)), null !== this.container.styles.transform) {
+      this.container = e;
+      this.parent = t;
+      this.effects = [];
+      this.curves = new ao(this.container);
+      if (this.container.styles.opacity < 1) {
+        this.effects.push(new ho(this.container.styles.opacity));
+      }
+      if (null !== this.container.styles.transform) {
         var n = this.container.bounds.left + this.container.styles.transformOrigin[0].number;
         var r = this.container.bounds.top + this.container.styles.transformOrigin[1].number;
         var i = this.container.styles.transform;
@@ -4991,7 +5028,9 @@ module.exports = function () {
           return !po(e);
         });
         if (t || 0 !== n.container.styles.position || !n.parent) {
-          if (r.unshift.apply(r, i), t = -1 === [2, 3].indexOf(n.container.styles.position), 0 !== n.container.styles.overflowX) {
+          r.unshift.apply(r, i);
+          t = -1 === [2, 3].indexOf(n.container.styles.position);
+          if (0 !== n.container.styles.overflowX) {
             var o = co(n.curves);
             var a = uo(n.curves);
             if (!_o(o, a)) {
@@ -5201,7 +5240,20 @@ module.exports = function () {
     }
     var p = null;
     var _ = null;
-    if (Ve(a) ? p = Xe(a, n.width) : s && Ve(s) && (_ = Xe(s, n.height)), null === p || s && !Oo(s) || (_ = u && l ? p / r * i : n.height), null !== _ && Oo(a) && (p = u && l ? _ / i * r : n.width), null !== p && null !== _) {
+    if (Ve(a)) {
+      p = Xe(a, n.width);
+    } else {
+      if (s && Ve(s)) {
+        _ = Xe(s, n.height);
+      }
+    }
+    if (!(null === p || s && !Oo(s))) {
+      _ = u && l ? p / r * i : n.height;
+    }
+    if (null !== _ && Oo(a)) {
+      p = u && l ? _ / i * r : n.width;
+    }
+    if (null !== p && null !== _) {
       return [p, _];
     }
     throw new Error("Unable to calculate background-size for element");

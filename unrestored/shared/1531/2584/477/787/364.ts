@@ -1,9 +1,24 @@
 "use strict";
 
 (function (e) {
-  exports.b = o;
-  exports.c = a;
-  exports.a = s;
+  Object.defineProperty(exports, "b", {
+    get: function () {
+      return o;
+    },
+    enumerable: true
+  });
+  Object.defineProperty(exports, "c", {
+    get: function () {
+      return a;
+    },
+    enumerable: true
+  });
+  Object.defineProperty(exports, "a", {
+    get: function () {
+      return s;
+    },
+    enumerable: true
+  });
   var r = require("./521");
   require("./736");
   var i = {};

@@ -1348,7 +1348,8 @@ exports.isNullableTypeAnnotation = function (e, t) {
   return !1;
 };
 exports.isNumberLiteral = function (e, t) {
-  if (console.trace("The node type NumberLiteral has been renamed to NumericLiteral"), !e) {
+  console.trace("The node type NumberLiteral has been renamed to NumericLiteral");
+  if (!e) {
     return !1;
   }
   if ("NumberLiteral" === e.type) {
@@ -1660,7 +1661,8 @@ exports.isRegExpLiteral = function (e, t) {
   return !1;
 };
 exports.isRegexLiteral = function (e, t) {
-  if (console.trace("The node type RegexLiteral has been renamed to RegExpLiteral"), !e) {
+  console.trace("The node type RegexLiteral has been renamed to RegExpLiteral");
+  if (!e) {
     return !1;
   }
   if ("RegexLiteral" === e.type) {
@@ -1678,7 +1680,8 @@ exports.isRestElement = function (e, t) {
   return !1;
 };
 exports.isRestProperty = function (e, t) {
-  if (console.trace("The node type RestProperty has been renamed to RestElement"), !e) {
+  console.trace("The node type RestProperty has been renamed to RestElement");
+  if (!e) {
     return !1;
   }
   if ("RestProperty" === e.type) {
@@ -1724,7 +1727,8 @@ exports.isSpreadElement = function (e, t) {
   return !1;
 };
 exports.isSpreadProperty = function (e, t) {
-  if (console.trace("The node type SpreadProperty has been renamed to SpreadElement"), !e) {
+  console.trace("The node type SpreadProperty has been renamed to SpreadElement");
+  if (!e) {
     return !1;
   }
   if ("SpreadProperty" === e.type) {

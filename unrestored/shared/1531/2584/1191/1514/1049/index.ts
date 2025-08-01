@@ -138,7 +138,10 @@ exports.removeUserSelectStyles = function (e) {
     return;
   }
   try {
-    if (e.body && h(e.body, "react-draggable-transparent-selection"), e.selection) {
+    if (e.body) {
+      h(e.body, "react-draggable-transparent-selection");
+    }
+    if (e.selection) {
       e.selection.empty();
     } else {
       var t = (e.defaultView || window).getSelection();

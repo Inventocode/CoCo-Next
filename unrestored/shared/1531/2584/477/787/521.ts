@@ -18,7 +18,22 @@
     } catch (i) {}
     return t;
   }
-  exports.b = i;
-  exports.a = o;
-  exports.c = a;
+  Object.defineProperty(exports, "b", {
+    get: function () {
+      return i;
+    },
+    enumerable: true
+  });
+  Object.defineProperty(exports, "a", {
+    get: function () {
+      return o;
+    },
+    enumerable: true
+  });
+  Object.defineProperty(exports, "c", {
+    get: function () {
+      return a;
+    },
+    enumerable: true
+  });
 }).call(this, require("../../../../3272/3198/1187/368"), require("../../155/1167/574")(module));

@@ -105,14 +105,16 @@ function p(e, t, n) {
               r();
             }
           });
-          if (t = !1, function (e, t) {
+          t = !1;
+          (function (e, t) {
             var n = e.value;
             var r = e.done;
             if (!r && n === s) {
               return;
             }
             d(t, l(r ? "Unexpected generator completion. If you get this, it is probably a gensync bug." : "Expected GENSYNC_SUSPEND, got ".concat(JSON.stringify(n), ". If you get this, it is probably a gensync bug."), "GENSYNC_EXPECTED_SUSPEND"));
-          }(a, e), !n) {
+          })(a, e);
+          if (!n) {
             return {
               v: void 0
             };
@@ -167,7 +169,12 @@ module.exports = Object.assign(function (e) {
     var r = e.sync;
     var a = e.async;
     var s = e.errback;
-    if (o("string", "name", t, !0), o("number", "arity", n, !0), o("function", "sync", r), o("function", "async", a, !0), o("function", "errback", s, !0), a && s) {
+    o("string", "name", t, !0);
+    o("number", "arity", n, !0);
+    o("function", "sync", r);
+    o("function", "async", a, !0);
+    o("function", "errback", s, !0);
+    if (a && s) {
       throw l("Expected one of either opts.async or opts.errback, but got _both_.", "GENSYNC_OPTIONS_ERROR");
     }
     if ("string" !== typeof t) {

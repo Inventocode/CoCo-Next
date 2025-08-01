@@ -43,7 +43,8 @@ var y = function () {
     for (e = n - 8; e < n; e++) {
       o = this.copyBit(e, 8, o);
     }
-    if (this.parsedFormatInfo = d.a.decodeFormatInformation(t, o), null !== this.parsedFormatInfo) {
+    this.parsedFormatInfo = d.a.decodeFormatInformation(t, o);
+    if (null !== this.parsedFormatInfo) {
       return this.parsedFormatInfo;
     }
     throw new g.a();
@@ -747,7 +748,8 @@ var x = function () {
                 l = 3;
                 continue;
               }
-              if (s = 2, !0 === this.hasSkipped) {
+              s = 2;
+              if (!0 === this.hasSkipped) {
                 c = this.haveMultiplyConfirmedCenters();
               } else {
                 var p = this.findRowSkip();

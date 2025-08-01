@@ -40,7 +40,7 @@ var s = require("../../11");
 var c = require("../../5");
 var l = require("../../204");
 var u = require("../../51/index");
-var d = (module => {
+var d = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -51,7 +51,7 @@ var d = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(u);
+}(u);
 function p(e, t) {
   return [Object(l.default)({
     targets: "#".concat(e),

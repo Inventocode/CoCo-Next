@@ -47,7 +47,12 @@ var s = function () {
     this.tooltip.hide();
     var t = this.pixels_to_workspace_units(e);
     var n = i.vec2.create();
-    if (i.vec2.add(n, this._start_xy, t), this._dragging_block.translate(n), this._dragging_block.set_dragging(!0), this._dragging_block.bring_to_front(), this._dragging_block.move_to_drag_surface(), this._dragging_block.is_deletable()) {
+    i.vec2.add(n, this._start_xy, t);
+    this._dragging_block.translate(n);
+    this._dragging_block.set_dragging(!0);
+    this._dragging_block.bring_to_front();
+    this._dragging_block.move_to_drag_surface();
+    if (this._dragging_block.is_deletable()) {
       var r = this._workspace.get_toolbox();
       if (void 0 != r) {
         r.add_delete_style();

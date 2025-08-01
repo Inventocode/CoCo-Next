@@ -17,7 +17,9 @@ var u = function (e) {
     n._record_undo = !1;
     var r = t.type;
     var i = t.group;
-    if (n.type = r, n._group = i, r === s.GroupEventType.GroupEnd) {
+    n.type = r;
+    n._group = i;
+    if (r === s.GroupEventType.GroupEnd) {
       for (var o = n._get_event_workspace().get_undo_stack().filter(function (e) {
           return e._group === n._group;
         }), a = o.length - 1; a >= 0; a--) {

@@ -80,7 +80,8 @@ exports._guessExecutionStatusRelativeToDifferentFunctions = function (e) {
         if (!T.has(o.node)) {
           T.add(o.node);
           var l = this._guessExecutionStatusRelativeTo(o);
-          if (T.delete(o.node), n && n !== l) {
+          T.delete(o.node);
+          if (n && n !== l) {
             return "unknown";
           }
           n = l;
@@ -98,7 +99,8 @@ exports._resolve = function (e, t) {
   if (t && t.indexOf(this) >= 0) {
     return;
   }
-  if ((t = t || []).push(this), this.isVariableDeclarator()) {
+  (t = t || []).push(this);
+  if (this.isVariableDeclarator()) {
     if (this.get("id").isIdentifier()) {
       return this.get("init").resolve(e, t);
     }
@@ -204,7 +206,8 @@ exports.isCompletionRecord = function (e) {
     if (t.isFunction() && !n) {
       return !!e;
     }
-    if (n = !1, Array.isArray(r) && t.key !== r.length - 1) {
+    n = !1;
+    if (Array.isArray(r) && t.key !== r.length - 1) {
       return !1;
     }
   } while ((t = t.parentPath) && !t.isProgram());

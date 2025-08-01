@@ -5,7 +5,7 @@ var i = require("../19");
 var o = require("../0/index");
 var a = require("./1501");
 var s = require("../8");
-var c = (module => {
+var c = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -16,7 +16,7 @@ var c = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(s);
+}(s);
 var u = require("../791");
 var l = require("./611");
 var f = require("../612/index");
@@ -167,10 +167,12 @@ var T = function (e) {
       var r = e.actionFn;
       var i = e.close;
       if (!t.current) {
-        if (t.current = !0, r) {
+        t.current = !0;
+        if (r) {
           var o;
           if (e.emitEvent) {
-            if (o = r(n), e.quitOnNullishReturnValue && !S(o)) {
+            o = r(n);
+            if (e.quitOnNullishReturnValue && !S(o)) {
               t.current = !1;
               return void i(n);
             }

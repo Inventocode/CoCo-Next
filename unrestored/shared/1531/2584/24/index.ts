@@ -3,7 +3,7 @@
 var r;
 var o;
 var i = require("../1/index");
-var a = (module => {
+var a = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -14,7 +14,7 @@ var a = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(i);
+}(i);
 var s = require("../7");
 var c = require("../27");
 var l = require("../40");
@@ -86,7 +86,8 @@ var T = function () {
       var t = this;
       var n = u.type.apply(this._doc, e);
       if (n && e) {
-        if (this.setDoc(n), "blockly" !== e[0]) {
+        this.setDoc(n);
+        if ("blockly" !== e[0]) {
           var r = new Map();
           var o = Object(C.b)(e);
           var i = o.picks;
@@ -157,7 +158,7 @@ var U = "user_focus_on_pos_ack";
 var W = "user_focus_on_pos_relay";
 var H = require("../38/index");
 var V = require("./481/index");
-var z = (module => {
+var z = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
   } : function () {
@@ -168,7 +169,7 @@ var z = (module => {
     get: defaultExport
   });
   return defaultExport;
-})(V);
+}(V);
 var Y = require("../59/index").a.oTSocketHost;
 var K = function () {
   function e(t, n) {
@@ -193,7 +194,8 @@ var K = function () {
       var t = this;
       this.subject.on(R, function (e) {
         var n = e.code;
-        if (console.info("===OPERATION_ACK===="), 1e7 === n) {
+        console.info("===OPERATION_ACK====");
+        if (1e7 === n) {
           if (window.confirm("\u670d\u52a1\u5668\u54cd\u5e94\u9519\u8bef\uff0c\u662f\u5426\u5237\u65b0\u9875\u9762\uff1f")) {
             window.location.reload();
           }

@@ -58,7 +58,8 @@ function l() {
     throw Error("Invalid byte index");
   }
   var e = 255 & n[i];
-  if (i++, 128 == (192 & e)) {
+  i++;
+  if (128 == (192 & e)) {
     return 63 & e;
   }
   throw Error("Invalid continuation byte");
@@ -72,7 +73,9 @@ function f(e) {
   if (i == r) {
     return !1;
   }
-  if (t = 255 & n[i], i++, 0 == (128 & t)) {
+  t = 255 & n[i];
+  i++;
+  if (0 == (128 & t)) {
     return t;
   }
   if (192 == (224 & t)) {

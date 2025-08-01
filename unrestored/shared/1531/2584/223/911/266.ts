@@ -63,7 +63,10 @@ function s(e, t, n) {
   var i;
   var o;
   var s;
-  if (e = Object(r.a)(e, 360), t = Object(r.a)(t, 100), n = Object(r.a)(n, 100), 0 === t) {
+  e = Object(r.a)(e, 360);
+  t = Object(r.a)(t, 100);
+  n = Object(r.a)(n, 100);
+  if (0 === t) {
     o = n;
     s = n;
     i = n;

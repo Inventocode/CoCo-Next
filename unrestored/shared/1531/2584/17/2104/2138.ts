@@ -86,7 +86,7 @@ var h = function () {
     e.inputList.map(function (c) {
       var f;
       var d;
-      if (c.fieldRow.forEach(function (e) {
+      c.fieldRow.forEach(function (e) {
         if (e.editable && "string" === typeof e.name) {
           if ((0, l.is_field_number)(e)) {
             var t = void 0;
@@ -124,7 +124,8 @@ var h = function () {
             r[e.name] = e.get_value();
           }
         }
-      }), c.name) {
+      });
+      if (c.name) {
         var h = null === (f = c.connection) || void 0 === f ? void 0 : f.get_shadow_string();
         a[c.name] = h || "";
       }
@@ -352,10 +353,13 @@ var h = function () {
     var i = e.connections;
     var o = e.comments;
     var a = [];
-    if (r && Object.keys(r).forEach(function (e) {
-      n.json_to_block_headless(r[e], t, !1);
-      a.push(e);
-    }), i) {
+    if (r) {
+      Object.keys(r).forEach(function (e) {
+        n.json_to_block_headless(r[e], t, !1);
+        a.push(e);
+      });
+    }
+    if (i) {
       var s = [];
       Object.keys(i).forEach(function (e) {
         Object.keys(i[e]).forEach(function (o) {
@@ -532,12 +536,13 @@ var h = function () {
       comments: {}
     };
     var i = [];
-    if (function e(t, n) {
+    (function e(t, n) {
       var r = n[t];
       if (void 0 !== r && (i.push(t), Object.keys(r).length)) {
         for (var o in r) e(o, n);
       }
-    }(t, e.connections), i.length) {
+    })(t, e.connections);
+    if (i.length) {
       for (var o = 0, a = i; o < a.length; o++) {
         n(e, a[o]);
       }
@@ -624,7 +629,8 @@ var h = function () {
                 } else {
                   for (var b = 0; b < m.childNodes.length; b++) {
                     if (m.childNodes[b].nodeType !== s.NodeType.TEXT) {
-                      if (h[E = m.getAttribute("name") || ""] = "", "block" === (k = (O = m.childNodes[b]).tagName.toLowerCase())) {
+                      h[E = m.getAttribute("name") || ""] = "";
+                      if ("block" === (k = (O = m.childNodes[b]).tagName.toLowerCase())) {
                         var w = O.getAttribute("id") || "";
                         r.connections[o][w] = {
                           type: "input",

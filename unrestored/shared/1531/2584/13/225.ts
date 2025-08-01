@@ -8,7 +8,8 @@ var r;
   var l = i.max;
   var f = i.random;
   function d(e, t) {
-    if (t = t || {}, (e = e || "") instanceof d) {
+    t = t || {};
+    if ((e = e || "") instanceof d) {
       return e;
     }
     if (!(this instanceof d)) {
@@ -176,7 +177,10 @@ var r;
                   }
                   return n < 1 / 6 ? e + 6 * (t - e) * n : n < .5 ? t : n < 2 / 3 ? e + (t - e) * (2 / 3 - n) * 6 : e;
                 }
-                if (e = F(e, 360), t = F(t, 100), n = F(n, 100), 0 === t) {
+                e = F(e, 360);
+                t = F(t, 100);
+                n = F(n, 100);
+                if (0 === t) {
                   r = i = o = n;
                 } else {
                   var s = n < .5 ? n * (1 + t) : n + t - n * t;
@@ -274,7 +278,8 @@ var r;
     var a = u(e, t, n);
     var s = o;
     var c = o - a;
-    if (i = 0 === o ? 0 : c / o, o == a) {
+    i = 0 === o ? 0 : c / o;
+    if (o == a) {
       r = 0;
     } else {
       switch (o) {

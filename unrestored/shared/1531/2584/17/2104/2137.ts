@@ -69,7 +69,8 @@ var u = function () {
       throw new Error(n + "extension not found.");
     }
     var i = this.get_mutator_properties(t);
-    if (r.apply(t), !this.mutator_properties_match(i, t)) {
+    r.apply(t);
+    if (!this.mutator_properties_match(i, t)) {
       throw new Error(n + "mutation properties changed when applying a non-mutator extension.");
     }
   };

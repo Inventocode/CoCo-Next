@@ -488,13 +488,17 @@
           for (this.__initialize(e, t), m = {}, n = this.__worklist, r = this.__leavelist, n.push(new l(e, null, null, null)), r.push(new l(null, null, null, null)); n.length;) {
             if ((i = n.pop()) !== m) {
               if (i.node) {
-                if (u = this.__execute(t.enter, i), this.__state === o || u === o) {
+                u = this.__execute(t.enter, i);
+                if (this.__state === o || u === o) {
                   return;
                 }
-                if (n.push(m), r.push(i), this.__state === a || u === a) {
+                n.push(m);
+                r.push(i);
+                if (this.__state === a || u === a) {
                   continue;
                 }
-                if (c = (s = i.node).type || i.wrap, !(g = this.__keys[c])) {
+                c = (s = i.node).type || i.wrap;
+                if (!(g = this.__keys[c])) {
                   if (!this.__fallback) {
                     throw new Error("Unknown node type " + c + ".");
                   }
@@ -564,11 +568,20 @@
             root: e
           }, "root")), n.push(p), r.push(p); n.length;) {
             if ((p = n.pop()) !== m) {
-              if (void 0 !== (f = this.__execute(t.enter, p)) && f !== o && f !== a && f !== s && (p.ref.replace(f), p.node = f), this.__state !== s && f !== s || (w(p), p.node = null), this.__state === o || f === o) {
+              if (void 0 !== (f = this.__execute(t.enter, p)) && f !== o && f !== a && f !== s) {
+                p.ref.replace(f);
+                p.node = f;
+              }
+              if (!(this.__state !== s && f !== s)) {
+                w(p);
+                p.node = null;
+              }
+              if (this.__state === o || f === o) {
                 return y.root;
               }
               if ((i = p.node) && (n.push(m), r.push(p), this.__state !== a && f !== a)) {
-                if (c = i.type || p.wrap, !(g = this.__keys[c])) {
+                c = i.type || p.wrap;
+                if (!(g = this.__keys[c])) {
                   if (!this.__fallback) {
                     throw new Error("Unknown node type " + c + ".");
                   }
@@ -742,7 +755,8 @@
               for (t = 0; t < e.length; t++) {
                 o[t] = (i = e[t], n[i.type](i));
               }
-              if (o.sort(), o.length > 0) {
+              o.sort();
+              if (o.length > 0) {
                 for (t = 1, r = 1; t < o.length; t++) {
                   if (o[t - 1] !== o[t]) {
                     o[r] = o[t];
@@ -994,7 +1008,15 @@
                   le = o.nextPos;
                   return o.result;
                 }
-                if (n = [], f.test(t.charAt(le)) ? (r = t.charAt(le), le++) : (r = s, me(d)), r !== s) {
+                n = [];
+                if (f.test(t.charAt(le))) {
+                  r = t.charAt(le);
+                  le++;
+                } else {
+                  r = s;
+                  me(d);
+                }
+                if (r !== s) {
                   for (; r !== s;) {
                     n.push(r);
                     if (f.test(t.charAt(le))) {
@@ -1044,7 +1066,8 @@
                   le = f.nextPos;
                   return f.result;
                 }
-                if (e = le, (n = Ce()) !== s) {
+                e = le;
+                if ((n = Ce()) !== s) {
                   for (r = [], i = le, (o = be()) !== s ? (44 === t.charCodeAt(le) ? (a = ",", le++) : (a = s, me(A)), a !== s && (c = be()) !== s && (u = Ce()) !== s ? i = o = [o, a, c, u] : (le = i, i = s)) : (le = i, i = s); i !== s;) {
                     r.push(i);
                     i = le;
@@ -1099,7 +1122,8 @@
                   le = u.nextPos;
                   return u.result;
                 }
-                if (e = le, (t = Oe()) !== s) {
+                e = le;
+                if ((t = Oe()) !== s) {
                   for (n = [], r = le, (i = Ee()) !== s && (o = Oe()) !== s ? r = i = [i, o] : (le = r, r = s); r !== s;) {
                     n.push(r);
                     r = le;
@@ -1147,8 +1171,20 @@
                   le = l.nextPos;
                   return l.result;
                 }
-                if (e = le, 33 === t.charCodeAt(le) ? (n = "!", le++) : (n = s, me(g)), n === s && (n = null), n !== s) {
-                  if (r = [], (i = ke()) !== s) {
+                e = le;
+                if (33 === t.charCodeAt(le)) {
+                  n = "!";
+                  le++;
+                } else {
+                  n = s;
+                  me(g);
+                }
+                if (n === s) {
+                  n = null;
+                }
+                if (n !== s) {
+                  r = [];
+                  if ((i = ke()) !== s) {
                     for (; i !== s;) {
                       r.push(i);
                       i = ke();
@@ -1245,9 +1281,25 @@
                         le = c.nextPos;
                         return c.result;
                       }
-                      if (e = le, "type(" === t.substr(le, 5) ? (n = "type(", le += 5) : (n = s, me(V)), n !== s) {
+                      e = le;
+                      if ("type(" === t.substr(le, 5)) {
+                        n = "type(";
+                        le += 5;
+                      } else {
+                        n = s;
+                        me(V);
+                      }
+                      if (n !== s) {
                         if (be() !== s) {
-                          if (r = [], G.test(t.charAt(le)) ? (i = t.charAt(le), le++) : (i = s, me(z)), i !== s) {
+                          r = [];
+                          if (G.test(t.charAt(le))) {
+                            i = t.charAt(le);
+                            le++;
+                          } else {
+                            i = s;
+                            me(z);
+                          }
+                          if (i !== s) {
                             for (; i !== s;) {
                               r.push(i);
                               if (G.test(t.charAt(le))) {
@@ -1308,8 +1360,24 @@
                         le = u.nextPos;
                         return u.result;
                       }
-                      if (e = le, 47 === t.charCodeAt(le) ? (n = "/", le++) : (n = s, me(X)), n !== s) {
-                        if (r = [], Y.test(t.charAt(le)) ? (i = t.charAt(le), le++) : (i = s, me(q)), i !== s) {
+                      e = le;
+                      if (47 === t.charCodeAt(le)) {
+                        n = "/";
+                        le++;
+                      } else {
+                        n = s;
+                        me(X);
+                      }
+                      if (n !== s) {
+                        r = [];
+                        if (Y.test(t.charAt(le))) {
+                          i = t.charAt(le);
+                          le++;
+                        } else {
+                          i = s;
+                          me(q);
+                        }
+                        if (i !== s) {
                           for (; i !== s;) {
                             r.push(i);
                             if (Y.test(t.charAt(le))) {
@@ -1341,7 +1409,15 @@
                                 le = i.nextPos;
                                 return i.result;
                               }
-                              if (e = [], W.test(t.charAt(le)) ? (n = t.charAt(le), le++) : (n = s, me(K)), n !== s) {
+                              e = [];
+                              if (W.test(t.charAt(le))) {
+                                n = t.charAt(le);
+                                le++;
+                              } else {
+                                n = s;
+                                me(K);
+                              }
+                              if (n !== s) {
                                 for (; n !== s;) {
                                   e.push(n);
                                   if (W.test(t.charAt(le))) {
@@ -1413,7 +1489,15 @@
                         le = u.nextPos;
                         return u.result;
                       }
-                      if (e = le, 34 === t.charCodeAt(le) ? (n = '"', le++) : (n = s, me(B)), n !== s) {
+                      e = le;
+                      if (34 === t.charCodeAt(le)) {
+                        n = '"';
+                        le++;
+                      } else {
+                        n = s;
+                        me(B);
+                      }
+                      if (n !== s) {
                         for (r = [], D.test(t.charAt(le)) ? (i = t.charAt(le), le++) : (i = s, me(I)), i === s && (i = le, 92 === t.charCodeAt(le) ? (o = "\\", le++) : (o = s, me(F)), o !== s ? (t.length > le ? (a = t.charAt(le), le++) : (a = s, me(R)), a !== s ? i = o = P(o, a) : (le = i, i = s)) : (le = i, i = s)); i !== s;) {
                           r.push(i);
                           if (D.test(t.charAt(le))) {
@@ -1475,7 +1559,15 @@
                         e = s;
                       }
                       if (e === s) {
-                        if (e = le, 39 === t.charCodeAt(le) ? (n = "'", le++) : (n = s, me(M)), n !== s) {
+                        e = le;
+                        if (39 === t.charCodeAt(le)) {
+                          n = "'";
+                          le++;
+                        } else {
+                          n = s;
+                          me(M);
+                        }
+                        if (n !== s) {
                           for (r = [], j.test(t.charAt(le)) ? (i = t.charAt(le), le++) : (i = s, me(L)), i === s && (i = le, 92 === t.charCodeAt(le) ? (o = "\\", le++) : (o = s, me(F)), o !== s ? (t.length > le ? (a = t.charAt(le), le++) : (a = s, me(R)), a !== s ? i = o = P(o, a) : (le = i, i = s)) : (le = i, i = s)); i !== s;) {
                             r.push(i);
                             if (j.test(t.charAt(le))) {
@@ -1566,8 +1658,37 @@
                           me(H);
                         }
                       }
-                      if (r !== s ? (46 === t.charCodeAt(le) ? (i = ".", le++) : (i = s, me(S)), i !== s ? n = r = [r, i] : (le = n, n = s)) : (le = n, n = s), n === s && (n = null), n !== s) {
-                        if (r = [], U.test(t.charAt(le)) ? (i = t.charAt(le), le++) : (i = s, me(H)), i !== s) {
+                      if (r !== s) {
+                        if (46 === t.charCodeAt(le)) {
+                          i = ".";
+                          le++;
+                        } else {
+                          i = s;
+                          me(S);
+                        }
+                        if (i !== s) {
+                          n = r = [r, i];
+                        } else {
+                          le = n;
+                          n = s;
+                        }
+                      } else {
+                        le = n;
+                        n = s;
+                      }
+                      if (n === s) {
+                        n = null;
+                      }
+                      if (n !== s) {
+                        r = [];
+                        if (U.test(t.charAt(le))) {
+                          i = t.charAt(le);
+                          le++;
+                        } else {
+                          i = s;
+                          me(H);
+                        }
+                        if (i !== s) {
                           for (; i !== s;) {
                             r.push(i);
                             if (U.test(t.charAt(le))) {
@@ -1639,7 +1760,15 @@
                     le = f.nextPos;
                     return f.result;
                   }
-                  if (e = le, 46 === t.charCodeAt(le) ? (n = ".", le++) : (n = s, me(S)), n !== s) {
+                  e = le;
+                  if (46 === t.charCodeAt(le)) {
+                    n = ".";
+                    le++;
+                  } else {
+                    n = s;
+                    me(S);
+                  }
+                  if (n !== s) {
                     if ((r = we()) !== s) {
                       for (i = [], o = le, 46 === t.charCodeAt(le) ? (a = ".", le++) : (a = s, me(S)), a !== s && (c = we()) !== s ? o = a = [a, c] : (le = o, o = s); o !== s;) {
                         i.push(o);
@@ -1755,9 +1884,25 @@
                     le = c.nextPos;
                     return c.result;
                   }
-                  if (e = le, ":nth-child(" === t.substr(le, 11) ? (n = ":nth-child(", le += 11) : (n = s, me(ne)), n !== s) {
+                  e = le;
+                  if (":nth-child(" === t.substr(le, 11)) {
+                    n = ":nth-child(";
+                    le += 11;
+                  } else {
+                    n = s;
+                    me(ne);
+                  }
+                  if (n !== s) {
                     if (be() !== s) {
-                      if (r = [], U.test(t.charAt(le)) ? (i = t.charAt(le), le++) : (i = s, me(H)), i !== s) {
+                      r = [];
+                      if (U.test(t.charAt(le))) {
+                        i = t.charAt(le);
+                        le++;
+                      } else {
+                        i = s;
+                        me(H);
+                      }
+                      if (i !== s) {
                         for (; i !== s;) {
                           r.push(i);
                           if (U.test(t.charAt(le))) {
@@ -1814,9 +1959,25 @@
                     le = c.nextPos;
                     return c.result;
                   }
-                  if (e = le, ":nth-last-child(" === t.substr(le, 16) ? (n = ":nth-last-child(", le += 16) : (n = s, me(re)), n !== s) {
+                  e = le;
+                  if (":nth-last-child(" === t.substr(le, 16)) {
+                    n = ":nth-last-child(";
+                    le += 16;
+                  } else {
+                    n = s;
+                    me(re);
+                  }
+                  if (n !== s) {
                     if (be() !== s) {
-                      if (r = [], U.test(t.charAt(le)) ? (i = t.charAt(le), le++) : (i = s, me(H)), i !== s) {
+                      r = [];
+                      if (U.test(t.charAt(le))) {
+                        i = t.charAt(le);
+                        le++;
+                      } else {
+                        i = s;
+                        me(H);
+                      }
+                      if (i !== s) {
                         for (; i !== s;) {
                           r.push(i);
                           if (U.test(t.charAt(le))) {
@@ -1894,7 +2055,8 @@
                   le = f.nextPos;
                   return f.result;
                 }
-                if (e = le, (n = we()) !== s) {
+                e = le;
+                if ((n = we()) !== s) {
                   for (r = [], i = le, 46 === t.charCodeAt(le) ? (o = ".", le++) : (o = s, me(S)), o !== s && (a = we()) !== s ? i = o = [o, a] : (le = i, i = s); i !== s;) {
                     r.push(i);
                     i = le;
@@ -2312,7 +2474,10 @@
         var o = A(t);
         c.traverse(e, {
           enter: function (e, a) {
-            if (null != a && i.unshift(a), l(e, t, i, r)) {
+            if (null != a) {
+              i.unshift(a);
+            }
+            if (l(e, t, i, r)) {
               if (o.length) {
                 for (var s = 0, c = o.length; s < c; ++s) {
                   if (l(e, o[s], i, r)) {

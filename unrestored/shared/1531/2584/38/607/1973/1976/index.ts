@@ -156,7 +156,8 @@ c.prototype.allGeneratedPositionsFor = function (e) {
     originalLine: t,
     originalColumn: r.getArg(e, "column", 0)
   };
-  if (n.source = this._findSourceIndex(n.source), n.source < 0) {
+  n.source = this._findSourceIndex(n.source);
+  if (n.source < 0) {
     return [];
   }
   var o = [];
@@ -191,7 +192,10 @@ u.prototype.consumer = c;
 u.prototype._findSourceIndex = function (e) {
   var t;
   var n = e;
-  if (null != this.sourceRoot && (n = r.relative(this.sourceRoot, n)), this._sources.has(n)) {
+  if (null != this.sourceRoot) {
+    n = r.relative(this.sourceRoot, n);
+  }
+  if (this._sources.has(n)) {
     return this._sources.indexOf(n);
   }
   for (t = 0; t < this._absoluteSources.length; ++t) {
@@ -362,7 +366,10 @@ u.prototype.sourceContentFor = function (e, t) {
   }
   var i;
   var o = e;
-  if (null != this.sourceRoot && (o = r.relative(this.sourceRoot, o)), null != this.sourceRoot && (i = r.urlParse(this.sourceRoot))) {
+  if (null != this.sourceRoot) {
+    o = r.relative(this.sourceRoot, o);
+  }
+  if (null != this.sourceRoot && (i = r.urlParse(this.sourceRoot))) {
     var a = o.replace(/^file:\/\//, "");
     if ("file" == i.scheme && this._sources.has(a)) {
       return this.sourcesContent[this._sources.indexOf(a)];
