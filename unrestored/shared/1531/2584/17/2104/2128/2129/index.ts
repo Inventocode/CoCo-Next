@@ -4,11 +4,11 @@ Object.defineProperty(exports, "__esModule", {
   value: !0
 });
 exports.onKeyDown_ = exports.Inject = void 0;
-var r = require("../../../../1001/93");
-var i = require("../../../259");
+var r = require("tslib");
+var i = require("@kitten-team/gl-matrix");
 var o = require("../../../../4/127");
 var a = require("../../../../125/195/index");
-var s = require("../../1325/755");
+var s = require("../../2174/755");
 var c = require("../../2150/1321");
 var u = require("../../../../1001/213/index");
 var l = (0, r.__importStar)(require("../../../../125/index"));
@@ -152,7 +152,7 @@ var p = function (e, t) {
       switch (o.label) {
         case 0:
           return [4, Promise.resolve().then(function () {
-            return (0, r.__importStar)(require("../../../../458"));
+            return (0, r.__importStar)(require("resize-observer-polyfill"));
           })];
         case 1:
           return [4, o.sent().default];

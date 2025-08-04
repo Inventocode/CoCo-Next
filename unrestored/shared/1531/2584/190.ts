@@ -30,7 +30,7 @@ function i(e) {
   return !1;
 }
 function a(e) {
-  return Object(r.isArray)(e) || Object(r.isPlainObject)(e) ? s(e, null, 2).replace(new RegExp('"'.concat(31, "...OBJECT").concat(30, '"'), "g"), "{...}").replace(new RegExp('"'.concat(31, "...ARRAY").concat(30, '"'), "g"), "[...]") : "".concat(e);
+  return Object(r.isArray)(e) || Object(r.isPlainObject)(e) ? s(e, null, 2).replace(new RegExp("\"".concat(31, "...OBJECT").concat(30, "\""), "g"), "{...}").replace(new RegExp("\"".concat(31, "...ARRAY").concat(30, "\""), "g"), "[...]") : "".concat(e);
 }
 function s(e, t, n, o) {
   return JSON.stringify(e, function (e, t) {
@@ -80,6 +80,6 @@ function u(e) {
   var n = function () {
     return Object(r.isArray)(this) ? "[...]" : "{...}";
   };
-  return "object" !== typeof e ? e.toString() : Array.isArray(e) ? t ? s(e, void 0, void 0, n).replace(/"([^"]+)"/g, "$1") : s(e, void 0, void 0, n) : s(e, void 0, void 0, n).replace(/([^"]+):"([^"]+)"/g, "$1:$2").replaceAll('"[...]"', "[...]").replaceAll('"{...}"', "{...}");
+  return "object" !== typeof e ? e.toString() : Array.isArray(e) ? t ? s(e, void 0, void 0, n).replace(/"([^"]+)"/g, "$1") : s(e, void 0, void 0, n) : s(e, void 0, void 0, n).replace(/([^"]+):"([^"]+)"/g, "$1:$2").replaceAll("\"[...]\"", "[...]").replaceAll("\"{...}\"", "{...}");
 }
 export default i;

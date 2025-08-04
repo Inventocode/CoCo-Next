@@ -1,10 +1,10 @@
 "use strict";
 
-var r = require("../1714/258/index");
+var r = require("../1720/258/index");
 var o = require("../1735/257");
 var i = require("./1248/index");
-var a = require("./309");
-var s = require("../1633/167");
+var a = require("../1623/309");
+var s = require("../1736/167");
 var c = r.aTypedArray;
 (0, r.exportTypedArrayMethod)("set", function (e) {
   c(this);

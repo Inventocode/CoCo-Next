@@ -2,7 +2,7 @@
 
 export { o as a };
 export { a as b };
-var r = require("../0/index");
+var r = require("react");
 require("../50/index");
 var i = Object(r.createContext)(null);
 var o = function (e) {

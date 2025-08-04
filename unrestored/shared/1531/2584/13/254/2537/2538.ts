@@ -36,7 +36,7 @@ var o = function () {
     return t;
   };
 }();
-var a = require("../../../0/index");
+var a = require("react");
 var s = (r = a) && r.__esModule ? r : {
   default: r
 };

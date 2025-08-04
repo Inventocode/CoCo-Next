@@ -1,5 +1,5 @@
 var r = require("../761");
-var i = require("../717");
+var i = require("../717/index");
 function o(e) {
   this.mode = i.BYTE;
   this.data = r.from(e);

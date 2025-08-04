@@ -282,7 +282,7 @@ var h = function (e) {
       return e.charCodeAt(0).toString(16).toUpperCase();
     }
     function r(e) {
-      return e.replace(/\\/g, "\\\\").replace(/"/g, '\\"').replace(/\0/g, "\\0").replace(/\t/g, "\\t").replace(/\n/g, "\\n").replace(/\r/g, "\\r").replace(/[\x00-\x0F]/g, function (e) {
+      return e.replace(/\\/g, "\\\\").replace(/"/g, "\\\"").replace(/\0/g, "\\0").replace(/\t/g, "\\t").replace(/\n/g, "\\n").replace(/\r/g, "\\r").replace(/[\x00-\x0F]/g, function (e) {
         return "\\x0" + n(e);
       }).replace(/[\x10-\x1F\x7F-\x9F]/g, function (e) {
         return "\\x" + n(e);
@@ -298,7 +298,7 @@ var h = function (e) {
     function o(e) {
       switch (e.type) {
         case "literal":
-          return '"' + r(e.text) + '"';
+          return "\"" + r(e.text) + "\"";
         case "class":
           var t = e.parts.map(function (e) {
             return Array.isArray(e) ? i(e[0]) + "-" + i(e[1]) : i(e);
@@ -334,7 +334,7 @@ var h = function (e) {
         default:
           return r.slice(0, -1).join(", ") + ", or " + r[r.length - 1];
       }
-    }(e) + " but " + (((a = t) ? '"' + r(a) + '"' : "end of input") + " found.");
+    }(e) + " but " + (((a = t) ? "\"" + r(a) + "\"" : "end of input") + " found.");
     var a;
   };
   return t;
@@ -398,10 +398,10 @@ var p = function (e, t) {
   var W = Ce("=", !1);
   var K = ke("whitespace");
   var X = /^[\t-\r \x85\xA0\u1680\u2000-\u200A\u2028\u2029\u202F\u205F\u3000]/;
-  var Y = Oe([["\t", "\r"], " ", "\x85", "\xa0", "\u1680", ["\u2000", "\u200a"], "\u2028", "\u2029", "\u202f", "\u205f", "\u3000"], !1, !1);
+  var Y = Oe([["\t", "\r"], " ", "", " ", " ", [" ", " "], " ", " ", " ", " ", "　"], !1, !1);
   var q = ke("syntax pattern");
   var $ = /^[!-\/:-@[-\^`{-~\xA1-\xA7\xA9\xAB\xAC\xAE\xB0\xB1\xB6\xBB\xBF\xD7\xF7\u2010-\u2027\u2030-\u203E\u2041-\u2053\u2055-\u205E\u2190-\u245F\u2500-\u2775\u2794-\u2BFF\u2E00-\u2E7F\u3001-\u3003\u3008-\u3020\u3030\uFD3E\uFD3F\uFE45\uFE46]/;
-  var J = Oe([["!", "/"], [":", "@"], ["[", "^"], "`", ["{", "~"], ["\xa1", "\xa7"], "\xa9", "\xab", "\xac", "\xae", "\xb0", "\xb1", "\xb6", "\xbb", "\xbf", "\xd7", "\xf7", ["\u2010", "\u2027"], ["\u2030", "\u203e"], ["\u2041", "\u2053"], ["\u2055", "\u205e"], ["\u2190", "\u245f"], ["\u2500", "\u2775"], ["\u2794", "\u2bff"], ["\u2e00", "\u2e7f"], ["\u3001", "\u3003"], ["\u3008", "\u3020"], "\u3030", "\ufd3e", "\ufd3f", "\ufe45", "\ufe46"], !1, !1);
+  var J = Oe([["!", "/"], [":", "@"], ["[", "^"], "`", ["{", "~"], ["¡", "§"], "©", "«", "¬", "®", "°", "±", "¶", "»", "¿", "×", "÷", ["‐", "‧"], ["‰", "‾"], ["⁁", "⁓"], ["⁕", "⁞"], ["←", "⑟"], ["─", "❵"], ["➔", "⯿"], ["⸀", "⹿"], ["、", "〃"], ["〈", "〠"], "〰", "﴾", "﴿", "﹅", "﹆"], !1, !1);
   var Z = ke("optional whitespace");
   var ee = ke("number");
   var te = Ce("-", !1);
@@ -433,7 +433,7 @@ var p = function (e, t) {
   var be = 0;
   if (void 0 !== t.startRule) {
     if (!(t.startRule in s)) {
-      throw new Error("Can't start parsing from rule \"" + t.startRule + '".');
+      throw new Error("Can't start parsing from rule \"" + t.startRule + "\".");
     }
     c = s[t.startRule];
   }
@@ -550,7 +550,7 @@ var p = function (e, t) {
           ge = e;
           c = n;
           if ((s = t) !== (u = a)) {
-            xe('Mismatch tag "' + s + '" !== "' + u + '"', Ee());
+            xe("Mismatch tag \"" + s + "\" !== \"" + u + "\"", Ee());
           }
           t = Object(r.a)({
             type: i.a.tag,
@@ -1104,7 +1104,7 @@ var p = function (e, t) {
                                         var r = t.value;
                                         var i = t.location;
                                         if (n in e) {
-                                          xe('Duplicate option "' + n + '" in plural element: "' + we() + '"', Ee());
+                                          xe("Duplicate option \"" + n + "\" in plural element: \"" + we() + "\"", Ee());
                                         }
                                         e[n] = {
                                           value: r,
@@ -1259,7 +1259,7 @@ var p = function (e, t) {
                                     var r = t.value;
                                     var i = t.location;
                                     if (n in e) {
-                                      xe('Duplicate option "' + n + '" in select element: "' + we() + '"', Ee());
+                                      xe("Duplicate option \"" + n + "\" in select element: \"" + we() + "\"", Ee());
                                     }
                                     e[n] = {
                                       value: r,

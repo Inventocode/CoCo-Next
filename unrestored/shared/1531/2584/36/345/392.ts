@@ -26,7 +26,7 @@ var i = {
       window.stepper.requestPermission().then(function (t) {
         if (t) {
           window.stepper.startStepperUpdates({
-            pedometerIsCountingText: "\u8ba1\u6b65\u5668\u6b63\u5e38\u8ba1\u6b65",
+            pedometerIsCountingText: "计步器正常计步",
             pedometerStepsToGoFormatText: "",
             pedometerYourProgressFormatText: "",
             pedometerGoalReachedFormatText: ""

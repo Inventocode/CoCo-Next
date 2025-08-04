@@ -294,15 +294,15 @@ var C = require("../48/87");
 var T = "".concat(a.a.serverHost, "/coconut");
 var S = 405e5;
 var I = Object(O.a)({
-  40400100: "\u7528\u6237\u672a\u6388\u6743",
-  40400915: "\u5f53\u524d\u7528\u6237\u65e0\u64cd\u4f5c\u6743\u9650",
-  40400916: "\u884c\u4e3a\u7a7a\u6216\u4e0d\u5b58\u5728",
-  40400917: "\u5217\u4e3a\u7a7a\u6216\u4e0d\u5b58\u5728",
-  40400919: "\u5bb9\u91cf\u5df2\u8fbe\u4e0a\u9650",
-  40400926: "\u6570\u636e\u6e90\u4e0d\u5b58\u5728",
-  40400927: "\u8d85\u8fc7\u6700\u5927\u6570\u636e\u5e93\u6570\u91cf",
-  40400931: "\u5b58\u50a8\u7684\u6570\u636e\u8d85\u51fa\u5355\u5143\u683c\u9650\u5236(1k\u4e2a\u5b57\u7b26)"
-}, S, "\u5b58\u50a8\u7684\u6570\u636e\u8d85\u51fa\u5f53\u524d\u5217\u6570\uff0c\u6ea2\u51fa\u90e8\u5206\u5b58\u50a8\u5931\u8d25");
+  40400100: "用户未授权",
+  40400915: "当前用户无操作权限",
+  40400916: "行为空或不存在",
+  40400917: "列为空或不存在",
+  40400919: "容量已达上限",
+  40400926: "数据源不存在",
+  40400927: "超过最大数据库数量",
+  40400931: "存储的数据超出单元格限制(1k个字符)"
+}, S, "存储的数据超出当前列数，溢出部分存储失败");
 function A(e) {
   return j.apply(this, arguments);
 }
@@ -655,7 +655,7 @@ function H() {
               e.next = 20;
               break;
             }
-            if ("\u63d2\u5165\u6570\u636e\u4e0e\u5217\u5c5e\u6027\u4e0d\u5339\u914d" !== d.data) {
+            if ("插入数据与列属性不匹配" !== d.data) {
               e.next = 17;
               break;
             }
@@ -688,7 +688,7 @@ function H() {
             }));
           case 35:
             throw new Error(JSON.stringify({
-              msg: "\u670d\u52a1\u5668\u9519\u8bef",
+              msg: "服务器错误",
               code: "E0"
             }));
           case 36:
@@ -777,7 +777,7 @@ function z() {
             }));
           case 30:
             throw new Error(JSON.stringify({
-              msg: "\u670d\u52a1\u5668\u9519\u8bef",
+              msg: "服务器错误",
               code: "E0"
             }));
           case 31:
@@ -870,7 +870,7 @@ function K() {
             }));
           case 30:
             throw new Error(JSON.stringify({
-              msg: "\u670d\u52a1\u5668\u9519\u8bef",
+              msg: "服务器错误",
               code: "E0"
             }));
           case 31:
@@ -967,7 +967,7 @@ function X() {
             }));
           case 31:
             throw new Error(JSON.stringify({
-              msg: "\u670d\u52a1\u5668\u9519\u8bef",
+              msg: "服务器错误",
               code: "E0"
             }));
           case 32:
@@ -1048,7 +1048,7 @@ function Z() {
             }));
           case 31:
             throw new Error(JSON.stringify({
-              msg: "\u670d\u52a1\u5668\u9519\u8bef",
+              msg: "服务器错误",
               code: "E0"
             }));
           case 32:
@@ -1126,7 +1126,7 @@ function $() {
             }));
           case 30:
             throw new Error(JSON.stringify({
-              msg: "\u670d\u52a1\u5668\u9519\u8bef",
+              msg: "服务器错误",
               code: "E0"
             }));
           case 31:

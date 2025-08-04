@@ -17,7 +17,7 @@ var i = function __importDefault(module) {
   return defaultExport;
 }(o);
 var a = require("../28/index");
-var s = require("../15/311");
+var s = require("./311");
 var c = require("../59/index");
 var l = Object(c.b)();
 function u(e, t) {
@@ -54,8 +54,8 @@ if (null === (r = window.location) || void 0 === r ? void 0 : r.pathname.include
 }
 i.a.registerPage({
   $app_id: window.location.host,
-  $app_name: "APP\u5de5\u5320",
-  product_name: "APP\u5de5\u5320",
+  $app_name: "APP工匠",
+  product_name: "APP工匠",
   page: p
 });
 i.a.quick("autoTrack");

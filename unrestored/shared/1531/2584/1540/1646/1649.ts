@@ -1,4 +1,4 @@
-var r = require("../1745/194");
+var r = require("../1736/194");
 module.exports = function (e, t) {
   var n = r.console;
   if (n && n.error) {

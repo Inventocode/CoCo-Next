@@ -1,7 +1,7 @@
 "use strict";
 
-var r = require("../../../../3272/3198/2668/220");
-var i = require("../../../../3272/3198/2668/230");
+var r = require("../../36/2668/220");
+var i = require("../../36/2668/230");
 var o = require("./766/index");
 var a = require("./807/index")("eslint:traverser");
 function s() {}
@@ -61,7 +61,7 @@ var c = function () {
             var n = e[t.type];
             if (!n) {
               n = o.getKeys(t);
-              a('Unknown node type "%s": Estimated visitor keys %j', t.type, n);
+              a("Unknown node type \"%s\": Estimated visitor keys %j", t.type, n);
             }
             return n;
           }(this._visitorKeys, e);

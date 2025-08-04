@@ -22,7 +22,7 @@ exports.getBoundPosition = function (e, t, n) {
     var l = s.ownerDocument;
     var u = l.defaultView;
     if (!((c = "parent" === a ? s.parentNode : l.querySelector(a)) instanceof u.HTMLElement)) {
-      throw new Error('Bounds selector "' + a + '" could not find an element.');
+      throw new Error("Bounds selector \"" + a + "\" could not find an element.");
     }
     var d = u.getComputedStyle(s);
     var p = u.getComputedStyle(c);

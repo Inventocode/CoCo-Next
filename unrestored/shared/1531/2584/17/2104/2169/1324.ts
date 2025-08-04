@@ -4,7 +4,7 @@ Object.defineProperty(exports, "__esModule", {
   value: !0
 });
 exports.OutputBlockRenderer = void 0;
-var r = require("../../../1001/93");
+var r = require("tslib");
 var i = require("../../../125/195/index");
 var o = require("../../../125/index");
 var a = function (e) {

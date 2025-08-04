@@ -26,10 +26,10 @@ var r = function () {
     return t;
   };
 }();
-var i = require("../../../0/index");
+var i = require("react");
 var o = u(i);
 var a = u(require("../../785/104/index"));
-var s = u(require("./2529/index"));
+var s = u(require("./2529"));
 var c = function (e) {
   if (e && e.__esModule) {
     return e;

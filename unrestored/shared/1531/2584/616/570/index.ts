@@ -35,7 +35,7 @@
   }
   function u(e, t, n, r) {
     if ("number" === typeof t) {
-      throw new TypeError('"value" argument must not be a number');
+      throw new TypeError("\"value\" argument must not be a number");
     }
     return "undefined" !== typeof ArrayBuffer && t instanceof ArrayBuffer ? function (e, t, n, r) {
       t.byteLength;
@@ -57,7 +57,7 @@
         n = "utf8";
       }
       if (!c.isEncoding(n)) {
-        throw new TypeError('"encoding" must be a valid string encoding');
+        throw new TypeError("\"encoding\" must be a valid string encoding");
       }
       var r = 0 | p(t, n);
       var i = (e = s(e, r)).write(t, n);
@@ -87,10 +87,10 @@
   }
   function l(e) {
     if ("number" !== typeof e) {
-      throw new TypeError('"size" argument must be a number');
+      throw new TypeError("\"size\" argument must be a number");
     }
     if (e < 0) {
-      throw new RangeError('"size" argument must not be negative');
+      throw new RangeError("\"size\" argument must not be negative");
     }
   }
   function f(e, t) {
@@ -518,7 +518,7 @@
   };
   c.concat = function (e, t) {
     if (!o(e)) {
-      throw new TypeError('"list" argument must be an Array of Buffers');
+      throw new TypeError("\"list\" argument must be an Array of Buffers");
     }
     if (0 === e.length) {
       return c.alloc(0);
@@ -534,7 +534,7 @@
     for (n = 0; n < e.length; ++n) {
       var a = e[n];
       if (!c.isBuffer(a)) {
-        throw new TypeError('"list" argument must be an Array of Buffers');
+        throw new TypeError("\"list\" argument must be an Array of Buffers");
       }
       a.copy(r, i);
       i += a.length;
@@ -760,10 +760,10 @@
   }
   function I(e, t, n, r, i, o) {
     if (!c.isBuffer(e)) {
-      throw new TypeError('"buffer" argument must be a Buffer instance');
+      throw new TypeError("\"buffer\" argument must be a Buffer instance");
     }
     if (t > i || t < o) {
-      throw new RangeError('"value" argument is out of bounds');
+      throw new RangeError("\"value\" argument is out of bounds");
     }
     if (n + r > e.length) {
       throw new RangeError("Index out of range");
@@ -1385,4 +1385,4 @@
     }
     return i;
   }
-}).call(this, require("../../31/251"));
+}).call(this, require("../../710/251"));

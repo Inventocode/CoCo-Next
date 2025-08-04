@@ -3,7 +3,7 @@
 export { ii as a };
 var r;
 var i = require("./269/index");
-var o = require("./559");
+var o = require("hammerjs");
 var a = require("./34/index");
 var s = {
   App: Symbol("App"),
@@ -6535,7 +6535,7 @@ var Jt = function (e) {
     s.preview = new a.t();
     s.target_name = new a.v("", Yt);
     s.content = new a.v("", qt);
-    s.next_text = new a.v("\u70b9\u51fb\u7ee7\u7eed", $t);
+    s.next_text = new a.v("点击继续", $t);
     s.next_text.name = "next_text";
     s.next_icon = new a.t();
     s.next_icon.name = "next_icon";
@@ -7257,7 +7257,7 @@ var pn = function (e) {
       }
     };
     i.time = new a.v("0.00");
-    i.unit = new a.v("\u79d2");
+    i.unit = new a.v("秒");
     i.time.style = Object.assign({}, hn, {
       fontSize: 30
     });
@@ -8144,7 +8144,7 @@ var Ar = function (e) {
     this.blank_text.visible = !1;
   };
   t.init_blank_text = function () {
-    var e = new a.v("\u7a7a", Qn);
+    var e = new a.v("空", Qn);
     e.anchor.set(.5, 0);
     e.position.y = jn;
     return e;
@@ -10300,5 +10300,5 @@ function ii() {
     return ni.get(e);
   }(qr.KittenStage);
 }
-console.log("%cWelcome to \u2764 Codemao Stage - v" + ri + " \u2764 for Kitten o(*\uffe3\u25bd\uffe3*)\u30d6", "\n  color: #BC2424;\n  text-shadow: 0 1px 0 #8D1B1B;");
+console.log("%cWelcome to ❤ Codemao Stage - v" + ri + " ❤ for Kitten o(*￣▽￣*)ブ", "\n  color: #BC2424;\n  text-shadow: 0 1px 0 #8D1B1B;");
 export default ii;

@@ -4,7 +4,7 @@ Object.defineProperty(exports, "__esModule", {
   value: !0
 });
 exports.init_sensing_blocks = void 0;
-var r = require("./2552/579");
+var r = require("./2555/579");
 exports.init_sensing_blocks = function (e) {
   var t = [{
     type: "get_time",
@@ -34,8 +34,8 @@ exports.init_sensing_blocks = function (e) {
   }];
   e.define_blocks_with_json_array(t);
   Object.assign(e.blocks_xml, {
-    get_time: '<block type="get_time"/>',
-    get_timer: '<block type="get_timer"/>',
-    reset_timer: '<block type="reset_timer"/>'
+    get_time: "<block type=\"get_time\"/>",
+    get_timer: "<block type=\"get_timer\"/>",
+    reset_timer: "<block type=\"reset_timer\"/>"
   });
 };

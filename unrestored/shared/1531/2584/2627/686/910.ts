@@ -1,5 +1,5 @@
 "use strict";
 
-var r = require("../../0/index");
+var r = require("react");
 var i = Object(r.createContext)(void 0);
 exports.a = i;

@@ -8,7 +8,7 @@ var r = this && this.__importDefault || function (e) {
 Object.defineProperty(exports, "__esModule", {
   value: !0
 });
-var i = r(require("../../0/index"));
+var i = r(require("react"));
 function o(e) {
   return "function" === typeof e ? i.default.createElement(a, {
     stage: e

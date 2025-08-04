@@ -282,7 +282,7 @@ u.prototype = {
   },
   mix: function (e, t) {
     if (!e || !e.rgb) {
-      throw new Error('Argument to "mix" was not a Color instance, but rather an instance of ' + typeof e);
+      throw new Error("Argument to \"mix\" was not a Color instance, but rather an instance of " + typeof e);
     }
     var n = e.rgb();
     var r = this.rgb();

@@ -4,11 +4,11 @@ Object.defineProperty(exports, "__esModule", {
   value: !0
 });
 exports.BlockGroup = void 0;
-var r = require("../../1001/93");
-var i = require("../../1001/134/index");
-var o = require("../259");
+var r = require("tslib");
+var i = require("inversify");
+var o = require("@kitten-team/gl-matrix");
 var a = require("../../125/195/index");
-var s = require("../../206/208/387");
+var s = require("../497/387");
 var c = require("../../1001/213/index");
 var u = require("../497/644");
 var l = function (e) {
@@ -248,5 +248,5 @@ var l = function (e) {
     }
   };
   return t = (0, r.__decorate)([(0, i.injectable)()], t);
-}(require("./1325/index").BlockSvg);
+}(require("./1325").BlockSvg);
 exports.BlockGroup = l;

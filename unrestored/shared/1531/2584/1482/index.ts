@@ -4,7 +4,7 @@
   var r = require("../25/index");
   var o = require("../6");
   var i = require("../10/index");
-  var a = require("../0/index");
+  var a = require("react");
   var s = function __importDefault(module) {
     var defaultExport = module && module.__esModule ? function () {
       return module.default;
@@ -49,7 +49,7 @@
     });
     return defaultExport;
   }(g);
-  var v = require("../2/index");
+  var v = require("../2");
   var b = require("../64");
   var y = require("../5");
   var E = require("../9");
@@ -399,7 +399,7 @@
       className: _.a.dialogTitle
     }, d, s.a.createElement("span", {
       className: _.a.defaultData
-    }, "\u2014 ", N({
+    }, "— ", N({
       id: "StorageDialog.defaultData"
     }))), s.a.createElement(C.a, ve), s.a.createElement("div", {
       className: _.a.list
@@ -409,7 +409,7 @@
       className: _.a.count
     }, s.a.createElement("span", null, N({
       id: "keyValueTotal"
-    }), "\uff1a"), G.length || "0")), s.a.createElement("div", {
+    }), "："), G.length || "0")), s.a.createElement("div", {
       className: _.a.listHeader
     }, s.a.createElement("div", {
       className: _.a.column1

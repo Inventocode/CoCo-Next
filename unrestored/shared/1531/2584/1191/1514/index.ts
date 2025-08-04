@@ -38,7 +38,7 @@ var r = function (e) {
     t.set(e, n);
   }
   return n;
-}(require("../../0/index"));
+}(require("react"));
 var o = p(require("../../50/index"));
 var i = p(require("../../75/index"));
 var a = p(require("../../8"));

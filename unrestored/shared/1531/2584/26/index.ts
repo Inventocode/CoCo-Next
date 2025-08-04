@@ -36,7 +36,7 @@ var l = require("../9");
 var u = require("../23");
 var d = require("../301/index");
 var p = require("../5");
-var f = require("../15/index");
+var f = require("../15");
 var h = new (function () {
   function e() {
     Object(a.a)(this, e);
@@ -62,7 +62,7 @@ var h = new (function () {
             n += e;
           }
         } else {
-          n += '<sep gap="50"></sep>';
+          n += "<sep gap=\"50\"></sep>";
         }
       });
       n += "</xml>";
@@ -158,7 +158,7 @@ var h = new (function () {
             text: t || l.text || Object(u.c)(u.b, "untitled"),
             icon: {
               font_id: Object(f.X)(l.iconId) ? void 0 : l.iconId,
-              html: Object(f.X)(l.iconId) ? '<img draggable="false" style="width: 16px; height: 16px;" src="'.concat(l.iconId, '">') : void 0
+              html: Object(f.X)(l.iconId) ? "<img draggable=\"false\" style=\"width: 16px; height: 16px;\" src=\"".concat(l.iconId, "\">") : void 0
             },
             blocks: a ? "ANY_".concat(n) : Array.isArray(l.blocks) ? this.convertBlockTypeToXml(l.blocks) : l.blocks
           });
@@ -557,12 +557,12 @@ var z = function __importDefault(module) {
   return defaultExport;
 }(V);
 var Y = require("../7");
-var K = require("../206/208/index");
+var K = require("./208/index");
 var q = require("../38/index");
 var X = require("../53");
 var Q = require("../47");
 var Z = require("../4/127");
-var J = require("../2/index");
+var J = require("../2");
 !function (e) {
   e.PNG = "dataurl+png";
   e.SVG_ASCII = "dataurl+ascii";
@@ -808,7 +808,7 @@ function le() {
             p = u.serializeToString(a);
             f = u.serializeToString(n);
             d = d.replace(/[\n\r]|\s{2,}/g, "");
-            return e.abrupt("return", '<svg xmlns="'.concat($, '" xmlns:xlink="').concat(ee, '" width="').concat(l.width, '" height="').concat(l.height, '"') + ' viewBox="'.concat(l.x, " ").concat(l.y, " ").concat(l.width, " ").concat(l.height, '">\n      ').concat(d, "\n      ").concat(p, "\n      ").concat(f, "\n    </svg>"));
+            return e.abrupt("return", "<svg xmlns=\"".concat($, "\" xmlns:xlink=\"").concat(ee, "\" width=\"").concat(l.width, "\" height=\"").concat(l.height, "\"") + " viewBox=\"".concat(l.x, " ").concat(l.y, " ").concat(l.width, " ").concat(l.height, "\">\n      ").concat(d, "\n      ").concat(p, "\n      ").concat(f, "\n    </svg>"));
           case 26:
           case "end":
             return e.stop();
@@ -845,7 +845,7 @@ if (window.location.href.toLowerCase().includes(se)) {
 }
 var de = require("../227/index");
 var pe = require("../206/index");
-var fe = require("../206/426");
+var fe = require("./426");
 var he = X.d;
 var me = .5 * he;
 var ge = 2 * he;
@@ -1021,7 +1021,7 @@ var Ce = -20;
 var Te = -4;
 var Se = [-12, -16];
 var Ie = [-20, -20];
-var Ae = '<svg width="'.concat(24, 'px" height="').concat(24, 'px" class="icon" aria-hidden="true">\n  <use xlink:href="#icon-block-drag-delete"></use>\n</svg>');
+var Ae = "<svg width=\"".concat(24, "px\" height=\"").concat(24, "px\" class=\"icon\" aria-hidden=\"true\">\n  <use xlink:href=\"#icon-block-drag-delete\"></use>\n</svg>");
 var je = new (function () {
   function e() {
     Object(a.a)(this, e);

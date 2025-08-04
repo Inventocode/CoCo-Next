@@ -1,4 +1,4 @@
-var r = require("../../1445/712/1089/index");
+var r = require("./1089/index");
 var i = require("./832");
 var o = Object.prototype.hasOwnProperty;
 module.exports = function (e, t, n) {

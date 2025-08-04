@@ -236,7 +236,7 @@ module.exports = function (e) {
         t(n);
       };
       r.onerror = function () {
-        n(new Error("fileReader \u8bfb\u53d6\u9519\u8bef"));
+        n(new Error("fileReader 读取错误"));
       };
     });
   }
@@ -639,7 +639,7 @@ module.exports = function (e) {
   })("versions", []).push({
     version: r.version,
     mode: n(13) ? "pure" : "global",
-    copyright: "\xa9 2019 Denis Pushkarev (zloirock.ru)"
+    copyright: "© 2019 Denis Pushkarev (zloirock.ru)"
   });
 }, function (e, t) {
   e.exports = "constructor,hasOwnProperty,isPrototypeOf,propertyIsEnumerable,toLocaleString,toString,valueOf".split(",");
@@ -839,7 +839,7 @@ module.exports = function (e) {
     var e;
     var t = n(28)("iframe");
     var r = o.length;
-    for (t.style.display = "none", n(49).appendChild(t), t.src = "javascript:", (e = t.contentWindow.document).open(), e.write("<script>document.F=Object<\/script>"), e.close(), c = e.F; r--;) {
+    for (t.style.display = "none", n(49).appendChild(t), t.src = "javascript:", (e = t.contentWindow.document).open(), e.write("<script>document.F=Object</script>"), e.close(), c = e.F; r--;) {
       delete c.prototype[o[r]];
     }
     return c();
@@ -3502,7 +3502,7 @@ module.exports = function (e) {
                   var s = l(t, o, a);
                   var c = s.indexOf("xmpmeta>") + 8;
                   var u = (s = s.substring(s.indexOf("<x:xmpmeta"), c)).indexOf("x:xmpmeta") + 10;
-                  s = s.slice(0, u) + 'xmlns:Iptc4xmpCore="http://iptc.org/std/Iptc4xmpCore/1.0/xmlns/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tiff="http://ns.adobe.com/tiff/1.0/" xmlns:plus="http://schemas.android.com/apk/lib/com.google.android.gms.plus" xmlns:ext="http://www.gettyimages.com/xsltExtension/1.0" xmlns:exif="http://ns.adobe.com/exif/1.0/" xmlns:stEvt="http://ns.adobe.com/xap/1.0/sType/ResourceEvent#" xmlns:stRef="http://ns.adobe.com/xap/1.0/sType/ResourceRef#" xmlns:crs="http://ns.adobe.com/camera-raw-settings/1.0/" xmlns:xapGImg="http://ns.adobe.com/xap/1.0/g/img/" xmlns:Iptc4xmpExt="http://iptc.org/std/Iptc4xmpExt/2008-02-29/" ' + s.slice(u);
+                  s = s.slice(0, u) + "xmlns:Iptc4xmpCore=\"http://iptc.org/std/Iptc4xmpCore/1.0/xmlns/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:tiff=\"http://ns.adobe.com/tiff/1.0/\" xmlns:plus=\"http://schemas.android.com/apk/lib/com.google.android.gms.plus\" xmlns:ext=\"http://www.gettyimages.com/xsltExtension/1.0\" xmlns:exif=\"http://ns.adobe.com/exif/1.0/\" xmlns:stEvt=\"http://ns.adobe.com/xap/1.0/sType/ResourceEvent#\" xmlns:stRef=\"http://ns.adobe.com/xap/1.0/sType/ResourceRef#\" xmlns:crs=\"http://ns.adobe.com/camera-raw-settings/1.0/\" xmlns:xapGImg=\"http://ns.adobe.com/xap/1.0/g/img/\" xmlns:Iptc4xmpExt=\"http://iptc.org/std/Iptc4xmpExt/2008-02-29/\" " + s.slice(u);
                   return h(i.parseFromString(s, "text/xml"));
                 }
                 n++;

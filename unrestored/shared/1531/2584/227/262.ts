@@ -17,31 +17,31 @@ var i = {
 var a = {
   NUMBER: {
     id: "category_number",
-    label: "\u6570\u5b57"
+    label: "数字"
   },
   BOOL: {
     id: "category_bool",
-    label: "\u5e03\u5c14"
+    label: "布尔"
   },
   STRING: {
     id: "category_string",
-    label: "\u5b57\u7b26"
+    label: "字符"
   },
   CONDITION: {
     id: "category_condition",
-    label: "\u6761\u4ef6"
+    label: "条件"
   },
   CIRCLE: {
     id: "category_circle",
-    label: "\u5faa\u73af"
+    label: "循环"
   },
   WAIT: {
     id: "category_wait",
-    label: "\u7b49\u5f85"
+    label: "等待"
   },
   CONSOLE: {
     id: "category_console",
-    label: "\u63a7\u5236\u53f0"
+    label: "控制台"
   }
 };
 var s = "-----";
@@ -56,7 +56,7 @@ var c = {
     id: "toolbox-control",
     text: "%{BKY_CONTROL}",
     iconId: "icon-toolbox-control",
-    blocks: ['<label type="'.concat(a.CONDITION.id, '"></label>'), "controls_if", s, '<label type="'.concat(a.CIRCLE.id, '"></label>'), "loop_conditionally", "loop_finitely", "loop_infinitely", "controls_for_closed_range", s, "break_loop", "continue_loop", s, '<label type="'.concat(a.WAIT.id, '"></label>'), "sleep", "wait_until", s, '<label type="'.concat(a.CONSOLE.id, '"></label>'), "new_console_log"]
+    blocks: ["<label type=\"".concat(a.CONDITION.id, "\"></label>"), "controls_if", s, "<label type=\"".concat(a.CIRCLE.id, "\"></label>"), "loop_conditionally", "loop_finitely", "loop_infinitely", "controls_for_closed_range", s, "break_loop", "continue_loop", s, "<label type=\"".concat(a.WAIT.id, "\"></label>"), "sleep", "wait_until", s, "<label type=\"".concat(a.CONSOLE.id, "\"></label>"), "new_console_log"]
   },
   feature: {
     id: "toolbox-feature",
@@ -68,25 +68,25 @@ var c = {
     id: "toolbox-operator",
     text: "%{BKY_OPERATOR}",
     iconId: "icon-toolbox-operation",
-    blocks: ['<label type="'.concat(a.NUMBER.id, '"></label>'), "math_shadow_number", "math_operation", "math_random_integer", s, "math_round", "math_complex_operation", "math_modulo", "math_trig", s, "math_check_divisible", "math_number_property", s, '<label type="'.concat(a.BOOL.id, '"></label>'), "math_compare", "logic_operation", "logic_negate", "logic_boolean", s, '<label type="'.concat(a.STRING.id, '"></label>'), "text_shadow", "text_join", "text_get_length", "text_split_text", "text_slice", "text_check_contain", s, "text_convert_type"]
+    blocks: ["<label type=\"".concat(a.NUMBER.id, "\"></label>"), "math_shadow_number", "math_operation", "math_random_integer", s, "math_round", "math_complex_operation", "math_modulo", "math_trig", s, "math_check_divisible", "math_number_property", s, "<label type=\"".concat(a.BOOL.id, "\"></label>"), "math_compare", "logic_operation", "logic_negate", "logic_boolean", s, "<label type=\"".concat(a.STRING.id, "\"></label>"), "text_shadow", "text_join", "text_get_length", "text_split_text", "text_slice", "text_check_contain", s, "text_convert_type"]
   },
   primitive: {
     id: "toolbox-primitive",
     text: "%{BKY_PRIMITIVE}",
     iconId: "icon-toolbox-variable",
-    blocks: ['<label type="'.concat(i.PRIMITIVE, '" width="10" height="10" align="center"></label>'), "variables_get", "variables_set", "variables_change"]
+    blocks: ["<label type=\"".concat(i.PRIMITIVE, "\" width=\"10\" height=\"10\" align=\"center\"></label>"), "variables_get", "variables_set", "variables_change"]
   },
   array: {
     id: "toolbox-array",
     text: "%{BKY_ARRAY}",
     iconId: "icon-toolbox-list",
-    blocks: ['<label type="'.concat(i.ARRAY, '" width="10" height="10" align="center"></label>'), "array_get", "lists_append", "lists_insert_value", "array_remove_item", "lists_replace", "array_copy", s, "array_get_item", "array_get_length", "lists_index_of", "lists_is_exist", s, "array_foreach"]
+    blocks: ["<label type=\"".concat(i.ARRAY, "\" width=\"10\" height=\"10\" align=\"center\"></label>"), "array_get", "lists_append", "lists_insert_value", "array_remove_item", "lists_replace", "array_copy", s, "array_get_item", "array_get_length", "lists_index_of", "lists_is_exist", s, "array_foreach"]
   },
   object: {
     id: "toolbox-object",
     text: "%{BKY_OBJECT}",
     iconId: "icon-toolbox-object",
-    blocks: ['<label type="'.concat(i.OBJECT, '" width="10" height="10" align="center"></label>'), "object_get", "object_create", "object_set_item", "object_delete_item", "object_clear", s, "object_length", "object_get_item", "object_include_key"]
+    blocks: ["<label type=\"".concat(i.OBJECT, "\" width=\"10\" height=\"10\" align=\"center\"></label>"), "object_get", "object_create", "object_set_item", "object_delete_item", "object_clear", s, "object_length", "object_get_item", "object_include_key"]
   },
   function: {
     id: "toolbox-function",

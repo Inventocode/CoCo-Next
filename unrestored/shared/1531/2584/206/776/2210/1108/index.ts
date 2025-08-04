@@ -108,7 +108,7 @@
   }
   function c(e, t) {
     var n = s.styles[t];
-    return n ? "\x1b[" + s.colors[n][0] + "m" + e + "\x1b[" + s.colors[n][1] + "m" : e;
+    return n ? "\u001b[" + s.colors[n][0] + "m" + e + "\u001b[" + s.colors[n][1] + "m" : e;
   }
   function u(e, t) {
     return e;
@@ -126,7 +126,7 @@
         return e.stylize("undefined", "undefined");
       }
       if (g(t)) {
-        var n = "'" + JSON.stringify(t).replace(/^"|"$/g, "").replace(/'/g, "\\'").replace(/\\"/g, '"') + "'";
+        var n = "'" + JSON.stringify(t).replace(/^"|"$/g, "").replace(/'/g, "\\'").replace(/\\"/g, "\"") + "'";
         return e.stylize(n, "string");
       }
       if (A(t)) {
@@ -259,7 +259,7 @@
         a = a.substr(1, a.length - 2);
         a = e.stylize(a, "name");
       } else {
-        a = a.replace(/'/g, "\\'").replace(/\\"/g, '"').replace(/(^"|"$)/g, "'");
+        a = a.replace(/'/g, "\\'").replace(/\\"/g, "\"").replace(/(^"|"$)/g, "'");
         a = e.stylize(a, "string");
       }
     }
@@ -408,12 +408,12 @@
   }
   exports.promisify = function (e) {
     if ("function" !== typeof e) {
-      throw new TypeError('The "original" argument must be of type Function');
+      throw new TypeError("The \"original\" argument must be of type Function");
     }
     if (T && e[T]) {
       var t;
       if ("function" !== typeof (t = e[T])) {
-        throw new TypeError('The "util.promisify.custom" argument must be of type Function');
+        throw new TypeError("The \"util.promisify.custom\" argument must be of type Function");
       }
       Object.defineProperty(t, T, {
         value: t,
@@ -458,7 +458,7 @@
   exports.promisify.custom = T;
   exports.callbackify = function (t) {
     if ("function" !== typeof t) {
-      throw new TypeError('The "original" argument must be of type Function');
+      throw new TypeError("The \"original\" argument must be of type Function");
     }
     function n() {
       for (var n = [], r = 0; r < arguments.length; r++) {
@@ -482,4 +482,4 @@
     Object.defineProperties(n, r(t));
     return n;
   };
-}).call(this, require("../../../../../../3272/3198/1187/368"));
+}).call(this, require("../../../../710/368"));

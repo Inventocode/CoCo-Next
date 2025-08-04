@@ -1,4 +1,4 @@
-var r = require("../1541/300").f;
+var r = require("../1623/300").f;
 var o = require("./332");
 var i = require("../1742/247/index")("toStringTag");
 module.exports = function (e, t, n) {

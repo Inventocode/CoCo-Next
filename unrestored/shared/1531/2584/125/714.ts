@@ -4,7 +4,7 @@ Object.defineProperty(exports, "__esModule", {
   value: !0
 });
 exports.adjust_bboxes_for_rtl = exports.get_computed_style = exports.get_style = exports.get_size = exports.get_viewport_page_offset = void 0;
-var r = require("../17/259");
+var r = require("@kitten-team/gl-matrix");
 var i = require("./index");
 var o = require("./474");
 function a(e) {

@@ -11,13 +11,13 @@ function r(e, t, n, r) {
     case "array":
       return a + "Array.isArray(" + t + ")";
     case "object":
-      return "(" + a + t + o + "typeof " + t + i + '"object"' + o + s + "Array.isArray(" + t + "))";
+      return "(" + a + t + o + "typeof " + t + i + "\"object\"" + o + s + "Array.isArray(" + t + "))";
     case "integer":
-      return "(typeof " + t + i + '"number"' + o + s + "(" + t + " % 1)" + o + t + i + t + (n ? o + a + "isFinite(" + t + ")" : "") + ")";
+      return "(typeof " + t + i + "\"number\"" + o + s + "(" + t + " % 1)" + o + t + i + t + (n ? o + a + "isFinite(" + t + ")" : "") + ")";
     case "number":
-      return "(typeof " + t + i + '"' + e + '"' + (n ? o + a + "isFinite(" + t + ")" : "") + ")";
+      return "(typeof " + t + i + "\"" + e + "\"" + (n ? o + a + "isFinite(" + t + ")" : "") + ")";
     default:
-      return "typeof " + t + i + '"' + e + '"';
+      return "typeof " + t + i + "\"" + e + "\"";
   }
 }
 module.exports = {
@@ -33,7 +33,7 @@ module.exports = {
       default:
         var i = "",
           a = o(e);
-        for (var s in a.array && a.object && (i = a.null ? "(" : "(!" + t + " || ", i += "typeof " + t + ' !== "object")', delete a.null, delete a.array, delete a.object), a.number && delete a.integer, a) i += (i ? " && " : "") + r(s, t, n, !0);
+        for (var s in a.array && a.object && (i = a.null ? "(" : "(!" + t + " || ", i += "typeof " + t + " !== \"object\")", delete a.null, delete a.array, delete a.object), a.number && delete a.integer, a) i += (i ? " && " : "") + r(s, t, n, !0);
         return i;
     }
   },
@@ -60,7 +60,7 @@ module.exports = {
   toHash: o,
   getProperty: c,
   escapeQuotes: u,
-  equal: require("../2218/1116"),
+  equal: require("../1115/1116"),
   ucs2length: require("./2220"),
   varOccurences: function (e, t) {
     t += "[^0-9]";
@@ -176,7 +176,7 @@ function l(e) {
 var f = /^\/(?:[^~]|~0|~1)*$/;
 var d = /^([0-9]+)(#|\/(?:[^~]|~0|~1)*)?$/;
 function h(e, t) {
-  return '""' == e ? t : (e + " + " + t).replace(/([^\\])' \+ '/g, "$1");
+  return "\"\"" == e ? t : (e + " + " + t).replace(/([^\\])' \+ '/g, "$1");
 }
 function p(e) {
   return e.replace(/~/g, "~0").replace(/\//g, "~1");

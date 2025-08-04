@@ -4,8 +4,8 @@ Object.defineProperty(exports, "__esModule", {
   value: !0
 });
 exports.get_num_g = exports.reset_all_block_id = exports.insert_before = exports.insert_after = exports.clone_node = exports.get_size_attr = exports.get_translate = exports.update_visibility_class = exports.add_class_if_necessary = exports.remove_class_if_necessary = exports.is_in_same_shadow = exports.is_inside_shadow = exports.is_parent = exports.xmlstr_to_dom = exports.contains = exports.has_class = exports.get_owner_document = exports.get_viewport_bbox = exports.get_viewport_size = exports.get_document_scroll = exports.remove_children = exports.create_dom = exports.get_page_offset = exports.parse_to_SVG = exports.parse_to_DOM = exports.remove_class = exports.add_class = exports.create_font_icon = exports.create_div_element = exports.create_svg_element = exports.set_css_transform = exports.remove_attribute = exports.remove_node = exports.XLINK_NS = exports.SVG_NS = void 0;
-var r = require("../1001/93");
-var i = require("../17/259");
+var r = require("tslib");
+var i = require("@kitten-team/gl-matrix");
 var o = require("./195/index");
 var a = require("./534");
 var s = (0, r.__importStar)(require("./714"));

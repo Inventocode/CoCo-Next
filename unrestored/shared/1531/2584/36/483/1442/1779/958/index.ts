@@ -1,5 +1,5 @@
 (function (e) {
-  var r = require("../1268/532");
+  var r = require("./532");
   var i = require("./1812");
   var o = exports && !exports.nodeType && exports;
   var a = o && "object" == typeof e && e && !e.nodeType && e;

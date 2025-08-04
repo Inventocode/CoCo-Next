@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: !0
 });
-var r = require("../../../1001/93");
+var r = require("tslib");
 require("./1309");
 (0, r.__exportStar)(require("./1995"), exports);
 (0, r.__exportStar)(require("./1996"), exports);

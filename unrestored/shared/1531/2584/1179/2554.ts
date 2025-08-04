@@ -4,7 +4,7 @@ Object.defineProperty(exports, "__esModule", {
   value: !0
 });
 exports.init_extensions = void 0;
-var r = (0, require("../1001/93").__importStar)(require("../17/533"));
+var r = (0, require("tslib").__importStar)(require("../17/533"));
 var o = require("../17/497/644");
 exports.init_extensions = function (e) {
   e.extensions.register("parent_tooltip_when_inline", function () {

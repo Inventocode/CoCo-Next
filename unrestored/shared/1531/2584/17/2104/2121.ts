@@ -4,9 +4,9 @@ Object.defineProperty(exports, "__esModule", {
   value: !0
 });
 exports.FlyoutButton = void 0;
-var r = require("../../1001/93");
-var i = require("../../1001/134/index");
-var o = require("../259");
+var r = require("tslib");
+var i = require("inversify");
+var o = require("@kitten-team/gl-matrix");
 var a = require("../../4/127");
 var s = require("../../125/index");
 var c = function () {

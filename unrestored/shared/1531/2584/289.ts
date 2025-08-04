@@ -41,7 +41,7 @@ function c() {
               e.next = 7;
               break;
             }
-            console.info("\u5f53\u524d\u4f5c\u54c1\u5305\u542b\u81ea\u5b9a\u4e49\u63a7\u4ef6");
+            console.info("当前作品包含自定义控件");
             s = !1;
             e.next = 28;
             break;
@@ -83,7 +83,7 @@ function c() {
             if (t.extensionWidgetList.filter(function (e) {
               return !c.includes(e.cdnUrl);
             }).length > 0) {
-              console.info("\u5f53\u524d\u4f5c\u54c1\u5305\u542b\u81ea\u5b9a\u4e49\u63a7\u4ef6");
+              console.info("当前作品包含自定义控件");
               s = !1;
             }
           case 28:

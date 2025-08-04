@@ -145,10 +145,10 @@ var l = function () {
         var o = t.notCached;
         var i = "";
         if ("string" === typeof r) {
-          i = '<block type="'.concat(n, '" uncache="').concat(o, '">').concat(r, "</block>");
+          i = "<block type=\"".concat(n, "\" uncache=\"").concat(o, "\">").concat(r, "</block>");
         } else {
           r.forEach(function (e) {
-            i += '<block type="'.concat(n, '">').concat(e, '</block> <sep gap="15"></sep>');
+            i += "<block type=\"".concat(n, "\">").concat(e, "</block> <sep gap=\"15\"></sep>");
           });
         }
         e[n] = i;

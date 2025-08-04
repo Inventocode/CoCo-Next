@@ -1,4 +1,4 @@
-require("../1633/86/index")({
+require("../1623/86")({
   target: "String",
   proto: !0
 }, {

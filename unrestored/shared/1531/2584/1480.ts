@@ -2,7 +2,7 @@
 
 export { i as a };
 var r = require("./33/index");
-var o = require("./0/index");
+var o = require("react");
 function i(e, t) {
   var n = t || {};
   var i = n.defaultValue;

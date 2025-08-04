@@ -1,7 +1,7 @@
 "use strict";
 
 var r = require("./19");
-var i = require("./0/index");
+var i = require("react");
 var o = require("./739/index");
 var a = require("./789");
 var s = function (e) {

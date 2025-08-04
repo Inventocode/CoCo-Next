@@ -16,7 +16,7 @@ var s = require("../../../58/index");
 var c = require("../../../27");
 var u = require("../../../40");
 var l = require("./44");
-var f = require("../../../0/index");
+var f = require("react");
 var d = Symbol.for("Animated:node");
 var h = function (e) {
   return e && e[d];

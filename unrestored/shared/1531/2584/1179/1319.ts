@@ -4,7 +4,7 @@ Object.defineProperty(exports, "__esModule", {
   value: !0
 });
 exports.init_shadows = void 0;
-var r = require("./2552/579");
+var r = require("./2555/579");
 exports.init_shadows = function (e) {
   var t = [{
     type: "logic_empty",
@@ -70,10 +70,10 @@ exports.init_shadows = function (e) {
   e.define_blocks_with_json_array(t);
   e.Blocks.SHADOW = e.Blocks.SHADOW || {};
   Object.assign(e.Blocks.SHADOW, {
-    logic: '<empty type="logic_empty"><field name="BOOL"></field></empty>',
-    text: '<shadow type="text"><field name="TEXT"></field></shadow>',
-    math: '<shadow type="math_number"><field name="NUM">0</field></shadow>',
-    multiline_text: '<shadow type="multiline_text"><field name="TEXT"></field></shadow>',
-    default_value: '<shadow type="default_value"><field name="TEXT"></field></shadow>'
+    logic: "<empty type=\"logic_empty\"><field name=\"BOOL\"></field></empty>",
+    text: "<shadow type=\"text\"><field name=\"TEXT\"></field></shadow>",
+    math: "<shadow type=\"math_number\"><field name=\"NUM\">0</field></shadow>",
+    multiline_text: "<shadow type=\"multiline_text\"><field name=\"TEXT\"></field></shadow>",
+    default_value: "<shadow type=\"default_value\"><field name=\"TEXT\"></field></shadow>"
   });
 };

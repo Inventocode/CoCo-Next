@@ -28,7 +28,7 @@ Object.defineProperty(o, "applyServerOp", {
 });
 var i = require("./777/index");
 var a = require("./728/index");
-var s = require("../../1036/32/index");
+var s = require("ot-json1");
 var c = require("../../24/index");
 var l = require("../../43");
 function u() {
@@ -90,7 +90,7 @@ function m(e) {
         try {
           g.decompose_and_transform_op(e);
         } catch (s) {
-          window.confirm("\u534f\u4f5c\u5f02\u5e38\uff0c\u8bf7\u5237\u65b0\u9875\u9762\uff1f");
+          window.confirm("协作异常，请刷新页面？");
         }
       }
       var i = null === (r = f.z.getWorkspaceDataByScreenId(o)) || void 0 === r ? void 0 : r.getProcedureManager();

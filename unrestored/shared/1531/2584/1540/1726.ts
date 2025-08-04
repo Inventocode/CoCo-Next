@@ -1,7 +1,7 @@
 "use strict";
 
-var r = require("./1714/258/index");
-var o = require("./1714/399").map;
+var r = require("./1720/258/index");
+var o = require("./1733/399").map;
 var i = require("./1735/949");
 var a = r.aTypedArray;
 (0, r.exportTypedArrayMethod)("map", function (e) {

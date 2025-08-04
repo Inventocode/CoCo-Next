@@ -128,7 +128,7 @@
         "use strict";
 
         n.STORE = {
-          magic: "\0\0",
+          magic: "\u0000\u0000",
           compress: function (e) {
             return e;
           },
@@ -276,7 +276,7 @@
         var i = e("pako");
         n.uncompressInputType = r ? "uint8array" : "array";
         n.compressInputType = r ? "uint8array" : "array";
-        n.magic = "\b\0";
+        n.magic = "\b\u0000";
         n.compress = function (e) {
           return i.deflateRaw(e);
         };
@@ -620,8 +620,8 @@
             v += "uc" + m(b.length, 2) + b;
           }
           var w = "";
-          w += "\n\0";
-          w += _ || A ? "\0\b" : "\0\0";
+          w += "\n\u0000";
+          w += _ || A ? "\u0000\b" : "\u0000\u0000";
           w += n.compressionMethod;
           w += m(s, 2);
           w += m(c, 2);
@@ -632,7 +632,7 @@
           w += m(v.length, 2);
           return {
             fileRecord: a.LOCAL_FILE_HEADER + w + f + v,
-            dirRecord: a.CENTRAL_FILE_HEADER + "\x14\0" + w + m(p.length, 2) + "\0\0\0\0" + (!0 === u ? "\x10\0\0\0" : "\0\0\0\0") + m(r, 4) + f + v + p,
+            dirRecord: a.CENTRAL_FILE_HEADER + "\u0014\u0000" + w + m(p.length, 2) + "\u0000\u0000\u0000\u0000" + (!0 === u ? "\u0010\u0000\u0000\u0000" : "\u0000\u0000\u0000\u0000") + m(r, 4) + f + v + p,
             compressedObject: n
           };
         };
@@ -735,7 +735,7 @@
               r.push(v);
             }
             var b;
-            b = a.CENTRAL_DIRECTORY_END + "\0\0\0\0" + m(r.length, 2) + m(r.length, 2) + m(s, 4) + m(o, 4) + m(l.length, 2) + l;
+            b = a.CENTRAL_DIRECTORY_END + "\u0000\u0000\u0000\u0000" + m(r.length, 2) + m(r.length, 2) + m(s, 4) + m(o, 4) + m(l.length, 2) + l;
             var w = e.type.toLowerCase();
             for (t = "uint8array" === w || "arraybuffer" === w || "blob" === w || "nodebuffer" === w ? new p(o + s + b.length) : new h(o + s + b.length), n = 0; n < r.length; n++) {
               t.append(r[n].fileRecord);
@@ -787,12 +787,12 @@
       14: [function (e, t, n) {
         "use strict";
 
-        n.LOCAL_FILE_HEADER = "PK\x03\x04";
-        n.CENTRAL_FILE_HEADER = "PK\x01\x02";
-        n.CENTRAL_DIRECTORY_END = "PK\x05\x06";
-        n.ZIP64_CENTRAL_DIRECTORY_LOCATOR = "PK\x06\x07";
-        n.ZIP64_CENTRAL_DIRECTORY_END = "PK\x06\x06";
-        n.DATA_DESCRIPTOR = "PK\x07\b";
+        n.LOCAL_FILE_HEADER = "PK\u0003\u0004";
+        n.CENTRAL_FILE_HEADER = "PK\u0001\u0002";
+        n.CENTRAL_DIRECTORY_END = "PK\u0005\u0006";
+        n.ZIP64_CENTRAL_DIRECTORY_LOCATOR = "PK\u0006\u0007";
+        n.ZIP64_CENTRAL_DIRECTORY_END = "PK\u0006\u0006";
+        n.DATA_DESCRIPTOR = "PK\u0007\b";
       }, {}],
       15: [function (e, t, n) {
         "use strict";
@@ -4586,4 +4586,4 @@
       }, {}]
     }, {}, [9])(9);
   });
-}).call(this, require("../../616/570/index").Buffer, require("../../31/251"));
+}).call(this, require("../../616/570/index").Buffer, require("../../710/251"));

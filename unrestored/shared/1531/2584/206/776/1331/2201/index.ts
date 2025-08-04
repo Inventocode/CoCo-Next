@@ -1,11 +1,11 @@
 "use strict";
 
-var r = require("../../../../../../3272/3198/2668/220");
-var i = require("../../../../../../3272/3198/2668/230");
-var o = require("../../../../../../3272/3198/2668/2689/703/index");
-var a = require("../../../../../../3272/3198/2668/2689/529");
-var s = require("../../../../../../3272/3198/2668/2689/356/index");
-var c = require("../../../../../../3272/3198/2668/2689/357/index");
+var r = require("../../../../36/2668/220");
+var i = require("../../../../36/2668/230");
+var o = require("../../../../36/2668/2689/703/index");
+var a = require("../../../../38/607/1970/529");
+var s = require("../../../../38/607/356");
+var c = require("../../../../38/607/357/index");
 var u = require("./2202");
 var l = /^[\da-fA-F]+$/;
 var f = /^\d+$/;
@@ -101,7 +101,7 @@ module.exports = function (e) {
                   break;
                 case 62:
                 case 125:
-                  this.raise(this.pos, "Unexpected token `" + this.input[this.pos] + "`. Did you mean `" + (62 === n ? "&gt;" : "&rbrace;") + '` or `{"' + this.input[this.pos] + '"}`?');
+                  this.raise(this.pos, "Unexpected token `" + this.input[this.pos] + "`. Did you mean `" + (62 === n ? "&gt;" : "&rbrace;") + "` or `{\"" + this.input[this.pos] + "\"}`?");
                 default:
                   if (w(n)) {
                     e += this.input.slice(t, this.pos);

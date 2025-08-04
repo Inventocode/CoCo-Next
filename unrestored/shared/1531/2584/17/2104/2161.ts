@@ -4,8 +4,8 @@ Object.defineProperty(exports, "__esModule", {
   value: !0
 });
 exports.FieldButton = void 0;
-var r = require("../../1001/93");
-var i = require("../../1001/134/index");
+var r = require("tslib");
+var i = require("inversify");
 var o = require("../../1001/213/index");
 var a = require("../../125/index");
 var s = require("../497/index");

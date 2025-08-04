@@ -1,7 +1,7 @@
 "use strict";
 
 var r = require("../11");
-var o = require("../0/index");
+var o = require("react");
 var i = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -57,7 +57,7 @@ var h = function __importDefault(module) {
   return defaultExport;
 }(f);
 var m = require("../13/index");
-var g = require("../15/index");
+var g = require("../15");
 var _ = function (e) {
   var t = e.text;
   var n = e.isSelected;

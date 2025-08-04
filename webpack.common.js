@@ -1,6 +1,5 @@
 const path = require("path")
 const webpack = require("webpack")
-const CopyPlugin = require("copy-webpack-plugin")
 const HtmlWebpackPlugin = require("html-webpack-plugin")
 
 /** @type {webpack.Configuration} */
@@ -37,14 +36,17 @@ const config = {
         ]
     },
     resolve: {
-        extensions: [".ts", ".tsx", ".js", ".jsx"]
+        extensions: [".ts", ".tsx", ".js", ".jsx"],
+        fallback: {
+            "fs": false,
+            "path": require.resolve("path/"),
+            "assert": require.resolve("assert/")
+        }
     },
     plugins: [
         new webpack.ProgressPlugin(),
-        new CopyPlugin({
-            patterns: [{
-                from: "static"
-            }]
+        new webpack.ProvidePlugin({
+            process: "process/"
         }),
         new HtmlWebpackPlugin({
             filename: "index.html",

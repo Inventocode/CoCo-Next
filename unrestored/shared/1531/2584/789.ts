@@ -3,7 +3,7 @@
 export { g as b };
 export { v as a };
 var r = require("./19");
-var i = require("./0/index");
+var i = require("react");
 var o = require("./29");
 var a = require("./8");
 var s = function __importDefault(module) {

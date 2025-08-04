@@ -88,7 +88,7 @@ function s(e, t, n) {
       throw new Error("Actions must be plain objects. Use custom middleware for async actions.");
     }
     if ("undefined" === typeof e.type) {
-      throw new Error('Actions may not have an undefined "type" property. Have you misspelled a constant?');
+      throw new Error("Actions may not have an undefined \"type\" property. Have you misspelled a constant?");
     }
     if (d) {
       throw new Error("Reducers may not dispatch actions.");
@@ -149,7 +149,7 @@ function s(e, t, n) {
 }
 function c(e, t) {
   var n = t && t.type;
-  return "Given " + (n && 'action "' + String(n) + '"' || "an action") + ', reducer "' + e + '" returned undefined. To ignore an action, you must explicitly return the previous state. If you want this reducer to hold no value, you can return null instead of undefined.';
+  return "Given " + (n && "action \"" + String(n) + "\"" || "an action") + ", reducer \"" + e + "\" returned undefined. To ignore an action, you must explicitly return the previous state. If you want this reducer to hold no value, you can return null instead of undefined.";
 }
 function u(e) {
   for (var t = Object.keys(e), n = {}, r = 0; r < t.length; r++) {
@@ -168,12 +168,12 @@ function u(e) {
         if ("undefined" === typeof n(void 0, {
           type: o.INIT
         })) {
-          throw new Error('Reducer "' + t + "\" returned undefined during initialization. If the state passed to the reducer is undefined, you must explicitly return the initial state. The initial state may not be undefined. If you don't want to set a value for this reducer, you can use null instead of undefined.");
+          throw new Error("Reducer \"" + t + "\" returned undefined during initialization. If the state passed to the reducer is undefined, you must explicitly return the initial state. The initial state may not be undefined. If you don't want to set a value for this reducer, you can use null instead of undefined.");
         }
         if ("undefined" === typeof n(void 0, {
           type: o.PROBE_UNKNOWN_ACTION()
         })) {
-          throw new Error('Reducer "' + t + "\" returned undefined when probed with a random type. Don't try to handle " + o.INIT + ' or other actions in "redux/*" namespace. They are considered private. Instead, you must return the current state for any unknown actions, unless it is undefined, in which case you must return the initial state, regardless of the action type. The initial state may not be undefined, but can be null.');
+          throw new Error("Reducer \"" + t + "\" returned undefined when probed with a random type. Don't try to handle " + o.INIT + " or other actions in \"redux/*\" namespace. They are considered private. Instead, you must return the current state for any unknown actions, unless it is undefined, in which case you must return the initial state, regardless of the action type. The initial state may not be undefined, but can be null.");
         }
       });
     }(n);
@@ -212,7 +212,7 @@ function f(e, t) {
     return l(e, t);
   }
   if ("object" !== typeof e || null === e) {
-    throw new Error("bindActionCreators expected an object or a function, instead received " + (null === e ? "null" : typeof e) + '. Did you write "import ActionCreators from" instead of "import * as ActionCreators from"?');
+    throw new Error("bindActionCreators expected an object or a function, instead received " + (null === e ? "null" : typeof e) + ". Did you write \"import ActionCreators from\" instead of \"import * as ActionCreators from\"?");
   }
   var n = {};
   for (var r in e) {

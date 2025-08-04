@@ -79,6 +79,7 @@ export async function unpack(config: UnpackConfig): Promise<void> {
         }
         module.external = movedPath
         module.path = movedPath.split("/")
+        module.isEntry = false
     }
     unminimize(modules)
     buildModulesDependency(modules)
@@ -93,6 +94,7 @@ export async function unpack(config: UnpackConfig): Promise<void> {
     const dirsPath: Set<string> = getAllDirsPath(modules)
     addIndexToModulesPath(modules, dirsPath)
     markExternals(modules, config.externals ?? [])
+    shakeUnusedModule(modules)
     transformModulesImport(modules, config)
     transformModulesExport(modules)
     await writeModules(config.output.path, modules)
@@ -100,7 +102,7 @@ export async function unpack(config: UnpackConfig): Promise<void> {
     if (pathMapPath) {
         const pathMap: Record<ModuleKey, string> = {}
         for (const module of Object.values(modules)) {
-            pathMap[module.key] = module.path.join("/")
+            pathMap[module.key] = module.external ?? "/" + module.path.join("/")
         }
         await fs.writeFile(
             path.resolve(config.output.path, pathMapPath),
@@ -335,6 +337,10 @@ function unminimize(modules: ModuleMap): void {
                     initPath.replaceWith(lastExpression)
                     path.parentPath.insertBefore(sequenceExpression.expressions.map(t.expressionStatement))
                 }
+            },
+            StringLiteral(path: NodePath<t.StringLiteral>): void {
+                path.node.extra ??= {}
+                path.node.extra["raw"] = JSON.stringify(path.node.value)
             }
         })
         bar.increment()
@@ -457,10 +463,25 @@ function buildModulesDependency(modules: ModuleMap): void {
                     const importedModuleKey: ModuleKey = importedModuleKeyNodePath.node.value
                     if (!(
                         bindCallCalleeNodePath.isMemberExpression({ computed: false }) &&
-                        t.isIdentifier(bindCallCalleeNodePath.node.object, {
-                            name: module.args[2]!
-                        }) &&
-                        bindCallCalleeNodePath.scope.getBinding(bindCallCalleeNodePath.node.object.name) == null &&
+                        (
+                            (
+                                t.isIdentifier(bindCallCalleeNodePath.node.object, {
+                                    name: module.args[2]!
+                                }) &&
+                                bindCallCalleeNodePath.scope.getBinding(bindCallCalleeNodePath.node.object.name) == null
+                            ) || (
+                                t.isMemberExpression(bindCallCalleeNodePath.node.object, {
+                                    computed: false
+                                }) &&
+                                t.isIdentifier(bindCallCalleeNodePath.node.object.object, {
+                                    name: module.args[2]!
+                                }) &&
+                                bindCallCalleeNodePath.scope.getBinding(bindCallCalleeNodePath.node.object.object.name) == null &&
+                                t.isIdentifier(bindCallCalleeNodePath.node.object.property, {
+                                    name: "t"
+                                })
+                            )
+                        ) &&
                         bindCallCalleeNodePath.get("property").isIdentifier({ name: "bind" })
                     )) {
                         return
@@ -635,9 +656,6 @@ function setModulesPathByImportName(modules: ModuleMap): void {
         (module: Module): boolean => module.isEntry
     )
     for (const module of entryModules) {
-        if (module.external != null) {
-            continue
-        }
         module.path = ["index"]
     }
     const queue = new PriorityQueue<Module>({
@@ -702,9 +720,6 @@ function setModulesPathByDependency(modules: ModuleMap): void {
         (module: Module): boolean => module.isEntry
     )
     for (const module of entryModules) {
-        if (module.external != null) {
-            continue
-        }
         module.path = [String(module.key).replace(/\//g, "")]
     }
     const queue = new PriorityQueue<Module>({
@@ -767,21 +782,33 @@ function markExternals(modules: ModuleMap, externals: Externals): void {
             }
             if (searchPath.test(path)) {
                 module.external = path.replace(searchPath, replace)
-                for (const importedModule of Object.values(module.dependency)) {
-                    recursiveMarkExternal(importedModule)
-                }
             }
         }
     }
 }
 
-function recursiveMarkExternal(module: Module): void {
-    if (module.external != null) {
-        return
+function shakeUnusedModule(modules: ModuleMap): void {
+    console.log("shaking unused modules")
+    const entryModules: Module[] = Object.values(modules).filter(
+        (module: Module): boolean => module.isEntry
+    )
+    const visited: Set<ModuleKey> = new Set()
+    const queue: Module[] = entryModules.slice()
+    let module: Module | undefined = undefined
+    while ((module = queue.shift()) != null) {
+        if (visited.has(module.key) || module.external != null) {
+            continue
+        }
+        visited.add(module.key)
+        for (const dependency of Object.values(module.dependency)) {
+            queue.push(dependency)
+        }
     }
-    module.external = "external/" + module.path.join("/")
-    for (const importedModule of Object.values(module.dependency)) {
-        recursiveMarkExternal(importedModule)
+    for (const module of Object.values(modules)) {
+        if (!visited.has(module.key) && module.external == null) {
+            module.path.unshift("unused")
+            module.external = module.path.join("/")
+        }
     }
 }
 

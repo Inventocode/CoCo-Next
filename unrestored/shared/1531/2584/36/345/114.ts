@@ -6,7 +6,7 @@ export { l as c };
 export { u as a };
 var r = require("../../47");
 var o = require("../../9");
-var i = require("../../15/index");
+var i = require("../../15");
 var a = require("../../48/index");
 function s(e) {
   return void 0 !== c(e);

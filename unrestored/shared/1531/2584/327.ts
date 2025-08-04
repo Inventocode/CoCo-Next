@@ -3,7 +3,7 @@
 export { r as a };
 export { o as b };
 export { i as c };
-var r = "\u559c\u6b22\u6211\u7684\u4f5c\u54c1\u5417\uff1f\u70b9\u4e2a\u8d5e\u518d\u8d70\uff01";
-var o = "\u4f5c\u8005\u5f88\u61d2\uff0c\u6ca1\u6709\u7559\u4e0b\u4efb\u4f55\u64cd\u4f5c\u8bf4\u660e\uff01";
-var i = "\u6211\u7528CoCo\u7f16\u8f91\u5668\u505a\u4e86\u4e2a\u5f88\u68d2\u7684APP\uff0c\u5feb\u6765\u770b\u770b\u5427\uff01";
+var r = "喜欢我的作品吗？点个赞再走！";
+var o = "作者很懒，没有留下任何操作说明！";
+var i = "我用CoCo编辑器做了个很棒的APP，快来看看吧！";
 export default r;

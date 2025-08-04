@@ -1,4 +1,4 @@
-var r = require("./838");
+var r = require("../1979/838");
 function i() {
   this._array = [];
   this._sorted = !0;

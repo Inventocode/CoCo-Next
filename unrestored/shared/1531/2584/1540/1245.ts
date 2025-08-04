@@ -3,7 +3,7 @@
 var r = require("./1745/946").charAt;
 var o = require("./1745/310");
 var i = require("./1745/423/index");
-var a = require("./936/1066/index");
+var a = require("./936/1066");
 var s = i.set;
 var c = i.getterFor("String Iterator");
 a(String, "String", function (e) {

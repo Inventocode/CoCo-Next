@@ -3,10 +3,10 @@
 Object.defineProperty(exports, "__esModule", {
   value: !0
 });
-var r = require("../../2342/444");
+var r = require("../../1366/444");
 var i = require("../../580");
 var o = require("./2330/index");
-var a = require("./1368");
+var a = require("./1368/index");
 var s = function () {
   function e(e) {
     this._binding = e;

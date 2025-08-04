@@ -130,11 +130,11 @@ module.exports = function (e, t, n) {
   }
   if (e.schema.$ref && o) {
     if ("fail" == e.opts.extendRefs) {
-      throw new Error('$ref: validation keywords used in schema at path "' + e.errSchemaPath + '" (see option extendRefs)');
+      throw new Error("$ref: validation keywords used in schema at path \"" + e.errSchemaPath + "\" (see option extendRefs)");
     }
     if (!0 !== e.opts.extendRefs) {
       o = !1;
-      e.logger.warn('$ref: keywords ignored in schema at path "' + e.errSchemaPath + '"');
+      e.logger.warn("$ref: keywords ignored in schema at path \"" + e.errSchemaPath + "\"");
     }
   }
   if (e.schema.$comment && e.opts.$comment) {

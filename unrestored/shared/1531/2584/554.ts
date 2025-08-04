@@ -1,6 +1,6 @@
 "use strict";
 
-var r = require("./0/index");
+var r = require("react");
 var o = require("./50/index");
 var i = function (e, t) {
   return (i = Object.setPrototypeOf || {

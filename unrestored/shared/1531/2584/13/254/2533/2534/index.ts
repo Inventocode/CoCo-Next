@@ -78,6 +78,6 @@ exports.red = {
   }
 };
 exports.isvalidColorString = function (e, t) {
-  var n = e.replace("\xb0", "");
+  var n = e.replace("°", "");
   return (0, i.default)(t + " (" + n + ")")._ok;
 };

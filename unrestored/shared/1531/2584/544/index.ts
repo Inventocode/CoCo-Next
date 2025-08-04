@@ -17,7 +17,7 @@ var a = function __importDefault(module) {
 }(i);
 var s = require("../7");
 var c = require("../27");
-var l = require("../0/index");
+var l = require("react");
 var u = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -201,17 +201,17 @@ function S(e) {
       alt: "failed"
     }), u.a.createElement("p", {
       className: C.a.title
-    }, "\u52a0\u8f7d\u5931\u8d25"), d && u.a.createElement("span", {
+    }, "加载失败"), d && u.a.createElement("span", {
       className: C.a.label
-    }, "\u4f60\u8f93\u5165\u7684\u7f51\u5740\u6709\u9519\u8bef\uff0c\u8bf7\u8f93\u5165\u6b63\u786e\u7684\u7f51\u5740"), !d && f && u.a.createElement("span", {
+    }, "你输入的网址有错误，请输入正确的网址"), !d && f && u.a.createElement("span", {
       className: C.a.label
-    }, "\u4f60\u8f93\u5165\u7684\u7f51\u5740\u505a\u4e86\u9650\u5236\u65e0\u6cd5\u6253\u5f00\uff0c\u53ef\u5728\u624b\u673a\u7aef\u6b63\u5e38\u6253\u5f00"), !d && !f && "error" === w && u.a.createElement("span", {
+    }, "你输入的网址做了限制无法打开，可在手机端正常打开"), !d && !f && "error" === w && u.a.createElement("span", {
       className: C.a.label
-    }, "\u8bf7\u68c0\u67e5\u662f\u5426\u8f93\u5165\u6b63\u786e\u7684\u7f51\u5740\uff0c", u.a.createElement("br", null), "\u5982\u679c\u7f51\u5740\u6b63\u786e\uff0c\u8bf7\u5c1d\u8bd5\u5728\u624b\u673a\u7aef\u6253\u5f00"), !d && !f && "http-protocol-error" === w && u.a.createElement("span", {
+    }, "请检查是否输入正确的网址，", u.a.createElement("br", null), "如果网址正确，请尝试在手机端打开"), !d && !f && "http-protocol-error" === w && u.a.createElement("span", {
       className: C.a.label
-    }, "\u7531\u4e8e\u6d4f\u89c8\u5668\u5b89\u5168\u7b56\u7565\uff0chttp://\u5f00\u5934\u7684\u7f51\u5740\u65e0\u6cd5\u5728\u6d4f\u89c8\u5668\u9884\u89c8\uff0c\u53ef\u5728\u624b\u673a\u7aef\u6b63\u5e38\u6253\u5f00"), p && u.a.createElement("span", {
+    }, "由于浏览器安全策略，http://开头的网址无法在浏览器预览，可在手机端正常打开"), p && u.a.createElement("span", {
       className: C.a.label
-    }, "\u4f60\u8f93\u5165\u7684\u7f51\u5740\u65e0\u6cd5\u6253\u5f00"));
+    }, "你输入的网址无法打开"));
   } else {
     if ("loading" === w) {
       h = u.a.createElement("div", {

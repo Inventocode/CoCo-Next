@@ -4,7 +4,7 @@ Object.defineProperty(exports, "__esModule", {
   value: !0
 });
 exports.BlockEvent = void 0;
-var r = require("../../../1001/93");
+var r = require("tslib");
 var i = function (e) {
   function t(t) {
     var n = e.call(this) || this;

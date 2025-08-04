@@ -32,7 +32,7 @@ var a = function () {
   return e;
 }();
 var s = require("./1027");
-var c = require("./2592");
+var c = require("../340/2592/index");
 var u = require("./905");
 var l = require("./394");
 var f = require("./737");
@@ -715,7 +715,7 @@ var L = function () {
   };
   return e;
 }();
-var U = require("./2587/index");
+var U = require("./2587");
 var H = [];
 function V(e) {
   return e.reduce(function (e, t) {
@@ -1924,7 +1924,7 @@ var me = function (e) {
   };
   return t;
 }(X);
-var ye = require("../340");
+var ye = require("../340/index");
 var be = 0;
 function we() {
   return be > 0;

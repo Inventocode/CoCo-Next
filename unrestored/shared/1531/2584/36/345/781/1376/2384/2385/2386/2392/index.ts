@@ -19,7 +19,7 @@ var b = Object.prototype.propertyIsEnumerable;
 var w = require("./1140").custom;
 var E = w && k(w) ? w : null;
 function x(e, t, n) {
-  var r = "double" === (n.quoteStyle || t) ? '"' : "'";
+  var r = "double" === (n.quoteStyle || t) ? "\"" : "'";
   return r + e + r;
 }
 function C(e) {
@@ -34,17 +34,17 @@ function k(e) {
 module.exports = function e(t, n, r, i) {
   var s = n || {};
   if (T(s, "quoteStyle") && "single" !== s.quoteStyle && "double" !== s.quoteStyle) {
-    throw new TypeError('option "quoteStyle" must be "single" or "double"');
+    throw new TypeError("option \"quoteStyle\" must be \"single\" or \"double\"");
   }
   if (T(s, "maxStringLength") && ("number" === typeof s.maxStringLength ? s.maxStringLength < 0 && s.maxStringLength !== 1 / 0 : null !== s.maxStringLength)) {
-    throw new TypeError('option "maxStringLength", if provided, must be a positive integer, Infinity, or `null`');
+    throw new TypeError("option \"maxStringLength\", if provided, must be a positive integer, Infinity, or `null`");
   }
   var c = !T(s, "customInspect") || s.customInspect;
   if ("boolean" !== typeof c) {
-    throw new TypeError('option "customInspect", if provided, must be `true` or `false`');
+    throw new TypeError("option \"customInspect\", if provided, must be `true` or `false`");
   }
   if (T(s, "indent") && null !== s.indent && "\t" !== s.indent && !(parseInt(s.indent, 10) === s.indent && s.indent > 0)) {
-    throw new TypeError('options "indent" must be "\\t", an integer > 0, or `null`');
+    throw new TypeError("options \"indent\" must be \"\\t\", an integer > 0, or `null`");
   }
   if ("undefined" === typeof t) {
     return "undefined";

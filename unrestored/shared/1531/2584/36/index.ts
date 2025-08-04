@@ -57,7 +57,7 @@ var f = function __importDefault(module) {
   });
   return defaultExport;
 }(p);
-var h = require("../0/index");
+var h = require("react");
 var m = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -79,15 +79,15 @@ var E = require("../23");
 var O = require("../49/index");
 var w = require("./345/index");
 var C = require("../38/index");
-var T = require("../2/index");
-var S = require("../15/index");
+var T = require("../2");
+var S = require("../15");
 var I = require("../53");
 var A = require("../182");
 var j = require("../233/index");
 var N = require("../40");
 var R = require("../21/index");
 var k = require("../55");
-var x = require("../35/85");
+var x = require("./85");
 var D = require("../79");
 var M = function () {
   function e(t) {
@@ -268,11 +268,11 @@ var B = function (e, t, n, o) {
           lineLabel: p,
           text: s.line
         });
-        u = '<label type="'.concat(p, '"></label>');
+        u = "<label type=\"".concat(p, "\"></label>");
       }
-      u += '\n    <block type="widget_method" uncache="true">\n      <mutation\n        widget_type="'.concat(t, '"\n        is_any_widget="').concat(o, '"\n        method="').concat(i, '">\n      </mutation>\n      <field name="WIDGET_ID">').concat(e, "</field>\n    </block>");
+      u += "\n    <block type=\"widget_method\" uncache=\"true\">\n      <mutation\n        widget_type=\"".concat(t, "\"\n        is_any_widget=\"").concat(o, "\"\n        method=\"").concat(i, "\">\n      </mutation>\n      <field name=\"WIDGET_ID\">").concat(e, "</field>\n    </block>");
       if (s.space) {
-        u += '<sep gap="'.concat(s.space, '"></sep>');
+        u += "<sep gap=\"".concat(s.space, "\"></sep>");
       }
       l.push({
         xml: u,
@@ -297,11 +297,11 @@ var B = function (e, t, n, o) {
           lineLabel: _,
           text: h.getter.line
         });
-        g = '<label type="'.concat(_, '"></label>');
+        g = "<label type=\"".concat(_, "\"></label>");
       }
-      g += '\n      <block type="widget_get" uncache="true">\n        <mutation\n          widget_type="'.concat(t, '"\n          is_any_widget="').concat(o, '"\n          property="').concat(p, '">\n        </mutation>\n        <field name="WIDGET_ID">').concat(e, "</field>\n      </block>");
+      g += "\n      <block type=\"widget_get\" uncache=\"true\">\n        <mutation\n          widget_type=\"".concat(t, "\"\n          is_any_widget=\"").concat(o, "\"\n          property=\"").concat(p, "\">\n        </mutation>\n        <field name=\"WIDGET_ID\">").concat(e, "</field>\n      </block>");
       if (null === (u = h.getter) || void 0 === u ? void 0 : u.space) {
-        g += '<sep gap="'.concat(h.getter.space, '"></sep>');
+        g += "<sep gap=\"".concat(h.getter.space, "\"></sep>");
       }
       if ("__visible" === p || "__disabled" === p) {
         a.push({
@@ -347,11 +347,11 @@ var B = function (e, t, n, o) {
           lineLabel: b,
           text: m.setter.line
         });
-        v = '<label type="'.concat(b, '"></label>');
+        v = "<label type=\"".concat(b, "\"></label>");
       }
-      v += '\n      <block type="widget_set" uncache="true">\n        <mutation\n          widget_type="'.concat(t, '"\n          is_any_widget="').concat(o, '"\n          property="').concat(p, '">\n        </mutation>\n        <field name="WIDGET_ID">').concat(e, "</field>\n      </block>");
+      v += "\n      <block type=\"widget_set\" uncache=\"true\">\n        <mutation\n          widget_type=\"".concat(t, "\"\n          is_any_widget=\"").concat(o, "\"\n          property=\"").concat(p, "\">\n        </mutation>\n        <field name=\"WIDGET_ID\">").concat(e, "</field>\n      </block>");
       if (null === (u = m.setter) || void 0 === u ? void 0 : u.space) {
-        v += '<sep gap="'.concat(m.setter.space, '"></sep>');
+        v += "<sep gap=\"".concat(m.setter.space, "\"></sep>");
       }
       if ("__visible" === p || "__disabled" === p) {
         c.push({
@@ -378,9 +378,9 @@ var B = function (e, t, n, o) {
         lineLabel: p,
         text: s.line
       });
-      l = '<label type="'.concat(p, '"></label>');
+      l = "<label type=\"".concat(p, "\"></label>");
     }
-    l += '\n    <block type="widget_event" uncache="true">\n      <mutation\n        widget_type="'.concat(t, '"\n        is_any_widget="').concat(o, '"\n        event="').concat(i, '">\n      </mutation>\n      <field name="WIDGET_ID">').concat(e, "</field>\n    </block>");
+    l += "\n    <block type=\"widget_event\" uncache=\"true\">\n      <mutation\n        widget_type=\"".concat(t, "\"\n        is_any_widget=\"").concat(o, "\"\n        event=\"").concat(i, "\">\n      </mutation>\n      <field name=\"WIDGET_ID\">").concat(e, "</field>\n    </block>");
     u.push({
       xml: l,
       order: c
@@ -660,12 +660,12 @@ function H() {
             u = I.length > 2 && void 0 !== I[2] ? I[2] : U;
             d = {};
             e.next = 6;
-            return import("../../../3272/index");
+            return import("@babel/preset-react");
           case 6:
             p = e.sent;
             f = p.default;
             e.next = 10;
-            return import("../../../3272/3198/2668/index");
+            return import("@babel/core");
           case 10:
             h = e.sent;
             g = h.transformSync;
@@ -926,9 +926,9 @@ function Q(e) {
     throw Object(C.a)(Object(T.zh)({
       allowText: Object(E.c)(E.b, "cloudDb.know").toString(),
       title: "error",
-      content: "\u81ea\u5b9a\u4e49\u63a7\u4ef6\u5b58\u5728\u95ee\u9898\uff0c\u4e0d\u652f\u6301\u5bfc\u5165",
+      content: "自定义控件存在问题，不支持导入",
       cancelBtnVisible: !1
-    })), new Error("file ".concat(t.join("\uff0c"), " not allow"));
+    })), new Error("file ".concat(t.join("，"), " not allow"));
   }
 }
 function Z(e, t) {
@@ -1236,5 +1236,5 @@ function he(e, t) {
   return "".concat(e, "_").concat(t);
 }
 var me = "widget";
-var ge = "\u63a7\u4ef6";
+var ge = "控件";
 export default me;

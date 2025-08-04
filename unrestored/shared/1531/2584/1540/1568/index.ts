@@ -1,7 +1,7 @@
 "use strict";
 
-var r = require("../1633/86/index");
-var o = require("../1722/817").indexOf;
+var r = require("../1623/86");
+var o = require("../1721/817").indexOf;
 var i = require("./708");
 var a = [].indexOf;
 var s = !!a && 1 / [1].indexOf(1, -0) < 0;

@@ -1,10 +1,10 @@
 "use strict";
 
-var r = require("../1633/86/index");
+var r = require("../1623/86");
 var o = require("./1216");
-var i = require("../1731/309");
+var i = require("../1623/309");
 var a = require("../1735/257");
-var s = require("./473");
+var s = require("../1680/473");
 var c = require("../1557/821/index");
 r({
   target: "Array",

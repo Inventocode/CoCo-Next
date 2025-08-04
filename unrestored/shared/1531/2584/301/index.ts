@@ -251,13 +251,13 @@ function v(e) {
   });
 }
 function b(e) {
-  e.insertBlockXML("phone_vibrate", '<value name="SECONDS">\n      <shadow type="math_number">\n        <field name="NUM" constraints="0,,0.1">1</field>\n      </shadow>\n    </value>');
+  e.insertBlockXML("phone_vibrate", "<value name=\"SECONDS\">\n      <shadow type=\"math_number\">\n        <field name=\"NUM\" constraints=\"0,,0.1\">1</field>\n      </shadow>\n    </value>");
   e.insertBlockXML("date_get_current_date");
-  e.insertBlockXML("date_check_date_is_equal", '<value name="DATE_A">\n      <shadow type="date_get_current_date"></shadow>\n    </value>\n    <value name="DATE_B">\n      <shadow type="date_get_current_date"></shadow>\n    </value>');
-  e.insertBlockXML("date_get_date_minus_operation", '<value name="DATE_A">\n      <shadow type="date_get_current_date"></shadow>\n    </value>\n    <value name="DATE_B">\n      <shadow type="date_get_current_date"></shadow>\n    </value>');
-  e.insertBlockXML("brightness_set_brightness", '<value name="VALUE">\n      <shadow type="math_number">\n        <field name="NUM" constraints="0,100,1">50</field>\n      </shadow>\n    </value>');
+  e.insertBlockXML("date_check_date_is_equal", "<value name=\"DATE_A\">\n      <shadow type=\"date_get_current_date\"></shadow>\n    </value>\n    <value name=\"DATE_B\">\n      <shadow type=\"date_get_current_date\"></shadow>\n    </value>");
+  e.insertBlockXML("date_get_date_minus_operation", "<value name=\"DATE_A\">\n      <shadow type=\"date_get_current_date\"></shadow>\n    </value>\n    <value name=\"DATE_B\">\n      <shadow type=\"date_get_current_date\"></shadow>\n    </value>");
+  e.insertBlockXML("brightness_set_brightness", "<value name=\"VALUE\">\n      <shadow type=\"math_number\">\n        <field name=\"NUM\" constraints=\"0,100,1\">50</field>\n      </shadow>\n    </value>");
   e.insertBlockXML("brightness_get_brightness");
-  e.insertBlockXML("brightness_set_keep_screen_on", '<value name="VALUE">\n      <shadow type="widget_boolean">\n        <field name="BOOL">TRUE</field>\n      </shadow>\n    </value>');
+  e.insertBlockXML("brightness_set_keep_screen_on", "<value name=\"VALUE\">\n      <shadow type=\"widget_boolean\">\n        <field name=\"BOOL\">TRUE</field>\n      </shadow>\n    </value>");
   e.insertBlockXML("phone_battery_level");
 }
 function y(e) {
@@ -315,7 +315,7 @@ function w(e, t) {
       type: "input_value",
       name: "PARAMETER",
       align: "CENTRE",
-      default_shadow: '<shadow type="screen_on_open_get_param_value" />'
+      default_shadow: "<shadow type=\"screen_on_open_get_param_value\" />"
     }, {
       type: "input_dummy",
       align: "CENTRE"
@@ -442,12 +442,12 @@ function C(e) {
   e.insertBlockXML("screen_on_open_get_param");
   e.insertBlockXML("screen_input", void 0, !0);
   e.insertBlockXML("screen_navigate_to");
-  e.insertBlockXML("screen_navigate_to_by_value", '    <value name="PARAMETER">\n  <shadow type="text">\n    <field name="TEXT">\u53c2\u6570</field>\n  </shadow>\n</value>');
-  e.insertBlockXML("new_screen_navigate_to", '<value name="SCREEN_ID">\n      <shadow type="screen_input"></shadow>\n    </value>', !0);
-  e.insertBlockXML("new_screen_navigate_to_by_value", '<value name="SCREEN_ID">\n        <shadow type="screen_input"></shadow>\n      </value>\n      <value name="PARAMETER">\n    <shadow type="text">\n      <field name="TEXT">\u53c2\u6570</field>\n    </shadow>\n  </value>', !0);
-  e.insertBlockXML("broadcast_on_receive", '<value name="BROADCAST">\n      <shadow type="broadcast_input"></shadow>\n    </value>', !0);
-  e.insertBlockXML("broadcast_send", '<value name="BROADCAST">\n      <shadow type="broadcast_input"></shadow>\n    </value>', !0);
-  e.insertBlockXML("broadcast_send_and_wait", '<value name="BROADCAST">\n      <shadow type="broadcast_input"></shadow>\n    </value>', !0);
+  e.insertBlockXML("screen_navigate_to_by_value", "    <value name=\"PARAMETER\">\n  <shadow type=\"text\">\n    <field name=\"TEXT\">参数</field>\n  </shadow>\n</value>");
+  e.insertBlockXML("new_screen_navigate_to", "<value name=\"SCREEN_ID\">\n      <shadow type=\"screen_input\"></shadow>\n    </value>", !0);
+  e.insertBlockXML("new_screen_navigate_to_by_value", "<value name=\"SCREEN_ID\">\n        <shadow type=\"screen_input\"></shadow>\n      </value>\n      <value name=\"PARAMETER\">\n    <shadow type=\"text\">\n      <field name=\"TEXT\">参数</field>\n    </shadow>\n  </value>", !0);
+  e.insertBlockXML("broadcast_on_receive", "<value name=\"BROADCAST\">\n      <shadow type=\"broadcast_input\"></shadow>\n    </value>", !0);
+  e.insertBlockXML("broadcast_send", "<value name=\"BROADCAST\">\n      <shadow type=\"broadcast_input\"></shadow>\n    </value>", !0);
+  e.insertBlockXML("broadcast_send_and_wait", "<value name=\"BROADCAST\">\n      <shadow type=\"broadcast_input\"></shadow>\n    </value>", !0);
 }
 function T(e) {
   e.insertBlockSnippetGenerator("screen_input", function (t, n) {
@@ -648,7 +648,7 @@ function S(e, t) {
       type: "input_value",
       name: "VALUE",
       check: ["Number"],
-      default_shadow: '<shadow type="controls_for_value" />'
+      default_shadow: "<shadow type=\"controls_for_value\" />"
     }, {
       type: "input_value",
       name: "FROM",
@@ -681,7 +681,7 @@ function S(e, t) {
       type: "input_value",
       name: "VALUE",
       check: ["Number"],
-      default_shadow: '<shadow type="controls_for_value" />'
+      default_shadow: "<shadow type=\"controls_for_value\" />"
     }, {
       type: "input_value",
       name: "FROM",
@@ -717,16 +717,16 @@ function S(e, t) {
   });
 }
 function I(e, t) {
-  e.insertBlockXML("controls_if", ['\n    <value name="IF0">\n      <empty type="logic_empty">\n        <field name="BOOL"></field>\n      </empty>\n    </value>\n  ', ' \n    <mutation else="1"></mutation>\n    <value name="IF0">\n      <empty type="logic_empty">\n        <field name="BOOL"></field>\n      </empty>\n    </value>']);
-  e.insertBlockXML("controls_for_closed_range", ['\n    <value name="FROM">\n      <shadow type="math_number">\n        <field name="NUM" constraints=",,1">1</field>\n      </shadow>\n    </value>\n    <value name="TO">\n      <shadow type="math_number">\n        <field name="NUM" constraints=",,1">10</field>\n      </shadow>\n    </value>\n    <value name="BY">\n      <shadow type="math_number">\n        <field name="NUM" constraints=",,1">1</field>\n      </shadow>\n    </value>']);
-  e.insertBlockXML("loop_finitely", '\n    <value name="TIMES">\n      <shadow type="math_number">\n        <field name="NUM" constraints="1,,1">20</field>\n      </shadow>\n    </value>\n    ');
-  e.insertBlockXML("sleep", '\n    <value name="SECONDS">\n      <shadow type="math_number">\n        <field name="NUM" constraints="0">1</field>\n      </shadow>\n    </value>\n    ');
-  e.insertBlockXML("loop_conditionally", '\n    <value name="CONDITION">\n      <empty type="logic_empty">\n        <field name="BOOL"></field>\n      </empty>\n    </value>\n  ');
+  e.insertBlockXML("controls_if", ["\n    <value name=\"IF0\">\n      <empty type=\"logic_empty\">\n        <field name=\"BOOL\"></field>\n      </empty>\n    </value>\n  ", " \n    <mutation else=\"1\"></mutation>\n    <value name=\"IF0\">\n      <empty type=\"logic_empty\">\n        <field name=\"BOOL\"></field>\n      </empty>\n    </value>"]);
+  e.insertBlockXML("controls_for_closed_range", ["\n    <value name=\"FROM\">\n      <shadow type=\"math_number\">\n        <field name=\"NUM\" constraints=\",,1\">1</field>\n      </shadow>\n    </value>\n    <value name=\"TO\">\n      <shadow type=\"math_number\">\n        <field name=\"NUM\" constraints=\",,1\">10</field>\n      </shadow>\n    </value>\n    <value name=\"BY\">\n      <shadow type=\"math_number\">\n        <field name=\"NUM\" constraints=\",,1\">1</field>\n      </shadow>\n    </value>"]);
+  e.insertBlockXML("loop_finitely", "\n    <value name=\"TIMES\">\n      <shadow type=\"math_number\">\n        <field name=\"NUM\" constraints=\"1,,1\">20</field>\n      </shadow>\n    </value>\n    ");
+  e.insertBlockXML("sleep", "\n    <value name=\"SECONDS\">\n      <shadow type=\"math_number\">\n        <field name=\"NUM\" constraints=\"0\">1</field>\n      </shadow>\n    </value>\n    ");
+  e.insertBlockXML("loop_conditionally", "\n    <value name=\"CONDITION\">\n      <empty type=\"logic_empty\">\n        <field name=\"BOOL\"></field>\n      </empty>\n    </value>\n  ");
   e.insertBlockXML("loop_infinitely");
-  e.insertBlockXML("wait_until", '\n    <value name="CONDITION">\n      <empty type="logic_empty">\n        <field name="BOOL"></field>\n      </empty>\n    </value>\n    ');
-  e.insertBlockXML("console_log", '\n    <mutation items="0"></mutation>\n    <value name="VALUE">\n      <shadow type="text">\n        <field name="TEXT">'.concat(t.Msg.CONSOLE_LOG_DEFAULT_VALUE, "</field>\n      </shadow>\n    </value>\n    "));
-  e.insertBlockXML("new_console_log", '\n    <mutation items="0"></mutation>\n    <value name="VALUE">\n      <shadow type="text">\n        <field name="TEXT">'.concat(t.Msg.CONSOLE_LOG_DEFAULT_VALUE, "</field>\n      </shadow>\n    </value>\n    "));
-  e.insertBlockXML("console_error", '\n    <mutation items="0"></mutation>\n    <value name="VALUE">\n      <shadow type="text">\n        <field name="TEXT">'.concat(t.Msg.CONSOLE_ERROR_DEFAULT_VALUE, "</field>\n      </shadow>\n    </value>\n    "));
+  e.insertBlockXML("wait_until", "\n    <value name=\"CONDITION\">\n      <empty type=\"logic_empty\">\n        <field name=\"BOOL\"></field>\n      </empty>\n    </value>\n    ");
+  e.insertBlockXML("console_log", "\n    <mutation items=\"0\"></mutation>\n    <value name=\"VALUE\">\n      <shadow type=\"text\">\n        <field name=\"TEXT\">".concat(t.Msg.CONSOLE_LOG_DEFAULT_VALUE, "</field>\n      </shadow>\n    </value>\n    "));
+  e.insertBlockXML("new_console_log", "\n    <mutation items=\"0\"></mutation>\n    <value name=\"VALUE\">\n      <shadow type=\"text\">\n        <field name=\"TEXT\">".concat(t.Msg.CONSOLE_LOG_DEFAULT_VALUE, "</field>\n      </shadow>\n    </value>\n    "));
+  e.insertBlockXML("console_error", "\n    <mutation items=\"0\"></mutation>\n    <value name=\"VALUE\">\n      <shadow type=\"text\">\n        <field name=\"TEXT\">".concat(t.Msg.CONSOLE_ERROR_DEFAULT_VALUE, "</field>\n      </shadow>\n    </value>\n    "));
   e.insertBlockXML("break_loop");
   e.insertBlockXML("continue_loop");
 }
@@ -818,7 +818,7 @@ function A(e) {
   });
 }
 function j(e) {
-  var t = '<shadow type="text"><field name="TEXT"></field></shadow>';
+  var t = "<shadow type=\"text\"><field name=\"TEXT\"></field></shadow>";
   e.extensions.register_mutator("CONSOLE_MUTATOR", {
     updateShape_: function () {
       e.events.disable();
@@ -947,8 +947,8 @@ function N(e, t) {
 }
 function R(e) {
   e.insertBlockXML("variables_get", "", !0);
-  e.insertBlockXML("variables_set", '<value name="VALUE">\n        <shadow type="math_number">\n          <field name="NUM">0</field>\n        </shadow>\n    </value>', !0);
-  e.insertBlockXML("variables_change", '<value name="VALUE">\n        <shadow type="math_number">\n          <field name="NUM">1</field>\n        </shadow>\n    </value>', !0);
+  e.insertBlockXML("variables_set", "<value name=\"VALUE\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\">0</field>\n        </shadow>\n    </value>", !0);
+  e.insertBlockXML("variables_change", "<value name=\"VALUE\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\">1</field>\n        </shadow>\n    </value>", !0);
 }
 function k(e) {
   e.insertBlockSnippetGenerator("variables_get", function (t, n) {
@@ -987,7 +987,7 @@ var P;
 var B;
 var F;
 var G = require("../323");
-var U = '<shadow type="math_number"><field name="NUM" constraints="1,,1">1</field></shadow>';
+var U = "<shadow type=\"math_number\"><field name=\"NUM\" constraints=\"1,,1\">1</field></shadow>";
 function W(e, t) {
   function n(e) {
     if (!t.events.is_undoing()) {
@@ -1240,7 +1240,7 @@ function W(e, t) {
     }, {
       type: "input_value",
       name: "ARRAY_CURRENT_ITEM",
-      default_shadow: '<shadow type="array_current_item" />'
+      default_shadow: "<shadow type=\"array_current_item\" />"
     }, {
       type: "input_dummy",
       align: "CENTRE"
@@ -1256,17 +1256,17 @@ function W(e, t) {
   });
 }
 function H(e) {
-  e.insertBlockXML("lists_replace", '\n    <mutation pos=\'nth\'></mutation>\n    <value name="ARRAY">\n      <shadow type="array_get"></shadow>\n    </value>\n    <value name="INDEX">\n      <shadow type="math_number">\n        <field name="NUM" constraints="1,,1">1</field>\n      </shadow>\n    </value>\n    <value name="VALUE">\n      <shadow type="math_number">\n        <field name="NUM">0</field>\n      </shadow>\n    </value>\n    ', !0);
-  e.insertBlockXML("array_remove_item", '\n    <mutation pos=\'nth\'></mutation>\n    <value name="ARRAY">\n      <shadow type="array_get"></shadow>\n    </value>\n    <value name="INDEX">\n      <shadow type="math_number">\n        <field name="NUM" constraints=\'1,,1\'>1</field>\n      </shadow>\n    </value>\n  ', !0);
+  e.insertBlockXML("lists_replace", "\n    <mutation pos='nth'></mutation>\n    <value name=\"ARRAY\">\n      <shadow type=\"array_get\"></shadow>\n    </value>\n    <value name=\"INDEX\">\n      <shadow type=\"math_number\">\n        <field name=\"NUM\" constraints=\"1,,1\">1</field>\n      </shadow>\n    </value>\n    <value name=\"VALUE\">\n      <shadow type=\"math_number\">\n        <field name=\"NUM\">0</field>\n      </shadow>\n    </value>\n    ", !0);
+  e.insertBlockXML("array_remove_item", "\n    <mutation pos='nth'></mutation>\n    <value name=\"ARRAY\">\n      <shadow type=\"array_get\"></shadow>\n    </value>\n    <value name=\"INDEX\">\n      <shadow type=\"math_number\">\n        <field name=\"NUM\" constraints='1,,1'>1</field>\n      </shadow>\n    </value>\n  ", !0);
   e.insertBlockXML("array_get", void 0, !0);
-  e.insertBlockXML("lists_append", '\n    <value name="ARRAY">\n      <shadow type="array_get"></shadow>\n    </value>\n    <value name="VALUE">\n      <shadow type="math_number">\n        <field name="NUM">0</field>\n      </shadow>\n    </value>\n  ', !0);
-  e.insertBlockXML("lists_insert_value", '\n    <value name="ARRAY">\n      <shadow type="array_get"></shadow>\n    </value>\n    <value name="INDEX">\n      <shadow type="math_number">\n        <field name="NUM" constraints=\'1,,1\'>1</field>\n      </shadow>\n    </value>\n    <value name="VALUE">\n      <shadow type="math_number">\n        <field name="NUM">0</field>\n      </shadow>\n    </value>\n  ', !0);
-  e.insertBlockXML("array_copy", '\n    <value name="FROM">\n      <shadow type="array_get"></shadow>\n    </value>\n    <value name="TO">\n      <shadow type="array_get"></shadow>\n    </value>\n    ', !0);
-  e.insertBlockXML("array_get_item", '\n    <mutation pos=\'nth\'></mutation>\n    <value name="ARRAY">\n      <shadow type="array_get"></shadow>\n    </value>\n    <value name="INDEX">\n      <shadow type="math_number">\n        <field name="NUM" constraints=\'1,,1\'>1</field>\n      </shadow>\n    </value>\n  ', !0);
-  e.insertBlockXML("array_get_length", '\n    <value name="ARRAY">\n      <shadow type="array_get"></shadow>\n    </value>\n    ', !0);
-  e.insertBlockXML("lists_index_of", '\n    <value name="ARRAY">\n      <shadow type="array_get"></shadow>\n    </value>\n    <value name="VALUE">\n      <shadow type="math_number">\n        <field name="NUM">0</field>\n      </shadow>\n    </value>\n  ', !0);
-  e.insertBlockXML("lists_is_exist", '\n    <value name="ARRAY">\n      <shadow type="array_get"></shadow>\n    </value>\n    <value name="VALUE">\n      <shadow type="math_number">\n        <field name="NUM">0</field>\n      </shadow>\n    </value>\n  ', !0);
-  e.insertBlockXML("array_foreach", '<value name="ARRAY">\n      <shadow type="array_get"></shadow>\n    </value>', !0);
+  e.insertBlockXML("lists_append", "\n    <value name=\"ARRAY\">\n      <shadow type=\"array_get\"></shadow>\n    </value>\n    <value name=\"VALUE\">\n      <shadow type=\"math_number\">\n        <field name=\"NUM\">0</field>\n      </shadow>\n    </value>\n  ", !0);
+  e.insertBlockXML("lists_insert_value", "\n    <value name=\"ARRAY\">\n      <shadow type=\"array_get\"></shadow>\n    </value>\n    <value name=\"INDEX\">\n      <shadow type=\"math_number\">\n        <field name=\"NUM\" constraints='1,,1'>1</field>\n      </shadow>\n    </value>\n    <value name=\"VALUE\">\n      <shadow type=\"math_number\">\n        <field name=\"NUM\">0</field>\n      </shadow>\n    </value>\n  ", !0);
+  e.insertBlockXML("array_copy", "\n    <value name=\"FROM\">\n      <shadow type=\"array_get\"></shadow>\n    </value>\n    <value name=\"TO\">\n      <shadow type=\"array_get\"></shadow>\n    </value>\n    ", !0);
+  e.insertBlockXML("array_get_item", "\n    <mutation pos='nth'></mutation>\n    <value name=\"ARRAY\">\n      <shadow type=\"array_get\"></shadow>\n    </value>\n    <value name=\"INDEX\">\n      <shadow type=\"math_number\">\n        <field name=\"NUM\" constraints='1,,1'>1</field>\n      </shadow>\n    </value>\n  ", !0);
+  e.insertBlockXML("array_get_length", "\n    <value name=\"ARRAY\">\n      <shadow type=\"array_get\"></shadow>\n    </value>\n    ", !0);
+  e.insertBlockXML("lists_index_of", "\n    <value name=\"ARRAY\">\n      <shadow type=\"array_get\"></shadow>\n    </value>\n    <value name=\"VALUE\">\n      <shadow type=\"math_number\">\n        <field name=\"NUM\">0</field>\n      </shadow>\n    </value>\n  ", !0);
+  e.insertBlockXML("lists_is_exist", "\n    <value name=\"ARRAY\">\n      <shadow type=\"array_get\"></shadow>\n    </value>\n    <value name=\"VALUE\">\n      <shadow type=\"math_number\">\n        <field name=\"NUM\">0</field>\n      </shadow>\n    </value>\n  ", !0);
+  e.insertBlockXML("array_foreach", "<value name=\"ARRAY\">\n      <shadow type=\"array_get\"></shadow>\n    </value>", !0);
 }
 function V(e) {
   e.insertBlockSnippetGenerator("array_get", function (t, n) {
@@ -1528,12 +1528,12 @@ function Y(e, t) {
 function K(e) {
   e.insertBlockXML("object_get", void 0, !0);
   e.insertBlockXML("object_create", "<mutation items='1'></mutation>", !0);
-  e.insertBlockXML("object_set_item", '<value name="OBJECT">\n      <shadow type="object_get"></shadow>\n    </value>\n    <value name="KEY">\n      <shadow type="text">\n        <field name="TEXT">key</field>\n      </shadow>\n    </value>\n    <value name="VALUE">\n      <shadow type="math_number">\n        <field name="NUM" allow_text="true">0</field>\n      </shadow>\n    </value>', !0);
-  e.insertBlockXML("object_delete_item", '<value name="OBJECT">\n      <shadow type="object_get"></shadow>\n    </value>\n    <value name="KEY">\n      <shadow type="text">\n        <field name="TEXT">key</field>\n      </shadow>\n    </value>', !0);
-  e.insertBlockXML("object_clear", '<value name="OBJECT">\n      <shadow type="object_get"></shadow>\n    </value>', !0);
-  e.insertBlockXML("object_length", '<value name="OBJECT">\n      <shadow type="object_get"></shadow>\n    </value>', !0);
-  e.insertBlockXML("object_get_item", '<value name="OBJECT">\n      <shadow type="object_get"></shadow>\n    </value>\n    <value name="KEY">\n      <shadow type="text">\n        <field name="TEXT">key</field>\n      </shadow>\n    </value>', !0);
-  e.insertBlockXML("object_include_key", '<value name="OBJECT">\n      <shadow type="object_get"></shadow>\n    </value>\n    <value name="KEY">\n      <shadow type="text">\n        <field name="TEXT">key</field>\n      </shadow>\n    </value>', !0);
+  e.insertBlockXML("object_set_item", "<value name=\"OBJECT\">\n      <shadow type=\"object_get\"></shadow>\n    </value>\n    <value name=\"KEY\">\n      <shadow type=\"text\">\n        <field name=\"TEXT\">key</field>\n      </shadow>\n    </value>\n    <value name=\"VALUE\">\n      <shadow type=\"math_number\">\n        <field name=\"NUM\" allow_text=\"true\">0</field>\n      </shadow>\n    </value>", !0);
+  e.insertBlockXML("object_delete_item", "<value name=\"OBJECT\">\n      <shadow type=\"object_get\"></shadow>\n    </value>\n    <value name=\"KEY\">\n      <shadow type=\"text\">\n        <field name=\"TEXT\">key</field>\n      </shadow>\n    </value>", !0);
+  e.insertBlockXML("object_clear", "<value name=\"OBJECT\">\n      <shadow type=\"object_get\"></shadow>\n    </value>", !0);
+  e.insertBlockXML("object_length", "<value name=\"OBJECT\">\n      <shadow type=\"object_get\"></shadow>\n    </value>", !0);
+  e.insertBlockXML("object_get_item", "<value name=\"OBJECT\">\n      <shadow type=\"object_get\"></shadow>\n    </value>\n    <value name=\"KEY\">\n      <shadow type=\"text\">\n        <field name=\"TEXT\">key</field>\n      </shadow>\n    </value>", !0);
+  e.insertBlockXML("object_include_key", "<value name=\"OBJECT\">\n      <shadow type=\"object_get\"></shadow>\n    </value>\n    <value name=\"KEY\">\n      <shadow type=\"text\">\n        <field name=\"TEXT\">key</field>\n      </shadow>\n    </value>", !0);
 }
 function q(e) {
   var t = function (t, n) {
@@ -1629,7 +1629,7 @@ function X(e) {
       for (var o = 0; o < this.itemCount_; o++) {
         var i = "KEY".concat(o);
         if (!this.get_input(i)) {
-          var a = this.append_shadow_input(i, '<shadow type="text"><field name="TEXT">key'.concat(o + 1, "</field></shadow>"));
+          var a = this.append_shadow_input(i, "<shadow type=\"text\"><field name=\"TEXT\">key".concat(o + 1, "</field></shadow>"));
           a.set_check(["Number", "String"]);
           if (0 !== o) {
             a.append_field(",");
@@ -1637,7 +1637,7 @@ function X(e) {
         }
         var s = "VALUE".concat(o);
         if (!this.get_input(s)) {
-          this.append_shadow_input(s, '<shadow type="math_number"><field name="NUM" allow_text="true">0</field></shadow>').append_field(":");
+          this.append_shadow_input(s, "<shadow type=\"math_number\"><field name=\"NUM\" allow_text=\"true\">0</field></shadow>").append_field(":");
         }
       }
       if (0 === this.itemCount_) {
@@ -1795,7 +1795,7 @@ function Q(e, t) {
 function Z(e) {
   e.insertBlockXML("app_on_mount");
   e.insertBlockXML("app_on_switch_background");
-  e.insertBlockXML("when", '\n      <value name="CONDITION">\n        <empty type="logic_empty">\n          <field name="BOOL"></field>\n        </empty>\n      </value>\n      ');
+  e.insertBlockXML("when", "\n      <value name=\"CONDITION\">\n        <empty type=\"logic_empty\">\n          <field name=\"BOOL\"></field>\n        </empty>\n      </value>\n      ");
   e.insertBlockXML("broadcast_input", void 0, !0);
 }
 function J(e) {
@@ -1840,7 +1840,7 @@ function $(e) {
       type: "field_coco_dropdown",
       custom: !0,
       name: "OP",
-      options: [["=", F.EQUAL], ["\u2260", F.UNEQUAL], ["<", F.LESS_THAN], ["\u2264", F.LESS_THAN_OR_EQUAL], [">", F.GREATER_THAN], ["\u2265", F.GREATER_THAN_OR_EQUAL]]
+      options: [["=", F.EQUAL], ["≠", F.UNEQUAL], ["<", F.LESS_THAN], ["≤", F.LESS_THAN_OR_EQUAL], [">", F.GREATER_THAN], ["≥", F.GREATER_THAN_OR_EQUAL]]
     }, {
       type: "input_value",
       name: "B",
@@ -2134,31 +2134,31 @@ function $(e) {
   });
 }
 function ee(e) {
-  e.insertBlockXML("math_shadow_number", '\n  <value name="VALUE">\n    <shadow type="math_number">\n      <field name="NUM">0</field>\n    </shadow>\n  </value>\n');
-  e.insertBlockXML("math_calculate_expression", '\n  <value name="INPUT">\n    <shadow type="text">\n      <field name="TEXT">1+2</field>\n    </shadow>\n  </value>\n  ');
-  e.insertBlockXML("math_operation", '\n  <value name="A">\n    <shadow type="math_number">\n      <field name="NUM">0</field>\n    </shadow>\n  </value>\n  <value name="B">\n    <shadow type="math_number">\n      <field name="NUM">0</field>\n    </shadow>\n  </value>\n');
-  e.insertBlockXML("math_random_integer", '\n  <value name="INPUT_A">\n    <shadow type="math_number">\n      <field name="NUM">0</field>\n    </shadow>\n  </value>\n  <value name="INPUT_B">\n    <shadow type="math_number">\n      <field name="NUM">5</field>\n    </shadow>\n  </value>\n  ');
-  e.insertBlockXML("math_number_property", '\n  <mutation divisor_input="false"></mutation>\n  <field name="PROPERTY">EVEN</field>\n  <value name="NUMBER_TO_CHECK">\n    <shadow type="math_number">\n      <field name="NUM">0</field>\n    </shadow>\n  </value>\n');
-  e.insertBlockXML("math_check_divisible", '\n  <value name="NUMBER_TO_CHECK">\n    <shadow type="math_number">\n      <field name="NUM">9</field>\n    </shadow>\n  </value>\n  <value name="DIVISOR">\n    <shadow type="math_number">\n      <field name="NUM">3</field>\n    </shadow>\n  </value>\n');
-  e.insertBlockXML("logic_operation", '\n  <value name="A">\n    <empty type="logic_empty">\n      <field name="BOOL"></field>\n    </empty>\n  </value>\n  <value name="B">\n    <empty type="logic_empty">\n      <field name="BOOL"></field>\n    </empty>\n  </value>\n  ');
-  e.insertBlockXML("math_complex_operation", '\n  <value name="NUM">\n    <shadow type="math_number">\n      <field name="NUM">0</field>\n    </shadow>\n  </value>\n');
-  e.insertBlockXML("math_modulo", '\n  <value name="DIVIDEND">\n    <shadow type="math_number">\n      <field name="NUM">64</field>\n    </shadow>\n  </value>\n  <value name="DIVISOR">\n    <shadow type="math_number">\n      <field name="NUM">10</field>\n    </shadow>\n  </value>\n');
-  e.insertBlockXML("math_trig", '\n  <field name="OP">SIN</field>\n  <value name="NUM">\n    <shadow type="math_number">\n      <field name="NUM">45</field>\n    </shadow>\n  </value>\n');
-  e.insertBlockXML("math_round", '\n  <field name="OP">ROUND</field>\n  <value name="NUM">\n    <shadow type="math_number">\n      <field name="NUM">3.1</field>\n    </shadow>\n  </value>\n  ');
-  e.insertBlockXML("math_compare", '\n  <value name="A">\n    <shadow type="math_number">\n      <field name="NUM">0</field>\n    </shadow>\n  </value>\n  <value name="B">\n    <shadow type="math_number">\n      <field name="NUM">0</field>\n    </shadow>\n  </value>\n');
+  e.insertBlockXML("math_shadow_number", "\n  <value name=\"VALUE\">\n    <shadow type=\"math_number\">\n      <field name=\"NUM\">0</field>\n    </shadow>\n  </value>\n");
+  e.insertBlockXML("math_calculate_expression", "\n  <value name=\"INPUT\">\n    <shadow type=\"text\">\n      <field name=\"TEXT\">1+2</field>\n    </shadow>\n  </value>\n  ");
+  e.insertBlockXML("math_operation", "\n  <value name=\"A\">\n    <shadow type=\"math_number\">\n      <field name=\"NUM\">0</field>\n    </shadow>\n  </value>\n  <value name=\"B\">\n    <shadow type=\"math_number\">\n      <field name=\"NUM\">0</field>\n    </shadow>\n  </value>\n");
+  e.insertBlockXML("math_random_integer", "\n  <value name=\"INPUT_A\">\n    <shadow type=\"math_number\">\n      <field name=\"NUM\">0</field>\n    </shadow>\n  </value>\n  <value name=\"INPUT_B\">\n    <shadow type=\"math_number\">\n      <field name=\"NUM\">5</field>\n    </shadow>\n  </value>\n  ");
+  e.insertBlockXML("math_number_property", "\n  <mutation divisor_input=\"false\"></mutation>\n  <field name=\"PROPERTY\">EVEN</field>\n  <value name=\"NUMBER_TO_CHECK\">\n    <shadow type=\"math_number\">\n      <field name=\"NUM\">0</field>\n    </shadow>\n  </value>\n");
+  e.insertBlockXML("math_check_divisible", "\n  <value name=\"NUMBER_TO_CHECK\">\n    <shadow type=\"math_number\">\n      <field name=\"NUM\">9</field>\n    </shadow>\n  </value>\n  <value name=\"DIVISOR\">\n    <shadow type=\"math_number\">\n      <field name=\"NUM\">3</field>\n    </shadow>\n  </value>\n");
+  e.insertBlockXML("logic_operation", "\n  <value name=\"A\">\n    <empty type=\"logic_empty\">\n      <field name=\"BOOL\"></field>\n    </empty>\n  </value>\n  <value name=\"B\">\n    <empty type=\"logic_empty\">\n      <field name=\"BOOL\"></field>\n    </empty>\n  </value>\n  ");
+  e.insertBlockXML("math_complex_operation", "\n  <value name=\"NUM\">\n    <shadow type=\"math_number\">\n      <field name=\"NUM\">0</field>\n    </shadow>\n  </value>\n");
+  e.insertBlockXML("math_modulo", "\n  <value name=\"DIVIDEND\">\n    <shadow type=\"math_number\">\n      <field name=\"NUM\">64</field>\n    </shadow>\n  </value>\n  <value name=\"DIVISOR\">\n    <shadow type=\"math_number\">\n      <field name=\"NUM\">10</field>\n    </shadow>\n  </value>\n");
+  e.insertBlockXML("math_trig", "\n  <field name=\"OP\">SIN</field>\n  <value name=\"NUM\">\n    <shadow type=\"math_number\">\n      <field name=\"NUM\">45</field>\n    </shadow>\n  </value>\n");
+  e.insertBlockXML("math_round", "\n  <field name=\"OP\">ROUND</field>\n  <value name=\"NUM\">\n    <shadow type=\"math_number\">\n      <field name=\"NUM\">3.1</field>\n    </shadow>\n  </value>\n  ");
+  e.insertBlockXML("math_compare", "\n  <value name=\"A\">\n    <shadow type=\"math_number\">\n      <field name=\"NUM\">0</field>\n    </shadow>\n  </value>\n  <value name=\"B\">\n    <shadow type=\"math_number\">\n      <field name=\"NUM\">0</field>\n    </shadow>\n  </value>\n");
   e.insertBlockXML("logic_boolean");
-  e.insertBlockXML("logic_negate", '\n  <value name="BOOL">\n    <empty type="logic_empty">\n      <field name="BOOL"></field>\n    </empty>\n  </value>\n');
-  e.insertBlockXML("text_shadow", '\n  <value name="VALUE">\n    <shadow type="text">\n      <field name="TEXT">Hello</field>\n    </shadow>\n  </value>\n');
-  e.insertBlockXML("text_convert_type", '\n  <value name="ORIGINAL_VALUE">\n    <shadow type="text">\n      <field name="TEXT">123</field>\n    </shadow>\n  </value>\n');
-  e.insertBlockXML("text_join", '\n  <mutation items="2"></mutation>\n  <value name="ADD0">\n    <shadow type="text">\n      <field name="TEXT">ab</field>\n    </shadow>\n  </value>\n  <value name="ADD1">\n    <shadow type="text">\n      <field name="TEXT">c</field>\n    </shadow>\n  </value>\n');
-  e.insertBlockXML("text_get_length", '\n  <value name="VALUE">\n    <shadow type="text">\n      <field name="TEXT">abc</field>\n    </shadow>\n  </value>\n');
-  e.insertBlockXML("text_slice", '\n      <mutation items="1"></mutation>\n      <value name="STRING">\n        <shadow type="text">\n          <field name="TEXT">abc</field>\n        </shadow>\n      </value>\n      <value name="NUM0">\n        <shadow type="math_number">\n          <field name="NUM" constraints="1,,1">1</field>\n        </shadow>\n      </value>\n    ');
-  e.insertBlockXML("text_check_contain", '\n  <value name="TEXT1">\n    <shadow type="text">\n      <field name="TEXT">abc</field>\n    </shadow>\n  </value>\n  <value name="TEXT2">\n    <shadow type="text">\n      <field name="TEXT">abc</field>\n    </shadow>\n  </value>\n');
-  e.insertBlockXML("text_split_text", '\n  <value name="STR_TO_SPLIT">\n    <shadow type="text">\n      <field name="TEXT">1,2,3,4</field>\n    </shadow>\n  </value>\n  <value name="SPLIT_STR">\n    <shadow type="text">\n      <field name="TEXT">,</field>\n    </shadow>\n  </value>\n');
+  e.insertBlockXML("logic_negate", "\n  <value name=\"BOOL\">\n    <empty type=\"logic_empty\">\n      <field name=\"BOOL\"></field>\n    </empty>\n  </value>\n");
+  e.insertBlockXML("text_shadow", "\n  <value name=\"VALUE\">\n    <shadow type=\"text\">\n      <field name=\"TEXT\">Hello</field>\n    </shadow>\n  </value>\n");
+  e.insertBlockXML("text_convert_type", "\n  <value name=\"ORIGINAL_VALUE\">\n    <shadow type=\"text\">\n      <field name=\"TEXT\">123</field>\n    </shadow>\n  </value>\n");
+  e.insertBlockXML("text_join", "\n  <mutation items=\"2\"></mutation>\n  <value name=\"ADD0\">\n    <shadow type=\"text\">\n      <field name=\"TEXT\">ab</field>\n    </shadow>\n  </value>\n  <value name=\"ADD1\">\n    <shadow type=\"text\">\n      <field name=\"TEXT\">c</field>\n    </shadow>\n  </value>\n");
+  e.insertBlockXML("text_get_length", "\n  <value name=\"VALUE\">\n    <shadow type=\"text\">\n      <field name=\"TEXT\">abc</field>\n    </shadow>\n  </value>\n");
+  e.insertBlockXML("text_slice", "\n      <mutation items=\"1\"></mutation>\n      <value name=\"STRING\">\n        <shadow type=\"text\">\n          <field name=\"TEXT\">abc</field>\n        </shadow>\n      </value>\n      <value name=\"NUM0\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints=\"1,,1\">1</field>\n        </shadow>\n      </value>\n    ");
+  e.insertBlockXML("text_check_contain", "\n  <value name=\"TEXT1\">\n    <shadow type=\"text\">\n      <field name=\"TEXT\">abc</field>\n    </shadow>\n  </value>\n  <value name=\"TEXT2\">\n    <shadow type=\"text\">\n      <field name=\"TEXT\">abc</field>\n    </shadow>\n  </value>\n");
+  e.insertBlockXML("text_split_text", "\n  <value name=\"STR_TO_SPLIT\">\n    <shadow type=\"text\">\n      <field name=\"TEXT\">1,2,3,4</field>\n    </shadow>\n  </value>\n  <value name=\"SPLIT_STR\">\n    <shadow type=\"text\">\n      <field name=\"TEXT\">,</field>\n    </shadow>\n  </value>\n");
 }
 function te(e, t) {
   e.Blocks.math_trig = {
-    shadow: '<shadow type="math_number"><field name="NUM">45</field></shadow>',
+    shadow: "<shadow type=\"math_number\"><field name=\"NUM\">45</field></shadow>",
     init: function () {
       this.set_colour(e.theme.block_color.MATH_HUE.fill);
       var n = new t({
@@ -2193,7 +2193,7 @@ function te(e, t) {
       }
     }
   };
-  var n = '<shadow type="math_number"><field name="NUM" constraints="1,,1">2</field></shadow>';
+  var n = "<shadow type=\"math_number\"><field name=\"NUM\" constraints=\"1,,1\">2</field></shadow>";
   e.extensions.register_mutator("TEXT_SLICE_MUTATOR", {
     updateShape_: function () {
       e.events.disable();
@@ -2590,8 +2590,8 @@ function ce(e) {
 }
 var le = require("../36/index");
 var ue = require("../121/index");
-var de = require("../15/index");
-var pe = require("../35/85");
+var de = require("../15");
+var pe = require("../36/85");
 function fe(e, t) {
   var n;
   if (Array.isArray(e)) {
@@ -2600,31 +2600,31 @@ function fe(e, t) {
   } else {
     n = e;
   }
-  var o = '<shadow type="text">\n    <field name="TEXT">'.concat(t, "</field>\n  </shadow>");
+  var o = "<shadow type=\"text\">\n    <field name=\"TEXT\">".concat(t, "</field>\n  </shadow>");
   switch (n) {
     case "number":
-      o = '<shadow type="math_number">\n      <field name="NUM">'.concat(t, "</field>\n    </shadow>");
+      o = "<shadow type=\"math_number\">\n      <field name=\"NUM\">".concat(t, "</field>\n    </shadow>");
       break;
     case "boolean":
-      o = '<shadow type="widget_boolean">\n      <field name="BOOL">'.concat(t ? "TRUE" : "FALSE", "</field>\n    </shadow>");
+      o = "<shadow type=\"widget_boolean\">\n      <field name=\"BOOL\">".concat(t ? "TRUE" : "FALSE", "</field>\n    </shadow>");
       break;
     case "color":
-      o = '<shadow type="color_picker">\n      <field name="COLOR_PALETTE">'.concat(Object(de.i)(t) ? "#ffffff" : t, "</field>\n    </shadow>");
+      o = "<shadow type=\"color_picker\">\n      <field name=\"COLOR_PALETTE\">".concat(Object(de.i)(t) ? "#ffffff" : t, "</field>\n    </shadow>");
       break;
     case "image":
-      o = '<shadow type="image_file_list_dropdown">\n        <field name="IMAGE_FILE_ID">'.concat(g.h, "</field>\n      </shadow>");
+      o = "<shadow type=\"image_file_list_dropdown\">\n        <field name=\"IMAGE_FILE_ID\">".concat(g.h, "</field>\n      </shadow>");
       break;
     case "icon":
-      o = '<shadow type="icon_file_list_dropdown">\n          <field name="ICON_FILE_ID">'.concat(g.h, "</field>\n        </shadow>");
+      o = "<shadow type=\"icon_file_list_dropdown\">\n          <field name=\"ICON_FILE_ID\">".concat(g.h, "</field>\n        </shadow>");
       break;
     case "multilineString":
-      o = '<shadow type="text_multiline">\n        <field name="TEXT">'.concat(t, "</field>\n      </shadow>");
+      o = "<shadow type=\"text_multiline\">\n        <field name=\"TEXT\">".concat(t, "</field>\n      </shadow>");
       break;
     case "richTextString":
-      o = '<shadow type="text_rich_text">\n          <field name="TEXT">'.concat(function (e) {
+      o = "<shadow type=\"text_rich_text\">\n          <field name=\"TEXT\">".concat(function (e) {
         var t = {
           "&": "&amp;",
-          '"': "&quot;",
+          "\"": "&quot;",
           "'": "&apos;",
           "<": "&lt;",
           ">": "&gt;"
@@ -2678,7 +2678,7 @@ function _e(e, t) {
         var l = Object(pe.a)(this.widgetType, r);
         if (this.isAnyWidget) {
           var u;
-          var d = "\u4efb\u610f" + Object(le.k)(this.widgetType);
+          var d = "任意" + Object(le.k)(this.widgetType);
           if (!(null === (u = this.get_input("WIDGET_ID_CONTAINER")) || void 0 === u)) {
             u.append_field(d);
           }
@@ -2745,14 +2745,14 @@ function _e(e, t) {
             }
             c.append_field(s, i);
           } else {
-            e.append_shadow_input(i, '<shadow type="widget_event_param">\n              <field name="PARAM_NAME">'.concat(a, '</field>\n              <mutation widget_type="').concat(e.widgetType, '" event="').concat(e.event, '" param="').concat(n, '"></mutation>\n            </shadow>'), "DO");
+            e.append_shadow_input(i, "<shadow type=\"widget_event_param\">\n              <field name=\"PARAM_NAME\">".concat(a, "</field>\n              <mutation widget_type=\"").concat(e.widgetType, "\" event=\"").concat(e.event, "\" param=\"").concat(n, "\"></mutation>\n            </shadow>"), "DO");
           }
         });
         if (this.isAnyWidget) {
           var _ = le.a;
           var v = "PARAM_".concat(_);
           var b = le.b;
-          this.append_shadow_input(v, '<shadow type="widget_event_param">\n          <field name="PARAM_NAME">'.concat(b, '</field>\n          <mutation widget_type="').concat(this.widgetType, '" event="').concat(this.event, '" param="').concat(_, '"></mutation>\n        </shadow>'), "DO");
+          this.append_shadow_input(v, "<shadow type=\"widget_event_param\">\n          <field name=\"PARAM_NAME\">".concat(b, "</field>\n          <mutation widget_type=\"").concat(this.widgetType, "\" event=\"").concat(this.event, "\" param=\"").concat(_, "\"></mutation>\n        </shadow>"), "DO");
         }
       },
       domToMutation: function (e) {
@@ -2874,7 +2874,7 @@ function _e(e, t) {
           if (!(null === (p = this.get_input("WIDGET_ID_CONTAINER")) || void 0 === p)) {
             p.append_field(f);
           }
-          this.append_shadow_input("WIDGET_ID", '<empty type="widget_any_id"></empty>', "PROPERTY");
+          this.append_shadow_input("WIDGET_ID", "<empty type=\"widget_any_id\"></empty>", "PROPERTY");
         } else {
           var h;
           var m = new ue.a({
@@ -3028,7 +3028,7 @@ function _e(e, t) {
           if (!(null === (C = this.get_input("WIDGET_ID_CONTAINER")) || void 0 === C)) {
             C.append_field(T);
           }
-          this.append_shadow_input("WIDGET_ID", '<empty type="widget_any_id"></empty>', "PROPERTY");
+          this.append_shadow_input("WIDGET_ID", "<empty type=\"widget_any_id\"></empty>", "PROPERTY");
         } else {
           var S;
           var I = new ue.a({
@@ -3241,7 +3241,7 @@ function _e(e, t) {
           if (!(null === r || void 0 === r)) {
             r.append_field(o);
           }
-          this.append_shadow_input("WIDGET_ID", '<empty type="widget_any_id"></empty>');
+          this.append_shadow_input("WIDGET_ID", "<empty type=\"widget_any_id\"></empty>");
           if ("__setVisible" === n.key) {
             var i = new ue.a({
               type: "field_coco_dropdown",
@@ -3725,713 +3725,713 @@ function ve(e) {
 }
 var be = {
   "zh-CN": {
-    PRESS: "\u70b9\u51fb",
-    PRESS_IN: "\u6309\u4e0b",
-    PRESS_OUT: "\u677e\u5f00",
-    PRESS_HOLD: "\u6309\u4f4f",
-    SIZE: "\u5c3a\u5bf8\u5927\u5c0f",
-    HUGE: "\u8d85\u5927",
-    LARGE: "\u5927",
-    MEDIUM: "\u4e2d",
-    SMALL: "\u5c0f",
-    TINY: "\u8d85\u5c0f",
-    INCREASE: "\u589e\u52a0",
-    DECREASE: "\u51cf\u5c11",
-    SET: "\u8bbe\u7f6e",
-    OF: "\u7684",
-    IMAGE: "\u56fe\u7247",
-    CONTENT: "\u6587\u672c\u5185\u5bb9",
-    TEXT_CONTENT: "\u6587\u672c",
-    TEXT_COLOR: "\u6587\u672c\u989c\u8272",
-    BACKGROUND_COLOR: "\u80cc\u666f\u989c\u8272",
-    ALIGN: "\u5bf9\u9f50\u65b9\u5f0f",
-    LEFT_ALIGN: "\u5c45\u5de6",
-    CENTER_ALIGN: "\u5c45\u4e2d",
-    RIGHT_ALIGN: "\u5c45\u53f3",
-    TOP_ALIGN: "\u5c45\u4e0a",
-    BOTTOM_ALIGN: "\u5c45\u4e0b",
-    FONT_SIZE: "\u5b57\u53f7",
-    HEIGHT: "\u9ad8\u5ea6",
-    WIDTH: "\u5bbd\u5ea6",
-    POSITION_X: "X\u5750\u6807",
-    POSITION_Y: "Y\u5750\u6807",
-    TEXT: "\u6587\u672c",
-    SHOW: "\u663e\u793a",
-    HIDE: "\u9690\u85cf",
-    DISABLED: "\u7981\u7528",
-    ABLE: "\u542f\u7528",
-    BRIGHTNESS: "\u4eae\u5ea6",
-    ALPHA: "\u900f\u660e\u5ea6",
-    HUE: "\u8272\u76f8",
-    SATURATION: "\u9971\u548c\u5ea6",
-    HORIZONTAL: "\u6c34\u5e73",
-    HORIZONTAL_FLIPPED: "\u6c34\u5e73\u7ffb\u8f6c",
-    VERTICAL_FLIPPED: "\u5782\u76f4\u7ffb\u8f6c",
-    VERTICAL: "\u5782\u76f4",
-    MOVE_TOP: "\u6700\u4e0a\u5c42",
-    MOVE_BOTTOM: "\u6700\u5e95\u5c42",
-    MOVE_UP: "\u4e0a\u4e00\u5c42",
-    MOVE_DOWN: "\u4e0b\u4e00\u5c42",
-    "opacity.invisible": "\u900f\u660e",
-    "opacity.visible": "\u4e0d\u900f\u660e",
-    INVALID_BLOCK: "\u65e0\u6548\u79ef\u6728\uff1a\u76f8\u5173\u63a7\u4ef6\u5df2\u88ab\u79fb\u9664",
-    COLOR: "\u989c\u8272",
-    MODE: "\u6837\u5f0f",
-    ICON: "\u56fe\u6807",
-    SYSTEM: "\u7cfb\u7edf",
-    EVENT: "\u4e8b\u4ef6",
-    CONTROL: "\u63a7\u5236",
-    PHONE: "\u529f\u80fd",
-    OPERATOR: "\u8fd0\u7b97",
-    PRIMITIVE: "\u53d8\u91cf",
-    ARRAY: "\u5217\u8868",
-    OBJECT: "\u5b57\u5178",
-    FUNCTION: "\u51fd\u6570",
-    STORAGE: "\u6570\u636e\u5e93",
-    SENSE: "\u4f20\u611f",
-    COMPONENTS: "\u754c\u9762\u63a7\u4ef6",
-    INVISIBLE_COMPONENTS: "\u5c4f\u5e55\u529f\u80fd",
-    GLOBAL_COMPONENTS: "\u5168\u5c40\u529f\u80fd",
-    ANY_COMPONENTS: "\u4efb\u610f\u63a7\u4ef6",
-    WHEN: "%1 \u5f53 %2 %3",
-    REPEAT_FOREVER: "\u91cd\u590d\u6267\u884c %1 %2",
-    REPEAT: "\u91cd\u590d\u6267\u884c %1 \u6b21 %2 %3",
-    REPEAT_WHEN: "\u5f53 %1 \u91cd\u590d\u6267\u884c %2 %3",
-    REPEAT_WHEN_TOOLTIP: "\u5982\u679c\u503c\u4e3a\u771f(true)\uff0c\u5219\u91cd\u590d\u6267\u884cC\u53e3\u5185\u7684\u4ee3\u7801\u3002\n\u5982\u679c\u503c\u4e3a\u5047(false)\uff0c\u5219\u7ed3\u675f\u91cd\u590d\u6267\u884c\u3002",
-    BREAK: "\u9000\u51fa\u5faa\u73af",
-    BREAK_TOOLTIP: "\u7ed3\u675f\u5faa\u73af\uff0c\u6267\u884c\u91cd\u590d\u6267\u884c\u4e0b\u9762\u7684\u4ee3\u7801\u3002",
-    WAIT_SECS: "\u7b49\u5f85 %1 \u79d2",
-    SLEEP_UTIL: "\u4fdd\u6301\u7b49\u5f85\u76f4\u5230%1",
-    CONTINUE: "\u8df3\u8fc7\u6b64\u6b21\u5faa\u73af\uff0c\u8fdb\u5165\u4e0b\u6b21\u5faa\u73af",
-    CONSOLE_LOG: "\u5728\u63a7\u5236\u53f0\u6253\u5370 %1",
-    NEW_CONSOLE_LOG: "\u5728\u63a7\u5236\u53f0 %1 %2",
-    CONSOLE_ERROR: "\u5728\u63a7\u5236\u53f0\u62a5\u9519 %1",
-    TO_LOG: "\u6253\u5370",
-    TO_ERROR: "\u62a5\u9519",
-    TO_WARNING: "\u9884\u8b66",
-    CONSOLE_LOG_DEFAULT_VALUE: "\u8c03\u8bd5\u4fe1\u606f",
-    CONSOLE_ERROR_DEFAULT_VALUE: "\u62a5\u9519\u4fe1\u606f",
-    CONTROLS_FOR: "\u91cd\u590d\u6267\u884c %1 \u4ece %2 \u5230 %3 \u524d\uff0c\u95f4\u9694 %4",
-    CONTROLS_FOR_TOOLTIP: "for\u5faa\u73af\u79ef\u6728\u3002\u53d8\u91cf\u201c\u6570\u5b57\u201d\u521d\u59cb\u65f6\u4e3a1\uff0c\u6bcf\u6b21\u91cd\u590d\u6267\u884c\u540e\u589e\u52a01\uff1b\u76f4\u5230\u201c\u6570\u5b57\u201d\u7b49\u4e8e10\u65f6\uff0c\u7ed3\u675f\u91cd\u590d\u6267\u884c\u3002",
-    CONTROLS_FOR_CLOSED_RANGE: "\u91cd\u590d\u6267\u884c %1 \u4ece %2 \u5230 %3\uff0c\u95f4\u9694 %4",
-    CONTROLS_FOR_CLOSED_RANGE_TOOLTIP: "for \u5faa\u73af\u79ef\u6728\u3002\u53d8\u91cf\u201c\u6570\u5b57\u201d\u521d\u59cb\u503c\u4e3a1\uff0c\u6bcf\u6b21\u91cd\u590d\u6267\u884c\u540e\u589e\u52a01\uff1b\u5f53\u201c\u6570\u5b57\u201d\u5c0f\u4e8e\u6216\u8005\u7b49\u4e8e10\u65f6\uff0c\u6267\u884c\u5f00\u53e3\u91cc\u7684\u8bed\u53e5",
-    CONTROLS_NUMBER: "\u6570\u5b57",
-    VARIABLE: "\u53d8\u91cf",
-    VARIABLES_GLOBAL: "\u5168\u5c40\u53d8\u91cf %1",
+    PRESS: "点击",
+    PRESS_IN: "按下",
+    PRESS_OUT: "松开",
+    PRESS_HOLD: "按住",
+    SIZE: "尺寸大小",
+    HUGE: "超大",
+    LARGE: "大",
+    MEDIUM: "中",
+    SMALL: "小",
+    TINY: "超小",
+    INCREASE: "增加",
+    DECREASE: "减少",
+    SET: "设置",
+    OF: "的",
+    IMAGE: "图片",
+    CONTENT: "文本内容",
+    TEXT_CONTENT: "文本",
+    TEXT_COLOR: "文本颜色",
+    BACKGROUND_COLOR: "背景颜色",
+    ALIGN: "对齐方式",
+    LEFT_ALIGN: "居左",
+    CENTER_ALIGN: "居中",
+    RIGHT_ALIGN: "居右",
+    TOP_ALIGN: "居上",
+    BOTTOM_ALIGN: "居下",
+    FONT_SIZE: "字号",
+    HEIGHT: "高度",
+    WIDTH: "宽度",
+    POSITION_X: "X坐标",
+    POSITION_Y: "Y坐标",
+    TEXT: "文本",
+    SHOW: "显示",
+    HIDE: "隐藏",
+    DISABLED: "禁用",
+    ABLE: "启用",
+    BRIGHTNESS: "亮度",
+    ALPHA: "透明度",
+    HUE: "色相",
+    SATURATION: "饱和度",
+    HORIZONTAL: "水平",
+    HORIZONTAL_FLIPPED: "水平翻转",
+    VERTICAL_FLIPPED: "垂直翻转",
+    VERTICAL: "垂直",
+    MOVE_TOP: "最上层",
+    MOVE_BOTTOM: "最底层",
+    MOVE_UP: "上一层",
+    MOVE_DOWN: "下一层",
+    "opacity.invisible": "透明",
+    "opacity.visible": "不透明",
+    INVALID_BLOCK: "无效积木：相关控件已被移除",
+    COLOR: "颜色",
+    MODE: "样式",
+    ICON: "图标",
+    SYSTEM: "系统",
+    EVENT: "事件",
+    CONTROL: "控制",
+    PHONE: "功能",
+    OPERATOR: "运算",
+    PRIMITIVE: "变量",
+    ARRAY: "列表",
+    OBJECT: "字典",
+    FUNCTION: "函数",
+    STORAGE: "数据库",
+    SENSE: "传感",
+    COMPONENTS: "界面控件",
+    INVISIBLE_COMPONENTS: "屏幕功能",
+    GLOBAL_COMPONENTS: "全局功能",
+    ANY_COMPONENTS: "任意控件",
+    WHEN: "%1 当 %2 %3",
+    REPEAT_FOREVER: "重复执行 %1 %2",
+    REPEAT: "重复执行 %1 次 %2 %3",
+    REPEAT_WHEN: "当 %1 重复执行 %2 %3",
+    REPEAT_WHEN_TOOLTIP: "如果值为真(true)，则重复执行C口内的代码。\n如果值为假(false)，则结束重复执行。",
+    BREAK: "退出循环",
+    BREAK_TOOLTIP: "结束循环，执行重复执行下面的代码。",
+    WAIT_SECS: "等待 %1 秒",
+    SLEEP_UTIL: "保持等待直到%1",
+    CONTINUE: "跳过此次循环，进入下次循环",
+    CONSOLE_LOG: "在控制台打印 %1",
+    NEW_CONSOLE_LOG: "在控制台 %1 %2",
+    CONSOLE_ERROR: "在控制台报错 %1",
+    TO_LOG: "打印",
+    TO_ERROR: "报错",
+    TO_WARNING: "预警",
+    CONSOLE_LOG_DEFAULT_VALUE: "调试信息",
+    CONSOLE_ERROR_DEFAULT_VALUE: "报错信息",
+    CONTROLS_FOR: "重复执行 %1 从 %2 到 %3 前，间隔 %4",
+    CONTROLS_FOR_TOOLTIP: "for循环积木。变量“数字”初始时为1，每次重复执行后增加1；直到“数字”等于10时，结束重复执行。",
+    CONTROLS_FOR_CLOSED_RANGE: "重复执行 %1 从 %2 到 %3，间隔 %4",
+    CONTROLS_FOR_CLOSED_RANGE_TOOLTIP: "for 循环积木。变量“数字”初始值为1，每次重复执行后增加1；当“数字”小于或者等于10时，执行开口里的语句",
+    CONTROLS_NUMBER: "数字",
+    VARIABLE: "变量",
+    VARIABLES_GLOBAL: "全局变量 %1",
     VARIABLES_GET: "%1",
-    VARIABLES_SET: "\u8bbe\u7f6e\u53d8\u91cf %1 \u7684\u503c\u4e3a %2",
-    CHANGE_VARIABLE: "\u5c06\u53d8\u91cf %1 %2 %3",
-    VARIABLES_CREATE: "\u521b\u5efa\u53d8\u91cf %1 \u4e3a %2",
-    SHOW_HIDE_VARIABLE: "%1 \u53d8\u91cf %2",
-    LISTS_APPEND: "\u6dfb\u52a0 %1 \u5230 %2 \u672b\u5c3e",
-    INSERT_LISTS_ITEM_BY_INDEX: "\u63d2\u5165 %3 \u5230 %1 \u7684\u7b2c %2 \u9879",
-    COPY_ARRAY: "\u590d\u5236 %1 \u5230 %2",
-    GET_ARRAY_LENGTH: "%1 \u7684\u957f\u5ea6",
-    GET_ARRAY_ITEM_INDEX: "%2 \u4e2d\u7b2c\u4e00\u4e2a %1 \u7684\u4f4d\u7f6e",
-    CHECK_ITEM_IN_ARRAY: "%1 \u4e2d\u5305\u542b %2",
-    LIST: "\u5217\u8868",
-    NTH: "\u7b2c",
-    LAST_ITEM: "\u6700\u540e\u4e00\u9879",
-    ALL_ITEM: "\u6240\u6709\u9879",
-    ITEM: "\u9879",
-    DELETE: "\u5220\u9664",
-    REPLACE: "\u66ff\u6362",
-    IS: "\u4e3a",
-    REMOVE_ARRAY_ITEM: "\u5220\u9664 %1 %2",
-    ARRAY_ITEM: "\u9879",
-    LISTS_REPLACE: "\u66ff\u6362 %1 %2",
-    ARRAY_CURRENT_ITEM: "\u5f53\u524d\u9879",
-    ARRAY_FOREACH: "\u904d\u5386 %1 \u53d6 %2\uff0c\u91cd\u590d\u6267\u884c %3 %4",
-    OBJECT_GET_VALUE: "\u83b7\u53d6\u5bf9\u8c61 %1 \u5c5e\u6027\u4e3a %2 \u7684\u503c",
-    OBJECT_GET_VALUE_TOOLTIP: '\u83b7\u53d6\u5bf9\u8c61\u4e2d\u67d0\u4e2a\u5c5e\u6027\u7684\u503c\u3002\u6bd4\u5982\u5bf9\u8c61A\u4e3a\uff1a\n{"province":"\u5e7f\u4e1c","city":"\u6df1\u5733","weather":"\u591a\u4e91"}\n\u90a3\u5176\u5c5e\u6027\u4e3aprovince\u7684\u503c\u4e3a\u5e7f\u4e1c\uff0c\u5c5e\u6027\u4e3acity\u7684\u503c\u4e3a\u6df1\u5733\uff0c\u5c5e\u6027\u4e3aweather\u7684\u503c\u4e3a\u591a\u4e91\u3002',
-    OBJECT_JSON_PARSE: "\u5c06\u6587\u672c %1 \u89e3\u6790\u4e3a\u5bf9\u8c61",
-    OBJECT_JSON_PARSE_TOOLTIP: "\u5c06\u7b26\u5408json\u7ed3\u6784\u7684\u6587\u672c\u5185\u5bb9\uff08\u6bd4\u5982HTTP\u5ba2\u6237\u7aef\u83b7\u5f97\u6587\u672c\u65f6\u7684\u6587\u672c\u5185\u5bb9\uff09\u8f6c\u6362\u6210\u5bf9\u8c61\u7c7b\u578b\uff0c\u5d4c\u5165\u5230\u201c\u83b7\u53d6\u5bf9\u8c61\uff1f\u5c5e\u6027\u4e3a\uff08\u201c\u201d\uff09\u7684\u503c\u201d\u79ef\u6728\u4e2d\uff0c\u53ef\u4ee5\u8fdb\u4e00\u6b65\u83b7\u53d6\u5bf9\u8c61\u4e2d\u67d0\u4e2a\u5c5e\u6027\u7684\u503c\u3002",
+    VARIABLES_SET: "设置变量 %1 的值为 %2",
+    CHANGE_VARIABLE: "将变量 %1 %2 %3",
+    VARIABLES_CREATE: "创建变量 %1 为 %2",
+    SHOW_HIDE_VARIABLE: "%1 变量 %2",
+    LISTS_APPEND: "添加 %1 到 %2 末尾",
+    INSERT_LISTS_ITEM_BY_INDEX: "插入 %3 到 %1 的第 %2 项",
+    COPY_ARRAY: "复制 %1 到 %2",
+    GET_ARRAY_LENGTH: "%1 的长度",
+    GET_ARRAY_ITEM_INDEX: "%2 中第一个 %1 的位置",
+    CHECK_ITEM_IN_ARRAY: "%1 中包含 %2",
+    LIST: "列表",
+    NTH: "第",
+    LAST_ITEM: "最后一项",
+    ALL_ITEM: "所有项",
+    ITEM: "项",
+    DELETE: "删除",
+    REPLACE: "替换",
+    IS: "为",
+    REMOVE_ARRAY_ITEM: "删除 %1 %2",
+    ARRAY_ITEM: "项",
+    LISTS_REPLACE: "替换 %1 %2",
+    ARRAY_CURRENT_ITEM: "当前项",
+    ARRAY_FOREACH: "遍历 %1 取 %2，重复执行 %3 %4",
+    OBJECT_GET_VALUE: "获取对象 %1 属性为 %2 的值",
+    OBJECT_GET_VALUE_TOOLTIP: "获取对象中某个属性的值。比如对象A为：\n{\"province\":\"广东\",\"city\":\"深圳\",\"weather\":\"多云\"}\n那其属性为province的值为广东，属性为city的值为深圳，属性为weather的值为多云。",
+    OBJECT_JSON_PARSE: "将文本 %1 解析为对象",
+    OBJECT_JSON_PARSE_TOOLTIP: "将符合json结构的文本内容（比如HTTP客户端获得文本时的文本内容）转换成对象类型，嵌入到“获取对象？属性为（“”）的值”积木中，可以进一步获取对象中某个属性的值。",
     OBJECT_GET: "%1",
-    OBJECT_SET_ITEM: "\u8bbe\u7f6e %1 \u952e %2 \u7684\u503c\u4e3a %3",
-    OBJECT_DELETE_ITEM: "\u5220\u9664 %1 \u4e2d\u7684\u952e %2",
-    OBJECT_CLEAR: "\u6e05\u7a7a %1",
-    OBJECT_LENGTH: "%1 \u952e\u7684\u603b\u6570",
-    OBJECT_GET_ITEM: "%1 \u952e %2 \u7684\u503c",
-    OBJECT_INCLUDE_KEY: "\u952e %2 \u5b58\u5728\u4e8e %1",
-    MATH_IS: "\u662f",
-    MATH_EVEN: "\u5076\u6570",
-    MATH_ODD: "\u5947\u6570",
-    MATH_PRIME: "\u8d28\u6570",
-    MATH_WHOLE: "\u6574\u6570",
-    MATH_POSITIVE: "\u6b63\u6570",
-    MATH_NEGATIVE: "\u8d1f\u6570",
-    MATH_ROUND_OPERATOR_ROUND: "\u56db\u820d\u4e94\u5165",
-    MATH_ROUND_OPERATOR_CEIL: "\u5411\u4e0a\u820d\u5165",
-    MATH_ROUND_OPERATOR_FLOOR: "\u5411\u4e0b\u820d\u5165",
-    REMINDER_OPERATION: "%1 \xf7 %2 \u7684\u4f59\u6570",
-    RANDOM_NUM: "\u5728 %1 \u5230 %2 \u95f4\u968f\u673a\u6574\u6570",
-    DIVISIBLE_BY: "%1 \u80fd\u88ab %2 \u6574\u9664",
-    CALCULATE: "\u6570\u5b66\u8fd0\u7b97 %1",
-    TEXT_SELECT: "%1 \u7684\u7b2c %2 \u5230\u7b2c %3 \u4e2a\u5b57\u7b26",
-    TEXT_LENGTH: "%1 \u7684\u957f\u5ea6",
-    TEXT_CONTAIN: "%1 \u5305\u542b %2",
-    TEXT_SPLIT: "\u628a %1 \u6309 %2 \u5206\u5f00\u6210\u5217\u8868",
-    CONVERT_TYPE: "\u628a %1 \u8f6c\u6362\u4e3a %2 \u7c7b\u578b",
-    NUMBER_TYPE: "\u6570\u5b57",
-    STRING_TYPE: "\u5b57\u7b26\u4e32",
-    BOOLEAN_TYPE: "\u5e03\u5c14\u503c",
-    TEXT_SLICE: "%1 \u7684\u7b2c %2",
-    OPERATORS_TEXT_SELECT_CHANGEABLE_TO: "\u5230\u7b2c",
-    OPERATORS_TEXT_SELECT_CHANGEABLE_END: "\u4e2a\u5b57\u7b26\u4e32",
-    APP_ON_MOUNT: "%1 \u5f53\u6253\u5f00\u5e94\u7528\u65f6 %2 %3",
-    APP_ON_SWITCH: "%1 \u5f53\u5e94\u7528 %2 \u65f6 %3 %4",
-    APP_ACTIVE: "\u8fd4\u56de\u524d\u53f0",
-    APP_BACKGROUND: "\u5207\u5230\u540e\u53f0",
-    BROADCAST_ON_RECEIVE: "%1 \u5f53 \u6536\u5230 \u5e7f\u64ad %2 \u65f6 %3 %4",
-    BROADCAST_SEND: "\u53d1\u9001\u5e7f\u64ad %1",
-    BROADCAST_SEND_AND_WAIT: "\u53d1\u9001\u5e7f\u64ad %1 \u5e76\u7b49\u5f85",
-    BROADCAST_INPUT_TOOLTIP: "\u5d4c\u5165\u201c\u5b57\u7b26\u4e32\u201d \uff1a\u6309 \u201c\u5e7f\u64ad\u540d\u79f0\u201d \u68c0\u7d22",
-    SCREEN_ON_OPEN: "%1 \u5f53\u6253\u5f00\u5c4f\u5e55\u65f6",
-    SCREEN_ON_OPEN_GET_PARAM: "%1 \u5f53\u6253\u5f00\u5c4f\u5e55\u65f6 %2 %3 %4",
-    SCREEN_ON_PRESS: "%1 \u5f53\u5c4f\u5e55\u88ab\u70b9\u51fb\u65f6 %2 %3 %4 %5",
-    SCREEN_ON_PRESS_MSG0: "%1 \u5f53 \u5c4f\u5e55 \u88ab %2 \u65f6 %3 %4 %5 %6",
-    SCREEN_UPDATE_BACKGROUND_COLOR: "\u8bbe\u7f6e %1 \u7684 \u80cc\u666f\u989c\u8272 \u4e3a %2",
-    SCREEN_SET_BACKGROUND_IMAGE: "\u8bbe\u7f6e %1 \u7684 \u80cc\u666f\u56fe\u7247 \u4e3a %2",
-    NEW_SCREEN_UPDATE_BACKGROUND_COLOR: "\u8bbe\u7f6e \u5c4f\u5e55 \u7684 \u80cc\u666f\u989c\u8272 \u4e3a %1",
-    NEW_SCREEN_SET_BACKGROUND_IMAGE: "\u8bbe\u7f6e \u5c4f\u5e55 \u7684 \u80cc\u666f\u56fe\u7247 \u4e3a %1",
-    SCREEN_GET_BACKGROUND_IMAGE: "%1 \u7684 \u80cc\u666f\u56fe\u7247",
-    SCREEN_NAVIGATE_TO: "\u5207\u6362\u5230\u5c4f\u5e55 %1",
-    SCREEN_NAVIGATE_TO_BY_VALUE: "\u5207\u6362\u5230\u5c4f\u5e55 %1 \u5e76\u4f20\u503c %2",
-    SCREEN_HEIGHT: "\u9ad8\u5ea6",
-    SCREEN_WIDTH: "\u5bbd\u5ea6",
-    SCREEN_GET_COLOR: "%1 \u7684 \u80cc\u666f\u989c\u8272",
-    SCREEN_GET_SIZE: "%1 \u7684 %2",
-    NEW_SCREEN_GET_COLOR: "\u5c4f\u5e55 \u7684 \u80cc\u666f\u989c\u8272",
-    NEW_SCREEN_GET_SIZE: "\u5c4f\u5e55 \u7684 %1",
-    NEW_SCREEN_GET_BACKGROUND_IMAGE: "\u5c4f\u5e55 \u7684 \u80cc\u666f\u56fe\u7247",
-    SCREEN_PREV: "\u4e0a\u4e00\u5c4f",
-    SCREEN_NEXT: "\u4e0b\u4e00\u5c4f",
-    SCREEN_PARAM: "\u53c2\u6570",
-    SCREEN_CHECK_IF_PRESSED: "\u5c4f\u5e55 \u88ab \u6309\u4f4f",
-    SCREEN_INPUT_TOOLTIP: "\u5d4c\u5165\u201c\u5b57\u7b26\u4e32\u201d\uff1a\u6309\u201c\u5c4f\u5e55\u540d\u79f0\u201d\u68c0\u7d22\n \u5d4c\u5165\u201c\u6570\u5b57\u201d\uff1a\u6309\u201c\u5c4f\u5e55\u5e8f\u53f7\u201d\u68c0\u7d22",
-    PHONE_VIBRATE: "\u624b\u673a\u632f\u52a8 %1 \u79d2",
-    PHONE_BATTERY_LEVEL: "\u5f53\u524d\u7535\u91cf",
-    BRIGHTNESS_SET_BRIGHTNESS: "\u8bbe\u7f6e\u5c4f\u5e55\u4eae\u5ea6\u4e3a %1",
-    BRIGHTNESS_GET_BRIGHTNESS: "\u5f53\u524d\u5c4f\u5e55\u4eae\u5ea6",
-    BRIGHTNESS_SET_KEEP_SCREEN_ON: "\u8bbe\u7f6e\u5c4f\u5e55\u662f\u5426\u4fdd\u6301\u5e38\u4eae %1",
-    GYROSCOPE_ON_PHONE_SHAKE: "%1 \u5f53\u624b\u673a\u88ab\u6447\u6643\u65f6 %2 %3",
-    GYROSCOPE_PHONE_GET_COMPASS: "\u6307\u5357\u9488",
-    GYROSCOPE_PHONE_GET_COMPASS_TOOLTIP: "\u624b\u673a\u8bbe\u5907\u9876\u90e8\u671d\u5411\u3002\n\u6b63\u5317\u4e3a 0\n\u6b63\u5357\u4e3a 180\n\u6b63\u897f\u4e3a 270\n\u6b63\u4e1c\u4e3a 90",
-    GYROSCOPE_PHONE_GET_ORIENTATION_VALUE: "\u624b\u673a\u5728 %1 \u65b9\u5411\u7684 %2",
-    VOLUME_SENSOR_SET_DETECTION_STATE: "%1 \u73af\u5883\u97f3\u91cf\u4f20\u611f\u5668",
-    VOLUME_SENSOR_GET_CURRENT_VALUE: "\u5f53\u524d\u73af\u5883\u97f3\u91cf",
-    ROTATION: "\u503e\u659c\u89d2\u5ea6",
-    GRAVITY: "\u52a0\u901f\u5ea6\u5206\u91cf",
-    TIME: "\u65f6\u95f4",
-    YEAR: "\u5e74",
-    MONTH: "\u6708",
-    DATE: "\u65e5",
-    DAYS: "\u5929\u6570",
-    DAY_NAME: "\u661f\u671f\uff08\u6587\u672c\uff09",
-    DAY_NUM: "\u661f\u671f\uff08\u6570\u5b57\uff09",
-    HOUR: "\u5c0f\u65f6",
-    MINUTE: "\u5206\u949f",
-    SECOND: "\u79d2",
-    DATE_OBJECT: "\u65e5\u671f",
-    START: "\u5f00\u59cb",
-    STOP: "\u505c\u6b62",
-    RESET: "\u91cd\u7f6e",
-    OPEN: "\u5f00\u542f",
-    CLOSE: "\u5173\u95ed",
+    OBJECT_SET_ITEM: "设置 %1 键 %2 的值为 %3",
+    OBJECT_DELETE_ITEM: "删除 %1 中的键 %2",
+    OBJECT_CLEAR: "清空 %1",
+    OBJECT_LENGTH: "%1 键的总数",
+    OBJECT_GET_ITEM: "%1 键 %2 的值",
+    OBJECT_INCLUDE_KEY: "键 %2 存在于 %1",
+    MATH_IS: "是",
+    MATH_EVEN: "偶数",
+    MATH_ODD: "奇数",
+    MATH_PRIME: "质数",
+    MATH_WHOLE: "整数",
+    MATH_POSITIVE: "正数",
+    MATH_NEGATIVE: "负数",
+    MATH_ROUND_OPERATOR_ROUND: "四舍五入",
+    MATH_ROUND_OPERATOR_CEIL: "向上舍入",
+    MATH_ROUND_OPERATOR_FLOOR: "向下舍入",
+    REMINDER_OPERATION: "%1 ÷ %2 的余数",
+    RANDOM_NUM: "在 %1 到 %2 间随机整数",
+    DIVISIBLE_BY: "%1 能被 %2 整除",
+    CALCULATE: "数学运算 %1",
+    TEXT_SELECT: "%1 的第 %2 到第 %3 个字符",
+    TEXT_LENGTH: "%1 的长度",
+    TEXT_CONTAIN: "%1 包含 %2",
+    TEXT_SPLIT: "把 %1 按 %2 分开成列表",
+    CONVERT_TYPE: "把 %1 转换为 %2 类型",
+    NUMBER_TYPE: "数字",
+    STRING_TYPE: "字符串",
+    BOOLEAN_TYPE: "布尔值",
+    TEXT_SLICE: "%1 的第 %2",
+    OPERATORS_TEXT_SELECT_CHANGEABLE_TO: "到第",
+    OPERATORS_TEXT_SELECT_CHANGEABLE_END: "个字符串",
+    APP_ON_MOUNT: "%1 当打开应用时 %2 %3",
+    APP_ON_SWITCH: "%1 当应用 %2 时 %3 %4",
+    APP_ACTIVE: "返回前台",
+    APP_BACKGROUND: "切到后台",
+    BROADCAST_ON_RECEIVE: "%1 当 收到 广播 %2 时 %3 %4",
+    BROADCAST_SEND: "发送广播 %1",
+    BROADCAST_SEND_AND_WAIT: "发送广播 %1 并等待",
+    BROADCAST_INPUT_TOOLTIP: "嵌入“字符串” ：按 “广播名称” 检索",
+    SCREEN_ON_OPEN: "%1 当打开屏幕时",
+    SCREEN_ON_OPEN_GET_PARAM: "%1 当打开屏幕时 %2 %3 %4",
+    SCREEN_ON_PRESS: "%1 当屏幕被点击时 %2 %3 %4 %5",
+    SCREEN_ON_PRESS_MSG0: "%1 当 屏幕 被 %2 时 %3 %4 %5 %6",
+    SCREEN_UPDATE_BACKGROUND_COLOR: "设置 %1 的 背景颜色 为 %2",
+    SCREEN_SET_BACKGROUND_IMAGE: "设置 %1 的 背景图片 为 %2",
+    NEW_SCREEN_UPDATE_BACKGROUND_COLOR: "设置 屏幕 的 背景颜色 为 %1",
+    NEW_SCREEN_SET_BACKGROUND_IMAGE: "设置 屏幕 的 背景图片 为 %1",
+    SCREEN_GET_BACKGROUND_IMAGE: "%1 的 背景图片",
+    SCREEN_NAVIGATE_TO: "切换到屏幕 %1",
+    SCREEN_NAVIGATE_TO_BY_VALUE: "切换到屏幕 %1 并传值 %2",
+    SCREEN_HEIGHT: "高度",
+    SCREEN_WIDTH: "宽度",
+    SCREEN_GET_COLOR: "%1 的 背景颜色",
+    SCREEN_GET_SIZE: "%1 的 %2",
+    NEW_SCREEN_GET_COLOR: "屏幕 的 背景颜色",
+    NEW_SCREEN_GET_SIZE: "屏幕 的 %1",
+    NEW_SCREEN_GET_BACKGROUND_IMAGE: "屏幕 的 背景图片",
+    SCREEN_PREV: "上一屏",
+    SCREEN_NEXT: "下一屏",
+    SCREEN_PARAM: "参数",
+    SCREEN_CHECK_IF_PRESSED: "屏幕 被 按住",
+    SCREEN_INPUT_TOOLTIP: "嵌入“字符串”：按“屏幕名称”检索\n 嵌入“数字”：按“屏幕序号”检索",
+    PHONE_VIBRATE: "手机振动 %1 秒",
+    PHONE_BATTERY_LEVEL: "当前电量",
+    BRIGHTNESS_SET_BRIGHTNESS: "设置屏幕亮度为 %1",
+    BRIGHTNESS_GET_BRIGHTNESS: "当前屏幕亮度",
+    BRIGHTNESS_SET_KEEP_SCREEN_ON: "设置屏幕是否保持常亮 %1",
+    GYROSCOPE_ON_PHONE_SHAKE: "%1 当手机被摇晃时 %2 %3",
+    GYROSCOPE_PHONE_GET_COMPASS: "指南针",
+    GYROSCOPE_PHONE_GET_COMPASS_TOOLTIP: "手机设备顶部朝向。\n正北为 0\n正南为 180\n正西为 270\n正东为 90",
+    GYROSCOPE_PHONE_GET_ORIENTATION_VALUE: "手机在 %1 方向的 %2",
+    VOLUME_SENSOR_SET_DETECTION_STATE: "%1 环境音量传感器",
+    VOLUME_SENSOR_GET_CURRENT_VALUE: "当前环境音量",
+    ROTATION: "倾斜角度",
+    GRAVITY: "加速度分量",
+    TIME: "时间",
+    YEAR: "年",
+    MONTH: "月",
+    DATE: "日",
+    DAYS: "天数",
+    DAY_NAME: "星期（文本）",
+    DAY_NUM: "星期（数字）",
+    HOUR: "小时",
+    MINUTE: "分钟",
+    SECOND: "秒",
+    DATE_OBJECT: "日期",
+    START: "开始",
+    STOP: "停止",
+    RESET: "重置",
+    OPEN: "开启",
+    CLOSE: "关闭",
     DATE_SET_TIMER_STATE: "%1 %2",
     DATE_TIMER: "%1",
     DATE_GET_CURRENT_DATE: "%1",
-    DATE_GET_CURRENT_DATE_TOOLTIP: "\u7535\u8111\u4e0a\u8fd0\u884c\u65f6\uff0c\u83b7\u53d6\u7684\u662f\u7535\u8111\u7cfb\u7edf\u5f53\u524d\u7684\u65f6\u95f4\u3002\n\u624b\u673a\u4e0a\u8fd0\u884c\u65f6\uff0c\u83b7\u53d6\u7684\u662f\u624b\u673a\u7cfb\u7edf\u5f53\u524d\u7684\u65f6\u95f4\u3002",
-    DATE_CURRENT_TIME: "\u5f53\u524d \u65f6\u95f4",
-    DATE_CURRENT_YEAR: "\u5f53\u524d \u5e74",
-    DATE_CURRENT_MONTH: "\u5f53\u524d \u6708",
-    DATE_CURRENT_DATE: "\u5f53\u524d \u65e5",
-    DATE_CURRENT_DAY_NAME: "\u5f53\u524d \u661f\u671f\uff08\u6587\u672c\uff09",
-    DATE_CURRENT_DAY_NUM: "\u5f53\u524d \u661f\u671f\uff08\u6570\u5b57\uff09",
-    DATE_CURRENT_HOUR: "\u5f53\u524d \u5c0f\u65f6",
-    DATE_CURRENT_MINUTE: "\u5f53\u524d \u5206\u949f",
-    DATE_CURRENT_SECOND: "\u5f53\u524d \u79d2",
-    DATE_CHECK_DATE_IS_EQUAL: "%1 \u4e0e %2 \u662f\u5426\u76f8\u7b49",
-    DATE_GET_DATE_MINUS_OPERATION: "%1 \u51cf\u53bb %2 \u7684 %3",
-    DATE_PICKER_ON_SELECT_DONE: "%1 \u5f53 %2 \u5b8c\u6210\u9009\u62e9\u65f6 %3 %4 %5 %6 %7",
-    DATE_PICKER_OPEN_SELECT_DIALOG: "\u8c03\u7528 %1 \u8fdb\u884c\u9009\u62e9",
-    DATE_PICKER_GET_DATE: "%1 \u7684\u65e5\u671f",
-    TIME_PICKER_ON_SELECT_DONE: "%1 \u5f53 %2 \u5b8c\u6210\u9009\u62e9\u65f6 %3 %4 %5 %6 %7",
-    TIME_PICKER_OPEN_SELECT_DIALOG: "\u8c03\u7528 %1 \u8fdb\u884c\u9009\u62e9",
-    TIME_PICKER_GET_TIME: "%1 \u7684\u65f6\u95f4",
-    HTTP_CLIENT_ON_SUCCESS: "%1 \u5f53 %2 \u83b7\u5f97\u6587\u672c\u65f6 %3 %4 %5 %6",
-    HTTP_CLIENT_ON_SUCCESS_TOOLTIP: "\u8bf7\u6c42\u6210\u529f\u65f6\u89e6\u53d1\u8be5\u4e8b\u4ef6\uff0c\u8fd4\u56de\u5185\u5bb9\u5b58\u50a8\u5728\u201c\u6587\u672c\u5185\u5bb9\u201d\u79ef\u6728\u4e2d\u3002",
-    HTTP_CLIENT_ON_ERROR: "%1 \u5f53 %2 \u51fa\u9519\u65f6 %3 %4 %5 %6",
-    HTTP_CLIENT_ON_ERROR_TOOLTIP: "\u8bf7\u6c42\u5931\u8d25\u65f6\u89e6\u53d1\u8be5\u4e8b\u4ef6\uff0c\u9519\u8bef\u539f\u56e0\u5b58\u50a8\u5728\u201c\u9519\u8bef\u6d88\u606f\u201d\u79ef\u6728\u4e2d\u3002",
-    HTTP_CLIENT_SET_URL: "\u8bbe\u7f6e %1 \u7684\u7f51\u5740\u4e3a %2",
-    HTTP_CLIENT_SET_HEADER: "\u8bbe\u7f6e %1 \u7684\u8bf7\u6c42\u5934\u4e3a %2",
-    HTTP_CLIENT_SEND_WITH_GET_REQUEST: "\u8c03\u7528 %1 \u53d1\u9001 GET \u8bf7\u6c42",
-    HTTP_CLIENT_SEND_WITH_GET_REQUEST_TOOLTIP: "\u5982\u679c\u4f7f\u7528\u7684api\u63a5\u53e3\u7684\u8c03\u7528\u65b9\u5f0f\u4e3aget\uff0c\u5219\u8bbe\u7f6e\u597d\u7f51\u5740\u548c\u8bf7\u6c42\u53c2\u6570\u540e\uff0c\u4f7f\u7528\u8be5\u79ef\u6728\u53d1\u9001get\u8bf7\u6c42\u3002",
-    HTTP_CLIENT_SEND_WITH_POST_REQUEST: "\u8c03\u7528 %1 \u53d1\u9001 POST \u8bf7\u6c42\uff0c\u6587\u672c\u4e3a %2",
-    HTTP_CLIENT_SEND_WITH_POST_REQUEST_TOOLTIP: "\u5982\u679c\u4f7f\u7528\u7684api\u63a5\u53e3\u7684\u8c03\u7528\u65b9\u5f0f\u4e3apost\uff0c\u5219\u8bbe\u7f6e\u597d\u7f51\u5740\u548c\u8bf7\u6c42\u6587\u672c\u540e\uff0c\u4f7f\u7528\u8be5\u79ef\u6728\u53d1\u9001post\u8bf7\u6c42\u3002",
-    HTTP_CLIENT_GET_URL: "%1 \u7684\u7f51\u5740",
-    HTTP_CLIENT_STATUS: "\u54cd\u5e94\u4ee3\u7801",
-    HTTP_CLIENT_RESPONSE: "\u6587\u672c\u5185\u5bb9",
-    HTTP_CLIENT_ERROR_STATUS: "\u9519\u8bef\u4ee3\u7801",
-    HTTP_CLIENT_ERROR_RESPONSE: "\u9519\u8bef\u6d88\u606f",
-    HTTP_CLIENT_SEND_DELETE_REQUEST: "\u8c03\u7528 %1 \u53d1\u9001 DELETE \u8bf7\u6c42",
-    HTTP_CLIENT_SEND_PUT_REQUEST: "\u8c03\u7528 %1 \u53d1\u9001 PUT \u8bf7\u6c42\uff0c\u6587\u672c\u4e3a %2",
-    HTTP_CLIENT_SEND_PATCH_REQUEST: "\u8c03\u7528 %1 \u53d1\u9001 PATCH \u8bf7\u6c42\uff0c\u6587\u672c\u4e3a %2",
-    SOUND_MAN: "\u7537\u58f0",
-    SOUND_WOMAN: "\u5973\u58f0",
-    SOUND_CHILD: "\u7ae5\u58f0",
-    SOUND_VOLUME: "\u97f3\u91cf",
-    SOUND_RATE: "\u97f3\u901f",
-    AUDIO_PLAY_SOUND: "\u64ad\u653e %1",
-    AUDIO_STOP_SOUND: "\u505c\u6b62 %1",
-    AUDIO_PAUSE_SOUND: "\u6682\u505c %1",
-    AUDIO_SET_SOUND_FILE: "\u8bbe\u7f6e %1 \u7684\u97f3\u6e90\u4e3a %2",
-    AUDIO_SET_VOLUME_OR_RATE: "\u8bbe\u7f6e %1 %2 \u5927\u5c0f\u4e3a %3",
-    AUDIO_CHANGE_VOLUME_OR_RATE: "\u8bbe\u7f6e %1 %2 %3 %4",
-    TEXT2SPEECH_SPEAK_TEXT: "%1 \u6717\u8bfb %2",
-    TEXT2SPEECH_SPEAK_TEXT_AND_WAIT: "%1 \u6717\u8bfb %2 \u76f4\u5230\u7ed3\u675f",
-    TEXT2SPEECH_DEFAULT_TEXT: "\u4f60\u597d",
-    CAMERA_PHOTO: "\u7167\u7247",
-    CAMERA_VIDEO: "\u89c6\u9891",
-    CAMERA_SET_CAMERA_DIRECTION: "\u8bbe\u7f6e\u76f8\u673a\u4e3a %1 \u6444\u50cf\u5934",
-    CAMERA_GET_CAMERA_TAKE_PHOTO: "\u8c03\u7528\u76f8\u673a\u62cd\u7167\uff0c\u5f53\u5b8c\u6210\u65f6\u8fd4\u56de %1 %2",
-    CAMERA_GET_CAMERA_TAKE_VIDEO: "\u8c03\u7528\u76f8\u673a\u5f55\u50cf\uff0c\u5f53\u5b8c\u6210\u65f6\u8fd4\u56de %1 %2",
-    CAMERA_GET_CAMERA_CHOOSE_PHOTO: "\u6253\u5f00\u76f8\u518c\u8fdb\u884c\u9009\u62e9\uff0c\u5f53\u5b8c\u6210\u65f6\u8fd4\u56de %1 %2",
-    TEXT_WIDGET_ON_PRESS: "%1 \u5f53 %2 \u88ab\u70b9\u51fb\u65f6 %3 %4",
-    TEXT_WIDGET_GET_PROPERTY: "%1 \u7684 %2",
-    TEXT_WIDGET_GET_CONTENT: "%1 \u7684 \u6587\u672c",
-    TEXT_WIDGET_SET_PROPERTY: "\u8bbe\u7f6e %1 \u7684 %2 \u4e3a %3",
-    TEXT_WIDGET_SET_ALIGN: "\u8bbe\u7f6e %1 \u7684 %2 \u4e3a",
-    TEXT_WIDGET_SET_CONTENT: "\u8bbe\u7f6e %1 \u7684 \u6587\u672c \u4e3a %2",
-    TEXT_WIDGET_SET_FONT_SIZE: "\u8bbe\u7f6e %1 \u7684 \u5b57\u53f7 \u4e3a %2",
-    TEXT_WIDGET_GET_FONT_SIZE: "%1 \u7684 \u5b57\u53f7",
-    TEXT_WIDGET_HORIZONTAL_ALIGN: "\u6c34\u5e73\u5bf9\u9f50",
-    TEXT_WIDGET_VERTICAL_ALIGN: "\u5782\u76f4\u5bf9\u9f50",
-    BUTTON_ON_PRESS: "%1 \u5f53\u6309\u94ae %2 \u88ab %3 %4 %5",
-    BUTTON_SET_CONTENT: "\u8bbe\u7f6e %1 \u7684\u6587\u672c\u4e3a %2",
-    BUTTON_SET_COLOR: "\u8bbe\u7f6e %1 \u7684\u989c\u8272\u4e3a %2",
-    BUTTON_SET_SIZE_TYPE: "\u8bbe\u7f6e %1 \u7684\u5c3a\u5bf8\u5927\u5c0f\u4e3a %2",
-    BUTTON_SET_MODE: "\u8bbe\u7f6e %1 \u7684\u6837\u5f0f\u4e3a %2",
-    BUTTON_GET_COLOR: "%1 \u7684\u989c\u8272",
-    BUTTON_GET_CONTENT: "%1 \u7684\u6587\u672c",
-    BUTTON_CONTAINED_TEXT: "\u5e95\u8272\u767d\u5b57",
-    BUTTON_OUTLINED_TEXT: "\u767d\u5e95\u5f69\u5b57",
-    BUTTON_CONTAINED_ICON: "\u5e95\u8272\u56fe\u6807",
-    BUTTON_OUTLINED_ICON: "\u767d\u5e95\u56fe\u6807",
-    BUTTON_DEFAULT_TEXT: "\u6309\u94ae",
-    INPUT_ON_FOCUS: "%1 \u5f53\u8f93\u5165\u6846 %2 \u83b7\u53d6\u7126\u70b9\u65f6 %3 %4",
-    INPUT_ON_BLUR: "%1 \u5f53\u8f93\u5165\u6846 %2 \u5931\u53bb\u7126\u70b9\u65f6 %3 %4",
-    INPUT_ON_CHANGE: "%1 \u5f53\u8f93\u5165\u6846 %2 \u7684\u5185\u5bb9\u6539\u53d8\u65f6 %3 %4",
-    INPUT_SET_INPUT_CONTENT: "\u8bbe\u7f6e %1 \u7684 %2 \u4e3a %3",
-    INPUT_SET_MODE: "\u8bbe\u7f6e %1 \u7684 \u6837\u5f0f\u4e3a %2",
-    INPUT_SET_COLOR: "\u8bbe\u7f6e %1 \u7684 \u989c\u8272 %2",
-    INPUT_SET_POSITION: "\u8bbe\u7f6e %1 \u7684 %2 \u4e3a",
-    INPUT_SET_SIZE: "\u8bbe\u7f6e %1 \u7684 \u5c3a\u5bf8 %2",
-    INPUT_GET_COLOR: " %1 \u7684 \u989c\u8272",
-    INPUT_GET_CONTENT: "%1 \u7684 %2",
-    INPUT_GET_POSITION: "%1 \u7684 %2",
-    INPUT_ASSERT_STATE: "%1 \u662f\u5426 %2",
-    INPUT_GET_HAS_ERROR_MESSAGE: "%1 \u662f\u5426 \u62a5\u9519",
-    INPUT_GET_PROPERTY: "%1 \u7684 %2",
-    INPUT_ERROR_TIPS: "%1 %2 \u62a5\u9519\u63d0\u793a",
-    INPUT_OUTLINED_NORMAL: "\u7ebf\u6846",
-    INPUT_CONTAINED_NORMAL: "\u5e95\u8272",
-    INPUT_CONTAINED_ROUND: "\u5706\u89d2",
-    INPUT_OUTLINED_FLAT: "\u6a2a\u7ebf",
-    INPUT_CONTENT: "\u8f93\u5165\u6587\u6848",
-    INPUT_PLACEHOLDER: "\u63d0\u793a\u6587\u6848",
-    INPUT_ERROR_MESSAGE: "\u62a5\u9519\u6587\u6848",
-    INPUT_REPORT_ERROR: "\u62a5\u9519",
-    INPUT_DEFAULT_ERROR_MESSAGE: "\u8f93\u5165\u9519\u8bef",
-    INPUT_DEFAULT_VALUE: "\u8f93\u5165\u6846\u5185\u5bb9",
-    INPUT_DEFAULT_PLACEHOLDER: "\u63d0\u793a\u8bed\u5185\u5bb9",
-    LOCAL_STORAGE_GET_ALL_FIELD_KEYS: "%1 \u7684\u6240\u6709\u952e",
-    LOCAL_STORAGE_GET_KEY_VALUE_COUNT: "%1 \u952e\u7684\u603b\u6570",
-    LOCAL_STORAGE_ASSERT_KEY_IN: "\u952e %1 \u5b58\u5728\u4e8e %2",
-    LOCAL_STORAGE_SET_VALUE_BY_KEY: "\u8bbe\u7f6e %1 \u952e %2 \u7684\u503c\u4e3a %3",
-    LOCAL_STORAGE_SET_VALUE_BY_KEY_TOOLTIP: "\u5982\u679c\u6570\u636e\u5e93\u4e2d\u5b58\u5728\u8be5\u952e\uff0c\u5219\u4fee\u6539\u952e\u7684\u503c\u3002\n\u5982\u679c\u4e0d\u5b58\u5728\uff0c\u5219\u65b0\u589e\u4e00\u4e2a\u952e\u503c\u5bf9\u3002",
-    LOCAL_STORAGE_GET_VALUE_BY_KEY: "%1 \u952e %2 \u7684\u503c",
-    LOCAL_STORAGE_CLEAR_ALL_DATA: "\u6e05\u7a7a %1",
-    LOCAL_STORAGE_DELETE_ITEM: "\u5220\u9664 %1 \u7684\u952e %2",
-    NEW_LOCAL_STORAGE_GET_ALL_FIELD_KEYS: "%1%2 \u7684\u6240\u6709\u952e",
-    CLOUD_STORAGE_ON_ERROR: "%1 \u5f53 %2 \u51fa\u9519\u65f6 %3 %4 %5 %6",
-    CLOUD_STORAGE_ON_ERROR_TOOLTIP: "\u5f53\u65b0\u589e\u3001\u4fee\u6539\u3001\u5220\u9664\u3001\u83b7\u53d6\u6570\u636e\u5e93\u7684\u952e\u503c\u5bf9\u51fa\u73b0\u9519\u8bef\u65f6\uff0c\u89e6\u53d1\u8be5\u4e8b\u4ef6\uff0c\u9519\u8bef\u539f\u56e0\u5b58\u50a8\u5728\u201c\u9519\u8bef\u6d88\u606f\u201d\u79ef\u6728\u4e2d\u3002",
-    CLOUD_STORAGE_SET_VALUE_BY_KEY: "%1 \u8bbe\u7f6e %2 %3 \u7684\u503c\u4e3a %4, \u5931\u8d25\u65f6\u8fd4\u56de %5",
-    CLOUD_STORAGE_SET_VALUE_BY_KEY_TOOLTIP: "\u5982\u679c\u4e91\u6570\u636e\u5e93\u4e2d\u5b58\u5728\u8be5\u952e\uff0c\u5219\u4fee\u6539\u952e\u7684\u503c\u3002\n\u5982\u679c\u4e0d\u5b58\u5728\uff0c\u5219\u65b0\u589e\u4e00\u4e2a\u952e\u503c\u5bf9\u3002",
-    CLOUD_STORAGE_GET_ALL_FIELD_KEYS: "%1 %2  \u7684\u6240\u6709\u952e, \u5931\u8d25\u65f6\u8fd4\u56de %3",
-    CLOUD_STORAGE_GET_KEY_VALUE_COUNT: "%1 %2 \u7684\u952e\u503c\u5bf9\u4e2a\u6570, \u5931\u8d25\u65f6\u8fd4\u56de %3",
-    CLOUD_STORAGE_ASSERT_KEY_IN: "%1 \u952e %2 \u662f\u5426\u5b58\u5728\u4e8e %3, \u5931\u8d25\u65f6\u8fd4\u56de %4",
-    CLOUD_STORAGE_GET_VALUE_BY_KEY: "%1 %2 \u4e2d\u952e\u4e3a %3 \u7684\u503c, \u5931\u8d25\u65f6\u8fd4\u56de %4",
-    CLOUD_STORAGE_CLEAR_ALL_DATA: "%1 \u6e05\u7a7a %2 \u6240\u6709\u952e\u503c\u5bf9, \u5931\u8d25\u65f6\u8fd4\u56de %3",
-    CLOUD_STORAGE_DELETE_ITEM: "%1 \u5220\u9664 %2 \u7684 %3 \u548c\u503c, \u5931\u8d25\u65f6\u8fd4\u56de %4",
-    CLOUD_STORAGE_CANNOT_REMOVED_ITEM: "\u65e0\u6cd5\u5220\u9664\u952e\u548c\u503c",
-    CLOUD_STORAGE_CANNOT_SET_ITEM: "\u65e0\u6cd5\u8bbe\u7f6e\u8be5\u503c",
-    CLOUD_STORAGE_CANNOT_CLEAR: "\u65e0\u6cd5\u6e05\u7a7a\u6240\u6709\u952e\u503c\u5bf9",
-    CLOUD_STORAGE_CANNOT_GET_ITEM: "\u65e0\u6cd5\u83b7\u53d6\u503c",
-    CLOUD_STORAGE_CANNOT_GET_ITEM_COUNT: "\u65e0\u6cd5\u83b7\u53d6\u952e\u503c\u5bf9\u4e2a\u6570",
-    CLOUD_STORAGE_CANNOT_GET_ALL_ITEM: "\u65e0\u6cd5\u83b7\u53d6\u6240\u6709\u952e",
-    CLOUD_STORAGE_CANNOT_ASSERT_KEY: "\u65e0\u6cd5\u5224\u65ad\u952e\u662f\u5426\u5b58\u5728",
-    CLOUD_STORAGE_PARAM_ERROR_TYPE: "\u9519\u8bef\u7c7b\u578b",
-    CLOUD_STORAGE_PARAM_ERROR_MESSAGE: "\u9519\u8bef\u4fe1\u606f",
-    IMAGE_ON_PRESS: "%1\u5f53 %2 \u88ab\u70b9\u51fb\u65f6 %3 %4",
-    IMAGE_SET_PROPERTY: "\u8bbe\u7f6e %1 \u7684 %2 \u4e3a %3",
-    IMAGE_GET_PROPERTY: "%1 \u7684 %2",
-    IMAGE_GET_FILE_ID: "%1 \u7684 \u56fe\u7247",
-    IMAGE_SET_FIELD_ID: "\u8bbe\u7f6e %1 \u56fe\u7247\u4e3a %2",
-    IMAGE_GET_FILE_ID_TOOLTIP: "\u8fd4\u56de\u56fe\u7247\u540d\u79f0\u6216\u94fe\u63a5\u3002",
-    IMAGE_SET_FIELD_ID_TOOLTIP: "\u8bbe\u7f6e\u56fe\u7247\u663e\u793a\u7684\u56fe\u7247\uff0c\u53ef\u4ee5\u5d4c\u5165\u9879\u76ee\u5185\u56fe\u7247\u8d44\u6e90\u7684\u540d\u79f0\u6216\u7f51\u7edc\u56fe\u7247\u7684\u94fe\u63a5\u3002",
-    CANVAS_CLEAR_ALL_BRUSH: "\u6e05\u9664 %1 \u7684 \u7b14\u8ff9",
-    CANVAS_TO_DATA_URL: "\u4fdd\u5b58 %1 \u4e3a\u56fe\u7247",
+    DATE_GET_CURRENT_DATE_TOOLTIP: "电脑上运行时，获取的是电脑系统当前的时间。\n手机上运行时，获取的是手机系统当前的时间。",
+    DATE_CURRENT_TIME: "当前 时间",
+    DATE_CURRENT_YEAR: "当前 年",
+    DATE_CURRENT_MONTH: "当前 月",
+    DATE_CURRENT_DATE: "当前 日",
+    DATE_CURRENT_DAY_NAME: "当前 星期（文本）",
+    DATE_CURRENT_DAY_NUM: "当前 星期（数字）",
+    DATE_CURRENT_HOUR: "当前 小时",
+    DATE_CURRENT_MINUTE: "当前 分钟",
+    DATE_CURRENT_SECOND: "当前 秒",
+    DATE_CHECK_DATE_IS_EQUAL: "%1 与 %2 是否相等",
+    DATE_GET_DATE_MINUS_OPERATION: "%1 减去 %2 的 %3",
+    DATE_PICKER_ON_SELECT_DONE: "%1 当 %2 完成选择时 %3 %4 %5 %6 %7",
+    DATE_PICKER_OPEN_SELECT_DIALOG: "调用 %1 进行选择",
+    DATE_PICKER_GET_DATE: "%1 的日期",
+    TIME_PICKER_ON_SELECT_DONE: "%1 当 %2 完成选择时 %3 %4 %5 %6 %7",
+    TIME_PICKER_OPEN_SELECT_DIALOG: "调用 %1 进行选择",
+    TIME_PICKER_GET_TIME: "%1 的时间",
+    HTTP_CLIENT_ON_SUCCESS: "%1 当 %2 获得文本时 %3 %4 %5 %6",
+    HTTP_CLIENT_ON_SUCCESS_TOOLTIP: "请求成功时触发该事件，返回内容存储在“文本内容”积木中。",
+    HTTP_CLIENT_ON_ERROR: "%1 当 %2 出错时 %3 %4 %5 %6",
+    HTTP_CLIENT_ON_ERROR_TOOLTIP: "请求失败时触发该事件，错误原因存储在“错误消息”积木中。",
+    HTTP_CLIENT_SET_URL: "设置 %1 的网址为 %2",
+    HTTP_CLIENT_SET_HEADER: "设置 %1 的请求头为 %2",
+    HTTP_CLIENT_SEND_WITH_GET_REQUEST: "调用 %1 发送 GET 请求",
+    HTTP_CLIENT_SEND_WITH_GET_REQUEST_TOOLTIP: "如果使用的api接口的调用方式为get，则设置好网址和请求参数后，使用该积木发送get请求。",
+    HTTP_CLIENT_SEND_WITH_POST_REQUEST: "调用 %1 发送 POST 请求，文本为 %2",
+    HTTP_CLIENT_SEND_WITH_POST_REQUEST_TOOLTIP: "如果使用的api接口的调用方式为post，则设置好网址和请求文本后，使用该积木发送post请求。",
+    HTTP_CLIENT_GET_URL: "%1 的网址",
+    HTTP_CLIENT_STATUS: "响应代码",
+    HTTP_CLIENT_RESPONSE: "文本内容",
+    HTTP_CLIENT_ERROR_STATUS: "错误代码",
+    HTTP_CLIENT_ERROR_RESPONSE: "错误消息",
+    HTTP_CLIENT_SEND_DELETE_REQUEST: "调用 %1 发送 DELETE 请求",
+    HTTP_CLIENT_SEND_PUT_REQUEST: "调用 %1 发送 PUT 请求，文本为 %2",
+    HTTP_CLIENT_SEND_PATCH_REQUEST: "调用 %1 发送 PATCH 请求，文本为 %2",
+    SOUND_MAN: "男声",
+    SOUND_WOMAN: "女声",
+    SOUND_CHILD: "童声",
+    SOUND_VOLUME: "音量",
+    SOUND_RATE: "音速",
+    AUDIO_PLAY_SOUND: "播放 %1",
+    AUDIO_STOP_SOUND: "停止 %1",
+    AUDIO_PAUSE_SOUND: "暂停 %1",
+    AUDIO_SET_SOUND_FILE: "设置 %1 的音源为 %2",
+    AUDIO_SET_VOLUME_OR_RATE: "设置 %1 %2 大小为 %3",
+    AUDIO_CHANGE_VOLUME_OR_RATE: "设置 %1 %2 %3 %4",
+    TEXT2SPEECH_SPEAK_TEXT: "%1 朗读 %2",
+    TEXT2SPEECH_SPEAK_TEXT_AND_WAIT: "%1 朗读 %2 直到结束",
+    TEXT2SPEECH_DEFAULT_TEXT: "你好",
+    CAMERA_PHOTO: "照片",
+    CAMERA_VIDEO: "视频",
+    CAMERA_SET_CAMERA_DIRECTION: "设置相机为 %1 摄像头",
+    CAMERA_GET_CAMERA_TAKE_PHOTO: "调用相机拍照，当完成时返回 %1 %2",
+    CAMERA_GET_CAMERA_TAKE_VIDEO: "调用相机录像，当完成时返回 %1 %2",
+    CAMERA_GET_CAMERA_CHOOSE_PHOTO: "打开相册进行选择，当完成时返回 %1 %2",
+    TEXT_WIDGET_ON_PRESS: "%1 当 %2 被点击时 %3 %4",
+    TEXT_WIDGET_GET_PROPERTY: "%1 的 %2",
+    TEXT_WIDGET_GET_CONTENT: "%1 的 文本",
+    TEXT_WIDGET_SET_PROPERTY: "设置 %1 的 %2 为 %3",
+    TEXT_WIDGET_SET_ALIGN: "设置 %1 的 %2 为",
+    TEXT_WIDGET_SET_CONTENT: "设置 %1 的 文本 为 %2",
+    TEXT_WIDGET_SET_FONT_SIZE: "设置 %1 的 字号 为 %2",
+    TEXT_WIDGET_GET_FONT_SIZE: "%1 的 字号",
+    TEXT_WIDGET_HORIZONTAL_ALIGN: "水平对齐",
+    TEXT_WIDGET_VERTICAL_ALIGN: "垂直对齐",
+    BUTTON_ON_PRESS: "%1 当按钮 %2 被 %3 %4 %5",
+    BUTTON_SET_CONTENT: "设置 %1 的文本为 %2",
+    BUTTON_SET_COLOR: "设置 %1 的颜色为 %2",
+    BUTTON_SET_SIZE_TYPE: "设置 %1 的尺寸大小为 %2",
+    BUTTON_SET_MODE: "设置 %1 的样式为 %2",
+    BUTTON_GET_COLOR: "%1 的颜色",
+    BUTTON_GET_CONTENT: "%1 的文本",
+    BUTTON_CONTAINED_TEXT: "底色白字",
+    BUTTON_OUTLINED_TEXT: "白底彩字",
+    BUTTON_CONTAINED_ICON: "底色图标",
+    BUTTON_OUTLINED_ICON: "白底图标",
+    BUTTON_DEFAULT_TEXT: "按钮",
+    INPUT_ON_FOCUS: "%1 当输入框 %2 获取焦点时 %3 %4",
+    INPUT_ON_BLUR: "%1 当输入框 %2 失去焦点时 %3 %4",
+    INPUT_ON_CHANGE: "%1 当输入框 %2 的内容改变时 %3 %4",
+    INPUT_SET_INPUT_CONTENT: "设置 %1 的 %2 为 %3",
+    INPUT_SET_MODE: "设置 %1 的 样式为 %2",
+    INPUT_SET_COLOR: "设置 %1 的 颜色 %2",
+    INPUT_SET_POSITION: "设置 %1 的 %2 为",
+    INPUT_SET_SIZE: "设置 %1 的 尺寸 %2",
+    INPUT_GET_COLOR: " %1 的 颜色",
+    INPUT_GET_CONTENT: "%1 的 %2",
+    INPUT_GET_POSITION: "%1 的 %2",
+    INPUT_ASSERT_STATE: "%1 是否 %2",
+    INPUT_GET_HAS_ERROR_MESSAGE: "%1 是否 报错",
+    INPUT_GET_PROPERTY: "%1 的 %2",
+    INPUT_ERROR_TIPS: "%1 %2 报错提示",
+    INPUT_OUTLINED_NORMAL: "线框",
+    INPUT_CONTAINED_NORMAL: "底色",
+    INPUT_CONTAINED_ROUND: "圆角",
+    INPUT_OUTLINED_FLAT: "横线",
+    INPUT_CONTENT: "输入文案",
+    INPUT_PLACEHOLDER: "提示文案",
+    INPUT_ERROR_MESSAGE: "报错文案",
+    INPUT_REPORT_ERROR: "报错",
+    INPUT_DEFAULT_ERROR_MESSAGE: "输入错误",
+    INPUT_DEFAULT_VALUE: "输入框内容",
+    INPUT_DEFAULT_PLACEHOLDER: "提示语内容",
+    LOCAL_STORAGE_GET_ALL_FIELD_KEYS: "%1 的所有键",
+    LOCAL_STORAGE_GET_KEY_VALUE_COUNT: "%1 键的总数",
+    LOCAL_STORAGE_ASSERT_KEY_IN: "键 %1 存在于 %2",
+    LOCAL_STORAGE_SET_VALUE_BY_KEY: "设置 %1 键 %2 的值为 %3",
+    LOCAL_STORAGE_SET_VALUE_BY_KEY_TOOLTIP: "如果数据库中存在该键，则修改键的值。\n如果不存在，则新增一个键值对。",
+    LOCAL_STORAGE_GET_VALUE_BY_KEY: "%1 键 %2 的值",
+    LOCAL_STORAGE_CLEAR_ALL_DATA: "清空 %1",
+    LOCAL_STORAGE_DELETE_ITEM: "删除 %1 的键 %2",
+    NEW_LOCAL_STORAGE_GET_ALL_FIELD_KEYS: "%1%2 的所有键",
+    CLOUD_STORAGE_ON_ERROR: "%1 当 %2 出错时 %3 %4 %5 %6",
+    CLOUD_STORAGE_ON_ERROR_TOOLTIP: "当新增、修改、删除、获取数据库的键值对出现错误时，触发该事件，错误原因存储在“错误消息”积木中。",
+    CLOUD_STORAGE_SET_VALUE_BY_KEY: "%1 设置 %2 %3 的值为 %4, 失败时返回 %5",
+    CLOUD_STORAGE_SET_VALUE_BY_KEY_TOOLTIP: "如果云数据库中存在该键，则修改键的值。\n如果不存在，则新增一个键值对。",
+    CLOUD_STORAGE_GET_ALL_FIELD_KEYS: "%1 %2  的所有键, 失败时返回 %3",
+    CLOUD_STORAGE_GET_KEY_VALUE_COUNT: "%1 %2 的键值对个数, 失败时返回 %3",
+    CLOUD_STORAGE_ASSERT_KEY_IN: "%1 键 %2 是否存在于 %3, 失败时返回 %4",
+    CLOUD_STORAGE_GET_VALUE_BY_KEY: "%1 %2 中键为 %3 的值, 失败时返回 %4",
+    CLOUD_STORAGE_CLEAR_ALL_DATA: "%1 清空 %2 所有键值对, 失败时返回 %3",
+    CLOUD_STORAGE_DELETE_ITEM: "%1 删除 %2 的 %3 和值, 失败时返回 %4",
+    CLOUD_STORAGE_CANNOT_REMOVED_ITEM: "无法删除键和值",
+    CLOUD_STORAGE_CANNOT_SET_ITEM: "无法设置该值",
+    CLOUD_STORAGE_CANNOT_CLEAR: "无法清空所有键值对",
+    CLOUD_STORAGE_CANNOT_GET_ITEM: "无法获取值",
+    CLOUD_STORAGE_CANNOT_GET_ITEM_COUNT: "无法获取键值对个数",
+    CLOUD_STORAGE_CANNOT_GET_ALL_ITEM: "无法获取所有键",
+    CLOUD_STORAGE_CANNOT_ASSERT_KEY: "无法判断键是否存在",
+    CLOUD_STORAGE_PARAM_ERROR_TYPE: "错误类型",
+    CLOUD_STORAGE_PARAM_ERROR_MESSAGE: "错误信息",
+    IMAGE_ON_PRESS: "%1当 %2 被点击时 %3 %4",
+    IMAGE_SET_PROPERTY: "设置 %1 的 %2 为 %3",
+    IMAGE_GET_PROPERTY: "%1 的 %2",
+    IMAGE_GET_FILE_ID: "%1 的 图片",
+    IMAGE_SET_FIELD_ID: "设置 %1 图片为 %2",
+    IMAGE_GET_FILE_ID_TOOLTIP: "返回图片名称或链接。",
+    IMAGE_SET_FIELD_ID_TOOLTIP: "设置图片显示的图片，可以嵌入项目内图片资源的名称或网络图片的链接。",
+    CANVAS_CLEAR_ALL_BRUSH: "清除 %1 的 笔迹",
+    CANVAS_TO_DATA_URL: "保存 %1 为图片",
     CANVAS_SET_VISIBLE: "%2 %1",
-    CANVAS_SET_PROPERTY: "\u8bbe\u7f6e %1 \u7684 %2 \u4e3a %3",
-    CANVAS_SET_BACKGROUND_COLOR: "\u8bbe\u7f6e %1 \u7684 \u80cc\u666f\u989c\u8272 \u4e3a %2",
-    CANVAS_SET_BACKGROUND_IMAGE: "\u8bbe\u7f6e %1 \u7684 \u80cc\u666f\u56fe\u7247 \u4e3a %2",
-    CANVAS_GET_PROPERTY: "%1 \u7684 %2",
-    CANVAS_GET_BACKGROUND_COLOR: "%1 \u7684 \u80cc\u666f\u989c\u8272",
-    CANVAS_GET_BACKGROUND_IMAGE: "%1 \u7684 \u80cc\u666f\u56fe\u7247",
-    CANVAS_ON_CANVAS_PRESS_MSG0: "%1 \u5f53 %2 \u88ab %3 \u65f6 %4 %5",
+    CANVAS_SET_PROPERTY: "设置 %1 的 %2 为 %3",
+    CANVAS_SET_BACKGROUND_COLOR: "设置 %1 的 背景颜色 为 %2",
+    CANVAS_SET_BACKGROUND_IMAGE: "设置 %1 的 背景图片 为 %2",
+    CANVAS_GET_PROPERTY: "%1 的 %2",
+    CANVAS_GET_BACKGROUND_COLOR: "%1 的 背景颜色",
+    CANVAS_GET_BACKGROUND_IMAGE: "%1 的 背景图片",
+    CANVAS_ON_CANVAS_PRESS_MSG0: "%1 当 %2 被 %3 时 %4 %5",
     CANVAS_ON_CANVAS_PRESS_MSG1: "%1",
-    CANVAS_ON_CANVAS_SWIPE: "%1 \u5f53 %2 \u88ab \u5212\u8fc7\u65f6",
-    CANVAS_CHECK_IF_PRESSED: "%1 \u88ab \u6309\u4f4f",
-    PARAM_POSITION_X: "X\u5750\u6807",
-    PARAM_POSITION_Y: "Y\u5750\u6807",
-    BRUSH: "\u753b\u7b14",
-    BRUSH_SET_PEN_UP: "%1 \u62ac\u7b14",
-    BRUSH_SET_PEN_DOWN: "%1 \u843d\u7b14",
-    PEN_UP: "\u62ac\u7b14",
-    PEN_DOWN: "\u843d\u7b14",
+    CANVAS_ON_CANVAS_SWIPE: "%1 当 %2 被 划过时",
+    CANVAS_CHECK_IF_PRESSED: "%1 被 按住",
+    PARAM_POSITION_X: "X坐标",
+    PARAM_POSITION_Y: "Y坐标",
+    BRUSH: "画笔",
+    BRUSH_SET_PEN_UP: "%1 抬笔",
+    BRUSH_SET_PEN_DOWN: "%1 落笔",
+    PEN_UP: "抬笔",
+    PEN_DOWN: "落笔",
     BRUSH_SET_PEN_UP_OR_DOWN: "%1 %2",
-    BRUSH_DRAW_POINT: "%1 \u753b\u70b9\uff1ax %2 y %3",
-    BRUSH_DRAW_LINE: "%1 \u753b\u7ebf\uff1ax1 %2 y1 %3 x2 %4 y2 %5",
-    BRUSH_DRAW_CIRCLE: "%1 \u753b\u5706\uff1a\u534a\u5f84 %2",
-    BRUSH_DRAW_ARC: "%1 \u753b\u5f27\uff1a\u534a\u5f84 %2 \u89d2\u5ea6 %3",
-    BRUSH_DRAW_POLYGON: "%1 \u753b %2 \u8fb9\u5f62\uff1a\u8fb9\u957f %3",
-    BRUSH_SET_COLOR: "\u8bbe\u7f6e %1 \u7684 \u989c\u8272 \u4e3a %2",
-    BRUSH_SET_FILL_COLOR: "\u8bbe\u7f6e %1 \u7684 \u586b\u5145\u8272 \u4e3a %2",
-    BRUSH_SET_FILL_PATH: "\u8bbe\u7f6e \u5f53\u524d \u4e3a %1 \u586b\u5145 %2",
-    POINT_START: "\u8d77\u70b9",
-    POINT_END: "\u7ec8\u70b9",
-    BRUSH_SET_PROPERTY: "\u8bbe\u7f6e %1 \u7684 %2 \u4e3a %3",
-    BRUSH_SET_PEN_SIZE: "\u8bbe\u7f6e %1 \u7684 \u7c97\u7ec6 \u4e3a %2",
-    BRUSH_CHANGE_PEN_SIZE: "\u5c06 %1 \u7684 \u7c97\u7ec6 %2 %3",
-    BRUSH_CHANGE_PROPERTY: "\u5c06 %1 \u7684 %2 %3 %4",
-    BRUSH_GET_PROPERTY: "%1 \u7684 %2",
-    BRUSH_GET_DRAW_PROCESS: "%1 \u662f\u5426\u5f00\u542f \u7ed8\u753b\u8fc7\u7a0b",
-    BRUSH_GET_COLOR: "%1 \u7684 \u989c\u8272",
-    BRUSH_GET_PEN_SIZE: "%1 \u7684 \u7c97\u7ec6",
-    BRUSH_MOVE_FORWARD: "%1 \u79fb\u52a8 %2 \u6b65",
-    BRUSH_MOVE_FORWARD_OR_BACKWARD: "%1 %2 \u79fb\u52a8 %3 \u50cf\u7d20",
-    FORWARD: "\u5411\u524d",
-    BACKWARD: "\u5411\u540e",
-    BRUSH_ROTATE: "%1 \u65cb\u8f6c %2 \u5ea6",
-    ROTATE_LEFT: "\u5411\u5de6",
-    ROTATE_RIGHT: "\u5411\u53f3",
-    BRUSH_ROTATE_LEFT_OR_RIGHT: "%1 %2 \u65cb\u8f6c %3 \u5ea6",
-    BRUSH_SET_ROTATION: "\u8bbe\u7f6e %1 \u7684 \u65b9\u5411 \u4e3a %2 \u5ea6",
-    BRUSH_GET_ROTATION: "%1 \u7684 \u65b9\u5411",
-    BRUSH_FACE_TO: "%1 \u9762\u5411 %2",
-    BRUSH_MOVE_TO_POSITION: "%1 \u79fb\u52a8\u5230 x %2 y %3",
-    BRUSH_MOVE_TO: "%1 \u79fb\u52a8\u5230 %2",
-    BRUSH_CHANGE_POSITION: "\u5c06 %1 \u7684 %2 %3 %4",
-    BRUSH_CHANGE_POSITION_IN_TIME: "\u5728 %2 \u79d2\u5185\uff0c%1 \u79fb\u52a8\u5230 x %3 y %4",
-    BRUSH_CHANGE_POSITION_TYPE_IN_TIME: "\u5728 %2 \u79d2\u5185\uff0c\u5c06 %1 \u7684 %3 %4 %5",
-    BRUSH_CHANGE_Z_INDEX: "\u5c06 %1 \u79fb\u81f3 %2",
-    INDEX_UP: "\u4e0a\u4e00\u5c42",
-    INDEX_DOWN: "\u4e0b\u4e00\u5c42",
-    INDEX_TOP: "\u6700\u4e0a\u5c42",
-    INDEX_BOTTOM: "\u6700\u5e95\u5c42",
-    ACTOR: "\u89d2\u8272",
-    TOUCH_POINT: "\u89e6\u78b0\u70b9",
-    BOUNDARY: "\u8fb9\u7f18",
-    BOUNDARY_TOP: "\u4e0a\u8fb9\u7f18",
-    BOUNDARY_RIGHT: "\u53f3\u8fb9\u7f18",
-    BOUNDARY_BOTTOM: "\u4e0b\u8fb9\u7f18",
-    BOUNDARY_LEFT: "\u5de6\u8fb9\u7f18",
-    BOUNDARY_ANY: "\u753b\u5e03\u8fb9\u7f18",
-    SCALE_A: "\u6bd4\u4f8b\u5927\u5c0f",
-    SCALE_X: "\u5bbd\u5ea6\u6bd4\u4f8b",
-    SCALE_Y: "\u9ad8\u5ea6\u6bd4\u4f8b",
-    RANDOM: "\u968f\u673a",
-    SCALE: "\u5927\u5c0f",
-    DEGREE: "\u89d2\u5ea6",
-    FADE_IN: "\u9010\u6e10\u663e\u793a",
-    FADE_OUT: "\u9010\u6e10\u9690\u85cf",
-    PLAY_CIRCULARLY: "\u5faa\u73af",
-    PLAY_INFINITELY: "\u65e0\u9650\u5faa\u73af",
-    PLAY_TIME: "\u6b21",
-    ACTOR_STOP_ACTION: "\u505c\u6b62 %1 \u7684 \u52a8\u4f5c\u64ad\u653e",
-    ACTOR_PLAY_ACTION: "\u64ad\u653e %1 \u7684 %2 \u95f4\u9694 %3 \u6beb\u79d2\uff0c%4",
-    ACTOR_PLAY_ACTION_AND_WAIT: "\u64ad\u653e %1 \u7684 %2 \u95f4\u9694 %3 \u6beb\u79d2\uff0c\u5faa\u73af %4 \u6b21\uff0c \u76f4\u5230\u7ed3\u675f",
+    BRUSH_DRAW_POINT: "%1 画点：x %2 y %3",
+    BRUSH_DRAW_LINE: "%1 画线：x1 %2 y1 %3 x2 %4 y2 %5",
+    BRUSH_DRAW_CIRCLE: "%1 画圆：半径 %2",
+    BRUSH_DRAW_ARC: "%1 画弧：半径 %2 角度 %3",
+    BRUSH_DRAW_POLYGON: "%1 画 %2 边形：边长 %3",
+    BRUSH_SET_COLOR: "设置 %1 的 颜色 为 %2",
+    BRUSH_SET_FILL_COLOR: "设置 %1 的 填充色 为 %2",
+    BRUSH_SET_FILL_PATH: "设置 当前 为 %1 填充 %2",
+    POINT_START: "起点",
+    POINT_END: "终点",
+    BRUSH_SET_PROPERTY: "设置 %1 的 %2 为 %3",
+    BRUSH_SET_PEN_SIZE: "设置 %1 的 粗细 为 %2",
+    BRUSH_CHANGE_PEN_SIZE: "将 %1 的 粗细 %2 %3",
+    BRUSH_CHANGE_PROPERTY: "将 %1 的 %2 %3 %4",
+    BRUSH_GET_PROPERTY: "%1 的 %2",
+    BRUSH_GET_DRAW_PROCESS: "%1 是否开启 绘画过程",
+    BRUSH_GET_COLOR: "%1 的 颜色",
+    BRUSH_GET_PEN_SIZE: "%1 的 粗细",
+    BRUSH_MOVE_FORWARD: "%1 移动 %2 步",
+    BRUSH_MOVE_FORWARD_OR_BACKWARD: "%1 %2 移动 %3 像素",
+    FORWARD: "向前",
+    BACKWARD: "向后",
+    BRUSH_ROTATE: "%1 旋转 %2 度",
+    ROTATE_LEFT: "向左",
+    ROTATE_RIGHT: "向右",
+    BRUSH_ROTATE_LEFT_OR_RIGHT: "%1 %2 旋转 %3 度",
+    BRUSH_SET_ROTATION: "设置 %1 的 方向 为 %2 度",
+    BRUSH_GET_ROTATION: "%1 的 方向",
+    BRUSH_FACE_TO: "%1 面向 %2",
+    BRUSH_MOVE_TO_POSITION: "%1 移动到 x %2 y %3",
+    BRUSH_MOVE_TO: "%1 移动到 %2",
+    BRUSH_CHANGE_POSITION: "将 %1 的 %2 %3 %4",
+    BRUSH_CHANGE_POSITION_IN_TIME: "在 %2 秒内，%1 移动到 x %3 y %4",
+    BRUSH_CHANGE_POSITION_TYPE_IN_TIME: "在 %2 秒内，将 %1 的 %3 %4 %5",
+    BRUSH_CHANGE_Z_INDEX: "将 %1 移至 %2",
+    INDEX_UP: "上一层",
+    INDEX_DOWN: "下一层",
+    INDEX_TOP: "最上层",
+    INDEX_BOTTOM: "最底层",
+    ACTOR: "角色",
+    TOUCH_POINT: "触碰点",
+    BOUNDARY: "边缘",
+    BOUNDARY_TOP: "上边缘",
+    BOUNDARY_RIGHT: "右边缘",
+    BOUNDARY_BOTTOM: "下边缘",
+    BOUNDARY_LEFT: "左边缘",
+    BOUNDARY_ANY: "画布边缘",
+    SCALE_A: "比例大小",
+    SCALE_X: "宽度比例",
+    SCALE_Y: "高度比例",
+    RANDOM: "随机",
+    SCALE: "大小",
+    DEGREE: "角度",
+    FADE_IN: "逐渐显示",
+    FADE_OUT: "逐渐隐藏",
+    PLAY_CIRCULARLY: "循环",
+    PLAY_INFINITELY: "无限循环",
+    PLAY_TIME: "次",
+    ACTOR_STOP_ACTION: "停止 %1 的 动作播放",
+    ACTOR_PLAY_ACTION: "播放 %1 的 %2 间隔 %3 毫秒，%4",
+    ACTOR_PLAY_ACTION_AND_WAIT: "播放 %1 的 %2 间隔 %3 毫秒，循环 %4 次， 直到结束",
     ACTOR_PLAY_COUNT: "%1",
-    ACTOR_ON_ACTOR_BUMP_MSG0: "%1 \u5f53 %2 \u78b0\u5230 %3 \u65f6",
+    ACTOR_ON_ACTOR_BUMP_MSG0: "%1 当 %2 碰到 %3 时",
     ACTOR_ON_ACTOR_BUMP_MSG1: "%1",
-    ACTOR_ON_ACTOR_LEAVE_MSG0: "%1 \u5f53 %2 \u79bb\u5f00 %3 \u65f6",
+    ACTOR_ON_ACTOR_LEAVE_MSG0: "%1 当 %2 离开 %3 时",
     ACTOR_ON_ACTOR_LEAVE_MSG1: "%1",
-    ACTOR_ON_ACTOR_PRESS_MSG0: "%1 \u5f53 %2 \u88ab %3 \u65f6 %4 %5",
+    ACTOR_ON_ACTOR_PRESS_MSG0: "%1 当 %2 被 %3 时 %4 %5",
     ACTOR_ON_ACTOR_PRESS_MSG1: "%1",
-    ACTOR_ROTATE: "%1 \u65cb\u8f6c %2 \u5ea6",
-    ACTOR_MOVE_FORWARD: "%1 \u79fb\u52a8 %2 \u50cf\u7d20",
-    ACTOR_SET_PROPERTY: "\u8bbe\u7f6e %1 \u7684 %2 \u4e3a %3",
-    ACTOR_SET_ROTATION: "\u8bbe\u7f6e %1 \u7684 \u65b9\u5411 \u4e3a %2 \u5ea6",
-    ACTOR_FACE_TO: "%1 \u9762\u5411 %2",
-    ACTOR_ROTATE_AROUND: "%1 \u7ed5 %2 \u65cb\u8f6c %3 \u5ea6",
-    ACTOR_MOVE_TO_POSITION: "%1 \u79fb\u52a8\u5230 x %2 y %3",
-    ACTOR_MOVE_TO: "%1 \u79fb\u52a8\u5230 %2",
-    ACTOR_CHANGE_POSITION: "\u5c06 %1 \u7684 %2 %3 %4",
-    ACTOR_CHANGE_POSITION_TYPE_IN_TIME: "\u5728 %2 \u79d2\u5185\uff0c\u5c06 %1 \u7684 %3 %4 %5",
-    ACTOR_CHANGE_POSITION_IN_TIME: "\u5728 %2 \u79d2\u5185\uff0c%1 \u79fb\u52a8\u5230 x %3 y %4",
+    ACTOR_ROTATE: "%1 旋转 %2 度",
+    ACTOR_MOVE_FORWARD: "%1 移动 %2 像素",
+    ACTOR_SET_PROPERTY: "设置 %1 的 %2 为 %3",
+    ACTOR_SET_ROTATION: "设置 %1 的 方向 为 %2 度",
+    ACTOR_FACE_TO: "%1 面向 %2",
+    ACTOR_ROTATE_AROUND: "%1 绕 %2 旋转 %3 度",
+    ACTOR_MOVE_TO_POSITION: "%1 移动到 x %2 y %3",
+    ACTOR_MOVE_TO: "%1 移动到 %2",
+    ACTOR_CHANGE_POSITION: "将 %1 的 %2 %3 %4",
+    ACTOR_CHANGE_POSITION_TYPE_IN_TIME: "在 %2 秒内，将 %1 的 %3 %4 %5",
+    ACTOR_CHANGE_POSITION_IN_TIME: "在 %2 秒内，%1 移动到 x %3 y %4",
     ACTOR_SET_VISIBLE: "%2 %1",
-    ACTOR_SHOW_HIDE_IN_TIME: "\u5728 %2 \u79d2\u5185\uff0c%3 %1",
-    ACTOR_CHANGE_OPACITY: "\u5c06 %1 \u7684 \u4e0d\u900f\u660e\u5ea6 %2 %3",
-    ACTOR_SET_SCALE: "\u8bbe\u7f6e %1 \u7684 \u5927\u5c0f \u4e3a %2",
-    ACTOR_CHANGE_SCALE: "\u5c06 %1 \u7684 \u5927\u5c0f %2 %3",
-    ACTOR_SET_SCALE_WITH_SECTION: "\u8bbe\u7f6e %1 \u7684 %2 \u4e3a %3",
-    ACTOR_CHANGE_SCALE_WITH_SECTION: "\u5c06 %1 \u7684 %2 %3 %4",
-    ACTOR_GET_SCALE_WITH_SECTION: "%1 \u7684 %2",
+    ACTOR_SHOW_HIDE_IN_TIME: "在 %2 秒内，%3 %1",
+    ACTOR_CHANGE_OPACITY: "将 %1 的 不透明度 %2 %3",
+    ACTOR_SET_SCALE: "设置 %1 的 大小 为 %2",
+    ACTOR_CHANGE_SCALE: "将 %1 的 大小 %2 %3",
+    ACTOR_SET_SCALE_WITH_SECTION: "设置 %1 的 %2 为 %3",
+    ACTOR_CHANGE_SCALE_WITH_SECTION: "将 %1 的 %2 %3 %4",
+    ACTOR_GET_SCALE_WITH_SECTION: "%1 的 %2",
     ACTOR_SET_FLIPPED: "%1 %2",
-    ACTOR_CHECK_IF_FLIPPED: "%1 \u662f\u5426 %2",
-    ACTOR_GET_PROPERTY: "%1 \u7684 %2",
-    ACTOR_MOVE_Z_INDEX: "%1 \u79fb\u81f3 %2",
-    ACTOR_PREVIOUS_NEXT_STYLE: "\u5207\u6362 %1 \u7684 %2 \u9020\u578b",
-    ACTOR_SET_CURRENT_STYLE: "\u8bbe\u7f6e %1 \u7684 \u9020\u578b \u4e3a %2 %3",
-    ACTOR_SET_CURRENT_ACTION_TOOLTIP: "\u5d4c\u5165\u4e3a\u201c\u5b57\u7b26\u4e32\u201d\u7c7b\u578b\uff1a\u6309\u201c\u52a8\u4f5c\u540d\u79f0\u201d\u68c0\u7d22\u3002",
-    ACTOR_SET_CURRENT_STYLE_TOOLTIP: "\u5d4c\u5165\u4e3a\u201c\u6570\u5b57\u201d\u7c7b\u578b\uff1a\u6309\u201c\u9020\u578b\u7f16\u53f7\u201d\u68c0\u7d22\u3002",
-    ACTOR_TALK: "\u5bf9\u8bdd",
-    ACTOR_THINK: "\u601d\u8003",
+    ACTOR_CHECK_IF_FLIPPED: "%1 是否 %2",
+    ACTOR_GET_PROPERTY: "%1 的 %2",
+    ACTOR_MOVE_Z_INDEX: "%1 移至 %2",
+    ACTOR_PREVIOUS_NEXT_STYLE: "切换 %1 的 %2 造型",
+    ACTOR_SET_CURRENT_STYLE: "设置 %1 的 造型 为 %2 %3",
+    ACTOR_SET_CURRENT_ACTION_TOOLTIP: "嵌入为“字符串”类型：按“动作名称”检索。",
+    ACTOR_SET_CURRENT_STYLE_TOOLTIP: "嵌入为“数字”类型：按“造型编号”检索。",
+    ACTOR_TALK: "对话",
+    ACTOR_THINK: "思考",
     ACTOR_SHOW_DIALOG: "%1 %2 %3",
-    ACTOR_SHOW_DIALOG_IN_TIME: "%1 %2 %3 \u6301\u7eed %4 \u79d2",
-    ACTOR_STYLE: "\u9020\u578b\u7f16\u53f7",
-    ACTOR_GET_STYLE_INDEX: "%1 \u7684 \u9020\u578b\u7f16\u53f7",
-    ACTOR_GET_ACTION_NAME: "%1 \u7684 \u52a8\u4f5c\u540d\u79f0",
-    ACTOR_GET_ROTATION: "%1 \u7684 \u65b9\u5411",
-    ACTOR_NEXT_ONE: "\u4e0b\u4e00\u4e2a",
-    ACTOR_PREVIOUS_ONE: "\u4e0a\u4e00\u4e2a",
-    ACTOR_CHECK_IF_PRESSED: "%1 \u88ab \u6309\u4f4f",
-    ACTOR_CHECK_IF_BUMPED: "%1 \u78b0\u5230 %2",
-    ACTOR_CHECK_IF_LEFT: "%1 \u79bb\u5f00 %2",
-    RADIO_ON_SELECTED: "%1 \u5f53 %2 \u88ab\u9009\u4e2d\u65f6%3 %4 %5 %6",
-    RADIO_ON_SELECTED_TOOLTIP: "\u9009\u4e2d\u9879\uff1a\u88ab\u9009\u4e2d\u9009\u9879\u7684\u5e8f\u53f7\uff0c\u6570\u5b57\u7c7b\u578b\n\u9009\u4e2d\u5185\u5bb9\uff1a\u88ab\u9009\u4e2d\u9009\u9879\u7684\u6587\u672c\u5185\u5bb9\uff0c\u5b57\u7b26\u4e32\u7c7b\u578b",
-    RADIO_SET_HEADLINE: "\u8bbe\u7f6e %1 \u7684\u9898\u5e72\u5185\u5bb9\u4e3a %2",
-    RADIO_SET_OPTION_COUNT: "\u8bbe\u7f6e %1 \u7684\u9009\u9879\u6570\u91cf\u4e3a %2",
-    RADIO_SET_OPTION_CONTENT: "\u8bbe\u7f6e %1 \u7b2c %2 \u9879\u7684\u5185\u5bb9\u4e3a %3",
-    RADIO_SET_OPTION_SELECTED_OR_DISABLED: "%1 %2 \u7b2c %3 \u9879",
-    RADIO_CLEAR_SELECTED: "\u6e05\u7a7a %1 \u6240\u6709\u9009\u9879\u72b6\u6001",
-    RADIO_CLEAR_SELECTED_TOOLTIP: "\u53d6\u6d88\u9009\u4e2d\u5f53\u524d\u9009\u4e2d\u9879\u3002",
-    RADIO_SET_OPTION_FEEDBACK: "\u8bbe\u7f6e %1 \u7b2c %2 \u9879\u7684\u53cd\u9988\u4e3a %3",
-    RADIO_SET_OPTION_FEEDBACK_TOOLTIP: "\u5982\u679c\u67d0\u4e00\u9879\u4e3a\u6b63\u786e\u9009\u9879\uff0c\u5219\u8bbe\u7f6e\u53cd\u9988\u4e3a\u6b63\u786e\uff0c\u5f53\u524d\u9009\u9879\u4f1a\u53d8\u4e3a\u7eff\u8272\uff0c\u51fa\u73b0\u221a\u3002\n\u5982\u679c\u67d0\u4e00\u9879\u4e3a\u9519\u8bef\u9009\u9879\uff0c\u5219\u8bbe\u7f6e\u53cd\u9988\u4e3a\u9519\u8bef\uff0c\u5f53\u524d\u9009\u9879\u4f1a\u53d8\u4e3a\u7ea2\u8272\uff0c\u51fa\u73b0\xd7\u3002",
-    RADIO_CLEAR_FEEDBACK: "\u6e05\u7a7a %1 \u6240\u6709\u9009\u9879\u7684\u53cd\u9988",
-    RADIO_CLEAR_FEEDBACK_TOOLTIP: "\u6e05\u9664\u6240\u6709\u9009\u9879\u6b63\u786e\u548c\u9519\u8bef\u7684\u6837\u5f0f\u53cd\u9988\u3002",
-    RADIO_DELETE_OPTION: "\u5220\u9664 %1 \u7b2c %2 \u9879",
-    RADIO_PUSH_OPTION: "\u6dfb\u52a0\u9009\u9879 %1 \u5230 %2 \u7684\u672b\u5c3e",
-    RADIO_SET_WIDGET_POSITION: "\u8bbe\u7f6e %1 \u7684 %2 \u4e3a %3",
-    RADIO_GET_SELECTED_OPTION_INDEX: "%1 \u7684\u9009\u4e2d\u9879",
-    RADIO_GET_SELECTED_OPTION_INDEX_TOOLTIP: "\u8fd4\u56de\u88ab\u9009\u4e2d\u9009\u9879\u7684\u5e8f\u53f7",
-    RADIO_GET_SELECTED_OPTION_CONTENT: "%1\u7684\u9009\u4e2d\u9879\u5185\u5bb9",
-    RADIO_GET_SELECTED_OPTION_CONTENT_TOOLTIP: "\u8fd4\u56de\u88ab\u9009\u4e2d\u9009\u9879\u7684\u6587\u672c\u5185\u5bb9",
-    RADIO_GET_OPTION_CONTENT_BY_INDEX: "%1 \u7b2c %2 \u9879\u7684\u5185\u5bb9",
-    RADIO_GET_HEADLINE: "%1 \u7684\u9898\u5e72\u5185\u5bb9 ",
-    RADIO_GET_PROPERTY: "%1 \u7684 %2",
-    RADIO_PARAM_SELECTED_INDEX: "\u9009\u4e2d\u9879",
-    RADIO_PARAM_SELECTED_CONTENT: "\u9009\u4e2d\u9879\u5185\u5bb9",
-    SELECTED: "\u9009\u4e2d",
-    OPTION_COUNT: "\u9879\u6570",
-    CORRECT: "\u6b63\u786e",
-    INCORRECT: "\u9519\u8bef",
-    UNSELECTED: "\u53d6\u6d88\u9009\u4e2d",
-    CHECKBOX_ON_SELECTED: "%1 \u5f53 %2 \u88ab %3 \u65f6 %4 %5 %6 %7",
-    CHECKBOX_ON_SELECTED_TOOLTIP: "\u9009\u4e2d\u9879\u5217\u8868\uff1a\u88ab\u9009\u4e2d\u6240\u6709\u9009\u9879\u7684\u5e8f\u53f7\uff0c\u5217\u8868\u7c7b\u578b\n\u9009\u4e2d\u5185\u5bb9\u5217\u8868\uff1a\u88ab\u9009\u4e2d\u6240\u6709\u9009\u9879\u7684\u6587\u672c\u5185\u5bb9\uff0c\u5217\u8868\u7c7b\u578b",
-    CHECKBOX_ON_CHANGE: "%1 \u5f53 %2 \u9009\u9879\u72b6\u6001\u53d1\u751f\u6539\u53d8\u65f6 %3 %4 %5 %6",
-    CHECKBOX_ON_CHANGE_TOOLTIP: "\u67d0\u4e00\u9879\u88ab\u9009\u4e2d\u6216\u53d6\u6d88\u9009\u4e2d\u65f6\u90fd\u4f1a\u89e6\u53d1\u8be5\u4e8b\u4ef6\u3002\n\u6539\u53d8\u9879\uff1a\u88ab\u9009\u4e2d\u6216\u88ab\u53d6\u6d88\u7684\u9009\u9879\u5e8f\u53f7\n\u6539\u53d8\u7ed3\u679c\uff1a\u503c\u4e3a\u771f(true)\u65f6\u8868\u793a\u8be5\u9879\u88ab\u9009\u4e2d\uff0c\u503c\u4e3a\u5047(false)\u65f6\u8868\u793a\u8be5\u9879\u88ab\u53d6\u6d88\u9009\u4e2d",
-    CHECKBOX_SET_HEADLINE: "\u8bbe\u7f6e %1 \u7684\u9898\u5e72\u5185\u5bb9\u4e3a %2",
-    CHECKBOX_SET_OPTION_COUNT: "\u8bbe\u7f6e %1 \u7684\u9009\u9879\u6570\u91cf\u4e3a %2",
-    CHECKBOX_SET_OPTION_CONTENT: "\u8bbe\u7f6e %1 \u7b2c %2 \u9879\u5185\u5bb9\u4e3a %3",
-    CHECKBOX_SET_OPTION_STATE: "%1 %2 \u7b2c %3 \u9879",
-    CHECKBOX_CLEAR_SELECTED: "\u6e05\u7a7a %1 \u6240\u6709\u9009\u9879\u72b6\u6001",
-    CHECKBOX_CLEAR_SELECTED_TOOLTIP: "\u53d6\u6d88\u591a\u9009\u6846\u6240\u6709\u9009\u9879\u7684\u9009\u4e2d\u72b6\u6001\u3002",
-    CHECKBOX_SET_OPTION_FEEDBACK: "\u8bbe\u7f6e %1 \u7b2c %2 \u9879\u7684\u53cd\u9988\u4e3a %3",
-    CHECKBOX_SET_OPTION_FEEDBACK_TOOLTIP: "\u5982\u679c\u67d0\u4e00\u9879\u4e3a\u6b63\u786e\u9009\u9879\uff0c\u5219\u8bbe\u7f6e\u53cd\u9988\u4e3a\u6b63\u786e\uff0c\u5f53\u524d\u9009\u9879\u4f1a\u53d8\u4e3a\u7eff\u8272\uff0c\u51fa\u73b0\u221a\u3002\n\u5982\u679c\u67d0\u4e00\u9879\u4e3a\u9519\u8bef\u9009\u9879\uff0c\u5219\u8bbe\u7f6e\u53cd\u9988\u4e3a\u9519\u8bef\uff0c\u5f53\u524d\u9009\u9879\u4f1a\u53d8\u4e3a\u7ea2\u8272\uff0c\u51fa\u73b0\xd7\u3002",
-    CHECKBOX_CLEAR_FEEDBACK: "\u6e05\u7a7a %1 \u6240\u6709\u9009\u9879\u7684\u53cd\u9988",
-    CHECKBOX_CLEAR_FEEDBACK_TOOLTIP: "\u6e05\u9664\u6240\u6709\u9009\u9879\u6b63\u786e\u548c\u9519\u8bef\u7684\u6837\u5f0f\u53cd\u9988\u3002",
-    CHECKBOX_DELETE_OPTION: "\u5220\u9664 %1 \u7b2c %2 \u9879",
-    CHECKBOX_PUSH_OPTION: "\u6dfb\u52a0\u9009\u9879 %1 \u5230 %2 \u7684\u672b\u5c3e",
-    CHECKBOX_SET_WIDGET_POSITION: "\u8bbe\u7f6e %1 \u7684 %2 \u4e3a %3",
-    CHECKBOX_GET_SELECTED_OPTION_INDEX: "%1 \u7684\u9009\u4e2d\u9879\u5217\u8868",
-    CHECKBOX_GET_SELECTED_OPTION_INDEX_TOOLTIP: "\u8fd4\u56de\u88ab\u9009\u4e2d\u6240\u6709\u9009\u9879\u7684\u5e8f\u53f7\uff0c\u5217\u8868\u7c7b\u578b",
-    CHECKBOX_GET_SELECTED_OPTION_CONTENT: "%1 \u7684\u9009\u4e2d\u5185\u5bb9\u5217\u8868",
-    CHECKBOX_GET_SELECTED_OPTION_CONTENT_TOOLTIP: "\u8fd4\u56de\u88ab\u9009\u4e2d\u6240\u6709\u9009\u9879\u7684\u6587\u672c\u5185\u5bb9\uff0c\u5217\u8868\u7c7b\u578b",
-    CHECKBOX_GET_OPTION_CONTENT_BY_INDEX: "%1 \u7b2c %2 \u9879\u7684\u5185\u5bb9",
-    CHECKBOX_GET_HEADLINE: "%1 \u7684\u9898\u5e72\u5185\u5bb9 ",
-    CHECKBOX_GET_PROPERTY: "%1 \u7684 %2",
-    CHECKBOX_PARAM_SELECTED_INDEX_LIST: "\u9009\u4e2d\u9879\u5217\u8868",
-    CHECKBOX_PARAM_SELECTED_CONTENT_LIST: "\u9009\u4e2d\u5185\u5bb9\u5217\u8868",
-    CHECKBOX_PARAM_SELECTED_INDEX: "\u6539\u53d8\u9879",
-    CHECKBOX_PARAM_SELECTED_RESULT: "\u6539\u53d8\u7ed3\u679c",
-    WEBVIEW_ON_START_LOAD: "%1 \u5f53 %2 \u5f00\u59cb\u52a0\u8f7d\u65f6 %3 %4",
-    WEBVIEW_ON_LOADED: "%1 \u5f53 %2 \u52a0\u8f7d\u5b8c\u6210\u65f6 %3 %4",
-    WEBVIEW_ON_LOAD_ERROR: "%1 \u5f53 %2 \u52a0\u8f7d\u5931\u8d25\u65f6 %3 %4",
-    WEBVIEW_SET_URL: "\u8bbe\u7f6e %1 \u7684\u7f51\u5740\u4e3a %2",
-    WEBVIEW_REFRESH: "\u91cd\u65b0\u52a0\u8f7d %1",
-    WEBVIEW_GET_URL: "%1 \u7684\u7f51\u5740",
-    WEBVIEW_GET_PROPERTY: "%1 \u7684 %2",
-    SWITCH_ON_STATE_CHANGE: "%1 \u5f53 %2 \u72b6\u6001\u53d1\u751f\u6539\u53d8\u65f6 %3 %4 %5",
-    SWITCH_SET_STATE: "\u8bbe\u7f6e %1 \u7684\u72b6\u6001\u4e3a %2",
-    SWITCH_SET_POSITION: "\u8bbe\u7f6e %1 \u7684 %2 \u4e3a %3",
-    SWITCH_GET_STATE: "%1 \u7684\u72b6\u6001",
-    SWITCH_GET_POSITION: "%1 \u7684 %2",
-    SWITCH_PARAM_STATE: "\u72b6\u6001",
-    SLIDER_ON_CHANGE: "%1 \u5f53 %2 \u6ed1\u5757\u4f4d\u7f6e\u6539\u53d8\u65f6 %3 %4 %5",
-    SLIDER_ON_SLIDE_START_AND_END: "%1 \u5f53 %2 %3 \u65f6 %4 %5 %6",
-    SLIDER_SET_VALUE: "\u8bbe\u7f6e %1 \u7684 %2 \u4e3a %3",
-    SLIDER_SET_SLIDE_VALUE: "\u8bbe\u7f6e %1 \u7684 \u6ed1\u5757\u4f4d\u7f6e \u4e3a %2",
-    SLIDER_SET_PROPERTY: "\u8bbe\u7f6e %1 \u7684 %2 \u4e3a %3",
-    SLIDER_GET_VALUE: "%1 \u7684 \u6ed1\u5757\u4f4d\u7f6e",
-    SLIDER_GET_SLIDE_VALUE: "%1 \u7684 \u6ed1\u5757\u4f4d\u7f6e",
-    SLIDER_GET_PROPERTY: "%1 \u7684 %2",
-    SLIDER_START_TO_SLIDE: "\u5f00\u59cb\u6ed1\u52a8",
-    SLIDER_END_TO_SLIDE: "\u7ed3\u675f\u6ed1\u52a8",
-    SLIDER_MAX_VALUE: "\u6700\u5927\u503c",
-    SLIDER_MIN_VALUE: "\u6700\u5c0f\u503c",
-    SLIDER_VALUE: "\u6ed1\u5757\u4f4d\u7f6e",
-    SLIDER_PARAM_VALUE: "\u6ed1\u5757\u4f4d\u7f6e",
-    ROOM_CREATE_ROOM: "\u521b\u5efa\u623f\u95f4 %1 \u623f\u95f4\u4eba\u6570 %2 %3 %4",
-    ROOM_FAILED_TEXT: "\u5931\u8d25\u5219\u6267\u884c",
-    ROOM_SUCCESS_TEXT: "\u6210\u529f\u5219\u6267\u884c",
-    ROOM_DEFAULT_ROOM_NAME: "\u623f\u95f4\u540d",
-    ROOM_USERS: "\u623f\u95f4\u4eba\u6570",
-    ROOM_LIST: "\u623f\u95f4\u540d\u79f0\u5217\u8868",
-    ROOM_DEFAULT_CREATE_ERROR: "\u5931\u8d25\u539f\u56e0",
-    ROOM_DEFAULT_NICKNAME: "\u6635\u79f0",
-    ROOM_CREATE_NICKNAME: "\u8bbe\u7f6e\u6211\u5728\u623f\u95f4\u7684\u6635\u79f0 %1 %2 %3",
-    ROOM_GET_ROOM_LIST: "\u83b7\u53d6\u623f\u95f4\u5217\u8868 %1 %2 %3",
-    ROOM_ENTER_ROOM: "\u8fdb\u5165\u623f\u95f4 %1 %2 %3",
-    ROOM_SEND_MESSAGE: "\u53d1\u9001\u623f\u95f4\u4fe1\u606f %1",
-    ROOM_RECEIVE_MESSAGE: "%1 \u5f53\u6536\u5230\u623f\u95f4\u6d88\u606f  %2 %3 %4",
-    ROOM_ENTER: "\u8fdb\u5165\u623f\u95f4",
-    ROOM_EXIT: "\u9000\u51fa\u623f\u95f4",
-    ROOM_RECEIVE_ROOM_INFO: "%1 \u5f53\u6536\u5230\u623f\u95f4\u901a\u77e5  %2 %3 %4 %5",
-    ROOM_EXIT_ROOM: "\u9000\u51fa\u623f\u95f4",
-    ROOM_NETWORK_ERROR: "%1 \u5f53\u53d1\u751f\u9519\u8bef%2 %3 %4",
-    ROOM_GET_ONLINE_USERS: "\u623f\u95f4\u4eba\u5458\u5217\u8868",
-    ROOM_NAME: "\u623f\u95f4\u540d",
-    ROOM_USER_NAME: "\u7528\u6237\u540d",
-    ROOM_MESSAGE: "\u6d88\u606f",
-    ROOM_ERROR_INFO: "\u9519\u8bef\u4fe1\u606f",
-    ROOM_CURRENT_ROOM_NAME: "\u5f53\u524d\u8fdb\u5165\u7684\u623f\u95f4\u540d",
-    ROOM_CURRENT_ROOM_USERS: "\u5f53\u524d\u8fdb\u5165\u7684\u623f\u95f4\u4eba\u5458\u5217\u8868",
-    LIST_VIEWER_ON_PRESS: "%1 \u5f53 %2 \u88ab\u70b9\u51fb\u65f6 %3 %4 %5",
-    LIST_VIEWER_SET_PROPERTY: "\u8bbe\u7f6e %1 \u7684 %2 \u4e3a %3",
-    LIST_VIEWER_SET_DATA_SOURCE: "\u8bbe\u7f6e %1 \u7684\u6570\u636e\u6e90\u4e3a %2",
-    LIST_VIEWER_GET_PROPERTY: "%1 \u7684 %2",
-    LIST_VIEWER_GET_DATA_SOURCE: "%1 \u7684\u6570\u636e\u6e90",
-    LIST_VIEWER_CHILD_WIDGET_ON_PRESS: "%1 \u5f53 %2 \u7684 %3 \u88ab\u70b9\u51fb\u65f6 %4 %5 %6",
-    LIST_VIEWER_CHILD_WIDGET_BIND_COLUMN: "\u5c06 %1 \u7684 %2 \u7ed1\u5b9a %3",
-    LIST_VIEWER_CHILD_WIDGET_SET_ATTRIBUTES: "\u8bbe\u7f6e %1 \u7b2c %2 \u884c %3 \u7684 %4 \u4e3a %5",
-    LIST_VIEWER_CHILD_WIDGET_SET_FONT_SIZE: "\u8bbe\u7f6e %1 \u7b2c %2 \u884c %3 \u7684\u5b57\u53f7\u4e3a %4",
-    LIST_VIEWER_CHILD_WIDGET_GET_ATTRIBUTES: "%1 \u7b2c %2 \u884c %3 \u7684 %4",
-    LIST_VIEWER_CHILD_WIDGET_GET_FONT_SIZE: "%1 \u7b2c %2 \u884c %3 \u7684\u5b57\u53f7",
-    LIST_VIEWER_ROW_INDEX: "\u884c\u6570",
-    WIDGET_OF: "\u7684",
+    ACTOR_SHOW_DIALOG_IN_TIME: "%1 %2 %3 持续 %4 秒",
+    ACTOR_STYLE: "造型编号",
+    ACTOR_GET_STYLE_INDEX: "%1 的 造型编号",
+    ACTOR_GET_ACTION_NAME: "%1 的 动作名称",
+    ACTOR_GET_ROTATION: "%1 的 方向",
+    ACTOR_NEXT_ONE: "下一个",
+    ACTOR_PREVIOUS_ONE: "上一个",
+    ACTOR_CHECK_IF_PRESSED: "%1 被 按住",
+    ACTOR_CHECK_IF_BUMPED: "%1 碰到 %2",
+    ACTOR_CHECK_IF_LEFT: "%1 离开 %2",
+    RADIO_ON_SELECTED: "%1 当 %2 被选中时%3 %4 %5 %6",
+    RADIO_ON_SELECTED_TOOLTIP: "选中项：被选中选项的序号，数字类型\n选中内容：被选中选项的文本内容，字符串类型",
+    RADIO_SET_HEADLINE: "设置 %1 的题干内容为 %2",
+    RADIO_SET_OPTION_COUNT: "设置 %1 的选项数量为 %2",
+    RADIO_SET_OPTION_CONTENT: "设置 %1 第 %2 项的内容为 %3",
+    RADIO_SET_OPTION_SELECTED_OR_DISABLED: "%1 %2 第 %3 项",
+    RADIO_CLEAR_SELECTED: "清空 %1 所有选项状态",
+    RADIO_CLEAR_SELECTED_TOOLTIP: "取消选中当前选中项。",
+    RADIO_SET_OPTION_FEEDBACK: "设置 %1 第 %2 项的反馈为 %3",
+    RADIO_SET_OPTION_FEEDBACK_TOOLTIP: "如果某一项为正确选项，则设置反馈为正确，当前选项会变为绿色，出现√。\n如果某一项为错误选项，则设置反馈为错误，当前选项会变为红色，出现×。",
+    RADIO_CLEAR_FEEDBACK: "清空 %1 所有选项的反馈",
+    RADIO_CLEAR_FEEDBACK_TOOLTIP: "清除所有选项正确和错误的样式反馈。",
+    RADIO_DELETE_OPTION: "删除 %1 第 %2 项",
+    RADIO_PUSH_OPTION: "添加选项 %1 到 %2 的末尾",
+    RADIO_SET_WIDGET_POSITION: "设置 %1 的 %2 为 %3",
+    RADIO_GET_SELECTED_OPTION_INDEX: "%1 的选中项",
+    RADIO_GET_SELECTED_OPTION_INDEX_TOOLTIP: "返回被选中选项的序号",
+    RADIO_GET_SELECTED_OPTION_CONTENT: "%1的选中项内容",
+    RADIO_GET_SELECTED_OPTION_CONTENT_TOOLTIP: "返回被选中选项的文本内容",
+    RADIO_GET_OPTION_CONTENT_BY_INDEX: "%1 第 %2 项的内容",
+    RADIO_GET_HEADLINE: "%1 的题干内容 ",
+    RADIO_GET_PROPERTY: "%1 的 %2",
+    RADIO_PARAM_SELECTED_INDEX: "选中项",
+    RADIO_PARAM_SELECTED_CONTENT: "选中项内容",
+    SELECTED: "选中",
+    OPTION_COUNT: "项数",
+    CORRECT: "正确",
+    INCORRECT: "错误",
+    UNSELECTED: "取消选中",
+    CHECKBOX_ON_SELECTED: "%1 当 %2 被 %3 时 %4 %5 %6 %7",
+    CHECKBOX_ON_SELECTED_TOOLTIP: "选中项列表：被选中所有选项的序号，列表类型\n选中内容列表：被选中所有选项的文本内容，列表类型",
+    CHECKBOX_ON_CHANGE: "%1 当 %2 选项状态发生改变时 %3 %4 %5 %6",
+    CHECKBOX_ON_CHANGE_TOOLTIP: "某一项被选中或取消选中时都会触发该事件。\n改变项：被选中或被取消的选项序号\n改变结果：值为真(true)时表示该项被选中，值为假(false)时表示该项被取消选中",
+    CHECKBOX_SET_HEADLINE: "设置 %1 的题干内容为 %2",
+    CHECKBOX_SET_OPTION_COUNT: "设置 %1 的选项数量为 %2",
+    CHECKBOX_SET_OPTION_CONTENT: "设置 %1 第 %2 项内容为 %3",
+    CHECKBOX_SET_OPTION_STATE: "%1 %2 第 %3 项",
+    CHECKBOX_CLEAR_SELECTED: "清空 %1 所有选项状态",
+    CHECKBOX_CLEAR_SELECTED_TOOLTIP: "取消多选框所有选项的选中状态。",
+    CHECKBOX_SET_OPTION_FEEDBACK: "设置 %1 第 %2 项的反馈为 %3",
+    CHECKBOX_SET_OPTION_FEEDBACK_TOOLTIP: "如果某一项为正确选项，则设置反馈为正确，当前选项会变为绿色，出现√。\n如果某一项为错误选项，则设置反馈为错误，当前选项会变为红色，出现×。",
+    CHECKBOX_CLEAR_FEEDBACK: "清空 %1 所有选项的反馈",
+    CHECKBOX_CLEAR_FEEDBACK_TOOLTIP: "清除所有选项正确和错误的样式反馈。",
+    CHECKBOX_DELETE_OPTION: "删除 %1 第 %2 项",
+    CHECKBOX_PUSH_OPTION: "添加选项 %1 到 %2 的末尾",
+    CHECKBOX_SET_WIDGET_POSITION: "设置 %1 的 %2 为 %3",
+    CHECKBOX_GET_SELECTED_OPTION_INDEX: "%1 的选中项列表",
+    CHECKBOX_GET_SELECTED_OPTION_INDEX_TOOLTIP: "返回被选中所有选项的序号，列表类型",
+    CHECKBOX_GET_SELECTED_OPTION_CONTENT: "%1 的选中内容列表",
+    CHECKBOX_GET_SELECTED_OPTION_CONTENT_TOOLTIP: "返回被选中所有选项的文本内容，列表类型",
+    CHECKBOX_GET_OPTION_CONTENT_BY_INDEX: "%1 第 %2 项的内容",
+    CHECKBOX_GET_HEADLINE: "%1 的题干内容 ",
+    CHECKBOX_GET_PROPERTY: "%1 的 %2",
+    CHECKBOX_PARAM_SELECTED_INDEX_LIST: "选中项列表",
+    CHECKBOX_PARAM_SELECTED_CONTENT_LIST: "选中内容列表",
+    CHECKBOX_PARAM_SELECTED_INDEX: "改变项",
+    CHECKBOX_PARAM_SELECTED_RESULT: "改变结果",
+    WEBVIEW_ON_START_LOAD: "%1 当 %2 开始加载时 %3 %4",
+    WEBVIEW_ON_LOADED: "%1 当 %2 加载完成时 %3 %4",
+    WEBVIEW_ON_LOAD_ERROR: "%1 当 %2 加载失败时 %3 %4",
+    WEBVIEW_SET_URL: "设置 %1 的网址为 %2",
+    WEBVIEW_REFRESH: "重新加载 %1",
+    WEBVIEW_GET_URL: "%1 的网址",
+    WEBVIEW_GET_PROPERTY: "%1 的 %2",
+    SWITCH_ON_STATE_CHANGE: "%1 当 %2 状态发生改变时 %3 %4 %5",
+    SWITCH_SET_STATE: "设置 %1 的状态为 %2",
+    SWITCH_SET_POSITION: "设置 %1 的 %2 为 %3",
+    SWITCH_GET_STATE: "%1 的状态",
+    SWITCH_GET_POSITION: "%1 的 %2",
+    SWITCH_PARAM_STATE: "状态",
+    SLIDER_ON_CHANGE: "%1 当 %2 滑块位置改变时 %3 %4 %5",
+    SLIDER_ON_SLIDE_START_AND_END: "%1 当 %2 %3 时 %4 %5 %6",
+    SLIDER_SET_VALUE: "设置 %1 的 %2 为 %3",
+    SLIDER_SET_SLIDE_VALUE: "设置 %1 的 滑块位置 为 %2",
+    SLIDER_SET_PROPERTY: "设置 %1 的 %2 为 %3",
+    SLIDER_GET_VALUE: "%1 的 滑块位置",
+    SLIDER_GET_SLIDE_VALUE: "%1 的 滑块位置",
+    SLIDER_GET_PROPERTY: "%1 的 %2",
+    SLIDER_START_TO_SLIDE: "开始滑动",
+    SLIDER_END_TO_SLIDE: "结束滑动",
+    SLIDER_MAX_VALUE: "最大值",
+    SLIDER_MIN_VALUE: "最小值",
+    SLIDER_VALUE: "滑块位置",
+    SLIDER_PARAM_VALUE: "滑块位置",
+    ROOM_CREATE_ROOM: "创建房间 %1 房间人数 %2 %3 %4",
+    ROOM_FAILED_TEXT: "失败则执行",
+    ROOM_SUCCESS_TEXT: "成功则执行",
+    ROOM_DEFAULT_ROOM_NAME: "房间名",
+    ROOM_USERS: "房间人数",
+    ROOM_LIST: "房间名称列表",
+    ROOM_DEFAULT_CREATE_ERROR: "失败原因",
+    ROOM_DEFAULT_NICKNAME: "昵称",
+    ROOM_CREATE_NICKNAME: "设置我在房间的昵称 %1 %2 %3",
+    ROOM_GET_ROOM_LIST: "获取房间列表 %1 %2 %3",
+    ROOM_ENTER_ROOM: "进入房间 %1 %2 %3",
+    ROOM_SEND_MESSAGE: "发送房间信息 %1",
+    ROOM_RECEIVE_MESSAGE: "%1 当收到房间消息  %2 %3 %4",
+    ROOM_ENTER: "进入房间",
+    ROOM_EXIT: "退出房间",
+    ROOM_RECEIVE_ROOM_INFO: "%1 当收到房间通知  %2 %3 %4 %5",
+    ROOM_EXIT_ROOM: "退出房间",
+    ROOM_NETWORK_ERROR: "%1 当发生错误%2 %3 %4",
+    ROOM_GET_ONLINE_USERS: "房间人员列表",
+    ROOM_NAME: "房间名",
+    ROOM_USER_NAME: "用户名",
+    ROOM_MESSAGE: "消息",
+    ROOM_ERROR_INFO: "错误信息",
+    ROOM_CURRENT_ROOM_NAME: "当前进入的房间名",
+    ROOM_CURRENT_ROOM_USERS: "当前进入的房间人员列表",
+    LIST_VIEWER_ON_PRESS: "%1 当 %2 被点击时 %3 %4 %5",
+    LIST_VIEWER_SET_PROPERTY: "设置 %1 的 %2 为 %3",
+    LIST_VIEWER_SET_DATA_SOURCE: "设置 %1 的数据源为 %2",
+    LIST_VIEWER_GET_PROPERTY: "%1 的 %2",
+    LIST_VIEWER_GET_DATA_SOURCE: "%1 的数据源",
+    LIST_VIEWER_CHILD_WIDGET_ON_PRESS: "%1 当 %2 的 %3 被点击时 %4 %5 %6",
+    LIST_VIEWER_CHILD_WIDGET_BIND_COLUMN: "将 %1 的 %2 绑定 %3",
+    LIST_VIEWER_CHILD_WIDGET_SET_ATTRIBUTES: "设置 %1 第 %2 行 %3 的 %4 为 %5",
+    LIST_VIEWER_CHILD_WIDGET_SET_FONT_SIZE: "设置 %1 第 %2 行 %3 的字号为 %4",
+    LIST_VIEWER_CHILD_WIDGET_GET_ATTRIBUTES: "%1 第 %2 行 %3 的 %4",
+    LIST_VIEWER_CHILD_WIDGET_GET_FONT_SIZE: "%1 第 %2 行 %3 的字号",
+    LIST_VIEWER_ROW_INDEX: "行数",
+    WIDGET_OF: "的",
     WIDGET_GET_MSG: "%1 %2",
-    WIDGET_SET: "\u8bbe\u7f6e",
+    WIDGET_SET: "设置",
     WIDGET_SET_MSG: "%1 %2",
-    WIDGET_SET_TO: "\u4e3a",
-    WIDGET_EVENT_MSG: "%1 \u5f53 %2 %3",
-    WIDGET_EVENT_SUFFIX: "\u65f6",
+    WIDGET_SET_TO: "为",
+    WIDGET_EVENT_MSG: "%1 当 %2 %3",
+    WIDGET_EVENT_SUFFIX: "时",
     WIDGET_EVENT_PARAM_MSG: "%1",
     WIDGET_METHOD_MSG: "%1",
-    WIDGET_METHOD_CALL_MSG: "\u8c03\u7528",
+    WIDGET_METHOD_CALL_MSG: "调用",
     WIDGET_COLOR_MSG: "%1",
     WIDGET_BOOLEAN_MSG: "%1",
-    WIDGET_BOOLEAN_TRUE: "\u662f",
-    WIDGET_BOOLEAN_FALSE: "\u5426",
-    WIDGET_OPACITY: "\u4e0d\u900f\u660e\u5ea6",
-    WIDGET_VISIBLE: "\u662f\u5426 \u663e\u793a",
-    WIDGET_DISABLED: "\u662f\u5426 \u542f\u7528",
-    CLOUD_DB_QUERY_BY_COLUMN_RESULT: "\u67e5\u8be2\u7ed3\u679c",
-    CLOUD_DB_QUERY_BY_COUNT_RESULT: "\u67e5\u8be2\u7ed3\u679c",
-    CLOUD_DB_ERROR_NAME: "\u9519\u8bef\u6570\u636e\u5e93\u540d\u79f0",
-    CLOUD_DB_ERROR_INFO: "\u9519\u8bef\u4fe1\u606f",
-    CLOUD_DB_ERROR: "%1 \u5f53 \u4e91\u6570\u636e\u5e93\u51fa\u9519\u65f6 %2 %3 %4 %5",
-    CLOUD_DB_INSERT: "\u65b0\u589e\u884c %1 \u5230 %2 %3 %4 %5",
-    CLOUD_DB_DELETE: "\u5220\u9664 %1 \u4e2d\u6ee1\u8db3\u6761\u4ef6 %2 %3 %4 \u7684\u884c %5 %6 %7",
-    CLOUD_DB_UPDATE: "\u66f4\u65b0 %1 \u4e2d\u6ee1\u8db3\u6761\u4ef6 %2 %3 %4 \u7684\u884c %5 \u4e3a %6 %7 %8",
-    CLOUD_DB_QUERY_BY_COLUMN: "\u67e5\u8be2 %1 \u4e2d\u6ee1\u8db3\u6761\u4ef6 %2 %3 %4 \u7684\u6570\u636e %5 %6 %7",
-    CLOUD_DB_ASC: "\u5347\u5e8f",
-    CLOUD_DB_DESC: "\u964d\u5e8f",
-    CLOUD_DB_QUERY_BY_COUNT: "\u67e5\u8be2 %1 \u7684 %2 %3 %4 %5",
-    CLOUD_DB_ROW: "\u884c\u6570",
-    CLOUD_DB_COLUMN: "\u5217\u6570",
-    CLOUD_DB_FAIL_RESULT: "\u5931\u8d25\u539f\u56e0",
-    TABLE_DATA_ON_CHANGE: "%1 \u5f53 %2 \u6570\u636e\u53d1\u751f\u53d8\u52a8\u65f6 %3 %4 ",
-    TABLE_DATA_ON_ERROR: "%1 \u5f53 \u6570\u636e\u8868\u51fa\u9519\u65f6 %2 %3 %4 %5",
-    TABLE_DATA_PARAM_ERROR_WIDGET_TITLE: "\u9519\u8bef\u6570\u636e\u8868\u540d\u79f0",
-    TABLE_DATA_PARAM_ERROR_MESSAGE: "\u9519\u8bef\u4fe1\u606f",
-    TABLE_DATA_SET_VALUE_BY_ROW_AND_COLUMN: "\u66ff\u6362 %1 \u5217:%2 \u884c:%3 \u7684\u503c\u4e3a %4",
-    TABLE_DATA_INSERT_ROW_DATA: "\u63d2\u5165\u884c %1",
-    TABLE_DATA_DELETE_ROW_DATA: "\u5220\u9664 %1 %2",
-    TABLE_DATA_CLEAR_DATA: "\u6e05\u7a7a %1",
-    TABLE_DATA_GET_VALUE_BY_ROW_AND_COLUMN: "%1 \u5217:%2 \u884c:%3 \u7684\u503c",
-    TABLE_DATA_GET_ROW_LENGTH: "%1 \u7684\u603b\u884c\u6570",
-    TABLE_DATA_GET_COLUMN_DATA: "%1 %2 \u7684 %3",
-    TABLE_DATA_GET_ROW_DATA: "%1 %2 \u7684 %3",
-    LAST_ROW: "\u6700\u540e\u4e00\u884c",
-    ALL_ROW: "\u6240\u6709\u884c",
-    ROW: "\u884c",
-    COLUMN: "\u5217",
-    EVENT_ADD: "\u65b0\u589e",
-    EVENT_SETTER: "\u8bbe\u7f6e",
-    EVENT_DELETE: "\u5220\u9664",
-    EVENT_QUERY: "\u67e5\u8be2",
-    EVENT_CLEAR: "\u6e05\u7a7a",
-    ERROR_INFO: "\u9519\u8bef\u4fe1\u606f",
-    QUERY_RESULT: "\u67e5\u8be2\u7ed3\u679c",
-    FAIL_RESULT: "\u5931\u8d25\u539f\u56e0",
-    ALL_KEYS_RESULT: "%1 \u67e5\u8be2\u7ed3\u679c",
-    CLOUD_SPACE_DICT_ON_ERROR: "%1 \u5f53 %2 %3 \u51fa\u9519\u65f6 %4 %5 %6",
-    CLOUD_SPACE_DICT_ON_ERROR_TOOLTIP: "\u6355\u83b7\u4e91\u5b57\u5178\u79ef\u6728\u6267\u884c\u65f6\u7684\u9519\u8bef\u4fe1\u606f\u3002",
-    CLOUD_SPACE_DICT_SET_KEY_VALUE: "\u8bbe\u7f6e %1 \u952e %2 \u7684\u503c\u4e3a %3 %4 %5 %6",
-    CLOUD_SPACE_DICT_SET_KEY_VALUE_TOOLTIP: "\u8f93\u5165\u5df2\u6709\u952e\u540d\u5219\u4fee\u6539\u5176\u503c\uff0c\u8f93\u5165\u65b0\u7684\u952e\u540d\u5219\u76f4\u63a5\u65b0\u5efa\u4e00\u4e2a\u952e\u503c\u5bf9\u3002",
-    CLOUD_SPACE_DICT_DELETE_KEY: "\u5220\u9664 %1 \u7684\u952e %2 %3 %4 %5",
-    CLOUD_SPACE_DICT_DELETE_KEY_TOOLTIP: "\u5220\u9664\u4e91\u5b57\u5178\u4e2d\u67d0\u4e2a\u952e\u503c\u5bf9\uff0c\u4e0d\u53ef\u64a4\u9500\u3002",
-    CLOUD_SPACE_DICT_GET_VALUE_BY_KEY: "\u67e5\u8be2 %1 \u4e2d \u952e\u4e3a %2 \u7684\u503c %3 %4 %5",
-    CLOUD_SPACE_DICT_GET_VALUE_BY_KEY_TOOLTIP: "\u67e5\u8be2\u4e91\u5b57\u5178\u67d0\u4e2a\u952e\u7684\u503c\u3002",
-    CLOUD_SPACE_DICT_GET_KEY_COUNT: "\u67e5\u8be2 %1 \u952e\u7684\u603b\u6570 %2 %3 %4",
-    CLOUD_SPACE_DICT_GET_KEY_COUNT_TOOLTIP: "\u67e5\u8be2\u4e91\u5b57\u5178\u952e\u503c\u5bf9\u4e2a\u6570\u3002",
-    CLOUD_SPACE_DICT_GET_ALL_KEYS: "\u67e5\u8be2 %1 \u6240\u6709\u952e\u540d %2 %3 %4",
-    CLOUD_SPACE_DICT_GET_ALL_KEYS_TOOLTIP: "\u67e5\u8be2\u4e91\u5b57\u5178\u6240\u6709\u952e\u540d\uff0c\u8fd4\u56de\u5217\u8868\u7ed3\u6784\u3002",
-    CLOUD_SPACE_DICT_CLEAR_DATA: "\u6e05\u7a7a %1 %2 %3 %4",
-    CLOUD_SPACE_DICT_CLEAR_DATA_TOOLTIP: "\u6e05\u7a7a\u4e91\u5b57\u5178\u6240\u6709\u6570\u636e\uff0c\u4e0d\u53ef\u64a4\u9500\u3002",
-    CLOUD_TABLE_EVENT_ADD: "\u65b0\u589e",
-    CLOUD_TABLE_EVENT_SETTER: "\u66ff\u6362",
-    CLOUD_TABLE_EVENT_DELETE: "\u5220\u9664",
-    CLOUD_TABLE_EVENT_QUERY: "\u67e5\u8be2",
-    CLOUD_TABLE_EVENT_CLEAR: "\u6e05\u7a7a",
-    CLOUT_TABLE_FAILED_TEXT: "\u5931\u8d25\u5219\u6267\u884c",
-    CLOUD_TABLE_QUERY_BY_COLUMN_LIST_RESULT: "%1\u67e5\u8be2\u7ed3\u679c",
-    CLOUD_TABLE_QUERY_BY_COLUMN_LINE_NUMBER_RESULT: "%1\u884c\u53f7\u5217\u8868",
-    CLOUD_TABLE_QUERY_BY_COLUMN_RESULT: "\u67e5\u8be2\u7ed3\u679c",
-    CLOUD_TABLE_QUERY_BY_COUNT_RESULT: "\u67e5\u8be2\u7ed3\u679c",
-    CLOUD_TABLE_ERROR_NAME: "\u9519\u8bef\u4e91\u6570\u636e\u8868\u540d\u79f0",
-    CLOUD_TABLE_ERROR_INFO: "\u9519\u8bef\u4fe1\u606f",
-    CLOUD_TABLE_ERROR: "%1 \u5f53 %2 %3\u51fa\u9519\u65f6 %4 %5 %6",
-    CLOUD_TABLE_ERROR_TOOLTIP: "\u6355\u83b7\u4e91\u6570\u636e\u8868\u79ef\u6728\u6267\u884c\u65f6\u7684\u9519\u8bef\u4fe1\u606f\u3002",
-    CLOUD_TABLE_INSERT: "\u65b0\u589e\u884c %1 \u5230 %2 %3 %4 %5",
-    CLOUD_TABLE_INSERT_TOOLTIP: "\u5728\u4e91\u6570\u636e\u8868\u6700\u540e\u4e00\u884c\u65b0\u589e\u6570\u636e\uff1a\u652f\u6301\u5d4c\u5165\u5b57\u7b26\u6216\u5217\u8868\u6570\u636e\uff0c\u5747\u4ee5\u9017\u53f7\u4e3a\u5206\u5217\u6807\u8bc6\u3002",
-    CLOUD_TABLE_DELETE: "\u5220\u9664 %1 \u4e2d %2 %3 %4 \u7684\u884c %5 %6 %7",
-    CLOUD_TABLE_DELETE_TOOLTIP: "\u5220\u9664\u4e91\u6570\u636e\u8868\u4e2d\u6ee1\u8db3\u6761\u4ef6\u7684\u884c\uff0c\u4e0d\u53ef\u64a4\u9500\u3002",
-    CLOUD_TABLE_UPDATE: "\u66f4\u65b0 %1 \u4e2d %2 %3 %4 \u7684\u884c\uff1a %5 \u4e3a %6 %7 %8",
-    CLOUD_TABLE_UPDATE_TOOLTIP: "\u66f4\u65b0\u4e91\u6570\u636e\u8868\u4e2d\u6ee1\u8db3\u6761\u4ef6\u7684\u884c\uff0c\u4e0d\u53ef\u64a4\u9500\u3002",
-    CLOUD_TABLE_QUERY_BY_COLUMN: "\u67e5\u8be2 %1 \u4e2d %2 %3 %4 \u7684\u6570\u636e %5 %6 %7",
-    CLOUD_TABLE_QUERY_BY_COLUMN_TOOLTIP: "\u67e5\u8be2\u4e91\u6570\u636e\u8868\u6ee1\u8db3\u6761\u4ef6\u7684\u6570\u636e\uff1a\u8fd4\u56de\u5217\u8868\u7ed3\u6784\uff0c\u82e5\u6709\u591a\u4e2a\u6570\u636e\u5219\u8fd4\u56de\u4e8c\u7ef4\u5217\u8868\u3002",
-    CLOUD_TABLE_ASC: "\u5347\u5e8f",
-    CLOUD_TABLE_DESC: "\u964d\u5e8f",
-    CLOUD_TABLE_QUERY_BY_COUNT: "\u67e5\u8be2 %1 \u7684 %2 %3 %4 %5",
-    CLOUD_TABLE_QUERY_BY_COUNT_TOOLTIP: "\u67e5\u8be2\u4e91\u6570\u636e\u8868\u7684\u884c\u6570\u6216\u5217\u6570\u3002",
-    CLOUD_TABLE_ROW: "\u884c\u6570",
-    CLOUD_TABLE_COLUMN: "\u5217\u6570",
-    CLOUD_TABLE_FAIL_RESULT: "\u5931\u8d25\u539f\u56e0",
-    CLOUD_TABLE_CLEAR_ALL: "\u6e05\u7a7a %1 %2 %3 %4",
-    CLOUD_TABLE_CLEAR_ALL_TOOLTIP: "\u6e05\u7a7a\u4e91\u6570\u636e\u8868\u6240\u6709\u6570\u636e\uff0c\u4e0d\u53ef\u64a4\u9500\u3002"
+    WIDGET_BOOLEAN_TRUE: "是",
+    WIDGET_BOOLEAN_FALSE: "否",
+    WIDGET_OPACITY: "不透明度",
+    WIDGET_VISIBLE: "是否 显示",
+    WIDGET_DISABLED: "是否 启用",
+    CLOUD_DB_QUERY_BY_COLUMN_RESULT: "查询结果",
+    CLOUD_DB_QUERY_BY_COUNT_RESULT: "查询结果",
+    CLOUD_DB_ERROR_NAME: "错误数据库名称",
+    CLOUD_DB_ERROR_INFO: "错误信息",
+    CLOUD_DB_ERROR: "%1 当 云数据库出错时 %2 %3 %4 %5",
+    CLOUD_DB_INSERT: "新增行 %1 到 %2 %3 %4 %5",
+    CLOUD_DB_DELETE: "删除 %1 中满足条件 %2 %3 %4 的行 %5 %6 %7",
+    CLOUD_DB_UPDATE: "更新 %1 中满足条件 %2 %3 %4 的行 %5 为 %6 %7 %8",
+    CLOUD_DB_QUERY_BY_COLUMN: "查询 %1 中满足条件 %2 %3 %4 的数据 %5 %6 %7",
+    CLOUD_DB_ASC: "升序",
+    CLOUD_DB_DESC: "降序",
+    CLOUD_DB_QUERY_BY_COUNT: "查询 %1 的 %2 %3 %4 %5",
+    CLOUD_DB_ROW: "行数",
+    CLOUD_DB_COLUMN: "列数",
+    CLOUD_DB_FAIL_RESULT: "失败原因",
+    TABLE_DATA_ON_CHANGE: "%1 当 %2 数据发生变动时 %3 %4 ",
+    TABLE_DATA_ON_ERROR: "%1 当 数据表出错时 %2 %3 %4 %5",
+    TABLE_DATA_PARAM_ERROR_WIDGET_TITLE: "错误数据表名称",
+    TABLE_DATA_PARAM_ERROR_MESSAGE: "错误信息",
+    TABLE_DATA_SET_VALUE_BY_ROW_AND_COLUMN: "替换 %1 列:%2 行:%3 的值为 %4",
+    TABLE_DATA_INSERT_ROW_DATA: "插入行 %1",
+    TABLE_DATA_DELETE_ROW_DATA: "删除 %1 %2",
+    TABLE_DATA_CLEAR_DATA: "清空 %1",
+    TABLE_DATA_GET_VALUE_BY_ROW_AND_COLUMN: "%1 列:%2 行:%3 的值",
+    TABLE_DATA_GET_ROW_LENGTH: "%1 的总行数",
+    TABLE_DATA_GET_COLUMN_DATA: "%1 %2 的 %3",
+    TABLE_DATA_GET_ROW_DATA: "%1 %2 的 %3",
+    LAST_ROW: "最后一行",
+    ALL_ROW: "所有行",
+    ROW: "行",
+    COLUMN: "列",
+    EVENT_ADD: "新增",
+    EVENT_SETTER: "设置",
+    EVENT_DELETE: "删除",
+    EVENT_QUERY: "查询",
+    EVENT_CLEAR: "清空",
+    ERROR_INFO: "错误信息",
+    QUERY_RESULT: "查询结果",
+    FAIL_RESULT: "失败原因",
+    ALL_KEYS_RESULT: "%1 查询结果",
+    CLOUD_SPACE_DICT_ON_ERROR: "%1 当 %2 %3 出错时 %4 %5 %6",
+    CLOUD_SPACE_DICT_ON_ERROR_TOOLTIP: "捕获云字典积木执行时的错误信息。",
+    CLOUD_SPACE_DICT_SET_KEY_VALUE: "设置 %1 键 %2 的值为 %3 %4 %5 %6",
+    CLOUD_SPACE_DICT_SET_KEY_VALUE_TOOLTIP: "输入已有键名则修改其值，输入新的键名则直接新建一个键值对。",
+    CLOUD_SPACE_DICT_DELETE_KEY: "删除 %1 的键 %2 %3 %4 %5",
+    CLOUD_SPACE_DICT_DELETE_KEY_TOOLTIP: "删除云字典中某个键值对，不可撤销。",
+    CLOUD_SPACE_DICT_GET_VALUE_BY_KEY: "查询 %1 中 键为 %2 的值 %3 %4 %5",
+    CLOUD_SPACE_DICT_GET_VALUE_BY_KEY_TOOLTIP: "查询云字典某个键的值。",
+    CLOUD_SPACE_DICT_GET_KEY_COUNT: "查询 %1 键的总数 %2 %3 %4",
+    CLOUD_SPACE_DICT_GET_KEY_COUNT_TOOLTIP: "查询云字典键值对个数。",
+    CLOUD_SPACE_DICT_GET_ALL_KEYS: "查询 %1 所有键名 %2 %3 %4",
+    CLOUD_SPACE_DICT_GET_ALL_KEYS_TOOLTIP: "查询云字典所有键名，返回列表结构。",
+    CLOUD_SPACE_DICT_CLEAR_DATA: "清空 %1 %2 %3 %4",
+    CLOUD_SPACE_DICT_CLEAR_DATA_TOOLTIP: "清空云字典所有数据，不可撤销。",
+    CLOUD_TABLE_EVENT_ADD: "新增",
+    CLOUD_TABLE_EVENT_SETTER: "替换",
+    CLOUD_TABLE_EVENT_DELETE: "删除",
+    CLOUD_TABLE_EVENT_QUERY: "查询",
+    CLOUD_TABLE_EVENT_CLEAR: "清空",
+    CLOUT_TABLE_FAILED_TEXT: "失败则执行",
+    CLOUD_TABLE_QUERY_BY_COLUMN_LIST_RESULT: "%1查询结果",
+    CLOUD_TABLE_QUERY_BY_COLUMN_LINE_NUMBER_RESULT: "%1行号列表",
+    CLOUD_TABLE_QUERY_BY_COLUMN_RESULT: "查询结果",
+    CLOUD_TABLE_QUERY_BY_COUNT_RESULT: "查询结果",
+    CLOUD_TABLE_ERROR_NAME: "错误云数据表名称",
+    CLOUD_TABLE_ERROR_INFO: "错误信息",
+    CLOUD_TABLE_ERROR: "%1 当 %2 %3出错时 %4 %5 %6",
+    CLOUD_TABLE_ERROR_TOOLTIP: "捕获云数据表积木执行时的错误信息。",
+    CLOUD_TABLE_INSERT: "新增行 %1 到 %2 %3 %4 %5",
+    CLOUD_TABLE_INSERT_TOOLTIP: "在云数据表最后一行新增数据：支持嵌入字符或列表数据，均以逗号为分列标识。",
+    CLOUD_TABLE_DELETE: "删除 %1 中 %2 %3 %4 的行 %5 %6 %7",
+    CLOUD_TABLE_DELETE_TOOLTIP: "删除云数据表中满足条件的行，不可撤销。",
+    CLOUD_TABLE_UPDATE: "更新 %1 中 %2 %3 %4 的行： %5 为 %6 %7 %8",
+    CLOUD_TABLE_UPDATE_TOOLTIP: "更新云数据表中满足条件的行，不可撤销。",
+    CLOUD_TABLE_QUERY_BY_COLUMN: "查询 %1 中 %2 %3 %4 的数据 %5 %6 %7",
+    CLOUD_TABLE_QUERY_BY_COLUMN_TOOLTIP: "查询云数据表满足条件的数据：返回列表结构，若有多个数据则返回二维列表。",
+    CLOUD_TABLE_ASC: "升序",
+    CLOUD_TABLE_DESC: "降序",
+    CLOUD_TABLE_QUERY_BY_COUNT: "查询 %1 的 %2 %3 %4 %5",
+    CLOUD_TABLE_QUERY_BY_COUNT_TOOLTIP: "查询云数据表的行数或列数。",
+    CLOUD_TABLE_ROW: "行数",
+    CLOUD_TABLE_COLUMN: "列数",
+    CLOUD_TABLE_FAIL_RESULT: "失败原因",
+    CLOUD_TABLE_CLEAR_ALL: "清空 %1 %2 %3 %4",
+    CLOUD_TABLE_CLEAR_ALL_TOOLTIP: "清空云数据表所有数据，不可撤销。"
   }
 };
 var ye = require("../6");
@@ -4663,8 +4663,8 @@ Ie.FieldNumber.prototype.show_editor = function () {
     var p = r.get_field_value("OP");
     c = "SOUND_VOLUME" === p ? Re.g : Re.e;
     l = "SOUND_VOLUME" === p ? Re.f : Re.d;
-    u = "SOUND_VOLUME" === p ? "\u5c0f" : "\u6162";
-    d = "SOUND_VOLUME" === p ? "\u5927" : "\u5feb";
+    u = "SOUND_VOLUME" === p ? "小" : "慢";
+    d = "SOUND_VOLUME" === p ? "大" : "快";
     this.set_constraints(c, l, 1);
     var f = {
       payload: {
@@ -4703,7 +4703,7 @@ Ie.FieldNumber.prototype.set_value = function (e) {
 var De = require("./374");
 var Me = require("./500");
 var Le = require("../38/index");
-var Pe = require("../2/index");
+var Pe = require("../2");
 var Be = require("../28/index");
 var Fe = De.FieldTextInput.prototype.show_editor;
 De.FieldTextInput.prototype.show_editor = function () {

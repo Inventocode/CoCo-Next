@@ -1,7 +1,7 @@
-var r = require("../1253/472");
-var o = require("../1541/631");
+var r = require("../1664/472");
+var o = require("../1667/631/index");
 var i = require("../1541/1061");
-var a = require("../1666/241");
+var a = require("../1659/241");
 module.exports = r("Reflect", "ownKeys") || function (e) {
   var t = o.f(a(e));
   var n = i.f;

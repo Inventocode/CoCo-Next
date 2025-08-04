@@ -1,6 +1,6 @@
 "use strict";
 
-var r = require("../../../../3272/3200/494");
+var r = require("../../38/607/494");
 var i = require("./807/index")("eslint:source-code-fixer");
 function o(e, t) {
   return e.fix.range[0] - t.fix.range[0] || e.fix.range[1] - t.fix.range[1];
@@ -23,7 +23,7 @@ s.applyFixes = function (e, t, n) {
   }
   var s = [];
   var c = [];
-  var u = e.startsWith("\ufeff") ? "\ufeff" : "";
+  var u = e.startsWith("﻿") ? "﻿" : "";
   var l = u ? e.slice(1) : e;
   var f = Number.NEGATIVE_INFINITY;
   var d = u;
@@ -31,7 +31,7 @@ s.applyFixes = function (e, t, n) {
     var t = e.fix;
     var n = t.range[0];
     var r = t.range[1];
-    return f >= n || n > r ? (s.push(e), !1) : ((n < 0 && r >= 0 || 0 === n && t.text.startsWith("\ufeff")) && (d = ""), d += l.slice(Math.max(0, f), Math.max(0, n)), d += t.text, f = r, !0);
+    return f >= n || n > r ? (s.push(e), !1) : ((n < 0 && r >= 0 || 0 === n && t.text.startsWith("﻿")) && (d = ""), d += l.slice(Math.max(0, f), Math.max(0, n)), d += t.text, f = r, !0);
   }
   t.forEach(function (e) {
     if (Object.prototype.hasOwnProperty.call(e, "fix")) {

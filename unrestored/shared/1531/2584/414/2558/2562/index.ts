@@ -33,9 +33,9 @@ var o = this && this.__assign || function () {
 Object.defineProperty(exports, "__esModule", {
   value: !0
 });
-var i = require("../../../0/index");
+var i = require("react");
 var a = require("../../../75/index");
-var s = require("../872");
+var s = require("../../1427/872");
 var c = require("./1429/index");
 var l = require("./1430");
 var u = require("./1431/index");

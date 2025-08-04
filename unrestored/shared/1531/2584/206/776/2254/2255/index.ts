@@ -1,11 +1,11 @@
 "use strict";
 
-var r = require("../../../../../../3272/3198/2668/220");
-var i = require("../../../../../../3272/3198/2668/230");
+var r = require("../../../../36/2668/220");
+var i = require("../../../../36/2668/230");
 var o = require("./1299");
-var a = require("../../../../../../3272/3198/2668/2689/356/index");
-var s = require("../../../../../../3272/3198/2668/2689/357/index");
-var c = require("../../../../../../3272/3200/624/index");
+var a = require("../../../../38/607/356");
+var s = require("../../../../38/607/357/index");
+var c = require("../../../../38/607/624/index");
 var u = require("./1344").isCommentToken;
 var l = require("./2256/index");
 var f = require("../../965");

@@ -621,7 +621,7 @@ var l = function () {
       this.old_rotate_center_pos.set(n.x, n.y);
       this.old_mouse_rotation = Object(o.u)(e.x - n.x, e.y - n.y);
       this.old_position.set(t.position.x, t.position.y);
-      this.value.text = Math.round(Object(o.v)(t.rotation_value)) + "\xb0";
+      this.value.text = Math.round(Object(o.v)(t.rotation_value)) + "°";
       this.events.fire("editor_rotate_btn:drag_start", {
         target_id: t.id
       });
@@ -681,7 +681,7 @@ var l = function () {
       var s = t.is_rotation_flipped ? Object(o.s)(a + Math.PI) : a;
       t.set_rotation_value(s);
       t.set_pixi_rotation(-a);
-      this.value.text = Math.round(Object(o.v)(t.rotation_value)) + "\xb0";
+      this.value.text = Math.round(Object(o.v)(t.rotation_value)) + "°";
       this.events.fire("actor:update", {
         target_id: t.id,
         data: {

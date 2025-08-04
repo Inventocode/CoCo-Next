@@ -53,7 +53,7 @@ module.exports = function (e, t, n) {
     var _;
     if (!(_ = e.formats[a])) {
       if ("ignore" == h) {
-        e.logger.warn('unknown format "' + a + '" ignored in schema at path "' + e.errSchemaPath + '"');
+        e.logger.warn("unknown format \"" + a + "\" ignored in schema at path \"" + e.errSchemaPath + "\"");
         if (u) {
           r += " if (true) { ";
         }
@@ -65,7 +65,7 @@ module.exports = function (e, t, n) {
         }
         return r;
       }
-      throw new Error('unknown format "' + a + '" is used in schema at path "' + e.errSchemaPath + '"');
+      throw new Error("unknown format \"" + a + "\" is used in schema at path \"" + e.errSchemaPath + "\"");
     }
     var A;
     var g = (A = "object" == typeof _ && !(_ instanceof RegExp) && _.validate) && _.type || "string";

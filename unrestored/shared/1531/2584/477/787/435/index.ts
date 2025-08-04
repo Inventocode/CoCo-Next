@@ -17,7 +17,7 @@
   require("../1168");
   var i = require("../316");
   require("./1435");
-  require("../1508/986");
+  require("./986");
   require("../736");
   function o(e, t, n) {
     if (t in e) {
@@ -69,4 +69,4 @@
     }
     return Array.isArray(e) ? e.map(a) : e;
   }
-}).call(this, require("../../../31/251"));
+}).call(this, require("../../../710/251"));

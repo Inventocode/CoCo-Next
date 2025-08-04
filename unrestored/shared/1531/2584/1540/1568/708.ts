@@ -1,6 +1,6 @@
 "use strict";
 
-var r = require("../1633/167");
+var r = require("../1736/167");
 module.exports = function (e, t) {
   var n = [][e];
   return !!n && r(function () {

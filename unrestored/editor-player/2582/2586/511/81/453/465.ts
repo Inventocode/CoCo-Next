@@ -514,7 +514,7 @@ var w = function () {
         r = "!";
         break;
       case 233:
-        r = '"';
+        r = "\"";
         break;
       case 234:
         r = "%";

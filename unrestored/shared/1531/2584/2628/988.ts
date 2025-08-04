@@ -2,7 +2,7 @@
 
 export { s as b };
 export { c as a };
-var r = require("../0/index");
+var r = require("react");
 var i = require("../16/687");
 var o = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {

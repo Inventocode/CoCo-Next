@@ -7,7 +7,7 @@ var i = require("../926");
 var o = require("../265");
 var a = require("./722");
 var s = require("../350");
-var c = require("../720/765");
+var c = require("./765");
 var u = 1e3;
 var l = function (e) {
   function t(t, n, r, i) {

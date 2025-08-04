@@ -4,7 +4,7 @@ Object.defineProperty(exports, "__esModule", {
   value: !0
 });
 exports.mergeClasses = void 0;
-var r = a(require("../2503/1142/index"));
+var r = a(require("./1142/index"));
 var i = a(require("./2484/index"));
 var o = Object.assign || function (e) {
   for (var t = 1; t < arguments.length; t++) {

@@ -5,9 +5,9 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.init_tell_blocks = exports.is_controls_if = exports.init_control_blocks = void 0;
 var r = require("../4/127");
-var o = require("../206/208/387");
+var o = require("../17/497/387");
 var i = require("../1001/213/index");
-var a = require("./2552/579");
+var a = require("./2555/579");
 var s = ["Boolean"];
 exports.init_control_blocks = function (e) {
   var t = [{
@@ -146,16 +146,16 @@ exports.init_control_blocks = function (e) {
   }];
   e.define_blocks_with_json_array(t);
   Object.assign(e.blocks_xml, {
-    repeat_forever: '<block type="repeat_forever"/>',
-    repeat_n_times: '<block type="repeat_n_times">\n      ' + (0, a.number_value)("times", "20", "1,,1") + "\n    </block>",
-    repeat_forever_until: '<block type="repeat_forever_until">\n      ' + (0, a.logic_value)("condition") + "\n    </block>",
-    break: '<block type="break"/>',
-    warp: '<block type="warp"/>',
-    wait: '<block type="wait">\n      ' + (0, a.number_value)("time", "1", "0") + "\n    </block>",
-    wait_until: '<block type="wait_until">\n      ' + (0, a.logic_value)("condition") + "\n    </block>",
-    destruct: '<block type="destruct"/>',
-    controls_if_no_else: '<block type="controls_if">\n      ' + (0, a.logic_value)("IF0") + "\n    </block>",
-    controls_if: '<block type="controls_if">\n      <mutation else="1"></mutation>\n      ' + (0, a.logic_value)("IF0") + "\n    </block>"
+    repeat_forever: "<block type=\"repeat_forever\"/>",
+    repeat_n_times: "<block type=\"repeat_n_times\">\n      " + (0, a.number_value)("times", "20", "1,,1") + "\n    </block>",
+    repeat_forever_until: "<block type=\"repeat_forever_until\">\n      " + (0, a.logic_value)("condition") + "\n    </block>",
+    break: "<block type=\"break\"/>",
+    warp: "<block type=\"warp\"/>",
+    wait: "<block type=\"wait\">\n      " + (0, a.number_value)("time", "1", "0") + "\n    </block>",
+    wait_until: "<block type=\"wait_until\">\n      " + (0, a.logic_value)("condition") + "\n    </block>",
+    destruct: "<block type=\"destruct\"/>",
+    controls_if_no_else: "<block type=\"controls_if\">\n      " + (0, a.logic_value)("IF0") + "\n    </block>",
+    controls_if: "<block type=\"controls_if\">\n      <mutation else=\"1\"></mutation>\n      " + (0, a.logic_value)("IF0") + "\n    </block>"
   });
   var n = {
     elseCount_: 0,
@@ -383,7 +383,7 @@ exports.init_tell_blocks = function (e, t) {
   }];
   e.define_blocks_with_json_array(n);
   Object.assign(e.blocks_xml, {
-    tell: '<block type="tell"/>',
-    sync_tell: '<block type="sync_tell"/>'
+    tell: "<block type=\"tell\"/>",
+    sync_tell: "<block type=\"sync_tell\"/>"
   });
 };

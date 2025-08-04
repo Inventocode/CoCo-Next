@@ -1,7 +1,7 @@
 "use strict";
 
 var r = require("./2219");
-var i = require("../2218/1116");
+var i = require("./1116");
 var o = require("../757/index");
 var a = require("../1335");
 var s = require("./2221");
@@ -117,12 +117,12 @@ c.ids = function (e) {
         }
         if (g && g.schema) {
           if (!i(e, g.schema)) {
-            throw new Error('id "' + p + '" resolves to more than one schema');
+            throw new Error("id \"" + p + "\" resolves to more than one schema");
           }
         } else if (p != v(A)) {
           if ("#" == p[0]) {
             if (c[p] && !i(e, c[p])) {
-              throw new Error('id "' + p + '" resolves to more than one schema');
+              throw new Error("id \"" + p + "\" resolves to more than one schema");
             }
             c[p] = e;
           } else {

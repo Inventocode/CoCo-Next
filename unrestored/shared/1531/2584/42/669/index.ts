@@ -1,7 +1,7 @@
 "use strict";
 
 (function (e) {
-  var r = require("../../0/index");
+  var r = require("react");
   var o = function __importDefault(module) {
     var defaultExport = module && module.__esModule ? function () {
       return module.default;
@@ -14,12 +14,12 @@
     });
     return defaultExport;
   }(r);
-  var i = require("../../458");
+  var i = require("resize-observer-polyfill");
   require("./848");
   var a = require("../../16/index");
   var s = require("../../5");
   var c = require("../../64");
-  var l = require("../../15/index");
+  var l = require("../../15");
   function u(e) {
     return e instanceof HTMLInputElement ? e.value : e.innerHTML || "";
   }

@@ -398,7 +398,7 @@ var v = function () {
           case 0:
             if (n = t.onprogress, r = t.timeout, s = void 0 === r ? 2e5 : r, c = t.onsuccess, u = t.onerror, l = t.persistentOption, p = t.insertOnly, !e) {
               if (u) {
-                u("\u6587\u4ef6\u4e0d\u5141\u8bb8\u4e3a\u7a7a\uff01");
+                u("文件不允许为空！");
               }
               return [2];
             }

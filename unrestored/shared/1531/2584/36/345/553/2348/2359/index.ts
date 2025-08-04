@@ -1,9 +1,9 @@
-var r = require("../717");
+var r = require("../717/index");
 var i = require("./2360");
 var o = require("./2361");
 var a = require("./2362");
 var s = require("./2363");
-var c = require("./1374");
+var c = require("../717/1374");
 var u = require("../716");
 var l = require("./2364");
 function f(e) {
@@ -58,7 +58,7 @@ function _(e, t) {
   var n;
   var c = r.getBestModeForData(e);
   if ((n = r.from(t, c)) !== r.BYTE && n.bit < c.bit) {
-    throw new Error('"' + e + '" cannot be encoded with mode ' + r.toString(n) + ".\n Suggested mode is: " + r.toString(c));
+    throw new Error("\"" + e + "\" cannot be encoded with mode " + r.toString(n) + ".\n Suggested mode is: " + r.toString(c));
   }
   switch (n !== r.KANJI || u.isKanjiModeEnabled() || (n = r.BYTE), n) {
     case r.NUMERIC:

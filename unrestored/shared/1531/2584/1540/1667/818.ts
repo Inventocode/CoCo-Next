@@ -1,4 +1,4 @@
-var r = require("../1633/167");
+var r = require("../1736/167");
 var o = /#|\.prototype\./;
 var i = function (e, t) {
   var n = s[a(e)];

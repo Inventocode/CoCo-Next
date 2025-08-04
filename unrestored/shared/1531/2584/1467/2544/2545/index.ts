@@ -84,7 +84,7 @@ module.exports = function (e, t) {
         console.error("falling back to prompt");
       }
       i = function (e) {
-        var t = (/mac os x/i.test(navigator.userAgent) ? "\u2318" : "Ctrl") + "+C";
+        var t = (/mac os x/i.test(navigator.userAgent) ? "⌘" : "Ctrl") + "+C";
         return e.replace(/#{\s*key\s*}/g, t);
       }("message" in t ? t.message : "Copy to clipboard: #{key}, Enter");
       window.prompt(i, e);

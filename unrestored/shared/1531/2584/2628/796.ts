@@ -26,21 +26,21 @@ var o = function (e) {
 }(Error);
 var a = function (e) {
   function t(t, n, r, i) {
-    return e.call(this, 'Invalid values for "' + t + '": "' + n + '". Options are "' + Object.keys(r).join('", "') + '"', "INVALID_VALUE", i) || this;
+    return e.call(this, "Invalid values for \"" + t + "\": \"" + n + "\". Options are \"" + Object.keys(r).join("\", \"") + "\"", "INVALID_VALUE", i) || this;
   }
   Object(i.b)(t, e);
   return t;
 }(o);
 var s = function (e) {
   function t(t, n, r) {
-    return e.call(this, 'Value for "' + t + '" must be of type ' + n, "INVALID_VALUE", r) || this;
+    return e.call(this, "Value for \"" + t + "\" must be of type " + n, "INVALID_VALUE", r) || this;
   }
   Object(i.b)(t, e);
   return t;
 }(o);
 var c = function (e) {
   function t(t, n) {
-    return e.call(this, 'The intl string context variable "' + t + '" was not provided to the string "' + n + '"', "MISSING_VALUE", n) || this;
+    return e.call(this, "The intl string context variable \"" + t + "\" was not provided to the string \"" + n + "\"", "MISSING_VALUE", n) || this;
   }
   Object(i.b)(t, e);
   return t;

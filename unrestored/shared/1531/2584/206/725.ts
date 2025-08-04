@@ -4,7 +4,7 @@ Object.defineProperty(exports, "__esModule", {
   value: !0
 });
 exports.rename_procedures_in_json = exports.delete_from_json = exports.load_from_json = void 0;
-var r = require("./208/387");
+var r = require("../17/497/387");
 var i = require("../301/173");
 var o = require("../1036/754");
 function a(e, t) {

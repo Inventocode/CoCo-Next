@@ -11,7 +11,7 @@ async function main(): Promise<void> {
     )
 
     for (const [key, path] of Object.entries(SharedModulesPath)) {
-        SharedModulesPath[key] = "../shared/" + path
+        SharedModulesPath[key] = path.startsWith("/") ? "../shared" + path : path
     }
 
     unpack({
@@ -33,7 +33,6 @@ async function main(): Promise<void> {
         },
         setPath: SetPath.BY_DEPENDENCY,
         publicPath: "https://creation.codemao.cn/coconut/web/1.22.0-0/",
-        useESImport: false,
         move: SharedModulesPath
     })
 }

@@ -110,7 +110,7 @@ Object.defineProperty(p, "types", {
     return av;
   }
 });
-var f = require("./0/index");
+var f = require("react");
 var h = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -164,7 +164,7 @@ var E = function __importDefault(module) {
 var O = require("./7");
 require("./1540/index");
 var w = require("./2628/index");
-require("./710");
+require("./710/index");
 var C = require("./188");
 var T = require("./23");
 var S = require("./10/index");
@@ -493,7 +493,7 @@ var H = {
 };
 var V;
 var z = require("./13/index");
-var Y = require("./2/index");
+var Y = require("./2");
 var K = require("./18");
 var q = require("./450/index");
 var X = require("./27");
@@ -524,7 +524,7 @@ var Q = new function e() {
   };
   this._store = {};
 }();
-var Z = require("./99/index");
+var Z = require("./99");
 var J = require("./522");
 var $ = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
@@ -539,7 +539,7 @@ var $ = function __importDefault(module) {
   return defaultExport;
 }(J);
 var ee = require("./1185");
-var te = require("./15/index");
+var te = require("./15");
 !function (e) {
   e[e.SAVE_BTN = 0] = "SAVE_BTN";
   e[e.MY_PROJECT = 1] = "MY_PROJECT";
@@ -1000,11 +1000,11 @@ var Re = Object(f.memo)(function (e) {
                   id: "know"
                 }),
                 title: "",
-                content: h.a.createElement("div", null, "\u4f5c\u54c1\u4f7f\u7528\u4e86\u672a\u5ba1\u6838\u7684\u81ea\u5b9a\u4e49\u63a7\u4ef6\uff0c\u9700\u5c06\u63a7\u4ef6\u63d0\u4ea4\u81f3", h.a.createElement("a", {
+                content: h.a.createElement("div", null, "作品使用了未审核的自定义控件，需将控件提交至", h.a.createElement("a", {
                   href: te.b,
                   target: "__blank",
                   rel: "noopener noreferrer"
-                }, "Coco\u63a7\u4ef6\u5546\u57ce-\u6295\u7a3f"), "\uff0c\u5e76\u7b49\u5f85\u5ba1\u6838\u901a\u8fc7\u540e\u624d\u80fd\u8fdb\u884c\u534f\u4f5c\u3002"),
+                }, "Coco控件商城-投稿"), "，并等待审核通过后才能进行协作。"),
                 cancelBtnVisible: !1
               }));
               return e.abrupt("return");
@@ -1421,7 +1421,7 @@ var Le = Object(f.memo)(function (e) {
     className: Me.a.icon
   })), h.a.createElement("p", {
     className: Me.a.text
-  }, "\u521b\u5efa\u7a7a\u767d\u4f5c\u54c1")))), o.length > 0 && o.map(function (e) {
+  }, "创建空白作品")))), o.length > 0 && o.map(function (e) {
     return h.a.createElement("div", {
       className: Me.a.itemContainer,
       key: e.id,
@@ -1539,46 +1539,46 @@ var Ye = function __importDefault(module) {
   return defaultExport;
 }(ze);
 var Ke = {
-  "sign_in_dialog/error/password_confirm/not_same": "\u4e24\u6b21\u8f93\u5165\u7684\u5bc6\u7801\u4e0d\u4e00\u81f4\uff0c\u8bf7\u91cd\u65b0\u8f93\u5165",
-  "sign_in_dialog/error/phone/unregisterd": "\u624b\u673a\u53f7\u672a\u6ce8\u518c\uff0c",
-  "sign_in_dialog/error/other/acc_or_pwd": "\u7528\u6237\u540d\u6216\u5bc6\u7801\u4e0d\u6b63\u786e",
-  "sign_in_dialog/error/phone/registered": "\u624b\u673a\u53f7\u5df2\u6ce8\u518c\uff0c",
-  "sign_in_dialog/error/phone/format": "\u624b\u673a\u683c\u5f0f\u4e0d\u6b63\u786e",
-  "sign_in_dialog/error/password/format": "\u8bf7\u8f93\u51656-20\u4f4d\u5bc6\u7801",
-  "sign_in_dialog/error/sms_code/fail": "\u9a8c\u8bc1\u7801\u9519\u8bef\uff0c\u8bf7\u91cd\u65b0\u8f93\u5165",
-  "sign_in_dialog/error/sms_code/frequent_resend": "\u53d1\u9001\u9a8c\u8bc1\u7801\u8fc7\u4e8e\u9891\u7e41\uff0c\u8bf7\u7a0d\u540e\u91cd\u8bd5",
-  "sign_in_dialog/error/other/network": "\u7f51\u7edc\u8fde\u63a5\u51fa\u9519\u4e86,\u8bf7\u7a0d\u540e\u518d\u8bd5",
-  "sign_in_dialog/placeholder/username": "\u624b\u673a/\u90ae\u7bb1/\u7528\u6237\u540d",
-  "sign_in_dialog/placeholder/password": "\u5bc6\u7801",
-  "sign_in_dialog/placeholder/code": "\u9a8c\u8bc1\u7801",
-  "sign_in_dialog/placeholder/password_n_tip": "\u5bc6\u7801\uff086-20\u4f4d\uff09",
-  "sign_in_dialog/placeholder/password_confirm": "\u518d\u6b21\u8f93\u5165\u5bc6\u7801",
-  "sign_in_dialog/placeholder/mobile_phone": "\u624b\u673a",
-  "sign_in_dialog/login": "\u767b\u5f55",
-  "sign_in_dialog/register": "\u6ce8\u518c",
-  "sign_in_dialog/btn_code": "\u83b7\u53d6\u9a8c\u8bc1\u7801",
-  "sign_in_dialog/login_now": "\u7acb\u5373\u767b\u5f55",
-  "sign_in_dialog/register_now": "\u7acb\u5373\u6ce8\u518c",
-  "sign_in_dialog/sign_in_with_password": "\u5bc6\u7801\u767b\u5f55",
-  "sign_in_dialog/sign_in_with_sms": "\u77ed\u4fe1\u767b\u5f55",
-  "sign_in_dialog/find_password": "\u627e\u56de\u5bc6\u7801",
-  "sign_in_dialog/sign_up_account": "\u8d26\u53f7\u6ce8\u518c",
-  "sign_in_dialog/new_user_sign_up": "\u65b0\u7528\u6237\u6ce8\u518c",
-  "sign_in_dialog/back_to_login": "\u8fd4\u56de\u767b\u5f55",
-  "sign_in_dialog/reset_password": "\u91cd\u7f6e\u5bc6\u7801",
-  "sign_in_dialog/reset_password_tip": "\u8bf7\u91cd\u7f6e\u4f60\u7684\u65b0\u5bc6\u7801",
-  "sign_in_dialog/finish": "\u5b8c\u6210",
-  "sign_in_dialog/forget_password/verify": "\u9a8c\u8bc1\u8eab\u4efd\u540e\uff0c\u53ef\u91cd\u7f6e\u5bc6\u7801",
-  "sign_in_dialog/next": "\u4e0b\u4e00\u6b65",
-  "sign_in_dialog/forget_password/success": "\u5bc6\u7801\u91cd\u7f6e\u6210\u529f",
-  "sign_in_dialog/forget_password/login_notice": "\u5feb\u53bb\u767b\u5f55\u4f60\u7684\u8d26\u53f7\u5427",
-  "sign_in_dialog/go_to_login": "\u53bb\u767b\u5f55",
-  "sign_in_dialog/register/success": "\u6ce8\u518c\u6210\u529f",
-  "sign_in_dialog/register/account_login": "\u5df2\u7ecf\u4e3a\u4f60\u767b\u5f55\u8d26\u53f7",
-  "sign_in_dialog/register/confirm": "\u786e\u5b9a",
-  "sign_in_dialog/phone_bound_by_other_account": "\u8be5\u624b\u673a\u53f7\u5df2\u7ed1\u5b9a\u5176\u4ed6\u5e10\u53f7",
-  "sign_in_dialog/bind_phone": "\u7ed1\u5b9a\u624b\u673a\u53f7",
-  "sign_in_dialog/phone_bind/verify": "\u90e8\u5206\u9ad8\u7ea7\u529f\u80fd\u9700\u7ed1\u5b9a\u624b\u673a\u540e\u4f7f\u7528"
+  "sign_in_dialog/error/password_confirm/not_same": "两次输入的密码不一致，请重新输入",
+  "sign_in_dialog/error/phone/unregisterd": "手机号未注册，",
+  "sign_in_dialog/error/other/acc_or_pwd": "用户名或密码不正确",
+  "sign_in_dialog/error/phone/registered": "手机号已注册，",
+  "sign_in_dialog/error/phone/format": "手机格式不正确",
+  "sign_in_dialog/error/password/format": "请输入6-20位密码",
+  "sign_in_dialog/error/sms_code/fail": "验证码错误，请重新输入",
+  "sign_in_dialog/error/sms_code/frequent_resend": "发送验证码过于频繁，请稍后重试",
+  "sign_in_dialog/error/other/network": "网络连接出错了,请稍后再试",
+  "sign_in_dialog/placeholder/username": "手机/邮箱/用户名",
+  "sign_in_dialog/placeholder/password": "密码",
+  "sign_in_dialog/placeholder/code": "验证码",
+  "sign_in_dialog/placeholder/password_n_tip": "密码（6-20位）",
+  "sign_in_dialog/placeholder/password_confirm": "再次输入密码",
+  "sign_in_dialog/placeholder/mobile_phone": "手机",
+  "sign_in_dialog/login": "登录",
+  "sign_in_dialog/register": "注册",
+  "sign_in_dialog/btn_code": "获取验证码",
+  "sign_in_dialog/login_now": "立即登录",
+  "sign_in_dialog/register_now": "立即注册",
+  "sign_in_dialog/sign_in_with_password": "密码登录",
+  "sign_in_dialog/sign_in_with_sms": "短信登录",
+  "sign_in_dialog/find_password": "找回密码",
+  "sign_in_dialog/sign_up_account": "账号注册",
+  "sign_in_dialog/new_user_sign_up": "新用户注册",
+  "sign_in_dialog/back_to_login": "返回登录",
+  "sign_in_dialog/reset_password": "重置密码",
+  "sign_in_dialog/reset_password_tip": "请重置你的新密码",
+  "sign_in_dialog/finish": "完成",
+  "sign_in_dialog/forget_password/verify": "验证身份后，可重置密码",
+  "sign_in_dialog/next": "下一步",
+  "sign_in_dialog/forget_password/success": "密码重置成功",
+  "sign_in_dialog/forget_password/login_notice": "快去登录你的账号吧",
+  "sign_in_dialog/go_to_login": "去登录",
+  "sign_in_dialog/register/success": "注册成功",
+  "sign_in_dialog/register/account_login": "已经为你登录账号",
+  "sign_in_dialog/register/confirm": "确定",
+  "sign_in_dialog/phone_bound_by_other_account": "该手机号已绑定其他帐号",
+  "sign_in_dialog/bind_phone": "绑定手机号",
+  "sign_in_dialog/phone_bind/verify": "部分高级功能需绑定手机后使用"
 };
 var qe = {
   "sign_in_dialog/error/password_confirm/not_same": "The two passwords did not match",
@@ -1622,45 +1622,45 @@ var qe = {
   "sign_in_dialog/phone_bind/verify": "Some advanced features need to be bound to the phone before use"
 };
 var Xe = {
-  "sign_in_dialog/error/password_confirm/not_same": "\u5169\u6b21\u8f38\u5165\u7684\u5bc6\u78bc\u4e0d\u4e00\u81f4\uff0c\u8acb\u91cd\u65b0\u8f38\u5165",
-  "sign_in_dialog/error/phone/unregisterd": "\u624b\u6a5f\u865f\u672a\u8a3b\u518a\uff0c",
-  "sign_in_dialog/error/other/acc_or_pwd": "\u7528\u6236\u540d\u6216\u5bc6\u78bc\u4e0d\u6b63\u78ba",
-  "sign_in_dialog/error/phone/registered": "\u624b\u6a5f\u865f\u5df2\u8a3b\u518a\uff0c",
-  "sign_in_dialog/error/phone/format": "\u624b\u6a5f\u683c\u5f0f\u4e0d\u6b63\u78ba",
-  "sign_in_dialog/error/password/format": "\u8acb\u8f38\u51656-20\u4f4d\u5bc6\u78bc",
-  "sign_in_dialog/error/sms_code/fail": "\u9a57\u8b49\u78bc\u932f\u8aa4\uff0c\u8acb\u91cd\u65b0\u8f38\u5165",
-  "sign_in_dialog/error/sms_code/frequent_resend": "\u767c\u9001\u9a57\u8b49\u78bc\u904e\u65bc\u983b\u7e41\uff0c\u8acb\u7a0d\u5f8c\u91cd\u8a66",
-  "sign_in_dialog/error/other/network": "\u7db2\u7d61\u9023\u63a5\u51fa\u932f\u4e86,\u8acb\u7a0d\u5f8c\u518d\u8a66",
-  "sign_in_dialog/placeholder/username": "\u624b\u6a5f/\u90f5\u7bb1/\u7528\u6236\u540d",
-  "sign_in_dialog/placeholder/password": "\u5bc6\u78bc",
-  "sign_in_dialog/placeholder/code": "\u9a57\u8b49\u78bc",
-  "sign_in_dialog/placeholder/password_n_tip": "\u5bc6\u78bc\uff086-20\u4f4d\uff09",
-  "sign_in_dialog/placeholder/password_confirm": "\u518d\u6b21\u8f38\u5165\u5bc6\u78bc",
-  "sign_in_dialog/placeholder/mobile_phone": "\u624b\u6a5f",
-  "sign_in_dialog/login": "\u767b\u9304",
-  "sign_in_dialog/register": "\u8a3b\u518a",
-  "sign_in_dialog/btn_code": "\u7372\u53d6\u9a57\u8b49\u78bc",
-  "sign_in_dialog/login_now": "\u7acb\u5373\u767b\u9304",
-  "sign_in_dialog/register_now": "\u7acb\u5373\u8a3b\u518a",
-  "sign_in_dialog/sign_in_with_password": "\u5bc6\u78bc\u767b\u9304",
-  "sign_in_dialog/sign_in_with_sms": "\u77ed\u4fe1\u767b\u9304",
-  "sign_in_dialog/find_password": "\u627e\u56de\u5bc6\u78bc",
-  "sign_in_dialog/sign_up_account": "\u8cec\u865f\u8a3b\u518a",
-  "sign_in_dialog/new_user_sign_up": "\u65b0\u7528\u6236\u8a3b\u518a",
-  "sign_in_dialog/back_to_login": "\u8fd4\u56de\u767b\u9304",
-  "sign_in_dialog/reset_password": "\u91cd\u7f6e\u5bc6\u78bc",
-  "sign_in_dialog/reset_password_tip": "\u8acb\u91cd\u7f6e\u4f60\u7684\u65b0\u5bc6\u78bc",
-  "sign_in_dialog/finish": "\u5b8c\u6210",
-  "sign_in_dialog/forget_password/verify": "\u9a57\u8b49\u8eab\u4efd\u5f8c\uff0c\u53ef\u91cd\u7f6e\u5bc6\u78bc",
-  "sign_in_dialog/next": "\u4e0b\u4e00\u6b65",
-  "sign_in_dialog/forget_password/success": "\u5bc6\u78bc\u91cd\u7f6e\u6210\u529f",
-  "sign_in_dialog/go_to_login": "\u53bb\u767b\u9304",
-  "sign_in_dialog/register/success": "\u8a3b\u518a\u6210\u529f",
-  "sign_in_dialog/register/account_login": "\u5df2\u7d93\u70ba\u4f60\u767b\u9304\u8cec\u865f",
-  "sign_in_dialog/register/confirm": "\u78ba\u5b9a",
-  "sign_in_dialog/phone_bound_by_other_account": "\u8a72\u624b\u6a5f\u865f\u5df2\u7d81\u5b9a\u5176\u4ed6\u5e33\u865f",
-  "sign_in_dialog/bind_phone": "\u7d81\u5b9a\u624b\u6a5f\u865f",
-  "sign_in_dialog/phone_bind/verify": "\u90e8\u5206\u9ad8\u7d1a\u529f\u80fd\u9700\u7d81\u5b9a\u624b\u6a5f\u5f8c\u4f7f\u7528"
+  "sign_in_dialog/error/password_confirm/not_same": "兩次輸入的密碼不一致，請重新輸入",
+  "sign_in_dialog/error/phone/unregisterd": "手機號未註冊，",
+  "sign_in_dialog/error/other/acc_or_pwd": "用戶名或密碼不正確",
+  "sign_in_dialog/error/phone/registered": "手機號已註冊，",
+  "sign_in_dialog/error/phone/format": "手機格式不正確",
+  "sign_in_dialog/error/password/format": "請輸入6-20位密碼",
+  "sign_in_dialog/error/sms_code/fail": "驗證碼錯誤，請重新輸入",
+  "sign_in_dialog/error/sms_code/frequent_resend": "發送驗證碼過於頻繁，請稍後重試",
+  "sign_in_dialog/error/other/network": "網絡連接出錯了,請稍後再試",
+  "sign_in_dialog/placeholder/username": "手機/郵箱/用戶名",
+  "sign_in_dialog/placeholder/password": "密碼",
+  "sign_in_dialog/placeholder/code": "驗證碼",
+  "sign_in_dialog/placeholder/password_n_tip": "密碼（6-20位）",
+  "sign_in_dialog/placeholder/password_confirm": "再次輸入密碼",
+  "sign_in_dialog/placeholder/mobile_phone": "手機",
+  "sign_in_dialog/login": "登錄",
+  "sign_in_dialog/register": "註冊",
+  "sign_in_dialog/btn_code": "獲取驗證碼",
+  "sign_in_dialog/login_now": "立即登錄",
+  "sign_in_dialog/register_now": "立即註冊",
+  "sign_in_dialog/sign_in_with_password": "密碼登錄",
+  "sign_in_dialog/sign_in_with_sms": "短信登錄",
+  "sign_in_dialog/find_password": "找回密碼",
+  "sign_in_dialog/sign_up_account": "賬號註冊",
+  "sign_in_dialog/new_user_sign_up": "新用戶註冊",
+  "sign_in_dialog/back_to_login": "返回登錄",
+  "sign_in_dialog/reset_password": "重置密碼",
+  "sign_in_dialog/reset_password_tip": "請重置你的新密碼",
+  "sign_in_dialog/finish": "完成",
+  "sign_in_dialog/forget_password/verify": "驗證身份後，可重置密碼",
+  "sign_in_dialog/next": "下一步",
+  "sign_in_dialog/forget_password/success": "密碼重置成功",
+  "sign_in_dialog/go_to_login": "去登錄",
+  "sign_in_dialog/register/success": "註冊成功",
+  "sign_in_dialog/register/account_login": "已經為你登錄賬號",
+  "sign_in_dialog/register/confirm": "確定",
+  "sign_in_dialog/phone_bound_by_other_account": "該手機號已綁定其他帳號",
+  "sign_in_dialog/bind_phone": "綁定手機號",
+  "sign_in_dialog/phone_bind/verify": "部分高級功能需綁定手機後使用"
 };
 var Qe = {};
 function Ze(e) {
@@ -2094,22 +2094,22 @@ var lt = function __importDefault(module) {
 }(st || (st = {}));
 var ut;
 var dt = [{
-  label: "\u7528\u6237\u534f\u8bae",
+  label: "用户协议",
   link: "https://static-platform.codemao.cn/926/protocols/7KeVbBdw_userserviceProtocol.html"
 }, {
-  label: "\u9690\u79c1\u534f\u8bae",
+  label: "隐私协议",
   link: "https://static-platform.codemao.cn/926/protocols/7KeVbBdw_privacyProtocol.html"
 }, {
-  label: "\u513f\u7ae5\u9690\u79c1\u4fdd\u62a4\u534f\u8bae",
+  label: "儿童隐私保护协议",
   link: "https://static-platform.codemao.cn/926/protocols/7KeVbBdw_childrenPrivacyProtectProtocol.html"
 }, {
-  label: "\u4e2a\u4eba\u4fe1\u606f\u4fdd\u62a4\u653f\u7b56\u6458\u8981",
+  label: "个人信息保护政策摘要",
   link: "https://static-platform.codemao.cn/926/protocols/7KeVbBdw_informationProtectionPolicySummary.html"
 }, {
-  label: "\u4e2a\u4eba\u4fe1\u606f\u6536\u96c6\u6e05\u5355",
+  label: "个人信息收集清单",
   link: "https://static-platform.codemao.cn/926/protocols/7KeVbBdw_informationCollectionList.html"
 }, {
-  label: "\u4e2a\u4eba\u4fe1\u606f\u5171\u4eab\u6e05\u5355",
+  label: "个人信息共享清单",
   link: "https://static-platform.codemao.cn/926/protocols/7KeVbBdw_informationSharingList.html"
 }];
 var pt = Object(f.memo)(function (e) {
@@ -2447,7 +2447,7 @@ var Rt = function () {
       className: Nt.a.headPhoto,
       style: {
         zIndex: a.length - t,
-        backgroundImage: 'url("'.concat(e.avatar_url, '")'),
+        backgroundImage: "url(\"".concat(e.avatar_url, "\")"),
         borderColor: n.get(e.id)
       }
     });
@@ -2461,7 +2461,7 @@ var Rt = function () {
   }, h.a.createElement("div", {
     className: Nt.a.headPhoto,
     style: {
-      backgroundImage: 'url("'.concat(a[0].avatar_url, '")'),
+      backgroundImage: "url(\"".concat(a[0].avatar_url, "\")"),
       borderColor: n.get(a[0].id)
     }
   }), h.a.createElement("div", {
@@ -2565,7 +2565,7 @@ var Mt = h.a.memo(function () {
     }, h.a.createElement("div", {
       className: Nt.a.headPhoto,
       style: {
-        backgroundImage: 'url("'.concat(e.avatar_url, '")')
+        backgroundImage: "url(\"".concat(e.avatar_url, "\")")
       }
     })));
   }), n.length > 3 && h.a.createElement(ee.a, {
@@ -2588,7 +2588,7 @@ var Mt = h.a.memo(function () {
       }, h.a.createElement("div", {
         className: Nt.a.headPhoto,
         style: {
-          backgroundImage: 'url("'.concat(e.avatar_url, '")')
+          backgroundImage: "url(\"".concat(e.avatar_url, "\")")
         }
       }))), h.a.createElement("div", {
         className: Nt.a.itemName
@@ -2760,11 +2760,11 @@ var Ft = h.a.memo(function () {
                   id: "know"
                 }),
                 title: "",
-                content: h.a.createElement("div", null, "\u4f5c\u54c1\u4f7f\u7528\u4e86\u672a\u5ba1\u6838\u7684\u81ea\u5b9a\u4e49\u63a7\u4ef6\uff0c\u9700\u5c06\u63a7\u4ef6\u63d0\u4ea4\u81f3", h.a.createElement("a", {
+                content: h.a.createElement("div", null, "作品使用了未审核的自定义控件，需将控件提交至", h.a.createElement("a", {
                   href: te.b,
                   target: "__blank",
                   rel: "noopener noreferrer"
-                }, "Coco\u63a7\u4ef6\u5546\u57ce-\u6295\u7a3f"), "\uff0c\u5e76\u7b49\u5f85\u5ba1\u6838\u901a\u8fc7\u540e\u624d\u80fd\u8fdb\u884c\u534f\u4f5c\u3002"),
+                }, "Coco控件商城-投稿"), "，并等待审核通过后才能进行协作。"),
                 cancelBtnVisible: !1
               }));
               return e.abrupt("return");
@@ -2791,9 +2791,9 @@ var Ft = h.a.memo(function () {
               }
               y(!1);
               m(Object(Y.zh)({
-                allowText: "\u786e\u5b9a",
-                title: "\u63d0\u793a",
-                content: "\u4f5c\u54c1\u4e2d\u542b\u6709\u4e91\u6570\u636e\u5e93\u63a7\u4ef6\uff0c\u6682\u65f6\u65e0\u6cd5\u534f\u4f5c",
+                allowText: "确定",
+                title: "提示",
+                content: "作品中含有云数据库控件，暂时无法协作",
                 cancelBtnVisible: !1
               }));
               return e.abrupt("return");
@@ -3068,7 +3068,7 @@ var Ft = h.a.memo(function () {
     type: "primary",
     onClick: function () {
       var e = document.createElement("input");
-      var t = T === K.c.Edit ? "".concat(G(), " \u70b9\u51fb\u94fe\u63a5\uff0c\u4e00\u8d77\u8fdb\u5165\u300a").concat(n, "\u300b\u7684\u534f\u540c\u521b\u4f5c\u5427~") : "".concat(G(), " \u70b9\u51fb\u94fe\u63a5\uff0c\u67e5\u770b\u300a").concat(n, "\u300b\u7684\u4f5c\u54c1\u5185\u5bb9\u5427~");
+      var t = T === K.c.Edit ? "".concat(G(), " 点击链接，一起进入《").concat(n, "》的协同创作吧~") : "".concat(G(), " 点击链接，查看《").concat(n, "》的作品内容吧~");
       e.setAttribute("value", t);
       document.body.append(e);
       e.select();
@@ -3148,7 +3148,7 @@ var Ut = h.a.memo(function () {
   }), Object(Z.a)(e) && h.a.createElement(kt, null));
 });
 var Wt = require("./197/index");
-var Ht = require("./133");
+var Ht = require("./133/index");
 var Vt = require("./463");
 var zt = require("./198");
 var Yt = function __importDefault(module) {
@@ -3867,12 +3867,12 @@ var tn = Object(f.memo)(function () {
     }
   }, h.a.createElement("div", {
     className: N()(en.a.packageInfoItem, en.a.packageAppId)
-  }, "APP ID\uff1acom.codemao.coco.apk_", I, h.a.createElement(z.j, {
+  }, "APP ID：com.codemao.coco.apk_", I, h.a.createElement(z.j, {
     type: "icon-copy",
     className: en.a.copyIcon
   }))), h.a.createElement("div", {
     className: en.a.packageInfoItem
-  }, "Version Code\uff1a", w.version))), h.a.createElement("div", {
+  }, "Version Code：", w.version))), h.a.createElement("div", {
     className: en.a.qrCodeWrapper
   }, y && h.a.createElement("div", {
     className: en.a.qrcode
@@ -3887,13 +3887,13 @@ var tn = Object(f.memo)(function () {
   }), p && h.a.createElement("div", {
     className: en.a.mask,
     onClick: k
-  }, "\u4e8c\u7ef4\u7801\u5df2\u8fc7\u671f", h.a.createElement("br", null), "\u82e5\u9700\u626b\u7801\uff0c\u8bf7\u91cd\u65b0\u6253\u5305")), h.a.createElement("p", {
+  }, "二维码已过期", h.a.createElement("br", null), "若需扫码，请重新打包")), h.a.createElement("p", {
     className: en.a.apkText
   }, " ", t({
     id: "package.apkText"
   })), w.expireTime && h.a.createElement("p", {
     className: en.a.apkText
-  }, "\uff08\u4e8c\u7ef4\u7801\u4ec5", Math.round(w.expireTime / 60), "\u5206\u949f\u5185\u6709\u6548\uff09")), h.a.createElement("div", {
+  }, "（二维码仅", Math.round(w.expireTime / 60), "分钟内有效）")), h.a.createElement("div", {
     className: en.a.footerWrapper
   }, h.a.createElement("div", {
     className: en.a.footerBtn,
@@ -4111,7 +4111,7 @@ var hn = Object(f.memo)(function (e) {
                 break;
               }
               p(Object(Y.mj)({
-                message: "\u5206\u4eab\u5931\u8d25\uff0c\u4f5c\u54c1\u4f7f\u7528\u4e86\u672a\u5ba1\u6838\u7684\u81ea\u5b9a\u4e49\u63a7\u4ef6",
+                message: "分享失败，作品使用了未审核的自定义控件",
                 type: "error"
               }));
               l(!1);
@@ -4140,7 +4140,7 @@ var hn = Object(f.memo)(function (e) {
     Object(be.a)("WorkPublish", {
       workId: o,
       workName: e.name,
-      workType: "APP\u5de5\u5320",
+      workType: "APP工匠",
       workDescription: e.description,
       sourceTag: w.tag,
       sourceId: w.id,
@@ -4366,7 +4366,7 @@ var bn = function (e) {
               break;
             }
             c(Object(Y.mj)({
-              message: "\u5206\u4eab\u5931\u8d25\uff0c\u4f5c\u54c1\u4f7f\u7528\u4e86\u672a\u5ba1\u6838\u7684\u81ea\u5b9a\u4e49\u63a7\u4ef6",
+              message: "分享失败，作品使用了未审核的自定义控件",
               type: "error"
             }));
             k(!1);
@@ -4700,8 +4700,8 @@ var yn = function (e) {
                 content: c({
                   id: "Play.widgetNotSupportsForbiddenKeywords"
                 }, {
-                  widgetTypeNames: Array.from(r).join("\u3001"),
-                  keywords: Array.from(o).join("\u3001")
+                  widgetTypeNames: Array.from(r).join("、"),
+                  keywords: Array.from(o).join("、")
                 }),
                 cancelBtnVisible: !1
               }));
@@ -4722,11 +4722,11 @@ var yn = function (e) {
                   id: "know"
                 }),
                 title: "",
-                content: h.a.createElement("div", null, "\u4f5c\u54c1\u4f7f\u7528\u4e86\u672a\u5ba1\u6838\u7684\u81ea\u5b9a\u4e49\u63a7\u4ef6\uff0c\u9700\u5c06\u63a7\u4ef6\u63d0\u4ea4\u81f3", h.a.createElement("a", {
+                content: h.a.createElement("div", null, "作品使用了未审核的自定义控件，需将控件提交至", h.a.createElement("a", {
                   href: te.b,
                   target: "__blank",
                   rel: "noopener noreferrer"
-                }, "Coco\u63a7\u4ef6\u5546\u57ce-\u6295\u7a3f"), "\uff0c\u5e76\u7b49\u5f85\u5ba1\u6838\u901a\u8fc7\u540e\u624d\u80fd\u8fdb\u884c\u5206\u4eab\u3002"),
+                }, "Coco控件商城-投稿"), "，并等待审核通过后才能进行分享。"),
                 cancelBtnVisible: !1
               }));
               return e.abrupt("return");
@@ -5754,9 +5754,9 @@ var Ln = h.a.memo(function (e) {
     if (oe.preventLeave === K.j.Show) {
       window.onbeforeunload = function (e) {
         if (e) {
-          e.returnValue = "\u4f60\u8981\u79bb\u5f00\u7f51\u9875\u5417\uff1f";
+          e.returnValue = "你要离开网页吗？";
         }
-        return "\u4f60\u8981\u79bb\u5f00\u7f51\u9875\u5417\uff1f";
+        return "你要离开网页吗？";
       };
     } else {
       window.onbeforeunload = function () {};
@@ -6195,7 +6195,7 @@ var Ln = h.a.memo(function (e) {
     }
   }), h.a.createElement(In, null));
 });
-var Pn = require("./204");
+var Pn = require("animejs");
 var Bn = require("./90");
 var Fn = require("./729/index");
 var Gn = require("./68");
@@ -6321,7 +6321,7 @@ var Yn = h.a.memo(function () {
         id: (null === l || void 0 === l ? void 0 : l.title) || (null === l || void 0 === l ? void 0 : l.previewAreaWidgetTitle)
       });
       if (u) {
-        n += "\u3010".concat(u, "\u3011");
+        n += "【".concat(u, "】");
       }
     }
     if (s) {
@@ -6637,7 +6637,7 @@ function Tr(e) {
   var a = "px";
   if ("string" === typeof t) {
     var s = /^[+-]?\d*(?:\.\d*)?(px|%)$/.exec(t);
-    rr()(null !== s, 'lockOffset value should be a number or a string of a number followed by "px" or "%". Given %s', t);
+    rr()(null !== s, "lockOffset value should be a number or a string of a number followed by \"px\" or \"%\". Given %s", t);
     o = parseFloat(t);
     i = parseFloat(t);
     a = s[1];
@@ -8318,7 +8318,7 @@ var ho = Object(f.memo)(function () {
       var o = n.get("title");
       var i = t({
         id: "deleteScreen"
-      }) + "\u201c" + Object(ve.f)(o, 10) + "\u201d?";
+      }) + "“" + Object(ve.f)(o, 10) + "”?";
       x(Object(Y.zh)({
         onClose: B,
         onConfirm: F,
@@ -8895,14 +8895,14 @@ var Yo = [{
   open: "(",
   close: ")"
 }, {
-  open: '"',
-  close: '"'
+  open: "\"",
+  close: "\""
 }, {
   open: "'",
   close: "'"
 }, {
-  open: '\\"',
-  close: '\\"'
+  open: "\\\"",
+  close: "\\\""
 }, {
   open: "\\'",
   close: "\\'"
@@ -9225,7 +9225,7 @@ function bi(e, t, n, r) {
 if ("undefined" !== typeof document) {
   document;
 }
-var yi = ['"', "'", '\\"', "\\'"];
+var yi = ["\"", "'", "\\\"", "\\'"];
 var Ei = {
   cm: function (e) {
     return 96 * e / 2.54;
@@ -11279,7 +11279,7 @@ function ls(e, t) {
   }, t);
 }
 function us(e, t) {
-  return 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="' + 32 * e + 'px" height="' + 32 * e + 'px" viewBox="0 0 32 32" ><path d="M 16,5 L 12,10 L 14.5,10 L 14.5,22 L 12,22 L 16,27 L 20,22 L 17.5,22 L 17.5,10 L 20, 10 L 16,5 Z" stroke-linejoin="round" stroke-width="1.2" fill="black" stroke="white" style="transform:rotate(' + t + 'deg);transform-origin: 16px 16px"></path></svg>';
+  return "data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"" + 32 * e + "px\" height=\"" + 32 * e + "px\" viewBox=\"0 0 32 32\" ><path d=\"M 16,5 L 12,10 L 14.5,10 L 14.5,22 L 12,22 L 16,27 L 20,22 L 17.5,22 L 17.5,10 L 20, 10 L 16,5 Z\" stroke-linejoin=\"round\" stroke-width=\"1.2\" fill=\"black\" stroke=\"white\" style=\"transform:rotate(" + t + "deg);transform-origin: 16px 16px\"></path></svg>";
 }
 var ds = Uo().browser.webkit;
 var ps = ds && function () {
@@ -11291,7 +11291,7 @@ var ps = ds && function () {
 }();
 var fs = "moveable-";
 var hs = "\n{\n\tposition: absolute;\n\twidth: 1px;\n\theight: 1px;\n\tleft: 0;\n\ttop: 0;\n    z-index: 3000;\n    --moveable-color: #4af;\n    --zoom: 1;\n    --zoompx: 1px;\n    will-change: transform;\n}\n.control-box {\n    z-index: 0;\n}\n.line, .control {\n    position: absolute;\n\tleft: 0;\n    top: 0;\n    will-change: transform;\n}\n.control {\n\twidth: 14px;\n\theight: 14px;\n\tborder-radius: 50%;\n\tborder: 2px solid #fff;\n\tbox-sizing: border-box;\n    background: #4af;\n    background: var(--moveable-color);\n\tmargin-top: -7px;\n    margin-left: -7px;\n    border: 2px solid #fff;\n    z-index: 10;\n}\n.padding {\n    position: absolute;\n    top: 0px;\n    left: 0px;\n    width: 100px;\n    height: 100px;\n    transform-origin: 0 0;\n}\n.line {\n\twidth: 1px;\n    height: 1px;\n    background: #4af;\n    background: var(--moveable-color);\n\ttransform-origin: 0px 50%;\n}\n.line.dashed {\n    box-sizing: border-box;\n    background: transparent;\n}\n.line.dashed.horizontal {\n    border-top: 1px dashed #4af;\n    border-top-color: #4af;\n    border-top-color: var(--moveable-color);\n}\n.line.dashed.vertical {\n    border-left: 1px dashed #4af;\n    border-left-color: #4af;\n    border-left-color: var(--moveable-color);\n}\n.line.vertical {\n    transform: translateX(-50%);\n}\n.line.horizontal {\n    transform: translateY(-50%);\n}\n.line.vertical.bold {\n    width: 2px;\n}\n.line.horizontal.bold {\n    height: 2px;\n}\n\n.control.origin {\n\tborder-color: #f55;\n\tbackground: #fff;\n\twidth: 12px;\n\theight: 12px;\n\tmargin-top: -6px;\n    margin-left: -6px;\n\tpointer-events: none;\n}\n" + [0, 15, 30, 45, 60, 75, 90, 105, 120, 135, 150, 165].map(function (e) {
-  return '\n.direction[data-rotation="' + e + '"] {\n\t' + function (e) {
+  return "\n.direction[data-rotation=\"" + e + "\"] {\n\t" + function (e) {
     var t = us(1, e);
     var n = us(2, e);
     var r = 45 * Math.round(e / 45) % 180;
@@ -11309,7 +11309,7 @@ var hs = "\n{\n\tposition: absolute;\n\twidth: 1px;\n\theight: 1px;\n\tleft: 0;\
     }
     return "cursor:" + o + ";cursor: url('" + t + "') 16 16, " + o + ";cursor: -webkit-image-set(url('" + t + "') 1x, url('" + n + "') 2x) 16 16, " + o + ";";
   }(e) + "\n}\n";
-}).join("\n") + "\n.group {\n    z-index: -1;\n}\n.area {\n    position: absolute;\n}\n.area-pieces {\n    position: absolute;\n    top: 0;\n    left: 0;\n    display: none;\n}\n.area.avoid, .area.pass {\n    pointer-events: none;\n}\n.area.avoid+.area-pieces {\n    display: block;\n}\n.area-piece {\n    position: absolute;\n}\n\n" + (ps ? ':global svg *:before {\n\tcontent:"";\n\ttransform-origin: inherit;\n}' : "") + "\n";
+}).join("\n") + "\n.group {\n    z-index: -1;\n}\n.area {\n    position: absolute;\n}\n.area-pieces {\n    position: absolute;\n    top: 0;\n    left: 0;\n    display: none;\n}\n.area.avoid, .area.pass {\n    pointer-events: none;\n}\n.area.avoid+.area-pieces {\n    display: block;\n}\n.area-piece {\n    position: absolute;\n}\n\n" + (ps ? ":global svg *:before {\n\tcontent:\"\";\n\ttransform-origin: inherit;\n}" : "") + "\n";
 var ms = [[0, 1, 2], [1, 0, 3], [2, 0, 3], [3, 1, 2]];
 var gs = Math.pow(10, 10);
 var _s = -gs;
@@ -20872,7 +20872,7 @@ var Sd = h.a.memo(function () {
         id: "StageToast.addActorToCanvasTips"
       });
       t(Object(Y.xj)(r));
-      var o = document.querySelectorAll('[data-widget-type="CANVAS_WIDGET"][data-role="WIDGET"]');
+      var o = document.querySelectorAll("[data-widget-type=\"CANVAS_WIDGET\"][data-role=\"WIDGET\"]");
       if (o) {
         o.forEach(function (e) {
           if (!e.classList.contains(n)) {
@@ -21314,7 +21314,7 @@ var Hd = Ud("guides");
 var Vd = Ud("guide");
 var zd = Ud("dragging");
 var Yd = Ud("display-drag");
-var Kd = Ho("scena-", '\n{\n    position: relative;\n    width: 100%;\n    height: 100%;\n}\ncanvas {\n    position: relative;\n}\n.guide-origin {\n    position: absolute;\n    width: 1px;\n    height: 1px;\n    top: 0;\n    left: 0;\n    opacity: 0;\n}\n.guides {\n    position: absolute;\n    top: 0;\n    left: 0;\n    will-change: transform;\n    z-index: 2000;\n}\n.display-drag {\n    position: absolute;\n    will-change: transform;\n    z-index: 2000;\n    font-weight: bold;\n    font-size: 12px;\n    display: none;\n    left: 20px;\n    top: -20px;\n    color: #f33;\n}\n:host.horizontal .guides {\n    width: 100%;\n    height: 0;\n    top: 30px;\n}\n:host.vertical .guides {\n    height: 100%;\n    width: 0;\n    left: 30px;\n}\n.guide {\n    position: absolute;\n    background: #f33;\n    z-index: 2;\n}\n.guide.dragging:before {\n    position: absolute;\n    content: "";\n    width: 100%;\n    height: 100%;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%, -50%);\n}\n:host.horizontal .guide {\n    width: 100%;\n    height: 1px;\n    cursor: row-resize;\n}\n:host.vertical .guide {\n    width: 1px;\n    height: 100%;\n    cursor: col-resize;\n}\n.mobile :host.horizontal .guide {\n    transform: scale(1, 2);\n}\n.mobile :host.vertical .guide {\n    transform: scale(2, 1);\n}\n:host.horizontal .guide:before {\n    height: 20px;\n}\n:host.vertical .guide:before {\n    width: 20px;\n}\n.adder {\n    display: none;\n}\n.adder.dragging {\n    display: block;\n}\n');
+var Kd = Ho("scena-", "\n{\n    position: relative;\n    width: 100%;\n    height: 100%;\n}\ncanvas {\n    position: relative;\n}\n.guide-origin {\n    position: absolute;\n    width: 1px;\n    height: 1px;\n    top: 0;\n    left: 0;\n    opacity: 0;\n}\n.guides {\n    position: absolute;\n    top: 0;\n    left: 0;\n    will-change: transform;\n    z-index: 2000;\n}\n.display-drag {\n    position: absolute;\n    will-change: transform;\n    z-index: 2000;\n    font-weight: bold;\n    font-size: 12px;\n    display: none;\n    left: 20px;\n    top: -20px;\n    color: #f33;\n}\n:host.horizontal .guides {\n    width: 100%;\n    height: 0;\n    top: 30px;\n}\n:host.vertical .guides {\n    height: 100%;\n    width: 0;\n    left: 30px;\n}\n.guide {\n    position: absolute;\n    background: #f33;\n    z-index: 2;\n}\n.guide.dragging:before {\n    position: absolute;\n    content: \"\";\n    width: 100%;\n    height: 100%;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%, -50%);\n}\n:host.horizontal .guide {\n    width: 100%;\n    height: 1px;\n    cursor: row-resize;\n}\n:host.vertical .guide {\n    width: 1px;\n    height: 100%;\n    cursor: col-resize;\n}\n.mobile :host.horizontal .guide {\n    transform: scale(1, 2);\n}\n.mobile :host.vertical .guide {\n    transform: scale(2, 1);\n}\n:host.horizontal .guide:before {\n    height: 20px;\n}\n:host.vertical .guide:before {\n    width: 20px;\n}\n.adder {\n    display: none;\n}\n.adder.dragging {\n    display: block;\n}\n");
 ["className", "rulerStyle", "snapThreshold", "snaps", "displayDragPos", "cspNonce", "dragPosFormat", "defaultGuides", "showGuides"].concat(kd);
 var qd = Bd("div", Kd);
 var Xd = function (e) {
@@ -21668,7 +21668,7 @@ var Xd = function (e) {
   };
   return t;
 }(f.PureComponent);
-var Qd = require("./458");
+var Qd = require("resize-observer-polyfill");
 var Zd = require("./1032");
 var Jd = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
@@ -21988,7 +21988,7 @@ var rp = h.a.memo(function () {
         var t = Object(Lt.Fb)(a);
         var n = Q({
           id: "deleteWidget"
-        }) + "\u201c" + Object(ve.f)(t, 10) + "\u201d?";
+        }) + "“" + Object(ve.f)(t, 10) + "”?";
         var o = Ot.z.checkFieldValueIsSelected("WIDGET_ID", a);
         var s = Ot.z.checkSomeFieldValueIsSelected("WIDGET_ID", Object(Lt.U)(a));
         if (o || s) {
@@ -22274,8 +22274,8 @@ var cp = [{
   type: "HorizontalAlign"
 }];
 var lp = require("./17/index");
-var up = require("./35/index");
-var dp = '<sep gap="50"></sep>';
+var up = require("./35");
+var dp = "<sep gap=\"50\"></sep>";
 var pp = require("./4/index");
 var fp = require("./46/index");
 var hp = require("./121/index");
@@ -22292,17 +22292,17 @@ var gp = {
     blocks: []
   },
   getTemplate: function (e) {
-    var t = '<field name="WIDGET_ID">'.concat(e, "</field>");
-    return ['<block type="text_widget_on_press" uncache="true">\n      '.concat(t, "\n    </block>"), dp, '<block type="text_widget_set_content" uncache="true">\n      '.concat(t, '\n      <value name="CONTENT">\n        <shadow type="text_multiline">\n          <field name="TEXT">').concat(lp.Blink.Msg.TEXT, "</field>\n        </shadow>\n      </value>\n    </block>"), '<block type="text_widget_set_color" uncache="true">\n      '.concat(t, '\n      <value name="COLOR">\n        <shadow type="color_picker"><field name="COLOR_PALETTE">').concat(ap.e, "</field></shadow>\n      </value>\n    </block>"), '<block type="text_widget_set_font_size" uncache="true">\n      '.concat(t, '\n      <value name="VALUE">\n        <shadow type="math_number">\n          <field name="NUM" constraints=\'').concat(cd.n, ",,1'>16</field>\n        </shadow>\n      </value>\n    </block>"), '<block type="text_widget_set_align" uncache="true">\n      '.concat(t, "\n    </block>"), dp, Object(up.sb)({
+    var t = "<field name=\"WIDGET_ID\">".concat(e, "</field>");
+    return ["<block type=\"text_widget_on_press\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), dp, "<block type=\"text_widget_set_content\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"CONTENT\">\n        <shadow type=\"text_multiline\">\n          <field name=\"TEXT\">").concat(lp.Blink.Msg.TEXT, "</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"text_widget_set_color\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"COLOR\">\n        <shadow type=\"color_picker\"><field name=\"COLOR_PALETTE\">").concat(ap.e, "</field></shadow>\n      </value>\n    </block>"), "<block type=\"text_widget_set_font_size\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"VALUE\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='").concat(cd.n, ",,1'>16</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"text_widget_set_align\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), dp, Object(up.sb)({
       property: "__opacity",
       widgetType: Wn.H,
       widgetId: e,
       isSetProperty: !0
-    }), '<block type="text_widget_set_size" uncache="true">\n      '.concat(t, '\n      <field name="SIZE_TYPE">height</field>\n      <value name="NUM">\n        <shadow type="math_number">\n          <field name="NUM" constraints=\'').concat(ap.l, ",").concat(ap.j, ",1'>100</field>\n        </shadow>\n      </value>\n    </block>"), '<block type="text_widget_set_position" uncache="true">\n        '.concat(t, '\n        <field name="POSITION_TYPE">positionX</field>\n        <value name="NUM">\n          <shadow type="math_number">\n            <field name="NUM" constraints=\',,1\'>100</field>\n          </shadow>\n        </value>\n    </block>'), '<block type="text_widget_set_visible" uncache="true">\n      '.concat(t, "\n    </block>"), dp, "<block type='text_widget_get_content' uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type='text_widget_get_color' uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type='text_widget_get_font_size' uncache=\"true\">\n      ".concat(t, "\n    </block>"), Object(up.sb)({
+    }), "<block type=\"text_widget_set_size\" uncache=\"true\">\n      ".concat(t, "\n      <field name=\"SIZE_TYPE\">height</field>\n      <value name=\"NUM\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='").concat(ap.l, ",").concat(ap.j, ",1'>100</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"text_widget_set_position\" uncache=\"true\">\n        ".concat(t, "\n        <field name=\"POSITION_TYPE\">positionX</field>\n        <value name=\"NUM\">\n          <shadow type=\"math_number\">\n            <field name=\"NUM\" constraints=',,1'>100</field>\n          </shadow>\n        </value>\n    </block>"), "<block type=\"text_widget_set_visible\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), dp, "<block type='text_widget_get_content' uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type='text_widget_get_color' uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type='text_widget_get_font_size' uncache=\"true\">\n      ".concat(t, "\n    </block>"), Object(up.sb)({
       property: "__opacity",
       widgetType: Wn.H,
       widgetId: e
-    }), '<block type="text_widget_get_size" uncache="true">\n      '.concat(t, '\n      <field name="SIZE_TYPE">height</field>\n    </block>'), '<block type="text_widget_get_position" uncache="true">\n      '.concat(t, '\n      <field name="POSITION_TYPE">positionX</field>\n    </block>'), dp, Object(up.sb)({
+    }), "<block type=\"text_widget_get_size\" uncache=\"true\">\n      ".concat(t, "\n      <field name=\"SIZE_TYPE\">height</field>\n    </block>"), "<block type=\"text_widget_get_position\" uncache=\"true\">\n      ".concat(t, "\n      <field name=\"POSITION_TYPE\">positionX</field>\n    </block>"), dp, Object(up.sb)({
       property: "__visible",
       widgetType: Wn.H,
       widgetId: e
@@ -23114,17 +23114,17 @@ var Fp = {
     blocks: []
   },
   getTemplate: function (e) {
-    var t = '<field name="WIDGET_ID">'.concat(e, "</field>");
-    return ['<block type="button_on_press" uncache="true">\n        '.concat(t, "\n      </block>"), mp.d, '<block type="button_set_content" uncache="true">\n        '.concat(t, '\n        <value name="CONTENT">\n          <shadow type="text">\n            <field name="TEXT">').concat(lp.Blink.Msg.BUTTON_DEFAULT_TEXT, "</field>\n          </shadow>\n        </value>\n      </block>"), '<block type="button_set_mode" uncache="true">\n        '.concat(t, '\n        <field name="MODE">').concat(Bp.b.CONTAINED_TEXT, "</field>\n      </block>"), '<block type="button_set_color" uncache="true">\n        '.concat(t, '\n        <value name="COLOR">\n          <shadow type="button_field_color"></shadow>\n        </value>\n      </block>'), Object(up.sb)({
+    var t = "<field name=\"WIDGET_ID\">".concat(e, "</field>");
+    return ["<block type=\"button_on_press\" uncache=\"true\">\n        ".concat(t, "\n      </block>"), mp.d, "<block type=\"button_set_content\" uncache=\"true\">\n        ".concat(t, "\n        <value name=\"CONTENT\">\n          <shadow type=\"text\">\n            <field name=\"TEXT\">").concat(lp.Blink.Msg.BUTTON_DEFAULT_TEXT, "</field>\n          </shadow>\n        </value>\n      </block>"), "<block type=\"button_set_mode\" uncache=\"true\">\n        ".concat(t, "\n        <field name=\"MODE\">").concat(Bp.b.CONTAINED_TEXT, "</field>\n      </block>"), "<block type=\"button_set_color\" uncache=\"true\">\n        ".concat(t, "\n        <value name=\"COLOR\">\n          <shadow type=\"button_field_color\"></shadow>\n        </value>\n      </block>"), Object(up.sb)({
       property: "__opacity",
       widgetType: Wn.d,
       widgetId: e,
       isSetProperty: !0
-    }), '<block type="button_set_size_type" uncache="true">\n        '.concat(t, '\n        <field name="SIZE_TYPE">').concat(Bp.c.MEDIUM, "</field>\n      </block>"), '<block type="button_set_position" uncache="true">\n        '.concat(t, '\n        <field name="POSITION_TYPE">positionX</field>\n        <value name="NUM">\n          <shadow type="math_number">\n            <field name="NUM" constraints=\'').concat(-Kn.a, ",").concat(Kn.a, ",1'>100</field>\n          </shadow>\n        </value>\n    </block>"), mp.d, '<block type="button_set_visible" uncache="true">\n        '.concat(t, "\n      </block>"), '<block type="button_set_disabled" uncache="true">\n        '.concat(t, "\n      </block>"), mp.d, '<block type="button_get_content" uncache="true">\n    '.concat(t, "\n    </block>"), '<block type="button_get_color" uncache="true">\n      '.concat(t, "\n    </block>"), Object(up.sb)({
+    }), "<block type=\"button_set_size_type\" uncache=\"true\">\n        ".concat(t, "\n        <field name=\"SIZE_TYPE\">").concat(Bp.c.MEDIUM, "</field>\n      </block>"), "<block type=\"button_set_position\" uncache=\"true\">\n        ".concat(t, "\n        <field name=\"POSITION_TYPE\">positionX</field>\n        <value name=\"NUM\">\n          <shadow type=\"math_number\">\n            <field name=\"NUM\" constraints='").concat(-Kn.a, ",").concat(Kn.a, ",1'>100</field>\n          </shadow>\n        </value>\n    </block>"), mp.d, "<block type=\"button_set_visible\" uncache=\"true\">\n        ".concat(t, "\n      </block>"), "<block type=\"button_set_disabled\" uncache=\"true\">\n        ".concat(t, "\n      </block>"), mp.d, "<block type=\"button_get_content\" uncache=\"true\">\n    ".concat(t, "\n    </block>"), "<block type=\"button_get_color\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), Object(up.sb)({
       property: "__opacity",
       widgetType: Wn.d,
       widgetId: e
-    }), '<block type="button_get_position" uncache="true">\n      '.concat(t, '\n      <field name="POSITION_TYPE">positionX</field>\n    </block>'), mp.d, Object(up.sb)({
+    }), "<block type=\"button_get_position\" uncache=\"true\">\n      ".concat(t, "\n      <field name=\"POSITION_TYPE\">positionX</field>\n    </block>"), mp.d, Object(up.sb)({
       property: "__visible",
       widgetType: Wn.d,
       widgetId: e
@@ -23552,12 +23552,12 @@ var $p = {
     blocks: []
   },
   getTemplate: function (e) {
-    var t = '<field name="WIDGET_ID">'.concat(e, "</field>");
-    return ['<block type="input_on_focus" uncache="true">\n        '.concat(t, "\n      </block>"), '<block type="input_on_blur" uncache="true">\n        '.concat(t, "\n      </block>"), '<block type="input_on_change" uncache="true">\n        '.concat(t, "\n      </block>"), '<sep gap="50"></sep>', Object(up.cb)({
+    var t = "<field name=\"WIDGET_ID\">".concat(e, "</field>");
+    return ["<block type=\"input_on_focus\" uncache=\"true\">\n        ".concat(t, "\n      </block>"), "<block type=\"input_on_blur\" uncache=\"true\">\n        ".concat(t, "\n      </block>"), "<block type=\"input_on_change\" uncache=\"true\">\n        ".concat(t, "\n      </block>"), "<sep gap=\"50\"></sep>", Object(up.cb)({
       widgetType: Wn.w,
-      title: "\u6587\u6848",
+      title: "文案",
       lineId: "text"
-    }), '<block type="input_set_content" uncache="true">\n    '.concat(t, '\n    <value name="CONTENT">\n      <shadow type="text">\n        <field name="TEXT">').concat(lp.Blink.Msg.INPUT_DEFAULT_VALUE, "</field>\n      </shadow>\n    </value>\n  </block>"), Object(up.sb)({
+    }), "<block type=\"input_set_content\" uncache=\"true\">\n    ".concat(t, "\n    <value name=\"CONTENT\">\n      <shadow type=\"text\">\n        <field name=\"TEXT\">").concat(lp.Blink.Msg.INPUT_DEFAULT_VALUE, "</field>\n      </shadow>\n    </value>\n  </block>"), Object(up.sb)({
       property: "contentColor",
       widgetType: Wn.w,
       widgetId: e,
@@ -23574,7 +23574,7 @@ var $p = {
       isSetProperty: !0
     }), Object(up.cb)({
       widgetType: Wn.w,
-      title: "\u6837\u5f0f",
+      title: "样式",
       lineId: "style"
     }), Object(up.qb)({
       property: "setTemplateMode",
@@ -23586,7 +23586,7 @@ var $p = {
       widgetId: e
     }), Object(up.cb)({
       widgetType: Wn.w,
-      title: "\u901a\u7528",
+      title: "通用",
       lineId: "common"
     }), Object(up.sb)({
       property: "__opacity",
@@ -23598,11 +23598,11 @@ var $p = {
       widgetType: Wn.w,
       widgetId: e,
       isSetProperty: !0
-    }), '<block type="input_set_position" uncache="true">\n        '.concat(t, '\n        <field name="POSITION_TYPE">positionX</field>\n        <value name="NUM">\n          <shadow type="math_number">\n            <field name="NUM" constraints=\',,1\'>100</field>\n          </shadow>\n        </value>\n    </block>'), '<block type="input_set_visible" uncache="true">\n        '.concat(t, '\n        <field name="VISIBLE">show</field>\n      </block>'), '<block type="input_set_disabled" uncache="true">\n        '.concat(t, '\n        <field name="DISABLE">disabled</field>\n      </block>'), '<block type="input_set_error_message" uncache="true">\n      '.concat(t, '\n      <field name="OPEN">open</field>\n        <value name="CONTENT">\n          <shadow type="text">\n            <field name="TEXT">').concat(lp.Blink.Msg.INPUT_DEFAULT_ERROR_MESSAGE, "</field>\n          </shadow>\n        </value>\n      </block>"), '<sep gap="50"></sep>', Object(up.cb)({
+    }), "<block type=\"input_set_position\" uncache=\"true\">\n        ".concat(t, "\n        <field name=\"POSITION_TYPE\">positionX</field>\n        <value name=\"NUM\">\n          <shadow type=\"math_number\">\n            <field name=\"NUM\" constraints=',,1'>100</field>\n          </shadow>\n        </value>\n    </block>"), "<block type=\"input_set_visible\" uncache=\"true\">\n        ".concat(t, "\n        <field name=\"VISIBLE\">show</field>\n      </block>"), "<block type=\"input_set_disabled\" uncache=\"true\">\n        ".concat(t, "\n        <field name=\"DISABLE\">disabled</field>\n      </block>"), "<block type=\"input_set_error_message\" uncache=\"true\">\n      ".concat(t, "\n      <field name=\"OPEN\">open</field>\n        <value name=\"CONTENT\">\n          <shadow type=\"text\">\n            <field name=\"TEXT\">").concat(lp.Blink.Msg.INPUT_DEFAULT_ERROR_MESSAGE, "</field>\n          </shadow>\n        </value>\n      </block>"), "<sep gap=\"50\"></sep>", Object(up.cb)({
       widgetType: Wn.w,
-      title: "\u8fd4\u56de\u503c",
+      title: "返回值",
       lineId: "getter"
-    }), '<block type="input_get_text" uncache="true">\n        '.concat(t, "\n      </block>"), Object(up.sb)({
+    }), "<block type=\"input_get_text\" uncache=\"true\">\n        ".concat(t, "\n      </block>"), Object(up.sb)({
       property: "errorMessage",
       widgetType: Wn.w,
       widgetId: e
@@ -23622,7 +23622,7 @@ var $p = {
       property: "__size",
       widgetType: Wn.w,
       widgetId: e
-    }), '<block type="input_get_position" uncache="true">\n        '.concat(t, '\n        <field name="POSITION_TYPE">positionX</field>\n      </block>'), '<sep gap="50"></sep>', Object(up.sb)({
+    }), "<block type=\"input_get_position\" uncache=\"true\">\n        ".concat(t, "\n        <field name=\"POSITION_TYPE\">positionX</field>\n      </block>"), "<sep gap=\"50\"></sep>", Object(up.sb)({
       property: "hasErrorMessage",
       widgetType: Wn.w,
       widgetId: e
@@ -24314,8 +24314,8 @@ var lf = {
     blocks: []
   },
   getTemplate: function (e) {
-    var t = '<field name="WIDGET_ID">'.concat(e, "</field>");
-    return ['<block type="image_on_press" uncache="true">\n      '.concat(t, "\n    </block>"), mp.d, '<block type="image_set_file_id" uncache="true">\n      '.concat(t, '\n      <value name="IMAGE_FILE_ID_SHADOW">\n        <shadow type="image_file_list_dropdown"> <field name="IMAGE_FILE_ID">').concat(mp.c, "</field></shadow>\n      </value>\n    </block>"), Object(up.sb)({
+    var t = "<field name=\"WIDGET_ID\">".concat(e, "</field>");
+    return ["<block type=\"image_on_press\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), mp.d, "<block type=\"image_set_file_id\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"IMAGE_FILE_ID_SHADOW\">\n        <shadow type=\"image_file_list_dropdown\"> <field name=\"IMAGE_FILE_ID\">").concat(mp.c, "</field></shadow>\n      </value>\n    </block>"), Object(up.sb)({
       property: "backgroundColor",
       widgetType: Wn.v,
       widgetId: e,
@@ -24325,7 +24325,7 @@ var lf = {
       widgetType: Wn.v,
       widgetId: e,
       isSetProperty: !0
-    }), '<block type="image_set_size" uncache="true">\n      '.concat(t, '\n      <field name="SIZE_TYPE">height</field>\n      <value name="NUM">\n        <shadow type="math_number">\n          <field name="NUM" constraints=\'0,,1\'>100</field>\n        </shadow>\n      </value>\n    </block>'), '<block type="image_set_position" uncache="true">\n      '.concat(t, '\n      <field name="POSITION_TYPE">positionX</field>\n      <value name="NUM">\n        <shadow type="math_number">\n          <field name="NUM" constraints=\',,1\'>100</field>\n        </shadow>\n      </value>\n    </block>'), '<block type="image_set_visible" uncache="true">\n      '.concat(t, '\n      <field name="VISIBLE">show</field>\n    </block>'), mp.d, '<block type="image_get_file_id" uncache="true">\n      '.concat(t, "\n    </block>"), Object(up.sb)({
+    }), "<block type=\"image_set_size\" uncache=\"true\">\n      ".concat(t, "\n      <field name=\"SIZE_TYPE\">height</field>\n      <value name=\"NUM\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='0,,1'>100</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"image_set_position\" uncache=\"true\">\n      ".concat(t, "\n      <field name=\"POSITION_TYPE\">positionX</field>\n      <value name=\"NUM\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints=',,1'>100</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"image_set_visible\" uncache=\"true\">\n      ".concat(t, "\n      <field name=\"VISIBLE\">show</field>\n    </block>"), mp.d, "<block type=\"image_get_file_id\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), Object(up.sb)({
       property: "backgroundColor",
       widgetType: Wn.v,
       widgetId: e
@@ -24333,7 +24333,7 @@ var lf = {
       property: "__opacity",
       widgetType: Wn.v,
       widgetId: e
-    }), '<block type="image_get_size" uncache="true">\n      '.concat(t, '\n      <field name="SIZE_TYPE">height</field>\n    </block>'), '<block type="image_get_position" uncache="true">\n      '.concat(t, '\n      <field name="POSITION_TYPE">positionX</field>\n    </block>'), mp.d, Object(up.sb)({
+    }), "<block type=\"image_get_size\" uncache=\"true\">\n      ".concat(t, "\n      <field name=\"SIZE_TYPE\">height</field>\n    </block>"), "<block type=\"image_get_position\" uncache=\"true\">\n      ".concat(t, "\n      <field name=\"POSITION_TYPE\">positionX</field>\n    </block>"), mp.d, Object(up.sb)({
       property: "__visible",
       widgetType: Wn.v,
       widgetId: e
@@ -24732,13 +24732,13 @@ var Ef = {
     blocks: Wn.C
   },
   getTemplate: function (e) {
-    var t = '<field name="WIDGET_ID">'.concat(e, "</field>");
-    return ['<block type="radio_on_select" uncache="true">\n      '.concat(t, "\n    </block>"), mp.d, '<block type="radio_set_headline" uncache="true">\n      '.concat(t, '\n      <value name="HEADLINE">\n        <shadow type="text">\n          <field name="TEXT"></field>\n        </shadow>\n      </value>\n    </block>'), '<block type="radio_set_option_count" uncache="true">\n      '.concat(t, '\n      <value name="COUNT">\n        <shadow type="math_number">\n          <field name="NUM" constraints=\'', 1, ",", 8, ",1'>4</field>\n        </shadow>\n      </value>\n    </block>"), '<block type="radio_set_option_content" uncache="true">\n      '.concat(t, '\n      <value name="INDEX">\n        <shadow type="math_number">\n          <field name="NUM" constraints=\'', 1, ",", 8, ',1\'>1</field>\n        </shadow>\n      </value>\n      <value name="CONTENT">\n        <shadow type="text">\n          <field name="TEXT"></field>\n        </shadow>\n      </value>\n    </block>'), '<block type="radio_set_option_selected_or_disabled" uncache="true">\n      <field name="STATE">selected</field>\n      '.concat(t, '\n      <value name="INDEX">\n        <shadow type="math_number">\n          <field name="NUM" constraints=\'', 1, ",", 8, ",1'>1</field>\n        </shadow>\n      </value>\n    </block>"), '<block type="radio_clear_selected" uncache="true">\n      '.concat(t, "\n    </block>"), '<block type="radio_set_option_feedback" uncache="true">\n      '.concat(t, '\n      <value name="INDEX">\n        <shadow type="math_number">\n          <field name="NUM" constraints=\'', 1, ",", 8, ',1\'>1</field>\n        </shadow>\n      </value>\n      <field name="STATE">correct</field>\n    </block>'), '<block type="radio_clear_feedback" uncache="true">\n      '.concat(t, "\n    </block>"), '<block type="radio_delete_option" uncache="true">\n      '.concat(t, '\n      <value name="INDEX">\n        <shadow type="math_number">\n          <field name="NUM" constraints=\'', 1, ",", 8, ",1'>1</field>\n        </shadow>\n      </value>\n    </block>"), '<block type="radio_push_option" uncache="true">\n      <value name="CONTENT">\n        <shadow type="text">\n          <field name="TEXT"></field>\n        </shadow>\n      </value>\n      '.concat(t, "\n    </block>"), Object(up.sb)({
+    var t = "<field name=\"WIDGET_ID\">".concat(e, "</field>");
+    return ["<block type=\"radio_on_select\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), mp.d, "<block type=\"radio_set_headline\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"HEADLINE\">\n        <shadow type=\"text\">\n          <field name=\"TEXT\"></field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"radio_set_option_count\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"COUNT\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='", 1, ",", 8, ",1'>4</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"radio_set_option_content\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"INDEX\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='", 1, ",", 8, ",1'>1</field>\n        </shadow>\n      </value>\n      <value name=\"CONTENT\">\n        <shadow type=\"text\">\n          <field name=\"TEXT\"></field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"radio_set_option_selected_or_disabled\" uncache=\"true\">\n      <field name=\"STATE\">selected</field>\n      ".concat(t, "\n      <value name=\"INDEX\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='", 1, ",", 8, ",1'>1</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"radio_clear_selected\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"radio_set_option_feedback\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"INDEX\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='", 1, ",", 8, ",1'>1</field>\n        </shadow>\n      </value>\n      <field name=\"STATE\">correct</field>\n    </block>"), "<block type=\"radio_clear_feedback\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"radio_delete_option\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"INDEX\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='", 1, ",", 8, ",1'>1</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"radio_push_option\" uncache=\"true\">\n      <value name=\"CONTENT\">\n        <shadow type=\"text\">\n          <field name=\"TEXT\"></field>\n        </shadow>\n      </value>\n      ".concat(t, "\n    </block>"), Object(up.sb)({
       property: "__opacity",
       widgetType: Wn.C,
       widgetId: e,
       isSetProperty: !0
-    }), '<block type="radio_set_position" uncache="true">\n      <value name="NUM">\n        <shadow type="math_number">\n          <field name="NUM" constraints=\',,1\'>100</field>\n        </shadow>\n      </value>\n      '.concat(t, "\n    </block>"), mp.d, '<block type="radio_set_visible" uncache="true">\n      '.concat(t, "\n    </block>"), '<block type="radio_set_disabled" uncache="true">\n      '.concat(t, "\n    </block>"), mp.d, '<block type="radio_get_selected_option_index" uncache="true">\n      '.concat(t, "\n    </block>"), '<block type="radio_get_selected_option_content" uncache="true">\n      '.concat(t, "\n    </block>"), '<block type="radio_get_option_content_by_index" uncache="true">\n      '.concat(t, '\n      <value name="INDEX">\n        <shadow type="math_number">\n          <field name="NUM" constraints=\'', 1, ",", 8, ",1'>1</field>\n        </shadow>\n      </value>\n    </block>"), '<block type="radio_get_headline" uncache="true">\n      '.concat(t, "\n    </block>"), '<block type="widget_get">\n      <mutation property="optionCount" widget_type="'.concat(Wn.C, '"></mutation>\n      <field name="WIDGET_ID">').concat(e, "</field>\n    </block>"), '<block type="widget_get">\n      <mutation property="__position" widget_type="'.concat(Wn.C, '"></mutation>\n      <field name="WIDGET_ID">').concat(e, "</field>\n    </block>"), Object(up.sb)({
+    }), "<block type=\"radio_set_position\" uncache=\"true\">\n      <value name=\"NUM\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints=',,1'>100</field>\n        </shadow>\n      </value>\n      ".concat(t, "\n    </block>"), mp.d, "<block type=\"radio_set_visible\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"radio_set_disabled\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), mp.d, "<block type=\"radio_get_selected_option_index\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"radio_get_selected_option_content\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"radio_get_option_content_by_index\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"INDEX\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='", 1, ",", 8, ",1'>1</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"radio_get_headline\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"widget_get\">\n      <mutation property=\"optionCount\" widget_type=\"".concat(Wn.C, "\"></mutation>\n      <field name=\"WIDGET_ID\">").concat(e, "</field>\n    </block>"), "<block type=\"widget_get\">\n      <mutation property=\"__position\" widget_type=\"".concat(Wn.C, "\"></mutation>\n      <field name=\"WIDGET_ID\">").concat(e, "</field>\n    </block>"), Object(up.sb)({
       property: "__opacity",
       widgetType: Wn.C,
       widgetId: e
@@ -24903,12 +24903,12 @@ var Ef = {
           name: "INDEX",
           align: "CENTRE",
           check: ["Number"],
-          default_shadow: '<shadow type="radio_on_select_index" />'
+          default_shadow: "<shadow type=\"radio_on_select_index\" />"
         }, {
           type: "input_value",
           name: "CONTENT",
           align: "CENTRE",
-          default_shadow: '<shadow type="radio_on_select_content" />'
+          default_shadow: "<shadow type=\"radio_on_select_content\" />"
         }, {
           type: "input_dummy",
           align: "CENTRE"
@@ -25287,13 +25287,13 @@ var Af = {
     blocks: Wn.g
   },
   getTemplate: function (e) {
-    var t = '<field name="WIDGET_ID">'.concat(e, "</field>");
-    return ['<block type="checkbox_on_select" uncache="true">\n      '.concat(t, "\n    </block>"), '<block type="checkbox_on_change" uncache="true">\n    '.concat(t, "\n  </block>"), mp.d, '<block type="checkbox_set_headline" uncache="true">\n      '.concat(t, '\n      <value name="HEADLINE">\n        <shadow type="text">\n          <field name="TEXT"></field>\n        </shadow>\n      </value>\n    </block>'), mp.d, '<block type="checkbox_set_option_count" uncache="true">\n      '.concat(t, '\n      <value name="COUNT">\n        <shadow type="math_number">\n          <field name="NUM" constraints=\'', 1, ",", 8, ",1'>4</field>\n        </shadow>\n      </value>\n    </block>"), '<block type="checkbox_set_option_content" uncache="true">\n      '.concat(t, '\n      <value name="INDEX">\n        <shadow type="math_number">\n          <field name="NUM" constraints=\'', 1, ",", 8, ',1\'>1</field>\n        </shadow>\n      </value>\n      <value name="CONTENT">\n        <shadow type="text">\n          <field name="TEXT"></field>\n        </shadow>\n      </value>\n    </block>'), '<block type="checkbox_set_option_state" uncache="true">\n      <field name="STATE">selected</field>\n      '.concat(t, '\n      <value name="INDEX">\n        <shadow type="math_number">\n          <field name="NUM" constraints=\'', 1, ",", 8, ",1'>1</field>\n        </shadow>\n      </value>\n    </block>"), '<block type="checkbox_clear_selected" uncache="true">\n      '.concat(t, "\n    </block>"), mp.d, '<block type="checkbox_set_option_feedback" uncache="true">\n      '.concat(t, '\n      <value name="INDEX">\n        <shadow type="math_number">\n          <field name="NUM" constraints=\'', 1, ",", 8, ',1\'>1</field>\n        </shadow>\n      </value>\n      <field name="STATE">correct</field>\n    </block>'), '<block type="checkbox_clear_feedback" uncache="true">\n      '.concat(t, "\n    </block>"), mp.d, '<block type="checkbox_delete_option" uncache="true">\n      '.concat(t, '\n      <value name="INDEX">\n        <shadow type="math_number">\n          <field name="NUM" constraints=\'', 1, ",", 8, ",1'>1</field>\n        </shadow>\n      </value>\n    </block>"), '<block type="checkbox_push_option" uncache="true">\n      <value name="CONTENT">\n        <shadow type="text">\n          <field name="TEXT"></field>\n        </shadow>\n      </value>\n      '.concat(t, "\n    </block>"), Object(up.sb)({
+    var t = "<field name=\"WIDGET_ID\">".concat(e, "</field>");
+    return ["<block type=\"checkbox_on_select\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"checkbox_on_change\" uncache=\"true\">\n    ".concat(t, "\n  </block>"), mp.d, "<block type=\"checkbox_set_headline\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"HEADLINE\">\n        <shadow type=\"text\">\n          <field name=\"TEXT\"></field>\n        </shadow>\n      </value>\n    </block>"), mp.d, "<block type=\"checkbox_set_option_count\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"COUNT\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='", 1, ",", 8, ",1'>4</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"checkbox_set_option_content\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"INDEX\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='", 1, ",", 8, ",1'>1</field>\n        </shadow>\n      </value>\n      <value name=\"CONTENT\">\n        <shadow type=\"text\">\n          <field name=\"TEXT\"></field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"checkbox_set_option_state\" uncache=\"true\">\n      <field name=\"STATE\">selected</field>\n      ".concat(t, "\n      <value name=\"INDEX\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='", 1, ",", 8, ",1'>1</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"checkbox_clear_selected\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), mp.d, "<block type=\"checkbox_set_option_feedback\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"INDEX\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='", 1, ",", 8, ",1'>1</field>\n        </shadow>\n      </value>\n      <field name=\"STATE\">correct</field>\n    </block>"), "<block type=\"checkbox_clear_feedback\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), mp.d, "<block type=\"checkbox_delete_option\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"INDEX\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='", 1, ",", 8, ",1'>1</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"checkbox_push_option\" uncache=\"true\">\n      <value name=\"CONTENT\">\n        <shadow type=\"text\">\n          <field name=\"TEXT\"></field>\n        </shadow>\n      </value>\n      ".concat(t, "\n    </block>"), Object(up.sb)({
       property: "__opacity",
       widgetType: Wn.g,
       widgetId: e,
       isSetProperty: !0
-    }), '<block type="checkbox_set_position" uncache="true">\n      <value name="NUM">\n        <shadow type="math_number">\n          <field name="NUM" constraints=\',,1\'>100</field>\n        </shadow>\n      </value>\n      '.concat(t, "\n    </block>"), mp.d, '<block type="checkbox_set_visible" uncache="true">\n      '.concat(t, "\n    </block>"), '<block type="checkbox_set_disabled" uncache="true">\n      '.concat(t, "\n    </block>"), mp.d, '<block type="checkbox_get_selected_option_index" uncache="true">\n      '.concat(t, "\n    </block>"), '<block type="checkbox_get_selected_option_content" uncache="true">\n      '.concat(t, "\n    </block>"), '<block type="checkbox_get_option_content_by_index" uncache="true">\n      '.concat(t, '\n      <value name="INDEX">\n        <shadow type="math_number">\n          <field name="NUM" constraints=\'', 1, ",", 8, ",1'>1</field>\n        </shadow>\n      </value>\n    </block>"), '<block type="checkbox_get_headline" uncache="true">\n      '.concat(t, "\n    </block>"), '<block type="widget_get">\n      <mutation property="optionCount" widget_type="'.concat(Wn.g, '"></mutation>\n      <field name="WIDGET_ID">').concat(e, "</field>\n    </block>"), '<block type="widget_get">\n      <mutation property="__position" widget_type="'.concat(Wn.g, '"></mutation>\n      <field name="WIDGET_ID">').concat(e, "</field>\n    </block>"), Object(up.sb)({
+    }), "<block type=\"checkbox_set_position\" uncache=\"true\">\n      <value name=\"NUM\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints=',,1'>100</field>\n        </shadow>\n      </value>\n      ".concat(t, "\n    </block>"), mp.d, "<block type=\"checkbox_set_visible\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"checkbox_set_disabled\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), mp.d, "<block type=\"checkbox_get_selected_option_index\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"checkbox_get_selected_option_content\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"checkbox_get_option_content_by_index\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"INDEX\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='", 1, ",", 8, ",1'>1</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"checkbox_get_headline\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"widget_get\">\n      <mutation property=\"optionCount\" widget_type=\"".concat(Wn.g, "\"></mutation>\n      <field name=\"WIDGET_ID\">").concat(e, "</field>\n    </block>"), "<block type=\"widget_get\">\n      <mutation property=\"__position\" widget_type=\"".concat(Wn.g, "\"></mutation>\n      <field name=\"WIDGET_ID\">").concat(e, "</field>\n    </block>"), Object(up.sb)({
       property: "__opacity",
       widgetType: Wn.g,
       widgetId: e
@@ -25492,12 +25492,12 @@ var Af = {
           type: "input_value",
           name: "INDEX",
           align: "CENTRE",
-          default_shadow: '<shadow type="checkbox_on_select_index" />'
+          default_shadow: "<shadow type=\"checkbox_on_select_index\" />"
         }, {
           type: "input_value",
           name: "CONTENT",
           align: "CENTRE",
-          default_shadow: '<shadow type="checkbox_on_select_content" />'
+          default_shadow: "<shadow type=\"checkbox_on_select_content\" />"
         }, {
           type: "input_dummy",
           align: "CENTRE"
@@ -25533,13 +25533,13 @@ var Af = {
           type: "input_value",
           name: "INDEX",
           align: "CENTRE",
-          default_shadow: '<shadow type="checkbox_on_change_index" />'
+          default_shadow: "<shadow type=\"checkbox_on_change_index\" />"
         }, {
           type: "input_value",
           name: "RESULT",
           align: "CENTRE",
           check: "Boolean",
-          default_shadow: '<shadow type="checkbox_on_change_result" />'
+          default_shadow: "<shadow type=\"checkbox_on_change_result\" />"
         }, {
           type: "input_dummy",
           align: "CENTRE"
@@ -25888,13 +25888,13 @@ var Lf = {
     blocks: Wn.L
   },
   getTemplate: function (e) {
-    var t = '<field name="WIDGET_ID">'.concat(e, "</field>");
-    return ['<block type="webview_on_start_load" uncache="true">\n      '.concat(t, "\n    </block>"), '<block type="webview_on_load" uncache="true">\n      '.concat(t, "\n    </block>"), '<block type="webview_on_load_error" uncache="true">\n      '.concat(t, "\n    </block>"), mp.d, '<block type="webview_set_url" uncache="true">\n      '.concat(t, '\n      <value name="VALUE">\n        <shadow type="text">\n          <field name="TEXT"></field>\n        </shadow>\n      </value>\n    </block>'), Object(up.sb)({
+    var t = "<field name=\"WIDGET_ID\">".concat(e, "</field>");
+    return ["<block type=\"webview_on_start_load\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"webview_on_load\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"webview_on_load_error\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), mp.d, "<block type=\"webview_set_url\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"VALUE\">\n        <shadow type=\"text\">\n          <field name=\"TEXT\"></field>\n        </shadow>\n      </value>\n    </block>"), Object(up.sb)({
       property: "__opacity",
       widgetType: Wn.L,
       widgetId: e,
       isSetProperty: !0
-    }), '<block type="webview_refresh" uncache="true">\n      '.concat(t, "\n    </block>"), mp.d, '<block type="webview_set_visible" uncache="true">\n    '.concat(t, "\n    </block>"), '<block type="webview_set_disabled" uncache="true">\n      '.concat(t, "\n    </block>"), mp.d, '<block type="webview_get_url" uncache="true">\n      '.concat(t, "\n    </block>"), Object(up.sb)({
+    }), "<block type=\"webview_refresh\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), mp.d, "<block type=\"webview_set_visible\" uncache=\"true\">\n    ".concat(t, "\n    </block>"), "<block type=\"webview_set_disabled\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), mp.d, "<block type=\"webview_get_url\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), Object(up.sb)({
       property: "__opacity",
       widgetType: Wn.L,
       widgetId: e
@@ -26190,8 +26190,8 @@ var Hf = {
     blocks: Wn.F
   },
   getTemplate: function (e) {
-    var t = '<field name="WIDGET_ID">'.concat(e, "</field>");
-    return ['<block type="switch_on_change" uncache="true">\n      '.concat(t, "\n    </block>"), mp.d, '<block type="switch_set_state" uncache="true">\n      '.concat(t, '\n      <value name="STATE_WRAPPER">\n        <shadow type="switch_state_dropdown"></shadow>\n      </value>\n    </block>'), mp.d, Object(up.sb)({
+    var t = "<field name=\"WIDGET_ID\">".concat(e, "</field>");
+    return ["<block type=\"switch_on_change\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), mp.d, "<block type=\"switch_set_state\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"STATE_WRAPPER\">\n        <shadow type=\"switch_state_dropdown\"></shadow>\n      </value>\n    </block>"), mp.d, Object(up.sb)({
       property: "__opacity",
       widgetType: Wn.F,
       widgetId: e,
@@ -26201,7 +26201,7 @@ var Hf = {
       widgetType: Wn.F,
       widgetId: e,
       isSetProperty: !0
-    }), '<block type="switch_set_position" uncache="true">\n      '.concat(t, '\n      <value name="NUM">\n        <shadow type="math_number">\n          <field name="NUM" constraints=\',,1\'>100</field>\n        </shadow>\n      </value>\n    </block>'), '<block type="switch_set_visible" uncache="true">\n    '.concat(t, "\n    </block>"), '<block type="switch_set_disabled" uncache="true">\n      '.concat(t, "\n    </block>"), mp.d, '<block type="switch_get_state" uncache="true">\n      '.concat(t, "\n    </block>"), Object(up.sb)({
+    }), "<block type=\"switch_set_position\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"NUM\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints=',,1'>100</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"switch_set_visible\" uncache=\"true\">\n    ".concat(t, "\n    </block>"), "<block type=\"switch_set_disabled\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), mp.d, "<block type=\"switch_get_state\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), Object(up.sb)({
       property: "__opacity",
       widgetType: Wn.F,
       widgetId: e
@@ -26209,7 +26209,7 @@ var Hf = {
       property: "__size",
       widgetType: Wn.F,
       widgetId: e
-    }), '<block type="switch_get_position" uncache="true">\n      '.concat(t, "\n    </block>"), mp.d, Object(up.sb)({
+    }), "<block type=\"switch_get_position\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), mp.d, Object(up.sb)({
       property: "__visible",
       widgetType: Wn.F,
       widgetId: e
@@ -26298,7 +26298,7 @@ var Hf = {
           type: "input_value",
           name: "STATE",
           align: "CENTRE",
-          default_shadow: '<shadow type="switch_on_change_state" />'
+          default_shadow: "<shadow type=\"switch_on_change_state\" />"
         }, {
           type: "input_dummy",
           align: "CENTRE"
@@ -26565,8 +26565,8 @@ var Zf = {
     blocks: Wn.E
   },
   getTemplate: function (e) {
-    var t = '<field name="WIDGET_ID">'.concat(e, "</field>");
-    return ['<block type="slider_on_change" uncache="true">\n      '.concat(t, "\n    </block>"), '<block type="slider_on_start_and_end" uncache="true">\n      '.concat(t, "\n    </block>"), mp.d, '<block type="slider_set_range_value" uncache="true">\n      '.concat(t, '\n      <value name="NUM">\n        <shadow type="math_number">\n          <field name="NUM" constraints=\'-').concat(Kn.a, ",").concat(Kn.a, ",1'>100</field>\n        </shadow>\n      </value>\n    </block>"), '<block type="slider_set_slide_value" uncache="true">\n      '.concat(t, '\n      <value name="NUM">\n        <shadow type="math_number">\n          <field name="NUM" constraints=\'-').concat(Kn.a, ",").concat(Kn.a, ",1'>100</field>\n        </shadow>\n      </value>\n    </block>"), mp.d, Object(up.sb)({
+    var t = "<field name=\"WIDGET_ID\">".concat(e, "</field>");
+    return ["<block type=\"slider_on_change\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"slider_on_start_and_end\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), mp.d, "<block type=\"slider_set_range_value\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"NUM\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='-").concat(Kn.a, ",").concat(Kn.a, ",1'>100</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"slider_set_slide_value\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"NUM\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='-").concat(Kn.a, ",").concat(Kn.a, ",1'>100</field>\n        </shadow>\n      </value>\n    </block>"), mp.d, Object(up.sb)({
       property: "__opacity",
       widgetType: Wn.E,
       widgetId: e,
@@ -26576,11 +26576,11 @@ var Zf = {
       widgetType: Wn.E,
       widgetId: e,
       isSetProperty: !0
-    }), '<block type="slider_set_position" uncache="true">\n      '.concat(t, '\n      <value name="NUM">\n        <shadow type="math_number">\n          <field name="NUM" constraints=\',,1\'>100</field>\n        </shadow>\n      </value>\n    </block>'), '<block type="slider_set_visible" uncache="true">\n    '.concat(t, "\n    </block>"), '<block type="slider_set_disabled" uncache="true">\n      '.concat(t, "\n    </block>"), mp.d, '<block type="slider_get_range_value" uncache="true">\n      '.concat(t, "\n    </block>"), '<block type="slider_get_slide_value" uncache="true">\n      '.concat(t, "\n    </block>"), Object(up.sb)({
+    }), "<block type=\"slider_set_position\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"NUM\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints=',,1'>100</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"slider_set_visible\" uncache=\"true\">\n    ".concat(t, "\n    </block>"), "<block type=\"slider_set_disabled\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), mp.d, "<block type=\"slider_get_range_value\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"slider_get_slide_value\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), Object(up.sb)({
       property: "__opacity",
       widgetType: Wn.E,
       widgetId: e
-    }), '<block type="slider_get_size" uncache="true">\n      '.concat(t, "\n    </block>"), '<block type="slider_get_position" uncache="true">\n      '.concat(t, "\n    </block>"), mp.d, Object(up.sb)({
+    }), "<block type=\"slider_get_size\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"slider_get_position\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), mp.d, Object(up.sb)({
       property: "__visible",
       widgetType: Wn.E,
       widgetId: e
@@ -26800,7 +26800,7 @@ var Zf = {
           name: "VALUE",
           align: "CENTRE",
           check: ["Number"],
-          default_shadow: '<shadow type="slider_on_change_value" />'
+          default_shadow: "<shadow type=\"slider_on_change_value\" />"
         }, {
           type: "input_dummy",
           align: "CENTRE"
@@ -26835,7 +26835,7 @@ var Zf = {
           name: "VALUE",
           align: "CENTRE",
           check: ["Number"],
-          default_shadow: '<shadow type="slider_on_start_and_end_value" />'
+          default_shadow: "<shadow type=\"slider_on_start_and_end_value\" />"
         }, {
           type: "input_dummy",
           align: "CENTRE"
@@ -27536,17 +27536,17 @@ var lh = {
     blocks: Wn.x
   },
   getTemplate: function (e) {
-    var t = '<field name="WIDGET_ID">'.concat(e, "</field>");
-    return ['<block type="list_viewer_on_press" uncache="true">\n      '.concat(t, "\n    </block>"), mp.d, Object(up.sb)({
+    var t = "<field name=\"WIDGET_ID\">".concat(e, "</field>");
+    return ["<block type=\"list_viewer_on_press\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), mp.d, Object(up.sb)({
       property: "__opacity",
       widgetType: Wn.x,
       widgetId: e,
       isSetProperty: !0
-    }), '<block type="list_viewer_set_size" uncache="true">\n      '.concat(t, '\n      <field name="SIZE_TYPE">height</field>\n      <value name="NUM">\n        <shadow type="math_number">\n          <field name="NUM" constraints=\'').concat(eh.l, ",").concat(eh.j, ",1'>100</field>\n        </shadow>\n      </value>\n    </block>"), '<block type="list_viewer_set_position" uncache="true">\n      '.concat(t, '\n      <field name="POSITION_TYPE">positionX</field>\n      <value name="NUM">\n        <shadow type="math_number">\n          <field name="NUM" constraints=\',,1\'>100</field>\n        </shadow>\n      </value>\n    </block>'), '<block type="list_viewer_set_data_source" uncache="true">\n      '.concat(t, '\n      <value name="DATA_SOURCE">\n        <shadow type="data_source_get"></shadow>\n      </value>\n    </block>'), '<block type="list_viewer_set_visible" uncache="true">\n      '.concat(t, "\n    </block>"), '<block type="list_viewer_set_disabled" uncache="true">\n      '.concat(t, "\n    </block>"), mp.d, Object(up.sb)({
+    }), "<block type=\"list_viewer_set_size\" uncache=\"true\">\n      ".concat(t, "\n      <field name=\"SIZE_TYPE\">height</field>\n      <value name=\"NUM\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='").concat(eh.l, ",").concat(eh.j, ",1'>100</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"list_viewer_set_position\" uncache=\"true\">\n      ".concat(t, "\n      <field name=\"POSITION_TYPE\">positionX</field>\n      <value name=\"NUM\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints=',,1'>100</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"list_viewer_set_data_source\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"DATA_SOURCE\">\n        <shadow type=\"data_source_get\"></shadow>\n      </value>\n    </block>"), "<block type=\"list_viewer_set_visible\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"list_viewer_set_disabled\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), mp.d, Object(up.sb)({
       property: "__opacity",
       widgetType: Wn.x,
       widgetId: e
-    }), '<block type="list_viewer_get_size" uncache="true">\n      '.concat(t, '\n      <field name="SIZE_TYPE">height</field>\n    </block>'), '<block type="list_viewer_get_position" uncache="true">\n      '.concat(t, '\n      <field name="POSITION_TYPE">positionX</field>\n    </block>'), '<block type="list_viewer_get_data_source" uncache="true">\n      '.concat(t, "\n    </block>"), mp.d, Object(up.sb)({
+    }), "<block type=\"list_viewer_get_size\" uncache=\"true\">\n      ".concat(t, "\n      <field name=\"SIZE_TYPE\">height</field>\n    </block>"), "<block type=\"list_viewer_get_position\" uncache=\"true\">\n      ".concat(t, "\n      <field name=\"POSITION_TYPE\">positionX</field>\n    </block>"), "<block type=\"list_viewer_get_data_source\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), mp.d, Object(up.sb)({
       property: "__visible",
       widgetType: Wn.x,
       widgetId: e
@@ -27554,7 +27554,7 @@ var lh = {
       property: "__disabled",
       widgetType: Wn.x,
       widgetId: e
-    }), mp.d, '<block type="list_viewer_child_widget_on_press" uncache="true">\n      '.concat(t, '\n      <field name="SLOT_WIDGET">').concat("titleSlot", "</field>\n    </block>"), mp.d, '<block type="list_viewer_child_widget_bind_column" uncache="true">\n      '.concat(t, '\n      <field name="SLOT_WIDGET">').concat("titleSlot", '</field>\n      <value name="COLUMN">\n        <shadow type="text">\n          <field name="TEXT"></field>\n        </shadow>\n      </value>\n    </block>'), '<block type="list_viewer_child_widget_set_string_attributes" uncache="true">\n      '.concat(t, '\n      <value name="ROW">\n        <shadow type="math_number">\n          <field name="NUM" constraints=\'1,,1\'>1</field>\n        </shadow>\n      </value>\n      <field name="SLOT_WIDGET">').concat("titleSlot", '</field>\n      <field name="ATTRIBUTES">').concat(mp.c, '</field>\n      <value name="VALUE">\n        <shadow type="text">\n          <field name="TEXT"></field>\n        </shadow>\n      </value>\n    </block>'), '<block type="list_viewer_child_widget_set_font_size" uncache="true">\n      '.concat(t, '\n      <value name="ROW">\n        <shadow type="math_number">\n          <field name="NUM" constraints=\'1,,1\'>1</field>\n        </shadow>\n      </value>\n      <field name="SLOT_WIDGET">').concat("titleSlot", '</field>\n      <value name="VALUE">\n        <shadow type="math_number"><field name="NUM" constraints="12,99,1">16</field></shadow>\n      </value>\n    </block>'), '<block type="list_viewer_child_widget_set_color_attributes" uncache="true">\n      '.concat(t, '\n      <value name="ROW">\n        <shadow type="math_number">\n          <field name="NUM" constraints=\'1,,1\'>1</field>\n        </shadow>\n      </value>\n      <field name="SLOT_WIDGET">').concat("titleSlot", '</field>\n      <field name="ATTRIBUTES">').concat(mp.c, '</field>\n      <value name="VALUE">\n      <shadow type="color_picker"><field name="COLOR_PALETTE">#000000</field></shadow>\n      </value>\n    </block>'), mp.d, '<block type="list_viewer_child_widget_get_string_attributes" uncache="true">\n      '.concat(t, '\n      <value name="ROW">\n        <shadow type="math_number">\n          <field name="NUM" constraints=\'1,,1\'>1</field>\n        </shadow>\n      </value>\n      <field name="SLOT_WIDGET">').concat("titleSlot", '</field>\n      <field name="ATTRIBUTES">').concat(mp.c, "</field>\n    </block>"), '<block type="list_viewer_child_widget_get_font_size" uncache="true">\n      '.concat(t, '\n      <value name="ROW">\n        <shadow type="math_number">\n          <field name="NUM" constraints=\'1,,1\'>1</field>\n        </shadow>\n      </value>\n      <field name="SLOT_WIDGET">').concat("titleSlot", "</field>\n    </block>"), '<block type="list_viewer_child_widget_get_color_attributes" uncache="true">\n      '.concat(t, '\n      <value name="ROW">\n        <shadow type="math_number">\n          <field name="NUM" constraints=\'1,,1\'>1</field>\n        </shadow>\n      </value>\n      <field name="SLOT_WIDGET">').concat("titleSlot", '</field>\n      <field name="ATTRIBUTES">').concat(mp.c, "</field>\n    </block>")];
+    }), mp.d, "<block type=\"list_viewer_child_widget_on_press\" uncache=\"true\">\n      ".concat(t, "\n      <field name=\"SLOT_WIDGET\">").concat("titleSlot", "</field>\n    </block>"), mp.d, "<block type=\"list_viewer_child_widget_bind_column\" uncache=\"true\">\n      ".concat(t, "\n      <field name=\"SLOT_WIDGET\">").concat("titleSlot", "</field>\n      <value name=\"COLUMN\">\n        <shadow type=\"text\">\n          <field name=\"TEXT\"></field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"list_viewer_child_widget_set_string_attributes\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"ROW\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='1,,1'>1</field>\n        </shadow>\n      </value>\n      <field name=\"SLOT_WIDGET\">").concat("titleSlot", "</field>\n      <field name=\"ATTRIBUTES\">").concat(mp.c, "</field>\n      <value name=\"VALUE\">\n        <shadow type=\"text\">\n          <field name=\"TEXT\"></field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"list_viewer_child_widget_set_font_size\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"ROW\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='1,,1'>1</field>\n        </shadow>\n      </value>\n      <field name=\"SLOT_WIDGET\">").concat("titleSlot", "</field>\n      <value name=\"VALUE\">\n        <shadow type=\"math_number\"><field name=\"NUM\" constraints=\"12,99,1\">16</field></shadow>\n      </value>\n    </block>"), "<block type=\"list_viewer_child_widget_set_color_attributes\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"ROW\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='1,,1'>1</field>\n        </shadow>\n      </value>\n      <field name=\"SLOT_WIDGET\">").concat("titleSlot", "</field>\n      <field name=\"ATTRIBUTES\">").concat(mp.c, "</field>\n      <value name=\"VALUE\">\n      <shadow type=\"color_picker\"><field name=\"COLOR_PALETTE\">#000000</field></shadow>\n      </value>\n    </block>"), mp.d, "<block type=\"list_viewer_child_widget_get_string_attributes\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"ROW\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='1,,1'>1</field>\n        </shadow>\n      </value>\n      <field name=\"SLOT_WIDGET\">").concat("titleSlot", "</field>\n      <field name=\"ATTRIBUTES\">").concat(mp.c, "</field>\n    </block>"), "<block type=\"list_viewer_child_widget_get_font_size\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"ROW\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='1,,1'>1</field>\n        </shadow>\n      </value>\n      <field name=\"SLOT_WIDGET\">").concat("titleSlot", "</field>\n    </block>"), "<block type=\"list_viewer_child_widget_get_color_attributes\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"ROW\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='1,,1'>1</field>\n        </shadow>\n      </value>\n      <field name=\"SLOT_WIDGET\">").concat("titleSlot", "</field>\n      <field name=\"ATTRIBUTES\">").concat(mp.c, "</field>\n    </block>")];
   },
   blockDeclareGroup: {
     setBlockGroupSnippet: function (e) {
@@ -27823,7 +27823,7 @@ var lh = {
           name: "INDEX",
           check: "String",
           align: "CENTRE",
-          default_shadow: '<shadow type="list_viewer_on_press_index" />'
+          default_shadow: "<shadow type=\"list_viewer_on_press_index\" />"
         }, {
           type: "input_dummy",
           align: "CENTRE"
@@ -27990,7 +27990,7 @@ var lh = {
           name: "INDEX",
           check: "Number",
           align: "CENTRE",
-          default_shadow: '<shadow type="list_viewer_child_widget_on_press_index" />'
+          default_shadow: "<shadow type=\"list_viewer_child_widget_on_press_index\" />"
         }, {
           type: "input_dummy",
           align: "CENTRE"
@@ -28441,13 +28441,13 @@ var _h = {
     blocks: Wn.A
   },
   getTemplate: function (e) {
-    var t = '<field name="WIDGET_ID">'.concat(e, "</field>");
-    return ['<block type="new_list_viewer_on_press" uncache="true">\n      '.concat(t, "\n    </block>"), '<block type="new_list_viewer_child_widget_on_press" uncache="true">\n      '.concat(t, '\n      <field name="SLOT_WIDGET">').concat("titleSlot", "</field>\n    </block>"), mp.d, '<block type="new_list_viewer_child_widget_set_color_attributes" uncache="true">\n      '.concat(t, '\n      <value name="ROW">\n        <shadow type="math_number">\n          <field name="NUM" constraints=\'1,,1\'>1</field>\n        </shadow>\n      </value>\n      <field name="SLOT_WIDGET">').concat("titleSlot", '</field>\n      <field name="ATTRIBUTES">').concat(mp.c, '</field>\n      <value name="VALUE">\n      <shadow type="color_picker"><field name="COLOR_PALETTE">#000000</field></shadow>\n      </value>\n    </block>'), mp.d, Object(up.sb)({
+    var t = "<field name=\"WIDGET_ID\">".concat(e, "</field>");
+    return ["<block type=\"new_list_viewer_on_press\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"new_list_viewer_child_widget_on_press\" uncache=\"true\">\n      ".concat(t, "\n      <field name=\"SLOT_WIDGET\">").concat("titleSlot", "</field>\n    </block>"), mp.d, "<block type=\"new_list_viewer_child_widget_set_color_attributes\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"ROW\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='1,,1'>1</field>\n        </shadow>\n      </value>\n      <field name=\"SLOT_WIDGET\">").concat("titleSlot", "</field>\n      <field name=\"ATTRIBUTES\">").concat(mp.c, "</field>\n      <value name=\"VALUE\">\n      <shadow type=\"color_picker\"><field name=\"COLOR_PALETTE\">#000000</field></shadow>\n      </value>\n    </block>"), mp.d, Object(up.sb)({
       property: "__opacity",
       widgetType: Wn.A,
       widgetId: e,
       isSetProperty: !0
-    }), '<block type="new_list_viewer_set_size" uncache="true">\n      '.concat(t, '\n      <field name="SIZE_TYPE">height</field>\n      <value name="NUM">\n        <shadow type="math_number">\n          <field name="NUM" constraints=\'').concat(dh.j, ",").concat(dh.h, ",1'>100</field>\n        </shadow>\n      </value>\n    </block>"), Object(up.sb)({
+    }), "<block type=\"new_list_viewer_set_size\" uncache=\"true\">\n      ".concat(t, "\n      <field name=\"SIZE_TYPE\">height</field>\n      <value name=\"NUM\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='").concat(dh.j, ",").concat(dh.h, ",1'>100</field>\n        </shadow>\n      </value>\n    </block>"), Object(up.sb)({
       property: "__position",
       widgetType: Wn.A,
       widgetId: e,
@@ -28462,11 +28462,11 @@ var _h = {
       widgetType: Wn.A,
       widgetId: e,
       isSetProperty: !0
-    }), mp.d, '<block type="new_list_viewer_child_widget_get_color_attributes" uncache="true">\n      '.concat(t, '\n      <value name="ROW">\n        <shadow type="math_number">\n          <field name="NUM" constraints=\'1,,1\'>1</field>\n        </shadow>\n      </value>\n      <field name="SLOT_WIDGET">').concat("titleSlot", '</field>\n      <field name="ATTRIBUTES">').concat(mp.c, "</field>\n    </block>"), Object(up.sb)({
+    }), mp.d, "<block type=\"new_list_viewer_child_widget_get_color_attributes\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"ROW\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='1,,1'>1</field>\n        </shadow>\n      </value>\n      <field name=\"SLOT_WIDGET\">").concat("titleSlot", "</field>\n      <field name=\"ATTRIBUTES\">").concat(mp.c, "</field>\n    </block>"), Object(up.sb)({
       property: "__opacity",
       widgetType: Wn.A,
       widgetId: e
-    }), '<block type="new_list_viewer_get_size" uncache="true">\n      '.concat(t, '\n      <field name="SIZE_TYPE">height</field>\n    </block>'), Object(up.sb)({
+    }), "<block type=\"new_list_viewer_get_size\" uncache=\"true\">\n      ".concat(t, "\n      <field name=\"SIZE_TYPE\">height</field>\n    </block>"), Object(up.sb)({
       property: "__position",
       widgetType: Wn.A,
       widgetId: e
@@ -28616,7 +28616,7 @@ var _h = {
           name: "INDEX",
           check: "String",
           align: "CENTRE",
-          default_shadow: '<shadow type="new_list_viewer_on_press_index" />'
+          default_shadow: "<shadow type=\"new_list_viewer_on_press_index\" />"
         }, {
           type: "input_dummy",
           align: "CENTRE"
@@ -28686,7 +28686,7 @@ var _h = {
           name: "INDEX",
           check: "Number",
           align: "CENTRE",
-          default_shadow: '<shadow type="new_list_viewer_child_widget_on_press_index" />'
+          default_shadow: "<shadow type=\"new_list_viewer_child_widget_on_press_index\" />"
         }, {
           type: "input_dummy",
           align: "CENTRE"
@@ -28788,42 +28788,42 @@ var Eh = {
     blocks: []
   },
   getTemplate: function (e) {
-    var t = '<field name="WIDGET_ID">'.concat(e, "</field>");
-    return ['<block type="canvas_on_canvas_press" uncache="true">\n      '.concat(t, "\n    </block>"), mp.d, Object(up.cb)({
+    var t = "<field name=\"WIDGET_ID\">".concat(e, "</field>");
+    return ["<block type=\"canvas_on_canvas_press\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), mp.d, Object(up.cb)({
       widgetType: Wn.f,
-      title: "\u80cc\u666f",
+      title: "背景",
       lineId: "background"
-    }), '<block type="canvas_set_background_image" uncache="true">\n      '.concat(t, '\n      <value name="IMAGE_FILE_ID">\n        <shadow type="image_file_list_dropdown">\n          <field name="IMAGE_FILE_ID">').concat(mp.c, "</field>\n        </shadow>\n      </value>\n    </block>"), Object(up.sb)({
+    }), "<block type=\"canvas_set_background_image\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"IMAGE_FILE_ID\">\n        <shadow type=\"image_file_list_dropdown\">\n          <field name=\"IMAGE_FILE_ID\">").concat(mp.c, "</field>\n        </shadow>\n      </value>\n    </block>"), Object(up.sb)({
       property: "backgroundColor",
       widgetType: Wn.f,
       widgetId: e,
       isSetProperty: !0
     }), Object(up.cb)({
       widgetType: Wn.f,
-      title: "\u7b14\u8ff9",
+      title: "笔迹",
       lineId: "brush"
-    }), '<block type="canvas_clear_all_brush" uncache="true">\n      '.concat(t, "\n    </block>"), Object(up.cb)({
+    }), "<block type=\"canvas_clear_all_brush\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), Object(up.cb)({
       widgetType: Wn.f,
-      title: "\u901a\u7528",
+      title: "通用",
       lineId: "common"
     }), Object(up.sb)({
       property: "__opacity",
       widgetType: Wn.f,
       widgetId: e,
       isSetProperty: !0
-    }), '<block type="canvas_set_size" uncache="true">\n      '.concat(t, '\n      <field name="SIZE_TYPE">height</field>\n      <value name="NUM">\n        <shadow type="math_number">\n          <field name="NUM" constraints=\'').concat(yh.h, ",").concat(yh.f, ",1'>100</field>\n        </shadow>\n      </value>\n    </block>"), '<block type="canvas_set_position" uncache="true">\n      '.concat(t, '\n      <field name="POSITION_TYPE">positionX</field>\n      <value name="NUM">\n        <shadow type="math_number">\n          <field name="NUM" constraints=\',,1\'>100</field>\n        </shadow>\n      </value>\n    </block>'), '<block type="canvas_set_visible" uncache="true">\n      '.concat(t, "\n    </block>"), Object(up.cb)({
+    }), "<block type=\"canvas_set_size\" uncache=\"true\">\n      ".concat(t, "\n      <field name=\"SIZE_TYPE\">height</field>\n      <value name=\"NUM\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='").concat(yh.h, ",").concat(yh.f, ",1'>100</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"canvas_set_position\" uncache=\"true\">\n      ".concat(t, "\n      <field name=\"POSITION_TYPE\">positionX</field>\n      <value name=\"NUM\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints=',,1'>100</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"canvas_set_visible\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), Object(up.cb)({
       widgetType: Wn.f,
-      title: "\u8fd4\u56de\u503c",
+      title: "返回值",
       lineId: "getter"
     }), Object(up.sb)({
       property: "backgroundColor",
       widgetType: Wn.f,
       widgetId: e
-    }), '<block type="canvas_get_background_image" uncache="true">\n      '.concat(t, "\n    </block>"), Object(up.sb)({
+    }), "<block type=\"canvas_get_background_image\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), Object(up.sb)({
       property: "__opacity",
       widgetType: Wn.f,
       widgetId: e
-    }), '<block type="canvas_get_position" uncache="true">\n      '.concat(t, '\n      <field name="POSITION_TYPE">positionX</field>\n    </block>'), '<block type="canvas_get_size" uncache="true">\n      '.concat(t, '\n      <field name="SIZE_TYPE">height</field>\n    </block>'), '<block type="canvas_to_data_url" uncache="true">\n      '.concat(t, "\n    </block>"), mp.d, '<block type="canvas_check_if_pressed" uncache="true">\n      '.concat(t, "\n    </block>"), Object(up.sb)({
+    }), "<block type=\"canvas_get_position\" uncache=\"true\">\n      ".concat(t, "\n      <field name=\"POSITION_TYPE\">positionX</field>\n    </block>"), "<block type=\"canvas_get_size\" uncache=\"true\">\n      ".concat(t, "\n      <field name=\"SIZE_TYPE\">height</field>\n    </block>"), "<block type=\"canvas_to_data_url\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), mp.d, "<block type=\"canvas_check_if_pressed\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), Object(up.sb)({
       property: "__visible",
       widgetType: Wn.f,
       widgetId: e
@@ -28958,14 +28958,14 @@ var Eh = {
           type: "input_value",
           name: "POSITION_X",
           check: ["Number"],
-          default_shadow: '<shadow type="canvas_on_canvas_press_positionX" />',
+          default_shadow: "<shadow type=\"canvas_on_canvas_press_positionX\" />",
           align: "CENTRE"
         }, {
           type: "input_value",
           name: "POSITION_Y",
           align: "CENTRE",
           check: ["Number"],
-          default_shadow: '<shadow type="canvas_on_canvas_press_positionY" />'
+          default_shadow: "<shadow type=\"canvas_on_canvas_press_positionY\" />"
         }],
         message1: "%{BKY_CANVAS_ON_CANVAS_PRESS_MSG1}",
         args1: [{
@@ -29322,7 +29322,7 @@ var Rh = Object(f.memo)(function (e) {
       var n = null === o || void 0 === o ? void 0 : o.components.get_editor();
       if (n) {
         n.toggle_pivot_mode(!0);
-        if (!(null === (e = a.current) || void 0 === e || null === (t = e.closest('[data-widget-type="CANVAS_WIDGET"]')) || void 0 === t)) {
+        if (!(null === (e = a.current) || void 0 === e || null === (t = e.closest("[data-widget-type=\"CANVAS_WIDGET\"]")) || void 0 === t)) {
           t.classList.add("actor-changing");
         }
         if (!(null === o || void 0 === o)) {
@@ -29977,7 +29977,7 @@ var Lh = [{
   label: "relativeCoordinate"
 }];
 var Ph = require("./279");
-var Bh = '<shadow type="math_number"><field name="NUM" constraints=",,1">0</field></shadow>';
+var Bh = "<shadow type=\"math_number\"><field name=\"NUM\" constraints=\",,1\">0</field></shadow>";
 var Fh = {
   itemCount_: 1,
   addMutation: function (e) {
@@ -30033,7 +30033,7 @@ var Fh = {
       if (!this.get_input("X")) {
         var e = this.append_shadow_input("X", Bh);
         e.set_check(["Number"]);
-        e.append_field(", \u5706\u5fc3 x");
+        e.append_field(", 圆心 x");
       }
       if (!this.get_input("Y")) {
         var t = this.append_shadow_input("Y", Bh);
@@ -30119,7 +30119,7 @@ var Gh = {
       if (!this.get_input("X")) {
         var e = this.append_shadow_input("X", Bh);
         e.set_check(["Number"]);
-        e.append_field(", \u5706\u5fc3 x");
+        e.append_field(", 圆心 x");
       }
       if (!this.get_input("Y")) {
         var t = this.append_shadow_input("Y", Bh);
@@ -30127,10 +30127,10 @@ var Gh = {
         t.append_field("y");
       }
       if (!this.get_input("START_ANGLE")) {
-        var n = this.append_shadow_input("START_ANGLE", '<shadow type="math_number"><field name="NUM" controller="ANGLE_SCALE,," constraints="-180,180,,true">-90</field></shadow>');
+        var n = this.append_shadow_input("START_ANGLE", "<shadow type=\"math_number\"><field name=\"NUM\" controller=\"ANGLE_SCALE,,\" constraints=\"-180,180,,true\">-90</field></shadow>");
         n.set_check(["Number"]);
-        n.append_field(", \u8d77\u59cb\u4f4d\u7f6e");
-        this.append_dummy_input("START_ANGLE_TEXT").append_field("\u5ea6");
+        n.append_field(", 起始位置");
+        this.append_dummy_input("START_ANGLE_TEXT").append_field("度");
       }
       if (this.get_input("MUTATE_ADD_BUTTON")) {
         this.remove_input("MUTATE_ADD_BUTTON");
@@ -30205,7 +30205,7 @@ var Uh = {
       if (!this.get_input("X")) {
         var e = this.append_shadow_input("X", Bh);
         e.set_check(["Number"]);
-        e.append_field(", \u8d77\u70b9 x");
+        e.append_field(", 起点 x");
       }
       if (!this.get_input("Y")) {
         var t = this.append_shadow_input("Y", Bh);
@@ -30242,36 +30242,36 @@ var Wh = {
     blocks: []
   },
   getTemplate: function (e) {
-    var t = '<field name="WIDGET_ID">'.concat(e, "</field>");
+    var t = "<field name=\"WIDGET_ID\">".concat(e, "</field>");
     return [Object(up.cb)({
       widgetType: Wn.c,
-      title: "\u56fe\u5f62",
+      title: "图形",
       lineId: "graph"
-    }), '<block type="brush_draw_point" uncache="true">\n      '.concat(t, '\n      <value name="X">\n        <shadow type="math_number">\n          <field name="NUM" constraints=\',,1\'>0</field>\n        </shadow>\n      </value>\n      <value name="Y">\n        <shadow type="math_number">\n          <field name="NUM" constraints=\',,1\'>0</field>\n        </shadow>\n      </value>\n    </block>'), '<block type="brush_draw_line" uncache="true">\n      '.concat(t, '\n      <value name="X1">\n        <shadow type="math_number">\n          <field name="NUM" constraints=\',,1\'>0</field>\n        </shadow>\n      </value>\n      <value name="Y1">\n        <shadow type="math_number">\n          <field name="NUM" constraints=\',,1\'>0</field>\n        </shadow>\n      </value>\n      <value name="X2">\n        <shadow type="math_number">\n          <field name="NUM" constraints=\',,1\'>60</field>\n        </shadow>\n      </value>\n      <value name="Y2">\n        <shadow type="math_number">\n          <field name="NUM" constraints=\',,1\'>60</field>\n        </shadow>\n      </value>\n    </block>'), '<block type="brush_draw_circle" uncache="true">\n      '.concat(t, '\n      <value name="RADIUS">\n        <shadow type="math_number">\n          <field name="NUM" constraints=\'0,,1\'>40</field>\n        </shadow>\n      </value>\n      <mutation items="1"></mutation>\n    </block>'), '<block type="brush_draw_arc" uncache="true">\n      '.concat(t, '\n      <value name="RADIUS">\n        <shadow type="math_number">\n          <field name="NUM" constraints=\'0,,1\'>40</field>\n        </shadow>\n      </value>\n      <value name="ANGLE">\n        <shadow type="math_number">\n          <field name="NUM">180</field>\n        </shadow>\n      </value>\n      <mutation items="1"></mutation>\n    </block>'), '<block type="brush_draw_polygon" uncache="true">\n      '.concat(t, '\n      <value name="STEP">\n        <shadow type="math_number">\n          <field name="NUM" constraints=\'0,,1\'>4</field>\n        </shadow>\n      </value>\n      <value name="SIDE">\n        <shadow type="math_number">\n          <field name="NUM" constraints=\'0,,1\'>40</field>\n        </shadow>\n      </value>\n      <mutation items="1"></mutation>\n    </block>'), Object(up.cb)({
+    }), "<block type=\"brush_draw_point\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"X\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints=',,1'>0</field>\n        </shadow>\n      </value>\n      <value name=\"Y\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints=',,1'>0</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"brush_draw_line\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"X1\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints=',,1'>0</field>\n        </shadow>\n      </value>\n      <value name=\"Y1\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints=',,1'>0</field>\n        </shadow>\n      </value>\n      <value name=\"X2\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints=',,1'>60</field>\n        </shadow>\n      </value>\n      <value name=\"Y2\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints=',,1'>60</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"brush_draw_circle\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"RADIUS\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='0,,1'>40</field>\n        </shadow>\n      </value>\n      <mutation items=\"1\"></mutation>\n    </block>"), "<block type=\"brush_draw_arc\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"RADIUS\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='0,,1'>40</field>\n        </shadow>\n      </value>\n      <value name=\"ANGLE\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\">180</field>\n        </shadow>\n      </value>\n      <mutation items=\"1\"></mutation>\n    </block>"), "<block type=\"brush_draw_polygon\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"STEP\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='0,,1'>4</field>\n        </shadow>\n      </value>\n      <value name=\"SIDE\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='0,,1'>40</field>\n        </shadow>\n      </value>\n      <mutation items=\"1\"></mutation>\n    </block>"), Object(up.cb)({
       widgetType: Wn.c,
-      title: "\u79fb\u52a8",
+      title: "移动",
       lineId: "move"
-    }), '<block type="brush_set_pen_up_or_down" uncache="true">\n      '.concat(t, "\n    </block>"), '<block type="brush_move_forward_or_backward" uncache="true">\n      '.concat(t, '\n      <value name="NUM">\n        <shadow type="math_number">\n          <field name="NUM" constraints=\',,1\'>10</field>\n        </shadow>\n      </value>\n    </block>'), '<block type="brush_move_to" uncache="true">\n      '.concat(t, "\n    </block>"), '<block type="brush_move_to_position" uncache="true">\n      '.concat(t, '\n      <value name="X">\n        <shadow type="math_number">\n          <field name="NUM" constraints=\',,1\'>100</field>\n        </shadow>\n      </value>\n      <value name="Y">\n        <shadow type="math_number">\n          <field name="NUM" constraints=\',,1\'>100</field>\n        </shadow>\n      </value>\n    </block>'), '<block type="brush_move_to_position_in_time" uncache="true">\n      '.concat(t, '\n      <value name="X">\n        <shadow type="math_number">\n          <field name="NUM" constraints=\',,1\'>100</field>\n        </shadow>\n      </value>\n      <value name="Y">\n        <shadow type="math_number">\n          <field name="NUM" constraints=\',,1\'>100</field>\n        </shadow>\n      </value>\n      <value name="SECONDS">\n        <shadow type="math_number">\n          <field name="NUM" constraints="0">1</field>\n        </shadow>\n      </value>\n    </block>'), mp.d, '<block type="brush_set_position" uncache="true">\n      '.concat(t, '\n      <field name="POSITION_TYPE">positionX</field>\n      <value name="NUM">\n        <shadow type="math_number">\n          <field name="NUM" constraints=\',,1\'>100</field>\n        </shadow>\n      </value>\n    </block>'), '<block type="brush_change_position" uncache="true">\n      '.concat(t, '\n      <value name="NUM">\n        <shadow type="math_number">\n          <field name="NUM" constraints=\',,1\'>100</field>\n        </shadow>\n      </value>\n    </block>'), '<block type="brush_change_position_type_in_time" uncache="true">\n      '.concat(t, '\n      <value name="NUM">\n        <shadow type="math_number">\n          <field name="NUM">100</field>\n        </shadow>\n      </value>\n      <value name="SECONDS">\n        <shadow type="math_number">\n          <field name="NUM" constraints="0">1</field>\n        </shadow>\n      </value>\n    </block>'), '<block type="brush_change_z_index" uncache="true">\n      '.concat(t, "\n    </block>"), Object(up.cb)({
+    }), "<block type=\"brush_set_pen_up_or_down\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"brush_move_forward_or_backward\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"NUM\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints=',,1'>10</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"brush_move_to\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"brush_move_to_position\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"X\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints=',,1'>100</field>\n        </shadow>\n      </value>\n      <value name=\"Y\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints=',,1'>100</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"brush_move_to_position_in_time\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"X\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints=',,1'>100</field>\n        </shadow>\n      </value>\n      <value name=\"Y\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints=',,1'>100</field>\n        </shadow>\n      </value>\n      <value name=\"SECONDS\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints=\"0\">1</field>\n        </shadow>\n      </value>\n    </block>"), mp.d, "<block type=\"brush_set_position\" uncache=\"true\">\n      ".concat(t, "\n      <field name=\"POSITION_TYPE\">positionX</field>\n      <value name=\"NUM\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints=',,1'>100</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"brush_change_position\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"NUM\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints=',,1'>100</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"brush_change_position_type_in_time\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"NUM\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\">100</field>\n        </shadow>\n      </value>\n      <value name=\"SECONDS\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints=\"0\">1</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"brush_change_z_index\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), Object(up.cb)({
       widgetType: Wn.c,
-      title: "\u65b9\u5411",
+      title: "方向",
       lineId: "rotate"
-    }), '<block type="brush_set_rotation" uncache="true">\n      '.concat(t, '\n      <value name="NUM">\n        <shadow type="math_number">\n          <field name="NUM" controller="ANGLE_SCALE,," constraints=\'-180,180,,true\'>90</field>\n        </shadow>\n      </value>\n    </block>'), '<block type="brush_face_to" uncache="true">\n      '.concat(t, "\n    </block>"), '<block type="brush_rotate_left_or_right" uncache="true">\n      '.concat(t, '\n      <value name="NUM">\n        <shadow type="math_number">\n          <field name="NUM">90</field>\n        </shadow>\n      </value>\n    </block>'), Object(up.cb)({
+    }), "<block type=\"brush_set_rotation\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"NUM\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" controller=\"ANGLE_SCALE,,\" constraints='-180,180,,true'>90</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"brush_face_to\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"brush_rotate_left_or_right\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"NUM\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\">90</field>\n        </shadow>\n      </value>\n    </block>"), Object(up.cb)({
       widgetType: Wn.c,
-      title: "\u989c\u8272",
+      title: "颜色",
       lineId: "color"
-    }), '<block type="brush_set_color" uncache="true">\n      '.concat(t, '\n      <value name="COLOR">\n        <shadow type="color_picker"><field name="COLOR_PALETTE">').concat(Ph.a, "</field></shadow>\n      </value>\n    </block>"), '<block type="brush_set_color_value" uncache="true">\n      '.concat(t, '\n      <value name="VALUE">\n        <shadow type="math_number">\n          <field name="NUM" controller="SLIDER,0,360" constraints=\'0,360,1\'>50</field>\n        </shadow>\n      </value>\n    </block>'), '<block type="brush_change_color_value" uncache="true">\n      '.concat(t, '\n      <value name="VALUE">\n        <shadow type="math_number">\n          <field name="NUM" constraints=\',,1\'>10</field>\n        </shadow>\n      </value>\n    </block>'), Object(up.cb)({
+    }), "<block type=\"brush_set_color\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"COLOR\">\n        <shadow type=\"color_picker\"><field name=\"COLOR_PALETTE\">").concat(Ph.a, "</field></shadow>\n      </value>\n    </block>"), "<block type=\"brush_set_color_value\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"VALUE\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" controller=\"SLIDER,0,360\" constraints='0,360,1'>50</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"brush_change_color_value\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"VALUE\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints=',,1'>10</field>\n        </shadow>\n      </value>\n    </block>"), Object(up.cb)({
       widgetType: Wn.c,
-      title: "\u7c97\u7ec6",
+      title: "粗细",
       lineId: "size"
-    }), '<block type="brush_set_pen_size" uncache="true">\n      '.concat(t, '\n      <value name="VALUE">\n        <shadow type="math_number">\n          <field name="NUM" controller="SLIDER,').concat(Ph.g, ",").concat(Ph.e, '" constraints="').concat(Ph.g, ",").concat(Ph.e, ',1">3</field>\n        </shadow>\n      </value>\n    </block>'), '<block type="brush_change_pen_size" uncache="true">\n      '.concat(t, '\n      <value name="VALUE">\n        <shadow type="math_number">\n          <field name="NUM" constraints=\',,1\'>1</field>\n        </shadow>\n      </value>\n    </block>'), Object(up.cb)({
+    }), "<block type=\"brush_set_pen_size\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"VALUE\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" controller=\"SLIDER,").concat(Ph.g, ",").concat(Ph.e, "\" constraints=\"").concat(Ph.g, ",").concat(Ph.e, ",1\">3</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"brush_change_pen_size\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"VALUE\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints=',,1'>1</field>\n        </shadow>\n      </value>\n    </block>"), Object(up.cb)({
       widgetType: Wn.c,
-      title: "\u586b\u5145",
+      title: "填充",
       lineId: "fill"
-    }), '<block type="brush_set_fill_color" uncache="true">\n      '.concat(t, '\n      <value name="COLOR">\n        <shadow type="color_picker"><field name="COLOR_PALETTE">').concat(Ph.a, "</field></shadow>\n      </value>\n    </block>"), '<block type="brush_set_fill_path" uncache="true">\n      '.concat(t, "\n    </block>"), mp.d, Object(up.cb)({
+    }), "<block type=\"brush_set_fill_color\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"COLOR\">\n        <shadow type=\"color_picker\"><field name=\"COLOR_PALETTE\">").concat(Ph.a, "</field></shadow>\n      </value>\n    </block>"), "<block type=\"brush_set_fill_path\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), mp.d, Object(up.cb)({
       widgetType: Wn.c,
-      title: "\u8fd4\u56de\u503c",
+      title: "返回值",
       lineId: "getter"
-    }), '<block type="brush_get_color_value" uncache="true">\n      '.concat(t, "\n    </block>"), '<block type="brush_get_pen_size" uncache="true">\n      '.concat(t, "\n    </block>"), '<block type="brush_get_rotation" uncache="true">\n      '.concat(t, "\n    </block>"), '<block type="brush_get_position" uncache="true">\n      '.concat(t, "\n    </block>")];
+    }), "<block type=\"brush_get_color_value\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"brush_get_pen_size\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"brush_get_rotation\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"brush_get_position\" uncache=\"true\">\n      ".concat(t, "\n    </block>")];
   },
   blockDeclareGroup: {
     setBlockGroupSnippet: function (e) {
@@ -31508,7 +31508,7 @@ var Vh = function (e) {
     }
   }, [t, M, v]);
   Object(f.useEffect)(function () {
-    var e = document.querySelector("#".concat(o, '[data-role="WIDGET"]'));
+    var e = document.querySelector("#".concat(o, "[data-role=\"WIDGET\"]"));
     if (e instanceof HTMLDivElement) {
       if (x) {
         e.classList.add("actor-moving");
@@ -31648,46 +31648,46 @@ var $h = {
   },
   getTemplate: function (e) {
     var t;
-    var n = '<field name="WIDGET_ID">'.concat(e, "</field>");
+    var n = "<field name=\"WIDGET_ID\">".concat(e, "</field>");
     var r = Object(up.Cb)(e);
     var o = null === r || void 0 === r || null === (t = r.attributes) || void 0 === t ? void 0 : t.actionList[0];
     var i = (null === o || void 0 === o ? void 0 : o.interval) || 200;
-    return ['<block type="actor_on_actor_press" uncache="true">\n      '.concat(n, "\n    </block>"), '<block type="actor_on_actor_bump" uncache="true">\n      '.concat(n, "\n    </block>"), '<block type="actor_on_actor_leave" uncache="true">\n      '.concat(n, "\n    </block>"), mp.d, Object(up.cb)({
+    return ["<block type=\"actor_on_actor_press\" uncache=\"true\">\n      ".concat(n, "\n    </block>"), "<block type=\"actor_on_actor_bump\" uncache=\"true\">\n      ".concat(n, "\n    </block>"), "<block type=\"actor_on_actor_leave\" uncache=\"true\">\n      ".concat(n, "\n    </block>"), mp.d, Object(up.cb)({
       widgetType: Wn.a,
-      title: "\u79fb\u52a8",
+      title: "移动",
       lineId: "move"
-    }), '<block type="actor_move_forward" uncache="true">\n      '.concat(n, '\n      <value name="NUM">\n        <shadow type="math_number">\n          <field name="NUM" constraints=",,1">10</field>\n        </shadow>\n      </value>\n    </block>'), '<block type="actor_move_to" uncache="true">\n      '.concat(n, "\n    </block>"), '<block type="actor_move_to_position" uncache="true">\n      '.concat(n, '\n      <value name="X">\n        <shadow type="math_number">\n          <field name="NUM" constraints=",,1">100</field>\n        </shadow>\n      </value>\n      <value name="Y">\n        <shadow type="math_number">\n          <field name="NUM" constraints=",,1">100</field>\n        </shadow>\n      </value>\n    </block>'), '<block type="actor_move_to_position_in_time" uncache="true">\n      '.concat(n, '\n      <value name="X">\n        <shadow type="math_number">\n          <field name="NUM" constraints=",,1">100</field>\n        </shadow>\n      </value>\n      <value name="Y">\n        <shadow type="math_number">\n          <field name="NUM" constraints=",,1">100</field>\n        </shadow>\n      </value>\n      <value name="SECONDS">\n        <shadow type="math_number">\n          <field name="NUM" constraints="0">1</field>\n        </shadow>\n      </value>\n    </block>'), mp.d, '<block type="actor_set_position" uncache="true">\n    '.concat(n, '\n    <value name="NUM">\n      <shadow type="math_number">\n        <field name="NUM" constraints=\',,1\'>100</field>\n      </shadow>\n    </value>\n    </block>'), '<block type="actor_change_position" uncache="true">\n    '.concat(n, '\n    <value name="NUM">\n      <shadow type="math_number">\n        <field name="NUM" constraints=\',,1\'>100</field>\n      </shadow>\n    </value>\n    </block>'), '<block type="actor_change_position_type_in_time" uncache="true">\n    '.concat(n, '\n    <value name="NUM">\n      <shadow type="math_number">\n        <field name="NUM" constraints=\',,1\'>100</field>\n      </shadow>\n    </value>\n    <value name="SECONDS">\n      <shadow type="math_number">\n        <field name="NUM" constraints="0">1</field>\n      </shadow>\n    </value>\n    </block>'), '<block type="actor_move_z_index" uncache="true">\n    '.concat(n, "\n    </block>"), Object(up.cb)({
+    }), "<block type=\"actor_move_forward\" uncache=\"true\">\n      ".concat(n, "\n      <value name=\"NUM\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints=\",,1\">10</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"actor_move_to\" uncache=\"true\">\n      ".concat(n, "\n    </block>"), "<block type=\"actor_move_to_position\" uncache=\"true\">\n      ".concat(n, "\n      <value name=\"X\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints=\",,1\">100</field>\n        </shadow>\n      </value>\n      <value name=\"Y\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints=\",,1\">100</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"actor_move_to_position_in_time\" uncache=\"true\">\n      ".concat(n, "\n      <value name=\"X\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints=\",,1\">100</field>\n        </shadow>\n      </value>\n      <value name=\"Y\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints=\",,1\">100</field>\n        </shadow>\n      </value>\n      <value name=\"SECONDS\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints=\"0\">1</field>\n        </shadow>\n      </value>\n    </block>"), mp.d, "<block type=\"actor_set_position\" uncache=\"true\">\n    ".concat(n, "\n    <value name=\"NUM\">\n      <shadow type=\"math_number\">\n        <field name=\"NUM\" constraints=',,1'>100</field>\n      </shadow>\n    </value>\n    </block>"), "<block type=\"actor_change_position\" uncache=\"true\">\n    ".concat(n, "\n    <value name=\"NUM\">\n      <shadow type=\"math_number\">\n        <field name=\"NUM\" constraints=',,1'>100</field>\n      </shadow>\n    </value>\n    </block>"), "<block type=\"actor_change_position_type_in_time\" uncache=\"true\">\n    ".concat(n, "\n    <value name=\"NUM\">\n      <shadow type=\"math_number\">\n        <field name=\"NUM\" constraints=',,1'>100</field>\n      </shadow>\n    </value>\n    <value name=\"SECONDS\">\n      <shadow type=\"math_number\">\n        <field name=\"NUM\" constraints=\"0\">1</field>\n      </shadow>\n    </value>\n    </block>"), "<block type=\"actor_move_z_index\" uncache=\"true\">\n    ".concat(n, "\n    </block>"), Object(up.cb)({
       widgetType: Wn.a,
-      title: "\u65b9\u5411",
+      title: "方向",
       lineId: "rotate"
-    }), '<block type="actor_set_rotation" uncache="true">\n      '.concat(n, '\n      <value name="NUM">\n        <shadow type="math_number">\n          <field name="NUM" controller="').concat(lp.I.ControllerType.ANGLE_SCALE, '" constraints="-180,180,,true">90</field>\n        </shadow>\n      </value>\n    </block>'), '<block type="actor_face_to" uncache="true">\n      '.concat(n, "\n    </block>"), '<block type="actor_rotate" uncache="true">\n      '.concat(n, '\n      <value name="NUM">\n        <shadow type="math_number">\n          <field name="NUM" constraints=",,1">90</field>\n        </shadow>\n      </value>\n    </block>'), '<block type="actor_rotate_around" uncache="true">\n      '.concat(n, '\n      <value name="NUM">\n        <shadow type="math_number">\n          <field name="NUM" constraints=",,1">90</field>\n        </shadow>\n      </value>\n    </block>'), Object(up.cb)({
+    }), "<block type=\"actor_set_rotation\" uncache=\"true\">\n      ".concat(n, "\n      <value name=\"NUM\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" controller=\"").concat(lp.I.ControllerType.ANGLE_SCALE, "\" constraints=\"-180,180,,true\">90</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"actor_face_to\" uncache=\"true\">\n      ".concat(n, "\n    </block>"), "<block type=\"actor_rotate\" uncache=\"true\">\n      ".concat(n, "\n      <value name=\"NUM\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints=\",,1\">90</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"actor_rotate_around\" uncache=\"true\">\n      ".concat(n, "\n      <value name=\"NUM\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints=\",,1\">90</field>\n        </shadow>\n      </value>\n    </block>"), Object(up.cb)({
       widgetType: Wn.a,
-      title: "\u9020\u578b",
+      title: "造型",
       lineId: "style"
-    }), '<block type="actor_set_current_style_embed" uncache="true">\n      '.concat(n, '\n       <value name="ACTOR_ACTION_WRAPPER">\n        <shadow type="actor_action_input"></shadow>\n      </value>\n       <value name="ACTOR_STYLE_WRAPPER">\n        <shadow type="actor_style_input"></shadow>\n      </value>\n    </block>'), '<block type="actor_previous_next_style" uncache="true">\n      '.concat(n, "\n    </block>"), Object(up.cb)({
+    }), "<block type=\"actor_set_current_style_embed\" uncache=\"true\">\n      ".concat(n, "\n       <value name=\"ACTOR_ACTION_WRAPPER\">\n        <shadow type=\"actor_action_input\"></shadow>\n      </value>\n       <value name=\"ACTOR_STYLE_WRAPPER\">\n        <shadow type=\"actor_style_input\"></shadow>\n      </value>\n    </block>"), "<block type=\"actor_previous_next_style\" uncache=\"true\">\n      ".concat(n, "\n    </block>"), Object(up.cb)({
       widgetType: Wn.a,
-      title: "\u52a8\u4f5c",
+      title: "动作",
       lineId: "action"
-    }), '<block type="actor_play_action_dropdown" uncache="true">\n      <mutation pos=\'true\'></mutation>\n      '.concat(n, '\n       <value name="ACTOR_ACTION_WRAPPER">\n        <shadow type="actor_action_input"></shadow>\n      </value>\n      <value name="ACTION_INTERVAL">\n       <shadow type="action_interval">\n           <field name="NUM">').concat(i, '</field>\n        </shadow>\n      </value>\n      <value name="PLAY_COUNT">\n        <shadow type="math_number">\n          <field name="NUM" constraints=\'1,,1\'>1</field>\n        </shadow>\n      </value>\n    </block>'), '<block type="actor_play_action_and_wait_dropdown" uncache="true">\n      '.concat(n, '\n       <value name="ACTOR_ACTION_WRAPPER">\n        <shadow type="actor_action_input"></shadow>\n      </value>\n      <value name="ACTION_INTERVAL">\n        <shadow type="action_interval">\n           <field name="NUM">').concat(i, '</field>\n        </shadow>\n      </value>\n      <value name="PLAY_COUNT">\n        <shadow type="math_number">\n          <field name="NUM" constraints=\'1,,1\'>1</field>\n        </shadow>\n      </value>\n    </block>'), '<block type="actor_stop_action" uncache="true">\n      '.concat(n, "\n    </block>"), Object(up.cb)({
+    }), "<block type=\"actor_play_action_dropdown\" uncache=\"true\">\n      <mutation pos='true'></mutation>\n      ".concat(n, "\n       <value name=\"ACTOR_ACTION_WRAPPER\">\n        <shadow type=\"actor_action_input\"></shadow>\n      </value>\n      <value name=\"ACTION_INTERVAL\">\n       <shadow type=\"action_interval\">\n           <field name=\"NUM\">").concat(i, "</field>\n        </shadow>\n      </value>\n      <value name=\"PLAY_COUNT\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='1,,1'>1</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"actor_play_action_and_wait_dropdown\" uncache=\"true\">\n      ".concat(n, "\n       <value name=\"ACTOR_ACTION_WRAPPER\">\n        <shadow type=\"actor_action_input\"></shadow>\n      </value>\n      <value name=\"ACTION_INTERVAL\">\n        <shadow type=\"action_interval\">\n           <field name=\"NUM\">").concat(i, "</field>\n        </shadow>\n      </value>\n      <value name=\"PLAY_COUNT\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='1,,1'>1</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"actor_stop_action\" uncache=\"true\">\n      ".concat(n, "\n    </block>"), Object(up.cb)({
       widgetType: Wn.a,
-      title: "\u6bd4\u4f8b\u5927\u5c0f",
+      title: "比例大小",
       lineId: "scale"
-    }), '<block type="actor_set_scale_with_section" uncache="true">\n      '.concat(n, '\n        <value name="NUM">\n        <shadow type="math_number">\n          <field name="NUM" constraints=\'').concat(100 * Kh.e, ",").concat(100 * Kh.c, ",1'>100</field>\n        </shadow>\n      </value>\n    </block>"), '<block type="actor_change_scale_with_section" uncache="true">\n      '.concat(n, '\n      <value name="NUM">\n        <shadow type="math_number">\n          <field name="NUM" constraints=\'0,,1\'>10</field>\n        </shadow>\n      </value>\n    </block>'), Object(up.cb)({
+    }), "<block type=\"actor_set_scale_with_section\" uncache=\"true\">\n      ".concat(n, "\n        <value name=\"NUM\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='").concat(100 * Kh.e, ",").concat(100 * Kh.c, ",1'>100</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"actor_change_scale_with_section\" uncache=\"true\">\n      ".concat(n, "\n      <value name=\"NUM\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='0,,1'>10</field>\n        </shadow>\n      </value>\n    </block>"), Object(up.cb)({
       widgetType: Wn.a,
-      title: "\u7ffb\u8f6c",
+      title: "翻转",
       lineId: "flip"
-    }), '<block type="actor_set_flipped" uncache="true">\n      '.concat(n, "\n    </block>"), Object(up.cb)({
+    }), "<block type=\"actor_set_flipped\" uncache=\"true\">\n      ".concat(n, "\n    </block>"), Object(up.cb)({
       widgetType: Wn.a,
-      title: "\u4e0d\u900f\u660e\u5ea6",
+      title: "不透明度",
       lineId: "opacity"
     }), Object(up.sb)({
       property: "__opacity",
       widgetType: Wn.a,
       widgetId: e,
       isSetProperty: !0
-    }), '<block type="actor_change_opacity" uncache="true">\n      '.concat(n, '\n      <value name="NUM">\n        <shadow type="math_number">\n          <field name="NUM" constraints=\'0,,1\'>10</field>\n        </shadow>\n      </value>\n    </block>'), '<block type="actor_show_hide_in_time" uncache="true">\n      '.concat(n, '\n      <value name="SECONDS">\n        <shadow type="math_number">\n          <field name="NUM" constraints="0">1</field>\n        </shadow>\n      </value>\n    </block>'), Object(up.cb)({
+    }), "<block type=\"actor_change_opacity\" uncache=\"true\">\n      ".concat(n, "\n      <value name=\"NUM\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='0,,1'>10</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"actor_show_hide_in_time\" uncache=\"true\">\n      ".concat(n, "\n      <value name=\"SECONDS\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints=\"0\">1</field>\n        </shadow>\n      </value>\n    </block>"), Object(up.cb)({
       widgetType: Wn.a,
-      title: "\u663e\u9690",
+      title: "显隐",
       lineId: "visivle"
     }), Object(up.sb)({
       property: "__visible",
@@ -31696,17 +31696,17 @@ var $h = {
       isSetProperty: !0
     }), Object(up.cb)({
       widgetType: Wn.a,
-      title: "\u5bf9\u8bdd",
+      title: "对话",
       lineId: "dialog"
-    }), '<block type="actor_show_dialog" uncache="true">\n      '.concat(n, '\n      <value name="TEXT">\n        <shadow type="text">\n          <field name="TEXT">Hi</field>\n        </shadow>\n      </value>\n    </block>'), '<block type="actor_show_dialog_in_time" uncache="true">\n      '.concat(n, '\n      <value name="TEXT">\n        <shadow type="text">\n          <field name="TEXT">Hi</field>\n        </shadow>\n      </value>\n      <value name="SECONDS">\n        <shadow type="math_number">\n          <field name="NUM" constraints="0">2</field>\n        </shadow>\n      </value>\n    </block>'), Object(up.cb)({
+    }), "<block type=\"actor_show_dialog\" uncache=\"true\">\n      ".concat(n, "\n      <value name=\"TEXT\">\n        <shadow type=\"text\">\n          <field name=\"TEXT\">Hi</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"actor_show_dialog_in_time\" uncache=\"true\">\n      ".concat(n, "\n      <value name=\"TEXT\">\n        <shadow type=\"text\">\n          <field name=\"TEXT\">Hi</field>\n        </shadow>\n      </value>\n      <value name=\"SECONDS\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints=\"0\">2</field>\n        </shadow>\n      </value>\n    </block>"), Object(up.cb)({
       widgetType: Wn.a,
-      title: "\u8fd4\u56de\u503c",
+      title: "返回值",
       lineId: "getter"
-    }), '<block type="actor_get_scale_with_section" uncache="true">\n      '.concat(n, "\n    </block>"), '<block type="actor_get_rotation" uncache="true">\n      '.concat(n, "\n    </block>"), Object(up.sb)({
+    }), "<block type=\"actor_get_scale_with_section\" uncache=\"true\">\n      ".concat(n, "\n    </block>"), "<block type=\"actor_get_rotation\" uncache=\"true\">\n      ".concat(n, "\n    </block>"), Object(up.sb)({
       property: "__opacity",
       widgetType: Wn.a,
       widgetId: e
-    }), '<block type="actor_get_position" uncache="true">\n      '.concat(n, "\n    </block>"), '<block type="actor_get_style_index" uncache="true">\n      '.concat(n, "\n    </block>"), '<block type="actor_get_action_name" uncache="true">\n      '.concat(n, "\n    </block>"), mp.d, '<block type="actor_check_if_pressed" uncache="true">\n      '.concat(n, "\n    </block>"), '<block type="actor_check_if_bumped" uncache="true">\n      '.concat(n, "\n    </block>"), '<block type="actor_check_if_left" uncache="true">\n      '.concat(n, "\n    </block>"), '<block type="actor_check_if_flipped" uncache="true">\n      '.concat(n, "\n    </block>"), Object(up.sb)({
+    }), "<block type=\"actor_get_position\" uncache=\"true\">\n      ".concat(n, "\n    </block>"), "<block type=\"actor_get_style_index\" uncache=\"true\">\n      ".concat(n, "\n    </block>"), "<block type=\"actor_get_action_name\" uncache=\"true\">\n      ".concat(n, "\n    </block>"), mp.d, "<block type=\"actor_check_if_pressed\" uncache=\"true\">\n      ".concat(n, "\n    </block>"), "<block type=\"actor_check_if_bumped\" uncache=\"true\">\n      ".concat(n, "\n    </block>"), "<block type=\"actor_check_if_left\" uncache=\"true\">\n      ".concat(n, "\n    </block>"), "<block type=\"actor_check_if_flipped\" uncache=\"true\">\n      ".concat(n, "\n    </block>"), Object(up.sb)({
       property: "__visible",
       widgetType: Wn.a,
       widgetId: e
@@ -32182,7 +32182,7 @@ var $h = {
       }
       var i;
       var a;
-      var s = '<shadow type="math_number"><field name="NUM" constraints="1,,1">2</field></shadow>';
+      var s = "<shadow type=\"math_number\"><field name=\"NUM\" constraints=\"1,,1\">2</field></shadow>";
       function c() {
         var e;
         var t;
@@ -32443,7 +32443,7 @@ var $h = {
           }
         }],
         output: "Number",
-        tooltip: "\u52a8\u4f5c\u65f6\u95f4"
+        tooltip: "动作时间"
       });
       e.insertBlockProfile("actor_play_action_embed", {
         type: "actor_play_action_embed",
@@ -32639,13 +32639,13 @@ var $h = {
           name: "POSITION_X",
           align: "CENTRE",
           check: ["Number"],
-          default_shadow: '<shadow type="actor_on_actor_press_positionX" />'
+          default_shadow: "<shadow type=\"actor_on_actor_press_positionX\" />"
         }, {
           type: "input_value",
           name: "POSITION_Y",
           align: "CENTRE",
           check: ["Number"],
-          default_shadow: '<shadow type="actor_on_actor_press_positionY" />'
+          default_shadow: "<shadow type=\"actor_on_actor_press_positionY\" />"
         }],
         message1: "%{BKY_ACTOR_ON_ACTOR_PRESS_MSG1}",
         args1: [{
@@ -33752,7 +33752,7 @@ var nm = function (e) {
     }
   }, [r, v, m, u, g, T, i, k]);
   Object(f.useEffect)(function () {
-    var e = document.querySelector("#".concat(i, '[data-role="WIDGET"]'));
+    var e = document.querySelector("#".concat(i, "[data-role=\"WIDGET\"]"));
     if (e instanceof HTMLDivElement) {
       if (J) {
         e.classList.add("actor-moving");
@@ -33866,8 +33866,8 @@ var am = {
     blocks: Wn.e
   },
   getTemplate: function (e) {
-    var t = '<field name="WIDGET_ID">'.concat(e, "</field>");
-    return ['<block type="camera_get_camera_take_photo" uncache="true">\n      '.concat(t, "\n    </block>"), '<block type="camera_get_camera_take_video" uncache="true">\n      '.concat(t, "\n    </block>"), '<block type="camera_get_camera_choose_photo" uncache="true">\n      '.concat(t, "\n    </block>")];
+    var t = "<field name=\"WIDGET_ID\">".concat(e, "</field>");
+    return ["<block type=\"camera_get_camera_take_photo\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"camera_get_camera_take_video\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"camera_get_camera_choose_photo\" uncache=\"true\">\n      ".concat(t, "\n    </block>")];
   },
   blockDeclareGroup: {
     setBlockGroupSnippet: function (e) {
@@ -33911,7 +33911,7 @@ var am = {
           name: "PHOTO",
           check: "String",
           align: "CENTRE",
-          default_shadow: '<shadow type="camera_get_camera_take_photo_value" />'
+          default_shadow: "<shadow type=\"camera_get_camera_take_photo_value\" />"
         }, {
           type: "input_statement",
           name: "DO",
@@ -33938,7 +33938,7 @@ var am = {
           name: "VIDEO",
           check: "String",
           align: "CENTRE",
-          default_shadow: '<shadow type="camera_get_camera_take_video_value" />'
+          default_shadow: "<shadow type=\"camera_get_camera_take_video_value\" />"
         }, {
           type: "input_statement",
           name: "DO",
@@ -33965,7 +33965,7 @@ var am = {
           name: "PHOTO",
           check: "String",
           align: "CENTRE",
-          default_shadow: '<shadow type="camera_get_camera_choose_photo_value" />'
+          default_shadow: "<shadow type=\"camera_get_camera_choose_photo_value\" />"
         }, {
           type: "input_statement",
           name: "DO",
@@ -34046,8 +34046,8 @@ var fm = {
     blocks: Wn.b
   },
   getTemplate: function (e) {
-    var t = '<field name="WIDGET_ID">'.concat(e, "</field>");
-    return ['<block type="audio_play_sound" uncache="true">\n      '.concat(t, "\n    </block>"), '<block type="audio_stop_sound" uncache="true">\n      '.concat(t, "\n    </block>"), '<block type="audio_pause_sound" uncache="true">\n      '.concat(t, "\n    </block>"), '<block type="audio_set_sound_file" uncache="true">\n      '.concat(t, '\n      <value name="SOUND_FILE_ID">\n        <shadow type="audio_sound_file_list_dropdown">\n          <field name="SOUND_FILE_ID">').concat(mp.c, "</field>\n        </shadow>\n      </value>\n    </block>"), '<block type="audio_set_volume_or_rate" uncache="true">\n      '.concat(t, '\n      <value name="VALUE">\n        <shadow type="math_number">\n          <field name="NUM" constraints="0,100,1">100</field>\n        </shadow>\n      </value>\n    </block>'), '<block type="audio_change_volume_or_rate" uncache="true">\n      '.concat(t, '\n      <value name="VALUE">\n        <shadow type="math_number">\n          <field name="NUM">10</field>\n        </shadow>\n      </value>\n    </block>'), mp.d, '<block type="text2speech_speak_text" uncache="true">\n      '.concat(t, '\n      <value name="VALUE">\n        <shadow type="text">\n          <field name="TEXT">').concat(lp.Blink.Msg.TEXT2SPEECH_DEFAULT_TEXT, "</field>\n        </shadow>\n      </value>\n    </block>"), '<block type="text2speech_speak_text_and_wait" uncache="true">\n      '.concat(t, '\n      <value name="VALUE">\n        <shadow type="text">\n          <field name="TEXT">').concat(lp.Blink.Msg.TEXT2SPEECH_DEFAULT_TEXT, "</field>\n        </shadow>\n      </value>\n    </block>")];
+    var t = "<field name=\"WIDGET_ID\">".concat(e, "</field>");
+    return ["<block type=\"audio_play_sound\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"audio_stop_sound\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"audio_pause_sound\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"audio_set_sound_file\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"SOUND_FILE_ID\">\n        <shadow type=\"audio_sound_file_list_dropdown\">\n          <field name=\"SOUND_FILE_ID\">").concat(mp.c, "</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"audio_set_volume_or_rate\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"VALUE\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints=\"0,100,1\">100</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"audio_change_volume_or_rate\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"VALUE\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\">10</field>\n        </shadow>\n      </value>\n    </block>"), mp.d, "<block type=\"text2speech_speak_text\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"VALUE\">\n        <shadow type=\"text\">\n          <field name=\"TEXT\">").concat(lp.Blink.Msg.TEXT2SPEECH_DEFAULT_TEXT, "</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"text2speech_speak_text_and_wait\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"VALUE\">\n        <shadow type=\"text\">\n          <field name=\"TEXT\">").concat(lp.Blink.Msg.TEXT2SPEECH_DEFAULT_TEXT, "</field>\n        </shadow>\n      </value>\n    </block>")];
   },
   blockDeclareGroup: {
     setBlockGroupSnippet: function (e) {
@@ -34302,8 +34302,8 @@ var gm = {
     blocks: Wn.t
   },
   getTemplate: function (e) {
-    var t = '<field name="WIDGET_ID">'.concat(e, "</field>");
-    return ['<block type="gyroscope_on_phone_shake" uncache="true">\n      '.concat(t, "\n    </block>"), '<block type="gyroscope_phone_get_compass" uncache="true">\n      '.concat(t, "\n    </block>"), '<block type="gyroscope_phone_get_orientation_value" uncache="true">\n      '.concat(t, "\n    </block>")];
+    var t = "<field name=\"WIDGET_ID\">".concat(e, "</field>");
+    return ["<block type=\"gyroscope_on_phone_shake\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"gyroscope_phone_get_compass\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"gyroscope_phone_get_orientation_value\" uncache=\"true\">\n      ".concat(t, "\n    </block>")];
   },
   blockDeclareGroup: {
     setBlockGroupSnippet: function (e) {
@@ -34401,8 +34401,8 @@ var bm = {
     blocks: Wn.K
   },
   getTemplate: function (e) {
-    var t = '<field name="WIDGET_ID">'.concat(e, "</field>");
-    return ['<block type="volume_sensor_set_detection_state" uncache="true">\n      '.concat(t, "\n    </block>"), '<block type="volume_sensor_get_current_value" uncache="true">\n      '.concat(t, "\n    </block>")];
+    var t = "<field name=\"WIDGET_ID\">".concat(e, "</field>");
+    return ["<block type=\"volume_sensor_set_detection_state\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"volume_sensor_get_current_value\" uncache=\"true\">\n      ".concat(t, "\n    </block>")];
   },
   blockDeclareGroup: {
     setBlockGroupSnippet: function (e) {
@@ -34512,8 +34512,8 @@ var Tm = {
     blocks: Wn.n
   },
   getTemplate: function (e) {
-    var t = '<field name="WIDGET_ID">'.concat(e, "</field>");
-    return ['<block type="date_picker_on_select_done" uncache="true">\n      '.concat(t, "\n    </block>"), mp.d, '<block type="date_picker_open_select_dialog" uncache="true">\n      '.concat(t, "\n    </block>"), mp.d, '<block type="date_picker_get_date" uncache="true">\n      '.concat(t, "\n    </block>"), '<block type="date_picker_get_value" uncache="true">\n      '.concat(t, "\n    </block>"), mp.d, mp.e];
+    var t = "<field name=\"WIDGET_ID\">".concat(e, "</field>");
+    return ["<block type=\"date_picker_on_select_done\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), mp.d, "<block type=\"date_picker_open_select_dialog\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), mp.d, "<block type=\"date_picker_get_date\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"date_picker_get_value\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), mp.d, mp.e];
   },
   blockDeclareGroup: {
     setBlockGroupSnippet: function (e) {
@@ -34575,22 +34575,22 @@ var Tm = {
           type: "input_value",
           name: "PARAM_DATE",
           align: "CENTRE",
-          default_shadow: '<shadow type="date_picker_on_select_done_date" />'
+          default_shadow: "<shadow type=\"date_picker_on_select_done_date\" />"
         }, {
           type: "input_value",
           name: "PARAM_YEAR",
           align: "CENTRE",
-          default_shadow: '<shadow type="date_picker_on_select_done_year" />'
+          default_shadow: "<shadow type=\"date_picker_on_select_done_year\" />"
         }, {
           type: "input_value",
           name: "PARAM_MONTH",
           align: "CENTRE",
-          default_shadow: '<shadow type="date_picker_on_select_done_month" />'
+          default_shadow: "<shadow type=\"date_picker_on_select_done_month\" />"
         }, {
           type: "input_value",
           name: "PARAM_DAY",
           align: "CENTRE",
-          default_shadow: '<shadow type="date_picker_on_select_done_day" />'
+          default_shadow: "<shadow type=\"date_picker_on_select_done_day\" />"
         }, {
           type: "input_statement",
           name: "DO",
@@ -34734,8 +34734,8 @@ var Rm = {
     blocks: Wn.J
   },
   getTemplate: function (e) {
-    var t = '<field name="WIDGET_ID">'.concat(e, "</field>");
-    return ['<block type="time_picker_on_select_done" uncache="true">\n      '.concat(t, "\n    </block>"), mp.d, '<block type="time_picker_open_select_dialog" uncache="true">\n      '.concat(t, "\n    </block>"), mp.d, '<block type="time_picker_get_time" uncache="true">\n      '.concat(t, "\n    </block>"), '<block type="time_picker_get_value" uncache="true">\n      '.concat(t, "\n    </block>"), mp.d, mp.e];
+    var t = "<field name=\"WIDGET_ID\">".concat(e, "</field>");
+    return ["<block type=\"time_picker_on_select_done\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), mp.d, "<block type=\"time_picker_open_select_dialog\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), mp.d, "<block type=\"time_picker_get_time\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"time_picker_get_value\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), mp.d, mp.e];
   },
   blockDeclareGroup: {
     setBlockGroupSnippet: function (e) {
@@ -34797,22 +34797,22 @@ var Rm = {
           type: "input_value",
           name: "PARAM_TIME",
           align: "CENTRE",
-          default_shadow: '<shadow type="time_picker_on_select_done_time" />'
+          default_shadow: "<shadow type=\"time_picker_on_select_done_time\" />"
         }, {
           type: "input_value",
           name: "PARAM_HOUR",
           align: "CENTRE",
-          default_shadow: '<shadow type="time_picker_on_select_done_hour" />'
+          default_shadow: "<shadow type=\"time_picker_on_select_done_hour\" />"
         }, {
           type: "input_value",
           name: "PARAM_MINUTE",
           align: "CENTRE",
-          default_shadow: '<shadow type="time_picker_on_select_done_minute" />'
+          default_shadow: "<shadow type=\"time_picker_on_select_done_minute\" />"
         }, {
           type: "input_value",
           name: "PARAM_SECOND",
           align: "CENTRE",
-          default_shadow: '<shadow type="time_picker_on_select_done_second" />'
+          default_shadow: "<shadow type=\"time_picker_on_select_done_second\" />"
         }, {
           type: "input_statement",
           name: "DO",
@@ -34931,8 +34931,8 @@ var Dm = {
     blocks: Wn.I
   },
   getTemplate: function (e) {
-    var t = '<field name="WIDGET_ID">'.concat(e, "</field>");
-    return ['<block type="date_set_timing" uncache="true">\n      '.concat(t, "\n    </block>"), '<block type="date_get_timing_value" uncache="true">\n      '.concat(t, "\n    </block>")];
+    var t = "<field name=\"WIDGET_ID\">".concat(e, "</field>");
+    return ["<block type=\"date_set_timing\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"date_get_timing_value\" uncache=\"true\">\n      ".concat(t, "\n    </block>")];
   },
   blockDeclareGroup: {
     setBlockGroupSnippet: function (e) {
@@ -35047,8 +35047,8 @@ var Pm = {
     blocks: Wn.u
   },
   getTemplate: function (e) {
-    var t = '<field name="WIDGET_ID">'.concat(e, "</field>");
-    return ['<block type="http_on_client_success" uncache="true">\n      '.concat(t, "\n    </block>"), '<block type="http_on_client_error" uncache="true">\n      '.concat(t, "\n    </block>"), mp.d, '<block type="http_set_client_url" uncache="true">\n      '.concat(t, '\n      <value name="VALUE">\n        <shadow type="text">\n          <field name="TEXT"></field>\n        </shadow>\n      </value>\n    </block>'), '<block type="http_set_client_header" uncache="true">\n      '.concat(t, '\n      <value name="VALUE">\n        <shadow type="text">\n          <field name="TEXT"></field>\n        </shadow>\n      </value>\n    </block>'), '<block type="http_send_get_request" uncache="true">\n      '.concat(t, "\n    </block>"), '<block type="http_send_post_request" uncache="true">\n      '.concat(t, '\n      <value name="VALUE">\n        <shadow type="text">\n          <field name="TEXT"></field>\n        </shadow>\n      </value>\n    </block>'), mp.d, '<block type="http_get_client_url" uncache="true">\n      '.concat(t, "\n    </block>"), mp.d, '<block type="object_json_parse" uncache="true">\n      <value name="TEXT">\n        <shadow type="text">\n          <field name="TEXT"></field>\n        </shadow>\n      </value>\n    </block>'];
+    var t = "<field name=\"WIDGET_ID\">".concat(e, "</field>");
+    return ["<block type=\"http_on_client_success\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"http_on_client_error\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), mp.d, "<block type=\"http_set_client_url\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"VALUE\">\n        <shadow type=\"text\">\n          <field name=\"TEXT\"></field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"http_set_client_header\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"VALUE\">\n        <shadow type=\"text\">\n          <field name=\"TEXT\"></field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"http_send_get_request\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"http_send_post_request\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"VALUE\">\n        <shadow type=\"text\">\n          <field name=\"TEXT\"></field>\n        </shadow>\n      </value>\n    </block>"), mp.d, "<block type=\"http_get_client_url\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), mp.d, "<block type=\"object_json_parse\" uncache=\"true\">\n      <value name=\"TEXT\">\n        <shadow type=\"text\">\n          <field name=\"TEXT\"></field>\n        </shadow>\n      </value>\n    </block>"];
   },
   blockDeclareGroup: {
     setBlockGroupSnippet: function (e) {
@@ -35159,12 +35159,12 @@ var Pm = {
           type: "input_value",
           name: "HTTP_CODE",
           check: "Number",
-          default_shadow: '<shadow type="http_on_client_success_code" />'
+          default_shadow: "<shadow type=\"http_on_client_success_code\" />"
         }, {
           type: "input_value",
           name: "RESPONSE",
           check: "String",
-          default_shadow: '<shadow type="http_on_client_success_response" />'
+          default_shadow: "<shadow type=\"http_on_client_success_response\" />"
         }, {
           type: "input_dummy",
           align: "CENTRE"
@@ -35200,12 +35200,12 @@ var Pm = {
           type: "input_value",
           name: "HTTP_CODE",
           check: "Number",
-          default_shadow: '<shadow type="http_on_client_error_code" />'
+          default_shadow: "<shadow type=\"http_on_client_error_code\" />"
         }, {
           type: "input_value",
           name: "MESSAGE",
           check: "String",
-          default_shadow: '<shadow type="http_on_client_error_response" />'
+          default_shadow: "<shadow type=\"http_on_client_error_response\" />"
         }, {
           type: "input_dummy",
           align: "CENTRE"
@@ -35557,7 +35557,7 @@ var Wm = {
       }
       this.append_dummy_input("FAILED_MUTATION_BTN");
       this.append_dummy_input("FAILED_TEXT", "FAILED_MUTATION_BTN").append_field(lp.Blink.Msg.ROOM_FAILED_TEXT);
-      this.append_shadow_input("ERROR_MSG", '<shadow type="room_error"/>', "FAILED_MUTATION_BTN");
+      this.append_shadow_input("ERROR_MSG", "<shadow type=\"room_error\"/>", "FAILED_MUTATION_BTN");
       var p;
       var f = this.append_statement_input("ERROR", void 0, "cloud_room_error_DO");
       if (this.failedConnection) {
@@ -35612,34 +35612,34 @@ var Wm = {
 var Hm = Object.assign({}, Wm, {
   successInputList: [{
     inputName: "CREATED_NAME",
-    default_shadow: '<shadow type="room_enter_room_name">\n        </shadow>'
+    default_shadow: "<shadow type=\"room_enter_room_name\">\n        </shadow>"
   }, {
     inputName: "USERS",
-    default_shadow: '<shadow type="room_enter_room_users">\n        </shadow>'
+    default_shadow: "<shadow type=\"room_enter_room_users\">\n        </shadow>"
   }],
   successDO: "ENTER_ROOM"
 });
 var Vm = Object.assign({}, Wm, {
   successInputList: [{
     inputName: "CREATED_NAME",
-    default_shadow: '<shadow type="room_create_room_name" />'
+    default_shadow: "<shadow type=\"room_create_room_name\" />"
   }],
   successDO: "CREATED_NAME"
 });
 var zm = Object.assign({}, Wm, {
   successInputList: [{
     inputName: "NAME",
-    default_shadow: '<shadow type="room_nickname">\n        </shadow>'
+    default_shadow: "<shadow type=\"room_nickname\">\n        </shadow>"
   }],
   successDO: "NICKNAME"
 });
 var Ym = Object.assign({}, Wm, {
   successInputList: [{
     inputName: "ROOMS_LIST",
-    default_shadow: '<shadow type="room_room_list">\n        </shadow>'
+    default_shadow: "<shadow type=\"room_room_list\">\n        </shadow>"
   }, {
     inputName: "USERS",
-    default_shadow: '<shadow type="room_user_list">\n        </shadow>'
+    default_shadow: "<shadow type=\"room_user_list\">\n        </shadow>"
   }],
   successDO: "ROOM_LIST"
 });
@@ -35651,8 +35651,8 @@ var qm = {
     blocks: Wn.i
   },
   getTemplate: function (e) {
-    var t = '<field name="WIDGET_ID">'.concat(e, "</field>");
-    return ['<block type="room_receive_message" uncache="true">\n      '.concat(t, '\n      <value name="MESSAGE_LIST">\n        <shadow type="array_get"></shadow>\n      </value>\n    </block>'), '<block type="room_receive_room_info" uncache="true">\n      '.concat(t, "\n    </block>"), '<block type="room_network_error" uncache="true">\n      '.concat(t, "\n    </block>"), mp.d, '<block type="room_create_room" uncache="true">\n      '.concat(t, '\n      <value name="ROOM_NAME">\n        <shadow type="text">\n          <field name="TEXT" >').concat(lp.Blink.Msg.ROOM_DEFAULT_ROOM_NAME, '</field>\n        </shadow>\n      </value>\n      <value name="COUNT">\n        <shadow type="math_number">\n            <field name="NUM" constraints=\'1,20,1\'>2</field>\n        </shadow>\n      </value>\n    </block>'), '<block type="room_create_nickname" uncache="true">\n      '.concat(t, '\n      <value name="NICKNAME">\n        <shadow type="text">\n          <field name="TEXT">').concat(lp.Blink.Msg.ROOM_DEFAULT_NICKNAME, "</field>\n        </shadow>\n      </value>\n    </block>"), '<block type="room_get_room_list" uncache="true">\n      '.concat(t, "\n    </block>"), '<block type="room_enter_room" uncache="true">\n      '.concat(t, '\n      <value name="ROOM_NAME">\n        <shadow type="text">\n          <field name="TEXT">').concat(lp.Blink.Msg.ROOM_NAME, "</field>\n        </shadow>\n      </value>\n    </block>"), '<block type="room_send_message" uncache="true">\n      '.concat(t, '\n      <value name="MESSAGE">\n        <shadow type="array_get"></shadow>\n      </value>\n    </block>'), '<block type="room_exit_room" uncache="true">\n      '.concat(t, "\n    </block>"), mp.d, '<block type="room_get_current_room_name" uncache="true">\n      '.concat(t, "\n    </block>"), '<block type="room_get_current_online_users" uncache="true">\n      '.concat(t, "\n    </block>")];
+    var t = "<field name=\"WIDGET_ID\">".concat(e, "</field>");
+    return ["<block type=\"room_receive_message\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"MESSAGE_LIST\">\n        <shadow type=\"array_get\"></shadow>\n      </value>\n    </block>"), "<block type=\"room_receive_room_info\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"room_network_error\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), mp.d, "<block type=\"room_create_room\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"ROOM_NAME\">\n        <shadow type=\"text\">\n          <field name=\"TEXT\" >").concat(lp.Blink.Msg.ROOM_DEFAULT_ROOM_NAME, "</field>\n        </shadow>\n      </value>\n      <value name=\"COUNT\">\n        <shadow type=\"math_number\">\n            <field name=\"NUM\" constraints='1,20,1'>2</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"room_create_nickname\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"NICKNAME\">\n        <shadow type=\"text\">\n          <field name=\"TEXT\">").concat(lp.Blink.Msg.ROOM_DEFAULT_NICKNAME, "</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"room_get_room_list\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"room_enter_room\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"ROOM_NAME\">\n        <shadow type=\"text\">\n          <field name=\"TEXT\">").concat(lp.Blink.Msg.ROOM_NAME, "</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"room_send_message\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"MESSAGE\">\n        <shadow type=\"array_get\"></shadow>\n      </value>\n    </block>"), "<block type=\"room_exit_room\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), mp.d, "<block type=\"room_get_current_room_name\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"room_get_current_online_users\" uncache=\"true\">\n      ".concat(t, "\n    </block>")];
   },
   blockDeclareGroup: {
     setBlockGroupSnippet: function (e) {
@@ -35976,7 +35976,7 @@ var qm = {
           type: "input_value",
           name: "USER",
           check: "String",
-          default_shadow: '<shadow type="room_user" />'
+          default_shadow: "<shadow type=\"room_user\" />"
         }, {
           type: "input_dummy",
           align: "CENTRE"
@@ -36002,7 +36002,7 @@ var qm = {
         args0: [Object(pp.e)(Km, !0), {
           type: "input_value",
           name: "NETWORK_ERROR",
-          default_shadow: '<shadow type="room_network_error_value" />'
+          default_shadow: "<shadow type=\"room_network_error_value\" />"
         }, {
           type: "input_dummy",
           align: "CENTRE"
@@ -36089,7 +36089,7 @@ var Xm = {
 var Qm = [{
   type: "WarningFields",
   url: "https://codemao.yuque.com/kzbwh0/coco_guide/idt04yhrfgug52dx",
-  label: "\u4e91\u6570\u636e\u8868"
+  label: "云数据表"
 }, {
   type: "WidgetTitle"
 }, {
@@ -36242,7 +36242,7 @@ var Jm = {
       }
       this.append_dummy_input("FAILED_MUTATION_BTN");
       this.append_dummy_input("FAILED_TEXT", "FAILED_MUTATION_BTN").append_field(lp.Blink.Msg.ROOM_FAILED_TEXT);
-      this.append_shadow_input("ERROR_MSG", '<shadow type="cloudDB_fail_result"/>', "FAILED_MUTATION_BTN");
+      this.append_shadow_input("ERROR_MSG", "<shadow type=\"cloudDB_fail_result\"/>", "FAILED_MUTATION_BTN");
       var p;
       var f = this.append_statement_input("ERROR", void 0, "cloudDB_error_DO");
       if (this.failedConnection) {
@@ -36301,14 +36301,14 @@ var $m = Object.assign({}, Jm, {
 var eg = Object.assign({}, Jm, {
   successInputList: [{
     inputName: "CLOUD_DB_QUERY_BY_COLUMN_RESULT",
-    default_shadow: '<shadow type="cloudDB_query_by_column_result">\n        </shadow>'
+    default_shadow: "<shadow type=\"cloudDB_query_by_column_result\">\n        </shadow>"
   }],
   successDO: "QUERY_BY_COLUMN"
 });
 var tg = Object.assign({}, Jm, {
   successInputList: [{
     inputName: "CLOUD_DB_QUERY_BY_COUNT_RESULT",
-    default_shadow: '<shadow type="cloudDB_query_by_count_result">\n        </shadow>'
+    default_shadow: "<shadow type=\"cloudDB_query_by_count_result\">\n        </shadow>"
   }],
   successDO: "QUERY_BY_COUNT"
 });
@@ -36319,10 +36319,10 @@ var ng = {
     blocks: Wn.h
   },
   getTemplate: function (e) {
-    var t = '<field name="WIDGET_ID">'.concat(e, "</field>");
+    var t = "<field name=\"WIDGET_ID\">".concat(e, "</field>");
     var n = Object(fp.c)().getCloudDBColumnList(e)[0].value;
-    var r = '<field name="COLUMNS">'.concat(n, "</field>");
-    return ['<block type="cloudDB_error"></block>', mp.d, '<block type="cloudDB_insert" uncache="true">\n      <value name="INSERT_ROW">\n        <shadow type="text">\n          <field name="TEXT" >1,2,3</field>\n        </shadow>\n      </value>\n      '.concat(t, "\n    </block>"), '<block type="cloudDB_delete" uncache="true">\n      '.concat(t, '\n      <value name="INPUT_COLUMN">\n        <shadow type="cloudDB_all_column_dropdown">').concat(r, '</shadow>\n      </value>\n      <value name="COLUMN_VALUE">\n        <shadow type="math_number">\n          <field name="NUM" allow_text="true">123</field>\n        </shadow>\n      </value>\n    </block>'), '<block type="cloudDB_update" uncache="true">\n      '.concat(t, '\n      <value name="INPUT_COLUMN">\n        <shadow type="cloudDB_all_column_dropdown">').concat(r, '</shadow>\n      </value>\n      <value name="COLUMN_VALUE">\n        <shadow type="math_number">\n          <field name="NUM" allow_text="true">123</field>\n        </shadow>\n      </value>\n      <value name="UPDATE_COLUMN">\n        <shadow type="cloudDB_all_column_dropdown">').concat(r, '</shadow>\n      </value>\n      <value name="UPDATE_COLUMN_VALUE">\n        <shadow type="math_number">\n          <field name="NUM" allow_text="true">456</field>\n        </shadow>\n      </value>\n    </block>'), '<block type="cloudDB_query_by_column" uncache="true">\n      '.concat(t, '\n      <value name="INPUT_COLUMN">\n        <shadow type="cloudDB_all_column_dropdown">').concat(r, '</shadow>\n      </value>\n      <value name="COLUMN_VALUE">\n        <shadow type="math_number">\n          <field name="NUM" allow_text="true">123</field>\n        </shadow>\n      </value>\n    </block>'), '<block type="cloudDB_query_by_count" uncache="true">\n      '.concat(t, "\n    </block>"), mp.d, '<block type="array_foreach" uncache="true">\n      <value name="ARRAY">\n        <shadow type="array_get"></shadow>\n      </value>\n    </block>'];
+    var r = "<field name=\"COLUMNS\">".concat(n, "</field>");
+    return ["<block type=\"cloudDB_error\"></block>", mp.d, "<block type=\"cloudDB_insert\" uncache=\"true\">\n      <value name=\"INSERT_ROW\">\n        <shadow type=\"text\">\n          <field name=\"TEXT\" >1,2,3</field>\n        </shadow>\n      </value>\n      ".concat(t, "\n    </block>"), "<block type=\"cloudDB_delete\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"INPUT_COLUMN\">\n        <shadow type=\"cloudDB_all_column_dropdown\">").concat(r, "</shadow>\n      </value>\n      <value name=\"COLUMN_VALUE\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" allow_text=\"true\">123</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"cloudDB_update\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"INPUT_COLUMN\">\n        <shadow type=\"cloudDB_all_column_dropdown\">").concat(r, "</shadow>\n      </value>\n      <value name=\"COLUMN_VALUE\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" allow_text=\"true\">123</field>\n        </shadow>\n      </value>\n      <value name=\"UPDATE_COLUMN\">\n        <shadow type=\"cloudDB_all_column_dropdown\">").concat(r, "</shadow>\n      </value>\n      <value name=\"UPDATE_COLUMN_VALUE\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" allow_text=\"true\">456</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"cloudDB_query_by_column\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"INPUT_COLUMN\">\n        <shadow type=\"cloudDB_all_column_dropdown\">").concat(r, "</shadow>\n      </value>\n      <value name=\"COLUMN_VALUE\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" allow_text=\"true\">123</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"cloudDB_query_by_count\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), mp.d, "<block type=\"array_foreach\" uncache=\"true\">\n      <value name=\"ARRAY\">\n        <shadow type=\"array_get\"></shadow>\n      </value>\n    </block>"];
   },
   blockDeclareGroup: {
     setBlockGroupSnippet: function (e) {
@@ -36501,11 +36501,11 @@ var ng = {
         args0: [Object(pp.e)("%{BKY_BLOCK_CLOUD_ICON}", !0), {
           type: "input_value",
           name: "CLOUD_DB_ERROR_NAME",
-          default_shadow: '<shadow type="cloudDB_error_name" />'
+          default_shadow: "<shadow type=\"cloudDB_error_name\" />"
         }, {
           type: "input_value",
           name: "CLOUD_DB_ERROR_INFO",
-          default_shadow: '<shadow type="cloudDB_error_info" />'
+          default_shadow: "<shadow type=\"cloudDB_error_info\" />"
         }, {
           type: "input_dummy",
           align: "CENTRE"
@@ -36552,7 +36552,7 @@ var ng = {
           name: "OPERATOR",
           custom: !0,
           options: function () {
-            return [["=", "EQ"], ["\u2260", "NE"], ["<", "LT"], ["\u2264", "LTE"], [">", "GT"], ["\u2265", "GTE"]];
+            return [["=", "EQ"], ["≠", "NE"], ["<", "LT"], ["≤", "LTE"], [">", "GT"], ["≥", "GTE"]];
           }
         }, {
           type: "input_value",
@@ -36587,7 +36587,7 @@ var ng = {
           name: "OPERATOR",
           custom: !0,
           options: function () {
-            return [["=", "EQ"], ["\u2260", "NE"], ["<", "LT"], ["\u2264", "LTE"], [">", "GT"], ["\u2265", "GTE"]];
+            return [["=", "EQ"], ["≠", "NE"], ["<", "LT"], ["≤", "LTE"], [">", "GT"], ["≥", "GTE"]];
           }
         }, {
           type: "input_value",
@@ -36627,7 +36627,7 @@ var ng = {
           name: "OPERATOR",
           custom: !0,
           options: function () {
-            return [["=", "EQ"], ["\u2260", "NE"], ["<", "LT"], ["\u2264", "LTE"], [">", "GT"], ["\u2265", "GTE"]];
+            return [["=", "EQ"], ["≠", "NE"], ["<", "LT"], ["≤", "LTE"], [">", "GT"], ["≥", "GTE"]];
           }
         }, {
           type: "input_value",
@@ -36727,10 +36727,10 @@ var ig = {
     blocks: Wn.y
   },
   getTemplate: function (e) {
-    var t = '<field name="WIDGET_ID">'.concat(e, "</field>");
+    var t = "<field name=\"WIDGET_ID\">".concat(e, "</field>");
     var n = Object(fp.c)().getLocalDocumentFieldList(e)[0].value;
-    var r = '<field name="DOC_KEYS">'.concat(n, "</field>");
-    return ['<block type="local_document_set_field_item" uncache="true">\n      '.concat(t, '\n      <value name="DOC_KEYS_WRAPPER">\n        <shadow type="local_document_all_key_field_dropdown">').concat(r, '</shadow>\n      </value>\n      <value name="VALUE">\n        <shadow type="text">\n          <field name="TEXT">0</field>\n        </shadow>\n      </value>\n    </block>'), '<block type="local_document_remove_field_item" uncache="true">\n      '.concat(t, '\n      <value name="DOC_KEYS_WRAPPER">\n        <shadow type="local_document_all_key_field_dropdown">').concat(r, "</shadow>\n      </value>\n    </block>"), '<block type="local_document_clear_all_field_items" uncache="true">\n      '.concat(t, "\n    </block>"), mp.d, '<block type="local_document_get_field_item" uncache="true">\n      '.concat(t, '\n      <value name="DOC_KEYS_WRAPPER">\n        <shadow type="local_document_all_key_field_dropdown">').concat(r, "</shadow>\n      </value>\n    </block>"), '<block type="local_document_get_field_key_count" uncache="true">\n      '.concat(t, "\n    </block>"), '<block type="local_document_get_all_field_keys" uncache="true">\n      '.concat(t, '\n      <value name="DOC_KEYS_WRAPPER">\n        <shadow type="local_document_all_key_field_dropdown">').concat(r, "</shadow>\n      </value>\n    </block>"), '<block type="local_document_check_if_field_key_exists" uncache="true">\n      '.concat(t, '\n      <value name="DOC_KEYS_WRAPPER">\n        <shadow type="local_document_all_key_field_dropdown">').concat(r, "</shadow>\n      </value>\n    </block>")];
+    var r = "<field name=\"DOC_KEYS\">".concat(n, "</field>");
+    return ["<block type=\"local_document_set_field_item\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"DOC_KEYS_WRAPPER\">\n        <shadow type=\"local_document_all_key_field_dropdown\">").concat(r, "</shadow>\n      </value>\n      <value name=\"VALUE\">\n        <shadow type=\"text\">\n          <field name=\"TEXT\">0</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"local_document_remove_field_item\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"DOC_KEYS_WRAPPER\">\n        <shadow type=\"local_document_all_key_field_dropdown\">").concat(r, "</shadow>\n      </value>\n    </block>"), "<block type=\"local_document_clear_all_field_items\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), mp.d, "<block type=\"local_document_get_field_item\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"DOC_KEYS_WRAPPER\">\n        <shadow type=\"local_document_all_key_field_dropdown\">").concat(r, "</shadow>\n      </value>\n    </block>"), "<block type=\"local_document_get_field_key_count\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"local_document_get_all_field_keys\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"DOC_KEYS_WRAPPER\">\n        <shadow type=\"local_document_all_key_field_dropdown\">").concat(r, "</shadow>\n      </value>\n    </block>"), "<block type=\"local_document_check_if_field_key_exists\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"DOC_KEYS_WRAPPER\">\n        <shadow type=\"local_document_all_key_field_dropdown\">").concat(r, "</shadow>\n      </value>\n    </block>")];
   },
   blockDeclareGroup: {
     setBlockGroupSnippet: function (e) {
@@ -36963,10 +36963,10 @@ var dg = {
     blocks: Wn.B
   },
   getTemplate: function (e) {
-    var t = '<field name="WIDGET_ID">'.concat(e, "</field>");
+    var t = "<field name=\"WIDGET_ID\">".concat(e, "</field>");
     var n = Object(fp.c)().getLocalDocumentFieldList(e)[0].value;
-    var r = '<field name="DOC_KEYS">'.concat(n, "</field>");
-    return ['<block type="new_local_document_set_field_item" uncache="true">\n      '.concat(t, '\n      <value name="DOC_KEYS_WRAPPER">\n        <shadow type="new_local_document_all_key_field_dropdown">').concat(r, '</shadow>\n      </value>\n      <value name="VALUE">\n        <shadow type="text">\n          <field name="TEXT">0</field>\n        </shadow>\n      </value>\n    </block>'), '<block type="new_local_document_remove_field_item" uncache="true">\n      '.concat(t, '\n      <value name="DOC_KEYS_WRAPPER">\n        <shadow type="new_local_document_all_key_field_dropdown">').concat(r, "</shadow>\n      </value>\n    </block>"), '<block type="new_local_document_clear_all_field_items" uncache="true">\n      '.concat(t, "\n    </block>"), mp.d, '<block type="new_local_document_get_field_item" uncache="true">\n      '.concat(t, '\n      <value name="DOC_KEYS_WRAPPER">\n        <shadow type="new_local_document_all_key_field_dropdown">').concat(r, "</shadow>\n      </value>\n    </block>"), '<block type="new_local_document_get_all_field_keys" uncache="true">\n      '.concat(t, '\n      <value name="DOC_KEYS_WRAPPER">\n        <shadow type="new_local_document_all_key_field_dropdown">').concat(r, "</shadow>\n      </value>\n    </block>"), '<block type="new_local_document_get_field_key_count" uncache="true">\n      '.concat(t, "\n    </block>"), mp.d, '<block type="new_local_document_check_if_field_key_exists" uncache="true">\n      '.concat(t, '\n      <value name="DOC_KEYS_WRAPPER">\n        <shadow type="new_local_document_all_key_field_dropdown">').concat(r, "</shadow>\n      </value>\n    </block>")];
+    var r = "<field name=\"DOC_KEYS\">".concat(n, "</field>");
+    return ["<block type=\"new_local_document_set_field_item\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"DOC_KEYS_WRAPPER\">\n        <shadow type=\"new_local_document_all_key_field_dropdown\">").concat(r, "</shadow>\n      </value>\n      <value name=\"VALUE\">\n        <shadow type=\"text\">\n          <field name=\"TEXT\">0</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"new_local_document_remove_field_item\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"DOC_KEYS_WRAPPER\">\n        <shadow type=\"new_local_document_all_key_field_dropdown\">").concat(r, "</shadow>\n      </value>\n    </block>"), "<block type=\"new_local_document_clear_all_field_items\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), mp.d, "<block type=\"new_local_document_get_field_item\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"DOC_KEYS_WRAPPER\">\n        <shadow type=\"new_local_document_all_key_field_dropdown\">").concat(r, "</shadow>\n      </value>\n    </block>"), "<block type=\"new_local_document_get_all_field_keys\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"DOC_KEYS_WRAPPER\">\n        <shadow type=\"new_local_document_all_key_field_dropdown\">").concat(r, "</shadow>\n      </value>\n    </block>"), "<block type=\"new_local_document_get_field_key_count\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), mp.d, "<block type=\"new_local_document_check_if_field_key_exists\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"DOC_KEYS_WRAPPER\">\n        <shadow type=\"new_local_document_all_key_field_dropdown\">").concat(r, "</shadow>\n      </value>\n    </block>")];
   },
   blockDeclareGroup: {
     setBlockGroupSnippet: function (e) {
@@ -37188,10 +37188,10 @@ var mg = Object(hg.a)("COLUMN");
 var gg = Object(hg.a)("COLUMN");
 cg = {};
 Object(k.a)(cg, mg, {
-  field: "\u7b2c1\u5217"
+  field: "第1列"
 });
 Object(k.a)(cg, gg, {
-  field: "\u7b2c2\u5217"
+  field: "第2列"
 });
 var _g = cg;
 var vg = [(lg = {
@@ -37255,7 +37255,7 @@ var Eg = [{
   url: "https://codemao.yuque.com/kzbwh0/ogrtbo/table-data"
 }];
 var Og = require("./407");
-var wg = '<shadow type="math_number"><field name="NUM" constraints="1,,1">1</field></shadow>';
+var wg = "<shadow type=\"math_number\"><field name=\"NUM\" constraints=\"1,,1\">1</field></shadow>";
 var Cg = {
   addMutation: function (e) {
     var t = this;
@@ -37380,7 +37380,7 @@ var Sg = {
             c.remove_field("LABEL");
             c.insert_field_at(0, "".concat(s.field, ":"), "LABEL");
           } else {
-            this.append_shadow_input("VALUE".concat(i), '<shadow type="text_multiline"><field name="TEXT"></field></shadow>', i + 1).insert_field_at(0, "".concat(s.field, ":"), "LABEL");
+            this.append_shadow_input("VALUE".concat(i), "<shadow type=\"text_multiline\"><field name=\"TEXT\"></field></shadow>", i + 1).insert_field_at(0, "".concat(s.field, ":"), "LABEL");
           }
           i++;
         }
@@ -37414,10 +37414,10 @@ var Ig = {
     blocks: Wn.G
   },
   getTemplate: function (e) {
-    var t = '<field name="WIDGET_ID">'.concat(e, "</field>");
+    var t = "<field name=\"WIDGET_ID\">".concat(e, "</field>");
     var n = Object(fp.c)().getTableDataColumnList(e)[0].value;
-    var r = '<field name="COLUMN">'.concat(n, "</field>");
-    return ['<block type="table_data_on_change" uncache="true">\n      '.concat(t, "\n    </block>"), mp.d, '<block type="table_data_get_value_by_row_and_column" uncache="true">\n      '.concat(t, '\n      <value name="COLUMN_WRAPPER">\n        <shadow type="table_data_column_field_dropdown">').concat(r, '</shadow>\n      </value>\n      <value name="ROW">\n        <shadow type="math_number">\n          <field name="NUM" constraints=\'1,,1\'>1</field>\n        </shadow>\n      </value>\n    </block>'), '<block type="table_data_get_column_data" uncache="true">\n      '.concat(t, '\n      <value name="COLUMN_WRAPPER">\n        <shadow type="table_data_column_field_dropdown">').concat(r, "</shadow>\n      </value>\n    </block>"), '<block type="table_data_get_row_data" uncache="true">\n      <mutation pos=\'nth\'></mutation>\n      '.concat(t, '\n      <value name="INDEX">\n        <shadow type="math_number">\n          <field name="NUM" constraints=\'1,,1\'>1</field>\n        </shadow>\n      </value>\n    </block>'), '<block type="table_data_get_row_length" uncache="true">\n      '.concat(t, "\n    </block>"), mp.d, '<block type="table_data_set_value_by_row_and_column" uncache="true">\n      '.concat(t, '\n      <value name="COLUMN_WRAPPER">\n        <shadow type="table_data_column_field_dropdown">').concat(r, '</shadow>\n      </value>\n      <value name="ROW">\n        <shadow type="math_number">\n          <field name="NUM" constraints=\'1,,1\'>1</field>\n        </shadow>\n      </value>\n      <value name="VALUE">\n        <shadow type="text_multiline">\n          <field name="TEXT"></field>\n        </shadow>\n      </value>\n    </block>'), '<block type="table_data_delete_row_data" uncache="true">\n      <mutation pos=\'nth\'></mutation>\n      '.concat(t, '\n      <value name="INDEX">\n        <shadow type="math_number">\n          <field name="NUM" constraints=\'1,,1\'>1</field>\n        </shadow>\n      </value>\n    </block>'), '<block type="table_data_insert_row_data" uncache="true">\n      <mutation pos=\'nth\'></mutation>\n      '.concat(t, "\n    </block>")];
+    var r = "<field name=\"COLUMN\">".concat(n, "</field>");
+    return ["<block type=\"table_data_on_change\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), mp.d, "<block type=\"table_data_get_value_by_row_and_column\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"COLUMN_WRAPPER\">\n        <shadow type=\"table_data_column_field_dropdown\">").concat(r, "</shadow>\n      </value>\n      <value name=\"ROW\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='1,,1'>1</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"table_data_get_column_data\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"COLUMN_WRAPPER\">\n        <shadow type=\"table_data_column_field_dropdown\">").concat(r, "</shadow>\n      </value>\n    </block>"), "<block type=\"table_data_get_row_data\" uncache=\"true\">\n      <mutation pos='nth'></mutation>\n      ".concat(t, "\n      <value name=\"INDEX\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='1,,1'>1</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"table_data_get_row_length\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), mp.d, "<block type=\"table_data_set_value_by_row_and_column\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"COLUMN_WRAPPER\">\n        <shadow type=\"table_data_column_field_dropdown\">").concat(r, "</shadow>\n      </value>\n      <value name=\"ROW\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='1,,1'>1</field>\n        </shadow>\n      </value>\n      <value name=\"VALUE\">\n        <shadow type=\"text_multiline\">\n          <field name=\"TEXT\"></field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"table_data_delete_row_data\" uncache=\"true\">\n      <mutation pos='nth'></mutation>\n      ".concat(t, "\n      <value name=\"INDEX\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='1,,1'>1</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"table_data_insert_row_data\" uncache=\"true\">\n      <mutation pos='nth'></mutation>\n      ".concat(t, "\n    </block>")];
   },
   blockDeclareGroup: {
     setBlockGroupSnippet: function (e) {
@@ -37467,7 +37467,7 @@ var Ig = {
           for (var l in a.attributes.db.header) {
             var u = e.valueToCode(t, n, "VALUE".concat(c), e.ORDER_FUNCTION_CALL);
             c++;
-            s += '"'.concat(l, '": ').concat(u || "''", ",");
+            s += "\"".concat(l, "\": ").concat(u || "''", ",");
           }
         }
         s += "}";
@@ -37744,7 +37744,7 @@ var jg = require("./305");
 var Ng = [{
   type: "WarningFields",
   url: jg.e,
-  label: "\u4e91\u5b57\u5178"
+  label: "云字典"
 }, {
   type: "WidgetTitle"
 }, {
@@ -37762,10 +37762,10 @@ var xg = {
     blocks: Wn.l
   },
   getTemplate: function (e) {
-    var t = '<field name="WIDGET_ID">'.concat(e, "</field>");
+    var t = "<field name=\"WIDGET_ID\">".concat(e, "</field>");
     var n = Object(fp.c)().getCloudDocumentFieldList(e)[0].value;
-    var r = '<field name="DOC_KEYS">'.concat(n, "</field>");
-    return ['<block type="cloud_document_on_error" uncache="true">\n      '.concat(t, "\n    </block>"), '<block type="cloud_document_set_field_item" uncache="true">\n      '.concat(t, '\n      <value name="DOC_KEYS_WRAPPER">\n        <shadow type="cloud_document_all_key_field_dropdown">').concat(r, '</shadow>\n      </value>    \n      <value name="VALUE">\n        <shadow type="text">\n          <field name="TEXT">0</field>\n        </shadow>\n      </value>\n      <value name="MESSAGE">\n        <shadow type="text">\n          <field name="TEXT">').concat(lp.Blink.Msg.CLOUD_STORAGE_CANNOT_SET_ITEM, "</field>\n        </shadow>\n      </value>\n    </block>"), '<block type="cloud_document_remove_field_item" uncache="true">\n      '.concat(t, '\n      <value name="DOC_KEYS_WRAPPER">\n        <shadow type="cloud_document_all_key_field_dropdown">').concat(r, '</shadow>\n      </value>\n      <value name="MESSAGE">\n        <shadow type="text">\n          <field name="TEXT">').concat(lp.Blink.Msg.CLOUD_STORAGE_CANNOT_REMOVED_ITEM, "</field>\n        </shadow>\n      </value>\n    </block>"), '<block type="cloud_document_clear_all_field_items" uncache="true">\n      '.concat(t, '\n      <value name="MESSAGE">\n        <shadow type="text">\n          <field name="TEXT">').concat(lp.Blink.Msg.CLOUD_STORAGE_CANNOT_CLEAR, "</field>\n        </shadow>\n      </value>\n    </block>"), mp.d, '<block type="cloud_document_get_field_item" uncache="true">\n      '.concat(t, '\n      <value name="DOC_KEYS_WRAPPER">\n        <shadow type="cloud_document_all_key_field_dropdown">').concat(r, '</shadow>\n      </value>\n      <value name="MESSAGE">\n        <shadow type="text">\n          <field name="TEXT">').concat(lp.Blink.Msg.CLOUD_STORAGE_CANNOT_GET_ITEM, "</field>\n        </shadow>\n      </value>\n    </block>"), '<block type="cloud_document_get_field_key_count" uncache="true">\n      '.concat(t, '\n      <value name="MESSAGE">\n        <shadow type="text">\n          <field name="TEXT">').concat(lp.Blink.Msg.CLOUD_STORAGE_CANNOT_GET_ITEM_COUNT, "</field>\n        </shadow>\n      </value>\n    </block>"), '<block type="cloud_document_get_all_field_keys" uncache="true">\n      '.concat(t, '\n      <value name="MESSAGE">\n        <shadow type="text">\n          <field name="TEXT">').concat(lp.Blink.Msg.CLOUD_STORAGE_CANNOT_GET_ALL_ITEM, "</field>\n        </shadow>\n      </value>     \n    </block>"), '<block type="cloud_document_check_if_field_key_exists" uncache="true">\n      '.concat(t, '\n      <value name="DOC_KEYS_WRAPPER">\n        <shadow type="cloud_document_all_key_field_dropdown">').concat(r, '</shadow>\n      </value>\n      <value name="MESSAGE">\n        <shadow type="text">\n          <field name="TEXT">').concat(lp.Blink.Msg.CLOUD_STORAGE_CANNOT_ASSERT_KEY, "</field>\n        </shadow>\n      </value>   \n    </block>")];
+    var r = "<field name=\"DOC_KEYS\">".concat(n, "</field>");
+    return ["<block type=\"cloud_document_on_error\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"cloud_document_set_field_item\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"DOC_KEYS_WRAPPER\">\n        <shadow type=\"cloud_document_all_key_field_dropdown\">").concat(r, "</shadow>\n      </value>    \n      <value name=\"VALUE\">\n        <shadow type=\"text\">\n          <field name=\"TEXT\">0</field>\n        </shadow>\n      </value>\n      <value name=\"MESSAGE\">\n        <shadow type=\"text\">\n          <field name=\"TEXT\">").concat(lp.Blink.Msg.CLOUD_STORAGE_CANNOT_SET_ITEM, "</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"cloud_document_remove_field_item\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"DOC_KEYS_WRAPPER\">\n        <shadow type=\"cloud_document_all_key_field_dropdown\">").concat(r, "</shadow>\n      </value>\n      <value name=\"MESSAGE\">\n        <shadow type=\"text\">\n          <field name=\"TEXT\">").concat(lp.Blink.Msg.CLOUD_STORAGE_CANNOT_REMOVED_ITEM, "</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"cloud_document_clear_all_field_items\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"MESSAGE\">\n        <shadow type=\"text\">\n          <field name=\"TEXT\">").concat(lp.Blink.Msg.CLOUD_STORAGE_CANNOT_CLEAR, "</field>\n        </shadow>\n      </value>\n    </block>"), mp.d, "<block type=\"cloud_document_get_field_item\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"DOC_KEYS_WRAPPER\">\n        <shadow type=\"cloud_document_all_key_field_dropdown\">").concat(r, "</shadow>\n      </value>\n      <value name=\"MESSAGE\">\n        <shadow type=\"text\">\n          <field name=\"TEXT\">").concat(lp.Blink.Msg.CLOUD_STORAGE_CANNOT_GET_ITEM, "</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"cloud_document_get_field_key_count\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"MESSAGE\">\n        <shadow type=\"text\">\n          <field name=\"TEXT\">").concat(lp.Blink.Msg.CLOUD_STORAGE_CANNOT_GET_ITEM_COUNT, "</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"cloud_document_get_all_field_keys\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"MESSAGE\">\n        <shadow type=\"text\">\n          <field name=\"TEXT\">").concat(lp.Blink.Msg.CLOUD_STORAGE_CANNOT_GET_ALL_ITEM, "</field>\n        </shadow>\n      </value>     \n    </block>"), "<block type=\"cloud_document_check_if_field_key_exists\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"DOC_KEYS_WRAPPER\">\n        <shadow type=\"cloud_document_all_key_field_dropdown\">").concat(r, "</shadow>\n      </value>\n      <value name=\"MESSAGE\">\n        <shadow type=\"text\">\n          <field name=\"TEXT\">").concat(lp.Blink.Msg.CLOUD_STORAGE_CANNOT_ASSERT_KEY, "</field>\n        </shadow>\n      </value>   \n    </block>")];
   },
   blockDeclareGroup: {
     setBlockGroupSnippet: function (e) {
@@ -37895,12 +37895,12 @@ var xg = {
           type: "input_value",
           name: "TYPE",
           check: ["String", "Number"],
-          default_shadow: '<shadow type="cloud_document_error_type" />'
+          default_shadow: "<shadow type=\"cloud_document_error_type\" />"
         }, {
           type: "input_value",
           name: "MESSAGE",
           check: ["String", "Number"],
-          default_shadow: '<shadow type="cloud_document_error_message" />'
+          default_shadow: "<shadow type=\"cloud_document_error_message\" />"
         }, {
           type: "input_dummy",
           align: "CENTRE"
@@ -38223,7 +38223,7 @@ function zg(e, t) {
         o.styleList.forEach(function (e, t) {
           n.push({
             type: "basic",
-            text: "\u9020\u578b".concat(t + 1),
+            text: "造型".concat(t + 1),
             value: e.id,
             icon: qg("rgb(231, 108, 234)", t + 1)
           });
@@ -38413,7 +38413,7 @@ function qg(e, t) {
   var o = 16 + 4 * r;
   var i = 10 + r;
   var a = t ? t > 999 ? 999 : t : "";
-  n.innerHTML = '\n    <svg style="fill:'.concat(e, '" class="icon" aria-hidden="true">\n      <text class="blocklyText" dominant-baseline="central" text-anchor="middle" style="fill:').concat(e, ';font-size:14px;font-weight: 900;" y="8.75" x="').concat(i, '">').concat(a, ".</text>\n    </svg>\n  ");
+  n.innerHTML = "\n    <svg style=\"fill:".concat(e, "\" class=\"icon\" aria-hidden=\"true\">\n      <text class=\"blocklyText\" dominant-baseline=\"central\" text-anchor=\"middle\" style=\"fill:").concat(e, ";font-size:14px;font-weight: 900;\" y=\"8.75\" x=\"").concat(i, "\">").concat(a, ".</text>\n    </svg>\n  ");
   return {
     src: n,
     width: o,
@@ -38427,7 +38427,7 @@ function Xg(e, t, n) {
   });
   var o = e > 9 ? 20 : 24;
   var i = e > 9 ? 20 : 24;
-  r.innerHTML = '\n    <svg style="fill:'.concat(t, '" opacity="').concat(n, '" aria-hidden="true">\n      <use xlink:href="').concat(e > 9 ? "#icon-screen-variable-plus" : "#icon-screen-variable", "\"></use>\n        <g fill='#fff' transform=\"translate(").concat(i / 2, ", ").concat(o / 2, ') scale(0.625 0.625)" >\n          <text dominant-baseline="middle" text-anchor="middle" font-family="sans-serif">').concat(e, "</text>\n        </g>\n    </svg>\n  ");
+  r.innerHTML = "\n    <svg style=\"fill:".concat(t, "\" opacity=\"").concat(n, "\" aria-hidden=\"true\">\n      <use xlink:href=\"").concat(e > 9 ? "#icon-screen-variable-plus" : "#icon-screen-variable", "\"></use>\n        <g fill='#fff' transform=\"translate(").concat(i / 2, ", ").concat(o / 2, ") scale(0.625 0.625)\" >\n          <text dominant-baseline=\"middle\" text-anchor=\"middle\" font-family=\"sans-serif\">").concat(e, "</text>\n        </g>\n    </svg>\n  ");
   return {
     src: r,
     width: i,
@@ -39207,7 +39207,7 @@ var h_ = {
       }
       this.append_dummy_input("FAILED_MUTATION_BTN");
       this.append_dummy_input("FAILED_TEXT", "FAILED_MUTATION_BTN").append_field(lp.Blink.Msg.ROOM_FAILED_TEXT);
-      this.append_shadow_input("ERROR_MSG", '<shadow type="cloud_dict_fail_result"/>', "FAILED_MUTATION_BTN");
+      this.append_shadow_input("ERROR_MSG", "<shadow type=\"cloud_dict_fail_result\"/>", "FAILED_MUTATION_BTN");
       var p;
       var f = this.append_statement_input("ERROR", void 0, "cloud_dict_error_DO");
       if (this.failedConnection) {
@@ -39266,21 +39266,21 @@ var m_ = Object.assign({}, h_, {
 var g_ = Object.assign({}, h_, {
   successInputList: [{
     inputName: "CLOUD_DICT_QUERY_VALUE_RESULT",
-    default_shadow: '<shadow type="cloud_dict_query_value_by_key_result">\n        </shadow>'
+    default_shadow: "<shadow type=\"cloud_dict_query_value_by_key_result\">\n        </shadow>"
   }],
   successDO: "QUERY_VALUE_BY_KEY"
 });
 var __ = Object.assign({}, h_, {
   successInputList: [{
     inputName: "CLOUD_DICT_QUERY_KEY_COUNT_RESULT",
-    default_shadow: '<shadow type="cloud_dict_query_key_count_result">\n        </shadow>'
+    default_shadow: "<shadow type=\"cloud_dict_query_key_count_result\">\n        </shadow>"
   }],
   successDO: "QUERY_KEY_COUNT"
 });
 var v_ = Object.assign({}, h_, {
   successInputList: [{
     inputName: "CLOUD_DICT_QUERY_ALL_KEYS_RESULT",
-    default_shadow: '<shadow type="cloud_dict_query_all_keys_result">\n        </shadow>'
+    default_shadow: "<shadow type=\"cloud_dict_query_all_keys_result\">\n        </shadow>"
   }],
   successDO: "QUERY_ALL_KEYS"
 });
@@ -39292,26 +39292,26 @@ var b_ = {
   },
   getTemplate: function (e) {
     var t;
-    var n = '<field name="WIDGET_ID">'.concat(e, "</field>");
+    var n = "<field name=\"WIDGET_ID\">".concat(e, "</field>");
     var r = Object(fp.c)().getCloudDictKeyList(e);
     var o = null === (t = r[1]) || void 0 === t ? void 0 : t.value;
     if (void 0 === o || Object.keys(Fg).includes(o)) {
       o = r[0].value;
     }
-    var i = '<field name="KEYS">'.concat(o, "</field>");
-    return ['<block type="cloud_space_dict_on_error" uncache="true">\n      '.concat(n, "\n    </block>"), mp.d, Object(up.cb)({
+    var i = "<field name=\"KEYS\">".concat(o, "</field>");
+    return ["<block type=\"cloud_space_dict_on_error\" uncache=\"true\">\n      ".concat(n, "\n    </block>"), mp.d, Object(up.cb)({
       widgetType: Wn.j,
-      title: "\u4fee\u6539",
+      title: "修改",
       lineId: "setter"
-    }), '<block type="cloud_space_dict_set_key_value" uncache="true">\n      '.concat(n, '\n      <value name="DICT_KEYS_WRAPPER">\n        <shadow type="cloud_dict_all_key_dropdown">').concat(i, '</shadow>\n      </value>\n      <value name="VALUE">\n        <shadow type="text">\n          <field name="TEXT" >0</field>\n        </shadow>\n      </value>\n    </block>'), '<block type="cloud_space_dict_delete_key" uncache="true">\n      '.concat(n, '\n      <value name="DICT_KEYS_WRAPPER">\n        <shadow type="cloud_dict_all_key_dropdown">').concat(i, "</shadow>\n      </value>\n    </block>"), Object(up.cb)({
+    }), "<block type=\"cloud_space_dict_set_key_value\" uncache=\"true\">\n      ".concat(n, "\n      <value name=\"DICT_KEYS_WRAPPER\">\n        <shadow type=\"cloud_dict_all_key_dropdown\">").concat(i, "</shadow>\n      </value>\n      <value name=\"VALUE\">\n        <shadow type=\"text\">\n          <field name=\"TEXT\" >0</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"cloud_space_dict_delete_key\" uncache=\"true\">\n      ".concat(n, "\n      <value name=\"DICT_KEYS_WRAPPER\">\n        <shadow type=\"cloud_dict_all_key_dropdown\">").concat(i, "</shadow>\n      </value>\n    </block>"), Object(up.cb)({
       widgetType: Wn.j,
-      title: "\u67e5\u8be2",
+      title: "查询",
       lineId: "query"
-    }), '<block type="cloud_space_dict_get_key_value" uncache="true">\n      '.concat(n, '\n      <value name="DICT_KEYS_WRAPPER">\n        <shadow type="cloud_dict_all_key_dropdown">').concat(i, "</shadow>\n      </value>\n    </block>"), '<block type="cloud_space_dict_get_key_count" uncache="true">\n      '.concat(n, "\n    </block>"), '<block type="cloud_space_dict_get_all_keys" uncache="true">\n      '.concat(n, "\n    </block>"), Object(up.cb)({
+    }), "<block type=\"cloud_space_dict_get_key_value\" uncache=\"true\">\n      ".concat(n, "\n      <value name=\"DICT_KEYS_WRAPPER\">\n        <shadow type=\"cloud_dict_all_key_dropdown\">").concat(i, "</shadow>\n      </value>\n    </block>"), "<block type=\"cloud_space_dict_get_key_count\" uncache=\"true\">\n      ".concat(n, "\n    </block>"), "<block type=\"cloud_space_dict_get_all_keys\" uncache=\"true\">\n      ".concat(n, "\n    </block>"), Object(up.cb)({
       widgetType: Wn.j,
-      title: "\u6e05\u7a7a",
+      title: "清空",
       lineId: "clear"
-    }), '<block type="cloud_space_dict_clear_data" uncache="true">\n      '.concat(n, "\n    </block>")];
+    }), "<block type=\"cloud_space_dict_clear_data\" uncache=\"true\">\n      ".concat(n, "\n    </block>")];
   },
   blockDeclareGroup: {
     setBlockGroupSnippet: function (e) {
@@ -39484,7 +39484,7 @@ var b_ = {
         }, {
           type: "input_value",
           name: "CLOUD_DICT_ERROR_INFO",
-          default_shadow: '<shadow type="cloud_dict_error_info" />'
+          default_shadow: "<shadow type=\"cloud_dict_error_info\" />"
         }, {
           type: "input_dummy",
           align: "CENTRE"
@@ -39821,7 +39821,7 @@ var C_ = {
       }
       this.append_dummy_input("FAILED_MUTATION_BTN");
       this.append_dummy_input("FAILED_TEXT", "FAILED_MUTATION_BTN").append_field(lp.Blink.Msg.CLOUT_TABLE_FAILED_TEXT);
-      this.append_shadow_input("ERROR_MSG", '<shadow type="cloudTable_fail_result"/>', "FAILED_MUTATION_BTN");
+      this.append_shadow_input("ERROR_MSG", "<shadow type=\"cloudTable_fail_result\"/>", "FAILED_MUTATION_BTN");
       var p;
       var f = this.append_statement_input("ERROR", void 0, "CONTEXT_CLOUD_TABLE_ERROR_DO");
       if (this.failedConnection) {
@@ -39880,14 +39880,14 @@ var T_ = Object.assign({}, C_, {
 var S_ = Object.assign({}, C_, {
   successInputList: [{
     inputName: "CLOUD_TABLE_QUERY_BY_COLUMN_LIST_RESULT",
-    default_shadow: '<shadow type="cloudTable_query_by_column_list_result">\n        </shadow>'
+    default_shadow: "<shadow type=\"cloudTable_query_by_column_list_result\">\n        </shadow>"
   }],
   successDO: "QUERY_BY_COLUMN"
 });
 var I_ = Object.assign({}, C_, {
   successInputList: [{
     inputName: "CLOUD_TABLE_QUERY_BY_COUNT_RESULT",
-    default_shadow: '<shadow type="cloudTable_query_by_count_result">\n        </shadow>'
+    default_shadow: "<shadow type=\"cloudTable_query_by_count_result\">\n        </shadow>"
   }],
   successDO: "QUERY_BY_COUNT"
 });
@@ -39899,26 +39899,26 @@ var A_ = {
   },
   getTemplate: function (e) {
     var t;
-    var n = '<field name="WIDGET_ID">'.concat(e, "</field>");
+    var n = "<field name=\"WIDGET_ID\">".concat(e, "</field>");
     var r = Object(fp.c)().getCloudTableColumnList(e);
     var o = null === (t = r[1]) || void 0 === t ? void 0 : t.value;
     if (void 0 === o || Object.keys(Fg).includes(o)) {
       o = r[0].value;
     }
-    var i = '<field name="COLUMNS">'.concat(o, "</field>");
-    return ['<block type="cloudTable_on_error" uncache="true">'.concat(n, "</block>"), mp.d, Object(up.cb)({
+    var i = "<field name=\"COLUMNS\">".concat(o, "</field>");
+    return ["<block type=\"cloudTable_on_error\" uncache=\"true\">".concat(n, "</block>"), mp.d, Object(up.cb)({
       widgetType: Wn.k,
-      title: "\u4fee\u6539",
+      title: "修改",
       lineId: "modify"
-    }), '<block type="cloudTable_insert" uncache="true">\n      <value name="INSERT_ROW">\n        <shadow type="text">\n          <field name="TEXT" >1,2,3</field>\n        </shadow>\n      </value>\n      '.concat(n, "\n    </block>"), '<block type="cloudTable_delete" uncache="true">\n      '.concat(n, '\n      <value name="INPUT_COLUMN">\n        <shadow type="cloudTable_all_column_dropdown">').concat(i, '</shadow>\n      </value>\n      <value name="COLUMN_VALUE">\n        <shadow type="text">\n          <field name="TEXT">123</field>\n        </shadow>\n      </value>\n    </block>'), '<block type="cloudTable_update" uncache="true">\n      '.concat(n, '\n      <value name="INPUT_COLUMN">\n        <shadow type="cloudTable_all_column_dropdown">').concat(i, '</shadow>\n      </value>\n      <value name="COLUMN_VALUE">\n        <shadow type="text">\n          <field name="TEXT">123</field>\n        </shadow>\n      </value>\n      <value name="UPDATE_COLUMN">\n        <shadow type="cloudTable_all_column_dropdown">').concat(i, '</shadow>\n      </value>\n      <value name="UPDATE_COLUMN_VALUE">\n        <shadow type="text">\n          <field name="TEXT">456</field>\n        </shadow>\n      </value>\n    </block>'), Object(up.cb)({
+    }), "<block type=\"cloudTable_insert\" uncache=\"true\">\n      <value name=\"INSERT_ROW\">\n        <shadow type=\"text\">\n          <field name=\"TEXT\" >1,2,3</field>\n        </shadow>\n      </value>\n      ".concat(n, "\n    </block>"), "<block type=\"cloudTable_delete\" uncache=\"true\">\n      ".concat(n, "\n      <value name=\"INPUT_COLUMN\">\n        <shadow type=\"cloudTable_all_column_dropdown\">").concat(i, "</shadow>\n      </value>\n      <value name=\"COLUMN_VALUE\">\n        <shadow type=\"text\">\n          <field name=\"TEXT\">123</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"cloudTable_update\" uncache=\"true\">\n      ".concat(n, "\n      <value name=\"INPUT_COLUMN\">\n        <shadow type=\"cloudTable_all_column_dropdown\">").concat(i, "</shadow>\n      </value>\n      <value name=\"COLUMN_VALUE\">\n        <shadow type=\"text\">\n          <field name=\"TEXT\">123</field>\n        </shadow>\n      </value>\n      <value name=\"UPDATE_COLUMN\">\n        <shadow type=\"cloudTable_all_column_dropdown\">").concat(i, "</shadow>\n      </value>\n      <value name=\"UPDATE_COLUMN_VALUE\">\n        <shadow type=\"text\">\n          <field name=\"TEXT\">456</field>\n        </shadow>\n      </value>\n    </block>"), Object(up.cb)({
       widgetType: Wn.k,
-      title: "\u67e5\u8be2",
+      title: "查询",
       lineId: "query"
-    }), '<block type="cloudTable_query_by_column" uncache="true">\n      '.concat(n, '\n      <value name="INPUT_COLUMN">\n        <shadow type="cloudTable_all_column_dropdown">').concat(i, '</shadow>\n      </value>\n      <value name="COLUMN_VALUE">\n        <shadow type="text">\n          <field name="TEXT">123</field>\n        </shadow>\n      </value>\n    </block>'), '<block type="cloudTable_query_by_count" uncache="true">\n      '.concat(n, "\n    </block>"), Object(up.cb)({
+    }), "<block type=\"cloudTable_query_by_column\" uncache=\"true\">\n      ".concat(n, "\n      <value name=\"INPUT_COLUMN\">\n        <shadow type=\"cloudTable_all_column_dropdown\">").concat(i, "</shadow>\n      </value>\n      <value name=\"COLUMN_VALUE\">\n        <shadow type=\"text\">\n          <field name=\"TEXT\">123</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"cloudTable_query_by_count\" uncache=\"true\">\n      ".concat(n, "\n    </block>"), Object(up.cb)({
       widgetType: Wn.k,
-      title: "\u6e05\u7a7a",
+      title: "清空",
       lineId: "clear"
-    }), '<block type="cloudTable_clear_all" uncache="true">\n      '.concat(n, "\n    </block>")];
+    }), "<block type=\"cloudTable_clear_all\" uncache=\"true\">\n      ".concat(n, "\n    </block>")];
   },
   blockDeclareGroup: {
     setBlockGroupSnippet: function (e) {
@@ -40121,7 +40121,7 @@ var A_ = {
         }, {
           type: "input_value",
           name: "CLOUD_TABLE_ERROR_INFO",
-          default_shadow: '<shadow type="cloudTable_error_info" />'
+          default_shadow: "<shadow type=\"cloudTable_error_info\" />"
         }, {
           type: "input_dummy",
           align: "CENTRE"
@@ -40171,7 +40171,7 @@ var A_ = {
           name: "OPERATOR",
           custom: !0,
           options: function () {
-            return [["=", "EQ"], ["\u2260", "NE"]];
+            return [["=", "EQ"], ["≠", "NE"]];
           }
         }, {
           type: "input_value",
@@ -40207,7 +40207,7 @@ var A_ = {
           name: "OPERATOR",
           custom: !0,
           options: function () {
-            return [["=", "EQ"], ["\u2260", "NE"]];
+            return [["=", "EQ"], ["≠", "NE"]];
           }
         }, {
           type: "input_value",
@@ -40248,7 +40248,7 @@ var A_ = {
           name: "OPERATOR",
           custom: !0,
           options: function () {
-            return [["=", "EQ"], ["\u2260", "NE"]];
+            return [["=", "EQ"], ["≠", "NE"]];
           }
         }, {
           type: "input_value",
@@ -40362,23 +40362,23 @@ var M_ = require("./680");
 var L_ = require("./681");
 var P_ = {
   "zh-CN": {
-    widget: "\u63a7\u4ef6",
-    widgetName: "\u6587\u672c",
-    content: "\u6587\u672c",
-    color: "\u6587\u672c\u989c\u8272",
-    backgroundColor: "\u80cc\u666f\u989c\u8272",
-    textAlign: "\u6c34\u5e73\u5bf9\u9f50",
-    justifyContent: "\u5782\u76f4\u5bf9\u9f50",
-    fontSize: "\u5b57\u53f7",
-    textAlignLeftMsg: "\u5c45\u5de6",
-    textAlignRightMsg: "\u5c45\u53f3",
-    textAlignCenterMsg: "\u5c45\u4e2d",
-    textVerticalTopMsg: "\u5c45\u4e0a",
-    textVerticalCenterMsg: "\u5c45\u4e2d",
-    textVerticalBottomMsg: "\u5c45\u4e0b",
-    onTextPress: "\u88ab\u70b9\u51fb",
-    width: "\u5bbd\u5ea6",
-    height: "\u9ad8\u5ea6"
+    widget: "控件",
+    widgetName: "文本",
+    content: "文本",
+    color: "文本颜色",
+    backgroundColor: "背景颜色",
+    textAlign: "水平对齐",
+    justifyContent: "垂直对齐",
+    fontSize: "字号",
+    textAlignLeftMsg: "居左",
+    textAlignRightMsg: "居右",
+    textAlignCenterMsg: "居中",
+    textVerticalTopMsg: "居上",
+    textVerticalCenterMsg: "居中",
+    textVerticalBottomMsg: "居下",
+    onTextPress: "被点击",
+    width: "宽度",
+    height: "高度"
   }
 };
 var B_ = {
@@ -40576,26 +40576,26 @@ var B_ = {
 };
 var F_ = {
   "zh-CN": {
-    widget: "\u63a7\u4ef6",
-    widgetName: "\u6309\u94ae",
-    button: "\u6309\u94ae",
-    text: "\u6587\u672c",
-    mode: "\u6837\u5f0f",
-    color: "\u989c\u8272",
-    sizeType: "\u5c3a\u5bf8\u5927\u5c0f",
-    containedTextMsg: "\u5e95\u8272\u767d\u5b57",
-    outlinedTextMsg: "\u767d\u5e95\u5f69\u5b57",
-    containedIconMsg: "\u5e95\u8272\u56fe\u6807",
-    outlinedIconMsg: "\u767d\u5e95\u56fe\u6807",
-    sizeTypeTinyMsg: "\u8d85\u5c0f",
-    sizeTypeSmallMsg: "\u5c0f",
-    sizeTypeMediumMsg: "\u4e2d",
-    sizeTypeLargeMsg: "\u5927",
-    sizeTypeHugeMsg: "\u8d85\u5927",
-    onButtonPress: "\u88ab",
-    pressMsg: "\u70b9\u51fb",
-    pressInMsg: "\u6309\u4e0b",
-    pressOutMsg: "\u677e\u5f00"
+    widget: "控件",
+    widgetName: "按钮",
+    button: "按钮",
+    text: "文本",
+    mode: "样式",
+    color: "颜色",
+    sizeType: "尺寸大小",
+    containedTextMsg: "底色白字",
+    outlinedTextMsg: "白底彩字",
+    containedIconMsg: "底色图标",
+    outlinedIconMsg: "白底图标",
+    sizeTypeTinyMsg: "超小",
+    sizeTypeSmallMsg: "小",
+    sizeTypeMediumMsg: "中",
+    sizeTypeLargeMsg: "大",
+    sizeTypeHugeMsg: "超大",
+    onButtonPress: "被",
+    pressMsg: "点击",
+    pressInMsg: "按下",
+    pressOutMsg: "松开"
   }
 };
 var G_ = {
@@ -40729,9 +40729,9 @@ var W_ = require("./673");
 var H_ = require("./674");
 var V_ = {
   "zh-CN": {
-    widget: "\u63a7\u4ef6",
-    widgetName: "\u5355\u9009\u6846",
-    optionCountMsg: "\u9009\u9879\u6570\u91cf"
+    widget: "控件",
+    widgetName: "单选框",
+    optionCountMsg: "选项数量"
   }
 };
 var z_ = {
@@ -40758,9 +40758,9 @@ var z_ = {
 var Y_ = require("./675");
 var K_ = {
   "zh-CN": {
-    widget: "\u63a7\u4ef6",
-    widgetName: "\u89d2\u8272",
-    rotation: "\u65b9\u5411"
+    widget: "控件",
+    widgetName: "角色",
+    rotation: "方向"
   }
 };
 var q_ = {
@@ -40782,9 +40782,9 @@ var q_ = {
 };
 var X_ = {
   "zh-CN": {
-    widget: "\u63a7\u4ef6",
-    widgetName: "\u591a\u9009\u6846",
-    optionCountMsg: "\u9009\u9879\u6570\u91cf"
+    widget: "控件",
+    widgetName: "多选框",
+    optionCountMsg: "选项数量"
   }
 };
 var Q_ = {
@@ -40810,10 +40810,10 @@ var Q_ = {
 };
 var Z_ = {
   "zh-CN": {
-    widget: "\u63a7\u4ef6",
-    widgetName: "\u7f51\u9875\u6846",
-    widthMsg: "\u5bbd\u5ea6 ",
-    heightMsg: "\u9ad8\u5ea6"
+    widget: "控件",
+    widgetName: "网页框",
+    widthMsg: "宽度 ",
+    heightMsg: "高度"
   }
 };
 var J_ = {
@@ -40859,10 +40859,10 @@ var J_ = {
 };
 var $_ = {
   "zh-CN": {
-    widget: "\u63a7\u4ef6",
-    widgetName: "\u5f00\u5173",
-    widthMsg: "\u5bbd\u5ea6 ",
-    heightMsg: "\u9ad8\u5ea6"
+    widget: "控件",
+    widgetName: "开关",
+    widthMsg: "宽度 ",
+    heightMsg: "高度"
   }
 };
 var ev = {
@@ -40914,10 +40914,10 @@ var ev = {
 };
 var tv = {
   "zh-CN": {
-    widget: "\u63a7\u4ef6",
-    widgetName: "\u6ed1\u52a8\u6761",
-    widthMsg: "\u5bbd\u5ea6 ",
-    heightMsg: "\u9ad8\u5ea6"
+    widget: "控件",
+    widgetName: "滑动条",
+    widthMsg: "宽度 ",
+    heightMsg: "高度"
   }
 };
 var nv = {
@@ -40963,8 +40963,8 @@ var nv = {
 };
 var rv = {
   "zh-CN": {
-    widget: "\u63a7\u4ef6",
-    widgetName: "\u5217\u8868\u6570\u636e\u6846"
+    widget: "控件",
+    widgetName: "列表数据框"
   }
 };
 var ov = {
@@ -40980,8 +40980,8 @@ var ov = {
 };
 var iv = {
   "zh-CN": {
-    widget: "\u63a7\u4ef6",
-    widgetName: "\u5217\u8868\u6570\u636e\u6846"
+    widget: "控件",
+    widgetName: "列表数据框"
   }
 };
 var av = {
@@ -41350,7 +41350,7 @@ var vv = Object(f.memo)(function (e) {
       }, h.a.createElement("div", {
         className: ip.a.widgetImgBig,
         style: {
-          backgroundImage: 'url("'.concat(t, '")')
+          backgroundImage: "url(\"".concat(t, "\")")
         }
       })) : void 0;
     }
@@ -41436,7 +41436,7 @@ var vv = Object(f.memo)(function (e) {
   }) : h.a.createElement("div", {
     className: ip.a.widgetImgSmall,
     style: {
-      backgroundImage: 'url("'.concat(t, '")')
+      backgroundImage: "url(\"".concat(t, "\")")
     }
   }) : h.a.createElement("span", {
     className: ip.a.icon
@@ -42523,7 +42523,7 @@ var Zv = Object(f.memo)(function () {
       var i = Object(Lt.Fb)(t.id || "");
       var a = n({
         id: "deleteWidget"
-      }) + "\u201c" + Object(ve.f)(i, 10) + "\u201d?";
+      }) + "“" + Object(ve.f)(i, 10) + "”?";
       if (t.type === Wn.h) {
         o.current = Object(Lt.Bb)(e);
         return void r(Object(Y.zh)({
@@ -43786,7 +43786,7 @@ var Bb = function (e, t) {
       customizeIconProps: {
         isSelected: b
       }
-    }, b ? "\u2713" : null));
+    }, b ? "✓" : null));
   }));
 };
 var Fb = f.forwardRef(Bb);
@@ -44444,7 +44444,7 @@ var My = Object(f.memo)(function () {
   }, h.a.createElement(z.i, {
     className: N()(ab.a.formItemWrapper, ab.a.formWidgetTitle, "changeTitle"),
     align: "vertical",
-    label: "\u540d\u79f0"
+    label: "名称"
   }, h.a.createElement(so, {
     value: l,
     renameInputValue: function (t) {
@@ -48010,7 +48010,7 @@ var KO = Object(f.memo)(function (e) {
       className: YO.a.text
     }, c), h.a.createElement("span", {
       className: YO.a.symbol
-    }, "\xb0")),
+    }, "°")),
     onBlur: function (e, t) {
       var r = Number(e);
       var i = (r %= 360) / 180 * Math.PI;
@@ -48610,12 +48610,12 @@ var uw = Object(f.memo)(function (e) {
     id: "initialData"
   })), h.a.createElement("span", {
     className: lw.a.fieldsLength
-  }, "\u952e\u503c\u5bf9:", i.length)), h.a.createElement("div", {
+  }, "键值对:", i.length)), h.a.createElement("div", {
     className: lw.a.imageBox
   }, h.a.createElement("img", {
     className: lw.a.image,
     src: "https://static.codemao.cn/coco/image/edit_localstorage_data_image.png",
-    alt: "\u5fae\u6570\u636e\u5e93"
+    alt: "微数据库"
   }), h.a.createElement("div", {
     className: lw.a.edit
   }, h.a.createElement("div", {
@@ -48627,7 +48627,7 @@ var uw = Object(f.memo)(function (e) {
             return;
           }
           a(Object(Y.yj)({
-            title: "\u5fae\u6570\u636e\u5e93",
+            title: "微数据库",
             widget: c,
             dbName: c.title,
             maxKeyLength: 2e3,
@@ -48649,7 +48649,7 @@ var uw = Object(f.memo)(function (e) {
               return;
             }
             a(Object(Y.yj)({
-              title: "\u4e91\u5fae\u6570\u636e\u5e93",
+              title: "云微数据库",
               dbName: c.title,
               widget: c,
               maxKeyLength: 2e3,
@@ -48666,7 +48666,7 @@ var uw = Object(f.memo)(function (e) {
                 return;
               }
               a(Object(Y.yj)({
-                title: "\u5fae\u6570\u636e\u5e93",
+                title: "微数据库",
                 dbName: c.title,
                 widget: c,
                 maxKeyLength: 2e3,
@@ -49977,7 +49977,7 @@ var Rw = Object(f.memo)(function (e) {
     href: t,
     target: "_blank",
     rel: "noopener noreferrer"
-  }, "\u5982\u4f55\u4f7f\u7528\uff1f")) : null;
+  }, "如何使用？")) : null;
 });
 var kw = require("./146");
 var xw = require("./1479");
@@ -50607,8 +50607,8 @@ var fC = Object(f.memo)(function (e) {
   })), h.a.createElement(ee.a, {
     overlayClassName: pC.a.helpPopover,
     placement: "rightTop",
-    title: "\u7ed8\u56fe\u8fc7\u7a0b\u662f\u4ec0\u4e48\uff1f",
-    content: h.a.createElement("div", null, "\u8fd9\u662f\u5bf9\u7ed8\u753b\u8fc7\u7a0b\u7684\u89e3\u91ca\u5185\u5bb9\uff0c\u5f85\u5b9a\u3002\u8fd9\u662f\u5bf9\u7ed8\u753b\u8fc7\u7a0b\u7684\u89e3\u91ca\u5185\u5bb9\uff0c \u5f85\u5b9a\u3002\u8fd9\u662f\u5bf9\u7ed8\u753b\u8fc7\u7a0b\u7684\u89e3\u91ca\u5185\u5bb9\uff0c\u5f85\u5b9a\u3002")
+    title: "绘图过程是什么？",
+    content: h.a.createElement("div", null, "这是对绘画过程的解释内容，待定。这是对绘画过程的解释内容， 待定。这是对绘画过程的解释内容，待定。")
   }, h.a.createElement("span", null, h.a.createElement(z.j, {
     type: "icon-help-circle",
     className: pC.a.helpIcon
@@ -50662,7 +50662,7 @@ var hC = [{
   renderContent: function (e) {
     return h.a.createElement("div", {
       className: pC.a.cursorNone
-    }, "\u7a7a");
+    }, "空");
   }
 }];
 var mC = Object(f.memo)(function (e) {
@@ -51156,11 +51156,11 @@ var jC = function (e) {
     className: AC.a.icon
   }, h.a.createElement(z.j, {
     type: "icon-trumpet"
-  })), "\u5c06\u57282023\u5e7412\u670831\u65e5\u505c\u6b62\u670d\u52a1\uff0c\u5efa\u8bae\u4f7f\u7528\u65b0\u7684", h.a.createElement("a", {
+  })), "将在2023年12月31日停止服务，建议使用新的", h.a.createElement("a", {
     target: "_blank",
     className: AC.a.link,
     href: t.url
-  }, t.label), "\u63a7\u4ef6")));
+  }, t.label), "控件")));
 };
 var NC = require("./419");
 var RC = function __importDefault(module) {
@@ -51515,7 +51515,7 @@ var BC = Object(f.memo)(function (e) {
   return h.a.createElement(z.i, {
     align: "vertical",
     className: N()(RC.a.formItemWrapper, RC.a.bluetoothConnect, M && RC.a.connected),
-    label: M ? "\u5df2\u8fde\u63a5" : "\u8bbe\u5907\u672a\u8fde\u63a5"
+    label: M ? "已连接" : "设备未连接"
   }, M ? h.a.createElement(h.a.Fragment, null, h.a.createElement("div", {
     className: RC.a.device
   }, M), h.a.createElement("div", {
@@ -51528,7 +51528,7 @@ var BC = Object(f.memo)(function (e) {
     }, h.a.createElement("div", {
       className: RC.a.popoverItem,
       onClick: P
-    }, "\u91cd\u7f6e\u5750\u6807"), h.a.createElement("div", {
+    }, "重置坐标"), h.a.createElement("div", {
       className: RC.a.popoverItem,
       onClick: function () {
         var e;
@@ -51544,7 +51544,7 @@ var BC = Object(f.memo)(function (e) {
           }
         }
       }
-    }, "\u65ad\u5f00\u8fde\u63a5")),
+    }, "断开连接")),
     placement: "bottomLeft",
     trigger: "click",
     visible: s,
@@ -51566,7 +51566,7 @@ var BC = Object(f.memo)(function (e) {
     stroke: "#847da4"
   })), h.a.createElement("span", {
     className: RC.a.text
-  }, "\u8fde\u63a5")));
+  }, "连接")));
 });
 var FC = "9326741751927357445c6b5a";
 var GC = "h14qlzk7z9zx8xlgcyu9tvrz9i845295";
@@ -51751,7 +51751,7 @@ var QC = Object(f.memo)(function (e) {
                 i(r, "");
               }
               t(Object(Y.mj)({
-                message: "\u5df2\u53d6\u6d88\u6388\u6743",
+                message: "已取消授权",
                 type: "info"
               }));
             case 2:
@@ -51765,7 +51765,7 @@ var QC = Object(f.memo)(function (e) {
   return h.a.createElement(z.i, {
     align: "vertical",
     className: N()(HC.a.formItemWrapper, HC.a.aqaraAuth, u && HC.a.connected),
-    label: u ? "\u5df2\u6388\u6743 \u7eff\u7c73" : "\u672a\u6388\u6743 \u7eff\u7c73"
+    label: u ? "已授权 绿米" : "未授权 绿米"
   }, u ? h.a.createElement("div", {
     className: HC.a.connect,
     onClick: function () {
@@ -51773,7 +51773,7 @@ var QC = Object(f.memo)(function (e) {
     }
   }, h.a.createElement("span", {
     className: HC.a.text
-  }, "\u53d6\u6d88\u6388\u6743")) : h.a.createElement("div", {
+  }, "取消授权")) : h.a.createElement("div", {
     className: N()(HC.a.connect, c && HC.a.connecting),
     onClick: function () {
       return d.apply(this, arguments);
@@ -51784,7 +51784,7 @@ var QC = Object(f.memo)(function (e) {
     stroke: "#847da4"
   })), h.a.createElement("span", {
     className: HC.a.text
-  }, "\u5f00\u59cb\u6388\u6743")));
+  }, "开始授权")));
 });
 var ZC = {
   Align: tO,
@@ -54426,7 +54426,7 @@ var zT = Object(f.memo)(function () {
   Object(f.useEffect)(function () {
     var e = document.getElementById("flyoutPinTitle");
     if (e) {
-      e.textContent = a ? "\u53d6\u6d88\u56fa\u5b9a" : "\u56fa\u5b9a\u79ef\u6728\u76d2";
+      e.textContent = a ? "取消固定" : "固定积木盒";
     }
     var t = document.getElementById("flyoutPinButton");
     if (t) {
@@ -55905,7 +55905,7 @@ var XS = Object(f.memo)(function () {
     o(Object(Y.cf)({
       name: "debugIcon",
       icon: "icon-data",
-      tooltip: "\u6570\u636e\u9762\u677f",
+      tooltip: "数据面板",
       visible: !0,
       onClick: function () {
         o(Object(Y.Vi)(K.h.DevTools));
@@ -55914,7 +55914,7 @@ var XS = Object(f.memo)(function () {
     o(Object(Y.cf)({
       name: "resourceIcon",
       icon: "icon-box",
-      tooltip: "\u9879\u76ee\u8d44\u6e90",
+      tooltip: "项目资源",
       visible: !0,
       onClick: function () {
         o(Object(Y.Vi)(K.h.ResourceLayout));
@@ -56329,7 +56329,7 @@ var lI = function (e) {
         case "PRIMITIVE":
         case "LIST":
         case "DICT":
-          s = JSON.stringify(r, l).replaceAll('"[...]"', "[...]").replaceAll('"{...}"', "{...}");
+          s = JSON.stringify(r, l).replaceAll("\"[...]\"", "[...]").replaceAll("\"{...}\"", "{...}");
           break;
         case Wn.B:
         case Wn.y:
@@ -56540,7 +56540,7 @@ var mI = h.a.memo(function (e) {
     className: hI.a.icon
   }), h.a.createElement("div", {
     className: hI.a.textWrapper
-  }, "\u5df2\u91cd\u7f6e\u4e3a\u521d\u59cb\u6570\u636e"))) : null;
+  }, "已重置为初始数据"))) : null;
 });
 var gI = Object(f.memo)(function () {
   var e = Object(A.a)().formatMessage;
@@ -56583,7 +56583,7 @@ var gI = Object(f.memo)(function () {
   }, h.a.createElement($S, null), h.a.createElement(uI, null), h.a.createElement("div", {
     className: N()(pI.a.help),
     onClick: o
-  }, "\u770b\u770b\u600e\u4e48\u7528\uff1f"))));
+  }, "看看怎么用？"))));
 });
 var _I = require("./1039");
 var vI = function __importDefault(module) {
@@ -57041,7 +57041,7 @@ var xI = Object(f.memo)(function (e) {
           content: s({
             id: "deleteSoundFileTips"
           }, {
-            name: t.join("\u3001")
+            name: t.join("、")
           })
         }));
       } else {
@@ -58100,7 +58100,7 @@ var dA = h.a.memo(h.a.forwardRef(function (e, t) {
     className: lA.a.rightSelected
   }, h.a.createElement("div", {
     className: lA.a.addedTitle
-  }, "\u5df2\u6dfb\u52a0\u6570\u636e"), h.a.createElement("div", {
+  }, "已添加数据"), h.a.createElement("div", {
     className: lA.a.selectedItems
   }, E.filter(function (e) {
     return e.selected;
@@ -59723,135 +59723,135 @@ var vA = function () {
     id: "icon-openview",
     viewBox: "0 0 12 12"
   }, h.a.createElement("g", {
-    id: "\u6570\u636e\u9762\u677f/ic_\u5c55\u5f00\u8868\u683c",
+    id: "数据面板/ic_展开表格",
     stroke: "none",
     strokeWidth: "1",
     fill: "none",
     fillRule: "evenodd"
   }, h.a.createElement("rect", {
-    id: "\u77e9\u5f62",
+    id: "矩形",
     x: "0",
     y: "0",
     width: "12",
     height: "12"
   }), h.a.createElement("g", {
-    id: "\u7f16\u7ec4-19",
+    id: "编组-19",
     transform: "translate(1.000000, 1.000000)",
     fill: "#847DA4",
     fillRule: "nonzero"
   }, h.a.createElement("g", {
-    id: "\u7f16\u7ec4-18",
+    id: "编组-18",
     transform: "translate(5.263158, 0.000000)"
   }, h.a.createElement("path", {
     d: "M3.68861864,0.179846713 C3.92841426,-0.0599489044 4.31719977,-0.0599489044 4.55699539,0.179846713 C4.77281145,0.395662769 4.79439305,0.732160641 4.62174021,0.97211306 L4.55699539,1.04822346 L1.04822346,4.55699539 C0.808427844,4.79679101 0.419642331,4.79679101 0.179846713,4.55699539 C-0.0359693427,4.34117934 -0.0575509483,4.00468146 0.115101897,3.76472905 L0.179846713,3.68861864 L3.68861864,0.179846713 Z",
-    id: "\u8def\u5f84-7"
+    id: "路径-7"
   }), h.a.createElement("path", {
     d: "M4.12280702,0 C4.43366905,0 4.69057739,0.231003178 4.73123669,0.530714164 L4.73684211,0.614035088 L4.73684211,3.39477667 C4.73684211,3.73389888 4.46192923,4.00881176 4.12280702,4.00881176 C3.81194499,4.00881176 3.55503664,3.77780858 3.51437735,3.47809759 L3.50877193,3.39477667 L3.50789474,1.22807018 L1.29098938,1.22807018 C0.980127345,1.22807018 0.723218998,0.997066998 0.682559704,0.697356012 L0.676954287,0.614035088 C0.676954287,0.303173057 0.907957465,0.0462647104 1.20766845,0.00560541661 L1.29098938,0 L4.12280702,0 Z",
-    id: "\u8def\u5f84-8"
+    id: "路径-8"
   })), h.a.createElement("g", {
-    id: "\u7f16\u7ec4-18\u5907\u4efd",
+    id: "编组-18备份",
     transform: "translate(2.368421, 7.631579) scale(-1, -1) translate(-2.368421, -7.631579) translate(0.000000, 5.263158)"
   }, h.a.createElement("path", {
     d: "M3.68861864,0.179846713 C3.92841426,-0.0599489044 4.31719977,-0.0599489044 4.55699539,0.179846713 C4.77281145,0.395662769 4.79439305,0.732160641 4.62174021,0.97211306 L4.55699539,1.04822346 L1.04822346,4.55699539 C0.808427844,4.79679101 0.419642331,4.79679101 0.179846713,4.55699539 C-0.0359693427,4.34117934 -0.0575509483,4.00468146 0.115101897,3.76472905 L0.179846713,3.68861864 L3.68861864,0.179846713 Z",
-    id: "\u8def\u5f84-7"
+    id: "路径-7"
   }), h.a.createElement("path", {
     d: "M4.12280702,0 C4.43366905,0 4.69057739,0.231003178 4.73123669,0.530714164 L4.73684211,0.614035088 L4.73684211,3.39477667 C4.73684211,3.73389888 4.46192923,4.00881176 4.12280702,4.00881176 C3.81194499,4.00881176 3.55503664,3.77780858 3.51437735,3.47809759 L3.50877193,3.39477667 L3.50789474,1.22807018 L1.29098938,1.22807018 C0.980127345,1.22807018 0.723218998,0.997066998 0.682559704,0.697356012 L0.676954287,0.614035088 C0.676954287,0.303173057 0.907957465,0.0462647104 1.20766845,0.00560541661 L1.29098938,0 L4.12280702,0 Z",
-    id: "\u8def\u5f84-8"
+    id: "路径-8"
   }))))), h.a.createElement("symbol", {
     id: "icon-resetData",
     viewBox: "0 0 12 12"
   }, h.a.createElement("g", {
-    id: "\u6570\u636e\u9762\u677f/ic_\u5237\u65b0",
+    id: "数据面板/ic_刷新",
     stroke: "none",
     strokeWidth: "1",
     fill: "none",
     fillRule: "evenodd"
   }, h.a.createElement("rect", {
-    id: "\u77e9\u5f62",
+    id: "矩形",
     x: "0",
     y: "0",
     width: "12",
     height: "12"
   }), h.a.createElement("g", {
-    id: "\u64a4\u56de",
+    id: "撤回",
     transform: "translate(5.986299, 6.000000) scale(-1, 1) translate(-5.986299, -6.000000) translate(-0.094356, 0.500000)",
     fill: "#847DA4",
     fillRule: "nonzero"
   }, h.a.createElement("g", {
-    id: "\u7f16\u7ec4-6"
+    id: "编组-6"
   }, h.a.createElement("path", {
     d: "M5.30630599,0 C8.2452976,0 10.612612,2.47014809 10.612612,5.5 C10.612612,5.82553727 10.3439054,6.08943736 10.012439,6.08943736 C9.68097268,6.08943736 9.41226611,5.82553727 9.41226611,5.5 C9.41226611,3.1057942 7.56556542,1.17887473 5.30630599,1.17887473 C3.04704657,1.17887473 1.20034588,3.1057942 1.20034588,5.5 C1.20034588,7.8942058 3.04704657,9.82112527 5.30630599,9.82112527 C6.10184344,9.82112527 6.863056,9.58305506 7.51884154,9.14047926 C7.79202572,8.95611303 8.16566574,9.02415285 8.35338988,9.29245046 C8.54111402,9.56074806 8.47183497,9.92770461 8.19865079,10.1120708 C7.34525914,10.6880068 6.34768318,11 5.30630599,11 C2.36731438,11 0,8.52985191 0,5.5 C0,2.47014809 2.36731438,0 5.30630599,0 Z",
-    id: "\u8def\u5f84"
+    id: "路径"
   }), h.a.createElement("path", {
     d: "M10.599994,3.29060133 C10.686384,2.97059083 11.0158367,2.78120399 11.3358472,2.86759399 C11.6238566,2.94534498 11.8060609,3.21997676 11.7766434,3.50741326 L11.7588545,3.60344717 L11.0021714,6.56616646 C10.9088233,6.91195144 10.5402314,7.09276017 10.2167507,6.97364233 L10.1298878,6.93361806 L7.39536658,5.36193564 C7.10603868,5.20019723 7.00260695,4.83453573 7.16434536,4.54520783 C7.30990993,4.28481271 7.6206522,4.17499351 7.89226505,4.27354092 L7.98107317,4.31418661 L10.0442192,5.50996579 L10.599994,3.29060133 Z",
-    id: "\u8def\u5f84-6",
+    id: "路径-6",
     transform: "translate(9.433843, 4.928480) rotate(12.000000) translate(-9.433843, -4.928480) "
   }))))), h.a.createElement("symbol", {
     id: "icon-watch-list",
     viewBox: "0 0 18 18"
   }, h.a.createElement("g", {
-    id: "\u6570\u636e\u9762\u677f/\u6570\u636e\u7c7b\u578bic/\u5217\u8868",
+    id: "数据面板/数据类型ic/列表",
     stroke: "none",
     strokeWidth: "1",
     fill: "none",
     fillRule: "evenodd"
   }, h.a.createElement("rect", {
-    id: "\u77e9\u5f62",
+    id: "矩形",
     x: "0",
     y: "0",
     width: "18",
     height: "18"
   }), h.a.createElement("g", {
-    id: "\u7f16\u7ec4",
+    id: "编组",
     transform: "translate(2.929252, 5.280715)",
     fill: "#FFC915",
     fillRule: "nonzero"
   }, h.a.createElement("path", {
     d: "M11.0707477,7.29261331 L11.1657336,7.29900349 C11.5074041,7.34535508 11.7707477,7.6382306 11.7707477,7.99261331 C11.7707477,8.37921264 11.457347,8.69261331 11.0707477,8.69261331 L11.0707477,8.69261331 L0.7,8.69261331 L0.605014146,8.68622314 C0.263343623,8.63987154 0,8.34699602 0,7.99261331 C0,7.60601399 0.313400675,7.29261331 0.7,7.29261331 L0.7,7.29261331 L11.0707477,7.29261331 Z M11.0707477,3.86640849 L11.1657336,3.87279867 C11.5074041,3.91915026 11.7707477,4.21202578 11.7707477,4.56640849 C11.7707477,4.95300782 11.457347,5.26640849 11.0707477,5.26640849 L11.0707477,5.26640849 L4.69556162,5.26691284 C5.20012227,4.9158124 5.60801832,4.43273497 5.8706019,3.86690757 L5.8706019,3.86690757 L11.0707477,3.86640849 Z M2.73807583,0 C4.03756936,0 5.09101701,1.06598869 5.09101701,2.38095238 C5.09101701,3.69591607 4.03756936,4.76190476 2.73807583,4.76190476 C1.4385823,4.76190476 0.385134656,3.69591607 0.385134656,2.38095238 C0.385134656,1.06598869 1.4385823,0 2.73807583,0 Z M11.0707477,0.440203672 L11.1657336,0.446593847 C11.5074041,0.492945442 11.7707477,0.785820957 11.7707477,1.14020367 C11.7707477,1.526803 11.457347,1.84020367 11.0707477,1.84020367 L11.0707477,1.84020367 L6.15585219,1.84009094 C6.07739795,1.32831577 5.88937179,0.853197536 5.61679993,0.440060386 L5.61679993,0.440060386 L11.0707477,0.440203672 Z",
-    id: "\u5f62\u72b6\u7ed3\u5408"
+    id: "形状结合"
   })))), h.a.createElement("symbol", {
     id: "icon-watch-database",
     viewBox: "0 0 18 18"
   }, h.a.createElement("g", {
-    id: "\u6570\u636e\u9762\u677f/\u6570\u636e\u7c7b\u578bic/\u5fae\u6570\u636e\u5e93",
+    id: "数据面板/数据类型ic/微数据库",
     stroke: "none",
     strokeWidth: "1",
     fill: "none",
     fillRule: "evenodd"
   }, h.a.createElement("rect", {
-    id: "\u77e9\u5f62",
+    id: "矩形",
     x: "0",
     y: "0",
     width: "18",
     height: "18"
   }), h.a.createElement("path", {
     d: "M9.0814433,2.8 C12.0380685,2.8 14.3583771,3.67005599 14.6359807,5.02539911 L14.6559786,5.15387252 L14.6628866,5.28865979 L14.6628866,12.7113402 C14.6628866,14.2084163 12.2424569,15.2 9.0814433,15.2 C6.09258984,15.2 3.75757287,14.3116823 3.51954108,12.9365827 L3.50341315,12.8062532 L3.5,12.7113402 L3.50028414,5.27800259 L3.50776834,5.14316381 C3.66011162,3.72528415 6.03242357,2.8 9.0814433,2.8 Z M4.765,10.64 L4.76597938,12.7113402 C4.76597938,13.2529076 6.80821921,13.9340206 9.0814433,13.9340206 C9.63726824,13.9340206 10.1798163,13.8934986 10.6822096,13.8242838 L11.1023717,13.758206 C12.3295953,13.5405477 13.2405279,13.1555143 13.3781677,12.8042392 L13.3938692,12.7460404 L13.3969072,12.7113774 L13.396,10.641 L13.323641,10.6803532 C12.3683366,11.1615242 10.9744266,11.4486342 9.41747167,11.484777 L9.0814433,11.4886598 C7.389064,11.4886598 5.86143803,11.1956316 4.83789866,10.6796741 L4.765,10.64 Z M5.98865979,11.2742268 C6.44073618,11.2742268 6.80721649,11.6407071 6.80721649,12.0927835 C6.80721649,12.5448599 6.44073618,12.9113402 5.98865979,12.9113402 C5.53658341,12.9113402 5.17010309,12.5448599 5.17010309,12.0927835 C5.17010309,11.6407071 5.53658341,11.2742268 5.98865979,11.2742268 Z M4.765,6.929 L4.76597938,9 C4.76597938,9.54156736 6.80821921,10.2226804 9.0814433,10.2226804 C11.2253395,10.2226804 13.1717079,9.61981166 13.3781677,9.09289902 L13.3938692,9.03470024 L13.3969072,9.00003724 L13.396,6.93 L13.323641,6.96901304 C12.3683366,7.45018398 10.9744266,7.73729398 9.41747167,7.77343678 L9.0814433,7.77731959 C7.38919195,7.77731959 5.86166385,7.48433532 4.83812427,6.96844765 L4.765,6.929 Z M5.98865979,7.5628866 C6.44073618,7.5628866 6.80721649,7.92936692 6.80721649,8.3814433 C6.80721649,8.83351968 6.44073618,9.2 5.98865979,9.2 C5.53658341,9.2 5.17010309,8.83351968 5.17010309,8.3814433 C5.17010309,7.92936692 5.53658341,7.5628866 5.98865979,7.5628866 Z M9.0814433,4.06597938 C6.80821921,4.06597938 4.76597938,4.74709243 4.76597938,5.28865979 C4.76597938,5.68082926 5.83688041,6.14617311 7.29091184,6.37307049 L7.71618058,6.43114078 C8.1506864,6.48218436 8.61112107,6.51134021 9.0814433,6.51134021 C9.55176552,6.51134021 10.0122002,6.48218436 10.446706,6.43114078 L10.8719748,6.37307049 C12.3260062,6.14617311 13.3969072,5.68082926 13.3969072,5.28865979 C13.3969072,4.74709243 11.3546674,4.06597938 9.0814433,4.06597938 Z",
-    id: "\u5f62\u72b6\u7ed3\u5408",
+    id: "形状结合",
     fill: "#6E4FF4",
     fillRule: "nonzero"
   }))), h.a.createElement("symbol", {
     id: "icon-watch-tabledata",
     viewBox: "0 0 18 18"
   }, h.a.createElement("g", {
-    id: "\u6570\u636e\u9762\u677f/\u6570\u636e\u7c7b\u578bic/\u8868\u683c",
+    id: "数据面板/数据类型ic/表格",
     stroke: "none",
     strokeWidth: "1",
     fill: "none",
     fillRule: "evenodd"
   }, h.a.createElement("rect", {
-    id: "\u77e9\u5f62",
+    id: "矩形",
     x: "0",
     y: "0",
     width: "18",
     height: "18"
   }), h.a.createElement("g", {
-    id: "\u7f16\u7ec4",
+    id: "编组",
     transform: "translate(2.500000, 3.000000)",
     fill: "#6E4FF4",
     fillRule: "nonzero"
   }, h.a.createElement("path", {
     d: "M11.05,-0.2 C12.1827482,-0.2 13.1156076,0.620494503 13.1945845,1.66670588 L13.2,1.81071429 L13.2,10.2607143 C13.2,11.3262165 12.3163905,12.1930372 11.2031653,12.2663987 L11.05,12.2714286 L1.95,12.2714286 C0.817251792,12.2714286 -0.115607595,11.4509341 -0.194584501,10.4047227 L-0.2,10.2607143 L-0.2,1.81071429 C-0.2,0.745212067 0.683609464,-0.121608618 1.79683473,-0.194970148 L1.95,-0.2 L11.05,-0.2 Z M3.92,8.5 L0.98,8.5 L0.98,10.2607143 C0.98,10.684321 1.30861179,11.0462653 1.74919084,11.1289537 L1.86154288,11.1436821 L1.94998683,11.1471429 L3.92,11.147 L3.92,8.5 Z M8.158,8.5 L5.314,8.5 L5.314,11.147 L8.158,11.147 L8.158,8.5 Z M12.019,8.5 L9.53,8.5 L9.53,11.147 L11.05,11.1471429 C11.520181,11.1471429 11.9122658,10.8409516 12.0006675,10.4425253 L12.0163107,10.341121 L12.02,10.2608163 L12.019,8.5 Z M3.92,4.878 L0.98,4.878 L0.98,7.196 L3.92,7.196 L3.92,4.878 Z M8.158,4.878 L5.314,4.878 L5.314,7.196 L8.158,7.196 L8.158,4.878 Z M12.019,4.878 L9.53,4.878 L9.53,7.196 L12.019,7.196 L12.019,4.878 Z M11.0424989,0.924145 L1.95,0.924285714 C1.47981902,0.924285714 1.08773424,1.23047695 0.999332479,1.62890328 L0.983689317,1.73030761 L0.98,1.81071429 L0.98,3.582 L12.019,3.582 L12.02,1.81071429 C12.02,1.38710755 11.6913882,1.02516323 11.2508092,0.942474826 L11.1384571,0.927746479 L11.0424989,0.924145 Z",
-    id: "\u5f62\u72b6\u7ed3\u5408"
+    id: "形状结合"
   })))), h.a.createElement("symbol", {
     id: "icon-watch-dict",
     viewBox: "0 0 18 18"
@@ -59862,13 +59862,13 @@ var vA = function () {
     type: "matrix",
     values: "0 0 0 0 0.627451 0 0 0 0 0.450980 0 0 0 0 1.000000 0 0 0 1.000000 0"
   }))), h.a.createElement("g", {
-    id: "\u6570\u636e\u9762\u677f/\u6570\u636e\u7c7b\u578bic/\u5b57\u5178",
+    id: "数据面板/数据类型ic/字典",
     stroke: "none",
     strokeWidth: "1",
     fill: "none",
     fillRule: "evenodd"
   }, h.a.createElement("rect", {
-    id: "\u77e9\u5f62",
+    id: "矩形",
     x: "0",
     y: "0",
     width: "18",
@@ -59880,46 +59880,46 @@ var vA = function () {
     transform: "translate(2.899665, 3.791227)"
   }, h.a.createElement("path", {
     d: "M3.04613079,0 L3.45823856,0.00284245402 L3.83251313,0.00995379814 L4.1717599,0.0222526827 L4.47878428,0.0406577579 L4.75639166,0.0660876742 C5.5478937,0.153833335 5.98013924,0.348816129 6.3939846,0.762652071 L6.3939846,0.762652071 L6.499,0.874 L6.60532299,0.762652071 C7.0297792,0.338205527 7.47359553,0.14397851 8.30501251,0.05954734 L8.52115487,0.0406572714 L8.82838691,0.022251921 C8.88220285,0.019718727 8.9373631,0.0174399561 8.99392618,0.0153964699 L8.99392618,0.0153964699 L9.35060691,0.00580586042 L9.74376482,0.000943433988 L11.3113416,0.000384854752 C11.9872692,0.00620791605 12.3032115,0.0682585485 12.6173047,0.382341032 C12.906184,0.671220384 12.9788063,0.883178233 12.9954415,1.49911289 L12.9954415,1.49911289 L12.9996103,1.7892202 L13,7.79846044 L12.9982076,8.11645334 L12.9909615,8.38077411 C12.9673287,8.90139968 12.8855514,9.10331879 12.6173126,9.37155761 C12.2840236,9.70484657 11.9919164,9.75254629 11.180141,9.75415845 L11.180141,9.75415845 L8.44732307,9.75424501 C7.7346633,9.75424501 7.15699218,10.3319161 7.15699218,11.0445759 L7.15699218,11.0445759 L5.84231542,11.0445759 C5.84231542,10.3319161 5.2646443,9.75424501 4.55196371,9.75424501 L4.55196371,9.75424501 L1.66252655,9.7531495 C0.968253782,9.74491705 0.69305795,9.68262706 0.381980568,9.37154967 C0.0678980852,9.05745647 0.00584745273,8.74151421 0,8.05992389 L0,8.05992389 L0,1.68832396 C0.00584743493,1.01239235 0.0678977809,0.696450412 0.381996438,0.382341032 C0.696089949,0.0682582442 1.01203189,0.00620789826 1.6879635,0.000384854318 L1.6879635,0.000384854318 L3.04613079,0 Z M3.23564756,1.31551746 L1.69928881,1.31501283 L1.32340621,1.32246428 L1.31465237,1.69398662 L1.31465237,8.05426118 L1.32211056,8.3802923 L1.32128812,8.4325891 L1.63186051,8.43800488 L4.55198453,8.43956825 C5.01609282,8.43956825 5.451849,8.56092849 5.82925045,8.77364636 L5.82925045,8.77364636 L5.84231542,8.78097844 L5.84231542,4.55234499 L5.84023719,3.97704786 L5.83325143,3.48919009 L5.82023151,3.08009884 L5.80764291,2.84684763 L5.79153793,2.64217942 L5.77158276,2.46352448 L5.7474436,2.30831308 C5.74305319,2.28425538 5.73847454,2.26106742 5.7337007,2.23869567 L5.7337007,2.23869567 L5.70265963,2.11383132 L5.66660004,2.00598618 L5.66660004,2.00598618 L5.64658398,1.95764277 L5.60237069,1.87050819 C5.59452333,1.85694004 5.58643208,1.84381335 5.57809001,1.83107458 L5.57809001,1.83107458 L5.52497195,1.75886865 L5.49605112,1.72545389 L5.42829125,1.65821255 C5.36635144,1.60309182 5.29493395,1.55618771 5.20647497,1.51643567 L5.20647497,1.51643567 L5.09166019,1.47209808 C5.07099971,1.46525794 5.04953655,1.45868685 5.02721021,1.45237628 L5.02721021,1.45237628 L4.88240974,1.41757118 C4.80434627,1.40166369 4.7174249,1.3879477 4.62001183,1.37619326 L4.62001183,1.37619326 L4.41071269,1.35523166 L4.1705312,1.33909208 L3.74600094,1.32302974 L3.23564756,1.31551746 Z M9.95626771,1.31467314 L9.58474542,1.31715535 L9.10363083,1.32736493 L8.82942369,1.33909165 L8.58905063,1.35523154 L8.37960196,1.3761934 C8.28212378,1.38794795 8.19515109,1.40166404 8.11704721,1.4175716 L8.11704721,1.4175716 L7.97217957,1.45237681 C7.94984416,1.45868738 7.92837293,1.46525849 7.90770527,1.47209863 L7.90770527,1.47209863 L7.79285714,1.51643622 C7.6866819,1.56413862 7.60507049,1.62213987 7.53492927,1.6922795 L7.53492927,1.6922795 L7.50086236,1.72836505 C7.44574167,1.79030255 7.39883749,1.86171896 7.3590853,1.95017954 L7.3590853,1.95017954 L7.3147475,2.06499761 C7.30790732,2.08565888 7.30133618,2.10712296 7.29502558,2.12945037 L7.29502558,2.12945037 L7.26022019,2.27425902 C7.24431255,2.35232751 7.2305964,2.43925539 7.21884181,2.53667676 L7.21884181,2.53667676 L7.1978799,2.74599497 L7.18174003,2.98620086 L7.16567734,3.41077889 L7.15816487,3.92119513 L7.1562618,8.78097844 L7.31844869,8.6961924 C7.62077735,8.55060073 7.95553651,8.46167176 8.30895228,8.44317905 L8.30895228,8.44317905 L8.44730225,8.43956825 L11.1788138,8.43948299 L11.6348442,8.4324121 L11.6802106,8.43331948 L11.6826452,8.16763062 L11.6853232,1.95545262 L11.6793544,1.33628502 L11.6802727,1.32178579 L11.6267341,1.32247506 L11.3055026,1.3150372 L9.95626771,1.31467314 Z",
-    id: "\u5f62\u72b6\u7ed3\u5408",
+    id: "形状结合",
     fill: "#12C2C3",
     fillRule: "nonzero"
   }))))), h.a.createElement("symbol", {
     id: "icon-watch-variable",
     viewBox: "0 0 18 18"
   }, h.a.createElement("g", {
-    id: "\u6570\u636e\u9762\u677f/\u6570\u636e\u7c7b\u578bic/\u53d8\u91cf",
+    id: "数据面板/数据类型ic/变量",
     stroke: "none",
     strokeWidth: "1",
     fill: "none",
     fillRule: "evenodd"
   }, h.a.createElement("rect", {
-    id: "\u77e9\u5f62",
+    id: "矩形",
     x: "0",
     y: "0",
     width: "18",
     height: "18"
   }), h.a.createElement("path", {
     d: "M14.3460655,3.57272727 C14.7004482,3.57272727 14.9933237,3.8360709 15.0396753,4.17774142 L15.0460655,4.27272727 L15.0456492,11.3036409 L15.0366632,11.9617657 L15.0213627,12.3227479 C14.9714186,13.1556132 14.8266282,13.4910853 14.4261315,13.8811524 L14.2834121,14.0110247 C13.9753212,14.2699819 13.6602741,14.3870474 13.058797,14.438659 L12.7598363,14.4581105 L12.4140933,14.4699367 L12.0154619,14.4758078 L10.8607791,14.4773937 C10.4741797,14.4773937 10.1607791,14.1639931 10.1607791,13.7773937 C10.1607791,13.423011 10.4241227,13.1301355 10.7657932,13.0837839 L10.8607791,13.0773937 L11.9791947,13.075828 L12.4949364,13.0663326 L12.7594167,13.0543423 L12.9694735,13.0371087 L13.1328675,13.0140186 C13.2992922,12.9834254 13.3862926,12.9396231 13.4493271,12.8782302 C13.5096687,12.8194599 13.5528316,12.7379985 13.5830513,12.5801513 L13.6058829,12.4248946 L13.6229676,12.2247102 L13.6348983,11.9720841 L13.6456682,11.2794502 L13.6455455,4.97272727 L10.8607791,4.97272727 C10.5063963,4.97272727 10.2135208,4.70938365 10.1671692,4.36771313 L10.1607791,4.27272727 C10.1607791,3.91834456 10.4241227,3.62546904 10.7657932,3.57911745 L10.8607791,3.57272727 L14.3460655,3.57272727 Z M6.93983185,3.57272727 C7.32643118,3.57272727 7.63983185,3.88612795 7.63983185,4.27272727 C7.63983185,4.62710999 7.37648823,4.9199855 7.03481771,4.9663371 L6.93983185,4.97272727 L5.82141622,4.97429301 L5.30567447,4.98378842 L5.04119416,4.99577866 L4.83113744,5.01301225 L4.66774336,5.03610238 C4.50131867,5.06669562 4.4143183,5.11049786 4.35128385,5.17189079 C4.29094217,5.23066107 4.24777926,5.31212246 4.21755961,5.4699697 L4.19472803,5.62522644 L4.17764329,5.82541078 L4.16571264,6.07803688 L4.15618402,6.57174146 L4.15454545,6.98834626 L4.15483185,13.0773937 L6.93983185,13.0773937 C7.29421457,13.0773937 7.58709008,13.3407373 7.63344168,13.6824079 L7.63983185,13.7773937 C7.63983185,14.1317764 7.37648823,14.424652 7.03481771,14.4710036 L6.93983185,14.4773937 L3.45454545,14.4773937 C3.10016274,14.4773937 2.80728722,14.2140501 2.76093563,13.8723796 L2.75454545,13.7773937 L2.75637508,6.52109503 L2.76318148,6.11637729 L2.77694092,5.7674115 C2.82466019,4.90514394 2.96762558,4.56522719 3.37447937,4.16896855 L3.51719886,4.03909632 C3.82528969,3.78013906 4.14033681,3.66307362 4.74181388,3.61146201 L5.04077456,3.59201054 L5.38651761,3.58018427 L5.78514897,3.57431319 L6.93983185,3.57272727 Z M7.82922156,6.34667915 L7.90487078,6.43184541 L8.98954545,7.87172727 L10.1004207,6.45100569 C10.338435,6.14636126 10.7783468,6.09234688 11.0829913,6.33036119 C11.3599407,6.54673784 11.4297579,6.92997193 11.2613395,7.22674649 L11.2036357,7.31293175 L9.86254545,9.02972727 L11.1734714,10.7694249 C11.4061327,11.0781769 11.344449,11.517079 11.035697,11.7497403 C10.7578203,11.9591354 10.3745219,11.9301112 10.1310309,11.6971322 L10.0553817,11.611966 L8.96954545,10.1717273 L7.85983177,11.5928057 C7.62181745,11.8974501 7.18190563,11.9514645 6.87726121,11.7134502 C6.60031173,11.4970735 6.53049452,11.1138394 6.69891299,10.8170649 L6.75661671,10.7308796 L8.09754545,9.01372727 L6.78678107,7.27438645 C6.55411979,6.9656345 6.61580346,6.52673235 6.92455541,6.29407107 C7.20243216,6.08467592 7.58573058,6.11370018 7.82922156,6.34667915 Z",
-    id: "\u5f62\u72b6\u7ed3\u5408",
+    id: "形状结合",
     fill: "#FFBB55",
     fillRule: "nonzero"
   }))), h.a.createElement("symbol", {
     id: "icon-open",
     viewBox: "0 0 12 12"
   }, h.a.createElement("g", {
-    id: "\u6570\u636e\u9762\u677f/ic_\u5c55\u5f00",
+    id: "数据面板/ic_展开",
     stroke: "none",
     strokeWidth: "1",
     fill: "none",
     fillRule: "evenodd"
   }, h.a.createElement("rect", {
-    id: "\u77e9\u5f62",
+    id: "矩形",
     x: "0",
     y: "0",
     width: "12",
     height: "12"
   }), h.a.createElement("polyline", {
-    id: "\u8def\u5f84",
+    id: "路径",
     stroke: "#847DA4",
     strokeWidth: "1.4",
     strokeLinecap: "round",
@@ -59929,20 +59929,20 @@ var vA = function () {
     id: "icon-fold-datawatch",
     viewBox: "0 0 12 12"
   }, h.a.createElement("g", {
-    id: "\u6570\u636e\u9762\u677f/ic_\u5173\u95ed",
+    id: "数据面板/ic_关闭",
     stroke: "none",
     strokeWidth: "1",
     fill: "none",
     fillRule: "evenodd"
   }, h.a.createElement("rect", {
-    id: "\u77e9\u5f62",
+    id: "矩形",
     x: "0",
     y: "0",
     width: "12",
     height: "12"
   }), h.a.createElement("path", {
     d: "M2,2 L10,10 M10,2 L2,10",
-    id: "\u5f62\u72b6\u7ed3\u5408",
+    id: "形状结合",
     stroke: "#847DA4",
     strokeWidth: "1.4",
     fill: "#847DA4",
@@ -59952,20 +59952,20 @@ var vA = function () {
     id: "icon-close-datawatch",
     viewBox: "0 0 12 12"
   }, h.a.createElement("g", {
-    id: "\u6570\u636e\u9762\u677f/ic_\u5173\u95ed",
+    id: "数据面板/ic_关闭",
     stroke: "none",
     strokeWidth: "1",
     fill: "none",
     fillRule: "evenodd"
   }, h.a.createElement("rect", {
-    id: "\u77e9\u5f62",
+    id: "矩形",
     x: "0",
     y: "0",
     width: "12",
     height: "12"
   }), h.a.createElement("path", {
     d: "M2,2 L10,10 M10,2 L2,10",
-    id: "\u5f62\u72b6\u7ed3\u5408",
+    id: "形状结合",
     stroke: "#847DA4",
     strokeWidth: "1.4",
     fill: "#847DA4",
@@ -60347,7 +60347,7 @@ var xA = function (e, t, n) {
 var DA = function (e, t) {
   var n = "";
   e.getModel().forEachNode(function (e) {
-    var r = e.data[t] || "\xa0";
+    var r = e.data[t] || " ";
     n = n.length ? "".concat(n, "\r\n").concat(r) : "".concat(r);
   });
   navigator.clipboard.writeText(n);
@@ -60360,7 +60360,7 @@ var MA = function (e, t) {
       if (!e.pinned) {
         var t = e.colId;
         if (t) {
-          var o = n.data[t] || "\xa0";
+          var o = n.data[t] || " ";
           r = r.length ? "".concat(r, "\t").concat(o) : "".concat(o);
         }
       }
@@ -60519,7 +60519,7 @@ var WA = Object(f.memo)(function (e) {
     }
   });
   var R = function (e) {
-    var t = new RegExp("^\u7b2c(\\d+)\u5217$");
+    var t = new RegExp("^第(\\d+)列$");
     var n = [];
     e.forEach(function (e) {
       var r = e.match(t);
@@ -60533,7 +60533,7 @@ var WA = Object(f.memo)(function (e) {
     for (var r = 1, o = 0; o < n.length && !(r < n[o]); o++) {
       r = n[o] + 1;
     }
-    return "\u7b2c".concat(r, "\u5217");
+    return "第".concat(r, "列");
   };
   var k = function (e) {
     n(Object(Y.mj)({
@@ -61973,7 +61973,7 @@ var ej = function (e, t, n) {
 var tj = function (e, t) {
   var n = "";
   e.getModel().forEachNode(function (e) {
-    var r = e.data[t] || "\xa0";
+    var r = e.data[t] || " ";
     n = n.length ? "".concat(n, "\r\n").concat(r) : "".concat(r);
   });
   navigator.clipboard.writeText(n);
@@ -61986,7 +61986,7 @@ var nj = function (e, t) {
       if (!e.pinned) {
         var t = e.colId;
         if (t) {
-          var o = n.data[t] || "\xa0";
+          var o = n.data[t] || " ";
           r = r.length ? "".concat(r, "\t").concat(o) : "".concat(o);
         }
       }
@@ -61998,7 +61998,7 @@ var nj = function (e, t) {
 var rj = function (e, t, n, r) {
   for (var o = ij(e, n), i = o.columnDefRecord, a = o.startColumnIndex, s = o.columnCount, c = e.getDisplayedRowCount(), l = a, u = r, d = !1, p = !1, f = [], h = !1, m = 0, g = 0; g < t.length; g++) {
     var _ = t[g];
-    if ('"' === _) {
+    if ("\"" === _) {
       h = !h;
     }
     if ("\n" !== _ || h) {
@@ -62211,7 +62211,7 @@ var lj = Object(f.memo)(function (e) {
           var a = {
             colId: i,
             headerName: function (e) {
-              var t = new RegExp("^\u7b2c(\\d+)\u5217$");
+              var t = new RegExp("^第(\\d+)列$");
               var n = [];
               e.forEach(function (e) {
                 var r = e.match(t);
@@ -62225,7 +62225,7 @@ var lj = Object(f.memo)(function (e) {
               for (var r = 1, o = 0; o < n.length && !(r < n[o]); o++) {
                 r = n[o] + 1;
               }
-              return "\u7b2c".concat(r, "\u5217");
+              return "第".concat(r, "列");
             }(e.api.getColumnDefs().map(function (e) {
               return e.headerName || "";
             })),
@@ -63687,7 +63687,7 @@ var gj = Object(f.memo)(function () {
     className: mj.a.tableDataDialog,
     title: h.a.createElement("div", null, y, h.a.createElement("span", {
       className: mj.a.defaultData
-    }, "\u2014 ", i({
+    }, "— ", i({
       id: "TableDataWidget.data"
     }))),
     footer: Z,
@@ -63753,7 +63753,7 @@ var vj = function __importDefault(module) {
 require("./2565");
 var bj = !1;
 if (!(bj || "undefined" === typeof window)) {
-  import("../../3276");
+  import("./3276");
   bj = !0;
 }
 var yj = {
@@ -64066,14 +64066,14 @@ var Rj = function (e) {
         height: 36,
         className: "btn-cancel",
         onClick: r.handleCancel
-      }, n || "\u53d6\u6d88"), h.a.createElement(Cj.a, {
+      }, n || "取消"), h.a.createElement(Cj.a, {
         type: "primary",
         width: 112,
         height: 36,
         className: "btn-ok",
         margin: "0 0 0 20px",
         onClick: r.handleOk
-      }, o || "\u786e\u5b9a"));
+      }, o || "确定"));
     });
     Object(Ve.a)(Object(tr.a)(r), "getTOPos", function () {
       var e = r.props.top;
@@ -64226,14 +64226,14 @@ Object(Ve.a)(Rj, "options", function (e) {
   }, h.a.createElement(Cj.a, {
     type: "secondary",
     onClick: e.onCancel
-  }, null !== (t = e.cancelText) && void 0 !== t ? t : "\u53d6\u6d88"), h.a.createElement(Cj.a, {
+  }, null !== (t = e.cancelText) && void 0 !== t ? t : "取消"), h.a.createElement(Cj.a, {
     type: "secondary",
     onClick: e.onSecondary
-  }, null !== (n = e.secondaryText) && void 0 !== n ? n : "\u4e0d\u4fdd\u5b58"), h.a.createElement(Cj.a, {
+  }, null !== (n = e.secondaryText) && void 0 !== n ? n : "不保存"), h.a.createElement(Cj.a, {
     type: "primary",
     margin: "0 0 0 16px",
     onClick: e.onPrimary
-  }, null !== (r = e.primaryText) && void 0 !== r ? r : "\u4fdd\u5b58"));
+  }, null !== (r = e.primaryText) && void 0 !== r ? r : "保存"));
   var s = document.createElement("div");
   s.className = "CUI-dialog-options-dialog";
   document.body.appendChild(s);
@@ -64270,13 +64270,13 @@ Object(Ve.a)(Rj, "warning", function (e) {
     height: 36,
     type: "secondary",
     onClick: e.onCancel
-  }, null !== (t = e.cancelText) && void 0 !== t ? t : "\u53d6\u6d88"), h.a.createElement(Cj.a, {
+  }, null !== (t = e.cancelText) && void 0 !== t ? t : "取消"), h.a.createElement(Cj.a, {
     width: 110,
     height: 36,
     margin: "0 0 0 20px",
     type: "danger",
     onClick: e.onOk
-  }, null !== (n = e.okText) && void 0 !== n ? n : "\u786e\u8ba4"));
+  }, null !== (n = e.okText) && void 0 !== n ? n : "确认"));
   var a = document.createElement("div");
   a.className = "CUI-dialog-warning-dialog";
   document.body.appendChild(a);
@@ -64312,7 +64312,7 @@ Object(Ve.a)(Rj, "info", function (e) {
     height: 36,
     type: "primary",
     onClick: e.onOk
-  }, null !== (t = e.okText) && void 0 !== t ? t : "\u786e\u8ba4");
+  }, null !== (t = e.okText) && void 0 !== t ? t : "确认");
   var i = document.createElement("div");
   i.className = "CUI-dialog-warning-dialog";
   document.body.appendChild(i);
@@ -65207,7 +65207,7 @@ function tN(e, t) {
   return $j(o, n);
 }
 var nN = function (e) {
-  return '<filter id="'.concat("cui_common_theme_filter", '" x="0" y="0" width="100%" height="100%">\n  <feFlood result="floodFill" flood-color=').concat(e, ' flood-opacity="1"></feFlood>\n  <feBlend in="SourceGraphic" in2="floodFill" mode="luminosity" result="blend"></feBlend>\n  <feComposite in="blend" in2="SourceAlpha" operator="in"></feComposite>\n</filter>');
+  return "<filter id=\"".concat("cui_common_theme_filter", "\" x=\"0\" y=\"0\" width=\"100%\" height=\"100%\">\n  <feFlood result=\"floodFill\" flood-color=").concat(e, " flood-opacity=\"1\"></feFlood>\n  <feBlend in=\"SourceGraphic\" in2=\"floodFill\" mode=\"luminosity\" result=\"blend\"></feBlend>\n  <feComposite in=\"blend\" in2=\"SourceAlpha\" operator=\"in\"></feComposite>\n</filter>");
 };
 var rN = {
   s1: "theme-color-ys1",
@@ -65800,7 +65800,7 @@ var AN = function (e) {
         p(void 0);
       }
       if (e.reportMethod) {
-        e.reportMethod("\u7528\u6237\u4fe1\u606f-\u91cd\u7f6e\u8bbe\u7f6e\u5bc6\u7801");
+        e.reportMethod("用户信息-重置设置密码");
       }
     },
     onChange: function () {
@@ -65831,7 +65831,7 @@ var AN = function (e) {
         _(void 0);
       }
       if (e.reportMethod) {
-        e.reportMethod("\u7528\u6237\u4fe1\u606f-\u91cd\u7f6e\u8bbe\u7f6e\u5bc6\u7801");
+        e.reportMethod("用户信息-重置设置密码");
       }
     },
     onChange: function () {
@@ -65846,7 +65846,7 @@ var AN = function (e) {
     onClick: T,
     disable: s,
     className: "CUI-sign-in-dialog-sign-in-btn",
-    "data-report": "\u7528\u6237\u4fe1\u606f-\u91cd\u7f6e\u5b8c\u6210"
+    "data-report": "用户信息-重置完成"
   }, n ? f.createElement(iN, {
     size: 18,
     themeColor: "10"
@@ -66097,7 +66097,7 @@ var PN = function (e) {
     },
     onBlur: function () {
       if (e.reportMethod) {
-        e.reportMethod("\u7528\u6237\u4fe1\u606f-\u91cd\u7f6e\u624b\u673a\u53f7");
+        e.reportMethod("用户信息-重置手机号");
       }
     }
   }), f.createElement("div", {
@@ -66129,7 +66129,7 @@ var PN = function (e) {
     },
     iconsSuffix: f.createElement("span", {
       onClick: S,
-      "data-report-click": "\u7528\u6237\u4fe1\u606f-\u91cd\u7f6e\u9a8c\u8bc1\u7801",
+      "data-report-click": "用户信息-重置验证码",
       className: vj()("get-code ".concat(h ? "disable" : "enable"), RN, {
         autoResolveMultipleImports: !0,
         handleMissingStyleName: "throw"
@@ -66144,7 +66144,7 @@ var PN = function (e) {
     onClick: w,
     disable: l,
     className: "CUI-sign-in-dialog-sign-in-btn",
-    "data-report": "\u7528\u6237\u4fe1\u606f-\u91cd\u7f6e\u4e0b\u4e00\u6b65"
+    "data-report": "用户信息-重置下一步"
   }, o ? f.createElement(iN, {
     size: 18,
     themeColor: "10"
@@ -66171,7 +66171,7 @@ var FN = function (e) {
       t(kj.LOGIN);
     },
     className: "CUI-sign-in-dialog-sign-in-btn",
-    "data-report": "\u7528\u6237\u4fe1\u606f-\u53bb\u767b\u5f55"
+    "data-report": "用户信息-去登录"
   }, Ze("sign_in_dialog/go_to_login")));
 };
 var GN = {
@@ -66401,7 +66401,7 @@ var zN = function (e) {
           key: "retry",
           className: "CUI-toast-btn-retry",
           onClick: g("retry")
-        }, "\u91cd\u8bd5");
+        }, "重试");
         i.push(a);
       }
       if (null !== (n = e.btn) && void 0 !== n && n.includes("ignore")) {
@@ -66409,7 +66409,7 @@ var zN = function (e) {
           key: "ignore",
           className: "CUI-toast-btn-ignore",
           onClick: g("ignore")
-        }, "\u5ffd\u7565");
+        }, "忽略");
         i.push(s);
       }
       if (null !== (r = e.btn) && void 0 !== r && r.includes("cancel")) {
@@ -66417,7 +66417,7 @@ var zN = function (e) {
           key: "cancel",
           className: "CUI-toast-btn-cancel",
           onClick: g("cancel")
-        }, "\u53d6\u6d88");
+        }, "取消");
         i.push(c);
       }
       if (null !== (o = e.btn) && void 0 !== o && o.includes("close")) {
@@ -66620,19 +66620,19 @@ var tR = function (e) {
     id: "#cui_check",
     size: 8,
     color: "#ffffff"
-  })), f.createElement("p", null, "\u6211\u5df2\u9605\u8bfb\u5e76\u540c\u610f", f.createElement("a", {
+  })), f.createElement("p", null, "我已阅读并同意", f.createElement("a", {
     href: "https://static-platform.codemao.cn/926/protocols/_userserviceProtocol.html",
     target: "_blank",
     rel: "noreferrer"
-  }, "\u300a\u7528\u6237\u534f\u8bae\u300b"), f.createElement("a", {
+  }, "《用户协议》"), f.createElement("a", {
     href: "https://static-platform.codemao.cn/926/protocols/_privacyProtocol.html",
     target: "_blank",
     rel: "noreferrer"
-  }, "\u300a\u9690\u79c1\u534f\u8bae\u300b"), f.createElement("a", {
+  }, "《隐私协议》"), f.createElement("a", {
     href: "https://static-platform.codemao.cn/926/protocols/_childrenPrivacyProtectProtocol.html",
     target: "_blank",
     rel: "noreferrer"
-  }, "\u300a\u513f\u7ae5\u9690\u79c1\u4fdd\u62a4\u534f\u8bae\u300b"))));
+  }, "《儿童隐私保护协议》"))));
 };
 var nR = f.useState;
 var rR = f.useEffect;
@@ -66785,7 +66785,7 @@ var sR = function (e) {
     },
     onBlur: function () {
       if (e.reportMethod) {
-        e.reportMethod("\u7528\u6237\u4fe1\u606f-\u8f93\u5165\u8d26\u53f7");
+        e.reportMethod("用户信息-输入账号");
       }
     }
   }), f.createElement("div", {
@@ -66816,7 +66816,7 @@ var sR = function (e) {
     },
     onBlur: function () {
       if (e.reportMethod) {
-        e.reportMethod("\u7528\u6237\u4fe1\u606f-\u8f93\u5165\u8d26\u53f7\u5bc6\u7801");
+        e.reportMethod("用户信息-输入账号密码");
       }
     }
   }), f.createElement("div", {
@@ -66828,7 +66828,7 @@ var sR = function (e) {
     onClick: O,
     disable: a,
     className: "CUI-sign-in-dialog-sign-in-btn",
-    "data-report": "\u7528\u6237\u4fe1\u606f-\u5bc6\u7801\u767b\u5f55"
+    "data-report": "用户信息-密码登录"
   }, t ? f.createElement(iN, {
     size: 18,
     themeColor: "10"
@@ -67115,7 +67115,7 @@ var gR = function (e) {
     },
     onBlur: function () {
       if (e.reportMethod) {
-        e.reportMethod("\u7528\u6237\u4fe1\u606f-\u8f93\u5165\u624b\u673a\u53f7");
+        e.reportMethod("用户信息-输入手机号");
       }
     }
   }), f.createElement("div", {
@@ -67147,7 +67147,7 @@ var gR = function (e) {
     },
     iconsSuffix: f.createElement("span", {
       onClick: N,
-      "data-report-click": "\u7528\u6237\u4fe1\u606f-\u767b\u5f55\u9a8c\u8bc1\u7801",
+      "data-report-click": "用户信息-登录验证码",
       className: vj()("get-code ".concat(m ? "disable" : "enable"), uR, {
         autoResolveMultipleImports: !0,
         handleMissingStyleName: "throw"
@@ -67162,7 +67162,7 @@ var gR = function (e) {
     onClick: A,
     disable: u,
     className: "CUI-sign-in-dialog-sign-in-btn",
-    "data-report": "\u7528\u6237\u4fe1\u606f-\u77ed\u4fe1\u767b\u5f55"
+    "data-report": "用户信息-短信登录"
   }, t ? f.createElement(iN, {
     size: 18,
     themeColor: "10"
@@ -67445,11 +67445,11 @@ var yR = function (e) {
       } else {
         $N.custom({
           colorType: "dark",
-          content: "\u8bf7\u9605\u8bfb\u5e76\u540c\u610f\u7528\u6237\u534f\u8bae\u3001\u9690\u79c1\u534f\u8bae\u3001\u513f\u7ae5\u9690\u79c1\u4fdd\u62a4\u534f\u8bae"
+          content: "请阅读并同意用户协议、隐私协议、儿童隐私保护协议"
         });
       }
     },
-    "data-report-click": "\u7528\u6237\u4fe1\u606f-\u5fae\u4fe1\u767b\u5f55"
+    "data-report-click": "用户信息-微信登录"
   }, f.createElement(wj, {
     id: "#cui_iconweixin",
     size: 37,
@@ -67464,11 +67464,11 @@ var yR = function (e) {
       } else {
         $N.custom({
           colorType: "dark",
-          content: "\u8bf7\u9605\u8bfb\u5e76\u540c\u610f\u7528\u6237\u534f\u8bae\u3001\u9690\u79c1\u534f\u8bae\u3001\u513f\u7ae5\u9690\u79c1\u4fdd\u62a4\u534f\u8bae"
+          content: "请阅读并同意用户协议、隐私协议、儿童隐私保护协议"
         });
       }
     },
-    "data-report-click": "\u7528\u6237\u4fe1\u606f-QQ\u767b\u5f55"
+    "data-report-click": "用户信息-QQ登录"
   }, f.createElement(wj, {
     id: "#cui_iconQQ1",
     size: 37
@@ -67514,7 +67514,7 @@ var OR = function (e) {
       }
     },
     className: "CUI-sign-in-dialog-sign-in-btn",
-    "data-report": "\u7528\u6237\u4fe1\u606f-\u6ce8\u518c\u6210\u529f\u786e\u5b9a"
+    "data-report": "用户信息-注册成功确定"
   }, Ze("sign_in_dialog/register/confirm")));
 };
 OR.defaultProps = {
@@ -67798,7 +67798,7 @@ var RR = function (e) {
     },
     onBlur: function () {
       if (e.reportMethod) {
-        e.reportMethod("\u7528\u6237\u4fe1\u606f-\u6ce8\u518c\u624b\u673a\u53f7");
+        e.reportMethod("用户信息-注册手机号");
       }
     }
   }), f.createElement("div", {
@@ -67835,7 +67835,7 @@ var RR = function (e) {
         });
       }
       if (e.reportMethod) {
-        e.reportMethod("\u7528\u6237\u4fe1\u606f-\u6ce8\u518c\u8bbe\u7f6e\u5bc6\u7801");
+        e.reportMethod("用户信息-注册设置密码");
       }
     }
   }), f.createElement("div", {
@@ -67864,7 +67864,7 @@ var RR = function (e) {
     },
     iconsSuffix: f.createElement("span", {
       onClick: R,
-      "data-report-click": "\u7528\u6237\u4fe1\u606f-\u6ce8\u518c\u9a8c\u8bc1\u7801",
+      "data-report-click": "用户信息-注册验证码",
       className: vj()("get-code ".concat(h ? "disable" : "enable"), SR, {
         autoResolveMultipleImports: !0,
         handleMissingStyleName: "throw"
@@ -67872,7 +67872,7 @@ var RR = function (e) {
     }, Ze("sign_in_dialog/btn_code"), h ? "(".concat(h, ")") : ""),
     onBlur: function () {
       if (e.reportMethod) {
-        e.reportMethod("\u7528\u6237\u4fe1\u606f-\u6ce8\u518c\u9a8c\u8bc1\u7801");
+        e.reportMethod("用户信息-注册验证码");
       }
     }
   }), f.createElement("div", {
@@ -67888,7 +67888,7 @@ var RR = function (e) {
     className: "CUI-sign-in-dialog-sign-in-btn",
     disable: l,
     onClick: j,
-    "data-report": "\u7528\u6237\u4fe1\u606f-\u6ce8\u518c\u5b8c\u6210"
+    "data-report": "用户信息-注册完成"
   }, t ? f.createElement(iN, {
     size: 18,
     themeColor: "10"
@@ -68055,7 +68055,7 @@ var PR = function (e) {
   }, [e.show]);
   var R = function (e) {
     if (j) {
-      j("\u7528\u6237\u4fe1\u606f-".concat(r === kj.LOGIN ? "\u767b\u5f55" : r === kj.REGISTER ? "\u6ce8\u518c" : "\u627e\u56de\u5bc6\u7801"));
+      j("用户信息-".concat(r === kj.LOGIN ? "登录" : r === kj.REGISTER ? "注册" : "找回密码"));
     }
     o(e);
   };
@@ -68589,7 +68589,7 @@ var ok = Object(f.memo)(function (e) {
     placement: "rightTop",
     getTooltipContainer: s,
     autoAdjustOverflow: !1,
-    title: "\u9009\u62e9\u56fe\u7247\u5e27",
+    title: "选择图片帧",
     trigger: "click",
     visible: n,
     align: {
@@ -69244,9 +69244,9 @@ var Ik = new (function () {
     Object(X.a)(this, e);
     this.isInited = !1;
     this.materialFilter = {
-      icon: ["\u5168\u90e8"],
-      sound: ["\u5168\u90e8"],
-      image: ["\u5168\u90e8"]
+      icon: ["全部"],
+      sound: ["全部"],
+      image: ["全部"]
     };
     this.materialResources = {
       icon: [],
@@ -74040,7 +74040,7 @@ function fL(e, t) {
       var t;
       t = e;
       var n = function (e) {
-        return "[" + e + '="' + t + '"]';
+        return "[" + e + "=\"" + t + "\"]";
       };
       var r = function () {
         var e = "\n      cursor: -webkit-grab;\n      cursor: grab;\n    ";
@@ -74153,7 +74153,7 @@ function mL(e) {
   return e instanceof hL(e).HTMLElement;
 }
 function gL(e, t) {
-  var n = "[" + iL.contextId + '="' + e + '"]';
+  var n = "[" + iL.contextId + "=\"" + e + "\"]";
   var r = Nx(document.querySelectorAll(n));
   if (!r.length) {
     return null;
@@ -74523,7 +74523,7 @@ function zL(e, t) {
     return null;
   }
   var o = VL(r, function (e) {
-    return "[" + iL.contextId + '="' + e + '"]';
+    return "[" + iL.contextId + "=\"" + e + "\"]";
   }(e));
   return o && mL(o) ? o : null;
 }
@@ -74566,7 +74566,7 @@ function XL(e) {
   }
   var c = o.draggable.getById(i);
   var l = function (e, t) {
-    var n = "[" + aL.contextId + '="' + e + '"]';
+    var n = "[" + aL.contextId + "=\"" + e + "\"]";
     var r = jx(Nx(document.querySelectorAll(n)), function (e) {
       return e.getAttribute(aL.id) === t;
     });
@@ -77890,11 +77890,11 @@ var cB = function () {
                   id: "know"
                 }),
                 title: "",
-                content: h.a.createElement("div", null, "\u4f5c\u54c1\u4f7f\u7528\u4e86\u672a\u5ba1\u6838\u7684\u81ea\u5b9a\u4e49\u63a7\u4ef6\uff0c\u9700\u5c06\u63a7\u4ef6\u63d0\u4ea4\u81f3", h.a.createElement("a", {
+                content: h.a.createElement("div", null, "作品使用了未审核的自定义控件，需将控件提交至", h.a.createElement("a", {
                   href: te.b,
                   target: "__blank",
                   rel: "noopener noreferrer"
-                }, "Coco\u63a7\u4ef6\u5546\u57ce-\u6295\u7a3f"), "\uff0c\u5e76\u7b49\u5f85\u5ba1\u6838\u901a\u8fc7\u540e\u624d\u80fd\u8fdb\u884c\u534f\u4f5c\u3002"),
+                }, "Coco控件商城-投稿"), "，并等待审核通过后才能进行协作。"),
                 cancelBtnVisible: !1
               }));
               return n.abrupt("return");
@@ -77957,7 +77957,7 @@ var cB = function () {
       }, e);
     }))).catch(function (n) {
       var r;
-      switch (console.error("\u52a0\u5165\u534f\u4f5c\u5931\u8d25,", n), null === (r = n.response) || void 0 === r ? void 0 : r.data.code) {
+      switch (console.error("加入协作失败,", n), null === (r = n.response) || void 0 === r ? void 0 : r.data.code) {
         case 80000001:
           e(Object(Y.Ch)(function () {
             window.location.reload();
@@ -78047,7 +78047,7 @@ var cB = function () {
                   editPermission: K.c.Preview
                 }));
               } else {
-                console.error("\u5f52\u6863\u5185\u5bb9\u4e0d\u5b58\u5728\uff0c\u52a0\u8f7d\u7a7a\u4f5c\u54c1");
+                console.error("归档内容不存在，加载空作品");
                 s();
               }
               t.next = 13;
@@ -78265,7 +78265,7 @@ var dB = function (e, t) {
 };
 dB.displayName = "EllipsisOutlined";
 var pB = f.forwardRef(dB);
-var fB = require("./612/index");
+var fB = require("./612");
 var hB = function (e, t) {
   var n = {};
   for (var r in e) if (Object.prototype.hasOwnProperty.call(e, r) && t.indexOf(r) < 0) {
@@ -78399,7 +78399,7 @@ var bB = function (e) {
         var r = e.overlay;
         n = "function" === typeof r ? r() : r;
         var o = (n = f.Children.only("string" === typeof n ? f.createElement("span", null, n) : n)).props;
-        Object(Vw.a)(!o.mode || "vertical" === o.mode, "Dropdown", 'mode="'.concat(o.mode, "\" is not supported for Dropdown's Menu."));
+        Object(Vw.a)(!o.mode || "vertical" === o.mode, "Dropdown", "mode=\"".concat(o.mode, "\" is not supported for Dropdown's Menu."));
         var i = o.selectable;
         var a = void 0 !== i && i;
         var s = o.expandIcon;
@@ -79259,7 +79259,7 @@ var $B = h.a.memo(function () {
   var x = Object(f.useCallback)(function (e) {
     var t = new Date(e);
     return {
-      date: "".concat(t.getFullYear(), "\u5e74").concat(t.getMonth() + 1, "\u6708").concat(t.getDate(), "\u65e5"),
+      date: "".concat(t.getFullYear(), "年").concat(t.getMonth() + 1, "月").concat(t.getDate(), "日"),
       time: "".concat(k(t.getHours()), ":").concat(k(t.getMinutes()), ":").concat(k(t.getSeconds()))
     };
   }, []);
@@ -79386,7 +79386,7 @@ var $B = h.a.memo(function () {
         return "";
       }
       var r = x(t);
-      return "\u7248\u672c\uff1a".concat(r.date, " ").concat(r.time);
+      return "版本：".concat(r.date, " ").concat(r.time);
     }())), h.a.createElement("div", {
       onClick: function () {
         return r("");
@@ -79490,7 +79490,7 @@ var oF = Object(f.memo)(function () {
               });
               t.unshift({
                 id: -1,
-                name: "\u5168\u90e8",
+                name: "全部",
                 sort: 0
               });
               u(t);
@@ -79763,7 +79763,7 @@ var oF = Object(f.memo)(function () {
     }, h.a.createElement("div", {
       className: rF.a.widgetImgContainer,
       style: {
-        backgroundImage: 'url("'.concat(e.icon, '")')
+        backgroundImage: "url(\"".concat(e.icon, "\")")
       }
     })), h.a.createElement("div", {
       className: rF.a.widgetCardFooter
@@ -79839,9 +79839,9 @@ var sF = Object(f.memo)(function () {
     type: "icon-download-apk"
   })));
 });
-var cF = ["\u4e3a\u4e86\u786e\u4fdd\u7f16\u7a0b\u732b\u793e\u533a\u6210\u5458\u8d26\u6237\u5b89\u5168\uff0c\u6211\u4eec\u5c06\u9650\u5236\u5bfc\u5165\u201c\u81ea\u5b9a\u4e49\u63a7\u4ef6\u201d\u7684\u4f5c\u54c1\u8fdb\u884c\u5206\u4eab\u53ca\u534f\u4f5c\u3002", "\u4e3a\u6b64\uff0c\u6211\u4eec\u5efa\u8bae\u5404\u4f5c\u8005\u8bf7\u5148\u5c06\u63a7\u4ef6\u63d0\u4ea4\u5ba1\u6838\uff0c\u518d\u7531\u63a7\u4ef6\u5546\u57ce\u6dfb\u52a0\u53ca\u4f7f\u7528 \u2764\ufe0f \u3002", "\u8fd9\u4e00\u63aa\u65bd\u65e8\u5728\u7ef4\u62a4\u6211\u4eec\u793e\u533a\u7684\u5065\u5eb7\u4e0e\u5b89\u5168\uff0c\u611f\u8c22\u60a8\u7684\u7406\u89e3\u4e0e\u652f\u6301 \u2764\ufe0f \uff5e"];
+var cF = ["为了确保编程猫社区成员账户安全，我们将限制导入“自定义控件”的作品进行分享及协作。", "为此，我们建议各作者请先将控件提交审核，再由控件商城添加及使用 ❤️ 。", "这一措施旨在维护我们社区的健康与安全，感谢您的理解与支持 ❤️ ～"];
 var lF = [{
-  label: "Coco\u63a7\u4ef6\u5546\u57ce-\u6295\u7a3f",
+  label: "Coco控件商城-投稿",
   url: te.b
 }];
 var uF = require("./1491");
@@ -79914,7 +79914,7 @@ var hF = Object(f.memo)(function () {
     className: fF.a.content
   }, h.a.createElement("div", {
     className: fF.a.updateInfo
-  }, h.a.createElement("header", null, "\u7248\u672cv", oo.f, "\u66f4\u65b0"), cF.map(function (e) {
+  }, h.a.createElement("header", null, "版本v", oo.f, "更新"), cF.map(function (e) {
     return h.a.createElement("p", {
       key: e
     }, e);
@@ -79934,7 +79934,7 @@ var hF = Object(f.memo)(function () {
     href: "https://codemao.yuque.com/kzbwh0/ogrtbo/update",
     target: "_blank",
     rel: "noopener noreferrer"
-  }, "\u5f80\u671f\u529f\u80fd\u66f4\u65b0\u56de\u987e", h.a.createElement(z.j, {
+  }, "往期功能更新回顾", h.a.createElement(z.j, {
     className: fF.a.iconLink,
     type: "icon-dropdown-down"
   }))))));
@@ -80450,8 +80450,8 @@ var wF = Object(f.memo)(function () {
                 allowText: a({
                   id: "cloudGrid.confirm"
                 }),
-                title: "\u9519\u8bef",
-                content: "\u9519\u8bef\u539f\u56e0 ".concat(f),
+                title: "错误",
+                content: "错误原因 ".concat(f),
                 cancelBtnVisible: !0
               }));
               return e.abrupt("return");
@@ -81395,7 +81395,7 @@ var kF = Object(f.memo)(function () {
   var Ce = {
     type: "CloudDBManagerDialog",
     url: null === (e = Qm[0]) || void 0 === e ? void 0 : e.url,
-    label: "\u4e91\u6570\u636e\u8868"
+    label: "云数据表"
   };
   return h.a.createElement(z.f, {
     visible: t,
@@ -81602,7 +81602,7 @@ var HF = Object(f.memo)(function () {
   var i = o.visible;
   var a = o.type;
   var s = o.callback;
-  var c = "share" === a ? "\u5206\u4eab" : "\u6253\u5305";
+  var c = "share" === a ? "分享" : "打包";
   var l = Object(A.a)().formatMessage;
   var u = Object(_.d)();
   Object(f.useEffect)(function () {
@@ -81677,19 +81677,19 @@ var HF = Object(f.memo)(function () {
   }, function () {
     switch (n) {
       case IF.STEP0:
-        return h.a.createElement("span", null, "\u606d\u559c\u4f60\u7b2c\u4e00\u6b21", c, "\u4e86\u4f7f\u7528\u4e91\u6570\u636e\u5e93\u7684\u4f5c\u54c1\uff0c\u6709\u4e00\u4e9b\u5c0f\u77e5\u8bc6\u9700\u8981\u4e86\u89e3\u4e0b");
+        return h.a.createElement("span", null, "恭喜你第一次", c, "了使用云数据库的作品，有一些小知识需要了解下");
       case IF.STEP1:
-        return h.a.createElement(h.a.Fragment, null, h.a.createElement("span", null, "\u4e4b\u524d\u7f16\u8f91\u5668\u5185\u4f7f\u7528\u7684\u6570\u636e\u662f"), h.a.createElement("span", {
+        return h.a.createElement(h.a.Fragment, null, h.a.createElement("span", null, "之前编辑器内使用的数据是"), h.a.createElement("span", {
           className: DF.a.yellow
-        }, "\u3010\u6d4b\u8bd5\u6570\u636e\u3011"));
+        }, "【测试数据】"));
       case IF.STEP2:
-        return h.a.createElement(h.a.Fragment, null, h.a.createElement("div", null, c, "\u540e\u4f1a\u81ea\u52a8\u751f\u6210\u4e00\u5957\u65b0\u7684\u6570\u636e\u5e93\uff0c"), h.a.createElement("div", null, "\u5176\u4ed6\u5c0f\u4f19\u4f34\u4f7f\u7528\u5e94\u7528\u65f6\u4ea7\u751f\u7684\u6570\u636e\u5c06\u5b58\u50a8\u5728", h.a.createElement("span", {
+        return h.a.createElement(h.a.Fragment, null, h.a.createElement("div", null, c, "后会自动生成一套新的数据库，"), h.a.createElement("div", null, "其他小伙伴使用应用时产生的数据将存储在", h.a.createElement("span", {
           className: DF.a.blue
-        }, "\u3010\u6b63\u5f0f\u6570\u636e\u3011"), "\u4e2d"));
+        }, "【正式数据】"), "中"));
       case IF.STEP3:
-        return h.a.createElement(h.a.Fragment, null, h.a.createElement("span", null, "\u4e24\u5957\u6570\u636e\u4e92\u4e0d\u5e72\u6270\uff0c\u4f60\u53ef\u4ee5\u5728"), h.a.createElement("span", {
+        return h.a.createElement(h.a.Fragment, null, h.a.createElement("span", null, "两套数据互不干扰，你可以在"), h.a.createElement("span", {
           className: DF.a.purple
-        }, "\xa0\u5bfc\u822a\u680f>\u6570\u636e\u7ba1\u7406\xa0"), h.a.createElement("span", null, "\u4e2d\u7ba1\u7406\u548c\u4fee\u6539\u6240\u6709\u6570\u636e"));
+        }, " 导航栏>数据管理 "), h.a.createElement("span", null, "中管理和修改所有数据"));
       default:
         return h.a.createElement("span", null);
     }
@@ -81723,7 +81723,7 @@ var HF = Object(f.memo)(function () {
           id: "cloudDBPublishDialog.then"
         }));
       case IF.STEP3:
-        return h.a.createElement("span", null, "\u53bb", c);
+        return h.a.createElement("span", null, "去", c);
       default:
         return h.a.createElement("span", null);
     }
@@ -81800,27 +81800,27 @@ var eG = Object(te.p)(function (e, t) {
 })();
 (function () {
   var e = zF.a.import("ui/icons");
-  e.bold = '<svg xmlns="http://www.w3.org/2000/svg" height="1em" width="1em" viewBox="0 0 32 32"><g fill-rule="evenodd" fill="none"><path fill-rule="nonzero" fill="currentColor" d="M18.159 15.341c.469.087.933.233 1.393.44.46.206.87.494 1.23.865.36.37.653.835.88 1.394.225.56.338 1.227.338 2.002 0 1.566-.46 2.784-1.38 3.654-.921.87-2.269 1.304-4.043 1.304h-5.221c-.452 0-.791-.12-1.017-.362-.226-.24-.339-.507-.339-.8V8.162c0-.293.117-.56.351-.8.235-.241.57-.362 1.005-.362h4.569c1.037 0 1.908.125 2.61.374.703.25 1.268.577 1.695.982.427.404.728.874.904 1.407.176.534.263 1.085.263 1.653 0 .603-.083 1.128-.25 1.575a3.502 3.502 0 0 1-.69 1.15 3.56 3.56 0 0 1-1.03.774c-.394.198-.816.34-1.268.426zm-4.895-1.42h2.585c.854 0 1.452-.194 1.795-.581.343-.387.515-.874.515-1.46 0-.257-.042-.503-.126-.735a1.756 1.756 0 0 0-.401-.633 1.95 1.95 0 0 0-.716-.452c-.293-.112-.648-.168-1.067-.168h-2.585v4.03zm0 8.187h2.46c.954 0 1.703-.198 2.247-.594.544-.396.807-1.033.79-1.911 0-.534-.075-.969-.225-1.305a1.866 1.866 0 0 0-.666-.8 2.786 2.786 0 0 0-1.08-.413 8.289 8.289 0 0 0-1.468-.117h-2.058v5.14z"/></g></svg>';
-  e.italic = '<svg xmlns="http://www.w3.org/2000/svg" height="1em" width="1em" viewBox="0 0 32 32"><g fill-rule="evenodd" fill="none"><path fill-rule="nonzero" fill="currentColor" d="M21.97 7.668a1 1 0 0 1 .117 1.993l-.116.007h-3.904l-2.505 12.664h3.943a1 1 0 0 1 .117 1.993l-.117.007H9.852a1 1 0 0 1-.117-1.993l.117-.007h3.67l2.506-12.664h-3.711a1 1 0 0 1-.117-1.993l.117-.007h9.654z"/></g></svg>';
-  e.underline = '<svg xmlns="http://www.w3.org/2000/svg" height="1em" width="1em" viewBox="0 0 32 32"><g fill-rule="evenodd" fill="none"><path fill-rule="nonzero" fill="currentColor" d="M25 23v1.838H8V23h17zM10 8.656c0-.25.079-.455.236-.616.157-.161.4-.242.732-.242.33 0 .578.08.744.242a.824.824 0 0 1 .248.616v6.118c0 .748.058 1.434.174 2.057.115.623.343 1.155.682 1.595.339.44.806.781 1.402 1.023.595.242 1.372.363 2.332.363 1.554 0 2.696-.352 3.423-1.056.728-.704 1.092-1.701 1.092-2.992V8.656a.87.87 0 0 1 .223-.616c.149-.161.397-.242.744-.242.331 0 .575.08.732.242a.846.846 0 0 1 .236.616v7.658c0 .792-.165 1.503-.496 2.134a4.795 4.795 0 0 1-1.365 1.606c-.579.44-1.265.777-2.059 1.012a8.975 8.975 0 0 1-2.555.352c-.91 0-1.762-.117-2.556-.352-.793-.235-1.484-.572-2.071-1.012a4.87 4.87 0 0 1-1.39-1.606c-.338-.63-.508-1.342-.508-2.134V8.656z"/></g></svg>';
-  e.strike = '<svg xmlns="http://www.w3.org/2000/svg" height="1em" width="1em" viewBox="0 0 32 32"><g fill-rule="evenodd" fill="none"><path fill-rule="nonzero" fill="currentColor" d="M23 19.82c0 .737-.177 1.42-.531 2.048a5.08 5.08 0 0 1-1.495 1.634c-.642.46-1.412.821-2.309 1.08-.896.26-1.876.399-2.939.416a11.575 11.575 0 0 1-2.475-.214 14.557 14.557 0 0 1-2.175-.59c-.952-.37-1.572-.755-1.86-1.157-.288-.402-.288-.754 0-1.056a1.1 1.1 0 0 1 .847-.327c.32.017.67.118 1.046.302.664.335 1.39.624 2.176.867a8.68 8.68 0 0 0 2.574.365c.576 0 1.135-.084 1.677-.252a5.403 5.403 0 0 0 1.445-.678c.42-.285.758-.629 1.013-1.03a2.4 2.4 0 0 0 .382-1.308c0-.47-.122-.892-.365-1.27a3.497 3.497 0 0 0-.202-.28h2.957c.156.43.234.913.234 1.45zm3-3.677v1.8H7v-1.8h19zM16.29 7c.842 0 1.661.088 2.459.264.797.176 1.478.394 2.042.653.565.26.969.553 1.213.88.243.327.243.65 0 .968-.2.251-.499.373-.897.364a2.324 2.324 0 0 1-1.096-.289 13.543 13.543 0 0 0-1.661-.716 5.56 5.56 0 0 0-2.06-.34c-1.129 0-2.031.244-2.706.73-.676.486-1.013 1.106-1.013 1.86 0 .469.144.871.431 1.206.288.335.665.629 1.13.88.465.251 1.002.486 1.61.704.61.218 1.235.436 1.877.653.842.285 1.595.579 2.259.88l.016.008h-5.68a34.805 34.805 0 0 1-.514-.184 9.952 9.952 0 0 1-2.01-.98c-.564-.369-1.002-.809-1.312-1.32-.31-.51-.465-1.135-.465-1.872 0-.67.178-1.278.532-1.823a4.66 4.66 0 0 1 1.411-1.382 6.791 6.791 0 0 1 2.027-.855A9.81 9.81 0 0 1 16.29 7z"/></g></svg>';
-  e.color = '<svg xmlns="http://www.w3.org/2000/svg" height="1em" width="1em" viewBox="0 0 33 32"><g fill-rule="evenodd" fill="none"><path fill-rule="nonzero" fill="currentColor" d="M13.937 17.33l-.902 2.53a26.25 26.25 0 0 1-.22.594c-.073.19-.158.367-.253.528-.095.161-.205.29-.33.385a.687.687 0 0 1-.429.143c-.293 0-.52-.092-.682-.275-.161-.183-.161-.524 0-1.023l4.62-13.442c.073-.235.202-.422.385-.561.183-.14.422-.209.715-.209.308 0 .557.07.748.209.19.14.323.326.396.561l4.642 13.486c.117.352.125.649.022.891-.103.242-.345.363-.726.363-.25.015-.451-.055-.605-.209a1.392 1.392 0 0 1-.341-.605l-1.21-3.366h-5.83zm5.434-1.54l-2.508-7.546-2.508 7.546h5.016z"/></g></svg>';
-  e.background = '<svg xmlns="http://www.w3.org/2000/svg" height="1em" width="1em" viewBox="0 0 32 32"><g fill-rule="evenodd" fill="none"><path fill-rule="nonzero" fill="currentColor" d="M22.357 7.252a2.8 2.8 0 0 1 1.025 3.825l-3.586 6.21a.8.8 0 0 1-.21.24l-2.208 1.664a2.798 2.798 0 0 1-1.736.565l-.577 1.017H11.16l1.475-2.63a2.8 2.8 0 0 1-.53-1.771l.138-3.02a.8.8 0 0 1 .106-.364l3.586-6.21a2.8 2.8 0 0 1 3.825-1.026zm-4.7 9.724l-3.877-2.238-.078 1.707a1.2 1.2 0 0 0 .386.937l.101.084.112.073.79.456a1.2 1.2 0 0 0 1.323-.08l1.244-.939zm3.9-8.338l-2.598-1.5a1.2 1.2 0 0 0-1.64.44l-3.21 5.56c.06.01.117.026.174.05l.09.045 4.438 2.562 3.185-5.518a1.2 1.2 0 0 0-.242-1.497l-.094-.075-.103-.067z"/></g></svg>';
-  e.script.super = '<svg xmlns="http://www.w3.org/2000/svg" height="1em" width="1em" viewBox="0 0 32 32"><g fill-rule="evenodd" fill="none"><path fill-rule="nonzero" fill="#9A84F8" d="M26 13.427c0 .382-.129.573-.387.573h-4.166c-.121 0-.23-.077-.324-.232a.901.901 0 0 1-.12-.55c.008-.105.029-.212.063-.32a.902.902 0 0 1 .176-.312c.046-.06.158-.156.336-.292.178-.135.385-.293.62-.474.236-.181.484-.386.746-.613.262-.227.5-.465.717-.712.216-.247.396-.5.54-.756.145-.257.217-.514.217-.771a.782.782 0 0 0-.24-.594c-.159-.151-.371-.227-.637-.227-.296 0-.517.086-.665.257-.148.171-.222.415-.222.732 0 .21-.052.36-.154.45-.103.088-.283.133-.54.133-.312 0-.52-.04-.627-.119-.106-.079-.16-.234-.16-.464 0-.66.206-1.18.616-1.563.41-.382 1.04-.573 1.889-.573.713 0 1.263.175 1.65.524.387.35.58.81.58 1.384 0 .23-.045.463-.136.697a3.79 3.79 0 0 1-.358.692 5.638 5.638 0 0 1-.507.663c-.19.214-.383.417-.58.608a14.629 14.629 0 0 1-1.571 1.285h2.857c.258 0 .387.191.387.574z"/><path fill-rule="nonzero" fill="currentColor" d="M18.076 9.392c.205-.337.418-.528.638-.572.22-.044.44.007.66.154.41.279.455.667.132 1.166l-4.136 5.896 4.884 6.952c.103.205.165.4.187.583.022.183-.092.363-.341.539-.499.337-.91.257-1.232-.242l-4.488-6.402-4.488 6.402c-.176.25-.37.392-.583.429-.213.037-.422-.026-.627-.187a.68.68 0 0 1-.297-.572.946.946 0 0 1 .231-.66l4.774-6.82-4.136-5.918a.84.84 0 0 1-.176-.605.683.683 0 0 1 .33-.561c.22-.147.418-.216.594-.209.176.007.367.15.572.429l3.828 5.456 3.674-5.258z"/></g></svg>';
-  e.script.sub = '<svg xmlns="http://www.w3.org/2000/svg" height="1em" width="1em" viewBox="0 0 32 32"><g fill-rule="evenodd" fill="none"><path fill-rule="nonzero" fill="#9A84F8" d="M26 24.427c0 .382-.129.573-.387.573h-4.166c-.121 0-.23-.077-.324-.232a.901.901 0 0 1-.12-.55c.008-.105.029-.212.063-.32a.902.902 0 0 1 .176-.312c.046-.06.158-.156.336-.292.178-.135.385-.293.62-.474.236-.181.484-.386.746-.613.262-.227.5-.465.717-.712.216-.247.396-.5.54-.756.145-.257.217-.514.217-.771a.782.782 0 0 0-.24-.594c-.159-.151-.371-.227-.637-.227-.296 0-.517.086-.665.257-.148.171-.222.415-.222.732 0 .21-.052.36-.154.45-.103.088-.283.133-.54.133-.312 0-.52-.04-.627-.119-.106-.079-.16-.234-.16-.464 0-.66.206-1.18.616-1.563.41-.382 1.04-.573 1.889-.573.713 0 1.263.175 1.65.524.387.35.58.81.58 1.384 0 .23-.045.463-.136.697a3.79 3.79 0 0 1-.358.692 5.638 5.638 0 0 1-.507.663c-.19.214-.383.417-.58.608-.235.224-.484.443-.746.657-.262.215-.537.424-.825.628h2.857c.258 0 .387.191.387.574Z"/><path fill-rule="nonzero" fill="currentColor" d="M18.076 9.392c.205-.337.418-.528.638-.572.22-.044.44.007.66.154.41.279.455.667.132 1.166l-4.136 5.896 4.884 6.952c.103.205.165.4.187.583.022.183-.092.363-.341.539-.499.337-.91.257-1.232-.242l-4.488-6.402-4.488 6.402c-.176.25-.37.392-.583.429-.213.037-.422-.026-.627-.187a.68.68 0 0 1-.297-.572.946.946 0 0 1 .231-.66l4.774-6.82-4.136-5.918a.84.84 0 0 1-.176-.605.683.683 0 0 1 .33-.561c.22-.147.418-.216.594-.209.176.007.367.15.572.429l3.828 5.456 3.674-5.258Z"/></g></svg>';
-  e.header[1] = '<svg xmlns="http://www.w3.org/2000/svg" height="1em" width="1em" viewBox="0 0 32 32"><g fill-rule="evenodd" fill="none"><path fill-rule="nonzero" fill="currentColor" d="M18 9.656c0-.264.062-.473.187-.627.125-.154.348-.231.671-.231.293 0 .513.08.66.242a.88.88 0 0 1 .22.616v13.772c0 .25-.07.455-.209.616-.14.161-.356.25-.649.264-.293 0-.513-.084-.66-.253a.922.922 0 0 1-.22-.627v-6.336H9.948v6.336c0 .25-.07.455-.209.616-.14.161-.356.25-.649.264-.293 0-.513-.084-.66-.253a.922.922 0 0 1-.22-.627V9.656a.88.88 0 0 1 .22-.616c.147-.161.367-.242.66-.242.293 0 .51.08.649.242.14.161.209.367.209.616v5.94H18v-5.94zm5.982 13.719c0 .312-.252.468-.756.468s-.756-.156-.756-.468v-5.749h-.588c-.152 0-.256-.048-.312-.144-.056-.096-.084-.296-.084-.6 0-.288.038-.488.114-.6.076-.112.194-.168.354-.168h1.2c.552 0 .828.208.828.624v6.637z"/></g></svg>';
-  e.header[2] = '<svg xmlns="http://www.w3.org/2000/svg" height="1em" width="1em" viewBox="0 0 32 32"><g fill-rule="evenodd" fill="none"><path fill-rule="nonzero" fill="currentColor" d="M18 9.656c0-.264.062-.473.187-.627.125-.154.348-.231.671-.231.293 0 .513.08.66.242a.88.88 0 0 1 .22.616v13.772c0 .25-.07.455-.209.616-.14.161-.356.25-.649.264-.293 0-.513-.084-.66-.253a.922.922 0 0 1-.22-.627v-6.336H9.948v6.336c0 .25-.07.455-.209.616-.14.161-.356.25-.649.264-.293 0-.513-.084-.66-.253a.922.922 0 0 1-.22-.627V9.656a.88.88 0 0 1 .22-.616c.147-.161.367-.242.66-.242.293 0 .51.08.649.242.14.161.209.367.209.616v5.94H18v-5.94zm8.138 13.77c0 .383-.129.574-.387.574h-4.166c-.121 0-.23-.077-.324-.232a.901.901 0 0 1-.12-.55c.008-.105.029-.212.063-.32a.902.902 0 0 1 .176-.312c.046-.06.158-.156.336-.292.178-.135.385-.293.62-.474.236-.181.484-.386.746-.613.262-.227.5-.465.717-.712.216-.247.396-.5.54-.756.145-.257.217-.514.217-.771a.782.782 0 0 0-.24-.594c-.159-.151-.371-.227-.637-.227-.296 0-.517.086-.665.257-.148.171-.222.415-.222.732 0 .21-.052.36-.154.45-.103.088-.283.133-.54.133-.312 0-.52-.04-.627-.119-.106-.079-.16-.234-.16-.464 0-.66.206-1.18.616-1.563.41-.382 1.04-.573 1.889-.573.713 0 1.263.175 1.65.524.387.35.58.81.58 1.384 0 .23-.045.463-.136.697a3.79 3.79 0 0 1-.358.692 5.638 5.638 0 0 1-.507.663c-.19.214-.383.417-.58.608a14.629 14.629 0 0 1-1.571 1.285h2.857c.258 0 .387.191.387.574z"/></g></svg>';
-  e.blockquote = '<svg xmlns="http://www.w3.org/2000/svg" height="1em" width="1em" viewBox="0 0 32 32"><g fill-rule="evenodd" fill="none"><path fill-rule="nonzero" fill="currentColor" d="M13.86 11.2a.8.8 0 1 1 0 1.6c-1.04 0-2.043.578-2.826 1.635a6.57 6.57 0 0 0-.889 1.688A3 3 0 1 1 8.082 18.3c.12-1.83.71-3.528 1.666-4.818 1.068-1.44 2.528-2.282 4.112-2.282zm8.99 0a.8.8 0 1 1 0 1.6c-1.04 0-2.043.578-2.826 1.635a6.572 6.572 0 0 0-.89 1.692 3 3 0 1 1-2.065 2.232c.111-1.853.702-3.573 1.67-4.877 1.067-1.44 2.527-2.282 4.11-2.282z"/></g></svg>';
-  e.list.ordered = '<svg xmlns="http://www.w3.org/2000/svg" height="1em" width="1em" viewBox="0 0 32 32"><g fill-rule="evenodd" fill="none"><path fill-rule="nonzero" fill="currentColor" d="M8.81 7c.35 0 .525.121.525.363v3.025h1.007c.267 0 .401.147.401.44 0 .294-.137.44-.4.44H7.31c-.198 0-.297-.146-.297-.44 0-.293.1-.44.297-.44h1.065l.001-2.508h-.373c-.096 0-.162-.028-.198-.084-.035-.056-.053-.172-.053-.349 0-.168.024-.284.072-.35.049-.064.123-.097.225-.097h.76zm3.974 1h11.715a.8.8 0 1 1 0 1.6H12.784a.8.8 0 1 1 0-1.6zm0 7.2h11.715a.8.8 0 1 1 0 1.6H12.784a.8.8 0 1 1 0-1.6zm0 7.2h11.715a.8.8 0 1 1 0 1.6H12.784a.8.8 0 1 1 0-1.6zm-2.442-4.666c0 .263-.086.394-.258.394H7.299c-.081 0-.154-.053-.217-.16a.634.634 0 0 1-.08-.377.993.993 0 0 1 .042-.22.625.625 0 0 1 .118-.215 1.4 1.4 0 0 1 .224-.2l.415-.326c.157-.125.219-.125.373-.233a2.92 2.92 0 0 0 .52-.442c.144-.17.264-.343.36-.52a1.09 1.09 0 0 0 .145-.53.545.545 0 0 0-.16-.408.583.583 0 0 0-.426-.156c-.197 0-.346.059-.445.177-.099.117-.148.285-.148.503 0 .145-.034.248-.103.309-.068.061-.189.092-.361.092-.208 0-.348-.028-.419-.082-.07-.054-.106-.16-.106-.32 0-.452.137-.81.41-1.073.275-.263.696-.394 1.264-.394.476 0 .844.12 1.103.36s.388.557.388.951c0 .159-.03.319-.091.48-.061.16-.141.319-.24.475-.099.157-.185.294-.312.441-.127.148-.242.237-.354.33-.111.094-.33.219-.506.366-.175.147-.326.243-.52.384h1.91c.173 0 .26.131.26.394zm-1.161 5.189c.152.009.303.038.453.09.15.05.282.12.4.21.116.089.21.198.284.328.074.13.11.277.11.443 0 .204-.042.387-.129.55a1.245 1.245 0 0 1-.357.418 1.672 1.672 0 0 1-.548.265 2.513 2.513 0 0 1-.7.092c-.294 0-.547-.041-.757-.124a1.689 1.689 0 0 1-.517-.306 1.167 1.167 0 0 1-.293-.385.822.822 0 0 1-.084-.37.328.328 0 0 1 .137-.261.498.498 0 0 1 .304-.096c.046 0 .094.005.145.016.05.01.099.029.144.054a.407.407 0 0 1 .118.099c.033.04.052.092.057.156a.558.558 0 0 0 .19.341.758.758 0 0 0 .24.134c.1.036.22.054.362.054a.83.83 0 0 0 .544-.198.625.625 0 0 0 .216-.471.492.492 0 0 0-.083-.287.646.646 0 0 0-.22-.198 1.067 1.067 0 0 0-.309-.111 1.76 1.76 0 0 0-.354-.035.542.542 0 0 1-.32-.102c-.096-.068-.144-.17-.144-.306 0-.106.04-.193.122-.261a.47.47 0 0 1 .312-.102.821.821 0 0 0 .506-.188.684.684 0 0 0 .163-.198.505.505 0 0 0-.118-.625.592.592 0 0 0-.4-.155.594.594 0 0 0-.433.156.51.51 0 0 0-.16.379c0 .085-.039.158-.117.22-.08.061-.2.092-.362.092a.383.383 0 0 1-.27-.102.347.347 0 0 1-.11-.267c0-.17.038-.324.114-.463a1.11 1.11 0 0 1 .316-.356c.134-.1.29-.177.467-.23a1.99 1.99 0 0 1 .571-.08c.198 0 .386.022.563.064.178.043.335.109.472.198a.98.98 0 0 1 .323.34.969.969 0 0 1 .118.488c0 .149-.026.28-.08.395a1.108 1.108 0 0 1-.209.306 1.22 1.22 0 0 1-.308.23c-.12.063-.242.117-.37.159z"/></g></svg>';
-  e.list.bullet = '<svg xmlns="http://www.w3.org/2000/svg" height="1em" width="1em" viewBox="0 0 32 32"><g fill-rule="evenodd" fill="none"><path fill-rule="nonzero" fill="currentColor" d="M10.8 8h13.617a.8.8 0 1 1 0 1.6H10.8a.8.8 0 1 1 0-1.6zM7.998 8c.55 0 .997.447.997.998v.004a.998.998 0 0 1-1.995 0v-.004C7 8.447 7.447 8 7.998 8zm2.802 7.2h13.617a.8.8 0 1 1 0 1.6H10.8a.8.8 0 1 1 0-1.6zm-2.805-.191c.55 0 .998.446.998.997v.005a.998.998 0 0 1-1.996 0v-.005c0-.55.447-.997.998-.997zM10.8 22.4h13.617a.8.8 0 1 1 0 1.6H10.8a.8.8 0 1 1 0-1.6zm-2.802-.394c.55 0 .997.446.997.997v.005a.998.998 0 1 1-1.995 0v-.005c0-.55.447-.997.998-.997z"/></g></svg>';
-  e.indent["+1"] = '<svg xmlns="http://www.w3.org/2000/svg" height="1em" width="1em" viewBox="0 0 32 32"><g fill-rule="evenodd" fill="none"><path fill-rule="nonzero" fill="currentColor" d="M7.8 8h17.128a.8.8 0 1 1 0 1.6H7.8a.8.8 0 1 1 0-1.6zm6.728 7.2h10.4a.8.8 0 1 1 0 1.6h-10.4a.8.8 0 1 1 0-1.6zM7.8 22.4h17.128a.8.8 0 1 1 0 1.6H7.8a.8.8 0 1 1 0-1.6zm3.296-6.876l-2.29-2.121a.95.95 0 0 0-1.596.696v3.891a.95.95 0 0 0 1.53.752l2.291-1.769a.95.95 0 0 0 .065-1.449z"/></g></svg>';
-  e.indent[-1] = '<svg xmlns="http://www.w3.org/2000/svg" height="1em" width="1em" viewBox="0 0 32 32"><g fill-rule="evenodd" fill="none"><path fill-rule="nonzero" fill="currentColor" d="M7.8 8h17.128a.8.8 0 1 1 0 1.6H7.8a.8.8 0 1 1 0-1.6zm6.728 7.2h10.4a.8.8 0 1 1 0 1.6h-10.4a.8.8 0 1 1 0-1.6zM7.8 22.4h17.128a.8.8 0 1 1 0 1.6H7.8a.8.8 0 1 1 0-1.6zm-.207-6.876l2.29-2.121a.95.95 0 0 1 1.597.696v3.891a.95.95 0 0 1-1.531.752l-2.29-1.769a.95.95 0 0 1-.066-1.449z"/></g></svg>';
-  e.align[""] = '<svg xmlns="http://www.w3.org/2000/svg" height="1em" width="1em" viewBox="0 0 32 32"><g fill-rule="evenodd" fill="none"><path fill-rule="nonzero" fill="currentColor" d="M6.8 15.2h17.422a.8.8 0 1 1 0 1.6H6.8a.8.8 0 1 1 0-1.6zm0-7.2h7.91a.8.8 0 1 1 0 1.6H6.8a.8.8 0 1 1 0-1.6zm0 14.4h14.348a.8.8 0 1 1 0 1.6H6.8a.8.8 0 1 1 0-1.6z"/></g></svg>';
-  e.align.center = '<svg xmlns="http://www.w3.org/2000/svg" height="1em" width="1em" viewBox="0 0 32 32"><g fill-rule="evenodd" fill="none"><path fill-rule="nonzero" fill="currentColor" d="M6.8 15h17.422a.8.8 0 1 1 0 1.6H6.8a.8.8 0 1 1 0-1.6zm5-7h7.91a.8.8 0 1 1 0 1.6H11.8a.8.8 0 1 1 0-1.6zm-3 14h14.348a.8.8 0 1 1 0 1.6H8.8a.8.8 0 1 1 0-1.6z"/></g></svg>';
-  e.align.right = '<svg xmlns="http://www.w3.org/2000/svg" height="1em" width="1em" viewBox="0 0 32 32"><g fill-rule="evenodd" fill="none"><path fill-rule="nonzero" fill="currentColor" d="M6.8 15h17.422a.8.8 0 1 1 0 1.6H6.8a.8.8 0 1 1 0-1.6zm10-7h7.91a.8.8 0 1 1 0 1.6H16.8a.8.8 0 1 1 0-1.6zm-7 14h14.348a.8.8 0 1 1 0 1.6H9.8a.8.8 0 1 1 0-1.6z"/></g></svg>';
-  e.align.justify = '<svg xmlns="http://www.w3.org/2000/svg" height="1em" width="1em" viewBox="0 0 32 32"><g fill-rule="evenodd" fill="none"><path fill-rule="nonzero" fill="currentColor" d="M6.8 15h17.422a.8.8 0 1 1 0 1.6H6.8a.8.8 0 1 1 0-1.6zm0 7h17.422a.8.8 0 1 1 0 1.6H6.8a.8.8 0 1 1 0-1.6zm0-14h17.422a.8.8 0 1 1 0 1.6H6.8a.8.8 0 1 1 0-1.6z"/></g></svg>';
-  e.link = '<svg xmlns="http://www.w3.org/2000/svg" height="1em" width="1em" viewBox="0 0 32 32"><g fill-rule="evenodd" fill="none"><path fill-rule="nonzero" fill="currentColor" d="M17.438 13.934a4.467 4.467 0 0 1 .145 6.164l-.145.153-2.883 2.882a4.467 4.467 0 0 1-6.462-6.164l.145-.152 1.52-1.52a.8.8 0 0 1 1.198 1.056l-.067.075-1.52 1.52a2.867 2.867 0 0 0 3.932 4.17l.123-.116 2.883-2.883a2.867 2.867 0 0 0 0-4.054.8.8 0 1 1 1.131-1.131zm5.657-5.657a4.467 4.467 0 0 1 .145 6.165l-.145.152-1.52 1.52a.8.8 0 0 1-1.198-1.057l.067-.075 1.52-1.52a2.867 2.867 0 0 0-3.932-4.17l-.123.116-2.882 2.883a2.867 2.867 0 0 0 0 4.054.8.8 0 1 1-1.132 1.132 4.467 4.467 0 0 1-.145-6.165l.145-.152 2.883-2.883a4.467 4.467 0 0 1 6.317 0z"/></g></svg>';
-  e.clean = '<svg xmlns="http://www.w3.org/2000/svg" height="1em" width="1em" viewBox="0 0 32 32"><g fill-rule="evenodd" fill="none"><path fill-rule="nonzero" fill="currentColor" d="M18.358 7a1 1 0 0 1 1 1v3h6a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1h-.243l1.248 5.774c.209.964-.386 1.924-1.342 2.142a1.73 1.73 0 0 1-.258.04l-.131.004H8.577c-.984 0-1.772-.81-1.772-1.8 0-.086.006-.172.018-.258l.023-.128 1.255-5.807A1 1 0 0 1 7.358 16v-4a1 1 0 0 1 1-1h6V8a1 1 0 0 1 1-1h3zm5.12 10H9.73l-1.32 6.112a.227.227 0 0 0-.005.048c0 .093.053.165.12.19l.052.01h4.05l.735-3.473a.8.8 0 0 1 .84-.633l.108.015a.8.8 0 0 1 .633.84l-.015.108-.665 3.143h4.765l-.655-3.099-.015-.107a.8.8 0 0 1 .633-.84l.107-.016a.8.8 0 0 1 .84.632l.726 3.43h3.968a.147.147 0 0 0 .033-.003c.077-.018.136-.096.14-.188l-.005-.057L23.478 17zm-5.72-8.4h-1.8v4h-7v2.8h15.8v-2.8h-7v-4z"/></g></svg>';
+  e.bold = "<svg xmlns=\"http://www.w3.org/2000/svg\" height=\"1em\" width=\"1em\" viewBox=\"0 0 32 32\"><g fill-rule=\"evenodd\" fill=\"none\"><path fill-rule=\"nonzero\" fill=\"currentColor\" d=\"M18.159 15.341c.469.087.933.233 1.393.44.46.206.87.494 1.23.865.36.37.653.835.88 1.394.225.56.338 1.227.338 2.002 0 1.566-.46 2.784-1.38 3.654-.921.87-2.269 1.304-4.043 1.304h-5.221c-.452 0-.791-.12-1.017-.362-.226-.24-.339-.507-.339-.8V8.162c0-.293.117-.56.351-.8.235-.241.57-.362 1.005-.362h4.569c1.037 0 1.908.125 2.61.374.703.25 1.268.577 1.695.982.427.404.728.874.904 1.407.176.534.263 1.085.263 1.653 0 .603-.083 1.128-.25 1.575a3.502 3.502 0 0 1-.69 1.15 3.56 3.56 0 0 1-1.03.774c-.394.198-.816.34-1.268.426zm-4.895-1.42h2.585c.854 0 1.452-.194 1.795-.581.343-.387.515-.874.515-1.46 0-.257-.042-.503-.126-.735a1.756 1.756 0 0 0-.401-.633 1.95 1.95 0 0 0-.716-.452c-.293-.112-.648-.168-1.067-.168h-2.585v4.03zm0 8.187h2.46c.954 0 1.703-.198 2.247-.594.544-.396.807-1.033.79-1.911 0-.534-.075-.969-.225-1.305a1.866 1.866 0 0 0-.666-.8 2.786 2.786 0 0 0-1.08-.413 8.289 8.289 0 0 0-1.468-.117h-2.058v5.14z\"/></g></svg>";
+  e.italic = "<svg xmlns=\"http://www.w3.org/2000/svg\" height=\"1em\" width=\"1em\" viewBox=\"0 0 32 32\"><g fill-rule=\"evenodd\" fill=\"none\"><path fill-rule=\"nonzero\" fill=\"currentColor\" d=\"M21.97 7.668a1 1 0 0 1 .117 1.993l-.116.007h-3.904l-2.505 12.664h3.943a1 1 0 0 1 .117 1.993l-.117.007H9.852a1 1 0 0 1-.117-1.993l.117-.007h3.67l2.506-12.664h-3.711a1 1 0 0 1-.117-1.993l.117-.007h9.654z\"/></g></svg>";
+  e.underline = "<svg xmlns=\"http://www.w3.org/2000/svg\" height=\"1em\" width=\"1em\" viewBox=\"0 0 32 32\"><g fill-rule=\"evenodd\" fill=\"none\"><path fill-rule=\"nonzero\" fill=\"currentColor\" d=\"M25 23v1.838H8V23h17zM10 8.656c0-.25.079-.455.236-.616.157-.161.4-.242.732-.242.33 0 .578.08.744.242a.824.824 0 0 1 .248.616v6.118c0 .748.058 1.434.174 2.057.115.623.343 1.155.682 1.595.339.44.806.781 1.402 1.023.595.242 1.372.363 2.332.363 1.554 0 2.696-.352 3.423-1.056.728-.704 1.092-1.701 1.092-2.992V8.656a.87.87 0 0 1 .223-.616c.149-.161.397-.242.744-.242.331 0 .575.08.732.242a.846.846 0 0 1 .236.616v7.658c0 .792-.165 1.503-.496 2.134a4.795 4.795 0 0 1-1.365 1.606c-.579.44-1.265.777-2.059 1.012a8.975 8.975 0 0 1-2.555.352c-.91 0-1.762-.117-2.556-.352-.793-.235-1.484-.572-2.071-1.012a4.87 4.87 0 0 1-1.39-1.606c-.338-.63-.508-1.342-.508-2.134V8.656z\"/></g></svg>";
+  e.strike = "<svg xmlns=\"http://www.w3.org/2000/svg\" height=\"1em\" width=\"1em\" viewBox=\"0 0 32 32\"><g fill-rule=\"evenodd\" fill=\"none\"><path fill-rule=\"nonzero\" fill=\"currentColor\" d=\"M23 19.82c0 .737-.177 1.42-.531 2.048a5.08 5.08 0 0 1-1.495 1.634c-.642.46-1.412.821-2.309 1.08-.896.26-1.876.399-2.939.416a11.575 11.575 0 0 1-2.475-.214 14.557 14.557 0 0 1-2.175-.59c-.952-.37-1.572-.755-1.86-1.157-.288-.402-.288-.754 0-1.056a1.1 1.1 0 0 1 .847-.327c.32.017.67.118 1.046.302.664.335 1.39.624 2.176.867a8.68 8.68 0 0 0 2.574.365c.576 0 1.135-.084 1.677-.252a5.403 5.403 0 0 0 1.445-.678c.42-.285.758-.629 1.013-1.03a2.4 2.4 0 0 0 .382-1.308c0-.47-.122-.892-.365-1.27a3.497 3.497 0 0 0-.202-.28h2.957c.156.43.234.913.234 1.45zm3-3.677v1.8H7v-1.8h19zM16.29 7c.842 0 1.661.088 2.459.264.797.176 1.478.394 2.042.653.565.26.969.553 1.213.88.243.327.243.65 0 .968-.2.251-.499.373-.897.364a2.324 2.324 0 0 1-1.096-.289 13.543 13.543 0 0 0-1.661-.716 5.56 5.56 0 0 0-2.06-.34c-1.129 0-2.031.244-2.706.73-.676.486-1.013 1.106-1.013 1.86 0 .469.144.871.431 1.206.288.335.665.629 1.13.88.465.251 1.002.486 1.61.704.61.218 1.235.436 1.877.653.842.285 1.595.579 2.259.88l.016.008h-5.68a34.805 34.805 0 0 1-.514-.184 9.952 9.952 0 0 1-2.01-.98c-.564-.369-1.002-.809-1.312-1.32-.31-.51-.465-1.135-.465-1.872 0-.67.178-1.278.532-1.823a4.66 4.66 0 0 1 1.411-1.382 6.791 6.791 0 0 1 2.027-.855A9.81 9.81 0 0 1 16.29 7z\"/></g></svg>";
+  e.color = "<svg xmlns=\"http://www.w3.org/2000/svg\" height=\"1em\" width=\"1em\" viewBox=\"0 0 33 32\"><g fill-rule=\"evenodd\" fill=\"none\"><path fill-rule=\"nonzero\" fill=\"currentColor\" d=\"M13.937 17.33l-.902 2.53a26.25 26.25 0 0 1-.22.594c-.073.19-.158.367-.253.528-.095.161-.205.29-.33.385a.687.687 0 0 1-.429.143c-.293 0-.52-.092-.682-.275-.161-.183-.161-.524 0-1.023l4.62-13.442c.073-.235.202-.422.385-.561.183-.14.422-.209.715-.209.308 0 .557.07.748.209.19.14.323.326.396.561l4.642 13.486c.117.352.125.649.022.891-.103.242-.345.363-.726.363-.25.015-.451-.055-.605-.209a1.392 1.392 0 0 1-.341-.605l-1.21-3.366h-5.83zm5.434-1.54l-2.508-7.546-2.508 7.546h5.016z\"/></g></svg>";
+  e.background = "<svg xmlns=\"http://www.w3.org/2000/svg\" height=\"1em\" width=\"1em\" viewBox=\"0 0 32 32\"><g fill-rule=\"evenodd\" fill=\"none\"><path fill-rule=\"nonzero\" fill=\"currentColor\" d=\"M22.357 7.252a2.8 2.8 0 0 1 1.025 3.825l-3.586 6.21a.8.8 0 0 1-.21.24l-2.208 1.664a2.798 2.798 0 0 1-1.736.565l-.577 1.017H11.16l1.475-2.63a2.8 2.8 0 0 1-.53-1.771l.138-3.02a.8.8 0 0 1 .106-.364l3.586-6.21a2.8 2.8 0 0 1 3.825-1.026zm-4.7 9.724l-3.877-2.238-.078 1.707a1.2 1.2 0 0 0 .386.937l.101.084.112.073.79.456a1.2 1.2 0 0 0 1.323-.08l1.244-.939zm3.9-8.338l-2.598-1.5a1.2 1.2 0 0 0-1.64.44l-3.21 5.56c.06.01.117.026.174.05l.09.045 4.438 2.562 3.185-5.518a1.2 1.2 0 0 0-.242-1.497l-.094-.075-.103-.067z\"/></g></svg>";
+  e.script.super = "<svg xmlns=\"http://www.w3.org/2000/svg\" height=\"1em\" width=\"1em\" viewBox=\"0 0 32 32\"><g fill-rule=\"evenodd\" fill=\"none\"><path fill-rule=\"nonzero\" fill=\"#9A84F8\" d=\"M26 13.427c0 .382-.129.573-.387.573h-4.166c-.121 0-.23-.077-.324-.232a.901.901 0 0 1-.12-.55c.008-.105.029-.212.063-.32a.902.902 0 0 1 .176-.312c.046-.06.158-.156.336-.292.178-.135.385-.293.62-.474.236-.181.484-.386.746-.613.262-.227.5-.465.717-.712.216-.247.396-.5.54-.756.145-.257.217-.514.217-.771a.782.782 0 0 0-.24-.594c-.159-.151-.371-.227-.637-.227-.296 0-.517.086-.665.257-.148.171-.222.415-.222.732 0 .21-.052.36-.154.45-.103.088-.283.133-.54.133-.312 0-.52-.04-.627-.119-.106-.079-.16-.234-.16-.464 0-.66.206-1.18.616-1.563.41-.382 1.04-.573 1.889-.573.713 0 1.263.175 1.65.524.387.35.58.81.58 1.384 0 .23-.045.463-.136.697a3.79 3.79 0 0 1-.358.692 5.638 5.638 0 0 1-.507.663c-.19.214-.383.417-.58.608a14.629 14.629 0 0 1-1.571 1.285h2.857c.258 0 .387.191.387.574z\"/><path fill-rule=\"nonzero\" fill=\"currentColor\" d=\"M18.076 9.392c.205-.337.418-.528.638-.572.22-.044.44.007.66.154.41.279.455.667.132 1.166l-4.136 5.896 4.884 6.952c.103.205.165.4.187.583.022.183-.092.363-.341.539-.499.337-.91.257-1.232-.242l-4.488-6.402-4.488 6.402c-.176.25-.37.392-.583.429-.213.037-.422-.026-.627-.187a.68.68 0 0 1-.297-.572.946.946 0 0 1 .231-.66l4.774-6.82-4.136-5.918a.84.84 0 0 1-.176-.605.683.683 0 0 1 .33-.561c.22-.147.418-.216.594-.209.176.007.367.15.572.429l3.828 5.456 3.674-5.258z\"/></g></svg>";
+  e.script.sub = "<svg xmlns=\"http://www.w3.org/2000/svg\" height=\"1em\" width=\"1em\" viewBox=\"0 0 32 32\"><g fill-rule=\"evenodd\" fill=\"none\"><path fill-rule=\"nonzero\" fill=\"#9A84F8\" d=\"M26 24.427c0 .382-.129.573-.387.573h-4.166c-.121 0-.23-.077-.324-.232a.901.901 0 0 1-.12-.55c.008-.105.029-.212.063-.32a.902.902 0 0 1 .176-.312c.046-.06.158-.156.336-.292.178-.135.385-.293.62-.474.236-.181.484-.386.746-.613.262-.227.5-.465.717-.712.216-.247.396-.5.54-.756.145-.257.217-.514.217-.771a.782.782 0 0 0-.24-.594c-.159-.151-.371-.227-.637-.227-.296 0-.517.086-.665.257-.148.171-.222.415-.222.732 0 .21-.052.36-.154.45-.103.088-.283.133-.54.133-.312 0-.52-.04-.627-.119-.106-.079-.16-.234-.16-.464 0-.66.206-1.18.616-1.563.41-.382 1.04-.573 1.889-.573.713 0 1.263.175 1.65.524.387.35.58.81.58 1.384 0 .23-.045.463-.136.697a3.79 3.79 0 0 1-.358.692 5.638 5.638 0 0 1-.507.663c-.19.214-.383.417-.58.608-.235.224-.484.443-.746.657-.262.215-.537.424-.825.628h2.857c.258 0 .387.191.387.574Z\"/><path fill-rule=\"nonzero\" fill=\"currentColor\" d=\"M18.076 9.392c.205-.337.418-.528.638-.572.22-.044.44.007.66.154.41.279.455.667.132 1.166l-4.136 5.896 4.884 6.952c.103.205.165.4.187.583.022.183-.092.363-.341.539-.499.337-.91.257-1.232-.242l-4.488-6.402-4.488 6.402c-.176.25-.37.392-.583.429-.213.037-.422-.026-.627-.187a.68.68 0 0 1-.297-.572.946.946 0 0 1 .231-.66l4.774-6.82-4.136-5.918a.84.84 0 0 1-.176-.605.683.683 0 0 1 .33-.561c.22-.147.418-.216.594-.209.176.007.367.15.572.429l3.828 5.456 3.674-5.258Z\"/></g></svg>";
+  e.header[1] = "<svg xmlns=\"http://www.w3.org/2000/svg\" height=\"1em\" width=\"1em\" viewBox=\"0 0 32 32\"><g fill-rule=\"evenodd\" fill=\"none\"><path fill-rule=\"nonzero\" fill=\"currentColor\" d=\"M18 9.656c0-.264.062-.473.187-.627.125-.154.348-.231.671-.231.293 0 .513.08.66.242a.88.88 0 0 1 .22.616v13.772c0 .25-.07.455-.209.616-.14.161-.356.25-.649.264-.293 0-.513-.084-.66-.253a.922.922 0 0 1-.22-.627v-6.336H9.948v6.336c0 .25-.07.455-.209.616-.14.161-.356.25-.649.264-.293 0-.513-.084-.66-.253a.922.922 0 0 1-.22-.627V9.656a.88.88 0 0 1 .22-.616c.147-.161.367-.242.66-.242.293 0 .51.08.649.242.14.161.209.367.209.616v5.94H18v-5.94zm5.982 13.719c0 .312-.252.468-.756.468s-.756-.156-.756-.468v-5.749h-.588c-.152 0-.256-.048-.312-.144-.056-.096-.084-.296-.084-.6 0-.288.038-.488.114-.6.076-.112.194-.168.354-.168h1.2c.552 0 .828.208.828.624v6.637z\"/></g></svg>";
+  e.header[2] = "<svg xmlns=\"http://www.w3.org/2000/svg\" height=\"1em\" width=\"1em\" viewBox=\"0 0 32 32\"><g fill-rule=\"evenodd\" fill=\"none\"><path fill-rule=\"nonzero\" fill=\"currentColor\" d=\"M18 9.656c0-.264.062-.473.187-.627.125-.154.348-.231.671-.231.293 0 .513.08.66.242a.88.88 0 0 1 .22.616v13.772c0 .25-.07.455-.209.616-.14.161-.356.25-.649.264-.293 0-.513-.084-.66-.253a.922.922 0 0 1-.22-.627v-6.336H9.948v6.336c0 .25-.07.455-.209.616-.14.161-.356.25-.649.264-.293 0-.513-.084-.66-.253a.922.922 0 0 1-.22-.627V9.656a.88.88 0 0 1 .22-.616c.147-.161.367-.242.66-.242.293 0 .51.08.649.242.14.161.209.367.209.616v5.94H18v-5.94zm8.138 13.77c0 .383-.129.574-.387.574h-4.166c-.121 0-.23-.077-.324-.232a.901.901 0 0 1-.12-.55c.008-.105.029-.212.063-.32a.902.902 0 0 1 .176-.312c.046-.06.158-.156.336-.292.178-.135.385-.293.62-.474.236-.181.484-.386.746-.613.262-.227.5-.465.717-.712.216-.247.396-.5.54-.756.145-.257.217-.514.217-.771a.782.782 0 0 0-.24-.594c-.159-.151-.371-.227-.637-.227-.296 0-.517.086-.665.257-.148.171-.222.415-.222.732 0 .21-.052.36-.154.45-.103.088-.283.133-.54.133-.312 0-.52-.04-.627-.119-.106-.079-.16-.234-.16-.464 0-.66.206-1.18.616-1.563.41-.382 1.04-.573 1.889-.573.713 0 1.263.175 1.65.524.387.35.58.81.58 1.384 0 .23-.045.463-.136.697a3.79 3.79 0 0 1-.358.692 5.638 5.638 0 0 1-.507.663c-.19.214-.383.417-.58.608a14.629 14.629 0 0 1-1.571 1.285h2.857c.258 0 .387.191.387.574z\"/></g></svg>";
+  e.blockquote = "<svg xmlns=\"http://www.w3.org/2000/svg\" height=\"1em\" width=\"1em\" viewBox=\"0 0 32 32\"><g fill-rule=\"evenodd\" fill=\"none\"><path fill-rule=\"nonzero\" fill=\"currentColor\" d=\"M13.86 11.2a.8.8 0 1 1 0 1.6c-1.04 0-2.043.578-2.826 1.635a6.57 6.57 0 0 0-.889 1.688A3 3 0 1 1 8.082 18.3c.12-1.83.71-3.528 1.666-4.818 1.068-1.44 2.528-2.282 4.112-2.282zm8.99 0a.8.8 0 1 1 0 1.6c-1.04 0-2.043.578-2.826 1.635a6.572 6.572 0 0 0-.89 1.692 3 3 0 1 1-2.065 2.232c.111-1.853.702-3.573 1.67-4.877 1.067-1.44 2.527-2.282 4.11-2.282z\"/></g></svg>";
+  e.list.ordered = "<svg xmlns=\"http://www.w3.org/2000/svg\" height=\"1em\" width=\"1em\" viewBox=\"0 0 32 32\"><g fill-rule=\"evenodd\" fill=\"none\"><path fill-rule=\"nonzero\" fill=\"currentColor\" d=\"M8.81 7c.35 0 .525.121.525.363v3.025h1.007c.267 0 .401.147.401.44 0 .294-.137.44-.4.44H7.31c-.198 0-.297-.146-.297-.44 0-.293.1-.44.297-.44h1.065l.001-2.508h-.373c-.096 0-.162-.028-.198-.084-.035-.056-.053-.172-.053-.349 0-.168.024-.284.072-.35.049-.064.123-.097.225-.097h.76zm3.974 1h11.715a.8.8 0 1 1 0 1.6H12.784a.8.8 0 1 1 0-1.6zm0 7.2h11.715a.8.8 0 1 1 0 1.6H12.784a.8.8 0 1 1 0-1.6zm0 7.2h11.715a.8.8 0 1 1 0 1.6H12.784a.8.8 0 1 1 0-1.6zm-2.442-4.666c0 .263-.086.394-.258.394H7.299c-.081 0-.154-.053-.217-.16a.634.634 0 0 1-.08-.377.993.993 0 0 1 .042-.22.625.625 0 0 1 .118-.215 1.4 1.4 0 0 1 .224-.2l.415-.326c.157-.125.219-.125.373-.233a2.92 2.92 0 0 0 .52-.442c.144-.17.264-.343.36-.52a1.09 1.09 0 0 0 .145-.53.545.545 0 0 0-.16-.408.583.583 0 0 0-.426-.156c-.197 0-.346.059-.445.177-.099.117-.148.285-.148.503 0 .145-.034.248-.103.309-.068.061-.189.092-.361.092-.208 0-.348-.028-.419-.082-.07-.054-.106-.16-.106-.32 0-.452.137-.81.41-1.073.275-.263.696-.394 1.264-.394.476 0 .844.12 1.103.36s.388.557.388.951c0 .159-.03.319-.091.48-.061.16-.141.319-.24.475-.099.157-.185.294-.312.441-.127.148-.242.237-.354.33-.111.094-.33.219-.506.366-.175.147-.326.243-.52.384h1.91c.173 0 .26.131.26.394zm-1.161 5.189c.152.009.303.038.453.09.15.05.282.12.4.21.116.089.21.198.284.328.074.13.11.277.11.443 0 .204-.042.387-.129.55a1.245 1.245 0 0 1-.357.418 1.672 1.672 0 0 1-.548.265 2.513 2.513 0 0 1-.7.092c-.294 0-.547-.041-.757-.124a1.689 1.689 0 0 1-.517-.306 1.167 1.167 0 0 1-.293-.385.822.822 0 0 1-.084-.37.328.328 0 0 1 .137-.261.498.498 0 0 1 .304-.096c.046 0 .094.005.145.016.05.01.099.029.144.054a.407.407 0 0 1 .118.099c.033.04.052.092.057.156a.558.558 0 0 0 .19.341.758.758 0 0 0 .24.134c.1.036.22.054.362.054a.83.83 0 0 0 .544-.198.625.625 0 0 0 .216-.471.492.492 0 0 0-.083-.287.646.646 0 0 0-.22-.198 1.067 1.067 0 0 0-.309-.111 1.76 1.76 0 0 0-.354-.035.542.542 0 0 1-.32-.102c-.096-.068-.144-.17-.144-.306 0-.106.04-.193.122-.261a.47.47 0 0 1 .312-.102.821.821 0 0 0 .506-.188.684.684 0 0 0 .163-.198.505.505 0 0 0-.118-.625.592.592 0 0 0-.4-.155.594.594 0 0 0-.433.156.51.51 0 0 0-.16.379c0 .085-.039.158-.117.22-.08.061-.2.092-.362.092a.383.383 0 0 1-.27-.102.347.347 0 0 1-.11-.267c0-.17.038-.324.114-.463a1.11 1.11 0 0 1 .316-.356c.134-.1.29-.177.467-.23a1.99 1.99 0 0 1 .571-.08c.198 0 .386.022.563.064.178.043.335.109.472.198a.98.98 0 0 1 .323.34.969.969 0 0 1 .118.488c0 .149-.026.28-.08.395a1.108 1.108 0 0 1-.209.306 1.22 1.22 0 0 1-.308.23c-.12.063-.242.117-.37.159z\"/></g></svg>";
+  e.list.bullet = "<svg xmlns=\"http://www.w3.org/2000/svg\" height=\"1em\" width=\"1em\" viewBox=\"0 0 32 32\"><g fill-rule=\"evenodd\" fill=\"none\"><path fill-rule=\"nonzero\" fill=\"currentColor\" d=\"M10.8 8h13.617a.8.8 0 1 1 0 1.6H10.8a.8.8 0 1 1 0-1.6zM7.998 8c.55 0 .997.447.997.998v.004a.998.998 0 0 1-1.995 0v-.004C7 8.447 7.447 8 7.998 8zm2.802 7.2h13.617a.8.8 0 1 1 0 1.6H10.8a.8.8 0 1 1 0-1.6zm-2.805-.191c.55 0 .998.446.998.997v.005a.998.998 0 0 1-1.996 0v-.005c0-.55.447-.997.998-.997zM10.8 22.4h13.617a.8.8 0 1 1 0 1.6H10.8a.8.8 0 1 1 0-1.6zm-2.802-.394c.55 0 .997.446.997.997v.005a.998.998 0 1 1-1.995 0v-.005c0-.55.447-.997.998-.997z\"/></g></svg>";
+  e.indent["+1"] = "<svg xmlns=\"http://www.w3.org/2000/svg\" height=\"1em\" width=\"1em\" viewBox=\"0 0 32 32\"><g fill-rule=\"evenodd\" fill=\"none\"><path fill-rule=\"nonzero\" fill=\"currentColor\" d=\"M7.8 8h17.128a.8.8 0 1 1 0 1.6H7.8a.8.8 0 1 1 0-1.6zm6.728 7.2h10.4a.8.8 0 1 1 0 1.6h-10.4a.8.8 0 1 1 0-1.6zM7.8 22.4h17.128a.8.8 0 1 1 0 1.6H7.8a.8.8 0 1 1 0-1.6zm3.296-6.876l-2.29-2.121a.95.95 0 0 0-1.596.696v3.891a.95.95 0 0 0 1.53.752l2.291-1.769a.95.95 0 0 0 .065-1.449z\"/></g></svg>";
+  e.indent[-1] = "<svg xmlns=\"http://www.w3.org/2000/svg\" height=\"1em\" width=\"1em\" viewBox=\"0 0 32 32\"><g fill-rule=\"evenodd\" fill=\"none\"><path fill-rule=\"nonzero\" fill=\"currentColor\" d=\"M7.8 8h17.128a.8.8 0 1 1 0 1.6H7.8a.8.8 0 1 1 0-1.6zm6.728 7.2h10.4a.8.8 0 1 1 0 1.6h-10.4a.8.8 0 1 1 0-1.6zM7.8 22.4h17.128a.8.8 0 1 1 0 1.6H7.8a.8.8 0 1 1 0-1.6zm-.207-6.876l2.29-2.121a.95.95 0 0 1 1.597.696v3.891a.95.95 0 0 1-1.531.752l-2.29-1.769a.95.95 0 0 1-.066-1.449z\"/></g></svg>";
+  e.align[""] = "<svg xmlns=\"http://www.w3.org/2000/svg\" height=\"1em\" width=\"1em\" viewBox=\"0 0 32 32\"><g fill-rule=\"evenodd\" fill=\"none\"><path fill-rule=\"nonzero\" fill=\"currentColor\" d=\"M6.8 15.2h17.422a.8.8 0 1 1 0 1.6H6.8a.8.8 0 1 1 0-1.6zm0-7.2h7.91a.8.8 0 1 1 0 1.6H6.8a.8.8 0 1 1 0-1.6zm0 14.4h14.348a.8.8 0 1 1 0 1.6H6.8a.8.8 0 1 1 0-1.6z\"/></g></svg>";
+  e.align.center = "<svg xmlns=\"http://www.w3.org/2000/svg\" height=\"1em\" width=\"1em\" viewBox=\"0 0 32 32\"><g fill-rule=\"evenodd\" fill=\"none\"><path fill-rule=\"nonzero\" fill=\"currentColor\" d=\"M6.8 15h17.422a.8.8 0 1 1 0 1.6H6.8a.8.8 0 1 1 0-1.6zm5-7h7.91a.8.8 0 1 1 0 1.6H11.8a.8.8 0 1 1 0-1.6zm-3 14h14.348a.8.8 0 1 1 0 1.6H8.8a.8.8 0 1 1 0-1.6z\"/></g></svg>";
+  e.align.right = "<svg xmlns=\"http://www.w3.org/2000/svg\" height=\"1em\" width=\"1em\" viewBox=\"0 0 32 32\"><g fill-rule=\"evenodd\" fill=\"none\"><path fill-rule=\"nonzero\" fill=\"currentColor\" d=\"M6.8 15h17.422a.8.8 0 1 1 0 1.6H6.8a.8.8 0 1 1 0-1.6zm10-7h7.91a.8.8 0 1 1 0 1.6H16.8a.8.8 0 1 1 0-1.6zm-7 14h14.348a.8.8 0 1 1 0 1.6H9.8a.8.8 0 1 1 0-1.6z\"/></g></svg>";
+  e.align.justify = "<svg xmlns=\"http://www.w3.org/2000/svg\" height=\"1em\" width=\"1em\" viewBox=\"0 0 32 32\"><g fill-rule=\"evenodd\" fill=\"none\"><path fill-rule=\"nonzero\" fill=\"currentColor\" d=\"M6.8 15h17.422a.8.8 0 1 1 0 1.6H6.8a.8.8 0 1 1 0-1.6zm0 7h17.422a.8.8 0 1 1 0 1.6H6.8a.8.8 0 1 1 0-1.6zm0-14h17.422a.8.8 0 1 1 0 1.6H6.8a.8.8 0 1 1 0-1.6z\"/></g></svg>";
+  e.link = "<svg xmlns=\"http://www.w3.org/2000/svg\" height=\"1em\" width=\"1em\" viewBox=\"0 0 32 32\"><g fill-rule=\"evenodd\" fill=\"none\"><path fill-rule=\"nonzero\" fill=\"currentColor\" d=\"M17.438 13.934a4.467 4.467 0 0 1 .145 6.164l-.145.153-2.883 2.882a4.467 4.467 0 0 1-6.462-6.164l.145-.152 1.52-1.52a.8.8 0 0 1 1.198 1.056l-.067.075-1.52 1.52a2.867 2.867 0 0 0 3.932 4.17l.123-.116 2.883-2.883a2.867 2.867 0 0 0 0-4.054.8.8 0 1 1 1.131-1.131zm5.657-5.657a4.467 4.467 0 0 1 .145 6.165l-.145.152-1.52 1.52a.8.8 0 0 1-1.198-1.057l.067-.075 1.52-1.52a2.867 2.867 0 0 0-3.932-4.17l-.123.116-2.882 2.883a2.867 2.867 0 0 0 0 4.054.8.8 0 1 1-1.132 1.132 4.467 4.467 0 0 1-.145-6.165l.145-.152 2.883-2.883a4.467 4.467 0 0 1 6.317 0z\"/></g></svg>";
+  e.clean = "<svg xmlns=\"http://www.w3.org/2000/svg\" height=\"1em\" width=\"1em\" viewBox=\"0 0 32 32\"><g fill-rule=\"evenodd\" fill=\"none\"><path fill-rule=\"nonzero\" fill=\"currentColor\" d=\"M18.358 7a1 1 0 0 1 1 1v3h6a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1h-.243l1.248 5.774c.209.964-.386 1.924-1.342 2.142a1.73 1.73 0 0 1-.258.04l-.131.004H8.577c-.984 0-1.772-.81-1.772-1.8 0-.086.006-.172.018-.258l.023-.128 1.255-5.807A1 1 0 0 1 7.358 16v-4a1 1 0 0 1 1-1h6V8a1 1 0 0 1 1-1h3zm5.12 10H9.73l-1.32 6.112a.227.227 0 0 0-.005.048c0 .093.053.165.12.19l.052.01h4.05l.735-3.473a.8.8 0 0 1 .84-.633l.108.015a.8.8 0 0 1 .633.84l-.015.108-.665 3.143h4.765l-.655-3.099-.015-.107a.8.8 0 0 1 .633-.84l.107-.016a.8.8 0 0 1 .84.632l.726 3.43h3.968a.147.147 0 0 0 .033-.003c.077-.018.136-.096.14-.188l-.005-.057L23.478 17zm-5.72-8.4h-1.8v4h-7v2.8h15.8v-2.8h-7v-4z\"/></g></svg>";
   zF.a.register(e, !0);
 })();
 var tG = require("./699");
@@ -81906,10 +81906,10 @@ var oG = Object(f.memo)(function () {
       (function (e, t) {
         var n;
         var r;
-        if (!(null === (n = t.querySelector('.ql-font .ql-picker-options [data-value="sans-serif"]')) || void 0 === n)) {
+        if (!(null === (n = t.querySelector(".ql-font .ql-picker-options [data-value=\"sans-serif\"]")) || void 0 === n)) {
           n.click();
         }
-        if (!(null === (r = t.querySelector('.ql-size .ql-picker-options [data-value="'.concat(XF[3], '"]'))) || void 0 === r)) {
+        if (!(null === (r = t.querySelector(".ql-size .ql-picker-options [data-value=\"".concat(XF[3], "\"]"))) || void 0 === r)) {
           r.click();
         }
         ZF(t, "color", "#000");
@@ -82963,7 +82963,7 @@ var wG = Object(f.memo)(function () {
                 break;
               }
               e(Object(Y.mj)({
-                message: "\u672a\u83b7\u53d6\u5230\u6559\u7a0b\u4fe1\u606f"
+                message: "未获取到教程信息"
               }));
               return t.abrupt("return");
             case 5:
@@ -83500,18 +83500,18 @@ var DG = Object(f.memo)(function () {
   var i = e.className;
   var a = e.isDangerous;
   var s = e.denyText;
-  var c = void 0 === s ? "\u62d2\u7edd" : s;
+  var c = void 0 === s ? "拒绝" : s;
   var l = e.allowText;
-  var u = void 0 === l ? "\u540c\u610f" : l;
+  var u = void 0 === l ? "同意" : l;
   var d = Object(_.d)();
   var p = "https://static.codemao.cn/coco/image/permission_camera.png";
-  var f = "\u9700\u8981\u5f00\u542f\u76f8\u673a\u6743\u9650\u624d\u80fd\u8fdb\u884c\u62cd\u7167\u6216\u6444\u50cf\u54e6";
+  var f = "需要开启相机权限才能进行拍照或摄像哦";
   switch (n) {
     case K.e.camera:
       break;
     case K.e.microphone:
       p = "https://static.codemao.cn/coco/image/permission_microphone.png";
-      f = "\u9700\u8981\u5f00\u542f\u9ea6\u514b\u98ce\u6743\u9650\u80fd\u4f7f\u7528\u73af\u5883\u97f3\u91cf";
+      f = "需要开启麦克风权限能使用环境音量";
   }
   return h.a.createElement(z.f, {
     visible: t,
@@ -83525,7 +83525,7 @@ var DG = Object(f.memo)(function () {
     alt: ""
   }), h.a.createElement("div", {
     className: xG.a.content
-  }, h.a.createElement("h3", null, "\u6388\u6743\u63d0\u793a"), h.a.createElement("span", null, f), h.a.createElement("div", {
+  }, h.a.createElement("h3", null, "授权提示"), h.a.createElement("span", null, f), h.a.createElement("div", {
     className: N()(xG.a.dialogButtons)
   }, h.a.createElement(z.d, {
     onClick: function () {
@@ -83579,7 +83579,7 @@ function PG() {
             case 2:
               if (t.sent) {
                 e(Object(Y.mj)({
-                  message: "\u4f5c\u54c1\u4fdd\u5b58\u6210\u529f",
+                  message: "作品保存成功",
                   type: "success"
                 }));
               }

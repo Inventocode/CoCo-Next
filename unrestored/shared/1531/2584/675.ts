@@ -4,14 +4,14 @@ export { r as messages };
 export { c as types };
 var r = {
   "zh-CN": {
-    widget: "\u63a7\u4ef6",
-    widgetName: "\u753b\u5e03",
-    backgroundColor: "\u80cc\u666f\u989c\u8272"
+    widget: "控件",
+    widgetName: "画布",
+    backgroundColor: "背景颜色"
   }
 };
 var o = require("./6");
 var i = require("./5");
-var a = require("./35/index");
+var a = require("./35");
 var s = require("./245");
 var c = {
   type: i.f,

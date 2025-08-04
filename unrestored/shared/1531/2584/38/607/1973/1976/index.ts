@@ -1,7 +1,7 @@
-var r = require("../1300/838");
+var r = require("../1979/838");
 var i = require("./1977");
-var o = require("../1300/1302").ArraySet;
-var a = require("../1300/1301/index");
+var o = require("./1302").ArraySet;
+var a = require("./1301/index");
 var s = require("./1978").quickSort;
 function c(e, t) {
   var n = e;
@@ -381,7 +381,7 @@ u.prototype.sourceContentFor = function (e, t) {
   if (t) {
     return null;
   }
-  throw new Error('"' + o + '" is not in the SourceMap.');
+  throw new Error("\"" + o + "\" is not in the SourceMap.");
 };
 u.prototype.generatedPositionFor = function (e) {
   var t = r.getArg(e, "source");
@@ -464,7 +464,7 @@ f.prototype.sourceContentFor = function (e, t) {
   if (t) {
     return null;
   }
-  throw new Error('"' + e + '" is not in the SourceMap.');
+  throw new Error("\"" + e + "\" is not in the SourceMap.");
 };
 f.prototype.generatedPositionFor = function (e) {
   for (var t = 0; t < this._sections.length; t++) {

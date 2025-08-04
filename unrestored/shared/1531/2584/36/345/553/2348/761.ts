@@ -19,7 +19,7 @@ var i = o.TYPED_ARRAY_SUPPORT ? 2147483647 : 1073741823;
 function o(e, t, n) {
   return o.TYPED_ARRAY_SUPPORT || this instanceof o ? "number" === typeof e ? c(this, e) : function (e, t, n, r) {
     if ("number" === typeof t) {
-      throw new TypeError('"value" argument must not be a number');
+      throw new TypeError("\"value\" argument must not be a number");
     }
     if ("undefined" !== typeof ArrayBuffer && t instanceof ArrayBuffer) {
       return function (e, t, n, r) {
@@ -343,7 +343,7 @@ o.prototype.fill = function (e, t, n) {
 };
 o.concat = function (e, t) {
   if (!r(e)) {
-    throw new TypeError('"list" argument must be an Array of Buffers');
+    throw new TypeError("\"list\" argument must be an Array of Buffers");
   }
   if (0 === e.length) {
     return s(null, 0);
@@ -359,7 +359,7 @@ o.concat = function (e, t) {
   for (n = 0; n < e.length; ++n) {
     var u = e[n];
     if (!o.isBuffer(u)) {
-      throw new TypeError('"list" argument must be an Array of Buffers');
+      throw new TypeError("\"list\" argument must be an Array of Buffers");
     }
     u.copy(i, a);
     a += u.length;

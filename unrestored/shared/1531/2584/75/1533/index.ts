@@ -1,7 +1,7 @@
 "use strict";
 
-var r = require("../../0/index");
-var i = require("../../683/34/763");
+var r = require("react");
+var i = require("../../0/1532/763");
 var o = require("./1534/index");
 function a(e) {
   for (var t = "https://reactjs.org/docs/error-decoder.html?invariant=" + e, n = 1; n < arguments.length; n++) {
@@ -4996,7 +4996,7 @@ function $a(e, t, n) {
             t.effectTag |= 4;
           }
         } else {
-          switch (c = 9 === n.nodeType ? n : n.ownerDocument, e === cn && (e = Me(o)), e === cn ? "script" === o ? ((e = c.createElement("div")).innerHTML = "<script><\/script>", e = e.removeChild(e.firstChild)) : "string" === typeof r.is ? e = c.createElement(o, {
+          switch (c = 9 === n.nodeType ? n : n.ownerDocument, e === cn && (e = Me(o)), e === cn ? "script" === o ? ((e = c.createElement("div")).innerHTML = "<script></script>", e = e.removeChild(e.firstChild)) : "string" === typeof r.is ? e = c.createElement(o, {
             is: r.is
           }) : (e = c.createElement(o), "select" === o && (c = e, r.multiple ? c.multiple = !0 : r.size && (c.size = r.size))) : e = c.createElementNS(e, o), e[Cn] = t, e[On] = r, Ha(e, t), t.stateNode = e, c = sn(o, r), o) {
             case "iframe":
@@ -7855,7 +7855,7 @@ T = function (e, t, n) {
         for (n = e; n.parentNode;) {
           n = n.parentNode;
         }
-        for (n = n.querySelectorAll("input[name=" + JSON.stringify("" + t) + '][type="radio"]'), t = 0; t < n.length; t++) {
+        for (n = n.querySelectorAll("input[name=" + JSON.stringify("" + t) + "][type=\"radio\"]"), t = 0; t < n.length; t++) {
           var r = n[t];
           if (r !== e && r.form === e.form) {
             var i = Dn(r);

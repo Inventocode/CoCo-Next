@@ -4,7 +4,7 @@ Object.defineProperty(exports, "__esModule", {
   value: !0
 });
 exports.CopyToClipboard = void 0;
-var r = i(require("../../0/index"));
+var r = i(require("react"));
 var o = i(require("./2545/index"));
 function i(e) {
   return e && e.__esModule ? e : {

@@ -3,7 +3,7 @@
 var r = require("../29");
 var i = require("../33/index");
 var o = require("../19");
-var a = require("../0/index");
+var a = require("react");
 var s = require("./1503/index");
 var c = require("../8");
 var u = function __importDefault(module) {

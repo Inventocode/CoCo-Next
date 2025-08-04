@@ -1,7 +1,7 @@
 "use strict";
 
-var r = require("../../../../../../3272/3198/2668/220");
-var i = require("../../../../../../3272/3198/2668/230");
+var r = require("../../../../36/2668/220");
+var i = require("../../../../36/2668/230");
 var o = require("./2267/index");
 var a = require("../1346");
 var s = function () {

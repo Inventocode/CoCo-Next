@@ -1,9 +1,9 @@
 "use strict";
 
 export { b as a };
-var n = require("./221");
-var o = require("./453/465");
-var i = require("./453/index");
+import * as n from "./221";
+import * as o from "./453/465";
+import * as i from "./453/index";
 var a = function () {
   var t = function (e, r) {
     return (t = Object.setPrototypeOf || {
@@ -61,7 +61,7 @@ var u = function (t) {
   e.GTIN_SIZE = 40;
   return e;
 }(i.a);
-var s = require("./109");
+import * as s from "./109";
 var c = function () {
   var t = function (e, r) {
     return (t = Object.setPrototypeOf || {
@@ -169,7 +169,7 @@ var p = function (t) {
   };
   return e;
 }(u);
-var g = require("./37");
+import * as g from "./37";
 var y = function () {
   var t = function (e, r) {
     return (t = Object.setPrototypeOf || {

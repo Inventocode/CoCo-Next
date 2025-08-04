@@ -14,7 +14,7 @@ g.prototype.validate = function (e, t) {
   var n;
   if ("string" == typeof e) {
     if (!(n = this.getSchema(e))) {
-      throw new Error('no schema with key or ref "' + e + '"');
+      throw new Error("no schema with key or ref \"" + e + "\"");
     }
   } else {
     var r = this._addSchema(e);
@@ -386,7 +386,7 @@ function w(e) {
 }
 function E(e, t) {
   if (e._schemas[t] || e._refs[t]) {
-    throw new Error('schema with key or id "' + t + '" already exists');
+    throw new Error("schema with key or id \"" + t + "\" already exists");
   }
 }
 function x() {}

@@ -4,7 +4,7 @@ Object.defineProperty(exports, "__esModule", {
   value: !0
 });
 exports.json = exports.block = exports.string = exports.color = exports.asserts = exports.array = exports.maths = exports.math = exports.base = exports.event = exports.dom = exports.style = exports.is = void 0;
-var r = require("../../1001/93");
+var r = require("tslib");
 var i = (0, r.__importStar)(require("../../125/714"));
 exports.style = i;
 var o = (0, r.__importStar)(require("../../125/index"));
@@ -18,7 +18,7 @@ exports.math = c;
 exports.maths = c;
 var u = (0, r.__importStar)(require("./961"));
 exports.array = u;
-var l = (0, r.__importStar)(require("../../206/208/387"));
+var l = (0, r.__importStar)(require("./387"));
 exports.asserts = l;
 var f = (0, r.__importStar)(require("../../1001/577"));
 exports.color = f;

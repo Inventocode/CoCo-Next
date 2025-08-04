@@ -2,73 +2,73 @@
 
 var r = {
   lessThanXSeconds: {
-    one: "\u4e0d\u5230 1 \u79d2",
-    other: "\u4e0d\u5230 {{count}} \u79d2"
+    one: "不到 1 秒",
+    other: "不到 {{count}} 秒"
   },
   xSeconds: {
-    one: "1 \u79d2",
-    other: "{{count}} \u79d2"
+    one: "1 秒",
+    other: "{{count}} 秒"
   },
-  halfAMinute: "\u534a\u5206\u949f",
+  halfAMinute: "半分钟",
   lessThanXMinutes: {
-    one: "\u4e0d\u5230 1 \u5206\u949f",
-    other: "\u4e0d\u5230 {{count}} \u5206\u949f"
+    one: "不到 1 分钟",
+    other: "不到 {{count}} 分钟"
   },
   xMinutes: {
-    one: "1 \u5206\u949f",
-    other: "{{count}} \u5206\u949f"
+    one: "1 分钟",
+    other: "{{count}} 分钟"
   },
   xHours: {
-    one: "1 \u5c0f\u65f6",
-    other: "{{count}} \u5c0f\u65f6"
+    one: "1 小时",
+    other: "{{count}} 小时"
   },
   aboutXHours: {
-    one: "\u5927\u7ea6 1 \u5c0f\u65f6",
-    other: "\u5927\u7ea6 {{count}} \u5c0f\u65f6"
+    one: "大约 1 小时",
+    other: "大约 {{count}} 小时"
   },
   xDays: {
-    one: "1 \u5929",
-    other: "{{count}} \u5929"
+    one: "1 天",
+    other: "{{count}} 天"
   },
   aboutXWeeks: {
-    one: "\u5927\u7ea6 1 \u4e2a\u661f\u671f",
-    other: "\u5927\u7ea6 {{count}} \u4e2a\u661f\u671f"
+    one: "大约 1 个星期",
+    other: "大约 {{count}} 个星期"
   },
   xWeeks: {
-    one: "1 \u4e2a\u661f\u671f",
-    other: "{{count}} \u4e2a\u661f\u671f"
+    one: "1 个星期",
+    other: "{{count}} 个星期"
   },
   aboutXMonths: {
-    one: "\u5927\u7ea6 1 \u4e2a\u6708",
-    other: "\u5927\u7ea6 {{count}} \u4e2a\u6708"
+    one: "大约 1 个月",
+    other: "大约 {{count}} 个月"
   },
   xMonths: {
-    one: "1 \u4e2a\u6708",
-    other: "{{count}} \u4e2a\u6708"
+    one: "1 个月",
+    other: "{{count}} 个月"
   },
   aboutXYears: {
-    one: "\u5927\u7ea6 1 \u5e74",
-    other: "\u5927\u7ea6 {{count}} \u5e74"
+    one: "大约 1 年",
+    other: "大约 {{count}} 年"
   },
   xYears: {
-    one: "1 \u5e74",
-    other: "{{count}} \u5e74"
+    one: "1 年",
+    other: "{{count}} 年"
   },
   overXYears: {
-    one: "\u8d85\u8fc7 1 \u5e74",
-    other: "\u8d85\u8fc7 {{count}} \u5e74"
+    one: "超过 1 年",
+    other: "超过 {{count}} 年"
   },
   almostXYears: {
-    one: "\u5c06\u8fd1 1 \u5e74",
-    other: "\u5c06\u8fd1 {{count}} \u5e74"
+    one: "将近 1 年",
+    other: "将近 {{count}} 年"
   }
 };
 var i = require("./484/692");
 var o = {
   date: Object(i.a)({
     formats: {
-      full: "y'\u5e74'M'\u6708'd'\u65e5' EEEE",
-      long: "y'\u5e74'M'\u6708'd'\u65e5'",
+      full: "y'年'M'月'd'日' EEEE",
+      long: "y'年'M'月'd'日'",
       medium: "yyyy-MM-dd",
       short: "yy-MM-dd"
     },
@@ -101,13 +101,13 @@ function c(e, t, n, r) {
     var r = Object(a.a)(e, n);
     var i = Object(a.a)(t, n);
     return r.getTime() === i.getTime();
-  }(e, t, n) ? r : e.getTime() > t.getTime() ? "'\u4e0b\u4e2a'" + r : "'\u4e0a\u4e2a'" + r;
+  }(e, t, n) ? r : e.getTime() > t.getTime() ? "'下个'" + r : "'上个'" + r;
 }
 var u = {
   lastWeek: c,
-  yesterday: "'\u6628\u5929' p",
-  today: "'\u4eca\u5929' p",
-  tomorrow: "'\u660e\u5929' p",
+  yesterday: "'昨天' p",
+  today: "'今天' p",
+  tomorrow: "'明天' p",
   nextWeek: c,
   other: "PP p"
 };
@@ -117,30 +117,30 @@ var f = {
     var n = Number(e);
     switch (String((t || {}).unit)) {
       case "date":
-        return n.toString() + "\u65e5";
+        return n.toString() + "日";
       case "hour":
-        return n.toString() + "\u65f6";
+        return n.toString() + "时";
       case "minute":
-        return n.toString() + "\u5206";
+        return n.toString() + "分";
       case "second":
-        return n.toString() + "\u79d2";
+        return n.toString() + "秒";
       default:
-        return "\u7b2c " + n.toString();
+        return "第 " + n.toString();
     }
   },
   era: Object(l.a)({
     values: {
-      narrow: ["\u524d", "\u516c\u5143"],
-      abbreviated: ["\u524d", "\u516c\u5143"],
-      wide: ["\u516c\u5143\u524d", "\u516c\u5143"]
+      narrow: ["前", "公元"],
+      abbreviated: ["前", "公元"],
+      wide: ["公元前", "公元"]
     },
     defaultWidth: "wide"
   }),
   quarter: Object(l.a)({
     values: {
       narrow: ["1", "2", "3", "4"],
-      abbreviated: ["\u7b2c\u4e00\u523b", "\u7b2c\u4e8c\u523b", "\u7b2c\u4e09\u523b", "\u7b2c\u56db\u523b"],
-      wide: ["\u7b2c\u4e00\u523b\u949f", "\u7b2c\u4e8c\u523b\u949f", "\u7b2c\u4e09\u523b\u949f", "\u7b2c\u56db\u523b\u949f"]
+      abbreviated: ["第一刻", "第二刻", "第三刻", "第四刻"],
+      wide: ["第一刻钟", "第二刻钟", "第三刻钟", "第四刻钟"]
     },
     defaultWidth: "wide",
     argumentCallback: function (e) {
@@ -149,85 +149,85 @@ var f = {
   }),
   month: Object(l.a)({
     values: {
-      narrow: ["\u4e00", "\u4e8c", "\u4e09", "\u56db", "\u4e94", "\u516d", "\u4e03", "\u516b", "\u4e5d", "\u5341", "\u5341\u4e00", "\u5341\u4e8c"],
-      abbreviated: ["1\u6708", "2\u6708", "3\u6708", "4\u6708", "5\u6708", "6\u6708", "7\u6708", "8\u6708", "9\u6708", "10\u6708", "11\u6708", "12\u6708"],
-      wide: ["\u4e00\u6708", "\u4e8c\u6708", "\u4e09\u6708", "\u56db\u6708", "\u4e94\u6708", "\u516d\u6708", "\u4e03\u6708", "\u516b\u6708", "\u4e5d\u6708", "\u5341\u6708", "\u5341\u4e00\u6708", "\u5341\u4e8c\u6708"]
+      narrow: ["一", "二", "三", "四", "五", "六", "七", "八", "九", "十", "十一", "十二"],
+      abbreviated: ["1月", "2月", "3月", "4月", "5月", "6月", "7月", "8月", "9月", "10月", "11月", "12月"],
+      wide: ["一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月"]
     },
     defaultWidth: "wide"
   }),
   day: Object(l.a)({
     values: {
-      narrow: ["\u65e5", "\u4e00", "\u4e8c", "\u4e09", "\u56db", "\u4e94", "\u516d"],
-      short: ["\u65e5", "\u4e00", "\u4e8c", "\u4e09", "\u56db", "\u4e94", "\u516d"],
-      abbreviated: ["\u5468\u65e5", "\u5468\u4e00", "\u5468\u4e8c", "\u5468\u4e09", "\u5468\u56db", "\u5468\u4e94", "\u5468\u516d"],
-      wide: ["\u661f\u671f\u65e5", "\u661f\u671f\u4e00", "\u661f\u671f\u4e8c", "\u661f\u671f\u4e09", "\u661f\u671f\u56db", "\u661f\u671f\u4e94", "\u661f\u671f\u516d"]
+      narrow: ["日", "一", "二", "三", "四", "五", "六"],
+      short: ["日", "一", "二", "三", "四", "五", "六"],
+      abbreviated: ["周日", "周一", "周二", "周三", "周四", "周五", "周六"],
+      wide: ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"]
     },
     defaultWidth: "wide"
   }),
   dayPeriod: Object(l.a)({
     values: {
       narrow: {
-        am: "\u4e0a",
-        pm: "\u4e0b",
-        midnight: "\u51cc\u6668",
-        noon: "\u5348",
-        morning: "\u65e9",
-        afternoon: "\u4e0b\u5348",
-        evening: "\u665a",
-        night: "\u591c"
+        am: "上",
+        pm: "下",
+        midnight: "凌晨",
+        noon: "午",
+        morning: "早",
+        afternoon: "下午",
+        evening: "晚",
+        night: "夜"
       },
       abbreviated: {
-        am: "\u4e0a\u5348",
-        pm: "\u4e0b\u5348",
-        midnight: "\u51cc\u6668",
-        noon: "\u4e2d\u5348",
-        morning: "\u65e9\u6668",
-        afternoon: "\u4e2d\u5348",
-        evening: "\u665a\u4e0a",
-        night: "\u591c\u95f4"
+        am: "上午",
+        pm: "下午",
+        midnight: "凌晨",
+        noon: "中午",
+        morning: "早晨",
+        afternoon: "中午",
+        evening: "晚上",
+        night: "夜间"
       },
       wide: {
-        am: "\u4e0a\u5348",
-        pm: "\u4e0b\u5348",
-        midnight: "\u51cc\u6668",
-        noon: "\u4e2d\u5348",
-        morning: "\u65e9\u6668",
-        afternoon: "\u4e2d\u5348",
-        evening: "\u665a\u4e0a",
-        night: "\u591c\u95f4"
+        am: "上午",
+        pm: "下午",
+        midnight: "凌晨",
+        noon: "中午",
+        morning: "早晨",
+        afternoon: "中午",
+        evening: "晚上",
+        night: "夜间"
       }
     },
     defaultWidth: "wide",
     formattingValues: {
       narrow: {
-        am: "\u4e0a",
-        pm: "\u4e0b",
-        midnight: "\u51cc\u6668",
-        noon: "\u5348",
-        morning: "\u65e9",
-        afternoon: "\u4e0b\u5348",
-        evening: "\u665a",
-        night: "\u591c"
+        am: "上",
+        pm: "下",
+        midnight: "凌晨",
+        noon: "午",
+        morning: "早",
+        afternoon: "下午",
+        evening: "晚",
+        night: "夜"
       },
       abbreviated: {
-        am: "\u4e0a\u5348",
-        pm: "\u4e0b\u5348",
-        midnight: "\u51cc\u6668",
-        noon: "\u4e2d\u5348",
-        morning: "\u65e9\u6668",
-        afternoon: "\u4e2d\u5348",
-        evening: "\u665a\u4e0a",
-        night: "\u591c\u95f4"
+        am: "上午",
+        pm: "下午",
+        midnight: "凌晨",
+        noon: "中午",
+        morning: "早晨",
+        afternoon: "中午",
+        evening: "晚上",
+        night: "夜间"
       },
       wide: {
-        am: "\u4e0a\u5348",
-        pm: "\u4e0b\u5348",
-        midnight: "\u51cc\u6668",
-        noon: "\u4e2d\u5348",
-        morning: "\u65e9\u6668",
-        afternoon: "\u4e2d\u5348",
-        evening: "\u665a\u4e0a",
-        night: "\u591c\u95f4"
+        am: "上午",
+        pm: "下午",
+        midnight: "凌晨",
+        noon: "中午",
+        morning: "早晨",
+        afternoon: "中午",
+        evening: "晚上",
+        night: "夜间"
       }
     },
     defaultFormattingWidth: "wide"
@@ -241,7 +241,7 @@ var p = {
     var i;
     n = n || {};
     i = "string" === typeof r[e] ? r[e] : 1 === t ? r[e].one : r[e].other.replace("{{count}}", t);
-    return n.addSuffix ? n.comparison > 0 ? i + "\u5185" : i + "\u524d" : i;
+    return n.addSuffix ? n.comparison > 0 ? i + "内" : i + "前" : i;
   },
   formatLong: o,
   formatRelative: function (e, t, n, r) {

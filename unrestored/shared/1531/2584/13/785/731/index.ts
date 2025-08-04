@@ -1,7 +1,7 @@
 "use strict";
 
 (function (e) {
-  var r = require("../325/index");
+  var r = require("../325");
   var i = require("./1463");
   var o = "object" == typeof exports && exports && !exports.nodeType && exports;
   var a = o && "object" == typeof e && e && !e.nodeType && e;

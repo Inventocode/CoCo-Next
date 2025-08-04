@@ -2,7 +2,7 @@
 
 var r = require("../19");
 var i = require("../33/index");
-var o = require("../0/index");
+var o = require("react");
 var a = require("../95");
 var s = require("../96");
 var c = require("../120");

@@ -5,7 +5,7 @@ export { p as a };
 var r;
 var o = require("./27");
 var i = require("./40");
-var a = require("./0/index");
+var a = require("react");
 var s = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;

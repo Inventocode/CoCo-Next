@@ -4,13 +4,13 @@ Object.defineProperty(exports, "__esModule", {
   value: !0
 });
 exports.Xml = void 0;
-var r = require("../../1001/93");
-var i = require("../../1001/134/index");
-var o = require("../259");
+var r = require("tslib");
+var i = require("inversify");
+var o = require("@kitten-team/gl-matrix");
 var a = require("../../125/195/index");
 var s = require("../../4/127");
 var c = require("../../1001/213/index");
-var u = require("../../206/208/387");
+var u = require("../497/387");
 var l = require("../../125/294");
 var f = (0, r.__importStar)(require("../../125/index"));
 var d = function () {
@@ -103,7 +103,7 @@ var d = function () {
       var d = l && this.block_to_dom(l, t);
       if (d) {
         d.setAttribute(a.BLOCK_GROUP_STOPPED_XML_TAG, "true");
-        var h = i.querySelector("next[" + a.LAST_NEXT_XML_TAG + '="true"]');
+        var h = i.querySelector("next[" + a.LAST_NEXT_XML_TAG + "=\"true\"]");
         if (!(null === h || void 0 === h)) {
           h.removeAttribute(a.LAST_NEXT_XML_TAG);
         }

@@ -16,7 +16,7 @@ var o = function __importDefault(module) {
   return defaultExport;
 }(r);
 var i = require("../../../16/index");
-var a = require("../../../0/index");
+var a = require("react");
 var s = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -30,7 +30,7 @@ var s = function __importDefault(module) {
   return defaultExport;
 }(a);
 var c = require("../../../5");
-var l = require("../../../15/index");
+var l = require("../../../15");
 var u = require("../../../205");
 var d = require("../../../9");
 var p = require("../../../98");
@@ -445,7 +445,7 @@ var U = function __importDefault(module) {
   return defaultExport;
 }(G);
 var W = require("../../../429");
-var H = require("../../../133");
+var H = require("../../../133/index");
 var V = Object(a.memo)(function (e) {
   var t = e.id;
   var n = e.type;

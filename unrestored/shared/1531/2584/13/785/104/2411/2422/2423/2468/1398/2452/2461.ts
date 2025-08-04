@@ -1,4 +1,4 @@
-var r = require("../../../../../../2483/2484/2485/1401/index");
+var r = require("../../../../../../2483/2484/2485/1401");
 var i = Object.prototype.hasOwnProperty;
 module.exports = function (e, t, n, o, a, s) {
   var c = 1 & n;

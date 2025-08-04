@@ -1,7 +1,7 @@
 "use strict";
 
 var r = require("../11");
-var o = require("../0/index");
+var o = require("react");
 var i = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -151,8 +151,8 @@ _a = Object(o.memo)(function (e) {
         }
       }, (null === e || void 0 === e ? void 0 : e.value) || "");
     },
-    cancelLabel: "\u53d6\u6d88",
-    okLabel: "\u786e\u5b9a",
+    cancelLabel: "取消",
+    okLabel: "确定",
     onOpen: function () {
       N.current = !0;
     },

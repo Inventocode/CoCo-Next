@@ -3,7 +3,7 @@
 export { c as useDrag };
 export { l as useGesture };
 var r = require("./329");
-var i = require("../../../0/index");
+var i = require("react");
 var o = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;

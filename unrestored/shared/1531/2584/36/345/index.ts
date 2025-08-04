@@ -305,7 +305,7 @@ if (!Object(M.d)()) {
   };
   window.CordovaWebsocketPlugin = B;
 }
-var F = require("../../15/index");
+var F = require("../../15");
 function G(e, t, n, r) {
   var o;
   if (!((null === (o = e.url) || void 0 === o ? void 0 : o.includes("codemao.cn")) || Object(F.O)(e.url || ""))) {

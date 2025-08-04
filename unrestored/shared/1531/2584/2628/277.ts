@@ -78,7 +78,7 @@ var u = function (e) {
 }(o);
 var l = function (e) {
   function t(t, n) {
-    var r = e.call(this, "MISSING_TRANSLATION", 'Missing message: "' + t.id + '" for locale "' + n + '", using ' + (t.defaultMessage ? "default message" : "id") + " as fallback.") || this;
+    var r = e.call(this, "MISSING_TRANSLATION", "Missing message: \"" + t.id + "\" for locale \"" + n + "\", using " + (t.defaultMessage ? "default message" : "id") + " as fallback.") || this;
     r.descriptor = t;
     return r;
   }

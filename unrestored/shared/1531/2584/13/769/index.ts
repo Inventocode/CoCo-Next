@@ -1,6 +1,6 @@
 "use strict";
 
-var r = require("./1046");
+var r = require("./1046/index");
 var i = require("./568");
 Object.defineProperty(exports, "__esModule", {
   value: !0
@@ -12,7 +12,7 @@ var s = i(require("./1045"));
 var c = i(require("./1047/index"));
 var u = i(require("./1048/index"));
 var l = i(require("./927"));
-var f = i(require("../../0/index"));
+var f = i(require("react"));
 var d = i(require("./950"));
 var h = i(require("./1753"));
 var p = i(require("./1754/index"));

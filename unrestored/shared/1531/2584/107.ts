@@ -13,7 +13,7 @@ var a;
 var s;
 var c;
 var u;
-var l = require("./683/559");
+var l = require("hammerjs");
 !function (e) {
   e.Actor = "actor";
   e.Scene = "scene";

@@ -2,7 +2,7 @@
 
 (function (e) {
   var r = require("./10/index");
-  var o = require("./0/index");
+  var o = require("react");
   var i = function __importDefault(module) {
     var defaultExport = module && module.__esModule ? function () {
       return module.default;
@@ -31,7 +31,7 @@
     return defaultExport;
   }(c);
   var u = require("./13/index");
-  var d = require("./2/index");
+  var d = require("./2");
   var p = require("./101");
   var f = function __importDefault(module) {
     var defaultExport = module && module.__esModule ? function () {

@@ -53,7 +53,7 @@ exports.default = function (e, t, n) {
           return e;
         });
         if (a.length > 1) {
-          throw new Error('Cannot resolve styleName "' + e + '" because it is present in multiple imports:\n\n\t' + a.join("\n\t") + '\n\nYou can resolve this by using a named import, e.g:\n\n\timport foo from "' + a[0] + '";\n\t<div styleName="foo.' + e + '" />\n\n');
+          throw new Error("Cannot resolve styleName \"" + e + "\" because it is present in multiple imports:\n\n\t" + a.join("\n\t") + "\n\nYou can resolve this by using a named import, e.g:\n\n\timport foo from \"" + a[0] + "\";\n\t<div styleName=\"foo." + e + "\" />\n\n");
         }
         return 0 === a.length ? i("Could not resolve the styleName '" + e + "'.", r) : t[a[0]][e];
       }(e, t, c);

@@ -1,7 +1,7 @@
 "use strict";
 
 var r = require("../19");
-var o = require("../0/index");
+var o = require("react");
 var i = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -42,7 +42,7 @@ var d = function __importDefault(module) {
 function p(e) {
   return e instanceof HTMLElement ? e : d.a.findDOMNode(e);
 }
-var f = require("../458");
+var f = require("resize-observer-polyfill");
 var h = new Map();
 var m = new f.default(function (e) {
   e.forEach(function (e) {

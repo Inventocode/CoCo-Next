@@ -9,7 +9,7 @@ export { d as c };
 export { p as a };
 var r = require("../11");
 var o = require("../25/index");
-var i = require("../1036/32/index");
+var i = require("ot-json1");
 function a(e) {
   for (var t = [], n = [], i = [], a = [{
       path: [],

@@ -3,7 +3,7 @@
 var r = require("../../../../337");
 var i = require("../../../../430");
 require("../../../../50/index");
-var o = require("../../../../0/index");
+var o = require("react");
 var a = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;

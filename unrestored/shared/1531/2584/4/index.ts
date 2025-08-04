@@ -105,7 +105,7 @@ function h(e, t) {
   }).join(";"), " */ ").concat(e);
 }
 function m(e, t) {
-  return "async function () {\n    if (typeof (".concat(e, ') === "boolean") {\n      return ((').concat(e, ") === ").concat(t, ");\n    } else if (typeof (").concat(e, ') === "number" && ((').concat(e, ") === 0)) {\n      return (false === ").concat(t, ");\n    }\n    return (true === ").concat(t, ")\n  }");
+  return "async function () {\n    if (typeof (".concat(e, ") === \"boolean\") {\n      return ((").concat(e, ") === ").concat(t, ");\n    } else if (typeof (").concat(e, ") === \"number\" && ((").concat(e, ") === 0)) {\n      return (false === ").concat(t, ");\n    }\n    return (true === ").concat(t, ")\n  }");
 }
 function g(e) {
   return JSON.stringify(e);
@@ -191,7 +191,7 @@ function S(e, t, n) {
       var l;
       var u = null === (c = i.connection) || void 0 === c ? void 0 : c.get_shadow_dom();
       this.cacheId[e] = (null === u || void 0 === u ? void 0 : u.getAttribute("id")) || o.Blink.utils.gen_uid();
-      a = (null === u || void 0 === u || null === (l = u.querySelector('field[name="'.concat(t, '"]'))) || void 0 === l ? void 0 : l.textContent) || "1";
+      a = (null === u || void 0 === u || null === (l = u.querySelector("field[name=\"".concat(t, "\"]"))) || void 0 === l ? void 0 : l.textContent) || "1";
     }
     var d = this.rendered;
     this.rendered = !1;

@@ -1,6 +1,6 @@
 "use strict";
 
-var r = require("./1633/86/index");
+var r = require("./1623/86");
 var o = require("./1745/946").codeAt;
 r({
   target: "String",

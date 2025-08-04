@@ -1,7 +1,7 @@
 "use strict";
 
-var r = require("./1633/86/index");
-var o = require("./1722/817").includes;
+var r = require("./1623/86");
+var o = require("./1721/817").includes;
 var i = require("./936/633");
 r({
   target: "Array",

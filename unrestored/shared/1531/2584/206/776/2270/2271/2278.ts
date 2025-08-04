@@ -273,7 +273,7 @@
         value: t[1].replace(/\\'/g, "'")
       } : (t = e.match(/^"([\s\S]*)"$/)) ? {
         type: "Just",
-        value: t[1].replace(/\\"/g, '"')
+        value: t[1].replace(/\\"/g, "\"")
       } : {
         type: "Just",
         value: e

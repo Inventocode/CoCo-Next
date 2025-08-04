@@ -94,7 +94,7 @@ module.exports = function (e, t, n) {
       o += " , " + i + " , " + d + " , validate.schema" + e.schemaPath + " ";
     }
     o += " , (dataPath || '')";
-    if ('""' != e.errorPath) {
+    if ("\"\"" != e.errorPath) {
       o += " + " + e.errorPath;
     }
     var F = s ? "data" + (s - 1 || "") : "parentData";
@@ -162,7 +162,7 @@ module.exports = function (e, t, n) {
     if (g) {
       if (w.errors) {
         if ("full" != w.errors) {
-          o += "  for (var " + O + "=" + p + "; " + O + "<errors; " + O + "++) { var " + k + " = vErrors[" + O + "]; if (" + k + ".dataPath === undefined) " + k + ".dataPath = (dataPath || '') + " + e.errorPath + "; if (" + k + ".schemaPath === undefined) { " + k + '.schemaPath = "' + l + '"; } ';
+          o += "  for (var " + O + "=" + p + "; " + O + "<errors; " + O + "++) { var " + k + " = vErrors[" + O + "]; if (" + k + ".dataPath === undefined) " + k + ".dataPath = (dataPath || '') + " + e.errorPath + "; if (" + k + ".schemaPath === undefined) { " + k + ".schemaPath = \"" + l + "\"; } ";
           if (e.opts.verbose) {
             o += " " + k + ".schema = " + i + "; " + k + ".data = " + d + "; ";
           }
@@ -172,7 +172,7 @@ module.exports = function (e, t, n) {
         if (!1 === w.errors) {
           o += " " + j + " ";
         } else {
-          o += " if (" + p + " == errors) { " + j + " } else {  for (var " + O + "=" + p + "; " + O + "<errors; " + O + "++) { var " + k + " = vErrors[" + O + "]; if (" + k + ".dataPath === undefined) " + k + ".dataPath = (dataPath || '') + " + e.errorPath + "; if (" + k + ".schemaPath === undefined) { " + k + '.schemaPath = "' + l + '"; } ';
+          o += " if (" + p + " == errors) { " + j + " } else {  for (var " + O + "=" + p + "; " + O + "<errors; " + O + "++) { var " + k + " = vErrors[" + O + "]; if (" + k + ".dataPath === undefined) " + k + ".dataPath = (dataPath || '') + " + e.errorPath + "; if (" + k + ".schemaPath === undefined) { " + k + ".schemaPath = \"" + l + "\"; } ";
           if (e.opts.verbose) {
             o += " " + k + ".schema = " + i + "; " + k + ".data = " + d + "; ";
           }
@@ -206,7 +206,7 @@ module.exports = function (e, t, n) {
         if (!1 === w.errors) {
           o += " " + j + " ";
         } else {
-          o += " if (Array.isArray(" + C + ")) { if (vErrors === null) vErrors = " + C + "; else vErrors = vErrors.concat(" + C + "); errors = vErrors.length;  for (var " + O + "=" + p + "; " + O + "<errors; " + O + "++) { var " + k + " = vErrors[" + O + "]; if (" + k + ".dataPath === undefined) " + k + ".dataPath = (dataPath || '') + " + e.errorPath + ";  " + k + '.schemaPath = "' + l + '";  ';
+          o += " if (Array.isArray(" + C + ")) { if (vErrors === null) vErrors = " + C + "; else vErrors = vErrors.concat(" + C + "); errors = vErrors.length;  for (var " + O + "=" + p + "; " + O + "<errors; " + O + "++) { var " + k + " = vErrors[" + O + "]; if (" + k + ".dataPath === undefined) " + k + ".dataPath = (dataPath || '') + " + e.errorPath + ";  " + k + ".schemaPath = \"" + l + "\";  ";
           if (e.opts.verbose) {
             o += " " + k + ".schema = " + i + "; " + k + ".data = " + d + "; ";
           }

@@ -14,10 +14,10 @@ var l = Object(s.a)("COLUMN");
 var u = Object(s.a)("COLUMN");
 r = {};
 Object(a.a)(r, l, {
-  field: "\u7b2c1\u5217"
+  field: "第1列"
 });
 Object(a.a)(r, u, {
-  field: "\u7b2c2\u5217"
+  field: "第2列"
 });
 var d = r;
 var p = [(o = {
@@ -33,10 +33,10 @@ function f() {
   var o = Object(s.a)("COLUMN");
   return {
     header: (e = {}, Object(a.a)(e, r, {
-      field: "\u7b2c1\u5217",
+      field: "第1列",
       width: 407
     }), Object(a.a)(e, o, {
-      field: "\u7b2c2\u5217",
+      field: "第2列",
       width: 407
     }), e),
     data: [(t = {

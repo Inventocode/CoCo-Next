@@ -1,12 +1,12 @@
 "use strict";
 
 var r = require("../../13/769/568");
-var i = require("../../13/769/1046");
+var i = require("../../13/769/1046/index");
 Object.defineProperty(exports, "__esModule", {
   value: !0
 });
 exports.default = exports.HOOK_MARK = void 0;
-var o = i(require("../../0/index"));
+var o = i(require("react"));
 var a = r(require("../../13/769/950"));
 exports.HOOK_MARK = "RC_FORM_INTERNAL_HOOKS";
 var s = function () {

@@ -140,18 +140,18 @@
         e._codecs = {
           mp3: !(i || !n && !t.canPlayType("audio/mp3;").replace(/^no$/, "")),
           mpeg: !!n,
-          opus: !!t.canPlayType('audio/ogg; codecs="opus"').replace(/^no$/, ""),
-          ogg: !!t.canPlayType('audio/ogg; codecs="vorbis"').replace(/^no$/, ""),
-          oga: !!t.canPlayType('audio/ogg; codecs="vorbis"').replace(/^no$/, ""),
-          wav: !!(t.canPlayType('audio/wav; codecs="1"') || t.canPlayType("audio/wav")).replace(/^no$/, ""),
+          opus: !!t.canPlayType("audio/ogg; codecs=\"opus\"").replace(/^no$/, ""),
+          ogg: !!t.canPlayType("audio/ogg; codecs=\"vorbis\"").replace(/^no$/, ""),
+          oga: !!t.canPlayType("audio/ogg; codecs=\"vorbis\"").replace(/^no$/, ""),
+          wav: !!(t.canPlayType("audio/wav; codecs=\"1\"") || t.canPlayType("audio/wav")).replace(/^no$/, ""),
           aac: !!t.canPlayType("audio/aac;").replace(/^no$/, ""),
           caf: !!t.canPlayType("audio/x-caf;").replace(/^no$/, ""),
           m4a: !!(t.canPlayType("audio/x-m4a;") || t.canPlayType("audio/m4a;") || t.canPlayType("audio/aac;")).replace(/^no$/, ""),
           m4b: !!(t.canPlayType("audio/x-m4b;") || t.canPlayType("audio/m4b;") || t.canPlayType("audio/aac;")).replace(/^no$/, ""),
           mp4: !!(t.canPlayType("audio/x-mp4;") || t.canPlayType("audio/mp4;") || t.canPlayType("audio/aac;")).replace(/^no$/, ""),
-          weba: !!t.canPlayType('audio/webm; codecs="vorbis"').replace(/^no$/, ""),
-          webm: !!t.canPlayType('audio/webm; codecs="vorbis"').replace(/^no$/, ""),
-          dolby: !!t.canPlayType('audio/mp4; codecs="ec-3"').replace(/^no$/, ""),
+          weba: !!t.canPlayType("audio/webm; codecs=\"vorbis\"").replace(/^no$/, ""),
+          webm: !!t.canPlayType("audio/webm; codecs=\"vorbis\"").replace(/^no$/, ""),
+          dolby: !!t.canPlayType("audio/mp4; codecs=\"ec-3\"").replace(/^no$/, ""),
           flac: !!(t.canPlayType("audio/x-flac;") || t.canPlayType("audio/flac;")).replace(/^no$/, "")
         };
         return e;
@@ -417,7 +417,7 @@
               }
             }
             if (!n) {
-              console.warn('No file extension was found. Consider using the "format" property or specify an extension.');
+              console.warn("No file extension was found. Consider using the \"format\" property or specify an extension.");
             }
             if (n && o.codecs(n)) {
               e = this._src[t];
@@ -1881,4 +1881,4 @@
       }
     };
   })();
-}).call(this, require("../31/251"));
+}).call(this, require("../710/251"));

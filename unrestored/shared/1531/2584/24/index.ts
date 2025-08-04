@@ -18,13 +18,13 @@ var a = function __importDefault(module) {
 var s = require("../7");
 var c = require("../27");
 var l = require("../40");
-var u = require("../1036/32/index");
-var d = require("../15/index");
-var p = require("../729/66");
+var u = require("ot-json1");
+var d = require("../15");
+var p = require("../38/66");
 var f = require("../31/index");
 var h = require("../389");
 var m = require("../23");
-var g = require("../2/index");
+var g = require("../2");
 var _ = require("../102");
 var v = require("../18");
 var b = require("../10/index");
@@ -157,7 +157,7 @@ var G = "user_focus_on_pos";
 var U = "user_focus_on_pos_ack";
 var W = "user_focus_on_pos_relay";
 var H = require("../38/index");
-var V = require("./481/index");
+var V = require("socket.io-client");
 var z = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -196,7 +196,7 @@ var K = function () {
         var n = e.code;
         console.info("===OPERATION_ACK====");
         if (1e7 === n) {
-          if (window.confirm("\u670d\u52a1\u5668\u54cd\u5e94\u9519\u8bef\uff0c\u662f\u5426\u5237\u65b0\u9875\u9762\uff1f")) {
+          if (window.confirm("服务器响应错误，是否刷新页面？")) {
             window.location.reload();
           }
         }
@@ -465,7 +465,7 @@ var Z = function () {
     key: "handleDisconnect",
     value: function () {
       if (this._canRefreshUrl) {
-        if (window.confirm("\u4e0e\u540e\u53f0\u8fde\u63a5\u65ad\u5f00\uff0c\u662f\u5426\u5237\u65b0\u9875\u9762\uff1f")) {
+        if (window.confirm("与后台连接断开，是否刷新页面？")) {
           window.location.reload();
         }
       }
@@ -501,7 +501,7 @@ var Z = function () {
                 break;
               case 9:
                 if (20000001 === n) {
-                  console.error("sock \u542f\u52a8\u5931\u8d25\u8bf7\u91cd\u8bd5");
+                  console.error("sock 启动失败请重试");
                   this.socketSuc.resolve({
                     status: "fail"
                   });

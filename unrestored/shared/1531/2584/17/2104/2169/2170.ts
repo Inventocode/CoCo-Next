@@ -4,7 +4,7 @@ Object.defineProperty(exports, "__esModule", {
   value: !0
 });
 exports.HeadBlockRenderer = void 0;
-var r = require("../../../1001/93");
+var r = require("tslib");
 var i = require("../../../125/index");
 var o = function (e) {
   function t(t) {

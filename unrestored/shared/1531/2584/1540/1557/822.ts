@@ -1,6 +1,6 @@
-var r = require("../1633/167");
+var r = require("../1736/167");
 var o = require("../1742/247/index");
-var i = require("../1734/629");
+var i = require("../1734/629/index");
 var a = o("species");
 module.exports = function (e) {
   return i >= 51 || !r(function () {

@@ -1,8 +1,8 @@
-var r = require("./1633/86/index");
-var o = require("./1633/231");
+var r = require("./1623/86");
+var o = require("./1738/231");
 var i = require("./1738/709").onFreeze;
-var a = require("./1638/826");
-var s = require("./1633/167");
+var a = require("./1664/826");
+var s = require("./1736/167");
 var c = Object.seal;
 r({
   target: "Object",

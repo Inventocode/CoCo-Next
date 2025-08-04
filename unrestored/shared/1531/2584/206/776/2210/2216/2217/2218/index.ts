@@ -6,7 +6,7 @@ var o = require("../1117");
 var a = require("../1336");
 var s = require("./1337");
 var c = i.ucs2length;
-var u = require("./1116");
+var u = require("../1115/1116");
 var l = o.Validation;
 function f(e, t, n) {
   var r = h.call(this, e, t, n);
@@ -119,7 +119,7 @@ module.exports = function e(t, n, h, m) {
       root: a,
       schemaPath: "",
       errSchemaPath: "#",
-      errorPath: '""',
+      errorPath: "\"\"",
       MissingRefError: o.MissingRef,
       RULES: I,
       validate: s,
@@ -274,7 +274,7 @@ module.exports = function e(t, n, h, m) {
       return;
     }
     if (void 0 === s) {
-      throw new Error('custom keyword "' + e.keyword + '"failed to compile');
+      throw new Error("custom keyword \"" + e.keyword + "\"failed to compile");
     }
     var f = S.length;
     S[f] = s;

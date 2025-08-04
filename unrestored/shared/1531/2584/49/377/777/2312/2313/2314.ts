@@ -4,7 +4,7 @@ Object.defineProperty(exports, "__esModule", {
   value: !0
 });
 exports.GlobalCommentPlugin = void 0;
-var r = require("../../../../../1001/93");
+var r = require("tslib");
 var i = (0, r.__importStar)(require("../../../../../17/533"));
 var o = require("../../../../../17/640/index");
 var a = require("../../../../../17/642");

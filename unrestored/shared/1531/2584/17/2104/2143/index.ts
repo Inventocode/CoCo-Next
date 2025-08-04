@@ -4,11 +4,11 @@ Object.defineProperty(exports, "__esModule", {
   value: !0
 });
 exports.Utils = void 0;
-var r = require("../../../1001/93");
-var i = require("../../../1001/134/index");
-var o = require("../../259");
+var r = require("tslib");
+var i = require("inversify");
+var o = require("@kitten-team/gl-matrix");
 var a = require("./2144");
-var s = require("../2128/1320");
+var s = require("./1320");
 var c = require("./2145");
 var u = require("../../../4/127");
 var l = require("../../../125/195/index");
@@ -39,10 +39,10 @@ var m = function () {
     };
     this.cached_shadow_dom = new Map();
     this.shadow_type_map = {
-      text: '<shadow type="text"><field name="TEXT"></field></shadow>',
-      math_number: '<shadow type="math_number"><field name="NUM"></field></shadow>',
-      logic_empty: '<empty type="logic_empty"><field name="BOOL"></field></empty>',
-      lists_get: '<shadow type="lists_get"><field name="VAR"></field></shadow>'
+      text: "<shadow type=\"text\"><field name=\"TEXT\"></field></shadow>",
+      math_number: "<shadow type=\"math_number\"><field name=\"NUM\"></field></shadow>",
+      logic_empty: "<empty type=\"logic_empty\"><field name=\"BOOL\"></field></empty>",
+      lists_get: "<shadow type=\"lists_get\"><field name=\"VAR\"></field></shadow>"
     };
     this.get_shadow_dom = function (t, n, r, i) {
       var o;

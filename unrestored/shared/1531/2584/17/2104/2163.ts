@@ -4,8 +4,8 @@ Object.defineProperty(exports, "__esModule", {
   value: !0
 });
 exports.FieldLabelSerializable = void 0;
-var r = require("../../1001/93");
-var i = require("../../1001/134/index");
+var r = require("tslib");
+var i = require("inversify");
 var o = function (e) {
   function t(t) {
     var n = e.call(this, t) || this;
@@ -17,9 +17,9 @@ var o = function (e) {
   t.prototype.get_display_text = function () {
     var e = this.text_;
     if (e.length > this.max_display_length) {
-      e = e.substring(0, this.max_display_length - 2) + "\u2026";
+      e = e.substring(0, this.max_display_length - 2) + "…";
     }
-    return e = e.replace(/\s/g, "\xa0");
+    return e = e.replace(/\s/g, " ");
   };
   return t = (0, r.__decorate)([(0, i.injectable)()], t);
 }(require("../../301/652").FieldLabel);

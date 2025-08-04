@@ -1,5 +1,5 @@
-var r = require("../936/437");
-var o = require("./631").f;
+var r = require("../1678/437");
+var o = require("../1667/631/index").f;
 var i = {}.toString;
 var a = "object" == typeof window && window && Object.getOwnPropertyNames ? Object.getOwnPropertyNames(window) : [];
 module.exports.f = function (e) {

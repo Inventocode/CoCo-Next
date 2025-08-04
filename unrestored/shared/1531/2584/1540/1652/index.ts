@@ -1,13 +1,13 @@
 "use strict";
 
-var r = require("../1633/86/index");
-var o = require("../1541/530");
+var r = require("../1623/86");
+var o = require("../1684/530");
 var i = require("./1236");
-var a = require("../1633/167");
-var s = require("../1253/472");
+var a = require("../1736/167");
+var s = require("../1664/472");
 var c = require("../1683/943");
 var l = require("./1239");
-var u = require("../1745/398");
+var u = require("../1745/398/index");
 r({
   target: "Promise",
   proto: !0,

@@ -20,11 +20,11 @@ var o = function __importDefault(module) {
 }(r);
 var i = require("../7");
 var a = require("../17/index");
-var s = require("./724");
+var s = require("./724/index");
 var c = require("./723");
 var l = require("../38/index");
-var u = require("../2/index");
-var d = require("../15/index");
+var u = require("../2");
+var d = require("../15");
 var p = require("../9");
 var f = require("../141/index");
 var h = require("./262");
@@ -83,7 +83,7 @@ function v(e) {
                     if (!Object(d.j)(e)) {
                       return "invalidVariableName";
                     }
-                    return ["\u51fd\u6570", "\u51fd\u6578", "function"].includes(e) ? "preservedProcedureName" : void 0;
+                    return ["函数", "函數", "function"].includes(e) ? "preservedProcedureName" : void 0;
                   },
                   confirmCallback: function (t) {
                     if (t !== s) {

@@ -4,7 +4,7 @@ Object.defineProperty(exports, "__esModule", {
   value: !0
 });
 var r = require("../../../580");
-var i = require("../1368");
+var i = require("../1368/index");
 var o = function () {
   function e(e) {
     this._binding = e;

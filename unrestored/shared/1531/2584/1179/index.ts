@@ -10,7 +10,7 @@ var i = require("./1426");
 var a = require("./2549");
 var s = require("./2550");
 var c = require("./2551");
-var l = require("./2552/index");
+var l = require("./2552");
 var u = require("./2553/index");
 var d = require("./2554");
 Object.defineProperty(exports, "init_extensions", {
@@ -36,7 +36,7 @@ Object.defineProperty(exports, "init_tell_blocks", {
     return p.init_tell_blocks;
   }
 });
-var f = require("./2555");
+var f = require("./2555/index");
 Object.defineProperty(exports, "init_data_blocks", {
   enumerable: !0,
   get: function () {

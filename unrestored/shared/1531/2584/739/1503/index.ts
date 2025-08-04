@@ -4,7 +4,7 @@ var r = require("../../19");
 var i = require("../../108");
 var o = require("../../20");
 var a = require("../../54");
-var s = require("../../0/index");
+var s = require("react");
 var c = require("../../95");
 var u = require("../../96");
 var l = require("../../103");
@@ -77,7 +77,7 @@ function x(e, t, n) {
   return n ? e[0] === t[0] : e[0] === t[0] && e[1] === t[1];
 }
 var C = require("../../33/index");
-var O = require("../../612/790/684");
+var O = require("../../2627/790/684");
 function k(e) {
   var t = e.prefixCls;
   var n = e.motion;
@@ -124,7 +124,7 @@ function S(e) {
     });
   });
 }
-var T = require("../../556/555/index");
+var T = require("../../1500/555/index");
 var B = require("../../110");
 var D = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {

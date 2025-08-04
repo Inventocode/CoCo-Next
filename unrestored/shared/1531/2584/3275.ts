@@ -664,7 +664,7 @@ var O = function () {
               });
             }
           } catch (E) {
-            throw console.error(E), console.log("headers is ", d), new Error("Iris Error: \u8bbe\u7f6e\u8bf7\u6c42\u5934\u65f6\u51fa\u9519\uff0c\u8bf7\u68c0\u67e5\u8bf7\u6c42\u5934\uff0c\u4e0d\u80fd\u542b\u6709\u4e2d\u6587");
+            throw console.error(E), console.log("headers is ", d), new Error("Iris Error: 设置请求头时出错，请检查请求头，不能含有中文");
           }
           if (s) {
             l.send(JSON.stringify(s));
@@ -685,7 +685,7 @@ function R(t, e) {
   if (t) {
     Object.keys(t).map(function (t) {
       if (-1 === e.indexOf(t)) {
-        new T("\u8bf7\u786e\u8ba4 " + t + " \u53c2\u6570\u662f\u5426\u5408\u6cd5");
+        new T("请确认 " + t + " 参数是否合法");
       }
     });
   }
@@ -695,7 +695,7 @@ function w(t, e, n) {
     if (!e.test(r)) {
       throw new f({
         error_code: n,
-        message: "Invalid " + t + ' "' + r + '", it should match the RegExp ' + e + "."
+        message: "Invalid " + t + " \"" + r + "\", it should match the RegExp " + e + "."
       });
     }
   };
@@ -720,7 +720,7 @@ function q(t) {
   if (0 !== t && 1 !== t) {
     throw new f({
       error_code: r.INVALID_SEX,
-      message: 'Invalid sex "' + t + '", it should be 0 or 1.'
+      message: "Invalid sex \"" + t + "\", it should be 0 or 1."
     });
   }
 }
@@ -728,7 +728,7 @@ function M(t) {
   if (!Number.isInteger(t)) {
     throw new f({
       error_code: r.INVALID_BIRTHDAY,
-      message: 'Invalid birthday "' + t + '", it should be a integer number.'
+      message: "Invalid birthday \"" + t + "\", it should be a integer number."
     });
   }
 }
@@ -2587,7 +2587,7 @@ var vt = function (t) {
               n = 0 - ((null === (e = null === (t = r.options) || void 0 === t ? void 0 : t.init_options) || void 0 === e ? void 0 : e.width) || ft.width) / 2;
               return r.options.dom_id || document.getElementById(Tt) ? [3, 2] : [4, $("div", {
                 id: Tt,
-                innerHTML: '<div style="position: absolute; width: 2px; height: 2px; left: 50%; top: 50%; transform: translate(-50%, -50%); margin: ' + n + "px 0 0 " + n + 'px" id="' + Nt + '"/>'
+                innerHTML: "<div style=\"position: absolute; width: 2px; height: 2px; left: 50%; top: 50%; transform: translate(-50%, -50%); margin: " + n + "px 0 0 " + n + "px\" id=\"" + Nt + "\"/>"
               }, "position: fixed;\n          left: 0px;\n          top: 0px;\n          height: 100vh;\n          width: 100vw;\n          background: rgba(0, 0, 0, .5);\n          z-index: 999;")];
             case 1:
               o.sent();
@@ -2775,10 +2775,10 @@ var mt = function (t) {
             });
           },
           fail: function (t) {
-            throw n.fail_callback && n.fail_callback(t), new Error("\u9a8c\u8bc1\u5931\u8d25");
+            throw n.fail_callback && n.fail_callback(t), new Error("验证失败");
           },
           error: function (t) {
-            throw n.fail_callback && n.fail_callback(t), new Error("\u9a8c\u8bc1\u5f02\u5e38");
+            throw n.fail_callback && n.fail_callback(t), new Error("验证异常");
           }
         }));
       });
@@ -2818,7 +2818,7 @@ var mt = function (t) {
           case 0:
             return document.getElementById("aliyun_captcha_dom_id") ? [3, 2] : [4, $("div", {
               id: "aliyun_captcha_dom_wrapper_id",
-              innerHTML: '\n            <div\n              style="position: absolute; display: flex; flex-direction: column; padding-top: 20px; justify-content: flex-start; align-items: center; width: 400px; height: 130px; background-color: #fff; left: 50%; top: 50%; transform: translate(-50%, -50%);"\n            >\n              <div style="font-size: 20px">\u62d6\u52a8\u4e0b\u65b9\u6ed1\u5757\u5b8c\u6210\u9a8c\u8bc1</div>\n              <div\n                style="display: flex; justify-content: center; align-items: center; bottom: 20px"\n                id="aliyun_captcha_dom_id"\n              >\n              </div>\n              <div id="aliyun_captcha_dom_close_id" style="cursor: pointer; color: blue; position: absolute; top: 20px; right: 20px">\u5173\u95ed</div>\n            </div>\n          '
+              innerHTML: "\n            <div\n              style=\"position: absolute; display: flex; flex-direction: column; padding-top: 20px; justify-content: flex-start; align-items: center; width: 400px; height: 130px; background-color: #fff; left: 50%; top: 50%; transform: translate(-50%, -50%);\"\n            >\n              <div style=\"font-size: 20px\">拖动下方滑块完成验证</div>\n              <div\n                style=\"display: flex; justify-content: center; align-items: center; bottom: 20px\"\n                id=\"aliyun_captcha_dom_id\"\n              >\n              </div>\n              <div id=\"aliyun_captcha_dom_close_id\" style=\"cursor: pointer; color: blue; position: absolute; top: 20px; right: 20px\">关闭</div>\n            </div>\n          "
             }, "position: fixed;\n        left: 0px;\n        top: 0px;\n        height: 100vh;\n        width: 100vw;\n        background: rgba(0, 0, 0, .5);\n        z-index: 999;")];
           case 1:
             e.sent();
@@ -3041,7 +3041,7 @@ function bt(t) {
         C().host = r;
       }
     } else {
-      console.warn('Unknown env "' + e + '", config has been set to default value.');
+      console.warn("Unknown env \"" + e + "\", config has been set to default value.");
     }
   }
   if (void 0 !== n) {

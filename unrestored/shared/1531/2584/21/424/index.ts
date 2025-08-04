@@ -717,7 +717,7 @@ var L = function __importDefault(module) {
   });
   return defaultExport;
 }(M);
-var P = require("../../15/index");
+var P = require("../../15");
 var B = require("../../48/200");
 new D.a({
   env: B.a.env,
@@ -898,7 +898,7 @@ function Y() {
           case 10:
             e.prev = 10;
             e.t0 = e.catch(4);
-            console.error("\u56fe\u7247\u4e0a\u4f20\u5931\u8d25");
+            console.error("图片上传失败");
           case 13:
             return e.abrupt("return", null);
           case 14:
@@ -1195,10 +1195,10 @@ function _e(e, t) {
 }
 var ve = {
   "zh-CN": {
-    weekdays: ["\u661f\u671f\u65e5", "\u661f\u671f\u4e00", "\u661f\u671f\u4e8c", "\u661f\u671f\u4e09", "\u661f\u671f\u56db", "\u661f\u671f\u4e94", "\u661f\u671f\u516d"]
+    weekdays: ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"]
   },
   "zh-TW": {
-    weekdays: ["\u661f\u671f\u65e5", "\u661f\u671f\u4e00", "\u661f\u671f\u4e8c", "\u661f\u671f\u4e09", "\u661f\u671f\u56db", "\u661f\u671f\u4e94", "\u661f\u671f\u516d"]
+    weekdays: ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"]
   },
   "en-US": {
     weekdays: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
@@ -1691,7 +1691,7 @@ function Lt(e, t) {
       messageId: "argNotNumber",
       widgetId: e,
       values: {
-        name: "\u5b57\u53f7"
+        name: "字号"
       }
     });
   }
@@ -1922,7 +1922,7 @@ function wn(e, t, n, r) {
         type: "error",
         messageId: "argNotNumber",
         values: {
-          name: "\u9879\u6570"
+          name: "项数"
         }
       });
     }
@@ -1962,7 +1962,7 @@ function Cn(e, t, n) {
         type: "error",
         messageId: "argNotNumber",
         values: {
-          name: "\u9879\u6570"
+          name: "项数"
         }
       });
     }
@@ -2042,7 +2042,7 @@ function In(e, t, n, r) {
         type: "error",
         messageId: "argNotNumber",
         values: {
-          name: "\u9879\u6570"
+          name: "项数"
         }
       });
     }
@@ -2111,7 +2111,7 @@ function Nn(e, t) {
         type: "error",
         messageId: "argNotNumber",
         values: {
-          name: "\u9879\u6570"
+          name: "项数"
         }
       });
     }
@@ -2637,7 +2637,7 @@ function Or() {
             }
             K.a.condition(!1, {
               type: "warning",
-              message: "\u672a\u5f00\u542f\u58f0\u97f3\u4fa6\u6d4b\u6743\u9650\uff0c\u65e0\u6cd5\u8fdb\u884c\u4fa6\u6d4b"
+              message: "未开启声音侦测权限，无法进行侦测"
             });
             return e.abrupt("return", !1);
           case 6:
@@ -2650,7 +2650,7 @@ function Or() {
             }
             K.a.condition(!1, {
               type: "warning",
-              message: "\u672a\u5f00\u542f\u58f0\u97f3\u4fa6\u6d4b\u6743\u9650\uff0c\u65e0\u6cd5\u8fdb\u884c\u4fa6\u6d4b"
+              message: "未开启声音侦测权限，无法进行侦测"
             });
             return e.abrupt("return", !1);
           case 12:
@@ -2668,7 +2668,7 @@ function Or() {
             e.t0 = e.catch(12);
             K.a.condition(!1, {
               type: "warning",
-              message: "\u672a\u5f00\u542f\u58f0\u97f3\u4fa6\u6d4b\u6743\u9650\uff0c\u65e0\u6cd5\u8fdb\u884c\u4fa6\u6d4b"
+              message: "未开启声音侦测权限，无法进行侦测"
             });
             return e.abrupt("return", !1);
           case 24:
@@ -2875,7 +2875,7 @@ var so = require("./312");
 var co = require("../../11");
 var lo = require("../../98");
 var uo = require("../../36/index");
-var po = require("../../35/85");
+var po = require("../../36/85");
 function fo(e) {
   var t = e.ruleKey;
   var n = e.ruleOptions;
@@ -3388,7 +3388,7 @@ function di(e, t) {
       widgetId: e,
       messageId: "argNotNumber",
       values: {
-        name: "\u65cb\u8f6c\u89d2\u5ea6"
+        name: "旋转角度"
       }
     })) {
       var r = n.rotation + t / 180 * Math.PI;
@@ -3402,7 +3402,7 @@ function di(e, t) {
       messageId: "argNotNumber",
       widgetId: e,
       values: {
-        name: "\u65cb\u8f6c\u89d2\u5ea6"
+        name: "旋转角度"
       }
     });
   }
@@ -3422,7 +3422,7 @@ function pi(e, t) {
       messageId: "argNotNumber",
       widgetId: e,
       values: {
-        name: "\u65cb\u8f6c"
+        name: "旋转"
       }
     });
   }
@@ -3435,7 +3435,7 @@ function fi(e, t) {
       widgetId: e,
       messageId: "argNotNumber",
       values: {
-        name: "\u79fb\u52a8\u8ddd\u79bb"
+        name: "移动距离"
       }
     })) {
       n.move_forward(t);
@@ -3448,7 +3448,7 @@ function fi(e, t) {
       messageId: "argNotNumber",
       widgetId: e,
       values: {
-        name: "\u79fb\u52a8"
+        name: "移动"
       }
     });
   }
@@ -3462,7 +3462,7 @@ function hi(e, t) {
       messageId: "argNotNumber",
       widgetId: e,
       values: {
-        name: "\u79fb\u52a8"
+        name: "移动"
       }
     });
   }
@@ -3478,7 +3478,7 @@ function mi(e, t) {
       messageId: "argNotNumber",
       widgetId: e,
       values: {
-        name: "\u89d2\u5ea6"
+        name: "角度"
       }
     });
   }
@@ -3508,14 +3508,14 @@ function bi(e, t, n, r) {
         widgetId: e,
         messageId: "argNotNumber",
         values: {
-          name: "\u95f4\u9694\u65f6\u95f4"
+          name: "间隔时间"
         }
       }) && K.a.isNumber(r, {
         type: "error",
         widgetId: e,
         messageId: "argNotNumber",
         values: {
-          name: "\u91cd\u590d\u6b21\u6570"
+          name: "重复次数"
         }
       })) {
         K.a.range(n, {
@@ -3583,7 +3583,7 @@ function bi(e, t, n, r) {
       widgetId: e,
       messageId: "mustToBeString",
       values: {
-        name: "\u52a8\u4f5c"
+        name: "动作"
       }
     });
   }
@@ -3629,7 +3629,7 @@ function wi(e, t, n) {
       widgetId: e,
       messageId: "argNotNumber",
       values: {
-        name: "\u65cb\u8f6c\u89d2\u5ea6"
+        name: "旋转角度"
       }
     })) {
       var a = Object(si.b)(n);
@@ -3663,14 +3663,14 @@ function Ti(e, t, n) {
     widgetId: e,
     messageId: "argNotNumber",
     values: {
-      name: "x\u5750\u6807"
+      name: "x坐标"
     }
   }) && K.a.isNumber(n, {
     type: "error",
     widgetId: e,
     messageId: "argNotNumber",
     values: {
-      name: "y\u5750\u6807"
+      name: "y坐标"
     }
   })) {
     Object(a.j)(e, {
@@ -3734,7 +3734,7 @@ function Ii(e, t) {
     widgetId: e,
     messageId: "argNotNumber",
     values: {
-      name: "x\u5750\u6807"
+      name: "x坐标"
     }
   })) {
     Object(a.j)(e, {
@@ -3751,7 +3751,7 @@ function Ai(e, t) {
     widgetId: e,
     messageId: "argNotNumber",
     values: {
-      name: "y\u5750\u6807"
+      name: "y坐标"
     }
   })) {
     Object(a.j)(e, {
@@ -3771,7 +3771,7 @@ function ji(e, t, n) {
         widgetId: e,
         messageId: "argNotNumber",
         values: {
-          name: "x\u5750\u6807"
+          name: "x坐标"
         }
       })) {
         return;
@@ -3789,7 +3789,7 @@ function ji(e, t, n) {
       messageId: "argNotNumber",
       widgetId: e,
       values: {
-        name: "X\u5750\u6807"
+        name: "X坐标"
       }
     });
   }
@@ -3802,7 +3802,7 @@ function Ni(e, t, n) {
       widgetId: e,
       messageId: "argNotNumber",
       values: {
-        name: "y\u5750\u6807"
+        name: "y坐标"
       }
     })) {
       Object(a.j)(e, {
@@ -3818,7 +3818,7 @@ function Ni(e, t, n) {
       messageId: "argNotNumber",
       widgetId: e,
       values: {
-        name: "Y\u5750\u6807"
+        name: "Y坐标"
       }
     });
   }
@@ -3844,7 +3844,7 @@ function ki() {
               messageId: "argNotNumber",
               widgetId: t,
               values: {
-                name: "\u65f6\u95f4"
+                name: "时间"
               }
             });
             return e.abrupt("return");
@@ -3858,7 +3858,7 @@ function ki() {
               messageId: "argNotNumber",
               widgetId: t,
               values: {
-                name: "X\u5750\u6807"
+                name: "X坐标"
               }
             });
             return e.abrupt("return");
@@ -3923,7 +3923,7 @@ function Di() {
               messageId: "argNotNumber",
               widgetId: t,
               values: {
-                name: "\u65f6\u95f4"
+                name: "时间"
               }
             });
             return e.abrupt("return");
@@ -3937,7 +3937,7 @@ function Di() {
               messageId: "argNotNumber",
               widgetId: t,
               values: {
-                name: "Y\u5750\u6807"
+                name: "Y坐标"
               }
             });
             return e.abrupt("return");
@@ -4000,7 +4000,7 @@ function Li() {
               messageId: "argNotNumber",
               widgetId: t,
               values: {
-                name: "\u65f6\u95f4"
+                name: "时间"
               }
             });
             return e.abrupt("return");
@@ -4014,7 +4014,7 @@ function Li() {
               messageId: "argNotNumber",
               widgetId: t,
               values: {
-                name: "X\u5750\u6807"
+                name: "X坐标"
               }
             });
             return e.abrupt("return");
@@ -4028,7 +4028,7 @@ function Li() {
               messageId: "argNotNumber",
               widgetId: t,
               values: {
-                name: "Y\u5750\u6807"
+                name: "Y坐标"
               }
             });
             return e.abrupt("return");
@@ -4104,7 +4104,7 @@ function Fi() {
               widgetId: t,
               messageId: "argNotNumber",
               values: {
-                name: "\u65f6\u95f4"
+                name: "时间"
               }
             })) {
               e.next = 8;
@@ -4151,7 +4151,7 @@ function Ui() {
               widgetId: t,
               messageId: "argNotNumber",
               values: {
-                name: "\u65f6\u95f4"
+                name: "时间"
               }
             })) {
               e.next = 5;
@@ -4181,7 +4181,7 @@ function Wi(e, t) {
     widgetId: e,
     messageId: "argNotNumber",
     values: {
-      name: "\u6bd4\u4f8b\u5927\u5c0f"
+      name: "比例大小"
     }
   })) {
     var n = {
@@ -4201,7 +4201,7 @@ function Hi(e, t, n) {
     widgetId: e,
     messageId: "argNotNumber",
     values: {
-      name: "\u6bd4\u4f8b\u5927\u5c0f"
+      name: "比例大小"
     }
   })) {
     var o;
@@ -4222,7 +4222,7 @@ function Vi(e, t, n) {
     widgetId: e,
     messageId: "argNotNumber",
     values: {
-      name: "\u6bd4\u4f8b\u5927\u5c0f"
+      name: "比例大小"
     }
   })) {
     n /= 100;
@@ -4269,7 +4269,7 @@ function Yi(e, t, n, r) {
     widgetId: e,
     messageId: "argNotNumber",
     values: {
-      name: "\u6bd4\u4f8b\u5927\u5c0f"
+      name: "比例大小"
     }
   })) {
     var i;
@@ -4300,7 +4300,7 @@ function Ki(e, t, n) {
     widgetId: e,
     messageId: "argNotNumber",
     values: {
-      name: "\u4e0d\u900f\u660e\u5ea6"
+      name: "不透明度"
     }
   })) {
     var o = "number" === typeof r.opacity ? r.opacity : 100;
@@ -4462,7 +4462,7 @@ function ra(e, t, n) {
               widgetId: e,
               messageId: "actorStyleIndexNotExists",
               values: {
-                name: "\u9020\u578b"
+                name: "造型"
               }
             });
           }
@@ -4472,7 +4472,7 @@ function ra(e, t, n) {
             widgetId: e,
             messageId: "actorStyleIndexNotExists",
             values: {
-              name: "\u9020\u578b"
+              name: "造型"
             }
           });
         }
@@ -4482,7 +4482,7 @@ function ra(e, t, n) {
           widgetId: e,
           messageId: "actorStyleIndexNotExists",
           values: {
-            name: "\u9020\u578b"
+            name: "造型"
           }
         });
       }
@@ -4492,7 +4492,7 @@ function ra(e, t, n) {
         widgetId: e,
         messageId: "actorActionNameNotExists",
         values: {
-          name: "\u52a8\u4f5c"
+          name: "动作"
         }
       });
     }
@@ -4502,7 +4502,7 @@ function ra(e, t, n) {
       widgetId: e,
       messageId: "mustToBeString",
       values: {
-        name: "\u52a8\u4f5c"
+        name: "动作"
       }
     });
   }
@@ -4553,7 +4553,7 @@ function ca(e, t, n, r) {
           widgetId: e,
           messageId: "argNotNumber",
           values: {
-            name: "\u65f6\u95f4"
+            name: "时间"
           }
         })) {
           var a = t.length > 90 ? "".concat(t.substr(0, 90), "...") : t;
@@ -4938,7 +4938,7 @@ function Wa() {
               messageId: "argNotNumber",
               widgetId: t,
               values: {
-                name: "\u534a\u5f84"
+                name: "半径"
               }
             });
             return e.abrupt("return");
@@ -4982,7 +4982,7 @@ function Va() {
               messageId: "argNotNumber",
               widgetId: t,
               values: {
-                name: "\u534a\u5f84"
+                name: "半径"
               }
             });
             return e.abrupt("return");
@@ -4996,7 +4996,7 @@ function Va() {
               messageId: "argNotNumber",
               widgetId: t,
               values: {
-                name: "\u5706\u5fc3x"
+                name: "圆心x"
               }
             });
             return e.abrupt("return");
@@ -5010,7 +5010,7 @@ function Va() {
               messageId: "argNotNumber",
               widgetId: t,
               values: {
-                name: "\u5706\u5fc3y"
+                name: "圆心y"
               }
             });
             return e.abrupt("return");
@@ -5063,7 +5063,7 @@ function za(e, t, n) {
         messageId: "argNotNumber",
         widgetId: e,
         values: {
-          name: "\u89d2\u5ea6"
+          name: "角度"
         }
       });
     }
@@ -5073,7 +5073,7 @@ function za(e, t, n) {
       messageId: "argNotNumber",
       widgetId: e,
       values: {
-        name: "\u534a\u5f84"
+        name: "半径"
       }
     });
   }
@@ -5102,7 +5102,7 @@ function Ka() {
               messageId: "argNotNumber",
               widgetId: t,
               values: {
-                name: "\u534a\u5f84"
+                name: "半径"
               }
             });
             return e.abrupt("return");
@@ -5116,7 +5116,7 @@ function Ka() {
               messageId: "argNotNumber",
               widgetId: t,
               values: {
-                name: "\u89d2\u5ea6"
+                name: "角度"
               }
             });
             return e.abrupt("return");
@@ -5130,7 +5130,7 @@ function Ka() {
               messageId: "argNotNumber",
               widgetId: t,
               values: {
-                name: "\u5706\u5fc3x"
+                name: "圆心x"
               }
             });
             return e.abrupt("return");
@@ -5144,7 +5144,7 @@ function Ka() {
               messageId: "argNotNumber",
               widgetId: t,
               values: {
-                name: "\u5706\u5fc3y"
+                name: "圆心y"
               }
             });
             return e.abrupt("return");
@@ -5158,7 +5158,7 @@ function Ka() {
               messageId: "argNotNumber",
               widgetId: t,
               values: {
-                name: "\u8d77\u59cb\u4f4d\u7f6e"
+                name: "起始位置"
               }
             });
             return e.abrupt("return");
@@ -5217,7 +5217,7 @@ function qa(e, t, n) {
         messageId: "argNotNumber",
         widgetId: e,
         values: {
-          name: "\u8fb9\u957f"
+          name: "边长"
         }
       });
     }
@@ -5227,7 +5227,7 @@ function qa(e, t, n) {
       messageId: "argNotNumber",
       widgetId: e,
       values: {
-        name: "\u591a\u8fb9\u5f62"
+        name: "多边形"
       }
     });
   }
@@ -5255,7 +5255,7 @@ function Qa() {
               messageId: "argNotNumber",
               widgetId: t,
               values: {
-                name: "\u591a\u8fb9\u5f62"
+                name: "多边形"
               }
             });
             return e.abrupt("return");
@@ -5269,7 +5269,7 @@ function Qa() {
               messageId: "argNotNumber",
               widgetId: t,
               values: {
-                name: "\u8fb9\u957f"
+                name: "边长"
               }
             });
             return e.abrupt("return");
@@ -5283,7 +5283,7 @@ function Qa() {
               messageId: "argNotNumber",
               widgetId: t,
               values: {
-                name: "\u8d77\u70b9x"
+                name: "起点x"
               }
             });
             return e.abrupt("return");
@@ -5297,7 +5297,7 @@ function Qa() {
               messageId: "argNotNumber",
               widgetId: t,
               values: {
-                name: "\u8d77\u70b9y"
+                name: "起点y"
               }
             });
             return e.abrupt("return");
@@ -5423,7 +5423,7 @@ function rs(e, t) {
       messageId: "argNotNumber",
       widgetId: e,
       values: {
-        name: "\u7c97\u7ec6"
+        name: "粗细"
       }
     });
   }
@@ -5445,16 +5445,16 @@ function os(e, t, n) {
       messageId: "argNotNumber",
       widgetId: e,
       values: {
-        name: "\u7c97\u7ec6"
+        name: "粗细"
       }
     });
   }
 }
 var is = {
-  hue: "\u8272\u76f8",
-  brightness: "\u660e\u5ea6",
-  saturation: "\u9971\u548c\u5ea6",
-  alpha: "\u900f\u660e\u5ea6"
+  hue: "色相",
+  brightness: "明度",
+  saturation: "饱和度",
+  alpha: "透明度"
 };
 function as(e, t, n) {
   if ("number" === typeof n) {
@@ -6607,7 +6607,7 @@ function Yc(e, t) {
         messageId: "argNotNumber",
         widgetId: e,
         values: {
-          name: "\u6ed1\u5757\u4f4d\u7f6e"
+          name: "滑块位置"
         }
       });
     }
@@ -6641,7 +6641,7 @@ function Kc(e, t) {
         messageId: "argNotNumber",
         widgetId: e,
         values: {
-          name: "\u6700\u5927\u503c"
+          name: "最大值"
         }
       });
     }
@@ -6675,7 +6675,7 @@ function qc(e, t) {
         messageId: "argNotNumber",
         widgetId: e,
         values: {
-          name: "\u6700\u5c0f\u503c"
+          name: "最小值"
         }
       });
     }
@@ -7095,7 +7095,7 @@ function Tl() {
               e.next = 6;
               break;
             }
-            Object(ps.fb)(t, 601, "\u975e\u6cd5\u7684\u8bf7\u6c42\u94fe\u63a5");
+            Object(ps.fb)(t, 601, "非法的请求链接");
             return e.abrupt("return");
           case 6:
             if (o = new URL(r.url), a = o.search ? {} : r.params, s = El(r.url, a), !Object(i.d)()) {
@@ -7141,7 +7141,7 @@ function Tl() {
                   type: "error",
                   messageId: "httpOnWeakNetworkTips"
                 });
-                Object(ps.fb)(t, 602, "\u7f51\u7edc\u65ad\u5f00\u4e2d");
+                Object(ps.fb)(t, 602, "网络断开中");
               }
             }
           case 25:
@@ -7183,7 +7183,7 @@ function Il() {
               e.next = 9;
               break;
             }
-            Object(ps.fb)(t, 601, "\u975e\u6cd5\u7684\u8bf7\u6c42\u94fe\u63a5");
+            Object(ps.fb)(t, 601, "非法的请求链接");
             return e.abrupt("return");
           case 9:
             if (a = r || o.body, !Object(i.d)()) {
@@ -7232,7 +7232,7 @@ function Il() {
                   type: "error",
                   messageId: "httpOnWeakNetworkTips"
                 });
-                Object(ps.fb)(t, 602, "\u7f51\u7edc\u65ad\u5f00\u4e2d");
+                Object(ps.fb)(t, 602, "网络断开中");
               }
             }
           case 28:
@@ -7269,7 +7269,7 @@ function Nl(e, t) {
 var Rl = require("../../48/87");
 var kl = require("../../27");
 var xl = require("../../40");
-var Dl = require("../../24/481/index");
+var Dl = require("socket.io-client");
 var Ml = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -7299,7 +7299,7 @@ var Fl = function () {
       if (e.message) {
         Ll.emitRoomError(e.message);
       } else {
-        Ll.emitRoomError("\u7f51\u7edc\u5f02\u5e38");
+        Ll.emitRoomError("网络异常");
       }
     };
     this.onMemberJoin = function (e) {
@@ -7504,7 +7504,7 @@ function Ul(e, t, n) {
     var o = e.message;
     if (L.a.isAxiosError(e)) {
       if ("ECONNABORTED" === e.code) {
-        o = "\u7f51\u7edc\u6709\u95ee\u9898";
+        o = "网络有问题";
       } else {
         if (null === (t = e.response) || void 0 === t || null === (r = t.data) || void 0 === r ? void 0 : r.msg) {
           o = e.response.data.msg;
@@ -7514,7 +7514,7 @@ function Ul(e, t, n) {
     if (n) {
       K.a.condition(!1, {
         type: "error",
-        message: "\u623f\u95f4\u79ef\u6728\uff1a".concat(o)
+        message: "房间积木：".concat(o)
       });
       return Promise.resolve(n(o));
     }
@@ -7545,7 +7545,7 @@ function zl() {
               type: "error",
               messageId: "argNotNumber",
               values: {
-                name: "\u623f\u95f4\u4eba\u6570"
+                name: "房间人数"
               }
             });
             return e.abrupt("return", Ul(Object(R.a)(j.a.mark(function e() {
@@ -7562,7 +7562,7 @@ function zl() {
                       e.next = 4;
                       return Rl.c(t, i, n).then(function (e) {
                         if (!e) {
-                          o("\u521b\u5efa\u623f\u95f4\u5931\u8d25");
+                          o("创建房间失败");
                         }
                       });
                     case 4:
@@ -7672,13 +7672,13 @@ function Xl() {
                         e.next = 11;
                         break;
                       }
-                      throw console.error("\u8fdb\u5165\u623f\u95f4\u5931\u8d25"), new Error("\u8fdb\u5165\u623f\u95f4\u5931\u8d25");
+                      throw console.error("进入房间失败"), new Error("进入房间失败");
                     case 11:
                       if (void 0 !== r) {
                         e.next = 14;
                         break;
                       }
-                      throw console.error("\u672a\u8bbe\u7f6e\u6635\u79f0"), new Error("\u672a\u8bbe\u7f6e\u6635\u79f0");
+                      throw console.error("未设置昵称"), new Error("未设置昵称");
                     case 14:
                       if (Gl.session) {
                         Gl.session.leave();
@@ -8255,7 +8255,7 @@ function Mu() {
                     console.error("getPicture fail:", t);
                     if ("number" === typeof t) {
                       Nu("error", "cameraTakePhotoFail");
-                      window.plugins.toast.showShortTop("\u76f8\u673a\u6ca1\u6709\u6743\u9650\u62cd\u7167", n, n);
+                      window.plugins.toast.showShortTop("相机没有权限拍照", n, n);
                     }
                   }, {
                     quality: 50,
@@ -8752,7 +8752,7 @@ function cd() {
             e.prev = 10;
             e.t0 = e.catch(0);
             if ((c = e.t0.message).toLocaleLowerCase().includes("network error")) {
-              c = "\u7f51\u7edc\u5f02\u5e38";
+              c = "网络异常";
             }
             K.a.log({
               type: "error",
@@ -8763,7 +8763,7 @@ function cd() {
               }
             });
             if (Object(i.d)()) {
-              window.plugins.toast.showShortTop("\u7f51\u7edc\u4e0d\u7a33\u5b9a\uff0c\u90e8\u5206\u4e91\u6570\u636e\u6e90\u83b7\u53d6\u5931\u8d25\uff0c\u53ef\u80fd\u5f71\u54cd\u4f5c\u54c1\u6548\u679c");
+              window.plugins.toast.showShortTop("网络不稳定，部分云数据源获取失败，可能影响作品效果");
             }
           case 16:
           case "end":
@@ -8875,7 +8875,7 @@ function md(e, t) {
       type: "error",
       messageId: "mustToBeString",
       values: {
-        name: "\u6570\u636e\u6e90"
+        name: "数据源"
       },
       widgetId: e
     });
@@ -8955,7 +8955,7 @@ function wd(e, t, n) {
       type: "error",
       messageId: "mustToBeString",
       values: {
-        name: "\u7ed1\u5b9a\u540d\u79f0"
+        name: "绑定名称"
       },
       widgetId: e
     });
@@ -9011,7 +9011,7 @@ function Cd(e, t, n, r, o) {
       type: "error",
       messageId: "argNotNumber",
       values: {
-        name: "\u884c\u6570"
+        name: "行数"
       },
       widgetId: e
     });
@@ -9050,7 +9050,7 @@ function Td(e, t, n, r) {
       type: "error",
       messageId: "argNotNumber",
       values: {
-        name: "\u884c\u6570"
+        name: "行数"
       },
       widgetId: e
     });
@@ -9140,7 +9140,7 @@ function jd() {
             };
             return e.abrupt("return", Promise.resolve(n));
           case 13:
-            console.error("\u65e0\u6cd5\u83b7\u53d6\u7535\u91cf\u503c\uff0c\u8fd4\u56de -1");
+            console.error("无法获取电量值，返回 -1");
             return e.abrupt("return", Promise.resolve({
               level: -1,
               charging: !1
@@ -9241,7 +9241,7 @@ function Fd() {
                         e.next = 4;
                         break;
                       }
-                      throw new Error("\u63d2\u5165\u6570\u636e\u683c\u5f0f\u9519\u8bef");
+                      throw new Error("插入数据格式错误");
                     case 4:
                       if (!i.every(function (e) {
                         return "" === e;
@@ -9249,7 +9249,7 @@ function Fd() {
                         e.next = 6;
                         break;
                       }
-                      throw new Error("\u63d2\u5165\u7a7a\u6570\u636e\u9519\u8bef");
+                      throw new Error("插入空数据错误");
                     case 6:
                       e.next = 14;
                       break;
@@ -9304,7 +9304,7 @@ function Ud() {
                         e.next = 7;
                         break;
                       }
-                      throw (n = new Error()).cloudDBId = t, n.errorInfo = "\u6240\u9009\u5217\u4e0d\u5b58\u5728", n.code = kd.COLUMN_CANNOT_FOUND, n;
+                      throw (n = new Error()).cloudDBId = t, n.errorInfo = "所选列不存在", n.code = kd.COLUMN_CANNOT_FOUND, n;
                     case 7:
                       e.next = 9;
                       return Dd.k(t, c.id, r, o);
@@ -9357,7 +9357,7 @@ function Hd() {
                         e.next = 7;
                         break;
                       }
-                      throw (n = new Error()).cloudDBId = t, n.errorInfo = "\u6240\u9009\u5217\u4e0d\u5b58\u5728", n.code = kd.COLUMN_CANNOT_FOUND, n;
+                      throw (n = new Error()).cloudDBId = t, n.errorInfo = "所选列不存在", n.code = kd.COLUMN_CANNOT_FOUND, n;
                     case 7:
                       e.next = 9;
                       return Dd.o(t, u.id, r, o, d.id, a);
@@ -9410,7 +9410,7 @@ function zd() {
                         e.next = 6;
                         break;
                       }
-                      throw (n = new Error()).cloudDBId = t, n.errorInfo = "\u6240\u9009\u5217\u4e0d\u5b58\u5728", n.code = kd.COLUMN_CANNOT_FOUND, n;
+                      throw (n = new Error()).cloudDBId = t, n.errorInfo = "所选列不存在", n.code = kd.COLUMN_CANNOT_FOUND, n;
                     case 6:
                       e.prev = 6;
                       e.next = 9;
@@ -9544,7 +9544,7 @@ function Zd(e, t, n, r) {
         type: "error",
         messageId: "argNotNumber",
         values: {
-          name: "\u884c"
+          name: "行"
         },
         widgetId: e
       });
@@ -9580,7 +9580,7 @@ function $d(e, t, n) {
         type: "error",
         messageId: "argNotNumber",
         values: {
-          name: "\u884c"
+          name: "行"
         },
         widgetId: e
       });
@@ -9634,7 +9634,7 @@ function np(e, t) {
         type: "error",
         messageId: "argNotNumber",
         values: {
-          name: "\u884c"
+          name: "行"
         },
         widgetId: e
       });
@@ -9667,7 +9667,7 @@ function rp(e, t, n) {
         type: "error",
         messageId: "argNotNumber",
         values: {
-          name: "\u884c"
+          name: "行"
         },
         widgetId: e
       });
@@ -9728,7 +9728,7 @@ function sp(e, t) {
         type: "error",
         messageId: "argNotNumber",
         values: {
-          name: "\u884c"
+          name: "行"
         },
         widgetId: e
       });
@@ -9962,7 +9962,7 @@ function vp() {
             }
             return e.abrupt("return", l.data);
           case 15:
-            throw 40400914 === l.code && (l.msg = "\u5bb9\u91cf\u5df2\u8fbe\u4e0a\u9650"), new Error(l.msg);
+            throw 40400914 === l.code && (l.msg = "容量已达上限"), new Error(l.msg);
           case 17:
             e.next = 25;
             break;
@@ -10241,7 +10241,7 @@ function Ap(e, t, n, r, o) {
   }).catch(function (n) {
     var r = n.errorInfo || n.message;
     if (r.toLocaleLowerCase().includes("network error")) {
-      r = "\u7f51\u7edc\u5f02\u5e38";
+      r = "网络异常";
     }
     Ll.emitCloudDictError("".concat(e, "_").concat(t), r);
     K.a.log({
@@ -10286,7 +10286,7 @@ function Rp() {
                         break;
                       }
                       throw new Error(JSON.stringify({
-                        msg: "\u672a\u7ed1\u5b9a\u6570\u636e\u6e90"
+                        msg: "未绑定数据源"
                       }));
                     case 4:
                       if (n !== Z.h) {
@@ -10294,7 +10294,7 @@ function Rp() {
                         break;
                       }
                       throw new Error(JSON.stringify({
-                        msg: "\u672a\u9009\u62e9key"
+                        msg: "未选择key"
                       }));
                     case 6:
                       if ("string" === typeof n || "number" === typeof n) {
@@ -10302,7 +10302,7 @@ function Rp() {
                         break;
                       }
                       throw new Error(JSON.stringify({
-                        msg: "\u5d4c\u5165\u79ef\u6728\u7684\u8fd4\u56de\u503c\u4e0d\u662f\u5b57\u7b26\u4e32\u7c7b\u578b"
+                        msg: "嵌入积木的返回值不是字符串类型"
                       }));
                     case 8:
                       if (!(n.toString().length > 150)) {
@@ -10310,7 +10310,7 @@ function Rp() {
                         break;
                       }
                       throw new Error(JSON.stringify({
-                        msg: "\u8d85\u51fakey\u957f\u5ea6\u9650\u5236\uff08150\u4e2a\u5b57\u7b26\uff09"
+                        msg: "超出key长度限制（150个字符）"
                       }));
                     case 10:
                       if (!((i = "object" === typeof r ? JSON.stringify(r) : r.toString()).length > 2e3)) {
@@ -10318,7 +10318,7 @@ function Rp() {
                         break;
                       }
                       throw new Error(JSON.stringify({
-                        msg: "\u8d85\u51favalue\u957f\u5ea6\u9650\u5236\uff082k\u4e2a\u5b57\u7b26\uff09"
+                        msg: "超出value长度限制（2k个字符）"
                       }));
                     case 13:
                       e.next = 15;
@@ -10369,7 +10369,7 @@ function xp() {
                         break;
                       }
                       throw new Error(JSON.stringify({
-                        msg: "\u672a\u7ed1\u5b9a\u6570\u636e\u6e90"
+                        msg: "未绑定数据源"
                       }));
                     case 4:
                       if (n !== Z.h) {
@@ -10377,7 +10377,7 @@ function xp() {
                         break;
                       }
                       throw new Error(JSON.stringify({
-                        msg: "\u672a\u9009\u62e9key"
+                        msg: "未选择key"
                       }));
                     case 6:
                       if ("string" === typeof n || "number" === typeof n) {
@@ -10385,7 +10385,7 @@ function xp() {
                         break;
                       }
                       throw new Error(JSON.stringify({
-                        msg: "\u5d4c\u5165\u79ef\u6728\u7684\u8fd4\u56de\u503c\u4e0d\u662f\u5b57\u7b26\u4e32\u7c7b\u578b"
+                        msg: "嵌入积木的返回值不是字符串类型"
                       }));
                     case 8:
                       e.next = 10;
@@ -10437,7 +10437,7 @@ function Mp() {
                         break;
                       }
                       throw new Error(JSON.stringify({
-                        msg: "\u672a\u7ed1\u5b9a\u6570\u636e\u6e90"
+                        msg: "未绑定数据源"
                       }));
                     case 4:
                       if (n !== Z.h) {
@@ -10445,7 +10445,7 @@ function Mp() {
                         break;
                       }
                       throw new Error(JSON.stringify({
-                        msg: "\u672a\u9009\u62e9key"
+                        msg: "未选择key"
                       }));
                     case 6:
                       if ("string" === typeof n || "number" === typeof n) {
@@ -10453,7 +10453,7 @@ function Mp() {
                         break;
                       }
                       throw new Error(JSON.stringify({
-                        msg: "\u5d4c\u5165\u79ef\u6728\u7684\u8fd4\u56de\u503c\u4e0d\u662f\u5b57\u7b26\u4e32\u7c7b\u578b"
+                        msg: "嵌入积木的返回值不是字符串类型"
                       }));
                     case 8:
                       e.next = 10;
@@ -10511,7 +10511,7 @@ function Pp() {
                         break;
                       }
                       throw new Error(JSON.stringify({
-                        msg: "\u672a\u7ed1\u5b9a\u6570\u636e\u6e90"
+                        msg: "未绑定数据源"
                       }));
                     case 4:
                       e.next = 6;
@@ -10564,7 +10564,7 @@ function Fp() {
                         break;
                       }
                       throw new Error(JSON.stringify({
-                        msg: "\u672a\u7ed1\u5b9a\u6570\u636e\u6e90"
+                        msg: "未绑定数据源"
                       }));
                     case 4:
                       e.next = 6;
@@ -10616,7 +10616,7 @@ function Up() {
                         break;
                       }
                       throw new Error(JSON.stringify({
-                        msg: "\u672a\u7ed1\u5b9a\u6570\u636e\u6e90"
+                        msg: "未绑定数据源"
                       }));
                     case 4:
                       e.next = 6;
@@ -10653,17 +10653,17 @@ function Yp(e, t) {
   r.cloudTableId = e;
   if (void 0 === t || null === t) {
     throw r.message = JSON.stringify({
-      msg: "\u5d4c\u5165\u79ef\u6728\u7684\u8fd4\u56de\u503c\u4e0d\u662f\u5b57\u7b26\u4e32\u7c7b\u578b"
+      msg: "嵌入积木的返回值不是字符串类型"
     }), r;
   }
   if ("object" === typeof t) {
     throw r.message = JSON.stringify({
-      msg: "\u5d4c\u5165\u79ef\u6728\u7684\u8fd4\u56de\u503c\u4e0d\u662f\u5b57\u7b26\u4e32\u7c7b\u578b"
+      msg: "嵌入积木的返回值不是字符串类型"
     }), r;
   }
   if ((n = t.toString()).length > 1e3) {
     throw r.message = JSON.stringify({
-      msg: "\u5b58\u50a8\u7684\u6570\u636e\u8d85\u51fa\u5355\u5143\u683c\u9650\u5236\uff081k\u4e2a\u5b57\u7b26\uff09"
+      msg: "存储的数据超出单元格限制（1k个字符）"
     }), r;
   }
   return n;
@@ -10714,12 +10714,12 @@ function qp() {
               var e = d[u];
               if (e === Z.h) {
                 throw n.message = JSON.stringify({
-                  msg: "\u672a\u9009\u62e9\u5217"
+                  msg: "未选择列"
                 }), n;
               }
               if ("string" !== typeof e && "number" !== typeof e) {
                 throw n.message = JSON.stringify({
-                  msg: "\u5d4c\u5165\u79ef\u6728\u7684\u8fd4\u56de\u503c\u4e0d\u662f\u5b57\u7b26\u4e32\u7c7b\u578b"
+                  msg: "嵌入积木的返回值不是字符串类型"
                 }), n;
               }
               if ("number" === typeof e) {
@@ -10759,7 +10759,7 @@ function Xp(e, t, n, r, o) {
   }).catch(function (n) {
     var r = n.errorInfo || n.message;
     if (r.toLocaleLowerCase().includes("network error") || r.toLocaleLowerCase().includes("timeout")) {
-      r = "\u7f51\u7edc\u5f02\u5e38";
+      r = "网络异常";
     }
     var i = {
       errorInfo: r,
@@ -10797,13 +10797,13 @@ function Zp() {
                         e.next = 4;
                         break;
                       }
-                      throw new Error("\u672a\u7ed1\u5b9a\u6570\u636e\u6e90");
+                      throw new Error("未绑定数据源");
                     case 4:
                       if (void 0 !== n && null !== n) {
                         e.next = 6;
                         break;
                       }
-                      throw new Error("\u5d4c\u5165\u79ef\u6728\u7684\u8fd4\u56de\u503c\u4e0d\u662f\u5b57\u7b26\u4e32\u7c7b\u578b");
+                      throw new Error("嵌入积木的返回值不是字符串类型");
                     case 6:
                       if ("object" !== typeof n) {
                         e.next = 14;
@@ -10813,7 +10813,7 @@ function Zp() {
                         e.next = 11;
                         break;
                       }
-                      throw new Error("\u5d4c\u5165\u79ef\u6728\u7684\u8fd4\u56de\u503c\u4e0d\u662f\u5b57\u7b26\u4e32\u7c7b\u578b");
+                      throw new Error("嵌入积木的返回值不是字符串类型");
                     case 11:
                       r = n.map(function (e) {
                         return e.toString();
@@ -10838,7 +10838,7 @@ function Zp() {
                       e.next = 23;
                       break;
                     case 22:
-                      throw new Error("\u5d4c\u5165\u79ef\u6728\u7684\u8fd4\u56de\u503c\u4e0d\u662f\u5b57\u7b26\u4e32\u7c7b\u578b");
+                      throw new Error("嵌入积木的返回值不是字符串类型");
                     case 23:
                       e.next = 29;
                       break;
@@ -10908,7 +10908,7 @@ function $p() {
                         break;
                       }
                       throw new Error(JSON.stringify({
-                        msg: "\u672a\u7ed1\u5b9a\u6570\u636e\u6e90"
+                        msg: "未绑定数据源"
                       }));
                     case 4:
                       e.next = 6;
@@ -10965,7 +10965,7 @@ function tf() {
                         break;
                       }
                       throw new Error(JSON.stringify({
-                        msg: "\u672a\u7ed1\u5b9a\u6570\u636e\u6e90"
+                        msg: "未绑定数据源"
                       }));
                     case 4:
                       e.next = 6;
@@ -11028,7 +11028,7 @@ function rf() {
                         break;
                       }
                       throw new Error(JSON.stringify({
-                        msg: "\u672a\u7ed1\u5b9a\u6570\u636e\u6e90"
+                        msg: "未绑定数据源"
                       }));
                     case 4:
                       e.next = 6;
@@ -11099,7 +11099,7 @@ function af() {
                         break;
                       }
                       throw new Error(JSON.stringify({
-                        msg: "\u672a\u7ed1\u5b9a\u6570\u636e\u6e90"
+                        msg: "未绑定数据源"
                       }));
                     case 4:
                       e.next = 6;
@@ -11146,7 +11146,7 @@ function cf() {
                         break;
                       }
                       throw new Error(JSON.stringify({
-                        msg: "\u672a\u7ed1\u5b9a\u6570\u636e\u6e90"
+                        msg: "未绑定数据源"
                       }));
                     case 4:
                       e.next = 6;

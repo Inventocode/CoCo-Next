@@ -1,7 +1,7 @@
 "use strict";
 
-var r = require("./1633/86/index");
-var o = require("./1714/399").map;
+var r = require("./1623/86");
+var o = require("./1733/399").map;
 r({
   target: "Array",
   proto: !0,

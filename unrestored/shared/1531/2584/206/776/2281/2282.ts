@@ -710,7 +710,7 @@
           e.buildMessage = function (e, t) {
             var n = {
               literal: function (e) {
-                return '"' + i(e.text) + '"';
+                return "\"" + i(e.text) + "\"";
               },
               class: function (e) {
                 var t;
@@ -734,7 +734,7 @@
               return e.charCodeAt(0).toString(16).toUpperCase();
             }
             function i(e) {
-              return e.replace(/\\/g, "\\\\").replace(/"/g, '\\"').replace(/\0/g, "\\0").replace(/\t/g, "\\t").replace(/\n/g, "\\n").replace(/\r/g, "\\r").replace(/[\x00-\x0F]/g, function (e) {
+              return e.replace(/\\/g, "\\\\").replace(/"/g, "\\\"").replace(/\0/g, "\\0").replace(/\t/g, "\\t").replace(/\n/g, "\\n").replace(/\r/g, "\\r").replace(/[\x00-\x0F]/g, function (e) {
                 return "\\x0" + r(e);
               }).replace(/[\x10-\x1F\x7F-\x9F]/g, function (e) {
                 return "\\x" + r(e);
@@ -774,7 +774,7 @@
                   return o.slice(0, -1).join(", ") + ", or " + o[o.length - 1];
               }
             }(e) + " but " + function (e) {
-              return e ? '"' + i(e) + '"' : "end of input";
+              return e ? "\"" + i(e) + "\"" : "end of input";
             }(t) + " found.";
           };
           return {
@@ -819,9 +819,9 @@
                   value: n
                 };
               };
-              var B = _e('"', !1);
+              var B = _e("\"", !1);
               var D = /^[^\\"]/;
-              var I = Ae(["\\", '"'], !0, !1);
+              var I = Ae(["\\", "\""], !0, !1);
               var F = _e("\\", !1);
               var R = {
                 type: "any"
@@ -845,7 +845,7 @@
                       case "t":
                         return "\t";
                       case "v":
-                        return "\v";
+                        return "\u000b";
                       default:
                         return t;
                     }
@@ -890,7 +890,7 @@
               var pe = {};
               if ("startRule" in n) {
                 if (!(n.startRule in c)) {
-                  throw new Error("Can't start parsing from rule \"" + n.startRule + '".');
+                  throw new Error("Can't start parsing from rule \"" + n.startRule + "\".");
                 }
                 u = c[n.startRule];
               }
@@ -1491,7 +1491,7 @@
                       }
                       e = le;
                       if (34 === t.charCodeAt(le)) {
-                        n = '"';
+                        n = "\"";
                         le++;
                       } else {
                         n = s;
@@ -1538,7 +1538,7 @@
                         }
                         if (r !== s) {
                           if (34 === t.charCodeAt(le)) {
-                            i = '"';
+                            i = "\"";
                             le++;
                           } else {
                             i = s;
@@ -2523,4 +2523,4 @@
     y.query = y;
     return y;
   }();
-}).call(this, require("../../../31/251"));
+}).call(this, require("../../../710/251"));

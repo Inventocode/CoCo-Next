@@ -4,8 +4,8 @@ Object.defineProperty(exports, "__esModule", {
   value: !0
 });
 exports.Events = void 0;
-var r = require("../../1001/93");
-var i = require("../../1001/134/index");
+var r = require("tslib");
+var i = require("inversify");
 var o = require("../642");
 var a = require("../640/index");
 var s = require("../../125/195/index");

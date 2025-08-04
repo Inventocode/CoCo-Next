@@ -1,7 +1,7 @@
 "use strict";
 
 var r = require("../20");
-var i = require("../0/index");
+var i = require("react");
 var o = {
   icon: {
     tag: "svg",

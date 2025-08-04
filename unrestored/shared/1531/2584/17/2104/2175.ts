@@ -4,16 +4,16 @@ Object.defineProperty(exports, "__esModule", {
   value: !0
 });
 exports.SimplifiedWorkspaceComment = void 0;
-var r = require("../../1001/93");
-var i = require("../../1001/134/index");
-var o = require("../259");
+var r = require("tslib");
+var i = require("inversify");
+var o = require("@kitten-team/gl-matrix");
 var a = require("../../4/127");
 var s = require("../../125/195/index");
 var c = require("../../125/index");
 var u = require("../../1001/213/index");
 var l = require("../../125/294");
 var f = require("../497/644");
-var d = require("./1325/755");
+var d = require("./2174/755");
 var h = function (e) {
   function t(t, n, r, i) {
     var a = e.call(this, t) || this;

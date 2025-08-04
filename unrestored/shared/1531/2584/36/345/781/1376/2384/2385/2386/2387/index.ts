@@ -5,7 +5,7 @@ var i = Function;
 var o = TypeError;
 var a = function (e) {
   try {
-    return i('"use strict"; return (' + e + ").constructor;")();
+    return i("\"use strict\"; return (" + e + ").constructor;")();
   } catch (t) {}
 };
 var s = Object.getOwnPropertyDescriptor;
@@ -226,7 +226,7 @@ module.exports = function (e, t) {
     throw new o("intrinsic name must be a non-empty string");
   }
   if (arguments.length > 1 && "boolean" !== typeof t) {
-    throw new o('"allowMissing" argument must be a boolean');
+    throw new o("\"allowMissing\" argument must be a boolean");
   }
   var n = x(e);
   var i = n.length > 0 ? n[0] : "";
@@ -243,7 +243,7 @@ module.exports = function (e, t) {
     var _ = n[d];
     var A = b(_, 0, 1);
     var y = b(_, -1);
-    if (('"' === A || "'" === A || "`" === A || '"' === y || "'" === y || "`" === y) && A !== y) {
+    if (("\"" === A || "'" === A || "`" === A || "\"" === y || "'" === y || "`" === y) && A !== y) {
       throw new r("property names with quotes must have matching quotes");
     }
     if (!("constructor" !== _ && h)) {

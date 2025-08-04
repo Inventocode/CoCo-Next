@@ -1,6 +1,6 @@
-var r = require("./1301/index");
-var i = require("./838");
-var o = require("./1302").ArraySet;
+var r = require("../1976/1301/index");
+var i = require("../1979/838");
+var o = require("../1976/1302").ArraySet;
 var a = require("./1975").MappingList;
 function s(e) {
   if (!e) {
@@ -110,7 +110,7 @@ s.prototype.applySourceMap = function (e, t, n) {
   var r = t;
   if (null == t) {
     if (null == e.file) {
-      throw new Error('SourceMapGenerator.prototype.applySourceMap requires either an explicit source file, or the source map\'s "file" property. Both were omitted.');
+      throw new Error("SourceMapGenerator.prototype.applySourceMap requires either an explicit source file, or the source map's \"file\" property. Both were omitted.");
     }
     r = e.file;
   }

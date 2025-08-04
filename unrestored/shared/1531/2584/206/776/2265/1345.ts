@@ -19,12 +19,12 @@ module.exports = {
     r(["".concat(t.currentSegments.map(i).join(","), ")"), "".concat(e.type).concat(n ? ":exit" : "")].join(" "));
   } : r,
   dumpDot: r.enabled ? function (e) {
-    var t = '\ndigraph {\nnode[shape=box,style="rounded,filled",fillcolor=white];\ninitial[label="",shape=circle,style=filled,fillcolor=black,width=0.25,height=0.25];\n';
+    var t = "\ndigraph {\nnode[shape=box,style=\"rounded,filled\",fillcolor=white];\ninitial[label=\"\",shape=circle,style=filled,fillcolor=black,width=0.25,height=0.25];\n";
     if (e.returnedSegments.length > 0) {
-      t += 'final[label="",shape=doublecircle,style=filled,fillcolor=black,width=0.25,height=0.25];\n';
+      t += "final[label=\"\",shape=doublecircle,style=filled,fillcolor=black,width=0.25,height=0.25];\n";
     }
     if (e.thrownSegments.length > 0) {
-      t += 'thrown[label="\u2718",shape=circle,width=0.3,height=0.3,fixedsize];\n';
+      t += "thrown[label=\"✘\",shape=circle,width=0.3,height=0.3,fixedsize];\n";
     }
     var n = Object.create(null);
     var i = this.makeDotArrows(e, n);
@@ -32,9 +32,9 @@ module.exports = {
       var a = n[o];
       t += "".concat(o, "[");
       if (a.reachable) {
-        t += 'label="';
+        t += "label=\"";
       } else {
-        t += 'style="rounded,dashed,filled",fillcolor="#FF9800",label="<<unreachable>>\\n';
+        t += "style=\"rounded,dashed,filled\",fillcolor=\"#FF9800\",label=\"<<unreachable>>\\n";
       }
       if (a.internal.nodes.length > 0 || a.internal.exitNodes.length > 0) {
         t += [].concat(a.internal.nodes.map(function (e) {
@@ -59,7 +59,7 @@ module.exports = {
       } else {
         t += "????";
       }
-      t += '"];\n';
+      t += "\"];\n";
     }
     t += "".concat(i, "\n");
     r("DOT", t += "}");

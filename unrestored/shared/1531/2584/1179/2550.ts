@@ -5,7 +5,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.init_math_blocks = void 0;
 var r = require("../4/127");
-var o = require("./2552/579");
+var o = require("./2555/579");
 exports.init_math_blocks = function (e) {
   var t = e.Blocks;
   e.define_blocks_with_json_array([{
@@ -208,14 +208,14 @@ exports.init_math_blocks = function (e) {
     }
   };
   Object.assign(e.blocks_xml, {
-    random: '<block type="random">\n      ' + (0, o.number_value)("a", "0") + "\n      " + (0, o.number_value)("b", "5") + "\n    </block>\n    ",
-    divisible_by: '<block type="divisible_by">\n      ' + (0, o.number_value)("NUMBER_TO_CHECK", "9") + "\n      " + (0, o.number_value)("DIVISOR", "3") + "\n    </block>\n    ",
-    calculate: '<block type="calculate">\n      ' + (0, o.text_value)("input", "1+2") + "\n    </block>\n    ",
-    math_arithmetic: '<block type="math_arithmetic">\n      ' + (0, o.number_value)("A", "0") + "\n      " + (0, o.number_value)("B", "0") + "\n    </block>\n    ",
-    math_single: '<block type="math_single">\n      ' + (0, o.number_value)("NUM", "0") + "\n    </block>\n    ",
-    math_round: '<block type="math_round">\n      ' + (0, o.number_value)("NUM", "3.1") + "\n    </block>\n    ",
-    math_modulo: '<block type="math_modulo">\n      ' + (0, o.number_value)("DIVIDEND", "64") + "\n      " + (0, o.number_value)("DIVISOR", "10") + "\n    </block>\n    ",
-    math_number_property: '<block type="math_number_property">\n      ' + (0, o.number_value)("NUMBER_TO_CHECK", "0") + "\n    </block>\n    ",
-    math_trig: '<block type="math_trig">\n      ' + (0, o.number_value)("NUM", "45") + "\n    </block>\n    "
+    random: "<block type=\"random\">\n      " + (0, o.number_value)("a", "0") + "\n      " + (0, o.number_value)("b", "5") + "\n    </block>\n    ",
+    divisible_by: "<block type=\"divisible_by\">\n      " + (0, o.number_value)("NUMBER_TO_CHECK", "9") + "\n      " + (0, o.number_value)("DIVISOR", "3") + "\n    </block>\n    ",
+    calculate: "<block type=\"calculate\">\n      " + (0, o.text_value)("input", "1+2") + "\n    </block>\n    ",
+    math_arithmetic: "<block type=\"math_arithmetic\">\n      " + (0, o.number_value)("A", "0") + "\n      " + (0, o.number_value)("B", "0") + "\n    </block>\n    ",
+    math_single: "<block type=\"math_single\">\n      " + (0, o.number_value)("NUM", "0") + "\n    </block>\n    ",
+    math_round: "<block type=\"math_round\">\n      " + (0, o.number_value)("NUM", "3.1") + "\n    </block>\n    ",
+    math_modulo: "<block type=\"math_modulo\">\n      " + (0, o.number_value)("DIVIDEND", "64") + "\n      " + (0, o.number_value)("DIVISOR", "10") + "\n    </block>\n    ",
+    math_number_property: "<block type=\"math_number_property\">\n      " + (0, o.number_value)("NUMBER_TO_CHECK", "0") + "\n    </block>\n    ",
+    math_trig: "<block type=\"math_trig\">\n      " + (0, o.number_value)("NUM", "45") + "\n    </block>\n    "
   });
 };

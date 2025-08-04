@@ -1,6 +1,6 @@
-var r = require("./1633/86/index");
-var o = require("./1666/241");
-var i = require("./1541/386/index").f;
+var r = require("./1623/86");
+var o = require("./1659/241");
+var i = require("./1659/386/index").f;
 r({
   target: "Reflect",
   stat: !0

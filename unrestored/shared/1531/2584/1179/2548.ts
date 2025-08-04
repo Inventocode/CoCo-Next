@@ -4,7 +4,7 @@ Object.defineProperty(exports, "__esModule", {
   value: !0
 });
 exports.init_events_blocks = void 0;
-var r = require("./2552/579");
+var r = require("./2555/579");
 var o = require("./2553/1425");
 exports.init_events_blocks = function (e) {
   var t = [{
@@ -98,13 +98,13 @@ exports.init_events_blocks = function (e) {
   }];
   e.define_blocks_with_json_array(t);
   Object.assign(e.blocks_xml, {
-    start_on_click: '<block type="start_on_click"/>',
-    start_on_click_2: '<block type="start_on_click_2"/>',
-    on_running_group_activated: '<block type="on_running_group_activated"/>',
-    self_listen: '<block type="self_listen">\n      ' + (0, r.text_value)("message", "Hi") + "\n    </block>",
-    self_broadcast: '<block type="self_broadcast">\n      ' + (0, r.text_value)("message", "Hi") + "\n    </block>",
-    self_broadcast_and_wait: '<block type="self_broadcast_and_wait">\n      ' + (0, r.text_value)("message", "Hi") + "\n    </block>",
-    when: '<block type="when">\n      ' + (0, r.logic_value)("condition") + "\n    </block>",
-    terminate: '<block type="terminate"/>'
+    start_on_click: "<block type=\"start_on_click\"/>",
+    start_on_click_2: "<block type=\"start_on_click_2\"/>",
+    on_running_group_activated: "<block type=\"on_running_group_activated\"/>",
+    self_listen: "<block type=\"self_listen\">\n      " + (0, r.text_value)("message", "Hi") + "\n    </block>",
+    self_broadcast: "<block type=\"self_broadcast\">\n      " + (0, r.text_value)("message", "Hi") + "\n    </block>",
+    self_broadcast_and_wait: "<block type=\"self_broadcast_and_wait\">\n      " + (0, r.text_value)("message", "Hi") + "\n    </block>",
+    when: "<block type=\"when\">\n      " + (0, r.logic_value)("condition") + "\n    </block>",
+    terminate: "<block type=\"terminate\"/>"
   });
 };

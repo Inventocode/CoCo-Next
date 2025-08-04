@@ -4,9 +4,9 @@ Object.defineProperty(exports, "__esModule", {
   value: !0
 });
 exports.get_nested_blocks_with_comment = exports.get_outer_block = exports.has_context = exports.is_valid_context = exports.cal_num_blocks = exports.fire_block_onchange = exports.update_disable_status = void 0;
-var r = require("../../206/208/index");
+var r = require("../../26/208/index");
 var i = require("../../125/195/index");
-var o = require("../../206/208/387");
+var o = require("./387");
 var a = require("../../1001/213/index");
 function s(e) {
   var t = e.previous_connection || e.output_connection;

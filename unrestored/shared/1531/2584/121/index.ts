@@ -146,7 +146,7 @@ var f = function (e) {
     value: function () {
       var e = this.text_;
       if (!e) {
-        return "\xa0";
+        return " ";
       }
       for (var t = "", n = 0, r = 0; r < e.length; r++) {
         if (e.charCodeAt(r) > 127) {
@@ -155,12 +155,12 @@ var f = function (e) {
           n += 1;
         }
         if (n > 14) {
-          t += "\u2026";
+          t += "…";
           break;
         }
         t += e[r];
       }
-      return t = t.replace(/\s/g, "\xa0");
+      return t = t.replace(/\s/g, " ");
     }
   }]);
   return n;

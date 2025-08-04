@@ -28,7 +28,7 @@ var u = require("./276");
 var d = require("./479/index");
 var p = require("../9");
 var f = require("../64");
-var h = require("../15/index");
+var h = require("../15");
 var m = require("../59/index");
 var g = new d.a({
   env: m.a.env,

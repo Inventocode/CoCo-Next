@@ -4,7 +4,7 @@ Object.defineProperty(exports, "__esModule", {
   value: !0
 });
 exports.init_logic_blocks = void 0;
-var r = require("./2552/579");
+var r = require("./2555/579");
 exports.init_logic_blocks = function (e) {
   var t = [{
     type: "logic_negate",
@@ -37,7 +37,7 @@ exports.init_logic_blocks = function (e) {
     }, {
       type: "field_dropdown",
       name: "OP",
-      options: [["=", "EQ"], ["\u2260", "NEQ"], ["<", "LT"], ["\u2264", "LTE"], [">", "GT"], ["\u2265", "GTE"]]
+      options: [["=", "EQ"], ["≠", "NEQ"], ["<", "LT"], ["≤", "LTE"], [">", "GT"], ["≥", "GTE"]]
     }, {
       type: "input_value",
       name: "B",
@@ -81,9 +81,9 @@ exports.init_logic_blocks = function (e) {
   };
   e.extensions.register("logic_op_tooltip", e.extensions.build_tooltip_for_dropdown("OP", n));
   Object.assign(e.blocks_xml, {
-    logic_negate: '<block type="logic_negate">\n      ' + (0, r.logic_value)("BOOL") + "\n    </block>\n    ",
-    logic_boolean: '<block type="logic_boolean" />',
-    logic_compare: '<block type="logic_compare">\n      ' + (0, r.number_value)("A", "0") + "\n      " + (0, r.number_value)("B", "0") + "\n    </block>\n    ",
-    logic_operation: '<block type="logic_operation">\n      ' + (0, r.logic_value)("A") + "\n      " + (0, r.logic_value)("B") + "\n    </block>\n    "
+    logic_negate: "<block type=\"logic_negate\">\n      " + (0, r.logic_value)("BOOL") + "\n    </block>\n    ",
+    logic_boolean: "<block type=\"logic_boolean\" />",
+    logic_compare: "<block type=\"logic_compare\">\n      " + (0, r.number_value)("A", "0") + "\n      " + (0, r.number_value)("B", "0") + "\n    </block>\n    ",
+    logic_operation: "<block type=\"logic_operation\">\n      " + (0, r.logic_value)("A") + "\n      " + (0, r.logic_value)("B") + "\n    </block>\n    "
   });
 };

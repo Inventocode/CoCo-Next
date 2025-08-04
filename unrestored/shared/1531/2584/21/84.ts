@@ -143,7 +143,7 @@ var i = function __importDefault(module) {
   return defaultExport;
 }(o);
 var a = require("../7");
-var s = require("../15/index");
+var s = require("../15");
 var c = require("../48/index");
 var l = new Map();
 var u = "!@_APP_@!";

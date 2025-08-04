@@ -26,7 +26,7 @@ var r = function () {
     return t;
   };
 }();
-var i = require("../../0/index");
+var i = require("react");
 var o = s(i);
 var a = s(require("../785/104/index"));
 function s(e) {

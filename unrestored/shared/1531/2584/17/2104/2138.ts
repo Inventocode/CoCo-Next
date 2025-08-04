@@ -4,12 +4,12 @@ Object.defineProperty(exports, "__esModule", {
   value: !0
 });
 exports.Json = void 0;
-var r = require("../../1001/93");
-var i = require("../../1001/134/index");
-var o = require("../259");
+var r = require("tslib");
+var i = require("inversify");
+var o = require("@kitten-team/gl-matrix");
 var a = require("../../4/127");
 var s = require("../../125/195/index");
-var c = require("../../206/208/387");
+var c = require("../497/387");
 var u = require("../../125/294");
 var l = require("../../1001/213/index");
 var f = require("../../125/index");

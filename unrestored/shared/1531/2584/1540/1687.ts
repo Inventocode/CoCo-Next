@@ -1,8 +1,8 @@
 "use strict";
 
-var r = require("./1633/86/index");
-var o = require("./1685/753").start;
-var i = require("./1685/1078/index")("trimStart");
+var r = require("./1623/86");
+var o = require("./1686/753/index").start;
+var i = require("./1686/1078")("trimStart");
 var a = i ? function () {
   return o(this);
 } : "".trimStart;

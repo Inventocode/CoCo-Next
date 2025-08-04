@@ -1,5 +1,5 @@
 var r = require("../1278");
-var i = require("../../../1442/1779/1268/index");
+var i = require("../../../1442/1779/1268");
 var o = require("../../../1442/1779/1828/1276");
 var a = require("../../../1442/1779/1269");
 var s = require("../../../1442/1779/1277/index");
@@ -7,7 +7,7 @@ var c = require("./1264/index");
 var u = require("../../../1442/1779/835");
 var l = require("./1841");
 var f = require("../../../1442/1779/958/index");
-var d = require("../../../1444/836/1086");
+var d = require("../../../1444/836/1086/index");
 var h = require("../../../1442/1779/638");
 var p = require("./1842");
 var _ = require("./1090/index");

@@ -1,12 +1,12 @@
 "use strict";
 
 var r;
-var o = require("../1745/194");
+var o = require("../1736/194");
 var i = require("./752");
 var a = require("./709");
 var s = require("../1739/938");
 var c = require("../1739/1250");
-var l = require("../1633/231");
+var l = require("./231");
 var u = require("../1745/423/index").enforce;
 var d = require("./1209");
 var p = !o.ActiveXObject && "ActiveXObject" in o;

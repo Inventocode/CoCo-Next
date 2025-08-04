@@ -1,7 +1,7 @@
 "use strict";
 
 var r = require("../11");
-var o = require("../0/index");
+var o = require("react");
 var i = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -105,7 +105,7 @@ _a = Object(o.memo)(function (e) {
     utils: u.a,
     locale: d.a
   }, i.a.createElement(f.a, {
-    format: "yyyy\u5e74MM\u6708dd\u65e5",
+    format: "yyyy年MM月dd日",
     value: I,
     onChange: function (e) {
       if (e && E) {
@@ -133,8 +133,8 @@ _a = Object(o.memo)(function (e) {
         }
       }, (null === e || void 0 === e ? void 0 : e.value) || "");
     },
-    cancelLabel: "\u53d6\u6d88",
-    okLabel: "\u786e\u5b9a"
+    cancelLabel: "取消",
+    okLabel: "确定"
   })), void 0 !== A && !A && i.a.createElement("div", {
     className: l()(y.a.mask),
     onClick: function () {

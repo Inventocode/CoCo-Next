@@ -4,7 +4,7 @@ Object.defineProperty(exports, "__esModule", {
   value: !0
 });
 exports.TreeNode = void 0;
-var r = require("../../../1001/93");
+var r = require("tslib");
 var i = require("../../../4/127");
 var o = require("../../../1001/213/index");
 var a = require("../../../125/index");

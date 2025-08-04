@@ -1,7 +1,7 @@
 "use strict";
 
 export { o as press };
-var r = require("../204");
+var r = require("animejs");
 function o(e) {
   return [Object(r.default)({
     targets: "#".concat(e),

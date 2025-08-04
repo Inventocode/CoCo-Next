@@ -4,8 +4,8 @@ Object.defineProperty(exports, "__esModule", {
   value: !0
 });
 exports.register_procedure_blocks = exports.icon_procedure = void 0;
-var r = require("../1001/93");
-var i = require("../206/208/387");
+var r = require("tslib");
+var i = require("../17/497/387");
 var o = require("../4/127");
 var a = require("../1001/213/index");
 var s = require("../1036/754");
@@ -102,7 +102,7 @@ exports.register_procedure_blocks = function (e, n, u, l) {
               s = null === u || void 0 === u ? void 0 : u.default_value;
               r.label = 2;
             case 2:
-              return t ? (f = e.mainWorkspace.get_block_by_id(o), (0, i.assert)(f), d = (0, a.is_func)(n) ? n() : n, h = d.get_procedure_by_def(o), (0, i.assert)(h), h.disabled ? (console.warn("Trying to add param to deleted procedure " + o), [2]) : (p = d.get_procedure_param_names(h.name)).includes(t) ? (console.warn("Param " + t + " exists."), [2]) : (_ = p.length, e.events.disable(), A = f.append_math_shadow("" + c.PROCEDURE_BLOCK_INPUT_NAMES.PARAM_PREFIX + _, c.PROCEDURE_BLOCK_INPUT_NAMES.DEF_MUTATOR), v = '<block type="' + c.PROCEDURE_BLOCK_TYPES.PARAM_ON_BLOCK + '"></block>', (m = f.append_block_input(v, A)).set_field_value(t, c.PROCEDURE_BLOCK_FIELD_NAMES.PARAM_NAME), void 0 !== s && m.set_field_value("=" + s, c.PROCEDURE_BLOCK_FIELD_NAMES.PARAM_DEFAULT_VALUE), e.events.enable(), e.events.is_enabled() && (y = e.events.get_group(), e.events.set_group(y || !0), e.events.fire(g("change_procedure_param", {
+              return t ? (f = e.mainWorkspace.get_block_by_id(o), (0, i.assert)(f), d = (0, a.is_func)(n) ? n() : n, h = d.get_procedure_by_def(o), (0, i.assert)(h), h.disabled ? (console.warn("Trying to add param to deleted procedure " + o), [2]) : (p = d.get_procedure_param_names(h.name)).includes(t) ? (console.warn("Param " + t + " exists."), [2]) : (_ = p.length, e.events.disable(), A = f.append_math_shadow("" + c.PROCEDURE_BLOCK_INPUT_NAMES.PARAM_PREFIX + _, c.PROCEDURE_BLOCK_INPUT_NAMES.DEF_MUTATOR), v = "<block type=\"" + c.PROCEDURE_BLOCK_TYPES.PARAM_ON_BLOCK + "\"></block>", (m = f.append_block_input(v, A)).set_field_value(t, c.PROCEDURE_BLOCK_FIELD_NAMES.PARAM_NAME), void 0 !== s && m.set_field_value("=" + s, c.PROCEDURE_BLOCK_FIELD_NAMES.PARAM_DEFAULT_VALUE), e.events.enable(), e.events.is_enabled() && (y = e.events.get_group(), e.events.set_group(y || !0), e.events.fire(g("change_procedure_param", {
                 block: f,
                 old_value: void 0,
                 new_value: {

@@ -8,7 +8,7 @@ export { w as c };
 export { C as d };
 export { T as e };
 var r = require("../6");
-var o = require("../0/index");
+var o = require("react");
 var i = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -35,15 +35,15 @@ var s = function __importDefault(module) {
   return defaultExport;
 }(a);
 var c = require("../36/index");
-var l = require("../15/index");
+var l = require("../15");
 var u = require("../5");
 var d = require("../10/index");
 var p = require("../16/index");
-var f = require("../2/index");
+var f = require("../2");
 require("./847");
 var h = require("../9");
 var m = require("./669/index");
-var g = require("../35/index");
+var g = require("../35");
 var _ = function (e) {
   var t = e.render;
   var n = e.widgetId;

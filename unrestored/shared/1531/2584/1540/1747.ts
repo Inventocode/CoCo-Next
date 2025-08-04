@@ -1,6 +1,6 @@
 "use strict";
 
-require("./1633/86/index")({
+require("./1623/86")({
   target: "URL",
   proto: !0,
   enumerable: !0

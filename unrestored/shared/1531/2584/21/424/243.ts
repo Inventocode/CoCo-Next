@@ -38,7 +38,7 @@ Object.defineProperty(i, "checkNormal", {
 var a = require("../../25/index");
 var s = require("../../11");
 var c = require("../../5");
-var l = require("../../204");
+var l = require("animejs");
 var u = require("../../51/index");
 var d = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {

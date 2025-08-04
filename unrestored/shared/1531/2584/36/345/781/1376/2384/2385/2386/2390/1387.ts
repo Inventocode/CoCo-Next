@@ -5,7 +5,7 @@ var i = Function;
 var o = TypeError;
 var a = function (e) {
   try {
-    return Function('"use strict"; return (' + e + ").constructor;")();
+    return Function("\"use strict\"; return (" + e + ").constructor;")();
   } catch (t) {}
 };
 var s = Object.getOwnPropertyDescriptor;
@@ -195,7 +195,7 @@ module.exports = function (e, t) {
     throw new o("intrinsic name must be a non-empty string");
   }
   if (arguments.length > 1 && "boolean" !== typeof t) {
-    throw new o('"allowMissing" argument must be a boolean');
+    throw new o("\"allowMissing\" argument must be a boolean");
   }
   var n = C(e);
   var r = n.length > 0 ? n[0] : "";

@@ -1,7 +1,7 @@
 "use strict";
 
 export { o as a };
-var r = require("./0/index");
+var r = require("react");
 var i = r.createContext(void 0);
 var o = function (e) {
   var t = e.children;

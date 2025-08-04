@@ -1,9 +1,9 @@
 "use strict";
 
 export { u as a };
-var n = require("../347");
-var o = require("../333");
-var i = require("../63");
+import * as n from "../347";
+import * as o from "../333";
+import * as i from "../63";
 var a = function () {
   var t = function (e, r) {
     return (t = Object.setPrototypeOf || {

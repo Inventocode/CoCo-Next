@@ -1,4 +1,4 @@
-var r = require("../../2528/2529/475");
+var r = require("./475");
 var i = require("./2530/index");
 var o = require("./2531/index");
 var a = Math.max;

@@ -98,7 +98,7 @@ exports.en = {
   MATH_ROUND_OPERATOR_ROUND: "Round",
   MATH_ROUND_OPERATOR_ROUNDUP: "Round up",
   MATH_ROUND_OPERATOR_ROUNDDOWN: "Round down",
-  MATH_MODULO_TITLE: "Remainder of %1 \xf7 %2",
+  MATH_MODULO_TITLE: "Remainder of %1 ÷ %2",
   MATH_MODULO_TOOLTIP: "Return the remainder from dividing the two numbers.",
   MATH_NUMBER_PROPERTY: "%1 %2",
   MATH_IS_EVEN: "even",

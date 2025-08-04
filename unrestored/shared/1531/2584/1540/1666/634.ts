@@ -1,4 +1,4 @@
-var r = require("./241");
+var r = require("../1659/241");
 var o = require("./1221");
 module.exports = Object.setPrototypeOf || ("__proto__" in {} ? function () {
   var e;

@@ -1,5 +1,5 @@
-var r = require("../../../../../3272/3198/2668/2689/356/1099");
-var i = require("../../../../../3272/3198/2668/2689/357/1298");
+var r = require("./1099");
+var i = require("../357/1298");
 function o(t, n, a) {
   if (i()) {
     module.exports = o = Reflect.construct;

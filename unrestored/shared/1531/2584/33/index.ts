@@ -2,7 +2,7 @@
 
 export { a };
 var r = require("./996");
-var i = require("../80/771");
+var i = require("./771");
 var o = require("./997");
 function a(e, t) {
   return Object(r.a)(e) || function (e, t) {

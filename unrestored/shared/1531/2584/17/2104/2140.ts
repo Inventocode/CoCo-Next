@@ -4,9 +4,9 @@ Object.defineProperty(exports, "__esModule", {
   value: !0
 });
 exports.RuntimeData = void 0;
-var r = require("../../1001/93");
-var i = require("../../1001/134/index");
-var o = (0, r.__importStar)(require("../../683/559"));
+var r = require("tslib");
+var i = require("inversify");
+var o = (0, r.__importStar)(require("hammerjs"));
 var a = require("../../4/127");
 var s = require("../../125/index");
 var c = function () {

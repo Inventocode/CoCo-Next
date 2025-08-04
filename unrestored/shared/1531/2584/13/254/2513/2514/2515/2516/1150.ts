@@ -1,5 +1,5 @@
-var r = require("../../../../../785/104/2411/2412/718/index");
-var i = require("../../../../2528/2529/475");
+var r = require("../../../../../785/104/2411/1395/718/index");
+var i = require("../../../../2533/1420/475");
 module.exports = function (e) {
   if (!i(e)) {
     return !1;

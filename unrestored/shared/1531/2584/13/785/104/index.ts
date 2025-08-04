@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.ReactCSS = exports.loop = exports.handleActive = exports.handleHover = exports.hover = void 0;
 var r = u(require("./2411/index"));
 var i = u(require("./2483/index"));
-var o = u(require("./2503/index"));
+var o = u(require("./2503"));
 var a = u(require("./2504"));
 var s = u(require("./2505"));
 var c = u(require("./2506"));

@@ -1,7 +1,7 @@
 "use strict";
 
 var n = require("./260");
-var o = require("../349/index");
+var o = require("../349");
 var i = function () {
   var t = function (e, r) {
     return (t = Object.setPrototypeOf || {

@@ -2,76 +2,43 @@
 
 var r;
 var i;
-var o = require("../../../../shared/1531/2584/25/index");
-var a = require("../../../../shared/1531/2584/296");
-var s = require("../../../../shared/1531/2584/1/index");
-var u = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default;
-  } : function () {
-    return module;
-  };
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  });
-  return defaultExport;
-}(s);
-var c = require("../../../../shared/1531/2584/10/index");
-var l = require("../../../../shared/1531/2584/6");
-var d = require("../../../../shared/1531/2584/7");
-var f = require("../../../../shared/1531/2584/0/index");
-var h = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default;
-  } : function () {
-    return module;
-  };
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  });
-  return defaultExport;
-}(f);
-var p = require("../../../../shared/1531/2584/16/index");
-var m = require("../../../../shared/1531/2584/38/2629");
-var b = require("../../../../shared/1531/2584/186/index");
-var g = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default;
-  } : function () {
-    return module;
-  };
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  });
-  return defaultExport;
-}(b);
-require("../../../../shared/1531/2584/710");
-var v = require("../../../../shared/1531/2584/36/index");
-var _ = require("../../../../shared/1531/2584/79");
-var y = require("../../../../shared/1531/2584/98");
-var O = require("../../../../shared/1531/2584/15/index");
-var w = require("../../../../shared/1531/2584/676/index");
-var E = require("../../../../shared/1531/2584/27");
-var T = require("../../../../shared/1531/2584/40");
-var j = require("../../../../shared/1531/2584/57/index");
-var S = require("../../../../shared/1531/2584/58/index");
-var A = require("../../../../shared/1531/2584/28/index");
+import * as o from "../../../../shared/1531/2584/25/index";
+import * as a from "../../../../shared/1531/2584/296";
+import * as s from "../../../../shared/1531/2584/1/index";
+import u from "../../../../shared/1531/2584/1/index";
+import * as c from "../../../../shared/1531/2584/10/index";
+import * as l from "../../../../shared/1531/2584/6";
+import * as d from "../../../../shared/1531/2584/7";
+import * as f from "react";
+import h from "react";
+import * as p from "../../../../shared/1531/2584/16/index";
+import * as m from "../../../../shared/1531/2584/38/2629";
+import * as b from "../../../../shared/1531/2584/186/index";
+import g from "../../../../shared/1531/2584/186/index";
+import "../../../../shared/1531/2584/710/index";
+import * as v from "../../../../shared/1531/2584/36/index";
+import * as _ from "../../../../shared/1531/2584/79";
+import * as y from "../../../../shared/1531/2584/98";
+import * as O from "../../../../shared/1531/2584/15";
+import * as w from "../../../../shared/1531/2584/676/index";
+import * as E from "../../../../shared/1531/2584/27";
+import * as T from "../../../../shared/1531/2584/40";
+import * as j from "../../../../shared/1531/2584/57/index";
+import * as S from "../../../../shared/1531/2584/58/index";
+import * as A from "../../../../shared/1531/2584/28/index";
 var k = [];
 var I = function () {};
 var M = {
   callNumber: function (t) {
     if (Object(A.d)()) {
       window.cordova.plugins.phonedialer.call(t, I, function (t) {
-        console.error("\u5e94\u7528\u9700\u8981\u5f00\u542f\u7535\u8bdd\u6743\u9650");
+        console.error("应用需要开启电话权限");
         var e = window.cordova.plugins.permissions;
         e.hasPermission(e.CALL_PHONE, function (t) {
           var e;
           if (!t.hasPermission) {
             if (!(null === (e = window.plugins.toast) || void 0 === e)) {
-              e.showLongCenter("\u5e94\u7528\u9700\u8981\u5f00\u542f\u7535\u8bdd\u6743\u9650");
+              e.showLongCenter("应用需要开启电话权限");
             }
           }
         });
@@ -104,10 +71,10 @@ var M = {
     }
   }
 };
-var C = require("../../../../shared/1531/2584/48/72");
-var x = require("../../../../shared/1531/2584/48/index");
-var R = require("../../../../shared/1531/2584/38/217/index");
-var N = require("../../../../shared/1531/2584/676/70");
+import * as C from "../../../../shared/1531/2584/48/72";
+import * as x from "../../../../shared/1531/2584/48/index";
+import * as R from "../../../../shared/1531/2584/38/217/index";
+import * as N from "../../../../shared/1531/2584/676/70";
 var L = function (t) {
   Object(j.a)(n, t);
   var e = Object(S.a)(n);
@@ -210,7 +177,7 @@ var L = function (t) {
   }]);
   return n;
 }(v.c);
-var D = require("../../../../shared/1531/2584/677/index");
+import * as D from "../../../../shared/1531/2584/677/index";
 var B = {
   pickContact: function (t) {
     navigator.contacts.pickContact(function (e) {
@@ -229,13 +196,13 @@ var B = {
       }
       t(n, r, i, o);
     }, function (t) {
-      console.error("\u5e94\u7528\u9700\u8981\u5f00\u542f\u901a\u8baf\u5f55\u6743\u9650");
+      console.error("应用需要开启通讯录权限");
       var e = window.cordova.plugins.permissions;
       e.hasPermission(e.READ_CONTACTS, function (t) {
         var e;
         if (!t.hasPermission) {
           if (!(null === (e = window.plugins.toast) || void 0 === e)) {
-            e.showLongCenter("\u5e94\u7528\u9700\u8981\u5f00\u542f\u901a\u8baf\u5f55\u6743\u9650");
+            e.showLongCenter("应用需要开启通讯录权限");
           }
         }
       });
@@ -280,7 +247,7 @@ var P = function (t) {
   }]);
   return n;
 }(v.c);
-var U = require("../../../../shared/1531/2584/678/index");
+import * as U from "../../../../shared/1531/2584/678/index";
 var W = [];
 var H = function () {};
 var F = {
@@ -313,13 +280,13 @@ var F = {
         return n(e, t);
       }, function () {
         r(e, t);
-        console.error("\u5e94\u7528\u9700\u8981\u5f00\u542f\u77ed\u4fe1\u6743\u9650");
+        console.error("应用需要开启短信权限");
         var n = window.cordova.plugins.permissions;
         n.hasPermission(n.SEND_SMS, function (t) {
           var e;
           if (!t.hasPermission) {
             if (!(null === (e = window.plugins.toast) || void 0 === e)) {
-              e.showLongCenter("\u5e94\u7528\u9700\u8981\u5f00\u542f\u77ed\u4fe1\u6743\u9650");
+              e.showLongCenter("应用需要开启短信权限");
             }
           }
         });
@@ -410,48 +377,15 @@ var G = function (t) {
   }]);
   return n;
 }(v.c);
-var Y = require("../../../../shared/1531/2584/679");
-var z = require("../../../../shared/1531/2584/75/index");
-var K = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default;
-  } : function () {
-    return module;
-  };
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  });
-  return defaultExport;
-}(z);
-var q = require("../../../../shared/1531/2584/8");
-var X = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default;
-  } : function () {
-    return module;
-  };
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  });
-  return defaultExport;
-}(q);
-var J = require("../../../../shared/1531/2584/51/index");
-var Z = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default;
-  } : function () {
-    return module;
-  };
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  });
-  return defaultExport;
-}(J);
-var Q = require("../../../../shared/1531/2584/189");
-var $ = require("../../../../shared/1531/2584/204");
+import * as Y from "../../../../shared/1531/2584/679";
+import * as z from "../../../../shared/1531/2584/75/index";
+import K from "../../../../shared/1531/2584/75/index";
+import * as q from "../../../../shared/1531/2584/8";
+import X from "../../../../shared/1531/2584/8";
+import * as J from "../../../../shared/1531/2584/51/index";
+import Z from "../../../../shared/1531/2584/51/index";
+import * as Q from "../../../../shared/1531/2584/189";
+import * as $ from "animejs";
 function tt(t, e) {
   return [Object($.default)({
     targets: "#".concat(t),
@@ -470,20 +404,9 @@ function tt(t, e) {
   })];
 }
 var et;
-var nt = require("../../../../shared/1531/2584/233/324");
-var rt = require("./138");
-var it = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default;
-  } : function () {
-    return module;
-  };
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  });
-  return defaultExport;
-}(rt);
+import * as nt from "../../../../shared/1531/2584/233/324";
+import * as rt from "./138";
+import it from "./138";
 var ot = "COCO_PLAYER_DIALOG";
 !function (t) {
   t.MESSAGE = "MESSAGE";
@@ -530,7 +453,7 @@ var at = {
     var e = Object(O.hb)(t, .4);
     var n = Object(O.hb)(t, .04);
     var r = Object(O.ib)(t, .3);
-    var i = Z()(t).toString();
+    var i = Z(t).toString();
     document.documentElement.style.setProperty("--dialog-theme-color", i);
     document.documentElement.style.setProperty("--dialog-theme-color-medium", e);
     document.documentElement.style.setProperty("--dialog-theme-color-light", n);
@@ -546,7 +469,7 @@ var at = {
       }
     }
     t.style.opacity = "1";
-    t.className = it.a.container;
+    t.className = it.container;
     return t;
   },
   cancel: function (t) {
@@ -584,7 +507,7 @@ var at = {
     var n = at.getContainer();
     if (this.dialogArr.length) {
       tt(ot, function () {
-        K.a.unmountComponentAtNode(n);
+        K.unmountComponentAtNode(n);
         var e = t.dialogArr[0];
         t.showDialog(e);
       });
@@ -594,7 +517,7 @@ var at = {
         var e;
         t = "COCO_PLAYER_DIALOG_CONTAINER";
         e = function () {
-          n.classList.remove(it.a.container);
+          n.classList.remove(it.container);
         };
         Object($.default)({
           targets: "#".concat(t),
@@ -607,7 +530,7 @@ var at = {
             }
           }
         });
-        K.a.unmountComponentAtNode(n);
+        K.unmountComponentAtNode(n);
       });
     }
   },
@@ -623,47 +546,47 @@ var at = {
     u = this.style === Q.b.styleA ? t === et.SELECT ? i ? "346px" : "400px" : "454px" : "472px";
     var c = "";
     c = a ? this.style === Q.b.styleA ? "39px 0" : "42px 0" : e ? "16px 0" : "24px 0 16px 0";
-    return h.a.createElement("div", {
+    return h.createElement("div", {
       style: {
         maxHeight: u,
         padding: c
       },
-      className: X()(a && it.a.singleElementContentBox, !a && it.a.contentBox)
-    }, e && h.a.createElement("div", {
+      className: X(a && it.singleElementContentBox, !a && it.contentBox)
+    }, e && h.createElement("div", {
       style: {
         background: "url(".concat(e, ") no-repeat"),
         backgroundSize: "cover",
         backgroundPosition: "center"
       },
-      className: it.a.imageBox
-    }), n && h.a.createElement("p", {
-      className: X()(it.a.title)
-    }, n), r && h.a.createElement("p", {
-      className: it.a.textBox
-    }, h.a.createElement("span", {
-      className: it.a.text
-    }, r)), t === et.PROMPT && h.a.createElement("div", {
-      className: it.a.inputBox
-    }, h.a.createElement("input", {
+      className: it.imageBox
+    }), n && h.createElement("p", {
+      className: X(it.title)
+    }, n), r && h.createElement("p", {
+      className: it.textBox
+    }, h.createElement("span", {
+      className: it.text
+    }, r)), t === et.PROMPT && h.createElement("div", {
+      className: it.inputBox
+    }, h.createElement("input", {
       id: "COCO_PLAYER_DIALOG_INPUT",
-      className: it.a.dialogInput,
+      className: it.dialogInput,
       placeholder: o
     })));
   },
   getButtonBox: function (t, e, n) {
-    var r = t === et.MESSAGE ? n || "" : "\u786e\u5b9a";
-    return h.a.createElement("div", {
-      className: it.a.buttonBox
-    }, e && h.a.createElement("button", {
-      className: X()(it.a.button, it.a.cancelButton),
-      onClick: this.cancel.bind(null, "\u53d6\u6d88")
-    }, h.a.createElement("span", null, "\u53d6\u6d88")), h.a.createElement("button", {
-      className: X()(it.a.button, it.a.mainButton),
+    var r = t === et.MESSAGE ? n || "" : "确定";
+    return h.createElement("div", {
+      className: it.buttonBox
+    }, e && h.createElement("button", {
+      className: X(it.button, it.cancelButton),
+      onClick: this.cancel.bind(null, "取消")
+    }, h.createElement("span", null, "取消")), h.createElement("button", {
+      className: X(it.button, it.mainButton),
       style: {
         width: this.style === Q.b.styleA ? e ? "133px" : "100%" : "fit-content"
       },
       onClick: t === et.PROMPT ? this.submit : this.confirm.bind(null, r)
-    }, h.a.createElement("span", null, r)));
+    }, h.createElement("span", null, r)));
   },
   message: function (t, e, n) {
     at.addDialog({
@@ -683,11 +606,11 @@ var at = {
     var s = this.getContainer();
     var u = this.getContentBox(et.MESSAGE, o, n, r, a);
     var c = this.getButtonBox(et.MESSAGE, a, i);
-    var l = h.a.createElement("div", {
+    var l = h.createElement("div", {
       id: ot,
-      className: X()(it.a.dialog, this.style === Q.b.styleA ? it.a.styleA : it.a.styleB)
+      className: X(it.dialog, this.style === Q.b.styleA ? it.styleA : it.styleB)
     }, u, c);
-    K.a.render(l, s);
+    K.render(l, s);
   },
   select: function (t, e, n) {
     at.addDialog({
@@ -706,29 +629,29 @@ var at = {
     var a = e.showCancelButton;
     var s = this.getContainer();
     var u = this.getContentBox(et.SELECT, "", n, r, a);
-    var c = h.a.createElement("div", {
+    var c = h.createElement("div", {
       id: ot,
-      className: X()(it.a.dialog, this.style === Q.b.styleA ? it.a.styleA : it.a.styleB)
-    }, u, h.a.createElement("div", {
-      className: it.a.optionButtonBox,
+      className: X(it.dialog, this.style === Q.b.styleA ? it.styleA : it.styleB)
+    }, u, h.createElement("div", {
+      className: it.optionButtonBox,
       style: {
         height: this.style === Q.b.styleA ? a ? "174px" : "120px" : "48px",
         justifyContent: this.style !== Q.b.styleB || a ? void 0 : "flex-end"
       }
-    }, a && this.style === Q.b.styleB && h.a.createElement("button", {
-      className: X()(it.a.button, it.a.cancelButton),
+    }, a && this.style === Q.b.styleB && h.createElement("button", {
+      className: X(it.button, it.cancelButton),
       onClick: this.cancel.bind(null, "")
-    }, h.a.createElement("span", null, "\u53d6\u6d88")), h.a.createElement("div", null, h.a.createElement("button", {
-      className: X()(it.a.button, it.a.mainButton),
+    }, h.createElement("span", null, "取消")), h.createElement("div", null, h.createElement("button", {
+      className: X(it.button, it.mainButton),
       onClick: this.confirm.bind(null, i)
-    }, h.a.createElement("span", null, i)), h.a.createElement("button", {
-      className: X()(it.a.button, it.a.mainButton),
+    }, h.createElement("span", null, i)), h.createElement("button", {
+      className: X(it.button, it.mainButton),
       onClick: this.confirm.bind(null, o)
-    }, h.a.createElement("span", null, o))), a && this.style === Q.b.styleA && h.a.createElement("button", {
-      className: X()(it.a.button, it.a.cancelButton),
+    }, h.createElement("span", null, o))), a && this.style === Q.b.styleA && h.createElement("button", {
+      className: X(it.button, it.cancelButton),
       onClick: this.cancel.bind(null, "")
-    }, h.a.createElement("span", null, "\u53d6\u6d88"))));
-    K.a.render(c, s);
+    }, h.createElement("span", null, "取消"))));
+    K.render(c, s);
   },
   prompt: function (t, e, n) {
     this.addDialog({
@@ -747,16 +670,16 @@ var at = {
     var a = this.getContainer();
     var s = this.getContentBox(et.PROMPT, "", n, r, o, i);
     var u = this.getButtonBox(et.PROMPT, o);
-    var c = h.a.createElement("div", {
+    var c = h.createElement("div", {
       id: ot,
-      className: X()(it.a.dialog, this.style === Q.b.styleA ? it.a.styleA : it.a.styleB)
+      className: X(it.dialog, this.style === Q.b.styleA ? it.styleA : it.styleB)
     }, s, u);
-    K.a.render(c, a);
+    K.render(c, a);
   }
 };
 var st = at;
-var ut = require("../../../../shared/1531/2584/21/index");
-var ct = require("../../../../shared/1531/2584/9");
+import * as ut from "../../../../shared/1531/2584/21/index";
+import * as ct from "../../../../shared/1531/2584/9";
 var lt = function (t) {
   Object(j.a)(n, t);
   var e = Object(S.a)(n);
@@ -845,20 +768,9 @@ var lt = function (t) {
   }]);
   return n;
 }(v.c);
-var dt = require("../../../../shared/1531/2584/671");
-var ft = require("../../../../shared/1531/2584/36/345/553/index");
-var ht = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default;
-  } : function () {
-    return module;
-  };
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  });
-  return defaultExport;
-}(ft);
+import * as dt from "../../../../shared/1531/2584/671";
+import * as ft from "../../../../shared/1531/2584/36/345/553/index";
+import ht from "../../../../shared/1531/2584/36/345/553/index";
 var pt = {
   "7%": "L",
   "15%": "M",
@@ -889,7 +801,7 @@ var mt = function (t) {
       var e;
       var n = this;
       if (t) {
-        ht.a.toDataURL(t, {
+        ht.toDataURL(t, {
           width: this.width,
           color: {
             dark: this.dark,
@@ -919,8 +831,8 @@ var mt = function (t) {
   }]);
   return n;
 }(v.c);
-var bt = require("../../../../shared/1531/2584/680");
-var gt = require("../../../../shared/1531/2584/36/345/392");
+import * as bt from "../../../../shared/1531/2584/680";
+import * as gt from "../../../../shared/1531/2584/36/345/392";
 var vt = function (t) {
   Object(j.a)(n, t);
   var e = Object(S.a)(n);
@@ -988,9 +900,9 @@ var vt = function (t) {
   }]);
   return n;
 }(v.c);
-var _t = require("../../../../shared/1531/2584/681");
-var yt = require("./721/index");
-var Ot = require("./81/index");
+import * as _t from "../../../../shared/1531/2584/681";
+import * as yt from "./721/index";
+import * as Ot from "./81/index";
 function wt() {
   var t = new Map();
   var e = [Ot.BarcodeFormat.QR_CODE];
@@ -1001,20 +913,9 @@ function Et() {
   return window.QRScanner;
 }
 var Tt;
-var jt = require("../../../../shared/1531/2584/23");
-var St = require("./249");
-var At = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default;
-  } : function () {
-    return module;
-  };
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  });
-  return defaultExport;
-}(St);
+import * as jt from "../../../../shared/1531/2584/23";
+import * as St from "./249";
+import At from "./249";
 function kt(t) {
   switch (t) {
     case Tt.UNEXPECTED_ERROR:
@@ -1053,84 +954,18 @@ function kt(t) {
   t[t.OPEN_SETTINGS_UNAVAILABLE = 8] = "OPEN_SETTINGS_UNAVAILABLE";
   t[t.NOT_FOUND = 9] = "NOT_FOUND";
 }(Tt || (Tt = {}));
-var It = require("./898");
-var Mt = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default;
-  } : function () {
-    return module;
-  };
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  });
-  return defaultExport;
-}(It);
-var Ct = require("./899");
-var xt = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default;
-  } : function () {
-    return module;
-  };
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  });
-  return defaultExport;
-}(Ct);
-var Rt = require("./900");
-var Nt = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default;
-  } : function () {
-    return module;
-  };
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  });
-  return defaultExport;
-}(Rt);
-var Lt = require("./613");
-var Dt = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default;
-  } : function () {
-    return module;
-  };
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  });
-  return defaultExport;
-}(Lt);
-var Bt = require("./901");
-var Pt = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default;
-  } : function () {
-    return module;
-  };
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  });
-  return defaultExport;
-}(Bt);
-var Ut = require("./902");
-var Wt = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default;
-  } : function () {
-    return module;
-  };
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  });
-  return defaultExport;
-}(Ut);
+import * as It from "./898";
+import Mt from "./898";
+import * as Ct from "./899";
+import xt from "./899";
+import * as Rt from "./900";
+import Nt from "./900";
+import * as Lt from "./613";
+import Dt from "./613";
+import * as Bt from "./901";
+import Pt from "./901";
+import * as Ut from "./902";
+import Wt from "./902";
 var Ht = function (t) {
   Object(j.a)(n, t);
   var e = Object(S.a)(n);
@@ -1175,7 +1010,7 @@ var Ht = function (t) {
     value: function () {
       if (this.previewPage) {
         var t = this.previewPage.children[0];
-        t.classList.remove(At.a.scanning);
+        t.classList.remove(At.scanning);
         t.style.display = "none";
         this.previewPage.children[1].style.display = "none";
         this.previewPage.children[2].style.display = "block";
@@ -1186,11 +1021,11 @@ var Ht = function (t) {
     value: function () {
       if (this.previewPage) {
         var t = this.previewPage.children[0];
-        t.className = At.a.scanning;
+        t.className = At.scanning;
         t.style.display = "block";
         this.previewPage.children[1].style.display = "block";
         this.previewPage.children[2].style.display = "none";
-        this.previewPage.children[5].src = Dt.a;
+        this.previewPage.children[5].src = Dt;
       }
     }
   }, {
@@ -1199,15 +1034,15 @@ var Ht = function (t) {
       var t = this;
       if (!this.previewPage) {
         var e = function () {
-          var e = Object(d.a)(u.a.mark(function e() {
-            return u.a.wrap(function (e) {
+          var e = Object(d.a)(u.mark(function e() {
+            return u.wrap(function (e) {
               for (;;) {
                 switch (e.prev = e.next) {
                   case 0:
                     e.next = 2;
                     return Object(ut.getCameraChoosePhoto)(function () {
-                      var e = Object(d.a)(u.a.mark(function e(n) {
-                        return u.a.wrap(function (e) {
+                      var e = Object(d.a)(u.mark(function e(n) {
+                        return u.wrap(function (e) {
                           for (;;) {
                             switch (e.prev = e.next) {
                               case 0:
@@ -1238,10 +1073,10 @@ var Ht = function (t) {
             return e.apply(this, arguments);
           };
         }();
-        var n = "\n        <img class=".concat(At.a.scanning, " src=").concat(Mt.a, " />\n        <p class=").concat(At.a.text, ">\n          ").concat(Object(jt.c)(jt.b, "ScanQrCode.tip"), "\n        </p>\n        <div class=").concat(At.a.error, ' style="display:none;">\n          <div>\n            <img src=').concat(Nt.a, ' />\n            <p>\u7f51\u7edc\u4e0d\u4f73\uff0c\u4e8c\u7ef4\u7801\u8bc6\u522b\u5931\u8d25</p>\n          </div>\n        </div>\n        <div class="').concat(At.a.largeBtn, " ").concat(At.a.photoBtn, '">\n          <img src=').concat(Wt.a, ' />\n        </div>\n        <div class="').concat(At.a.smallBtn, " ").concat(At.a.returnBtn, '">\n          <img src=').concat(xt.a, ' />\n        </div>\n        <div class="').concat(At.a.largeBtn, " ").concat(At.a.lightBtn, '">\n          <img src=').concat(Dt.a, " />\n        </div>\n      ");
+        var n = "\n        <img class=".concat(At.scanning, " src=").concat(Mt, " />\n        <p class=").concat(At.text, ">\n          ").concat(Object(jt.c)(jt.b, "ScanQrCode.tip"), "\n        </p>\n        <div class=").concat(At.error, " style=\"display:none;\">\n          <div>\n            <img src=").concat(Nt, " />\n            <p>网络不佳，二维码识别失败</p>\n          </div>\n        </div>\n        <div class=\"").concat(At.largeBtn, " ").concat(At.photoBtn, "\">\n          <img src=").concat(Wt, " />\n        </div>\n        <div class=\"").concat(At.smallBtn, " ").concat(At.returnBtn, "\">\n          <img src=").concat(xt, " />\n        </div>\n        <div class=\"").concat(At.largeBtn, " ").concat(At.lightBtn, "\">\n          <img src=").concat(Dt, " />\n        </div>\n      ");
         var r = document.createElement("div");
         r.id = "SCANNER_PREVIEW_CONTAINER_ID";
-        r.className = At.a.container;
+        r.className = At.container;
         r.innerHTML = n;
         this.previewPage = r;
         this.previewPage.children[3].onclick = e;
@@ -1257,9 +1092,9 @@ var Ht = function (t) {
                 if (e) {
                   t.emit("onScanError", kt(e.code));
                 } else {
-                  var n = document.getElementsByClassName(At.a.lightBtn)[0];
+                  var n = document.getElementsByClassName(At.lightBtn)[0];
                   if (n) {
-                    n.innerHTML = "<img src=".concat(Dt.a, " />");
+                    n.innerHTML = "<img src=".concat(Dt, " />");
                   }
                 }
               });
@@ -1268,9 +1103,9 @@ var Ht = function (t) {
                 if (e) {
                   t.emit("onScanError", kt(e.code));
                 } else {
-                  var n = document.getElementsByClassName(At.a.lightBtn)[0];
+                  var n = document.getElementsByClassName(At.lightBtn)[0];
                   if (n) {
-                    n.innerHTML = "<img src=".concat(Pt.a, " />");
+                    n.innerHTML = "<img src=".concat(Pt, " />");
                   }
                 }
               });
@@ -1308,10 +1143,10 @@ var Ht = function (t) {
   }, {
     key: "decodeImage",
     value: function () {
-      var t = Object(d.a)(u.a.mark(function t(e) {
+      var t = Object(d.a)(u.mark(function t(e) {
         var n;
         var r;
-        return u.a.wrap(function (t) {
+        return u.wrap(function (t) {
           for (;;) {
             switch (t.prev = t.next) {
               case 0:
@@ -1347,11 +1182,11 @@ var Ht = function (t) {
   }, {
     key: "scanImage",
     value: function () {
-      var t = Object(d.a)(u.a.mark(function t(e) {
+      var t = Object(d.a)(u.mark(function t(e) {
         var n;
         var r;
         var i;
-        return u.a.wrap(function (t) {
+        return u.wrap(function (t) {
           for (;;) {
             switch (t.prev = t.next) {
               case 0:
@@ -1378,7 +1213,7 @@ var Ht = function (t) {
   }]);
   return n;
 }(v.c);
-var Ft = require("../../../../shared/1531/2584/673");
+import * as Ft from "../../../../shared/1531/2584/673";
 var Vt = function (t) {
   Object(j.a)(n, t);
   var e = Object(S.a)(n);
@@ -1388,7 +1223,7 @@ var Vt = function (t) {
   }
   return n;
 }(v.d);
-var Gt = require("../../../../shared/1531/2584/675");
+import * as Gt from "../../../../shared/1531/2584/675";
 var Yt = function (t) {
   Object(j.a)(n, t);
   var e = Object(S.a)(n);
@@ -1398,9 +1233,9 @@ var Yt = function (t) {
   }
   return n;
 }(v.d);
-var zt = require("../../../../shared/1531/2584/36/345/114");
-var Kt = require("../../../../shared/1531/2584/14");
-var qt = require("../../../../shared/1531/2584/116");
+import * as zt from "../../../../shared/1531/2584/36/345/114";
+import * as Kt from "../../../../shared/1531/2584/14";
+import * as qt from "../../../../shared/1531/2584/116";
 var Xt = function (t) {
   Object(j.a)(n, t);
   var e = Object(S.a)(n);
@@ -1440,7 +1275,7 @@ var Xt = function (t) {
   }]);
   return n;
 }(v.d);
-var Jt = require("../../../../shared/1531/2584/77");
+import * as Jt from "../../../../shared/1531/2584/77";
 var Zt = function (t) {
   Object(j.a)(n, t);
   var e = Object(S.a)(n);
@@ -1480,9 +1315,9 @@ var Zt = function (t) {
   }]);
   return n;
 }(v.d);
-var Qt = require("../../../../shared/1531/2584/672");
-var $t = require("../../../../shared/1531/2584/674");
-var te = require("../../../../shared/1531/2584/58/685");
+import * as Qt from "../../../../shared/1531/2584/672";
+import * as $t from "../../../../shared/1531/2584/674";
+import * as te from "../../../../shared/1531/2584/58/685";
 var ee = window.WebSocket;
 var ne = window.XMLHttpRequest;
 var re = ne.prototype.open;
@@ -1545,24 +1380,13 @@ function ue() {
 var ce;
 var le;
 var de;
-var fe = require("../../../../shared/1531/2584/36/345/index");
-require("./1161");
-require("./1162");
-var he = require("../../../../shared/1531/2584/2628/index");
-var pe = require("../../../../shared/1531/2584/13/index");
-var me = require("./71");
-var be = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default;
-  } : function () {
-    return module;
-  };
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  });
-  return defaultExport;
-}(me);
+import * as fe from "../../../../shared/1531/2584/36/345/index";
+import "./1161";
+import "./1162";
+import * as he from "../../../../shared/1531/2584/2628/index";
+import * as pe from "../../../../shared/1531/2584/13/index";
+import * as me from "./71";
+import be from "./71";
 var ge = [{
   number: 1,
   letter: ""
@@ -1615,35 +1439,35 @@ var ve = Object(f.memo)(function () {
   var a = function (t) {
     o(i + "" + t);
   };
-  return h.a.createElement("div", {
-    className: X()(be.a.dialerBox, !e.dialPageVisible && be.a.dialerBoxHide)
-  }, h.a.createElement("div", {
-    className: be.a.backBox,
+  return h.createElement("div", {
+    className: X(be.dialerBox, !e.dialPageVisible && be.dialerBoxHide)
+  }, h.createElement("div", {
+    className: be.backBox,
     onClick: function () {
       t(Object(C.s)({
         dialPageVisible: !1
       }));
     }
-  }, h.a.createElement(pe.j, {
+  }, h.createElement(pe.j, {
     type: "icon-phone-nav-back"
-  })), h.a.createElement("div", {
-    className: be.a.dialNumber
-  }, i), h.a.createElement("div", {
-    className: be.a.numberBox
+  })), h.createElement("div", {
+    className: be.dialNumber
+  }, i), h.createElement("div", {
+    className: be.numberBox
   }, ge.map(function (t) {
-    return h.a.createElement("div", {
+    return h.createElement("div", {
       key: t.number,
-      className: X()(be.a.keyItem, be.a.numberKey),
+      className: X(be.keyItem, be.numberKey),
       onClick: a.bind(null, t.number)
-    }, h.a.createElement("div", {
-      className: be.a.number
-    }, t.number), h.a.createElement("div", {
-      className: be.a.letter
+    }, h.createElement("div", {
+      className: be.number
+    }, t.number), h.createElement("div", {
+      className: be.letter
     }, t.letter));
-  }), h.a.createElement("div", {
-    className: X()(be.a.keyItem, be.a.white)
-  }), h.a.createElement("div", {
-    className: X()(be.a.keyItem, be.a.callBtn),
+  }), h.createElement("div", {
+    className: X(be.keyItem, be.white)
+  }), h.createElement("div", {
+    className: X(be.keyItem, be.callBtn),
     onClick: function () {
       if (i) {
         t(Object(C.s)({
@@ -1663,12 +1487,12 @@ var ve = Object(f.memo)(function () {
         });
       }
     }
-  }, h.a.createElement(pe.j, {
+  }, h.createElement(pe.j, {
     type: "icon-phone-call-dial"
-  })), h.a.createElement("div", {
-    className: X()(be.a.keyItem, be.a.white)
-  }, h.a.createElement("div", {
-    className: be.a.deleteBtn,
+  })), h.createElement("div", {
+    className: X(be.keyItem, be.white)
+  }, h.createElement("div", {
+    className: be.deleteBtn,
     onClick: function () {
       if (i) {
         o(i.substr(0, i.length - 1));
@@ -1676,7 +1500,7 @@ var ve = Object(f.memo)(function () {
     }
   }, "x"))));
 });
-var _e = require("../../../../shared/1531/2584/702");
+import * as _e from "../../../../shared/1531/2584/702";
 var ye = Object(f.memo)(function () {
   var t = Object(p.d)();
   var e = Object(_e.a)().formatMessage;
@@ -1746,85 +1570,85 @@ var ye = Object(f.memo)(function () {
       }
     });
   };
-  return h.a.createElement("div", {
-    className: X()(be.a.callingBox, !n.callingPageVisible && be.a.callingBoxHide)
-  }, "dialOutCall" === n.callType && h.a.createElement(h.a.Fragment, null, h.a.createElement("div", {
-    className: be.a.phoneNumber
-  }, n.phoneNumber), n.callStatus === N.b.RINGING && h.a.createElement("div", {
-    className: be.a.phoneStatus
+  return h.createElement("div", {
+    className: X(be.callingBox, !n.callingPageVisible && be.callingBoxHide)
+  }, "dialOutCall" === n.callType && h.createElement(h.Fragment, null, h.createElement("div", {
+    className: be.phoneNumber
+  }, n.phoneNumber), n.callStatus === N.b.RINGING && h.createElement("div", {
+    className: be.phoneStatus
   }, e({
     id: "emulator.onRinging"
-  })), n.callStatus === N.b.OFFHOOK && h.a.createElement("div", {
-    className: be.a.phoneStatus
-  }, s(o)), h.a.createElement("div", {
-    className: X()(be.a.callBtnBox, be.a.flexCC)
-  }, h.a.createElement("div", {
-    className: be.a.callBtnItemBox,
+  })), n.callStatus === N.b.OFFHOOK && h.createElement("div", {
+    className: be.phoneStatus
+  }, s(o)), h.createElement("div", {
+    className: X(be.callBtnBox, be.flexCC)
+  }, h.createElement("div", {
+    className: be.callBtnItemBox,
     onClick: u
-  }, h.a.createElement("div", {
-    className: X()(be.a.callBtnItem, be.a.callEnd)
-  }, h.a.createElement(pe.j, {
+  }, h.createElement("div", {
+    className: X(be.callBtnItem, be.callEnd)
+  }, h.createElement(pe.j, {
     type: "icon-phone-call-disconnect"
-  })), h.a.createElement("span", {
-    className: be.a.callBtnText
+  })), h.createElement("span", {
+    className: be.callBtnText
   }, e({
     id: "emulator.callEnd"
-  }))))), "incomingCall" === n.callType && h.a.createElement(h.a.Fragment, null, h.a.createElement("div", {
-    className: be.a.phoneNumber
-  }, n.phoneNumber), n.callStatus === N.b.RINGING && h.a.createElement("div", {
-    className: be.a.phoneStatus
+  }))))), "incomingCall" === n.callType && h.createElement(h.Fragment, null, h.createElement("div", {
+    className: be.phoneNumber
+  }, n.phoneNumber), n.callStatus === N.b.RINGING && h.createElement("div", {
+    className: be.phoneStatus
   }, e({
     id: "emulator.phoneNumber"
-  })), n.callStatus === N.b.OFFHOOK && h.a.createElement("div", {
-    className: be.a.phoneStatus
-  }, s(o)), h.a.createElement("div", {
-    className: X()(be.a.callBtnBox, n.callStatus === N.b.RINGING ? be.a.flexSC : be.a.flexCC)
-  }, h.a.createElement("div", {
-    className: be.a.callBtnItemBox,
+  })), n.callStatus === N.b.OFFHOOK && h.createElement("div", {
+    className: be.phoneStatus
+  }, s(o)), h.createElement("div", {
+    className: X(be.callBtnBox, n.callStatus === N.b.RINGING ? be.flexSC : be.flexCC)
+  }, h.createElement("div", {
+    className: be.callBtnItemBox,
     onClick: l
-  }, h.a.createElement("div", {
-    className: X()(be.a.callBtnItem, be.a.callEnd)
-  }, h.a.createElement(pe.j, {
+  }, h.createElement("div", {
+    className: X(be.callBtnItem, be.callEnd)
+  }, h.createElement(pe.j, {
     type: "icon-phone-call-disconnect"
-  })), h.a.createElement("span", {
-    className: be.a.callBtnText
+  })), h.createElement("span", {
+    className: be.callBtnText
   }, n.callStatus === N.b.RINGING ? e({
     id: "emulator.callRefuse"
   }) : e({
     id: "emulator.callEnd"
-  }))), n.callStatus === N.b.RINGING && h.a.createElement("div", {
-    className: be.a.callBtnItemBox,
+  }))), n.callStatus === N.b.RINGING && h.createElement("div", {
+    className: be.callBtnItemBox,
     onClick: d
-  }, h.a.createElement("div", {
-    className: X()(be.a.callBtnItem, be.a.callConnect)
-  }, h.a.createElement(pe.j, {
+  }, h.createElement("div", {
+    className: X(be.callBtnItem, be.callConnect)
+  }, h.createElement(pe.j, {
     type: "icon-phone-call-dial"
-  })), h.a.createElement("span", {
-    className: be.a.callBtnText
+  })), h.createElement("span", {
+    className: be.callBtnText
   }, e({
     id: "emulator.callConnect"
   }))))));
 });
-var Oe = require("../../../../shared/1531/2584/677/476");
+import * as Oe from "../../../../shared/1531/2584/677/476";
 var we = [{
   avatar: "https://static.codemao.cn/crc-uploader/2021/12/bbc05b5084214ba6a0c164be0e557364.jpeg",
-  name: "\u7f16\u7a0b\u732b",
+  name: "编程猫",
   number: "123 4567 8901"
 }, {
   avatar: "https://static.codemao.cn/crc-uploader/2021/12/35488fb77f963585880c80b956250b5f.jpeg",
-  name: "\u5927\u9ec4\u9e21",
+  name: "大黄鸡",
   number: "123 4567 8902"
 }, {
   avatar: "https://static.codemao.cn/crc-uploader/2021/12/ecee961d68c6b11db9a2275cf92ac602.jpeg",
-  name: "\u6d3b\u52a8\u55b5",
+  name: "活动喵",
   number: "123 4567 8903"
 }, {
   avatar: "https://static.codemao.cn/crc-uploader/2021/12/5bcc344dfd6d8833cd78fec568b95471.jpeg",
-  name: "\u8ff7\u4f60\u96c0",
+  name: "迷你雀",
   number: "123 4567 8904"
 }, {
   avatar: "https://static.codemao.cn/crc-uploader/2021/12/c36d182c24a52f1b94120c6abf1becaa.jpeg",
-  name: "\u661f\u80fd\u5154",
+  name: "星能兔",
   number: "123 4567 8905"
 }];
 var Ee = Object(f.memo)(function () {
@@ -1844,40 +1668,40 @@ var Ee = Object(f.memo)(function () {
     });
     Object(ut.emitWidgetEvent)(Oe.a, "onContactPickerSelected", e.contactWidgetId, n, r);
   };
-  return h.a.createElement("div", {
-    className: X()(be.a.contactBox, !e.contactPageVisible && be.a.contactBoxHide)
-  }, h.a.createElement("div", {
-    className: be.a.backBox,
+  return h.createElement("div", {
+    className: X(be.contactBox, !e.contactPageVisible && be.contactBoxHide)
+  }, h.createElement("div", {
+    className: be.backBox,
     onClick: function () {
       t(Object(C.s)({
         contactPageVisible: !1
       }));
     }
-  }, h.a.createElement(pe.j, {
+  }, h.createElement(pe.j, {
     type: "icon-phone-nav-back"
-  })), h.a.createElement("div", {
-    className: be.a.contactList
+  })), h.createElement("div", {
+    className: be.contactList
   }, we.map(function (t) {
-    return h.a.createElement("div", {
+    return h.createElement("div", {
       onClick: n.bind(null, t.name, t.number, t.avatar),
       key: t.name,
-      className: X()(be.a.contactItem, be.a.flexSC)
-    }, h.a.createElement("div", {
-      className: be.a.flexCC
-    }, h.a.createElement("img", {
+      className: X(be.contactItem, be.flexSC)
+    }, h.createElement("div", {
+      className: be.flexCC
+    }, h.createElement("img", {
       src: t.avatar,
-      className: be.a.itemAvatar,
+      className: be.itemAvatar,
       alt: ""
-    }), h.a.createElement("div", null, h.a.createElement("div", {
-      className: be.a.itemName
-    }, t.name), h.a.createElement("div", {
-      className: be.a.itemNumber
-    }, t.number))), h.a.createElement(pe.j, {
+    }), h.createElement("div", null, h.createElement("div", {
+      className: be.itemName
+    }, t.name), h.createElement("div", {
+      className: be.itemNumber
+    }, t.number))), h.createElement(pe.j, {
       type: "icon-fold-left"
     }));
   })));
 });
-var Te = require("../../../../shared/1531/2584/678/360");
+import * as Te from "../../../../shared/1531/2584/678/360";
 var je = Object(f.memo)(function () {
   var t = Object(p.d)();
   var e = Object(_e.a)().formatMessage;
@@ -1909,26 +1733,26 @@ var je = Object(f.memo)(function () {
       v([]);
     }
   }, [n.sendSmsPageVisible, n.sendSmsNumber, n.sendSmsContent]);
-  return h.a.createElement("div", {
-    className: X()(be.a.sendSmsBox, !n.sendSmsPageVisible && be.a.sendSmsBoxHide)
-  }, h.a.createElement("div", {
-    className: be.a.backBox
-  }, h.a.createElement("div", {
+  return h.createElement("div", {
+    className: X(be.sendSmsBox, !n.sendSmsPageVisible && be.sendSmsBoxHide)
+  }, h.createElement("div", {
+    className: be.backBox
+  }, h.createElement("div", {
     onClick: function () {
       t(Object(C.s)({
         sendSmsPageVisible: !1
       }));
     }
-  }, h.a.createElement(pe.j, {
+  }, h.createElement(pe.j, {
     type: "icon-phone-nav-back"
-  })), h.a.createElement("span", {
-    className: be.a.receiveUser
+  })), h.createElement("span", {
+    className: be.receiveUser
   }, e({
     id: "emulator.smsReceiver"
-  }))), h.a.createElement("div", {
-    className: be.a.numberBox
-  }, h.a.createElement(pe.k, {
-    className: be.a.inputNumber,
+  }))), h.createElement("div", {
+    className: be.numberBox
+  }, h.createElement(pe.k, {
+    className: be.inputNumber,
     defaultValue: o,
     placeholder: e({
       id: "emulator.smsSendNumberPlaceHolder"
@@ -1937,23 +1761,23 @@ var je = Object(f.memo)(function () {
       a(t);
     },
     maxLength: 20
-  })), h.a.createElement("div", {
-    className: be.a.smsBox
+  })), h.createElement("div", {
+    className: be.smsBox
   }, g.map(function (t, e) {
-    return h.a.createElement("div", {
+    return h.createElement("div", {
       key: e,
-      className: be.a.smsItem
+      className: be.smsItem
     }, t);
-  }), h.a.createElement("div", {
-    className: be.a.scrollToView,
+  }), h.createElement("div", {
+    className: be.scrollToView,
     ref: T
-  })), h.a.createElement("div", {
-    className: be.a.contentBox
-  }, h.a.createElement(pe.A, {
+  })), h.createElement("div", {
+    className: be.contentBox
+  }, h.createElement(pe.A, {
     ref: E,
     rows: O,
     maxLength: 200,
-    className: be.a.contentTextArea,
+    className: be.contentTextArea,
     defaultValue: l,
     placeholder: e({
       id: "emulator.smsContentPlaceHolder"
@@ -1964,7 +1788,7 @@ var je = Object(f.memo)(function () {
         w(Math.min(E.current.getRowCount(), 7));
       }
     }
-  }), h.a.createElement("div", {
+  }), h.createElement("div", {
     onClick: function () {
       if (o && l) {
         v(g.concat(l));
@@ -1991,8 +1815,8 @@ var je = Object(f.memo)(function () {
         }, 10);
       }
     },
-    className: X()(be.a.sendSmsBtn, (!o || !l) && be.a.disable)
-  }, h.a.createElement(pe.j, {
+    className: X(be.sendSmsBtn, (!o || !l) && be.disable)
+  }, h.createElement(pe.j, {
     type: "icon-phone-send-sms"
   }))));
 });
@@ -2017,31 +1841,31 @@ var Se = Object(f.memo)(function () {
       return de && clearTimeout(de);
     };
   }, [n.receiveSmsPageVisible, n.receiveSmsNumber, n.receiveSmsContent, t]);
-  return h.a.createElement("div", {
-    className: X()(be.a.receiveSms, !n.receiveSmsPageVisible && be.a.receiveSmsHide)
-  }, h.a.createElement("div", {
-    className: be.a.flexSC
-  }, h.a.createElement("div", {
-    className: be.a.smsIconBox
-  }, h.a.createElement("div", {
-    className: be.a.smsIcon
-  }, h.a.createElement(pe.j, {
+  return h.createElement("div", {
+    className: X(be.receiveSms, !n.receiveSmsPageVisible && be.receiveSmsHide)
+  }, h.createElement("div", {
+    className: be.flexSC
+  }, h.createElement("div", {
+    className: be.smsIconBox
+  }, h.createElement("div", {
+    className: be.smsIcon
+  }, h.createElement(pe.j, {
     type: "icon-widget-sms-service"
-  })), h.a.createElement("span", null, e({
+  })), h.createElement("span", null, e({
     id: "emulator.sms"
-  }))), h.a.createElement("div", {
-    className: be.a.smsTime
+  }))), h.createElement("div", {
+    className: be.smsTime
   }, e({
     id: "emulator.now"
-  }))), h.a.createElement("div", {
-    className: be.a.smsNumber
-  }, n.receiveSmsNumber), h.a.createElement("div", {
-    className: be.a.smsContent
+  }))), h.createElement("div", {
+    className: be.smsNumber
+  }, n.receiveSmsNumber), h.createElement("div", {
+    className: be.smsContent
   }, n.receiveSmsContent));
 });
 var Ae = Object(f.memo)(function () {
-  return h.a.createElement("div", {
-    className: be.a.screenMask,
+  return h.createElement("div", {
+    className: be.screenMask,
     id: "cocoScreenMask"
   });
 });
@@ -2049,80 +1873,80 @@ var ke = Object(f.memo)(function () {
   var t = Object(p.e)(function (t) {
     return t.language;
   });
-  return h.a.createElement(he.b, {
+  return h.createElement(he.b, {
     locale: t,
     messages: jt.e[t] || jt.e[jt.b]
-  }, h.a.createElement(ve, null), h.a.createElement(Ee, null), h.a.createElement(je, null), h.a.createElement(Se, null), h.a.createElement(ye, null), h.a.createElement(Ae, null));
+  }, h.createElement(ve, null), h.createElement(Ee, null), h.createElement(je, null), h.createElement(Se, null), h.createElement(ye, null), h.createElement(Ae, null));
 });
-var Ie = require("../../../../shared/1531/2584/21/424/67/410");
+import * as Ie from "../../../../shared/1531/2584/21/424/67/410";
 var Me = function () {
-  return h.a.createElement("svg", {
+  return h.createElement("svg", {
     "aria-hidden": "true",
     width: "0",
     height: "0",
     style: {
       position: "absolute"
     }
-  }, h.a.createElement("symbol", {
+  }, h.createElement("symbol", {
     id: "icon-radio-correct",
     viewBox: "0 0 1024 1024"
-  }, h.a.createElement("path", {
+  }, h.createElement("path", {
     d: "M935.594667 287.573333s-369.322667 393.984-452.096 487.594667c-82.773333 93.610667-147.328 0-147.328 0L96 535.253333s-38.314667-56.533333 30.293333-109.226666a87.552 87.552 0 0 1 117.034667 0l169.557333 171.648 421.802667-380.330667s40.362667-27.306667 82.773333 7.808c32.256 29.269333 18.133333 62.421333 18.133334 62.421333z"
-  })), h.a.createElement("symbol", {
+  })), h.createElement("symbol", {
     id: "icon-radio-incorrect",
     viewBox: "0 0 1024 1024"
-  }, h.a.createElement("path", {
+  }, h.createElement("path", {
     d: "M741.290667 204.074667a63.445333 63.445333 0 0 1 88.618666 1.365333 55.04 55.04 0 0 1-0.896 77.866667l-231.210666 226.005333 225.28 213.205333a59.989333 59.989333 0 0 1-1.706667 88.661334 71.125333 71.125333 0 0 1-96.597333-2.645334l-216.533334-211.669333-216.490666 211.669333c-24.917333 24.32-63.488 26.88-91.221334 6.912l-5.418666-4.266666a59.989333 59.989333 0 0 1-1.706667-88.661334l225.28-213.205333L187.52 283.306667a55.04 55.04 0 0 1 1.621333-80.256 63.445333 63.445333 0 0 1 86.101334 1.024l233.002666 220.501333z"
-  })), h.a.createElement("symbol", {
+  })), h.createElement("symbol", {
     id: "icon-fold-left",
     viewBox: "0 0 1024 1024"
-  }, h.a.createElement("path", {
+  }, h.createElement("path", {
     d: "M361.344 265.344a32 32 0 0 1 45.312 0l224 224a32 32 0 0 1 3.648 40.832l-3.648 4.48-224 224a32 32 0 0 1-48.96-40.832l3.648-4.48L562.752 512 361.344 310.656a32 32 0 0 1 0-45.312z"
-  })), h.a.createElement("symbol", {
+  })), h.createElement("symbol", {
     id: "icon-phone-nav-back",
     viewBox: "0 0 1350 1024"
-  }, h.a.createElement("path", {
+  }, h.createElement("path", {
     d: "M572.330667 25.002667a85.333333 85.333333 0 0 1 7.082666 112.64l-7.082666 8.021333L291.328 426.666667H2048a85.333333 85.333333 0 0 1 9.984 170.069333L2048 597.333333H291.328l281.002667 281.002667a85.333333 85.333333 0 0 1 7.082666 112.64l-7.082666 8.021333a85.333333 85.333333 0 0 1-112.64 7.082667l-8.021334-7.082667-426.666666-426.666666a85.333333 85.333333 0 0 1-7.082667-112.64l7.082667-8.021334 426.666666-426.666666a85.333333 85.333333 0 0 1 120.661334 0z"
-  })), h.a.createElement("symbol", {
+  })), h.createElement("symbol", {
     id: "icon-phone-call-disconnect",
     viewBox: "0 0 1024 1024"
-  }, h.a.createElement("path", {
+  }, h.createElement("path", {
     d: "M524.693333 388.416c-127.402667 0.298667-249.024 27.669333-310.741333 89.386667-27.989333 27.989333-42.282667 61.738667-41.066667 102.485333 0.917333 22.784 7.296 45.909333 21.909334 60.501333 10.026667 10.325333 24.32 16.106667 41.941333 13.077334l112.213333-19.157334c14.890667-2.752 26.133333-7.616 34.048-15.210666 9.728-9.130667 13.376-23.722667 13.376-43.477334l0.618667-30.72c0-4.864 1.813333-8.512 4.864-11.541333 2.730667-3.349333 6.976-4.864 10.325333-5.781333 19.456-5.162667 61.12-10.645333 112.512-10.645334 51.370667 0 92.736 4.266667 112.490667 10.944 3.349333 0.917333 6.997333 2.752 9.728 5.482667a13.376 13.376 0 0 1 4.565333 10.645333L652.373333 576c0.597333 19.754667 4.544 34.048 13.973334 43.477333 7.893333 7.893333 19.157333 12.458667 34.346666 15.210667l108.864 18.56c18.56 3.328 33.749333-3.050667 45.312-14.293333 13.376-13.696 21.290667-34.986667 21.589334-59.904 0.597333-40.746667-14.912-74.197333-42.261334-101.269334-61.738667-61.717333-182.144-89.685333-309.546666-89.386666z"
-  })), h.a.createElement("symbol", {
+  })), h.createElement("symbol", {
     id: "icon-phone-call-dial",
     viewBox: "0 0 1024 1024"
-  }, h.a.createElement("path", {
+  }, h.createElement("path", {
     d: "M375.658667 651.733333c84.522667 84.522667 190.016 151.104 276.992 151.104 39.829333 0 73.877333-13.674667 101.845333-43.776 15.509333-16.426667 27.072-37.696 27.072-58.069333 0-14.592-5.482667-28.586667-20.373333-38.933333l-92.736-65.365334c-12.778667-8.810667-24.021333-13.674667-34.666667-13.674666-13.674667 0-26.453333 7.296-40.448 20.970666l-22.186667 21.589334a15.573333 15.573333 0 0 1-11.562666 4.565333c-4.266667 0-8.213333-1.514667-11.541334-3.050667-17.941333-9.408-50.773333-35.264-81.493333-66.282666-31.018667-30.997333-57.472-63.232-66.282667-81.792-1.514667-3.328-3.050667-7.296-3.050666-10.944a14.72 14.72 0 0 1 4.565333-10.944l21.589333-22.805334c13.376-14.592 20.693333-27.349333 20.693334-40.746666 0-10.944-4.565333-22.186667-13.696-34.965334l-63.850667-90.304c-10.645333-14.890667-25.536-21.589333-41.962667-21.589333-19.157333 0-39.829333 9.429333-57.472 26.773333-29.184 28.266667-41.941333 63.232-41.941333 101.845334 0 86.976 65.664 191.573333 150.506667 276.394666z"
-  })), h.a.createElement("symbol", {
+  })), h.createElement("symbol", {
     id: "icon-phone-call-idle",
     viewBox: "0 0 1024 1024"
-  }, h.a.createElement("path", {
+  }, h.createElement("path", {
     d: "M341.317818 226.513455c23.156364 0 43.589818 10.146909 57.483637 29.626181l61.416727 86.830546c11.240727 15.755636 17.058909 30.510545 17.058909 45.847273 0 18.548364-8.610909 35.048727-25.623273 53.620363l-18.571636 19.549091c2.490182 5.236364 7.074909 12.288 13.218909 20.48l6.656 8.517818 7.586909 9.169455c2.676364 3.141818 5.492364 6.353455 8.424727 9.634909l9.122909 9.960727c3.141818 3.374545 6.4 6.749091 9.728 10.170182l9.797819 9.844364c4.794182 4.701091 9.658182 9.309091 14.498909 13.730909l9.611636 8.587636c1.582545 1.396364 3.165091 2.722909 4.724364 4.049455l9.169454 7.610181c11.892364 9.611636 22.388364 17.035636 29.463273 20.759273l1.117091 0.488727 19.176727-18.618181c16.221091-15.872 31.883636-24.738909 49.198546-26.018909l4.375272-0.16291c14.848 0 29.253818 5.818182 45.428364 16.989091l89.134545 62.836364c19.176727 13.312 28.625455 32.628364 28.625455 54.690909 0 24.413091-12.288 49.617455-31.650909 70.144-30.417455 32.721455-68.491636 48.826182-113.384727 48.826182-84.898909 0-189.207273-59.368727-281.437091-151.598546C283.438545 559.848727 224.674909 456.285091 224.674909 371.269818c0-44.148364 15.429818-82.734545 46.661818-112.965818C291.863273 238.08 316.834909 226.513455 341.317818 226.513455z m0 41.890909c-12.730182 0-27.485091 6.842182-40.727273 19.851636C277.620364 310.481455 266.565818 338.152727 266.565818 371.246545c0 71.633455 53.597091 166.074182 138.728727 251.229091C490.402909 707.560727 585.658182 761.786182 657.105455 761.786182c33.396364 0 60.322909-11.380364 82.804363-35.584 12.730182-13.498182 20.340364-29.090909 20.340364-41.518546 0-8.727273-3.095273-15.034182-10.752-20.340363l-89.088-62.789818c-9.634909-6.679273-16.570182-9.472-21.457455-9.472-6.306909 0-13.824 3.979636-24.32 14.266181l-21.154909 20.573091a35.746909 35.746909 0 0 1-25.925818 10.519273c-7.168 0-13.032727-1.722182-20.875636-5.329455-20.526545-10.775273-54.085818-37.818182-83.502546-67.514181l-5.585454-5.655273c-29.486545-30.161455-53.271273-59.880727-62.464-79.220364-3.072-6.749091-4.794182-12.427636-4.794182-19.2 0-9.541818 3.467636-18.292364 10.123636-24.948363l20.549818-21.690182c10.356364-11.310545 14.382545-19.013818 14.382546-25.064727 0-5.469091-2.676364-12.264727-9.309091-21.573819L364.637091 280.413091A26.903273 26.903273 0 0 0 341.317818 268.404364z m403.828364-18.338909c7.610182 0 14.475636 5.12 17.384727 12.916363a22.341818 22.341818 0 0 1-4.235636 22.714182l-99.956364 108.869818h111.336727c10.356364 0 18.804364 9.378909 18.804364 20.852364 0 11.450182-8.448 20.829091-18.804364 20.829091h-157.323636c-7.610182 0-14.475636-5.12-17.384727-12.916364a22.341818 22.341818 0 0 1 4.235636-22.714182l99.956364-108.869818h-88.482909c-10.356364 0-18.804364-9.378909-18.804364-20.852364 0-11.450182 8.448-20.829091 18.804364-20.82909h134.469818z"
-  })), h.a.createElement("symbol", {
+  })), h.createElement("symbol", {
     id: "icon-phone-send-sms",
     viewBox: "0 0 1024 1024"
-  }, h.a.createElement("path", {
+  }, h.createElement("path", {
     d: "M186.453333 825.813333l54.101334-240.938666a34.133333 34.133333 0 0 1 30.805333-26.538667l332.373333-24.277333-332.544-26.325334a34.133333 34.133333 0 0 1-30.634666-26.496L186.453333 240.896a34.133333 34.133333 0 0 1 48.597334-38.058667l599.893333 299.946667a34.133333 34.133333 0 0 1 0 61.098667l-599.936 299.946666a34.133333 34.133333 0 0 1-48.597333-37.973333z"
-  })), h.a.createElement("symbol", {
+  })), h.createElement("symbol", {
     id: "icon-widget-sms-service",
     viewBox: "0 0 1024 1024"
-  }, h.a.createElement("path", {
+  }, h.createElement("path", {
     d: "M828.970667 140.8A139.562667 139.562667 0 0 1 968.533333 280.362667V743.68a139.562667 139.562667 0 0 1-139.562666 139.562667H194.986667A139.562667 139.562667 0 0 1 55.466667 743.637333V280.32A139.562667 139.562667 0 0 1 195.029333 140.8zM115.2 391.978667v351.658666c0 44.074667 35.754667 79.829333 79.829333 79.829334H829.013333a79.829333 79.829333 0 0 0 79.829334-79.829334V392.021333l-334.464 185.728c-36.181333 19.242667-78.549333 20.522667-115.925334 3.669334l-7.936-3.882667L115.2 391.978667zM828.970667 200.533333H194.986667A79.829333 79.829333 0 0 0 115.2 280.362667v43.349333l363.733333 201.301333c19.157333 10.154667 41.173333 11.178667 60.586667 3.242667l6.314667-2.986667L908.8 323.754667V280.362667c0-41.984-32.426667-76.373333-73.6-79.573334l-6.229333-0.256z"
-  })), h.a.createElement("symbol", {
+  })), h.createElement("symbol", {
     id: "icon-close",
     viewBox: "0 0 1024 1024"
-  }, h.a.createElement("path", {
+  }, h.createElement("path", {
     d: "M980.906667 43.093333a59.733333 59.733333 0 0 1 6.314666 77.056l-6.314666 7.424L596.394667 512l384.512 384.426667a59.733333 59.733333 0 0 1-77.056 90.794666l-7.424-6.314666L512 596.394667l-384.426667 384.512a59.733333 59.733333 0 0 1-90.794666-77.056l6.314666-7.424L427.605333 512 43.093333 127.573333A59.733333 59.733333 0 0 1 120.149333 36.778667l7.424 6.314666L512 427.605333 896.426667 43.093333a59.733333 59.733333 0 0 1 84.48 0z"
   }), " "));
 };
-var Ce = h.a.memo(function () {
+var Ce = h.memo(function () {
   var t = Object(p.e)(function (t) {
     return t.currentScreenId;
   });
   if (!t) {
     console.error("The currentScreen id is undefined");
   }
-  return h.a.createElement("div", {
+  return h.createElement("div", {
     id: nt.a,
     style: {
       width: "100%",
@@ -2131,11 +1955,11 @@ var Ce = h.a.memo(function () {
     onClick: function (t) {
       return t.stopPropagation();
     }
-  }, h.a.createElement(Ie.a, {
+  }, h.createElement(Ie.a, {
     id: t || ""
-  }), h.a.createElement(Me, null), h.a.createElement(ke, null));
+  }), h.createElement(Me, null), h.createElement(ke, null));
 });
-var xe = require("../../../../shared/1531/2584/38/217/388");
+import * as xe from "../../../../shared/1531/2584/38/217/388";
 var Re = {
   x: 0,
   y: 0,
@@ -2278,22 +2102,22 @@ function We(t) {
   return He.apply(this, arguments);
 }
 function He() {
-  return (He = Object(d.a)(u.a.mark(function t(e) {
+  return (He = Object(d.a)(u.mark(function t(e) {
     var n;
-    return u.a.wrap(function (t) {
+    return u.wrap(function (t) {
       for (;;) {
         switch (t.prev = t.next) {
           case 0:
             t.next = 2;
             return Promise.all(e.map(function () {
-              var t = Object(d.a)(u.a.mark(function t(e) {
+              var t = Object(d.a)(u.mark(function t(e) {
                 var n;
-                return u.a.wrap(function (t) {
+                return u.wrap(function (t) {
                   for (;;) {
                     switch (t.prev = t.next) {
                       case 0:
                         t.next = 2;
-                        return g.a.get("".concat(e.cdnUrl, "?t=").concat(Math.random()));
+                        return g.get("".concat(e.cdnUrl, "?t=").concat(Math.random()));
                       case 2:
                         n = t.sent;
                         return t.abrupt("return", Object(l.a)(Object(l.a)({}, e), {}, {
@@ -2325,7 +2149,7 @@ function Fe(t, e) {
   return Ve.apply(this, arguments);
 }
 function Ve() {
-  return (Ve = Object(d.a)(u.a.mark(function t(e, n) {
+  return (Ve = Object(d.a)(u.mark(function t(e, n) {
     var r;
     var i;
     var o;
@@ -2335,16 +2159,16 @@ function Ve() {
     var f;
     var h;
     var p;
-    return u.a.wrap(function (t) {
+    return u.wrap(function (t) {
       for (;;) {
         switch (t.prev = t.next) {
           case 0:
             o = function () {
-              return (o = Object(d.a)(u.a.mark(function t(e, n) {
+              return (o = Object(d.a)(u.mark(function t(e, n) {
                 var i;
                 var o;
                 var a;
-                return u.a.wrap(function (t) {
+                return u.wrap(function (t) {
                   for (;;) {
                     switch (t.prev = t.next) {
                       case 0:
@@ -2422,7 +2246,7 @@ function Ye(t) {
   return ze.apply(this, arguments);
 }
 function ze() {
-  return (ze = Object(d.a)(u.a.mark(function t(e) {
+  return (ze = Object(d.a)(u.mark(function t(e) {
     var n;
     var r;
     var i;
@@ -2436,7 +2260,7 @@ function ze() {
     var m;
     var b;
     var g;
-    return u.a.wrap(function (t) {
+    return u.wrap(function (t) {
       for (;;) {
         switch (t.prev = t.next) {
           case 0:
@@ -2519,14 +2343,14 @@ Object(v.s)(Ft);
 Object(v.s)($t);
 Object(v.s)(Gt);
 var _a;
-_a = h.a.memo(function (t) {
+_a = h.memo(function (t) {
   var e = Object(f.useState)(!1);
   var n = Object(c.a)(e, 2);
   var r = n[0];
   var i = n[1];
   var o = function () {
-    var e = Object(d.a)(u.a.mark(function e() {
-      return u.a.wrap(function (e) {
+    var e = Object(d.a)(u.mark(function e() {
+      return u.wrap(function (e) {
         for (;;) {
           switch (e.prev = e.next) {
             case 0:
@@ -2549,9 +2373,9 @@ _a = h.a.memo(function (t) {
   Object(f.useEffect)(function () {
     o();
   }, []);
-  return r ? h.a.createElement(p.a, {
+  return r ? h.createElement(p.a, {
     store: Object(x.a)()
-  }, h.a.createElement(Ce, null)) : null;
+  }, h.createElement(Ce, null)) : null;
 });
 export { _a as a };
 export default _a;

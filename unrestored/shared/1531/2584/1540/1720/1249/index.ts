@@ -1,10 +1,10 @@
-var r = require("../../1731/309");
+var r = require("../../1623/309");
 var o = require("../../1735/257");
 var i = require("../../1253/934");
 var a = require("../../1253/824");
 var s = require("./1064");
 var c = require("../../1253/632");
-var l = require("../../1714/258/index").aTypedArrayConstructor;
+var l = require("../258/index").aTypedArrayConstructor;
 module.exports = function (e) {
   var t;
   var n;

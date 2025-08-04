@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: !0
 });
-var r = require("./2342/444");
+var r = require("./1366/444");
 function i(e) {
   return "function" === typeof e ? e.name : "symbol" === typeof e ? e.toString() : e;
 }
@@ -47,7 +47,7 @@ exports.circularDependencyToException = function e(t) {
           var r = i(t.serviceIdentifier);
           n.push(r);
           return null !== t.parentRequest ? e(t.parentRequest, n) : n;
-        }(e).reverse().join(" --\x3e ");
+        }(e).reverse().join(" --> ");
       }(t);
       throw new Error(r.CIRCULAR_DEPENDENCY + " " + n);
     }

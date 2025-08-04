@@ -4,8 +4,8 @@ Object.defineProperty(exports, "__esModule", {
   value: !0
 });
 exports.Extensions = void 0;
-var r = require("../../1001/93");
-var i = require("../../1001/134/index");
+var r = require("tslib");
+var i = require("inversify");
 var o = require("../../4/127");
 var a = require("../../125/195/index");
 var s = require("../497/841");
@@ -18,10 +18,10 @@ var u = function () {
   }
   e.prototype.register = function (e, t) {
     if ((0, s.string_is_empty_or_whitespace)(e)) {
-      throw new Error('Error when registering extension "' + e + '": invalid extension name. ');
+      throw new Error("Error when registering extension \"" + e + "\": invalid extension name. ");
     }
     if (this.extensions[e]) {
-      console.error('Error when registering extension "' + e + '": extension existed.');
+      console.error("Error when registering extension \"" + e + "\": extension existed.");
     } else {
       this.extensions[e] = t;
     }
@@ -29,7 +29,7 @@ var u = function () {
   e.prototype.register_mixin = function (e, t) {
     var n = this.check_existed_mutator_property(t);
     if (n) {
-      throw Error('Error when registering extension "' + e + '": Trying to register mixin with mutator property: ' + n + ". ");
+      throw Error("Error when registering extension \"" + e + "\": Trying to register mixin with mutator property: " + n + ". ");
     }
     this.register(e, function () {
       this.mixin(t);
@@ -44,10 +44,10 @@ var u = function () {
     for (var r = 0; r < this.MUTATOR_PROPERTIES_.length; r++) {
       var i = this.MUTATOR_PROPERTIES_[r];
       if (!t.hasOwnProperty(i)) {
-        throw new Error('Error when registering mutator "' + e + '": missing required property "' + i + '". ');
+        throw new Error("Error when registering mutator \"" + e + "\": missing required property \"" + i + "\". ");
       }
       if (!(0, c.is_func)(t[i])) {
-        throw new Error('Error when registering mutator "' + e + '": required property "' + i + '" must be a function. ');
+        throw new Error("Error when registering mutator \"" + e + "\": required property \"" + i + "\" must be a function. ");
       }
     }
     this.mutators[e] = function () {
@@ -63,7 +63,7 @@ var u = function () {
     }
   };
   e.prototype.apply = function (e, t) {
-    var n = 'Error when applying extension "' + e + '": ';
+    var n = "Error when applying extension \"" + e + "\": ";
     var r = this.extensions[e];
     if (!(0, c.is_func)(r)) {
       throw new Error(n + "extension not found.");
@@ -75,7 +75,7 @@ var u = function () {
     }
   };
   e.prototype.apply_mutator = function (e, t) {
-    var n = 'Error when applying mutator "' + e + '": ';
+    var n = "Error when applying mutator \"" + e + "\": ";
     var r = this.mutators[e];
     if (!(0, c.is_func)(r)) {
       throw new Error(n + "mutator not found.");
@@ -87,7 +87,7 @@ var u = function () {
     r.apply(t);
     var o = this.check_absent_mutator_property(t);
     if (o) {
-      throw new Error(n + "applied a mutator didn't add \"" + o + '"');
+      throw new Error(n + "applied a mutator didn't add \"" + o + "\"");
     }
   };
   e.prototype.check_existed_mutator_property = function (e) {

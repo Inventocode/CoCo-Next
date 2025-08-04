@@ -3,8 +3,8 @@
 Object.defineProperty(exports, "__esModule", {
   value: !0
 });
-var r = require("../../1366");
-var i = require("../../2342/444");
+var r = require("../../1366/index");
+var i = require("../../1366/444");
 var o = require("../../580");
 var a = require("../../359");
 var s = require("../../846");

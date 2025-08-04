@@ -32,7 +32,7 @@ var r = function (e) {
     t.set(e, n);
   }
   return n;
-}(require("../../0/index"));
+}(require("react"));
 var o = u(require("../../50/index"));
 var i = u(require("../../75/index"));
 var a = require("./1049/index");

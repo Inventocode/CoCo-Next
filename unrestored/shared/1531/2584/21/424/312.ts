@@ -20,7 +20,7 @@ var i = require("../../28/index");
 var a = require("../../48/72");
 var s = require("../../91");
 var c = require("../../14");
-var l = require("../../15/index");
+var l = require("../../15");
 var u = require("../../36/345/114");
 function d(e, t) {
   var n = Object(o.a)().getState().screenList;

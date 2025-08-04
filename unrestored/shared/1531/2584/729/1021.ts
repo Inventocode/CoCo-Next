@@ -747,7 +747,7 @@ var j = function () {
     },
     parse: function (t, n) {
       if (function (e) {
-        var t = "Kaydara FBX Binary  \0";
+        var t = "Kaydara FBX Binary  \u0000";
         return e.byteLength >= t.length && t === _(e, 0, t.length);
       }(t)) {
         e = new c().parse(t);
@@ -878,7 +878,7 @@ var j = function () {
           t = "image/tga";
           break;
         default:
-          return void console.warn('FBXLoader: Image type "' + i + '" is not supported.');
+          return void console.warn("FBXLoader: Image type \"" + i + "\" is not supported.");
       }
       if ("string" === typeof n) {
         return "data:" + t + ";base64," + n;
@@ -977,7 +977,7 @@ var j = function () {
           s = new r.w();
           break;
         default:
-          console.warn('THREE.FBXLoader: unknown material type "%s". Defaulting to MeshPhongMaterial.', o);
+          console.warn("THREE.FBXLoader: unknown material type \"%s\". Defaulting to MeshPhongMaterial.", o);
           s = new r.x();
       }
       s.setValues(l);
@@ -2546,7 +2546,7 @@ var j = function () {
       }
     },
     parseNodeSpecialProperty: function (e, t, n) {
-      var r = n.split('",').map(function (e) {
+      var r = n.split("\",").map(function (e) {
         return e.trim().replace(/^\"/, "").replace(/\s/, "_");
       });
       var i = r[0];

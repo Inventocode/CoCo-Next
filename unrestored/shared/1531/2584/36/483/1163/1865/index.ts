@@ -1,5 +1,5 @@
 var r = require("./1866/index");
-var i = require("../../1447/1097");
+var i = require("../1097");
 var o = require("./1868/index");
 var a = /^[-+]0x[0-9a-f]+$/i;
 var s = /^0b[01]+$/i;

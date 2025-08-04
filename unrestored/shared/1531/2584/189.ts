@@ -106,7 +106,7 @@ var i = {
       label: "setButtonText",
       valueType: "string",
       checkType: ["string", "boolean", "number", "array"],
-      defaultValue: "\u786e\u5b9a"
+      defaultValue: "确定"
     }, {
       key: "setImage",
       label: "setImage",
@@ -141,13 +141,13 @@ var i = {
       label: "setOption1",
       valueType: "string",
       checkType: ["string", "boolean", "number", "array"],
-      defaultValue: "\u9009\u98791"
+      defaultValue: "选项1"
     }, {
       key: "setOption2",
       label: "setOption2",
       valueType: "string",
       checkType: ["string", "boolean", "number", "array"],
-      defaultValue: "\u9009\u98792"
+      defaultValue: "选项2"
     }, {
       key: "setShowCancelButton",
       label: "setShowCancelButton",
@@ -177,7 +177,7 @@ var i = {
       label: "setInputPlaceHolder",
       valueType: "string",
       checkType: ["string", "boolean", "number", "array"],
-      defaultValue: "\u8bf7\u8f93\u5165\u5185\u5bb9"
+      defaultValue: "请输入内容"
     }, {
       key: "setShowCancelButton",
       label: "setShowCancelButton",

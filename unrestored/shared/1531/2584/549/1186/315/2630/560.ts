@@ -1,7 +1,7 @@
 "use strict";
 
 export { o as a };
-var r = require("../../../../0/index");
+var r = require("react");
 var i = "undefined" !== typeof window ? r.useLayoutEffect : r.useEffect;
 function o(e) {
   var t = r.useRef(e);

@@ -1,11 +1,11 @@
 "use strict";
 
-var r = require("./1633/86/index");
-var o = require("./1690/440");
+var r = require("./1623/86");
+var o = require("./1698/440");
 r({
   target: "String",
   proto: !0,
-  forced: require("./1690/441")("bold")
+  forced: require("./1698/441")("bold")
 }, {
   bold: function () {
     return o(this, "b", "", "");

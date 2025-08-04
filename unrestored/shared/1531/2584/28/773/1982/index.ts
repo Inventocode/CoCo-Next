@@ -14,7 +14,7 @@ function l(e) {
     return t;
   }(e || {})).stripIgnoreTag) {
     if (e.onIgnoreTag) {
-      console.error('Notes: cannot use these two options "stripIgnoreTag" and "onIgnoreTag" at the same time');
+      console.error("Notes: cannot use these two options \"stripIgnoreTag\" and \"onIgnoreTag\" at the same time");
     }
     e.onIgnoreTag = i.onIgnoreTagStripAll;
   }

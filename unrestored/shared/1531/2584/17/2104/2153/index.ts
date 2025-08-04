@@ -4,11 +4,11 @@ Object.defineProperty(exports, "__esModule", {
   value: !0
 });
 exports.Toolbox = void 0;
-var r = require("../../../1001/93");
-var i = require("../../../1001/134/index");
+var r = require("tslib");
+var i = require("inversify");
 var o = require("../../../4/127");
 var a = require("../../../125/195/index");
-var s = require("../../../206/208/387");
+var s = require("../../497/387");
 var c = require("../../../125/index");
 var u = require("../../../1001/213/index");
 var l = require("../../../125/294");

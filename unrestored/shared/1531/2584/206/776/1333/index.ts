@@ -1,7 +1,7 @@
 "use strict";
 
 var r = require("../842");
-var i = require("../../../../../3272/3200/624/index");
+var i = require("../../../38/607/624/index");
 var o = require("./2207/index");
 var a = function (e, t) {
   for (var n = {}, r = 0, o = Object.entries(e); r < o.length; r++) {

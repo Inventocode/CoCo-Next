@@ -1,8 +1,8 @@
 var r = require("./1375");
 function i(e, t) {
   var n = e.a / 255;
-  var r = t + '="' + e.hex + '"';
-  return n < 1 ? r + " " + t + '-opacity="' + n.toFixed(2).slice(1) + '"' : r;
+  var r = t + "=\"" + e.hex + "\"";
+  return n < 1 ? r + " " + t + "-opacity=\"" + n.toFixed(2).slice(1) + "\"" : r;
 }
 function o(e, t, n) {
   var r = e + t;
@@ -16,8 +16,8 @@ exports.render = function (e, t, n) {
   var s = e.modules.size;
   var c = e.modules.data;
   var u = s + 2 * a.margin;
-  var l = a.color.light.a ? "<path " + i(a.color.light, "fill") + ' d="M0 0h' + u + "v" + u + 'H0z"/>' : "";
-  var f = "<path " + i(a.color.dark, "stroke") + ' d="' + function (e, t, n) {
+  var l = a.color.light.a ? "<path " + i(a.color.light, "fill") + " d=\"M0 0h" + u + "v" + u + "H0z\"/>" : "";
+  var f = "<path " + i(a.color.dark, "stroke") + " d=\"" + function (e, t, n) {
     for (var r = "", i = 0, a = !1, s = 0, c = 0; c < e.length; c++) {
       var u = Math.floor(c % t);
       var l = Math.floor(c / t);
@@ -40,9 +40,9 @@ exports.render = function (e, t, n) {
       }
     }
     return r;
-  }(c, s, a.margin) + '"/>';
-  var d = 'viewBox="0 0 ' + u + " " + u + '"';
-  var h = '<svg xmlns="http://www.w3.org/2000/svg" ' + (a.width ? 'width="' + a.width + '" height="' + a.width + '" ' : "") + d + ' shape-rendering="crispEdges">' + l + f + "</svg>\n";
+  }(c, s, a.margin) + "\"/>";
+  var d = "viewBox=\"0 0 " + u + " " + u + "\"";
+  var h = "<svg xmlns=\"http://www.w3.org/2000/svg\" " + (a.width ? "width=\"" + a.width + "\" height=\"" + a.width + "\" " : "") + d + " shape-rendering=\"crispEdges\">" + l + f + "</svg>\n";
   if ("function" === typeof n) {
     n(null, h);
   }

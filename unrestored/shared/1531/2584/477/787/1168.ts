@@ -35,7 +35,7 @@ function o(e, t) {
   }) : null;
   if (null === (i = d) || void 0 === i ? void 0 : i.length) {
     d.forEach(function (e) {
-      f.push("[" + e[0] + '="' + e[1] + '"]');
+      f.push("[" + e[0] + "=\"" + e[1] + "\"]");
     });
   } else if (l.id && f.push("#" + l.id), (o = l.className) && Object(r.h)(o)) {
     for (a = o.split(/\s+/), u = 0; u < a.length; u++) {
@@ -46,7 +46,7 @@ function o(e, t) {
   for (u = 0; u < h.length; u++) {
     s = h[u];
     if (c = l.getAttribute(s)) {
-      f.push("[" + s + '="' + c + '"]');
+      f.push("[" + s + "=\"" + c + "\"]");
     }
   }
   return f.join("");

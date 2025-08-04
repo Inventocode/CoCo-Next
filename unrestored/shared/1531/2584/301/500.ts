@@ -4,9 +4,9 @@ Object.defineProperty(exports, "__esModule", {
   value: !0
 });
 exports.Field = void 0;
-var r = require("../1001/93");
-var i = require("../1001/134/index");
-var o = require("../17/259");
+var r = require("tslib");
+var i = require("inversify");
+var o = require("@kitten-team/gl-matrix");
 var a = require("../4/127");
 var s = require("../125/195/index");
 var c = require("../125/294");
@@ -264,7 +264,7 @@ var f = function () {
     return this.field_group;
   };
   e.prototype.show_editor = function (e, t) {
-    throw new ReferenceError("show_editor \u4e0d\u80fd\u5728 field \u4e2d\u8c03\u7528\uff0c\u9700\u8981\u7531\u5b50\u7c7b\u5b9e\u73b0");
+    throw new ReferenceError("show_editor 不能在 field 中调用，需要由子类实现");
   };
   e.prototype.set_visible = function (e) {
     if (this.visible_ != e) {
@@ -283,7 +283,7 @@ var f = function () {
   };
   e.prototype.get_display_text = function () {
     var e = this.text_;
-    return e ? (e.length > this.max_display_length && (e = e.substring(0, this.max_display_length - 2) + "\u2026"), e = e.replace(/\s/g, "\xa0")) : "\xa0";
+    return e ? (e.length > this.max_display_length && (e = e.substring(0, this.max_display_length - 2) + "…"), e = e.replace(/\s/g, " ")) : " ";
   };
   e.prototype.call_validator = function (e) {
     if (void 0 != e) {

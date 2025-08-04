@@ -5,7 +5,7 @@ var i = require("../../../19");
 var o = require("../../../103");
 var a = require("../../../430");
 require("../../../50/index");
-var s = require("../../../0/index");
+var s = require("react");
 var c = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;

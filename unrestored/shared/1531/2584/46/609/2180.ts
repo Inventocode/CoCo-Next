@@ -4,7 +4,7 @@ Object.defineProperty(exports, "__esModule", {
   value: !0
 });
 exports.JsonJavaScriptGenerator = void 0;
-var r = require("../../1001/93");
+var r = require("tslib");
 var i = function (e) {
   function t() {
     var t = e.call(this, "Javascript") || this;

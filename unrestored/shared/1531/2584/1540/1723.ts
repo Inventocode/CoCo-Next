@@ -1,7 +1,7 @@
 "use strict";
 
-var r = require("./1745/194");
-var o = require("./1714/258/index");
+var r = require("./1736/194");
+var o = require("./1720/258/index");
 var i = require("./936/index");
 var a = require("./1742/247/index")("iterator");
 var s = r.Uint8Array;

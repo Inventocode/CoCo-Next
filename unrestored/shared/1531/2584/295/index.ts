@@ -3,7 +3,7 @@
 var r;
 var o = require("../10/index");
 var i = require("../47");
-var a = require("../0/index");
+var a = require("react");
 var s = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;

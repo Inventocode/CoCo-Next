@@ -505,7 +505,7 @@ function F() {
             }));
           case 30:
             throw new Error(JSON.stringify({
-              msg: "\u670d\u52a1\u5668\u9519\u8bef",
+              msg: "服务器错误",
               code: "E0"
             }));
           case 31:
@@ -602,7 +602,7 @@ function U() {
             }));
           case 30:
             throw new Error(JSON.stringify({
-              msg: "\u670d\u52a1\u5668\u9519\u8bef",
+              msg: "服务器错误",
               code: "E0"
             }));
           case 31:
@@ -707,7 +707,7 @@ function H() {
             }));
           case 30:
             throw new Error(JSON.stringify({
-              msg: "\u670d\u52a1\u5668\u9519\u8bef",
+              msg: "服务器错误",
               code: "E0"
             }));
           case 31:
@@ -804,7 +804,7 @@ function z() {
             }));
           case 30:
             throw new Error(JSON.stringify({
-              msg: "\u670d\u52a1\u5668\u9519\u8bef",
+              msg: "服务器错误",
               code: "E0"
             }));
           case 31:
@@ -885,7 +885,7 @@ function K() {
             }));
           case 30:
             throw new Error(JSON.stringify({
-              msg: "\u670d\u52a1\u5668\u9519\u8bef",
+              msg: "服务器错误",
               code: "E0"
             }));
           case 31:

@@ -4,35 +4,35 @@ export { r as messages };
 export { u as types };
 var r = {
   "zh-CN": {
-    widget: "\u63a7\u4ef6",
-    widgetName: "\u8f93\u5165\u6846",
-    widthMsg: "\u5bbd\u5ea6 ",
-    heightMsg: "\u9ad8\u5ea6",
-    hasErrorMessageLabel: "\u662f\u5426 \u62a5\u9519",
-    placeholderContent: "\u63d0\u793a\u6587\u6848",
-    inputContent: "\u8f93\u5165\u6587\u6848",
-    fontSize: "\u5b57\u53f7",
-    textAlign: "\u5bf9\u9f50\u65b9\u5f0f",
-    left: "\u5c45\u5de6",
-    center: "\u5c45\u4e2d",
-    right: "\u5c45\u53f3",
-    outlinedNormal: "\u7ebf\u6846",
-    containedNormal: "\u5e95\u8272",
-    containedRound: "\u5706\u89d2",
-    outlinedFlat: "\u6a2a\u7ebf",
-    color: "\u989c\u8272 \u4e3a",
-    templateMode: "\u7684 \u80cc\u666f\u6846 \u6837\u5f0f \u4e3a \u6a21\u677f",
-    backgroundImage: "\u7684 \u80cc\u666f\u6846 \u6837\u5f0f \u4e3a \u56fe\u7247",
-    errorMessageContent: "\u62a5\u9519\u6587\u6848",
-    contentColor: "\u7684 \u989c\u8272",
-    outOfRange: "\u5d4c\u5165\u79ef\u6728\u6570\u503c\u8d85\u8fc7\u53d6\u503c\u8303\u56f4",
-    set: "\u8bbe\u7f6e"
+    widget: "控件",
+    widgetName: "输入框",
+    widthMsg: "宽度 ",
+    heightMsg: "高度",
+    hasErrorMessageLabel: "是否 报错",
+    placeholderContent: "提示文案",
+    inputContent: "输入文案",
+    fontSize: "字号",
+    textAlign: "对齐方式",
+    left: "居左",
+    center: "居中",
+    right: "居右",
+    outlinedNormal: "线框",
+    containedNormal: "底色",
+    containedRound: "圆角",
+    outlinedFlat: "横线",
+    color: "颜色 为",
+    templateMode: "的 背景框 样式 为 模板",
+    backgroundImage: "的 背景框 样式 为 图片",
+    errorMessageContent: "报错文案",
+    contentColor: "的 颜色",
+    outOfRange: "嵌入积木数值超过取值范围",
+    set: "设置"
   }
 };
 var o = require("./6");
 var i = require("./97");
 var a = require("./5");
-var s = require("./35/index");
+var s = require("./35");
 var c = require("./77");
 var l = require("./60");
 var u = {

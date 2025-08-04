@@ -566,7 +566,7 @@ var q = function __importDefault(module) {
 var X = require("../25/index");
 var Q = require("../7");
 var Z = require("./304");
-var J = require("../1036/32/index");
+var J = require("ot-json1");
 var $ = require("../24/index");
 var ee = require("./244");
 var te = require("../10/index");
@@ -734,7 +734,7 @@ function ve(e, t, n) {
   var r = Object(J.moveOp)(Object(X.a)(ie(e, t)), Object(X.a)(ie(e, n)));
   $.a.applyClient(r);
 }
-var be = require("../2/index");
+var be = require("../2");
 var ye = require("../9");
 var Ee = require("../38/index");
 var Oe = require("../43");
@@ -899,7 +899,7 @@ function Re(e, t) {
   }
 }
 var ke = require("./377/index");
-var xe = require("../99/index");
+var xe = require("../99");
 function De(e) {
   return 2 === e.length && "screens" === e[0];
 }

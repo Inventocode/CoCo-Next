@@ -4,19 +4,19 @@ export { r as messages };
 export { c as types };
 var r = {
   "zh-CN": {
-    widget: "\u63a7\u4ef6",
-    widgetName: "\u56fe\u7247\u6846",
-    fileId: "\u56fe\u7247",
-    onImagePress: "\u88ab\u70b9\u51fb",
-    width: "\u5bbd\u5ea6",
-    height: "\u9ad8\u5ea6",
-    backgroundColor: "\u80cc\u666f\u989c\u8272"
+    widget: "控件",
+    widgetName: "图片框",
+    fileId: "图片",
+    onImagePress: "被点击",
+    width: "宽度",
+    height: "高度",
+    backgroundColor: "背景颜色"
   }
 };
 var o = require("./6");
-var i = require("./133");
+var i = require("./133/index");
 var a = require("./5");
-var s = require("./35/index");
+var s = require("./35");
 var c = {
   type: a.v,
   icon: i.a,

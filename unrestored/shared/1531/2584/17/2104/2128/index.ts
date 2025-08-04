@@ -4,10 +4,10 @@ Object.defineProperty(exports, "__esModule", {
   value: !0
 });
 exports.Blink = void 0;
-var r = require("../../../1001/93");
-var i = require("../../../1001/134/index");
+var r = require("tslib");
+var i = require("inversify");
 var o = require("../../../1179/1319");
-var a = require("./1320");
+var a = require("../2143/1320");
 var s = require("./2129/index");
 var c = require("../../640/index");
 var u = require("../../../4/127");
@@ -44,7 +44,7 @@ var l = function () {
         var r = n.type;
         if (r) {
           if (this.Blocks[r]) {
-            console.warn("Block definition #" + t + ' in JSON array overwrites prior definition of "' + r + '".');
+            console.warn("Block definition #" + t + " in JSON array overwrites prior definition of \"" + r + "\".");
           }
           this.Blocks[r] = {
             init: function (e) {
@@ -63,7 +63,7 @@ var l = function () {
   };
   e.prototype.define_block_with_object = function (e, t) {
     if (this.Blocks[e]) {
-      console.warn('Block definition overwrites prior definition of "' + e + '".');
+      console.warn("Block definition overwrites prior definition of \"" + e + "\".");
     }
     this.Blocks[e] = t;
   };

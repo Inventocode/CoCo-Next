@@ -4,8 +4,8 @@ Object.defineProperty(exports, "__esModule", {
   value: !0
 });
 exports.ColorController = void 0;
-var r = require("../../../1001/93");
-var i = require("../../../1001/134/index");
+var r = require("tslib");
+var i = require("inversify");
 var o = require("../../../125/294");
 var a = require("../../../1001/577");
 var s = require("../../../125/195/index");
@@ -82,7 +82,7 @@ var u = function (e) {
         e.current_color_panel_element = o.querySelector(".color-strip-panel");
       }
     });
-    var i = "\n      <div>\n        " + r.COLOR_PREVIEW + '\n      </div>\n      <div class="color-preview">\n      </div>\n    ';
+    var i = "\n      <div>\n        " + r.COLOR_PREVIEW + "\n      </div>\n      <div class=\"color-preview\">\n      </div>\n    ";
     var o = document.createElement("div");
     o.classList.add("preview-panel");
     o.innerHTML = i;
@@ -124,7 +124,7 @@ var u = function (e) {
   };
   t.prototype.create_color_panel = function (e) {
     return e.map(function (e) {
-      return '<div data="' + e[0] + '" id="' + e[0] + '_panel" class="color-panel-item">\n    <div class="color-label">' + e[1] + '</div>\n    <div class="color-strip-panel">\n      <div id="' + e[0] + '_panel_strip" class="color-strip"></div>\n      <div class="color-handle"></div>\n    </div>\n  </div>';
+      return "<div data=\"" + e[0] + "\" id=\"" + e[0] + "_panel\" class=\"color-panel-item\">\n    <div class=\"color-label\">" + e[1] + "</div>\n    <div class=\"color-strip-panel\">\n      <div id=\"" + e[0] + "_panel_strip\" class=\"color-strip\"></div>\n      <div class=\"color-handle\"></div>\n    </div>\n  </div>";
     }).join("");
   };
   t.prototype.get_linear_gradient_rgba = function (e, t, n) {

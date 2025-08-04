@@ -83,7 +83,7 @@ o.a.prototype.drag_move_rotate_btn = function (e) {
     var i = t.is_rotation_flipped ? Object(a.s)(o + Math.PI) : o;
     t.set_rotation_value(i);
     t.set_pixi_rotation(-o);
-    this.value.text = "".concat(Math.round(Object(a.v)(t.rotation_value)), "\xb0");
+    this.value.text = "".concat(Math.round(Object(a.v)(t.rotation_value)), "°");
     this.events.fire("actor:update", {
       target_id: t.id,
       data: {

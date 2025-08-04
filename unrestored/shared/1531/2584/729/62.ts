@@ -7006,7 +7006,7 @@ St.prototype = Object.assign(Object.create(v.prototype), {
     var e = this.attributes.position;
     var t = this.morphAttributes.position;
     if (e && e.isGLBufferAttribute) {
-      console.error('THREE.BufferGeometry.computeBoundingBox(): GLBufferAttribute requires a manual bounding box. Alternatively set "mesh.frustumCulled" to "false".', this);
+      console.error("THREE.BufferGeometry.computeBoundingBox(): GLBufferAttribute requires a manual bounding box. Alternatively set \"mesh.frustumCulled\" to \"false\".", this);
       return void this.boundingBox.set(new C(-1 / 0, -1 / 0, -1 / 0), new C(1 / 0, 1 / 0, 1 / 0));
     }
     if (void 0 !== e) {
@@ -7030,7 +7030,7 @@ St.prototype = Object.assign(Object.create(v.prototype), {
       this.boundingBox.makeEmpty();
     }
     if (isNaN(this.boundingBox.min.x) || isNaN(this.boundingBox.min.y) || isNaN(this.boundingBox.min.z)) {
-      console.error('THREE.BufferGeometry.computeBoundingBox(): Computed min/max have NaN values. The "position" attribute is likely to have NaN values.', this);
+      console.error("THREE.BufferGeometry.computeBoundingBox(): Computed min/max have NaN values. The \"position\" attribute is likely to have NaN values.", this);
     }
   },
   computeBoundingSphere: function () {
@@ -7040,7 +7040,7 @@ St.prototype = Object.assign(Object.create(v.prototype), {
     var e = this.attributes.position;
     var t = this.morphAttributes.position;
     if (e && e.isGLBufferAttribute) {
-      console.error('THREE.BufferGeometry.computeBoundingSphere(): GLBufferAttribute requires a manual bounding sphere. Alternatively set "mesh.frustumCulled" to "false".', this);
+      console.error("THREE.BufferGeometry.computeBoundingSphere(): GLBufferAttribute requires a manual bounding sphere. Alternatively set \"mesh.frustumCulled\" to \"false\".", this);
       return void this.boundingSphere.set(new C(), 1 / 0);
     }
     if (e) {
@@ -7080,7 +7080,7 @@ St.prototype = Object.assign(Object.create(v.prototype), {
       }
       this.boundingSphere.radius = Math.sqrt(o);
       if (isNaN(this.boundingSphere.radius)) {
-        console.error('THREE.BufferGeometry.computeBoundingSphere(): Computed radius is NaN. The "position" attribute is likely to have NaN values.', this);
+        console.error("THREE.BufferGeometry.computeBoundingSphere(): Computed radius is NaN. The \"position\" attribute is likely to have NaN values.", this);
       }
     }
   },
@@ -15324,7 +15324,7 @@ Ii.prototype = Object.assign(Object.create(Pe.prototype), {
   isSprite: !0,
   raycast: function (e, t) {
     if (null === e.camera) {
-      console.error('THREE.Sprite: "Raycaster.camera" needs to be set in order to raycast against sprites.');
+      console.error("THREE.Sprite: \"Raycaster.camera\" needs to be set in order to raycast against sprites.");
     }
     _i.setFromMatrixScale(this.matrixWorld);
     Ti.copy(e.camera.matrixWorld);
@@ -21882,7 +21882,7 @@ function Os(e, t, n, r, i) {
       path: f
     };
   }
-  console.error('THREE.Font: character "' + e + '" does not exists in font family ' + i.familyName + ".");
+  console.error("THREE.Font: character \"" + e + "\" does not exists in font family " + i.familyName + ".");
 }
 function ks(e) {
   Co.call(this, e);

@@ -1,5 +1,5 @@
-var r = require("../../../../../3272/3198/2668/2689/529");
-var i = require("../../../../../3272/3198/2668/2689/356/1099");
+var r = require("./529");
+var i = require("./1099");
 var o = require("./1971");
 var a = require("./1972");
 function s(t) {

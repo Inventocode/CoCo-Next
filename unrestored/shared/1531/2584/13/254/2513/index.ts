@@ -4,7 +4,7 @@ Object.defineProperty(exports, "__esModule", {
   value: !0
 });
 exports.Raised = void 0;
-var r = s(require("../../../0/index"));
+var r = s(require("react"));
 var i = s(require("../../../50/index"));
 var o = s(require("../../785/104/index"));
 var a = s(require("./2514/index"));

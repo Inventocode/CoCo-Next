@@ -1,8 +1,8 @@
-var r = require("./2540/index");
+var r = require("./2540");
 var o = require("./2541");
 var i = require("./2542");
-var a = require("./2543");
-var s = require("./1423/index");
+var a = require("./2543/index");
+var s = require("./1423");
 function c(e, t) {
   this.typeNumber = e;
   this.errorCorrectLevel = t;

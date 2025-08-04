@@ -1,7 +1,7 @@
 "use strict";
 
-var r = require("./258/index");
-var o = require("./399").filter;
+var r = require("../1720/258/index");
+var o = require("../1733/399").filter;
 var i = require("./1715/index");
 var a = r.aTypedArray;
 (0, r.exportTypedArrayMethod)("filter", function (e) {

@@ -1,10 +1,10 @@
-var r = require("./1633/86/index");
-var o = require("./1731/309");
-var i = require("./1541/820/index");
+var r = require("./1623/86");
+var o = require("./1623/309");
+var i = require("./1541/820");
 r({
   target: "Object",
   stat: !0,
-  forced: require("./1633/167")(function () {
+  forced: require("./1736/167")(function () {
     i(1);
   })
 }, {

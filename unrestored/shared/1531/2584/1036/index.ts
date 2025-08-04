@@ -4,7 +4,7 @@ Object.defineProperty(exports, "__esModule", {
   value: !0
 });
 exports.effect_of_update_disabled = exports.effect_of_update_param = exports.effect_of_rename_proc = exports.update_after_set_disabled = exports.update_after_set_field_value = exports.update_after_mutation = void 0;
-var r = require("./32/index");
+var r = require("ot-json1");
 var o = require("./1363/index");
 var i = require("../4/127");
 var a = require("../301/173");
@@ -176,7 +176,7 @@ exports.effect_of_update_param = function (e, t, n, r) {
         i.appendChild(s);
         var p = i.children.length - 1;
         var f = "" + a.PROCEDURE_BLOCK_INPUT_NAMES.ARG_PREFIX + p;
-        var h = '<shadow type="default_value"><field name="TEXT">' + l + "</field></shadow>";
+        var h = "<shadow type=\"default_value\"><field name=\"TEXT\">" + l + "</field></shadow>";
         if (null !== (m = c("increase", r, t.id, i, f, h))) {
           d.push(m);
         }

@@ -4,20 +4,20 @@ export { r as messages };
 export { o as types };
 var r = {
   "zh-CN": {
-    widgetNameMsg: "\u751f\u6210\u4e8c\u7ef4\u7801",
-    errorCorrectionLevelMsg: "\u5bb9\u9519\u7387",
-    errorCorrectionLevelTooltipMsg: "\u5bb9\u9519\u7387\u8d8a\u9ad8\u7684\u4e8c\u7ef4\u7801\u56fe\u7247\uff0c\u53ef\u5728\u906e\u6321\u8d8a\u591a\u7684\u60c5\u51b5\u4e0b\u88ab\u626b\u63cf\u51fa\u6765\u3002",
-    marginMsg: "\u8fb9\u7f18\u7559\u767d",
-    marginLessThanMsg: "\u8fb9\u7f18\u7559\u767d\u53ea\u80fd\u8f93\u5165\u5c0f\u4e8e{ruleValue}\u7684\u6570\u5b57",
-    marginGreaterThanMsg: "\u8fb9\u7f18\u7559\u767d\u53ea\u80fd\u8f93\u5165\u5927\u4e8e{ruleValue}\u7684\u6570\u5b57",
-    darkMsg: "\u524d\u666f\u8272",
-    lightMsg: "\u80cc\u666f\u8272",
-    toDataUrlMsg: "\u751f\u6210\u4e8c\u7ef4\u7801",
-    paramTextMsg: "\u6587\u672c",
-    onDataUrlSuccessMsg: "\u751f\u6210\u6210\u529f",
-    QRCodeImageMsg: "\u4e8c\u7ef4\u7801\u56fe\u7247",
-    textIsEmpty: "\u6587\u672c\u4e0d\u80fd\u4e3a\u7a7a",
-    tooLongText: "\u6587\u672c\u8fc7\u957f\uff0c\u65e0\u6cd5\u751f\u6210\u4e8c\u7ef4\u7801\uff0c\u8bf7\u5220\u51cf\u6587\u672c\u5185\u5bb9\u3002"
+    widgetNameMsg: "生成二维码",
+    errorCorrectionLevelMsg: "容错率",
+    errorCorrectionLevelTooltipMsg: "容错率越高的二维码图片，可在遮挡越多的情况下被扫描出来。",
+    marginMsg: "边缘留白",
+    marginLessThanMsg: "边缘留白只能输入小于{ruleValue}的数字",
+    marginGreaterThanMsg: "边缘留白只能输入大于{ruleValue}的数字",
+    darkMsg: "前景色",
+    lightMsg: "背景色",
+    toDataUrlMsg: "生成二维码",
+    paramTextMsg: "文本",
+    onDataUrlSuccessMsg: "生成成功",
+    QRCodeImageMsg: "二维码图片",
+    textIsEmpty: "文本不能为空",
+    tooLongText: "文本过长，无法生成二维码，请删减文本内容。"
   }
 };
 var o = {

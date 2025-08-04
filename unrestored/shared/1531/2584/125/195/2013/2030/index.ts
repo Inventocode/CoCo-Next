@@ -4,7 +4,7 @@ Object.defineProperty(exports, "__esModule", {
   value: !0
 });
 exports.ControllerType = void 0;
-var r = require("../../../../1001/93");
+var r = require("tslib");
 !function (e) {
   e.SLIDER = "SLIDER";
   e.ANGLE_SCALE = "ANGLE_SCALE";

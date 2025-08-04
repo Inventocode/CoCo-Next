@@ -1,7 +1,7 @@
 "use strict";
 
 var r = require("../702");
-var o = require("../0/index");
+var o = require("react");
 var i = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;

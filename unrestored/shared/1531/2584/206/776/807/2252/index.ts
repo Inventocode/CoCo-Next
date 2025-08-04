@@ -1,4 +1,4 @@
-var r = require("../../../../../../3272/2883/2731/806/index");
+var r = require("../../../../38/607/806/index");
 module.exports = function (e) {
   function t(e) {
     for (var t = 0, n = 0; n < e.length; n++) {

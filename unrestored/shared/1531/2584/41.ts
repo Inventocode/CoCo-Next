@@ -15,7 +15,7 @@ var o = function __importDefault(module) {
 }(r);
 var i = require("./23");
 var a = require("./38/index");
-var s = require("./2/index");
+var s = require("./2");
 var c = o.a.create({
   timeout: 2e4,
   withCredentials: !0

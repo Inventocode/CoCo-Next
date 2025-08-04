@@ -165,7 +165,7 @@ var A = function (e) {
         throw new TypeError("Cannot call a class as a function");
       }
     })(this, n);
-    (r = t.call(this, 'JSONPath should not be called with "new" (it prevents return of (unwrapped) scalar values)')).avoidNew = !0;
+    (r = t.call(this, "JSONPath should not be called with \"new\" (it prevents return of (unwrapped) scalar values)")).avoidNew = !0;
     r.value = e;
     r.name = "NewError";
     return r;
@@ -237,10 +237,10 @@ g.prototype.evaluate = function (e, t, n, i) {
   t = t || this.json;
   if ((e = e || this.path) && "object" === r(e) && !Array.isArray(e)) {
     if (!e.path && "" !== e.path) {
-      throw new TypeError('You must supply a "path" property when providing an object argument to JSONPath.evaluate().');
+      throw new TypeError("You must supply a \"path\" property when providing an object argument to JSONPath.evaluate().");
     }
     if (!h.call(e, "json")) {
-      throw new TypeError('You must supply a "json" property when providing an object argument to JSONPath.evaluate().');
+      throw new TypeError("You must supply a \"json\" property when providing an object argument to JSONPath.evaluate().");
     }
     t = e.json;
     c = h.call(e, "flatten") ? e.flatten : c;

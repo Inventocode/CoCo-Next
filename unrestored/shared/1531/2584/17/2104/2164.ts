@@ -4,8 +4,8 @@ Object.defineProperty(exports, "__esModule", {
   value: !0
 });
 exports.FieldMultilineInput = void 0;
-var r = require("../../1001/93");
-var i = require("../../1001/134/index");
+var r = require("tslib");
+var i = require("inversify");
 var o = require("../../125/index");
 var a = function (e) {
   function t(t) {
@@ -20,7 +20,7 @@ var a = function (e) {
   }
   (0, r.__extends)(t, e);
   t.prototype.get_display_text = function () {
-    return this.text_ ? this.text_ : "\xa0";
+    return this.text_ ? this.text_ : " ";
   };
   t.prototype.render_ = function () {
     var e;
@@ -36,7 +36,7 @@ var a = function (e) {
       var a = (0, o.create_svg_element)("tspan");
       this.text_element.appendChild(a);
       for (var s = 0, c = Array.from(r), u = 0; u < c.length; u++) {
-        a.textContent = c.slice(s, u + 1).join("").replace(/\n/g, "").replace(/\s/g, "\xa0");
+        a.textContent = c.slice(s, u + 1).join("").replace(/\n/g, "").replace(/\s/g, " ");
         var l = this.utils.get_cached_width(a);
         i = Math.max(i, l);
         var f = c[u];

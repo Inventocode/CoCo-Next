@@ -4,8 +4,8 @@ Object.defineProperty(exports, "__esModule", {
   value: !0
 });
 exports.block_render_svg = void 0;
-var r = require("../../../1001/93");
-var i = require("../../259");
+var r = require("tslib");
+var i = require("@kitten-team/gl-matrix");
 var o = require("../../../125/195/index");
 var a = require("../../../125/534");
 var s = require("../../../1001/213/index");

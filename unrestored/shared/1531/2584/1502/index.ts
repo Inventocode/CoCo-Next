@@ -3,7 +3,7 @@
 var r = require("../29");
 var o = require("../33/index");
 var i = require("../54");
-var a = require("../0/index");
+var a = require("react");
 var s = require("../20");
 var c = require("../19");
 var l = require("../95");
@@ -696,7 +696,7 @@ function ee(e) {
     });
   });
 }
-var te = require("../556/555/index");
+var te = require("../1500/555/index");
 var ne = require("../110");
 var re = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {

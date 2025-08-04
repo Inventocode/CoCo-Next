@@ -1,9 +1,9 @@
 "use strict";
 
-var r = require("../../../../../../3272/3198/2668/220");
-var i = require("../../../../../../3272/3198/2668/230");
-var o = require("../../../../../../3272/3198/2668/2689/356/index");
-var a = require("../../../../../../3272/3198/2668/2689/357/index");
+var r = require("../../../../36/2668/220");
+var i = require("../../../../36/2668/230");
+var o = require("../../../../38/607/356");
+var a = require("../../../../38/607/357/index");
 var s = require("../1328/1109/index").Syntax;
 var c = require("./1330/index");
 var u = require("../1110");

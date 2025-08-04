@@ -1,8 +1,8 @@
 "use strict";
 
 export { f as a };
-var r = require("../81/index");
-var i = require("./599");
+import * as r from "../81/index";
+import * as i from "./599";
 function o() {
   return "undefined" !== typeof navigator;
 }
@@ -340,7 +340,7 @@ var f = function () {
       throw new r.ArgumentException("Cannot create a capture canvas without a media element.");
     }
     if ("undefined" === typeof document) {
-      throw new Error('The page "Document" is undefined, make sure you\'re running in a browser.');
+      throw new Error("The page \"Document\" is undefined, make sure you're running in a browser.");
     }
     var n = document.createElement("canvas");
     var i = t.getMediaElementDimensions(e);

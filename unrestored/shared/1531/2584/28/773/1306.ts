@@ -27,7 +27,7 @@ function c(e, t) {
   for (; t < e.length; t++) {
     var n = e[t];
     if (" " !== n) {
-      return "'" === n || '"' === n ? t : -1;
+      return "'" === n || "\"" === n ? t : -1;
     }
   }
 }
@@ -41,7 +41,7 @@ function u(e, t) {
 }
 function l(e) {
   return function (e) {
-    return '"' === e[0] && '"' === e[e.length - 1] || "'" === e[0] && "'" === e[e.length - 1];
+    return "\"" === e[0] && "\"" === e[e.length - 1] || "'" === e[0] && "'" === e[e.length - 1];
   }(e) ? e.substr(1, e.length - 2) : e;
 }
 exports.parseTag = function (e, t, n) {
@@ -77,7 +77,7 @@ exports.parseTag = function (e, t, n) {
         s = !1;
         continue;
       }
-      if ('"' === h || "'" === h) {
+      if ("\"" === h || "'" === h) {
         for (var p = 1, _ = e.charAt(u - p); "" === _.trim() || "=" === _;) {
           if ("=" === _) {
             c = h;
@@ -149,7 +149,7 @@ exports.parseAttr = function (e, t) {
     } else {
       f = e.slice(n, p);
       n = p + 1;
-      i = '"' === e.charAt(n) || "'" === e.charAt(n) ? n : c(e, p + 1);
+      i = "\"" === e.charAt(n) || "'" === e.charAt(n) ? n : c(e, p + 1);
     }
   }
   if (n < e.length) {

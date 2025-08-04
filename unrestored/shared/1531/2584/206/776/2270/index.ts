@@ -1,8 +1,8 @@
 "use strict";
 
-var r = require("../../../../../3272/3200/624/index");
-var i = require("../../../../../3272/3198/2668/220");
-var o = require("../../../../../3272/3198/2668/230");
+var r = require("../../../38/607/624/index");
+var i = require("../../../36/2668/220");
+var o = require("../../../36/2668/230");
 var a = require("./2271/index");
 var s = require("../1112");
 var c = require("../807/index")("eslint:config-comment-parser");
@@ -47,7 +47,7 @@ module.exports = function () {
         c("Levn parsing failed; falling back to manual parsing.");
       }
       n = {};
-      var r = e.replace(/([\x2D\/-9A-Za-z]+):/g, '"$1":').replace(/(\]|[0-9])[\t-\r \xA0\u1680\u2000-\u200A\u2028\u2029\u202F\u205F\u3000\uFEFF]+(?=")/, "$1,");
+      var r = e.replace(/([\x2D\/-9A-Za-z]+):/g, "\"$1\":").replace(/(\]|[0-9])[\t-\r \xA0\u1680\u2000-\u200A\u2028\u2029\u202F\u205F\u3000\uFEFF]+(?=")/, "$1,");
       try {
         n = JSON.parse("{".concat(r, "}"));
       } catch (i) {

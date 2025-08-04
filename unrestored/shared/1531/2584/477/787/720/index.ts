@@ -20,7 +20,7 @@
   var s = require("../521");
   var c = require("./1436");
   var u = require("../764/index");
-  var l = require("./765");
+  var l = require("../764/765");
   var f = require("../218");
   function d() {
     var e = this.getScope();

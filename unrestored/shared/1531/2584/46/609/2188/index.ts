@@ -4,7 +4,7 @@ Object.defineProperty(exports, "__esModule", {
   value: !0
 });
 exports.JsonPythonGenerator = void 0;
-var r = require("../../../1001/93");
+var r = require("tslib");
 var i = function (e) {
   function t() {
     var t = e.call(this, "Python") || this;
@@ -40,8 +40,8 @@ var i = function (e) {
   t.prototype.quote = function (e) {
     var t = "'";
     if (-1 !== (e = e.replace(/\\/g, "\\\\").replace(/\n/g, "\\\n").replace(/\%/g, "\\%")).indexOf("'")) {
-      if (-1 === e.indexOf('"')) {
-        t = '"';
+      if (-1 === e.indexOf("\"")) {
+        t = "\"";
       } else {
         e = e.replace(/'/g, "\\'");
       }

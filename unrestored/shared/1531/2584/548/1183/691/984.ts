@@ -1,13 +1,13 @@
 "use strict";
 
-var r = require("../../../0/index");
+var r = require("react");
 require("../../../50/index");
-var i = require("../../../549/1186/100");
+var i = require("../100");
 var o = require("../../../19");
 var a = require("../../../54");
-var s = require("./1043");
-var c = require("../../../549/1186/701/index");
-var u = require("./2590");
+var s = require("../270/1043");
+var c = require("../701/index");
+var u = require("../270/2590");
 var l = Object(c.a)(function (e) {
   return {
     day: {

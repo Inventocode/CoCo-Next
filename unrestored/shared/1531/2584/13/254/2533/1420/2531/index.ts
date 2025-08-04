@@ -1,4 +1,4 @@
-var r = require("../../../2528/2529/475");
+var r = require("../475");
 var i = require("./979");
 var o = /^\s+|\s+$/g;
 var a = /^[-+]0x[0-9a-f]+$/i;

@@ -1,7 +1,7 @@
 "use strict";
 
 export { W as a };
-var r = require("../0/index");
+var r = require("react");
 var i = require("./988");
 var o = require("./275");
 var a = require("./277");
@@ -49,7 +49,7 @@ function h(e, t, n, r, i) {
     r = "second";
   }
   if (!Intl.RelativeTimeFormat) {
-    e.onError(new f.a('Intl.RelativeTimeFormat is not available in this environment.\nTry polyfilling it using "@formatjs/intl-relativetimeformat"\n', "MISSING_INTL_API"));
+    e.onError(new f.a("Intl.RelativeTimeFormat is not available in this environment.\nTry polyfilling it using \"@formatjs/intl-relativetimeformat\"\n", "MISSING_INTL_API"));
   }
   try {
     return function (e, t, n) {
@@ -156,7 +156,7 @@ function w(e, t, n, r) {
     r = {};
   }
   if (!Intl.PluralRules) {
-    s(new f.a('Intl.PluralRules is not available in this environment.\nTry polyfilling it using "@formatjs/intl-pluralrules"\n', "MISSING_INTL_API"));
+    s(new f.a("Intl.PluralRules is not available in this environment.\nTry polyfilling it using \"@formatjs/intl-pluralrules\"\n", "MISSING_INTL_API"));
   }
   var c = Object(o.e)(r, b);
   try {
@@ -278,7 +278,7 @@ function R(e, t, n, r) {
       try {
         return F(t.getMessageFormat(_, u, l).format(v), h);
       } catch (m) {
-        f(new a.b('Error formatting default message for: "' + A + '", rendering default message verbatim', i, n, m));
+        f(new a.b("Error formatting default message for: \"" + A + "\", rendering default message verbatim", i, n, m));
         return _;
       }
     }
@@ -289,13 +289,13 @@ function R(e, t, n, r) {
       formatters: t
     }).format(v), h);
   } catch (m) {
-    f(new a.b('Error formatting message: "' + A + '", using ' + (_ ? "default message" : "id") + " as fallback.", i, n, m));
+    f(new a.b("Error formatting message: \"" + A + "\", using " + (_ ? "default message" : "id") + " as fallback.", i, n, m));
   }
   if (_) {
     try {
       return F(t.getMessageFormat(_, u, l).format(v), h);
     } catch (m) {
-      f(new a.b('Error formatting the default message for: "' + A + '", rendering message verbatim', i, n, m));
+      f(new a.b("Error formatting the default message for: \"" + A + "\", rendering message verbatim", i, n, m));
     }
   }
   return g || _ || A;
@@ -322,7 +322,7 @@ function L(e, t, n, r) {
     r = {};
   }
   if (!Intl.ListFormat) {
-    s(new f.a('Intl.ListFormat is not available in this environment.\nTry polyfilling it using "@formatjs/intl-listformat"\n', "MISSING_INTL_API"));
+    s(new f.a("Intl.ListFormat is not available in this environment.\nTry polyfilling it using \"@formatjs/intl-listformat\"\n", "MISSING_INTL_API"));
   }
   var c = Object(o.e)(r, M);
   try {
@@ -363,7 +363,7 @@ function H(e, t, n, r) {
     r = {};
   }
   if (!Intl.DisplayNames) {
-    s(new f.a('Intl.DisplayNames is not available in this environment.\nTry polyfilling it using "@formatjs/intl-displaynames"\n', "MISSING_INTL_API"));
+    s(new f.a("Intl.DisplayNames is not available in this environment.\nTry polyfilling it using \"@formatjs/intl-displaynames\"\n", "MISSING_INTL_API"));
   }
   var c = Object(o.e)(r, U);
   try {
@@ -424,15 +424,15 @@ function W(e, t) {
   var c = r.onError;
   if (i) {
     if (!Intl.NumberFormat.supportedLocalesOf(i).length && c) {
-      c(new a.c('Missing locale data for locale: "' + i + '" in Intl.NumberFormat. Using default locale: "' + s + '" as fallback. See https://formatjs.io/docs/react-intl#runtime-requirements for more details'));
+      c(new a.c("Missing locale data for locale: \"" + i + "\" in Intl.NumberFormat. Using default locale: \"" + s + "\" as fallback. See https://formatjs.io/docs/react-intl#runtime-requirements for more details"));
     } else {
       if (!Intl.DateTimeFormat.supportedLocalesOf(i).length && c) {
-        c(new a.c('Missing locale data for locale: "' + i + '" in Intl.DateTimeFormat. Using default locale: "' + s + '" as fallback. See https://formatjs.io/docs/react-intl#runtime-requirements for more details'));
+        c(new a.c("Missing locale data for locale: \"" + i + "\" in Intl.DateTimeFormat. Using default locale: \"" + s + "\" as fallback. See https://formatjs.io/docs/react-intl#runtime-requirements for more details"));
       }
     }
   } else {
     if (c) {
-      c(new a.a('"locale" was not configured, using "' + s + '" as fallback. See https://formatjs.io/docs/react-intl/api#intlshape for more details'));
+      c(new a.a("\"locale\" was not configured, using \"" + s + "\" as fallback. See https://formatjs.io/docs/react-intl/api#intlshape for more details"));
     }
     r.locale = r.defaultLocale || "en";
   }

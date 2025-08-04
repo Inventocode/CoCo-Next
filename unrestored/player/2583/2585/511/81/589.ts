@@ -95,12 +95,12 @@ var d = function () {
             i = !0;
             break;
           case 236:
-            e.append("[)>\x1e05\x1d");
-            n.insert(0, "\x1e\x04");
+            e.append("[)>\u001e05\u001d");
+            n.insert(0, "\u001e\u0004");
             break;
           case 237:
-            e.append("[)>\x1e06\x1d");
-            n.insert(0, "\x1e\x04");
+            e.append("[)>\u001e06\u001d");
+            n.insert(0, "\u001e\u0004");
             break;
           case 238:
             return r.ANSIX12_ENCODE;
@@ -372,7 +372,7 @@ var d = function () {
     return n >= 0 ? n : n + 256;
   };
   t.C40_BASIC_SET_CHARS = ["*", "*", "*", " ", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
-  t.C40_SHIFT2_SET_CHARS = ["!", '"', "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "\\", "]", "^", "_"];
+  t.C40_SHIFT2_SET_CHARS = ["!", "\"", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "\\", "]", "^", "_"];
   t.TEXT_BASIC_SET_CHARS = ["*", "*", "*", " ", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
   t.TEXT_SHIFT2_SET_CHARS = t.C40_SHIFT2_SET_CHARS;
   t.TEXT_SHIFT3_SET_CHARS = ["`", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "{", "|", "}", "~", String.fromCharCode(127)];

@@ -63,7 +63,7 @@ function m(e, t) {
         widgetId: e,
         messageId: "argNotNumber",
         values: {
-          name: "X\u5750\u6807"
+          name: "X坐标"
         }
       })) {
         return;
@@ -76,7 +76,7 @@ function m(e, t) {
         widgetId: e,
         messageId: "argNotNumber",
         values: {
-          name: "Y\u5750\u6807"
+          name: "Y坐标"
         }
       })) {
         return;
@@ -100,7 +100,7 @@ function g(e, t) {
         widgetId: e,
         messageId: "argNotNumber",
         values: {
-          name: "\u9ad8\u5ea6"
+          name: "高度"
         }
       })) {
         return;
@@ -120,7 +120,7 @@ function g(e, t) {
         widgetId: e,
         messageId: "argNotNumber",
         values: {
-          name: "\u5bbd\u5ea6"
+          name: "宽度"
         }
       })) {
         return;

@@ -38,8 +38,8 @@ var b = "https://static.codemao.cn/coco/image/default-button-background.png";
 var y = {
   id: "button_widget_default_icon",
   md5: "",
-  name: "\u6536\u85cf",
-  cdnUrl: "https://ocean.codemao.cn/appcraft/resource/icon/\u793e\u4ea4/\u6536\u85cf.svg",
+  name: "收藏",
+  cdnUrl: "https://ocean.codemao.cn/appcraft/resource/icon/社交/收藏.svg",
   source: ""
 };
 export default o;

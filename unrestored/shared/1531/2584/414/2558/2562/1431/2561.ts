@@ -1,7 +1,7 @@
 "use strict";
 
-var r = require("../../../../683/34/763");
-var o = require("../../../../0/index");
+var r = require("../../../../0/1532/763");
+var o = require("react");
 function i(e) {
   for (var t = "https://reactjs.org/docs/error-decoder.html?invariant=" + e, n = 1; n < arguments.length; n++) {
     t += "&args[]=" + encodeURIComponent(arguments[n]);
@@ -240,7 +240,7 @@ function F(e, t) {
       }
     }
     return !1;
-  }(e, t, r, !1) ? "" : null !== r ? (e = r.attributeName, 3 === (n = r.type) || 4 === n && !0 === t ? e + '=""' : (r.sanitizeURL && (t = "" + t), e + '="' + B(t) + '"')) : k(e) ? e + '="' + B(t) + '"' : "";
+  }(e, t, r, !1) ? "" : null !== r ? (e = r.attributeName, 3 === (n = r.type) || 4 === n && !0 === t ? e + "=\"\"" : (r.sanitizeURL && (t = "" + t), e + "=\"" + B(t) + "\"")) : k(e) ? e + "=\"" + B(t) + "\"" : "";
 }
 var G = "function" === typeof Object.is ? Object.is : function (e, t) {
   return e === t && (0 !== e || 1 / e === 1 / t) || e !== e && t !== t;
@@ -767,7 +767,7 @@ var Oe = function () {
                 throw Error(i(303));
               }
               this.stack.push(u);
-              r[this.suspenseDepth] += "\x3c!--$!--\x3e";
+              r[this.suspenseDepth] += "<!--$!-->";
               continue;
             }
             r[this.suspenseDepth] += l;
@@ -798,7 +798,7 @@ var Oe = function () {
   };
   t.render = function (e, t, n) {
     if ("string" === typeof e || "number" === typeof e) {
-      return "" === (n = "" + e) ? "" : this.makeStaticMarkup ? B(n) : this.previousWasTextNode ? "\x3c!-- --\x3e" + B(n) : (this.previousWasTextNode = !0, B(n));
+      return "" === (n = "" + e) ? "" : this.makeStaticMarkup ? B(n) : this.previousWasTextNode ? "<!-- -->" + B(n) : (this.previousWasTextNode = !0, B(n));
     }
     e = (t = Ee(e, t, this.threadID)).child;
     t = t.context;
@@ -1100,7 +1100,7 @@ var Oe = function () {
         }
         if (g) {
           if (!be.hasOwnProperty(y)) {
-            p = k(p = y) && null != f ? p + '="' + B(f) + '"' : "";
+            p = k(p = y) && null != f ? p + "=\"" + B(f) + "\"" : "";
           }
         } else {
           p = F(y, f);
@@ -1112,7 +1112,7 @@ var Oe = function () {
     }
     if (!l) {
       if (u) {
-        d += ' data-reactroot=""';
+        d += " data-reactroot=\"\"";
       }
     }
     var y = d;

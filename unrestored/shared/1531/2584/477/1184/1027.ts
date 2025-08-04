@@ -4,7 +4,7 @@ export { c as a };
 export { l as b };
 var r = require("../../36/483/39");
 var i = require("./306");
-var o = require("./2587/index");
+var o = require("./2587");
 var a = require("./915");
 var s = require("./394");
 var c = function () {

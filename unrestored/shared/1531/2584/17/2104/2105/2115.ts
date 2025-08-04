@@ -4,9 +4,9 @@ Object.defineProperty(exports, "__esModule", {
   value: !0
 });
 exports.MoveEvent = void 0;
-var r = require("../../../1001/93");
-var i = require("../../259");
-var o = require("../../../1001/134/index");
+var r = require("tslib");
+var i = require("@kitten-team/gl-matrix");
+var o = require("inversify");
 var a = require("../../../125/195/index");
 var s = require("../../../1001/213/index");
 var c = function (e) {
@@ -80,7 +80,7 @@ var c = function (e) {
             }
             var u = r.output_connection || r.previous_connection;
             if (!u) {
-              throw Error("\u6ca1\u6709\u5bf9\u5916\u8fde\u63a5\u8bb0\u5f55\u4e2a\ud83d\udd28\u7684\u8fde\u63a5\u4e8b\u4ef6");
+              throw Error("没有对外连接记录个🔨的连接事件");
             }
             var l = e ? t.new_input_name : t.old_input_name;
             if (l) {

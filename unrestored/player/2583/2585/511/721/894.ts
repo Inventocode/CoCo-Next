@@ -1,8 +1,8 @@
 "use strict";
 
 export { a };
-var r = require("../81/index");
-var i = require("./261");
+import * as r from "../81/index";
+import * as i from "./261";
 var o = function () {
   var t = function (e, n) {
     return (t = Object.setPrototypeOf || {

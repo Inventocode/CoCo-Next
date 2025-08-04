@@ -8,12 +8,18 @@ module.exports = function (e) {
       enumerable: !0,
       get: function () {
         return t.l;
+      },
+      set: function (value) {
+        t.l = value;
       }
     });
     Object.defineProperty(t, "id", {
       enumerable: !0,
       get: function () {
         return t.i;
+      },
+      set: function (value) {
+        t.i = value;
       }
     });
     Object.defineProperty(t, "exports", {

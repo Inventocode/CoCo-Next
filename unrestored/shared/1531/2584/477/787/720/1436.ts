@@ -1,7 +1,7 @@
 "use strict";
 
 export { s as a };
-var r = require("../1508/index");
+var r = require("../1508");
 var i = require("../265");
 var o = require("../350");
 var a = require("../218");

@@ -158,7 +158,7 @@ function g(e, t, n) {
   }
   return e;
 }
-var _ = require("../0/index");
+var _ = require("react");
 require("../50/index");
 var v = require("./2539/index");
 var b = require("./1422");

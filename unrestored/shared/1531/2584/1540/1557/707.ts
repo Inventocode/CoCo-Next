@@ -1,8 +1,8 @@
 "use strict";
 
-var r = require("../1541/628");
-var o = require("../1541/300");
-var i = require("../1253/627");
+var r = require("../1656/628");
+var o = require("../1623/300");
+var i = require("../1665/627");
 module.exports = function (e, t, n) {
   var a = r(t);
   if (a in e) {

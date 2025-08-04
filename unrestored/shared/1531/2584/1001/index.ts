@@ -4,8 +4,8 @@ Object.defineProperty(exports, "__esModule", {
   value: !0
 });
 exports.DARK_THEME_CONFIG = exports.DEFAULT_THEME_CONFIG = exports.RendererParams = exports.Theme = void 0;
-var r = require("./93");
-var i = require("./134/index");
+var r = require("tslib");
+var i = require("inversify");
 var o = require("../4/127");
 var a = require("./213/index");
 var s = require("./577");

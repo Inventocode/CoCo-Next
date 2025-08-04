@@ -91,7 +91,7 @@ function m(e) {
   return e.replace(f, "&quot;");
 }
 function y(e) {
-  return e.replace(d, '"');
+  return e.replace(d, "\"");
 }
 function b(e) {
   return e.replace(h, function (e, t) {
@@ -267,13 +267,13 @@ exports.StripTagBody = function (e, t) {
 };
 exports.stripCommentTag = function (e) {
   for (var t = "", n = 0; n < e.length;) {
-    var r = e.indexOf("\x3c!--", n);
+    var r = e.indexOf("<!--", n);
     if (-1 === r) {
       t += e.slice(n);
       break;
     }
     t += e.slice(n, r);
-    var i = e.indexOf("--\x3e", r);
+    var i = e.indexOf("-->", r);
     if (-1 === i) {
       break;
     }
@@ -288,6 +288,6 @@ exports.stripBlankChar = function (e) {
     return 127 !== t && (!(t <= 31) || 10 === t || 13 === t);
   })).join("");
 };
-exports.attributeWrapSign = '"';
+exports.attributeWrapSign = "\"";
 exports.cssFilter = s;
 exports.getDefaultCSSWhiteList = i;

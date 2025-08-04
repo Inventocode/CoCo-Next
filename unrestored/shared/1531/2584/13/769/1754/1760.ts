@@ -12,7 +12,7 @@ var s = r(require("../1045"));
 var c = r(require("../1047/index"));
 var u = r(require("../1048/index"));
 var l = r(require("../927"));
-var f = r(require("../../../0/index"));
+var f = r(require("react"));
 var d = r(require("../../../8"));
 var h = r(require("./1256"));
 function p(e, t) {

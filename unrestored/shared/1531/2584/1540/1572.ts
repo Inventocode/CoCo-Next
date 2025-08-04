@@ -1,7 +1,7 @@
 "use strict";
 
-var r = require("./1633/86/index");
-var o = require("./1633/167");
+var r = require("./1623/86");
+var o = require("./1736/167");
 var i = require("./1557/707");
 r({
   target: "Array",

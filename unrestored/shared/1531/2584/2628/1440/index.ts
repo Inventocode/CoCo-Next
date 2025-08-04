@@ -91,7 +91,7 @@ function s(e, t, n, r, c, u, l) {
           var w;
           if (!(w = p.options["=" + A])) {
             if (!Intl.PluralRules) {
-              throw new o.a('Intl.PluralRules is not available in this environment.\nTry polyfilling it using "@formatjs/intl-pluralrules"\n', "MISSING_INTL_API", l);
+              throw new o.a("Intl.PluralRules is not available in this environment.\nTry polyfilling it using \"@formatjs/intl-pluralrules\"\n", "MISSING_INTL_API", l);
             }
             var E = n.getPluralRules(t, {
               type: p.pluralType

@@ -28,7 +28,7 @@ var _ = require("../../../../27");
 var A = require("../../../../47");
 var g = require("../44");
 export { b as Globals } from "../44";
-var v = require("../../../../0/index");
+var v = require("react");
 var m = require("../307");
 require("./1281");
 require("./1282");
@@ -1191,7 +1191,7 @@ var ue = function (e) {
         var P = Object(m.f)(d);
         if (P !== k.constructor) {
           if (!R) {
-            throw Error("Cannot animate between ".concat(k.constructor.name, " and ").concat(P.name, ', as the "to" prop suggests'));
+            throw Error("Cannot animate between ".concat(k.constructor.name, " and ").concat(P.name, ", as the \"to\" prop suggests"));
           }
           k = this._set(D);
         }

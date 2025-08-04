@@ -33,62 +33,62 @@ export { w as c };
 export { C as e };
 var r = [{
   id: "sans-serif",
-  name: "\u9ed8\u8ba4\u5b57\u4f53",
+  name: "默认字体",
   cdnUrl: "",
   image: "https://kn-cdn.codemao.cn/painter/img/mrht.png"
 }, {
   id: "zhanKuKuaiLeTi",
-  name: "\u7ad9\u9177\u5feb\u4e50\u4f53",
+  name: "站酷快乐体",
   cdnUrl: "https://kn-cdn.codemao.cn/painter/fonts/zkklt.woff",
   image: "https://kn-cdn.codemao.cn/painter/img/zkklt.png"
 }, {
   id: "zhanKuWenYiTi",
-  name: "\u7ad9\u9177\u6587\u827a\u4f53",
+  name: "站酷文艺体",
   cdnUrl: "https://kn-cdn.codemao.cn/painter/fonts/zkwyt.woff",
   image: "https://kn-cdn.codemao.cn/painter/img/zkwyt.png"
 }, {
   id: "zhanKuKuHeiTi",
-  name: "\u7ad9\u9177\u9177\u9ed1\u4f53",
+  name: "站酷酷黑体",
   cdnUrl: "https://kn-cdn.codemao.cn/painter/fonts/zkht.woff",
   image: "https://kn-cdn.codemao.cn/painter/img/zkkht.png"
 }, {
   id: "zhanKuXiaoWeiLogo",
-  name: "\u7ad9\u9177\u5c0f\u5faelogo",
+  name: "站酷小微logo",
   cdnUrl: "https://kn-cdn.codemao.cn/painter/fonts/zkxwLOGO.woff",
   image: "https://kn-cdn.codemao.cn/painter/img/zkxwlogo.png"
 }, {
   id: "zhanKuHuangYouTi",
-  name: "\u7ad9\u9177\u5e86\u79d1\u9ec4\u6cb9\u4f53",
+  name: "站酷庆科黄油体",
   cdnUrl: "https://kn-cdn.codemao.cn/painter/fonts/zkqkhyt.woff",
   image: "https://kn-cdn.codemao.cn/painter/img/zkqkhyt.png"
 }, {
   id: "ruiZiZhenYanTi",
-  name: "\u9510\u5b57\u771f\u8a00\u4f53",
+  name: "锐字真言体",
   cdnUrl: "https://kn-cdn.codemao.cn/painter/fonts/rzzyt.woff",
   image: "https://kn-cdn.codemao.cn/painter/img/rzzyt.png"
 }, {
   id: "yangRenDongZhuShiTi",
-  name: "\u6768\u4efb\u4e1c\u7af9\u77f3\u4f53",
+  name: "杨任东竹石体",
   cdnUrl: "https://kn-cdn.codemao.cn/painter/fonts/yrdszt.woff",
   image: "https://kn-cdn.codemao.cn/painter/img/yrdzst.png"
 }, {
   id: "baoTuXiaoBaiTi",
-  name: "\u5305\u56fe\u5c0f\u767d\u4f53",
+  name: "包图小白体",
   cdnUrl: "https://kn-cdn.codemao.cn/painter/fonts/btxb.woff",
   image: "https://kn-cdn.codemao.cn/painter/img/btxbt.png"
 }, {
   id: "muYaoSuiXinShouXieTi",
-  name: "\u6c90\u7476\u968f\u5fc3\u624b\u5199\u4f53",
+  name: "沐瑶随心手写体",
   cdnUrl: "https://kn-cdn.codemao.cn/painter/fonts/myrbsx.woff",
   image: "https://kn-cdn.codemao.cn/painter/img/mysxsxt.png"
 }, {
   id: "shouShuTi",
-  name: "\u624b\u4e66\u4f53",
+  name: "手书体",
   cdnUrl: "https://kn-cdn.codemao.cn/painter/fonts/sst.woff",
   image: "https://kn-cdn.codemao.cn/painter/img/sht.png"
 }, {
   id: "keAiDeKeAi",
-  name: "\u53ef\u7231\u7684\u53ef\u7231",
+  name: "可爱的可爱",
   cdnUrl: "https://kn-cdn.codemao.cn/painter/fonts/kadka.woff",
   image: "https://kn-cdn.codemao.cn/painter/img/kadka.png"
 }];

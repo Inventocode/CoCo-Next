@@ -46,11 +46,11 @@ var i = this && this.__spreadArrays || function () {
 Object.defineProperty(exports, "__esModule", {
   value: !0
 });
-var a = require("../../0/index");
-var s = require("../../0/index");
+var a = require("react");
+var s = require("react");
 var c = require("../../50/index");
-var l = require("./872");
-var u = require("../1427");
+var l = require("../1427/872");
+var u = require("../1427/index");
 var d = require("../1428");
 var p = require("./2559");
 var f = require("./2562/index");

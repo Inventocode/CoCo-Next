@@ -1,6 +1,6 @@
+const path = require("path")
 const webpack = require("webpack")
 const { merge } = require("webpack-merge")
-const webpackDevServer = require("webpack-dev-server")
 
 const common = require("./webpack.common.js")
 const server = require("./webpack.server.js")
@@ -9,7 +9,7 @@ const server = require("./webpack.server.js")
 const config = merge(common, server, {
     mode: "development",
     devServer: {
-        static: false
+        static: path.resolve(__dirname, "static")
     },
     module: {
         rules: [

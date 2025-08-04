@@ -1,4 +1,4 @@
-var r = require("../717");
+var r = require("../717/index");
 var i = require("../716");
 function o(e) {
   this.mode = r.KANJI;

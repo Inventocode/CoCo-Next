@@ -53,28 +53,6 @@ function proxyWebSocket(): void {
     }
 }
 
-function proxyOpen(): void {
-    const originalOpen: typeof open = open
-    window.open = function open(
-        url?: string | URL,
-        target?: string,
-        features?: string
-    ): WindowProxy | null {
-        if (typeof url == "string") {
-            url = new URL(url, location.href)
-        }
-        if (
-            url?.hostname.endsWith("coco.codemao.cn") ||
-            url?.hostname == location.hostname
-        ) {
-            url.protocol = location.protocol
-            url.host = location.host
-        }
-        return originalOpen.call(this, url, target, features)
-    }
-    window.open.toString = originalOpen.toString.bind(originalOpen)
-}
-
 function needsProxy(url: URL): boolean {
     if (url.hostname == "static.codemao.cn") {
         return false
@@ -95,6 +73,28 @@ function rewriteURL(url: URL): URL {
     }
     url.host = location.host
     return url
+}
+
+function proxyOpen(): void {
+    const originalOpen: typeof open = open
+    window.open = function open(
+        url?: string | URL,
+        target?: string,
+        features?: string
+    ): WindowProxy | null {
+        if (typeof url == "string") {
+            url = new URL(url, location.href)
+        }
+        if (
+            url?.hostname.endsWith("coco.codemao.cn") ||
+            url?.hostname == location.hostname
+        ) {
+            url.protocol = location.protocol
+            url.host = location.host
+        }
+        return originalOpen.call(this, url, target, features)
+    }
+    window.open.toString = originalOpen.toString.bind(originalOpen)
 }
 
 if (!location.hostname.endsWith(".codemao.cn")) {

@@ -28,7 +28,7 @@ var o = function __importDefault(module) {
   return defaultExport;
 }(r);
 var i = require("./7");
-var a = require("./35/index");
+var a = require("./35");
 var s = require("./98");
 var c = require("./53");
 var l = require("./59/index");

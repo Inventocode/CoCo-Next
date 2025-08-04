@@ -1,6 +1,6 @@
 "use strict";
 
-var r = require("../../../../../3272/3198/2668/220");
+var r = require("../../../36/2668/220");
 var i = function e(t, n) {
   r(this, e);
   this.name = t;

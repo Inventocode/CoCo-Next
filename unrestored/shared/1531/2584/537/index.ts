@@ -15,7 +15,7 @@ var a = function __importDefault(module) {
   });
   return defaultExport;
 }(i);
-var s = require("../0/index");
+var s = require("react");
 var c = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;

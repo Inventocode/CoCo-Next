@@ -13,7 +13,7 @@ var i = Object.assign || function (e) {
   }
   return e;
 };
-var o = require("../../0/index");
+var o = require("react");
 var a = (r = o) && r.__esModule ? r : {
   default: r
 };

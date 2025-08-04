@@ -32,7 +32,7 @@ var d = {
     blocks: []
   },
   getTemplate: function (e) {
-    return ['<block type="screen_on_press" uncache="true"></block>', f, '<block type="new_screen_set_background_color" uncache="true">\n    <value name="COLOR">\n      <shadow type="color_picker"><field name="COLOR_PALETTE">'.concat(c.c, "</field></shadow>\n    </value>\n    </block>"), '<block type="new_screen_set_background_image" uncache="true">\n      <value name="IMAGE_FILE_ID">\n        <shadow type="image_file_list_dropdown">\n          <field name="IMAGE_FILE_ID">'.concat(h, "</field>\n        </shadow>\n      </value>\n    </block>"), f, '<block type="new_screen_get_size" uncache="true">\n    </block>', '<block type="new_screen_get_color" uncache="true">\n    </block>\n    <block type="new_screen_get_background_image" uncache="true">\n    </block>\n    ', f, '<block type="screen_check_if_pressed" uncache="true">\n    </block>'];
+    return ["<block type=\"screen_on_press\" uncache=\"true\"></block>", f, "<block type=\"new_screen_set_background_color\" uncache=\"true\">\n    <value name=\"COLOR\">\n      <shadow type=\"color_picker\"><field name=\"COLOR_PALETTE\">".concat(c.c, "</field></shadow>\n    </value>\n    </block>"), "<block type=\"new_screen_set_background_image\" uncache=\"true\">\n      <value name=\"IMAGE_FILE_ID\">\n        <shadow type=\"image_file_list_dropdown\">\n          <field name=\"IMAGE_FILE_ID\">".concat(h, "</field>\n        </shadow>\n      </value>\n    </block>"), f, "<block type=\"new_screen_get_size\" uncache=\"true\">\n    </block>", "<block type=\"new_screen_get_color\" uncache=\"true\">\n    </block>\n    <block type=\"new_screen_get_background_image\" uncache=\"true\">\n    </block>\n    ", f, "<block type=\"screen_check_if_pressed\" uncache=\"true\">\n    </block>"];
   },
   blockDeclareGroup: {
     setBlockGroupSnippet: function (e) {
@@ -135,12 +135,12 @@ var d = {
           type: "input_value",
           name: "POSITION_X",
           align: "CENTRE",
-          default_shadow: '<shadow type="screen_on_press_positionX" />'
+          default_shadow: "<shadow type=\"screen_on_press_positionX\" />"
         }, {
           type: "input_value",
           name: "POSITION_Y",
           align: "CENTRE",
-          default_shadow: '<shadow type="screen_on_press_positionY" />'
+          default_shadow: "<shadow type=\"screen_on_press_positionY\" />"
         }, {
           type: "input_dummy",
           align: "CENTRE"
@@ -360,12 +360,12 @@ var d = {
   },
   topBlocks: ["screen_on_open_get_param", "screen_on_open", "screen_on_press", "app_on_switch_background", "broadcast_on_receive", "widget_event"]
 };
-var p = require("./35/index");
-var f = '<sep gap="'.concat(45, '"></sep>');
+var p = require("./35");
+var f = "<sep gap=\"".concat(45, "\"></sep>");
 var h = "DROPDOWN_PLACEHOLDER_OPTION_VALUE";
 var m = "?";
 var g = "DROPDOWN_PLACEHOLDER_EMPTY_IMAGE_VALUE";
-var _ = '\n  <block type="date_get_current_date" uncache="true">\n  </block>\n  <block type="date_check_date_is_equal" uncache="true">\n    <value name="DATE_A">\n      <shadow type="date_get_current_date"></shadow>\n    </value>\n    <value name="DATE_B">\n      <shadow type="date_get_current_date"></shadow>\n    </value>\n  </block>\n  <block type="date_get_date_minus_operation" uncache="true">\n    <value name="DATE_A">\n      <shadow type="date_get_current_date"></shadow>\n    </value>\n    <value name="DATE_B">\n      <shadow type="date_get_current_date"></shadow>\n    </value>\n  </block>';
+var _ = "\n  <block type=\"date_get_current_date\" uncache=\"true\">\n  </block>\n  <block type=\"date_check_date_is_equal\" uncache=\"true\">\n    <value name=\"DATE_A\">\n      <shadow type=\"date_get_current_date\"></shadow>\n    </value>\n    <value name=\"DATE_B\">\n      <shadow type=\"date_get_current_date\"></shadow>\n    </value>\n  </block>\n  <block type=\"date_get_date_minus_operation\" uncache=\"true\">\n    <value name=\"DATE_A\">\n      <shadow type=\"date_get_current_date\"></shadow>\n    </value>\n    <value name=\"DATE_B\">\n      <shadow type=\"date_get_current_date\"></shadow>\n    </value>\n  </block>";
 function v() {
   var e = [d];
   Object(p.K)().forEach(function (t) {

@@ -1,8 +1,8 @@
 var r = require("./1780");
-var i = require("./1781/index");
+var i = require("./1781");
 var o = require("./1782");
 var a = require("./1783");
-var s = require("./1784");
+var s = require("./1784/index");
 function c(e) {
   var t = -1;
   var n = null == e ? 0 : e.length;

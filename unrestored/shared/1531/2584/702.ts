@@ -1,7 +1,7 @@
 "use strict";
 
 export { a };
-var r = require("./0/index");
+var r = require("react");
 var i = require("./2628/988");
 var o = require("./2628/275");
 function a() {

@@ -6,8 +6,8 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 var i = r(require("../746"));
-var o = r(require("../1048/1081"));
-var a = r(require("../../../0/index"));
+var o = r(require("../1046/1081"));
+var a = r(require("react"));
 var s = r(require("../../../8"));
 function c(e, t) {
   var n = Object.keys(e);

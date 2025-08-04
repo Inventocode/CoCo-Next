@@ -24,8 +24,8 @@ var o = function __importDefault(module) {
 var i = require("./10/index");
 var a = require("./7");
 var s = require("./38/index");
-var c = require("./2/index");
-var l = require("./99/index");
+var c = require("./2");
+var l = require("./99");
 var u = function () {
   var e;
   var t = s.d.getState().project.currentScreenIndex;

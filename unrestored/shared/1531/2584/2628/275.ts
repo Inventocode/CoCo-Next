@@ -7,7 +7,7 @@ export { p as d };
 export { g as c };
 export { v as f };
 export { m as b };
-var r = require("../0/index");
+var r = require("react");
 var i = require("./2589/index");
 var o = require("./2589/792");
 var a = function __importDefault(module) {

@@ -2,12 +2,12 @@
 
 require("../1245");
 var r;
-var o = require("../1633/86/index");
-var i = require("./272");
+var o = require("../1623/86");
+var i = require("../1623/272");
 var a = require("./1252");
-var s = require("./194");
+var s = require("../1736/194");
 var c = require("./1212");
-var l = require("./398");
+var l = require("./398/index");
 var u = require("./635");
 var d = require("./332");
 var p = require("./1233");
@@ -277,7 +277,7 @@ var U = function (e) {
 var W = {};
 var H = p({}, W, {
   " ": 1,
-  '"': 1,
+  "\"": 1,
   "<": 1,
   ">": 1,
   "`": 1

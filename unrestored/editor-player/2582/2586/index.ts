@@ -1,61 +1,28 @@
 "use strict";
 
-var r = require("../../../shared/1531/2584/0/index");
-var i = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default;
-  } : function () {
-    return module;
-  };
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  });
-  return defaultExport;
-}(r);
-require("../../../shared/1531/2584/710");
-var o = require("../../../shared/1531/2584/75/index");
-var a = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default;
-  } : function () {
-    return module;
-  };
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  });
-  return defaultExport;
-}(o);
-var s = require("../../../shared/1531/2584/1/index");
-var u = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default;
-  } : function () {
-    return module;
-  };
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  });
-  return defaultExport;
-}(s);
-var c = require("../../../shared/1531/2584/6");
-var l = require("../../../shared/1531/2584/7");
-var d = require("../../../shared/1531/2584/10/index");
-var f = require("./511/index");
-var h = require("../../../shared/1531/2584/177");
-var p = i.a.memo(function () {
+import * as r from "react";
+import i from "react";
+import "../../../shared/1531/2584/710/index";
+import * as o from "../../../shared/1531/2584/75/index";
+import a from "../../../shared/1531/2584/75/index";
+import * as s from "../../../shared/1531/2584/1/index";
+import u from "../../../shared/1531/2584/1/index";
+import * as c from "../../../shared/1531/2584/6";
+import * as l from "../../../shared/1531/2584/7";
+import * as d from "../../../shared/1531/2584/10/index";
+import * as f from "./511/index";
+import * as h from "../../../shared/1531/2584/177";
+var p = i.memo(function () {
   var t = Object(r.useState)();
   var e = Object(d.a)(t, 2);
   var n = e[0];
   var o = e[1];
   function a() {
-    return (a = Object(l.a)(u.a.mark(function t() {
+    return (a = Object(l.a)(u.mark(function t() {
       var e;
       var n;
       var r;
-      return u.a.wrap(function (t) {
+      return u.wrap(function (t) {
         for (;;) {
           switch (t.prev = t.next) {
             case 0:
@@ -87,6 +54,6 @@ var p = i.a.memo(function () {
       a.apply(this, arguments);
     }();
   }, []);
-  return n ? i.a.createElement(f.a, n) : i.a.createElement(i.a.Fragment, null);
+  return n ? i.createElement(f.a, n) : i.createElement(i.Fragment, null);
 });
-a.a.render(i.a.createElement(p, null), document.getElementById("root"));
+a.render(i.createElement(p, null), document.getElementById("root"));

@@ -550,7 +550,7 @@ function O(e) {
   return "number" === typeof e && isFinite(e);
 }
 var k = require("./736");
-var S = require("./1508/index");
+var S = require("./1508");
 var T = require("./316");
 var B = {
   traceFetch: !0,

@@ -2,7 +2,7 @@
 
 var r = require("../29");
 var i = require("../19");
-var o = require("../0/index");
+var o = require("react");
 var a = require("./1501");
 var s = require("../8");
 var c = function __importDefault(module) {
@@ -19,8 +19,8 @@ var c = function __importDefault(module) {
 }(s);
 var u = require("../791");
 var l = require("./611");
-var f = require("../612/index");
-var d = require("../612/790/index");
+var f = require("../612");
+var d = require("./790/index");
 var h = require("./686/index");
 var p = require("../789");
 var _ = require("./462");

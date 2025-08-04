@@ -1,4 +1,4 @@
-var r = require("../717");
+var r = require("../717/index");
 function i(e) {
   this.mode = r.NUMERIC;
   this.data = e.toString();

@@ -1,11 +1,11 @@
 "use strict";
 
-var r = require("../../../../../../3272/3198/2668/2689/703/index");
-var i = require("../../../../../../3272/3198/2668/2689/529");
-var o = require("../../../../../../3272/3198/2668/2689/356/index");
-var a = require("../../../../../../3272/3198/2668/2689/357/index");
-var s = require("../../../../../../3272/3198/2668/220");
-var c = require("../../../../../../3272/3198/2668/230");
+var r = require("../../../../36/2668/2689/703/index");
+var i = require("../../../../38/607/1970/529");
+var o = require("../../../../38/607/356");
+var a = require("../../../../38/607/357/index");
+var s = require("../../../../36/2668/220");
+var c = require("../../../../36/2668/230");
 var u = require("./1109/index").Syntax;
 var l = require("../1110");
 var f = require("../964");
@@ -64,7 +64,7 @@ var _ = function () {
           if (s.type !== u.DirectiveStatement) {
             break;
           }
-          if ('"use strict"' === s.raw || "'use strict'" === s.raw) {
+          if ("\"use strict\"" === s.raw || "'use strict'" === s.raw) {
             return !0;
           }
         }
@@ -79,7 +79,7 @@ var _ = function () {
             break;
           }
           if (null !== d.raw && void 0 !== d.raw) {
-            if ('"use strict"' === d.raw || "'use strict'" === d.raw) {
+            if ("\"use strict\"" === d.raw || "'use strict'" === d.raw) {
               return !0;
             }
           } else if ("use strict" === d.value) {

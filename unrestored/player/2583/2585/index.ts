@@ -1,67 +1,23 @@
 "use strict";
 
-var r = require("../../../shared/1531/2584/0/index");
-var i = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default;
-  } : function () {
-    return module;
-  };
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  });
-  return defaultExport;
-}(r);
-require("../../../shared/1531/2584/710");
-var o = require("../../../shared/1531/2584/75/index");
-var a = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default;
-  } : function () {
-    return module;
-  };
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  });
-  return defaultExport;
-}(o);
-var s = require("../../../shared/1531/2584/28/index");
-var u = require("../../../shared/1531/2584/15/index");
-var c = require("../../../shared/1531/2584/68");
-var l = require("../../../shared/1531/2584/1/index");
-var d = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default;
-  } : function () {
-    return module;
-  };
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  });
-  return defaultExport;
-}(l);
-var f = require("../../../shared/1531/2584/6");
-var h = require("../../../shared/1531/2584/7");
-var p = require("../../../shared/1531/2584/10/index");
-var m = require("../../../shared/1531/2584/8");
-var b = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default;
-  } : function () {
-    return module;
-  };
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  });
-  return defaultExport;
-}(m);
-var g = require("./511/index");
-var v = require("../../../shared/1531/2584/177");
-var _ = require("../../../shared/1531/2584/729/index");
+import * as r from "react";
+import i from "react";
+import "../../../shared/1531/2584/710/index";
+import * as o from "../../../shared/1531/2584/75/index";
+import a from "../../../shared/1531/2584/75/index";
+import * as s from "../../../shared/1531/2584/28/index";
+import * as u from "../../../shared/1531/2584/15";
+import * as c from "../../../shared/1531/2584/68";
+import * as l from "../../../shared/1531/2584/1/index";
+import d from "../../../shared/1531/2584/1/index";
+import * as f from "../../../shared/1531/2584/6";
+import * as h from "../../../shared/1531/2584/7";
+import * as p from "../../../shared/1531/2584/10/index";
+import * as m from "../../../shared/1531/2584/8";
+import b from "../../../shared/1531/2584/8";
+import * as g from "./511/index";
+import * as v from "../../../shared/1531/2584/177";
+import * as _ from "../../../shared/1531/2584/729/index";
 function y() {
   window.parent.postMessage({
     type: "ON_INIT_SUCCESS"
@@ -92,38 +48,16 @@ function T(t) {
     }
   });
 }
-var A = require("../../../shared/1531/2584/13/index");
-var S = require("./1020");
-var I = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default;
-  } : function () {
-    return module;
-  };
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  });
-  return defaultExport;
-}(S);
-var C = require("../../../shared/1531/2584/289");
-var j = require("./527");
-var M = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default;
-  } : function () {
-    return module;
-  };
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  });
-  return defaultExport;
-}(j);
+import * as A from "../../../shared/1531/2584/13/index";
+import * as S from "./1020";
+import I from "./1020";
+import * as C from "../../../shared/1531/2584/289";
+import * as j from "./527";
+import M from "./527";
 function k(t) {
   return "translate(-50%, -50%) " + "scale(".concat(t, ")");
 }
-var R = i.a.memo(function () {
+var R = i.memo(function () {
   var t = Object(r.useState)();
   var e = Object(p.a)(t, 2);
   var n = e[0];
@@ -152,13 +86,13 @@ var R = i.a.memo(function () {
   var Y = Object(r.useRef)();
   var K = Object(r.useRef)();
   function X() {
-    return (X = Object(h.a)(d.a.mark(function t() {
+    return (X = Object(h.a)(d.mark(function t() {
       var e;
       var n;
       var r;
       var i;
       var o;
-      return d.a.wrap(function (t) {
+      return d.wrap(function (t) {
         for (;;) {
           switch (t.prev = t.next) {
             case 0:
@@ -274,54 +208,43 @@ var R = i.a.memo(function () {
       window.removeEventListener("message", q);
     };
   }, []);
-  return i.a.createElement("div", {
-    className: M.a.community
-  }, i.a.createElement("div", {
+  return i.createElement("div", {
+    className: M.community
+  }, i.createElement("div", {
     id: "webPlayer",
-    className: b()(M.a.main),
+    className: b(M.main),
     style: {
       transform: k(u),
       left: D ? "35%" : "50%"
     }
-  }, i.a.createElement("div", {
-    className: b()(j && M.a.vibrate, M.a.playerWrapper)
-  }, n && i.a.createElement(g.a, n)), i.a.createElement("div", {
-    className: b()(j && M.a.vibrate, M.a.deviceFrame)
-  }), i.a.createElement("div", {
-    className: M.a.emulatorWrapper
-  }, i.a.createElement(_.a, {
+  }, i.createElement("div", {
+    className: b(j && M.vibrate, M.playerWrapper)
+  }, n && i.createElement(g.a, n)), i.createElement("div", {
+    className: b(j && M.vibrate, M.deviceFrame)
+  }), i.createElement("div", {
+    className: M.emulatorWrapper
+  }, i.createElement(_.a, {
     messageWindow: window
-  }))), i.a.createElement("div", {
-    className: M.a.appUrlBtn,
+  }))), i.createElement("div", {
+    className: M.appUrlBtn,
     onClick: function () {
       window.open(window.location.origin.replace(/\d+/g, ""), "_blank");
     }
-  }, i.a.createElement("img", {
-    src: I.a,
-    className: M.a.appUrlBtnImg,
+  }, i.createElement("img", {
+    src: I,
+    className: M.appUrlBtnImg,
     alt: ""
-  }), i.a.createElement("span", null, "\u53bbCoCo\u5236\u4f5c"), i.a.createElement(A.j, {
+  }), i.createElement("span", null, "去CoCo制作"), i.createElement(A.j, {
     type: "icon-fold-left",
-    className: M.a.appUrlBtnIcon
+    className: M.appUrlBtnIcon
   })));
 });
-var N = require("./528");
-var x = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default;
-  } : function () {
-    return module;
-  };
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  });
-  return defaultExport;
-}(N);
+import * as N from "./528";
+import x from "./528";
 function D(t) {
   return "translate(-50%, -50%) " + "scale(".concat(t, ")");
 }
-var L = i.a.memo(function () {
+var L = i.memo(function () {
   var t = Object(r.useState)();
   var e = Object(p.a)(t, 2);
   var n = e[0];
@@ -350,14 +273,14 @@ var L = i.a.memo(function () {
   var H = Object(r.useRef)();
   var V = Object(r.useRef)();
   function G() {
-    return (G = Object(h.a)(d.a.mark(function t() {
+    return (G = Object(h.a)(d.mark(function t() {
       var e;
       var n;
       var r;
       var i;
       var o;
       var a;
-      return d.a.wrap(function (t) {
+      return d.wrap(function (t) {
         for (;;) {
           switch (t.prev = t.next) {
             case 0:
@@ -463,63 +386,52 @@ var L = i.a.memo(function () {
     t();
     window.onresize = t;
   }, []);
-  return i.a.createElement("div", {
-    className: x.a.community
-  }, i.a.createElement("div", {
+  return i.createElement("div", {
+    className: x.community
+  }, i.createElement("div", {
     id: "webPlayer",
-    className: b()(x.a.main),
+    className: b(x.main),
     style: {
       transform: D(l),
       left: j ? "35%" : "50%"
     }
-  }, i.a.createElement("div", {
-    className: b()(E && x.a.vibrate, x.a.playerWrapper)
-  }, n && i.a.createElement(g.a, n)), i.a.createElement("div", {
-    className: b()(E && x.a.vibrate, x.a.deviceFrame)
-  }), i.a.createElement("div", {
-    className: x.a.emulatorWrapper
-  }, i.a.createElement(_.a, {
+  }, i.createElement("div", {
+    className: b(E && x.vibrate, x.playerWrapper)
+  }, n && i.createElement(g.a, n)), i.createElement("div", {
+    className: b(E && x.vibrate, x.deviceFrame)
+  }), i.createElement("div", {
+    className: x.emulatorWrapper
+  }, i.createElement(_.a, {
     messageWindow: window
-  }))), i.a.createElement("div", {
-    className: x.a.appUrlBtn,
+  }))), i.createElement("div", {
+    className: x.appUrlBtn,
     onClick: function () {
       window.open(window.location.origin.replace(/\d+/g, ""), "_blank");
     }
-  }, i.a.createElement("img", {
-    src: I.a,
-    className: x.a.appUrlBtnImg,
+  }, i.createElement("img", {
+    src: I,
+    className: x.appUrlBtnImg,
     alt: ""
-  }), i.a.createElement("span", null, "\u53bbCoCo\u5236\u4f5c"), i.a.createElement(A.j, {
+  }), i.createElement("span", null, "去CoCo制作"), i.createElement(A.j, {
     type: "icon-fold-left",
-    className: x.a.appUrlBtnIcon
+    className: x.appUrlBtnIcon
   })));
 });
-require("../../../shared/1531/2584/1160");
+import "../../../shared/1531/2584/1160";
 var B = function (t) {
   var e = t.channel;
-  return i.a.createElement(i.a.Fragment, null, function () {
+  return i.createElement(i.Fragment, null, function () {
     switch (e) {
       case c.a.H5:
-        return i.a.createElement(L, null);
+        return i.createElement(L, null);
       default:
-        return i.a.createElement(R, null);
+        return i.createElement(R, null);
     }
   }());
 };
-var P = require("./1182");
-var U = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default;
-  } : function () {
-    return module;
-  };
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  });
-  return defaultExport;
-}(P);
-var F = i.a.memo(function () {
+import * as P from "./1182";
+import U from "./1182";
+var F = i.memo(function () {
   var t = Object(r.useState)();
   var e = Object(p.a)(t, 2);
   var n = e[0];
@@ -537,13 +449,13 @@ var F = i.a.memo(function () {
     return I.apply(this, arguments);
   }
   function I() {
-    return (I = Object(h.a)(d.a.mark(function t() {
+    return (I = Object(h.a)(d.mark(function t() {
       var e;
       var n;
       var r;
       var i;
       var o;
-      return d.a.wrap(function (t) {
+      return d.wrap(function (t) {
         for (;;) {
           switch (t.prev = t.next) {
             case 0:
@@ -614,18 +526,18 @@ var F = i.a.memo(function () {
       O();
     }
   }, [b, u]);
-  return n ? i.a.createElement("div", {
-    className: U.a.community
-  }, i.a.createElement("input", {
+  return n ? i.createElement("div", {
+    className: U.community
+  }, i.createElement("input", {
     type: "file",
     accept: "image/*",
     capture: "camera",
     id: "appcraft-camera-input",
-    className: U.a.camera
-  }), i.a.createElement(g.a, n)) : i.a.createElement(i.a.Fragment, null);
+    className: U.camera
+  }), i.createElement(g.a, n)) : i.createElement(i.Fragment, null);
 });
-var W = require("../../../shared/1531/2584/41");
-var H = require("../../../shared/1531/2584/59/index");
+import * as W from "../../../shared/1531/2584/41";
+import * as H from "../../../shared/1531/2584/59/index";
 function V() {
   var t = Object(H.b)();
   var e = "https://".concat({
@@ -638,8 +550,8 @@ function V() {
     url: window.location.href
   };
   return W.a.post(e, n).then(function () {
-    var t = Object(h.a)(d.a.mark(function t(e) {
-      return d.a.wrap(function (t) {
+    var t = Object(h.a)(d.mark(function t(e) {
+      return d.wrap(function (t) {
         for (;;) {
           switch (t.prev = t.next) {
             case 0:
@@ -664,31 +576,20 @@ function V() {
     return Promise.reject(t);
   });
 }
-var G = require("../../../shared/1531/2584/327");
-var z = require("./1041");
-var Y = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default;
-  } : function () {
-    return module;
-  };
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  });
-  return defaultExport;
-}(z);
+import * as G from "../../../shared/1531/2584/327";
+import * as z from "./1041";
+import Y from "./1041";
 function K(t, e, n) {
   return X.apply(this, arguments);
 }
 function X() {
-  return (X = Object(h.a)(d.a.mark(function t(e, n, r) {
+  return (X = Object(h.a)(d.mark(function t(e, n, r) {
     var i;
     var o;
     var a;
     var s;
     var c;
-    return d.a.wrap(function (t) {
+    return d.wrap(function (t) {
       for (;;) {
         switch (t.prev = t.next) {
           case 0:
@@ -740,7 +641,7 @@ function X() {
     }, t, null, [[3, 10]]);
   }))).apply(this, arguments);
 }
-var q = i.a.memo(function () {
+var q = i.memo(function () {
   var t = Object(r.useState)();
   var e = Object(p.a)(t, 2);
   var n = e[0];
@@ -759,7 +660,7 @@ var q = i.a.memo(function () {
   var T = E[1];
   var A = Object(r.useRef)();
   function S() {
-    return (S = Object(h.a)(d.a.mark(function t() {
+    return (S = Object(h.a)(d.mark(function t() {
       var e;
       var n;
       var r;
@@ -769,7 +670,7 @@ var q = i.a.memo(function () {
       var s;
       var c;
       var f;
-      return d.a.wrap(function (t) {
+      return d.wrap(function (t) {
         for (;;) {
           switch (t.prev = t.next) {
             case 0:
@@ -841,39 +742,39 @@ var q = i.a.memo(function () {
       o(Object(f.a)({}, A.current));
     }
   }, [O, _]);
-  return n ? i.a.createElement("div", {
-    className: Y.a.community
-  }, c && i.a.createElement("img", {
+  return n ? i.createElement("div", {
+    className: Y.community
+  }, c && i.createElement("img", {
     src: "https://static.codemao.cn/crc-uploader/2021/12/35f947eec3186875243a6ffb6efd5cf5.gif",
     alt: "loading",
-    className: Y.a.loading
-  }), i.a.createElement("input", {
+    className: Y.loading
+  }), i.createElement("input", {
     type: "file",
     accept: "image/*",
     capture: "camera",
     id: "appcraft-camera-input",
-    className: Y.a.camera
-  }), i.a.createElement(g.a, n)) : i.a.createElement(i.a.Fragment, null);
+    className: Y.camera
+  }), i.createElement(g.a, n)) : i.createElement(i.Fragment, null);
 });
 var Z = function (t) {
   var e = t.channel;
-  return i.a.createElement(i.a.Fragment, null, function () {
+  return i.createElement(i.Fragment, null, function () {
     switch (e) {
       case c.a.H5:
-        return i.a.createElement(q, null);
+        return i.createElement(q, null);
       default:
-        return i.a.createElement(F, null);
+        return i.createElement(F, null);
     }
   }());
 };
-var J = i.a.memo(function () {
+var J = i.memo(function () {
   var t = (Object(u.N)(window.location.href).channel || "").toUpperCase();
   window.history.pushState = function () {};
   window.history.replaceState = function () {};
-  return Object(s.f)() ? i.a.createElement(Z, {
+  return Object(s.f)() ? i.createElement(Z, {
     channel: t
-  }) : i.a.createElement(B, {
+  }) : i.createElement(B, {
     channel: t
   });
 });
-a.a.render(i.a.createElement(J, null), document.getElementById("root"));
+a.render(i.createElement(J, null), document.getElementById("root"));

@@ -1,6 +1,6 @@
 "use strict";
 
-var r = require("./0/index");
+var r = require("react");
 var o = function () {
   function e(e, t) {
     for (var n = 0; n < t.length; n++) {

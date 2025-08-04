@@ -88,7 +88,7 @@ module.exports = function (e, t, n) {
       o += " " + i + "( ";
     }
     o += " " + f + ", (dataPath || '')";
-    if ('""' != e.errorPath) {
+    if ("\"\"" != e.errorPath) {
       o += " + " + e.errorPath;
     }
     var m = o += " , " + (s ? "data" + (s - 1 || "") : "parentData") + " , " + (s ? e.dataPathArr[s] : "parentDataProperty") + ", rootData)  ";

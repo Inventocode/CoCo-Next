@@ -63,12 +63,12 @@ module.exports = function () {
             if (t = m("json-stringify") && v) {
               var n = i.stringify;
               g(function () {
-                t = '"-271821-04-20T00:00:00.000Z"' == n(new c(-864e13)) && '"+275760-09-13T00:00:00.000Z"' == n(new c(864e13)) && '"-000001-01-01T00:00:00.000Z"' == n(new c(-621987552e5)) && '"1969-12-31T23:59:59.999Z"' == n(new c(-1));
+                t = "\"-271821-04-20T00:00:00.000Z\"" == n(new c(-864e13)) && "\"+275760-09-13T00:00:00.000Z\"" == n(new c(864e13)) && "\"-000001-01-01T00:00:00.000Z\"" == n(new c(-621987552e5)) && "\"1969-12-31T23:59:59.999Z\"" == n(new c(-1));
               });
             }
           } else {
             var r;
-            var s = '{"a":[1,true,false,null,"\\u0000\\b\\n\\f\\r\\t"]}';
+            var s = "{\"a\":[1,true,false,null,\"\\u0000\\b\\n\\f\\r\\t\"]}";
             if ("json-stringify" == e) {
               var u = "function" == typeof (n = i.stringify);
               if (u) {
@@ -76,8 +76,8 @@ module.exports = function () {
                   return 1;
                 }).toJSON = r;
                 g(function () {
-                  u = "0" === n(0) && "0" === n(new o()) && '""' == n(new a()) && n(_) === h && n(h) === h && n() === h && "1" === n(r) && "[1]" == n([r]) && "[null]" == n([h]) && "null" == n(null) && "[null,null,null]" == n([h, _, null]) && n({
-                    a: [r, !0, !1, null, "\0\b\n\f\r\t"]
+                  u = "0" === n(0) && "0" === n(new o()) && "\"\"" == n(new a()) && n(_) === h && n(h) === h && n() === h && "1" === n(r) && "[1]" == n([r]) && "[null]" == n([h]) && "null" == n(null) && "[null,null,null]" == n([h, _, null]) && n({
+                    a: [r, !0, !1, null, "\u0000\b\n\f\r\t"]
                   }) == s && "1" === n(null, r) && "[\n 1,\n 2\n]" == n([1, 2], null, 1);
                 }, function () {
                   u = !1;
@@ -94,7 +94,7 @@ module.exports = function () {
                     r = f(s);
                     if (l = 5 == r.a.length && 1 === r.a[0]) {
                       g(function () {
-                        l = !f('"\t"');
+                        l = !f("\"\t\"");
                       });
                       if (l) {
                         g(function () {
@@ -168,7 +168,7 @@ module.exports = function () {
           if (!m("json-stringify") && !m("date-serialization")) {
             var w = {
               92: "\\\\",
-              34: '\\"',
+              34: "\\\"",
               8: "\\b",
               12: "\\f",
               10: "\\n",
@@ -249,7 +249,7 @@ module.exports = function () {
               var S = /[\x00-\x1f\x22\x5c]/g;
               var T = function (e) {
                 S.lastIndex = 0;
-                return '"' + (S.test(e) ? e.replace(S, k) : e) + '"';
+                return "\"" + (S.test(e) ? e.replace(S, k) : e) + "\"";
               };
               var B = function e(t, n, r, i, o, a, s) {
                 var u;
@@ -358,7 +358,7 @@ module.exports = function () {
             var F = a.fromCharCode;
             var R = {
               92: "\\",
-              34: '"',
+              34: "\"",
               47: "/",
               98: "\b",
               116: "\t",
@@ -853,7 +853,7 @@ module.exports = function () {
     };
     n.getScreenOrientation = function () {
       var e = screen.msOrientation || screen.mozOrientation || (screen.orientation || {}).type;
-      var t = "\u672a\u53d6\u5230\u503c";
+      var t = "未取到值";
       if (e) {
         t = e.indexOf("landscape") > -1 ? "landscape" : "portrait";
       } else if (n.mediaQueriesSupported()) {
@@ -985,7 +985,7 @@ module.exports = function () {
       }
     };
     n.formatString = function (e, r) {
-      return n.isNumber(r) && e.length > r ? (t.log("\u5b57\u7b26\u4e32\u957f\u5ea6\u8d85\u8fc7\u9650\u5236\uff0c\u5df2\u7ecf\u505a\u622a\u53d6--" + e), e.slice(0, r)) : e;
+      return n.isNumber(r) && e.length > r ? (t.log("字符串长度超过限制，已经做截取--" + e), e.slice(0, r)) : e;
     };
     n.searchObjString = function (e) {
       var r = ["$element_selector", "$element_path"];
@@ -1010,12 +1010,12 @@ module.exports = function () {
             try {
               r[o] = e(i);
               if (n.isFunction(r[o])) {
-                t.log("\u60a8\u7684\u5c5e\u6027- " + o + " \u683c\u5f0f\u4e0d\u6ee1\u8db3\u8981\u6c42\uff0c\u6211\u4eec\u5df2\u7ecf\u5c06\u5176\u5220\u9664");
+                t.log("您的属性- " + o + " 格式不满足要求，我们已经将其删除");
                 delete r[o];
               }
             } catch (s) {
               delete r[o];
-              t.log("\u60a8\u7684\u5c5e\u6027- " + o + " \u629b\u51fa\u4e86\u5f02\u5e38\uff0c\u6211\u4eec\u5df2\u7ecf\u5c06\u5176\u5220\u9664");
+              t.log("您的属性- " + o + " 抛出了异常，我们已经将其删除");
             }
           }
         });
@@ -1028,9 +1028,9 @@ module.exports = function () {
           if (n in e) {
             if (r < 3) {
               delete e[n];
-              t.log("\u60a8\u7684\u5c5e\u6027- " + n + "\u662f\u4fdd\u7559\u5b57\u6bb5\uff0c\u6211\u4eec\u5df2\u7ecf\u5c06\u5176\u5220\u9664");
+              t.log("您的属性- " + n + "是保留字段，我们已经将其删除");
             } else {
-              t.log("\u60a8\u7684\u5c5e\u6027- " + n + "\u662f\u4fdd\u7559\u5b57\u6bb5\uff0c\u8bf7\u907f\u514d\u5176\u4f5c\u4e3a\u5c5e\u6027\u540d");
+              t.log("您的属性- " + n + "是保留字段，请避免其作为属性名");
             }
           }
         });
@@ -1061,13 +1061,13 @@ module.exports = function () {
             if (n.isString(e)) {
               o.push(e);
             } else {
-              t.log("\u60a8\u7684\u6570\u636e-", i, r, "\u7684\u6570\u7ec4\u91cc\u7684\u503c\u5fc5\u987b\u662f\u5b57\u7b26\u4e32,\u5df2\u7ecf\u5c06\u5176\u5220\u9664");
+              t.log("您的数据-", i, r, "的数组里的值必须是字符串,已经将其删除");
             }
           });
           e[i] = o;
         }
         if (!(n.isString(r) || n.isNumber(r) || n.isDate(r) || n.isBoolean(r) || n.isArray(r) || n.isFunction(r) || "$option" === i)) {
-          t.log("\u60a8\u7684\u6570\u636e-", i, r, "-\u683c\u5f0f\u4e0d\u6ee1\u8db3\u8981\u6c42\uff0c\u6211\u4eec\u5df2\u7ecf\u5c06\u5176\u5220\u9664");
+          t.log("您的数据-", i, r, "-格式不满足要求，我们已经将其删除");
           delete e[i];
         }
       }), e) : e;
@@ -1303,7 +1303,7 @@ module.exports = function () {
         i = null == i ? 73e3 : i;
         if (o = void 0 === o ? t.para.cross_subdomain : o) {
           var u = n.getCurrentDomain(location.href);
-          if ("url\u89e3\u6790\u5931\u8d25" === u) {
+          if ("url解析失败" === u) {
             u = "";
           }
           a = u ? "; domain=" + u : "";
@@ -1653,13 +1653,13 @@ module.exports = function () {
     };
     n.getHostname = function (e, r) {
       if (!(r && "string" == typeof r)) {
-        r = "hostname\u89e3\u6790\u5f02\u5e38";
+        r = "hostname解析异常";
       }
       var i = null;
       try {
         i = n.URL(e).hostname;
       } catch (a) {
-        t.log("getHostname\u4f20\u5165\u7684url\u53c2\u6570\u4e0d\u5408\u6cd5\uff01");
+        t.log("getHostname传入的url参数不合法！");
       }
       return i || r;
     };
@@ -1735,12 +1735,12 @@ module.exports = function () {
       switch (typeof r) {
         case "function":
           var i = r();
-          return "" === i || "" === n.trim(i) ? "url\u89e3\u6790\u5931\u8d25" : -1 !== i.indexOf(".") ? i : "url\u89e3\u6790\u5931\u8d25";
+          return "" === i || "" === n.trim(i) ? "url解析失败" : -1 !== i.indexOf(".") ? i : "url解析失败";
         case "string":
-          return "" === r || "" === n.trim(r) ? "url\u89e3\u6790\u5931\u8d25" : -1 !== r.indexOf(".") ? r : "url\u89e3\u6790\u5931\u8d25";
+          return "" === r || "" === n.trim(r) ? "url解析失败" : -1 !== r.indexOf(".") ? r : "url解析失败";
         default:
           var o = n.getCookieTopLevelDomain();
-          return "" === e || "" === o ? "url\u89e3\u6790\u5931\u8d25" : o;
+          return "" === e || "" === o ? "url解析失败" : o;
       }
     };
     n.getCookieTopLevelDomain = function (e) {
@@ -1900,7 +1900,7 @@ module.exports = function () {
     };
     n.strToUnicode = function (e) {
       if ("string" != typeof e) {
-        t.log("\u8f6c\u6362unicode\u9519\u8bef", e);
+        t.log("转换unicode错误", e);
         return e;
       }
       for (var n = "", r = 0; r < e.length; r++) {
@@ -1909,7 +1909,7 @@ module.exports = function () {
       return n;
     };
     n.getReferrer = function (e) {
-      return "string" != typeof (e = e || document.referrer) ? "\u53d6\u503c\u5f02\u5e38_referrer\u5f02\u5e38_" + String(e) : (0 === e.indexOf("https://www.baidu.com/") && (e = e.split("?")[0]), "string" == typeof (e = e.slice(0, t.para.max_referrer_string_length)) ? e : "");
+      return "string" != typeof (e = e || document.referrer) ? "取值异常_referrer异常_" + String(e) : (0 === e.indexOf("https://www.baidu.com/") && (e = e.split("?")[0]), "string" == typeof (e = e.slice(0, t.para.max_referrer_string_length)) ? e : "");
     };
     n.getKeywordFromReferrer = function (e) {
       e = e || document.referrer;
@@ -1919,7 +1919,7 @@ module.exports = function () {
           var i = n.getReferSearchEngine(e);
           var o = n.getQueryParamsFromUrl(e);
           if (n.isEmptyObject(o)) {
-            return "\u672a\u53d6\u5230\u503c";
+            return "未取到值";
           }
           var a = null;
           for (var s in r) if (i === s && "object" == typeof o) {
@@ -1935,11 +1935,11 @@ module.exports = function () {
               return o[a];
             }
           }
-          return "\u672a\u53d6\u5230\u503c";
+          return "未取到值";
         }
-        return "" === e ? "\u672a\u53d6\u5230\u503c_\u76f4\u63a5\u6253\u5f00" : "\u672a\u53d6\u5230\u503c_\u975ehttp\u7684url";
+        return "" === e ? "未取到值_直接打开" : "未取到值_非http的url";
       }
-      return "\u53d6\u503c\u5f02\u5e38_referrer\u5f02\u5e38_" + String(e);
+      return "取值异常_referrer异常_" + String(e);
     };
     n.getWxAdIdFromUrl = function (e) {
       var t = n.getQueryParam(e, "gdt_vid");
@@ -1951,7 +1951,7 @@ module.exports = function () {
         callbacks: ""
       };
       if (n.isString(t) && t.length) {
-        o.click_id = 16 == t.length || 18 == t.length ? t : "\u53c2\u6570\u89e3\u6790\u4e0d\u5408\u6cd5";
+        o.click_id = 16 == t.length || 18 == t.length ? t : "参数解析不合法";
         if (n.isString(r) && r.length) {
           o.hash_key = r;
         }
@@ -1963,7 +1963,7 @@ module.exports = function () {
     };
     n.getReferSearchEngine = function (e) {
       var r = n.getHostname(e);
-      if (!r || "hostname\u89e3\u6790\u5f02\u5e38" === r) {
+      if (!r || "hostname解析异常" === r) {
         return "";
       }
       t.para.source_type.keyword;
@@ -1981,7 +1981,7 @@ module.exports = function () {
           return o;
         }
       }
-      return "\u672a\u77e5\u641c\u7d22\u5f15\u64ce";
+      return "未知搜索引擎";
     };
     n.getSourceFromReferrer = function () {
       function e(e, t) {
@@ -1998,9 +1998,9 @@ module.exports = function () {
       var s = n.info.pageProp.url;
       if (s) {
         var c = s.match(new RegExp(r));
-        return c && c[0] ? "\u4ed8\u8d39\u5e7f\u544a\u6d41\u91cf" : e(i, a) ? "\u81ea\u7136\u641c\u7d22\u6d41\u91cf" : e(o, a) ? "\u793e\u4ea4\u7f51\u7ad9\u6d41\u91cf" : "" === a ? "\u76f4\u63a5\u6d41\u91cf" : "\u5f15\u8350\u6d41\u91cf";
+        return c && c[0] ? "付费广告流量" : e(i, a) ? "自然搜索流量" : e(o, a) ? "社交网站流量" : "" === a ? "直接流量" : "引荐流量";
       }
-      return "\u83b7\u53d6url\u5f02\u5e38";
+      return "获取url异常";
     };
     n.info = {
       initPage: function () {
@@ -2008,13 +2008,13 @@ module.exports = function () {
         var r = location.href;
         var i = n.getCurrentDomain(r);
         if (!i) {
-          t.debug.jssdkDebug("url_domain\u5f02\u5e38_" + r + "_" + i);
+          t.debug.jssdkDebug("url_domain异常_" + r + "_" + i);
         }
         this.pageProp = {
           referrer: e,
           referrer_host: e ? n.getHostname(e) : "",
           url: r,
-          url_host: n.getHostname(r, "url_host\u53d6\u503c\u5f02\u5e38"),
+          url_host: n.getHostname(r, "url_host取值异常"),
           url_domain: i
         };
       },
@@ -2332,7 +2332,7 @@ module.exports = function () {
     };
     n.jsonp = function (e) {
       if (!n.isObject(e) || !n.isString(e.callbackName)) {
-        t.log("JSONP \u8bf7\u6c42\u7f3a\u5c11 callbackName");
+        t.log("JSONP 请求缺少 callbackName");
         return !1;
       }
       e.success = n.isFunction(e.success) ? e.success : function () {};
@@ -2525,14 +2525,14 @@ module.exports = function () {
     t.addReferrerHost = function (e) {
       if (n.isObject(e.properties)) {
         if (e.properties.$first_referrer) {
-          e.properties.$first_referrer_host = n.getHostname(e.properties.$first_referrer, "\u53d6\u503c\u5f02\u5e38");
+          e.properties.$first_referrer_host = n.getHostname(e.properties.$first_referrer, "取值异常");
         }
         if (!("track" !== e.type && "track_signup" !== e.type)) {
           if ("$referrer" in e.properties) {
-            e.properties.$referrer_host = "" === e.properties.$referrer ? "" : n.getHostname(e.properties.$referrer, "\u53d6\u503c\u5f02\u5e38");
+            e.properties.$referrer_host = "" === e.properties.$referrer ? "" : n.getHostname(e.properties.$referrer, "取值异常");
           }
           if (t.para.preset_properties.latest_referrer && t.para.preset_properties.latest_referrer_host) {
-            e.properties.$latest_referrer_host = "" === e.properties.$latest_referrer ? "" : n.getHostname(e.properties.$latest_referrer, "\u53d6\u503c\u5f02\u5e38");
+            e.properties.$latest_referrer_host = "" === e.properties.$latest_referrer ? "" : n.getHostname(e.properties.$latest_referrer, "取值异常");
           }
         }
       }
@@ -2648,7 +2648,7 @@ module.exports = function () {
             if (n.isObject(t.para.heatmap.collect_tags.div)) {
               if (t.para.heatmap.collect_tags.div.ignore_tags) {
                 if (!n.isArray(t.para.heatmap.collect_tags.div.ignore_tags)) {
-                  t.log("ignore_tags \u53c2\u6570\u5fc5\u987b\u662f\u6570\u7ec4\u683c\u5f0f");
+                  t.log("ignore_tags 参数必须是数组格式");
                   t.para.heatmap.collect_tags.div.ignore_tags = f;
                 }
               } else {
@@ -2698,9 +2698,9 @@ module.exports = function () {
       state: 0,
       historyState: [],
       stateType: {
-        1: "1-init\u672a\u5f00\u59cb",
-        2: "2-init\u5f00\u59cb",
-        3: "3-store\u5b8c\u6210"
+        1: "1-init未开始",
+        2: "2-init开始",
+        3: "3-store完成"
       },
       getState: function () {
         return this.historyState.join("\n");
@@ -2754,14 +2754,14 @@ module.exports = function () {
         });
       },
       apph5: function (e) {
-        var r = "app_h5\u6253\u901a\u5931\u8d25-";
+        var r = "app_h5打通失败-";
         var i = {
-          1: r + "use_app_track\u4e3afalse",
-          2: r + "Android\u6216\u8005iOS\uff0c\u6ca1\u6709\u66b4\u9732\u76f8\u5e94\u65b9\u6cd5",
-          3.1: r + "Android\u6821\u9a8cserver_url\u5931\u8d25",
-          3.2: r + "iOS\u6821\u9a8cserver_url\u5931\u8d25",
-          4.1: r + "H5 \u6821\u9a8c iOS server_url \u5931\u8d25",
-          4.2: r + "H5 \u6821\u9a8c Android server_url \u5931\u8d25"
+          1: r + "use_app_track为false",
+          2: r + "Android或者iOS，没有暴露相应方法",
+          3.1: r + "Android校验server_url失败",
+          3.2: r + "iOS校验server_url失败",
+          4.1: r + "H5 校验 iOS server_url 失败",
+          4.2: r + "H5 校验 Android server_url 失败"
         };
         var o = e.output;
         var a = e.step;
@@ -2778,27 +2778,27 @@ module.exports = function () {
       defineMode: function (e) {
         var t = {
           1: {
-            title: "\u5f53\u524d\u9875\u9762\u65e0\u6cd5\u8fdb\u884c\u53ef\u89c6\u5316\u5168\u57cb\u70b9",
-            message: "App SDK \u4e0e Web JS SDK \u6ca1\u6709\u8fdb\u884c\u6253\u901a\uff0c\u8bf7\u8054\u7cfb\u8d35\u65b9\u6280\u672f\u4eba\u5458\u4fee\u6b63 App SDK \u7684\u914d\u7f6e\uff0c\u8be6\u7ec6\u4fe1\u606f\u8bf7\u67e5\u770b\u6587\u6863\u3002",
-            link_text: "\u914d\u7f6e\u6587\u6863",
+            title: "当前页面无法进行可视化全埋点",
+            message: "App SDK 与 Web JS SDK 没有进行打通，请联系贵方技术人员修正 App SDK 的配置，详细信息请查看文档。",
+            link_text: "配置文档",
             link_url: "https://manual.sensorsdata.cn/sa/latest/tech_sdk_client_link-1573913.html"
           },
           2: {
-            title: "\u5f53\u524d\u9875\u9762\u65e0\u6cd5\u8fdb\u884c\u53ef\u89c6\u5316\u5168\u57cb\u70b9",
-            message: "App SDK \u4e0e Web JS SDK \u6ca1\u6709\u8fdb\u884c\u6253\u901a\uff0c\u8bf7\u8054\u7cfb\u8d35\u65b9\u6280\u672f\u4eba\u5458\u4fee\u6b63 Web JS SDK \u7684\u914d\u7f6e\uff0c\u8be6\u7ec6\u4fe1\u606f\u8bf7\u67e5\u770b\u6587\u6863\u3002",
-            link_text: "\u914d\u7f6e\u6587\u6863",
+            title: "当前页面无法进行可视化全埋点",
+            message: "App SDK 与 Web JS SDK 没有进行打通，请联系贵方技术人员修正 Web JS SDK 的配置，详细信息请查看文档。",
+            link_text: "配置文档",
             link_url: "https://manual.sensorsdata.cn/sa/latest/tech_sdk_client_link-1573913.html"
           },
           3: {
-            title: "\u5f53\u524d\u9875\u9762\u65e0\u6cd5\u8fdb\u884c\u53ef\u89c6\u5316\u5168\u57cb\u70b9",
-            message: "Web JS SDK \u6ca1\u6709\u5f00\u542f\u5168\u57cb\u70b9\u914d\u7f6e\uff0c\u8bf7\u8054\u7cfb\u8d35\u65b9\u5de5\u4f5c\u4eba\u5458\u4fee\u6b63 SDK \u7684\u914d\u7f6e\uff0c\u8be6\u7ec6\u4fe1\u606f\u8bf7\u67e5\u770b\u6587\u6863\u3002",
-            link_text: "\u914d\u7f6e\u6587\u6863",
+            title: "当前页面无法进行可视化全埋点",
+            message: "Web JS SDK 没有开启全埋点配置，请联系贵方工作人员修正 SDK 的配置，详细信息请查看文档。",
+            link_text: "配置文档",
             link_url: "https://manual.sensorsdata.cn/sa/latest/tech_sdk_client_web_all-1573964.html"
           },
           4: {
-            title: "\u5f53\u524d\u9875\u9762\u65e0\u6cd5\u8fdb\u884c\u53ef\u89c6\u5316\u5168\u57cb\u70b9",
-            message: "Web JS SDK \u914d\u7f6e\u7684\u6570\u636e\u6821\u9a8c\u5730\u5740\u4e0e App SDK \u914d\u7f6e\u7684\u6570\u636e\u6821\u9a8c\u5730\u5740\u4e0d\u4e00\u81f4\uff0c\u8bf7\u8054\u7cfb\u8d35\u65b9\u5de5\u4f5c\u4eba\u5458\u4fee\u6b63 SDK \u7684\u914d\u7f6e\uff0c\u8be6\u7ec6\u4fe1\u606f\u8bf7\u67e5\u770b\u6587\u6863\u3002",
-            link_text: "\u914d\u7f6e\u6587\u6863",
+            title: "当前页面无法进行可视化全埋点",
+            message: "Web JS SDK 配置的数据校验地址与 App SDK 配置的数据校验地址不一致，请联系贵方工作人员修正 SDK 的配置，详细信息请查看文档。",
+            link_text: "配置文档",
             link_url: "https://manual.sensorsdata.cn/sa/latest/tech_sdk_client_link-1573913.html"
           }
         };
@@ -2811,14 +2811,14 @@ module.exports = function () {
               return !1;
             }
           } catch (i) {
-            t.log("\u4e0d\u652f\u6301 _.URL \u65b9\u6cd5");
+            t.log("不支持 _.URL 方法");
             return !1;
           }
           return !0;
         },
         serverUrl: function () {
           if (n.isString(t.para.server_url) && "" !== t.para.server_url && !this.protocolIsSame(t.para.server_url, location.href)) {
-            t.log("SDK \u68c0\u6d4b\u5230\u60a8\u7684\u6570\u636e\u53d1\u9001\u5730\u5740\u548c\u5f53\u524d\u9875\u9762\u5730\u5740\u7684\u534f\u8bae\u4e0d\u4e00\u81f4\uff0c\u5efa\u8bae\u60a8\u4fee\u6539\u6210\u4e00\u81f4\u7684\u534f\u8bae\u3002\n\u56e0\u4e3a\uff1a1\u3001https \u4e0b\u9762\u53d1\u9001 http \u7684\u56fe\u7247\u8bf7\u6c42\u4f1a\u5931\u8d25\u30022\u3001http \u9875\u9762\u4f7f\u7528 https + ajax \u65b9\u5f0f\u53d1\u6570\u636e\uff0c\u5728 ie9 \u53ca\u4ee5\u4e0b\u4f1a\u4e22\u5931\u6570\u636e\u3002");
+            t.log("SDK 检测到您的数据发送地址和当前页面地址的协议不一致，建议您修改成一致的协议。\n因为：1、https 下面发送 http 的图片请求会失败。2、http 页面使用 https + ajax 方式发数据，在 ie9 及以下会丢失数据。");
           }
         },
         ajax: function (e) {
@@ -2826,7 +2826,7 @@ module.exports = function () {
             return !1;
           }
           if (n.isString(e) && "" !== e && !this.protocolIsSame(e, location.href)) {
-            t.log("SDK \u68c0\u6d4b\u5230\u60a8\u7684\u6570\u636e\u53d1\u9001\u5730\u5740\u548c\u5f53\u524d\u9875\u9762\u5730\u5740\u7684\u534f\u8bae\u4e0d\u4e00\u81f4\uff0c\u5efa\u8bae\u60a8\u4fee\u6539\u6210\u4e00\u81f4\u7684\u534f\u8bae\u3002\u56e0\u4e3a http \u9875\u9762\u4f7f\u7528 https + ajax \u65b9\u5f0f\u53d1\u6570\u636e\uff0c\u5728 ie9 \u53ca\u4ee5\u4e0b\u4f1a\u4e22\u5931\u6570\u636e\u3002");
+            t.log("SDK 检测到您的数据发送地址和当前页面地址的协议不一致，建议您修改成一致的协议。因为 http 页面使用 https + ajax 方式发数据，在 ie9 及以下会丢失数据。");
           }
         }
       }
@@ -2951,8 +2951,8 @@ module.exports = function () {
           t.setOnceProfile(n.extend({
             $first_visit_time: new Date(),
             $first_referrer: n.isDecodeURI(t.para.url_is_decode, n.getReferrer()),
-            $first_browser_language: navigator.language || "\u53d6\u503c\u5f02\u5e38",
-            $first_browser_charset: "string" == typeof document.charset ? document.charset.toUpperCase() : "\u53d6\u503c\u5f02\u5e38",
+            $first_browser_language: navigator.language || "取值异常",
+            $first_browser_charset: "string" == typeof document.charset ? document.charset.toUpperCase() : "取值异常",
             $first_traffic_source_type: n.getSourceFromReferrer(),
             $first_search_keyword: n.getKeywordFromReferrer()
           }, o()));
@@ -2985,8 +2985,8 @@ module.exports = function () {
           t.setOnceProfile(n.extend({
             $first_visit_time: new Date(),
             $first_referrer: n.isDecodeURI(t.para.url_is_decode, n.getReferrer()),
-            $first_browser_language: navigator.language || "\u53d6\u503c\u5f02\u5e38",
-            $first_browser_charset: "string" == typeof document.charset ? document.charset.toUpperCase() : "\u53d6\u503c\u5f02\u5e38",
+            $first_browser_language: navigator.language || "取值异常",
+            $first_browser_charset: "string" == typeof document.charset ? document.charset.toUpperCase() : "取值异常",
             $first_traffic_source_type: n.getSourceFromReferrer(),
             $first_search_keyword: n.getKeywordFromReferrer()
           }, o));
@@ -3017,7 +3017,7 @@ module.exports = function () {
         this.autoTrackIsUsed = !0;
       },
       getAnonymousID: function () {
-        return n.isEmptyObject(t.store._state) ? "\u8bf7\u5148\u521d\u59cb\u5316SDK" : t.store._state._first_id || t.store._state.first_id || t.store._state._distinct_id || t.store._state.distinct_id;
+        return n.isEmptyObject(t.store._state) ? "请先初始化SDK" : t.store._state._first_id || t.store._state.first_id || t.store._state._distinct_id || t.store._state.distinct_id;
       },
       setPlugin: function (e) {
         if (!n.isObject(e)) {
@@ -3028,7 +3028,7 @@ module.exports = function () {
             if (n.isObject(window.SensorsDataWebJSSDKPlugin) && window.SensorsDataWebJSSDKPlugin[r]) {
               e(window.SensorsDataWebJSSDKPlugin[r]);
             } else {
-              t.log(r + "\u6ca1\u6709\u83b7\u53d6\u5230,\u8bf7\u67e5\u9605\u6587\u6863\uff0c\u8c03\u6574" + r + "\u7684\u5f15\u5165\u987a\u5e8f\uff01");
+              t.log(r + "没有获取到,请查阅文档，调整" + r + "的引入顺序！");
             }
           }
         });
@@ -3050,11 +3050,11 @@ module.exports = function () {
       if ("function" == typeof n) {
         n.apply(t, i);
       } else {
-        t.log("quick\u65b9\u6cd5\u4e2d\u6ca1\u6709\u8fd9\u4e2a\u529f\u80fd" + e[0]);
+        t.log("quick方法中没有这个功能" + e[0]);
       }
     };
     t.use = function (e, r) {
-      return n.isString(e) ? n.isObject(window.SensorsDataWebJSSDKPlugin) && n.isObject(window.SensorsDataWebJSSDKPlugin[e]) && n.isFunction(window.SensorsDataWebJSSDKPlugin[e].init) ? (window.SensorsDataWebJSSDKPlugin[e].init(t, r), window.SensorsDataWebJSSDKPlugin[e]) : n.isObject(t.modules) && n.isObject(t.modules[e]) && n.isFunction(t.modules[e].init) ? (t.modules[e].init(t, r), t.modules[e]) : void t.log(e + "\u6ca1\u6709\u83b7\u53d6\u5230,\u8bf7\u67e5\u9605\u6587\u6863\uff0c\u8c03\u6574" + e + "\u7684\u5f15\u5165\u987a\u5e8f\uff01") : (t.log("use\u63d2\u4ef6\u540d\u79f0\u5fc5\u987b\u662f\u5b57\u7b26\u4e32\uff01"), !1);
+      return n.isString(e) ? n.isObject(window.SensorsDataWebJSSDKPlugin) && n.isObject(window.SensorsDataWebJSSDKPlugin[e]) && n.isFunction(window.SensorsDataWebJSSDKPlugin[e].init) ? (window.SensorsDataWebJSSDKPlugin[e].init(t, r), window.SensorsDataWebJSSDKPlugin[e]) : n.isObject(t.modules) && n.isObject(t.modules[e]) && n.isFunction(t.modules[e].init) ? (t.modules[e].init(t, r), t.modules[e]) : void t.log(e + "没有获取到,请查阅文档，调整" + e + "的引入顺序！") : (t.log("use插件名称必须是字符串！"), !1);
     };
     t.track = function (e, t, n) {
       if (s.check({
@@ -3126,7 +3126,7 @@ module.exports = function () {
               e[i] = r;
             } else {
               delete e[i];
-              t.log("appendProfile\u5c5e\u6027\u7684\u503c\u5fc5\u987b\u662f\u5b57\u7b26\u4e32\u6216\u8005\u6570\u7ec4");
+              t.log("appendProfile属性的值必须是字符串或者数组");
             }
           }
         });
@@ -3157,7 +3157,7 @@ module.exports = function () {
             properties: e
           }, r);
         } else {
-          t.log("profile_increment\u7684\u503c\u53ea\u80fd\u662f\u6570\u5b57");
+          t.log("profile_increment的值只能是数字");
         }
       }
     };
@@ -3179,7 +3179,7 @@ module.exports = function () {
           if (n.isString(e)) {
             o[e] = !0;
           } else {
-            t.log("profile_unset\u7ed9\u7684\u6570\u7ec4\u91cc\u9762\u7684\u503c\u5fc5\u987b\u65f6string,\u5df2\u7ecf\u8fc7\u6ee4\u6389", e);
+            t.log("profile_unset给的数组里面的值必须时string,已经过滤掉", e);
           }
         });
         s.send({
@@ -3187,7 +3187,7 @@ module.exports = function () {
           properties: o
         }, r);
       } else {
-        t.log("profile_unset\u7684\u53c2\u6570\u662f\u6570\u7ec4");
+        t.log("profile_unset的参数是数组");
       }
     };
     t.identify = function (e, r) {
@@ -3219,7 +3219,7 @@ module.exports = function () {
           }
         }
       } else {
-        t.log("identify\u7684\u53c2\u6570\u5fc5\u987b\u662f\u5b57\u7b26\u4e32");
+        t.log("identify的参数必须是字符串");
       }
     };
     t.trackSignup = function (e, t, n, r) {
@@ -3245,7 +3245,7 @@ module.exports = function () {
       })) {
         n.extend(n.info.currentProps, e);
       } else {
-        t.log("register\u8f93\u5165\u7684\u53c2\u6570\u6709\u8bef");
+        t.log("register输入的参数有误");
       }
     };
     t.clearAllRegister = function (e) {
@@ -3268,7 +3268,7 @@ module.exports = function () {
       })) {
         c.setProps(e);
       } else {
-        t.log("register\u8f93\u5165\u7684\u53c2\u6570\u6709\u8bef");
+        t.log("register输入的参数有误");
       }
     };
     t.registerOnce = function (e) {
@@ -3277,7 +3277,7 @@ module.exports = function () {
       })) {
         c.setPropsOnce(e);
       } else {
-        t.log("registerOnce\u8f93\u5165\u7684\u53c2\u6570\u6709\u8bef");
+        t.log("registerOnce输入的参数有误");
       }
     };
     t.registerSession = function (e) {
@@ -3286,7 +3286,7 @@ module.exports = function () {
       })) {
         c.setSessionProps(e);
       } else {
-        t.log("registerSession\u8f93\u5165\u7684\u53c2\u6570\u6709\u8bef");
+        t.log("registerSession输入的参数有误");
       }
     };
     t.registerSessionOnce = function (e) {
@@ -3295,7 +3295,7 @@ module.exports = function () {
       })) {
         c.setSessionPropsOnce(e);
       } else {
-        t.log("registerSessionOnce\u8f93\u5165\u7684\u53c2\u6570\u6709\u8bef");
+        t.log("registerSessionOnce输入的参数有误");
       }
     };
     t.login = function (e, n) {
@@ -3318,7 +3318,7 @@ module.exports = function () {
           }
         }
       } else {
-        t.log("login\u7684\u53c2\u6570\u5fc5\u987b\u662f\u5b57\u7b26\u4e32");
+        t.log("login的参数必须是字符串");
         if (n) {
           n();
         }
@@ -3335,7 +3335,7 @@ module.exports = function () {
           c.set("distinct_id", r);
         }
       } else {
-        t.log("\u6ca1\u6709first_id\uff0clogout\u5931\u8d25");
+        t.log("没有first_id，logout失败");
       }
     };
     t.getPresetProperties = function () {
@@ -3401,7 +3401,7 @@ module.exports = function () {
                     sa_jssdk_heatmap_render(t, e, r, i);
                     if ("object" == typeof console && "function" == typeof console.log) {
                       if (!(t.heatmap_version && t.heatmap_version === t.lib_version)) {
-                        console.log("heatmap.js\u4e0esensorsdata.js\u7248\u672c\u53f7\u4e0d\u4e00\u81f4\uff0c\u53ef\u80fd\u5b58\u5728\u98ce\u9669!");
+                        console.log("heatmap.js与sensorsdata.js版本号不一致，可能存在风险!");
                       }
                     }
                   }
@@ -3412,7 +3412,7 @@ module.exports = function () {
               url: t.para.heatmap_url
             });
           } else {
-            t.log("\u6ca1\u6709\u6307\u5b9aheatmap_url\u7684\u8def\u5f84");
+            t.log("没有指定heatmap_url的路径");
           }
         },
         isStorageHasKeyword: function () {
@@ -3449,7 +3449,7 @@ module.exports = function () {
               }
               if (e.data.data.userURL && location.search.match(/sa-visual-mode=true/)) {
                 o = e.data.data.userURL;
-                var i = n.secCheck.isHttpUrl(o) ? n.secCheck.removeScriptProtocol(o) : (t.log("\u53ef\u89c6\u5316\u6a21\u5f0f\u68c0\u6d4b URL \u5931\u8d25"), !1);
+                var i = n.secCheck.isHttpUrl(o) ? n.secCheck.removeScriptProtocol(o) : (t.log("可视化模式检测 URL 失败"), !1);
                 if (i) {
                   window.location.href = i;
                 }
@@ -3491,7 +3491,7 @@ module.exports = function () {
               }
               if ("v-track-mode" === t.data.type) {
                 if (t.data.data && t.data.data.isVtrack) {
-                  alert("\u5f53\u524d\u7248\u672c\u4e0d\u652f\u6301\uff0c\u8bf7\u5347\u7ea7\u90e8\u7f72\u795e\u7b56\u6570\u636e\u6cbb\u7406");
+                  alert("当前版本不支持，请升级部署神策数据治理");
                 }
                 window.removeEventListener("message", e, !1);
               }
@@ -3690,7 +3690,7 @@ module.exports = function () {
             }
           });
         } else {
-          t.log("\u5f53\u524d server_url \u4e3a\u7a7a\u6216\u4e0d\u6b63\u786e\uff0c\u53ea\u5728\u63a7\u5236\u53f0\u6253\u5370\u65e5\u5fd7\uff0cnetwork \u4e2d\u4e0d\u4f1a\u53d1\u6570\u636e\uff0c\u8bf7\u914d\u7f6e\u6b63\u786e\u7684 server_url\uff01");
+          t.log("当前 server_url 为空或不正确，只在控制台打印日志，network 中不会发数据，请配置正确的 server_url！");
         }
       },
       appendPendingItems: function (e) {
@@ -3769,11 +3769,11 @@ module.exports = function () {
                 r.push(i);
               } else {
                 localStorage.removeItem(u);
-                t.log("localStorage-\u6570\u636eparse\u5f02\u5e38" + i);
+                t.log("localStorage-数据parse异常" + i);
               }
             } else {
               localStorage.removeItem(u);
-              t.log("localStorage-\u6570\u636e\u53d6\u503c\u5f02\u5e38" + i);
+              t.log("localStorage-数据取值异常" + i);
             }
           }
         }
@@ -3972,7 +3972,7 @@ module.exports = function () {
         return !1;
       }
       if (t.readyState.state < 3) {
-        t.log("\u521d\u59cb\u5316\u6ca1\u6709\u5b8c\u6210");
+        t.log("初始化没有完成");
         return !1;
       }
       e._track_id = Number(String(n.getRandom()).slice(2, 5) + String(n.getRandom()).slice(2, 4) + String(new Date().getTime()).slice(-4));
@@ -4005,7 +4005,7 @@ module.exports = function () {
       } else if ("string" == typeof t.para.server_url && "" !== t.para.server_url) {
         this.sendCall(e, t.para.server_url, e.callback);
       } else {
-        t.log("\u5f53\u524d server_url \u4e3a\u7a7a\u6216\u4e0d\u6b63\u786e\uff0c\u53ea\u5728\u63a7\u5236\u53f0\u6253\u5370\u65e5\u5fd7\uff0cnetwork \u4e2d\u4e0d\u4f1a\u53d1\u6570\u636e\uff0c\u8bf7\u914d\u7f6e\u6b63\u786e\u7684 server_url\uff01");
+        t.log("当前 server_url 为空或不正确，只在控制台打印日志，network 中不会发数据，请配置正确的 server_url！");
       }
     };
     a.sendCall = function (e, r, i) {
@@ -4058,23 +4058,23 @@ module.exports = function () {
         return "string" == typeof this[e] ? this[this[e]](t) : n.isFunction(this[e]) ? this[e](t) : void 0;
       },
       str: function (e) {
-        return !!n.isString(e) || (t.log("\u8bf7\u68c0\u67e5\u53c2\u6570\u683c\u5f0f,\u5fc5\u987b\u662f\u5b57\u7b26\u4e32"), !0);
+        return !!n.isString(e) || (t.log("请检查参数格式,必须是字符串"), !0);
       },
       properties: function (e) {
         n.strip_sa_properties(e);
-        return !e || (n.isObject(e) ? !!this.checkPropertiesKey(e) || (t.log("properties \u91cc\u7684\u81ea\u5b9a\u4e49\u5c5e\u6027\u540d\u9700\u8981\u662f\u5408\u6cd5\u7684\u53d8\u91cf\u540d\uff0c\u4e0d\u80fd\u4ee5\u6570\u5b57\u5f00\u5934\uff0c\u4e14\u53ea\u5305\u542b\uff1a\u5927\u5c0f\u5199\u5b57\u6bcd\u3001\u6570\u5b57\u3001\u4e0b\u5212\u7ebf\uff0c\u81ea\u5b9a\u4e49\u5c5e\u6027\u4e0d\u80fd\u4ee5 $ \u5f00\u5934"), !0) : (t.log("properties\u53ef\u4ee5\u6ca1\u6709\uff0c\u4f46\u6709\u7684\u8bdd\u5fc5\u987b\u662f\u5bf9\u8c61"), !0));
+        return !e || (n.isObject(e) ? !!this.checkPropertiesKey(e) || (t.log("properties 里的自定义属性名需要是合法的变量名，不能以数字开头，且只包含：大小写字母、数字、下划线，自定义属性不能以 $ 开头"), !0) : (t.log("properties可以没有，但有的话必须是对象"), !0));
       },
       propertiesMust: function (e) {
         n.strip_sa_properties(e);
-        return void 0 === e || !n.isObject(e) || n.isEmptyObject(e) ? (t.log("properties\u5fc5\u987b\u662f\u5bf9\u8c61\u4e14\u6709\u503c"), !0) : !!this.checkPropertiesKey(e) || (t.log("properties \u91cc\u7684\u81ea\u5b9a\u4e49\u5c5e\u6027\u540d\u9700\u8981\u662f\u5408\u6cd5\u7684\u53d8\u91cf\u540d\uff0c\u4e0d\u80fd\u4ee5\u6570\u5b57\u5f00\u5934\uff0c\u4e14\u53ea\u5305\u542b\uff1a\u5927\u5c0f\u5199\u5b57\u6bcd\u3001\u6570\u5b57\u3001\u4e0b\u5212\u7ebf\uff0c\u81ea\u5b9a\u4e49\u5c5e\u6027\u4e0d\u80fd\u4ee5 $ \u5f00\u5934"), !0);
+        return void 0 === e || !n.isObject(e) || n.isEmptyObject(e) ? (t.log("properties必须是对象且有值"), !0) : !!this.checkPropertiesKey(e) || (t.log("properties 里的自定义属性名需要是合法的变量名，不能以数字开头，且只包含：大小写字母、数字、下划线，自定义属性不能以 $ 开头"), !0);
       },
       event: function (e) {
-        return !(!n.isString(e) || !this.regChecks.regName.test(e)) || (t.log("\u8bf7\u68c0\u67e5\u53c2\u6570\u683c\u5f0f\uff0ceventName \u5fc5\u987b\u662f\u5b57\u7b26\u4e32\uff0c\u4e14\u9700\u662f\u5408\u6cd5\u7684\u53d8\u91cf\u540d\uff0c\u5373\u4e0d\u80fd\u4ee5\u6570\u5b57\u5f00\u5934\uff0c\u4e14\u53ea\u5305\u542b\uff1a\u5927\u5c0f\u5199\u5b57\u6bcd\u3001\u6570\u5b57\u3001\u4e0b\u5212\u7ebf\u548c $,\u5176\u4e2d\u4ee5 $ \u5f00\u5934\u7684\u8868\u660e\u662f\u7cfb\u7edf\u7684\u4fdd\u7559\u5b57\u6bb5\uff0c\u81ea\u5b9a\u4e49\u4e8b\u4ef6\u540d\u8bf7\u4e0d\u8981\u4ee5 $ \u5f00\u5934"), !0);
+        return !(!n.isString(e) || !this.regChecks.regName.test(e)) || (t.log("请检查参数格式，eventName 必须是字符串，且需是合法的变量名，即不能以数字开头，且只包含：大小写字母、数字、下划线和 $,其中以 $ 开头的表明是系统的保留字段，自定义事件名请不要以 $ 开头"), !0);
       },
       test_id: "str",
       group_id: "str",
       distinct_id: function (e) {
-        return !(!n.isString(e) || !/^.{1,255}$/.test(e)) || (t.log("distinct_id\u5fc5\u987b\u662f\u4e0d\u80fd\u4e3a\u7a7a\uff0c\u4e14\u5c0f\u4e8e255\u4f4d\u7684\u5b57\u7b26\u4e32"), !1);
+        return !(!n.isString(e) || !/^.{1,255}$/.test(e)) || (t.log("distinct_id必须是不能为空，且小于255位的字符串"), !1);
       }
     };
     s.check = function (e) {
@@ -4110,16 +4110,16 @@ module.exports = function () {
       if (!(e.type && "profile" === e.type.slice(0, 7))) {
         i.properties = n.extend({}, n.info.properties(), c.getProps(), c.getSessionProps(), n.info.currentProps, i.properties);
         if (t.para.preset_properties.latest_referrer && !n.isString(i.properties.$latest_referrer)) {
-          i.properties.$latest_referrer = "\u53d6\u503c\u5f02\u5e38";
+          i.properties.$latest_referrer = "取值异常";
         }
         if (t.para.preset_properties.latest_search_keyword && !n.isString(i.properties.$latest_search_keyword)) {
-          i.properties.$latest_search_keyword = "\u53d6\u503c\u5f02\u5e38";
+          i.properties.$latest_search_keyword = "取值异常";
         }
         if (t.para.preset_properties.latest_traffic_source_type && !n.isString(i.properties.$latest_traffic_source_type)) {
-          i.properties.$latest_traffic_source_type = "\u53d6\u503c\u5f02\u5e38";
+          i.properties.$latest_traffic_source_type = "取值异常";
         }
         if (t.para.preset_properties.latest_landing_page && !n.isString(i.properties.$latest_landing_page)) {
-          i.properties.$latest_landing_page = "\u53d6\u503c\u5f02\u5e38";
+          i.properties.$latest_landing_page = "取值异常";
         }
         if ("not_collect" === t.para.preset_properties.latest_wx_ad_click_id) {
           delete i.properties._latest_wx_ad_click_id;
@@ -4127,9 +4127,9 @@ module.exports = function () {
           delete i.properties._latest_wx_ad_callbacks;
         } else {
           if (t.para.preset_properties.latest_wx_ad_click_id && !n.isString(i.properties._latest_wx_ad_click_id)) {
-            i.properties._latest_wx_ad_click_id = "\u53d6\u503c\u5f02\u5e38";
-            i.properties._latest_wx_ad_hash_key = "\u53d6\u503c\u5f02\u5e38";
-            i.properties._latest_wx_ad_callbacks = "\u53d6\u503c\u5f02\u5e38";
+            i.properties._latest_wx_ad_click_id = "取值异常";
+            i.properties._latest_wx_ad_hash_key = "取值异常";
+            i.properties._latest_wx_ad_callbacks = "取值异常";
           }
         }
         if (n.isString(i.properties._latest_wx_ad_click_id)) {
@@ -4178,9 +4178,9 @@ module.exports = function () {
         },
         success: function (e) {
           if (!0 === n.isEmptyObject(e)) {
-            alert("debug\u6570\u636e\u53d1\u9001\u6210\u529f" + o);
+            alert("debug数据发送成功" + o);
           } else {
-            alert("debug\u5931\u8d25 \u9519\u8bef\u539f\u56e0" + JSON.stringify(e));
+            alert("debug失败 错误原因" + JSON.stringify(e));
           }
         }
       });
@@ -4430,7 +4430,7 @@ module.exports = function () {
         c.setProps(i, !0);
         var a = {};
         if ("" === e) {
-          e = "url\u89e3\u6790\u5931\u8d25";
+          e = "url解析失败";
         }
         n.each(t.para.preset_properties, function (r, i) {
           if (-1 === i.indexOf("latest_")) {
@@ -4441,13 +4441,13 @@ module.exports = function () {
             if ("wx_ad_click_id" === i && "not_collect" === r) {
               return !1;
             }
-            if ("utm" !== i && "url\u89e3\u6790\u5931\u8d25" === e) {
+            if ("utm" !== i && "url解析失败" === e) {
               if ("wx_ad_click_id" === i) {
-                a._latest_wx_ad_click_id = "url\u7684domain\u89e3\u6790\u5931\u8d25";
-                a._latest_wx_ad_hash_key = "url\u7684domain\u89e3\u6790\u5931\u8d25";
-                a._latest_wx_ad_callbacks = "url\u7684domain\u89e3\u6790\u5931\u8d25";
+                a._latest_wx_ad_click_id = "url的domain解析失败";
+                a._latest_wx_ad_hash_key = "url的domain解析失败";
+                a._latest_wx_ad_callbacks = "url的domain解析失败";
               } else {
-                a["$latest_" + i] = "url\u7684domain\u89e3\u6790\u5931\u8d25";
+                a["$latest_" + i] = "url的domain解析失败";
               }
             } else if (n.isReferralTraffic(document.referrer)) {
               switch (i) {
@@ -4524,7 +4524,7 @@ module.exports = function () {
           }
         }
         if (!1 === t.para.app_js_bridge.is_send) {
-          t.log("\u8bbe\u7f6e\u4e86 is_send:false,\u5982\u679c\u6253\u901a\u5931\u8d25\uff0c\u6570\u636e\u5c06\u88ab\u4e22\u5f03\uff01");
+          t.log("设置了 is_send:false,如果打通失败，数据将被丢弃！");
         }
       },
       initState: function () {
@@ -4850,14 +4850,14 @@ module.exports = function () {
         window.webkit.messageHandlers.sensorsdataNativeTracker.postMessage(JSON.stringify(r));
       } else {
         if (!n.isObject(window.SensorsData_APP_New_H5_Bridge) || !window.SensorsData_APP_New_H5_Bridge.sensorsdata_js_call_app) {
-          t.log("\u6570\u636e\u53d1\u5f80App\u5931\u8d25\uff0cApp\u6ca1\u6709\u66b4\u9732bridge");
+          t.log("数据发往App失败，App没有暴露bridge");
           return !1;
         }
         window.SensorsData_APP_New_H5_Bridge.sensorsdata_js_call_app(JSON.stringify(r));
       }
     };
     t.JSBridge.prototype.hasAppBridge = function () {
-      return window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.sensorsdataNativeTracker && window.webkit.messageHandlers.sensorsdataNativeTracker.postMessage ? "ios" : n.isObject(window.SensorsData_APP_New_H5_Bridge) && window.SensorsData_APP_New_H5_Bridge.sensorsdata_js_call_app ? "android" : (t.log("App\u7aefbridge\u672a\u66b4\u9732"), !1);
+      return window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.sensorsdataNativeTracker && window.webkit.messageHandlers.sensorsdataNativeTracker.postMessage ? "ios" : n.isObject(window.SensorsData_APP_New_H5_Bridge) && window.SensorsData_APP_New_H5_Bridge.sensorsdata_js_call_app ? "android" : (t.log("App端bridge未暴露"), !1);
     };
     t.JSBridge.prototype.requestToApp = function (e) {
       var r = this;
@@ -4885,7 +4885,7 @@ module.exports = function () {
         window.webkit.messageHandlers.sensorsdataNativeTracker.postMessage(JSON.stringify(a));
       } else {
         if (!n.isObject(window.SensorsData_APP_New_H5_Bridge) || !window.SensorsData_APP_New_H5_Bridge.sensorsdata_js_call_app) {
-          t.log("\u6570\u636e\u53d1\u5f80App\u5931\u8d25\uff0cApp\u6ca1\u6709\u66b4\u9732bridge");
+          t.log("数据发往App失败，App没有暴露bridge");
           return !1;
         }
         window.SensorsData_APP_New_H5_Bridge.sensorsdata_js_call_app(JSON.stringify(a));
@@ -5033,10 +5033,10 @@ module.exports = function () {
       setNotice: function (e) {
         t.is_heatmap_render_mode = !0;
         if (!t.para.heatmap) {
-          t.errorMsg = "\u60a8SDK\u6ca1\u6709\u914d\u7f6e\u5f00\u542f\u70b9\u51fb\u56fe\uff0c\u53ef\u80fd\u6ca1\u6709\u6570\u636e\uff01";
+          t.errorMsg = "您SDK没有配置开启点击图，可能没有数据！";
         }
         if (e && e[0] && e[1] && "http:" === e[1].slice(0, 5) && "https:" === location.protocol) {
-          t.errorMsg = "\u60a8\u7684\u5f53\u524d\u9875\u9762\u662fhttps\u7684\u5730\u5740\uff0c\u795e\u7b56\u5206\u6790\u73af\u5883\u4e5f\u5fc5\u987b\u662fhttps\uff01";
+          t.errorMsg = "您的当前页面是https的地址，神策分析环境也必须是https！";
         }
         if (!t.para.heatmap_url) {
           t.para.heatmap_url = location.protocol + "//static.sensorsdata.cn/sdk/" + t.lib_version + "/heatmap.min.js";
@@ -5367,7 +5367,7 @@ module.exports = function () {
           return !1;
         }
         if (!(n.isString(e.name) && e.name.length > 0)) {
-          t.log("----vtrackcustom----\u5c5e\u6027\u540d\u4e0d\u5408\u6cd5,\u5c5e\u6027\u629b\u5f03", e.name);
+          t.log("----vtrackcustom----属性名不合法,属性抛弃", e.name);
           return !1;
         }
         var i;
@@ -5379,19 +5379,19 @@ module.exports = function () {
             s = n.getDomBySelector(e.element_selector);
           } else {
             if (!n.isString(e.list_selector)) {
-              t.log("----vtrackcustom----\u5c5e\u6027\u914d\u7f6e\u5f02\u5e38\uff0c\u5c5e\u6027\u629b\u5f03", e.name);
+              t.log("----vtrackcustom----属性配置异常，属性抛弃", e.name);
               return !1;
             }
             var c = n.getDomBySelector(r.properties.$element_selector);
             if (!c) {
-              t.log("----vtrackcustom----\u70b9\u51fb\u5143\u7d20\u83b7\u53d6\u5f02\u5e38\uff0c\u5c5e\u6027\u629b\u5f03", e.name);
+              t.log("----vtrackcustom----点击元素获取异常，属性抛弃", e.name);
               return !1;
             }
             var u = t.heatmap.getClosestLi(c);
             s = this.getPropElInLi(u, e.list_selector);
           }
           if (!s || !n.isElement(s)) {
-            t.log("----vtrackcustom----\u5c5e\u6027\u5143\u7d20\u83b7\u53d6\u5931\u8d25\uff0c\u5c5e\u6027\u629b\u5f03", e.name);
+            t.log("----vtrackcustom----属性元素获取失败，属性抛弃", e.name);
             return !1;
           }
           if ("input" === s.tagName.toLowerCase()) {
@@ -5408,15 +5408,15 @@ module.exports = function () {
             try {
               o = new RegExp(e.regular).exec(i);
             } catch (f) {
-              t.log("----vtrackcustom----\u6b63\u5219\u5904\u7406\u5931\u8d25\uff0c\u5c5e\u6027\u629b\u5f03", e.name);
+              t.log("----vtrackcustom----正则处理失败，属性抛弃", e.name);
               return !1;
             }
             if (null === o) {
-              t.log("----vtrackcustom----\u5c5e\u6027\u89c4\u5219\u5904\u7406\uff0c\u672a\u5339\u914d\u5230\u7ed3\u679c,\u5c5e\u6027\u629b\u5f03", e.name);
+              t.log("----vtrackcustom----属性规则处理，未匹配到结果,属性抛弃", e.name);
               return !1;
             }
             if (!n.isArray(o) || !n.isString(o[0])) {
-              t.log("----vtrackcustom----\u6b63\u5219\u5904\u7406\u5f02\u5e38\uff0c\u5c5e\u6027\u629b\u5f03", e.name, o);
+              t.log("----vtrackcustom----正则处理异常，属性抛弃", e.name, o);
               return !1;
             }
             i = o[0];
@@ -5425,18 +5425,18 @@ module.exports = function () {
             a[e.name] = i;
           } else if ("NUMBER" === e.type) {
             if (i.length < 1) {
-              t.log("----vtrackcustom----\u672a\u83b7\u53d6\u5230\u6570\u5b57\u5185\u5bb9\uff0c\u5c5e\u6027\u629b\u5f03", e.name, i);
+              t.log("----vtrackcustom----未获取到数字内容，属性抛弃", e.name, i);
               return !1;
             }
             if (isNaN(Number(i))) {
-              t.log("----vtrackcustom----\u6570\u5b57\u7c7b\u578b\u5c5e\u6027\u8f6c\u6362\u5931\u8d25\uff0c\u5c5e\u6027\u629b\u5f03", e.name, i);
+              t.log("----vtrackcustom----数字类型属性转换失败，属性抛弃", e.name, i);
               return !1;
             }
             a[e.name] = Number(i);
           }
           return a;
         }
-        t.log("----vtrackcustom----\u5c5e\u6027\u4e0d\u652f\u6301\u6b64\u83b7\u53d6\u65b9\u5f0f", e.name, e.method);
+        t.log("----vtrackcustom----属性不支持此获取方式", e.name, e.method);
         return !1;
       },
       getPropElInLi: function (e, r) {
@@ -5448,7 +5448,7 @@ module.exports = function () {
         }
         var i;
         var o = t.heatmap.getDomSelector(e);
-        return o ? (i = o + r, n.getDomBySelector(i) || null) : (t.log("----vtrackcustom---\u83b7\u53d6\u540c\u7ea7\u5c5e\u6027\u5143\u7d20\u5931\u8d25\uff0cselector\u4fe1\u606f\u5f02\u5e38", o, r), null);
+        return o ? (i = o + r, n.getDomBySelector(i) || null) : (t.log("----vtrackcustom---获取同级属性元素失败，selector信息异常", o, r), null);
       },
       filterConfig: function (e, r, i) {
         var o = [];
@@ -5499,7 +5499,7 @@ module.exports = function () {
           api_url: ""
         };
         if (!n.isString(t.para.server_url)) {
-          t.log("----vtrackcollect---server_url\u5fc5\u987b\u4e3a\u5b57\u7b26\u4e32");
+          t.log("----vtrackcollect---server_url必须为字符串");
           return !1;
         }
         try {
@@ -5507,7 +5507,7 @@ module.exports = function () {
           o.server_url.project = e.searchParams.get("project") || "default";
           o.server_url.host = e.host;
         } catch (s) {
-          t.log("----vtrackcollect---server_url\u89e3\u6790\u5f02\u5e38", s);
+          t.log("----vtrackcollect---server_url解析异常", s);
           return !1;
         }
         try {
@@ -5515,14 +5515,14 @@ module.exports = function () {
           o.page_url.host = r.hostname;
           o.page_url.pathname = r.pathname;
         } catch (s) {
-          t.log("----vtrackcollect---\u9875\u9762\u5730\u5740\u89e3\u6790\u5f02\u5e38", s);
+          t.log("----vtrackcollect---页面地址解析异常", s);
           return !1;
         }
         try {
           (i = new n.urlParse(t.para.server_url))._values.Path = "/config/visualized/Web.conf";
           o.api_url = i.getUrl();
         } catch (s) {
-          t.log("----vtrackcollect---API\u5730\u5740\u89e3\u6790\u5f02\u5e38", s);
+          t.log("----vtrackcollect---API地址解析异常", s);
           return !1;
         }
         this.url_info = o;
@@ -5536,7 +5536,7 @@ module.exports = function () {
           this.storageEnable = !1;
         }
         if (!this.initUrl()) {
-          t.log("----vtrackcustom----\u521d\u59cb\u5316\u5931\u8d25\uff0curl\u4fe1\u606f\u89e3\u6790\u5931\u8d25");
+          t.log("----vtrackcustom----初始化失败，url信息解析失败");
           return !1;
         }
         if (this.storageEnable) {
@@ -5584,7 +5584,7 @@ module.exports = function () {
               if (304 === r) {
                 o = e.config;
               } else {
-                t.log("----vtrackcustom----\u6570\u636e\u5f02\u5e38", r);
+                t.log("----vtrackcustom----数据异常", r);
                 e.updateConfig(o);
               }
             }
@@ -5593,7 +5593,7 @@ module.exports = function () {
           e.setNextFetch();
         }, function (n) {
           e.update_time = new Date().getTime();
-          t.log("----vtrackcustom----\u914d\u7f6e\u62c9\u53d6\u5931\u8d25", n);
+          t.log("----vtrackcustom----配置拉取失败", n);
           e.setNextFetch();
         });
       },
@@ -5760,7 +5760,7 @@ module.exports = function () {
           return r.apply(t, arguments);
         }
         try {
-          console.error("\u8bf7\u5148\u521d\u59cb\u5316\u795e\u7b56JS SDK");
+          console.error("请先初始化神策JS SDK");
         } catch (i) {
           t.log(i);
         }
@@ -5850,10 +5850,10 @@ module.exports = function () {
         addLatestChannelUrl: function () {
           var e = this.getUrlDomain();
           var i = this.cookie.getChannel();
-          if ("url\u89e3\u6790\u5931\u8d25" === e) {
+          if ("url解析失败" === e) {
             this.registerAndSave({
               _sa_channel_landing_url: "",
-              _sa_channel_landing_url_error: "url\u7684domain\u89e3\u6790\u5931\u8d25"
+              _sa_channel_landing_url_error: "url的domain解析失败"
             });
           } else if (t.isReferralTraffic(document.referrer)) {
             var o = t.getQueryParam(location.href, "sat_cf");
@@ -5872,7 +5872,7 @@ module.exports = function () {
           } else {
             n.registerPage({
               _sa_channel_landing_url: "",
-              _sa_channel_landing_url_error: "\u53d6\u503c\u5f02\u5e38"
+              _sa_channel_landing_url_error: "取值异常"
             });
           }
         },
@@ -5904,7 +5904,7 @@ module.exports = function () {
         getUrlDomain: function () {
           var e = t.info.pageProp.url_domain;
           if ("" === e) {
-            e = "url\u89e3\u6790\u5931\u8d25";
+            e = "url解析失败";
           }
           return e;
         },
@@ -6018,7 +6018,7 @@ module.exports = function () {
         apiURL: "{origin}/sdk/deeplink/param?key={key}&system_type=JS&project={project}",
         init: function () {
           if (this.sd) {
-            this.log("deeplink\u5df2\u7ecf\u521d\u59cb\u5316");
+            this.log("deeplink已经初始化");
             return !1;
           }
           if (o(sensorsDataAnalytic201505)) {
@@ -6026,7 +6026,7 @@ module.exports = function () {
           }
           this.log("init()");
           if (null === this.sd) {
-            this.log("\u795e\u7b56JS SDK\u672a\u6210\u529f\u5f15\u5165");
+            this.log("神策JS SDK未成功引入");
             return !1;
           }
           var e = {};
@@ -6040,14 +6040,14 @@ module.exports = function () {
             }
           }
           if (!r.hasOwnProperty(i)) {
-            this.log("\u4e0d\u652f\u6301\u5f53\u524d\u7cfb\u7edf\uff0c\u76ee\u524d\u53ea\u652f\u6301Android\u548ciOS");
+            this.log("不支持当前系统，目前只支持Android和iOS");
             return !1;
           }
           if (o(e) && this.sd._.isNumber(e.timeout) && e.timeout >= 2500) {
             this.timeout = e.timeout;
           }
           if (!this.sd.para.server_url) {
-            this.log("\u795e\u7b56JS SDK\u914d\u7f6e\u9879server_url\u672a\u6b63\u786e\u914d\u7f6e");
+            this.log("神策JS SDK配置项server_url未正确配置");
             return !1;
           }
           var t;
@@ -6059,12 +6059,12 @@ module.exports = function () {
           this.apiURL = this.apiURL.replace("{origin}", s.origin).replace("{project}", s.project);
           var c = this.sd._.URL(window.location.href).searchParams.get("deeplink");
           if (!c) {
-            this.log("\u5f53\u524d\u9875\u9762\u7f3a\u5c11deeplink\u53c2\u6570");
+            this.log("当前页面缺少deeplink参数");
             return !1;
           }
           var u = (c = window.decodeURIComponent(c)).match(/\/sd\/(\w+)\/(\w+)$/);
           if (!u) {
-            this.log("\u5f53\u524d\u9875\u9762\u7684deeplink\u53c2\u6570\u65e0\u6548");
+            this.log("当前页面的deeplink参数无效");
             return !1;
           }
           this.key = u[2];
@@ -6076,11 +6076,11 @@ module.exports = function () {
             credentials: !1,
             success: function (e) {
               if (e.errorMsg) {
-                a.log("API\u62a5\u9519\uff1a" + e.errorMsg);
+                a.log("API报错：" + e.errorMsg);
                 return !1;
               }
               a.data = e;
-              a.log("API\u67e5\u8be2\u6210\u529f\uff0c\u6570\u636e\uff1a" + JSON.stringify(e, null, "  "));
+              a.log("API查询成功，数据：" + JSON.stringify(e, null, "  "));
               if (this.data.app_key) {
                 if (this.data.android_info && this.data.android_info.url_schemes) {
                   this.data.android_info.url_schemes += "://sensorsdata/sd/" + this.data.app_key + "/" + this.key;
@@ -6091,7 +6091,7 @@ module.exports = function () {
               }
             }.bind(this),
             error: function (e) {
-              a.log("API\u67e5\u8be2\u51fa\u9519");
+              a.log("API查询出错");
             }
           });
           this.addListeners();
@@ -6099,33 +6099,33 @@ module.exports = function () {
         openDeepLink: function () {
           this.log("openDeeplink()");
           if (!this.data) {
-            this.log("\u6ca1\u6709Deep link\u6570\u636e!");
+            this.log("没有Deep link数据!");
             return !1;
           }
           if ("iOS" === i) {
-            this.log("\u5f53\u524d\u7cfb\u7edf\u662fiOS");
+            this.log("当前系统是iOS");
             var t = this.sd && this.sd._ && this.sd._.getIOSVersion() >= 9 && this.data.ios_info.ios_wake_url ? this.data.ios_info.ios_wake_url : this.data.ios_info.url_schemes;
-            this.log("\u5524\u8d77APP\u7684\u5730\u5740\uff1a" + t);
+            this.log("唤起APP的地址：" + t);
             r = this;
             o = t;
             a = this.data.ios_info.download_url;
-            r.log("\u5c1d\u8bd5\u5524\u8d77 iOS app:" + o);
+            r.log("尝试唤起 iOS app:" + o);
             window.location.href = o;
             r.timer = setTimeout(function () {
               if (n()) {
                 r.log("The page is hidden, stop navigating to download page");
                 return !1;
               }
-              r.log("App\u53ef\u80fd\u672a\u5b89\u88c5\uff0c\u8df3\u8f6c\u5230\u4e0b\u8f7d\u5730\u5740");
+              r.log("App可能未安装，跳转到下载地址");
               window.location.href = a;
             }, r.timeout);
             r.log("new timer:" + r.timer);
           } else {
-            this.log("\u5f53\u524d\u7cfb\u7edf\u662f android");
+            this.log("当前系统是 android");
             (function (t, r, i) {
-              t.log("\u5c1d\u8bd5\u5524\u8d77 android app");
+              t.log("尝试唤起 android app");
               var o = r;
-              t.log("\u5524\u8d77APP\u7684\u5730\u5740\uff1a" + o);
+              t.log("唤起APP的地址：" + o);
               window.location = o;
               t.timer = setTimeout(function () {
                 var r = n();
@@ -6134,7 +6134,7 @@ module.exports = function () {
                   t.log("The page is hidden, stop navigating to download page");
                   return !1;
                 }
-                t.log("App\u53ef\u80fd\u672a\u5b89\u88c5\uff0c\u8df3\u8f6c\u5230\u4e0b\u8f7d\u5730\u5740");
+                t.log("App可能未安装，跳转到下载地址");
                 window.location = i;
               }, t.timeout);
             })(this, this.data.android_info.url_schemes, this.data.android_info.download_url);
@@ -6319,13 +6319,13 @@ module.exports = function () {
                 if (/[A-Za-z0-9]+\./.test(t[i].part_url) && "[object Boolean]" == Object.prototype.toString.call(t[i].after_hash)) {
                   r.push(t[i]);
                 } else {
-                  e.log("linker \u914d\u7f6e\u7684\u7b2c " + (i + 1) + " \u9879\u683c\u5f0f\u4e0d\u6b63\u786e\uff0c\u8bf7\u68c0\u67e5\u53c2\u6570\u683c\u5f0f\uff01");
+                  e.log("linker 配置的第 " + (i + 1) + " 项格式不正确，请检查参数格式！");
                 }
               }
               return r;
             }(this.option);
           } else {
-            e.log("\u8bf7\u914d\u7f6e\u6253\u901a\u57df\u540d\u53c2\u6570\uff01");
+            e.log("请配置打通域名参数！");
           }
         }
       };

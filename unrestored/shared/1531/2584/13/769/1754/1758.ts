@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 var i = r(require("../746"));
-var o = r(require("../../../0/index"));
+var o = r(require("react"));
 var a = r(require("../../../8"));
 var s = r(require("../950"));
 function c(e, t) {

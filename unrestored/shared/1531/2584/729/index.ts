@@ -1,6 +1,6 @@
 "use strict";
 
-var r = require("../0/index");
+var r = require("react");
 var o = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -14,10 +14,10 @@ var o = function __importDefault(module) {
   return defaultExport;
 }(r);
 var i = require("../16/index");
-require("../710");
+require("../710/index");
 var a = require("../155/index");
 var s = require("../6");
-var c = require("./66");
+var c = require("../38/66");
 var l = require("./62");
 var u = require("../676/70");
 var d = function (e) {
@@ -357,29 +357,29 @@ var F = require("../13/index");
 var G = require("../94/index");
 var U = {
   rotation: [{
-    title: "X \u65cb\u8f6c",
+    title: "X 旋转",
     prop: "x",
     icon: "icon-phone-rotation-x",
     min: -180,
     max: 180,
-    unit: "\xb0"
+    unit: "°"
   }, {
-    title: "Y \u65cb\u8f6c",
+    title: "Y 旋转",
     prop: "y",
     icon: "icon-phone-rotation-y",
     min: -180,
     max: 180,
-    unit: "\xb0"
+    unit: "°"
   }, {
-    title: "Z \u65cb\u8f6c",
+    title: "Z 旋转",
     prop: "z",
     icon: "icon-phone-rotation-z",
     min: -180,
     max: 180,
-    unit: "\xb0"
+    unit: "°"
   }],
   position: [{
-    title: "X \u79fb\u52a8",
+    title: "X 移动",
     prop: "x",
     icon: "icon-phone-move-x",
     min: -6,
@@ -388,7 +388,7 @@ var U = {
       className: "emulator-meterUnit"
     }, "m")
   }, {
-    title: "Y \u79fb\u52a8",
+    title: "Y 移动",
     prop: "y",
     icon: "icon-phone-move-y",
     min: -6,
@@ -397,7 +397,7 @@ var U = {
       className: "emulator-meterUnit"
     }, "m")
   }, {
-    title: "Z \u79fb\u52a8",
+    title: "Z 移动",
     prop: "z",
     icon: "icon-phone-move-z",
     min: -6,
@@ -507,7 +507,7 @@ var H = function (e) {
     type: "icon-phone-shake-selected"
   }), o.a.createElement("p", {
     className: "emulator-shakeBtnName"
-  }, "\u6447\u4e00\u6447"))));
+  }, "摇一摇"))));
 };
 var V = function () {
   var e = Object(i.e)(function (e) {

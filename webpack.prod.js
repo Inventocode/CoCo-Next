@@ -1,5 +1,6 @@
 const webpack = require("webpack")
 const { merge } = require("webpack-merge")
+const CopyPlugin = require("copy-webpack-plugin")
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin")
 
@@ -24,7 +25,7 @@ const config = merge(common, {
         ],
         splitChunks: {
             chunks: "all",
-            minSize: 20000,
+            minSize: 200000,
             maxSize: 1000000,
             minChunks: 1,
             maxAsyncRequests: 30,
@@ -32,6 +33,11 @@ const config = merge(common, {
         }
     },
     plugins: [
+        new CopyPlugin({
+            patterns: [{
+                from: "static"
+            }]
+        }),
         new MiniCssExtractPlugin({
             filename: "static/styles/[name].css"
         })

@@ -1,12 +1,12 @@
 (function (e, r) {
-  var i = require("../../../../3272/3200/624/index");
-  var o = require("../../206/776/1050");
-  var a = require("../../../../3272/3200/494");
-  var s = require("../../../../3272/3198/2668/230");
-  var c = require("../../../../3272/2883/2731/806/index");
-  var u = require("../../../../3272/3198/2668/220");
-  var l = require("../../../../3272/3198/2668/2689/356/index");
-  var f = require("../../../../3272/3198/2668/2689/357/index");
+  var i = require("./624/index");
+  var o = require("./1050");
+  var a = require("./494");
+  var s = require("../../36/2668/230");
+  var c = require("./806/index");
+  var u = require("../../36/2668/220");
+  var l = require("./356");
+  var f = require("./357/index");
   var d = require("./1970/index");
   !function (t, n) {
     "use strict";
@@ -218,8 +218,8 @@
     var I = {
       "\n": "n",
       "\r": "r",
-      "\u2028": "u2028",
-      "\u2029": "u2029"
+      " ": "u2028",
+      " ": "u2029"
     };
     function F(e) {
       return e.replace(/[\n\r\u2028\u2029]/g, function (t, n) {
@@ -249,8 +249,8 @@
     var W = /^\d*\.?\d*(?:e[+-]?\d*(?:\d\.?|\.?\d)\d*)?$/i;
     var K = /^(0[xob])?[0-9a-f]+n$/i;
     var X = S(["in", "instanceof", "typeof", "new", "void", "delete", "++", "--", "+", "-", "!", "~", "&", "|", "^", "*", "**", "/", "%", ">>", "<<", ">>>", "<", ">", "<=", ">=", "==", "===", "!=", "!==", "?", "=", "+=", "-=", "/=", "*=", "**=", "%=", ">>=", "<<=", ">>>=", "|=", "^=", "&=", "&&", "??", "||"]);
-    var Y = S(h(" \xa0\n\r\t\f\v\u200b\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200a\u2028\u2029\u202f\u205f\u3000\ufeff"));
-    var q = S(h("\n\r\u2028\u2029"));
+    var Y = S(h("  \n\r\t\f\u000b​               　﻿"));
+    var q = S(h("\n\r  "));
     var $ = S(h(";]),:"));
     var J = S(h("[{(,;:"));
     var Z = S(h("[]{}(),;:"));
@@ -535,7 +535,7 @@
           case 98:
             return "\b";
           case 118:
-            return "\v";
+            return "\u000b";
           case 102:
             return "\f";
           case 120:
@@ -567,7 +567,7 @@
           if (n >= "0" && n <= "7" && (e += a(!0))[0] <= "3" && (n = o()) >= "0" && n <= "7") {
             e += a(!0);
           }
-          return "0" === e ? "\0" : (e.length > 0 && T.has_directive("use strict") && t && _("Legacy octal escape sequences are not allowed in strict mode"), String.fromCharCode(parseInt(e, 8)));
+          return "0" === e ? "\u0000" : (e.length > 0 && T.has_directive("use strict") && t && _("Legacy octal escape sequences are not allowed in strict mode"), String.fromCharCode(parseInt(e, 8)));
         }(s, t)) : s;
       }
       function m(e, t) {
@@ -783,12 +783,12 @@
           p();
           l();
           if (n) {
-            if (c("\x3c!--")) {
+            if (c("<!--")) {
               s(4);
               w("comment3");
               continue;
             }
-            if (c("--\x3e") && i.newline_before) {
+            if (c("-->") && i.newline_before) {
               s(3);
               w("comment4");
               continue;
@@ -946,7 +946,7 @@
         if (i(e, t)) {
           return a();
         }
-        l(r.token, "Unexpected token " + r.token.type + " \xab" + r.token.value + "\xbb, expected " + e + " \xab" + t + "\xbb");
+        l(r.token, "Unexpected token " + r.token.type + " «" + r.token.value + "», expected " + e + " «" + t + "»");
       }
       function h(e) {
         return d("punc", e);
@@ -2954,7 +2954,7 @@
       $documentation: "Represents a debugger statement"
     }, xe);
     var Oe = be("Directive", "value quote", {
-      $documentation: 'Represents a directive, like "use strict";',
+      $documentation: "Represents a directive, like \"use strict\";",
       $propdoc: {
         value: "[string] The value of this directive as a plain string (it's not an AST_String!)",
         quote: "[string] the original quote character"
@@ -3221,7 +3221,7 @@
           t = e.length;
         }
         var n = this.body;
-        return ye(["(function(", e.slice(0, t), '){"$ORIG"})(', e.slice(t + 1), ")"].join("")).transform(new Ln(function (e) {
+        return ye(["(function(", e.slice(0, t), "){\"$ORIG\"})(", e.slice(t + 1), ")"].join("")).transform(new Ln(function (e) {
           if (e instanceof Oe && "$ORIG" == e.value) {
             return w.splice(n);
           }
@@ -3367,10 +3367,10 @@
       }
     });
     var tt = be("Jump", null, {
-      $documentation: "Base class for \u201cjumps\u201d (for now that's `return`, `throw`, `break` and `continue`)"
+      $documentation: "Base class for “jumps” (for now that's `return`, `throw`, `break` and `continue`)"
     }, xe);
     var nt = be("Exit", "value", {
-      $documentation: "Base class for \u201cexits\u201d (`return` and `throw`)",
+      $documentation: "Base class for “exits” (`return` and `throw`)",
       $propdoc: {
         value: "[AST_Node?] the value returned or thrown by this statement; could be null for AST_Return"
       },
@@ -3470,7 +3470,7 @@
     var ft = be("Switch", "expression", {
       $documentation: "A `switch` statement",
       $propdoc: {
-        expression: "[AST_Node] the `switch` \u201cdiscriminant\u201d"
+        expression: "[AST_Node] the `switch` “discriminant”"
       },
       _walk: function (e) {
         return e._visit(this, function () {
@@ -3753,9 +3753,9 @@
       }
     });
     var Tt = be("PropAccess", "expression property", {
-      $documentation: 'Base class for property access expressions, i.e. `a.foo` or `a["foo"]`',
+      $documentation: "Base class for property access expressions, i.e. `a.foo` or `a[\"foo\"]`",
       $propdoc: {
-        expression: "[AST_Node] the \u201ccontainer\u201d expression",
+        expression: "[AST_Node] the “container” expression",
         property: "[AST_Node|string] the property to access.  For AST_Dot this is always a plain string, while for AST_Sub it's an arbitrary AST_Node"
       }
     });
@@ -3774,7 +3774,7 @@
       }
     }, Tt);
     var Dt = be("Sub", null, {
-      $documentation: 'Index-style property access, i.e. `a["foo"]`',
+      $documentation: "Index-style property access, i.e. `a[\"foo\"]`",
       _walk: function (e) {
         return e._visit(this, function () {
           this.expression._walk(e);
@@ -3846,7 +3846,7 @@
       }
     });
     var Mt = be("Assign", null, {
-      $documentation: "An assignment expression \u2014 `a = b + 5`"
+      $documentation: "An assignment expression — `a = b + 5`"
     }, Pt);
     var jt = be("DefaultAssign", null, {
       $documentation: "A default assignment expression like in `(a = 3) => a`"
@@ -4783,13 +4783,13 @@
             return "'" + t.replace(/\x27/g, "\\'") + "'";
           }
           function a() {
-            return '"' + t.replace(/\x22/g, '\\"') + '"';
+            return "\"" + t.replace(/\x22/g, "\\\"") + "\"";
           }
           t = t.replace(/[\\\b\f\n\r\v\t\x22\x27\u2028\u2029\0\ufeff]/g, function (n, o) {
             switch (n) {
-              case '"':
+              case "\"":
                 ++r;
-                return '"';
+                return "\"";
               case "'":
                 ++i;
                 return "'";
@@ -4805,15 +4805,15 @@
                 return "\\b";
               case "\f":
                 return "\\f";
-              case "\v":
+              case "\u000b":
                 return e.ie8 ? "\\x0B" : "\\v";
-              case "\u2028":
+              case " ":
                 return "\\u2028";
-              case "\u2029":
+              case " ":
                 return "\\u2029";
-              case "\ufeff":
+              case "﻿":
                 return "\\ufeff";
-              case "\0":
+              case "\u0000":
                 return /[0-9]/.test(te(t, o + 1)) ? "\\x00" : "\\0";
             }
             return n;
@@ -4855,7 +4855,7 @@
             e.source_map.add(t.token.file, t.line, t.col, t.token.line, t.token.col, t.name || "name" != t.token.type ? t.name : t.token.value);
           } catch (e) {
             if (null != t.token.file) {
-              Ee.warn("Couldn't figure out mapping for {file}:{line},{col} \u2192 {cline},{ccol} [{name}]", {
+              Ee.warn("Couldn't figure out mapping for {file}:{line},{col} → {cline},{ccol} [{name}]", {
                 file: t.token.file,
                 line: t.token.line,
                 col: t.token.col,
@@ -6762,7 +6762,7 @@
             if (!(y = t instanceof en ? s.def_variable(t, null) : u.def_variable(t, "SymbolVar" == t.TYPE ? null : void 0)).orig.every(function (e) {
               return e === t || (t instanceof en ? e instanceof cn : !(e instanceof nn || e instanceof tn));
             })) {
-              fe('"'.concat(t.name, '" is redeclared'), t.start.file, t.start.line, t.start.col, t.start.pos);
+              fe("\"".concat(t.name, "\" is redeclared"), t.start.file, t.start.line, t.start.col, t.start.pos);
             }
             if (!(t instanceof rn)) {
               h(y, 2);
@@ -6787,7 +6787,7 @@
             t.thedef = b;
           }
           if (!(s instanceof ze || !(t instanceof Ct || t instanceof xt))) {
-            fe('"'.concat(t.TYPE, '" statement may only appear at the top level'), t.start.file, t.start.line, t.start.col, t.start.pos);
+            fe("\"".concat(t.TYPE, "\" statement may only appear at the top level"), t.start.file, t.start.line, t.start.col, t.start.pos);
           }
         }
       });
@@ -14614,7 +14614,7 @@
             name: n.key
           }), new Qt(n)) : "init" == e.kind ? ("Identifier" != t.type && "Literal" != t.type && (n.key = c(t)), new Vt(n)) : ("string" != typeof n.key && "number" != typeof n.key || (n.key = new an({
             name: n.key
-          })), n.value = new Ke(n.value), "get" == e.kind ? new zt(n) : "set" == e.kind ? new Gt(n) : "method" == e.kind ? (n.async = e.value.async, n.is_generator = e.value.generator, n.quote = e.computed ? '"' : null, new Qt(n)) : void 0);
+          })), n.value = new Ke(n.value), "get" == e.kind ? new zt(n) : "set" == e.kind ? new Gt(n) : "method" == e.kind ? (n.async = e.value.async, n.is_generator = e.value.generator, n.quote = e.computed ? "\"" : null, new Qt(n)) : void 0);
         },
         MethodDefinition: function (e) {
           var t = {
@@ -15559,4 +15559,4 @@
     t.string_template = C;
     t.to_ascii = xi;
   }(exports, require("./1973/index"));
-}).call(this, require("../../31/251"), require("../../616/570/index").Buffer);
+}).call(this, require("../../710/251"), require("../../616/570/index").Buffer);

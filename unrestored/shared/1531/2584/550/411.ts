@@ -405,11 +405,11 @@ module.exports = function () {
   };
   var q = function (e, t, n, r, i) {
     if (0 === n[r]) {
-      return "\xd7";
+      return "×";
     }
     var o = r - 1;
     if (Array.isArray(i) && !0 === i[o]) {
-      return "\xd7";
+      return "×";
     }
     var a = o - 1;
     var s = o + 1;
@@ -417,87 +417,87 @@ module.exports = function () {
     var u = a >= 0 ? t[a] : 0;
     var l = t[s];
     if (2 === c && 3 === l) {
-      return "\xd7";
+      return "×";
     }
     if (-1 !== V.indexOf(c)) {
       return "!";
     }
     if (-1 !== V.indexOf(l)) {
-      return "\xd7";
+      return "×";
     }
     if (-1 !== G.indexOf(l)) {
-      return "\xd7";
+      return "×";
     }
     if (8 === Y(o, t)) {
-      return "\xf7";
+      return "÷";
     }
     if (11 === U.get(e[o])) {
-      return "\xd7";
+      return "×";
     }
     if ((c === B || c === D) && 11 === U.get(e[s])) {
-      return "\xd7";
+      return "×";
     }
     if (7 === c || 7 === l) {
-      return "\xd7";
+      return "×";
     }
     if (9 === c) {
-      return "\xd7";
+      return "×";
     }
     if (-1 === [_, A, g].indexOf(c) && 9 === l) {
-      return "\xd7";
+      return "×";
     }
     if (-1 !== [v, m, y, x, S].indexOf(l)) {
-      return "\xd7";
+      return "×";
     }
     if (Y(o, t) === E) {
-      return "\xd7";
+      return "×";
     }
     if (X(23, E, o, t)) {
-      return "\xd7";
+      return "×";
     }
     if (X([v, m], w, o, t)) {
-      return "\xd7";
+      return "×";
     }
     if (X(12, 12, o, t)) {
-      return "\xd7";
+      return "×";
     }
     if (c === _) {
-      return "\xf7";
+      return "÷";
     }
     if (23 === c || 23 === l) {
-      return "\xd7";
+      return "×";
     }
     if (16 === l || 16 === c) {
-      return "\xf7";
+      return "÷";
     }
     if (-1 !== [A, g, w].indexOf(l) || 14 === c) {
-      return "\xd7";
+      return "×";
     }
     if (36 === u && -1 !== K.indexOf(c)) {
-      return "\xd7";
+      return "×";
     }
     if (c === S && 36 === l) {
-      return "\xd7";
+      return "×";
     }
     if (l === b) {
-      return "\xd7";
+      return "×";
     }
     if (-1 !== H.indexOf(l) && c === C || -1 !== H.indexOf(c) && l === C) {
-      return "\xd7";
+      return "×";
     }
     if (c === k && -1 !== [R, B, D].indexOf(l) || -1 !== [R, B, D].indexOf(c) && l === O) {
-      return "\xd7";
+      return "×";
     }
     if (-1 !== H.indexOf(c) && -1 !== z.indexOf(l) || -1 !== z.indexOf(c) && -1 !== H.indexOf(l)) {
-      return "\xd7";
+      return "×";
     }
     if (-1 !== [k, O].indexOf(c) && (l === C || -1 !== [E, g].indexOf(l) && t[s + 1] === C) || -1 !== [E, g].indexOf(c) && l === C || c === C && -1 !== [C, S, x].indexOf(l)) {
-      return "\xd7";
+      return "×";
     }
     if (-1 !== [C, S, x, v, m].indexOf(l)) {
       for (var f = o; f >= 0;) {
         if ((d = t[f]) === C) {
-          return "\xd7";
+          return "×";
         }
         if (-1 === [S, x].indexOf(d)) {
           break;
@@ -509,7 +509,7 @@ module.exports = function () {
       for (f = -1 !== [v, m].indexOf(c) ? a : o; f >= 0;) {
         var d;
         if ((d = t[f]) === C) {
-          return "\xd7";
+          return "×";
         }
         if (-1 === [S, x].indexOf(d)) {
           break;
@@ -518,29 +518,29 @@ module.exports = function () {
       }
     }
     if (P === c && -1 !== [P, N, I, F].indexOf(l) || -1 !== [N, I].indexOf(c) && -1 !== [N, M].indexOf(l) || -1 !== [M, F].indexOf(c) && l === M) {
-      return "\xd7";
+      return "×";
     }
     if (-1 !== W.indexOf(c) && -1 !== [b, O].indexOf(l) || -1 !== W.indexOf(l) && c === k) {
-      return "\xd7";
+      return "×";
     }
     if (-1 !== H.indexOf(c) && -1 !== H.indexOf(l)) {
-      return "\xd7";
+      return "×";
     }
     if (c === x && -1 !== H.indexOf(l)) {
-      return "\xd7";
+      return "×";
     }
     if (-1 !== H.concat(C).indexOf(c) && l === E && -1 === L.indexOf(e[s]) || -1 !== H.concat(C).indexOf(l) && c === m) {
-      return "\xd7";
+      return "×";
     }
     if (41 === c && 41 === l) {
       for (var h = n[o], p = 1; h > 0 && 41 === t[--h];) {
         p++;
       }
       if (p % 2 !== 0) {
-        return "\xd7";
+        return "×";
       }
     }
-    return c === B && l === D ? "\xd7" : "\xf7";
+    return c === B && l === D ? "×" : "÷";
   };
   var $ = function (e, t) {
     if (!t) {
@@ -1397,7 +1397,7 @@ module.exports = function () {
     if (18 === t.type) {
       var n = ct[t.name];
       if ("undefined" === typeof n) {
-        throw new Error('Attempting to parse an unsupported color function "' + t.name + '"');
+        throw new Error("Attempting to parse an unsupported color function \"" + t.name + "\"");
       }
       return n(e, t.values);
     }
@@ -1896,7 +1896,7 @@ module.exports = function () {
     if (18 === t.type) {
       var r = bt[t.name];
       if ("undefined" === typeof r) {
-        throw new Error('Attempting to parse an unsupported image function "' + t.name + '"');
+        throw new Error("Attempting to parse an unsupported image function \"" + t.name + "\"");
       }
       return r(e, t.values);
     }
@@ -2694,7 +2694,7 @@ module.exports = function () {
       if (18 === t.type) {
         var n = kn[t.name];
         if ("undefined" === typeof n) {
-          throw new Error('Attempting to parse an unsupported transform function "' + t.name + '"');
+          throw new Error("Attempting to parse an unsupported transform function \"" + t.name + "\"");
         }
         return n(t.values);
       }
@@ -3424,38 +3424,38 @@ module.exports = function () {
     var o = t[n - 1];
     var a = t[n];
     if (2 === o && 3 === a) {
-      return "\xd7";
+      return "×";
     }
     if (2 === o || 3 === o || 4 === o) {
-      return "\xf7";
+      return "÷";
     }
     if (2 === a || 3 === a || 4 === a) {
-      return "\xf7";
+      return "÷";
     }
     if (o === _r && -1 !== [_r, Ar, gr, vr].indexOf(a)) {
-      return "\xd7";
+      return "×";
     }
     if ((o === gr || o === Ar) && (a === Ar || 10 === a)) {
-      return "\xd7";
+      return "×";
     }
     if ((o === vr || 10 === o) && 10 === a) {
-      return "\xd7";
+      return "×";
     }
     if (13 === a || 5 === a) {
-      return "\xd7";
+      return "×";
     }
     if (7 === a) {
-      return "\xd7";
+      return "×";
     }
     if (1 === o) {
-      return "\xd7";
+      return "×";
     }
     if (13 === o && 14 === a) {
       for (; 5 === i;) {
         i = t[--r];
       }
       if (14 === i) {
-        return "\xd7";
+        return "×";
       }
     }
     if (15 === o && 15 === a) {
@@ -3464,10 +3464,10 @@ module.exports = function () {
         i = t[--r];
       }
       if (s % 2 === 0) {
-        return "\xd7";
+        return "×";
       }
     }
-    return "\xf7";
+    return "÷";
   };
   var Er = function (e) {
     var t = function (e) {
@@ -3499,10 +3499,10 @@ module.exports = function () {
             value: null
           };
         }
-        for (var e = "\xd7"; r < n && "\xd7" === (e = wr(0, o, ++r));) {
+        for (var e = "×"; r < n && "×" === (e = wr(0, o, ++r));) {
           ;
         }
-        if ("\xd7" !== e || r === n) {
+        if ("×" !== e || r === n) {
           var a = mr.apply(null, t.slice(i, r));
           i = r;
           return {
@@ -3751,10 +3751,10 @@ module.exports = function () {
                 value: null
               };
             }
-            for (var e = "\xd7"; l < s && "\xd7" === (e = q(n, o, i, ++l, a));) {
+            for (var e = "×"; l < s && "×" === (e = q(n, o, i, ++l, a));) {
               ;
             }
-            if ("\xd7" !== e || l === s) {
+            if ("×" !== e || l === s) {
               var t = new J(n, e, u, l);
               u = l;
               return {
@@ -3914,7 +3914,7 @@ module.exports = function () {
       var r;
       var i = e.call(this, t, n) || this;
       switch (i.type = n.type.toLowerCase(), i.checked = n.checked, i.value = function (e) {
-        var t = e.type === Kr ? new Array(e.value.length + 1).join("\u2022") : e.value;
+        var t = e.type === Kr ? new Array(e.value.length + 1).join("•") : e.value;
         return 0 === t.length ? e.placeholder || "" : t;
       }(n), "checkbox" !== i.type && "radio" !== i.type || (i.styles.backgroundColor = 3739148031, i.styles.borderTopColor = i.styles.borderRightColor = i.styles.borderBottomColor = i.styles.borderLeftColor = 2779096575, i.styles.borderTopWidth = i.styles.borderRightWidth = i.styles.borderBottomWidth = i.styles.borderLeftWidth = 1, i.styles.borderTopStyle = i.styles.borderRightStyle = i.styles.borderBottomStyle = i.styles.borderLeftStyle = 1, i.styles.backgroundClip = [0], i.styles.backgroundOrigin = [0], i.bounds = (r = i.bounds).width > r.height ? new a(r.left + (r.width - r.height) / 2, r.top, r.height, r.height) : r.width < r.height ? new a(r.left, r.top + (r.height - r.width) / 2, r.width, r.width) : r), i.type) {
         case "checkbox":
@@ -4126,15 +4126,15 @@ module.exports = function () {
   };
   var wi = {
     integers: [9e3, 8e3, 7e3, 6e3, 5e3, 4e3, 3e3, 2e3, 1e3, 900, 800, 700, 600, 500, 400, 300, 200, 100, 90, 80, 70, 60, 50, 40, 30, 20, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1],
-    values: ["\u0554", "\u0553", "\u0552", "\u0551", "\u0550", "\u054f", "\u054e", "\u054d", "\u054c", "\u054b", "\u054a", "\u0549", "\u0548", "\u0547", "\u0546", "\u0545", "\u0544", "\u0543", "\u0542", "\u0541", "\u0540", "\u053f", "\u053e", "\u053d", "\u053c", "\u053b", "\u053a", "\u0539", "\u0538", "\u0537", "\u0536", "\u0535", "\u0534", "\u0533", "\u0532", "\u0531"]
+    values: ["Ք", "Փ", "Ւ", "Ց", "Ր", "Տ", "Վ", "Ս", "Ռ", "Ջ", "Պ", "Չ", "Ո", "Շ", "Ն", "Յ", "Մ", "Ճ", "Ղ", "Ձ", "Հ", "Կ", "Ծ", "Խ", "Լ", "Ի", "Ժ", "Թ", "Ը", "Է", "Զ", "Ե", "Դ", "Գ", "Բ", "Ա"]
   };
   var Ei = {
     integers: [1e4, 9e3, 8e3, 7e3, 6e3, 5e3, 4e3, 3e3, 2e3, 1e3, 400, 300, 200, 100, 90, 80, 70, 60, 50, 40, 30, 20, 19, 18, 17, 16, 15, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1],
-    values: ["\u05d9\u05f3", "\u05d8\u05f3", "\u05d7\u05f3", "\u05d6\u05f3", "\u05d5\u05f3", "\u05d4\u05f3", "\u05d3\u05f3", "\u05d2\u05f3", "\u05d1\u05f3", "\u05d0\u05f3", "\u05ea", "\u05e9", "\u05e8", "\u05e7", "\u05e6", "\u05e4", "\u05e2", "\u05e1", "\u05e0", "\u05de", "\u05dc", "\u05db", "\u05d9\u05d8", "\u05d9\u05d7", "\u05d9\u05d6", "\u05d8\u05d6", "\u05d8\u05d5", "\u05d9", "\u05d8", "\u05d7", "\u05d6", "\u05d5", "\u05d4", "\u05d3", "\u05d2", "\u05d1", "\u05d0"]
+    values: ["י׳", "ט׳", "ח׳", "ז׳", "ו׳", "ה׳", "ד׳", "ג׳", "ב׳", "א׳", "ת", "ש", "ר", "ק", "צ", "פ", "ע", "ס", "נ", "מ", "ל", "כ", "יט", "יח", "יז", "טז", "טו", "י", "ט", "ח", "ז", "ו", "ה", "ד", "ג", "ב", "א"]
   };
   var xi = {
     integers: [1e4, 9e3, 8e3, 7e3, 6e3, 5e3, 4e3, 3e3, 2e3, 1e3, 900, 800, 700, 600, 500, 400, 300, 200, 100, 90, 80, 70, 60, 50, 40, 30, 20, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1],
-    values: ["\u10f5", "\u10f0", "\u10ef", "\u10f4", "\u10ee", "\u10ed", "\u10ec", "\u10eb", "\u10ea", "\u10e9", "\u10e8", "\u10e7", "\u10e6", "\u10e5", "\u10e4", "\u10f3", "\u10e2", "\u10e1", "\u10e0", "\u10df", "\u10de", "\u10dd", "\u10f2", "\u10dc", "\u10db", "\u10da", "\u10d9", "\u10d8", "\u10d7", "\u10f1", "\u10d6", "\u10d5", "\u10d4", "\u10d3", "\u10d2", "\u10d1", "\u10d0"]
+    values: ["ჵ", "ჰ", "ჯ", "ჴ", "ხ", "ჭ", "წ", "ძ", "ც", "ჩ", "შ", "ყ", "ღ", "ქ", "ფ", "ჳ", "ტ", "ს", "რ", "ჟ", "პ", "ო", "ჲ", "ნ", "მ", "ლ", "კ", "ი", "თ", "ჱ", "ზ", "ვ", "ე", "დ", "გ", "ბ", "ა"]
   };
   var Ci = function (e, t, n, r, i, o) {
     return e < t || e > n ? Bi(e, i, o.length > 0) : r.integers.reduce(function (t, n, i) {
@@ -4199,21 +4199,21 @@ module.exports = function () {
   };
   var Bi = function (e, t, n) {
     var r = n ? ". " : "";
-    var i = n ? "\u3001" : "";
+    var i = n ? "、" : "";
     var o = n ? ", " : "";
     var a = n ? " " : "";
     switch (t) {
       case 0:
-        return "\u2022" + a;
+        return "•" + a;
       case 1:
-        return "\u25e6" + a;
+        return "◦" + a;
       case 2:
-        return "\u25fe" + a;
+        return "◾" + a;
       case 5:
         var s = ki(e, 48, 57, !0, r);
         return s.length < 4 ? "0" + s : s;
       case 4:
-        return Si(e, "\u3007\u4e00\u4e8c\u4e09\u56db\u4e94\u516d\u4e03\u516b\u4e5d", i);
+        return Si(e, "〇一二三四五六七八九", i);
       case 6:
         return Ci(e, 1, 3999, bi, 3, r).toLowerCase();
       case 7:
@@ -4237,28 +4237,28 @@ module.exports = function () {
       case 30:
         return ki(e, 6112, 6121, !0, r);
       case 15:
-        return Si(e, "\u5b50\u4e11\u5bc5\u536f\u8fb0\u5df3\u5348\u672a\u7533\u9149\u620c\u4ea5", i);
+        return Si(e, "子丑寅卯辰巳午未申酉戌亥", i);
       case 16:
-        return Si(e, "\u7532\u4e59\u4e19\u4e01\u620a\u5df1\u5e9a\u8f9b\u58ec\u7678", i);
+        return Si(e, "甲乙丙丁戊己庚辛壬癸", i);
       case 17:
       case 48:
-        return Ti(e, "\u96f6\u4e00\u4e8c\u4e09\u56db\u4e94\u516d\u4e03\u516b\u4e5d", "\u5341\u767e\u5343\u842c", "\u8ca0", i, 14);
+        return Ti(e, "零一二三四五六七八九", "十百千萬", "負", i, 14);
       case 47:
-        return Ti(e, "\u96f6\u58f9\u8cb3\u53c3\u8086\u4f0d\u9678\u67d2\u634c\u7396", "\u62fe\u4f70\u4edf\u842c", "\u8ca0", i, 15);
+        return Ti(e, "零壹貳參肆伍陸柒捌玖", "拾佰仟萬", "負", i, 15);
       case 42:
-        return Ti(e, "\u96f6\u4e00\u4e8c\u4e09\u56db\u4e94\u516d\u4e03\u516b\u4e5d", "\u5341\u767e\u5343\u842c", "\u8d1f", i, 14);
+        return Ti(e, "零一二三四五六七八九", "十百千萬", "负", i, 14);
       case 41:
-        return Ti(e, "\u96f6\u58f9\u8d30\u53c1\u8086\u4f0d\u9646\u67d2\u634c\u7396", "\u62fe\u4f70\u4edf\u842c", "\u8d1f", i, 15);
+        return Ti(e, "零壹贰叁肆伍陆柒捌玖", "拾佰仟萬", "负", i, 15);
       case 26:
-        return Ti(e, "\u3007\u4e00\u4e8c\u4e09\u56db\u4e94\u516d\u4e03\u516b\u4e5d", "\u5341\u767e\u5343\u4e07", "\u30de\u30a4\u30ca\u30b9", i, 0);
+        return Ti(e, "〇一二三四五六七八九", "十百千万", "マイナス", i, 0);
       case 25:
-        return Ti(e, "\u96f6\u58f1\u5f10\u53c2\u56db\u4f0d\u516d\u4e03\u516b\u4e5d", "\u62fe\u767e\u5343\u4e07", "\u30de\u30a4\u30ca\u30b9", i, 7);
+        return Ti(e, "零壱弐参四伍六七八九", "拾百千万", "マイナス", i, 7);
       case 31:
-        return Ti(e, "\uc601\uc77c\uc774\uc0bc\uc0ac\uc624\uc721\uce60\ud314\uad6c", "\uc2ed\ubc31\ucc9c\ub9cc", "\ub9c8\uc774\ub108\uc2a4", o, 7);
+        return Ti(e, "영일이삼사오육칠팔구", "십백천만", "마이너스", o, 7);
       case 33:
-        return Ti(e, "\u96f6\u4e00\u4e8c\u4e09\u56db\u4e94\u516d\u4e03\u516b\u4e5d", "\u5341\u767e\u5343\u842c", "\ub9c8\uc774\ub108\uc2a4", o, 0);
+        return Ti(e, "零一二三四五六七八九", "十百千萬", "마이너스", o, 0);
       case 32:
-        return Ti(e, "\u96f6\u58f9\u8cb3\u53c3\u56db\u4e94\u516d\u4e03\u516b\u4e5d", "\u62fe\u767e\u5343", "\ub9c8\uc774\ub108\uc2a4", o, 7);
+        return Ti(e, "零壹貳參四五六七八九", "拾百千", "마이너스", o, 7);
       case 18:
         return ki(e, 2406, 2415, !0, r);
       case 20:
@@ -4270,15 +4270,15 @@ module.exports = function () {
       case 22:
         return Ci(e, 1, 10999, Ei, 3, r);
       case 23:
-        return Si(e, "\u3042\u3044\u3046\u3048\u304a\u304b\u304d\u304f\u3051\u3053\u3055\u3057\u3059\u305b\u305d\u305f\u3061\u3064\u3066\u3068\u306a\u306b\u306c\u306d\u306e\u306f\u3072\u3075\u3078\u307b\u307e\u307f\u3080\u3081\u3082\u3084\u3086\u3088\u3089\u308a\u308b\u308c\u308d\u308f\u3090\u3091\u3092\u3093");
+        return Si(e, "あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゆよらりるれろわゐゑをん");
       case 24:
-        return Si(e, "\u3044\u308d\u306f\u306b\u307b\u3078\u3068\u3061\u308a\u306c\u308b\u3092\u308f\u304b\u3088\u305f\u308c\u305d\u3064\u306d\u306a\u3089\u3080\u3046\u3090\u306e\u304a\u304f\u3084\u307e\u3051\u3075\u3053\u3048\u3066\u3042\u3055\u304d\u3086\u3081\u307f\u3057\u3091\u3072\u3082\u305b\u3059");
+        return Si(e, "いろはにほへとちりぬるをわかよたれそつねならむうゐのおくやまけふこえてあさきゆめみしゑひもせす");
       case 27:
         return ki(e, 3302, 3311, !0, r);
       case 28:
-        return Si(e, "\u30a2\u30a4\u30a6\u30a8\u30aa\u30ab\u30ad\u30af\u30b1\u30b3\u30b5\u30b7\u30b9\u30bb\u30bd\u30bf\u30c1\u30c4\u30c6\u30c8\u30ca\u30cb\u30cc\u30cd\u30ce\u30cf\u30d2\u30d5\u30d8\u30db\u30de\u30df\u30e0\u30e1\u30e2\u30e4\u30e6\u30e8\u30e9\u30ea\u30eb\u30ec\u30ed\u30ef\u30f0\u30f1\u30f2\u30f3", i);
+        return Si(e, "アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヰヱヲン", i);
       case 29:
-        return Si(e, "\u30a4\u30ed\u30cf\u30cb\u30db\u30d8\u30c8\u30c1\u30ea\u30cc\u30eb\u30f2\u30ef\u30ab\u30e8\u30bf\u30ec\u30bd\u30c4\u30cd\u30ca\u30e9\u30e0\u30a6\u30f0\u30ce\u30aa\u30af\u30e4\u30de\u30b1\u30d5\u30b3\u30a8\u30c6\u30a2\u30b5\u30ad\u30e6\u30e1\u30df\u30b7\u30f1\u30d2\u30e2\u30bb\u30b9", i);
+        return Si(e, "イロハニホヘトチリヌルヲワカヨタレソツネナラムウヰノオクヤマケフコエテアサキユメミシヱヒモセス", i);
       case 34:
         return ki(e, 3792, 3801, !0, r);
       case 37:
@@ -4642,10 +4642,10 @@ module.exports = function () {
         t += e.internalSubset;
       }
       if (e.publicId) {
-        t += '"' + e.publicId + '"';
+        t += "\"" + e.publicId + "\"";
       }
       if (e.systemId) {
-        t += '"' + e.systemId + '"';
+        t += "\"" + e.systemId + "\"";
       }
       t += ">";
     }
@@ -4666,7 +4666,7 @@ module.exports = function () {
   var Vi = "___html2canvas___pseudoelement_before";
   var Gi = "___html2canvas___pseudoelement_after";
   var zi = function (e) {
-    Qi(e, "." + Vi + ':before{\n    content: "" !important;\n    display: none !important;\n}\n         .' + Gi + ':after{\n    content: "" !important;\n    display: none !important;\n}');
+    Qi(e, "." + Vi + ":before{\n    content: \"\" !important;\n    display: none !important;\n}\n         ." + Gi + ":after{\n    content: \"\" !important;\n    display: none !important;\n}");
   };
   var Qi = function (e, t) {
     var n = e.ownerDocument;

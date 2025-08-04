@@ -1,7 +1,7 @@
 "use strict";
 
 export { f as a };
-var r = require("../0/index");
+var r = require("react");
 var o = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -19,7 +19,7 @@ var a = require("../623");
 var s = require("../702");
 var c = require("../739/index");
 var l = require("../13/index");
-var u = require("../2/index");
+var u = require("../2");
 var d = require("./513");
 var p = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {

@@ -4,8 +4,8 @@ Object.defineProperty(exports, "__esModule", {
   value: !0
 });
 exports.TransformToOp = void 0;
-var r = require("../../../1001/93");
-var i = require("../../../1036/32/index");
+var r = require("tslib");
+var i = require("ot-json1");
 var o = require("../../../1036/1363/index");
 var a = (0, r.__importStar)(require("../../../17/533"));
 var s = require("../../../4/127");

@@ -45,7 +45,7 @@ var s = function __importDefault(module) {
   });
   return defaultExport;
 }(a);
-var c = require("./15/index");
+var c = require("./15");
 var l = require("./64");
 var u = require("./287");
 var d = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAC0lEQVQYV2NgAAIAAAUAAarVyFEAAAAASUVORK5CYII=";

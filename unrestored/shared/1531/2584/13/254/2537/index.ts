@@ -13,7 +13,7 @@ var r = Object.assign || function (e) {
   }
   return e;
 };
-var i = c(require("../../../0/index"));
+var i = c(require("react"));
 var o = c(require("../../785/104/index"));
 var a = require("./2538");
 var s = c(require("../1158/index"));

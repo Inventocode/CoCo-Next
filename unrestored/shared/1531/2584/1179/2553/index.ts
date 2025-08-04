@@ -4,12 +4,12 @@ Object.defineProperty(exports, "__esModule", {
   value: !0
 });
 exports.init_color_blocks = void 0;
-var r = require("../../1001/93");
+var r = require("tslib");
 var o = require("../../1001/577");
 var i = require("../../301/480");
 var a = (0, r.__importStar)(require("../../17/533"));
 var s = require("../../4/127");
-var c = require("../2552/579");
+var c = require("../2555/579");
 var l = require("./1425");
 function u(e, t) {
   var n;
@@ -110,24 +110,24 @@ exports.init_color_blocks = function (e) {
                 var p = function (e, t, i) {
                   switch (t) {
                     case a.EColorFormat.ColorString:
-                      return '  <div class="color-menu-item-content">\n        <div class="color-string">\n        \u201c' + (0, o.rgba_to_hex)(e).toUpperCase() + "\u201d\n        </div>\n      </div>";
+                      return "  <div class=\"color-menu-item-content\">\n        <div class=\"color-string\">\n        “" + (0, o.rgba_to_hex)(e).toUpperCase() + "”\n        </div>\n      </div>";
                     case a.EColorFormat.HSVA:
                       var s = n(e),
                         c = s[0],
                         l = s[1],
                         d = s[2],
                         p = s[3];
-                      return '  <div class="color-menu-item-content">\n        <div class="color-hsva">\n          H\n          <div>' + (u(i, "H") || c) + "</div>\n          S\n          <div>" + (u(i, "S") || l) + "</div>\n          V\n          <div>" + (u(i, "V") || d) + "</div>\n          A\n          <div>" + (u(i, "A") || p) + "</div>\n        </div>\n      </div>";
+                      return "  <div class=\"color-menu-item-content\">\n        <div class=\"color-hsva\">\n          H\n          <div>" + (u(i, "H") || c) + "</div>\n          S\n          <div>" + (u(i, "S") || l) + "</div>\n          V\n          <div>" + (u(i, "V") || d) + "</div>\n          A\n          <div>" + (u(i, "A") || p) + "</div>\n        </div>\n      </div>";
                     case a.EColorFormat.RGBA:
                       var f = r(e),
                         h = f[0],
                         m = f[1],
                         g = f[2];
                       p = f[3];
-                      return '  <div class="color-menu-item-content">\n        <div class="color-rgba">\n          R\n          <div>' + (u(i, "R") || h) + "</div>\n          G\n          <div>" + (u(i, "G") || m) + "</div>\n          B\n          <div>" + (u(i, "B") || g) + "</div>\n          A\n          <div>" + (u(i, "A") || p) + "</div>\n        </div>\n      </div>";
+                      return "  <div class=\"color-menu-item-content\">\n        <div class=\"color-rgba\">\n          R\n          <div>" + (u(i, "R") || h) + "</div>\n          G\n          <div>" + (u(i, "G") || m) + "</div>\n          B\n          <div>" + (u(i, "B") || g) + "</div>\n          A\n          <div>" + (u(i, "A") || p) + "</div>\n        </div>\n      </div>";
                     case a.EColorFormat.ColorPalette:
                     default:
-                      return '<div class="color-menu-item-content">\n          <div class="color-palette">\n            <div style="background-color: ' + e + ';"></div>\n          </div>\n        </div>';
+                      return "<div class=\"color-menu-item-content\">\n          <div class=\"color-palette\">\n            <div style=\"background-color: " + e + ";\"></div>\n          </div>\n        </div>";
                   }
                 }(t(i), c, i);
                 d.innerHTML = p;
@@ -291,7 +291,7 @@ exports.init_color_blocks = function (e) {
     }
   });
   Object.assign(e.blocks_xml, {
-    color_picker: '<block type="color_picker">\n      <mutation format="1" color="#E8308C"></mutation>\n      <field name="COLOR_PALETTE">#E8308C</field>\n    </block>'
+    color_picker: "<block type=\"color_picker\">\n      <mutation format=\"1\" color=\"#E8308C\"></mutation>\n      <field name=\"COLOR_PALETTE\">#E8308C</field>\n    </block>"
   });
 };
 var d = "0,360,1,false";
@@ -299,5 +299,5 @@ var p = "0,255,1,";
 var f = "0,100,1,";
 var h = "360";
 var m = function (e, t, n) {
-  return '<shadow type="math_number"><field name="NUM" constraints="' + t + '" exceptions="' + n + '">' + e + "</field></shadow>";
+  return "<shadow type=\"math_number\"><field name=\"NUM\" constraints=\"" + t + "\" exceptions=\"" + n + "\">" + e + "</field></shadow>";
 };

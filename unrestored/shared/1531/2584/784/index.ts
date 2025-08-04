@@ -1,7 +1,7 @@
 "use strict";
 
 export { l as a };
-var r = require("../0/index");
+var r = require("react");
 var o = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;

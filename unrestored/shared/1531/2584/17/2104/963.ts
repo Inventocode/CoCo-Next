@@ -4,12 +4,12 @@ Object.defineProperty(exports, "__esModule", {
   value: !0
 });
 exports.WorkspaceElement = void 0;
-var r = require("../../1001/93");
-var i = require("../259");
+var r = require("tslib");
+var i = require("@kitten-team/gl-matrix");
 var o = require("../../4/127");
 var a = require("../../125/195/index");
 var s = require("../../125/index");
-var c = require("./1325/755");
+var c = require("./2174/755");
 var u = function () {
   function e(e) {
     this.id = "";

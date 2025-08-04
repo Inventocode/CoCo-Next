@@ -1,0 +1,1 @@
+module.exports = "\t\n\u000b\f\r                　  ﻿";

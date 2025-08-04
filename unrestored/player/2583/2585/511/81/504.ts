@@ -243,7 +243,7 @@ var f = function (t) {
       var i = t.charAt(r);
       if ("+" === i || "$" === i || "%" === i || "/" === i) {
         var a = t.charAt(r + 1);
-        var s = "\0";
+        var s = "\u0000";
         switch (i) {
           case "+":
             if (!(a >= "A" && a <= "Z")) {
@@ -267,7 +267,7 @@ var f = function (t) {
             } else if (a >= "P" && a <= "T") {
               s = String.fromCharCode(a.charCodeAt(0) + 43);
             } else if ("U" === a) {
-              s = "\0";
+              s = "\u0000";
             } else if ("V" === a) {
               s = "@";
             } else if ("W" === a) {
@@ -276,7 +276,7 @@ var f = function (t) {
               if ("X" !== a && "Y" !== a && "Z" !== a) {
                 throw new o.a();
               }
-              s = "\x7f";
+              s = "";
             }
             break;
           case "/":

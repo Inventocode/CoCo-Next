@@ -23,7 +23,7 @@ var r = this && this.__extends || function () {
 Object.defineProperty(exports, "__esModule", {
   value: !0
 });
-var o = require("../../872");
+var o = require("../../../1427/872");
 var i = require("./2560");
 var a = function (e) {
   function t(t, n, r) {

@@ -212,7 +212,7 @@ function E(e, t) {
     }
   });
 }
-var x = require("../../../0/index");
+var x = require("react");
 function C() {}
 var O = function (e, t, n) {
   return Object.defineProperty(e, t, {
@@ -830,7 +830,7 @@ var Ne = function (e) {
   var r = n[0].map(function (e, t) {
     return n.map(function (e) {
       if (!(t in e)) {
-        throw Error('The arity of each "output" value must be equal');
+        throw Error("The arity of each \"output\" value must be equal");
       }
       return e[t];
     });
@@ -866,11 +866,11 @@ var je = function (e) {
 };
 var Le = je(console.warn);
 function Ue() {
-  Le("".concat(Me, 'The "interpolate" function is deprecated in v9 (use "to" instead)'));
+  Le("".concat(Me, "The \"interpolate\" function is deprecated in v9 (use \"to\" instead)"));
 }
 var He = je(console.warn);
 function Ve() {
-  He("".concat(Me, 'Directly calling start instead of using the api object is deprecated in v9 (use ".start" instead), this will be removed in later 0.X.0 versions'));
+  He("".concat(Me, "Directly calling start instead of using the api object is deprecated in v9 (use \".start\" instead), this will be removed in later 0.X.0 versions"));
 }
 function Ge(e) {
   return k.str(e) && ("#" == e[0] || /\d/.test(e) || !N() && Ie.test(e) || e in (M || {}));

@@ -161,7 +161,7 @@ var h = require("./2403");
 var p = function () {
   function e(e) {
     if (!(null === e || void 0 === e ? void 0 : e.token)) {
-      throw new Error("\u8bf7\u4f20\u5165 API Token\u3002(\u767b\u9646 vika.cn \u5728\u5de6\u4e0b\u89d2\u7528\u6237\u4e2d\u5fc3\u83b7\u53d6)");
+      throw new Error("请传入 API Token。(登陆 vika.cn 在左下角用户中心获取)");
     }
     this.config = h.mergeConfig(e);
     this.axios = s.default.create({
@@ -234,12 +234,12 @@ var p = function () {
             u = {
               success: !1,
               code: (null === f || void 0 === f ? void 0 : f.code) || 500,
-              message: (null === f || void 0 === f ? void 0 : f.message) || "\u8bf7\u6c42\u53c2\u6570\u914d\u7f6e\u9519\u8bef"
+              message: (null === f || void 0 === f ? void 0 : f.message) || "请求参数配置错误"
             };
             return [3, 4];
           case 4:
             if (!u.success) {
-              console.error("\u8bf7\u6c42\u53d1\u751f\u9519\u8bef\uff1a", u);
+              console.error("请求发生错误：", u);
             }
             return [2, u];
         }
@@ -248,7 +248,7 @@ var p = function () {
   };
   e.prototype.datasheet = function (e) {
     if (!e) {
-      throw new Error("\u8bf7\u4f20\u5165\u7ef4\u683c\u8868Id, \u53ef\u4ee5\u4ece\u7ef4\u683c\u8868 url \u4e0a\u83b7\u53d6\uff0c\u7ef4\u683c\u8868 id \u901a\u5e38\u4ee5 dst \u5f00\u5934");
+      throw new Error("请传入维格表Id, 可以从维格表 url 上获取，维格表 id 通常以 dst 开头");
     }
     return new l.Datasheet(e, this);
   };

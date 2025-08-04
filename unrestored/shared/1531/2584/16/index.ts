@@ -6,7 +6,7 @@ export { unstable_batchedUpdates as b } from "../75/index";
 export { W as d };
 export { q as e };
 export { z as f };
-var r = require("../0/index");
+var r = require("react");
 var i = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
