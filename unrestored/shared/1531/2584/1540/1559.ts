@@ -3,7 +3,7 @@ var o = require("./1713/1063");
 var i = require("./936/633");
 r({
   target: "Array",
-  proto: !0
+  proto: true
 }, {
   fill: o
 });

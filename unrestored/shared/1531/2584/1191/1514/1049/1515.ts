@@ -1,17 +1,17 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
 exports.getPrefix = o;
 exports.browserPrefixToKey = i;
 exports.browserPrefixToStyle = function (e, t) {
   return t ? "-".concat(t.toLowerCase(), "-").concat(e) : e;
 };
-exports.default = void 0;
+exports.default = undefined;
 var r = ["Moz", "Webkit", "O", "ms"];
 function o() {
-  var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "transform";
+  var e = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : "transform";
   if ("undefined" === typeof window || "undefined" === typeof window.document) {
     return "";
   }
@@ -28,13 +28,13 @@ function o() {
 }
 function i(e, t) {
   return t ? "".concat(t).concat(function (e) {
-    for (var t = "", n = !0, r = 0; r < e.length; r++) {
+    for (var t = "", n = true, r = 0; r < e.length; r++) {
       if (n) {
         t += e[r].toUpperCase();
-        n = !1;
+        n = false;
       } else {
         if ("-" === e[r]) {
-          n = !0;
+          n = true;
         } else {
           t += e[r];
         }

@@ -8,7 +8,7 @@ var s = require("./150");
 var u = require("./169");
 var c = require("./117");
 var l = require("./164");
-var d = require("./191/index");
+var d = require("./191");
 var f = require("./335");
 var h = require("./56");
 var p = function (t) {
@@ -22,7 +22,7 @@ var p = function (t) {
     return {
       next: function () {
         if (t && r >= t.length) {
-          t = void 0;
+          t = undefined;
         }
         return {
           value: t && t[r++],
@@ -183,10 +183,10 @@ var _ = function () {
     var r = 0;
     var i = this.mappingBitMatrix.getHeight();
     var o = this.mappingBitMatrix.getWidth();
-    var a = !1;
-    var s = !1;
-    var u = !1;
-    var c = !1;
+    var a = false;
+    var s = false;
+    var u = false;
+    var c = false;
     do {
       if (n !== i || 0 !== r || a) {
         if (n !== i - 2 || 0 !== r || 0 === (3 & o) || s) {
@@ -214,25 +214,25 @@ var _ = function () {
               t[e++] = 255 & this.readCorner4(i, o);
               n -= 2;
               r += 2;
-              c = !0;
+              c = true;
             }
           } else {
             t[e++] = 255 & this.readCorner3(i, o);
             n -= 2;
             r += 2;
-            u = !0;
+            u = true;
           }
         } else {
           t[e++] = 255 & this.readCorner2(i, o);
           n -= 2;
           r += 2;
-          s = !0;
+          s = true;
         }
       } else {
         t[e++] = 255 & this.readCorner1(i, o);
         n -= 2;
         r += 2;
-        a = !0;
+        a = true;
       }
     } while (n < i || r < o);
     if (e !== this.version.getTotalCodewords()) {
@@ -461,7 +461,7 @@ var y = function (t) {
     return {
       next: function () {
         if (t && r >= t.length) {
-          t = void 0;
+          t = undefined;
         }
         return {
           value: t && t[r++],
@@ -575,7 +575,7 @@ var O = function (t) {
     return {
       next: function () {
         if (t && r >= t.length) {
-          t = void 0;
+          t = undefined;
         }
         return {
           value: t && t[r++],
@@ -841,7 +841,7 @@ var M = function () {
   t.prototype.decode = function (e, n) {
     var i;
     var a;
-    if (void 0 === n) {
+    if (undefined === n) {
       n = null;
     }
     if (null != n && n.has(o.a.PURE_BARCODE)) {

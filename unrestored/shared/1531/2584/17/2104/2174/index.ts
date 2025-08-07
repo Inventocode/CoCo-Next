@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.WorkspaceComment = void 0;
+exports.WorkspaceComment = undefined;
 var r = require("tslib");
 var i = require("inversify");
 var o = require("@kitten-team/gl-matrix");
@@ -32,15 +32,15 @@ var g = function (e) {
     a.bubble_height_ = p[1];
     a.parent_width_ = 0;
     a.relative_position_ = o.vec2.create();
-    a.expanded_ = !1;
+    a.expanded_ = false;
     a.prev_text_l = 0;
-    a.is_textarea_focused = !1;
-    a.auto_layout_ = !0;
+    a.is_textarea_focused = false;
+    a.auto_layout_ = true;
     a.parent_block_ = n;
     var s = a.workspace.is_resizes_enabled();
-    a.workspace.set_resizes_enabled(!1);
+    a.workspace.set_resizes_enabled(false);
     a.events.disable();
-    a.id = void 0 != i ? i : (0, f.gen_uid)();
+    a.id = undefined != i ? i : (0, f.gen_uid)();
     a.svg_group.classList.add("blocklyWorkspaceComment");
     a.update_movable();
     if (n) {
@@ -48,9 +48,9 @@ var g = function (e) {
         a.parent_width_ = n.first_row_width;
         a.relative_position_ = o.vec2.fromValues(a.parent_width_ + 60, n.first_row_height / 2);
       }
-      a.deletable_ = !1;
+      a.deletable_ = false;
     }
-    var c = void 0;
+    var c = undefined;
     if (r) {
       if (a.parent_block_) {
         c = (0, d.clone_deep)(a.get_relative_position());
@@ -71,7 +71,7 @@ var g = function (e) {
       if (a.parent_block_) {
         var l = a.change_event_factory("comment", {
           block: a.parent_block_,
-          old_value: void 0,
+          old_value: undefined,
           new_value: a.id
         });
         a.events.fire(l);
@@ -84,7 +84,7 @@ var g = function (e) {
         var h = a.move_event_factory({
           block: a
         });
-        h.set_record_undo(!1);
+        h.set_record_undo(false);
         if (c) {
           h.set_old_coord(c);
         }
@@ -120,8 +120,8 @@ var g = function (e) {
     } else {
       this.update_icon();
     }
-    this.rendered = !0;
-    if (!(null === (e = this.workspace.get_canvas()) || void 0 === e)) {
+    this.rendered = true;
+    if (!(null === (e = this.workspace.get_canvas()) || undefined === e)) {
       e.appendChild(this.svg_group);
     }
   };
@@ -165,7 +165,7 @@ var g = function (e) {
   };
   t.prototype.on_icon_click = function (e) {
     if (!(this.workspace.is_dragging() || this.utils.is_right_button(e))) {
-      this.set_expanded(!0);
+      this.set_expanded(true);
     }
   };
   t.prototype.get_bounding_rectangle = function () {
@@ -184,7 +184,7 @@ var g = function (e) {
     return this.get_root_block() || this;
   };
   t.prototype.get_root_block = function () {
-    for (var e = this.parent_block_; null === e || void 0 === e ? void 0 : e.parent_block;) {
+    for (var e = this.parent_block_; null === e || undefined === e ? undefined : e.parent_block;) {
       e = e.parent_block;
     }
     return e;
@@ -195,7 +195,7 @@ var g = function (e) {
       r = this.parent_block_ ? this.change_event_factory("comment", {
         block: this.parent_block_,
         old_value: this.xml.comment_to_dom_with_xy(this),
-        new_value: void 0
+        new_value: undefined
       }) : this.delete_event_factory({
         block: this
       });
@@ -234,40 +234,40 @@ var g = function (e) {
       var i = [{
         text: this.Msg.BLUE_COMMENT,
         name: "comment_set_color_blue",
-        enabled: !0,
+        enabled: true,
         callback: r.bind(this, "BLUE"),
         icon: n("BLUE"),
         selected: "BLUE" === this.color_theme
       }, {
         text: this.Msg.GREEN_COMMENT,
         name: "comment_set_color_green",
-        enabled: !0,
+        enabled: true,
         callback: r.bind(this, "GREEN"),
         icon: n("GREEN"),
         selected: "GREEN" === this.color_theme
       }, {
         text: this.Msg.YELLOW_COMMENT,
         name: "comment_set_color_yellow",
-        enabled: !0,
+        enabled: true,
         callback: r.bind(this, "YELLOW"),
         icon: n("YELLOW"),
         selected: "YELLOW" === this.color_theme
       }, {
         text: this.Msg.RED_COMMENT,
         name: "comment_set_color_red",
-        enabled: !0,
+        enabled: true,
         callback: r.bind(this, "RED"),
         icon: n("RED"),
         selected: "RED" === this.color_theme
       }, {
         text: this.Msg.DELETE_COMMENT,
         name: "comment_delete",
-        enabled: !0,
+        enabled: true,
         callback: function () {
           if (t.parent_block_) {
-            t.parent_block_.set_comment_text(void 0);
+            t.parent_block_.set_comment_text(undefined);
           } else {
-            t.dispose(void 0, !0);
+            t.dispose(undefined, true);
           }
         }
       }];
@@ -512,7 +512,7 @@ var g = function (e) {
         if (e.textarea_) {
           e.set_text(e.textarea_.value || "");
         }
-        e.is_textarea_focused = !1;
+        e.is_textarea_focused = false;
       });
       this.events.bind_event_with_checks(this.textarea_, "input", this, function (t) {
         t.stopPropagation();
@@ -522,7 +522,7 @@ var g = function (e) {
       this.events.bind_event_with_checks(i, "mousedown", this, function (e) {
         e.stopPropagation();
         e.preventDefault();
-        this.set_expanded(!1);
+        this.set_expanded(false);
       });
       var o = document.createElement("div");
       o.classList.add("blocklyCommentTopContainer");
@@ -592,7 +592,7 @@ var g = function (e) {
           if (t.textarea_) {
             t.textarea_.focus();
           }
-          t.is_textarea_focused = !0;
+          t.is_textarea_focused = true;
           t.select();
           t.events.unbind_event(n);
           t.workspace.cancel_current_gesture();
@@ -620,11 +620,11 @@ var g = function (e) {
   t.prototype.unbind_resize_events = function () {
     if (this.on_mouseup_wrapper) {
       this.events.unbind_event(this.on_mouseup_wrapper);
-      this.on_mouseup_wrapper = void 0;
+      this.on_mouseup_wrapper = undefined;
     }
     if (this.on_mousemove_wrapper) {
       this.events.unbind_event(this.on_mousemove_wrapper);
-      this.on_mousemove_wrapper = void 0;
+      this.on_mousemove_wrapper = undefined;
     }
   };
   t.prototype.resize_mouse_down = function (e, t) {
@@ -641,7 +641,7 @@ var g = function (e) {
     }
   };
   t.prototype.resize_mouse_move = function (e, t) {
-    this.auto_layout_ = !1;
+    this.auto_layout_ = false;
     var n = this.workspace.move_drag(t);
     if (e.indexOf("e") > -1 && e.indexOf("w") > -1) {
       this.set_bubble_size(n[0], this.bubble_height_);
@@ -660,7 +660,7 @@ var g = function (e) {
         new_value: [this.bubble_width_, this.bubble_height_]
       }));
     }
-    this.size_before_resize = void 0;
+    this.size_before_resize = undefined;
   };
   t.prototype.is_auto_layout = function () {
     return this.auto_layout_;
@@ -671,7 +671,7 @@ var g = function (e) {
   t.prototype.focus = function () {
     var e;
     var t;
-    this.set_expanded(!0);
+    this.set_expanded(true);
     if (this.textarea_) {
       var n = (0, l.get_viewport_size)();
       if (this.textarea_.getBoundingClientRect().left >= n.width) {
@@ -681,7 +681,7 @@ var g = function (e) {
         r = r * o - i.contentLeft;
         r -= i.viewWidth;
         r += this.bubble_width_ * o;
-        if (!(null === (t = null === (e = this.workspace.get_scrollbar()) || void 0 === e ? void 0 : e.h_scroll) || void 0 === t)) {
+        if (!(null === (t = null === (e = this.workspace.get_scrollbar()) || undefined === e ? undefined : e.h_scroll) || undefined === t)) {
           t.set(r);
         }
         this.textarea_.focus();
@@ -694,8 +694,8 @@ var g = function (e) {
     get: function () {
       return !!this.workspace.get_block_drag_surface() && !this.parent_block_;
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   t.prototype.compute_line_connect_position = function () {
     var e = o.vec2.scale(o.vec2.create(), this.relative_position_, -1);
@@ -725,11 +725,11 @@ var g = function (e) {
     }
     this.unselect();
   };
-  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.touch_manager)], t.prototype, "touch_manager", void 0);
-  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.Msg)], t.prototype, "Msg", void 0);
-  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.xml)], t.prototype, "xml", void 0);
-  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.json)], t.prototype, "json", void 0);
-  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.ChangeEvent)], t.prototype, "change_event_factory", void 0);
+  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.touch_manager)], t.prototype, "touch_manager", undefined);
+  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.Msg)], t.prototype, "Msg", undefined);
+  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.xml)], t.prototype, "xml", undefined);
+  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.json)], t.prototype, "json", undefined);
+  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.ChangeEvent)], t.prototype, "change_event_factory", undefined);
   return t = (0, r.__decorate)([(0, i.injectable)()], t);
 }(h.WorkspaceElement);
 exports.WorkspaceComment = g;

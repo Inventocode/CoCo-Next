@@ -25,7 +25,7 @@ var _styleModuleImportMap = {
 var PlayerMenuItem = function PlayerMenuItem(props) {
   var _onClick = props.onClick;
   var _props$iconSrc = props.iconSrc;
-  var iconSrc = _props$iconSrc === void 0 ? '' : _props$iconSrc;
+  var iconSrc = _props$iconSrc === undefined ? '' : _props$iconSrc;
   var iconSrcActive = props.iconSrcActive;
   var iconSrcDisabled = props.iconSrcDisabled;
   var disabled = props.disabled;

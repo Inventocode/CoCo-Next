@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.init_color_blocks = void 0;
+exports.init_color_blocks = undefined;
 var r = require("tslib");
 var o = require("../../1001/577");
 var i = require("../../301/480");
@@ -17,7 +17,7 @@ function u(e, t) {
   var o;
   var i;
   var a;
-  return (null === (n = e.get_input_target_block(t)) || void 0 === n ? void 0 : n.get_field_value("NUM")) || (null === (a = null === (i = null === (o = null === (r = e.get_input_target_block(t)) || void 0 === r ? void 0 : r.output_connection) || void 0 === o ? void 0 : o.target_connection) || void 0 === i ? void 0 : i.get_shadow_dom()) || void 0 === a ? void 0 : a.textContent);
+  return (null === (n = e.get_input_target_block(t)) || undefined === n ? undefined : n.get_field_value("NUM")) || (null === (a = null === (i = null === (o = null === (r = e.get_input_target_block(t)) || undefined === r ? undefined : r.output_connection) || undefined === o ? undefined : o.target_connection) || undefined === i ? undefined : i.get_shadow_dom()) || undefined === a ? undefined : a.textContent);
 }
 exports.init_color_blocks = function (e) {
   function t(e) {
@@ -30,7 +30,7 @@ exports.init_color_blocks = function (e) {
         return e.color_;
       case a.EColorFormat.ColorString:
         var n;
-        if (n = null === (t = e.get_input_target_block("COLOR_STRING")) || void 0 === t ? void 0 : t.get_field("TEXT")) {
+        if (n = null === (t = e.get_input_target_block("COLOR_STRING")) || undefined === t ? undefined : t.get_field("TEXT")) {
           e.color_ = new o.Color(n.get_value());
         }
         return e.color_;
@@ -138,7 +138,7 @@ exports.init_color_blocks = function (e) {
                   e.widget_div.hide_if_owner(s);
                   e.tooltip.hide();
                   var r = String(i.format_);
-                  if (!(null === (n = i.addMutation) || void 0 === n)) {
+                  if (!(null === (n = i.addMutation) || undefined === n)) {
                     n.call(i, c, r);
                   }
                 });
@@ -146,10 +146,10 @@ exports.init_color_blocks = function (e) {
               }(l, s, i, d);
             });
             e.widget_div.show(s, function () {
-              s.focus(!1);
+              s.focus(false);
             });
             var h = e.widget_div.DIV;
-            if (!(null === h || void 0 === h)) {
+            if (!(null === h || undefined === h)) {
               h.appendChild(d);
             }
             s.source_block.workspace.options.dropdown.menu.align = "center";
@@ -157,25 +157,25 @@ exports.init_color_blocks = function (e) {
             e.widget_div.position(m[0], m[1]);
           }(s, e.Msg.SELECT_COLOR_PARAM_TYPE);
         },
-        has_circle: !0
+        has_circle: true
       });
       this.append_dummy_input("BUTTON").append_field(d, "BUTTON");
-      this.set_output(!0, ["String", "Color"]);
-      this.set_inputs_inline(!0);
+      this.set_output(true, ["String", "Color"]);
+      this.set_inputs_inline(true);
       this.set_colour(e.theme.block_color.PURPLE_1.fill);
       this.format_ = a.EColorFormat.ColorPalette;
       this.color_ = new o.Color("#E8308C");
       e.extensions.apply("param_color_block", this);
     },
     addMutation: function (t, n) {
-      if (void 0 !== t && "string" !== typeof t) {
+      if (undefined !== t && "string" !== typeof t) {
         this.updateShape_(t);
         var r = e.di_container;
         var o = r.get(s.BINDING.events);
         if (o.is_enabled()) {
           var i = r.get(s.BINDING.ChangeEvent)("mutation", {
             block: this,
-            old_value: void 0,
+            old_value: undefined,
             new_value: t,
             name: n
           });
@@ -184,14 +184,14 @@ exports.init_color_blocks = function (e) {
       }
     },
     removeMutation: function (t, n) {
-      if (void 0 !== n) {
+      if (undefined !== n) {
         this.updateShape_(parseInt(n));
         var r = e.di_container;
         var o = r.get(s.BINDING.events);
         if (o.is_enabled()) {
           var i = r.get(s.BINDING.ChangeEvent)("mutation", {
             block: this,
-            old_value: void 0,
+            old_value: undefined,
             new_value: n,
             name: t
           });

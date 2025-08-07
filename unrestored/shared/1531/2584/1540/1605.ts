@@ -3,7 +3,7 @@ var o = require("./1594/940");
 var i = Math.exp;
 r({
   target: "Math",
-  stat: !0
+  stat: true
 }, {
   tanh: function (e) {
     var t = o(e = +e);

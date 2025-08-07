@@ -1,25 +1,25 @@
 "use strict";
 
 export { A as a };
-var r = require("../../29");
-var i = require("react");
+import r = require("../../29");
+import i = require("react");
 require("../../50/index");
-var o = require("../280");
-var a = require("./100");
+import o = require("../280");
+import a = require("./100");
 require("../../19");
 require("../../54");
-var s = require("./701/index");
-var c = require("./270/index");
-var u = require("./691/index");
+import s = require("./701/index");
+import c = require("./270/index");
+import u = require("./691/index");
 require("./983");
 require("../../33/index");
-var l = require("./778/index");
+import l = require("./778/index");
 require("../../95");
 require("../../96");
 require("../../322");
 require("../../273");
 require("../../120");
-var f = Object(s.a)({
+var f = s.a({
   toolbar: {
     flexDirection: "column",
     alignItems: "flex-start"
@@ -39,25 +39,25 @@ var d = function (e) {
   var r = e.setOpenView;
   var s = e.isLandscape;
   var l = e.openView;
-  var d = Object(o.b)();
+  var d = o.b();
   var h = f();
-  var p = Object(i.useMemo)(function () {
-    return Object(u.d)(n);
+  var p = i.useMemo(function () {
+    return u.d(n);
   }, [n]);
-  var _ = Object(i.useMemo)(function () {
-    return Object(u.b)(n);
+  var _ = i.useMemo(function () {
+    return u.b(n);
   }, [n]);
-  return Object(i.createElement)(c.b, {
+  return i.createElement(c.b, {
     isLandscape: s,
-    className: Object(a.a)(!p && h.toolbar, s && h.toolbarLandscape)
-  }, Object(i.createElement)(c.c, {
+    className: a.a(!p && h.toolbar, s && h.toolbarLandscape)
+  }, i.createElement(c.c, {
     variant: p ? "h3" : "subtitle1",
     onClick: function () {
       return r("year");
     },
     selected: "year" === l,
     label: d.getYearText(t)
-  }), !p && !_ && Object(i.createElement)(c.c, {
+  }), !p && !_ && i.createElement(c.c, {
     variant: "h4",
     selected: "date" === l,
     onClick: function () {
@@ -65,8 +65,8 @@ var d = function (e) {
     },
     align: s ? "left" : "center",
     label: d.getDatePickerHeaderText(t),
-    className: Object(a.a)(s && h.dateLandscape)
-  }), _ && Object(i.createElement)(c.c, {
+    className: a.a(s && h.dateLandscape)
+  }), _ && i.createElement(c.c, {
     variant: "h4",
     onClick: function () {
       return r("month");
@@ -92,8 +92,8 @@ var p = function (e) {
   for (var t = 1; t < arguments.length; t++) {
     var n = null != arguments[t] ? arguments[t] : {};
     if (t % 2) {
-      h(n, !0).forEach(function (t) {
-        Object(r.a)(e, t, n[t]);
+      h(n, true).forEach(function (t) {
+        r.a(e, t, n[t]);
       });
     } else {
       if (Object.getOwnPropertyDescriptors) {
@@ -111,20 +111,20 @@ var p = function (e) {
   views: ["year", "date"]
 });
 function _(e) {
-  var t = Object(o.b)();
+  var t = o.b();
   return {
     getDefaultFormat: function () {
-      return Object(u.c)(e.views, t);
+      return u.c(e.views, t);
     }
   };
 }
-var A = Object(c.g)({
+var A = c.g({
   useOptions: _,
   Input: c.d,
   useState: c.i,
   DefaultToolbarComponent: d
 });
-var g = Object(c.g)({
+var g = c.g({
   useOptions: _,
   Input: c.a,
   useState: c.e,

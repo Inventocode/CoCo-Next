@@ -3,9 +3,9 @@
 export { p as a };
 var r;
 var i;
-var o = require("./19");
-var a = require("./171");
-var s = require("./110");
+import o = require("./19");
+import a = require("./171");
+import s = require("./110");
 var c = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -18,7 +18,7 @@ var c = function __importDefault(module) {
   });
   return defaultExport;
 }(s);
-var u = require("react");
+import u = require("react");
 var l = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -31,7 +31,7 @@ var l = function __importDefault(module) {
   });
   return defaultExport;
 }(u);
-var f = require("./75/index");
+import f = require("./75/index");
 var d = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -44,10 +44,10 @@ var d = function __importDefault(module) {
   });
   return defaultExport;
 }(f);
-var h = !1;
+var h = false;
 var p = {
   load: function () {
-    var e = Object(a.a)(c.a.mark(function e(t) {
+    var e = a.a(c.a.mark(function e(t) {
       var a;
       return c.a.wrap(function (e) {
         for (;;) {
@@ -70,12 +70,12 @@ var p = {
               document.body.appendChild(r);
               d.a.render(l.a.createElement(l.a.Suspense, {
                 fallback: null
-              }, l.a.createElement(a, Object(o.a)({
+              }, l.a.createElement(a, o.a({
                 getPlayerRef: function (e) {
                   return i = e;
                 }
               }, t))), r);
-              h = !0;
+              h = true;
             case 8:
             case "end":
               return e.stop();
@@ -101,12 +101,12 @@ var p = {
           x: 0,
           y: 0
         };
-        if (null !== e && void 0 !== e && e.closeAnimationPos) {
+        if (null !== e && undefined !== e && e.closeAnimationPos) {
           l = e.closeAnimationPos;
         }
         var f = {
           transition: "transform 0.5s cubic-bezier(0.2, 0, 0.2, 1)",
-          transform: "translate(".concat(((null === (i = l) || void 0 === i ? void 0 : i.x) || 0) - c / 2, "px, ").concat(((null === (o = l) || void 0 === o ? void 0 : o.y) || 0) - u / 2, "px) scale(0)")
+          transform: "translate(".concat(((null === (i = l) || undefined === i ? undefined : i.x) || 0) - c / 2, "px, ").concat(((null === (o = l) || undefined === o ? undefined : o.y) || 0) - u / 2, "px) scale(0)")
         };
         a.style.transition = f.transition;
         a.style.transform = f.transform;
@@ -114,9 +114,9 @@ var p = {
           if (r) {
             d.a.unmountComponentAtNode(r);
             document.body.removeChild(r);
-            r = void 0;
-            t(void 0);
-            h = !1;
+            r = undefined;
+            t(undefined);
+            h = false;
           }
         });
       }
@@ -125,7 +125,7 @@ var p = {
   hide: function () {
     var e;
     if (r) {
-      if (!(null === (e = i) || void 0 === e)) {
+      if (!(null === (e = i) || undefined === e)) {
         e.pause();
       }
       r.children[0].style.display = "none";

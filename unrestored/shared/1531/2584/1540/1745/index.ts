@@ -257,11 +257,11 @@ var U = function (e) {
     }(e), n = 0; n < 8; n++) {
       if (!(o && 0 === e[n])) {
         if (o) {
-          o = !1;
+          o = false;
         }
         if (r === n) {
           t += n ? ":" : "::";
-          o = !0;
+          o = true;
         } else {
           t += e[n].toString(16);
           if (n < 7) {
@@ -332,7 +332,7 @@ var J = function (e) {
 var $ = function (e) {
   var t = e.path;
   var n = t.length;
-  if (!(!n || "file" == e.scheme && 1 == n && Z(t[0], !0))) {
+  if (!(!n || "file" == e.scheme && 1 == n && Z(t[0], true))) {
     t.pop();
   }
 };
@@ -369,10 +369,10 @@ var Oe = function (e, t, n, o) {
   var u = n || te;
   var p = 0;
   var h = "";
-  var m = !1;
-  var g = !1;
-  var _ = !1;
-  for (n || (e.scheme = "", e.username = "", e.password = "", e.host = null, e.port = null, e.path = [], e.query = null, e.fragment = null, e.cannotBeABaseURL = !1, t = t.replace(L, "")), t = t.replace(P, ""), i = f(t); p <= i.length;) {
+  var m = false;
+  var g = false;
+  var _ = false;
+  for (n || (e.scheme = "", e.username = "", e.password = "", e.host = null, e.port = null, e.path = [], e.query = null, e.fragment = null, e.cannotBeABaseURL = false, t = t.replace(L, "")), t = t.replace(P, ""), i = f(t); p <= i.length;) {
     switch (a = i[p], u) {
       case te:
         if (!a || !I.test(a)) {
@@ -419,7 +419,7 @@ var Oe = function (e, t, n, o) {
                   u = ie;
                   p++;
                 } else {
-                  e.cannotBeABaseURL = !0;
+                  e.cannotBeABaseURL = true;
                   e.path.push("");
                   u = be;
                 }
@@ -437,7 +437,7 @@ var Oe = function (e, t, n, o) {
           e.path = o.path.slice();
           e.query = o.query;
           e.fragment = "";
-          e.cannotBeABaseURL = !0;
+          e.cannotBeABaseURL = true;
           u = Ee;
           break;
         }
@@ -529,7 +529,7 @@ var Oe = function (e, t, n, o) {
           if (m) {
             h = "%40" + h;
           }
-          m = !0;
+          m = true;
           s = f(h);
           for (var v = 0; v < s.length; v++) {
             var b = s[v];
@@ -541,7 +541,7 @@ var Oe = function (e, t, n, o) {
                 e.username += y;
               }
             } else {
-              _ = !0;
+              _ = true;
             }
           }
           h = "";
@@ -581,10 +581,10 @@ var Oe = function (e, t, n, o) {
             continue;
           }
           if ("[" == a) {
-            g = !0;
+            g = true;
           } else {
             if ("]" == a) {
-              g = !1;
+              g = false;
             }
           }
           h += a;
@@ -664,7 +664,7 @@ var Oe = function (e, t, n, o) {
           break;
         }
         if (o && "file" == o.scheme && !J(i.slice(p).join(""))) {
-          if (Z(o.path[0], !0)) {
+          if (Z(o.path[0], true)) {
             e.path.push(o.path[0]);
           } else {
             e.host = o.host;
@@ -801,12 +801,12 @@ var we = function (e) {
   var t;
   var n;
   var r = u(this, we, "URL");
-  var o = arguments.length > 1 ? arguments[1] : void 0;
+  var o = arguments.length > 1 ? arguments[1] : undefined;
   var a = g(e);
   var s = w(r, {
     type: "URL"
   });
-  if (void 0 !== o) {
+  if (undefined !== o) {
     if (o instanceof we) {
       t = C(o);
     } else if (n = Oe(t = {}, g(o))) {
@@ -928,8 +928,8 @@ var Pe = function (e, t) {
   return {
     get: e,
     set: t,
-    configurable: !0,
-    enumerable: !0
+    configurable: true,
+    enumerable: true
   };
 };
 if (i) {
@@ -1028,12 +1028,12 @@ if (i) {
 l(Ce, "toJSON", function () {
   return Te.call(this);
 }, {
-  enumerable: !0
+  enumerable: true
 });
 l(Ce, "toString", function () {
   return Te.call(this);
 }, {
-  enumerable: !0
+  enumerable: true
 });
 if (y) {
   var Be = y.createObjectURL;
@@ -1051,7 +1051,7 @@ if (y) {
 }
 _(we, "URL");
 o({
-  global: !0,
+  global: true,
   forced: !a,
   sham: !i
 }, {

@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.FieldDefaultValue = void 0;
+exports.FieldDefaultValue = undefined;
 var r = require("tslib");
 var i = require("inversify");
 var o = require("../../4/127");
@@ -14,10 +14,10 @@ var s = function (e) {
       text: t.enable_empty ? t.default_value : t.default_value || "0",
       opt_validator: t.opt_validator
     }) || this;
-    n.has_been_edited = !1;
-    n.enable_empty = !1;
+    n.has_been_edited = false;
+    n.enable_empty = false;
     n.field_type = "FieldDefaultValue";
-    if (void 0 !== t.enable_empty) {
+    if (undefined !== t.enable_empty) {
       n.enable_empty = t.enable_empty;
     }
     return n;
@@ -30,7 +30,7 @@ var s = function (e) {
     if (e !== this.has_been_edited) {
       if (this.source_block && this.events.is_enabled()) {
         var t = this.events.get_group();
-        this.events.set_group(t || !0);
+        this.events.set_group(t || true);
         this.events.fire(this.change_event_factory("field_default_value", {
           block: this.source_block,
           old_value: this.has_been_edited,
@@ -52,7 +52,7 @@ var s = function (e) {
     }
   };
   t.prototype.on_html_input_change = function () {
-    this.set_has_been_edited(!0);
+    this.set_has_been_edited(true);
     e.prototype.on_html_input_change.call(this);
   };
   t.prototype.get_validated_value = function (e, t) {
@@ -75,7 +75,7 @@ var s = function (e) {
       }
     }
   };
-  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.widget_div)], t.prototype, "widget_div", void 0);
+  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.widget_div)], t.prototype, "widget_div", undefined);
   return t = (0, r.__decorate)([(0, i.injectable)()], t);
 }(require("../../301/374").FieldTextInput);
 exports.FieldDefaultValue = s;

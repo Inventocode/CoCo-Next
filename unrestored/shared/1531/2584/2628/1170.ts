@@ -2,22 +2,22 @@
 
 module.exports = function (e, t) {
   if (e === t) {
-    return !0;
+    return true;
   }
   if (!e || !t) {
-    return !1;
+    return false;
   }
   var n = Object.keys(e);
   var r = Object.keys(t);
   var i = n.length;
   if (r.length !== i) {
-    return !1;
+    return false;
   }
   for (var o = 0; o < i; o++) {
     var a = n[o];
     if (e[a] !== t[a] || !Object.prototype.hasOwnProperty.call(t, a)) {
-      return !1;
+      return false;
     }
   }
-  return !0;
+  return true;
 };

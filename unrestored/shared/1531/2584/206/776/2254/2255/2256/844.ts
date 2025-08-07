@@ -1,6 +1,6 @@
 "use strict";
 
-var r = require("../../../../../31/index");
+var r = require("lodash");
 function i(e) {
   return e.range[0];
 }

@@ -20,12 +20,12 @@ module.exports = function (e, t, n) {
   var v = "passingSchemas" + i;
   r += "var " + d + " = errors , " + g + " = false , " + f + " = false , " + v + " = null; ";
   var m = e.compositeRule;
-  e.compositeRule = h.compositeRule = !0;
+  e.compositeRule = h.compositeRule = true;
   var y = a;
   if (y) {
     for (var b, w = -1, E = y.length - 1; w < E;) {
       b = y[w += 1];
-      if (e.opts.strictKeywords ? "object" == typeof b && Object.keys(b).length > 0 || !1 === b : e.util.schemaHasRules(b, e.RULES.all)) {
+      if (e.opts.strictKeywords ? "object" == typeof b && Object.keys(b).length > 0 || false === b : e.util.schemaHasRules(b, e.RULES.all)) {
         h.schema = b;
         h.schemaPath = s + "[" + w + "]";
         h.errSchemaPath = c + "/" + w;
@@ -43,9 +43,9 @@ module.exports = function (e, t, n) {
   }
   e.compositeRule = h.compositeRule = m;
   r += p + "if (!" + f + ") {   var err =   ";
-  if (!1 !== e.createErrors) {
+  if (false !== e.createErrors) {
     r += " { keyword: 'oneOf' , dataPath: (dataPath || '') + " + e.errorPath + " , schemaPath: " + e.util.toQuotedString(c) + " , params: { passingSchemas: " + v + " } ";
-    if (!1 !== e.opts.messages) {
+    if (false !== e.opts.messages) {
       r += " , message: 'should match exactly one schema in oneOf' ";
     }
     if (e.opts.verbose) {

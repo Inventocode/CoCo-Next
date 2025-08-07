@@ -18,7 +18,7 @@ var i = function () {
     return this.binarizer.getBlackRow(t, e);
   };
   t.prototype.getBlackMatrix = function () {
-    if (!(null !== this.matrix && void 0 !== this.matrix)) {
+    if (!(null !== this.matrix && undefined !== this.matrix)) {
       this.matrix = this.binarizer.getBlackMatrix();
     }
     return this.matrix;

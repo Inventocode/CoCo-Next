@@ -29,14 +29,14 @@ var createOptions = function createOptions(config) {
   }, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react___default.createElement(__WEBPACK_IMPORTED_MODULE_2__button__.Button, {
     type: "secondary",
     onClick: config.onCancel
-  }, (_config$cancelText = config.cancelText) !== null && _config$cancelText !== void 0 ? _config$cancelText : '取消'), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react___default.createElement(__WEBPACK_IMPORTED_MODULE_2__button__.Button, {
+  }, (_config$cancelText = config.cancelText) !== null && _config$cancelText !== undefined ? _config$cancelText : '取消'), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react___default.createElement(__WEBPACK_IMPORTED_MODULE_2__button__.Button, {
     type: "secondary",
     onClick: config.onSecondary
-  }, (_config$secondaryText = config.secondaryText) !== null && _config$secondaryText !== void 0 ? _config$secondaryText : '不保存'), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react___default.createElement(__WEBPACK_IMPORTED_MODULE_2__button__.Button, {
+  }, (_config$secondaryText = config.secondaryText) !== null && _config$secondaryText !== undefined ? _config$secondaryText : '不保存'), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react___default.createElement(__WEBPACK_IMPORTED_MODULE_2__button__.Button, {
     type: "primary",
     margin: "0 0 0 16px",
     onClick: config.onPrimary
-  }, (_config$primaryText = config.primaryText) !== null && _config$primaryText !== void 0 ? _config$primaryText : '保存'));
+  }, (_config$primaryText = config.primaryText) !== null && _config$primaryText !== undefined ? _config$primaryText : '保存'));
   var div = document.createElement('div');
   div.className = 'CUI-dialog-options-dialog';
   document.body.appendChild(div);
@@ -44,9 +44,9 @@ var createOptions = function createOptions(config) {
     show: true,
     centerShowUp: true,
     top: config.top,
-    closeBtn: (_config$closeBtn = config.closeBtn) !== null && _config$closeBtn !== void 0 ? _config$closeBtn : false,
+    closeBtn: (_config$closeBtn = config.closeBtn) !== null && _config$closeBtn !== undefined ? _config$closeBtn : false,
     closeAnimation: false,
-    maskClose: (_config$maskClose = config.maskClose) !== null && _config$maskClose !== void 0 ? _config$maskClose : false,
+    maskClose: (_config$maskClose = config.maskClose) !== null && _config$maskClose !== undefined ? _config$maskClose : false,
     header: config.title,
     footer: btn,
     container: div,

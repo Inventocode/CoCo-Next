@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.CreateEvent = void 0;
+exports.CreateEvent = undefined;
 var r = require("tslib");
 var i = require("inversify");
 var o = require("../../../125/195/index");
@@ -14,11 +14,11 @@ var c = function (e) {
     var n = e.call(this, t.block) || this;
     n.type = o.BlockEventType.CREATE;
     n.ids = [];
-    n.is_shadow = !1;
+    n.is_shadow = false;
     n.source = t.source || "other";
     var r = t.block;
     var i = r.get_workspace();
-    if (void 0 != i && i.rendered) {
+    if (undefined != i && i.rendered) {
       n._xml = n.xml.workspace_element_to_dom_with_xy(r);
     } else {
       n._xml = n.xml.workspace_element_to_dom(r);
@@ -53,7 +53,7 @@ var c = function (e) {
       var i = this.ids[r];
       var o = t.get_element_from_db(i);
       if (o) {
-        o.dispose(!1, !1);
+        o.dispose(false, false);
       } else {
         if (i == this._block_id) {
           this.is_shadow;
@@ -74,8 +74,8 @@ var c = function (e) {
       };
     }
   };
-  (0, r.__decorate)([(0, s.lazy_inject)(s.BINDING.events)], t.prototype, "events", void 0);
-  (0, r.__decorate)([(0, s.lazy_inject)(s.BINDING.xml)], t.prototype, "xml", void 0);
+  (0, r.__decorate)([(0, s.lazy_inject)(s.BINDING.events)], t.prototype, "events", undefined);
+  (0, r.__decorate)([(0, s.lazy_inject)(s.BINDING.xml)], t.prototype, "xml", undefined);
   return t = (0, r.__decorate)([(0, i.injectable)()], t);
 }(require("./643").BlockEvent);
 exports.CreateEvent = c;

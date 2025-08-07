@@ -35,7 +35,7 @@ var f = function (e) {
 };
 r({
   target: "Number",
-  proto: !0,
+  proto: true,
   forced: c && ("0.000" !== 8e-5.toFixed(3) || "1" !== .9.toFixed(0) || "1.25" !== 1.255.toFixed(2) || "1000000000000000128" !== 0xde0b6b3a7640080.toFixed(0)) || !s(function () {
     c.call({});
   })

@@ -4,7 +4,7 @@ var r = require("../../../36/2668/220");
 var i = require("../../../36/2668/230");
 var o = require("../../../38/607/806/index");
 var a = require("./2282");
-var s = require("../../../31/index");
+var s = require("lodash");
 function c(e) {
   switch (e.type) {
     case "identifier":
@@ -147,12 +147,12 @@ var h = function () {
       if (e.parent) {
         this.currentAncestry.unshift(e.parent);
       }
-      this.applySelectors(e, !1);
+      this.applySelectors(e, false);
     }
   }, {
     key: "leaveNode",
     value: function (e) {
-      this.applySelectors(e, !0);
+      this.applySelectors(e, true);
       this.currentAncestry.shift();
     }
   }]);

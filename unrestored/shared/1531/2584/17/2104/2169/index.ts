@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.block_render_svg = void 0;
+exports.block_render_svg = undefined;
 var r = require("tslib");
 var i = require("@kitten-team/gl-matrix");
 var o = require("../../../125/195/index");
@@ -39,14 +39,14 @@ exports.block_render_svg = function (e) {
     }
     (0, r.__extends)(t, e);
     t.prototype.get_block_renderer = function () {
-      return this.is_starting_block() ? new c.HeadBlockRenderer(this) : void 0 != this.output_connection ? this.is_shadow() && "param_color" !== this.element_type ? new u.ShadowBlockRenderer(this) : new l.OutputBlockRenderer(this) : new f.BlockRenderer(this);
+      return this.is_starting_block() ? new c.HeadBlockRenderer(this) : undefined != this.output_connection ? this.is_shadow() && "param_color" !== this.element_type ? new u.ShadowBlockRenderer(this) : new l.OutputBlockRenderer(this) : new f.BlockRenderer(this);
     };
     t.prototype.render = function (e) {
       this.width = 0;
       this.svg_path_width = 0;
       this.block_renderer = this.get_block_renderer();
       this.utils.start_text_cache();
-      this.rendered = !0;
+      this.rendered = true;
       var t = 0;
       if (this.warning) {
         t = this.warning.render_icon(t, this.block_renderer);
@@ -57,10 +57,10 @@ exports.block_render_svg = function (e) {
       if (this.comment) {
         this.comment.reposition();
       }
-      if (!1 !== e) {
+      if (false !== e) {
         var r = this.get_parent();
         if (r) {
-          r.render(!0);
+          r.render(true);
         } else {
           this.workspace.resize_contents();
         }
@@ -90,7 +90,7 @@ exports.block_render_svg = function (e) {
       if (!this.is_output_block()) {
         return 0;
       }
-      switch (null === (t = e.connection) || void 0 === t ? void 0 : t.get_output_shape()) {
+      switch (null === (t = e.connection) || undefined === t ? undefined : t.get_output_shape()) {
         case o.OutputShape.ROUND:
           return this.theme.renderer.INPUT_SHAPE_ROUND_WIDTH;
         case o.OutputShape.HEXAGONAL:
@@ -111,10 +111,10 @@ exports.block_render_svg = function (e) {
           if (!u.is_visible()) {
             return "continue";
           }
-          if (i && void 0 != t && t !== o.InputType.STATEMENT && u.type !== o.InputType.STATEMENT) {
+          if (i && undefined != t && t !== o.InputType.STATEMENT && u.type !== o.InputType.STATEMENT) {
             c = r[r.length - 1];
           } else {
-            c = s.create_row_for_input_(u, void 0 == t ? e : 0);
+            c = s.create_row_for_input_(u, undefined == t ? e : 0);
             t = u.type;
             r.push(c);
           }
@@ -175,10 +175,10 @@ exports.block_render_svg = function (e) {
     };
     t.prototype.render_move_connections_ = function () {
       var e = this.get_relative_to_surface_xy();
-      if (void 0 != this.previous_connection) {
+      if (undefined != this.previous_connection) {
         this.previous_connection.move_to_offset(e);
       }
-      if (void 0 != this.output_connection) {
+      if (undefined != this.output_connection) {
         this.output_connection.move_to_offset(e);
       }
       for (var t = 0; t < this.inputList.length; ++t) {
@@ -199,7 +199,7 @@ exports.block_render_svg = function (e) {
     };
     t.prototype.render_draw_top_ = function (e) {
       this.block_renderer.render_path_start(e, this);
-      if (void 0 != this.previous_connection) {
+      if (undefined != this.previous_connection) {
         var t = 0;
         if (this.is_render_notch()) {
           t = this.theme.renderer.NOTCH_WIDTH + this.theme.renderer.NTOCH_START_PADDING;
@@ -220,8 +220,8 @@ exports.block_render_svg = function (e) {
           }
         } else {
           if (f.type == o.InputRowType.STATEMENT) {
-            if (void 0 != d && !this.is_starting_block() || 0 == this.inputs_inline) {
-              this.block_renderer.render_edge_shape_right(e, this, !0, n, c);
+            if (undefined != d && !this.is_starting_block() || 0 == this.inputs_inline) {
+              this.block_renderer.render_edge_shape_right(e, this, true, n, c);
             }
             this.render_row_statement(e, n, f, u, t);
           }
@@ -267,7 +267,7 @@ exports.block_render_svg = function (e) {
           t[0] += 0 === u.fieldRow.length && 0 === c ? 0 : u.margin_left;
           var l = u.connection;
           var f = l.targetBlock();
-          if (u.connection && u.connection.get_targe_connection() && void 0 != f) {
+          if (u.connection && u.connection.get_targe_connection() && undefined != f) {
             l.set_offset_in_block(t[0], t[1] + (s.height - f.height) / 2);
           }
           t[0] += u.render_width;
@@ -278,7 +278,7 @@ exports.block_render_svg = function (e) {
       }
       var d = r.right_edge;
       var h = r[n - 1];
-      if (void 0 != h && h.type === o.InputType.STATEMENT) {
+      if (undefined != h && h.type === o.InputType.STATEMENT) {
         d = this.theme.renderer.STATEMENT_OTHER_ROW_MIN_WIDTH - this.theme.renderer.BLOCK_EDGE_WIDTH;
       }
       r.right_edge = Math.max(t[0], d);
@@ -361,7 +361,7 @@ exports.block_render_svg = function (e) {
       }
     };
     t.prototype.render_draw_left_ = function (e) {
-      if (void 0 != this.output_connection) {
+      if (undefined != this.output_connection) {
         this.output_connection.set_offset_in_block(0, 0);
       }
       this.block_renderer.render_path_end(e, this);

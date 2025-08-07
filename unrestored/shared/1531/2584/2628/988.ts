@@ -2,8 +2,8 @@
 
 export { s as b };
 export { c as a };
-var r = require("react");
-var i = require("../16/687");
+import r = require("react");
+import i = require("../16/687");
 var o = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;

@@ -32,10 +32,10 @@ module.exports = {
       }
       return t;
     }({
-      optimistic: !1,
-      directive: !1,
-      nodejsScope: !1,
-      impliedStrict: !1,
+      optimistic: false,
+      directive: false,
+      nodejsScope: false,
+      impliedStrict: false,
       sourceType: "script",
       ecmaVersion: 5,
       childVisitorKeys: null,

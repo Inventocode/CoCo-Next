@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.FieldMultilineInput = void 0;
+exports.FieldMultilineInput = undefined;
 var r = require("tslib");
 var i = require("inversify");
 var o = require("../../125/index");
@@ -41,7 +41,7 @@ var a = function (e) {
         i = Math.max(i, l);
         var f = c[u];
         var d = c[u + 1];
-        var h = void 0 !== this.max_width && l >= this.max_width && void 0 !== c[u + 1];
+        var h = undefined !== this.max_width && l >= this.max_width && undefined !== c[u + 1];
         if ("\n" === f || h) {
           a = (0, o.create_svg_element)("tspan");
           this.text_element.appendChild(a);
@@ -65,10 +65,10 @@ var a = function (e) {
       p += this.padding_y;
       this.size_.height = p;
       this.size_.width = i + 2 * this.padding_x;
-      if (!(null === (e = this.border_rect) || void 0 === e)) {
+      if (!(null === (e = this.border_rect) || undefined === e)) {
         e.setAttribute("width", String(this.size_.width));
       }
-      if (!(null === (t = this.border_rect) || void 0 === t)) {
+      if (!(null === (t = this.border_rect) || undefined === t)) {
         t.setAttribute("height", String(this.size_.height));
       }
     } else {

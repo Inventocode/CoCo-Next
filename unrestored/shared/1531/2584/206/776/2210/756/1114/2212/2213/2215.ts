@@ -16,12 +16,12 @@
         case "public":
         case "static":
         case "let":
-          return !0;
+          return true;
         default:
-          return !1;
+          return false;
       }
     }(e)) {
-      return !0;
+      return true;
     }
     switch (e.length) {
       case 2:
@@ -41,7 +41,7 @@
       case 10:
         return "instanceof" === e;
       default:
-        return !1;
+        return false;
     }
   }
   function o(e, t) {
@@ -55,19 +55,19 @@
     var r;
     var i;
     if (0 === e.length) {
-      return !1;
+      return false;
     }
     i = e.charCodeAt(0);
     if (!t.isIdentifierStartES5(i)) {
-      return !1;
+      return false;
     }
     for (n = 1, r = e.length; n < r; ++n) {
       i = e.charCodeAt(n);
       if (!t.isIdentifierPartES5(i)) {
-        return !1;
+        return false;
       }
     }
-    return !0;
+    return true;
   }
   function c(e) {
     var n;
@@ -76,24 +76,24 @@
     var o;
     var a;
     if (0 === e.length) {
-      return !1;
+      return false;
     }
     for (a = t.isIdentifierStartES6, n = 0, r = e.length; n < r; ++n) {
       if (55296 <= (i = e.charCodeAt(n)) && i <= 56319) {
         if (++n >= r) {
-          return !1;
+          return false;
         }
         if (!(56320 <= (o = e.charCodeAt(n)) && o <= 57343)) {
-          return !1;
+          return false;
         }
         i = 1024 * (i - 55296) + (o - 56320) + 65536;
       }
       if (!a(i)) {
-        return !1;
+        return false;
       }
       a = t.isIdentifierPartES6;
     }
-    return !0;
+    return true;
   }
   module.exports = {
     isKeywordES5: r,

@@ -10,8 +10,8 @@ export { d as b };
 export { p as d };
 export { f as a };
 export { h as j };
-var r = require("./47");
-var o = require("./547");
+import r = require("./47");
+import o = require("./547");
 var i = "STYLE_DEFAULT_STYLE_ID";
 var a = {
   id: i,
@@ -19,20 +19,20 @@ var a = {
 };
 var s = 100;
 var c = .01;
-var l = !1;
-var u = !1;
+var l = false;
+var u = false;
 var d = 9999;
 var p = 10;
 var f = "ACTOR_ACTION";
 function h(e, t) {
   var n;
   var o;
-  var i = Object(r.a)(e);
+  var i = r.a(e);
   try {
     for (i.s(); !(o = i.n()).done;) {
       var s;
       var c = o.value;
-      var l = Object(r.a)(c.styleList);
+      var l = r.a(c.styleList);
       try {
         for (l.s(); !(s = l.n()).done;) {
           var u = s.value;

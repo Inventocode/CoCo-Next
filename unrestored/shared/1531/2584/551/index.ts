@@ -1,7 +1,7 @@
 "use strict";
 
-var r = require("../11");
-var o = require("react");
+import r = require("../11");
+import o = require("react");
 var i = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -14,7 +14,7 @@ var i = function __importDefault(module) {
   });
   return defaultExport;
 }(o);
-var a = require("../8");
+import a = require("../8");
 var s = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -27,7 +27,7 @@ var s = function __importDefault(module) {
   });
   return defaultExport;
 }(a);
-var c = require("../51/index");
+import c = require("color");
 var l = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -40,10 +40,10 @@ var l = function __importDefault(module) {
   });
   return defaultExport;
 }(c);
-var u = require("../5");
-var d = require("../90");
-var p = require("../147");
-var f = require("./246");
+import u = require("../5");
+import d = require("../90");
+import p = require("../147");
+import f = require("./246");
 var h = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -56,10 +56,10 @@ var h = function __importDefault(module) {
   });
   return defaultExport;
 }(f);
-var m = require("../6");
-var g = require("../15");
-var _ = require("../13/index");
-var v = require("../379");
+import m = require("../6");
+import g = require("../15");
+import _ = require("../13/index");
+import v = require("../379");
 var b = function (e) {
   var t = e.mode;
   var n = e.text;
@@ -70,7 +70,7 @@ var b = function (e) {
   var d = e.onClick;
   var f = e.sizeType;
   var b = e.disabled;
-  var y = Object(o.useRef)(null);
+  var y = o.useRef(null);
   var E = function (e) {
     var t = "";
     if ("correct" === e) {
@@ -88,24 +88,24 @@ var b = function (e) {
     var e = function (e, t) {
       return t === v.a.BUTTON ? {
         default: {
-          borderColor: Object(g.hb)(e, .8),
-          backgroundColor: Object(g.hb)(e, .2),
+          borderColor: g.hb(e, .8),
+          backgroundColor: g.hb(e, .2),
           color: "inherit"
         },
         selected: {
-          borderColor: Object(g.v)(e),
-          backgroundColor: Object(g.hb)(e, .4),
+          borderColor: g.v(e),
+          backgroundColor: g.hb(e, .4),
           color: "inherit"
         },
         correct: {
           color: p.c,
-          borderColor: Object(g.hb)(p.c, .8),
-          backgroundColor: Object(g.hb)(p.c, .1)
+          borderColor: g.hb(p.c, .8),
+          backgroundColor: g.hb(p.c, .1)
         },
         inCorrect: {
           color: p.f,
-          borderColor: Object(g.hb)(p.f, .8),
-          backgroundColor: Object(g.hb)(p.f, .1)
+          borderColor: g.hb(p.f, .8),
+          backgroundColor: g.hb(p.f, .1)
         },
         disabled: {
           borderColor: "#e6e6e6",
@@ -115,24 +115,24 @@ var b = function (e) {
       } : {
         default: {
           color: "inherit",
-          borderColor: Object(g.v)(e),
+          borderColor: g.v(e),
           borderWidth: 1
         },
         selected: {
           color: "inherit",
-          borderColor: Object(g.v)(e),
+          borderColor: g.v(e),
           borderWidth: 5
         },
         correct: {
-          borderColor: Object(g.v)(p.c),
-          color: Object(g.v)(p.c),
-          backgroundColor: Object(g.v)(p.c),
+          borderColor: g.v(p.c),
+          color: g.v(p.c),
+          backgroundColor: g.v(p.c),
           borderWidth: 1
         },
         inCorrect: {
-          borderColor: Object(g.v)(p.f),
-          color: Object(g.v)(p.f),
-          backgroundColor: Object(g.v)(p.f),
+          borderColor: g.v(p.f),
+          color: g.v(p.f),
+          backgroundColor: g.v(p.f),
           borderWidth: 1
         },
         disabled: {
@@ -160,7 +160,7 @@ var b = function (e) {
   }
   var C = p.g[f];
   return t === v.a.BUTTON ? i.a.createElement("button", {
-    style: Object(m.a)(Object(m.a)({}, O), {}, {
+    style: m.a(m.a({}, O), {}, {
       padding: C.optionPadding
     }),
     className: s()(h.a.buttonRadio, "radio-widget-button"),
@@ -173,24 +173,24 @@ var b = function (e) {
   }, n), i.a.createElement("div", {
     className: h.a.buttonRadioInner,
     style: {
-      color: null === O || void 0 === O ? void 0 : O.color,
+      color: null === O || undefined === O ? undefined : O.color,
       fontSize: C.iconFontSize
     }
   }, E)) : i.a.createElement("div", {
     style: {
-      color: null === O || void 0 === O ? void 0 : O.color
+      color: null === O || undefined === O ? undefined : O.color
     },
     className: h.a.defaultRadio,
     onClick: w
   }, i.a.createElement("div", {
     style: {
-      backgroundColor: null === O || void 0 === O ? void 0 : O.backgroundColor,
-      borderColor: null === O || void 0 === O ? void 0 : O.borderColor,
-      borderWidth: null === O || void 0 === O ? void 0 : O.borderWidth,
+      backgroundColor: null === O || undefined === O ? undefined : O.backgroundColor,
+      borderColor: null === O || undefined === O ? undefined : O.borderColor,
+      borderWidth: null === O || undefined === O ? undefined : O.borderWidth,
       width: C.innerSize,
       height: C.innerSize
     },
-    className: s()(h.a.inner, Object(r.a)({}, h.a.selected, a))
+    className: s()(h.a.inner, r.a({}, h.a.selected, a))
   }, E), i.a.createElement("p", {
     ref: y,
     style: {
@@ -227,7 +227,7 @@ _a = function (e) {
     "data-widget-type": u.C,
     "data-min-width": S.minWidth,
     "data-max-width": S.maxWidth,
-    className: s()(h.a.radioWidget, d.b, Object(r.a)({}, h.a.hide, !o)),
+    className: s()(h.a.radioWidget, d.b, r.a({}, h.a.hide, !o)),
     style: {
       top: n.y,
       left: n.x,
@@ -235,9 +235,9 @@ _a = function (e) {
       width: m.width,
       minWidth: "".concat(S.minWidth, "px"),
       maxWidth: "".concat(S.maxWidth, "px"),
-      opacity: void 0 === a ? void 0 : a / 100
+      opacity: undefined === a ? undefined : a / 100
     },
-    "data-lock-height": !0
+    "data-lock-height": true
   }, w && i.a.createElement("div", {
     className: h.a.headline,
     onClick: function (e) {

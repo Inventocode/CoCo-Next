@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.FieldButton = void 0;
+exports.FieldButton = undefined;
 var r = require("tslib");
 var i = require("inversify");
 var o = require("../../1001/213/index");
@@ -33,7 +33,7 @@ var c = function (e) {
       this.field_group = (0, a.create_svg_element)("g", {
         class: "fieldButton",
         cursor: "default"
-      }, void 0);
+      }, undefined);
       if (!this.visible_) {
         this.field_group.style.display = "none";
       }
@@ -72,7 +72,7 @@ var c = function (e) {
           "fill-opacity": 0
         }, this.field_group);
       }
-      if (void 0 == this.source_block) {
+      if (undefined == this.source_block) {
         throw new ReferenceError("Field should have source block when init.");
       }
       this.source_block.get_svg_root().appendChild(this.field_group);
@@ -91,7 +91,7 @@ var c = function (e) {
       } else {
         if (!(this.source_block.is_in_flyout || this.utils.is_right_button(e))) {
           if (t) {
-            t.update_is_mutation_click(!0);
+            t.update_is_mutation_click(true);
             t.handle_up(e);
           }
           if (this.click_handler_) {

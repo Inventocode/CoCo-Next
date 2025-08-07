@@ -3,8 +3,8 @@ module.exports = function (e, t) {
   try {
     Object.defineProperty(r, e, {
       value: t,
-      configurable: !0,
-      writable: !0
+      configurable: true,
+      writable: true
     });
   } catch (n) {
     r[e] = t;

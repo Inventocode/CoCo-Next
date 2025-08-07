@@ -1,19 +1,19 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.WidgetDiv = void 0;
+exports.WidgetDiv = undefined;
 var r = require("tslib");
 var i = require("inversify");
 var o = require("../../125/index");
 var a = require("../../125/714");
 var s = function () {
   function e() {
-    this.dispose_ = void 0;
+    this.dispose_ = undefined;
   }
   e.prototype.create_dom = function () {
-    if (void 0 == this.DIV) {
+    if (undefined == this.DIV) {
       this.DIV = (0, o.create_dom)("div", "blocklyWidgetDiv");
       document.body.appendChild(this.DIV);
     }
@@ -22,7 +22,7 @@ var s = function () {
     this.hide();
     this.owner_ = e;
     this.dispose_ = t;
-    if (void 0 != this.DIV) {
+    if (undefined != this.DIV) {
       var n = (0, a.get_viewport_page_offset)(document);
       this.DIV.style.top = n[1] + "px";
       this.DIV.style.direction = "ltr";
@@ -31,16 +31,16 @@ var s = function () {
   };
   e.prototype.hide = function () {
     if (this.is_visible()) {
-      this.owner_ = void 0;
+      this.owner_ = undefined;
       if (this.dispose_) {
         this.dispose_();
       }
-      this.dispose_ = void 0;
+      this.dispose_ = undefined;
       this.hide_and_clear_dom();
     }
   };
   e.prototype.hide_and_clear_dom = function () {
-    if (void 0 != this.DIV) {
+    if (undefined != this.DIV) {
       this.DIV.setAttribute("style", "display: none;");
       (0, o.remove_children)(this.DIV);
     }
@@ -66,7 +66,7 @@ var s = function () {
         e = r[0];
       }
     }
-    if (void 0 != this.DIV) {
+    if (undefined != this.DIV) {
       this.DIV.style.left = e + "px";
       this.DIV.style.top = t + "px";
       this.DIV.style.height = "0px";
@@ -93,7 +93,7 @@ var s = function () {
     return Math.max(o, e.left);
   };
   e.prototype.position_internal = function (e, t, n) {
-    if (void 0 != this.DIV) {
+    if (undefined != this.DIV) {
       this.DIV.style.left = e + "px";
       this.DIV.style.top = t + "px";
       this.DIV.style.height = n + "px";

@@ -9,17 +9,17 @@ if (!(a in s)) {
   o.f(s, a, {
     value: function (e) {
       if ("function" != typeof this || !r(e)) {
-        return !1;
+        return false;
       }
       if (!r(this.prototype)) {
         return e instanceof this;
       }
       for (; e = i(e);) {
         if (this.prototype === e) {
-          return !0;
+          return true;
         }
       }
-      return !1;
+      return false;
     }
   });
 }

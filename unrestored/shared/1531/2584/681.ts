@@ -14,4 +14,4 @@ var r = {
     errorMsg: "失败原因"
   }
 };
-var o = require("./540");
+import o = require("./540");

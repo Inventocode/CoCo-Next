@@ -97,7 +97,7 @@ var Menu = /*#__PURE__*/function (_React$Component) {
     Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_classCallCheck__.default)(this, Menu);
     _this = _super.call(this, props);
     Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Object(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default)(_this), "menu", null);
-    Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Object(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default)(_this), "subMenuHideParent", void 0);
+    Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Object(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default)(_this), "subMenuHideParent", undefined);
     Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Object(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default)(_this), "showMenu", function () {
       if (_this.menu) {
         _this.menu.style.display = 'block';
@@ -138,25 +138,25 @@ var Menu = /*#__PURE__*/function (_React$Component) {
     });
     Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Object(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default)(_this), "unregisterListeners", function (show) {
       var _this$menu;
-      if (!((_this$menu = _this.menu) !== null && _this$menu !== void 0 && _this$menu.parentElement)) {
+      if (!((_this$menu = _this.menu) !== null && _this$menu !== undefined && _this$menu.parentElement)) {
         return;
       }
       if (show === MenuListShowType.HOVER || show === MenuListShowType.CLICK || show === 'subMenu') {
         var _this$menu2;
         var _this$menu3;
         var _this$menu4;
-        if ((_this$menu2 = _this.menu) === null || _this$menu2 === void 0) {
-          void 0;
+        if ((_this$menu2 = _this.menu) === null || _this$menu2 === undefined) {
+          undefined;
         } else {
           _this$menu2.parentElement.removeEventListener('mouseenter', _this.showMenu);
         }
-        if ((_this$menu3 = _this.menu) === null || _this$menu3 === void 0) {
-          void 0;
+        if ((_this$menu3 = _this.menu) === null || _this$menu3 === undefined) {
+          undefined;
         } else {
           _this$menu3.parentElement.removeEventListener('mouseleave', _this.hideMenu);
         }
-        if ((_this$menu4 = _this.menu) === null || _this$menu4 === void 0) {
-          void 0;
+        if ((_this$menu4 = _this.menu) === null || _this$menu4 === undefined) {
+          undefined;
         } else {
           _this$menu4.parentElement.removeEventListener('click', _this.showMenu);
         }

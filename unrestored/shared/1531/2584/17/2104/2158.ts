@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.WorkspaceAudio = void 0;
+exports.WorkspaceAudio = undefined;
 var r = require("tslib");
 var i = require("inversify");
 var o = require("../../125/index");
@@ -11,7 +11,7 @@ var a = require("../../125/474");
 var s = require("../../4/127");
 var c = function () {
   function e(e) {
-    this.last_sound_ = void 0;
+    this.last_sound_ = undefined;
     this.SOUNDS_ = {};
     this.parent_workspace_ = e;
   }
@@ -41,12 +41,12 @@ var c = function () {
     var n = this.SOUNDS_[e];
     if (n) {
       var r = Date.now();
-      if (void 0 != this.last_sound_ && r - this.last_sound_ < this.theme.blink_params.SOUND_LIMIT) {
+      if (undefined != this.last_sound_ && r - this.last_sound_ < this.theme.blink_params.SOUND_LIMIT) {
         return;
       }
       this.last_sound_ = r;
-      var i = void 0;
-      (i = a.is.ie(9) || a.is.ipad() || a.is.android() ? n : (0, o.clone_node)(n)).volume = void 0 == t ? 1 : t;
+      var i = undefined;
+      (i = a.is.ie(9) || a.is.ipad() || a.is.android() ? n : (0, o.clone_node)(n)).volume = undefined == t ? 1 : t;
       var s = i.play();
       if (s) {
         s.catch(function (e) {
@@ -68,7 +68,7 @@ var c = function () {
       }
     }
   };
-  (0, r.__decorate)([(0, s.lazy_inject)(s.BINDING.theme)], e.prototype, "theme", void 0);
+  (0, r.__decorate)([(0, s.lazy_inject)(s.BINDING.theme)], e.prototype, "theme", undefined);
   return e = (0, r.__decorate)([(0, i.injectable)()], e);
 }();
 exports.WorkspaceAudio = c;

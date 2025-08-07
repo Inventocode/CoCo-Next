@@ -1,19 +1,19 @@
 "use strict";
 
 export { y as a };
-var r = require("../95");
-var i = require("../96");
-var o = require("../103");
-var a = require("../120");
-var s = require("../140");
-var c = require("react");
-var u = require("./1011");
-var l = require("./690");
-var f = require("./413");
+import r = require("../95");
+import i = require("../96");
+import o = require("../103");
+import a = require("../120");
+import s = require("../140");
+import c = require("react");
+import u = require("./1011");
+import l = require("./690");
+import f = require("./413");
 var d = 0;
 var h = {};
 function p(e) {
-  var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+  var t = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : 1;
   var n = d++;
   var r = t;
   function i() {
@@ -21,22 +21,22 @@ function p(e) {
       e();
       delete h[n];
     } else {
-      h[n] = Object(f.a)(i);
+      h[n] = f.a(i);
     }
   }
-  h[n] = Object(f.a)(i);
+  h[n] = f.a(i);
   return n;
 }
 p.cancel = function (e) {
-  if (void 0 !== e) {
+  if (undefined !== e) {
     f.a.cancel(h[e]);
     delete h[e];
   }
 };
 p.ids = h;
 var _;
-var A = require("../789");
-var g = require("../314");
+import A = require("../789");
+import g = require("../314");
 function v(e) {
   return !e || null === e.offsetParent || e.hidden;
 }
@@ -45,14 +45,14 @@ function m(e) {
   return !(t && t[1] && t[2] && t[3]) || !(t[1] === t[2] && t[2] === t[3]);
 }
 var y = function (e) {
-  Object(a.a)(n, e);
-  var t = Object(s.a)(n);
+  a.a(n, e);
+  var t = s.a(n);
   function n() {
     var e;
-    Object(r.a)(this, n);
+    r.a(this, n);
     (e = t.apply(this, arguments)).containerRef = c.createRef();
-    e.animationStart = !1;
-    e.destroyed = !1;
+    e.animationStart = false;
+    e.destroyed = false;
     e.onClick = function (t, n) {
       var r;
       var i;
@@ -60,16 +60,16 @@ var y = function (e) {
       var s = a.insertExtraNode;
       if (!(a.disabled || !t || v(t) || t.className.indexOf("-leave") >= 0)) {
         e.extraNode = document.createElement("div");
-        var c = Object(o.a)(e).extraNode;
+        var c = o.a(e).extraNode;
         var l = e.context.getPrefixCls;
         c.className = "".concat(l(""), "-click-animating-node");
         var f = e.getAttributeName();
         t.setAttribute(f, "true");
         if (n && "#ffffff" !== n && "rgb(255, 255, 255)" !== n && m(n) && !/rgba\((?:\d*, ){3}0\)/.test(n) && "transparent" !== n) {
           c.style.borderColor = n;
-          var d = (null === (r = t.getRootNode) || void 0 === r ? void 0 : r.call(t)) || t.ownerDocument;
-          var h = d instanceof Document ? d.body : null !== (i = d.firstChild) && void 0 !== i ? i : d;
-          _ = Object(u.a)("\n      [".concat(l(""), "-click-animating-without-extra-node='true']::after, .").concat(l(""), "-click-animating-node {\n        --antd-wave-shadow-color: ").concat(n, ";\n      }"), "antd-wave", {
+          var d = (null === (r = t.getRootNode) || undefined === r ? undefined : r.call(t)) || t.ownerDocument;
+          var h = d instanceof Document ? d.body : null !== (i = d.firstChild) && undefined !== i ? i : d;
+          _ = u.a("\n      [".concat(l(""), "-click-animating-without-extra-node='true']::after, .").concat(l(""), "-click-animating-node {\n        --antd-wave-shadow-color: ").concat(n, ";\n      }"), "antd-wave", {
             csp: e.csp,
             attachTo: h
           });
@@ -106,16 +106,16 @@ var y = function (e) {
               return e.onClick(t, r);
             }, 0);
             p.cancel(e.animationStartId);
-            e.animationStart = !0;
+            e.animationStart = true;
             e.animationStartId = p(function () {
-              e.animationStart = !1;
+              e.animationStart = false;
             }, 10);
           }
         };
-        t.addEventListener("click", n, !0);
+        t.addEventListener("click", n, true);
         return {
           cancel: function () {
-            t.removeEventListener("click", n, !0);
+            t.removeEventListener("click", n, true);
           }
         };
       }
@@ -128,16 +128,16 @@ var y = function (e) {
         return r;
       }
       var i = e.containerRef;
-      if (Object(l.c)(r)) {
-        i = Object(l.a)(r.ref, e.containerRef);
+      if (l.c(r)) {
+        i = l.a(r.ref, e.containerRef);
       }
-      return Object(g.a)(r, {
+      return g.a(r, {
         ref: i
       });
     };
     return e;
   }
-  Object(i.a)(n, [{
+  i.a(n, [{
     key: "componentDidMount",
     value: function () {
       var e = this.containerRef.current;
@@ -154,7 +154,7 @@ var y = function (e) {
       if (this.clickWaveTimeoutId) {
         clearTimeout(this.clickWaveTimeoutId);
       }
-      this.destroyed = !0;
+      this.destroyed = true;
     }
   }, {
     key: "getAttributeName",

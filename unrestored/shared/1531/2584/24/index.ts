@@ -2,7 +2,7 @@
 
 var r;
 var o;
-var i = require("../1/index");
+import i = require("regenerator-runtime");
 var a = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -15,31 +15,31 @@ var a = function __importDefault(module) {
   });
   return defaultExport;
 }(i);
-var s = require("../7");
-var c = require("../27");
-var l = require("../40");
-var u = require("ot-json1");
-var d = require("../15");
-var p = require("../38/66");
-var f = require("../31/index");
-var h = require("../389");
-var m = require("../23");
-var g = require("../2");
-var _ = require("../102");
-var v = require("../18");
-var b = require("../10/index");
-var y = require("../25/index");
-var E = require("../49/304");
-var O = require("../49/index");
-var w = require("../43");
-var C = require("../49/244");
+import s = require("../7");
+import c = require("../27");
+import l = require("../40");
+import u = require("ot-json1");
+import d = require("../15");
+import p = require("../38/66");
+import f = require("lodash");
+import h = require("../389");
+import m = require("../../../../../src/shared/language");
+import g = require("../2");
+import _ = require("../102");
+import v = require("../18");
+import b = require("../10/index");
+import y = require("../25/index");
+import E = require("../49/304");
+import O = require("../49/index");
+import w = require("../43");
+import C = require("../49/244");
 var T = function () {
   function e() {
-    Object(c.a)(this, e);
+    c.a(this, e);
     this._doc = null;
     this._previousDoc = null;
   }
-  Object(l.a)(e, [{
+  l.a(e, [{
     key: "setDoc",
     value: function (e) {
       this._previousDoc = this._doc;
@@ -66,13 +66,13 @@ var T = function () {
   }, {
     key: "onGetSnapShort",
     value: function (e) {
-      Object(w.f)(Object(f.cloneDeep)(e));
+      w.f(f.cloneDeep(e));
     }
   }, {
     key: "applyServerOp2IDE",
     value: function (e) {
       var t = this;
-      if (Object(C.c)(e)) {
+      if (C.c(e)) {
         e.forEach(function (e) {
           t.handleServerOp2IDE(e);
         });
@@ -89,32 +89,32 @@ var T = function () {
         this.setDoc(n);
         if ("blockly" !== e[0]) {
           var r = new Map();
-          var o = Object(C.b)(e);
+          var o = C.b(e);
           var i = o.picks;
           var a = o.drops;
           i.forEach(function (e) {
-            if (Object(C.f)(e.op)) {
-              r.set(e.op.p, Object(E.a)({
-                path: ["$"].concat(Object(y.a)(e.path)),
+            if (C.f(e.op)) {
+              r.set(e.op.p, E.a({
+                path: ["$"].concat(y.a(e.path)),
                 json: t._previousDoc
               })[0]);
             }
             Object.entries(O.oTHelper).forEach(function (t) {
-              var n = Object(b.a)(t, 2)[1];
+              var n = b.a(t, 2)[1];
               if (n && n.serverOp && n.serverOp.pick) {
                 n.serverOp.pick(e);
               }
             });
           });
           a.forEach(function (e) {
-            if (Object(C.d)(e.op)) {
+            if (C.d(e.op)) {
               var t = r.get(e.op.d);
               e.op = {
                 i: t
               };
             }
             Object.entries(O.oTHelper).forEach(function (t) {
-              var n = Object(b.a)(t, 2)[1];
+              var n = b.a(t, 2)[1];
               if (n && n.serverOp && n.serverOp.drop) {
                 n.serverOp.drop(e);
               }
@@ -122,7 +122,7 @@ var T = function () {
           });
         } else {
           var s;
-          if (!(null === (s = O.oTHelper.blink) || void 0 === s)) {
+          if (!(null === (s = O.oTHelper.blink) || undefined === s)) {
             s.serverOp.applyServerOp(e);
           }
         }
@@ -156,8 +156,8 @@ var F = "set_doc_relay";
 var G = "user_focus_on_pos";
 var U = "user_focus_on_pos_ack";
 var W = "user_focus_on_pos_relay";
-var H = require("../38/index");
-var V = require("socket.io-client");
+import H = require("../38/index");
+import V = require("socket.io-client");
 var z = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -173,22 +173,22 @@ var z = function __importDefault(module) {
 var Y = require("../59/index").a.oTSocketHost;
 var K = function () {
   function e(t, n) {
-    Object(c.a)(this, e);
-    this.subject = void 0;
-    this.client = void 0;
+    c.a(this, e);
+    this.subject = undefined;
+    this.client = undefined;
     this.subject = z()(Y, {
       path: "/collaborate/",
       query: {
         work_id: n,
         stag: 4
       },
-      upgrade: !1,
+      upgrade: false,
       transports: ["websocket"]
     });
     this.client = t;
     this.onSocketEvent(n);
   }
-  Object(l.a)(e, [{
+  l.a(e, [{
     key: "onSocketEvent",
     value: function (e) {
       var t = this;
@@ -245,7 +245,7 @@ var K = function () {
 }();
 var q = function () {
   function e() {
-    Object(c.a)(this, e);
+    c.a(this, e);
     this.applyClient = function (e, t) {
       e.sendOperation(e.revision, t);
       e.setState(new X(t));
@@ -257,7 +257,7 @@ var q = function () {
       return e;
     };
   }
-  Object(l.a)(e, [{
+  l.a(e, [{
     key: "applyServer",
     value: function (e, t) {
       e.setState(this);
@@ -273,11 +273,11 @@ var q = function () {
 }();
 var X = function () {
   function e(t) {
-    Object(c.a)(this, e);
-    this.outstanding = void 0;
+    c.a(this, e);
+    this.outstanding = undefined;
     this.outstanding = t;
   }
-  Object(l.a)(e, [{
+  l.a(e, [{
     key: "applyClient",
     value: function (e, t) {
       e.setState(new Q(this.outstanding, t));
@@ -311,13 +311,13 @@ var X = function () {
 }();
 var Q = function () {
   function e(t, n) {
-    Object(c.a)(this, e);
-    this.outstanding = void 0;
-    this.buffer = void 0;
+    c.a(this, e);
+    this.outstanding = undefined;
+    this.buffer = undefined;
     this.outstanding = t;
     this.buffer = n;
   }
-  Object(l.a)(e, [{
+  l.a(e, [{
     key: "applyClient",
     value: function (t, n) {
       var r = u.type.compose(this.buffer, n);
@@ -366,15 +366,15 @@ var Q = function () {
 var Z = function () {
   function e(t) {
     var n = this;
-    Object(c.a)(this, e);
-    this._socket = void 0;
-    this.revision = void 0;
-    this.adapter = void 0;
-    this.isSuccessfulCreateRoom = void 0;
-    this.state = void 0;
-    this.initDocData = void 0;
-    this._canRefreshUrl = !0;
-    this.socketSuc = void 0;
+    c.a(this, e);
+    this._socket = undefined;
+    this.revision = undefined;
+    this.adapter = undefined;
+    this.isSuccessfulCreateRoom = undefined;
+    this.state = undefined;
+    this.initDocData = undefined;
+    this._canRefreshUrl = true;
+    this.socketSuc = undefined;
     this.sendOperation = function (e, t) {
       n._socket.subject.emit(N, {
         revision: e,
@@ -399,12 +399,12 @@ var Z = function () {
     this._socket = new K(this, t);
     this.adapter = new T();
     this.state = new q();
-    this._canRefreshUrl = !0;
+    this._canRefreshUrl = true;
   }
-  Object(l.a)(e, [{
+  l.a(e, [{
     key: "disconnect",
     value: function () {
-      this._canRefreshUrl = !1;
+      this._canRefreshUrl = false;
       this._socket.subject.close();
     }
   }, {
@@ -427,7 +427,7 @@ var Z = function () {
     key: "applyClient",
     value: function (e) {
       console.info("======= apply Client=======", e);
-      e = Object(f.cloneDeep)(e);
+      e = f.cloneDeep(e);
       this.state.applyClient(this, e);
       this.adapter.applyOpFromIDE(e);
     }
@@ -479,19 +479,19 @@ var Z = function () {
   }, {
     key: "handleJoinAck",
     value: function () {
-      var e = Object(s.a)(a.a.mark(function e(t) {
+      var e = s.a(a.a.mark(function e(t) {
         var n;
         var r;
         return a.a.wrap(function (e) {
           for (;;) {
             switch (e.prev = e.next) {
               case 0:
-                if (n = t.code, r = t.data, this.initDocData = void 0, 20000002 !== n) {
+                if (n = t.code, r = t.data, this.initDocData = undefined, 20000002 !== n) {
                   e.next = 9;
                   break;
                 }
                 e.next = 5;
-                return Object(w.b)();
+                return w.b();
               case 5:
                 this.initDocData = e.sent;
                 this._socket.subject.emit(S, {
@@ -549,7 +549,7 @@ var Z = function () {
     key: "_distributeUserColor",
     value: function (e) {
       var t;
-      var n = Object(w.c)();
+      var n = w.c();
       Object.keys(n).forEach(function (t) {
         if (!e.some(function (e) {
           return e.id === Number(t);
@@ -566,10 +566,10 @@ var Z = function () {
         }(r);
         r.push(n[e.id]);
       });
-      if (!(null === (t = O.oTHelper.customEvent) || void 0 === t)) {
+      if (!(null === (t = O.oTHelper.customEvent) || undefined === t)) {
         t.emit.userColors(n);
       }
-      Object(H.a)(Object(_.t)(n));
+      H.a(_.t(n));
     }
   }, {
     key: "handleServerUserStatusChanged",
@@ -577,16 +577,16 @@ var Z = function () {
       var t;
       this._distributeUserColor(e);
       this._updateUserFocusInfoList(e);
-      Object(H.a)(Object(_.l)(e));
-      if (!(null === (t = O.oTHelper.customEvent) || void 0 === t)) {
+      H.a(_.l(e));
+      if (!(null === (t = O.oTHelper.customEvent) || undefined === t)) {
         t.emit.focusItem("widget");
       }
     }
   }, {
     key: "_updateUserFocusInfoList",
     value: function (e) {
-      var t = Object(w.d)();
-      Object(H.a)(Object(_.v)(p.a.List(t.filter(function (t) {
+      var t = w.d();
+      H.a(_.v(p.a.List(t.filter(function (t) {
         return e.some(function (e) {
           return e.id === t.userId;
         });
@@ -605,54 +605,54 @@ var Z = function () {
           edit_permission: e.edit_permission
         });
       });
-      Object(H.a)(Object(_.s)(t));
+      H.a(_.s(t));
     }
   }, {
     key: "handleUserEliminated",
     value: function (e) {
-      var t = Object(H.b)();
+      var t = H.b();
       this.disconnect();
-      Object(H.a)(Object(g.zh)({
+      H.a(g.zh({
         onConfirm: function () {
-          Object(H.a)(Object(g.Gf)());
+          H.a(g.Gf());
         },
-        allowText: Object(m.c)(t, "confirm").toString(),
+        allowText: m.c(t, "confirm").toString(),
         onClose: function () {
-          Object(H.a)(Object(g.Gf)());
+          H.a(g.Gf());
         },
-        title: Object(m.c)(t, e === o.ProjectRemove ? "OT.currentProjectBeDeleteTitle" : "OT.editPermissionLostTitle").toString(),
-        content: Object(m.c)(t, e === o.ProjectRemove ? "OT.currentProjectBeDeleteDescription" : "OT.editPermissionLostDescription").toString(),
-        cancelBtnVisible: !1
+        title: m.c(t, e === o.ProjectRemove ? "OT.currentProjectBeDeleteTitle" : "OT.editPermissionLostTitle").toString(),
+        content: m.c(t, e === o.ProjectRemove ? "OT.currentProjectBeDeleteDescription" : "OT.editPermissionLostDescription").toString(),
+        cancelBtnVisible: false
       }));
     }
   }, {
     key: "handleCustomEventRelay",
     value: function (e) {
       var t;
-      if (!(null === (t = O.oTHelper.customEvent) || void 0 === t)) {
+      if (!(null === (t = O.oTHelper.customEvent) || undefined === t)) {
         t.accept(e);
       }
     }
   }, {
     key: "handleSetCollAutoSave",
     value: function () {
-      Object(H.a)(Object(g.di)(!0));
+      H.a(g.di(true));
     }
   }, {
     key: "handleUserPermissionChange",
     value: function (e) {
       var t;
-      var n = Object(H.b)();
-      var r = e.edit_permission === v.c.ReadOnly ? Object(m.c)(n, "OT.permissionChangeToReadOnly").toString() : Object(m.c)(n, "OT.permissionChangeToEdit").toString();
-      var o = null === (t = H.d.getState().common.userInfo) || void 0 === t ? void 0 : t.id;
+      var n = H.b();
+      var r = e.edit_permission === v.c.ReadOnly ? m.c(n, "OT.permissionChangeToReadOnly").toString() : m.c(n, "OT.permissionChangeToEdit").toString();
+      var o = null === (t = H.d.getState().common.userInfo) || undefined === t ? undefined : t.id;
       var i = e.coll_user_id;
       if (o === i) {
-        Object(H.a)(Object(g.mj)({
-          visible: !0,
+        H.a(g.mj({
+          visible: true,
           message: r,
           duration: 2e3
         }));
-        Object(H.a)(Object(g.Ci)(e.edit_permission === v.c.ReadOnly ? v.c.ReadOnly : v.c.Edit));
+        H.a(g.Ci(e.edit_permission === v.c.ReadOnly ? v.c.ReadOnly : v.c.Edit));
       }
       var a = Array.from(H.d.getState().oTState.cooperationUserList);
       var s = a.find(function (e) {
@@ -661,18 +661,18 @@ var Z = function () {
       if (s) {
         s.edit_permission = e.edit_permission;
       }
-      Object(H.a)(Object(_.s)(a));
+      H.a(_.s(a));
     }
   }, {
     key: "forceSetDoc",
     value: function () {
-      var e = Object(s.a)(a.a.mark(function e() {
+      var e = s.a(a.a.mark(function e() {
         return a.a.wrap(function (e) {
           for (;;) {
             switch (e.prev = e.next) {
               case 0:
                 e.next = 2;
-                return Object(w.b)();
+                return w.b();
               case 2:
                 this.initDocData = e.sent;
                 this.adapter.setDoc(this.initDocData);
@@ -697,12 +697,12 @@ var Z = function () {
     key: "collSetDoc",
     value: function (e) {
       if (e.business_type === r.RevertProject) {
-        var t = Object(H.b)();
-        Object(H.a)(Object(g.zh)({
-          allowText: Object(m.c)(t, "confirm").toString(),
-          title: Object(m.c)(t, "OT.tips").toString(),
-          content: Object(m.c)(t, "OT.revert").toString(),
-          cancelBtnVisible: !1
+        var t = H.b();
+        H.a(g.zh({
+          allowText: m.c(t, "confirm").toString(),
+          title: m.c(t, "OT.tips").toString(),
+          content: m.c(t, "OT.revert").toString(),
+          cancelBtnVisible: false
         }));
       }
       this.initDocData = e.doc;
@@ -712,18 +712,18 @@ var Z = function () {
   }]);
   return e;
 }();
-var J = require("../49/377/index");
+import J = require("../49/377/index");
 var $ = new (function () {
   function e() {
-    Object(c.a)(this, e);
-    this.client = void 0;
-    this.workerId = void 0;
+    c.a(this, e);
+    this.client = undefined;
+    this.workerId = undefined;
     this.workerId = "";
   }
-  Object(l.a)(e, [{
+  l.a(e, [{
     key: "init",
     value: function () {
-      var e = Object(s.a)(a.a.mark(function e(t) {
+      var e = s.a(a.a.mark(function e(t) {
         return a.a.wrap(function (e) {
           for (;;) {
             switch (e.prev = e.next) {
@@ -759,13 +759,13 @@ var $ = new (function () {
   }, {
     key: "reconnect",
     value: function () {
-      var e = Object(s.a)(a.a.mark(function e() {
+      var e = s.a(a.a.mark(function e() {
         return a.a.wrap(function (e) {
           for (;;) {
             switch (e.prev = e.next) {
               case 0:
                 e.next = 2;
-                return Object(d.lb)(500);
+                return d.lb(500);
               case 2:
                 this.disconnect();
                 e.next = 5;
@@ -784,16 +784,16 @@ var $ = new (function () {
   }, {
     key: "disconnect",
     value: function () {
-      var e = Object(s.a)(a.a.mark(function e() {
+      var e = s.a(a.a.mark(function e() {
         var t;
         return a.a.wrap(function (e) {
           for (;;) {
             switch (e.prev = e.next) {
               case 0:
-                if (!(null === (t = this.client) || void 0 === t)) {
+                if (!(null === (t = this.client) || undefined === t)) {
                   t.disconnect();
                 }
-                this.client = void 0;
+                this.client = undefined;
                 J.blinkOTAdapter.stop();
                 O.oTHelper.dispose();
               case 4:
@@ -811,7 +811,7 @@ var $ = new (function () {
     key: "applyClient",
     value: function (e) {
       var t;
-      if (!(null === (t = this.client) || void 0 === t)) {
+      if (!(null === (t = this.client) || undefined === t)) {
         t.applyClient(e);
       }
     }
@@ -820,14 +820,14 @@ var $ = new (function () {
     value: function () {
       var e;
       var t;
-      return null === (e = this.client) || void 0 === e || null === (t = e.adapter) || void 0 === t ? void 0 : t.getDoc();
+      return null === (e = this.client) || undefined === e || null === (t = e.adapter) || undefined === t ? undefined : t.getDoc();
     }
   }, {
     key: "getPreviousDoc",
     value: function () {
       var e;
       var t;
-      return null === (e = this.client) || void 0 === e || null === (t = e.adapter) || void 0 === t ? void 0 : t.getPreviousDoc();
+      return null === (e = this.client) || undefined === e || null === (t = e.adapter) || undefined === t ? undefined : t.getPreviousDoc();
     }
   }]);
   return e;

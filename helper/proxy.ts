@@ -1,3 +1,9 @@
+interface Window {
+    SLIGHTNING_CODEMAO_ENVIRONMENT_XML_HTTP_REQUEST?: boolean
+    SLIGHTNING_CODEMAO_ENVIRONMENT_FETCH?: boolean
+    SLIGHTNING_CODEMAO_ENVIRONMENT_WEB_SOCKET?: boolean
+}
+
 function proxyXMLHttpRequest(): void {
     let originalOpen: typeof XMLHttpRequest.prototype.open = XMLHttpRequest.prototype.open
     XMLHttpRequest.prototype.open = function open(
@@ -17,6 +23,7 @@ function proxyXMLHttpRequest(): void {
         }
     }
     XMLHttpRequest.prototype.open.toString = originalOpen.toString.bind(originalOpen)
+    window.SLIGHTNING_CODEMAO_ENVIRONMENT_XML_HTTP_REQUEST = true
 }
 
 function proxyFetch(): void {
@@ -37,6 +44,7 @@ function proxyFetch(): void {
         return originalFetch.call(this, input, init)
     }
     fetch.toString = originalFetch.toString.bind(originalFetch)
+    window.SLIGHTNING_CODEMAO_ENVIRONMENT_FETCH = true
 }
 
 function proxyWebSocket(): void {
@@ -51,6 +59,7 @@ function proxyWebSocket(): void {
             super(url, protocols)
         }
     }
+    window.SLIGHTNING_CODEMAO_ENVIRONMENT_WEB_SOCKET = true
 }
 
 function needsProxy(url: URL): boolean {

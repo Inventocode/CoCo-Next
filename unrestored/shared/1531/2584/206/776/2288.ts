@@ -7,9 +7,9 @@
   var r = !!Object({
     NODE_ENV: "production",
     PUBLIC_URL: "",
-    WDS_SOCKET_HOST: void 0,
-    WDS_SOCKET_PATH: void 0,
-    WDS_SOCKET_PORT: void 0
+    WDS_SOCKET_HOST: undefined,
+    WDS_SOCKET_PATH: undefined,
+    WDS_SOCKET_PORT: undefined
   }).TIMING;
   var i = ["Rule", "Time (ms)", "Relative"];
   var o = [function (e, t, n) {
@@ -62,7 +62,7 @@
         }
         return function () {
           var i = t.hrtime();
-          r.apply(void 0, arguments);
+          r.apply(undefined, arguments);
           i = t.hrtime(i);
           e[n] += 1e3 * i[0] + i[1] / 1e6;
         };

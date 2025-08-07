@@ -15,4 +15,4 @@ var r = {
     onContactPickerSelected: "完成选择"
   }
 };
-var o = require("./476");
+import o = require("./476");

@@ -14,11 +14,11 @@ var i = "http://www.w3.org/2000/svg";
     var a = r.QRCodeDecoderErrorCorrectionLevel.L;
     var s = t.QUIET_ZONE_SIZE;
     if (o) {
-      if (void 0 !== o.get(r.EncodeHintType.ERROR_CORRECTION)) {
+      if (undefined !== o.get(r.EncodeHintType.ERROR_CORRECTION)) {
         var u = o.get(r.EncodeHintType.ERROR_CORRECTION).toString();
         a = r.QRCodeDecoderErrorCorrectionLevel.fromString(u);
       }
-      if (void 0 !== o.get(r.EncodeHintType.MARGIN)) {
+      if (undefined !== o.get(r.EncodeHintType.MARGIN)) {
         s = Number.parseInt(o.get(r.EncodeHintType.MARGIN).toString(), 10);
       }
     }

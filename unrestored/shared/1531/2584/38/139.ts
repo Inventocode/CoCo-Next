@@ -3,10 +3,10 @@
 export { r as a };
 export { c as b };
 var r;
-var o = require("../27");
-var i = require("../57/index");
-var a = require("../58/index");
-var s = require("../197/276");
+import o = require("../27");
+import i = require("../57/index");
+import a = require("../58/index");
+import s = require("../197/276");
 !function (e) {
   e.NO_UNDEF = "NO_UNDEF";
   e.NO_RETURN_FUNCTION = "NO_RETURN_FUNCTION";
@@ -19,15 +19,15 @@ var s = require("../197/276");
   e.PARAM_NOT_IN_CONTEXT = "PARAM_NOT_IN_CONTEXT";
 }(r || (r = {}));
 var c = function (e) {
-  Object(i.a)(n, e);
-  var t = Object(a.a)(n);
+  i.a(n, e);
+  var t = a.a(n);
   function n(e, r, i, a, s) {
     var c;
-    Object(o.a)(this, n);
-    (c = t.call(this, e)).type = void 0;
-    c.blockId = void 0;
-    c.screenId = void 0;
-    c.data = void 0;
+    o.a(this, n);
+    (c = t.call(this, e)).type = undefined;
+    c.blockId = undefined;
+    c.screenId = undefined;
+    c.data = undefined;
     c.type = e;
     c.blockId = i;
     c.screenId = r;
@@ -36,5 +36,5 @@ var c = function (e) {
     return c;
   }
   return n;
-}(Object(s.a)(Error));
+}(s.a(Error));
 export default r;

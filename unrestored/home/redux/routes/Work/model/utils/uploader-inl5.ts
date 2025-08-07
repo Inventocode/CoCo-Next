@@ -110,7 +110,7 @@ function getFileExtension(fileName) {
 }
 function uploadFileToCdn(file) {
   var fileType = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'IMAGE';
-  return __awaiter(this, void 0, void 0, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.mark(function _callee() {
+  return __awaiter(this, undefined, undefined, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.mark(function _callee() {
     var fileName;
     var result;
     return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.wrap(function _callee$(_context) {
@@ -147,7 +147,7 @@ function uploadFileToCdn(file) {
   }));
 }
 function uploadProjectJsonToCdn(content) {
-  return __awaiter(this, void 0, void 0, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.mark(function _callee2() {
+  return __awaiter(this, undefined, undefined, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.mark(function _callee2() {
     var blob;
     var file;
     var result;

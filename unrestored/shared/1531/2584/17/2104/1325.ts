@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.BlockSvg = void 0;
+exports.BlockSvg = undefined;
 var r = require("tslib");
 var i = require("@kitten-team/gl-matrix");
 var o = require("../../4/127");
@@ -30,59 +30,59 @@ var g = function (e) {
     r.svg_path_width = 0;
     r.first_row_width = 0;
     r.first_row_height = 0;
-    r.event_initialized = !1;
-    r.warning = void 0;
-    r.output_connection = void 0;
-    r.previous_connection = void 0;
-    r.next_connection = void 0;
-    r.is_shadow_ = !1;
+    r.event_initialized = false;
+    r.warning = undefined;
+    r.output_connection = undefined;
+    r.previous_connection = undefined;
+    r.next_connection = undefined;
+    r.is_shadow_ = false;
     r.child_blocks = [];
-    r.collapsed_ = !1;
-    r.collapsed_dirty = !1;
-    r._is_insertion_marker = !1;
+    r.collapsed_ = false;
+    r.collapsed_dirty = false;
+    r._is_insertion_marker = false;
     r.getInput = r.get_input;
     r.get_inherited_disabled = function () {
       for (var e = r.get_surround_parent(); e;) {
         if (e.disabled) {
-          return !0;
+          return true;
         }
         e = e.get_surround_parent();
       }
-      return !1;
+      return false;
     };
     r.get_root_block = r.get_top_parent;
     r.getFieldValue = r.get_field_value;
     r.jsonInit = function (e) {
       var t = (0, f.clone_deep)(e);
       var n = t.type ? "Block \"" + t.type + "\": " : "";
-      (0, c.assert)(void 0 == t.output || void 0 == t.previousStatement, n + "Must not have both an output and a previousStatement.");
-      if (void 0 != t.colour) {
+      (0, c.assert)(undefined == t.output || undefined == t.previousStatement, n + "Must not have both an output and a previousStatement.");
+      if (undefined != t.colour) {
         r.set_colour_from_json(t);
       }
-      for (var i = 0, o = t["message" + i]; void 0 != o;) {
+      for (var i = 0, o = t["message" + i]; undefined != o;) {
         var a = t["args" + i];
         var s = t["lastDummyAlign" + i];
         r.interpolate_(o, a || [], s);
         o = t["message" + ++i];
       }
-      if (void 0 != t.inputsInline) {
+      if (undefined != t.inputsInline) {
         r.inputs_inline = t.inputsInline;
       }
-      if (void 0 !== t.output) {
-        var u = !0 === t.output ? void 0 : t.output;
-        r.set_output(!0, u, t.required_context);
+      if (undefined !== t.output) {
+        var u = true === t.output ? undefined : t.output;
+        r.set_output(true, u, t.required_context);
       }
-      if (void 0 !== t.previousStatement) {
-        r.set_previous_statement(!0);
+      if (undefined !== t.previousStatement) {
+        r.set_previous_statement(true);
       }
-      if (void 0 !== t.nextStatement) {
-        r.set_next_statement(!0);
+      if (undefined !== t.nextStatement) {
+        r.set_next_statement(true);
       }
-      if (void 0 != t.enableContextMenu) {
+      if (undefined != t.enableContextMenu) {
         var l = t.enableContextMenu;
         r.enable_context_menu = !!l;
       }
-      if (void 0 != t.helpUrl) {
+      if (undefined != t.helpUrl) {
         l = t.helpUrl;
         var d = r.utils.replace_message_references(l);
         r.set_help_url(d);
@@ -90,12 +90,12 @@ var g = function (e) {
       if ((0, f.is_string)(t.extensions)) {
         console.error("\n        JSON attribute \"extensions\" should be an array of strings.\n        Found raw string in JSON for \"" + t.type + "\" block.\n      ");
       }
-      if (void 0 != t.tooltip) {
+      if (undefined != t.tooltip) {
         l = t.tooltip;
         d = r.utils.replace_message_references(l);
         r.set_tooltip(d);
       }
-      if (void 0 != t.mutator) {
+      if (undefined != t.mutator) {
         r.extensions.apply_mutator(t.mutator, r);
       }
       if (Array.isArray(t.extensions)) {
@@ -103,10 +103,10 @@ var g = function (e) {
           r.extensions.apply(h[p], r);
         }
       }
-      if (void 0 != t.outputShape) {
+      if (undefined != t.outputShape) {
         r.set_output_shape(t.outputShape);
       }
-      if (void 0 != t.category) {
+      if (undefined != t.category) {
         r.set_category(t.category);
       }
       if (t.context_menu) {
@@ -115,33 +115,33 @@ var g = function (e) {
     };
     r.appendDummyInput = r.append_dummy_input;
     r.context_menu_options_setting = r.workspace.options.context_menu.block;
-    r.prevent_disable_style_change = !1;
-    r.is_glowing_stack = !1;
-    r.is_flashing = !1;
+    r.prevent_disable_style_change = false;
+    r.is_glowing_stack = false;
+    r.is_flashing = false;
     r.removeInput = r.remove_input;
     r.visibility_ = a.BlockVisibility.VISIBLE;
-    r.visibility_for_undo = void 0;
-    r.connectable_ = !0;
+    r.visibility_for_undo = undefined;
+    r.connectable_ = true;
     r.opacity = 1;
-    r.category_ = void 0;
-    r.output_shape = void 0;
+    r.category_ = undefined;
+    r.output_shape = undefined;
     r.help_url = "";
     r.colour_ = r.theme.block_color.DEFAULT.fill;
     r.border_colour = r.theme.block_color.DEFAULT.border;
     var i = t.workspace;
     var o = t.prototype_name;
     if (o) {
-      if (!(null === (n = r.svg_group) || void 0 === n)) {
+      if (!(null === (n = r.svg_group) || undefined === n)) {
         n.classList.add(o);
       }
     }
     r.id = t.id && !i.get_block_by_id(t.id) ? t.id : (0, u.gen_uid)();
     r._is_insertion_marker = !!t.is_insertion_marker;
-    r.enable_context_menu = !0;
+    r.enable_context_menu = true;
     if (o) {
       r.type = o;
       var s = r.Blink.Blocks[o];
-      if (void 0 == s) {
+      if (undefined == s) {
         throw new Error("Error: Unknown block type " + o + ".");
       }
       Object.assign(r, s);
@@ -149,7 +149,7 @@ var g = function (e) {
     r.inputs_inline_default = r.inputs_inline;
     i.blockDB_.set(r.id, r);
     i.add_top_block(r);
-    var d = void 0;
+    var d = undefined;
     if (r.events.is_enabled()) {
       d = r.create_event_factory({
         block: r
@@ -158,7 +158,7 @@ var g = function (e) {
     r.svg_path = (0, l.create_svg_element)("path", {
       class: "blocklyPath"
     }, r.svg_group);
-    r.rendered = !1;
+    r.rendered = false;
     if (r.Blink.mainWorkspace.options.tooltip) {
       r.svg_path.tooltip = function () {
         return (0, f.is_func)(r.tooltip) ? r.tooltip() : r.tooltip;
@@ -182,10 +182,10 @@ var g = function (e) {
       return this._onchange;
     },
     set: function (e) {
-      this._onchange = null === e || void 0 === e ? void 0 : e.bind(this);
+      this._onchange = null === e || undefined === e ? undefined : e.bind(this);
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   t.prototype.render = function (e) {
     console.warn("\n      why: opt_bubble " + e + "\n    ");
@@ -197,10 +197,10 @@ var g = function (e) {
     return this.previous_connection && this.previous_connection.targetBlock();
   };
   t.prototype.is_starting_block = function () {
-    return void 0 == this.output_connection && void 0 == this.previous_connection && "factory_base" !== this.type;
+    return undefined == this.output_connection && undefined == this.previous_connection && "factory_base" !== this.type;
   };
   t.prototype.is_ending_block = function () {
-    return void 0 == this.next_connection && void 0 == this.output_connection && void 0 != this.previous_connection;
+    return undefined == this.next_connection && undefined == this.output_connection && undefined != this.previous_connection;
   };
   t.prototype.is_output_block = function () {
     return !this.previous_connection && !this.next_connection && !this.is_shadow() && !!this.output_connection;
@@ -251,12 +251,12 @@ var g = function (e) {
     return this.collapsed_;
   };
   t.prototype.set_collapsed = function (e, t) {
-    if (void 0 === t) {
-      t = !1;
+    if (undefined === t) {
+      t = false;
     }
     var n = this.is_collapsed();
     if (n != e || t) {
-      this.collapsed_dirty = !0;
+      this.collapsed_dirty = true;
       this.collapsed_ = e;
       if (this.events.is_enabled() && n !== e) {
         this.events.fire(this.change_event_factory("collapsed", {
@@ -266,7 +266,7 @@ var g = function (e) {
         }));
       }
       if (t) {
-        for (var r = this.get_top_parent().get_descendants(!0, !0), i = r.length - 1; i >= 0; i--) {
+        for (var r = this.get_top_parent().get_descendants(true, true), i = r.length - 1; i >= 0; i--) {
           r[i].update_collapsed(t);
         }
       } else if (this.rendered) {
@@ -278,11 +278,11 @@ var g = function (e) {
     var n;
     var r;
     var i = this;
-    if (void 0 === t) {
+    if (undefined === t) {
       t = {};
     }
     this.events.disable();
-    var o = (null === (r = null === (n = this.workspace.options.block_group) || void 0 === n ? void 0 : n.get_default_name) || void 0 === r ? void 0 : r.bind(this, this)) || this.to_string.bind(this);
+    var o = (null === (r = null === (n = this.workspace.options.block_group) || undefined === n ? undefined : n.get_default_name) || undefined === r ? undefined : r.bind(this, this)) || this.to_string.bind(this);
     var a = this.block_group_factory({
       workspace: this.workspace,
       origin_block: this,
@@ -293,9 +293,9 @@ var g = function (e) {
         i.events.fire(i.change_event_factory("group_block", {
           block: i,
           old_value: [i.parent_group.id, i.parent_group.group_name, i.parent_group.group_stop_at || ""],
-          new_value: void 0
+          new_value: undefined
         }));
-        i.parent_group = void 0;
+        i.parent_group = undefined;
       },
       origin_xy: t.origin_xy,
       group_stop_at: t.group_stop_at
@@ -307,18 +307,18 @@ var g = function (e) {
     if (this.events.is_enabled()) {
       this.events.fire(this.change_event_factory("group_block", {
         block: this,
-        old_value: void 0,
+        old_value: undefined,
         new_value: [this.parent_group.id, this.parent_group.group_name, this.parent_group.group_stop_at || ""]
       }));
     }
   };
   t.prototype.update_collapsed = function (e) {
-    if (void 0 === e) {
-      e = !1;
+    if (undefined === e) {
+      e = false;
     }
     if (this.collapsed_dirty || e) {
       var t = this.rendered;
-      this.rendered = !1;
+      this.rendered = false;
       for (var n = 0; n < this.inputList.length; n++) {
         this.inputList[n].set_visible(!this.collapsed_);
       }
@@ -338,21 +338,21 @@ var g = function (e) {
       }
       if (this.collapsed_) {
         if (this.warning) {
-          this.warning.set_expanded(!1);
+          this.warning.set_expanded(false);
         }
         if (e) {
-          this.remove_input(s.COLLAPSED_INPUT_NAME, !0);
+          this.remove_input(s.COLLAPSED_INPUT_NAME, true);
         }
         var i = this.to_string(this.theme.blink_params.COLLAPSE_CHARS);
         this.append_dummy_input(s.COLLAPSED_INPUT_NAME).append_field(i).init();
       } else {
-        this.remove_input(s.COLLAPSED_INPUT_NAME, !0);
+        this.remove_input(s.COLLAPSED_INPUT_NAME, true);
       }
       this.rendered = t;
       if (t || e) {
         this.render();
       }
-      this.collapsed_dirty = !1;
+      this.collapsed_dirty = false;
     }
   };
   t.prototype.set_comment_visible = function (e) {
@@ -369,7 +369,7 @@ var g = function (e) {
   t.prototype.set_visible_as_child = function (e) {
     this.rendered = e;
     this.get_svg_root().style.display = e ? "block" : "none";
-    this.get_descendants(!1, !0).forEach(function (t) {
+    this.get_descendants(false, true).forEach(function (t) {
       var n = e && !t.is_collapsed() && !t.get_collapsed_surround_parent();
       t.set_comment_visible(n);
     });
@@ -414,7 +414,7 @@ var g = function (e) {
       if (i) {
         i.connect(r);
       }
-      r.set_hidden(!0);
+      r.set_hidden(true);
     }
     return n;
   };
@@ -432,7 +432,7 @@ var g = function (e) {
         if (i[c]) {
           throw new Error("Block \"" + this.type + "\": Message index %" + c + " duplicated.");
         }
-        i[c] = !0;
+        i[c] = true;
         o++;
         a.push(t[c - 1]);
       } else if (c = c.trim()) {
@@ -459,8 +459,8 @@ var g = function (e) {
     for (s = 0; s < a.length; s++) {
       var d = a[s];
       if ("string" != typeof d) {
-        var h = void 0;
-        var p = void 0;
+        var h = undefined;
+        var p = undefined;
         if ("string" != typeof d) {
           if (d.custom) {
             h = this.init_custom_field(d);
@@ -471,10 +471,10 @@ var g = function (e) {
                 p = this.append_shadow_input_json(d.name, d.field_type, d.default_text);
                 break;
               case "input_value":
-                p = this.append_value_input(d.name, void 0, void 0, d.default_shadow);
+                p = this.append_value_input(d.name, undefined, undefined, d.default_shadow);
                 break;
               case "input_statement":
-                p = this.append_statement_input(d.name, void 0, d.provided_context);
+                p = this.append_statement_input(d.name, undefined, d.provided_context);
                 break;
               case "input_dummy":
                 p = this.append_dummy_input(d.name);
@@ -551,10 +551,10 @@ var g = function (e) {
                 });
                 break;
               case "mutation_add_button":
-                h = this.mutation_add_factory(void 0);
+                h = this.mutation_add_factory(undefined);
                 break;
               case "mutation_remove_button":
-                h = this.mutation_remove_factory(void 0);
+                h = this.mutation_remove_factory(undefined);
                 break;
               case "field_number":
                 h = this.field_number_factory({
@@ -578,7 +578,7 @@ var g = function (e) {
                 h = this.init_custom_field(d);
             }
             if (h) {
-              if (void 0 !== d.margin_left) {
+              if (undefined !== d.margin_left) {
                 h.margin_left = d.margin_left;
               }
               f.push([h, d.name]);
@@ -586,7 +586,7 @@ var g = function (e) {
               if (d.check) {
                 p.set_check(d.check);
               }
-              if (void 0 !== d.margin_left) {
+              if (undefined !== d.margin_left) {
                 p.margin_left = d.margin_left;
               }
               for (var w = 0; w < f.length; w++) {
@@ -601,7 +601,7 @@ var g = function (e) {
           });
         }
       } else {
-        f.push([d, void 0]);
+        f.push([d, undefined]);
       }
     }
   };
@@ -633,7 +633,7 @@ var g = function (e) {
     }
   };
   t.prototype.set_disabled = function (e) {
-    var t = void 0;
+    var t = undefined;
     if (this.disabled !== e) {
       if (this.events.is_enabled()) {
         t = this.change_event_factory("disabled", {
@@ -674,7 +674,7 @@ var g = function (e) {
         }
       }
     } else {
-      for (var t = this.get_connections(!0), n = 0; n < t.length; n++) {
+      for (var t = this.get_connections(true), n = 0; n < t.length; n++) {
         var r;
         var i = t[n];
         i.set_hidden(e);
@@ -698,7 +698,7 @@ var g = function (e) {
     return t;
   };
   t.prototype.get_top_group = function () {
-    for (var e = this, t = void 0; e;) {
+    for (var e = this, t = undefined; e;) {
       if (e.parent_group) {
         e = t = e.parent_group;
       }
@@ -763,8 +763,8 @@ var g = function (e) {
     }
   };
   t.prototype.get_matching_connection = function (e, t) {
-    var n = this.get_connections(!0);
-    var r = e.get_connections(!0);
+    var n = this.get_connections(true);
+    var r = e.get_connections(true);
     if (!this.is_insertion_marker() && n.length != r.length) {
       throw new Error("Connection lists did not match in length.");
     }
@@ -780,7 +780,7 @@ var g = function (e) {
         this.output_connection.disconnect();
       }
     } else if (this.previous_connection) {
-      var t = void 0;
+      var t = undefined;
       if (this.previous_connection.is_connected()) {
         t = this.previous_connection.get_targe_connection();
         this.previous_connection.disconnect();
@@ -821,7 +821,7 @@ var g = function (e) {
     }
   };
   t.prototype.get_shadow_field = function (e, t) {
-    if (void 0 === t) {
+    if (undefined === t) {
       t = "NUM";
     }
     var n = this.get_input(e);
@@ -833,7 +833,7 @@ var g = function (e) {
     }
   };
   t.prototype.get_shadow_field_value = function (e, t) {
-    if (void 0 === t) {
+    if (undefined === t) {
       t = "NUM";
     }
     var n = this.get_shadow_field(e, t);
@@ -859,8 +859,8 @@ var g = function (e) {
   };
   t.prototype.set_next_statement = function (e, t) {
     if (e) {
-      if (void 0 == t) {
-        t = void 0;
+      if (undefined == t) {
+        t = undefined;
       }
       if (!this.next_connection) {
         this.next_connection = this.make_connection(a.CONNECTION_TYPE.NEXT_STATEMENT);
@@ -870,14 +870,14 @@ var g = function (e) {
       if (this.next_connection) {
         (0, c.assert)(!this.next_connection.is_connected(), "Must disconnect next statement before removing connection.");
         this.next_connection.dispose();
-        this.next_connection = void 0;
+        this.next_connection = undefined;
       }
     }
   };
   t.prototype.set_previous_statement = function (e, t) {
     if (e) {
-      if (void 0 == t) {
-        t = void 0;
+      if (undefined == t) {
+        t = undefined;
       }
       if (!this.previous_connection) {
         (0, c.assert)(!this.output_connection, "Remove output connection prior to adding previous connection.");
@@ -888,14 +888,14 @@ var g = function (e) {
       if (this.previous_connection) {
         (0, c.assert)(!this.previous_connection.is_connected(), "Must disconnect previous statement before removing connection.");
         this.previous_connection.dispose();
-        this.previous_connection = void 0;
+        this.previous_connection = undefined;
       }
     }
   };
   t.prototype.set_output = function (e, t, n) {
     if (e) {
       if (!this.output_connection) {
-        if (void 0 != this.previous_connection) {
+        if (undefined != this.previous_connection) {
           throw new Error("Remove previous connection prior to adding output connection.");
         }
         this.output_connection = this.make_connection(a.CONNECTION_TYPE.OUTPUT_VALUE, n);
@@ -909,7 +909,7 @@ var g = function (e) {
         throw new Error("Must disconnect output value before removing connection.");
       }
       this.output_connection.dispose();
-      this.output_connection = void 0;
+      this.output_connection = undefined;
     }
   };
   t.prototype.append_value_input = function (e, t, n, r) {
@@ -924,15 +924,15 @@ var g = function (e) {
   t.prototype.respawn_all_shadows = function () {
     var e;
     var t;
-    if (!(null === (e = this.previous_connection) || void 0 === e)) {
+    if (!(null === (e = this.previous_connection) || undefined === e)) {
       e.respawn_shadow();
     }
-    if (!(null === (t = this.next_connection) || void 0 === t)) {
+    if (!(null === (t = this.next_connection) || undefined === t)) {
       t.respawn_shadow();
     }
     this.inputList.forEach(function (e) {
       var t;
-      if (!(null === (t = e.connection) || void 0 === t)) {
+      if (!(null === (t = e.connection) || undefined === t)) {
         t.respawn_shadow();
       }
     });
@@ -963,21 +963,21 @@ var g = function (e) {
   };
   t.prototype.append_shadow_input_json = function (e, t, n, r) {
     var i = {
-      text: "<shadow type=\"text\"><field name=\"TEXT\">" + (n = void 0 == n ? "" : n) + "</field></shadow>",
+      text: "<shadow type=\"text\"><field name=\"TEXT\">" + (n = undefined == n ? "" : n) + "</field></shadow>",
       math: "<shadow type=\"math_number\"><field name=\"NUM\">" + n + "</field></shadow>",
       bool: "<empty type=\"logic_empty\"><field name=\"BOOL\"></field></empty>"
     };
-    return this.append_shadow(a.InputType.VALUE, e, i[t], void 0, r);
+    return this.append_shadow(a.InputType.VALUE, e, i[t], undefined, r);
   };
   t.prototype.append_input = function (e, t, n, r) {
-    var i = e === a.InputType.DUMMY ? void 0 : this.make_connection(e, r);
+    var i = e === a.InputType.DUMMY ? undefined : this.make_connection(e, r);
     var o = this.input_factory({
       type: e,
       name: t,
       block: this,
       connection: i
     });
-    if (void 0 === n) {
+    if (undefined === n) {
       this.inputList.push(o);
     } else {
       n = "number" === typeof n ? n : this.get_input_index(n);
@@ -986,11 +986,11 @@ var g = function (e) {
     return o;
   };
   t.prototype.get_descendants = function (e, t) {
-    if (void 0 === e) {
-      e = !1;
+    if (undefined === e) {
+      e = false;
     }
-    if (void 0 === t) {
-      t = !1;
+    if (undefined === t) {
+      t = false;
     }
     for (var n = [this], r = this.get_children(e), i = 0; i < r.length; i++) {
       var o = r[i];
@@ -1073,15 +1073,15 @@ var g = function (e) {
       width: Number(this.utils.replace_message_references("" + e.width)),
       height: Number(this.utils.replace_message_references("" + e.height)),
       alt: this.utils.replace_message_references(e.alt || ""),
-      callback: "field_button" === e.type ? e.callback : void 0,
-      circle: "field_button" === e.type ? e.circle : void 0
+      callback: "field_button" === e.type ? e.callback : undefined,
+      circle: "field_button" === e.type ? e.circle : undefined
     };
   };
   t.prototype.mixin = function (e, t) {
     if (!t) {
       var n = [];
       for (var r in e) {
-        if (void 0 != this[r]) {
+        if (undefined != this[r]) {
           n.push(r);
         }
       }
@@ -1114,7 +1114,7 @@ var g = function (e) {
     }
   };
   t.prototype.to_string = function (e, t) {
-    if (void 0 === t) {
+    if (undefined === t) {
       t = "...";
     }
     var n = [];
@@ -1133,7 +1133,7 @@ var g = function (e) {
       }
       if (a.connection) {
         if (o = a.connection.targetBlock()) {
-          n.push(o.to_string(void 0, t));
+          n.push(o.to_string(undefined, t));
         } else {
           n.push(t);
         }
@@ -1141,7 +1141,7 @@ var g = function (e) {
     }
     if ("start_on_click" === this.type) {
       if (o = this.get_next_block()) {
-        n.push(o.to_string(void 0, t));
+        n.push(o.to_string(undefined, t));
       }
     }
     var l = n.join(" ").trim() || " ";
@@ -1155,8 +1155,8 @@ var g = function (e) {
       var e = this.workspace.current_gesture_;
       return !(e && e.is_start_from_flyout()) && this.workspace.degrade_translate ? this.workspace.blockDB_.size < this.workspace.degrade_translate : !!this.workspace.get_block_drag_surface();
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   t.prototype.move_by = function (e) {
     var t;
@@ -1203,7 +1203,7 @@ var g = function (e) {
         (0, c.fail)("Child block does not have output or previous statement.");
       }
     }
-    if (void 0 === i) {
+    if (undefined === i) {
       this.inputList.push(a);
     } else {
       i = "number" === typeof i ? i : this.get_input_index(i);
@@ -1213,7 +1213,7 @@ var g = function (e) {
       for (var l = this.get_descendants(), f = 0; f < l.length; f++) {
         if (!l[f].is_insertion_marker()) {
           l[f].init_svg();
-          l[f].render(!1);
+          l[f].render(false);
         }
       }
     }
@@ -1223,7 +1223,7 @@ var g = function (e) {
     return a;
   };
   t.prototype.move_connections = function (e) {
-    for (var t = this.get_connections(!0), n = 0; n < t.length; n++) {
+    for (var t = this.get_connections(true), n = 0; n < t.length; n++) {
       t[n].move_by(e);
     }
     var r = this.get_icons();
@@ -1237,7 +1237,7 @@ var g = function (e) {
   t.prototype.dispose = function (e, t) {
     var n;
     var r;
-    if (!(null === (n = this.parent_group) || void 0 === n)) {
+    if (!(null === (n = this.parent_group) || undefined === n)) {
       n.dispose();
     }
     if (this.workspace) {
@@ -1255,7 +1255,7 @@ var g = function (e) {
         this.unplug(e);
         this.block_animations.dispose_ui_effect(this);
       }
-      this.rendered = !1;
+      this.rendered = false;
       if (this.onchange) {
         this.workspace.remove_change_listener(this.onchange);
       }
@@ -1278,19 +1278,19 @@ var g = function (e) {
         if (this.workspace) {
           this.workspace.remove_top_block(this);
           this.workspace.blockDB_.delete(this.id);
-          this.workspace = void 0;
+          this.workspace = undefined;
         }
         if (this.runtime_data.selected == this) {
-          this.runtime_data.selected = void 0;
+          this.runtime_data.selected = undefined;
         }
         for (s = this.child_blocks.length - 1; s >= 0; s--) {
-          this.child_blocks[s].dispose(!1);
+          this.child_blocks[s].dispose(false);
         }
         for (s = 0; s < this.inputList.length; s++) {
           this.inputList[s].dispose();
         }
         this.inputList.length = 0;
-        var c = this.get_connections(!0);
+        var c = this.get_connections(true);
         for (s = 0; s < c.length; s++) {
           var u = c[s];
           if (u.is_connected()) {
@@ -1301,7 +1301,7 @@ var g = function (e) {
       } finally {
         this.events.enable();
       }
-      if ((null === (r = this.Blink.tooltip) || void 0 === r ? void 0 : r.get_element()) === this.svg_path) {
+      if ((null === (r = this.Blink.tooltip) || undefined === r ? undefined : r.get_element()) === this.svg_path) {
         this.Blink.tooltip.hide();
       }
       if (!(this.is_shadow() || this.is_insertion_marker())) {
@@ -1329,9 +1329,9 @@ var g = function (e) {
         this.workspace.remove_change_listener(this.onchange);
       }
       this.workspace.blockDB_.delete(this.id);
-      if (this.workspace.get_top_blocks(!1).includes(this)) {
+      if (this.workspace.get_top_blocks(false).includes(this)) {
         this.workspace.remove_top_block(this);
-        this.workspace = void 0;
+        this.workspace = undefined;
         if (this.svg_group) {
           (0, l.remove_node)(this.svg_group);
         }
@@ -1403,13 +1403,13 @@ var g = function (e) {
       text: this.Msg.DUPLICATE_BLOCK,
       name: "copy",
       area: "block",
-      enabled: !0,
+      enabled: true,
       callback: function () {
         t.runtime_data.clipboard.copy(t);
       }
     };
     if (this.get_descendants().length > this.workspace.remaining_capacity()) {
-      n.enabled = !1;
+      n.enabled = false;
     }
     e.push(n);
   };
@@ -1418,7 +1418,7 @@ var g = function (e) {
     e.push({
       text: this.Msg.COPY_AND_PASTE,
       name: "copy_and_paste",
-      enabled: !0,
+      enabled: true,
       callback: function () {
         t.runtime_data.clipboard.duplicate(t);
       }
@@ -1434,7 +1434,7 @@ var g = function (e) {
         name: "remove_comment",
         callback: function () {
           if (n.comment) {
-            n.set_comment_text(void 0);
+            n.set_comment_text(undefined);
           }
         }
       } : {
@@ -1442,18 +1442,18 @@ var g = function (e) {
         text: this.Msg.ADD_COMMENT,
         name: "add_comment",
         callback: function () {
-          return (0, r.__awaiter)(n, void 0, void 0, function () {
+          return (0, r.__awaiter)(n, undefined, undefined, function () {
             var e;
             return (0, r.__generator)(this, function (t) {
               switch (t.label) {
                 case 0:
                   return "simplified" !== this.workspace.get_options().comment_type ? [3, 2] : [4, this.workspace.show_external_comment_editor("")];
                 case 1:
-                  if (!(void 0 == (e = t.sent()))) {
+                  if (!(undefined == (e = t.sent()))) {
                     this.set_comment_text(e);
                     (0, c.assert)(this.comment);
                     this.comment.init_svg();
-                    this.comment.set_expanded(!0);
+                    this.comment.set_expanded(true);
                   }
                   return [2];
                 case 2:
@@ -1477,19 +1477,19 @@ var g = function (e) {
         var n = {
           text: this.Msg.EXPAND_BLOCK,
           name: "expand",
-          enabled: !0,
+          enabled: true,
           callback: function () {
-            t.set_collapsed(!1);
+            t.set_collapsed(false);
           }
         };
         e.push(n);
       } else {
         var r = {
-          enabled: !0,
+          enabled: true,
           text: this.Msg.COLLAPSE_BLOCK,
           name: "collapse",
           callback: function () {
-            t.set_collapsed(!0);
+            t.set_collapsed(true);
           }
         };
         e.push(r);
@@ -1502,11 +1502,11 @@ var g = function (e) {
       text: this.Msg.DELETE_BLOCK,
       name: "delete",
       area: "block",
-      enabled: !0,
+      enabled: true,
       callback: function () {
         var e = t.events.get_group();
-        t.events.set_group(e || !0);
-        t.dispose(!0, !0);
+        t.events.set_group(e || true);
+        t.dispose(true, true);
         t.events.set_group(e);
       }
     };
@@ -1518,7 +1518,7 @@ var g = function (e) {
       text: this.utils.replace_message_references("%{BKY_BLOCK_GROUP}"),
       name: "block_group",
       area: "block",
-      enabled: !0,
+      enabled: true,
       callback: function () {
         t.hide_into_group();
       }
@@ -1531,7 +1531,7 @@ var g = function (e) {
     e.push({
       text: this.utils.replace_message_references("%{BKY_" + (n ? "HIDE" : "SHOW") + "_BLOCK_STACK}"),
       name: "change_visibility",
-      enabled: !0,
+      enabled: true,
       callback: function () {
         t.set_chunk_visibility(n ? a.BlockVisibility.TRANSLUCENT : a.BlockVisibility.VISIBLE);
         t.update_chunk_visibility();
@@ -1553,7 +1553,7 @@ var g = function (e) {
     }
     if (!(0, f.is_string)(e) && this.comment) {
       this.comment.dispose();
-      this.comment = void 0;
+      this.comment = undefined;
     }
   };
   t.prototype.get_comment_text = function () {
@@ -1571,7 +1571,7 @@ var g = function (e) {
   };
   t.prototype.unselect = function () {
     if (this.runtime_data.selected == this) {
-      this.runtime_data.selected = void 0;
+      this.runtime_data.selected = undefined;
       this.remove_select();
       if (this.events.is_enabled()) {
         this.events.fire(this.ui_event_factory({
@@ -1583,7 +1583,7 @@ var g = function (e) {
     }
   };
   t.prototype.init_svg = function () {
-    if (void 0 == this.svg_group) {
+    if (undefined == this.svg_group) {
       throw new ReferenceError("Cannot init svg to block without svg group.");
     }
     if (!this._is_insertion_marker) {
@@ -1599,7 +1599,7 @@ var g = function (e) {
     this.init_events();
     var t = this.get_svg_root();
     var n = this.workspace.get_canvas();
-    if ((void 0 == t || void 0 == t.parentNode) && void 0 != n) {
+    if ((undefined == t || undefined == t.parentNode) && undefined != n) {
       if (this.is_insertion_marker() && this.output_connection) {
         return;
       }
@@ -1614,7 +1614,7 @@ var g = function (e) {
         this.svg_group.addEventListener("mouseover", function (e) {
           var n;
           e.stopPropagation();
-          if (!(0, l.is_inside_shadow)(e.relatedTarget) && (null === (n = t.output_connection) || void 0 === n ? void 0 : n.is_connected())) {
+          if (!(0, l.is_inside_shadow)(e.relatedTarget) && (null === (n = t.output_connection) || undefined === n ? undefined : n.is_connected())) {
             t.svg_group.classList.add("output-block-hover");
           }
         });
@@ -1628,11 +1628,11 @@ var g = function (e) {
       if (!(this.is_in_flyout || !this.is_wrap_shape() && !this.is_shadow())) {
         this.svg_path.addEventListener("mouseover", function (e) {
           e.stopPropagation();
-          n(!0);
+          n(true);
         });
         this.svg_path.addEventListener("mouseout", function (e) {
           e.stopPropagation();
-          n(!1);
+          n(false);
         });
       }
       var n = function (e) {
@@ -1664,7 +1664,7 @@ var g = function (e) {
     if (t) {
       (0, l.remove_node)(t);
     }
-    if (!(null === (e = this.svg_path) || void 0 === e)) {
+    if (!(null === (e = this.svg_path) || undefined === e)) {
       e.removeAttribute("filter");
     }
   };
@@ -1704,34 +1704,34 @@ var g = function (e) {
     }
   };
   t.prototype.get_output_shape = function () {
-    return void 0 != this.output_connection && this.output_connection.get_output_shape();
+    return undefined != this.output_connection && this.output_connection.get_output_shape();
   };
   t.prototype.is_text_shadow = function () {
     if (!this.is_shadow()) {
-      return !1;
+      return false;
     }
     for (var e = 0; e < this.inputList.length; e++) {
       for (var t = this.inputList[e], n = 0; n < t.fieldRow.length; n++) {
         var r = t.fieldRow[n];
         if ((0, f.is_field_number)(r) || (0, f.is_field_text_input)(r) || "FieldTextDropdown" === r.field_type || "FieldMultilineInput" === r.field_type || "FieldDefaultValue" === r.field_type) {
-          return !0;
+          return true;
         }
       }
     }
-    return !1;
+    return false;
   };
   t.prototype.get_relative_to_surface_xy = function () {
     var e;
     var t;
-    var n = this.use_drag_surface ? null === (e = this.workspace.get_block_drag_surface()) || void 0 === e ? void 0 : e.get_group() : void 0;
+    var n = this.use_drag_surface ? null === (e = this.workspace.get_block_drag_surface()) || undefined === e ? undefined : e.get_group() : undefined;
     var r = this.get_svg_root();
-    if (void 0 == r) {
+    if (undefined == r) {
       return i.vec2.create();
     }
     var o = i.vec2.create();
     do {
       i.vec2.add(o, o, this.utils.get_relative_xy(r));
-      if (this.use_drag_surface && (null === (t = this.workspace.get_block_drag_surface()) || void 0 === t ? void 0 : t.get_current_block()) == r) {
+      if (this.use_drag_surface && (null === (t = this.workspace.get_block_drag_surface()) || undefined === t ? undefined : t.get_current_block()) == r) {
         var a = this.workspace.get_block_drag_surface().get_surface_translation();
         i.vec2.add(o, o, [a[0], a[1]]);
       }
@@ -1754,12 +1754,12 @@ var g = function (e) {
     return e;
   };
   t.prototype.set_dragging = function (e) {
-    if (void 0 != this.svg_group) {
+    if (undefined != this.svg_group) {
       var t = this.svg_group;
       if (e) {
         t.translate_ = "";
         t.skew_ = "";
-        this.runtime_data.dragging_connections = this.runtime_data.dragging_connections.concat(this.get_connections(!0));
+        this.runtime_data.dragging_connections = this.runtime_data.dragging_connections.concat(this.get_connections(true));
         (0, l.add_class)(t, "blocklyDragging");
       } else {
         this.runtime_data.dragging_connections = [];
@@ -1794,14 +1794,14 @@ var g = function (e) {
       if (!(e.events.get_group() && e.events.get_group() !== n)) {
         e.events.set_group(n);
         t.snap_to_grid();
-        e.events.set_group(!1);
+        e.events.set_group(false);
       }
     }, this.theme.blink_params.BUMP_DELAY / 2);
     window.setTimeout(function () {
       if (!(e.events.get_group() && e.events.get_group() !== n)) {
         e.events.set_group(n);
         t.bump_neighbours();
-        e.events.set_group(!1);
+        e.events.set_group(false);
       }
     }, this.theme.blink_params.BUMP_DELAY);
   };
@@ -1812,14 +1812,14 @@ var g = function (e) {
       var n = t ? t.color : this.theme.insertion_marker.COLOR;
       this.set_colour(n);
       this.set_opacity(this.theme.insertion_marker.OPACITY);
-      if (void 0 != this.svg_group) {
+      if (undefined != this.svg_group) {
         (0, l.add_class)(this.svg_group, "InsertionMarker");
       }
     }
     this.update_colour();
   };
   t.prototype.highlight_for_replacement = function (e) {
-    if (void 0 != this.svg_path && void 0 != this.svg_group) {
+    if (undefined != this.svg_path && undefined != this.svg_group) {
       if (e) {
         (0, l.add_class)(this.svg_group, "blocklyReplaceable");
         if (!this.is_shadow() || "param_color" === this.element_type) {
@@ -1858,7 +1858,7 @@ var g = function (e) {
       var t = this;
       do {
         var n = t.get_svg_root();
-        if (void 0 != n && void 0 != n.parentNode) {
+        if (undefined != n && undefined != n.parentNode) {
           n.parentNode.appendChild(n);
         }
         t = t.get_parent();
@@ -1892,7 +1892,7 @@ var g = function (e) {
           if (this.output_connection && this.output_connection.is_connected()) {
             throw new Error("Still connected to parent block.");
           }
-          this.parent_block = void 0;
+          this.parent_block = undefined;
         } else {
           this.workspace.remove_top_block(this);
         }
@@ -1926,11 +1926,11 @@ var g = function (e) {
   t.prototype.select = function () {
     if (this.is_shadow() && this.get_parent()) {
       var e = this.get_parent();
-      if (void 0 != e) {
+      if (undefined != e) {
         e.select();
       }
     } else if (this.runtime_data.selected != this) {
-      var t = void 0;
+      var t = undefined;
       if (this.runtime_data.selected) {
         t = this.runtime_data.selected.id;
         this.events.disable();
@@ -1981,12 +1981,12 @@ var g = function (e) {
     }
   };
   t.prototype.get_inputs_inline = function () {
-    return void 0 == this.inputs_inline || this.inputs_inline;
+    return undefined == this.inputs_inline || this.inputs_inline;
   };
   t.prototype.set_glow_stack = function (e) {
     this.is_glowing_stack = e;
     var t = this.svg_group;
-    if (void 0 == t) {
+    if (undefined == t) {
       throw new Error("Block may not been init.");
     }
     if (this.is_glowing_stack) {
@@ -2000,26 +2000,26 @@ var g = function (e) {
     this.block_animations.block_flash_effect(this, this.is_flashing);
   };
   t.prototype.add_select = function () {
-    this.set_glow_stack(!0);
+    this.set_glow_stack(true);
   };
   t.prototype.remove_select = function () {
-    this.set_glow_stack(!1);
+    this.set_glow_stack(false);
   };
   t.prototype.bump_neighbours = function () {
     if (this.workspace && !(this.workspace.is_dragging() || this.workspace.current_gesture_ && this.workspace.current_gesture_.is_dragging() && this.workspace.current_gesture_.has_started) && this.events.is_record_undo() && this.workspace.is_resizes_enabled()) {
       var e = this.get_top_parent();
       if (!e.is_in_flyout && (!s.NEED_COLLAPSE_CHILDREN_BLOCKS.includes(this.type) && !this.is_include_special_input() || !this.is_collapsed())) {
-        for (var t = this.get_connections(!1), n = 0; n < t.length; n++) {
+        for (var t = this.get_connections(false), n = 0; n < t.length; n++) {
           var r = t[n];
           var i = r.targetBlock();
-          if (void 0 != i && r.is_connected() && r.is_superior()) {
+          if (undefined != i && r.is_connected() && r.is_superior()) {
             i.bump_neighbours();
           }
           for (var o = r.neighbours_(this.theme.blink_params.SNAP_RADIUS), a = 0; a < o.length; a++) {
             var c = o[a];
             if (!r.is_connected() || !c.is_connected()) {
               var u = c.get_source_block().get_top_parent();
-              if ("hidden" !== (null === u || void 0 === u ? void 0 : u.get_visibility()) && u != e) {
+              if ("hidden" !== (null === u || undefined === u ? undefined : u.get_visibility()) && u != e) {
                 if (r.is_superior()) {
                   c.bump_away_from(r);
                 } else {
@@ -2047,7 +2047,7 @@ var g = function (e) {
     }
     var n = this.get_full_next_block();
     if (this.is_collapsed() && this.is_starting_block()) {
-      n = void 0;
+      n = undefined;
     }
     if (n) {
       var r = n.get_height_width();
@@ -2076,7 +2076,7 @@ var g = function (e) {
     var i = n[t ? r + 1 : r - 1];
     if (i) {
       if ((0, f.is_func)(i.tab)) {
-        i.tab(void 0, t);
+        i.tab(undefined, t);
       } else {
         if ((0, f.is_func)(i.show_editor)) {
           i.show_editor();
@@ -2116,7 +2116,7 @@ var g = function (e) {
       var r = this.inputList[n];
       if (r.name == e) {
         if (r.connection && r.connection.is_connected()) {
-          r.connection.set_shadow_dom(void 0);
+          r.connection.set_shadow_dom(undefined);
           var i = r.connection.targetBlock();
           if (i.is_shadow()) {
             this.events.disable();
@@ -2216,11 +2216,11 @@ var g = function (e) {
   t.prototype.is_stack_connectable = function () {
     for (var e, t = this; t;) {
       if (!t.is_connectable()) {
-        return !1;
+        return false;
       }
-      t = null === (e = t.previous_connection) || void 0 === e ? void 0 : e.targetBlock();
+      t = null === (e = t.previous_connection) || undefined === e ? undefined : e.targetBlock();
     }
-    return !0;
+    return true;
   };
   t.prototype.get_input_index = function (e) {
     var t = this.get_input(e);
@@ -2239,7 +2239,7 @@ var g = function (e) {
         this.domToMutation(this.xml.text_to_dom(e));
       } else {
         try {
-          this.domToMutation(void 0);
+          this.domToMutation(undefined);
         } catch (t) {}
       }
     }
@@ -2297,8 +2297,8 @@ var g = function (e) {
   };
   t.prototype.for_each_descendant_element = function (e, t) {
     var n;
-    if (void 0 === t) {
-      t = !1;
+    if (undefined === t) {
+      t = false;
     }
     e(this);
     if (this.comment) {
@@ -2306,18 +2306,18 @@ var g = function (e) {
     }
     if (t) {
       for (i = 0; i < this.inputList.length; i++) {
-        if (o = null === (n = this.inputList[i].connection) || void 0 === n ? void 0 : n.targetBlock()) {
-          o.for_each_descendant_element(e, !0);
+        if (o = null === (n = this.inputList[i].connection) || undefined === n ? undefined : n.targetBlock()) {
+          o.for_each_descendant_element(e, true);
         }
       }
       var r = this.get_next_block();
       if (r) {
-        r.for_each_descendant_element(e, !0);
+        r.for_each_descendant_element(e, true);
       }
     } else {
       for (var i = 0; i < this.child_blocks.length; i++) {
         var o;
-        (o = this.child_blocks[i]).for_each_descendant_element(e, !1);
+        (o = this.child_blocks[i]).for_each_descendant_element(e, false);
       }
     }
   };
@@ -2326,7 +2326,7 @@ var g = function (e) {
   };
   t.prototype.get_border_colour = function () {
     var e;
-    return this.is_shadow() && "param" !== this.element_type && "param_color" !== this.element_type ? (null === (e = this.parent_block) || void 0 === e ? void 0 : e.get_border_colour()) || this.theme.block_color.DEFAULT.border : this.border_colour;
+    return this.is_shadow() && "param" !== this.element_type && "param_color" !== this.element_type ? (null === (e = this.parent_block) || undefined === e ? undefined : e.get_border_colour()) || this.theme.block_color.DEFAULT.border : this.border_colour;
   };
   t.prototype.get_stroke_width = function () {
     return this.is_shadow() && "param" !== this.element_type && "param_color" !== this.element_type ? this.is_editable() && this.is_text_shadow() ? this.theme.shadow_style.BORDER : this.theme.shadow_style.NO_BORDER : "1px";
@@ -2340,11 +2340,11 @@ var g = function (e) {
     if ((this.disabled || this.get_inherited_disabled()) && !this.prevent_disable_style_change) {
       return this.theme.disabled_color.fill;
     }
-    if (this.layer_colour && this.is_output_block() && (null === (e = this.parent_block) || void 0 === e ? void 0 : e.get_colour()) === this.colour_) {
+    if (this.layer_colour && this.is_output_block() && (null === (e = this.parent_block) || undefined === e ? undefined : e.get_colour()) === this.colour_) {
       return this.layer_colour;
     }
     if (!this.is_editable()) {
-      var n = (null === (t = this.get_parent()) || void 0 === t ? void 0 : t.get_colour()) || this.colour_;
+      var n = (null === (t = this.get_parent()) || undefined === t ? undefined : t.get_colour()) || this.colour_;
       return (0, d.darken)(n, .1);
     }
     return this.colour_;
@@ -2360,8 +2360,8 @@ var g = function (e) {
   };
   t.prototype.set_colour = function (e, t, n) {
     this.colour_ = "string" === typeof e ? new d.Color(e) : e;
-    this.border_colour = void 0 != t ? "string" === typeof t ? new d.Color(t) : t : (0, d.darken)(this.colour_, .1);
-    this.layer_colour = void 0 != n ? "string" === typeof n ? new d.Color(n) : n : void 0;
+    this.border_colour = undefined != t ? "string" === typeof t ? new d.Color(t) : t : (0, d.darken)(this.colour_, .1);
+    this.layer_colour = undefined != n ? "string" === typeof n ? new d.Color(n) : n : undefined;
     if (this.rendered) {
       this.update_colour();
     }
@@ -2389,32 +2389,32 @@ var g = function (e) {
       }
     }
   };
-  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.Blink)], t.prototype, "Blink", void 0);
-  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.context_menu)], t.prototype, "context_menu", void 0);
-  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.extensions)], t.prototype, "extensions", void 0);
-  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.Msg)], t.prototype, "Msg", void 0);
-  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.xml)], t.prototype, "xml", void 0);
-  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.RenderedConnection)], t.prototype, "RenderedConnection", void 0);
-  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.registry)], t.prototype, "registry", void 0);
-  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.FieldLabel)], t.prototype, "field_label_factory", void 0);
-  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.FieldLabelSerializable)], t.prototype, "field_label_serializable_factory", void 0);
-  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.FieldColour)], t.prototype, "field_colour_factory", void 0);
-  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.FieldDropdown)], t.prototype, "field_dropdown_factory", void 0);
-  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.FieldIcon)], t.prototype, "field_icon_factory", void 0);
-  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.FieldButton)], t.prototype, "field_button_factory", void 0);
-  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.MutationAddButton)], t.prototype, "mutation_add_factory", void 0);
-  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.MutationRemoveButton)], t.prototype, "mutation_remove_factory", void 0);
-  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.FieldNumber)], t.prototype, "field_number_factory", void 0);
-  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.FieldTextDropdown)], t.prototype, "field_text_dropdown_factory", void 0);
-  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.FieldTextInput)], t.prototype, "field_text_input_factory", void 0);
-  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.FieldDefaultValue)], t.prototype, "field_default_value", void 0);
-  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.FieldImage)], t.prototype, "field_image_factory", void 0);
-  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.FieldMultilineInput)], t.prototype, "field_multiline_input", void 0);
-  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.Input)], t.prototype, "input_factory", void 0);
-  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.RenderedConnection)], t.prototype, "connection_factory", void 0);
-  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.ChangeEvent)], t.prototype, "change_event_factory", void 0);
-  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.WorkspaceComment)], t.prototype, "workspace_comment_factory", void 0);
-  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.BlockGroup)], t.prototype, "block_group_factory", void 0);
+  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.Blink)], t.prototype, "Blink", undefined);
+  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.context_menu)], t.prototype, "context_menu", undefined);
+  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.extensions)], t.prototype, "extensions", undefined);
+  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.Msg)], t.prototype, "Msg", undefined);
+  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.xml)], t.prototype, "xml", undefined);
+  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.RenderedConnection)], t.prototype, "RenderedConnection", undefined);
+  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.registry)], t.prototype, "registry", undefined);
+  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.FieldLabel)], t.prototype, "field_label_factory", undefined);
+  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.FieldLabelSerializable)], t.prototype, "field_label_serializable_factory", undefined);
+  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.FieldColour)], t.prototype, "field_colour_factory", undefined);
+  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.FieldDropdown)], t.prototype, "field_dropdown_factory", undefined);
+  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.FieldIcon)], t.prototype, "field_icon_factory", undefined);
+  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.FieldButton)], t.prototype, "field_button_factory", undefined);
+  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.MutationAddButton)], t.prototype, "mutation_add_factory", undefined);
+  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.MutationRemoveButton)], t.prototype, "mutation_remove_factory", undefined);
+  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.FieldNumber)], t.prototype, "field_number_factory", undefined);
+  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.FieldTextDropdown)], t.prototype, "field_text_dropdown_factory", undefined);
+  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.FieldTextInput)], t.prototype, "field_text_input_factory", undefined);
+  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.FieldDefaultValue)], t.prototype, "field_default_value", undefined);
+  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.FieldImage)], t.prototype, "field_image_factory", undefined);
+  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.FieldMultilineInput)], t.prototype, "field_multiline_input", undefined);
+  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.Input)], t.prototype, "input_factory", undefined);
+  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.RenderedConnection)], t.prototype, "connection_factory", undefined);
+  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.ChangeEvent)], t.prototype, "change_event_factory", undefined);
+  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.WorkspaceComment)], t.prototype, "workspace_comment_factory", undefined);
+  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.BlockGroup)], t.prototype, "block_group_factory", undefined);
   return t;
 }(require("./963").WorkspaceElement);
 exports.BlockSvg = g;

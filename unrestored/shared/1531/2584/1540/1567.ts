@@ -5,10 +5,10 @@ var o = require("./1721/817").includes;
 var i = require("./936/633");
 r({
   target: "Array",
-  proto: !0
+  proto: true
 }, {
   includes: function (e) {
-    return o(this, e, arguments.length > 1 ? arguments[1] : void 0);
+    return o(this, e, arguments.length > 1 ? arguments[1] : undefined);
   }
 });
 i("includes");

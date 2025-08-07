@@ -1,16 +1,16 @@
 "use strict";
 
-var r = require("../../19");
-var i = require("../../108");
-var o = require("../../20");
-var a = require("../../54");
-var s = require("react");
-var c = require("../../95");
-var u = require("../../96");
-var l = require("../../103");
-var f = require("../../120");
-var d = require("../../140");
-var h = require("../../75/index");
+import r = require("../../19");
+import i = require("../../108");
+import o = require("../../20");
+import a = require("../../54");
+import s = require("react");
+import c = require("../../95");
+import u = require("../../96");
+import l = require("../../103");
+import f = require("../../120");
+import d = require("../../140");
+import h = require("../../75/index");
 var p = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -23,44 +23,44 @@ var p = function __importDefault(module) {
   });
   return defaultExport;
 }(h);
-var _ = require("../../1026/413");
+import _ = require("../../1026/413");
 function A(e, t) {
   return !!e && e.contains(t);
 }
-var g = require("./1009");
-var v = require("../../1026/690");
-var m = require("./916");
-var y = require("../../2627/462");
-var b = Object(s.forwardRef)(function (e, t) {
+import g = require("./1009");
+import v = require("../../1026/690");
+import m = require("./916");
+import y = require("../../2627/462");
+var b = s.forwardRef(function (e, t) {
   var n = e.didUpdate;
   var r = e.getContainer;
   var i = e.children;
-  var o = Object(s.useRef)();
-  Object(s.useImperativeHandle)(t, function () {
+  var o = s.useRef();
+  s.useImperativeHandle(t, function () {
     return {};
   });
-  var a = Object(s.useRef)(!1);
-  if (!a.current && Object(y.a)()) {
+  var a = s.useRef(false);
+  if (!a.current && y.a()) {
     o.current = r();
-    a.current = !0;
+    a.current = true;
   }
-  Object(s.useEffect)(function () {
-    if (!(null === n || void 0 === n)) {
+  s.useEffect(function () {
+    if (!(null === n || undefined === n)) {
       n(e);
     }
   });
-  Object(s.useEffect)(function () {
+  s.useEffect(function () {
     return function () {
       var e;
       var t;
-      if (!(null === (e = o.current) || void 0 === e || null === (t = e.parentNode) || void 0 === t)) {
+      if (!(null === (e = o.current) || undefined === e || null === (t = e.parentNode) || undefined === t)) {
         t.removeChild(o.current);
       }
     };
   }, []);
   return o.current ? p.a.createPortal(i, o.current) : null;
 });
-var w = require("../../8");
+import w = require("../../8");
 var E = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -76,8 +76,8 @@ var E = function __importDefault(module) {
 function x(e, t, n) {
   return n ? e[0] === t[0] : e[0] === t[0] && e[1] === t[1];
 }
-var C = require("../../33/index");
-var O = require("../../2627/790/684");
+import C = require("../../33/index");
+import O = require("../../2627/790/684");
 function k(e) {
   var t = e.prefixCls;
   var n = e.motion;
@@ -102,8 +102,8 @@ function S(e) {
   }
   var f = {};
   if (c || l || u) {
-    f = Object(o.a)({
-      motionAppear: !0
+    f = o.a({
+      motionAppear: true
     }, k({
       motion: c,
       prefixCls: t,
@@ -111,9 +111,9 @@ function S(e) {
       animation: u
     }));
   }
-  return s.createElement(O.a, Object(r.a)({}, f, {
+  return s.createElement(O.a, r.a({}, f, {
     visible: n,
-    removeOnLeave: !0
+    removeOnLeave: true
   }), function (e) {
     var n = e.className;
     return s.createElement("div", {
@@ -124,8 +124,8 @@ function S(e) {
     });
   });
 }
-var T = require("../../1500/555/index");
-var B = require("../../110");
+import T = require("../../1500/555/index");
+import B = require("../../110");
 var D = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -138,7 +138,7 @@ var D = function __importDefault(module) {
   });
   return defaultExport;
 }(B);
-var I = require("../../171");
+import I = require("../../171");
 var F = ["measure", "align", null, "motion"];
 var R = s.forwardRef(function (e, t) {
   var n = e.visible;
@@ -159,10 +159,10 @@ var R = s.forwardRef(function (e, t) {
   var b = e.onMouseLeave;
   var w = e.onMouseDown;
   var x = e.onTouchStart;
-  var S = Object(s.useRef)();
-  var B = Object(s.useRef)();
-  var R = Object(s.useState)();
-  var P = Object(C.a)(R, 2);
+  var S = s.useRef();
+  var B = s.useRef();
+  var R = s.useState();
+  var P = C.a(R, 2);
   var N = P[0];
   var M = P[1];
   var j = function (e) {
@@ -170,7 +170,7 @@ var R = s.forwardRef(function (e, t) {
       width: 0,
       height: 0
     });
-    var n = Object(C.a)(t, 2);
+    var n = C.a(t, 2);
     var r = n[0];
     var i = n[1];
     return [s.useMemo(function () {
@@ -201,16 +201,16 @@ var R = s.forwardRef(function (e, t) {
       });
     }];
   }(f);
-  var L = Object(C.a)(j, 2);
+  var L = C.a(j, 2);
   var U = L[0];
   var H = L[1];
   var V = function (e, t) {
-    var n = Object(s.useState)(null);
-    var r = Object(C.a)(n, 2);
+    var n = s.useState(null);
+    var r = C.a(n, 2);
     var i = r[0];
     var o = r[1];
-    var a = Object(s.useRef)();
-    var c = Object(s.useRef)(!1);
+    var a = s.useRef();
+    var c = s.useRef(false);
     function u(e) {
       if (!c.current) {
         o(e);
@@ -219,16 +219,16 @@ var R = s.forwardRef(function (e, t) {
     function l() {
       _.a.cancel(a.current);
     }
-    Object(s.useEffect)(function () {
+    s.useEffect(function () {
       u("measure");
     }, [e]);
-    Object(s.useEffect)(function () {
+    s.useEffect(function () {
       switch (i) {
         case "measure":
           t();
       }
       if (i) {
-        a.current = Object(_.a)(Object(I.a)(D.a.mark(function e() {
+        a.current = _.a(I.a(D.a.mark(function e() {
           var t;
           var n;
           return D.a.wrap(function (e) {
@@ -248,15 +248,15 @@ var R = s.forwardRef(function (e, t) {
         })));
       }
     }, [i]);
-    Object(s.useEffect)(function () {
+    s.useEffect(function () {
       return function () {
-        c.current = !0;
+        c.current = true;
         l();
       };
     }, []);
     return [i, function (e) {
       l();
-      a.current = Object(_.a)(function () {
+      a.current = _.a(function () {
         u(function (e) {
           switch (i) {
             case "align":
@@ -266,7 +266,7 @@ var R = s.forwardRef(function (e, t) {
           }
           return e;
         });
-        if (!(null === e || void 0 === e)) {
+        if (!(null === e || undefined === e)) {
           e();
         }
       });
@@ -276,13 +276,13 @@ var R = s.forwardRef(function (e, t) {
       H(g());
     }
   });
-  var G = Object(C.a)(V, 2);
+  var G = C.a(V, 2);
   var z = G[0];
   var Q = G[1];
-  var W = Object(s.useRef)();
+  var W = s.useRef();
   function K() {
     var e;
-    if (!(null === (e = S.current) || void 0 === e)) {
+    if (!(null === (e = S.current) || undefined === e)) {
       e.forceAlign();
     }
   }
@@ -299,17 +299,17 @@ var R = s.forwardRef(function (e, t) {
       } else {
         Q(function () {
           var e;
-          if (!(null === (e = W.current) || void 0 === e)) {
+          if (!(null === (e = W.current) || undefined === e)) {
             e.call(W);
           }
         });
       }
-      if (!(null === m || void 0 === m)) {
+      if (!(null === m || undefined === m)) {
         m(e, t);
       }
     }
   }
-  var Y = Object(o.a)({}, k(e));
+  var Y = o.a({}, k(e));
   function q() {
     return new Promise(function (e) {
       W.current = e;
@@ -319,7 +319,7 @@ var R = s.forwardRef(function (e, t) {
     var t = Y[e];
     Y[e] = function (e, n) {
       Q();
-      return null === t || void 0 === t ? void 0 : t(e, n);
+      return null === t || undefined === t ? undefined : t(e, n);
     };
   });
   s.useEffect(function () {
@@ -335,14 +335,14 @@ var R = s.forwardRef(function (e, t) {
       }
     };
   });
-  var $ = Object(o.a)(Object(o.a)({}, U), {}, {
+  var $ = o.a(o.a({}, U), {}, {
     zIndex: l,
-    opacity: "motion" !== z && "stable" !== z && n ? 0 : void 0,
-    pointerEvents: "stable" === z ? void 0 : "none"
+    opacity: "motion" !== z && "stable" !== z && n ? 0 : undefined,
+    pointerEvents: "stable" === z ? undefined : "none"
   }, c);
-  var J = !0;
-  if (!(!(null === p || void 0 === p ? void 0 : p.points) || "align" !== z && "stable" !== z)) {
-    J = !1;
+  var J = true;
+  if (!(!(null === p || undefined === p ? undefined : p.points) || "align" !== z && "stable" !== z)) {
+    J = false;
   }
   var Z = u;
   if (s.Children.count(u) > 1) {
@@ -350,7 +350,7 @@ var R = s.forwardRef(function (e, t) {
       className: "".concat(i, "-content")
     }, u);
   }
-  return s.createElement(O.a, Object(r.a)({
+  return s.createElement(O.a, r.a({
     visible: n,
     ref: B,
     leavedClassName: "".concat(i, "-hidden")
@@ -367,7 +367,7 @@ var R = s.forwardRef(function (e, t) {
       target: A || g,
       key: "popup",
       ref: S,
-      monitorWindowResize: !0,
+      monitorWindowResize: true,
       disabled: J,
       align: p,
       onAlign: X
@@ -378,7 +378,7 @@ var R = s.forwardRef(function (e, t) {
       onMouseLeave: b,
       onMouseDownCapture: w,
       onTouchStartCapture: x,
-      style: Object(o.a)(Object(o.a)({}, r), $)
+      style: o.a(o.a({}, r), $)
     }, Z));
   });
 });
@@ -390,10 +390,10 @@ var N = s.forwardRef(function (e, t) {
   var a = e.zIndex;
   var c = e.children;
   var u = e.mobile;
-  var l = (u = void 0 === u ? {} : u).popupClassName;
+  var l = (u = undefined === u ? {} : u).popupClassName;
   var f = u.popupStyle;
   var d = u.popupMotion;
-  var h = void 0 === d ? {} : d;
+  var h = undefined === d ? {} : d;
   var p = u.popupRender;
   var _ = s.useRef();
   s.useImperativeHandle(t, function () {
@@ -404,7 +404,7 @@ var N = s.forwardRef(function (e, t) {
       }
     };
   });
-  var A = Object(o.a)({
+  var A = o.a({
     zIndex: a
   }, f);
   var g = c;
@@ -416,10 +416,10 @@ var N = s.forwardRef(function (e, t) {
   if (p) {
     g = p(g);
   }
-  return s.createElement(O.a, Object(r.a)({
+  return s.createElement(O.a, r.a({
     visible: i,
     ref: _,
-    removeOnLeave: !0
+    removeOnLeave: true
   }, h), function (e, t) {
     var r = e.className;
     var i = e.style;
@@ -427,7 +427,7 @@ var N = s.forwardRef(function (e, t) {
     return s.createElement("div", {
       ref: t,
       className: a,
-      style: Object(o.a)(Object(o.a)({}, i), A)
+      style: o.a(o.a({}, i), A)
     }, g);
   });
 });
@@ -437,34 +437,34 @@ var j = ["visible", "mobile"];
 var L = s.forwardRef(function (e, t) {
   var n = e.visible;
   var i = e.mobile;
-  var c = Object(a.a)(e, j);
-  var u = Object(s.useState)(n);
-  var l = Object(C.a)(u, 2);
+  var c = a.a(e, j);
+  var u = s.useState(n);
+  var l = C.a(u, 2);
   var f = l[0];
   var d = l[1];
-  var h = Object(s.useState)(!1);
-  var p = Object(C.a)(h, 2);
+  var h = s.useState(false);
+  var p = C.a(h, 2);
   var _ = p[0];
   var A = p[1];
-  var g = Object(o.a)(Object(o.a)({}, c), {}, {
+  var g = o.a(o.a({}, c), {}, {
     visible: f
   });
-  Object(s.useEffect)(function () {
+  s.useEffect(function () {
     d(n);
     if (n && i) {
       A(function () {
         if ("undefined" === typeof navigator || "undefined" === typeof window) {
-          return !1;
+          return false;
         }
         var e = navigator.userAgent || navigator.vendor || window.opera;
-        return !(!/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino|android|ipad|playbook|silk/i.test(e) && !/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw-(n|u)|c55\/|capi|ccwa|cdm-|cell|chtm|cldc|cmd-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc-s|devi|dica|dmob|do(c|p)o|ds(12|-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(-|_)|g1 u|g560|gene|gf-5|g-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd-(m|p|t)|hei-|hi(pt|ta)|hp( i|ip)|hs-c|ht(c(-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i-(20|go|ma)|i230|iac( |-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|-[a-w])|libw|lynx|m1-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|-([1-8]|c))|phil|pire|pl(ay|uc)|pn-2|po(ck|rt|se)|prox|psio|pt-g|qa-a|qc(07|12|21|32|60|-[2-7]|i-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h-|oo|p-)|sdk\/|se(c(-|0|1)|47|mc|nd|ri)|sgh-|shar|sie(-|m)|sk-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h-|v-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl-|tdg-|tel(i|m)|tim-|t-mo|to(pl|sh)|ts(70|m-|m3|m5)|tx-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas-|your|zeto|zte-/i.test(null === e || void 0 === e ? void 0 : e.substr(0, 4)));
+        return !(!/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino|android|ipad|playbook|silk/i.test(e) && !/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw-(n|u)|c55\/|capi|ccwa|cdm-|cell|chtm|cldc|cmd-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc-s|devi|dica|dmob|do(c|p)o|ds(12|-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(-|_)|g1 u|g560|gene|gf-5|g-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd-(m|p|t)|hei-|hi(pt|ta)|hp( i|ip)|hs-c|ht(c(-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i-(20|go|ma)|i230|iac( |-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|-[a-w])|libw|lynx|m1-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|-([1-8]|c))|phil|pire|pl(ay|uc)|pn-2|po(ck|rt|se)|prox|psio|pt-g|qa-a|qc(07|12|21|32|60|-[2-7]|i-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h-|oo|p-)|sdk\/|se(c(-|0|1)|47|mc|nd|ri)|sgh-|shar|sie(-|m)|sk-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h-|v-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl-|tdg-|tel(i|m)|tim-|t-mo|to(pl|sh)|ts(70|m-|m3|m5)|tx-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas-|your|zeto|zte-/i.test(null === e || undefined === e ? undefined : e.substr(0, 4)));
       }());
     }
   }, [n, i]);
-  var v = _ ? s.createElement(M, Object(r.a)({}, g, {
+  var v = _ ? s.createElement(M, r.a({}, g, {
     mobile: i,
     ref: t
-  })) : s.createElement(P, Object(r.a)({}, g, {
+  })) : s.createElement(P, r.a({}, g, {
     ref: t
   }));
   return s.createElement("div", null, s.createElement(S, g), v);
@@ -482,29 +482,29 @@ function z(e) {
 var Q = ["onClick", "onMouseDown", "onTouchStart", "onMouseEnter", "onMouseLeave", "onFocus", "onBlur", "onContextMenu"];
 var W = function (e) {
   var t = function (t) {
-    Object(f.a)(i, t);
-    var n = Object(d.a)(i);
+    f.a(i, t);
+    var n = d.a(i);
     function i(e) {
       var t;
       var o;
-      Object(c.a)(this, i);
+      c.a(this, i);
       (t = n.call(this, e)).popupRef = s.createRef();
       t.triggerRef = s.createRef();
-      t.attachId = void 0;
-      t.clickOutsideHandler = void 0;
-      t.touchOutsideHandler = void 0;
-      t.contextMenuOutsideHandler1 = void 0;
-      t.contextMenuOutsideHandler2 = void 0;
-      t.mouseDownTimeout = void 0;
-      t.focusTime = void 0;
-      t.preClickTime = void 0;
-      t.preTouchTime = void 0;
-      t.delayTimer = void 0;
-      t.hasPopupMouseDown = void 0;
+      t.attachId = undefined;
+      t.clickOutsideHandler = undefined;
+      t.touchOutsideHandler = undefined;
+      t.contextMenuOutsideHandler1 = undefined;
+      t.contextMenuOutsideHandler2 = undefined;
+      t.mouseDownTimeout = undefined;
+      t.focusTime = undefined;
+      t.preClickTime = undefined;
+      t.preTouchTime = undefined;
+      t.delayTimer = undefined;
+      t.hasPopupMouseDown = undefined;
       t.onMouseEnter = function (e) {
         var n = t.props.mouseEnterDelay;
         t.fireEvents("onMouseEnter", e);
-        t.delaySetPopupVisible(!0, n, n ? null : e);
+        t.delaySetPopupVisible(true, n, n ? null : e);
       };
       t.onMouseMove = function (e) {
         t.fireEvents("onMouseMove", e);
@@ -512,15 +512,15 @@ var W = function (e) {
       };
       t.onMouseLeave = function (e) {
         t.fireEvents("onMouseLeave", e);
-        t.delaySetPopupVisible(!1, t.props.mouseLeaveDelay);
+        t.delaySetPopupVisible(false, t.props.mouseLeaveDelay);
       };
       t.onPopupMouseEnter = function () {
         t.clearDelayTimer();
       };
       t.onPopupMouseLeave = function (e) {
         var n;
-        if (!(e.relatedTarget && !e.relatedTarget.setTimeout && A(null === (n = t.popupRef.current) || void 0 === n ? void 0 : n.getElement(), e.relatedTarget))) {
-          t.delaySetPopupVisible(!1, t.props.mouseLeaveDelay);
+        if (!(e.relatedTarget && !e.relatedTarget.setTimeout && A(null === (n = t.popupRef.current) || undefined === n ? undefined : n.getElement(), e.relatedTarget))) {
+          t.delaySetPopupVisible(false, t.props.mouseLeaveDelay);
         }
       };
       t.onFocus = function (e) {
@@ -528,7 +528,7 @@ var W = function (e) {
         t.clearDelayTimer();
         if (t.isFocusToShow()) {
           t.focusTime = Date.now();
-          t.delaySetPopupVisible(!0, t.props.focusDelay);
+          t.delaySetPopupVisible(true, t.props.focusDelay);
         }
       };
       t.onMouseDown = function (e) {
@@ -543,13 +543,13 @@ var W = function (e) {
         t.fireEvents("onBlur", e);
         t.clearDelayTimer();
         if (t.isBlurToHide()) {
-          t.delaySetPopupVisible(!1, t.props.blurDelay);
+          t.delaySetPopupVisible(false, t.props.blurDelay);
         }
       };
       t.onContextMenu = function (e) {
         e.preventDefault();
         t.fireEvents("onContextMenu", e);
-        t.setPopupVisible(!0, e);
+        t.setPopupVisible(true, e);
       };
       t.onContextMenuClose = function () {
         if (t.isContextMenuToShow()) {
@@ -588,10 +588,10 @@ var W = function (e) {
       };
       t.onPopupMouseDown = function () {
         var e;
-        t.hasPopupMouseDown = !0;
+        t.hasPopupMouseDown = true;
         clearTimeout(t.mouseDownTimeout);
         t.mouseDownTimeout = window.setTimeout(function () {
-          t.hasPopupMouseDown = !1;
+          t.hasPopupMouseDown = false;
         }, 0);
         if (t.context) {
           (e = t.context).onPopupMouseDown.apply(e, arguments);
@@ -613,12 +613,12 @@ var W = function (e) {
           return e(t.triggerRef.current);
         }
         try {
-          var n = Object(g.a)(t.triggerRef.current);
+          var n = g.a(t.triggerRef.current);
           if (n) {
             return n;
           }
         } catch (r) {}
-        return p.a.findDOMNode(Object(l.a)(t));
+        return p.a.findDOMNode(l.a(t));
       };
       t.getPopupClassNameFromAlign = function (e) {
         var n = [];
@@ -677,7 +677,7 @@ var W = function (e) {
         }
         O.onMouseDown = t.onPopupMouseDown;
         O.onTouchStart = t.onPopupMouseDown;
-        return s.createElement(U, Object(r.a)({
+        return s.createElement(U, r.a({
           prefixCls: n,
           destroyPopupOnHide: i,
           visible: E,
@@ -720,7 +720,7 @@ var W = function (e) {
         if (n) {
           n.appendChild(e);
         } else {
-          t.attachId = Object(_.a)(function () {
+          t.attachId = _.a(function () {
             t.attachParent(e);
           });
         }
@@ -764,7 +764,7 @@ var W = function (e) {
       });
       return t;
     }
-    Object(u.a)(i, [{
+    u.a(i, [{
       key: "componentDidMount",
       value: function () {
         this.componentDidUpdate();
@@ -777,17 +777,17 @@ var W = function (e) {
         if (this.state.popupVisible) {
           if (!(this.clickOutsideHandler || !this.isClickToHide() && !this.isContextMenuToShow())) {
             e = t.getDocument(this.getRootDomNode());
-            this.clickOutsideHandler = Object(m.a)(e, "mousedown", this.onDocumentClick);
+            this.clickOutsideHandler = m.a(e, "mousedown", this.onDocumentClick);
           }
           if (!this.touchOutsideHandler) {
             e = e || t.getDocument(this.getRootDomNode());
-            this.touchOutsideHandler = Object(m.a)(e, "touchstart", this.onDocumentClick);
+            this.touchOutsideHandler = m.a(e, "touchstart", this.onDocumentClick);
           }
           if (!this.contextMenuOutsideHandler1 && this.isContextMenuToShow()) {
             e = e || t.getDocument(this.getRootDomNode());
-            this.contextMenuOutsideHandler1 = Object(m.a)(e, "scroll", this.onContextMenuClose);
+            this.contextMenuOutsideHandler1 = m.a(e, "scroll", this.onContextMenuClose);
           }
-          return void (!this.contextMenuOutsideHandler2 && this.isContextMenuToShow() && (this.contextMenuOutsideHandler2 = Object(m.a)(window, "blur", this.onContextMenuClose)));
+          return void (!this.contextMenuOutsideHandler2 && this.isContextMenuToShow() && (this.contextMenuOutsideHandler2 = m.a(window, "blur", this.onContextMenuClose)));
         }
         this.clearOutsideHandler();
       }
@@ -803,7 +803,7 @@ var W = function (e) {
       key: "getPopupDomNode",
       value: function () {
         var e;
-        return (null === (e = this.popupRef.current) || void 0 === e ? void 0 : e.getElement()) || null;
+        return (null === (e = this.popupRef.current) || undefined === e ? undefined : e.getElement()) || null;
       }
     }, {
       key: "getPopupAlign",
@@ -814,7 +814,7 @@ var W = function (e) {
         var r = e.builtinPlacements;
         return t && r ? function (e, t, n) {
           var r = e[t] || {};
-          return Object(o.a)(Object(o.a)({}, r), n);
+          return o.a(o.a({}, r), n);
         }(r, t, n) : n;
       }
     }, {
@@ -957,7 +957,7 @@ var W = function (e) {
       value: function () {
         var e;
         if (this.state.popupVisible) {
-          if (!(null === (e = this.popupRef.current) || void 0 === e)) {
+          if (!(null === (e = this.popupRef.current) || undefined === e)) {
             e.forceAlign();
           }
         }
@@ -977,7 +977,7 @@ var W = function (e) {
     }, {
       key: "close",
       value: function () {
-        this.setPopupVisible(!1);
+        this.setPopupVisible(false);
       }
     }, {
       key: "render",
@@ -1031,9 +1031,9 @@ var W = function (e) {
         if (d) {
           f.className = d;
         }
-        var h = Object(o.a)({}, f);
-        if (Object(v.c)(l)) {
-          h.ref = Object(v.a)(this.triggerRef, l.ref);
+        var h = o.a({}, f);
+        if (v.c(l)) {
+          h.ref = v.a(this.triggerRef, l.ref);
         }
         var p;
         var _ = s.cloneElement(l, h);
@@ -1056,7 +1056,7 @@ var W = function (e) {
       value: function (e, t) {
         var n = e.popupVisible;
         var r = {};
-        if (void 0 !== n && t.popupVisible !== n) {
+        if (undefined !== n && t.popupVisible !== n) {
           r.popupVisible = n;
           r.prevPopupVisible = t.popupVisible;
         }
@@ -1079,19 +1079,19 @@ var W = function (e) {
     focusDelay: 0,
     blurDelay: .15,
     popupStyle: {},
-    destroyPopupOnHide: !1,
+    destroyPopupOnHide: false,
     popupAlign: {},
-    defaultPopupVisible: !1,
-    mask: !1,
-    maskClosable: !0,
+    defaultPopupVisible: false,
+    mask: false,
+    maskClosable: true,
     action: [],
     showAction: [],
     hideAction: [],
-    autoDestroy: !1
+    autoDestroy: false
   };
   return t;
 }(b);
-var K = require("../1010");
+import K = require("../1010");
 var X = function (e) {
   var t = e.overlay;
   var n = e.prefixCls;
@@ -1107,14 +1107,14 @@ var X = function (e) {
 var Y = function (e, t) {
   var n = e.overlayClassName;
   var c = e.trigger;
-  var u = void 0 === c ? ["hover"] : c;
+  var u = undefined === c ? ["hover"] : c;
   var l = e.mouseEnterDelay;
-  var f = void 0 === l ? 0 : l;
+  var f = undefined === l ? 0 : l;
   var d = e.mouseLeaveDelay;
-  var h = void 0 === d ? .1 : d;
+  var h = undefined === d ? .1 : d;
   var p = e.overlayStyle;
   var _ = e.prefixCls;
-  var A = void 0 === _ ? "rc-tooltip" : _;
+  var A = undefined === _ ? "rc-tooltip" : _;
   var g = e.children;
   var v = e.onVisibleChange;
   var m = e.afterVisibleChange;
@@ -1122,38 +1122,38 @@ var Y = function (e, t) {
   var b = e.animation;
   var w = e.motion;
   var E = e.placement;
-  var x = void 0 === E ? "right" : E;
+  var x = undefined === E ? "right" : E;
   var C = e.align;
-  var O = void 0 === C ? {} : C;
+  var O = undefined === C ? {} : C;
   var k = e.destroyTooltipOnHide;
-  var S = void 0 !== k && k;
+  var S = undefined !== k && k;
   var T = e.defaultVisible;
   var B = e.getTooltipContainer;
   var D = e.overlayInnerStyle;
-  var I = Object(a.a)(e, ["overlayClassName", "trigger", "mouseEnterDelay", "mouseLeaveDelay", "overlayStyle", "prefixCls", "children", "onVisibleChange", "afterVisibleChange", "transitionName", "animation", "motion", "placement", "align", "destroyTooltipOnHide", "defaultVisible", "getTooltipContainer", "overlayInnerStyle"]);
-  var F = Object(s.useRef)(null);
-  Object(s.useImperativeHandle)(t, function () {
+  var I = a.a(e, ["overlayClassName", "trigger", "mouseEnterDelay", "mouseLeaveDelay", "overlayStyle", "prefixCls", "children", "onVisibleChange", "afterVisibleChange", "transitionName", "animation", "motion", "placement", "align", "destroyTooltipOnHide", "defaultVisible", "getTooltipContainer", "overlayInnerStyle"]);
+  var F = s.useRef(null);
+  s.useImperativeHandle(t, function () {
     return F.current;
   });
-  var R = Object(o.a)({}, I);
+  var R = o.a({}, I);
   if ("visible" in e) {
     R.popupVisible = e.visible;
   }
-  var P = !1;
-  var N = !1;
+  var P = false;
+  var N = false;
   if ("boolean" === typeof S) {
     P = S;
-  } else if (S && "object" === Object(i.a)(S)) {
+  } else if (S && "object" === i.a(S)) {
     var M = S.keepParent;
-    P = !0 === M;
-    N = !1 === M;
+    P = true === M;
+    N = false === M;
   }
-  return s.createElement(W, Object(r.a)({
+  return s.createElement(W, r.a({
     popupClassName: n,
     prefixCls: A,
     popup: function () {
       var t = e.arrowContent;
-      var n = void 0 === t ? null : t;
+      var n = undefined === t ? null : t;
       var r = e.overlay;
       var i = e.id;
       return [s.createElement("div", {
@@ -1186,6 +1186,6 @@ var Y = function (e, t) {
     mouseEnterDelay: f
   }, R), g);
 };
-var q = Object(s.forwardRef)(Y);
+var q = s.forwardRef(Y);
 export { q as a };
 export default q;

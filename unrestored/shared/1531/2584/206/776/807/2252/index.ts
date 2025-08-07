@@ -59,7 +59,7 @@ module.exports = function (e) {
   }
   function o() {
     var e = i.instances.indexOf(this);
-    return -1 !== e && (i.instances.splice(e, 1), !0);
+    return -1 !== e && (i.instances.splice(e, 1), true);
   }
   function a(e, t) {
     var n = i(this.namespace + ("undefined" === typeof t ? ":" : t) + e);
@@ -107,21 +107,21 @@ module.exports = function (e) {
   };
   i.enabled = function (e) {
     if ("*" === e[e.length - 1]) {
-      return !0;
+      return true;
     }
     var t;
     var n;
     for (t = 0, n = i.skips.length; t < n; t++) {
       if (i.skips[t].test(e)) {
-        return !1;
+        return false;
       }
     }
     for (t = 0, n = i.names.length; t < n; t++) {
       if (i.names[t].test(e)) {
-        return !0;
+        return true;
       }
     }
-    return !1;
+    return false;
   };
   i.humanize = require("./2253");
   Object.keys(e).forEach(function (t) {

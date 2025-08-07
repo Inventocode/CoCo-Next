@@ -21,32 +21,32 @@ var u = {
 };
 var l = o.forwardRef(function (e, t) {
   var n = e.align;
-  var s = void 0 === n ? "inherit" : n;
+  var s = undefined === n ? "inherit" : n;
   var l = e.classes;
   var f = e.className;
   var d = e.color;
-  var h = void 0 === d ? "initial" : d;
+  var h = undefined === d ? "initial" : d;
   var p = e.component;
   var _ = e.display;
-  var A = void 0 === _ ? "initial" : _;
+  var A = undefined === _ ? "initial" : _;
   var g = e.gutterBottom;
-  var v = void 0 !== g && g;
+  var v = undefined !== g && g;
   var m = e.noWrap;
-  var y = void 0 !== m && m;
+  var y = undefined !== m && m;
   var b = e.paragraph;
-  var w = void 0 !== b && b;
+  var w = undefined !== b && b;
   var E = e.variant;
-  var x = void 0 === E ? "body1" : E;
+  var x = undefined === E ? "body1" : E;
   var C = e.variantMapping;
-  var O = void 0 === C ? u : C;
-  var k = Object(i.a)(e, ["align", "classes", "className", "color", "component", "display", "gutterBottom", "noWrap", "paragraph", "variant", "variantMapping"]);
+  var O = undefined === C ? u : C;
+  var k = i.a(e, ["align", "classes", "className", "color", "component", "display", "gutterBottom", "noWrap", "paragraph", "variant", "variantMapping"]);
   var S = p || (w ? "p" : O[x] || u[x]) || "span";
-  return o.createElement(S, Object(r.a)({
-    className: Object(a.a)(l.root, f, "inherit" !== x && l[x], "initial" !== h && l["color".concat(Object(c.a)(h))], y && l.noWrap, v && l.gutterBottom, w && l.paragraph, "inherit" !== s && l["align".concat(Object(c.a)(s))], "initial" !== A && l["display".concat(Object(c.a)(A))]),
+  return o.createElement(S, r.a({
+    className: a.a(l.root, f, "inherit" !== x && l[x], "initial" !== h && l["color".concat(c.a(h))], y && l.noWrap, v && l.gutterBottom, w && l.paragraph, "inherit" !== s && l["align".concat(c.a(s))], "initial" !== A && l["display".concat(c.a(A))]),
     ref: t
   }, k));
 });
-exports.a = Object(s.a)(function (e) {
+exports.a = s.a(function (e) {
   return {
     root: {
       margin: 0

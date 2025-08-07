@@ -15,7 +15,7 @@ var h = require("./1734/1068");
 var m = [];
 var g = m.sort;
 var _ = c(function () {
-  m.sort(void 0);
+  m.sort(undefined);
 });
 var v = c(function () {
   m.sort(null);
@@ -27,7 +27,7 @@ var y = !c(function () {
   }
   if (!(d && d > 3)) {
     if (p) {
-      return !0;
+      return true;
     }
     if (h) {
       return h < 603;
@@ -72,16 +72,16 @@ var y = !c(function () {
 });
 r({
   target: "Array",
-  proto: !0,
+  proto: true,
   forced: _ || !v || !b || !y
 }, {
   sort: function (e) {
-    if (void 0 !== e) {
+    if (undefined !== e) {
       o(e);
     }
     var t = i(this);
     if (y) {
-      return void 0 === e ? g.call(t) : g.call(t, e);
+      return undefined === e ? g.call(t) : g.call(t, e);
     }
     var n;
     var r;
@@ -94,7 +94,7 @@ r({
     }
     for (n = (c = l(c, function (e) {
       return function (t, n) {
-        return void 0 === n ? -1 : void 0 === t ? 1 : void 0 !== e ? +e(t, n) || 0 : s(t) > s(n) ? 1 : -1;
+        return undefined === n ? -1 : undefined === t ? 1 : undefined !== e ? +e(t, n) || 0 : s(t) > s(n) ? 1 : -1;
       };
     }(e))).length, r = 0; r < n;) {
       t[r] = c[r++];

@@ -16,8 +16,8 @@
       throw new TypeError("not a function");
     }
     this._state = 0;
-    this._handled = !1;
-    this._value = void 0;
+    this._handled = false;
+    this._value = undefined;
     this._deferreds = [];
     p(e, this);
   }
@@ -26,7 +26,7 @@
       e = e._value;
     }
     if (0 !== e._state) {
-      e._handled = !0;
+      e._handled = true;
       c._immediateFn(function () {
         var n = 1 === e._state ? t.onFulfilled : t.onRejected;
         if (null !== n) {
@@ -96,16 +96,16 @@
     this.promise = n;
   }
   function p(e, t) {
-    var n = !1;
+    var n = false;
     try {
       e(function (e) {
         if (!n) {
-          n = !0;
+          n = true;
           l(t, e);
         }
       }, function (e) {
         if (!n) {
-          n = !0;
+          n = true;
           f(t, e);
         }
       });
@@ -113,7 +113,7 @@
       if (n) {
         return;
       }
-      n = !0;
+      n = true;
       f(t, r);
     }
   }

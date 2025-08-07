@@ -17,7 +17,7 @@ var f = !u(function () {
 var h = p || f;
 r({
   target: "Reflect",
-  stat: !0,
+  stat: true,
   forced: h,
   sham: h
 }, {

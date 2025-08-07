@@ -20,7 +20,7 @@ module.exports = function (e) {
   i(n, [{
     key: "moveNext",
     value: function () {
-      return this.index <= this.indexEnd && (this.current = this.tokens[this.index], this.index += 1, !0);
+      return this.index <= this.indexEnd && (this.current = this.tokens[this.index], this.index += 1, true);
     }
   }, {
     key: "getOneToken",

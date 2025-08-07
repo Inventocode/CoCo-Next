@@ -2,7 +2,7 @@
 
 export { m as a };
 var r;
-var o = require("../1/index");
+import o = require("regenerator-runtime");
 var i = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -15,64 +15,64 @@ var i = function __importDefault(module) {
   });
   return defaultExport;
 }(o);
-var a = require("../7");
-var s = require("../27");
-var c = require("../40");
-var l = require("../57/index");
-var u = require("../58/index");
-var d = require("../197/276");
+import a = require("../7");
+import s = require("../27");
+import c = require("../40");
+import l = require("../57/index");
+import u = require("../58/index");
+import d = require("../197/276");
 !function (e) {
   e.BREAK = "BREAK";
   e.CONTINUE = "CONTINUE";
   e.TERMINATE = "TERMINATE";
 }(r || (r = {}));
 var p = function (e) {
-  Object(l.a)(n, e);
-  var t = Object(u.a)(n);
+  l.a(n, e);
+  var t = u.a(n);
   function n() {
     var e;
-    var o = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "Scheduler terminated!";
-    Object(s.a)(this, n);
+    var o = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : "Scheduler terminated!";
+    s.a(this, n);
     (e = t.call(this, o)).name = r.TERMINATE;
     return e;
   }
   return n;
-}(Object(d.a)(Error));
+}(d.a(Error));
 var f = function (e) {
-  Object(l.a)(n, e);
-  var t = Object(u.a)(n);
+  l.a(n, e);
+  var t = u.a(n);
   function n() {
     var e;
-    var o = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "Repetition continued!";
-    Object(s.a)(this, n);
+    var o = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : "Repetition continued!";
+    s.a(this, n);
     (e = t.call(this, o)).name = r.CONTINUE;
     return e;
   }
   return n;
-}(Object(d.a)(Error));
+}(d.a(Error));
 var h = function (e) {
-  Object(l.a)(n, e);
-  var t = Object(u.a)(n);
+  l.a(n, e);
+  var t = u.a(n);
   function n() {
     var e;
-    var o = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "Repetition broken!";
-    Object(s.a)(this, n);
+    var o = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : "Repetition broken!";
+    s.a(this, n);
     (e = t.call(this, o)).name = r.BREAK;
     return e;
   }
   return n;
-}(Object(d.a)(Error));
+}(d.a(Error));
 var m = function () {
   function e() {
-    Object(s.a)(this, e);
-    this._continuous = void 0;
-    this._terminated = void 0;
+    s.a(this, e);
+    this._continuous = undefined;
+    this._terminated = undefined;
     this._continuous = {
       promise: Promise.resolve()
     };
-    this._terminated = !1;
+    this._terminated = false;
   }
-  Object(c.a)(e, [{
+  c.a(e, [{
     key: "checkContinuity",
     value: function () {
       return this._continuous.promise;
@@ -101,7 +101,7 @@ var m = function () {
   }, {
     key: "giveUp",
     value: function () {
-      this._terminated = !0;
+      this._terminated = true;
       if (this._continuous.reject) {
         this._continuous.reject(new p());
       }
@@ -112,7 +112,7 @@ var m = function () {
   }, {
     key: "run",
     value: function () {
-      var e = Object(a.a)(i.a.mark(function e(t) {
+      var e = a.a(i.a.mark(function e(t) {
         var n;
         return i.a.wrap(function (e) {
           for (;;) {
@@ -168,7 +168,7 @@ var m = function () {
   }, {
     key: "loop",
     value: function () {
-      var t = Object(a.a)(i.a.mark(function t(n, o) {
+      var t = a.a(i.a.mark(function t(n, o) {
         var s;
         var c;
         return i.a.wrap(function (t) {
@@ -177,12 +177,12 @@ var m = function () {
               case 0:
                 s = -1;
                 c = function () {
-                  var e = Object(a.a)(i.a.mark(function e() {
+                  var e = a.a(i.a.mark(function e() {
                     return i.a.wrap(function (e) {
                       for (;;) {
                         switch (e.prev = e.next) {
                           case 0:
-                            return e.abrupt("return", !0);
+                            return e.abrupt("return", true);
                           case 1:
                           case "end":
                             return e.stop();
@@ -259,7 +259,7 @@ var m = function () {
   }, {
     key: "loopConditionally",
     value: function () {
-      var e = Object(a.a)(i.a.mark(function e(t, n) {
+      var e = a.a(i.a.mark(function e(t, n) {
         return i.a.wrap(function (e) {
           for (;;) {
             switch (e.prev = e.next) {
@@ -280,7 +280,7 @@ var m = function () {
   }, {
     key: "loopStep",
     value: function () {
-      var t = Object(a.a)(i.a.mark(function t(n, o, a, s) {
+      var t = a.a(i.a.mark(function t(n, o, a, s) {
         var c;
         var l;
         return i.a.wrap(function (t) {
@@ -339,7 +339,7 @@ var m = function () {
   }, {
     key: "loopStepClosedRange",
     value: function () {
-      var t = Object(a.a)(i.a.mark(function t(n, o, a, s) {
+      var t = a.a(i.a.mark(function t(n, o, a, s) {
         var c;
         var l;
         return i.a.wrap(function (t) {
@@ -398,7 +398,7 @@ var m = function () {
   }, {
     key: "listForEach",
     value: function () {
-      var t = Object(a.a)(i.a.mark(function t(n, o) {
+      var t = a.a(i.a.mark(function t(n, o) {
         var a;
         return i.a.wrap(function (t) {
           for (;;) {
@@ -451,7 +451,7 @@ var m = function () {
   }, {
     key: "loopFinitely",
     value: function () {
-      var e = Object(a.a)(i.a.mark(function e(t, n) {
+      var e = a.a(i.a.mark(function e(t, n) {
         var r;
         return i.a.wrap(function (e) {
           for (;;) {
@@ -477,7 +477,7 @@ var m = function () {
   }, {
     key: "loopInfinitely",
     value: function () {
-      var e = Object(a.a)(i.a.mark(function e(t) {
+      var e = a.a(i.a.mark(function e(t) {
         return i.a.wrap(function (e) {
           for (;;) {
             switch (e.prev = e.next) {
@@ -498,13 +498,13 @@ var m = function () {
   }, {
     key: "waitUntil",
     value: function () {
-      var e = Object(a.a)(i.a.mark(function e(t) {
+      var e = a.a(i.a.mark(function e(t) {
         return i.a.wrap(function (e) {
           for (;;) {
             switch (e.prev = e.next) {
               case 0:
                 e.next = 2;
-                return this.loopConditionally(function () {}, Object(a.a)(i.a.mark(function e() {
+                return this.loopConditionally(function () {}, a.a(i.a.mark(function e() {
                   var n;
                   return i.a.wrap(function (e) {
                     for (;;) {
@@ -536,7 +536,7 @@ var m = function () {
   }], [{
     key: "sleep",
     value: function () {
-      var t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : e.DEFAULT_SLEEP_DURATION;
+      var t = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : e.DEFAULT_SLEEP_DURATION;
       return new Promise(function (n) {
         setTimeout(n, Math.min(t, e.MAX_TIMEOUT));
       });

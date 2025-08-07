@@ -3,7 +3,7 @@
 module.exports = function (e, t, n, r, o, i, a, s) {
   if (!e) {
     var c;
-    if (void 0 === t) {
+    if (undefined === t) {
       c = new Error("Minified exception occurred; use the non-minified dev environment for the full error message and additional helpful warnings.");
     } else {
       var l = [n, r, o, i, a, s];
@@ -12,6 +12,7 @@ module.exports = function (e, t, n, r, o, i, a, s) {
         return l[u++];
       }))).name = "Invariant Violation";
     }
-    throw c.framesToPop = 1, c;
+    c.framesToPop = 1;
+    throw c;
   }
 };

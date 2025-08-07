@@ -3,9 +3,9 @@
 export { i as c };
 export { o as b };
 export { a };
-var r = require("./316");
+import r = require("./316");
 function i(e, t) {
-  if (void 0 === t) {
+  if (undefined === t) {
     t = 0;
   }
   return "string" !== typeof e || 0 === t || e.length <= t ? e : e.substr(0, t) + "...";
@@ -40,6 +40,6 @@ function o(e, t) {
   return n;
 }
 function a(e, t) {
-  return !!Object(r.h)(e) && (Object(r.g)(t) ? t.test(e) : "string" === typeof t && -1 !== e.indexOf(t));
+  return !!r.h(e) && (r.g(t) ? t.test(e) : "string" === typeof t && -1 !== e.indexOf(t));
 }
 export default a;

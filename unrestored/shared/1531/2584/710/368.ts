@@ -39,11 +39,11 @@ function s(e) {
 }();
 var c;
 var u = [];
-var l = !1;
+var l = false;
 var f = -1;
 function d() {
   if (l && c) {
-    l = !1;
+    l = false;
     if (c.length) {
       u = c.concat(u);
     } else {
@@ -57,7 +57,7 @@ function d() {
 function h() {
   if (!l) {
     var e = s(d);
-    l = !0;
+    l = true;
     for (var t = u.length; t;) {
       for (c = u, u = []; ++f < t;) {
         if (c) {
@@ -68,7 +68,7 @@ function h() {
       t = u.length;
     }
     c = null;
-    l = !1;
+    l = false;
     (function (e) {
       if (r === clearTimeout) {
         return clearTimeout(e);
@@ -110,7 +110,7 @@ p.prototype.run = function () {
   this.fun.apply(null, this.array);
 };
 i.title = "browser";
-i.browser = !0;
+i.browser = true;
 i.env = {};
 i.argv = [];
 i.version = "";

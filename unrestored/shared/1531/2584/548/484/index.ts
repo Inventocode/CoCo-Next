@@ -4,15 +4,15 @@ var r = require("./168");
 var i = require("./111");
 var o = require("./106");
 function a(e, t) {
-  Object(o.a)(2, arguments);
-  var n = Object(i.a)(e);
-  var a = Object(r.a)(t);
+  o.a(2, arguments);
+  var n = i.a(e);
+  var a = r.a(t);
   return isNaN(a) ? new Date(NaN) : a ? (n.setDate(n.getDate() + a), n) : n;
 }
 function s(e, t) {
-  Object(o.a)(2, arguments);
-  var n = Object(i.a)(e);
-  var a = Object(r.a)(t);
+  o.a(2, arguments);
+  var n = i.a(e);
+  var a = r.a(t);
   if (isNaN(a)) {
     return new Date(NaN);
   }
@@ -26,27 +26,27 @@ function s(e, t) {
   return s >= u ? c : (n.setFullYear(c.getFullYear(), c.getMonth(), s), n);
 }
 function c(e, t) {
-  Object(o.a)(2, arguments);
-  var n = Object(r.a)(t);
+  o.a(2, arguments);
+  var n = r.a(t);
   return s(e, 12 * n);
 }
 function u(e) {
-  Object(o.a)(1, arguments);
-  var t = Object(i.a)(e);
+  o.a(1, arguments);
+  var t = i.a(e);
   t.setHours(23, 59, 59, 999);
   return t;
 }
 function l(e, t) {
-  Object(o.a)(1, arguments);
+  o.a(1, arguments);
   var n = t || {};
   var a = n.locale;
   var s = a && a.options && a.options.weekStartsOn;
-  var c = null == s ? 0 : Object(r.a)(s);
-  var u = null == n.weekStartsOn ? c : Object(r.a)(n.weekStartsOn);
+  var c = null == s ? 0 : r.a(s);
+  var u = null == n.weekStartsOn ? c : r.a(n.weekStartsOn);
   if (!(u >= 0 && u <= 6)) {
     throw new RangeError("weekStartsOn must be between 0 and 6 inclusively");
   }
-  var l = Object(i.a)(e);
+  var l = i.a(e);
   var f = l.getDay();
   var d = 6 + (f < u ? -7 : 0) - (f - u);
   l.setDate(l.getDate() + d);
@@ -54,16 +54,16 @@ function l(e, t) {
   return l;
 }
 function f(e) {
-  Object(o.a)(1, arguments);
-  var t = Object(i.a)(e);
+  o.a(1, arguments);
+  var t = i.a(e);
   var n = t.getFullYear();
   t.setFullYear(n + 1, 0, 0);
   t.setHours(23, 59, 59, 999);
   return t;
 }
 function d(e) {
-  Object(o.a)(1, arguments);
-  var t = Object(i.a)(e);
+  o.a(1, arguments);
+  var t = i.a(e);
   return !isNaN(t);
 }
 var h = {
@@ -131,7 +131,7 @@ var h = {
 };
 var p = require("./692");
 var _ = {
-  date: Object(p.a)({
+  date: p.a({
     formats: {
       full: "EEEE, MMMM do, y",
       long: "MMMM do, y",
@@ -140,7 +140,7 @@ var _ = {
     },
     defaultWidth: "full"
   }),
-  time: Object(p.a)({
+  time: p.a({
     formats: {
       full: "h:mm:ss a zzzz",
       long: "h:mm:ss a z",
@@ -149,7 +149,7 @@ var _ = {
     },
     defaultWidth: "full"
   }),
-  dateTime: Object(p.a)({
+  dateTime: p.a({
     formats: {
       full: "{{date}} 'at' {{time}}",
       long: "{{date}} 'at' {{time}}",
@@ -184,7 +184,7 @@ var v = {
     }
     return n + "th";
   },
-  era: Object(g.a)({
+  era: g.a({
     values: {
       narrow: ["B", "A"],
       abbreviated: ["BC", "AD"],
@@ -192,7 +192,7 @@ var v = {
     },
     defaultWidth: "wide"
   }),
-  quarter: Object(g.a)({
+  quarter: g.a({
     values: {
       narrow: ["1", "2", "3", "4"],
       abbreviated: ["Q1", "Q2", "Q3", "Q4"],
@@ -203,7 +203,7 @@ var v = {
       return Number(e) - 1;
     }
   }),
-  month: Object(g.a)({
+  month: g.a({
     values: {
       narrow: ["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"],
       abbreviated: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
@@ -211,7 +211,7 @@ var v = {
     },
     defaultWidth: "wide"
   }),
-  day: Object(g.a)({
+  day: g.a({
     values: {
       narrow: ["S", "M", "T", "W", "T", "F", "S"],
       short: ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"],
@@ -220,7 +220,7 @@ var v = {
     },
     defaultWidth: "wide"
   }),
-  dayPeriod: Object(g.a)({
+  dayPeriod: g.a({
     values: {
       narrow: {
         am: "a",
@@ -305,14 +305,14 @@ var b = {
   },
   localize: v,
   match: {
-    ordinalNumber: Object(m.a)({
+    ordinalNumber: m.a({
       matchPattern: /^(\d+)(th|st|nd|rd)?/i,
       parsePattern: /\d+/i,
       valueCallback: function (e) {
         return parseInt(e, 10);
       }
     }),
-    era: Object(y.a)({
+    era: y.a({
       matchPatterns: {
         narrow: /^(b|a)/i,
         abbreviated: /^(b\.?\s?c\.?|b\.?\s?c\.?\s?e\.?|a\.?\s?d\.?|c\.?\s?e\.?)/i,
@@ -324,7 +324,7 @@ var b = {
       },
       defaultParseWidth: "any"
     }),
-    quarter: Object(y.a)({
+    quarter: y.a({
       matchPatterns: {
         narrow: /^[1234]/i,
         abbreviated: /^q[1234]/i,
@@ -339,7 +339,7 @@ var b = {
         return e + 1;
       }
     }),
-    month: Object(y.a)({
+    month: y.a({
       matchPatterns: {
         narrow: /^[jfmasond]/i,
         abbreviated: /^(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)/i,
@@ -352,7 +352,7 @@ var b = {
       },
       defaultParseWidth: "any"
     }),
-    day: Object(y.a)({
+    day: y.a({
       matchPatterns: {
         narrow: /^[smtwf]/i,
         short: /^(su|mo|tu|we|th|fr|sa)/i,
@@ -366,7 +366,7 @@ var b = {
       },
       defaultParseWidth: "any"
     }),
-    dayPeriod: Object(y.a)({
+    dayPeriod: y.a({
       matchPatterns: {
         narrow: /^(a|p|mi|n|(in the|at) (morning|afternoon|evening|night))/i,
         any: /^([ap]\.?\s?m\.?|midnight|noon|(in the|at) (morning|afternoon|evening|night))/i
@@ -393,14 +393,14 @@ var b = {
   }
 };
 function w(e, t) {
-  Object(o.a)(2, arguments);
-  var n = Object(i.a)(e).getTime();
-  var a = Object(r.a)(t);
+  o.a(2, arguments);
+  var n = i.a(e).getTime();
+  var a = r.a(t);
   return new Date(n + a);
 }
 function E(e, t) {
-  Object(o.a)(2, arguments);
-  var n = Object(r.a)(t);
+  o.a(2, arguments);
+  var n = r.a(t);
   return w(e, -n);
 }
 function x(e, t) {
@@ -456,9 +456,9 @@ var C = {
   }
 };
 function O(e) {
-  Object(o.a)(1, arguments);
+  o.a(1, arguments);
   var t = 1;
-  var n = Object(i.a)(e);
+  var n = i.a(e);
   var r = n.getUTCDay();
   var a = (r < t ? 7 : 0) + r - t;
   n.setUTCDate(n.getUTCDate() - a);
@@ -466,8 +466,8 @@ function O(e) {
   return n;
 }
 function k(e) {
-  Object(o.a)(1, arguments);
-  var t = Object(i.a)(e);
+  o.a(1, arguments);
+  var t = i.a(e);
   var n = t.getUTCFullYear();
   var r = new Date(0);
   r.setUTCFullYear(n + 1, 0, 4);
@@ -480,7 +480,7 @@ function k(e) {
   return t.getTime() >= a.getTime() ? n + 1 : t.getTime() >= c.getTime() ? n : n - 1;
 }
 function S(e) {
-  Object(o.a)(1, arguments);
+  o.a(1, arguments);
   var t = k(e);
   var n = new Date(0);
   n.setUTCFullYear(t, 0, 4);
@@ -489,52 +489,52 @@ function S(e) {
   return r;
 }
 function T(e) {
-  Object(o.a)(1, arguments);
-  var t = Object(i.a)(e);
+  o.a(1, arguments);
+  var t = i.a(e);
   var n = O(t).getTime() - S(t).getTime();
   return Math.round(n / 6048e5) + 1;
 }
 var B = require("./432");
 function D(e, t) {
-  Object(o.a)(1, arguments);
-  var n = Object(i.a)(e, t);
+  o.a(1, arguments);
+  var n = i.a(e, t);
   var a = n.getUTCFullYear();
   var s = t || {};
   var c = s.locale;
   var u = c && c.options && c.options.firstWeekContainsDate;
-  var l = null == u ? 1 : Object(r.a)(u);
-  var f = null == s.firstWeekContainsDate ? l : Object(r.a)(s.firstWeekContainsDate);
+  var l = null == u ? 1 : r.a(u);
+  var f = null == s.firstWeekContainsDate ? l : r.a(s.firstWeekContainsDate);
   if (!(f >= 1 && f <= 7)) {
     throw new RangeError("firstWeekContainsDate must be between 1 and 7 inclusively");
   }
   var d = new Date(0);
   d.setUTCFullYear(a + 1, 0, f);
   d.setUTCHours(0, 0, 0, 0);
-  var h = Object(B.a)(d, t);
+  var h = B.a(d, t);
   var p = new Date(0);
   p.setUTCFullYear(a, 0, f);
   p.setUTCHours(0, 0, 0, 0);
-  var _ = Object(B.a)(p, t);
+  var _ = B.a(p, t);
   return n.getTime() >= h.getTime() ? a + 1 : n.getTime() >= _.getTime() ? a : a - 1;
 }
 function I(e, t) {
-  Object(o.a)(1, arguments);
+  o.a(1, arguments);
   var n = t || {};
   var i = n.locale;
   var a = i && i.options && i.options.firstWeekContainsDate;
-  var s = null == a ? 1 : Object(r.a)(a);
-  var c = null == n.firstWeekContainsDate ? s : Object(r.a)(n.firstWeekContainsDate);
+  var s = null == a ? 1 : r.a(a);
+  var c = null == n.firstWeekContainsDate ? s : r.a(n.firstWeekContainsDate);
   var u = D(e, t);
   var l = new Date(0);
   l.setUTCFullYear(u, 0, c);
   l.setUTCHours(0, 0, 0, 0);
-  var f = Object(B.a)(l, t);
+  var f = B.a(l, t);
   return f;
 }
 function F(e, t) {
-  Object(o.a)(1, arguments);
-  var n = Object(i.a)(e);
-  var r = Object(B.a)(n, t).getTime() - I(n, t).getTime();
+  o.a(1, arguments);
+  var n = i.a(e);
+  var r = B.a(n, t).getTime() - I(n, t).getTime();
   return Math.round(r / 6048e5) + 1;
 }
 var R = "midnight";
@@ -741,8 +741,8 @@ var G = {
   },
   D: function (e, t, n) {
     var r = function (e) {
-      Object(o.a)(1, arguments);
-      var t = Object(i.a)(e);
+      o.a(1, arguments);
+      var t = i.a(e);
       var n = t.getTime();
       t.setUTCMonth(0, 1);
       t.setUTCHours(0, 0, 0, 0);
@@ -1187,26 +1187,26 @@ function ie(e) {
   return e.match(te)[1].replace(ne, "'");
 }
 function oe(e, t) {
-  Object(o.a)(2, arguments);
-  var n = Object(i.a)(e);
-  var r = Object(i.a)(t);
+  o.a(2, arguments);
+  var n = i.a(e);
+  var r = i.a(t);
   return n.getTime() > r.getTime();
 }
 function ae(e, t) {
-  Object(o.a)(2, arguments);
-  var n = Object(i.a)(e);
-  var r = Object(i.a)(t);
+  o.a(2, arguments);
+  var n = i.a(e);
+  var r = i.a(t);
   return n.getTime() < r.getTime();
 }
 function se(e) {
-  Object(o.a)(1, arguments);
-  var t = Object(i.a)(e);
+  o.a(1, arguments);
+  var t = i.a(e);
   t.setHours(0, 0, 0, 0);
   return t;
 }
 function ce(e) {
-  Object(o.a)(1, arguments);
-  var t = Object(i.a)(e);
+  o.a(1, arguments);
+  var t = i.a(e);
   t.setMinutes(0, 0, 0);
   return t;
 }
@@ -1220,17 +1220,17 @@ function ue(e, t) {
   return e;
 }
 function le(e, t, n) {
-  Object(o.a)(2, arguments);
+  o.a(2, arguments);
   var a = n || {};
   var s = a.locale;
   var c = s && s.options && s.options.weekStartsOn;
-  var u = null == c ? 0 : Object(r.a)(c);
-  var l = null == a.weekStartsOn ? u : Object(r.a)(a.weekStartsOn);
+  var u = null == c ? 0 : r.a(c);
+  var l = null == a.weekStartsOn ? u : r.a(a.weekStartsOn);
   if (!(l >= 0 && l <= 6)) {
     throw new RangeError("weekStartsOn must be between 0 and 6 inclusively");
   }
-  var f = Object(i.a)(e);
-  var d = Object(r.a)(t);
+  var f = i.a(e);
+  var d = r.a(t);
   var h = f.getUTCDay();
   var p = d % 7;
   var _ = (p + 7) % 7;
@@ -1453,12 +1453,12 @@ var Qe = {
         var o = He(n.year, i);
         e.setUTCFullYear(o, 0, r.firstWeekContainsDate);
         e.setUTCHours(0, 0, 0, 0);
-        return Object(B.a)(e, r);
+        return B.a(e, r);
       }
       var a = "era" in t && 1 !== t.era ? 1 - n.year : n.year;
       e.setUTCFullYear(a, 0, r.firstWeekContainsDate);
       e.setUTCHours(0, 0, 0, 0);
-      return Object(B.a)(e, r);
+      return B.a(e, r);
     },
     incompatibleTokens: ["y", "R", "u", "Q", "q", "M", "L", "I", "d", "D", "i", "t", "T"]
   },
@@ -1707,10 +1707,10 @@ var Qe = {
       return t >= 1 && t <= 53;
     },
     set: function (e, t, n, a) {
-      return Object(B.a)(function (e, t, n) {
-        Object(o.a)(2, arguments);
-        var a = Object(i.a)(e);
-        var s = Object(r.a)(t);
+      return B.a(function (e, t, n) {
+        o.a(2, arguments);
+        var a = i.a(e);
+        var s = r.a(t);
         var c = F(a, n) - s;
         a.setUTCDate(a.getUTCDate() - 7 * c);
         return a;
@@ -1737,9 +1737,9 @@ var Qe = {
     },
     set: function (e, t, n, a) {
       return O(function (e, t) {
-        Object(o.a)(2, arguments);
-        var n = Object(i.a)(e);
-        var a = Object(r.a)(t);
+        o.a(2, arguments);
+        var n = i.a(e);
+        var a = r.a(t);
         var s = T(n) - a;
         n.setUTCDate(n.getUTCDate() - 7 * s);
         return n;
@@ -2058,13 +2058,13 @@ var Qe = {
     },
     set: function (e, t, n, a) {
       (e = function (e, t) {
-        Object(o.a)(2, arguments);
-        var n = Object(r.a)(t);
+        o.a(2, arguments);
+        var n = r.a(t);
         if (n % 7 === 0) {
           n -= 7;
         }
         var a = 1;
-        var s = Object(i.a)(e);
+        var s = i.a(e);
         var c = s.getUTCDay();
         var u = n % 7;
         var l = (u + 7) % 7;
@@ -2409,7 +2409,7 @@ var Qe = {
     },
     set: function (e, t, n, r) {
       return [new Date(1e3 * n), {
-        timestampIsSet: !0
+        timestampIsSet: true
       }];
     },
     incompatibleTokens: "*"
@@ -2421,7 +2421,7 @@ var Qe = {
     },
     set: function (e, t, n, r) {
       return [new Date(n), {
-        timestampIsSet: !0
+        timestampIsSet: true
       }];
     },
     incompatibleTokens: "*"
@@ -2446,8 +2446,8 @@ function Ze(e) {
   return e.match(Xe)[1].replace(Ye, "'");
 }
 function et(e) {
-  Object(o.a)(1, arguments);
-  var t = Object(i.a)(e);
+  o.a(1, arguments);
+  var t = i.a(e);
   var n = t.getFullYear();
   var r = t.getMonth();
   var a = new Date(0);
@@ -2456,31 +2456,31 @@ function et(e) {
   return a.getDate();
 }
 function tt(e) {
-  Object(o.a)(1, arguments);
-  var t = Object(i.a)(e);
+  o.a(1, arguments);
+  var t = i.a(e);
   t.setDate(1);
   t.setHours(0, 0, 0, 0);
   return t;
 }
 function nt(e) {
-  Object(o.a)(1, arguments);
-  var t = Object(i.a)(e);
+  o.a(1, arguments);
+  var t = i.a(e);
   var n = t.getMonth();
   t.setFullYear(t.getFullYear(), n + 1, 0);
   t.setHours(23, 59, 59, 999);
   return t;
 }
 function rt(e, t) {
-  Object(o.a)(1, arguments);
+  o.a(1, arguments);
   var n = t || {};
   var a = n.locale;
   var s = a && a.options && a.options.weekStartsOn;
-  var c = null == s ? 0 : Object(r.a)(s);
-  var u = null == n.weekStartsOn ? c : Object(r.a)(n.weekStartsOn);
+  var c = null == s ? 0 : r.a(s);
+  var u = null == n.weekStartsOn ? c : r.a(n.weekStartsOn);
   if (!(u >= 0 && u <= 6)) {
     throw new RangeError("weekStartsOn must be between 0 and 6 inclusively");
   }
-  var l = Object(i.a)(e);
+  var l = i.a(e);
   var f = l.getDay();
   var d = (f < u ? 7 : 0) + f - u;
   l.setDate(l.getDate() - d);
@@ -2488,8 +2488,8 @@ function rt(e, t) {
   return l;
 }
 function it(e) {
-  Object(o.a)(1, arguments);
-  var t = Object(i.a)(e);
+  o.a(1, arguments);
+  var t = i.a(e);
   var n = new Date(0);
   n.setFullYear(t.getFullYear(), 0, 1);
   n.setHours(0, 0, 0, 0);
@@ -2497,7 +2497,7 @@ function it(e) {
 }
 var ot = function () {
   function e(e) {
-    var t = (void 0 === e ? {} : e).locale;
+    var t = (undefined === e ? {} : e).locale;
     this.yearFormat = "yyyy";
     this.yearMonthFormat = "MMMM yyyy";
     this.dateTime12hFormat = "MMMM do hh:mm aaaa";
@@ -2515,9 +2515,9 @@ var ot = function () {
   };
   e.prototype.getDiff = function (e, t) {
     return function (e, t) {
-      Object(o.a)(2, arguments);
-      var n = Object(i.a)(e);
-      var r = Object(i.a)(t);
+      o.a(2, arguments);
+      var n = i.a(e);
+      var r = i.a(t);
       return n.getTime() - r.getTime();
     }(e, this.date(t));
   };
@@ -2535,50 +2535,50 @@ var ot = function () {
   };
   e.prototype.getHours = function (e) {
     return function (e) {
-      Object(o.a)(1, arguments);
-      var t = Object(i.a)(e);
+      o.a(1, arguments);
+      var t = i.a(e);
       var n = t.getHours();
       return n;
     }(e);
   };
   e.prototype.setHours = function (e, t) {
     return function (e, t) {
-      Object(o.a)(2, arguments);
-      var n = Object(i.a)(e);
-      var a = Object(r.a)(t);
+      o.a(2, arguments);
+      var n = i.a(e);
+      var a = r.a(t);
       n.setHours(a);
       return n;
     }(e, t);
   };
   e.prototype.setMinutes = function (e, t) {
     return function (e, t) {
-      Object(o.a)(2, arguments);
-      var n = Object(i.a)(e);
-      var a = Object(r.a)(t);
+      o.a(2, arguments);
+      var n = i.a(e);
+      var a = r.a(t);
       n.setMinutes(a);
       return n;
     }(e, t);
   };
   e.prototype.getSeconds = function (e) {
     return function (e) {
-      Object(o.a)(1, arguments);
-      var t = Object(i.a)(e);
+      o.a(1, arguments);
+      var t = i.a(e);
       var n = t.getSeconds();
       return n;
     }(e);
   };
   e.prototype.setSeconds = function (e, t) {
     return function (e, t) {
-      Object(o.a)(2, arguments);
-      var n = Object(i.a)(e);
-      var a = Object(r.a)(t);
+      o.a(2, arguments);
+      var n = i.a(e);
+      var a = r.a(t);
       n.setSeconds(a);
       return n;
     }(e, t);
   };
   e.prototype.isSameDay = function (e, t) {
     return function (e, t) {
-      Object(o.a)(2, arguments);
+      o.a(2, arguments);
       var n = se(e);
       var r = se(t);
       return n.getTime() === r.getTime();
@@ -2586,23 +2586,23 @@ var ot = function () {
   };
   e.prototype.isSameMonth = function (e, t) {
     return function (e, t) {
-      Object(o.a)(2, arguments);
-      var n = Object(i.a)(e);
-      var r = Object(i.a)(t);
+      o.a(2, arguments);
+      var n = i.a(e);
+      var r = i.a(t);
       return n.getFullYear() === r.getFullYear() && n.getMonth() === r.getMonth();
     }(e, t);
   };
   e.prototype.isSameYear = function (e, t) {
     return function (e, t) {
-      Object(o.a)(2, arguments);
-      var n = Object(i.a)(e);
-      var r = Object(i.a)(t);
+      o.a(2, arguments);
+      var n = i.a(e);
+      var r = i.a(t);
       return n.getFullYear() === r.getFullYear();
     }(e, t);
   };
   e.prototype.isSameHour = function (e, t) {
     return function (e, t) {
-      Object(o.a)(2, arguments);
+      o.a(2, arguments);
       var n = ce(e);
       var r = ce(t);
       return n.getTime() === r.getTime();
@@ -2616,17 +2616,17 @@ var ot = function () {
   };
   e.prototype.getYear = function (e) {
     return function (e) {
-      Object(o.a)(1, arguments);
-      var t = Object(i.a)(e);
+      o.a(1, arguments);
+      var t = i.a(e);
       var n = t.getFullYear();
       return n;
     }(e);
   };
   e.prototype.setYear = function (e, t) {
     return function (e, t) {
-      Object(o.a)(2, arguments);
-      var n = Object(i.a)(e);
-      var a = Object(r.a)(t);
+      o.a(2, arguments);
+      var n = i.a(e);
+      var a = r.a(t);
       return isNaN(n.getTime()) ? new Date(NaN) : (n.setFullYear(a), n);
     }(e, t);
   };
@@ -2635,7 +2635,7 @@ var ot = function () {
   };
   e.prototype.parse = function (e, t) {
     return "" === e ? null : function (e, t, n, a) {
-      Object(o.a)(3, arguments);
+      o.a(3, arguments);
       var s = String(e);
       var c = String(t);
       var u = a || {};
@@ -2644,19 +2644,19 @@ var ot = function () {
         throw new RangeError("locale must contain match property");
       }
       var f = l.options && l.options.firstWeekContainsDate;
-      var d = null == f ? 1 : Object(r.a)(f);
-      var h = null == u.firstWeekContainsDate ? d : Object(r.a)(u.firstWeekContainsDate);
+      var d = null == f ? 1 : r.a(f);
+      var h = null == u.firstWeekContainsDate ? d : r.a(u.firstWeekContainsDate);
       if (!(h >= 1 && h <= 7)) {
         throw new RangeError("firstWeekContainsDate must be between 1 and 7 inclusively");
       }
       var p = l.options && l.options.weekStartsOn;
-      var _ = null == p ? 0 : Object(r.a)(p);
-      var A = null == u.weekStartsOn ? _ : Object(r.a)(u.weekStartsOn);
+      var _ = null == p ? 0 : r.a(p);
+      var A = null == u.weekStartsOn ? _ : r.a(u.weekStartsOn);
       if (!(A >= 0 && A <= 6)) {
         throw new RangeError("weekStartsOn must be between 0 and 6 inclusively");
       }
       if ("" === c) {
-        return "" === s ? Object(i.a)(n) : new Date(NaN);
+        return "" === s ? i.a(n) : new Date(NaN);
       }
       var g;
       var v = {
@@ -2688,7 +2688,7 @@ var ot = function () {
         if (O) {
           var k = O.incompatibleTokens;
           if (Array.isArray(k)) {
-            for (var S = void 0, T = 0; T < w.length; T++) {
+            for (var S = undefined, T = 0; T < w.length; T++) {
               var B = w[T].token;
               if (-1 !== k.indexOf(B) || B === C) {
                 S = w[T];
@@ -2753,7 +2753,7 @@ var ot = function () {
       }).map(function (e) {
         return e[0];
       });
-      var F = Object(i.a)(n);
+      var F = i.a(n);
       if (isNaN(F)) {
         return new Date(NaN);
       }
@@ -2779,19 +2779,19 @@ var ot = function () {
   };
   e.prototype.format = function (e, t) {
     return function (e, t, n) {
-      Object(o.a)(2, arguments);
+      o.a(2, arguments);
       var a = String(t);
       var s = n || {};
       var c = s.locale || b;
       var u = c.options && c.options.firstWeekContainsDate;
-      var l = null == u ? 1 : Object(r.a)(u);
-      var f = null == s.firstWeekContainsDate ? l : Object(r.a)(s.firstWeekContainsDate);
+      var l = null == u ? 1 : r.a(u);
+      var f = null == s.firstWeekContainsDate ? l : r.a(s.firstWeekContainsDate);
       if (!(f >= 1 && f <= 7)) {
         throw new RangeError("firstWeekContainsDate must be between 1 and 7 inclusively");
       }
       var h = c.options && c.options.weekStartsOn;
-      var p = null == h ? 0 : Object(r.a)(h);
-      var _ = null == s.weekStartsOn ? p : Object(r.a)(s.weekStartsOn);
+      var p = null == h ? 0 : r.a(h);
+      var _ = null == s.weekStartsOn ? p : r.a(s.weekStartsOn);
       if (!(_ >= 0 && _ <= 6)) {
         throw new RangeError("weekStartsOn must be between 0 and 6 inclusively");
       }
@@ -2801,7 +2801,7 @@ var ot = function () {
       if (!c.formatLong) {
         throw new RangeError("locale must contain formatLong property");
       }
-      var A = Object(i.a)(e);
+      var A = i.a(e);
       if (!d(A)) {
         throw new RangeError("Invalid time value");
       }
@@ -2846,9 +2846,9 @@ var ot = function () {
   };
   e.prototype.isEqual = function (e, t) {
     return null === e && null === t || function (e, t) {
-      Object(o.a)(2, arguments);
-      var n = Object(i.a)(e);
-      var r = Object(i.a)(t);
+      o.a(2, arguments);
+      var n = i.a(e);
+      var r = i.a(t);
       return n.getTime() === r.getTime();
     }(e, t);
   };
@@ -2878,9 +2878,9 @@ var ot = function () {
   };
   e.prototype.setMonth = function (e, t) {
     return function (e, t) {
-      Object(o.a)(2, arguments);
-      var n = Object(i.a)(e);
-      var a = Object(r.a)(t);
+      o.a(2, arguments);
+      var n = i.a(e);
+      var a = r.a(t);
       var s = n.getFullYear();
       var c = n.getDate();
       var u = new Date(0);
@@ -2914,10 +2914,10 @@ var ot = function () {
     var e = this;
     var t = new Date();
     return function (e, t) {
-      Object(o.a)(1, arguments);
+      o.a(1, arguments);
       var n = e || {};
-      var r = Object(i.a)(n.start);
-      var a = Object(i.a)(n.end);
+      var r = i.a(n.start);
+      var a = i.a(n.end);
       var s = a.getTime();
       if (!(r.getTime() <= s)) {
         throw new RangeError("Invalid interval");
@@ -2930,7 +2930,7 @@ var ot = function () {
         throw new RangeError("`options.step` must be a number greater than 1");
       }
       for (; u.getTime() <= s;) {
-        c.push(Object(i.a)(u));
+        c.push(i.a(u));
         u.setDate(u.getDate() + l);
         u.setHours(0, 0, 0, 0);
       }

@@ -1,22 +1,22 @@
 "use strict";
 
 export { f as a };
-var r = require("../6");
-var o = require("../27");
-var i = require("../40");
-var a = require("../57/index");
-var s = require("../58/index");
-var c = require("../17/index");
-var l = require("./727");
-var u = require("../18");
-var d = require("../9");
-var p = require("../46/index");
+import r = require("../6");
+import o = require("../27");
+import i = require("../40");
+import a = require("../57/index");
+import s = require("../58/index");
+import c = require("../17/index");
+import l = require("./727");
+import u = require("../18");
+import d = require("../9");
+import p = require("../46/index");
 var f = function (e) {
-  Object(a.a)(n, e);
-  var t = Object(s.a)(n);
+  a.a(n, e);
+  var t = s.a(n);
   function n(e) {
     var r;
-    Object(o.a)(this, n);
+    o.a(this, n);
     (r = t.call(this, {
       menu_generator: e.options,
       opt_onchange: e.optOnchange,
@@ -27,7 +27,7 @@ var f = function (e) {
     r.SVG_WIDTH = 2;
     return r;
   }
-  Object(i.a)(n, [{
+  i.a(n, [{
     key: "show_editor",
     value: function () {
       var e;
@@ -40,28 +40,28 @@ var f = function (e) {
           var s;
           var l;
           var f = n[i];
-          var h = Object(r.a)(Object(r.a)({}, f), {}, {
+          var h = r.a(r.a({}, f), {}, {
             icon: {
-              width: (null === (a = f.snapshot) || void 0 === a ? void 0 : a.width) || 40,
-              height: (null === (s = f.snapshot) || void 0 === s ? void 0 : s.height) || 40,
-              src: (null === (l = f.snapshot) || void 0 === l ? void 0 : l.src) || ""
+              width: (null === (a = f.snapshot) || undefined === a ? undefined : a.width) || 40,
+              height: (null === (s = f.snapshot) || undefined === s ? undefined : s.height) || 40,
+              src: (null === (l = f.snapshot) || undefined === l ? undefined : l.src) || ""
             }
           });
           o.push(h);
         }
       }
       var m = this.source_block;
-      var g = (null === (e = this.source_block) || void 0 === e ? void 0 : e.is_shadow()) && this.source_block.parent_block || this.source_block;
+      var g = (null === (e = this.source_block) || undefined === e ? undefined : e.is_shadow()) && this.source_block.parent_block || this.source_block;
       if (!m || !g) {
         throw Error("field is not attached to any block.");
       }
       var _ = g.get_field_value("WIDGET_ID");
       if ("DOC_KEYS" === this.name && _ === d.h) {
         var v = {
-          payload: void 0,
+          payload: undefined,
           type: "ASYNC_OPEN_TOAST_ON_NOT_SELECT_DOCUMENT"
         };
-        Object(p.c)().dispatchAction(v);
+        p.c().dispatchAction(v);
       } else {
         var b;
         var y;
@@ -85,7 +85,7 @@ var f = function (e) {
           w = j.height + 2 * S;
           C = E[1] + j.height + S;
         }
-        this.change_editor_style(!0);
+        this.change_editor_style(true);
         var N = {
           payload: {
             type: u.a.DYNAMIC_DROPDOWN,
@@ -93,7 +93,7 @@ var f = function (e) {
             setValue: function (e) {
               t.set_value(e);
             },
-            showCurrentScreenIndex: !1,
+            showCurrentScreenIndex: false,
             position: {
               left: E[0],
               top: C
@@ -103,21 +103,21 @@ var f = function (e) {
               scale: T < 1 ? 1 : T,
               fieldWidth: O,
               blockHeight: w,
-              sourceBlockId: (null === (b = this.source_block) || void 0 === b ? void 0 : b.id) || "",
+              sourceBlockId: (null === (b = this.source_block) || undefined === b ? undefined : b.id) || "",
               fieldName: this.name || "",
-              emptyImageVisible: "image_set_file_id" === (null === (y = m.parent_block) || void 0 === y ? void 0 : y.type)
+              emptyImageVisible: "image_set_file_id" === (null === (y = m.parent_block) || undefined === y ? undefined : y.type)
             },
             onHide: function () {
               if (t.source_block) {
-                t.focus(!1);
-                t.change_editor_style(!1);
+                t.focus(false);
+                t.change_editor_style(false);
               }
             }
           },
           type: "SHOW_BLOCKS_DROPDOWN"
         };
         if (!("BROADCAST" !== this.name && "VAR" !== this.name && "ARRAY" !== this.name && "OBJECT" !== this.name)) {
-          N.payload.showCurrentScreenIndex = !0;
+          N.payload.showCurrentScreenIndex = true;
         }
         if ("IMAGE_FILE_ID" === this.name) {
           N.payload.type = u.a.IMAGE_DROPDOWN;
@@ -138,7 +138,7 @@ var f = function (e) {
             }
           }
         }
-        Object(p.c)().dispatchAction(N);
+        p.c().dispatchAction(N);
       }
     }
   }, {

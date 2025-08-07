@@ -1,5 +1,5 @@
 "use strict";
 
 var r = require("react");
-var i = Object(r.createContext)({});
+var i = r.createContext({});
 exports.a = i;

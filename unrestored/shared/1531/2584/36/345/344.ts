@@ -3,10 +3,10 @@
 export { i as getBrightness };
 export { a as setBrightness };
 export { s as setKeepScreenOn };
-var r = require("../../28/index");
+import r = require("../../28/index");
 var o = 1;
 function i() {
-  if (Object(r.d)()) {
+  if (r.d()) {
     var e = window.cordova.plugins.brightness;
     return new Promise(function (t, n) {
       e.getBrightness(function (e) {
@@ -29,7 +29,7 @@ function i() {
 function a(e) {
   e = Math.min(100, Math.max(0, e));
   e /= 100;
-  if (Object(r.d)()) {
+  if (r.d()) {
     window.cordova.plugins.brightness.setBrightness(e, function () {
       console.info("setBrightness success", e);
     }, function (e) {
@@ -40,7 +40,7 @@ function a(e) {
   }
 }
 function s(e) {
-  if (Object(r.d)()) {
+  if (r.d()) {
     window.cordova.plugins.brightness.setKeepScreenOn(e);
   }
 }

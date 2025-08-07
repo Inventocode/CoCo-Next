@@ -20,7 +20,7 @@ var l = function (t) {
     return {
       next: function () {
         if (t && n >= t.length) {
-          t = void 0;
+          t = undefined;
         }
         return {
           value: t && t[n++],
@@ -98,7 +98,7 @@ var d = function () {
         S[T + _] = O + b + 1;
       }
     }
-    for (_ = 0, R = new a.a(m), N = 0, void 0; _ < c; _++) {
+    for (_ = 0, R = new a.a(m), N = 0, undefined; _ < c; _++) {
       var R;
       var N;
       for (var D = 4 * (c - _) + (s ? 9 : 12), M = 0; M < D; M++) {

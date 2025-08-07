@@ -15,7 +15,7 @@ for (var s = function (e) {
   c.push((u + 256).toString(16).substr(1));
 }
 var l = function (e) {
-  var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+  var t = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : 0;
   var n = (c[e[t + 0]] + c[e[t + 1]] + c[e[t + 2]] + c[e[t + 3]] + "-" + c[e[t + 4]] + c[e[t + 5]] + "-" + c[e[t + 6]] + c[e[t + 7]] + "-" + c[e[t + 8]] + c[e[t + 9]] + "-" + c[e[t + 10]] + c[e[t + 11]] + c[e[t + 12]] + c[e[t + 13]] + c[e[t + 14]] + c[e[t + 15]]).toLowerCase();
   if (!s(n)) {
     throw TypeError("Stringified UUID is invalid");

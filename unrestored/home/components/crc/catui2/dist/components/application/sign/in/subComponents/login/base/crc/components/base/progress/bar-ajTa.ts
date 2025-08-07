@@ -35,19 +35,19 @@ var ProgressBar = function ProgressBar(props) {
   var barStyle = {
     marginTop: noText ? undefined : '21px',
     width: "".concat(getLegalnumber(width), "px"),
-    height: "".concat(legalHeight !== null && legalHeight !== void 0 ? legalHeight : 8, "px"),
+    height: "".concat(legalHeight !== null && legalHeight !== undefined ? legalHeight : 8, "px"),
     border: barBorderStyle,
     borderRadius: "".concat(legalHeight / 2, "px"),
-    backgroundColor: barColor !== null && barColor !== void 0 ? barColor : "#".concat(underpainting),
-    borderColor: barColor !== null && barColor !== void 0 ? barColor : "#".concat(underpainting)
+    backgroundColor: barColor !== null && barColor !== undefined ? barColor : "#".concat(underpainting),
+    borderColor: barColor !== null && barColor !== undefined ? barColor : "#".concat(underpainting)
   };
   var strokeStyle = {
     fontSize: "".concat(legalHeight * 0.6, "px"),
-    height: "".concat(legalHeight !== null && legalHeight !== void 0 ? legalHeight : 8, "px"),
+    height: "".concat(legalHeight !== null && legalHeight !== undefined ? legalHeight : 8, "px"),
     width: "".concat(getLegalnumber(percentage, 100), "%"),
     borderRadius: "".concat(legalHeight / 2, "px"),
-    backgroundColor: strokeColor !== null && strokeColor !== void 0 ? strokeColor : "#".concat(mainColor),
-    borderColor: strokeColor !== null && strokeColor !== void 0 ? strokeColor : "#".concat(mainColor)
+    backgroundColor: strokeColor !== null && strokeColor !== undefined ? strokeColor : "#".concat(mainColor),
+    borderColor: strokeColor !== null && strokeColor !== undefined ? strokeColor : "#".concat(mainColor)
   };
   return /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react___default.createElement("div", {
     className: "CUI-progress-bar-bar",

@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.init_tell_blocks = exports.is_controls_if = exports.init_control_blocks = void 0;
+exports.init_tell_blocks = exports.is_controls_if = exports.init_control_blocks = undefined;
 var r = require("../4/127");
 var o = require("../17/497/387");
 var i = require("../1001/213/index");
@@ -20,10 +20,10 @@ exports.init_control_blocks = function (e) {
       type: "input_statement",
       name: "DO"
     }],
-    previousStatement: !0,
-    nextStatement: !0,
+    previousStatement: true,
+    nextStatement: true,
     colour: (0, a.i18n)("BLUE_1"),
-    inputsInline: !0
+    inputsInline: true
   }, {
     type: "repeat_n_times",
     message0: (0, a.i18n)("repeat_n_times"),
@@ -39,10 +39,10 @@ exports.init_control_blocks = function (e) {
       type: "input_statement",
       name: "DO"
     }],
-    previousStatement: !0,
-    nextStatement: !0,
+    previousStatement: true,
+    nextStatement: true,
     colour: (0, a.i18n)("BLUE_1"),
-    inputsInline: !0
+    inputsInline: true
   }, {
     type: "repeat_forever_until",
     message0: (0, a.i18n)("repeat_forever_until"),
@@ -58,17 +58,17 @@ exports.init_control_blocks = function (e) {
       type: "input_statement",
       name: "DO"
     }],
-    previousStatement: !0,
-    nextStatement: !0,
+    previousStatement: true,
+    nextStatement: true,
     colour: (0, a.i18n)("BLUE_1"),
-    inputsInline: !0
+    inputsInline: true
   }, {
     type: "break",
     message0: (0, a.i18n)("break"),
-    previousStatement: !0,
-    nextStatement: !0,
+    previousStatement: true,
+    nextStatement: true,
     colour: (0, a.i18n)("BLUE_1"),
-    inputsInline: !0
+    inputsInline: true
   }, {
     type: "warp",
     message0: (0, a.i18n)("warp"),
@@ -79,10 +79,10 @@ exports.init_control_blocks = function (e) {
       type: "input_statement",
       name: "DO"
     }],
-    previousStatement: !0,
-    nextStatement: !0,
+    previousStatement: true,
+    nextStatement: true,
     colour: (0, a.i18n)("GREEN_5"),
-    inputsInline: !0
+    inputsInline: true
   }, {
     type: "wait",
     message0: (0, a.i18n)("wait_secs"),
@@ -92,10 +92,10 @@ exports.init_control_blocks = function (e) {
       check: "Number",
       align: "CENTRE"
     }],
-    previousStatement: !0,
-    nextStatement: !0,
+    previousStatement: true,
+    nextStatement: true,
     colour: (0, a.i18n)("BLUE_1"),
-    inputsInline: !0
+    inputsInline: true
   }, {
     type: "wait_until",
     message0: (0, a.i18n)("wait_until"),
@@ -105,17 +105,17 @@ exports.init_control_blocks = function (e) {
       check: "Boolean",
       align: "CENTRE"
     }],
-    previousStatement: !0,
-    nextStatement: !0,
+    previousStatement: true,
+    nextStatement: true,
     colour: (0, a.i18n)("BLUE_1"),
-    inputsInline: !0
+    inputsInline: true
   }, {
     type: "destruct",
     message0: (0, a.i18n)("destruct"),
-    previousStatement: !0,
-    nextStatement: !0,
+    previousStatement: true,
+    nextStatement: true,
     colour: (0, a.i18n)("BLUE_1"),
-    inputsInline: !0
+    inputsInline: true
   }, {
     type: "controls_if",
     message0: (0, a.i18n)("CONTROLS_IF_MSG_IF") + " %1",
@@ -137,9 +137,9 @@ exports.init_control_blocks = function (e) {
       type: "input_dummy",
       name: "EXTRA_ADD_ELSE"
     }],
-    inputsInline: !0,
-    previousStatement: !0,
-    nextStatement: !0,
+    inputsInline: true,
+    previousStatement: true,
+    nextStatement: true,
     colour: (0, a.i18n)("BLUE_1"),
     mutator: "controls_if_mutator_codemao",
     extensions: ["controls_if_tooltip"]
@@ -175,7 +175,7 @@ exports.init_control_blocks = function (e) {
       if (o.is_enabled()) {
         var a = i("mutation", {
           block: this,
-          old_value: void 0,
+          old_value: undefined,
           new_value: t || this.prevElseifCount_
         });
         o.fire(a);
@@ -195,7 +195,7 @@ exports.init_control_blocks = function (e) {
         o.fire(i("mutation", {
           block: this,
           old_value: t || this.prevElseifCount_,
-          new_value: void 0
+          new_value: undefined
         }));
       }
     },
@@ -264,7 +264,7 @@ exports.init_control_blocks = function (e) {
             for (var y = t || this.prevElseifCount_, E = new RegExp("[^0-9]" + y + "$"), O = this.inputList.length - 1; O >= 0; O--) {
               var w = this.inputList[O];
               if (E.test(w.name)) {
-                if (null === (c = null === (n = w.connection) || void 0 === n ? void 0 : n.targetBlock()) || void 0 === c ? void 0 : c.is_shadow()) {
+                if (null === (c = null === (n = w.connection) || undefined === n ? undefined : n.targetBlock()) || undefined === c ? undefined : c.is_shadow()) {
                   f.disable();
                   this.remove_input(w.name);
                   f.enable();
@@ -350,10 +350,10 @@ exports.init_tell_blocks = function (e, t) {
       type: "input_statement",
       name: "DO"
     }],
-    previousStatement: !0,
-    nextStatement: !0,
+    previousStatement: true,
+    nextStatement: true,
     colour: (0, a.i18n)("BLUE_1"),
-    inputsInline: !0,
+    inputsInline: true,
     extensions: ["disable_inside_warp_loop"]
   }, {
     type: "sync_tell",
@@ -375,10 +375,10 @@ exports.init_tell_blocks = function (e, t) {
       type: "input_statement",
       name: "DO"
     }],
-    previousStatement: !0,
-    nextStatement: !0,
+    previousStatement: true,
+    nextStatement: true,
     colour: (0, a.i18n)("BLUE_1"),
-    inputsInline: !0,
+    inputsInline: true,
     extensions: ["disable_inside_warp_loop"]
   }];
   e.define_blocks_with_json_array(n);

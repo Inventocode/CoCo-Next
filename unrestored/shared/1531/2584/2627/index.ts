@@ -1,10 +1,10 @@
 "use strict";
 
-var r = require("../29");
-var i = require("../19");
-var o = require("react");
-var a = require("./1501");
-var s = require("../8");
+import r = require("../29");
+import i = require("../19");
+import o = require("react");
+import a = require("./1501");
+import s = require("../8");
 var c = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -17,18 +17,18 @@ var c = function __importDefault(module) {
   });
   return defaultExport;
 }(s);
-var u = require("../791");
-var l = require("./611");
-var f = require("../612");
-var d = require("./790/index");
-var h = require("./686/index");
-var p = require("../789");
-var _ = require("./462");
+import u = require("../791");
+import l = require("./611");
+import f = require("../612");
+import d = require("./790/index");
+import h = require("./686/index");
+import p = require("../789");
+import _ = require("./462");
 var A;
 var g = function () {
-  return Object(_.a)() && window.document.documentElement;
+  return _.a() && window.document.documentElement;
 };
-var v = require("../431");
+import v = require("../431");
 var m = function (e, t) {
   var n = {};
   for (var r in e) if (Object.prototype.hasOwnProperty.call(e, r) && t.indexOf(r) < 0) {
@@ -53,7 +53,7 @@ if (g()) {
     setTimeout(function () {
       A = null;
     }, 100);
-  }, !0);
+  }, true);
 }
 var y = function (e) {
   var t;
@@ -63,13 +63,13 @@ var y = function (e) {
   var g = n.direction;
   var y = function (t) {
     var n = e.onCancel;
-    if (!(null === n || void 0 === n)) {
+    if (!(null === n || undefined === n)) {
       n(t);
     }
   };
   var b = function (t) {
     var n = e.onOk;
-    if (!(null === n || void 0 === n)) {
+    if (!(null === n || undefined === n)) {
       n(t);
     }
   };
@@ -78,9 +78,9 @@ var y = function (e) {
     var r = e.okType;
     var a = e.cancelText;
     var s = e.confirmLoading;
-    return o.createElement(o.Fragment, null, o.createElement(f.a, Object(i.a)({
+    return o.createElement(o.Fragment, null, o.createElement(f.a, i.a({
       onClick: y
-    }, e.cancelButtonProps), a || t.cancelText), o.createElement(f.a, Object(i.a)({}, Object(d.a)(r), {
+    }, e.cancelButtonProps), a || t.cancelText), o.createElement(f.a, i.a({}, d.a(r), {
       loading: s,
       onClick: b
     }, e.okButtonProps), n || t.okText));
@@ -93,55 +93,55 @@ var y = function (e) {
   var S = e.getContainer;
   var T = e.closeIcon;
   var B = e.focusTriggerAfterClose;
-  var D = void 0 === B || B;
+  var D = undefined === B || B;
   var I = m(e, ["prefixCls", "footer", "visible", "wrapClassName", "centered", "getContainer", "closeIcon", "focusTriggerAfterClose"]);
   var F = _("modal", E);
   var R = _();
   var P = o.createElement(h.a, {
     componentName: "Modal",
-    defaultLocale: Object(l.b)()
+    defaultLocale: l.b()
   }, w);
   var N = o.createElement("span", {
     className: "".concat(F, "-close-x")
   }, T || o.createElement(u.a, {
     className: "".concat(F, "-close-icon")
   }));
-  var M = c()(O, (t = {}, Object(r.a)(t, "".concat(F, "-centered"), !!k), Object(r.a)(t, "".concat(F, "-wrap-rtl"), "rtl" === g), t));
-  return o.createElement(a.a, Object(i.a)({}, I, {
-    getContainer: void 0 === S ? s : S,
+  var M = c()(O, (t = {}, r.a(t, "".concat(F, "-centered"), !!k), r.a(t, "".concat(F, "-wrap-rtl"), "rtl" === g), t));
+  return o.createElement(a.a, i.a({}, I, {
+    getContainer: undefined === S ? s : S,
     prefixCls: F,
     wrapClassName: M,
-    footer: void 0 === x ? P : x,
+    footer: undefined === x ? P : x,
     visible: C,
     mousePosition: A,
     onClose: y,
     closeIcon: N,
     focusTriggerAfterClose: D,
-    transitionName: Object(v.b)(R, "zoom", e.transitionName),
-    maskTransitionName: Object(v.b)(R, "fade", e.maskTransitionName)
+    transitionName: v.b(R, "zoom", e.transitionName),
+    maskTransitionName: v.b(R, "fade", e.maskTransitionName)
   }));
 };
 y.defaultProps = {
   width: 520,
-  confirmLoading: !1,
-  visible: !1,
+  confirmLoading: false,
+  visible: false,
   okType: "primary"
 };
 var b = y;
-var w = require("../75/index");
-var E = require("./1024");
-var x = require("./1023");
-var C = require("./1025");
-var O = require("./914");
-var k = require("../33/index");
+import w = require("../75/index");
+import E = require("./1024");
+import x = require("./1023");
+import C = require("./1025");
+import O = require("./914");
+import k = require("../33/index");
 function S(e) {
   return !(!e || !e.then);
 }
 var T = function (e) {
-  var t = o.useRef(!1);
+  var t = o.useRef(false);
   var n = o.useRef();
-  var r = o.useState(!1);
-  var a = Object(k.a)(r, 2);
+  var r = o.useState(false);
+  var a = k.a(r, 2);
   var s = a[0];
   var c = a[1];
   o.useEffect(function () {
@@ -162,38 +162,38 @@ var T = function (e) {
   var l = e.children;
   var h = e.prefixCls;
   var p = e.buttonProps;
-  return o.createElement(f.a, Object(i.a)({}, Object(d.a)(u), {
+  return o.createElement(f.a, i.a({}, d.a(u), {
     onClick: function (n) {
       var r = e.actionFn;
       var i = e.close;
       if (!t.current) {
-        t.current = !0;
+        t.current = true;
         if (r) {
           var o;
           if (e.emitEvent) {
             o = r(n);
             if (e.quitOnNullishReturnValue && !S(o)) {
-              t.current = !1;
+              t.current = false;
               return void i(n);
             }
           } else if (r.length) {
             o = r(i);
-            t.current = !1;
+            t.current = false;
           } else if (!(o = r())) {
             return void i();
           }
           !function (n) {
             var r = e.close;
             if (S(n)) {
-              c(!0);
+              c(true);
               n.then(function () {
-                c(!1);
-                r.apply(void 0, arguments);
-                t.current = !1;
+                c(false);
+                r.apply(undefined, arguments);
+                t.current = false;
               }, function (e) {
                 console.error(e);
-                c(!1);
-                t.current = !1;
+                c(false);
+                t.current = false;
               });
             }
           }(o);
@@ -208,8 +208,8 @@ var T = function (e) {
     ref: n
   }), l);
 };
-var B = require("../363/index");
-var D = require("./285/index");
+import B = require("../363/index");
+import D = require("./285/index");
 var I = function (e) {
   var t = e.icon;
   var n = e.onCancel;
@@ -232,20 +232,20 @@ var I = function (e) {
   var x = e.iconPrefixCls;
   var C = e.bodyStyle;
   var O = e.closable;
-  var k = void 0 !== O && O;
+  var k = undefined !== O && O;
   var S = e.closeIcon;
   var I = e.modalRender;
   var F = e.focusTriggerAfterClose;
-  Object(B.a)(!("string" === typeof t && t.length > 2), "Modal", "`icon` is using ReactNode instead of string naming in v4. Please check `".concat(t, "` at https://ant.design/components/icon"));
+  B.a(!("string" === typeof t && t.length > 2), "Modal", "`icon` is using ReactNode instead of string naming in v4. Please check `".concat(t, "` at https://ant.design/components/icon"));
   var R = e.okType || "primary";
   var P = "".concat(w, "-confirm");
   var N = !("okCancel" in e) || e.okCancel;
   var M = e.width || 416;
   var j = e.style || {};
-  var L = void 0 === e.mask || e.mask;
-  var U = void 0 !== e.maskClosable && e.maskClosable;
+  var L = undefined === e.mask || e.mask;
+  var U = undefined !== e.maskClosable && e.maskClosable;
   var H = null !== e.autoFocusButton && (e.autoFocusButton || "ok");
-  var V = c()(P, "".concat(P, "-").concat(e.type), Object(r.a)({}, "".concat(P, "-rtl"), "rtl" === y), e.className);
+  var V = c()(P, "".concat(P, "-").concat(e.type), r.a({}, "".concat(P, "-rtl"), "rtl" === y), e.className);
   var G = N && o.createElement(T, {
     actionFn: n,
     close: a,
@@ -260,17 +260,17 @@ var I = function (e) {
   }, o.createElement(b, {
     prefixCls: w,
     className: V,
-    wrapClassName: c()(Object(r.a)({}, "".concat(P, "-centered"), !!e.centered)),
+    wrapClassName: c()(r.a({}, "".concat(P, "-centered"), !!e.centered)),
     onCancel: function () {
       return a({
-        triggerCancel: !0
+        triggerCancel: true
       });
     },
     visible: l,
     title: "",
     footer: "",
-    transitionName: Object(v.b)(E, "zoom", e.transitionName),
-    maskTransitionName: Object(v.b)(E, "fade", e.maskTransitionName),
+    transitionName: v.b(E, "zoom", e.transitionName),
+    maskTransitionName: v.b(E, "fade", e.maskTransitionName),
     mask: L,
     maskClosable: U,
     maskStyle: p,
@@ -290,7 +290,7 @@ var I = function (e) {
     className: "".concat(P, "-body-wrapper")
   }, o.createElement("div", {
     className: "".concat(P, "-body")
-  }, t, void 0 === e.title ? null : o.createElement("span", {
+  }, t, undefined === e.title ? null : o.createElement("span", {
     className: "".concat(P, "-title")
   }, e.title), o.createElement("div", {
     className: "".concat(P, "-content")
@@ -324,9 +324,9 @@ var R = function (e, t) {
 var P = "";
 function N(e) {
   var t = document.createDocumentFragment();
-  var n = Object(i.a)(Object(i.a)({}, e), {
+  var n = i.a(i.a({}, e), {
     close: s,
-    visible: !0
+    visible: true
   });
   function r() {
     w.unmountComponentAtNode(t);
@@ -353,14 +353,14 @@ function N(e) {
     var a = e.prefixCls;
     var s = R(e, ["okText", "cancelText", "prefixCls"]);
     setTimeout(function () {
-      var e = Object(l.b)();
-      var c = Object(D.b)();
+      var e = l.b();
+      var c = D.b();
       var u = c.getPrefixCls;
       var f = c.getIconPrefixCls;
-      var d = u(void 0, P);
+      var d = u(undefined, P);
       var h = a || "".concat(d, "-modal");
       var p = f();
-      w.render(o.createElement(I, Object(i.a)({}, s, {
+      w.render(o.createElement(I, i.a({}, s, {
         prefixCls: h,
         rootPrefixCls: d,
         iconPrefixCls: p,
@@ -373,8 +373,8 @@ function N(e) {
     for (var t = this, o = arguments.length, s = new Array(o), c = 0; c < o; c++) {
       s[c] = arguments[c];
     }
-    a(n = Object(i.a)(Object(i.a)({}, n), {
-      visible: !1,
+    a(n = i.a(i.a({}, n), {
+      visible: false,
       afterClose: function () {
         if ("function" === typeof e.afterClose) {
           e.afterClose();
@@ -388,61 +388,61 @@ function N(e) {
   return {
     destroy: s,
     update: function (e) {
-      a(n = "function" === typeof e ? e(n) : Object(i.a)(Object(i.a)({}, n), e));
+      a(n = "function" === typeof e ? e(n) : i.a(i.a({}, n), e));
     }
   };
 }
 function M(e) {
-  return Object(i.a)(Object(i.a)({
+  return i.a(i.a({
     icon: o.createElement(O.a, null),
-    okCancel: !1
+    okCancel: false
   }, e), {
     type: "warning"
   });
 }
 function j(e) {
-  return Object(i.a)(Object(i.a)({
+  return i.a(i.a({
     icon: o.createElement(E.a, null),
-    okCancel: !1
+    okCancel: false
   }, e), {
     type: "info"
   });
 }
 function L(e) {
-  return Object(i.a)(Object(i.a)({
+  return i.a(i.a({
     icon: o.createElement(x.a, null),
-    okCancel: !1
+    okCancel: false
   }, e), {
     type: "success"
   });
 }
 function U(e) {
-  return Object(i.a)(Object(i.a)({
+  return i.a(i.a({
     icon: o.createElement(C.a, null),
-    okCancel: !1
+    okCancel: false
   }, e), {
     type: "error"
   });
 }
 function H(e) {
-  return Object(i.a)(Object(i.a)({
+  return i.a(i.a({
     icon: o.createElement(O.a, null),
-    okCancel: !0
+    okCancel: true
   }, e), {
     type: "confirm"
   });
 }
-var V = require("../80/index");
-var G = require("./605");
+import V = require("../80/index");
+import G = require("./605");
 var z = function (e, t) {
   var n = e.afterClose;
   var r = e.config;
-  var a = o.useState(!0);
-  var s = Object(k.a)(a, 2);
+  var a = o.useState(true);
+  var s = k.a(a, 2);
   var c = s[0];
   var u = s[1];
   var l = o.useState(r);
-  var f = Object(k.a)(l, 2);
+  var f = k.a(l, 2);
   var d = f[0];
   var _ = f[1];
   var A = o.useContext(p.b);
@@ -451,7 +451,7 @@ var z = function (e, t) {
   var m = v("modal");
   var y = v();
   var b = function () {
-    u(!1);
+    u(false);
     for (var e = arguments.length, t = new Array(e), n = 0; n < e; n++) {
       t[n] = arguments[n];
     }
@@ -467,7 +467,7 @@ var z = function (e, t) {
       destroy: b,
       update: function (e) {
         _(function (t) {
-          return Object(i.a)(Object(i.a)({}, t), e);
+          return i.a(i.a({}, t), e);
         });
       }
     };
@@ -476,7 +476,7 @@ var z = function (e, t) {
     componentName: "Modal",
     defaultLocale: G.a.Modal
   }, function (e) {
-    return o.createElement(I, Object(i.a)({
+    return o.createElement(I, i.a({
       prefixCls: m,
       rootPrefixCls: y
     }, d, {
@@ -494,12 +494,12 @@ var W = 0;
 var K = o.memo(o.forwardRef(function (e, t) {
   var n = function () {
     var e = o.useState([]);
-    var t = Object(k.a)(e, 2);
+    var t = k.a(e, 2);
     var n = t[0];
     var r = t[1];
     return [n, o.useCallback(function (e) {
       r(function (t) {
-        return [].concat(Object(V.a)(t), [e]);
+        return [].concat(V.a(t), [e]);
       });
       return function () {
         r(function (t) {
@@ -510,7 +510,7 @@ var K = o.memo(o.forwardRef(function (e, t) {
       };
     }, [])];
   }();
-  var r = Object(k.a)(n, 2);
+  var r = k.a(n, 2);
   var i = r[0];
   var a = r[1];
   o.useImperativeHandle(t, function () {
@@ -527,12 +527,12 @@ var Y = b;
 Y.useModal = function () {
   var e = o.useRef(null);
   var t = o.useState([]);
-  var n = Object(k.a)(t, 2);
+  var n = k.a(t, 2);
   var r = n[0];
   var i = n[1];
   o.useEffect(function () {
     if (r.length) {
-      Object(V.a)(r).forEach(function (e) {
+      V.a(r).forEach(function (e) {
         e();
       });
       i([]);
@@ -552,12 +552,12 @@ Y.useModal = function () {
           a();
         }
       });
-      a = null === (r = e.current) || void 0 === r ? void 0 : r.patchElement(c);
+      a = null === (r = e.current) || undefined === r ? undefined : r.patchElement(c);
       return {
         destroy: function () {
           function e() {
             var e;
-            if (!(null === (e = s.current) || void 0 === e)) {
+            if (!(null === (e = s.current) || undefined === e)) {
               e.destroy();
             }
           }
@@ -565,14 +565,14 @@ Y.useModal = function () {
             e();
           } else {
             i(function (t) {
-              return [].concat(Object(V.a)(t), [e]);
+              return [].concat(V.a(t), [e]);
             });
           }
         },
         update: function (e) {
           function t() {
             var t;
-            if (!(null === (t = s.current) || void 0 === t)) {
+            if (!(null === (t = s.current) || undefined === t)) {
               t.update(e);
             }
           }
@@ -580,7 +580,7 @@ Y.useModal = function () {
             t();
           } else {
             i(function (e) {
-              return [].concat(Object(V.a)(e), [t]);
+              return [].concat(V.a(e), [t]);
             });
           }
         }
@@ -623,7 +623,7 @@ Y.destroyAll = function () {
 };
 Y.config = function (e) {
   var t = e.rootPrefixCls;
-  Object(B.a)(!1, "Modal", "Modal.config is deprecated. Please use ConfigProvider.config instead.");
+  B.a(false, "Modal", "Modal.config is deprecated. Please use ConfigProvider.config instead.");
   P = t;
 };
 export { Y as a };

@@ -12,14 +12,14 @@ export { O as f };
 export { w as g };
 export { C as k };
 export { T as l };
-var r = require("./6");
-var o = require("./25/index");
-var i = require("./98");
-var a = require("./36/index");
-var s = require("./5");
-var c = require("./76");
-var l = require("./4/index");
-var u = require("./46/index");
+import r = require("./6");
+import o = require("./25/index");
+import i = require("./98");
+import a = require("../../../../src/shared/widget/custom/load");
+import s = require("./5");
+import c = require("./76");
+import l = require("./4/index");
+import u = require("./46/index");
 var d = {
   type: s.D,
   category: {
@@ -60,74 +60,74 @@ var d = {
         }
         var u = "";
         u = "press" === i ? "argsOnScreenPress" : "pressIn" === i ? "argsOnScreenPressIn" : "pressHold" === i ? "argsOnScreenPressHold" : "argsOnScreenPressOut";
-        return Object(l.n)(u, [Object(l.o)(e.getDynamicValue("__CURRENT_SCREEN_ID__"))], a, [s, c]);
+        return l.n(u, [l.o(e.getDynamicValue("__CURRENT_SCREEN_ID__"))], a, [s, c]);
       });
       e.insertBlockSnippetGenerator("screen_field_color", function (t, n) {
         var r = t.blocks[n];
-        return Object(l.o)(e.getFieldValue(r, "COLOR_VALUE") || "");
+        return l.o(e.getFieldValue(r, "COLOR_VALUE") || "");
       });
       e.insertBlockSnippetGenerator("screen_set_background_color", function (t, n) {
         var r = e.getFieldValue(t.blocks[n], "SCREEN_ID") || "";
         var o = e.valueToCode(t, n, "COLOR", e.ORDER_FUNCTION_CALL);
-        return Object(l.n)("setScreenBackgroundColor", [Object(l.o)(r), o]);
+        return l.n("setScreenBackgroundColor", [l.o(r), o]);
       });
       e.insertBlockSnippetGenerator("screen_check_if_pressed", function (t, n) {
-        return Object(l.s)("checkIfScreenPressed", [Object(l.o)(e.getDynamicValue("__CURRENT_SCREEN_ID__"))]);
+        return l.s("checkIfScreenPressed", [l.o(e.getDynamicValue("__CURRENT_SCREEN_ID__"))]);
       });
       e.insertBlockSnippetGenerator("screen_set_background_image", function (t, n) {
         var r = e.getFieldValue(t.blocks[n], "SCREEN_ID") || "";
         var o = e.valueToCode(t, n, "IMAGE_FILE_ID", e.ORDER_FUNCTION_CALL);
-        return o ? Object(l.n)("setScreenBackgroundImageId", [Object(l.o)(r), o]) : "";
+        return o ? l.n("setScreenBackgroundImageId", [l.o(r), o]) : "";
       });
       e.insertBlockSnippetGenerator("screen_get_color", function (t, n) {
         var r = e.getFieldValue(t.blocks[n], "SCREEN_ID") || "";
-        return Object(l.s)("getScreenBackgroundColor", [Object(l.o)(r)]);
+        return l.s("getScreenBackgroundColor", [l.o(r)]);
       });
       e.insertBlockSnippetGenerator("screen_get_size", function (t, n) {
         var r = t.blocks[n];
         var o = e.getFieldValue(r, "SCREEN_ID") || "";
         var i = e.getFieldValue(r, "PROPERTY") || "";
-        return Object(l.s)("height" === i ? "getScreenHeight" : "getScreenWidth", [Object(l.o)(o)]);
+        return l.s("height" === i ? "getScreenHeight" : "getScreenWidth", [l.o(o)]);
       });
       e.insertBlockSnippetGenerator("screen_get_background_image", function (t, n) {
         var r = e.getFieldValue(t.blocks[n], "SCREEN_ID") || "";
-        return Object(l.s)("getScreenBackgroundImage", [Object(l.o)(r)]);
+        return l.s("getScreenBackgroundImage", [l.o(r)]);
       });
       e.insertBlockSnippetGenerator("new_screen_set_background_color", function (n, r) {
         var o = t(n, r).block;
         var i = e.getDynamicValue("__CURRENT_SCREEN_ID__");
         var a = e.valueToCode(n, r, "COLOR", e.ORDER_FUNCTION_CALL);
-        return Object(l.l)(Object(l.n)("setScreenBackgroundColor", [Object(l.o)(i), a]), o, e);
+        return l.l(l.n("setScreenBackgroundColor", [l.o(i), a]), o, e);
       });
       e.insertBlockSnippetGenerator("new_screen_set_background_image", function (n, r) {
         var o = e.getDynamicValue("__CURRENT_SCREEN_ID__");
         var i = t(n, r).block;
         var a = e.valueToCode(n, r, "IMAGE_FILE_ID", e.ORDER_FUNCTION_CALL);
-        return a ? Object(l.l)(Object(l.n)("setScreenBackgroundImageId", [Object(l.o)(o), a]), i, e) : "";
+        return a ? l.l(l.n("setScreenBackgroundImageId", [l.o(o), a]), i, e) : "";
       });
       e.insertBlockSnippetGenerator("new_screen_get_color", function (t, n) {
         var r = e.getDynamicValue("__CURRENT_SCREEN_ID__");
-        return Object(l.s)("getScreenBackgroundColor", [Object(l.o)(r)]);
+        return l.s("getScreenBackgroundColor", [l.o(r)]);
       });
       e.insertBlockSnippetGenerator("new_screen_get_size", function (t, n) {
         var r = t.blocks[n];
         var o = e.getDynamicValue("__CURRENT_SCREEN_ID__") || "";
         var i = e.getFieldValue(r, "PROPERTY") || "";
-        return Object(l.s)("height" === i ? "getScreenHeight" : "getScreenWidth", [Object(l.o)(o)]);
+        return l.s("height" === i ? "getScreenHeight" : "getScreenWidth", [l.o(o)]);
       });
       e.insertBlockSnippetGenerator("new_screen_get_background_image", function (t, n) {
         var r = e.getDynamicValue("__CURRENT_SCREEN_ID__");
-        return Object(l.s)("getScreenBackgroundImage", [Object(l.o)(r)]);
+        return l.s("getScreenBackgroundImage", [l.o(r)]);
       });
     },
     setBlockGroupProfile: function (e, t) {
       e.insertBlockProfile("screen_on_press", {
         type: "screen_on_press",
         message0: "%{BKY_SCREEN_ON_PRESS_MSG0}",
-        args0: [Object(l.e)("%{BKY_BLOCK_TAB_ICON}", !0), {
+        args0: [l.e("%{BKY_BLOCK_TAB_ICON}", true), {
           type: "field_coco_dropdown",
           name: "PRESS_EVENT",
-          custom: !0,
+          custom: true,
           options: function () {
             return [[t.Msg.PRESS, "press"], [t.Msg.PRESS_IN, "pressIn"], [t.Msg.PRESS_HOLD, "pressHold"], [t.Msg.PRESS_OUT, "pressOut"]];
           }
@@ -150,7 +150,7 @@ var d = {
           provided_context: "screen_on_press_DO"
         }],
         colour: "%{BKY_EVENTS_HUE}",
-        inputsInline: !0
+        inputsInline: true
       });
       e.insertBlockProfile("screen_on_press_positionX", {
         type: "screen_on_press_positionX",
@@ -174,19 +174,19 @@ var d = {
         args0: [{
           type: "field_coco_dropdown",
           name: "SCREEN_ID",
-          custom: !0,
+          custom: true,
           advancedOptions: function () {
-            return Object(u.c)().getScreenList();
+            return u.c().getScreenList();
           }
         }, {
           type: "input_value",
           check: ["Color", "String"],
           name: "COLOR"
         }],
-        previousStatement: !0,
-        nextStatement: !0,
+        previousStatement: true,
+        nextStatement: true,
         colour: "%{BKY_APPEARANCE_HUE}",
-        inputsInline: !0
+        inputsInline: true
       });
       e.insertBlockProfile("screen_field_color", {
         type: "screen_field_color",
@@ -205,14 +205,14 @@ var d = {
         args0: [{
           type: "field_coco_dropdown",
           name: "SCREEN_ID",
-          custom: !0,
+          custom: true,
           options: function () {
-            return Object(u.c)().getScreenList();
+            return u.c().getScreenList();
           }
         }, {
           type: "field_coco_dropdown",
           name: "PROPERTY",
-          custom: !0,
+          custom: true,
           options: function () {
             return [{
               type: "basic",
@@ -226,7 +226,7 @@ var d = {
           }
         }],
         output: ["Number"],
-        inputsInline: !0,
+        inputsInline: true,
         colour: "%{BKY_APPEARANCE_HUE}"
       });
       e.insertBlockProfile("screen_get_color", {
@@ -235,13 +235,13 @@ var d = {
         args0: [{
           type: "field_coco_dropdown",
           name: "SCREEN_ID",
-          custom: !0,
+          custom: true,
           options: function () {
-            return Object(u.c)().getScreenList();
+            return u.c().getScreenList();
           }
         }],
         output: ["String", "Color"],
-        inputsInline: !0,
+        inputsInline: true,
         colour: "%{BKY_APPEARANCE_HUE}"
       });
       e.insertBlockProfile("screen_set_background_image", {
@@ -250,19 +250,19 @@ var d = {
         args0: [{
           type: "field_coco_dropdown",
           name: "SCREEN_ID",
-          custom: !0,
+          custom: true,
           advancedOptions: function () {
-            return Object(u.c)().getScreenList();
+            return u.c().getScreenList();
           }
         }, {
           type: "input_value",
           name: "IMAGE_FILE_ID",
           check: ["String"]
         }],
-        previousStatement: !0,
-        nextStatement: !0,
+        previousStatement: true,
+        nextStatement: true,
         colour: "%{BKY_APPEARANCE_HUE}",
-        inputsInline: !0
+        inputsInline: true
       });
       e.insertBlockProfile("screen_get_background_image", {
         type: "screen_get_background_image",
@@ -270,14 +270,14 @@ var d = {
         args0: [{
           type: "field_coco_dropdown",
           name: "SCREEN_ID",
-          custom: !0,
+          custom: true,
           advancedOptions: function () {
-            return Object(u.c)().getScreenList();
+            return u.c().getScreenList();
           }
         }],
         output: ["String"],
         colour: "%{BKY_APPEARANCE_HUE}",
-        inputsInline: !0
+        inputsInline: true
       });
       e.insertBlockProfile("new_screen_get_size", {
         type: "new_screen_get_size",
@@ -285,7 +285,7 @@ var d = {
         args0: [{
           type: "field_coco_dropdown",
           name: "PROPERTY",
-          custom: !0,
+          custom: true,
           options: function () {
             return [{
               type: "basic",
@@ -299,7 +299,7 @@ var d = {
           }
         }],
         output: ["Number"],
-        inputsInline: !0,
+        inputsInline: true,
         colour: "%{BKY_APPEARANCE_HUE}"
       });
       e.insertBlockProfile("new_screen_get_color", {
@@ -307,7 +307,7 @@ var d = {
         message0: "%{BKY_NEW_SCREEN_GET_COLOR}",
         args0: [],
         output: ["String", "Color"],
-        inputsInline: !0,
+        inputsInline: true,
         colour: "%{BKY_APPEARANCE_HUE}"
       });
       e.insertBlockProfile("new_screen_set_background_color", {
@@ -318,10 +318,10 @@ var d = {
           check: ["Color", "String"],
           name: "COLOR"
         }],
-        previousStatement: !0,
-        nextStatement: !0,
+        previousStatement: true,
+        nextStatement: true,
         colour: "%{BKY_APPEARANCE_HUE}",
-        inputsInline: !0
+        inputsInline: true
       });
       e.insertBlockProfile("new_screen_set_background_image", {
         type: "new_screen_set_background_image",
@@ -331,10 +331,10 @@ var d = {
           name: "IMAGE_FILE_ID",
           check: ["String"]
         }],
-        previousStatement: !0,
-        nextStatement: !0,
+        previousStatement: true,
+        nextStatement: true,
         colour: "%{BKY_APPEARANCE_HUE}",
-        inputsInline: !0
+        inputsInline: true
       });
       e.insertBlockProfile("new_screen_get_background_image", {
         type: "new_screen_get_background_image",
@@ -342,7 +342,7 @@ var d = {
         args0: [],
         output: ["String"],
         colour: "%{BKY_APPEARANCE_HUE}",
-        inputsInline: !0
+        inputsInline: true
       });
       e.insertBlockProfile("screen_check_if_pressed", {
         type: "screen_check_if_pressed",
@@ -350,7 +350,7 @@ var d = {
         args0: [],
         output: "Boolean",
         colour: "%{BKY_APPEARANCE_HUE}",
-        inputsInline: !0
+        inputsInline: true
       });
     }
   },
@@ -360,7 +360,7 @@ var d = {
   },
   topBlocks: ["screen_on_open_get_param", "screen_on_open", "screen_on_press", "app_on_switch_background", "broadcast_on_receive", "widget_event"]
 };
-var p = require("./35");
+import p = require("./35");
 var f = "<sep gap=\"".concat(45, "\"></sep>");
 var h = "DROPDOWN_PLACEHOLDER_OPTION_VALUE";
 var m = "?";
@@ -368,7 +368,7 @@ var g = "DROPDOWN_PLACEHOLDER_EMPTY_IMAGE_VALUE";
 var _ = "\n  <block type=\"date_get_current_date\" uncache=\"true\">\n  </block>\n  <block type=\"date_check_date_is_equal\" uncache=\"true\">\n    <value name=\"DATE_A\">\n      <shadow type=\"date_get_current_date\"></shadow>\n    </value>\n    <value name=\"DATE_B\">\n      <shadow type=\"date_get_current_date\"></shadow>\n    </value>\n  </block>\n  <block type=\"date_get_date_minus_operation\" uncache=\"true\">\n    <value name=\"DATE_A\">\n      <shadow type=\"date_get_current_date\"></shadow>\n    </value>\n    <value name=\"DATE_B\">\n      <shadow type=\"date_get_current_date\"></shadow>\n    </value>\n  </block>";
 function v() {
   var e = [d];
-  Object(p.K)().forEach(function (t) {
+  p.K().forEach(function (t) {
     if (t.blockConfig) {
       e.push(t.blockConfig);
     }
@@ -381,7 +381,7 @@ function v() {
         }
         var o = i.f(t.type);
         if (o) {
-          return Object(a.e)(null, o.type, o.types, !0);
+          return a.e(null, o.type, o.types, true);
         }
       }
       return n(e);
@@ -393,10 +393,10 @@ function b() {
   var e = new Map();
   var t = [];
   v().forEach(function (e) {
-    t.push.apply(t, Object(o.a)(e.topBlocks));
+    t.push.apply(t, o.a(e.topBlocks));
   });
   t.forEach(function (t) {
-    e.set(t, !0);
+    e.set(t, true);
   });
   return e;
 }
@@ -405,7 +405,7 @@ function y() {
   v().forEach(function (t) {
     e[t.type] = t.category;
   });
-  return Object(r.a)({}, e);
+  return r.a({}, e);
 }
 function E() {
   var e = {};
@@ -447,7 +447,7 @@ function T(e, t, n) {
   var r;
   var o;
   var i = 100;
-  var a = null === n || void 0 === n ? void 0 : n.find(function (e) {
+  var a = null === n || undefined === n ? undefined : n.find(function (e) {
     return e.label === t;
   });
   if (a) {
@@ -475,12 +475,12 @@ function T(e, t, n) {
     }
   }
   !function (e) {
-    var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-    var n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : c.b;
-    var r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 100;
-    var o = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "NUM";
+    var t = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : 0;
+    var n = arguments.length > 2 && undefined !== arguments[2] ? arguments[2] : c.b;
+    var r = arguments.length > 3 && undefined !== arguments[3] ? arguments[3] : 100;
+    var o = arguments.length > 4 && undefined !== arguments[4] ? arguments[4] : "NUM";
     var i = e.source_block;
-    var a = null === i || void 0 === i ? void 0 : i.get_shadow_field(o);
+    var a = null === i || undefined === i ? undefined : i.get_shadow_field(o);
     if (a && "FieldNumber" === a.field_type) {
       a.set_value(r.toString());
       a.set_constraints(t, n, 1);

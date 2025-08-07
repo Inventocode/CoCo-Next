@@ -1,7 +1,7 @@
 "use strict";
 
-var r = require("../19");
-var o = require("react");
+import r = require("../19");
+import o = require("react");
 var i = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -14,19 +14,19 @@ var i = function __importDefault(module) {
   });
   return defaultExport;
 }(o);
-var a = require("../242/index");
-var s = require("../20");
-var c = require("../108");
+import a = require("../242/index");
+import s = require("../20");
+import c = require("../108");
 function l(e, t) {
   if ("function" === typeof e) {
     e(t);
   } else {
-    if ("object" === Object(c.a)(e) && e && "current" in e) {
+    if ("object" === c.a(e) && e && "current" in e) {
       e.current = t;
     }
   }
 }
-var u = require("../75/index");
+import u = require("../75/index");
 var d = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -42,31 +42,31 @@ var d = function __importDefault(module) {
 function p(e) {
   return e instanceof HTMLElement ? e : d.a.findDOMNode(e);
 }
-var f = require("resize-observer-polyfill");
+import f = require("resize-observer-polyfill");
 var h = new Map();
 var m = new f.default(function (e) {
   e.forEach(function (e) {
     var t;
     var n = e.target;
-    if (!(null === (t = h.get(n)) || void 0 === t)) {
+    if (!(null === (t = h.get(n)) || undefined === t)) {
       t.forEach(function (e) {
         return e(n);
       });
     }
   });
 });
-var g = require("../95");
-var _ = require("../96");
-var v = require("../120");
-var b = require("../140");
+import g = require("../95");
+import _ = require("../96");
+import v = require("../120");
+import b = require("../140");
 var y = function (e) {
-  Object(v.a)(n, e);
-  var t = Object(b.a)(n);
+  v.a(n, e);
+  var t = b.a(n);
   function n() {
-    Object(g.a)(this, n);
+    g.a(this, n);
     return t.apply(this, arguments);
   }
-  Object(_.a)(n, [{
+  _.a(n, [{
     key: "render",
     value: function () {
       return this.props.children;
@@ -90,8 +90,8 @@ function O(e) {
   var d = o.isValidElement(t) && function (e) {
     var t;
     var n;
-    var r = Object(a.isMemo)(e) ? e.type.type : e.type;
-    return !("function" === typeof r && !(null === (t = r.prototype) || void 0 === t ? void 0 : t.render)) && !("function" === typeof e && !(null === (n = e.prototype) || void 0 === n ? void 0 : n.render));
+    var r = a.isMemo(e) ? e.type.type : e.type;
+    return !("function" === typeof r && !(null === (t = r.prototype) || undefined === t ? undefined : t.render)) && !("function" === typeof e && !(null === (n = e.prototype) || undefined === n ? undefined : n.render));
   }(t);
   var f = d ? t.ref : null;
   var g = o.useMemo(function () {
@@ -129,11 +129,11 @@ function O(e) {
       u.current = h;
       var m = l === Math.round(i) ? i : l;
       var g = d === Math.round(a) ? a : d;
-      var v = Object(s.a)(Object(s.a)({}, h), {}, {
+      var v = s.a(s.a({}, h), {}, {
         offsetWidth: m,
         offsetHeight: g
       });
-      if (!(null === c || void 0 === c)) {
+      if (!(null === c || undefined === c)) {
         c(v, e, r);
       }
       if (n) {
@@ -176,14 +176,14 @@ function O(e) {
 }
 function w(e) {
   return function e(t) {
-    var n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+    var n = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : {};
     var r = [];
     i.a.Children.forEach(t, function (t) {
-      if (void 0 !== t && null !== t || n.keepEmpty) {
+      if (undefined !== t && null !== t || n.keepEmpty) {
         if (Array.isArray(t)) {
           r = r.concat(e(t));
         } else {
-          if (Object(a.isFragment)(t) && t.props) {
+          if (a.isFragment(t) && t.props) {
             r = r.concat(e(t.props.children, n));
           } else {
             r.push(t);
@@ -193,8 +193,8 @@ function w(e) {
     });
     return r;
   }(e.children).map(function (t, n) {
-    var i = (null === t || void 0 === t ? void 0 : t.key) || "".concat("rc-observer-key", "-").concat(n);
-    return o.createElement(O, Object(r.a)({}, e, {
+    var i = (null === t || undefined === t ? undefined : t.key) || "".concat("rc-observer-key", "-").concat(n);
+    return o.createElement(O, r.a({}, e, {
       key: i
     }), t);
   });
@@ -215,13 +215,13 @@ w.Collection = function (e) {
     });
     Promise.resolve().then(function () {
       if (s === r.current) {
-        if (!(null === n || void 0 === n)) {
+        if (!(null === n || undefined === n)) {
           n(i.current);
         }
         i.current = [];
       }
     });
-    if (!(null === a || void 0 === a)) {
+    if (!(null === a || undefined === a)) {
       a(e, t, o);
     }
   }, [n, a]);

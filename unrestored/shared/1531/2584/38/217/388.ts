@@ -1,14 +1,14 @@
 "use strict";
 
 export { i as a };
-var r = require("../../27");
-var o = require("../../40");
+import r = require("../../27");
+import o = require("../../40");
 var i = function () {
   function e() {
-    Object(r.a)(this, e);
+    r.a(this, e);
     this.listeners = {};
   }
-  Object(o.a)(e, [{
+  o.a(e, [{
     key: "addEventListener",
     value: function (e, t) {
       var n = this.listeners[e];

@@ -4,7 +4,7 @@ var r = [3, 5, 6, 7, 8, 9, 10, 11];
 module.exports = {
   normalizeOptions: function (e) {
     var t = function () {
-      var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 5;
+      var e = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : 5;
       if ("number" !== typeof e) {
         throw new Error("ecmaVersion must be a number. Received value of type ".concat(typeof e, " instead."));
       }
@@ -18,14 +18,14 @@ module.exports = {
       return t;
     }(e.ecmaVersion);
     var n = function () {
-      var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "script";
+      var e = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : "script";
       if ("script" === e || "module" === e) {
         return e;
       }
       throw new Error("Invalid sourceType.");
     }(e.sourceType);
-    var i = !0 === e.range;
-    var o = !0 === e.loc;
+    var i = true === e.range;
+    var o = true === e.loc;
     if ("module" === n && t < 6) {
       throw new Error("sourceType 'module' is not supported when ecmaVersion < 2015. Consider adding `{ ecmaVersion: 2015 }` to the parser options.");
     }

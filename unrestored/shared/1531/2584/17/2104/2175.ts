@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.SimplifiedWorkspaceComment = void 0;
+exports.SimplifiedWorkspaceComment = undefined;
 var r = require("tslib");
 var i = require("inversify");
 var o = require("@kitten-team/gl-matrix");
@@ -28,21 +28,21 @@ var h = function (e) {
     a.left_top_offset = [-a.icon_size / 2, -a.icon_size / 2];
     a.bubble_width_ = 214;
     a.bubble_height_ = 126;
-    a.auto_layout_ = !0;
+    a.auto_layout_ = true;
     a.relative_position_ = o.vec2.create();
-    a.expanded_ = !1;
+    a.expanded_ = false;
     a.color_theme = "BLUE";
-    a.is_textarea_focused = !1;
+    a.is_textarea_focused = false;
     a.parent_block_ = n;
     a.base_block = n;
     var s = a.workspace.is_resizes_enabled();
-    a.workspace.set_resizes_enabled(!1);
+    a.workspace.set_resizes_enabled(false);
     a.events.disable();
-    a.id = void 0 != i ? i : (0, l.gen_uid)();
+    a.id = undefined != i ? i : (0, l.gen_uid)();
     a.svg_group.classList.add("blocklyWorkspaceComment");
     a.update_movable();
     if (n) {
-      a.deletable_ = !1;
+      a.deletable_ = false;
     }
     if (r) {
       a.translate(o.vec2.fromValues(r.x, r.y));
@@ -57,7 +57,7 @@ var h = function (e) {
       if (a.parent_block_) {
         a.events.fire(a.change_event_factory("comment", {
           block: a.parent_block_,
-          old_value: void 0,
+          old_value: undefined,
           new_value: a.id
         }));
       } else {
@@ -103,16 +103,16 @@ var h = function (e) {
       var o = (0, f.get_nested_blocks_with_comment)(i);
       var a = o[0];
       if (a !== this.parent_block_) {
-        if (!(null === (t = null === a || void 0 === a ? void 0 : a.comment) || void 0 === t)) {
-          t.init_svg(!0);
+        if (!(null === (t = null === a || undefined === a ? undefined : a.comment) || undefined === t)) {
+          t.init_svg(true);
         }
         return void (this.svg_icon || (this.svg_icon = (0, c.create_svg_element)("g", {}, this.svg_group), this.reposition()));
       }
       o.forEach(function (e) {
         var t;
         if (e !== r.parent_block_ && e.comment && e.comment.rendered) {
-          e.comment.rendered = !1;
-          if (!(null === (t = r.workspace.get_canvas()) || void 0 === t)) {
+          e.comment.rendered = false;
+          if (!(null === (t = r.workspace.get_canvas()) || undefined === t)) {
             t.removeChild(e.comment.svg_group);
           }
         }
@@ -132,8 +132,8 @@ var h = function (e) {
       }
       this.events.bind_event_with_checks(this.svg_icon, "mouseup", this, this.on_icon_click);
       this.reposition();
-      this.rendered = !0;
-      if (!(null === (n = this.workspace.get_canvas()) || void 0 === n)) {
+      this.rendered = true;
+      if (!(null === (n = this.workspace.get_canvas()) || undefined === n)) {
         n.appendChild(this.svg_group);
       }
       this.update_visibility();
@@ -192,14 +192,14 @@ var h = function (e) {
     }
   };
   t.prototype.show_editor = function () {
-    return (0, r.__awaiter)(this, void 0, void 0, function () {
+    return (0, r.__awaiter)(this, undefined, undefined, function () {
       var e;
       return (0, r.__generator)(this, function (t) {
         switch (t.label) {
           case 0:
             return [4, this.workspace.show_external_comment_editor(this.text_)];
           case 1:
-            if (!(void 0 == (e = t.sent()))) {
+            if (!(undefined == (e = t.sent()))) {
               this.set_text(e);
             }
             return [2];
@@ -231,7 +231,7 @@ var h = function (e) {
     return this.get_root_block() || this;
   };
   t.prototype.get_root_block = function () {
-    for (var e = this.parent_block_; null === e || void 0 === e ? void 0 : e.parent_block;) {
+    for (var e = this.parent_block_; null === e || undefined === e ? undefined : e.parent_block;) {
       e = e.parent_block;
     }
     return e;
@@ -244,7 +244,7 @@ var h = function (e) {
       t = this.parent_block_ ? this.change_event_factory("comment", {
         block: this.parent_block_,
         old_value: this.xml.comment_to_dom_with_xy(this),
-        new_value: void 0
+        new_value: undefined
       }) : this.delete_event_factory({
         block: this
       });
@@ -260,7 +260,7 @@ var h = function (e) {
         var e = (0, f.get_outer_block)(n.parent_block_);
         var t = (0, f.get_nested_blocks_with_comment)(e)[0];
         if (t && t.comment && t.rendered) {
-          t.comment.init_svg(!0);
+          t.comment.init_svg(true);
         }
       }
     });
@@ -330,9 +330,9 @@ var h = function (e) {
   };
   t.prototype.draw_line = function () {};
   t.prototype.cancel_operation = function () {};
-  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.xml)], t.prototype, "xml", void 0);
-  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.ChangeEvent)], t.prototype, "change_event_factory", void 0);
-  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.SimplifiedCommentBubble)], t.prototype, "comment_bubble", void 0);
+  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.xml)], t.prototype, "xml", undefined);
+  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.ChangeEvent)], t.prototype, "change_event_factory", undefined);
+  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.SimplifiedCommentBubble)], t.prototype, "comment_bubble", undefined);
   return t = (0, r.__decorate)([(0, i.injectable)()], t);
 }(require("./963").WorkspaceElement);
 exports.SimplifiedWorkspaceComment = h;

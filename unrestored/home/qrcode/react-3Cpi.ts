@@ -792,7 +792,7 @@ function QRCodeCanvas(props) {
     imageSettings
   } = _a;
   const otherProps = __objRest(_a, ["value", "size", "level", "bgColor", "fgColor", "includeMargin", "style", "imageSettings"]);
-  const imgSrc = imageSettings == null ? void 0 : imageSettings.src;
+  const imgSrc = imageSettings == null ? undefined : imageSettings.src;
   const _canvas = Object(__WEBPACK_IMPORTED_MODULE_0_react__.useRef)(null);
   const _image = Object(__WEBPACK_IMPORTED_MODULE_0_react__.useRef)(null);
   const [isImgLoaded, setIsImageLoaded] = Object(__WEBPACK_IMPORTED_MODULE_0_react__.useState)(false);

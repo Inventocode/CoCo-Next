@@ -36,8 +36,8 @@ var o = function () {
       this.hints.set(r.DecodeHintType.POSSIBLE_FORMATS, t);
       this.reader.setHints(this.hints);
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   e.prototype.decodeBitmap = function (t) {
     return this.reader.decodeWithState(t);

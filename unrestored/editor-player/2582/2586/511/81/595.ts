@@ -22,10 +22,10 @@ var f = function () {
     var h = a.a.L;
     var l = t.QUIET_ZONE_SIZE;
     if (null !== f) {
-      if (void 0 !== f.get(o.a.ERROR_CORRECTION)) {
+      if (undefined !== f.get(o.a.ERROR_CORRECTION)) {
         h = a.a.fromString(f.get(o.a.ERROR_CORRECTION).toString());
       }
-      if (void 0 !== f.get(o.a.MARGIN)) {
+      if (undefined !== f.get(o.a.MARGIN)) {
         l = Number.parseInt(f.get(o.a.MARGIN).toString(), 10);
       }
     }

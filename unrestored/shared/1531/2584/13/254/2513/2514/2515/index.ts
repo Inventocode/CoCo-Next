@@ -14,8 +14,8 @@ module.exports = function e(t, n, l, f, d) {
       if (s(o)) {
         a(t, n, c, l, e, f, d);
       } else {
-        var h = f ? f(u(t, c), o, c + "", t, n, d) : void 0;
-        if (void 0 === h) {
+        var h = f ? f(u(t, c), o, c + "", t, n, d) : undefined;
+        if (undefined === h) {
           h = o;
         }
         i(t, c, h);

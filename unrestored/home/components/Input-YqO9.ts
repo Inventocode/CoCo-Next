@@ -195,7 +195,7 @@ var formatOnChangeEvent = function formatOnChangeEvent(value, oldInputValueRef, 
     value: value
   };
 };
-var animationTimeId = void 0;
+var animationTimeId = undefined;
 var Input = function Input(props, ref) {
   var warning = props.warning;
   var placeholder = props.placeholder;

@@ -4,12 +4,12 @@ var i = require("./944");
 var a = require("../1736/167");
 if (r && a(function () {
   return "sy" !== Object.getOwnPropertyDescriptor(RegExp.prototype, "flags").get.call({
-    dotAll: !0,
-    sticky: !0
+    dotAll: true,
+    sticky: true
   });
 })) {
   o.f(RegExp.prototype, "flags", {
-    configurable: !0,
+    configurable: true,
     get: i
   });
 }

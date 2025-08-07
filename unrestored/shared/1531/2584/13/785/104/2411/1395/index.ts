@@ -8,11 +8,11 @@ var u = s.hasOwnProperty;
 var l = c.call(Object);
 module.exports = function (e) {
   if (!o(e) || "[object Object]" != r(e)) {
-    return !1;
+    return false;
   }
   var t = i(e);
   if (null === t) {
-    return !0;
+    return true;
   }
   var n = u.call(t, "constructor") && t.constructor;
   return "function" == typeof n && n instanceof n && c.call(n) == l;

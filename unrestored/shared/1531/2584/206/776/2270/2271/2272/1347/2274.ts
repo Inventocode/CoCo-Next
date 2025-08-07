@@ -82,10 +82,10 @@ function me(e, t) {
 function ye(e, t) {
   for (var n = -1, r = t.length >>> 0; ++n < r;) {
     if (e === t[n]) {
-      return !0;
+      return true;
     }
   }
-  return !1;
+  return false;
 }
 function be(e) {
   return !e;
@@ -373,40 +373,40 @@ F = function (e) {
   var n;
   for (t = 0, n = e.length; t < n; ++t) {
     if (!e[t]) {
-      return !1;
+      return false;
     }
   }
-  return !0;
+  return true;
 };
 R = function (e) {
   var t;
   var n;
   for (t = 0, n = e.length; t < n; ++t) {
     if (e[t]) {
-      return !0;
+      return true;
     }
   }
-  return !1;
+  return false;
 };
 P = me(function (e, t) {
   var n;
   var r;
   for (n = 0, r = t.length; n < r; ++n) {
     if (e(t[n])) {
-      return !0;
+      return true;
     }
   }
-  return !1;
+  return false;
 });
 N = me(function (e, t) {
   var n;
   var r;
   for (n = 0, r = t.length; n < r; ++n) {
     if (!e(t[n])) {
-      return !1;
+      return false;
     }
   }
-  return !0;
+  return true;
 });
 M = function (e) {
   return e.concat().sort(function (e, t) {
@@ -616,7 +616,7 @@ le = function () {
   var s;
   var c;
   var u = [];
-  for (t = void 0, n = 0, r = (e = ve.call(arguments)).length; n < r; ++n) {
+  for (t = undefined, n = 0, r = (e = ve.call(arguments)).length; n < r; ++n) {
     if (!(t <= (o = (i = e[n]).length))) {
       t = o;
     }
@@ -639,7 +639,7 @@ fe = function (e) {
   var a;
   var s;
   var c = [];
-  for (n = void 0, r = 0, i = (t = ve.call(arguments, 1)).length; r < i; ++r) {
+  for (n = undefined, r = 0, i = (t = ve.call(arguments, 1)).length; r < i; ++r) {
     if (!(n <= (a = (o = t[r]).length))) {
       n = a;
     }

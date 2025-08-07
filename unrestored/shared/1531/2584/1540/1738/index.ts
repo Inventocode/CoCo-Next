@@ -13,12 +13,12 @@ var p = !o.ActiveXObject && "ActiveXObject" in o;
 var f = Object.isExtensible;
 var h = function (e) {
   return function () {
-    return e(this, arguments.length ? arguments[0] : void 0);
+    return e(this, arguments.length ? arguments[0] : undefined);
   };
 };
 var m = module.exports = s("WeakMap", h, c);
 if (d && p) {
-  r = c.getConstructor(h, "WeakMap", !0);
+  r = c.getConstructor(h, "WeakMap", true);
   a.enable();
   var g = m.prototype;
   var _ = g.delete;

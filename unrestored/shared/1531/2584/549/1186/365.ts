@@ -5,16 +5,16 @@ export { h as b };
 export { E as c };
 export { w as d };
 var r;
-var i = require("react");
+import i = require("react");
 require("../../50/index");
-var o = require("../../548/1183/100");
-var a = require("../../548/1183/270/1509");
-var s = require("../../548/1183/270/153/index");
-var c = require("../../95");
-var u = require("../../96");
-var l = require("../../322");
-var f = require("../../273");
-var d = require("../../120");
+import o = require("../../548/1183/100");
+import a = require("../../548/1183/270/1509");
+import s = require("../../548/1183/270/153/index");
+import c = require("../../95");
+import u = require("../../96");
+import l = require("../../322");
+import f = require("../../273");
+import d = require("../../120");
 !function (e) {
   e.HOURS = "hours";
   e.MINUTES = "minutes";
@@ -25,13 +25,13 @@ var p = function (e) {
   function t() {
     var e;
     var n;
-    Object(c.a)(this, t);
+    c.a(this, t);
     for (var r = arguments.length, i = new Array(r), o = 0; o < r; o++) {
       i[o] = arguments[o];
     }
-    (n = Object(l.a)(this, (e = Object(f.a)(t)).call.apply(e, [this].concat(i)))).state = {
-      toAnimateTransform: !1,
-      previousType: void 0
+    (n = l.a(this, (e = f.a(t)).call.apply(e, [this].concat(i)))).state = {
+      toAnimateTransform: false,
+      previousType: undefined
     };
     n.getAngleStyle = function () {
       var e = n.props;
@@ -49,18 +49,18 @@ var p = function (e) {
     };
     return n;
   }
-  Object(d.a)(t, e);
-  Object(u.a)(t, [{
+  d.a(t, e);
+  u.a(t, [{
     key: "render",
     value: function () {
       var e = this.props;
       var t = e.classes;
       var n = e.hasSelected;
-      return Object(i.createElement)("div", {
+      return i.createElement("div", {
         style: this.getAngleStyle(),
-        className: Object(o.a)(t.pointer, this.state.toAnimateTransform && t.animateTransform)
-      }, Object(i.createElement)("div", {
-        className: Object(o.a)(t.thumb, n && t.noPoint)
+        className: o.a(t.pointer, this.state.toAnimateTransform && t.animateTransform)
+      }, i.createElement("div", {
+        className: o.a(t.thumb, n && t.noPoint)
       }));
     }
   }]);
@@ -68,15 +68,15 @@ var p = function (e) {
 }(i.Component);
 p.getDerivedStateFromProps = function (e, t) {
   return e.type !== t.previousType ? {
-    toAnimateTransform: !0,
+    toAnimateTransform: true,
     previousType: e.type
   } : {
-    toAnimateTransform: !1,
+    toAnimateTransform: false,
     previousType: e.type
   };
 };
-var _ = Object(s.a)(function (e) {
-  return Object(a.a)({
+var _ = s.a(function (e) {
+  return a.a({
     pointer: {
       width: 2,
       backgroundColor: e.palette.primary.main,
@@ -142,7 +142,7 @@ var y = function (e, t, n) {
   return i;
 };
 var b = function (e, t) {
-  var n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
+  var n = arguments.length > 2 && undefined !== arguments[2] ? arguments[2] : 1;
   var r = 6 * n;
   var i = m(r, e, t);
   var o = i.value;
@@ -162,33 +162,33 @@ var x = function (e) {
   function t() {
     var e;
     var n;
-    Object(c.a)(this, t);
+    c.a(this, t);
     for (var r = arguments.length, i = new Array(r), o = 0; o < r; o++) {
       i[o] = arguments[o];
     }
-    (n = Object(l.a)(this, (e = Object(f.a)(t)).call.apply(e, [this].concat(i)))).isMoving = !1;
+    (n = l.a(this, (e = f.a(t)).call.apply(e, [this].concat(i)))).isMoving = false;
     n.handleTouchMove = function (e) {
-      n.isMoving = !0;
+      n.isMoving = true;
       n.setTime(e);
     };
     n.handleTouchEnd = function (e) {
       if (n.isMoving) {
-        n.setTime(e, !0);
-        n.isMoving = !1;
+        n.setTime(e, true);
+        n.isMoving = false;
       }
     };
     n.handleMove = function (e) {
       e.preventDefault();
       e.stopPropagation();
       if ("undefined" === typeof e.buttons ? 1 === e.nativeEvent.which : 1 === e.buttons) {
-        n.setTime(e.nativeEvent, !1);
+        n.setTime(e.nativeEvent, false);
       }
     };
     n.handleMouseUp = function (e) {
       if (n.isMoving) {
-        n.isMoving = !1;
+        n.isMoving = false;
       }
-      n.setTime(e.nativeEvent, !0);
+      n.setTime(e.nativeEvent, true);
     };
     n.hasSelected = function () {
       var e = n.props;
@@ -198,11 +198,11 @@ var x = function (e) {
     };
     return n;
   }
-  Object(d.a)(t, e);
-  Object(u.a)(t, [{
+  d.a(t, e);
+  u.a(t, [{
     key: "setTime",
     value: function (e) {
-      var t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+      var t = arguments.length > 1 && undefined !== arguments[1] && arguments[1];
       var n = e.offsetX;
       var r = e.offsetY;
       if ("undefined" === typeof n) {
@@ -222,11 +222,11 @@ var x = function (e) {
       var r = e.children;
       var o = e.type;
       var a = !e.ampm && o === h.HOURS && (n < 1 || n > 12);
-      return Object(i.createElement)("div", {
+      return i.createElement("div", {
         className: t.container
-      }, Object(i.createElement)("div", {
+      }, i.createElement("div", {
         className: t.clock
-      }, Object(i.createElement)("div", {
+      }, i.createElement("div", {
         role: "menu",
         tabIndex: -1,
         className: t.squareMask,
@@ -234,9 +234,9 @@ var x = function (e) {
         onTouchEnd: this.handleTouchEnd,
         onMouseUp: this.handleMouseUp,
         onMouseMove: this.handleMove
-      }), Object(i.createElement)("div", {
+      }), i.createElement("div", {
         className: t.pin
-      }), Object(i.createElement)(_, {
+      }), i.createElement(_, {
         type: o,
         value: n,
         isInner: a,
@@ -247,11 +247,11 @@ var x = function (e) {
   return t;
 }(i.Component);
 x.defaultProps = {
-  ampm: !1,
+  ampm: false,
   minutesStep: 1
 };
-var C = Object(s.a)(function (e) {
-  return Object(a.a)({
+var C = s.a(function (e) {
+  return a.a({
     container: {
       display: "flex",
       justifyContent: "center",

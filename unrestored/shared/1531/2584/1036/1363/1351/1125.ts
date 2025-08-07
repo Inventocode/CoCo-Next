@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.uniSlice = exports.dlen = exports.eachOp = void 0;
+exports.uniSlice = exports.dlen = exports.eachOp = undefined;
 var r = require("./1124");
 var i = function (e) {
   if (!Array.isArray(e)) {
@@ -162,8 +162,8 @@ function p(e, n, o) {
   i(n);
   for (var a, s = [], c = u(s), f = d(e), p = f.take, _ = f.peek, A = 0; A < n.length; A++) {
     var g = n[A];
-    var v = void 0;
-    var m = void 0;
+    var v = undefined;
+    var m = undefined;
     switch (typeof g) {
       case "number":
         for (v = g; v > 0;) {
@@ -204,8 +204,8 @@ function _(e, n) {
   i(n);
   for (var o, a = [], s = u(a), c = d(e).take, p = 0; p < n.length; p++) {
     var _ = n[p];
-    var A = void 0;
-    var g = void 0;
+    var A = undefined;
+    var g = undefined;
     switch (typeof _) {
       case "number":
         for (A = _; A > 0;) {
@@ -297,10 +297,10 @@ function y(e) {
   });
 }
 function b(e) {
-  var t = !0;
+  var t = true;
   o(e, function (e) {
     if ("object" === typeof e && "number" === typeof e.d) {
-      t = !1;
+      t = false;
     }
   });
   return t;
@@ -313,7 +313,7 @@ exports.default = function (e) {
     normalize: c,
     checkOp: i,
     create: function () {
-      var t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
+      var t = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : "";
       if ("string" !== typeof t) {
         throw Error("Initial data must be a string");
       }

@@ -14,48 +14,48 @@ var f = o.forwardRef(function (e, t) {
   var s = e.classes;
   var c = e.className;
   var f = e.color;
-  var d = void 0 === f ? "default" : f;
+  var d = undefined === f ? "default" : f;
   var h = e.component;
-  var p = void 0 === h ? "button" : h;
+  var p = undefined === h ? "button" : h;
   var _ = e.disabled;
-  var A = void 0 !== _ && _;
+  var A = undefined !== _ && _;
   var g = e.disableElevation;
-  var v = void 0 !== g && g;
+  var v = undefined !== g && g;
   var m = e.disableFocusRipple;
-  var y = void 0 !== m && m;
+  var y = undefined !== m && m;
   var b = e.endIcon;
   var w = e.focusVisibleClassName;
   var E = e.fullWidth;
-  var x = void 0 !== E && E;
+  var x = undefined !== E && E;
   var C = e.size;
-  var O = void 0 === C ? "medium" : C;
+  var O = undefined === C ? "medium" : C;
   var k = e.startIcon;
   var S = e.type;
-  var T = void 0 === S ? "button" : S;
+  var T = undefined === S ? "button" : S;
   var B = e.variant;
-  var D = void 0 === B ? "text" : B;
-  var I = Object(r.a)(e, ["children", "classes", "className", "color", "component", "disabled", "disableElevation", "disableFocusRipple", "endIcon", "focusVisibleClassName", "fullWidth", "size", "startIcon", "type", "variant"]);
+  var D = undefined === B ? "text" : B;
+  var I = r.a(e, ["children", "classes", "className", "color", "component", "disabled", "disableElevation", "disableFocusRipple", "endIcon", "focusVisibleClassName", "fullWidth", "size", "startIcon", "type", "variant"]);
   var F = k && o.createElement("span", {
-    className: Object(a.a)(s.startIcon, s["iconSize".concat(Object(l.a)(O))])
+    className: a.a(s.startIcon, s["iconSize".concat(l.a(O))])
   }, k);
   var R = b && o.createElement("span", {
-    className: Object(a.a)(s.endIcon, s["iconSize".concat(Object(l.a)(O))])
+    className: a.a(s.endIcon, s["iconSize".concat(l.a(O))])
   }, b);
-  return o.createElement(u.a, Object(i.a)({
-    className: Object(a.a)(s.root, s[D], c, "inherit" === d ? s.colorInherit : "default" !== d && s["".concat(D).concat(Object(l.a)(d))], "medium" !== O && [s["".concat(D, "Size").concat(Object(l.a)(O))], s["size".concat(Object(l.a)(O))]], v && s.disableElevation, A && s.disabled, x && s.fullWidth),
+  return o.createElement(u.a, i.a({
+    className: a.a(s.root, s[D], c, "inherit" === d ? s.colorInherit : "default" !== d && s["".concat(D).concat(l.a(d))], "medium" !== O && [s["".concat(D, "Size").concat(l.a(O))], s["size".concat(l.a(O))]], v && s.disableElevation, A && s.disabled, x && s.fullWidth),
     component: p,
     disabled: A,
     focusRipple: !y,
-    focusVisibleClassName: Object(a.a)(s.focusVisible, w),
+    focusVisibleClassName: a.a(s.focusVisible, w),
     ref: t,
     type: T
   }, I), o.createElement("span", {
     className: s.label
   }, F, n, R));
 });
-exports.a = Object(s.a)(function (e) {
+exports.a = s.a(function (e) {
   return {
-    root: Object(i.a)({}, e.typography.button, {
+    root: i.a({}, e.typography.button, {
       boxSizing: "border-box",
       minWidth: 64,
       padding: "6px 16px",
@@ -66,7 +66,7 @@ exports.a = Object(s.a)(function (e) {
       }),
       "&:hover": {
         textDecoration: "none",
-        backgroundColor: Object(c.a)(e.palette.text.primary, e.palette.action.hoverOpacity),
+        backgroundColor: c.a(e.palette.text.primary, e.palette.action.hoverOpacity),
         "@media (hover: none)": {
           backgroundColor: "transparent"
         },
@@ -90,7 +90,7 @@ exports.a = Object(s.a)(function (e) {
     textPrimary: {
       color: e.palette.primary.main,
       "&:hover": {
-        backgroundColor: Object(c.a)(e.palette.primary.main, e.palette.action.hoverOpacity),
+        backgroundColor: c.a(e.palette.primary.main, e.palette.action.hoverOpacity),
         "@media (hover: none)": {
           backgroundColor: "transparent"
         }
@@ -99,7 +99,7 @@ exports.a = Object(s.a)(function (e) {
     textSecondary: {
       color: e.palette.secondary.main,
       "&:hover": {
-        backgroundColor: Object(c.a)(e.palette.secondary.main, e.palette.action.hoverOpacity),
+        backgroundColor: c.a(e.palette.secondary.main, e.palette.action.hoverOpacity),
         "@media (hover: none)": {
           backgroundColor: "transparent"
         }
@@ -114,10 +114,10 @@ exports.a = Object(s.a)(function (e) {
     },
     outlinedPrimary: {
       color: e.palette.primary.main,
-      border: "1px solid ".concat(Object(c.a)(e.palette.primary.main, .5)),
+      border: "1px solid ".concat(c.a(e.palette.primary.main, .5)),
       "&:hover": {
         border: "1px solid ".concat(e.palette.primary.main),
-        backgroundColor: Object(c.a)(e.palette.primary.main, e.palette.action.hoverOpacity),
+        backgroundColor: c.a(e.palette.primary.main, e.palette.action.hoverOpacity),
         "@media (hover: none)": {
           backgroundColor: "transparent"
         }
@@ -125,10 +125,10 @@ exports.a = Object(s.a)(function (e) {
     },
     outlinedSecondary: {
       color: e.palette.secondary.main,
-      border: "1px solid ".concat(Object(c.a)(e.palette.secondary.main, .5)),
+      border: "1px solid ".concat(c.a(e.palette.secondary.main, .5)),
       "&:hover": {
         border: "1px solid ".concat(e.palette.secondary.main),
-        backgroundColor: Object(c.a)(e.palette.secondary.main, e.palette.action.hoverOpacity),
+        backgroundColor: c.a(e.palette.secondary.main, e.palette.action.hoverOpacity),
         "@media (hover: none)": {
           backgroundColor: "transparent"
         }

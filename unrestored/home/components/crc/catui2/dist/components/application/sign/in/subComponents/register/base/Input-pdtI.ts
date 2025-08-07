@@ -121,7 +121,7 @@ var Input = /*#__PURE__*/function (_React$Component) {
       fireChangeEvent(_this.input, ''); // 异步保持 focus，否则会丢失。
       setTimeout(function () {
         var _this$input;
-        return (_this$input = _this.input) === null || _this$input === void 0 ? void 0 : _this$input.focus();
+        return (_this$input = _this.input) === null || _this$input === undefined ? undefined : _this$input.focus();
       });
     });
     Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Object(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default)(_this), "renderIcons", function (type) {
@@ -144,7 +144,7 @@ var Input = /*#__PURE__*/function (_React$Component) {
         }, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_8_react___default.createElement("span", {
           onClick: function onClick(event) {
             var _icon$onClick;
-            return (_icon$onClick = icon.onClick) === null || _icon$onClick === void 0 ? void 0 : _icon$onClick.call(icon, event);
+            return (_icon$onClick = icon.onClick) === null || _icon$onClick === undefined ? undefined : _icon$onClick.call(icon, event);
           },
           style: {
             cursor: icon.onClick ? 'pointer' : ''
@@ -183,10 +183,10 @@ var Input = /*#__PURE__*/function (_React$Component) {
     Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Object(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default)(_this), "onPointerMoveAction", function (e) {
       if (_this.props.hintYDirection === 'up') {
         var _this$hint;
-        var height = (_this$hint = _this.hint) === null || _this$hint === void 0 ? void 0 : _this$hint.getBoundingClientRect().height;
+        var height = (_this$hint = _this.hint) === null || _this$hint === undefined ? undefined : _this$hint.getBoundingClientRect().height;
         _this.mousePos = {
           left: e.clientX,
-          top: e.clientY - HINT_PADDING_OFFSET_Y - (height !== null && height !== void 0 ? height : 0)
+          top: e.clientY - HINT_PADDING_OFFSET_Y - (height !== null && height !== undefined ? height : 0)
         };
       } else {
         _this.mousePos = {
@@ -266,7 +266,7 @@ var Input = /*#__PURE__*/function (_React$Component) {
       var _this$props2 = _this.props;
       var inputStyle = _this$props2.inputStyle;
       var size = _this$props2.size;
-      var offsetY = (inputStyle === null || inputStyle === void 0 ? void 0 : inputStyle.height) && parseInt(inputStyle.height) || size === 'lg' && 44 || size === 'md' && 36 || size === 'sm' && 28 || 36; // * 2 + 12 较为居中
+      var offsetY = (inputStyle === null || inputStyle === undefined ? undefined : inputStyle.height) && parseInt(inputStyle.height) || size === 'lg' && 44 || size === 'md' && 36 || size === 'sm' && 28 || 36; // * 2 + 12 较为居中
       return "28px ".concat(-offsetY * 2 + 12, "px");
     });
     Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Object(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default)(_this), "lintValue", function (value) {
@@ -274,8 +274,8 @@ var Input = /*#__PURE__*/function (_React$Component) {
       if (linter && !linter(value)) {
         var _this$inputWrap;
         // 设置 lint 的目的主要就是为了这个动画
-        if ((_this$inputWrap = _this.inputWrap) === null || _this$inputWrap === void 0) {
-          void 0;
+        if ((_this$inputWrap = _this.inputWrap) === null || _this$inputWrap === undefined) {
+          undefined;
         } else {
           _this$inputWrap.animate([{
             backgroundColor: 'rgba(255,239,237,0)',
@@ -306,7 +306,7 @@ var Input = /*#__PURE__*/function (_React$Component) {
       return true;
     });
     _this.state = {
-      _value: (_this$props$value$toS = (_this$props$value = _this.props.value) === null || _this$props$value === void 0 ? void 0 : _this$props$value.toString()) !== null && _this$props$value$toS !== void 0 ? _this$props$value$toS : '',
+      _value: (_this$props$value$toS = (_this$props$value = _this.props.value) === null || _this$props$value === undefined ? undefined : _this$props$value.toString()) !== null && _this$props$value$toS !== undefined ? _this$props$value$toS : '',
       showClearBtn: false,
       showLabel: _this.props.value ? false : true,
       inputStatus: '',
@@ -486,8 +486,8 @@ Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.d
   align: 'left',
   maxLength: 500
 });
-Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Input, "SearchInput", void 0);
-Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Input, "UnderlineInput", void 0);
+Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Input, "SearchInput", undefined);
+Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Input, "UnderlineInput", undefined);
 function isIconType(icons) {
   var flag = false;
   for (var i = 0; i < icons.length; i++) {
@@ -509,11 +509,11 @@ function fireChangeEvent(input, value) {
   var evt = new Event('change', {
     bubbles: true
   });
-  if (input === null || input === void 0) {
-    void 0;
+  if (input === null || input === undefined) {
+    undefined;
   } else {
-    if ((_valueTracker = input._valueTracker) === null || _valueTracker === void 0) {
-      void 0;
+    if ((_valueTracker = input._valueTracker) === null || _valueTracker === undefined) {
+      undefined;
     } else {
       _valueTracker.setValue(lastValue);
     }

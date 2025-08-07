@@ -5,8 +5,8 @@ import i from "react";
 import "../../../shared/1531/2584/710/index";
 import * as o from "../../../shared/1531/2584/75/index";
 import a from "../../../shared/1531/2584/75/index";
-import * as s from "../../../shared/1531/2584/1/index";
-import u from "../../../shared/1531/2584/1/index";
+import * as s from "regenerator-runtime";
+import u from "regenerator-runtime";
 import * as c from "../../../shared/1531/2584/6";
 import * as l from "../../../shared/1531/2584/7";
 import * as d from "../../../shared/1531/2584/10/index";
@@ -39,7 +39,7 @@ var p = i.memo(function () {
               t.t1 = t.sent;
               r = t.t0.parse.call(t.t0, t.t1);
               o(Object(c.a)(Object(c.a)({}, r), {}, {
-                shouldOpenEmulator: !0
+                shouldOpenEmulator: true
               }));
             case 10:
             case "end":

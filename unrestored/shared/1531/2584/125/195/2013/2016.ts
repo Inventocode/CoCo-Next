@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.BlockOptionType = exports.WorkspaceOptionType = void 0;
+exports.BlockOptionType = exports.WorkspaceOptionType = undefined;
 (function (e) {
   e[e.PASTE = 0] = "PASTE";
   e[e.CLEAN_UP = 1] = "CLEAN_UP";

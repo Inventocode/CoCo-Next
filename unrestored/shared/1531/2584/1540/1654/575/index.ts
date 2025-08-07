@@ -38,7 +38,7 @@ var m = function () {
   }
   return m();
 };
-s[d] = !0;
+s[d] = true;
 module.exports = Object.create || function (e, t) {
   var n;
   if (null !== e) {
@@ -49,5 +49,5 @@ module.exports = Object.create || function (e, t) {
   } else {
     n = m();
   }
-  return void 0 === t ? n : i(n, t);
+  return undefined === t ? n : i(n, t);
 };

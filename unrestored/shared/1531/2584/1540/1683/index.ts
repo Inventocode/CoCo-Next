@@ -19,11 +19,11 @@ r("split", function (e, t, n) {
   var r;
   r = "c" == "abbc".split(/(b)*/)[1] || 4 != "test".split(/(?:)/, -1).length || 2 != "ab".split(/(?:ab)*/).length || 4 != ".".split(/(.?)(.?)/).length || ".".split(/()()/).length > 1 || "".split(/.?/).length ? function (e, n) {
     var r = u(a(this));
-    var i = void 0 === n ? 4294967295 : n >>> 0;
+    var i = undefined === n ? 4294967295 : n >>> 0;
     if (0 === i) {
       return [];
     }
-    if (void 0 === e) {
+    if (undefined === e) {
       return [r];
     }
     if (!o(e)) {
@@ -42,13 +42,13 @@ r("split", function (e, t, n) {
       d.push(r.slice(h));
     }
     return d.length > i ? d.slice(0, i) : d;
-  } : "0".split(void 0, 0).length ? function (e, n) {
-    return void 0 === e && 0 === n ? [] : t.call(this, e, n);
+  } : "0".split(undefined, 0).length ? function (e, n) {
+    return undefined === e && 0 === n ? [] : t.call(this, e, n);
   } : t;
   return [function (t, n) {
     var o = a(this);
-    var i = void 0 == t ? void 0 : t[e];
-    return void 0 !== i ? i.call(t, o, n) : r.call(u(o), t, n);
+    var i = undefined == t ? undefined : t[e];
+    return undefined !== i ? i.call(t, o, n) : r.call(u(o), t, n);
   }, function (e, o) {
     var a = i(this);
     var p = u(e);
@@ -60,7 +60,7 @@ r("split", function (e, t, n) {
     var g = a.unicode;
     var v = (a.ignoreCase ? "i" : "") + (a.multiline ? "m" : "") + (a.unicode ? "u" : "") + (m ? "g" : "y");
     var b = new h(m ? "^(?:" + a.source + ")" : a, v);
-    var y = void 0 === o ? 4294967295 : o >>> 0;
+    var y = undefined === o ? 4294967295 : o >>> 0;
     if (0 === y) {
       return [];
     }

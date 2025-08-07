@@ -45,7 +45,7 @@ l.make = function () {
     }
     this.typeNumber = e;
   }
-  this.makeImpl(!1, this.getBestMaskPattern());
+  this.makeImpl(false, this.getBestMaskPattern());
 };
 l.makeImpl = function (e, t) {
   this.moduleCount = 4 * this.typeNumber + 17;
@@ -83,7 +83,7 @@ l.setupPositionProbePattern = function (e, t) {
 };
 l.getBestMaskPattern = function () {
   for (var e = 0, t = 0, n = 0; n < 8; n++) {
-    this.makeImpl(!0, n);
+    this.makeImpl(true, n);
     var r = a.getLostPoint(this);
     if (0 == n || e > r) {
       e = r;
@@ -179,7 +179,7 @@ l.mapData = function (e, t) {
     for (6 == s && s--;;) {
       for (var c = 0; c < 2; c++) {
         if (null == this.modules[r][s - c]) {
-          var l = !1;
+          var l = false;
           if (i < e.length) {
             l = 1 == (e[i] >>> o & 1);
           }
@@ -218,7 +218,7 @@ c.createData = function (e, t, n) {
     throw new Error("code length overflow. (" + s.getLengthInBits() + ">" + 8 * d + ")");
   }
   for (s.getLengthInBits() + 4 <= 8 * d && s.put(0, 4); s.getLengthInBits() % 8 != 0;) {
-    s.putBit(!1);
+    s.putBit(false);
   }
   for (; !(s.getLengthInBits() >= 8 * d) && (s.put(c.PAD0, 8), !(s.getLengthInBits() >= 8 * d));) {
     s.put(c.PAD1, 8);

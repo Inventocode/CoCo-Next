@@ -3,7 +3,7 @@
 export { u as b };
 export { p as c };
 export { h as a };
-var r = require("./1/index");
+import r = require("regenerator-runtime");
 var o = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -16,9 +16,9 @@ var o = function __importDefault(module) {
   });
   return defaultExport;
 }(r);
-var i = require("./7");
-var a = require("./41");
-var s = require("./59/index");
+import i = require("./7");
+import a = require("./41");
+import s = require("./59/index");
 s.a.materialHost;
 var c = s.a.serverHost;
 var l = s.a.openServiceHost;
@@ -26,7 +26,7 @@ function u() {
   return d.apply(this, arguments);
 }
 function d() {
-  return (d = Object(i.a)(o.a.mark(function e() {
+  return (d = i.a(o.a.mark(function e() {
     var t;
     var n;
     var r;
@@ -60,7 +60,10 @@ function d() {
             e.next = 17;
             break;
           case 13:
-            throw e.prev = 13, e.t0 = e.catch(0), console.error(e.t0), e.t0;
+            e.prev = 13;
+            e.t0 = e.catch(0);
+            console.error(e.t0);
+            throw e.t0;
           case 17:
           case "end":
             return e.stop();
@@ -73,7 +76,7 @@ function p() {
   return f.apply(this, arguments);
 }
 function f() {
-  return (f = Object(i.a)(o.a.mark(function e() {
+  return (f = i.a(o.a.mark(function e() {
     var t;
     var n;
     var r;
@@ -105,7 +108,10 @@ function f() {
             e.next = 17;
             break;
           case 13:
-            throw e.prev = 13, e.t0 = e.catch(0), console.error(e.t0), e.t0;
+            e.prev = 13;
+            e.t0 = e.catch(0);
+            console.error(e.t0);
+            throw e.t0;
           case 17:
           case "end":
             return e.stop();
@@ -118,7 +124,7 @@ function h(e) {
   return m.apply(this, arguments);
 }
 function m() {
-  return (m = Object(i.a)(o.a.mark(function e(t) {
+  return (m = i.a(o.a.mark(function e(t) {
     var n;
     var r;
     return o.a.wrap(function (e) {
@@ -140,9 +146,12 @@ function m() {
             r = n.data;
             return e.abrupt("return", r.result);
           case 7:
-            return e.abrupt("return", !1);
+            return e.abrupt("return", false);
           case 10:
-            throw e.prev = 10, e.t0 = e.catch(0), console.error(e.t0), e.t0;
+            e.prev = 10;
+            e.t0 = e.catch(0);
+            console.error(e.t0);
+            throw e.t0;
           case 14:
           case "end":
             return e.stop();

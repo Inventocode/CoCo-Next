@@ -1,7 +1,7 @@
 "use strict";
 
-var r = require("./10/index");
-var o = require("react");
+import r = require("./10/index");
+import o = require("react");
 var i = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -14,27 +14,27 @@ var i = function __importDefault(module) {
   });
   return defaultExport;
 }(o);
-var a = require("./38/376");
-var s = require("./82");
+import a = require("./38/376");
+import s = require("./82");
 var _a;
-_a = Object(o.memo)(function (e) {
-  var t = Object(o.useState)([]);
-  var n = Object(r.a)(t, 2);
+_a = o.memo(function (e) {
+  var t = o.useState([]);
+  var n = r.a(t, 2);
   var c = n[0];
   var l = n[1];
-  var u = Object(o.useState)("0 0 1024 1024");
-  var d = Object(r.a)(u, 2);
+  var u = o.useState("0 0 1024 1024");
+  var d = r.a(u, 2);
   var p = d[0];
   var f = d[1];
   var h = e.icon;
-  var m = void 0 === h ? s.c : h;
-  Object(o.useEffect)(function () {
-    var e = Object(a.a)(m.id);
+  var m = undefined === h ? s.c : h;
+  o.useEffect(function () {
+    var e = a.a(m.id);
     if (e) {
       l(e.path);
       return void f(e.viewBox);
     }
-    var t = (null === m || void 0 === m ? void 0 : m.cdnUrl) || (null === m || void 0 === m ? void 0 : m.source);
+    var t = (null === m || undefined === m ? undefined : m.cdnUrl) || (null === m || undefined === m ? undefined : m.source);
     if (t) {
       if (t.startsWith("http")) {
         t += "?_=".concat(Math.random());
@@ -45,13 +45,13 @@ _a = Object(o.memo)(function (e) {
         var t = new DOMParser().parseFromString(e, "image/svg+xml");
         var n = [];
         var r = t.querySelector("svg");
-        var o = (null === r || void 0 === r ? void 0 : r.getAttribute("viewBox")) || "0 0 1024 1024";
+        var o = (null === r || undefined === r ? undefined : r.getAttribute("viewBox")) || "0 0 1024 1024";
         t.querySelectorAll("path").forEach(function (e) {
           n.push(e.getAttribute("d") || "");
         });
         l(n);
         f(o);
-        Object(a.c)(m.id, n, o);
+        a.c(m.id, n, o);
       });
     }
   }, [m]);

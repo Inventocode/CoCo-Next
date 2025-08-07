@@ -6,29 +6,29 @@ var i = require("./226");
 var a = function () {
   function t() {}
   t.castAsNonUtf8Char = function (t, e) {
-    if (void 0 === e) {
+    if (undefined === e) {
       e = null;
     }
     var r = e ? e.getName() : this.ISO88591;
     return i.a.decode(new Uint8Array([t]), r);
   };
   t.guessEncoding = function (e, r) {
-    if (null !== r && void 0 !== r && void 0 !== r.get(n.a.CHARACTER_SET)) {
+    if (null !== r && undefined !== r && undefined !== r.get(n.a.CHARACTER_SET)) {
       return r.get(n.a.CHARACTER_SET).toString();
     }
-    for (var o = e.length, i = !0, a = !0, u = !0, s = 0, c = 0, f = 0, h = 0, l = 0, d = 0, p = 0, g = 0, y = 0, w = 0, v = 0, _ = e.length > 3 && 239 === e[0] && 187 === e[1] && 191 === e[2], m = 0; m < o && (i || a || u); m++) {
+    for (var o = e.length, i = true, a = true, u = true, s = 0, c = 0, f = 0, h = 0, l = 0, d = 0, p = 0, g = 0, y = 0, w = 0, v = 0, _ = e.length > 3 && 239 === e[0] && 187 === e[1] && 191 === e[2], m = 0; m < o && (i || a || u); m++) {
       var A = 255 & e[m];
       if (u) {
         if (s > 0) {
           if (0 === (128 & A)) {
-            u = !1;
+            u = false;
           } else {
             s--;
           }
         } else {
           if (0 !== (128 & A)) {
             if (0 === (64 & A)) {
-              u = !1;
+              u = false;
             } else {
               s++;
               if (0 === (32 & A)) {
@@ -42,7 +42,7 @@ var a = function () {
                   if (0 === (8 & A)) {
                     h++;
                   } else {
-                    u = !1;
+                    u = false;
                   }
                 }
               }
@@ -52,7 +52,7 @@ var a = function () {
       }
       if (i) {
         if (A > 127 && A < 160) {
-          i = !1;
+          i = false;
         } else {
           if (A > 159 && (A < 192 || 215 === A || 247 === A)) {
             v++;
@@ -62,13 +62,13 @@ var a = function () {
       if (a) {
         if (l > 0) {
           if (A < 64 || 127 === A || A > 252) {
-            a = !1;
+            a = false;
           } else {
             l--;
           }
         } else {
           if (128 === A || 160 === A || A > 239) {
-            a = !1;
+            a = false;
           } else {
             if (A > 160 && A < 224) {
               d++;
@@ -93,10 +93,10 @@ var a = function () {
       }
     }
     if (u && s > 0) {
-      u = !1;
+      u = false;
     }
     if (a && l > 0) {
-      a = !1;
+      a = false;
     }
     return u && (_ || c + f + h > 0) ? t.UTF8 : a && (t.ASSUME_SHIFT_JIS || y >= 3 || w >= 3) ? t.SHIFT_JIS : i && a ? 2 === y && 2 === d || 10 * v >= o ? t.SHIFT_JIS : t.ISO88591 : i ? t.ISO88591 : a ? t.SHIFT_JIS : u ? t.UTF8 : t.PLATFORM_DEFAULT_ENCODING;
   };
@@ -109,10 +109,10 @@ var a = function () {
       if ("%%" === t) {
         return "%";
       }
-      if (void 0 !== e[++n]) {
-        t = i ? parseInt(i.substr(1)) : void 0;
+      if (undefined !== e[++n]) {
+        t = i ? parseInt(i.substr(1)) : undefined;
         var s;
-        var c = a ? parseInt(a.substr(1)) : void 0;
+        var c = a ? parseInt(a.substr(1)) : undefined;
         switch (u) {
           case "s":
             s = e[n];
@@ -137,7 +137,7 @@ var a = function () {
         }
         s = "object" === typeof s ? JSON.stringify(s) : (+s).toString(c);
         for (var f = parseInt(o), h = o && o[0] + "" === "0" ? "0" : " "; s.length < f;) {
-          s = void 0 !== r ? s + h : h + s;
+          s = undefined !== r ? s + h : h + s;
         }
         return s;
       }
@@ -149,7 +149,7 @@ var a = function () {
     return i.a.encode(t, e);
   };
   t.getCharCode = function (t, e) {
-    if (void 0 === e) {
+    if (undefined === e) {
       e = 0;
     }
     return t.charCodeAt(e);
@@ -163,7 +163,7 @@ var a = function () {
   t.EUC_JP = "EUC_JP";
   t.UTF8 = o.a.UTF8.getName();
   t.PLATFORM_DEFAULT_ENCODING = t.UTF8;
-  t.ASSUME_SHIFT_JIS = !1;
+  t.ASSUME_SHIFT_JIS = false;
   return t;
 }();
 exports.a = a;

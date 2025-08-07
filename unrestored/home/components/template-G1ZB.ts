@@ -179,7 +179,7 @@ var HeaderView = function (_React$Component) {
   }, {
     key: "handleLoginOut",
     value: function handleLoginOut() {
-      return __awaiter(this, void 0, void 0, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.mark(function _callee() {
+      return __awaiter(this, undefined, undefined, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.mark(function _callee() {
         return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {

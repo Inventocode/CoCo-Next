@@ -8,14 +8,14 @@ var s = require("../1680/473");
 var c = require("../1557/821/index");
 r({
   target: "Array",
-  proto: !0
+  proto: true
 }, {
   flat: function () {
-    var e = arguments.length ? arguments[0] : void 0;
+    var e = arguments.length ? arguments[0] : undefined;
     var t = i(this);
     var n = a(t.length);
     var r = c(t, 0);
-    r.length = o(r, t, t, n, 0, void 0 === e ? 1 : s(e));
+    r.length = o(r, t, t, n, 0, undefined === e ? 1 : s(e));
     return r;
   }
 });

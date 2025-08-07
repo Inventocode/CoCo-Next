@@ -2,7 +2,7 @@
 
 export { P as a };
 export { W as b };
-var r = require("../1/index");
+import r = require("regenerator-runtime");
 var o = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -15,28 +15,28 @@ var o = function __importDefault(module) {
   });
   return defaultExport;
 }(r);
-var i = require("../7");
-var a = require("../27");
-var s = require("../40");
-var c = require("../17/index");
-var l = require("../26/208/index");
-var u = require("../4/index");
-var d = require("../301/index");
-var p = require("../26/426");
-var f = require("../15");
-var h = require("../9");
-var m = require("../38/139");
-var g = require("../47");
-var _ = require("../25/index");
-var v = require("../6");
-var b = require("../11");
-var y = require("./776/index");
+import i = require("../7");
+import a = require("../27");
+import s = require("../40");
+import c = require("../17/index");
+import l = require("../26/208/index");
+import u = require("../4/index");
+import d = require("../301/index");
+import p = require("../26/426");
+import f = require("../15");
+import h = require("../9");
+import m = require("../38/139");
+import g = require("../47");
+import _ = require("../25/index");
+import v = require("../6");
+import b = require("../11");
+import y = require("./776/index");
 var E = ["loopFinitely", "loopConditionally", "loopInfinitely", "loopStep", "loopStepClosedRange", "listForEach"];
 var O = ["breakLoop", "continueLoop"];
 var w = {
   create: function (e) {
     var t = [];
-    var n = !1;
+    var n = false;
     var r = function () {
       return t.length > 0 ? t[t.length - 1] : null;
     };
@@ -44,9 +44,9 @@ var w = {
       onCodePathStart: function () {
         var e;
         t.push({
-          inLoop: (null === (e = r()) || void 0 === e ? void 0 : e.inLoop) || n
+          inLoop: (null === (e = r()) || undefined === e ? undefined : e.inLoop) || n
         });
-        n = !1;
+        n = false;
       },
       onCodePathEnd: function () {
         t.pop();
@@ -54,21 +54,21 @@ var w = {
       CallExpression: function (t) {
         if (function (e) {
           if ("CallExpression" !== e.type) {
-            return !1;
+            return false;
           }
           var t = e.callee;
           return "MemberExpression" === t.type && "Identifier" === t.object.type && "Identifier" === t.property.type && !t.computed && 0 !== e.arguments.length && ("FunctionExpression" === e.arguments[0].type || "ArrowFunctionExpression" === e.arguments[0].type) && "asyncScheduler" === t.object.name && E.includes(t.property.name);
         }(t)) {
-          n = !0;
+          n = true;
         } else if (function (e) {
           if ("CallExpression" !== e.type) {
-            return !1;
+            return false;
           }
           var t = e.callee;
           return "MemberExpression" === t.type && "Identifier" === t.object.type && "Identifier" === t.property.type && !t.computed && "asyncScheduler" === t.object.name && O.includes(t.property.name);
         }(t)) {
           var o;
-          if (!(null === (o = r()) || void 0 === o ? void 0 : o.inLoop)) {
+          if (!(null === (o = r()) || undefined === o ? undefined : o.inLoop)) {
             e.report({
               message: "Loop control call is not in loop context",
               node: t
@@ -101,7 +101,7 @@ var T = {
             }
             return t;
           }(t.value).widgetId;
-          if (!(void 0 === n || o.has(n))) {
+          if (!(undefined === n || o.has(n))) {
             e.report({
               message: "Widget ".concat(n, " not exists"),
               loc: t.loc
@@ -115,17 +115,17 @@ var T = {
 var S = new y.Linter();
 S.defineRule("no-loop-control-outside-loop", w);
 S.defineRule("widgets-must-exists", T);
-var I = Object(b.a)({
+var I = b.a({
   "consistent-return": "warn"
 }, "no-loop-control-outside-loop", "error");
 function A(e, t, n, r) {
   var o = {
-    Coco: !0,
-    asyncScheduler: !0
+    Coco: true,
+    asyncScheduler: true
   };
-  if (!(null === r || void 0 === r)) {
+  if (!(null === r || undefined === r)) {
     r.forEach(function (e) {
-      o[e] = !0;
+      o[e] = true;
     });
   }
   return S.verify(e, {
@@ -135,17 +135,17 @@ function A(e, t, n, r) {
       sourceType: "module",
       ecmaFeatures: {}
     },
-    rules: Object(v.a)(Object(v.a)({}, I), {}, Object(b.a)({}, "widgets-must-exists", ["error", {
+    rules: v.a(v.a({}, I), {}, b.a({}, "widgets-must-exists", ["error", {
       screen: t
     }, n])),
     env: {
-      es2017: !0
+      es2017: true
     }
   });
 }
-var j = require("../323");
-var N = require("../55");
-var R = require("../28/index");
+import j = require("../323");
+import N = require("../55");
+import R = require("../28/index");
 var k = ["Coco", "AsyncScheduler", "asyncScheduler"];
 function x(e) {
   var t = /Expected to return a value at the end of async function '(.+)'./.exec(e);
@@ -166,7 +166,7 @@ function L(e, t, n, r, o, i) {
   var a = e + "\n\n" + t;
   var s = a.split(/\n{2,}/);
   var c = o.id;
-  var l = [].concat(k, Object(_.a)(n));
+  var l = [].concat(k, _.a(n));
   var u = function (e) {
     var t = D.exec(e);
     if (t) {
@@ -177,26 +177,26 @@ function L(e, t, n, r, o, i) {
     throw new m.b(m.a.RETURN_NOT_IN_FUNCTION, c, u, "returnNotInFunction");
   }
   var d;
-  var p = Object(g.a)(s);
+  var p = g.a(s);
   try {
     for (p.s(); !(d = p.n()).done;) {
       var f = d.value;
       if (f.trim().length) {
         var h;
         var v = A(f, o, i, l);
-        var b = Object(g.a)(v);
+        var b = g.a(v);
         try {
           for (b.s(); !(h = b.n()).done;) {
             var y = h.value;
-            var E = Object(j.a)(f, y);
+            var E = j.a(f, y);
             if ("no-undef" === y.ruleId) {
               throw new m.b(m.a.NO_UNDEF, c, E.blockId, "noUndef", E);
             }
             if ("consistent-return" === y.ruleId) {
               var O = x(y.message);
-              var w = O ? r.get(O) : void 0;
+              var w = O ? r.get(O) : undefined;
               if (w) {
-                w.consistentReturn = !1;
+                w.consistentReturn = false;
               }
             } else {
               if ("no-loop-control-outside-loop" === y.ruleId) {
@@ -205,7 +205,7 @@ function L(e, t, n, r, o, i) {
               if ("widgets-must-exists" === y.ruleId) {
                 N.b.push({
                   type: "warning",
-                  message: Object(R.o)("widgetNotExists"),
+                  message: R.o("widgetNotExists"),
                   screenId: c,
                   blockId: E.blockId
                 });
@@ -243,19 +243,19 @@ function L(e, t, n, r, o, i) {
   }
 }
 var P;
-var B = require("./725");
+import B = require("./725");
 var F = function () {
   function e(t, n, r, o, i, s) {
-    Object(a.a)(this, e);
+    a.a(this, e);
     this._undoStack = [];
     this._redoStack = [];
-    this._screenId = void 0;
-    this._workspaceJson = void 0;
-    this._workspaceOffset = void 0;
-    this._procedureManager = void 0;
+    this._screenId = undefined;
+    this._workspaceJson = undefined;
+    this._workspaceOffset = undefined;
+    this._procedureManager = undefined;
     this._screenId = t;
     this._procedureManager = new l.ProcedureManager(o, i, s);
-    this._workspaceJson = n ? Object(B.load_from_json)(this._procedureManager, n, !1) : {
+    this._workspaceJson = n ? B.load_from_json(this._procedureManager, n, false) : {
       blocks: {},
       connections: {},
       comments: {}
@@ -265,7 +265,7 @@ var F = function () {
       y: 0
     };
   }
-  Object(s.a)(e, [{
+  s.a(e, [{
     key: "getScreenId",
     value: function () {
       return this._screenId;
@@ -355,18 +355,18 @@ var U = {
 var W = function () {
   function e() {
     var t = this;
-    Object(a.a)(this, e);
+    a.a(this, e);
     this._currentScreenId = "__NOT_EXIST__";
     this._currentProjectId = "__NOT_EXIST__";
-    this.debuggingBlock = void 0;
+    this.debuggingBlock = undefined;
     this.workspaceDataMap = new Map();
-    this.jsGenerator = Object(d.c)();
-    this.eventBus = void 0;
+    this.jsGenerator = d.c();
+    this.eventBus = undefined;
     this.getCurrentScreenId = function () {
       return t._currentScreenId;
     };
     this._moveBlockToViewArea = function () {
-      var e = Object(i.a)(o.a.mark(function e(n, r) {
+      var e = i.a(o.a.mark(function e(n, r) {
         var i;
         var a;
         var s;
@@ -441,7 +441,7 @@ var W = function () {
                   R.set(C + k * j, T + k * N);
                 }
                 e.next = 30;
-                return Object(f.lb)(5);
+                return f.lb(5);
               case 30:
                 e.next = 25;
                 break;
@@ -457,7 +457,7 @@ var W = function () {
       };
     }();
     this.playWarningAnimation = function () {
-      var e = Object(i.a)(o.a.mark(function e(n) {
+      var e = i.a(o.a.mark(function e(n) {
         var r;
         var i;
         var a;
@@ -467,7 +467,7 @@ var W = function () {
           for (;;) {
             switch (e.prev = e.next) {
               case 0:
-                t.stopWarningAnimation(!1);
+                t.stopWarningAnimation(false);
                 e.next = 3;
                 return t._moveBlockToViewArea(n, {
                   type: "percent",
@@ -506,11 +506,11 @@ var W = function () {
                 s = r.get_svg_root();
                 i.setAttribute("filter", "url(#".concat(p.b.blocklyFocusedShadowFilterId, ")"));
                 i.setAttribute("fill-backups", a);
-                if (Object(f.Q)()) {
+                if (f.Q()) {
                   i.removeAttribute("fill");
                 }
                 i.setAttribute("id", "@_BLOCK_SVG_PATH_ID_@");
-                if (c = G(Object(f.ib)(a, 0), Object(f.ib)(a, .2), Object(f.ib)(a, 0))) {
+                if (c = G(f.ib(a, 0), f.ib(a, .2), f.ib(a, 0))) {
                   s.appendChild(c);
                 }
               case 21:
@@ -525,7 +525,7 @@ var W = function () {
       };
     }();
     this.stopWarningAnimation = function () {
-      var e = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
+      var e = !(arguments.length > 0 && undefined !== arguments[0]) || arguments[0];
       var n = document.getElementById("@_BLOCK_SVG_PATH_ID_@");
       var r = document.getElementById("@_ANIMATION_SVG_ID_@");
       if (n) {
@@ -544,7 +544,7 @@ var W = function () {
     };
     this.eventBus = U;
   }
-  Object(s.a)(e, [{
+  s.a(e, [{
     key: "getWorkspaceDataByScreenId",
     value: function (e) {
       return this.workspaceDataMap.get(e);
@@ -585,7 +585,7 @@ var W = function () {
   }, {
     key: "selectWorkspaceByScreenId",
     value: function (e) {
-      var t = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+      var t = !(arguments.length > 1 && undefined !== arguments[1]) || arguments[1];
       var n = this.workspaceDataMap.get(e);
       if (n) {
         if (t) {
@@ -731,7 +731,7 @@ var W = function () {
     key: "generateAllWorkspaceCodes",
     value: function (e) {
       var t = this;
-      var n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+      var n = arguments.length > 1 && undefined !== arguments[1] && arguments[1];
       var r = [];
       var o = this.getCurrentProjectId();
       this.workspaceDataMap.forEach(function (i, a) {
@@ -784,7 +784,7 @@ var W = function () {
       if (!o) {
         return "";
       }
-      var i = Object(h.eb)();
+      var i = h.eb();
       var a = o.getProcedureManager();
       if (n) {
         this.checkDisabledBlocks(o.getWorkspaceJson(), r);
@@ -795,18 +795,18 @@ var W = function () {
       a.get_all_procedure_names().forEach(function (e) {
         var t = a.get_procedure_by_name(e);
         if (t) {
-          var n = Object(u.f)(e, r);
+          var n = u.f(e, r);
           c.push(n);
           d.set(n, {
             blockId: t.def_id,
             hasReturn: !!t.return_count,
-            consistentReturn: !0
+            consistentReturn: true
           });
         }
       });
       this.jsGenerator.setDynamicValue("__CURRENT_SCREEN_ID__", r);
       this.jsGenerator.setDynamicValue("__CURRENT_PROJECT_ID__", e);
-      var p = Object(h.zb)();
+      var p = h.zb();
       var f = this.jsGenerator.workspaceToCode(s, function (e) {
         return p.has(e);
       });
@@ -821,7 +821,7 @@ var W = function () {
     value: function (e, t) {
       if (e !== t) {
         var n = this.workspaceDataMap.get(t);
-        return 0 === Object.keys((null === n || void 0 === n ? void 0 : n.getWorkspaceJson().blocks) || {}).length;
+        return 0 === Object.keys((null === n || undefined === n ? undefined : n.getWorkspaceJson().blocks) || {}).length;
       }
       return 0 === c.Blink.mainWorkspace.get_all_blocks().length;
     }
@@ -854,12 +854,12 @@ var W = function () {
   }, {
     key: "disabledShortcut",
     value: function () {
-      c.Blink.mainWorkspace.set_hotkey_enable(!1);
+      c.Blink.mainWorkspace.set_hotkey_enable(false);
     }
   }, {
     key: "ableShortcut",
     value: function () {
-      c.Blink.mainWorkspace.set_hotkey_enable(!0);
+      c.Blink.mainWorkspace.set_hotkey_enable(true);
     }
   }, {
     key: "resizeWorkspace",
@@ -871,7 +871,7 @@ var W = function () {
     value: function () {
       var e;
       var t;
-      if (!(null === (e = c.Blink.runtime_data) || void 0 === e || null === (t = e.selected) || void 0 === t)) {
+      if (!(null === (e = c.Blink.runtime_data) || undefined === e || null === (t = e.selected) || undefined === t)) {
         t.unselect();
       }
     }
@@ -939,7 +939,7 @@ var W = function () {
         for (var a in i) {
           var s = i[a].fields;
           for (var c in s) if (c === e && s[c] === t) {
-            n[o] = !0;
+            n[o] = true;
             break;
           }
         }
@@ -952,7 +952,7 @@ var W = function () {
       c.Blink.mainWorkspace.get_all_blocks().forEach(function (o) {
         var i;
         if (o.type === e && o.get_field_value(t) === n) {
-          if (!(null === (i = o.get_field(t)) || void 0 === i)) {
+          if (!(null === (i = o.get_field(t)) || undefined === i)) {
             i.set_value(r);
           }
         }
@@ -964,8 +964,8 @@ var W = function () {
       c.Blink.mainWorkspace.get_all_blocks().forEach(function (o) {
         var i;
         var a;
-        if (o.type === e && (null === (i = o.get_field(t)) || void 0 === i ? void 0 : i.get_text()) === n) {
-          if (!(null === (a = o.get_field(t)) || void 0 === a)) {
+        if (o.type === e && (null === (i = o.get_field(t)) || undefined === i ? undefined : i.get_text()) === n) {
+          if (!(null === (a = o.get_field(t)) || undefined === a)) {
             a.set_text(r);
           }
         }
@@ -981,7 +981,7 @@ var W = function () {
       c.Blink.json.json_to_workspace(t, c.Blink.mainWorkspace);
       c.Blink.mainWorkspace.get_all_blocks().forEach(function (e) {
         if (!("param" !== e.element_type || e.deletable_)) {
-          e.set_deletable(!0);
+          e.set_deletable(true);
         }
       });
       this._setWorkspaceOffset(n || {
@@ -1014,7 +1014,7 @@ var W = function () {
   }, {
     key: "hasBlockByList",
     value: function (e) {
-      var t = !1;
+      var t = false;
       this.workspaceDataMap.forEach(function (n) {
         if (!t) {
           var r = n.getWorkspaceJson().blocks;
@@ -1028,13 +1028,13 @@ var W = function () {
   }, {
     key: "hasCloudBlock",
     value: function () {
-      var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "cloudRoom";
+      var e = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : "cloudRoom";
       var t = ["room_create_room", "room_create_nickname", "room_get_room_list", "room_enter_room", "room_send_message"];
       var n = ["cloud_document_set_field_item", "cloud_document_remove_field_item", "cloud_document_clear_all_field_items", "cloud_document_get_field_item", "cloud_document_get_field_key_count", "cloud_document_get_all_field_keys", "cloud_document_check_if_field_key_exists"];
       var r = ["cloudDB_insert", "cloudDB_delete", "cloudDB_update", "cloudDB_query_by_column", "cloudDB_query_by_count", "cloudDB_error"];
       var o = ["cloud_space_dict_on_error", "cloud_space_dict_set_key_value", "cloud_space_dict_delete_key", "cloud_space_dict_get_key_value", "cloud_space_dict_get_key_count", "cloud_space_dict_get_all_keys", "cloud_space_dict_clear_data"];
       var i = ["cloudTable_insert", "cloudTable_delete", "cloudTable_update", "cloudTable_query_by_column", "cloudTable_query_by_count", "cloudTable_clear_all"];
-      var a = !1;
+      var a = false;
       if ("cloudRoom" === e) {
         a = this.hasBlockByList(t);
       }

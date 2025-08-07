@@ -36,7 +36,7 @@ module.exports = function () {
         n = o;
         i.forEach(function (n) {
           t.push(n);
-          e.all[n] = !0;
+          e.all[n] = true;
         });
       }
       t.push(n);

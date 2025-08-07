@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.DeleteEvent = void 0;
+exports.DeleteEvent = undefined;
 var r = require("tslib");
 var i = require("inversify");
 var o = require("../../../125/195/index");
@@ -14,14 +14,14 @@ var c = function (e) {
     var n = e.call(this, t.block) || this;
     n.type = o.BlockEventType.DELETE;
     n.ids = [];
-    n.is_shadow = !1;
+    n.is_shadow = false;
     var r = t.block;
     if (s.base.is_block_svg(r) && r.get_parent()) {
       console.error("Connected blocks cannot be deleted.");
       return n;
     }
     var i = r.get_workspace();
-    if (void 0 != i && i.rendered) {
+    if (undefined != i && i.rendered) {
       n.old_xml = n.xml.workspace_element_to_dom_with_xy(r);
     } else {
       n.old_xml = n.xml.workspace_element_to_dom(r);
@@ -40,7 +40,7 @@ var c = function (e) {
       for (var n = 0; n < this.ids.length; n++) {
         var r = this.ids[n];
         if (o = t.get_element_from_db(r)) {
-          o.dispose(!1, !1);
+          o.dispose(false, false);
         } else {
           if (!(r !== this._block_id || this.is_shadow)) {
             console.warn("Can't delete non-existent block: " + r);
@@ -51,8 +51,8 @@ var c = function (e) {
       var i = this.old_xml.getAttribute("id");
       if (i) {
         var o;
-        if (void 0 != (o = t.get_element_from_db(i))) {
-          o.dispose(!1, !1);
+        if (undefined != (o = t.get_element_from_db(i))) {
+          o.dispose(false, false);
         }
         var a = s.dom.create_dom("xml");
         a.appendChild(this.old_xml);
@@ -67,9 +67,9 @@ var c = function (e) {
       group: this._group
     };
   };
-  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.xml)], t.prototype, "xml", void 0);
-  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.events)], t.prototype, "events", void 0);
-  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.Blink)], t.prototype, "Blink", void 0);
+  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.xml)], t.prototype, "xml", undefined);
+  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.events)], t.prototype, "events", undefined);
+  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.Blink)], t.prototype, "Blink", undefined);
   return t = (0, r.__decorate)([(0, i.injectable)()], t);
 }(require("./643").BlockEvent);
 exports.DeleteEvent = c;

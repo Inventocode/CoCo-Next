@@ -40,7 +40,7 @@ var h = function (t) {
     return {
       next: function () {
         if (t && r >= t.length) {
-          t = void 0;
+          t = undefined;
         }
         return {
           value: t && t[r++],
@@ -74,13 +74,13 @@ var p = function (t) {
       g = e.DEFAULT_ALLOWED_LENGTHS;
     }
     var v = b.length;
-    var _ = !1;
+    var _ = false;
     var y = 0;
     try {
       for (var w = h(g), E = w.next(); !E.done; E = w.next()) {
         var O = E.value;
         if (v === O) {
-          _ = !0;
+          _ = true;
           break;
         }
         if (O > y) {
@@ -103,7 +103,7 @@ var p = function (t) {
       }
     }
     if (!_ && v > y) {
-      _ = !0;
+      _ = true;
     }
     if (!_) {
       throw new o.a();
@@ -160,7 +160,7 @@ var p = function (t) {
     t.reverse();
     try {
       var n = e.skipWhiteSpace(t);
-      var r = void 0;
+      var r = undefined;
       try {
         r = e.findGuardPattern(t, n, e.END_PATTERN_REVERSED[0]);
       } catch (o) {
@@ -181,7 +181,7 @@ var p = function (t) {
     var i = r.length;
     var o = new Int32Array(i);
     var s = t.getSize();
-    var u = !1;
+    var u = false;
     var c = 0;
     var f = n;
     o.fill(0);

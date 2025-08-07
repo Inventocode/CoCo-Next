@@ -211,7 +211,7 @@ exports.safeAttrValue = function (e, t, n, r) {
     if (v.test(n) && (A.lastIndex = 0, A.test(n))) {
       return "";
     }
-    if (!1 !== r) {
+    if (false !== r) {
       n = (r = r || s).process(n);
     }
   }
@@ -234,7 +234,7 @@ exports.StripTagBody = function (e, t) {
   }
   var n = !Array.isArray(e);
   var r = [];
-  var i = !1;
+  var i = false;
   return {
     onIgnoreTag: function (a, s, c) {
       if (function (t) {
@@ -243,8 +243,8 @@ exports.StripTagBody = function (e, t) {
         if (c.isClosing) {
           var u = "[/removed]";
           var l = c.position + u.length;
-          r.push([!1 !== i ? i : c.position, l]);
-          i = !1;
+          r.push([false !== i ? i : c.position, l]);
+          i = false;
           return u;
         }
         if (!i) {

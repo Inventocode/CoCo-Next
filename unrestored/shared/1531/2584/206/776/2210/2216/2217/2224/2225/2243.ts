@@ -23,7 +23,7 @@ module.exports = function (e, t, n) {
         for (var A, g = -1, v = _.length - 1; g < v;) {
           A = _[g += 1];
           var m = e.schema.properties[A];
-          if (!(m && (e.opts.strictKeywords ? "object" == typeof m && Object.keys(m).length > 0 || !1 === m : e.util.schemaHasRules(m, e.RULES.all)))) {
+          if (!(m && (e.opts.strictKeywords ? "object" == typeof m && Object.keys(m).length > 0 || false === m : e.util.schemaHasRules(m, e.RULES.all)))) {
             p[p.length] = A;
           }
         }
@@ -61,9 +61,9 @@ module.exports = function (e, t, n) {
         r += "  if (!" + f + ") {   ";
         (S = S || []).push(r);
         r = "";
-        if (!1 !== e.createErrors) {
+        if (false !== e.createErrors) {
           r += " { keyword: 'required' , dataPath: (dataPath || '') + " + e.errorPath + " , schemaPath: " + e.util.toQuotedString(c) + " , params: { missingProperty: '" + E + "' } ";
-          if (!1 !== e.opts.messages) {
+          if (false !== e.opts.messages) {
             r += " , message: '";
             if (e.opts._errorDataPathProperty) {
               r += "is a required property";
@@ -111,13 +111,13 @@ module.exports = function (e, t, n) {
         var S;
         E = "' + " + (T = "missing" + i) + " + '";
         if (e.opts._errorDataPathProperty) {
-          e.errorPath = e.opts.jsonPointers ? e.util.getPathExpr(y, T, !0) : y + " + " + T;
+          e.errorPath = e.opts.jsonPointers ? e.util.getPathExpr(y, T, true) : y + " + " + T;
         }
         (S = S || []).push(r);
         r = "";
-        if (!1 !== e.createErrors) {
+        if (false !== e.createErrors) {
           r += " { keyword: 'required' , dataPath: (dataPath || '') + " + e.errorPath + " , schemaPath: " + e.util.toQuotedString(c) + " , params: { missingProperty: '" + E + "' } ";
-          if (!1 !== e.opts.messages) {
+          if (false !== e.opts.messages) {
             r += " , message: '";
             if (e.opts._errorDataPathProperty) {
               r += "is a required property";
@@ -157,9 +157,9 @@ module.exports = function (e, t, n) {
       }
       if (d) {
         r += " if (" + h + " && !Array.isArray(" + h + ")) {  var err =   ";
-        if (!1 !== e.createErrors) {
+        if (false !== e.createErrors) {
           r += " { keyword: 'required' , dataPath: (dataPath || '') + " + e.errorPath + " , schemaPath: " + e.util.toQuotedString(c) + " , params: { missingProperty: '" + E + "' } ";
-          if (!1 !== e.opts.messages) {
+          if (false !== e.opts.messages) {
             r += " , message: '";
             if (e.opts._errorDataPathProperty) {
               r += "is a required property";
@@ -182,9 +182,9 @@ module.exports = function (e, t, n) {
         r += " || ! Object.prototype.hasOwnProperty.call(" + l + ", " + h + "[" + O + "]) ";
       }
       r += ") {  var err =   ";
-      if (!1 !== e.createErrors) {
+      if (false !== e.createErrors) {
         r += " { keyword: 'required' , dataPath: (dataPath || '') + " + e.errorPath + " , schemaPath: " + e.util.toQuotedString(c) + " , params: { missingProperty: '" + E + "' } ";
-        if (!1 !== e.opts.messages) {
+        if (false !== e.opts.messages) {
           r += " , message: '";
           if (e.opts._errorDataPathProperty) {
             r += "is a required property";
@@ -220,9 +220,9 @@ module.exports = function (e, t, n) {
             r += " || ! Object.prototype.hasOwnProperty.call(" + l + ", '" + e.util.escapeQuotes(D) + "') ";
           }
           r += ") {  var err =   ";
-          if (!1 !== e.createErrors) {
+          if (false !== e.createErrors) {
             r += " { keyword: 'required' , dataPath: (dataPath || '') + " + e.errorPath + " , schemaPath: " + e.util.toQuotedString(c) + " , params: { missingProperty: '" + E + "' } ";
-            if (!1 !== e.opts.messages) {
+            if (false !== e.opts.messages) {
               r += " , message: '";
               if (e.opts._errorDataPathProperty) {
                 r += "is a required property";

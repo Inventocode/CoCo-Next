@@ -65,7 +65,7 @@ var r = {
 };
 var i = require("./484/692");
 var o = {
-  date: Object(i.a)({
+  date: i.a({
     formats: {
       full: "y'年'M'月'd'日' EEEE",
       long: "y'年'M'月'd'日'",
@@ -74,7 +74,7 @@ var o = {
     },
     defaultWidth: "full"
   }),
-  time: Object(i.a)({
+  time: i.a({
     formats: {
       full: "zzzz a h:mm:ss",
       long: "z a h:mm:ss",
@@ -83,7 +83,7 @@ var o = {
     },
     defaultWidth: "full"
   }),
-  dateTime: Object(i.a)({
+  dateTime: i.a({
     formats: {
       full: "{{date}} {{time}}",
       long: "{{date}} {{time}}",
@@ -97,9 +97,9 @@ var a = require("./484/432");
 var s = require("./484/106");
 function c(e, t, n, r) {
   return function (e, t, n) {
-    Object(s.a)(2, arguments);
-    var r = Object(a.a)(e, n);
-    var i = Object(a.a)(t, n);
+    s.a(2, arguments);
+    var r = a.a(e, n);
+    var i = a.a(t, n);
     return r.getTime() === i.getTime();
   }(e, t, n) ? r : e.getTime() > t.getTime() ? "'下个'" + r : "'上个'" + r;
 }
@@ -128,7 +128,7 @@ var f = {
         return "第 " + n.toString();
     }
   },
-  era: Object(l.a)({
+  era: l.a({
     values: {
       narrow: ["前", "公元"],
       abbreviated: ["前", "公元"],
@@ -136,7 +136,7 @@ var f = {
     },
     defaultWidth: "wide"
   }),
-  quarter: Object(l.a)({
+  quarter: l.a({
     values: {
       narrow: ["1", "2", "3", "4"],
       abbreviated: ["第一刻", "第二刻", "第三刻", "第四刻"],
@@ -147,7 +147,7 @@ var f = {
       return Number(e) - 1;
     }
   }),
-  month: Object(l.a)({
+  month: l.a({
     values: {
       narrow: ["一", "二", "三", "四", "五", "六", "七", "八", "九", "十", "十一", "十二"],
       abbreviated: ["1月", "2月", "3月", "4月", "5月", "6月", "7月", "8月", "9月", "10月", "11月", "12月"],
@@ -155,7 +155,7 @@ var f = {
     },
     defaultWidth: "wide"
   }),
-  day: Object(l.a)({
+  day: l.a({
     values: {
       narrow: ["日", "一", "二", "三", "四", "五", "六"],
       short: ["日", "一", "二", "三", "四", "五", "六"],
@@ -164,7 +164,7 @@ var f = {
     },
     defaultWidth: "wide"
   }),
-  dayPeriod: Object(l.a)({
+  dayPeriod: l.a({
     values: {
       narrow: {
         am: "上",
@@ -250,14 +250,14 @@ var p = {
   },
   localize: f,
   match: {
-    ordinalNumber: Object(d.a)({
+    ordinalNumber: d.a({
       matchPattern: /^(\u7b2c\s*)?\d+(\u65e5|\u65f6|\u5206|\u79d2)?/i,
       parsePattern: /\d+/i,
       valueCallback: function (e) {
         return parseInt(e, 10);
       }
     }),
-    era: Object(h.a)({
+    era: h.a({
       matchPatterns: {
         narrow: /^(\u524d)/i,
         abbreviated: /^(\u524d)/i,
@@ -269,7 +269,7 @@ var p = {
       },
       defaultParseWidth: "any"
     }),
-    quarter: Object(h.a)({
+    quarter: h.a({
       matchPatterns: {
         narrow: /^[1234]/i,
         abbreviated: /^\u7b2c[\u4e00\u4e8c\u4e09\u56db]\u523b/i,
@@ -284,7 +284,7 @@ var p = {
         return e + 1;
       }
     }),
-    month: Object(h.a)({
+    month: h.a({
       matchPatterns: {
         narrow: /^(\u4e00|\u4e8c|\u4e09|\u56db|\u4e94|\u516d|\u4e03|\u516b|\u4e5d|\u5341[\u4e8c\u4e00])/i,
         abbreviated: /^(\u4e00|\u4e8c|\u4e09|\u56db|\u4e94|\u516d|\u4e03|\u516b|\u4e5d|\u5341[\u4e8c\u4e00]|\d|1[12])\u6708/i,
@@ -297,7 +297,7 @@ var p = {
       },
       defaultParseWidth: "any"
     }),
-    day: Object(h.a)({
+    day: h.a({
       matchPatterns: {
         narrow: /^[\u4e00\u4e8c\u4e09\u56db\u4e94\u516d\u65e5]/i,
         short: /^[\u4e00\u4e8c\u4e09\u56db\u4e94\u516d\u65e5]/i,
@@ -310,7 +310,7 @@ var p = {
       },
       defaultParseWidth: "any"
     }),
-    dayPeriod: Object(h.a)({
+    dayPeriod: h.a({
       matchPatterns: {
         any: /^(\u4e0a\u5348?|\u4e0b\u5348?|\u5348\u591c|[\u4e2d\u6b63]\u5348|\u65e9\u4e0a?|\u4e0b\u5348|\u665a\u4e0a?|\u51cc\u6668|)/i
       },

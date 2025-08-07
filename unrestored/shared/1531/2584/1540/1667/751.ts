@@ -10,7 +10,7 @@ module.exports = function (e) {
   var n = o.f;
   if (a && t && !t[s]) {
     n(t, s, {
-      configurable: !0,
+      configurable: true,
       get: function () {
         return this;
       }

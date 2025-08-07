@@ -26,35 +26,35 @@ var _ = function () {
     this.variables = [];
     this.references = [];
     this.variableScope = "global" === this.type || "function" === this.type || "module" === this.type ? this : r.variableScope;
-    this.functionExpressionScope = !1;
-    this.directCallToEvalScope = !1;
-    this.thisFound = !1;
+    this.functionExpressionScope = false;
+    this.directCallToEvalScope = false;
+    this.thisFound = false;
     this.__left = [];
     this.upper = r;
     this.isStrict = function (e, t, n, r) {
       var i;
       if (e.upper && e.upper.isStrict) {
-        return !0;
+        return true;
       }
       if (n) {
-        return !0;
+        return true;
       }
       if ("class" === e.type || "module" === e.type) {
-        return !0;
+        return true;
       }
       if ("block" === e.type || "switch" === e.type) {
-        return !1;
+        return false;
       }
       if ("function" === e.type) {
         if (t.type === u.ArrowFunctionExpression && t.body.type !== u.BlockStatement) {
-          return !1;
+          return false;
         }
         if (!(i = t.type === u.Program ? t : t.body)) {
-          return !1;
+          return false;
         }
       } else {
         if ("global" !== e.type) {
-          return !1;
+          return false;
         }
         i = t;
       }
@@ -65,7 +65,7 @@ var _ = function () {
             break;
           }
           if ("\"use strict\"" === s.raw || "'use strict'" === s.raw) {
-            return !0;
+            return true;
           }
         }
       } else {
@@ -78,16 +78,16 @@ var _ = function () {
           if (d.type !== u.Literal || "string" !== typeof d.value) {
             break;
           }
-          if (null !== d.raw && void 0 !== d.raw) {
+          if (null !== d.raw && undefined !== d.raw) {
             if ("\"use strict\"" === d.raw || "'use strict'" === d.raw) {
-              return !0;
+              return true;
             }
           } else if ("use strict" === d.value) {
-            return !0;
+            return true;
           }
         }
       }
-      return !1;
+      return false;
     }(this, i, o, t.__useDirective());
     this.childScopes = [];
     if (this.upper) {
@@ -114,7 +114,7 @@ var _ = function () {
     value: function (e) {
       var t = e.identifier.name;
       if (!this.set.has(t)) {
-        return !1;
+        return false;
       }
       var n = this.set.get(t).defs;
       return n.length > 0 && n.every(p);
@@ -159,17 +159,17 @@ var _ = function () {
   }, {
     key: "__isValidResolution",
     value: function (e, t) {
-      return !0;
+      return true;
     }
   }, {
     key: "__resolve",
     value: function (e) {
       var t = e.identifier.name;
       if (!this.set.has(t)) {
-        return !1;
+        return false;
       }
       var n = this.set.get(t);
-      return !!this.__isValidResolution(e, n) && (n.references.push(e), n.stack = n.stack && e.from.variableScope === this.variableScope, e.tainted && (n.tainted = !0, this.taints.set(n.name, !0)), e.resolved = n, !0);
+      return !!this.__isValidResolution(e, n) && (n.references.push(e), n.stack = n.stack && e.from.variableScope === this.variableScope, e.tainted && (n.tainted = true, this.taints.set(n.name, true)), e.resolved = n, true);
     }
   }, {
     key: "__delegateToUpperScope",
@@ -182,9 +182,9 @@ var _ = function () {
   }, {
     key: "__addDeclaredVariablesOfNode",
     value: function (e, t) {
-      if (null !== t && void 0 !== t) {
+      if (null !== t && undefined !== t) {
         var n = this.__declaredVariables.get(t);
-        if (!(null !== n && void 0 !== n)) {
+        if (!(null !== n && undefined !== n)) {
           n = [];
           this.__declaredVariables.set(t, n);
         }
@@ -231,16 +231,16 @@ var _ = function () {
     key: "__detectEval",
     value: function () {
       var e = this;
-      this.directCallToEvalScope = !0;
+      this.directCallToEvalScope = true;
       do {
-        e.dynamic = !0;
+        e.dynamic = true;
         e = e.upper;
       } while (e);
     }
   }, {
     key: "__detectThis",
     value: function () {
-      this.thisFound = !0;
+      this.thisFound = true;
     }
   }, {
     key: "__isClosed",
@@ -268,25 +268,25 @@ var _ = function () {
   }, {
     key: "isArgumentsMaterialized",
     value: function () {
-      return !0;
+      return true;
     }
   }, {
     key: "isThisMaterialized",
     value: function () {
-      return !0;
+      return true;
     }
   }, {
     key: "isUsedName",
     value: function (e) {
       if (this.set.has(e)) {
-        return !0;
+        return true;
       }
       for (var t = 0, n = this.through.length; t < n; ++t) {
         if (this.through[t].identifier.name === e) {
-          return !0;
+          return true;
         }
       }
-      return !1;
+      return false;
     }
   }]);
   return e;
@@ -297,7 +297,7 @@ var A = function (e) {
   function n(e, r) {
     var i;
     s(this, n);
-    (i = t.call(this, e, "global", null, r, !1)).implicit = {
+    (i = t.call(this, e, "global", null, r, false)).implicit = {
       set: new Map(),
       variables: [],
       left: []
@@ -335,7 +335,7 @@ var g = function (e) {
   var t = a(n);
   function n(e, r, i) {
     s(this, n);
-    return t.call(this, e, "module", r, i, !1);
+    return t.call(this, e, "module", r, i, false);
   }
   return n;
 }(_);
@@ -345,8 +345,8 @@ var v = function (e) {
   function n(e, r, i) {
     var o;
     s(this, n);
-    (o = t.call(this, e, "function-expression-name", r, i, !1)).__define(i.id, new d(f.FunctionName, i.id, i, null, null, null));
-    o.functionExpressionScope = !0;
+    (o = t.call(this, e, "function-expression-name", r, i, false)).__define(i.id, new d(f.FunctionName, i.id, i, null, null, null));
+    o.functionExpressionScope = true;
     return o;
   }
   return n;
@@ -356,7 +356,7 @@ var m = function (e) {
   var t = a(n);
   function n(e, r, i) {
     s(this, n);
-    return t.call(this, e, "catch", r, i, !1);
+    return t.call(this, e, "catch", r, i, false);
   }
   return n;
 }(_);
@@ -365,7 +365,7 @@ var y = function (e) {
   var t = a(n);
   function n(e, r, i) {
     s(this, n);
-    return t.call(this, e, "with", r, i, !1);
+    return t.call(this, e, "with", r, i, false);
   }
   c(n, [{
     key: "__close",
@@ -375,7 +375,7 @@ var y = function (e) {
       }
       for (var t = 0, o = this.__left.length; t < o; ++t) {
         var a = this.__left[t];
-        a.tainted = !0;
+        a.tainted = true;
         this.__delegateToUpperScope(a);
       }
       this.__left = null;
@@ -389,7 +389,7 @@ var b = function (e) {
   var t = a(n);
   function n(e, r, i) {
     s(this, n);
-    return t.call(this, e, "block", r, i, !1);
+    return t.call(this, e, "block", r, i, false);
   }
   return n;
 }(_);
@@ -398,7 +398,7 @@ var w = function (e) {
   var t = a(n);
   function n(e, r, i) {
     s(this, n);
-    return t.call(this, e, "switch", r, i, !1);
+    return t.call(this, e, "switch", r, i, false);
   }
   return n;
 }(_);
@@ -417,10 +417,10 @@ var E = function (e) {
     key: "isArgumentsMaterialized",
     value: function () {
       if (this.block.type === u.ArrowFunctionExpression) {
-        return !1;
+        return false;
       }
       if (!this.isStatic()) {
-        return !0;
+        return true;
       }
       var e = this.set.get("arguments");
       h(e, "Always have arguments variable.");
@@ -435,13 +435,13 @@ var E = function (e) {
     key: "__defineArguments",
     value: function () {
       this.__defineGeneric("arguments", this.set, this.variables, null, null);
-      this.taints.set("arguments", !0);
+      this.taints.set("arguments", true);
     }
   }, {
     key: "__isValidResolution",
     value: function (e, t) {
       if ("Program" === this.block.type) {
-        return !0;
+        return true;
       }
       var n = this.block.body.range[0];
       return !(t.scope === this && e.identifier.range[0] < n && t.defs.every(function (e) {
@@ -456,7 +456,7 @@ var x = function (e) {
   var t = a(n);
   function n(e, r, i) {
     s(this, n);
-    return t.call(this, e, "for", r, i, !1);
+    return t.call(this, e, "for", r, i, false);
   }
   return n;
 }(_);
@@ -465,7 +465,7 @@ var C = function (e) {
   var t = a(n);
   function n(e, r, i) {
     s(this, n);
-    return t.call(this, e, "class", r, i, !1);
+    return t.call(this, e, "class", r, i, false);
   }
   return n;
 }(_);

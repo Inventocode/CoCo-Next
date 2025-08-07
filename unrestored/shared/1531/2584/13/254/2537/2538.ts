@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.handleFocus = void 0;
+exports.handleFocus = undefined;
 var r;
 var i = Object.assign || function (e) {
   for (var t = 1; t < arguments.length; t++) {
@@ -18,10 +18,10 @@ var o = function () {
   function e(e, t) {
     for (var n = 0; n < t.length; n++) {
       var r = t[n];
-      r.enumerable = r.enumerable || !1;
-      r.configurable = !0;
+      r.enumerable = r.enumerable || false;
+      r.configurable = true;
       if ("value" in r) {
-        r.writable = !0;
+        r.writable = true;
       }
       Object.defineProperty(e, r.key, r);
     }
@@ -58,9 +58,9 @@ function l(e, t) {
   e.prototype = Object.create(t && t.prototype, {
     constructor: {
       value: e,
-      enumerable: !1,
-      writable: !0,
-      configurable: !0
+      enumerable: false,
+      writable: true,
+      configurable: true
     }
   });
   if (t) {
@@ -72,7 +72,7 @@ function l(e, t) {
   }
 }
 exports.handleFocus = function (e) {
-  var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "span";
+  var t = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : "span";
   return function (n) {
     function r() {
       var e;
@@ -84,16 +84,16 @@ exports.handleFocus = function (e) {
       }
       t = n = u(this, (e = r.__proto__ || Object.getPrototypeOf(r)).call.apply(e, [this].concat(o)));
       n.state = {
-        focus: !1
+        focus: false
       };
       n.handleFocus = function () {
         return n.setState({
-          focus: !0
+          focus: true
         });
       };
       n.handleBlur = function () {
         return n.setState({
-          focus: !1
+          focus: false
         });
       };
       return u(n, t);

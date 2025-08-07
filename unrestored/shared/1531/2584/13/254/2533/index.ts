@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.ColorWrap = void 0;
+exports.ColorWrap = undefined;
 var r = Object.assign || function (e) {
   for (var t = 1; t < arguments.length; t++) {
     var n = arguments[t];
@@ -17,10 +17,10 @@ var i = function () {
   function e(e, t) {
     for (var n = 0; n < t.length; n++) {
       var r = t[n];
-      r.enumerable = r.enumerable || !1;
-      r.configurable = !0;
+      r.enumerable = r.enumerable || false;
+      r.configurable = true;
       if ("value" in r) {
-        r.writable = !0;
+        r.writable = true;
       }
       Object.defineProperty(e, r.key, r);
     }
@@ -103,9 +103,9 @@ var l = exports.ColorWrap = function (e) {
       e.prototype = Object.create(t && t.prototype, {
         constructor: {
           value: e,
-          enumerable: !1,
-          writable: !0,
-          configurable: !0
+          enumerable: false,
+          writable: true,
+          configurable: true
         }
       });
       if (t) {

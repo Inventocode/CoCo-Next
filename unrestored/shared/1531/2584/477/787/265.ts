@@ -1,25 +1,25 @@
 "use strict";
 
 export { s as a };
-var r = require("./364");
-var i = Object(r.b)();
+import r = require("./364");
+var i = r.b();
 var o = "Sentry Logger ";
 var a = function () {
   function e() {
-    this._enabled = !1;
+    this._enabled = false;
   }
   e.prototype.disable = function () {
-    this._enabled = !1;
+    this._enabled = false;
   };
   e.prototype.enable = function () {
-    this._enabled = !0;
+    this._enabled = true;
   };
   e.prototype.log = function () {
     for (var e = [], t = 0; t < arguments.length; t++) {
       e[t] = arguments[t];
     }
     if (this._enabled) {
-      Object(r.a)(function () {
+      r.a(function () {
         i.console.log(o + "[Log]: " + e.join(" "));
       });
     }
@@ -29,7 +29,7 @@ var a = function () {
       e[t] = arguments[t];
     }
     if (this._enabled) {
-      Object(r.a)(function () {
+      r.a(function () {
         i.console.warn(o + "[Warn]: " + e.join(" "));
       });
     }
@@ -39,7 +39,7 @@ var a = function () {
       e[t] = arguments[t];
     }
     if (this._enabled) {
-      Object(r.a)(function () {
+      r.a(function () {
         i.console.error(o + "[Error]: " + e.join(" "));
       });
     }

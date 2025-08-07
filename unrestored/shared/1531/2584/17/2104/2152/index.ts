@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.ColorController = void 0;
+exports.ColorController = undefined;
 var r = require("tslib");
 var i = require("inversify");
 var o = require("../../../125/294");
@@ -24,7 +24,7 @@ var u = function (e) {
   (0, r.__extends)(t, e);
   t.prototype.show = function (e, t) {
     var n;
-    var r = (null === (n = e.source_block) || void 0 === n ? void 0 : n.is_shadow()) ? e.source_block.parent_block : e.source_block;
+    var r = (null === (n = e.source_block) || undefined === n ? undefined : n.is_shadow()) ? e.source_block.parent_block : e.source_block;
     if (r) {
       this.owner = e;
       this.color_format = t.color_format;
@@ -41,7 +41,7 @@ var u = function (e) {
   t.prototype.hide = function () {
     var e;
     this.container.style.display = "none";
-    if (!(null === (e = this.color_element) || void 0 === e)) {
+    if (!(null === (e = this.color_element) || undefined === e)) {
       e.remove();
     }
   };
@@ -70,14 +70,14 @@ var u = function (e) {
       var o = t;
       e.set_color_panel_item_left(o);
       o.addEventListener("mousedown", e.bind_color_strip_event.bind(e, o));
-      if (!(null === (n = o.querySelector(".color-handle")) || void 0 === n)) {
+      if (!(null === (n = o.querySelector(".color-handle")) || undefined === n)) {
         n.addEventListener("mousedown", e.bind_color_event.bind(e));
       }
-      if (!(null === (r = o.querySelector(".color-strip-panel")) || void 0 === r)) {
+      if (!(null === (r = o.querySelector(".color-strip-panel")) || undefined === r)) {
         r.addEventListener("mousedown", e.bind_color_event.bind(e));
       }
       o.querySelector(".color-strip-panel").addEventListener("mouseup", e.set_color_handle_position.bind(e));
-      if ((null === (i = e.line) || void 0 === i ? void 0 : i.toLowerCase()) === o.getAttribute("data")) {
+      if ((null === (i = e.line) || undefined === i ? undefined : i.toLowerCase()) === o.getAttribute("data")) {
         e.color_handle_element = o.querySelector(".color-handle");
         e.current_color_panel_element = o.querySelector(".color-strip-panel");
       }
@@ -107,12 +107,12 @@ var u = function (e) {
     var i;
     var o;
     var a;
-    var s = null === (n = null === (t = this.owner) || void 0 === t ? void 0 : t.source_block) || void 0 === n ? void 0 : n.parent_block;
+    var s = null === (n = null === (t = this.owner) || undefined === t ? undefined : t.source_block) || undefined === n ? undefined : n.parent_block;
     var c = e.getAttribute("data");
     var u = e.querySelector(".color-handle");
     if (s && c && u) {
       var l = this.get_field_value(s, c.toUpperCase());
-      var f = (null === (a = null === (o = null === (i = null === (r = s.get_input_target_block(c.toUpperCase())) || void 0 === r ? void 0 : r.output_connection) || void 0 === i ? void 0 : i.target_connection) || void 0 === o ? void 0 : o.get_shadow_dom()) || void 0 === a ? void 0 : a.firstChild).getAttribute("constraints");
+      var f = (null === (a = null === (o = null === (i = null === (r = s.get_input_target_block(c.toUpperCase())) || undefined === r ? undefined : r.output_connection) || undefined === i ? undefined : i.target_connection) || undefined === o ? undefined : o.get_shadow_dom()) || undefined === a ? undefined : a.firstChild).getAttribute("constraints");
       if (f) {
         var d = f.split(",");
         var h = d[0];
@@ -137,7 +137,7 @@ var u = function (e) {
   t.prototype.get_linear_gradient_hsva = function (e, t, n) {
     var i;
     var o;
-    var s = null === (o = null === (i = this.owner) || void 0 === i ? void 0 : i.source_block) || void 0 === o ? void 0 : o.parent_block;
+    var s = null === (o = null === (i = this.owner) || undefined === i ? undefined : i.source_block) || undefined === o ? undefined : o.parent_block;
     if (!s) {
       return "";
     }
@@ -201,10 +201,10 @@ var u = function (e) {
         var c;
         var u = document.getElementById(r[0] + "_panel_strip");
         if (u) {
-          if (!(null === (s = null === (a = null === (o = null === (i = e.owner) || void 0 === i ? void 0 : i.source_block) || void 0 === o ? void 0 : o.parent_block) || void 0 === a ? void 0 : a.get_input_target_block(r[0].toString().toUpperCase())) || void 0 === s ? void 0 : s.get_field_value("NUM"))) {
+          if (!(null === (s = null === (a = null === (o = null === (i = e.owner) || undefined === i ? undefined : i.source_block) || undefined === o ? undefined : o.parent_block) || undefined === a ? undefined : a.get_input_target_block(r[0].toString().toUpperCase())) || undefined === s ? undefined : s.get_field_value("NUM"))) {
             var l = document.getElementById(r[0] + "_panel");
             l.style.opacity = "0.2";
-            if (!(null === (c = null === l || void 0 === l ? void 0 : l.querySelector(".color-handle")) || void 0 === c)) {
+            if (!(null === (c = null === l || undefined === l ? undefined : l.querySelector(".color-handle")) || undefined === c)) {
               c.remove();
             }
             u.style.cursor = "not-allowed";
@@ -223,7 +223,7 @@ var u = function (e) {
       } else if (this.color_format === s.EColorControllerFormat.RGBA) {
         this.color[this.line.toLowerCase()] = e;
       } else if (this.color_format === s.EColorControllerFormat.HSVA) {
-        var r = null === (n = null === (t = this.owner) || void 0 === t ? void 0 : t.source_block) || void 0 === n ? void 0 : n.parent_block;
+        var r = null === (n = null === (t = this.owner) || undefined === t ? undefined : t.source_block) || undefined === n ? undefined : n.parent_block;
         if (!r) {
           return;
         }
@@ -258,7 +258,7 @@ var u = function (e) {
     var i;
     var o;
     var a;
-    return (null === (n = e.get_input_target_block(t)) || void 0 === n ? void 0 : n.get_field_value("NUM")) || (null === (a = null === (o = null === (i = null === (r = e.get_input_target_block(t)) || void 0 === r ? void 0 : r.output_connection) || void 0 === i ? void 0 : i.target_connection) || void 0 === o ? void 0 : o.get_shadow_dom()) || void 0 === a ? void 0 : a.textContent);
+    return (null === (n = e.get_input_target_block(t)) || undefined === n ? undefined : n.get_field_value("NUM")) || (null === (a = null === (o = null === (i = null === (r = e.get_input_target_block(t)) || undefined === r ? undefined : r.output_connection) || undefined === i ? undefined : i.target_connection) || undefined === o ? undefined : o.get_shadow_dom()) || undefined === a ? undefined : a.textContent);
   };
   t.prototype.field_to_color_value = function (e, t, n) {
     var r = (0, o.clamp)(e, t, n);
@@ -273,7 +273,7 @@ var u = function (e) {
     var i;
     var o = e.getAttribute("data");
     if (o) {
-      var a = null === (i = null === (r = null === (n = null === (t = this.owner) || void 0 === t ? void 0 : t.source_block) || void 0 === n ? void 0 : n.parent_block) || void 0 === r ? void 0 : r.get_input_target_block(o.toUpperCase())) || void 0 === i ? void 0 : i.get_field("NUM");
+      var a = null === (i = null === (r = null === (n = null === (t = this.owner) || undefined === t ? undefined : t.source_block) || undefined === n ? undefined : n.parent_block) || undefined === r ? undefined : r.get_input_target_block(o.toUpperCase())) || undefined === i ? undefined : i.get_field("NUM");
       if (a) {
         this.owner = a;
         this.line = o.toUpperCase();
@@ -293,7 +293,7 @@ var u = function (e) {
       var n = this.move_color_handle.bind(this);
       document.addEventListener("mousemove", n);
       document.addEventListener("mouseup", function e() {
-        t.current_color_panel_item_left = void 0;
+        t.current_color_panel_item_left = undefined;
         document.removeEventListener("mousemove", n);
         document.removeEventListener("mouseup", e);
       });
@@ -313,7 +313,7 @@ var u = function (e) {
     var t;
     var n;
     if (this.current_color_panel_item_left && this.color_handle_element) {
-      var r = (null === (n = null === (t = this.owner) || void 0 === t ? void 0 : t.source_block) || void 0 === n ? void 0 : n.get_workspace().get_scale()) || 1;
+      var r = (null === (n = null === (t = this.owner) || undefined === t ? undefined : t.source_block) || undefined === n ? undefined : n.get_workspace().get_scale()) || 1;
       var i = (e - this.current_color_panel_item_left) / r;
       var a = (0, o.clamp)(i, 0, this.color_strip_width);
       var s = this.max - this.min;
@@ -334,7 +334,7 @@ var u = function (e) {
       this.color_handle_element.style.left = e + "px";
     }
   };
-  (0, r.__decorate)([(0, c.lazy_inject)(c.BINDING.Blink)], t.prototype, "Blink", void 0);
+  (0, r.__decorate)([(0, c.lazy_inject)(c.BINDING.Blink)], t.prototype, "Blink", undefined);
   return t = (0, r.__decorate)([(0, i.injectable)()], t);
 }(require("./1106").Controller);
 exports.ColorController = u;

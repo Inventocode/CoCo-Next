@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.delete_from_xml = exports.rename_procedures_in_xml = exports.load_from_xml = void 0;
+exports.delete_from_xml = exports.rename_procedures_in_xml = exports.load_from_xml = undefined;
 var r = require("../../17/497/387");
 var i = require("../../301/173");
 var o = require("../../1036/754");
@@ -55,7 +55,7 @@ exports.load_from_xml = function (e, t, n) {
         var n = e.querySelector("field[name=\"" + i.PROCEDURE_BLOCK_FIELD_NAMES.PARAM_DEFAULT_VALUE + "\"]");
         return {
           param_name: t.textContent,
-          default_value: (null === n || void 0 === n ? void 0 : n.textContent) || void 0
+          default_value: (null === n || undefined === n ? undefined : n.textContent) || undefined
         };
       });
       var f = t.querySelector("statement[name=\"" + i.PROCEDURE_BLOCK_INPUT_NAMES.DEF_STATEMENT + "\"]");
@@ -69,19 +69,19 @@ exports.load_from_xml = function (e, t, n) {
       if (!(_ = c[s])) {
         _ = {
           def_id: a,
-          disabled: !0,
+          disabled: true,
           name: s,
           base_name: s,
           params: [],
           callers_id: [],
           return_count: 0,
-          valid: !0,
+          valid: true,
           created_timestamp: Date.now()
         };
         c[s] = _;
       }
       _.def_id = a;
-      _.disabled = !1;
+      _.disabled = false;
       _.params = l;
       return void (_.return_count = d);
     }
@@ -101,7 +101,7 @@ exports.load_from_xml = function (e, t, n) {
         if (!e.get_procedure_by_name(s)) {
           var A = e.add_procedure_def(s, "");
           A.params = l;
-          A.disabled = !0;
+          A.disabled = true;
         }
         return void e.add_caller(s, a, o === i.PROCEDURE_BLOCK_TYPES.CALL_RETURN ? "call_return" : "call");
       }
@@ -109,13 +109,13 @@ exports.load_from_xml = function (e, t, n) {
         var g = t.querySelector("mutation");
         _ = {
           def_id: g && g.getAttribute("def_id") || "",
-          disabled: !0,
+          disabled: true,
           name: s,
           base_name: s,
           params: l,
           callers_id: [],
           return_count: 0,
-          valid: !0,
+          valid: true,
           created_timestamp: Date.now()
         };
         c[s] = _;
@@ -124,7 +124,7 @@ exports.load_from_xml = function (e, t, n) {
         id: a,
         proc_name: s,
         call_type: o === i.PROCEDURE_BLOCK_TYPES.CALL_RETURN ? "call_return" : "call",
-        disabled: !1
+        disabled: false
       };
       return void _.callers_id.push(a);
     }

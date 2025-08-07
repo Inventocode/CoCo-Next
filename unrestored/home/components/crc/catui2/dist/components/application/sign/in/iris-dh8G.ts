@@ -327,7 +327,7 @@ var AuthModule = /*#__PURE__*/function () {
                 return this.iris.auth.get_auth_instance().get_agreements();
               case 4:
                 agreementsData = _context6.sent;
-                idsData = agreementsData === null || agreementsData === void 0 ? void 0 : agreementsData.data;
+                idsData = agreementsData === null || agreementsData === undefined ? undefined : agreementsData.data;
                 agreementIds = [];
                 if (idsData && idsData instanceof Array) {
                   idsData.forEach(function (data) {

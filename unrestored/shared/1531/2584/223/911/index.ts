@@ -1,8 +1,8 @@
 "use strict";
 
 export { d as a };
-var r = require("./266");
-var i = require("./740");
+import r = require("./266");
+import i = require("./740");
 var o = [{
   index: 7,
   opacity: .15
@@ -38,7 +38,7 @@ function a(e) {
   var t = e.r;
   var n = e.g;
   var i = e.b;
-  var o = Object(r.h)(t, n, i);
+  var o = r.h(t, n, i);
   return {
     h: 360 * o.h,
     s: o.s,
@@ -49,7 +49,7 @@ function s(e) {
   var t = e.r;
   var n = e.g;
   var i = e.b;
-  return "#".concat(Object(r.f)(t, n, i, !1));
+  return "#".concat(r.f(t, n, i, false));
 }
 function c(e, t, n) {
   var r = n / 100;
@@ -82,19 +82,19 @@ function f(e, t, n) {
   return Number(r.toFixed(2));
 }
 function d(e) {
-  for (var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, n = [], r = Object(i.a)(e), d = 5; d > 0; d -= 1) {
+  for (var t = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : {}, n = [], r = i.a(e), d = 5; d > 0; d -= 1) {
     var h = a(r);
-    var p = s(Object(i.a)({
-      h: u(h, d, !0),
-      s: l(h, d, !0),
-      v: f(h, d, !0)
+    var p = s(i.a({
+      h: u(h, d, true),
+      s: l(h, d, true),
+      v: f(h, d, true)
     }));
     n.push(p);
   }
   n.push(s(r));
   for (var _ = 1; _ <= 4; _ += 1) {
     var A = a(r);
-    var g = s(Object(i.a)({
+    var g = s(i.a({
       h: u(A, _),
       s: l(A, _),
       v: f(A, _)
@@ -104,7 +104,7 @@ function d(e) {
   return "dark" === t.theme ? o.map(function (e) {
     var r = e.index;
     var o = e.opacity;
-    return s(c(Object(i.a)(t.backgroundColor || "#141414"), Object(i.a)(n[r]), 100 * o));
+    return s(c(i.a(t.backgroundColor || "#141414"), i.a(n[r]), 100 * o));
   }) : n;
 }
 var h = {

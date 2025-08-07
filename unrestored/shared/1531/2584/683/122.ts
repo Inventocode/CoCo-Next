@@ -31,7 +31,7 @@ var i = function () {
   e.set_log_enabled = function (e) {
     this.log_enabled = e;
   };
-  e.log_enabled = !1;
+  e.log_enabled = false;
   return e;
 }();
 export default i;

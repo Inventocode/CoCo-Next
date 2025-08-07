@@ -19,7 +19,7 @@ function _(e) {
 function A(e) {
   var t = e.match(i);
   if (!t) {
-    return !1;
+    return false;
   }
   var n = +t[1];
   var r = +t[2];
@@ -31,7 +31,7 @@ function A(e) {
 function g(e, t) {
   var n = e.match(a);
   if (!n) {
-    return !1;
+    return false;
   }
   var r = n[1];
   var i = n[2];
@@ -63,7 +63,7 @@ _.full = {
   time: g,
   "date-time": function (e) {
     var t = e.split(v);
-    return 2 == t.length && A(t[0]) && g(t[1], !0);
+    return 2 == t.length && A(t[0]) && g(t[1], true);
   },
   uri: function (e) {
     return m.test(e) && c.test(e);
@@ -86,12 +86,12 @@ var m = /\/|:/;
 var y = /[^\\]\\Z/;
 function b(e) {
   if (y.test(e)) {
-    return !1;
+    return false;
   }
   try {
     new RegExp(e);
-    return !0;
+    return true;
   } catch (t) {
-    return !1;
+    return false;
   }
 }

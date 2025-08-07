@@ -116,7 +116,7 @@ var w = "INITIAL_OT_STATE";
 var C = function () {
   return {
     type: w,
-    payload: void 0
+    payload: undefined
   };
 };
 export default m;

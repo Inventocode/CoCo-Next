@@ -2,9 +2,9 @@
 
 var r;
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.AllUIEvents = exports.UIEventType = void 0;
+exports.AllUIEvents = exports.UIEventType = undefined;
 (function (e) {
   e.SELECTED = "selected";
   e.COMMENT_OPEN = "commentOpen";

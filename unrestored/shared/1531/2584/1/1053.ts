@@ -10,9 +10,9 @@ var r = function (e) {
   function s(e, t, n) {
     Object.defineProperty(e, t, {
       value: n,
-      enumerable: !0,
-      configurable: !0,
-      writable: !0
+      enumerable: true,
+      configurable: true,
+      writable: true
     });
     return e[t];
   }
@@ -54,7 +54,8 @@ var r = function (e) {
             n.sent = n._sent = n.arg;
           } else if ("throw" === n.method) {
             if ("suspendedStart" === r) {
-              throw r = "completed", n.arg;
+              r = "completed";
+              throw n.arg;
             }
             n.dispatchException(n.arg);
           } else if ("return" === n.method) {
@@ -147,10 +148,10 @@ var r = function (e) {
   }
   function y(e, t) {
     var n = e.iterator[t.method];
-    if (void 0 === n) {
+    if (undefined === n) {
       t.delegate = null;
       if ("throw" === t.method) {
-        if (e.iterator.return && (t.method = "return", t.arg = void 0, y(e, t), "throw" === t.method)) {
+        if (e.iterator.return && (t.method = "return", t.arg = undefined, y(e, t), "throw" === t.method)) {
           return l;
         }
         t.method = "throw";
@@ -166,7 +167,7 @@ var r = function (e) {
       return l;
     }
     var i = r.arg;
-    return i ? i.done ? (t[e.resultName] = i.value, t.next = e.nextLoc, "return" !== t.method && (t.method = "next", t.arg = void 0), t.delegate = null, l) : i : (t.method = "throw", t.arg = new TypeError("iterator result is not an object"), t.delegate = null, l);
+    return i ? i.done ? (t[e.resultName] = i.value, t.next = e.nextLoc, "return" !== t.method && (t.method = "next", t.arg = undefined), t.delegate = null, l) : i : (t.method = "throw", t.arg = new TypeError("iterator result is not an object"), t.delegate = null, l);
   }
   function b(e) {
     var t = {
@@ -192,7 +193,7 @@ var r = function (e) {
       tryLoc: "root"
     }];
     e.forEach(b, this);
-    this.reset(!0);
+    this.reset(true);
   }
   function x(e) {
     if (e) {
@@ -209,12 +210,12 @@ var r = function (e) {
           for (; ++r < e.length;) {
             if (n.call(e, r)) {
               t.value = e[r];
-              t.done = !1;
+              t.done = false;
               return t;
             }
           }
-          t.value = void 0;
-          t.done = !0;
+          t.value = undefined;
+          t.done = true;
           return t;
         };
         return o.next = o;
@@ -226,8 +227,8 @@ var r = function (e) {
   }
   function C() {
     return {
-      value: void 0,
-      done: !0
+      value: undefined,
+      done: true
     };
   }
   d.prototype = g.constructor = h;
@@ -258,7 +259,7 @@ var r = function (e) {
   };
   e.AsyncIterator = m;
   e.async = function (t, n, r, i, o) {
-    if (void 0 === o) {
+    if (undefined === o) {
       o = Promise;
     }
     var a = new m(c(t, n, r, i), o);
@@ -283,11 +284,11 @@ var r = function (e) {
         var r = t.pop();
         if (r in e) {
           n.value = r;
-          n.done = !1;
+          n.done = false;
           return n;
         }
       }
-      n.done = !0;
+      n.done = true;
       return n;
     };
   };
@@ -297,20 +298,20 @@ var r = function (e) {
     reset: function (e) {
       this.prev = 0;
       this.next = 0;
-      this.sent = this._sent = void 0;
-      this.done = !1;
+      this.sent = this._sent = undefined;
+      this.done = false;
       this.delegate = null;
       this.method = "next";
-      this.arg = void 0;
+      this.arg = undefined;
       this.tryEntries.forEach(w);
       if (!e) {
         for (var t in this) if ("t" === t.charAt(0) && n.call(this, t) && !isNaN(+t.slice(1))) {
-          this[t] = void 0;
+          this[t] = undefined;
         }
       }
     },
     stop: function () {
-      this.done = !0;
+      this.done = true;
       var e = this.tryEntries[0].completion;
       if ("throw" === e.type) {
         throw e.arg;
@@ -328,7 +329,7 @@ var r = function (e) {
         t.next = n;
         if (r) {
           t.method = "next";
-          t.arg = void 0;
+          t.arg = undefined;
         }
         return !!r;
       }
@@ -343,14 +344,14 @@ var r = function (e) {
           var c = n.call(o, "finallyLoc");
           if (s && c) {
             if (this.prev < o.catchLoc) {
-              return r(o.catchLoc, !0);
+              return r(o.catchLoc, true);
             }
             if (this.prev < o.finallyLoc) {
               return r(o.finallyLoc);
             }
           } else if (s) {
             if (this.prev < o.catchLoc) {
-              return r(o.catchLoc, !0);
+              return r(o.catchLoc, true);
             }
           } else {
             if (!c) {
@@ -429,7 +430,7 @@ var r = function (e) {
         nextLoc: n
       };
       if ("next" === this.method) {
-        this.arg = void 0;
+        this.arg = undefined;
       }
       return l;
     }

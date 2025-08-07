@@ -1,14 +1,14 @@
 "use strict";
 
 export { g as a };
-var r = require("../95");
-var o = require("../96");
-var i = require("../103");
-var a = require("../120");
-var s = require("../322");
-var c = require("../273");
-var l = require("../29");
-var u = require("../232/index");
+import r = require("../95");
+import o = require("../96");
+import i = require("../103");
+import a = require("../120");
+import s = require("../322");
+import c = require("../273");
+import l = require("../29");
+import u = require("../232/index");
 var d = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -21,7 +21,7 @@ var d = function __importDefault(module) {
   });
   return defaultExport;
 }(u);
-var p = require("react");
+import p = require("react");
 var f = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -56,52 +56,52 @@ var h = {
 function m(e) {
   var t = function () {
     if ("undefined" === typeof Reflect || !Reflect.construct) {
-      return !1;
+      return false;
     }
     if (Reflect.construct.sham) {
-      return !1;
+      return false;
     }
     if ("function" === typeof Proxy) {
-      return !0;
+      return true;
     }
     try {
       Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {}));
-      return !0;
+      return true;
     } catch (e) {
-      return !1;
+      return false;
     }
   }();
   return function () {
     var n;
-    var r = Object(c.a)(e);
+    var r = c.a(e);
     if (t) {
-      var o = Object(c.a)(this).constructor;
+      var o = c.a(this).constructor;
       n = Reflect.construct(r, arguments, o);
     } else {
       n = r.apply(this, arguments);
     }
-    return Object(s.a)(this, n);
+    return s.a(this, n);
   };
 }
 var g = function (e) {
-  Object(a.a)(n, e);
+  a.a(n, e);
   var t = m(n);
   function n() {
     var e;
-    Object(r.a)(this, n);
+    r.a(this, n);
     for (var o = arguments.length, a = new Array(o), s = 0; s < o; s++) {
       a[s] = arguments[s];
     }
     e = t.call.apply(t, [this].concat(a));
-    Object(l.a)(Object(i.a)(e), "setClass", function () {
+    l.a(i.a(e), "setClass", function () {
       var t = e.props;
       var n = t.type;
-      var r = void 0 === n ? "transparent" : n;
+      var r = undefined === n ? "transparent" : n;
       var o = t.size;
-      var i = void 0 === o ? "md" : o;
+      var i = undefined === o ? "md" : o;
       return "".concat(r, " size-").concat(i);
     });
-    Object(l.a)(Object(i.a)(e), "preventMouseEventWhenDisable", function (t) {
+    l.a(i.a(e), "preventMouseEventWhenDisable", function (t) {
       return function (n) {
         if (!e.props.disable) {
           var r = e.props;
@@ -127,13 +127,13 @@ var g = function (e) {
         }
       };
     });
-    Object(l.a)(Object(i.a)(e), "inserSpaceIfTwoText", function () {
+    l.a(i.a(e), "inserSpaceIfTwoText", function () {
       var t = e.props.children;
       return "string" === typeof t && 2 === t.length && /^(?:[\u3400-\u4DB5\u4E00-\u9FEA\uFA0E\uFA0F\uFA11\uFA13\uFA14\uFA1F\uFA21\uFA23\uFA24\uFA27-\uFA29]|[\uD840-\uD868\uD86A-\uD86C\uD86F-\uD872\uD874-\uD879][\uDC00-\uDFFF]|\uD869[\uDC00-\uDED6\uDF00-\uDFFF]|\uD86D[\uDC00-\uDF34\uDF40-\uDFFF]|\uD86E[\uDC00-\uDC1D\uDC20-\uDFFF]|\uD873[\uDC00-\uDEA1\uDEB0-\uDFFF]|\uD87A[\uDC00-\uDFE0])+$/.test(t) ? t.split("").join(" ") : t;
     });
     return e;
   }
-  Object(o.a)(n, [{
+  o.a(n, [{
     key: "render",
     value: function () {
       var e = this.props;
@@ -161,7 +161,7 @@ var g = function (e) {
         id: this.props.id,
         style: {
           borderRadius: c || "",
-          backgroundColor: t || void 0,
+          backgroundColor: t || undefined,
           padding: p
         },
         onClick: this.preventMouseEventWhenDisable("click"),
@@ -169,8 +169,8 @@ var g = function (e) {
         onMouseLeave: this.preventMouseEventWhenDisable("leave"),
         onContextMenu: this.preventMouseEventWhenDisable("context"),
         "data-report-click": i,
-        className: ("".concat(s ? "selected" : "", " ").concat(null !== u && void 0 !== u ? u : "") ? "".concat(s ? "selected" : "", " ").concat(null !== u && void 0 !== u ? u : "") + " " : "") + d()("btn ".concat(l ? "disabled" : "", " ").concat(this.setClass()), h, {
-          autoResolveMultipleImports: !0,
+        className: ("".concat(s ? "selected" : "", " ").concat(null !== u && undefined !== u ? u : "") ? "".concat(s ? "selected" : "", " ").concat(null !== u && undefined !== u ? u : "") + " " : "") + d()("btn ".concat(l ? "disabled" : "", " ").concat(this.setClass()), h, {
+          autoResolveMultipleImports: true,
           handleMissingStyleName: "throw"
         })
       }, this.inserSpaceIfTwoText()), null != n && f.a.createElement("span", {
@@ -180,7 +180,7 @@ var g = function (e) {
   }]);
   return n;
 }(f.a.Component);
-Object(l.a)(g, "defaultProps", {
+l.a(g, "defaultProps", {
   type: "transparent",
   size: "md"
 });

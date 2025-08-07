@@ -41,7 +41,7 @@ var p = function (t) {
     return {
       next: function () {
         if (t && r >= t.length) {
-          t = void 0;
+          t = undefined;
         }
         return {
           value: t && t[r++],
@@ -73,7 +73,7 @@ var m = function (t) {
       var d = f.a.decodeDigit(t, s, c, f.a.L_PATTERNS);
       n += String.fromCharCode("0".charCodeAt(0) + d);
       try {
-        for (r = void 0, h = p(s), m = h.next(), void 0; !m.done; m = h.next()) {
+        for (r = undefined, h = p(s), m = h.next(), undefined; !m.done; m = h.next()) {
           var h;
           var m;
           c += m.value;
@@ -94,12 +94,12 @@ var m = function (t) {
         }
       }
     }
-    c = f.a.findGuardPattern(t, c, !0, f.a.MIDDLE_PATTERN, new Int32Array(f.a.MIDDLE_PATTERN.length).fill(0))[1];
+    c = f.a.findGuardPattern(t, c, true, f.a.MIDDLE_PATTERN, new Int32Array(f.a.MIDDLE_PATTERN.length).fill(0))[1];
     for (l = 0; l < 4 && c < u; l++) {
       d = f.a.decodeDigit(t, s, c, f.a.L_PATTERNS);
       n += String.fromCharCode("0".charCodeAt(0) + d);
       try {
-        for (o = void 0, b = p(s), g = b.next(), void 0; !g.done; g = b.next()) {
+        for (o = undefined, b = p(s), g = b.next(), undefined; !g.done; g = b.next()) {
           var b;
           var g;
           c += g.value;
@@ -217,7 +217,7 @@ var y = function (t) {
     return {
       next: function () {
         if (t && r >= t.length) {
-          t = void 0;
+          t = undefined;
         }
         return {
           value: t && t[r++],
@@ -249,7 +249,7 @@ var w = function (t) {
       var d = e.decodeDigit(t, a, u, e.L_AND_G_PATTERNS);
       r += String.fromCharCode("0".charCodeAt(0) + d % 10);
       try {
-        for (i = void 0, f = y(a), h = f.next(), void 0; !h.done; h = f.next()) {
+        for (i = undefined, f = y(a), h = f.next(), undefined; !h.done; h = f.next()) {
           var f;
           var h;
           u += h.value;
@@ -277,7 +277,7 @@ var w = function (t) {
     return u;
   };
   e.prototype.decodeEnd = function (t, n) {
-    return e.findGuardPatternWithoutCounters(t, n, !0, e.MIDDLE_END_PATTERN);
+    return e.findGuardPatternWithoutCounters(t, n, true, e.MIDDLE_END_PATTERN);
   };
   e.prototype.checkChecksum = function (t) {
     return f.a.checkChecksum(e.convertUPCEtoUPCA(t));
@@ -367,7 +367,7 @@ var O = function (t) {
     return {
       next: function () {
         if (t && r >= t.length) {
-          t = void 0;
+          t = undefined;
         }
         return {
           value: t && t[r++],
@@ -469,8 +469,8 @@ var T = function (t) {
   };
   return e;
 }(l.a);
-var A = require("./602/index");
-var S = require("./509");
+var A = require("./602");
+var S = require("./509/index");
 var I = function () {
   var t = function (e, n) {
     return (t = Object.setPrototypeOf || {
@@ -496,7 +496,7 @@ var C = function (t) {
     var n = t.call(this) || this;
     n.readers = [];
     var o = e ? e.get(i.a.POSSIBLE_FORMATS) : null;
-    var c = e && void 0 !== e.get(i.a.ASSUME_CODE_39_CHECK_DIGIT);
+    var c = e && undefined !== e.get(i.a.ASSUME_CODE_39_CHECK_DIGIT);
     if (o) {
       if (o.includes(r.a.EAN_13) || o.includes(r.a.UPC_A) || o.includes(r.a.EAN_8) || o.includes(r.a.UPC_E)) {
         n.readers.push(new T(e));

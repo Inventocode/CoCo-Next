@@ -13,6 +13,6 @@ module.exports = function (e) {
     } else {
       t = 0;
     }
-    return e.apply(void 0, arguments);
+    return e.apply(undefined, arguments);
   };
 };

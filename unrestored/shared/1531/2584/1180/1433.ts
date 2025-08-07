@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.readBits = exports.readArray = exports.readUnsigned = exports.readString = exports.peekBytes = exports.readBytes = exports.peekByte = exports.readByte = exports.buildStream = void 0;
+exports.readBits = exports.readArray = exports.readUnsigned = exports.readString = exports.peekBytes = exports.readBytes = exports.peekByte = exports.readByte = exports.buildStream = undefined;
 exports.buildStream = function (e) {
   return {
     data: e,
@@ -17,7 +17,7 @@ var r = function () {
 };
 exports.readByte = r;
 exports.peekByte = function () {
-  var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
+  var e = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : 0;
   return function (t) {
     return t.data[t.pos + e];
   };

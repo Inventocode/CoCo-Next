@@ -21,6 +21,6 @@
         "noUnusedLocals": true,
         "noUnusedParameters": true
     },
-    "include": ["src/**/*", "unrestored/**/*", "scripts/**/*", "helper/**/*"],
+    "include": ["src/**/*", "unrestored/**/*", "scripts/**/*", "helper/**/*", "src/shared/widget/custom/.ts"],
     "exclude": ["node_modules", "public"]
 }

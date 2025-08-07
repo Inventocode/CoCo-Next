@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.InputRowType = void 0;
+exports.InputRowType = undefined;
 (function (e) {
   e[e.INLINE = -1] = "INLINE";
   e[e.STATEMENT = 3] = "STATEMENT";

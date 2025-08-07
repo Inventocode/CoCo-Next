@@ -9,10 +9,10 @@ var c = o != Object;
 var l = a("join", ",");
 r({
   target: "Array",
-  proto: !0,
+  proto: true,
   forced: c || !l
 }, {
   join: function (e) {
-    return s.call(i(this), void 0 === e ? "," : e);
+    return s.call(i(this), undefined === e ? "," : e);
   }
 });

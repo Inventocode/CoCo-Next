@@ -1,9 +1,9 @@
 "use strict";
 
 var r;
-var o = require("../11");
-var i = require("../10/index");
-var a = require("react");
+import o = require("../11");
+import i = require("../10/index");
+import a = require("react");
 var s = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -16,7 +16,7 @@ var s = function __importDefault(module) {
   });
   return defaultExport;
 }(a);
-var c = require("../51/index");
+import c = require("color");
 var l = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -29,7 +29,7 @@ var l = function __importDefault(module) {
   });
   return defaultExport;
 }(c);
-var u = require("../8");
+import u = require("../8");
 var d = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -42,12 +42,12 @@ var d = function __importDefault(module) {
   });
   return defaultExport;
 }(u);
-var p = require("../5");
-var f = require("../90");
-var h = require("../15");
-var m = require("../28/index");
-var g = require("../78");
-var _ = require("./158");
+import p = require("../5");
+import f = require("../90");
+import h = require("../15");
+import m = require("../28/index");
+import g = require("../78");
+import _ = require("./158");
 var v = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -64,19 +64,19 @@ var v = function __importDefault(module) {
   e[e.DOWN = 0] = "DOWN";
   e[e.UP = 1] = "UP";
 }(r || (r = {}));
-var b = !1;
-if (Object(m.b)() && Object(m.h)()) {
+var b = false;
+if (m.b() && m.h()) {
   document.body.addEventListener("touchmove", function (e) {
     if (b) {
       e.preventDefault();
     }
   }, {
-    passive: !1
+    passive: false
   });
 }
 var _a;
 _a = function (e) {
-  var t = Object(a.useRef)(null);
+  var t = a.useRef(null);
   var n = e.id;
   var c = e.position;
   var u = e.visible;
@@ -88,7 +88,7 @@ _a = function (e) {
   var w = e.onStartToSlid;
   var C = e.isEditState;
   var T = e.selected;
-  var S = void 0 !== T && T;
+  var S = undefined !== T && T;
   var I = e.handleImageUrl;
   var A = e.backgroundImageUrl;
   var j = e.trackImageUrl;
@@ -96,58 +96,58 @@ _a = function (e) {
   var R = _.step;
   var k = _.minValue;
   var x = _.direction;
-  var D = void 0 === x ? g.b.HORIZONTAL : x;
+  var D = undefined === x ? g.b.HORIZONTAL : x;
   var M = _.sliderType;
-  var L = void 0 === M ? g.d.TEMPLATE : M;
+  var L = undefined === M ? g.d.TEMPLATE : M;
   var P = _.handleImageRatio;
-  var B = void 0 === P ? 2 : P;
+  var B = undefined === P ? 2 : P;
   var F = _.backgroundImageDirection;
-  var G = void 0 === F ? g.b.HORIZONTAL : F;
+  var G = undefined === F ? g.b.HORIZONTAL : F;
   var U = _.trackImageDirection;
-  var W = void 0 === U ? g.b.HORIZONTAL : U;
+  var W = undefined === U ? g.b.HORIZONTAL : U;
   var H = _.handleImageDirection || g.b.HORIZONTAL;
   var V = _.mode;
   var z = _.color;
   var Y = _.disabled;
   var K = _.value;
-  var q = Object(a.useRef)(null);
-  var X = Object(a.useRef)(null);
-  var Q = Object(a.useRef)(r.UP);
-  var Z = Object(a.useState)(!1);
-  var J = Object(i.a)(Z, 2);
+  var q = a.useRef(null);
+  var X = a.useRef(null);
+  var Q = a.useRef(r.UP);
+  var Z = a.useState(false);
+  var J = i.a(Z, 2);
   var $ = J[0];
   var ee = J[1];
-  var te = Object(a.useState)(0);
-  var ne = Object(i.a)(te, 2);
+  var te = a.useState(0);
+  var ne = i.a(te, 2);
   var re = ne[0];
   var oe = ne[1];
-  var ie = Object(a.useState)(0);
-  var ae = Object(i.a)(ie, 2);
+  var ie = a.useState(0);
+  var ae = i.a(ie, 2);
   var se = ae[0];
   var ce = ae[1];
-  var le = Object(a.useState)(0);
-  var ue = Object(i.a)(le, 2);
+  var le = a.useState(0);
+  var ue = i.a(le, 2);
   var de = ue[0];
   var pe = ue[1];
-  var fe = Object(a.useState)(0);
-  var he = Object(i.a)(fe, 2);
+  var fe = a.useState(0);
+  var he = i.a(fe, 2);
   var me = he[0];
   var ge = he[1];
-  var _e = Object(a.useState)("");
-  var ve = Object(i.a)(_e, 2);
+  var _e = a.useState("");
+  var ve = i.a(_e, 2);
   var be = ve[0];
   var ye = ve[1];
-  var Ee = Object(a.useState)("");
-  var Oe = Object(i.a)(Ee, 2);
+  var Ee = a.useState("");
+  var Oe = i.a(Ee, 2);
   var we = Oe[0];
   var Ce = Oe[1];
-  var Te = Object(a.useRef)(1);
-  var Se = Object(a.useRef)(1);
-  Object(a.useEffect)(function () {
+  var Te = a.useRef(1);
+  var Se = a.useRef(1);
+  a.useEffect(function () {
     if (j) {
       Te.current = Te.current + 1;
       var e = Te.current;
-      Object(h.gb)(j, W === g.b.HORIZONTAL ? -90 : 90).then(function (t) {
+      h.gb(j, W === g.b.HORIZONTAL ? -90 : 90).then(function (t) {
         if (!(Te.current > e)) {
           ye(t);
         }
@@ -156,11 +156,11 @@ _a = function (e) {
       });
     }
   }, [j, W]);
-  Object(a.useEffect)(function () {
+  a.useEffect(function () {
     if (A) {
       Se.current = Se.current + 1;
       var e = Se.current;
-      Object(h.gb)(A, G === g.b.HORIZONTAL ? -90 : 90).then(function (t) {
+      h.gb(A, G === g.b.HORIZONTAL ? -90 : 90).then(function (t) {
         if (!(Se.current > e)) {
           Ce(t);
         }
@@ -169,14 +169,14 @@ _a = function (e) {
       });
     }
   }, [A, G]);
-  Object(a.useEffect)(function () {
+  a.useEffect(function () {
     if (L === g.d.IMAGE) {
-      ee(!0);
+      ee(true);
     } else {
-      ee(!1);
+      ee(false);
     }
   }, [L]);
-  Object(a.useEffect)(function () {
+  a.useEffect(function () {
     var e = E.height;
     if (D === g.b.VERTICAL) {
       e = E.width;
@@ -211,12 +211,12 @@ _a = function (e) {
       var t = l()(e).toString();
       return {
         default: {
-          stepBackgroundColor: Object(h.hb)(t, .2),
+          stepBackgroundColor: h.hb(t, .2),
           handleBorderColor: t,
           trackBackgroundColor: t
         },
         disabled: {
-          stepBackgroundColor: Object(h.hb)("#ccc", .2),
+          stepBackgroundColor: h.hb("#ccc", .2),
           handleBorderColor: "#ccc",
           trackBackgroundColor: "#ccc"
         }
@@ -227,12 +227,12 @@ _a = function (e) {
   function Ae(e, t) {
     return t / e * 100 + "%";
   }
-  var je = Object(a.useCallback)(function (e, n) {
+  var je = a.useCallback(function (e, n) {
     var r;
     var o = q.current;
     var i = X.current;
     var a = t.current;
-    var s = null === (r = t.current) || void 0 === r ? void 0 : r.getClientRects()[0];
+    var s = null === (r = t.current) || undefined === r ? undefined : r.getClientRects()[0];
     if (!s) {
       return K;
     }
@@ -265,9 +265,9 @@ _a = function (e) {
     }
     return K;
   }, [D, N, k, R, K]);
-  var Ne = Object(a.useCallback)(function (e) {
-    if (Object(h.W)()) {
-      b = !0;
+  var Ne = a.useCallback(function (e) {
+    if (h.W()) {
+      b = true;
       if (!Y) {
         if (w) {
           w(K);
@@ -275,24 +275,24 @@ _a = function (e) {
       }
     }
   }, [Y, w, K]);
-  var Re = Object(a.useCallback)(function (e) {
-    if (Object(h.W)() && !Y) {
-      b = !0;
+  var Re = a.useCallback(function (e) {
+    if (h.W() && !Y) {
+      b = true;
       var t = je(e.changedTouches[0].clientX, e.changedTouches[0].clientY);
       if (y) {
         y(t);
       }
     }
   }, [Y, je, y]);
-  var ke = Object(a.useCallback)(function () {
-    b = !1;
+  var ke = a.useCallback(function () {
+    b = false;
     if (!Y) {
       if (O) {
         O(K);
       }
     }
   }, [Y, O, K]);
-  Object(a.useLayoutEffect)(function () {
+  a.useLayoutEffect(function () {
     var e = X.current;
     var n = q.current;
     var r = t.current;
@@ -325,25 +325,25 @@ _a = function (e) {
       }
     }
   }, [re, se, N, k, K, D, $, E]);
-  Object(a.useEffect)(function () {
-    if (!Object(h.W)()) {
+  a.useEffect(function () {
+    if (!h.W()) {
       var e = K;
       var t = K;
-      var n = Object(h.p)(function () {
+      var n = h.p(function () {
         if (y) {
           y(e);
         }
       }, 60);
       var o = q.current;
       if (o) {
-        if (!(null === o || void 0 === o)) {
+        if (!(null === o || undefined === o)) {
           o.addEventListener("mousedown", a, {
-            passive: !1
+            passive: false
           });
         }
       }
       return function () {
-        if (!(null === o || void 0 === o)) {
+        if (!(null === o || undefined === o)) {
           o.removeEventListener("mousedown", a);
         }
       };
@@ -372,13 +372,13 @@ _a = function (e) {
           w(K);
         }
         document.addEventListener("mousemove", i, {
-          passive: !1
+          passive: false
         });
         document.addEventListener("mouseup", s, {
-          passive: !1
+          passive: false
         });
         document.addEventListener("mouseleave", s, {
-          passive: !1
+          passive: false
         });
       }
     }
@@ -397,14 +397,14 @@ _a = function (e) {
     id: n,
     "data-role": p.M,
     "data-widget-type": p.E,
-    className: d()(f.b, Object(o.a)({}, v.a.hide, !u)),
+    className: d()(f.b, o.a({}, v.a.hide, !u)),
     style: {
       top: c.y,
       left: c.x,
       height: E.height,
       width: E.width,
-      opacity: void 0 === m ? void 0 : m / 100,
-      filter: Y && $ ? "saturate(0)" : void 0
+      opacity: undefined === m ? undefined : m / 100,
+      filter: Y && $ ? "saturate(0)" : undefined
     }
   }, s.a.createElement("div", {
     className: v.a.sliderBox
@@ -421,21 +421,21 @@ _a = function (e) {
       width: "100%",
       height: "100%",
       borderRadius: $ ? 0 : D === g.b.HORIZONTAL ? E.height / 2 : E.width / 2,
-      backgroundColor: $ ? void 0 : Ie.stepBackgroundColor,
-      backgroundImage: $ ? "url(".concat(G === D ? A : we, ")") : void 0
+      backgroundColor: $ ? undefined : Ie.stepBackgroundColor,
+      backgroundImage: $ ? "url(".concat(G === D ? A : we, ")") : undefined
     }
   }, s.a.createElement("div", {
     className: d()(v.a.trackBox, D === g.b.HORIZONTAL ? v.a.horizontalTrackBox : v.a.verticalTrackBox),
     ref: X,
     style: {
-      backgroundColor: $ ? void 0 : Ie.trackBackgroundColor
+      backgroundColor: $ ? undefined : Ie.trackBackgroundColor
     }
   }, s.a.createElement("div", {
     className: v.a.track,
     style: {
       width: D === g.b.HORIZONTAL ? E.width : "100%",
       height: D === g.b.HORIZONTAL ? "100%" : E.height,
-      backgroundImage: $ ? "url(".concat(W === D ? j : be, ")") : void 0
+      backgroundImage: $ ? "url(".concat(W === D ? j : be, ")") : undefined
     }
   }))), s.a.createElement("div", {
     onTouchStart: Ne,
@@ -449,8 +449,8 @@ _a = function (e) {
       borderWidth: de,
       borderRadius: me,
       borderColor: Ie.handleBorderColor,
-      color: Object(h.hb)(Ie.handleBorderColor, .3),
-      backgroundImage: $ ? "url(".concat(I, ")") : void 0
+      color: h.hb(Ie.handleBorderColor, .3),
+      backgroundImage: $ ? "url(".concat(I, ")") : undefined
     }
   }, !$ && V === g.c.PRIMARY && s.a.createElement("div", {
     className: v.a.handleInner,

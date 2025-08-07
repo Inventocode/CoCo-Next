@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.draw_arrow = exports.position_dropdown = void 0;
+exports.draw_arrow = exports.position_dropdown = undefined;
 var r = require("@kitten-team/gl-matrix");
 var i = require("../125/index");
 var o = require("../125/714");
@@ -39,7 +39,7 @@ exports.position_dropdown = function (e, t) {
   var A = f.inputList.find(function (e) {
     return e.fieldRow.indexOf(t) > -1;
   });
-  var g = ((((null === A || void 0 === A ? void 0 : A.height) || f.first_row_height) + 2) * u - l.height) / 2;
+  var g = ((((null === A || undefined === A ? undefined : A.height) || f.first_row_height) + 2) * u - l.height) / 2;
   if (c[1] <= a.height / 2 + s[1]) {
     c[1] += l.height + g;
     e.classList.add("lower");
@@ -72,7 +72,7 @@ exports.position_dropdown = function (e, t) {
   return c;
 };
 exports.draw_arrow = function (e) {
-  if (void 0 === e) {
+  if (undefined === e) {
     e = "triangle";
   }
   var t = (0, i.create_svg_element)("g", {

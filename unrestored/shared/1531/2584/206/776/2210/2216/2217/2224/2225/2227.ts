@@ -11,13 +11,13 @@ module.exports = function (e, t, n) {
   c.level++;
   var l = "valid" + c.level;
   var f = c.baseId;
-  var d = !0;
+  var d = true;
   var h = i;
   if (h) {
     for (var p, _ = -1, A = h.length - 1; _ < A;) {
       p = h[_ += 1];
-      if (e.opts.strictKeywords ? "object" == typeof p && Object.keys(p).length > 0 || !1 === p : e.util.schemaHasRules(p, e.RULES.all)) {
-        d = !1;
+      if (e.opts.strictKeywords ? "object" == typeof p && Object.keys(p).length > 0 || false === p : e.util.schemaHasRules(p, e.RULES.all)) {
+        d = false;
         c.schema = p;
         c.schemaPath = o + "[" + _ + "]";
         c.errSchemaPath = a + "/" + _;

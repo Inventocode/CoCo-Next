@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.Swatch = void 0;
+exports.Swatch = undefined;
 var r = Object.assign || function (e) {
   for (var t = 1; t < arguments.length; t++) {
     var n = arguments[t];
@@ -26,14 +26,14 @@ var u = exports.Swatch = function (e) {
   var t = e.color;
   var n = e.style;
   var a = e.onClick;
-  var c = void 0 === a ? function () {} : a;
+  var c = undefined === a ? function () {} : a;
   var u = e.onHover;
   var l = e.title;
-  var f = void 0 === l ? t : l;
+  var f = undefined === l ? t : l;
   var d = e.children;
   var h = e.focus;
   var p = e.focusStyle;
-  var _ = void 0 === p ? {} : p;
+  var _ = undefined === p ? {} : p;
   var A = "transparent" === t;
   var g = (0, o.default)({
     default: {

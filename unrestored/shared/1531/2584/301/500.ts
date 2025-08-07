@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.Field = void 0;
+exports.Field = undefined;
 var r = require("tslib");
 var i = require("inversify");
 var o = require("@kitten-team/gl-matrix");
@@ -15,22 +15,22 @@ var l = require("../17/497/index");
 var f = function () {
   function e(e, t) {
     var n;
-    if (void 0 === e) {
+    if (undefined === e) {
       e = "";
     }
     this.field_type = "Field";
-    this.editable = !0;
-    this.visible_ = !0;
+    this.editable = true;
+    this.visible_ = true;
     this.size_ = new c.Size(0, 0);
     this.text_ = "";
-    this.name = void 0;
+    this.name = undefined;
     this.margin_left = this.theme.renderer.SEP_SPACE_X;
     this.render_sep = this.margin_left;
-    this.validator_ = void 0;
+    this.validator_ = undefined;
     this.set_value(e);
     this.validator_ = t;
-    this.max_display_length = (null === (n = this.workspace_db.current) || void 0 === n ? void 0 : n.get_options().field_max_length) || 50;
-    this.value_before_editing = void 0;
+    this.max_display_length = (null === (n = this.workspace_db.current) || undefined === n ? undefined : n.get_options().field_max_length) || 50;
+    this.value_before_editing = undefined;
   }
   e.prototype.set_validator = function (e) {
     this.validator_ = e;
@@ -66,7 +66,7 @@ var f = function () {
     this.size_.width = 0;
     if (this.source_block && this.source_block.rendered) {
       if (this.source_block.is_collapsed()) {
-        this.source_block.update_collapsed(!0);
+        this.source_block.update_collapsed(true);
       } else {
         this.source_block.render();
       }
@@ -79,8 +79,8 @@ var f = function () {
     return this.text_;
   };
   e.prototype.init = function (e, t) {
-    if (void 0 === e) {
-      e = !0;
+    if (undefined === e) {
+      e = true;
     }
     if (!this.field_group && this.source_block) {
       this.field_group = (0, u.create_svg_element)("g", {});
@@ -112,9 +112,9 @@ var f = function () {
         }
       }
       this.update_editable();
-      if (void 0 != this.source_block) {
+      if (undefined != this.source_block) {
         var n = this.source_block.get_svg_root();
-        if (void 0 == n) {
+        if (undefined == n) {
           throw new ReferenceError("Field should have svg root when init.");
         }
         n.appendChild(this.field_group);
@@ -136,11 +136,11 @@ var f = function () {
     }
   };
   e.prototype.get_scaled_bbox = function () {
-    if (void 0 == this.source_block) {
+    if (undefined == this.source_block) {
       throw new ReferenceError("Field has not been insert to workspace.");
     }
     var e = this.source_block.get_workspace();
-    if (void 0 == e) {
+    if (undefined == e) {
       throw new ReferenceError("Field's source block has not been insert to workspace.");
     }
     if (!this.field_group) {
@@ -187,7 +187,7 @@ var f = function () {
     return this.size_;
   };
   e.prototype.layout = function (e, t) {
-    if (void 0 != this.field_group) {
+    if (undefined != this.field_group) {
       e[0] += this.render_sep;
       var n = e[0];
       var r = e[1] + (t - this.size_.height) / 2;
@@ -201,12 +201,12 @@ var f = function () {
   e.prototype.dispose = function () {
     if (this.mouse_down_wrapper) {
       this.events.unbind_event(this.mouse_down_wrapper);
-      this.mouse_down_wrapper = void 0;
+      this.mouse_down_wrapper = undefined;
     }
     delete this.source_block;
-    if (void 0 != this.field_group) {
+    if (undefined != this.field_group) {
       (0, u.remove_node)(this.field_group);
-      this.field_group = void 0;
+      this.field_group = undefined;
     }
     if (this.input_element || this.text_element) {
       if (this.input_element) {
@@ -218,7 +218,7 @@ var f = function () {
       delete this.text_element;
       delete this.input_element;
     }
-    this.validator_ = void 0;
+    this.validator_ = undefined;
   };
   e.prototype.render_ = function () {
     var e;
@@ -232,10 +232,10 @@ var f = function () {
           this.text_element.appendChild(document.createTextNode(this.get_display_text()));
           this.update_width();
           this.update_height();
-          if (!(null === (e = this.border_rect) || void 0 === e)) {
+          if (!(null === (e = this.border_rect) || undefined === e)) {
             e.setAttribute("width", "" + this.size_.width);
           }
-          if (!(null === (t = this.border_rect) || void 0 === t)) {
+          if (!(null === (t = this.border_rect) || undefined === t)) {
             t.setAttribute("height", "" + this.size_.height);
           }
         } else {
@@ -286,12 +286,12 @@ var f = function () {
     return e ? (e.length > this.max_display_length && (e = e.substring(0, this.max_display_length - 2) + "…"), e = e.replace(/\s/g, " ")) : " ";
   };
   e.prototype.call_validator = function (e) {
-    if (void 0 != e) {
+    if (undefined != e) {
       if (!this.validator_) {
         return e;
       }
       var t = this.validator_.call(this, e);
-      if (void 0 != t) {
+      if (undefined != t) {
         return t;
       }
     }
@@ -302,8 +302,8 @@ var f = function () {
     }
   };
   e.prototype.focus = function (e) {
-    if (void 0 === e) {
-      e = !0;
+    if (undefined === e) {
+      e = true;
     }
     if (this.source_block) {
       var t = this.runtime_data.editing;
@@ -311,19 +311,19 @@ var f = function () {
         this.value_before_editing = this.get_value();
         this.runtime_data.editing = this;
       } else {
-        this.value_before_editing = void 0;
-        this.runtime_data.editing = void 0;
+        this.value_before_editing = undefined;
+        this.runtime_data.editing = undefined;
       }
       var n = this.runtime_data.editing;
       if (t && t !== n && this.events.is_enabled()) {
         if (t.value_before_editing) {
-          t.value_before_editing = void 0;
+          t.value_before_editing = undefined;
         }
         this.events.fire(this.ui_event_factory({
           type: s.UIEventType.FIELD_FOCUS_CHANGE,
           workspace_id: this.source_block.workspace.id,
           old_value: this.name,
-          new_value: void 0,
+          new_value: undefined,
           block_id: this.source_block.id
         }));
       }
@@ -331,21 +331,21 @@ var f = function () {
         this.events.fire(this.ui_event_factory({
           type: s.UIEventType.FIELD_FOCUS_CHANGE,
           workspace_id: this.source_block.workspace.id,
-          old_value: void 0,
+          old_value: undefined,
           new_value: this.name,
           block_id: this.source_block.id
         }));
       }
     }
   };
-  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.events)], e.prototype, "events", void 0);
-  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.theme)], e.prototype, "theme", void 0);
-  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.utils)], e.prototype, "utils", void 0);
-  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.workspace_db)], e.prototype, "workspace_db", void 0);
-  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.runtime_data)], e.prototype, "runtime_data", void 0);
-  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.tooltip)], e.prototype, "tooltip", void 0);
-  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.ChangeEvent)], e.prototype, "change_event_factory", void 0);
-  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.UIEvent)], e.prototype, "ui_event_factory", void 0);
+  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.events)], e.prototype, "events", undefined);
+  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.theme)], e.prototype, "theme", undefined);
+  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.utils)], e.prototype, "utils", undefined);
+  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.workspace_db)], e.prototype, "workspace_db", undefined);
+  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.runtime_data)], e.prototype, "runtime_data", undefined);
+  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.tooltip)], e.prototype, "tooltip", undefined);
+  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.ChangeEvent)], e.prototype, "change_event_factory", undefined);
+  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.UIEvent)], e.prototype, "ui_event_factory", undefined);
   return e = (0, r.__decorate)([(0, i.injectable)()], e);
 }();
 exports.Field = f;

@@ -11,10 +11,10 @@ module.exports = function (e, t) {
   function o(e, t) {
     for (var n = 0; n < t.length; n++) {
       var r = t[n];
-      r.enumerable = r.enumerable || !1;
-      r.configurable = !0;
+      r.enumerable = r.enumerable || false;
+      r.configurable = true;
       if ("value" in r) {
-        r.writable = !0;
+        r.writable = true;
       }
       Object.defineProperty(e, r.key, r);
     }
@@ -23,9 +23,9 @@ module.exports = function (e, t) {
     if (t in e) {
       Object.defineProperty(e, t, {
         value: n,
-        enumerable: !0,
-        configurable: !0,
-        writable: !0
+        enumerable: true,
+        configurable: true,
+        writable: true
       });
     } else {
       e[t] = n;
@@ -61,7 +61,7 @@ module.exports = function (e, t) {
     for (var t = 1; t < arguments.length; t++) {
       var n = null != arguments[t] ? arguments[t] : {};
       if (t % 2) {
-        c(Object(n), !0).forEach(function (t) {
+        c(Object(n), true).forEach(function (t) {
           a(e, t, n[t]);
         });
       } else {
@@ -88,7 +88,7 @@ module.exports = function (e, t) {
     })(e, t);
   }
   function d(e) {
-    if (void 0 === e) {
+    if (undefined === e) {
       throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
     }
     return e;
@@ -101,15 +101,15 @@ module.exports = function (e, t) {
     }(e) || function (e, t) {
       if ("undefined" != typeof Symbol && Symbol.iterator in Object(e)) {
         var n = [];
-        var r = !0;
-        var i = !1;
-        var o = void 0;
+        var r = true;
+        var i = false;
+        var o = undefined;
         try {
-          for (var a, s = e[Symbol.iterator](); !(r = (a = s.next()).done) && (n.push(a.value), !t || n.length !== t); r = !0) {
+          for (var a, s = e[Symbol.iterator](); !(r = (a = s.next()).done) && (n.push(a.value), !t || n.length !== t); r = true) {
             ;
           }
         } catch (e) {
-          i = !0;
+          i = true;
           o = e;
         } finally {
           try {
@@ -137,7 +137,7 @@ module.exports = function (e, t) {
       if ("Object" === n && e.constructor) {
         n = e.constructor.name;
       }
-      return "Map" === n || "Set" === n ? Array.from(e) : "Arguments" === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n) ? _(e, t) : void 0;
+      return "Map" === n || "Set" === n ? Array.from(e) : "Arguments" === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n) ? _(e, t) : undefined;
     }
   }
   function _(e, t) {
@@ -216,8 +216,8 @@ module.exports = function (e, t) {
       e.prototype = Object.create(t && t.prototype, {
         constructor: {
           value: e,
-          writable: !0,
-          configurable: !0
+          writable: true,
+          configurable: true
         }
       });
       if (t) {
@@ -229,19 +229,19 @@ module.exports = function (e, t) {
     var n = function (t) {
       var n = function () {
         if ("undefined" == typeof Reflect || !Reflect.construct) {
-          return !1;
+          return false;
         }
         if (Reflect.construct.sham) {
-          return !1;
+          return false;
         }
         if ("function" == typeof Proxy) {
-          return !0;
+          return true;
         }
         try {
           Date.prototype.toString.call(Reflect.construct(Date, [], function () {}));
-          return !0;
+          return true;
         } catch (e) {
-          return !1;
+          return false;
         }
       }();
       return function () {
@@ -261,7 +261,7 @@ module.exports = function (e, t) {
         }
       })(this, r);
       a(d(t = n.call(this, e)), "state", {
-        drag: !1,
+        drag: false,
         my: null,
         mx: null,
         image: E
@@ -273,7 +273,7 @@ module.exports = function (e, t) {
         n.y = .5;
         n.backgroundColor = t.props.backgroundColor;
         t.setState({
-          drag: !1,
+          drag: false,
           image: n
         }, t.props.onImageReady);
         t.props.onLoadSuccess(n);
@@ -287,7 +287,7 @@ module.exports = function (e, t) {
       a(d(t), "handleMouseDown", function (e) {
         (e = e || window.event).preventDefault();
         t.setState({
-          drag: !0,
+          drag: true,
           mx: null,
           my: null
         });
@@ -295,7 +295,7 @@ module.exports = function (e, t) {
       a(d(t), "handleMouseUp", function () {
         if (t.state.drag) {
           t.setState({
-            drag: !1
+            drag: false
           });
           t.props.onMouseUp();
         }
@@ -318,7 +318,7 @@ module.exports = function (e, t) {
         var g;
         var v;
         e = e || window.event;
-        if (!1 !== t.state.drag) {
+        if (false !== t.state.drag) {
           e.preventDefault();
           i = {
             mx: n = e.targetTouches ? e.targetTouches[0].pageX : e.clientX,
@@ -373,21 +373,21 @@ module.exports = function (e, t) {
         this.paint(n);
         if (document) {
           e = !!function () {
-            var e = !1;
+            var e = false;
             try {
               var t = Object.defineProperty({}, "passive", {
                 get: function () {
-                  e = !0;
+                  e = true;
                 }
               });
               window.addEventListener("test", t, t);
               window.removeEventListener("test", t, t);
             } catch (t) {
-              e = !1;
+              e = false;
             }
             return e;
           }() && {
-            passive: !1
+            passive: false
           };
           t = b.native;
           document.addEventListener(t.move, this.handleMouseMove, e);
@@ -422,11 +422,11 @@ module.exports = function (e, t) {
         var e;
         if (document) {
           e = b.native;
-          document.removeEventListener(e.move, this.handleMouseMove, !1);
-          document.removeEventListener(e.up, this.handleMouseUp, !1);
+          document.removeEventListener(e.move, this.handleMouseMove, false);
+          document.removeEventListener(e.up, this.handleMouseUp, false);
           if (v) {
-            document.removeEventListener(e.mouseMove, this.handleMouseMove, !1);
-            document.removeEventListener(e.mouseUp, this.handleMouseUp, !1);
+            document.removeEventListener(e.mouseMove, this.handleMouseMove, false);
+            document.removeEventListener(e.mouseUp, this.handleMouseUp, false);
           }
         }
       }
@@ -438,7 +438,7 @@ module.exports = function (e, t) {
     }, {
       key: "getBorders",
       value: function (e) {
-        var t = 0 < arguments.length && void 0 !== e ? e : this.props.border;
+        var t = 0 < arguments.length && undefined !== e ? e : this.props.border;
         return Array.isArray(t) ? t : [t, t];
       }
     }, {
@@ -606,7 +606,7 @@ module.exports = function (e, t) {
       key: "paintImage",
       value: function (e, t, n, r) {
         var i;
-        var o = 3 < arguments.length && void 0 !== r ? r : w;
+        var o = 3 < arguments.length && undefined !== r ? r : w;
         if (t.resource) {
           i = this.calculatePosition(t, n);
           e.save();
@@ -830,9 +830,9 @@ module.exports = function (e, t) {
     onMouseUp: function () {},
     onMouseMove: function () {},
     onPositionChange: function () {},
-    disableBoundaryChecks: !1,
-    disableHiDPIScaling: !1,
-    disableCanvasRotation: !0
+    disableBoundaryChecks: false,
+    disableHiDPIScaling: false,
+    disableCanvasRotation: true
   });
   return x;
 }(require("../50/index"), require("react"));

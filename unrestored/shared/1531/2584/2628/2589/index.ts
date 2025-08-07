@@ -1,9 +1,9 @@
 "use strict";
 
 export { f as a };
-var r = require("./183");
-var i = require("./1166");
-var o = require("./792");
+import r = require("./183");
+import i = require("./1166");
+import o = require("./792");
 var a = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -16,17 +16,17 @@ var a = function __importDefault(module) {
   });
   return defaultExport;
 }(o);
-var s = require("../1440/index");
+import s = require("../1440/index");
 function c(e, t) {
   return t ? Object.keys(e).reduce(function (n, i) {
     var o;
     var a;
-    n[i] = (o = e[i], (a = t[i]) ? Object(r.a)(Object(r.a)(Object(r.a)({}, o || {}), a || {}), Object.keys(o).reduce(function (e, t) {
-      e[t] = Object(r.a)(Object(r.a)({}, o[t]), a[t] || {});
+    n[i] = (o = e[i], (a = t[i]) ? r.a(r.a(r.a({}, o || {}), a || {}), Object.keys(o).reduce(function (e, t) {
+      e[t] = r.a(r.a({}, o[t]), a[t] || {});
       return e;
     }, {})) : o);
     return n;
-  }, Object(r.a)({}, e)) : e;
+  }, r.a({}, e)) : e;
 }
 function u(e) {
   return {
@@ -50,7 +50,7 @@ var f = function () {
   function e(t, n, i, o) {
     var a;
     var f = this;
-    if (void 0 === n) {
+    if (undefined === n) {
       n = e.defaultLocale;
     }
     this.formatterCache = {
@@ -74,7 +74,7 @@ var f = function () {
       return n.length <= 1 ? n[0] || "" : n;
     };
     this.formatToParts = function (e) {
-      return Object(s.a)(f.ast, f.locales, f.formatters, f.formats, e, void 0, f.message);
+      return s.a(f.ast, f.locales, f.formatters, f.formats, e, undefined, f.message);
     };
     this.resolvedOptions = function () {
       return {
@@ -90,8 +90,8 @@ var f = function () {
         throw new TypeError("IntlMessageFormat.__parse must be set to process `message` of type `string`");
       }
       this.ast = e.__parse(t, {
-        normalizeHashtagInPlural: !1,
-        ignoreTag: null === o || void 0 === o ? void 0 : o.ignoreTag
+        normalizeHashtagInPlural: false,
+        ignoreTag: null === o || undefined === o ? undefined : o.ignoreTag
       });
     } else {
       this.ast = t;
@@ -101,7 +101,7 @@ var f = function () {
     }
     this.formats = c(e.formats, i);
     this.locales = n;
-    this.formatters = o && o.formatters || (void 0 === (a = this.formatterCache) && (a = {
+    this.formatters = o && o.formatters || (undefined === (a = this.formatterCache) && (a = {
       number: {},
       dateTime: {},
       pluralRules: {}
@@ -110,7 +110,7 @@ var f = function () {
         for (var e, t = [], n = 0; n < arguments.length; n++) {
           t[n] = arguments[n];
         }
-        return new ((e = Intl.NumberFormat).bind.apply(e, Object(r.c)([void 0], t)))();
+        return new ((e = Intl.NumberFormat).bind.apply(e, r.c([undefined], t)))();
       }, {
         cache: u(a.number),
         strategy: l.strategies.variadic
@@ -119,7 +119,7 @@ var f = function () {
         for (var e, t = [], n = 0; n < arguments.length; n++) {
           t[n] = arguments[n];
         }
-        return new ((e = Intl.DateTimeFormat).bind.apply(e, Object(r.c)([void 0], t)))();
+        return new ((e = Intl.DateTimeFormat).bind.apply(e, r.c([undefined], t)))();
       }, {
         cache: u(a.dateTime),
         strategy: l.strategies.variadic
@@ -128,7 +128,7 @@ var f = function () {
         for (var e, t = [], n = 0; n < arguments.length; n++) {
           t[n] = arguments[n];
         }
-        return new ((e = Intl.PluralRules).bind.apply(e, Object(r.c)([void 0], t)))();
+        return new ((e = Intl.PluralRules).bind.apply(e, r.c([undefined], t)))();
       }, {
         cache: u(a.pluralRules),
         strategy: l.strategies.variadic
@@ -142,8 +142,8 @@ var f = function () {
       }
       return e.memoizedDefaultLocale;
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   e.memoizedDefaultLocale = null;
   e.__parse = i.a;

@@ -45,16 +45,16 @@ var showCodemaoAgreement = /*#__PURE__*/function () {
             __WEBPACK_IMPORTED_MODULE_3_react_dom___default.render(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_2_react___default.createElement(__WEBPACK_IMPORTED_MODULE_2_react___default.Suspense, {
               fallback: null
             }, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_2_react___default.createElement(CodemaoAgreement, {
-              onSignSuccess: options === null || options === void 0 ? void 0 : options.onSignSuccess,
-              onSignError: options === null || options === void 0 ? void 0 : options.onSignError,
-              entryDialogText: options === null || options === void 0 ? void 0 : options.entryDialogText,
+              onSignSuccess: options === null || options === undefined ? undefined : options.onSignSuccess,
+              onSignError: options === null || options === undefined ? undefined : options.onSignError,
+              entryDialogText: options === null || options === undefined ? undefined : options.entryDialogText,
               onClose: function onClose() {
                 // Dialog关闭后不会自动从DOM移除
                 // 此弹窗仅会出现一次，因此我们将它彻底卸载
                 setTimeout(closeFn, 0);
-                if (options === null || options === void 0 ? void 0 : options.onClose) {
-                  if (options === null || options === void 0) {
-                    void 0;
+                if (options === null || options === undefined ? undefined : options.onClose) {
+                  if (options === null || options === undefined) {
+                    undefined;
                   } else {
                     options.onClose();
                   }

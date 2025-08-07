@@ -4,7 +4,7 @@ var i = require("./241");
 var a = require("./386/index");
 r({
   target: "Reflect",
-  stat: !0,
+  stat: true,
   sham: !o
 }, {
   getOwnPropertyDescriptor: function (e, t) {

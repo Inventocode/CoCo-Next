@@ -9,14 +9,14 @@ var c = require("./1623/300");
 if (o) {
   r({
     target: "Object",
-    proto: !0,
+    proto: true,
     forced: i
   }, {
     __defineGetter__: function (e, t) {
       c.f(a(this), e, {
         get: s(t),
-        enumerable: !0,
-        configurable: !0
+        enumerable: true,
+        configurable: true
       });
     }
   });

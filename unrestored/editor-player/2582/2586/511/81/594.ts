@@ -13,7 +13,7 @@ var i = function (t) {
     return {
       next: function () {
         if (t && n >= t.length) {
-          t = void 0;
+          t = undefined;
         }
         return {
           value: t && t[n++],
@@ -77,23 +77,23 @@ var a = function () {
   };
   t.prototype.equals = function (e) {
     if (!(e instanceof t)) {
-      return !1;
+      return false;
     }
     var r = e;
     if (this.width !== r.width) {
-      return !1;
+      return false;
     }
     if (this.height !== r.height) {
-      return !1;
+      return false;
     }
     for (var n = 0, o = this.height; n < o; ++n) {
       for (var i = this.bytes[n], a = r.bytes[n], u = 0, s = this.width; u < s; ++u) {
         if (i[u] !== a[u]) {
-          return !1;
+          return false;
         }
       }
     }
-    return !0;
+    return true;
   };
   t.prototype.toString = function () {
     for (var t = new o.a(), e = 0, r = this.height; e < r; ++e) {

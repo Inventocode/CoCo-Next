@@ -1,19 +1,19 @@
 "use strict";
 
 export { i as a };
-var r = require("./10/768");
+import r = require("./10/768");
 function i(e) {
   if ("undefined" === typeof Symbol || null == e[Symbol.iterator]) {
-    if (Array.isArray(e) || (e = Object(r.a)(e))) {
+    if (Array.isArray(e) || (e = r.a(e))) {
       var t = 0;
       var n = function () {};
       return {
         s: n,
         n: function () {
           return t >= e.length ? {
-            done: !0
+            done: true
           } : {
-            done: !1,
+            done: false,
             value: e[t++]
           };
         },
@@ -27,8 +27,8 @@ function i(e) {
   }
   var i;
   var o;
-  var a = !0;
-  var s = !1;
+  var a = true;
+  var s = false;
   return {
     s: function () {
       i = e[Symbol.iterator]();
@@ -39,7 +39,7 @@ function i(e) {
       return e;
     },
     e: function (e) {
-      s = !0;
+      s = true;
       o = e;
     },
     f: function () {

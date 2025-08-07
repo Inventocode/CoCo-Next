@@ -4,7 +4,7 @@ module.exports = function (e, t, n) {
   var i;
   r(e);
   try {
-    if (void 0 === (o = e.return)) {
+    if (undefined === (o = e.return)) {
       if ("throw" === t) {
         throw n;
       }
@@ -12,7 +12,7 @@ module.exports = function (e, t, n) {
     }
     o = o.call(e);
   } catch (a) {
-    i = !0;
+    i = true;
     o = a;
   }
   if ("throw" === t) {

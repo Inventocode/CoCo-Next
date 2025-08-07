@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.TOOLBOX_POSITION = exports.DeleteArea = void 0;
+exports.TOOLBOX_POSITION = exports.DeleteArea = undefined;
 (function (e) {
   e[e.DELETE_AREA_NONE = 0] = "DELETE_AREA_NONE";
   e[e.DELETE_AREA_TOOLBOX = 2] = "DELETE_AREA_TOOLBOX";

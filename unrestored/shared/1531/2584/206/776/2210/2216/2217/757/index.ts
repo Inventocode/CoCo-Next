@@ -29,11 +29,11 @@ module.exports = {
   checkDataTypes: function (e, t, n) {
     switch (e.length) {
       case 1:
-        return r(e[0], t, n, !0);
+        return r(e[0], t, n, true);
       default:
         var i = "",
           a = o(e);
-        for (var s in a.array && a.object && (i = a.null ? "(" : "(!" + t + " || ", i += "typeof " + t + " !== \"object\")", delete a.null, delete a.array, delete a.object), a.number && delete a.integer, a) i += (i ? " && " : "") + r(s, t, n, !0);
+        for (var s in a.array && a.object && (i = a.null ? "(" : "(!" + t + " || ", i += "typeof " + t + " !== \"object\")", delete a.null, delete a.array, delete a.object), a.number && delete a.integer, a) i += (i ? " && " : "") + r(s, t, n, true);
         return i;
     }
   },
@@ -77,7 +77,7 @@ module.exports = {
       return !e;
     }
     for (var n in e) if (t[n]) {
-      return !0;
+      return true;
     }
   },
   schemaHasRulesExcept: function (e, t, n) {
@@ -85,7 +85,7 @@ module.exports = {
       return !e && "not" != n;
     }
     for (var r in e) if (r != n && t[r]) {
-      return !0;
+      return true;
     }
   },
   schemaUnknownRules: function (e, t) {
@@ -158,7 +158,7 @@ module.exports = {
 var i = o(["string", "number", "integer", "boolean", "null"]);
 function o(e) {
   for (var t = {}, n = 0; n < e.length; n++) {
-    t[e[n]] = !0;
+    t[e[n]] = true;
   }
   return t;
 }

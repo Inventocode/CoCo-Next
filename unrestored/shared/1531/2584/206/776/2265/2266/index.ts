@@ -63,17 +63,17 @@ var s = function () {
       var l = Object.create(null);
       var f = [[i, 0]];
       var d = null;
-      var h = !1;
+      var h = false;
       var p = {
         skip: function () {
           if (f.length <= 1) {
-            h = !0;
+            h = true;
           } else {
             d = f[f.length - 2][0];
           }
         },
         break: function () {
-          h = !0;
+          h = true;
         }
       };
       function _(e) {
@@ -94,7 +94,7 @@ var s = function () {
           if (d && -1 !== u.prevSegments.indexOf(d)) {
             d = null;
           }
-          l[u.id] = !0;
+          l[u.id] = true;
           if (!d && (r.call(this, u, p), u === o && p.skip(), h)) {
             break;
           }

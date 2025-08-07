@@ -5,7 +5,7 @@ var a = i.toString;
 var s = /^\s*function ([^ (]*)/;
 if (r && !("name" in i)) {
   o(i, "name", {
-    configurable: !0,
+    configurable: true,
     get: function () {
       try {
         return a.call(this).match(s)[1];

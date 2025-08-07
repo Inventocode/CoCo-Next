@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.ProcedurePlugin = void 0;
+exports.ProcedurePlugin = undefined;
 var r = require("tslib");
 var i = (0, r.__importStar)(require("../../../17/533"));
 var o = require("../../../301/173");
@@ -20,7 +20,7 @@ var f = function (e) {
   t.prototype.before_handle_event_group = function (e) {
     for (var t = new Map(), n = 0; n < e.length;) {
       var r = e[n];
-      if (void 0 !== r) {
+      if (undefined !== r) {
         if (r.type !== i.BlockEventType.CREATE) {
           if (r.type === i.BlockEventType.CHANGE) {
             if ("procedure_rename" !== r.element && "field" !== r.element) {
@@ -29,7 +29,7 @@ var f = function (e) {
             }
             u = r.get_block_id();
             var a = t.get(u);
-            if (void 0 !== a) {
+            if (undefined !== a) {
               var s = r.get_new_value();
               var c = e[a].get_element_json();
               if ("string" === typeof s) {
@@ -68,7 +68,7 @@ var f = function (e) {
       var d = new Map();
       i.pick_ops.forEach(function (e) {
         var t = u.analyze_path("pick", e.path);
-        if (void 0 !== t) {
+        if (undefined !== t) {
           var n = t.event_type;
           var r = t.normalized_path;
           switch (n) {
@@ -77,7 +77,7 @@ var f = function (e) {
               break;
             case l.EventType.DELETE_BLOCK:
               var i = o.get(r.target_id);
-              if (void 0 === i) {
+              if (undefined === i) {
                 o.set(r.target_id, -1);
               } else {
                 o.set(r.target_id, i - 1);
@@ -91,13 +91,13 @@ var f = function (e) {
       });
       i.drop_ops.forEach(function (e) {
         var t = u.analyze_path("drop", e.path);
-        if (void 0 !== t) {
+        if (undefined !== t) {
           var n = t.event_type;
           var r = t.normalized_path;
           switch (n) {
             case l.EventType.CREATE_BLOCK:
               var i = o.get(r.target_id);
-              if (void 0 === i) {
+              if (undefined === i) {
                 o.set(r.target_id, 1);
               } else {
                 o.set(r.target_id, i + 1);
@@ -162,8 +162,8 @@ var f = function (e) {
         if (i.name !== r) {
           this.procedure_manager.rename_procedure(i.name, r);
         }
-        i.disabled = !1;
-        i.valid = !0;
+        i.disabled = false;
+        i.valid = true;
         i.base_name = i.name;
       } else {
         i = this.procedure_manager.add_procedure_def(r, n.id);
@@ -203,7 +203,7 @@ var f = function (e) {
       var r = this.json.get_block_data_by_id(this.ws_json, t);
       if (r) {
         var i = Object.keys(r.blocks).filter(function (e) {
-          return r.blocks[e].type === o.PROCEDURE_BLOCK_TYPES.RETURN && void 0 !== r.blocks[e].shadows.VALUE;
+          return r.blocks[e].type === o.PROCEDURE_BLOCK_TYPES.RETURN && undefined !== r.blocks[e].shadows.VALUE;
         }).length;
         if (!(i < 1)) {
           for (var a = this.ws_json.blocks[n]; a.parent_id;) {
@@ -249,7 +249,7 @@ var f = function (e) {
         var c = i.fields[o.PROCEDURE_BLOCK_FIELD_NAMES.PARAM_DEFAULT_VALUE].slice(1);
         a.push({
           param_name: s,
-          default_value: c || void 0
+          default_value: c || undefined
         });
       }
     });
@@ -259,14 +259,14 @@ var f = function (e) {
     var t = this.json.get_block_data_by_id(this.ws_json, e);
     if (t) {
       var n = Object.keys(t.blocks).filter(function (e) {
-        return t.blocks[e].type === o.PROCEDURE_BLOCK_TYPES.RETURN && void 0 !== t.blocks[e].shadows.VALUE;
+        return t.blocks[e].type === o.PROCEDURE_BLOCK_TYPES.RETURN && undefined !== t.blocks[e].shadows.VALUE;
       }).length;
       var r = this.procedure_manager.get_procedure_by_def(e);
       (0, c.assert)(r);
       r.return_count = n;
     }
   };
-  (0, r.__decorate)([(0, a.lazy_inject)(s.BINDING.json)], t.prototype, "json", void 0);
+  (0, r.__decorate)([(0, a.lazy_inject)(s.BINDING.json)], t.prototype, "json", undefined);
   return t;
 }(require("./1135").BasePlugin);
 exports.ProcedurePlugin = f;

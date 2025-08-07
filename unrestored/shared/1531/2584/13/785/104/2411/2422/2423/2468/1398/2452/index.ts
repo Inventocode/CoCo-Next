@@ -18,10 +18,10 @@ module.exports = function (e, t, n, h, p, _) {
   var w = v == m;
   if (w && u(e)) {
     if (!u(t)) {
-      return !1;
+      return false;
     }
-    A = !0;
-    y = !1;
+    A = true;
+    y = false;
   }
   if (w && !y) {
     if (!_) {

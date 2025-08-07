@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.decompressFrames = exports.decompressFrame = exports.parseGIF = void 0;
+exports.decompressFrames = exports.decompressFrame = exports.parseGIF = undefined;
 var r;
 var o = (r = require("./2573")) && r.__esModule ? r : {
   default: r

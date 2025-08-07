@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.adjust_bboxes_for_rtl = exports.get_computed_style = exports.get_style = exports.get_size = exports.get_viewport_page_offset = void 0;
+exports.adjust_bboxes_for_rtl = exports.get_computed_style = exports.get_style = exports.get_size = exports.get_viewport_page_offset = undefined;
 var r = require("@kitten-team/gl-matrix");
 var i = require("./index");
 var o = require("./474");
@@ -11,7 +11,7 @@ function a(e) {
   var t = e.offsetWidth;
   var n = e.offsetHeight;
   var r = o.is.webkit() && !t && !n;
-  if ((void 0 != t || r) && e.getBoundingClientRect) {
+  if ((undefined != t || r) && e.getBoundingClientRect) {
     var i = e.getBoundingClientRect();
     return {
       width: i.right - i.left,
@@ -25,13 +25,13 @@ function a(e) {
 }
 function s(e, t) {
   return c(e, t) || function (e, t) {
-    return e.currentStyle ? e.currentStyle[t] : void 0;
+    return e.currentStyle ? e.currentStyle[t] : undefined;
   }(e, t) || e.style && e.style[Number(t)];
 }
 function c(e, t) {
   var n = (0, i.get_owner_document)(e);
   if (n.defaultView && n.defaultView.getComputedStyle) {
-    var r = n.defaultView.getComputedStyle(e, void 0);
+    var r = n.defaultView.getComputedStyle(e, undefined);
     if (r) {
       return r[Number(t)] || r.getPropertyValue(t) || "";
     }

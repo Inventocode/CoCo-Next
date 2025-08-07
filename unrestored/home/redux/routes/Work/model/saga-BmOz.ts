@@ -866,7 +866,7 @@ function handleRenameWork(action) {
   }, _marked9, this, [[1, 40]]);
 }
 function getWorkBcmUrl(id) {
-  return __awaiter(this, void 0, void 0, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.mark(function _callee() {
+  return __awaiter(this, undefined, undefined, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.mark(function _callee() {
     var url;
     var result;
     return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.wrap(function _callee$(_context10) {
@@ -911,7 +911,7 @@ function getWorkBcmUrl(id) {
   }));
 }
 function getWorkBcmJson(bcmUrl) {
-  return __awaiter(this, void 0, void 0, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.mark(function _callee2() {
+  return __awaiter(this, undefined, undefined, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.mark(function _callee2() {
     var bcmRes;
     var json;
     return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.wrap(function _callee2$(_context11) {
@@ -936,7 +936,7 @@ function getWorkBcmJson(bcmUrl) {
   }));
 }
 function updateProject(params) {
-  return __awaiter(this, void 0, void 0, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.mark(function _callee3() {
+  return __awaiter(this, undefined, undefined, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.mark(function _callee3() {
     var name;
     var content;
     var id;

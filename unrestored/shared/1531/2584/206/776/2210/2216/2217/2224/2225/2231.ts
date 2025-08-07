@@ -18,16 +18,16 @@ module.exports = function (e, t, n) {
   var A = h.dataLevel = e.dataLevel + 1;
   var g = "data" + A;
   var v = e.baseId;
-  var m = e.opts.strictKeywords ? "object" == typeof a && Object.keys(a).length > 0 || !1 === a : e.util.schemaHasRules(a, e.RULES.all);
+  var m = e.opts.strictKeywords ? "object" == typeof a && Object.keys(a).length > 0 || false === a : e.util.schemaHasRules(a, e.RULES.all);
   r += "var " + d + " = errors;var " + f + ";";
   if (m) {
     var y = e.compositeRule;
-    e.compositeRule = h.compositeRule = !0;
+    e.compositeRule = h.compositeRule = true;
     h.schema = a;
     h.schemaPath = s;
     h.errSchemaPath = c;
     r += " var " + p + " = false; for (var " + _ + " = 0; " + _ + " < " + l + ".length; " + _ + "++) { ";
-    h.errorPath = e.util.getPathExpr(e.errorPath, _, e.opts.jsonPointers, !0);
+    h.errorPath = e.util.getPathExpr(e.errorPath, _, e.opts.jsonPointers, true);
     var b = l + "[" + _ + "]";
     h.dataPathArr[A] = _;
     var w = e.validate(h);
@@ -46,9 +46,9 @@ module.exports = function (e, t, n) {
   var E = E || [];
   E.push(r);
   r = "";
-  if (!1 !== e.createErrors) {
+  if (false !== e.createErrors) {
     r += " { keyword: 'contains' , dataPath: (dataPath || '') + " + e.errorPath + " , schemaPath: " + e.util.toQuotedString(c) + " , params: {} ";
-    if (!1 !== e.opts.messages) {
+    if (false !== e.opts.messages) {
       r += " , message: 'should contain a valid item' ";
     }
     if (e.opts.verbose) {

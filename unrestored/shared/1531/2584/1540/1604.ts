@@ -6,7 +6,7 @@ var s = Math.exp;
 var c = Math.E;
 r({
   target: "Math",
-  stat: !0,
+  stat: true,
   forced: o(function () {
     return -2e-17 != Math.sinh(-2e-17);
   })

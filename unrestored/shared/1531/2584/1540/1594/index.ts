@@ -5,7 +5,7 @@ var a = Math.abs;
 var s = Math.E;
 r({
   target: "Math",
-  stat: !0,
+  stat: true,
   forced: !i || i(710) === 1 / 0
 }, {
   cosh: function (e) {

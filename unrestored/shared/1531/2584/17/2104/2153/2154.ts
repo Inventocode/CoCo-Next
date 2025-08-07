@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.TreeNode = void 0;
+exports.TreeNode = undefined;
 var r = require("tslib");
 var i = require("../../../4/127");
 var o = require("../../../1001/213/index");
@@ -18,7 +18,7 @@ var s = function (e) {
     };
     r.blocks = [];
     var i = {
-      text: void 0,
+      text: undefined,
       name: "",
       color: "",
       secondary_color: r.theme.flyout.BACKGROUND_COLOR.toString(),
@@ -30,16 +30,16 @@ var s = function (e) {
         selected_style: ""
       },
       icon: {
-        style: void 0,
-        selected_style: void 0,
-        html: void 0,
-        selected_html: void 0,
-        font_id: void 0,
-        selected_font_id: void 0
+        style: undefined,
+        selected_style: undefined,
+        html: undefined,
+        selected_html: undefined,
+        font_id: undefined,
+        selected_font_id: undefined
       },
       children: [],
       blocks: [],
-      selectable: !0
+      selectable: true
     };
     if (n.text) {
       n.text = r.utils.replace_message_references(n.text);
@@ -92,7 +92,7 @@ var s = function (e) {
     if (this.config_.element.style) {
       this.element_.setAttribute("style", this.config_.element.style);
     }
-    if (void 0 != this.config_.text) {
+    if (undefined != this.config_.text) {
       var e = document.createElement("div");
       e.classList.add("blocklyTreeLabel");
       e.textContent = this.config_.text;
@@ -103,7 +103,7 @@ var s = function (e) {
     this.html_div.appendChild(this.element_);
     this.html_div.appendChild(this.children_container_);
     this.element_.className = this.get_node_classname();
-    this.set_expanded(!1);
+    this.set_expanded(false);
   };
   t.prototype.get_blocks = function (e) {
     return this.blocks;
@@ -123,12 +123,12 @@ var s = function (e) {
   };
   t.prototype.select = function () {
     if (!this.disabled_) {
-      this.selected_ = !0;
+      this.selected_ = true;
       this.update_node();
     }
   };
   t.prototype.unselect = function () {
-    this.selected_ = !1;
+    this.selected_ = false;
     this.update_node();
   };
   t.prototype.set_disabled = function (e) {
@@ -147,14 +147,14 @@ var s = function (e) {
       if (this.config_.element.selected_style) {
         this.element_.setAttribute("style", this.config_.element.selected_style);
       }
-      if (void 0 != this.config_.icon.selected_style) {
+      if (undefined != this.config_.icon.selected_style) {
         this.icon_el.setAttribute("style", this.config_.icon.selected_style);
       }
-      if (void 0 != this.config_.icon.selected_font_id) {
+      if (undefined != this.config_.icon.selected_font_id) {
         (0, a.remove_children)(this.icon_el);
         (0, a.create_font_icon)(this.config_.icon.selected_font_id, this.icon_el);
       } else {
-        if (void 0 != this.config_.icon.selected_html) {
+        if (undefined != this.config_.icon.selected_html) {
           this.icon_el.innerHTML = this.config_.icon.selected_html;
         }
       }
@@ -184,7 +184,7 @@ var s = function (e) {
       e.splice(t, 1);
     }
     this.html_div.remove();
-    this.set_tree(void 0);
+    this.set_tree(undefined);
   };
   t.prototype.find_node_by_name = function (e) {
     if (this.name_ === e) {
@@ -201,8 +201,8 @@ var s = function (e) {
       }
     }
   };
-  (0, r.__decorate)([(0, i.lazy_inject)(i.BINDING.theme)], t.prototype, "theme", void 0);
-  (0, r.__decorate)([(0, i.lazy_inject)(i.BINDING.utils)], t.prototype, "utils", void 0);
+  (0, r.__decorate)([(0, i.lazy_inject)(i.BINDING.theme)], t.prototype, "theme", undefined);
+  (0, r.__decorate)([(0, i.lazy_inject)(i.BINDING.utils)], t.prototype, "utils", undefined);
   return t;
 }(require("./1323").BaseNode);
 exports.TreeNode = s;

@@ -11,16 +11,16 @@ module.exports = function (e, t, n) {
   var d;
   var h;
   var p = 0;
-  var _ = !1;
-  var A = !1;
-  var g = !0;
+  var _ = false;
+  var A = false;
+  var g = true;
   if ("function" != typeof e) {
     throw new TypeError("Expected a function");
   }
   function v(t) {
     var n = c;
     var r = u;
-    c = u = void 0;
+    c = u = undefined;
     p = t;
     return f = e.apply(r, n);
   }
@@ -31,7 +31,7 @@ module.exports = function (e, t, n) {
   }
   function y(e) {
     var n = e - h;
-    return void 0 === h || n >= t || n < 0 || A && e - p >= l;
+    return undefined === h || n >= t || n < 0 || A && e - p >= l;
   }
   function b() {
     var e = i();
@@ -44,8 +44,8 @@ module.exports = function (e, t, n) {
     }(e));
   }
   function w(e) {
-    d = void 0;
-    return g && c ? v(e) : (c = u = void 0, f);
+    d = undefined;
+    return g && c ? v(e) : (c = u = undefined, f);
   }
   function E() {
     var e = i();
@@ -54,7 +54,7 @@ module.exports = function (e, t, n) {
     u = this;
     h = e;
     if (n) {
-      if (void 0 === d) {
+      if (undefined === d) {
         return m(h);
       }
       if (A) {
@@ -63,7 +63,7 @@ module.exports = function (e, t, n) {
         return v(h);
       }
     }
-    if (void 0 === d) {
+    if (undefined === d) {
       d = setTimeout(b, t);
     }
     return f;
@@ -75,14 +75,14 @@ module.exports = function (e, t, n) {
     g = "trailing" in n ? !!n.trailing : g;
   }
   E.cancel = function () {
-    if (void 0 !== d) {
+    if (undefined !== d) {
       clearTimeout(d);
     }
     p = 0;
-    c = h = u = d = void 0;
+    c = h = u = d = undefined;
   };
   E.flush = function () {
-    return void 0 === d ? f : w(i());
+    return undefined === d ? f : w(i());
   };
   return E;
 };

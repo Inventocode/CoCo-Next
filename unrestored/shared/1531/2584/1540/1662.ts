@@ -3,7 +3,7 @@ var o = require("./1659/241");
 var i = Object.isExtensible;
 r({
   target: "Reflect",
-  stat: !0
+  stat: true
 }, {
   isExtensible: function (e) {
     o(e);

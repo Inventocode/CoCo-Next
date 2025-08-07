@@ -1,17 +1,17 @@
 "use strict";
 
-var r = require("../29");
-var o = require("../33/index");
-var i = require("../54");
-var a = require("react");
-var s = require("../20");
-var c = require("../19");
-var l = require("../95");
-var u = require("../96");
-var d = require("../103");
-var p = require("../120");
-var f = require("../140");
-var h = require("../75/index");
+import r = require("../29");
+import o = require("../33/index");
+import i = require("../54");
+import a = require("react");
+import s = require("../20");
+import c = require("../19");
+import l = require("../95");
+import u = require("../96");
+import d = require("../103");
+import p = require("../120");
+import f = require("../140");
+import h = require("../75/index");
 var m = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -24,13 +24,13 @@ var m = function __importDefault(module) {
   });
   return defaultExport;
 }(h);
-var g = require("../1504/228");
-var _ = require("./558");
-var v = require("../1504/478");
-var b = require("./428");
-var y = require("./488");
-var E = require("./999");
-var O = require("../8");
+import g = require("../1504/228");
+import _ = require("./558");
+import v = require("../1504/478");
+import b = require("./428");
+import y = require("./488");
+import E = require("./999");
+import O = require("../8");
 var w = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -46,9 +46,9 @@ var w = function __importDefault(module) {
 function C(e, t, n) {
   return n ? e[0] === t[0] : e[0] === t[0] && e[1] === t[1];
 }
-var T = require("./1000");
-var S = require("../108");
-var I = require("./378");
+import T = require("./1000");
+import S = require("../108");
+import I = require("./378");
 function A(e, t) {
   var n = {};
   n[e.toLowerCase()] = t.toLowerCase();
@@ -72,9 +72,9 @@ var j = function (e, t) {
     }
   }
   return n;
-}(Object(I.a)(), "undefined" !== typeof window ? window : {});
+}(I.a(), "undefined" !== typeof window ? window : {});
 var N = {};
-if (Object(I.a)()) {
+if (I.a()) {
   var R = document.createElement("div");
   N = R.style;
 }
@@ -101,19 +101,19 @@ var L = !(!D || !M);
 var P = D || "animationend";
 var B = M || "transitionend";
 function F(e, t) {
-  return e ? "object" === Object(S.a)(e) ? e[t.replace(/-\w/g, function (e) {
+  return e ? "object" === S.a(e) ? e[t.replace(/-\w/g, function (e) {
     return e[1].toUpperCase();
   })] : "".concat(e, "-").concat(t) : null;
 }
 function G(e) {
-  var t = Object(a.useRef)(!1);
-  var n = Object(a.useState)(e);
-  var r = Object(o.a)(n, 2);
+  var t = a.useRef(false);
+  var n = a.useState(e);
+  var r = o.a(n, 2);
   var i = r[0];
   var s = r[1];
-  Object(a.useEffect)(function () {
+  a.useEffect(function () {
     return function () {
-      t.current = !0;
+      t.current = true;
     };
   }, []);
   return [i, function (e) {
@@ -122,14 +122,14 @@ function G(e) {
     }
   }];
 }
-var U = Object(I.a)() ? a.useLayoutEffect : a.useEffect;
+var U = I.a() ? a.useLayoutEffect : a.useEffect;
 var W = ["prepare", "start", "active", "end"];
 function H(e) {
   return "active" === e || "end" === e;
 }
 var V = function (e, t) {
   var n = a.useState("none");
-  var r = Object(o.a)(n, 2);
+  var r = o.a(n, 2);
   var i = r[0];
   var s = r[1];
   var c = function () {
@@ -143,9 +143,9 @@ var V = function (e, t) {
       };
     }, []);
     return [function n(r) {
-      var o = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
+      var o = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : 2;
       t();
-      var i = Object(g.a)(function () {
+      var i = g.a(function () {
         if (o <= 1) {
           r({
             isCanceled: function () {
@@ -159,7 +159,7 @@ var V = function (e, t) {
       e.current = i;
     }, t];
   }();
-  var l = Object(o.a)(c, 2);
+  var l = o.a(c, 2);
   var u = l[0];
   var d = l[1];
   U(function () {
@@ -167,7 +167,7 @@ var V = function (e, t) {
       var e = W.indexOf(i);
       var n = W[e + 1];
       var r = t(i);
-      if (!1 === r) {
+      if (false === r) {
         s(n);
       } else {
         u(function (e) {
@@ -176,7 +176,7 @@ var V = function (e, t) {
               s(n);
             }
           }
-          if (!0 === r) {
+          if (true === r) {
             t();
           } else {
             Promise.resolve(r).then(t);
@@ -196,11 +196,11 @@ var V = function (e, t) {
 };
 function z(e, t, n, i) {
   var c = i.motionEnter;
-  var l = void 0 === c || c;
+  var l = undefined === c || c;
   var u = i.motionAppear;
-  var d = void 0 === u || u;
+  var d = undefined === u || u;
   var p = i.motionLeave;
-  var f = void 0 === p || p;
+  var f = undefined === p || p;
   var h = i.motionDeadline;
   var m = i.motionLeaveImmediately;
   var g = i.onAppearPrepare;
@@ -217,49 +217,49 @@ function z(e, t, n, i) {
   var I = i.onLeaveEnd;
   var A = i.onVisibleChanged;
   var j = G();
-  var N = Object(o.a)(j, 2);
+  var N = o.a(j, 2);
   var R = N[0];
   var k = N[1];
   var x = G("none");
-  var D = Object(o.a)(x, 2);
+  var D = o.a(x, 2);
   var M = D[0];
   var L = D[1];
   var F = G(null);
-  var W = Object(o.a)(F, 2);
+  var W = o.a(F, 2);
   var z = W[0];
   var Y = W[1];
-  var K = Object(a.useRef)(!1);
-  var q = Object(a.useRef)(null);
-  var X = Object(a.useRef)(!1);
-  var Q = Object(a.useRef)(null);
+  var K = a.useRef(false);
+  var q = a.useRef(null);
+  var X = a.useRef(false);
+  var Q = a.useRef(null);
   function Z() {
     return n() || Q.current;
   }
-  var J = Object(a.useRef)(!1);
+  var J = a.useRef(false);
   function $(e) {
     var t;
     var n = Z();
     if (!(e && !e.deadline && e.target !== n)) {
       if ("appear" === M && J.current) {
-        t = null === T || void 0 === T ? void 0 : T(n, e);
+        t = null === T || undefined === T ? undefined : T(n, e);
       } else {
         if ("enter" === M && J.current) {
-          t = null === S || void 0 === S ? void 0 : S(n, e);
+          t = null === S || undefined === S ? undefined : S(n, e);
         } else {
           if ("leave" === M && J.current) {
-            t = null === I || void 0 === I ? void 0 : I(n, e);
+            t = null === I || undefined === I ? undefined : I(n, e);
           }
         }
       }
-      if (!(!1 === t || X.current)) {
+      if (!(false === t || X.current)) {
         L("none");
         Y(null);
       }
     }
   }
   var ee = function (e) {
-    var t = Object(a.useRef)();
-    var n = Object(a.useRef)(e);
+    var t = a.useRef();
+    var n = a.useRef(e);
     n.current = e;
     var r = a.useCallback(function (e) {
       n.current(e);
@@ -286,7 +286,7 @@ function z(e, t, n, i) {
       }
     }, o];
   }($);
-  var te = Object(o.a)(ee, 1)[0];
+  var te = o.a(ee, 1)[0];
   var ne = a.useMemo(function () {
     var e;
     var t;
@@ -294,21 +294,21 @@ function z(e, t, n, i) {
     switch (M) {
       case "appear":
         e = {};
-        Object(r.a)(e, "prepare", g);
-        Object(r.a)(e, "start", b);
-        Object(r.a)(e, "active", O);
+        r.a(e, "prepare", g);
+        r.a(e, "start", b);
+        r.a(e, "active", O);
         return e;
       case "enter":
         t = {};
-        Object(r.a)(t, "prepare", _);
-        Object(r.a)(t, "start", y);
-        Object(r.a)(t, "active", w);
+        r.a(t, "prepare", _);
+        r.a(t, "start", y);
+        r.a(t, "active", w);
         return t;
       case "leave":
         n = {};
-        Object(r.a)(n, "prepare", v);
-        Object(r.a)(n, "start", E);
-        Object(r.a)(n, "active", C);
+        r.a(n, "prepare", v);
+        r.a(n, "start", E);
+        r.a(n, "active", C);
         return n;
       default:
         return {};
@@ -321,7 +321,7 @@ function z(e, t, n, i) {
     }
     var n;
     if (ae in ne) {
-      Y((null === (n = ne[ae]) || void 0 === n ? void 0 : n.call(ne, Z(), null)) || null);
+      Y((null === (n = ne[ae]) || undefined === n ? undefined : n.call(ne, Z(), null)) || null);
     }
     if ("active" === ae) {
       te(Z());
@@ -329,14 +329,14 @@ function z(e, t, n, i) {
         clearTimeout(q.current);
         q.current = setTimeout(function () {
           $({
-            deadline: !0
+            deadline: true
           });
         }, h);
       }
     }
-    return !0;
+    return true;
   });
-  var oe = Object(o.a)(re, 2);
+  var oe = o.a(re, 2);
   var ie = oe[0];
   var ae = oe[1];
   var se = H(ae);
@@ -345,7 +345,7 @@ function z(e, t, n, i) {
     k(t);
     var n;
     var r = K.current;
-    K.current = !0;
+    K.current = true;
     if (e) {
       if (!r && t && d) {
         n = "appear";
@@ -362,40 +362,40 @@ function z(e, t, n, i) {
       }
     }
   }, [t]);
-  Object(a.useEffect)(function () {
+  a.useEffect(function () {
     if ("appear" === M && !d || "enter" === M && !l || "leave" === M && !f) {
       L("none");
     }
   }, [d, l, f]);
-  Object(a.useEffect)(function () {
+  a.useEffect(function () {
     return function () {
       clearTimeout(q.current);
-      X.current = !0;
+      X.current = true;
     };
   }, []);
-  Object(a.useEffect)(function () {
-    if (void 0 !== R && "none" === M) {
-      if (!(null === A || void 0 === A)) {
+  a.useEffect(function () {
+    if (undefined !== R && "none" === M) {
+      if (!(null === A || undefined === A)) {
         A(R);
       }
     }
   }, [R, M]);
   var ce = z;
   if (ne.prepare && "start" === ae) {
-    ce = Object(s.a)({
+    ce = s.a({
       transition: "none"
     }, ce);
   }
-  return [M, ae, ce, null !== R && void 0 !== R ? R : t];
+  return [M, ae, ce, null !== R && undefined !== R ? R : t];
 }
 var Y = function (e) {
-  Object(p.a)(n, e);
-  var t = Object(f.a)(n);
+  p.a(n, e);
+  var t = f.a(n);
   function n() {
-    Object(l.a)(this, n);
+    l.a(this, n);
     return t.apply(this, arguments);
   }
-  Object(u.a)(n, [{
+  u.a(n, [{
     key: "render",
     value: function () {
       return this.props.children;
@@ -408,46 +408,46 @@ var K = function (e) {
   function n(e) {
     return !(!e.motionName || !t);
   }
-  if ("object" === Object(S.a)(e)) {
+  if ("object" === S.a(e)) {
     t = e.transitionSupport;
   }
   var i = a.forwardRef(function (e, t) {
     var i = e.visible;
-    var c = void 0 === i || i;
+    var c = undefined === i || i;
     var l = e.removeOnLeave;
-    var u = void 0 === l || l;
+    var u = undefined === l || l;
     var d = e.forceRender;
     var p = e.children;
     var f = e.motionName;
     var h = e.leavedClassName;
     var m = e.eventProps;
     var g = n(e);
-    var _ = Object(a.useRef)();
-    var y = Object(a.useRef)();
+    var _ = a.useRef();
+    var y = a.useRef();
     var E = z(g, c, function () {
       try {
-        return Object(v.a)(_.current || y.current);
+        return v.a(_.current || y.current);
       } catch (e) {
         return null;
       }
     }, e);
-    var O = Object(o.a)(E, 4);
+    var O = o.a(E, 4);
     var C = O[0];
     var T = O[1];
     var S = O[2];
     var I = O[3];
     var A = a.useRef(I);
     if (I) {
-      A.current = !0;
+      A.current = true;
     }
-    var j = Object(a.useRef)(t);
+    var j = a.useRef(t);
     j.current = t;
     var N;
     var R = a.useCallback(function (e) {
       _.current = e;
-      Object(b.b)(j.current, e);
+      b.b(j.current, e);
     }, []);
-    var k = Object(s.a)(Object(s.a)({}, m), {}, {
+    var k = s.a(s.a({}, m), {}, {
       visible: c
     });
     if (p) {
@@ -465,14 +465,14 @@ var K = function (e) {
             }
           }
         }
-        N = p(Object(s.a)(Object(s.a)({}, k), {}, {
-          className: w()(F(f, C), (x = {}, Object(r.a)(x, F(f, "".concat(C, "-").concat(D)), D), Object(r.a)(x, f, "string" === typeof f), x)),
+        N = p(s.a(s.a({}, k), {}, {
+          className: w()(F(f, C), (x = {}, r.a(x, F(f, "".concat(C, "-").concat(D)), D), r.a(x, f, "string" === typeof f), x)),
           style: S
         }), R);
       } else {
-        N = I ? p(Object(s.a)({}, k), R) : !u && A.current ? p(Object(s.a)(Object(s.a)({}, k), {}, {
+        N = I ? p(s.a({}, k), R) : !u && A.current ? p(s.a(s.a({}, k), {}, {
           className: h
-        }), R) : d ? p(Object(s.a)(Object(s.a)({}, k), {}, {
+        }), R) : d ? p(s.a(s.a({}, k), {}, {
           style: {
             display: "none"
           }
@@ -490,54 +490,54 @@ var K = function (e) {
 }(L);
 function q(e) {
   var t;
-  t = e && "object" === Object(S.a)(e) && "key" in e ? e : {
+  t = e && "object" === S.a(e) && "key" in e ? e : {
     key: e
   };
-  return Object(s.a)(Object(s.a)({}, t), {}, {
+  return s.a(s.a({}, t), {}, {
     key: String(t.key)
   });
 }
 function X() {
-  var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
+  var e = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : [];
   return e.map(q);
 }
 function Q() {
-  var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
-  var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
+  var e = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : [];
+  var t = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : [];
   var n = [];
   var r = 0;
   var o = t.length;
   var i = X(e);
   var a = X(t);
   i.forEach(function (e) {
-    for (var t = !1, i = r; i < o; i += 1) {
+    for (var t = false, i = r; i < o; i += 1) {
       var c = a[i];
       if (c.key === e.key) {
         if (r < i) {
           n = n.concat(a.slice(r, i).map(function (e) {
-            return Object(s.a)(Object(s.a)({}, e), {}, {
+            return s.a(s.a({}, e), {}, {
               status: "add"
             });
           }));
           r = i;
         }
-        n.push(Object(s.a)(Object(s.a)({}, c), {}, {
+        n.push(s.a(s.a({}, c), {}, {
           status: "keep"
         }));
         r += 1;
-        t = !0;
+        t = true;
         break;
       }
     }
     if (!t) {
-      n.push(Object(s.a)(Object(s.a)({}, e), {}, {
+      n.push(s.a(s.a({}, e), {}, {
         status: "remove"
       }));
     }
   });
   if (r < o) {
     n = n.concat(a.slice(r).map(function (e) {
-      return Object(s.a)(Object(s.a)({}, e), {}, {
+      return s.a(s.a({}, e), {}, {
         status: "add"
       });
     }));
@@ -565,13 +565,13 @@ function Q() {
 }
 var Z = ["eventProps", "visible", "children", "motionName", "motionAppear", "motionEnter", "motionLeave", "motionLeaveImmediately", "motionDeadline", "removeOnLeave", "leavedClassName", "onAppearStart", "onAppearActive", "onAppearEnd", "onEnterStart", "onEnterActive", "onEnterEnd", "onLeaveStart", "onLeaveActive", "onLeaveEnd"];
 !function (e) {
-  var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : K;
+  var t = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : K;
   var n = function (e) {
-    Object(p.a)(r, e);
-    var n = Object(f.a)(r);
+    p.a(r, e);
+    var n = f.a(r);
     function r() {
       var e;
-      Object(l.a)(this, r);
+      l.a(this, r);
       (e = n.apply(this, arguments)).state = {
         keyEntities: []
       };
@@ -579,7 +579,7 @@ var Z = ["eventProps", "visible", "children", "motionName", "motionAppear", "mot
         e.setState(function (e) {
           return {
             keyEntities: e.keyEntities.map(function (e) {
-              return e.key !== t ? e : Object(s.a)(Object(s.a)({}, e), {}, {
+              return e.key !== t ? e : s.a(s.a({}, e), {}, {
                 status: "removed"
               });
             })
@@ -588,7 +588,7 @@ var Z = ["eventProps", "visible", "children", "motionName", "motionAppear", "mot
       };
       return e;
     }
-    Object(u.a)(r, [{
+    u.a(r, [{
       key: "render",
       value: function () {
         var e = this;
@@ -597,7 +597,7 @@ var Z = ["eventProps", "visible", "children", "motionName", "motionAppear", "mot
         var o = r.component;
         var s = r.children;
         var l = r.onVisibleChanged;
-        var u = Object(i.a)(r, ["component", "children", "onVisibleChanged"]);
+        var u = i.a(r, ["component", "children", "onVisibleChanged"]);
         var d = o || a.Fragment;
         var p = {};
         Z.forEach(function (e) {
@@ -607,14 +607,14 @@ var Z = ["eventProps", "visible", "children", "motionName", "motionAppear", "mot
         delete u.keys;
         return a.createElement(d, u, n.map(function (n) {
           var r = n.status;
-          var o = Object(i.a)(n, ["status"]);
+          var o = i.a(n, ["status"]);
           var u = "add" === r || "keep" === r;
-          return a.createElement(t, Object(c.a)({}, p, {
+          return a.createElement(t, c.a({}, p, {
             key: o.key,
             visible: u,
             eventProps: o,
             onVisibleChanged: function (t) {
-              if (!(null === l || void 0 === l)) {
+              if (!(null === l || undefined === l)) {
                 l(t, {
                   key: o.key
                 });
@@ -674,8 +674,8 @@ function ee(e) {
   }
   var d = {};
   if (i || u || l) {
-    d = Object(s.a)({
-      motionAppear: !0
+    d = s.a({
+      motionAppear: true
     }, $({
       motion: i,
       prefixCls: t,
@@ -683,9 +683,9 @@ function ee(e) {
       animation: l
     }));
   }
-  return a.createElement(J, Object(c.a)({}, d, {
+  return a.createElement(J, c.a({}, d, {
     visible: n,
-    removeOnLeave: !0
+    removeOnLeave: true
   }), function (e) {
     var n = e.className;
     return a.createElement("div", {
@@ -696,8 +696,8 @@ function ee(e) {
     });
   });
 }
-var te = require("../1500/555/index");
-var ne = require("../110");
+import te = require("../1500/555/index");
+import ne = require("../110");
 var re = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -710,7 +710,7 @@ var re = function __importDefault(module) {
   });
   return defaultExport;
 }(ne);
-var oe = require("../171");
+import oe = require("../171");
 var ie = ["measure", "align", null, "motion"];
 var ae = a.forwardRef(function (e, t) {
   var n = e.visible;
@@ -731,10 +731,10 @@ var ae = a.forwardRef(function (e, t) {
   var O = e.onMouseLeave;
   var C = e.onMouseDown;
   var T = e.onTouchStart;
-  var S = Object(a.useRef)();
-  var I = Object(a.useRef)();
-  var A = Object(a.useState)();
-  var j = Object(o.a)(A, 2);
+  var S = a.useRef();
+  var I = a.useRef();
+  var A = a.useState();
+  var j = o.a(A, 2);
   var N = j[0];
   var R = j[1];
   var k = function (e) {
@@ -742,7 +742,7 @@ var ae = a.forwardRef(function (e, t) {
       width: 0,
       height: 0
     });
-    var n = Object(o.a)(t, 2);
+    var n = o.a(t, 2);
     var r = n[0];
     var i = n[1];
     return [a.useMemo(function () {
@@ -773,16 +773,16 @@ var ae = a.forwardRef(function (e, t) {
       });
     }];
   }(p);
-  var x = Object(o.a)(k, 2);
+  var x = o.a(k, 2);
   var D = x[0];
   var M = x[1];
   var L = function (e, t) {
-    var n = Object(a.useState)(null);
-    var r = Object(o.a)(n, 2);
+    var n = a.useState(null);
+    var r = o.a(n, 2);
     var i = r[0];
     var s = r[1];
-    var c = Object(a.useRef)();
-    var l = Object(a.useRef)(!1);
+    var c = a.useRef();
+    var l = a.useRef(false);
     function u(e) {
       if (!l.current) {
         s(e);
@@ -791,16 +791,16 @@ var ae = a.forwardRef(function (e, t) {
     function d() {
       g.a.cancel(c.current);
     }
-    Object(a.useEffect)(function () {
+    a.useEffect(function () {
       u("measure");
     }, [e]);
-    Object(a.useEffect)(function () {
+    a.useEffect(function () {
       switch (i) {
         case "measure":
           t();
       }
       if (i) {
-        c.current = Object(g.a)(Object(oe.a)(re.a.mark(function e() {
+        c.current = g.a(oe.a(re.a.mark(function e() {
           var t;
           var n;
           return re.a.wrap(function (e) {
@@ -820,15 +820,15 @@ var ae = a.forwardRef(function (e, t) {
         })));
       }
     }, [i]);
-    Object(a.useEffect)(function () {
+    a.useEffect(function () {
       return function () {
-        l.current = !0;
+        l.current = true;
         d();
       };
     }, []);
     return [i, function (e) {
       d();
-      c.current = Object(g.a)(function () {
+      c.current = g.a(function () {
         u(function (e) {
           switch (i) {
             case "align":
@@ -838,7 +838,7 @@ var ae = a.forwardRef(function (e, t) {
           }
           return e;
         });
-        if (!(null === e || void 0 === e)) {
+        if (!(null === e || undefined === e)) {
           e();
         }
       });
@@ -848,13 +848,13 @@ var ae = a.forwardRef(function (e, t) {
       M(v());
     }
   });
-  var P = Object(o.a)(L, 2);
+  var P = o.a(L, 2);
   var B = P[0];
   var F = P[1];
-  var G = Object(a.useRef)();
+  var G = a.useRef();
   function U() {
     var e;
-    if (!(null === (e = S.current) || void 0 === e)) {
+    if (!(null === (e = S.current) || undefined === e)) {
       e.forceAlign();
     }
   }
@@ -871,17 +871,17 @@ var ae = a.forwardRef(function (e, t) {
       } else {
         F(function () {
           var e;
-          if (!(null === (e = G.current) || void 0 === e)) {
+          if (!(null === (e = G.current) || undefined === e)) {
             e.call(G);
           }
         });
       }
-      if (!(null === y || void 0 === y)) {
+      if (!(null === y || undefined === y)) {
         y(e, t);
       }
     }
   }
-  var H = Object(s.a)({}, $(e));
+  var H = s.a({}, $(e));
   function V() {
     return new Promise(function (e) {
       G.current = e;
@@ -891,7 +891,7 @@ var ae = a.forwardRef(function (e, t) {
     var t = H[e];
     H[e] = function (e, n) {
       F();
-      return null === t || void 0 === t ? void 0 : t(e, n);
+      return null === t || undefined === t ? undefined : t(e, n);
     };
   });
   a.useEffect(function () {
@@ -907,14 +907,14 @@ var ae = a.forwardRef(function (e, t) {
       }
     };
   });
-  var z = Object(s.a)(Object(s.a)({}, D), {}, {
+  var z = s.a(s.a({}, D), {}, {
     zIndex: d,
-    opacity: "motion" !== B && "stable" !== B && n ? 0 : void 0,
-    pointerEvents: "stable" === B ? void 0 : "none"
+    opacity: "motion" !== B && "stable" !== B && n ? 0 : undefined,
+    pointerEvents: "stable" === B ? undefined : "none"
   }, l);
-  var Y = !0;
-  if (!(!(null === m || void 0 === m ? void 0 : m.points) || "align" !== B && "stable" !== B)) {
-    Y = !1;
+  var Y = true;
+  if (!(!(null === m || undefined === m ? undefined : m.points) || "align" !== B && "stable" !== B)) {
+    Y = false;
   }
   var K = u;
   if (a.Children.count(u) > 1) {
@@ -922,7 +922,7 @@ var ae = a.forwardRef(function (e, t) {
       className: "".concat(r, "-content")
     }, u);
   }
-  return a.createElement(J, Object(c.a)({
+  return a.createElement(J, c.a({
     visible: n,
     ref: I,
     leavedClassName: "".concat(r, "-hidden")
@@ -939,7 +939,7 @@ var ae = a.forwardRef(function (e, t) {
       target: _ || v,
       key: "popup",
       ref: S,
-      monitorWindowResize: !0,
+      monitorWindowResize: true,
       disabled: Y,
       align: m,
       onAlign: W
@@ -950,7 +950,7 @@ var ae = a.forwardRef(function (e, t) {
       onMouseLeave: O,
       onMouseDownCapture: C,
       onTouchStartCapture: T,
-      style: Object(s.a)(Object(s.a)({}, o), z)
+      style: s.a(s.a({}, o), z)
     }, K));
   });
 });
@@ -962,10 +962,10 @@ var ce = a.forwardRef(function (e, t) {
   var o = e.zIndex;
   var i = e.children;
   var l = e.mobile;
-  var u = (l = void 0 === l ? {} : l).popupClassName;
+  var u = (l = undefined === l ? {} : l).popupClassName;
   var d = l.popupStyle;
   var p = l.popupMotion;
-  var f = void 0 === p ? {} : p;
+  var f = undefined === p ? {} : p;
   var h = l.popupRender;
   var m = a.useRef();
   a.useImperativeHandle(t, function () {
@@ -976,7 +976,7 @@ var ce = a.forwardRef(function (e, t) {
       }
     };
   });
-  var g = Object(s.a)({
+  var g = s.a({
     zIndex: o
   }, d);
   var _ = i;
@@ -988,10 +988,10 @@ var ce = a.forwardRef(function (e, t) {
   if (h) {
     _ = h(_);
   }
-  return a.createElement(J, Object(c.a)({
+  return a.createElement(J, c.a({
     visible: r,
     ref: m,
-    removeOnLeave: !0
+    removeOnLeave: true
   }, f), function (e, t) {
     var r = e.className;
     var o = e.style;
@@ -999,7 +999,7 @@ var ce = a.forwardRef(function (e, t) {
     return a.createElement("div", {
       ref: t,
       className: i,
-      style: Object(s.a)(Object(s.a)({}, o), g)
+      style: s.a(s.a({}, o), g)
     }, _);
   });
 });
@@ -1009,28 +1009,28 @@ var ue = ["visible", "mobile"];
 var de = a.forwardRef(function (e, t) {
   var n = e.visible;
   var r = e.mobile;
-  var l = Object(i.a)(e, ue);
-  var u = Object(a.useState)(n);
-  var d = Object(o.a)(u, 2);
+  var l = i.a(e, ue);
+  var u = a.useState(n);
+  var d = o.a(u, 2);
   var p = d[0];
   var f = d[1];
-  var h = Object(a.useState)(!1);
-  var m = Object(o.a)(h, 2);
+  var h = a.useState(false);
+  var m = o.a(h, 2);
   var g = m[0];
   var _ = m[1];
-  var v = Object(s.a)(Object(s.a)({}, l), {}, {
+  var v = s.a(s.a({}, l), {}, {
     visible: p
   });
-  Object(a.useEffect)(function () {
+  a.useEffect(function () {
     f(n);
     if (n && r) {
-      _(Object(T.a)());
+      _(T.a());
     }
   }, [n, r]);
-  var b = g ? a.createElement(le, Object(c.a)({}, v, {
+  var b = g ? a.createElement(le, c.a({}, v, {
     mobile: r,
     ref: t
-  })) : a.createElement(se, Object(c.a)({}, v, {
+  })) : a.createElement(se, c.a({}, v, {
     ref: t
   }));
   return a.createElement("div", null, a.createElement(ee, v), b);
@@ -1048,29 +1048,29 @@ function ge(e) {
 var _e = ["onClick", "onMouseDown", "onTouchStart", "onMouseEnter", "onMouseLeave", "onFocus", "onBlur", "onContextMenu"];
 var ve = function (e) {
   var t = function (t) {
-    Object(p.a)(r, t);
-    var n = Object(f.a)(r);
+    p.a(r, t);
+    var n = f.a(r);
     function r(e) {
       var t;
       var o;
-      Object(l.a)(this, r);
+      l.a(this, r);
       (t = n.call(this, e)).popupRef = a.createRef();
       t.triggerRef = a.createRef();
-      t.attachId = void 0;
-      t.clickOutsideHandler = void 0;
-      t.touchOutsideHandler = void 0;
-      t.contextMenuOutsideHandler1 = void 0;
-      t.contextMenuOutsideHandler2 = void 0;
-      t.mouseDownTimeout = void 0;
-      t.focusTime = void 0;
-      t.preClickTime = void 0;
-      t.preTouchTime = void 0;
-      t.delayTimer = void 0;
-      t.hasPopupMouseDown = void 0;
+      t.attachId = undefined;
+      t.clickOutsideHandler = undefined;
+      t.touchOutsideHandler = undefined;
+      t.contextMenuOutsideHandler1 = undefined;
+      t.contextMenuOutsideHandler2 = undefined;
+      t.mouseDownTimeout = undefined;
+      t.focusTime = undefined;
+      t.preClickTime = undefined;
+      t.preTouchTime = undefined;
+      t.delayTimer = undefined;
+      t.hasPopupMouseDown = undefined;
       t.onMouseEnter = function (e) {
         var n = t.props.mouseEnterDelay;
         t.fireEvents("onMouseEnter", e);
-        t.delaySetPopupVisible(!0, n, n ? null : e);
+        t.delaySetPopupVisible(true, n, n ? null : e);
       };
       t.onMouseMove = function (e) {
         t.fireEvents("onMouseMove", e);
@@ -1078,15 +1078,15 @@ var ve = function (e) {
       };
       t.onMouseLeave = function (e) {
         t.fireEvents("onMouseLeave", e);
-        t.delaySetPopupVisible(!1, t.props.mouseLeaveDelay);
+        t.delaySetPopupVisible(false, t.props.mouseLeaveDelay);
       };
       t.onPopupMouseEnter = function () {
         t.clearDelayTimer();
       };
       t.onPopupMouseLeave = function (e) {
         var n;
-        if (!(e.relatedTarget && !e.relatedTarget.setTimeout && Object(_.a)(null === (n = t.popupRef.current) || void 0 === n ? void 0 : n.getElement(), e.relatedTarget))) {
-          t.delaySetPopupVisible(!1, t.props.mouseLeaveDelay);
+        if (!(e.relatedTarget && !e.relatedTarget.setTimeout && _.a(null === (n = t.popupRef.current) || undefined === n ? undefined : n.getElement(), e.relatedTarget))) {
+          t.delaySetPopupVisible(false, t.props.mouseLeaveDelay);
         }
       };
       t.onFocus = function (e) {
@@ -1094,7 +1094,7 @@ var ve = function (e) {
         t.clearDelayTimer();
         if (t.isFocusToShow()) {
           t.focusTime = Date.now();
-          t.delaySetPopupVisible(!0, t.props.focusDelay);
+          t.delaySetPopupVisible(true, t.props.focusDelay);
         }
       };
       t.onMouseDown = function (e) {
@@ -1109,13 +1109,13 @@ var ve = function (e) {
         t.fireEvents("onBlur", e);
         t.clearDelayTimer();
         if (t.isBlurToHide()) {
-          t.delaySetPopupVisible(!1, t.props.blurDelay);
+          t.delaySetPopupVisible(false, t.props.blurDelay);
         }
       };
       t.onContextMenu = function (e) {
         e.preventDefault();
         t.fireEvents("onContextMenu", e);
-        t.setPopupVisible(!0, e);
+        t.setPopupVisible(true, e);
       };
       t.onContextMenuClose = function () {
         if (t.isContextMenuToShow()) {
@@ -1154,10 +1154,10 @@ var ve = function (e) {
       };
       t.onPopupMouseDown = function () {
         var e;
-        t.hasPopupMouseDown = !0;
+        t.hasPopupMouseDown = true;
         clearTimeout(t.mouseDownTimeout);
         t.mouseDownTimeout = window.setTimeout(function () {
-          t.hasPopupMouseDown = !1;
+          t.hasPopupMouseDown = false;
         }, 0);
         if (t.context) {
           (e = t.context).onPopupMouseDown.apply(e, arguments);
@@ -1168,7 +1168,7 @@ var ve = function (e) {
           var n = e.target;
           var r = t.getRootDomNode();
           var o = t.getPopupDomNode();
-          if (!(Object(_.a)(r, n) && !t.isContextMenuOnly() || Object(_.a)(o, n) || t.hasPopupMouseDown)) {
+          if (!(_.a(r, n) && !t.isContextMenuOnly() || _.a(o, n) || t.hasPopupMouseDown)) {
             t.close();
           }
         }
@@ -1179,12 +1179,12 @@ var ve = function (e) {
           return e(t.triggerRef.current);
         }
         try {
-          var n = Object(v.a)(t.triggerRef.current);
+          var n = v.a(t.triggerRef.current);
           if (n) {
             return n;
           }
         } catch (r) {}
-        return m.a.findDOMNode(Object(d.a)(t));
+        return m.a.findDOMNode(d.a(t));
       };
       t.getPopupClassNameFromAlign = function (e) {
         var n = [];
@@ -1243,7 +1243,7 @@ var ve = function (e) {
         }
         S.onMouseDown = t.onPopupMouseDown;
         S.onTouchStart = t.onPopupMouseDown;
-        return a.createElement(pe, Object(c.a)({
+        return a.createElement(pe, c.a({
           prefixCls: n,
           destroyPopupOnHide: r,
           visible: w,
@@ -1286,7 +1286,7 @@ var ve = function (e) {
         if (n) {
           n.appendChild(e);
         } else {
-          t.attachId = Object(g.a)(function () {
+          t.attachId = g.a(function () {
             t.attachParent(e);
           });
         }
@@ -1330,7 +1330,7 @@ var ve = function (e) {
       });
       return t;
     }
-    Object(u.a)(r, [{
+    u.a(r, [{
       key: "componentDidMount",
       value: function () {
         this.componentDidUpdate();
@@ -1343,17 +1343,17 @@ var ve = function (e) {
         if (this.state.popupVisible) {
           if (!(this.clickOutsideHandler || !this.isClickToHide() && !this.isContextMenuToShow())) {
             e = t.getDocument(this.getRootDomNode());
-            this.clickOutsideHandler = Object(y.a)(e, "mousedown", this.onDocumentClick);
+            this.clickOutsideHandler = y.a(e, "mousedown", this.onDocumentClick);
           }
           if (!this.touchOutsideHandler) {
             e = e || t.getDocument(this.getRootDomNode());
-            this.touchOutsideHandler = Object(y.a)(e, "touchstart", this.onDocumentClick);
+            this.touchOutsideHandler = y.a(e, "touchstart", this.onDocumentClick);
           }
           if (!this.contextMenuOutsideHandler1 && this.isContextMenuToShow()) {
             e = e || t.getDocument(this.getRootDomNode());
-            this.contextMenuOutsideHandler1 = Object(y.a)(e, "scroll", this.onContextMenuClose);
+            this.contextMenuOutsideHandler1 = y.a(e, "scroll", this.onContextMenuClose);
           }
-          return void (!this.contextMenuOutsideHandler2 && this.isContextMenuToShow() && (this.contextMenuOutsideHandler2 = Object(y.a)(window, "blur", this.onContextMenuClose)));
+          return void (!this.contextMenuOutsideHandler2 && this.isContextMenuToShow() && (this.contextMenuOutsideHandler2 = y.a(window, "blur", this.onContextMenuClose)));
         }
         this.clearOutsideHandler();
       }
@@ -1369,7 +1369,7 @@ var ve = function (e) {
       key: "getPopupDomNode",
       value: function () {
         var e;
-        return (null === (e = this.popupRef.current) || void 0 === e ? void 0 : e.getElement()) || null;
+        return (null === (e = this.popupRef.current) || undefined === e ? undefined : e.getElement()) || null;
       }
     }, {
       key: "getPopupAlign",
@@ -1380,7 +1380,7 @@ var ve = function (e) {
         var r = e.builtinPlacements;
         return t && r ? function (e, t, n) {
           var r = e[t] || {};
-          return Object(s.a)(Object(s.a)({}, r), n);
+          return s.a(s.a({}, r), n);
         }(r, t, n) : n;
       }
     }, {
@@ -1523,7 +1523,7 @@ var ve = function (e) {
       value: function () {
         var e;
         if (this.state.popupVisible) {
-          if (!(null === (e = this.popupRef.current) || void 0 === e)) {
+          if (!(null === (e = this.popupRef.current) || undefined === e)) {
             e.forceAlign();
           }
         }
@@ -1543,7 +1543,7 @@ var ve = function (e) {
     }, {
       key: "close",
       value: function () {
-        this.setPopupVisible(!1);
+        this.setPopupVisible(false);
       }
     }, {
       key: "render",
@@ -1597,9 +1597,9 @@ var ve = function (e) {
         if (p) {
           d.className = p;
         }
-        var f = Object(s.a)({}, d);
-        if (Object(b.c)(u)) {
-          f.ref = Object(b.a)(this.triggerRef, u.ref);
+        var f = s.a({}, d);
+        if (b.c(u)) {
+          f.ref = b.a(this.triggerRef, u.ref);
         }
         var h;
         var m = a.cloneElement(u, f);
@@ -1622,7 +1622,7 @@ var ve = function (e) {
       value: function (e, t) {
         var n = e.popupVisible;
         var r = {};
-        if (void 0 !== n && t.popupVisible !== n) {
+        if (undefined !== n && t.popupVisible !== n) {
           r.popupVisible = n;
           r.prevPopupVisible = t.popupVisible;
         }
@@ -1645,15 +1645,15 @@ var ve = function (e) {
     focusDelay: 0,
     blurDelay: .15,
     popupStyle: {},
-    destroyPopupOnHide: !1,
+    destroyPopupOnHide: false,
     popupAlign: {},
-    defaultPopupVisible: !1,
-    mask: !1,
-    maskClosable: !0,
+    defaultPopupVisible: false,
+    mask: false,
+    maskClosable: true,
     action: [],
     showAction: [],
     hideAction: [],
-    autoDestroy: !1
+    autoDestroy: false
   };
   return t;
 }(E.a);
@@ -1702,16 +1702,16 @@ var Ee = {
 };
 var Oe = a.forwardRef(function (e, t) {
   var n = e.arrow;
-  var s = void 0 !== n && n;
+  var s = undefined !== n && n;
   var c = e.prefixCls;
-  var l = void 0 === c ? "rc-dropdown" : c;
+  var l = undefined === c ? "rc-dropdown" : c;
   var u = e.transitionName;
   var d = e.animation;
   var p = e.align;
   var f = e.placement;
-  var h = void 0 === f ? "bottomLeft" : f;
+  var h = undefined === f ? "bottomLeft" : f;
   var m = e.placements;
-  var g = void 0 === m ? Ee : m;
+  var g = undefined === m ? Ee : m;
   var _ = e.getPopupContainer;
   var v = e.showAction;
   var b = e.hideAction;
@@ -1719,10 +1719,10 @@ var Oe = a.forwardRef(function (e, t) {
   var E = e.overlayStyle;
   var O = e.visible;
   var C = e.trigger;
-  var T = void 0 === C ? ["hover"] : C;
-  var S = Object(i.a)(e, ["arrow", "prefixCls", "transitionName", "animation", "align", "placement", "placements", "getPopupContainer", "showAction", "hideAction", "overlayClassName", "overlayStyle", "visible", "trigger"]);
+  var T = undefined === C ? ["hover"] : C;
+  var S = i.a(e, ["arrow", "prefixCls", "transitionName", "animation", "align", "placement", "placements", "getPopupContainer", "showAction", "hideAction", "overlayClassName", "overlayStyle", "visible", "trigger"]);
   var I = a.useState();
-  var A = Object(o.a)(I, 2);
+  var A = o.a(I, 2);
   var j = A[0];
   var N = A[1];
   var R = "visible" in e ? O : j;
@@ -1737,7 +1737,7 @@ var Oe = a.forwardRef(function (e, t) {
   var D = function (t) {
     var n = e.onOverlayClick;
     var r = x().props;
-    N(!1);
+    N(false);
     if (n) {
       n(t);
     }
@@ -1765,7 +1765,7 @@ var Oe = a.forwardRef(function (e, t) {
   return a.createElement(ve, Object.assign({}, S, {
     prefixCls: l,
     ref: k,
-    popupClassName: w()(y, Object(r.a)({}, "".concat(l, "-show-arrow"), s)),
+    popupClassName: w()(y, r.a({}, "".concat(l, "-show-arrow"), s)),
     popupStyle: E,
     builtinPlacements: g,
     action: T,
@@ -1795,7 +1795,7 @@ var Oe = a.forwardRef(function (e, t) {
     var n = t.props ? t.props : {};
     var r = w()(n.className, function () {
       var t = e.openClassName;
-      return void 0 !== t ? t : "".concat(l, "-open");
+      return undefined !== t ? t : "".concat(l, "-open");
     }());
     return j && t ? a.cloneElement(t, {
       className: r

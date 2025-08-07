@@ -3,7 +3,7 @@
 var r = require("../../../../../../38/607/494");
 var i = require("./2213/index");
 var o = require("../../../../1331/index");
-var a = require("../../../../../../31/index");
+var a = require("lodash");
 var s = require("../../../../965");
 var c = s.breakableTypePattern;
 var u = s.createGlobalLinebreakMatcher;
@@ -22,7 +22,7 @@ var b = /^(?:(?:(?!\\)[\s\S])|\\(?:(?![0-7])[\s\S])|\\0(?![0-9]))*\\(?:[1-7]|0[0
 function w(e, t, n) {
   var r = e.identifier;
   var i = 0 === t || n[t - 1].identifier !== r;
-  return r && !1 === e.init && e.isWrite() && i;
+  return r && false === e.init && e.isWrite() && i;
 }
 function E(e) {
   return e[0] !== e[0].toLocaleLowerCase();
@@ -51,10 +51,10 @@ function T(e) {
   return "CallExpression" === e.parent.type && e.parent.callee === e;
 }
 function B(e) {
-  return "MemberExpression" === e.type && "Identifier" === e.object.type && "Reflect" === e.object.name && "Identifier" === e.property.type && "apply" === e.property.name && !1 === e.computed;
+  return "MemberExpression" === e.type && "Identifier" === e.object.type && "Reflect" === e.object.name && "Identifier" === e.property.type && "apply" === e.property.name && false === e.computed;
 }
 function D(e) {
-  return "MemberExpression" === e.type && "Identifier" === e.object.type && p.test(e.object.name) && "Identifier" === e.property.type && "from" === e.property.name && !1 === e.computed;
+  return "MemberExpression" === e.type && "Identifier" === e.object.type && p.test(e.object.name) && "Identifier" === e.property.type && "from" === e.property.name && false === e.computed;
 }
 function I(e) {
   for (var t = e; "MemberExpression" === t.type && !t.computed; t = t.property) {
@@ -62,7 +62,7 @@ function I(e) {
       return _.test(t.property.name);
     }
   }
-  return !1;
+  return false;
 }
 function F(e) {
   return function (t) {
@@ -129,10 +129,10 @@ module.exports = {
   isInLoop: function (e) {
     for (var t = e; t && !O(t); t = t.parent) {
       if (k(t)) {
-        return !0;
+        return true;
       }
     }
-    return !1;
+    return false;
   },
   isArrayFromMethod: D,
   isParenthesised: function (e, t) {
@@ -145,14 +145,14 @@ module.exports = {
     var r = n.getTokens(e);
     var i = n.getTokens(t);
     if (r.length !== i.length) {
-      return !1;
+      return false;
     }
     for (var o = 0; o < r.length; ++o) {
       if (r[o].type !== i[o].type || r[o].value !== i[o].value) {
-        return !1;
+        return false;
       }
     }
-    return !0;
+    return true;
   },
   isArrowToken: P,
   isClosingBraceToken: Q,
@@ -209,11 +209,11 @@ module.exports = {
     return null;
   },
   isDefaultThisBinding: function (e, t) {
-    var n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+    var n = arguments.length > 2 && undefined !== arguments[2] ? arguments[2] : {};
     var r = n.capIsConstructor;
-    var i = void 0 === r || r;
+    var i = undefined === r || r;
     if (i && x(e) || R(e, t)) {
-      return !1;
+      return false;
     }
     for (var o = null === e.id, a = e; a;) {
       var s = a.parent;
@@ -225,13 +225,13 @@ module.exports = {
         case "ReturnStatement":
           var c = C(s);
           if (null === c || !T(c)) {
-            return !0;
+            return true;
           }
           a = c.parent;
           break;
         case "ArrowFunctionExpression":
           if (a !== s.body || !T(s)) {
-            return !0;
+            return true;
           }
           a = s.parent;
           break;
@@ -248,10 +248,10 @@ module.exports = {
         case "CallExpression":
           return B(s.callee) ? 3 !== s.arguments.length || s.arguments[0] !== a || S(s.arguments[1]) : D(s.callee) ? 3 !== s.arguments.length || s.arguments[1] !== a || S(s.arguments[2]) : !I(s.callee) || 2 !== s.arguments.length || s.arguments[0] !== a || S(s.arguments[1]);
         default:
-          return !0;
+          return true;
       }
     }
-    return !0;
+    return true;
   },
   getPrecedence: function (e) {
     switch (e.type) {
@@ -457,7 +457,7 @@ module.exports = {
       case "TaggedTemplateExpression":
       case "YieldExpression":
       case "AwaitExpression":
-        return !0;
+        return true;
       case "AssignmentExpression":
         return module.exports.couldBeError(t.right);
       case "SequenceExpression":
@@ -468,7 +468,7 @@ module.exports = {
       case "ConditionalExpression":
         return module.exports.couldBeError(t.consequent) || module.exports.couldBeError(t.alternate);
       default:
-        return !1;
+        return false;
     }
   },
   isNullLiteral: function (e) {
@@ -493,7 +493,7 @@ module.exports = {
         var s = new Set(["-", "--"]);
         return !(a.has(n.value) && a.has(i.value) || s.has(n.value) && s.has(i.value));
       }
-      return !0;
+      return true;
     }
     return "String" === n.type || "String" === i.type || "Template" === n.type || "Template" === i.type || !("Numeric" === n.type || "Numeric" !== i.type || !i.value.startsWith("."));
   },

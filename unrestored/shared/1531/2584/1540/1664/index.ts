@@ -3,7 +3,7 @@ var o = require("./472");
 var i = require("../1659/241");
 r({
   target: "Reflect",
-  stat: !0,
+  stat: true,
   sham: !require("./826")
 }, {
   preventExtensions: function (e) {
@@ -13,9 +13,9 @@ r({
       if (t) {
         t(e);
       }
-      return !0;
+      return true;
     } catch (n) {
-      return !1;
+      return false;
     }
   }
 });

@@ -4,7 +4,7 @@ var i = require("../1735/257");
 var a = require("../1745/310");
 r({
   target: "String",
-  stat: !0
+  stat: true
 }, {
   raw: function (e) {
     for (var t = o(e.raw), n = i(t.length), r = arguments.length, s = [], c = 0; n > c;) {

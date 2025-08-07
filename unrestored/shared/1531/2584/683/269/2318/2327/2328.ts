@@ -1,7 +1,7 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
 var r = require("../../1366/444");
 var i = require("../../580");
@@ -27,7 +27,7 @@ exports.resolveInstance = function (e, t, n) {
         e[r] = i;
       });
       return e;
-    }(c = new ((a = e).bind.apply(a, [void 0].concat(s)))(), t, n);
+    }(c = new ((a = e).bind.apply(a, [undefined].concat(s)))(), t, n);
   } else {
     c = new e();
   }

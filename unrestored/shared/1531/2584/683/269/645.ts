@@ -1,15 +1,15 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
 var r = require("./1366/444");
 var i = require("./359");
 function o(e, t, n, i, o) {
   var a = {};
   var s = "number" === typeof o;
-  var c = void 0 !== o && s ? o.toString() : n;
-  if (s && void 0 !== n) {
+  var c = undefined !== o && s ? o.toString() : n;
+  if (s && undefined !== n) {
     throw new Error(r.INVALID_DECORATOR_OPERATION);
   }
   if (Reflect.hasOwnMetadata(e, t)) {

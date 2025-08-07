@@ -50,27 +50,27 @@
   var g = require("./190");
   var _ = require("./26/index");
   var v = require("./239");
-  exports.a = Object(o.memo)(function () {
+  exports.a = o.memo(function () {
     var t;
-    var n = Object(o.useRef)();
-    var s = Object(o.useRef)(null);
-    var p = Object(o.useState)(!1);
-    var b = Object(r.a)(p, 2);
+    var n = o.useRef();
+    var s = o.useRef(null);
+    var p = o.useState(false);
+    var b = r.a(p, 2);
     var y = b[0];
     var E = b[1];
-    var O = Object(o.useRef)(null);
-    var w = Object(a.e)(function (e) {
+    var O = o.useRef(null);
+    var w = a.e(function (e) {
       return e.project.contextMenuInfo;
     }).toJS();
     var C = w.position;
     var T = w.visible;
     var S = w.widgetId;
-    var I = Object(m.Bb)(S);
-    var A = Object(a.e)(function (e) {
+    var I = m.Bb(S);
+    var A = a.e(function (e) {
       return e.project.screens;
     });
-    var j = null === (t = Object(v.d)()) || void 0 === t ? void 0 : t.id;
-    Object(o.useLayoutEffect)(function () {
+    var j = null === (t = v.d()) || undefined === t ? undefined : t.id;
+    o.useLayoutEffect(function () {
       var e = s.current;
       if (T && e) {
         var t = e.clientHeight;
@@ -82,36 +82,36 @@
         e.style.left = C.x + "px";
       }
     }, [T, C]);
-    var N = Object(l.a)().formatMessage;
-    var R = Object(a.d)();
-    Object(o.useEffect)(function () {
+    var N = l.a().formatMessage;
+    var R = a.d();
+    o.useEffect(function () {
       var t = function t() {
         e(function () {
-          R(Object(d.Wg)());
-          document.removeEventListener("mousedown", t, !0);
+          R(d.Wg());
+          document.removeEventListener("mousedown", t, true);
         });
       };
       if (T) {
-        document.addEventListener("mousedown", t, !0);
+        document.addEventListener("mousedown", t, true);
       }
       return function () {
-        return document.removeEventListener("mousedown", t, !0);
+        return document.removeEventListener("mousedown", t, true);
       };
     }, [R, T]);
     var k = function (e) {
-      R(Object(d.Ef)(Object(m.w)(S), e));
+      R(d.Ef(m.w(S), e));
     };
     var x = function () {
       var e;
-      var t = null === (e = n.current) || void 0 === e ? void 0 : e.id;
+      var t = null === (e = n.current) || undefined === e ? undefined : e.id;
       if (j && t) {
-        R(Object(d.Mf)(t, j));
+        R(d.Mf(t, j));
       }
     };
     var D = function () {
-      n.current = void 0;
+      n.current = undefined;
     };
-    Object(o.useLayoutEffect)(function () {
+    o.useLayoutEffect(function () {
       var e = O.current;
       if (e) {
         if (y) {
@@ -134,17 +134,17 @@
     }, i.a.createElement("div", {
       className: c()(f.a.menuItem),
       onMouseDown: function () {
-        R(Object(d.Ef)(Object(m.w)(S)));
+        R(d.Ef(m.w(S)));
       }
     }, N({
       id: "copyAndPaste"
-    })), ![h.a, h.c].includes((null === I || void 0 === I ? void 0 : I.type) || "") && i.a.createElement("div", {
+    })), ![h.a, h.c].includes((null === I || undefined === I ? undefined : I.type) || "") && i.a.createElement("div", {
       className: c()(f.a.menuItem, f.a.copyTo),
       onMouseEnter: function () {
-        E(!0);
+        E(true);
       },
       onMouseLeave: function () {
-        E(!1);
+        E(false);
       }
     }, i.a.createElement("span", null, N({
       id: "copyTo"
@@ -168,29 +168,29 @@
       })), i.a.createElement("p", null, e.get("title")));
     }))), i.a.createElement("div", {
       onMouseDown: function () {
-        var e = Object(m.Fb)(S || "");
+        var e = m.Fb(S || "");
         var t = N({
           id: "deleteWidget"
-        }) + "“" + Object(g.f)(e, 10) + "”?";
+        }) + "“" + g.f(e, 10) + "”?";
         var r = _.z.checkFieldValueIsSelected("WIDGET_ID", S);
-        var o = _.z.checkSomeFieldValueIsSelected("WIDGET_ID", Object(m.U)(S));
+        var o = _.z.checkSomeFieldValueIsSelected("WIDGET_ID", m.U(S));
         if (r || o) {
-          n.current = Object(m.Bb)(S);
-          R(Object(d.zh)({
+          n.current = m.Bb(S);
+          R(d.zh({
             onConfirm: x,
             onClose: D,
             allowText: N({
               id: "delete"
             }),
             title: t,
-            isDangerous: !0,
+            isDangerous: true,
             content: N({
               id: o ? "deleteParentWidgetTips" : "deleteWidgetTips"
             })
           }));
         } else {
           if (j) {
-            R(Object(d.Mf)(S, j));
+            R(d.Mf(S, j));
           }
         }
       },

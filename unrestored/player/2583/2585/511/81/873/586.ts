@@ -6,7 +6,7 @@ var r = function () {
     this.deviceId = t;
     this.label = e;
     this.kind = "videoinput";
-    this.groupId = n || void 0;
+    this.groupId = n || undefined;
   }
   t.prototype.toJSON = function () {
     return {

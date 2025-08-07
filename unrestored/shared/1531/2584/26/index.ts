@@ -27,32 +27,32 @@ export { tt as r };
 export { nt as w };
 export { rt as s };
 var r;
-var o = require("../227/262");
-var i = require("../25/index");
-var a = require("../27");
-var s = require("../40");
-var c = require("../17/index");
-var l = require("../9");
-var u = require("../23");
-var d = require("../301/index");
-var p = require("../5");
-var f = require("../15");
+import o = require("../227/262");
+import i = require("../25/index");
+import a = require("../27");
+import s = require("../40");
+import c = require("../17/index");
+import l = require("../9");
+import u = require("../../../../../src/shared/language");
+import d = require("../301/index");
+import p = require("../5");
+import f = require("../15");
 var h = new (function () {
   function e() {
-    Object(a.a)(this, e);
-    this.lastSelectedWidgetCategoryName = void 0;
-    this.basicToolboxConfig = void 0;
+    a.a(this, e);
+    this.lastSelectedWidgetCategoryName = undefined;
+    this.basicToolboxConfig = undefined;
   }
-  Object(s.a)(e, [{
+  s.a(e, [{
     key: "getToolbox",
     value: function () {
       var e;
-      return null === (e = c.Blink.mainWorkspace) || void 0 === e ? void 0 : e.get_toolbox();
+      return null === (e = c.Blink.mainWorkspace) || undefined === e ? undefined : e.get_toolbox();
     }
   }, {
     key: "convertBlockTypeToXml",
     value: function (e) {
-      var t = Object(d.a)();
+      var t = d.a();
       var n = "<xml>";
       e.forEach(function (e) {
         if (e !== o.c) {
@@ -86,11 +86,11 @@ var h = new (function () {
           blocks: Array.isArray(n.blocks) ? e.convertBlockTypeToXml(n.blocks) : n.blocks
         };
       });
-      this.basicToolboxConfig = [].concat(Object(i.a)(t), [{
+      this.basicToolboxConfig = [].concat(i.a(t), [{
         name: "toolbox-widget",
         text: "%{BKY_COMPONENTS}",
         children: [],
-        selectable: !1,
+        selectable: false,
         element: {
           unselected_classname: "cocoToolboxWidgetTab",
           selected_classname: "cocoToolboxWidgetTabSelected"
@@ -102,7 +102,7 @@ var h = new (function () {
         name: "toolbox-invisible-widget",
         text: "%{BKY_INVISIBLE_COMPONENTS}",
         children: [],
-        selectable: !1,
+        selectable: false,
         element: {
           unselected_classname: "cocoToolboxWidgetTab",
           selected_classname: "cocoToolboxWidgetTabSelected"
@@ -114,7 +114,7 @@ var h = new (function () {
         name: "toolbox-global-widget",
         text: "%{BKY_GLOBAL_COMPONENTS}",
         children: [],
-        selectable: !1,
+        selectable: false,
         element: {
           unselected_classname: "cocoToolboxWidgetTab",
           selected_classname: "cocoToolboxWidgetTabSelected"
@@ -126,7 +126,7 @@ var h = new (function () {
         name: "toolbox-any-widget",
         text: "%{BKY_ANY_COMPONENTS}",
         children: [],
-        selectable: !1,
+        selectable: false,
         element: {
           unselected_classname: "cocoToolboxWidgetTab",
           selected_classname: "cocoToolboxWidgetTabSelected"
@@ -149,16 +149,16 @@ var h = new (function () {
           if (n === p.m) {
             return;
           }
-          var l = Object(o.e)()[n];
+          var l = o.e()[n];
           if (!l) {
             return void console.error("Type [".concat(n, "] has no toolbox config. "));
           }
           c = s.new_node({
             name: e,
-            text: t || l.text || Object(u.c)(u.b, "untitled"),
+            text: t || l.text || u.c(u.b, "untitled"),
             icon: {
-              font_id: Object(f.X)(l.iconId) ? void 0 : l.iconId,
-              html: Object(f.X)(l.iconId) ? "<img draggable=\"false\" style=\"width: 16px; height: 16px;\" src=\"".concat(l.iconId, "\">") : void 0
+              font_id: f.X(l.iconId) ? undefined : l.iconId,
+              html: f.X(l.iconId) ? "<img draggable=\"false\" style=\"width: 16px; height: 16px;\" src=\"".concat(l.iconId, "\">") : undefined
             },
             blocks: a ? "ANY_".concat(n) : Array.isArray(l.blocks) ? this.convertBlockTypeToXml(l.blocks) : l.blocks
           });
@@ -182,7 +182,7 @@ var h = new (function () {
         var s = i.remove_children();
         try {
           var c;
-          if ((null === (c = e.invisibleWidgetIds) || void 0 === c ? void 0 : c.length) > 0) {
+          if ((null === (c = e.invisibleWidgetIds) || undefined === c ? undefined : c.length) > 0) {
             i.html_div.style.display = "block";
           } else {
             i.html_div.style.display = "none";
@@ -195,20 +195,20 @@ var h = new (function () {
         e.widgetIds.forEach(function (e) {
           var t = l.dc.get(e);
           if (t) {
-            var r = Object(l.qb)(e);
-            if (!((null === r || void 0 === r ? void 0 : r.type) && [p.x, p.A].includes(r.type))) {
-              n._appendTreeNode(t.id, Object(l.Fb)(t.id), t.type, a, o);
+            var r = l.qb(e);
+            if (!((null === r || undefined === r ? undefined : r.type) && [p.x, p.A].includes(r.type))) {
+              n._appendTreeNode(t.id, l.Fb(t.id), t.type, a, o);
               if (-1 === u.indexOf(t.type)) {
                 u.unshift(t.type);
               }
             }
           }
         });
-        if (!(null === (t = e.invisibleWidgetIds) || void 0 === t)) {
+        if (!(null === (t = e.invisibleWidgetIds) || undefined === t)) {
           t.forEach(function (e) {
             var t = l.dc.get(e);
             if (t) {
-              n._appendTreeNode(t.id, Object(l.Fb)(t.id), t.type, s, i);
+              n._appendTreeNode(t.id, l.Fb(t.id), t.type, s, i);
               if (-1 === u.indexOf(t.type)) {
                 u.unshift(t.type);
               }
@@ -241,7 +241,7 @@ var h = new (function () {
         e.forEach(function (e) {
           var n = l.dc.get(e);
           if (n) {
-            t._appendTreeNode(n.id, Object(l.Fb)(n.id), n.type, o, r);
+            t._appendTreeNode(n.id, l.Fb(n.id), n.type, o, r);
             if (-1 === i.indexOf(n.type)) {
               i.unshift(n.type);
             }
@@ -262,7 +262,7 @@ var h = new (function () {
         var o = r.remove_children();
         var i = [];
         e.forEach(function (e) {
-          t._appendTreeNode("ANY_" + e, e, e, o, r, !0);
+          t._appendTreeNode("ANY_" + e, e, e, o, r, true);
           if (-1 === i.indexOf(e)) {
             i.unshift(e);
           }
@@ -274,7 +274,7 @@ var h = new (function () {
     value: function (e, t) {
       var n;
       var r;
-      var o = null === (n = c.Blink.mainWorkspace) || void 0 === n || null === (r = n.get_toolbox()) || void 0 === r ? void 0 : r.find_node_by_name(e);
+      var o = null === (n = c.Blink.mainWorkspace) || undefined === n || null === (r = n.get_toolbox()) || undefined === r ? undefined : r.find_node_by_name(e);
       if (o) {
         o.get_element().getElementsByClassName("blocklyTreeLabel")[0].textContent = t;
       }
@@ -287,11 +287,11 @@ var h = new (function () {
       if (e) {
         var t;
         var n = e;
-        var r = Object(l.qb)(e);
-        if ((null === r || void 0 === r ? void 0 : r.type) && [p.x, p.A].includes(r.type)) {
+        var r = l.qb(e);
+        if ((null === r || undefined === r ? undefined : r.type) && [p.x, p.A].includes(r.type)) {
           n = r.id;
         }
-        var o = null === (t = c.Blink.mainWorkspace.get_toolbox()) || void 0 === t ? void 0 : t.find_node_by_name(n);
+        var o = null === (t = c.Blink.mainWorkspace.get_toolbox()) || undefined === t ? undefined : t.find_node_by_name(n);
         if (o) {
           o.get_element().classList.add("cocoWidgetSelected");
         }
@@ -313,15 +313,15 @@ var h = new (function () {
       var r;
       var o = this.getToolbox();
       if (o) {
-        var i = null === (t = o.find_node_by_name("toolbox-widget")) || void 0 === t ? void 0 : t.get_children();
+        var i = null === (t = o.find_node_by_name("toolbox-widget")) || undefined === t ? undefined : t.get_children();
         if (i && i.indexOf(e) > -1) {
-          return !0;
+          return true;
         }
-        var a = null === (n = o.find_node_by_name("toolbox-invisible-widget")) || void 0 === n ? void 0 : n.get_children();
+        var a = null === (n = o.find_node_by_name("toolbox-invisible-widget")) || undefined === n ? undefined : n.get_children();
         if (a && a.indexOf(e) > -1) {
-          return !0;
+          return true;
         }
-        var s = null === (r = o.find_node_by_name("toolbox-global-widget")) || void 0 === r ? void 0 : r.get_children();
+        var s = null === (r = o.find_node_by_name("toolbox-global-widget")) || undefined === r ? undefined : r.get_children();
         return !!(s && s.indexOf(e) > -1);
       }
     }
@@ -329,7 +329,7 @@ var h = new (function () {
     key: "getSelectWidgetCategoryName",
     value: function () {
       var e;
-      var t = null === (e = this.getToolbox()) || void 0 === e ? void 0 : e.get_selected();
+      var t = null === (e = this.getToolbox()) || undefined === e ? undefined : e.get_selected();
       if (t && this.checkIsWidgetCategory(t)) {
         return t.get_name();
       }
@@ -338,7 +338,7 @@ var h = new (function () {
     key: "setSelectedItem",
     value: function (e) {
       var t;
-      if (!(null === (t = this.getToolbox()) || void 0 === t)) {
+      if (!(null === (t = this.getToolbox()) || undefined === t)) {
         t.set_selected_item(e);
       }
     }
@@ -346,16 +346,16 @@ var h = new (function () {
     key: "setSelectedItemByWidgetId",
     value: function (e) {
       var t = this.getToolbox();
-      if (null === t || void 0 === t ? void 0 : t.flyout.is_visible()) {
-        if (!(null === t || void 0 === t)) {
-          t.set_selected_item(null === t || void 0 === t ? void 0 : t.find_node_by_name(e));
+      if (null === t || undefined === t ? undefined : t.flyout.is_visible()) {
+        if (!(null === t || undefined === t)) {
+          t.set_selected_item(null === t || undefined === t ? undefined : t.find_node_by_name(e));
         }
       }
     }
   }]);
   return e;
 }())();
-var m = require("./653");
+import m = require("./653");
 var g = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -368,7 +368,7 @@ var g = function __importDefault(module) {
   });
   return defaultExport;
 }(m);
-var _ = require("./654");
+import _ = require("./654");
 var v = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -381,7 +381,7 @@ var v = function __importDefault(module) {
   });
   return defaultExport;
 }(_);
-var b = require("./655");
+import b = require("./655");
 var y = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -394,7 +394,7 @@ var y = function __importDefault(module) {
   });
   return defaultExport;
 }(b);
-var E = require("./656");
+import E = require("./656");
 var O = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -407,7 +407,7 @@ var O = function __importDefault(module) {
   });
   return defaultExport;
 }(E);
-var w = require("./657");
+import w = require("./657");
 var C = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -420,7 +420,7 @@ var C = function __importDefault(module) {
   });
   return defaultExport;
 }(w);
-var T = require("./658");
+import T = require("./658");
 var S = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -433,7 +433,7 @@ var S = function __importDefault(module) {
   });
   return defaultExport;
 }(T);
-var I = require("./659");
+import I = require("./659");
 var A = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -446,7 +446,7 @@ var A = function __importDefault(module) {
   });
   return defaultExport;
 }(I);
-var j = require("./660");
+import j = require("./660");
 var N = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -459,7 +459,7 @@ var N = function __importDefault(module) {
   });
   return defaultExport;
 }(j);
-var R = require("./661");
+import R = require("./661");
 var k = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -472,7 +472,7 @@ var k = function __importDefault(module) {
   });
   return defaultExport;
 }(R);
-var x = require("./662");
+import x = require("./662");
 var D = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -485,7 +485,7 @@ var D = function __importDefault(module) {
   });
   return defaultExport;
 }(x);
-var M = require("./663");
+import M = require("./663");
 var L = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -498,7 +498,7 @@ var L = function __importDefault(module) {
   });
   return defaultExport;
 }(M);
-var P = require("./664");
+import P = require("./664");
 var B = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -511,7 +511,7 @@ var B = function __importDefault(module) {
   });
   return defaultExport;
 }(P);
-var F = require("./665");
+import F = require("./665");
 var G = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -542,8 +542,8 @@ var U = {
 var W = function () {
   for (var e in U) c.Blink.Msg[e] = U[e];
 };
-var H = require("../6");
-var V = require("../1/index");
+import H = require("../6");
+import V = require("regenerator-runtime");
 var z = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -556,13 +556,13 @@ var z = function __importDefault(module) {
   });
   return defaultExport;
 }(V);
-var Y = require("../7");
-var K = require("./208/index");
-var q = require("../38/index");
-var X = require("../53");
-var Q = require("../47");
-var Z = require("../4/127");
-var J = require("../2");
+import Y = require("../7");
+import K = require("./208/index");
+import q = require("../38/index");
+import X = require("../53");
+import Q = require("../47");
+import Z = require("../4/127");
+import J = require("../2");
 !function (e) {
   e.PNG = "dataurl+png";
   e.SVG_ASCII = "dataurl+ascii";
@@ -575,7 +575,7 @@ function te(e) {
   return ne.apply(this, arguments);
 }
 function ne() {
-  return (ne = Object(Y.a)(z.a.mark(function e(t) {
+  return (ne = Y.a(z.a.mark(function e(t) {
     var n;
     var r;
     var o;
@@ -588,7 +588,7 @@ function ne() {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
-            if (r = u.length > 1 && void 0 !== u[1] ? u[1] : 2, o = null === (n = c.Blink.mainWorkspace.get_block_by_id(t)) || void 0 === n ? void 0 : n.svg_group) {
+            if (r = u.length > 1 && undefined !== u[1] ? u[1] : 2, o = null === (n = c.Blink.mainWorkspace.get_block_by_id(t)) || undefined === n ? undefined : n.svg_group) {
               e.next = 4;
               break;
             }
@@ -602,7 +602,7 @@ function ne() {
             s = (a.width + 10) * r;
             l = (a.height + 10) * r;
             ue(i, s, l, "png", function (e) {
-              q.d.dispatch(Object(J.bi)(!0, e));
+              q.d.dispatch(J.bi(true, e));
             });
           case 11:
           case "end":
@@ -616,7 +616,7 @@ function re(e, t) {
   return oe.apply(this, arguments);
 }
 function oe() {
-  return (oe = Object(Y.a)(z.a.mark(function e(t, n) {
+  return (oe = Y.a(z.a.mark(function e(t, n) {
     var r;
     var o;
     var i;
@@ -674,7 +674,7 @@ function ie() {
   return ae.apply(this, arguments);
 }
 function ae() {
-  return (ae = Object(Y.a)(z.a.mark(function e() {
+  return (ae = Y.a(z.a.mark(function e() {
     var t;
     var n;
     var r;
@@ -687,14 +687,14 @@ function ae() {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
-            if (n = null === (t = c.Blink.mainWorkspace.get_flyout()) || void 0 === t ? void 0 : t.get_workspace()) {
+            if (n = null === (t = c.Blink.mainWorkspace.get_flyout()) || undefined === t ? undefined : t.get_workspace()) {
               e.next = 3;
               break;
             }
             return e.abrupt("return");
           case 3:
-            r = n.get_top_blocks(!1);
-            o = Object(Q.a)(r);
+            r = n.get_top_blocks(false);
+            o = Q.a(r);
             e.prev = 5;
             o.s();
           case 7:
@@ -702,7 +702,7 @@ function ae() {
               e.next = 18;
               break;
             }
-            if (s = i.value, l = null === (a = n.get_block_by_id(s.id)) || void 0 === a ? void 0 : a.svg_group) {
+            if (s = i.value, l = null === (a = n.get_block_by_id(s.id)) || undefined === a ? undefined : a.svg_group) {
               e.next = 12;
               break;
             }
@@ -712,7 +712,7 @@ function ae() {
             return re(s, l);
           case 14:
             e.next = 16;
-            return Object(f.lb)(200);
+            return f.lb(200);
           case 16:
             e.next = 7;
             break;
@@ -740,7 +740,7 @@ function ce(e) {
   return le.apply(this, arguments);
 }
 function le() {
-  return (le = Object(Y.a)(z.a.mark(function e(t) {
+  return (le = Y.a(z.a.mark(function e(t) {
     var n;
     var r;
     var o;
@@ -756,7 +756,7 @@ function le() {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
-            (n = t.cloneNode(!0)).removeAttribute("width");
+            (n = t.cloneNode(true)).removeAttribute("width");
             n.removeAttribute("height");
             n.removeAttribute("transform");
             r = n.querySelectorAll("image");
@@ -838,28 +838,28 @@ function ue(e, t, n, r, o) {
 if (window.location.href.toLowerCase().includes(se)) {
   window.addEventListener("load", function () {
     var e = document.getElementById("logo");
-    if (!(null === e || void 0 === e)) {
+    if (!(null === e || undefined === e)) {
       e.addEventListener("click", ie);
     }
   });
 }
-var de = require("../227/index");
-var pe = require("../206/index");
-var fe = require("./426");
+import de = require("../227/index");
+import pe = require("../206/index");
+import fe = require("./426");
 var he = X.d;
 var me = .5 * he;
 var ge = 2 * he;
 var _e = {
   zoom: {
-    controls: !1,
-    wheel: !1,
+    controls: false,
+    wheel: false,
     startScale: he,
     maxScale: ge,
     minScale: me,
     scaleSpeed: 1.2
   },
-  notch: !1,
-  tooltip: !0,
+  notch: false,
+  tooltip: true,
   flyout: {
     fixed_width: X.b,
     corner_radius: 12,
@@ -877,22 +877,22 @@ var _e = {
     step: 10
   },
   show_scrollbars: {
-    flyout: !1
+    flyout: false
   },
   delete_area_margin: 0,
-  sounds: !1,
+  sounds: false,
   scrollable: {
-    flyout: !0
+    flyout: true
   },
   context_menu: {
     workspace: [c.I.WorkspaceOptionType.PASTE, c.I.WorkspaceOptionType.CLEAN_UP, c.I.WorkspaceOptionType.DELETE_ALL, c.I.WorkspaceOptionType.COPY_ALL, c.I.WorkspaceOptionType.GLOBAL_COMMENT],
     block: [c.I.BlockOptionType.COPY_AND_PASTE, c.I.BlockOptionType.COPY, c.I.BlockOptionType.ADD_COMMENT, c.I.BlockOptionType.COLLAPSE, c.I.BlockOptionType.DELETE, function (e) {
       return {
-        text: Object(u.c)(Object(q.b)(), "Workspace.ContextMenu.blockToImage"),
+        text: u.c(q.b(), "Workspace.ContextMenu.blockToImage"),
         name: "blockToImage",
-        enabled: !0,
+        enabled: true,
         callback: function () {
-          var t = Object(Y.a)(z.a.mark(function t() {
+          var t = Y.a(z.a.mark(function t() {
             return z.a.wrap(function (t) {
               for (;;) {
                 switch (t.prev = t.next) {
@@ -921,14 +921,14 @@ var _e = {
         var n = q.d.getState();
         var r = n.project.screens.get(n.project.currentScreenIndex);
         if (r) {
-          var o = null === (t = Ee.getWorkspaceDataByScreenId(r.id)) || void 0 === t ? void 0 : t.getProcedureManager();
+          var o = null === (t = Ee.getWorkspaceDataByScreenId(r.id)) || undefined === t ? undefined : t.getProcedureManager();
           if (o) {
             return o.get_procedure_by_caller_id(e.id);
           }
         }
       }();
       return {
-        text: Object(u.c)(Object(q.b)(), "Workspace.ContextMenu.jumpToProcDef"),
+        text: u.c(q.b(), "Workspace.ContextMenu.jumpToProcDef"),
         name: "jumpToProcDef",
         enabled: !!t && !t.disabled,
         callback: function () {
@@ -939,7 +939,7 @@ var _e = {
               c.Blink.mainWorkspace.center_on_block(e);
               n.select();
               Ee.setDebuggingBlock(n);
-              n.set_glow_stack(!0);
+              n.set_glow_stack(true);
             }
           }
         }
@@ -948,7 +948,7 @@ var _e = {
   }
 };
 function ve(e) {
-  var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "zh";
+  var t = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : "zh";
   Object.assign(c.Blink.Msg, e);
   c.Blink.utils.set_language(t);
 }
@@ -960,16 +960,16 @@ function be() {
   return e.getProcedureManager();
 }
 function ye(e, t) {
-  var n = c.Blink.inject(e, Object(H.a)(Object(H.a)(Object(H.a)({}, _e), t), {}, {
+  var n = c.Blink.inject(e, H.a(H.a(H.a({}, _e), t), {}, {
     custom_svg_defs: fe.a,
-    auto_resize: !0
+    auto_resize: true
   }));
   var r = h.getToolbox();
   if (r) {
     r.get_flyout().hide();
     r.get_flyout().get_workspace().set_scale(.8);
     r.get_children().forEach(function (e) {
-      return e.set_expanded(!0);
+      return e.set_expanded(true);
     });
   }
   n.get_parent_svg().setAttribute("enable-animation", "true");
@@ -1008,15 +1008,15 @@ function ye(e, t) {
       lineLabel: e.id,
       text: e.label
     };
-    Object(l.x)([t], "category");
+    l.x([t], "category");
   });
-  Object(de.d)();
-  Object(de.b)(be);
+  de.d();
+  de.b(be);
   return n;
 }
 var Ee = new pe.b();
-var Oe = require("../125/index");
-var we = require("../49/index");
+import Oe = require("../125/index");
+import we = require("../49/index");
 var Ce = -20;
 var Te = -4;
 var Se = [-12, -16];
@@ -1024,8 +1024,8 @@ var Ie = [-20, -20];
 var Ae = "<svg width=\"".concat(24, "px\" height=\"").concat(24, "px\" class=\"icon\" aria-hidden=\"true\">\n  <use xlink:href=\"#icon-block-drag-delete\"></use>\n</svg>");
 var je = new (function () {
   function e() {
-    Object(a.a)(this, e);
-    this.iconGroup = void 0;
+    a.a(this, e);
+    this.iconGroup = undefined;
     this.iconGroup = function () {
       var e = c.BU.dom.create_svg_element("g", {
         class: "blocklyDeleteIcon"
@@ -1037,7 +1037,7 @@ var je = new (function () {
       return e;
     }();
   }
-  Object(s.a)(e, [{
+  s.a(e, [{
     key: "removeDisposeAnimation",
     value: function () {
       var e = this.iconGroup.querySelector("#".concat("block_delete_icon_animate_id"));
@@ -1070,7 +1070,7 @@ var je = new (function () {
         return t;
       }(e);
       this.iconGroup.setAttribute("transform", "translate(".concat(n[0], ", ").concat(n[1], ")"));
-      var r = null === (t = e.workspace.get_block_drag_surface()) || void 0 === t ? void 0 : t.get_group();
+      var r = null === (t = e.workspace.get_block_drag_surface()) || undefined === t ? undefined : t.get_group();
       if (r) {
         r.appendChild(this.iconGroup);
       }
@@ -1101,18 +1101,18 @@ function Ne() {
     var t;
     var n;
     var r = document.querySelector(".slider-controller");
-    var o = Object(Oe.is_parent)(r, e.relatedTarget);
+    var o = Oe.is_parent(r, e.relatedTarget);
     var i = document.querySelector(".angle-controller");
-    var a = Object(Oe.is_parent)(i, e.relatedTarget);
+    var a = Oe.is_parent(i, e.relatedTarget);
     var s = document.querySelector(".color-controller");
-    var l = Object(Oe.is_parent)(s, e.relatedTarget);
-    var u = "menu-item" === (null === (t = e.relatedTarget) || void 0 === t ? void 0 : t.className);
-    var d = "blocklyHtmlInput" === (null === (n = e.relatedTarget) || void 0 === n ? void 0 : n.className);
+    var l = Oe.is_parent(s, e.relatedTarget);
+    var u = "menu-item" === (null === (t = e.relatedTarget) || undefined === t ? undefined : t.className);
+    var d = "blocklyHtmlInput" === (null === (n = e.relatedTarget) || undefined === n ? undefined : n.className);
     if (!(o || a || l || d || u)) {
       c.Blink.widget_div.hide();
     }
   });
-  if (!(null === e || void 0 === e)) {
+  if (!(null === e || undefined === e)) {
     e.addEventListener("contextmenu", function (e) {
       e.preventDefault();
     });
@@ -1133,7 +1133,7 @@ function De(e) {
     case c.I.UIEventType.SCALE:
       !function (e) {
         var t = Number(e.get_new_value());
-        Ee.eventBus.emit(pe.a.WORKSPACE_SCALE_CHANGE, Object(f.M)(t, me, ge));
+        Ee.eventBus.emit(pe.a.WORKSPACE_SCALE_CHANGE, f.M(t, me, ge));
       }(e);
       break;
     case c.I.UIEventType.FLYOUT_SHOW:
@@ -1145,9 +1145,9 @@ function De(e) {
     case c.I.UIEventType.CATEGORY_WILL_CHANGE:
       !function (e) {
         var t;
-        var n = null === (t = e.get_new_value()) || void 0 === t ? void 0 : t.get_name();
+        var n = null === (t = e.get_new_value()) || undefined === t ? undefined : t.get_name();
         if (n) {
-          Object(de.e)(n);
+          de.e(n);
         }
       }(e);
       break;
@@ -1156,7 +1156,7 @@ function De(e) {
         var t;
         var n;
         var r = e.get_new_value();
-        if (!(null === (t = we.oTHelper.customEvent) || void 0 === t || null === (n = t.emit) || void 0 === n)) {
+        if (!(null === (t = we.oTHelper.customEvent) || undefined === t || null === (n = t.emit) || undefined === n)) {
           n.focusItem("block", r);
         }
       }(e);
@@ -1185,32 +1185,32 @@ var Me = function (e) {
       var i;
       var a;
       if (Re) {
-        if (!(null === (a = Re.get_element()) || void 0 === a)) {
+        if (!(null === (a = Re.get_element()) || undefined === a)) {
           a.classList.remove("cocoTreeRelated");
         }
       }
-      if (!(null === (o = (Re = r).get_element()) || void 0 === o || null === (i = o.classList) || void 0 === i)) {
+      if (!(null === (o = (Re = r).get_element()) || undefined === o || null === (i = o.classList) || undefined === i)) {
         i.add("cocoTreeRelated");
       }
     }
   } else {
     var s;
     if (Re) {
-      if (!(null === (s = Re.get_element()) || void 0 === s)) {
+      if (!(null === (s = Re.get_element()) || undefined === s)) {
         s.classList.remove("cocoTreeRelated");
       }
-      Re = void 0;
+      Re = undefined;
     }
   }
 };
-var Le = !1;
+var Le = false;
 function Pe(e) {
   Ue();
   Le = e._is_from_flyout;
   Ge(1);
 }
 function Be(e) {
-  q.d.dispatch(Object(J.ti)(!1));
+  q.d.dispatch(J.ti(false));
 }
 function Fe(e) {
   var t;
@@ -1230,7 +1230,7 @@ function Fe(e) {
               return;
             }
             if (!Le) {
-              q.d.dispatch(Object(J.ti)(t));
+              q.d.dispatch(J.ti(t));
             }
             if (t) {
               je.create(e);
@@ -1248,7 +1248,7 @@ function Fe(e) {
 function Ge(e) {
   var t;
   if (!(e > 1 || e < 0)) {
-    var n = null === (t = c.Blink.mainWorkspace.get_block_drag_surface()) || void 0 === t ? void 0 : t.get_group();
+    var n = null === (t = c.Blink.mainWorkspace.get_block_drag_surface()) || undefined === t ? undefined : t.get_group();
     if (n) {
       if (1 === e) {
         n.removeAttribute("opacity");
@@ -1261,11 +1261,11 @@ function Ge(e) {
 function Ue() {
   var e = Ee.getDebuggingBlock();
   if (e) {
-    e.set_glow_stack(!1);
+    e.set_glow_stack(false);
   }
 }
 var We;
-var He = require("../11");
+import He = require("../11");
 !function (e) {
   e.PRIMITIVE = "PRIMITIVE";
   e.ARRAY = "ARRAY";
@@ -1289,58 +1289,58 @@ var He = require("../11");
 }(We || (We = {}));
 var Ve = function () {
   var e;
-  return Object(H.a)((e = {}, Object(He.a)(e, We.PRIMITIVE, {
+  return H.a((e = {}, He.a(e, We.PRIMITIVE, {
     blocksList: ["variables_get", "variables_set", "variables_change"],
     fieldName: "VAR"
-  }), Object(He.a)(e, We.ARRAY, {
+  }), He.a(e, We.ARRAY, {
     blocksList: ["array_get"],
     fieldName: "ARRAY"
-  }), Object(He.a)(e, We.OBJECT, {
+  }), He.a(e, We.OBJECT, {
     blocksList: ["object_get"],
     fieldName: "OBJECT"
-  }), Object(He.a)(e, We.BROADCAST, {
+  }), He.a(e, We.BROADCAST, {
     blocksList: ["broadcast_input"],
     fieldName: "BROADCAST"
-  }), Object(He.a)(e, We.DOC_KEYS, {
+  }), He.a(e, We.DOC_KEYS, {
     blocksList: ["local_document_all_key_field_dropdown", "local_document_set_field_item", "local_document_remove_field_item", "local_document_get_field_item", "local_document_check_if_field_key_exists", "new_local_document_all_key_field_dropdown", "new_local_document_set_field_item", "new_local_document_remove_field_item", "new_local_document_get_field_item", "new_local_document_check_if_field_key_exists"],
     fieldName: "DOC_KEYS"
-  }), Object(He.a)(e, We.IMAGE_LIBRARY, {
+  }), He.a(e, We.IMAGE_LIBRARY, {
     blocksList: ["image_file_list_dropdown"],
     fieldName: "IMAGE_FILE_ID"
-  }), Object(He.a)(e, We.ICON_LIBRARY, {
+  }), He.a(e, We.ICON_LIBRARY, {
     blocksList: ["icon_file_list_dropdown"],
     fieldName: "ICON_FILE_ID"
-  }), Object(He.a)(e, We.SOUND_LIBRARY, {
+  }), He.a(e, We.SOUND_LIBRARY, {
     blocksList: ["audio_sound_file_list_dropdown"],
     fieldName: "SOUND_FILE_ID"
-  }), Object(He.a)(e, We.CLOUD_DOC_KEYS, {
+  }), He.a(e, We.CLOUD_DOC_KEYS, {
     blocksList: ["cloud_document_all_key_field_dropdown"],
     fieldName: "DOC_KEYS"
-  }), Object(He.a)(e, We.SCREEN, {
+  }), He.a(e, We.SCREEN, {
     blocksList: ["screen_set_background_color", "screen_set_background_image", "screen_navigate_to", "screen_navigate_to_by_value", "new_screen_navigate_to", "new_screen_navigate_to_by_value", "screen_get_size", "screen_get_color", "screen_get_background_image", "screen_check_if_pressed"],
     fieldName: "SCREEN_ID"
-  }), Object(He.a)(e, We.DATA_SOURCE, {
+  }), He.a(e, We.DATA_SOURCE, {
     blocksList: ["data_source_get"],
     fieldName: "DATA_SOURCE"
-  }), Object(He.a)(e, We.GRID, {
+  }), He.a(e, We.GRID, {
     blocksList: ["data_source_get"],
     fieldName: "DATA_SOURCE"
-  }), Object(He.a)(e, We.COLUMNS, {
+  }), He.a(e, We.COLUMNS, {
     blocksList: ["cloudDB_all_column_dropdown"],
     fieldName: "COLUMNS"
-  }), Object(He.a)(e, We.CLOUD_DB, {
+  }), He.a(e, We.CLOUD_DB, {
     blocksList: ["cloudDB_insert", "cloudDB_delete", "cloudDB_update", "cloudDB_query_by_column", "cloudDB_query_by_count"],
     fieldName: "WIDGET_ID"
-  }), Object(He.a)(e, We.TABLE_DATA_COLUMN, {
+  }), He.a(e, We.TABLE_DATA_COLUMN, {
     blocksList: ["table_data_column_field_dropdown"],
     fieldName: "COLUMN"
-  }), Object(He.a)(e, We.CLOUD_DICT_KEYS, {
+  }), He.a(e, We.CLOUD_DICT_KEYS, {
     blocksList: ["cloud_dict_all_key_dropdown"],
     fieldName: "KEYS"
-  }), Object(He.a)(e, We.CLOUD_TABLE_COLUMNS, {
+  }), He.a(e, We.CLOUD_TABLE_COLUMNS, {
     blocksList: ["cloudTable_all_column_dropdown"],
     fieldName: "COLUMNS"
-  }), e), Object(l.N)());
+  }), e), l.N());
 };
 function ze(e, t, n) {
   var r;
@@ -1352,7 +1352,7 @@ function ze(e, t, n) {
       if (i.includes(e.type) && e.inputList.length) {
         var r;
         var o = e.get_field(a);
-        if (!o || (null === (r = o.get_value()) || void 0 === r ? void 0 : r.toString()) !== t) {
+        if (!o || (null === (r = o.get_value()) || undefined === r ? undefined : r.toString()) !== t) {
           return;
         }
         if (o.get_text() === n) {
@@ -1361,7 +1361,7 @@ function ze(e, t, n) {
         o.set_text(n);
       }
     });
-    if (!(null === (r = c.Blink.mainWorkspace.get_toolbox()) || void 0 === r)) {
+    if (!(null === (r = c.Blink.mainWorkspace.get_toolbox()) || undefined === r)) {
       r.refresh_selection();
     }
   }
@@ -1376,18 +1376,18 @@ function Ye(e, t) {
       if (o.includes(e.type) && e.inputList.length) {
         var n;
         var r = e.get_field(i);
-        if (!r || (null === (n = r.get_value()) || void 0 === n ? void 0 : n.toString()) !== t) {
+        if (!r || (null === (n = r.get_value()) || undefined === n ? undefined : n.toString()) !== t) {
           return;
         }
-        if (!(null === r || void 0 === r)) {
+        if (!(null === r || undefined === r)) {
           r.set_value(l.h);
         }
-        if (!(null === r || void 0 === r)) {
+        if (!(null === r || undefined === r)) {
           r.set_text(l.g);
         }
       }
     });
-    if (!(null === (n = c.Blink.mainWorkspace.get_toolbox()) || void 0 === n)) {
+    if (!(null === (n = c.Blink.mainWorkspace.get_toolbox()) || undefined === n)) {
       n.refresh_selection();
     }
   }
@@ -1402,8 +1402,8 @@ function Ke() {
           var t = e.get_field("BUMP_TYPE");
           if (t) {
             var n = e.get_field_value("BUMP_TYPE");
-            if ((null === n || void 0 === n ? void 0 : n.startsWith("ACTOR_")) || (null === n || void 0 === n ? void 0 : n.startsWith("BRUSH_"))) {
-              var r = Object(l.Bb)(n);
+            if ((null === n || undefined === n ? undefined : n.startsWith("ACTOR_")) || (null === n || undefined === n ? undefined : n.startsWith("BRUSH_"))) {
+              var r = l.Bb(n);
               if (r) {
                 t.set_text(r.title);
               } else {
@@ -1417,8 +1417,8 @@ function Ke() {
           var t = e.get_field("TARGET");
           if (t) {
             var n = e.get_field_value("TARGET");
-            if ((null === n || void 0 === n ? void 0 : n.startsWith("ACTOR_")) || (null === n || void 0 === n ? void 0 : n.startsWith("BRUSH_"))) {
-              var r = Object(l.Bb)(n);
+            if ((null === n || undefined === n ? undefined : n.startsWith("ACTOR_")) || (null === n || undefined === n ? undefined : n.startsWith("BRUSH_"))) {
+              var r = l.Bb(n);
               if (r) {
                 t.set_text(r.title);
               } else {
@@ -1434,20 +1434,20 @@ function Ke() {
           var o;
           var i;
           var a = e.get_field("ACTOR_STYLE_ID") || e.get_shadow_field("ACTOR_STYLE_WRAPPER", "ACTOR_STYLE_ID");
-          var s = e.get_field("WIDGET_ID") || (null === (t = e.parent_block) || void 0 === t ? void 0 : t.get_field("WIDGET_ID"));
-          var c = null === s || void 0 === s ? void 0 : s.get_value();
-          if (!c || void 0 === (o = Object(l.Bb)(c)) || (r = n.get_value()) === l.h || void 0 === (i = o.attributes.actionList.find(function (e) {
+          var s = e.get_field("WIDGET_ID") || (null === (t = e.parent_block) || undefined === t ? undefined : t.get_field("WIDGET_ID"));
+          var c = null === s || undefined === s ? undefined : s.get_value();
+          if (!c || undefined === (o = l.Bb(c)) || (r = n.get_value()) === l.h || undefined === (i = o.attributes.actionList.find(function (e) {
             return e.id === r;
           }))) {
             n.set_value(l.h);
             n.set_text(l.g);
-            if (!(null === a || void 0 === a)) {
+            if (!(null === a || undefined === a)) {
               a.set_value(l.h);
             }
-            if (!(null === a || void 0 === a)) {
+            if (!(null === a || undefined === a)) {
               a.set_text(l.g);
             }
-            return void (o || (null === s || void 0 === s || s.set_value(l.h), null === s || void 0 === s || s.set_text(l.g)));
+            return void (o || (null === s || undefined === s || s.set_value(l.h), null === s || undefined === s || s.set_text(l.g)));
           }
           n.set_value(i.id);
           n.set_text(i.name);
@@ -1456,13 +1456,13 @@ function Ke() {
             var d = i.styleList.findIndex(function (e) {
               return e.id === u;
             });
-            var p = -1 === d ? void 0 : i.styleList[d];
-            a.set_value((null === p || void 0 === p ? void 0 : p.id) || l.h);
+            var p = -1 === d ? undefined : i.styleList[d];
+            a.set_value((null === p || undefined === p ? undefined : p.id) || l.h);
           }
         }
       }
     });
-    if (!(null === (e = c.Blink.mainWorkspace.get_toolbox()) || void 0 === e)) {
+    if (!(null === (e = c.Blink.mainWorkspace.get_toolbox()) || undefined === e)) {
       e.refresh_selection();
     }
   }
@@ -1486,7 +1486,7 @@ function Qe(e, t, n) {
       var a = o.parent_block;
       if (a && a.get_field_value("WIDGET_ID") === e) {
         if (o.get_field_value("DOC_KEYS") === t) {
-          if (!(null === (i = o.get_field("DOC_KEYS")) || void 0 === i)) {
+          if (!(null === (i = o.get_field("DOC_KEYS")) || undefined === i)) {
             i.set_value(n);
           }
         }
@@ -1502,21 +1502,21 @@ function Ze(e) {
       if (n.includes(t.type) && t.inputList.length) {
         var r;
         var o = t.get_field("WIDGET_ID");
-        if (!o || (null === (r = o.get_value()) || void 0 === r ? void 0 : r.toString()) !== e) {
+        if (!o || (null === (r = o.get_value()) || undefined === r ? undefined : r.toString()) !== e) {
           return;
         }
         var i = t.get_field("SLOT_WIDGET");
-        if (!(null === i || void 0 === i)) {
+        if (!(null === i || undefined === i)) {
           i.set_value(l.h);
         }
-        if (!(null === i || void 0 === i)) {
+        if (!(null === i || undefined === i)) {
           i.set_text(l.g);
         }
         var a = t.get_field("ATTRIBUTE");
-        if (!(null === a || void 0 === a)) {
+        if (!(null === a || undefined === a)) {
           a.set_value(l.h);
         }
-        if (!(null === a || void 0 === a)) {
+        if (!(null === a || undefined === a)) {
           a.set_text(l.g);
         }
       }
@@ -1531,11 +1531,11 @@ function Je(e, t) {
       if (o && o.get_field_value("WIDGET_ID") === e) {
         var i;
         var a = r.get_field("DOC_KEYS");
-        var s = Object(Q.a)(t);
+        var s = Q.a(t);
         try {
           for (s.s(); !(i = s.n()).done;) {
             var c = i.value;
-            if (c.id === (null === a || void 0 === a ? void 0 : a.get_value())) {
+            if (c.id === (null === a || undefined === a ? undefined : a.get_value())) {
               a.set_text(c.key);
             }
           }
@@ -1556,7 +1556,7 @@ function $e(e, t) {
       if (o && o.get_field_value("WIDGET_ID") === e) {
         var i = r.get_field("COLUMN");
         var a = t.header;
-        for (var s in a) if (s === (null === i || void 0 === i ? void 0 : i.get_value())) {
+        for (var s in a) if (s === (null === i || undefined === i ? undefined : i.get_value())) {
           var c = a[s];
           i.set_text(c.field);
         }
@@ -1569,15 +1569,15 @@ function et(e, t, n) {
   c.Blink.mainWorkspace.get_all_blocks().forEach(function (o) {
     if (r.includes(o.type)) {
       var i = o.parent_block;
-      var a = null === i || void 0 === i ? void 0 : i.get_field_value("WIDGET_ID");
+      var a = null === i || undefined === i ? undefined : i.get_field_value("WIDGET_ID");
       if (a) {
-        var s = Object(l.Z)(a);
+        var s = l.Z(a);
         if (e === s && o.get_field_value("KEYS") === t) {
           var c = o.get_field("KEYS");
-          if (!(null === c || void 0 === c)) {
+          if (!(null === c || undefined === c)) {
             c.set_value(n);
           }
-          if (!(null === c || void 0 === c)) {
+          if (!(null === c || undefined === c)) {
             c.set_text(n);
           }
         }
@@ -1592,10 +1592,10 @@ function tt(e) {
       var r = n.parent_block;
       if (r && r.get_field_value("WIDGET_ID") === e) {
         var o = n.get_field("KEYS");
-        if (!(null === o || void 0 === o)) {
+        if (!(null === o || undefined === o)) {
           o.set_value(l.h);
         }
-        if (!(null === o || void 0 === o)) {
+        if (!(null === o || undefined === o)) {
           o.set_text(l.g);
         }
       }
@@ -1607,15 +1607,15 @@ function nt(e, t, n) {
   c.Blink.mainWorkspace.get_all_blocks().forEach(function (o) {
     if (r.includes(o.type)) {
       var i = o.parent_block;
-      var a = null === i || void 0 === i ? void 0 : i.get_field_value("WIDGET_ID");
+      var a = null === i || undefined === i ? undefined : i.get_field_value("WIDGET_ID");
       if (a) {
-        var s = Object(l.db)(a);
+        var s = l.db(a);
         if (e === s && o.get_field_value("COLUMNS") === t) {
           var c = o.get_field("COLUMNS");
-          if (!(null === c || void 0 === c)) {
+          if (!(null === c || undefined === c)) {
             c.set_value(n);
           }
-          if (!(null === c || void 0 === c)) {
+          if (!(null === c || undefined === c)) {
             c.set_text(n);
           }
         }
@@ -1630,10 +1630,10 @@ function rt(e) {
       var r = n.parent_block;
       if (r && r.get_field_value("WIDGET_ID") === e) {
         var o = n.get_field("COLUMNS");
-        if (!(null === o || void 0 === o)) {
+        if (!(null === o || undefined === o)) {
           o.set_value(l.h);
         }
-        if (!(null === o || void 0 === o)) {
+        if (!(null === o || undefined === o)) {
           o.set_text(l.g);
         }
       }

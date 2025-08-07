@@ -9,11 +9,11 @@ var u = function () {
     this.field = t;
   }
   t.prototype.decode = function (t, e) {
-    for (var r = this.field, a = new o.a(r, t), u = new Int32Array(e), s = !0, c = 0; c < e; c++) {
+    for (var r = this.field, a = new o.a(r, t), u = new Int32Array(e), s = true, c = 0; c < e; c++) {
       var f = a.evaluateAt(r.exp(c + r.getGeneratorBase()));
       u[u.length - 1 - c] = f;
       if (0 !== f) {
-        s = !1;
+        s = false;
       }
     }
     if (!s) {

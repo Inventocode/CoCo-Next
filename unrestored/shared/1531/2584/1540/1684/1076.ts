@@ -5,9 +5,9 @@ module.exports = function (e) {
     "/./"[e](t);
   } catch (n) {
     try {
-      t[r] = !1;
+      t[r] = false;
       return "/./"[e](t);
     } catch (o) {}
   }
-  return !1;
+  return false;
 };

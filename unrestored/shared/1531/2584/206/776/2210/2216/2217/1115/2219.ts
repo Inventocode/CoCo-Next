@@ -19,7 +19,7 @@
     return "(?:" + e + ")";
   }
   function r(e) {
-    return void 0 === e ? "undefined" : null === e ? "null" : Object.prototype.toString.call(e).split(" ").pop().split("]").shift().toLowerCase();
+    return undefined === e ? "undefined" : null === e ? "null" : Object.prototype.toString.call(e).split(" ").pop().split("]").shift().toLowerCase();
   }
   function i(e) {
     return e.toUpperCase();
@@ -102,8 +102,8 @@
       IPV6ADDRESS: new RegExp("^\\[?(" + x + ")" + n(n("\\%25|\\%(?!" + r + "{2})") + "(" + C + ")") + "?\\]?$")
     };
   }
-  var a = o(!1);
-  var s = o(!0);
+  var a = o(false);
+  var s = o(true);
   var c = function (e, t) {
     if (Array.isArray(e)) {
       return e;
@@ -111,15 +111,15 @@
     if (Symbol.iterator in Object(e)) {
       return function (e, t) {
         var n = [];
-        var r = !0;
-        var i = !1;
-        var o = void 0;
+        var r = true;
+        var i = false;
+        var o = undefined;
         try {
-          for (var a, s = e[Symbol.iterator](); !(r = (a = s.next()).done) && (n.push(a.value), !t || n.length !== t); r = !0) {
+          for (var a, s = e[Symbol.iterator](); !(r = (a = s.next()).done) && (n.push(a.value), !t || n.length !== t); r = true) {
             ;
           }
         } catch (c) {
-          i = !0;
+          i = true;
           o = c;
         } finally {
           try {
@@ -247,18 +247,18 @@
     var r = 128;
     var i = 0;
     var o = 72;
-    var a = !0;
-    var s = !1;
-    var c = void 0;
+    var a = true;
+    var s = false;
+    var c = undefined;
     try {
-      for (var l, f = e[Symbol.iterator](); !(a = (l = f.next()).done); a = !0) {
+      for (var l, f = e[Symbol.iterator](); !(a = (l = f.next()).done); a = true) {
         var d = l.value;
         if (d < 128) {
           t.push(_(d));
         }
       }
     } catch (U) {
-      s = !0;
+      s = true;
       c = U;
     } finally {
       try {
@@ -275,18 +275,18 @@
     var g = h;
     for (h && t.push("-"); g < n;) {
       var b = u;
-      var w = !0;
-      var E = !1;
-      var x = void 0;
+      var w = true;
+      var E = false;
+      var x = undefined;
       try {
-        for (var C, O = e[Symbol.iterator](); !(w = (C = O.next()).done); w = !0) {
+        for (var C, O = e[Symbol.iterator](); !(w = (C = O.next()).done); w = true) {
           var k = C.value;
           if (k >= r && k < b) {
             b = k;
           }
         }
       } catch (U) {
-        E = !0;
+        E = true;
         x = U;
       } finally {
         try {
@@ -305,11 +305,11 @@
       }
       i += (b - r) * S;
       r = b;
-      var T = !0;
-      var B = !1;
-      var D = void 0;
+      var T = true;
+      var B = false;
+      var D = undefined;
       try {
-        for (var I, F = e[Symbol.iterator](); !(T = (I = F.next()).done); T = !0) {
+        for (var I, F = e[Symbol.iterator](); !(T = (I = F.next()).done); T = true) {
           var R = I.value;
           if (R < r && ++i > u) {
             A("overflow");
@@ -332,7 +332,7 @@
           }
         }
       } catch (U) {
-        B = !0;
+        B = true;
         D = U;
       } finally {
         try {
@@ -403,19 +403,19 @@
     if (e.scheme) {
       e.scheme = String(e.scheme).replace(t.PCT_ENCODED, n).toLowerCase().replace(t.NOT_SCHEME, "");
     }
-    if (void 0 !== e.userinfo) {
+    if (undefined !== e.userinfo) {
       e.userinfo = String(e.userinfo).replace(t.PCT_ENCODED, n).replace(t.NOT_USERINFO, O).replace(t.PCT_ENCODED, i);
     }
-    if (void 0 !== e.host) {
+    if (undefined !== e.host) {
       e.host = String(e.host).replace(t.PCT_ENCODED, n).toLowerCase().replace(t.NOT_HOST, O).replace(t.PCT_ENCODED, i);
     }
-    if (void 0 !== e.path) {
+    if (undefined !== e.path) {
       e.path = String(e.path).replace(t.PCT_ENCODED, n).replace(e.scheme ? t.NOT_PATH : t.NOT_PATH_NOSCHEME, O).replace(t.PCT_ENCODED, i);
     }
-    if (void 0 !== e.query) {
+    if (undefined !== e.query) {
       e.query = String(e.query).replace(t.PCT_ENCODED, n).replace(t.NOT_QUERY, O).replace(t.PCT_ENCODED, i);
     }
-    if (void 0 !== e.fragment) {
+    if (undefined !== e.fragment) {
       e.fragment = String(e.fragment).replace(t.PCT_ENCODED, n).replace(t.NOT_FRAGMENT, O).replace(t.PCT_ENCODED, i);
     }
     return e;
@@ -456,7 +456,7 @@
       }, []).sort(function (e, t) {
         return t.length - e.length;
       })[0];
-      var m = void 0;
+      var m = undefined;
       if (v && v.length > 1) {
         var y = A.slice(0, v.index);
         var b = A.slice(v.index + v.length);
@@ -472,11 +472,11 @@
     return e;
   }
   var I = /^(?:([^:\/?#]+):)?(?:\/\/((?:([^\/?#@]*)@)?(\[[^\/?#\]]+\]|[^\/?#:]*)(?:\:(\d*))?))?([^?#]*)(?:\?([^#]*))?(?:#((?:.|\n|\r)*))?/i;
-  var F = void 0 === "".match(/(){0}/)[1];
+  var F = undefined === "".match(/(){0}/)[1];
   function R(e) {
-    var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+    var t = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : {};
     var n = {};
-    var r = !1 !== t.iri ? s : a;
+    var r = false !== t.iri ? s : a;
     if ("suffix" === t.reference) {
       e = (t.scheme ? t.scheme + ":" : "") + "//" + e;
     }
@@ -494,25 +494,25 @@
           n.port = i[5];
         }
       } else {
-        n.scheme = i[1] || void 0;
-        n.userinfo = -1 !== e.indexOf("@") ? i[3] : void 0;
-        n.host = -1 !== e.indexOf("//") ? i[4] : void 0;
+        n.scheme = i[1] || undefined;
+        n.userinfo = -1 !== e.indexOf("@") ? i[3] : undefined;
+        n.host = -1 !== e.indexOf("//") ? i[4] : undefined;
         n.port = parseInt(i[5], 10);
         n.path = i[6] || "";
-        n.query = -1 !== e.indexOf("?") ? i[7] : void 0;
-        n.fragment = -1 !== e.indexOf("#") ? i[8] : void 0;
+        n.query = -1 !== e.indexOf("?") ? i[7] : undefined;
+        n.fragment = -1 !== e.indexOf("#") ? i[8] : undefined;
         if (isNaN(n.port)) {
-          n.port = e.match(/\/\/(?:.|\n)*\:(?:\/|\?|\#|$)/) ? i[4] : void 0;
+          n.port = e.match(/\/\/(?:.|\n)*\:(?:\/|\?|\#|$)/) ? i[4] : undefined;
         }
       }
       if (n.host) {
         n.host = D(B(n.host, r), r);
       }
-      if (void 0 !== n.scheme || void 0 !== n.userinfo || void 0 !== n.host || void 0 !== n.port || n.path || void 0 !== n.query) {
-        if (void 0 === n.scheme) {
+      if (undefined !== n.scheme || undefined !== n.userinfo || undefined !== n.host || undefined !== n.port || n.path || undefined !== n.query) {
+        if (undefined === n.scheme) {
           n.reference = "relative";
         } else {
-          if (void 0 === n.fragment) {
+          if (undefined === n.fragment) {
             n.reference = "absolute";
           } else {
             n.reference = "uri";
@@ -546,13 +546,13 @@
     return n;
   }
   function P(e, t) {
-    var n = !1 !== t.iri ? s : a;
+    var n = false !== t.iri ? s : a;
     var r = [];
-    if (void 0 !== e.userinfo) {
+    if (undefined !== e.userinfo) {
       r.push(e.userinfo);
       r.push("@");
     }
-    if (void 0 !== e.host) {
+    if (undefined !== e.host) {
       r.push(D(B(String(e.host), n), n).replace(n.IPV6ADDRESS, function (e, t, n) {
         return "[" + t + (n ? "%25" + n : "") + "]";
       }));
@@ -561,7 +561,7 @@
       r.push(":");
       r.push(String(e.port));
     }
-    return r.length ? r.join("") : void 0;
+    return r.length ? r.join("") : undefined;
   }
   var N = /^\.\.?\//;
   var M = /^\/\.(\/|$)/;
@@ -591,7 +591,7 @@
     return t.join("");
   }
   function H(e) {
-    var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+    var t = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : {};
     var n = t.iri ? s : a;
     var r = [];
     var i = C[(t.scheme || e.scheme || "").toLowerCase()];
@@ -615,7 +615,7 @@
       r.push(":");
     }
     var o = P(e, t);
-    if (void 0 !== o) {
+    if (undefined !== o) {
       if ("suffix" !== t.reference) {
         r.push("//");
       }
@@ -624,28 +624,28 @@
         r.push("/");
       }
     }
-    if (void 0 !== e.path) {
+    if (undefined !== e.path) {
       var c = e.path;
       if (!(t.absolutePath || i && i.absolutePath)) {
         c = U(c);
       }
-      if (void 0 === o) {
+      if (undefined === o) {
         c = c.replace(/^\/\//, "/%2F");
       }
       r.push(c);
     }
-    if (void 0 !== e.query) {
+    if (undefined !== e.query) {
       r.push("?");
       r.push(e.query);
     }
-    if (void 0 !== e.fragment) {
+    if (undefined !== e.fragment) {
       r.push("#");
       r.push(e.fragment);
     }
     return r.join("");
   }
   function V(e, t) {
-    var n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+    var n = arguments.length > 2 && undefined !== arguments[2] ? arguments[2] : {};
     var r = arguments[3];
     var i = {};
     if (!r) {
@@ -660,7 +660,7 @@
       i.path = U(t.path || "");
       i.query = t.query;
     } else {
-      if (void 0 !== t.userinfo || void 0 !== t.host || void 0 !== t.port) {
+      if (undefined !== t.userinfo || undefined !== t.host || undefined !== t.port) {
         i.userinfo = t.userinfo;
         i.host = t.host;
         i.port = t.port;
@@ -671,7 +671,7 @@
           if ("/" === t.path.charAt(0)) {
             i.path = U(t.path);
           } else {
-            if (void 0 === e.userinfo && void 0 === e.host && void 0 === e.port || e.path) {
+            if (undefined === e.userinfo && undefined === e.host && undefined === e.port || e.path) {
               if (e.path) {
                 i.path = e.path.slice(0, e.path.lastIndexOf("/") + 1) + t.path;
               } else {
@@ -685,7 +685,7 @@
           i.query = t.query;
         } else {
           i.path = e.path;
-          if (void 0 !== t.query) {
+          if (undefined !== t.query) {
             i.query = t.query;
           } else {
             i.query = e.query;
@@ -705,7 +705,7 @@
   }
   var z = {
     scheme: "http",
-    domainHost: !0,
+    domainHost: true,
     parse: function (e, t) {
       if (!e.host) {
         e.error = e.error || "HTTP URIs must have a host.";
@@ -715,7 +715,7 @@
     serialize: function (e, t) {
       var n = "https" === String(e.scheme).toLowerCase();
       if (!(e.port !== (n ? 443 : 80) && "" !== e.port)) {
-        e.port = void 0;
+        e.port = undefined;
       }
       if (!e.path) {
         e.path = "/";
@@ -734,33 +734,33 @@
   }
   var K = {
     scheme: "ws",
-    domainHost: !0,
+    domainHost: true,
     parse: function (e, t) {
       var n = e;
       n.secure = W(n);
       n.resourceName = (n.path || "/") + (n.query ? "?" + n.query : "");
-      n.path = void 0;
-      n.query = void 0;
+      n.path = undefined;
+      n.query = undefined;
       return n;
     },
     serialize: function (e, t) {
       if (!(e.port !== (W(e) ? 443 : 80) && "" !== e.port)) {
-        e.port = void 0;
+        e.port = undefined;
       }
       if ("boolean" === typeof e.secure) {
         e.scheme = e.secure ? "wss" : "ws";
-        e.secure = void 0;
+        e.secure = undefined;
       }
       if (e.resourceName) {
         var n = e.resourceName.split("?");
         var r = c(n, 2);
         var i = r[0];
         var o = r[1];
-        e.path = i && "/" !== i ? i : void 0;
+        e.path = i && "/" !== i ? i : undefined;
         e.query = o;
-        e.resourceName = void 0;
+        e.resourceName = undefined;
       }
-      e.fragment = void 0;
+      e.fragment = undefined;
       return e;
     }
   };
@@ -789,9 +789,9 @@
     parse: function (e, t) {
       var n = e;
       var r = n.to = n.path ? n.path.split(",") : [];
-      n.path = void 0;
+      n.path = undefined;
       if (n.query) {
-        for (var i = !1, o = {}, a = n.query.split("&"), s = 0, c = a.length; s < c; ++s) {
+        for (var i = false, o = {}, a = n.query.split("&"), s = 0, c = a.length; s < c; ++s) {
           var u = a[s].split("=");
           switch (u[0]) {
             case "to":
@@ -806,7 +806,7 @@
               n.body = G(u[1], t);
               break;
             default:
-              i = !0;
+              i = true;
               o[G(u[0], t)] = G(u[1], t);
           }
         }
@@ -814,7 +814,7 @@
           n.headers = o;
         }
       }
-      n.query = void 0;
+      n.query = undefined;
       for (var h = 0, p = r.length; h < p; ++h) {
         var _ = r[h].split("@");
         _[0] = G(_[0]);
@@ -834,7 +834,7 @@
     serialize: function (e, t) {
       var n;
       var r = e;
-      var o = void 0 !== (n = e.to) && null !== n ? n instanceof Array ? n : "number" !== typeof n.length || n.split || n.setInterval || n.call ? [n] : Array.prototype.slice.call(n) : [];
+      var o = undefined !== (n = e.to) && null !== n ? n instanceof Array ? n : "number" !== typeof n.length || n.split || n.setInterval || n.call ? [n] : Array.prototype.slice.call(n) : [];
       if (o) {
         for (var a = 0, s = o.length; a < s; ++a) {
           var c = String(o[a]);
@@ -881,7 +881,7 @@
         var c = C[s];
         r.nid = o;
         r.nss = a;
-        r.path = void 0;
+        r.path = undefined;
         if (c) {
           r = c.parse(r, t);
         }
@@ -910,7 +910,7 @@
     parse: function (e, t) {
       var n = e;
       n.uuid = n.nss;
-      n.nss = void 0;
+      n.nss = undefined;
       if (!(t.tolerant || n.uuid && n.uuid.match(ue))) {
         n.error = n.error || "UUID is not valid.";
       }
@@ -946,7 +946,7 @@
     }({
       scheme: "null"
     }, n);
-    return H(V(R(e, r), R(t, r), r, !0), r);
+    return H(V(R(e, r), R(t, r), r, true), r);
   };
   e.normalize = function (e, t) {
     if ("string" === typeof e) {
@@ -980,6 +980,6 @@
   };
   e.unescapeComponent = G;
   Object.defineProperty(e, "__esModule", {
-    value: !0
+    value: true
   });
 }(exports);

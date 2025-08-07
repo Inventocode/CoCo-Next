@@ -72,9 +72,9 @@
           var i;
           var c;
           var u;
-          for (t = {}, o(e, "{"), n = !1;;) {
+          for (t = {}, o(e, "{"), n = false;;) {
             if (a(e, "...")) {
-              n = !0;
+              n = true;
               break;
             }
             c = (i = s(e))[0];
@@ -124,9 +124,9 @@
     }, {
       type: "Null"
     }], i = {
-      Undefined: !0,
-      Null: !0
-    }); i[s = (o = u(e)).type] || n.push(o), i[s] = !0, a(e, "|");) {
+      Undefined: true,
+      Null: true
+    }); i[s = (o = u(e)).type] || n.push(o), i[s] = true, a(e, "|");) {
       ;
     }
     return n;
@@ -143,10 +143,10 @@
       var r = t.length >>> 0;
       for (; ++n < r;) {
         if (e === t[n]) {
-          return !0;
+          return true;
         }
       }
-      return !1;
+      return false;
     }("->", t = e.match(n) || [])) {
       throw new Error("Function types are not supported. To validate that something is a function, you may use 'Function'.");
     }

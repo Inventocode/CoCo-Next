@@ -12,10 +12,11 @@ if ("undefined" === typeof window || "function" !== typeof MessageChannel) {
     if (null !== c) {
       try {
         var n = exports.unstable_now();
-        c(!0, n);
+        c(true, n);
         c = null;
       } catch (r) {
-        throw setTimeout(e, 0), r;
+        setTimeout(e, 0);
+        throw r;
       }
     }
   };
@@ -38,7 +39,7 @@ if ("undefined" === typeof window || "function" !== typeof MessageChannel) {
     clearTimeout(u);
   };
   a = function () {
-    return !1;
+    return false;
   };
   s = exports.unstable_forceFrameRate = function () {};
 } else {
@@ -65,7 +66,7 @@ if ("undefined" === typeof window || "function" !== typeof MessageChannel) {
       return h.now() - g;
     };
   }
-  var v = !1;
+  var v = false;
   var m = null;
   var y = -1;
   var b = 5;
@@ -88,23 +89,24 @@ if ("undefined" === typeof window || "function" !== typeof MessageChannel) {
       var e = exports.unstable_now();
       w = e + b;
       try {
-        if (m(!0, e)) {
+        if (m(true, e)) {
           x.postMessage(null);
         } else {
-          v = !1;
+          v = false;
           m = null;
         }
       } catch (n) {
-        throw x.postMessage(null), n;
+        x.postMessage(null);
+        throw n;
       }
     } else {
-      v = !1;
+      v = false;
     }
   };
   r = function (e) {
     m = e;
     if (!v) {
-      v = !0;
+      v = true;
       x.postMessage(null);
     }
   };
@@ -124,7 +126,7 @@ function C(e, t) {
   e: for (;;) {
     var r = n - 1 >>> 1;
     var i = e[r];
-    if (!(void 0 !== i && 0 < S(i, t))) {
+    if (!(undefined !== i && 0 < S(i, t))) {
       break e;
     }
     e[r] = t;
@@ -133,11 +135,11 @@ function C(e, t) {
   }
 }
 function O(e) {
-  return void 0 === (e = e[0]) ? null : e;
+  return undefined === (e = e[0]) ? null : e;
 }
 function k(e) {
   var t = e[0];
-  if (void 0 !== t) {
+  if (undefined !== t) {
     var n = e.pop();
     if (n !== t) {
       e[0] = n;
@@ -146,8 +148,8 @@ function k(e) {
         var a = e[o];
         var s = o + 1;
         var c = e[s];
-        if (void 0 !== a && 0 > S(a, n)) {
-          if (void 0 !== c && 0 > S(c, a)) {
+        if (undefined !== a && 0 > S(a, n)) {
+          if (undefined !== c && 0 > S(c, a)) {
             e[r] = c;
             e[s] = n;
             r = s;
@@ -157,7 +159,7 @@ function k(e) {
             r = o;
           }
         } else {
-          if (!(void 0 !== c && 0 > S(c, n))) {
+          if (!(undefined !== c && 0 > S(c, n))) {
             break e;
           }
           e[r] = c;
@@ -179,9 +181,9 @@ var B = [];
 var D = 1;
 var I = null;
 var F = 3;
-var R = !1;
-var P = !1;
-var N = !1;
+var R = false;
+var P = false;
+var N = false;
 function M(e) {
   for (var t = O(B); null !== t;) {
     if (null === t.callback) {
@@ -198,11 +200,11 @@ function M(e) {
   }
 }
 function j(e) {
-  N = !1;
+  N = false;
   M(e);
   if (!P) {
     if (null !== O(T)) {
-      P = !0;
+      P = true;
       r(L);
     } else {
       var t = O(B);
@@ -213,12 +215,12 @@ function j(e) {
   }
 }
 function L(e, n) {
-  P = !1;
+  P = false;
   if (N) {
-    N = !1;
+    N = false;
     o();
   }
-  R = !0;
+  R = true;
   var r = F;
   try {
     for (M(n), I = O(T); null !== I && (!(I.expirationTime > n) || e && !a());) {
@@ -242,19 +244,19 @@ function L(e, n) {
       I = O(T);
     }
     if (null !== I) {
-      var u = !0;
+      var u = true;
     } else {
       var l = O(B);
       if (null !== l) {
         i(j, l.startTime - n);
       }
-      u = !1;
+      u = false;
     }
     return u;
   } finally {
     I = null;
     F = r;
-    R = !1;
+    R = false;
   }
 }
 function U(e) {
@@ -283,7 +285,7 @@ exports.unstable_cancelCallback = function (e) {
 };
 exports.unstable_continueExecution = function () {
   if (!(P || R)) {
-    P = !0;
+    P = true;
     r(L);
   }
 };
@@ -357,7 +359,7 @@ exports.unstable_scheduleCallback = function (e, n, a) {
       if (N) {
         o();
       } else {
-        N = !0;
+        N = true;
       }
       i(j, c - s);
     }
@@ -365,7 +367,7 @@ exports.unstable_scheduleCallback = function (e, n, a) {
     e.sortIndex = a;
     C(T, e);
     if (!(P || R)) {
-      P = !0;
+      P = true;
       r(L);
     }
   }

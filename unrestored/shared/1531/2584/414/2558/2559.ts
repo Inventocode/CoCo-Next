@@ -21,7 +21,7 @@ var r = this && this.__extends || function () {
   };
 }();
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
 var o = require("react");
 var i = require("../../75/index");
@@ -70,7 +70,7 @@ var u = function (e) {
     });
   };
   t.prototype.fallbackMethodAvailable = function (e) {
-    return !1;
+    return false;
   };
   t.prototype.fallbackMethod = function (e, t) {};
   t.prototype.isSlowRenderer = function () {

@@ -5,7 +5,7 @@ var a = require("./1660/495");
 var s = require("./1660/1067");
 r({
   target: "Object",
-  stat: !0,
+  stat: true,
   forced: o(function () {
     a(1);
   }),

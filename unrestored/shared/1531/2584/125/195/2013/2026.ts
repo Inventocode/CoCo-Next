@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.TokenizationState = void 0;
+exports.TokenizationState = undefined;
 (function (e) {
   e[e.BaseCase = 0] = "BaseCase";
   e[e.PercentFound = 1] = "PercentFound";

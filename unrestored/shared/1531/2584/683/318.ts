@@ -1,11 +1,11 @@
 "use strict";
 
 export { l as a };
-var r = require("./34/index");
-var i = require("./122");
-var o = require("./65");
-var a = require("./128");
-var s = require("./467");
+import r = require("./34/index");
+import i = require("./122");
+import o = require("./65");
+import a = require("./128");
+import s = require("./467");
 var c = {
   fontFamily: ["NotoSansCJKsc-Medium", "NotoSansCJKsc"],
   fontSize: "19px",
@@ -44,18 +44,18 @@ var u = {
 var l = function () {
   function e(e, t, n, i, u) {
     var l = this;
-    this.is_in_pivot_mode = !1;
-    this.is_dragging_scale_btn = !1;
+    this.is_in_pivot_mode = false;
+    this.is_dragging_scale_btn = false;
     this.old_scale = new r.o();
     this.old_mouse_r = 0;
-    this.is_dragging_rotate_btn = !1;
+    this.is_dragging_rotate_btn = false;
     this.old_mouse_rotation = 0;
     this.old_position = new r.o();
     this.old_rotate_center_pos = new r.o();
-    this.is_dragging_rotate_center = !1;
+    this.is_dragging_rotate_center = false;
     this.old_mouse_pos = new r.o();
-    this.is_dragging_actor = !1;
-    this.is_mouse_in = !1;
+    this.is_dragging_actor = false;
+    this.is_mouse_in = false;
     this.BTN_SIZE = 32;
     this.MIN_EDITOR_BOX = 54;
     this.DISPLAY_WIDTH = 51;
@@ -67,11 +67,11 @@ var l = function () {
       l.editor.setParent(e);
     };
     this.on_actor_change = function (e) {
-      if (l.target && Object(o.l)(l.target)) {
-        if (void 0 !== e.visible) {
+      if (l.target && o.l(l.target)) {
+        if (undefined !== e.visible) {
           l.editor.visible = e.visible;
         }
-        if (void 0 !== e.rotation || e.scale || e.texture) {
+        if (undefined !== e.rotation || e.scale || e.texture) {
           l.draw_editor(l.target);
         } else {
           if (e.position || e.pivot) {
@@ -81,8 +81,8 @@ var l = function () {
       }
     };
     this.on_video_change = function (e) {
-      if (l.target && Object(s.b)(l.target)) {
-        if (void 0 === e.visible) {
+      if (l.target && s.b(l.target)) {
+        if (undefined === e.visible) {
           if (e.scale) {
             l.draw_editor(l.target);
           } else {
@@ -140,11 +140,11 @@ var l = function () {
           var t = e.data.getLocalPosition(l.hover_container);
           switch (e.target.name) {
             case a.b.ROTATE_BTN:
-              l.cursor_rotate.visible = !0;
+              l.cursor_rotate.visible = true;
               l.cursor_rotate.position.set(t.x, t.y);
               return void l.app.render();
             case a.b.SCALE_BTN:
-              l.cursor_scale.visible = !0;
+              l.cursor_scale.visible = true;
               l.cursor_scale.position.set(t.x, t.y);
               return void l.app.render();
             default:
@@ -152,8 +152,8 @@ var l = function () {
           }
         }
         if (l.cursor_scale.visible || l.cursor_rotate.visible) {
-          l.cursor_scale.visible = !1;
-          l.cursor_rotate.visible = !1;
+          l.cursor_scale.visible = false;
+          l.cursor_rotate.visible = false;
           l.app.render();
         }
       }
@@ -172,10 +172,10 @@ var l = function () {
     };
     this.drag_end = function (e) {
       if (l.target) {
-        if (Object(o.l)(l.target)) {
+        if (o.l(l.target)) {
           if (l.is_in_pivot_mode) {
             if (l.is_dragging_rotate_center) {
-              l.is_dragging_rotate_center = !1;
+              l.is_dragging_rotate_center = false;
               var t = l.app.get_app().stage.toLocal(l.rotation_center.position, l.editor);
               l.target.set_pivot_by_stage_point(t.x, -t.y);
               l.events.fire("editor_rotation_center:drag_end", {
@@ -186,7 +186,7 @@ var l = function () {
             return;
           }
           if (l.is_dragging_rotate_btn) {
-            l.is_dragging_rotate_btn = !1;
+            l.is_dragging_rotate_btn = false;
             l.set_btn_drag_end_status("cursor_rotate", e);
             l.target.set_rotation(l.target.rotation_value);
             l.events.fire("actor:update", {
@@ -203,9 +203,9 @@ var l = function () {
           }
         }
         if (l.is_dragging_scale_btn) {
-          l.is_dragging_scale_btn = !1;
+          l.is_dragging_scale_btn = false;
           l.set_btn_drag_end_status("cursor_scale", e);
-          if (Object(o.l)(l.target)) {
+          if (o.l(l.target)) {
             l.events.fire("actor:update", {
               target_id: l.target.id,
               data: {
@@ -214,7 +214,7 @@ var l = function () {
               }
             });
           }
-          if (Object(s.b)(l.target)) {
+          if (s.b(l.target)) {
             l.events.fire("video_scale_btn:drag_end", {
               target_id: l.target.id,
               data: {
@@ -232,14 +232,14 @@ var l = function () {
       }
     };
     this.on_mouse_in = function () {
-      l.is_mouse_in = !0;
+      l.is_mouse_in = true;
     };
     this.on_mouse_move_fake_actor_over_out = function (e) {
       if (!(!l.is_mouse_in || l.is_in_pivot_mode || l.is_dragging_actor || l.is_dragging_scale_btn || l.is_dragging_rotate_btn)) {
         if (!e.target || e.target.name !== a.b.BORDER_LINE && e.target.name !== a.b.MENU_BTN && e.target.name !== a.b.ROTATE_BTN && e.target.name !== a.b.SCALE_BTN && e.target.name !== a.b.ROTATION_CENTER) {
           var t;
           var n = l.app.get_interaction_manager().hitTest(e.data.global, l.app.get_scene_container());
-          if (Object(o.l)(n)) {
+          if (o.l(n)) {
             t = l.data.get_internal_actor(n.id);
           }
           var r = t === l.target;
@@ -247,7 +247,7 @@ var l = function () {
             l.events.fire("actor:mouseout", {
               target_id: l.mouseover_target_id
             });
-            return void (l.mouseover_target_id = void 0);
+            return void (l.mouseover_target_id = undefined);
           }
           if (t && !r && l.mouseover_target_id !== t.id) {
             l.events.fire("actor:mouseover", {
@@ -259,19 +259,19 @@ var l = function () {
           l.events.fire("actor:mouseout", {
             target_id: l.mouseover_target_id
           });
-          l.mouseover_target_id = void 0;
+          l.mouseover_target_id = undefined;
         }
       }
     };
     this.on_mouse_out = function () {
-      l.is_mouse_in = !1;
-      l.mouseover_target_id = void 0;
+      l.is_mouse_in = false;
+      l.mouseover_target_id = undefined;
     };
     this.on_actor_drag_start = function (e) {
-      l.is_dragging_actor = !0;
+      l.is_dragging_actor = true;
     };
     this.on_actor_drag_end = function (e) {
-      l.is_dragging_actor = !1;
+      l.is_dragging_actor = false;
     };
     this.on_right_click = function () {
       if (l.target) {
@@ -282,9 +282,9 @@ var l = function () {
     };
     this.on_break = function (e) {
       var t;
-      if (!(e && e !== (null === (t = l.target) || void 0 === t ? void 0 : t.id))) {
+      if (!(e && e !== (null === (t = l.target) || undefined === t ? undefined : t.id))) {
         if (l.is_in_pivot_mode) {
-          l.toggle_pivot_mode(!1);
+          l.toggle_pivot_mode(false);
         } else {
           if (l.is_dragging_rotate_btn) {
             l.set_btn_drag_end_status("cursor_rotate");
@@ -294,10 +294,10 @@ var l = function () {
             }
           }
         }
-        l.is_dragging_rotate_center = !1;
-        l.is_dragging_rotate_btn = !1;
-        l.is_dragging_scale_btn = !1;
-        l.is_dragging_actor = !1;
+        l.is_dragging_rotate_center = false;
+        l.is_dragging_rotate_btn = false;
+        l.is_dragging_scale_btn = false;
+        l.is_dragging_actor = false;
       }
     };
     this.app = t;
@@ -306,16 +306,16 @@ var l = function () {
     this.loader = u;
     this.MOVE_CURSOR = e.cursor_move_url;
     this.editor = new r.f();
-    this.editor.visible = !1;
-    this.editor.interactive = !0;
+    this.editor.visible = false;
+    this.editor.interactive = true;
     this.editor_box_border1 = new r.j();
-    this.editor_box_border1.interactive = !1;
+    this.editor_box_border1.interactive = false;
     this.editor.addChild(this.editor_box_border1);
     this.editor_box_border2 = new r.j();
-    this.editor_box_border2.interactive = !1;
+    this.editor_box_border2.interactive = false;
     this.editor.addChild(this.editor_box_border2);
     this.editor_box = new r.j();
-    this.editor_box.interactive = !0;
+    this.editor_box.interactive = true;
     this.editor_box.cursor = "url(" + this.MOVE_CURSOR + ") 8 8, auto";
     this.editor.addChild(this.editor_box);
     this.left_border = new r.j();
@@ -355,14 +355,14 @@ var l = function () {
     this.editor.addChild(this.hover_container);
     this.cursor_scale = new r.t();
     this.cursor_scale.anchor.set(.5);
-    this.cursor_scale.visible = !1;
+    this.cursor_scale.visible = false;
     this.hover_container.addChild(this.cursor_scale);
     this.cursor_rotate = new r.t();
     this.cursor_rotate.anchor.set(.5);
-    this.cursor_rotate.visible = !1;
+    this.cursor_rotate.visible = false;
     this.hover_container.addChild(this.cursor_rotate);
     this.value_bar = new r.j();
-    this.value_bar.visible = !1;
+    this.value_bar.visible = false;
     this.value_bar.beginFill(4868682, 1);
     this.value_bar.drawRoundedRect(0, 0, this.DISPLAY_WIDTH, this.DISPLAY_HEIGHT, this.DISPLAY_RADIUS);
     this.value_bar.endFill();
@@ -392,17 +392,17 @@ var l = function () {
       }
     });
     this.editor.addListener("mousedown", this.drag_start);
-    this.editor.addListener("mousemove", Object(o.w)(this.drag_move, o.a));
+    this.editor.addListener("mousemove", o.w(this.drag_move, o.a));
     this.editor.addListener("mouseup", this.drag_end);
     this.editor.addListener("mouseupoutside", this.drag_end);
     this.editor.addListener("mousemove", this.set_cursor_when_hover);
     this.editor.addListener("touchstart", this.drag_start);
-    this.editor.addListener("touchmove", Object(o.w)(this.drag_move, o.a));
+    this.editor.addListener("touchmove", o.w(this.drag_move, o.a));
     this.editor.addListener("touchend", this.drag_end);
     this.editor.addListener("touchendoutside", this.drag_end);
     this.editor.addListener("mouseover", this.on_mouse_in);
     this.editor.addListener("mouseout", this.on_mouse_out);
-    this.editor.addListener("mousemove", Object(o.w)(this.on_mouse_move_fake_actor_over_out, o.a));
+    this.editor.addListener("mousemove", o.w(this.on_mouse_move_fake_actor_over_out, o.a));
     this.editor.addListener("rightclick", this.on_right_click);
     this.events.event_emitter.addListener("break", this.on_break);
     this.events.add_listener("actor:drag_start", this.on_actor_drag_start);
@@ -417,19 +417,19 @@ var l = function () {
     });
   }
   e.prototype.destroy = function () {
-    if (Object(o.l)(this.target)) {
+    if (o.l(this.target)) {
       this.target.remove_listener("destroy", this.on_target_destroy);
     }
-    if (Object(s.b)(this.target)) {
+    if (s.b(this.target)) {
       this.target.remove_listener("destroy", this.on_target_destroy);
     }
     this.events.event_emitter.removeListener("break", this.on_break);
     this.events.remove_listener("actor:drag_start", this.on_actor_drag_start);
     this.events.remove_listener("actor:drag_end", this.on_actor_drag_end);
     this.editor.destroy({
-      children: !0,
-      texture: !0,
-      baseTexture: !0
+      children: true,
+      texture: true,
+      baseTexture: true
     });
   };
   e.prototype.set_target_actor = function (e) {
@@ -455,7 +455,7 @@ var l = function () {
     }
   };
   e.prototype.set_target_video = function (e) {
-    if (Object(s.b)(e) && e !== this.target) {
+    if (s.b(e) && e !== this.target) {
       if (this.get_displayed()) {
         this.hide();
       }
@@ -466,9 +466,9 @@ var l = function () {
       this.draw_editor(this.target);
       this.target.add_listener("change", this.on_video_change);
       this.target.add_listener("destroy", this.on_target_destroy);
-      this.rotation_center.visible = !1;
-      this.rotate_btn.visible = !1;
-      this.menu_btn.visible = !1;
+      this.rotation_center.visible = false;
+      this.rotate_btn.visible = false;
+      this.menu_btn.visible = false;
       this.app.render();
     }
   };
@@ -477,15 +477,15 @@ var l = function () {
   };
   e.prototype.hide = function () {
     if (this.target) {
-      if (Object(o.l)(this.target)) {
+      if (o.l(this.target)) {
         this.target.remove_listener("change", this.on_actor_change);
       }
-      if (Object(s.b)(this.target)) {
+      if (s.b(this.target)) {
         this.target.remove_listener("change", this.on_video_change);
       }
       this.target.removeListener("destroy", this.on_target_destroy);
-      this.target = void 0;
-      this.editor.visible = !1;
+      this.target = undefined;
+      this.editor.visible = false;
       this.app.render();
     }
   };
@@ -597,13 +597,13 @@ var l = function () {
     e.width = this.BTN_SIZE;
     e.height = this.BTN_SIZE;
     e.anchor.set(.5);
-    e.interactive = !0;
+    e.interactive = true;
     this.editor.addChild(e);
   };
   e.prototype.drag_start_scale_btn = function (e) {
     if (this.target) {
-      this.is_dragging_scale_btn = !0;
-      var t = Object(o.l)(this.target) ? Object(o.d)(this.target, this.target.position) : this.target.get_pixi_position();
+      this.is_dragging_scale_btn = true;
+      var t = o.l(this.target) ? o.d(this.target, this.target.position) : this.target.get_pixi_position();
       this.old_mouse_r = Math.hypot(e.x - t.x, e.y - t.y);
       this.old_scale.set(this.target.scale.x, this.target.scale.y);
       this.value.text = "" + Math.round(100 * this.target.get_scale().x);
@@ -614,14 +614,14 @@ var l = function () {
     }
   };
   e.prototype.drag_start_rotate_btn = function (e) {
-    this.is_dragging_rotate_btn = !0;
+    this.is_dragging_rotate_btn = true;
     var t = this.editor.name && this.data.get_internal_actor(this.editor.name);
     if (t) {
       var n = this.app.get_app().stage.toLocal(new r.o(0, 0), t);
       this.old_rotate_center_pos.set(n.x, n.y);
-      this.old_mouse_rotation = Object(o.u)(e.x - n.x, e.y - n.y);
+      this.old_mouse_rotation = o.u(e.x - n.x, e.y - n.y);
       this.old_position.set(t.position.x, t.position.y);
-      this.value.text = Math.round(Object(o.v)(t.rotation_value)) + "°";
+      this.value.text = Math.round(o.v(t.rotation_value)) + "°";
       this.events.fire("editor_rotate_btn:drag_start", {
         target_id: t.id
       });
@@ -629,14 +629,14 @@ var l = function () {
     }
   };
   e.prototype.drag_start_rotate_center = function (e) {
-    this.is_dragging_rotate_center = !0;
+    this.is_dragging_rotate_center = true;
     var t = e.data.getLocalPosition(this.editor);
     this.old_mouse_pos.set(t.x, t.y);
   };
   e.prototype.drag_move_scale_btn = function (e) {
     if (this.target) {
       var t = Math.hypot(this.target.width / this.target.scale.x / 2, this.target.height / this.target.scale.y / 2);
-      var n = Object(o.l)(this.target) ? Object(o.d)(this.target, this.target.position) : this.target.get_pixi_position();
+      var n = o.l(this.target) ? o.d(this.target, this.target.position) : this.target.get_pixi_position();
       var i = (Math.hypot(e.x - n.x, e.y - n.y) - this.old_mouse_r) / t;
       var a = function (e) {
         var t = Math.max(Math.abs(e) + i, .01);
@@ -644,7 +644,7 @@ var l = function () {
       };
       var c = a(this.old_scale.x);
       var u = a(this.old_scale.y);
-      if (Object(s.b)(this.target)) {
+      if (s.b(this.target)) {
         this.target.set_pixi_scale(c, u);
       } else {
         var l = new r.o(this.target.pivot.x / this.target.scale.x * c, this.target.pivot.y / this.target.scale.y * u);
@@ -653,7 +653,7 @@ var l = function () {
         this.target.set_pixi_scale(c, u);
       }
       this.value.text = "" + Math.round(100 * this.target.get_scale().x);
-      if (Object(o.l)(this.target)) {
+      if (o.l(this.target)) {
         this.events.fire("actor:update", {
           target_id: this.target.id,
           data: {
@@ -671,17 +671,17 @@ var l = function () {
   e.prototype.drag_move_rotate_btn = function (e) {
     var t = this.editor.name && this.data.get_internal_actor(this.editor.name);
     if (t) {
-      var n = Object(o.u)(e.x - this.old_rotate_center_pos.x, e.y - this.old_rotate_center_pos.y);
+      var n = o.u(e.x - this.old_rotate_center_pos.x, e.y - this.old_rotate_center_pos.y);
       var r = n - this.old_mouse_rotation;
       this.old_mouse_rotation = n;
-      var i = Object(o.p)(this.old_position, this.old_rotate_center_pos, r);
+      var i = o.p(this.old_position, this.old_rotate_center_pos, r);
       this.old_position.set(i.x, i.y);
       t.set_pixi_position(i.x, i.y);
-      var a = Object(o.s)(-t.rotation - r);
-      var s = t.is_rotation_flipped ? Object(o.s)(a + Math.PI) : a;
+      var a = o.s(-t.rotation - r);
+      var s = t.is_rotation_flipped ? o.s(a + Math.PI) : a;
       t.set_rotation_value(s);
       t.set_pixi_rotation(-a);
-      this.value.text = Math.round(Object(o.v)(t.rotation_value)) + "°";
+      this.value.text = Math.round(o.v(t.rotation_value)) + "°";
       this.events.fire("actor:update", {
         target_id: t.id,
         data: {
@@ -699,7 +699,7 @@ var l = function () {
     var t = e.data.getLocalPosition(this.editor);
     this.rotation_center.position.set(this.rotation_center.x + t.x - this.old_mouse_pos.x, this.rotation_center.y + t.y - this.old_mouse_pos.y);
     this.old_mouse_pos.set(t.x, t.y);
-    if (Object(o.l)(this.target)) {
+    if (o.l(this.target)) {
       var n = this.app.get_app().stage.toLocal(this.rotation_center.position, this.editor);
       this.target.set_pivot_by_stage_point(n.x, -n.y);
       this.events.fire("actor:update", {
@@ -714,14 +714,14 @@ var l = function () {
   e.prototype.set_btn_drag_start_status = function (e, t) {
     this.app.get_app().stage.cursor = "none";
     this.set_box_cursor("none");
-    this[e].visible = !0;
+    this[e].visible = true;
     this[e].position.set(t.x, t.y);
-    this.value_bar.visible = !0;
+    this.value_bar.visible = true;
     this.update_value_bar(t);
-    this.set_btns_visible(!1);
+    this.set_btns_visible(false);
   };
   e.prototype.update_value_bar = function (e) {
-    var t = Object(o.p)({
+    var t = o.p({
       x: e.x + this.DISPLAY_OFFSET,
       y: e.y + this.DISPLAY_OFFSET
     }, {
@@ -736,18 +736,18 @@ var l = function () {
     var r = this.app.get_interaction_manager();
     n.cursor = "default";
     this.set_box_cursor("move");
-    this.value_bar.visible = !1;
-    if (Object(o.l)(this.target)) {
-      this.set_btns_visible(!0);
+    this.value_bar.visible = false;
+    if (o.l(this.target)) {
+      this.set_btns_visible(true);
     } else {
-      this.scale_btn.visible = !0;
+      this.scale_btn.visible = true;
     }
     var i = t && r.hitTest(t.data.global, this.editor);
     var s = "cursor_scale" === e ? a.b.SCALE_BTN : a.b.ROTATE_BTN;
     var c = i && i.name === s;
     this[e].visible = !!c;
     var u = t && r.hitTest(t.data.global, this.app.get_scene_container());
-    var l = Object(o.l)(u) && this.data.get_internal_actor(u.id);
+    var l = o.l(u) && this.data.get_internal_actor(u.id);
     if (!c && l && l !== this.target) {
       this.events.fire("actor:mouseover", {
         target_id: l.id
@@ -757,14 +757,14 @@ var l = function () {
   };
   e.prototype.get_hit_target = function (e) {
     var t = this.app.get_interaction_manager().hitTest(e.data.global, this.app.get_scene_container());
-    if (Object(o.l)(t)) {
+    if (o.l(t)) {
       var n = this.data.get_internal_actor(t.id);
       if (n) {
         this.set_target_actor(n.id);
         return n;
       }
     }
-    return Object(s.b)(t) ? (this.set_target_video(t), t) : this.editor.name ? this.data.get_internal_actor(this.editor.name) : void 0;
+    return s.b(t) ? (this.set_target_video(t), t) : this.editor.name ? this.data.get_internal_actor(this.editor.name) : undefined;
   };
   e.prototype.check_mouse_pos_is_in_stage = function (e) {
     var t = e.data.getLocalPosition(this.app.get_app().stage);
@@ -775,7 +775,7 @@ var l = function () {
   };
   e.prototype.init_border_line = function (e, t) {
     e.name = a.b.BORDER_LINE;
-    e.interactive = !0;
+    e.interactive = true;
     e.cursor = "url(" + this.MOVE_CURSOR + ") 8 8, auto";
     e.filters = [t];
     this.editor.addChild(e);

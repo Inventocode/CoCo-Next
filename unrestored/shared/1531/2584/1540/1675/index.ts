@@ -10,8 +10,8 @@ var l = require("./948");
 r("match", function (e, t, n) {
   return [function (t) {
     var n = s(this);
-    var r = void 0 == t ? void 0 : t[e];
-    return void 0 !== r ? r.call(t, n) : new RegExp(t)[e](a(n));
+    var r = undefined == t ? undefined : t[e];
+    return undefined !== r ? r.call(t, n) : new RegExp(t)[e](a(n));
   }, function (e) {
     var r = o(this);
     var s = a(e);

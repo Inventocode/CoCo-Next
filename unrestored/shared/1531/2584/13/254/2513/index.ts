@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.Raised = void 0;
+exports.Raised = undefined;
 var r = s(require("react"));
 var i = s(require("../../../50/index"));
 var o = s(require("../../785/104/index"));
@@ -19,7 +19,7 @@ var c = exports.Raised = function (e) {
   var i = e.background;
   var s = e.children;
   var c = e.styles;
-  var u = void 0 === c ? {} : c;
+  var u = undefined === c ? {} : c;
   var l = (0, o.default)((0, a.default)({
     default: {
       wrap: {

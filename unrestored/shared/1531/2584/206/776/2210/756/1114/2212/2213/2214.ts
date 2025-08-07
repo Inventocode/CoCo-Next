@@ -3,7 +3,7 @@
 
   function t(e) {
     if (null == e) {
-      return !1;
+      return false;
     }
     switch (e.type) {
       case "BlockStatement":
@@ -24,9 +24,9 @@
       case "VariableDeclaration":
       case "WhileStatement":
       case "WithStatement":
-        return !0;
+        return true;
     }
-    return !1;
+    return false;
   }
   function n(e) {
     switch (e.type) {
@@ -44,7 +44,7 @@
   module.exports = {
     isExpression: function (e) {
       if (null == e) {
-        return !1;
+        return false;
       }
       switch (e.type) {
         case "ArrayExpression":
@@ -63,23 +63,23 @@
         case "ThisExpression":
         case "UnaryExpression":
         case "UpdateExpression":
-          return !0;
+          return true;
       }
-      return !1;
+      return false;
     },
     isStatement: t,
     isIterationStatement: function (e) {
       if (null == e) {
-        return !1;
+        return false;
       }
       switch (e.type) {
         case "DoWhileStatement":
         case "ForInStatement":
         case "ForStatement":
         case "WhileStatement":
-          return !0;
+          return true;
       }
-      return !1;
+      return false;
     },
     isSourceElement: function (e) {
       return t(e) || null != e && "FunctionDeclaration" === e.type;
@@ -87,19 +87,19 @@
     isProblematicIfStatement: function (e) {
       var t;
       if ("IfStatement" !== e.type) {
-        return !1;
+        return false;
       }
       if (null == e.alternate) {
-        return !1;
+        return false;
       }
       t = e.consequent;
       do {
         if ("IfStatement" === t.type && null == t.alternate) {
-          return !0;
+          return true;
         }
         t = n(t);
       } while (t);
-      return !1;
+      return false;
     },
     trailingStatement: n
   };

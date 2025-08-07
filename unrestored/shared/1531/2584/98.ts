@@ -7,8 +7,8 @@ export { u as g };
 export { d as e };
 export { p as d };
 export { f as c };
-var r = require("./9");
-var o = require("./79");
+import r = require("./9");
+import o = require("../../../../src/shared/widget/custom/type");
 var i = new Map();
 var a = new Map();
 function s(e) {
@@ -27,7 +27,7 @@ function u(e) {
 }
 function d() {
   return Array.from(a.values()).filter(function (e) {
-    return Object(o.d)(e.type);
+    return o.d(e.type);
   }).map(function (e) {
     return {
       type: e.type,
@@ -39,7 +39,7 @@ function p() {
   var e = Array.from(i.values());
   var t = [];
   e.forEach(function (e) {
-    if (Object(r.Mb)(e.type)) {
+    if (r.Mb(e.type)) {
       t.push({
         id: e.id,
         type: e.type,
@@ -51,7 +51,7 @@ function p() {
 }
 function f() {
   Array.from(a.keys()).forEach(function (e) {
-    if (Object(o.d)(e)) {
+    if (o.d(e)) {
       a.delete(e);
     }
   });

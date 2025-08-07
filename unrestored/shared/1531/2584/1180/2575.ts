@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.lzw = void 0;
+exports.lzw = undefined;
 exports.lzw = function (e, t, n) {
   var r;
   var o;

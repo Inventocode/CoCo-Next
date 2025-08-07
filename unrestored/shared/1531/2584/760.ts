@@ -16,12 +16,12 @@ i.a.prototype.set_flipped = function (e) {
 };
 i.a.prototype.set_scale = function (e, t) {
   var n = e;
-  if (void 0 !== n) {
+  if (undefined !== n) {
     n = Math.max(0, n);
     n = this.is_horizontal_flipped ? -1 * n : n;
   }
-  var r = void 0 === t ? e : t;
-  if (void 0 !== r) {
+  var r = undefined === t ? e : t;
+  if (undefined !== r) {
     r = Math.max(0, r);
     r = this.is_vertical_flipped ? -1 * r : r;
   }
@@ -29,7 +29,7 @@ i.a.prototype.set_scale = function (e, t) {
 };
 var s = o.a.prototype.drag_start_scale_btn;
 o.a.prototype.drag_start_scale_btn = function (e) {
-  this._old_actor_center = Object(a.l)(this.target) ? Object(a.d)(this.target, this.target.position) : this.target.get_pixi_position();
+  this._old_actor_center = a.l(this.target) ? a.d(this.target, this.target.position) : this.target.get_pixi_position();
   var t = this.target.get_scale();
   var n = t.x;
   var r = t.y;
@@ -48,7 +48,7 @@ o.a.prototype.drag_move_scale_btn = function (e) {
     var i = Math.abs(o / this._old_actor_scale_ratio);
     this.target.set_pixi_scale(o, i);
     this.value.text = "".concat(Math.round(100 * this.target.get_scale().x));
-    if (Object(a.l)(this.target)) {
+    if (a.l(this.target)) {
       this.events.fire("actor:update", {
         target_id: this.target.id,
         data: {
@@ -68,7 +68,7 @@ o.a.prototype.drag_start_rotate_btn = function (e) {
   var t = this.editor.name && this.data.get_internal_actor(this.editor.name);
   if (t) {
     var n = c.call(this, e);
-    this._old_actor_rotation = Object(a.u)(e.x - t.x, e.y - t.y);
+    this._old_actor_rotation = a.u(e.x - t.x, e.y - t.y);
     this._old_actor_pivot = new r.o(t.x, t.y);
     return n;
   }
@@ -76,14 +76,14 @@ o.a.prototype.drag_start_rotate_btn = function (e) {
 o.a.prototype.drag_move_rotate_btn = function (e) {
   var t = this.editor.name && this.data.get_internal_actor(this.editor.name);
   if (t) {
-    var n = Object(a.u)(e.x - this._old_actor_pivot.x, e.y - this._old_actor_pivot.y);
+    var n = a.u(e.x - this._old_actor_pivot.x, e.y - this._old_actor_pivot.y);
     var r = n - this._old_actor_rotation;
     this._old_actor_rotation = n;
-    var o = Object(a.s)(-t.rotation - r);
-    var i = t.is_rotation_flipped ? Object(a.s)(o + Math.PI) : o;
+    var o = a.s(-t.rotation - r);
+    var i = t.is_rotation_flipped ? a.s(o + Math.PI) : o;
     t.set_rotation_value(i);
     t.set_pixi_rotation(-o);
-    this.value.text = "".concat(Math.round(Object(a.v)(t.rotation_value)), "°");
+    this.value.text = "".concat(Math.round(a.v(t.rotation_value)), "°");
     this.events.fire("actor:update", {
       target_id: t.id,
       data: {

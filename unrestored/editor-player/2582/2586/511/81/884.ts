@@ -46,7 +46,7 @@ var u = function () {
       throw new a.a("Requested row is outside the image: " + t);
     }
     var r = this.getWidth();
-    if (null === e || void 0 === e || e.length < r) {
+    if (null === e || undefined === e || e.length < r) {
       e = new Uint8ClampedArray(r);
     }
     var o = (t + this.top) * this.dataWidth + this.left;
@@ -74,10 +74,10 @@ var u = function () {
     return o;
   };
   e.prototype.isCropSupported = function () {
-    return !0;
+    return true;
   };
   e.prototype.crop = function (t, r, n, o) {
-    return new e(this.yuvData, this.dataWidth, this.dataHeight, this.left + t, this.top + r, n, o, !1);
+    return new e(this.yuvData, this.dataWidth, this.dataHeight, this.left + t, this.top + r, n, o, false);
   };
   e.prototype.renderThumbnail = function () {
     for (var t = this.getWidth() / e.THUMBNAIL_SCALE_FACTOR, r = this.getHeight() / e.THUMBNAIL_SCALE_FACTOR, n = new Int32Array(t * r), o = this.yuvData, i = this.top * this.dataWidth + this.left, a = 0; a < r; a++) {

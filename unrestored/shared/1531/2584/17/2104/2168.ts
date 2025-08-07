@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.Input = void 0;
+exports.Input = undefined;
 var r = require("tslib");
 var i = require("inversify");
 var o = require("../../4/127");
@@ -17,7 +17,7 @@ var s = function () {
     this.render_height = 0;
     this.width = 0;
     this.height = 0;
-    this.visible_ = !0;
+    this.visible_ = true;
     this.setCheck = this.set_check;
     this.appendField = this.append_field;
     this.type = e.type;
@@ -30,9 +30,9 @@ var s = function () {
     return this.visible_;
   };
   e.prototype.init = function () {
-    if (void 0 != this.source_block) {
+    if (undefined != this.source_block) {
       var e = this.source_block.get_workspace();
-      if (void 0 != e && e.rendered) {
+      if (undefined != e && e.rendered) {
         for (var t = 0; t < this.fieldRow.length; t++) {
           this.fieldRow[t].init();
         }
@@ -92,7 +92,7 @@ var s = function () {
     }
     return t || n ? ((0, a.is_string)(t) && (t = this.field_label_factory({
       text: this.utils.replace_message_references(t)
-    })), t.source_block = this.source_block, void 0 != n && (t.name = n), void 0 != this.source_block && this.source_block.rendered && t.init(), (0, a.is_field_dropdown)(t) && t.prefix_field && (e = this.insert_field_at(e, t.prefix_field)), this.fieldRow.splice(e, 0, t), ++e, (0, a.is_field_dropdown)(t) && t.suffix_field && (e = this.insert_field_at(e, t.suffix_field)), void 0 != this.source_block && this.source_block.rendered && this.source_block.render(), e) : 0;
+    })), t.source_block = this.source_block, undefined != n && (t.name = n), undefined != this.source_block && this.source_block.rendered && t.init(), (0, a.is_field_dropdown)(t) && t.prefix_field && (e = this.insert_field_at(e, t.prefix_field)), this.fieldRow.splice(e, 0, t), ++e, (0, a.is_field_dropdown)(t) && t.suffix_field && (e = this.insert_field_at(e, t.suffix_field)), undefined != this.source_block && this.source_block.rendered && this.source_block.render(), e) : 0;
   };
   e.prototype.remove_field = function (e) {
     for (var t, n, r = 0, i = this.fieldRow.length; r < i; r++) {
@@ -100,15 +100,15 @@ var s = function () {
       if (o.name === e) {
         o.dispose();
         this.fieldRow.splice(r, 1);
-        if (null === (t = this.source_block) || void 0 === t ? void 0 : t.rendered) {
-          if (!(null === (n = this.source_block) || void 0 === n)) {
+        if (null === (t = this.source_block) || undefined === t ? undefined : t.rendered) {
+          if (!(null === (n = this.source_block) || undefined === n)) {
             n.render();
           }
         }
-        return !0;
+        return true;
       }
     }
-    return !1;
+    return false;
   };
   e.prototype.get_field = function (e) {
     for (var t = 0, n = this.fieldRow.length; t < n; t++) {
@@ -118,9 +118,9 @@ var s = function () {
       }
     }
   };
-  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.utils)], e.prototype, "utils", void 0);
-  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.theme)], e.prototype, "theme", void 0);
-  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.FieldLabel)], e.prototype, "field_label_factory", void 0);
+  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.utils)], e.prototype, "utils", undefined);
+  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.theme)], e.prototype, "theme", undefined);
+  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.FieldLabel)], e.prototype, "field_label_factory", undefined);
   return e = (0, r.__decorate)([(0, i.injectable)()], e);
 }();
 exports.Input = s;

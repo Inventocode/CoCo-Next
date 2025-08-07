@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.BlockVisibility = void 0;
+exports.BlockVisibility = undefined;
 (function (e) {
   e.VISIBLE = "visible";
   e.HIDDEN = "hidden";

@@ -17,9 +17,9 @@ function h(e) {
     var n = e.tokTypes;
     var r = e.TokContext;
     var i = e.TokenType;
-    var o = new r("<tag", !1);
-    var a = new r("</tag", !1);
-    var s = new r("<tag>...</tag>", !0, !0);
+    var o = new r("<tag", false);
+    var a = new r("</tag", false);
+    var s = new r("<tag>...</tag>", true, true);
     var c = {
       tc_oTag: o,
       tc_cTag: a,
@@ -28,17 +28,17 @@ function h(e) {
     var u = {
       jsxName: new i("jsxName"),
       jsxText: new i("jsxText", {
-        beforeExpr: !0
+        beforeExpr: true
       }),
       jsxTagStart: new i("jsxTagStart", {
-        startsExpr: !0
+        startsExpr: true
       }),
       jsxTagEnd: new i("jsxTagEnd")
     };
     u.jsxTagStart.updateContext = function () {
       this.context.push(s);
       this.context.push(o);
-      this.exprAllowed = !1;
+      this.exprAllowed = false;
     };
     u.jsxTagEnd.updateContext = function (e) {
       var t = this.context.pop();
@@ -46,7 +46,7 @@ function h(e) {
         this.context.pop();
         this.exprAllowed = this.curContext() === s;
       } else {
-        this.exprAllowed = !0;
+        this.exprAllowed = true;
       }
     };
     t = {
@@ -58,7 +58,7 @@ function h(e) {
   return t;
 }
 function p(e) {
-  return e ? "JSXIdentifier" === e.type ? e.name : "JSXNamespacedName" === e.type ? e.namespace.name + ":" + e.name.name : "JSXMemberExpression" === e.type ? p(e.object) + "." + p(e.property) : void 0 : e;
+  return e ? "JSXIdentifier" === e.type ? e.name : "JSXNamespacedName" === e.type ? e.namespace.name + ":" + e.name.name : "JSXMemberExpression" === e.type ? p(e.object) + "." + p(e.property) : undefined : e;
 }
 module.exports = function (e) {
   e = e || {};
@@ -105,7 +105,7 @@ module.exports = function (e) {
                 default:
                   if (w(n)) {
                     e += this.input.slice(t, this.pos);
-                    e += this.jsx_readNewLine(!0);
+                    e += this.jsx_readNewLine(true);
                     t = this.pos;
                   } else {
                     ++this.pos;
@@ -149,7 +149,7 @@ module.exports = function (e) {
               } else {
                 if (w(r)) {
                   t += this.input.slice(n, this.pos);
-                  t += this.jsx_readNewLine(!1);
+                  t += this.jsx_readNewLine(false);
                   n = this.pos;
                 } else {
                   ++this.pos;
@@ -406,14 +406,14 @@ module.exports = function (e) {
                   o(a(d.prototype), "updateContext", this).call(this, e);
                 }
               }
-              this.exprAllowed = !0;
+              this.exprAllowed = true;
             } else {
               if (this.type !== A.slash || e !== g.jsxTagStart) {
                 return o(a(d.prototype), "updateContext", this).call(this, e);
               }
               this.context.length -= 2;
               this.context.push(y);
-              this.exprAllowed = !1;
+              this.exprAllowed = false;
             }
           }
         }], [{
@@ -425,7 +425,7 @@ module.exports = function (e) {
         return d;
       }(t);
     }({
-      allowNamespaces: !1 !== e.allowNamespaces,
+      allowNamespaces: false !== e.allowNamespaces,
       allowNamespacedObjects: !!e.allowNamespacedObjects
     }, t);
   };
@@ -434,6 +434,6 @@ Object.defineProperty(module.exports, "tokTypes", {
   get: function () {
     return h(require("../1111")).tokTypes;
   },
-  configurable: !0,
-  enumerable: !0
+  configurable: true,
+  enumerable: true
 });

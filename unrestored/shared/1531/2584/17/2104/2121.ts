@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.FlyoutButton = void 0;
+exports.FlyoutButton = undefined;
 var r = require("tslib");
 var i = require("inversify");
 var o = require("@kitten-team/gl-matrix");
@@ -13,14 +13,14 @@ var c = function () {
   function e(e) {
     var t = this;
     this.position_ = o.vec2.fromValues(0, 0);
-    this.svg_group = void 0;
+    this.svg_group = undefined;
     this.width = 0;
-    this.width_ratio = void 0;
+    this.width_ratio = undefined;
     this.height = 0;
     this.margin_right = 0;
     this.on_mouse_up = function (e) {
       var n;
-      var r = null === (n = t.target_workspace) || void 0 === n ? void 0 : n.get_gesture(e);
+      var r = null === (n = t.target_workspace) || undefined === n ? undefined : n.get_gesture(e);
       if (r) {
         r.cancel();
       }
@@ -35,7 +35,7 @@ var c = function () {
     this.is_label = e.is_label;
     this.flyout_padding_left = e.flyout_padding_left;
     this.flyout_padding_right = e.flyout_padding_right;
-    this.callback_ = void 0;
+    this.callback_ = undefined;
     var n = e.xml;
     var r = e.target_workspace;
     var i = n.getAttribute("callbackkey");
@@ -49,10 +49,10 @@ var c = function () {
         console.warn("Buttons should have callbacks. Button text: " + this.text_);
       }
     }
-    this.relation = n.getAttribute("relation") || void 0;
-    this.css_class = n.getAttribute("web-class") || void 0;
-    this.default_display = n.getAttribute("display") || void 0;
-    this.type = n.getAttribute("type") || void 0;
+    this.relation = n.getAttribute("relation") || undefined;
+    this.css_class = n.getAttribute("web-class") || undefined;
+    this.default_display = n.getAttribute("display") || undefined;
+    this.type = n.getAttribute("type") || undefined;
     this.height = parseInt(n.getAttribute("height") || "0") || this.height;
     var a = n.getAttribute("width");
     if (a) {
@@ -70,7 +70,7 @@ var c = function () {
     var c = function (e) {
       if ("string" === typeof e) {
         var t = parseFloat(e);
-        return isNaN(t) ? void 0 : t;
+        return isNaN(t) ? undefined : t;
       }
     };
     this.position = n.getAttribute("position") || "relative";
@@ -78,16 +78,16 @@ var c = function () {
     this.top = c(n.getAttribute("top"));
     this.right = c(n.getAttribute("right"));
     this.bottom = c(n.getAttribute("bottom"));
-    this.align = n.getAttribute("align") || void 0;
-    this.inline = n.getAttribute("inline") || void 0;
+    this.align = n.getAttribute("align") || undefined;
+    this.inline = n.getAttribute("inline") || undefined;
     this.margin_right = c(n.getAttribute("margin_right")) || 0;
-    this.img_url = n.getAttribute("img_url") || void 0;
+    this.img_url = n.getAttribute("img_url") || undefined;
     this.img_width = c(n.getAttribute("img_width")) || 0;
     this.img_height = c(n.getAttribute("img_height")) || 0;
     this.img_margin_right = c(n.getAttribute("img_margin_right")) || 0;
     this.vertical_padding = c(n.getAttribute("vertical_padding")) || 0;
-    this.option = n.getAttribute("option") || void 0;
-    this.title = n.getAttribute("title") || void 0;
+    this.option = n.getAttribute("option") || undefined;
+    this.title = n.getAttribute("title") || undefined;
   }
   e.prototype.get_svg_group = function () {
     return this.svg_group;
@@ -96,8 +96,8 @@ var c = function () {
     return this.target_workspace;
   };
   e.prototype.show = function (e) {
-    if (void 0 === e) {
-      e = !0;
+    if (undefined === e) {
+      e = true;
     }
     if (this.svg_group) {
       this.svg_group.setAttribute("display", e ? "block" : "none");
@@ -123,7 +123,7 @@ var c = function () {
     if (this.svg_group) {
       (0, s.remove_node)(this.svg_group);
     }
-    this.workspace_ = void 0;
+    this.workspace_ = undefined;
   };
   e.prototype.retach = function (e) {
     this.workspace_ = e;
@@ -137,7 +137,7 @@ var c = function () {
     }
     if (this.svg_group) {
       (0, s.remove_node)(this.svg_group);
-      this.svg_group = void 0;
+      this.svg_group = undefined;
     }
     delete this.workspace_;
     delete this.target_workspace;
@@ -163,7 +163,7 @@ var c = function () {
         }
       }
     };
-    var f = null === (t = this.target_workspace) || void 0 === t ? void 0 : t.get_custom_flyout_button(this.type || "");
+    var f = null === (t = this.target_workspace) || undefined === t ? undefined : t.get_custom_flyout_button(this.type || "");
     if (f) {
       var d = f(e);
       if (d instanceof Element) {
@@ -174,7 +174,7 @@ var c = function () {
         this.svg_group = h;
         this.update_callback = p;
       }
-      if (!(null === (r = null === (n = this.workspace_) || void 0 === n ? void 0 : n.svg_block_canvas_) || void 0 === r)) {
+      if (!(null === (r = null === (n = this.workspace_) || undefined === n ? undefined : n.svg_block_canvas_) || undefined === r)) {
         r.appendChild(this.svg_group);
       }
       if (this.svg_group.cachedWidth_) {
@@ -194,7 +194,7 @@ var c = function () {
         this.svg_group = (0, s.create_svg_element)("g", {
           class: "blocklyLine"
         });
-        if (!(null === (o = null === (i = this.workspace_) || void 0 === i ? void 0 : i.svg_block_canvas_) || void 0 === o)) {
+        if (!(null === (o = null === (i = this.workspace_) || undefined === i ? undefined : i.svg_block_canvas_) || undefined === o)) {
           o.appendChild(this.svg_group);
         }
         var _ = (0, s.create_svg_element)("rect", {
@@ -218,7 +218,7 @@ var c = function () {
         this.svg_group = (0, s.create_svg_element)("g", {
           class: this.css_class
         });
-        if (!(null === (c = null === (a = this.workspace_) || void 0 === a ? void 0 : a.svg_block_canvas_) || void 0 === c)) {
+        if (!(null === (c = null === (a = this.workspace_) || undefined === a ? undefined : a.svg_block_canvas_) || undefined === c)) {
           c.appendChild(this.svg_group);
         }
         var v = (0, s.create_svg_element)("rect", {
@@ -268,7 +268,7 @@ var c = function () {
     return this.svg_group;
   };
   e.MARGIN = 5;
-  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.events)], e.prototype, "event", void 0);
+  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.events)], e.prototype, "event", undefined);
   return e = (0, r.__decorate)([(0, i.injectable)()], e);
 }();
 exports.FlyoutButton = c;

@@ -24,7 +24,7 @@ var o = function () {
 }();
 !function (t) {
   function e(e, n) {
-    if (void 0 === e) {
+    if (undefined === e) {
       e = 500;
     }
     return t.call(this, new i.a(n), e, n) || this;

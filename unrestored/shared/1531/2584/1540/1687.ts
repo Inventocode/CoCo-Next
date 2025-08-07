@@ -8,7 +8,7 @@ var a = i ? function () {
 } : "".trimStart;
 r({
   target: "String",
-  proto: !0,
+  proto: true,
   forced: i
 }, {
   trimStart: a,

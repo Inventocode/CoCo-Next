@@ -1,9 +1,9 @@
 "use strict";
 
 export { o as a };
-var r = require("./10/index");
+import r = require("./10/index");
 function o(e) {
-  for (var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
+  for (var t = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : {
       line: 1,
       column: 0
     }, n = t.line, o = t.column, i = 0, a = 1; i >= 0 && i < e.length && a < n;) {
@@ -30,7 +30,7 @@ function o(e) {
     var d = u[1];
     d.split(";").forEach(function (e) {
       var t = e.split("=");
-      var n = Object(r.a)(t, 2);
+      var n = r.a(t, 2);
       var o = n[0];
       var i = n[1];
       if (o && i) {

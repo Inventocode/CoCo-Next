@@ -1,7 +1,7 @@
 "use strict";
 
 (function (t) {
-  var r = require("../../1/index");
+  var r = require("regenerator-runtime");
   var i = require("./842");
   var o = require("../../36/2668/220");
   var a = require("../../36/2668/230");
@@ -13,7 +13,7 @@
   var d = require("./2189/index");
   var h = require("./766/index");
   var p = require("./1331/index");
-  var _ = require("../../31/index");
+  var _ = require("lodash");
   var A = require("./1333/index");
   var g = require("./2209");
   var v = require("./965");
@@ -45,15 +45,15 @@
   };
   function N(e) {
     var t = e.ruleId;
-    var n = void 0 === t ? null : t;
+    var n = undefined === t ? null : t;
     var r = e.loc;
-    var i = void 0 === r ? P : r;
+    var i = undefined === r ? P : r;
     var o = e.message;
-    var a = void 0 === o ? function (e) {
+    var a = undefined === o ? function (e) {
       return Object.prototype.hasOwnProperty.call(I.rules, e) ? "Rule '".concat(e, "' was removed and replaced by: ").concat(I.rules[e].join(", ")) : "Definition for rule '".concat(e, "' was not found.");
     }(e.ruleId) : o;
     var s = e.severity;
-    var c = void 0 === s ? 2 : s;
+    var c = undefined === s ? 2 : s;
     return {
       ruleId: n,
       message: a,
@@ -158,7 +158,7 @@
                   var C = c(x[E], 2);
                   var O = C[0];
                   var k = C[1].value;
-                  var S = void 0;
+                  var S = undefined;
                   try {
                     S = m.normalizeConfigGlobal(k);
                   } catch (B) {
@@ -230,7 +230,7 @@
     var r = t.ecmaFeatures || {};
     var i = t.ecmaVersion || 5;
     return d.analyze(e, {
-      ignoreEval: !0,
+      ignoreEval: true,
       nodejsScope: r.globalReturn,
       impliedStrict: r.impliedStrict,
       ecmaVersion: i,
@@ -284,13 +284,13 @@
       enter: function (e, t) {
         e.parent = t;
         l.push({
-          isEntering: !0,
+          isEntering: true,
           node: e
         });
       },
       leave: function (e) {
         l.push({
-          isEntering: !1,
+          isEntering: false,
           node: e
         });
       },
@@ -325,11 +325,11 @@
               return e.name === r;
             });
             if (s) {
-              s.eslintUsed = !0;
-              return !0;
+              s.eslintUsed = true;
+              return true;
             }
           }
-          return !1;
+          return false;
         }(e.scopeManager, f, r, t);
       },
       parserOptions: r,
@@ -359,7 +359,7 @@
                   disableFixes: s
                 });
               }
-              var t = l.apply(void 0, arguments);
+              var t = l.apply(undefined, arguments);
               if (t.fix && o.meta && !o.meta.fixable) {
                 throw new Error("Fixable rules should export a `meta.fixable` property.");
               }
@@ -370,7 +370,8 @@
             try {
               return e.create(t);
             } catch (n) {
-              throw n.message = "Error while loading rule '".concat(t.id, "': ").concat(n.message), n;
+              n.message = "Error while loading rule '".concat(t.id, "': ").concat(n.message);
+              throw n;
             }
           }(o, f);
           Object.keys(p).forEach(function (e) {
@@ -393,7 +394,8 @@
           p.leaveNode(f);
         }
       } catch (t) {
-        throw t.currentNode = f, t;
+        t.currentNode = f;
+        throw t;
       }
     });
     return h;
@@ -402,12 +404,12 @@
     return e.lastConfigArray && e.lastConfigArray.pluginRules.get(t) || e.ruleMap.get(t);
   }
   function W(e) {
-    return e || ("object" === typeof t ? t.cwd() : void 0);
+    return e || ("object" === typeof t ? t.cwd() : undefined);
   }
   var K = new WeakMap();
   var X = function () {
     function e() {
-      var t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+      var t = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : {};
       var n = t.cwd;
       o(this, e);
       K.set(this, {
@@ -426,8 +428,8 @@
         var i = K.get(this);
         var o = t || {};
         var a = function (e, t) {
-          var n = !0 === t.noInlineConfig;
-          var r = !1 === e.allowInlineConfig;
+          var n = true === t.noInlineConfig;
+          var r = false === e.allowInlineConfig;
           var i = t.configNameOfNoInlineConfig ? " (".concat(t.configNameOfNoInlineConfig, ")") : "";
           var o = e.reportUnusedDisableDirectives;
           if ("boolean" === typeof o) {
@@ -460,7 +462,7 @@
           if (!i.parserMap.has(o.parser)) {
             return [{
               ruleId: null,
-              fatal: !0,
+              fatal: true,
               severity: 2,
               message: "Configured parser '".concat(o.parser, "' was not found."),
               line: 0,
@@ -481,7 +483,7 @@
           return n;
         }(r) : {};
         var b = Object.assign({
-          builtin: !0
+          builtin: true
         }, o.env, y);
         var E = Object.keys(b).filter(function (e) {
           return b[e];
@@ -502,7 +504,7 @@
           var o = _.merge(i, t || {});
           if ("module" === o.sourceType) {
             o.ecmaFeatures = Object.assign({}, o.ecmaFeatures, {
-              globalReturn: !1
+              globalReturn: false
             });
           }
           o.ecmaVersion = (r = o.ecmaVersion) >= 2015 ? r - 2009 : r;
@@ -534,13 +536,13 @@
               return "//".concat(t);
             });
             var o = Object.assign({}, n, {
-              loc: !0,
-              range: !0,
-              raw: !0,
-              tokens: !0,
-              comment: !0,
-              eslintVisitorKeys: !0,
-              eslintScopeManager: !0,
+              loc: true,
+              range: true,
+              raw: true,
+              tokens: true,
+              comment: true,
+              eslintVisitorKeys: true,
+              eslintScopeManager: true,
               filePath: r
             });
             try {
@@ -552,7 +554,7 @@
               var u = a.visitorKeys || h.KEYS;
               var l = a.scopeManager || U(s, o, u);
               return {
-                success: !0,
+                success: true,
                 sourceCode: new w({
                   text: e,
                   ast: s,
@@ -565,10 +567,10 @@
               var f = "Parsing error: ".concat(d.message.replace(/^line [0-9]+:/i, "").trim());
               F("%s\n%s", f, d.stack);
               return {
-                success: !1,
+                success: false,
                 error: {
                   ruleId: null,
-                  fatal: !0,
+                  fatal: true,
                   severity: 2,
                   message: f,
                   line: d.lineNumber,
@@ -600,7 +602,7 @@
           try {
             for (a.s(); !(r = a.n()).done;) {
               var s = r.value;
-              var c = void 0 === t[s] ? void 0 : m.normalizeConfigGlobal(t[s]);
+              var c = undefined === t[s] ? undefined : m.normalizeConfigGlobal(t[s]);
               var f = o[s] && o[s].value || c;
               var h = o[s] && o[s].comments;
               if ("off" !== f) {
@@ -611,7 +613,7 @@
                   e.set.set(s, p);
                 }
                 p.eslintImplicitGlobalSetting = c;
-                p.eslintExplicitGlobal = void 0 !== h;
+                p.eslintExplicitGlobal = undefined !== h;
                 p.eslintExplicitGlobalComments = h;
                 p.writeable = "writable" === f;
               }
@@ -624,13 +626,13 @@
           Object.keys(i).forEach(function (t) {
             var n = e.set.get(t);
             if (n) {
-              n.eslintUsed = !0;
+              n.eslintUsed = true;
             }
           });
           e.through = e.through.filter(function (t) {
             var n = t.identifier.name;
             var r = e.set.get(n);
-            return !r || (t.resolved = r, r.references.push(t), !1);
+            return !r || (t.resolved = r, r.references.push(t), false);
           });
         }(T.scopeManager.scopes[0], O, {
           exportedVariables: B.exportedVariables,
@@ -651,7 +653,10 @@
             F("Line:", P);
             N.message += ":".concat(P);
           }
-          throw F("Parser Options:", C), F("Parser Path:", s), F("Settings:", k), N;
+          F("Parser Options:", C);
+          F("Parser Path:", s);
+          F("Settings:", k);
+          throw N;
         }
         return x({
           directives: B.disableDirectives,
@@ -776,7 +781,7 @@
       value: function (e, t, n) {
         var r;
         var i = [];
-        var o = !1;
+        var o = false;
         var a = 0;
         var s = e;
         var c = n && n.filename || "".concat(e.slice(0, 10), "...");

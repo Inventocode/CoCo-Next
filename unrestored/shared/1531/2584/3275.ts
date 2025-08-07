@@ -301,7 +301,7 @@ function l(t, e) {
                 c.label++;
                 return {
                   value: i[1],
-                  done: !1
+                  done: false
                 };
               case 5:
                 c.label++;
@@ -349,8 +349,8 @@ function l(t, e) {
           throw i[1];
         }
         return {
-          value: i[0] ? i[1] : void 0,
-          done: !0
+          value: i[0] ? i[1] : undefined,
+          done: true
         };
       }([i, s]);
     };
@@ -362,12 +362,12 @@ var f = function (t) {
     var n = t.call(this, e.message) || this;
     var r = e.error_code;
     var o = e.error_origin_response;
-    var i = void 0 === o ? {
+    var i = undefined === o ? {
       error_code: r,
       error_message: e.message,
       error_number: r || null
     } : o;
-    if (void 0 !== e.error_code) {
+    if (undefined !== e.error_code) {
       n.error_code = r;
     }
     if (e.error_body) {
@@ -550,15 +550,15 @@ var N = {
 };
 var v = {
   pid: {
-    required: !0,
+    required: true,
     types: ["string"]
   },
   appid: {
-    required: !0,
+    required: true,
     types: ["string", "number"]
   },
   product_code: {
-    required: !0,
+    required: true,
     types: ["string", "number"]
   }
 };
@@ -588,7 +588,7 @@ var O = function () {
     return 0 === Object.keys(e).length ? "" + C().host[this.hostType] + t : "" + C().host[this.hostType] + t + "?" + n;
   };
   t.prototype.dispatch_request = function (t) {
-    return p(this, void 0, void 0, function () {
+    return p(this, undefined, undefined, function () {
       var e = this;
       return l(this, function (n) {
         return [2, new Promise(function (n, o) {
@@ -607,12 +607,12 @@ var O = function () {
           var d = h(h(h({}, e.public_headers), t.headers), _);
           var p = a ? i : e.get_complete_url(i, u);
           var l = new XMLHttpRequest();
-          l.open(c.toUpperCase(), p, !0);
+          l.open(c.toUpperCase(), p, true);
           if (s) {
             l.setRequestHeader("Content-Type", "application/json;charset=utf-8");
           }
           l.timeout = m().requestTimeout || e.timeout;
-          l.withCredentials = !0;
+          l.withCredentials = true;
           l.onreadystatechange = function () {
             var t;
             if (l && 4 === l.readyState && (0 !== l.status || l.responseURL && 0 === l.responseURL.indexOf("file:"))) {
@@ -635,7 +635,7 @@ var O = function () {
                     error_origin_response: e
                   }) : {
                     error_code: e.error_code,
-                    error_body: (null === (t = e.catastrophe) || void 0 === t ? void 0 : t.error) || e,
+                    error_body: (null === (t = e.catastrophe) || undefined === t ? undefined : t.error) || e,
                     error_origin_response: e,
                     message: "Get error from " + p + "."
                   }));
@@ -664,7 +664,9 @@ var O = function () {
               });
             }
           } catch (E) {
-            throw console.error(E), console.log("headers is ", d), new Error("Iris Error: 设置请求头时出错，请检查请求头，不能含有中文");
+            console.error(E);
+            console.log("headers is ", d);
+            throw new Error("Iris Error: 设置请求头时出错，请检查请求头，不能含有中文");
           }
           if (s) {
             l.send(JSON.stringify(s));
@@ -743,7 +745,7 @@ function B(t) {
   V(o);
 }
 function V(t) {
-  if (!(null === t || void 0 === t ? void 0 : t.length)) {
+  if (!(null === t || undefined === t ? undefined : t.length)) {
     throw new f({
       error_code: r.AGREEMENT_IDS,
       message: "agreement_ids should not be an empty array."
@@ -785,7 +787,7 @@ function x(t, e) {
   }
 }
 function W(t, e) {
-  return p(this, void 0, void 0, function () {
+  return p(this, undefined, undefined, function () {
     return l(this, function (n) {
       switch (n.label) {
         case 0:
@@ -839,7 +841,7 @@ function X(t) {
   return !(!t || "undefined" === t || "" === t);
 }
 function z(t, e, n) {
-  return p(this, void 0, void 0, function () {
+  return p(this, undefined, undefined, function () {
     return l(this, function (r) {
       return [2, new Promise(function (r, o) {
         if (document.getElementById(e)) {
@@ -876,10 +878,10 @@ function $(t, e, n) {
   return new Promise(function (r, o) {
     var i = document.createElement(t);
     i.onload = function () {
-      r(!0);
+      r(true);
     };
     i.onerror = function () {
-      o(!1);
+      o(false);
     };
     if (e) {
       Object.keys(e).forEach(function (t) {
@@ -892,7 +894,7 @@ function $(t, e, n) {
     i.innerHTML = e.innerHTML;
     i.setAttribute("style", n || "");
     document.body.appendChild(i);
-    r(!0);
+    r(true);
   });
 }
 function J(t) {
@@ -939,7 +941,7 @@ var nt = function () {
     });
   }
   t.prototype.dispatch_request = function (t) {
-    return p(this, void 0, void 0, function () {
+    return p(this, undefined, undefined, function () {
       return l(this, function (e) {
         return [2, this.request.dispatch_request(t)];
       });
@@ -952,13 +954,15 @@ var nt = function () {
       return t + " " + e;
     }
     var n = C().domain;
-    throw j(Q("access"), n), j(Q("token_type"), n), new f({
+    j(Q("access"), n);
+    j(Q("token_type"), n);
+    throw new f({
       error_code: r.NO_TOKEN,
       message: "NO Token(cookie might have been expired). Please login."
     });
   };
   t.prototype.get_access = function (t) {
-    return p(this, void 0, void 0, function () {
+    return p(this, undefined, undefined, function () {
       var e;
       return l(this, function (n) {
         switch (n.label) {
@@ -987,7 +991,9 @@ var nt = function () {
             this.set(e.data);
             return [2, this.get_complete_access_token()];
           case 6:
-            throw n.sent(), this.clear(), new f({
+            n.sent();
+            this.clear();
+            throw new f({
               error_code: r.NO_TOKEN,
               message: "NO Token. Please login."
             });
@@ -998,7 +1004,7 @@ var nt = function () {
     });
   };
   t.prototype.convert_cookie_to_token = function (t) {
-    return p(this, void 0, void 0, function () {
+    return p(this, undefined, undefined, function () {
       return l(this, function (e) {
         return [2, this.dispatch_request({
           url: s.GET_TOKEN_FROM_OLD_COOKIE,
@@ -1052,7 +1058,7 @@ var nt = function () {
     }
   };
   t.prototype.refresh_token = function () {
-    return p(this, void 0, void 0, function () {
+    return p(this, undefined, undefined, function () {
       return l(this, function (t) {
         return [2, this.dispatch_request({
           method: "put",
@@ -1065,7 +1071,7 @@ var nt = function () {
     });
   };
   t.prototype.refresh = function () {
-    return p(this, void 0, void 0, function () {
+    return p(this, undefined, undefined, function () {
       var t;
       var e;
       return l(this, function (n) {
@@ -1078,7 +1084,10 @@ var nt = function () {
             this.set(t.data);
             return [3, 3];
           case 2:
-            throw (e = n.sent()).error_code === r.REFRESH_TOKEN_INVALID && this.clear(), e;
+            if ((e = n.sent()).error_code === r.REFRESH_TOKEN_INVALID) {
+              this.clear();
+            }
+            throw e;
           case 3:
             return [2];
         }
@@ -1097,7 +1106,7 @@ var nt = function () {
   return t;
 }();
 function rt(t, e) {
-  return p(this, void 0, void 0, function () {
+  return p(this, undefined, undefined, function () {
     var n;
     return l(this, function (o) {
       switch (o.label) {
@@ -1121,7 +1130,7 @@ function rt(t, e) {
   });
 }
 var ot = function (t, e, n) {
-  return !1 !== e ? h(h(h({}, t), {
+  return false !== e ? h(h(h({}, t), {
     "X-Captcha-Id": g().appid || ""
   }), n) : t;
 };
@@ -1133,12 +1142,12 @@ var it = function () {
         "Product-Code": g().product_code,
         pid: g().pid,
         Platform: g().platform
-      }, a), null === (t = m()) || void 0 === t ? void 0 : t.custom_headers)
+      }, a), null === (t = m()) || undefined === t ? undefined : t.custom_headers)
     });
     this.token = new nt();
   }
   t.prototype.dispatch_request = function (t) {
-    return p(this, void 0, void 0, function () {
+    return p(this, undefined, undefined, function () {
       var e;
       var n;
       var r = this;
@@ -1149,7 +1158,7 @@ var it = function () {
           case 1:
             e[n] = o.sent();
             return [2, rt(2, function () {
-              return p(r, void 0, void 0, function () {
+              return p(r, undefined, undefined, function () {
                 return l(this, function (e) {
                   return [2, this.request.dispatch_request(t)];
                 });
@@ -1162,7 +1171,7 @@ var it = function () {
     });
   };
   t.prototype.email_register_send_captcha = function (t, e) {
-    return p(this, void 0, void 0, function () {
+    return p(this, undefined, undefined, function () {
       return l(this, function (n) {
         D(t);
         return [2, this.dispatch_request({
@@ -1179,7 +1188,7 @@ var it = function () {
     });
   };
   t.prototype.validate_email_register_captcha = function (t, e) {
-    return p(this, void 0, void 0, function () {
+    return p(this, undefined, undefined, function () {
       return l(this, function (n) {
         D(t);
         return [2, this.dispatch_request({
@@ -1194,7 +1203,7 @@ var it = function () {
     });
   };
   t.prototype.register_email = function (t, e) {
-    return p(this, void 0, void 0, function () {
+    return p(this, undefined, undefined, function () {
       var n;
       var r;
       var o;
@@ -1219,7 +1228,7 @@ var it = function () {
     });
   };
   t.prototype.get_agreements = function () {
-    return p(this, void 0, void 0, function () {
+    return p(this, undefined, undefined, function () {
       return l(this, function (t) {
         return [2, this.dispatch_request({
           url: i.GET_AGREEMENTS,
@@ -1229,7 +1238,7 @@ var it = function () {
     });
   };
   t.prototype.get_agreements_need_sign = function () {
-    return p(this, void 0, void 0, function () {
+    return p(this, undefined, undefined, function () {
       return l(this, function (t) {
         return [2, this.dispatch_request({
           url: i.GET_AGREEMENTS_NEED_SIGN,
@@ -1239,7 +1248,7 @@ var it = function () {
     });
   };
   t.prototype.sign_agreements = function (t, e) {
-    return p(this, void 0, void 0, function () {
+    return p(this, undefined, undefined, function () {
       return l(this, function (n) {
         return [2, this.dispatch_request({
           url: i.SIGN_AGREEMENTS,
@@ -1253,7 +1262,7 @@ var it = function () {
     });
   };
   t.prototype.find_latest_protocol_list = function (t, e) {
-    return p(this, void 0, void 0, function () {
+    return p(this, undefined, undefined, function () {
       return l(this, function (n) {
         return [2, this.dispatch_request({
           url: i.FIND_LATEST_PROTOCOL_LIST,
@@ -1267,7 +1276,7 @@ var it = function () {
     });
   };
   t.prototype.send_voice_captcha = function (t, e, n) {
-    return p(this, void 0, void 0, function () {
+    return p(this, undefined, undefined, function () {
       var r;
       var o;
       var c;
@@ -1299,7 +1308,7 @@ var it = function () {
     });
   };
   t.prototype.register_send_captcha = function (t, e, n) {
-    return p(this, void 0, void 0, function () {
+    return p(this, undefined, undefined, function () {
       return l(this, function (r) {
         k(t);
         return [2, this.dispatch_request({
@@ -1317,7 +1326,7 @@ var it = function () {
     });
   };
   t.prototype.register = function (t, e) {
-    return p(this, void 0, void 0, function () {
+    return p(this, undefined, undefined, function () {
       var n;
       var r;
       return l(this, function (o) {
@@ -1343,7 +1352,7 @@ var it = function () {
     });
   };
   t.prototype.login_captcha = function (t, e, n) {
-    return p(this, void 0, void 0, function () {
+    return p(this, undefined, undefined, function () {
       return l(this, function (r) {
         k(t);
         return [2, this.dispatch_request({
@@ -1361,7 +1370,7 @@ var it = function () {
     });
   };
   t.prototype.login_phone = function (t, e, n, r) {
-    return p(this, void 0, void 0, function () {
+    return p(this, undefined, undefined, function () {
       var o;
       var c;
       return l(this, function (s) {
@@ -1390,7 +1399,7 @@ var it = function () {
     });
   };
   t.prototype.login_account = function (t, e, n, r) {
-    return p(this, void 0, void 0, function () {
+    return p(this, undefined, undefined, function () {
       var o;
       var c;
       return l(this, function (s) {
@@ -1417,7 +1426,7 @@ var it = function () {
     });
   };
   t.prototype.login_wechat = function (t, e, n, r) {
-    return p(this, void 0, void 0, function () {
+    return p(this, undefined, undefined, function () {
       var o;
       var c;
       return l(this, function (s) {
@@ -1444,7 +1453,7 @@ var it = function () {
     });
   };
   t.prototype.login_qq = function (t, e, n) {
-    return p(this, void 0, void 0, function () {
+    return p(this, undefined, undefined, function () {
       var r;
       var o;
       return l(this, function (c) {
@@ -1470,7 +1479,7 @@ var it = function () {
     });
   };
   t.prototype.bind_phone_for_third_party = function (t, e) {
-    return p(this, void 0, void 0, function () {
+    return p(this, undefined, undefined, function () {
       return l(this, function (n) {
         k(t);
         return [2, this.dispatch_request({
@@ -1485,7 +1494,7 @@ var it = function () {
     });
   };
   t.prototype.create_user_for_third_party = function (t, e, n) {
-    return p(this, void 0, void 0, function () {
+    return p(this, undefined, undefined, function () {
       var r;
       return l(this, function (o) {
         switch (o.label) {
@@ -1515,7 +1524,7 @@ var it = function () {
     });
   };
   t.prototype.logout = function () {
-    return p(this, void 0, void 0, function () {
+    return p(this, undefined, undefined, function () {
       var t;
       return l(this, function (e) {
         switch (e.label) {
@@ -1526,7 +1535,7 @@ var it = function () {
               data: {
                 refresh_token: this.token.get_refresh()
               },
-              with_token: !0
+              with_token: true
             })];
           case 1:
             if (t = e.sent()) {
@@ -1538,7 +1547,7 @@ var it = function () {
     });
   };
   t.prototype.bind_phone_captcha = function (t, e, n) {
-    return p(this, void 0, void 0, function () {
+    return p(this, undefined, undefined, function () {
       return l(this, function (r) {
         k(t);
         return [2, this.dispatch_request({
@@ -1551,13 +1560,13 @@ var it = function () {
           headers: ot({
             "X-Captcha-Ticket": e
           }),
-          with_token: !0
+          with_token: true
         })];
       });
     });
   };
   t.prototype.bind_phone = function (t, e) {
-    return p(this, void 0, void 0, function () {
+    return p(this, undefined, undefined, function () {
       return l(this, function (n) {
         k(t);
         y(e);
@@ -1568,13 +1577,13 @@ var it = function () {
             phone_number: t,
             captcha: e
           },
-          with_token: !0
+          with_token: true
         })];
       });
     });
   };
   t.prototype.bind_phone_check = function (t) {
-    return p(this, void 0, void 0, function () {
+    return p(this, undefined, undefined, function () {
       return l(this, function (e) {
         k(t);
         return [2, this.dispatch_request({
@@ -1583,13 +1592,13 @@ var it = function () {
           params: {
             phone_number: t
           },
-          with_token: !0
+          with_token: true
         })];
       });
     });
   };
   t.prototype.rebind_phone_captcha = function (t, e, n) {
-    return p(this, void 0, void 0, function () {
+    return p(this, undefined, undefined, function () {
       return l(this, function (r) {
         k(t);
         k(e);
@@ -1601,13 +1610,13 @@ var it = function () {
             old_phone_number: e,
             pid: n
           },
-          with_token: !0
+          with_token: true
         })];
       });
     });
   };
   t.prototype.rebind_phone = function (t, e) {
-    return p(this, void 0, void 0, function () {
+    return p(this, undefined, undefined, function () {
       return l(this, function (n) {
         k(t);
         y(e);
@@ -1618,13 +1627,13 @@ var it = function () {
             phone_number: t,
             captcha: e
           },
-          with_token: !0
+          with_token: true
         })];
       });
     });
   };
   t.prototype.reset_pwd_captcha = function (t, e, n) {
-    return p(this, void 0, void 0, function () {
+    return p(this, undefined, undefined, function () {
       return l(this, function (r) {
         k(t);
         return [2, this.dispatch_request({
@@ -1642,7 +1651,7 @@ var it = function () {
     });
   };
   t.prototype.reset_pwd_token = function (t, e) {
-    return p(this, void 0, void 0, function () {
+    return p(this, undefined, undefined, function () {
       return l(this, function (n) {
         k(t);
         y(e);
@@ -1658,7 +1667,7 @@ var it = function () {
     });
   };
   t.prototype.reset_pwd = function (t, e, n) {
-    return p(this, void 0, void 0, function () {
+    return p(this, undefined, undefined, function () {
       var r;
       var o;
       return l(this, function (c) {
@@ -1690,7 +1699,7 @@ var it = function () {
           case 4:
             if ("" !== o) {
               Object.assign(r, {
-                with_token: !0
+                with_token: true
               });
             }
             return [2, this.dispatch_request(r)];
@@ -1699,7 +1708,7 @@ var it = function () {
     });
   };
   t.prototype.send_universal_captcha = function (t, e, n) {
-    return p(this, void 0, void 0, function () {
+    return p(this, undefined, undefined, function () {
       return l(this, function (r) {
         k(t);
         return [2, this.dispatch_request({
@@ -1717,7 +1726,7 @@ var it = function () {
     });
   };
   t.prototype.verify_universal_captcha = function (t, e) {
-    return p(this, void 0, void 0, function () {
+    return p(this, undefined, undefined, function () {
       return l(this, function (n) {
         k(t);
         y(e);
@@ -1733,7 +1742,7 @@ var it = function () {
     });
   };
   t.prototype.login_captcha_silence = function (t, e, n) {
-    return p(this, void 0, void 0, function () {
+    return p(this, undefined, undefined, function () {
       return l(this, function (r) {
         k(t);
         return [2, this.dispatch_request({
@@ -1751,7 +1760,7 @@ var it = function () {
     });
   };
   t.prototype.login_phone_silence = function (t, e, n, r) {
-    return p(this, void 0, void 0, function () {
+    return p(this, undefined, undefined, function () {
       var o;
       var c;
       var s;
@@ -1769,9 +1778,9 @@ var it = function () {
               s = n || "";
             }
             if ("object" === typeof t) {
-              o = (null === t || void 0 === t ? void 0 : t.phone_number) || "";
-              c = (null === t || void 0 === t ? void 0 : t.captcha) || "";
-              r = null === t || void 0 === t ? void 0 : t.agreement_ids;
+              o = (null === t || undefined === t ? undefined : t.phone_number) || "";
+              c = (null === t || undefined === t ? undefined : t.captcha) || "";
+              r = null === t || undefined === t ? undefined : t.agreement_ids;
               s = e || "";
             }
             k(o);
@@ -1797,26 +1806,26 @@ var it = function () {
     });
   };
   t.prototype.get_access_token = function (t) {
-    return p(this, void 0, void 0, function () {
+    return p(this, undefined, undefined, function () {
       return l(this, function (e) {
         return [2, this.token.get_access(t)];
       });
     });
   };
   t.prototype.request_with_token = function (t) {
-    return p(this, void 0, void 0, function () {
+    return p(this, undefined, undefined, function () {
       var e;
       return l(this, function (n) {
         e = {
-          with_token: !0,
-          without_base_url: !0
+          with_token: true,
+          without_base_url: true
         };
         return [2, this.dispatch_request(Object.assign(t, e))];
       });
     });
   };
   t.prototype.set_username = function (t) {
-    return p(this, void 0, void 0, function () {
+    return p(this, undefined, undefined, function () {
       return l(this, function (e) {
         P(t);
         return [2, this.dispatch_request({
@@ -1825,13 +1834,13 @@ var it = function () {
           data: {
             username: t
           },
-          with_token: !0
+          with_token: true
         })];
       });
     });
   };
   t.prototype.init_password = function (t, e) {
-    return p(this, void 0, void 0, function () {
+    return p(this, undefined, undefined, function () {
       return l(this, function (n) {
         S(t);
         S(e);
@@ -1843,13 +1852,13 @@ var it = function () {
             password: t,
             confirm_password: e
           },
-          with_token: !0
+          with_token: true
         })];
       });
     });
   };
   t.prototype.change_pwd_by_old = function (t, e, n) {
-    return p(this, void 0, void 0, function () {
+    return p(this, undefined, undefined, function () {
       var r;
       return l(this, function (o) {
         switch (o.label) {
@@ -1865,7 +1874,7 @@ var it = function () {
                 password: e,
                 confirm_password: n
               },
-              with_token: !0
+              with_token: true
             })];
           case 1:
             if (r = o.sent()) {
@@ -1877,7 +1886,7 @@ var it = function () {
     });
   };
   t.prototype.change_pwd_by_phone_captcha = function (t, e) {
-    return p(this, void 0, void 0, function () {
+    return p(this, undefined, undefined, function () {
       return l(this, function (n) {
         k(t);
         return [2, this.dispatch_request({
@@ -1887,13 +1896,13 @@ var it = function () {
             phone_number: t,
             pid: e
           },
-          with_token: !0
+          with_token: true
         })];
       });
     });
   };
   t.prototype.change_pwd_by_phone = function (t, e, n) {
-    return p(this, void 0, void 0, function () {
+    return p(this, undefined, undefined, function () {
       var r;
       return l(this, function (o) {
         switch (o.label) {
@@ -1909,7 +1918,7 @@ var it = function () {
                 captcha: e,
                 password: n
               },
-              with_token: !0
+              with_token: true
             })];
           case 1:
             if (r = o.sent()) {
@@ -1921,7 +1930,7 @@ var it = function () {
     });
   };
   t.prototype.set_profile = function (t) {
-    return p(this, void 0, void 0, function () {
+    return p(this, undefined, undefined, function () {
       return l(this, function (e) {
         if (t) {
           R(t, ["nickname", "avatar_url", "fullname", "birthday", "sex", "qq", "description", "grade"]);
@@ -1931,24 +1940,24 @@ var it = function () {
           url: i.SET_PROFILE,
           method: "patch",
           data: h({}, t),
-          with_token: !0
+          with_token: true
         })];
       });
     });
   };
   t.prototype.check_bind_for_third_party = function () {
-    return p(this, void 0, void 0, function () {
+    return p(this, undefined, undefined, function () {
       return l(this, function (t) {
         return [2, this.dispatch_request({
           url: i.CHECK_BIND_FOR_THIRD_PARTY,
           method: "get",
-          with_token: !0
+          with_token: true
         })];
       });
     });
   };
   t.prototype.bind_wechat = function (t, e) {
-    return p(this, void 0, void 0, function () {
+    return p(this, undefined, undefined, function () {
       return l(this, function (n) {
         return [2, this.dispatch_request({
           url: i.BIND_WECHAT,
@@ -1957,24 +1966,24 @@ var it = function () {
             code: t,
             appid: e
           },
-          with_token: !0
+          with_token: true
         })];
       });
     });
   };
   t.prototype.unbind_wechat = function () {
-    return p(this, void 0, void 0, function () {
+    return p(this, undefined, undefined, function () {
       return l(this, function (t) {
         return [2, this.dispatch_request({
           url: i.UNBIND_WECHAT,
           method: "patch",
-          with_token: !0
+          with_token: true
         })];
       });
     });
   };
   t.prototype.bind_qq = function (t, e, n) {
-    return p(this, void 0, void 0, function () {
+    return p(this, undefined, undefined, function () {
       return l(this, function (e) {
         return [2, this.dispatch_request({
           url: i.BIND_QQ,
@@ -1983,46 +1992,46 @@ var it = function () {
             code: t,
             agreement_ids: n
           },
-          with_token: !0
+          with_token: true
         })];
       });
     });
   };
   t.prototype.unbind_qq = function () {
-    return p(this, void 0, void 0, function () {
+    return p(this, undefined, undefined, function () {
       return l(this, function (t) {
         return [2, this.dispatch_request({
           url: i.UNBIND_QQ,
           method: "patch",
-          with_token: !0
+          with_token: true
         })];
       });
     });
   };
   t.prototype.get_profile = function () {
-    return p(this, void 0, void 0, function () {
+    return p(this, undefined, undefined, function () {
       return l(this, function (t) {
         return [2, this.dispatch_request({
           url: i.GET_PROFILE,
           method: "get",
-          with_token: !0
+          with_token: true
         })];
       });
     });
   };
   t.prototype.get_auth = function () {
-    return p(this, void 0, void 0, function () {
+    return p(this, undefined, undefined, function () {
       return l(this, function (t) {
         return [2, this.dispatch_request({
           url: i.GET_AUTH,
           method: "get",
-          with_token: !0
+          with_token: true
         })];
       });
     });
   };
   t.prototype.login_account_ticket = function (t, e, n, r, o) {
-    return p(this, void 0, void 0, function () {
+    return p(this, undefined, undefined, function () {
       var c;
       return l(this, function (s) {
         switch (s.label) {
@@ -2050,7 +2059,7 @@ var it = function () {
     });
   };
   t.prototype.get_grade_list = function () {
-    return p(this, void 0, void 0, function () {
+    return p(this, undefined, undefined, function () {
       return l(this, function (t) {
         return [2, this.dispatch_request({
           url: i.GET_GRADE_LIST,
@@ -2142,7 +2151,7 @@ var dt = function (t) {
   }
   d(e, t);
   e.prototype.get_init_params = function () {
-    return p(this, void 0, void 0, function () {
+    return p(this, undefined, undefined, function () {
       return l(this, function (t) {
         return [2, b.dispatch_request({
           url: c.GET_GEETEST_PARAMS,
@@ -2155,7 +2164,7 @@ var dt = function (t) {
     });
   };
   e.prototype.init_geetest = function (t) {
-    return p(this, void 0, void 0, function () {
+    return p(this, undefined, undefined, function () {
       var e;
       var n;
       var r = this;
@@ -2163,7 +2172,7 @@ var dt = function (t) {
         switch (o.label) {
           case 0:
             return [4, W(3, function () {
-              return p(r, void 0, void 0, function () {
+              return p(r, undefined, undefined, function () {
                 return l(this, function (t) {
                   return [2, this.get_init_params()];
                 });
@@ -2182,7 +2191,7 @@ var dt = function (t) {
                 t.onReady(function () {
                   e(t);
                 }).onSuccess(function () {
-                  return p(r, void 0, void 0, function () {
+                  return p(r, undefined, undefined, function () {
                     var t;
                     var e;
                     return l(this, function (n) {
@@ -2206,7 +2215,10 @@ var dt = function (t) {
                     });
                   });
                 }).onError(function () {
-                  throw r.fail_callback && r.fail_callback(), new Error("Got error in Geetest captcha.");
+                  if (r.fail_callback) {
+                    r.fail_callback();
+                  }
+                  throw new Error("Got error in Geetest captcha.");
                 }).onClose(function () {
                   if (!r.captcha_obj.getValidate() && r.close_callback) {
                     r.close_callback();
@@ -2219,7 +2231,7 @@ var dt = function (t) {
     });
   };
   e.prototype.init = function () {
-    return p(this, void 0, void 0, function () {
+    return p(this, undefined, undefined, function () {
       var t;
       var e;
       return l(this, function (n) {
@@ -2246,7 +2258,7 @@ var dt = function (t) {
     }
   };
   e.prototype.get_ticket = function () {
-    return p(this, void 0, void 0, function () {
+    return p(this, undefined, undefined, function () {
       var t;
       return l(this, function (e) {
         t = this.captcha_obj.getValidate();
@@ -2295,7 +2307,7 @@ var pt = function (t) {
   }
   d(e, t);
   e.prototype.init = function () {
-    return p(this, void 0, void 0, function () {
+    return p(this, undefined, undefined, function () {
       var t;
       return l(this, function (e) {
         switch (e.label) {
@@ -2315,7 +2327,7 @@ var pt = function (t) {
     });
   };
   e.prototype.init_smCaptcha = function () {
-    return p(this, void 0, void 0, function () {
+    return p(this, undefined, undefined, function () {
       var t;
       var e;
       var n;
@@ -2344,7 +2356,7 @@ var pt = function (t) {
               t(e);
             });
             e.onSuccess(function (t) {
-              return p(c, void 0, void 0, function () {
+              return p(c, undefined, undefined, function () {
                 var e;
                 var o;
                 return l(this, function (i) {
@@ -2359,20 +2371,20 @@ var pt = function (t) {
                       return [4, this.get_ticket()];
                     case 2:
                       e = i.sent();
-                      if (!(null === n || void 0 === n)) {
+                      if (!(null === n || undefined === n)) {
                         n(e.data.ticket, this.options.product_id || "");
                       }
                       return [3, 4];
                     case 3:
                       o = i.sent();
-                      if (!(null === r || void 0 === r)) {
+                      if (!(null === r || undefined === r)) {
                         r(ut("success_callback triggerd fatal error", o));
                       }
                       return [3, 4];
                     case 4:
                       return [3, 6];
                     case 5:
-                      if (!(null === r || void 0 === r)) {
+                      if (!(null === r || undefined === r)) {
                         r(ut("incorrect captcha checking", t));
                       }
                       i.label = 6;
@@ -2387,13 +2399,13 @@ var pt = function (t) {
                 errType: t,
                 errMsg: e
               });
-              if (!(null === r || void 0 === r)) {
+              if (!(null === r || undefined === r)) {
                 r(n);
               }
               s(n);
             });
             e.onClose(function () {
-              if (!(null === o || void 0 === o)) {
+              if (!(null === o || undefined === o)) {
                 o();
               }
             });
@@ -2404,14 +2416,14 @@ var pt = function (t) {
   };
   e.prototype.show = function () {
     var t = this.options.init_options;
-    if (this.options && ["embed", "float"].includes((null === t || void 0 === t ? void 0 : t.product) || "")) {
+    if (this.options && ["embed", "float"].includes((null === t || undefined === t ? undefined : t.product) || "")) {
       this.instance.appendTo("#" + this.options.dom_id);
     } else {
       this.instance.verify();
     }
   };
   e.prototype.get_ticket = function (t) {
-    return p(this, void 0, void 0, function () {
+    return p(this, undefined, undefined, function () {
       var t;
       return l(this, function (e) {
         t = this.instance.getValidate();
@@ -2457,7 +2469,7 @@ var Et = function (t) {
   }
   d(e, t);
   e.prototype.init = function () {
-    return p(this, void 0, void 0, function () {
+    return p(this, undefined, undefined, function () {
       return l(this, function (t) {
         switch (t.label) {
           case 0:
@@ -2475,12 +2487,12 @@ var Et = function (t) {
     });
   };
   e.prototype.initTencentCaptcha = function (t) {
-    return p(this, void 0, void 0, function () {
+    return p(this, undefined, undefined, function () {
       var e;
       var n = this;
       return l(this, function (r) {
         e = function (t) {
-          return p(n, void 0, void 0, function () {
+          return p(n, undefined, undefined, function () {
             var e;
             var n;
             return l(this, function (r) {
@@ -2534,7 +2546,7 @@ var Et = function (t) {
     this.captcha_obj.show();
   };
   e.prototype.get_ticket = function (t, e) {
-    return p(this, void 0, void 0, function () {
+    return p(this, undefined, undefined, function () {
       return l(this, function (n) {
         return [2, b.dispatch_request({
           url: c.CHECK_AND_GET_TENCENT_TICKET,
@@ -2579,12 +2591,12 @@ var vt = function (t) {
     (function () {
       var t;
       var e;
-      p(this, void 0, void 0, function () {
+      p(this, undefined, undefined, function () {
         var n;
         return l(this, function (o) {
           switch (o.label) {
             case 0:
-              n = 0 - ((null === (e = null === (t = r.options) || void 0 === t ? void 0 : t.init_options) || void 0 === e ? void 0 : e.width) || ft.width) / 2;
+              n = 0 - ((null === (e = null === (t = r.options) || undefined === t ? undefined : t.init_options) || undefined === e ? undefined : e.width) || ft.width) / 2;
               return r.options.dom_id || document.getElementById(Tt) ? [3, 2] : [4, $("div", {
                 id: Tt,
                 innerHTML: "<div style=\"position: absolute; width: 2px; height: 2px; left: 50%; top: 50%; transform: translate(-50%, -50%); margin: " + n + "px 0 0 " + n + "px\" id=\"" + Nt + "\"/>"
@@ -2602,7 +2614,7 @@ var vt = function (t) {
   }
   d(e, t);
   e.prototype.init = function () {
-    return p(this, void 0, void 0, function () {
+    return p(this, undefined, undefined, function () {
       var t;
       return l(this, function (e) {
         switch (e.label) {
@@ -2623,7 +2635,7 @@ var vt = function (t) {
     });
   };
   e.prototype.init_NECaptcha = function () {
-    return p(this, void 0, void 0, function () {
+    return p(this, undefined, undefined, function () {
       var t;
       var e;
       var n;
@@ -2645,17 +2657,17 @@ var vt = function (t) {
             appendTo: e ? "#" + e : "#" + Nt
           }, ft), i), {
             onVerify: function (t, e) {
-              return p(c, void 0, void 0, function () {
+              return p(c, undefined, undefined, function () {
                 var o;
                 return l(this, function (i) {
                   switch (i.label) {
                     case 0:
-                      return t ? (null === r || void 0 === r || r(ut("incorrect captcha checking", t)), [3, 3]) : [3, 1];
+                      return t ? (null === r || undefined === r || r(ut("incorrect captcha checking", t)), [3, 3]) : [3, 1];
                     case 1:
                       return [4, this.get_ticket(e.validate)];
                     case 2:
                       o = i.sent();
-                      if (!(null === n || void 0 === n)) {
+                      if (!(null === n || undefined === n)) {
                         n(o.data.ticket, this.options.product_id || "");
                       }
                       this.clearMask();
@@ -2667,12 +2679,12 @@ var vt = function (t) {
               });
             },
             onError: function (t) {
-              if (!(null === r || void 0 === r)) {
+              if (!(null === r || undefined === r)) {
                 r(ut("fatal error occurred", t));
               }
             },
             onClose: function () {
-              if (!(null === o || void 0 === o)) {
+              if (!(null === o || undefined === o)) {
                 o();
               }
               c.clearMask();
@@ -2681,7 +2693,7 @@ var vt = function (t) {
             t(e);
           }, function (t) {
             var e = ut("some error occurred", t);
-            if (!(null === r || void 0 === r)) {
+            if (!(null === r || undefined === r)) {
               r(e);
             }
             s(e);
@@ -2702,7 +2714,7 @@ var vt = function (t) {
     }
   };
   e.prototype.get_ticket = function (t) {
-    return p(this, void 0, void 0, function () {
+    return p(this, undefined, undefined, function () {
       return l(this, function (e) {
         return [2, b.dispatch_request({
           url: c.CHECK_AND_GET_NETEASE_TICKET,
@@ -2750,7 +2762,7 @@ var mt = function (t) {
         window.nc = r.init(h(h({}, t), {
           renderTo: "aliyun_captcha_dom_id",
           success: function (t) {
-            return p(n, void 0, void 0, function () {
+            return p(n, undefined, undefined, function () {
               var e;
               return l(this, function (n) {
                 switch (n.label) {
@@ -2758,10 +2770,10 @@ var mt = function (t) {
                     return [4, this.get_ticket(t)];
                   case 1:
                     if (200 === (e = n.sent()).status) {
-                      if (!(null === this || void 0 === this)) {
+                      if (!(null === this || undefined === this)) {
                         this.success_callback(e.data.ticket, e.data.appid);
                       }
-                      if (!(null === this || void 0 === this)) {
+                      if (!(null === this || undefined === this)) {
                         this.clearMask();
                       }
                     } else {
@@ -2775,10 +2787,16 @@ var mt = function (t) {
             });
           },
           fail: function (t) {
-            throw n.fail_callback && n.fail_callback(t), new Error("验证失败");
+            if (n.fail_callback) {
+              n.fail_callback(t);
+            }
+            throw new Error("验证失败");
           },
           error: function (t) {
-            throw n.fail_callback && n.fail_callback(t), new Error("验证异常");
+            if (n.fail_callback) {
+              n.fail_callback(t);
+            }
+            throw new Error("验证异常");
           }
         }));
       });
@@ -2793,7 +2811,7 @@ var mt = function (t) {
   }
   d(e, t);
   e.prototype.init = function () {
-    return p(this, void 0, void 0, function () {
+    return p(this, undefined, undefined, function () {
       return l(this, function (t) {
         switch (t.label) {
           case 0:
@@ -2811,7 +2829,7 @@ var mt = function (t) {
     });
   };
   e.prototype.initAliyunCaptcha = function () {
-    return p(this, void 0, void 0, function () {
+    return p(this, undefined, undefined, function () {
       var t;
       return l(this, function (e) {
         switch (e.label) {
@@ -2822,7 +2840,7 @@ var mt = function (t) {
             }, "position: fixed;\n        left: 0px;\n        top: 0px;\n        height: 100vh;\n        width: 100vw;\n        background: rgba(0, 0, 0, .5);\n        z-index: 999;")];
           case 1:
             e.sent();
-            if (!(null === (t = document.getElementById("aliyun_captcha_dom_close_id")) || void 0 === t)) {
+            if (!(null === (t = document.getElementById("aliyun_captcha_dom_close_id")) || undefined === t)) {
               t.addEventListener("click", this.handleOnCancel);
             }
             e.label = 2;
@@ -2844,7 +2862,7 @@ var mt = function (t) {
     this.initNCCaptcha(At);
   };
   e.prototype.get_ticket = function (t) {
-    return p(this, void 0, void 0, function () {
+    return p(this, undefined, undefined, function () {
       return l(this, function (e) {
         return [2, b.dispatch_request({
           url: c.CHECK_AND_GET_ALIYUN_TICKET,
@@ -2877,10 +2895,10 @@ var It = function () {
     this.pid = t.pid;
   }
   t.prototype.get_rule_from_server = function (t, e) {
-    if (void 0 === e) {
+    if (undefined === e) {
       e = "";
     }
-    return p(this, void 0, void 0, function () {
+    return p(this, undefined, undefined, function () {
       var n;
       var r;
       return l(this, function (o) {
@@ -2889,7 +2907,7 @@ var It = function () {
             return [4, z(at.FINGER_PRINT_2, "finger-print", 10)];
           case 1:
             o.sent();
-            return [4, p(void 0, void 0, void 0, function () {
+            return [4, p(undefined, undefined, undefined, function () {
               return l(this, function (t) {
                 return [2, new Promise(function (t) {
                   var e = function () {
@@ -2934,7 +2952,7 @@ var It = function () {
   };
   t.prototype.get_captcha = function (t) {
     var e;
-    return p(this, void 0, void 0, function () {
+    return p(this, undefined, undefined, function () {
       var n;
       var r;
       var o;
@@ -2949,7 +2967,7 @@ var It = function () {
           case 0:
             n = t.identity;
             r = t.scene;
-            o = void 0 === r ? "" : r;
+            o = undefined === r ? "" : r;
             i = t.success_callback;
             c = t.fail_callback;
             return [4, this.get_rule_from_server(n, o)];
@@ -2962,7 +2980,7 @@ var It = function () {
                 return [2, new Ct(_, i, c)];
               }
               if (u) {
-                return [2, null === (e = gt(a)) || void 0 === e ? void 0 : e.create(t, {
+                return [2, null === (e = gt(a)) || undefined === e ? undefined : e.create(t, {
                   appid: u
                 })];
               }
@@ -2981,7 +2999,7 @@ var Ct = function () {
     this.fail_callback = n;
   }
   t.prototype.init = function () {
-    return p(this, void 0, void 0, function () {
+    return p(this, undefined, undefined, function () {
       return l(this, function (t) {
         console.log("DisableCaptcha init");
         return [2];
@@ -3044,7 +3062,7 @@ function bt(t) {
       console.warn("Unknown env \"" + e + "\", config has been set to default value.");
     }
   }
-  if (void 0 !== n) {
+  if (undefined !== n) {
     C().domain = n;
   }
   A = t;

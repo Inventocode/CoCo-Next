@@ -1,17 +1,17 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.Hue = void 0;
+exports.Hue = undefined;
 var r = function () {
   function e(e, t) {
     for (var n = 0; n < t.length; n++) {
       var r = t[n];
-      r.enumerable = r.enumerable || !1;
-      r.configurable = !0;
+      r.enumerable = r.enumerable || false;
+      r.configurable = true;
       if ("value" in r) {
-        r.writable = !0;
+        r.writable = true;
       }
       Object.defineProperty(e, r.key, r);
     }
@@ -91,9 +91,9 @@ var f = exports.Hue = function (e) {
     e.prototype = Object.create(t && t.prototype, {
       constructor: {
         value: e,
-        enumerable: !1,
-        writable: !0,
-        configurable: !0
+        enumerable: false,
+        writable: true,
+        configurable: true
       }
     });
     if (t) {
@@ -120,7 +120,7 @@ var f = exports.Hue = function (e) {
     value: function () {
       var e = this;
       var t = this.props.direction;
-      var n = void 0 === t ? "horizontal" : t;
+      var n = undefined === t ? "horizontal" : t;
       var r = (0, a.default)({
         default: {
           hue: {

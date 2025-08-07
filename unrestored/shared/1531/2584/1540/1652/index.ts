@@ -10,8 +10,8 @@ var l = require("./1239");
 var u = require("../1745/398/index");
 r({
   target: "Promise",
-  proto: !0,
-  real: !0,
+  proto: true,
+  real: true,
   forced: !!i && a(function () {
     i.prototype.finally.call({
       then: function () {}
@@ -36,7 +36,7 @@ if (!o && "function" == typeof i) {
   var d = s("Promise").prototype.finally;
   if (i.prototype.finally !== d) {
     u(i.prototype, "finally", d, {
-      unsafe: !0
+      unsafe: true
     });
   }
 }

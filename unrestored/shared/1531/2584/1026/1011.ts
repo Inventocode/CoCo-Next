@@ -1,20 +1,20 @@
 "use strict";
 
 export { s as a };
-var r = require("../2627/462");
+import r = require("../2627/462");
 function i(e) {
   return e.attachTo ? e.attachTo : document.querySelector("head") || document.body;
 }
 function o(e) {
   var t;
-  var n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-  if (!Object(r.a)()) {
+  var n = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : {};
+  if (!r.a()) {
     return null;
   }
   var o;
   var a = document.createElement("style");
-  if (null === (t = n.csp) || void 0 === t ? void 0 : t.nonce) {
-    a.nonce = null === (o = n.csp) || void 0 === o ? void 0 : o.nonce;
+  if (null === (t = n.csp) || undefined === t ? undefined : t.nonce) {
+    a.nonce = null === (o = n.csp) || undefined === o ? undefined : o.nonce;
   }
   a.innerHTML = e;
   var s = i(n);
@@ -32,7 +32,7 @@ function o(e) {
 }
 var a = new Map();
 function s(e, t) {
-  var n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+  var n = arguments.length > 2 && undefined !== arguments[2] ? arguments[2] : {};
   var r = i(n);
   if (!a.has(r)) {
     var s = o("", n);
@@ -47,8 +47,8 @@ function s(e, t) {
     var l;
     var f;
     var d;
-    if ((null === (l = n.csp) || void 0 === l ? void 0 : l.nonce) && u.nonce !== (null === (f = n.csp) || void 0 === f ? void 0 : f.nonce)) {
-      u.nonce = null === (d = n.csp) || void 0 === d ? void 0 : d.nonce;
+    if ((null === (l = n.csp) || undefined === l ? undefined : l.nonce) && u.nonce !== (null === (f = n.csp) || undefined === f ? undefined : f.nonce)) {
+      u.nonce = null === (d = n.csp) || undefined === d ? undefined : d.nonce;
     }
     if (u.innerHTML !== e) {
       u.innerHTML = e;

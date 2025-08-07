@@ -30,7 +30,7 @@ module.exports = function () {
         }
         var o = l(e);
         var a = o.ecmaFeatures || {};
-        var s = !0 === o.tokens ? new u(t, n) : null;
+        var s = true === o.tokens ? new u(t, n) : null;
         (i = h.call(this, {
           ecmaVersion: o.ecmaVersion,
           sourceType: o.sourceType,
@@ -70,10 +70,10 @@ module.exports = function () {
           }
         }, n))[f] = {
           tokens: s ? [] : null,
-          comments: !0 === o.comment ? [] : null,
-          impliedStrict: !0 === a.impliedStrict && i.options.ecmaVersion >= 5,
+          comments: true === o.comment ? [] : null,
+          impliedStrict: true === a.impliedStrict && i.options.ecmaVersion >= 5,
           ecmaVersion: i.options.ecmaVersion,
-          jsxAttrValueToken: !1,
+          jsxAttrValueToken: false,
           lastToken: null
         };
         return i;
@@ -136,7 +136,7 @@ module.exports = function () {
         key: "parseTopLevel",
         value: function (e) {
           if (this[f].impliedStrict) {
-            this.strict = !0;
+            this.strict = true;
           }
           return o(a(p.prototype), "parseTopLevel", this).call(this, e);
         }
@@ -145,7 +145,10 @@ module.exports = function () {
         value: function (t, n) {
           var r = e.acorn.getLineInfo(this.input, t);
           var i = new SyntaxError(n);
-          throw i.index = t, i.lineNumber = r.line, i.column = r.column + 1, i;
+          i.index = t;
+          i.lineNumber = r.line;
+          i.column = r.column + 1;
+          throw i;
         }
       }, {
         key: "raiseRecoverable",
@@ -156,7 +159,7 @@ module.exports = function () {
         key: "unexpected",
         value: function (e) {
           var t = "Unexpected token";
-          if (null !== e && void 0 !== e) {
+          if (null !== e && undefined !== e) {
             this.pos = e;
             if (this.options.locations) {
               for (; this.pos < this.lineStart;) {
@@ -176,7 +179,7 @@ module.exports = function () {
         value: function (e) {
           var n = o(a(p.prototype), "jsx_readString", this).call(this, e);
           if (this.type === t.string) {
-            this[f].jsxAttrValueToken = !0;
+            this[f].jsxAttrValueToken = true;
           }
           return n;
         }
@@ -195,7 +198,7 @@ module.exports = function () {
             }
           }
           if (e.type.indexOf("Function") > -1 && !e.generator) {
-            e.generator = !1;
+            e.generator = false;
           }
           return e;
         }

@@ -1,9 +1,9 @@
 "use strict";
 
 var r;
-var o = require("../10/index");
-var i = require("../47");
-var a = require("react");
+import o = require("../10/index");
+import i = require("../47");
+import a = require("react");
 var s = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -16,7 +16,7 @@ var s = function __importDefault(module) {
   });
   return defaultExport;
 }(a);
-var c = require("../8");
+import c = require("../8");
 var l = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -29,9 +29,9 @@ var l = function __importDefault(module) {
   });
   return defaultExport;
 }(c);
-var u = require("../53");
+import u = require("../53");
 require("./829");
-var d = require("../94/index");
+import d = require("../94/index");
 var _a;
 _a = s.a.memo(s.a.forwardRef(function (e, t) {
   var n = e.warning;
@@ -56,58 +56,58 @@ _a = s.a.memo(s.a.forwardRef(function (e, t) {
   var j = e.maxLength;
   var N = e.disabled;
   var R = e.type;
-  var k = void 0 === R ? "text" : R;
+  var k = undefined === R ? "text" : R;
   var x = e.dependency;
   var D = e.rules;
   var M = e.readOnly;
-  var L = void 0 !== M && M;
+  var L = undefined !== M && M;
   var P = e.isTrimmed;
-  var B = void 0 !== P && P;
+  var B = undefined !== P && P;
   var F = e.clearButtonVisible;
-  var G = Object(a.useState)(!1);
-  var U = Object(o.a)(G, 2);
+  var G = a.useState(false);
+  var U = o.a(G, 2);
   var W = U[0];
   var H = U[1];
-  var V = Object(a.useState)(!1);
-  var z = Object(o.a)(V, 2);
+  var V = a.useState(false);
+  var z = o.a(V, 2);
   var Y = z[0];
   var K = z[1];
-  var q = Object(a.useRef)(null);
-  var X = Object(a.useRef)("");
-  var Q = Object(a.useState)(!!f || !!p);
-  var Z = Object(o.a)(Q, 2);
+  var q = a.useRef(null);
+  var X = a.useRef("");
+  var Q = a.useState(!!f || !!p);
+  var Z = o.a(Q, 2);
   var J = Z[0];
   var $ = Z[1];
-  var ee = Object(a.useRef)(!0);
-  Object(a.useEffect)(function () {
+  var ee = a.useRef(true);
+  a.useEffect(function () {
     var e = q.current;
-    if (void 0 === p && e) {
-      e.value = void 0 === f ? "" : f.toString().substr(0, j || 1 / 0);
+    if (undefined === p && e) {
+      e.value = undefined === f ? "" : f.toString().substr(0, j || 1 / 0);
       $(!e.value);
     }
   }, [q, x, p, f]);
-  Object(a.useEffect)(function () {
+  a.useEffect(function () {
     var e = q.current;
-    if (void 0 !== p && e) {
+    if (undefined !== p && e) {
       e.value = p.toString().substr(0, j);
     }
   }, [q, p, j]);
-  Object(a.useImperativeHandle)(t, function () {
+  a.useImperativeHandle(t, function () {
     var e;
     return {
       input: q.current,
-      value: (null === (e = q.current) || void 0 === e ? void 0 : e.value) || "",
+      value: (null === (e = q.current) || undefined === e ? undefined : e.value) || "",
       focus: function () {
         var e;
-        return null === (e = q.current) || void 0 === e ? void 0 : e.focus();
+        return null === (e = q.current) || undefined === e ? undefined : e.focus();
       },
       blur: function () {
         var e;
-        return null === (e = q.current) || void 0 === e ? void 0 : e.blur();
+        return null === (e = q.current) || undefined === e ? undefined : e.blur();
       },
       select: function () {
         var e;
-        return null === (e = q.current) || void 0 === e ? void 0 : e.select();
+        return null === (e = q.current) || undefined === e ? undefined : e.select();
       }
     };
   });
@@ -118,7 +118,7 @@ _a = s.a.memo(s.a.forwardRef(function (e, t) {
       if (D) {
         var r = function (e, t, n) {
           var r;
-          var o = Object(i.a)(n);
+          var o = i.a(n);
           try {
             for (o.s(); !(r = o.n()).done;) {
               var a = r.value;
@@ -183,7 +183,7 @@ _a = s.a.memo(s.a.forwardRef(function (e, t) {
         if ("" !== e) {
           if (r) {
             var a;
-            var s = Object(i.a)(r);
+            var s = i.a(r);
             try {
               for (s.s(); !(a = s.n()).done;) {
                 var c = a.value;
@@ -208,7 +208,7 @@ _a = s.a.memo(s.a.forwardRef(function (e, t) {
               value: e
             };
           }
-          if (void 0 !== n && e.length > o.length) {
+          if (undefined !== n && e.length > o.length) {
             return {
               status: "fail",
               value: o,
@@ -222,7 +222,7 @@ _a = s.a.memo(s.a.forwardRef(function (e, t) {
             break;
           }
         }
-        if (l > -1 && void 0 !== n) {
+        if (l > -1 && undefined !== n) {
           for (var d = o, p = l; p < e.length; p++) {
             var f = o.slice(0, l) + e.slice(l, p) + o.slice(l);
             if (f.length > n) {
@@ -253,24 +253,24 @@ _a = s.a.memo(s.a.forwardRef(function (e, t) {
   var re = function (e) {
     if ("fail" === e.status) {
       if (!r) {
-        K(!0);
+        K(true);
         r = setTimeout(function () {
-          K(!1);
+          K(false);
           r = null;
         }, 600);
       }
     } else {
-      K(!1);
+      K(false);
     }
   };
-  var oe = Object(a.useCallback)(function (e) {
-    H(!0);
+  var oe = a.useCallback(function (e) {
+    H(true);
     if (b) {
       b(e);
     }
   }, [b]);
-  var ie = Object(a.useCallback)(function (e) {
-    H(!1);
+  var ie = a.useCallback(function (e) {
+    H(false);
     var t = q.current;
     if (t) {
       var n = t.value;
@@ -278,10 +278,10 @@ _a = s.a.memo(s.a.forwardRef(function (e, t) {
       if ("number" === k) {
         r = function (e, t, n) {
           var r = parseFloat(e) || 0;
-          if (void 0 !== n) {
+          if (undefined !== n) {
             r = Math.max(r, n);
           }
-          if (void 0 !== t) {
+          if (undefined !== t) {
             r = Math.min(r, t);
           }
           return r.toString();
@@ -321,7 +321,7 @@ _a = s.a.memo(s.a.forwardRef(function (e, t) {
       } else {
         (function (e) {
           var t = ne();
-          if (void 0 !== t && h) {
+          if (undefined !== t && h) {
             h(t, e);
           }
         })(e);
@@ -344,13 +344,13 @@ _a = s.a.memo(s.a.forwardRef(function (e, t) {
     },
     readOnly: L,
     onCompositionStart: function () {
-      ee.current = !1;
+      ee.current = false;
       if (y) {
         y();
       }
     },
     onCompositionEnd: function (e) {
-      ee.current = !0;
+      ee.current = true;
       ne();
       if (E) {
         E(e);
@@ -364,7 +364,7 @@ _a = s.a.memo(s.a.forwardRef(function (e, t) {
       if (t) {
         t.value = "";
         t.focus();
-        $(!0);
+        $(true);
         if (O) {
           O();
         }

@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.TimerHandler = void 0;
+exports.TimerHandler = undefined;
 var r = function () {
   function e() {
     this.timers = [];
@@ -38,7 +38,7 @@ var r = function () {
       }
       t(function () {
         e.pop(i);
-      }, o, !0);
+      }, o, true);
       return i;
     };
     var n = window.clearTimeout.bind(window);

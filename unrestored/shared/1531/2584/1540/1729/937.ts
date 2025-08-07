@@ -32,6 +32,6 @@ var s = function (e) {
   };
 };
 module.exports = {
-  left: s(!1),
-  right: s(!0)
+  left: s(false),
+  right: s(true)
 };

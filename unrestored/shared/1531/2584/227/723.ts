@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.register_procedure_blocks = exports.icon_procedure = void 0;
+exports.register_procedure_blocks = exports.icon_procedure = undefined;
 var r = require("tslib");
 var i = require("../17/497/387");
 var o = require("../4/127");
@@ -25,7 +25,7 @@ exports.register_procedure_blocks = function (e, n, u, l) {
       var l = (0, a.is_func)(n) ? n() : n;
       var _ = f({
         src: exports.icon_procedure,
-        opt_is_head: !0
+        opt_is_head: true
       });
       var A = e.Msg.PROCEDURES_DEFNORETURN_PROCEDURE;
       var v = A;
@@ -40,10 +40,10 @@ exports.register_procedure_blocks = function (e, n, u, l) {
           return n ? e.events.is_undoing() ? n.name : t : (0, s.get_legal_procedure_name)(t, l.get_occupied_procedure_names().concat([A]));
         }
       });
-      y.set_spell_check(!1);
+      y.set_spell_check(false);
       if (!(this.is_in_flyout || this.is_insertion_marker())) {
         y.on_mouse_down = function () {
-          return (0, r.__awaiter)(o, void 0, void 0, function () {
+          return (0, r.__awaiter)(o, undefined, undefined, function () {
             var t;
             var n;
             var o;
@@ -68,16 +68,16 @@ exports.register_procedure_blocks = function (e, n, u, l) {
         };
       }
       this.append_dummy_input("PROCEDURES_2_DEFNORETURN_DEFINE").append_field(_).append_field(e.Msg.PROCEDURES_DEFNORETURN_TITLE).append_field(y, c.PROCEDURE_BLOCK_FIELD_NAMES.PROCEDURE_NAME);
-      var b = p(void 0);
+      var b = p(undefined);
       b.margin_left = 12;
       this.append_dummy_input(c.PROCEDURE_BLOCK_INPUT_NAMES.DEF_MUTATOR).append_field(b).append_field(h());
-      this.append_statement_input("STACK", void 0, c.PROCEDURE_CONTEXT);
-      this.set_inputs_inline(!0);
+      this.append_statement_input("STACK", undefined, c.PROCEDURE_CONTEXT);
+      this.set_inputs_inline(true);
       this.set_colour(e.theme.block_color.ORANGE_4.fill);
       this.set_tooltip(e.Msg.PROCEDURES_DEFNORETURN_TOOLTIP);
     },
     addMutation: function (t) {
-      return (0, r.__awaiter)(this, void 0, void 0, function () {
+      return (0, r.__awaiter)(this, undefined, undefined, function () {
         var o;
         var s;
         var u;
@@ -94,17 +94,17 @@ exports.register_procedure_blocks = function (e, n, u, l) {
           switch (r.label) {
             case 0:
               o = this.id;
-              s = void 0;
+              s = undefined;
               return "string" === typeof t && t ? [3, 2] : [4, l.call(this, o)];
             case 1:
               u = r.sent();
-              t = null === u || void 0 === u ? void 0 : u.param_name;
-              s = null === u || void 0 === u ? void 0 : u.default_value;
+              t = null === u || undefined === u ? undefined : u.param_name;
+              s = null === u || undefined === u ? undefined : u.default_value;
               r.label = 2;
             case 2:
-              return t ? (f = e.mainWorkspace.get_block_by_id(o), (0, i.assert)(f), d = (0, a.is_func)(n) ? n() : n, h = d.get_procedure_by_def(o), (0, i.assert)(h), h.disabled ? (console.warn("Trying to add param to deleted procedure " + o), [2]) : (p = d.get_procedure_param_names(h.name)).includes(t) ? (console.warn("Param " + t + " exists."), [2]) : (_ = p.length, e.events.disable(), A = f.append_math_shadow("" + c.PROCEDURE_BLOCK_INPUT_NAMES.PARAM_PREFIX + _, c.PROCEDURE_BLOCK_INPUT_NAMES.DEF_MUTATOR), v = "<block type=\"" + c.PROCEDURE_BLOCK_TYPES.PARAM_ON_BLOCK + "\"></block>", (m = f.append_block_input(v, A)).set_field_value(t, c.PROCEDURE_BLOCK_FIELD_NAMES.PARAM_NAME), void 0 !== s && m.set_field_value("=" + s, c.PROCEDURE_BLOCK_FIELD_NAMES.PARAM_DEFAULT_VALUE), e.events.enable(), e.events.is_enabled() && (y = e.events.get_group(), e.events.set_group(y || !0), e.events.fire(g("change_procedure_param", {
+              return t ? (f = e.mainWorkspace.get_block_by_id(o), (0, i.assert)(f), d = (0, a.is_func)(n) ? n() : n, h = d.get_procedure_by_def(o), (0, i.assert)(h), h.disabled ? (console.warn("Trying to add param to deleted procedure " + o), [2]) : (p = d.get_procedure_param_names(h.name)).includes(t) ? (console.warn("Param " + t + " exists."), [2]) : (_ = p.length, e.events.disable(), A = f.append_math_shadow("" + c.PROCEDURE_BLOCK_INPUT_NAMES.PARAM_PREFIX + _, c.PROCEDURE_BLOCK_INPUT_NAMES.DEF_MUTATOR), v = "<block type=\"" + c.PROCEDURE_BLOCK_TYPES.PARAM_ON_BLOCK + "\"></block>", (m = f.append_block_input(v, A)).set_field_value(t, c.PROCEDURE_BLOCK_FIELD_NAMES.PARAM_NAME), undefined !== s && m.set_field_value("=" + s, c.PROCEDURE_BLOCK_FIELD_NAMES.PARAM_DEFAULT_VALUE), e.events.enable(), e.events.is_enabled() && (y = e.events.get_group(), e.events.set_group(y || true), e.events.fire(g("change_procedure_param", {
                 block: f,
-                old_value: void 0,
+                old_value: undefined,
                 new_value: {
                   param_name: t,
                   default_value: s
@@ -118,14 +118,14 @@ exports.register_procedure_blocks = function (e, n, u, l) {
       var t;
       var r = (0, a.is_func)(n) ? n() : n;
       var i = r.get_procedure_name_by_def(this.id);
-      var o = null === (t = r.get_procedure_by_name(i)) || void 0 === t ? void 0 : t.params;
+      var o = null === (t = r.get_procedure_by_name(i)) || undefined === t ? undefined : t.params;
       if (o && 0 !== o.length) {
         e.events.disable();
         var s = "" + c.PROCEDURE_BLOCK_INPUT_NAMES.PARAM_PREFIX + (o.length - 1);
         var u = this.get_input(s);
         var l = u && u.connection && u.connection.targetBlock();
         if (l) {
-          l.dispose(void 0, !1);
+          l.dispose(undefined, false);
         }
         this.remove_input(s);
         e.events.enable();
@@ -134,7 +134,7 @@ exports.register_procedure_blocks = function (e, n, u, l) {
           e.events.fire(g("change_procedure_param", {
             block: this,
             old_value: f,
-            new_value: void 0
+            new_value: undefined
           }));
         }
       }
@@ -177,26 +177,26 @@ exports.register_procedure_blocks = function (e, n, u, l) {
       });
       r.margin_left = 2;
       this.append_dummy_input().append_field(r, c.PROCEDURE_BLOCK_FIELD_NAMES.PARAM_DEFAULT_VALUE);
-      this.set_output(!0);
-      this.set_inputs_inline(!0);
+      this.set_output(true);
+      this.set_inputs_inline(true);
       this.set_colour(e.theme.block_color.ORANGE_7.fill);
       this.on_mouse_down = function (n) {
         var r = e.events.get_group();
-        e.events.set_group(r || !0);
+        e.events.set_group(r || true);
         if (0 === n.button) {
           var i = t.workspace.get_gesture(n);
           if (i) {
             var o = i.handle_move.bind(i);
             var a = i.handle_up.bind(i);
             var s = 0;
-            var u = !1;
+            var u = false;
             i.handle_move = function (r) {
               if (u) {
                 o(r);
               } else if (s < 10) {
                 s++;
               } else {
-                i.is_dragging_block = !0;
+                i.is_dragging_block = true;
                 var a = function () {
                   e.events.disable();
                   var n = t.get_field_value(c.PROCEDURE_BLOCK_FIELD_NAMES.PARAM_NAME) || "";
@@ -218,7 +218,7 @@ exports.register_procedure_blocks = function (e, n, u, l) {
                 a.select();
                 i.handle_block_start(n, a);
                 i.target_block = a;
-                u = !0;
+                u = true;
               }
             };
             i.handle_up = function (t) {
@@ -234,10 +234,10 @@ exports.register_procedure_blocks = function (e, n, u, l) {
     init: function () {
       this.append_dummy_input("PROCEDURES_2_DEFRETURN_RETURN").append_field(e.Msg.PROCEDURES_DEFRETURN_RETURN);
       this.append_math_shadow(c.PROCEDURE_BLOCK_INPUT_NAMES.RETURN_VALUE);
-      this.append_dummy_input(c.PROCEDURE_BLOCK_INPUT_NAMES.RETURN_MUTATOR).append_field(p(void 0), "REMOVE_MUTATOR");
-      this.set_previous_statement(!0);
-      this.set_next_statement(!1);
-      this.set_inputs_inline(!0);
+      this.append_dummy_input(c.PROCEDURE_BLOCK_INPUT_NAMES.RETURN_MUTATOR).append_field(p(undefined), "REMOVE_MUTATOR");
+      this.set_previous_statement(true);
+      this.set_next_statement(false);
+      this.set_inputs_inline(true);
       this.set_colour(e.theme.block_color.ORANGE_4.fill);
       this.itemCount_ = 1;
     },
@@ -247,13 +247,13 @@ exports.register_procedure_blocks = function (e, n, u, l) {
         var r = this.get_input(c.PROCEDURE_BLOCK_INPUT_NAMES.RETURN_MUTATOR);
         (0, i.assert)(r);
         r.remove_field("ADD_MUTATOR");
-        r.append_field(p(void 0), "REMOVE_MUTATOR");
+        r.append_field(p(undefined), "REMOVE_MUTATOR");
         this.append_math_shadow(c.PROCEDURE_BLOCK_INPUT_NAMES.RETURN_VALUE, c.PROCEDURE_BLOCK_INPUT_NAMES.RETURN_MUTATOR);
         var o = this.get_input(c.PROCEDURE_BLOCK_INPUT_NAMES.RETURN_VALUE);
-        var a = o && (null === (n = o.connection) || void 0 === n ? void 0 : n.targetBlock());
+        var a = o && (null === (n = o.connection) || undefined === n ? undefined : n.targetBlock());
         if (t) {
           e.events.disable();
-          if (!(null === a || void 0 === a)) {
+          if (!(null === a || undefined === a)) {
             a.set_field_value(t.toString(), "NUM");
           }
           e.events.enable();
@@ -263,7 +263,7 @@ exports.register_procedure_blocks = function (e, n, u, l) {
         if (e.events.is_enabled()) {
           e.events.fire(g("mutation", {
             block: this,
-            old_value: void 0,
+            old_value: undefined,
             new_value: t || 1
           }));
         }
@@ -274,13 +274,13 @@ exports.register_procedure_blocks = function (e, n, u, l) {
       var n;
       if (!(this.itemCount_ < 1)) {
         var r = this.get_input(c.PROCEDURE_BLOCK_INPUT_NAMES.RETURN_VALUE);
-        var o = r && (null === (t = r.connection) || void 0 === t ? void 0 : t.targetBlock());
+        var o = r && (null === (t = r.connection) || undefined === t ? undefined : t.targetBlock());
         var a = "";
-        if (null === o || void 0 === o ? void 0 : o.is_shadow()) {
+        if (null === o || undefined === o ? undefined : o.is_shadow()) {
           a = o.get_field_value("NUM") || "";
         } else {
-          var s = null === (n = null === r || void 0 === r ? void 0 : r.connection) || void 0 === n ? void 0 : n.get_shadow_dom();
-          var u = null === s || void 0 === s ? void 0 : s.firstChild;
+          var s = null === (n = null === r || undefined === r ? undefined : r.connection) || undefined === n ? undefined : n.get_shadow_dom();
+          var u = null === s || undefined === s ? undefined : s.firstChild;
           if (u && null !== u.textContent) {
             a = u.textContent;
           }
@@ -296,7 +296,7 @@ exports.register_procedure_blocks = function (e, n, u, l) {
           e.events.fire(g("mutation", {
             block: this,
             old_value: a,
-            new_value: void 0
+            new_value: undefined
           }));
         }
       }
@@ -310,7 +310,7 @@ exports.register_procedure_blocks = function (e, n, u, l) {
       var t;
       if (e) {
         if (0 === parseInt(e.getAttribute("items") || "0", 10)) {
-          if (!(null === (t = this.removeMutation) || void 0 === t)) {
+          if (!(null === (t = this.removeMutation) || undefined === t)) {
             t.call(this);
           }
         }
@@ -349,8 +349,8 @@ exports.register_procedure_blocks = function (e, n, u, l) {
           var p = h.getAttribute("value");
           var _ = this.append_default_value_shadow("" + c.PROCEDURE_BLOCK_INPUT_NAMES.ARG_PREFIX + d);
           var A = p || "0";
-          var g = null === (r = null === _ || void 0 === _ ? void 0 : _.connection) || void 0 === r ? void 0 : r.targetBlock();
-          if (null === g || void 0 === g ? void 0 : g.is_shadow()) {
+          var g = null === (r = null === _ || undefined === _ ? undefined : _.connection) || undefined === r ? undefined : r.targetBlock();
+          if (null === g || undefined === g ? undefined : g.is_shadow()) {
             var v = g.get_field("TEXT");
             if (v && (0, a.is_field_default_value)(v)) {
               v.set_value(A);
@@ -384,15 +384,15 @@ exports.register_procedure_blocks = function (e, n, u, l) {
       }).length;
       var r = this.append_default_value_shadow("" + c.PROCEDURE_BLOCK_INPUT_NAMES.ARG_PREFIX + n);
       var i = e || "0";
-      var o = null === (t = null === r || void 0 === r ? void 0 : r.connection) || void 0 === t ? void 0 : t.targetBlock();
-      if (null === o || void 0 === o ? void 0 : o.is_shadow()) {
+      var o = null === (t = null === r || undefined === r ? undefined : r.connection) || undefined === t ? undefined : t.targetBlock();
+      if (null === o || undefined === o ? undefined : o.is_shadow()) {
         var s = o.get_field("TEXT");
         if (s && (0, a.is_field_default_value)(s)) {
           s.set_value(i);
         }
       }
       if (this.is_collapsed()) {
-        this.update_collapsed(!0);
+        this.update_collapsed(true);
       } else {
         this.render();
       }
@@ -406,7 +406,7 @@ exports.register_procedure_blocks = function (e, n, u, l) {
       }
       this.remove_input("" + c.PROCEDURE_BLOCK_INPUT_NAMES.ARG_PREFIX + (e - 1));
       if (this.is_collapsed()) {
-        this.update_collapsed(!0);
+        this.update_collapsed(true);
       } else {
         this.render();
       }
@@ -415,17 +415,17 @@ exports.register_procedure_blocks = function (e, n, u, l) {
   e.define_block_with_object(c.PROCEDURE_BLOCK_TYPES.CALL_RETURN, (0, r.__assign)((0, r.__assign)({}, v), {
     init: function () {
       v.build_inputs.call(this);
-      this.set_output(!0);
-      this.set_inputs_inline(!0);
+      this.set_output(true);
+      this.set_inputs_inline(true);
       this.set_colour(e.theme.block_color.ORANGE_4.fill);
     }
   }));
   e.define_block_with_object(c.PROCEDURE_BLOCK_TYPES.CALL_NORETURN, (0, r.__assign)((0, r.__assign)({}, v), {
     init: function () {
       v.build_inputs.call(this);
-      this.set_previous_statement(!0);
-      this.set_next_statement(!0);
-      this.set_inputs_inline(!0);
+      this.set_previous_statement(true);
+      this.set_next_statement(true);
+      this.set_inputs_inline(true);
       this.set_colour(e.theme.block_color.ORANGE_4.fill);
     }
   }));
@@ -437,7 +437,7 @@ exports.register_procedure_blocks = function (e, n, u, l) {
       name: c.PROCEDURE_BLOCK_FIELD_NAMES.PARAM_NAME,
       text: "x"
     }],
-    output: !0,
+    output: true,
     colour: "%{BKY_ORANGE_7}",
     required_context: c.PROCEDURE_CONTEXT,
     extensions: ["param_block"]

@@ -20,11 +20,11 @@ export { w as q };
 export { C as c };
 export { T as b };
 export { S as t };
-var r = require("../10/index");
-var o = require("../17/index");
-var i = require("./127");
+import r = require("../10/index");
+import o = require("../17/index");
+import i = require("./127");
 function a(e) {
-  var t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+  var t = arguments.length > 1 && undefined !== arguments[1] && arguments[1];
   return {
     alt: "*",
     src: e,
@@ -50,7 +50,7 @@ function l(e, t) {
   return "async function(".concat(c(n), ") {").concat(t, "}");
 }
 function u(e, t, n, r) {
-  var o = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+  var o = arguments.length > 4 && undefined !== arguments[4] && arguments[4];
   var i = c(t);
   var a = c(r);
   var s = o ? "CocoExtension." : "Coco.";
@@ -62,7 +62,7 @@ function u(e, t, n, r) {
   return l + ");\n";
 }
 function d(e, t, n) {
-  var r = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+  var r = arguments.length > 4 && undefined !== arguments[4] && arguments[4];
   var o = JSON.stringify({
     blockId: t.id,
     blockType: t.type,
@@ -75,7 +75,7 @@ function d(e, t, n) {
   return i;
 }
 function p(e, t, n, r) {
-  var o = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+  var o = arguments.length > 4 && undefined !== arguments[4] && arguments[4];
   var i = t ? c(t) : "";
   var a = o ? "CocoExtension." : "Coco.";
   var s = "await ".concat(a).concat(e, "(").concat(i);
@@ -98,7 +98,7 @@ function f(e, t, n, r) {
 }
 function h(e, t) {
   return "/* ".concat(Object.entries(t).map(function (e) {
-    var t = Object(r.a)(e, 2);
+    var t = r.a(e, 2);
     var n = t[0];
     var o = t[1];
     return "".concat(n, "=").concat(o);
@@ -111,7 +111,7 @@ function g(e) {
   return JSON.stringify(e);
 }
 function _(e, t) {
-  var n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+  var n = arguments.length > 2 && undefined !== arguments[2] && arguments[2];
   var r = t ? c(t) : "";
   var o = n ? "CocoExtension." : "Coco.";
   return "".concat(o).concat(e, "(").concat(r, ")");
@@ -140,13 +140,13 @@ var C = o.Blink.di_container.get(i.BINDING.ChangeEvent);
 function T(e, t, n, r) {
   if (!this.get_input(e)) {
     var i = this.rendered;
-    this.rendered = !1;
+    this.rendered = false;
     var a = t();
     if (i) {
       this.inputList.forEach(function (e) {
         return e.init();
       });
-      this.render(!0);
+      this.render(true);
     }
     if (this.rendered) {
       this.cacheId[e] = this.cacheId[e] || o.Blink.utils.gen_uid();
@@ -156,19 +156,19 @@ function T(e, t, n, r) {
       var c;
       var l = o.Blink.utils.string_to_dom(n);
       l.setAttribute("id", this.cacheId[e]);
-      if (void 0 !== r && l.firstElementChild) {
+      if (undefined !== r && l.firstElementChild) {
         l.firstElementChild.textContent = r;
       }
-      if (!(null === (s = a.connection) || void 0 === s)) {
+      if (!(null === (s = a.connection) || undefined === s)) {
         s.set_shadow_dom(l);
       }
-      if (!(null === (c = a.connection) || void 0 === c)) {
+      if (!(null === (c = a.connection) || undefined === c)) {
         c.respawn_shadow();
       }
       if (o.Blink.events.is_enabled()) {
         var u = C("mutation", {
           block: this,
-          old_value: void 0,
+          old_value: undefined,
           new_value: "1"
         });
         o.Blink.events.fire(u);
@@ -182,31 +182,31 @@ function S(e, t, n) {
   var i = this.get_input(e);
   if (i) {
     var a;
-    var s = null === (r = i.connection) || void 0 === r ? void 0 : r.targetBlock();
+    var s = null === (r = i.connection) || undefined === r ? undefined : r.targetBlock();
     if (s && s.is_shadow()) {
       this.cacheId[e] = s.id;
       a = s.get_field_value(t) || "1";
     } else {
       var c;
       var l;
-      var u = null === (c = i.connection) || void 0 === c ? void 0 : c.get_shadow_dom();
-      this.cacheId[e] = (null === u || void 0 === u ? void 0 : u.getAttribute("id")) || o.Blink.utils.gen_uid();
-      a = (null === u || void 0 === u || null === (l = u.querySelector("field[name=\"".concat(t, "\"]"))) || void 0 === l ? void 0 : l.textContent) || "1";
+      var u = null === (c = i.connection) || undefined === c ? undefined : c.get_shadow_dom();
+      this.cacheId[e] = (null === u || undefined === u ? undefined : u.getAttribute("id")) || o.Blink.utils.gen_uid();
+      a = (null === u || undefined === u || null === (l = u.querySelector("field[name=\"".concat(t, "\"]"))) || undefined === l ? undefined : l.textContent) || "1";
     }
     var d = this.rendered;
-    this.rendered = !1;
+    this.rendered = false;
     n();
     if (d) {
       this.inputList.forEach(function (e) {
         return e.init();
       });
-      this.render(!0);
+      this.render(true);
     }
     if (o.Blink.events.is_enabled()) {
       var p = C("mutation", {
         block: this,
         old_value: a,
-        new_value: void 0
+        new_value: undefined
       });
       o.Blink.events.fire(p);
     }

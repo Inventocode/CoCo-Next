@@ -21,7 +21,7 @@ module.exports = function () {
           var o = r(i, 2);
           var a = o[0];
           var s = o[1];
-          var c = void 0 === s ? null : s;
+          var c = undefined === s ? null : s;
           n[a] = {
             value: c,
             comment: t
@@ -39,7 +39,7 @@ module.exports = function () {
         n = a.parse("Object", e) || {};
         if (s.isEverySeverityValid(n)) {
           return {
-            success: !0,
+            success: true,
             config: n
           };
         }
@@ -53,10 +53,10 @@ module.exports = function () {
       } catch (i) {
         c("Manual parsing failed.");
         return {
-          success: !1,
+          success: false,
           error: {
             ruleId: null,
-            fatal: !0,
+            fatal: true,
             severity: 2,
             message: "Failed to parse JSON from '".concat(r, "': ").concat(i.message),
             line: t.start.line,
@@ -65,7 +65,7 @@ module.exports = function () {
         };
       }
       return {
-        success: !0,
+        success: true,
         config: n
       };
     }
@@ -77,7 +77,7 @@ module.exports = function () {
       e.replace(/[\t-\r \xA0\u1680\u2000-\u200A\u2028\u2029\u202F\u205F\u3000\uFEFF]*,[\t-\r \xA0\u1680\u2000-\u200A\u2028\u2029\u202F\u205F\u3000\uFEFF]*/g, ",").split(/,+/).forEach(function (e) {
         var n = e.trim();
         if (n) {
-          t[n] = !0;
+          t[n] = true;
         }
       });
       return t;

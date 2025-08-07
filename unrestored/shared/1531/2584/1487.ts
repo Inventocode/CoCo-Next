@@ -120,7 +120,7 @@ var r;
   function f(e) {
     var t;
     var n = [];
-    for (n[(e.length >> 2) - 1] = void 0, t = 0; t < n.length; t += 1) {
+    for (n[(e.length >> 2) - 1] = undefined, t = 0; t < n.length; t += 1) {
       n[t] = 0;
     }
     var r = 8 * e.length;
@@ -154,7 +154,7 @@ var r;
       var o = f(e);
       var i = [];
       var a = [];
-      for (i[15] = a[15] = void 0, o.length > 16 && (o = d(o, 8 * e.length)), n = 0; n < 16; n += 1) {
+      for (i[15] = a[15] = undefined, o.length > 16 && (o = d(o, 8 * e.length)), n = 0; n < 16; n += 1) {
         i[n] = 909522486 ^ o[n];
         a[n] = 1549556828 ^ o[n];
       }
@@ -165,7 +165,7 @@ var r;
   function v(e, t, n) {
     return t ? n ? _(t, e) : h(_(t, e)) : n ? g(e) : h(g(e));
   }
-  if (!(void 0 === (r = function () {
+  if (!(undefined === (r = function () {
     return v;
   }.call(exports, require, exports, module)))) {
     module.exports = r;

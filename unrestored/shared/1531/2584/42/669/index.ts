@@ -27,8 +27,8 @@
     return e.replace(/<div><br><\/div>/g, "\n").replace(/<div>|<br>/g, "\n").replace(/<\/div>/g, "");
   }
   function p(e, t) {
-    var n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : s.q.FIXED;
-    var r = arguments.length > 3 ? arguments[3] : void 0;
+    var n = arguments.length > 2 && undefined !== arguments[2] ? arguments[2] : s.q.FIXED;
+    var r = arguments.length > 3 ? arguments[3] : undefined;
     var o = document.getElementById("COCO_APP_ZONE");
     var i = getComputedStyle(e);
     if (o) {
@@ -72,19 +72,19 @@
     var n = t.target;
     var f = t.callback;
     var h = t.options;
-    var m = void 0 === h ? {} : h;
+    var m = undefined === h ? {} : h;
     var g = m.sizeAdaptive;
-    var _ = void 0 === g ? s.q.FIXED : g;
+    var _ = undefined === g ? s.q.FIXED : g;
     var v = m.maxLength;
-    var b = void 0 === v ? 1 / 0 : v;
+    var b = undefined === v ? 1 / 0 : v;
     var y = m.isMultipleRow;
-    var E = void 0 === y || y;
-    var O = Object(r.useRef)(null);
-    var w = Object(r.useRef)();
-    var C = Object(a.e)(function (e) {
+    var E = undefined === y || y;
+    var O = r.useRef(null);
+    var w = r.useRef();
+    var C = a.e(function (e) {
       return e.common.stageScale;
     });
-    Object(r.useEffect)(function () {
+    r.useEffect(function () {
       var t = O.current;
       if (t && n) {
         w.current = n;
@@ -93,14 +93,14 @@
         t.contentEditable = "true";
         t.innerHTML = u(n);
         e(function () {
-          Object(c.b)(t);
+          c.b(t);
         });
       }
     }, [f, _, C, n]);
-    Object(r.useEffect)(function () {
+    r.useEffect(function () {
       var e = O.current;
       if (E && e) {
-        var t = Object(l.p)(function (e) {
+        var t = l.p(function (e) {
           f(e);
         }, 60);
         var n = new i.default(function () {
@@ -131,7 +131,7 @@
       onDoubleClick: function () {
         var e = O.current;
         if (e) {
-          Object(c.c)(e);
+          c.c(e);
         }
       },
       onInput: function (e) {
@@ -140,15 +140,15 @@
           var n = d(t.innerHTML);
           if (n.length >= b) {
             t.innerHTML = n.slice(0, b);
-            Object(c.b)(t);
+            c.b(t);
           }
         }
       },
       onPaste: function (e) {
-        if ((null === e || void 0 === e ? void 0 : e.clipboardData) && document.execCommand) {
+        if ((null === e || undefined === e ? undefined : e.clipboardData) && document.execCommand) {
           e.preventDefault();
           var t = e.clipboardData.getData("text/plain");
-          document.execCommand("insertText", !1, t);
+          document.execCommand("insertText", false, t);
         }
       }
     });
@@ -157,14 +157,14 @@
     var n = t.target;
     var i = t.callback;
     var c = t.options;
-    var l = (void 0 === c ? {} : c).sizeAdaptive;
-    var d = void 0 === l ? s.q.FIXED : l;
-    var f = Object(r.useRef)(null);
-    var h = Object(r.useRef)();
-    var m = Object(a.e)(function (e) {
+    var l = (undefined === c ? {} : c).sizeAdaptive;
+    var d = undefined === l ? s.q.FIXED : l;
+    var f = r.useRef(null);
+    var h = r.useRef();
+    var m = a.e(function (e) {
       return e.common.stageScale;
     });
-    Object(r.useEffect)(function () {
+    r.useEffect(function () {
       var t = f.current;
       if (t && n) {
         var r = u(n);
@@ -206,8 +206,8 @@
   }
   exports.a = function (e) {
     var t = e.options;
-    var n = (void 0 === t ? {} : t).isMultipleRow;
-    var r = void 0 === n || n;
+    var n = (undefined === t ? {} : t).isMultipleRow;
+    var r = undefined === n || n;
     return o.a.createElement("div", {
       className: "coco-widget-editor"
     }, r ? o.a.createElement(f, e) : o.a.createElement(h, e));

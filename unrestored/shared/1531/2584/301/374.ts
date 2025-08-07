@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.FieldTextInput = void 0;
+exports.FieldTextInput = undefined;
 var r = require("tslib");
 var i = require("inversify");
 var o = require("../4/127");
@@ -14,13 +14,13 @@ var u = function (e) {
   function t(t) {
     var n = e.call(this, t.text, t.opt_validator) || this;
     n.field_type = "FieldTextInput";
-    n.spellcheck_ = !0;
-    n.is_composition_inputting = !1;
+    n.spellcheck_ = true;
+    n.is_composition_inputting = false;
     n.on_start_composition = function () {
-      n.is_composition_inputting = !0;
+      n.is_composition_inputting = true;
     };
     n.on_end_composition = function () {
-      n.is_composition_inputting = !1;
+      n.is_composition_inputting = false;
     };
     n.size_ = new a.Size(0, 30);
     return n;
@@ -50,7 +50,7 @@ var u = function (e) {
         r.style.left = n[0] + "px";
         r.style.top = n[1] + "px";
         r.style.transformOrigin = "top left";
-        r.style.transform = "scale(" + (null !== (e = this.workspace_.get_scale()) && void 0 !== e ? e : 1) + ")";
+        r.style.transform = "scale(" + (null !== (e = this.workspace_.get_scale()) && undefined !== e ? e : 1) + ")";
       }
     }
   };
@@ -61,13 +61,13 @@ var u = function (e) {
     }
     this.workspace_ = this.source_block.get_workspace();
     this.widget_div.show(this, function () {
-      n.focus(!1);
+      n.focus(false);
       if (t) {
         t();
       }
       n.widget_dispose()();
     });
-    if (void 0 == this.widget_div.DIV) {
+    if (undefined == this.widget_div.DIV) {
       throw new Error("DIV is undefined");
     }
     this.html_input = this.widget_create();
@@ -90,7 +90,7 @@ var u = function (e) {
   t.prototype.update_height = function () {
     var t;
     e.prototype.update_height.call(this);
-    if (!(null === (t = this.text_element) || void 0 === t)) {
+    if (!(null === (t = this.text_element) || undefined === t)) {
       t.setAttribute("y", String(this.size_.height / 2));
     }
   };
@@ -107,7 +107,7 @@ var u = function (e) {
       if (this.source_block) {
         e = this.call_validator(this.html_input.value);
       }
-      if (void 0 == e) {
+      if (undefined == e) {
         (0, s.add_class)(this.html_input, "blocklyInvalidInput");
       } else {
         (0, s.remove_class)(this.html_input, "blocklyInvalidInput");
@@ -125,7 +125,7 @@ var u = function (e) {
         }
         var i;
         var o = t.events.get_group();
-        t.events.set_group(o || !0);
+        t.events.set_group(o || true);
         if (e !== t.html_input.defaultValue && t.events.is_enabled()) {
           i = t.change_event_factory("field", {
             block: t.source_block,
@@ -135,7 +135,7 @@ var u = function (e) {
           });
         }
         t.set_text(e);
-        if (null === (n = t.source_block) || void 0 === n ? void 0 : n.rendered) {
+        if (null === (n = t.source_block) || undefined === n ? undefined : n.rendered) {
           t.source_block.render();
         }
         if (t.html_input.onKeyDownWrapper_) {
@@ -151,7 +151,7 @@ var u = function (e) {
           t.events.unbind_event(t.html_input.onInputWrapper_ || []);
         }
         if (t.html_input.onWorkspaceChangeWrapper_) {
-          if (!(null === (r = t.workspace_) || void 0 === r)) {
+          if (!(null === (r = t.workspace_) || undefined === r)) {
             r.remove_change_listener(t.html_input.onWorkspaceChangeWrapper_);
           }
         }
@@ -172,7 +172,7 @@ var u = function (e) {
         if (i) {
           t.events.fire(i);
         }
-        t.events.set_group(!1);
+        t.events.set_group(false);
       }
     };
   };
@@ -188,7 +188,7 @@ var u = function (e) {
         } else {
           if (9 == e.keyCode) {
             this.widget_div.hide();
-            if (!(null === (t = this.source_block) || void 0 === t)) {
+            if (!(null === (t = this.source_block) || undefined === t)) {
               t.tab(this, !e.shiftKey);
             }
             e.preventDefault();
@@ -207,7 +207,7 @@ var u = function (e) {
         this.validate_();
       } else {
         if (c.is.webkit()) {
-          if (!(null === (e = this.source_block) || void 0 === e)) {
+          if (!(null === (e = this.source_block) || undefined === e)) {
             e.render();
           }
         }
@@ -217,10 +217,10 @@ var u = function (e) {
   };
   t.prototype.widget_create = function (e, t) {
     var r;
-    if (void 0 === e) {
+    if (undefined === e) {
       e = "input";
     }
-    if (void 0 === t) {
+    if (undefined === t) {
       t = "blocklyHtmlInput";
     }
     var i = this.widget_div.DIV;
@@ -231,7 +231,7 @@ var u = function (e) {
     o.setAttribute("spellcheck", String(this.spellcheck_));
     o.style.fontSize = n.FONTSIZE + "pt";
     o.value = o.defaultValue = this.text_;
-    o.oldValue_ = void 0;
+    o.oldValue_ = undefined;
     o.style.webkitAppearance = "none";
     i.appendChild(o);
     this.resize_editor();
@@ -242,7 +242,7 @@ var u = function (e) {
     if (this.source_block.is_shadow()) {
       i.style.borderRadius = n.FONTSIZE + "pt";
       o.style.borderRadius = n.FONTSIZE + "pt";
-      var a = (null === (r = this.source_block.parent_block) || void 0 === r ? void 0 : r.get_colour()) || "#fff";
+      var a = (null === (r = this.source_block.parent_block) || undefined === r ? undefined : r.get_colour()) || "#fff";
       o.style.boxShadow = "inset " + a + " 0px 0px 0px 2px";
     } else {
       i.style.borderRadius = "4px";
@@ -262,7 +262,7 @@ var u = function (e) {
       this.html_input.onKeyPressWrapper_ = this.events.bind_event_with_checks(this.html_input, "keypress", this, this.on_html_input_change);
       this.html_input.onInputWrapper_ = this.events.bind_event(this.html_input, "input", this, this.on_html_input_change);
       this.html_input.onWorkspaceChangeWrapper_ = this.resize_editor.bind(this);
-      if (!(null === (e = this.workspace_) || void 0 === e)) {
+      if (!(null === (e = this.workspace_) || undefined === e)) {
         e.add_change_listener(this.html_input.onWorkspaceChangeWrapper_);
       }
       this.html_input.on_composition_start_wrapper_ = this.events.bind_event_with_checks(this.html_input, "compositionstart", this, this.on_start_composition);
@@ -273,10 +273,10 @@ var u = function (e) {
     this.spellcheck_ = e;
   };
   t.prototype.set_value = function (t) {
-    if (void 0 != t) {
+    if (undefined != t) {
       if (this.source_block) {
         var n = this.call_validator(t);
-        if (void 0 != n) {
+        if (undefined != n) {
           t = n;
         }
       }
@@ -285,8 +285,8 @@ var u = function (e) {
   };
   t.prototype.init = function () {
     var t;
-    e.prototype.init.call(this, !0);
-    if (null === (t = this.source_block) || void 0 === t ? void 0 : t.is_shadow()) {
+    e.prototype.init.call(this, true);
+    if (null === (t = this.source_block) || undefined === t ? undefined : t.is_shadow()) {
       this.source_block.get_svg_root().classList.add("blocklyShadowTextInput");
     }
     if (this.field_group) {
@@ -294,7 +294,7 @@ var u = function (e) {
     }
   };
   t.FONTSIZE = 12;
-  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.widget_div)], t.prototype, "widget_div", void 0);
+  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.widget_div)], t.prototype, "widget_div", undefined);
   return t = n = (0, r.__decorate)([(0, i.injectable)()], t);
 }(require("./500").Field);
 exports.FieldTextInput = u;

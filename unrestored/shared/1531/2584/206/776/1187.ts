@@ -35,7 +35,7 @@
     return n;
   }
   exports.resolve = function () {
-    for (var t = "", i = !1, o = arguments.length - 1; o >= -1 && !i; o--) {
+    for (var t = "", i = false, o = arguments.length - 1; o >= -1 && !i; o--) {
       var a = o >= 0 ? arguments[o] : e.cwd();
       if ("string" !== typeof a) {
         throw new TypeError("Arguments to path.resolve must be strings");
@@ -107,14 +107,14 @@
     if (0 === e.length) {
       return ".";
     }
-    for (var t = e.charCodeAt(0), n = 47 === t, r = -1, i = !0, o = e.length - 1; o >= 1; --o) {
+    for (var t = e.charCodeAt(0), n = 47 === t, r = -1, i = true, o = e.length - 1; o >= 1; --o) {
       if (47 === (t = e.charCodeAt(o))) {
         if (!i) {
           r = o;
           break;
         }
       } else {
-        i = !1;
+        i = false;
       }
     }
     return -1 === r ? n ? "/" : "." : n && 1 === r ? "/" : e.slice(0, r);
@@ -127,7 +127,7 @@
       var t;
       var n = 0;
       var r = -1;
-      var i = !0;
+      var i = true;
       for (t = e.length - 1; t >= 0; --t) {
         if (47 === e.charCodeAt(t)) {
           if (!i) {
@@ -135,7 +135,7 @@
             break;
           }
         } else if (-1 === r) {
-          i = !1;
+          i = false;
           r = t + 1;
         }
       }
@@ -150,11 +150,11 @@
     if ("string" !== typeof e) {
       e += "";
     }
-    for (var t = -1, n = 0, r = -1, i = !0, o = 0, a = e.length - 1; a >= 0; --a) {
+    for (var t = -1, n = 0, r = -1, i = true, o = 0, a = e.length - 1; a >= 0; --a) {
       var s = e.charCodeAt(a);
       if (47 !== s) {
         if (-1 === r) {
-          i = !1;
+          i = false;
           r = a + 1;
         }
         if (46 === s) {

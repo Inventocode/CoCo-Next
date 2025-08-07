@@ -8,15 +8,15 @@ var r = function () {
   }
   e.prototype.memoize = function (e) {
     if (this._hasWeakSet) {
-      return !!this._inner.has(e) || (this._inner.add(e), !1);
+      return !!this._inner.has(e) || (this._inner.add(e), false);
     }
     for (var t = 0; t < this._inner.length; t++) {
       if (this._inner[t] === e) {
-        return !0;
+        return true;
       }
     }
     this._inner.push(e);
-    return !1;
+    return false;
   };
   e.prototype.unmemoize = function (e) {
     if (this._hasWeakSet) {

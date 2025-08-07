@@ -28,42 +28,42 @@ var r = module.exports = function (e, t, n) {
   })(t, "function" == typeof (n = t.cb || n) ? n : n.pre || function () {}, n.post || function () {}, e, "", e);
 };
 r.keywords = {
-  additionalItems: !0,
-  items: !0,
-  contains: !0,
-  additionalProperties: !0,
-  propertyNames: !0,
-  not: !0
+  additionalItems: true,
+  items: true,
+  contains: true,
+  additionalProperties: true,
+  propertyNames: true,
+  not: true
 };
 r.arrayKeywords = {
-  items: !0,
-  allOf: !0,
-  anyOf: !0,
-  oneOf: !0
+  items: true,
+  allOf: true,
+  anyOf: true,
+  oneOf: true
 };
 r.propsKeywords = {
-  definitions: !0,
-  properties: !0,
-  patternProperties: !0,
-  dependencies: !0
+  definitions: true,
+  properties: true,
+  patternProperties: true,
+  dependencies: true
 };
 r.skipKeywords = {
-  default: !0,
-  enum: !0,
-  const: !0,
-  required: !0,
-  maximum: !0,
-  minimum: !0,
-  exclusiveMaximum: !0,
-  exclusiveMinimum: !0,
-  multipleOf: !0,
-  maxLength: !0,
-  minLength: !0,
-  pattern: !0,
-  format: !0,
-  maxItems: !0,
-  minItems: !0,
-  uniqueItems: !0,
-  maxProperties: !0,
-  minProperties: !0
+  default: true,
+  enum: true,
+  const: true,
+  required: true,
+  maximum: true,
+  minimum: true,
+  exclusiveMaximum: true,
+  exclusiveMinimum: true,
+  multipleOf: true,
+  maxLength: true,
+  minLength: true,
+  pattern: true,
+  format: true,
+  maxItems: true,
+  minItems: true,
+  uniqueItems: true,
+  maxProperties: true,
+  minProperties: true
 };

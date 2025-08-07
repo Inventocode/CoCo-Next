@@ -49,7 +49,7 @@ function g() {
 }
 function v() {
   var e;
-  for (g(); !d && void 0 !== (e = f.shift());) {
+  for (g(); !d && undefined !== (e = f.shift());) {
     h(e);
   }
 }
@@ -79,7 +79,7 @@ var E = function () {
   return s.H;
 };
 function x(e) {
-  var t = "*" === e ? E : Object(a.k)(e) ? b : Object(a.a)(e) ? m : Object(a.l)(e) ? b : Object(a.d)(e) ? y : Object(a.m)(e) ? w : null;
+  var t = "*" === e ? E : a.k(e) ? b : a.a(e) ? m : a.l(e) ? b : a.d(e) ? y : a.m(e) ? w : null;
   if (null === t) {
     throw new Error("invalid pattern: " + e);
   }
@@ -92,10 +92,10 @@ var O = function (e) {
   return e && e.type === r.b;
 };
 function k(e) {
-  if (void 0 === e) {
-    e = Object(s.B)();
+  if (undefined === e) {
+    e = s.B();
   }
-  var t = !1;
+  var t = false;
   var n = [];
   return {
     take: function (r) {
@@ -105,7 +105,7 @@ function k(e) {
         if (e.isEmpty()) {
           n.push(r);
           r.cancel = function () {
-            Object(s.O)(n, r);
+            s.O(n, r);
           };
         } else {
           r(e.take());
@@ -129,7 +129,7 @@ function k(e) {
     },
     close: function () {
       if (!t) {
-        t = !0;
+        t = true;
         var e = n;
         n = [];
         for (var r = 0, i = e.length; r < i; r++) {
@@ -142,7 +142,7 @@ function k(e) {
 function S() {
   var e = function () {
     var e;
-    var t = !1;
+    var t = false;
     var n = [];
     var i = n;
     var o = function () {
@@ -151,14 +151,14 @@ function S() {
       }
     };
     var a = function () {
-      t = !0;
+      t = true;
       var e = n = i;
       i = [];
       e.forEach(function (e) {
         e(C);
       });
     };
-    (e = {})[r.e] = !0;
+    (e = {})[r.e] = true;
     e.put = function (e) {
       if (!t) {
         if (O(e)) {
@@ -175,7 +175,7 @@ function S() {
       }
     };
     e.take = function (e, n) {
-      if (void 0 === n) {
+      if (undefined === n) {
         n = E;
       }
       if (t) {
@@ -184,9 +184,9 @@ function S() {
         e[r.d] = n;
         o();
         i.push(e);
-        e.cancel = Object(s.L)(function () {
+        e.cancel = s.L(function () {
           o();
-          Object(s.O)(i, e);
+          s.O(i, e);
         });
       }
     };
@@ -207,11 +207,11 @@ function S() {
 }
 function T(e, t) {
   var n = e[r.a];
-  if (Object(a.d)(n)) {
+  if (a.d(n)) {
     t.cancel = n;
   }
   e.then(t, function (e) {
-    t(e, !0);
+    t(e, true);
   });
 }
 var B;
@@ -226,12 +226,12 @@ function F(e) {
 }
 (B = {})[s.r] = function (e, t, n) {
   var i = t.channel;
-  var o = void 0 === i ? e.channel : i;
+  var o = undefined === i ? e.channel : i;
   var s = t.pattern;
   var c = t.maybe;
   var u = function (e) {
     if (e instanceof Error) {
-      n(e, !0);
+      n(e, true);
     } else {
       if (!O(e) || c) {
         n(e);
@@ -241,9 +241,9 @@ function F(e) {
     }
   };
   try {
-    o.take(u, Object(a.g)(s) ? x(s) : null);
+    o.take(u, a.g(s) ? x(s) : null);
   } catch (l) {
-    return void n(l, !0);
+    return void n(l, true);
   }
   n.cancel = u.cancel;
 };
@@ -256,9 +256,9 @@ B[s.n] = function (e, t, n) {
     try {
       t = (r ? r.put : e.dispatch)(i);
     } catch (s) {
-      return void n(s, !0);
+      return void n(s, true);
     }
-    if (o && Object(a.j)(t)) {
+    if (o && a.j(t)) {
       T(t, n);
     } else {
       n(t);
@@ -270,30 +270,30 @@ B[s.a] = function (e, t, n, r) {
   var o = D;
   var c = Object.keys(t);
   if (0 !== c.length) {
-    var u = Object(s.I)(t, n);
+    var u = s.I(t, n);
     c.forEach(function (e) {
       i(t[e], o, u[e], e);
     });
   } else {
-    n(Object(a.a)(t) ? [] : {});
+    n(a.a(t) ? [] : {});
   }
 };
 B[s.p] = function (e, t, n, r) {
   var i = r.digestEffect;
   var o = D;
   var c = Object.keys(t);
-  var u = Object(a.a)(t) ? Object(s.J)(c.length) : {};
+  var u = a.a(t) ? s.J(c.length) : {};
   var l = {};
-  var f = !1;
+  var f = false;
   c.forEach(function (e) {
     var t = function (t, r) {
       if (!f) {
-        if (r || Object(s.P)(t)) {
+        if (r || s.P(t)) {
           n.cancel();
           n(t, r);
         } else {
           n.cancel();
-          f = !0;
+          f = true;
           u[e] = t;
           n(u);
         }
@@ -304,7 +304,7 @@ B[s.p] = function (e, t, n, r) {
   });
   n.cancel = function () {
     if (!f) {
-      f = !0;
+      f = true;
       c.forEach(function (e) {
         return l[e].cancel();
       });
@@ -323,15 +323,15 @@ B[s.c] = function (e, t, n, r) {
   var u = r.task;
   try {
     var l = o.apply(i, c);
-    if (Object(a.j)(l)) {
+    if (a.j(l)) {
       return void T(l, n);
     }
-    if (Object(a.e)(l)) {
-      return void G(e, l, u.context, D, Object(s.G)(o), !1, n);
+    if (a.e(l)) {
+      return void G(e, l, u.context, D, s.G(o), false, n);
     }
     n(l);
   } catch (f) {
-    n(f, !0);
+    n(f, true);
   }
 };
 B[s.w] = function (e, t, n) {
@@ -340,10 +340,10 @@ B[s.w] = function (e, t, n) {
   var o = t.args;
   try {
     var s = function (e, t) {
-      if (Object(a.n)(e)) {
+      if (a.n(e)) {
         n(t);
       } else {
-        n(e, !0);
+        n(e, true);
       }
     };
     i.apply(r, o.concat(s));
@@ -351,7 +351,7 @@ B[s.w] = function (e, t, n) {
       n.cancel = s.cancel;
     }
   } catch (c) {
-    n(c, !0);
+    n(c, true);
   }
 };
 B[s.f] = function (e, t, n, r) {
@@ -366,21 +366,21 @@ B[s.f] = function (e, t, n, r) {
     var r = e.args;
     try {
       var i = n.apply(t, r);
-      if (Object(a.e)(i)) {
+      if (a.e(i)) {
         return i;
       }
-      var o = !1;
-      return Object(s.N)(function (e) {
+      var o = false;
+      return s.N(function (e) {
         return o ? {
           value: e,
-          done: !0
-        } : (o = !0, {
+          done: true
+        } : (o = true, {
           value: i,
-          done: !Object(a.j)(i)
+          done: !a.j(i)
         });
       });
     } catch (c) {
-      return Object(s.N)(function () {
+      return s.N(function () {
         throw c;
       });
     }
@@ -392,10 +392,10 @@ B[s.f] = function (e, t, n, r) {
   var d = function (e, t) {
     return e.isSagaIterator ? {
       name: e.meta.name
-    } : Object(s.G)(t);
+    } : s.G(t);
   }(f, o);
   _(function () {
-    var t = G(e, f, l.context, D, d, u, void 0);
+    var t = G(e, f, l.context, D, d, u, undefined);
     if (u) {
       n(t);
     } else {
@@ -422,21 +422,21 @@ B[s.h] = function (e, t, n, r) {
       };
       t.cancel = function () {
         if (e.isRunning()) {
-          Object(s.O)(e.joiners, n);
+          s.O(e.joiners, n);
         }
       };
       e.joiners.push(n);
     } else if (e.isAborted()) {
-      t(e.error(), !0);
+      t(e.error(), true);
     } else {
       t(e.result());
     }
   };
-  if (Object(a.a)(t)) {
+  if (a.a(t)) {
     if (0 === t.length) {
       return void n([]);
     }
-    var c = Object(s.I)(t, n);
+    var c = s.I(t, n);
     t.forEach(function (e, t) {
       o(e, c[t]);
     });
@@ -449,7 +449,7 @@ B[s.y] = function (e, t, n, i) {
   if (t === r.h) {
     F(o);
   } else {
-    if (Object(a.a)(t)) {
+    if (a.a(t)) {
       t.forEach(F);
     } else {
       F(t);
@@ -461,9 +461,9 @@ B[s.q] = function (e, t, n) {
   var r = t.selector;
   var i = t.args;
   try {
-    n(r.apply(void 0, [e.getState()].concat(i)));
+    n(r.apply(undefined, [e.getState()].concat(i)));
   } catch (o) {
-    n(o, !0);
+    n(o, true);
   }
 };
 B[s.A] = function (e, t, n) {
@@ -495,7 +495,7 @@ B[s.g] = function (e, t, n, r) {
 };
 B[s.E] = function (e, t, n, r) {
   var i = r.task;
-  Object(s.M)(i.context, t);
+  s.M(i.context, t);
   n();
 };
 var R = B;
@@ -508,7 +508,7 @@ function N(e) {
   return n ? t + "  " + P(n.fileName, n.lineNumber) : t;
 }
 function M(e) {
-  var t = Object(s.R)(function (e) {
+  var t = s.R(function (e) {
     return e.cancelledTasks;
   }, e);
   return t.length ? ["Tasks cancelled due to error:"].concat(t).join("\n") : "";
@@ -523,7 +523,7 @@ var H = function () {
   var e = L[0];
   var t = L.slice(1);
   var n = e.crashedEffect ? function (e) {
-    var t = Object(s.S)(e);
+    var t = s.S(e);
     return t ? t.code + "  " + P(t.fileName, t.lineNumber) : "";
   }(e.crashedEffect) : null;
   return ["The above error occurred in task " + N(e.meta) + (n ? " \n when executing effect " + n : "")].concat(t.map(function (e) {
@@ -532,7 +532,7 @@ var H = function () {
 };
 function V(e, t, n, i, o, a, c) {
   var u;
-  if (void 0 === c) {
+  if (undefined === c) {
     c = s.Q;
   }
   var f;
@@ -544,17 +544,17 @@ function V(e, t, n, i, o, a, c) {
   var g = function (e, t, n) {
     var r;
     var i = [];
-    var o = !1;
+    var o = false;
     function a(e) {
       t();
       u();
-      n(e, !0);
+      n(e, true);
     }
     function c(t) {
       i.push(t);
       t.cont = function (c, u) {
         if (!o) {
-          Object(s.O)(i, t);
+          s.O(i, t);
           t.cont = s.Q;
           if (u) {
             a(c);
@@ -563,7 +563,7 @@ function V(e, t, n, i, o, a, c) {
               r = c;
             }
             if (!i.length) {
-              o = !0;
+              o = true;
               n(r);
             }
           }
@@ -572,7 +572,7 @@ function V(e, t, n, i, o, a, c) {
     }
     function u() {
       if (!o) {
-        o = !0;
+        o = true;
         i.forEach(function (e) {
           e.cont = s.Q;
           e.cancel();
@@ -633,7 +633,7 @@ function V(e, t, n, i, o, a, c) {
     });
     m.joiners = null;
   }
-  (u = {})[r.i] = !0;
+  (u = {})[r.i] = true;
   u.id = i;
   u.meta = o;
   u.isRoot = a;
@@ -644,13 +644,13 @@ function V(e, t, n, i, o, a, c) {
     if (0 === h) {
       h = 1;
       g.cancelAll();
-      v(r.j, !1);
+      v(r.j, false);
     }
   };
   u.cont = c;
   u.end = v;
   u.setContext = function (e) {
-    Object(s.M)(A, e);
+    s.M(A, e);
   };
   u.toPromise = function () {
     if (!p) {
@@ -685,10 +685,10 @@ function V(e, t, n, i, o, a, c) {
 }
 function G(e, t, n, i, o, c, u) {
   var l = e.finalizeRunEffect(function (t, n, i) {
-    if (Object(a.j)(t)) {
+    if (a.j(t)) {
       T(t, i);
-    } else if (Object(a.e)(t)) {
-      G(e, t, d.context, n, o, !1, i);
+    } else if (a.e(t)) {
+      G(e, t, d.context, n, o, false, i);
     } else if (t && t[r.c]) {
       (0, R[t.type])(e, t.payload, i, h);
     } else {
@@ -723,16 +723,16 @@ function G(e, t, n, i, o, c, u) {
         o = t.throw(e);
         U();
       } else {
-        if (Object(s.T)(e)) {
+        if (s.T(e)) {
           f.status = 1;
           p.cancel();
-          o = Object(a.d)(t.return) ? t.return(r.j) : {
-            done: !0,
+          o = a.d(t.return) ? t.return(r.j) : {
+            done: true,
             value: r.j
           };
         } else {
-          o = Object(s.U)(e) ? Object(a.d)(t.return) ? t.return() : {
-            done: !0
+          o = s.U(e) ? a.d(t.return) ? t.return() : {
+            done: true
           } : t.next(e);
         }
       }
@@ -749,18 +749,18 @@ function G(e, t, n, i, o, c, u) {
         throw c;
       }
       f.status = 2;
-      f.cont(c, !0);
+      f.cont(c, true);
     }
   }
   function _(t, n, r, i) {
-    if (void 0 === i) {
+    if (undefined === i) {
       i = "";
     }
     var o;
     var a = I();
     function c(n, i) {
       if (!o) {
-        o = !0;
+        o = true;
         r.cancel = s.Q;
         if (e.sagaMonitor) {
           if (i) {
@@ -788,7 +788,7 @@ function G(e, t, n, i, o, c, u) {
     c.cancel = s.Q;
     r.cancel = function () {
       if (!o) {
-        o = !0;
+        o = true;
         c.cancel();
         c.cancel = s.Q;
         if (e.sagaMonitor) {
@@ -801,19 +801,19 @@ function G(e, t, n, i, o, c, u) {
 }
 function z(e, t) {
   var n = e.channel;
-  var r = void 0 === n ? S() : n;
+  var r = undefined === n ? S() : n;
   var i = e.dispatch;
   var o = e.getState;
   var a = e.context;
-  var u = void 0 === a ? {} : a;
+  var u = undefined === a ? {} : a;
   var l = e.sagaMonitor;
   var f = e.effectMiddlewares;
   var d = e.onError;
-  var h = void 0 === d ? s.b : d;
+  var h = undefined === d ? s.b : d;
   for (var p = arguments.length, A = new Array(p > 2 ? p - 2 : 0), g = 2; g < p; g++) {
     A[g - 2] = arguments[g];
   }
-  var v = t.apply(void 0, A);
+  var v = t.apply(undefined, A);
   var m;
   var y = I();
   if (l) {
@@ -830,7 +830,7 @@ function z(e, t) {
     });
   }
   if (f) {
-    var b = c.compose.apply(void 0, f);
+    var b = c.compose.apply(undefined, f);
     m = function (e) {
       return function (t, n, r) {
         return b(function (t) {
@@ -843,14 +843,14 @@ function z(e, t) {
   }
   var w = {
     channel: r,
-    dispatch: Object(s.d)(i),
+    dispatch: s.d(i),
     getState: o,
     sagaMonitor: l,
     onError: h,
     finalizeRunEffect: m
   };
   return _(function () {
-    var e = G(w, v, u, y, Object(s.G)(t), !0, void 0);
+    var e = G(w, v, u, y, s.G(t), true, undefined);
     if (l) {
       l.effectResolved(y, e);
     }
@@ -859,17 +859,17 @@ function z(e, t) {
 }
 var Q = function (e) {
   var t;
-  var n = void 0 === e ? {} : e;
+  var n = undefined === e ? {} : e;
   var r = n.context;
-  var a = void 0 === r ? {} : r;
+  var a = undefined === r ? {} : r;
   var c = n.channel;
-  var u = void 0 === c ? S() : c;
+  var u = undefined === c ? S() : c;
   var l = n.sagaMonitor;
-  var f = Object(o.a)(n, ["context", "channel", "sagaMonitor"]);
+  var f = o.a(n, ["context", "channel", "sagaMonitor"]);
   function d(e) {
     var n = e.getState;
     var r = e.dispatch;
-    t = z.bind(null, Object(i.a)({}, f, {
+    t = z.bind(null, i.a({}, f, {
       context: a,
       channel: u,
       dispatch: r,
@@ -888,10 +888,10 @@ var Q = function (e) {
     };
   }
   d.run = function () {
-    return t.apply(void 0, arguments);
+    return t.apply(undefined, arguments);
   };
   d.setContext = function (e) {
-    Object(s.M)(a, e);
+    s.M(a, e);
   };
   return d;
 };

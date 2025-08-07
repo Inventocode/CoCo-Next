@@ -12,28 +12,28 @@ var u = o.forwardRef(function (e, t) {
   var s = e.classes;
   var u = e.className;
   var l = e.color;
-  var f = void 0 === l ? "inherit" : l;
+  var f = undefined === l ? "inherit" : l;
   var d = e.component;
-  var h = void 0 === d ? "svg" : d;
+  var h = undefined === d ? "svg" : d;
   var p = e.fontSize;
-  var _ = void 0 === p ? "medium" : p;
+  var _ = undefined === p ? "medium" : p;
   var A = e.htmlColor;
   var g = e.titleAccess;
   var v = e.viewBox;
-  var m = void 0 === v ? "0 0 24 24" : v;
-  var y = Object(i.a)(e, ["children", "classes", "className", "color", "component", "fontSize", "htmlColor", "titleAccess", "viewBox"]);
-  return o.createElement(h, Object(r.a)({
-    className: Object(a.a)(s.root, u, "inherit" !== f && s["color".concat(Object(c.a)(f))], "default" !== _ && "medium" !== _ && s["fontSize".concat(Object(c.a)(_))]),
+  var m = undefined === v ? "0 0 24 24" : v;
+  var y = i.a(e, ["children", "classes", "className", "color", "component", "fontSize", "htmlColor", "titleAccess", "viewBox"]);
+  return o.createElement(h, r.a({
+    className: a.a(s.root, u, "inherit" !== f && s["color".concat(c.a(f))], "default" !== _ && "medium" !== _ && s["fontSize".concat(c.a(_))]),
     focusable: "false",
     viewBox: m,
     color: A,
-    "aria-hidden": !g || void 0,
-    role: g ? "img" : void 0,
+    "aria-hidden": !g || undefined,
+    role: g ? "img" : undefined,
     ref: t
   }, y), n, g ? o.createElement("title", null, g) : null);
 });
 u.muiName = "SvgIcon";
-exports.a = Object(s.a)(function (e) {
+exports.a = s.a(function (e) {
   return {
     root: {
       userSelect: "none",

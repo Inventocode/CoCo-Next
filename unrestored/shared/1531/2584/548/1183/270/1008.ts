@@ -2,7 +2,7 @@
 
 function r(e) {
   var t;
-  var n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 166;
+  var n = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : 166;
   function r() {
     for (var r = arguments.length, i = new Array(r), o = 0; o < r; o++) {
       i[o] = arguments[o];

@@ -9,7 +9,7 @@ function s(e, t, n, r, i) {
   this.column = null == t ? null : t;
   this.source = null == n ? null : n;
   this.name = null == i ? null : i;
-  this[a] = !0;
+  this[a] = true;
   if (null != r) {
     this.add(r);
   }
@@ -21,7 +21,7 @@ s.fromStringWithSourceMap = function (e, t, n) {
   var u = function () {
     return e() + (e() || "");
     function e() {
-      return c < a.length ? a[c++] : void 0;
+      return c < a.length ? a[c++] : undefined;
     }
   };
   var l = 1;
@@ -69,7 +69,7 @@ s.fromStringWithSourceMap = function (e, t, n) {
   });
   return r;
   function h(e, t) {
-    if (null === e || void 0 === e.source) {
+    if (null === e || undefined === e.source) {
       r.add(t);
     } else {
       var o = n ? i.join(n, e.source) : e.source;
@@ -176,7 +176,7 @@ s.prototype.toStringWithSourceMap = function (e) {
     column: 0
   };
   var n = new r(e);
-  var i = !1;
+  var i = false;
   var o = null;
   var a = null;
   var s = null;
@@ -202,7 +202,7 @@ s.prototype.toStringWithSourceMap = function (e) {
       a = r.line;
       s = r.column;
       c = r.name;
-      i = !0;
+      i = true;
     } else {
       if (i) {
         n.addMapping({
@@ -212,7 +212,7 @@ s.prototype.toStringWithSourceMap = function (e) {
           }
         });
         o = null;
-        i = !1;
+        i = false;
       }
     }
     for (var u = 0, l = e.length; u < l; u++) {
@@ -221,7 +221,7 @@ s.prototype.toStringWithSourceMap = function (e) {
         t.column = 0;
         if (u + 1 === l) {
           o = null;
-          i = !1;
+          i = false;
         } else {
           if (i) {
             n.addMapping({

@@ -14,7 +14,7 @@ var r = require("../../28/index");
 var o = function () {};
 var i = {
   start: function (e, t, n) {
-    if (Object(r.d)()) {
+    if (r.d()) {
       window.stepper.isStepCountingAvailable().then(function (e) {
         if (!e) {
           t();
@@ -50,14 +50,14 @@ var i = {
     }
   },
   stop: function () {
-    if (Object(r.d)()) {
+    if (r.d()) {
       window.stepper.stopStepperUpdates().then(o).catch(function (e) {
         return console.error("stopStepperUpdates", e);
       });
     }
   },
   reset: function (e) {
-    if (Object(r.d)()) {
+    if (r.d()) {
       window.stepper.destroy().then(e).catch(function (e) {
         return console.error("destroy", e);
       });

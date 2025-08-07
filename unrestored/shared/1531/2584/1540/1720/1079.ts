@@ -13,6 +13,6 @@ module.exports = !a || !o(function () {
   new c(null);
   new c(1.5);
   new c(e);
-}, !0) || o(function () {
-  return 1 !== new c(new s(2), 1, void 0).length;
+}, true) || o(function () {
+  return 1 !== new c(new s(2), 1, undefined).length;
 });

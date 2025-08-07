@@ -10,17 +10,17 @@ var l = require("../../1745/332");
 var u = require("../../1742/247/index");
 var d = require("../../1684/530");
 var p = u("iterator");
-var f = !1;
+var f = false;
 if ([].keys) {
   if ("next" in (i = [].keys())) {
     if ((o = s(s(i))) !== Object.prototype) {
       r = o;
     }
   } else {
-    f = !0;
+    f = true;
   }
 }
-var h = void 0 == r || a(function () {
+var h = undefined == r || a(function () {
   var e = {};
   return r[p].call(e) !== e;
 });

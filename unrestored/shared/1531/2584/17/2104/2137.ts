@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.Extensions = void 0;
+exports.Extensions = undefined;
 var r = require("tslib");
 var i = require("inversify");
 var o = require("../../4/127");
@@ -115,14 +115,14 @@ var u = function () {
   e.prototype.mutator_properties_match = function (e, t) {
     var n = this.get_mutator_properties(t);
     if (n.length != e.length) {
-      return !1;
+      return false;
     }
     for (var r = 0; r < n.length; r++) {
       if (e[r] != n[r]) {
-        return !1;
+        return false;
       }
     }
-    return !0;
+    return true;
   };
   e.prototype.build_tooltip_for_dropdown = function (e, t) {
     var n = this;
@@ -141,11 +141,11 @@ var u = function () {
       }
       this.set_tooltip(function () {
         var o = n.get_field_value(e);
-        var a = o ? t[o] : void 0;
-        if (void 0 == a) {
+        var a = o ? t[o] : undefined;
+        if (undefined == a) {
           if (-1 === r.indexOf(n.type)) {
             var s = "No tooltip mapping for value " + o + " of field " + e;
-            if (void 0 != n.type) {
+            if (undefined != n.type) {
               s += " of block type " + n.type;
             }
             console.warn(s + ".");
@@ -162,13 +162,13 @@ var u = function () {
     if (r && (0, c.is_func)(r.is_dynamic) && !r.is_dynamic()) {
       for (var i = r.get_options(), o = 0; o < i.length; ++o) {
         var s = i[o][a.OptionTypes.VALUE];
-        if (!(void 0 != s && void 0 != n[s])) {
+        if (!(undefined != s && undefined != n[s])) {
           console.warn("No tooltip mapping for value " + s + " of field " + t + " of block type " + e.type);
         }
       }
     }
   };
-  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.utils)], e.prototype, "utils", void 0);
+  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.utils)], e.prototype, "utils", undefined);
   return e = (0, r.__decorate)([(0, i.injectable)()], e);
 }();
 exports.Extensions = u;

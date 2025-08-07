@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.hsva_to_rgba = exports.rgba_to_hex = exports.hsv_to_rgb = exports.rgb_to_hsv = exports.darken = exports.Color = void 0;
+exports.hsva_to_rgba = exports.rgba_to_hex = exports.hsv_to_rgb = exports.rgb_to_hsv = exports.darken = exports.Color = undefined;
 var r = require("../125/294");
 var i = function () {
   function e(e, t, n) {
@@ -17,7 +17,7 @@ var i = function () {
     }
   }
   e.prototype.set = function (e) {
-    return "undefined" !== typeof e && ("string" === typeof e ? this._set(e) : (this.copy(e), !0));
+    return "undefined" !== typeof e && ("string" === typeof e ? this._set(e) : (this.copy(e), true));
   };
   e.prototype._set = function (e) {
     var t = (e = String(e).toLowerCase().trim()).match(/^(?:rgb|rgba)?\s*\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*(,\s*(\d*\.?\d+)\s*)?\)$/);
@@ -25,8 +25,8 @@ var i = function () {
       var n = Math.round(Number(t[1]));
       var r = Math.round(Number(t[2]));
       var i = Math.round(Number(t[3]));
-      var o = void 0 === t[5] ? 1 : Number(t[5]);
-      return !(n < 0 || n > 255 || r < 0 || r > 255 || i < 0 || i > 255 || o < 0 || o > 1) && (this.r = n, this.g = r, this.b = i, this.a = o, !0);
+      var o = undefined === t[5] ? 1 : Number(t[5]);
+      return !(n < 0 || n > 255 || r < 0 || r > 255 || i < 0 || i > 255 || o < 0 || o > 1) && (this.r = n, this.g = r, this.b = i, this.a = o, true);
     }
     var a = this.normalize_hexa(e);
     if (a) {
@@ -34,9 +34,9 @@ var i = function () {
       r = parseInt(a.substr(3, 2), 16);
       i = parseInt(a.substr(5, 2), 16);
       o = parseInt(a.substr(7, 2), 16) / 255;
-      return !(n < 0 || n > 255 || r < 0 || r > 255 || i < 0 || i > 255 || o < 0 || o > 1) && (this.r = n, this.g = r, this.b = i, this.a = o, !0);
+      return !(n < 0 || n > 255 || r < 0 || r > 255 || i < 0 || i > 255 || o < 0 || o > 1) && (this.r = n, this.g = r, this.b = i, this.a = o, true);
     }
-    return !1;
+    return false;
   };
   e.prototype.normalize_hexa = function (e) {
     e = "0x" == e.substring(0, 2) ? "#" + e.substring(2) : e;
@@ -91,7 +91,7 @@ exports.Color = i;
 var o = new i("#000");
 exports.darken = function (e, t, n) {
   o.a = (0, r.clamp)(t, 0, 1);
-  return ((null === n || void 0 === n ? void 0 : n.copy(e)) || e.clone()).blend(o);
+  return ((null === n || undefined === n ? undefined : n.copy(e)) || e.clone()).blend(o);
 };
 exports.rgb_to_hsv = function (e, t, n) {
   var r = e / 255;

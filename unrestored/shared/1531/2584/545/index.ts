@@ -1,7 +1,7 @@
 "use strict";
 
-var r = require("../11");
-var o = require("react");
+import r = require("../11");
+import o = require("react");
 var i = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -14,7 +14,7 @@ var i = function __importDefault(module) {
   });
   return defaultExport;
 }(o);
-var a = require("../51/index");
+import a = require("color");
 var s = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -27,7 +27,7 @@ var s = function __importDefault(module) {
   });
   return defaultExport;
 }(a);
-var c = require("../8");
+import c = require("../8");
 var l = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -40,14 +40,14 @@ var l = function __importDefault(module) {
   });
   return defaultExport;
 }(c);
-var u = require("../5");
-var d = require("../90");
-var p = require("../131");
-var f = require("../15");
-var h = require("../9");
-var m = require("../53");
-var g = require("../162");
-var _ = require("./201");
+import u = require("../5");
+import d = require("../90");
+import p = require("../131");
+import f = require("../15");
+import h = require("../9");
+import m = require("../53");
+import g = require("../162");
+import _ = require("./201");
 var v = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -80,45 +80,45 @@ _a = function (e) {
   var j = _.imageResizeMode;
   var N = i.a.useRef(null);
   var R = i.a.useRef(null);
-  var k = i.a.useRef(!1);
+  var k = i.a.useRef(false);
   var x = function () {
     var e = function (e, t) {
       var n;
       var o = s()(t).toString();
-      return (n = {}, Object(r.a)(n, g.c.DEFAULT, {
+      return (n = {}, r.a(n, g.c.DEFAULT, {
         turnOn: {
-          backgroundColor: Object(f.hb)(o, .3),
+          backgroundColor: f.hb(o, .3),
           handleColor: o
         },
         turnOff: {
-          backgroundColor: Object(f.hb)("#000", .2),
+          backgroundColor: f.hb("#000", .2),
           handleColor: "#ffffff"
         },
         disabled: {
-          backgroundColor: Object(f.hb)("#000", .1),
+          backgroundColor: f.hb("#000", .1),
           handleColor: "#ffffff"
         }
-      }), Object(r.a)(n, g.c.PRIMARY, {
+      }), r.a(n, g.c.PRIMARY, {
         turnOn: {
           backgroundColor: o,
           handleColor: "#ffffff"
         },
         turnOff: {
-          backgroundColor: Object(f.hb)("#000", .2),
+          backgroundColor: f.hb("#000", .2),
           handleColor: "#ffffff"
         },
         disabled: {
-          backgroundColor: Object(f.hb)("#000", .1),
+          backgroundColor: f.hb("#000", .1),
           handleColor: "#ffffff"
         }
       }), n)[e];
     }(O, w);
     return C ? e.disabled : T ? e.turnOn : e.turnOff;
   }();
-  var D = Object(h.hb)(I);
-  var M = Object(f.U)(I) ? I : D ? (null === D || void 0 === D ? void 0 : D.source) || (null === D || void 0 === D ? void 0 : D.cdnUrl) : p.b;
-  var L = Object(h.hb)(A);
-  var P = Object(f.U)(A) ? A : L ? (null === L || void 0 === L ? void 0 : L.source) || (null === L || void 0 === L ? void 0 : L.cdnUrl) : p.a;
+  var D = h.hb(I);
+  var M = f.U(I) ? I : D ? (null === D || undefined === D ? undefined : D.source) || (null === D || undefined === D ? undefined : D.cdnUrl) : p.b;
+  var L = h.hb(A);
+  var P = f.U(A) ? A : L ? (null === L || undefined === L ? undefined : L.source) || (null === L || undefined === L ? undefined : L.cdnUrl) : p.a;
   var B = i.a.createElement("div", {
     ref: R,
     style: {
@@ -129,7 +129,7 @@ _a = function (e) {
       width: y.width
     }
   });
-  Object(o.useEffect)(function () {
+  o.useEffect(function () {
     if (S === g.a.IMAGE && !k.current) {
       var e = R.current;
       if (!e) {
@@ -149,7 +149,7 @@ _a = function (e) {
     "data-max-width": m.o,
     "data-min-height": p.i,
     "data-max-height": m.m,
-    className: l()(v.a.switchWidget, d.b, Object(r.a)({}, v.a.hide, !a)),
+    className: l()(v.a.switchWidget, d.b, r.a({}, v.a.hide, !a)),
     style: {
       top: n.y,
       left: n.x,
@@ -159,8 +159,8 @@ _a = function (e) {
       minHeight: "".concat(p.i, "px"),
       maxWidth: "".concat(m.o, "px"),
       maxHeight: "".concat(m.m, "px"),
-      opacity: void 0 === c ? void 0 : c / 100,
-      filter: C && S === g.a.IMAGE ? "saturate(0) brightness(1.1)" : void 0
+      opacity: undefined === c ? undefined : c / 100,
+      filter: C && S === g.a.IMAGE ? "saturate(0) brightness(1.1)" : undefined
     },
     onClick: function (t) {
       if (!C) {
@@ -169,29 +169,29 @@ _a = function (e) {
         }
         if (S === g.a.TEMPLATE) {
           var n;
-          if (!(null === (n = N.current) || void 0 === n)) {
+          if (!(null === (n = N.current) || undefined === n)) {
             n.classList.add(v.a.leftAnimation);
           }
           setTimeout(function () {
             var e;
-            if (!(null === (e = N.current) || void 0 === e)) {
+            if (!(null === (e = N.current) || undefined === e)) {
               e.classList.remove(v.a.leftAnimation);
             }
           }, 100);
         } else {
           var r = R.current;
-          if (!Object(h.s)(e.id) && E || !r) {
+          if (!h.s(e.id) && E || !r) {
             return;
           }
           r.classList.add(v.a.imageAnimationFirstHalf);
-          k.current = !0;
+          k.current = true;
           setTimeout(function () {
             r.classList.remove(v.a.imageAnimationFirstHalf);
             r.classList.add(v.a.imageAnimationSecondHalf);
             r.style.backgroundImage = "url(".concat(T ? P : M, ")");
             setTimeout(function () {
               r.classList.remove(v.a.imageAnimationSecondHalf);
-              k.current = !1;
+              k.current = false;
             }, 100);
           }, 100);
         }

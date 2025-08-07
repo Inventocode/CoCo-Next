@@ -1,15 +1,15 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.UIEvent = void 0;
+exports.UIEvent = undefined;
 var r = require("tslib");
 var i = require("inversify");
 var o = function (e) {
   function t(t) {
     var n = e.call(this) || this;
-    n._record_undo = !1;
+    n._record_undo = false;
     n.type = t.type;
     n._workspace_id = t.workspace_id;
     n._old_value = t.old_value;

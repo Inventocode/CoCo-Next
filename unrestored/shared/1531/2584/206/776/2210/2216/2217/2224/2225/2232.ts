@@ -49,14 +49,14 @@ module.exports = function (e, t, n) {
       var C = "missing" + i;
       var O = "' + " + C + " + '";
       if (e.opts._errorDataPathProperty) {
-        e.errorPath = e.opts.jsonPointers ? e.util.getPathExpr(y, C, !0) : y + " + " + C;
+        e.errorPath = e.opts.jsonPointers ? e.util.getPathExpr(y, C, true) : y + " + " + C;
       }
       var k = k || [];
       k.push(r);
       r = "";
-      if (!1 !== e.createErrors) {
+      if (false !== e.createErrors) {
         r += " { keyword: 'dependencies' , dataPath: (dataPath || '') + " + e.errorPath + " , schemaPath: " + e.util.toQuotedString(c) + " , params: { property: '" + e.util.escapeQuotes(b) + "', missingProperty: '" + O + "', depsCount: " + m.length + ", deps: '" + e.util.escapeQuotes(1 == m.length ? m[0] : m.join(", ")) + "' } ";
-        if (!1 !== e.opts.messages) {
+        if (false !== e.opts.messages) {
           r += " , message: 'should have ";
           if (1 == m.length) {
             r += "property " + e.util.escapeQuotes(m[0]);
@@ -100,9 +100,9 @@ module.exports = function (e, t, n) {
             r += " || ! Object.prototype.hasOwnProperty.call(" + l + ", '" + e.util.escapeQuotes(B) + "') ";
           }
           r += ") {  var err =   ";
-          if (!1 !== e.createErrors) {
+          if (false !== e.createErrors) {
             r += " { keyword: 'dependencies' , dataPath: (dataPath || '') + " + e.errorPath + " , schemaPath: " + e.util.toQuotedString(c) + " , params: { property: '" + e.util.escapeQuotes(b) + "', missingProperty: '" + O + "', depsCount: " + m.length + ", deps: '" + e.util.escapeQuotes(1 == m.length ? m[0] : m.join(", ")) + "' } ";
-            if (!1 !== e.opts.messages) {
+            if (false !== e.opts.messages) {
               r += " , message: 'should have ";
               if (1 == m.length) {
                 r += "property " + e.util.escapeQuotes(m[0]);
@@ -132,7 +132,7 @@ module.exports = function (e, t, n) {
   var P = d.baseId;
   for (var b in _) {
     v = _[b];
-    if (e.opts.strictKeywords ? "object" == typeof v && Object.keys(v).length > 0 || !1 === v : e.util.schemaHasRules(v, e.RULES.all)) {
+    if (e.opts.strictKeywords ? "object" == typeof v && Object.keys(v).length > 0 || false === v : e.util.schemaHasRules(v, e.RULES.all)) {
       r += " " + p + " = true; if ( " + l + e.util.getProperty(b) + " !== undefined ";
       if (g) {
         r += " && Object.prototype.hasOwnProperty.call(" + l + ", '" + e.util.escapeQuotes(b) + "') ";

@@ -10,7 +10,7 @@ var c = require("./449");
 var f = function () {
   function t() {}
   t.prototype.decode = function (t, e) {
-    if (void 0 === e) {
+    if (undefined === e) {
       e = null;
     }
     var r = null;
@@ -18,7 +18,7 @@ var f = function () {
     var f = null;
     var h = null;
     try {
-      f = (l = i.detectMirror(!1)).getPoints();
+      f = (l = i.detectMirror(false)).getPoints();
       this.reportFoundResultPoints(e, f);
       h = new s.a().decode(l);
     } catch (y) {
@@ -27,7 +27,7 @@ var f = function () {
     if (null == h) {
       try {
         var l;
-        f = (l = i.detectMirror(!0)).getPoints();
+        f = (l = i.detectMirror(true)).getPoints();
         this.reportFoundResultPoints(e, f);
         h = new s.a().decode(l);
       } catch (y) {

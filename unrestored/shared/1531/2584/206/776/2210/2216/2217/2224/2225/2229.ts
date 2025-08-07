@@ -6,7 +6,7 @@ module.exports = function (e, t, n) {
   var o = e.errSchemaPath + "/" + t;
   e.opts.allErrors;
   var a = e.util.toQuotedString(i);
-  if (!0 === e.opts.$comment) {
+  if (true === e.opts.$comment) {
     r += " console.log(" + a + ");";
   } else {
     if ("function" == typeof e.opts.$comment) {

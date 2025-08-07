@@ -2,7 +2,7 @@
 
 var r = require("../568");
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
 exports.isEventFromHandle = function (e, t) {
   try {
@@ -10,7 +10,7 @@ exports.isEventFromHandle = function (e, t) {
       return e.target === (0, o.findDOMNode)(t[n]);
     });
   } catch (n) {
-    return !1;
+    return false;
   }
 };
 exports.isValueOutOfRange = function (e, t) {

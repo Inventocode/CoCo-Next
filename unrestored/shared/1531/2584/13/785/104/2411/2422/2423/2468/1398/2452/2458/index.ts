@@ -4,13 +4,13 @@ var o = require("../../../../../../../../../254/2513/2514/2519/2527/851");
 var a = require("../1399/index");
 var s = require("./2459");
 var c = require("./2460");
-var u = r ? r.prototype : void 0;
-var l = u ? u.valueOf : void 0;
+var u = r ? r.prototype : undefined;
+var l = u ? u.valueOf : undefined;
 module.exports = function (e, t, n, r, u, f, d) {
   switch (n) {
     case "[object DataView]":
       if (e.byteLength != t.byteLength || e.byteOffset != t.byteOffset) {
-        return !1;
+        return false;
       }
       e = e.buffer;
       t = t.buffer;
@@ -30,7 +30,7 @@ module.exports = function (e, t, n, r, u, f, d) {
     case "[object Set]":
       var p = 1 & r;
       if (h || (h = c), e.size != t.size && !p) {
-        return !1;
+        return false;
       }
       var _ = d.get(e);
       if (_) {
@@ -46,5 +46,5 @@ module.exports = function (e, t, n, r, u, f, d) {
         return l.call(e) == l.call(t);
       }
   }
-  return !1;
+  return false;
 };

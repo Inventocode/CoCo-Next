@@ -31,8 +31,8 @@ function u(e, t) {
   a = a.map(String).map(r.normalize).map(function (e) {
     return c && r.isAbsolute(c) && r.isAbsolute(e) ? r.relative(c, e) : e;
   });
-  this._names = o.fromArray(s.map(String), !0);
-  this._sources = o.fromArray(a, !0);
+  this._names = o.fromArray(s.map(String), true);
+  this._sources = o.fromArray(a, true);
   this._absoluteSources = this._sources.toArray().map(function (e) {
     return r.computeSourceURL(c, e, t);
   });
@@ -92,8 +92,8 @@ c.fromSourceMap = function (e, t) {
 c.prototype._version = 3;
 c.prototype.__generatedMappings = null;
 Object.defineProperty(c.prototype, "_generatedMappings", {
-  configurable: !0,
-  enumerable: !0,
+  configurable: true,
+  enumerable: true,
   get: function () {
     if (!this.__generatedMappings) {
       this._parseMappings(this._mappings, this.sourceRoot);
@@ -103,8 +103,8 @@ Object.defineProperty(c.prototype, "_generatedMappings", {
 });
 c.prototype.__originalMappings = null;
 Object.defineProperty(c.prototype, "_originalMappings", {
-  configurable: !0,
-  enumerable: !0,
+  configurable: true,
+  enumerable: true,
   get: function () {
     if (!this.__originalMappings) {
       this._parseMappings(this._mappings, this.sourceRoot);
@@ -164,7 +164,7 @@ c.prototype.allGeneratedPositionsFor = function (e) {
   var a = this._findMapping(n, this._originalMappings, "originalLine", "originalColumn", r.compareByOriginalPositions, i.LEAST_UPPER_BOUND);
   if (a >= 0) {
     var s = this._originalMappings[a];
-    if (void 0 === e.column) {
+    if (undefined === e.column) {
       for (var c = s.originalLine; s && s.originalLine === c;) {
         o.push({
           line: r.getArg(s, "generatedLine", null),
@@ -207,8 +207,8 @@ u.prototype._findSourceIndex = function (e) {
 };
 u.fromSourceMap = function (e, t) {
   var n = Object.create(u.prototype);
-  var i = n._names = o.fromArray(e._names.toArray(), !0);
-  var a = n._sources = o.fromArray(e._sources.toArray(), !0);
+  var i = n._names = o.fromArray(e._names.toArray(), true);
+  var a = n._sources = o.fromArray(e._sources.toArray(), true);
   n.sourceRoot = e._sourceRoot;
   n.sourcesContent = e._generateSourcesContent(n._sources.toArray(), n.sourceRoot);
   n.file = e._file;
@@ -456,7 +456,7 @@ f.prototype.hasContentsOfAllSources = function () {
 };
 f.prototype.sourceContentFor = function (e, t) {
   for (var n = 0; n < this._sections.length; n++) {
-    var r = this._sections[n].consumer.sourceContentFor(e, !0);
+    var r = this._sections[n].consumer.sourceContentFor(e, true);
     if (r) {
       return r;
     }

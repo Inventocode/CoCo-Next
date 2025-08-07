@@ -5,7 +5,7 @@ var a = require("./628");
 var s = require("../1623/300");
 r({
   target: "Reflect",
-  stat: !0,
+  stat: true,
   forced: require("../1736/167")(function () {
     Reflect.defineProperty(s.f({}, 1, {
       value: 1
@@ -21,9 +21,9 @@ r({
     i(n);
     try {
       s.f(e, r, n);
-      return !0;
+      return true;
     } catch (o) {
-      return !1;
+      return false;
     }
   }
 });

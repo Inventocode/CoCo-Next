@@ -5,12 +5,12 @@ module.exports = function (e, t, n, o, a, s) {
   var u = r(e);
   var l = u.length;
   if (l != r(t).length && !c) {
-    return !1;
+    return false;
   }
   for (var f = l; f--;) {
     var d = u[f];
     if (!(c ? d in t : i.call(t, d))) {
-      return !1;
+      return false;
     }
   }
   var h = s.get(e);
@@ -18,7 +18,7 @@ module.exports = function (e, t, n, o, a, s) {
   if (h && p) {
     return h == t && p == e;
   }
-  var _ = !0;
+  var _ = true;
   s.set(e, t);
   s.set(t, e);
   for (var A = c; ++f < l;) {
@@ -27,8 +27,8 @@ module.exports = function (e, t, n, o, a, s) {
     if (o) {
       var m = c ? o(v, g, d, t, e, s) : o(g, v, d, e, t, s);
     }
-    if (!(void 0 === m ? g === v || a(g, v, n, o, s) : m)) {
-      _ = !1;
+    if (!(undefined === m ? g === v || a(g, v, n, o, s) : m)) {
+      _ = false;
       break;
     }
     if (!A) {
@@ -39,7 +39,7 @@ module.exports = function (e, t, n, o, a, s) {
     var y = e.constructor;
     var b = t.constructor;
     if (!(y == b || !("constructor" in e) || !("constructor" in t) || "function" == typeof y && y instanceof y && "function" == typeof b && b instanceof b)) {
-      _ = !1;
+      _ = false;
     }
   }
   s.delete(e);

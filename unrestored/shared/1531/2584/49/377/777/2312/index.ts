@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.TransformToIde = void 0;
+exports.TransformToIde = undefined;
 var r = require("tslib");
 var i = require("../../../../17/497/962");
 var o = require("../../../../301/173");
@@ -21,7 +21,7 @@ var h = function () {
       for (var t = [], n = 1; n < arguments.length; n++) {
         t[n - 1] = arguments[n];
       }
-      console.error.apply(console, (0, r.__spreadArray)(["Error when transform to ide ", "[" + e + "]: "], t, !1));
+      console.error.apply(console, (0, r.__spreadArray)(["Error when transform to ide ", "[" + e + "]: "], t, false));
     };
     this.param_block_ids = [];
     this.redo_param_connect = [];
@@ -44,7 +44,7 @@ var h = function () {
     } catch (u) {
       this.error("Before decompose and sort op", u);
     }
-    var n = void 0;
+    var n = undefined;
     try {
       n = f.decompose_and_sort_op(e);
     } catch (u) {
@@ -79,11 +79,11 @@ var h = function () {
           try {
             t.Blink.events.disable();
             var n = t.Blink.mainWorkspace.get_block_by_id(e);
-            if (!(null === n || void 0 === n)) {
-              n.set_collapsed(!1);
+            if (!(null === n || undefined === n)) {
+              n.set_collapsed(false);
             }
-            if (!(null === n || void 0 === n)) {
-              n.set_collapsed(!0);
+            if (!(null === n || undefined === n)) {
+              n.set_collapsed(true);
             }
           } catch (u) {
             t.error("Retrying creating collapsed blocks", e);
@@ -119,7 +119,7 @@ var h = function () {
           t.error("Before analyze pick op", e, o);
         }
         var i = f.analyze_path("pick", e.path);
-        if (void 0 !== i && (r.pick_ops.push({
+        if (undefined !== i && (r.pick_ops.push({
           event_type: i.event_type,
           normalized_path: i.normalized_path,
           operation: e.operation
@@ -141,7 +141,7 @@ var h = function () {
           t.error("Before analyze drop op", e, a);
         }
         var i = f.analyze_path("drop", e.path);
-        if (void 0 !== i) {
+        if (undefined !== i) {
           r.drop_ops.push({
             event_type: i.event_type,
             normalized_path: i.normalized_path,
@@ -183,7 +183,7 @@ var h = function () {
       for (var t = [], i = 0; i < arguments.length; i++) {
         t[i] = arguments[i];
       }
-      return n.error.apply(n, (0, r.__spreadArray)(["Transforming pick operation", e], t, !1));
+      return n.error.apply(n, (0, r.__spreadArray)(["Transforming pick operation", e], t, false));
     };
     if (i !== l.EventType.DISCONNECT) {
       if (i !== l.EventType.DELETE_BLOCK) {
@@ -196,7 +196,7 @@ var h = function () {
             if (!(v = this.Blink.mainWorkspace.get_block_by_id(_))) {
               return void a("remove shadow input: cannot find target block " + _);
             }
-            for (var s = void 0, c = 0; c < t.length; c++) {
+            for (var s = undefined, c = 0; c < t.length; c++) {
               var u = t[c];
               if (u.event_type === l.EventType.APPEND_SHADOW_INPUT && l.is_path_4(u.normalized_path) && u.normalized_path.target_id === o.target_id && u.normalized_path.property_name === o.property_name) {
                 s = u;
@@ -237,8 +237,8 @@ var h = function () {
               this.change_event_factory("comment", {
                 block: h,
                 old_value: p,
-                new_value: void 0
-              }).run(!0);
+                new_value: undefined
+              }).run(true);
             } catch (w) {
               a(w);
             } finally {
@@ -250,7 +250,7 @@ var h = function () {
             });
             this.Blink.events.disable();
             try {
-              A.run(!0);
+              A.run(true);
             } catch (w) {
               a(w);
             } finally {
@@ -278,7 +278,7 @@ var h = function () {
           this.Blink.events.disable();
           try {
             b.deserialize(y);
-            b.run(!0);
+            b.run(true);
           } catch (w) {
             a("disconnecting from parent", w);
           } finally {
@@ -290,7 +290,7 @@ var h = function () {
         });
         this.Blink.events.disable();
         try {
-          A.run(!0);
+          A.run(true);
         } catch (w) {
           a("deleting", w);
         } finally {
@@ -319,7 +319,7 @@ var h = function () {
       this.Blink.events.disable();
       try {
         b.deserialize(y);
-        b.run(!0);
+        b.run(true);
       } catch (w) {
         a(w);
       } finally {
@@ -347,7 +347,7 @@ var h = function () {
       for (var t = [], n = 0; n < arguments.length; n++) {
         t[n] = arguments[n];
       }
-      return _.error.apply(_, (0, r.__spreadArray)(["Transforming drop operation", e], t, !1));
+      return _.error.apply(_, (0, r.__spreadArray)(["Transforming drop operation", e], t, false));
     };
     var g = e.event_type;
     var v = e.normalized_path;
@@ -375,10 +375,10 @@ var h = function () {
           this.Blink.events.enable();
         }
         var w = this.Blink.mainWorkspace.get_block_by_id(y);
-        if ("param" === (null === w || void 0 === w ? void 0 : w.element_type)) {
+        if ("param" === (null === w || undefined === w ? undefined : w.element_type)) {
           this.param_block_ids.push(y);
         }
-        return void ((null === w || void 0 === w ? void 0 : w.is_collapsed()) && this.redo_collapse_ids.push(y));
+        return void ((null === w || undefined === w ? undefined : w.is_collapsed()) && this.redo_collapse_ids.push(y));
       }
       if (g === l.EventType.CREATE_COMMENT) {
         var E = v.target_id;
@@ -392,12 +392,12 @@ var h = function () {
           }
           var C = this.change_event_factory("comment", {
             block: q,
-            old_value: void 0,
+            old_value: undefined,
             new_value: E
           });
           this.Blink.events.disable();
           try {
-            C.run(!0);
+            C.run(true);
           } catch (ie) {
             A(ie);
           } finally {
@@ -422,7 +422,7 @@ var h = function () {
           this.Blink.events.disable();
           try {
             T.deserialize(S);
-            T.run(!0);
+            T.run(true);
           } catch (ie) {
             A(ie);
           } finally {
@@ -436,7 +436,7 @@ var h = function () {
             });
             this.Blink.events.disable();
             try {
-              B.run(!0);
+              B.run(true);
             } catch (ie) {
               A(ie);
             } finally {
@@ -451,7 +451,7 @@ var h = function () {
           });
           this.Blink.events.disable();
           try {
-            I.run(!0);
+            I.run(true);
           } catch (ie) {
             A(ie);
           } finally {
@@ -499,7 +499,7 @@ var h = function () {
         this.Blink.events.disable();
         try {
           T.deserialize(S);
-          T.run(!0);
+          T.run(true);
         } catch (ie) {
           A(ie);
         } finally {
@@ -524,7 +524,7 @@ var h = function () {
         });
         this.Blink.events.disable();
         try {
-          C.run(!0);
+          C.run(true);
         } catch (ie) {
           A(ie);
         } finally {
@@ -548,7 +548,7 @@ var h = function () {
         });
         this.Blink.events.disable();
         try {
-          C.run(!0);
+          C.run(true);
         } catch (ie) {
           A(ie);
         } finally {
@@ -576,7 +576,7 @@ var h = function () {
         });
         this.Blink.events.disable();
         try {
-          C.run(!0);
+          C.run(true);
         } catch (ie) {
           A(ie);
         } finally {
@@ -619,7 +619,7 @@ var h = function () {
         this.Blink.events.disable();
         try {
           T.deserialize(S);
-          T.run(!0);
+          T.run(true);
         } catch (ie) {
           A(ie);
         } finally {
@@ -661,7 +661,7 @@ var h = function () {
         this.Blink.events.disable();
         try {
           T.deserialize(S);
-          T.run(!0);
+          T.run(true);
         } catch (ie) {
           A(ie);
         } finally {
@@ -684,7 +684,7 @@ var h = function () {
         });
         this.Blink.events.disable();
         try {
-          B.run(!0);
+          B.run(true);
         } catch (ie) {
           A(ie);
         } finally {
@@ -708,7 +708,7 @@ var h = function () {
         });
         this.Blink.events.disable();
         try {
-          Y.run(!0);
+          Y.run(true);
         } catch (ie) {
           A(ie);
         } finally {
@@ -733,7 +733,7 @@ var h = function () {
         });
         this.Blink.events.disable();
         try {
-          I.run(!0);
+          I.run(true);
         } catch (ie) {
           A(ie);
         } finally {
@@ -757,7 +757,7 @@ var h = function () {
         });
         this.Blink.events.disable();
         try {
-          J.run(!0);
+          J.run(true);
         } catch (ie) {
           A(ie);
         } finally {
@@ -799,7 +799,7 @@ var h = function () {
         });
         this.Blink.events.disable();
         try {
-          C.run(!0);
+          C.run(true);
         } catch (ie) {
           A(ie);
         } finally {
@@ -817,16 +817,16 @@ var h = function () {
           return void A("Invalid block " + y);
         }
         if (z = U.get_input(re)) {
-          if (!(null === (a = z.connection) || void 0 === a)) {
+          if (!(null === (a = z.connection) || undefined === a)) {
             a.set_shadow_from_string(m.i);
           }
         } else {
           this.Blink.events.disable();
           try {
-            if (!(null === (f = U.addMutation) || void 0 === f)) {
+            if (!(null === (f = U.addMutation) || undefined === f)) {
               f.call(U);
             }
-            if (!(null === (p = null === (h = null === (d = U.get_input(re)) || void 0 === d ? void 0 : d.connection) || void 0 === h ? void 0 : h.targetBlock()) || void 0 === p)) {
+            if (!(null === (p = null === (h = null === (d = U.get_input(re)) || undefined === d ? undefined : d.connection) || undefined === h ? undefined : h.targetBlock()) || undefined === p)) {
               p.dispose();
             }
           } catch (ie) {
@@ -854,10 +854,10 @@ var h = function () {
       }
     }
   };
-  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.Blink)], e.prototype, "Blink", void 0);
-  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.MoveEvent)], e.prototype, "move_event_factory", void 0);
-  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.DeleteEvent)], e.prototype, "delete_event_factory", void 0);
-  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.ChangeEvent)], e.prototype, "change_event_factory", void 0);
+  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.Blink)], e.prototype, "Blink", undefined);
+  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.MoveEvent)], e.prototype, "move_event_factory", undefined);
+  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.DeleteEvent)], e.prototype, "delete_event_factory", undefined);
+  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.ChangeEvent)], e.prototype, "change_event_factory", undefined);
   return e;
 }();
 exports.TransformToIde = h;

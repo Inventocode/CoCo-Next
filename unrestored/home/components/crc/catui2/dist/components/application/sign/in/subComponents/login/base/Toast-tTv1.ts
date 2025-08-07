@@ -64,7 +64,7 @@ var Toast = function Toast(props) {
       timer.current = setTimeout(function () {
         setIsClosing(true);
         timer.current = 0;
-      }, duration !== null && duration !== void 0 ? duration : DEFAULT_TIMEOUT);
+      }, duration !== null && duration !== undefined ? duration : DEFAULT_TIMEOUT);
     }
     return function () {
       if (toastEl && onClose) {
@@ -160,7 +160,7 @@ var Toast = function Toast(props) {
       var _props$btn3;
       var _props$btn4;
       var btns = [];
-      if ((_props$btn = props.btn) !== null && _props$btn !== void 0 && _props$btn.includes('retry')) {
+      if ((_props$btn = props.btn) !== null && _props$btn !== undefined && _props$btn.includes('retry')) {
         var retry = /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_2_react___default.createElement("span", {
           key: "retry",
           className: "CUI-toast-btn-retry",
@@ -168,7 +168,7 @@ var Toast = function Toast(props) {
         }, "\u91CD\u8BD5");
         btns.push(retry);
       }
-      if ((_props$btn2 = props.btn) !== null && _props$btn2 !== void 0 && _props$btn2.includes('ignore')) {
+      if ((_props$btn2 = props.btn) !== null && _props$btn2 !== undefined && _props$btn2.includes('ignore')) {
         var ignore = /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_2_react___default.createElement("span", {
           key: "ignore",
           className: "CUI-toast-btn-ignore",
@@ -176,7 +176,7 @@ var Toast = function Toast(props) {
         }, "\u5FFD\u7565");
         btns.push(ignore);
       }
-      if ((_props$btn3 = props.btn) !== null && _props$btn3 !== void 0 && _props$btn3.includes('cancel')) {
+      if ((_props$btn3 = props.btn) !== null && _props$btn3 !== undefined && _props$btn3.includes('cancel')) {
         var cancel = /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_2_react___default.createElement("span", {
           key: "cancel",
           className: "CUI-toast-btn-cancel",
@@ -184,7 +184,7 @@ var Toast = function Toast(props) {
         }, "\u53D6\u6D88");
         btns.push(cancel);
       }
-      if ((_props$btn4 = props.btn) !== null && _props$btn4 !== void 0 && _props$btn4.includes('close')) {
+      if ((_props$btn4 = props.btn) !== null && _props$btn4 !== undefined && _props$btn4.includes('close')) {
         var close = /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_2_react___default.createElement("span", {
           key: "close",
           className: "CUI-toast-btn-close",

@@ -14,7 +14,7 @@ var _ = c;
 if (r && "[object DataView]" != _(new r(new ArrayBuffer(1))) || i && "[object Map]" != _(new i()) || o && "[object Promise]" != _(o.resolve()) || a && "[object Set]" != _(new a()) || s && "[object WeakMap]" != _(new s())) {
   _ = function (e) {
     var t = c(e);
-    var n = "[object Object]" == t ? e.constructor : void 0;
+    var n = "[object Object]" == t ? e.constructor : undefined;
     var r = n ? u(n) : "";
     if (r) {
       switch (r) {

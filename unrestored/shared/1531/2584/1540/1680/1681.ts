@@ -7,7 +7,7 @@ module.exports = function (e, t, n, c, l, u) {
   var d = n + e.length;
   var p = c.length;
   var f = s;
-  if (void 0 !== l) {
+  if (undefined !== l) {
     l = r(l);
     f = a;
   }
@@ -32,10 +32,10 @@ module.exports = function (e, t, n, c, l, u) {
         }
         if (s > p) {
           var u = o(s / 10);
-          return 0 === u ? r : u <= p ? void 0 === c[u - 1] ? i.charAt(1) : c[u - 1] + i.charAt(1) : r;
+          return 0 === u ? r : u <= p ? undefined === c[u - 1] ? i.charAt(1) : c[u - 1] + i.charAt(1) : r;
         }
         a = c[s - 1];
     }
-    return void 0 === a ? "" : a;
+    return undefined === a ? "" : a;
   });
 };

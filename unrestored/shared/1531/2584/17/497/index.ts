@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.json = exports.block = exports.string = exports.color = exports.asserts = exports.array = exports.maths = exports.math = exports.base = exports.event = exports.dom = exports.style = exports.is = void 0;
+exports.json = exports.block = exports.string = exports.color = exports.asserts = exports.array = exports.maths = exports.math = exports.base = exports.event = exports.dom = exports.style = exports.is = undefined;
 var r = require("tslib");
 var i = (0, r.__importStar)(require("../../125/714"));
 exports.style = i;
@@ -26,7 +26,7 @@ var d = (0, r.__importStar)(require("./841"));
 exports.string = d;
 var h = require("../../125/474");
 Object.defineProperty(exports, "is", {
-  enumerable: !0,
+  enumerable: true,
   get: function () {
     return h.is;
   }

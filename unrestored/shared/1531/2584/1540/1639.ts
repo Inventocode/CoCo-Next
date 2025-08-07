@@ -6,7 +6,7 @@ var s = require("./1736/167");
 var c = Object.seal;
 r({
   target: "Object",
-  stat: !0,
+  stat: true,
   forced: s(function () {
     c(1);
   }),

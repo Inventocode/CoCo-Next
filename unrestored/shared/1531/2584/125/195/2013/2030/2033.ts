@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.EColorFormat = exports.EColorControllerFormat = void 0;
+exports.EColorFormat = exports.EColorControllerFormat = undefined;
 (function (e) {
   e.RGBA = "RGBA";
   e.HSVA = "HSVA";

@@ -18,7 +18,7 @@ module.exports = function (e, t, n) {
   } else {
     r = s;
   }
-  if ((s || h) && !1 !== e.opts.uniqueItems) {
+  if ((s || h) && false !== e.opts.uniqueItems) {
     if (h) {
       i += " var " + d + "; if (" + r + " === false || " + r + " === undefined) " + d + " = true; else if (typeof " + r + " != 'boolean') " + d + " = false; else { ";
     }
@@ -30,7 +30,7 @@ module.exports = function (e, t, n) {
     } else {
       i += " var itemIndices = {}, item; for (;i--;) { var item = " + f + "[i]; ";
       var A = "checkDataType" + (_ ? "s" : "");
-      i += " if (" + e.util[A](p, "item", e.opts.strictNumbers, !0) + ") continue; ";
+      i += " if (" + e.util[A](p, "item", e.opts.strictNumbers, true) + ") continue; ";
       if (_) {
         i += " if (typeof item == 'string') item = '\"' + item; ";
       }
@@ -44,9 +44,9 @@ module.exports = function (e, t, n) {
     var g = g || [];
     g.push(i);
     i = "";
-    if (!1 !== e.createErrors) {
+    if (false !== e.createErrors) {
       i += " { keyword: 'uniqueItems' , dataPath: (dataPath || '') + " + e.errorPath + " , schemaPath: " + e.util.toQuotedString(u) + " , params: { i: i, j: j } ";
-      if (!1 !== e.opts.messages) {
+      if (false !== e.opts.messages) {
         i += " , message: 'should NOT have duplicate items (items ## ' + j + ' and ' + i + ' are identical)' ";
       }
       if (e.opts.verbose) {

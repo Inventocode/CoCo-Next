@@ -28,8 +28,8 @@ export { Pe as a };
 export { Fe as v };
 export { We as c };
 export { a as z } from "../321";
-var r = require("../10/index");
-var o = require("../8");
+import r = require("../10/index");
+import o = require("../8");
 var i = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -42,7 +42,7 @@ var i = function __importDefault(module) {
   });
   return defaultExport;
 }(o);
-var a = require("react");
+import a = require("react");
 var s = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -59,13 +59,13 @@ require("./828");
 var c = a.createContext(null);
 var l = c.Provider;
 var u = c;
-var d = Object(a.memo)(function (e) {
+var d = a.memo(function (e) {
   var t = e.children;
   var n = e.value;
   var r = e.disabled;
   var o = e.className;
-  var c = Object(a.useContext)(u);
-  var l = Object(a.useCallback)(function () {
+  var c = a.useContext(u);
+  var l = a.useCallback(function () {
     if (c) {
       c.value = n;
       c.onChange(n);
@@ -75,32 +75,32 @@ var d = Object(a.memo)(function (e) {
     disabled: r,
     onClick: l,
     className: i()("coco-radio-item", o, {
-      selected: (null === c || void 0 === c ? void 0 : c.value) === n
+      selected: (null === c || undefined === c ? undefined : c.value) === n
     })
   }, t || n);
 });
-var p = Object(a.memo)(function (e) {
+var p = a.memo(function (e) {
   var t = e.children;
   var n = e.value;
   var o = e.onChange;
   var c = e.style;
   var u = e.defaultValue;
-  var d = Object(a.useState)(u);
-  var p = Object(r.a)(d, 2);
+  var d = a.useState(u);
+  var p = r.a(d, 2);
   var f = p[0];
   var h = p[1];
-  Object(a.useEffect)(function () {
-    if (void 0 !== n) {
+  a.useEffect(function () {
+    if (undefined !== n) {
       h(n);
     }
   }, [n]);
-  var m = Object(a.useCallback)(function (e) {
-    if (void 0 === n) {
+  var m = a.useCallback(function (e) {
+    if (undefined === n) {
       h(e);
     }
   }, [n]);
-  var g = Object(a.useCallback)(function (e) {
-    if (void 0 !== e) {
+  var g = a.useCallback(function (e) {
+    if (undefined !== e) {
       m(e);
       if (o) {
         o(e);
@@ -114,32 +114,32 @@ var p = Object(a.memo)(function (e) {
     }
   }, s.a.createElement("div", {
     className: i()("coco-radio", e.className, {
-      "disabled-all": !1
+      "disabled-all": false
     }),
     style: c
   }, t));
 });
-var f = require("../295/index");
-var h = require("../296");
-var m = require("../31/index");
+import f = require("../295/index");
+import h = require("../296");
+import m = require("lodash");
 require("./636");
-var g = Object(a.memo)(function (e) {
+var g = a.memo(function (e) {
   var t = e.onStep;
   var n = e.max;
   var r = e.min;
   var o = e.defaultValue;
   var i = e.disabled;
-  var c = Object(h.a)(e, ["onStep", "max", "min", "defaultValue", "disabled"]);
+  var c = h.a(e, ["onStep", "max", "min", "defaultValue", "disabled"]);
   var l = Number(n) <= Number(o);
   var u = Number(r) >= Number(o);
   var d = Number(o);
-  var p = Object(a.useCallback)(function (e) {
-    if (!l && Object(m.isFunction)(t)) {
+  var p = a.useCallback(function (e) {
+    if (!l && m.isFunction(t)) {
       t("".concat(d + 1), e, "up");
     }
   }, [l, t, d]);
-  var g = Object(a.useCallback)(function (e) {
-    if (!u && Object(m.isFunction)(t)) {
+  var g = a.useCallback(function (e) {
+    if (!u && m.isFunction(t)) {
       t("".concat(d - 1), e, "down");
     }
   }, [u, t, d]);
@@ -163,9 +163,9 @@ var g = Object(a.memo)(function (e) {
     })))
   }));
 });
-var _ = require("../536");
+import _ = require("../536");
 require("./1080");
-var v = require("./769/index");
+import v = require("./769/index");
 var b = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -179,31 +179,31 @@ var b = function __importDefault(module) {
   return defaultExport;
 }(v);
 require("./831");
-var y = Object(a.memo)(function (e) {
+var y = a.memo(function (e) {
   var t = e.step;
-  var n = void 0 === t ? 1 : t;
+  var n = undefined === t ? 1 : t;
   var o = e.max;
-  var c = void 0 === o ? 100 : o;
+  var c = undefined === o ? 100 : o;
   var l = e.min;
-  var u = void 0 === l ? 1 : l;
+  var u = undefined === l ? 1 : l;
   var d = e.onChange;
   var p = e.value;
   var h = e.className;
   var m = e.isShowLeftInput;
   var g = e.isShowRightInput;
   var _ = e.inputAfter;
-  var v = Object(a.useRef)(null);
-  var y = Object(a.useState)(p || u);
-  var E = Object(r.a)(y, 2);
+  var v = a.useRef(null);
+  var y = a.useState(p || u);
+  var E = r.a(y, 2);
   var O = E[0];
   var w = E[1];
-  Object(a.useEffect)(function () {
-    if (void 0 !== p) {
+  a.useEffect(function () {
+    if (undefined !== p) {
       T(p.toString());
       w(p);
     }
   }, [p]);
-  var C = Object(a.useCallback)(function (e) {
+  var C = a.useCallback(function (e) {
     T(e.toString());
     w(e);
     if (d) {
@@ -212,7 +212,7 @@ var y = Object(a.memo)(function (e) {
   }, [d]);
   var T = function (e) {
     var t;
-    var n = null === (t = v.current) || void 0 === t ? void 0 : t.input;
+    var n = null === (t = v.current) || undefined === t ? undefined : t.input;
     if (n) {
       n.value = e.toString();
     }
@@ -251,10 +251,10 @@ var y = Object(a.memo)(function (e) {
     after: _
   }));
 });
-var E = require("../94/index");
+import E = require("../94/index");
 require("./637");
-var O = require("../361");
-var w = Object(a.memo)(function (e) {
+import O = require("../361");
+var w = a.memo(function (e) {
   var t = e.style;
   var n = e.children;
   var o = e.value;
@@ -263,46 +263,46 @@ var w = Object(a.memo)(function (e) {
   var u = e.defaultValue;
   var d = e.open;
   var p = e.autoCloseWhenChanged;
-  var f = void 0 === p || p;
-  var h = Object(a.useState)(o || u);
-  var m = Object(r.a)(h, 2);
+  var f = undefined === p || p;
+  var h = a.useState(o || u);
+  var m = r.a(h, 2);
   var g = m[0];
   var _ = m[1];
-  var v = Object(a.useState)(d);
-  var b = Object(r.a)(v, 2);
+  var v = a.useState(d);
+  var b = r.a(v, 2);
   var y = b[0];
   var w = b[1];
-  var C = Object(a.useRef)(null);
-  var T = Object(a.useState)(null);
-  var S = Object(r.a)(T, 2);
+  var C = a.useRef(null);
+  var T = a.useState(null);
+  var S = r.a(T, 2);
   var I = S[0];
   var A = S[1];
-  Object(a.useEffect)(function () {
-    if (void 0 !== o) {
+  a.useEffect(function () {
+    if (undefined !== o) {
       _(o);
     }
   }, [o]);
-  Object(a.useEffect)(function () {
+  a.useEffect(function () {
     w(d);
   }, [d]);
-  var j = Object(a.useCallback)(function (e) {
-    if (void 0 === o) {
+  var j = a.useCallback(function (e) {
+    if (undefined === o) {
       _(e);
     }
   }, [o]);
-  var N = Object(a.useCallback)(function (e) {
+  var N = a.useCallback(function (e) {
     if (e) {
       A(e);
     }
   }, []);
-  var R = Object(a.useCallback)(function () {
+  var R = a.useCallback(function () {
     w(!y);
   }, [y]);
-  Object(a.useEffect)(function () {
+  a.useEffect(function () {
     var e = function e(t) {
       var n = t.target;
       if (C.current && !C.current.contains(n)) {
-        w(!1);
+        w(false);
         document.body.removeEventListener("click", e);
       }
     };
@@ -321,7 +321,7 @@ var w = Object(a.memo)(function (e) {
           c(e);
         }
         if (f) {
-          w(!1);
+          w(false);
         }
       },
       onChangeSelectorContent: N
@@ -346,31 +346,31 @@ var w = Object(a.memo)(function (e) {
     className: i()("coco-select-options", [y ? "show" : "hide"])
   }, n)));
 });
-var C = Object(a.memo)(function (e) {
+var C = a.memo(function (e) {
   var t = e.value;
   var n = e.suffix;
   var r = e.children;
   var o = e.className;
-  var c = Object(a.useContext)(O.b);
-  Object(a.useEffect)(function () {
-    if ((null === c || void 0 === c ? void 0 : c.value) === t) {
+  var c = a.useContext(O.b);
+  a.useEffect(function () {
+    if ((null === c || undefined === c ? undefined : c.value) === t) {
       c.onChangeSelectorContent(r || t);
     }
   }, [c, r, t]);
   return s.a.createElement("div", {
     onClick: function () {
-      if (!(null === c || void 0 === c)) {
+      if (!(null === c || undefined === c)) {
         c.onChange(t);
       }
     },
     className: i()({
-      selected: (null === c || void 0 === c ? void 0 : c.value) === t
+      selected: (null === c || undefined === c ? undefined : c.value) === t
     }, o, "coco-option")
   }, r || s.a.createElement("div", {
     className: "coco-option-content"
   }, s.a.createElement("p", null, t), n));
 });
-var T = require("../1/index");
+import T = require("regenerator-runtime");
 var S = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -383,11 +383,11 @@ var S = function __importDefault(module) {
   });
   return defaultExport;
 }(T);
-var I = require("../7");
-var A = require("../16/index");
-var j = require("../702");
-var N = require("../1185");
-var R = require("../51/index");
+import I = require("../7");
+import A = require("../16/index");
+import j = require("../702");
+import N = require("../1185");
+import R = require("color");
 var k = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -400,20 +400,20 @@ var k = function __importDefault(module) {
   });
   return defaultExport;
 }(R);
-var x = require("../2");
-var D = require("../133/342");
-var M = require("../15");
+import x = require("../2");
+import D = require("../133/342");
+import M = require("../15");
 require("./646");
 function L(e) {
   return "#ffffff" === k()(e).hex().toLocaleLowerCase();
 }
 var P;
-var B = Object(a.memo)(function (e) {
+var B = a.memo(function (e) {
   var t = e.onClick;
   var n = e.color;
   var r = e.selected;
   var o = e.className;
-  var a = Object(M.i)(n);
+  var a = M.i(n);
   return s.a.createElement("div", {
     onClick: function () {
       if (t) {
@@ -433,9 +433,9 @@ var B = Object(a.memo)(function (e) {
     type: "icon-selected"
   }));
 });
-var F = require("./785/index");
-var G = require("./254/index");
-var U = require("./225");
+import F = require("./785/index");
+import G = require("./254/index");
+import U = require("./225");
 var W = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -455,14 +455,14 @@ var W = function __importDefault(module) {
 }(P || (P = {}));
 var H;
 var V = [P.HEX, P.HSVA, P.RGBA];
-var z = Object(a.memo)(function (e) {
+var z = a.memo(function (e) {
   var t = e.color;
   var n = e.onChange;
-  var o = Object(a.useState)(P.HEX);
-  var i = Object(r.a)(o, 2);
+  var o = a.useState(P.HEX);
+  var i = r.a(o, 2);
   var c = i[0];
   var l = i[1];
-  var u = Object(a.useMemo)(function () {
+  var u = a.useMemo(function () {
     var e = W()(t).toHex8();
     var n = W()(t).toHsv();
     n.a = Math.round(100 * n.a);
@@ -525,15 +525,15 @@ var z = Object(a.memo)(function (e) {
           }
           t = {
             h: e.H || p.h,
-            s: Number(Object(m.isUndefined)(e.S) ? f.s : e.S),
-            v: Number(Object(m.isUndefined)(e.V) ? f.v : e.V),
+            s: Number(m.isUndefined(e.S) ? f.s : e.S),
+            v: Number(m.isUndefined(e.V) ? f.v : e.V),
             source: "hsv"
           };
         }
       }
     }
-    if (t && Object(M.kb)(t)) {
-      var r = Object(M.C)(t, e.H || f.h);
+    if (t && M.kb(t)) {
+      var r = M.C(t, e.H || f.h);
       n(r);
     }
   };
@@ -665,14 +665,14 @@ var Y = {
     }
   }
 };
-var K = Object(a.memo)(function (e) {
+var K = a.memo(function (e) {
   var t = e.color;
   var n = e.handleColorChange;
   var r = function (e) {
     var t = e.hex;
-    if (!Object(M.i)(t)) {
-      t = void 0 !== e.rgb.a ? "".concat(e.hex).concat(function (e) {
-        var t = Math.round(255 * Object(m.clamp)(e, 0, 1));
+    if (!M.i(t)) {
+      t = undefined !== e.rgb.a ? "".concat(e.hex).concat(function (e) {
+        var t = Math.round(255 * m.clamp(e, 0, 1));
         var n = t.toString(16);
         return t <= 15 ? "0".concat(n) : n;
       }(e.rgb.a)) : "".concat(e.hex, "FF");
@@ -683,7 +683,7 @@ var K = Object(a.memo)(function (e) {
     onChange: r,
     color: t,
     presetColors: [],
-    disableAlpha: !1,
+    disableAlpha: false,
     styles: Y
   }), s.a.createElement(z, {
     color: t,
@@ -691,24 +691,24 @@ var K = Object(a.memo)(function (e) {
   }));
 });
 var q = [];
-var X = Object(a.memo)(Object(a.forwardRef)(function (e, t) {
+var X = a.memo(a.forwardRef(function (e, t) {
   var o = e.value;
   var c = e.onChange;
   var l = e.onClose;
   var u = e.defaultValue;
-  var d = void 0 === u ? "#000000ff" : u;
+  var d = undefined === u ? "#000000ff" : u;
   var p = e.style;
-  var f = void 0 === p ? {} : p;
-  var h = Object(a.useRef)(null);
-  var m = Object(a.useRef)(null);
-  var g = Object(a.useRef)(!1);
-  var _ = Object(A.d)();
-  var v = Object(j.a)().formatMessage;
-  var b = Object(a.useState)(o || d);
-  var y = Object(r.a)(b, 2);
+  var f = undefined === p ? {} : p;
+  var h = a.useRef(null);
+  var m = a.useRef(null);
+  var g = a.useRef(false);
+  var _ = A.d();
+  var v = j.a().formatMessage;
+  var b = a.useState(o || d);
+  var y = r.a(b, 2);
   var O = y[0];
   var w = y[1];
-  var C = Object(a.useRef)(O);
+  var C = a.useRef(O);
   if (0 === q.length) {
     q.push(O);
   }
@@ -724,12 +724,12 @@ var X = Object(a.memo)(Object(a.forwardRef)(function (e, t) {
   var R = function (e) {
     T(e);
   };
-  Object(a.useImperativeHandle)(t, function () {
+  a.useImperativeHandle(t, function () {
     return {
       setRGBA: w
     };
   });
-  Object(a.useEffect)(function () {
+  a.useEffect(function () {
     var e = function (e) {
       var n = e.target;
       var r = h.current;
@@ -738,7 +738,7 @@ var X = Object(a.memo)(Object(a.forwardRef)(function (e, t) {
         if (l) {
           l(O);
         }
-        _(Object(x.hh)());
+        _(x.hh());
         if (H) {
           var i = q.indexOf(H);
           if (i > -1) {
@@ -754,36 +754,36 @@ var X = Object(a.memo)(Object(a.forwardRef)(function (e, t) {
     };
     var t = function () {
       document.body.removeEventListener("mousedown", e, {
-        capture: !0
+        capture: true
       });
       document.body.removeEventListener("touchstart", e, {
-        capture: !0
+        capture: true
       });
       document.body.removeEventListener("mousewheel", e, {
-        capture: !0
+        capture: true
       });
     };
     document.body.addEventListener("mousedown", e, {
-      capture: !0
+      capture: true
     });
     document.body.addEventListener("touchstart", e, {
-      capture: !0
+      capture: true
     });
     document.body.addEventListener("mousewheel", e, {
-      capture: !0
+      capture: true
     });
     return t;
   });
-  Object(a.useEffect)(function () {
+  a.useEffect(function () {
     C.current = O;
   }, [O]);
-  Object(a.useEffect)(function () {
+  a.useEffect(function () {
     var e = function () {
-      g.current = !0;
+      g.current = true;
       document.addEventListener("mouseup", function () {
-        g.current = !1;
+        g.current = false;
       }, {
-        once: !0
+        once: true
       });
     };
     document.addEventListener("mousedown", e);
@@ -791,18 +791,18 @@ var X = Object(a.memo)(Object(a.forwardRef)(function (e, t) {
       return document.removeEventListener("mousedown", e);
     };
   });
-  var L = Object(a.useCallback)(function () {
+  var L = a.useCallback(function () {
     if (c) {
       c(C.current, g.current);
     }
   }, [c]);
-  var P = Object(a.useCallback)(function (e) {
-    if (!1 === e && c) {
+  var P = a.useCallback(function (e) {
+    if (false === e && c) {
       c(C.current, g.current);
     }
   }, [c]);
   var F = function () {
-    var e = Object(I.a)(S.a.mark(function e() {
+    var e = I.a(S.a.mark(function e() {
       var t;
       var n;
       var r;
@@ -814,12 +814,12 @@ var X = Object(a.memo)(Object(a.forwardRef)(function (e, t) {
                 e.next = 3;
                 break;
               }
-              _(Object(x.mj)({
+              _(x.mj({
                 message: v({
                   id: "colorPicker.eyeDropperTips"
                 })
               }));
-              return e.abrupt("return", !1);
+              return e.abrupt("return", false);
             case 3:
               e.prev = 3;
               t = new window.EyeDropper();
@@ -828,7 +828,7 @@ var X = Object(a.memo)(Object(a.forwardRef)(function (e, t) {
                 return console.info(e);
               });
             case 7:
-              if (null === (n = e.sent) || void 0 === n ? void 0 : n.sRGBHex) {
+              if (null === (n = e.sent) || undefined === n ? undefined : n.sRGBHex) {
                 r = k()(n.sRGBHex).hex();
                 T(r);
               }
@@ -861,7 +861,7 @@ var X = Object(a.memo)(Object(a.forwardRef)(function (e, t) {
       key: t,
       color: e,
       selected: O === e,
-      className: Object(M.V)(e) ? "coco-palette-light-color-selected" : "coco-palette-dark-color-selected"
+      className: M.V(e) ? "coco-palette-light-color-selected" : "coco-palette-dark-color-selected"
     });
   })), s.a.createElement("div", {
     className: "coco-palette-history-color"
@@ -915,7 +915,7 @@ var X = Object(a.memo)(Object(a.forwardRef)(function (e, t) {
   })))));
 }));
 require("./855");
-var Q = Object(a.memo)(Object(a.forwardRef)(function (e, t) {
+var Q = a.memo(a.forwardRef(function (e, t) {
   var n = e.children;
   var o = e.defaultVisible;
   var c = e.className;
@@ -926,24 +926,24 @@ var Q = Object(a.memo)(Object(a.forwardRef)(function (e, t) {
   var f = e.onHide;
   var h = e.contentClassName;
   var m = e.autoClose;
-  var g = void 0 === m || m;
+  var g = undefined === m || m;
   var _ = e.disabled;
-  var v = void 0 !== _ && _;
-  var b = Object(a.useState)(!!o);
-  var y = Object(r.a)(b, 2);
+  var v = undefined !== _ && _;
+  var b = a.useState(!!o);
+  var y = r.a(b, 2);
   var E = y[0];
   var O = y[1];
-  var w = Object(a.useRef)(null);
-  Object(a.useEffect)(function () {
+  var w = a.useRef(null);
+  a.useEffect(function () {
     if (E && d) {
       d();
     }
   }, [E]);
-  Object(a.useLayoutEffect)(function () {
+  a.useLayoutEffect(function () {
     var e = function e(t) {
       var n = t.target;
       if (w.current && !w.current.contains(n)) {
-        O(!1);
+        O(false);
         document.body.removeEventListener("click", e);
       }
     };
@@ -958,18 +958,18 @@ var Q = Object(a.memo)(Object(a.forwardRef)(function (e, t) {
       document.body.removeEventListener("click", e);
     };
   }, [E, p, g]);
-  Object(a.useImperativeHandle)(t, function () {
+  a.useImperativeHandle(t, function () {
     return {
       target: w.current,
       visible: E,
       showContent: function () {
-        O(!0);
+        O(true);
         if (d) {
           d();
         }
       },
       hideContent: function () {
-        O(!1);
+        O(false);
         if (f) {
           f();
         }
@@ -983,7 +983,7 @@ var Q = Object(a.memo)(Object(a.forwardRef)(function (e, t) {
   }, s.a.createElement("div", {
     className: "coco-popover-children",
     onClick: function () {
-      O(!0);
+      O(true);
     }
   }, n), s.a.createElement("div", {
     className: i()("coco-popover-content", h, [E ? "show" : "hide"])
@@ -991,22 +991,22 @@ var Q = Object(a.memo)(Object(a.forwardRef)(function (e, t) {
     className: "coco-popover-disabled-mask"
   }));
 }));
-var Z = require("../537/index");
+import Z = require("../537/index");
 require("./857");
-var J = Object(a.memo)(s.a.forwardRef(function (e, t) {
+var J = a.memo(s.a.forwardRef(function (e, t) {
   var n = e.type;
   var r = e.icon;
   var o = e.onClick;
   var c = e.disabled;
   var l = e.style;
-  var u = void 0 === l ? {} : l;
+  var u = undefined === l ? {} : l;
   var d = e.className;
   var p = e.danger;
   var f = e.children;
   var h = e.shape;
-  var m = void 0 === h ? "circle" : h;
-  var g = Object(a.useRef)(null);
-  Object(a.useImperativeHandle)(t, function () {
+  var m = undefined === h ? "circle" : h;
+  var g = a.useRef(null);
+  a.useImperativeHandle(t, function () {
     return {
       button: g.current
     };
@@ -1028,56 +1028,56 @@ require("./858");
 var $ = a.createContext(null);
 var ee = $.Provider;
 var te = $;
-Object(a.memo)(function (e) {
+a.memo(function (e) {
   var t = e.children;
   var n = e.onSelect;
   var o = e.value;
   var c = e.defaultValue;
   var l = e.className;
   var u = e.style;
-  var d = void 0 === u ? {} : u;
+  var d = undefined === u ? {} : u;
   var p = e.open;
   var f = e.onBlur;
-  var h = Object(a.useState)(o || c);
-  var m = Object(r.a)(h, 2);
+  var h = a.useState(o || c);
+  var m = r.a(h, 2);
   var g = m[0];
   var _ = m[1];
-  var v = Object(a.useState)(!1);
-  var b = Object(r.a)(v, 2);
+  var v = a.useState(false);
+  var b = r.a(v, 2);
   var y = b[0];
   var O = b[1];
-  Object(a.useEffect)(function () {
+  a.useEffect(function () {
     _(o);
   }, [o]);
-  Object(a.useEffect)(function () {
-    if (void 0 !== p) {
+  a.useEffect(function () {
+    if (undefined !== p) {
       O(p);
     }
   }, [p]);
-  Object(a.useEffect)(function () {
+  a.useEffect(function () {
     var e;
-    if (!(null === (e = S.current) || void 0 === e)) {
+    if (!(null === (e = S.current) || undefined === e)) {
       e.setAttribute("tabindex", "-1");
     }
   }, []);
-  var w = Object(a.useCallback)(function (e) {
-    if (void 0 === p) {
+  var w = a.useCallback(function (e) {
+    if (undefined === p) {
       O(e);
     }
   }, [p]);
-  var C = Object(a.useCallback)(function (e) {
+  var C = a.useCallback(function (e) {
     _(e);
-    w(!1);
+    w(false);
     if (n) {
       n(e);
     }
   }, [n, w]);
-  var T = Object(a.useCallback)(function () {
+  var T = a.useCallback(function () {
     w(!y);
   }, [y, w]);
-  var S = Object(a.useRef)(null);
-  var I = Object(a.useCallback)(function () {
-    w(!1);
+  var S = a.useRef(null);
+  var I = a.useCallback(function () {
+    w(false);
     if (f) {
       f();
     }
@@ -1107,22 +1107,22 @@ Object(a.memo)(function (e) {
     })
   }, t)));
 });
-var ne = Object(a.memo)(function (e) {
+var ne = a.memo(function (e) {
   var t = e.title;
   var n = e.children;
   var o = e.disabled;
-  var c = Object(a.useState)(!1);
-  var l = Object(r.a)(c, 2);
+  var c = a.useState(false);
+  var l = r.a(c, 2);
   var u = l[0];
   var d = l[1];
-  var p = Object(a.useCallback)(function () {
+  var p = a.useCallback(function () {
     if (!o) {
-      d(!0);
+      d(true);
     }
   }, [d, o]);
-  var f = Object(a.useCallback)(function () {
+  var f = a.useCallback(function () {
     if (!o) {
-      d(!1);
+      d(false);
     }
   }, [d, o]);
   return s.a.createElement("div", {
@@ -1143,27 +1143,27 @@ var ne = Object(a.memo)(function (e) {
     })
   }, n));
 });
-var re = Object(a.memo)(function (e) {
+var re = a.memo(function (e) {
   var t = e.value;
   var n = e.title;
   var r = e.content;
   var o = e.disabled;
-  var c = Object(a.useContext)(te);
-  var l = Object(a.useCallback)(function () {
-    if (null === c || void 0 === c ? void 0 : c.onSelect) {
+  var c = a.useContext(te);
+  var l = a.useCallback(function () {
+    if (null === c || undefined === c ? undefined : c.onSelect) {
       c.onSelect(t);
     }
   }, [t, c]);
   return s.a.createElement("div", {
     className: i()("coco-tree-node-item", {
-      selected: (null === c || void 0 === c ? void 0 : c.selectedValue) === t,
+      selected: (null === c || undefined === c ? undefined : c.selectedValue) === t,
       disabled: o
     }),
     onClick: l,
     key: t
   }, r || s.a.createElement("span", null, n));
 });
-Object(a.memo)(function (e) {
+a.memo(function (e) {
   var t = e.children;
   var n = e.className;
   return s.a.createElement("div", {
@@ -1171,33 +1171,33 @@ Object(a.memo)(function (e) {
   }, t ? s.a.createElement(ne, e) : s.a.createElement(re, e));
 });
 require("./859");
-var oe = Object(a.memo)(function (e) {
+var oe = a.memo(function (e) {
   var t = e.type;
-  var n = void 0 === t ? "info" : t;
+  var n = undefined === t ? "info" : t;
   var o = e.message;
   var c = e.showPrefixIcon;
-  var l = void 0 === c || c;
+  var l = undefined === c || c;
   var u = e.showCloseIcon;
-  var d = void 0 !== u && u;
+  var d = undefined !== u && u;
   var p = e.visible;
   var f = e.onClose;
   var h = e.icon;
   var m = e.className;
-  var g = Object(a.useState)(!0);
-  var _ = Object(r.a)(g, 2);
+  var g = a.useState(true);
+  var _ = r.a(g, 2);
   var v = _[0];
   var b = _[1];
-  Object(a.useLayoutEffect)(function () {
-    if (void 0 !== p) {
+  a.useLayoutEffect(function () {
+    if (undefined !== p) {
       b(p);
     }
   }, [p]);
-  var y = Object(a.useCallback)(function (e) {
-    if (void 0 === p) {
+  var y = a.useCallback(function (e) {
+    if (undefined === p) {
       b(e);
     }
   }, [p]);
-  var O = Object(a.useMemo)(function () {
+  var O = a.useMemo(function () {
     var e = "";
     var t = "";
     switch (n) {
@@ -1220,8 +1220,8 @@ var oe = Object(a.memo)(function (e) {
       className: t
     };
   }, [n]);
-  var w = Object(a.useCallback)(function () {
-    y(!1);
+  var w = a.useCallback(function () {
+    y(false);
     if (f) {
       f();
     }
@@ -1241,9 +1241,9 @@ var oe = Object(a.memo)(function (e) {
     type: "icon-close"
   })));
 });
-var ie = require("../11");
+import ie = require("../11");
 require("./647");
-var ae = Object(a.memo)(function (e) {
+var ae = a.memo(function (e) {
   var t;
   var n = e.children;
   var r = e.justify;
@@ -1252,24 +1252,24 @@ var ae = Object(a.memo)(function (e) {
   var c = e.label;
   return s.a.createElement("div", {
     "data-row-label": c,
-    className: i()("coco-row", a, (t = {}, Object(ie.a)(t, "coco-row-".concat(o), o), Object(ie.a)(t, "coco-row-".concat(r), r), t))
+    className: i()("coco-row", a, (t = {}, ie.a(t, "coco-row-".concat(o), o), ie.a(t, "coco-row-".concat(r), r), t))
   }, n);
 });
-var se = Object(a.memo)(function (e) {
+var se = a.memo(function (e) {
   var t = e.children;
   var n = e.span;
   if ("string" === typeof n) {
     var r = parseInt(n);
-    n = isNaN(r) ? void 0 : 48 * r / 100;
+    n = isNaN(r) ? undefined : 48 * r / 100;
   }
   return s.a.createElement("div", {
-    className: i()("coco-col", Object(ie.a)({}, "coco-col-".concat(n), void 0 !== n))
+    className: i()("coco-col", ie.a({}, "coco-col-".concat(n), undefined !== n))
   }, t);
 });
-var ce = require("../27");
-var le = require("../40");
-var ue = require("../57/index");
-var de = require("../58/index");
+import ce = require("../27");
+import le = require("../40");
+import ue = require("../57/index");
+import de = require("../58/index");
 var pe = a.createContext({
   draggedItemIndex: -1
 });
@@ -1289,17 +1289,17 @@ function ge(e, t, n) {
   return s;
 }
 var _e = function (e) {
-  Object(ue.a)(n, e);
-  var t = Object(de.a)(n);
+  ue.a(n, e);
+  var t = de.a(n);
   function n(e) {
     var r;
-    Object(ce.a)(this, n);
-    (r = t.call(this, e)).separationLineRef = Object(a.createRef)();
-    r.dragContentRef = Object(a.createRef)();
-    r.dragWrapperRef = Object(a.createRef)();
-    r._dragResult = void 0;
-    r._mousedownTimeId = void 0;
-    r._mousemoveTimeId = void 0;
+    ce.a(this, n);
+    (r = t.call(this, e)).separationLineRef = a.createRef();
+    r.dragContentRef = a.createRef();
+    r.dragWrapperRef = a.createRef();
+    r._dragResult = undefined;
+    r._mousedownTimeId = undefined;
+    r._mousemoveTimeId = undefined;
     r.handleMouseDown = function (e) {
       if (0 === e.button) {
         var t = r.props;
@@ -1351,7 +1351,7 @@ var _e = function (e) {
       r._dragResult.destinationIndex = -1;
       r._dragResult.sourceIndex = -1;
       r.setState({
-        isDragging: !1,
+        isDragging: false,
         draggedItemIndex: -1
       });
       r._setMouseCursor("initial");
@@ -1363,7 +1363,7 @@ var _e = function (e) {
           r._mousemoveTimeId = null;
         }, 60);
         r.setState({
-          isDragging: !0
+          isDragging: true
         });
         var t = me(e);
         var n = r.separationLineRef.current;
@@ -1411,12 +1411,12 @@ var _e = function (e) {
       destinationIndex: -1
     };
     r.state = {
-      isDragging: !1,
+      isDragging: false,
       draggedItemIndex: -1
     };
     return r;
   }
-  Object(le.a)(n, [{
+  le.a(n, [{
     key: "render",
     value: function () {
       var e = this.state;
@@ -1447,8 +1447,8 @@ var _e = function (e) {
   return n;
 }(s.a.PureComponent);
 _e.DELAY = 200;
-Object(a.memo)(_e);
-Object(a.memo)(function (e) {
+a.memo(_e);
+a.memo(function (e) {
   var t = e.index;
   var n = e.children;
   return s.a.createElement(fe, null, function (e) {
@@ -1463,27 +1463,27 @@ Object(a.memo)(function (e) {
 });
 require("./861");
 var ve;
-var be = Object(a.memo)(function (e) {
+var be = a.memo(function (e) {
   var t = e.children;
   var n = e.showDropdownIcon;
-  var o = void 0 === n || n;
+  var o = undefined === n || n;
   var c = e.overlay;
   var l = e.className;
   var u = e.onClick;
-  var d = Object(a.useState)(!1);
-  var p = Object(r.a)(d, 2);
+  var d = a.useState(false);
+  var p = r.a(d, 2);
   var f = p[0];
   var h = p[1];
-  var m = Object(a.useRef)(null);
+  var m = a.useRef(null);
   function g(e) {
     var t;
     var n;
     if (e) {
-      if (!(null === (t = m.current) || void 0 === t)) {
+      if (!(null === (t = m.current) || undefined === t)) {
         t.showContent();
       }
     } else {
-      if (!(null === (n = m.current) || void 0 === n)) {
+      if (!(null === (n = m.current) || undefined === n)) {
         n.hideContent();
       }
     }
@@ -1493,7 +1493,7 @@ var be = Object(a.memo)(function (e) {
     onClick: function () {
       var e;
       if (u) {
-        u(!!(null === (e = m.current) || void 0 === e ? void 0 : e.visible), g);
+        u(!!(null === (e = m.current) || undefined === e ? undefined : e.visible), g);
       }
     }
   }, s.a.createElement(Q, {
@@ -1502,17 +1502,17 @@ var be = Object(a.memo)(function (e) {
     content: s.a.createElement("div", {
       onClick: function () {
         var e;
-        if (!(null === (e = m.current) || void 0 === e)) {
+        if (!(null === (e = m.current) || undefined === e)) {
           e.hideContent();
         }
-        h(!1);
+        h(false);
       }
     }, c),
     onOpen: function () {
-      h(!0);
+      h(true);
     },
     onClose: function () {
-      h(!1);
+      h(false);
     }
   }, s.a.createElement("div", {
     className: i()("coco-dropdown-selector", {
@@ -1521,8 +1521,8 @@ var be = Object(a.memo)(function (e) {
     onClick: function () {
       var e;
       var t;
-      if (null === (e = m.current) || void 0 === e ? void 0 : e.visible) {
-        if (!(null === (t = m.current) || void 0 === t)) {
+      if (null === (e = m.current) || undefined === e ? undefined : e.visible) {
+        if (!(null === (t = m.current) || undefined === t)) {
           t.hideContent();
         }
       }
@@ -1536,7 +1536,7 @@ var ye = a.createContext(null);
 var Ee = ye.Provider;
 var Oe = ye;
 require("./862");
-var we = Object(a.memo)(function (e) {
+var we = a.memo(function (e) {
   var t = e.children;
   var n = e.onClick;
   return s.a.createElement(Ee, {
@@ -1551,20 +1551,20 @@ var we = Object(a.memo)(function (e) {
     className: "coco-menu"
   }, t));
 });
-var Ce = Object(a.memo)(function (e) {
+var Ce = a.memo(function (e) {
   var t = e.children;
   var n = e.value;
-  var r = Object(a.useContext)(Oe);
+  var r = a.useContext(Oe);
   return s.a.createElement("div", {
     className: "coco-menu-item",
     onClick: function () {
-      if (void 0 !== n && r) {
+      if (undefined !== n && r) {
         r.onClick(n);
       }
     }
   }, t);
 });
-var Te = require("./317");
+import Te = require("./317");
 var Se = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -1577,23 +1577,23 @@ var Se = function __importDefault(module) {
   });
   return defaultExport;
 }(Te);
-var Ie = Object(a.memo)(function (e) {
+var Ie = a.memo(function (e) {
   var t;
   var n = e.value;
   var o = e.children;
   var c = e.subMenu;
   var l = e.onClick;
-  var u = Object(a.useRef)(null);
-  var d = Object(a.useState)("right");
-  var p = Object(r.a)(d, 2);
+  var u = a.useRef(null);
+  var d = a.useState("right");
+  var p = r.a(d, 2);
   var f = p[0];
   var h = p[1];
-  var m = Object(a.useState)(!1);
-  var g = Object(r.a)(m, 2);
+  var m = a.useState(false);
+  var g = r.a(m, 2);
   var _ = g[0];
   var v = g[1];
-  var b = Object(a.useMemo)(function () {
-    return Object(M.p)(v, 100);
+  var b = a.useMemo(function () {
+    return M.p(v, 100);
   }, []);
   return s.a.createElement("div", {
     ref: u,
@@ -1601,7 +1601,7 @@ var Ie = Object(a.memo)(function (e) {
     onMouseEnter: function () {
       if (c) {
         b(function () {
-          return !0;
+          return true;
         });
         var e = u.current;
         if (e) {
@@ -1617,7 +1617,7 @@ var Ie = Object(a.memo)(function (e) {
     onMouseLeave: function () {
       if (c) {
         b(function () {
-          return !1;
+          return false;
         });
       }
     },
@@ -1633,37 +1633,37 @@ var Ie = Object(a.memo)(function (e) {
   }, s.a.createElement(E.a, {
     type: "icon-arrow-down"
   })))), c && s.a.createElement("div", {
-    className: i()(Se.a.subMenuOverlay, (t = {}, Object(ie.a)(t, Se.a.visible, _), Object(ie.a)(t, Se.a.placementLeft, "left" === f), Object(ie.a)(t, Se.a.placementRight, "right" === f), t))
+    className: i()(Se.a.subMenuOverlay, (t = {}, ie.a(t, Se.a.visible, _), ie.a(t, Se.a.placementLeft, "left" === f), ie.a(t, Se.a.placementRight, "right" === f), t))
   }, c));
 });
-var Ae = require("../739/index");
+import Ae = require("../739/index");
 require("./863");
-var je = Object(a.memo)(function (e) {
+var je = a.memo(function (e) {
   var t = e.children;
   var n = e.onChange;
   var o = e.onCancel;
   var c = e.multiple;
-  var l = void 0 !== c && c;
+  var l = undefined !== c && c;
   var u = e.accept;
-  var d = void 0 === u ? "" : u;
+  var d = undefined === u ? "" : u;
   var p = e.className;
   var f = e.tooltip;
-  var h = void 0 === f ? "" : f;
+  var h = undefined === f ? "" : f;
   var m = e.style;
-  var g = void 0 === m ? {} : m;
-  var _ = Object(a.useRef)(null);
-  var v = Object(a.useState)(!1);
-  var b = Object(r.a)(v, 2);
+  var g = undefined === m ? {} : m;
+  var _ = a.useRef(null);
+  var v = a.useState(false);
+  var b = r.a(v, 2);
   var y = b[0];
   var E = b[1];
-  Object(a.useEffect)(function () {
+  a.useEffect(function () {
     var e = function (e) {
       var t;
       if (y) {
-        if (_.current && 0 === (null === (t = _.current.files) || void 0 === t ? void 0 : t.length) && o) {
+        if (_.current && 0 === (null === (t = _.current.files) || undefined === t ? undefined : t.length) && o) {
           o();
         }
-        E(!1);
+        E(false);
       }
     };
     window.addEventListener("focus", e);
@@ -1675,7 +1675,7 @@ var je = Object(a.memo)(function (e) {
     onClick: function () {
       var e = _.current;
       if (e) {
-        E(!0);
+        E(true);
         e.click();
       }
     },
@@ -1703,7 +1703,7 @@ var je = Object(a.memo)(function (e) {
     className: "coco-upload-button-content"
   }, t)));
 });
-var Ne = Object(a.memo)(function (e) {
+var Ne = a.memo(function (e) {
   var t = e.children;
   var n = e.className;
   return s.a.createElement("div", {
@@ -1711,13 +1711,13 @@ var Ne = Object(a.memo)(function (e) {
   }, t);
 });
 require("./864");
-var Re = Object(a.memo)(function (e) {
+var Re = a.memo(function (e) {
   var t = e.children;
   var n = e.className;
   var r = e.label;
   var o = e.labelWidth;
   var a = e.align;
-  var c = void 0 === a ? "horizontal" : a;
+  var c = undefined === a ? "horizontal" : a;
   return s.a.createElement("div", {
     className: i()(n, "coco-form-item", ["horizontal" === c ? "coco-form-item-horizontal" : "coco-form-item-vertical"])
   }, r && s.a.createElement("p", {
@@ -1730,47 +1730,47 @@ var Re = Object(a.memo)(function (e) {
   }, t));
 });
 require("./865");
-var ke = Object(a.memo)(s.a.forwardRef(function (e, t) {
+var ke = a.memo(s.a.forwardRef(function (e, t) {
   var n = e.defaultValue;
   var o = e.value;
   var c = e.className;
   var l = e.placeholder;
-  var u = void 0 === l ? "" : l;
+  var u = undefined === l ? "" : l;
   var d = e.rows;
-  var p = void 0 === d ? 1 : d;
+  var p = undefined === d ? 1 : d;
   var f = e.cols;
   var h = e.maxLength;
   var m = e.minLength;
   var g = e.autoComplete;
-  var _ = void 0 === g ? "on" : g;
+  var _ = undefined === g ? "on" : g;
   var v = e.onChange;
   var b = e.onFocus;
   var y = e.onBlur;
   var E = e.dependency;
   var O = e.disabled;
-  var w = Object(a.useRef)(null);
-  var C = Object(a.useRef)(null);
-  var T = Object(a.useRef)(null);
-  var S = Object(a.useState)(!1);
-  var I = Object(r.a)(S, 2);
+  var w = a.useRef(null);
+  var C = a.useRef(null);
+  var T = a.useRef(null);
+  var S = a.useState(false);
+  var I = r.a(S, 2);
   var A = I[0];
   var j = I[1];
-  var N = Object(a.useCallback)(function (e) {
+  var N = a.useCallback(function (e) {
     var t = C.current;
     if (t) {
       t.innerHTML = e + "/" + h;
     }
   }, [h]);
-  Object(a.useEffect)(function () {
+  a.useEffect(function () {
     var e = w.current;
-    if (e && void 0 === o) {
-      e.value = void 0 === n ? "" : n.toString();
+    if (e && undefined === o) {
+      e.value = undefined === n ? "" : n.toString();
       N(e.value.length);
     }
   }, [w, N, E, o, n]);
-  Object(a.useEffect)(function () {
+  a.useEffect(function () {
     var e = w.current;
-    if (void 0 !== o && e) {
+    if (undefined !== o && e) {
       e.value = o;
       N(o.toString().length);
     }
@@ -1782,7 +1782,7 @@ var ke = Object(a.memo)(s.a.forwardRef(function (e, t) {
       t.style.display = "block";
       var n = e.value.replace(/'\n'/g, "<br>");
       var r = getComputedStyle(e);
-      t.innerHTML = Object(M.t)(n);
+      t.innerHTML = M.t(n);
       t.style.width = r.width;
       t.style.lineHeight = r.lineHeight;
       t.style.minHeight = r.lineHeight;
@@ -1794,7 +1794,7 @@ var ke = Object(a.memo)(s.a.forwardRef(function (e, t) {
     }
     return 1;
   };
-  Object(a.useImperativeHandle)(t, function () {
+  a.useImperativeHandle(t, function () {
     return {
       getRowCount: function () {
         return R();
@@ -1831,13 +1831,13 @@ var ke = Object(a.memo)(s.a.forwardRef(function (e, t) {
       if (y) {
         y(e, t);
       }
-      j(!1);
+      j(false);
     },
     onFocus: function (e) {
       if (b) {
         b(e);
       }
-      j(!0);
+      j(true);
     }
   }, k)), s.a.createElement("div", {
     className: "coco-textarea-textCounter",
@@ -1851,7 +1851,7 @@ var ke = Object(a.memo)(s.a.forwardRef(function (e, t) {
   }));
 }));
 require("../538/index");
-var xe = require("./303/index");
+import xe = require("./303/index");
 var De = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -1868,17 +1868,17 @@ require("./867");
 var Me = "@__EMPTY_ADVANCE_TEXT_TIP_ID__@";
 var Le = function () {
   var e;
-  if (!(null === (e = document.getElementById(Me)) || void 0 === e)) {
+  if (!(null === (e = document.getElementById(Me)) || undefined === e)) {
     e.remove();
   }
 };
 var Pe = function (e) {
   var t = e.text;
   var n = e.duration;
-  var r = void 0 === n ? 500 : n;
+  var r = undefined === n ? 500 : n;
   var o = e.className;
-  var c = Object(a.useRef)(null);
-  Object(a.useEffect)(function () {
+  var c = a.useRef(null);
+  a.useEffect(function () {
     return function () {
       Le();
     };
@@ -1919,18 +1919,18 @@ var Pe = function (e) {
   }, t);
 };
 require("./868");
-var Be = Object(M.p)(function (e) {
+var Be = M.p(function (e) {
   if (e) {
     e();
   }
-}, 30, !0);
+}, 30, true);
 var Fe = function (e) {
   var t = e.children;
   var n = e.onScrollBottom;
   var r = e.height;
   var o = e.classnames;
   var a = e.offsetY;
-  var c = void 0 === a ? 10 : a;
+  var c = undefined === a ? 10 : a;
   return s.a.createElement("div", {
     style: {
       height: r
@@ -1944,7 +1944,7 @@ var Fe = function (e) {
     }
   }, t);
 };
-var Ge = require("./782");
+import Ge = require("./782");
 var Ue = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -1958,25 +1958,25 @@ var Ue = function __importDefault(module) {
   return defaultExport;
 }(Ge);
 require("./869");
-var We = Object(a.memo)(Object(a.forwardRef)(function (e, t) {
+var We = a.memo(a.forwardRef(function (e, t) {
   var o = e.sourceImage;
   var c = e.defaultScale;
-  var l = void 0 === c ? 1 : c;
+  var l = undefined === c ? 1 : c;
   var u = e.width;
   var d = e.height;
   var p = e.border;
-  var f = void 0 === p ? 0 : p;
+  var f = undefined === p ? 0 : p;
   var h = e.rotate;
-  var m = void 0 === h ? 0 : h;
+  var m = undefined === h ? 0 : h;
   var g = e.step;
-  var _ = void 0 === g ? .01 : g;
+  var _ = undefined === g ? .01 : g;
   var v = e.minScale;
-  var b = void 0 === v ? 1 : v;
+  var b = undefined === v ? 1 : v;
   var y = e.maxScale;
-  var E = void 0 === y ? 2 : y;
-  var O = Object(a.useRef)(null);
-  var w = Object(a.useState)(l);
-  var C = Object(r.a)(w, 2);
+  var E = undefined === y ? 2 : y;
+  var O = a.useRef(null);
+  var w = a.useState(l);
+  var C = r.a(w, 2);
   var T = C[0];
   var S = C[1];
   var I = function (e) {
@@ -1989,7 +1989,7 @@ var We = Object(a.memo)(Object(a.forwardRef)(function (e, t) {
     }
     S(t);
   };
-  Object(a.useImperativeHandle)(t, function () {
+  a.useImperativeHandle(t, function () {
     return {
       target: O.current,
       setScale: function (e) {
@@ -2045,5 +2045,5 @@ var We = Object(a.memo)(Object(a.forwardRef)(function (e, t) {
     className: "coco-avatar-editor-zoomInIcon"
   }))));
 }));
-var He = require("../321");
+import He = require("../321");
 export default Pe;

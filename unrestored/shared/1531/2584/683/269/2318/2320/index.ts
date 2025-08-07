@@ -1,7 +1,7 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
 var r = require("./2321");
 var i = require("../../1366/444");
@@ -37,7 +37,9 @@ function A(e, t, n, o, a) {
         }
         var a = c.getServiceIdentifierAsString(e),
           s = i.NOT_REGISTERED;
-        throw s += c.listMetadataForTarget(a, n), s += c.listRegisteredBindingsForServiceIdentifier(o, a, g), new Error(s);
+        s += c.listMetadataForTarget(a, n);
+        s += c.listRegisteredBindingsForServiceIdentifier(o, a, g);
+        throw new Error(s);
       case r.BindingCount.OnlyOneBindingAvailable:
         if (!n.isArray()) {
           return t;
@@ -49,7 +51,8 @@ function A(e, t, n, o, a) {
         }
         a = c.getServiceIdentifierAsString(e);
         s = i.AMBIGUOUS_MATCH + " " + a;
-        throw s += c.listRegisteredBindingsForServiceIdentifier(o, a, g), new Error(s);
+        s += c.listRegisteredBindingsForServiceIdentifier(o, a, g);
+        throw new Error(s);
     }
   })(a.serviceIdentifier, u, a, n.container);
   return u;
@@ -68,15 +71,15 @@ function g(e, t) {
 }
 exports.getBindingDictionary = _;
 exports.plan = function (e, t, n, r, _, g, v, m) {
-  if (void 0 === m) {
-    m = !1;
+  if (undefined === m) {
+    m = false;
   }
   var y = new u.Context(t);
   var b = function (e, t, n, r, i, o) {
     var s = e ? a.MULTI_INJECT_TAG : a.INJECT_TAG;
     var c = new l.Metadata(s, n);
     var u = new p.Target(t, r, n, c);
-    if (void 0 !== i) {
+    if (undefined !== i) {
       var f = new l.Metadata(i, o);
       u.metadata.push(f);
     }
@@ -115,14 +118,17 @@ exports.plan = function (e, t, n, r, _, g, v, m) {
             }
           }
           s.forEach(function (n) {
-            e(t, !1, n.serviceIdentifier, a, r, n);
+            e(t, false, n.serviceIdentifier, a, r, n);
           });
         }
       });
     })(e, m, _, y, null, b);
     return y;
   } catch (w) {
-    throw s.isStackOverflowExeption(w) && y.plan && c.circularDependencyToException(y.plan.rootRequest), w;
+    if (s.isStackOverflowExeption(w) && y.plan) {
+      c.circularDependencyToException(y.plan.rootRequest);
+    }
+    throw w;
   }
 };
 exports.createMockRequest = function (e, t, n, r) {

@@ -2,9 +2,9 @@
 
 var r = require("../568");
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.default = void 0;
+exports.default = undefined;
 var i = r(require("../746"));
 var o = r(require("react"));
 var a = r(require("../../../8"));
@@ -26,7 +26,7 @@ function u(e) {
   for (var t = 1; t < arguments.length; t++) {
     var n = null != arguments[t] ? arguments[t] : {};
     if (t % 2) {
-      c(Object(n), !0).forEach(function (t) {
+      c(Object(n), true).forEach(function (t) {
         (0, i.default)(e, t, n[t]);
       });
     } else {
@@ -77,7 +77,7 @@ var l = function (e) {
     if (l) {
       f = u(u({}, f), v);
     }
-    var _ = (0, a.default)((s = {}, (0, i.default)(s, "".concat(t, "-dot"), !0), (0, i.default)(s, "".concat(t, "-dot-active"), l), (0, i.default)(s, "".concat(t, "-dot-reverse"), r), s));
+    var _ = (0, a.default)((s = {}, (0, i.default)(s, "".concat(t, "-dot"), true), (0, i.default)(s, "".concat(t, "-dot-active"), l), (0, i.default)(s, "".concat(t, "-dot-reverse"), r), s));
     return o.default.createElement("span", {
       className: _,
       style: f,

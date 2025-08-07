@@ -1,7 +1,7 @@
 "use strict";
 
 function r(e, t, n) {
-  if (void 0 === n) {
+  if (undefined === n) {
     n = Error;
   }
   if (!e) {

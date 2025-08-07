@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.load_json_js_generator_math = void 0;
+exports.load_json_js_generator_math = undefined;
 exports.load_json_js_generator_math = function (e) {
   e.register("random", function (t, n) {
     var r = e.value_to_code(t, n, "a", e.ORDER_COMMA) || "0";
@@ -21,7 +21,7 @@ exports.load_json_js_generator_math = function (e) {
       MINUS: [" - ", e.ORDER_SUBTRACTION],
       MULTIPLY: [" * ", e.ORDER_MULTIPLICATION],
       DIVIDE: [" / ", e.ORDER_DIVISION],
-      POWER: [void 0, e.ORDER_COMMA]
+      POWER: [undefined, e.ORDER_COMMA]
     }[e.get_field_value(t.blocks[n], "OP")];
     var i = r[0];
     var o = r[1];

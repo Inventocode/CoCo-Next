@@ -1,7 +1,7 @@
 "use strict";
 
 function r(e) {
-  if (null === e || !0 === e || !1 === e) {
+  if (null === e || true === e || false === e) {
     return NaN;
   }
   var t = Number(e);

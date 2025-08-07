@@ -19,18 +19,18 @@ module.exports = s(Array, "Array", function (e, t) {
   var t = e.target;
   var n = e.kind;
   var r = e.index++;
-  return !t || r >= t.length ? (e.target = void 0, {
-    value: void 0,
-    done: !0
+  return !t || r >= t.length ? (e.target = undefined, {
+    value: undefined,
+    done: true
   }) : "keys" == n ? {
     value: r,
-    done: !1
+    done: false
   } : "values" == n ? {
     value: t[r],
-    done: !1
+    done: false
   } : {
     value: [r, t[r]],
-    done: !1
+    done: false
   };
 }, "values");
 i.Arguments = i.Array;

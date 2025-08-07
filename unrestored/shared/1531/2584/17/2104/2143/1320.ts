@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.zh_hans = void 0;
+exports.zh_hans = undefined;
 exports.zh_hans = {
   DUPLICATE_BLOCK: "复制",
   COPY_ALL: "复制所有积木（ %1 块）",

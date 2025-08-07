@@ -1,8 +1,8 @@
 "use strict";
 
-var r = require("../6");
-var o = require("../11");
-var i = require("react");
+import r = require("../6");
+import o = require("../11");
+import i = require("react");
 var a = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -15,7 +15,7 @@ var a = function __importDefault(module) {
   });
   return defaultExport;
 }(i);
-var s = require("../51/index");
+import s = require("color");
 var c = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -28,7 +28,7 @@ var c = function __importDefault(module) {
   });
   return defaultExport;
 }(s);
-var l = require("../8");
+import l = require("../8");
 var u = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -41,13 +41,13 @@ var u = function __importDefault(module) {
   });
   return defaultExport;
 }(l);
-var d = require("../5");
-var p = require("../15");
-var f = require("../35");
-var h = require("../90");
-var m = require("../321");
-var g = require("../83");
-var _ = require("./380");
+import d = require("../5");
+import p = require("../15");
+import f = require("../35");
+import h = require("../90");
+import m = require("../321");
+import g = require("../83");
+import _ = require("./380");
 var v = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -78,47 +78,47 @@ _a = function (e) {
   var I = b.text;
   var A = b.sizeType;
   var j = b.iconId;
-  var N = Object(i.useRef)(null);
-  var R = Object(i.useRef)(null);
-  var k = Object(f.O)(T) === g.a.ICON;
-  var x = Object(i.useMemo)(function () {
+  var N = i.useRef(null);
+  var R = i.useRef(null);
+  var k = f.O(T) === g.a.ICON;
+  var x = i.useMemo(function () {
     var e = function (e, t) {
       var n;
       var r = c()(t).toString();
-      return (n = {}, Object(o.a)(n, g.b.CONTAINED_TEXT, {
+      return (n = {}, o.a(n, g.b.CONTAINED_TEXT, {
         default: {
           backgroundColor: r,
-          color: Object(p.Z)(r) ? p.a : "#ffffff"
+          color: p.Z(r) ? p.a : "#ffffff"
         },
         disabled: {
           backgroundColor: "#cccccc",
           color: "#e6e6e6"
         }
-      }), Object(o.a)(n, g.b.OUTLINED_TEXT, {
+      }), o.a(n, g.b.OUTLINED_TEXT, {
         default: {
           borderColor: r,
           color: r,
-          background: Object(p.Z)(r) ? p.a : "#ffffff"
+          background: p.Z(r) ? p.a : "#ffffff"
         },
         disabled: {
           background: "#ffffff",
           borderColor: "#e9e9e9",
           color: "#e9e9e9"
         }
-      }), Object(o.a)(n, g.b.CONTAINED_ICON, {
+      }), o.a(n, g.b.CONTAINED_ICON, {
         default: {
           backgroundColor: r,
-          color: Object(p.Z)(r) ? p.a : "#ffffff"
+          color: p.Z(r) ? p.a : "#ffffff"
         },
         disabled: {
           backgroundColor: "#cccccc",
           color: "#e6e6e6"
         }
-      }), Object(o.a)(n, g.b.OUTLINED_ICON, {
+      }), o.a(n, g.b.OUTLINED_ICON, {
         default: {
           borderColor: r,
           color: r,
-          background: Object(p.Z)(r) ? p.a : "#ffffff"
+          background: p.Z(r) ? p.a : "#ffffff"
         },
         disabled: {
           background: "#ffffff",
@@ -129,8 +129,8 @@ _a = function (e) {
     }(T, C);
     return S ? e.disabled : e.default;
   }, [T, C, S]);
-  var D = Object(i.useMemo)(function () {
-    return Object(f.Q)(A, T);
+  var D = i.useMemo(function () {
+    return f.Q(A, T);
   }, [T, A]);
   var M = D.height;
   var L = D.fontSize;
@@ -138,10 +138,10 @@ _a = function (e) {
   var B = D.maxWidth;
   return a.a.createElement("button", {
     id: s,
-    className: u()(h.b, v.a.buttonWidget, Object(o.a)({}, v.a.hide, !l)),
+    className: u()(h.b, v.a.buttonWidget, o.a({}, v.a.hide, !l)),
     "data-role": d.M,
     "data-widget-type": d.d,
-    "data-lock-height": !0,
+    "data-lock-height": true,
     "data-min-width": P,
     "data-max-width": B,
     ref: N,
@@ -161,17 +161,17 @@ _a = function (e) {
         w();
       }
     },
-    style: Object(r.a)({
+    style: r.a({
       borderRadius: k ? M / 2 : M / 4,
       top: t.y,
       left: t.x,
       height: M,
       width: n.width,
       fontSize: L,
-      opacity: void 0 === _ ? void 0 : _ / 100
+      opacity: undefined === _ ? undefined : _ / 100
     }, x)
   }, k ? a.a.createElement(m.a, {
-    icon: y || Object(f.fb)(j)
+    icon: y || f.fb(j)
   }) : a.a.createElement("div", {
     className: u()(v.a.inputWrapper)
   }, a.a.createElement("div", {

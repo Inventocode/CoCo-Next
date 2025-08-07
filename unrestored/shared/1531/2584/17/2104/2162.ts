@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.FieldIcon = void 0;
+exports.FieldIcon = undefined;
 var r = require("tslib");
 var i = require("inversify");
 var o = require("../../125/index");
@@ -16,7 +16,7 @@ var c = function (e) {
     n.width_ = n.theme.renderer.HEAD_ICON_WIDTH;
     n.height_ = n.theme.renderer.HEAD_ICON_WIDTH;
     n.size_ = new s.Size(0, 0);
-    n.opt_is_head_ = t.opt_is_head || !1;
+    n.opt_is_head_ = t.opt_is_head || false;
     n.set_value(n.utils.replace_message_references(t.src));
     return n;
   }
@@ -26,7 +26,7 @@ var c = function (e) {
   };
   t.prototype.init = function () {
     if (!this.field_group) {
-      if (!1 === this.opt_is_head_ && void 0 != this.source_block) {
+      if (false === this.opt_is_head_ && undefined != this.source_block) {
         if ("*" === this.text_ || "" === this.text_) {
           return;
         }
@@ -43,8 +43,8 @@ var c = function (e) {
         cx: e,
         cy: e,
         r: e,
-        fill: void 0 != this.source_block ? this.source_block.get_colour() : "",
-        stroke: void 0 != this.source_block ? this.source_block.get_border_colour() : this.theme.block_color.DEFAULT.border,
+        fill: undefined != this.source_block ? this.source_block.get_colour() : "",
+        stroke: undefined != this.source_block ? this.source_block.get_border_colour() : this.theme.block_color.DEFAULT.border,
         class: "blockly_head_icon_wrapper"
       }, this.field_group);
       this.image_element = (0, o.create_svg_element)("image", {
@@ -62,11 +62,11 @@ var c = function (e) {
           "fill-opacity": 0
         }, this.field_group);
       }
-      if (void 0 == this.source_block) {
+      if (undefined == this.source_block) {
         throw new ReferenceError("Field should have source block when init.");
       }
       var t = this.source_block.get_svg_root();
-      if (void 0 == t) {
+      if (undefined == t) {
         throw new ReferenceError("Field should have svg root when init.");
       }
       t.appendChild(this.field_group);

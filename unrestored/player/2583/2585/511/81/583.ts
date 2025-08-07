@@ -35,7 +35,7 @@ var u = function (t) {
   e.prototype.getBlackRow = function (t, n) {
     var r = this.getLuminanceSource();
     var o = r.getWidth();
-    if (void 0 === n || null === n || n.getSize() < o) {
+    if (undefined === n || null === n || n.getSize() < o) {
       n = new i.a(o);
     } else {
       n.clear();

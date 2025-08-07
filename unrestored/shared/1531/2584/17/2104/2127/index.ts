@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.WorkspaceCommentDragger = void 0;
+exports.WorkspaceCommentDragger = undefined;
 var r = require("tslib");
 var i = require("inversify");
 var o = require("@kitten-team/gl-matrix");
@@ -24,28 +24,28 @@ var s = function (e) {
     }
   };
   t.prototype.end_block_drag = function (e, t) {
-    if (void 0 == this._workspace || void 0 == this._dragging_block) {
+    if (undefined == this._workspace || undefined == this._dragging_block) {
       throw new Error("Comment dragger has been disposed.");
     }
     this.drag_block(e, t);
     this.block_animations.disconnect_ui_effect_stop(this._dragging_block);
-    var n = void 0;
+    var n = undefined;
     if (this.events.is_enabled()) {
       var r = this._workspace.current_gesture_;
       n = this.end_drag_event_factory({
         block: this._dragging_block,
         is_outside: this._was_outside,
         mouse_position: o.vec2.fromValues(e.clientX, e.clientY),
-        is_from_flyout: (null === r || void 0 === r ? void 0 : r.is_start_from_flyout()) || !1,
+        is_from_flyout: (null === r || undefined === r ? undefined : r.is_start_from_flyout()) || false,
         redo_stack_before_drag: this.redo_stack_before_drag
       });
     }
-    this._dragging_block.set_mouse_through_style(!1);
+    this._dragging_block.set_mouse_through_style(false);
     var i = this.pixels_to_workspace_units(t);
     var a = o.vec2.add(o.vec2.create(), this._start_xy, i);
     this._dragging_block.move_off_drag_surface(a);
     this._dragging_block.bring_to_front();
-    if (!this.maybe_delete_block() && (this._dragging_block.set_dragging(!1), this.events.is_enabled())) {
+    if (!this.maybe_delete_block() && (this._dragging_block.set_dragging(false), this.events.is_enabled())) {
       var s = this.move_event_factory({
         block: this._dragging_block
       });
@@ -53,10 +53,10 @@ var s = function (e) {
       s.record_new();
       this.events.fire(s);
     }
-    this._workspace.set_resizes_enabled(!0);
+    this._workspace.set_resizes_enabled(true);
     if (this._dragging_block.is_deletable()) {
       var c = this._workspace.get_toolbox();
-      if (void 0 != c) {
+      if (undefined != c) {
         c.remove_delete_style();
       }
     }
@@ -66,7 +66,7 @@ var s = function (e) {
     if (n) {
       this.events.fire(n);
     }
-    this.events.set_group(!1);
+    this.events.set_group(false);
   };
   return t = (0, r.__decorate)([(0, i.injectable)()], t);
 }(require("./1317").ElementDragger);

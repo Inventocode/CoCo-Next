@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.BasePlugin = void 0;
+exports.BasePlugin = undefined;
 var r = function () {
   function e() {}
   e.prototype.before_handle_event_group = function (e) {};
@@ -21,7 +21,7 @@ var r = function () {
     return e;
   };
   e.prototype.after_analyze_op = function (e) {
-    return !0;
+    return true;
   };
   e.prototype.before_generate_event = function (e) {
     return e;

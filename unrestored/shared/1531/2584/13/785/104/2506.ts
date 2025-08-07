@@ -1,12 +1,12 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
 exports.default = function (e, t) {
   var n = {};
   var r = function (e) {
-    var t = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+    var t = !(arguments.length > 1 && undefined !== arguments[1]) || arguments[1];
     n[e] = t;
   };
   if (0 === e) {

@@ -16,7 +16,7 @@ module.exports = function (e, t) {
         }
       } else {
         var o = document.createEvent("Event");
-        o.initEvent(n.method, !1, !1);
+        o.initEvent(n.method, false, false);
         o.data = n.params;
         e.dispatchEvent(o);
       }

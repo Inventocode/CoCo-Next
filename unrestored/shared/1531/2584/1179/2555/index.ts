@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.init_data_blocks = void 0;
+exports.init_data_blocks = undefined;
 var r = require("./579");
 exports.init_data_blocks = function (e, t) {
   var n = [{
@@ -13,12 +13,12 @@ exports.init_data_blocks = function (e, t) {
       type: "field_dropdown",
       name: "VAR",
       options: function () {
-        return t("any", !0);
+        return t("any", true);
       }
     }],
-    output: !0,
+    output: true,
     colour: (0, r.i18n)("ORANGE_2"),
-    inputsInline: !0
+    inputsInline: true
   }, {
     type: "variables_set",
     message0: (0, r.i18n)("variables_set"),
@@ -34,9 +34,9 @@ exports.init_data_blocks = function (e, t) {
       align: "CENTRE",
       check: ["Number", "String", "Boolean", "Array"]
     }],
-    inputsInline: !0,
-    previousStatement: !0,
-    nextStatement: !0,
+    inputsInline: true,
+    previousStatement: true,
+    nextStatement: true,
     colour: (0, r.i18n)("ORANGE_2")
   }, {
     type: "change_variable",
@@ -57,10 +57,10 @@ exports.init_data_blocks = function (e, t) {
       check: "Number",
       align: "CENTRE"
     }],
-    previousStatement: !0,
-    nextStatement: !0,
+    previousStatement: true,
+    nextStatement: true,
     colour: (0, r.i18n)("ORANGE_2"),
-    inputsInline: !0
+    inputsInline: true
   }, {
     type: "lists_get",
     message0: (0, r.i18n)("lists_get"),
@@ -68,12 +68,12 @@ exports.init_data_blocks = function (e, t) {
       type: "field_dropdown",
       name: "VAR",
       options: function () {
-        return t("list", !0);
+        return t("list", true);
       }
     }],
     output: "Array",
     colour: (0, r.i18n)("ORANGE_1"),
-    inputsInline: !0
+    inputsInline: true
   }, {
     type: "lists_append",
     message0: (0, r.i18n)("lists_append"),
@@ -87,9 +87,9 @@ exports.init_data_blocks = function (e, t) {
       check: ["Array"]
     }],
     colour: (0, r.i18n)("ORANGE_1"),
-    inputsInline: !0,
-    previousStatement: !0,
-    nextStatement: !0
+    inputsInline: true,
+    previousStatement: true,
+    nextStatement: true
   }, {
     type: "lists_insert_value",
     message0: (0, r.i18n)("lists_insert_value"),
@@ -109,9 +109,9 @@ exports.init_data_blocks = function (e, t) {
       align: "CENTRE"
     }],
     colour: (0, r.i18n)("ORANGE_1"),
-    inputsInline: !0,
-    previousStatement: !0,
-    nextStatement: !0
+    inputsInline: true,
+    previousStatement: true,
+    nextStatement: true
   }, {
     type: "lists_copy",
     message0: (0, r.i18n)("lists_copy"),
@@ -125,9 +125,9 @@ exports.init_data_blocks = function (e, t) {
       check: "Array"
     }],
     colour: (0, r.i18n)("ORANGE_1"),
-    inputsInline: !0,
-    previousStatement: !0,
-    nextStatement: !0
+    inputsInline: true,
+    previousStatement: true,
+    nextStatement: true
   }, {
     type: "lists_length",
     message0: (0, r.i18n)("lists_length"),
@@ -138,7 +138,7 @@ exports.init_data_blocks = function (e, t) {
     }],
     output: "Number",
     colour: (0, r.i18n)("ORANGE_1"),
-    inputsInline: !0
+    inputsInline: true
   }, {
     type: "lists_is_exist",
     message0: (0, r.i18n)("lists_is_exist"),
@@ -153,7 +153,7 @@ exports.init_data_blocks = function (e, t) {
     }],
     colour: (0, r.i18n)("ORANGE_1"),
     output: "Boolean",
-    inputsInline: !0
+    inputsInline: true
   }, {
     type: "lists_index_of",
     message0: (0, r.i18n)("lists_index_of"),
@@ -168,7 +168,7 @@ exports.init_data_blocks = function (e, t) {
     }],
     colour: (0, r.i18n)("ORANGE_1"),
     output: "Number",
-    inputsInline: !0
+    inputsInline: true
   }];
   e.define_blocks_with_json_array(n);
   Object.assign(e.blocks_xml, {

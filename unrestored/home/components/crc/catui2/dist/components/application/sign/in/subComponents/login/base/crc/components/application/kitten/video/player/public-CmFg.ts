@@ -89,12 +89,12 @@ var kittenVideoPlayer = {
         x: 0,
         y: 0
       };
-      if (options !== null && options !== void 0 && options.closeAnimationPos) {
+      if (options !== null && options !== undefined && options.closeAnimationPos) {
         closeAnimationPos = options.closeAnimationPos;
       }
       var ANIMATION = {
         transition: 'transform 0.5s cubic-bezier(0.2, 0, 0.2, 1)',
-        transform: "translate(".concat((((_closeAnimationPos = closeAnimationPos) === null || _closeAnimationPos === void 0 ? void 0 : _closeAnimationPos.x) || 0) - width / 2, "px, ").concat((((_closeAnimationPos2 = closeAnimationPos) === null || _closeAnimationPos2 === void 0 ? void 0 : _closeAnimationPos2.y) || 0) - height / 2, "px) scale(0)")
+        transform: "translate(".concat((((_closeAnimationPos = closeAnimationPos) === null || _closeAnimationPos === undefined ? undefined : _closeAnimationPos.x) || 0) - width / 2, "px, ").concat((((_closeAnimationPos2 = closeAnimationPos) === null || _closeAnimationPos2 === undefined ? undefined : _closeAnimationPos2.y) || 0) - height / 2, "px) scale(0)")
       };
       draggableRef.style.transition = ANIMATION.transition;
       draggableRef.style.transform = ANIMATION.transform;
@@ -119,8 +119,8 @@ var kittenVideoPlayer = {
     if (!videoPlayerContainer) {
       return;
     }
-    if ((_player = player) === null || _player === void 0) {
-      void 0;
+    if ((_player = player) === null || _player === undefined) {
+      undefined;
     } else {
       _player.pause();
     }

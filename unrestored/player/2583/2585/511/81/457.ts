@@ -3,7 +3,7 @@
 var r = require("./187");
 var i = require("./165");
 var o = require("./166");
-var a = require("./191/index");
+var a = require("./191");
 var s = require("./456");
 var u = require("./156");
 var c = require("./297");
@@ -37,7 +37,7 @@ var g = function (t) {
     return {
       next: function () {
         if (t && r >= t.length) {
-          t = void 0;
+          t = undefined;
         }
         return {
           value: t && t[r++],
@@ -54,11 +54,11 @@ var v = function () {
     return l.a.applyMaskPenaltyRule1(t) + l.a.applyMaskPenaltyRule2(t) + l.a.applyMaskPenaltyRule3(t) + l.a.applyMaskPenaltyRule4(t);
   };
   t.encode = function (e, n, a) {
-    if (void 0 === a) {
+    if (undefined === a) {
       a = null;
     }
     var s = t.DEFAULT_BYTE_MODE_ENCODING;
-    var l = null !== a && void 0 !== a.get(r.a.CHARACTER_SET);
+    var l = null !== a && undefined !== a.get(r.a.CHARACTER_SET);
     if (l) {
       s = a.get(r.a.CHARACTER_SET).toString();
     }
@@ -66,7 +66,7 @@ var v = function () {
     var m = new i.a();
     if (p === u.a.BYTE && (l || t.DEFAULT_BYTE_MODE_ENCODING !== s)) {
       var g = o.a.getCharacterSetECIByName(s);
-      if (void 0 !== g) {
+      if (undefined !== g) {
         this.appendECI(g, m);
       }
     }
@@ -74,7 +74,7 @@ var v = function () {
     var v;
     var _ = new i.a();
     this.appendBytes(e, p, _, s);
-    if (null !== a && void 0 !== a.get(r.a.QR_VERSION)) {
+    if (null !== a && undefined !== a.get(r.a.QR_VERSION)) {
       var y = Number.parseInt(a.get(r.a.QR_VERSION).toString(), 10);
       v = c.a.getVersionForNumber(y);
       var w = this.calculateBitsNeeded(p, m, _, v);
@@ -118,21 +118,21 @@ var v = function () {
     return e < t.ALPHANUMERIC_TABLE.length ? t.ALPHANUMERIC_TABLE[e] : -1;
   };
   t.chooseMode = function (e, n) {
-    if (void 0 === n) {
+    if (undefined === n) {
       n = null;
     }
     if (o.a.SJIS.getName() === n && this.isOnlyDoubleByteKanji(e)) {
       return u.a.KANJI;
     }
-    for (var r = !1, i = !1, a = 0, s = e.length; a < s; ++a) {
+    for (var r = false, i = false, a = 0, s = e.length; a < s; ++a) {
       var c = e.charAt(a);
       if (t.isDigit(c)) {
-        r = !0;
+        r = true;
       } else {
         if (-1 === this.getAlphanumericCode(c.charCodeAt(0))) {
           return u.a.BYTE;
         }
-        i = !0;
+        i = true;
       }
     }
     return i ? u.a.ALPHANUMERIC : r ? u.a.NUMERIC : u.a.BYTE;
@@ -142,19 +142,19 @@ var v = function () {
     try {
       e = p.a.encode(t, o.a.SJIS);
     } catch (a) {
-      return !1;
+      return false;
     }
     var n = e.length;
     if (n % 2 !== 0) {
-      return !1;
+      return false;
     }
     for (var r = 0; r < n; r += 2) {
       var i = 255 & e[r];
       if ((i < 129 || i > 159) && (i < 224 || i > 235)) {
-        return !1;
+        return false;
       }
     }
-    return !0;
+    return true;
   };
   t.chooseMaskPattern = function (t, e, n, r) {
     for (var i = Number.MAX_SAFE_INTEGER, o = -1, a = 0; a < f.a.NUM_MASK_PATTERNS; a++) {
@@ -185,12 +185,12 @@ var v = function () {
       throw new b.a("data bits cannot fit in the QR Code" + e.getSize() + " > " + n);
     }
     for (var r = 0; r < 4 && e.getSize() < n; ++r) {
-      e.appendBit(!1);
+      e.appendBit(false);
     }
     var i = 7 & e.getSize();
     if (i > 0) {
       for (r = i; r < 8; r++) {
-        e.appendBit(!1);
+        e.appendBit(false);
       }
     }
     var o = t - e.getSizeInBytes();
@@ -257,7 +257,7 @@ var v = function () {
     var O = new i.a();
     for (p = 0; p < d; ++p) {
       try {
-        for (a = void 0, T = g(h), A = T.next(), void 0; !A.done; A = T.next()) {
+        for (a = undefined, T = g(h), A = T.next(), undefined; !A.done; A = T.next()) {
           var T;
           var A;
           if (p < (w = A.value.getDataBytes()).length) {
@@ -282,7 +282,7 @@ var v = function () {
     }
     for (p = 0; p < f; ++p) {
       try {
-        for (u = void 0, S = g(h), I = S.next(), void 0; !I.done; I = S.next()) {
+        for (u = undefined, S = g(h), I = S.next(), undefined; !I.done; I = S.next()) {
           var S;
           var I;
           if (p < (E = I.value.getErrorCorrectionBytes()).length) {

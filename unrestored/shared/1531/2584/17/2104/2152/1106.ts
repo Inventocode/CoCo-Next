@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.Controller = void 0;
+exports.Controller = undefined;
 var r = require("tslib");
 var i = require("inversify");
 var o = require("../../../4/127");
@@ -51,7 +51,7 @@ var s = function () {
       }
     }
   };
-  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.theme)], e.prototype, "theme", void 0);
+  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.theme)], e.prototype, "theme", undefined);
   return e = (0, r.__decorate)([(0, i.injectable)()], e);
 }();
 exports.Controller = s;

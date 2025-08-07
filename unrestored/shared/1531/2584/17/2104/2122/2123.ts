@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.Flyout = void 0;
+exports.Flyout = undefined;
 var r = require("tslib");
 var i = require("inversify");
 var o = require("@kitten-team/gl-matrix");
@@ -14,20 +14,20 @@ var u = function () {
   function e(e) {
     var t = this;
     this.listeners_ = [];
-    this.containerVisible_ = !0;
+    this.containerVisible_ = true;
     this.permanently_disabled_ = [];
-    this.reflow_wrapper = void 0;
+    this.reflow_wrapper = undefined;
     this.buttons_ = [];
     this.cached_blocks = new Map();
     this.cached_buttons = new Map();
     this.default_button_gap = 12;
-    this.horizontalLayout_ = !1;
-    this.is_visible_ = !1;
+    this.horizontalLayout_ = false;
+    this.is_visible_ = false;
     this.width_ = 0;
     this.height_ = 0;
     this.event_wrappers_ = [];
     this.drag_angle_range_ = 50;
-    this.auto_close = !0;
+    this.auto_close = true;
     this.bind_transition_end_event = function () {
       if (t.svg_group && t.targetWorkspace_) {
         t.transition_end_wrapper = t.events.bind_event_with_checks(t.svg_group, "transitionend", t, function (e) {
@@ -45,8 +45,8 @@ var u = function () {
     };
     e.get_metrics = this.get_metrics.bind(this);
     e.set_metrics = this.set_metrics.bind(this);
-    e.has_categories = !1;
-    e.in_flyout = !0;
+    e.has_categories = false;
+    e.in_flyout = true;
     this.workspace_ = this.workspace_factory(e);
     this.workspace_.set_scale(e.zoomOptions.startScale);
     this.RTL = !!e.RTL;
@@ -68,7 +68,7 @@ var u = function () {
   };
   e.prototype.filter_for_capacity = function () {
     if (this.targetWorkspace_) {
-      for (var e = this.targetWorkspace_.remaining_capacity(), t = this.workspace_.get_top_blocks(!1), n = 0; n < t.length; n++) {
+      for (var e = this.targetWorkspace_.remaining_capacity(), t = this.workspace_.get_top_blocks(false), n = 0; n < t.length; n++) {
         var r = t[n];
         if (-1 == this.permanently_disabled_.indexOf(r)) {
           var i = r.get_descendants();
@@ -81,7 +81,7 @@ var u = function () {
     if (this.reflow_wrapper) {
       this.workspace_.remove_change_listener(this.reflow_wrapper);
     }
-    var e = this.workspace_.get_top_blocks(!1);
+    var e = this.workspace_.get_top_blocks(false);
     this.reflow_internal(e);
     if (this.reflow_wrapper) {
       this.workspace_.add_change_listener(this.reflow_wrapper);
@@ -199,7 +199,7 @@ var u = function () {
       delete this.scrollbar_;
     }
     if (this.workspace_) {
-      this.workspace_.set_target_workspace(void 0);
+      this.workspace_.set_target_workspace(undefined);
       this.workspace_.dispose();
     }
     if (this.svg_group) {
@@ -218,10 +218,10 @@ var u = function () {
     this.cached_buttons.clear();
   };
   e.prototype.add_block_listeners = function (e, t) {
-    this.listeners_.push(this.events.bind_event_with_checks(e, "mousedown", void 0, this.block_mouse_down(t)));
+    this.listeners_.push(this.events.bind_event_with_checks(e, "mousedown", undefined, this.block_mouse_down(t)));
   };
   e.prototype.xml_to_flyout_dom = function (e, t, n, r) {
-    if (void 0 === r) {
+    if (undefined === r) {
       r = this.workspace_;
     }
     if (!this.targetWorkspace_) {
@@ -289,7 +289,7 @@ var u = function () {
     if (this.workspace_ && this.svg_group) {
       var n;
       this.events.disable();
-      this.workspace_.set_resizes_enabled(!1);
+      this.workspace_.set_resizes_enabled(false);
       this.hide();
       this.clear_old_blocks();
       if ("string" == typeof e) {
@@ -302,7 +302,7 @@ var u = function () {
       } else {
         n = e;
       }
-      this.set_visible(!0);
+      this.set_visible(true);
       this.permanently_disabled_.length = 0;
       for (var o = [], a = [], s = 0; s < n.length; s++) {
         var u = n[s];
@@ -311,7 +311,7 @@ var u = function () {
       this.layout_(o, a);
       if (this.svg_background_) {
         this.listeners_.push(this.events.bind_event_with_checks(this.svg_background_, "mouseover", this, function () {
-          for (var e = t.workspace_.get_top_blocks(!1), n = 0; n < e.length; n++) {
+          for (var e = t.workspace_.get_top_blocks(false), n = 0; n < e.length; n++) {
             e[n].remove_select();
           }
         }));
@@ -319,7 +319,7 @@ var u = function () {
         console.warn("Flyout background svg not found.");
       }
       this.reset_size();
-      this.workspace_.set_resizes_enabled(!0);
+      this.workspace_.set_resizes_enabled(true);
       this.reflow();
       this.filter_for_capacity();
       this.position();
@@ -343,7 +343,7 @@ var u = function () {
   e.prototype.hide = function () {
     var e = this;
     if (this.is_visible() && this.targetWorkspace_ && this.svg_group) {
-      this.set_visible(!1);
+      this.set_visible(false);
       this.listeners_.forEach(function (t) {
         return e.events.unbind_event(t);
       });
@@ -351,7 +351,7 @@ var u = function () {
       this.position();
       if (this.reflow_wrapper) {
         this.workspace_.remove_change_listener(this.reflow_wrapper);
-        this.reflow_wrapper = void 0;
+        this.reflow_wrapper = undefined;
       }
       if (!this.auto_close) {
         this.utils.svg_resize(this.targetWorkspace_);
@@ -363,7 +363,7 @@ var u = function () {
   e.prototype.clear_old_blocks = function () {
     if (this.workspace_) {
       !function (e) {
-        for (var t = e.get_top_blocks(!1), n = 0; n < t.length; n++) {
+        for (var t = e.get_top_blocks(false), n = 0; n < t.length; n++) {
           var r = t[n];
           if (r.get_workspace() == e) {
             r.detach();
@@ -415,7 +415,7 @@ var u = function () {
     }
     var r;
     this.events.disable();
-    this.targetWorkspace_.set_resizes_enabled(!1);
+    this.targetWorkspace_.set_resizes_enabled(false);
     try {
       e.remove_hover();
       r = this.place_new_block(e, n);
@@ -425,9 +425,9 @@ var u = function () {
     }
     if (this.events.is_enabled()) {
       if (!this.events.get_group()) {
-        this.events.set_group(!0);
+        this.events.set_group(true);
       }
-      if (void 0 != r && this.events.is_enabled()) {
+      if (undefined != r && this.events.is_enabled()) {
         this.events.fire(this.create_event_factory({
           block: r,
           source: t ? "flyout:click" : "flyout:drag"
@@ -446,7 +446,7 @@ var u = function () {
     }
     this.workspace_.set_target_workspace(e);
     if (e.options.flyout_scrollable) {
-      this.scrollbar_ = this.scrollbar_factory(this.workspace_, this.horizontalLayout_, !1, "blocklyFlyoutScrollbar", e.options.flyout_show_scrollbars);
+      this.scrollbar_ = this.scrollbar_factory(this.workspace_, this.horizontalLayout_, false, "blocklyFlyoutScrollbar", e.options.flyout_show_scrollbars);
       this.bind_scroll_events();
     }
     this.bind_transition_end_event();
@@ -491,15 +491,15 @@ var u = function () {
   e.prototype.clear_cached_blocks = function () {
     this.cached_blocks.clear();
   };
-  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.utils)], e.prototype, "utils", void 0);
-  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.events)], e.prototype, "events", void 0);
-  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.xml)], e.prototype, "xml", void 0);
-  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.theme)], e.prototype, "theme", void 0);
-  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.CreateEvent)], e.prototype, "create_event_factory", void 0);
-  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.UIEvent)], e.prototype, "ui_event_factory", void 0);
-  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.FlyoutButton)], e.prototype, "flyout_button_factory", void 0);
-  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.WorkspaceSvg)], e.prototype, "workspace_factory", void 0);
-  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.Scrollbar)], e.prototype, "scrollbar_factory", void 0);
+  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.utils)], e.prototype, "utils", undefined);
+  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.events)], e.prototype, "events", undefined);
+  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.xml)], e.prototype, "xml", undefined);
+  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.theme)], e.prototype, "theme", undefined);
+  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.CreateEvent)], e.prototype, "create_event_factory", undefined);
+  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.UIEvent)], e.prototype, "ui_event_factory", undefined);
+  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.FlyoutButton)], e.prototype, "flyout_button_factory", undefined);
+  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.WorkspaceSvg)], e.prototype, "workspace_factory", undefined);
+  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.Scrollbar)], e.prototype, "scrollbar_factory", undefined);
   return e = (0, r.__decorate)([(0, i.injectable)()], e);
 }();
 exports.Flyout = u;

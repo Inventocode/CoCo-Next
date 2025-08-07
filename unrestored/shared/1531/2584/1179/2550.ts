@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.init_math_blocks = void 0;
+exports.init_math_blocks = undefined;
 var r = require("../4/127");
 var o = require("./2555/579");
 exports.init_math_blocks = function (e) {
@@ -24,7 +24,7 @@ exports.init_math_blocks = function (e) {
     }],
     output: "Number",
     colour: (0, o.i18n)("ORANGE_3"),
-    inputsInline: !0
+    inputsInline: true
   }, {
     type: "divisible_by",
     message0: (0, o.i18n)("divisible_by"),
@@ -39,7 +39,7 @@ exports.init_math_blocks = function (e) {
     }],
     output: "Boolean",
     colour: (0, o.i18n)("ORANGE_3"),
-    inputsInline: !0
+    inputsInline: true
   }, {
     type: "calculate",
     message0: (0, o.i18n)("calculate"),
@@ -50,7 +50,7 @@ exports.init_math_blocks = function (e) {
     }],
     output: "Number",
     colour: (0, o.i18n)("ORANGE_3"),
-    inputsInline: !0,
+    inputsInline: true,
     tooltip: (0, o.i18n)("CALCULATE_TOOLTIPS")
   }, {
     type: "math_arithmetic",
@@ -68,7 +68,7 @@ exports.init_math_blocks = function (e) {
       name: "B",
       check: ["Number", "String", "Boolean", "Array"]
     }],
-    inputsInline: !0,
+    inputsInline: true,
     output: "Number",
     colour: (0, o.i18n)("ORANGE_3"),
     extensions: ["math_op_tooltip"]
@@ -115,7 +115,7 @@ exports.init_math_blocks = function (e) {
       name: "DIVISOR",
       check: "Number"
     }],
-    inputsInline: !0,
+    inputsInline: true,
     output: "Number",
     colour: (0, o.i18n)("ORANGE_3"),
     tooltip: (0, o.i18n)("MATH_MODULO_TOOLTIP")
@@ -131,7 +131,7 @@ exports.init_math_blocks = function (e) {
       name: "PROPERTY",
       options: [[(0, o.i18n)("MATH_IS_EVEN"), "EVEN"], [(0, o.i18n)("MATH_IS_ODD"), "ODD"], [(0, o.i18n)("MATH_IS_PRIME"), "PRIME"], [(0, o.i18n)("MATH_IS_WHOLE"), "WHOLE"], [(0, o.i18n)("MATH_IS_POSITIVE"), "POSITIVE"], [(0, o.i18n)("MATH_IS_NEGATIVE"), "NEGATIVE"]]
     }],
-    inputsInline: !0,
+    inputsInline: true,
     output: "Boolean",
     colour: (0, o.i18n)("ORANGE_3"),
     tooltip: (0, o.i18n)("MATH_IS_TOOLTIP")
@@ -164,12 +164,12 @@ exports.init_math_blocks = function (e) {
           var s = t.get_input("DEGREES");
           var c = e.di_container.get(r.BINDING.events);
           if (a) {
-            if (!(s || c.is_undoing() || null === (o = t.addMutation) || void 0 === o)) {
+            if (!(s || c.is_undoing() || null === (o = t.addMutation) || undefined === o)) {
               o.call(t);
             }
           } else {
             if (s && !c.is_undoing()) {
-              if (!(null === (i = t.removeMutation) || void 0 === i)) {
+              if (!(null === (i = t.removeMutation) || undefined === i)) {
                 i.call(t);
               }
             }
@@ -179,8 +179,8 @@ exports.init_math_blocks = function (e) {
       this.append_dummy_input().append_field(n, "OP");
       this.append_shadow_input("NUM", (0, o.number_shadow)("45")).set_check("Number");
       this.append_dummy_input("DEGREES").append_field((0, o.i18n)("MATH_DEGREES"));
-      this.set_inputs_inline(!0);
-      this.set_output(!0);
+      this.set_inputs_inline(true);
+      this.set_output(true);
     },
     addMutation: function () {
       this.append_dummy_input("DEGREES").append_field((0, o.i18n)("MATH_DEGREES"));
@@ -189,7 +189,7 @@ exports.init_math_blocks = function (e) {
         var n = e.di_container.get(r.BINDING.ChangeEvent);
         t.fire(n("mutation", {
           block: this,
-          old_value: void 0,
+          old_value: undefined,
           new_value: "add"
         }));
       }
@@ -202,7 +202,7 @@ exports.init_math_blocks = function (e) {
         t.fire(n("mutation", {
           block: this,
           old_value: "remove",
-          new_value: void 0
+          new_value: undefined
         }));
       }
     }

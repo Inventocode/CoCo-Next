@@ -120,7 +120,7 @@ var y = function () {
   };
   e.prototype.getUpdatedOffsetForIndex = function (e) {
     var t = e.align;
-    var n = void 0 === t ? a.START : t;
+    var n = undefined === t ? a.START : t;
     var r = e.containerSize;
     var o = e.currentOffset;
     var i = e.targetIndex;
@@ -289,7 +289,7 @@ var T = function (e) {
     var t = e.scrollOffset;
     var n = e.scrollToIndex;
     this.rootNode.addEventListener("scroll", this.handleScroll, {
-      passive: !0
+      passive: true
     });
     if (null != t) {
       this.scrollTo(t);
@@ -350,18 +350,18 @@ var T = function (e) {
   };
   t.prototype.scrollTo = function (e) {
     var t = this.props.scrollDirection;
-    var n = void 0 === t ? s.VERTICAL : t;
+    var n = undefined === t ? s.VERTICAL : t;
     this.rootNode[m[n]] = e;
   };
   t.prototype.getOffsetForIndex = function (e, t, n) {
-    if (void 0 === t) {
+    if (undefined === t) {
       t = this.props.scrollToAlignment;
     }
-    if (void 0 === n) {
+    if (undefined === n) {
       n = this.props.itemCount;
     }
     var r = this.props.scrollDirection;
-    var o = void 0 === r ? s.VERTICAL : r;
+    var o = undefined === r ? s.VERTICAL : r;
     if (e < 0 || e >= n) {
       e = 0;
     }
@@ -373,7 +373,7 @@ var T = function (e) {
     });
   };
   t.prototype.recomputeSizes = function (e) {
-    if (void 0 === e) {
+    if (undefined === e) {
       e = 0;
     }
     this.styleCache = {};
@@ -386,14 +386,14 @@ var T = function (e) {
     n.estimatedItemSize;
     var o = n.height;
     var i = n.overscanCount;
-    var a = void 0 === i ? 3 : i;
+    var a = undefined === i ? 3 : i;
     var c = n.renderItem;
     n.itemCount;
     n.itemSize;
     var u = n.onItemsRendered;
     n.onScroll;
     var d = n.scrollDirection;
-    var p = void 0 === d ? s.VERTICAL : d;
+    var p = undefined === d ? s.VERTICAL : d;
     n.scrollOffset;
     n.scrollToIndex;
     n.scrollToAlignment;
@@ -433,7 +433,7 @@ var T = function (e) {
       f.forEach(function (e) {
         return C.push(c({
           index: e,
-          style: t.getStyle(e, !0)
+          style: t.getStyle(e, true)
         }));
       });
       if (p === s.HORIZONTAL) {
@@ -445,7 +445,7 @@ var T = function (e) {
         if (!(null != f && f.includes(I))) {
           C.push(c({
             index: I,
-            style: this.getStyle(I, !1)
+            style: this.getStyle(I, false)
           }));
         }
       }
@@ -456,21 +456,21 @@ var T = function (e) {
         });
       }
     }
-    return Object(r.createElement)("div", l({
+    return r.createElement("div", l({
       ref: this.getRef
     }, _, {
       style: T
-    }), Object(r.createElement)("div", {
+    }), r.createElement("div", {
       style: S
     }, C));
   };
   t.prototype.getNodeOffset = function () {
     var e = this.props.scrollDirection;
-    var t = void 0 === e ? s.VERTICAL : e;
+    var t = undefined === e ? s.VERTICAL : e;
     return this.rootNode[m[t]];
   };
   t.prototype.getEstimatedItemSize = function (e) {
-    if (void 0 === e) {
+    if (undefined === e) {
       e = this.props;
     }
     return e.estimatedItemSize || "number" === typeof e.itemSize && e.itemSize || 50;
@@ -486,7 +486,7 @@ var T = function (e) {
     var r;
     var o;
     var i = this.props.scrollDirection;
-    var a = void 0 === i ? s.VERTICAL : i;
+    var a = undefined === i ? s.VERTICAL : i;
     var c = this.sizeAndPositionManager.getSizeAndPositionForIndex(e);
     var u = c.size;
     var d = c.offset;
@@ -499,20 +499,20 @@ var T = function (e) {
   };
   t.propTypes = {
     estimatedItemSize: o.number,
-    height: Object(o.oneOfType)([o.number, o.string]).isRequired,
+    height: o.oneOfType([o.number, o.string]).isRequired,
     itemCount: o.number.isRequired,
-    itemSize: Object(o.oneOfType)([o.number, o.array, o.func]).isRequired,
+    itemSize: o.oneOfType([o.number, o.array, o.func]).isRequired,
     onScroll: o.func,
     onItemsRendered: o.func,
     overscanCount: o.number,
     renderItem: o.func.isRequired,
     scrollOffset: o.number,
     scrollToIndex: o.number,
-    scrollToAlignment: Object(o.oneOf)([a.AUTO, a.START, a.CENTER, a.END]),
-    scrollDirection: Object(o.oneOf)([s.HORIZONTAL, s.VERTICAL]),
-    stickyIndices: Object(o.arrayOf)(o.number),
+    scrollToAlignment: o.oneOf([a.AUTO, a.START, a.CENTER, a.END]),
+    scrollDirection: o.oneOf([s.HORIZONTAL, s.VERTICAL]),
+    stickyIndices: o.arrayOf(o.number),
     style: o.object,
-    width: Object(o.oneOfType)([o.number, o.string])
+    width: o.oneOfType([o.number, o.string])
   };
   return t;
 }(r.PureComponent);

@@ -6,7 +6,7 @@ function o() {}
 function a(e, t, n) {
   this.fn = e;
   this.context = t;
-  this.once = n || !1;
+  this.once = n || false;
 }
 function s(e, t, n, r, o) {
   if ("function" !== typeof n) {
@@ -40,7 +40,7 @@ function u() {
 if (Object.create) {
   o.prototype = Object.create(null);
   if (!new o().__proto__) {
-    i = !1;
+    i = false;
   }
 }
 u.prototype.eventNames = function () {
@@ -77,32 +77,32 @@ u.prototype.listenerCount = function (e) {
 u.prototype.emit = function (e, t, n, r, o, a) {
   var s = i ? i + e : e;
   if (!this._events[s]) {
-    return !1;
+    return false;
   }
   var c;
   var u;
   var l = this._events[s];
   var f = arguments.length;
   if (l.fn) {
-    switch (l.once && this.removeListener(e, l.fn, void 0, !0), f) {
+    switch (l.once && this.removeListener(e, l.fn, undefined, true), f) {
       case 1:
         l.fn.call(l.context);
-        return !0;
+        return true;
       case 2:
         l.fn.call(l.context, t);
-        return !0;
+        return true;
       case 3:
         l.fn.call(l.context, t, n);
-        return !0;
+        return true;
       case 4:
         l.fn.call(l.context, t, n, r);
-        return !0;
+        return true;
       case 5:
         l.fn.call(l.context, t, n, r, o);
-        return !0;
+        return true;
       case 6:
         l.fn.call(l.context, t, n, r, o, a);
-        return !0;
+        return true;
     }
     for (u = 1, c = new Array(f - 1); u < f; u++) {
       c[u - 1] = arguments[u];
@@ -112,7 +112,7 @@ u.prototype.emit = function (e, t, n, r, o, a) {
     var d;
     var h = l.length;
     for (u = 0; u < h; u++) {
-      switch (l[u].once && this.removeListener(e, l[u].fn, void 0, !0), f) {
+      switch (l[u].once && this.removeListener(e, l[u].fn, undefined, true), f) {
         case 1:
           l[u].fn.call(l[u].context);
           break;
@@ -135,13 +135,13 @@ u.prototype.emit = function (e, t, n, r, o, a) {
       }
     }
   }
-  return !0;
+  return true;
 };
 u.prototype.on = function (e, t, n) {
-  return s(this, e, t, n, !1);
+  return s(this, e, t, n, false);
 };
 u.prototype.once = function (e, t, n) {
-  return s(this, e, t, n, !0);
+  return s(this, e, t, n, true);
 };
 u.prototype.removeListener = function (e, t, n, r) {
   var o = i ? i + e : e;

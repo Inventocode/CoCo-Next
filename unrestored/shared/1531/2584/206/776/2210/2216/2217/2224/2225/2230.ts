@@ -21,9 +21,9 @@ module.exports = function (e, t, n) {
   var h = h || [];
   h.push(r);
   r = "";
-  if (!1 !== e.createErrors) {
+  if (false !== e.createErrors) {
     r += " { keyword: 'const' , dataPath: (dataPath || '') + " + e.errorPath + " , schemaPath: " + e.util.toQuotedString(c) + " , params: { allowedValue: schema" + i + " } ";
-    if (!1 !== e.opts.messages) {
+    if (false !== e.opts.messages) {
       r += " , message: 'should be equal to constant' ";
     }
     if (e.opts.verbose) {

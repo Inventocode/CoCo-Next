@@ -1,6 +1,6 @@
 "use strict";
 
-var r = require("../186/index");
+var r = require("axios");
 var o = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -14,7 +14,7 @@ var o = function __importDefault(module) {
   return defaultExport;
 }(r).a.create({
   timeout: 5e3,
-  withCredentials: !0
+  withCredentials: true
 });
 o.interceptors.request.use(function (e) {
   return e;

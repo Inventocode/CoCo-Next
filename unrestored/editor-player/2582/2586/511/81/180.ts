@@ -11,18 +11,18 @@ var s = function () {
     this.height = e;
     this.rowSize = r;
     this.bits = n;
-    if (!(void 0 !== e && null !== e)) {
+    if (!(undefined !== e && null !== e)) {
       e = t;
     }
     this.height = e;
     if (t < 1 || e < 1) {
       throw new u.a("Both dimensions must be greater than 0");
     }
-    if (!(void 0 !== r && null !== r)) {
+    if (!(undefined !== r && null !== r)) {
       r = Math.floor((t + 31) / 32);
     }
     this.rowSize = r;
-    if (!(void 0 !== n && null !== n)) {
+    if (!(undefined !== n && null !== n)) {
       this.bits = new Int32Array(this.rowSize * this.height);
     }
   }
@@ -54,14 +54,14 @@ var s = function () {
         f++;
       } else if (e.substring(f, f + r.length) === r) {
         f += r.length;
-        o[i] = !0;
+        o[i] = true;
         i++;
       } else {
         if (e.substring(f, f + n.length) !== n) {
           throw new u.a("illegal character encountered: " + e.substring(f));
         }
         f += n.length;
-        o[i] = !1;
+        o[i] = false;
         i++;
       }
     }
@@ -130,7 +130,7 @@ var s = function () {
     }
   };
   t.prototype.getRow = function (t, e) {
-    if (null === e || void 0 === e || e.getSize() < this.width) {
+    if (null === e || undefined === e || e.getSize() < this.width) {
       e = new n.a(this.width);
     } else {
       e.clear();
@@ -222,7 +222,7 @@ var s = function () {
   };
   t.prototype.equals = function (e) {
     if (!(e instanceof t)) {
-      return !1;
+      return false;
     }
     var r = e;
     return this.width === r.width && this.height === r.height && this.rowSize === r.rowSize && i.a.equals(this.bits, r.bits);
@@ -232,13 +232,13 @@ var s = function () {
     return t = 31 * (t = 31 * (t = 31 * (t = 31 * t + this.width) + this.height) + this.rowSize) + i.a.hashCode(this.bits);
   };
   t.prototype.toString = function (t, e, r) {
-    if (void 0 === t) {
+    if (undefined === t) {
       t = "X ";
     }
-    if (void 0 === e) {
+    if (undefined === e) {
       e = "  ";
     }
-    if (void 0 === r) {
+    if (undefined === r) {
       r = "\n";
     }
     return this.buildToString(t, e, r);

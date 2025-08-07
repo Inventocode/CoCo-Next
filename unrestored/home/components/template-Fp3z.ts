@@ -89,7 +89,7 @@ var __decorate = this && this.__decorate || function (decorators, target, key, d
   return r;
 };
 import * as styles from "./styles-nlA+";
-var timeId = void 0;
+var timeId = undefined;
 var CommonToastView = function (_React$Component) {
   _inherits(CommonToastView, _React$Component);
   function CommonToastView(props) {

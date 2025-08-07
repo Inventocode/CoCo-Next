@@ -75,7 +75,7 @@ module.exports = function (e, t, n) {
     T.schema = m.validate;
     T.schemaPath = "";
     var D = e.compositeRule;
-    e.compositeRule = T.compositeRule = !0;
+    e.compositeRule = T.compositeRule = true;
     var I = e.validate(T).replace(/validate\.schema/g, y);
     e.compositeRule = T.compositeRule = D;
     o += " " + I;
@@ -88,7 +88,7 @@ module.exports = function (e, t, n) {
     } else {
       o += "self";
     }
-    if (A || !1 === w.schema) {
+    if (A || false === w.schema) {
       o += " , " + d + " ";
     } else {
       o += " , " + i + " , " + d + " , validate.schema" + e.schemaPath + " ";
@@ -101,7 +101,7 @@ module.exports = function (e, t, n) {
     var R = s ? e.dataPathArr[s] : "parentDataProperty";
     var P = o += " , " + F + " , " + R + " , rootData )  ";
     o = N.pop();
-    if (!1 === w.errors) {
+    if (false === w.errors) {
       o += " " + h + " = ";
       if (S) {
         o += "await ";
@@ -122,7 +122,7 @@ module.exports = function (e, t, n) {
   } else {
     var N;
     o += " if ( ";
-    if (void 0 === w.valid) {
+    if (undefined === w.valid) {
       o += " !";
       o += v ? "" + B : "" + h;
     } else {
@@ -134,9 +134,9 @@ module.exports = function (e, t, n) {
     o = "";
     (N = N || []).push(o);
     o = "";
-    if (!1 !== e.createErrors) {
+    if (false !== e.createErrors) {
       o += " { keyword: '" + (r || "custom") + "' , dataPath: (dataPath || '') + " + e.errorPath + " , schemaPath: " + e.util.toQuotedString(l) + " , params: { keyword: '" + this.keyword + "' } ";
-      if (!1 !== e.opts.messages) {
+      if (false !== e.opts.messages) {
         o += " , message: 'should pass \"" + this.keyword + "\" keyword validation' ";
       }
       if (e.opts.verbose) {
@@ -169,7 +169,7 @@ module.exports = function (e, t, n) {
           o += " } ";
         }
       } else {
-        if (!1 === w.errors) {
+        if (false === w.errors) {
           o += " " + j + " ";
         } else {
           o += " if (" + p + " == errors) { " + j + " } else {  for (var " + O + "=" + p + "; " + O + "<errors; " + O + "++) { var " + k + " = vErrors[" + O + "]; if (" + k + ".dataPath === undefined) " + k + ".dataPath = (dataPath || '') + " + e.errorPath + "; if (" + k + ".schemaPath === undefined) { " + k + ".schemaPath = \"" + l + "\"; } ";
@@ -182,9 +182,9 @@ module.exports = function (e, t, n) {
     } else {
       if (v) {
         o += "   var err =   ";
-        if (!1 !== e.createErrors) {
+        if (false !== e.createErrors) {
           o += " { keyword: '" + (r || "custom") + "' , dataPath: (dataPath || '') + " + e.errorPath + " , schemaPath: " + e.util.toQuotedString(l) + " , params: { keyword: '" + this.keyword + "' } ";
-          if (!1 !== e.opts.messages) {
+          if (false !== e.opts.messages) {
             o += " , message: 'should pass \"" + this.keyword + "\" keyword validation' ";
           }
           if (e.opts.verbose) {
@@ -203,7 +203,7 @@ module.exports = function (e, t, n) {
           }
         }
       } else {
-        if (!1 === w.errors) {
+        if (false === w.errors) {
           o += " " + j + " ";
         } else {
           o += " if (Array.isArray(" + C + ")) { if (vErrors === null) vErrors = " + C + "; else vErrors = vErrors.concat(" + C + "); errors = vErrors.length;  for (var " + O + "=" + p + "; " + O + "<errors; " + O + "++) { var " + k + " = vErrors[" + O + "]; if (" + k + ".dataPath === undefined) " + k + ".dataPath = (dataPath || '') + " + e.errorPath + ";  " + k + ".schemaPath = \"" + l + "\";  ";

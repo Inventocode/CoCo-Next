@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.DARK_THEME_CONFIG = exports.DEFAULT_THEME_CONFIG = exports.RendererParams = exports.Theme = void 0;
+exports.DARK_THEME_CONFIG = exports.DEFAULT_THEME_CONFIG = exports.RendererParams = exports.Theme = undefined;
 var r = require("tslib");
 var i = require("inversify");
 var o = require("../4/127");
@@ -19,7 +19,7 @@ var c = function () {
   }
   e.prototype.get_color = function (e) {
     var t = e.match(/^%\{(BKY_)?([^}]+)\}$/);
-    e = (null === t || void 0 === t ? void 0 : t[2]) || e;
+    e = (null === t || undefined === t ? undefined : t[2]) || e;
     return this.block_color[e];
   };
   e.prototype.register = function (e, t) {
@@ -81,7 +81,7 @@ var c = function () {
     e.disabled_color.fill = new s.Color(e.disabled_color.fill, h.disabled_color.fill, "Block disabled fill color " + e.disabled_color.fill + " replaced by default");
     e.disabled_color.border = new s.Color(e.disabled_color.border, h.disabled_color.border, "Block disabled border color " + e.disabled_color.border + " replaced by default");
   };
-  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.Blink)], e.prototype, "Blink", void 0);
+  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.Blink)], e.prototype, "Blink", undefined);
   return e = (0, r.__decorate)([(0, i.injectable)()], e);
 }();
 exports.Theme = c;

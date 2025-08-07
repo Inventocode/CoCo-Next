@@ -13,7 +13,7 @@ var i = function (t) {
     return {
       next: function () {
         if (t && n >= t.length) {
-          t = void 0;
+          t = undefined;
         }
         return {
           value: t && t[n++],

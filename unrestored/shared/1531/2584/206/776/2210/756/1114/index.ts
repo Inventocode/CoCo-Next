@@ -1,6 +1,6 @@
 "use strict";
 
-var r = require("../../../../../31/index");
+var r = require("lodash");
 var i = require("./2212/index");
 function o(e) {
   return !e.reachable;
@@ -11,7 +11,7 @@ module.exports = {
     docs: {
       description: "require `return` statements to either always or never specify values",
       category: "Best Practices",
-      recommended: !1,
+      recommended: false,
       url: "https://eslint.org/docs/rules/consistent-return"
     },
     schema: [{
@@ -19,10 +19,10 @@ module.exports = {
       properties: {
         treatUndefinedAsUnspecified: {
           type: "boolean",
-          default: !1
+          default: false
         }
       },
-      additionalProperties: !1
+      additionalProperties: false
     }],
     messages: {
       missingReturn: "Expected to return a value at the end of {{name}}.",
@@ -31,7 +31,7 @@ module.exports = {
     }
   },
   create: function (e) {
-    var t = !0 === (e.options[0] || {}).treatUndefinedAsUnspecified;
+    var t = true === (e.options[0] || {}).treatUndefinedAsUnspecified;
     var n = null;
     function a(t) {
       var r;
@@ -66,8 +66,8 @@ module.exports = {
         n = {
           upper: n,
           codePath: e,
-          hasReturn: !1,
-          hasReturnValue: !1,
+          hasReturn: false,
+          hasReturnValue: false,
           messageId: "",
           node: t
         };
@@ -92,7 +92,7 @@ module.exports = {
             });
           }
         } else {
-          n.hasReturn = !0;
+          n.hasReturn = true;
           n.hasReturnValue = s;
           n.messageId = s ? "missingReturnValue" : "unexpectedReturnValue";
           n.data = {

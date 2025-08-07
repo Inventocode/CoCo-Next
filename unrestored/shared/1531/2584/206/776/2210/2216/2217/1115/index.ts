@@ -26,10 +26,10 @@ function c(e, t, n) {
     s = l.baseId;
   }
   if (i instanceof a) {
-    o = i.validate || e.call(this, i.schema, t, void 0, s);
+    o = i.validate || e.call(this, i.schema, t, undefined, s);
   } else {
-    if (void 0 !== i) {
-      o = p(i, this._opts.inlineRefs) ? i : e.call(this, i, t, void 0, s);
+    if (undefined !== i) {
+      o = p(i, this._opts.inlineRefs) ? i : e.call(this, i, t, undefined, s);
     }
   }
   return o;
@@ -95,18 +95,18 @@ c.ids = function (e) {
     "": t
   };
   var a = {
-    "": _(t, !1)
+    "": _(t, false)
   };
   var c = {};
   var u = this;
   s(e, {
-    allKeys: !0
+    allKeys: true
   }, function (e, t, s, l, f, d, h) {
     if ("" !== t) {
       var p = u._getId(e);
       var _ = n[l];
       var A = a[l] + "/" + f;
-      if (void 0 !== h) {
+      if (undefined !== h) {
         A += "/" + ("number" == typeof h ? h : o.escapeFragment(h));
       }
       if ("string" == typeof p) {
@@ -145,7 +145,7 @@ function d(e, t, n, r) {
     for (var i = e.fragment.split("/"), a = 1; a < i.length; a++) {
       var s = i[a];
       if (s) {
-        if (void 0 === (n = n[s = o.unescapeFragment(s)])) {
+        if (undefined === (n = n[s = o.unescapeFragment(s)])) {
           break;
         }
         var c;
@@ -160,34 +160,34 @@ function d(e, t, n, r) {
         }
       }
     }
-    return void 0 !== n && n !== r.schema ? {
+    return undefined !== n && n !== r.schema ? {
       schema: n,
       root: r,
       baseId: t
-    } : void 0;
+    } : undefined;
   }
 }
 var h = o.toHash(["type", "format", "pattern", "maxLength", "minLength", "maxProperties", "minProperties", "maxItems", "minItems", "maximum", "minimum", "uniqueItems", "multipleOf", "required", "enum"]);
 function p(e, t) {
-  return !1 !== t && (void 0 === t || !0 === t ? function e(t) {
+  return false !== t && (undefined === t || true === t ? function e(t) {
     var n;
     if (Array.isArray(t)) {
       for (var r = 0; r < t.length; r++) {
         if ("object" == typeof (n = t[r]) && !e(n)) {
-          return !1;
+          return false;
         }
       }
     } else {
       for (var i in t) {
         if ("$ref" == i) {
-          return !1;
+          return false;
         }
         if ("object" == typeof (n = t[i]) && !e(n)) {
-          return !1;
+          return false;
         }
       }
     }
-    return !0;
+    return true;
   }(e) : t ? function e(t) {
     var n;
     var r = 0;
@@ -213,10 +213,10 @@ function p(e, t) {
       }
     }
     return r;
-  }(e) <= t : void 0);
+  }(e) <= t : undefined);
 }
 function _(e, t) {
-  if (!1 !== t) {
+  if (false !== t) {
     e = v(e);
   }
   return A(r.parse(e));

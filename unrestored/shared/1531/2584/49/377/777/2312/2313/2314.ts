@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.GlobalCommentPlugin = void 0;
+exports.GlobalCommentPlugin = undefined;
 var r = require("tslib");
 var i = (0, r.__importStar)(require("../../../../../17/533"));
 var o = require("../../../../../17/640/index");
@@ -25,7 +25,7 @@ var s = function (e) {
           }
           c = r.get_block_id();
           var a = t.get(c);
-          if (void 0 !== a) {
+          if (undefined !== a) {
             (s = e[a].get_element_json()).comments[c].pinned = o;
             e.splice(n, 1);
             continue;
@@ -42,7 +42,7 @@ var s = function (e) {
       }
     }
   };
-  (0, r.__decorate)([(0, o.lazy_inject)(a.BINDING.json)], t.prototype, "json", void 0);
+  (0, r.__decorate)([(0, o.lazy_inject)(a.BINDING.json)], t.prototype, "json", undefined);
   return t;
 }(require("../../../728/1135").BasePlugin);
 exports.GlobalCommentPlugin = s;

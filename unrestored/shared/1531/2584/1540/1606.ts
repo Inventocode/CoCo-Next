@@ -1,1 +1,1 @@
-require("./1745/531")(Math, "Math", !0);
+require("./1745/531")(Math, "Math", true);

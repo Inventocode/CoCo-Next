@@ -70,8 +70,8 @@ export { V as cb };
 export { z as ab };
 export { Y as H };
 export { K as t };
-var r = require("./10/index");
-var o = require("./47");
+import r = require("./10/index");
+import o = require("./47");
 function i(e, t, n) {
   return (e / t * 100).toFixed(n);
 }
@@ -96,7 +96,7 @@ function l(e, t) {
   var r = new Set(e);
   var i = new Set(t);
   var a = [];
-  var s = Object(o.a)(r);
+  var s = o.a(r);
   try {
     for (s.s(); !(n = s.n()).done;) {
       var c = n.value;
@@ -114,7 +114,7 @@ function l(e, t) {
 function u(e) {
   return /^[\u4E00-\u9FA5A-Za-z][\u4E00-\u9FA5A-Za-z0-9_]*$/.test(e);
 }
-var d = require("./51/index");
+import d = require("color");
 var p = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -127,8 +127,8 @@ var p = function __importDefault(module) {
   });
   return defaultExport;
 }(d);
-var f = require("./31/index");
-var h = require("./13/225");
+import f = require("lodash");
+import h = require("./13/225");
 var m = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -168,19 +168,19 @@ var O = function (e) {
 };
 var w = function (e) {
   if ("string" !== typeof e) {
-    return !1;
+    return false;
   }
-  var t = !0;
+  var t = true;
   try {
     p()(e).toString();
   } catch (n) {
-    t = !1;
+    t = false;
   }
   return t;
 };
 var C = function (e) {
   var t = e.alpha();
-  var n = Math.round(255 * Object(f.clamp)(t, 0, 1));
+  var n = Math.round(255 * f.clamp(t, 0, 1));
   var r = n.toString(16);
   var o = n <= 15 ? "0".concat(r) : r;
   return e.hex() + o.toUpperCase();
@@ -195,7 +195,7 @@ function T(e) {
 var S = function (e) {
   var t = 0;
   var n = 0;
-  Object(f.each)(["r", "g", "b", "a", "h", "s", "l", "v"], function (r) {
+  f.each(["r", "g", "b", "a", "h", "s", "l", "v"], function (r) {
     if (e[r] && (t += 1, isNaN(e[r]) || (n += 1), "s" === r || "l" === r)) {
       if (/^\d+%$/.test(e[r])) {
         n += 1;
@@ -223,7 +223,7 @@ var I = function (e, t) {
     source: e.source
   };
 };
-var A = require("./450/index");
+import A = require("./450/index");
 function j() {
   var e = navigator.userAgent;
   return !!["Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod"].find(function (t) {
@@ -237,7 +237,7 @@ function R() {
   var e = navigator.userAgent.indexOf("Chrome") > -1;
   return navigator.userAgent.indexOf("Safari") > -1 && !e;
 }
-var k = require("./141/311");
+import k = require("./141/311");
 function x(e, t) {
   var n = new Date(e);
   n.setDate(n.getDate() + t);
@@ -252,7 +252,7 @@ function D(e) {
   var n = "0".concat(e.getMinutes()).slice(-2);
   return "".concat(t, ":").concat(n);
 }
-var M = require("./1/index");
+import M = require("regenerator-runtime");
 var L = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -265,13 +265,13 @@ var L = function __importDefault(module) {
   });
   return defaultExport;
 }(M);
-var P = require("./7");
+import P = require("./7");
 var B = {};
 function F(e, t) {
   return G.apply(this, arguments);
 }
 function G() {
-  return (G = Object(P.a)(L.a.mark(function e(t, n) {
+  return (G = P.a(L.a.mark(function e(t, n) {
     var r;
     return L.a.wrap(function (e) {
       for (;;) {
@@ -321,7 +321,7 @@ function W(e) {
   if ("object" === typeof e) {
     var t = Array.isArray(e) ? [] : {};
     Object.entries(e).forEach(function (e) {
-      var n = Object(r.a)(e, 2);
+      var n = r.a(e, 2);
       var o = n[0];
       var i = n[1];
       t[o] = W(i);

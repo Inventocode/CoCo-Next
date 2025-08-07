@@ -6,7 +6,7 @@
       var r;
       var i = 1;
       var o = {};
-      var a = !1;
+      var a = false;
       var s = e.document;
       var c = Object.getPrototypeOf && Object.getPrototypeOf(e);
       c = c && c.setTimeout ? c : e;
@@ -19,10 +19,10 @@
       } else {
         if (function () {
           if (e.postMessage && !e.importScripts) {
-            var t = !0;
+            var t = true;
             var n = e.onmessage;
             e.onmessage = function () {
-              t = !1;
+              t = false;
             };
             e.postMessage("", "*");
             e.onmessage = n;
@@ -37,7 +37,7 @@
               }
             };
             if (e.addEventListener) {
-              e.addEventListener("message", n, !1);
+              e.addEventListener("message", n, false);
             } else {
               e.attachEvent("onmessage", n);
             }
@@ -105,7 +105,7 @@
       } else {
         var t = o[e];
         if (t) {
-          a = !0;
+          a = true;
           try {
             !function (e) {
               var t = e.callback;
@@ -124,12 +124,12 @@
                   t(n[0], n[1], n[2]);
                   break;
                 default:
-                  t.apply(void 0, n);
+                  t.apply(undefined, n);
               }
             }(t);
           } finally {
             u(e);
-            a = !1;
+            a = false;
           }
         }
       }

@@ -6,14 +6,14 @@ export { _ as e };
 export { v as a };
 export { b };
 export { y as d };
-var r = require("../27");
-var o = require("../40");
+import r = require("../27");
+import o = require("../40");
 var i = function () {
   function e() {
-    Object(r.a)(this, e);
+    r.a(this, e);
     this.profileMap = new Map();
   }
-  Object(o.a)(e, [{
+  o.a(e, [{
     key: "insertBlockProfile",
     value: function (e, t) {
       this.profileMap.set(e, t);
@@ -30,12 +30,12 @@ var i = function () {
   }]);
   return e;
 }();
-var a = require("./609/index");
-var s = require("../4/index");
+import a = require("./609/index");
+import s = require("../4/index");
 var c = function () {
   function e() {
     var t = this;
-    Object(r.a)(this, e);
+    r.a(this, e);
     this.dynamicValueMap = new Map();
     this.generator = new a.JsonJavaScriptGenerator();
     this.getFieldValue = this.generator.get_field_value.bind(this.generator);
@@ -54,7 +54,7 @@ var c = function () {
           if (a) {
             c.widgetId = a;
           }
-          return Object(s.h)(o, c);
+          return s.h(o, c);
         }
         return o;
       });
@@ -94,12 +94,12 @@ var c = function () {
     this.ORDER_ASSIGNMENT = this.generator.ORDER_ASSIGNMENT;
     this.ORDER_COMMA = this.generator.ORDER_COMMA;
     this.ORDER_NONE = this.generator.ORDER_NONE;
-    Object(a.load_basic_blocks_json_js_generators)(this.generator);
+    a.load_basic_blocks_json_js_generators(this.generator);
   }
-  Object(o.a)(e, [{
+  o.a(e, [{
     key: "getDynamicValue",
     value: function (e) {
-      var t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+      var t = arguments.length > 1 && undefined !== arguments[1] && arguments[1];
       var n = this.dynamicValueMap.get(e);
       return t ? n || "" : n || e;
     }
@@ -123,14 +123,14 @@ var c = function () {
 }();
 var l = function () {
   function e() {
-    Object(r.a)(this, e);
+    r.a(this, e);
     this.xmlMap = new Map();
   }
-  Object(o.a)(e, [{
+  o.a(e, [{
     key: "insertBlockXML",
     value: function (e) {
-      var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
-      var n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+      var t = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : "";
+      var n = arguments.length > 2 && undefined !== arguments[2] && arguments[2];
       this.xmlMap.set(e, {
         xml: t,
         notCached: n
@@ -218,7 +218,7 @@ var u = {
     return [];
   },
   getSliderVisible: function () {
-    return !1;
+    return false;
   },
   getListViewerChildWidgetList: function (e, t) {
     return [];
@@ -258,7 +258,7 @@ function _(e, t) {
   for (var n = arguments.length, r = new Array(n > 2 ? n - 2 : 0), o = 2; o < n; o++) {
     r[o - 2] = arguments[o];
   }
-  r.forEach(g.bind(void 0, e, t));
+  r.forEach(g.bind(undefined, e, t));
 }
 function v() {
   return f.getBlockProfileList();

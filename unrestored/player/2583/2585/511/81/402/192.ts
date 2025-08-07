@@ -36,12 +36,12 @@ var f = function (t) {
   }
   d(e, t);
   e.findStartGuardPattern = function (t) {
-    for (var n, r = !1, i = 0, o = Int32Array.from([0, 0, 0]); !r;) {
+    for (var n, r = false, i = 0, o = Int32Array.from([0, 0, 0]); !r;) {
       o = Int32Array.from([0, 0, 0]);
-      var a = (n = e.findGuardPattern(t, i, !1, this.START_END_PATTERN, o))[0];
+      var a = (n = e.findGuardPattern(t, i, false, this.START_END_PATTERN, o))[0];
       var s = a - ((i = n[1]) - a);
       if (s >= 0) {
-        r = t.isRange(s, a, !1);
+        r = t.isRange(s, a, false);
       }
     }
     return n;
@@ -52,7 +52,7 @@ var f = function (t) {
   e.checkStandardUPCEANChecksum = function (t) {
     var n = t.length;
     if (0 === n) {
-      return !1;
+      return false;
     }
     var r = parseInt(t.charAt(n - 1), 10);
     return e.getStandardUPCEANChecksum(t.substring(0, n - 1)) === r;
@@ -75,7 +75,7 @@ var f = function (t) {
     return (1e3 - n) % 10;
   };
   e.decodeEnd = function (t, n) {
-    return e.findGuardPattern(t, n, !1, e.START_END_PATTERN, new Int32Array(e.START_END_PATTERN.length).fill(0));
+    return e.findGuardPattern(t, n, false, e.START_END_PATTERN, new Int32Array(e.START_END_PATTERN.length).fill(0));
   };
   e.findGuardPatternWithoutCounters = function (t, e, n, r) {
     return this.findGuardPattern(t, e, n, r, new Int32Array(r.length));
@@ -139,7 +139,7 @@ var h = function (t) {
     return {
       next: function () {
         if (t && r >= t.length) {
-          t = void 0;
+          t = undefined;
         }
         return {
           value: t && t[r++],
@@ -180,7 +180,7 @@ var p = function () {
       var p = f.decodeDigit(e, a, u, f.L_AND_G_PATTERNS);
       r += String.fromCharCode("0".charCodeAt(0) + p % 10);
       try {
-        for (i = void 0, m = h(a), b = m.next(), void 0; !b.done; b = m.next()) {
+        for (i = undefined, m = h(a), b = m.next(), undefined; !b.done; b = m.next()) {
           var m;
           var b;
           u += b.value;
@@ -282,7 +282,7 @@ var m = function (t) {
     return {
       next: function () {
         if (t && r >= t.length) {
-          t = void 0;
+          t = undefined;
         }
         return {
           value: t && t[r++],
@@ -322,7 +322,7 @@ var b = function () {
       var d = f.decodeDigit(t, o, s, f.L_AND_G_PATTERNS);
       n += String.fromCharCode("0".charCodeAt(0) + d % 10);
       try {
-        for (r = void 0, h = m(o), p = h.next(), void 0; !p.done; p = h.next()) {
+        for (r = undefined, h = m(o), p = h.next(), undefined; !p.done; p = h.next()) {
           var h;
           var p;
           s += p.value;
@@ -366,7 +366,7 @@ var b = function () {
 var g = function () {
   function t() {}
   t.decodeRow = function (t, e, n) {
-    var r = f.findGuardPattern(e, n, !1, this.EXTENSION_START_PATTERN, new Int32Array(this.EXTENSION_START_PATTERN.length).fill(0));
+    var r = f.findGuardPattern(e, n, false, this.EXTENSION_START_PATTERN, new Int32Array(this.EXTENSION_START_PATTERN.length).fill(0));
     try {
       return new p().decodeRow(t, e, r);
     } catch (i) {
@@ -434,7 +434,7 @@ var y = function (t) {
     }
     var E = y[1];
     var O = E + (E - y[0]);
-    if (O >= n.getSize() || !n.isRange(E, O, !1)) {
+    if (O >= n.getSize() || !n.isRange(E, O, false)) {
       throw new c.a();
     }
     var T = b.toString();
@@ -459,9 +459,9 @@ var y = function (t) {
     } catch (D) {}
     var R = null == u ? null : u.get(i.a.ALLOWED_EAN_EXTENSIONS);
     if (null != R) {
-      var N = !1;
+      var N = false;
       for (var x in R) if (M.toString() === x) {
-        N = !0;
+        N = true;
         break;
       }
       if (!N) {
@@ -479,7 +479,7 @@ var y = function (t) {
   e.checkStandardUPCEANChecksum = function (t) {
     var n = t.length;
     if (0 === n) {
-      return !1;
+      return false;
     }
     var r = parseInt(t.charAt(n - 1), 10);
     return e.getStandardUPCEANChecksum(t.substring(0, n - 1)) === r;
@@ -502,7 +502,7 @@ var y = function (t) {
     return (1e3 - n) % 10;
   };
   e.decodeEnd = function (t, n) {
-    return e.findGuardPattern(t, n, !1, e.START_END_PATTERN, new Int32Array(e.START_END_PATTERN.length).fill(0));
+    return e.findGuardPattern(t, n, false, e.START_END_PATTERN, new Int32Array(e.START_END_PATTERN.length).fill(0));
   };
   return e;
 }(f);

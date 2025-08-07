@@ -67,7 +67,7 @@ var g = function (e) {
     (o = t.call(this, null, e)).options = e;
     o.scopeManager = i;
     o.parent = null;
-    o.isInnerMethodDefinition = !1;
+    o.isInnerMethodDefinition = false;
     return o;
   }
   i(n, [{
@@ -110,13 +110,13 @@ var g = function (e) {
       if ("function" === typeof t) {
         i = t;
         r = {
-          processRightHandNodes: !1
+          processRightHandNodes: false
         };
       }
       (function (e, t, n, r) {
         var i = new f(e, t, r);
         i.visit(t);
-        if (null !== n && void 0 !== n) {
+        if (null !== n && undefined !== n) {
           i.rightHandNodes.forEach(n.visit, n);
         }
       })(this.options, e, r.processRightHandNodes ? this : null, i);
@@ -137,11 +137,11 @@ var g = function (e) {
       var i = this;
       function o(n, r) {
         i.currentScope().__define(n, new p(n, e, t, r.rest));
-        i.referencingDefaultValue(n, r.assignments, null, !0);
+        i.referencingDefaultValue(n, r.assignments, null, true);
       }
       for (t = 0, n = e.params.length; t < n; ++t) {
         this.visitPattern(e.params[t], {
-          processRightHandNodes: !0
+          processRightHandNodes: true
         }, o);
       }
       if (e.rest) {
@@ -149,7 +149,7 @@ var g = function (e) {
           type: "RestElement",
           argument: e.rest
         }, function (t) {
-          r.currentScope().__define(t, new p(t, e, e.params.length, !0));
+          r.currentScope().__define(t, new p(t, e, e.params.length, true));
         });
       }
       if (e.body) {
@@ -184,7 +184,7 @@ var g = function (e) {
       }
       var n = e.type === s.MethodDefinition;
       if (n) {
-        t = this.pushInnerMethodDefinition(!0);
+        t = this.pushInnerMethodDefinition(true);
       }
       this.visit(e.value);
       if (n) {
@@ -201,11 +201,11 @@ var g = function (e) {
       if (e.left.type === s.VariableDeclaration) {
         this.visit(e.left);
         this.visitPattern(e.left.declarations[0].id, function (n) {
-          t.currentScope().__referencing(n, u.WRITE, e.right, null, !0, !0);
+          t.currentScope().__referencing(n, u.WRITE, e.right, null, true, true);
         });
       } else {
         this.visitPattern(e.left, {
-          processRightHandNodes: !0
+          processRightHandNodes: true
         }, function (n, r) {
           var i = null;
           if (!t.currentScope().isStrict) {
@@ -214,8 +214,8 @@ var g = function (e) {
               node: e
             };
           }
-          t.referencingDefaultValue(n, r.assignments, i, !1);
-          t.currentScope().__referencing(n, u.WRITE, e.right, i, !0, !1);
+          t.referencingDefaultValue(n, r.assignments, i, false);
+          t.currentScope().__referencing(n, u.WRITE, e.right, i, true, false);
         });
       }
       this.visit(e.right);
@@ -229,12 +229,12 @@ var g = function (e) {
       var o = n.declarations[r];
       var a = o.init;
       this.visitPattern(o.id, {
-        processRightHandNodes: !0
+        processRightHandNodes: true
       }, function (s, c) {
         e.__define(s, new _(t, s, o, n, r, n.kind));
-        i.referencingDefaultValue(s, c.assignments, null, !0);
+        i.referencingDefaultValue(s, c.assignments, null, true);
         if (a) {
-          i.currentScope().__referencing(s, u.WRITE, a, null, !c.topLevel, !0);
+          i.currentScope().__referencing(s, u.WRITE, a, null, !c.topLevel, true);
         }
       });
     }
@@ -245,7 +245,7 @@ var g = function (e) {
       if (f.isPattern(e.left)) {
         if ("=" === e.operator) {
           this.visitPattern(e.left, {
-            processRightHandNodes: !0
+            processRightHandNodes: true
           }, function (n, r) {
             var i = null;
             if (!t.currentScope().isStrict) {
@@ -254,8 +254,8 @@ var g = function (e) {
                 node: e
               };
             }
-            t.referencingDefaultValue(n, r.assignments, i, !1);
-            t.currentScope().__referencing(n, u.WRITE, e.right, i, !r.topLevel, !1);
+            t.referencingDefaultValue(n, r.assignments, i, false);
+            t.currentScope().__referencing(n, u.WRITE, e.right, i, !r.topLevel, false);
           });
         } else {
           this.currentScope().__referencing(e.left, u.RW, e.right);
@@ -271,10 +271,10 @@ var g = function (e) {
       var t = this;
       this.scopeManager.__nestCatchScope(e);
       this.visitPattern(e.param, {
-        processRightHandNodes: !0
+        processRightHandNodes: true
       }, function (n, r) {
         t.currentScope().__define(n, new _(l.CatchClause, e.param, e, null, null, null));
-        t.referencingDefaultValue(n, r.assignments, null, !0);
+        t.referencingDefaultValue(n, r.assignments, null, true);
       });
       this.visit(e.body);
       this.close(e);
@@ -284,14 +284,14 @@ var g = function (e) {
     value: function (e) {
       this.scopeManager.__nestGlobalScope(e);
       if (this.scopeManager.__isNodejsScope()) {
-        this.currentScope().isStrict = !1;
-        this.scopeManager.__nestFunctionScope(e, !1);
+        this.currentScope().isStrict = false;
+        this.scopeManager.__nestFunctionScope(e, false);
       }
       if (this.scopeManager.__isES6() && this.scopeManager.isModule()) {
         this.scopeManager.__nestModuleScope(e);
       }
       if (this.scopeManager.isStrictModeSupported() && this.scopeManager.isImpliedStrict()) {
-        this.currentScope().isStrict = !0;
+        this.currentScope().isStrict = true;
       }
       this.visitChildren(e);
       this.close(e);

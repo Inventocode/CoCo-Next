@@ -1,6 +1,6 @@
 "use strict";
 
-var r = require("./1/index");
+import r = require("regenerator-runtime");
 var o = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -13,22 +13,22 @@ var o = function __importDefault(module) {
   });
   return defaultExport;
 }(r);
-var i = require("./7");
-var a = require("./27");
-var s = require("./40");
+import i = require("./7");
+import a = require("./27");
+import s = require("./40");
 var c = function () {
   function e() {
-    var t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "appCraft";
-    Object(a.a)(this, e);
-    this._dbs = void 0;
-    this._databaseName = void 0;
+    var t = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : "appCraft";
+    a.a(this, e);
+    this._dbs = undefined;
+    this._databaseName = undefined;
     this._tableName = "grid";
     this._version = 1;
     this._dbs = {};
     this._databaseName = t;
     this.open(this._databaseName, this._version);
   }
-  Object(s.a)(e, [{
+  s.a(e, [{
     key: "open",
     value: function (e, t) {
       var n = this;
@@ -39,12 +39,12 @@ var c = function () {
           var i = indexedDB.open(e, t);
           i.onupgradeneeded = function (e) {
             var t = e.target.result;
-            if (!1 === t.objectStoreNames.contains(n._tableName)) {
+            if (false === t.objectStoreNames.contains(n._tableName)) {
               var o = t.createObjectStore(n._tableName, {
                 keyPath: "id"
               });
               o.createIndex("id", "id", {
-                unique: !0
+                unique: true
               });
               o.createIndex("name", "name");
               o.createIndex("header", "header");
@@ -67,7 +67,7 @@ var c = function () {
   }, {
     key: "_getTransaction",
     value: function () {
-      var e = Object(i.a)(o.a.mark(function e(t) {
+      var e = i.a(o.a.mark(function e(t) {
         var n;
         return o.a.wrap(function (e) {
           for (;;) {
@@ -101,7 +101,7 @@ var c = function () {
   }, {
     key: "_getObjectStore",
     value: function () {
-      var e = Object(i.a)(o.a.mark(function e() {
+      var e = i.a(o.a.mark(function e() {
         var t;
         return o.a.wrap(function (e) {
           for (;;) {

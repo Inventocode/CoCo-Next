@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.InputType = void 0;
+exports.InputType = undefined;
 (function (e) {
   e[e.VALUE = 1] = "VALUE";
   e[e.STATEMENT = 3] = "STATEMENT";

@@ -49,20 +49,20 @@ exports.parseTag = function (e, t, n) {
 
   var r = "";
   var a = 0;
-  var s = !1;
-  var c = !1;
+  var s = false;
+  var c = false;
   var u = 0;
   var l = e.length;
   var f = "";
   var d = "";
   e: for (u = 0; u < l; u++) {
     var h = e.charAt(u);
-    if (!1 === s) {
+    if (false === s) {
       if ("<" === h) {
         s = u;
         continue;
       }
-    } else if (!1 === c) {
+    } else if (false === c) {
       if ("<" === h) {
         r += n(e.slice(a, u));
         s = u;
@@ -74,7 +74,7 @@ exports.parseTag = function (e, t, n) {
         f = i(d = e.slice(s, u + 1));
         r += t(s, r.length, f, d, o(d));
         a = u + 1;
-        s = !1;
+        s = false;
         continue;
       }
       if ("\"" === h || "'" === h) {
@@ -87,7 +87,7 @@ exports.parseTag = function (e, t, n) {
         }
       }
     } else if (h === c) {
-      c = !1;
+      c = false;
       continue;
     }
   }
@@ -102,7 +102,7 @@ exports.parseAttr = function (e, t) {
   var n = 0;
   var i = 0;
   var o = [];
-  var f = !1;
+  var f = false;
   var d = e.length;
   function h(e, n) {
     if (!((e = (e = r.trim(e)).replace(a, "").toLowerCase()).length < 1)) {
@@ -115,14 +115,14 @@ exports.parseAttr = function (e, t) {
   for (var p = 0; p < d; p++) {
     var _;
     var A = e.charAt(p);
-    if (!1 !== f || "=" !== A) {
-      if (!1 === f || p !== i) {
+    if (false !== f || "=" !== A) {
+      if (false === f || p !== i) {
         if (/\s|\n|\t/.test(A)) {
           e = e.replace(/\s|\n|\t/g, " ");
-          if (!1 === f) {
+          if (false === f) {
             if (-1 === (_ = s(e, p))) {
               h(r.trim(e.slice(n, p)));
-              f = !1;
+              f = false;
               n = p + 1;
               continue;
             }
@@ -131,7 +131,7 @@ exports.parseAttr = function (e, t) {
           }
           if (-1 === (_ = u(e, p - 1))) {
             h(f, l(r.trim(e.slice(n, p))));
-            f = !1;
+            f = false;
             n = p + 1;
             continue;
           }
@@ -143,7 +143,7 @@ exports.parseAttr = function (e, t) {
           break;
         }
         h(f, r.trim(e.slice(i + 1, _)));
-        f = !1;
+        f = false;
         n = (p = _) + 1;
       }
     } else {
@@ -153,7 +153,7 @@ exports.parseAttr = function (e, t) {
     }
   }
   if (n < e.length) {
-    if (!1 === f) {
+    if (false === f) {
       h(e.slice(n));
     } else {
       h(f, l(r.trim(e.slice(n))));

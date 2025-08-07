@@ -64,8 +64,8 @@ var n = function () {
     return Math.trunc(t / e);
   };
   t.parseInt = function (t, e) {
-    if (void 0 === e) {
-      e = void 0;
+    if (undefined === e) {
+      e = undefined;
     }
     return parseInt(t, e);
   };

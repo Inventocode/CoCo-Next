@@ -4,7 +4,7 @@ var i = Math.abs;
 var a = Math.pow;
 r({
   target: "Math",
-  stat: !0
+  stat: true
 }, {
   cbrt: function (e) {
     return o(e = +e) * a(i(e), 1 / 3);

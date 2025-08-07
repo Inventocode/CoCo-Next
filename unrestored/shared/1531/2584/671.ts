@@ -25,8 +25,8 @@ var o = {
   icon: "icon-widget-qrcode",
   title: "widgetNameMsg",
   platforms: ["web", "android", "ios"],
-  isInvisibleWidget: !0,
-  isGlobalWidget: !0,
+  isInvisibleWidget: true,
+  isGlobalWidget: true,
   properties: [{
     key: "dark",
     label: "darkMsg",
@@ -77,7 +77,7 @@ var o = {
     label: "QRCodeImageMsg",
     valueType: "string",
     defaultValue: "",
-    readonly: !0
+    readonly: true
   }],
   methods: [{
     key: "textToDataUrl",

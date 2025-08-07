@@ -27,7 +27,7 @@ function a(t) {
       function u(t) {
         i(a, n, o, c, u, "throw", t);
       }
-      c(void 0);
+      c(undefined);
     });
   };
 }
@@ -62,7 +62,7 @@ function s() {
             t.prev = 10;
             t.t0 = t.catch(4);
             console.error(t.t0);
-            return t.abrupt("return", new Response(void 0, {
+            return t.abrupt("return", new Response(undefined, {
               status: 400,
               statusText: "Bad Request"
             }));
@@ -94,8 +94,8 @@ c.addEventListener("fetch", function (t) {
   if ("GET" === e.method && r.origin === c.location.origin && "/editor/service/code" === r.pathname) {
     var n = function (t) {
       var e = new URL(t.url).searchParams.get("id");
-      var r = e ? u.get(e) : void 0;
-      return void 0 === r ? new Response(JSON.stringify({}), {
+      var r = e ? u.get(e) : undefined;
+      return undefined === r ? new Response(JSON.stringify({}), {
         status: 404,
         statusText: "Not Found"
       }) : new Response(r, {

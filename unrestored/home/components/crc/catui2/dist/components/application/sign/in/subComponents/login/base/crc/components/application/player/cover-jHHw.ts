@@ -16,17 +16,17 @@ var PlayerCover = function PlayerCover(props) {
   var onSignInBtnClick = props.onSignInBtnClick;
   var userInfo = props.userInfo;
   var _props$signInBtnText = props.signInBtnText;
-  var signInBtnText = _props$signInBtnText === void 0 ? '立即登录' : _props$signInBtnText;
+  var signInBtnText = _props$signInBtnText === undefined ? '立即登录' : _props$signInBtnText;
   var _props$signInTipText = props.signInTipText;
-  var signInTipText = _props$signInTipText === void 0 ? '你还未登录，登录后体验更棒哦～' : _props$signInTipText;
+  var signInTipText = _props$signInTipText === undefined ? '你还未登录，登录后体验更棒哦～' : _props$signInTipText;
   var _props$playBtnTipText = props.playBtnTipText;
-  var playBtnTipText = _props$playBtnTipText === void 0 ? '' : _props$playBtnTipText;
+  var playBtnTipText = _props$playBtnTipText === undefined ? '' : _props$playBtnTipText;
   var _props$showSignInBtn = props.showSignInBtn;
-  var showSignInBtn = _props$showSignInBtn === void 0 ? true : _props$showSignInBtn;
+  var showSignInBtn = _props$showSignInBtn === undefined ? true : _props$showSignInBtn;
   var _props$showPlayBtn = props.showPlayBtn;
-  var showPlayBtn = _props$showPlayBtn === void 0 ? true : _props$showPlayBtn;
+  var showPlayBtn = _props$showPlayBtn === undefined ? true : _props$showPlayBtn;
   var _props$showUserInfo = props.showUserInfo;
-  var showUserInfo = _props$showUserInfo === void 0 ? true : _props$showUserInfo;
+  var showUserInfo = _props$showUserInfo === undefined ? true : _props$showUserInfo;
   var style = props.style;
   var Style = Object.assign({
     backgroundImage: "url(".concat(imgSrc, ")")

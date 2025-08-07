@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.init_text_blocks = void 0;
+exports.init_text_blocks = undefined;
 var r = require("../4/127");
 var o = require("../125/534");
 var i = require("../125/294");
@@ -28,7 +28,7 @@ exports.init_text_blocks = function (e) {
     }],
     output: "String",
     colour: (0, s.i18n)("ORANGE_3"),
-    inputsInline: !0
+    inputsInline: true
   }, {
     type: "text_length",
     message0: (0, s.i18n)("text_length"),
@@ -39,7 +39,7 @@ exports.init_text_blocks = function (e) {
     }],
     output: "Number",
     colour: (0, s.i18n)("ORANGE_3"),
-    inputsInline: !0
+    inputsInline: true
   }, {
     type: "text_contain",
     message0: (0, s.i18n)("text_contain"),
@@ -54,7 +54,7 @@ exports.init_text_blocks = function (e) {
     }],
     output: "Boolean",
     colour: (0, s.i18n)("ORANGE_3"),
-    inputsInline: !0
+    inputsInline: true
   }, {
     type: "text_split",
     message0: (0, s.i18n)("text_split"),
@@ -69,12 +69,12 @@ exports.init_text_blocks = function (e) {
     }],
     output: "Array",
     colour: (0, s.i18n)("ORANGE_3"),
-    inputsInline: !0
+    inputsInline: true
   }, {
     type: "text_join",
     message0: "",
     output: "String",
-    inputsInline: !0,
+    inputsInline: true,
     colour: (0, s.i18n)("ORANGE_3"),
     tooltip: (0, s.i18n)("TEXT_JOIN_TOOLTIP"),
     mutator: "text_join_mutator_codemao"
@@ -88,8 +88,8 @@ exports.init_text_blocks = function (e) {
       for (var t = 0; t < this.inputList.length; t++) {
         for (var n = this.inputList[t], r = 0; r < n.fieldRow.length; r++) {
           if (e == n.fieldRow[r].name) {
-            n.insert_field_at(r, this.newQuote_(!0));
-            return void n.insert_field_at(r + 2, this.newQuote_(!1));
+            n.insert_field_at(r, this.newQuote_(true));
+            return void n.insert_field_at(r + 2, this.newQuote_(false));
           }
         }
       }
@@ -115,13 +115,13 @@ exports.init_text_blocks = function (e) {
       var o = e.di_container.get(r.BINDING.events);
       var a = o.get_group();
       if (!a) {
-        o.set_group(!0);
+        o.set_group(true);
       }
       var c = "ADD" + this.itemCount_;
       var l = this.shadow_ids[this.itemCount_] || (0, i.gen_uid)();
       this.shadow_ids[this.itemCount_] = l;
       var u = t || "";
-      if (!(null === (n = this.append_value_input(c, "TITLE_TAIL", void 0, (0, s.text_shadow)(u, l)).connection) || void 0 === n)) {
+      if (!(null === (n = this.append_value_input(c, "TITLE_TAIL", undefined, (0, s.text_shadow)(u, l)).connection) || undefined === n)) {
         n.respawn_shadow();
       }
       this.itemCount_++;
@@ -129,19 +129,19 @@ exports.init_text_blocks = function (e) {
         var d = this.get_input("MUTATE_BUTTON");
         if (d && !d.get_field("REMOVE")) {
           var p = e.di_container.get(r.BINDING.MutationRemoveButton);
-          d.insert_field_at(0, p(void 0), "REMOVE");
+          d.insert_field_at(0, p(undefined), "REMOVE");
         }
       }
       if (o.is_enabled()) {
         var f = e.di_container.get(r.BINDING.ChangeEvent);
         o.fire(f("mutation", {
           block: this,
-          old_value: void 0,
+          old_value: undefined,
           new_value: u
         }));
       }
       if (!a) {
-        o.set_group(!1);
+        o.set_group(false);
       }
     },
     removeMutation: function () {
@@ -161,7 +161,7 @@ exports.init_text_blocks = function (e) {
         var l = e.di_container.get(r.BINDING.events);
         var u = l.get_group();
         if (!u) {
-          l.set_group(!0);
+          l.set_group(true);
         }
         var d = a.connection.targetBlock();
         if (d && d.is_shadow()) {
@@ -169,8 +169,8 @@ exports.init_text_blocks = function (e) {
           c = d.get_field_value("TEXT") || "";
         } else {
           var p = a.connection.get_shadow_dom();
-          this.shadow_ids[n] = (null === p || void 0 === p ? void 0 : p.getAttribute("id")) || (0, i.gen_uid)();
-          c = (null === (t = null === p || void 0 === p ? void 0 : p.firstChild) || void 0 === t ? void 0 : t.textContent) || "";
+          this.shadow_ids[n] = (null === p || undefined === p ? undefined : p.getAttribute("id")) || (0, i.gen_uid)();
+          c = (null === (t = null === p || undefined === p ? undefined : p.firstChild) || undefined === t ? undefined : t.textContent) || "";
         }
         this.remove_input(o);
         if (l.is_enabled()) {
@@ -178,11 +178,11 @@ exports.init_text_blocks = function (e) {
           l.fire(f("mutation", {
             block: this,
             old_value: c,
-            new_value: void 0
+            new_value: undefined
           }));
         }
         if ("" === u) {
-          l.set_group(!1);
+          l.set_group(false);
         }
       }
     },
@@ -217,7 +217,7 @@ exports.init_text_blocks = function (e) {
       var l = this.append_dummy_input("MUTATE_BUTTON").append_field(c(), "ADD");
       if (this.itemCount_ > 2) {
         var u = e.di_container.get(r.BINDING.MutationRemoveButton);
-        l.insert_field_at(0, u(void 0), "REMOVE");
+        l.insert_field_at(0, u(undefined), "REMOVE");
       }
       n.enable();
     }

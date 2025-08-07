@@ -27,7 +27,7 @@ export { G as x };
 export { U as y };
 export { H as r };
 export { V as m };
-var r = require("../1/index");
+import r = require("regenerator-runtime");
 var o = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -40,9 +40,9 @@ var o = function __importDefault(module) {
   });
   return defaultExport;
 }(r);
-var i = require("../7");
-var a = require("../59/index");
-var s = require("../133/index");
+import i = require("../7");
+import a = require("../59/index");
+import s = require("../133/index");
 var c = "https://owfemtgc1d.feishu.cn/share/base/form/shrcnlokP3seuMFtmTLxCAh40Sc";
 function l(e) {
   return 0 === e.indexOf("data:");
@@ -82,7 +82,7 @@ function g(e) {
   return _.apply(this, arguments);
 }
 function _() {
-  return (_ = Object(i.a)(o.a.mark(function e(t) {
+  return (_ = i.a(o.a.mark(function e(t) {
     var n;
     var r;
     return o.a.wrap(function (e) {
@@ -110,7 +110,7 @@ function v(e, t) {
   return b.apply(this, arguments);
 }
 function b() {
-  return (b = Object(i.a)(o.a.mark(function e(t, n) {
+  return (b = i.a(o.a.mark(function e(t, n) {
     var r;
     var i;
     var a;
@@ -150,7 +150,7 @@ function y(e) {
   t.innerHTML = e;
   for (var n = t.getElementsByTagName("script"); n.length > 0;) {
     var r;
-    if (!(null === (r = n[0].parentNode) || void 0 === r)) {
+    if (!(null === (r = n[0].parentNode) || undefined === r)) {
       r.removeChild(n[0]);
     }
   }
@@ -168,7 +168,7 @@ function E(e, t) {
   return O.apply(this, arguments);
 }
 function O() {
-  return (O = Object(i.a)(o.a.mark(function e(t, n) {
+  return (O = i.a(o.a.mark(function e(t, n) {
     var r;
     var i;
     var a;
@@ -200,7 +200,7 @@ function w(e) {
   return C.apply(this, arguments);
 }
 function C() {
-  return (C = Object(i.a)(o.a.mark(function e(t) {
+  return (C = i.a(o.a.mark(function e(t) {
     return o.a.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
@@ -228,7 +228,7 @@ function T(e) {
   return S.apply(this, arguments);
 }
 function S() {
-  return (S = Object(i.a)(o.a.mark(function e(t) {
+  return (S = i.a(o.a.mark(function e(t) {
     var n;
     return o.a.wrap(function (e) {
       for (;;) {
@@ -302,7 +302,7 @@ function x(e, t) {
   return window.location.origin + window.location.pathname + n;
 }
 function D() {
-  return "production" === Object(a.b)() ? "https://coco.codemao.cn" : window.location.origin;
+  return "production" === a.b() ? "https://coco.codemao.cn" : window.location.origin;
 }
 function M(e) {
   return D() + "/editor/player/".concat(e, "?channel=community");
@@ -311,7 +311,7 @@ function L(e) {
   return D() + "/editor/player/".concat(e, "?channel=h5");
 }
 function P(e) {
-  var t = Object(a.b)();
+  var t = a.b();
   var n = "";
   if ("development" === t || "dev" === t) {
     n = "dev-";
@@ -327,7 +327,7 @@ function P(e) {
   return "https://".concat(n, "shequ.codemao.cn/work/").concat(e);
 }
 function B() {
-  var e = Object(a.b)();
+  var e = a.b();
   var t = "";
   if ("development" === e || "dev" === e) {
     t = "dev-";
@@ -343,7 +343,7 @@ function B() {
   return "https://".concat(t, "coco.codemao.cn");
 }
 function F() {
-  var e = Object(a.b)();
+  var e = a.b();
   var t = "";
   if ("development" === e || "dev" === e) {
     t = "dev-";
@@ -369,14 +369,14 @@ function U(e) {
     });
   } catch (n) {
     console.error("isValidUrl error", n);
-    return !0;
+    return true;
   }
 }
 var W = ["socketcv.codemao.cn"];
 function H(e) {
-  for (var t = !1, n = 0; n < W.length; n++) {
-    if (null === e || void 0 === e ? void 0 : e.includes(W[n])) {
-      t = !0;
+  for (var t = false, n = 0; n < W.length; n++) {
+    if (null === e || undefined === e ? undefined : e.includes(W[n])) {
+      t = true;
       break;
     }
   }
@@ -384,7 +384,7 @@ function H(e) {
 }
 function V() {
   return "https://".concat(function () {
-    var e = Object(a.b)();
+    var e = a.b();
     var t = "";
     if ("development" === e || "dev" === e) {
       t = "dev-";

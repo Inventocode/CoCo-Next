@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.Utils = void 0;
+exports.Utils = undefined;
 var r = require("tslib");
 var i = require("inversify");
 var o = require("@kitten-team/gl-matrix");
@@ -23,7 +23,7 @@ var v = /scale\(\s*([-+\d.e]+)\s*\)/;
 var m = function () {
   function e() {
     var e = this;
-    this.is_3d_supported_cached_ = void 0;
+    this.is_3d_supported_cached_ = undefined;
     this.string_to_dom = function (e) {
       if (window.ActiveXObject) {
         var t = new window.ActiveXObject("Microsoft.XMLDOM");
@@ -46,7 +46,7 @@ var m = function () {
     };
     this.get_shadow_dom = function (t, n, r, i) {
       var o;
-      var a = null === (o = e.cached_shadow_dom.get(e.shadow_type_map[t])) || void 0 === o ? void 0 : o.cloneNode(!0);
+      var a = null === (o = e.cached_shadow_dom.get(e.shadow_type_map[t])) || undefined === o ? undefined : o.cloneNode(true);
       if (!a) {
         a = e.string_to_dom(e.shadow_type_map[t]);
         e.cached_shadow_dom.set(e.shadow_type_map[t], a);
@@ -57,7 +57,7 @@ var m = function () {
         });
       }
       if (a.firstElementChild) {
-        if (void 0 != n) {
+        if (undefined != n) {
           a.firstElementChild.textContent = n;
         }
         if (i) {
@@ -107,11 +107,11 @@ var m = function () {
     return (0, d.gen_uid)();
   };
   e.prototype.is_3d_supported = function () {
-    if (void 0 != this.is_3d_supported_cached_) {
+    if (undefined != this.is_3d_supported_cached_) {
       return this.is_3d_supported_cached_;
     }
     if (!window.getComputedStyle) {
-      return !1;
+      return false;
     }
     var e = document.createElement("p");
     var t = "none";
@@ -122,12 +122,12 @@ var m = function () {
       MozTransform: "-moz-transform",
       transform: "transform"
     };
-    for (var r in document.body.insertBefore(e, null), n) if (void 0 != e.style.getPropertyValue(n[r])) {
+    for (var r in document.body.insertBefore(e, null), n) if (undefined != e.style.getPropertyValue(n[r])) {
       e.style.setProperty(n[r], "translate3d(1px,1px,1px)");
       var i = window.getComputedStyle(e);
       if (!i) {
         document.body.removeChild(e);
-        return !1;
+        return false;
       }
       t = i.getPropertyValue(n[r]);
     }
@@ -158,8 +158,8 @@ var m = function () {
     var i = t.get_injection_div();
     if (i) {
       var o = t.get_toolbox();
-      var a = (null === o || void 0 === o ? void 0 : o.get_width()) || 0;
-      var s = (null === o || void 0 === o ? void 0 : o.get_height()) || 0;
+      var a = (null === o || undefined === o ? undefined : o.get_width()) || 0;
+      var s = (null === o || undefined === o ? undefined : o.get_height()) || 0;
       var c = t.get_flyout();
       if (c && c.is_visible() && !c.is_auto_close()) {
         a += c.get_width();
@@ -197,7 +197,7 @@ var m = function () {
     }
   };
   e.prototype.set_language = function (e) {
-    switch (void 0 === e && (e = "zh"), e) {
+    switch (undefined === e && (e = "zh"), e) {
       case "en":
         Object.assign(this.Msg, a.en);
         break;
@@ -211,7 +211,7 @@ var m = function () {
   e.prototype.get_scale = function (e) {
     var t = 1;
     var n = e.getAttribute("transform");
-    if (void 0 != n) {
+    if (undefined != n) {
       var r = n.match(v);
       if (r && r[1]) {
         t = parseFloat(r[1]);
@@ -230,7 +230,7 @@ var m = function () {
       t[1] = parseInt(r, 10);
     }
     var i = e.getAttribute("transform");
-    var a = void 0 != i && i.match(_);
+    var a = undefined != i && i.match(_);
     if (a) {
       t[0] += parseFloat(a[1]);
       if (a[3]) {
@@ -321,11 +321,11 @@ var m = function () {
     return "textarea" == t.type || "text" == t.type || "number" == t.type || "email" == t.type || "password" == t.type || "search" == t.type || "tel" == t.type || "url" == t.type || t.isContentEditable;
   };
   e.prototype.check_message_references = function (e) {
-    for (var t = !0, n = /%{BKY_([a-zA-Z][a-zA-Z0-9_]*)}/g, r = n.exec(e); r;) {
+    for (var t = true, n = /%{BKY_([a-zA-Z][a-zA-Z0-9_]*)}/g, r = n.exec(e); r;) {
       var i = r[1];
-      if (void 0 == this.Msg[i]) {
+      if (undefined == this.Msg[i]) {
         console.warn("WARNING: No message string for %{BKY_" + i + "}.");
-        t = !1;
+        t = false;
       }
       e = e.substring(r.index + i.length + 1);
       r = n.exec(e);
@@ -413,9 +413,9 @@ var m = function () {
           var u = i.join("");
           if (/[A-Z]\w*/i.test(u)) {
             var f = u.toUpperCase();
-            var d = f.startsWith("BKY_") ? f.substring(4) : void 0;
-            var p = d && d in this.Msg ? this.Msg[d] : void 0;
-            if (void 0 !== p) {
+            var d = f.startsWith("BKY_") ? f.substring(4) : undefined;
+            var p = d && d in this.Msg ? this.Msg[d] : undefined;
+            if (undefined !== p) {
               if ((0, h.is_string)(p)) {
                 Array.prototype.push.apply(t, this.tokenize_interpolation(p));
               } else {
@@ -467,7 +467,7 @@ var m = function () {
       var a = i;
       if ("number" === typeof t || "number" === typeof n) {
         var s = o.vec2.fromValues(0, 0);
-        var c = void 0 != a && a.match(_);
+        var c = undefined != a && a.match(_);
         if (c) {
           s[0] = parseFloat(c[1]);
           s[1] = parseFloat(c[3]);
@@ -549,7 +549,7 @@ var m = function () {
           for (var o = e; o.parentNode && "text" !== o.tagName.toLowerCase();) {
             o = o.parentNode;
           }
-          var a = o.cloneNode(!0);
+          var a = o.cloneNode(true);
           document.body.appendChild(a);
           i(a);
           document.body.removeChild(a);
@@ -559,15 +559,15 @@ var m = function () {
     } catch (c) {
       console.warn(c);
       var s = e.textContent;
-      return void 0 == s ? 0 : 8 * s.length;
+      return undefined == s ? 0 : 8 * s.length;
     }
     this.cached_widths.set(n, r);
     return r;
   };
-  (0, r.__decorate)([(0, u.lazy_inject)(u.BINDING.Msg)], e.prototype, "Msg", void 0);
-  (0, r.__decorate)([(0, u.lazy_inject)(u.BINDING.runtime_data)], e.prototype, "runtime_data", void 0);
-  (0, r.__decorate)([(0, u.lazy_inject)(u.BINDING.widget_div)], e.prototype, "widget_div", void 0);
-  (0, r.__decorate)([(0, u.lazy_inject)(u.BINDING.workspace_db)], e.prototype, "workspace_db", void 0);
+  (0, r.__decorate)([(0, u.lazy_inject)(u.BINDING.Msg)], e.prototype, "Msg", undefined);
+  (0, r.__decorate)([(0, u.lazy_inject)(u.BINDING.runtime_data)], e.prototype, "runtime_data", undefined);
+  (0, r.__decorate)([(0, u.lazy_inject)(u.BINDING.widget_div)], e.prototype, "widget_div", undefined);
+  (0, r.__decorate)([(0, u.lazy_inject)(u.BINDING.workspace_db)], e.prototype, "workspace_db", undefined);
   return e = (0, r.__decorate)([(0, i.injectable)()], e);
 }();
 exports.Utils = m;

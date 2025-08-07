@@ -6,7 +6,7 @@ module.exports = {
     docs: {
       description: "disallow the use of undeclared variables unless mentioned in `/*global */` comments",
       category: "Variables",
-      recommended: !0,
+      recommended: true,
       url: "https://eslint.org/docs/rules/no-undef"
     },
     schema: [{
@@ -14,10 +14,10 @@ module.exports = {
       properties: {
         typeof: {
           type: "boolean",
-          default: !1
+          default: false
         }
       },
-      additionalProperties: !1
+      additionalProperties: false
     }],
     messages: {
       undef: "'{{name}}' is not defined."
@@ -25,7 +25,7 @@ module.exports = {
   },
   create: function (e) {
     var t = e.options[0];
-    var n = t && !0 === t.typeof || !1;
+    var n = t && true === t.typeof || false;
     return {
       "Program:exit": function () {
         e.getScope().through.forEach(function (t) {

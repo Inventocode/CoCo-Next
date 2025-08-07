@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.init_extensions = void 0;
+exports.init_extensions = undefined;
 var r = (0, require("tslib").__importStar)(require("../17/533"));
 var o = require("../17/497/644");
 exports.init_extensions = function (e) {
@@ -26,13 +26,13 @@ exports.init_extensions = function (e) {
   e.extensions.register_mixin("disable_inside_warp_loop", {
     onchange: function (e) {
       if ((!e.type || e.type == r.BlockEventType.MOVE) && !this.is_in_flyout) {
-        for (var t = ["repeat_forever", "repeat_n_times", "repeat_forever_until"], n = !1, o = !0, i = this.get_surround_parent(); i;) {
+        for (var t = ["repeat_forever", "repeat_n_times", "repeat_forever_until"], n = false, o = true, i = this.get_surround_parent(); i;) {
           if (n && "warp" === i.type) {
-            o = !1;
+            o = false;
             break;
           }
           if (t.includes(i.type)) {
-            n = !0;
+            n = true;
           }
           i = i.get_surround_parent();
         }
@@ -40,13 +40,13 @@ exports.init_extensions = function (e) {
           if (!this.disabled) {
             return;
           }
-          this.disabled = !1;
+          this.disabled = false;
           this.update_disabled();
         } else {
           if (this.disabled) {
             return;
           }
-          this.disabled = !0;
+          this.disabled = true;
           this.update_disabled();
         }
       }

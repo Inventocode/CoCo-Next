@@ -8,7 +8,7 @@ var c = o(function () {
 });
 r({
   target: "Object",
-  stat: !0,
+  stat: true,
   forced: !s || c,
   sham: !s
 }, {

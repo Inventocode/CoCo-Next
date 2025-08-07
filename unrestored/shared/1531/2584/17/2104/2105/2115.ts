@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.MoveEvent = void 0;
+exports.MoveEvent = undefined;
 var r = require("tslib");
 var i = require("@kitten-team/gl-matrix");
 var o = require("inversify");
@@ -29,12 +29,12 @@ var c = function (e) {
   };
   t.prototype._current_location = function () {
     var e = this.workspace_db.get(this._workspace_id);
-    if (void 0 == e) {
+    if (undefined == e) {
       console.error("Event has no workspace.");
       return {};
     }
     var t = e.get_element_from_db(this._block_id);
-    if (void 0 == t) {
+    if (undefined == t) {
       console.error("Event has no block.");
       return {};
     }
@@ -62,13 +62,13 @@ var c = function (e) {
     this.new_coordinate = e.coordinate;
   };
   t.prototype.is_null = function () {
-    return this.old_parent_id === this.new_parent_id && this.old_input_name === this.new_input_name && (void 0 == this.old_coordinate && void 0 == this.new_coordinate || void 0 != this.old_coordinate && void 0 != this.new_coordinate && i.vec2.equals(this.old_coordinate, this.new_coordinate));
+    return this.old_parent_id === this.new_parent_id && this.old_input_name === this.new_input_name && (undefined == this.old_coordinate && undefined == this.new_coordinate || undefined != this.old_coordinate && undefined != this.new_coordinate && i.vec2.equals(this.old_coordinate, this.new_coordinate));
   };
   t.prototype.run = function (e) {
     var t = this;
     var n = this._get_event_workspace();
     var r = n.get_element_from_db(this._block_id);
-    if (void 0 != r) {
+    if (undefined != r) {
       !function () {
         if ((0, s.is_block_svg)(r)) {
           var i = e ? t.new_parent_id : t.old_parent_id;
@@ -89,9 +89,9 @@ var c = function (e) {
             } else if (u.type === a.CONNECTION_TYPE.PREVIOUS_STATEMENT) {
               o = c.next_connection;
             }
-            if (void 0 != o) {
+            if (undefined != o) {
               r.unplug();
-              return void u.connect(o, !0);
+              return void u.connect(o, true);
             }
             console.warn("Can't connect to non-existent input: " + l + ", so dispose this blockConnection");
             if (u) {
@@ -110,7 +110,7 @@ var c = function (e) {
         if (o) {
           var a = r.get_relative_to_surface_xy();
           if ((0, s.is_workspace_comment)(r)) {
-            var c = null === (n = r.get_parent_block()) || void 0 === n ? void 0 : n.get_relative_to_surface_xy();
+            var c = null === (n = r.get_parent_block()) || undefined === n ? undefined : n.get_relative_to_surface_xy();
             if (c) {
               i.vec2.add(o, c, o);
             }
@@ -133,8 +133,8 @@ var c = function (e) {
     };
   };
   t.prototype.serialize = function () {
-    var e = this.old_coordinate ? [this.old_coordinate[0], this.old_coordinate[1]] : void 0;
-    var t = this.new_coordinate ? [this.new_coordinate[0], this.new_coordinate[1]] : void 0;
+    var e = this.old_coordinate ? [this.old_coordinate[0], this.old_coordinate[1]] : undefined;
+    var t = this.new_coordinate ? [this.new_coordinate[0], this.new_coordinate[1]] : undefined;
     return {
       id: this._block_id,
       group: this._group,

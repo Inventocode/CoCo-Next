@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.DragArea = exports.BlockEventType = void 0;
+exports.DragArea = exports.BlockEventType = undefined;
 (function (e) {
   e.CREATE = "create";
   e.DELETE = "delete";

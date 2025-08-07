@@ -16,20 +16,20 @@ module.exports = function (e, t, n) {
       r = e.async;
       i = "validate";
     } else {
-      r = !0 === e.root.schema.$async;
+      r = true === e.root.schema.$async;
       i = "root.refVal[0]";
     }
   } else {
     var h = e.resolveRef(e.baseId, c, e.isRoot);
-    if (void 0 === h) {
+    if (undefined === h) {
       var p = e.MissingRefError.message(e.baseId, c);
       if ("fail" == e.opts.missingRefs) {
         e.logger.error(p);
         (v = v || []).push(o);
         o = "";
-        if (!1 !== e.createErrors) {
+        if (false !== e.createErrors) {
           o += " { keyword: '$ref' , dataPath: (dataPath || '') + " + e.errorPath + " , schemaPath: " + e.util.toQuotedString(u) + " , params: { ref: '" + e.util.escapeQuotes(c) + "' } ";
-          if (!1 !== e.opts.messages) {
+          if (false !== e.opts.messages) {
             o += " , message: 'can\\'t resolve reference " + e.util.escapeQuotes(c) + "' ";
           }
           if (e.opts.verbose) {
@@ -74,7 +74,7 @@ module.exports = function (e, t, n) {
         o += " if (" + g + ") { ";
       }
     } else {
-      r = !0 === h.$async || e.async && !1 !== h.$async;
+      r = true === h.$async || e.async && false !== h.$async;
       i = h.code;
     }
   }

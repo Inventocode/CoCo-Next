@@ -13,17 +13,17 @@ var r = {
     backgroundColor: "背景颜色"
   }
 };
-var o = require("./6");
-var i = require("./133/index");
-var a = require("./5");
-var s = require("./35");
+import o = require("./6");
+import i = require("./133/index");
+import a = require("./5");
+import s = require("./35");
 var c = {
   type: a.v,
   icon: i.a,
   title: "widgetName",
   platforms: ["web", "android", "ios"],
-  isGlobalWidget: !1,
-  isInvisibleWidget: !1,
+  isGlobalWidget: false,
+  isInvisibleWidget: false,
   properties: [{
     key: "fileId",
     label: "fileId",
@@ -42,13 +42,13 @@ var c = {
     label: "backgroundColor",
     valueType: "color",
     defaultValue: i.g
-  }, Object(o.a)({}, s.i), {
+  }, o.a({}, s.i), {
     key: "__width",
     label: "width",
     valueType: "number",
     defaultValue: 100,
     blockOptions: {
-      generateBlock: !1
+      generateBlock: false
     }
   }, {
     key: "__height",
@@ -56,14 +56,14 @@ var c = {
     valueType: "number",
     defaultValue: 100,
     blockOptions: {
-      generateBlock: !1
+      generateBlock: false
     }
   }, {
     key: "__size",
     label: "",
     valueType: "number",
     defaultValue: 100,
-    readonly: !0,
+    readonly: true,
     blockOptions: {
       setter: {
         keys: ["__height", "__width"]
@@ -78,8 +78,8 @@ var c = {
     label: "__setVisible",
     params: [],
     blockOptions: {
-      callMethodLabel: !1,
-      generateBlock: !1
+      callMethodLabel: false,
+      generateBlock: false
     }
   }],
   events: [{

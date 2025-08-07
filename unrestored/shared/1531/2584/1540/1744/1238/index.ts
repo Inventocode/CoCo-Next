@@ -29,17 +29,22 @@ if (!w) {
       try {
         t();
       } catch (n) {
-        throw o ? a() : i = void 0, n;
+        if (o) {
+          a();
+        } else {
+          i = undefined;
+        }
+        throw n;
       }
     }
-    i = void 0;
+    i = undefined;
     if (e) {
       e.enter();
     }
   };
   if (h || _ || g || !v || !b) {
     if (!m && E && E.resolve) {
-      (l = E.resolve(void 0)).constructor = E;
+      (l = E.resolve(undefined)).constructor = E;
       u = l.then;
       a = function () {
         u.call(l, r);
@@ -52,10 +57,10 @@ if (!w) {
       };
     }
   } else {
-    s = !0;
+    s = true;
     c = b.createTextNode("");
     new v(r).observe(c, {
-      characterData: !0
+      characterData: true
     });
     a = function () {
       c.data = s = !s;
@@ -65,7 +70,7 @@ if (!w) {
 module.exports = w || function (e) {
   var t = {
     fn: e,
-    next: void 0
+    next: undefined
   };
   if (i) {
     i.next = t;

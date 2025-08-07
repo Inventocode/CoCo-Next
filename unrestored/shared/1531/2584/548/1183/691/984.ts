@@ -8,7 +8,7 @@ var a = require("../../../54");
 var s = require("../270/1043");
 var c = require("../701/index");
 var u = require("../270/2590");
-var l = Object(c.a)(function (e) {
+var l = c.a(function (e) {
   return {
     day: {
       width: 36,
@@ -49,22 +49,22 @@ var f = function (e) {
   var c = e.hidden;
   var f = e.current;
   var d = e.selected;
-  var h = Object(a.a)(e, ["children", "disabled", "hidden", "current", "selected"]);
+  var h = a.a(e, ["children", "disabled", "hidden", "current", "selected"]);
   var p = l();
-  var _ = Object(i.a)(p.day, c && p.hidden, f && p.current, d && p.daySelected, n && p.dayDisabled);
-  return Object(r.createElement)(u.a, Object(o.a)({
+  var _ = i.a(p.day, c && p.hidden, f && p.current, d && p.daySelected, n && p.dayDisabled);
+  return r.createElement(u.a, o.a({
     className: _,
     tabIndex: c || n ? -1 : 0
-  }, h), Object(r.createElement)(s.a, {
+  }, h), r.createElement(s.a, {
     variant: "body2",
     color: "inherit"
   }, t));
 };
 f.displayName = "Day";
 f.defaultProps = {
-  disabled: !1,
-  hidden: !1,
-  current: !1,
-  selected: !1
+  disabled: false,
+  hidden: false,
+  current: false,
+  selected: false
 };
 exports.a = f;

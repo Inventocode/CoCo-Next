@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.GroupEvent = void 0;
+exports.GroupEvent = undefined;
 var r = require("tslib");
 var i = require("inversify");
 var o = require("../../../26/208/index");
@@ -14,7 +14,7 @@ var u = function (e) {
   function t(t) {
     var n = e.call(this) || this;
     n._workspace_id = n.Blink.mainWorkspace.id || "";
-    n._record_undo = !1;
+    n._record_undo = false;
     var r = t.type;
     var i = t.group;
     n.type = r;
@@ -38,7 +38,7 @@ var u = function (e) {
     if (n) {
       var r = new Set();
       var i = new Set();
-      n.get_descendants(!1, !0).forEach(function (e) {
+      n.get_descendants(false, true).forEach(function (e) {
         if (e.type !== o.PROCEDURE_BLOCK_TYPES.CALL_NORETURN && e.type !== o.PROCEDURE_BLOCK_TYPES.CALL_RETURN && (0, c.has_context)(e)) {
           var t = (0, c.is_valid_context)(e);
           if (!(t || e.disabled)) {
@@ -51,7 +51,7 @@ var u = function (e) {
       });
       var a = function (e, n) {
         var r = t.events.is_record_undo();
-        t.events.set_record_undo(!0);
+        t.events.set_record_undo(true);
         t.events.disable();
         var i = t.events.get_group();
         t.events.set_group(t._group);
@@ -63,14 +63,14 @@ var u = function (e) {
         t.events.set_record_undo(r);
       };
       r.forEach(function (e) {
-        a(e, !0);
+        a(e, true);
       });
       i.forEach(function (e) {
-        a(e, !1);
+        a(e, false);
       });
     }
   };
-  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.Blink)], t.prototype, "Blink", void 0);
+  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.Blink)], t.prototype, "Blink", undefined);
   return t = (0, r.__decorate)([(0, i.injectable)()], t);
 }(require("./840").BaseEvent);
 exports.GroupEvent = u;

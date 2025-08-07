@@ -1,9 +1,9 @@
 "use strict";
 
 var r;
-var i = require("../../33/index");
-var o = require("../../108");
-var a = require("react");
+import i = require("../../33/index");
+import o = require("../../108");
+import a = require("react");
 var s = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -16,8 +16,8 @@ var s = function __importDefault(module) {
   });
   return defaultExport;
 }(a);
-var c = require("../../1502/428");
-var u = require("./1456");
+import c = require("../../1502/428");
+import u = require("./1456");
 function l(e) {
   return (l = "function" === typeof Symbol && "symbol" === typeof Symbol.iterator ? function (e) {
     return typeof e;
@@ -29,9 +29,9 @@ function f(e, t, n) {
   if (t in e) {
     Object.defineProperty(e, t, {
       value: n,
-      enumerable: !0,
-      configurable: !0,
-      writable: !0
+      enumerable: true,
+      configurable: true,
+      writable: true
     });
   } else {
     e[t] = n;
@@ -58,7 +58,7 @@ var h = {
   O: "-o-"
 };
 function p() {
-  if (void 0 !== r) {
+  if (undefined !== r) {
     return r;
   }
   r = "";
@@ -125,7 +125,7 @@ function C(e) {
   return x(e);
 }
 function O(e) {
-  return x(e, !0);
+  return x(e, true);
 }
 function k(e) {
   var t = function (e) {
@@ -149,7 +149,7 @@ function k(e) {
   return t;
 }
 function S(e) {
-  return null !== e && void 0 !== e && e == e.window;
+  return null !== e && undefined !== e && e == e.window;
 }
 function T(e) {
   return S(e) ? e.document : 9 === e.nodeType ? e : e.ownerDocument;
@@ -161,7 +161,7 @@ function F(e, t) {
   return "left" === e ? t.useCssRight ? "right" : e : t.useCssBottom ? "bottom" : e;
 }
 function R(e) {
-  return "left" === e ? "right" : "right" === e ? "left" : "top" === e ? "bottom" : "bottom" === e ? "top" : void 0;
+  return "left" === e ? "right" : "right" === e ? "left" : "top" === e ? "bottom" : "bottom" === e ? "top" : undefined;
 }
 function P(e, t, n) {
   if ("static" === E(e, "position")) {
@@ -320,7 +320,7 @@ function H(e, t, n) {
   for (i = 0; i < t.length; i++) {
     if (r = t[i]) {
       for (o = 0; o < n.length; o++) {
-        var s = void 0;
+        var s = undefined;
         s = "border" === r ? "".concat(r).concat(n[o], "Width") : r + n[o];
         a += parseFloat(m(e, s)) || 0;
       }
@@ -350,17 +350,17 @@ function G(e, t, n) {
   m(e);
   var a = j(e);
   var s = 0;
-  if (null === o || void 0 === o || o <= 0) {
-    o = void 0;
-    if (null === (s = m(e, t)) || void 0 === s || Number(s) < 0) {
+  if (null === o || undefined === o || o <= 0) {
+    o = undefined;
+    if (null === (s = m(e, t)) || undefined === s || Number(s) < 0) {
       s = e.style[t] || 0;
     }
     s = parseFloat(s) || 0;
   }
-  if (void 0 === r) {
+  if (undefined === r) {
     r = a ? 1 : -1;
   }
-  var c = void 0 !== o || a;
+  var c = undefined !== o || a;
   var u = o || s;
   return -1 === r ? c ? u - H(e, ["border", "padding"], i) : s : c ? 1 === r ? u : u + (2 === r ? -H(e, ["border"], i) : H(e, ["margin"], i)) : s + H(e, L.slice(r), i);
 }
@@ -389,10 +389,10 @@ function Q() {
   var r;
   var i = t[0];
   if (0 !== i.offsetWidth) {
-    r = G.apply(void 0, t);
+    r = G.apply(undefined, t);
   } else {
     U(i, z, function () {
-      r = G.apply(void 0, t);
+      r = G.apply(undefined, t);
     });
   }
   return r;
@@ -411,7 +411,7 @@ M(["width", "height"], function (e) {
   var n = "width" === e ? ["Left", "Right"] : ["Top", "Bottom"];
   V[e] = function (t, r) {
     var i = r;
-    if (void 0 === i) {
+    if (undefined === i) {
       return t && Q(t, e, -1);
     }
     if (t) {
@@ -483,7 +483,7 @@ var K = {
   },
   merge: function () {
     for (var e = {}, t = 0; t < arguments.length; t++) {
-      K.mix(e, t < 0 || arguments.length <= t ? void 0 : arguments[t]);
+      K.mix(e, t < 0 || arguments.length <= t ? undefined : arguments[t]);
     }
     return e;
   },
@@ -557,16 +557,16 @@ function $(e, t) {
   }
   if (t || function (e) {
     if (K.isWindow(e) || 9 === e.nodeType) {
-      return !1;
+      return false;
     }
     var t = K.getDocument(e).body;
     var n = null;
     for (n = q(e); n && n !== t; n = q(n)) {
       if ("fixed" === K.css(n, "position")) {
-        return !0;
+        return true;
       }
     }
-    return !1;
+    return false;
   }(e)) {
     n.left = Math.max(n.left, l);
     n.top = Math.max(n.top, f);
@@ -817,7 +817,7 @@ function ue(e, t, n) {
     for (var t = 1; t < arguments.length; t++) {
       var n = null != arguments[t] ? arguments[t] : {};
       if (t % 2) {
-        d(n, !0).forEach(function (t) {
+        d(n, true).forEach(function (t) {
           f(e, t, n[t]);
         });
       } else {
@@ -837,14 +837,14 @@ function ue(e, t, n) {
 }
 ce.__getOffsetParent = Y;
 ce.__getVisibleRectForElement = $;
-var le = require("../../1502/488");
-var fe = require("resize-observer-polyfill");
-var de = require("../../1502/558");
+import le = require("../../1502/488");
+import fe = require("resize-observer-polyfill");
+import de = require("../../1502/558");
 function he(e, t) {
   var n = null;
   var r = null;
   var o = new fe.default(function (e) {
-    var o = Object(i.a)(e, 1)[0].target;
+    var o = i.a(e, 1)[0].target;
     if (document.documentElement.contains(o)) {
       var a = o.getBoundingClientRect();
       var s = a.width;
@@ -874,7 +874,7 @@ function pe(e) {
   return "function" !== typeof e ? null : e();
 }
 function _e(e) {
-  return "object" === Object(o.a)(e) && e ? e : null;
+  return "object" === o.a(e) && e ? e : null;
 }
 var Ae = s.a.forwardRef(function (e, t) {
   var n = e.children;
@@ -884,7 +884,7 @@ var Ae = s.a.forwardRef(function (e, t) {
   var l = e.onAlign;
   var f = e.monitorWindowResize;
   var d = e.monitorBufferTime;
-  var h = void 0 === d ? 0 : d;
+  var h = undefined === d ? 0 : d;
   var p = s.a.useRef({});
   var _ = s.a.useRef();
   var A = s.a.Children.only(n);
@@ -893,30 +893,30 @@ var Ae = s.a.forwardRef(function (e, t) {
   g.current.target = o;
   g.current.onAlign = l;
   var v = function (e, t) {
-    var n = s.a.useRef(!1);
+    var n = s.a.useRef(false);
     var r = s.a.useRef(null);
     function i() {
       window.clearTimeout(r.current);
     }
     return [function o(a) {
-      if (n.current && !0 !== a) {
+      if (n.current && true !== a) {
         i();
         r.current = window.setTimeout(function () {
-          n.current = !1;
+          n.current = false;
           o();
         }, t);
       } else {
-        if (!1 === e()) {
+        if (false === e()) {
           return;
         }
-        n.current = !0;
+        n.current = true;
         i();
         r.current = window.setTimeout(function () {
-          n.current = !1;
+          n.current = false;
         }, t);
       }
     }, function () {
-      n.current = !1;
+      n.current = false;
       i();
     }];
   }(function () {
@@ -932,7 +932,7 @@ var Ae = s.a.forwardRef(function (e, t) {
       p.current.element = s;
       p.current.point = c;
       var l = document.activeElement;
-      if (s && Object(u.a)(s)) {
+      if (s && u.a(s)) {
         i = ce(o, s, a);
       } else {
         if (c) {
@@ -940,18 +940,18 @@ var Ae = s.a.forwardRef(function (e, t) {
         }
       }
       (function (e, t) {
-        if (e !== document.activeElement && Object(de.a)(t, e) && "function" === typeof e.focus) {
+        if (e !== document.activeElement && de.a(t, e) && "function" === typeof e.focus) {
           e.focus();
         }
       })(l, o);
       if (r && i) {
         r(o, i);
       }
-      return !0;
+      return true;
     }
-    return !1;
+    return false;
   }, h);
-  var m = Object(i.a)(v, 2);
+  var m = i.a(v, 2);
   var y = m[0];
   var b = m[1];
   var w = s.a.useRef({
@@ -990,7 +990,7 @@ var Ae = s.a.forwardRef(function (e, t) {
   s.a.useEffect(function () {
     if (f) {
       if (!x.current) {
-        x.current = Object(le.a)(window, "resize", y);
+        x.current = le.a(window, "resize", y);
       }
     } else {
       if (x.current) {
@@ -1012,13 +1012,13 @@ var Ae = s.a.forwardRef(function (e, t) {
   s.a.useImperativeHandle(t, function () {
     return {
       forceAlign: function () {
-        return y(!0);
+        return y(true);
       }
     };
   });
   if (s.a.isValidElement(A)) {
     A = s.a.cloneElement(A, {
-      ref: Object(c.a)(A.ref, _)
+      ref: c.a(A.ref, _)
     });
   }
   return A;

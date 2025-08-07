@@ -1,7 +1,7 @@
 "use strict";
 
 export { c as a };
-var r = require("../1/index");
+import r = require("regenerator-runtime");
 var o = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -14,8 +14,8 @@ var o = function __importDefault(module) {
   });
   return defaultExport;
 }(r);
-var i = require("../7");
-var a = require("./411");
+import i = require("../7");
+import a = require("html2canvas");
 var s = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -32,7 +32,7 @@ function c(e, t) {
   return l.apply(this, arguments);
 }
 function l() {
-  return (l = Object(i.a)(o.a.mark(function e(t, n) {
+  return (l = i.a(o.a.mark(function e(t, n) {
     var r;
     return o.a.wrap(function (e) {
       for (;;) {
@@ -47,10 +47,10 @@ function l() {
             e.next = 5;
             return s()(t, {
               scale: n,
-              useCORS: !0,
-              logging: !1,
+              useCORS: true,
+              logging: false,
               ignoreElements: function (e) {
-                return "iframe" === (null === e || void 0 === e ? void 0 : e.tagName.toLowerCase());
+                return "iframe" === (null === e || undefined === e ? undefined : e.tagName.toLowerCase());
               },
               onclone: function (e) {
                 try {

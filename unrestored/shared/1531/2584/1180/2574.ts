@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.deinterlace = void 0;
+exports.deinterlace = undefined;
 exports.deinterlace = function (e, t) {
   for (var n = new Array(e.length), r = e.length / t, o = function (r, o) {
       var i = e.slice(o * t, (o + 1) * t);

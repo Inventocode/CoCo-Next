@@ -146,9 +146,9 @@ var n = function (t) {
   }
   function x(t, e) {
     var r = t.iterator[e.method];
-    if (void 0 === r) {
+    if (undefined === r) {
       if (e.delegate = null, "throw" === e.method) {
-        if (t.iterator.return && (e.method = "return", e.arg = void 0, x(t, e), "throw" === e.method)) {
+        if (t.iterator.return && (e.method = "return", e.arg = undefined, x(t, e), "throw" === e.method)) {
           return f;
         }
         e.method = "throw";
@@ -164,7 +164,7 @@ var n = function (t) {
       return f;
     }
     var o = n.arg;
-    return o ? o.done ? (e[t.resultName] = o.value, e.next = t.nextLoc, "return" !== e.method && (e.method = "next", e.arg = void 0), e.delegate = null, f) : o : (e.method = "throw", e.arg = new TypeError("iterator result is not an object"), e.delegate = null, f);
+    return o ? o.done ? (e[t.resultName] = o.value, e.next = t.nextLoc, "return" !== e.method && (e.method = "next", e.arg = undefined), e.delegate = null, f) : o : (e.method = "throw", e.arg = new TypeError("iterator result is not an object"), e.delegate = null, f);
   }
   function b(t) {
     var e = {
@@ -211,7 +211,7 @@ var n = function (t) {
               return e;
             }
           }
-          e.value = void 0;
+          e.value = undefined;
           e.done = !0;
           return e;
         };
@@ -224,7 +224,7 @@ var n = function (t) {
   }
   function _() {
     return {
-      value: void 0,
+      value: undefined,
       done: !0
     };
   }
@@ -256,7 +256,7 @@ var n = function (t) {
   };
   t.AsyncIterator = w;
   t.async = function (e, r, n, o, i) {
-    if (void 0 === i) {
+    if (undefined === i) {
       i = Promise;
     }
     var a = new w(u(e, r, n, o), i);
@@ -293,9 +293,9 @@ var n = function (t) {
   E.prototype = {
     constructor: E,
     reset: function (t) {
-      if (this.prev = 0, this.next = 0, this.sent = this._sent = void 0, this.done = !1, this.delegate = null, this.method = "next", this.arg = void 0, this.tryEntries.forEach(L), !t) {
+      if (this.prev = 0, this.next = 0, this.sent = this._sent = undefined, this.done = !1, this.delegate = null, this.method = "next", this.arg = undefined, this.tryEntries.forEach(L), !t) {
         for (var e in this) if ("t" === e.charAt(0) && r.call(this, e) && !isNaN(+e.slice(1))) {
-          this[e] = void 0;
+          this[e] = undefined;
         }
       }
     },
@@ -318,7 +318,7 @@ var n = function (t) {
         e.next = r;
         if (n) {
           e.method = "next";
-          e.arg = void 0;
+          e.arg = undefined;
         }
         return !!n;
       }
@@ -419,7 +419,7 @@ var n = function (t) {
         nextLoc: r
       };
       if ("next" === this.method) {
-        this.arg = void 0;
+        this.arg = undefined;
       }
       return f;
     }

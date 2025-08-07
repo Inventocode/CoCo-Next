@@ -20,19 +20,19 @@ function o(e, t) {
 }
 function a() {
   if ("undefined" === typeof Reflect || !Reflect.construct) {
-    return !1;
+    return false;
   }
   if (Reflect.construct.sham) {
-    return !1;
+    return false;
   }
   if ("function" === typeof Proxy) {
-    return !0;
+    return true;
   }
   try {
     Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {}));
-    return !0;
+    return true;
   } catch (e) {
-    return !1;
+    return false;
   }
 }
 function s(e, t, n) {
@@ -47,7 +47,7 @@ function s(e, t, n) {
   }).apply(null, arguments);
 }
 function c(e) {
-  var t = "function" === typeof Map ? new Map() : void 0;
+  var t = "function" === typeof Map ? new Map() : undefined;
   return (c = function (e) {
     if (null === e || (n = e, -1 === Function.toString.call(n).indexOf("[native code]"))) {
       return e;
@@ -68,9 +68,9 @@ function c(e) {
     r.prototype = Object.create(e.prototype, {
       constructor: {
         value: r,
-        enumerable: !1,
-        writable: !0,
-        configurable: !0
+        enumerable: false,
+        writable: true,
+        configurable: true
       }
     });
     return o(r, e);
@@ -78,7 +78,7 @@ function c(e) {
 }
 function u(e, t) {
   return !t || "object" !== typeof t && "function" !== typeof t ? function (e) {
-    if (void 0 === e) {
+    if (undefined === e) {
       throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
     }
     return e;
@@ -106,7 +106,7 @@ function f(e, t) {
     if ("Object" === n && e.constructor) {
       n = e.constructor.name;
     }
-    return "Map" === n || "Set" === n ? Array.from(e) : "Arguments" === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n) ? d(e, t) : void 0;
+    return "Map" === n || "Set" === n ? Array.from(e) : "Arguments" === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n) ? d(e, t) : undefined;
   }
 }
 function d(e, t) {
@@ -136,8 +136,8 @@ var A = function (e) {
     e.prototype = Object.create(t && t.prototype, {
       constructor: {
         value: e,
-        writable: !0,
-        configurable: !0
+        writable: true,
+        configurable: true
       }
     });
     if (t) {
@@ -165,7 +165,7 @@ var A = function (e) {
         throw new TypeError("Cannot call a class as a function");
       }
     })(this, n);
-    (r = t.call(this, "JSONPath should not be called with \"new\" (it prevents return of (unwrapped) scalar values)")).avoidNew = !0;
+    (r = t.call(this, "JSONPath should not be called with \"new\" (it prevents return of (unwrapped) scalar values)")).avoidNew = true;
     r.value = e;
     r.name = "NewError";
     return r;
@@ -195,17 +195,17 @@ function g(e, t, n, i, o) {
   this.json = e.json || n;
   this.path = e.path || t;
   this.resultType = e.resultType || "value";
-  this.flatten = e.flatten || !1;
+  this.flatten = e.flatten || false;
   this.wrap = !h.call(e, "wrap") || e.wrap;
   this.sandbox = e.sandbox || {};
-  this.preventEval = e.preventEval || !1;
+  this.preventEval = e.preventEval || false;
   this.parent = e.parent || null;
   this.parentProperty = e.parentProperty || null;
   this.callback = e.callback || i || null;
   this.otherTypeCallback = e.otherTypeCallback || o || function () {
     throw new TypeError("You must supply an otherTypeCallback callback option with the @other() operator.");
   };
-  if (!1 !== e.autostart) {
+  if (false !== e.autostart) {
     var s = {
       path: a ? e.path : t
     };
@@ -276,7 +276,7 @@ g.prototype.evaluate = function (e, t, n, i) {
         e.push(n);
       }
       return e;
-    }, []) : this._getPreferredOutput(f[0]) : u ? [] : void 0;
+    }, []) : this._getPreferredOutput(f[0]) : u ? [] : undefined;
   }
 };
 g.prototype._getPreferredOutput = function (e) {
@@ -336,22 +336,22 @@ g.prototype._trace = function (e, t, n, i, o, a, s, c) {
     v(this._trace(A, t[d], p(n, d), t, d, a, s));
   } else if ("*" === d) {
     this._walk(d, A, t, n, i, o, a, function (e, t, n, r, i, o, a, s) {
-      v(l._trace(_(e, n), r, i, o, a, s, !0, !0));
+      v(l._trace(_(e, n), r, i, o, a, s, true, true));
     });
   } else if (".." === d) {
     v(this._trace(A, t, n, i, o, a, s));
     this._walk(d, A, t, n, i, o, a, function (e, t, n, i, o, a, s, c) {
       if ("object" === r(i[e])) {
-        v(l._trace(_(t, n), i[e], p(o, e), i, e, c, !0));
+        v(l._trace(_(t, n), i[e], p(o, e), i, e, c, true));
       }
     });
   } else {
     if ("^" === d) {
-      this._hasParentSelector = !0;
+      this._hasParentSelector = true;
       return {
         path: n.slice(0, -1),
         expr: A,
-        isParentSelector: !0
+        isParentSelector: true
       };
     }
     if ("~" === d) {
@@ -374,7 +374,7 @@ g.prototype._trace = function (e, t, n, i, o, a, s, c) {
       }
       this._walk(d, A, t, n, i, o, a, function (e, t, n, r, i, o, a, s) {
         if (l._eval(t.replace(/^\?\(((?:[\0-\t\x0B\f\x0E-\u2027\u202A-\uD7FF\uE000-\uFFFF]|[\uD800-\uDBFF][\uDC00-\uDFFF]|[\uD800-\uDBFF](?![\uDC00-\uDFFF])|(?:[^\uD800-\uDBFF]|^)[\uDC00-\uDFFF])*?)\)$/, "$1"), r[e], e, i, o, a)) {
-          v(l._trace(_(e, n), r, i, o, a, s, !0));
+          v(l._trace(_(e, n), r, i, o, a, s, true));
         }
       });
     } else if ("(" === d[0]) {
@@ -383,12 +383,12 @@ g.prototype._trace = function (e, t, n, i, o, a, s, c) {
       }
       v(this._trace(_(this._eval(d, t, n[n.length - 1], n.slice(0, -1), i, o), A), t, n, i, o, a, s));
     } else if ("@" === d[0]) {
-      var m = !1;
+      var m = false;
       var y = d.slice(1, -2);
       switch (y) {
         case "scalar":
           if (!(t && ["object", "function"].includes(r(t)))) {
-            m = !0;
+            m = true;
           }
           break;
         case "boolean":
@@ -396,32 +396,32 @@ g.prototype._trace = function (e, t, n, i, o, a, s, c) {
         case "undefined":
         case "function":
           if (r(t) === y) {
-            m = !0;
+            m = true;
           }
           break;
         case "integer":
           if (!(!Number.isFinite(t) || t % 1)) {
-            m = !0;
+            m = true;
           }
           break;
         case "number":
           if (Number.isFinite(t)) {
-            m = !0;
+            m = true;
           }
           break;
         case "nonFinite":
           if (!("number" !== typeof t || Number.isFinite(t))) {
-            m = !0;
+            m = true;
           }
           break;
         case "object":
           if (t && r(t) === y) {
-            m = !0;
+            m = true;
           }
           break;
         case "array":
           if (Array.isArray(t)) {
-            m = !0;
+            m = true;
           }
           break;
         case "other":
@@ -429,7 +429,7 @@ g.prototype._trace = function (e, t, n, i, o, a, s, c) {
           break;
         case "null":
           if (null === t) {
-            m = !0;
+            m = true;
           }
           break;
         default:
@@ -447,7 +447,7 @@ g.prototype._trace = function (e, t, n, i, o, a, s, c) {
       }
     } else if ("`" === d[0] && t && h.call(t, d.slice(1))) {
       var b = d.slice(1);
-      v(this._trace(A, t[b], p(n, b), t, b, a, s, !0));
+      v(this._trace(A, t[b], p(n, b), t, b, a, s, true));
     } else if (d.includes(",")) {
       var w;
       var E = function (e, t) {
@@ -463,9 +463,9 @@ g.prototype._trace = function (e, t, n, i, o, a, s, c) {
               s: i,
               n: function () {
                 return r >= e.length ? {
-                  done: !0
+                  done: true
                 } : {
-                  done: !1,
+                  done: false,
                   value: e[r++]
                 };
               },
@@ -478,8 +478,8 @@ g.prototype._trace = function (e, t, n, i, o, a, s, c) {
           throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
         }
         var o;
-        var a = !0;
-        var s = !1;
+        var a = true;
+        var s = false;
         return {
           s: function () {
             n = e[Symbol.iterator]();
@@ -490,7 +490,7 @@ g.prototype._trace = function (e, t, n, i, o, a, s, c) {
             return e;
           },
           e: function (e) {
-            s = !0;
+            s = true;
             o = e;
           },
           f: function () {
@@ -509,7 +509,7 @@ g.prototype._trace = function (e, t, n, i, o, a, s, c) {
       try {
         for (E.s(); !(w = E.n()).done;) {
           var x = w.value;
-          v(this._trace(_(x, A), t, n, i, o, a, !0));
+          v(this._trace(_(x, A), t, n, i, o, a, true));
         }
       } catch (B) {
         E.e(B);
@@ -517,7 +517,7 @@ g.prototype._trace = function (e, t, n, i, o, a, s, c) {
         E.f();
       }
     } else if (!c && t && h.call(t, d)) {
-      v(this._trace(A, t[d], p(n, d), t, d, a, s, !0));
+      v(this._trace(A, t[d], p(n, d), t, d, a, s, true));
     }
   }
   if (this._hasParentSelector) {
@@ -560,7 +560,7 @@ g.prototype._slice = function (e, t, n, r, i, o, a) {
     l = l < 0 ? Math.max(0, l + s) : Math.min(s, l);
     f = f < 0 ? Math.max(0, f + s) : Math.min(s, f);
     for (var d = [], h = l; h < f; h += u) {
-      this._trace(_(h, t), n, r, i, o, a, !0).forEach(function (e) {
+      this._trace(_(h, t), n, r, i, o, a, true).forEach(function (e) {
         d.push(e);
       });
     }
@@ -595,7 +595,8 @@ g.prototype._eval = function (e, t, n, r, i, o) {
   try {
     return this.vm.runInNewContext(e, this.currSandbox);
   } catch (a) {
-    throw console.log(a), new Error("jsonPath: " + a.message + ": " + e);
+    console.log(a);
+    throw new Error("jsonPath: " + a.message + ": " + e);
   }
 };
 g.cache = {};
@@ -662,7 +663,7 @@ g.prototype.vm = {
     }
     var a = (e = e.replace(/;[\t-\r \xA0\u1680\u2000-\u200A\u2028\u2029\u202F\u205F\u3000\uFEFF]*$/, "")).lastIndexOf(";");
     var c = a > -1 ? e.slice(0, a + 1) + " return " + e.slice(a + 1) : " return " + e;
-    return s(Function, l(n).concat([c])).apply(void 0, l(i));
+    return s(Function, l(n).concat([c])).apply(undefined, l(i));
   }
 };
 export default g;

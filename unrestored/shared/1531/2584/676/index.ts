@@ -21,4 +21,4 @@ var r = {
     dialNumberRepeat: "不能调用多个拨号界面积木，仅执行最后一个"
   }
 };
-var o = require("./70");
+import o = require("./70");

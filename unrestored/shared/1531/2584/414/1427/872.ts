@@ -5,8 +5,8 @@
     return null == e || "" === e ? null : e;
   }
   function r(e, t) {
-    if (void 0 === t) {
-      t = !1;
+    if (undefined === t) {
+      t = false;
     }
     return null != e && ("" !== e || t);
   }
@@ -20,25 +20,25 @@
     return null != e && "function" === typeof e.toString ? e.toString() : null;
   }
   function s(e) {
-    if (void 0 !== e) {
+    if (undefined !== e) {
       if (null === e || "" === e) {
         return null;
       }
       if ("number" === typeof e) {
-        return isNaN(e) ? void 0 : e;
+        return isNaN(e) ? undefined : e;
       }
       var t = parseInt(e, 10);
-      return isNaN(t) ? void 0 : t;
+      return isNaN(t) ? undefined : t;
     }
   }
   function c(e) {
-    if (void 0 !== e) {
+    if (undefined !== e) {
       return null !== e && "" !== e && ("boolean" === typeof e ? e : /true/i.test(e));
     }
   }
   function l(e, t, n) {
-    if (void 0 === n) {
-      n = !1;
+    if (undefined === n) {
+      n = false;
     }
     var r = null == e;
     var o = null == t;
@@ -73,7 +73,7 @@
     }
   }
   function u(e, t, n) {
-    if (null === e || void 0 === e) {
+    if (null === e || undefined === e) {
       return null;
     }
     if (!Array.isArray(e)) {
@@ -106,7 +106,7 @@
     });
   }
   Object.defineProperty(exports, "__esModule", {
-    value: !0
+    value: true
   });
   var p = Object.freeze({
     __proto__: null,
@@ -138,13 +138,13 @@
     }
     e.prototype.addExistingKeys = function (e) {
       for (var t = 0; t < e.length; t++) {
-        this.existingKeys[e[t]] = !0;
+        this.existingKeys[e[t]] = true;
       }
     };
     e.prototype.getUniqueKey = function (e, t) {
       e = a(e);
       for (var n = 0;;) {
-        var r = void 0;
+        var r = undefined;
         if (e) {
           r = e;
           if (0 !== n) {
@@ -161,7 +161,7 @@
           }
         }
         if (!this.existingKeys[r]) {
-          this.existingKeys[r] = !0;
+          this.existingKeys[r] = true;
           return r;
         }
         n++;
@@ -236,25 +236,25 @@
   }
   function T(e, t) {
     if (null == e) {
-      return !0;
+      return true;
     }
     for (var n = 0; n < e.length; n++) {
       if (!t(e[n], n)) {
-        return !1;
+        return false;
       }
     }
-    return !0;
+    return true;
   }
   function S(e, t) {
     if (null == e) {
-      return !1;
+      return false;
     }
     for (var n = 0; n < e.length; n++) {
       if (t(e[n], n)) {
-        return !0;
+        return true;
       }
     }
-    return !1;
+    return false;
   }
   function I(e, t) {
     if (null != e) {
@@ -333,13 +333,13 @@
     },
     findIndex: C,
     fill: function (e, t, n, r) {
-      if (void 0 === t) {
+      if (undefined === t) {
         t = null;
       }
-      if (void 0 === n) {
+      if (undefined === n) {
         n = 0;
       }
-      if (void 0 === r) {
+      if (undefined === r) {
         r = e.length;
       }
       for (var o = n; o < r; o++) {
@@ -417,7 +417,7 @@
   }
   function L(e, t, n, r) {
     var o = D(e, n);
-    if (void 0 !== o) {
+    if (undefined !== o) {
       M(t, n, r ? r(o) : o);
     }
   }
@@ -447,11 +447,11 @@
     return n;
   }
   function F(e, t, n, o) {
-    if (void 0 === n) {
-      n = !0;
+    if (undefined === n) {
+      n = true;
     }
-    if (void 0 === o) {
-      o = !1;
+    if (undefined === o) {
+      o = false;
     }
     if (r(t)) {
       R(t, function (t, r) {
@@ -468,7 +468,7 @@
           if (V(r) && V(i) && !Array.isArray(i)) {
             F(i, r, n, o);
           } else {
-            if (n || void 0 !== r) {
+            if (n || undefined !== r) {
               e[t] = r;
             }
           }
@@ -516,7 +516,7 @@
   function H(e, t) {
     Object.keys(e).forEach(function (t) {
       if ("object" === typeof e[t]) {
-        e[t] = void 0;
+        e[t] = undefined;
       }
     });
     var n = Object.getPrototypeOf(e);
@@ -527,7 +527,7 @@
           value: function () {
             console.warn("AG Grid: " + t + " function " + e + "() cannot be called as the grid has been destroyed.\n                     Please don't call grid API functions on destroyed grids - as a matter of fact you shouldn't\n                     be keeping the API reference, your application has a memory leak! Remove the API reference\n                     when the grid is destroyed.");
           },
-          writable: !0
+          writable: true
         };
       }
     });
@@ -592,7 +592,7 @@
   function X(e, t) {
     if (!q[t]) {
       e();
-      q[t] = !0;
+      q[t] = true;
     }
   }
   function Q(e) {
@@ -609,15 +609,15 @@
     ne(e, 400);
   }
   var $ = [];
-  var ee = !1;
+  var ee = false;
   function te(e) {
     $.push(e);
     if (!ee) {
-      ee = !0;
+      ee = true;
       window.setTimeout(function () {
         var e = $.slice();
         $.length = 0;
-        ee = !1;
+        ee = false;
         e.forEach(function (e) {
           return e();
         });
@@ -625,7 +625,7 @@
     }
   }
   function ne(e, t) {
-    if (void 0 === t) {
+    if (undefined === t) {
       t = 0;
     }
     if (e.length > 0) {
@@ -638,8 +638,8 @@
   }
   function re(e, t, n) {
     var r;
-    if (void 0 === n) {
-      n = !1;
+    if (undefined === n) {
+      n = false;
     }
     return function () {
       for (var o = [], i = 0; i < arguments.length; i++) {
@@ -660,17 +660,17 @@
     };
   }
   function oe(e, t, n, r) {
-    if (void 0 === n) {
+    if (undefined === n) {
       n = 100;
     }
     var o = new Date().getTime();
     var i = null;
-    var a = !1;
+    var a = false;
     var s = function () {
       var s = new Date().getTime() - o > n;
       if (e() || s) {
         t();
-        a = !0;
+        a = true;
         if (null != i) {
           window.clearInterval(i);
           i = null;
@@ -719,7 +719,7 @@
   var se = function () {
     function e(e, t) {
       this.beanWrappers = {};
-      this.destroyed = !1;
+      this.destroyed = false;
       if (e && e.beanClasses) {
         this.contextParams = e;
         this.logger = t;
@@ -772,7 +772,7 @@
     e.prototype.createBeanWrapper = function (e) {
       var t = e.__agBeanMetaData;
       if (!t) {
-        var n = void 0;
+        var n = undefined;
         n = e.prototype.constructor ? Q(e.prototype.constructor) : "" + e;
         return void console.error("Context item " + n + " is not a bean");
       }
@@ -838,8 +838,8 @@
       return r;
     };
     e.prototype.lookupBeanInstance = function (e, t, n) {
-      if (void 0 === n) {
-        n = !1;
+      if (undefined === n) {
+        n = false;
       }
       if ("context" === t) {
         return this;
@@ -863,7 +863,7 @@
         if (o) {
           o.forEach(function (e) {
             if (e != n) {
-              r[e] = !0;
+              r[e] = true;
             }
           });
         }
@@ -873,7 +873,7 @@
       });
     };
     e.prototype.getBean = function (e) {
-      return this.lookupBeanInstance("getBean", e, !0);
+      return this.lookupBeanInstance("getBean", e, true);
     };
     e.prototype.destroy = function () {
       if (!this.destroyed) {
@@ -881,7 +881,7 @@
         var e = this.getBeanInstances();
         this.destroyBeans(e);
         this.contextParams.providedBeanInstances = null;
-        this.destroyed = !0;
+        this.destroyed = true;
         this.logger.log(">> ag-Application Context shut down - component is dead");
       }
     };
@@ -930,12 +930,12 @@
   }
   function pe(e) {
     return function (t, n, r) {
-      he(t, e, !1, t, n, null);
+      he(t, e, false, t, n, null);
     };
   }
   function fe(e) {
     return function (t, n, r) {
-      he(t, e, !0, t, n, null);
+      he(t, e, true, t, n, null);
     };
   }
   function he(e, t, n, r, o, i) {
@@ -962,7 +962,7 @@
       var o;
       var i = "function" == typeof t ? t : t.constructor;
       if ("number" === typeof r) {
-        var a = void 0;
+        var a = undefined;
         if (n) {
           o = ge(i);
           a = n;
@@ -1017,11 +1017,11 @@
       this.globalSyncListeners = new Set();
       this.globalAsyncListeners = new Set();
       this.asyncFunctionsQueue = [];
-      this.scheduled = !1;
+      this.scheduled = false;
       this.firedEvents = {};
     }
     e.prototype.setBeans = function (e, t, n, r) {
-      if (void 0 === r) {
+      if (undefined === r) {
         r = null;
       }
       this.logger = e.create("EventService");
@@ -1044,16 +1044,16 @@
       return 0 === this.allSyncListeners.size && 0 === this.allAsyncListeners.size && 0 === this.globalSyncListeners.size && 0 === this.globalAsyncListeners.size;
     };
     e.prototype.addEventListener = function (e, t, n) {
-      if (void 0 === n) {
-        n = !1;
+      if (undefined === n) {
+        n = false;
       }
-      this.getListeners(e, n, !0).add(t);
+      this.getListeners(e, n, true).add(t);
     };
     e.prototype.removeEventListener = function (e, t, n) {
-      if (void 0 === n) {
-        n = !1;
+      if (undefined === n) {
+        n = false;
       }
-      var r = this.getListeners(e, n, !1);
+      var r = this.getListeners(e, n, false);
       if (r) {
         r.delete(t);
         if (0 === r.size) {
@@ -1062,21 +1062,21 @@
       }
     };
     e.prototype.addGlobalListener = function (e, t) {
-      if (void 0 === t) {
-        t = !1;
+      if (undefined === t) {
+        t = false;
       }
       (t ? this.globalAsyncListeners : this.globalSyncListeners).add(e);
     };
     e.prototype.removeGlobalListener = function (e, t) {
-      if (void 0 === t) {
-        t = !1;
+      if (undefined === t) {
+        t = false;
       }
       (t ? this.globalAsyncListeners : this.globalSyncListeners).delete(e);
     };
     e.prototype.dispatchEvent = function (e) {
-      this.dispatchToListeners(e, !0);
-      this.dispatchToListeners(e, !1);
-      this.firedEvents[e.type] = !0;
+      this.dispatchToListeners(e, true);
+      this.dispatchToListeners(e, false);
+      this.firedEvents[e.type] = true;
     };
     e.prototype.dispatchEventOnce = function (e) {
       if (!this.firedEvents[e.type]) {
@@ -1086,7 +1086,7 @@
     e.prototype.dispatchToListeners = function (e, t) {
       var n = this;
       var r = e.type;
-      var o = this.getListeners(r, t, !1);
+      var o = this.getListeners(r, t, false);
       if (o) {
         (function (r) {
           r.forEach(function (r) {
@@ -1118,11 +1118,11 @@
       this.asyncFunctionsQueue.push(e);
       if (!this.scheduled) {
         window.setTimeout(this.flushAsyncQueue.bind(this), 0);
-        this.scheduled = !0;
+        this.scheduled = true;
       }
     };
     e.prototype.flushAsyncQueue = function () {
-      this.scheduled = !1;
+      this.scheduled = false;
       var e = this.asyncFunctionsQueue.slice();
       this.asyncFunctionsQueue = [];
       e.forEach(function (e) {
@@ -1194,11 +1194,11 @@
   var Oe = function () {
     function e() {}
     e.register = function (t, n) {
-      if (void 0 === n) {
-        n = !0;
+      if (undefined === n) {
+        n = true;
       }
       e.modulesMap[t.moduleName] = t;
-      if (void 0 === e.moduleBased) {
+      if (undefined === e.moduleBased) {
         e.moduleBased = n;
       } else {
         if (e.moduleBased !== n) {
@@ -1210,8 +1210,8 @@
       }
     };
     e.registerModules = function (t, n) {
-      if (void 0 === n) {
-        n = !0;
+      if (undefined === n) {
+        n = true;
       }
       if (t) {
         t.forEach(function (t) {
@@ -1221,13 +1221,13 @@
     };
     e.assertRegistered = function (e, t) {
       if (this.isRegistered(e)) {
-        return !0;
+        return true;
       }
       var n = "AG Grid: unable to use " + t + " as module " + e + " is not present. Please see: https://www.ag-grid.com/javascript-table/modules/";
       X(function () {
         console.warn(n);
       }, t + e);
-      return !1;
+      return false;
     };
     e.isRegistered = function (t) {
       return !!e.modulesMap[t];
@@ -1261,13 +1261,13 @@
   };
   var Ce = function () {
     function e(e, t, n, r) {
-      this.moving = !1;
-      this.menuVisible = !1;
-      this.filterActive = !1;
+      this.moving = false;
+      this.menuVisible = false;
+      this.filterActive = false;
       this.eventService = new ye();
-      this.rowGroupActive = !1;
-      this.pivotActive = !1;
-      this.aggregationActive = !1;
+      this.rowGroupActive = false;
+      this.pivotActive = false;
+      this.aggregationActive = false;
       this.colDef = e;
       this.userProvidedColDef = t;
       this.colId = n;
@@ -1275,7 +1275,7 @@
       this.setState(e);
     }
     e.prototype.setState = function (e) {
-      if (void 0 !== e.sort) {
+      if (undefined !== e.sort) {
         if (!(e.sort !== Ee.SORT_ASC && e.sort !== Ee.SORT_DESC)) {
           this.sort = e.sort;
         }
@@ -1286,7 +1286,7 @@
       }
       var t = s(e.sortIndex);
       var n = s(e.initialSortIndex);
-      if (void 0 !== t) {
+      if (undefined !== t) {
         if (null !== t) {
           this.sortIndex = t;
         }
@@ -1297,18 +1297,18 @@
       }
       var r = c(e.hide);
       var o = c(e.initialHide);
-      this.visible = void 0 !== r ? !r : !o;
-      if (void 0 !== e.pinned) {
+      this.visible = undefined !== r ? !r : !o;
+      if (undefined !== e.pinned) {
         this.setPinned(e.pinned);
       } else {
         this.setPinned(e.initialPinned);
       }
       var i = s(e.flex);
       var a = s(e.initialFlex);
-      if (void 0 !== i) {
+      if (undefined !== i) {
         this.flex = i;
       } else {
-        if (void 0 !== a) {
+        if (undefined !== a) {
           this.flex = a;
         }
       }
@@ -1360,20 +1360,20 @@
       }
     };
     e.prototype.resetActualWidth = function (e) {
-      if (void 0 === e) {
+      if (undefined === e) {
         e = "api";
       }
       var t = this.columnUtils.calculateColInitialWidth(this.colDef);
-      this.setActualWidth(t, e, !0);
+      this.setActualWidth(t, e, true);
     };
     e.prototype.isEmptyGroup = function () {
-      return !1;
+      return false;
     };
     e.prototype.isRowGroupDisplayed = function (e) {
       if (o(this.colDef) || o(this.colDef.showRowGroup)) {
-        return !1;
+        return false;
       }
-      var t = !0 === this.colDef.showRowGroup;
+      var t = true === this.colDef.showRowGroup;
       var n = this.colDef.showRowGroup === e;
       return t || n;
     };
@@ -1467,7 +1467,7 @@
         var t = this.createColumnFunctionCallbackParams(e);
         return (0, this.colDef.suppressNavigable)(t);
       }
-      return !1;
+      return false;
     };
     e.prototype.isCellEditable = function (e) {
       return !(e.group && !this.gridOptionsWrapper.isEnableGroupEdit()) && this.isColumnFunc(e, this.colDef.editable);
@@ -1485,13 +1485,13 @@
       return this.isColumnFunc(e, this.colDef ? this.colDef.suppressPaste : null);
     };
     e.prototype.isResizable = function () {
-      return !0 === this.colDef.resizable;
+      return true === this.colDef.resizable;
     };
     e.prototype.isColumnFunc = function (e, t) {
       return "boolean" === typeof t ? t : "function" === typeof t && t(this.createColumnFunctionCallbackParams(e));
     };
     e.prototype.setMoving = function (t, n) {
-      if (void 0 === n) {
+      if (undefined === n) {
         n = "api";
       }
       this.moving = t;
@@ -1514,7 +1514,7 @@
       return this.sort;
     };
     e.prototype.setSort = function (t, n) {
-      if (void 0 === n) {
+      if (undefined === n) {
         n = "api";
       }
       if (this.sort !== t) {
@@ -1523,7 +1523,7 @@
       }
     };
     e.prototype.setMenuVisible = function (t, n) {
-      if (void 0 === n) {
+      if (undefined === n) {
         n = "api";
       }
       if (this.menuVisible !== t) {
@@ -1568,7 +1568,7 @@
       return this.left + this.actualWidth;
     };
     e.prototype.setLeft = function (t, n) {
-      if (void 0 === n) {
+      if (undefined === n) {
         n = "api";
       }
       this.oldLeft = this.left;
@@ -1581,7 +1581,7 @@
       return this.filterActive;
     };
     e.prototype.setFilterActive = function (t, n, r) {
-      if (void 0 === n) {
+      if (undefined === n) {
         n = "api";
       }
       if (this.filterActive !== t) {
@@ -1595,7 +1595,7 @@
       this.eventService.dispatchEvent(o);
     };
     e.prototype.setPinned = function (e) {
-      if (!0 === e || e === Ee.PINNED_LEFT) {
+      if (true === e || e === Ee.PINNED_LEFT) {
         this.pinned = Ee.PINNED_LEFT;
       } else {
         if (e === Ee.PINNED_RIGHT) {
@@ -1606,7 +1606,7 @@
       }
     };
     e.prototype.setFirstRightPinned = function (t, n) {
-      if (void 0 === n) {
+      if (undefined === n) {
         n = "api";
       }
       if (this.firstRightPinned !== t) {
@@ -1615,7 +1615,7 @@
       }
     };
     e.prototype.setLastLeftPinned = function (t, n) {
-      if (void 0 === n) {
+      if (undefined === n) {
         n = "api";
       }
       if (this.lastLeftPinned !== t) {
@@ -1642,10 +1642,10 @@
       return this.pinned;
     };
     e.prototype.setVisible = function (t, n) {
-      if (void 0 === n) {
+      if (undefined === n) {
         n = "api";
       }
-      var r = !0 === t;
+      var r = true === t;
       if (this.visible !== r) {
         this.visible = r;
         this.eventService.dispatchEvent(this.createColumnEvent(e.EVENT_VISIBLE_CHANGED, n));
@@ -1700,11 +1700,11 @@
       return Math.max(n, 1);
     };
     e.prototype.setActualWidth = function (e, t, n) {
-      if (void 0 === t) {
+      if (undefined === t) {
         t = "api";
       }
-      if (void 0 === n) {
-        n = !1;
+      if (undefined === n) {
+        n = false;
       }
       if (null != this.minWidth) {
         e = Math.max(e, this.minWidth);
@@ -1743,7 +1743,7 @@
       }
     };
     e.prototype.setMinimum = function (e) {
-      if (void 0 === e) {
+      if (undefined === e) {
         e = "api";
       }
       if (r(this.minWidth)) {
@@ -1751,7 +1751,7 @@
       }
     };
     e.prototype.setRowGroupActive = function (t, n) {
-      if (void 0 === n) {
+      if (undefined === n) {
         n = "api";
       }
       if (this.rowGroupActive !== t) {
@@ -1763,7 +1763,7 @@
       return this.rowGroupActive;
     };
     e.prototype.setPivotActive = function (t, n) {
-      if (void 0 === n) {
+      if (undefined === n) {
         n = "api";
       }
       if (this.pivotActive !== t) {
@@ -1781,7 +1781,7 @@
       return this.isAllowPivot() || this.isAllowRowGroup() || this.isAllowValue();
     };
     e.prototype.setValueActive = function (t, n) {
-      if (void 0 === n) {
+      if (undefined === n) {
         n = "api";
       }
       if (this.aggregationActive !== t) {
@@ -1793,13 +1793,13 @@
       return this.aggregationActive;
     };
     e.prototype.isAllowPivot = function () {
-      return !0 === this.colDef.enablePivot;
+      return true === this.colDef.enablePivot;
     };
     e.prototype.isAllowValue = function () {
-      return !0 === this.colDef.enableValue;
+      return true === this.colDef.enableValue;
     };
     e.prototype.isAllowRowGroup = function () {
-      return !0 === this.colDef.enableRowGroup;
+      return true === this.colDef.enableRowGroup;
     };
     e.prototype.getMenuTabs = function (e) {
       var t = this.getColDef().menuTabs;
@@ -1833,11 +1833,11 @@
     e.EVENT_ROW_GROUP_CHANGED = "columnRowGroupChanged";
     e.EVENT_PIVOT_CHANGED = "columnPivotChanged";
     e.EVENT_VALUE_CHANGED = "columnValueChanged";
-    we([pe("gridOptionsWrapper")], e.prototype, "gridOptionsWrapper", void 0);
-    we([pe("columnUtils")], e.prototype, "columnUtils", void 0);
-    we([pe("columnApi")], e.prototype, "columnApi", void 0);
-    we([pe("gridApi")], e.prototype, "gridApi", void 0);
-    we([pe("context")], e.prototype, "context", void 0);
+    we([pe("gridOptionsWrapper")], e.prototype, "gridOptionsWrapper", undefined);
+    we([pe("columnUtils")], e.prototype, "columnUtils", undefined);
+    we([pe("columnApi")], e.prototype, "columnApi", undefined);
+    we([pe("gridApi")], e.prototype, "gridApi", undefined);
+    we([pe("context")], e.prototype, "context", undefined);
     we([le], e.prototype, "initialise", null);
     return e;
   }();
@@ -1946,13 +1946,13 @@
       return this.instanceId;
     };
     e.prototype.isChildInThisGroupDeepSearch = function (t) {
-      var n = !1;
+      var n = false;
       this.children.forEach(function (r) {
         if (t === r) {
-          n = !0;
+          n = true;
         }
         if (r instanceof e && r.isChildInThisGroupDeepSearch(t)) {
-          n = !0;
+          n = true;
         }
       });
       return n;
@@ -1968,12 +1968,12 @@
     };
     e.prototype.isResizable = function () {
       if (!this.displayedChildren) {
-        return !1;
+        return false;
       }
-      var e = !1;
+      var e = false;
       this.displayedChildren.forEach(function (t) {
         if (t.isResizable()) {
-          e = !0;
+          e = true;
         }
       });
       return e;
@@ -2091,13 +2091,13 @@
     e.HEADER_GROUP_SHOW_CLOSED = "closed";
     e.EVENT_LEFT_CHANGED = "leftChanged";
     e.EVENT_DISPLAYED_CHILDREN_CHANGED = "displayedChildrenChanged";
-    Te([pe("gridOptionsWrapper")], e.prototype, "gridOptionsWrapper", void 0);
+    Te([pe("gridOptionsWrapper")], e.prototype, "gridOptionsWrapper", undefined);
     return e;
   }();
   var Ie = function () {
     function e(e, t, n, r) {
       this.localEventService = new ye();
-      this.expandable = !1;
+      this.expandable = false;
       this.colGroupDef = e;
       this.groupId = t;
       this.expanded = !!e && !!e.openByDefault;
@@ -2122,7 +2122,7 @@
       return this.padding;
     };
     e.prototype.setExpanded = function (t) {
-      this.expanded = void 0 !== t && t;
+      this.expanded = undefined !== t && t;
       var n = {
         type: e.EVENT_EXPANDED_CHANGED
       };
@@ -2182,20 +2182,20 @@
     };
     e.prototype.setExpandable = function () {
       if (!this.isPadding()) {
-        for (var t = !1, n = !1, r = !1, o = this.findChildrenRemovingPadding(), i = 0, a = o.length; i < a; i++) {
+        for (var t = false, n = false, r = false, o = this.findChildrenRemovingPadding(), i = 0, a = o.length; i < a; i++) {
           var s = o[i];
           if (s.isVisible()) {
             var c = s.getColumnGroupShow();
             if (c === Se.HEADER_GROUP_SHOW_OPEN) {
-              t = !0;
-              r = !0;
+              t = true;
+              r = true;
             } else {
               if (c === Se.HEADER_GROUP_SHOW_CLOSED) {
-                n = !0;
-                r = !0;
+                n = true;
+                r = true;
               } else {
-                t = !0;
-                n = !0;
+                t = true;
+                n = true;
               }
             }
           }
@@ -2249,10 +2249,10 @@
   var je = ["touchstart", "touchend", "touchmove", "touchcancel"];
   var Ne = {};
   function Re(e) {
-    e.__ag_Grid_Stop_Propagation = !0;
+    e.__ag_Grid_Stop_Propagation = true;
   }
   function ke(e) {
-    return !0 === e.__ag_Grid_Stop_Propagation;
+    return true === e.__ag_Grid_Stop_Propagation;
   }
   var xe = function () {
     var e = {
@@ -2307,8 +2307,8 @@
   }
   function Fe(e, t, n, r) {
     var o = O(je, n) ? {
-      passive: !0
-    } : void 0;
+      passive: true
+    } : undefined;
     if (e && e.addEventListener) {
       e.addEventListener(t, n, r, o);
     }
@@ -2357,8 +2357,8 @@
     function e() {
       var e = this;
       this.destroyFunctions = [];
-      this.destroyed = !1;
-      this.__v_skip = !0;
+      this.destroyed = false;
+      this.__v_skip = true;
       this.getContext = function () {
         return e.context;
       };
@@ -2374,7 +2374,7 @@
         return e();
       });
       this.destroyFunctions.length = 0;
-      this.destroyed = !0;
+      this.destroyed = true;
       this.dispatchEvent({
         type: e.EVENT_DESTROYED
       });
@@ -2448,10 +2448,10 @@
       return [];
     };
     e.EVENT_DESTROYED = "destroyed";
-    Ue([pe("frameworkOverrides")], e.prototype, "frameworkOverrides", void 0);
-    Ue([pe("context")], e.prototype, "context", void 0);
-    Ue([pe("eventService")], e.prototype, "eventService", void 0);
-    Ue([pe("gridOptionsWrapper")], e.prototype, "gridOptionsWrapper", void 0);
+    Ue([pe("frameworkOverrides")], e.prototype, "frameworkOverrides", undefined);
+    Ue([pe("context")], e.prototype, "context", undefined);
+    Ue([pe("eventService")], e.prototype, "eventService", undefined);
+    Ue([pe("gridOptionsWrapper")], e.prototype, "gridOptionsWrapper", undefined);
     Ue([ue], e.prototype, "destroy", null);
     return e;
   }();
@@ -2561,7 +2561,7 @@
     };
     t.prototype.createAutoGroupTreeItem = function (e, t) {
       for (var n = t, r = this.findDepth(e) - 1; r >= 0; r--) {
-        var o = new Ie(null, "FAKE_PATH_" + t.getId() + "}_" + r, !0, r);
+        var o = new Ie(null, "FAKE_PATH_" + t.getId() + "}_" + r, true, r);
         this.context.createBean(o);
         o.setChildren([n]);
         n.setOriginalParent(o);
@@ -2585,10 +2585,10 @@
           s.setChildren(c);
           o.push(s);
         } else {
-          for (var l = void 0, u = void 0, d = n - 1; d >= t; d--) {
+          for (var l = undefined, u = undefined, d = n - 1; d >= t; d--) {
             var p = r.getUniqueKey(null, null);
             var f = this.createMergedColGroupDef(null);
-            var h = new Ie(f, p, !0, t);
+            var h = new Ie(f, p, true, t);
             this.context.createBean(h);
             if (u) {
               u.setChildren([h]);
@@ -2639,11 +2639,11 @@
     t.prototype.createColumnGroup = function (e, t, n, r, o, i) {
       var a = this.createMergedColGroupDef(t);
       var s = o.getUniqueKey(a.groupId || null, null);
-      var c = new Ie(a, s, !1, n);
+      var c = new Ie(a, s, false, n);
       this.context.createBean(c);
       var l = this.findExistingGroup(t, i);
       if (l && l.isExpanded()) {
-        c.setExpanded(!0);
+        c.setExpanded(true);
       }
       var u = this.recursivelyCreateColumns(a.children, n + 1, e, r, o, i);
       c.setChildren(u);
@@ -2672,7 +2672,7 @@
     };
     t.prototype.applyColumnState = function (e, t) {
       var n = s(t.flex);
-      if (void 0 !== n) {
+      if (undefined !== n) {
         e.setFlex(n);
       }
       if (e.getFlex() <= 0) {
@@ -2684,22 +2684,22 @@
           e.setActualWidth(o);
         }
       }
-      if (void 0 !== t.sort) {
+      if (undefined !== t.sort) {
         if (t.sort == Ee.SORT_ASC || t.sort == Ee.SORT_DESC) {
           e.setSort(t.sort);
         } else {
-          e.setSort(void 0);
+          e.setSort(undefined);
         }
       }
       var i = s(t.sortIndex);
-      if (void 0 !== i) {
+      if (undefined !== i) {
         e.setSortIndex(i);
       }
       var a = c(t.hide);
-      if (void 0 !== a) {
+      if (undefined !== a) {
         e.setVisible(!a);
       }
-      if (void 0 !== t.pinned) {
+      if (undefined !== t.pinned) {
         e.setPinned(t.pinned);
       }
     };
@@ -2707,7 +2707,7 @@
       var n = u(t, function (t) {
         var n = t.getUserProvidedColDef();
         if (!n) {
-          return !1;
+          return false;
         }
         var r = null != e.colId;
         var o = null != e.field;
@@ -2730,7 +2730,7 @@
     t.prototype.mergeColDefs = function (e) {
       var t = {};
       var n = this.gridOptionsWrapper.getDefaultColDef();
-      F(t, n, !0, !0);
+      F(t, n, true, true);
       var r = e.type;
       if (!r) {
         r = n && n.type;
@@ -2738,7 +2738,7 @@
       if (r) {
         this.assignColumnTypes(r, t);
       }
-      F(t, e, !0, !0);
+      F(t, e, true, true);
       return t;
     };
     t.prototype.assignColumnTypes = function (e, t) {
@@ -2768,7 +2768,7 @@
       n.forEach(function (e) {
         var n = r[e.trim()];
         if (n) {
-          F(t, n, !0, !0);
+          F(t, n, true, true);
         } else {
           console.warn("ag-grid: colDef.type '" + e + "' does not correspond to defined gridOptions.columnTypes");
         }
@@ -2777,19 +2777,19 @@
     t.prototype.checkForDeprecatedItems = function (e) {
       if (e) {
         var t = e;
-        if (void 0 !== t.group) {
+        if (undefined !== t.group) {
           console.warn("ag-grid: colDef.group is invalid, please check documentation on how to do grouping as it changed in version 3");
         }
-        if (void 0 !== t.headerGroup) {
+        if (undefined !== t.headerGroup) {
           console.warn("ag-grid: colDef.headerGroup is invalid, please check documentation on how to do grouping as it changed in version 3");
         }
-        if (void 0 !== t.headerGroupShow) {
+        if (undefined !== t.headerGroupShow) {
           console.warn("ag-grid: colDef.headerGroupShow is invalid, should be columnGroupShow, please check documentation on how to do grouping as it changed in version 3");
         }
-        if (void 0 !== t.suppressRowGroup) {
+        if (undefined !== t.suppressRowGroup) {
           console.warn("ag-grid: colDef.suppressRowGroup is deprecated, please use colDef.type instead");
         }
-        if (void 0 !== t.suppressAggregation) {
+        if (undefined !== t.suppressAggregation) {
           console.warn("ag-grid: colDef.suppressAggregation is deprecated, please use colDef.type instead");
         }
         if (t.suppressRowGroup || t.suppressAggregation) {
@@ -2802,9 +2802,9 @@
       }
     };
     t.prototype.isColumnGroup = function (e) {
-      return void 0 !== e.children;
+      return undefined !== e.children;
     };
-    Ve([pe("columnUtils")], t.prototype, "columnUtils", void 0);
+    Ve([pe("columnUtils")], t.prototype, "columnUtils", undefined);
     Ve([ze(0, me("loggerFactory"))], t.prototype, "setBeans", null);
     return t = Ve([de("columnFactory")], t);
   }(We);
@@ -2939,12 +2939,12 @@
     return e.length > t ? e : ((t -= e.length) > n.length && (n += Ze(n, t / n.length)), n.slice(0, t) + e);
   }
   function $e(e) {
-    return null === e || void 0 === e ? null : e.replace(/([A-Z])/g, function (e) {
+    return null === e || undefined === e ? null : e.replace(/([A-Z])/g, function (e) {
       return "-" + e[0].toLowerCase();
     });
   }
   function et(e) {
-    return null === e || void 0 === e ? null : e.replace(/-([a-z])/g, function (e) {
+    return null === e || undefined === e ? null : e.replace(/-([a-z])/g, function (e) {
       return e[1].toUpperCase();
     });
   }
@@ -3101,7 +3101,7 @@
       var t = null !== e && e.apply(this, arguments) || this;
       t.primaryHeaderRowCount = 0;
       t.secondaryHeaderRowCount = 0;
-      t.secondaryColumnsPresent = !1;
+      t.secondaryColumnsPresent = false;
       t.gridHeaderRowCount = 0;
       t.displayedColumnsLeft = [];
       t.displayedColumnsRight = [];
@@ -3113,16 +3113,16 @@
       t.rowGroupColumns = [];
       t.valueColumns = [];
       t.pivotColumns = [];
-      t.ready = !1;
-      t.autoGroupsNeedBuilding = !1;
-      t.forceRecreateAutoGroups = !1;
-      t.pivotMode = !1;
+      t.ready = false;
+      t.autoGroupsNeedBuilding = false;
+      t.forceRecreateAutoGroups = false;
+      t.pivotMode = false;
       t.bodyWidth = 0;
       t.leftWidth = 0;
       t.rightWidth = 0;
-      t.bodyWidthDirty = !0;
+      t.bodyWidthDirty = true;
       t.colDefVersion = 0;
-      t.flexColsCalculatedAtLestOnce = !1;
+      t.flexColsCalculatedAtLestOnce = false;
       return t;
     }
     ct(t, e);
@@ -3136,8 +3136,8 @@
       this.addManagedListener(this.gridOptionsWrapper, "autoGroupColumnDef", this.onAutoGroupColumnDefChanged.bind(this));
     };
     t.prototype.onAutoGroupColumnDefChanged = function () {
-      this.autoGroupsNeedBuilding = !0;
-      this.forceRecreateAutoGroups = !0;
+      this.autoGroupsNeedBuilding = true;
+      this.forceRecreateAutoGroups = true;
       this.updateGridColumns();
       this.updateDisplayedColumns("gridOptionsChanged");
     };
@@ -3146,7 +3146,7 @@
     };
     t.prototype.setColumnDefs = function (e, t) {
       var n = this;
-      if (void 0 === t) {
+      if (undefined === t) {
         t = "api";
       }
       var r = !!this.columnDefs;
@@ -3154,10 +3154,10 @@
       var o = this.compareColumnStatesAndRaiseEvents(t);
       this.columnDefs = e;
       this.valueCache.expire();
-      this.autoGroupsNeedBuilding = !0;
+      this.autoGroupsNeedBuilding = true;
       var i = this.primaryColumns;
       var a = this.primaryColumnTree;
-      var s = this.columnFactory.createColumnTree(e, !0, a);
+      var s = this.columnFactory.createColumnTree(e, true, a);
       this.primaryColumnTree = s.columnTree;
       this.primaryHeaderRowCount = s.treeDept + 1;
       this.primaryColumns = this.getColumnsFromTree(this.primaryColumnTree);
@@ -3168,7 +3168,7 @@
       this.extractRowGroupColumns(t, i);
       this.extractPivotColumns(t, i);
       this.extractValueColumns(t, i);
-      this.ready = !0;
+      this.ready = true;
       this.updateGridColumns();
       if (r && this.gridColsArePrimary && this.gridOptionsWrapper.isApplyColumnDefOrder()) {
         this.orderGridColumnsLikePrimary();
@@ -3188,7 +3188,7 @@
       this.eventService.dispatchEvent(e);
     };
     t.prototype.dispatchEverythingChanged = function (e) {
-      if (void 0 === e) {
+      if (undefined === e) {
         e = "api";
       }
       var t = {
@@ -3253,7 +3253,7 @@
       if (e !== this.scrollWidth || t !== this.scrollPosition || this.bodyWidthDirty) {
         this.scrollWidth = e;
         this.scrollPosition = t;
-        this.bodyWidthDirty = !0;
+        this.bodyWidthDirty = true;
         this.setViewport();
         if (this.ready) {
           this.checkViewportColumns();
@@ -3264,15 +3264,15 @@
       return this.pivotMode;
     };
     t.prototype.isPivotSettingAllowed = function (e) {
-      return !e || !this.gridOptionsWrapper.isTreeData() || (console.warn("AG Grid: Pivot mode not available in conjunction Tree Data i.e. 'gridOptions.treeData: true'"), !1);
+      return !e || !this.gridOptionsWrapper.isTreeData() || (console.warn("AG Grid: Pivot mode not available in conjunction Tree Data i.e. 'gridOptions.treeData: true'"), false);
     };
     t.prototype.setPivotMode = function (e, t) {
-      if (void 0 === t) {
+      if (undefined === t) {
         t = "api";
       }
       if (e !== this.pivotMode && this.isPivotSettingAllowed(this.pivotMode)) {
         this.pivotMode = e;
-        this.autoGroupsNeedBuilding = !0;
+        this.autoGroupsNeedBuilding = true;
         this.updateGridColumns();
         this.updateDisplayedColumns(t);
         var n = {
@@ -3318,7 +3318,7 @@
     };
     t.prototype.autoSizeColumns = function (e, t, n) {
       var r = this;
-      if (void 0 === n) {
+      if (undefined === n) {
         n = "api";
       }
       this.animationFrameService.flushAllFrames();
@@ -3328,7 +3328,7 @@
         i = 0;
         this.actionOnGridColumns(e, function (e) {
           if (o.indexOf(e) >= 0) {
-            return !1;
+            return false;
           }
           var a = r.autoWidthCalculator.getPreferredWidthForColumn(e, t);
           if (a > 0) {
@@ -3337,13 +3337,13 @@
             o.push(e);
             i++;
           }
-          return !0;
+          return true;
         }, n);
       }
-      this.fireColumnResizedEvent(o, !0, "autosizeColumns");
+      this.fireColumnResizedEvent(o, true, "autosizeColumns");
     };
     t.prototype.fireColumnResizedEvent = function (e, t, n, r) {
-      if (void 0 === r) {
+      if (undefined === r) {
         r = null;
       }
       if (e && e.length) {
@@ -3361,7 +3361,7 @@
       }
     };
     t.prototype.autoSizeColumn = function (e, t, n) {
-      if (void 0 === n) {
+      if (undefined === n) {
         n = "api";
       }
       if (e) {
@@ -3369,7 +3369,7 @@
       }
     };
     t.prototype.autoSizeAllColumns = function (e, t) {
-      if (void 0 === t) {
+      if (undefined === t) {
         t = "api";
       }
       var n = this.getAllDisplayedColumns();
@@ -3438,14 +3438,14 @@
             s += f;
           }
           if (n) {
-            c = !1;
+            c = false;
             p.forEach(function (e) {
               if (n(e)) {
-                c = !0;
+                c = true;
               }
             });
           } else {
-            c = !0;
+            c = true;
           }
           if (c) {
             if (0 === i.length && a) {
@@ -3492,11 +3492,11 @@
     };
     t.prototype.updatePrimaryColumnList = function (e, t, n, r, o, a) {
       var s = this;
-      if (void 0 === a) {
+      if (undefined === a) {
         a = "api";
       }
       if (e && !i(e)) {
-        var c = !1;
+        var c = false;
         e.forEach(function (e) {
           var o = s.getPrimaryColumn(e);
           if (o) {
@@ -3512,7 +3512,7 @@
               v(t, o);
             }
             r(o);
-            c = !0;
+            c = true;
           }
         });
         if (c) {
@@ -3533,22 +3533,22 @@
       }
     };
     t.prototype.setRowGroupColumns = function (e, t) {
-      if (void 0 === t) {
+      if (undefined === t) {
         t = "api";
       }
-      this.autoGroupsNeedBuilding = !0;
+      this.autoGroupsNeedBuilding = true;
       this.setPrimaryColumnList(e, this.rowGroupColumns, Ke.EVENT_COLUMN_ROW_GROUP_CHANGED, this.setRowGroupActive.bind(this), t);
     };
     t.prototype.setRowGroupActive = function (e, t, n) {
       if (e !== t.isRowGroupActive()) {
         t.setRowGroupActive(e, n);
         if (!(e || this.gridOptionsWrapper.isSuppressMakeColumnVisibleAfterUnGroup())) {
-          t.setVisible(!0, n);
+          t.setVisible(true, n);
         }
       }
     };
     t.prototype.addRowGroupColumn = function (e, t) {
-      if (void 0 === t) {
+      if (undefined === t) {
         t = "api";
       }
       if (e) {
@@ -3556,21 +3556,21 @@
       }
     };
     t.prototype.addRowGroupColumns = function (e, t) {
-      if (void 0 === t) {
+      if (undefined === t) {
         t = "api";
       }
-      this.autoGroupsNeedBuilding = !0;
-      this.updatePrimaryColumnList(e, this.rowGroupColumns, !0, this.setRowGroupActive.bind(this, !0), Ke.EVENT_COLUMN_ROW_GROUP_CHANGED, t);
+      this.autoGroupsNeedBuilding = true;
+      this.updatePrimaryColumnList(e, this.rowGroupColumns, true, this.setRowGroupActive.bind(this, true), Ke.EVENT_COLUMN_ROW_GROUP_CHANGED, t);
     };
     t.prototype.removeRowGroupColumns = function (e, t) {
-      if (void 0 === t) {
+      if (undefined === t) {
         t = "api";
       }
-      this.autoGroupsNeedBuilding = !0;
-      this.updatePrimaryColumnList(e, this.rowGroupColumns, !1, this.setRowGroupActive.bind(this, !1), Ke.EVENT_COLUMN_ROW_GROUP_CHANGED, t);
+      this.autoGroupsNeedBuilding = true;
+      this.updatePrimaryColumnList(e, this.rowGroupColumns, false, this.setRowGroupActive.bind(this, false), Ke.EVENT_COLUMN_ROW_GROUP_CHANGED, t);
     };
     t.prototype.removeRowGroupColumn = function (e, t) {
-      if (void 0 === t) {
+      if (undefined === t) {
         t = "api";
       }
       if (e) {
@@ -3578,15 +3578,15 @@
       }
     };
     t.prototype.addPivotColumns = function (e, t) {
-      if (void 0 === t) {
+      if (undefined === t) {
         t = "api";
       }
-      this.updatePrimaryColumnList(e, this.pivotColumns, !0, function (e) {
-        return e.setPivotActive(!0, t);
+      this.updatePrimaryColumnList(e, this.pivotColumns, true, function (e) {
+        return e.setPivotActive(true, t);
       }, Ke.EVENT_COLUMN_PIVOT_CHANGED, t);
     };
     t.prototype.setPivotColumns = function (e, t) {
-      if (void 0 === t) {
+      if (undefined === t) {
         t = "api";
       }
       this.setPrimaryColumnList(e, this.pivotColumns, Ke.EVENT_COLUMN_PIVOT_CHANGED, function (e, n) {
@@ -3594,21 +3594,21 @@
       }, t);
     };
     t.prototype.addPivotColumn = function (e, t) {
-      if (void 0 === t) {
+      if (undefined === t) {
         t = "api";
       }
       this.addPivotColumns([e], t);
     };
     t.prototype.removePivotColumns = function (e, t) {
-      if (void 0 === t) {
+      if (undefined === t) {
         t = "api";
       }
-      this.updatePrimaryColumnList(e, this.pivotColumns, !1, function (e) {
-        return e.setPivotActive(!1, t);
+      this.updatePrimaryColumnList(e, this.pivotColumns, false, function (e) {
+        return e.setPivotActive(false, t);
       }, Ke.EVENT_COLUMN_PIVOT_CHANGED, t);
     };
     t.prototype.removePivotColumn = function (e, t) {
-      if (void 0 === t) {
+      if (undefined === t) {
         t = "api";
       }
       this.removePivotColumns([e], t);
@@ -3635,7 +3635,7 @@
       this.fireColumnEvent(n, t, i);
     };
     t.prototype.setValueColumns = function (e, t) {
-      if (void 0 === t) {
+      if (undefined === t) {
         t = "api";
       }
       this.setPrimaryColumnList(e, this.valueColumns, Ke.EVENT_COLUMN_VALUE_CHANGED, this.setValueActive.bind(this), t);
@@ -3647,13 +3647,13 @@
       }
     };
     t.prototype.addValueColumns = function (e, t) {
-      if (void 0 === t) {
+      if (undefined === t) {
         t = "api";
       }
-      this.updatePrimaryColumnList(e, this.valueColumns, !0, this.setValueActive.bind(this, !0), Ke.EVENT_COLUMN_VALUE_CHANGED, t);
+      this.updatePrimaryColumnList(e, this.valueColumns, true, this.setValueActive.bind(this, true), Ke.EVENT_COLUMN_VALUE_CHANGED, t);
     };
     t.prototype.addValueColumn = function (e, t) {
-      if (void 0 === t) {
+      if (undefined === t) {
         t = "api";
       }
       if (e) {
@@ -3661,16 +3661,16 @@
       }
     };
     t.prototype.removeValueColumn = function (e, t) {
-      if (void 0 === t) {
+      if (undefined === t) {
         t = "api";
       }
       this.removeValueColumns([e], t);
     };
     t.prototype.removeValueColumns = function (e, t) {
-      if (void 0 === t) {
+      if (undefined === t) {
         t = "api";
       }
-      this.updatePrimaryColumnList(e, this.valueColumns, !1, this.setValueActive.bind(this, !1), Ke.EVENT_COLUMN_VALUE_CHANGED, t);
+      this.updatePrimaryColumnList(e, this.valueColumns, false, this.setValueActive.bind(this, false), Ke.EVENT_COLUMN_VALUE_CHANGED, t);
     };
     t.prototype.normaliseColumnWidth = function (e, t) {
       var n = e.getMinWidth();
@@ -3688,7 +3688,7 @@
     };
     t.prototype.setColumnWidths = function (e, t, n, r) {
       var o = this;
-      if (void 0 === r) {
+      if (undefined === r) {
         r = "api";
       }
       var i = [];
@@ -3721,7 +3721,7 @@
       var n = e.width;
       var o = 0;
       var i = 0;
-      var a = !0;
+      var a = true;
       t.forEach(function (e) {
         var t = e.getMinWidth();
         o += t || 0;
@@ -3729,7 +3729,7 @@
         if (r(n) && n > 0) {
           i += n;
         } else {
-          a = !1;
+          a = false;
         }
       });
       return n >= o && (!a || n <= i);
@@ -3747,12 +3747,12 @@
           a.forEach(function (e) {
             return i.push(e);
           });
-          for (var u = !0, d = 0, p = function () {
+          for (var u = true, d = 0, p = function () {
               if (++d > 1e3) {
                 console.error("AG Grid: infinite loop in resizeColumnSets");
                 return "break";
               }
-              u = !1;
+              u = false;
               var e = [];
               var n = 0;
               var o = t;
@@ -3778,13 +3778,13 @@
                 var f = n.getMaxWidth();
                 if (r(p) && d < p) {
                   d = p;
-                  l[n.getId()] = !0;
-                  u = !0;
+                  l[n.getId()] = true;
+                  u = true;
                 } else {
                   if (r(f) && f > 0 && d > f) {
                     d = f;
-                    l[n.getId()] = !0;
-                    u = !0;
+                    l[n.getId()] = true;
+                    u = true;
                   }
                 }
                 c[n.getId()] = d;
@@ -3805,7 +3805,7 @@
         var a = o.length > 0;
         var s = this.refreshFlexedColumns({
           resizingCols: i,
-          skipSetLeft: !0
+          skipSetLeft: true
         });
         if (a) {
           this.setLeftValues(n);
@@ -3822,7 +3822,7 @@
       }
     };
     t.prototype.setColumnAggFunc = function (e, t, n) {
-      if (void 0 === n) {
+      if (undefined === n) {
         n = "api";
       }
       if (e) {
@@ -3845,7 +3845,7 @@
       this.eventService.dispatchEvent(r);
     };
     t.prototype.moveRowGroupColumn = function (e, t, n) {
-      if (void 0 === n) {
+      if (undefined === n) {
         n = "api";
       }
       var r = this.rowGroupColumns[e];
@@ -3862,7 +3862,7 @@
       this.eventService.dispatchEvent(o);
     };
     t.prototype.moveColumns = function (e, t, n) {
-      if (void 0 === n) {
+      if (undefined === n) {
         n = "api";
       }
       this.columnAnimationService.start();
@@ -3905,21 +3905,21 @@
       }
     };
     t.prototype.doesMovePassLockedPositions = function (e) {
-      var t = !1;
-      var n = !0;
+      var t = false;
+      var n = true;
       e.forEach(function (e) {
         if (e.getColDef().lockPosition) {
           if (t) {
-            n = !1;
+            n = false;
           }
         } else {
-          t = !0;
+          t = true;
         }
       });
       return n;
     };
     t.prototype.doesMovePassMarryChildren = function (e) {
-      var t = !0;
+      var t = true;
       this.columnUtils.depthFirstOriginalTreeSearch(null, this.gridBalancedTree, function (n) {
         if (n instanceof Ie) {
           var r = n;
@@ -3931,7 +3931,7 @@
               i.push(n);
             });
             if (Math.max.apply(Math, i) - Math.min.apply(Math, i) > r.getLeafColumns().length - 1) {
-              t = !1;
+              t = false;
             }
           }
         }
@@ -3939,13 +3939,13 @@
       return t;
     };
     t.prototype.moveColumn = function (e, t, n) {
-      if (void 0 === n) {
+      if (undefined === n) {
         n = "api";
       }
       this.moveColumns([e], t, n);
     };
     t.prototype.moveColumnByIndex = function (e, t, n) {
-      if (void 0 === n) {
+      if (undefined === n) {
         n = "api";
       }
       var r = this.gridColumns[e];
@@ -4047,22 +4047,22 @@
       return i(this.rowGroupColumns);
     };
     t.prototype.setColumnVisible = function (e, t, n) {
-      if (void 0 === n) {
+      if (undefined === n) {
         n = "api";
       }
       this.setColumnsVisible([e], t, n);
     };
     t.prototype.setColumnsVisible = function (e, t, n) {
       var r = this;
-      if (void 0 === t) {
-        t = !1;
+      if (undefined === t) {
+        t = false;
       }
-      if (void 0 === n) {
+      if (undefined === n) {
         n = "api";
       }
       this.columnAnimationService.start();
       this.actionOnGridColumns(e, function (e) {
-        return e.isVisible() !== t && (e.setVisible(t, n), !0);
+        return e.isVisible() !== t && (e.setVisible(t, n), true);
       }, n, function () {
         return {
           type: Ke.EVENT_COLUMN_VISIBLE,
@@ -4077,7 +4077,7 @@
       this.columnAnimationService.finish();
     };
     t.prototype.setColumnPinned = function (e, t, n) {
-      if (void 0 === n) {
+      if (undefined === n) {
         n = "api";
       }
       if (e) {
@@ -4087,14 +4087,14 @@
     t.prototype.setColumnsPinned = function (e, t, n) {
       var r;
       var o = this;
-      if (void 0 === n) {
+      if (undefined === n) {
         n = "api";
       }
       if ("print" !== this.gridOptionsWrapper.getDomLayout()) {
         this.columnAnimationService.start();
-        r = !0 === t || t === Ee.PINNED_LEFT ? Ee.PINNED_LEFT : t === Ee.PINNED_RIGHT ? Ee.PINNED_RIGHT : null;
+        r = true === t || t === Ee.PINNED_LEFT ? Ee.PINNED_LEFT : t === Ee.PINNED_RIGHT ? Ee.PINNED_RIGHT : null;
         this.actionOnGridColumns(e, function (e) {
-          return e.getPinned() !== r && (e.setPinned(r), !0);
+          return e.getPinned() !== r && (e.setPinned(r), true);
         }, n, function () {
           return {
             type: Ke.EVENT_COLUMN_PINNED,
@@ -4118,7 +4118,7 @@
         e.forEach(function (e) {
           var n = a.getGridColumn(e);
           if (n) {
-            if (!1 !== t(n)) {
+            if (false !== t(n)) {
               s.push(n);
             }
           }
@@ -4230,7 +4230,7 @@
       });
     };
     t.prototype.resetColumnState = function (e) {
-      if (void 0 === e) {
+      if (undefined === e) {
         e = "api";
       }
       var t = this.getColumnsFromTree(this.primaryColumnTree);
@@ -4289,26 +4289,26 @@
       });
       this.applyColumnState({
         state: n,
-        applyOrder: !0
+        applyOrder: true
       }, e);
     };
     t.prototype.applyColumnState = function (e, t) {
       var n = this;
-      if (void 0 === t) {
+      if (undefined === t) {
         t = "api";
       }
       if (i(this.primaryColumns)) {
-        return !1;
+        return false;
       }
       if (e && e.state && !e.state.forEach) {
         console.warn("AG Grid: applyColumnState() - the state attribute should be an array, however an array was not found. Please provide an array of items (one for each col you want to change) for state.");
-        return !1;
+        return false;
       }
       this.columnAnimationService.start();
       var r = this.compareColumnStatesAndRaiseEvents(t);
-      this.autoGroupsNeedBuilding = !0;
+      this.autoGroupsNeedBuilding = true;
       var o = this.primaryColumns.slice();
-      var a = !0;
+      var a = true;
       var s = {};
       var c = {};
       var l = [];
@@ -4323,16 +4323,16 @@
           } else {
             var d = n.getPrimaryColumn(u);
             if (d) {
-              n.syncColumnWithStateItem(d, r, e.defaultState, s, c, !1, t);
+              n.syncColumnWithStateItem(d, r, e.defaultState, s, c, false, t);
               v(o, d);
             } else {
-              a = !1;
+              a = false;
             }
           }
         });
       }
       var p = function (r) {
-        return n.syncColumnWithStateItem(r, null, e.defaultState, s, c, !1, t);
+        return n.syncColumnWithStateItem(r, null, e.defaultState, s, c, false, t);
       };
       o.forEach(p);
       var f = function (e, t, n, r) {
@@ -4361,7 +4361,7 @@
       l.forEach(function (r) {
         var o = n.getAutoColumn(r.colId);
         v(h, o);
-        n.syncColumnWithStateItem(o, r, e.defaultState, null, null, !0, t);
+        n.syncColumnWithStateItem(o, r, e.defaultState, null, null, true, t);
       });
       h.forEach(p);
       this.applyOrderAfterApplyState(e);
@@ -4384,7 +4384,7 @@
             var o = r[e.colId];
             if (o) {
               t.push(o);
-              n[e.colId] = !0;
+              n[e.colId] = true;
             }
           }
         });
@@ -4456,7 +4456,7 @@
           }
           t.fireColumnResizedEvent(a(function (e, t) {
             return e.width != t.getActualWidth();
-          }), !0, e);
+          }), true, e);
           t.raiseColumnPinnedEvent(a(function (e, t) {
             return e.pinned != t.getPinned();
           }), e);
@@ -4528,7 +4528,7 @@
       var i = {};
       e.forEach(function (e) {
         if (o[e.colId]) {
-          i[e.colId] = !0;
+          i[e.colId] = true;
         }
       });
       var a = j(e, function (e) {
@@ -4565,41 +4565,41 @@
           var i = t;
           var a = n;
           var s = {
-            value1: void 0,
-            value2: void 0
+            value1: undefined,
+            value2: undefined
           };
-          var c = !1;
+          var c = false;
           if (i) {
-            if (void 0 !== i[e]) {
+            if (undefined !== i[e]) {
               s.value1 = i[e];
-              c = !0;
+              c = true;
             }
-            if (r(o) && void 0 !== i[o]) {
+            if (r(o) && undefined !== i[o]) {
               s.value2 = i[o];
-              c = !0;
+              c = true;
             }
           }
           if (!c && a) {
-            if (void 0 !== a[e]) {
+            if (undefined !== a[e]) {
               s.value1 = a[e];
             }
-            if (r(o) && void 0 !== a[o]) {
+            if (r(o) && undefined !== a[o]) {
               s.value2 = a[o];
             }
           }
           return s;
         };
         var l = c("hide").value1;
-        if (void 0 !== l) {
+        if (undefined !== l) {
           e.setVisible(!l, s);
         }
         var u = c("pinned").value1;
-        if (void 0 !== u) {
+        if (undefined !== u) {
           e.setPinned(u);
         }
         var d = this.gridOptionsWrapper.getMinColWidth();
         var p = c("flex").value1;
-        if (void 0 !== p) {
+        if (undefined !== p) {
           e.setFlex(p);
         }
         if (e.getFlex() <= 0) {
@@ -4609,24 +4609,24 @@
           }
         }
         var h = c("sort").value1;
-        if (void 0 !== h) {
+        if (undefined !== h) {
           if (h === Ee.SORT_DESC || h === Ee.SORT_ASC) {
             e.setSort(h);
           } else {
-            e.setSort(void 0);
+            e.setSort(undefined);
           }
         }
         var m = c("sortIndex").value1;
-        if (void 0 !== m) {
+        if (undefined !== m) {
           e.setSortIndex(m);
         }
         if (!a) {
           var g = c("aggFunc").value1;
-          if (void 0 !== g) {
+          if (undefined !== g) {
             if ("string" === typeof g) {
               e.setAggFunc(g);
               if (!e.isValueActive()) {
-                e.setValueActive(!0, s);
+                e.setValueActive(true, s);
                 this.valueColumns.push(e);
               }
             } else {
@@ -4635,7 +4635,7 @@
               }
               e.setAggFunc(null);
               if (e.isValueActive()) {
-                e.setValueActive(!1, s);
+                e.setValueActive(false, s);
                 v(this.valueColumns, e);
               }
             }
@@ -4643,10 +4643,10 @@
           var _ = c("rowGroup", "rowGroupIndex");
           var b = _.value1;
           var y = _.value2;
-          if (!(void 0 === b && void 0 === y)) {
+          if (!(undefined === b && undefined === y)) {
             if ("number" === typeof y || b) {
               if (!e.isRowGroupActive()) {
-                e.setRowGroupActive(!0, s);
+                e.setRowGroupActive(true, s);
                 this.rowGroupColumns.push(e);
               }
               if (o && "number" === typeof y) {
@@ -4654,7 +4654,7 @@
               }
             } else {
               if (e.isRowGroupActive()) {
-                e.setRowGroupActive(!1, s);
+                e.setRowGroupActive(false, s);
                 v(this.rowGroupColumns, e);
               }
             }
@@ -4662,10 +4662,10 @@
           var E = c("pivot", "pivotIndex");
           var O = E.value1;
           var w = E.value2;
-          if (!(void 0 === O && void 0 === w)) {
+          if (!(undefined === O && undefined === w)) {
             if ("number" === typeof w || O) {
               if (!e.isPivotActive()) {
-                e.setPivotActive(!0, s);
+                e.setPivotActive(true, s);
                 this.pivotColumns.push(e);
               }
               if (i && "number" === typeof w) {
@@ -4673,7 +4673,7 @@
               }
             } else {
               if (e.isPivotActive()) {
-                e.setPivotActive(!1, s);
+                e.setPivotActive(false, s);
                 v(this.pivotColumns, e);
               }
             }
@@ -4739,8 +4739,8 @@
       return n || r || o;
     };
     t.prototype.getDisplayNameForColumn = function (e, t, n) {
-      if (void 0 === n) {
-        n = !1;
+      if (undefined === n) {
+        n = false;
       }
       if (!e) {
         return null;
@@ -4780,15 +4780,15 @@
       var i = null;
       if (r(o)) {
         i = o ? o.getAggFunc() : null;
-        n = !0;
+        n = true;
       } else {
         var a = e.isValueActive();
         var s = this.pivotMode || !this.isRowGroupEmpty();
         if (a && s) {
           i = e.getAggFunc();
-          n = !0;
+          n = true;
         } else {
-          n = !1;
+          n = false;
         }
       }
       if (n) {
@@ -4825,7 +4825,7 @@
         return t.setValueActive(n, e);
       }, function () {}, function () {}, function (e) {
         var t = e.aggFunc;
-        return null === t || "" === t ? null : void 0 !== t ? !!t : void 0;
+        return null === t || "" === t ? null : undefined !== t ? !!t : undefined;
       }, function (e) {
         return null != e.initialAggFunc && "" != e.initialAggFunc;
       });
@@ -4854,10 +4854,10 @@
       });
     };
     t.prototype.extractColumns = function (e, t, n, r, o, i, a) {
-      if (void 0 === e) {
+      if (undefined === e) {
         e = [];
       }
-      if (void 0 === t) {
+      if (undefined === t) {
         t = [];
       }
       var l = [];
@@ -4871,9 +4871,9 @@
         var g = s(r(f));
         var _ = s(o(f));
         if (p) {
-          d = void 0 !== h || void 0 !== g ? void 0 !== h ? h : g >= 0 : m || _ >= 0;
+          d = undefined !== h || undefined !== g ? undefined !== h ? h : g >= 0 : m || _ >= 0;
         } else {
-          d = void 0 !== h ? h : void 0 !== g ? null !== g && g >= 0 : t.indexOf(n) >= 0;
+          d = undefined !== h ? h : undefined !== g ? null !== g && g >= 0 : t.indexOf(n) >= 0;
         }
         if (d) {
           if (p ? null != g || null != _ : null != g) {
@@ -4906,12 +4906,12 @@
       });
       t.forEach(function (e) {
         if (p.indexOf(e) < 0) {
-          n(e, !1);
+          n(e, false);
         }
       });
       p.forEach(function (e) {
         if (t.indexOf(e) < 0) {
-          n(e, !0);
+          n(e, true);
         }
       });
       return p;
@@ -4930,7 +4930,7 @@
       });
     };
     t.prototype.resetColumnGroupState = function (e) {
-      if (void 0 === e) {
+      if (undefined === e) {
         e = "api";
       }
       var t = [];
@@ -4939,7 +4939,7 @@
           var n = e.getColGroupDef();
           var r = {
             groupId: e.getGroupId(),
-            open: n ? n.openByDefault : void 0
+            open: n ? n.openByDefault : undefined
           };
           t.push(r);
         }
@@ -4961,7 +4961,7 @@
     };
     t.prototype.setColumnGroupState = function (e, t) {
       var n = this;
-      if (void 0 === t) {
+      if (undefined === t) {
         t = "api";
       }
       this.columnAnimationService.start();
@@ -4991,7 +4991,7 @@
     };
     t.prototype.setColumnGroupOpened = function (e, t, n) {
       var r;
-      if (void 0 === n) {
+      if (undefined === n) {
         n = "api";
       }
       r = e instanceof Ie ? e.getId() : e || "";
@@ -5029,10 +5029,10 @@
       });
     };
     t.prototype.checkColSpanActiveInCols = function (e) {
-      var t = !1;
+      var t = false;
       e.forEach(function (e) {
         if (r(e.getColDef().colSpan)) {
-          t = !0;
+          t = true;
         }
       });
       return t;
@@ -5065,23 +5065,23 @@
       return this.secondaryColumnsPresent;
     };
     t.prototype.setSecondaryColumns = function (e, t) {
-      if (void 0 === t) {
+      if (undefined === t) {
         t = "api";
       }
       var n = e && e.length > 0;
       if (n || this.secondaryColumnsPresent) {
         if (n) {
           this.processSecondaryColumnDefinitions(e);
-          var r = this.columnFactory.createColumnTree(e, !1);
+          var r = this.columnFactory.createColumnTree(e, false);
           this.secondaryBalancedTree = r.columnTree;
           this.secondaryHeaderRowCount = r.treeDept + 1;
           this.secondaryColumns = this.getColumnsFromTree(this.secondaryBalancedTree);
-          this.secondaryColumnsPresent = !0;
+          this.secondaryColumnsPresent = true;
         } else {
           this.secondaryBalancedTree = null;
           this.secondaryHeaderRowCount = -1;
           this.secondaryColumns = null;
-          this.secondaryColumnsPresent = !1;
+          this.secondaryColumnsPresent = false;
         }
         this.updateGridColumns();
         this.updateDisplayedColumns(t);
@@ -5119,12 +5119,12 @@
         this.gridBalancedTree = this.secondaryBalancedTree.slice();
         this.gridHeaderRowCount = this.secondaryHeaderRowCount;
         this.gridColumns = this.secondaryColumns.slice();
-        this.gridColsArePrimary = !1;
+        this.gridColsArePrimary = false;
       } else {
         this.gridBalancedTree = this.primaryColumnTree.slice();
         this.gridHeaderRowCount = this.primaryHeaderRowCount;
         this.gridColumns = this.primaryColumns.slice();
-        this.gridColsArePrimary = !0;
+        this.gridColsArePrimary = true;
         this.orderGridColsLikeLastPrimary();
       }
       this.addAutoGroupToGridColumns();
@@ -5151,21 +5151,21 @@
         var e = at(this.lastPrimaryOrder.map(function (e, t) {
           return [e, t];
         }));
-        var t = !0;
+        var t = true;
         this.gridColumns.forEach(function (n) {
           if (e.has(n)) {
-            t = !1;
+            t = false;
           }
         });
         if (!t) {
           var n = at(this.gridColumns.map(function (e) {
-            return [e, !0];
+            return [e, true];
           }));
           var r = this.lastPrimaryOrder.filter(function (e) {
             return n.has(e);
           });
           var i = at(r.map(function (e) {
-            return [e, !0];
+            return [e, true];
           }));
           var a = this.gridColumns.filter(function (e) {
             return !i.has(e);
@@ -5344,14 +5344,14 @@
       this.viewportRowCenter = {};
       var e = {};
       this.viewportColumns.forEach(function (t) {
-        return e[t.getId()] = !0;
+        return e[t.getId()] = true;
       });
       var t = function t(n, r, o) {
-        for (var i = !1, a = 0; a < n.length; a++) {
+        for (var i = false, a = 0; a < n.length; a++) {
           var s = n[a];
-          var c = !1;
+          var c = false;
           if (s instanceof Ce) {
-            c = !0 === e[s.getId()];
+            c = true === e[s.getId()];
           } else {
             var l = s.getDisplayedChildren();
             if (l) {
@@ -5359,7 +5359,7 @@
             }
           }
           if (c) {
-            i = !0;
+            i = true;
             if (!r[o]) {
               r[o] = [];
             }
@@ -5381,7 +5381,7 @@
     };
     t.prototype.refreshFlexedColumns = function (e) {
       var t = this;
-      if (void 0 === e) {
+      if (undefined === e) {
         e = {};
       }
       var n = e.source ? e.source : "flex";
@@ -5458,18 +5458,18 @@
         this.updateBodyWidths();
       }
       if (e.fireResizedEvent) {
-        this.fireColumnResizedEvent(c, !0, n, s);
+        this.fireColumnResizedEvent(c, true, n, s);
       }
       if (!this.flexColsCalculatedAtLestOnce) {
         if (this.gridOptionsWrapper.isRowModelDefault()) {
           this.rowModel.resetRowHeights();
         }
-        this.flexColsCalculatedAtLestOnce = !0;
+        this.flexColsCalculatedAtLestOnce = true;
       }
       return s;
     };
     t.prototype.sizeColumnsToFit = function (e, t, n) {
-      if (void 0 === t) {
+      if (undefined === t) {
         t = "sizeColumnsToFit";
       }
       var o = this.getAllDisplayedColumns();
@@ -5477,14 +5477,14 @@
         var i = [];
         var a = [];
         o.forEach(function (e) {
-          if (!0 === e.getColDef().suppressSizeToFit) {
+          if (true === e.getColDef().suppressSizeToFit) {
             a.push(e);
           } else {
             i.push(e);
           }
         });
         var s = i.slice(0);
-        var c = !1;
+        var c = false;
         var l = function (e) {
           v(i, e);
           a.push(e);
@@ -5492,7 +5492,7 @@
         for (i.forEach(function (e) {
           return e.resetActualWidth(t);
         }); !c;) {
-          c = !0;
+          c = true;
           var u = e - this.getWidthOfColsInList(a);
           if (u <= 0) {
             i.forEach(function (e) {
@@ -5507,19 +5507,19 @@
               if (r(m) && _ < m) {
                 _ = m;
                 l(h);
-                c = !1;
+                c = false;
               } else {
                 if (r(g) && h.isGreaterThanMax(_)) {
                   _ = g;
                   l(h);
-                  c = !1;
+                  c = false;
                 } else {
                   if (0 === f) {
                     _ = p;
                   }
                 }
               }
-              h.setActualWidth(_, t, !0);
+              h.setActualWidth(_, t, true);
               p -= _;
             }
           }
@@ -5530,7 +5530,7 @@
         this.setLeftValues(t);
         this.updateBodyWidths();
         if (!n) {
-          this.fireColumnResizedEvent(s, !0, t);
+          this.fireColumnResizedEvent(s, true, t);
         }
       }
     };
@@ -5582,7 +5582,7 @@
     };
     t.prototype.createGroupAutoColumnsIfNeeded = function () {
       if (this.autoGroupsNeedBuilding) {
-        this.autoGroupsNeedBuilding = !1;
+        this.autoGroupsNeedBuilding = false;
         var e = this.gridOptionsWrapper.isGroupUseEntireRow(this.pivotMode);
         var t = this.pivotMode ? this.gridOptionsWrapper.isPivotSuppressAutoColumn() : this.gridOptionsWrapper.isGroupSuppressAutoColumn();
         if ((this.rowGroupColumns.length > 0 || this.usingTreeData) && !t && !e) {
@@ -5627,21 +5627,21 @@
       }
       return null;
     };
-    lt([pe("expressionService")], t.prototype, "expressionService", void 0);
-    lt([pe("columnFactory")], t.prototype, "columnFactory", void 0);
-    lt([pe("displayedGroupCreator")], t.prototype, "displayedGroupCreator", void 0);
-    lt([pe("autoWidthCalculator")], t.prototype, "autoWidthCalculator", void 0);
-    lt([pe("columnUtils")], t.prototype, "columnUtils", void 0);
-    lt([pe("columnAnimationService")], t.prototype, "columnAnimationService", void 0);
-    lt([pe("autoGroupColService")], t.prototype, "autoGroupColService", void 0);
-    lt([fe("aggFuncService")], t.prototype, "aggFuncService", void 0);
-    lt([fe("valueCache")], t.prototype, "valueCache", void 0);
-    lt([fe("animationFrameService")], t.prototype, "animationFrameService", void 0);
-    lt([pe("rowModel")], t.prototype, "rowModel", void 0);
-    lt([pe("columnApi")], t.prototype, "columnApi", void 0);
-    lt([pe("gridApi")], t.prototype, "gridApi", void 0);
-    lt([pe("sortController")], t.prototype, "sortController", void 0);
-    lt([pe("columnDefFactory")], t.prototype, "columnDefFactory", void 0);
+    lt([pe("expressionService")], t.prototype, "expressionService", undefined);
+    lt([pe("columnFactory")], t.prototype, "columnFactory", undefined);
+    lt([pe("displayedGroupCreator")], t.prototype, "displayedGroupCreator", undefined);
+    lt([pe("autoWidthCalculator")], t.prototype, "autoWidthCalculator", undefined);
+    lt([pe("columnUtils")], t.prototype, "columnUtils", undefined);
+    lt([pe("columnAnimationService")], t.prototype, "columnAnimationService", undefined);
+    lt([pe("autoGroupColService")], t.prototype, "autoGroupColService", undefined);
+    lt([fe("aggFuncService")], t.prototype, "aggFuncService", undefined);
+    lt([fe("valueCache")], t.prototype, "valueCache", undefined);
+    lt([fe("animationFrameService")], t.prototype, "animationFrameService", undefined);
+    lt([pe("rowModel")], t.prototype, "rowModel", undefined);
+    lt([pe("columnApi")], t.prototype, "columnApi", undefined);
+    lt([pe("gridApi")], t.prototype, "gridApi", undefined);
+    lt([pe("sortController")], t.prototype, "sortController", undefined);
+    lt([pe("columnDefFactory")], t.prototype, "columnDefFactory", undefined);
     lt([le], t.prototype, "init", null);
     lt([ut(0, me("loggerFactory"))], t.prototype, "setBeans", null);
     return t = lt([de("columnController")], t);
@@ -5756,7 +5756,7 @@
     };
     t.prototype.getOriginalPathForColumn = function (e, t) {
       var n = [];
-      var r = !1;
+      var r = false;
       (function t(o, i) {
         for (var a = 0; a < o.length; a++) {
           if (r) {
@@ -5767,7 +5767,7 @@
             t(s.getChildren(), i + 1);
             n[i] = s;
           } else if (s === e) {
-            r = !0;
+            r = true;
           }
         }
       })(t, 0);
@@ -5924,7 +5924,7 @@
     };
     t.prototype.getOriginalPathForColumn = function (e, t) {
       var n = [];
-      var r = !1;
+      var r = false;
       (function e(o, i) {
         for (var a = 0; a < o.length; a++) {
           if (r) {
@@ -5935,7 +5935,7 @@
             e(s.getChildren(), i + 1);
             n[i] = s;
           } else if (s === t) {
-            r = !0;
+            r = true;
           }
         }
       })(e, 0);
@@ -6076,46 +6076,46 @@
     t.EVENT_ROWS_UPDATED = "rowsUpdated";
     t.EVENT_HEADERS_UPDATED = "headersUpdated";
     t.EVENT_ROW_CONTAINER_UPDATED = "rowContainerUpdated";
-    xt([pe("columnController")], t.prototype, "columnController", void 0);
-    xt([pe("paginationProxy")], t.prototype, "paginationProxy", void 0);
-    xt([pe("valueService")], t.prototype, "valueService", void 0);
+    xt([pe("columnController")], t.prototype, "columnController", undefined);
+    xt([pe("paginationProxy")], t.prototype, "paginationProxy", undefined);
+    xt([pe("valueService")], t.prototype, "valueService", undefined);
     xt([le], t.prototype, "postConstruct", null);
     return t = n = xt([de("headlessService")], t);
   }(We);
   function Mt() {
-    if (void 0 === vt) {
+    if (undefined === vt) {
       vt = !!document.documentMode;
     }
     return vt;
   }
   function Lt() {
-    if (void 0 === bt) {
+    if (undefined === bt) {
       bt = !Mt() && !!window.StyleMedia;
     }
     return bt;
   }
   function Pt() {
-    if (void 0 === _t) {
+    if (undefined === _t) {
       _t = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
     }
     return _t;
   }
   function Bt() {
-    if (void 0 === yt) {
+    if (undefined === yt) {
       var e = window;
       yt = !!e.chrome && (!!e.chrome.webstore || !!e.chrome.runtime) || /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
     }
     return yt;
   }
   function Ft() {
-    if (void 0 === Et) {
+    if (undefined === Et) {
       var e = window;
       Et = "undefined" !== typeof e.InstallTrigger;
     }
     return Et;
   }
   function Gt() {
-    if (void 0 === Ot) {
+    if (undefined === Ot) {
       Ot = (/iPad|iPhone|iPod/.test(navigator.platform) || "MacIntel" === navigator.platform && navigator.maxTouchPoints > 1) && !window.MSStream;
     }
     return Ot;
@@ -6127,18 +6127,18 @@
     var t = e.tabIndex;
     var n = e.getAttribute("tabIndex");
     if (Mt() && 0 === t && null === n) {
-      return !0 === {
-        a: !0,
-        body: !0,
-        button: !0,
-        frame: !0,
-        iframe: !0,
-        img: !0,
-        input: !0,
-        isindex: !0,
-        object: !0,
-        select: !0,
-        textarea: !0
+      return true === {
+        a: true,
+        body: true,
+        button: true,
+        frame: true,
+        iframe: true,
+        img: true,
+        input: true,
+        isindex: true,
+        object: true,
+        select: true,
+        textarea: true
       }[e.nodeName.toLowerCase()] ? "0" : null;
     }
     return -1 !== t || null !== n && ("" !== n || Ft()) ? t.toString() : null;
@@ -6216,19 +6216,19 @@
     hasOverflowScrolling: function () {
       var e = ["webkit", "moz", "o", "ms"];
       var t = document.createElement("div");
-      var n = !1;
+      var n = false;
       document.getElementsByTagName("body")[0].appendChild(t);
       t.setAttribute("style", e.map(function (e) {
         return "-" + e + "-overflow-scrolling: touch";
       }).concat("overflow-scrolling: touch").join(";"));
       var r = window.getComputedStyle(t);
       if ("touch" === r.overflowScrolling) {
-        n = !0;
+        n = true;
       }
       if (!n) {
         for (var o = 0, i = e; o < i.length; o++) {
           if ("touch" === r[i[o] + "OverflowScrolling"]) {
-            n = !0;
+            n = true;
             break;
           }
         }
@@ -6296,7 +6296,7 @@
       var i = e.className.lastIndexOf(" " + t) === e.className.length - t.length - 1;
       return n || r || o || i;
     }
-    return !1;
+    return false;
   }
   function en(e) {
     var t = Element.prototype.matches || Element.prototype.msMatchesSelector;
@@ -6325,14 +6325,14 @@
   function on(e, t, n) {
     for (var r = 0; e;) {
       if ($t(e, t)) {
-        return !0;
+        return true;
       }
       e = e.parentElement;
       if (n && ++r > n) {
         break;
       }
     }
-    return !1;
+    return false;
   }
   function an(e) {
     var t = window.getComputedStyle(e);
@@ -6645,9 +6645,9 @@
     setCheckboxState: function (e, t) {
       if ("boolean" === typeof t) {
         e.checked = t;
-        e.indeterminate = !1;
+        e.indeterminate = false;
       } else {
-        e.indeterminate = !0;
+        e.indeterminate = true;
       }
     },
     addOrRemoveAttribute: Mn,
@@ -6854,7 +6854,7 @@
       return "boolean" === typeof e ? e : "string" === typeof e && ("TRUE" === e.toUpperCase() || "" == e);
     };
     e.toNumber = function (e) {
-      return "number" === typeof e ? e : "string" === typeof e ? Number(e) : void 0;
+      return "number" === typeof e ? e : "string" === typeof e ? Number(e) : undefined;
     };
     e.EVENTS = [];
     e.STRING_PROPERTIES = Gn.STRING_PROPERTIES;
@@ -6894,7 +6894,7 @@
   }();
   var Yn = function () {
     function e(e, t, n, r) {
-      if (void 0 === r) {
+      if (undefined === r) {
         r = 1;
       }
       this.r = Math.min(1, Math.max(0, e || 0));
@@ -6918,13 +6918,13 @@
     e.fromHexString = function (t) {
       var n = t.match(e.hexRe);
       if (n) {
-        return new e((r = parseInt(n[1], 16)) / 255, (o = parseInt(n[2], 16)) / 255, (i = parseInt(n[3], 16)) / 255, (a = void 0 !== n[4] ? parseInt(n[4], 16) : 255) / 255);
+        return new e((r = parseInt(n[1], 16)) / 255, (o = parseInt(n[2], 16)) / 255, (i = parseInt(n[3], 16)) / 255, (a = undefined !== n[4] ? parseInt(n[4], 16) : 255) / 255);
       }
       if (n = t.match(e.shortHexRe)) {
         var r = parseInt(n[1], 16);
         var o = parseInt(n[2], 16);
         var i = parseInt(n[3], 16);
-        var a = void 0 !== n[4] ? parseInt(n[4], 16) : 15;
+        var a = undefined !== n[4] ? parseInt(n[4], 16) : 15;
         return new e((r += 16 * r) / 255, (o += 16 * o) / 255, (i += 16 * i) / 255, (a += 16 * a) / 255);
       }
       throw new Error("Malformed hexadecimal color string: '" + t + "'");
@@ -6949,7 +6949,7 @@
       throw new Error("The given array should contain 3 or 4 color components (numbers).");
     };
     e.fromHSB = function (t, n, r, o) {
-      if (void 0 === o) {
+      if (undefined === o) {
         o = 1;
       }
       var i = e.HSBtoRGB(t, n, r);
@@ -6966,7 +6966,7 @@
       return t;
     };
     e.prototype.toRgbaString = function (e) {
-      if (void 0 === e) {
+      if (undefined === e) {
         e = 3;
       }
       var t = [Math.round(255 * this.r), Math.round(255 * this.g), Math.round(255 * this.b)];
@@ -7222,14 +7222,14 @@
     return e;
   }();
   function Kn(e, t) {
-    if (void 0 === t) {
+    if (undefined === t) {
       t = ",";
     }
     var n = [];
     var r = function (e) {
       return "\r" === e || "\n" === e;
     };
-    var o = !1;
+    var o = false;
     if ("" === e) {
       return [[""]];
     }
@@ -7252,15 +7252,15 @@
               n[c][l] += "\"";
               u++;
             } else {
-              o = !1;
+              o = false;
             }
             i = c;
             a = l;
             s = u;
             return "continue";
           }
-          if (void 0 === d || d === t || r(d)) {
-            o = !0;
+          if (undefined === d || d === t || r(d)) {
+            o = true;
             i = c;
             a = l;
             s = u;
@@ -7450,7 +7450,7 @@
     }
   }
   function Er(e, t) {
-    Jn(e, "checked", void 0 === t ? "mixed" : t);
+    Jn(e, "checked", undefined === t ? "mixed" : t);
   }
   var Or = Object.freeze({
     __proto__: null,
@@ -7483,10 +7483,10 @@
     setAriaChecked: Er
   });
   function wr(e, t, n) {
-    if (void 0 === t) {
-      t = !0;
+    if (undefined === t) {
+      t = true;
     }
-    if (void 0 === n) {
+    if (undefined === n) {
       n = "-";
     }
     if (!e) {
@@ -7610,7 +7610,7 @@
     for (n = 0, r = o.length; n < r; n++) {
       var c;
       var l = o[n];
-      var u = void 0;
+      var u = undefined;
       for (u = 0, c = i.length; u < c; u++) {
         if (l === i[u]) {
           s++;
@@ -7729,7 +7729,7 @@
       s.setAttribute("role", "presentation");
       return s;
     }
-    var l = void 0;
+    var l = undefined;
     if ("function" === typeof o) {
       l = o();
     } else {
@@ -7751,7 +7751,7 @@
   }
   function Pr(e) {
     if (e.altKey || e.ctrlKey || e.metaKey) {
-      return !1;
+      return false;
     }
     var t = 1 === e.key.length;
     var n = function (e) {
@@ -7761,9 +7761,9 @@
   }
   function Br(e, t, n, r, o) {
     var i = e.getSuppressKeyboardEventFunc();
-    var a = r ? r.getColDef().suppressKeyboardEvent : void 0;
+    var a = r ? r.getColDef().suppressKeyboardEvent : undefined;
     if (!i && !a) {
-      return !1;
+      return false;
     }
     var s = {
       event: t,
@@ -7777,7 +7777,7 @@
       columnApi: e.getColumnApi()
     };
     if (a && a(s)) {
-      return !0;
+      return true;
     }
     return !!i && i(s);
   }
@@ -7803,7 +7803,7 @@
   });
   function Ur(e, t, n) {
     if (0 === n) {
-      return !1;
+      return false;
     }
     var r = Math.abs(e.clientX - t.clientX);
     var o = Math.abs(e.clientY - t.clientY);
@@ -7874,12 +7874,12 @@
         for (var n = function (e, n) {
             var r = t[e.id];
             var o = t[n.id];
-            var i = void 0 !== r;
-            var a = void 0 !== o;
+            var i = undefined !== r;
+            var a = undefined !== o;
             return i && a ? r - o : !i && !a ? e.__objectId - n.__objectId : i ? 1 : -1;
-          }, r = !1, o = 0; o < e.length - 1; o++) {
+          }, r = false, o = 0; o < e.length - 1; o++) {
           if (n(e[o], e[o + 1]) > 0) {
-            r = !0;
+            r = true;
             break;
           }
         }
@@ -7931,10 +7931,10 @@
   var qr = Kr(Kr(Kr(Kr(Kr(Kr(Kr(Kr(Kr(Kr(Kr(Kr(Kr(Kr(Kr(Kr(Kr(Kr(Kr(Kr({}, Zn), Or), N), Xt), qn), Tr), Pn), Ge), ae), Rr), p), Mr), Gr), st), Wr), Tt), z), Hr), Yr), it);
   var Xr = function () {
     function e(e, t) {
-      if (void 0 === e) {
+      if (undefined === e) {
         e = 0;
       }
-      if (void 0 === t) {
+      if (undefined === t) {
         t = 1;
       }
       this.nextValue = e;
@@ -7983,7 +7983,7 @@
       });
     };
     e.resolve = function (t) {
-      if (void 0 === t) {
+      if (undefined === t) {
         t = null;
       }
       return new e(function (e) {
@@ -8090,7 +8090,7 @@
       n.FADE_OUT_TOOLTIP_TIMEOUT = 1e3;
       n.state = Qr.NOTHING;
       n.tooltipInstanceCount = 0;
-      n.tooltipMouseTrack = !1;
+      n.tooltipMouseTrack = false;
       n.parentComp = t;
       return n;
     }
@@ -8155,8 +8155,8 @@
         t();
         e.getContext().destroyBean(n);
       }, this.FADE_OUT_TOOLTIP_TIMEOUT);
-      this.tooltipPopupDestroyFunc = void 0;
-      this.tooltipComp = void 0;
+      this.tooltipPopupDestroyFunc = undefined;
+      this.tooltipComp = undefined;
     };
     t.prototype.isLastTooltipHiddenRecently = function () {
       return new Date().getTime() - t.lastTooltipHideTime < this.SHOW_QUICK_TOOLTIP_DIFF;
@@ -8206,17 +8206,17 @@
     t.prototype.clearTimeouts = function () {
       if (this.showTooltipTimeoutId) {
         window.clearTimeout(this.showTooltipTimeoutId);
-        this.showTooltipTimeoutId = void 0;
+        this.showTooltipTimeoutId = undefined;
       }
       if (this.hideTooltipTimeoutId) {
         window.clearTimeout(this.hideTooltipTimeoutId);
-        this.hideTooltipTimeoutId = void 0;
+        this.hideTooltipTimeoutId = undefined;
       }
     };
-    to([pe("popupService")], t.prototype, "popupService", void 0);
-    to([pe("userComponentFactory")], t.prototype, "userComponentFactory", void 0);
-    to([pe("columnApi")], t.prototype, "columnApi", void 0);
-    to([pe("gridApi")], t.prototype, "gridApi", void 0);
+    to([pe("popupService")], t.prototype, "popupService", undefined);
+    to([pe("userComponentFactory")], t.prototype, "userComponentFactory", undefined);
+    to([pe("columnApi")], t.prototype, "columnApi", undefined);
+    to([pe("gridApi")], t.prototype, "gridApi", undefined);
     to([le], t.prototype, "postConstruct", null);
     return t;
   }(We);
@@ -8263,8 +8263,8 @@
     function t(t) {
       var n = e.call(this) || this;
       n.annotatedGuiListeners = [];
-      n.displayed = !0;
-      n.visible = !0;
+      n.displayed = true;
+      n.visible = true;
       n.compId = ao.next();
       n.cssClassStates = {};
       if (t) {
@@ -8329,7 +8329,7 @@
     };
     t.prototype.createComponentFromElement = function (e, t, n) {
       var r = e.nodeName;
-      var o = n ? n[e.getAttribute("ref")] : void 0;
+      var o = n ? n[e.getAttribute("ref")] : undefined;
       var i = this.agStackComponentsRegistry.getComponentClass(r);
       if (i) {
         no = e;
@@ -8532,15 +8532,15 @@
       });
     };
     t.prototype.addCssClass = function (e) {
-      if (!0 !== this.cssClassStates[e]) {
+      if (true !== this.cssClassStates[e]) {
         Qt(this.eGui, e);
-        this.cssClassStates[e] = !0;
+        this.cssClassStates[e] = true;
       }
     };
     t.prototype.removeCssClass = function (e) {
-      if (!1 !== this.cssClassStates[e]) {
+      if (false !== this.cssClassStates[e]) {
         Zt(this.eGui, e);
-        this.cssClassStates[e] = !1;
+        this.cssClassStates[e] = false;
       }
     };
     t.prototype.addOrRemoveCssClass = function (e, t) {
@@ -8557,7 +8557,7 @@
       return this.queryForHtmlElement("[ref=\"" + e + "\"]");
     };
     t.EVENT_DISPLAYED_CHANGED = "displayedChanged";
-    io([pe("agStackComponentsRegistry")], t.prototype, "agStackComponentsRegistry", void 0);
+    io([pe("agStackComponentsRegistry")], t.prototype, "agStackComponentsRegistry", undefined);
     io([ce], t.prototype, "preConstructOnComponent", null);
     io([ce], t.prototype, "createChildComponentsPreConstruct", null);
     io([le], t.prototype, "addAnnotatedGridEventListeners", null);
@@ -8589,7 +8589,7 @@
     }
     co(t, e);
     t.prototype.isPopup = function () {
-      return !0;
+      return true;
     };
     t.prototype.setParentComponent = function (t) {
       Qt(t.getGui(), "ag-has-popup");
@@ -8733,7 +8733,7 @@
       var t;
       var n = this.eInput;
       if (e.cellStartedEdit) {
-        this.focusAfterAttached = !0;
+        this.focusAfterAttached = true;
         if (e.keyPress === _o.BACKSPACE || e.keyPress === _o.DELETE) {
           t = "";
         } else {
@@ -8742,16 +8742,16 @@
           } else {
             t = this.getStartValue(e);
             if (e.keyPress !== _o.F2) {
-              this.highlightAllOnFocus = !0;
+              this.highlightAllOnFocus = true;
             }
           }
         }
       } else {
-        this.focusAfterAttached = !1;
+        this.focusAfterAttached = false;
         t = this.getStartValue(e);
       }
       if (null != t) {
-        n.setValue(t, !0);
+        n.setValue(t, true);
       }
       this.addManagedListener(n.getGui(), "keydown", function (e) {
         var t = e.keyCode;
@@ -8801,16 +8801,16 @@
       return e.useFormatter || e.column.getColDef().refData ? e.formatValue(e.value) : e.value;
     };
     t.prototype.isPopup = function () {
-      return !1;
+      return false;
     };
     t.TEMPLATE = "<div class=\"ag-cell-edit-wrapper\"><ag-input-text-field class=\"ag-cell-editor\" ref=\"eInput\"></ag-input-text-field></div>";
-    bo([uo("eInput")], t.prototype, "eInput", void 0);
+    bo([uo("eInput")], t.prototype, "eInput", undefined);
     return t;
   }(lo);
   var Eo = function () {
     function e(e, t, n, r) {
       var o = this;
-      this.alive = !0;
+      this.alive = true;
       this.context = e;
       t.newDateComponent(n).then(function (t) {
         if (o.alive) {
@@ -8830,7 +8830,7 @@
       });
     }
     e.prototype.destroy = function () {
-      this.alive = !1;
+      this.alive = false;
       this.dateComp = this.context.destroyBean(this.dateComp);
     };
     e.prototype.getDate = function () {
@@ -8878,7 +8878,7 @@
         this.filterOptions.forEach(function (t) {
           if ("string" !== typeof t) {
             if (T(["displayKey", "displayName", "test"], function (e) {
-              return !!t[e] || (console.warn("AG Grid: ignoring FilterOptionDef as it doesn't contain a '" + e + "'"), !1);
+              return !!t[e] || (console.warn("AG Grid: ignoring FilterOptionDef as it doesn't contain a '" + e + "'"), false);
             })) {
               e.customFilterOptions[t.displayKey] = t;
             }
@@ -8980,12 +8980,12 @@
   };
   var So = function (e) {
     function t(t, n) {
-      if (void 0 === n) {
-        n = !1;
+      if (undefined === n) {
+        n = false;
       }
       var r = e.call(this, t) || this;
       r.isFocusableContainer = n;
-      r.skipTabGuardFocus = !1;
+      r.skipTabGuardFocus = false;
       return r;
     }
     Co(t, e);
@@ -9009,8 +9009,8 @@
       }
     };
     t.prototype.focusInnerElement = function (e) {
-      if (void 0 === e) {
-        e = !1;
+      if (undefined === e) {
+        e = false;
       }
       var t = this.focusController.findFocusableElements(this.getFocusableElement());
       if (this.isFocusableContainer && this.tabGuardsAreActive()) {
@@ -9028,7 +9028,7 @@
         if (this.isFocusableContainer && n) {
           this.deactivateTabGuards();
         }
-        var r = this.focusController.findNextFocusableElement(this.getFocusableElement(), !1, e.shiftKey);
+        var r = this.focusController.findNextFocusableElement(this.getFocusableElement(), false, e.shiftKey);
         if (this.isFocusableContainer && n) {
           setTimeout(function () {
             return t.activateTabGuards();
@@ -9051,12 +9051,12 @@
       }
     };
     t.prototype.forceFocusOutOfContainer = function (e) {
-      if (void 0 === e) {
-        e = !1;
+      if (undefined === e) {
+        e = false;
       }
       if (this.isFocusableContainer) {
         this.activateTabGuards();
-        this.skipTabGuardFocus = !0;
+        this.skipTabGuardFocus = true;
         var t = e ? this.topTabGuard : this.bottomTabGuard;
         if (t) {
           t.focus();
@@ -9117,11 +9117,11 @@
       });
     };
     t.prototype.shouldStopEventPropagation = function (e) {
-      return !1;
+      return false;
     };
     t.prototype.onFocus = function (e) {
       if (this.skipTabGuardFocus) {
-        this.skipTabGuardFocus = !1;
+        this.skipTabGuardFocus = false;
       } else {
         this.focusInnerElement(e.target === this.bottomTabGuard);
       }
@@ -9151,7 +9151,7 @@
       }
     };
     t.FOCUS_MANAGED_CLASS = "ag-focus-managed";
-    To([pe("focusController")], t.prototype, "focusController", void 0);
+    To([pe("focusController")], t.prototype, "focusController", undefined);
     To([le], t.prototype, "postConstruct", null);
     return t;
   }(so);
@@ -9197,7 +9197,7 @@
     function t(t) {
       var n = e.call(this) || this;
       n.filterNameKey = t;
-      n.applyActive = !1;
+      n.applyActive = false;
       n.hidePopup = null;
       n.appliedModel = null;
       return n;
@@ -9224,7 +9224,7 @@
     t.prototype.init = function (e) {
       var t = this;
       this.setParams(e);
-      this.resetUiToDefaults(!0).then(function () {
+      this.resetUiToDefaults(true).then(function () {
         t.updateUiVisibility();
         t.setupOnBtApplyDebounce();
       });
@@ -9233,9 +9233,9 @@
       t.checkForDeprecatedParams(e);
       this.providedFilterParams = e;
       if ("keep" === e.newRowsAction) {
-        this.newRowsActionKeep = !0;
+        this.newRowsActionKeep = true;
       } else if ("clear" === e.newRowsAction) {
-        this.newRowsActionKeep = !1;
+        this.newRowsActionKeep = false;
       } else {
         var n = [Ee.ROW_MODEL_TYPE_SERVER_SIDE, Ee.ROW_MODEL_TYPE_INFINITE];
         this.newRowsActionKeep = n.indexOf(this.rowModel.getType()) >= 0;
@@ -9257,7 +9257,7 @@
               case "apply":
                 r = e.translate("applyFilter");
                 o = function (t) {
-                  return e.onBtApply(!1, !1, t);
+                  return e.onBtApply(false, false, t);
                 };
                 break;
               case "clear":
@@ -9334,7 +9334,7 @@
       var t = this;
       var n = this.getModel();
       var r = function () {
-        t.onUiChanged(!1, "prevent");
+        t.onUiChanged(false, "prevent");
         if (t.providedFilterParams.closeOnApply) {
           t.close(e);
         }
@@ -9358,21 +9358,21 @@
     t.prototype.applyModel = function () {
       var e = this.getModelFromUi();
       if (!this.isModelValid(e)) {
-        return !1;
+        return false;
       }
       var t = this.appliedModel;
       this.appliedModel = e;
       return !this.areModelsEqual(t, e);
     };
     t.prototype.isModelValid = function (e) {
-      return !0;
+      return true;
     };
     t.prototype.onBtApply = function (e, t, n) {
-      if (void 0 === e) {
-        e = !1;
+      if (undefined === e) {
+        e = false;
       }
-      if (void 0 === t) {
-        t = !1;
+      if (undefined === t) {
+        t = false;
       }
       if (this.applyModel()) {
         this.providedFilterParams.filterChangedCallback({
@@ -9410,8 +9410,8 @@
       return this.newRowsActionKeep;
     };
     t.prototype.onUiChanged = function (e, t) {
-      if (void 0 === e) {
-        e = !1;
+      if (undefined === e) {
+        e = false;
       }
       this.updateUiVisibility();
       this.providedFilterParams.filterModifiedCallback();
@@ -9446,7 +9446,7 @@
     t.prototype.translate = function (e) {
       return this.gridOptionsWrapper.getLocaleTextFunc()(e, wo[e]);
     };
-    Ao([pe("rowModel")], t.prototype, "rowModel", void 0);
+    Ao([pe("rowModel")], t.prototype, "rowModel", undefined);
     Ao([le], t.prototype, "postConstruct", null);
     return t;
   }(So);
@@ -9507,12 +9507,12 @@
     t.prototype.onFloatingFilterChanged = function (e, t) {
       this.setTypeFromFloatingFilter(e);
       this.setValueFromFloatingFilter(t);
-      this.onUiChanged(!0);
+      this.onUiChanged(true);
     };
     t.prototype.setTypeFromFloatingFilter = function (e) {
       this.eType1.setValue(e);
       this.eType2.setValue(this.optionsFactory.getDefaultOption());
-      (this.isDefaultOperator("AND") ? this.eJoinOperatorAnd : this.eJoinOperatorOr).setValue(!0);
+      (this.isDefaultOperator("AND") ? this.eJoinOperatorAnd : this.eJoinOperatorOr).setValue(true);
     };
     t.prototype.getModelFromUi = function () {
       return this.isConditionUiComplete(go.One) ? this.isAllowTwoConditions() && this.isConditionUiComplete(go.Two) ? {
@@ -9529,20 +9529,20 @@
       return this.eType2.getValue();
     };
     t.prototype.getJoinOperator = function () {
-      return !0 === this.eJoinOperatorOr.getValue() ? "OR" : "AND";
+      return true === this.eJoinOperatorOr.getValue() ? "OR" : "AND";
     };
     t.prototype.areModelsEqual = function (e, t) {
       if (!e && !t) {
-        return !0;
+        return true;
       }
       if (!e && t || e && !t) {
-        return !1;
+        return false;
       }
       var n;
       var r = !e.operator;
       var o = !t.operator;
       if (!r && o || r && !o) {
-        return !1;
+        return false;
       }
       if (r) {
         var i = e;
@@ -9580,7 +9580,7 @@
       var t = this;
       var n = this.getModel();
       if (null == n) {
-        return !0;
+        return true;
       }
       var r = n.operator;
       var o = [];
@@ -9698,13 +9698,13 @@
     t.NOT_CONTAINS = "notContains";
     t.STARTS_WITH = "startsWith";
     t.ENDS_WITH = "endsWith";
-    Ro([uo("eOptions1")], t.prototype, "eType1", void 0);
-    Ro([uo("eOptions2")], t.prototype, "eType2", void 0);
-    Ro([uo("eJoinOperatorPanel")], t.prototype, "eJoinOperatorPanel", void 0);
-    Ro([uo("eJoinOperatorAnd")], t.prototype, "eJoinOperatorAnd", void 0);
-    Ro([uo("eJoinOperatorOr")], t.prototype, "eJoinOperatorOr", void 0);
-    Ro([uo("eCondition1Body")], t.prototype, "eCondition1Body", void 0);
-    Ro([uo("eCondition2Body")], t.prototype, "eCondition2Body", void 0);
+    Ro([uo("eOptions1")], t.prototype, "eType1", undefined);
+    Ro([uo("eOptions2")], t.prototype, "eType2", undefined);
+    Ro([uo("eJoinOperatorPanel")], t.prototype, "eJoinOperatorPanel", undefined);
+    Ro([uo("eJoinOperatorAnd")], t.prototype, "eJoinOperatorAnd", undefined);
+    Ro([uo("eJoinOperatorOr")], t.prototype, "eJoinOperatorOr", undefined);
+    Ro([uo("eCondition1Body")], t.prototype, "eCondition1Body", undefined);
+    Ro([uo("eCondition2Body")], t.prototype, "eCondition2Body", undefined);
     return t;
   }(jo);
   var Do = function () {
@@ -9760,27 +9760,27 @@
           case t.EQUALS:
           case t.NOT_EQUAL:
             if (this.scalarFilterParams.includeBlanksInEquals) {
-              return !0;
+              return true;
             }
             break;
           case t.GREATER_THAN:
           case t.GREATER_THAN_OR_EQUAL:
             if (this.scalarFilterParams.includeBlanksInGreaterThan) {
-              return !0;
+              return true;
             }
             break;
           case t.LESS_THAN:
           case t.LESS_THAN_OR_EQUAL:
             if (this.scalarFilterParams.includeBlanksInLessThan) {
-              return !0;
+              return true;
             }
             break;
           case t.IN_RANGE:
             if (this.scalarFilterParams.includeBlanksInRange) {
-              return !0;
+              return true;
             }
         }
-        return !1;
+        return false;
       }
       var l = this.comparator();
       var u = l(i, r);
@@ -9802,7 +9802,7 @@
           return this.scalarFilterParams.inRangeInclusive ? u >= 0 && d <= 0 : u > 0 && d < 0;
         default:
           console.warn("AG Grid: Unexpected type of filter \"" + s + "\", it looks like the filter was configured with incorrect Filter Options");
-          return !0;
+          return true;
       }
     };
     return t;
@@ -9927,10 +9927,10 @@
     t.prototype.isConditionUiComplete = function (e) {
       var t = e === go.One ? this.getCondition1Type() : this.getCondition2Type();
       if (t === xo.EMPTY) {
-        return !1;
+        return false;
       }
       if (this.doesFilterHaveHiddenInput(t)) {
-        return !0;
+        return true;
       }
       var n = this.getFromToComponents(e);
       var r = n[0];
@@ -9986,21 +9986,21 @@
       return e === go.One ? [this.dateCondition1FromComp, this.dateCondition1ToComp] : [this.dateCondition2FromComp, this.dateCondition2ToComp];
     };
     t.DEFAULT_FILTER_OPTIONS = [Mo.EQUALS, Mo.GREATER_THAN, Mo.LESS_THAN, Mo.NOT_EQUAL, Mo.IN_RANGE];
-    Po([uo("eCondition1PanelFrom")], t.prototype, "eCondition1PanelFrom", void 0);
-    Po([uo("eCondition1PanelTo")], t.prototype, "eCondition1PanelTo", void 0);
-    Po([uo("eCondition2PanelFrom")], t.prototype, "eCondition2PanelFrom", void 0);
-    Po([uo("eCondition2PanelTo")], t.prototype, "eCondition2PanelTo", void 0);
-    Po([pe("userComponentFactory")], t.prototype, "userComponentFactory", void 0);
+    Po([uo("eCondition1PanelFrom")], t.prototype, "eCondition1PanelFrom", undefined);
+    Po([uo("eCondition1PanelTo")], t.prototype, "eCondition1PanelTo", undefined);
+    Po([uo("eCondition2PanelFrom")], t.prototype, "eCondition2PanelFrom", undefined);
+    Po([uo("eCondition2PanelTo")], t.prototype, "eCondition2PanelTo", undefined);
+    Po([pe("userComponentFactory")], t.prototype, "userComponentFactory", undefined);
     return t;
   }(Mo);
   var Fo = function () {
     function e(e, t) {
       var n = this;
-      if (void 0 === t) {
-        t = !1;
+      if (undefined === t) {
+        t = false;
       }
       this.destroyFuncs = [];
-      this.touching = !1;
+      this.touching = false;
       this.eventService = new ye();
       this.eElement = e;
       this.preventMouseClick = t;
@@ -10008,23 +10008,23 @@
       var o = this.onTouchMove.bind(this);
       var i = this.onTouchEnd.bind(this);
       this.eElement.addEventListener("touchstart", r, {
-        passive: !0
+        passive: true
       });
       this.eElement.addEventListener("touchmove", o, {
-        passive: !0
+        passive: true
       });
       this.eElement.addEventListener("touchend", i, {
-        passive: !1
+        passive: false
       });
       this.destroyFuncs.push(function () {
         n.eElement.removeEventListener("touchstart", r, {
-          passive: !0
+          passive: true
         });
         n.eElement.removeEventListener("touchmove", o, {
-          passive: !0
+          passive: true
         });
         n.eElement.removeEventListener("touchend", i, {
-          passive: !1
+          passive: false
         });
       });
     }
@@ -10046,13 +10046,13 @@
       var n = this;
       if (!this.touching) {
         this.touchStart = t.touches[0];
-        this.touching = !0;
-        this.moved = !1;
+        this.touching = true;
+        this.moved = false;
         var r = this.touchStart;
         window.setTimeout(function () {
           var o = n.touchStart === r;
           if (n.touching && o && !n.moved) {
-            n.moved = !0;
+            n.moved = true;
             var i = {
               type: e.EVENT_LONG_TAP,
               touchStart: n.touchStart,
@@ -10068,7 +10068,7 @@
         var t = this.getActiveTouch(e.touches);
         if (t) {
           if (!Ur(t, this.touchStart, 4)) {
-            this.moved = !0;
+            this.moved = true;
           }
         }
       }
@@ -10086,7 +10086,7 @@
         if (this.preventMouseClick) {
           t.preventDefault();
         }
-        this.touching = !1;
+        this.touching = false;
       }
     };
     e.prototype.checkForDoubleTap = function () {
@@ -10167,7 +10167,7 @@
     };
     t.prototype.refresh = function (e) {
       this.params = e;
-      return this.workOutTemplate() == this.currentTemplate && this.workOutShowMenu() == this.currentShowMenu && this.workOutSort() == this.currentSort && (this.setDisplayName(e), !0);
+      return this.workOutTemplate() == this.currentTemplate && this.workOutShowMenu() == this.currentShowMenu && this.workOutSort() == this.currentSort && (this.setDisplayName(e), true);
     };
     t.prototype.workOutTemplate = function () {
       var e = h(this.params.template, t.TEMPLATE);
@@ -10212,10 +10212,10 @@
       var e = this;
       var t = this.gridOptionsWrapper;
       if (!t.isSuppressTouch()) {
-        var n = new Fo(this.getGui(), !0);
+        var n = new Fo(this.getGui(), true);
         var o = t.isSuppressMenuHide();
         var i = o && r(this.eMenu);
-        var a = i ? new Fo(this.eMenu, !0) : n;
+        var a = i ? new Fo(this.eMenu, true) : n;
         if (this.params.enableMenu) {
           var s = i ? "EVENT_TAP" : "EVENT_LONG_TAP";
           this.addManagedListener(a, Fo[s], function (n) {
@@ -10226,7 +10226,7 @@
           this.addManagedListener(n, Fo.EVENT_TAP, function (t) {
             var n = t.touchStart.target;
             if (!(o && e.eMenu.contains(n))) {
-              e.sortController.progressSort(e.params.column, !1, "uiColumnSorted");
+              e.sortController.progressSort(e.params.column, false, "uiColumnSorted");
             }
           });
         }
@@ -10342,16 +10342,16 @@
       Jt(this.eFilter, "ag-hidden", !e);
     };
     t.TEMPLATE = "<div class=\"ag-cell-label-container\" role=\"presentation\">\n            <span ref=\"eMenu\" class=\"ag-header-icon ag-header-cell-menu-button\" aria-hidden=\"true\"></span>\n            <div ref=\"eLabel\" class=\"ag-header-cell-label\" role=\"presentation\" unselectable=\"on\">\n                <span ref=\"eText\" class=\"ag-header-cell-text\" unselectable=\"on\"></span>\n                <span ref=\"eFilter\" class=\"ag-header-icon ag-header-label-icon ag-filter-icon\" aria-hidden=\"true\"></span>\n                <span ref=\"eSortOrder\" class=\"ag-header-icon ag-header-label-icon ag-sort-order\" aria-hidden=\"true\"></span>\n                <span ref=\"eSortAsc\" class=\"ag-header-icon ag-header-label-icon ag-sort-ascending-icon\" aria-hidden=\"true\"></span>\n                <span ref=\"eSortDesc\" class=\"ag-header-icon ag-header-label-icon ag-sort-descending-icon\" aria-hidden=\"true\"></span>\n                <span ref=\"eSortNone\" class=\"ag-header-icon ag-header-label-icon ag-sort-none-icon\" aria-hidden=\"true\"></span>\n            </div>\n        </div>";
-    Uo([pe("sortController")], t.prototype, "sortController", void 0);
-    Uo([pe("menuFactory")], t.prototype, "menuFactory", void 0);
-    Uo([uo("eFilter")], t.prototype, "eFilter", void 0);
-    Uo([uo("eSortAsc")], t.prototype, "eSortAsc", void 0);
-    Uo([uo("eSortDesc")], t.prototype, "eSortDesc", void 0);
-    Uo([uo("eSortNone")], t.prototype, "eSortNone", void 0);
-    Uo([uo("eSortOrder")], t.prototype, "eSortOrder", void 0);
-    Uo([uo("eMenu")], t.prototype, "eMenu", void 0);
-    Uo([uo("eLabel")], t.prototype, "eLabel", void 0);
-    Uo([uo("eText")], t.prototype, "eText", void 0);
+    Uo([pe("sortController")], t.prototype, "sortController", undefined);
+    Uo([pe("menuFactory")], t.prototype, "menuFactory", undefined);
+    Uo([uo("eFilter")], t.prototype, "eFilter", undefined);
+    Uo([uo("eSortAsc")], t.prototype, "eSortAsc", undefined);
+    Uo([uo("eSortDesc")], t.prototype, "eSortDesc", undefined);
+    Uo([uo("eSortNone")], t.prototype, "eSortNone", undefined);
+    Uo([uo("eSortOrder")], t.prototype, "eSortOrder", undefined);
+    Uo([uo("eMenu")], t.prototype, "eMenu", undefined);
+    Uo([uo("eLabel")], t.prototype, "eLabel", undefined);
+    Uo([uo("eText")], t.prototype, "eText", undefined);
     return t;
   }(so);
   var Ho = function () {
@@ -10438,7 +10438,7 @@
       this.addManagedListener(r, Ie.EVENT_EXPANDABLE_CHANGED, this.updateIconVisibility.bind(this));
     };
     t.prototype.addTouchAndClickListeners = function (e, t) {
-      var n = new Fo(e, !0);
+      var n = new Fo(e, true);
       this.addManagedListener(n, Fo.EVENT_TAP, t);
       this.addDestroyFunc(function () {
         return n.destroy();
@@ -10451,8 +10451,8 @@
         tn(this.eOpenIcon, e);
         tn(this.eCloseIcon, !e);
       } else {
-        tn(this.eOpenIcon, !1);
-        tn(this.eCloseIcon, !1);
+        tn(this.eOpenIcon, false);
+        tn(this.eCloseIcon, false);
       }
     };
     t.prototype.addInIcon = function (e, t) {
@@ -10463,8 +10463,8 @@
     };
     t.prototype.addGroupExpandIcon = function () {
       if (!this.params.columnGroup.isExpandable()) {
-        tn(this.eOpenIcon, !1);
-        return void tn(this.eCloseIcon, !1);
+        tn(this.eOpenIcon, false);
+        return void tn(this.eCloseIcon, false);
       }
     };
     t.prototype.setupLabel = function () {
@@ -10475,9 +10475,9 @@
       }
     };
     t.TEMPLATE = "<div class=\"ag-header-group-cell-label\" ref=\"agContainer\" role=\"presentation\">\n            <span ref=\"agLabel\" class=\"ag-header-group-text\" role=\"presentation\"></span>\n            <span ref=\"agOpened\" class=\"ag-header-icon ag-header-expand-icon ag-header-expand-icon-expanded\"></span>\n            <span ref=\"agClosed\" class=\"ag-header-icon ag-header-expand-icon ag-header-expand-icon-collapsed\"></span>\n        </div>";
-    Vo([pe("columnController")], t.prototype, "columnController", void 0);
-    Vo([uo("agOpened")], t.prototype, "eOpenIcon", void 0);
-    Vo([uo("agClosed")], t.prototype, "eCloseIcon", void 0);
+    Vo([pe("columnController")], t.prototype, "columnController", undefined);
+    Vo([uo("agOpened")], t.prototype, "eOpenIcon", undefined);
+    Vo([uo("agClosed")], t.prototype, "eCloseIcon", undefined);
     return t;
   }(so);
   var Yo = function (e, t, n, r) {
@@ -10503,20 +10503,20 @@
       this.rowIndex = null;
       this.key = null;
       this.childrenMapped = {};
-      this.displayed = !1;
+      this.displayed = false;
       this.rowTop = null;
       this.oldRowTop = null;
-      this.selectable = !0;
+      this.selectable = true;
       this.__objectId = e.OBJECT_ID_SEQUENCE++;
-      this.alreadyRendered = !1;
+      this.alreadyRendered = false;
       this.highlighted = null;
-      this.selected = !1;
+      this.selected = false;
     }
     e.prototype.setData = function (e) {
-      this.setDataCommon(e, !1);
+      this.setDataCommon(e, false);
     };
     e.prototype.updateData = function (e) {
-      this.setDataCommon(e, !0);
+      this.setDataCommon(e, true);
     };
     e.prototype.setDataCommon = function (e, t) {
       var n = this.data;
@@ -10555,7 +10555,7 @@
       this.context.createBean(t);
       t.id = this.id;
       t.data = this.data;
-      t.daemon = !0;
+      t.daemon = true;
       t.selected = this.selected;
       t.level = this.level;
       return t;
@@ -10568,7 +10568,7 @@
       this.setId(t);
       this.selectionController.syncInRowNode(this, n);
       this.checkRowSelectable();
-      var i = this.createDataChangedEvent(e, o, !1);
+      var i = this.createDataChangedEvent(e, o, false);
       this.dispatchLocalEvent(i);
     };
     e.prototype.checkRowSelectable = function () {
@@ -10592,7 +10592,7 @@
             console.error("AG Grid: Row ID's cannot start with " + e.ID_PREFIX_ROW_GROUP + ", this is a reserved prefix for AG Grid's row grouping feature.");
           }
         } else {
-          this.id = void 0;
+          this.id = undefined;
         }
       } else {
         this.id = t;
@@ -10675,7 +10675,7 @@
     e.prototype.setMaster = function (t) {
       if (this.master !== t) {
         if (this.master && !t) {
-          this.expanded = !1;
+          this.expanded = false;
         }
         this.master = t;
         if (this.eventService) {
@@ -10684,8 +10684,8 @@
       }
     };
     e.prototype.setRowHeight = function (t, n) {
-      if (void 0 === n) {
-        n = !1;
+      if (undefined === n) {
+        n = false;
       }
       this.rowHeight = t;
       this.rowHeightEstimated = n;
@@ -10769,8 +10769,8 @@
       if (this.eventService) {
         n.forEach(function (e) {
           var n = t.columnController.getGridColumn(e);
-          var o = t.aggData ? t.aggData[e] : void 0;
-          var i = r ? r[e] : void 0;
+          var o = t.aggData ? t.aggData[e] : undefined;
+          var i = r ? r[e] : undefined;
           t.dispatchCellChangedEvent(n, o, i);
         });
       }
@@ -10822,44 +10822,44 @@
     };
     e.prototype.calculateSelectedFromChildren = function () {
       var e;
-      var t = !1;
-      var n = !1;
-      var r = !1;
+      var t = false;
+      var n = false;
+      var r = false;
       if (this.childrenAfterGroup) {
         for (var o = 0; o < this.childrenAfterGroup.length; o++) {
           var i = this.childrenAfterGroup[o];
           if (i.selectable) {
             switch (i.isSelected()) {
-              case !0:
-                t = !0;
+              case true:
+                t = true;
                 break;
-              case !1:
-                n = !0;
+              case false:
+                n = true;
                 break;
               default:
-                r = !0;
+                r = true;
             }
           }
         }
       }
-      e = r ? void 0 : !(!t || n) || !(!t && n) && void 0;
+      e = r ? undefined : !(!t || n) || !(!t && n) && undefined;
       this.selectThisNode(e);
     };
     e.prototype.setSelectedInitialValue = function (e) {
       this.selected = e;
     };
     e.prototype.setSelected = function (e, t, n) {
-      if (void 0 === t) {
-        t = !1;
+      if (undefined === t) {
+        t = false;
       }
-      if (void 0 === n) {
-        n = !1;
+      if (undefined === n) {
+        n = false;
       }
       this.setSelectedParams({
         newValue: e,
         clearSelection: t,
         suppressFinishActions: n,
-        rangeSelect: !1
+        rangeSelect: false
       });
     };
     e.prototype.isRowPinned = function () {
@@ -10867,12 +10867,12 @@
     };
     e.prototype.setSelectedParams = function (e) {
       var t = this.gridOptionsWrapper.isGroupSelectsChildren();
-      var n = !0 === e.newValue;
-      var r = !0 === e.clearSelection;
-      var o = !0 === e.suppressFinishActions;
-      var i = !0 === e.rangeSelect;
-      var a = t && !0 === e.groupSelectsFiltered;
-      if (void 0 === this.id) {
+      var n = true === e.newValue;
+      var r = true === e.clearSelection;
+      var o = true === e.suppressFinishActions;
+      var i = true === e.rangeSelect;
+      var a = t && true === e.groupSelectsFiltered;
+      if (undefined === this.id) {
         console.warn("AG Grid: cannot select node until id for node is known");
         return 0;
       }
@@ -10922,15 +10922,15 @@
     };
     e.prototype.doRowRangeSelection = function (e) {
       var t = this;
-      if (void 0 === e) {
-        e = !0;
+      if (undefined === e) {
+        e = true;
       }
       var n = this.gridOptionsWrapper.isGroupSelectsChildren();
       var r = this.selectionController.getLastSelectedNode();
       var o = this.rowModel.getNodesInRangeForSelection(this, r);
       var i = 0;
       o.forEach(function (r) {
-        if (!(r.group && n || !1 === e && t === r)) {
+        if (!(r.group && n || false === e && t === r)) {
           if (r.selectThisNode(e)) {
             i++;
           }
@@ -10948,17 +10948,17 @@
     e.prototype.isParentOfNode = function (e) {
       for (var t = this.parent; t;) {
         if (t === e) {
-          return !0;
+          return true;
         }
         t = t.parent;
       }
-      return !1;
+      return false;
     };
     e.prototype.selectThisNode = function (t) {
       var n = !this.selectable && t;
       var r = this.selected === t;
       if (n || r) {
-        return !1;
+        return false;
       }
       this.selected = t;
       if (this.eventService) {
@@ -10966,7 +10966,7 @@
       }
       var o = this.createGlobalRowEvent(Ke.EVENT_ROW_SELECTED);
       this.mainEventService.dispatchEvent(o);
-      return !0;
+      return true;
     };
     e.prototype.selectChildNodes = function (e, t) {
       var n = t ? this.childrenAfterFilter : this.childrenAfterGroup;
@@ -10976,8 +10976,8 @@
       for (var r = 0, i = 0; i < n.length; i++) {
         r += n[i].setSelectedParams({
           newValue: e,
-          clearSelection: !1,
-          suppressFinishActions: !0,
+          clearSelection: false,
+          suppressFinishActions: true,
           groupSelectsFiltered: t
         });
       }
@@ -11004,15 +11004,15 @@
       this.dispatchLocalEvent(this.createLocalRowEvent(e.EVENT_MOUSE_LEAVE));
     };
     e.prototype.getFirstChildOfFirstChild = function (e) {
-      for (var t = this, n = !0, o = !1, i = null; n && !o;) {
+      for (var t = this, n = true, o = false, i = null; n && !o;) {
         var a = t.parent;
         if (r(a) && t.firstChild) {
           if (a.rowGroupColumn === e) {
-            o = !0;
+            o = true;
             i = a;
           }
         } else {
-          n = !1;
+          n = false;
         }
         t = a;
       }
@@ -11055,17 +11055,17 @@
     e.EVENT_UI_LEVEL_CHANGED = "uiLevelChanged";
     e.EVENT_HIGHLIGHT_CHANGED = "rowHighlightChanged";
     e.EVENT_DRAGGING_CHANGED = "draggingChanged";
-    Yo([pe("eventService")], e.prototype, "mainEventService", void 0);
-    Yo([pe("rowRenderer")], e.prototype, "rowRenderer", void 0);
-    Yo([pe("gridOptionsWrapper")], e.prototype, "gridOptionsWrapper", void 0);
-    Yo([pe("selectionController")], e.prototype, "selectionController", void 0);
-    Yo([pe("columnController")], e.prototype, "columnController", void 0);
-    Yo([pe("valueService")], e.prototype, "valueService", void 0);
-    Yo([pe("rowModel")], e.prototype, "rowModel", void 0);
-    Yo([pe("context")], e.prototype, "context", void 0);
-    Yo([pe("valueCache")], e.prototype, "valueCache", void 0);
-    Yo([pe("columnApi")], e.prototype, "columnApi", void 0);
-    Yo([pe("gridApi")], e.prototype, "gridApi", void 0);
+    Yo([pe("eventService")], e.prototype, "mainEventService", undefined);
+    Yo([pe("rowRenderer")], e.prototype, "rowRenderer", undefined);
+    Yo([pe("gridOptionsWrapper")], e.prototype, "gridOptionsWrapper", undefined);
+    Yo([pe("selectionController")], e.prototype, "selectionController", undefined);
+    Yo([pe("columnController")], e.prototype, "columnController", undefined);
+    Yo([pe("valueService")], e.prototype, "valueService", undefined);
+    Yo([pe("rowModel")], e.prototype, "rowModel", undefined);
+    Yo([pe("context")], e.prototype, "context", undefined);
+    Yo([pe("valueCache")], e.prototype, "valueCache", undefined);
+    Yo([pe("columnApi")], e.prototype, "columnApi", undefined);
+    Yo([pe("gridApi")], e.prototype, "gridApi", undefined);
     return e;
   }();
   var qo = function () {
@@ -11112,7 +11112,7 @@
     }
     qo(t, e);
     t.prototype.postConstruct = function () {
-      this.eCheckbox.setPassive(!0);
+      this.eCheckbox.setPassive(true);
     };
     t.prototype.getCheckboxId = function () {
       return this.eCheckbox.getInputElement().id;
@@ -11126,15 +11126,15 @@
     t.prototype.onSelectionChanged = function () {
       var e = this.gridOptionsWrapper.getLocaleTextFunc();
       var t = this.rowNode.isSelected();
-      var n = void 0 === t ? e("ariaIndeterminate", "indeterminate") : !0 === t ? e("ariaChecked", "checked") : e("ariaUnchecked", "unchecked");
+      var n = undefined === t ? e("ariaIndeterminate", "indeterminate") : true === t ? e("ariaChecked", "checked") : e("ariaUnchecked", "unchecked");
       var r = e("ariaRowToggleSelection", "Press Space to toggle row selection");
-      this.eCheckbox.setValue(t, !0);
+      this.eCheckbox.setValue(t, true);
       this.eCheckbox.setInputAriaLabel(r + " (" + n + ")");
     };
     t.prototype.onCheckedClicked = function (e) {
       var t = this.gridOptionsWrapper.isGroupSelectsFiltered();
       return this.rowNode.setSelectedParams({
-        newValue: !1,
+        newValue: false,
         rangeSelect: e.shiftKey,
         groupSelectsFiltered: t
       });
@@ -11142,7 +11142,7 @@
     t.prototype.onUncheckedClicked = function (e) {
       var t = this.gridOptionsWrapper.isGroupSelectsFiltered();
       return this.rowNode.setSelectedParams({
-        newValue: !0,
+        newValue: true,
         rangeSelect: e.shiftKey,
         groupSelectsFiltered: t
       });
@@ -11160,7 +11160,7 @@
       });
       this.addManagedListener(this.eCheckbox.getInputElement(), "click", function (e) {
         var n = t.eCheckbox.getValue();
-        if (void 0 === t.eCheckbox.getPreviousValue()) {
+        if (undefined === t.eCheckbox.getPreviousValue()) {
           if (0 === t.onUncheckedClicked(e || {})) {
             t.onCheckedClicked(e);
           }
@@ -11195,92 +11195,92 @@
       var e = this.column ? this.column.getColDef() : null;
       return !!e && "function" === typeof e.checkboxSelection;
     };
-    Xo([uo("eCheckbox")], t.prototype, "eCheckbox", void 0);
+    Xo([uo("eCheckbox")], t.prototype, "eCheckbox", undefined);
     Xo([le], t.prototype, "postConstruct", null);
     return t;
   }(so);
   var Zo = {
     propertyName: "dateComponent",
     isCellRenderer: function () {
-      return !1;
+      return false;
     }
   };
   var Jo = {
     propertyName: "headerComponent",
     isCellRenderer: function () {
-      return !1;
+      return false;
     }
   };
   var $o = {
     propertyName: "headerGroupComponent",
     isCellRenderer: function () {
-      return !1;
+      return false;
     }
   };
   var ei = {
     propertyName: "cellRenderer",
     isCellRenderer: function () {
-      return !0;
+      return true;
     }
   };
   var ti = {
     propertyName: "pinnedRowCellRenderer",
     isCellRenderer: function () {
-      return !0;
+      return true;
     }
   };
   var ni = {
     propertyName: "cellEditor",
     isCellRenderer: function () {
-      return !1;
+      return false;
     }
   };
   var ri = {
     propertyName: "innerRenderer",
     isCellRenderer: function () {
-      return !0;
+      return true;
     }
   };
   var oi = {
     propertyName: "loadingOverlayComponent",
     isCellRenderer: function () {
-      return !1;
+      return false;
     }
   };
   var ii = {
     propertyName: "noRowsOverlayComponent",
     isCellRenderer: function () {
-      return !1;
+      return false;
     }
   };
   var ai = {
     propertyName: "tooltipComponent",
     isCellRenderer: function () {
-      return !1;
+      return false;
     }
   };
   var si = {
     propertyName: "filter",
     isCellRenderer: function () {
-      return !1;
+      return false;
     }
   };
   var ci = {
     propertyName: "floatingFilterComponent",
     isCellRenderer: function () {
-      return !1;
+      return false;
     }
   };
   var li = {
     propertyName: "toolPanel",
     isCellRenderer: function () {
-      return !1;
+      return false;
     }
   };
   var ui = {
     propertyName: "statusPanel",
     isCellRenderer: function () {
-      return !1;
+      return false;
     }
   };
   var di = function () {
@@ -11344,21 +11344,21 @@
       return this.createAndInitUserComponent(e.columnGroup.getColGroupDef(), e, $o, "agColumnGroupHeader");
     };
     t.prototype.newFullWidthGroupRowInnerCellRenderer = function (e) {
-      return this.createAndInitUserComponent(this.gridOptions.groupRowRendererParams, e, ri, null, !0);
+      return this.createAndInitUserComponent(this.gridOptions.groupRowRendererParams, e, ri, null, true);
     };
     t.prototype.newFullWidthCellRenderer = function (e, t, n) {
       return this.createAndInitUserComponent(null, e, {
         propertyName: t,
         isCellRenderer: function () {
-          return !0;
+          return true;
         }
       }, n);
     };
     t.prototype.newCellRenderer = function (e, t, n) {
-      if (void 0 === n) {
-        n = !1;
+      if (undefined === n) {
+        n = false;
       }
-      return this.createAndInitUserComponent(e, t, n ? ti : ei, null, !0);
+      return this.createAndInitUserComponent(e, t, n ? ti : ei, null, true);
     };
     t.prototype.newCellEditor = function (e, t) {
       return this.createAndInitUserComponent(e, t, ni, "agCellEditor");
@@ -11376,13 +11376,13 @@
       return this.createAndInitUserComponent(e.colDef, e, ai, "agTooltipComponent");
     };
     t.prototype.newFilterComponent = function (e, t, n) {
-      return this.createAndInitUserComponent(e, t, si, n, !1);
+      return this.createAndInitUserComponent(e, t, si, n, false);
     };
     t.prototype.newSetFilterCellRenderer = function (e, t) {
-      return this.createAndInitUserComponent(e, t, ei, null, !0);
+      return this.createAndInitUserComponent(e, t, ei, null, true);
     };
     t.prototype.newFloatingFilterComponent = function (e, t, n) {
-      return this.createAndInitUserComponent(e, t, ci, n, !0);
+      return this.createAndInitUserComponent(e, t, ci, n, true);
     };
     t.prototype.newToolPanelComponent = function (e, t) {
       return this.createAndInitUserComponent(e, t, li);
@@ -11391,8 +11391,8 @@
       return this.createAndInitUserComponent(e, t, ui);
     };
     t.prototype.createAndInitUserComponent = function (e, t, n, r, o) {
-      if (void 0 === o) {
-        o = !1;
+      if (undefined === o) {
+        o = false;
       }
       if (!e) {
         e = this.gridOptions;
@@ -11425,7 +11425,7 @@
       return n;
     };
     t.prototype.lookupComponentClassDef = function (e, t, n, r) {
-      if (void 0 === n) {
+      if (undefined === n) {
         n = null;
       }
       var o = null;
@@ -11435,7 +11435,7 @@
       var c = null;
       if (null != e) {
         var l = e[t];
-        if (!(null == l || !0 === l)) {
+        if (!(null == l || true === l)) {
           if ("string" === typeof l) {
             o = l;
           } else {
@@ -11462,7 +11462,7 @@
       }
       if (s) {
         return {
-          componentFromFramework: !0,
+          componentFromFramework: true,
           component: s,
           source: ko.HARDCODED,
           paramsFromSelector: null
@@ -11470,14 +11470,14 @@
       }
       if (i) {
         return {
-          componentFromFramework: !1,
+          componentFromFramework: false,
           component: i,
           source: ko.HARDCODED,
           paramsFromSelector: null
         };
       }
       if (a) {
-        return this.agComponentUtils.adaptFunction(t, a, !1, ko.HARDCODED);
+        return this.agComponentUtils.adaptFunction(t, a, false, ko.HARDCODED);
       }
       var u;
       var d = c ? c(n) : null;
@@ -11497,18 +11497,18 @@
       var r = this.userComponentRegistry.retrieve(n);
       return null == r ? null : r.componentFromFramework ? {
         component: r.component,
-        componentFromFramework: !0,
+        componentFromFramework: true,
         source: ko.REGISTERED_BY_NAME,
         paramsFromSelector: null
       } : this.agComponentUtils.doesImplementIComponent(r.component) ? {
         component: r.component,
-        componentFromFramework: !1,
+        componentFromFramework: false,
         source: r.source == bi.REGISTERED ? ko.REGISTERED_BY_NAME : ko.DEFAULT,
         paramsFromSelector: null
       } : this.agComponentUtils.adaptFunction(e, r.component, r.componentFromFramework, r.source == bi.REGISTERED ? ko.REGISTERED_BY_NAME : ko.DEFAULT);
     };
     t.prototype.createFinalParams = function (e, t, n, r) {
-      if (void 0 === r) {
+      if (undefined === r) {
         r = null;
       }
       var o = {};
@@ -11556,11 +11556,11 @@
         return e.init(t);
       }
     };
-    pi([pe("gridOptions")], t.prototype, "gridOptions", void 0);
-    pi([pe("agComponentUtils")], t.prototype, "agComponentUtils", void 0);
-    pi([pe("componentMetadataProvider")], t.prototype, "componentMetadataProvider", void 0);
-    pi([pe("userComponentRegistry")], t.prototype, "userComponentRegistry", void 0);
-    pi([fe("frameworkComponentWrapper")], t.prototype, "frameworkComponentWrapper", void 0);
+    pi([pe("gridOptions")], t.prototype, "gridOptions", undefined);
+    pi([pe("agComponentUtils")], t.prototype, "agComponentUtils", undefined);
+    pi([pe("componentMetadataProvider")], t.prototype, "componentMetadataProvider", undefined);
+    pi([pe("userComponentRegistry")], t.prototype, "userComponentRegistry", undefined);
+    pi([fe("frameworkComponentWrapper")], t.prototype, "frameworkComponentWrapper", undefined);
     return t = pi([de("userComponentFactory")], t);
   }(We);
   var _i = function () {
@@ -11632,8 +11632,8 @@
       this.eDropNotAllowedIcon = xr("dropNotAllowed", this.gridOptionsWrapper, null);
     };
     n.prototype.addDragSource = function (e, t) {
-      if (void 0 === t) {
-        t = !1;
+      if (undefined === t) {
+        t = false;
       }
       var n = {
         eElement: e.eElement,
@@ -11666,11 +11666,11 @@
     };
     n.prototype.nudge = function () {
       if (this.dragging) {
-        this.onDragging(this.eventLastTime, !0);
+        this.onDragging(this.eventLastTime, true);
       }
     };
     n.prototype.onDragStart = function (e, t) {
-      this.dragging = !0;
+      this.dragging = true;
       this.dragSource = e;
       this.eventLastTime = t;
       this.dragItem = this.dragSource.getDragItem();
@@ -11682,12 +11682,12 @@
     };
     n.prototype.onDragStop = function (e) {
       this.eventLastTime = null;
-      this.dragging = !1;
+      this.dragging = false;
       if (this.dragSource.onDragStopped) {
         this.dragSource.onDragStopped();
       }
       if (this.lastDropTarget && this.lastDropTarget.onDragStop) {
-        var t = this.createDropTargetEvent(this.lastDropTarget, e, null, null, !1);
+        var t = this.createDropTargetEvent(this.lastDropTarget, e, null, null, false);
         this.lastDropTarget.onDragStop(t);
       }
       this.lastDropTarget = null;
@@ -11751,7 +11751,7 @@
       return t;
     };
     n.prototype.isMouseOnDropTarget = function (e, t) {
-      var n = !1;
+      var n = false;
       this.getAllContainersFromDropTarget(t).filter(function (e) {
         return e;
       }).forEach(function (t) {
@@ -11760,7 +11760,7 @@
           var o = e.clientX >= r.left && e.clientX < r.right;
           var i = e.clientY >= r.top && e.clientY < r.bottom;
           if (o && i) {
-            n = !0;
+            n = true;
           }
         }
       });
@@ -11877,8 +11877,8 @@
       }
     };
     n.prototype.setGhostIcon = function (e, t) {
-      if (void 0 === t) {
-        t = !1;
+      if (undefined === t) {
+        t = false;
       }
       hn(this.eGhostIcon);
       var n = null;
@@ -11927,10 +11927,10 @@
     n.ICON_NOT_ALLOWED = "notAllowed";
     n.ICON_HIDE = "hide";
     n.GHOST_TEMPLATE = "<div class=\"ag-dnd-ghost ag-unselectable\">\n            <span class=\"ag-dnd-ghost-icon ag-shake-left-to-right\"></span>\n            <div class=\"ag-dnd-ghost-label\"></div>\n        </div>";
-    vi([pe("dragService")], n.prototype, "dragService", void 0);
-    vi([pe("environment")], n.prototype, "environment", void 0);
-    vi([pe("columnApi")], n.prototype, "columnApi", void 0);
-    vi([pe("gridApi")], n.prototype, "gridApi", void 0);
+    vi([pe("dragService")], n.prototype, "dragService", undefined);
+    vi([pe("environment")], n.prototype, "environment", undefined);
+    vi([pe("columnApi")], n.prototype, "columnApi", undefined);
+    vi([pe("gridApi")], n.prototype, "gridApi", undefined);
     vi([le], n.prototype, "init", null);
     vi([ue], n.prototype, "clearDragSourceParamsList", null);
     return n = r = vi([de("dragAndDropService")], n);
@@ -11981,14 +11981,14 @@
       a.column = r;
       a.customGui = o;
       a.dragStartPixels = i;
-      a.isCustomGui = !1;
+      a.isCustomGui = false;
       a.dragSource = null;
       return a;
     }
     Ei(n, e);
     n.prototype.postConstruct = function () {
       if (this.customGui) {
-        this.isCustomGui = !0;
+        this.isCustomGui = true;
         this.setDragElement(this.customGui, this.dragStartPixels);
       } else {
         this.setTemplate("<div class=\"ag-drag-handle ag-row-drag\" aria-hidden=\"true\"></div>");
@@ -12020,7 +12020,7 @@
     };
     n.prototype.addDragSource = function (e) {
       var n = this;
-      if (void 0 === e) {
+      if (undefined === e) {
         e = 4;
       }
       if (this.dragSource) {
@@ -12028,7 +12028,7 @@
       }
       var r = {
         rowNode: this.rowNode,
-        columns: this.column ? [this.column] : void 0,
+        columns: this.column ? [this.column] : undefined,
         defaultTextValue: this.cellValueFn()
       };
       var o = this.column && this.column.getColDef().rowDragText;
@@ -12045,7 +12045,7 @@
         dragStartPixels: e,
         dragSourceDomDataKey: this.beans.gridOptionsWrapper.getDomDataKey()
       };
-      this.beans.dragAndDropService.addDragSource(this.dragSource, !0);
+      this.beans.dragAndDropService.addDragSource(this.dragSource, true);
     };
     n.prototype.removeDragSource = function () {
       if (this.dragSource) {
@@ -12053,7 +12053,7 @@
       }
       this.dragSource = null;
     };
-    Oi([pe("beans")], n.prototype, "beans", void 0);
+    Oi([pe("beans")], n.prototype, "beans", undefined);
     Oi([le], n.prototype, "postConstruct", null);
     Oi([ue], n.prototype, "removeDragSource", null);
     return n;
@@ -12069,16 +12069,16 @@
     Ei(t, e);
     t.prototype.setDisplayedOrVisible = function (e) {
       if (e) {
-        this.parent.setDisplayed(!1);
+        this.parent.setDisplayed(false);
       } else {
-        var t = !0;
-        var n = !1;
+        var t = true;
+        var n = false;
         if (this.column) {
           t = this.column.isRowDrag(this.rowNode) || this.parent.isCustomGui;
           n = Z(this.column.getColDef().rowDrag);
         }
         if (n) {
-          this.parent.setDisplayed(!0);
+          this.parent.setDisplayed(true);
           this.parent.setVisible(t);
         } else {
           this.parent.setDisplayed(t);
@@ -12185,17 +12185,17 @@
     Ii(t, e);
     t.prototype.isTopLevelFooter = function () {
       if (!this.gridOptionsWrapper.isGroupIncludeTotalFooter()) {
-        return !1;
+        return false;
       }
       if (null != this.params.value || -1 != this.params.node.level) {
-        return !1;
+        return false;
       }
       var e = this.params.colDef;
       if (null == e) {
-        return !0;
+        return true;
       }
-      if (!0 === e.showRowGroup) {
-        return !0;
+      if (true === e.showRowGroup) {
+        return true;
       }
       var t = this.columnController.getRowGroupColumns();
       return !t || 0 === t.length || t[0].getId() === e.showRowGroup;
@@ -12205,7 +12205,7 @@
       var t = this.isTopLevelFooter();
       var n = this.isEmbeddedRowMismatch();
       var r = null == e.value;
-      var o = !1;
+      var o = false;
       if (this.gridOptionsWrapper.isGroupIncludeFooter() && this.gridOptionsWrapper.isGroupHideOpenParents()) {
         var i = e.node;
         if (i.footer) {
@@ -12224,7 +12224,7 @@
     };
     t.prototype.isEmbeddedRowMismatch = function () {
       if (!this.params.fullWidth || !this.gridOptionsWrapper.isEmbedFullWidthRows()) {
-        return !1;
+        return false;
       }
       var e = this.params.pinned === Ee.PINNED_LEFT;
       var t = this.params.pinned === Ee.PINNED_RIGHT;
@@ -12235,7 +12235,7 @@
       if (!this.gridOptionsWrapper.isGroupHideOpenParents()) {
         var e = this.params;
         var t = e.node;
-        var n = !!!e.colDef || !0 === e.colDef.showRowGroup ? t.uiLevel : 0;
+        var n = !!!e.colDef || true === e.colDef.showRowGroup ? t.uiLevel : 0;
         if (e.padding >= 0) {
           this.setPaddingDeprecatedWay(n, e.padding);
         } else {
@@ -12361,7 +12361,7 @@
     };
     t.prototype.isUserWantsSelected = function () {
       var e = this.params.checkbox;
-      return "function" === typeof e ? e(this.params) : !0 === e;
+      return "function" === typeof e ? e(this.params) : true === e;
     };
     t.prototype.addCheckboxIfNeeded = function () {
       var e = this;
@@ -12425,10 +12425,10 @@
           var n = t.rowGroupColumn;
           this.draggedFromHideOpenParents = !!n && !e.isRowGroupDisplayed(n.getId());
         } else {
-          this.draggedFromHideOpenParents = !0;
+          this.draggedFromHideOpenParents = true;
         }
       } else {
-        this.draggedFromHideOpenParents = !1;
+        this.draggedFromHideOpenParents = false;
       }
       if (this.draggedFromHideOpenParents) {
         for (var r = t.parent; !o(r);) {
@@ -12465,23 +12465,23 @@
     };
     t.prototype.isShowRowGroupForThisRow = function () {
       if (this.gridOptionsWrapper.isTreeData()) {
-        return !0;
+        return true;
       }
       var e = this.displayedGroup.rowGroupColumn;
       if (!e) {
-        return !1;
+        return false;
       }
       var t = this.params.column;
       return null == t || t.isRowGroupDisplayed(e.getId());
     };
     t.prototype.isExpandable = function () {
       if (this.draggedFromHideOpenParents) {
-        return !0;
+        return true;
       }
       var e = this.displayedGroup;
       var t = this.columnController.isPivotMode() && e.leafGroup;
       if (!(e.isExpandable() && !e.footer && !t)) {
-        return !1;
+        return false;
       }
       var n = this.params.column;
       return null == n || "string" !== typeof n.getColDef().showRowGroup || this.isShowRowGroupForThisRow();
@@ -12502,8 +12502,8 @@
         tn(n, l);
       } else {
         lr(a);
-        tn(n, !1);
-        tn(t, !1);
+        tn(n, false);
+        tn(t, false);
       }
       var u = i.isPivotMode();
       var d = u && o.leafGroup;
@@ -12524,19 +12524,19 @@
       e.prototype.destroy.call(this);
     };
     t.prototype.refresh = function () {
-      return !1;
+      return false;
     };
     t.TEMPLATE = "<span class=\"ag-cell-wrapper\">\n            <span class=\"ag-group-expanded\" ref=\"eExpanded\"></span>\n            <span class=\"ag-group-contracted\" ref=\"eContracted\"></span>\n            <span class=\"ag-group-checkbox ag-invisible\" ref=\"eCheckbox\"></span>\n            <span class=\"ag-group-value\" ref=\"eValue\"></span>\n            <span class=\"ag-group-child-count\" ref=\"eChildCount\"></span>\n        </span>";
-    Ai([pe("rowRenderer")], t.prototype, "rowRenderer", void 0);
-    Ai([pe("expressionService")], t.prototype, "expressionService", void 0);
-    Ai([pe("valueFormatterService")], t.prototype, "valueFormatterService", void 0);
-    Ai([pe("columnController")], t.prototype, "columnController", void 0);
-    Ai([pe("userComponentFactory")], t.prototype, "userComponentFactory", void 0);
-    Ai([uo("eExpanded")], t.prototype, "eExpanded", void 0);
-    Ai([uo("eContracted")], t.prototype, "eContracted", void 0);
-    Ai([uo("eCheckbox")], t.prototype, "eCheckbox", void 0);
-    Ai([uo("eValue")], t.prototype, "eValue", void 0);
-    Ai([uo("eChildCount")], t.prototype, "eChildCount", void 0);
+    Ai([pe("rowRenderer")], t.prototype, "rowRenderer", undefined);
+    Ai([pe("expressionService")], t.prototype, "expressionService", undefined);
+    Ai([pe("valueFormatterService")], t.prototype, "valueFormatterService", undefined);
+    Ai([pe("columnController")], t.prototype, "columnController", undefined);
+    Ai([pe("userComponentFactory")], t.prototype, "userComponentFactory", undefined);
+    Ai([uo("eExpanded")], t.prototype, "eExpanded", undefined);
+    Ai([uo("eContracted")], t.prototype, "eContracted", undefined);
+    Ai([uo("eCheckbox")], t.prototype, "eCheckbox", undefined);
+    Ai([uo("eValue")], t.prototype, "eValue", undefined);
+    Ai([uo("eChildCount")], t.prototype, "eChildCount", undefined);
     return t;
   }(so);
   var Ni = function () {
@@ -12615,7 +12615,7 @@
     t.prototype.refresh = function (e) {
       var t = e.value;
       if (t === this.lastValue) {
-        return !1;
+        return false;
       }
       if (r(e.valueFormatted)) {
         this.eValue.innerHTML = e.valueFormatted;
@@ -12627,7 +12627,7 @@
         }
       }
       if (this.filterManager.isSuppressFlashingCellsBecauseFiltering()) {
-        return !1;
+        return false;
       }
       if ("number" === typeof t && "number" === typeof this.lastValue) {
         var n = t - this.lastValue;
@@ -12638,10 +12638,10 @@
       }
       this.setTimerToRemoveDelta();
       this.lastValue = t;
-      return !0;
+      return true;
     };
     t.TEMPLATE = "<span><span class=\"ag-value-change-delta\"></span><span class=\"ag-value-change-value\"></span></span>";
-    Ri([pe("filterManager")], t.prototype, "filterManager", void 0);
+    Ri([pe("filterManager")], t.prototype, "filterManager", undefined);
     return t;
   }(so);
   var xi = function () {
@@ -12720,10 +12720,10 @@
       if (o(t)) {
         t = "";
       }
-      return t !== this.lastValue && !this.filterManager.isSuppressFlashingCellsBecauseFiltering() && (this.addSlideAnimation(), this.lastValue = t, r(e.valueFormatted) ? this.eCurrent.innerHTML = e.valueFormatted : r(e.value) ? this.eCurrent.innerHTML = t : hn(this.eCurrent), !0);
+      return t !== this.lastValue && !this.filterManager.isSuppressFlashingCellsBecauseFiltering() && (this.addSlideAnimation(), this.lastValue = t, r(e.valueFormatted) ? this.eCurrent.innerHTML = e.valueFormatted : r(e.value) ? this.eCurrent.innerHTML = t : hn(this.eCurrent), true);
     };
     t.TEMPLATE = "<span>\n            <span class=\"ag-value-slide-current\"></span>\n        </span>";
-    Di([pe("filterManager")], t.prototype, "filterManager", void 0);
+    Di([pe("filterManager")], t.prototype, "filterManager", undefined);
     return t;
   }(so);
   var Li = function () {
@@ -12788,11 +12788,11 @@
       this.eLoadingText.innerText = t("loadingOoo", "Loading");
     };
     t.prototype.refresh = function (e) {
-      return !1;
+      return false;
     };
     t.TEMPLATE = "<div class=\"ag-loading\">\n            <span class=\"ag-loading-icon\" ref=\"eLoadingIcon\"></span>\n            <span class=\"ag-loading-text\" ref=\"eLoadingText\"></span>\n        </div>";
-    Pi([uo("eLoadingIcon")], t.prototype, "eLoadingIcon", void 0);
-    Pi([uo("eLoadingText")], t.prototype, "eLoadingText", void 0);
+    Pi([uo("eLoadingIcon")], t.prototype, "eLoadingIcon", undefined);
+    Pi([uo("eLoadingText")], t.prototype, "eLoadingText", undefined);
     return t;
   }(so);
   var Fi = function () {
@@ -12836,7 +12836,7 @@
   var Ui = function (e) {
     function t() {
       var t = e.call(this, "<div class=\"ag-cell-edit-wrapper\"><ag-select class=\"ag-cell-editor\" ref=\"eSelect\"></ag-select></div>") || this;
-      t.startedByEnter = !1;
+      t.startedByEnter = false;
       return t;
     }
     Fi(t, e);
@@ -12847,22 +12847,22 @@
         console.warn("AG Grid: no values found for select cellEditor");
       } else {
         this.startedByEnter = e.keyPress === _o.ENTER;
-        var n = !1;
+        var n = false;
         e.values.forEach(function (r) {
           var o = {
             value: r
           };
           var i = t.valueFormatterService.formatValue(e.column, null, null, r);
-          var a = null !== i && void 0 !== i;
+          var a = null !== i && undefined !== i;
           o.text = a ? i : r;
           t.eSelect.addOption(o);
           n = n || e.value === r;
         });
         if (n) {
-          this.eSelect.setValue(e.value, !0);
+          this.eSelect.setValue(e.value, true);
         } else {
           if (e.values.length) {
-            this.eSelect.setValue(e.values[0], !0);
+            this.eSelect.setValue(e.values[0], true);
           }
         }
         if (!this.gridOptionsWrapper.isFullRowEdit()) {
@@ -12887,10 +12887,10 @@
       return this.eSelect.getValue();
     };
     t.prototype.isPopup = function () {
-      return !1;
+      return false;
     };
-    Gi([pe("valueFormatterService")], t.prototype, "valueFormatterService", void 0);
-    Gi([uo("eSelect")], t.prototype, "eSelect", void 0);
+    Gi([pe("valueFormatterService")], t.prototype, "valueFormatterService", undefined);
+    Gi([uo("eSelect")], t.prototype, "eSelect", undefined);
     return t;
   }(lo);
   var Wi = function () {
@@ -12919,7 +12919,7 @@
     }
     Wi(t, e);
     t.prototype.isPopup = function () {
-      return !0;
+      return true;
     };
     return t;
   }(yo);
@@ -12949,7 +12949,7 @@
     }
     Vi(t, e);
     t.prototype.isPopup = function () {
-      return !0;
+      return true;
     };
     return t;
   }(Ui);
@@ -13001,7 +13001,7 @@
       this.focusAfterAttached = e.cellStartedEdit;
       this.eTextArea.setMaxLength(e.maxLength || 200).setCols(e.cols || 60).setRows(e.rows || 10);
       if (r(e.value)) {
-        this.eTextArea.setValue(e.value.toString(), !0);
+        this.eTextArea.setValue(e.value.toString(), true);
       }
       this.addGuiEventListener("keydown", this.onKeyDown.bind(this));
     };
@@ -13022,7 +13022,7 @@
       return this.params.parseValue(this.eTextArea.getValue());
     };
     t.TEMPLATE = "<div class=\"ag-large-text\" tabindex=\"0\">\n            <ag-input-text-area ref=\"eTextArea\" class=\"ag-large-text-input\"></ag-input-text-area>\n        </div>";
-    Ki([uo("eTextArea")], t.prototype, "eTextArea", void 0);
+    Ki([uo("eTextArea")], t.prototype, "eTextArea", undefined);
     return t;
   }(lo);
   var Xi = function () {
@@ -13163,10 +13163,10 @@
       var t = e === go.One;
       var n = t ? this.getCondition1Type() : this.getCondition2Type();
       if (n === xo.EMPTY) {
-        return !1;
+        return false;
       }
       if (this.doesFilterHaveHiddenInput(n)) {
-        return !0;
+        return true;
       }
       var r = t ? this.eValueFrom1 : this.eValueFrom2;
       var o = t ? this.eValueTo1 : this.eValueTo2;
@@ -13219,10 +13219,10 @@
       return e || (Bt() || Lt() ? null : "\\d\\-\\.");
     };
     t.DEFAULT_FILTER_OPTIONS = [Mo.EQUALS, Mo.NOT_EQUAL, Mo.LESS_THAN, Mo.LESS_THAN_OR_EQUAL, Mo.GREATER_THAN, Mo.GREATER_THAN_OR_EQUAL, Mo.IN_RANGE];
-    Qi([uo("eValueFrom1")], t.prototype, "eValueFrom1", void 0);
-    Qi([uo("eValueTo1")], t.prototype, "eValueTo1", void 0);
-    Qi([uo("eValueFrom2")], t.prototype, "eValueFrom2", void 0);
-    Qi([uo("eValueTo2")], t.prototype, "eValueTo2", void 0);
+    Qi([uo("eValueFrom1")], t.prototype, "eValueFrom1", undefined);
+    Qi([uo("eValueTo1")], t.prototype, "eValueTo1", undefined);
+    Qi([uo("eValueFrom2")], t.prototype, "eValueFrom2", undefined);
+    Qi([uo("eValueTo2")], t.prototype, "eValueTo2", undefined);
     return t;
   }(Mo);
   var Ji = function () {
@@ -13398,7 +13398,7 @@
       return Cr(this.eDateInput.getValue());
     };
     t.prototype.setDate = function (e) {
-      this.eDateInput.setValue(wr(e, !1));
+      this.eDateInput.setValue(wr(e, false));
     };
     t.prototype.setInputPlaceholder = function (e) {
       this.eDateInput.setInputPlaceholder(e);
@@ -13411,7 +13411,7 @@
     t.prototype.shouldUseBrowserDatePicker = function (e) {
       return e.filterParams && null != e.filterParams.browserDatePicker ? e.filterParams.browserDatePicker : Bt() || Ft();
     };
-    ia([uo("eDateInput")], t.prototype, "eDateInput", void 0);
+    ia([uo("eDateInput")], t.prototype, "eDateInput", undefined);
     return t;
   }(so);
   var sa = function () {
@@ -13483,7 +13483,7 @@
         return this.isTypeEditable(this.lastType);
       }
       if (e.operator) {
-        return !1;
+        return false;
       }
       var t = e;
       return this.isTypeEditable(t.type);
@@ -13555,16 +13555,16 @@
       var n = Cr(e.dateFrom);
       if (t === xo.IN_RANGE) {
         var r = Cr(e.dateTo);
-        return wr(n, !1) + "-" + wr(r, !1);
+        return wr(n, false) + "-" + wr(r, false);
       }
-      return null == n ? "" + t : "" + wr(n, !1);
+      return null == n ? "" + t : "" + wr(n, false);
     };
     t.prototype.init = function (t) {
       e.prototype.init.call(this, t);
       this.params = t;
       this.createDateComponent();
       var n = this.gridOptionsWrapper.getLocaleTextFunc();
-      this.eReadOnlyText.setDisabled(!0).setInputAriaLabel(n("ariaDateFilterInput", "Date Filter Input"));
+      this.eReadOnlyText.setDisabled(true).setInputAriaLabel(n("ariaDateFilterInput", "Date Filter Input"));
     };
     t.prototype.setEditable = function (e) {
       tn(this.eDateWrapper, e);
@@ -13610,9 +13610,9 @@
         return e.dateComp.destroy();
       });
     };
-    ua([pe("userComponentFactory")], t.prototype, "userComponentFactory", void 0);
-    ua([uo("eReadOnlyText")], t.prototype, "eReadOnlyText", void 0);
-    ua([uo("eDateWrapper")], t.prototype, "eDateWrapper", void 0);
+    ua([pe("userComponentFactory")], t.prototype, "userComponentFactory", undefined);
+    ua([uo("eReadOnlyText")], t.prototype, "eReadOnlyText", undefined);
+    ua([uo("eDateWrapper")], t.prototype, "eDateWrapper", undefined);
     return t;
   }(ca);
   var pa = function () {
@@ -13692,7 +13692,7 @@
       var n = t ? this.getCondition1Type() : this.getCondition2Type();
       var r = t ? this.eValue1 : this.eValue2;
       var o = this.getCleanValue(r);
-      r.setValue(o, !0);
+      r.setValue(o, true);
       var i = {
         filterType: this.getFilterType(),
         type: n
@@ -13795,11 +13795,11 @@
           return o >= 0 && o === n.length - r.length;
         default:
           console.warn("AG Grid: Unexpected type of filter \"" + e + "\", it looks like the filter was configured with incorrect Filter Options");
-          return !1;
+          return false;
       }
     };
-    fa([uo("eValue1")], t.prototype, "eValue1", void 0);
-    fa([uo("eValue2")], t.prototype, "eValue2", void 0);
+    fa([uo("eValue1")], t.prototype, "eValue1", undefined);
+    fa([uo("eValue2")], t.prototype, "eValue2", undefined);
     return t;
   }(xo);
   var ma = function () {
@@ -13870,9 +13870,9 @@
       this.addManagedListener(o, "keydown", r);
       var i = t.column.getDefinition();
       if (i.filterParams && i.filterParams.filterOptions && 1 === i.filterParams.filterOptions.length && "inRange" === i.filterParams.filterOptions[0]) {
-        this.eFloatingFilterInput.setDisabled(!0);
+        this.eFloatingFilterInput.setDisabled(true);
       }
-      var a = this.columnController.getDisplayNameForColumn(t.column, "header", !0);
+      var a = this.columnController.getDisplayNameForColumn(t.column, "header", true);
       var s = this.gridOptionsWrapper.getLocaleTextFunc();
       this.eFloatingFilterInput.setInputAriaLabel(a + " " + s("ariaFilterInput", "Filter Input"));
     };
@@ -13883,7 +13883,7 @@
         var r = this.eFloatingFilterInput.getValue();
         if (this.params.filterParams.trimInput) {
           r = ha.trimInput(r);
-          this.eFloatingFilterInput.setValue(r, !0);
+          this.eFloatingFilterInput.setValue(r, true);
         }
         this.params.parentFilterInstance(function (e) {
           if (e) {
@@ -13895,8 +13895,8 @@
     t.prototype.setEditable = function (e) {
       this.eFloatingFilterInput.setDisabled(!e);
     };
-    ga([pe("columnController")], t.prototype, "columnController", void 0);
-    ga([uo("eFloatingFilterInput")], t.prototype, "eFloatingFilterInput", void 0);
+    ga([pe("columnController")], t.prototype, "columnController", undefined);
+    ga([uo("eFloatingFilterInput")], t.prototype, "eFloatingFilterInput", undefined);
     ga([le], t.prototype, "postConstruct", null);
     return t;
   }(ca);
@@ -14137,7 +14137,7 @@
       var n = this.frameworkComponents[t];
       if (n) {
         return {
-          componentFromFramework: !0,
+          componentFromFramework: true,
           component: n,
           source: bi.REGISTERED
         };
@@ -14145,14 +14145,14 @@
       var r = this.jsComponents[t];
       if (r) {
         return {
-          componentFromFramework: !1,
+          componentFromFramework: false,
           component: r,
           source: bi.REGISTERED
         };
       }
       var o = this.agGridDefaults[t];
       return o ? {
-        componentFromFramework: !1,
+        componentFromFramework: false,
         component: o,
         source: bi.DEFAULT
       } : (Object.keys(this.agGridDefaults).indexOf(t) < 0 && console.warn("AG Grid: Looking for component [" + t + "] but it wasn't found."), null);
@@ -14163,7 +14163,7 @@
         console.warn("ag-grid. Since v15.0 component names have been renamed to be namespaced. You should rename " + t.propertyHolder + ":" + e + " to " + t.propertyHolder + ":" + t.newComponentName);
       }, "DEPRECATE_COMPONENT_" + e), t.newComponentName) : e;
     };
-    wa([pe("gridOptions")], t.prototype, "gridOptions", void 0);
+    wa([pe("gridOptions")], t.prototype, "gridOptions", undefined);
     wa([le], t.prototype, "init", null);
     return t = wa([de("userComponentRegistry")], t);
   }(We);
@@ -14173,7 +14173,7 @@
       if (!t) {
         return null;
       }
-      if (!0 === t) {
+      if (true === t) {
         return {
           toolPanels: [e.DEFAULT_COLUMN_COMP, e.DEFAULT_FILTER_COMP],
           defaultToolPanel: "columns"
@@ -14277,7 +14277,7 @@
     return r;
   };
   function ja(e) {
-    return !0 === e || "true" === e;
+    return true === e || "true" === e;
   }
   function Na(e, t) {
     var n = parseInt(e, 10);
@@ -14288,7 +14288,7 @@
     function e() {
       this.propertyEventService = new ye();
       this.domDataKey = "__AG_" + Math.random().toString();
-      this.destroyed = !1;
+      this.destroyed = false;
     }
     var n;
     n = e;
@@ -14302,11 +14302,11 @@
       this.gridOptions.api = null;
       this.gridOptions.columnApi = null;
       this.removeEventListener(n.PROP_DOM_LAYOUT, this.updateLayoutClassesListener);
-      this.destroyed = !0;
+      this.destroyed = true;
     };
     e.prototype.init = function () {
       var e = this;
-      if (!0 !== this.gridOptions.suppressPropertyNamesCheck) {
+      if (true !== this.gridOptions.suppressPropertyNamesCheck) {
         this.checkGridOptionsProperties();
         this.checkColumnDefProperties();
       }
@@ -14393,7 +14393,7 @@
     };
     e.prototype.getDomData = function (e, t) {
       var n = e[this.getDomDataKey()];
-      return n ? n[t] : void 0;
+      return n ? n[t] : undefined;
     };
     e.prototype.setDomData = function (e, t, n) {
       var r = this.getDomDataKey();
@@ -14493,7 +14493,7 @@
     };
     e.prototype.isGroupSelectsChildren = function () {
       var e = ja(this.gridOptions.groupSelectsChildren);
-      return e && this.isTreeData() ? (console.warn("AG Grid: groupSelectsChildren does not work with tree data"), !1) : e;
+      return e && this.isTreeData() ? (console.warn("AG Grid: groupSelectsChildren does not work with tree data"), false) : e;
     };
     e.prototype.isSuppressRowHoverHighlight = function () {
       return ja(this.gridOptions.suppressRowHoverHighlight);
@@ -14734,7 +14734,7 @@
     };
     e.prototype.getPaginationPageSize = function () {
       return function (e) {
-        return "number" == typeof e ? e : "string" == typeof e ? parseInt(e, 10) : void 0;
+        return "number" == typeof e ? e : "string" == typeof e ? parseInt(e, 10) : undefined;
       }(this.gridOptions.paginationPageSize);
     };
     e.prototype.isPaginateChildRows = function () {
@@ -14964,7 +14964,7 @@
       return this.gridOptions.defaultColGroupDef;
     };
     e.prototype.getDefaultExportParams = function (e) {
-      return this.gridOptions.defaultExportParams ? (console.warn("AG Grid: Since v25.2 `defaultExportParams`  has been replaced by `default" + tt(e) + "ExportParams`'"), this.gridOptions.defaultExportParams) : "csv" === e && this.gridOptions.defaultCsvExportParams ? this.gridOptions.defaultCsvExportParams : "excel" === e && this.gridOptions.defaultExcelExportParams ? this.gridOptions.defaultExcelExportParams : void 0;
+      return this.gridOptions.defaultExportParams ? (console.warn("AG Grid: Since v25.2 `defaultExportParams`  has been replaced by `default" + tt(e) + "ExportParams`'"), this.gridOptions.defaultExportParams) : "csv" === e && this.gridOptions.defaultCsvExportParams ? this.gridOptions.defaultCsvExportParams : "excel" === e && this.gridOptions.defaultExcelExportParams ? this.gridOptions.defaultExcelExportParams : undefined;
     };
     e.prototype.isSuppressCsvExport = function () {
       return ja(this.gridOptions.suppressCsvExport);
@@ -15092,8 +15092,8 @@
       return r(this.gridOptions.clipboardDeliminator) ? this.gridOptions.clipboardDeliminator : "\t";
     };
     e.prototype.setProperty = function (e, t, n) {
-      if (void 0 === n) {
-        n = !1;
+      if (undefined === n) {
+        n = false;
       }
       var r = this.gridOptions;
       var o = r[e];
@@ -15215,7 +15215,7 @@
           e.defaultColDef = {};
         }
         if (null == e.defaultColDef.floatingFilter) {
-          e.defaultColDef.floatingFilter = !0;
+          e.defaultColDef.floatingFilter = true;
         }
       }
       if (e.rowDeselection) {
@@ -15266,25 +15266,25 @@
       }
       if (e.detailCellRendererParams && e.detailCellRendererParams.autoHeight) {
         console.warn("AG Grid: since v24.1, grid property detailCellRendererParams.autoHeight is replaced with grid property detailRowAutoHeight. This allows this feature to work when you provide a custom DetailCellRenderer");
-        e.detailRowAutoHeight = !0;
+        e.detailRowAutoHeight = true;
       }
       if (e.suppressKeyboardEvent) {
         console.warn("AG Grid: since v24.1 suppressKeyboardEvent in the gridOptions has been deprecated and will be removed in\n                 future versions of AG Grid. If you need this to be set for every column use the defaultColDef property.");
       }
       if (e.suppressEnterpriseResetOnNewColumns) {
         console.warn("AG Grid: since v25, grid property suppressEnterpriseResetOnNewColumns is deprecated. This was a temporary property to allow changing columns in Server Side Row Model without triggering a reload. Now that it is possible to dynamically change columns in the grid, this is no longer needed.");
-        e.detailRowAutoHeight = !0;
+        e.detailRowAutoHeight = true;
       }
       if (e.suppressColumnStateEvents) {
         console.warn("AG Grid: since v25, grid property suppressColumnStateEvents no longer works due to a refactor that we did. It should be possible to achieve similar using event.source, which would be \"api\" if the event was due to setting column state via the API");
-        e.detailRowAutoHeight = !0;
+        e.detailRowAutoHeight = true;
       }
       if (e.defaultExportParams) {
         console.warn("AG Grid: since v25.2, the grid property `defaultExportParams` has been replaced by `defaultCsvExportParams` and `defaultExcelExportParams`.");
       }
       if (e.stopEditingWhenGridLosesFocus) {
         console.warn("AG Grid: since v25.2.2, the grid property `stopEditingWhenGridLosesFocus`.");
-        e.stopEditingWhenCellsLoseFocus = !0;
+        e.stopEditingWhenCellsLoseFocus = true;
       }
     };
     e.prototype.checkForViolations = function () {
@@ -15326,14 +15326,14 @@
       return !this.gridOptions.rowHeight || o(this.gridOptions.rowHeight) ? this.getDefaultRowHeight() : this.gridOptions.rowHeight && this.isNumeric(this.gridOptions.rowHeight) ? this.gridOptions.rowHeight : (console.warn("AG Grid row height must be a number if not using standard row model"), this.getDefaultRowHeight());
     };
     e.prototype.getRowHeightForNode = function (e, t) {
-      if (void 0 === t) {
-        t = !1;
+      if (undefined === t) {
+        t = false;
       }
       if ("function" === typeof this.gridOptions.getRowHeight) {
         if (t) {
           return {
             height: this.getDefaultRowHeight(),
-            estimated: !0
+            estimated: true
           };
         }
         var n = {
@@ -15351,17 +15351,17 @@
           }
           return {
             height: Math.max(1, o),
-            estimated: !1
+            estimated: false
           };
         }
       }
       if (e.detail && this.isMasterDetail()) {
         return this.isNumeric(this.gridOptions.detailRowHeight) ? {
           height: this.gridOptions.detailRowHeight,
-          estimated: !1
+          estimated: false
         } : {
           height: 300,
-          estimated: !1
+          estimated: false
         };
       }
       var i = this.getDefaultRowHeight();
@@ -15371,18 +15371,18 @@
         if (t) {
           return {
             height: a,
-            estimated: !0
+            estimated: true
           };
         }
         var c = this.autoHeightCalculator.getPreferredHeightForRow(e);
         return {
           height: Math.max(c, s),
-          estimated: !1
+          estimated: false
         };
       }
       return {
         height: a,
-        estimated: !1
+        estimated: false
       };
     };
     e.prototype.isDynamicRowHeight = function () {
@@ -15455,11 +15455,11 @@
     e.PROP_IS_APPLY_SERVER_SIDE_TRANSACTION = "isApplyServerSideTransaction";
     e.PROP_IS_SERVER_SIDE_GROUP = "isServerSideGroup";
     e.PROP_GET_SERVER_SIDE_GROUP_KEY = "getServerSideGroupKey";
-    Sa([pe("gridOptions")], e.prototype, "gridOptions", void 0);
-    Sa([pe("columnController")], e.prototype, "columnController", void 0);
-    Sa([pe("eventService")], e.prototype, "eventService", void 0);
-    Sa([pe("environment")], e.prototype, "environment", void 0);
-    Sa([pe("autoHeightCalculator")], e.prototype, "autoHeightCalculator", void 0);
+    Sa([pe("gridOptions")], e.prototype, "gridOptions", undefined);
+    Sa([pe("columnController")], e.prototype, "columnController", undefined);
+    Sa([pe("eventService")], e.prototype, "eventService", undefined);
+    Sa([pe("environment")], e.prototype, "environment", undefined);
+    Sa([pe("autoHeightCalculator")], e.prototype, "autoHeightCalculator", undefined);
     Sa([Ia(0, me("gridApi")), Ia(1, me("columnApi"))], e.prototype, "agWire", null);
     Sa([ue], e.prototype, "destroy", null);
     Sa([le], e.prototype, "init", null);
@@ -15467,7 +15467,7 @@
   }();
   var xa = function () {
     function e(e, t) {
-      this.active = !0;
+      this.active = true;
       this.nodeIdsToColumns = {};
       this.mapToItems = {};
       this.keepingColumns = e;
@@ -15478,7 +15478,7 @@
       this.mapToItems[t.id] = this.pathRoot;
     }
     e.prototype.setInactive = function () {
-      this.active = !1;
+      this.active = false;
     };
     e.prototype.isActive = function () {
       return this.active;
@@ -15507,8 +15507,8 @@
       t(e);
     };
     e.prototype.forEachChangedNodeDepthFirst = function (e, t) {
-      if (void 0 === t) {
-        t = !1;
+      if (undefined === t) {
+        t = false;
       }
       if (this.active) {
         this.depthFirstSearchChangedPath(this.pathRoot, e);
@@ -15539,7 +15539,7 @@
             this.nodeIdsToColumns[r.id] = {};
           }
           t.forEach(function (e) {
-            return n.nodeIdsToColumns[r.id][e.getId()] = !0;
+            return n.nodeIdsToColumns[r.id][e.getId()] = true;
           });
           r = r.parent;
         }
@@ -15673,7 +15673,7 @@
       var e = this;
       R(this.selectedNodes, function (t, n) {
         if (n && n.group) {
-          e.selectedNodes[n.id] = void 0;
+          e.selectedNodes[n.id] = undefined;
         }
       });
     };
@@ -15681,7 +15681,7 @@
       if (this.gridOptionsWrapper.isGroupSelectsChildren() && this.rowModel.getType() === Ee.ROW_MODEL_TYPE_CLIENT_SIDE) {
         var t = this.rowModel.getRootNode();
         if (!e) {
-          (e = new xa(!0, t)).setInactive();
+          (e = new xa(true, t)).setInactive();
         }
         e.forEachChangedNodeDepthFirst(function (e) {
           if (e !== t) {
@@ -15701,9 +15701,9 @@
         if (i && i.id !== e.id) {
           var a = t.selectedNodes[i.id];
           r += a.setSelectedParams({
-            newValue: !1,
-            clearSelection: !1,
-            suppressFinishActions: !0
+            newValue: false,
+            clearSelection: false,
+            suppressFinishActions: true
           });
           if (t.groupSelectsChildren && i.parent) {
             n[i.parent.id] = i.parent;
@@ -15721,7 +15721,7 @@
         if (t.isSelected()) {
           this.selectedNodes[t.id] = t;
         } else {
-          this.selectedNodes[t.id] = void 0;
+          this.selectedNodes[t.id] = undefined;
         }
       }
     };
@@ -15738,10 +15738,10 @@
     };
     t.prototype.syncInNewRowNode = function (e) {
       if (r(this.selectedNodes[e.id])) {
-        e.setSelectedInitialValue(!0);
+        e.setSelectedInitialValue(true);
         this.selectedNodes[e.id] = e;
       } else {
-        e.setSelectedInitialValue(!1);
+        e.setSelectedInitialValue(false);
       }
     };
     t.prototype.reset = function () {
@@ -15786,11 +15786,11 @@
       return 0 === e;
     };
     t.prototype.deselectAllRowNodes = function (e) {
-      if (void 0 === e) {
-        e = !1;
+      if (undefined === e) {
+        e = false;
       }
       var t = function (e) {
-        return e.selectThisNode(!1);
+        return e.selectThisNode(false);
       };
       var n = this.rowModel.getType() === Ee.ROW_MODEL_TYPE_CLIENT_SIDE;
       if (e) {
@@ -15817,15 +15817,15 @@
       this.eventService.dispatchEvent(r);
     };
     t.prototype.selectAllRowNodes = function (e) {
-      if (void 0 === e) {
-        e = !1;
+      if (undefined === e) {
+        e = false;
       }
       if (this.rowModel.getType() !== Ee.ROW_MODEL_TYPE_CLIENT_SIDE) {
         throw new Error("selectAll only available with normal row model, ie not " + this.rowModel.getType());
       }
       var t = this.rowModel;
       var n = function (e) {
-        return e.selectThisNode(!0);
+        return e.selectThisNode(true);
       };
       if (e) {
         t.forEachNodeAfterFilter(n);
@@ -15845,7 +15845,7 @@
     t.prototype.selectNode = function (e, t) {
       if (e) {
         e.setSelectedParams({
-          newValue: !0,
+          newValue: true,
           clearSelection: !t
         });
       }
@@ -15857,8 +15857,8 @@
     t.prototype.deselectNode = function (e) {
       if (e) {
         e.setSelectedParams({
-          newValue: !1,
-          clearSelection: !1
+          newValue: false,
+          clearSelection: false
         });
       }
     };
@@ -15866,9 +15866,9 @@
       var n = this.rowModel.getRow(e);
       this.selectNode(n, t);
     };
-    Ma([pe("rowModel")], t.prototype, "rowModel", void 0);
-    Ma([pe("columnApi")], t.prototype, "columnApi", void 0);
-    Ma([pe("gridApi")], t.prototype, "gridApi", void 0);
+    Ma([pe("rowModel")], t.prototype, "rowModel", undefined);
+    Ma([pe("columnApi")], t.prototype, "columnApi", undefined);
+    Ma([pe("gridApi")], t.prototype, "gridApi", undefined);
     Ma([La(0, me("loggerFactory"))], t.prototype, "setBeans", null);
     Ma([le], t.prototype, "init", null);
     return t = Ma([de("selectionController")], t);
@@ -16004,19 +16004,19 @@
       this.columnController.setColumnAggFunc(e, t);
     };
     e.prototype.setColumnWidth = function (e, t, n) {
-      if (void 0 === n) {
-        n = !0;
+      if (undefined === n) {
+        n = true;
       }
       this.columnController.setColumnWidths([{
         key: e,
         newWidth: t
-      }], !1, n);
+      }], false, n);
     };
     e.prototype.setColumnWidths = function (e, t) {
-      if (void 0 === t) {
-        t = !0;
+      if (undefined === t) {
+        t = true;
       }
-      this.columnController.setColumnWidths(e, !1, t);
+      this.columnController.setColumnWidths(e, false, t);
     };
     e.prototype.setPivotMode = function (e) {
       this.columnController.setPivotMode(e);
@@ -16169,10 +16169,10 @@
     e.prototype.setColumnState = function (e) {
       return this.columnController.applyColumnState({
         state: e,
-        applyOrder: !0
+        applyOrder: true
       }, "api");
     };
-    Ba([pe("columnController")], e.prototype, "columnController", void 0);
+    Ba([pe("columnController")], e.prototype, "columnController", undefined);
     Ba([ue], e.prototype, "cleanDownReferencesToAvoidMemoryLeakInCaseApplicationIsKeepingReferenceToDestroyedGrid", null);
     return e = Ba([de("columnApi")], e);
   }();
@@ -16245,12 +16245,12 @@
       var s = e.call(this) || this;
       s.instanceId = Ka++;
       s.allRowComps = [];
-      s.active = !0;
+      s.active = true;
       s.centerCols = [];
       s.leftCols = [];
       s.rightCols = [];
-      s.lastMouseDownOnDragger = !1;
-      s.updateColumnListsPending = !1;
+      s.lastMouseDownOnDragger = false;
+      s.updateColumnListsPending = false;
       s.parentScope = t;
       s.beans = r;
       s.rowNode = n;
@@ -16340,9 +16340,9 @@
       var e = this.beans.gridOptionsWrapper.getProcessRowPostCreateFunc();
       if (e) {
         e({
-          eRow: this.centerRowComp ? this.centerRowComp.getGui() : void 0,
-          ePinnedLeftRow: this.leftRowComp ? this.leftRowComp.getGui() : void 0,
-          ePinnedRightRow: this.rightRowComp ? this.rightRowComp.getGui() : void 0,
+          eRow: this.centerRowComp ? this.centerRowComp.getGui() : undefined,
+          ePinnedLeftRow: this.leftRowComp ? this.leftRowComp.getGui() : undefined,
+          ePinnedRightRow: this.rightRowComp ? this.rightRowComp.getGui() : undefined,
           node: this.rowNode,
           api: this.beans.gridOptionsWrapper.getApi(),
           rowIndex: this.rowNode.rowIndex,
@@ -16362,7 +16362,7 @@
     };
     t.prototype.updateColumnLists = function (e) {
       var t = this;
-      if (!(void 0 === e && (e = !1), this.isFullWidth())) {
+      if (!(undefined === e && (e = false), this.isFullWidth())) {
         if (e || this.beans.gridOptionsWrapper.isSuppressAnimationFrame() || this.printLayout) {
           this.updateColumnListsImpl();
         } else {
@@ -16372,13 +16372,13 @@
                 t.updateColumnListsImpl();
               }
             }, this.rowNode.rowIndex, "createTasksP1");
-            this.updateColumnListsPending = !0;
+            this.updateColumnListsPending = true;
           }
         }
       }
     };
     t.prototype.updateColumnListsImpl = function () {
-      this.updateColumnListsPending = !1;
+      this.updateColumnListsPending = false;
       if (this.printLayout) {
         this.centerCols = this.beans.columnController.getAllDisplayedColumns();
         this.leftCols = [];
@@ -16398,8 +16398,8 @@
         this.slideRowIn = t;
         this.fadeRowIn = !t;
       } else {
-        this.slideRowIn = !1;
-        this.fadeRowIn = !1;
+        this.slideRowIn = false;
+        this.fadeRowIn = false;
       }
     };
     t.prototype.isEditing = function () {
@@ -16418,14 +16418,14 @@
       var e = this;
       var t = function (t, n) {
         if (!t) {
-          return !0;
+          return true;
         }
         var r = t.getFullWidthRowComp();
         if (!r) {
-          return !0;
+          return true;
         }
         if (!r.refresh) {
-          return !1;
+          return false;
         }
         var o = e.createFullWidthParams(t.getGui(), n);
         return r.refresh(o);
@@ -16526,7 +16526,7 @@
       });
     };
     t.prototype.onDisplayedColumnsChanged = function () {
-      this.updateColumnLists(!0);
+      this.updateColumnLists(true);
     };
     t.prototype.onVirtualColumnsChanged = function () {
       this.updateColumnLists();
@@ -16549,7 +16549,7 @@
           rowPinned: n.rowPinned,
           column: r && r.column
         };
-        this.beans.rowRenderer.navigateToNextCell(e, e.keyCode, o, !0);
+        this.beans.rowRenderer.navigateToNextCell(e, e.keyCode, o, true);
         e.preventDefault();
       }
     };
@@ -16562,7 +16562,7 @@
         var r = n === e.target;
         var o = null;
         if (!r) {
-          o = this.beans.focusController.findNextFocusableElement(n, !1, e.shiftKey);
+          o = this.beans.focusController.findNextFocusableElement(n, false, e.shiftKey);
         }
         if (this.isFullWidth() && r || !o) {
           this.beans.rowRenderer.onTabKeyDown(this, e);
@@ -16576,7 +16576,7 @@
       Jt(r, "ag-full-width-focus", n);
       if (n) {
         r.focus({
-          preventScroll: !0
+          preventScroll: true
         });
       }
     };
@@ -16627,7 +16627,7 @@
       if (this.isFullWidth()) {
         var t = this.rowNode;
         var n = this.beans.columnController;
-        this.beans.focusController.setFocusedCell(t.rowIndex, n.getAllDisplayedColumns()[0], t.rowPinned, !0);
+        this.beans.focusController.setFocusedCell(t.rowIndex, n.getAllDisplayedColumns()[0], t.rowPinned, true);
       }
     };
     t.prototype.onRowClick = function (e) {
@@ -16642,13 +16642,13 @@
           if (this.rowNode.isSelected()) {
             if (o) {
               this.rowNode.setSelectedParams({
-                newValue: !1
+                newValue: false
               });
             } else {
               if (n) {
                 if (i) {
                   this.rowNode.setSelectedParams({
-                    newValue: !1
+                    newValue: false
                   });
                 }
               } else {
@@ -16662,7 +16662,7 @@
           } else {
             var a = !o && !n;
             this.rowNode.setSelectedParams({
-              newValue: !0,
+              newValue: true,
               clearSelection: a,
               rangeSelect: r
             });
@@ -16696,7 +16696,7 @@
     t.prototype.createFullWidthParams = function (e, t) {
       var n = this;
       return {
-        fullWidth: !0,
+        fullWidth: true,
         data: this.rowNode.data,
         node: this.rowNode,
         value: this.rowNode.key,
@@ -16717,13 +16717,13 @@
       };
     };
     t.prototype.addFullWidthRowDragging = function (e, t, n) {
-      if (void 0 === n) {
+      if (undefined === n) {
         n = "";
       }
       if (this.isFullWidth()) {
         var r = new wi(function () {
           return n;
-        }, this.rowNode, void 0, e, t);
+        }, this.rowNode, undefined, e, t);
         this.createManagedBean(r, this.beans.context);
       }
     };
@@ -16763,8 +16763,8 @@
       }
     };
     t.prototype.stopEditing = function (e) {
-      if (void 0 === e) {
-        e = !1;
+      if (undefined === e) {
+        e = false;
       }
       this.forEachCellComp(function (t) {
         t.stopEditing(e);
@@ -16774,7 +16774,7 @@
           var t = this.createRowEvent(Ke.EVENT_ROW_VALUE_CHANGED);
           this.beans.eventService.dispatchEvent(t);
         }
-        this.setEditingRow(!1);
+        this.setEditingRow(false);
       }
     };
     t.prototype.setEditingRow = function (e) {
@@ -16786,13 +16786,13 @@
       this.beans.eventService.dispatchEvent(t);
     };
     t.prototype.startRowEditing = function (e, t, n) {
-      if (void 0 === e) {
+      if (undefined === e) {
         e = null;
       }
-      if (void 0 === t) {
+      if (undefined === t) {
         t = null;
       }
-      if (void 0 === n) {
+      if (undefined === n) {
         n = null;
       }
       if (!this.editingRow) {
@@ -16804,7 +16804,7 @@
             r.startEditingIfEnabled(null, null, o);
           }
         });
-        this.setEditingRow(!0);
+        this.setEditingRow(true);
       }
     };
     t.prototype.forEachCellComp = function (e) {
@@ -16937,8 +16937,8 @@
     };
     t.prototype.roundRowTopToBounds = function (e) {
       var t = this.beans.controllersService.getGridBodyController().getScrollFeature().getVScrollPosition();
-      var n = this.applyPaginationOffset(t.top, !0) - 100;
-      var r = this.applyPaginationOffset(t.bottom, !0) + 100;
+      var n = this.applyPaginationOffset(t.top, true) - 100;
+      var r = this.applyPaginationOffset(t.bottom, true) + 100;
       return Math.min(Math.max(n, e), r);
     };
     t.prototype.getFrameworkOverrides = function () {
@@ -16967,7 +16967,7 @@
       e.prototype.removeEventListener.call(this, t, n);
     };
     t.prototype.destroyFirstPass = function () {
-      this.active = !1;
+      this.active = false;
       this.setupRemoveAnimation();
       var t = this.createRowEvent(Ke.EVENT_VIRTUAL_ROW_REMOVED);
       this.dispatchEvent(t);
@@ -17001,7 +17001,7 @@
         this.rowFocused = e;
       }
       if (!e && this.editingRow) {
-        this.stopEditing(!1);
+        this.stopEditing(false);
       }
     };
     t.prototype.onPaginationChanged = function () {
@@ -17018,8 +17018,8 @@
       this.onTopChanged();
     };
     t.prototype.applyPaginationOffset = function (e, t) {
-      if (void 0 === t) {
-        t = !1;
+      if (undefined === t) {
+        t = false;
       }
       return this.rowNode.isRowPinned() ? e : e + this.beans.paginationProxy.getPixelOffset() * (t ? 1 : -1);
     };
@@ -17079,16 +17079,16 @@
       });
     };
     t.prototype.getPinnedLeftRowElement = function () {
-      return this.leftRowComp ? this.leftRowComp.getGui() : void 0;
+      return this.leftRowComp ? this.leftRowComp.getGui() : undefined;
     };
     t.prototype.getPinnedRightRowElement = function () {
-      return this.rightRowComp ? this.rightRowComp.getGui() : void 0;
+      return this.rightRowComp ? this.rightRowComp.getGui() : undefined;
     };
     t.prototype.getBodyRowElement = function () {
-      return this.centerRowComp ? this.centerRowComp.getGui() : void 0;
+      return this.centerRowComp ? this.centerRowComp.getGui() : undefined;
     };
     t.prototype.getFullWidthRowElement = function () {
-      return this.fullWidthRowComp ? this.fullWidthRowComp.getGui() : void 0;
+      return this.fullWidthRowComp ? this.fullWidthRowComp.getGui() : undefined;
     };
     t.DOM_DATA_KEY_RENDERED_ROW = "renderedRow";
     return t;
@@ -17121,27 +17121,27 @@
   var Za = function (e) {
     function t(t) {
       var n = e.call(this, "<div class=\"ag-popup-editor\" tabindex=\"-1\"/>") || this;
-      n.getGuiCalledOnChild = !1;
+      n.getGuiCalledOnChild = false;
       n.cellEditor = t;
       return n;
     }
     Qa(t, e);
     t.prototype.onKeyDown = function (e) {
-      if (!Br(this.gridOptionsWrapper, e, this.params.node, this.params.column, !0)) {
+      if (!Br(this.gridOptionsWrapper, e, this.params.node, this.params.column, true)) {
         this.params.onKeyDown(e);
       }
     };
     t.prototype.getGui = function () {
       if (!this.getGuiCalledOnChild) {
         this.appendChild(this.cellEditor.getGui());
-        this.getGuiCalledOnChild = !0;
+        this.getGuiCalledOnChild = true;
       }
       return e.prototype.getGui.call(this);
     };
     t.prototype.init = function (n) {
       var r = this;
       this.params = n;
-      this.gridOptionsWrapper.setDomData(this.getGui(), t.DOM_KEY_POPUP_EDITOR_WRAPPER, !0);
+      this.gridOptionsWrapper.setDomData(this.getGui(), t.DOM_KEY_POPUP_EDITOR_WRAPPER, true);
       this.addDestroyFunc(function () {
         return r.destroyBean(r.cellEditor);
       });
@@ -17304,10 +17304,10 @@
   var rs = function (e) {
     function n(t, n, r, o, i, a, s, c, l) {
       var u = e.call(this) || this;
-      u.hasChartRange = !1;
-      u.editingCell = !1;
-      u.suppressRefreshCell = !1;
-      u.tooltipFeatureEnabled = !1;
+      u.hasChartRange = false;
+      u.editingCell = false;
+      u.suppressRefreshCell = false;
+      u.tooltipFeatureEnabled = false;
       u.scope = null;
       u.cellEditorVersion = 0;
       u.cellRendererVersion = 0;
@@ -17383,7 +17383,7 @@
       return t.join("");
     };
     n.prototype.getCellWrapperString = function (e) {
-      if (void 0 === e) {
+      if (undefined === e) {
         e = "";
       }
       return "<div ref=\"eCellWrapper\" class=\"ag-cell-wrapper\" role=\"presentation\">\n            <span ref=\"eCellValue\" role=\"presentation\" class=\"ag-cell-value\"" + (this.beans.gridOptionsWrapper.isEnableCellTextSelection() ? "" : " unselectable=\"on\"") + ">\n                " + (null != e ? e : "") + "\n            </span>\n        </div>";
@@ -17394,7 +17394,7 @@
     n.prototype.afterAttached = function () {
       this.addDomData();
       this.populateTemplate();
-      this.createCellRendererInstance(!0);
+      this.createCellRendererInstance(true);
       this.angular1Compile();
       this.refreshHandle();
       if (r(this.tooltip)) {
@@ -17404,7 +17404,7 @@
     n.prototype.createTooltipFeatureIfNeeded = function () {
       if (!(this.beans.gridOptionsWrapper.isEnableBrowserTooltips() || this.tooltipFeatureEnabled)) {
         this.createManagedBean(new ro(this), this.beans.context);
-        this.tooltipFeatureEnabled = !0;
+        this.tooltipFeatureEnabled = true;
       }
     };
     n.prototype.onColumnHover = function () {
@@ -17495,7 +17495,7 @@
         return "string" === typeof this.cellRendererGui ? this.cellRendererGui : "";
       }
       var e = this.getComponentHolder();
-      return e.template ? e.template : e.templateUrl ? this.beans.templateService.getTemplate(e.templateUrl, this.refreshCell.bind(this, !0)) || "" : this.getValueToUse();
+      return e.template ? e.template : e.templateUrl ? this.beans.templateService.getTemplate(e.templateUrl, this.refreshCell.bind(this, true)) || "" : this.getValueToUse();
     };
     n.prototype.getRenderedRow = function () {
       return this.rowComp;
@@ -17613,7 +17613,7 @@
     n.prototype.processStylesFromColDef = function () {
       var e = this.getComponentHolder();
       if (e.cellStyle) {
-        var t = void 0;
+        var t = undefined;
         if ("function" === typeof e.cellStyle) {
           var n = {
             column: this.column,
@@ -17667,7 +17667,7 @@
       if (e.template) {
         this.eCellValue.innerHTML = e.template;
       } else if (e.templateUrl) {
-        var t = this.beans.templateService.getTemplate(e.templateUrl, this.refreshCell.bind(this, !0));
+        var t = this.beans.templateService.getTemplate(e.templateUrl, this.refreshCell.bind(this, true));
         if (t) {
           this.eCellValue.innerHTML = t;
         }
@@ -17682,12 +17682,12 @@
     };
     n.prototype.attemptCellRendererRefresh = function () {
       if (o(this.cellRenderer) || !this.cellRenderer || o(this.cellRenderer.refresh)) {
-        return !1;
+        return false;
       }
       var e = this.createCellRendererParams();
       var t = this.beans.userComponentFactory.createFinalParams(this.getComponentHolder(), this.cellRendererType, e);
       var n = this.cellRenderer.refresh(t);
-      return !0 === n || void 0 === n;
+      return true === n || undefined === n;
     };
     n.prototype.refreshToolTip = function () {
       var e = this.getToolTip();
@@ -17739,8 +17739,8 @@
       };
     };
     n.prototype.getTooltipText = function (e) {
-      if (void 0 === e) {
-        e = !0;
+      if (undefined === e) {
+        e = true;
       }
       return e ? nt(this.tooltip) : this.tooltip;
     };
@@ -17777,49 +17777,49 @@
     n.prototype.setUsingWrapper = function () {
       var e = this.getComponentHolder();
       if (this.rowNode.rowPinned) {
-        this.usingWrapper = !1;
-        this.includeSelectionComponent = !1;
-        this.includeRowDraggingComponent = !1;
-        return void (this.includeDndSourceComponent = !1);
+        this.usingWrapper = false;
+        this.includeSelectionComponent = false;
+        this.includeRowDraggingComponent = false;
+        return void (this.includeDndSourceComponent = false);
       }
       var t = "function" === typeof e.checkboxSelection;
       var n = "function" === typeof e.rowDrag;
       var r = "function" === typeof e.dndSource;
-      this.includeSelectionComponent = t || !0 === e.checkboxSelection;
-      this.includeRowDraggingComponent = n || !0 === e.rowDrag;
-      this.includeDndSourceComponent = r || !0 === e.dndSource;
+      this.includeSelectionComponent = t || true === e.checkboxSelection;
+      this.includeRowDraggingComponent = n || true === e.rowDrag;
+      this.includeDndSourceComponent = r || true === e.dndSource;
       var o = this.beans.gridOptionsWrapper.isEnableCellTextSelection();
       this.usingWrapper = o || this.includeRowDraggingComponent || this.includeSelectionComponent || this.includeDndSourceComponent;
     };
     n.prototype.chooseCellRenderer = function () {
       var e = this.getComponentHolder();
       if (e.template || e.templateUrl) {
-        this.usingCellRenderer = !1;
+        this.usingCellRenderer = false;
       } else {
         var t = this.createCellRendererParams();
         if (this.rowNode.rowPinned && this.beans.userComponentFactory.lookupComponentClassDef(e, "pinnedRowCellRenderer", t)) {
           this.cellRendererType = n.CELL_RENDERER_TYPE_PINNED;
-          this.usingCellRenderer = !0;
+          this.usingCellRenderer = true;
         } else {
           if (this.beans.userComponentFactory.lookupComponentClassDef(e, "cellRenderer", t)) {
             this.cellRendererType = n.CELL_RENDERER_TYPE_NORMAL;
-            this.usingCellRenderer = !0;
+            this.usingCellRenderer = true;
           } else {
-            this.usingCellRenderer = !1;
+            this.usingCellRenderer = false;
           }
         }
       }
     };
     n.prototype.createCellRendererInstance = function (e) {
       var t = this;
-      if (void 0 === e) {
-        e = !1;
+      if (undefined === e) {
+        e = false;
       }
       if (this.usingCellRenderer) {
         var r = this.beans.gridOptionsWrapper.isAngularCompileRows();
         var o = this.beans.gridOptionsWrapper.isSuppressAnimationFrame();
         if (r || o || this.autoHeightCell) {
-          e = !1;
+          e = false;
         }
         var i = this.createCellRendererParams();
         this.cellRendererVersion++;
@@ -17901,7 +17901,7 @@
       var n = this.beans.gridOptionsWrapper.isGroupIncludeFooter();
       var r = this.beans.gridOptionsWrapper.isGroupSuppressBlankHeader();
       var o = t && n && !r;
-      return this.beans.valueService.getValue(this.column, this.rowNode, !1, o);
+      return this.beans.valueService.getValue(this.column, this.rowNode, false, o);
     };
     n.prototype.onMouseEvent = function (e, t) {
       if (!ke(t)) {
@@ -17980,30 +17980,30 @@
       if (this.beans.gridOptionsWrapper.isFullRowEdit()) {
         this.rowComp.startRowEditing(e, t, this);
       } else {
-        this.startEditingIfEnabled(e, t, !0);
+        this.startEditingIfEnabled(e, t, true);
       }
     };
     n.prototype.isCellEditable = function () {
       return this.column.isCellEditable(this.rowNode);
     };
     n.prototype.startEditingIfEnabled = function (e, t, n) {
-      if (void 0 === e) {
+      if (undefined === e) {
         e = null;
       }
-      if (void 0 === t) {
+      if (undefined === t) {
         t = null;
       }
-      if (void 0 === n) {
-        n = !1;
+      if (undefined === n) {
+        n = false;
       }
       if (this.isCellEditable() && !this.editingCell) {
-        this.editingCell = !0;
+        this.editingCell = true;
         this.cellEditorVersion++;
         var r = this.afterCellEditorCreated.bind(this, this.cellEditorVersion);
         var i = this.createCellEditorParams(e, t, n);
         this.createCellEditor(i).then(r);
         if (o(this.cellEditor) && n) {
-          this.focusCell(!0);
+          this.focusCell(true);
         }
       }
     };
@@ -18029,7 +18029,7 @@
       } else {
         if (t.isCancelBeforeStart && t.isCancelBeforeStart()) {
           this.beans.context.destroyBean(t);
-          return void (this.editingCell = !1);
+          return void (this.editingCell = false);
         }
         if (!t.getGui) {
           console.warn("AG Grid: cellEditor for column " + this.column.getId() + " is missing getGui() method");
@@ -18037,10 +18037,10 @@
             console.warn("AG Grid: we found 'render' on the component, are you trying to set a React renderer but added it as colDef.cellEditor instead of colDef.cellEditorFmk?");
           }
           this.beans.context.destroyBean(t);
-          return void (this.editingCell = !1);
+          return void (this.editingCell = false);
         }
         this.cellEditor = t;
-        this.cellEditorInPopup = void 0 !== t.isPopup && t.isPopup();
+        this.cellEditorInPopup = undefined !== t.isPopup && t.isPopup();
         this.setInlineEditingClass();
         if (this.cellEditorInPopup) {
           this.addPopupCellEditor();
@@ -18078,13 +18078,13 @@
           type: "popupCellEditor",
           eventSource: this.getGui(),
           ePopup: t,
-          keepWithinBounds: !0
+          keepWithinBounds: true
         };
         var a = "under" === o ? n.positionPopupUnderComponent.bind(n, i) : n.positionPopupOverComponent.bind(n, i);
         var s = n.addPopup({
           modal: r,
           eChild: t,
-          closeOnEsc: !0,
+          closeOnEsc: true,
           closedCallback: function () {
             e.onPopupEditorClosed();
           },
@@ -18136,11 +18136,11 @@
       };
     };
     n.prototype.stopEditingAndFocus = function (e) {
-      if (void 0 === e) {
-        e = !1;
+      if (undefined === e) {
+        e = false;
       }
       this.stopRowOrCellEdit();
-      this.focusCell(!0);
+      this.focusCell(true);
       if (!e) {
         this.navigateAfterEdit();
       }
@@ -18162,8 +18162,8 @@
       return r(o) ? this.beans.expressionService.evaluate(o, n) : e;
     };
     n.prototype.focusCell = function (e) {
-      if (void 0 === e) {
-        e = !1;
+      if (undefined === e) {
+        e = false;
       }
       this.beans.focusController.setFocusedCell(this.cellPosition.rowIndex, this.column, this.rowNode.rowPinned, e);
     };
@@ -18172,7 +18172,7 @@
         if (this.cellEditor && this.cellEditor.focusIn) {
           this.cellEditor.focusIn();
         } else {
-          this.focusCell(!0);
+          this.focusCell(true);
         }
       }
     };
@@ -18215,7 +18215,7 @@
         if (e.shiftKey && this.rangeSelectionEnabled) {
           this.onShiftRangeSelect(t);
         } else {
-          this.beans.rowRenderer.navigateToNextCell(e, t, this.cellPosition, !0);
+          this.beans.rowRenderer.navigateToNextCell(e, t, this.cellPosition, true);
         }
         e.preventDefault();
       }
@@ -18241,7 +18241,7 @@
         this.stopEditingAndFocus();
       } else {
         if (this.beans.gridOptionsWrapper.isEnterMovesDown()) {
-          this.beans.rowRenderer.navigateToNextCell(null, _o.DOWN, this.cellPosition, !1);
+          this.beans.rowRenderer.navigateToNextCell(null, _o.DOWN, this.cellPosition, false);
         } else {
           this.startRowOrCellEdit(_o.ENTER);
           if (this.editingCell) {
@@ -18253,7 +18253,7 @@
     n.prototype.navigateAfterEdit = function () {
       if (!this.beans.gridOptionsWrapper.isFullRowEdit()) {
         if (this.beans.gridOptionsWrapper.isEnterMovesDownAfterEdit()) {
-          this.beans.rowRenderer.navigateToNextCell(null, _o.DOWN, this.cellPosition, !1);
+          this.beans.rowRenderer.navigateToNextCell(null, _o.DOWN, this.cellPosition, false);
         }
       }
     };
@@ -18264,8 +18264,8 @@
     };
     n.prototype.onEscapeKeyDown = function () {
       if (this.editingCell) {
-        this.stopRowOrCellEdit(!0);
-        this.focusCell(!0);
+        this.stopRowOrCellEdit(true);
+        this.focusCell(true);
       }
     };
     n.prototype.onKeyPress = function (e) {
@@ -18293,9 +18293,9 @@
             rangeSelect: e.shiftKey,
             groupSelectsFiltered: o
           });
-          if (void 0 === n && 0 === i) {
+          if (undefined === n && 0 === i) {
             this.rowNode.setSelectedParams({
-              newValue: !1,
+              newValue: false,
               rangeSelect: e.shiftKey,
               groupSelectsFiltered: o
             });
@@ -18336,16 +18336,16 @@
     n.prototype.isRightClickInExistingRange = function (e) {
       var t = this.beans.rangeController;
       if (t && t.isCellInAnyRange(this.getCellPosition()) && 2 === e.button) {
-        return !0;
+        return true;
       }
-      return !1;
+      return false;
     };
     n.prototype.containsWidget = function (e) {
       return on(e, "ag-selection-checkbox", 3);
     };
     n.prototype.isDoubleClickOnIPad = function () {
       if (!Gt() || xe("dblclick")) {
-        return !1;
+        return false;
       }
       var e = new Date().getTime();
       var t = e - this.lastIPadMouseClickEvent < 200;
@@ -18433,10 +18433,10 @@
       var t;
       var n = this;
       var r = this.beans.gridOptionsWrapper.isEnableRtl();
-      var o = !1;
-      var i = !1;
-      var a = !1;
-      var s = !1;
+      var o = false;
+      var i = false;
+      var a = false;
+      var s = false;
       var c = this.cellPosition.column;
       var l = this.beans;
       var u = l.rangeController;
@@ -18452,26 +18452,26 @@
         return u.isCellInSpecificRange(n.cellPosition, e);
       });
       if (!e) {
-        s = !0;
+        s = true;
       }
       if (!t) {
-        i = !0;
+        i = true;
       }
       for (var f = 0; f < p.length && !(o && i && a && s); f++) {
         var h = p[f];
         var m = u.getRangeStartRow(h);
         var g = u.getRangeEndRow(h);
         if (!o && this.beans.rowPositionUtils.sameRow(m, this.cellPosition)) {
-          o = !0;
+          o = true;
         }
         if (!a && this.beans.rowPositionUtils.sameRow(g, this.cellPosition)) {
-          a = !0;
+          a = true;
         }
         if (!s && e && h.columns.indexOf(e) < 0) {
-          s = !0;
+          s = true;
         }
         if (!i && t && h.columns.indexOf(t) < 0) {
-          i = !0;
+          i = true;
         }
       }
       return {
@@ -18549,7 +18549,7 @@
     n.prototype.getHasChartRange = function () {
       var e = this.beans.rangeController;
       if (!this.rangeCount || !e) {
-        return !1;
+        return false;
       }
       var n = e.getCellRanges();
       return n.length > 0 && n.every(function (e) {
@@ -18563,7 +18563,7 @@
       var o = r.getCellRanges();
       var i = o.length;
       if (this.rangeCount < 1 || i < 1) {
-        return !1;
+        return false;
       }
       var a = m(o);
       var s = this.getCellPosition();
@@ -18706,7 +18706,7 @@
       this.beans.context.createBean(t);
       var n = this.getComponentHolder().checkboxSelection;
       if ("function" !== typeof n) {
-        n = void 0;
+        n = undefined;
       }
       t.init({
         rowNode: this.rowNode,
@@ -18751,8 +18751,8 @@
       }
     };
     n.prototype.stopRowOrCellEdit = function (e) {
-      if (void 0 === e) {
-        e = !1;
+      if (undefined === e) {
+        e = false;
       }
       if (this.beans.gridOptionsWrapper.isFullRowEdit()) {
         this.rowComp.stopRowEditing(e);
@@ -18761,21 +18761,21 @@
       }
     };
     n.prototype.stopEditing = function (e) {
-      if (void 0 === e) {
-        e = !1;
+      if (undefined === e) {
+        e = false;
       }
       if (this.editingCell) {
         if (this.cellEditor) {
           var t;
           var n = this.getValue();
-          var r = !1;
+          var r = false;
           if (!e) {
             if (!(this.cellEditor.isCancelAfterEnd && this.cellEditor.isCancelAfterEnd())) {
               t = this.cellEditor.getValue();
-              r = !0;
+              r = true;
             }
           }
-          this.editingCell = !1;
+          this.editingCell = false;
           this.beans.context.destroyBean(this.cellEditor);
           this.cellEditor = null;
           if (this.cellEditorInPopup && this.hideEditorPopup) {
@@ -18796,13 +18796,13 @@
           this.setInlineEditingClass();
           this.refreshHandle();
           if (r && t !== n) {
-            this.suppressRefreshCell = !0;
+            this.suppressRefreshCell = true;
             this.rowNode.setDataValue(this.column, t);
-            this.suppressRefreshCell = !1;
+            this.suppressRefreshCell = false;
           }
           this.refreshCell({
-            forceRefresh: !0,
-            suppressFlash: !0
+            forceRefresh: true,
+            suppressFlash: true
           });
           var a = ns(ns({}, this.createEvent(null, Ke.EVENT_CELL_EDITING_STOPPED)), {
             oldValue: n,
@@ -18810,7 +18810,7 @@
           });
           this.beans.eventService.dispatchEvent(a);
         } else {
-          this.editingCell = !1;
+          this.editingCell = false;
         }
       }
     };
@@ -18818,7 +18818,7 @@
       var e = this.getGui();
       if (e.contains(document.activeElement) && !Mt()) {
         e.focus({
-          preventScroll: !0
+          preventScroll: true
         });
       }
       hn(e);
@@ -18903,7 +18903,7 @@
       t.allRowCons = [];
       t.topRowCons = [];
       t.bottomRowCons = [];
-      t.refreshInProgress = !1;
+      t.refreshInProgress = false;
       return t;
     }
     os(t, e);
@@ -19065,7 +19065,7 @@
         animate: e.animate,
         newData: e.newData,
         newPage: e.newPage,
-        onlyBody: !0
+        onlyBody: true
       };
       this.redrawAfterModelUpdate(t);
     };
@@ -19101,14 +19101,14 @@
       e.length = 0;
       if (t) {
         t.forEach(function (t) {
-          var r = new qa(n.$scope, t, n.beans, !1, !1, n.printLayout);
+          var r = new qa(n.$scope, t, n.beans, false, false, n.printLayout);
           e.push(r);
         });
       }
     };
     t.prototype.onPinnedRowDataChanged = function () {
       this.redrawAfterModelUpdate({
-        recycleRows: !0
+        recycleRows: true
       });
     };
     t.prototype.getRenderedIndexesForRowNodes = function (e) {
@@ -19142,7 +19142,7 @@
       return o(this.gridOptionsWrapper.getDomData(n, rs.DOM_DATA_KEY_CELL_COMP)) ? null : t;
     };
     t.prototype.redrawAfterModelUpdate = function (e) {
-      if (void 0 === e) {
+      if (undefined === e) {
         e = {};
       }
       this.getLockOnRefresh();
@@ -19157,15 +19157,15 @@
       }
       var i = function () {
         if (null == t || null == o) {
-          return !1;
+          return false;
         }
-        var e = !1;
+        var e = false;
         R(o, function (n, r) {
           var o = r.getRowNode();
           var i = o.rowIndex == t.rowIndex;
           var a = o.rowPinned == t.rowPinned;
           if (i && a) {
-            e = !0;
+            e = true;
           }
         });
         return e;
@@ -19202,19 +19202,19 @@
       if (this.refreshInProgress) {
         throw new Error("AG Grid: cannot get grid to draw rows when it is in the middle of drawing rows. Your code probably called a grid API method while the grid was in the render stage. To overcome this, put the API call into a timeout, e.g. instead of api.refreshView(), call setTimeout(function() { api.refreshView(); }, 0). To see what part of your code that caused the refresh check this stacktrace.");
       }
-      this.refreshInProgress = !0;
+      this.refreshInProgress = true;
     };
     t.prototype.releaseLockOnRefresh = function () {
-      this.refreshInProgress = !1;
+      this.refreshInProgress = false;
     };
     t.prototype.restoreFocusedCell = function (e) {
       if (e) {
-        this.focusController.setFocusedCell(e.rowIndex, e.column, e.rowPinned, !0);
+        this.focusController.setFocusedCell(e.rowIndex, e.column, e.rowPinned, true);
       }
     };
     t.prototype.stopEditing = function (e) {
-      if (void 0 === e) {
-        e = !1;
+      if (undefined === e) {
+        e = false;
       }
       this.forEachRowComp(function (t, n) {
         n.stopEditing(e);
@@ -19242,7 +19242,7 @@
       }
     };
     t.prototype.flashCells = function (e) {
-      if (void 0 === e) {
+      if (undefined === e) {
         e = {};
       }
       var t = e.flashDelay;
@@ -19255,12 +19255,12 @@
       });
     };
     t.prototype.refreshCells = function (e) {
-      if (void 0 === e) {
+      if (undefined === e) {
         e = {};
       }
       var t = {
         forceRefresh: e.force,
-        newData: !1,
+        newData: false,
         suppressFlash: e.suppressFlash
       };
       this.forEachCellCompFiltered(e.rowNodes, e.columns, function (e) {
@@ -19317,12 +19317,12 @@
         e.forEach(function (e) {
           var t = e.id;
           if (e.rowPinned === Ee.PINNED_TOP) {
-            o.top[t] = !0;
+            o.top[t] = true;
           } else {
             if (e.rowPinned === Ee.PINNED_BOTTOM) {
-              o.bottom[t] = !0;
+              o.bottom[t] = true;
             } else {
-              o.normal[t] = !0;
+              o.normal[t] = true;
             }
           }
         });
@@ -19332,7 +19332,7 @@
         t.forEach(function (e) {
           var t = a.columnController.getGridColumn(e);
           if (r(t)) {
-            i[t.getId()] = !0;
+            i[t.getId()] = true;
           }
         });
       }
@@ -19409,14 +19409,14 @@
     };
     t.prototype.redrawAfterScroll = function () {
       this.getLockOnRefresh();
-      this.redraw(null, !1, !0);
+      this.redraw(null, false, true);
       this.releaseLockOnRefresh();
       this.dispatchDisplayedRowsChanged();
     };
     t.prototype.removeRowCompsNotToDraw = function (e) {
       var t = {};
       e.forEach(function (e) {
-        return t[e] = !0;
+        return t[e] = true;
       });
       var n = Object.keys(this.rowConsByRowIndex).filter(function (e) {
         return !t[e];
@@ -19441,18 +19441,18 @@
     };
     t.prototype.redraw = function (e, t, n) {
       var o = this;
-      if (void 0 === t) {
-        t = !1;
+      if (undefined === t) {
+        t = false;
       }
-      if (void 0 === n) {
-        n = !1;
+      if (undefined === n) {
+        n = false;
       }
       this.rowContainerHeightService.updateOffset();
       this.workOutFirstAndLastRowsToRender();
       var i = this.calculateIndexesToDraw(e);
       this.removeRowCompsNotToDraw(i);
       if (this.printLayout) {
-        t = !1;
+        t = false;
       }
       i.forEach(function (i) {
         r(o.createOrUpdateRowCon(i, e, t, n));
@@ -19504,17 +19504,17 @@
     t.prototype.refreshFullWidthRows = function (e) {
       var t = [];
       var n = !!e;
-      var r = n ? {} : void 0;
+      var r = n ? {} : undefined;
       if (n && r) {
         e.forEach(function (e) {
-          return r[e.id] = !0;
+          return r[e.id] = true;
         });
       }
       R(this.rowConsByRowIndex, function (e, o) {
         if (o.isFullWidth()) {
           var i = o.getRowNode();
           if (n && r) {
-            var a = i.level > 0 && i.parent ? i.parent.id : void 0;
+            var a = i.level > 0 && i.parent ? i.parent.id : undefined;
             if (!r[i.id] && !r[a]) {
               return;
             }
@@ -19547,7 +19547,7 @@
         a = this.createRowCon(i, n, o);
       }
       if (i) {
-        i.alreadyRendered = !0;
+        i.alreadyRendered = true;
       }
       this.rowConsByRowIndex[e] = a;
       return a;
@@ -19596,9 +19596,9 @@
         } else {
           var r = this.gridOptionsWrapper.getRowBufferInPixels();
           var o = this.controllersService.getGridBodyController();
-          var i = !1;
-          var a = void 0;
-          var s = void 0;
+          var i = false;
+          var a = undefined;
+          var s = undefined;
           do {
             var c = this.paginationProxy.getPixelOffset();
             var l = this.paginationProxy.getCurrentPagePixelRange();
@@ -19694,7 +19694,7 @@
       });
     };
     t.prototype.navigateToNextCell = function (e, t, n, i) {
-      for (var a = n, s = !1; a && (a === n || !this.isValidNavigateCell(a));) {
+      for (var a = n, s = false; a && (a === n || !this.isValidNavigateCell(a));) {
         if (this.gridOptionsWrapper.isEnableRtl()) {
           if (t === _o.LEFT) {
             a = this.getLastCellOfColSpan(a);
@@ -19762,13 +19762,13 @@
       return t ? (e = t.getCellPosition(), this.ensureCellVisible(e), e) : null;
     };
     t.prototype.tryToFocusFullWidthRow = function (e, t) {
-      if (void 0 === t) {
-        t = !1;
+      if (undefined === t) {
+        t = false;
       }
       var n = this.columnController.getAllDisplayedColumns();
       var r = this.getRowConByPosition(e);
       if (!r || !r.isFullWidth()) {
-        return !1;
+        return false;
       }
       var o = {
         rowIndex: e.rowIndex,
@@ -19776,10 +19776,10 @@
         column: e.column || (t ? m(n) : n[0])
       };
       this.focusPosition(o);
-      return !0;
+      return true;
     };
     t.prototype.focusPosition = function (e) {
-      this.focusController.setFocusedCell(e.rowIndex, e.column, e.rowPinned, !0);
+      this.focusController.setFocusedCell(e.rowIndex, e.column, e.rowPinned, true);
       if (this.rangeController) {
         this.rangeController.setRangeToCell(e);
       }
@@ -19861,9 +19861,9 @@
         }
       } else {
         if (e instanceof rs) {
-          e.focusCell(!0);
+          e.focusCell(true);
         }
-        if (this.focusController.focusNextGridCoreContainer(!1)) {
+        if (this.focusController.focusNextGridCoreContainer(false)) {
           t.preventDefault();
         }
       }
@@ -19871,7 +19871,7 @@
     t.prototype.tabToNextCell = function (e) {
       var t = this.focusController.getFocusedCell();
       if (!t) {
-        return !1;
+        return false;
       }
       var n = this.getComponentForCell(t);
       return !!(n || (n = this.getRowConByPosition(t)) && n.isFullWidth()) && this.tabToNextCellCommon(n, e);
@@ -19889,19 +19889,19 @@
     t.prototype.moveToNextEditingCell = function (e, t) {
       var n = e.getCellPosition();
       e.stopEditing();
-      var r = this.findNextCellToFocusOn(n, t, !0);
+      var r = this.findNextCellToFocusOn(n, t, true);
       var o = null != r;
       if (o) {
-        r.startEditingIfEnabled(null, null, !0);
-        r.focusCell(!1);
+        r.startEditingIfEnabled(null, null, true);
+        r.focusCell(false);
       }
       return o;
     };
     t.prototype.moveToNextEditingRow = function (e, t) {
       var n = e.getCellPosition();
-      var r = this.findNextCellToFocusOn(n, t, !0);
+      var r = this.findNextCellToFocusOn(n, t, true);
       if (null == r) {
-        return !1;
+        return false;
       }
       var o = e.getCellPosition();
       var i = r.getCellPosition();
@@ -19916,9 +19916,9 @@
         r.setFocusInOnEditor();
         r.focusCell();
       } else {
-        r.focusCell(!0);
+        r.focusCell(true);
       }
-      return !0;
+      return true;
     };
     t.prototype.moveToNextCellNotEditing = function (e, t) {
       var n;
@@ -19926,9 +19926,9 @@
       n = e instanceof qa ? is(is({}, e.getRowPosition()), {
         column: t ? o[0] : m(o)
       }) : e.getCellPosition();
-      var i = this.findNextCellToFocusOn(n, t, !1);
+      var i = this.findNextCellToFocusOn(n, t, false);
       if (i instanceof rs) {
-        i.focusCell(!0);
+        i.focusCell(true);
       } else if (i) {
         return this.tryToFocusFullWidthRow(i.getRowPosition(), t);
       }
@@ -20007,26 +20007,26 @@
     };
     t.prototype.isRangeInRenderedViewport = function (e, t) {
       if (null == e || null == t) {
-        return !1;
+        return false;
       }
       var n = e > this.lastRenderedRow;
       return !(t < this.firstRenderedRow) && !n;
     };
-    as([pe("paginationProxy")], t.prototype, "paginationProxy", void 0);
-    as([pe("columnController")], t.prototype, "columnController", void 0);
-    as([pe("$scope")], t.prototype, "$scope", void 0);
-    as([pe("pinnedRowModel")], t.prototype, "pinnedRowModel", void 0);
-    as([pe("rowModel")], t.prototype, "rowModel", void 0);
-    as([pe("focusController")], t.prototype, "focusController", void 0);
-    as([pe("cellNavigationService")], t.prototype, "cellNavigationService", void 0);
-    as([pe("columnApi")], t.prototype, "columnApi", void 0);
-    as([pe("gridApi")], t.prototype, "gridApi", void 0);
-    as([pe("beans")], t.prototype, "beans", void 0);
-    as([pe("rowContainerHeightService")], t.prototype, "rowContainerHeightService", void 0);
-    as([pe("animationFrameService")], t.prototype, "animationFrameService", void 0);
-    as([pe("rowPositionUtils")], t.prototype, "rowPositionUtils", void 0);
-    as([fe("rangeController")], t.prototype, "rangeController", void 0);
-    as([fe("controllersService")], t.prototype, "controllersService", void 0);
+    as([pe("paginationProxy")], t.prototype, "paginationProxy", undefined);
+    as([pe("columnController")], t.prototype, "columnController", undefined);
+    as([pe("$scope")], t.prototype, "$scope", undefined);
+    as([pe("pinnedRowModel")], t.prototype, "pinnedRowModel", undefined);
+    as([pe("rowModel")], t.prototype, "rowModel", undefined);
+    as([pe("focusController")], t.prototype, "focusController", undefined);
+    as([pe("cellNavigationService")], t.prototype, "cellNavigationService", undefined);
+    as([pe("columnApi")], t.prototype, "columnApi", undefined);
+    as([pe("gridApi")], t.prototype, "gridApi", undefined);
+    as([pe("beans")], t.prototype, "beans", undefined);
+    as([pe("rowContainerHeightService")], t.prototype, "rowContainerHeightService", undefined);
+    as([pe("animationFrameService")], t.prototype, "animationFrameService", undefined);
+    as([pe("rowPositionUtils")], t.prototype, "rowPositionUtils", undefined);
+    as([fe("rangeController")], t.prototype, "rangeController", undefined);
+    as([fe("controllersService")], t.prototype, "controllersService", undefined);
     as([ss(0, me("loggerFactory"))], t.prototype, "agWire", null);
     as([le], t.prototype, "postConstruct", null);
     return t = as([de("rowRenderer")], t);
@@ -20129,7 +20129,7 @@
     t.prototype.onMouseOver = function () {
       this.columnHoverService.setMouseOver(this.columns);
     };
-    ps([pe("columnHoverService")], t.prototype, "columnHoverService", void 0);
+    ps([pe("columnHoverService")], t.prototype, "columnHoverService", undefined);
     ps([le], t.prototype, "postConstruct", null);
     return t;
   }(We);
@@ -20408,7 +20408,7 @@
     function t(t, n, r) {
       var o = e.call(this, t, n) || this;
       o.className = r;
-      o.disabled = !1;
+      o.disabled = false;
       return o;
     }
     ys(t, e);
@@ -20504,10 +20504,10 @@
   };
   var Cs = function (e) {
     function t(t, n, r, o) {
-      if (void 0 === r) {
+      if (undefined === r) {
         r = "text";
       }
-      if (void 0 === o) {
+      if (undefined === o) {
         o = "input";
       }
       var i = e.call(this, t, "\n            <div role=\"presentation\">\n                <div ref=\"eLabel\" class=\"ag-input-field-label\"></div>\n                <div ref=\"eWrapper\" class=\"ag-wrapper ag-input-wrapper\" role=\"presentation\">\n                    <" + o + " ref=\"eInput\" class=\"ag-input-field-input\"></" + o + ">\n                </div>\n            </div>", n) || this;
@@ -20584,9 +20584,9 @@
       rn(this.eInput, t);
       return e.prototype.setDisabled.call(this, t);
     };
-    ws([uo("eLabel")], t.prototype, "eLabel", void 0);
-    ws([uo("eWrapper")], t.prototype, "eWrapper", void 0);
-    ws([uo("eInput")], t.prototype, "eInput", void 0);
+    ws([uo("eLabel")], t.prototype, "eLabel", undefined);
+    ws([uo("eWrapper")], t.prototype, "eWrapper", undefined);
+    ws([uo("eInput")], t.prototype, "eInput", undefined);
     return t;
   }(Es);
   var Ts = function () {
@@ -20611,17 +20611,17 @@
   }();
   var Ss = function (e) {
     function t(t, n, r) {
-      if (void 0 === n) {
+      if (undefined === n) {
         n = "ag-checkbox";
       }
-      if (void 0 === r) {
+      if (undefined === r) {
         r = "checkbox";
       }
       var o = e.call(this, t, n, r) || this;
       o.labelAlignment = "right";
-      o.selected = !1;
-      o.readOnly = !1;
-      o.passive = !1;
+      o.selected = false;
+      o.readOnly = false;
+      o.passive = false;
       return o;
     }
     Ts(t, e);
@@ -20630,7 +20630,7 @@
       this.addManagedListener(this.eLabel, "click", this.toggle.bind(this));
     };
     t.prototype.getNextValue = function () {
-      return void 0 === this.selected || !this.selected;
+      return undefined === this.selected || !this.selected;
     };
     t.prototype.setPassive = function (e) {
       this.passive = e;
@@ -20674,9 +20674,9 @@
     t.prototype.setSelected = function (e, t) {
       if (this.isSelected() !== e) {
         this.previousValue = this.isSelected();
-        e = this.selected = "boolean" === typeof e ? e : void 0;
+        e = this.selected = "boolean" === typeof e ? e : undefined;
         this.eInput.checked = e;
-        this.eInput.indeterminate = void 0 === e;
+        this.eInput.indeterminate = undefined === e;
         if (!t) {
           this.dispatchChange(this.selected, this.previousValue);
         }
@@ -20708,7 +20708,7 @@
       }
     };
     t.prototype.refreshSelectedClass = function (e) {
-      Jt(this.eWrapper, "ag-checked", !0 === e);
+      Jt(this.eWrapper, "ag-checked", true === e);
       Jt(this.eWrapper, "ag-indeterminate", null == e);
     };
     return t;
@@ -20754,8 +20754,8 @@
   var js = function (e) {
     function t(t, n) {
       var r = e.call(this) || this;
-      r.cbSelectAllVisible = !1;
-      r.processingEventFromCheckbox = !1;
+      r.cbSelectAllVisible = false;
+      r.processingEventFromCheckbox = false;
       r.cbSelectAll = t;
       r.column = n;
       var o = n.getColDef();
@@ -20820,12 +20820,12 @@
     };
     t.prototype.updateStateOfCheckbox = function () {
       if (!this.processingEventFromCheckbox) {
-        this.processingEventFromCheckbox = !0;
+        this.processingEventFromCheckbox = true;
         var e = this.getSelectionCount();
         var t = this.getNextCheckboxState(e);
         this.cbSelectAll.setValue(t);
         this.refreshSelectAllLabel();
-        this.processingEventFromCheckbox = !1;
+        this.processingEventFromCheckbox = false;
       }
     };
     t.prototype.refreshSelectAllLabel = function () {
@@ -20886,12 +20886,12 @@
           api: this.gridApi
         });
       }
-      return !!e && (this.gridOptionsWrapper.isRowModelServerSide() ? (console.warn("headerCheckboxSelection is not supported for Server Side Row Model"), !1) : this.gridOptionsWrapper.isRowModelInfinite() ? (console.warn("headerCheckboxSelection is not supported for Infinite Row Model"), !1) : !this.gridOptionsWrapper.isRowModelViewport() || (console.warn("headerCheckboxSelection is not supported for Viewport Row Model"), !1));
+      return !!e && (this.gridOptionsWrapper.isRowModelServerSide() ? (console.warn("headerCheckboxSelection is not supported for Server Side Row Model"), false) : this.gridOptionsWrapper.isRowModelInfinite() ? (console.warn("headerCheckboxSelection is not supported for Infinite Row Model"), false) : !this.gridOptionsWrapper.isRowModelViewport() || (console.warn("headerCheckboxSelection is not supported for Viewport Row Model"), false));
     };
-    As([pe("gridApi")], t.prototype, "gridApi", void 0);
-    As([pe("columnApi")], t.prototype, "columnApi", void 0);
-    As([pe("rowModel")], t.prototype, "rowModel", void 0);
-    As([pe("selectionController")], t.prototype, "selectionController", void 0);
+    As([pe("gridApi")], t.prototype, "gridApi", undefined);
+    As([pe("columnApi")], t.prototype, "columnApi", undefined);
+    As([pe("rowModel")], t.prototype, "rowModel", undefined);
+    As([pe("selectionController")], t.prototype, "selectionController", undefined);
     As([le], t.prototype, "postConstruct", null);
     return t;
   }(We);
@@ -21029,7 +21029,7 @@
       this.draggable = this.workOutDraggable();
     };
     n.prototype.calculateDisplayName = function () {
-      return this.columnController.getDisplayNameForColumn(this.column, "header", !0);
+      return this.columnController.getDisplayNameForColumn(this.column, "header", true);
     };
     n.prototype.onNewColumnsLoaded = function () {
       var e = this.columnController.getColDefVersion();
@@ -21063,19 +21063,19 @@
       if (this.headerComp) {
         this.getGui().removeChild(this.headerCompGui);
         this.headerComp = this.destroyBean(this.headerComp);
-        this.headerCompGui = void 0;
+        this.headerCompGui = undefined;
       }
       this.removeMoveDragSource();
     };
     n.prototype.removeMoveDragSource = function () {
       if (this.moveDragSource) {
         this.dragAndDropService.removeDragSource(this.moveDragSource);
-        this.moveDragSource = void 0;
+        this.moveDragSource = undefined;
       }
     };
     n.prototype.attemptHeaderCompRefresh = function () {
       if (!this.headerComp.refresh) {
-        return !1;
+        return false;
       }
       var e = this.createParams();
       var t = this.userComponentFactory.createFinalParams(this.getComponentHolder(), "headerComponent", e);
@@ -21097,11 +21097,11 @@
         var t = this.getParentComponent();
         this.focusController.setFocusedHeader(t.getRowIndex(), this.getColumn());
       }
-      this.setActiveHeader(!0);
+      this.setActiveHeader(true);
     };
     n.prototype.onFocusOut = function (e) {
       if (!this.getGui().contains(e.relatedTarget)) {
-        this.setActiveHeader(!1);
+        this.setActiveHeader(false);
       }
     };
     n.prototype.handleKeyDown = function (e) {
@@ -21230,13 +21230,13 @@
           },
           dragItemName: this.displayName,
           onDragStarted: function () {
-            return e.column.setMoving(!0, "uiColumnMoved");
+            return e.column.setMoving(true, "uiColumnMoved");
           },
           onDragStopped: function () {
-            return e.column.setMoving(!1, "uiColumnMoved");
+            return e.column.setMoving(false, "uiColumnMoved");
           }
         };
-        this.dragAndDropService.addDragSource(this.moveDragSource, !0);
+        this.dragAndDropService.addDragSource(this.moveDragSource, true);
       }
     };
     n.prototype.createDragItem = function () {
@@ -21272,8 +21272,8 @@
               var r = n.horizontalResizeService.addResizeBar({
                 eResizeBar: n.eResize,
                 onResizeStart: n.onResizeStart.bind(n),
-                onResizing: n.onResizing.bind(n, !1),
-                onResizeEnd: n.onResizing.bind(n, !0)
+                onResizing: n.onResizing.bind(n, false),
+                onResizeEnd: n.onResizing.bind(n, true)
               });
               o.push(r);
               if (t) {
@@ -21363,18 +21363,18 @@
       return t;
     };
     n.TEMPLATE = "<div class=\"ag-header-cell\" role=\"columnheader\" unselectable=\"on\" tabindex=\"-1\">\n            <div ref=\"eResize\" class=\"ag-header-cell-resize\" role=\"presentation\"></div>\n            <ag-checkbox ref=\"cbSelectAll\" class=\"ag-header-select-all\" role=\"presentation\"></ag-checkbox>\n        </div>";
-    xs([pe("dragAndDropService")], n.prototype, "dragAndDropService", void 0);
-    xs([pe("columnController")], n.prototype, "columnController", void 0);
-    xs([pe("horizontalResizeService")], n.prototype, "horizontalResizeService", void 0);
-    xs([pe("menuFactory")], n.prototype, "menuFactory", void 0);
-    xs([pe("gridApi")], n.prototype, "gridApi", void 0);
-    xs([pe("columnApi")], n.prototype, "columnApi", void 0);
-    xs([pe("sortController")], n.prototype, "sortController", void 0);
-    xs([pe("userComponentFactory")], n.prototype, "userComponentFactory", void 0);
-    xs([pe("columnHoverService")], n.prototype, "columnHoverService", void 0);
-    xs([pe("beans")], n.prototype, "beans", void 0);
-    xs([uo("eResize")], n.prototype, "eResize", void 0);
-    xs([uo("cbSelectAll")], n.prototype, "cbSelectAll", void 0);
+    xs([pe("dragAndDropService")], n.prototype, "dragAndDropService", undefined);
+    xs([pe("columnController")], n.prototype, "columnController", undefined);
+    xs([pe("horizontalResizeService")], n.prototype, "horizontalResizeService", undefined);
+    xs([pe("menuFactory")], n.prototype, "menuFactory", undefined);
+    xs([pe("gridApi")], n.prototype, "gridApi", undefined);
+    xs([pe("columnApi")], n.prototype, "columnApi", undefined);
+    xs([pe("sortController")], n.prototype, "sortController", undefined);
+    xs([pe("userComponentFactory")], n.prototype, "userComponentFactory", undefined);
+    xs([pe("columnHoverService")], n.prototype, "columnHoverService", undefined);
+    xs([pe("beans")], n.prototype, "beans", undefined);
+    xs([uo("eResize")], n.prototype, "eResize", undefined);
+    xs([uo("cbSelectAll")], n.prototype, "cbSelectAll", undefined);
     xs([ue], n.prototype, "destroyHeaderComp", null);
     return n;
   }(Rs);
@@ -21524,7 +21524,7 @@
           e = i.headerName;
         }
         if (!e) {
-          e = o ? this.columnController.getDisplayNameForColumn(o[0], "header", !0) : "";
+          e = o ? this.columnController.getDisplayNameForColumn(o[0], "header", true) : "";
         }
       }
       var a = this.afterHeaderCompCreated.bind(this, e);
@@ -21554,16 +21554,16 @@
           getDragItem: this.getDragItemForGroup.bind(this),
           onDragStarted: function () {
             return o.forEach(function (e) {
-              return e.setMoving(!0, "uiColumnDragged");
+              return e.setMoving(true, "uiColumnDragged");
             });
           },
           onDragStopped: function () {
             return o.forEach(function (e) {
-              return e.setMoving(!1, "uiColumnDragged");
+              return e.setMoving(false, "uiColumnDragged");
             });
           }
         };
-        this.dragAndDropService.addDragSource(i, !0);
+        this.dragAndDropService.addDragSource(i, true);
         this.addDestroyFunc(function () {
           return r.dragAndDropService.removeDragSource(i);
         });
@@ -21591,10 +21591,10 @@
       };
     };
     n.prototype.isSuppressMoving = function () {
-      var e = !1;
+      var e = false;
       this.column.getLeafColumns().forEach(function (t) {
         if (t.getColDef().suppressMovable || t.getColDef().lockPosition) {
-          e = !0;
+          e = true;
         }
       });
       return e || this.gridOptionsWrapper.isSuppressMovableColumns();
@@ -21638,8 +21638,8 @@
         var t = this.horizontalResizeService.addResizeBar({
           eResizeBar: this.eHeaderCellResize,
           onResizeStart: this.onResizeStart.bind(this),
-          onResizing: this.onResizing.bind(this, !1),
-          onResizeEnd: this.onResizing.bind(this, !0)
+          onResizing: this.onResizing.bind(this, false),
+          onResizeEnd: this.onResizing.bind(this, true)
         });
         this.addDestroyFunc(t);
         if (!this.gridOptionsWrapper.isSuppressAutoSize()) {
@@ -21732,13 +21732,13 @@
       return t;
     };
     n.TEMPLATE = "<div class=\"ag-header-group-cell\" role=\"columnheader\" tabindex=\"-1\">\n            <div ref=\"agResize\" class=\"ag-header-cell-resize\" role=\"presentation\"></div>\n        </div>";
-    Ls([pe("columnController")], n.prototype, "columnController", void 0);
-    Ls([pe("horizontalResizeService")], n.prototype, "horizontalResizeService", void 0);
-    Ls([pe("dragAndDropService")], n.prototype, "dragAndDropService", void 0);
-    Ls([pe("userComponentFactory")], n.prototype, "userComponentFactory", void 0);
-    Ls([pe("beans")], n.prototype, "beans", void 0);
-    Ls([pe("gridApi")], n.prototype, "gridApi", void 0);
-    Ls([pe("columnApi")], n.prototype, "columnApi", void 0);
+    Ls([pe("columnController")], n.prototype, "columnController", undefined);
+    Ls([pe("horizontalResizeService")], n.prototype, "horizontalResizeService", undefined);
+    Ls([pe("dragAndDropService")], n.prototype, "dragAndDropService", undefined);
+    Ls([pe("userComponentFactory")], n.prototype, "userComponentFactory", undefined);
+    Ls([pe("beans")], n.prototype, "beans", undefined);
+    Ls([pe("gridApi")], n.prototype, "gridApi", undefined);
+    Ls([pe("columnApi")], n.prototype, "columnApi", undefined);
     return n;
   }(Rs);
   var Bs = function () {
@@ -21789,9 +21789,9 @@
     };
     t.prototype.init = function (e) {
       this.params = e;
-      var t = this.columnController.getDisplayNameForColumn(e.column, "header", !0);
+      var t = this.columnController.getDisplayNameForColumn(e.column, "header", true);
       var n = this.gridOptionsWrapper.getLocaleTextFunc();
-      this.eFloatingFilterText.setDisabled(!0).setInputAriaLabel(t + " " + n("ariaFilterInput", "Filter Input"));
+      this.eFloatingFilterText.setDisabled(true).setInputAriaLabel(t + " " + n("ariaFilterInput", "Filter Input"));
     };
     t.prototype.onParentModelChanged = function (e) {
       var t = this;
@@ -21806,8 +21806,8 @@
         this.eFloatingFilterText.setValue("");
       }
     };
-    Fs([uo("eFloatingFilterText")], t.prototype, "eFloatingFilterText", void 0);
-    Fs([pe("columnController")], t.prototype, "columnController", void 0);
+    Fs([uo("eFloatingFilterText")], t.prototype, "eFloatingFilterText", undefined);
+    Fs([pe("columnController")], t.prototype, "columnController", undefined);
     return t;
   }(so);
   var Us = function () {
@@ -22005,8 +22005,8 @@
       }
     };
     n.prototype.getFilterComponent = function (e) {
-      if (void 0 === e) {
-        e = !0;
+      if (undefined === e) {
+        e = true;
       }
       return this.filterManager.getFilterComponent(this.column, "NO_UI", e);
     };
@@ -22019,7 +22019,7 @@
         n = Us.getFloatingFilterType(e.filter);
       } else if (e.filterFramework) {
         ;
-      } else if (!0 === e.filter) {
+      } else if (true === e.filter) {
         n = Oe.isRegistered(exports.ModuleNames.SetFilterModule) ? "agSetColumnFloatingFilter" : "agTextColumnFloatingFilter";
       }
       return n;
@@ -22037,7 +22037,7 @@
         parentFilterInstance: this.parentFilterInstance.bind(this),
         showParentFilter: this.showParentFilter.bind(this),
         onFloatingFilterChanged: this.onFloatingFilterChanged.bind(this),
-        suppressFilterButton: !1
+        suppressFilterButton: false
       };
       this.suppressFilterButton = !!e.floatingFilterComponentParams && !!e.floatingFilterComponentParams.suppressFilterButton;
       var a = this.userComponentFactory.newFloatingFilterComponent(e, i, t);
@@ -22048,7 +22048,7 @@
       return a;
     };
     n.prototype.currentParentModel = function () {
-      var e = this.getFilterComponent(!1);
+      var e = this.getFilterComponent(false);
       return e ? e.resolveNow(null, function (e) {
         return e && e.getModel();
       }) : null;
@@ -22064,16 +22064,16 @@
       console.warn("AG Grid: since version 21.x, how floating filters are implemented has changed. Instead of calling params.onFloatingFilterChanged(), get a reference to the main filter via params.parentFilterInstance() and then set a value on the parent filter directly.");
     };
     n.TEMPLATE = "<div class=\"ag-header-cell\" role=\"gridcell\" tabindex=\"-1\">\n            <div class=\"ag-floating-filter-full-body\" ref=\"eFloatingFilterBody\" role=\"presentation\"></div>\n            <div class=\"ag-floating-filter-button ag-hidden\" ref=\"eButtonWrapper\" role=\"presentation\">\n                <button type=\"button\" aria-label=\"Open Filter Menu\" class=\"ag-floating-filter-button-button\" ref=\"eButtonShowMainFilter\" tabindex=\"-1\"></button>\n            </div>\n        </div>";
-    Hs([pe("columnHoverService")], n.prototype, "columnHoverService", void 0);
-    Hs([pe("userComponentFactory")], n.prototype, "userComponentFactory", void 0);
-    Hs([pe("gridApi")], n.prototype, "gridApi", void 0);
-    Hs([pe("columnApi")], n.prototype, "columnApi", void 0);
-    Hs([pe("filterManager")], n.prototype, "filterManager", void 0);
-    Hs([pe("menuFactory")], n.prototype, "menuFactory", void 0);
-    Hs([pe("beans")], n.prototype, "beans", void 0);
-    Hs([uo("eFloatingFilterBody")], n.prototype, "eFloatingFilterBody", void 0);
-    Hs([uo("eButtonWrapper")], n.prototype, "eButtonWrapper", void 0);
-    Hs([uo("eButtonShowMainFilter")], n.prototype, "eButtonShowMainFilter", void 0);
+    Hs([pe("columnHoverService")], n.prototype, "columnHoverService", undefined);
+    Hs([pe("userComponentFactory")], n.prototype, "userComponentFactory", undefined);
+    Hs([pe("gridApi")], n.prototype, "gridApi", undefined);
+    Hs([pe("columnApi")], n.prototype, "columnApi", undefined);
+    Hs([pe("filterManager")], n.prototype, "filterManager", undefined);
+    Hs([pe("menuFactory")], n.prototype, "menuFactory", undefined);
+    Hs([pe("beans")], n.prototype, "beans", undefined);
+    Hs([uo("eFloatingFilterBody")], n.prototype, "eFloatingFilterBody", undefined);
+    Hs([uo("eButtonWrapper")], n.prototype, "eButtonWrapper", undefined);
+    Hs([uo("eButtonShowMainFilter")], n.prototype, "eButtonShowMainFilter", undefined);
     return n;
   }(Rs);
   var zs = function () {
@@ -22256,7 +22256,7 @@
           if (a && a.getColumn() != r) {
             e.destroyChildComponents([o]);
             v(t, o);
-            a = void 0;
+            a = undefined;
           }
           if (a) {
             v(t, o);
@@ -22302,8 +22302,8 @@
     t.prototype.getHeaderComps = function () {
       return this.headerComps;
     };
-    Ys([pe("columnController")], t.prototype, "columnController", void 0);
-    Ys([pe("focusController")], t.prototype, "focusController", void 0);
+    Ys([pe("columnController")], t.prototype, "columnController", undefined);
+    Ys([pe("focusController")], t.prototype, "focusController", undefined);
     Ys([ue], t.prototype, "destroyAllChildComponents", null);
     Ys([le], t.prototype, "init", null);
     return t;
@@ -22328,8 +22328,8 @@
   };
   var Qs = function () {
     function e(e, t) {
-      this.needToMoveLeft = !1;
-      this.needToMoveRight = !1;
+      this.needToMoveLeft = false;
+      this.needToMoveRight = false;
       this.pinned = e;
       this.eContainer = t;
       this.centerContainer = !r(e);
@@ -22347,26 +22347,26 @@
     e.prototype.onDragEnter = function (e) {
       var n = e.dragItem.columns;
       if (e.dragSource.type === exports.DragSourceType.ToolPanel) {
-        this.setColumnsVisible(n, !0, "uiColumnDragged");
+        this.setColumnsVisible(n, true, "uiColumnDragged");
       } else {
         var r = e.dragItem.visibleState;
         var o = (n || []).filter(function (e) {
           return r[e.getId()];
         });
-        this.setColumnsVisible(o, !0, "uiColumnDragged");
+        this.setColumnsVisible(o, true, "uiColumnDragged");
       }
       this.setColumnsPinned(n, this.pinned, "uiColumnDragged");
-      this.onDragging(e, !0);
+      this.onDragging(e, true);
     };
     e.prototype.onDragLeave = function (e) {
       if (!this.gridOptionsWrapper.isSuppressDragLeaveHidesColumns() && !e.fromNudge) {
         var t = e.dragSource.getDragItem().columns;
-        this.setColumnsVisible(t, !1, "uiColumnDragged");
+        this.setColumnsVisible(t, false, "uiColumnDragged");
       }
       this.ensureIntervalCleared();
     };
     e.prototype.setColumnsVisible = function (e, t, n) {
-      if (void 0 === n) {
+      if (undefined === n) {
         n = "api";
       }
       if (e) {
@@ -22377,7 +22377,7 @@
       }
     };
     e.prototype.setColumnsPinned = function (e, t, n) {
-      if (void 0 === n) {
+      if (undefined === n) {
         n = "api";
       }
       if (e) {
@@ -22419,8 +22419,8 @@
     };
     e.prototype.onDragging = function (e, t) {
       var n = this;
-      if (void 0 === t) {
-        t = !1;
+      if (undefined === t) {
+        t = false;
       }
       this.lastDraggingEvent = e;
       if (!o(e.hDirection)) {
@@ -22567,9 +22567,9 @@
         this.failedMoveAttempts = 0;
         this.movingIntervalId = window.setInterval(this.moveInterval.bind(this), 100);
         if (this.needToMoveLeft) {
-          this.dragAndDropService.setGhostIcon(yi.ICON_LEFT, !0);
+          this.dragAndDropService.setGhostIcon(yi.ICON_LEFT, true);
         } else {
-          this.dragAndDropService.setGhostIcon(yi.ICON_RIGHT, !0);
+          this.dragAndDropService.setGhostIcon(yi.ICON_RIGHT, true);
         }
       }
     };
@@ -22610,11 +22610,11 @@
         }
       }
     };
-    Xs([pe("loggerFactory")], e.prototype, "loggerFactory", void 0);
-    Xs([pe("columnController")], e.prototype, "columnController", void 0);
-    Xs([pe("dragAndDropService")], e.prototype, "dragAndDropService", void 0);
-    Xs([pe("gridOptionsWrapper")], e.prototype, "gridOptionsWrapper", void 0);
-    Xs([pe("controllersService")], e.prototype, "controllersService", void 0);
+    Xs([pe("loggerFactory")], e.prototype, "loggerFactory", undefined);
+    Xs([pe("columnController")], e.prototype, "columnController", undefined);
+    Xs([pe("dragAndDropService")], e.prototype, "dragAndDropService", undefined);
+    Xs([pe("gridOptionsWrapper")], e.prototype, "gridOptionsWrapper", undefined);
+    Xs([pe("controllersService")], e.prototype, "controllersService", undefined);
     Xs([le], e.prototype, "init", null);
     return e;
   }();
@@ -22692,8 +22692,8 @@
         this.columnController.addPivotColumns(this.columnsToPivot, "toolPanelDragAndDrop");
       }
     };
-    Zs([pe("columnController")], e.prototype, "columnController", void 0);
-    Zs([pe("gridOptionsWrapper")], e.prototype, "gridOptionsWrapper", void 0);
+    Zs([pe("columnController")], e.prototype, "columnController", undefined);
+    Zs([pe("gridOptionsWrapper")], e.prototype, "gridOptionsWrapper", undefined);
     return e;
   }();
   var $s = function () {
@@ -22804,9 +22804,9 @@
     n.prototype.onDragStop = function (e) {
       this.currentDropListener.onDragStop(e);
     };
-    ec([pe("dragAndDropService")], n.prototype, "dragAndDropService", void 0);
-    ec([pe("columnController")], n.prototype, "columnController", void 0);
-    ec([pe("controllersService")], n.prototype, "controllersService", void 0);
+    ec([pe("dragAndDropService")], n.prototype, "dragAndDropService", undefined);
+    ec([pe("columnController")], n.prototype, "columnController", undefined);
+    ec([pe("controllersService")], n.prototype, "controllersService", undefined);
     ec([le], n.prototype, "postConstruct", null);
     ec([le], n.prototype, "init", null);
     return n;
@@ -22920,11 +22920,11 @@
       return e;
     };
     t.prototype.onGridColumnsChanged = function () {
-      this.refresh(!0);
+      this.refresh(true);
     };
     t.prototype.refresh = function (e) {
-      if (void 0 === e) {
-        e = !1;
+      if (undefined === e) {
+        e = false;
       }
       this.refreshRowComps(e);
     };
@@ -22934,16 +22934,16 @@
       this.createManagedBean(t);
     };
     t.prototype.destroyRowComps = function (e) {
-      if (void 0 === e) {
-        e = !1;
+      if (undefined === e) {
+        e = false;
       }
       this.groupsRowComps.forEach(this.destroyRowComp.bind(this));
       this.groupsRowComps = [];
       this.destroyRowComp(this.filtersRowComp);
-      this.filtersRowComp = void 0;
+      this.filtersRowComp = undefined;
       if (!e) {
         this.destroyRowComp(this.columnsRowComp);
-        this.columnsRowComp = void 0;
+        this.columnsRowComp = undefined;
       }
     };
     t.prototype.destroyRowComp = function (e) {
@@ -22954,8 +22954,8 @@
     };
     t.prototype.refreshRowComps = function (e) {
       var t = this;
-      if (void 0 === e) {
-        e = !1;
+      if (undefined === e) {
+        e = false;
       }
       var n = new Xr();
       !function () {
@@ -22973,7 +22973,7 @@
           var o = t.columnsRowComp.getRowIndex() !== r;
           if (!(e && !o)) {
             t.destroyRowComp(t.columnsRowComp);
-            t.columnsRowComp = void 0;
+            t.columnsRowComp = undefined;
           }
         }
         if (!t.columnsRowComp) {
@@ -22983,7 +22983,7 @@
       (function () {
         var r = function () {
           t.destroyRowComp(t.filtersRowComp);
-          t.filtersRowComp = void 0;
+          t.filtersRowComp = undefined;
         };
         if (!t.columnController.isPivotMode() && t.columnController.hasFloatingFilters()) {
           var o = n.next();
@@ -23004,8 +23004,8 @@
         return t.eContainer.appendChild(e.getGui());
       });
     };
-    oc([pe("columnController")], t.prototype, "columnController", void 0);
-    oc([pe("scrollVisibleService")], t.prototype, "scrollVisibleService", void 0);
+    oc([pe("columnController")], t.prototype, "columnController", undefined);
+    oc([pe("scrollVisibleService")], t.prototype, "scrollVisibleService", undefined);
     oc([le], t.prototype, "init", null);
     oc([ue], t.prototype, "destroyRowComps", null);
     return t;
@@ -23076,7 +23076,7 @@
       }
     };
     n.prototype.getHeaderContainer = function (e) {
-      if (void 0 === e) {
+      if (undefined === e) {
         e = "center";
       }
       if (null === e) {
@@ -23089,7 +23089,7 @@
         n = this.focusController.getFocusedHeader();
       }
       if (!n) {
-        return !1;
+        return false;
       }
       var o = n.headerRowIndex;
       var i = n.column;
@@ -23097,11 +23097,11 @@
       var s = e === exports.HeaderNavigationDirection.UP;
       var c = s ? o - 1 : o + 1;
       var l = null;
-      var u = !1;
+      var u = false;
       if (c < 0) {
         c = 0;
         l = i;
-        u = !0;
+        u = true;
       }
       if (c >= a) {
         c = -1;
@@ -23118,17 +23118,17 @@
           l = s ? p.getParent() : p;
         }
         if (!l) {
-          return !1;
+          return false;
         }
       }
       return this.focusController.focusHeaderPosition({
         headerRowIndex: c,
         column: l
-      }, void 0, !1, !0, r);
+      }, undefined, false, true, r);
     };
     n.prototype.navigateHorizontally = function (e, n, r) {
-      if (void 0 === n) {
-        n = !1;
+      if (undefined === n) {
+        n = false;
       }
       var o;
       var i;
@@ -23140,7 +23140,7 @@
         i = "After";
         o = this.headerPositionUtils.findHeader(a, i);
       }
-      return o ? this.focusController.focusHeaderPosition(o, i, n, !0, r) : !n || this.focusNextHeaderRow(a, i, r);
+      return o ? this.focusController.focusHeaderPosition(o, i, n, true, r) : !n || this.focusNextHeaderRow(a, i, r);
     };
     n.prototype.focusNextHeaderRow = function (e, t, n) {
       var r;
@@ -23155,10 +23155,10 @@
         r = o + 1;
         i = this.headerPositionUtils.findColAtEdgeForHeaderRow(r, "start");
       }
-      return this.focusController.focusHeaderPosition(i, t, !0, !0, n);
+      return this.focusController.focusHeaderPosition(i, t, true, true, n);
     };
     n.prototype.scrollToColumn = function (e, t) {
-      if (void 0 === t) {
+      if (undefined === t) {
         t = "After";
       }
       if (!e.getPinned()) {
@@ -23174,10 +23174,10 @@
         this.animationFrameService.flushAllFrames();
       }
     };
-    sc([pe("focusController")], n.prototype, "focusController", void 0);
-    sc([pe("headerPositionUtils")], n.prototype, "headerPositionUtils", void 0);
-    sc([pe("animationFrameService")], n.prototype, "animationFrameService", void 0);
-    sc([pe("controllersService")], n.prototype, "controllersService", void 0);
+    sc([pe("focusController")], n.prototype, "focusController", undefined);
+    sc([pe("headerPositionUtils")], n.prototype, "headerPositionUtils", undefined);
+    sc([pe("animationFrameService")], n.prototype, "animationFrameService", undefined);
+    sc([pe("controllersService")], n.prototype, "controllersService", undefined);
     sc([le], n.prototype, "postConstruct", null);
     return n = sc([de("headerNavigationService")], n);
   }(We);
@@ -23269,7 +23269,7 @@
       var i = t ? n + r + o : n;
       this.callback(i);
     };
-    pc([pe("columnController")], t.prototype, "columnController", void 0);
+    pc([pe("columnController")], t.prototype, "columnController", undefined);
     pc([le], t.prototype, "postConstruct", null);
     return t;
   }(We);
@@ -23362,7 +23362,7 @@
     n.prototype.onTabKeyDown = function (e) {
       var n = this.gridOptionsWrapper.isEnableRtl();
       var r = e.shiftKey !== n ? exports.HeaderNavigationDirection.LEFT : exports.HeaderNavigationDirection.RIGHT;
-      if (this.headerNavigationService.navigateHorizontally(r, !0, e) || this.focusController.focusNextGridCoreContainer(e.shiftKey)) {
+      if (this.headerNavigationService.navigateHorizontally(r, true, e) || this.focusController.focusNextGridCoreContainer(e.shiftKey)) {
         e.preventDefault();
       }
     };
@@ -23375,7 +23375,7 @@
           if (!r(n)) {
             n = exports.HeaderNavigationDirection.RIGHT;
           }
-          this.headerNavigationService.navigateHorizontally(n, !1, e);
+          this.headerNavigationService.navigateHorizontally(n, false, e);
           break;
         case uc.UP:
           n = exports.HeaderNavigationDirection.UP;
@@ -23471,16 +23471,16 @@
       tn(this.ePinnedRightHeader, e);
     };
     n.TEMPLATE = "<div class=\"ag-header\" role=\"presentation\">\n            <div class=\"ag-pinned-left-header\" ref=\"ePinnedLeftHeader\" role=\"presentation\"></div>\n            <div class=\"ag-header-viewport\" ref=\"eHeaderViewport\" role=\"presentation\">\n                <div class=\"ag-header-container\" ref=\"eHeaderContainer\" role=\"rowgroup\"></div>\n            </div>\n            <div class=\"ag-pinned-right-header\" ref=\"ePinnedRightHeader\" role=\"presentation\"></div>\n        </div>";
-    mc([uo("ePinnedLeftHeader")], n.prototype, "ePinnedLeftHeader", void 0);
-    mc([uo("ePinnedRightHeader")], n.prototype, "ePinnedRightHeader", void 0);
-    mc([uo("eHeaderContainer")], n.prototype, "eHeaderContainer", void 0);
-    mc([uo("eHeaderViewport")], n.prototype, "eHeaderViewport", void 0);
-    mc([pe("columnController")], n.prototype, "columnController", void 0);
-    mc([pe("gridApi")], n.prototype, "gridApi", void 0);
-    mc([pe("autoWidthCalculator")], n.prototype, "autoWidthCalculator", void 0);
-    mc([pe("headerNavigationService")], n.prototype, "headerNavigationService", void 0);
-    mc([pe("pinnedWidthService")], n.prototype, "pinnedWidthService", void 0);
-    mc([pe("controllersService")], n.prototype, "controllersService", void 0);
+    mc([uo("ePinnedLeftHeader")], n.prototype, "ePinnedLeftHeader", undefined);
+    mc([uo("ePinnedRightHeader")], n.prototype, "ePinnedRightHeader", undefined);
+    mc([uo("eHeaderContainer")], n.prototype, "eHeaderContainer", undefined);
+    mc([uo("eHeaderViewport")], n.prototype, "eHeaderViewport", undefined);
+    mc([pe("columnController")], n.prototype, "columnController", undefined);
+    mc([pe("gridApi")], n.prototype, "gridApi", undefined);
+    mc([pe("autoWidthCalculator")], n.prototype, "autoWidthCalculator", undefined);
+    mc([pe("headerNavigationService")], n.prototype, "headerNavigationService", undefined);
+    mc([pe("pinnedWidthService")], n.prototype, "pinnedWidthService", undefined);
+    mc([pe("controllersService")], n.prototype, "controllersService", undefined);
     return n;
   }(So);
   var _c = function () {
@@ -23538,7 +23538,7 @@
       t.activeAdvancedFilters = [];
       t.quickFilter = null;
       t.quickFilterParts = null;
-      t.processingFilterChange = !1;
+      t.processingFilterChange = false;
       return t;
     }
     var o;
@@ -23622,7 +23622,7 @@
       var e = this;
       this.activeAdvancedFilters.length = 0;
       this.allAdvancedFilters.forEach(function (t) {
-        if (t.filterPromise.resolveNow(!1, function (e) {
+        if (t.filterPromise.resolveNow(false, function (e) {
           return e.isFilterActive();
         })) {
           var n = t.filterPromise.resolveNow(null, function (e) {
@@ -23634,7 +23634,7 @@
     };
     n.prototype.updateFilterFlagInColumns = function (e, t) {
       this.allAdvancedFilters.forEach(function (n) {
-        var r = n.filterPromise.resolveNow(!1, function (e) {
+        var r = n.filterPromise.resolveNow(false, function (e) {
           return e.isFilterActive();
         });
         n.column.setFilterActive(r, e, t);
@@ -23654,11 +23654,11 @@
             node: e,
             data: n
           })) {
-            return !1;
+            return false;
           }
         }
       }
-      return !0;
+      return true;
     };
     n.prototype.parseQuickFilter = function (e) {
       return r(e) ? this.gridOptionsWrapper.isRowModelDefault() ? e.toUpperCase() : (console.warn("ag-grid: quick filtering only works with the Client-Side Row Model"), null) : null;
@@ -23689,9 +23689,9 @@
       if (t) {
         F(n, t);
       }
-      this.processingFilterChange = !0;
+      this.processingFilterChange = true;
       this.eventService.dispatchEvent(n);
-      this.processingFilterChange = !1;
+      this.processingFilterChange = false;
     };
     n.prototype.isSuppressFlashingCellsBecauseFiltering = function () {
       return !this.allowShowChangeAfterFilter && this.processingFilterChange;
@@ -23729,7 +23729,7 @@
       return !(this.isQuickFilterPresent() && !this.doesRowPassQuickFilter(e.rowNode)) && !(this.gridOptionsWrapper.isExternalFilterPresent() && !this.gridOptionsWrapper.doesExternalFilterPass(e.rowNode)) && !(this.isAdvancedFilterPresent() && !this.doAdvancedFiltersPass(e.rowNode, e.filterInstanceToSkip));
     };
     n.prototype.getQuickFilterTextForColumn = function (e, t) {
-      var n = this.valueService.getValue(e, t, !0);
+      var n = this.valueService.getValue(e, t, true);
       var o = e.getColDef();
       if (o.getQuickFilterText) {
         var i = {
@@ -23769,12 +23769,12 @@
     n.prototype.createValueGetter = function (e) {
       var t = this;
       return function (n) {
-        return t.valueService.getValue(e, n, !0);
+        return t.valueService.getValue(e, n, true);
       };
     };
     n.prototype.getFilterComponent = function (e, t, n) {
-      if (void 0 === n) {
-        n = !0;
+      if (undefined === n) {
+        n = true;
       }
       if (n) {
         return this.getOrCreateFilterWrapper(e, t).filterPromise;
@@ -23784,7 +23784,7 @@
     };
     n.prototype.isFilterActive = function (e) {
       var t = this.cachedFilter(e);
-      return !!t && t.filterPromise.resolveNow(!1, function (e) {
+      return !!t && t.filterPromise.resolveNow(false, function (e) {
         return e.isFilterActive();
       });
     };
@@ -23835,7 +23835,7 @@
       return c;
     };
     n.prototype.createFilterParams = function (e, t, n) {
-      if (void 0 === n) {
+      if (undefined === n) {
         n = null;
       }
       var r = {
@@ -23848,7 +23848,7 @@
         valueGetter: this.createValueGetter(e),
         context: this.gridOptionsWrapper.getContext(),
         doesRowPassOtherFilter: function () {
-          return !0;
+          return true;
         }
       };
       if (n) {
@@ -23906,10 +23906,10 @@
     };
     n.prototype.onNewColumnsLoaded = function () {
       var e = this;
-      var t = !1;
+      var t = false;
       this.allAdvancedFilters.forEach(function (n) {
         if (!e.columnController.getPrimaryColumn(n.column)) {
-          t = !0;
+          t = true;
           e.disposeFilterWrapper(n, "filterDestroyed");
         }
       });
@@ -23918,7 +23918,7 @@
       }
     };
     n.prototype.destroyFilter = function (e, t) {
-      if (void 0 === t) {
+      if (undefined === t) {
         t = "api";
       }
       var n = this.allAdvancedFilters.get(e.getColId());
@@ -23932,7 +23932,7 @@
       e.filterPromise.then(function (r) {
         (r.setModel(null) || Zr.resolve()).then(function () {
           n.getContext().destroyBean(r);
-          e.column.setFilterActive(!1, t);
+          e.column.setFilterActive(false, t);
           if (e.scope) {
             if (e.compiledElement) {
               e.compiledElement.remove();
@@ -23951,14 +23951,14 @@
       });
     };
     n.QUICK_FILTER_SEPARATOR = "\n";
-    bc([pe("$compile")], n.prototype, "$compile", void 0);
-    bc([pe("$scope")], n.prototype, "$scope", void 0);
-    bc([pe("valueService")], n.prototype, "valueService", void 0);
-    bc([pe("columnController")], n.prototype, "columnController", void 0);
-    bc([pe("rowModel")], n.prototype, "rowModel", void 0);
-    bc([pe("columnApi")], n.prototype, "columnApi", void 0);
-    bc([pe("gridApi")], n.prototype, "gridApi", void 0);
-    bc([pe("userComponentFactory")], n.prototype, "userComponentFactory", void 0);
+    bc([pe("$compile")], n.prototype, "$compile", undefined);
+    bc([pe("$scope")], n.prototype, "$scope", undefined);
+    bc([pe("valueService")], n.prototype, "valueService", undefined);
+    bc([pe("columnController")], n.prototype, "columnController", undefined);
+    bc([pe("rowModel")], n.prototype, "rowModel", undefined);
+    bc([pe("columnApi")], n.prototype, "columnApi", undefined);
+    bc([pe("gridApi")], n.prototype, "gridApi", undefined);
+    bc([pe("userComponentFactory")], n.prototype, "userComponentFactory", undefined);
     bc([le], n.prototype, "init", null);
     bc([ue], n.prototype, "destroy", null);
     return n = o = bc([de("filterManager")], n);
@@ -24004,20 +24004,20 @@
   var wc = function (e) {
     function t() {
       var t = null !== e && e.apply(this, arguments) || this;
-      t.initialised = !1;
+      t.initialised = false;
       return t;
     }
     Ec(t, e);
     t.prototype.init = function () {
       this.cellExpressions = this.gridOptionsWrapper.isEnableCellExpressions();
-      this.initialised = !0;
+      this.initialised = true;
     };
     t.prototype.getValue = function (e, t, n, r) {
-      if (void 0 === n) {
-        n = !1;
+      if (undefined === n) {
+        n = false;
       }
-      if (void 0 === r) {
-        r = !1;
+      if (undefined === r) {
+        r = false;
       }
       if (!this.initialised) {
         this.init();
@@ -24028,8 +24028,8 @@
         var a = i.field;
         var s = e.getId();
         var c = t.data;
-        var l = t.groupData && void 0 !== t.groupData[s];
-        var u = !r && t.aggData && void 0 !== t.aggData[s];
+        var l = t.groupData && undefined !== t.groupData[s];
+        var u = !r && t.aggData && undefined !== t.aggData[s];
         if (n && i.filterValueGetter) {
           o = this.executeFilterValueGetter(i.filterValueGetter, c, e, t);
         } else {
@@ -24077,7 +24077,7 @@
     t.prototype.getOpenedGroup = function (e, t) {
       if (this.gridOptionsWrapper.isShowOpenedGroup() && t.getColDef().showRowGroup) {
         for (var n = t.getColDef().showRowGroup, r = e.parent; null != r;) {
-          if (r.rowGroupColumn && (!0 === n || n === r.rowGroupColumn.getId())) {
+          if (r.rowGroupColumn && (true === n || n === r.rowGroupColumn.getId())) {
             return r.key;
           }
           r = r.parent;
@@ -24110,8 +24110,8 @@
             context: this.gridOptionsWrapper.getContext()
           };
           p.newValue = n;
-          if (void 0 === (d = l && r(l) ? l(p) : r(u) ? this.expressionService.evaluate(u, p) : this.setValueUsingField(e.data, c, n, a.isFieldContainsDots()))) {
-            d = !0;
+          if (undefined === (d = l && r(l) ? l(p) : r(u) ? this.expressionService.evaluate(u, p) : this.setValueUsingField(e.data, c, n, a.isFieldContainsDots()))) {
+            d = true;
           }
           if (d) {
             e.resetQuickFilterAggregateText();
@@ -24147,7 +24147,7 @@
     };
     t.prototype.setValueUsingField = function (e, t, n, r) {
       if (!t) {
-        return !1;
+        return false;
       }
       if (r) {
         for (var o = t.split("."), i = e; o.length > 0 && i;) {
@@ -24161,7 +24161,7 @@
       } else {
         e[t] = n;
       }
-      return !0;
+      return true;
     };
     t.prototype.executeFilterValueGetter = function (e, t, n, r) {
       var o = {
@@ -24179,7 +24179,7 @@
     t.prototype.executeValueGetter = function (e, t, n, r) {
       var o = n.getId();
       var i = this.valueCache.getValue(r, o);
-      if (void 0 !== i) {
+      if (undefined !== i) {
         return i;
       }
       var a = {
@@ -24215,9 +24215,9 @@
       }
       return o;
     };
-    Oc([pe("expressionService")], t.prototype, "expressionService", void 0);
-    Oc([pe("columnController")], t.prototype, "columnController", void 0);
-    Oc([pe("valueCache")], t.prototype, "valueCache", void 0);
+    Oc([pe("expressionService")], t.prototype, "expressionService", undefined);
+    Oc([pe("columnController")], t.prototype, "columnController", undefined);
+    Oc([pe("valueCache")], t.prototype, "valueCache", undefined);
     Oc([le], t.prototype, "init", null);
     return t = Oc([de("valueService")], t);
   }(We);
@@ -24282,7 +24282,7 @@
         print: e === Ee.DOM_LAYOUT_PRINT
       });
     };
-    Tc([pe("gridOptionsWrapper")], t.prototype, "gridOptionsWrapper", void 0);
+    Tc([pe("gridOptionsWrapper")], t.prototype, "gridOptionsWrapper", undefined);
     Tc([le], t.prototype, "postConstruct", null);
     return t;
   }(We);
@@ -24358,7 +24358,7 @@
       }
     };
     t.prototype.horizontallyScrollHeaderCenterAndFloatingCenter = function (e) {
-      if (void 0 === e) {
+      if (undefined === e) {
         e = this.centerRowContainerCon.getCenterViewportScrollLeft();
       }
       var t = this.enableRtl ? e : -e;
@@ -24372,7 +24372,7 @@
       fn(this.lastHorizontalScrollElement === this.centerRowContainerCon.getViewportElement() ? i.getViewport() : this.centerRowContainerCon.getViewportElement(), Math.abs(e), this.enableRtl);
     };
     t.prototype.isControllingScroll = function (e) {
-      return this.lastHorizontalScrollElement ? e === this.lastHorizontalScrollElement : (this.lastHorizontalScrollElement = e, !0);
+      return this.lastHorizontalScrollElement ? e === this.lastHorizontalScrollElement : (this.lastHorizontalScrollElement = e, true);
     };
     t.prototype.onFakeHorizontalScroll = function () {
       var e = this.controllersService.getFakeHScrollCon().getViewport();
@@ -24388,14 +24388,14 @@
     };
     t.prototype.onBodyHorizontalScroll = function (e) {
       var t = this.centerRowContainerCon.getViewportElement().scrollLeft;
-      if (!this.shouldBlockScrollUpdate("horizontal", t, !0)) {
+      if (!this.shouldBlockScrollUpdate("horizontal", t, true)) {
         this.doHorizontalScroll(Math.round(pn(e, this.enableRtl)));
         this.resetLastHorizontalScrollElementDebounced();
       }
     };
     t.prototype.onVerticalScroll = function () {
       var e = this.eBodyViewport.scrollTop;
-      if (!this.shouldBlockScrollUpdate("vertical", e, !0)) {
+      if (!this.shouldBlockScrollUpdate("vertical", e, true)) {
         this.animationFrameService.setScrollTop(e);
         this.nextScrollTop = e;
         if (this.gridOptionsWrapper.isSuppressAnimationFrame()) {
@@ -24424,17 +24424,17 @@
       this.onHorizontalViewportChanged();
     };
     t.prototype.shouldBlockScrollUpdate = function (e, t, n) {
-      if (void 0 === n) {
-        n = !1;
+      if (undefined === n) {
+        n = false;
       }
       if (n && !Gt()) {
-        return !1;
+        return false;
       }
       if ("vertical" === e) {
         var r = sn(this.eBodyViewport);
         var o = this.eBodyViewport.scrollHeight;
         if (t < 0 || t + r > o) {
-          return !0;
+          return true;
         }
       }
       if ("horizontal" === e) {
@@ -24442,16 +24442,16 @@
         var a = this.centerRowContainerCon.getViewportElement().scrollWidth;
         if (this.enableRtl && dn()) {
           if (t > 0) {
-            return !0;
+            return true;
           }
         } else if (t < 0) {
-          return !0;
+          return true;
         }
         if (Math.abs(t) + i > a) {
-          return !0;
+          return true;
         }
       }
-      return !1;
+      return false;
     };
     t.prototype.redrawRowsAfterScroll = function () {
       var e = {
@@ -24512,7 +24512,7 @@
       this.eBodyViewport.scrollTop = 0;
     };
     t.prototype.ensureNodeVisible = function (e, t) {
-      if (void 0 === t) {
+      if (undefined === t) {
         t = null;
       }
       for (var n = this.rowModel.getRowCount(), r = "function" === typeof e, o = -1, i = 0; i < n; i++) {
@@ -24611,7 +24611,7 @@
           var d = a < t.getActualWidth();
           var p = l || d;
           if (p || u) {
-            var f = void 0;
+            var f = undefined;
             f = this.enableRtl ? p ? c - a - o : c - i : p ? o : i - a;
             this.centerRowContainerCon.setCenterViewportScrollLeft(f);
           }
@@ -24622,15 +24622,15 @@
         }
       }
     };
-    jc([pe("controllersService")], t.prototype, "controllersService", void 0);
-    jc([pe("animationFrameService")], t.prototype, "animationFrameService", void 0);
-    jc([pe("columnApi")], t.prototype, "columnApi", void 0);
-    jc([pe("gridApi")], t.prototype, "gridApi", void 0);
-    jc([pe("paginationProxy")], t.prototype, "paginationProxy", void 0);
-    jc([pe("rowModel")], t.prototype, "rowModel", void 0);
-    jc([pe("rowContainerHeightService")], t.prototype, "heightScaler", void 0);
-    jc([pe("rowRenderer")], t.prototype, "rowRenderer", void 0);
-    jc([pe("columnController")], t.prototype, "columnController", void 0);
+    jc([pe("controllersService")], t.prototype, "controllersService", undefined);
+    jc([pe("animationFrameService")], t.prototype, "animationFrameService", undefined);
+    jc([pe("columnApi")], t.prototype, "columnApi", undefined);
+    jc([pe("gridApi")], t.prototype, "gridApi", undefined);
+    jc([pe("paginationProxy")], t.prototype, "paginationProxy", undefined);
+    jc([pe("rowModel")], t.prototype, "rowModel", undefined);
+    jc([pe("rowContainerHeightService")], t.prototype, "heightScaler", undefined);
+    jc([pe("rowRenderer")], t.prototype, "rowRenderer", undefined);
+    jc([pe("columnController")], t.prototype, "columnController", undefined);
     jc([le], t.prototype, "postConstruct", null);
     return t;
   }(We);
@@ -24698,10 +24698,10 @@
   var Mc = function (e) {
     function n(t) {
       var n = e.call(this) || this;
-      n.isMultiRowDrag = !1;
-      n.isGridSorted = !1;
-      n.isGridFiltered = !1;
-      n.isRowGroupActive = !1;
+      n.isMultiRowDrag = false;
+      n.isGridSorted = false;
+      n.isGridFiltered = false;
+      n.isRowGroupActive = false;
       n.eContainer = t;
       return n;
     }
@@ -24746,12 +24746,12 @@
       var t = this.gridOptionsWrapper.isEnableMultiRowDragging();
       var n = this.selectionController.getSelectedNodes();
       var r = e.dragItem.rowNode;
-      return t && -1 !== n.indexOf(r) ? (this.isMultiRowDrag = !0, Dc(n)) : (this.isMultiRowDrag = !1, [r]);
+      return t && -1 !== n.indexOf(r) ? (this.isMultiRowDrag = true, Dc(n)) : (this.isMultiRowDrag = false, [r]);
     };
     n.prototype.onDragEnter = function (e) {
       this.dispatchGridEvent(Ke.EVENT_ROW_DRAG_ENTER, e);
       this.getRowNodes(e).forEach(function (e) {
-        e.setDragging(!0);
+        e.setDragging(true);
       });
       this.onEnterOrDragging(e);
     };
@@ -24838,7 +24838,7 @@
       this.clientSideRowModel.highlightRowAtPixel(null);
     };
     n.prototype.moveRows = function (e, t, n) {
-      if (void 0 === n) {
+      if (undefined === n) {
         n = 0;
       }
       if (this.clientSideRowModel.ensureRowsAtPixel(e, t, n)) {
@@ -24899,7 +24899,7 @@
             getContainer: e.getContainer
           };
           if (e.fromGrid) {
-            e.fromGrid = void 0;
+            e.fromGrid = undefined;
             r = e;
           } else {
             if (e.onDragEnter) {
@@ -24930,7 +24930,7 @@
             getIconName: function () {
               return yi.ICON_MOVE;
             },
-            external: !0
+            external: true
           }, r));
         }
       } else {
@@ -24964,14 +24964,14 @@
           a(n);
           e.onDragStop(t.draggingToRowDragEvent(Ke.EVENT_ROW_DRAG_END, n));
         } : a,
-        fromGrid: !0
+        fromGrid: true
       } : {
         getContainer: n,
         onDragEnter: r,
         onDragLeave: o,
         onDragging: i,
         onDragStop: a,
-        fromGrid: !0
+        fromGrid: true
       };
     };
     n.prototype.draggingToRowDragEvent = function (e, n) {
@@ -25013,7 +25013,7 @@
         this.clearRowHighlight();
       }
       if (this.isFromThisGrid(e)) {
-        this.isMultiRowDrag = !1;
+        this.isMultiRowDrag = false;
       }
     };
     n.prototype.onDragStop = function (e) {
@@ -25026,20 +25026,20 @@
     n.prototype.stopDragging = function (e) {
       this.ensureIntervalCleared();
       this.getRowNodes(e).forEach(function (e) {
-        e.setDragging(!1);
+        e.setDragging(false);
       });
     };
-    xc([pe("dragAndDropService")], n.prototype, "dragAndDropService", void 0);
-    xc([pe("rowModel")], n.prototype, "rowModel", void 0);
-    xc([pe("paginationProxy")], n.prototype, "paginationProxy", void 0);
-    xc([pe("columnController")], n.prototype, "columnController", void 0);
-    xc([pe("focusController")], n.prototype, "focusController", void 0);
-    xc([pe("sortController")], n.prototype, "sortController", void 0);
-    xc([pe("filterManager")], n.prototype, "filterManager", void 0);
-    xc([pe("selectionController")], n.prototype, "selectionController", void 0);
-    xc([fe("rangeController")], n.prototype, "rangeController", void 0);
-    xc([pe("mouseEventService")], n.prototype, "mouseEventService", void 0);
-    xc([pe("controllersService")], n.prototype, "controllersService", void 0);
+    xc([pe("dragAndDropService")], n.prototype, "dragAndDropService", undefined);
+    xc([pe("rowModel")], n.prototype, "rowModel", undefined);
+    xc([pe("paginationProxy")], n.prototype, "paginationProxy", undefined);
+    xc([pe("columnController")], n.prototype, "columnController", undefined);
+    xc([pe("focusController")], n.prototype, "focusController", undefined);
+    xc([pe("sortController")], n.prototype, "sortController", undefined);
+    xc([pe("filterManager")], n.prototype, "filterManager", undefined);
+    xc([pe("selectionController")], n.prototype, "selectionController", undefined);
+    xc([fe("rangeController")], n.prototype, "rangeController", undefined);
+    xc([pe("mouseEventService")], n.prototype, "mouseEventService", undefined);
+    xc([pe("controllersService")], n.prototype, "controllersService", undefined);
     xc([le], n.prototype, "postConstruct", null);
     return n;
   }(We);
@@ -25125,8 +25125,8 @@
       this.view.setColumnMovingCss(e);
     };
     t.prototype.setCellTextSelection = function (e) {
-      if (void 0 === e) {
-        e = !1;
+      if (undefined === e) {
+        e = false;
       }
       this.view.setCellSelectableCss(e);
     };
@@ -25142,7 +25142,7 @@
       this.addManagedListener(this.eGridBody, "dragstart", function (e) {
         if (e.target instanceof HTMLImageElement) {
           e.preventDefault();
-          return !1;
+          return false;
         }
       });
     };
@@ -25265,7 +25265,7 @@
       if (r > 0) {
         this.columnController.sizeColumnsToFit(r, "sizeColumnsToFit");
       } else {
-        if (void 0 === e) {
+        if (undefined === e) {
           window.setTimeout(function () {
             t.sizeColumnsToFit(100);
           }, 0);
@@ -25286,18 +25286,18 @@
         }
       }
     };
-    Pc([pe("rowContainerHeightService")], t.prototype, "rowContainerHeightService", void 0);
-    Pc([pe("controllersService")], t.prototype, "controllersService", void 0);
-    Pc([pe("columnController")], t.prototype, "columnController", void 0);
-    Pc([pe("scrollVisibleService")], t.prototype, "scrollVisibleService", void 0);
-    Pc([fe("contextMenuFactory")], t.prototype, "contextMenuFactory", void 0);
-    Pc([pe("headerNavigationService")], t.prototype, "headerNavigationService", void 0);
-    Pc([pe("paginationProxy")], t.prototype, "paginationProxy", void 0);
-    Pc([pe("dragAndDropService")], t.prototype, "dragAndDropService", void 0);
-    Pc([pe("pinnedRowModel")], t.prototype, "pinnedRowModel", void 0);
-    Pc([pe("rowRenderer")], t.prototype, "rowRenderer", void 0);
-    Pc([pe("popupService")], t.prototype, "popupService", void 0);
-    Pc([pe("mouseEventService")], t.prototype, "mouseEventService", void 0);
+    Pc([pe("rowContainerHeightService")], t.prototype, "rowContainerHeightService", undefined);
+    Pc([pe("controllersService")], t.prototype, "controllersService", undefined);
+    Pc([pe("columnController")], t.prototype, "columnController", undefined);
+    Pc([pe("scrollVisibleService")], t.prototype, "scrollVisibleService", undefined);
+    Pc([fe("contextMenuFactory")], t.prototype, "contextMenuFactory", undefined);
+    Pc([pe("headerNavigationService")], t.prototype, "headerNavigationService", undefined);
+    Pc([pe("paginationProxy")], t.prototype, "paginationProxy", undefined);
+    Pc([pe("dragAndDropService")], t.prototype, "dragAndDropService", undefined);
+    Pc([pe("pinnedRowModel")], t.prototype, "pinnedRowModel", undefined);
+    Pc([pe("rowRenderer")], t.prototype, "rowRenderer", undefined);
+    Pc([pe("popupService")], t.prototype, "popupService", undefined);
+    Pc([pe("mouseEventService")], t.prototype, "mouseEventService", undefined);
     return t;
   }(We);
   var Gc = function () {
@@ -25461,7 +25461,7 @@
       var r = e.getRowNode();
       var o = this.focusController.getFocusedCell();
       var i = o && o.column;
-      if (!Br(this.gridOptionsWrapper, n, r, i, !1)) {
+      if (!Br(this.gridOptionsWrapper, n, r, i, false)) {
         var a = n.key;
         if ("keydown" === t) {
           switch (a) {
@@ -25510,8 +25510,8 @@
       if (r && n.isRowsToRender()) {
         var s = [t.isEmpty(a), t.isEmpty(o)];
         var c = s[0] ? null : a;
-        var l = void 0;
-        var u = void 0;
+        var l = undefined;
+        var u = undefined;
         if (s[1]) {
           l = null;
           u = this.paginationProxy.getRowCount() - 1;
@@ -25551,18 +25551,18 @@
       }
       e.preventDefault();
     };
-    Uc([pe("mouseEventService")], n.prototype, "mouseEventService", void 0);
-    Uc([pe("valueService")], n.prototype, "valueService", void 0);
-    Uc([fe("contextMenuFactory")], n.prototype, "contextMenuFactory", void 0);
-    Uc([pe("controllersService")], n.prototype, "controllersService", void 0);
-    Uc([pe("navigationService")], n.prototype, "navigationService", void 0);
-    Uc([pe("focusController")], n.prototype, "focusController", void 0);
-    Uc([pe("undoRedoService")], n.prototype, "undoRedoService", void 0);
-    Uc([pe("columnController")], n.prototype, "columnController", void 0);
-    Uc([pe("paginationProxy")], n.prototype, "paginationProxy", void 0);
-    Uc([pe("pinnedRowModel")], n.prototype, "pinnedRowModel", void 0);
-    Uc([fe("rangeController")], n.prototype, "rangeController", void 0);
-    Uc([fe("clipboardService")], n.prototype, "clipboardService", void 0);
+    Uc([pe("mouseEventService")], n.prototype, "mouseEventService", undefined);
+    Uc([pe("valueService")], n.prototype, "valueService", undefined);
+    Uc([fe("contextMenuFactory")], n.prototype, "contextMenuFactory", undefined);
+    Uc([pe("controllersService")], n.prototype, "controllersService", undefined);
+    Uc([pe("navigationService")], n.prototype, "navigationService", undefined);
+    Uc([pe("focusController")], n.prototype, "focusController", undefined);
+    Uc([pe("undoRedoService")], n.prototype, "undoRedoService", undefined);
+    Uc([pe("columnController")], n.prototype, "columnController", undefined);
+    Uc([pe("paginationProxy")], n.prototype, "paginationProxy", undefined);
+    Uc([pe("pinnedRowModel")], n.prototype, "pinnedRowModel", undefined);
+    Uc([fe("rangeController")], n.prototype, "rangeController", undefined);
+    Uc([fe("clipboardService")], n.prototype, "clipboardService", undefined);
     Uc([le], n.prototype, "postConstruct", null);
     return n;
   }(We);
@@ -25635,8 +25635,8 @@
           this.centerWidth = e;
           this.columnController.refreshFlexedColumns({
             viewportWidth: this.centerWidth,
-            updateBodyWidths: !0,
-            fireResizedEvent: !0
+            updateBodyWidths: true,
+            fireResizedEvent: true
           });
         }
       } else {
@@ -25684,11 +25684,11 @@
       var t = this.centerContainerCon.getViewportScrollLeft();
       this.columnController.setViewportPosition(e, t);
     };
-    Vc([pe("controllersService")], t.prototype, "controllersService", void 0);
-    Vc([pe("columnController")], t.prototype, "columnController", void 0);
-    Vc([pe("scrollVisibleService")], t.prototype, "scrollVisibleService", void 0);
-    Vc([pe("columnApi")], t.prototype, "columnApi", void 0);
-    Vc([pe("gridApi")], t.prototype, "gridApi", void 0);
+    Vc([pe("controllersService")], t.prototype, "controllersService", undefined);
+    Vc([pe("columnController")], t.prototype, "columnController", undefined);
+    Vc([pe("scrollVisibleService")], t.prototype, "scrollVisibleService", undefined);
+    Vc([pe("columnApi")], t.prototype, "columnApi", undefined);
+    Vc([pe("gridApi")], t.prototype, "gridApi", undefined);
     Vc([le], t.prototype, "postConstruct", null);
     return t;
   }(We);
@@ -25748,7 +25748,7 @@
         In(this.element, e);
       }
     };
-    Kc([pe("pinnedWidthService")], t.prototype, "pinnedWidthService", void 0);
+    Kc([pe("pinnedWidthService")], t.prototype, "pinnedWidthService", undefined);
     Kc([le], t.prototype, "postConstruct", null);
     return t;
   }(We);
@@ -25808,7 +25808,7 @@
         In(this.element, e);
       }
     };
-    Qc([pe("pinnedWidthService")], t.prototype, "pinnedWidthService", void 0);
+    Qc([pe("pinnedWidthService")], t.prototype, "pinnedWidthService", undefined);
     Qc([le], t.prototype, "postConstruct", null);
     return t;
   }(We);
@@ -25869,7 +25869,7 @@
         this.eWrapper.style.height = t;
       }
     };
-    $c([pe("rowContainerHeightService")], t.prototype, "maxDivHeightScaler", void 0);
+    $c([pe("rowContainerHeightService")], t.prototype, "maxDivHeightScaler", undefined);
     $c([le], t.prototype, "postConstruct", null);
     return t;
   }(We);
@@ -25933,8 +25933,8 @@
         });
       }
     };
-    nl([fe("rangeController")], t.prototype, "rangeController", void 0);
-    nl([pe("dragService")], t.prototype, "dragService", void 0);
+    nl([fe("rangeController")], t.prototype, "rangeController", undefined);
+    nl([pe("dragService")], t.prototype, "dragService", undefined);
     nl([le], t.prototype, "postConstruct", null);
     return t;
   }(We);
@@ -26128,7 +26128,7 @@
         }
       };
       this.eContainer.addEventListener("touchmove", t, {
-        passive: !1
+        passive: false
       });
       this.addDestroyFunc(function () {
         return e.eContainer.removeEventListener("touchmove", t);
@@ -26178,11 +26178,11 @@
     t.prototype.setCenterViewportScrollLeft = function (e) {
       fn(this.eViewport, e, this.enableRtl);
     };
-    il([pe("scrollVisibleService")], t.prototype, "scrollVisibleService", void 0);
-    il([pe("dragService")], t.prototype, "dragService", void 0);
-    il([pe("controllersService")], t.prototype, "controllersService", void 0);
-    il([pe("columnController")], t.prototype, "columnController", void 0);
-    il([pe("resizeObserverService")], t.prototype, "resizeObserverService", void 0);
+    il([pe("scrollVisibleService")], t.prototype, "scrollVisibleService", undefined);
+    il([pe("dragService")], t.prototype, "dragService", undefined);
+    il([pe("controllersService")], t.prototype, "controllersService", undefined);
+    il([pe("columnController")], t.prototype, "columnController", undefined);
+    il([pe("resizeObserverService")], t.prototype, "resizeObserverService", undefined);
     il([le], t.prototype, "postConstruct", null);
     return t;
   }(We);
@@ -26301,7 +26301,7 @@
         this.menuFactory.registerGridComp(this);
       }
       if (this.rangeController || this.gridOptionsWrapper.isRowSelectionMulti()) {
-        pr(this.getGui(), !0);
+        pr(this.getGui(), true);
         if (this.rangeController) {
           this.rangeController.registerGridComp(this);
         }
@@ -26323,12 +26323,12 @@
     };
     n.prototype.addAngularApplyCheck = function () {
       var e = this;
-      var t = !1;
+      var t = false;
       var n = function () {
         if (!t) {
-          t = !0;
+          t = true;
           window.setTimeout(function () {
-            t = !1;
+            t = false;
             e.$scope.$apply();
           }, 0);
         }
@@ -26345,17 +26345,17 @@
     n.prototype.removeScrollEventListener = function (e) {
       this.eBodyViewport.removeEventListener("scroll", e);
     };
-    hl([pe("beans")], n.prototype, "beans", void 0);
-    hl([pe("gridApi")], n.prototype, "gridApi", void 0);
-    hl([pe("$scope")], n.prototype, "$scope", void 0);
-    hl([pe("resizeObserverService")], n.prototype, "resizeObserverService", void 0);
-    hl([fe("rangeController")], n.prototype, "rangeController", void 0);
-    hl([fe("contextMenuFactory")], n.prototype, "contextMenuFactory", void 0);
-    hl([fe("menuFactory")], n.prototype, "menuFactory", void 0);
-    hl([uo("eBodyViewport")], n.prototype, "eBodyViewport", void 0);
-    hl([uo("eTop")], n.prototype, "eTop", void 0);
-    hl([uo("eBottom")], n.prototype, "eBottom", void 0);
-    hl([uo("headerRoot")], n.prototype, "headerRootComp", void 0);
+    hl([pe("beans")], n.prototype, "beans", undefined);
+    hl([pe("gridApi")], n.prototype, "gridApi", undefined);
+    hl([pe("$scope")], n.prototype, "$scope", undefined);
+    hl([pe("resizeObserverService")], n.prototype, "resizeObserverService", undefined);
+    hl([fe("rangeController")], n.prototype, "rangeController", undefined);
+    hl([fe("contextMenuFactory")], n.prototype, "contextMenuFactory", undefined);
+    hl([fe("menuFactory")], n.prototype, "menuFactory", undefined);
+    hl([uo("eBodyViewport")], n.prototype, "eBodyViewport", undefined);
+    hl([uo("eTop")], n.prototype, "eTop", undefined);
+    hl([uo("eBottom")], n.prototype, "eBottom", undefined);
+    hl([uo("headerRoot")], n.prototype, "headerRootComp", undefined);
     hl([le], n.prototype, "init", null);
     return n;
   }(so);
@@ -26390,7 +26390,7 @@
   var bl = function () {
     function e() {
       this.detailGridInfoMap = {};
-      this.destroyCalled = !1;
+      this.destroyCalled = false;
     }
     e.prototype.registerGridComp = function (e) {
       this.gridBodyComp = e;
@@ -26430,7 +26430,7 @@
       this.detailGridInfoMap[e] = t;
     };
     e.prototype.removeDetailGridInfo = function (e) {
-      this.detailGridInfoMap[e] = void 0;
+      this.detailGridInfoMap[e] = undefined;
     };
     e.prototype.getDetailGridInfo = function (e) {
       return this.detailGridInfoMap[e];
@@ -26586,13 +26586,13 @@
       return this.pinnedRowModel.getPinnedBottomRow(e);
     };
     e.prototype.setColumnDefs = function (e, t) {
-      if (void 0 === t) {
+      if (undefined === t) {
         t = "api";
       }
       this.columnController.setColumnDefs(e, t);
     };
     e.prototype.setAutoGroupColumnDef = function (e, t) {
-      this.gridOptionsWrapper.setProperty("autoGroupColumnDef", e, !0);
+      this.gridOptionsWrapper.setProperty("autoGroupColumnDef", e, true);
     };
     e.prototype.expireValueCache = function () {
       this.valueCache.expire();
@@ -26615,7 +26615,7 @@
       }
     };
     e.prototype.refreshCells = function (e) {
-      if (void 0 === e) {
+      if (undefined === e) {
         e = {};
       }
       if (Array.isArray(e)) {
@@ -26625,16 +26625,16 @@
       }
     };
     e.prototype.flashCells = function (e) {
-      if (void 0 === e) {
+      if (undefined === e) {
         e = {};
       }
       this.rowRenderer.flashCells(e);
     };
     e.prototype.redrawRows = function (e) {
-      if (void 0 === e) {
+      if (undefined === e) {
         e = {};
       }
-      var t = e ? e.rowNodes : void 0;
+      var t = e ? e.rowNodes : undefined;
       this.rowRenderer.redrawRows(t);
     };
     e.prototype.refreshView = function () {
@@ -26721,9 +26721,9 @@
       } else {
         var a = {
           step: n,
-          keepRenderedRows: !0,
-          animate: !0,
-          keepEditingRows: !0
+          keepRenderedRows: true,
+          animate: true,
+          keepEditingRows: true
         };
         this.clientSideRowModel.refreshModel(a);
       }
@@ -26742,10 +26742,10 @@
     };
     e.prototype.expandAll = function () {
       if (this.clientSideRowModel) {
-        this.clientSideRowModel.expandOrCollapseAll(!0);
+        this.clientSideRowModel.expandOrCollapseAll(true);
       } else {
         if (this.serverSideRowModel) {
-          this.serverSideRowModel.expandAll(!0);
+          this.serverSideRowModel.expandAll(true);
         } else {
           console.warn("AG Grid: expandAll only works with Client Side Row Model and Server Side Row Model");
         }
@@ -26753,10 +26753,10 @@
     };
     e.prototype.collapseAll = function () {
       if (this.clientSideRowModel) {
-        this.clientSideRowModel.expandOrCollapseAll(!1);
+        this.clientSideRowModel.expandOrCollapseAll(false);
       } else {
         if (this.serverSideRowModel) {
-          this.serverSideRowModel.expandAll(!1);
+          this.serverSideRowModel.expandAll(false);
         } else {
           console.warn("AG Grid: collapseAll only works with Client Side Row Model and Server Side Row Model");
         }
@@ -26791,8 +26791,8 @@
       this.selectionController.selectIndex(e, t);
     };
     e.prototype.deselectIndex = function (e, t) {
-      if (void 0 === t) {
-        t = !1;
+      if (undefined === t) {
+        t = false;
       }
       console.warn("AG Grid: do not use api for selection, call node.setSelected(value) instead");
       if (t) {
@@ -26801,31 +26801,31 @@
       this.selectionController.deselectIndex(e);
     };
     e.prototype.selectNode = function (e, t, n) {
-      if (void 0 === t) {
-        t = !1;
+      if (undefined === t) {
+        t = false;
       }
-      if (void 0 === n) {
-        n = !1;
+      if (undefined === n) {
+        n = false;
       }
       console.warn("AG Grid: API for selection is deprecated, call node.setSelected(value) instead");
       if (n) {
         console.warn("AG Grid: suppressEvents is no longer supported, stop listening for the event if you no longer want it");
       }
       e.setSelectedParams({
-        newValue: !0,
+        newValue: true,
         clearSelection: !t
       });
     };
     e.prototype.deselectNode = function (e, t) {
-      if (void 0 === t) {
-        t = !1;
+      if (undefined === t) {
+        t = false;
       }
       console.warn("AG Grid: API for selection is deprecated, call node.setSelected(value) instead");
       if (t) {
         console.warn("AG Grid: suppressEvents is no longer supported, stop listening for the event if you no longer want it");
       }
       e.setSelectedParams({
-        newValue: !1
+        newValue: false
       });
     };
     e.prototype.selectAll = function () {
@@ -26835,10 +26835,10 @@
       this.selectionController.deselectAllRowNodes();
     };
     e.prototype.selectAllFiltered = function () {
-      this.selectionController.selectAllRowNodes(!0);
+      this.selectionController.selectAllRowNodes(true);
     };
     e.prototype.deselectAllFiltered = function () {
-      this.selectionController.deselectAllRowNodes(!0);
+      this.selectionController.deselectAllRowNodes(true);
     };
     e.prototype.recomputeAggregates = function () {
       if (o(this.clientSideRowModel)) {
@@ -26891,7 +26891,7 @@
       this.gridBodyCon.getScrollFeature().ensureIndexVisible(e, t);
     };
     e.prototype.ensureNodeVisible = function (e, t) {
-      if (void 0 === t) {
+      if (undefined === t) {
         t = null;
       }
       this.gridBodyCon.getScrollFeature().ensureNodeVisible(e, t);
@@ -27022,7 +27022,7 @@
       return this.focusController.clearFocusedCell();
     };
     e.prototype.setFocusedCell = function (e, t, n) {
-      this.focusController.setFocusedCell(e, t, n, !0);
+      this.focusController.setFocusedCell(e, t, n, true);
     };
     e.prototype.setSuppressRowDrag = function (e) {
       this.gridOptionsWrapper.setProperty(ka.PROP_SUPPRESS_ROW_DRAG, e);
@@ -27278,7 +27278,7 @@
     };
     e.prototype.destroy = function () {
       if (!this.destroyCalled) {
-        this.destroyCalled = !0;
+        this.destroyCalled = true;
         this.gridCompController.destroyGridUi();
         this.context.destroy();
       }
@@ -27404,19 +27404,19 @@
       this.gridOptionsWrapper.setProperty(ka.PROP_POPUP_PARENT, e);
     };
     e.prototype.tabToNextCell = function () {
-      return this.rowRenderer.tabToNextCell(!1);
+      return this.rowRenderer.tabToNextCell(false);
     };
     e.prototype.tabToPreviousCell = function () {
-      return this.rowRenderer.tabToNextCell(!0);
+      return this.rowRenderer.tabToNextCell(true);
     };
     e.prototype.getCellRendererInstances = function (e) {
-      if (void 0 === e) {
+      if (undefined === e) {
         e = {};
       }
       return this.rowRenderer.getCellRendererInstances(e);
     };
     e.prototype.getCellEditorInstances = function (e) {
-      if (void 0 === e) {
+      if (undefined === e) {
         e = {};
       }
       return this.rowRenderer.getCellEditorInstances(e);
@@ -27425,8 +27425,8 @@
       return this.rowRenderer.getEditingCells();
     };
     e.prototype.stopEditing = function (e) {
-      if (void 0 === e) {
-        e = !1;
+      if (undefined === e) {
+        e = false;
       }
       this.rowRenderer.stopEditing(e);
     };
@@ -27588,14 +27588,14 @@
       this.purgeServerSideCache(e);
     };
     e.prototype.purgeServerSideCache = function (e) {
-      if (void 0 === e) {
+      if (undefined === e) {
         e = [];
       }
       if (this.serverSideRowModel) {
         console.warn("AG Grid: since v25.0, api.purgeServerSideCache is deprecated. Please use api.refreshServerSideStore({purge: true}) instead.");
         this.refreshServerSideStore({
           route: e,
-          purge: !0
+          purge: true
         });
       } else {
         console.warn("AG Grid: api.purgeServerSideCache is only available when rowModelType='serverSide'.");
@@ -27713,38 +27713,38 @@
     e.prototype.paginationGoToPage = function (e) {
       this.paginationProxy.goToPage(e);
     };
-    vl([fe("immutableService")], e.prototype, "immutableService", void 0);
-    vl([fe("csvCreator")], e.prototype, "csvCreator", void 0);
-    vl([fe("excelCreator")], e.prototype, "excelCreator", void 0);
-    vl([pe("rowRenderer")], e.prototype, "rowRenderer", void 0);
-    vl([pe("filterManager")], e.prototype, "filterManager", void 0);
-    vl([pe("columnController")], e.prototype, "columnController", void 0);
-    vl([pe("selectionController")], e.prototype, "selectionController", void 0);
-    vl([pe("gridOptionsWrapper")], e.prototype, "gridOptionsWrapper", void 0);
-    vl([pe("valueService")], e.prototype, "valueService", void 0);
-    vl([pe("alignedGridsService")], e.prototype, "alignedGridsService", void 0);
-    vl([pe("eventService")], e.prototype, "eventService", void 0);
-    vl([pe("pinnedRowModel")], e.prototype, "pinnedRowModel", void 0);
-    vl([pe("context")], e.prototype, "context", void 0);
-    vl([pe("rowModel")], e.prototype, "rowModel", void 0);
-    vl([pe("sortController")], e.prototype, "sortController", void 0);
-    vl([pe("paginationProxy")], e.prototype, "paginationProxy", void 0);
-    vl([pe("focusController")], e.prototype, "focusController", void 0);
-    vl([pe("dragAndDropService")], e.prototype, "dragAndDropService", void 0);
-    vl([fe("rangeController")], e.prototype, "rangeController", void 0);
-    vl([fe("clipboardService")], e.prototype, "clipboardService", void 0);
-    vl([fe("aggFuncService")], e.prototype, "aggFuncService", void 0);
-    vl([pe("menuFactory")], e.prototype, "menuFactory", void 0);
-    vl([fe("contextMenuFactory")], e.prototype, "contextMenuFactory", void 0);
-    vl([pe("valueCache")], e.prototype, "valueCache", void 0);
-    vl([pe("animationFrameService")], e.prototype, "animationFrameService", void 0);
-    vl([fe("statusBarService")], e.prototype, "statusBarService", void 0);
-    vl([fe("chartService")], e.prototype, "chartService", void 0);
-    vl([fe("undoRedoService")], e.prototype, "undoRedoService", void 0);
-    vl([fe("headlessService")], e.prototype, "headlessService", void 0);
-    vl([fe("rowNodeBlockLoader")], e.prototype, "rowNodeBlockLoader", void 0);
-    vl([fe("ssrmTransactionManager")], e.prototype, "serverSideTransactionManager", void 0);
-    vl([fe("controllersService")], e.prototype, "controllersService", void 0);
+    vl([fe("immutableService")], e.prototype, "immutableService", undefined);
+    vl([fe("csvCreator")], e.prototype, "csvCreator", undefined);
+    vl([fe("excelCreator")], e.prototype, "excelCreator", undefined);
+    vl([pe("rowRenderer")], e.prototype, "rowRenderer", undefined);
+    vl([pe("filterManager")], e.prototype, "filterManager", undefined);
+    vl([pe("columnController")], e.prototype, "columnController", undefined);
+    vl([pe("selectionController")], e.prototype, "selectionController", undefined);
+    vl([pe("gridOptionsWrapper")], e.prototype, "gridOptionsWrapper", undefined);
+    vl([pe("valueService")], e.prototype, "valueService", undefined);
+    vl([pe("alignedGridsService")], e.prototype, "alignedGridsService", undefined);
+    vl([pe("eventService")], e.prototype, "eventService", undefined);
+    vl([pe("pinnedRowModel")], e.prototype, "pinnedRowModel", undefined);
+    vl([pe("context")], e.prototype, "context", undefined);
+    vl([pe("rowModel")], e.prototype, "rowModel", undefined);
+    vl([pe("sortController")], e.prototype, "sortController", undefined);
+    vl([pe("paginationProxy")], e.prototype, "paginationProxy", undefined);
+    vl([pe("focusController")], e.prototype, "focusController", undefined);
+    vl([pe("dragAndDropService")], e.prototype, "dragAndDropService", undefined);
+    vl([fe("rangeController")], e.prototype, "rangeController", undefined);
+    vl([fe("clipboardService")], e.prototype, "clipboardService", undefined);
+    vl([fe("aggFuncService")], e.prototype, "aggFuncService", undefined);
+    vl([pe("menuFactory")], e.prototype, "menuFactory", undefined);
+    vl([fe("contextMenuFactory")], e.prototype, "contextMenuFactory", undefined);
+    vl([pe("valueCache")], e.prototype, "valueCache", undefined);
+    vl([pe("animationFrameService")], e.prototype, "animationFrameService", undefined);
+    vl([fe("statusBarService")], e.prototype, "statusBarService", undefined);
+    vl([fe("chartService")], e.prototype, "chartService", undefined);
+    vl([fe("undoRedoService")], e.prototype, "undoRedoService", undefined);
+    vl([fe("headlessService")], e.prototype, "headlessService", undefined);
+    vl([fe("rowNodeBlockLoader")], e.prototype, "rowNodeBlockLoader", undefined);
+    vl([fe("ssrmTransactionManager")], e.prototype, "serverSideTransactionManager", undefined);
+    vl([fe("controllersService")], e.prototype, "controllersService", undefined);
     vl([le], e.prototype, "init", null);
     vl([ue], e.prototype, "cleanDownReferencesToAvoidMemoryLeakInCaseApplicationIsKeepingReferenceToDestroyedGrid", null);
     return e = vl([de("gridApi")], e);
@@ -27922,7 +27922,7 @@
         console.warn("Unable to get template error " + e.status + " - " + t);
       }
     };
-    Tl([pe("$scope")], t.prototype, "$scope", void 0);
+    Tl([pe("$scope")], t.prototype, "$scope", undefined);
     return t = Tl([de("templateService")], t);
   }(We);
   var Il = function () {
@@ -28074,14 +28074,14 @@
     };
     t.prototype.clearFocusedCell = function () {
       this.focusedCellPosition = null;
-      this.onCellFocused(!1);
+      this.onCellFocused(false);
     };
     t.prototype.getFocusedCell = function () {
       return this.focusedCellPosition;
     };
     t.prototype.setFocusedCell = function (e, t, r, o) {
-      if (void 0 === o) {
-        o = !1;
+      if (undefined === o) {
+        o = false;
       }
       var i = this.columnController.getGridColumn(t);
       if (i) {
@@ -28103,7 +28103,7 @@
     };
     t.prototype.isHeaderWrapperFocused = function (e) {
       if (null == this.focusedHeaderPosition) {
-        return !1;
+        return false;
       }
       var t = e.getColumn();
       var n = e.getParentComponent().getRowIndex();
@@ -28126,14 +28126,14 @@
       };
     };
     t.prototype.focusHeaderPosition = function (e, t, n, r, o) {
-      if (void 0 === t) {
+      if (undefined === t) {
         t = null;
       }
-      if (void 0 === n) {
-        n = !1;
+      if (undefined === n) {
+        n = false;
       }
-      if (void 0 === r) {
-        r = !1;
+      if (undefined === r) {
+        r = false;
       }
       if (r) {
         var i;
@@ -28160,14 +28160,14 @@
         }
       }
       if (!e) {
-        return !1;
+        return false;
       }
       if (-1 === e.headerRowIndex) {
         return this.focusGridView(e.column);
       }
       this.headerNavigationService.scrollToColumn(e.column, t);
       var l = this.headerNavigationService.getHeaderContainer(e.column.getPinned()).getRowComps()[e.headerRowIndex].getHeaderComps()[e.column.getUniqueId()];
-      return !!l && (l.getFocusableElement().focus(), !0);
+      return !!l && (l.getFocusableElement().focus(), true);
     };
     t.prototype.isAnyCellFocused = function () {
       return !!this.focusedCellPosition;
@@ -28176,8 +28176,8 @@
       return null != this.focusedCellPosition && this.focusedCellPosition.rowIndex === e && this.focusedCellPosition.rowPinned === n(t);
     };
     t.prototype.findFocusableElements = function (e, t, n) {
-      if (void 0 === n) {
-        n = !1;
+      if (undefined === n) {
+        n = false;
       }
       var r = Ee.FOCUSABLE_SELECTOR;
       var o = Ee.FOCUSABLE_EXCLUDE;
@@ -28199,15 +28199,15 @@
       });
     };
     t.prototype.focusInto = function (e, t, n) {
-      if (void 0 === t) {
-        t = !1;
+      if (undefined === t) {
+        t = false;
       }
-      if (void 0 === n) {
-        n = !1;
+      if (undefined === n) {
+        n = false;
       }
       var r = this.findFocusableElements(e, null, n);
       var o = t ? m(r) : r[0];
-      return !!o && (o.focus(), !0);
+      return !!o && (o.focus(), true);
     };
     t.prototype.findNextFocusableElement = function (e, t, n) {
       var r = this.findFocusableElements(e, t ? ":not([tabindex=\"-1\"])" : null);
@@ -28219,17 +28219,17 @@
     t.prototype.isFocusUnderManagedComponent = function (e) {
       var t = e.querySelectorAll("." + So.FOCUS_MANAGED_CLASS);
       if (!t.length) {
-        return !1;
+        return false;
       }
       for (var n = 0; n < t.length; n++) {
         if (t[n].contains(document.activeElement)) {
-          return !0;
+          return true;
         }
       }
-      return !1;
+      return false;
     };
     t.prototype.findTabbableParent = function (e, t) {
-      if (void 0 === t) {
+      if (undefined === t) {
         t = 5;
       }
       for (var n = 0; e && null === Ut(e) && ++n <= t;) {
@@ -28247,7 +28247,7 @@
         api: this.gridApi,
         columnApi: this.columnApi,
         rowPinned: null,
-        isFullWidthCell: !1
+        isFullWidthCell: false
       };
       if (this.focusedCellPosition) {
         var n = t.rowIndex = this.focusedCellPosition.rowIndex;
@@ -28266,7 +28266,7 @@
     t.prototype.focusGridView = function (e, t) {
       var r = t ? this.rowPositionUtils.getLastRow() : this.rowPositionUtils.getFirstRow();
       if (!r) {
-        return !1;
+        return false;
       }
       var o = r.rowIndex;
       var i = r.rowPinned;
@@ -28275,14 +28275,14 @@
         e = a.column;
       }
       if (null == o || !e) {
-        return !1;
+        return false;
       }
       this.rowRenderer.ensureCellVisible({
         rowIndex: o,
         column: e,
         rowPinned: i
       });
-      this.setFocusedCell(o, e, n(i), !0);
+      this.setFocusedCell(o, e, n(i), true);
       if (this.rangeController) {
         var s = {
           rowIndex: o,
@@ -28291,21 +28291,21 @@
         };
         this.rangeController.setRangeToCell(s);
       }
-      return !0;
+      return true;
     };
     t.prototype.focusNextGridCoreContainer = function (e) {
-      return !!this.gridCompController.focusNextInnerContainer(e) || (e || this.gridCompController.forceFocusOutOfContainer(), !1);
+      return !!this.gridCompController.focusNextInnerContainer(e) || (e || this.gridCompController.forceFocusOutOfContainer(), false);
     };
     t.AG_KEYBOARD_FOCUS = "ag-keyboard-focus";
-    t.keyboardModeActive = !1;
+    t.keyboardModeActive = false;
     t.instancesMonitored = new Map();
-    Al([pe("columnController")], t.prototype, "columnController", void 0);
-    Al([pe("headerNavigationService")], t.prototype, "headerNavigationService", void 0);
-    Al([pe("columnApi")], t.prototype, "columnApi", void 0);
-    Al([pe("gridApi")], t.prototype, "gridApi", void 0);
-    Al([pe("rowRenderer")], t.prototype, "rowRenderer", void 0);
-    Al([pe("rowPositionUtils")], t.prototype, "rowPositionUtils", void 0);
-    Al([fe("rangeController")], t.prototype, "rangeController", void 0);
+    Al([pe("columnController")], t.prototype, "columnController", undefined);
+    Al([pe("headerNavigationService")], t.prototype, "headerNavigationService", undefined);
+    Al([pe("columnApi")], t.prototype, "columnApi", undefined);
+    Al([pe("gridApi")], t.prototype, "gridApi", undefined);
+    Al([pe("rowRenderer")], t.prototype, "rowRenderer", undefined);
+    Al([pe("rowPositionUtils")], t.prototype, "rowPositionUtils", undefined);
+    Al([fe("rangeController")], t.prototype, "rangeController", undefined);
     Al([le], t.prototype, "init", null);
     return t = r = Al([de("focusController")], t);
   }(We);
@@ -28417,7 +28417,7 @@
         y: r,
         nudgeX: i,
         nudgeY: a,
-        keepWithinBounds: !0
+        keepWithinBounds: true
       });
       this.callPostProcessPopup(e.type, e.ePopup, null, e.mouseEvent, e.column, e.rowNode);
     };
@@ -28597,7 +28597,7 @@
         if (null != p) {
           window.clearInterval(p);
         }
-        p = void 0;
+        p = undefined;
       };
     };
     t.prototype.addPopup = function (e) {
@@ -28645,12 +28645,12 @@
         m.appendChild(r);
         h.appendChild(m);
         if (s) {
-          this.setAlwaysOnTop(m, !0);
+          this.setAlwaysOnTop(m, true);
         } else {
           this.bringPopupToFront(m);
         }
         var _;
-        var v = !1;
+        var v = false;
         var b = function (e) {
           if (m.contains(document.activeElement)) {
             if ((e.which || e.keyCode) === _o.ESCAPE) {
@@ -28671,7 +28671,7 @@
           });
         };
         var O = function (e) {
-          if (void 0 === e) {
+          if (undefined === e) {
             e = {};
           }
           var n = e.mouseEvent;
@@ -28685,7 +28685,7 @@
             mouseEvent: n,
             touchEvent: o
           }) || v)) {
-            v = !0;
+            v = true;
             h.removeChild(m);
             d.removeEventListener("keydown", b);
             d.removeEventListener("mousedown", y);
@@ -28746,32 +28746,32 @@
       var r = e.touchEvent;
       var o = n || r;
       if (!o) {
-        return !1;
+        return false;
       }
       var i = C(this.popupList, function (e) {
         return e.element === t;
       });
       if (-1 === i) {
-        return !1;
+        return false;
       }
       for (var a = i; a < this.popupList.length; a++) {
         if (Le(this.popupList[a].element, o)) {
-          return !0;
+          return true;
         }
       }
       return this.isElementWithinCustomPopup(o.target);
     };
     t.prototype.isElementWithinCustomPopup = function (e) {
       if (!this.popupList.length) {
-        return !1;
+        return false;
       }
       for (; e && e !== document.body;) {
         if (e.classList.contains("ag-custom-component-popup") || null === e.parentElement) {
-          return !0;
+          return true;
         }
         e = e.parentElement;
       }
-      return !1;
+      return false;
     };
     t.prototype.isEventSameChainAsOriginalEvent = function (e) {
       var t = e.originalMouseEvent;
@@ -28791,10 +28791,10 @@
         var s = Math.abs(t.screenX - i) < 5;
         var c = Math.abs(t.screenY - a) < 5;
         if (s && c) {
-          return !0;
+          return true;
         }
       }
-      return !1;
+      return false;
     };
     t.prototype.getWrapper = function (e) {
       for (; !$t(e, "ag-popup") && e.parentElement;) {
@@ -28842,8 +28842,8 @@
         this.eventService.dispatchEvent(c);
       }
     };
-    kl([pe("environment")], t.prototype, "environment", void 0);
-    kl([pe("focusController")], t.prototype, "focusController", void 0);
+    kl([pe("environment")], t.prototype, "environment", undefined);
+    kl([pe("focusController")], t.prototype, "focusController", undefined);
     return t = kl([de("popupService")], t);
   }(We);
   var Dl = function () {
@@ -29009,7 +29009,7 @@
       });
     };
     t.prototype.cloneItemIntoDummy = function (e, t) {
-      var n = e.cloneNode(!0);
+      var n = e.cloneNode(true);
       n.style.width = "";
       n.style.position = "static";
       n.style.left = "";
@@ -29025,8 +29025,8 @@
       r.appendChild(n);
       t.appendChild(r);
     };
-    Gl([pe("rowRenderer")], t.prototype, "rowRenderer", void 0);
-    Gl([pe("controllersService")], t.prototype, "controllersService", void 0);
+    Gl([pe("rowRenderer")], t.prototype, "rowRenderer", undefined);
+    Gl([pe("controllersService")], t.prototype, "controllersService", undefined);
     Gl([le], t.prototype, "postConstruct", null);
     return t = Gl([de("autoWidthCalculator")], t);
   }(We);
@@ -29082,7 +29082,7 @@
         onDragStop: this.onDragStop.bind(this, e),
         onDragging: this.onDragging.bind(this, e)
       };
-      this.dragService.addDragSource(n, !0);
+      this.dragService.addDragSource(n, true);
       return function () {
         return t.dragService.removeDragSource(n);
       };
@@ -29090,7 +29090,7 @@
     t.prototype.onDragStart = function (e, t) {
       this.dragStartX = t.clientX;
       this.setResizeIcons();
-      var n = t instanceof MouseEvent && !0 === t.shiftKey;
+      var n = t instanceof MouseEvent && true === t.shiftKey;
       e.onResizeStart(n);
     };
     t.prototype.setResizeIcons = function () {
@@ -29114,8 +29114,8 @@
       this.resizeAmount = t.clientX - this.dragStartX;
       e.onResizing(this.resizeAmount);
     };
-    Hl([pe("dragService")], t.prototype, "dragService", void 0);
-    Hl([pe("eGridDiv")], t.prototype, "eGridDiv", void 0);
+    Hl([pe("dragService")], t.prototype, "dragService", undefined);
+    Hl([pe("eGridDiv")], t.prototype, "eGridDiv", undefined);
     return t = Hl([de("horizontalResizeService")], t);
   }(We);
   var zl = function () {
@@ -29180,10 +29180,10 @@
       this.createManagedBean(new Ic(this.view));
       this.addRtlSupport();
       this.addManagedListener(this, Ke.EVENT_KEYBOARD_FOCUS, function () {
-        r.view.addOrRemoveKeyboardFocusClass(!0);
+        r.view.addOrRemoveKeyboardFocusClass(true);
       });
       this.addManagedListener(this, Ke.EVENT_MOUSE_FOCUS, function () {
-        r.view.addOrRemoveKeyboardFocusClass(!1);
+        r.view.addOrRemoveKeyboardFocusClass(false);
       });
       var o = this.resizeObserverService.observeResize(this.eGridHostDiv, this.onGridSizeChanged.bind(this));
       this.addDestroyFunc(function () {
@@ -29234,24 +29234,24 @@
       return !!e && (e.getParent() && (e = this.columnController.getColumnGroupAtLevel(e, 0)), this.focusController.focusHeaderPosition({
         headerRowIndex: 0,
         column: e
-      }), !0);
+      }), true);
     };
     n.prototype.forceFocusOutOfContainer = function (e) {
-      if (void 0 === e) {
-        e = !1;
+      if (undefined === e) {
+        e = false;
       }
       this.view.forceFocusOutOfContainer(e);
     };
-    Yl([pe("columnApi")], n.prototype, "columnApi", void 0);
-    Yl([pe("gridApi")], n.prototype, "gridApi", void 0);
-    Yl([pe("popupService")], n.prototype, "popupService", void 0);
-    Yl([pe("focusController")], n.prototype, "focusController", void 0);
-    Yl([fe("clipboardService")], n.prototype, "clipboardService", void 0);
-    Yl([pe("loggerFactory")], n.prototype, "loggerFactory", void 0);
-    Yl([pe("resizeObserverService")], n.prototype, "resizeObserverService", void 0);
-    Yl([pe("columnController")], n.prototype, "columnController", void 0);
-    Yl([pe("controllersService")], n.prototype, "controllersService", void 0);
-    Yl([pe("mouseEventService")], n.prototype, "mouseEventService", void 0);
+    Yl([pe("columnApi")], n.prototype, "columnApi", undefined);
+    Yl([pe("gridApi")], n.prototype, "gridApi", undefined);
+    Yl([pe("popupService")], n.prototype, "popupService", undefined);
+    Yl([pe("focusController")], n.prototype, "focusController", undefined);
+    Yl([fe("clipboardService")], n.prototype, "clipboardService", undefined);
+    Yl([pe("loggerFactory")], n.prototype, "loggerFactory", undefined);
+    Yl([pe("resizeObserverService")], n.prototype, "resizeObserverService", undefined);
+    Yl([pe("columnController")], n.prototype, "columnController", undefined);
+    Yl([pe("controllersService")], n.prototype, "controllersService", undefined);
+    Yl([pe("mouseEventService")], n.prototype, "mouseEventService", undefined);
     Yl([le], n.prototype, "postConstruct", null);
     return n;
   }(We);
@@ -29295,7 +29295,7 @@
   };
   var Ql = function (e) {
     function n(t) {
-      var n = e.call(this, void 0, !0) || this;
+      var n = e.call(this, undefined, true) || this;
       n.eGridDiv = t;
       return n;
     }
@@ -29363,18 +29363,18 @@
           return this.focusController.focusInto(m(t));
         }
         var n = m(this.columnController.getAllDisplayedColumns());
-        if (this.focusController.focusGridView(n, !0)) {
-          return !0;
+        if (this.focusController.focusGridView(n, true)) {
+          return true;
         }
       }
       return this.con.focusGridHeader();
     };
     n.prototype.onTabKeyDown = function () {};
-    Xl([pe("columnController")], n.prototype, "columnController", void 0);
-    Xl([pe("loggerFactory")], n.prototype, "loggerFactory", void 0);
-    Xl([uo("gridBody")], n.prototype, "gridBodyComp", void 0);
-    Xl([uo("sideBar")], n.prototype, "sideBarComp", void 0);
-    Xl([uo("rootWrapperBody")], n.prototype, "eRootWrapperBody", void 0);
+    Xl([pe("columnController")], n.prototype, "columnController", undefined);
+    Xl([pe("loggerFactory")], n.prototype, "loggerFactory", undefined);
+    Xl([uo("gridBody")], n.prototype, "gridBodyComp", undefined);
+    Xl([uo("sideBar")], n.prototype, "sideBarComp", undefined);
+    Xl([uo("rootWrapperBody")], n.prototype, "eRootWrapperBody", undefined);
     return n;
   }(So);
   var Zl = function () {
@@ -29446,7 +29446,7 @@
           type: "columnMenu",
           eventSource: t,
           ePopup: r,
-          keepWithinBounds: !0,
+          keepWithinBounds: true,
           column: e
         });
       }, t);
@@ -29466,11 +29466,11 @@
       });
       var s = n || this.gridBodyComp.getGui();
       var c = this.popupService.addPopup({
-        modal: !0,
+        modal: true,
         eChild: a,
-        closeOnEsc: !0,
+        closeOnEsc: true,
         closedCallback: function (t) {
-          e.setMenuVisible(!1, "contextMenu");
+          e.setMenuVisible(false, "contextMenu");
           var r = t instanceof KeyboardEvent;
           if (o.tabListener) {
             o.tabListener = o.tabListener();
@@ -29499,10 +29499,10 @@
           });
         }
       });
-      e.setMenuVisible(!0, "contextMenu");
+      e.setMenuVisible(true, "contextMenu");
     };
     t.prototype.trapFocusWithin = function (e, t) {
-      if (!(e.keyCode !== _o.TAB || e.defaultPrevented || this.focusController.findNextFocusableElement(t, !1, e.shiftKey))) {
+      if (!(e.keyCode !== _o.TAB || e.defaultPrevented || this.focusController.findNextFocusableElement(t, false, e.shiftKey))) {
         e.preventDefault();
         this.focusController.focusInto(t, e.shiftKey);
       }
@@ -29510,9 +29510,9 @@
     t.prototype.isMenuEnabled = function (e) {
       return e.isFilterAllowed();
     };
-    Jl([pe("filterManager")], t.prototype, "filterManager", void 0);
-    Jl([pe("popupService")], t.prototype, "popupService", void 0);
-    Jl([pe("focusController")], t.prototype, "focusController", void 0);
+    Jl([pe("filterManager")], t.prototype, "filterManager", undefined);
+    Jl([pe("popupService")], t.prototype, "popupService", undefined);
+    Jl([pe("focusController")], t.prototype, "focusController", undefined);
     return t = Jl([de("menuFactory")], t);
   }(We);
   var eu = function () {
@@ -29575,7 +29575,7 @@
       if (e.touchEnabled) {
         var r = e.touchStartListener;
         t.removeEventListener("touchstart", r, {
-          passive: !0
+          passive: true
         });
       }
     };
@@ -29598,8 +29598,8 @@
       return this.dragging;
     };
     t.prototype.addDragSource = function (e, t) {
-      if (void 0 === t) {
-        t = !1;
+      if (undefined === t) {
+        t = false;
       }
       var n = this.onMouseDown.bind(this, e);
       e.eElement.addEventListener("mousedown", n);
@@ -29608,7 +29608,7 @@
       if (t && !o) {
         r = this.onTouchStart.bind(this, e);
         e.eElement.addEventListener("touchstart", r, {
-          passive: !0
+          passive: true
         });
       }
       this.dragSources.push({
@@ -29621,7 +29621,7 @@
     t.prototype.onTouchStart = function (e, t) {
       var n = this;
       this.currentDragParams = e;
-      this.dragging = !1;
+      this.dragging = false;
       var r = t.touches[0];
       this.touchLastTime = r;
       this.touchStart = r;
@@ -29638,7 +29638,7 @@
           }
         },
         options: {
-          passive: !1
+          passive: false
         }
       }, {
         target: i,
@@ -29647,21 +29647,21 @@
           return n.onTouchMove(t, e.eElement);
         },
         options: {
-          passive: !0
+          passive: true
         }
       }, {
         target: i,
         type: "touchend",
         listener: o,
         options: {
-          passive: !0
+          passive: true
         }
       }, {
         target: i,
         type: "touchcancel",
         listener: o,
         options: {
-          passive: !0
+          passive: true
         }
       }];
       this.addTemporaryEvents(a);
@@ -29672,12 +29672,12 @@
     t.prototype.onMouseDown = function (e, t) {
       var n = this;
       var r = t;
-      if ((!e.skipMouseEvent || !e.skipMouseEvent(t)) && !r._alreadyProcessedByDragService && (r._alreadyProcessedByDragService = !0, 0 === t.button)) {
+      if ((!e.skipMouseEvent || !e.skipMouseEvent(t)) && !r._alreadyProcessedByDragService && (r._alreadyProcessedByDragService = true, 0 === t.button)) {
         this.currentDragParams = e;
-        this.dragging = !1;
+        this.dragging = false;
         this.mouseStartEvent = t;
         var o = this.gridOptionsWrapper.getDocument();
-        this.setNoSelectToBody(!0);
+        this.setNoSelectToBody(true);
         var i = [{
           target: o,
           type: "mousemove",
@@ -29738,7 +29738,7 @@
         if (!this.dragging && this.isEventNearStartEvent(e, t)) {
           return;
         }
-        this.dragging = !0;
+        this.dragging = true;
         var r = {
           type: Ke.EVENT_DRAG_STARTED,
           api: this.gridApi,
@@ -29772,7 +29772,7 @@
     };
     t.prototype.onUpCommon = function (e, t) {
       if (this.dragging) {
-        this.dragging = !1;
+        this.dragging = false;
         this.currentDragParams.onDragStop(e);
         var n = {
           type: Ke.EVENT_DRAG_STOPPED,
@@ -29782,7 +29782,7 @@
         };
         this.eventService.dispatchEvent(n);
       }
-      this.setNoSelectToBody(!1);
+      this.setNoSelectToBody(false);
       this.mouseStartEvent = null;
       this.touchStart = null;
       this.touchLastTime = null;
@@ -29792,9 +29792,9 @@
       });
       this.dragEndFunctions.length = 0;
     };
-    tu([pe("loggerFactory")], t.prototype, "loggerFactory", void 0);
-    tu([pe("columnApi")], t.prototype, "columnApi", void 0);
-    tu([pe("gridApi")], t.prototype, "gridApi", void 0);
+    tu([pe("loggerFactory")], t.prototype, "loggerFactory", undefined);
+    tu([pe("columnApi")], t.prototype, "columnApi", undefined);
+    tu([pe("gridApi")], t.prototype, "gridApi", undefined);
     tu([le], t.prototype, "init", null);
     tu([ue], t.prototype, "removeAllListeners", null);
     return t = tu([de("dragService")], t);
@@ -29845,14 +29845,14 @@
     ru(t, e);
     n = t;
     t.prototype.progressSort = function (e, t, n) {
-      if (void 0 === n) {
+      if (undefined === n) {
         n = "api";
       }
       var r = this.getNextSortDirection(e);
       this.setSortForColumn(e, r, t, n);
     };
     t.prototype.setSortForColumn = function (e, t, n, r) {
-      if (void 0 === r) {
+      if (undefined === r) {
         r = "api";
       }
       if (t !== Ee.SORT_ASC && t !== Ee.SORT_DESC) {
@@ -29903,7 +29903,7 @@
     t.prototype.clearSortBarThisColumn = function (e, t) {
       this.columnController.getPrimaryAndSecondaryAndAutoColumns().forEach(function (n) {
         if (n !== e) {
-          n.setSort(void 0, t);
+          n.setSort(undefined, t);
         }
       });
     };
@@ -29954,9 +29954,9 @@
       });
     };
     t.DEFAULT_SORTING_ORDER = [Ee.SORT_ASC, Ee.SORT_DESC, null];
-    ou([pe("columnController")], t.prototype, "columnController", void 0);
-    ou([pe("columnApi")], t.prototype, "columnApi", void 0);
-    ou([pe("gridApi")], t.prototype, "gridApi", void 0);
+    ou([pe("columnController")], t.prototype, "columnController", undefined);
+    ou([pe("columnApi")], t.prototype, "columnApi", undefined);
+    ou([pe("gridApi")], t.prototype, "gridApi", undefined);
     return t = n = ou([de("sortController")], t);
   }(We);
   var au = function () {
@@ -30023,7 +30023,7 @@
         }
         t = t.parentElement;
       }
-      return !1;
+      return false;
     };
     t.prototype.getCellPositionForEvent = function (e) {
       var t = this.getRenderedCellForEvent(e);
@@ -30054,7 +30054,7 @@
     };
     t.gridInstanceSequence = new Xr();
     t.GRID_DOM_KEY = "__ag_grid_instance";
-    su([pe("controllersService")], t.prototype, "controllersService", void 0);
+    su([pe("controllersService")], t.prototype, "controllersService", undefined);
     return t = n = su([de("mouseEventService")], t);
   }(We);
   var lu = function () {
@@ -30101,7 +30101,7 @@
     }
     lu(t, e);
     t.prototype.getNextCellToFocus = function (e, t) {
-      for (var n = t, r = !1; !r;) {
+      for (var n = t, r = false; !r;) {
         switch (e) {
           case _o.UP:
             n = this.getCellAbove(n);
@@ -30289,10 +30289,10 @@
         rowPinned: r
       };
     };
-    uu([pe("columnController")], t.prototype, "columnController", void 0);
-    uu([pe("rowModel")], t.prototype, "rowModel", void 0);
-    uu([pe("pinnedRowModel")], t.prototype, "pinnedRowModel", void 0);
-    uu([pe("paginationProxy")], t.prototype, "paginationProxy", void 0);
+    uu([pe("columnController")], t.prototype, "columnController", undefined);
+    uu([pe("rowModel")], t.prototype, "rowModel", undefined);
+    uu([pe("pinnedRowModel")], t.prototype, "pinnedRowModel", undefined);
+    uu([pe("paginationProxy")], t.prototype, "paginationProxy", undefined);
     return t = uu([de("cellNavigationService")], t);
   }(We);
   var pu = function () {
@@ -30339,8 +30339,8 @@
     }
     pu(t, e);
     t.prototype.formatValue = function (e, t, n, r, o, i) {
-      if (void 0 === i) {
-        i = !0;
+      if (undefined === i) {
+        i = true;
       }
       var a;
       var s = null;
@@ -30373,7 +30373,7 @@
       }
       return s;
     };
-    fu([pe("expressionService")], t.prototype, "expressionService", void 0);
+    fu([pe("expressionService")], t.prototype, "expressionService", undefined);
     return t = fu([de("valueFormatterService")], t);
   }(We);
   var mu = function () {
@@ -30406,7 +30406,7 @@
     };
     t.prototype.toggle = function () {
       if (!this.isSelected()) {
-        this.setValue(!0);
+        this.setValue(true);
       }
     };
     t.prototype.addInputListeners = function () {
@@ -30415,7 +30415,7 @@
     };
     t.prototype.onChange = function (e) {
       if (e.selected && e.name && this.eInput.name && this.eInput.name === e.name && e.id && this.eInput.id !== e.id) {
-        this.setValue(!1, !0);
+        this.setValue(false, true);
       }
     };
     return t;
@@ -30520,9 +30520,9 @@
     t.prototype.isVerticalScrollShowing = function () {
       return this.verticalScrollShowing;
     };
-    yu([pe("columnApi")], t.prototype, "columnApi", void 0);
-    yu([pe("gridApi")], t.prototype, "gridApi", void 0);
-    yu([pe("controllersService")], t.prototype, "controllersService", void 0);
+    yu([pe("columnApi")], t.prototype, "columnApi", undefined);
+    yu([pe("gridApi")], t.prototype, "gridApi", undefined);
+    yu([pe("controllersService")], t.prototype, "controllersService", undefined);
     yu([le], t.prototype, "postConstruct", null);
     return t = yu([de("scrollVisibleService")], t);
   }(We);
@@ -30578,7 +30578,7 @@
         for (var o = Object.keys(e), i = 0; i < o.length; i++) {
           var a = o[i];
           var s = e[a];
-          var c = void 0;
+          var c = undefined;
           if ("string" === typeof s) {
             c = this.expressionService.evaluate(s, t);
           } else {
@@ -30598,7 +30598,7 @@
     };
     t.prototype.processStaticCellClasses = function (e, t, n) {
       if (e.cellClass) {
-        var r = void 0;
+        var r = undefined;
         if ("function" === typeof e.cellClass) {
           r = (0, e.cellClass)(t);
         } else {
@@ -30615,7 +30615,7 @@
         }
       }
     };
-    wu([pe("expressionService")], t.prototype, "expressionService", void 0);
+    wu([pe("expressionService")], t.prototype, "expressionService", undefined);
     return t = wu([de("stylingService")], t);
   }(We);
   var Tu = function () {
@@ -30682,8 +30682,8 @@
     t.prototype.isHovered = function (e) {
       return !!this.selectedColumns && this.selectedColumns.indexOf(e) >= 0;
     };
-    Su([pe("columnApi")], t.prototype, "columnApi", void 0);
-    Su([pe("gridApi")], t.prototype, "gridApi", void 0);
+    Su([pe("columnApi")], t.prototype, "columnApi", undefined);
+    Su([pe("gridApi")], t.prototype, "gridApi", undefined);
     return t = Su([de("columnHoverService")], t);
   }(We);
   var Au = function () {
@@ -30729,7 +30729,7 @@
       var t = null !== e && e.apply(this, arguments) || this;
       t.executeNextFuncs = [];
       t.executeLaterFuncs = [];
-      t.active = !1;
+      t.active = false;
       t.animationThreadCount = 0;
       return t;
     }
@@ -30746,13 +30746,13 @@
     t.prototype.start = function () {
       if (!(this.active || this.gridOptionsWrapper.isSuppressColumnMoveAnimation() || this.gridOptionsWrapper.isEnableRtl())) {
         this.ensureAnimationCssClassPresent();
-        this.active = !0;
+        this.active = true;
       }
     };
     t.prototype.finish = function () {
       if (this.active) {
         this.flush();
-        this.active = !1;
+        this.active = false;
       }
     };
     t.prototype.executeNextVMTurn = function (e) {
@@ -30773,10 +30773,10 @@
       var e = this;
       this.animationThreadCount++;
       var t = this.animationThreadCount;
-      this.gridBodyCon.setColumnMovingCss(!0);
+      this.gridBodyCon.setColumnMovingCss(true);
       this.executeLaterFuncs.push(function () {
         if (e.animationThreadCount === t) {
-          e.gridBodyCon.setColumnMovingCss(!1);
+          e.gridBodyCon.setColumnMovingCss(false);
         }
       });
     };
@@ -30798,7 +30798,7 @@
         }, 300);
       }
     };
-    ju([pe("controllersService")], t.prototype, "controllersService", void 0);
+    ju([pe("controllersService")], t.prototype, "controllersService", undefined);
     ju([le], t.prototype, "postConstruct", null);
     return t = ju([de("columnAnimationService")], t);
   }(We);
@@ -30854,7 +30854,7 @@
       var o = this.gridOptionsWrapper.isGroupMultiAutoColumn();
       if (r && o) {
         console.warn("AG Grid: you cannot mix groupMultiAutoColumn with treeData, only one column can be used to display groups when doing tree data");
-        o = !1;
+        o = false;
       }
       if (o) {
         e.forEach(function (e, r) {
@@ -30870,13 +30870,13 @@
       var i = this.generateDefaultColDef(e);
       if (!(r = e ? Ee.GROUP_AUTO_COLUMN_ID + "-" + e.getId() : n.GROUP_AUTO_COLUMN_BUNDLE_ID, F(i, this.gridOptionsWrapper.getAutoGroupColumnDef()), (i = this.columnFactory.mergeColDefs(i)).colId = r, this.gridOptionsWrapper.isTreeData())) {
         if (o(i.field) && o(i.valueGetter) && o(i.filterValueGetter)) {
-          i.filter = !1;
+          i.filter = false;
         }
       }
       if (t && t > 0) {
-        i.headerCheckboxSelection = !1;
+        i.headerCheckboxSelection = false;
       }
-      var a = new Ce(i, null, r, !0);
+      var a = new Ce(i, null, r, true);
       this.context.createBean(a);
       return a;
     };
@@ -30904,13 +30904,13 @@
         }
         n.showRowGroup = e.getColId();
       } else {
-        n.showRowGroup = !0;
+        n.showRowGroup = true;
       }
       return n;
     };
     t.GROUP_AUTO_COLUMN_BUNDLE_ID = Ee.GROUP_AUTO_COLUMN_ID;
-    ku([pe("columnController")], t.prototype, "columnController", void 0);
-    ku([pe("columnFactory")], t.prototype, "columnFactory", void 0);
+    ku([pe("columnController")], t.prototype, "columnController", undefined);
+    ku([pe("columnFactory")], t.prototype, "columnFactory", undefined);
     return t = n = ku([de("autoGroupColService")], t);
   }(We);
   var Du = function () {
@@ -30993,10 +30993,10 @@
       this.calculatePages();
       var e = {
         type: Ke.EVENT_PAGINATION_CHANGED,
-        animate: !1,
-        newData: !1,
-        newPage: !1,
-        keepRenderedRows: !0,
+        animate: false,
+        newData: false,
+        newPage: false,
+        keepRenderedRows: true,
         api: this.gridApi,
         columnApi: this.columnApi
       };
@@ -31007,10 +31007,10 @@
         this.currentPage = e;
         var t = {
           type: Ke.EVENT_MODEL_UPDATED,
-          animate: !1,
-          keepRenderedRows: !1,
-          newData: !1,
-          newPage: !0,
+          animate: false,
+          keepRenderedRows: false,
+          newData: false,
+          newPage: true,
           api: this.gridApi,
           columnApi: this.columnApi
         };
@@ -31207,9 +31207,9 @@
       this.topDisplayedRowIndex = 0;
       this.bottomDisplayedRowIndex = this.rowModel.getRowCount() - 1;
     };
-    Mu([pe("rowModel")], t.prototype, "rowModel", void 0);
-    Mu([pe("columnApi")], t.prototype, "columnApi", void 0);
-    Mu([pe("gridApi")], t.prototype, "gridApi", void 0);
+    Mu([pe("rowModel")], t.prototype, "rowModel", undefined);
+    Mu([pe("columnApi")], t.prototype, "columnApi", undefined);
+    Mu([pe("gridApi")], t.prototype, "gridApi", undefined);
     Mu([le], t.prototype, "postConstruct", null);
     return t = Mu([de("paginationProxy")], t);
   }(We);
@@ -31284,7 +31284,7 @@
         }
       }
     };
-    Bu([pe("controllersService")], t.prototype, "controllersService", void 0);
+    Bu([pe("controllersService")], t.prototype, "controllersService", undefined);
     Bu([le], t.prototype, "postConstruct", null);
     return t = Bu([de("paginationAutoPageSizeService")], t);
   }(We);
@@ -31427,8 +31427,8 @@
         this.rowRenderer.refreshCells();
       }
     };
-    Vu([pe("rowModel")], t.prototype, "rowModel", void 0);
-    Vu([pe("rowRenderer")], t.prototype, "rowRenderer", void 0);
+    Vu([pe("rowModel")], t.prototype, "rowModel", undefined);
+    Vu([pe("rowRenderer")], t.prototype, "rowRenderer", undefined);
     Vu([le], t.prototype, "init", null);
     return t = Vu([de("changeDetectionService")], t);
   }(We);
@@ -31478,7 +31478,7 @@
   var Xu = function (e) {
     function t() {
       var t = null !== e && e.apply(this, arguments) || this;
-      t.consuming = !1;
+      t.consuming = false;
       return t;
     }
     Yu(t, e);
@@ -31507,9 +31507,9 @@
       }
     };
     t.prototype.onEvent = function (e) {
-      this.consuming = !0;
+      this.consuming = true;
       e();
-      this.consuming = !1;
+      this.consuming = false;
     };
     t.prototype.fireColumnEvent = function (e) {
       this.fireEvent(function (t) {
@@ -31606,7 +31606,7 @@
               });
             this.columnController.applyColumnState({
               state: a,
-              applyOrder: !0
+              applyOrder: true
             }, "alignedGridChanged");
             this.logger.log("onColumnEvent-> processing " + e.type + " toIndex = " + i.toIndex);
             break;
@@ -31644,7 +31644,7 @@
                 key: n.getColId(),
                 newWidth: n.getActualWidth()
               }];
-              t.columnController.setColumnWidths(r, !1, l.finished, "alignedGridChanged");
+              t.columnController.setColumnWidths(r, false, l.finished, "alignedGridChanged");
             });
         }
         var u = this.controllersService.getGridBodyController().isVerticalScrollShowing();
@@ -31658,8 +31658,8 @@
         }
       }
     };
-    Ku([pe("columnController")], t.prototype, "columnController", void 0);
-    Ku([pe("controllersService")], t.prototype, "controllersService", void 0);
+    Ku([pe("columnController")], t.prototype, "columnController", undefined);
+    Ku([pe("controllersService")], t.prototype, "controllersService", undefined);
     Ku([qu(0, me("loggerFactory"))], t.prototype, "setBeans", null);
     Ku([le], t.prototype, "init", null);
     return t = Ku([de("alignedGridsService")], t);
@@ -31728,7 +31728,7 @@
       return function () {
         function t() {}
         t.prototype.refresh = function (e) {
-          return !1;
+          return false;
         };
         t.prototype.getGui = function () {
           var t = e(this.params);
@@ -31744,7 +31744,7 @@
     t.prototype.doesImplementIComponent = function (e) {
       return !!e && e.prototype && "getGui" in e.prototype;
     };
-    Zu([pe("componentMetadataProvider")], t.prototype, "componentMetadataProvider", void 0);
+    Zu([pe("componentMetadataProvider")], t.prototype, "componentMetadataProvider", undefined);
     return t = Zu([de("agComponentUtils")], t);
   }(We);
   var $u = function () {
@@ -31882,7 +31882,7 @@
     t.prototype.retrieve = function (e) {
       return this.componentMetaData[e];
     };
-    ed([pe("agComponentUtils")], t.prototype, "agComponentUtils", void 0);
+    ed([pe("agComponentUtils")], t.prototype, "agComponentUtils", undefined);
     ed([le], t.prototype, "postConstruct", null);
     return t = ed([de("componentMetadataProvider")], t);
   }(We);
@@ -31918,43 +31918,43 @@
         this.serverSideRowModel = this.rowModel;
       }
     };
-    nd([pe("resizeObserverService")], e.prototype, "resizeObserverService", void 0);
-    nd([pe("paginationProxy")], e.prototype, "paginationProxy", void 0);
-    nd([pe("context")], e.prototype, "context", void 0);
-    nd([pe("columnApi")], e.prototype, "columnApi", void 0);
-    nd([pe("gridApi")], e.prototype, "gridApi", void 0);
-    nd([pe("gridOptionsWrapper")], e.prototype, "gridOptionsWrapper", void 0);
-    nd([pe("expressionService")], e.prototype, "expressionService", void 0);
-    nd([pe("rowRenderer")], e.prototype, "rowRenderer", void 0);
-    nd([pe("$compile")], e.prototype, "$compile", void 0);
-    nd([pe("templateService")], e.prototype, "templateService", void 0);
-    nd([pe("valueService")], e.prototype, "valueService", void 0);
-    nd([pe("eventService")], e.prototype, "eventService", void 0);
-    nd([pe("columnController")], e.prototype, "columnController", void 0);
-    nd([pe("headerNavigationService")], e.prototype, "headerNavigationService", void 0);
-    nd([pe("columnAnimationService")], e.prototype, "columnAnimationService", void 0);
-    nd([fe("rangeController")], e.prototype, "rangeController", void 0);
-    nd([pe("focusController")], e.prototype, "focusController", void 0);
-    nd([fe("contextMenuFactory")], e.prototype, "contextMenuFactory", void 0);
-    nd([pe("popupService")], e.prototype, "popupService", void 0);
-    nd([pe("valueFormatterService")], e.prototype, "valueFormatterService", void 0);
-    nd([pe("stylingService")], e.prototype, "stylingService", void 0);
-    nd([pe("columnHoverService")], e.prototype, "columnHoverService", void 0);
-    nd([pe("userComponentFactory")], e.prototype, "userComponentFactory", void 0);
-    nd([pe("animationFrameService")], e.prototype, "taskQueue", void 0);
-    nd([pe("dragAndDropService")], e.prototype, "dragAndDropService", void 0);
-    nd([pe("sortController")], e.prototype, "sortController", void 0);
-    nd([pe("filterManager")], e.prototype, "filterManager", void 0);
-    nd([pe("rowContainerHeightService")], e.prototype, "rowContainerHeightService", void 0);
-    nd([pe("frameworkOverrides")], e.prototype, "frameworkOverrides", void 0);
-    nd([pe("detailRowCompCache")], e.prototype, "detailRowCompCache", void 0);
-    nd([pe("cellPositionUtils")], e.prototype, "cellPositionUtils", void 0);
-    nd([pe("rowPositionUtils")], e.prototype, "rowPositionUtils", void 0);
-    nd([pe("selectionController")], e.prototype, "selectionController", void 0);
-    nd([fe("selectionHandleFactory")], e.prototype, "selectionHandleFactory", void 0);
-    nd([pe("rowCssClassCalculator")], e.prototype, "rowCssClassCalculator", void 0);
-    nd([pe("rowModel")], e.prototype, "rowModel", void 0);
-    nd([pe("controllersService")], e.prototype, "controllersService", void 0);
+    nd([pe("resizeObserverService")], e.prototype, "resizeObserverService", undefined);
+    nd([pe("paginationProxy")], e.prototype, "paginationProxy", undefined);
+    nd([pe("context")], e.prototype, "context", undefined);
+    nd([pe("columnApi")], e.prototype, "columnApi", undefined);
+    nd([pe("gridApi")], e.prototype, "gridApi", undefined);
+    nd([pe("gridOptionsWrapper")], e.prototype, "gridOptionsWrapper", undefined);
+    nd([pe("expressionService")], e.prototype, "expressionService", undefined);
+    nd([pe("rowRenderer")], e.prototype, "rowRenderer", undefined);
+    nd([pe("$compile")], e.prototype, "$compile", undefined);
+    nd([pe("templateService")], e.prototype, "templateService", undefined);
+    nd([pe("valueService")], e.prototype, "valueService", undefined);
+    nd([pe("eventService")], e.prototype, "eventService", undefined);
+    nd([pe("columnController")], e.prototype, "columnController", undefined);
+    nd([pe("headerNavigationService")], e.prototype, "headerNavigationService", undefined);
+    nd([pe("columnAnimationService")], e.prototype, "columnAnimationService", undefined);
+    nd([fe("rangeController")], e.prototype, "rangeController", undefined);
+    nd([pe("focusController")], e.prototype, "focusController", undefined);
+    nd([fe("contextMenuFactory")], e.prototype, "contextMenuFactory", undefined);
+    nd([pe("popupService")], e.prototype, "popupService", undefined);
+    nd([pe("valueFormatterService")], e.prototype, "valueFormatterService", undefined);
+    nd([pe("stylingService")], e.prototype, "stylingService", undefined);
+    nd([pe("columnHoverService")], e.prototype, "columnHoverService", undefined);
+    nd([pe("userComponentFactory")], e.prototype, "userComponentFactory", undefined);
+    nd([pe("animationFrameService")], e.prototype, "taskQueue", undefined);
+    nd([pe("dragAndDropService")], e.prototype, "dragAndDropService", undefined);
+    nd([pe("sortController")], e.prototype, "sortController", undefined);
+    nd([pe("filterManager")], e.prototype, "filterManager", undefined);
+    nd([pe("rowContainerHeightService")], e.prototype, "rowContainerHeightService", undefined);
+    nd([pe("frameworkOverrides")], e.prototype, "frameworkOverrides", undefined);
+    nd([pe("detailRowCompCache")], e.prototype, "detailRowCompCache", undefined);
+    nd([pe("cellPositionUtils")], e.prototype, "cellPositionUtils", undefined);
+    nd([pe("rowPositionUtils")], e.prototype, "rowPositionUtils", undefined);
+    nd([pe("selectionController")], e.prototype, "selectionController", undefined);
+    nd([fe("selectionHandleFactory")], e.prototype, "selectionHandleFactory", undefined);
+    nd([pe("rowCssClassCalculator")], e.prototype, "rowCssClassCalculator", undefined);
+    nd([pe("rowModel")], e.prototype, "rowModel", undefined);
+    nd([pe("controllersService")], e.prototype, "controllersService", undefined);
     nd([le], e.prototype, "postConstruct", null);
     return e = nd([de("beans")], e);
   }();
@@ -32082,13 +32082,13 @@
     };
     t.prototype.getTheme = function () {
       for (var e = /\bag-(material|(?:theme-([\w\-]*)))\b/, t = this.eGridDiv, n = null; t && !(n = e.exec(t.className));) {
-        t = t.parentElement || void 0;
+        t = t.parentElement || undefined;
       }
       if (!n) {
         return {};
       }
       var r = n[0];
-      if (void 0 === n[2]) {
+      if (undefined === n[2]) {
         var o = r.replace("ag-", "ag-theme-");
         X(function () {
           return console.warn("AG Grid: As of v19 old theme are no longer provided. Please replace " + r + " with " + o + ".");
@@ -32100,7 +32100,7 @@
         themeFamily: r.replace(/-dark$/, "")
       };
     };
-    id([pe("eGridDiv")], t.prototype, "eGridDiv", void 0);
+    id([pe("eGridDiv")], t.prototype, "eGridDiv", undefined);
     return t = id([de("environment")], t);
   }(We);
   var ud = function () {
@@ -32146,15 +32146,15 @@
       var t = null !== e && e.apply(this, arguments) || this;
       t.createTasksP1 = {
         list: [],
-        sorted: !1
+        sorted: false
       };
       t.createTasksP2 = {
         list: [],
-        sorted: !1
+        sorted: false
       };
       t.destroyTasks = [];
-      t.ticking = !1;
-      t.scrollGoingDown = !0;
+      t.ticking = false;
+      t.scrollGoingDown = true;
       t.lastScrollTop = 0;
       t.taskCount = 0;
       t.cancelledTasks = new Set();
@@ -32169,7 +32169,7 @@
       this.useAnimationFrame = !this.gridOptionsWrapper.isSuppressAnimationFrame();
     };
     t.prototype.verifyAnimationFrameOn = function (e) {
-      if (!1 === this.useAnimationFrame) {
+      if (false === this.useAnimationFrame) {
         console.warn("AG Grid: AnimationFrameService." + e + " called but animation frames are off");
       }
     };
@@ -32188,7 +32188,7 @@
     };
     t.prototype.addTaskToList = function (e, t) {
       e.list.push(t);
-      e.sorted = !1;
+      e.sorted = false;
     };
     t.prototype.sortTaskList = function (e) {
       if (!e.sorted) {
@@ -32196,7 +32196,7 @@
         e.list.sort(function (e, n) {
           return e.index !== n.index ? t * (n.index - e.index) : n.createOrder - e.createOrder;
         });
-        e.sorted = !0;
+        e.sorted = true;
       }
     };
     t.prototype.addDestroyTask = function (e) {
@@ -32208,7 +32208,7 @@
       this.verifyAnimationFrameOn("executeFrame");
       for (var t = this.createTasksP1, n = t.list, r = this.createTasksP2, o = r.list, i = this.destroyTasks, a = new Date().getTime(), s = new Date().getTime() - a, c = e <= 0, l = this.controllersService.getGridBodyController(); c || s < e;) {
         if (!l.getScrollFeature().executeAnimationFrameScroll()) {
-          var u = void 0;
+          var u = undefined;
           if (n.length) {
             this.sortTaskList(t);
             u = n.pop().task;
@@ -32235,7 +32235,7 @@
       }
     };
     t.prototype.stopTicking = function () {
-      this.ticking = !1;
+      this.ticking = false;
       var e = {
         type: Ke.EVENT_ANIMATION_QUEUE_EMPTY,
         columnApi: this.gridOptionsWrapper.getColumnApi(),
@@ -32251,7 +32251,7 @@
     t.prototype.schedule = function () {
       if (this.useAnimationFrame) {
         if (!this.ticking) {
-          this.ticking = !0;
+          this.ticking = true;
           this.requestFrame();
         }
       }
@@ -32271,7 +32271,7 @@
     t.prototype.isQueueEmpty = function () {
       return !this.ticking;
     };
-    dd([pe("controllersService")], t.prototype, "controllersService", void 0);
+    dd([pe("controllersService")], t.prototype, "controllersService", undefined);
     dd([le], t.prototype, "init", null);
     return t = dd([de("animationFrameService")], t);
   }(We);
@@ -32332,41 +32332,41 @@
       var r = e.ctrlKey || e.metaKey;
       var o = this.mouseEventService.getCellPositionForEvent(e);
       if (!o) {
-        return !1;
+        return false;
       }
-      var i = !1;
+      var i = false;
       switch (t) {
         case _o.PAGE_HOME:
         case _o.PAGE_END:
           if (!(r || n)) {
             this.onHomeOrEndKey(t);
-            i = !0;
+            i = true;
           }
           break;
         case _o.LEFT:
         case _o.RIGHT:
           if (r && !n) {
             this.onCtrlLeftOrRight(t, o);
-            i = !0;
+            i = true;
           }
           break;
         case _o.UP:
         case _o.DOWN:
           if (r && !n) {
             this.onCtrlUpOrDown(t, o);
-            i = !0;
+            i = true;
           }
           break;
         case _o.PAGE_DOWN:
           if (!(r || n)) {
             this.onPageDown(o);
-            i = !0;
+            i = true;
           }
           break;
         case _o.PAGE_UP:
           if (!(r || n)) {
             this.onPageUp(o);
-            i = !0;
+            i = true;
           }
       }
       if (i) {
@@ -32393,7 +32393,7 @@
         this.gridBodyCon.getScrollFeature().ensureIndexVisible(t, n);
       }
       this.animationFrameService.flushAllFrames();
-      this.focusController.setFocusedCell(i, a, null, !0);
+      this.focusController.setFocusedCell(i, a, null, true);
       if (this.rangeController) {
         var s = {
           rowIndex: i,
@@ -32510,13 +32510,13 @@
         focusColumn: r
       });
     };
-    hd([pe("mouseEventService")], t.prototype, "mouseEventService", void 0);
-    hd([pe("paginationProxy")], t.prototype, "paginationProxy", void 0);
-    hd([pe("focusController")], t.prototype, "focusController", void 0);
-    hd([pe("animationFrameService")], t.prototype, "animationFrameService", void 0);
-    hd([fe("rangeController")], t.prototype, "rangeController", void 0);
-    hd([pe("columnController")], t.prototype, "columnController", void 0);
-    hd([pe("controllersService")], t.prototype, "controllersService", void 0);
+    hd([pe("mouseEventService")], t.prototype, "mouseEventService", undefined);
+    hd([pe("paginationProxy")], t.prototype, "paginationProxy", undefined);
+    hd([pe("focusController")], t.prototype, "focusController", undefined);
+    hd([pe("animationFrameService")], t.prototype, "animationFrameService", undefined);
+    hd([fe("rangeController")], t.prototype, "rangeController", undefined);
+    hd([pe("columnController")], t.prototype, "columnController", undefined);
+    hd([pe("controllersService")], t.prototype, "controllersService", undefined);
     hd([le], t.prototype, "postConstruct", null);
     return t = hd([de("navigationService")], t);
   }(We);
@@ -32653,7 +32653,7 @@
       var t = e / (this.modelHeight - this.getUiBodyHeight());
       return this.maxScrollY * t;
     };
-    _d([pe("controllersService")], t.prototype, "controllersService", void 0);
+    _d([pe("controllersService")], t.prototype, "controllersService", undefined);
     _d([vd(0, me("loggerFactory"))], t.prototype, "agWire", null);
     _d([le], t.prototype, "postConstruct", null);
     return t = _d([de("rowContainerHeightService")], t);
@@ -32729,7 +32729,7 @@
               n.recurseDown(t(e), t);
             }
             if (n.groupSelectsChildren) {
-              o = r(u(t(e), "selectable", !0));
+              o = r(u(t(e), "selectable", true));
             } else {
               o = !!n.isRowSelectableFunc && n.isRowSelectableFunc(e);
             }
@@ -32797,15 +32797,15 @@
       var r = this.centerRowContainerCon.getContainerElement();
       r.appendChild(n);
       var o = Ua.createChildScopeOrNull(e, this.$scope, this.beans.gridOptionsWrapper);
-      var i = o ? o.scope : void 0;
-      var a = o ? o.scopeDestroyFunc : void 0;
+      var i = o ? o.scope : undefined;
+      var a = o ? o.scopeDestroyFunc : undefined;
       var s = [];
       var c = this.columnController.getAllAutoRowHeightCols();
       var l = this.columnController.getAllDisplayedColumns();
       c.filter(function (e) {
         return l.indexOf(e) >= 0;
       }).forEach(function (r) {
-        var o = new rs(i, t.beans, r, e, null, !0, !1, n, !1);
+        var o = new rs(i, t.beans, r, e, null, true, false, n, false);
         s.push(o);
       });
       s.forEach(function (e) {
@@ -32838,17 +32838,17 @@
         rowLevel: this.rowCssClassCalculator.calculateRowLevel(e),
         firstRowOnPage: n === this.beans.paginationProxy.getPageFirstRow(),
         lastRowOnPage: n === this.beans.paginationProxy.getPageLastRow(),
-        printLayout: !1,
+        printLayout: false,
         expandable: e.isExpandable()
       };
       Qt(t, this.rowCssClassCalculator.getInitialRowClasses(r).join(" "));
     };
-    Cd([pe("beans")], t.prototype, "beans", void 0);
-    Cd([pe("$scope")], t.prototype, "$scope", void 0);
-    Cd([pe("columnController")], t.prototype, "columnController", void 0);
-    Cd([pe("rowCssClassCalculator")], t.prototype, "rowCssClassCalculator", void 0);
-    Cd([pe("$compile")], t.prototype, "$compile", void 0);
-    Cd([pe("controllersService")], t.prototype, "controllersService", void 0);
+    Cd([pe("beans")], t.prototype, "beans", undefined);
+    Cd([pe("$scope")], t.prototype, "$scope", undefined);
+    Cd([pe("columnController")], t.prototype, "columnController", undefined);
+    Cd([pe("rowCssClassCalculator")], t.prototype, "rowCssClassCalculator", undefined);
+    Cd([pe("$compile")], t.prototype, "$compile", undefined);
+    Cd([pe("controllersService")], t.prototype, "controllersService", undefined);
     Cd([le], t.prototype, "postConstruct", null);
     return t = Cd([de("autoHeightCalculator")], t);
   }(We);
@@ -32893,9 +32893,9 @@
   var Ad = function (e) {
     function t() {
       var t = e.call(this) || this;
-      t.previousAndFirstButtonsDisabled = !1;
-      t.nextButtonDisabled = !1;
-      t.lastButtonDisabled = !1;
+      t.previousAndFirstButtonsDisabled = false;
+      t.nextButtonDisabled = false;
+      t.lastButtonDisabled = false;
       return t;
     }
     Sd(t, e);
@@ -32934,7 +32934,7 @@
         });
         this.onPaginationChanged();
       } else {
-        this.setDisplayed(!1);
+        this.setDisplayed(false);
       }
     };
     t.prototype.onPaginationChanged = function () {
@@ -33045,17 +33045,17 @@
         this.lbRecordCount.innerHTML = r;
       }
     };
-    Id([pe("paginationProxy")], t.prototype, "paginationProxy", void 0);
-    Id([pe("rowNodeBlockLoader")], t.prototype, "rowNodeBlockLoader", void 0);
-    Id([uo("btFirst")], t.prototype, "btFirst", void 0);
-    Id([uo("btPrevious")], t.prototype, "btPrevious", void 0);
-    Id([uo("btNext")], t.prototype, "btNext", void 0);
-    Id([uo("btLast")], t.prototype, "btLast", void 0);
-    Id([uo("lbRecordCount")], t.prototype, "lbRecordCount", void 0);
-    Id([uo("lbFirstRowOnPage")], t.prototype, "lbFirstRowOnPage", void 0);
-    Id([uo("lbLastRowOnPage")], t.prototype, "lbLastRowOnPage", void 0);
-    Id([uo("lbCurrent")], t.prototype, "lbCurrent", void 0);
-    Id([uo("lbTotal")], t.prototype, "lbTotal", void 0);
+    Id([pe("paginationProxy")], t.prototype, "paginationProxy", undefined);
+    Id([pe("rowNodeBlockLoader")], t.prototype, "rowNodeBlockLoader", undefined);
+    Id([uo("btFirst")], t.prototype, "btFirst", undefined);
+    Id([uo("btPrevious")], t.prototype, "btPrevious", undefined);
+    Id([uo("btNext")], t.prototype, "btNext", undefined);
+    Id([uo("btLast")], t.prototype, "btLast", undefined);
+    Id([uo("lbRecordCount")], t.prototype, "lbRecordCount", undefined);
+    Id([uo("lbFirstRowOnPage")], t.prototype, "lbFirstRowOnPage", undefined);
+    Id([uo("lbLastRowOnPage")], t.prototype, "lbLastRowOnPage", undefined);
+    Id([uo("lbCurrent")], t.prototype, "lbCurrent", undefined);
+    Id([uo("lbTotal")], t.prototype, "lbTotal", undefined);
     Id([le], t.prototype, "postConstruct", null);
     return t;
   }(so);
@@ -33103,7 +33103,7 @@
     }
     jd(t, e);
     t.prototype.observeResize = function (e, t, n) {
-      if (void 0 === n) {
+      if (undefined === n) {
         n = 50;
       }
       var r = this.getFrameworkOverrides();
@@ -33118,7 +33118,7 @@
       }() : function () {
         var o = bn(e);
         var i = vn(e);
-        var a = !0;
+        var a = true;
         (function s() {
           if (a) {
             var c = bn(e);
@@ -33132,7 +33132,7 @@
           }
         })();
         return function () {
-          return a = !1;
+          return a = false;
         };
       }();
     };
@@ -33183,8 +33183,8 @@
   var Dd = function (e) {
     function n() {
       var t = e.call(this, n.TEMPLATE) || this;
-      t.inProgress = !1;
-      t.destroyRequested = !1;
+      t.inProgress = false;
+      t.destroyRequested = false;
       return t;
     }
     kd(n, e);
@@ -33195,7 +33195,7 @@
     };
     n.prototype.postConstruct = function () {
       this.createManagedBean(new Ic(this));
-      this.setDisplayed(!1);
+      this.setDisplayed(false);
       this.addManagedListener(this.eventService, Ke.EVENT_ROW_DATA_CHANGED, this.onRowDataChanged.bind(this));
       this.addManagedListener(this.eventService, Ke.EVENT_ROW_DATA_UPDATED, this.onRowDataChanged.bind(this));
       this.addManagedListener(this.eventService, Ke.EVENT_NEW_COLUMNS_LOADED, this.onNewColumnsLoaded.bind(this));
@@ -33229,24 +33229,24 @@
       if (!this.inProgress) {
         this.setWrapperTypeClass(t);
         this.destroyActiveOverlay();
-        this.inProgress = !0;
+        this.inProgress = true;
         if (e) {
           e.then(function (e) {
-            n.inProgress = !1;
+            n.inProgress = false;
             n.eOverlayWrapper.appendChild(e.getGui());
             n.activeOverlay = e;
             if (n.destroyRequested) {
-              n.destroyRequested = !1;
+              n.destroyRequested = false;
               n.destroyActiveOverlay();
             }
           });
         }
-        this.setDisplayed(!0);
+        this.setDisplayed(true);
       }
     };
     n.prototype.destroyActiveOverlay = function () {
       if (this.inProgress) {
-        this.destroyRequested = !0;
+        this.destroyRequested = true;
       } else {
         if (this.activeOverlay) {
           this.activeOverlay = this.getContext().destroyBean(this.activeOverlay);
@@ -33256,7 +33256,7 @@
     };
     n.prototype.hideOverlay = function () {
       this.destroyActiveOverlay();
-      this.setDisplayed(!1);
+      this.setDisplayed(false);
     };
     n.prototype.destroy = function () {
       this.destroyActiveOverlay();
@@ -33280,11 +33280,11 @@
       }
     };
     n.TEMPLATE = "\n        <div class=\"ag-overlay\" aria-hidden=\"true\">\n            <div class=\"ag-overlay-panel\">\n                <div class=\"ag-overlay-wrapper\" ref=\"eOverlayWrapper\"></div>\n            </div>\n        </div>";
-    xd([pe("userComponentFactory")], n.prototype, "userComponentFactory", void 0);
-    xd([pe("paginationProxy")], n.prototype, "paginationProxy", void 0);
-    xd([pe("gridApi")], n.prototype, "gridApi", void 0);
-    xd([pe("columnController")], n.prototype, "columnController", void 0);
-    xd([uo("eOverlayWrapper")], n.prototype, "eOverlayWrapper", void 0);
+    xd([pe("userComponentFactory")], n.prototype, "userComponentFactory", undefined);
+    xd([pe("paginationProxy")], n.prototype, "paginationProxy", undefined);
+    xd([pe("gridApi")], n.prototype, "gridApi", undefined);
+    xd([pe("columnController")], n.prototype, "columnController", undefined);
+    xd([uo("eOverlayWrapper")], n.prototype, "eOverlayWrapper", undefined);
     xd([le], n.prototype, "postConstruct", null);
     return n;
   }(so);
@@ -33328,12 +33328,12 @@
   };
   var Pd = function (e) {
     function t(n) {
-      if (void 0 === n) {
+      if (undefined === n) {
         n = {};
       }
       var r = e.call(this, t.getTemplate(n)) || this;
-      r.suppressEnabledCheckbox = !0;
-      r.suppressOpenCloseIcons = !1;
+      r.suppressEnabledCheckbox = true;
+      r.suppressOpenCloseIcons = false;
       var o = n.title;
       var i = n.enabled;
       var a = n.items;
@@ -33390,10 +33390,10 @@
             e.toggleGroupExpand();
             break;
           case _o.RIGHT:
-            e.toggleGroupExpand(!0);
+            e.toggleGroupExpand(true);
             break;
           case _o.LEFT:
-            e.toggleGroupExpand(!1);
+            e.toggleGroupExpand(false);
         }
       });
     };
@@ -33416,7 +33416,7 @@
       return this;
     };
     t.prototype.toggleGroupExpand = function (e) {
-      return this.suppressOpenCloseIcons ? (this.expanded = !0, this.refreshChildDisplay(), tn(this.eContainer, !0), this) : (e = null != e ? e : !this.expanded, this.expanded === e || (this.expanded = e, this.refreshChildDisplay(), tn(this.eContainer, e), this.dispatchEvent({
+      return this.suppressOpenCloseIcons ? (this.expanded = true, this.refreshChildDisplay(), tn(this.eContainer, true), this) : (e = null != e ? e : !this.expanded, this.expanded === e || (this.expanded = e, this.refreshChildDisplay(), tn(this.eContainer, e), this.dispatchEvent({
         type: this.expanded ? t.EVENT_EXPANDED : t.EVENT_COLLAPSED
       })), this);
     };
@@ -33459,7 +33459,7 @@
     t.prototype.onEnableChange = function (e) {
       var t = this;
       this.cbGroupEnabled.onValueChange(function (n) {
-        t.setEnabled(n, !0);
+        t.setEnabled(n, true);
         e(n);
       });
       return this;
@@ -33473,7 +33473,7 @@
     t.prototype.hideOpenCloseIcons = function (e) {
       this.suppressOpenCloseIcons = e;
       if (e) {
-        this.toggleGroupExpand(!0);
+        this.toggleGroupExpand(true);
       }
       return this;
     };
@@ -33490,13 +33490,13 @@
     };
     t.EVENT_EXPANDED = "expanded";
     t.EVENT_COLLAPSED = "collapsed";
-    Ld([uo("eTitleBar")], t.prototype, "eTitleBar", void 0);
-    Ld([uo("eGroupOpenedIcon")], t.prototype, "eGroupOpenedIcon", void 0);
-    Ld([uo("eGroupClosedIcon")], t.prototype, "eGroupClosedIcon", void 0);
-    Ld([uo("eToolbar")], t.prototype, "eToolbar", void 0);
-    Ld([uo("cbGroupEnabled")], t.prototype, "cbGroupEnabled", void 0);
-    Ld([uo("eTitle")], t.prototype, "eTitle", void 0);
-    Ld([uo("eContainer")], t.prototype, "eContainer", void 0);
+    Ld([uo("eTitleBar")], t.prototype, "eTitleBar", undefined);
+    Ld([uo("eGroupOpenedIcon")], t.prototype, "eGroupOpenedIcon", undefined);
+    Ld([uo("eGroupClosedIcon")], t.prototype, "eGroupClosedIcon", undefined);
+    Ld([uo("eToolbar")], t.prototype, "eToolbar", undefined);
+    Ld([uo("cbGroupEnabled")], t.prototype, "cbGroupEnabled", undefined);
+    Ld([uo("eTitle")], t.prototype, "eTitle", undefined);
+    Ld([uo("eContainer")], t.prototype, "eContainer", undefined);
     Ld([le], t.prototype, "postConstruct", null);
     return t;
   }(so);
@@ -33541,8 +33541,8 @@
   var Gd = function (e) {
     function t(n) {
       var r = e.call(this, t.getTemplate(n)) || this;
-      r.closable = !0;
-      r.positioned = !1;
+      r.closable = true;
+      r.positioned = false;
       r.dragStartPosition = {
         x: 0,
         y: 0
@@ -33552,8 +33552,8 @@
         y: 0
       };
       r.size = {
-        width: void 0,
-        height: void 0
+        width: undefined,
+        height: undefined
       };
       r.config = n;
       return r;
@@ -33622,7 +33622,7 @@
             this.offsetElement(d, p);
           }
         }
-        this.positioned = !0;
+        this.positioned = true;
         this.eContentWrapper.style.height = "0";
       }
     };
@@ -33673,10 +33673,10 @@
       }
     };
     t.prototype.offsetElement = function (e, t) {
-      if (void 0 === e) {
+      if (undefined === e) {
         e = 0;
       }
-      if (void 0 === t) {
+      if (undefined === t) {
         t = 0;
       }
       var n = this.getGui();
@@ -33686,7 +33686,7 @@
         y: t,
         minWidth: this.minWidth,
         minHeight: this.minHeight,
-        keepWithinBounds: !0
+        keepWithinBounds: true
       });
       this.position.x = parseInt(n.style.left, 10);
       this.position.y = parseInt(n.style.top, 10);
@@ -33696,11 +33696,11 @@
     };
     t.prototype.setHeight = function (e) {
       var t = this.getGui();
-      var n = !1;
+      var n = false;
       if ("string" === typeof e && -1 !== e.indexOf("%")) {
         An(t, e);
         e = ln(t);
-        n = !0;
+        n = true;
       } else {
         e = Math.max(this.minHeight, e);
         var r = t.offsetParent;
@@ -33723,11 +33723,11 @@
     };
     t.prototype.setWidth = function (e) {
       var t = this.getGui();
-      var n = !1;
+      var n = false;
       if ("string" === typeof e && -1 !== e.indexOf("%")) {
         In(t, e);
         e = un(t);
-        n = !0;
+        n = true;
       } else {
         e = Math.max(this.minWidth, e);
         var r = t.offsetParent;
@@ -33815,11 +33815,11 @@
       e.prototype.destroy.call(this);
     };
     t.CLOSE_BTN_TEMPLATE = "<div class=\"ag-button\"></div>";
-    Fd([pe("popupService")], t.prototype, "popupService", void 0);
-    Fd([uo("eContentWrapper")], t.prototype, "eContentWrapper", void 0);
-    Fd([uo("eTitleBar")], t.prototype, "eTitleBar", void 0);
-    Fd([uo("eTitleBarButtons")], t.prototype, "eTitleBarButtons", void 0);
-    Fd([uo("eTitle")], t.prototype, "eTitle", void 0);
+    Fd([pe("popupService")], t.prototype, "popupService", undefined);
+    Fd([uo("eContentWrapper")], t.prototype, "eContentWrapper", undefined);
+    Fd([uo("eTitleBar")], t.prototype, "eTitleBar", undefined);
+    Fd([uo("eTitleBarButtons")], t.prototype, "eTitleBarButtons", undefined);
+    Fd([uo("eTitle")], t.prototype, "eTitle", undefined);
     Fd([le], t.prototype, "postConstruct", null);
     return t;
   }(so);
@@ -33866,13 +33866,13 @@
       var n = e.call(this, t) || this;
       n.RESIZE_TEMPLATE = "<div class=\"ag-resizer-wrapper\">\n            <div ref=\"eTopLeftResizer\" class=\"ag-resizer ag-resizer-topLeft\"></div>\n            <div ref=\"eTopResizer\" class=\"ag-resizer ag-resizer-top\"></div>\n            <div ref=\"eTopRightResizer\" class=\"ag-resizer ag-resizer-topRight\"></div>\n            <div ref=\"eRightResizer\" class=\"ag-resizer ag-resizer-right\"></div>\n            <div ref=\"eBottomRightResizer\" class=\"ag-resizer ag-resizer-bottomRight\"></div>\n            <div ref=\"eBottomResizer\" class=\"ag-resizer ag-resizer-bottom\"></div>\n            <div ref=\"eBottomLeftResizer\" class=\"ag-resizer ag-resizer-bottomLeft\"></div>\n            <div ref=\"eLeftResizer\" class=\"ag-resizer ag-resizer-left\"></div>\n        </div>";
       n.resizable = {};
-      n.movable = !1;
-      n.isMoving = !1;
-      n.isMaximizable = !1;
-      n.isMaximized = !1;
+      n.movable = false;
+      n.isMoving = false;
+      n.isMaximizable = false;
+      n.isMaximized = false;
       n.maximizeListeners = [];
       n.resizeListenerDestroy = null;
-      n.isResizing = !1;
+      n.isResizing = false;
       n.lastPosition = {
         x: 0,
         y: 0,
@@ -33916,7 +33916,7 @@
       var o = this.popupService.addPopup({
         modal: r,
         eChild: e,
-        closeOnEsc: !0,
+        closeOnEsc: true,
         closedCallback: this.destroy.bind(this),
         alwaysOnTop: n
       });
@@ -33965,7 +33965,7 @@
       return this.resizerMap[e].element;
     };
     t.prototype.onResizeStart = function (e) {
-      this.isResizing = !0;
+      this.isResizing = true;
       this.updateDragStartPosition(e.clientX, e.clientY);
     };
     t.prototype.onResize = function (e, t) {
@@ -33989,11 +33989,11 @@
           var f = n ? -1 : 1;
           var h = this.getWidth();
           var m = h + l * f;
-          var g = !1;
+          var g = false;
           if (n) {
             d = h - m;
             if (this.position.x + d <= 0 || m <= this.minWidth) {
-              g = !0;
+              g = true;
               d = 0;
             }
           }
@@ -34005,11 +34005,11 @@
           f = o ? -1 : 1;
           var _ = this.getHeight();
           var v = _ + u * f;
-          var b = !1;
+          var b = false;
           if (o) {
             p = _ - v;
             if (this.position.y + p <= 0 || v <= this.minHeight) {
-              b = !0;
+              b = true;
               p = 0;
             }
           }
@@ -34024,7 +34024,7 @@
       }
     };
     t.prototype.onResizeEnd = function () {
-      this.isResizing = !1;
+      this.isResizing = false;
       var e = {
         type: "resize",
         api: this.gridOptionsWrapper.getApi(),
@@ -34033,7 +34033,7 @@
       this.dispatchEvent(e);
     };
     t.prototype.onMoveStart = function (e) {
-      this.isMoving = !0;
+      this.isMoving = true;
       this.updateDragStartPosition(e.clientX, e.clientY);
     };
     t.prototype.onMove = function (e) {
@@ -34043,8 +34043,8 @@
         var r = t.y;
         var o = this.calculateMouseMovement({
           e: e,
-          isTop: !0,
-          anywhereWithin: !0,
+          isTop: true,
+          anywhereWithin: true,
           topBuffer: this.getHeight() - this.getBodyHeight()
         });
         var i = o.movementX;
@@ -34054,7 +34054,7 @@
       }
     };
     t.prototype.onMoveEnd = function () {
-      this.isMoving = !1;
+      this.isMoving = false;
     };
     t.prototype.toggleMaximize = function () {
       if (this.isMaximized) {
@@ -34095,8 +34095,8 @@
       }
     };
     t.prototype.destroy = function () {
-      this.setResizable(!1);
-      this.setMovable(!1);
+      this.setResizable(false);
+      this.setMovable(false);
       this.maximizeButtonComp = this.destroyBean(this.maximizeButtonComp);
       this.clearMaximizebleListeners();
       e.prototype.destroy.call(this);
@@ -34135,7 +34135,7 @@
             t.dragService.removeDragSource(a);
             i.style.pointerEvents = "none";
           }
-          t.resizerMap[r].dragSource = o ? a : void 0;
+          t.resizerMap[r].dragSource = o ? a : undefined;
         }
       });
     };
@@ -34153,7 +34153,7 @@
           this.moveElementDragListener = t;
         } else {
           this.dragService.removeDragSource(t);
-          this.moveElementDragListener = void 0;
+          this.moveElementDragListener = undefined;
         }
       }
     };
@@ -34161,7 +34161,7 @@
       var t = this;
       if (!e) {
         this.clearMaximizebleListeners();
-        return void (this.maximizeButtonComp && (this.destroyBean(this.maximizeButtonComp), this.maximizeButtonComp = this.maximizeIcon = this.minimizeIcon = void 0));
+        return void (this.maximizeButtonComp && (this.destroyBean(this.maximizeButtonComp), this.maximizeButtonComp = this.maximizeIcon = this.minimizeIcon = undefined));
       }
       var n = this.eTitleBar;
       if (n && e !== this.isMaximizable) {
@@ -34176,12 +34176,12 @@
         this.addTitleBarButton(r, 0);
         this.maximizeListeners.push(this.addManagedListener(n, "dblclick", this.toggleMaximize.bind(this)));
         this.resizeListenerDestroy = this.addManagedListener(this, "resize", function () {
-          t.isMaximized = !1;
+          t.isMaximized = false;
           t.refreshMaximizeIcon();
         });
       }
     };
-    Wd([pe("dragService")], t.prototype, "dragService", void 0);
+    Wd([pe("dragService")], t.prototype, "dragService", undefined);
     return t;
   }(Gd);
   var Vd = function () {
@@ -34206,10 +34206,10 @@
   }();
   var zd = function (e) {
     function t(t, n, r) {
-      if (void 0 === n) {
+      if (undefined === n) {
         n = "ag-text-field";
       }
-      if (void 0 === r) {
+      if (undefined === r) {
         r = "text";
       }
       return e.call(this, t, n, r) || this;
@@ -34338,12 +34338,12 @@
       var n = Es.EVENT_CHANGED;
       this.addManagedListener(this.eText, n, function () {
         var n = parseFloat(t.eText.getValue());
-        t.eSlider.setValue(n.toString(), !0);
+        t.eSlider.setValue(n.toString(), true);
         e(n || 0);
       });
       this.addManagedListener(this.eSlider, n, function () {
         var n = t.eSlider.getValue();
-        t.eText.setValue(n, !0);
+        t.eText.setValue(n, true);
         e(parseFloat(n));
       });
       return this;
@@ -34371,8 +34371,8 @@
     };
     t.prototype.setValue = function (e) {
       if (!(this.getValue() === e)) {
-        this.eText.setValue(e, !0);
-        this.eSlider.setValue(e, !0);
+        this.eText.setValue(e, true);
+        this.eSlider.setValue(e, true);
         this.dispatchEvent({
           type: Es.EVENT_CHANGED
         });
@@ -34385,9 +34385,9 @@
       return this;
     };
     t.TEMPLATE = "<div class=\"ag-slider\">\n            <label ref=\"eLabel\"></label>\n            <div class=\"ag-wrapper ag-slider-wrapper\">\n                <ag-input-range ref=\"eSlider\"></ag-input-range>\n                <ag-input-number-field ref=\"eText\"></ag-input-number-field>\n            </div>\n        </div>";
-    Xd([uo("eLabel")], t.prototype, "eLabel", void 0);
-    Xd([uo("eSlider")], t.prototype, "eSlider", void 0);
-    Xd([uo("eText")], t.prototype, "eText", void 0);
+    Xd([uo("eLabel")], t.prototype, "eLabel", undefined);
+    Xd([uo("eSlider")], t.prototype, "eSlider", undefined);
+    Xd([uo("eText")], t.prototype, "eText", undefined);
     Xd([le], t.prototype, "init", null);
     return t;
   }(bs);
@@ -34436,10 +34436,10 @@
       r.S = 1;
       r.B = 1;
       r.A = 1;
-      r.isSpectrumDragging = !1;
-      r.isSpectrumHueDragging = !1;
-      r.isSpectrumAlphaDragging = !1;
-      r.colorChanged = !1;
+      r.isSpectrumDragging = false;
+      r.isSpectrumHueDragging = false;
+      r.isSpectrumAlphaDragging = false;
+      r.colorChanged = false;
       r.picker = n.picker;
       return r;
     }
@@ -34467,7 +34467,7 @@
     };
     t.prototype.onSpectrumDraggerDown = function (e) {
       this.refreshSpectrumRect();
-      this.isSpectrumDragging = !0;
+      this.isSpectrumDragging = true;
       this.moveDragger(e);
     };
     t.prototype.onSpectrumDraggerMove = function (e) {
@@ -34477,7 +34477,7 @@
     };
     t.prototype.onSpectrumHueDown = function (e) {
       this.refreshHueRect();
-      this.isSpectrumHueDragging = !0;
+      this.isSpectrumHueDragging = true;
       this.moveHueSlider(e);
     };
     t.prototype.onSpectrumHueMove = function (e) {
@@ -34487,7 +34487,7 @@
     };
     t.prototype.onSpectrumAlphaDown = function (e) {
       this.refreshAlphaRect();
-      this.isSpectrumAlphaDragging = !0;
+      this.isSpectrumAlphaDragging = true;
       this.moveAlphaSlider(e);
     };
     t.prototype.onSpectrumAlphaMove = function (e) {
@@ -34496,9 +34496,9 @@
       }
     };
     t.prototype.onMouseUp = function () {
-      this.isSpectrumDragging = !1;
-      this.isSpectrumHueDragging = !1;
-      this.isSpectrumAlphaDragging = !1;
+      this.isSpectrumDragging = false;
+      this.isSpectrumHueDragging = false;
+      this.isSpectrumAlphaDragging = false;
     };
     t.prototype.moveDragger = function (e) {
       var t = this.spectrumValRect;
@@ -34544,7 +34544,7 @@
       var n = e.toRgbaString();
       var r = this.picker;
       if (Yn.fromString(r.getValue()).toRgbaString() !== n) {
-        this.colorChanged = !0;
+        this.colorChanged = true;
       }
       r.setValue(n);
       this.spectrumColor.style.backgroundColor = t.toRgbaString();
@@ -34614,14 +34614,14 @@
     t.maxRecentColors = 8;
     t.recentColors = [];
     t.TEMPLATE = "<div class=\"ag-color-panel\">\n            <div ref=\"spectrumColor\" class=\"ag-spectrum-color\">\n                <div class=\"ag-spectrum-sat ag-spectrum-fill\">\n                    <div ref=\"spectrumVal\" class=\"ag-spectrum-val ag-spectrum-fill\">\n                        <div ref=\"spectrumDragger\" class=\"ag-spectrum-dragger\"></div>\n                    </div>\n                </div>\n            </div>\n            <div class=\"ag-spectrum-tools\">\n                <div ref=\"spectrumHue\" class=\"ag-spectrum-hue ag-spectrum-tool\">\n                    <div class=\"ag-spectrum-hue-background\"></div>\n                    <div ref=\"spectrumHueSlider\" class=\"ag-spectrum-slider\"></div>\n                </div>\n                <div ref=\"spectrumAlpha\" class=\"ag-spectrum-alpha ag-spectrum-tool\">\n                    <div class=\"ag-spectrum-alpha-background\"></div>\n                    <div ref=\"spectrumAlphaSlider\" class=\"ag-spectrum-slider\"></div>\n                </div>\n                <div ref=\"recentColors\" class=\"ag-recent-colors\"></div>\n            </div>\n        </div>";
-    Jd([uo("spectrumColor")], t.prototype, "spectrumColor", void 0);
-    Jd([uo("spectrumVal")], t.prototype, "spectrumVal", void 0);
-    Jd([uo("spectrumDragger")], t.prototype, "spectrumDragger", void 0);
-    Jd([uo("spectrumHue")], t.prototype, "spectrumHue", void 0);
-    Jd([uo("spectrumHueSlider")], t.prototype, "spectrumHueSlider", void 0);
-    Jd([uo("spectrumAlpha")], t.prototype, "spectrumAlpha", void 0);
-    Jd([uo("spectrumAlphaSlider")], t.prototype, "spectrumAlphaSlider", void 0);
-    Jd([uo("recentColors")], t.prototype, "recentColors", void 0);
+    Jd([uo("spectrumColor")], t.prototype, "spectrumColor", undefined);
+    Jd([uo("spectrumVal")], t.prototype, "spectrumVal", undefined);
+    Jd([uo("spectrumDragger")], t.prototype, "spectrumDragger", undefined);
+    Jd([uo("spectrumHue")], t.prototype, "spectrumHue", undefined);
+    Jd([uo("spectrumHueSlider")], t.prototype, "spectrumHueSlider", undefined);
+    Jd([uo("spectrumAlpha")], t.prototype, "spectrumAlpha", undefined);
+    Jd([uo("spectrumAlphaSlider")], t.prototype, "spectrumAlphaSlider", undefined);
+    Jd([uo("recentColors")], t.prototype, "recentColors", undefined);
     Jd([le], t.prototype, "postConstruct", null);
     return t;
   }(so);
@@ -34667,9 +34667,9 @@
     function t(t, n, r, o) {
       var i = e.call(this, t, "<div class=\"ag-picker-field\" role=\"presentation\">\n                <div ref=\"eLabel\"></div>\n                <div ref=\"eWrapper\"\n                    class=\"ag-wrapper ag-picker-field-wrapper\"\n                    tabIndex=\"-1\"\n                    " + (o ? "aria-haspopup=\"" + o + "\"" : "") + "\n                >\n                    <div ref=\"eDisplayField\" class=\"ag-picker-field-display\"></div>\n                    <div ref=\"eIcon\" class=\"ag-picker-field-icon\" aria-hidden=\"true\"></div>\n                </div>\n            </div>", n) || this;
       i.pickerIcon = r;
-      i.isPickerDisplayed = !1;
-      i.isDestroyingPicker = !1;
-      i.skipClick = !1;
+      i.isPickerDisplayed = false;
+      i.isDestroyingPicker = false;
+      i.skipClick = false;
       return i;
     }
     ep(t, e);
@@ -34681,7 +34681,7 @@
       ar(this.eWrapper, n);
       var r = function () {
         if (t.skipClick) {
-          t.skipClick = !1;
+          t.skipClick = false;
         } else {
           if (!t.isDisabled()) {
             t.pickerComponent = t.showPicker();
@@ -34691,7 +34691,7 @@
       var o = this.getGui();
       this.addManagedListener(o, "mousedown", function (e) {
         if (!t.skipClick && t.pickerComponent && t.pickerComponent.isAlive() && gn(t.pickerComponent.getGui()) && o.contains(e.target)) {
-          t.skipClick = !0;
+          t.skipClick = true;
         }
       });
       this.addManagedListener(o, "keydown", function (e) {
@@ -34735,10 +34735,10 @@
     t.prototype.getFocusableElement = function () {
       return this.eWrapper;
     };
-    tp([uo("eLabel")], t.prototype, "eLabel", void 0);
-    tp([uo("eWrapper")], t.prototype, "eWrapper", void 0);
-    tp([uo("eDisplayField")], t.prototype, "eDisplayField", void 0);
-    tp([uo("eIcon")], t.prototype, "eIcon", void 0);
+    tp([uo("eLabel")], t.prototype, "eLabel", undefined);
+    tp([uo("eWrapper")], t.prototype, "eWrapper", undefined);
+    tp([uo("eDisplayField")], t.prototype, "eDisplayField", undefined);
+    tp([uo("eIcon")], t.prototype, "eIcon", undefined);
     return t;
   }(Es);
   var rp = function () {
@@ -34780,16 +34780,16 @@
       var e = this;
       var t = this.getGui().getBoundingClientRect();
       var n = this.createBean(new Hd({
-        closable: !1,
-        modal: !0,
-        hideTitleBar: !0,
+        closable: false,
+        modal: true,
+        hideTitleBar: true,
         minWidth: 190,
         width: 190,
         height: 250,
         x: t.right - 190,
         y: t.top - 250
       }));
-      this.isPickerDisplayed = !0;
+      this.isPickerDisplayed = true;
       Qt(n.getGui(), "ag-color-dialog");
       var r = this.createBean(new $d({
         picker: this
@@ -34804,9 +34804,9 @@
       r.setValue(this.getValue());
       n.addDestroyFunc(function () {
         if (e.isDestroyingPicker) {
-          e.isDestroyingPicker = !1;
+          e.isDestroyingPicker = false;
         } else {
-          e.isDestroyingPicker = !0;
+          e.isDestroyingPicker = true;
           if (r.isAlive()) {
             e.destroyBean(r);
           }
@@ -34814,7 +34814,7 @@
         if (e.isAlive()) {
           e.getFocusableElement().focus();
         }
-        e.isPickerDisplayed = !1;
+        e.isPickerDisplayed = false;
       });
       return n;
     };
@@ -35030,7 +35030,7 @@
   };
   var dp = function (e) {
     function t(t) {
-      if (void 0 === t) {
+      if (undefined === t) {
         t = "default";
       }
       var n = e.call(this, "<div class=\"ag-list ag-" + t + "-list\" role=\"listbox\"></div>") || this;
@@ -35057,7 +35057,7 @@
         case _o.DOWN:
         case _o.UP:
           var r = t === _o.DOWN,
-            o = void 0;
+            o = undefined;
           if (e.preventDefault(), this.highlightedEl) {
             var i = this.itemEls.indexOf(this.highlightedEl) + (r ? 1 : -1);
             i = Math.min(Math.max(i, 0), this.itemEls.length - 1);
@@ -35158,14 +35158,14 @@
         this.clearHighlighted();
         this.highlightedEl = e;
         Qt(this.highlightedEl, t.ACTIVE_CLASS);
-        yr(this.highlightedEl, !0);
+        yr(this.highlightedEl, true);
         this.highlightedEl.focus();
       }
     };
     t.prototype.clearHighlighted = function () {
       if (this.highlightedEl && this.highlightedEl.offsetParent) {
         Zt(this.highlightedEl, t.ACTIVE_CLASS);
-        yr(this.highlightedEl, !1);
+        yr(this.highlightedEl, false);
         this.highlightedEl = null;
       }
     };
@@ -35239,7 +35239,7 @@
         }
       });
       this.listComponent.addManagedListener(this.listComponent, Es.EVENT_CHANGED, function () {
-        e.setValue(e.listComponent.getValue(), !1, !0);
+        e.setValue(e.listComponent.getValue(), false, true);
         if (e.hideList) {
           e.hideList();
         }
@@ -35259,12 +35259,12 @@
         }
       });
       var o = this.popupService.addPopup({
-        modal: !0,
+        modal: true,
         eChild: t,
-        closeOnEsc: !0,
+        closeOnEsc: true,
         closedCallback: function () {
           e.hideList = null;
-          e.isPickerDisplayed = !1;
+          e.isPickerDisplayed = false;
           r();
           n();
           if (e.isAlive()) {
@@ -35275,7 +35275,7 @@
       if (o) {
         this.hideList = o.hideFunc;
       }
-      this.isPickerDisplayed = !0;
+      this.isPickerDisplayed = true;
       Sn(t, un(this.eWrapper));
       t.style.maxHeight = sn(this.popupService.getPopupParent()) + "px";
       t.style.position = "absolute";
@@ -35283,7 +35283,7 @@
         type: "ag-list",
         eventSource: this.eWrapper,
         ePopup: t,
-        keepWithinBounds: !0
+        keepWithinBounds: true
       });
       this.listComponent.refreshHighlighted();
       return this.listComponent;
@@ -35300,7 +35300,7 @@
       return this;
     };
     t.prototype.setValue = function (t, n, r) {
-      return this.value === t ? this : (r || this.listComponent.setValue(t, !0), this.listComponent.getValue() === this.getValue() ? this : (this.eDisplayField.innerHTML = this.listComponent.getDisplayValue(), e.prototype.setValue.call(this, t, n)));
+      return this.value === t ? this : (r || this.listComponent.setValue(t, true), this.listComponent.getValue() === this.getValue() ? this : (this.eDisplayField.innerHTML = this.listComponent.getDisplayValue(), e.prototype.setValue.call(this, t, n)));
     };
     t.prototype.destroy = function () {
       if (this.hideList) {
@@ -35309,7 +35309,7 @@
       this.destroyBean(this.listComponent);
       e.prototype.destroy.call(this);
     };
-    fp([pe("popupService")], t.prototype, "popupService", void 0);
+    fp([pe("popupService")], t.prototype, "popupService", undefined);
     fp([le], t.prototype, "init", null);
     return t;
   }(np);
@@ -35445,7 +35445,7 @@
       var o = e.clientX - t.left - n;
       var i = e.clientY - t.top - r;
       var a = Math.atan2(i, o);
-      this.setValue(a, !0);
+      this.setValue(a, true);
     };
     t.prototype.toDegrees = function (e) {
       return e / Math.PI * 180;
@@ -35509,11 +35509,11 @@
       e.prototype.destroy.call(this);
     };
     t.TEMPLATE = "<div class=\"ag-angle-select\">\n            <div ref=\"eLabel\"></div>\n            <div class=\"ag-wrapper ag-angle-select-wrapper\">\n                <div ref=\"eAngleSelectField\" class=\"ag-angle-select-field\">\n                    <div ref=\"eParentCircle\" class=\"ag-angle-select-parent-circle\">\n                        <div ref=\"eChildCircle\" class=\"ag-angle-select-child-circle\"></div>\n                    </div>\n                </div>\n                <ag-input-number-field ref=\"eAngleValue\"></ag-input-number-field>\n            </div>\n        </div>";
-    gp([uo("eLabel")], t.prototype, "eLabel", void 0);
-    gp([uo("eParentCircle")], t.prototype, "eParentCircle", void 0);
-    gp([uo("eChildCircle")], t.prototype, "eChildCircle", void 0);
-    gp([uo("eAngleValue")], t.prototype, "eAngleValue", void 0);
-    gp([pe("dragService")], t.prototype, "dragService", void 0);
+    gp([uo("eLabel")], t.prototype, "eLabel", undefined);
+    gp([uo("eParentCircle")], t.prototype, "eParentCircle", undefined);
+    gp([uo("eChildCircle")], t.prototype, "eChildCircle", undefined);
+    gp([uo("eAngleValue")], t.prototype, "eAngleValue", undefined);
+    gp([pe("dragService")], t.prototype, "dragService", undefined);
     return t;
   }(bs);
   var vp = function () {
@@ -35601,7 +35601,7 @@
       if (!this.active || !e.detail) {
         this.destroyFullWidthRow(n);
       } else {
-        var r = this.getCacheItem(e, !0);
+        var r = this.getCacheItem(e, true);
         switch (t) {
           case Ee.PINNED_LEFT:
             this.destroyFullWidthRow(r.left);
@@ -35622,8 +35622,8 @@
       }
     };
     t.prototype.getCacheItem = function (e, t) {
-      if (void 0 === t) {
-        t = !1;
+      if (undefined === t) {
+        t = false;
       }
       for (var n = null, r = 0; r < this.cacheItems.length; r++) {
         var o = this.cacheItems[r];
@@ -35669,19 +35669,19 @@
             case Ee.PINNED_LEFT:
               if (r.left) {
                 n = r.left;
-                r.left = void 0;
+                r.left = undefined;
               }
               break;
             case Ee.PINNED_RIGHT:
               if (r.right) {
                 n = r.right;
-                r.right = void 0;
+                r.right = undefined;
               }
               break;
             default:
               if (r.center) {
                 n = r.center;
-                r.center = void 0;
+                r.center = undefined;
               }
           }
         }
@@ -35754,7 +35754,7 @@
           }
         }
       }
-      return void 0 === e ? null : {
+      return undefined === e ? null : {
         rowIndex: t,
         rowPinned: e
       };
@@ -35778,7 +35778,7 @@
           }
         }
       }
-      return void 0 === e ? null : {
+      return undefined === e ? null : {
         rowIndex: e,
         rowPinned: t
       };
@@ -35800,12 +35800,12 @@
       switch (e.rowPinned) {
         case Ee.PINNED_TOP:
           if (t.rowPinned !== Ee.PINNED_TOP) {
-            return !0;
+            return true;
           }
           break;
         case Ee.PINNED_BOTTOM:
           if (t.rowPinned !== Ee.PINNED_BOTTOM) {
-            return !1;
+            return false;
           }
           break;
         default:
@@ -35815,9 +35815,9 @@
       }
       return e.rowIndex < t.rowIndex;
     };
-    Cp([pe("rowModel")], t.prototype, "rowModel", void 0);
-    Cp([pe("pinnedRowModel")], t.prototype, "pinnedRowModel", void 0);
-    Cp([pe("paginationProxy")], t.prototype, "paginationProxy", void 0);
+    Cp([pe("rowModel")], t.prototype, "rowModel", undefined);
+    Cp([pe("pinnedRowModel")], t.prototype, "pinnedRowModel", undefined);
+    Cp([pe("paginationProxy")], t.prototype, "paginationProxy", undefined);
     return t = Cp([de("rowPositionUtils")], t);
   }(We);
   var Sp = function () {
@@ -35947,7 +35947,7 @@
       return n.length - 1;
     };
     t.prototype.setPinnedTopRowData = function (e) {
-      this.pinnedTopRows = this.createNodesFromData(e, !0);
+      this.pinnedTopRows = this.createNodesFromData(e, true);
       var t = {
         type: Ke.EVENT_PINNED_ROW_DATA_CHANGED,
         api: this.gridApi,
@@ -35956,7 +35956,7 @@
       this.eventService.dispatchEvent(t);
     };
     t.prototype.setPinnedBottomRowData = function (e) {
-      this.pinnedBottomRows = this.createNodesFromData(e, !1);
+      this.pinnedBottomRows = this.createNodesFromData(e, false);
       var t = {
         type: Ke.EVENT_PINNED_ROW_DATA_CHANGED,
         api: this.gridApi,
@@ -36026,8 +36026,8 @@
       var t = m(e);
       return t.rowTop + t.rowHeight;
     };
-    Np([pe("columnApi")], t.prototype, "columnApi", void 0);
-    Np([pe("gridApi")], t.prototype, "gridApi", void 0);
+    Np([pe("columnApi")], t.prototype, "columnApi", undefined);
+    Np([pe("gridApi")], t.prototype, "gridApi", undefined);
     Np([le], t.prototype, "init", null);
     return t = Np([de("pinnedRowModel")], t);
   }(We);
@@ -36132,10 +36132,10 @@
     function n() {
       var t = null !== e && e.apply(this, arguments) || this;
       t.cellValueChanges = [];
-      t.isCellEditing = !1;
-      t.isRowEditing = !1;
-      t.isPasting = !1;
-      t.isFilling = !1;
+      t.isCellEditing = false;
+      t.isRowEditing = false;
+      t.isPasting = false;
+      t.isFilling = false;
       t.onCellValueChanged = function (e) {
         if (t.isCellEditing || t.isRowEditing || t.isPasting || t.isFilling) {
           var n = e.rowPinned;
@@ -36281,26 +36281,26 @@
       if (Oe.isRegistered(exports.ModuleNames.RangeSelectionModule)) {
         this.gridApi.clearRangeSelection();
       }
-      this.focusController.setFocusedCell(n, r, o, !0);
+      this.focusController.setFocusedCell(n, r, o, true);
     };
     n.prototype.addRowEditingListeners = function () {
       var e = this;
       this.addManagedListener(this.eventService, Ke.EVENT_ROW_EDITING_STARTED, function () {
-        e.isRowEditing = !0;
+        e.isRowEditing = true;
       });
       this.addManagedListener(this.eventService, Ke.EVENT_ROW_EDITING_STOPPED, function () {
         var t = new xp(e.cellValueChanges);
         e.pushActionsToUndoStack(t);
-        e.isRowEditing = !1;
+        e.isRowEditing = false;
       });
     };
     n.prototype.addCellEditingListeners = function () {
       var e = this;
       this.addManagedListener(this.eventService, Ke.EVENT_CELL_EDITING_STARTED, function () {
-        e.isCellEditing = !0;
+        e.isCellEditing = true;
       });
       this.addManagedListener(this.eventService, Ke.EVENT_CELL_EDITING_STOPPED, function () {
-        e.isCellEditing = !1;
+        e.isCellEditing = false;
         if (!e.isRowEditing && !e.isPasting && !e.isFilling) {
           var t = new xp(e.cellValueChanges);
           e.pushActionsToUndoStack(t);
@@ -36310,23 +36310,23 @@
     n.prototype.addPasteListeners = function () {
       var e = this;
       this.addManagedListener(this.eventService, Ke.EVENT_PASTE_START, function () {
-        e.isPasting = !0;
+        e.isPasting = true;
       });
       this.addManagedListener(this.eventService, Ke.EVENT_PASTE_END, function () {
         var t = new xp(e.cellValueChanges);
         e.pushActionsToUndoStack(t);
-        e.isPasting = !1;
+        e.isPasting = false;
       });
     };
     n.prototype.addFillListeners = function () {
       var e = this;
       this.addManagedListener(this.eventService, Ke.EVENT_FILL_START, function () {
-        e.isFilling = !0;
+        e.isFilling = true;
       });
       this.addManagedListener(this.eventService, Ke.EVENT_FILL_END, function (t) {
         var n = new Dp(e.cellValueChanges, t.initialRange, t.finalRange);
         e.pushActionsToUndoStack(n);
-        e.isFilling = !1;
+        e.isFilling = false;
       });
     };
     n.prototype.pushActionsToUndoStack = function (e) {
@@ -36344,10 +36344,10 @@
           return this.rowModel.getRow(e.rowIndex);
       }
     };
-    Pp([pe("focusController")], n.prototype, "focusController", void 0);
-    Pp([pe("gridApi")], n.prototype, "gridApi", void 0);
-    Pp([pe("rowModel")], n.prototype, "rowModel", void 0);
-    Pp([pe("pinnedRowModel")], n.prototype, "pinnedRowModel", void 0);
+    Pp([pe("focusController")], n.prototype, "focusController", undefined);
+    Pp([pe("gridApi")], n.prototype, "gridApi", undefined);
+    Pp([pe("rowModel")], n.prototype, "rowModel", undefined);
+    Pp([pe("pinnedRowModel")], n.prototype, "pinnedRowModel", undefined);
     Pp([le], n.prototype, "init", null);
     return n = Pp([de("undoRedoService")], n);
   }(We);
@@ -36488,8 +36488,8 @@
         };
       }
     };
-    Hp([pe("columnController")], t.prototype, "columnController", void 0);
-    Hp([pe("headerNavigationService")], t.prototype, "headerNavigationService", void 0);
+    Hp([pe("columnController")], t.prototype, "columnController", undefined);
+    Hp([pe("headerNavigationService")], t.prototype, "headerNavigationService", undefined);
     return t = Hp([de("headerPositionUtils")], t);
   }(We);
   var zp = function (e, t, n, r) {
@@ -36517,7 +36517,7 @@
       var o = [];
       var i = {};
       e.forEach(function (e) {
-        for (var a = !0, s = r.createDefFromColumn(e, t, n), c = e.getOriginalParent(); c;) {
+        for (var a = true, s = r.createDefFromColumn(e, t, n), c = e.getOriginalParent(); c;) {
           var l = null;
           if (c.isPadding()) {
             c = c.getOriginalParent();
@@ -36525,7 +36525,7 @@
             var u = i[c.getGroupId()];
             if (u) {
               u.children.push(s);
-              a = !1;
+              a = false;
               break;
             }
             if (l = r.createDefFromGroup(c)) {
@@ -36558,7 +36558,7 @@
       r.pivot = e.isPivotActive();
       r.pivotIndex = e.isPivotActive() ? n.indexOf(e) : null;
       r.aggFunc = e.isValueActive() ? e.getAggFunc() : null;
-      r.hide = !e.isVisible() || void 0;
+      r.hide = !e.isVisible() || undefined;
       r.pinned = e.isPinned() ? e.getPinned() : null;
       r.sort = e.getSort() ? e.getSort() : null;
       r.sortIndex = null != e.getSortIndex() ? e.getSortIndex() : null;
@@ -36696,8 +36696,8 @@
     e.prototype.calculateRowLevel = function (e) {
       return e.group ? e.level : e.parent ? e.parent.level + 1 : 0;
     };
-    Kp([pe("stylingService")], e.prototype, "stylingService", void 0);
-    Kp([pe("gridOptionsWrapper")], e.prototype, "gridOptionsWrapper", void 0);
+    Kp([pe("stylingService")], e.prototype, "stylingService", undefined);
+    Kp([pe("gridOptionsWrapper")], e.prototype, "gridOptionsWrapper", undefined);
     return e = Kp([de("rowCssClassCalculator")], e);
   }();
   var Xp = function () {
@@ -36751,7 +36751,7 @@
         this.state = t.STATE_FAILED;
         this.processServerFail();
       }
-      this.dispatchLoadCompleted(!1);
+      this.dispatchLoadCompleted(false);
     };
     t.prototype.success = function (e, t) {
       this.successCommon(e, t);
@@ -36775,8 +36775,8 @@
       }
     };
     t.prototype.dispatchLoadCompleted = function (e) {
-      if (void 0 === e) {
-        e = !0;
+      if (undefined === e) {
+        e = true;
       }
       var n = {
         type: t.EVENT_LOAD_COMPLETE,
@@ -36840,7 +36840,7 @@
       var t = null !== e && e.apply(this, arguments) || this;
       t.activeBlockLoadsCount = 0;
       t.blocks = [];
-      t.active = !0;
+      t.active = true;
       return t;
     }
     var n;
@@ -36866,7 +36866,7 @@
     };
     t.prototype.destroy = function () {
       e.prototype.destroy.call(this);
-      this.active = !1;
+      this.active = false;
     };
     t.prototype.loadComplete = function () {
       this.activeBlockLoadsCount--;
@@ -36965,7 +36965,7 @@
         var c = s.sort === Ee.SORT_DESC;
         var l = this.getValue(r, s.column);
         var u = this.getValue(o, s.column);
-        var d = void 0;
+        var d = undefined;
         var p = s.column.getColDef().comparator;
         if (0 !== (d = p ? p(l, u, r, o, c) : qr.defaultComparator(l, u, this.gridOptionsWrapper.isAccentedSort()))) {
           return s.sort === Ee.SORT_ASC ? d : -1 * d;
@@ -36976,8 +36976,8 @@
     e.prototype.getValue = function (e, t) {
       return this.valueService.getValue(t, e);
     };
-    tf([pe("gridOptionsWrapper")], e.prototype, "gridOptionsWrapper", void 0);
-    tf([pe("valueService")], e.prototype, "valueService", void 0);
+    tf([pe("gridOptionsWrapper")], e.prototype, "gridOptionsWrapper", undefined);
+    tf([pe("valueService")], e.prototype, "valueService", undefined);
     return e = tf([de("rowNodeSorter")], e);
   }();
   var rf = function () {
@@ -37021,7 +37021,7 @@
   var af = function (e) {
     function t() {
       var t = null !== e && e.apply(this, arguments) || this;
-      t.ready = !1;
+      t.ready = false;
       t.readyCallbacks = [];
       return t;
     }
@@ -37233,9 +37233,9 @@
     t.prototype.getContainer = function () {
       return this.eContainer;
     };
-    cf([pe("scrollVisibleService")], t.prototype, "scrollVisibleService", void 0);
-    cf([pe("columnController")], t.prototype, "columnController", void 0);
-    cf([pe("controllersService")], t.prototype, "controllersService", void 0);
+    cf([pe("scrollVisibleService")], t.prototype, "scrollVisibleService", undefined);
+    cf([pe("columnController")], t.prototype, "columnController", undefined);
+    cf([pe("controllersService")], t.prototype, "controllersService", undefined);
     cf([le], t.prototype, "postConstruct", null);
     return t;
   }(We);
@@ -37317,10 +37317,10 @@
       }));
     };
     t.TEMPLATE = "<div class=\"ag-body-horizontal-scroll\" aria-hidden=\"true\">\n            <div class=\"ag-horizontal-left-spacer\" ref=\"eLeftSpacer\"></div>\n            <div class=\"ag-body-horizontal-scroll-viewport\" ref=\"eViewport\">\n                <div class=\"ag-body-horizontal-scroll-container\" ref=\"eContainer\"></div>\n            </div>\n            <div class=\"ag-horizontal-right-spacer\" ref=\"eRightSpacer\"></div>\n        </div>";
-    df([uo("eLeftSpacer")], t.prototype, "eLeftSpacer", void 0);
-    df([uo("eRightSpacer")], t.prototype, "eRightSpacer", void 0);
-    df([uo("eViewport")], t.prototype, "eViewport", void 0);
-    df([uo("eContainer")], t.prototype, "eContainer", void 0);
+    df([uo("eLeftSpacer")], t.prototype, "eLeftSpacer", undefined);
+    df([uo("eRightSpacer")], t.prototype, "eRightSpacer", undefined);
+    df([uo("eViewport")], t.prototype, "eViewport", undefined);
+    df([uo("eContainer")], t.prototype, "eContainer", undefined);
     df([le], t.prototype, "postConstruct", null);
     return t;
   }(so);
@@ -37396,7 +37396,7 @@
     t.prototype.getPinnedLeftWidth = function () {
       return this.leftWidth;
     };
-    hf([pe("columnController")], t.prototype, "columnController", void 0);
+    hf([pe("columnController")], t.prototype, "columnController", undefined);
     hf([le], t.prototype, "postConstruct", null);
     return t = hf([de("pinnedWidthService")], t);
   }(We);
@@ -37525,7 +37525,7 @@
     };
     n.prototype.isCellEligibleToBeRemoved = function (e) {
       if (e.getColumn().getPinned() != this.pinned) {
-        return !0;
+        return true;
       }
       var t = e.isEditing();
       var n = this.beans.focusController.isCellFocused(e.getCellPosition());
@@ -37533,10 +37533,10 @@
         var r = e.getColumn();
         return !(this.beans.columnController.getAllDisplayedColumns().indexOf(r) >= 0);
       }
-      return !0;
+      return true;
     };
     n.prototype.newCellComp = function (e) {
-      var t = new rs(this.controller.getScope(), this.beans, e, this.rowNode, this.controller, !1, this.controller.isPrintLayout(), this.getGui(), this.controller.isEditing());
+      var t = new rs(this.controller.getScope(), this.beans, e, this.rowNode, this.controller, false, this.controller.isPrintLayout(), this.getGui(), this.controller.isEditing());
       this.cellComps[e.getId()] = t;
       this.getGui().appendChild(t.getGui());
     };
@@ -37855,11 +37855,11 @@
       }
       return new _f(e, this, this.beans, t);
     };
-    yf([pe("rowRenderer")], t.prototype, "rowRenderer", void 0);
-    yf([pe("beans")], t.prototype, "beans", void 0);
-    yf([uo("eViewport")], t.prototype, "eViewport", void 0);
-    yf([uo("eContainer")], t.prototype, "eContainer", void 0);
-    yf([uo("eWrapper")], t.prototype, "eWrapper", void 0);
+    yf([pe("rowRenderer")], t.prototype, "rowRenderer", undefined);
+    yf([pe("beans")], t.prototype, "beans", undefined);
+    yf([uo("eViewport")], t.prototype, "eViewport", undefined);
+    yf([uo("eContainer")], t.prototype, "eContainer", undefined);
+    yf([uo("eWrapper")], t.prototype, "eWrapper", undefined);
     yf([le], t.prototype, "postConstruct", null);
     return t;
   }(so);
@@ -37923,7 +37923,7 @@
       function i(e, t) {
         var n;
         if (!o[(n = t).moduleName]) {
-          o[n.moduleName] = !0;
+          o[n.moduleName] = true;
           r.push(n);
           Oe.register(n, e);
         }
@@ -37932,7 +37932,7 @@
         }
       }
       if (t) {
-        t.forEach(i.bind(null, !0));
+        t.forEach(i.bind(null, true));
       }
       if (n) {
         n.forEach(i.bind(null, !Oe.isPackageBased()));
@@ -38122,7 +38122,7 @@
       console.warn("WARNING - grid options for AG Grid not found. Please ensure the attribute ag-grid points to a valid object on the scope");
     }
   }
-  var Tf = !1;
+  var Tf = false;
   var Sf;
   var If = function () {
     var e = function (t, n) {
@@ -38213,7 +38213,7 @@
         } else if (t.isFocusUnderManagedComponent(r)) {
           o.eHeaderButton.focus();
         } else {
-          var a = t.findNextFocusableElement(r, !1, e.shiftKey);
+          var a = t.findNextFocusableElement(r, false, e.shiftKey);
           if (a) {
             a.focus();
           } else {
@@ -38226,7 +38226,7 @@
       this.afterAttachedParams = e;
     };
     t.prototype.getMinDimensions = function () {
-      var e = this.getGui().cloneNode(!0);
+      var e = this.getGui().cloneNode(true);
       var t = e.querySelector("[ref=\"eBody\"]");
       e.style.position = "fixed";
       this.getGui().appendChild(e);
@@ -38235,7 +38235,7 @@
       this.items.forEach(function (o) {
         hn(t);
         var i = o.tabbedItem.bodyPromise.resolveNow(null, function (e) {
-          return e.cloneNode(!0);
+          return e.cloneNode(true);
         });
         if (null != i) {
           t.appendChild(i);
@@ -38293,7 +38293,7 @@
         e.tabbedItem.bodyPromise.then(function (n) {
           t.eBody.appendChild(n);
           var r = !t.focusController.isKeyboardMode();
-          t.focusController.focusInto(t.eBody, !1, r);
+          t.focusController.focusInto(t.eBody, false, r);
           if (e.tabbedItem.afterAttachedCallback) {
             e.tabbedItem.afterAttachedCallback(t.afterAttachedParams);
           }
@@ -38307,8 +38307,8 @@
         ie(this.params.onActiveItemClicked);
       }
     };
-    Af([uo("eHeader")], t.prototype, "eHeader", void 0);
-    Af([uo("eBody")], t.prototype, "eBody", void 0);
+    Af([uo("eHeader")], t.prototype, "eHeader", undefined);
+    Af([uo("eBody")], t.prototype, "eBody", undefined);
     return t;
   }(So);
   (Sf = exports.ServerSideTransactionResultStatus || (exports.ServerSideTransactionResultStatus = {})).StoreNotFound = "StoreNotFound";
@@ -38359,18 +38359,18 @@
   };
   var xf = function (e) {
     function t(n, r) {
-      if (void 0 === n) {
+      if (undefined === n) {
         n = "default";
       }
-      if (void 0 === r) {
+      if (undefined === r) {
         r = "listbox";
       }
-      var o = e.call(this, t.getTemplate(n), !0) || this;
+      var o = e.call(this, t.getTemplate(n), true) || this;
       o.cssIdentifier = n;
       o.ariaRole = r;
       o.renderedRows = new Map();
       o.rowHeight = 20;
-      o.isDestroyed = !1;
+      o.isDestroyed = false;
       return o;
     }
     Rf(t, e);
@@ -38419,10 +38419,10 @@
     };
     t.prototype.navigate = function (e) {
       if (null == this.lastFocusedRowIndex) {
-        return !1;
+        return false;
       }
       var t = this.lastFocusedRowIndex + (e ? -1 : 1);
-      return !(t < 0 || t >= this.model.getRowCount()) && (this.focusRow(t), !0);
+      return !(t < 0 || t >= this.model.getRowCount()) && (this.focusRow(t), true);
     };
     t.prototype.getLastFocusedRow = function () {
       return this.lastFocusedRowIndex;
@@ -38577,12 +38577,12 @@
     t.prototype.destroy = function () {
       if (!this.isDestroyed) {
         this.clearVirtualRows();
-        this.isDestroyed = !0;
+        this.isDestroyed = true;
         e.prototype.destroy.call(this);
       }
     };
-    kf([pe("resizeObserverService")], t.prototype, "resizeObserverService", void 0);
-    kf([uo("eContainer")], t.prototype, "eContainer", void 0);
+    kf([pe("resizeObserverService")], t.prototype, "resizeObserverService", undefined);
+    kf([uo("eContainer")], t.prototype, "eContainer", undefined);
     return t;
   }(So);
   (Nf = exports.ServerSideStoreType || (exports.ServerSideStoreType = {})).Full = "full";
@@ -38593,15 +38593,15 @@
     function e() {}
     e.prototype.wrap = function (e, t, n, r, o) {
       var i = this;
-      if (void 0 === n) {
+      if (undefined === n) {
         n = [];
       }
       var a = this.createWrapper(e, r, o);
       t.forEach(function (e) {
-        i.createMethod(a, e, !0);
+        i.createMethod(a, e, true);
       });
       n.forEach(function (e) {
-        i.createMethod(a, e, !1);
+        i.createMethod(a, e, false);
       });
       return a;
     };
@@ -38669,7 +38669,7 @@
       this.gridApi = a;
       this.columnApi = s;
       this.selectionController = c;
-      this.rootNode.group = !0;
+      this.rootNode.group = true;
       this.rootNode.level = -1;
       this.rootNode.id = e.ROOT_NODE_ID;
       this.rootNode.allLeafChildren = [];
@@ -38724,7 +38724,7 @@
       var t = e.length > 0;
       if (t) {
         e.forEach(function (e) {
-          e.setSelected(!1, !1, !0);
+          e.setSelected(false, false, true);
         });
       }
       this.selectionController.updateGroupsFromChildrenSelections();
@@ -38768,7 +38768,7 @@
               n.push(o);
             }
             o.clearRowTopAndRowIndex();
-            i[o.id] = !0;
+            i[o.id] = true;
             delete r.allNodesMap[o.id];
             t.remove.push(o);
           }
@@ -38789,7 +38789,7 @@
             if (!i.selectable && i.isSelected()) {
               r.push(i);
             }
-            o.setMasterForRow(i, t, e.TOP_LEVEL, !1);
+            o.setMasterForRow(i, t, e.TOP_LEVEL, false);
             n.update.push(i);
           }
         });
@@ -38827,8 +38827,8 @@
     e.prototype.createNode = function (e, t, n) {
       var r = new Ko();
       this.context.createBean(r);
-      r.group = !1;
-      this.setMasterForRow(r, e, n, !0);
+      r.group = false;
+      this.setMasterForRow(r, e, n, true);
       if (t && !this.suppressParentsInRowNodes) {
         r.parent = t;
       }
@@ -38843,11 +38843,11 @@
     };
     e.prototype.setMasterForRow = function (e, t, n, r) {
       if (this.doingTreeData) {
-        e.setMaster(!1);
+        e.setMaster(false);
         if (r) {
-          e.expanded = !1;
+          e.expanded = false;
         }
-      } else if (this.doingMasterDetail ? this.isRowMasterFunc ? e.setMaster(this.isRowMasterFunc(t)) : e.setMaster(!0) : e.setMaster(!1), r) {
+      } else if (this.doingMasterDetail ? this.isRowMasterFunc ? e.setMaster(this.isRowMasterFunc(t)) : e.setMaster(true) : e.setMaster(false), r) {
         var o = this.columnController.getRowGroupColumns();
         var i = n + (o ? o.length : 0);
         e.expanded = !!e.master && this.isExpanded(i);
@@ -38908,7 +38908,7 @@
   var Hf = function (e) {
     function n() {
       var t = null !== e && e.apply(this, arguments) || this;
-      t.onRowGroupOpenedPending = !1;
+      t.onRowGroupOpenedPending = false;
       return t;
     }
     Uf(n, e);
@@ -38918,9 +38918,9 @@
       });
       var n = this.refreshModel.bind(this, {
         step: exports.ClientSideRowModelSteps.EVERYTHING,
-        afterColumnsChanged: !0,
-        keepRenderedRows: !0,
-        animate: !0
+        afterColumnsChanged: true,
+        keepRenderedRows: true,
+        animate: true
       });
       this.addManagedListener(this.eventService, Ke.EVENT_NEW_COLUMNS_LOADED, n);
       this.addManagedListener(this.eventService, Ke.EVENT_COLUMN_ROW_GROUP_CHANGED, e);
@@ -38934,8 +38934,8 @@
       this.addManagedListener(this.eventService, Ke.EVENT_COLUMN_PIVOT_MODE_CHANGED, e);
       var r = this.refreshModel.bind(this, {
         step: exports.ClientSideRowModelSteps.MAP,
-        keepRenderedRows: !0,
-        animate: !0
+        keepRenderedRows: true,
+        animate: true
       });
       this.addManagedListener(this.gridOptionsWrapper, ka.PROP_GROUP_REMOVE_SINGLE_CHILDREN, r);
       this.addManagedListener(this.gridOptionsWrapper, ka.PROP_GROUP_REMOVE_LOWEST_SINGLE_CHILDREN, r);
@@ -38951,16 +38951,16 @@
     };
     n.prototype.ensureRowHeightsValid = function (e, t, n, r) {
       var o;
-      var i = !1;
+      var i = false;
       do {
-        o = !1;
+        o = false;
         for (var a = this.getRowIndexAtPixel(e), s = this.getRowIndexAtPixel(t), c = Math.max(a, n), l = Math.min(s, r), u = c; u <= l; u++) {
           var d = this.getRow(u);
           if (d.rowHeightEstimated) {
             var p = this.gridOptionsWrapper.getRowHeightForNode(d);
             d.setRowHeight(p.height);
-            o = !0;
-            i = !0;
+            o = true;
+            i = true;
           }
         }
         if (o) {
@@ -39008,7 +39008,7 @@
     };
     n.prototype.ensureRowsAtPixel = function (e, n, r) {
       var o = this;
-      if (void 0 === r) {
+      if (undefined === r) {
         r = 0;
       }
       var i = this.getRowIndexAtPixel(n);
@@ -39018,10 +39018,10 @@
         qr.insertIntoArray(o.rootNode.allLeafChildren, e, Math.max(i + r, 0) + t);
       }), this.refreshModel({
         step: exports.ClientSideRowModelSteps.EVERYTHING,
-        keepRenderedRows: !0,
-        animate: !0,
-        keepEditingRows: !0
-      }), !0);
+        keepRenderedRows: true,
+        animate: true,
+        keepEditingRows: true
+      }), true);
     };
     n.prototype.highlightRowAtPixel = function (e, t) {
       var n = null != t ? this.getRowIndexAtPixel(t) : null;
@@ -39052,7 +39052,7 @@
       return this.lastHighlightedRow;
     };
     n.prototype.isLastRowIndexKnown = function () {
-      return !0;
+      return true;
     };
     n.prototype.getRowCount = function () {
       return this.rowsToDisplay ? this.rowsToDisplay.length : 0;
@@ -39085,13 +39085,13 @@
     n.prototype.onRowGroupOpened = function () {
       var e = this;
       if (!this.onRowGroupOpenedPending) {
-        this.onRowGroupOpenedPending = !0;
+        this.onRowGroupOpenedPending = true;
         var n = function () {
-          e.onRowGroupOpenedPending = !1;
+          e.onRowGroupOpenedPending = false;
           var n = e.gridOptionsWrapper.isAnimateRows();
           e.refreshModel({
             step: exports.ClientSideRowModelSteps.MAP,
-            keepRenderedRows: !0,
+            keepRenderedRows: true,
             animate: n
           });
         };
@@ -39107,7 +39107,7 @@
         var n = this.gridOptionsWrapper.isAnimateRows();
         this.refreshModel({
           step: exports.ClientSideRowModelSteps.FILTER,
-          keepRenderedRows: !0,
+          keepRenderedRows: true,
           animate: n
         });
       }
@@ -39116,9 +39116,9 @@
       var e = this.gridOptionsWrapper.isAnimateRows();
       this.refreshModel({
         step: exports.ClientSideRowModelSteps.SORT,
-        keepRenderedRows: !0,
+        keepRenderedRows: true,
         animate: e,
-        keepEditingRows: !0
+        keepEditingRows: true
       });
     };
     n.prototype.getType = function () {
@@ -39137,7 +39137,7 @@
     };
     n.prototype.createChangePath = function (e) {
       var t = qr.missingOrEmpty(e);
-      var n = new xa(!1, this.rootNode);
+      var n = new xa(false, this.rootNode);
       if (t || this.gridOptionsWrapper.isTreeData()) {
         n.setInactive();
       }
@@ -39145,10 +39145,10 @@
     };
     n.prototype.isSuppressModelUpdateAfterUpdateTransaction = function (e) {
       if (!this.gridOptionsWrapper.isSuppressModelUpdateAfterUpdateTransaction()) {
-        return !1;
+        return false;
       }
       if (null == e.rowNodeTransactions) {
-        return !1;
+        return false;
       }
       var t = qr.filter(e.rowNodeTransactions, function (e) {
         return null != e.add && e.add.length > 0 || null != e.remove && e.remove.length > 0;
@@ -39182,7 +39182,7 @@
           animate: e.animate,
           keepRenderedRows: e.keepRenderedRows,
           newData: e.newData,
-          newPage: !1
+          newPage: false
         };
         this.eventService.dispatchEvent(o);
         if (this.$scope) {
@@ -39202,13 +39202,13 @@
     n.prototype.getNodesInRangeForSelection = function (e, t) {
       var n;
       var r = !t;
-      var o = !1;
+      var o = false;
       var i = [];
       var a = this.gridOptionsWrapper.isGroupSelectsChildren();
       this.forEachNodeAfterFilterAndSort(function (s) {
         var c = r && !o;
         if (!(r || s !== t && s !== e)) {
-          r = !0;
+          r = true;
         }
         if (!(s.group && a)) {
           var l = r && !o;
@@ -39219,7 +39219,7 @@
         }
         if (c) {
           if (!(s !== t && s !== e)) {
-            o = !0;
+            o = true;
             n = s === t ? t : e;
           }
         }
@@ -39449,7 +39449,7 @@
       this.refreshModel({
         step: exports.ClientSideRowModelSteps.EVERYTHING,
         groupState: n,
-        newData: !0
+        newData: true
       });
     };
     n.prototype.batchUpdateRowData = function (e, t) {
@@ -39477,20 +39477,20 @@
       this.valueCache.onDataChanged();
       var t = [];
       var n = [];
-      var r = !1;
+      var r = false;
       if (this.rowDataTransactionBatch) {
         this.rowDataTransactionBatch.forEach(function (o) {
-          var i = e.nodeManager.updateRowData(o.rowDataTransaction, void 0);
+          var i = e.nodeManager.updateRowData(o.rowDataTransaction, undefined);
           n.push(i);
           if (o.callback) {
             t.push(o.callback.bind(null, i));
           }
           if ("number" === typeof o.rowDataTransaction.addIndex) {
-            r = !0;
+            r = true;
           }
         });
       }
-      this.commonUpdateRowData(n, void 0, r);
+      this.commonUpdateRowData(n, undefined, r);
       if (t.length > 0) {
         window.setTimeout(function () {
           t.forEach(function (e) {
@@ -39508,7 +39508,7 @@
         this.eventService.dispatchEvent(o);
       }
       this.rowDataTransactionBatch = null;
-      this.applyAsyncTransactionsTimeout = void 0;
+      this.applyAsyncTransactionsTimeout = undefined;
     };
     n.prototype.updateRowData = function (e, t) {
       this.valueCache.onDataChanged();
@@ -39536,9 +39536,9 @@
         step: exports.ClientSideRowModelSteps.EVERYTHING,
         rowNodeTransactions: e,
         rowNodeOrder: n,
-        keepRenderedRows: !0,
-        animate: !0,
-        keepEditingRows: !0
+        keepRenderedRows: true,
+        animate: true,
+        keepEditingRows: true
       });
       var o = {
         type: Ke.EVENT_ROW_DATA_UPDATED,
@@ -39555,37 +39555,37 @@
     n.prototype.onRowHeightChanged = function () {
       this.refreshModel({
         step: exports.ClientSideRowModelSteps.MAP,
-        keepRenderedRows: !0,
-        keepEditingRows: !0
+        keepRenderedRows: true,
+        keepEditingRows: true
       });
     };
     n.prototype.resetRowHeights = function () {
-      var e = !1;
+      var e = false;
       this.forEachNode(function (t) {
-        t.setRowHeight(t.rowHeight, !0);
+        t.setRowHeight(t.rowHeight, true);
         var n = t.detailNode;
         if (n) {
-          n.setRowHeight(n.rowHeight, !0);
+          n.setRowHeight(n.rowHeight, true);
         }
-        e = !0;
+        e = true;
       });
       if (e) {
         this.onRowHeightChanged();
       }
     };
-    Wf([pe("columnController")], n.prototype, "columnController", void 0);
-    Wf([pe("$scope")], n.prototype, "$scope", void 0);
-    Wf([pe("selectionController")], n.prototype, "selectionController", void 0);
-    Wf([pe("valueCache")], n.prototype, "valueCache", void 0);
-    Wf([pe("columnApi")], n.prototype, "columnApi", void 0);
-    Wf([pe("gridApi")], n.prototype, "gridApi", void 0);
-    Wf([pe("animationFrameService")], n.prototype, "animationFrameService", void 0);
-    Wf([pe("filterStage")], n.prototype, "filterStage", void 0);
-    Wf([pe("sortStage")], n.prototype, "sortStage", void 0);
-    Wf([pe("flattenStage")], n.prototype, "flattenStage", void 0);
-    Wf([fe("groupStage")], n.prototype, "groupStage", void 0);
-    Wf([fe("aggregationStage")], n.prototype, "aggregationStage", void 0);
-    Wf([fe("pivotStage")], n.prototype, "pivotStage", void 0);
+    Wf([pe("columnController")], n.prototype, "columnController", undefined);
+    Wf([pe("$scope")], n.prototype, "$scope", undefined);
+    Wf([pe("selectionController")], n.prototype, "selectionController", undefined);
+    Wf([pe("valueCache")], n.prototype, "valueCache", undefined);
+    Wf([pe("columnApi")], n.prototype, "columnApi", undefined);
+    Wf([pe("gridApi")], n.prototype, "gridApi", undefined);
+    Wf([pe("animationFrameService")], n.prototype, "animationFrameService", undefined);
+    Wf([pe("filterStage")], n.prototype, "filterStage", undefined);
+    Wf([pe("sortStage")], n.prototype, "sortStage", undefined);
+    Wf([pe("flattenStage")], n.prototype, "flattenStage", undefined);
+    Wf([fe("groupStage")], n.prototype, "groupStage", undefined);
+    Wf([fe("aggregationStage")], n.prototype, "aggregationStage", undefined);
+    Wf([fe("pivotStage")], n.prototype, "pivotStage", undefined);
     Wf([le], n.prototype, "init", null);
     return n = Wf([de("rowModel")], n);
   }(We);
@@ -39638,8 +39638,8 @@
       this.filterService.filter(n);
       this.selectableService.updateSelectableAfterFiltering(t);
     };
-    zf([pe("selectableService")], t.prototype, "selectableService", void 0);
-    zf([pe("filterService")], t.prototype, "filterService", void 0);
+    zf([pe("selectableService")], t.prototype, "selectableService", undefined);
+    zf([pe("filterService")], t.prototype, "filterService", undefined);
     return t = zf([de("filterStage")], t);
   }(We);
   var Kf = function () {
@@ -39699,7 +39699,7 @@
       var n = function (e) {
         if (e) {
           e.forEach(function (e) {
-            return t[e.id] = !0;
+            return t[e.id] = true;
           });
         }
       };
@@ -39712,9 +39712,9 @@
       }
       return t;
     };
-    qf([pe("sortService")], t.prototype, "sortService", void 0);
-    qf([pe("sortController")], t.prototype, "sortController", void 0);
-    qf([pe("columnController")], t.prototype, "columnController", void 0);
+    qf([pe("sortService")], t.prototype, "sortService", undefined);
+    qf([pe("sortController")], t.prototype, "sortController", undefined);
+    qf([pe("columnController")], t.prototype, "columnController", undefined);
     return t = qf([de("sortStage")], t);
   }(We);
   var Qf = function () {
@@ -39820,7 +39820,7 @@
         Object.keys(e).forEach(function (n) {
           t[n] = e[n];
         });
-        t.footer = !0;
+        t.footer = true;
         t.setRowTop(null);
         t.setRowIndex(null);
         t.oldRowTop = null;
@@ -39837,8 +39837,8 @@
       }
       var t = new Ko();
       this.context.createBean(t);
-      t.detail = !0;
-      t.selectable = !1;
+      t.detail = true;
+      t.selectable = false;
       t.parent = e;
       if (qr.exists(e.id)) {
         t.id = "detail_" + e.id;
@@ -39848,7 +39848,7 @@
       e.detailNode = t;
       return t;
     };
-    Zf([pe("columnController")], t.prototype, "columnController", void 0);
+    Zf([pe("columnController")], t.prototype, "columnController", undefined);
     return t = Zf([de("flattenStage")], t);
   }(We);
   var $f = function () {
@@ -39901,7 +39901,7 @@
       var a = this;
       if (o) {
         o.forEachChangedNodeDepthFirst(function (s) {
-          a.pullDownGroupDataForHideOpenParents(s.childrenAfterFilter, !0);
+          a.pullDownGroupDataForHideOpenParents(s.childrenAfterFilter, true);
           s.childrenAfterSort = t ? n ? a.doDeltaSort(s, e, r, o, i) : a.rowNodeSorter.doFullSort(s.childrenAfterFilter, e) : s.childrenAfterFilter.slice(0);
           a.updateChildIndexes(s);
           if (a.postSortFunc) {
@@ -39969,7 +39969,7 @@
         if (e) {
           e.executeFromRootNode(function (e) {
             return function e(n) {
-              t.pullDownGroupDataForHideOpenParents(n.childrenAfterSort, !1);
+              t.pullDownGroupDataForHideOpenParents(n.childrenAfterSort, false);
               n.childrenAfterSort.forEach(function (t) {
                 if (t.hasChildren()) {
                   e(t);
@@ -40006,8 +40006,8 @@
         });
       }
     };
-    eh([pe("columnController")], t.prototype, "columnController", void 0);
-    eh([pe("rowNodeSorter")], t.prototype, "rowNodeSorter", void 0);
+    eh([pe("columnController")], t.prototype, "columnController", undefined);
+    eh([pe("rowNodeSorter")], t.prototype, "rowNodeSorter", undefined);
     eh([le], t.prototype, "init", null);
     return t = eh([de("sortService")], t);
   }(We);
@@ -40095,12 +40095,12 @@
               }
             }
             r(t, o);
-          }(e, !1);
+          }(e, false);
         });
       } else {
         t.forEachChangedNodeDepthFirst(function (e) {
-          return r(e, !1);
-        }, !0);
+          return r(e, false);
+        }, true);
       }
     };
     t.prototype.setAllChildrenCountTreeData = function (e) {
@@ -40132,7 +40132,7 @@
     t.prototype.doingTreeDataFiltering = function () {
       return this.gridOptionsWrapper.isTreeData() && !this.gridOptionsWrapper.isExcludeChildrenWhenTreeDataFiltering();
     };
-    rh([pe("filterManager")], t.prototype, "filterManager", void 0);
+    rh([pe("filterManager")], t.prototype, "filterManager", undefined);
     rh([le], t.prototype, "postConstruct", null);
     return t = rh([de("filterService")], t);
   }(We);
@@ -40208,7 +40208,7 @@
                 if (s.data !== e) {
                   n.update.push(e);
                 }
-                r[a] = void 0;
+                r[a] = undefined;
               } else {
                 n.add.push(e);
               }
@@ -40224,7 +40224,7 @@
         console.error("AG Grid: ImmutableService requires getRowNodeId() callback to be implemented, your row data need IDs!");
       }
     };
-    ah([pe("rowModel")], t.prototype, "rowModel", void 0);
+    ah([pe("rowModel")], t.prototype, "rowModel", undefined);
     ah([le], t.prototype, "postConstruct", null);
     return t = ah([de("immutableService")], t);
   }(We);
@@ -40301,7 +40301,7 @@
       if (qr.exists(t)) {
         e.setDataAndId(t, n.toString());
       } else {
-        e.setDataAndId(void 0, void 0);
+        e.setDataAndId(undefined, undefined);
       }
     };
     t.prototype.loadFromDatasource = function () {
@@ -40339,8 +40339,8 @@
       return this.lastAccessed;
     };
     t.prototype.getRow = function (e, t) {
-      if (void 0 === t) {
-        t = !1;
+      if (undefined === t) {
+        t = false;
       }
       if (!t) {
         this.lastAccessed = this.params.lastAccessedSequence.next();
@@ -40369,10 +40369,10 @@
     t.prototype.processServerResult = function (e) {
       var t = this;
       this.rowNodes.forEach(function (n, r) {
-        var o = e.rowData ? e.rowData[r] : void 0;
+        var o = e.rowData ? e.rowData[r] : undefined;
         t.setDataAndId(n, o, t.startRow + r);
       });
-      var n = null != e.rowCount && e.rowCount >= 0 ? e.rowCount : void 0;
+      var n = null != e.rowCount && e.rowCount >= 0 ? e.rowCount : undefined;
       this.parentCache.pageLoaded(this, n);
     };
     t.prototype.destroyRowNodes = function () {
@@ -40430,7 +40430,7 @@
   var mh = function (e) {
     function t(t) {
       var n = e.call(this) || this;
-      n.lastRowIndexKnown = !1;
+      n.lastRowIndexKnown = false;
       n.blocks = {};
       n.blockCount = 0;
       n.rowCount = t.initialRowCount;
@@ -40442,8 +40442,8 @@
       this.logger = e.create("InfiniteCache");
     };
     t.prototype.getRow = function (e, t) {
-      if (void 0 === t) {
-        t = !1;
+      if (undefined === t) {
+        t = false;
       }
       var n = Math.floor(e / this.params.blockSize);
       var r = this.blocks[n];
@@ -40518,10 +40518,10 @@
     t.prototype.isBlockFocused = function (e) {
       var t = this.focusController.getFocusCellToUseAfterRefresh();
       if (!t) {
-        return !1;
+        return false;
       }
       if (null != t.rowPinned) {
-        return !1;
+        return false;
       }
       var n = e.getStartRow();
       var r = e.getEndRow();
@@ -40540,7 +40540,7 @@
     t.prototype.checkRowCount = function (e, t) {
       if ("number" === typeof t && t >= 0) {
         this.rowCount = t;
-        this.lastRowIndexKnown = !0;
+        this.lastRowIndexKnown = true;
       } else if (!this.lastRowIndexKnown) {
         var n = (e.getId() + 1) * this.params.blockSize + this.params.overflowSize;
         if (this.rowCount < n) {
@@ -40606,7 +40606,7 @@
       this.getBlocksInOrder().forEach(function (t) {
         return e.removeBlockFromCache(t);
       });
-      this.lastRowIndexKnown = !1;
+      this.lastRowIndexKnown = false;
       if (0 === this.rowCount) {
         this.rowCount = this.params.initialRowCount;
       }
@@ -40616,16 +40616,16 @@
       var n = this;
       var r = [];
       var o = -1;
-      var i = !1;
+      var i = false;
       var a = new Xr();
       if (qr.missing(e)) {
-        i = !0;
+        i = true;
       }
-      var s = !1;
+      var s = false;
       this.getBlocksInOrder().forEach(function (c) {
         if (!s) {
           if (i && o + 1 !== c.getId()) {
-            s = !0;
+            s = true;
           } else {
             o = c.getId();
             c.forEachNode(function (n) {
@@ -40643,8 +40643,8 @@
       return s || i ? [] : r;
     };
     t.MAX_EMPTY_BLOCKS_TO_KEEP = 2;
-    fh([pe("rowRenderer")], t.prototype, "rowRenderer", void 0);
-    fh([pe("focusController")], t.prototype, "focusController", void 0);
+    fh([pe("rowRenderer")], t.prototype, "rowRenderer", undefined);
+    fh([pe("focusController")], t.prototype, "focusController", undefined);
     fh([hh(0, me("loggerFactory"))], t.prototype, "setBeans", null);
     fh([ue], t.prototype, "destroyAllBlocks", null);
     return t;
@@ -40699,7 +40699,7 @@
       };
     };
     t.prototype.ensureRowHeightsValid = function (e, t, n, r) {
-      return !1;
+      return false;
     };
     t.prototype.init = function () {
       var e = this;
@@ -40783,10 +40783,10 @@
         type: Ke.EVENT_MODEL_UPDATED,
         api: this.gridApi,
         columnApi: this.columnApi,
-        newPage: !1,
-        newData: !1,
-        keepRenderedRows: !0,
-        animate: !1
+        newPage: false,
+        newData: false,
+        keepRenderedRows: true,
+        animate: false
       };
     };
     t.prototype.resetCache = function () {
@@ -40874,13 +40874,13 @@
         this.infiniteCache.setRowCount(e, t);
       }
     };
-    _h([pe("filterManager")], t.prototype, "filterManager", void 0);
-    _h([pe("sortController")], t.prototype, "sortController", void 0);
-    _h([pe("selectionController")], t.prototype, "selectionController", void 0);
-    _h([pe("gridApi")], t.prototype, "gridApi", void 0);
-    _h([pe("columnApi")], t.prototype, "columnApi", void 0);
-    _h([pe("rowRenderer")], t.prototype, "rowRenderer", void 0);
-    _h([pe("rowNodeBlockLoader")], t.prototype, "rowNodeBlockLoader", void 0);
+    _h([pe("filterManager")], t.prototype, "filterManager", undefined);
+    _h([pe("sortController")], t.prototype, "sortController", undefined);
+    _h([pe("selectionController")], t.prototype, "selectionController", undefined);
+    _h([pe("gridApi")], t.prototype, "gridApi", undefined);
+    _h([pe("columnApi")], t.prototype, "columnApi", undefined);
+    _h([pe("rowRenderer")], t.prototype, "rowRenderer", undefined);
+    _h([pe("rowNodeBlockLoader")], t.prototype, "rowNodeBlockLoader", undefined);
     _h([le], t.prototype, "init", null);
     _h([ue], t.prototype, "destroyDatasource", null);
     return t = _h([de("rowModel")], t);
@@ -40959,7 +40959,7 @@
         api: this.gridOptionsWrapper.getApi(),
         columnApi: this.gridOptionsWrapper.getColumnApi(),
         context: this.gridOptionsWrapper.getContext()
-      }) : this.columnController.getDisplayNameForColumn(t, "csv", !0);
+      }) : this.columnController.getDisplayNameForColumn(t, "csv", true);
     };
     e.prototype.createValueForGroupNode = function (e) {
       if (this.processRowGroupCallback) {
@@ -41008,8 +41008,8 @@
           r.style.display = "none";
           document.body.appendChild(r);
           r.dispatchEvent(new MouseEvent("click", {
-            bubbles: !1,
-            cancelable: !0,
+            bubbles: false,
+            cancelable: true,
             view: n
           }));
           document.body.removeChild(r);
@@ -41046,7 +41046,7 @@
   var Ch = function (e) {
     function t(t) {
       var n = e.call(this, t) || this;
-      n.isFirstLine = !0;
+      n.isFirstLine = true;
       n.result = "";
       var r = t.suppressQuotes;
       var o = t.columnSeparator;
@@ -41123,7 +41123,7 @@
       this.result += this.putInQuotes(this.extractRowCellValue(e, t, t, Ee.EXPORT_TYPE_CSV, n));
     };
     t.prototype.putInQuotes = function (e) {
-      return this.suppressQuotes ? e : null === e || void 0 === e ? "\"\"" : ("string" === typeof e ? t = e : "function" === typeof e.toString ? t = e.toString() : (console.warn("unknown value type during csv conversion"), t = ""), "\"" + t.replace(/"/g, "\"\"") + "\"");
+      return this.suppressQuotes ? e : null === e || undefined === e ? "\"\"" : ("string" === typeof e ? t = e : "function" === typeof e.toString ? t = e.toString() : (console.warn("unknown value type during csv conversion"), t = ""), "\"" + t.replace(/"/g, "\"\"") + "\"");
       var t;
     };
     t.prototype.parse = function () {
@@ -41133,7 +41133,7 @@
       if (!this.isFirstLine) {
         this.result += "\r\n";
       }
-      this.isFirstLine = !1;
+      this.isFirstLine = false;
     };
     return t;
   }(Eh);
@@ -41233,21 +41233,21 @@
         columnController: t,
         valueService: n,
         gridOptionsWrapper: r,
-        processCellCallback: i || void 0,
-        processHeaderCallback: a || void 0,
-        processGroupHeaderCallback: s || void 0,
-        processRowGroupCallback: c || void 0,
-        suppressQuotes: l || !1,
+        processCellCallback: i || undefined,
+        processHeaderCallback: a || undefined,
+        processGroupHeaderCallback: s || undefined,
+        processRowGroupCallback: c || undefined,
+        suppressQuotes: l || false,
         columnSeparator: u || ","
       });
     };
     t.prototype.isExportSuppressed = function () {
       return this.gridOptionsWrapper.isSuppressCsvExport();
     };
-    Sh([pe("columnController")], t.prototype, "columnController", void 0);
-    Sh([pe("valueService")], t.prototype, "valueService", void 0);
-    Sh([pe("gridSerializer")], t.prototype, "gridSerializer", void 0);
-    Sh([pe("gridOptionsWrapper")], t.prototype, "gridOptionsWrapper", void 0);
+    Sh([pe("columnController")], t.prototype, "columnController", undefined);
+    Sh([pe("valueService")], t.prototype, "valueService", undefined);
+    Sh([pe("gridSerializer")], t.prototype, "gridSerializer", undefined);
+    Sh([pe("gridOptionsWrapper")], t.prototype, "gridOptionsWrapper", undefined);
     Sh([le], t.prototype, "postConstruct", null);
     return t = Sh([de("csvCreator")], t);
   }(yh);
@@ -41300,7 +41300,7 @@
     }
     Ah(t, e);
     t.prototype.serialize = function (e, t) {
-      if (void 0 === t) {
+      if (undefined === t) {
         t = {};
       }
       var n = this.getColumnsToExport(t.allColumns, t.columnKeys);
@@ -41308,7 +41308,7 @@
     };
     t.prototype.processRow = function (e, t, n, r) {
       var o = t.shouldRowBeSkipped || function () {
-        return !1;
+        return false;
       };
       var i = this.gridOptionsWrapper;
       var a = i.getContext();
@@ -41407,7 +41407,7 @@
         } else {
           var r = n.onNewHeaderRow();
           t.forEach(function (e, t) {
-            r.onColumn(e, t, void 0);
+            r.onColumn(e, t, undefined);
           });
         }
         return n;
@@ -41459,8 +41459,8 @@
       };
     };
     t.prototype.getColumnsToExport = function (e, t) {
-      if (void 0 === e) {
-        e = !1;
+      if (undefined === e) {
+        e = false;
       }
       var n = this.columnController.isPivotMode();
       return t && t.length ? this.columnController.getGridColumns(t) : e && !n ? (this.gridOptionsWrapper.isTreeData() ? this.columnController.getGridColumns([Ee.GROUP_AUTO_COLUMN_ID]) : []).concat(this.columnController.getAllPrimaryColumns() || []) : this.columnController.getAllDisplayedColumns();
@@ -41498,11 +41498,11 @@
         o.onColumn(t || "", i++, a.getLeafColumns().length - 1);
       });
     };
-    jh([pe("displayedGroupCreator")], t.prototype, "displayedGroupCreator", void 0);
-    jh([pe("columnController")], t.prototype, "columnController", void 0);
-    jh([pe("rowModel")], t.prototype, "rowModel", void 0);
-    jh([pe("pinnedRowModel")], t.prototype, "pinnedRowModel", void 0);
-    jh([pe("selectionController")], t.prototype, "selectionController", void 0);
+    jh([pe("displayedGroupCreator")], t.prototype, "displayedGroupCreator", undefined);
+    jh([pe("columnController")], t.prototype, "columnController", undefined);
+    jh([pe("rowModel")], t.prototype, "rowModel", undefined);
+    jh([pe("pinnedRowModel")], t.prototype, "pinnedRowModel", undefined);
+    jh([pe("selectionController")], t.prototype, "selectionController", undefined);
     return t = jh([de("gridSerializer")], t);
   }(We);
   var Rh = {
@@ -41512,7 +41512,7 @@
   var kh = function () {
     function e() {}
     e.createHeader = function (e) {
-      if (void 0 === e) {
+      if (undefined === e) {
         e = {};
       }
       var t = ["version"];
@@ -41573,12 +41573,12 @@
       this.folders.push({
         path: e,
         created: new Date(),
-        isBase64: !1
+        isBase64: false
       });
     };
     e.addFile = function (e, t, n) {
-      if (void 0 === n) {
-        n = !1;
+      if (undefined === n) {
+        n = false;
       }
       this.files.push({
         path: e,
@@ -41588,7 +41588,7 @@
       });
     };
     e.getContent = function (e) {
-      if (void 0 === e) {
+      if (undefined === e) {
         e = "application/zip";
       }
       var t = this.buildFileStream();
@@ -41603,7 +41603,7 @@
       this.files = [];
     };
     e.buildFileStream = function (e) {
-      if (void 0 === e) {
+      if (undefined === e) {
         e = "";
       }
       for (var t = this.folders.concat(this.files), n = t.length, r = "", o = 0, i = 0, a = 0, s = t; a < s.length; a++) {
@@ -41649,8 +41649,8 @@
       };
     };
     e.getConvertedContent = function (e, t) {
-      if (void 0 === t) {
-        t = !1;
+      if (undefined === t) {
+        t = false;
       }
       if (t) {
         e = e.split(";base64,")[1];
@@ -41703,9 +41703,9 @@
     e.files = [];
     return e;
   }();
-  Oe.register(ch, !1);
-  Oe.register(bh, !1);
-  Oe.register(Rh, !1);
+  Oe.register(ch, false);
+  Oe.register(bh, false);
+  Oe.register(Rh, false);
   exports.AgAbstractField = Es;
   exports.AgAngleSelect = _p;
   exports.AgCheckbox = Ss;
@@ -41821,7 +41821,7 @@
   exports.ProvidedFilter = jo;
   exports.Qualifier = me;
   exports.QuerySelector = function (e) {
-    return po.bind(this, e, void 0);
+    return po.bind(this, e, undefined);
   };
   exports.RefSelector = uo;
   exports.ResizeObserverService = Rd;
@@ -41862,8 +41862,8 @@
   exports.ZipContainer = Dh;
   exports._ = qr;
   exports.defaultGroupComparator = function (e, t, n, o, i) {
-    if (void 0 === i) {
-      i = !1;
+    if (undefined === i) {
+      i = false;
     }
     console.warn("AG Grid: Since ag-grid 11.0.0 defaultGroupComparator is not necessary. You can remove this from your colDef");
     var a = r(n) && n.group;
@@ -41876,14 +41876,14 @@
       return {
         restrict: "A",
         controller: ["$element", "$scope", "$compile", "$attrs", Cf],
-        scope: !0
+        scope: true
       };
     });
   };
   exports.initialiseAgGridWithWebComponents = function () {
     console.warn("ag-grid: initialiseAgGridWithWebComponents is deprecated. Please use the ag-grid-webcomponent dependency instead. ");
     if (!Tf) {
-      Tf = !0;
+      Tf = true;
       if (!("undefined" !== typeof document && document.registerElement)) {
         console.error("AG Grid: unable to find document.registerElement() function, unable to initialise AG Grid as a Web Component");
       }
@@ -41896,8 +41896,8 @@
           get: function () {
             return this.__agGridGetProperty(t);
           },
-          enumerable: !0,
-          configurable: !0
+          enumerable: true,
+          configurable: true
         });
       });
       var t = e;
@@ -41932,7 +41932,7 @@
         this._agGrid = new Of(this, this._gridOptions, n);
         this.api = e.api;
         this.columnApi = e.columnApi;
-        this._initialised = !0;
+        this._initialised = true;
       };
       t.createdCallback = function () {
         for (var e = 0; e < this.attributes.length; e++) {

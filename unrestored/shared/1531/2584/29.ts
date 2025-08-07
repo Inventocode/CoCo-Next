@@ -4,9 +4,9 @@ function r(e, t, n) {
   if (t in e) {
     Object.defineProperty(e, t, {
       value: n,
-      enumerable: !0,
-      configurable: !0,
-      writable: !0
+      enumerable: true,
+      configurable: true,
+      writable: true
     });
   } else {
     e[t] = n;

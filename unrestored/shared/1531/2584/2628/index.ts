@@ -1,24 +1,24 @@
 "use strict";
 
 export { W as a };
-var r = require("react");
-var i = require("./988");
-var o = require("./275");
-var a = require("./277");
+import r = require("react");
+import i = require("./988");
+import o = require("./275");
+import a = require("./277");
 var s = ["localeMatcher", "style", "currency", "currencyDisplay", "unit", "unitDisplay", "useGrouping", "minimumIntegerDigits", "minimumFractionDigits", "maximumFractionDigits", "minimumSignificantDigits", "maximumSignificantDigits", "compactDisplay", "currencyDisplay", "currencySign", "notation", "signDisplay", "unit", "unitDisplay"];
 function c(e, t, n) {
   var r = e.locale;
   var i = e.formats;
   var a = e.onError;
-  if (void 0 === n) {
+  if (undefined === n) {
     n = {};
   }
   var c = n.format;
-  var u = c && Object(o.f)(i, "number", c, a) || {};
-  return t(r, Object(o.e)(n, s, u));
+  var u = c && o.f(i, "number", c, a) || {};
+  return t(r, o.e(n, s, u));
 }
 function u(e, t, n, r) {
-  if (void 0 === r) {
+  if (undefined === r) {
     r = {};
   }
   try {
@@ -29,7 +29,7 @@ function u(e, t, n, r) {
   return String(n);
 }
 function l(e, t, n, r) {
-  if (void 0 === r) {
+  if (undefined === r) {
     r = {};
   }
   try {
@@ -39,10 +39,10 @@ function l(e, t, n, r) {
   }
   return [];
 }
-var f = require("./796");
+import f = require("./796");
 var d = ["numeric", "style"];
 function h(e, t, n, r, i) {
-  if (void 0 === i) {
+  if (undefined === i) {
     i = {};
   }
   if (!r) {
@@ -56,12 +56,12 @@ function h(e, t, n, r, i) {
       var r = e.locale;
       var i = e.formats;
       var a = e.onError;
-      if (void 0 === n) {
+      if (undefined === n) {
         n = {};
       }
       var s = n.format;
-      var c = !!s && Object(o.f)(i, "relative", s, a) || {};
-      return t(r, Object(o.e)(n, d, c));
+      var c = !!s && o.f(i, "relative", s, a) || {};
+      return t(r, o.e(n, d, c));
     }(e, t, i).format(n, r);
   } catch (s) {
     e.onError(new a.b("Error formatting relative time.", s));
@@ -84,14 +84,14 @@ function A(e, t, n, r) {
   var a = e.formats;
   var s = e.onError;
   var c = e.timeZone;
-  if (void 0 === r) {
+  if (undefined === r) {
     r = {};
   }
   var u = r.format;
   var l = p(p({}, c && {
     timeZone: c
-  }), u && Object(o.f)(a, t, u, s));
-  var f = Object(o.e)(r, _, l);
+  }), u && o.f(a, t, u, s));
+  var f = o.e(r, _, l);
   if (!("time" !== t || f.hour || f.minute || f.second)) {
     f = p(p({}, f), {
       hour: "numeric",
@@ -101,7 +101,7 @@ function A(e, t, n, r) {
   return n(i, f);
 }
 function g(e, t, n, r) {
-  if (void 0 === r) {
+  if (undefined === r) {
     r = {};
   }
   var i = "string" === typeof n ? new Date(n || 0) : n;
@@ -113,7 +113,7 @@ function g(e, t, n, r) {
   return String(i);
 }
 function v(e, t, n, r) {
-  if (void 0 === r) {
+  if (undefined === r) {
     r = {};
   }
   var i = "string" === typeof n ? new Date(n || 0) : n;
@@ -125,7 +125,7 @@ function v(e, t, n, r) {
   return String(i);
 }
 function m(e, t, n, r) {
-  if (void 0 === r) {
+  if (undefined === r) {
     r = {};
   }
   var i = "string" === typeof n ? new Date(n || 0) : n;
@@ -137,7 +137,7 @@ function m(e, t, n, r) {
   return [];
 }
 function y(e, t, n, r) {
-  if (void 0 === r) {
+  if (undefined === r) {
     r = {};
   }
   var i = "string" === typeof n ? new Date(n || 0) : n;
@@ -152,13 +152,13 @@ var b = ["localeMatcher", "type"];
 function w(e, t, n, r) {
   var i = e.locale;
   var s = e.onError;
-  if (void 0 === r) {
+  if (undefined === r) {
     r = {};
   }
   if (!Intl.PluralRules) {
     s(new f.a("Intl.PluralRules is not available in this environment.\nTry polyfilling it using \"@formatjs/intl-pluralrules\"\n", "MISSING_INTL_API"));
   }
-  var c = Object(o.e)(r, b);
+  var c = o.e(r, b);
   try {
     return t(i, c).select(n);
   } catch (u) {
@@ -168,9 +168,9 @@ function w(e, t, n, r) {
 }
 var E;
 var x;
-var C = require("./2588");
-var O = require("./2589/index");
-var k = require("./1440/index");
+import C = require("./2588");
+import O = require("./2589/index");
+import k = require("./1440/index");
 !function (e) {
   e[e.literal = 0] = "literal";
   e[e.argument = 1] = "argument";
@@ -245,14 +245,14 @@ function R(e, t, n, r) {
   var f = e.onError;
   var d = e.timeZone;
   var h = e.wrapRichTextChunksInFragment;
-  if (void 0 === n) {
+  if (undefined === n) {
     n = {
       id: ""
     };
   }
   var p = n.id;
   var _ = n.defaultMessage;
-  Object(C.a)(!!p, "[React Intl] An `id` must be provided to format a message.");
+  C.a(!!p, "[React Intl] An `id` must be provided to format a message.");
   var A = String(p);
   var g = c && Object.prototype.hasOwnProperty.call(c, A) && c[A];
   if (Array.isArray(g) && 1 === g.length && g[0].type === E.literal) {
@@ -264,7 +264,7 @@ function R(e, t, n, r) {
   var v = r && function (e) {
     return Object.keys(e).reduce(function (t, n) {
       var r = e[n];
-      t[n] = Object(k.b)(r) ? Object(o.b)(r) : r;
+      t[n] = k.b(r) ? o.b(r) : r;
       return t;
     }, {});
   }(r);
@@ -300,7 +300,7 @@ function R(e, t, n, r) {
   }
   return g || _ || A;
 }
-var P = require("./1170");
+import P = require("./1170");
 var N = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -318,13 +318,13 @@ var j = Date.now();
 function L(e, t, n, r) {
   var i = e.locale;
   var s = e.onError;
-  if (void 0 === r) {
+  if (undefined === r) {
     r = {};
   }
   if (!Intl.ListFormat) {
     s(new f.a("Intl.ListFormat is not available in this environment.\nTry polyfilling it using \"@formatjs/intl-listformat\"\n", "MISSING_INTL_API"));
   }
-  var c = Object(o.e)(r, M);
+  var c = o.e(r, M);
   try {
     var u = {};
     var l = n.map(function (e, t) {
@@ -359,13 +359,13 @@ var U = ["localeMatcher", "style", "type", "fallback"];
 function H(e, t, n, r) {
   var i = e.locale;
   var s = e.onError;
-  if (void 0 === r) {
+  if (undefined === r) {
     r = {};
   }
   if (!Intl.DisplayNames) {
     s(new f.a("Intl.DisplayNames is not available in this environment.\nTry polyfilling it using \"@formatjs/intl-displaynames\"\n", "MISSING_INTL_API"));
   }
-  var c = Object(o.e)(r, U);
+  var c = o.e(r, U);
   try {
     return t(i, c).of(n);
   } catch (u) {
@@ -417,7 +417,7 @@ function Q(e) {
   };
 }
 function W(e, t) {
-  var n = Object(o.c)(t);
+  var n = o.c(t);
   var r = G(G({}, o.a), e);
   var i = r.locale;
   var s = r.defaultLocale;
@@ -454,7 +454,7 @@ function W(e, t) {
 var K = function (e) {
   function t() {
     var t = null !== e && e.apply(this, arguments) || this;
-    t.cache = Object(o.d)();
+    t.cache = o.d();
     t.state = {
       cache: t.cache,
       intl: W(Q(t.props), t.cache),
@@ -473,7 +473,7 @@ var K = function (e) {
     };
   };
   t.prototype.render = function () {
-    Object(o.g)(this.state.intl);
+    o.g(this.state.intl);
     return r.createElement(i.b, {
       value: this.state.intl
     }, this.props.children);

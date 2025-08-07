@@ -6,7 +6,7 @@ var s = Math.sqrt;
 var c = Math.LN2;
 r({
   target: "Math",
-  stat: !0,
+  stat: true,
   forced: !i || 710 != Math.floor(i(Number.MAX_VALUE)) || i(1 / 0) != 1 / 0
 }, {
   acosh: function (e) {

@@ -1,8 +1,8 @@
 "use strict";
 
 export { A as a };
-var r = require("./183");
-var i = require("../1440/253");
+import r = require("./183");
+import i = require("../1440/253");
 var o = /(?:[Eec]{1,6}|G{1,5}|[Qq]{1,5}|(?:[yYur]+|U{1,5})|[ML]{1,5}|d{1,2}|D{1,3}|F{1}|[abB]{1,5}|[hkHK]{1,2}|w{1,2}|W{1}|m{1,2}|s{1,2}|[zZOvVxX]{1,4})(?=([^']*'[^']*')*[^']*$)/g;
 function a(e) {
   var t = {};
@@ -53,7 +53,7 @@ function a(e) {
         t.weekday = ["short", "long", "narrow", "short"][n - 4];
         break;
       case "a":
-        t.hour12 = !0;
+        t.hour12 = true;
         break;
       case "b":
       case "B":
@@ -176,7 +176,7 @@ function d(e) {
         t.currency = o.options[0];
         continue;
       case "group-off":
-        t.useGrouping = !1;
+        t.useGrouping = false;
         continue;
       case "precision-integer":
       case ".":
@@ -195,17 +195,17 @@ function d(e) {
         t.compactDisplay = "long";
         continue;
       case "scientific":
-        t = Object(r.a)(Object(r.a)(Object(r.a)({}, t), {
+        t = r.a(r.a(r.a({}, t), {
           notation: "scientific"
         }), o.options.reduce(function (e, t) {
-          return Object(r.a)(Object(r.a)({}, e), f(t));
+          return r.a(r.a({}, e), f(t));
         }, {}));
         continue;
       case "engineering":
-        t = Object(r.a)(Object(r.a)(Object(r.a)({}, t), {
+        t = r.a(r.a(r.a({}, t), {
           notation: "engineering"
         }), o.options.reduce(function (e, t) {
-          return Object(r.a)(Object(r.a)({}, e), f(t));
+          return r.a(r.a({}, e), f(t));
         }, {}));
         continue;
       case "notation-simple":
@@ -250,14 +250,14 @@ function d(e) {
         return "";
       });
       if (o.options.length) {
-        t = Object(r.a)(Object(r.a)({}, t), u(o.options[0]));
+        t = r.a(r.a({}, t), u(o.options[0]));
       }
     } else if (c.test(o.stem)) {
-      t = Object(r.a)(Object(r.a)({}, t), u(o.stem));
+      t = r.a(r.a({}, t), u(o.stem));
     } else {
       var a = l(o.stem);
       if (a) {
-        t = Object(r.a)(Object(r.a)({}, t), a);
+        t = r.a(r.a({}, t), a);
       }
     }
   }
@@ -276,7 +276,7 @@ var h = function (e) {
     }
     return a;
   }
-  Object(r.b)(t, e);
+  r.b(t, e);
   t.buildMessage = function (e, t) {
     function n(e) {
       return e.charCodeAt(0).toString(16).toUpperCase();
@@ -340,86 +340,86 @@ var h = function (e) {
   return t;
 }(Error);
 var p = function (e, t) {
-  t = void 0 !== t ? t : {};
+  t = undefined !== t ? t : {};
   var n;
   var o = {};
   var s = {
     start: Ie
   };
   var c = Ie;
-  var u = Ce("<", !1);
+  var u = Ce("<", false);
   var l = function (e) {
     return e.join("");
   };
-  var f = Ce("#", !1);
+  var f = Ce("#", false);
   var p = ke("tagElement");
-  var _ = Ce("/>", !1);
-  var A = Ce(">", !1);
-  var g = Ce("</", !1);
+  var _ = Ce("/>", false);
+  var A = Ce(">", false);
+  var g = Ce("</", false);
   var v = ke("argumentElement");
-  var m = Ce("{", !1);
-  var y = Ce("}", !1);
+  var m = Ce("{", false);
+  var y = Ce("}", false);
   var b = ke("numberSkeletonId");
   var w = /^['\/{}]/;
-  var E = Oe(["'", "/", "{", "}"], !1, !1);
+  var E = Oe(["'", "/", "{", "}"], false, false);
   var x = {
     type: "any"
   };
   var C = ke("numberSkeletonTokenOption");
-  var O = Ce("/", !1);
+  var O = Ce("/", false);
   var k = ke("numberSkeletonToken");
-  var S = Ce("::", !1);
+  var S = Ce("::", false);
   var T = function (e) {
     it.pop();
     return e.replace(/\s*$/, "");
   };
-  var B = Ce(",", !1);
-  var D = Ce("number", !1);
+  var B = Ce(",", false);
+  var D = Ce("number", false);
   var I = function (e, t, n) {
-    return Object(r.a)({
+    return r.a({
       type: "number" === t ? i.a.number : "date" === t ? i.a.date : i.a.time,
       style: n && n[2],
       value: e
     }, at());
   };
-  var F = Ce("'", !1);
+  var F = Ce("'", false);
   var R = /^[^']/;
-  var P = Oe(["'"], !0, !1);
+  var P = Oe(["'"], true, false);
   var N = /^[^a-zA-Z'{}]/;
-  var M = Oe([["a", "z"], ["A", "Z"], "'", "{", "}"], !0, !1);
+  var M = Oe([["a", "z"], ["A", "Z"], "'", "{", "}"], true, false);
   var j = /^[a-zA-Z]/;
-  var L = Oe([["a", "z"], ["A", "Z"]], !1, !1);
-  var U = Ce("date", !1);
-  var H = Ce("time", !1);
-  var V = Ce("plural", !1);
-  var G = Ce("selectordinal", !1);
-  var z = Ce("offset:", !1);
-  var Q = Ce("select", !1);
-  var W = Ce("=", !1);
+  var L = Oe([["a", "z"], ["A", "Z"]], false, false);
+  var U = Ce("date", false);
+  var H = Ce("time", false);
+  var V = Ce("plural", false);
+  var G = Ce("selectordinal", false);
+  var z = Ce("offset:", false);
+  var Q = Ce("select", false);
+  var W = Ce("=", false);
   var K = ke("whitespace");
   var X = /^[\t-\r \x85\xA0\u1680\u2000-\u200A\u2028\u2029\u202F\u205F\u3000]/;
-  var Y = Oe([["\t", "\r"], " ", "", " ", " ", [" ", " "], " ", " ", " ", " ", "　"], !1, !1);
+  var Y = Oe([["\t", "\r"], " ", "", " ", " ", [" ", " "], " ", " ", " ", " ", "　"], false, false);
   var q = ke("syntax pattern");
   var $ = /^[!-\/:-@[-\^`{-~\xA1-\xA7\xA9\xAB\xAC\xAE\xB0\xB1\xB6\xBB\xBF\xD7\xF7\u2010-\u2027\u2030-\u203E\u2041-\u2053\u2055-\u205E\u2190-\u245F\u2500-\u2775\u2794-\u2BFF\u2E00-\u2E7F\u3001-\u3003\u3008-\u3020\u3030\uFD3E\uFD3F\uFE45\uFE46]/;
-  var J = Oe([["!", "/"], [":", "@"], ["[", "^"], "`", ["{", "~"], ["¡", "§"], "©", "«", "¬", "®", "°", "±", "¶", "»", "¿", "×", "÷", ["‐", "‧"], ["‰", "‾"], ["⁁", "⁓"], ["⁕", "⁞"], ["←", "⑟"], ["─", "❵"], ["➔", "⯿"], ["⸀", "⹿"], ["、", "〃"], ["〈", "〠"], "〰", "﴾", "﴿", "﹅", "﹆"], !1, !1);
+  var J = Oe([["!", "/"], [":", "@"], ["[", "^"], "`", ["{", "~"], ["¡", "§"], "©", "«", "¬", "®", "°", "±", "¶", "»", "¿", "×", "÷", ["‐", "‧"], ["‰", "‾"], ["⁁", "⁓"], ["⁕", "⁞"], ["←", "⑟"], ["─", "❵"], ["➔", "⯿"], ["⸀", "⹿"], ["、", "〃"], ["〈", "〠"], "〰", "﴾", "﴿", "﹅", "﹆"], false, false);
   var Z = ke("optional whitespace");
   var ee = ke("number");
-  var te = Ce("-", !1);
+  var te = Ce("-", false);
   ke("apostrophe");
   var ne = ke("double apostrophes");
-  var re = Ce("''", !1);
+  var re = Ce("''", false);
   var ie = function (e) {
     return "<" !== e && "{" !== e && !(ot() && "#" === e) && !(it.length > 1 && "}" === e);
   };
-  var oe = Ce("\n", !1);
+  var oe = Ce("\n", false);
   var ae = ke("argNameOrNumber");
   var se = ke("validTag");
   var ce = ke("argNumber");
-  var ue = Ce("0", !1);
+  var ue = Ce("0", false);
   var le = /^[1-9]/;
-  var fe = Oe([["1", "9"]], !1, !1);
+  var fe = Oe([["1", "9"]], false, false);
   var de = /^[0-9]/;
-  var he = Oe([["0", "9"]], !1, !1);
+  var he = Oe([["0", "9"]], false, false);
   var pe = ke("argName");
   var _e = ke("tagName");
   var Ae = 0;
@@ -431,7 +431,7 @@ var p = function (e, t) {
   var me = 0;
   var ye = [];
   var be = 0;
-  if (void 0 !== t.startRule) {
+  if (undefined !== t.startRule) {
     if (!(t.startRule in s)) {
       throw new Error("Can't start parsing from rule \"" + t.startRule + "\".");
     }
@@ -446,7 +446,7 @@ var p = function (e, t) {
   function xe(e, t) {
     throw function (e, t) {
       return new h(e, [], "", t);
-    }(e, t = void 0 !== t ? t : Te(ge, Ae));
+    }(e, t = undefined !== t ? t : Te(ge, Ae));
   }
   function Ce(e, t) {
     return {
@@ -538,7 +538,7 @@ var p = function (e, t) {
     var n;
     t = Ae;
     ge = Ae;
-    if ((!st ? void 0 : o) !== o && (n = function () {
+    if ((!st ? undefined : o) !== o && (n = function () {
       var e;
       var t;
       var n;
@@ -552,7 +552,7 @@ var p = function (e, t) {
           if ((s = t) !== (u = a)) {
             xe("Mismatch tag \"" + s + "\" !== \"" + u + "\"", Ee());
           }
-          t = Object(r.a)({
+          t = r.a({
             type: i.a.tag,
             value: s,
             children: c
@@ -588,7 +588,7 @@ var p = function (e, t) {
       if ((t = Pe()) !== o) {
         ge = e;
         n = t;
-        t = Object(r.a)({
+        t = r.a({
           type: i.a.literal,
           value: n
         }, at());
@@ -624,7 +624,7 @@ var p = function (e, t) {
         if (s !== o) {
           ge = t;
           c = a;
-          n = Object(r.a)({
+          n = r.a({
             type: i.a.argument,
             value: c
           }, at());
@@ -730,7 +730,7 @@ var p = function (e, t) {
                   if (t !== o) {
                     ge = e;
                     i = t;
-                    t = Object(r.a)({
+                    t = r.a({
                       type: 0,
                       tokens: i,
                       parsedOptions: ct ? d(i) : {}
@@ -749,7 +749,7 @@ var p = function (e, t) {
                   t = Ae;
                   ge = Ae;
                   it.push("numberArgStyle");
-                  if ((n = (n = !0) ? void 0 : o) !== o && (i = Pe()) !== o) {
+                  if ((n = (n = true) ? undefined : o) !== o && (i = Pe()) !== o) {
                     ge = t;
                     n = T(i);
                     t = n;
@@ -905,7 +905,7 @@ var p = function (e, t) {
                     if (n !== o) {
                       ge = t;
                       c = n;
-                      n = Object(r.a)({
+                      n = r.a({
                         type: 1,
                         pattern: c,
                         parsedOptions: ct ? a(c) : {}
@@ -924,7 +924,7 @@ var p = function (e, t) {
                     t = Ae;
                     ge = Ae;
                     it.push("dateOrTimeArgStyle");
-                    if ((n = (n = !0) ? void 0 : o) !== o && (i = Pe()) !== o) {
+                    if ((n = (n = true) ? undefined : o) !== o && (i = Pe()) !== o) {
                       ge = t;
                       n = T(i);
                       t = n;
@@ -1094,7 +1094,7 @@ var p = function (e, t) {
                                 if (p !== o) {
                                   ge = t;
                                   n = function (e, t, n, o) {
-                                    return Object(r.a)({
+                                    return r.a({
                                       type: i.a.plural,
                                       pluralType: "plural" === t ? "cardinal" : "ordinal",
                                       value: e,
@@ -1251,7 +1251,7 @@ var p = function (e, t) {
                             if (d !== o) {
                               ge = t;
                               n = function (e, t) {
-                                return Object(r.a)({
+                                return r.a({
                                   type: i.a.select,
                                   value: e,
                                   options: t.reduce(function (e, t) {
@@ -1335,7 +1335,7 @@ var p = function (e, t) {
         }
         if (n !== o) {
           ge = t;
-          n = Object(r.a)({
+          n = r.a({
             type: i.a.pound
           }, at());
         }
@@ -1351,7 +1351,7 @@ var p = function (e, t) {
     var i;
     t = Ae;
     ge = Ae;
-    if ((n = (n = st) ? void 0 : o) !== o) {
+    if ((n = (n = st) ? undefined : o) !== o) {
       r = [];
       if ((i = $e()) === o && (i = Je()) === o && (i = Ze()) === o) {
         if (60 === e.charCodeAt(Ae)) {
@@ -1429,7 +1429,7 @@ var p = function (e, t) {
     }
     be--;
     if (r === o) {
-      n = void 0;
+      n = undefined;
     } else {
       Ae = n;
       n = o;
@@ -1499,7 +1499,7 @@ var p = function (e, t) {
     if (n !== o) {
       ge = t;
       f = n;
-      n = Object(r.a)({
+      n = r.a({
         type: i.a.literal,
         value: f.join("")
       }, at());
@@ -1607,7 +1607,7 @@ var p = function (e, t) {
     }
     be--;
     if (a === o) {
-      i = void 0;
+      i = undefined;
     } else {
       Ae = i;
       i = o;
@@ -1651,7 +1651,7 @@ var p = function (e, t) {
         }
         be--;
         if (a === o) {
-          i = void 0;
+          i = undefined;
         } else {
           Ae = i;
           i = o;
@@ -1920,7 +1920,7 @@ var p = function (e, t) {
       if (i !== o) {
         ge = Ae;
         it.push("select");
-        if ((!0 ? void 0 : o) !== o && (a = Fe()) !== o) {
+        if ((true ? undefined : o) !== o && (a = Fe()) !== o) {
           if (125 === e.charCodeAt(Ae)) {
             s = "}";
             Ae++;
@@ -1935,7 +1935,7 @@ var p = function (e, t) {
             c = n;
             u = a;
             it.pop();
-            t = Object(r.a)({
+            t = r.a({
               id: c,
               value: u
             }, at());
@@ -2005,7 +2005,7 @@ var p = function (e, t) {
       if (i !== o) {
         ge = Ae;
         it.push("plural");
-        if ((!0 ? void 0 : o) !== o && (a = Fe()) !== o) {
+        if ((true ? undefined : o) !== o && (a = Fe()) !== o) {
           if (125 === e.charCodeAt(Ae)) {
             s = "}";
             Ae++;
@@ -2020,7 +2020,7 @@ var p = function (e, t) {
             c = n;
             u = a;
             it.pop();
-            t = Object(r.a)({
+            t = r.a({
               id: c,
               value: u
             }, at());
@@ -2202,7 +2202,7 @@ var p = function (e, t) {
         }
         if (r !== o) {
           ge = Ae;
-          if ((i = (i = "<" === (a = r) || ">" === a || "{" === a || "}" === a || ot() && "#" === a) ? void 0 : o) !== o) {
+          if ((i = (i = "<" === (a = r) || ">" === a || "{" === a || "}" === a || ot() && "#" === a) ? undefined : o) !== o) {
             n = r = [r, i];
           } else {
             Ae = n;
@@ -2291,7 +2291,7 @@ var p = function (e, t) {
     }
     if (r !== o) {
       ge = Ae;
-      if ((i = (i = ie(r)) ? void 0 : o) !== o) {
+      if ((i = (i = ie(r)) ? undefined : o) !== o) {
         n = r = [r, i];
       } else {
         Ae = n;
@@ -2365,7 +2365,7 @@ var p = function (e, t) {
           }
           be--;
           if (a === o) {
-            i = void 0;
+            i = undefined;
           } else {
             Ae = i;
             i = o;
@@ -2412,7 +2412,7 @@ var p = function (e, t) {
               }
               be--;
               if (a === o) {
-                i = void 0;
+                i = undefined;
               } else {
                 Ae = i;
                 i = o;
@@ -2551,7 +2551,7 @@ var p = function (e, t) {
     }
     be--;
     if (a === o) {
-      i = void 0;
+      i = undefined;
     } else {
       Ae = i;
       i = o;
@@ -2587,7 +2587,7 @@ var p = function (e, t) {
         }
         be--;
         if (a === o) {
-          i = void 0;
+          i = undefined;
         } else {
           Ae = i;
           i = o;
@@ -2640,25 +2640,28 @@ var p = function (e, t) {
   if ((n = c()) !== o && Ae === e.length) {
     return n;
   }
-  throw n !== o && Ae < e.length && Be({
-    type: "end"
-  }), De(ye, me < e.length ? e.charAt(me) : null, me < e.length ? Te(me, me + 1) : Te(me, me));
+  if (n !== o && Ae < e.length) {
+    Be({
+      type: "end"
+    });
+  }
+  throw De(ye, me < e.length ? e.charAt(me) : null, me < e.length ? Te(me, me + 1) : Te(me, me));
 };
 var _ = /(^|[^\\])#/g;
 function A(e, t) {
-  t = Object(r.a)({
-    normalizeHashtagInPlural: !0,
-    shouldParseSkeleton: !0
+  t = r.a({
+    normalizeHashtagInPlural: true,
+    shouldParseSkeleton: true
   }, t || {});
   var n = p(e, t);
   if (t.normalizeHashtagInPlural) {
     (function e(t) {
       t.forEach(function (t) {
-        if (Object(i.h)(t) || Object(i.j)(t)) {
+        if (i.h(t) || i.j(t)) {
           Object.keys(t.options).forEach(function (n) {
-            for (var o, a = t.options[n], s = -1, c = void 0, u = 0; u < a.value.length; u++) {
+            for (var o, a = t.options[n], s = -1, c = undefined, u = 0; u < a.value.length; u++) {
               var l = a.value[u];
-              if (Object(i.e)(l) && _.test(l.value)) {
+              if (i.e(l) && _.test(l.value)) {
                 s = u;
                 c = l;
                 break;
@@ -2667,7 +2670,7 @@ function A(e, t) {
             if (c) {
               var f = c.value.replace(_, "$1{" + t.value + ", number}");
               var d = p(f);
-              (o = a.value).splice.apply(o, Object(r.c)([s, 1], d));
+              (o = a.value).splice.apply(o, r.c([s, 1], d));
             }
             e(a.value);
           });

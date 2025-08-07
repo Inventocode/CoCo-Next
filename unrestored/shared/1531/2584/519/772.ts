@@ -1,11 +1,11 @@
 "use strict";
 
 export { s as a };
-var r = require("../33/996");
-var i = require("../80/995");
-var o = require("../33/771");
-var a = require("../33/997");
+import r = require("../33/996");
+import i = require("../80/995");
+import o = require("../33/771");
+import a = require("../33/997");
 function s(e) {
-  return Object(r.a)(e) || Object(i.a)(e) || Object(o.a)(e) || Object(a.a)();
+  return r.a(e) || i.a(e) || o.a(e) || a.a();
 }
 export default s;

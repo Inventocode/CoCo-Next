@@ -1,6 +1,6 @@
 require("../1623/86")({
   target: "Math",
-  stat: !0
+  stat: true
 }, {
   fround: require("./1597")
 });

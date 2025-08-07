@@ -76,7 +76,7 @@ var i = this && this.__generator || function (e, t) {
                 a.label++;
                 return {
                   value: o[1],
-                  done: !1
+                  done: false
                 };
               case 5:
                 a.label++;
@@ -124,15 +124,15 @@ var i = this && this.__generator || function (e, t) {
           throw o[1];
         }
         return {
-          value: o[0] ? o[1] : void 0,
-          done: !0
+          value: o[0] ? o[1] : undefined,
+          done: true
         };
       }([o, s]);
     };
   }
 };
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
 var o = require("./2319");
 var a = require("../1366/444");
@@ -152,18 +152,18 @@ var g = function () {
     if ("object" !== typeof t) {
       throw new Error("" + a.CONTAINER_OPTIONS_MUST_BE_AN_OBJECT);
     }
-    if (void 0 === t.defaultScope) {
+    if (undefined === t.defaultScope) {
       t.defaultScope = s.BindingScopeEnum.Transient;
     } else if (t.defaultScope !== s.BindingScopeEnum.Singleton && t.defaultScope !== s.BindingScopeEnum.Transient && t.defaultScope !== s.BindingScopeEnum.Request) {
       throw new Error("" + a.CONTAINER_OPTIONS_INVALID_DEFAULT_SCOPE);
     }
-    if (void 0 === t.autoBindInjectable) {
-      t.autoBindInjectable = !1;
+    if (undefined === t.autoBindInjectable) {
+      t.autoBindInjectable = false;
     } else if ("boolean" !== typeof t.autoBindInjectable) {
       throw new Error("" + a.CONTAINER_OPTIONS_INVALID_AUTO_BIND_INJECTABLE);
     }
-    if (void 0 === t.skipBaseClassChecks) {
-      t.skipBaseClassChecks = !1;
+    if (undefined === t.skipBaseClassChecks) {
+      t.skipBaseClassChecks = false;
     } else if ("boolean" !== typeof t.skipBaseClassChecks) {
       throw new Error("" + a.CONTAINER_OPTIONS_INVALID_SKIP_BASE_CHECK);
     }
@@ -209,7 +209,7 @@ var g = function () {
     for (var e = [], t = 0; t < arguments.length; t++) {
       e[t] = arguments[t];
     }
-    return r(this, void 0, void 0, function () {
+    return r(this, undefined, undefined, function () {
       var t;
       var n;
       var r;
@@ -281,7 +281,7 @@ var g = function () {
     return this.isBoundTagged(e, c.NAMED_TAG, t);
   };
   e.prototype.isBoundTagged = function (e, t, n) {
-    var r = !1;
+    var r = false;
     if (this._bindingDictionary.hasKey(e)) {
       var i = this._bindingDictionary.get(e);
       var o = l.createMockRequest(this, e, t, n);
@@ -299,7 +299,7 @@ var g = function () {
   };
   e.prototype.restore = function () {
     var e = this._snapshots.pop();
-    if (void 0 === e) {
+    if (undefined === e) {
       throw new Error(a.NO_MORE_SNAPSHOTS_AVAILABLE);
     }
     this._bindingDictionary = e.bindings;
@@ -323,19 +323,19 @@ var g = function () {
     this._metadataReader = e;
   };
   e.prototype.get = function (e) {
-    return this._get(!1, !1, s.TargetTypeEnum.Variable, e);
+    return this._get(false, false, s.TargetTypeEnum.Variable, e);
   };
   e.prototype.getTagged = function (e, t, n) {
-    return this._get(!1, !1, s.TargetTypeEnum.Variable, e, t, n);
+    return this._get(false, false, s.TargetTypeEnum.Variable, e, t, n);
   };
   e.prototype.getNamed = function (e, t) {
     return this.getTagged(e, c.NAMED_TAG, t);
   };
   e.prototype.getAll = function (e) {
-    return this._get(!0, !0, s.TargetTypeEnum.Variable, e);
+    return this._get(true, true, s.TargetTypeEnum.Variable, e);
   };
   e.prototype.getAllTagged = function (e, t, n) {
-    return this._get(!1, !0, s.TargetTypeEnum.Variable, e, t, n);
+    return this._get(false, true, s.TargetTypeEnum.Variable, e, t, n);
   };
   e.prototype.getAllNamed = function (e, t) {
     return this.getAllTagged(e, c.NAMED_TAG, t);
@@ -389,7 +389,7 @@ var g = function () {
       value: o
     };
     if (this._middleware) {
-      if (void 0 === (s = this._middleware(c)) || null === s) {
+      if (undefined === (s = this._middleware(c)) || null === s) {
         throw new Error(a.INVALID_MIDDLEWARE_RETURN);
       }
     } else {

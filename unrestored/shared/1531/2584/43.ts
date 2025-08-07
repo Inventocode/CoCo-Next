@@ -8,7 +8,7 @@ export { h as b };
 export { g as e };
 export { _ as c };
 export { v as d };
-var r = require("./1/index");
+import r = require("regenerator-runtime");
 var o = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -21,44 +21,44 @@ var o = function __importDefault(module) {
   });
   return defaultExport;
 }(r);
-var i = require("./10/index");
-var a = require("./7");
-var s = require("./38/index");
-var c = require("./2");
-var l = require("./99");
+import i = require("./10/index");
+import a = require("./7");
+import s = require("./38/index");
+import c = require("./2");
+import l = require("./99");
 var u = function () {
   var e;
   var t = s.d.getState().project.currentScreenIndex;
-  return null === (e = s.d.getState().project.screens.get(t)) || void 0 === e ? void 0 : e.get("id");
+  return null === (e = s.d.getState().project.screens.get(t)) || undefined === e ? undefined : e.get("id");
 };
 var d = function (e) {
   var t;
   var n = s.d.getState().project;
   var r = n.currentScreenIndex;
-  return e === (null === (t = n.screens.get(r)) || void 0 === t ? void 0 : t.id);
+  return e === (null === (t = n.screens.get(r)) || undefined === t ? undefined : t.id);
 };
 var p = function (e) {
   return s.d.dispatch(e);
 };
 function f(e) {
-  p(Object(c.xh)(e));
+  p(c.xh(e));
 }
 function h() {
   return m.apply(this, arguments);
 }
 function m() {
-  return (m = Object(a.a)(o.a.mark(function e() {
+  return (m = a.a(o.a.mark(function e() {
     var t;
     return o.a.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
             e.next = 2;
-            return Object(l.c)();
+            return l.c();
           case 2:
             t = e.sent;
             Object.entries(t.screens).forEach(function (e) {
-              Object(i.a)(e, 2)[1].snapshot = "";
+              i.a(e, 2)[1].snapshot = "";
             });
             return e.abrupt("return", t);
           case 5:
@@ -71,7 +71,7 @@ function m() {
 }
 function g() {
   var e;
-  return (null === (e = s.d.getState().common.userInfo) || void 0 === e ? void 0 : e.id) || -1;
+  return (null === (e = s.d.getState().common.userInfo) || undefined === e ? undefined : e.id) || -1;
 }
 function _() {
   return s.d.getState().oTState.onlineCooperationUserColorRecord.toJSON();

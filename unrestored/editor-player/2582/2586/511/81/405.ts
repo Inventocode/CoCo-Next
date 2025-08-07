@@ -22,7 +22,7 @@ var y = function () {
     this.bitMatrix = t;
   }
   t.prototype.readFormatInformation = function () {
-    if (null !== this.parsedFormatInfo && void 0 !== this.parsedFormatInfo) {
+    if (null !== this.parsedFormatInfo && undefined !== this.parsedFormatInfo) {
       return this.parsedFormatInfo;
     }
     for (var t = 0, e = 0; e < 6; e++) {
@@ -50,7 +50,7 @@ var y = function () {
     throw new g.a();
   };
   t.prototype.readVersion = function () {
-    if (null !== this.parsedVersion && void 0 !== this.parsedVersion) {
+    if (null !== this.parsedVersion && undefined !== this.parsedVersion) {
       return this.parsedVersion;
     }
     var t = this.bitMatrix.getHeight();
@@ -89,7 +89,7 @@ var y = function () {
     var r = p.a.values.get(t.getDataMask());
     var n = this.bitMatrix.getHeight();
     r.unmaskBitMatrix(this.bitMatrix, n);
-    for (var o = e.buildFunctionPattern(), i = !0, a = new Uint8Array(e.getTotalCodewords()), u = 0, s = 0, c = 0, f = n - 1; f > 0; f -= 2) {
+    for (var o = e.buildFunctionPattern(), i = true, a = new Uint8Array(e.getTotalCodewords()), u = 0, s = 0, c = 0, f = n - 1; f > 0; f -= 2) {
       if (6 === f) {
         f--;
       }
@@ -152,7 +152,7 @@ var v = function (t) {
     return {
       next: function () {
         if (t && n >= t.length) {
-          t = void 0;
+          t = undefined;
         }
         return {
           value: t && t[n++],
@@ -285,7 +285,7 @@ var E = function (t) {
     return {
       next: function () {
         if (t && n >= t.length) {
-          t = void 0;
+          t = undefined;
         }
         return {
           value: t && t[n++],
@@ -313,12 +313,12 @@ var C = function () {
     }
     try {
       r.remask();
-      r.setMirror(!0);
+      r.setMirror(true);
       r.readVersion();
       r.readFormatInformation();
       r.mirror();
       var o = this.decodeBitMatrixParser(r, e);
-      o.setOther(new A(!0));
+      o.setOther(new A(true));
       return o;
     } catch (i) {
       if (null !== n) {
@@ -435,7 +435,7 @@ var N = function (t) {
       var n = Math.abs(t - this.estimatedModuleSize);
       return n <= 1 || n <= this.estimatedModuleSize;
     }
-    return !1;
+    return false;
   };
   e.prototype.combineEstimate = function (t, r, n) {
     return new e((this.getX() + r) / 2, (this.getY() + t) / 2, (this.estimatedModuleSize + n) / 2);
@@ -453,7 +453,7 @@ var D = function (t) {
     return {
       next: function () {
         if (t && n >= t.length) {
-          t = void 0;
+          t = undefined;
         }
         return {
           value: t && t[n++],
@@ -528,10 +528,10 @@ var M = function () {
   t.prototype.foundPatternCross = function (t) {
     for (var e = this.moduleSize, r = e / 2, n = 0; n < 3; n++) {
       if (Math.abs(e - t[n]) >= r) {
-        return !1;
+        return false;
       }
     }
-    return !0;
+    return true;
   };
   t.prototype.crossCheckVertical = function (e, r, n, o) {
     var i = this.image;
@@ -603,7 +603,7 @@ var M = function () {
       }
       var d = new N(u, s, c);
       this.possibleCenters.push(d);
-      if (null !== this.resultPointCallback && void 0 !== this.resultPointCallback) {
+      if (null !== this.resultPointCallback && undefined !== this.resultPointCallback) {
         this.resultPointCallback.foundPossibleResultPoint(d);
       }
     }
@@ -636,7 +636,7 @@ var B = function (t) {
     var i = t.call(this, e, r) || this;
     i.estimatedModuleSize = n;
     i.count = o;
-    if (void 0 === o) {
+    if (undefined === o) {
       i.count = 1;
     }
     return i;
@@ -653,7 +653,7 @@ var B = function (t) {
       var n = Math.abs(t - this.estimatedModuleSize);
       return n <= 1 || n <= this.estimatedModuleSize;
     }
-    return !1;
+    return false;
   };
   e.prototype.combineEstimate = function (t, r, n) {
     var o = this.count + 1;
@@ -689,7 +689,7 @@ var F = function (t) {
     return {
       next: function () {
         if (t && n >= t.length) {
-          t = void 0;
+          t = undefined;
         }
         return {
           value: t && t[n++],
@@ -715,8 +715,8 @@ var x = function () {
     return this.possibleCenters;
   };
   t.prototype.find = function (e) {
-    var r = null !== e && void 0 !== e && void 0 !== e.get(i.a.TRY_HARDER);
-    var n = null !== e && void 0 !== e && void 0 !== e.get(i.a.PURE_BARCODE);
+    var r = null !== e && undefined !== e && undefined !== e.get(i.a.TRY_HARDER);
+    var n = null !== e && undefined !== e && undefined !== e.get(i.a.PURE_BARCODE);
     var o = this.image;
     var a = o.getHeight();
     var u = o.getWidth();
@@ -724,7 +724,7 @@ var x = function () {
     if (s < t.MIN_SKIP || r) {
       s = t.MIN_SKIP;
     }
-    for (var c = !1, f = new Int32Array(5), h = s - 1; h < a && !c; h += s) {
+    for (var c = false, f = new Int32Array(5), h = s - 1; h < a && !c; h += s) {
       f[0] = 0;
       f[1] = 0;
       f[2] = 0;
@@ -739,7 +739,7 @@ var x = function () {
         } else if (0 === (1 & l)) {
           if (4 === l) {
             if (t.foundPatternCross(f)) {
-              if (!0 !== this.handlePossibleCenter(f, h, d, n)) {
+              if (true !== this.handlePossibleCenter(f, h, d, n)) {
                 f[0] = f[2];
                 f[1] = f[3];
                 f[2] = f[4];
@@ -749,7 +749,7 @@ var x = function () {
                 continue;
               }
               s = 2;
-              if (!0 === this.hasSkipped) {
+              if (true === this.hasSkipped) {
                 c = this.haveMultiplyConfirmedCenters();
               } else {
                 var p = this.findRowSkip();
@@ -780,7 +780,7 @@ var x = function () {
         }
       }
       if (t.foundPatternCross(f)) {
-        if (!0 === this.handlePossibleCenter(f, h, u, n)) {
+        if (true === this.handlePossibleCenter(f, h, u, n)) {
           s = f[0];
           if (this.hasSkipped) {
             c = this.haveMultiplyConfirmedCenters();
@@ -799,12 +799,12 @@ var x = function () {
     for (var e = 0, r = 0; r < 5; r++) {
       var n = t[r];
       if (0 === n) {
-        return !1;
+        return false;
       }
       e += n;
     }
     if (e < 7) {
-      return !1;
+      return false;
     }
     var o = e / 7;
     var i = o / 2;
@@ -825,21 +825,21 @@ var x = function () {
       a++;
     }
     if (e < a || r < a) {
-      return !1;
+      return false;
     }
     for (; e >= a && r >= a && !u.get(r - a, e - a) && i[1] <= n;) {
       i[1]++;
       a++;
     }
     if (e < a || r < a || i[1] > n) {
-      return !1;
+      return false;
     }
     for (; e >= a && r >= a && u.get(r - a, e - a) && i[0] <= n;) {
       i[0]++;
       a++;
     }
     if (i[0] > n) {
-      return !1;
+      return false;
     }
     var s = u.getHeight();
     var c = u.getWidth();
@@ -848,21 +848,21 @@ var x = function () {
       a++;
     }
     if (e + a >= s || r + a >= c) {
-      return !1;
+      return false;
     }
     for (; e + a < s && r + a < c && !u.get(r + a, e + a) && i[3] < n;) {
       i[3]++;
       a++;
     }
     if (e + a >= s || r + a >= c || i[3] >= n) {
-      return !1;
+      return false;
     }
     for (; e + a < s && r + a < c && u.get(r + a, e + a) && i[4] < n;) {
       i[4]++;
       a++;
     }
     if (i[4] >= n) {
-      return !1;
+      return false;
     }
     var f = i[0] + i[1] + i[2] + i[3] + i[4];
     return Math.abs(f - o) < 2 * o && t.foundPatternCross(i);
@@ -964,24 +964,24 @@ var x = function () {
     var a = t.centerFromEnd(e, n);
     var u = this.crossCheckVertical(r, Math.floor(a), e[2], i);
     if (!isNaN(u) && (a = this.crossCheckHorizontal(Math.floor(a), Math.floor(u), e[2], i), !isNaN(a) && (!o || this.crossCheckDiagonal(Math.floor(u), Math.floor(a), e[2], i)))) {
-      for (var s = i / 7, c = !1, f = this.possibleCenters, h = 0, l = f.length; h < l; h++) {
+      for (var s = i / 7, c = false, f = this.possibleCenters, h = 0, l = f.length; h < l; h++) {
         var d = f[h];
         if (d.aboutEquals(s, u, a)) {
           f[h] = d.combineEstimate(u, a, s);
-          c = !0;
+          c = true;
           break;
         }
       }
       if (!c) {
         var p = new B(a, u, s);
         f.push(p);
-        if (null !== this.resultPointCallback && void 0 !== this.resultPointCallback) {
+        if (null !== this.resultPointCallback && undefined !== this.resultPointCallback) {
           this.resultPointCallback.foundPossibleResultPoint(p);
         }
       }
-      return !0;
+      return true;
     }
-    return !1;
+    return false;
   };
   t.prototype.findRowSkip = function () {
     var e;
@@ -995,7 +995,7 @@ var x = function () {
         var a = i.value;
         if (a.getCount() >= t.CENTER_QUORUM) {
           if (null != n) {
-            this.hasSkipped = !0;
+            this.hasSkipped = true;
             return Math.floor((Math.abs(n.getX() - a.getX()) - Math.abs(n.getY() - a.getY())) / 2);
           }
           n = a;
@@ -1049,7 +1049,7 @@ var x = function () {
       }
     }
     if (i < 3) {
-      return !1;
+      return false;
     }
     var f = a / u;
     var h = 0;
@@ -1175,7 +1175,7 @@ var k = function () {
     return this.resultPointCallback;
   };
   t.prototype.detect = function (t) {
-    this.resultPointCallback = null === t || void 0 === t ? null : t.get(i.a.NEED_RESULT_POINT_CALLBACK);
+    this.resultPointCallback = null === t || undefined === t ? null : t.get(i.a.NEED_RESULT_POINT_CALLBACK);
     var e = new x(this.image, this.resultPointCallback).find(t);
     return this.processFinderPatternInfo(e);
   };
@@ -1336,7 +1336,7 @@ var V = function () {
   t.prototype.decode = function (e, r) {
     var o;
     var a;
-    if (void 0 !== r && null !== r && void 0 !== r.get(i.a.PURE_BARCODE)) {
+    if (undefined !== r && null !== r && undefined !== r.get(i.a.PURE_BARCODE)) {
       var c = t.extractPureBits(e.getBlackMatrix());
       o = this.decoder.decodeBitMatrix(c, r);
       a = t.NO_POINTS;
@@ -1348,7 +1348,7 @@ var V = function () {
     if (o.getOther() instanceof A) {
       o.getOther().applyMirroredCorrection(a);
     }
-    var h = new u.a(o.getText(), o.getRawBytes(), void 0, a, n.a.QR_CODE, void 0);
+    var h = new u.a(o.getText(), o.getRawBytes(), undefined, a, n.a.QR_CODE, undefined);
     var l = o.getByteSegments();
     if (null !== l) {
       h.putMetadata(s.a.BYTE_SEGMENTS, l);
@@ -1415,7 +1415,7 @@ var V = function () {
     return g;
   };
   t.moduleSize = function (t, e) {
-    for (var r = e.getHeight(), n = e.getWidth(), o = t[0], i = t[1], u = !0, s = 0; o < n && i < r;) {
+    for (var r = e.getHeight(), n = e.getWidth(), o = t[0], i = t[1], u = true, s = 0; o < n && i < r;) {
       if (u !== e.get(o, i)) {
         if (5 === ++s) {
           break;

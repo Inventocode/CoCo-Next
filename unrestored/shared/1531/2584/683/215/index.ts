@@ -9,29 +9,29 @@ function a(e) {
       case 0:
         return t;
       case 1:
-        return Object(o.a)(n) ? t : Object(i.a)(function (t, r) {
+        return o.a(n) ? t : i.a(function (t, r) {
           return e(n, t, r);
         });
       case 2:
-        return Object(o.a)(n) && Object(o.a)(a) ? t : Object(o.a)(n) ? Object(i.a)(function (t, n) {
+        return o.a(n) && o.a(a) ? t : o.a(n) ? i.a(function (t, n) {
           return e(t, a, n);
-        }) : Object(o.a)(a) ? Object(i.a)(function (t, r) {
+        }) : o.a(a) ? i.a(function (t, r) {
           return e(n, t, r);
-        }) : Object(r.a)(function (t) {
+        }) : r.a(function (t) {
           return e(n, a, t);
         });
       default:
-        return Object(o.a)(n) && Object(o.a)(a) && Object(o.a)(s) ? t : Object(o.a)(n) && Object(o.a)(a) ? Object(i.a)(function (t, n) {
+        return o.a(n) && o.a(a) && o.a(s) ? t : o.a(n) && o.a(a) ? i.a(function (t, n) {
           return e(t, n, s);
-        }) : Object(o.a)(n) && Object(o.a)(s) ? Object(i.a)(function (t, n) {
+        }) : o.a(n) && o.a(s) ? i.a(function (t, n) {
           return e(t, a, n);
-        }) : Object(o.a)(a) && Object(o.a)(s) ? Object(i.a)(function (t, r) {
+        }) : o.a(a) && o.a(s) ? i.a(function (t, r) {
           return e(n, t, r);
-        }) : Object(o.a)(n) ? Object(r.a)(function (t) {
+        }) : o.a(n) ? r.a(function (t) {
           return e(t, a, s);
-        }) : Object(o.a)(a) ? Object(r.a)(function (t) {
+        }) : o.a(a) ? r.a(function (t) {
           return e(n, t, s);
-        }) : Object(o.a)(s) ? Object(r.a)(function (t) {
+        }) : o.a(s) ? r.a(function (t) {
           return e(n, a, t);
         }) : e(n, a, s);
     }

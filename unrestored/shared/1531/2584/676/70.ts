@@ -22,8 +22,8 @@ var a = {
   icon: "icon-widget-phone-dialer",
   title: "widgetName",
   platforms: ["web", "android"],
-  isGlobalWidget: !0,
-  isInvisibleWidget: !0,
+  isGlobalWidget: true,
+  isInvisibleWidget: true,
   properties: [{
     key: "phoneNumber",
     label: "phoneNumber",
@@ -32,7 +32,7 @@ var a = {
     defaultValue: "",
     validators: {
       notEmpty: {
-        value: !0,
+        value: true,
         message: "phoneNumberNotEmpty"
       }
     }

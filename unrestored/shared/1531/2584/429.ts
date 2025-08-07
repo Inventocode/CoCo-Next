@@ -2,7 +2,7 @@
 
 export { o as b };
 export { i as a };
-var r = require("./205");
+import r = require("./205");
 function o(e) {
   switch (e) {
     case r.a.CONTAIN:

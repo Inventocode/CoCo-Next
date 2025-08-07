@@ -1,19 +1,19 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
 var r = require("../580");
 var i = require("../715");
 var o = function () {
   function e(e, t) {
     this.id = i.id();
-    this.activated = !1;
+    this.activated = false;
     this.serviceIdentifier = e;
     this.scope = t;
     this.type = r.BindingTypeEnum.Invalid;
     this.constraint = function (e) {
-      return !0;
+      return true;
     };
     this.implementationType = null;
     this.cache = null;
@@ -24,7 +24,7 @@ var o = function () {
   }
   e.prototype.clone = function () {
     var t = new e(this.serviceIdentifier, this.scope);
-    t.activated = !1;
+    t.activated = false;
     t.implementationType = this.implementationType;
     t.dynamicValue = this.dynamicValue;
     t.scope = this.scope;

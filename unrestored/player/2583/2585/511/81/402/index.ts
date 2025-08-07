@@ -34,7 +34,7 @@ var s = function (t) {
     return {
       next: function () {
         if (t && r >= t.length) {
-          t = void 0;
+          t = undefined;
         }
         return {
           value: t && t[r++],
@@ -66,7 +66,7 @@ var u = function (t) {
       var m = i.a.decodeDigit(t, l, f, i.a.L_AND_G_PATTERNS);
       r += String.fromCharCode("0".charCodeAt(0) + m % 10);
       try {
-        for (o = void 0, b = s(l), g = b.next(), void 0; !g.done; g = b.next()) {
+        for (o = undefined, b = s(l), g = b.next(), undefined; !g.done; g = b.next()) {
           var b;
           var g;
           f += g.value;
@@ -91,12 +91,12 @@ var u = function (t) {
       }
     }
     r = e.determineFirstDigit(r, h);
-    f = i.a.findGuardPattern(t, f, !0, i.a.MIDDLE_PATTERN, new Int32Array(i.a.MIDDLE_PATTERN.length).fill(0))[1];
+    f = i.a.findGuardPattern(t, f, true, i.a.MIDDLE_PATTERN, new Int32Array(i.a.MIDDLE_PATTERN.length).fill(0))[1];
     for (p = 0; p < 6 && f < d; p++) {
       m = i.a.decodeDigit(t, l, f, i.a.L_PATTERNS);
       r += String.fromCharCode("0".charCodeAt(0) + m);
       try {
-        for (u = void 0, v = s(l), _ = v.next(), void 0; !_.done; _ = v.next()) {
+        for (u = undefined, v = s(l), _ = v.next(), undefined; !_.done; _ = v.next()) {
           var v;
           var _;
           f += _.value;

@@ -13,7 +13,7 @@ var i = function (t) {
     return {
       next: function () {
         if (t && n >= t.length) {
-          t = void 0;
+          t = undefined;
         }
         return {
           value: t && t[n++],
@@ -103,21 +103,21 @@ var a = function () {
       throw new o.a("incorect value");
     }
     var r = t.VALUES_TO_ECI.get(e);
-    if (void 0 === r) {
+    if (undefined === r) {
       throw new o.a("incorect value");
     }
     return r;
   };
   t.getCharacterSetECIByName = function (e) {
     var r = t.NAME_TO_ECI.get(e);
-    if (void 0 === r) {
+    if (undefined === r) {
       throw new o.a("incorect value");
     }
     return r;
   };
   t.prototype.equals = function (e) {
     if (!(e instanceof t)) {
-      return !1;
+      return false;
     }
     var r = e;
     return this.getName() === r.getName();

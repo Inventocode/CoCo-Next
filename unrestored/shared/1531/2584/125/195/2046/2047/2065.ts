@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.BlockGroupType = exports.LAST_NEXT_XML_TAG = exports.BLOCK_GROUP_STOPPED_XML_TAG = exports.BLOCK_GROUP_ID_XML_TAG = exports.BLOCK_GROUP_NAME_XML_TAG = exports.BLOCK_GROUP_NAME_FIELD_NAME = exports.BLOCK_GROUP_TAG_FIELD_NAME = void 0;
+exports.BlockGroupType = exports.LAST_NEXT_XML_TAG = exports.BLOCK_GROUP_STOPPED_XML_TAG = exports.BLOCK_GROUP_ID_XML_TAG = exports.BLOCK_GROUP_NAME_XML_TAG = exports.BLOCK_GROUP_NAME_FIELD_NAME = exports.BLOCK_GROUP_TAG_FIELD_NAME = undefined;
 exports.BLOCK_GROUP_TAG_FIELD_NAME = "group_tag";
 exports.BLOCK_GROUP_NAME_FIELD_NAME = "group_name";
 exports.BLOCK_GROUP_NAME_XML_TAG = "block_group_name";

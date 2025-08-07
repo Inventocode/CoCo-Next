@@ -4,7 +4,7 @@ var r = require("./1623/86");
 var o = require("./1745/946").codeAt;
 r({
   target: "String",
-  proto: !0
+  proto: true
 }, {
   codePointAt: function (e) {
     return o(this, e);

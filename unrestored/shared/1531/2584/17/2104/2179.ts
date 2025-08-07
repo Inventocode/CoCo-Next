@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.Msg = void 0;
+exports.Msg = undefined;
 exports.Msg = {
   MATH_ADDITION_SYMBOL: "+",
   MATH_SUBTRACTION_SYMBOL: "-",

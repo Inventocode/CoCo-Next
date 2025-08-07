@@ -10,7 +10,7 @@ var a = function (e) {
     if (e && n != n) {
       for (; l > u;) {
         if ((s = c[u++]) != s) {
-          return !0;
+          return true;
         }
       }
     } else {
@@ -24,6 +24,6 @@ var a = function (e) {
   };
 };
 module.exports = {
-  includes: a(!0),
-  indexOf: a(!1)
+  includes: a(true),
+  indexOf: a(false)
 };

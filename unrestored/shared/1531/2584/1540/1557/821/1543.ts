@@ -6,11 +6,11 @@ module.exports = function (e) {
   if (o(e)) {
     if ("function" != typeof (t = e.constructor) || t !== Array && !o(t.prototype)) {
       if (r(t) && null === (t = t[i])) {
-        t = void 0;
+        t = undefined;
       }
     } else {
-      t = void 0;
+      t = undefined;
     }
   }
-  return void 0 === t ? Array : t;
+  return undefined === t ? Array : t;
 };

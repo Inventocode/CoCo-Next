@@ -2,9 +2,9 @@
 
 var r = require("../568");
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.default = void 0;
+exports.default = undefined;
 var i = r(require("../746"));
 var o = r(require("./1188/index"));
 var a = r(require("../1044"));
@@ -32,7 +32,7 @@ function _(e) {
   for (var t = 1; t < arguments.length; t++) {
     var n = null != arguments[t] ? arguments[t] : {};
     if (t % 2) {
-      p(Object(n), !0).forEach(function (t) {
+      p(Object(n), true).forEach(function (t) {
         (0, i.default)(e, t, n[t]);
       });
     } else {
@@ -50,19 +50,19 @@ function _(e) {
 function A(e) {
   var t = function () {
     if ("undefined" === typeof Reflect || !Reflect.construct) {
-      return !1;
+      return false;
     }
     if (Reflect.construct.sham) {
-      return !1;
+      return false;
     }
     if ("function" === typeof Proxy) {
-      return !0;
+      return true;
     }
     try {
       Date.prototype.toString.call(Reflect.construct(Date, [], function () {}));
-      return !0;
+      return true;
     } catch (e) {
-      return !1;
+      return false;
     }
   }();
   return function () {
@@ -84,14 +84,14 @@ var g = function (e) {
     var e;
     (0, a.default)(this, n);
     (e = t.apply(this, arguments)).state = {
-      clickFocused: !1
+      clickFocused: false
     };
     e.setHandleRef = function (t) {
       e.handle = t;
     };
     e.handleMouseUp = function () {
       if (document.activeElement === e.handle) {
-        e.setClickFocus(!0);
+        e.setClickFocus(true);
       }
     };
     e.handleMouseDown = function (t) {
@@ -99,10 +99,10 @@ var g = function (e) {
       e.focus();
     };
     e.handleBlur = function () {
-      e.setClickFocus(!1);
+      e.setClickFocus(false);
     };
     e.handleKeyDown = function () {
-      e.setClickFocus(!1);
+      e.setClickFocus(false);
     };
     return e;
   }
@@ -128,7 +128,7 @@ var g = function (e) {
   }, {
     key: "clickFocus",
     value: function () {
-      this.setClickFocus(!0);
+      this.setClickFocus(true);
       this.focus();
     }
   }, {

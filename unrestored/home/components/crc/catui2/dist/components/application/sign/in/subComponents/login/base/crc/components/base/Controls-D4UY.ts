@@ -34,8 +34,8 @@ var Controls = function Controls(_ref) {
   }, [camera, gl]);
   Object(__WEBPACK_IMPORTED_MODULE_1_react_three_fiber__.useFrame)(function () {
     var _ref$current;
-    if ((_ref$current = ref.current) === null || _ref$current === void 0) {
-      void 0;
+    if ((_ref$current = ref.current) === null || _ref$current === undefined) {
+      undefined;
     } else {
       _ref$current.update();
     }

@@ -16,8 +16,8 @@ var Light = function Light(props) {
   var camera = _useThree.camera;
   Object(__WEBPACK_IMPORTED_MODULE_2_react_three_fiber__.useFrame)(function () {
     var _ref$current;
-    if ((_ref$current = ref.current) === null || _ref$current === void 0) {
-      void 0;
+    if ((_ref$current = ref.current) === null || _ref$current === undefined) {
+      undefined;
     } else {
       _ref$current.position.copy(camera.position);
     }

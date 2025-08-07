@@ -1,15 +1,15 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.MutationRemoveButton = exports.MutationAddButton = void 0;
+exports.MutationRemoveButton = exports.MutationAddButton = undefined;
 var r = require("tslib");
 var i = require("inversify");
 var o = require("../../125/index");
 var a = function (e) {
   function t(t, n, r) {
-    if (void 0 === r) {
+    if (undefined === r) {
       r = 20;
     }
     var i = e.call(this, {
@@ -27,7 +27,7 @@ var a = function (e) {
     var e;
     var t = this;
     if (!this.field_group) {
-      this.field_group = (0, o.create_svg_element)("g", {}, void 0);
+      this.field_group = (0, o.create_svg_element)("g", {}, undefined);
       if (!this.visible_) {
         this.field_group.style.display = "none";
       }
@@ -73,8 +73,8 @@ var a = function (e) {
           t.rect_element.style.fill = "rgba(0, 0, 0, .15)";
         }
       });
-      var n = null === (e = this.source_block) || void 0 === e ? void 0 : e.get_svg_root();
-      if (void 0 == n) {
+      var n = null === (e = this.source_block) || undefined === e ? undefined : e.get_svg_root();
+      if (undefined == n) {
         throw new ReferenceError("Field should have svg root when init.");
       }
       n.appendChild(this.field_group);
@@ -97,21 +97,21 @@ var a = function (e) {
         r.handle_up(e);
       } else if (!this.source_block.is_in_flyout && !this.utils.is_right_button(e)) {
         if (r) {
-          r.update_is_mutation_click(!0);
+          r.update_is_mutation_click(true);
           r.handle_up(e);
         }
         if (!this.events.is_enabled()) {
           return;
         }
         var i = this.events.get_group();
-        this.events.set_group(i || !0);
+        this.events.set_group(i || true);
         var o = this.source_block;
         if (this.is_add) {
-          if (!(null === (t = o.addMutation) || void 0 === t)) {
+          if (!(null === (t = o.addMutation) || undefined === t)) {
             t.call(o, this.index_, this.name);
           }
         } else {
-          if (!(null === (n = o.removeMutation) || void 0 === n)) {
+          if (!(null === (n = o.removeMutation) || undefined === n)) {
             n.call(o, this.index_, this.name);
           }
         }
@@ -127,7 +127,7 @@ var a = function (e) {
 }(require("../../301/541").FieldImage);
 var s = function (e) {
   function t() {
-    return e.call(this, !0) || this;
+    return e.call(this, true) || this;
   }
   (0, r.__extends)(t, e);
   return t = (0, r.__decorate)([(0, i.injectable)()], t);
@@ -135,10 +135,10 @@ var s = function (e) {
 exports.MutationAddButton = s;
 var c = function (e) {
   function t(t) {
-    if (void 0 === t) {
-      t = void 0;
+    if (undefined === t) {
+      t = undefined;
     }
-    return e.call(this, !1, t) || this;
+    return e.call(this, false, t) || this;
   }
   (0, r.__extends)(t, e);
   return t = (0, r.__decorate)([(0, i.injectable)()], t);

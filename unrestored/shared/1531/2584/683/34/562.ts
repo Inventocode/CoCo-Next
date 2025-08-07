@@ -1,16 +1,16 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
 var r = function () {
   function e(e, t) {
     for (var n = 0; n < t.length; n++) {
       var r = t[n];
-      r.enumerable = r.enumerable || !1;
-      r.configurable = !0;
+      r.enumerable = r.enumerable || false;
+      r.configurable = true;
       if ("value" in r) {
-        r.writable = !0;
+        r.writable = true;
       }
       Object.defineProperty(e, r.key, r);
     }
@@ -32,8 +32,8 @@ function i(e, t) {
 }
 var o = function () {
   function e(t, n, r) {
-    if (void 0 === n) {
-      n = !1;
+    if (undefined === n) {
+      n = false;
     }
     i(this, e);
     this._fn = t;
@@ -44,7 +44,7 @@ var o = function () {
   r(e, [{
     key: "detach",
     value: function () {
-      return null !== this._owner && (this._owner.detach(this), !0);
+      return null !== this._owner && (this._owner.detach(this), true);
     }
   }]);
   return e;
@@ -64,12 +64,12 @@ function a(e, t) {
 var s = function () {
   function e() {
     i(this, e);
-    this._head = this._tail = void 0;
+    this._head = this._tail = undefined;
   }
   r(e, [{
     key: "handlers",
     value: function () {
-      var e = !(arguments.length <= 0 || void 0 === arguments[0]) && arguments[0];
+      var e = !(arguments.length <= 0 || undefined === arguments[0]) && arguments[0];
       var t = this._head;
       if (e) {
         return !!t;
@@ -93,7 +93,7 @@ var s = function () {
     value: function () {
       var e = this._head;
       if (!e) {
-        return !1;
+        return false;
       }
       for (; e;) {
         if (e._once) {
@@ -102,25 +102,25 @@ var s = function () {
         e._fn.apply(e._thisArg, arguments);
         e = e._next;
       }
-      return !0;
+      return true;
     }
   }, {
     key: "add",
     value: function (e) {
-      var t = arguments.length <= 1 || void 0 === arguments[1] ? null : arguments[1];
+      var t = arguments.length <= 1 || undefined === arguments[1] ? null : arguments[1];
       if ("function" !== typeof e) {
         throw new Error("MiniSignal#add(): First arg must be a Function.");
       }
-      return a(this, new o(e, !1, t));
+      return a(this, new o(e, false, t));
     }
   }, {
     key: "once",
     value: function (e) {
-      var t = arguments.length <= 1 || void 0 === arguments[1] ? null : arguments[1];
+      var t = arguments.length <= 1 || undefined === arguments[1] ? null : arguments[1];
       if ("function" !== typeof e) {
         throw new Error("MiniSignal#once(): First arg must be a Function.");
       }
-      return a(this, new o(e, !0, t));
+      return a(this, new o(e, true, t));
     }
   }, {
     key: "detach",

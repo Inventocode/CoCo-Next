@@ -13,8 +13,8 @@ function i(e, t) {
   e.prototype = Object.create(t && t.prototype, {
     constructor: {
       value: e,
-      writable: !0,
-      configurable: !0
+      writable: true,
+      configurable: true
     }
   });
   if (t) {

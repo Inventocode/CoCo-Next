@@ -6,15 +6,15 @@ export { a as f };
 export { s as c };
 export { c as b };
 export { u as a };
-var r = require("./80/index");
+import r = require("./80/index");
 function o(e) {
-  return Array.isArray(e) ? e : void 0 !== e ? [e] : [];
+  return Array.isArray(e) ? e : undefined !== e ? [e] : [];
 }
 function i(e, t) {
   var n = t.labelInValue;
   var r = t.combobox;
   var o = new Map();
-  if (void 0 === e || "" === e && r) {
+  if (undefined === e || "" === e && r) {
     return [[], o];
   }
   var i = Array.isArray(e) ? e : [e];
@@ -25,7 +25,7 @@ function i(e, t) {
     }).map(function (e) {
       var t = e.key;
       var n = e.value;
-      var r = void 0 !== n ? n : t;
+      var r = undefined !== n ? n : t;
       o.set(r, e);
       return r;
     });
@@ -53,7 +53,7 @@ function a(e, t) {
 }
 function s(e, t) {
   var n;
-  var o = Object(r.a)(t);
+  var o = r.a(t);
   for (n = e.length - 1; n >= 0 && e[n].disabled; n -= 1) {
     ;
   }

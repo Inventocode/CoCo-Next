@@ -2,10 +2,10 @@
 
 var n = function () {
   function t(t, e, r, n, o, i) {
-    if (void 0 === o) {
+    if (undefined === o) {
       o = -1;
     }
-    if (void 0 === i) {
+    if (undefined === i) {
       i = -1;
     }
     this.rawBytes = t;
@@ -14,7 +14,7 @@ var n = function () {
     this.ecLevel = n;
     this.structuredAppendSequenceNumber = o;
     this.structuredAppendParity = i;
-    this.numBits = void 0 === t || null === t ? 0 : 8 * t.length;
+    this.numBits = undefined === t || null === t ? 0 : 8 * t.length;
   }
   t.prototype.getRawBytes = function () {
     return this.rawBytes;

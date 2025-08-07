@@ -106,7 +106,7 @@ var h = /^[^-]{0,}$/i;
 function m(e) {
   return new RegExp("^[\\d-]{0,".concat(e, "}$"), "i");
 }
-var g = require("./60");
+import g = require("./60");
 var _ = 20;
 var v = 40;
 var b = "1.21.7";

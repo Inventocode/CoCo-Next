@@ -4,8 +4,8 @@ var r;
 var i;
 import * as o from "../../../../shared/1531/2584/25/index";
 import * as a from "../../../../shared/1531/2584/296";
-import * as s from "../../../../shared/1531/2584/1/index";
-import u from "../../../../shared/1531/2584/1/index";
+import * as s from "regenerator-runtime";
+import u from "regenerator-runtime";
 import * as c from "../../../../shared/1531/2584/10/index";
 import * as l from "../../../../shared/1531/2584/6";
 import * as d from "../../../../shared/1531/2584/7";
@@ -13,11 +13,11 @@ import * as f from "react";
 import h from "react";
 import * as p from "../../../../shared/1531/2584/16/index";
 import * as m from "../../../../shared/1531/2584/38/2629";
-import * as b from "../../../../shared/1531/2584/186/index";
-import g from "../../../../shared/1531/2584/186/index";
+import * as b from "axios";
+import g from "axios";
 import "../../../../shared/1531/2584/710/index";
-import * as v from "../../../../shared/1531/2584/36/index";
-import * as _ from "../../../../shared/1531/2584/79";
+import * as v from "../../../../../src/shared/widget/custom/load";
+import * as _ from "../../../../../src/shared/widget/custom/type";
 import * as y from "../../../../shared/1531/2584/98";
 import * as O from "../../../../shared/1531/2584/15";
 import * as w from "../../../../shared/1531/2584/676/index";
@@ -37,12 +37,12 @@ var M = {
         e.hasPermission(e.CALL_PHONE, function (t) {
           var e;
           if (!t.hasPermission) {
-            if (!(null === (e = window.plugins.toast) || void 0 === e)) {
+            if (!(null === (e = window.plugins.toast) || undefined === e)) {
               e.showLongCenter("应用需要开启电话权限");
             }
           }
         });
-      }, !1, !1);
+      }, false, false);
     } else {
       window.location.href = "tel:".concat(t);
     }
@@ -51,7 +51,7 @@ var M = {
     if (Object(A.d)()) {
       window.cordova.plugins.phonedialer.dial(t, I, function (t) {
         return console.error(t);
-      }, !1);
+      }, false);
     } else {
       window.location.href = "tel:".concat(t);
     }
@@ -60,7 +60,7 @@ var M = {
     var e;
     if (Object(A.d)()) {
       k.push(t);
-      if (!(null === (e = window.CallTrap) || void 0 === e)) {
+      if (!(null === (e = window.CallTrap) || undefined === e)) {
         e.onCall(function (t) {
           var e = t.state;
           k.forEach(function (t) {
@@ -81,9 +81,9 @@ var L = function (t) {
   function n(t) {
     var o;
     Object(E.a)(this, n);
-    (o = e.call(this, t)).phoneNumber = void 0;
+    (o = e.call(this, t)).phoneNumber = undefined;
     o.oldState = "";
-    o.isIncomingCall = !1;
+    o.isIncomingCall = false;
     o.phoneNumber = t.phoneNumber;
     M.onCall(function (t) {
       switch (t) {
@@ -93,11 +93,11 @@ var L = function (t) {
         case N.b.OFFHOOK:
           if (o.oldState === N.b.RINGING) {
             o.emit("onConnectReceivePhoneCall");
-            o.isIncomingCall = !0;
+            o.isIncomingCall = true;
           } else {
             if (o.__widgetId === r) {
               o.emit("onPhoneCallStart");
-              o.isIncomingCall = !1;
+              o.isIncomingCall = false;
             }
           }
           break;
@@ -110,7 +110,7 @@ var L = function (t) {
             } else {
               if (!(o.isIncomingCall || o.oldState !== N.b.OFFHOOK)) {
                 o.emit("onPhoneCallEnd", N.a.DIAL_OUT_CALL_END);
-                i = !1;
+                i = false;
               }
             }
           }
@@ -129,7 +129,7 @@ var L = function (t) {
           } else {
             Object(x.a)().dispatch(Object(C.s)({
               phoneDialWidgetId: this.__widgetId,
-              callingPageVisible: !0,
+              callingPageVisible: true,
               phoneNumber: this.phoneNumber,
               callType: "dialOutCall",
               callStatus: N.b.RINGING
@@ -151,7 +151,7 @@ var L = function (t) {
           if (!i) {
             r = this.__widgetId;
             M.callNumber(this.phoneNumber);
-            i = !0;
+            i = true;
           }
         }
       } else {
@@ -167,7 +167,7 @@ var L = function (t) {
         }
         return void Object(x.a)().dispatch(Object(C.s)({
           phoneDialWidgetId: this.__widgetId,
-          dialPageVisible: !0,
+          dialPageVisible: true,
           phoneNumber: this.phoneNumber
         }));
       }
@@ -201,7 +201,7 @@ var B = {
       e.hasPermission(e.READ_CONTACTS, function (t) {
         var e;
         if (!t.hasPermission) {
-          if (!(null === (e = window.plugins.toast) || void 0 === e)) {
+          if (!(null === (e = window.plugins.toast) || undefined === e)) {
             e.showLongCenter("应用需要开启通讯录权限");
           }
         }
@@ -215,10 +215,10 @@ var P = function (t) {
   function n(t) {
     var r;
     Object(E.a)(this, n);
-    (r = e.call(this, t)).contactName = void 0;
-    r.phoneNumber = void 0;
-    r.contactAvatar = void 0;
-    r.phoneNumberList = void 0;
+    (r = e.call(this, t)).contactName = undefined;
+    r.phoneNumber = undefined;
+    r.contactAvatar = undefined;
+    r.phoneNumberList = undefined;
     r.contactName = t.contactName;
     r.phoneNumber = t.phoneNumber;
     r.contactAvatar = t.phoneNumber;
@@ -240,7 +240,7 @@ var P = function (t) {
       } else {
         Object(x.a)().dispatch(Object(C.s)({
           contactWidgetId: this.__widgetId,
-          contactPageVisible: !0
+          contactPageVisible: true
         }));
       }
     }
@@ -255,7 +255,7 @@ var F = {
     if (t) {
       if (Object(A.d)()) {
         window.sms.send(t, e, {
-          replaceLineBreaks: !1,
+          replaceLineBreaks: false,
           android: {
             intent: "INTENT"
           }
@@ -272,7 +272,7 @@ var F = {
   sendMessage: function (t, e, n, r) {
     if (Object(A.d)()) {
       window.sms.send(t, e, {
-        replaceLineBreaks: !1,
+        replaceLineBreaks: false,
         android: {
           intent: ""
         }
@@ -285,7 +285,7 @@ var F = {
         n.hasPermission(n.SEND_SMS, function (t) {
           var e;
           if (!t.hasPermission) {
-            if (!(null === (e = window.plugins.toast) || void 0 === e)) {
+            if (!(null === (e = window.plugins.toast) || undefined === e)) {
               e.showLongCenter("应用需要开启短信权限");
             }
           }
@@ -302,7 +302,7 @@ var F = {
   startWatchReceiveSms: function () {
     var t;
     if (Object(A.d)()) {
-      if (!(null === (t = window.SMSReceive) || void 0 === t)) {
+      if (!(null === (t = window.SMSReceive) || undefined === t)) {
         t.startWatch(H, function () {
           return console.warn("sms receive: failed to start watching");
         });
@@ -321,20 +321,20 @@ var F = {
     }
   }
 };
-var V = !1;
+var V = false;
 var G = function (t) {
   Object(j.a)(n, t);
   var e = Object(S.a)(n);
   function n(t) {
     var r;
     Object(E.a)(this, n);
-    (r = e.call(this, t)).phoneNumber = void 0;
-    r.smsContent = void 0;
+    (r = e.call(this, t)).phoneNumber = undefined;
+    r.smsContent = undefined;
     r.phoneNumber = t.phoneNumber;
     r.smsContent = t.smsContent;
     if (!V) {
       F.startWatchReceiveSms();
-      V = !0;
+      V = true;
     }
     F.onCall(function (t, e) {
       r.emit("onReceiveSms", t, e);
@@ -366,7 +366,7 @@ var G = function (t) {
       if (Object(A.g)()) {
         Object(x.a)().dispatch(Object(C.s)({
           smsWidgetId: this.__widgetId,
-          sendSmsPageVisible: !0,
+          sendSmsPageVisible: true,
           sendSmsNumber: this.phoneNumber,
           sendSmsContent: this.smsContent
         }));
@@ -382,8 +382,8 @@ import * as z from "../../../../shared/1531/2584/75/index";
 import K from "../../../../shared/1531/2584/75/index";
 import * as q from "../../../../shared/1531/2584/8";
 import X from "../../../../shared/1531/2584/8";
-import * as J from "../../../../shared/1531/2584/51/index";
-import Z from "../../../../shared/1531/2584/51/index";
+import * as J from "color";
+import Z from "color";
 import * as Q from "../../../../shared/1531/2584/189";
 import * as $ from "animejs";
 function tt(t, e) {
@@ -475,7 +475,7 @@ var at = {
   cancel: function (t) {
     var e = at.dialogArr[0];
     var n = at.dialogPropMap.get(e);
-    if (!(null === n || void 0 === n)) {
+    if (!(null === n || undefined === n)) {
       n.onCancel(t);
     }
     at.close();
@@ -483,17 +483,17 @@ var at = {
   confirm: function (t) {
     var e = at.dialogArr[0];
     var n = at.dialogPropMap.get(e);
-    if (!(null === n || void 0 === n)) {
+    if (!(null === n || undefined === n)) {
       n.onConfirm(t);
     }
     at.close();
   },
   submit: function () {
     var t = document.getElementById("COCO_PLAYER_DIALOG_INPUT");
-    var e = null === t || void 0 === t ? void 0 : t.value;
+    var e = null === t || undefined === t ? undefined : t.value;
     var n = at.dialogArr[0];
     var r = at.dialogPropMap.get(n);
-    if (!(null === r || void 0 === r)) {
+    if (!(null === r || undefined === r)) {
       r.onConfirm(e);
     }
     at.close();
@@ -636,7 +636,7 @@ var at = {
       className: it.optionButtonBox,
       style: {
         height: this.style === Q.b.styleA ? a ? "174px" : "120px" : "48px",
-        justifyContent: this.style !== Q.b.styleB || a ? void 0 : "flex-end"
+        justifyContent: this.style !== Q.b.styleB || a ? undefined : "flex-end"
       }
     }, a && this.style === Q.b.styleB && h.createElement("button", {
       className: X(it.button, it.cancelButton),
@@ -686,13 +686,13 @@ var lt = function (t) {
   function n(t) {
     var r;
     Object(E.a)(this, n);
-    (r = e.call(this, t)).style = void 0;
-    r.themeColor = void 0;
-    r.title = void 0;
-    r.text = void 0;
-    r.image = void 0;
-    r.selectedOption = void 0;
-    r.inputText = void 0;
+    (r = e.call(this, t)).style = undefined;
+    r.themeColor = undefined;
+    r.title = undefined;
+    r.text = undefined;
+    r.image = undefined;
+    r.selectedOption = undefined;
+    r.inputText = undefined;
     r.style = t.style;
     r.themeColor = t.themeColor;
     r.title = t.title;
@@ -769,8 +769,8 @@ var lt = function (t) {
   return n;
 }(v.c);
 import * as dt from "../../../../shared/1531/2584/671";
-import * as ft from "../../../../shared/1531/2584/36/345/553/index";
-import ht from "../../../../shared/1531/2584/36/345/553/index";
+import * as ft from "qrcode";
+import ht from "qrcode";
 var pt = {
   "7%": "L",
   "15%": "M",
@@ -785,10 +785,10 @@ var mt = function (t) {
     Object(E.a)(this, n);
     (r = e.call(this, t)).image = "";
     r.width = 300;
-    r.dark = void 0;
-    r.light = void 0;
-    r.errorCorrectionLevel = void 0;
-    r.margin = void 0;
+    r.dark = undefined;
+    r.light = undefined;
+    r.errorCorrectionLevel = undefined;
+    r.margin = undefined;
     r.dark = t.dark;
     r.light = t.light;
     r.errorCorrectionLevel = t.errorCorrectionLevel;
@@ -839,9 +839,9 @@ var vt = function (t) {
   function n(t) {
     var r;
     Object(E.a)(this, n);
-    (r = e.call(this, t)).stride = void 0;
-    r.stepCount = void 0;
-    r.isStopStep = void 0;
+    (r = e.call(this, t)).stride = undefined;
+    r.stepCount = undefined;
+    r.isStopStep = undefined;
     r.stepInStopTime = 0;
     r.stride = t.stride;
     r.stepCount = t.stepCount;
@@ -856,7 +856,7 @@ var vt = function (t) {
         var e = 0;
         gt.default.start(function (n) {
           if (t.isStopStep && ++e % 2 === 0) {
-            t.isStopStep = !1;
+            t.isStopStep = false;
             t.stepInStopTime = n - t.stepCount;
             e = 0;
           }
@@ -864,8 +864,8 @@ var vt = function (t) {
             t.emit("onStepCountChange", n - t.stepInStopTime);
             t.stepCount = n - t.stepInStopTime;
           }
-          if (void 0 === t.isStopStep) {
-            t.isStopStep = !1;
+          if (undefined === t.isStopStep) {
+            t.isStopStep = false;
           }
         }, function () {
           return t.emit("onPedometerNotAvailable");
@@ -879,7 +879,7 @@ var vt = function (t) {
     value: function () {
       if (!Object(A.g)()) {
         gt.default.stop();
-        this.isStopStep = !0;
+        this.isStopStep = true;
       }
     }
   }, {
@@ -891,7 +891,7 @@ var vt = function (t) {
         this.stepInStopTime = 0;
         this.emit("onStepCountChange", 0);
         gt.default.reset(function () {
-          if (!1 === t.isStopStep) {
+          if (false === t.isStopStep) {
             t.startStepUpdate();
           }
         });
@@ -913,7 +913,7 @@ function Et() {
   return window.QRScanner;
 }
 var Tt;
-import * as jt from "../../../../shared/1531/2584/23";
+import * as jt from "../../../../../src/shared/language";
 import * as St from "./249";
 import At from "./249";
 function kt(t) {
@@ -975,7 +975,7 @@ var Ht = function (t) {
     for (var r = arguments.length, i = new Array(r), o = 0; o < r; o++) {
       i[o] = arguments[o];
     }
-    (t = e.call.apply(e, [this].concat(i))).previewPage = void 0;
+    (t = e.call.apply(e, [this].concat(i))).previewPage = undefined;
     t.QRCodeReader = wt();
     t.QRCodeScanner = Et();
     return t;
@@ -1196,7 +1196,7 @@ var Ht = function (t) {
                 } else {
                   r = Object(x.a)().getState().imageFileMap;
                   i = r.get(e);
-                  n = (null === i || void 0 === i ? void 0 : i.cdnUrl) || "";
+                  n = (null === i || undefined === i ? undefined : i.cdnUrl) || "";
                 }
                 this.decodeImage(n);
               case 3:
@@ -1242,7 +1242,7 @@ var Xt = function (t) {
   function n(t) {
     var r;
     Object(E.a)(this, n);
-    (r = e.call(this, t)).templateMode = void 0;
+    (r = e.call(this, t)).templateMode = undefined;
     r.templateMode = t.templateMode;
     return r;
   }
@@ -1282,7 +1282,7 @@ var Zt = function (t) {
   function n(t) {
     var r;
     Object(E.a)(this, n);
-    (r = e.call(this, t)).templateMode = void 0;
+    (r = e.call(this, t)).templateMode = undefined;
     r.templateMode = t.templateMode;
     return r;
   }
@@ -1342,7 +1342,7 @@ var ae = function (t) {
   Object(T.a)(n, [{
     key: "open",
     value: function (t, e, n, r, i) {
-      return re.apply(this, [t, e, null === n || void 0 === n || n, r, i]);
+      return re.apply(this, [t, e, null === n || undefined === n || n, r, i]);
     }
   }]);
   return n;
@@ -1354,18 +1354,18 @@ function ue() {
   try {
     Object.defineProperty(window, "WebSocket", {
       value: oe,
-      writable: !1,
-      configurable: !1
+      writable: false,
+      configurable: false
     });
     Object.defineProperty(window, "XMLHttpRequest", {
       value: ae,
-      writable: !1,
-      configurable: !1
+      writable: false,
+      configurable: false
     });
     Object.defineProperty(window, "fetch", {
       value: se,
-      writable: !1,
-      configurable: !1
+      writable: false,
+      configurable: false
     });
     Object.freeze(oe.prototype);
     Object.freeze(oe);
@@ -1380,7 +1380,7 @@ function ue() {
 var ce;
 var le;
 var de;
-import * as fe from "../../../../shared/1531/2584/36/345/index";
+import * as fe from "../../../../../src/shared/widget/custom/external-module";
 import "./1161";
 import "./1162";
 import * as he from "../../../../shared/1531/2584/2628/index";
@@ -1445,7 +1445,7 @@ var ve = Object(f.memo)(function () {
     className: be.backBox,
     onClick: function () {
       t(Object(C.s)({
-        dialPageVisible: !1
+        dialPageVisible: false
       }));
     }
   }, h.createElement(pe.j, {
@@ -1471,8 +1471,8 @@ var ve = Object(f.memo)(function () {
     onClick: function () {
       if (i) {
         t(Object(C.s)({
-          dialPageVisible: !1,
-          callingPageVisible: !0,
+          dialPageVisible: false,
+          callingPageVisible: true,
           callType: "dialOutCall",
           phoneNumber: i,
           callStatus: N.b.RINGING
@@ -1536,7 +1536,7 @@ var ye = Object(f.memo)(function () {
   };
   var u = function () {
     t(Object(C.s)({
-      callingPageVisible: !1,
+      callingPageVisible: false,
       callStatus: N.b.IDEL
     }));
     Object(ut.emitWidgetEvent)(N.c, "onPhoneCallEnd", n.phoneDialWidgetId, N.a.DIAL_OUT_CALL_END);
@@ -1550,7 +1550,7 @@ var ye = Object(f.memo)(function () {
   var l = function () {
     Object(ut.emitWidgetEventType)(N.c, "onPhoneCallEnd", n.callStatus === N.b.RINGING ? N.a.INCOMING_CALL_REFUSE_END : N.a.INCOMING_CALL_CONNECT_END);
     t(Object(C.s)({
-      callingPageVisible: !1,
+      callingPageVisible: false,
       callStatus: N.b.IDEL
     }));
     Object(R.b)({
@@ -1658,7 +1658,7 @@ var Ee = Object(f.memo)(function () {
   });
   var n = function (n, r, i) {
     t(Object(C.s)({
-      contactPageVisible: !1
+      contactPageVisible: false
     }));
     Object(ut.setProperties)(e.contactWidgetId, {
       contactName: n,
@@ -1674,7 +1674,7 @@ var Ee = Object(f.memo)(function () {
     className: be.backBox,
     onClick: function () {
       t(Object(C.s)({
-        contactPageVisible: !1
+        contactPageVisible: false
       }));
     }
   }, h.createElement(pe.j, {
@@ -1740,7 +1740,7 @@ var je = Object(f.memo)(function () {
   }, h.createElement("div", {
     onClick: function () {
       t(Object(C.s)({
-        sendSmsPageVisible: !1
+        sendSmsPageVisible: false
       }));
     }
   }, h.createElement(pe.j, {
@@ -1806,7 +1806,7 @@ var je = Object(f.memo)(function () {
         }
         le = setTimeout(function () {
           var t;
-          if (!(null === (t = T.current) || void 0 === t)) {
+          if (!(null === (t = T.current) || undefined === t)) {
             t.scrollIntoView({
               behavior: "smooth",
               block: "end"
@@ -1833,7 +1833,7 @@ var Se = Object(f.memo)(function () {
     if (n.receiveSmsPageVisible) {
       de = setTimeout(function () {
         t(Object(C.s)({
-          receiveSmsPageVisible: !1
+          receiveSmsPageVisible: false
         }));
       }, 2e3);
     }
@@ -1975,7 +1975,7 @@ var Ne = function (t) {
     var r;
     Object(E.a)(this, n);
     (r = e.call(this)).options = t;
-    r.emitTimer = void 0;
+    r.emitTimer = undefined;
     r.emitReading = function () {
       r.emit("reading");
     };
@@ -2003,7 +2003,7 @@ var Ne = function (t) {
       if (this.emitTimer) {
         throw new Error("Already started");
       }
-      this.emitTimer = setInterval(this.emitReading, (null === (t = this.options) || void 0 === t ? void 0 : t.frequency) || 60);
+      this.emitTimer = setInterval(this.emitReading, (null === (t = this.options) || undefined === t ? undefined : t.frequency) || 60);
     }
   }, {
     key: "stop",
@@ -2029,7 +2029,7 @@ var De = function (t) {
     var r;
     Object(E.a)(this, n);
     (r = e.call(this)).options = t;
-    r.emitTimer = void 0;
+    r.emitTimer = undefined;
     r.emitReading = function () {
       r.emit("reading");
     };
@@ -2057,7 +2057,7 @@ var De = function (t) {
       if (this.emitTimer) {
         throw new Error("Already started");
       }
-      this.emitTimer = setInterval(this.emitReading, (null === (t = this.options) || void 0 === t ? void 0 : t.frequency) || 60);
+      this.emitTimer = setInterval(this.emitReading, (null === (t = this.options) || undefined === t ? undefined : t.frequency) || 60);
     }
   }, {
     key: "stop",
@@ -2264,7 +2264,7 @@ function ze() {
       for (;;) {
         switch (t.prev = t.next) {
           case 0:
-            if (n = e.id, r = e.blockCode, i = e.shouldOpenEmulator, s = e.extensionWidgetList, c = e.unsafeExtensionWidgetList, l = e.fontFileMap, d = Object(a.a)(e, ["id", "blockCode", "shouldOpenEmulator", "extensionWidgetList", "unsafeExtensionWidgetList", "fontFileMap"]), (f = e.apiToken || e["x-coconut-authorization"] || "") || console.warn("api token not set. some api call may fail."), Ge(h = d.widgetMap), p = [], !(null === s || void 0 === s ? void 0 : s.length)) {
+            if (n = e.id, r = e.blockCode, i = e.shouldOpenEmulator, s = e.extensionWidgetList, c = e.unsafeExtensionWidgetList, l = e.fontFileMap, d = Object(a.a)(e, ["id", "blockCode", "shouldOpenEmulator", "extensionWidgetList", "unsafeExtensionWidgetList", "fontFileMap"]), (f = e.apiToken || e["x-coconut-authorization"] || "") || console.warn("api token not set. some api call may fail."), Ge(h = d.widgetMap), p = [], !(null === s || undefined === s ? undefined : s.length)) {
               t.next = 11;
               break;
             }
@@ -2274,7 +2274,7 @@ function ze() {
             m = t.sent;
             p.push.apply(p, Object(o.a)(m));
           case 11:
-            if ((null === c || void 0 === c ? void 0 : c.length) && p.push.apply(p, Object(o.a)(c)), !p.length) {
+            if ((null === c || undefined === c ? undefined : c.length) && p.push.apply(p, Object(o.a)(c)), !p.length) {
               t.next = 15;
               break;
             }
@@ -2344,7 +2344,7 @@ Object(v.s)($t);
 Object(v.s)(Gt);
 var _a;
 _a = h.memo(function (t) {
-  var e = Object(f.useState)(!1);
+  var e = Object(f.useState)(false);
   var n = Object(c.a)(e, 2);
   var r = n[0];
   var i = n[1];
@@ -2358,7 +2358,7 @@ _a = h.memo(function (t) {
               e.next = 3;
               return Ye(t);
             case 3:
-              i(!0);
+              i(true);
             case 4:
             case "end":
               return e.stop();

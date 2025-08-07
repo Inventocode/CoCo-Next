@@ -25,7 +25,7 @@ var c = function (e) {
       var n = (t = this.restElements)[t.length - 1] || null;
       this.callback(e, {
         topLevel: e === this.rootPattern,
-        rest: null !== n && void 0 !== n && n.argument === e,
+        rest: null !== n && undefined !== n && n.argument === e,
         assignments: this.assignments
       });
     }

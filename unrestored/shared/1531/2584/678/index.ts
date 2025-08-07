@@ -20,4 +20,4 @@ var r = {
     smsContentMinLength: "短信内容长度太短，当前值{inputValue}，最小长度{ruleValue}"
   }
 };
-var o = require("./360");
+import o = require("./360");

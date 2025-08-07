@@ -15,8 +15,8 @@ var a = function (e, t) {
   return n;
 }(o.es2015, o.es5);
 var s = {
-  Atomics: !1,
-  SharedArrayBuffer: !1
+  Atomics: false,
+  SharedArrayBuffer: false
 };
 module.exports = new Map(Object.entries({
   builtin: {
@@ -42,9 +42,9 @@ module.exports = new Map(Object.entries({
   },
   es2020: {
     globals: r(r(r({}, a), s), {
-      BigInt: !1,
-      BigInt64Array: !1,
-      BigUint64Array: !1
+      BigInt: false,
+      BigInt64Array: false,
+      BigUint64Array: false
     }),
     parserOptions: {
       ecmaVersion: 11
@@ -57,7 +57,7 @@ module.exports = new Map(Object.entries({
     globals: o.node,
     parserOptions: {
       ecmaFeatures: {
-        globalReturn: !0
+        globalReturn: true
       }
     }
   },
@@ -74,7 +74,7 @@ module.exports = new Map(Object.entries({
     globals: o.commonjs,
     parserOptions: {
       ecmaFeatures: {
-        globalReturn: !0
+        globalReturn: true
       }
     }
   },

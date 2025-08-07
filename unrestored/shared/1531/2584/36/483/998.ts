@@ -25,19 +25,19 @@
   }
   function a() {
     if ("undefined" === typeof Reflect || !Reflect.construct) {
-      return !1;
+      return false;
     }
     if (Reflect.construct.sham) {
-      return !1;
+      return false;
     }
     if ("function" === typeof Proxy) {
-      return !0;
+      return true;
     }
     try {
       Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {}));
-      return !0;
+      return true;
     } catch (e) {
-      return !1;
+      return false;
     }
   }
   function s(e, t, n) {
@@ -52,7 +52,7 @@
     }).apply(null, arguments);
   }
   function c(e) {
-    var t = "function" === typeof Map ? new Map() : void 0;
+    var t = "function" === typeof Map ? new Map() : undefined;
     return (c = function (e) {
       if (null === e || (n = e, -1 === Function.toString.call(n).indexOf("[native code]"))) {
         return e;
@@ -73,9 +73,9 @@
       r.prototype = Object.create(e.prototype, {
         constructor: {
           value: r,
-          enumerable: !1,
-          writable: !0,
-          configurable: !0
+          enumerable: false,
+          writable: true,
+          configurable: true
         }
       });
       return o(r, e);
@@ -139,7 +139,7 @@
     return e;
   }
   function h(e, t) {
-    return void 0 === e || null === e || !("array" !== t || !Array.isArray(e) || e.length) || !(!function (e) {
+    return undefined === e || null === e || !("array" !== t || !Array.isArray(e) || e.length) || !(!function (e) {
       return "string" === e || "url" === e || "hex" === e || "email" === e || "date" === e || "pattern" === e;
     }(t) || "string" !== typeof e || e);
   }
@@ -164,9 +164,9 @@
     Object({
       NODE_ENV: "production",
       PUBLIC_URL: "",
-      WDS_SOCKET_HOST: void 0,
-      WDS_SOCKET_PATH: void 0,
-      WDS_SOCKET_PORT: void 0
+      WDS_SOCKET_HOST: undefined,
+      WDS_SOCKET_PATH: undefined,
+      WDS_SOCKET_PORT: undefined
     });
   }
   var _ = function (e) {
@@ -203,7 +203,7 @@
       });
       return o;
     }
-    var a = !0 === t.firstFields ? Object.keys(e) : t.firstFields || [];
+    var a = true === t.firstFields ? Object.keys(e) : t.firstFields || [];
     var s = Object.keys(e);
     var c = s.length;
     var u = 0;
@@ -253,14 +253,14 @@
       var i;
       r = e.fullFields ? function (e, t) {
         for (var n = e, r = 0; r < t.length; r++) {
-          if (void 0 == n) {
+          if (undefined == n) {
             return n;
           }
           n = n[t[r]];
         }
         return n;
       }(t, e.fullFields) : t[n.field || e.fullField];
-      return (i = n) && void 0 !== i.message ? (n.field = n.field || e.fullField, n.fieldValue = r, n) : {
+      return (i = n) && undefined !== i.message ? (n.field = n.field || e.fullField, n.fieldValue = r, n) : {
         message: "function" === typeof n ? n() : n,
         fieldValue: r,
         field: n.field || e.fullField
@@ -302,12 +302,12 @@
     },
     regexp: function (e) {
       if (e instanceof RegExp) {
-        return !0;
+        return true;
       }
       try {
         return !!new RegExp(e);
       } catch (t) {
-        return !1;
+        return false;
       }
     },
     date: function (e) {
@@ -340,7 +340,7 @@
       }
     },
     type: function (e, t, n, r, i) {
-      if (e.required && void 0 === t) {
+      if (e.required && undefined === t) {
         m(e, t, n, r, i);
       } else {
         var o = e.type;
@@ -376,7 +376,7 @@
         }
       }
       if (!u) {
-        return !1;
+        return false;
       }
       if (h) {
         c = t.length;
@@ -449,7 +449,7 @@
           w.type(e, t, r, o, i);
           w.range(e, t, r, o, i);
           w.pattern(e, t, r, o, i);
-          if (!0 === e.whitespace) {
+          if (true === e.whitespace) {
             w.whitespace(e, t, r, o, i);
           }
         }
@@ -463,7 +463,7 @@
           return n();
         }
         w.required(e, t, r, o, i);
-        if (void 0 !== t) {
+        if (undefined !== t) {
           w.type(e, t, r, o, i);
         }
       }
@@ -473,13 +473,13 @@
       var o = [];
       if (e.required || !e.required && r.hasOwnProperty(e.field)) {
         if ("" === t) {
-          t = void 0;
+          t = undefined;
         }
         if (h(t) && !e.required) {
           return n();
         }
         w.required(e, t, r, o, i);
-        if (void 0 !== t) {
+        if (undefined !== t) {
           w.type(e, t, r, o, i);
           w.range(e, t, r, o, i);
         }
@@ -493,7 +493,7 @@
           return n();
         }
         w.required(e, t, r, o, i);
-        if (void 0 !== t) {
+        if (undefined !== t) {
           w.type(e, t, r, o, i);
         }
       }
@@ -519,7 +519,7 @@
           return n();
         }
         w.required(e, t, r, o, i);
-        if (void 0 !== t) {
+        if (undefined !== t) {
           w.type(e, t, r, o, i);
           w.range(e, t, r, o, i);
         }
@@ -533,7 +533,7 @@
           return n();
         }
         w.required(e, t, r, o, i);
-        if (void 0 !== t) {
+        if (undefined !== t) {
           w.type(e, t, r, o, i);
           w.range(e, t, r, o, i);
         }
@@ -543,11 +543,11 @@
     array: function (e, t, n, r, i) {
       var o = [];
       if (e.required || !e.required && r.hasOwnProperty(e.field)) {
-        if ((void 0 === t || null === t) && !e.required) {
+        if ((undefined === t || null === t) && !e.required) {
           return n();
         }
         w.required(e, t, r, o, i, "array");
-        if (void 0 !== t && null !== t) {
+        if (undefined !== t && null !== t) {
           w.type(e, t, r, o, i);
           w.range(e, t, r, o, i);
         }
@@ -561,7 +561,7 @@
           return n();
         }
         w.required(e, t, r, o, i);
-        if (void 0 !== t) {
+        if (undefined !== t) {
           w.type(e, t, r, o, i);
         }
       }
@@ -574,7 +574,7 @@
           return n();
         }
         w.required(e, t, r, o, i);
-        if (void 0 !== t) {
+        if (undefined !== t) {
           w.enum(e, t, r, o, i);
         }
       }
@@ -715,10 +715,10 @@
     };
     t.validate = function (t, n, i) {
       var o = this;
-      if (void 0 === n) {
+      if (undefined === n) {
         n = {};
       }
-      if (void 0 === i) {
+      if (undefined === i) {
         i = function () {};
       }
       var a = t;
@@ -785,14 +785,14 @@
           });
         }
         function l(i) {
-          if (void 0 === i) {
+          if (undefined === i) {
             i = [];
           }
           var l = Array.isArray(i) ? i : [i];
           if (!s.suppressWarning && l.length) {
             e.warning("async-validator:", l);
           }
-          if (l.length && void 0 !== o.message) {
+          if (l.length && undefined !== o.message) {
             l = [].concat(o.message);
           }
           var f = l.map(g(o, a));
@@ -802,7 +802,7 @@
           }
           if (c) {
             if (o.required && !t.value) {
-              if (void 0 !== o.message) {
+              if (undefined !== o.message) {
                 f = [].concat(o.message).map(g(o, a));
               } else {
                 if (s.error) {
@@ -850,10 +850,10 @@
           i = o.asyncValidator(o, t.value, l, t.source, s);
         } else {
           if (o.validator) {
-            if (!0 === (i = o.validator(o, t.value, l, t.source, s))) {
+            if (true === (i = o.validator(o, t.value, l, t.source, s))) {
               l();
             } else {
-              if (!1 === i) {
+              if (false === i) {
                 l("function" === typeof o.message ? o.message(o.fullField || o.field) : o.message || (o.fullField || o.field) + " fails");
               } else {
                 if (i instanceof Array) {
@@ -899,7 +899,7 @@
       }, a);
     };
     t.getType = function (e) {
-      if (void 0 === e.type && e.pattern instanceof RegExp) {
+      if (undefined === e.type && e.pattern instanceof RegExp) {
         e.type = "pattern";
       }
       if ("function" !== typeof e.validator && e.type && !x.hasOwnProperty(e.type)) {
@@ -916,7 +916,7 @@
       if (-1 !== n) {
         t.splice(n, 1);
       }
-      return 1 === t.length && "required" === t[0] ? x.required : x[this.getType(e)] || void 0;
+      return 1 === t.length && "required" === t[0] ? x.required : x[this.getType(e)] || undefined;
     };
     return e;
   }();

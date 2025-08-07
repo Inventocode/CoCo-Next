@@ -8,6 +8,6 @@ module.exports = function (e, t) {
     if ("Object" === n && e.constructor) {
       n = e.constructor.name;
     }
-    return "Map" === n || "Set" === n ? Array.from(n) : "Arguments" === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n) ? r(e, t) : void 0;
+    return "Map" === n || "Set" === n ? Array.from(n) : "Arguments" === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n) ? r(e, t) : undefined;
   }
 };

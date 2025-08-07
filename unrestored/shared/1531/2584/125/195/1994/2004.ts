@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.GroupEventType = void 0;
+exports.GroupEventType = undefined;
 (function (e) {
   e.GroupStart = "GROUP_START";
   e.GroupEnd = "GROUP_END";

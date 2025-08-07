@@ -57,7 +57,7 @@ function d(e, t, n) {
     t.trueForkContext.add(n);
     t.falseForkContext.add(n);
   }
-  if (!0 !== e.test) {
+  if (true !== e.test) {
     e.brokenForkContext.addAll(t.falseForkContext);
   }
   e.endOfTestSegments = t.trueForkContext.makeNext(0, -1);
@@ -125,7 +125,7 @@ var h = function () {
         isForkingAsResult: t,
         trueForkContext: a.newEmpty(this.forkContext),
         falseForkContext: a.newEmpty(this.forkContext),
-        processed: !1
+        processed: false
       };
     }
   }, {
@@ -142,7 +142,7 @@ var h = function () {
             var r = this.choiceContext;
             r.trueForkContext.addAll(e.trueForkContext);
             r.falseForkContext.addAll(e.falseForkContext);
-            r.processed = !0;
+            r.processed = true;
             return e;
           }
           break;
@@ -174,7 +174,7 @@ var h = function () {
         var n = "&&" === e.kind ? e.trueForkContext : e.falseForkContext;
         t.replaceHead(n.makeNext(0, -1));
         n.clear();
-        e.processed = !1;
+        e.processed = false;
       } else {
         if ("&&" === e.kind) {
           e.falseForkContext.add(t.head);
@@ -193,7 +193,7 @@ var h = function () {
         e.trueForkContext.add(t.head);
         e.falseForkContext.add(t.head);
       }
-      e.processed = !1;
+      e.processed = false;
       t.replaceHead(e.trueForkContext.makeNext(0, -1));
     }
   }, {
@@ -203,7 +203,7 @@ var h = function () {
       var t = this.forkContext;
       e.trueForkContext.clear();
       e.trueForkContext.add(t.head);
-      e.processed = !0;
+      e.processed = true;
       t.replaceHead(e.falseForkContext.makeNext(0, -1));
     }
   }, {
@@ -214,11 +214,11 @@ var h = function () {
         hasCase: e,
         defaultSegments: null,
         defaultBodySegments: null,
-        foundDefault: !1,
-        lastIsDefault: !1,
+        foundDefault: false,
+        lastIsDefault: false,
         countForks: 0
       };
-      this.pushBreakContext(!0, t);
+      this.pushBreakContext(true, t);
     }
   }, {
     key: "popSwitchContext",
@@ -269,13 +269,13 @@ var h = function () {
         if (t) {
           n.defaultSegments = r.head;
           if (e) {
-            n.foundDefault = !0;
+            n.foundDefault = true;
           } else {
             n.defaultBodySegments = i.head;
           }
         } else {
           if (!e && n.foundDefault) {
-            n.foundDefault = !1;
+            n.foundDefault = false;
             n.defaultBodySegments = i.head;
           }
         }
@@ -292,8 +292,8 @@ var h = function () {
         hasFinalizer: e,
         returnedForkContext: e ? a.newEmpty(this.forkContext) : null,
         thrownForkContext: a.newEmpty(this.forkContext),
-        lastOfTryIsReachable: !1,
-        lastOfCatchIsReachable: !1
+        lastOfTryIsReachable: false,
+        lastOfCatchIsReachable: false
       };
     }
   }, {
@@ -365,7 +365,7 @@ var h = function () {
           }
           a.push(o.newNext(this.idGenerator.next(), c));
         }
-        this.pushForkContext(!0);
+        this.pushForkContext(true);
         this.forkContext.add(a);
       }
     }
@@ -385,38 +385,38 @@ var h = function () {
     key: "pushLoopContext",
     value: function (e, t) {
       var n = this.forkContext;
-      var r = this.pushBreakContext(!0, t);
+      var r = this.pushBreakContext(true, t);
       switch (e) {
         case "WhileStatement":
-          this.pushChoiceContext("loop", !1);
+          this.pushChoiceContext("loop", false);
           this.loopContext = {
             upper: this.loopContext,
             type: e,
             label: t,
-            test: void 0,
+            test: undefined,
             continueDestSegments: null,
             brokenForkContext: r.brokenForkContext
           };
           break;
         case "DoWhileStatement":
-          this.pushChoiceContext("loop", !1);
+          this.pushChoiceContext("loop", false);
           this.loopContext = {
             upper: this.loopContext,
             type: e,
             label: t,
-            test: void 0,
+            test: undefined,
             entrySegments: null,
             continueForkContext: a.newEmpty(n),
             brokenForkContext: r.brokenForkContext
           };
           break;
         case "ForStatement":
-          this.pushChoiceContext("loop", !1);
+          this.pushChoiceContext("loop", false);
           this.loopContext = {
             upper: this.loopContext,
             type: e,
             label: t,
-            test: void 0,
+            test: undefined,
             endOfInitSegments: null,
             testSegments: null,
             endOfTestSegments: null,
@@ -462,7 +462,7 @@ var h = function () {
             r.trueForkContext.add(t.head);
             r.falseForkContext.add(t.head);
           }
-          if (!0 !== e.test) {
+          if (true !== e.test) {
             n.addAll(r.falseForkContext);
           }
           for (var i = r.trueForkContext.segmentsList, o = 0; o < i.length; ++o) {
@@ -503,7 +503,7 @@ var h = function () {
         t.trueForkContext.add(n.head);
         t.falseForkContext.add(n.head);
       }
-      if (!0 !== e.test) {
+      if (true !== e.test) {
         e.brokenForkContext.addAll(t.falseForkContext);
       }
       n.replaceHead(t.trueForkContext.makeNext(0, -1));

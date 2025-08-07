@@ -2,7 +2,7 @@
 
 export { o as a };
 var r;
-var i = require("./306");
+import i = require("./306");
 !function (e) {
   e.PENDING = "PENDING";
   e.RESOLVED = "RESOLVED";
@@ -21,7 +21,7 @@ var o = function () {
     };
     this._setResult = function (e, n) {
       if (t._state === r.PENDING) {
-        if (Object(i.m)(n)) {
+        if (i.m(n)) {
           n.then(t._resolve, t._reject);
         } else {
           t._state = e;
@@ -46,7 +46,7 @@ var o = function () {
             if (t._state === r.REJECTED && e.onrejected) {
               e.onrejected(t._value);
             }
-            e.done = !0;
+            e.done = true;
           }
         });
       }
@@ -93,7 +93,7 @@ var o = function () {
     var r = this;
     return new e(function (e, i) {
       r._attachHandler({
-        done: !1,
+        done: false,
         onfulfilled: function (n) {
           if (t) {
             try {
@@ -130,13 +130,13 @@ var o = function () {
       var i;
       var o;
       return n.then(function (e) {
-        o = !1;
+        o = false;
         i = e;
         if (t) {
           t();
         }
       }, function (e) {
-        o = !0;
+        o = true;
         i = e;
         if (t) {
           t();

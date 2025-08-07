@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.get_nested_blocks_with_comment = exports.get_outer_block = exports.has_context = exports.is_valid_context = exports.cal_num_blocks = exports.fire_block_onchange = exports.update_disable_status = void 0;
+exports.get_nested_blocks_with_comment = exports.get_outer_block = exports.has_context = exports.is_valid_context = exports.cal_num_blocks = exports.fire_block_onchange = exports.update_disable_status = undefined;
 var r = require("../../26/208/index");
 var i = require("../../125/195/index");
 var o = require("./387");
@@ -14,9 +14,9 @@ function s(e) {
 }
 exports.update_disable_status = function (e) {
   if (!e.is_in_flyout) {
-    for (var t = ["repeat_forever", "repeat_n_times", "repeat_forever_until"], n = !0, r = e.get_surround_parent(); r;) {
+    for (var t = ["repeat_forever", "repeat_n_times", "repeat_forever_until"], n = true, r = e.get_surround_parent(); r;) {
       if (t.includes(r.type)) {
-        n = !1;
+        n = false;
         break;
       }
       r = r.get_surround_parent();
@@ -25,13 +25,13 @@ exports.update_disable_status = function (e) {
       if (!e.disabled) {
         return;
       }
-      e.disabled = !1;
+      e.disabled = false;
       e.update_disabled();
     } else {
       if (e.disabled) {
         return;
       }
-      e.disabled = !0;
+      e.disabled = true;
       e.update_disabled();
     }
   }
@@ -54,20 +54,20 @@ exports.is_valid_context = function (e) {
   var n;
   var a = e.previous_connection || e.output_connection;
   if (!a || !a.target_connection || !s(e)) {
-    return !0;
+    return true;
   }
   for (var c = a.target_connection, u = function () {
       (0, o.assert)(c.is_superior());
       if (c.context === a.context) {
         if (e.type === r.PROCEDURE_BLOCK_TYPES.PARAM) {
-          var s = !1;
+          var s = false;
           var u = e.get_field_value("param_name") || "";
           c.get_source_block().inputList.forEach(function (e) {
             var t;
             if (e.type === i.InputType.VALUE) {
-              var n = null === (t = e.connection) || void 0 === t ? void 0 : t.targetBlock();
+              var n = null === (t = e.connection) || undefined === t ? undefined : t.targetBlock();
               if (n && n.get_field_value("param_name") === u) {
-                s = !0;
+                s = true;
               }
             }
           });
@@ -76,17 +76,17 @@ exports.is_valid_context = function (e) {
           };
         }
         return {
-          value: !0
+          value: true
         };
       }
-      c = (null === (t = c.source_block.previous_connection) || void 0 === t ? void 0 : t.target_connection) || (null === (n = c.source_block.output_connection) || void 0 === n ? void 0 : n.target_connection);
+      c = (null === (t = c.source_block.previous_connection) || undefined === t ? undefined : t.target_connection) || (null === (n = c.source_block.output_connection) || undefined === n ? undefined : n.target_connection);
     }; c;) {
     var l = u();
     if ("object" === typeof l) {
       return l.value;
     }
   }
-  return !1;
+  return false;
 };
 exports.has_context = s;
 exports.get_outer_block = function (e) {

@@ -7,8 +7,8 @@ var i = function e(t, n) {
   this.identifiers = [];
   this.references = [];
   this.defs = [];
-  this.tainted = !1;
-  this.stack = !0;
+  this.tainted = false;
+  this.stack = true;
   this.scope = n;
 };
 i.CatchClause = "CatchClause";

@@ -25,7 +25,7 @@ function i(e) {
       function c(e) {
         r(a, i, o, s, c, "throw", e);
       }
-      s(void 0);
+      s(undefined);
     });
   };
 }

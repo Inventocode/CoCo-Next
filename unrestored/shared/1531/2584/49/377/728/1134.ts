@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.analyze_path = exports.decompose_and_sort_op = exports.filter_events = void 0;
+exports.analyze_path = exports.decompose_and_sort_op = exports.filter_events = undefined;
 var r = require("tslib");
 var i = (0, r.__importStar)(require("../../../17/533"));
 var o = (0, r.__importStar)(require("./1133"));
@@ -63,17 +63,17 @@ exports.filter_events = function (e) {
       } else {
         s = o.get_block_id();
         var a = n.get(s);
-        if (void 0 !== a) {
+        if (undefined !== a) {
           t.splice(a, r - a + 1);
           r = a;
-          n.set(s, void 0);
+          n.set(s, undefined);
           continue;
         }
         r++;
       }
     } else {
       var s = o.get_block_id();
-      if (void 0 !== n.get(s)) {
+      if (undefined !== n.get(s)) {
         console.error("create the same block " + s + " multi times.");
         return [];
       }
@@ -192,7 +192,7 @@ exports.decompose_and_sort_op = function (e) {
   });
 };
 exports.analyze_path = function (e, t) {
-  var n = void 0;
+  var n = undefined;
   var r = a(t);
   if (r) {
     var i = r.target_type;
@@ -275,7 +275,7 @@ exports.analyze_path = function (e, t) {
         n = o.EventType.EDIT_FIELD_EXTRA_ATTR;
       }
     }
-    if (void 0 !== n) {
+    if (undefined !== n) {
       return {
         event_type: n,
         normalized_path: r

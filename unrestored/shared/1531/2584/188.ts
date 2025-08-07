@@ -3,9 +3,9 @@
 export { d as b };
 export { p as a };
 var r;
-var o = require("./27");
-var i = require("./40");
-var a = require("react");
+import o = require("./27");
+import i = require("./40");
+import a = require("react");
 var s = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -31,10 +31,10 @@ if (navigator.platform.match("Mac")) {
 }
 var c = function () {
   function e() {
-    Object(o.a)(this, e);
+    o.a(this, e);
     this.handlers = new Array();
   }
-  Object(i.a)(e, [{
+  i.a(e, [{
     key: "addHandler",
     value: function (e) {
       this.handlers.push(e);
@@ -50,10 +50,10 @@ var c = function () {
   }, {
     key: "dispatch",
     value: function (e) {
-      var t = !1;
+      var t = false;
       this.handlers.forEach(function (n) {
         if (u(e, n.keys)) {
-          t = t || !1 !== n.callback();
+          t = t || false !== n.callback();
         }
       });
       return t;
@@ -73,14 +73,14 @@ var u = function e(t, n) {
     var o = n[r || "windows"];
     return !!o && e(t, o);
   }
-  return !1;
+  return false;
 };
 function d(e) {
   var t = e.keys;
   var n = e.callback;
   var r = e.disabled;
-  var o = Object(a.useContext)(l);
-  Object(a.useEffect)(function () {
+  var o = a.useContext(l);
+  a.useEffect(function () {
     if (!r) {
       var e = {
         keys: t,
@@ -98,8 +98,8 @@ function p(e) {
   var t = e.children;
   var n = e.useCapture;
   var r = e.emitter;
-  var o = Object(a.useRef)(new c());
-  Object(a.useEffect)(function () {
+  var o = a.useRef(new c());
+  a.useEffect(function () {
     var e = function (e) {
       var t = document.activeElement;
       if (t) {
@@ -125,7 +125,7 @@ function p(e) {
         r.push(e.key.toLowerCase());
       }
       var i = r.join("+");
-      if (!1 !== o.current.dispatch(i)) {
+      if (false !== o.current.dispatch(i)) {
         e.stopImmediatePropagation();
         e.preventDefault();
       }

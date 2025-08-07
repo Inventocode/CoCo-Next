@@ -1,8 +1,8 @@
 "use strict";
 
-var r = require("./6");
-var o = require("./11");
-var i = require("react");
+import r = require("./6");
+import o = require("./11");
+import i = require("react");
 var a = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -15,7 +15,7 @@ var a = function __importDefault(module) {
   });
   return defaultExport;
 }(i);
-var s = require("./51/index");
+import s = require("color");
 var c = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -28,7 +28,7 @@ var c = function __importDefault(module) {
   });
   return defaultExport;
 }(s);
-var l = require("./8");
+import l = require("./8");
 var u = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -41,9 +41,9 @@ var u = function __importDefault(module) {
   });
   return defaultExport;
 }(l);
-var d = require("./5");
-var p = require("./90");
-var f = require("./240");
+import d = require("./5");
+import p = require("./90");
+import f = require("./240");
 var h = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -85,21 +85,21 @@ _a = function (e) {
     id: t,
     "data-widget-type": d.H,
     "data-role": d.M,
-    className: u()(p.b, h.a.textWidget, Object(o.a)({}, h.a.hide, !n)),
+    className: u()(p.b, h.a.textWidget, o.a({}, h.a.hide, !n)),
     onClick: function () {
       if (s) {
         s();
       }
     },
-    style: Object(r.a)(Object(r.a)({}, y), {}, {
+    style: r.a(r.a({}, y), {}, {
       position: "static"
     })
   }, a.a.createElement("span", {
     className: h.a.content,
     style: {
-      display: b ? "-webkit-box" : void 0,
-      lineClamp: b || void 0,
-      WebkitLineClamp: b || void 0,
+      display: b ? "-webkit-box" : undefined,
+      lineClamp: b || undefined,
+      WebkitLineClamp: b || undefined,
       whiteSpace: b ? "break-spaces" : "pre"
     }
   }, f));

@@ -21,7 +21,7 @@ function s(e) {
   a.delete(e);
 }
 function c(e) {
-  var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+  var t = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : 1;
   var n = o += 1;
   function i(t) {
     if (0 === t) {

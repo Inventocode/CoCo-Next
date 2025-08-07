@@ -5,10 +5,10 @@ export { u as c };
 export { l as a };
 export { f as b };
 export { d as e };
-var r = require("./1506");
+import r = require("./1506");
 function i(e) {
-  var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-  var n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
+  var t = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : 0;
+  var n = arguments.length > 2 && undefined !== arguments[2] ? arguments[2] : 1;
   return Math.min(Math.max(t, e), n);
 }
 function o(e) {
@@ -33,7 +33,7 @@ function o(e) {
   var t = e.indexOf("(");
   var n = e.substring(0, t);
   if (-1 === ["rgb", "rgba", "hsl", "hsla"].indexOf(n)) {
-    throw new Error(Object(r.a)(3, e));
+    throw new Error(r.a(3, e));
   }
   var i = e.substring(t + 1, e.length - 1).split(",");
   return {
@@ -71,7 +71,7 @@ function c(e) {
     var i = t[2] / 100;
     var s = r * Math.min(i, 1 - i);
     var c = function (e) {
-      var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : (e + n / 30) % 12;
+      var t = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : (e + n / 30) % 12;
       return i - s * Math.max(Math.min(t - 3, 9 - t, 1), -1);
     };
     var u = "rgb";

@@ -53,7 +53,7 @@
     s = t.type;
     u = t.structure;
     if (s) {
-      if (!(l = (null != (f = n.customTypes[s]) ? f.cast : void 0) || r[s])) {
+      if (!(l = (null != (f = n.customTypes[s]) ? f.cast : undefined) || r[s])) {
         throw new Error("Type not defined: " + s + ".");
       }
       return l(e, n, c);
@@ -147,14 +147,14 @@
               type: "Object"
             }, {
               type: "String"
-            }], (t.explicit = !0, t))
+            }], (t.explicit = true, t))
           };
       }
     },
     Undefined: function (e) {
-      return "undefined" === e || void 0 === e ? {
+      return "undefined" === e || undefined === e ? {
         type: "Just",
-        value: void 0
+        value: undefined
       } : {
         type: "Nothing"
       };
@@ -186,10 +186,10 @@
     Boolean: function (e) {
       return "true" === e ? {
         type: "Just",
-        value: !0
+        value: true
       } : "false" === e ? {
         type: "Just",
-        value: !1
+        value: false
       } : {
         type: "Nothing"
       };

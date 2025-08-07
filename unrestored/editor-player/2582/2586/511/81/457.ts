@@ -37,7 +37,7 @@ var w = function (t) {
     return {
       next: function () {
         if (t && n >= t.length) {
-          t = void 0;
+          t = undefined;
         }
         return {
           value: t && t[n++],
@@ -54,11 +54,11 @@ var v = function () {
     return f.a.applyMaskPenaltyRule1(t) + f.a.applyMaskPenaltyRule2(t) + f.a.applyMaskPenaltyRule3(t) + f.a.applyMaskPenaltyRule4(t);
   };
   t.encode = function (e, r, a) {
-    if (void 0 === a) {
+    if (undefined === a) {
       a = null;
     }
     var u = t.DEFAULT_BYTE_MODE_ENCODING;
-    var f = null !== a && void 0 !== a.get(n.a.CHARACTER_SET);
+    var f = null !== a && undefined !== a.get(n.a.CHARACTER_SET);
     if (f) {
       u = a.get(n.a.CHARACTER_SET).toString();
     }
@@ -66,7 +66,7 @@ var v = function () {
     var g = new o.a();
     if (p === s.a.BYTE && (f || t.DEFAULT_BYTE_MODE_ENCODING !== u)) {
       var w = i.a.getCharacterSetECIByName(u);
-      if (void 0 !== w) {
+      if (undefined !== w) {
         this.appendECI(w, g);
       }
     }
@@ -74,7 +74,7 @@ var v = function () {
     var v;
     var _ = new o.a();
     this.appendBytes(e, p, _, u);
-    if (null !== a && void 0 !== a.get(n.a.QR_VERSION)) {
+    if (null !== a && undefined !== a.get(n.a.QR_VERSION)) {
       var m = Number.parseInt(a.get(n.a.QR_VERSION).toString(), 10);
       v = c.a.getVersionForNumber(m);
       var A = this.calculateBitsNeeded(p, g, _, v);
@@ -118,21 +118,21 @@ var v = function () {
     return e < t.ALPHANUMERIC_TABLE.length ? t.ALPHANUMERIC_TABLE[e] : -1;
   };
   t.chooseMode = function (e, r) {
-    if (void 0 === r) {
+    if (undefined === r) {
       r = null;
     }
     if (i.a.SJIS.getName() === r && this.isOnlyDoubleByteKanji(e)) {
       return s.a.KANJI;
     }
-    for (var n = !1, o = !1, a = 0, u = e.length; a < u; ++a) {
+    for (var n = false, o = false, a = 0, u = e.length; a < u; ++a) {
       var c = e.charAt(a);
       if (t.isDigit(c)) {
-        n = !0;
+        n = true;
       } else {
         if (-1 === this.getAlphanumericCode(c.charCodeAt(0))) {
           return s.a.BYTE;
         }
-        o = !0;
+        o = true;
       }
     }
     return o ? s.a.ALPHANUMERIC : n ? s.a.NUMERIC : s.a.BYTE;
@@ -142,19 +142,19 @@ var v = function () {
     try {
       e = p.a.encode(t, i.a.SJIS);
     } catch (a) {
-      return !1;
+      return false;
     }
     var r = e.length;
     if (r % 2 !== 0) {
-      return !1;
+      return false;
     }
     for (var n = 0; n < r; n += 2) {
       var o = 255 & e[n];
       if ((o < 129 || o > 159) && (o < 224 || o > 235)) {
-        return !1;
+        return false;
       }
     }
-    return !0;
+    return true;
   };
   t.chooseMaskPattern = function (t, e, r, n) {
     for (var o = Number.MAX_SAFE_INTEGER, i = -1, a = 0; a < l.a.NUM_MASK_PATTERNS; a++) {
@@ -185,12 +185,12 @@ var v = function () {
       throw new y.a("data bits cannot fit in the QR Code" + e.getSize() + " > " + r);
     }
     for (var n = 0; n < 4 && e.getSize() < r; ++n) {
-      e.appendBit(!1);
+      e.appendBit(false);
     }
     var o = 7 & e.getSize();
     if (o > 0) {
       for (n = o; n < 8; n++) {
-        e.appendBit(!1);
+        e.appendBit(false);
       }
     }
     var i = t - e.getSizeInBytes();
@@ -257,7 +257,7 @@ var v = function () {
     var C = new o.a();
     for (p = 0; p < h; ++p) {
       try {
-        for (a = void 0, I = w(d), S = I.next(), void 0; !S.done; S = I.next()) {
+        for (a = undefined, I = w(d), S = I.next(), undefined; !S.done; S = I.next()) {
           var I;
           var S;
           if (p < (A = S.value.getDataBytes()).length) {
@@ -282,7 +282,7 @@ var v = function () {
     }
     for (p = 0; p < l; ++p) {
       try {
-        for (s = void 0, T = w(d), O = T.next(), void 0; !O.done; O = T.next()) {
+        for (s = undefined, T = w(d), O = T.next(), undefined; !O.done; O = T.next()) {
           var T;
           var O;
           if (p < (E = O.value.getErrorCorrectionBytes()).length) {

@@ -37,29 +37,29 @@ export { b as isOpeningBracketToken };
 export { m as isOpeningParenToken };
 export { ne as isParenthesized };
 export { g as isSemicolonToken };
-var r = require("../../../../11");
-var i = require("../../../../1/index");
-var o = require("../../../../27");
-var a = require("../../../../40");
-var s = require("../../../../36/461");
-var c = require("../../../../25/index");
-var u = require("../../../../47");
-var l = require("../../766/index");
+import r = require("../../../../11");
+import i = require("regenerator-runtime");
+import o = require("../../../../27");
+import a = require("../../../../40");
+import s = require("../../../../36/461");
+import c = require("../../../../25/index");
+import u = require("../../../../47");
+import l = require("../../766/index");
 function f(e, t) {
   var n = t.range[0];
   var r = e;
-  var i = !1;
+  var i = false;
   do {
-    i = !1;
+    i = false;
     var o;
-    var a = Object(u.a)(r.childScopes);
+    var a = u.a(r.childScopes);
     try {
       for (a.s(); !(o = a.n()).done;) {
         var s = o.value;
         var c = s.block.range;
         if (c[0] <= n && n < c[1]) {
           r = s;
-          i = !0;
+          i = true;
           break;
         }
       }
@@ -158,7 +158,7 @@ function j(e, t) {
 }
 var L = "undefined" !== typeof globalThis ? globalThis : "undefined" !== typeof self ? self : "undefined" !== typeof window ? window : "undefined" !== typeof global ? global : {};
 var U = Object.freeze(new Set(["Array", "ArrayBuffer", "BigInt", "BigInt64Array", "BigUint64Array", "Boolean", "DataView", "Date", "decodeURI", "decodeURIComponent", "encodeURI", "encodeURIComponent", "escape", "Float32Array", "Float64Array", "Function", "Infinity", "Int16Array", "Int32Array", "Int8Array", "isFinite", "isNaN", "isPrototypeOf", "JSON", "Map", "Math", "NaN", "Number", "Object", "parseFloat", "parseInt", "Promise", "Proxy", "Reflect", "RegExp", "Set", "String", "Symbol", "Uint16Array", "Uint32Array", "Uint8Array", "Uint8ClampedArray", "undefined", "unescape", "WeakMap", "WeakSet"]));
-var H = new Set([Array.isArray, "function" === typeof BigInt ? BigInt : void 0, Boolean, Date, Date.parse, decodeURI, decodeURIComponent, encodeURI, encodeURIComponent, escape, isFinite, isNaN, isPrototypeOf].concat(Object(c.a)(Object.getOwnPropertyNames(Math).map(function (e) {
+var H = new Set([Array.isArray, "function" === typeof BigInt ? BigInt : undefined, Boolean, Date, Date.parse, decodeURI, decodeURIComponent, encodeURI, encodeURIComponent, escape, isFinite, isNaN, isPrototypeOf].concat(c.a(Object.getOwnPropertyNames(Math).map(function (e) {
   return Math[e];
 }).filter(function (e) {
   return "function" === typeof e;
@@ -189,7 +189,7 @@ function z(e, t) {
       if (null == o) {
         return null;
       }
-      n.push.apply(n, Object(c.a)(o.value));
+      n.push.apply(n, c.a(o.value));
     } else {
       var a = W(i, t);
       if (null == a) {
@@ -316,7 +316,7 @@ var Q = Object.freeze({
           var s = o.value;
           if (H.has(a[s])) {
             return {
-              value: a[s].apply(a, Object(c.a)(r))
+              value: a[s].apply(a, c.a(r))
             };
           }
           if (V.has(a[s])) {
@@ -331,7 +331,7 @@ var Q = Object.freeze({
           var l = u.value;
           if (H.has(l)) {
             return {
-              value: l.apply(void 0, Object(c.a)(r))
+              value: l.apply(undefined, c.a(r))
             };
           }
           if (V.has(l)) {
@@ -376,7 +376,7 @@ var Q = Object.freeze({
   LogicalExpression: function (e, t) {
     var n = W(e.left, t);
     if (null != n) {
-      if ("||" === e.operator && !0 === Boolean(n.value) || "&&" === e.operator && !1 === Boolean(n.value)) {
+      if ("||" === e.operator && true === Boolean(n.value) || "&&" === e.operator && false === Boolean(n.value)) {
         return n;
       }
       var r = W(e.right, t);
@@ -402,7 +402,7 @@ var Q = Object.freeze({
       var i = n.value;
       if (H.has(i)) {
         return {
-          value: Object(s.a)(i, Object(c.a)(r))
+          value: s.a(i, c.a(r))
         };
       }
     }
@@ -411,7 +411,7 @@ var Q = Object.freeze({
   ObjectExpression: function (e, t) {
     var n;
     var r = {};
-    var i = Object(u.a)(e.properties);
+    var i = u.a(e.properties);
     try {
       for (i.s(); !(n = i.n()).done;) {
         var o = n.value;
@@ -463,7 +463,7 @@ var Q = Object.freeze({
       });
       if (i === String.raw) {
         return {
-          value: i.apply(void 0, [o].concat(Object(c.a)(r)))
+          value: i.apply(undefined, [o].concat(c.a(r)))
         };
       }
     }
@@ -488,7 +488,7 @@ var Q = Object.freeze({
     }
     if ("void" === e.operator) {
       return {
-        value: void 0
+        value: undefined
       };
     }
     var n = W(e.argument, t);
@@ -523,7 +523,7 @@ function W(e, t) {
   return null != e && Object.hasOwnProperty.call(Q, e.type) ? Q[e.type](e, t) : null;
 }
 function K(e) {
-  var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+  var t = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : null;
   try {
     return W(e, t);
   } catch (n) {
@@ -531,7 +531,7 @@ function K(e) {
   }
 }
 function X(e) {
-  var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+  var t = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : null;
   if (e && "Literal" === e.type && null === e.value) {
     if (e.regex) {
       return "/".concat(e.regex.pattern, "/").concat(e.regex.flags);
@@ -603,18 +603,18 @@ var Z = Object.freeze(Object.assign(Object.create(null), {
   $visitChildren: function (e, t, n) {
     var r;
     var i = e.type;
-    var o = Object(u.a)(n[i] || l.getKeys(e));
+    var o = u.a(n[i] || l.getKeys(e));
     try {
       for (o.s(); !(r = o.n()).done;) {
         var a = e[r.value];
         if (Array.isArray(a)) {
           var s;
-          var c = Object(u.a)(a);
+          var c = u.a(a);
           try {
             for (c.s(); !(s = c.n()).done;) {
               var f = s.value;
               if (f && this.$visit(f, t, n)) {
-                return !0;
+                return true;
               }
             }
           } catch (d) {
@@ -623,7 +623,7 @@ var Z = Object.freeze(Object.assign(Object.create(null), {
             c.f();
           }
         } else if (a && this.$visit(a, t, n)) {
-          return !0;
+          return true;
         }
       }
     } catch (d) {
@@ -631,28 +631,28 @@ var Z = Object.freeze(Object.assign(Object.create(null), {
     } finally {
       o.f();
     }
-    return !1;
+    return false;
   },
   ArrowFunctionExpression: function () {
-    return !1;
+    return false;
   },
   AssignmentExpression: function () {
-    return !0;
+    return true;
   },
   AwaitExpression: function () {
-    return !0;
+    return true;
   },
   BinaryExpression: function (e, t, n) {
     return !(!t.considerImplicitTypeConversion || !$.has(e.operator) || "Literal" === e.left.type && "Literal" === e.right.type) || this.$visitChildren(e, t, n);
   },
   CallExpression: function () {
-    return !0;
+    return true;
   },
   FunctionExpression: function () {
-    return !1;
+    return false;
   },
   ImportExpression: function () {
-    return !0;
+    return true;
   },
   MemberExpression: function (e, t, n) {
     return !!t.considerGetters || !(!t.considerImplicitTypeConversion || !e.computed || "Literal" === e.property.type) || this.$visitChildren(e, t, n);
@@ -661,7 +661,7 @@ var Z = Object.freeze(Object.assign(Object.create(null), {
     return !(!t.considerImplicitTypeConversion || !e.computed || "Literal" === e.key.type) || this.$visitChildren(e, t, n);
   },
   NewExpression: function () {
-    return !0;
+    return true;
   },
   Property: function (e, t, n) {
     return !(!t.considerImplicitTypeConversion || !e.computed || "Literal" === e.key.type) || this.$visitChildren(e, t, n);
@@ -670,18 +670,18 @@ var Z = Object.freeze(Object.assign(Object.create(null), {
     return "delete" === e.operator || !(!t.considerImplicitTypeConversion || !J.has(e.operator) || "Literal" === e.argument.type) || this.$visitChildren(e, t, n);
   },
   UpdateExpression: function () {
-    return !0;
+    return true;
   },
   YieldExpression: function () {
-    return !0;
+    return true;
   }
 }));
 function ee(e, t) {
-  var n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+  var n = arguments.length > 2 && undefined !== arguments[2] ? arguments[2] : {};
   var r = n.considerGetters;
-  var i = void 0 !== r && r;
+  var i = undefined !== r && r;
   var o = n.considerImplicitTypeConversion;
-  var a = void 0 !== o && o;
+  var a = undefined !== o && o;
   return Z.$visit(e, {
     considerGetters: i,
     considerImplicitTypeConversion: a
@@ -726,7 +726,7 @@ function ne(e, t, n) {
     o = t;
   }
   if (null == i) {
-    return !1;
+    return false;
   }
   a = s = i;
   do {
@@ -738,17 +738,17 @@ function ne(e, t, n) {
 var re = /\$(?:[\$&'`]|[1-9][0-9]?)/g;
 var ie = new WeakMap();
 function oe(e, t) {
-  for (var n = !1, r = t - 1; r >= 0 && 92 === e.charCodeAt(r); --r) {
+  for (var n = false, r = t - 1; r >= 0 && 92 === e.charCodeAt(r); --r) {
     n = !n;
   }
   return n;
 }
 var ae = function () {
   function e(t) {
-    var n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+    var n = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : {};
     var r = n.escaped;
-    var i = void 0 !== r && r;
-    Object(o.a)(this, e);
+    var i = undefined !== r && r;
+    o.a(this, e);
     if (!(t instanceof RegExp)) {
       throw new TypeError("'pattern' should be a RegExp instance.");
     }
@@ -760,7 +760,7 @@ var ae = function () {
       escaped: Boolean(i)
     });
   }
-  Object(a.a)(e, [{
+  a.a(e, [{
     key: "execAll",
     value: i.mark(function e(t) {
       var n;
@@ -814,12 +814,12 @@ var ae = function () {
         var r;
         var i = [];
         var o = 0;
-        var a = Object(u.a)(e.execAll(t));
+        var a = u.a(e.execAll(t));
         try {
           for (a.s(); !(r = a.n()).done;) {
             var s = r.value;
             i.push(t.slice(o, s.index));
-            i.push(String(n.apply(void 0, Object(c.a)(s).concat([s.index, s.input]))));
+            i.push(String(n.apply(undefined, c.a(s).concat([s.index, s.input]))));
             o = s.index + s[0].length;
           }
         } catch (l) {
@@ -849,7 +849,7 @@ var ae = function () {
           }
         }
         var s;
-        var c = Object(u.a)(e.execAll(t));
+        var c = u.a(e.execAll(t));
         try {
           for (c.s(); !(s = c.n()).done;) {
             o = s.value;
@@ -876,7 +876,7 @@ var le = Symbol("call");
 var fe = Symbol("construct");
 var de = Symbol("esm");
 var he = {
-  require: Object(r.a)({}, le, !0)
+  require: r.a({}, le, true)
 };
 function pe(e) {
   return null == e || 0 !== e.defs.length || e.references.some(function (e) {
@@ -889,27 +889,27 @@ function _e(e) {
     case "ConditionalExpression":
       return t.consequent === e || t.alternate === e;
     case "LogicalExpression":
-      return !0;
+      return true;
     case "SequenceExpression":
       return t.expressions[t.expressions.length - 1] === e;
     default:
-      return !1;
+      return false;
   }
 }
 var Ae = function () {
   function e(t) {
-    var n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+    var n = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : {};
     var r = n.mode;
-    var i = void 0 === r ? "strict" : r;
+    var i = undefined === r ? "strict" : r;
     var a = n.globalObjectNames;
-    var s = void 0 === a ? ["global", "self", "window"] : a;
-    Object(o.a)(this, e);
+    var s = undefined === a ? ["global", "self", "window"] : a;
+    o.a(this, e);
     this.variableStack = [];
     this.globalScope = t;
     this.mode = i;
     this.globalObjectNames = s.slice(0);
   }
-  Object(a.a)(e, [{
+  a.a(e, [{
     key: "iterateGlobalReferences",
     value: i.mark(function e(t) {
       var n;
@@ -940,13 +940,13 @@ var Ae = function () {
               }
               return e.abrupt("continue", 9);
             case 8:
-              return e.delegateYield(this._iterateVariableReferences(c, s, a, !0), "t0", 9);
+              return e.delegateYield(this._iterateVariableReferences(c, s, a, true), "t0", 9);
             case 9:
               n++;
               e.next = 1;
               break;
             case 12:
-              l = Object(u.a)(this.globalObjectNames);
+              l = u.a(this.globalObjectNames);
               e.prev = 13;
               l.s();
             case 15:
@@ -960,7 +960,7 @@ var Ae = function () {
               }
               return e.abrupt("continue", 22);
             case 21:
-              return e.delegateYield(this._iterateVariableReferences(p, h, t, !1), "t1", 22);
+              return e.delegateYield(this._iterateVariableReferences(p, h, t, false), "t1", 22);
             case 22:
               e.next = 15;
               break;
@@ -995,7 +995,7 @@ var Ae = function () {
         for (;;) {
           switch (e.prev = e.next) {
             case 0:
-              n = Object(u.a)(this.iterateGlobalReferences(he));
+              n = u.a(this.iterateGlobalReferences(he));
               e.prev = 1;
               n.s();
             case 3:
@@ -1070,7 +1070,7 @@ var Ae = function () {
           switch (e.prev = e.next) {
             case 0:
               n = this.globalScope.block;
-              r = Object(u.a)(n.body);
+              r = u.a(n.body);
               e.prev = 2;
               r.s();
             case 4:
@@ -1132,7 +1132,7 @@ var Ae = function () {
               e.next = 69;
               break;
             case 29:
-              _ = Object(u.a)(a.specifiers);
+              _ = u.a(a.specifiers);
               e.prev = 30;
               _.s();
             case 32:
@@ -1153,7 +1153,7 @@ var Ae = function () {
               e.next = 59;
               break;
             case 40:
-              y = Object(u.a)(m);
+              y = u.a(m);
               e.prev = 41;
               y.s();
             case 43:
@@ -1235,7 +1235,7 @@ var Ae = function () {
             case 2:
               this.variableStack.push(t);
               e.prev = 3;
-              a = Object(u.a)(t.references);
+              a = u.a(t.references);
               e.prev = 5;
               a.s();
             case 7:
@@ -1431,7 +1431,7 @@ var Ae = function () {
                 e.next = 4;
                 break;
               }
-              return e.delegateYield(this._iterateVariableReferences(o, n, r, !1), "t0", 4);
+              return e.delegateYield(this._iterateVariableReferences(o, n, r, false), "t0", 4);
             case 4:
               return e.abrupt("return");
             case 5:
@@ -1439,7 +1439,7 @@ var Ae = function () {
                 e.next = 31;
                 break;
               }
-              a = Object(u.a)(t.properties);
+              a = u.a(t.properties);
               e.prev = 7;
               a.s();
             case 9:
@@ -1529,7 +1529,7 @@ var Ae = function () {
                 info: s[ue]
               };
             case 10:
-              return e.delegateYield(this._iterateVariableReferences(d(this.globalScope, t.local), n, s, !1), "t0", 11);
+              return e.delegateYield(this._iterateVariableReferences(d(this.globalScope, t.local), n, s, false), "t0", 11);
             case 11:
               return e.abrupt("return");
             case 12:
@@ -1537,7 +1537,7 @@ var Ae = function () {
                 e.next = 15;
                 break;
               }
-              return e.delegateYield(this._iterateVariableReferences(d(this.globalScope, t.local), n, r, !1), "t1", 14);
+              return e.delegateYield(this._iterateVariableReferences(d(this.globalScope, t.local), n, r, false), "t1", 14);
             case 14:
               return e.abrupt("return");
             case 15:

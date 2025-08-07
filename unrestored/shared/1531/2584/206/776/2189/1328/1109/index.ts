@@ -222,7 +222,7 @@
     this.parent[this.key] = e;
   };
   l.prototype.remove = function () {
-    return Array.isArray(this.parent) ? (this.parent.splice(this.key, 1), !0) : (this.replace(null), !1);
+    return Array.isArray(this.parent) ? (this.parent.splice(this.key, 1), true) : (this.replace(null), false);
   };
   d.prototype.path = function () {
     var e;
@@ -266,7 +266,7 @@
   d.prototype.__execute = function (e, t) {
     var n;
     var r;
-    r = void 0;
+    r = undefined;
     n = this.__current;
     this.__current = t;
     this.__state = null;
@@ -401,7 +401,7 @@
       root: e
     }, "root")), n.push(d), r.push(d); n.length;) {
       if ((d = n.pop()) !== m) {
-        if (void 0 !== (u = this.__execute(t.enter, d)) && u !== a && u !== s && u !== c) {
+        if (undefined !== (u = this.__execute(t.enter, d)) && u !== a && u !== s && u !== c) {
           d.ref.replace(u);
           d.node = u;
         }
@@ -442,7 +442,7 @@
             }
           }
         }
-      } else if (d = r.pop(), void 0 !== (u = this.__execute(t.leave, d)) && u !== a && u !== s && u !== c && d.ref.replace(u), this.__state !== c && u !== c || w(d), this.__state === a || u === a) {
+      } else if (d = r.pop(), undefined !== (u = this.__execute(t.leave, d)) && u !== a && u !== s && u !== c && d.ref.replace(u), this.__state !== c && u !== c || w(d), this.__state === a || u === a) {
         return y.root;
       }
     }
@@ -490,7 +490,7 @@
             s += 1;
           }
         }
-        return s === c.length ? i.Break : c[s].extendedRange[0] > e.range[1] ? i.Skip : void 0;
+        return s === c.length ? i.Break : c[s].extendedRange[0] > e.range[1] ? i.Skip : undefined;
       }
     });
     s = 0;
@@ -507,7 +507,7 @@
             s += 1;
           }
         }
-        return s === c.length ? i.Break : c[s].extendedRange[0] > e.range[1] ? i.Skip : void 0;
+        return s === c.length ? i.Break : c[s].extendedRange[0] > e.range[1] ? i.Skip : undefined;
       }
     });
     return e;

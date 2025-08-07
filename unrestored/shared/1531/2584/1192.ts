@@ -5,10 +5,10 @@ var o = function () {
   function e(e, t) {
     for (var n = 0; n < t.length; n++) {
       var r = t[n];
-      r.enumerable = r.enumerable || !1;
-      r.configurable = !0;
+      r.enumerable = r.enumerable || false;
+      r.configurable = true;
       if ("value" in r) {
-        r.writable = !0;
+        r.writable = true;
       }
       Object.defineProperty(e, r.key, r);
     }
@@ -100,7 +100,7 @@ var a = {
   }
 };
 var s = function (e) {
-  return Object(r.createElement)("div", {
+  return r.createElement("div", {
     className: e.className,
     style: i({}, a.base, a[e.direction], e.replaceStyles || {}),
     onMouseDown: function (t) {
@@ -155,7 +155,7 @@ var g = function (e) {
       return !t || "object" !== typeof t && "function" !== typeof t ? e : t;
     }(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this, e));
     n.state = {
-      isResizing: !1,
+      isResizing: false,
       resizeCursor: "auto",
       width: "undefined" === typeof (n.propsSize && n.propsSize.width) ? "auto" : n.propsSize && n.propsSize.width,
       height: "undefined" === typeof (n.propsSize && n.propsSize.height) ? "auto" : n.propsSize && n.propsSize.height,
@@ -187,9 +187,9 @@ var g = function (e) {
     e.prototype = Object.create(t && t.prototype, {
       constructor: {
         value: e,
-        enumerable: !1,
-        writable: !0,
-        configurable: !0
+        enumerable: false,
+        writable: true,
+        configurable: true
       }
     });
     if (t) {
@@ -220,11 +220,11 @@ var g = function (e) {
           height: window.innerHeight
         };
       }
-      var t = !1;
+      var t = false;
       var n = this.parentNode.style.flexWrap;
       var r = e.style.minWidth;
       if ("wrap" !== n) {
-        t = !0;
+        t = true;
         this.parentNode.style.flexWrap = "wrap";
       }
       e.style.position = "relative";
@@ -333,7 +333,7 @@ var g = function (e) {
           width: this.size.width,
           height: this.size.height
         },
-        isResizing: !0,
+        isResizing: true,
         resizeCursor: window.getComputedStyle(e.target).cursor,
         direction: t
       });
@@ -377,10 +377,10 @@ var g = function (e) {
           var I = Number(E.replace("%", "")) / 100;
           E = w.height * I;
         }
-        v = "undefined" === typeof v ? void 0 : Number(v);
-        b = "undefined" === typeof b ? void 0 : Number(b);
-        y = "undefined" === typeof y ? void 0 : Number(y);
-        E = "undefined" === typeof E ? void 0 : Number(E);
+        v = "undefined" === typeof v ? undefined : Number(v);
+        b = "undefined" === typeof b ? undefined : Number(b);
+        y = "undefined" === typeof y ? undefined : Number(y);
+        E = "undefined" === typeof E ? undefined : Number(E);
         var A = "number" === typeof l ? l : i.width / i.height;
         var j = i.width;
         var N = i.height;
@@ -516,7 +516,7 @@ var g = function (e) {
           this.setState(this.props.size);
         }
         this.setState({
-          isResizing: !1,
+          isResizing: false,
           resizeCursor: "auto"
         });
       }
@@ -544,15 +544,15 @@ var g = function (e) {
         return null;
       }
       var u = Object.keys(n).map(function (t) {
-        return !1 !== n[t] ? Object(r.createElement)(s, {
+        return false !== n[t] ? r.createElement(s, {
           key: t,
           direction: t,
           onResizeStart: e.onResizeStart,
           replaceStyles: o && o[t],
           className: i && i[t]
-        }, l && l[t] ? Object(r.createElement)(l[t]) : null) : null;
+        }, l && l[t] ? r.createElement(l[t]) : null) : null;
       });
-      return Object(r.createElement)("span", {
+      return r.createElement("span", {
         className: c,
         style: a
       }, u);
@@ -562,7 +562,7 @@ var g = function (e) {
     value: function () {
       var e = this;
       var t = this.state.isResizing ? c : l;
-      return Object(r.createElement)("div", i({
+      return r.createElement("div", i({
         ref: function (t) {
           if (t) {
             e.resizable = t;
@@ -578,7 +578,7 @@ var g = function (e) {
           boxSizing: "border-box"
         }),
         className: this.props.className
-      }, this.extendsProps), this.state.isResizing && Object(r.createElement)("div", {
+      }, this.extendsProps), this.state.isResizing && r.createElement("div", {
         style: {
           height: "100%",
           width: "100%",
@@ -669,18 +669,18 @@ g.defaultProps = {
   onResize: function () {},
   onResizeStop: function () {},
   enable: {
-    top: !0,
-    right: !0,
-    bottom: !0,
-    left: !0,
-    topRight: !0,
-    bottomRight: !0,
-    bottomLeft: !0,
-    topLeft: !0
+    top: true,
+    right: true,
+    bottom: true,
+    left: true,
+    topRight: true,
+    bottomRight: true,
+    bottomLeft: true,
+    topLeft: true
   },
   style: {},
   grid: [1, 1],
-  lockAspectRatio: !1,
+  lockAspectRatio: false,
   lockAspectRatioExtraWidth: 0,
   lockAspectRatioExtraHeight: 0,
   scale: 1,

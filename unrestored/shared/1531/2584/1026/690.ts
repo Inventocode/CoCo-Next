@@ -3,13 +3,13 @@
 export { o as b };
 export { a };
 export { s as c };
-var r = require("../108");
-var i = require("../242/index");
+import r = require("../108");
+import i = require("../242/index");
 function o(e, t) {
   if ("function" === typeof e) {
     e(t);
   } else {
-    if ("object" === Object(r.a)(e) && e && "current" in e) {
+    if ("object" === r.a(e) && e && "current" in e) {
       e.current = t;
     }
   }
@@ -27,7 +27,7 @@ function a() {
 function s(e) {
   var t;
   var n;
-  var r = Object(i.isMemo)(e) ? e.type.type : e.type;
-  return !("function" === typeof r && !(null === (t = r.prototype) || void 0 === t ? void 0 : t.render)) && !("function" === typeof e && !(null === (n = e.prototype) || void 0 === n ? void 0 : n.render));
+  var r = i.isMemo(e) ? e.type.type : e.type;
+  return !("function" === typeof r && !(null === (t = r.prototype) || undefined === t ? undefined : t.render)) && !("function" === typeof e && !(null === (n = e.prototype) || undefined === n ? undefined : n.render));
 }
 export default a;

@@ -29,26 +29,26 @@ var r = {
     set: "设置"
   }
 };
-var o = require("./6");
-var i = require("./97");
-var a = require("./5");
-var s = require("./35");
-var c = require("./77");
-var l = require("./60");
+import o = require("./6");
+import i = require("./97");
+import a = require("./5");
+import s = require("./35");
+import c = require("./77");
+import l = require("./60");
 var u = {
   type: a.w,
   icon: i.b,
   title: "widgetName",
   platforms: ["web", "android", "ios"],
-  isGlobalWidget: !1,
-  isInvisibleWidget: !1,
-  properties: [Object(o.a)({}, s.h), {
+  isGlobalWidget: false,
+  isInvisibleWidget: false,
+  properties: [o.a({}, s.h), {
     key: "__width",
     label: "widthMsg",
     valueType: "number",
     defaultValue: 100,
     blockOptions: {
-      generateBlock: !1
+      generateBlock: false
     },
     validators: {
       greaterThan: i.m
@@ -59,7 +59,7 @@ var u = {
     valueType: "number",
     defaultValue: 100,
     blockOptions: {
-      generateBlock: !1
+      generateBlock: false
     },
     validators: {
       greaterThan: i.l
@@ -69,7 +69,7 @@ var u = {
     label: "",
     valueType: "number",
     defaultValue: 100,
-    readonly: !0,
+    readonly: true,
     blockOptions: {
       setter: {
         keys: ["__height", "__width"]
@@ -82,7 +82,7 @@ var u = {
     key: "hasErrorMessage",
     label: "hasErrorMessageLabel",
     valueType: "boolean",
-    defaultValue: !1,
+    defaultValue: false,
     blockOptions: {
       getter: {
         func: "checkIfInputWidgetHasErrorMessage"
@@ -94,7 +94,7 @@ var u = {
     valueType: "color",
     defaultValue: i.n,
     blockOptions: {
-      generateBlock: !1
+      generateBlock: false
     }
   }, {
     key: "valueColor",
@@ -102,14 +102,14 @@ var u = {
     valueType: "color",
     defaultValue: i.o,
     blockOptions: {
-      generateBlock: !1
+      generateBlock: false
     }
   }, {
     key: "contentColor",
     label: "contentColor",
     valueType: "color",
     defaultValue: i.n,
-    readonly: !0,
+    readonly: true,
     blockOptions: {
       setter: {
         keys: ["valueColor", "placeholderColor"]
@@ -128,7 +128,7 @@ var u = {
         value: l.n,
         message: "outOfRange"
       },
-      isInteger: !0
+      isInteger: true
     }
   }, {
     key: "textAlign",
@@ -147,7 +147,7 @@ var u = {
     }],
     blockOptions: {
       getter: {
-        generateBlock: !1
+        generateBlock: false
       }
     }
   }, {
@@ -157,7 +157,7 @@ var u = {
     defaultValue: "",
     blockOptions: {
       setter: {
-        generateBlock: !1
+        generateBlock: false
       }
     }
   }],
@@ -178,22 +178,22 @@ var u = {
         label: "outlinedNormal",
         value: c.c.OUTLINED_NORMAL,
         image: "https://static.codemao.cn/coco/image/input-outline-normal-template.png",
-        isHideFieldImage: !0
+        isHideFieldImage: true
       }, {
         label: "containedNormal",
         value: c.c.CONTAINED_NORMAL,
         image: "https://static.codemao.cn/coco/image/input-contain-normal-template.png",
-        isHideFieldImage: !0
+        isHideFieldImage: true
       }, {
         label: "containedRound",
         value: c.c.CONTAINED_ROUND,
         image: "https://static.codemao.cn/coco/image/input-contain-round-template.png",
-        isHideFieldImage: !0
+        isHideFieldImage: true
       }, {
         label: "outlinedFlat",
         value: c.c.OUTLINED_FLAT,
         image: "https://static.codemao.cn/coco/image/input-outline-flat-template.png",
-        isHideFieldImage: !0
+        isHideFieldImage: true
       }]
     }, {
       key: "backgroundColor",

@@ -26,7 +26,7 @@ var o = {
 };
 var a = require("../223/index");
 var s = function (e, t) {
-  return i.createElement(a.a, Object(r.a)(Object(r.a)({}, e), {}, {
+  return i.createElement(a.a, r.a(r.a({}, e), {}, {
     ref: t,
     icon: o
   }));

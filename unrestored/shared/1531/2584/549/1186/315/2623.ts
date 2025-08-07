@@ -10,27 +10,27 @@ var c = o.forwardRef(function (e, t) {
   var n = e.classes;
   var s = e.className;
   var c = e.component;
-  var u = void 0 === c ? "div" : c;
+  var u = undefined === c ? "div" : c;
   var l = e.square;
-  var f = void 0 !== l && l;
+  var f = undefined !== l && l;
   var d = e.elevation;
-  var h = void 0 === d ? 1 : d;
+  var h = undefined === d ? 1 : d;
   var p = e.variant;
-  var _ = void 0 === p ? "elevation" : p;
-  var A = Object(r.a)(e, ["classes", "className", "component", "square", "elevation", "variant"]);
-  return o.createElement(u, Object(i.a)({
-    className: Object(a.a)(n.root, s, "outlined" === _ ? n.outlined : n["elevation".concat(h)], !f && n.rounded),
+  var _ = undefined === p ? "elevation" : p;
+  var A = r.a(e, ["classes", "className", "component", "square", "elevation", "variant"]);
+  return o.createElement(u, i.a({
+    className: a.a(n.root, s, "outlined" === _ ? n.outlined : n["elevation".concat(h)], !f && n.rounded),
     ref: t
   }, A));
 });
-exports.a = Object(s.a)(function (e) {
+exports.a = s.a(function (e) {
   var t = {};
   e.shadows.forEach(function (e, n) {
     t["elevation".concat(n)] = {
       boxShadow: e
     };
   });
-  return Object(i.a)({
+  return i.a({
     root: {
       backgroundColor: e.palette.background.paper,
       color: e.palette.text.primary,

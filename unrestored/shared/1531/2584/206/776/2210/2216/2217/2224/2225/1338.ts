@@ -23,11 +23,11 @@ module.exports = function (e, t, n) {
   var A = e.opts.$data && _ && _.$data;
   var g = h ? "<" : ">";
   var v = h ? ">" : "<";
-  var m = void 0;
-  if (!d && "number" != typeof s && void 0 !== s) {
+  var m = undefined;
+  if (!d && "number" != typeof s && undefined !== s) {
     throw new Error(t + " must be number");
   }
-  if (!A && void 0 !== _ && "number" != typeof _ && "boolean" != typeof _) {
+  if (!A && undefined !== _ && "number" != typeof _ && "boolean" != typeof _) {
     throw new Error(p + " must be number or boolean");
   }
   if (A) {
@@ -42,9 +42,9 @@ module.exports = function (e, t, n) {
     m = p;
     (C = C || []).push(i);
     i = "";
-    if (!1 !== e.createErrors) {
+    if (false !== e.createErrors) {
       i += " { keyword: '" + (m || "_exclusiveLimit") + "' , dataPath: (dataPath || '') + " + e.errorPath + " , schemaPath: " + e.util.toQuotedString(u) + " , params: {} ";
-      if (!1 !== e.opts.messages) {
+      if (false !== e.opts.messages) {
         i += " , message: '" + p + " should be boolean' ";
       }
       if (e.opts.verbose) {
@@ -70,7 +70,7 @@ module.exports = function (e, t, n) {
       i += " (" + r + " !== undefined && typeof " + r + " != 'number') || ";
     }
     i += " " + w + " == 'number' ? ( (" + b + " = " + r + " === undefined || " + y + " " + g + "= " + r + ") ? " + f + " " + v + "= " + y + " : " + f + " " + v + " " + r + " ) : ( (" + b + " = " + y + " === true) ? " + f + " " + v + "= " + r + " : " + f + " " + v + " " + r + " ) || " + f + " !== " + f + ") { var op" + o + " = " + b + " ? '" + g + "' : '" + g + "='; ";
-    if (void 0 === s) {
+    if (undefined === s) {
       m = p;
       u = e.errSchemaPath + "/" + p;
       r = y;
@@ -86,8 +86,8 @@ module.exports = function (e, t, n) {
       }
       i += " ( " + r + " === undefined || " + _ + " " + g + "= " + r + " ? " + f + " " + v + "= " + _ + " : " + f + " " + v + " " + r + " ) || " + f + " !== " + f + ") { ";
     } else {
-      if (E && void 0 === s) {
-        b = !0;
+      if (E && undefined === s) {
+        b = true;
         m = p;
         u = e.errSchemaPath + "/" + p;
         r = _;
@@ -97,12 +97,12 @@ module.exports = function (e, t, n) {
           r = Math[h ? "min" : "max"](_, s);
         }
         if (_ === (!E || r)) {
-          b = !0;
+          b = true;
           m = p;
           u = e.errSchemaPath + "/" + p;
           v += "=";
         } else {
-          b = !1;
+          b = false;
           x += "=";
         }
       }
@@ -117,9 +117,9 @@ module.exports = function (e, t, n) {
   m = m || t;
   (C = C || []).push(i);
   i = "";
-  if (!1 !== e.createErrors) {
+  if (false !== e.createErrors) {
     i += " { keyword: '" + (m || "_limit") + "' , dataPath: (dataPath || '') + " + e.errorPath + " , schemaPath: " + e.util.toQuotedString(u) + " , params: { comparison: " + k + ", limit: " + r + ", exclusive: " + b + " } ";
-    if (!1 !== e.opts.messages) {
+    if (false !== e.opts.messages) {
       i += " , message: 'should be " + x + " ";
       i += d ? "' + " + r : r + "'";
     }

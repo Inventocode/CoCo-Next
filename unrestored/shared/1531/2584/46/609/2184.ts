@@ -4,9 +4,9 @@ function r(e) {
   return /^[+-]?Infinity$/.test(e) || /^[+-]?\d*\.?\d+(e[+-]?\d+)?$/.test(e);
 }
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.load_json_js_generator_shadow = void 0;
+exports.load_json_js_generator_shadow = undefined;
 exports.load_json_js_generator_shadow = function (e) {
   e.register("logic_empty", function () {
     return ["false", e.ORDER_ATOMIC];

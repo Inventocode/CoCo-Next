@@ -20,14 +20,14 @@ module.exports = {
       h(e, {
         type: t,
         index: o(null),
-        first: void 0,
-        last: void 0,
+        first: undefined,
+        last: undefined,
         size: 0
       });
       if (!d) {
         e.size = 0;
       }
-      if (void 0 != r) {
+      if (undefined != r) {
         c(r, e[l], {
           that: e,
           AS_ENTRIES: n
@@ -44,12 +44,12 @@ module.exports = {
         a.value = n;
       } else {
         i.last = a = {
-          index: o = p(t, !0),
+          index: o = p(t, true),
           key: t,
           value: n,
           previous: r = i.last,
-          next: void 0,
-          removed: !1
+          next: undefined,
+          removed: false
         };
         if (!i.first) {
           i.first = a;
@@ -84,14 +84,14 @@ module.exports = {
     i(u.prototype, {
       clear: function () {
         for (var e = f(this), t = e.index, n = e.first; n;) {
-          n.removed = !0;
+          n.removed = true;
           if (n.previous) {
-            n.previous = n.previous.next = void 0;
+            n.previous = n.previous.next = undefined;
           }
           delete t[n.index];
           n = n.next;
         }
-        e.first = e.last = void 0;
+        e.first = e.last = undefined;
         if (d) {
           e.size = 0;
         } else {
@@ -105,7 +105,7 @@ module.exports = {
           var r = n.next;
           var o = n.previous;
           delete t.index[n.index];
-          n.removed = !0;
+          n.removed = true;
           if (o) {
             o.next = r;
           }
@@ -127,7 +127,7 @@ module.exports = {
         return !!n;
       },
       forEach: function (e) {
-        for (var t, n = f(this), r = a(e, arguments.length > 1 ? arguments[1] : void 0, 3); t = t ? t.next : n.first;) {
+        for (var t, n = f(this), r = a(e, arguments.length > 1 ? arguments[1] : undefined, 3); t = t ? t.next : n.first;) {
           for (r(t.value, t.key, this); t && t.removed;) {
             t = t.previous;
           }
@@ -169,7 +169,7 @@ module.exports = {
         target: e,
         state: o(e),
         kind: t,
-        last: void 0
+        last: undefined
       });
     }, function () {
       for (var e = i(this), t = e.kind, n = e.last; n && n.removed;) {
@@ -177,18 +177,18 @@ module.exports = {
       }
       return e.target && (e.last = n = n ? n.next : e.state.first) ? "keys" == t ? {
         value: n.key,
-        done: !1
+        done: false
       } : "values" == t ? {
         value: n.value,
-        done: !1
+        done: false
       } : {
         value: [n.key, n.value],
-        done: !1
-      } : (e.target = void 0, {
-        value: void 0,
-        done: !0
+        done: false
+      } : (e.target = undefined, {
+        value: undefined,
+        done: true
       });
-    }, n ? "entries" : "values", !n, !0);
+    }, n ? "entries" : "values", !n, true);
     u(t);
   }
 };

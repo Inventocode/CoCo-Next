@@ -15,7 +15,7 @@
 | 模块 | 抓取 | 拆包 | 语法升级 | JSX 反向转换 | 反压缩 |
 | :-: | :-: | :-: | :-: | :-: | :-: |
 | CoCo Home | ✅ | 75% | ❌ | ❌ | / |
-| CoCo Editor | ✅ | 75% | ❌ | ❌ | ❌ |
+| CoCo Editor | ✅ | 75% | ❌ | ❌ | 0% |
 | CoCo Editor Player | ✅ | 75% | ❌ | ❌ | ❌ |
 | CoCo Editor ServiceWorker | ✅ | ✅ | ❌ | / | ❌ |
 | CoCo Player | ✅ | 75% | ❌ | ❌ | ❌ |
@@ -86,7 +86,21 @@ $ npm run start
 
 #### (2)在浏览器中打开
 
-在本机浏览器中打开 <http://coco.localhost:7090/>
+在本机浏览器中打开 <http://coco.localhost:7090/>。
+
+### 4.构建生产版本
+
+```sh
+$ npm run build
+```
+
+提示：你可以使用下面这个命令在本地启动一个服务器来查看生产版本。
+
+```sh
+$ npm run serve
+```
+
+依然是在 <http://coco.localhost:7090/> 中打开。
 
 ## 三、目录结构说明
 

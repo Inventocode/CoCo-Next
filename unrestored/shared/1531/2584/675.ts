@@ -9,23 +9,23 @@ var r = {
     backgroundColor: "背景颜色"
   }
 };
-var o = require("./6");
-var i = require("./5");
-var a = require("./35");
-var s = require("./245");
+import o = require("./6");
+import i = require("./5");
+import a = require("./35");
+import s = require("./245");
 var c = {
   type: i.f,
   icon: "icon-widget-canvas",
   title: "widgetName",
   platforms: ["web", "android", "ios"],
-  isGlobalWidget: !1,
-  isInvisibleWidget: !1,
+  isGlobalWidget: false,
+  isInvisibleWidget: false,
   properties: [{
     key: "backgroundColor",
     label: "backgroundColor",
     valueType: "color",
     defaultValue: s.a
-  }, Object(o.a)({}, a.i)],
+  }, o.a({}, a.i)],
   methods: [],
   events: []
 };

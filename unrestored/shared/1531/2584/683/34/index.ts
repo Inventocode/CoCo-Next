@@ -214,8 +214,8 @@ Object.defineProperty(r, "url", {
     return ge;
   }
 });
-var i = require("./1459/index");
-var o = require("../../0/1532/763");
+import i = require("./1459/index");
+import o = require("../../0/1532/763");
 var a = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -408,9 +408,9 @@ var W = function (e) {
       chrome: i(C),
       device: i(w) || i(E) || i(x) || i(O) || i(C)
     },
-    any: !1,
-    phone: !1,
-    tablet: !1
+    any: false,
+    phone: false,
+    tablet: false
   };
   o.any = o.apple.device || o.android.device || o.windows.device || o.other.device;
   o.phone = o.apple.phone || o.android.phone || o.windows.phone;
@@ -585,20 +585,20 @@ var fe = {
   RESOLUTION: 1,
   FILTER_RESOLUTION: 1,
   SPRITE_MAX_TEXTURES: function (e) {
-    var t = !0;
+    var t = true;
     if (W.tablet || W.phone) {
       var n;
       if (W.apple.device) {
         if (n = navigator.userAgent.match(/OS (\d+)_(\d+)?/)) {
           if (parseInt(n[1], 10) < 11) {
-            t = !1;
+            t = false;
           }
         }
       }
       if (W.android.device) {
         if (n = navigator.userAgent.match(/Android\s([0-9.]*)/)) {
           if (parseInt(n[1], 10) < 7) {
-            t = !1;
+            t = false;
           }
         }
       }
@@ -608,16 +608,16 @@ var fe = {
   SPRITE_BATCH_SIZE: 4096,
   RENDER_OPTIONS: {
     view: null,
-    antialias: !1,
-    autoDensity: !1,
+    antialias: false,
+    autoDensity: false,
     backgroundColor: 0,
     backgroundAlpha: 1,
-    useContextAlpha: !0,
-    clearBeforeRender: !0,
-    preserveDrawingBuffer: !1,
+    useContextAlpha: true,
+    clearBeforeRender: true,
+    preserveDrawingBuffer: false,
     width: 800,
     height: 600,
-    legacy: !1
+    legacy: false
   },
   GC_MODE: V.AUTO,
   GC_MAX_IDLE: 3600,
@@ -627,10 +627,10 @@ var fe = {
   PRECISION_VERTEX: G.HIGH,
   PRECISION_FRAGMENT: W.apple.device ? G.HIGH : G.MEDIUM,
   CAN_UPLOAD_SAME_BUFFER: !W.apple.device,
-  CREATE_IMAGE_BITMAP: !1,
-  ROUND_PIXELS: !1
+  CREATE_IMAGE_BITMAP: false,
+  ROUND_PIXELS: false
 };
-var de = require("./1307");
+import de = require("./1307");
 var he = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -643,7 +643,7 @@ var he = function __importDefault(module) {
   });
   return defaultExport;
 }(de);
-var pe = require("./1308");
+import pe = require("./1308");
 var _e = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -656,7 +656,7 @@ var _e = function __importDefault(module) {
   });
   return defaultExport;
 }(pe);
-var Ae = require("./1028/index");
+import Ae = require("./1028/index");
 !function (e) {
   e[e.WEBGL_LEGACY = 0] = "WEBGL_LEGACY";
   e[e.WEBGL = 1] = "WEBGL";
@@ -807,11 +807,11 @@ var ge = {
   resolve: Ae.resolve
 };
 fe.RETINA_PREFIX = /@([0-9\.]+)x/;
-fe.FAIL_IF_MAJOR_PERFORMANCE_CAVEAT = !1;
+fe.FAIL_IF_MAJOR_PERFORMANCE_CAVEAT = false;
 var ve;
-var me = !1;
+var me = false;
 function ye() {
-  me = !0;
+  me = true;
 }
 function be(e) {
   var t;
@@ -822,19 +822,19 @@ function be(e) {
     } else if (self.console) {
       self.console.log("PixiJS 6.0.4 - " + e + " - http://www.pixijs.com/");
     }
-    me = !0;
+    me = true;
   }
 }
 function we() {
   if ("undefined" === typeof ve) {
     ve = function () {
       var e = {
-        stencil: !0,
+        stencil: true,
         failIfMajorPerformanceCaveat: fe.FAIL_IF_MAJOR_PERFORMANCE_CAVEAT
       };
       try {
         if (!self.WebGLRenderingContext) {
-          return !1;
+          return false;
         }
         var t = document.createElement("canvas");
         var n = t.getContext("webgl", e) || t.getContext("experimental-webgl", e);
@@ -848,7 +848,7 @@ function we() {
         n = null;
         return r;
       } catch (o) {
-        return !1;
+        return false;
       }
     }();
   }
@@ -1005,7 +1005,7 @@ var Ee = {
   yellowgreen: "#9acd32"
 };
 function xe(e, t) {
-  if (void 0 === t) {
+  if (undefined === t) {
     t = [];
   }
   t[0] = (e >> 16 & 255) / 255;
@@ -1047,7 +1047,7 @@ function Te(e, t) {
 }
 function Be(e, t, n, r) {
   n = n || new Float32Array(4);
-  if (r || void 0 === r) {
+  if (r || undefined === r) {
     n[0] = e[0] * t;
     n[1] = e[1] * t;
     n[2] = e[2] * t;
@@ -1075,7 +1075,7 @@ function Ie(e, t, n, r) {
   (n = n || new Float32Array(4))[0] = (e >> 16 & 255) / 255;
   n[1] = (e >> 8 & 255) / 255;
   n[2] = (255 & e) / 255;
-  if (r || void 0 === r) {
+  if (r || undefined === r) {
     n[0] *= t;
     n[1] *= t;
     n[2] *= t;
@@ -1084,7 +1084,7 @@ function Ie(e, t, n, r) {
   return n;
 }
 function Fe(e, t) {
-  if (void 0 === t) {
+  if (undefined === t) {
     t = null;
   }
   var n = 6 * e;
@@ -1182,7 +1182,7 @@ function Ge() {
 }
 var ze = {};
 function Qe(e, t, n) {
-  if (void 0 === n) {
+  if (undefined === n) {
     n = 3;
   }
   if (!ze[t]) {
@@ -1200,7 +1200,7 @@ function Qe(e, t, n) {
         console.warn(r);
       }
     }
-    ze[t] = !0;
+    ze[t] = true;
   }
 }
 var We = {};
@@ -1242,8 +1242,8 @@ var $e = function () {
     set: function (e) {
       this.canvas.width = e;
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(e.prototype, "height", {
     get: function () {
@@ -1252,8 +1252,8 @@ var $e = function () {
     set: function (e) {
       this.canvas.height = e;
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   return e;
 }();
@@ -1308,16 +1308,16 @@ function tt(e) {
   var t = et.exec(e);
   if (t) {
     return {
-      mediaType: t[1] ? t[1].toLowerCase() : void 0,
-      subType: t[2] ? t[2].toLowerCase() : void 0,
-      charset: t[3] ? t[3].toLowerCase() : void 0,
-      encoding: t[4] ? t[4].toLowerCase() : void 0,
+      mediaType: t[1] ? t[1].toLowerCase() : undefined,
+      subType: t[2] ? t[2].toLowerCase() : undefined,
+      charset: t[3] ? t[3].toLowerCase() : undefined,
+      encoding: t[4] ? t[4].toLowerCase() : undefined,
       data: t[5]
     };
   }
 }
 function nt(e, t) {
-  if (void 0 === t) {
+  if (undefined === t) {
     t = self.location;
   }
   if (0 === e.indexOf("data:")) {
@@ -1334,7 +1334,7 @@ function nt(e, t) {
 }
 function rt(e, t) {
   var n = fe.RETINA_PREFIX.exec(e);
-  return n ? parseFloat(n[1]) : void 0 !== t ? t : 1;
+  return n ? parseFloat(n[1]) : undefined !== t ? t : 1;
 }
 var it;
 var ot = 2 * Math.PI;
@@ -1349,16 +1349,16 @@ var st = Math.PI / 180;
 }(it || (it = {}));
 var ct = function () {
   function e(e, t, n, r) {
-    if (void 0 === e) {
+    if (undefined === e) {
       e = 0;
     }
-    if (void 0 === t) {
+    if (undefined === t) {
       t = 0;
     }
-    if (void 0 === n) {
+    if (undefined === n) {
       n = 0;
     }
-    if (void 0 === r) {
+    if (undefined === r) {
       r = 0;
     }
     this.x = Number(e);
@@ -1371,36 +1371,36 @@ var ct = function () {
     get: function () {
       return this.x;
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(e.prototype, "right", {
     get: function () {
       return this.x + this.width;
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(e.prototype, "top", {
     get: function () {
       return this.y;
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(e.prototype, "bottom", {
     get: function () {
       return this.y + this.height;
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(e, "EMPTY", {
     get: function () {
       return new e(0, 0, 0, 0);
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   e.prototype.clone = function () {
     return new e(this.x, this.y, this.width, this.height);
@@ -1423,10 +1423,10 @@ var ct = function () {
     return !(this.width <= 0 || this.height <= 0) && e >= this.x && e < this.x + this.width && t >= this.y && t < this.y + this.height;
   };
   e.prototype.pad = function (e, t) {
-    if (void 0 === e) {
+    if (undefined === e) {
       e = 0;
     }
-    if (void 0 === t) {
+    if (undefined === t) {
       t = e;
     }
     this.x -= e;
@@ -1447,10 +1447,10 @@ var ct = function () {
     return this;
   };
   e.prototype.ceil = function (e, t) {
-    if (void 0 === e) {
+    if (undefined === e) {
       e = 1;
     }
-    if (void 0 === t) {
+    if (undefined === t) {
       t = .001;
     }
     var n = Math.ceil((this.x + this.width - t) * e) / e;
@@ -1479,13 +1479,13 @@ var ct = function () {
 }();
 var ut = function () {
   function e(e, t, n) {
-    if (void 0 === e) {
+    if (undefined === e) {
       e = 0;
     }
-    if (void 0 === t) {
+    if (undefined === t) {
       t = 0;
     }
-    if (void 0 === n) {
+    if (undefined === n) {
       n = 0;
     }
     this.x = e;
@@ -1498,7 +1498,7 @@ var ut = function () {
   };
   e.prototype.contains = function (e, t) {
     if (this.radius <= 0) {
-      return !1;
+      return false;
     }
     var n = this.radius * this.radius;
     var r = this.x - e;
@@ -1515,16 +1515,16 @@ var ut = function () {
 }();
 var lt = function () {
   function e(e, t, n, r) {
-    if (void 0 === e) {
+    if (undefined === e) {
       e = 0;
     }
-    if (void 0 === t) {
+    if (undefined === t) {
       t = 0;
     }
-    if (void 0 === n) {
+    if (undefined === n) {
       n = 0;
     }
-    if (void 0 === r) {
+    if (undefined === r) {
       r = 0;
     }
     this.x = e;
@@ -1538,7 +1538,7 @@ var lt = function () {
   };
   e.prototype.contains = function (e, t) {
     if (this.width <= 0 || this.height <= 0) {
-      return !1;
+      return false;
     }
     var n = (e - this.x) / this.width;
     var r = (t - this.y) / this.height;
@@ -1566,7 +1566,7 @@ var ft = function () {
     }
     this.points = r;
     this.type = it.POLY;
-    this.closeStroke = !0;
+    this.closeStroke = true;
   }
   e.prototype.clone = function () {
     var t = new e(this.points.slice());
@@ -1574,7 +1574,7 @@ var ft = function () {
     return t;
   };
   e.prototype.contains = function (e, t) {
-    for (var n = !1, r = this.points.length / 2, i = 0, o = r - 1; i < r; o = i++) {
+    for (var n = false, r = this.points.length / 2, i = 0, o = r - 1; i < r; o = i++) {
       var a = this.points[2 * i];
       var s = this.points[2 * i + 1];
       var c = this.points[2 * o];
@@ -1594,19 +1594,19 @@ var ft = function () {
 }();
 var dt = function () {
   function e(e, t, n, r, i) {
-    if (void 0 === e) {
+    if (undefined === e) {
       e = 0;
     }
-    if (void 0 === t) {
+    if (undefined === t) {
       t = 0;
     }
-    if (void 0 === n) {
+    if (undefined === n) {
       n = 0;
     }
-    if (void 0 === r) {
+    if (undefined === r) {
       r = 0;
     }
-    if (void 0 === i) {
+    if (undefined === i) {
       i = 20;
     }
     this.x = e;
@@ -1621,29 +1621,29 @@ var dt = function () {
   };
   e.prototype.contains = function (e, t) {
     if (this.width <= 0 || this.height <= 0) {
-      return !1;
+      return false;
     }
     if (e >= this.x && e <= this.x + this.width && t >= this.y && t <= this.y + this.height) {
       if (t >= this.y + this.radius && t <= this.y + this.height - this.radius || e >= this.x + this.radius && e <= this.x + this.width - this.radius) {
-        return !0;
+        return true;
       }
       var n = e - (this.x + this.radius);
       var r = t - (this.y + this.radius);
       var i = this.radius * this.radius;
       if (n * n + r * r <= i) {
-        return !0;
+        return true;
       }
       if ((n = e - (this.x + this.width - this.radius)) * n + r * r <= i) {
-        return !0;
+        return true;
       }
       if (n * n + (r = t - (this.y + this.height - this.radius)) * r <= i) {
-        return !0;
+        return true;
       }
       if ((n = e - (this.x + this.radius)) * n + r * r <= i) {
-        return !0;
+        return true;
       }
     }
-    return !1;
+    return false;
   };
   e.prototype.toString = function () {
     return "[@pixi/math:RoundedRectangle x=" + this.x + " y=" + this.y + "width=" + this.width + " height=" + this.height + " radius=" + this.radius + "]";
@@ -1652,10 +1652,10 @@ var dt = function () {
 }();
 var ht = function () {
   function e(e, t) {
-    if (void 0 === e) {
+    if (undefined === e) {
       e = 0;
     }
-    if (void 0 === t) {
+    if (undefined === t) {
       t = 0;
     }
     this.x = 0;
@@ -1678,10 +1678,10 @@ var ht = function () {
     return e.x === this.x && e.y === this.y;
   };
   e.prototype.set = function (e, t) {
-    if (void 0 === e) {
+    if (undefined === e) {
       e = 0;
     }
-    if (void 0 === t) {
+    if (undefined === t) {
       t = e;
     }
     this.x = e;
@@ -1695,10 +1695,10 @@ var ht = function () {
 }();
 var pt = function () {
   function e(e, t, n, r) {
-    if (void 0 === n) {
+    if (undefined === n) {
       n = 0;
     }
-    if (void 0 === r) {
+    if (undefined === r) {
       r = 0;
     }
     this._x = n;
@@ -1707,19 +1707,19 @@ var pt = function () {
     this.scope = t;
   }
   e.prototype.clone = function (t, n) {
-    if (void 0 === t) {
+    if (undefined === t) {
       t = this.cb;
     }
-    if (void 0 === n) {
+    if (undefined === n) {
       n = this.scope;
     }
     return new e(t, n, this._x, this._y);
   };
   e.prototype.set = function (e, t) {
-    if (void 0 === e) {
+    if (undefined === e) {
       e = 0;
     }
-    if (void 0 === t) {
+    if (undefined === t) {
       t = e;
     }
     if (!(this._x === e && this._y === t)) {
@@ -1757,8 +1757,8 @@ var pt = function () {
         this.cb.call(this.scope);
       }
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(e.prototype, "y", {
     get: function () {
@@ -1770,29 +1770,29 @@ var pt = function () {
         this.cb.call(this.scope);
       }
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   return e;
 }();
 var _t = function () {
   function e(e, t, n, r, i, o) {
-    if (void 0 === e) {
+    if (undefined === e) {
       e = 1;
     }
-    if (void 0 === t) {
+    if (undefined === t) {
       t = 0;
     }
-    if (void 0 === n) {
+    if (undefined === n) {
       n = 0;
     }
-    if (void 0 === r) {
+    if (undefined === r) {
       r = 1;
     }
-    if (void 0 === i) {
+    if (undefined === i) {
       i = 0;
     }
-    if (void 0 === o) {
+    if (undefined === o) {
       o = 0;
     }
     this.array = null;
@@ -2011,15 +2011,15 @@ var _t = function () {
     get: function () {
       return new e();
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(e, "TEMP_MATRIX", {
     get: function () {
       return new e();
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   return e;
 }();
@@ -2094,10 +2094,10 @@ var xt = {
     return 2 * Math.abs(e) <= Math.abs(t) ? t >= 0 ? xt.S : xt.N : 2 * Math.abs(t) <= Math.abs(e) ? e > 0 ? xt.E : xt.W : t > 0 ? e > 0 ? xt.SE : xt.SW : e > 0 ? xt.NE : xt.NW;
   },
   matrixAppendRotationInv: function (e, t, n, r) {
-    if (void 0 === n) {
+    if (undefined === n) {
       n = 0;
     }
-    if (void 0 === r) {
+    if (undefined === r) {
       r = 0;
     }
     var i = bt[xt.inv(t)];
@@ -2189,8 +2189,8 @@ var Ct = function () {
         this.updateSkew();
       }
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   e.IDENTITY = new e();
   return e;
@@ -2205,25 +2205,25 @@ fe.TARGET_FPMS = .06;
 })(Et || (Et = {}));
 var Ot = function () {
   function e(e, t, n, r) {
-    if (void 0 === t) {
+    if (undefined === t) {
       t = null;
     }
-    if (void 0 === n) {
+    if (undefined === n) {
       n = 0;
     }
-    if (void 0 === r) {
-      r = !1;
+    if (undefined === r) {
+      r = false;
     }
     this.next = null;
     this.previous = null;
-    this._destroyed = !1;
+    this._destroyed = false;
     this.fn = e;
     this.context = t;
     this.priority = n;
     this.once = r;
   }
   e.prototype.match = function (e, t) {
-    if (void 0 === t) {
+    if (undefined === t) {
       t = null;
     }
     return this.fn === e && this.context === t;
@@ -2238,7 +2238,7 @@ var Ot = function () {
     }
     var t = this.next;
     if (this.once) {
-      this.destroy(!0);
+      this.destroy(true);
     }
     if (this._destroyed) {
       this.next = null;
@@ -2254,10 +2254,10 @@ var Ot = function () {
     e.next = this;
   };
   e.prototype.destroy = function (e) {
-    if (void 0 === e) {
-      e = !1;
+    if (undefined === e) {
+      e = false;
     }
-    this._destroyed = !0;
+    this._destroyed = true;
     this.fn = null;
     this.context = null;
     if (this.previous) {
@@ -2276,15 +2276,15 @@ var Ot = function () {
 var kt = function () {
   function e() {
     var e = this;
-    this.autoStart = !1;
+    this.autoStart = false;
     this.deltaTime = 1;
     this.lastTime = -1;
     this.speed = 1;
-    this.started = !1;
+    this.started = false;
     this._requestId = null;
     this._maxElapsedMS = 100;
     this._minElapsedMS = 0;
-    this._protected = !1;
+    this._protected = false;
     this._lastFrame = -1;
     this._head = new Ot(null, null, 1 / 0);
     this.deltaMS = 1 / fe.TARGET_FPMS;
@@ -2322,16 +2322,16 @@ var kt = function () {
     }
   };
   e.prototype.add = function (e, t, n) {
-    if (void 0 === n) {
+    if (undefined === n) {
       n = Et.NORMAL;
     }
     return this._addListener(new Ot(e, t, n));
   };
   e.prototype.addOnce = function (e, t, n) {
-    if (void 0 === n) {
+    if (undefined === n) {
       n = Et.NORMAL;
     }
-    return this._addListener(new Ot(e, t, n, !0));
+    return this._addListener(new Ot(e, t, n, true));
   };
   e.prototype._addListener = function (e) {
     var t = this._head.next;
@@ -2373,18 +2373,18 @@ var kt = function () {
       }
       return e;
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   e.prototype.start = function () {
     if (!this.started) {
-      this.started = !0;
+      this.started = true;
       this._requestIfNeeded();
     }
   };
   e.prototype.stop = function () {
     if (this.started) {
-      this.started = !1;
+      this.started = false;
       this._cancelIfNeeded();
     }
   };
@@ -2392,7 +2392,7 @@ var kt = function () {
     if (!this._protected) {
       this.stop();
       for (var e = this._head.next; e;) {
-        e = e.destroy(!0);
+        e = e.destroy(true);
       }
       this._head.destroy();
       this._head = null;
@@ -2400,7 +2400,7 @@ var kt = function () {
   };
   e.prototype.update = function (e) {
     var t;
-    if (void 0 === e) {
+    if (undefined === e) {
       e = performance.now();
     }
     if (e > this.lastTime) {
@@ -2432,8 +2432,8 @@ var kt = function () {
     get: function () {
       return 1e3 / this.elapsedMS;
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(e.prototype, "minFPS", {
     get: function () {
@@ -2444,8 +2444,8 @@ var kt = function () {
       var n = Math.min(Math.max(0, t) / 1e3, fe.TARGET_FPMS);
       this._maxElapsedMS = 1 / n;
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(e.prototype, "maxFPS", {
     get: function () {
@@ -2459,32 +2459,32 @@ var kt = function () {
         this._minElapsedMS = 1 / (t / 1e3);
       }
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(e, "shared", {
     get: function () {
       if (!e._shared) {
         var t = e._shared = new e();
-        t.autoStart = !0;
-        t._protected = !0;
+        t.autoStart = true;
+        t._protected = true;
       }
       return e._shared;
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(e, "system", {
     get: function () {
       if (!e._system) {
         var t = e._system = new e();
-        t.autoStart = !0;
-        t._protected = !0;
+        t.autoStart = true;
+        t._protected = true;
       }
       return e._system;
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   return e;
 }();
@@ -2493,8 +2493,8 @@ var St = function () {
   e.init = function (e) {
     var t = this;
     e = Object.assign({
-      autoStart: !0,
-      sharedTicker: !1
+      autoStart: true,
+      sharedTicker: false
     }, e);
     Object.defineProperty(this, "ticker", {
       set: function (e) {
@@ -2531,7 +2531,7 @@ var St = function () {
   };
   return e;
 }();
-fe.SORTABLE_CHILDREN = !1;
+fe.SORTABLE_CHILDREN = false;
 var Tt = function () {
   function e() {
     this.minX = 1 / 0;
@@ -2656,10 +2656,10 @@ var Tt = function () {
     this.addVerticesMatrix(e.worldTransform, t, n, r);
   };
   e.prototype.addVerticesMatrix = function (e, t, n, r, i, o) {
-    if (void 0 === i) {
+    if (undefined === i) {
       i = 0;
     }
-    if (void 0 === o) {
+    if (undefined === o) {
       o = i;
     }
     for (var a = e.a, s = e.b, c = e.c, u = e.d, l = e.tx, f = e.ty, d = this.minX, h = this.minY, p = this.maxX, _ = this.maxY, A = n; A < r; A += 2) {
@@ -2723,10 +2723,10 @@ var Tt = function () {
     }
   };
   e.prototype.pad = function (e, t) {
-    if (void 0 === e) {
+    if (undefined === e) {
       e = 0;
     }
-    if (void 0 === t) {
+    if (undefined === t) {
       t = e;
     }
     if (!this.isEmpty()) {
@@ -2772,8 +2772,8 @@ var It = function (e) {
     t.tempDisplayObjectParent = null;
     t.transform = new Ct();
     t.alpha = 1;
-    t.visible = !0;
-    t.renderable = !0;
+    t.visible = true;
+    t.renderable = true;
     t.parent = null;
     t.worldAlpha = 1;
     t._lastSortedIndex = 0;
@@ -2787,9 +2787,9 @@ var It = function (e) {
     t._boundsRect = null;
     t._localBoundsRect = null;
     t._mask = null;
-    t._destroyed = !1;
-    t.isSprite = !1;
-    t.isMask = !1;
+    t._destroyed = false;
+    t.isSprite = false;
+    t.isMask = false;
     return t;
   }
   Dt(t, e);
@@ -2852,7 +2852,7 @@ var It = function (e) {
     var r = this._bounds;
     var i = this._boundsID;
     this._bounds = this._localBounds;
-    var o = this.getBounds(!1, e);
+    var o = this.getBounds(false, e);
     this.parent = n;
     this.transform = t;
     this._bounds = r;
@@ -2860,8 +2860,8 @@ var It = function (e) {
     return o;
   };
   t.prototype.toGlobal = function (e, t, n) {
-    if (void 0 === n) {
-      n = !1;
+    if (undefined === n) {
+      n = false;
     }
     if (!n) {
       this._recursivePostUpdateTransform();
@@ -2899,31 +2899,31 @@ var It = function (e) {
     return e;
   };
   t.prototype.setTransform = function (e, t, n, r, i, o, a, s, c) {
-    if (void 0 === e) {
+    if (undefined === e) {
       e = 0;
     }
-    if (void 0 === t) {
+    if (undefined === t) {
       t = 0;
     }
-    if (void 0 === n) {
+    if (undefined === n) {
       n = 1;
     }
-    if (void 0 === r) {
+    if (undefined === r) {
       r = 1;
     }
-    if (void 0 === i) {
+    if (undefined === i) {
       i = 0;
     }
-    if (void 0 === o) {
+    if (undefined === o) {
       o = 0;
     }
-    if (void 0 === a) {
+    if (undefined === a) {
       a = 0;
     }
-    if (void 0 === s) {
+    if (undefined === s) {
       s = 0;
     }
-    if (void 0 === c) {
+    if (undefined === c) {
       c = 0;
     }
     this.position.x = e;
@@ -2949,9 +2949,9 @@ var It = function (e) {
     this.filters = null;
     this.filterArea = null;
     this.hitArea = null;
-    this.interactive = !1;
-    this.interactiveChildren = !1;
-    this._destroyed = !0;
+    this.interactive = false;
+    this.interactiveChildren = false;
+    this._destroyed = true;
   };
   Object.defineProperty(t.prototype, "_tempDisplayObjectParent", {
     get: function () {
@@ -2960,8 +2960,8 @@ var It = function (e) {
       }
       return this.tempDisplayObjectParent;
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   t.prototype.enableTempParent = function () {
     var e = this.parent;
@@ -2978,8 +2978,8 @@ var It = function (e) {
     set: function (e) {
       this.transform.position.x = e;
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(t.prototype, "y", {
     get: function () {
@@ -2988,22 +2988,22 @@ var It = function (e) {
     set: function (e) {
       this.transform.position.y = e;
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(t.prototype, "worldTransform", {
     get: function () {
       return this.transform.worldTransform;
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(t.prototype, "localTransform", {
     get: function () {
       return this.transform.localTransform;
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(t.prototype, "position", {
     get: function () {
@@ -3012,8 +3012,8 @@ var It = function (e) {
     set: function (e) {
       this.transform.position.copyFrom(e);
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(t.prototype, "scale", {
     get: function () {
@@ -3022,8 +3022,8 @@ var It = function (e) {
     set: function (e) {
       this.transform.scale.copyFrom(e);
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(t.prototype, "pivot", {
     get: function () {
@@ -3032,8 +3032,8 @@ var It = function (e) {
     set: function (e) {
       this.transform.pivot.copyFrom(e);
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(t.prototype, "skew", {
     get: function () {
@@ -3042,8 +3042,8 @@ var It = function (e) {
     set: function (e) {
       this.transform.skew.copyFrom(e);
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(t.prototype, "rotation", {
     get: function () {
@@ -3052,8 +3052,8 @@ var It = function (e) {
     set: function (e) {
       this.transform.rotation = e;
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(t.prototype, "angle", {
     get: function () {
@@ -3062,8 +3062,8 @@ var It = function (e) {
     set: function (e) {
       this.transform.rotation = e * st;
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(t.prototype, "zIndex", {
     get: function () {
@@ -3072,25 +3072,25 @@ var It = function (e) {
     set: function (e) {
       this._zIndex = e;
       if (this.parent) {
-        this.parent.sortDirty = !0;
+        this.parent.sortDirty = true;
       }
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(t.prototype, "worldVisible", {
     get: function () {
       var e = this;
       do {
         if (!e.visible) {
-          return !1;
+          return false;
         }
         e = e.parent;
       } while (e);
-      return !0;
+      return true;
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(t.prototype, "mask", {
     get: function () {
@@ -3099,17 +3099,17 @@ var It = function (e) {
     set: function (e) {
       var t;
       if (this._mask) {
-        (t = this._mask.maskObject || this._mask).renderable = !0;
-        t.isMask = !1;
+        (t = this._mask.maskObject || this._mask).renderable = true;
+        t.isMask = false;
       }
       this._mask = e;
       if (this._mask) {
-        (t = this._mask.maskObject || this._mask).renderable = !1;
-        t.isMask = !0;
+        (t = this._mask.maskObject || this._mask).renderable = false;
+        t.isMask = true;
       }
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   return t;
 }(he.a);
@@ -3131,7 +3131,7 @@ var Pt = function (e) {
     var t = e.call(this) || this;
     t.children = [];
     t.sortableChildren = fe.SORTABLE_CHILDREN;
-    t.sortDirty = !1;
+    t.sortDirty = false;
     return t;
   }
   Dt(t, e);
@@ -3150,7 +3150,7 @@ var Pt = function (e) {
         i.parent.removeChild(i);
       }
       i.parent = this;
-      this.sortDirty = !0;
+      this.sortDirty = true;
       i.transform._parentID = -1;
       this.children.push(i);
       this._boundsID++;
@@ -3168,7 +3168,7 @@ var Pt = function (e) {
       e.parent.removeChild(e);
     }
     e.parent = this;
-    this.sortDirty = !0;
+    this.sortDirty = true;
     e.transform._parentID = -1;
     this.children.splice(t, 0, e);
     this._boundsID++;
@@ -3244,10 +3244,10 @@ var Pt = function (e) {
     return t;
   };
   t.prototype.removeChildren = function (e, t) {
-    if (void 0 === e) {
+    if (undefined === e) {
       e = 0;
     }
-    if (void 0 === t) {
+    if (undefined === t) {
       t = this.children.length;
     }
     var n;
@@ -3275,17 +3275,17 @@ var Pt = function (e) {
     throw new RangeError("removeChildren: numeric values are outside the acceptable range.");
   };
   t.prototype.sortChildren = function () {
-    for (var e = !1, t = 0, n = this.children.length; t < n; ++t) {
+    for (var e = false, t = 0, n = this.children.length; t < n; ++t) {
       var r = this.children[t];
       r._lastSortedIndex = t;
       if (!(e || 0 === r.zIndex)) {
-        e = !0;
+        e = true;
       }
     }
     if (e && this.children.length > 1) {
       this.children.sort(Rt);
     }
-    this.sortDirty = !1;
+    this.sortDirty = false;
   };
   t.prototype.updateTransform = function () {
     if (this.sortableChildren && this.sortDirty) {
@@ -3322,8 +3322,8 @@ var Pt = function (e) {
     this._bounds.updateID = this._boundsID;
   };
   t.prototype.getLocalBounds = function (t, n) {
-    if (void 0 === n) {
-      n = !1;
+    if (undefined === n) {
+      n = false;
     }
     var r = e.prototype.getLocalBounds.call(this, t);
     if (!n) {
@@ -3386,7 +3386,7 @@ var Pt = function (e) {
   t.prototype._render = function (e) {};
   t.prototype.destroy = function (t) {
     e.prototype.destroy.call(this);
-    this.sortDirty = !1;
+    this.sortDirty = false;
     var n = "boolean" === typeof t ? t : t && t.children;
     var r = this.removeChildren(0, this.children.length);
     if (n) {
@@ -3404,8 +3404,8 @@ var Pt = function (e) {
       this.scale.x = 0 !== t ? e / t : 1;
       this._width = e;
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(t.prototype, "height", {
     get: function () {
@@ -3416,8 +3416,8 @@ var Pt = function (e) {
       this.scale.y = 0 !== t ? e / t : 1;
       this._height = e;
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   return t;
 }(It);
@@ -3432,7 +3432,7 @@ var Nt = function () {
     this.target = null;
     this.originalEvent = null;
     this.identifier = null;
-    this.isPrimary = !1;
+    this.isPrimary = false;
     this.button = 0;
     this.buttons = 0;
     this.width = 0;
@@ -3449,15 +3449,15 @@ var Nt = function () {
     get: function () {
       return this.identifier;
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   e.prototype.getLocalPosition = function (e, t, n) {
     return e.worldTransform.applyInverse(n || this.global, t);
   };
   e.prototype.copyEvent = function (e) {
     if ("isPrimary" in e && e.isPrimary) {
-      this.isPrimary = !0;
+      this.isPrimary = true;
     }
     this.button = "button" in e && e.button;
     var t = "buttons" in e && e.buttons;
@@ -3473,7 +3473,7 @@ var Nt = function () {
     this.tangentialPressure = "tangentialPressure" in e && e.tangentialPressure || 0;
   };
   e.prototype.reset = function () {
-    this.isPrimary = !1;
+    this.isPrimary = false;
   };
   return e;
 }();
@@ -3490,23 +3490,23 @@ var Mt = function (e, t) {
 };
 var jt = function () {
   function e() {
-    this.stopped = !1;
+    this.stopped = false;
     this.stopsPropagatingAt = null;
-    this.stopPropagationHint = !1;
+    this.stopPropagationHint = false;
     this.target = null;
     this.currentTarget = null;
     this.type = null;
     this.data = null;
   }
   e.prototype.stopPropagation = function () {
-    this.stopped = !0;
-    this.stopPropagationHint = !0;
+    this.stopped = true;
+    this.stopPropagationHint = true;
     this.stopsPropagatingAt = this.currentTarget;
   };
   e.prototype.reset = function () {
-    this.stopped = !1;
+    this.stopped = false;
     this.stopsPropagatingAt = null;
-    this.stopPropagationHint = !1;
+    this.stopPropagationHint = false;
     this.currentTarget = null;
     this.target = null;
   };
@@ -3524,8 +3524,8 @@ var Lt = function () {
     get: function () {
       return this._pointerId;
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(e.prototype, "flags", {
     get: function () {
@@ -3534,15 +3534,15 @@ var Lt = function () {
     set: function (e) {
       this._flags = e;
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(e.prototype, "none", {
     get: function () {
       return this._flags === e.FLAGS.NONE;
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(e.prototype, "over", {
     get: function () {
@@ -3551,8 +3551,8 @@ var Lt = function () {
     set: function (t) {
       this._doSet(e.FLAGS.OVER, t);
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(e.prototype, "rightDown", {
     get: function () {
@@ -3561,8 +3561,8 @@ var Lt = function () {
     set: function (t) {
       this._doSet(e.FLAGS.RIGHT_DOWN, t);
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(e.prototype, "leftDown", {
     get: function () {
@@ -3571,8 +3571,8 @@ var Lt = function () {
     set: function (t) {
       this._doSet(e.FLAGS.LEFT_DOWN, t);
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   e.FLAGS = Object.freeze({
     NONE: 0,
@@ -3588,27 +3588,27 @@ var Ut = function () {
   }
   e.prototype.recursiveFindHit = function (e, t, n, r, i) {
     if (!t || !t.visible) {
-      return !1;
+      return false;
     }
     var o = e.data.global;
-    var a = !1;
+    var a = false;
     var s = i = t.interactive || i;
-    var c = !0;
+    var c = true;
     if (t.hitArea) {
       if (r) {
         t.worldTransform.applyInverse(o, this._tempPoint);
         if (t.hitArea.contains(this._tempPoint.x, this._tempPoint.y)) {
-          a = !0;
+          a = true;
         } else {
-          r = !1;
-          c = !1;
+          r = false;
+          c = false;
         }
       }
-      s = !1;
+      s = false;
     } else {
       if (t._mask && r) {
         if (!(t._mask.containsPoint && t._mask.containsPoint(o))) {
-          r = !1;
+          r = false;
         }
       }
     }
@@ -3620,19 +3620,19 @@ var Ut = function () {
           if (!f.parent) {
             continue;
           }
-          s = !1;
+          s = false;
           if (d) {
             if (e.target) {
-              r = !1;
+              r = false;
             }
-            a = !0;
+            a = true;
           }
         }
       }
     }
     if (i) {
       if (r && !e.target && !t.hitArea && t.containsPoint && t.containsPoint(o)) {
-        a = !0;
+        a = true;
       }
       if (t.interactive) {
         if (a && !e.target) {
@@ -3646,13 +3646,13 @@ var Ut = function () {
     return a;
   };
   e.prototype.findHit = function (e, t, n, r) {
-    this.recursiveFindHit(e, t, n, r, !1);
+    this.recursiveFindHit(e, t, n, r, false);
   };
   return e;
 }();
 var Ht = {
-  interactive: !1,
-  interactiveChildren: !0,
+  interactive: false,
+  interactiveChildren: true,
   hitArea: null,
   get buttonMode() {
     return "pointer" === this.cursor;
@@ -3668,12 +3668,12 @@ var Ht = {
   },
   cursor: null,
   get trackedPointers() {
-    if (void 0 === this._trackedPointers) {
+    if (undefined === this._trackedPointers) {
       this._trackedPointers = {};
     }
     return this._trackedPointers;
   },
-  _trackedPointers: void 0
+  _trackedPointers: undefined
 };
 It.mixin(Ht);
 var Vt = {
@@ -3687,7 +3687,7 @@ var Gt = function (e) {
     var r = e.call(this) || this;
     n = n || {};
     r.renderer = t;
-    r.autoPreventDefault = void 0 === n.autoPreventDefault || n.autoPreventDefault;
+    r.autoPreventDefault = undefined === n.autoPreventDefault || n.autoPreventDefault;
     r.interactionFrequency = n.interactionFrequency || 10;
     r.mouse = new Nt();
     r.mouse.identifier = 1;
@@ -3697,9 +3697,9 @@ var Gt = function (e) {
     r.interactionDataPool = [];
     r.eventData = new jt();
     r.interactionDOMElement = null;
-    r.moveWhenInside = !1;
-    r.eventsAdded = !1;
-    r.tickerAdded = !1;
+    r.moveWhenInside = false;
+    r.eventsAdded = false;
+    r.tickerAdded = false;
     r.mouseOverRenderer = !("PointerEvent" in self);
     r.supportsTouchEvents = "ontouchstart" in self;
     r.supportsPointerEvents = !!self.PointerEvent;
@@ -3724,7 +3724,7 @@ var Gt = function (e) {
     r.delayedEvents = [];
     r.search = new Ut();
     r._tempDisplayObject = new Ft();
-    r._useSystemTicker = void 0 === n.useSystemTicker || n.useSystemTicker;
+    r._useSystemTicker = undefined === n.useSystemTicker || n.useSystemTicker;
     r.setTargetElement(r.renderer.view, r.renderer.resolution);
     return r;
   }
@@ -3747,15 +3747,15 @@ var Gt = function (e) {
         this.removeTickerListener();
       }
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(t.prototype, "lastObjectRendered", {
     get: function () {
       return this.renderer._lastObjectRendered || this._tempDisplayObject;
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   t.prototype.hitTest = function (e, t) {
     Vt.target = null;
@@ -3763,11 +3763,11 @@ var Gt = function (e) {
     if (!t) {
       t = this.lastObjectRendered;
     }
-    this.processInteractive(Vt, t, null, !0);
+    this.processInteractive(Vt, t, null, true);
     return Vt.target;
   };
   t.prototype.setTargetElement = function (e, t) {
-    if (void 0 === t) {
+    if (undefined === t) {
       t = 1;
     }
     this.removeTickerListener();
@@ -3780,13 +3780,13 @@ var Gt = function (e) {
   t.prototype.addTickerListener = function () {
     if (!this.tickerAdded && this.interactionDOMElement && this._useSystemTicker) {
       kt.system.add(this.tickerUpdate, this, Et.INTERACTION);
-      this.tickerAdded = !0;
+      this.tickerAdded = true;
     }
   };
   t.prototype.removeTickerListener = function () {
     if (this.tickerAdded) {
       kt.system.remove(this.tickerUpdate, this);
-      this.tickerAdded = !1;
+      this.tickerAdded = false;
     }
   };
   t.prototype.addEvents = function () {
@@ -3801,26 +3801,26 @@ var Gt = function (e) {
         }
       }
       if (this.supportsPointerEvents) {
-        self.document.addEventListener("pointermove", this.onPointerMove, !0);
-        this.interactionDOMElement.addEventListener("pointerdown", this.onPointerDown, !0);
-        this.interactionDOMElement.addEventListener("pointerleave", this.onPointerOut, !0);
-        this.interactionDOMElement.addEventListener("pointerover", this.onPointerOver, !0);
-        self.addEventListener("pointercancel", this.onPointerCancel, !0);
-        self.addEventListener("pointerup", this.onPointerUp, !0);
+        self.document.addEventListener("pointermove", this.onPointerMove, true);
+        this.interactionDOMElement.addEventListener("pointerdown", this.onPointerDown, true);
+        this.interactionDOMElement.addEventListener("pointerleave", this.onPointerOut, true);
+        this.interactionDOMElement.addEventListener("pointerover", this.onPointerOver, true);
+        self.addEventListener("pointercancel", this.onPointerCancel, true);
+        self.addEventListener("pointerup", this.onPointerUp, true);
       } else {
-        self.document.addEventListener("mousemove", this.onPointerMove, !0);
-        this.interactionDOMElement.addEventListener("mousedown", this.onPointerDown, !0);
-        this.interactionDOMElement.addEventListener("mouseout", this.onPointerOut, !0);
-        this.interactionDOMElement.addEventListener("mouseover", this.onPointerOver, !0);
-        self.addEventListener("mouseup", this.onPointerUp, !0);
+        self.document.addEventListener("mousemove", this.onPointerMove, true);
+        this.interactionDOMElement.addEventListener("mousedown", this.onPointerDown, true);
+        this.interactionDOMElement.addEventListener("mouseout", this.onPointerOut, true);
+        this.interactionDOMElement.addEventListener("mouseover", this.onPointerOver, true);
+        self.addEventListener("mouseup", this.onPointerUp, true);
       }
       if (this.supportsTouchEvents) {
-        this.interactionDOMElement.addEventListener("touchstart", this.onPointerDown, !0);
-        this.interactionDOMElement.addEventListener("touchcancel", this.onPointerCancel, !0);
-        this.interactionDOMElement.addEventListener("touchend", this.onPointerUp, !0);
-        this.interactionDOMElement.addEventListener("touchmove", this.onPointerMove, !0);
+        this.interactionDOMElement.addEventListener("touchstart", this.onPointerDown, true);
+        this.interactionDOMElement.addEventListener("touchcancel", this.onPointerCancel, true);
+        this.interactionDOMElement.addEventListener("touchend", this.onPointerUp, true);
+        this.interactionDOMElement.addEventListener("touchmove", this.onPointerMove, true);
       }
-      this.eventsAdded = !0;
+      this.eventsAdded = true;
     }
   };
   t.prototype.removeEvents = function () {
@@ -3835,27 +3835,27 @@ var Gt = function (e) {
         }
       }
       if (this.supportsPointerEvents) {
-        self.document.removeEventListener("pointermove", this.onPointerMove, !0);
-        this.interactionDOMElement.removeEventListener("pointerdown", this.onPointerDown, !0);
-        this.interactionDOMElement.removeEventListener("pointerleave", this.onPointerOut, !0);
-        this.interactionDOMElement.removeEventListener("pointerover", this.onPointerOver, !0);
-        self.removeEventListener("pointercancel", this.onPointerCancel, !0);
-        self.removeEventListener("pointerup", this.onPointerUp, !0);
+        self.document.removeEventListener("pointermove", this.onPointerMove, true);
+        this.interactionDOMElement.removeEventListener("pointerdown", this.onPointerDown, true);
+        this.interactionDOMElement.removeEventListener("pointerleave", this.onPointerOut, true);
+        this.interactionDOMElement.removeEventListener("pointerover", this.onPointerOver, true);
+        self.removeEventListener("pointercancel", this.onPointerCancel, true);
+        self.removeEventListener("pointerup", this.onPointerUp, true);
       } else {
-        self.document.removeEventListener("mousemove", this.onPointerMove, !0);
-        this.interactionDOMElement.removeEventListener("mousedown", this.onPointerDown, !0);
-        this.interactionDOMElement.removeEventListener("mouseout", this.onPointerOut, !0);
-        this.interactionDOMElement.removeEventListener("mouseover", this.onPointerOver, !0);
-        self.removeEventListener("mouseup", this.onPointerUp, !0);
+        self.document.removeEventListener("mousemove", this.onPointerMove, true);
+        this.interactionDOMElement.removeEventListener("mousedown", this.onPointerDown, true);
+        this.interactionDOMElement.removeEventListener("mouseout", this.onPointerOut, true);
+        this.interactionDOMElement.removeEventListener("mouseover", this.onPointerOver, true);
+        self.removeEventListener("mouseup", this.onPointerUp, true);
       }
       if (this.supportsTouchEvents) {
-        this.interactionDOMElement.removeEventListener("touchstart", this.onPointerDown, !0);
-        this.interactionDOMElement.removeEventListener("touchcancel", this.onPointerCancel, !0);
-        this.interactionDOMElement.removeEventListener("touchend", this.onPointerUp, !0);
-        this.interactionDOMElement.removeEventListener("touchmove", this.onPointerMove, !0);
+        this.interactionDOMElement.removeEventListener("touchstart", this.onPointerDown, true);
+        this.interactionDOMElement.removeEventListener("touchcancel", this.onPointerCancel, true);
+        this.interactionDOMElement.removeEventListener("touchend", this.onPointerUp, true);
+        this.interactionDOMElement.removeEventListener("touchmove", this.onPointerMove, true);
       }
       this.interactionDOMElement = null;
-      this.eventsAdded = !1;
+      this.eventsAdded = false;
     }
   };
   t.prototype.tickerUpdate = function (e) {
@@ -3868,13 +3868,13 @@ var Gt = function (e) {
   t.prototype.update = function () {
     if (this.interactionDOMElement) {
       if (this._didMove) {
-        this._didMove = !1;
+        this._didMove = false;
       } else {
         for (var e in this.cursor = null, this.activeInteractionData) if (this.activeInteractionData.hasOwnProperty(e)) {
           var t = this.activeInteractionData[e];
           if (t.originalEvent && "touch" !== t.pointerType) {
             var n = this.configureInteractionEventForDOMEvent(this.eventData, t.originalEvent, t);
-            this.processInteractive(n, this.lastObjectRendered, this.processPointerOverOut, !0);
+            this.processInteractive(n, this.lastObjectRendered, this.processPointerOverOut, true);
           }
         }
         this.setCursorMode(this.cursor);
@@ -3883,9 +3883,9 @@ var Gt = function (e) {
   };
   t.prototype.setCursorMode = function (e) {
     e = e || "default";
-    var t = !0;
+    var t = true;
     if (self.OffscreenCanvas && this.interactionDOMElement instanceof OffscreenCanvas) {
-      t = !1;
+      t = false;
     }
     if (this.currentCursorMode !== e) {
       this.currentCursorMode = e;
@@ -3947,7 +3947,7 @@ var Gt = function (e) {
     if (!o.length) {
       return i;
     }
-    e.stopPropagationHint = !1;
+    e.stopPropagationHint = false;
     var a = o.length;
     this.delayedEvents = [];
     for (var s = 0; s < a; s++) {
@@ -3956,7 +3956,7 @@ var Gt = function (e) {
       var l = c.eventString;
       var f = c.eventData;
       if (f.stopsPropagatingAt === u) {
-        f.stopPropagationHint = !0;
+        f.stopPropagationHint = true;
       }
       this.dispatchEvent(u, l, f);
     }
@@ -3975,7 +3975,7 @@ var Gt = function (e) {
         var o = this.getInteractionDataForPointerId(i);
         var a = this.configureInteractionEventForDOMEvent(this.eventData, i, o);
         a.data.originalEvent = e;
-        this.processInteractive(a, this.lastObjectRendered, this.processPointerDown, !0);
+        this.processInteractive(a, this.lastObjectRendered, this.processPointerDown, true);
         this.emit("pointerdown", a);
         if ("touch" === i.pointerType) {
           this.emit("touchstart", a);
@@ -3999,9 +3999,9 @@ var Gt = function (e) {
       } else if ("mouse" === r.pointerType || "pen" === r.pointerType) {
         var o = 2 === r.button;
         if (o) {
-          t.trackedPointers[i].rightDown = !0;
+          t.trackedPointers[i].rightDown = true;
         } else {
-          t.trackedPointers[i].leftDown = !0;
+          t.trackedPointers[i].leftDown = true;
         }
         this.dispatchEvent(t, o ? "rightdown" : "mousedown", e);
       }
@@ -4026,13 +4026,13 @@ var Gt = function (e) {
   };
   t.prototype.onPointerCancel = function (e) {
     if (!(this.supportsTouchEvents && "touch" === e.pointerType)) {
-      this.onPointerComplete(e, !0, this.processPointerCancel);
+      this.onPointerComplete(e, true, this.processPointerCancel);
     }
   };
   t.prototype.processPointerCancel = function (e, t) {
     var n = e.data;
     var r = e.data.identifier;
-    if (void 0 !== t.trackedPointers[r]) {
+    if (undefined !== t.trackedPointers[r]) {
       delete t.trackedPointers[r];
       this.dispatchEvent(t, "pointercancel", e);
       if ("touch" === n.pointerType) {
@@ -4042,7 +4042,7 @@ var Gt = function (e) {
   };
   t.prototype.onPointerUp = function (e) {
     if (!(this.supportsTouchEvents && "touch" === e.pointerType)) {
-      this.onPointerComplete(e, !1, this.processPointerUp);
+      this.onPointerComplete(e, false, this.processPointerUp);
     }
   };
   t.prototype.processPointerUp = function (e, t, n) {
@@ -4051,17 +4051,17 @@ var Gt = function (e) {
     var o = t.trackedPointers[i];
     var a = "touch" === r.pointerType;
     var s = "mouse" === r.pointerType || "pen" === r.pointerType;
-    var c = !1;
+    var c = false;
     if (s) {
       var u = 2 === r.button;
       var l = Lt.FLAGS;
       var f = u ? l.RIGHT_DOWN : l.LEFT_DOWN;
-      var d = void 0 !== o && o.flags & f;
+      var d = undefined !== o && o.flags & f;
       if (n) {
         this.dispatchEvent(t, u ? "rightup" : "mouseup", e);
         if (d) {
           this.dispatchEvent(t, u ? "rightclick" : "click", e);
-          c = !0;
+          c = true;
         }
       } else {
         if (d) {
@@ -4070,9 +4070,9 @@ var Gt = function (e) {
       }
       if (o) {
         if (u) {
-          o.rightDown = !1;
+          o.rightDown = false;
         } else {
-          o.leftDown = !1;
+          o.leftDown = false;
         }
       }
     }
@@ -4087,7 +4087,7 @@ var Gt = function (e) {
         }
         if (a) {
           this.dispatchEvent(t, "tap", e);
-          o.over = !1;
+          o.over = false;
         }
       }
     } else {
@@ -4106,7 +4106,7 @@ var Gt = function (e) {
     if (!this.supportsTouchEvents || "touch" !== e.pointerType) {
       var t = this.normalizeToPointerData(e);
       if (!("mouse" !== t[0].pointerType && "pen" !== t[0].pointerType)) {
-        this._didMove = !0;
+        this._didMove = true;
         this.cursor = null;
       }
       for (var n = t.length, r = 0; r < n; r++) {
@@ -4114,7 +4114,7 @@ var Gt = function (e) {
         var o = this.getInteractionDataForPointerId(i);
         var a = this.configureInteractionEventForDOMEvent(this.eventData, i, o);
         a.data.originalEvent = e;
-        this.processInteractive(a, this.lastObjectRendered, this.processPointerMove, !0);
+        this.processInteractive(a, this.lastObjectRendered, this.processPointerMove, true);
         this.emit("pointermove", a);
         if ("touch" === i.pointerType) {
           this.emit("touchmove", a);
@@ -4149,13 +4149,13 @@ var Gt = function (e) {
     if (!this.supportsTouchEvents || "touch" !== e.pointerType) {
       var t = this.normalizeToPointerData(e)[0];
       if ("mouse" === t.pointerType) {
-        this.mouseOverRenderer = !1;
+        this.mouseOverRenderer = false;
         this.setCursorMode(null);
       }
       var n = this.getInteractionDataForPointerId(t);
       var r = this.configureInteractionEventForDOMEvent(this.eventData, t, n);
       r.data.originalEvent = t;
-      this.processInteractive(r, this.lastObjectRendered, this.processPointerOverOut, !1);
+      this.processInteractive(r, this.lastObjectRendered, this.processPointerOverOut, false);
       this.emit("pointerout", r);
       if ("mouse" === t.pointerType || "pen" === t.pointerType) {
         this.emit("mouseout", r);
@@ -4172,10 +4172,10 @@ var Gt = function (e) {
     if (n && !a) {
       a = t.trackedPointers[i] = new Lt(i);
     }
-    if (void 0 !== a) {
+    if (undefined !== a) {
       if (n && this.mouseOverRenderer) {
         if (!a.over) {
-          a.over = !0;
+          a.over = true;
           this.delayDispatchEvent(t, "pointerover", e);
           if (o) {
             this.delayDispatchEvent(t, "mouseover", e);
@@ -4186,7 +4186,7 @@ var Gt = function (e) {
         }
       } else {
         if (a.over) {
-          a.over = !1;
+          a.over = false;
           this.dispatchEvent(t, "pointerout", this.eventData);
           if (o) {
             this.dispatchEvent(t, "mouseout", e);
@@ -4204,7 +4204,7 @@ var Gt = function (e) {
     var r = this.configureInteractionEventForDOMEvent(this.eventData, t, n);
     r.data.originalEvent = t;
     if ("mouse" === t.pointerType) {
-      this.mouseOverRenderer = !0;
+      this.mouseOverRenderer = true;
     }
     this.emit("pointerover", r);
     if (!("mouse" !== t.pointerType && "pen" !== t.pointerType)) {
@@ -4293,7 +4293,7 @@ var Gt = function (e) {
         if ("undefined" === typeof i.layerY) {
           i.layerY = i.offsetY = i.clientY;
         }
-        i.isNormalized = !0;
+        i.isNormalized = true;
         t.push(i);
       }
     } else if (self.MouseEvent && (!(e instanceof MouseEvent) || this.supportsPointerEvents && e instanceof self.PointerEvent)) {
@@ -4301,7 +4301,7 @@ var Gt = function (e) {
     } else {
       var o = e;
       if ("undefined" === typeof o.isPrimary) {
-        o.isPrimary = !0;
+        o.isPrimary = true;
       }
       if ("undefined" === typeof o.width) {
         o.width = 1;
@@ -4330,7 +4330,7 @@ var Gt = function (e) {
       if ("undefined" === typeof o.tangentialPressure) {
         o.tangentialPressure = 0;
       }
-      o.isNormalized = !0;
+      o.isNormalized = true;
       t.push(o);
     }
     return t;
@@ -4419,15 +4419,15 @@ var zt = function () {
     get: function () {
       return 0 === this.items.length;
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(e.prototype, "name", {
     get: function () {
       return this._name;
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   return e;
 }();
@@ -4440,7 +4440,7 @@ Object.defineProperties(zt.prototype, {
   }
 });
 fe.PREFER_ENV = W.any ? K.WEBGL : K.WEBGL2;
-fe.STRICT_TEXTURE_CACHE = !1;
+fe.STRICT_TEXTURE_CACHE = false;
 var Qt = [];
 function Wt(e, t) {
   if (!e) {
@@ -4481,16 +4481,16 @@ function Xt(e, t) {
 }
 var Yt = function () {
   function e(e, t) {
-    if (void 0 === e) {
+    if (undefined === e) {
       e = 0;
     }
-    if (void 0 === t) {
+    if (undefined === t) {
       t = 0;
     }
     this._width = e;
     this._height = t;
-    this.destroyed = !1;
-    this.internal = !1;
+    this.destroyed = false;
+    this.internal = false;
     this.onResize = new zt("setRealSize");
     this.onUpdate = new zt("update");
     this.onError = new zt("onError");
@@ -4519,8 +4519,8 @@ var Yt = function () {
     get: function () {
       return !!this._width && !!this._height;
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   e.prototype.update = function () {
     if (!this.destroyed) {
@@ -4534,23 +4534,23 @@ var Yt = function () {
     get: function () {
       return this._width;
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(e.prototype, "height", {
     get: function () {
       return this._height;
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   e.prototype.style = function (e, t, n) {
-    return !1;
+    return false;
   };
   e.prototype.dispose = function () {};
   e.prototype.destroy = function () {
     if (!this.destroyed) {
-      this.destroyed = !0;
+      this.destroyed = true;
       this.dispose();
       this.onError.removeAll();
       this.onError = null;
@@ -4561,7 +4561,7 @@ var Yt = function () {
     }
   };
   e.test = function (e, t) {
-    return !1;
+    return false;
   };
   return e;
 }();
@@ -4590,7 +4590,7 @@ var qt = function (e) {
       n.height = o;
       r.texImage2D(t.target, 0, n.internalFormat, i, o, 0, t.format, n.type, this.data);
     }
-    return !0;
+    return true;
   };
   t.prototype.dispose = function () {
     this.data = null;
@@ -4607,10 +4607,10 @@ var $t = {
 };
 var Jt = function (e) {
   function t(t, n) {
-    if (void 0 === t) {
+    if (undefined === t) {
       t = null;
     }
-    if (void 0 === n) {
+    if (undefined === n) {
       n = null;
     }
     var r = e.call(this) || this;
@@ -4627,22 +4627,22 @@ var Jt = function (e) {
     var p = n.resolution;
     var _ = n.resourceOptions;
     if (!(!t || t instanceof Yt)) {
-      (t = Wt(t, _)).internal = !0;
+      (t = Wt(t, _)).internal = true;
     }
     r.width = c || 0;
     r.height = u || 0;
     r.resolution = p || fe.RESOLUTION;
-    r.mipmap = void 0 !== o ? o : fe.MIPMAP_TEXTURES;
-    r.anisotropicLevel = void 0 !== a ? a : fe.ANISOTROPIC_LEVEL;
+    r.mipmap = undefined !== o ? o : fe.MIPMAP_TEXTURES;
+    r.anisotropicLevel = undefined !== a ? a : fe.ANISOTROPIC_LEVEL;
     r.wrapMode = l || fe.WRAP_MODE;
-    r.scaleMode = void 0 !== s ? s : fe.SCALE_MODE;
+    r.scaleMode = undefined !== s ? s : fe.SCALE_MODE;
     r.format = f || J.RGBA;
     r.type = d || ee.UNSIGNED_BYTE;
     r.target = h || Z.TEXTURE_2D;
-    r.alphaMode = void 0 !== i ? i : oe.UNPACK;
+    r.alphaMode = undefined !== i ? i : oe.UNPACK;
     r.uid = Ge();
     r.touched = 0;
-    r.isPowerOfTwo = !1;
+    r.isPowerOfTwo = false;
     r._refreshPOT();
     r._glTextures = {};
     r.dirtyId = 0;
@@ -4650,7 +4650,7 @@ var Jt = function (e) {
     r.cacheId = null;
     r.valid = c > 0 && u > 0;
     r.textureCacheIds = [];
-    r.destroyed = !1;
+    r.destroyed = false;
     r.resource = null;
     r._batchEnabled = 0;
     r._batchLocation = 0;
@@ -4663,25 +4663,25 @@ var Jt = function (e) {
     get: function () {
       return Math.ceil(this.width * this.resolution - 1e-4);
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(t.prototype, "realHeight", {
     get: function () {
       return Math.ceil(this.height * this.resolution - 1e-4);
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   t.prototype.setStyle = function (e, t) {
     var n;
-    if (void 0 !== e && e !== this.scaleMode) {
+    if (undefined !== e && e !== this.scaleMode) {
       this.scaleMode = e;
-      n = !0;
+      n = true;
     }
-    if (void 0 !== t && t !== this.mipmap) {
+    if (undefined !== t && t !== this.mipmap) {
       this.mipmap = t;
-      n = !0;
+      n = true;
     }
     if (n) {
       this.dirtyStyleId++;
@@ -4738,7 +4738,7 @@ var Jt = function (e) {
       this.emit("update", this);
     } else {
       if (this.width > 0 && this.height > 0) {
-        this.valid = !0;
+        this.valid = true;
         this.emit("loaded", this);
         this.emit("update", this);
       }
@@ -4763,7 +4763,7 @@ var Jt = function (e) {
     this.dispose();
     t.removeFromCache(this);
     this.textureCacheIds = null;
-    this.destroyed = !0;
+    this.destroyed = true;
   };
   t.prototype.dispose = function () {
     this.emit("dispose", this);
@@ -4772,7 +4772,7 @@ var Jt = function (e) {
     return this;
   };
   t.from = function (e, n, r) {
-    if (void 0 === r) {
+    if (undefined === r) {
       r = fe.STRICT_TEXTURE_CACHE;
     }
     var i = "string" === typeof e;
@@ -4987,7 +4987,7 @@ var en = function (e) {
         }
       }
     }
-    return !0;
+    return true;
   };
   return t;
 }(Zt);
@@ -4998,15 +4998,15 @@ var tn = function (e) {
     var i = r.naturalWidth || r.videoWidth || r.width;
     var o = r.naturalHeight || r.videoHeight || r.height;
     (n = e.call(this, i, o) || this).source = t;
-    n.noSubImage = !1;
+    n.noSubImage = false;
     return n;
   }
   Xt(t, e);
   t.crossOrigin = function (e, t, n) {
-    if (void 0 === n && 0 !== t.indexOf("data:")) {
+    if (undefined === n && 0 !== t.indexOf("data:")) {
       e.crossOrigin = nt(t);
     } else {
-      if (!1 !== n) {
+      if (false !== n) {
         e.crossOrigin = "string" === typeof n ? n : "anonymous";
       }
     }
@@ -5024,7 +5024,7 @@ var tn = function (e) {
     } else {
       i.texSubImage2D(i.TEXTURE_2D, 0, 0, 0, t.format, t.type, r);
     }
-    return !0;
+    return true;
   };
   t.prototype.update = function () {
     if (!this.destroyed) {
@@ -5069,11 +5069,11 @@ var rn = function (e) {
     for (var l = 0; l < t.SIDES; l++) {
       i.items[l].target = Z.TEXTURE_CUBE_MAP_POSITIVE_X + l;
     }
-    i.linkBaseTexture = !1 !== u;
+    i.linkBaseTexture = false !== u;
     if (n) {
       i.initFromArray(n, r);
     }
-    if (!1 !== c) {
+    if (false !== c) {
       i.load();
     }
     return i;
@@ -5084,7 +5084,7 @@ var rn = function (e) {
     t.target = Z.TEXTURE_CUBE_MAP;
   };
   t.prototype.addBaseTextureAt = function (e, t, n) {
-    if (void 0 === n) {
+    if (undefined === n) {
       n = this.linkBaseTexture;
     }
     if (!this.items[t]) {
@@ -5121,7 +5121,7 @@ var rn = function (e) {
         }
       }
     }
-    return !0;
+    return true;
   };
   t.test = function (e) {
     return Array.isArray(e) && e.length === t.SIDES;
@@ -5146,12 +5146,12 @@ var on = function (e) {
     }
     r.url = t.src;
     r._process = null;
-    r.preserveBitmap = !1;
-    r.createBitmap = (void 0 !== n.createBitmap ? n.createBitmap : fe.CREATE_IMAGE_BITMAP) && !!self.createImageBitmap;
+    r.preserveBitmap = false;
+    r.createBitmap = (undefined !== n.createBitmap ? n.createBitmap : fe.CREATE_IMAGE_BITMAP) && !!self.createImageBitmap;
     r.alphaMode = "number" === typeof n.alphaMode ? n.alphaMode : null;
     r.bitmap = null;
     r._load = null;
-    if (!1 !== n.autoLoad) {
+    if (false !== n.autoLoad) {
       r.load();
     }
     return r;
@@ -5160,7 +5160,7 @@ var on = function (e) {
   t.prototype.load = function (e) {
     var t = this;
     if (!this._load) {
-      if (void 0 !== e) {
+      if (undefined !== e) {
         this.createBitmap = e;
       }
       this._load = new Promise(function (e, n) {
@@ -5209,16 +5209,16 @@ var on = function (e) {
       return e.prototype.upload.call(this, t, n, r);
     }
     if (!this.bitmap && (this.process(), !this.bitmap)) {
-      return !1;
+      return false;
     }
     e.prototype.upload.call(this, t, n, r, this.bitmap);
     if (!this.preserveBitmap) {
-      var i = !0;
+      var i = true;
       var o = n._glTextures;
       for (var a in o) {
         var s = o[a];
         if (s !== r && s.dirtyId !== n.dirtyId) {
-          i = !1;
+          i = false;
           break;
         }
       }
@@ -5229,7 +5229,7 @@ var on = function (e) {
         this.bitmap = null;
       }
     }
-    return !0;
+    return true;
   };
   t.prototype.dispose = function () {
     this.source.onload = null;
@@ -5260,7 +5260,7 @@ var an = function (e) {
     r._resolve = null;
     r._crossorigin = n.crossorigin;
     r._load = null;
-    if (!1 !== n.autoLoad) {
+    if (false !== n.autoLoad) {
       r.load();
     }
     return r;
@@ -5369,17 +5369,17 @@ var sn = function (e) {
       }
       n = o;
     }
-    (i = e.call(this, n) || this).noSubImage = !0;
-    i._autoUpdate = !0;
-    i._isConnectedToTicker = !1;
+    (i = e.call(this, n) || this).noSubImage = true;
+    i._autoUpdate = true;
+    i._isConnectedToTicker = false;
     i._updateFPS = r.updateFPS || 0;
     i._msToNextUpdate = 0;
-    i.autoPlay = !1 !== r.autoPlay;
+    i.autoPlay = false !== r.autoPlay;
     i._load = null;
     i._resolve = null;
     i._onCanPlay = i._onCanPlay.bind(i);
     i._onError = i._onError.bind(i);
-    if (!1 !== r.autoLoad) {
+    if (false !== r.autoLoad) {
       i.load();
     }
     return i;
@@ -5402,7 +5402,7 @@ var sn = function (e) {
     }
     var t = this.source;
     if ((t.readyState === t.HAVE_ENOUGH_DATA || t.readyState === t.HAVE_FUTURE_DATA) && t.width && t.height) {
-      t.complete = !0;
+      t.complete = true;
     }
     t.addEventListener("play", this._onPlayStart.bind(this));
     t.addEventListener("pause", this._onPlayStop.bind(this));
@@ -5411,7 +5411,7 @@ var sn = function (e) {
     } else {
       t.addEventListener("canplay", this._onCanPlay);
       t.addEventListener("canplaythrough", this._onCanPlay);
-      t.addEventListener("error", this._onError, !0);
+      t.addEventListener("error", this._onError, true);
     }
     this._load = new Promise(function (n) {
       if (e.valid) {
@@ -5424,12 +5424,12 @@ var sn = function (e) {
     return this._load;
   };
   t.prototype._onError = function (e) {
-    this.source.removeEventListener("error", this._onError, !0);
+    this.source.removeEventListener("error", this._onError, true);
     this.onError.emit(e);
   };
   t.prototype._isSourcePlaying = function () {
     var e = this.source;
-    return e.currentTime > 0 && !1 === e.paused && !1 === e.ended && e.readyState > 2;
+    return e.currentTime > 0 && false === e.paused && false === e.ended && e.readyState > 2;
   };
   t.prototype._isSourceReady = function () {
     var e = this.source;
@@ -5441,13 +5441,13 @@ var sn = function (e) {
     }
     if (this.autoUpdate && !this._isConnectedToTicker) {
       kt.shared.add(this.update, this);
-      this._isConnectedToTicker = !0;
+      this._isConnectedToTicker = true;
     }
   };
   t.prototype._onPlayStop = function () {
     if (this._isConnectedToTicker) {
       kt.shared.remove(this.update, this);
-      this._isConnectedToTicker = !1;
+      this._isConnectedToTicker = false;
     }
   };
   t.prototype._onCanPlay = function () {
@@ -5474,7 +5474,7 @@ var sn = function (e) {
     }
     var t = this.source;
     if (t) {
-      t.removeEventListener("error", this._onError, !0);
+      t.removeEventListener("error", this._onError, true);
       t.pause();
       t.src = "";
       t.load();
@@ -5490,17 +5490,17 @@ var sn = function (e) {
         this._autoUpdate = e;
         if (!this._autoUpdate && this._isConnectedToTicker) {
           kt.shared.remove(this.update, this);
-          this._isConnectedToTicker = !1;
+          this._isConnectedToTicker = false;
         } else {
           if (this._autoUpdate && !this._isConnectedToTicker && this._isSourcePlaying()) {
             kt.shared.add(this.update, this);
-            this._isConnectedToTicker = !0;
+            this._isConnectedToTicker = true;
           }
         }
       }
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(t.prototype, "updateFPS", {
     get: function () {
@@ -5511,8 +5511,8 @@ var sn = function (e) {
         this._updateFPS = e;
       }
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   t.test = function (e, n) {
     return self.HTMLVideoElement && e instanceof HTMLVideoElement || t.TYPES.indexOf(n) > -1;
@@ -5578,7 +5578,7 @@ var fn = function (e) {
       n.height = o;
       r.texImage2D(t.target, 0, 1 === e.context.webGLVersion ? r.DEPTH_COMPONENT : r.DEPTH_COMPONENT16, i, o, 0, t.format, t.type, this.data);
     }
-    return !0;
+    return true;
   };
   return t;
 }(qt);
@@ -5586,8 +5586,8 @@ var dn = function () {
   function e(e, t) {
     this.width = Math.ceil(e || 100);
     this.height = Math.ceil(t || 100);
-    this.stencil = !1;
-    this.depth = !1;
+    this.stencil = false;
+    this.depth = false;
     this.dirtyId = 0;
     this.dirtyFormat = 0;
     this.dirtySize = 0;
@@ -5601,11 +5601,11 @@ var dn = function () {
     get: function () {
       return this.colorTextures[0];
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   e.prototype.addColorTexture = function (e, t) {
-    if (void 0 === e) {
+    if (undefined === e) {
       e = 0;
     }
     this.colorTextures[e] = t || new Jt(null, {
@@ -5637,13 +5637,13 @@ var dn = function () {
     return this;
   };
   e.prototype.enableDepth = function () {
-    this.depth = !0;
+    this.depth = true;
     this.dirtyId++;
     this.dirtyFormat++;
     return this;
   };
   e.prototype.enableStencil = function () {
-    this.stencil = !0;
+    this.stencil = true;
     this.dirtyId++;
     this.dirtyFormat++;
     return this;
@@ -5668,7 +5668,7 @@ var dn = function () {
     }
   };
   e.prototype.dispose = function () {
-    this.disposeRunner.emit(this, !1);
+    this.disposeRunner.emit(this, false);
   };
   e.prototype.destroyDepthTexture = function () {
     if (this.depthTexture) {
@@ -5702,7 +5702,7 @@ var hn = function (e) {
     n.mipmap = ie.OFF;
     n.width = Math.ceil(c) || 100;
     n.height = Math.ceil(u) || 100;
-    n.valid = !0;
+    n.valid = true;
     n.clearColor = [0, 0, 0, 0];
     n.framebuffer = new dn(n.width * n.resolution, n.height * n.resolution).addColorTexture(0, n);
     n.maskStack = [];
@@ -5786,9 +5786,9 @@ var _n = new pn();
 var An = function (e) {
   function t(n, r, i, o, a, s) {
     var c = e.call(this) || this;
-    c.noFrame = !1;
+    c.noFrame = false;
     if (!r) {
-      c.noFrame = !0;
+      c.noFrame = true;
       r = new ct(0, 0, 1, 1);
     }
     if (n instanceof t) {
@@ -5797,12 +5797,12 @@ var An = function (e) {
     c.baseTexture = n;
     c._frame = r;
     c.trim = o;
-    c.valid = !1;
+    c.valid = false;
     c._uvs = _n;
     c.uvMatrix = null;
     c.orig = i || r;
     c._rotate = Number(a || 0);
-    if (!0 === a) {
+    if (true === a) {
       c._rotate = 2;
     } else if (c._rotate % 2 !== 0) {
       throw new Error("attempt to use diamond-shaped UVs. If you are sure, set rotation manually");
@@ -5839,7 +5839,7 @@ var An = function (e) {
       }
       this._frame.width = e.width;
       this._frame.height = e.height;
-      this.valid = !0;
+      this.valid = true;
       this.updateUvs();
     } else {
       this.frame = this._frame;
@@ -5863,7 +5863,7 @@ var An = function (e) {
     this._uvs = null;
     this.trim = null;
     this.orig = null;
-    this.valid = !1;
+    this.valid = false;
     t.removeFromCache(this);
     this.textureCacheIds = null;
   };
@@ -5884,10 +5884,10 @@ var An = function (e) {
     this._updateID++;
   };
   t.from = function (e, n, r) {
-    if (void 0 === n) {
+    if (undefined === n) {
       n = {};
     }
-    if (void 0 === r) {
+    if (undefined === r) {
       r = fe.STRICT_TEXTURE_CACHE;
     }
     var i = "string" === typeof e;
@@ -5917,11 +5917,11 @@ var An = function (e) {
   };
   t.fromURL = function (e, n) {
     var r = Object.assign({
-      autoLoad: !1
-    }, null === n || void 0 === n ? void 0 : n.resourceOptions);
+      autoLoad: false
+    }, null === n || undefined === n ? undefined : n.resourceOptions);
     var i = t.from(e, Object.assign({
       resourceOptions: r
-    }, n), !1);
+    }, n), false);
     var o = i.baseTexture.resource;
     return i.baseTexture.valid ? Promise.resolve(i) : o.load().then(function () {
       return Promise.resolve(i);
@@ -5992,8 +5992,8 @@ var An = function (e) {
     get: function () {
       return this.baseTexture.resolution;
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(t.prototype, "frame", {
     get: function () {
@@ -6001,7 +6001,7 @@ var An = function (e) {
     },
     set: function (e) {
       this._frame = e;
-      this.noFrame = !1;
+      this.noFrame = false;
       var t = e.x;
       var n = e.y;
       var r = e.width;
@@ -6022,8 +6022,8 @@ var An = function (e) {
         this.updateUvs();
       }
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(t.prototype, "rotate", {
     get: function () {
@@ -6035,22 +6035,22 @@ var An = function (e) {
         this.updateUvs();
       }
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(t.prototype, "width", {
     get: function () {
       return this.orig.width;
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(t.prototype, "height", {
     get: function () {
       return this.orig.height;
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   t.prototype.castToBaseTexture = function () {
     return this.baseTexture;
@@ -6080,7 +6080,7 @@ gn(An.WHITE.baseTexture);
 var vn = function (e) {
   function t(t, n) {
     var r = e.call(this, t, n) || this;
-    r.valid = !0;
+    r.valid = true;
     r.filterFrame = null;
     r.filterPoolKey = null;
     r.updateUvs();
@@ -6091,12 +6091,12 @@ var vn = function (e) {
     get: function () {
       return this.baseTexture.framebuffer;
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   t.prototype.resize = function (e, t, n) {
-    if (void 0 === n) {
-      n = !0;
+    if (undefined === n) {
+      n = true;
     }
     e = Math.ceil(e);
     t = Math.ceil(t);
@@ -6112,7 +6112,7 @@ var vn = function (e) {
     var t = this.baseTexture;
     if (t.resolution !== e) {
       t.setResolution(e);
-      this.resize(t.width, t.height, !1);
+      this.resize(t.width, t.height, false);
     }
   };
   t.create = function (e) {
@@ -6136,7 +6136,7 @@ var mn = function () {
   function e(e) {
     this.texturePool = {};
     this.textureOptions = e || {};
-    this.enableFullScreen = !1;
+    this.enableFullScreen = false;
     this._pixelsWidth = 0;
     this._pixelsHeight = 0;
   }
@@ -6149,7 +6149,7 @@ var mn = function () {
     return new vn(n);
   };
   e.prototype.getOptimalTexture = function (t, n, r) {
-    if (void 0 === r) {
+    if (undefined === r) {
       r = 1;
     }
     var i = e.SCREEN_KEY;
@@ -6183,12 +6183,12 @@ var mn = function () {
     this.returnTexture(e);
   };
   e.prototype.clear = function (e) {
-    if (e = !1 !== e) {
+    if (e = false !== e) {
       for (var t in this.texturePool) {
         var n = this.texturePool[t];
         if (n) {
           for (var r = 0; r < n.length; r++) {
-            n[r].destroy(!0);
+            n[r].destroy(true);
           }
         }
       }
@@ -6202,7 +6202,7 @@ var mn = function () {
       this.enableFullScreen = t.width > 0 && t.height > 0;
       if (r) {
         for (var i = 0; i < r.length; i++) {
-          r[i].destroy(!0);
+          r[i].destroy(true);
         }
       }
       this.texturePool[n] = [];
@@ -6215,13 +6215,13 @@ var mn = function () {
 }();
 var yn = function () {
   function e(e, t, n, r, i, o, a) {
-    if (void 0 === t) {
+    if (undefined === t) {
       t = 0;
     }
-    if (void 0 === n) {
-      n = !1;
+    if (undefined === n) {
+      n = false;
     }
-    if (void 0 === r) {
+    if (undefined === r) {
       r = ee.FLOAT;
     }
     this.buffer = e;
@@ -6243,11 +6243,11 @@ var yn = function () {
 var bn = 0;
 var wn = function () {
   function e(e, t, n) {
-    if (void 0 === t) {
-      t = !0;
+    if (undefined === t) {
+      t = true;
     }
-    if (void 0 === n) {
-      n = !1;
+    if (undefined === n) {
+      n = false;
     }
     this.data = e || new Float32Array(1);
     this._glBuffers = {};
@@ -6262,7 +6262,7 @@ var wn = function () {
     this._updateID++;
   };
   e.prototype.dispose = function () {
-    this.disposeRunner.emit(this, !1);
+    this.disposeRunner.emit(this, false);
   };
   e.prototype.destroy = function () {
     this.dispose();
@@ -6310,10 +6310,10 @@ var kn = {
 };
 var Sn = function () {
   function e(e, t) {
-    if (void 0 === e) {
+    if (undefined === e) {
       e = [];
     }
-    if (void 0 === t) {
+    if (undefined === t) {
       t = {};
     }
     this.buffers = e;
@@ -6321,20 +6321,20 @@ var Sn = function () {
     this.attributes = t;
     this.glVertexArrayObjects = {};
     this.id = On++;
-    this.instanced = !1;
+    this.instanced = false;
     this.instanceCount = 1;
     this.disposeRunner = new zt("disposeGeometry");
     this.refCount = 0;
   }
   e.prototype.addAttribute = function (e, t, n, r, i, o, a, s) {
-    if (void 0 === n) {
+    if (undefined === n) {
       n = 0;
     }
-    if (void 0 === r) {
-      r = !1;
+    if (undefined === r) {
+      r = false;
     }
-    if (void 0 === s) {
-      s = !1;
+    if (undefined === s) {
+      s = false;
     }
     if (!t) {
       throw new Error("You must pass a buffer when creating an attribute");
@@ -6374,7 +6374,7 @@ var Sn = function () {
       }
       e = new wn(e);
     }
-    e.index = !0;
+    e.index = true;
     this.indexBuffer = e;
     if (-1 === this.buffers.indexOf(e)) {
       this.buffers.push(e);
@@ -6440,7 +6440,7 @@ var Sn = function () {
     return 0;
   };
   e.prototype.dispose = function () {
-    this.disposeRunner.emit(this, !1);
+    this.disposeRunner.emit(this, false);
   };
   e.prototype.destroy = function () {
     this.dispose();
@@ -6458,7 +6458,7 @@ var Sn = function () {
     }
     if (this.indexBuffer) {
       t.indexBuffer = t.buffers[this.buffers.indexOf(this.indexBuffer)];
-      t.indexBuffer.index = !0;
+      t.indexBuffer.index = true;
     }
     return t;
   };
@@ -6485,7 +6485,7 @@ var Sn = function () {
     r.attributes = n.attributes;
     if (n.indexBuffer) {
       r.indexBuffer = r.buffers[n.buffers.indexOf(n.indexBuffer)];
-      r.indexBuffer.index = !0;
+      r.indexBuffer.index = true;
       var u = 0;
       var l = 0;
       var f = 0;
@@ -6570,7 +6570,7 @@ var Dn = 0;
 var In = function () {
   function e(e, t) {
     this.uniforms = e;
-    this.group = !0;
+    this.group = true;
     this.syncUniforms = {};
     this.dirtyId = 0;
     this.id = Dn++;
@@ -6591,7 +6591,7 @@ var Fn = function () {
   function e() {
     this.renderTexture = null;
     this.target = null;
-    this.legacy = !1;
+    this.legacy = false;
     this.resolution = 1;
     this.sourceFrame = new ct();
     this.destinationFrame = new ct();
@@ -6628,9 +6628,9 @@ var Nn = function (e) {
       resolution: 1,
       filterArea: new Float32Array(4),
       filterClamp: new Float32Array(4)
-    }, !0);
-    n.forceClear = !1;
-    n.useMaxPadding = !1;
+    }, true);
+    n.forceClear = false;
+    n.useMaxPadding = false;
     return n;
   }
   Xt(t, e);
@@ -6649,7 +6649,7 @@ var Nn = function (e) {
     i.resolution = a;
     i.legacy = u;
     i.target = e;
-    i.sourceFrame.copyFrom(e.filterArea || e.getBounds(!0));
+    i.sourceFrame.copyFrom(e.filterArea || e.getBounds(true));
     i.sourceFrame.pad(s);
     if (c) {
       var d = this.tempRect.copyFrom(o.sourceFrame);
@@ -6734,7 +6734,7 @@ var Nn = function (e) {
     this.statePool.push(t);
   };
   t.prototype.bindAndClear = function (e, t) {
-    if (void 0 === t) {
+    if (undefined === t) {
       t = ae.CLEAR;
     }
     var n = this.renderer;
@@ -6792,10 +6792,10 @@ var Nn = function (e) {
     return a;
   };
   t.prototype.destroy = function () {
-    this.texturePool.clear(!1);
+    this.texturePool.clear(false);
   };
   t.prototype.getOptimalFilterTexture = function (e, t, n) {
-    if (void 0 === n) {
+    if (undefined === n) {
       n = 1;
     }
     return this.texturePool.getOptimalTexture(e, t, n);
@@ -6815,7 +6815,7 @@ var Nn = function (e) {
     this.texturePool.returnTexture(e);
   };
   t.prototype.emptyPool = function () {
-    this.texturePool.clear(!0);
+    this.texturePool.clear(true);
   };
   t.prototype.resize = function () {
     this.texturePool.setScreenSize(this.renderer.view);
@@ -6932,12 +6932,12 @@ var Un = function (e) {
     n.webGLVersion = 1;
     n.extensions = {};
     n.supports = {
-      uint32Indices: !1
+      uint32Indices: false
     };
     n.handleContextLost = n.handleContextLost.bind(n);
     n.handleContextRestored = n.handleContextRestored.bind(n);
-    t.view.addEventListener("webglcontextlost", n.handleContextLost, !1);
-    t.view.addEventListener("webglcontextrestored", n.handleContextRestored, !1);
+    t.view.addEventListener("webglcontextlost", n.handleContextLost, false);
+    t.view.addEventListener("webglcontextrestored", n.handleContextRestored, false);
     return n;
   }
   Xt(t, e);
@@ -6945,8 +6945,8 @@ var Un = function (e) {
     get: function () {
       return !this.gl || this.gl.isContextLost();
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   t.prototype.contextChange = function (e) {
     this.gl = e;
@@ -7076,9 +7076,9 @@ var Gn = function (e) {
     this.CONTEXT_UID = this.renderer.CONTEXT_UID;
     this.current = this.unknownFramebuffer;
     this.viewport = new ct();
-    this.hasMRT = !0;
-    this.writeDepthTexture = !0;
-    this.disposeAll(!0);
+    this.hasMRT = true;
+    this.writeDepthTexture = true;
+    this.disposeAll(true);
     if (1 === this.renderer.context.webGLVersion) {
       var t = this.renderer.context.extensions.drawBuffers;
       var n = this.renderer.context.extensions.depthTexture;
@@ -7091,11 +7091,11 @@ var Gn = function (e) {
           return t.drawBuffersWEBGL(e);
         };
       } else {
-        this.hasMRT = !1;
+        this.hasMRT = false;
         e.drawBuffers = function () {};
       }
       if (!n) {
-        this.writeDepthTexture = !1;
+        this.writeDepthTexture = false;
       }
     } else {
       this.msaaSamples = e.getInternalformatParameter(e.RENDERBUFFER, e.RGBA8, e.SAMPLES);
@@ -7169,11 +7169,11 @@ var Gn = function (e) {
         height: this.renderer.height
       };
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   t.prototype.clear = function (e, t, n, r, i) {
-    if (void 0 === i) {
+    if (undefined === i) {
       i = Y.COLOR | Y.DEPTH;
     }
     var o = this.gl;
@@ -7353,16 +7353,16 @@ var Wn = function (e) {
     var n = e.call(this, t) || this;
     n._activeGeometry = null;
     n._activeVao = null;
-    n.hasVao = !0;
-    n.hasInstance = !0;
-    n.canUseUInt32ElementIndex = !1;
+    n.hasVao = true;
+    n.hasInstance = true;
+    n.canUseUInt32ElementIndex = false;
     n.managedGeometries = {};
     n.managedBuffers = {};
     return n;
   }
   Xt(t, e);
   t.prototype.contextChange = function () {
-    this.disposeAll(!0);
+    this.disposeAll(true);
     var e = this.gl = this.renderer.gl;
     var t = this.renderer.context;
     this.CONTEXT_UID = this.renderer.CONTEXT_UID;
@@ -7382,7 +7382,7 @@ var Wn = function (e) {
           return n.deleteVertexArrayOES(e);
         };
       } else {
-        this.hasVao = !1;
+        this.hasVao = false;
         e.createVertexArray = function () {
           return null;
         };
@@ -7407,7 +7407,7 @@ var Wn = function (e) {
           return r.drawArraysInstancedANGLE(e, t, n, i);
         };
       } else {
-        this.hasInstance = !1;
+        this.hasInstance = false;
       }
     }
     this.canUseUInt32ElementIndex = 2 === t.webGLVersion || !!t.extensions.uint32ElementIndex;
@@ -7416,12 +7416,12 @@ var Wn = function (e) {
     t = t || this.renderer.shader.shader;
     var n = this.gl;
     var r = e.glVertexArrayObjects[this.CONTEXT_UID];
-    var i = !1;
+    var i = false;
     if (!r) {
       this.managedGeometries[e.id] = e;
       e.disposeRunner.add(this);
       e.glVertexArrayObjects[this.CONTEXT_UID] = r = {};
-      i = !0;
+      i = true;
     }
     var o = r[t.program.id] || this.initGeometryVao(e, t.program, i);
     this._activeGeometry = e;
@@ -7474,8 +7474,8 @@ var Wn = function (e) {
     return i.join("-");
   };
   t.prototype.initGeometryVao = function (e, t, n) {
-    if (void 0 === n) {
-      n = !0;
+    if (undefined === n) {
+      n = true;
     }
     this.checkCompatibility(e, t);
     var r = this.gl;
@@ -7508,14 +7508,14 @@ var Wn = function (e) {
     for (var d in u) {
       var h = u[d];
       var p = h.size;
-      if (void 0 === h.stride) {
+      if (undefined === h.stride) {
         if (l[h.buffer] === p * Qn[h.type]) {
           h.stride = 0;
         } else {
           h.stride = l[h.buffer];
         }
       }
-      if (void 0 === h.start) {
+      if (undefined === h.start) {
         h.start = f[h.buffer];
         f[h.buffer] += p * Qn[h.type];
       }
@@ -7650,14 +7650,14 @@ var Wn = function (e) {
 }(ln);
 var Kn = function () {
   function e(e) {
-    if (void 0 === e) {
+    if (undefined === e) {
       e = null;
     }
     this.type = ue.NONE;
-    this.autoDetect = !0;
+    this.autoDetect = true;
     this.maskObject = e || null;
-    this.pooled = !1;
-    this.isMaskData = !0;
+    this.pooled = false;
+    this.isMaskData = true;
     this._stencilCounter = 0;
     this._scissorCounter = 0;
     this._scissorRect = null;
@@ -7667,7 +7667,7 @@ var Kn = function () {
     if (this.pooled) {
       this.maskObject = null;
       this.type = ue.NONE;
-      this.autoDetect = !0;
+      this.autoDetect = true;
     }
     this._target = null;
   };
@@ -7724,7 +7724,7 @@ function Yn(e, t, n, r) {
 }
 function qn(e) {
   for (var t = new Array(e), n = 0; n < t.length; n++) {
-    t[n] = !1;
+    t[n] = false;
   }
   return t;
 }
@@ -7756,7 +7756,7 @@ function $n(e, t) {
     case "uvec4":
       return new Uint32Array(4 * t);
     case "bool":
-      return !1;
+      return false;
     case "bvec2":
       return qn(2 * t);
     case "bvec3":
@@ -7778,7 +7778,7 @@ var er = Zn;
 function tr() {
   if (er === Zn || er && er.isContextLost()) {
     var e = document.createElement("canvas");
-    var t = void 0;
+    var t = undefined;
     if (fe.PREFER_ENV >= K.WEBGL2) {
       t = e.getContext("webgl2", {});
     }
@@ -7886,14 +7886,14 @@ var cr = [{
   }
 }, {
   test: function (e, t) {
-    return "mat3" === e.type && 1 === e.size && void 0 !== t.a;
+    return "mat3" === e.type && 1 === e.size && undefined !== t.a;
   },
   code: function (e) {
     return "\n            gl.uniformMatrix3fv(ud[\"" + e + "\"].location, false, uv[\"" + e + "\"].toArray(true));\n            ";
   }
 }, {
   test: function (e, t) {
-    return "vec2" === e.type && 1 === e.size && void 0 !== t.x;
+    return "vec2" === e.type && 1 === e.size && undefined !== t.x;
   },
   code: function (e) {
     return "\n                cv = ud[\"" + e + "\"].value;\n                v = uv[\"" + e + "\"];\n\n                if(cv[0] !== v.x || cv[1] !== v.y)\n                {\n                    cv[0] = v.x;\n                    cv[1] = v.y;\n                    gl.uniform2f(ud[\"" + e + "\"].location, v.x, v.y);\n                }";
@@ -7907,7 +7907,7 @@ var cr = [{
   }
 }, {
   test: function (e, t) {
-    return "vec4" === e.type && 1 === e.size && void 0 !== t.width;
+    return "vec4" === e.type && 1 === e.size && undefined !== t.width;
   },
   code: function (e) {
     return "\n                cv = ud[\"" + e + "\"].value;\n                v = uv[\"" + e + "\"];\n\n                if(cv[0] !== v.x || cv[1] !== v.y || cv[2] !== v.width || cv[3] !== v.height)\n                {\n                    cv[0] = v.x;\n                    cv[1] = v.y;\n                    cv[2] = v.width;\n                    cv[3] = v.height;\n                    gl.uniform4f(ud[\"" + e + "\"].location, v.x, v.y, v.width, v.height)\n                }";
@@ -7985,7 +7985,7 @@ var pr = 0;
 var _r = {};
 var Ar = function () {
   function e(t, n, r) {
-    if (void 0 === r) {
+    if (undefined === r) {
       r = "pixi-shader";
     }
     this.id = pr++;
@@ -8072,15 +8072,15 @@ var Ar = function () {
     get: function () {
       return "attribute vec2 aVertexPosition;\nattribute vec2 aTextureCoord;\n\nuniform mat3 projectionMatrix;\n\nvarying vec2 vTextureCoord;\n\nvoid main(void){\n   gl_Position = vec4((projectionMatrix * vec3(aVertexPosition, 1.0)).xy, 0.0, 1.0);\n   vTextureCoord = aTextureCoord;\n}\n";
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(e, "defaultFragmentSrc", {
     get: function () {
       return "varying vec2 vTextureCoord;\n\nuniform sampler2D uSampler;\n\nvoid main(void){\n   gl_FragColor *= texture2D(uSampler, vTextureCoord);\n}";
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   e.from = function (t, n, r) {
     var i = t + n;
@@ -8100,15 +8100,15 @@ var gr = function () {
   }
   e.prototype.checkUniformExists = function (e, t) {
     if (t.uniforms[e]) {
-      return !0;
+      return true;
     }
     for (var n in t.uniforms) {
       var r = t.uniforms[n];
       if (r.group && this.checkUniformExists(e, r)) {
-        return !0;
+        return true;
       }
     }
-    return !1;
+    return false;
   };
   e.prototype.destroy = function () {
     this.uniformGroup = null;
@@ -8117,8 +8117,8 @@ var gr = function () {
     get: function () {
       return this.uniformGroup.uniforms;
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   e.from = function (t, n, r) {
     return new e(Ar.from(t, n), r);
@@ -8130,8 +8130,8 @@ var vr = function () {
     this.data = 0;
     this.blendMode = q.NORMAL;
     this.polygonOffset = 0;
-    this.blend = !0;
-    this.depthMask = !0;
+    this.blend = true;
+    this.depthMask = true;
   }
   Object.defineProperty(e.prototype, "blend", {
     get: function () {
@@ -8142,8 +8142,8 @@ var vr = function () {
         this.data ^= 1;
       }
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(e.prototype, "offsets", {
     get: function () {
@@ -8154,8 +8154,8 @@ var vr = function () {
         this.data ^= 2;
       }
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(e.prototype, "culling", {
     get: function () {
@@ -8166,8 +8166,8 @@ var vr = function () {
         this.data ^= 4;
       }
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(e.prototype, "depthTest", {
     get: function () {
@@ -8178,8 +8178,8 @@ var vr = function () {
         this.data ^= 8;
       }
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(e.prototype, "depthMask", {
     get: function () {
@@ -8190,8 +8190,8 @@ var vr = function () {
         this.data ^= 32;
       }
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(e.prototype, "clockwiseFrontFace", {
     get: function () {
@@ -8202,8 +8202,8 @@ var vr = function () {
         this.data ^= 16;
       }
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(e.prototype, "blendMode", {
     get: function () {
@@ -8213,8 +8213,8 @@ var vr = function () {
       this.blend = e !== q.NONE;
       this._blendMode = e;
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(e.prototype, "polygonOffset", {
     get: function () {
@@ -8224,16 +8224,16 @@ var vr = function () {
       this.offsets = !!e;
       this._polygonOffset = e;
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   e.prototype.toString = function () {
     return "[@pixi/core:State blendMode=" + this.blendMode + " clockwiseFrontFace=" + this.clockwiseFrontFace + " culling=" + this.culling + " depthMask=" + this.depthMask + " polygonOffset=" + this.polygonOffset + "]";
   };
   e.for2d = function () {
     var t = new e();
-    t.depthTest = !1;
-    t.blend = !0;
+    t.depthTest = false;
+    t.blend = true;
     return t;
   };
   return e;
@@ -8244,8 +8244,8 @@ var mr = function (e) {
     var a = Ar.from(n || t.defaultVertexSrc, r || t.defaultFragmentSrc);
     (o = e.call(this, a, i) || this).padding = 0;
     o.resolution = fe.FILTER_RESOLUTION;
-    o.enabled = !0;
-    o.autoFit = !0;
+    o.enabled = true;
+    o.autoFit = true;
     o.legacy = !!o.program.attributeData.aTextureCoord;
     o.state = new vr();
     return o;
@@ -8261,22 +8261,22 @@ var mr = function (e) {
     set: function (e) {
       this.state.blendMode = e;
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(t, "defaultVertexSrc", {
     get: function () {
       return "attribute vec2 aVertexPosition;\n\nuniform mat3 projectionMatrix;\n\nvarying vec2 vTextureCoord;\n\nuniform vec4 inputSize;\nuniform vec4 outputFrame;\n\nvec4 filterVertexPosition( void )\n{\n    vec2 position = aVertexPosition * max(outputFrame.zw, vec2(0.)) + outputFrame.xy;\n\n    return vec4((projectionMatrix * vec3(position, 1.0)).xy, 0.0, 1.0);\n}\n\nvec2 filterTextureCoord( void )\n{\n    return aVertexPosition * (outputFrame.zw * inputSize.zw);\n}\n\nvoid main(void)\n{\n    gl_Position = filterVertexPosition();\n    vTextureCoord = filterTextureCoord();\n}\n";
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(t, "defaultFragmentSrc", {
     get: function () {
       return "varying vec2 vTextureCoord;\n\nuniform sampler2D uSampler;\n\nvoid main(void){\n   gl_FragColor = texture2D(uSampler, vTextureCoord);\n}\n";
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   return t;
 }(gr);
@@ -8291,7 +8291,7 @@ var br = function () {
     this._updateID = 0;
     this.clampOffset = 0;
     this.clampMargin = "undefined" === typeof t ? .5 : t;
-    this.isSimple = !1;
+    this.isSimple = false;
   }
   Object.defineProperty(e.prototype, "texture", {
     get: function () {
@@ -8301,11 +8301,11 @@ var br = function () {
       this._texture = e;
       this._textureID = -1;
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   e.prototype.multiplyUvs = function (e, t) {
-    if (void 0 === t) {
+    if (undefined === t) {
       t = e;
     }
     for (var n = this.mapCoord, r = 0; r < e.length; r += 2) {
@@ -8319,10 +8319,10 @@ var br = function () {
   e.prototype.update = function (e) {
     var t = this._texture;
     if (!t || !t.valid) {
-      return !1;
+      return false;
     }
     if (!e && this._textureID === t._updateID) {
-      return !1;
+      return false;
     }
     this._textureID = t._updateID;
     this._updateID++;
@@ -8345,7 +8345,7 @@ var br = function () {
     this.uClampOffset[0] = c / o.realWidth;
     this.uClampOffset[1] = c / o.realHeight;
     this.isSimple = t._frame.width === o.width && t._frame.height === o.height && 0 === t.rotate;
-    return !0;
+    return true;
   };
   return e;
 }();
@@ -8354,7 +8354,7 @@ var wr = function (e) {
     var n = this;
     var r = new _t();
     n = e.call(this, "attribute vec2 aVertexPosition;\nattribute vec2 aTextureCoord;\n\nuniform mat3 projectionMatrix;\nuniform mat3 otherMatrix;\n\nvarying vec2 vMaskCoord;\nvarying vec2 vTextureCoord;\n\nvoid main(void)\n{\n    gl_Position = vec4((projectionMatrix * vec3(aVertexPosition, 1.0)).xy, 0.0, 1.0);\n\n    vTextureCoord = aTextureCoord;\n    vMaskCoord = ( otherMatrix * vec3( aTextureCoord, 1.0)  ).xy;\n}\n", "varying vec2 vMaskCoord;\nvarying vec2 vTextureCoord;\n\nuniform sampler2D uSampler;\nuniform sampler2D mask;\nuniform float alpha;\nuniform float npmAlpha;\nuniform vec4 maskClamp;\n\nvoid main(void)\n{\n    float clip = step(3.5,\n        step(maskClamp.x, vMaskCoord.x) +\n        step(maskClamp.y, vMaskCoord.y) +\n        step(vMaskCoord.x, maskClamp.z) +\n        step(vMaskCoord.y, maskClamp.w));\n\n    vec4 original = texture2D(uSampler, vTextureCoord);\n    vec4 masky = texture2D(mask, vMaskCoord);\n    float alphaMul = 1.0 - npmAlpha * (1.0 - masky.a);\n\n    original *= (alphaMul * masky.r * alpha * clip);\n\n    gl_FragColor = original;\n}\n") || this;
-    t.renderable = !1;
+    t.renderable = false;
     n.maskSprite = t;
     n.maskMatrix = r;
     return n;
@@ -8381,7 +8381,7 @@ var wr = function (e) {
 var Er = function (e) {
   function t(t) {
     var n = e.call(this, t) || this;
-    n.enableScissor = !0;
+    n.enableScissor = true;
     n.alphaMaskPool = [];
     n.maskDataPool = [];
     n.maskStack = [];
@@ -8398,7 +8398,7 @@ var Er = function (e) {
     var n = t;
     if (!n.isMaskData) {
       var r = this.maskDataPool.pop() || new Kn();
-      r.pooled = !0;
+      r.pooled = true;
       r.maskObject = t;
       n = r;
     }
@@ -8461,7 +8461,7 @@ var Er = function (e) {
     r[0].resolution = this.renderer.resolution;
     r[0].maskSprite = t;
     var i = n.filterArea;
-    n.filterArea = t.getBounds(!0);
+    n.filterArea = t.getBounds(true);
     this.renderer.filter.push(n, r);
     n.filterArea = i;
     this.alphaMaskIndex++;
@@ -8517,11 +8517,11 @@ var Cr = function (e) {
   };
   t.prototype.push = function (e) {
     var t = e.maskObject;
-    t.renderable = !0;
+    t.renderable = true;
     var n = e._scissorRect;
-    var r = t.getBounds(!0);
+    var r = t.getBounds(true);
     var i = this.renderer.gl;
-    t.renderable = !1;
+    t.renderable = false;
     if (n) {
       r.fit(n);
     } else {
@@ -8584,14 +8584,14 @@ var Or = function (e) {
       n.enable(n.STENCIL_TEST);
     }
     e._stencilCounter++;
-    n.colorMask(!1, !1, !1, !1);
+    n.colorMask(false, false, false, false);
     n.stencilFunc(n.EQUAL, r, this._getBitwiseMask());
     n.stencilOp(n.KEEP, n.KEEP, n.INCR);
-    t.renderable = !0;
+    t.renderable = true;
     t.render(this.renderer);
     this.renderer.batch.flush();
     this.renderer.framebuffer.blit();
-    t.renderable = !1;
+    t.renderable = false;
     this._useCurrent();
   };
   t.prototype.pop = function (e) {
@@ -8601,18 +8601,18 @@ var Or = function (e) {
       t.clear(t.STENCIL_BUFFER_BIT);
       t.clearStencil(0);
     } else {
-      t.colorMask(!1, !1, !1, !1);
+      t.colorMask(false, false, false, false);
       t.stencilOp(t.KEEP, t.KEEP, t.DECR);
-      e.renderable = !0;
+      e.renderable = true;
       e.render(this.renderer);
       this.renderer.batch.flush();
-      e.renderable = !1;
+      e.renderable = false;
       this._useCurrent();
     }
   };
   t.prototype._useCurrent = function () {
     var e = this.renderer.gl;
-    e.colorMask(!0, !0, !0, !0);
+    e.colorMask(true, true, true, true);
     e.stencilFunc(e.EQUAL, this.getStackLength(), this._getBitwiseMask());
     e.stencilOp(e.KEEP, e.KEEP, e.KEEP);
   };
@@ -8673,7 +8673,7 @@ var Br = function (e) {
   }
   Xt(t, e);
   t.prototype.bind = function (e, t, n) {
-    if (void 0 === e) {
+    if (undefined === e) {
       e = null;
     }
     var r;
@@ -8773,7 +8773,7 @@ var Fr = {
 var Rr = function (e) {
   function t(t) {
     var n = e.call(this, t) || this;
-    n.destroyed = !1;
+    n.destroyed = false;
     n.systemCheck();
     n.gl = null;
     n.shader = null;
@@ -8790,11 +8790,11 @@ var Rr = function (e) {
       }
       try {
         var e = new Function("param1", "param2", "param3", "return param1[param2] === param3;");
-        fr = !0 === e({
+        fr = true === e({
           a: "b"
         }, "a", "b");
       } catch (t) {
-        fr = !1;
+        fr = false;
       }
       return fr;
     }()) {
@@ -8843,10 +8843,10 @@ var Rr = function (e) {
         for (var r in e.uniforms) {
           var i = t[r];
           if (i) {
-            for (var o = e.uniforms[r], a = !1, s = 0; s < cr.length; s++) {
+            for (var o = e.uniforms[r], a = false, s = 0; s < cr.length; s++) {
               if (cr[s].test(i, o)) {
                 n.push(cr[s].code(r, o));
-                a = !0;
+                a = true;
                 break;
               }
             }
@@ -8901,7 +8901,7 @@ var Rr = function (e) {
     this.shader = null;
   };
   t.prototype.destroy = function () {
-    this.destroyed = !0;
+    this.destroyed = true;
   };
   return t;
 }(ln);
@@ -8912,7 +8912,7 @@ var Pr = function (e) {
     n.stateId = 0;
     n.polygonOffset = 0;
     n.blendMode = q.NONE;
-    n._blendEq = !1;
+    n._blendEq = false;
     n.map = [];
     n.map[0] = n.setBlend;
     n.map[1] = n.setOffset;
@@ -8922,14 +8922,14 @@ var Pr = function (e) {
     n.map[5] = n.setDepthMask;
     n.checks = [];
     n.defaultState = new vr();
-    n.defaultState.blend = !0;
+    n.defaultState.blend = true;
     return n;
   }
   Xt(t, e);
   t.prototype.contextChange = function (e) {
     this.gl = e;
     this.blendModes = function (e, t) {
-      if (void 0 === t) {
+      if (undefined === t) {
         t = [];
       }
       t[q.NORMAL] = [e.ONE, e.ONE_MINUS_SRC_ALPHA];
@@ -9024,11 +9024,11 @@ var Pr = function (e) {
         n.blendFuncSeparate(t[0], t[1], t[2], t[3]);
       }
       if (6 === t.length) {
-        this._blendEq = !0;
+        this._blendEq = true;
         n.blendEquationSeparate(t[4], t[5]);
       } else {
         if (this._blendEq) {
-          this._blendEq = !1;
+          this._blendEq = false;
           n.blendEquationSeparate(n.FUNC_ADD, n.FUNC_ADD);
         }
       }
@@ -9038,9 +9038,9 @@ var Pr = function (e) {
     this.gl.polygonOffset(e, t);
   };
   t.prototype.reset = function () {
-    this.gl.pixelStorei(this.gl.UNPACK_FLIP_Y_WEBGL, !1);
+    this.gl.pixelStorei(this.gl.UNPACK_FLIP_Y_WEBGL, false);
     this.forceState(this.defaultState);
-    this._blendEq = !0;
+    this._blendEq = true;
     this.blendMode = -1;
     this.setBlendMode(0);
   };
@@ -9086,12 +9086,12 @@ var Nr = function (e) {
     }
   };
   t.prototype.run = function () {
-    for (var e = this.renderer.texture, t = e.managedTextures, n = !1, r = 0; r < t.length; r++) {
+    for (var e = this.renderer.texture, t = e.managedTextures, n = false, r = 0; r < t.length; r++) {
       var i = t[r];
       if (!i.framebuffer && this.count - i.touched > this.maxIdle) {
-        e.destroyTexture(i, !0);
+        e.destroyTexture(i, true);
         t[r] = null;
-        n = !0;
+        n = true;
       }
     }
     if (n) {
@@ -9122,7 +9122,7 @@ var Mr = function (e) {
   this.height = -1;
   this.dirtyId = -1;
   this.dirtyStyleId = -1;
-  this.mipmap = !1;
+  this.mipmap = false;
   this.wrapMode = 33071;
   this.type = 6408;
   this.internalFormat = 5121;
@@ -9134,9 +9134,9 @@ var jr = function (e) {
     n.boundTextures = [];
     n.currentLocation = -1;
     n.managedTextures = [];
-    n._unknownBoundTextures = !1;
+    n._unknownBoundTextures = false;
     n.unknownTexture = new Jt();
-    n.hasIntegerTextures = !1;
+    n.hasIntegerTextures = false;
     return n;
   }
   Xt(t, e);
@@ -9166,7 +9166,7 @@ var jr = function (e) {
     }
   };
   t.prototype.bind = function (e, t) {
-    if (void 0 === t) {
+    if (undefined === t) {
       t = 0;
     }
     var n = this.gl;
@@ -9203,8 +9203,8 @@ var jr = function (e) {
     }
   };
   t.prototype.reset = function () {
-    this._unknownBoundTextures = !0;
-    this.hasIntegerTextures = !1;
+    this._unknownBoundTextures = true;
+    this.hasIntegerTextures = false;
     this.currentLocation = -1;
     for (var e = 0; e < this.boundTextures.length; e++) {
       this.boundTextures[e] = this.unknownTexture;
@@ -9214,7 +9214,7 @@ var jr = function (e) {
     var t = this.gl;
     var n = this.boundTextures;
     if (this._unknownBoundTextures) {
-      this._unknownBoundTextures = !1;
+      this._unknownBoundTextures = false;
       for (var r = 0; r < n.length; r++) {
         if (n[r] === this.unknownTexture) {
           this.bind(null, r);
@@ -9278,7 +9278,7 @@ var jr = function (e) {
       this.initTextureType(e, t);
       if (e.resource && e.resource.upload(n, e, t)) {
         if (t.samplerType !== te.FLOAT) {
-          this.hasIntegerTextures = !0;
+          this.hasIntegerTextures = true;
         }
       } else {
         var r = e.realWidth;
@@ -9311,7 +9311,7 @@ var jr = function (e) {
       if (e.mipmap !== ie.POW2 && 2 === this.webGLVersion || e.isPowerOfTwo) {
         t.mipmap = e.mipmap >= 1;
       } else {
-        t.mipmap = !1;
+        t.mipmap = false;
       }
       if (2 === this.webGLVersion || e.isPowerOfTwo) {
         t.wrapMode = e.wrapMode;
@@ -9365,7 +9365,7 @@ var Lr = {
 var Ur = new _t();
 var Hr = function (e) {
   function t(t, n) {
-    if (void 0 === t) {
+    if (undefined === t) {
       t = X.UNKNOWN;
     }
     var r = e.call(this) || this;
@@ -9384,7 +9384,7 @@ var Hr = function (e) {
     r._backgroundColorString = "#000000";
     r.backgroundColor = n.backgroundColor || r._backgroundColor;
     r.backgroundAlpha = n.backgroundAlpha;
-    if (void 0 !== n.transparent) {
+    if (undefined !== n.transparent) {
       Qe("6.0.0", "Option transparent is deprecated, please use backgroundAlpha instead.");
       r.useContextAlpha = n.transparent;
       r.backgroundAlpha = n.transparent ? 0 : 1;
@@ -9401,15 +9401,15 @@ var Hr = function (e) {
     get: function () {
       return this.view.width;
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(t.prototype, "height", {
     get: function () {
       return this.view.height;
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   t.prototype.resize = function (e, t) {
     this.screen.width = e;
@@ -9423,7 +9423,7 @@ var Hr = function (e) {
     this.emit("resize", e, t);
   };
   t.prototype.generateTexture = function (e, t, n, r) {
-    if (0 === (r = r || e.getLocalBounds(null, !0)).width) {
+    if (0 === (r = r || e.getLocalBounds(null, true)).width) {
       r.width = 1;
     }
     if (0 === r.height) {
@@ -9439,7 +9439,7 @@ var Hr = function (e) {
     Ur.ty = -r.y;
     this.render(e, {
       renderTexture: i,
-      clear: !1,
+      clear: false,
       transform: Ur,
       skipUpdateTransform: !!e.parent
     });
@@ -9472,8 +9472,8 @@ var Hr = function (e) {
       this._backgroundColorString = Ce(e);
       xe(e, this._backgroundColorRgba);
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(t.prototype, "backgroundAlpha", {
     get: function () {
@@ -9482,8 +9482,8 @@ var Hr = function (e) {
     set: function (e) {
       this._backgroundColorRgba[3] = e;
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   return t;
 }(he.a);
@@ -9504,7 +9504,7 @@ var Vr = function (e) {
     };
     r.globalUniforms = new In({
       projectionMatrix: new _t()
-    }, !0);
+    }, true);
     r.addSystem(Er, "mask").addSystem(Un, "context").addSystem(Pr, "state").addSystem(Rr, "shader").addSystem(jr, "texture").addSystem(Wn, "geometry").addSystem(Gn, "framebuffer").addSystem(Cr, "scissor").addSystem(Or, "stencil").addSystem(kr, "projection").addSystem(Nr, "textureGC").addSystem(Nn, "filter").addSystem(Br, "renderTexture").addSystem(jn, "batch");
     r.initPlugins(t.__plugins);
     if (n.context) {
@@ -9514,12 +9514,12 @@ var Vr = function (e) {
         alpha: !!r.useContextAlpha,
         antialias: n.antialias,
         premultipliedAlpha: r.useContextAlpha && "notMultiplied" !== r.useContextAlpha,
-        stencil: !0,
+        stencil: true,
         preserveDrawingBuffer: n.preserveDrawingBuffer,
         powerPreference: r.options.powerPreference
       });
     }
-    r.renderingToScreen = !0;
+    r.renderingToScreen = true;
     be(2 === r.context.webGLVersion ? "WebGL 2" : "WebGL 1");
     r.resize(r.options.width, r.options.height);
     return r;
@@ -9576,7 +9576,7 @@ var Vr = function (e) {
       }
       this.renderTexture.bind(n);
       this.batch.currentRenderer.start();
-      if (void 0 !== r ? r : this.clearBeforeRender) {
+      if (undefined !== r ? r : this.clearBeforeRender) {
         this.renderTexture.clear();
       }
       e.render(this);
@@ -9611,8 +9611,8 @@ var Vr = function (e) {
       Qe("6.0.0", "Renderer#extract has been deprecated, please use Renderer#plugins.extract instead.");
       return this.plugins.extract;
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   t.registerPlugin = function (e, n) {
     t.__plugins = t.__plugins || {};
@@ -9663,8 +9663,8 @@ var Qr = function () {
       }
       return this._int8View;
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(e.prototype, "uint8View", {
     get: function () {
@@ -9673,8 +9673,8 @@ var Qr = function () {
       }
       return this._uint8View;
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(e.prototype, "int16View", {
     get: function () {
@@ -9683,8 +9683,8 @@ var Qr = function () {
       }
       return this._int16View;
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(e.prototype, "uint16View", {
     get: function () {
@@ -9693,8 +9693,8 @@ var Qr = function () {
       }
       return this._uint16View;
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(e.prototype, "int32View", {
     get: function () {
@@ -9703,8 +9703,8 @@ var Qr = function () {
       }
       return this._int32View;
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   e.prototype.view = function (e) {
     return this[e + "View"];
@@ -10047,7 +10047,7 @@ var Kr = function () {
       }
       this.defaultGroupCache[e] = In.from({
         uSamplers: t
-      }, !0);
+      }, true);
       var r = this.fragTemplate;
       r = (r = r.replace(/%count%/gi, "" + e)).replace(/%forloop%/gi, this.generateSampleSrc(e));
       this.programCache[e] = new Ar(this.vertexSrc, r);
@@ -10081,13 +10081,13 @@ var Kr = function () {
 }();
 var Xr = function (e) {
   function t(t) {
-    if (void 0 === t) {
-      t = !1;
+    if (undefined === t) {
+      t = false;
     }
     var n = e.call(this) || this;
-    n._buffer = new wn(null, t, !1);
-    n._indexBuffer = new wn(null, t, !0);
-    n.addAttribute("aVertexPosition", n._buffer, 2, !1, ee.FLOAT).addAttribute("aTextureCoord", n._buffer, 2, !1, ee.FLOAT).addAttribute("aColor", n._buffer, 4, !0, ee.UNSIGNED_BYTE).addAttribute("aTextureId", n._buffer, 1, !0, ee.FLOAT).addIndex(n._indexBuffer);
+    n._buffer = new wn(null, t, false);
+    n._indexBuffer = new wn(null, t, true);
+    n.addAttribute("aVertexPosition", n._buffer, 2, false, ee.FLOAT).addAttribute("aTextureCoord", n._buffer, 2, false, ee.FLOAT).addAttribute("aColor", n._buffer, 4, true, ee.UNSIGNED_BYTE).addAttribute("aTextureId", n._buffer, 1, true, ee.FLOAT).addIndex(n._indexBuffer);
     return n;
   }
   Xt(t, e);
@@ -10124,15 +10124,15 @@ var $r = function () {
     get: function () {
       return Yr;
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(e, "defaultFragmentTemplate", {
     get: function () {
       return qr;
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   return e;
 }().create();
@@ -10161,7 +10161,7 @@ var ri = function () {
     var n = this;
     this.stage = new Pt();
     t = Object.assign({
-      forceCanvas: !1
+      forceCanvas: false
     }, t);
     this.renderer = function (e) {
       return Vr.create(e);
@@ -10180,15 +10180,15 @@ var ri = function () {
     get: function () {
       return this.renderer.view;
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(e.prototype, "screen", {
     get: function () {
       return this.renderer.screen;
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   e.prototype.destroy = function (t, n) {
     var r = this;
@@ -10285,24 +10285,24 @@ var ai = function () {
     var r;
     var i;
     var o = this.renderer;
-    var a = !1;
-    var s = !1;
+    var a = false;
+    var s = false;
     if (t) {
       if (t instanceof vn) {
         i = t;
       } else {
         i = this.renderer.generateTexture(t);
-        s = !0;
+        s = true;
       }
     }
     if (i) {
       n = i.baseTexture.resolution;
       r = i.frame;
-      a = !1;
+      a = false;
       o.renderTexture.bind(i);
     } else {
       n = this.renderer.resolution;
-      a = !0;
+      a = true;
       (r = oi).width = this.renderer.width;
       r.height = this.renderer.height;
       o.renderTexture.bind(null);
@@ -10324,7 +10324,7 @@ var ai = function () {
       l = p;
     }
     if (s) {
-      i.destroy(!0);
+      i.destroy(true);
     }
     return l.canvas;
   };
@@ -10333,13 +10333,13 @@ var ai = function () {
     var r;
     var i;
     var o = this.renderer;
-    var a = !1;
+    var a = false;
     if (t) {
       if (t instanceof vn) {
         i = t;
       } else {
         i = this.renderer.generateTexture(t);
-        a = !0;
+        a = true;
       }
     }
     if (i) {
@@ -10358,7 +10358,7 @@ var ai = function () {
     var l = o.gl;
     l.readPixels(r.x * n, r.y * n, s, c, l.RGBA, l.UNSIGNED_BYTE, u);
     if (a) {
-      i.destroy(!0);
+      i.destroy(true);
     }
     e.arrayPostDivide(u, u);
     return u;
@@ -10382,7 +10382,7 @@ var ai = function () {
   };
   return e;
 }();
-var si = require("./1172");
+import si = require("./1172");
 var ci = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -10395,7 +10395,7 @@ var ci = function __importDefault(module) {
   });
   return defaultExport;
 }(si);
-var ui = require("./562");
+import ui = require("./562");
 var li = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -10454,19 +10454,19 @@ function pi(e, t) {
     empty: fi,
     drain: fi,
     error: fi,
-    started: !1,
-    paused: !1,
+    started: false,
+    paused: false,
     push: function (e, t) {
-      i(e, !1, t);
+      i(e, false, t);
     },
     kill: function () {
       n = 0;
       r.drain = fi;
-      r.started = !1;
+      r.started = false;
       r._tasks = [];
     },
     unshift: function (e, t) {
-      i(e, !0, t);
+      i(e, true, t);
     },
     process: function () {
       for (; !r.paused && n < r.concurrency && r._tasks.length;) {
@@ -10490,13 +10490,13 @@ function pi(e, t) {
       return r._tasks.length + n === 0;
     },
     pause: function () {
-      if (!0 !== r.paused) {
-        r.paused = !0;
+      if (true !== r.paused) {
+        r.paused = true;
       }
     },
     resume: function () {
-      if (!1 !== r.paused) {
-        r.paused = !1;
+      if (false !== r.paused) {
+        r.paused = false;
         for (var e = 1; e <= r.concurrency; e++) {
           r.process();
         }
@@ -10507,7 +10507,7 @@ function pi(e, t) {
     if (null != n && "function" !== typeof n) {
       throw new Error("task callback must be a function");
     }
-    r.started = !0;
+    r.started = true;
     if (null == e && r.idle()) {
       setTimeout(function () {
         return r.drain();
@@ -10549,10 +10549,10 @@ var _i = {};
 function Ai(e, t) {
   for (var n = 0; n < t.length; n++) {
     var r = t[n];
-    r.enumerable = r.enumerable || !1;
-    r.configurable = !0;
+    r.enumerable = r.enumerable || false;
+    r.configurable = true;
     if ("value" in r) {
-      r.writable = !0;
+      r.writable = true;
     }
     Object.defineProperty(e, r.key, r);
   }
@@ -10581,7 +10581,7 @@ var bi = function () {
     this.url = n;
     this.extension = this._getExtension();
     this.data = null;
-    this.crossOrigin = !0 === r.crossOrigin ? "anonymous" : r.crossOrigin;
+    this.crossOrigin = true === r.crossOrigin ? "anonymous" : r.crossOrigin;
     this.timeout = r.timeout || 0;
     this.loadType = r.loadType || this._determineLoadType();
     this.xhrType = r.xhrType;
@@ -10648,7 +10648,7 @@ var bi = function () {
           }, 1);
         }
       } else {
-        switch (t && this.onComplete.once(t), this._setFlag(e.STATUS_FLAGS.LOADING, !0), this.onStart.dispatch(this), !1 !== this.crossOrigin && "string" === typeof this.crossOrigin || (this.crossOrigin = this._determineCrossOrigin(this.url)), this.loadType) {
+        switch (t && this.onComplete.once(t), this._setFlag(e.STATUS_FLAGS.LOADING, true), this.onStart.dispatch(this), false !== this.crossOrigin && "string" === typeof this.crossOrigin || (this.crossOrigin = this._determineCrossOrigin(this.url)), this.loadType) {
           case e.LOAD_TYPE.IMAGE:
             this.type = e.TYPE.IMAGE;
             this._loadElement("image");
@@ -10681,18 +10681,18 @@ var bi = function () {
   t._clearEvents = function () {
     clearTimeout(this._elementTimer);
     if (this.data && this.data.removeEventListener) {
-      this.data.removeEventListener("error", this._boundOnError, !1);
-      this.data.removeEventListener("load", this._boundComplete, !1);
-      this.data.removeEventListener("progress", this._boundOnProgress, !1);
-      this.data.removeEventListener("canplaythrough", this._boundComplete, !1);
+      this.data.removeEventListener("error", this._boundOnError, false);
+      this.data.removeEventListener("load", this._boundComplete, false);
+      this.data.removeEventListener("progress", this._boundOnProgress, false);
+      this.data.removeEventListener("canplaythrough", this._boundComplete, false);
     }
     if (this.xhr) {
       if (this.xhr.removeEventListener) {
-        this.xhr.removeEventListener("error", this._boundXhrOnError, !1);
-        this.xhr.removeEventListener("timeout", this._boundXhrOnTimeout, !1);
-        this.xhr.removeEventListener("abort", this._boundXhrOnAbort, !1);
-        this.xhr.removeEventListener("progress", this._boundOnProgress, !1);
-        this.xhr.removeEventListener("load", this._boundXhrOnLoad, !1);
+        this.xhr.removeEventListener("error", this._boundXhrOnError, false);
+        this.xhr.removeEventListener("timeout", this._boundXhrOnTimeout, false);
+        this.xhr.removeEventListener("abort", this._boundXhrOnAbort, false);
+        this.xhr.removeEventListener("progress", this._boundOnProgress, false);
+        this.xhr.removeEventListener("load", this._boundXhrOnLoad, false);
       } else {
         this.xhr.onerror = null;
         this.xhr.ontimeout = null;
@@ -10705,8 +10705,8 @@ var bi = function () {
     if (this.isComplete) {
       throw new Error("Complete called again for an already completed resource.");
     }
-    this._setFlag(e.STATUS_FLAGS.COMPLETE, !0);
-    this._setFlag(e.STATUS_FLAGS.LOADING, !1);
+    this._setFlag(e.STATUS_FLAGS.COMPLETE, true);
+    this._setFlag(e.STATUS_FLAGS.LOADING, false);
     this.onComplete.dispatch(this);
   };
   t._loadElement = function (e) {
@@ -10725,9 +10725,9 @@ var bi = function () {
     if (!this.metadata.skipSource) {
       this.data.src = this.url;
     }
-    this.data.addEventListener("error", this._boundOnError, !1);
-    this.data.addEventListener("load", this._boundComplete, !1);
-    this.data.addEventListener("progress", this._boundOnProgress, !1);
+    this.data.addEventListener("error", this._boundOnError, false);
+    this.data.addEventListener("load", this._boundComplete, false);
+    this.data.addEventListener("progress", this._boundOnProgress, false);
     if (this.timeout) {
       this._elementTimer = setTimeout(this._boundOnTimeout, this.timeout);
     }
@@ -10758,10 +10758,10 @@ var bi = function () {
           this.data.appendChild(this._createSource(e, this.url, Array.isArray(r) ? r[0] : r));
         }
       }
-      this.data.addEventListener("error", this._boundOnError, !1);
-      this.data.addEventListener("load", this._boundComplete, !1);
-      this.data.addEventListener("progress", this._boundOnProgress, !1);
-      this.data.addEventListener("canplaythrough", this._boundComplete, !1);
+      this.data.addEventListener("error", this._boundOnError, false);
+      this.data.addEventListener("load", this._boundComplete, false);
+      this.data.addEventListener("progress", this._boundOnProgress, false);
+      this.data.addEventListener("canplaythrough", this._boundComplete, false);
       this.data.load();
       if (this.timeout) {
         this._elementTimer = setTimeout(this._boundOnTimeout, this.timeout);
@@ -10775,18 +10775,18 @@ var bi = function () {
       this.xhrType = this._determineXhrType();
     }
     var t = this.xhr = new XMLHttpRequest();
-    t.open("GET", this.url, !0);
+    t.open("GET", this.url, true);
     t.timeout = this.timeout;
     if (this.xhrType === e.XHR_RESPONSE_TYPE.JSON || this.xhrType === e.XHR_RESPONSE_TYPE.DOCUMENT) {
       t.responseType = e.XHR_RESPONSE_TYPE.TEXT;
     } else {
       t.responseType = this.xhrType;
     }
-    t.addEventListener("error", this._boundXhrOnError, !1);
-    t.addEventListener("timeout", this._boundXhrOnTimeout, !1);
-    t.addEventListener("abort", this._boundXhrOnAbort, !1);
-    t.addEventListener("progress", this._boundOnProgress, !1);
-    t.addEventListener("load", this._boundXhrOnLoad, !1);
+    t.addEventListener("error", this._boundXhrOnError, false);
+    t.addEventListener("timeout", this._boundXhrOnTimeout, false);
+    t.addEventListener("abort", this._boundXhrOnAbort, false);
+    t.addEventListener("progress", this._boundOnProgress, false);
+    t.addEventListener("load", this._boundXhrOnLoad, false);
     t.send();
   };
   t._loadXdr = function () {
@@ -10799,7 +10799,7 @@ var bi = function () {
     e.ontimeout = this._boundXhrOnTimeout;
     e.onprogress = this._boundOnProgress;
     e.onload = this._boundXhrOnLoad;
-    e.open("GET", this.url, !0);
+    e.open("GET", this.url, true);
     setTimeout(function () {
       return e.send();
     }, 1);
@@ -10896,7 +10896,7 @@ var bi = function () {
     }
     mi.href = e;
     var n = !(e = ci()(mi.href, {
-      strictMode: !0
+      strictMode: true
     })).port && "" === t.port || e.port === t.port;
     var r = e.protocol ? e.protocol + ":" : "";
     return e.host === t.hostname && n && r === t.protocol ? "" : "anonymous";
@@ -11112,15 +11112,15 @@ var Oi = /(#[\w-]+)?$/;
 var ki = function () {
   function e(t, n) {
     var r = this;
-    if (void 0 === t) {
+    if (undefined === t) {
       t = "";
     }
-    if (void 0 === n) {
+    if (undefined === n) {
       n = 10;
     }
     this.baseUrl = t;
     this.progress = 0;
-    this.loading = !1;
+    this.loading = false;
     this.defaultQueryString = "";
     this._beforeMiddleware = [];
     this._afterMiddleware = [];
@@ -11206,7 +11206,7 @@ var ki = function () {
     return this;
   };
   t.reset = function () {
-    for (var e in this.progress = 0, this.loading = !1, this._queue.kill(), this._queue.pause(), this.resources) {
+    for (var e in this.progress = 0, this.loading = false, this._queue.kill(), this._queue.pause(), this.resources) {
       var t = this.resources[e];
       if (t._onLoadBinding) {
         t._onLoadBinding.detach();
@@ -11240,7 +11240,7 @@ var ki = function () {
   t._prepareUrl = function (e) {
     var t;
     var n = ci()(e, {
-      strictMode: !0
+      strictMode: true
     });
     t = n.protocol || !n.path || 0 === e.indexOf("//") ? e : this.baseUrl.length && this.baseUrl.lastIndexOf("/") !== this.baseUrl.length - 1 && "/" !== e.charAt(0) ? this.baseUrl + "/" + e : this.baseUrl + e;
     if (this.defaultQueryString) {
@@ -11268,16 +11268,16 @@ var ki = function () {
         e._onLoadBinding = e.onComplete.once(n._onLoad, n);
         e.load();
       }
-    }, !0);
+    }, true);
   };
   t._onStart = function () {
     this.progress = 0;
-    this.loading = !0;
+    this.loading = true;
     this.onStart.dispatch(this);
   };
   t._onComplete = function () {
     this.progress = 100;
-    this.loading = !1;
+    this.loading = false;
     this.onComplete.dispatch(this, this.resources);
   };
   t._onLoad = function (e) {
@@ -11300,7 +11300,7 @@ var ki = function () {
       if (t._queue.idle() && 0 === t._resourcesParsing.length) {
         t._onComplete();
       }
-    }, !0);
+    }, true);
   };
   gi(e, [{
     key: "concurrency",
@@ -11369,7 +11369,7 @@ var Bi = function (e) {
         i.use(c);
       }
     }
-    i._protected = !1;
+    i._protected = false;
     return i;
   }
   (function (e, t) {
@@ -11388,13 +11388,13 @@ var Bi = function (e) {
     get: function () {
       var e = t._shared;
       if (!e) {
-        (e = new t())._protected = !0;
+        (e = new t())._protected = true;
         t._shared = e;
       }
       return e;
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   t.registerPlugin = function (e) {
     t._plugins.push(e);
@@ -11414,7 +11414,7 @@ var Di = function () {
   function e() {}
   e.init = function (e) {
     e = Object.assign({
-      sharedLoader: !1
+      sharedLoader: false
     }, e);
     this.loader = e.sharedLoader ? Bi.shared : new Bi();
   };
@@ -11429,7 +11429,7 @@ var Di = function () {
 var Ii = bi;
 var Fi = function () {
   function e(e, t, n) {
-    if (void 0 === n) {
+    if (undefined === n) {
       n = null;
     }
     this._texture = e instanceof An ? e : null;
@@ -11445,13 +11445,13 @@ var Fi = function () {
     this._callback = null;
   }
   e.prototype._updateResolution = function (e) {
-    if (void 0 === e) {
+    if (undefined === e) {
       e = null;
     }
     var t = this.data.meta.scale;
     var n = rt(e, null);
     if (null === n) {
-      n = void 0 !== t ? parseFloat(t) : 1;
+      n = undefined !== t ? parseFloat(t) : 1;
     }
     if (1 !== n) {
       this.baseTexture.setResolution(n);
@@ -11477,10 +11477,10 @@ var Fi = function () {
       if (a) {
         var s = null;
         var c = null;
-        var u = !1 !== o.trimmed && o.sourceSize ? o.sourceSize : o.frame;
+        var u = false !== o.trimmed && o.sourceSize ? o.sourceSize : o.frame;
         var l = new ct(0, 0, Math.floor(u.w) / this.resolution, Math.floor(u.h) / this.resolution);
         s = o.rotated ? new ct(Math.floor(a.x) / this.resolution, Math.floor(a.y) / this.resolution, Math.floor(a.h) / this.resolution, Math.floor(a.w) / this.resolution) : new ct(Math.floor(a.x) / this.resolution, Math.floor(a.y) / this.resolution, Math.floor(a.w) / this.resolution, Math.floor(a.h) / this.resolution);
-        if (!1 !== o.trimmed && o.spriteSourceSize) {
+        if (false !== o.trimmed && o.spriteSourceSize) {
           c = new ct(Math.floor(o.spriteSourceSize.x) / this.resolution, Math.floor(o.spriteSourceSize.y) / this.resolution, Math.floor(a.w) / this.resolution, Math.floor(a.h) / this.resolution);
         }
         this.textures[i] = new An(this.baseTexture, s, l, c, o.rotated ? 2 : 0, o.anchor);
@@ -11520,13 +11520,13 @@ var Fi = function () {
   };
   e.prototype.destroy = function (e) {
     var t;
-    for (var n in void 0 === e && (e = !1), this.textures) this.textures[n].destroy();
+    for (var n in undefined === e && (e = false), this.textures) this.textures[n].destroy();
     this._frames = null;
     this._frameKeys = null;
     this.data = null;
     this.textures = null;
     if (e) {
-      if (!(null === (t = this._texture) || void 0 === t)) {
+      if (!(null === (t = this._texture) || undefined === t)) {
         t.destroy();
       }
       this.baseTexture.destroy();
@@ -11545,7 +11545,7 @@ var Ri = function () {
     var o = this;
     var a = t.name + "_image";
     if (t.data && t.type === Ii.TYPE.JSON && t.data.frames && !o.resources[a]) {
-      var s = null === (i = null === (r = t.data) || void 0 === r ? void 0 : r.meta) || void 0 === i ? void 0 : i.related_multi_packs;
+      var s = null === (i = null === (r = t.data) || undefined === r ? undefined : r.meta) || undefined === i ? undefined : i.related_multi_packs;
       if (Array.isArray(s)) {
         for (var c = function (e) {
             if ("string" !== typeof e) {
@@ -11631,7 +11631,7 @@ var ji = function (e) {
     n._textureTrimmedID = -1;
     n.indices = Mi;
     n.pluginName = "batch";
-    n.isSprite = !0;
+    n.isSprite = true;
     n._roundPixels = fe.ROUND_PIXELS;
     return n;
   }
@@ -11786,8 +11786,8 @@ var ji = function (e) {
       }
       this._roundPixels = e;
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(t.prototype, "width", {
     get: function () {
@@ -11798,8 +11798,8 @@ var ji = function (e) {
       this.scale.x = t * e / this._texture.orig.width;
       this._width = e;
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(t.prototype, "height", {
     get: function () {
@@ -11810,8 +11810,8 @@ var ji = function (e) {
       this.scale.y = t * e / this._texture.orig.height;
       this._height = e;
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(t.prototype, "anchor", {
     get: function () {
@@ -11820,8 +11820,8 @@ var ji = function (e) {
     set: function (e) {
       this._anchor.copyFrom(e);
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(t.prototype, "tint", {
     get: function () {
@@ -11831,8 +11831,8 @@ var ji = function (e) {
       this._tint = e;
       this._tintRGB = (e >> 16) + (65280 & e) + ((255 & e) << 16);
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(t.prototype, "texture", {
     get: function () {
@@ -11856,8 +11856,8 @@ var ji = function (e) {
         }
       }
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   return t;
 }(Pt);
@@ -11882,10 +11882,10 @@ function Ui(e, t) {
 var Hi = new ht();
 var Vi = function (e) {
   function t(t, n, r) {
-    if (void 0 === n) {
+    if (undefined === n) {
       n = 100;
     }
-    if (void 0 === r) {
+    if (undefined === r) {
       r = 100;
     }
     var i = e.call(this, t) || this;
@@ -11894,7 +11894,7 @@ var Vi = function (e) {
     i._height = r;
     i.uvMatrix = i.texture.uvMatrix || new br(t);
     i.pluginName = "tilingSprite";
-    i.uvRespectAnchor = !1;
+    i.uvRespectAnchor = false;
     return i;
   }
   Ui(t, e);
@@ -11904,10 +11904,10 @@ var Vi = function (e) {
     },
     set: function (e) {
       this.uvMatrix.clampMargin = e;
-      this.uvMatrix.update(!0);
+      this.uvMatrix.update(true);
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(t.prototype, "tileScale", {
     get: function () {
@@ -11916,8 +11916,8 @@ var Vi = function (e) {
     set: function (e) {
       this.tileTransform.scale.copyFrom(e);
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(t.prototype, "tilePosition", {
     get: function () {
@@ -11926,8 +11926,8 @@ var Vi = function (e) {
     set: function (e) {
       this.tileTransform.position.copyFrom(e);
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   t.prototype._onTextureUpdate = function () {
     if (this.uvMatrix) {
@@ -11962,10 +11962,10 @@ var Vi = function (e) {
     if (Hi.x >= r && Hi.x < r + t) {
       var i = -n * this.anchor._y;
       if (Hi.y >= i && Hi.y < i + n) {
-        return !0;
+        return true;
       }
     }
-    return !1;
+    return false;
   };
   t.prototype.destroy = function (t) {
     e.prototype.destroy.call(this, t);
@@ -11982,8 +11982,8 @@ var Vi = function (e) {
     set: function (e) {
       this._width = e;
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(t.prototype, "height", {
     get: function () {
@@ -11992,8 +11992,8 @@ var Vi = function (e) {
     set: function (e) {
       this._height = e;
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   return t;
 }(ji);
@@ -12051,13 +12051,13 @@ var Qi = function (e) {
     if (l) {
       zi.prepend(u.mapCoord);
     } else {
-      f.uniforms.uMapCoord = u.mapCoord.toArray(!0);
+      f.uniforms.uMapCoord = u.mapCoord.toArray(true);
       f.uniforms.uClampFrame = u.uClampFrame;
       f.uniforms.uClampOffset = u.uClampOffset;
     }
-    f.uniforms.uTransform = zi.toArray(!0);
+    f.uniforms.uTransform = zi.toArray(true);
     f.uniforms.uColor = Ie(e.tint, e.worldAlpha, f.uniforms.uColor, s.alphaMode);
-    f.uniforms.translationMatrix = e.transform.worldTransform.toArray(!0);
+    f.uniforms.translationMatrix = e.transform.worldTransform.toArray(true);
     f.uniforms.uSampler = a;
     t.shader.bind(f);
     t.geometry.bind(n);
@@ -12068,7 +12068,7 @@ var Qi = function (e) {
   return t;
 }(Mn);
 var Wi = new _t();
-It.prototype._cacheAsBitmap = !1;
+It.prototype._cacheAsBitmap = false;
 It.prototype._cacheData = null;
 It.prototype._cacheAsBitmapResolution = null;
 var Ki = function () {
@@ -12093,8 +12093,8 @@ Object.defineProperties(It.prototype, {
       if (e !== this._cacheAsBitmapResolution) {
         this._cacheAsBitmapResolution = e;
         if (this.cacheAsBitmap) {
-          this.cacheAsBitmap = !1;
-          this.cacheAsBitmap = !0;
+          this.cacheAsBitmap = false;
+          this.cacheAsBitmap = true;
         }
       }
     }
@@ -12154,7 +12154,7 @@ It.prototype._initCachedDisplayObject = function (e) {
     var t = this.alpha;
     this.alpha = 1;
     e.batch.flush();
-    var n = this.getLocalBounds(null, !0).clone();
+    var n = this.getLocalBounds(null, true).clone();
     if (this.filters) {
       var r = this.filters[0].padding;
       n.pad(r);
@@ -12177,9 +12177,9 @@ It.prototype._initCachedDisplayObject = function (e) {
     this.render = this._cacheData.originalRender;
     e.render(this, {
       renderTexture: c,
-      clear: !0,
+      clear: true,
       transform: l,
-      skipUpdateTransform: !1
+      skipUpdateTransform: false
     });
     e.projection.transform = s;
     e.renderTexture.bind(i, o, a);
@@ -12217,7 +12217,7 @@ It.prototype._renderCachedCanvas = function (e) {
 };
 It.prototype._initCachedDisplayObjectCanvas = function (e) {
   if (!this._cacheData || !this._cacheData.sprite) {
-    var t = this.getLocalBounds(null, !0);
+    var t = this.getLocalBounds(null, true);
     var n = this.alpha;
     this.alpha = 1;
     var r = e.context;
@@ -12239,9 +12239,9 @@ It.prototype._initCachedDisplayObjectCanvas = function (e) {
     this.renderCanvas = this._cacheData.originalRenderCanvas;
     e.render(this, {
       renderTexture: o,
-      clear: !0,
+      clear: true,
       transform: s,
-      skipUpdateTransform: !1
+      skipUpdateTransform: false
     });
     e.context = r;
     e._projTransform = i;
@@ -12280,14 +12280,14 @@ It.prototype._getCachedLocalBounds = function () {
   return this._cacheData.sprite.getLocalBounds(null);
 };
 It.prototype._destroyCachedDisplayObject = function () {
-  this._cacheData.sprite._texture.destroy(!0);
+  this._cacheData.sprite._texture.destroy(true);
   this._cacheData.sprite = null;
   Jt.removeFromCache(this._cacheData.textureCacheId);
   An.removeFromCache(this._cacheData.textureCacheId);
   this._cacheData.textureCacheId = null;
 };
 It.prototype._cacheAsBitmapDestroy = function (e) {
-  this.cacheAsBitmap = !1;
+  this.cacheAsBitmap = false;
   this.destroy(e);
 };
 It.prototype.name = null;
@@ -12300,7 +12300,7 @@ Pt.prototype.getChildByName = function (e, t) {
   if (t) {
     for (n = 0, r = this.children.length; n < r; n++) {
       if (this.children[n].getChildByName) {
-        var i = this.children[n].getChildByName(e, !0);
+        var i = this.children[n].getChildByName(e, true);
         if (i) {
           return i;
         }
@@ -12310,11 +12310,11 @@ Pt.prototype.getChildByName = function (e, t) {
   return null;
 };
 It.prototype.getGlobalPosition = function (e, t) {
-  if (void 0 === e) {
+  if (undefined === e) {
     e = new ht();
   }
-  if (void 0 === t) {
-    t = !1;
+  if (undefined === t) {
+    t = false;
   }
   if (this.parent) {
     this.parent.toGlobal(this.position, e, t);
@@ -12450,7 +12450,7 @@ function qi(e) {
 }
 function $i() {
   if ("undefined" === typeof document) {
-    return !1;
+    return false;
   }
   var e = qi("#ff00ff");
   var t = qi("#ffff00");
@@ -12463,7 +12463,7 @@ function $i() {
   r.drawImage(t, 2, 0);
   var i = r.getImageData(2, 0, 1, 1);
   if (!i) {
-    return !1;
+    return false;
   }
   var o = i.data;
   return 255 === o[0] && 0 === o[1] && 0 === o[2];
@@ -12477,7 +12477,7 @@ var Zi = function (e) {
       alpha: i.useContextAlpha
     });
     i.context = i.rootContext;
-    i.refresh = !0;
+    i.refresh = true;
     i.maskManager = new Yi(i);
     i.smoothProperty = "imageSmoothingEnabled";
     if (!i.rootContext.imageSmoothingEnabled) {
@@ -12499,11 +12499,11 @@ var Zi = function (e) {
       }
     }
     i.initPlugins(t.__plugins);
-    i.blendModes = (void 0 === r && (r = []), $i() ? (r[q.NORMAL] = "source-over", r[q.ADD] = "lighter", r[q.MULTIPLY] = "multiply", r[q.SCREEN] = "screen", r[q.OVERLAY] = "overlay", r[q.DARKEN] = "darken", r[q.LIGHTEN] = "lighten", r[q.COLOR_DODGE] = "color-dodge", r[q.COLOR_BURN] = "color-burn", r[q.HARD_LIGHT] = "hard-light", r[q.SOFT_LIGHT] = "soft-light", r[q.DIFFERENCE] = "difference", r[q.EXCLUSION] = "exclusion", r[q.HUE] = "hue", r[q.SATURATION] = "saturate", r[q.COLOR] = "color", r[q.LUMINOSITY] = "luminosity") : (r[q.NORMAL] = "source-over", r[q.ADD] = "lighter", r[q.MULTIPLY] = "source-over", r[q.SCREEN] = "source-over", r[q.OVERLAY] = "source-over", r[q.DARKEN] = "source-over", r[q.LIGHTEN] = "source-over", r[q.COLOR_DODGE] = "source-over", r[q.COLOR_BURN] = "source-over", r[q.HARD_LIGHT] = "source-over", r[q.SOFT_LIGHT] = "source-over", r[q.DIFFERENCE] = "source-over", r[q.EXCLUSION] = "source-over", r[q.HUE] = "source-over", r[q.SATURATION] = "source-over", r[q.COLOR] = "source-over", r[q.LUMINOSITY] = "source-over"), r[q.NORMAL_NPM] = r[q.NORMAL], r[q.ADD_NPM] = r[q.ADD], r[q.SCREEN_NPM] = r[q.SCREEN], r[q.SRC_IN] = "source-in", r[q.SRC_OUT] = "source-out", r[q.SRC_ATOP] = "source-atop", r[q.DST_OVER] = "destination-over", r[q.DST_IN] = "destination-in", r[q.DST_OUT] = "destination-out", r[q.DST_ATOP] = "destination-atop", r[q.XOR] = "xor", r[q.SUBTRACT] = "source-over", r);
+    i.blendModes = (undefined === r && (r = []), $i() ? (r[q.NORMAL] = "source-over", r[q.ADD] = "lighter", r[q.MULTIPLY] = "multiply", r[q.SCREEN] = "screen", r[q.OVERLAY] = "overlay", r[q.DARKEN] = "darken", r[q.LIGHTEN] = "lighten", r[q.COLOR_DODGE] = "color-dodge", r[q.COLOR_BURN] = "color-burn", r[q.HARD_LIGHT] = "hard-light", r[q.SOFT_LIGHT] = "soft-light", r[q.DIFFERENCE] = "difference", r[q.EXCLUSION] = "exclusion", r[q.HUE] = "hue", r[q.SATURATION] = "saturate", r[q.COLOR] = "color", r[q.LUMINOSITY] = "luminosity") : (r[q.NORMAL] = "source-over", r[q.ADD] = "lighter", r[q.MULTIPLY] = "source-over", r[q.SCREEN] = "source-over", r[q.OVERLAY] = "source-over", r[q.DARKEN] = "source-over", r[q.LIGHTEN] = "source-over", r[q.COLOR_DODGE] = "source-over", r[q.COLOR_BURN] = "source-over", r[q.HARD_LIGHT] = "source-over", r[q.SOFT_LIGHT] = "source-over", r[q.DIFFERENCE] = "source-over", r[q.EXCLUSION] = "source-over", r[q.HUE] = "source-over", r[q.SATURATION] = "source-over", r[q.COLOR] = "source-over", r[q.LUMINOSITY] = "source-over"), r[q.NORMAL_NPM] = r[q.NORMAL], r[q.ADD_NPM] = r[q.ADD], r[q.SCREEN_NPM] = r[q.SCREEN], r[q.SRC_IN] = "source-in", r[q.SRC_OUT] = "source-out", r[q.SRC_ATOP] = "source-atop", r[q.DST_OVER] = "destination-over", r[q.DST_IN] = "destination-in", r[q.DST_OUT] = "destination-out", r[q.DST_ATOP] = "destination-atop", r[q.XOR] = "xor", r[q.SUBTRACT] = "source-over", r);
     i._activeBlendMode = null;
-    i._outerBlend = !1;
+    i._outerBlend = false;
     i._projTransform = null;
-    i.renderingToScreen = !1;
+    i.renderingToScreen = false;
     be("Canvas");
     i.resize(i.options.width, i.options.height);
     return i;
@@ -12542,7 +12542,7 @@ var Zi = function (e) {
         if (!(n = n.castToBaseTexture())._canvasRenderTarget) {
           n._canvasRenderTarget = new $e(n.width, n.height, n.resolution);
           n.resource = new nn(n._canvasRenderTarget.canvas);
-          n.valid = !0;
+          n.valid = true;
         }
         this.context = n._canvasRenderTarget.context;
         this.resolution = n._canvasRenderTarget.resolution;
@@ -12563,9 +12563,9 @@ var Zi = function (e) {
       s.setTransform(1, 0, 0, 1, 0, 0);
       s.globalAlpha = 1;
       this._activeBlendMode = q.NORMAL;
-      this._outerBlend = !1;
+      this._outerBlend = false;
       s.globalCompositeOperation = this.blendModes[q.NORMAL];
-      if (void 0 !== r ? r : this.clearBeforeRender) {
+      if (undefined !== r ? r : this.clearBeforeRender) {
         if (this.renderingToScreen) {
           s.clearRect(0, 0, this.width, this.height);
           if (this.backgroundAlpha > 0) {
@@ -12611,10 +12611,10 @@ var Zi = function (e) {
     }
   };
   t.prototype.clear = function (e, t) {
-    if (void 0 === e) {
+    if (undefined === e) {
       e = this._backgroundColorString;
     }
-    if (void 0 === t) {
+    if (undefined === t) {
       t = this.backgroundAlpha;
     }
     var n = this.context;
@@ -12640,7 +12640,7 @@ var Zi = function (e) {
   t.prototype.destroy = function (t) {
     e.prototype.destroy.call(this, t);
     this.context = null;
-    this.refresh = !0;
+    this.refresh = true;
     this.maskManager.destroy();
     this.maskManager = null;
     this.smoothProperty = null;
@@ -12769,7 +12769,7 @@ var eo = {
     return ke(n);
   },
   cacheStepsPerColorChannel: 8,
-  convertTintToImage: !1,
+  convertTintToImage: false,
   canUseMultiply: $i(),
   tintMethod: null
 };
@@ -12803,13 +12803,13 @@ An.prototype.tintCache = null;
   e.SQUARE = "square";
 })(no || (no = {}));
 var io = {
-  adaptive: !0,
+  adaptive: true,
   maxLength: 10,
   minSegments: 8,
   maxSegments: 2048,
   epsilon: 1e-4,
   _segmentsCount: function (e, t) {
-    if (void 0 === t) {
+    if (undefined === t) {
       t = 20;
     }
     if (!this.adaptive || !e || isNaN(e)) {
@@ -12832,7 +12832,7 @@ var oo = function () {
     this.alpha = 1;
     this.texture = An.WHITE;
     this.matrix = null;
-    this.visible = !1;
+    this.visible = false;
     this.reset();
   }
   e.prototype.clone = function () {
@@ -12849,7 +12849,7 @@ var oo = function () {
     this.alpha = 1;
     this.texture = An.WHITE;
     this.matrix = null;
-    this.visible = !1;
+    this.visible = false;
   };
   e.prototype.destroy = function () {
     this.texture = null;
@@ -12972,7 +12972,7 @@ function fo(e, t, n) {
   return e + (t - e) * n;
 }
 function ho(e, t, n, r, i, o, a) {
-  if (void 0 === a) {
+  if (undefined === a) {
     a = [];
   }
   for (var s = a, c = 0, u = 0, l = 0, f = 0, d = 0, h = 0, p = 0, _ = 0; p <= 20; ++p) {
@@ -13147,10 +13147,10 @@ function go(e, t) {
         var I = 2 * B;
         if (!c) {
           if (o.cap === no.ROUND) {
-            p += Ao(m - C * (D - I) * .5, y - O * (D - I) * .5, m - C * D, y - O * D, m + C * I, y + O * I, d, !0) + 2;
+            p += Ao(m - C * (D - I) * .5, y - O * (D - I) * .5, m - C * D, y - O * D, m + C * I, y + O * I, d, true) + 2;
           } else {
             if (o.cap === no.SQUARE) {
-              p += _o(m, y, C, O, D, I, !0, d);
+              p += _o(m, y, C, O, D, I, true, d);
             }
           }
         }
@@ -13214,13 +13214,13 @@ function go(e, t) {
                   if (L) {
                     d.push(Q, W);
                     d.push(b + C * I, w + O * I);
-                    p += Ao(b, w, b + C * I, w + O * I, b + k * I, w + S * I, d, !0) + 4;
+                    p += Ao(b, w, b + C * I, w + O * I, b + k * I, w + S * I, d, true) + 4;
                     d.push(Q, W);
                     d.push(b + k * I, w + S * I);
                   } else {
                     d.push(b - C * D, w - O * D);
                     d.push(K, X);
-                    p += Ao(b, w, b - C * D, w - O * D, b - k * D, w - S * D, d, !1) + 4;
+                    p += Ao(b, w, b - C * D, w - O * D, b - k * D, w - S * D, d, false) + 4;
                     d.push(b - k * D, w - S * D);
                     d.push(K, X);
                   }
@@ -13234,7 +13234,7 @@ function go(e, t) {
               d.push(b + C * I, w + O * I);
               if (!(o.join === to.BEVEL || z / g > v)) {
                 if (o.join === to.ROUND) {
-                  p += L ? Ao(b, w, b + C * I, w + O * I, b + k * I, w + S * I, d, !0) + 2 : Ao(b, w, b - C * D, w - O * D, b - k * D, w - S * D, d, !1) + 2;
+                  p += L ? Ao(b, w, b + C * I, w + O * I, b + k * I, w + S * I, d, true) + 2 : Ao(b, w, b - C * D, w - O * D, b - k * D, w - S * D, d, false) + 2;
                 } else {
                   if (L) {
                     d.push(K, X);
@@ -13265,10 +13265,10 @@ function go(e, t) {
         d.push(b + C * I, w + O * I);
         if (!c) {
           if (o.cap === no.ROUND) {
-            p += Ao(b - C * (D - I) * .5, w - O * (D - I) * .5, b - C * D, w - O * D, b + C * I, w + O * I, d, !1) + 2;
+            p += Ao(b - C * (D - I) * .5, w - O * (D - I) * .5, b - C * D, w - O * D, b + C * I, w + O * I, d, false) + 2;
           } else {
             if (o.cap === no.SQUARE) {
-              p += _o(b, w, C, O, D, I, !1, d);
+              p += _o(b, w, C, O, D, I, false, d);
             }
           }
         }
@@ -13429,13 +13429,13 @@ var Co = [];
 var Oo = [];
 var ko = function () {
   function e(e, t, n, r) {
-    if (void 0 === t) {
+    if (undefined === t) {
       t = null;
     }
-    if (void 0 === n) {
+    if (undefined === n) {
       n = null;
     }
-    if (void 0 === r) {
+    if (undefined === r) {
       r = null;
     }
     this.shape = e;
@@ -13483,7 +13483,7 @@ var Bo = function (e) {
     t._bounds = new Tt();
     t.boundsDirty = -1;
     t.boundsPadding = 0;
-    t.batchable = !1;
+    t.batchable = false;
     t.indicesUint16 = null;
     t.uvsFloat32 = null;
     t.closePointEps = 1e-4;
@@ -13498,8 +13498,8 @@ var Bo = function (e) {
       }
       return this._bounds;
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   t.prototype.invalidate = function () {
     this.boundsDirty = -1;
@@ -13532,13 +13532,13 @@ var Bo = function (e) {
     return this;
   };
   t.prototype.drawShape = function (e, t, n, r) {
-    if (void 0 === t) {
+    if (undefined === t) {
       t = null;
     }
-    if (void 0 === n) {
+    if (undefined === n) {
       n = null;
     }
-    if (void 0 === r) {
+    if (undefined === r) {
       r = null;
     }
     var i = new ko(e, t, n, r);
@@ -13547,7 +13547,7 @@ var Bo = function (e) {
     return this;
   };
   t.prototype.drawHole = function (e, t) {
-    if (void 0 === t) {
+    if (undefined === t) {
       t = null;
     }
     if (!this.graphicsData.length) {
@@ -13587,21 +13587,21 @@ var Bo = function (e) {
     for (var t = this.graphicsData, n = 0; n < t.length; ++n) {
       var r = t[n];
       if (r.fillStyle.visible && r.shape && (r.matrix ? r.matrix.applyInverse(e, So) : So.copyFrom(e), r.shape.contains(So.x, So.y))) {
-        var i = !1;
+        var i = false;
         if (r.holes) {
           for (var o = 0; o < r.holes.length; o++) {
             if (r.holes[o].shape.contains(So.x, So.y)) {
-              i = !0;
+              i = true;
               break;
             }
           }
         }
         if (!i) {
-          return !0;
+          return true;
         }
       }
     }
-    return !1;
+    return false;
   };
   t.prototype.updateBatches = function (e) {
     if (this.graphicsData.length) {
@@ -13670,11 +13670,11 @@ var Bo = function (e) {
             this.buildDrawCalls();
           }
         } else {
-          this.batchable = !0;
+          this.batchable = true;
         }
       }
     } else {
-      this.batchable = !0;
+      this.batchable = true;
     }
   };
   t.prototype._compareStyles = function (e, t) {
@@ -13682,20 +13682,20 @@ var Bo = function (e) {
   };
   t.prototype.validateBatching = function () {
     if (this.dirty === this.cacheDirty || !this.graphicsData.length) {
-      return !1;
+      return false;
     }
     for (var e = 0, t = this.graphicsData.length; e < t; e++) {
       var n = this.graphicsData[e];
       var r = n.fillStyle;
       var i = n.lineStyle;
       if (r && !r.texture.baseTexture.valid) {
-        return !1;
+        return false;
       }
       if (i && !i.texture.baseTexture.valid) {
-        return !1;
+        return false;
       }
     }
-    return !0;
+    return true;
   };
   t.prototype.packBatches = function () {
     this.batchDirty++;
@@ -13709,11 +13709,11 @@ var Bo = function (e) {
   };
   t.prototype.isBatchable = function () {
     if (this.points.length > 131070) {
-      return !1;
+      return false;
     }
     for (var e = this.batches, n = 0; n < e.length; n++) {
       if (e[n].style.native) {
-        return !1;
+        return false;
       }
     }
     return this.points.length < 2 * t.BATCHABLE_SIZE;
@@ -13737,7 +13737,7 @@ var Bo = function (e) {
     var o = 0;
     var a = null;
     var s = 0;
-    var c = !1;
+    var c = false;
     var u = $.TRIANGLES;
     var l = 0;
     this.drawCalls.push(i);
@@ -13887,7 +13887,7 @@ var Bo = function (e) {
     }
   };
   t.prototype.addUvs = function (e, t, n, r, i, o) {
-    if (void 0 === o) {
+    if (undefined === o) {
       o = null;
     }
     for (var a = 0, s = t.length, c = n.frame; a < i;) {
@@ -13926,7 +13926,7 @@ var Do = function (e) {
     var t = null !== e && e.apply(this, arguments) || this;
     t.width = 0;
     t.alignment = .5;
-    t.native = !1;
+    t.native = false;
     t.cap = no.BUTT;
     t.join = to.MITER;
     t.miterLimit = 10;
@@ -13953,7 +13953,7 @@ var Do = function (e) {
     this.color = 0;
     this.alignment = .5;
     this.width = 0;
-    this.native = !1;
+    this.native = false;
   };
   return t;
 }(oo);
@@ -13961,7 +13961,7 @@ var Io = new Float32Array(3);
 var Fo = {};
 var Ro = function (e) {
   function t(t) {
-    if (void 0 === t) {
+    if (undefined === t) {
       t = null;
     }
     var n = e.call(this) || this;
@@ -13972,7 +13972,7 @@ var Ro = function (e) {
     n._fillStyle = new oo();
     n._lineStyle = new Do();
     n._matrix = null;
-    n._holeMode = !1;
+    n._holeMode = false;
     n.currentPath = null;
     n.batches = [];
     n.batchTint = -1;
@@ -13989,8 +13989,8 @@ var Ro = function (e) {
     get: function () {
       return this._geometry;
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   t.prototype.clone = function () {
     this.finishPoly();
@@ -14003,8 +14003,8 @@ var Ro = function (e) {
     set: function (e) {
       this.state.blendMode = e;
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(t.prototype, "tint", {
     get: function () {
@@ -14013,38 +14013,38 @@ var Ro = function (e) {
     set: function (e) {
       this._tint = e;
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(t.prototype, "fill", {
     get: function () {
       return this._fillStyle;
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(t.prototype, "line", {
     get: function () {
       return this._lineStyle;
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   t.prototype.lineStyle = function (e, t, n, r, i) {
-    if (void 0 === e) {
+    if (undefined === e) {
       e = null;
     }
-    if (void 0 === t) {
+    if (undefined === t) {
       t = 0;
     }
-    if (void 0 === n) {
+    if (undefined === n) {
       n = 1;
     }
-    if (void 0 === r) {
+    if (undefined === r) {
       r = .5;
     }
-    if (void 0 === i) {
-      i = !1;
+    if (undefined === i) {
+      i = false;
     }
     if ("number" === typeof e) {
       e = {
@@ -14065,7 +14065,7 @@ var Ro = function (e) {
       alpha: 1,
       matrix: null,
       alignment: .5,
-      native: !1,
+      native: false,
       cap: no.BUTT,
       join: to.MITER,
       miterLimit: 10
@@ -14094,12 +14094,12 @@ var Ro = function (e) {
       if (t > 2) {
         this.drawShape(this.currentPath);
         this.currentPath = new ft();
-        this.currentPath.closeStroke = !1;
+        this.currentPath.closeStroke = false;
         this.currentPath.points.push(e[t - 2], e[t - 1]);
       }
     } else {
       this.currentPath = new ft();
-      this.currentPath.closeStroke = !1;
+      this.currentPath.closeStroke = false;
     }
   };
   t.prototype.finishPoly = function () {
@@ -14131,10 +14131,10 @@ var Ro = function (e) {
     return this;
   };
   t.prototype._initCurve = function (e, t) {
-    if (void 0 === e) {
+    if (undefined === e) {
       e = 0;
     }
-    if (void 0 === t) {
+    if (undefined === t) {
       t = 0;
     }
     if (this.currentPath) {
@@ -14175,8 +14175,8 @@ var Ro = function (e) {
     return this;
   };
   t.prototype.arc = function (e, t, n, r, i, o) {
-    if (void 0 === o) {
-      o = !1;
+    if (undefined === o) {
+      o = false;
     }
     if (r === i) {
       return this;
@@ -14209,10 +14209,10 @@ var Ro = function (e) {
     return this;
   };
   t.prototype.beginFill = function (e, t) {
-    if (void 0 === e) {
+    if (undefined === e) {
       e = 0;
     }
-    if (void 0 === t) {
+    if (undefined === t) {
       t = 1;
     }
     return this.beginTextureFill({
@@ -14266,7 +14266,7 @@ var Ro = function (e) {
     for (var e, t = arguments, n = [], r = 0; r < arguments.length; r++) {
       n[r] = t[r];
     }
-    var i = !0;
+    var i = true;
     var o = n[0];
     if (o.points) {
       i = o.closeStroke;
@@ -14293,7 +14293,7 @@ var Ro = function (e) {
     this._fillStyle.reset();
     this._boundsID++;
     this._matrix = null;
-    this._holeMode = !1;
+    this._holeMode = false;
     this.currentPath = null;
     return this;
   };
@@ -14394,7 +14394,7 @@ var Ro = function (e) {
           translationMatrix: new _t(),
           default: In.from({
             uSamplers: i
-          }, !0)
+          }, true)
         };
         var s = e.plugins[n]._shader.program;
         Fo[n] = new gr(s, a);
@@ -14445,7 +14445,7 @@ var Ro = function (e) {
   t.prototype.closePath = function () {
     var e = this.currentPath;
     if (e) {
-      e.closeStroke = !0;
+      e.closeStroke = true;
     }
     return this;
   };
@@ -14455,12 +14455,12 @@ var Ro = function (e) {
   };
   t.prototype.beginHole = function () {
     this.finishPoly();
-    this._holeMode = !0;
+    this._holeMode = true;
     return this;
   };
   t.prototype.endHole = function () {
     this.finishPoly();
-    this._holeMode = !1;
+    this._holeMode = false;
     return this;
   };
   t.prototype.destroy = function (t) {
@@ -14537,10 +14537,10 @@ var Po = function () {
         n.beginPath();
         var y = (S = h).points;
         var b = d.holes;
-        var w = void 0;
-        var E = void 0;
-        var x = void 0;
-        var C = void 0;
+        var w = undefined;
+        var E = undefined;
+        var x = undefined;
+        var C = undefined;
         n.moveTo(y[0], y[1]);
         for (var O = 2; O < y.length; O += 2) {
           n.lineTo(y[O], y[O + 1]);
@@ -14678,14 +14678,14 @@ var Po = function () {
     }
   };
   e.prototype.setPatternTransform = function (e, t) {
-    if (!1 !== this._svgMatrix) {
+    if (false !== this._svgMatrix) {
       if (!this._svgMatrix) {
         var n = document.createElementNS("http://www.w3.org/2000/svg", "svg");
         if (n && n.createSVGMatrix) {
           this._svgMatrix = n.createSVGMatrix();
         }
         if (!this._svgMatrix || !e.setTransform) {
-          return void (this._svgMatrix = !1);
+          return void (this._svgMatrix = false);
         }
       }
       this._svgMatrix.a = t.a;
@@ -14706,7 +14706,7 @@ var Po = function () {
 }();
 var No = new _t();
 Ro.prototype.generateCanvasTexture = function (e, t) {
-  if (void 0 === t) {
+  if (undefined === t) {
     t = 1;
   }
   var n = this.getLocalBounds();
@@ -14726,7 +14726,7 @@ Ro.prototype.generateCanvasTexture = function (e, t) {
   No.ty -= n.y;
   mo.render(this, {
     renderTexture: r,
-    clear: !0,
+    clear: true,
     transform: No
   });
   var i = An.from(r.baseTexture._canvasRenderTarget.canvas, {
@@ -14737,7 +14737,7 @@ Ro.prototype.generateCanvasTexture = function (e, t) {
 };
 Ro.prototype.cachedGraphicsData = [];
 Ro.prototype._renderCanvas = function (e) {
-  if (!0 !== this.isMask) {
+  if (true !== this.isMask) {
     this.finishPoly();
     e.plugins.graphics.render(this);
   }
@@ -14758,7 +14758,7 @@ var jo = function () {
     var c = 0;
     var u = t.baseTexture.getDrawableSource();
     if (!(t.orig.width <= 0 || t.orig.height <= 0) && t.valid && u && t.valid) {
-      n.setBlendMode(e.blendMode, !0);
+      n.setBlendMode(e.blendMode, true);
       n.context.globalAlpha = e.worldAlpha;
       var l = t.baseTexture.scaleMode === ne.LINEAR;
       if (n.smoothProperty && n.context[n.smoothProperty] !== l) {
@@ -14975,8 +14975,8 @@ var Qo = function (e, t) {
 }(zo || (zo = {}));
 var Wo = {
   align: "left",
-  breakWords: !1,
-  dropShadow: !1,
+  breakWords: false,
+  dropShadow: false,
   dropShadowAlpha: 1,
   dropShadowAngle: Math.PI / 6,
   dropShadowBlur: 0,
@@ -14998,9 +14998,9 @@ var Wo = {
   stroke: "black",
   strokeThickness: 0,
   textBaseline: "alphabetic",
-  trim: !1,
+  trim: false,
   whiteSpace: "pre",
-  wordWrap: !1,
+  wordWrap: false,
   wordWrapWidth: 100,
   leading: 0
 };
@@ -15029,8 +15029,8 @@ var Xo = function () {
         this.styleID++;
       }
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(e.prototype, "breakWords", {
     get: function () {
@@ -15042,8 +15042,8 @@ var Xo = function () {
         this.styleID++;
       }
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(e.prototype, "dropShadow", {
     get: function () {
@@ -15055,8 +15055,8 @@ var Xo = function () {
         this.styleID++;
       }
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(e.prototype, "dropShadowAlpha", {
     get: function () {
@@ -15068,8 +15068,8 @@ var Xo = function () {
         this.styleID++;
       }
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(e.prototype, "dropShadowAngle", {
     get: function () {
@@ -15081,8 +15081,8 @@ var Xo = function () {
         this.styleID++;
       }
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(e.prototype, "dropShadowBlur", {
     get: function () {
@@ -15094,8 +15094,8 @@ var Xo = function () {
         this.styleID++;
       }
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(e.prototype, "dropShadowColor", {
     get: function () {
@@ -15108,8 +15108,8 @@ var Xo = function () {
         this.styleID++;
       }
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(e.prototype, "dropShadowDistance", {
     get: function () {
@@ -15121,8 +15121,8 @@ var Xo = function () {
         this.styleID++;
       }
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(e.prototype, "fill", {
     get: function () {
@@ -15135,8 +15135,8 @@ var Xo = function () {
         this.styleID++;
       }
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(e.prototype, "fillGradientType", {
     get: function () {
@@ -15148,8 +15148,8 @@ var Xo = function () {
         this.styleID++;
       }
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(e.prototype, "fillGradientStops", {
     get: function () {
@@ -15158,24 +15158,24 @@ var Xo = function () {
     set: function (e) {
       if (!function (e, t) {
         if (!Array.isArray(e) || !Array.isArray(t)) {
-          return !1;
+          return false;
         }
         if (e.length !== t.length) {
-          return !1;
+          return false;
         }
         for (var n = 0; n < e.length; ++n) {
           if (e[n] !== t[n]) {
-            return !1;
+            return false;
           }
         }
-        return !0;
+        return true;
       }(this._fillGradientStops, e)) {
         this._fillGradientStops = e;
         this.styleID++;
       }
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(e.prototype, "fontFamily", {
     get: function () {
@@ -15187,8 +15187,8 @@ var Xo = function () {
         this.styleID++;
       }
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(e.prototype, "fontSize", {
     get: function () {
@@ -15200,8 +15200,8 @@ var Xo = function () {
         this.styleID++;
       }
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(e.prototype, "fontStyle", {
     get: function () {
@@ -15213,8 +15213,8 @@ var Xo = function () {
         this.styleID++;
       }
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(e.prototype, "fontVariant", {
     get: function () {
@@ -15226,8 +15226,8 @@ var Xo = function () {
         this.styleID++;
       }
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(e.prototype, "fontWeight", {
     get: function () {
@@ -15239,8 +15239,8 @@ var Xo = function () {
         this.styleID++;
       }
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(e.prototype, "letterSpacing", {
     get: function () {
@@ -15252,8 +15252,8 @@ var Xo = function () {
         this.styleID++;
       }
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(e.prototype, "lineHeight", {
     get: function () {
@@ -15265,8 +15265,8 @@ var Xo = function () {
         this.styleID++;
       }
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(e.prototype, "leading", {
     get: function () {
@@ -15278,8 +15278,8 @@ var Xo = function () {
         this.styleID++;
       }
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(e.prototype, "lineJoin", {
     get: function () {
@@ -15291,8 +15291,8 @@ var Xo = function () {
         this.styleID++;
       }
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(e.prototype, "miterLimit", {
     get: function () {
@@ -15304,8 +15304,8 @@ var Xo = function () {
         this.styleID++;
       }
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(e.prototype, "padding", {
     get: function () {
@@ -15317,8 +15317,8 @@ var Xo = function () {
         this.styleID++;
       }
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(e.prototype, "stroke", {
     get: function () {
@@ -15331,8 +15331,8 @@ var Xo = function () {
         this.styleID++;
       }
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(e.prototype, "strokeThickness", {
     get: function () {
@@ -15344,8 +15344,8 @@ var Xo = function () {
         this.styleID++;
       }
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(e.prototype, "textBaseline", {
     get: function () {
@@ -15357,8 +15357,8 @@ var Xo = function () {
         this.styleID++;
       }
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(e.prototype, "trim", {
     get: function () {
@@ -15370,8 +15370,8 @@ var Xo = function () {
         this.styleID++;
       }
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(e.prototype, "whiteSpace", {
     get: function () {
@@ -15383,8 +15383,8 @@ var Xo = function () {
         this.styleID++;
       }
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(e.prototype, "wordWrap", {
     get: function () {
@@ -15396,8 +15396,8 @@ var Xo = function () {
         this.styleID++;
       }
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(e.prototype, "wordWrapWidth", {
     get: function () {
@@ -15409,8 +15409,8 @@ var Xo = function () {
         this.styleID++;
       }
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   e.prototype.toFontString = function () {
     var e = "number" === typeof this.fontSize ? this.fontSize + "px" : this.fontSize;
@@ -15461,10 +15461,10 @@ var Jo = function () {
     this.fontProperties = c;
   }
   e.measureText = function (t, n, r, i) {
-    if (void 0 === i) {
+    if (undefined === i) {
       i = e._canvas;
     }
-    r = void 0 === r || null === r ? n.wordWrap : r;
+    r = undefined === r || null === r ? n.wordWrap : r;
     var o = n.toFontString();
     var a = e.measureFont(o);
     if (0 === a.fontSize) {
@@ -15490,7 +15490,7 @@ var Jo = function () {
     return new e(t, n, h, _, c, u, p + n.leading, l, a);
   };
   e.wordWrap = function (t, n, r) {
-    if (void 0 === r) {
+    if (undefined === r) {
       r = e._canvas;
     }
     for (var i = r.getContext("2d"), o = 0, a = "", s = "", c = Object.create(null), u = n.letterSpacing, l = n.whiteSpace, f = e.collapseSpaces(l), d = e.collapseNewlines(l), h = !f, p = n.wordWrapWidth + u, _ = e.tokenize(t), A = 0; A < _.length; A++) {
@@ -15534,7 +15534,7 @@ var Jo = function () {
             var k = e.getFromCache(E, u, c, i);
             if (k + o > p) {
               s += e.addLine(a);
-              h = !1;
+              h = false;
               a = "";
               o = 0;
             }
@@ -15549,13 +15549,13 @@ var Jo = function () {
           }
           var S = A === _.length - 1;
           s += e.addLine(g, !S);
-          h = !1;
+          h = false;
           a = "";
           o = 0;
         }
       } else {
         if (y + o > p) {
-          h = !1;
+          h = false;
           s += e.addLine(a);
           a = "";
           o = 0;
@@ -15566,11 +15566,11 @@ var Jo = function () {
         }
       }
     }
-    return s += e.addLine(a, !1);
+    return s += e.addLine(a, false);
   };
   e.addLine = function (t, n) {
-    if (void 0 === n) {
-      n = !0;
+    if (undefined === n) {
+      n = true;
     }
     t = e.trimRight(t);
     return t = n ? t + "\n" : t;
@@ -15637,7 +15637,7 @@ var Jo = function () {
     return t;
   };
   e.canBreakChars = function (e, t, n, r, i) {
-    return !0;
+    return true;
   };
   e.wordWrapSplit = function (e) {
     return e.split("");
@@ -15672,11 +15672,11 @@ var Jo = function () {
     var f = 4 * a;
     var d = 0;
     var h = 0;
-    var p = !1;
+    var p = false;
     for (d = 0; d < s; ++d) {
       for (var _ = 0; _ < f; _ += 4) {
         if (255 !== u[h + _]) {
-          p = !0;
+          p = true;
           break;
         }
       }
@@ -15685,10 +15685,10 @@ var Jo = function () {
       }
       h += f;
     }
-    for (n.ascent = s - d, h = l - f, p = !1, d = c; d > s; --d) {
+    for (n.ascent = s - d, h = l - f, p = false, d = c; d > s; --d) {
       for (_ = 0; _ < f; _ += 4) {
         if (255 !== u[h + _]) {
-          p = !0;
+          p = true;
           break;
         }
       }
@@ -15703,7 +15703,7 @@ var Jo = function () {
     return n;
   };
   e.clearMetrics = function (t) {
-    if (void 0 === t) {
+    if (undefined === t) {
       t = "";
     }
     if (t) {
@@ -15734,17 +15734,17 @@ Jo.HEIGHT_MULTIPLIER = 2;
 Jo._newlines = [10, 13];
 Jo._breakingSpaces = [9, 32, 8192, 8193, 8194, 8195, 8196, 8197, 8198, 8200, 8201, 8202, 8287, 12288];
 var ea = {
-  texture: !0,
-  children: !1,
-  baseTexture: !0
+  texture: true,
+  children: false,
+  baseTexture: true
 };
 var ta = function (e) {
   function t(t, n, r) {
     var i = this;
-    var o = !1;
+    var o = false;
     if (!r) {
       r = document.createElement("canvas");
-      o = !0;
+      o = true;
     }
     r.width = 3;
     r.height = 3;
@@ -15755,7 +15755,7 @@ var ta = function (e) {
     i.canvas = r;
     i.context = i.canvas.getContext("2d");
     i._resolution = fe.RESOLUTION;
-    i._autoResolution = !0;
+    i._autoResolution = true;
     i._text = null;
     i._style = null;
     i._styleListener = null;
@@ -15775,7 +15775,7 @@ var ta = function (e) {
   t.prototype.updateText = function (e) {
     var n = this._style;
     if (this.localStyleID !== n.styleID) {
-      this.dirty = !0;
+      this.dirty = true;
       this.localStyleID = n.styleID;
     }
     if (this.dirty || !e) {
@@ -15836,7 +15836,7 @@ var ta = function (e) {
             }
           }
           if (n.stroke && n.strokeThickness) {
-            this.drawLetterSpacing(u[w], r + n.padding, i + n.padding - g, !0);
+            this.drawLetterSpacing(u[w], r + n.padding, i + n.padding - g, true);
           }
           if (n.fill) {
             this.drawLetterSpacing(u[w], r + n.padding, i + n.padding - g);
@@ -15847,8 +15847,8 @@ var ta = function (e) {
     }
   };
   t.prototype.drawLetterSpacing = function (e, t, n, r) {
-    if (void 0 === r) {
-      r = !1;
+    if (undefined === r) {
+      r = false;
     }
     var i = this._style.letterSpacing;
     if (0 !== i) {
@@ -15891,22 +15891,22 @@ var ta = function (e) {
     this._onTextureUpdate();
     o.setRealSize(e.width, e.height, this._resolution);
     this._recursivePostUpdateTransform();
-    this.dirty = !1;
+    this.dirty = false;
   };
   t.prototype._render = function (t) {
     if (this._autoResolution && this._resolution !== t.resolution) {
       this._resolution = t.resolution;
-      this.dirty = !0;
+      this.dirty = true;
     }
-    this.updateText(!0);
+    this.updateText(true);
     e.prototype._render.call(this, t);
   };
   t.prototype.getLocalBounds = function (t) {
-    this.updateText(!0);
+    this.updateText(true);
     return e.prototype.getLocalBounds.call(this, t);
   };
   t.prototype._calculateBounds = function () {
-    this.updateText(!0);
+    this.updateText(true);
     this.calculateVertices();
     this._bounds.addQuad(this.vertexData);
   };
@@ -15951,7 +15951,7 @@ var ta = function (e) {
       var v = u.length + 1;
       var m = 1;
       for (d = 0; d < u.length; d++) {
-        var y = void 0;
+        var y = undefined;
         y = "number" === typeof l[d] ? l[d] : m / v;
         r.addColorStop(y, u[d]);
         m++;
@@ -15976,31 +15976,31 @@ var ta = function (e) {
   };
   Object.defineProperty(t.prototype, "width", {
     get: function () {
-      this.updateText(!0);
+      this.updateText(true);
       return Math.abs(this.scale.x) * this._texture.orig.width;
     },
     set: function (e) {
-      this.updateText(!0);
+      this.updateText(true);
       var t = He(this.scale.x) || 1;
       this.scale.x = t * e / this._texture.orig.width;
       this._width = e;
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(t.prototype, "height", {
     get: function () {
-      this.updateText(!0);
+      this.updateText(true);
       return Math.abs(this.scale.y) * this._texture.orig.height;
     },
     set: function (e) {
-      this.updateText(!0);
+      this.updateText(true);
       var t = He(this.scale.y) || 1;
       this.scale.y = t * e / this._texture.orig.height;
       this._height = e;
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(t.prototype, "style", {
     get: function () {
@@ -16010,48 +16010,48 @@ var ta = function (e) {
       e = e || {};
       this._style = e instanceof Xo ? e : new Xo(e);
       this.localStyleID = -1;
-      this.dirty = !0;
+      this.dirty = true;
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(t.prototype, "text", {
     get: function () {
       return this._text;
     },
     set: function (e) {
-      e = String(null === e || void 0 === e ? "" : e);
+      e = String(null === e || undefined === e ? "" : e);
       if (this._text !== e) {
         this._text = e;
-        this.dirty = !0;
+        this.dirty = true;
       }
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(t.prototype, "resolution", {
     get: function () {
       return this._resolution;
     },
     set: function (e) {
-      this._autoResolution = !1;
+      this._autoResolution = false;
       if (this._resolution !== e) {
         this._resolution = e;
-        this.dirty = !0;
+        this.dirty = true;
       }
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
-  t.nextLineHeightBehavior = !1;
+  t.nextLineHeightBehavior = false;
   return t;
 }(ji);
 ta.prototype._renderCanvas = function (e) {
   if (this._autoResolution && this._resolution !== e.resolution) {
     this._resolution = e.resolution;
-    this.dirty = !0;
+    this.dirty = true;
   }
-  this.updateText(!0);
+  this.updateText(true);
   ji.prototype._renderCanvas.call(this, e);
 };
 var na = function (e, t) {
@@ -16067,22 +16067,22 @@ var na = function (e, t) {
 };
 var ra = function (e) {
   function t(t, n) {
-    if (void 0 === n) {
-      n = !0;
+    if (undefined === n) {
+      n = true;
     }
     var r = e.call(this, t[0] instanceof An ? t[0] : t[0].texture) || this;
     r._textures = null;
     r._durations = null;
     r._autoUpdate = n;
-    r._isConnectedToTicker = !1;
+    r._isConnectedToTicker = false;
     r.animationSpeed = 1;
-    r.loop = !0;
-    r.updateAnchor = !1;
+    r.loop = true;
+    r.updateAnchor = false;
     r.onComplete = null;
     r.onFrameChange = null;
     r.onLoop = null;
     r._currentTime = 0;
-    r._playing = !1;
+    r._playing = false;
     r._previousFrame = null;
     r.textures = t;
     return r;
@@ -16096,19 +16096,19 @@ var ra = function (e) {
   })(t, e);
   t.prototype.stop = function () {
     if (this._playing) {
-      this._playing = !1;
+      this._playing = false;
       if (this._autoUpdate && this._isConnectedToTicker) {
         kt.shared.remove(this.update, this);
-        this._isConnectedToTicker = !1;
+        this._isConnectedToTicker = false;
       }
     }
   };
   t.prototype.play = function () {
     if (!this._playing) {
-      this._playing = !0;
+      this._playing = true;
       if (this._autoUpdate && !this._isConnectedToTicker) {
         kt.shared.add(this.update, this, Et.HIGH);
-        this._isConnectedToTicker = !0;
+        this._isConnectedToTicker = true;
       }
     }
   };
@@ -16209,8 +16209,8 @@ var ra = function (e) {
     get: function () {
       return this._textures.length;
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(t.prototype, "textures", {
     get: function () {
@@ -16232,8 +16232,8 @@ var ra = function (e) {
       this.gotoAndStop(0);
       this.updateTexture();
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(t.prototype, "currentFrame", {
     get: function () {
@@ -16243,15 +16243,15 @@ var ra = function (e) {
       }
       return e;
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(t.prototype, "playing", {
     get: function () {
       return this._playing;
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(t.prototype, "autoUpdate", {
     get: function () {
@@ -16262,17 +16262,17 @@ var ra = function (e) {
         this._autoUpdate = e;
         if (!this._autoUpdate && this._isConnectedToTicker) {
           kt.shared.remove(this.update, this);
-          this._isConnectedToTicker = !1;
+          this._isConnectedToTicker = false;
         } else {
           if (this._autoUpdate && !this._isConnectedToTicker && this._playing) {
             kt.shared.add(this.update, this);
-            this._isConnectedToTicker = !0;
+            this._isConnectedToTicker = true;
           }
         }
       }
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   return t;
 }(ji);
@@ -16305,8 +16305,8 @@ var oa = function (e) {
     e.prototype = null === t ? Object.create(t) : (n.prototype = t.prototype, new n());
   })(t, e);
   t.prototype._loadMatrix = function (e, t) {
-    if (void 0 === t) {
-      t = !1;
+    if (undefined === t) {
+      t = false;
     }
     var n = e;
     if (t) {
@@ -16373,7 +16373,7 @@ var oa = function (e) {
     this._loadMatrix(i, t);
   };
   t.prototype.saturate = function (e, t) {
-    if (void 0 === e) {
+    if (undefined === e) {
       e = 0;
     }
     var n = 2 * e / 3 + 1;
@@ -16430,7 +16430,7 @@ var oa = function (e) {
     this._loadMatrix([2, -.4, .5, 0, 0, -.5, 2, -.4, 0, 0, -.4, -.5, 3, 0, 0, 0, 0, 0, 1, 0], e);
   };
   t.prototype.reset = function () {
-    this._loadMatrix([1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0], !1);
+    this._loadMatrix([1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0], false);
   };
   Object.defineProperty(t.prototype, "matrix", {
     get: function () {
@@ -16439,8 +16439,8 @@ var oa = function (e) {
     set: function (e) {
       this.uniforms.m = e;
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(t.prototype, "alpha", {
     get: function () {
@@ -16449,8 +16449,8 @@ var oa = function (e) {
     set: function (e) {
       this.uniforms.uAlpha = e;
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   return t;
 }(mr);
@@ -16470,7 +16470,7 @@ var sa = function (e) {
   function t(t, n) {
     var r = this;
     var i = new _t();
-    t.renderable = !1;
+    t.renderable = false;
     (r = e.call(this, "attribute vec2 aVertexPosition;\n\nuniform mat3 projectionMatrix;\nuniform mat3 filterMatrix;\n\nvarying vec2 vTextureCoord;\nvarying vec2 vFilterCoord;\n\nuniform vec4 inputSize;\nuniform vec4 outputFrame;\n\nvec4 filterVertexPosition( void )\n{\n    vec2 position = aVertexPosition * max(outputFrame.zw, vec2(0.)) + outputFrame.xy;\n\n    return vec4((projectionMatrix * vec3(position, 1.0)).xy, 0.0, 1.0);\n}\n\nvec2 filterTextureCoord( void )\n{\n    return aVertexPosition * (outputFrame.zw * inputSize.zw);\n}\n\nvoid main(void)\n{\n\tgl_Position = filterVertexPosition();\n\tvTextureCoord = filterTextureCoord();\n\tvFilterCoord = ( filterMatrix * vec3( vTextureCoord, 1.0)  ).xy;\n}\n", "varying vec2 vFilterCoord;\nvarying vec2 vTextureCoord;\n\nuniform vec2 scale;\nuniform mat2 rotation;\nuniform sampler2D uSampler;\nuniform sampler2D mapSampler;\n\nuniform highp vec4 inputSize;\nuniform vec4 inputClamp;\n\nvoid main(void)\n{\n  vec4 map =  texture2D(mapSampler, vFilterCoord);\n\n  map -= 0.5;\n  map.xy = scale * inputSize.zw * (rotation * map.xy);\n\n  gl_FragColor = texture2D(uSampler, clamp(vec2(vTextureCoord.x + map.x, vTextureCoord.y + map.y), inputClamp.xy, inputClamp.zw));\n}\n", {
       mapSampler: t._texture,
       filterMatrix: i,
@@ -16481,7 +16481,7 @@ var sa = function (e) {
       rotation: new Float32Array([1, 0, 0, 1])
     }) || this).maskSprite = t;
     r.maskMatrix = i;
-    if (!(null !== n && void 0 !== n)) {
+    if (!(null !== n && undefined !== n)) {
       n = 20;
     }
     r.scale = new ht(n, n);
@@ -16516,8 +16516,8 @@ var sa = function (e) {
     set: function (e) {
       this.uniforms.mapSampler = e;
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   return t;
 }(mr);
@@ -16534,14 +16534,14 @@ var ca = function (e, t) {
 };
 var ua = function (e) {
   function t(t, n, r) {
-    if (void 0 === t) {
+    if (undefined === t) {
       t = 4;
     }
-    if (void 0 === n) {
+    if (undefined === n) {
       n = 3;
     }
-    if (void 0 === r) {
-      r = !1;
+    if (undefined === r) {
+      r = false;
     }
     var i = e.call(this, "attribute vec2 aVertexPosition;\nattribute vec2 aTextureCoord;\n\nuniform mat3 projectionMatrix;\n\nvarying vec2 vTextureCoord;\n\nvoid main(void)\n{\n    gl_Position = vec4((projectionMatrix * vec3(aVertexPosition, 1.0)).xy, 0.0, 1.0);\n    vTextureCoord = aTextureCoord;\n}", r ? "\nvarying vec2 vTextureCoord;\nuniform sampler2D uSampler;\n\nuniform vec2 uOffset;\nuniform vec4 filterClamp;\n\nvoid main(void)\n{\n    vec4 color = vec4(0.0);\n\n    // Sample top left pixel\n    color += texture2D(uSampler, clamp(vec2(vTextureCoord.x - uOffset.x, vTextureCoord.y + uOffset.y), filterClamp.xy, filterClamp.zw));\n\n    // Sample top right pixel\n    color += texture2D(uSampler, clamp(vec2(vTextureCoord.x + uOffset.x, vTextureCoord.y + uOffset.y), filterClamp.xy, filterClamp.zw));\n\n    // Sample bottom right pixel\n    color += texture2D(uSampler, clamp(vec2(vTextureCoord.x + uOffset.x, vTextureCoord.y - uOffset.y), filterClamp.xy, filterClamp.zw));\n\n    // Sample bottom left pixel\n    color += texture2D(uSampler, clamp(vec2(vTextureCoord.x - uOffset.x, vTextureCoord.y - uOffset.y), filterClamp.xy, filterClamp.zw));\n\n    // Average\n    color *= 0.25;\n\n    gl_FragColor = color;\n}\n" : "\nvarying vec2 vTextureCoord;\nuniform sampler2D uSampler;\n\nuniform vec2 uOffset;\n\nvoid main(void)\n{\n    vec4 color = vec4(0.0);\n\n    // Sample top left pixel\n    color += texture2D(uSampler, vec2(vTextureCoord.x - uOffset.x, vTextureCoord.y + uOffset.y));\n\n    // Sample top right pixel\n    color += texture2D(uSampler, vec2(vTextureCoord.x + uOffset.x, vTextureCoord.y + uOffset.y));\n\n    // Sample bottom right pixel\n    color += texture2D(uSampler, vec2(vTextureCoord.x + uOffset.x, vTextureCoord.y - uOffset.y));\n\n    // Sample bottom left pixel\n    color += texture2D(uSampler, vec2(vTextureCoord.x - uOffset.x, vTextureCoord.y - uOffset.y));\n\n    // Average\n    color *= 0.25;\n\n    gl_FragColor = color;\n}") || this;
     i._kernels = [];
@@ -16576,7 +16576,7 @@ var ua = function (e) {
       this.uniforms.uOffset[1] = i * a;
       e.applyFilter(this, t, n, r);
     } else {
-      for (var s = e.getFilterTexture(), c = t, u = s, l = void 0, f = this._quality - 1, d = 0; d < f; d++) {
+      for (var s = e.getFilterTexture(), c = t, u = s, l = undefined, f = this._quality - 1, d = 0; d < f; d++) {
         i = this._kernels[d] + .5;
         this.uniforms.uOffset[0] = i * o;
         this.uniforms.uOffset[1] = i * a;
@@ -16624,15 +16624,15 @@ var ua = function (e) {
         this._quality = 1;
       }
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(t.prototype, "clamp", {
     get: function () {
       return this._clamp;
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(t.prototype, "pixelSize", {
     get: function () {
@@ -16657,8 +16657,8 @@ var ua = function (e) {
         }
       }
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(t.prototype, "quality", {
     get: function () {
@@ -16668,8 +16668,8 @@ var ua = function (e) {
       this._quality = Math.max(1, Math.round(e));
       this._generateKernels();
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(t.prototype, "blur", {
     get: function () {
@@ -16679,8 +16679,8 @@ var ua = function (e) {
       this._blur = e;
       this._generateKernels();
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   return t;
 }(mr);
@@ -16738,7 +16738,7 @@ var fa = function (e) {
     var i = e.getFilterTexture();
     this._tintFilter.apply(e, t, i, 1);
     this._blurFilter.apply(e, i, n, r);
-    if (!0 !== this.shadowOnly) {
+    if (true !== this.shadowOnly) {
       e.applyFilter(this, t, n, 0);
     }
     e.returnFilterTexture(i);
@@ -16762,8 +16762,8 @@ var fa = function (e) {
         this._blurFilter.resolution = e;
       }
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(t.prototype, "distance", {
     get: function () {
@@ -16774,8 +16774,8 @@ var fa = function (e) {
       this._updatePadding();
       this._updateShift();
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(t.prototype, "rotation", {
     get: function () {
@@ -16785,8 +16785,8 @@ var fa = function (e) {
       this.angle = e * st;
       this._updateShift();
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(t.prototype, "alpha", {
     get: function () {
@@ -16795,8 +16795,8 @@ var fa = function (e) {
     set: function (e) {
       this._tintFilter.uniforms.alpha = e;
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(t.prototype, "color", {
     get: function () {
@@ -16805,8 +16805,8 @@ var fa = function (e) {
     set: function (e) {
       xe(e, this._tintFilter.uniforms.color);
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(t.prototype, "kernels", {
     get: function () {
@@ -16815,8 +16815,8 @@ var fa = function (e) {
     set: function (e) {
       this._blurFilter.kernels = e;
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(t.prototype, "blur", {
     get: function () {
@@ -16826,8 +16826,8 @@ var fa = function (e) {
       this._blurFilter.blur = e;
       this._updatePadding();
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(t.prototype, "quality", {
     get: function () {
@@ -16836,8 +16836,8 @@ var fa = function (e) {
     set: function (e) {
       this._blurFilter.quality = e;
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(t.prototype, "pixelSize", {
     get: function () {
@@ -16846,15 +16846,15 @@ var fa = function (e) {
     set: function (e) {
       this._blurFilter.pixelSize = e;
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   t.defaults = {
     rotation: 45,
     distance: 5,
     color: 0,
     alpha: .5,
-    shadowOnly: !1,
+    shadowOnly: false,
     kernels: null,
     blur: 2,
     quality: 3,
@@ -16876,7 +16876,7 @@ var da = function (e, t) {
 };
 var ha = function (e) {
   function t(t) {
-    if (void 0 === t) {
+    if (undefined === t) {
       t = 10;
     }
     var n = e.call(this, "attribute vec2 aVertexPosition;\nattribute vec2 aTextureCoord;\n\nuniform mat3 projectionMatrix;\n\nvarying vec2 vTextureCoord;\n\nvoid main(void)\n{\n    gl_Position = vec4((projectionMatrix * vec3(aVertexPosition, 1.0)).xy, 0.0, 1.0);\n    vTextureCoord = aTextureCoord;\n}", "precision mediump float;\n\nvarying vec2 vTextureCoord;\n\nuniform vec2 size;\nuniform sampler2D uSampler;\n\nuniform vec4 filterArea;\n\nvec2 mapCoord( vec2 coord )\n{\n    coord *= filterArea.xy;\n    coord += filterArea.zw;\n\n    return coord;\n}\n\nvec2 unmapCoord( vec2 coord )\n{\n    coord -= filterArea.zw;\n    coord /= filterArea.xy;\n\n    return coord;\n}\n\nvec2 pixelate(vec2 coord, vec2 size)\n{\n\treturn floor( coord / size ) * size;\n}\n\nvoid main(void)\n{\n    vec2 coord = mapCoord(vTextureCoord);\n\n    coord = pixelate(coord, size);\n\n    coord = unmapCoord(coord);\n\n    gl_FragColor = texture2D(uSampler, coord);\n}\n") || this;
@@ -16900,8 +16900,8 @@ var ha = function (e) {
       }
       this.uniforms.size = e;
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   return t;
 }(mr);
@@ -16936,8 +16936,8 @@ var _a = function (e) {
     set: function (e) {
       this.uniforms.offset = e;
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(t.prototype, "radius", {
     get: function () {
@@ -16946,8 +16946,8 @@ var _a = function (e) {
     set: function (e) {
       this.uniforms.radius = e;
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(t.prototype, "angle", {
     get: function () {
@@ -16956,8 +16956,8 @@ var _a = function (e) {
     set: function (e) {
       this.uniforms.angle = e;
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   t.defaults = {
     radius: 200,
@@ -16980,7 +16980,7 @@ var Aa = function (e, t) {
 };
 var ga = function (e) {
   function t(t) {
-    if (void 0 === t) {
+    if (undefined === t) {
       t = 8;
     }
     var n = e.call(this, "attribute vec2 aVertexPosition;\nattribute vec2 aTextureCoord;\n\nuniform mat3 projectionMatrix;\n\nvarying vec2 vTextureCoord;\n\nvoid main(void)\n{\n    gl_Position = vec4((projectionMatrix * vec3(aVertexPosition, 1.0)).xy, 0.0, 1.0);\n    vTextureCoord = aTextureCoord;\n}", "varying vec2 vTextureCoord;\n\nuniform vec4 filterArea;\nuniform float pixelSize;\nuniform sampler2D uSampler;\n\nvec2 mapCoord( vec2 coord )\n{\n    coord *= filterArea.xy;\n    coord += filterArea.zw;\n\n    return coord;\n}\n\nvec2 unmapCoord( vec2 coord )\n{\n    coord -= filterArea.zw;\n    coord /= filterArea.xy;\n\n    return coord;\n}\n\nvec2 pixelate(vec2 coord, vec2 size)\n{\n    return floor( coord / size ) * size;\n}\n\nvec2 getMod(vec2 coord, vec2 size)\n{\n    return mod( coord , size) / size;\n}\n\nfloat character(float n, vec2 p)\n{\n    p = floor(p*vec2(4.0, -4.0) + 2.5);\n\n    if (clamp(p.x, 0.0, 4.0) == p.x)\n    {\n        if (clamp(p.y, 0.0, 4.0) == p.y)\n        {\n            if (int(mod(n/exp2(p.x + 5.0*p.y), 2.0)) == 1) return 1.0;\n        }\n    }\n    return 0.0;\n}\n\nvoid main()\n{\n    vec2 coord = mapCoord(vTextureCoord);\n\n    // get the rounded color..\n    vec2 pixCoord = pixelate(coord, vec2(pixelSize));\n    pixCoord = unmapCoord(pixCoord);\n\n    vec4 color = texture2D(uSampler, pixCoord);\n\n    // determine the character to use\n    float gray = (color.r + color.g + color.b) / 3.0;\n\n    float n =  65536.0;             // .\n    if (gray > 0.2) n = 65600.0;    // :\n    if (gray > 0.3) n = 332772.0;   // *\n    if (gray > 0.4) n = 15255086.0; // o\n    if (gray > 0.5) n = 23385164.0; // &\n    if (gray > 0.6) n = 15252014.0; // 8\n    if (gray > 0.7) n = 13199452.0; // @\n    if (gray > 0.8) n = 11512810.0; // #\n\n    // get the mod..\n    vec2 modd = getMod(coord, vec2(pixelSize));\n\n    gl_FragColor = color * character( n, vec2(-1.0) + modd * 2.0);\n\n}\n") || this;
@@ -17001,8 +17001,8 @@ var ga = function (e) {
     set: function (e) {
       this.uniforms.pixelSize = e;
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   return t;
 }(mr);
@@ -17067,7 +17067,7 @@ Nn.prototype.push = function (e, t) {
   i.resolution = a;
   i.legacy = u;
   i.target = e;
-  i.sourceFrame.copyFrom(e.filterArea || e.getBounds(!0));
+  i.sourceFrame.copyFrom(e.filterArea || e.getBounds(true));
   i.sourceFrame.pad(s);
   if (c) {
     var d = new ct(o.sourceFrame.x - o.sourceFrame.width / 2, o.sourceFrame.y - o.sourceFrame.height / 2, 2 * o.sourceFrame.width, 2 * o.sourceFrame.height);

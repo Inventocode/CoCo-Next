@@ -3,9 +3,9 @@
 var r = require("./1046/index");
 var i = require("./568");
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.default = void 0;
+exports.default = undefined;
 var o = i(require("./746"));
 var a = i(require("./1044"));
 var s = i(require("./1045"));
@@ -34,7 +34,7 @@ function g(e) {
   for (var t = 1; t < arguments.length; t++) {
     var n = null != arguments[t] ? arguments[t] : {};
     if (t % 2) {
-      A(Object(n), !0).forEach(function (t) {
+      A(Object(n), true).forEach(function (t) {
         (0, o.default)(e, t, n[t]);
       });
     } else {
@@ -52,19 +52,19 @@ function g(e) {
 function v(e) {
   var t = function () {
     if ("undefined" === typeof Reflect || !Reflect.construct) {
-      return !1;
+      return false;
     }
     if (Reflect.construct.sham) {
-      return !1;
+      return false;
     }
     if ("function" === typeof Proxy) {
-      return !0;
+      return true;
     }
     try {
       Date.prototype.toString.call(Reflect.construct(Date, [], function () {}));
-      return !0;
+      return true;
     } catch (e) {
-      return !1;
+      return false;
     }
   }();
   return function () {
@@ -92,14 +92,14 @@ var m = function (e) {
         r.props.onAfterChange(r.getValue());
       }
       r.setState({
-        dragging: !1
+        dragging: false
       });
     };
-    var i = void 0 !== e.defaultValue ? e.defaultValue : e.min;
-    var o = void 0 !== e.value ? e.value : i;
+    var i = undefined !== e.defaultValue ? e.defaultValue : e.min;
+    var o = undefined !== e.value ? e.value : i;
     r.state = {
       value: r.trimAlignValue(o),
-      dragging: !1
+      dragging: false
     };
     (0, d.default)(!("minimumTrackStyle" in e), "minimumTrackStyle will be deprecated, please use trackStyle instead.");
     (0, d.default)(!("maximumTrackStyle" in e), "maximumTrackStyle will be deprecated, please use railStyle instead.");
@@ -128,7 +128,7 @@ var m = function (e) {
         var n = this.props;
         var r = n.value;
         var i = n.onChange;
-        var o = void 0 !== r ? r : t.value;
+        var o = undefined !== r ? r : t.value;
         var a = this.trimAlignValue(o, this.props);
         if (a !== t.value) {
           this.setState({
@@ -158,7 +158,7 @@ var m = function (e) {
     key: "onStart",
     value: function (e) {
       this.setState({
-        dragging: !0
+        dragging: true
       });
       var t = this.props;
       var n = this.getValue();
@@ -225,7 +225,7 @@ var m = function (e) {
   }, {
     key: "trimAlignValue",
     value: function (e) {
-      var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+      var t = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : {};
       if (null === e) {
         return null;
       }
@@ -279,7 +279,7 @@ var m = function (e) {
           return e.saveHandle(0, t);
         }
       });
-      var O = void 0 !== v ? this.calcOffset(v) : 0;
+      var O = undefined !== v ? this.calcOffset(v) : 0;
       var k = s[0] || s;
       return {
         tracks: f.default.createElement(h.default, {

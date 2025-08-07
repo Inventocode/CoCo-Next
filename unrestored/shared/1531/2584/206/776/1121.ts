@@ -1,4 +1,4 @@
-var r = require("../../1/index");
+var r = require("regenerator-runtime");
 var o = require("../../36/2668/220");
 var i = require("../../36/2668/230");
 var a = require("./2210/756/index");

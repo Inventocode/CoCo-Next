@@ -22,6 +22,6 @@ var l = 640;
 var u = 16;
 var d = "#111111ff";
 var p = "#e4f5ffff";
-var f = !1;
-var h = !1;
+var f = false;
+var h = false;
 export default p;

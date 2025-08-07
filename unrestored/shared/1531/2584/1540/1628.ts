@@ -6,12 +6,12 @@ var s = require("./1659/386/index");
 var c = require("./1557/707");
 r({
   target: "Object",
-  stat: !0,
+  stat: true,
   sham: !o
 }, {
   getOwnPropertyDescriptors: function (e) {
     for (var t, n, r = a(e), o = s.f, l = i(r), u = {}, d = 0; l.length > d;) {
-      if (void 0 !== (n = o(r, t = l[d++]))) {
+      if (undefined !== (n = o(r, t = l[d++]))) {
         c(u, t, n);
       }
     }

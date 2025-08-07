@@ -1,10 +1,10 @@
 "use strict";
 
 export { s as a };
-var r = require("./215/index");
-var i = require("./34/index");
-var o = require("./65");
-var a = require("./122");
+import r = require("./215/index");
+import i = require("./34/index");
+import o = require("./65");
+import a = require("./122");
 var s = function () {
   function e(e, t) {
     var n = this;
@@ -43,7 +43,7 @@ var s = function () {
     var r = function () {
       n.remove_effects();
     };
-    if (Object(o.m)(t)) {
+    if (o.m(t)) {
       this.target_sprite = t.background;
       t.add_listener("destroy", r);
       this.get_target_position = function () {
@@ -84,7 +84,7 @@ var s = function () {
           break;
         case 4:
           n = new i.A();
-          Object(o.m)(this.target);
+          o.m(this.target);
           this.target.add_listener("change", r);
           break;
         case 6:
@@ -93,7 +93,7 @@ var s = function () {
       this.effect_filter_list[e] = n;
       this.update_target_filter();
     }
-    n.enabled = !0;
+    n.enabled = true;
     return n;
   };
   e.prototype.update_target_filter = function () {
@@ -136,7 +136,7 @@ var s = function () {
     var t = this.get_effect_filter(0);
     if (this.is_color_matrix_filter(t)) {
       this.hue_degree = e;
-      t.hue(this.hue_degree, !1);
+      t.hue(this.hue_degree, false);
     }
   };
   e.prototype.get_hue = function () {
@@ -146,7 +146,7 @@ var s = function () {
     var t = this.get_effect_filter(1);
     if (this.is_color_matrix_filter(t)) {
       this.brightness = e;
-      var n = Object(r.a)(-1, 1, e / 100 - 1);
+      var n = r.a(-1, 1, e / 100 - 1);
       t.matrix = [1, 0, 0, 0, n, 0, 1, 0, 0, n, 0, 0, 1, 0, n, 0, 0, 0, 1, 0];
     }
   };
@@ -156,8 +156,8 @@ var s = function () {
   e.prototype.set_saturate = function (e) {
     var t = this.get_effect_filter(5);
     if (this.is_color_matrix_filter(t)) {
-      this.saturation = Object(r.a)(-100, 100, e);
-      t.saturate(this.saturation / 100, !1);
+      this.saturation = r.a(-100, 100, e);
+      t.saturate(this.saturation / 100, false);
     }
   };
   e.prototype.get_saturate = function () {
@@ -167,7 +167,7 @@ var s = function () {
     var t = this.get_effect_filter(2);
     if (this.is_pixelate_filter(t)) {
       var n = Math.min(this.target_sprite.width, this.target_sprite.height);
-      this.pixelate_size = Object(r.a)(1, n, e);
+      this.pixelate_size = r.a(1, n, e);
       t.size = this.pixelate_size;
     }
   };
@@ -181,7 +181,7 @@ var s = function () {
       if (!this.is_displacement_filter(n)) {
         return;
       }
-      return void (this.displacement_speed = Object(r.a)(0, 100, e));
+      return void (this.displacement_speed = r.a(0, 100, e));
     } catch (i) {
       return new a.a("Init displacement filter failed.");
     }
@@ -192,8 +192,8 @@ var s = function () {
   e.prototype.set_twist = function (e) {
     var t = this.get_effect_filter(4);
     if (this.is_twist_filter(t)) {
-      this.twist_angle = Object(r.a)(0, 100, e);
-      t.angle = Object(o.b)(10 * this.twist_angle);
+      this.twist_angle = r.a(0, 100, e);
+      t.angle = o.b(10 * this.twist_angle);
       t.radius = Math.sqrt(Math.pow(this.target_sprite.width / 2, 2) + Math.pow(this.target_sprite.height / 2, 2));
       this.update_twist_offset();
     }
@@ -205,7 +205,7 @@ var s = function () {
     var t = this.get_effect_filter(6);
     if (this.is_ascii_filter(t)) {
       var n = Math.min(this.target_sprite.width, this.target_sprite.height);
-      this.ascii_size = Object(r.a)(1, n, e);
+      this.ascii_size = r.a(1, n, e);
       t.size = this.ascii_size;
     }
   };
@@ -240,7 +240,7 @@ var s = function () {
     var e = this;
     this.effect_filter_list.forEach(function (t, n) {
       if (t) {
-        t.enabled = !1;
+        t.enabled = false;
         e.reset_default_value(n);
       }
     });

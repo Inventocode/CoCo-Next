@@ -39,7 +39,7 @@ function i(e, t) {
       }
     }
     for (; n < e.length;) {
-      if (Object(r.a)(e[n], t)) {
+      if (r.a(e[n], t)) {
         return n;
       }
       n += 1;
@@ -48,5 +48,5 @@ function i(e, t) {
   }(t, e, 0) >= 0;
 }
 var o = require("./518");
-var a = Object(o.a)(i);
+var a = o.a(i);
 exports.a = a;

@@ -29,7 +29,7 @@ module.exports = function (e, t) {
     if (t && t.toJSON && "function" === typeof t.toJSON) {
       t = t.toJSON();
     }
-    if (void 0 !== t) {
+    if (undefined !== t) {
       if ("number" == typeof t) {
         return isFinite(t) ? "" + t : "null";
       }

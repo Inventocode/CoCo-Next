@@ -1,28 +1,28 @@
 "use strict";
 
 export { Je as a };
-var r = require("../19");
-var o = require("../29");
-var i = require("../20");
-var a = require("../80/index");
-var s = require("../33/index");
-var c = require("../54");
-var l = require("react");
-var u = require("../330");
+import r = require("../19");
+import o = require("../29");
+import i = require("../20");
+import a = require("../80/index");
+import s = require("../33/index");
+import c = require("../54");
+import l = require("react");
+import u = require("../330");
 var d = function () {
   if ("undefined" === typeof navigator || "undefined" === typeof window) {
-    return !1;
+    return false;
   }
   var e = navigator.userAgent || navigator.vendor || window.opera;
-  return !(!/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino|android|ipad|playbook|silk/i.test(e) && !/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw-(n|u)|c55\/|capi|ccwa|cdm-|cell|chtm|cldc|cmd-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc-s|devi|dica|dmob|do(c|p)o|ds(12|-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(-|_)|g1 u|g560|gene|gf-5|g-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd-(m|p|t)|hei-|hi(pt|ta)|hp( i|ip)|hs-c|ht(c(-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i-(20|go|ma)|i230|iac( |-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|-[a-w])|libw|lynx|m1-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|-([1-8]|c))|phil|pire|pl(ay|uc)|pn-2|po(ck|rt|se)|prox|psio|pt-g|qa-a|qc(07|12|21|32|60|-[2-7]|i-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h-|oo|p-)|sdk\/|se(c(-|0|1)|47|mc|nd|ri)|sgh-|shar|sie(-|m)|sk-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h-|v-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl-|tdg-|tel(i|m)|tim-|t-mo|to(pl|sh)|ts(70|m-|m3|m5)|tx-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas-|your|zeto|zte-/i.test(null === e || void 0 === e ? void 0 : e.substr(0, 4)));
+  return !(!/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino|android|ipad|playbook|silk/i.test(e) && !/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw-(n|u)|c55\/|capi|ccwa|cdm-|cell|chtm|cldc|cmd-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc-s|devi|dica|dmob|do(c|p)o|ds(12|-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(-|_)|g1 u|g560|gene|gf-5|g-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd-(m|p|t)|hei-|hi(pt|ta)|hp( i|ip)|hs-c|ht(c(-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i-(20|go|ma)|i230|iac( |-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|-[a-w])|libw|lynx|m1-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|-([1-8]|c))|phil|pire|pl(ay|uc)|pn-2|po(ck|rt|se)|prox|psio|pt-g|qa-a|qc(07|12|21|32|60|-[2-7]|i-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h-|oo|p-)|sdk\/|se(c(-|0|1)|47|mc|nd|ri)|sgh-|shar|sie(-|m)|sk-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h-|v-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl-|tdg-|tel(i|m)|tim-|t-mo|to(pl|sh)|ts(70|m-|m3|m5)|tx-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas-|your|zeto|zte-/i.test(null === e || undefined === e ? undefined : e.substr(0, 4)));
 };
-var p = require("../108");
-var f = require("../242/index");
+import p = require("../108");
+import f = require("../242/index");
 function h(e, t) {
   if ("function" === typeof e) {
     e(t);
   } else {
-    if ("object" === Object(p.a)(e) && e && "current" in e) {
+    if ("object" === p.a(e) && e && "current" in e) {
       e.current = t;
     }
   }
@@ -37,7 +37,7 @@ function m() {
     });
   };
 }
-var g = require("../8");
+import g = require("../8");
 var _ = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -57,21 +57,21 @@ function v(e, t) {
   var i = n.onChange;
   var a = n.postState;
   var c = l.useState(function () {
-    return void 0 !== o ? o : void 0 !== r ? "function" === typeof r ? r() : r : "function" === typeof e ? e() : e;
+    return undefined !== o ? o : undefined !== r ? "function" === typeof r ? r() : r : "function" === typeof e ? e() : e;
   });
-  var u = Object(s.a)(c, 2);
+  var u = s.a(c, 2);
   var d = u[0];
   var p = u[1];
-  var f = void 0 !== o ? o : d;
+  var f = undefined !== o ? o : d;
   if (a) {
     f = a(f);
   }
-  var h = l.useRef(!0);
+  var h = l.useRef(true);
   l.useEffect(function () {
     if (h.current) {
-      h.current = !1;
+      h.current = false;
     } else {
-      if (void 0 === o) {
+      if (undefined === o) {
         p(o);
       }
     }
@@ -83,9 +83,9 @@ function v(e, t) {
     }
   }];
 }
-var b = require("../783");
-var y = require("./557");
-var E = require("../733");
+import b = require("../783");
+import y = require("./557");
+import E = require("../733");
 var O = function (e, t) {
   var n;
   var r;
@@ -118,7 +118,7 @@ var O = function (e, t) {
   var D = N.onCompositionStart;
   var M = N.onCompositionEnd;
   var L = N.style;
-  return I = l.cloneElement(I, Object(i.a)(Object(i.a)({
+  return I = l.cloneElement(I, i.a(i.a({
     id: a,
     ref: m(t, j),
     disabled: c,
@@ -126,8 +126,8 @@ var O = function (e, t) {
     autoComplete: p || "off",
     type: "search",
     autoFocus: d,
-    className: _()("".concat(o, "-selection-search-input"), null === (n = I) || void 0 === n || null === (r = n.props) || void 0 === r ? void 0 : r.className),
-    style: Object(i.a)(Object(i.a)({}, L), {}, {
+    className: _()("".concat(o, "-selection-search-input"), null === (n = I) || undefined === n || null === (r = n.props) || undefined === r ? undefined : r.className),
+    style: i.a(i.a({}, L), {}, {
       opacity: f ? null : 0
     }),
     role: "combobox",
@@ -178,7 +178,7 @@ var O = function (e, t) {
 var w = l.forwardRef(O);
 w.displayName = "Input";
 var C = w;
-var T = require("../487");
+import T = require("../487");
 function S(e, t) {
   if (T.b) {
     l.useLayoutEffect(e, t);
@@ -209,7 +209,7 @@ var A = function (e) {
   var w = e.maxTagCount;
   var T = e.maxTagTextLength;
   var A = e.maxTagPlaceholder;
-  var j = void 0 === A ? function (e) {
+  var j = undefined === A ? function (e) {
     return "+ ".concat(e.length, " ...");
   } : A;
   var N = e.tagRender;
@@ -222,12 +222,12 @@ var A = function (e) {
   var P = e.onInputCompositionStart;
   var B = e.onInputCompositionEnd;
   var F = l.useRef(null);
-  var G = Object(l.useState)(0);
-  var U = Object(s.a)(G, 2);
+  var G = l.useState(0);
+  var U = s.a(G, 2);
   var W = U[0];
   var H = U[1];
-  var V = Object(l.useState)(!1);
-  var z = Object(s.a)(V, 2);
+  var V = l.useState(false);
+  var z = s.a(V, 2);
   var Y = z[0];
   var K = z[1];
   var q = "".concat(n, "-selection");
@@ -235,8 +235,8 @@ var A = function (e) {
   var Q = "tags" === p || f && (i || Y);
   function Z(e, t, n, r, i) {
     return l.createElement("span", {
-      className: _()("".concat(q, "-item"), Object(o.a)({}, "".concat(q, "-item-disabled"), n)),
-      title: "string" === typeof e || "number" === typeof e ? e.toString() : void 0
+      className: _()("".concat(q, "-item"), o.a({}, "".concat(q, "-item-disabled"), n)),
+      title: "string" === typeof e || "number" === typeof e ? e.toString() : undefined
     }, l.createElement("span", {
       className: "".concat(q, "-item-content")
     }, t), r && l.createElement(E.a, {
@@ -255,10 +255,10 @@ var A = function (e) {
       width: W
     },
     onFocus: function () {
-      K(!0);
+      K(true);
     },
     onBlur: function () {
-      K(!1);
+      K(false);
     }
   }, l.createElement(C, {
     ref: c,
@@ -279,11 +279,11 @@ var A = function (e) {
     onCompositionStart: P,
     onCompositionEnd: B,
     tabIndex: v,
-    attrs: Object(b.a)(e, !0)
+    attrs: b.a(e, true)
   }), l.createElement("span", {
     ref: F,
     className: "".concat(q, "-search-mirror"),
-    "aria-hidden": !0
+    "aria-hidden": true
   }, X, " "));
   var $ = l.createElement(y.a, {
     prefixCls: "".concat(q, "-overflow"),
@@ -305,7 +305,7 @@ var A = function (e) {
           e.stopPropagation();
         }
         k(r, {
-          selected: !1
+          selected: false
         });
       };
       return "function" === typeof N ? function (e, t, n, r, o) {
@@ -325,7 +325,7 @@ var A = function (e) {
     },
     renderRest: function (e) {
       var t = "function" === typeof j ? j(e) : j;
-      return Z(t, t, !1);
+      return Z(t, t, false);
     },
     suffix: J,
     itemKey: "key",
@@ -359,8 +359,8 @@ var j = function (e) {
   var T = e.onInputPaste;
   var S = e.onInputCompositionStart;
   var I = e.onInputCompositionEnd;
-  var A = l.useState(!1);
-  var j = Object(s.a)(A, 2);
+  var A = l.useState(false);
+  var j = s.a(A, 2);
   var N = j[0];
   var R = j[1];
   var k = "combobox" === d;
@@ -372,11 +372,11 @@ var j = function (e) {
   }
   l.useEffect(function () {
     if (k) {
-      R(!1);
+      R(false);
     }
   }, [k, v]);
   var L = !("combobox" !== d && !p) && !!M;
-  var P = !D || "string" !== typeof D.label && "number" !== typeof D.label ? void 0 : D.label.toString();
+  var P = !D || "string" !== typeof D.label && "number" !== typeof D.label ? undefined : D.label.toString();
   return l.createElement(l.Fragment, null, l.createElement("span", {
     className: "".concat(n, "-selection-search")
   }, l.createElement(C, {
@@ -394,15 +394,15 @@ var j = function (e) {
     onKeyDown: E,
     onMouseDown: O,
     onChange: function (e) {
-      R(!0);
+      R(true);
       w(e);
     },
     onPaste: T,
     onCompositionStart: S,
     onCompositionEnd: I,
     tabIndex: m,
-    attrs: Object(b.a)(e, !0),
-    maxLength: k ? y : void 0
+    attrs: b.a(e, true),
+    maxLength: k ? y : undefined
   })), !k && D && !L && l.createElement("span", {
     className: "".concat(n, "-selection-item"),
     title: P
@@ -411,7 +411,7 @@ var j = function (e) {
   }, h));
 };
 function N() {
-  var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 250;
+  var e = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : 250;
   var t = l.useRef(null);
   var n = l.useRef(null);
   function r(r) {
@@ -433,8 +433,8 @@ function N() {
   }, r];
 }
 var R = function (e, t) {
-  var n = Object(l.useRef)(null);
-  var o = Object(l.useRef)(!1);
+  var n = l.useRef(null);
+  var o = l.useRef(false);
   var i = e.prefixCls;
   var a = e.multiple;
   var c = e.open;
@@ -457,13 +457,13 @@ var R = function (e, t) {
     };
   });
   var b = N(0);
-  var y = Object(s.a)(b, 2);
+  var y = s.a(b, 2);
   var E = y[0];
   var O = y[1];
-  var w = Object(l.useRef)(null);
+  var w = l.useRef(null);
   var C = function (e) {
-    if (!1 !== h(e, !0, o.current)) {
-      g(!0);
+    if (false !== h(e, true, o.current)) {
+      g(true);
     }
   };
   var T = {
@@ -480,11 +480,11 @@ var R = function (e, t) {
         m(e.target.value);
       }
       if (![u.a.SHIFT, u.a.TAB, u.a.BACKSPACE, u.a.ESC].includes(t)) {
-        g(!0);
+        g(true);
       }
     },
     onInputMouseDown: function () {
-      O(!0);
+      O(true);
     },
     onInputChange: function (e) {
       var t = e.target.value;
@@ -500,22 +500,22 @@ var R = function (e, t) {
       w.current = t;
     },
     onInputCompositionStart: function () {
-      o.current = !0;
+      o.current = true;
     },
     onInputCompositionEnd: function (e) {
-      o.current = !1;
+      o.current = false;
       if ("combobox" !== d) {
         C(e.target.value);
       }
     }
   };
-  var S = a ? l.createElement(A, Object(r.a)({}, e, T)) : l.createElement(j, Object(r.a)({}, e, T));
+  var S = a ? l.createElement(A, r.a({}, e, T)) : l.createElement(j, r.a({}, e, T));
   return l.createElement("div", {
     ref: v,
     className: "".concat(i, "-selector"),
     onClick: function (e) {
       if (e.target !== n.current) {
-        if (void 0 !== document.body.style.msTouchAction) {
+        if (undefined !== document.body.style.msTouchAction) {
           setTimeout(function () {
             n.current.focus();
           });
@@ -531,7 +531,7 @@ var R = function (e, t) {
       }
       if (!(("combobox" === d || p && t) && c)) {
         if (c) {
-          h("", !0, !1);
+          h("", true, false);
         }
         g();
       }
@@ -541,12 +541,12 @@ var R = function (e, t) {
 var k = l.forwardRef(R);
 k.displayName = "Selector";
 var x = k;
-var D = require("../95");
-var M = require("../96");
-var L = require("../103");
-var P = require("../120");
-var B = require("../140");
-var F = require("../75/index");
+import D = require("../95");
+import M = require("../96");
+import L = require("../103");
+import P = require("../120");
+import B = require("../140");
+import F = require("../75/index");
 var G = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -579,7 +579,7 @@ function z(e) {
   V.delete(e);
 }
 function Y(e) {
-  var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+  var t = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : 1;
   var n = H += 1;
   function r(t) {
     if (0 === t) {
@@ -624,29 +624,29 @@ Y.cancel = function (e) {
   z(t);
   return W(t);
 };
-var Z = Object(l.forwardRef)(function (e, t) {
+var Z = l.forwardRef(function (e, t) {
   var n = e.didUpdate;
   var r = e.getContainer;
   var o = e.children;
-  var i = Object(l.useRef)();
-  Object(l.useImperativeHandle)(t, function () {
+  var i = l.useRef();
+  l.useImperativeHandle(t, function () {
     return {};
   });
-  var a = Object(l.useRef)(!1);
+  var a = l.useRef(false);
   if (!a.current && Q()) {
     i.current = r();
-    a.current = !0;
+    a.current = true;
   }
-  Object(l.useEffect)(function () {
-    if (!(null === n || void 0 === n)) {
+  l.useEffect(function () {
+    if (!(null === n || undefined === n)) {
       n(e);
     }
   });
-  Object(l.useEffect)(function () {
+  l.useEffect(function () {
     return function () {
       var e;
       var t;
-      if (!(null === (e = i.current) || void 0 === e || null === (t = e.parentNode) || void 0 === t)) {
+      if (!(null === (e = i.current) || undefined === e || null === (t = e.parentNode) || undefined === t)) {
         t.removeChild(i.current);
       }
     };
@@ -708,19 +708,19 @@ var se = !(!ie || !ae);
 var ce = ie || "animationend";
 var le = ae || "transitionend";
 function ue(e, t) {
-  return e ? "object" === Object(p.a)(e) ? e[t.replace(/-\w/g, function (e) {
+  return e ? "object" === p.a(e) ? e[t.replace(/-\w/g, function (e) {
     return e[1].toUpperCase();
   })] : "".concat(e, "-").concat(t) : null;
 }
 function de(e) {
-  var t = Object(l.useRef)(!1);
-  var n = Object(l.useState)(e);
-  var r = Object(s.a)(n, 2);
+  var t = l.useRef(false);
+  var n = l.useState(e);
+  var r = s.a(n, 2);
   var o = r[0];
   var i = r[1];
-  Object(l.useEffect)(function () {
+  l.useEffect(function () {
     return function () {
-      t.current = !0;
+      t.current = true;
     };
   }, []);
   return [o, function (e) {
@@ -736,7 +736,7 @@ function he(e) {
 }
 var me = function (e, t) {
   var n = l.useState("none");
-  var r = Object(s.a)(n, 2);
+  var r = s.a(n, 2);
   var o = r[0];
   var i = r[1];
   var a = function () {
@@ -750,7 +750,7 @@ var me = function (e, t) {
       };
     }, []);
     return [function n(r) {
-      var o = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
+      var o = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : 2;
       t();
       var i = Y(function () {
         if (o <= 1) {
@@ -766,7 +766,7 @@ var me = function (e, t) {
       e.current = i;
     }, t];
   }();
-  var c = Object(s.a)(a, 2);
+  var c = s.a(a, 2);
   var u = c[0];
   var d = c[1];
   pe(function () {
@@ -774,7 +774,7 @@ var me = function (e, t) {
       var e = fe.indexOf(o);
       var n = fe[e + 1];
       var r = t(o);
-      if (!1 === r) {
+      if (false === r) {
         i(n);
       } else {
         u(function (e) {
@@ -783,7 +783,7 @@ var me = function (e, t) {
               i(n);
             }
           }
-          if (!0 === r) {
+          if (true === r) {
             t();
           } else {
             Promise.resolve(r).then(t);
@@ -803,11 +803,11 @@ var me = function (e, t) {
 };
 function ge(e, t, n, r) {
   var a = r.motionEnter;
-  var c = void 0 === a || a;
+  var c = undefined === a || a;
   var u = r.motionAppear;
-  var d = void 0 === u || u;
+  var d = undefined === u || u;
   var p = r.motionLeave;
-  var f = void 0 === p || p;
+  var f = undefined === p || p;
   var h = r.motionDeadline;
   var m = r.motionLeaveImmediately;
   var g = r.onAppearPrepare;
@@ -824,49 +824,49 @@ function ge(e, t, n, r) {
   var I = r.onLeaveEnd;
   var A = r.onVisibleChanged;
   var j = de();
-  var N = Object(s.a)(j, 2);
+  var N = s.a(j, 2);
   var R = N[0];
   var k = N[1];
   var x = de("none");
-  var D = Object(s.a)(x, 2);
+  var D = s.a(x, 2);
   var M = D[0];
   var L = D[1];
   var P = de(null);
-  var B = Object(s.a)(P, 2);
+  var B = s.a(P, 2);
   var F = B[0];
   var G = B[1];
-  var U = Object(l.useRef)(!1);
-  var W = Object(l.useRef)(null);
-  var H = Object(l.useRef)(!1);
-  var V = Object(l.useRef)(null);
+  var U = l.useRef(false);
+  var W = l.useRef(null);
+  var H = l.useRef(false);
+  var V = l.useRef(null);
   function z() {
     return n() || V.current;
   }
-  var Y = Object(l.useRef)(!1);
+  var Y = l.useRef(false);
   function K(e) {
     var t;
     var n = z();
     if (!(e && !e.deadline && e.target !== n)) {
       if ("appear" === M && Y.current) {
-        t = null === T || void 0 === T ? void 0 : T(n, e);
+        t = null === T || undefined === T ? undefined : T(n, e);
       } else {
         if ("enter" === M && Y.current) {
-          t = null === S || void 0 === S ? void 0 : S(n, e);
+          t = null === S || undefined === S ? undefined : S(n, e);
         } else {
           if ("leave" === M && Y.current) {
-            t = null === I || void 0 === I ? void 0 : I(n, e);
+            t = null === I || undefined === I ? undefined : I(n, e);
           }
         }
       }
-      if (!(!1 === t || H.current)) {
+      if (!(false === t || H.current)) {
         L("none");
         G(null);
       }
     }
   }
   var q = function (e) {
-    var t = Object(l.useRef)();
-    var n = Object(l.useRef)(e);
+    var t = l.useRef();
+    var n = l.useRef(e);
     n.current = e;
     var r = l.useCallback(function (e) {
       n.current(e);
@@ -893,7 +893,7 @@ function ge(e, t, n, r) {
       }
     }, o];
   }(K);
-  var X = Object(s.a)(q, 1)[0];
+  var X = s.a(q, 1)[0];
   var Q = l.useMemo(function () {
     var e;
     var t;
@@ -901,21 +901,21 @@ function ge(e, t, n, r) {
     switch (M) {
       case "appear":
         e = {};
-        Object(o.a)(e, "prepare", g);
-        Object(o.a)(e, "start", b);
-        Object(o.a)(e, "active", O);
+        o.a(e, "prepare", g);
+        o.a(e, "start", b);
+        o.a(e, "active", O);
         return e;
       case "enter":
         t = {};
-        Object(o.a)(t, "prepare", _);
-        Object(o.a)(t, "start", y);
-        Object(o.a)(t, "active", w);
+        o.a(t, "prepare", _);
+        o.a(t, "start", y);
+        o.a(t, "active", w);
         return t;
       case "leave":
         n = {};
-        Object(o.a)(n, "prepare", v);
-        Object(o.a)(n, "start", E);
-        Object(o.a)(n, "active", C);
+        o.a(n, "prepare", v);
+        o.a(n, "start", E);
+        o.a(n, "active", C);
         return n;
       default:
         return {};
@@ -928,7 +928,7 @@ function ge(e, t, n, r) {
     }
     var n;
     if (ee in Q) {
-      G((null === (n = Q[ee]) || void 0 === n ? void 0 : n.call(Q, z(), null)) || null);
+      G((null === (n = Q[ee]) || undefined === n ? undefined : n.call(Q, z(), null)) || null);
     }
     if ("active" === ee) {
       X(z());
@@ -936,14 +936,14 @@ function ge(e, t, n, r) {
         clearTimeout(W.current);
         W.current = setTimeout(function () {
           K({
-            deadline: !0
+            deadline: true
           });
         }, h);
       }
     }
-    return !0;
+    return true;
   });
-  var J = Object(s.a)(Z, 2);
+  var J = s.a(Z, 2);
   var $ = J[0];
   var ee = J[1];
   var te = he(ee);
@@ -952,7 +952,7 @@ function ge(e, t, n, r) {
     k(t);
     var n;
     var r = U.current;
-    U.current = !0;
+    U.current = true;
     if (e) {
       if (!r && t && d) {
         n = "appear";
@@ -969,40 +969,40 @@ function ge(e, t, n, r) {
       }
     }
   }, [t]);
-  Object(l.useEffect)(function () {
+  l.useEffect(function () {
     if ("appear" === M && !d || "enter" === M && !c || "leave" === M && !f) {
       L("none");
     }
   }, [d, c, f]);
-  Object(l.useEffect)(function () {
+  l.useEffect(function () {
     return function () {
       clearTimeout(W.current);
-      H.current = !0;
+      H.current = true;
     };
   }, []);
-  Object(l.useEffect)(function () {
-    if (void 0 !== R && "none" === M) {
-      if (!(null === A || void 0 === A)) {
+  l.useEffect(function () {
+    if (undefined !== R && "none" === M) {
+      if (!(null === A || undefined === A)) {
         A(R);
       }
     }
   }, [R, M]);
   var ne = F;
   if (Q.prepare && "start" === ee) {
-    ne = Object(i.a)({
+    ne = i.a({
       transition: "none"
     }, ne);
   }
-  return [M, ee, ne, null !== R && void 0 !== R ? R : t];
+  return [M, ee, ne, null !== R && undefined !== R ? R : t];
 }
 var _e = function (e) {
-  Object(P.a)(n, e);
-  var t = Object(B.a)(n);
+  P.a(n, e);
+  var t = B.a(n);
   function n() {
-    Object(D.a)(this, n);
+    D.a(this, n);
     return t.apply(this, arguments);
   }
-  Object(M.a)(n, [{
+  M.a(n, [{
     key: "render",
     value: function () {
       return this.props.children;
@@ -1015,22 +1015,22 @@ var ve = function (e) {
   function n(e) {
     return !(!e.motionName || !t);
   }
-  if ("object" === Object(p.a)(e)) {
+  if ("object" === p.a(e)) {
     t = e.transitionSupport;
   }
   var r = l.forwardRef(function (e, t) {
     var r = e.visible;
-    var a = void 0 === r || r;
+    var a = undefined === r || r;
     var c = e.removeOnLeave;
-    var u = void 0 === c || c;
+    var u = undefined === c || c;
     var d = e.forceRender;
     var p = e.children;
     var f = e.motionName;
     var m = e.leavedClassName;
     var g = e.eventProps;
     var v = n(e);
-    var b = Object(l.useRef)();
-    var y = Object(l.useRef)();
+    var b = l.useRef();
+    var y = l.useRef();
     var E = ge(v, a, function () {
       try {
         return q(b.current || y.current);
@@ -1038,23 +1038,23 @@ var ve = function (e) {
         return null;
       }
     }, e);
-    var O = Object(s.a)(E, 4);
+    var O = s.a(E, 4);
     var w = O[0];
     var C = O[1];
     var T = O[2];
     var S = O[3];
     var I = l.useRef(S);
     if (S) {
-      I.current = !0;
+      I.current = true;
     }
-    var A = Object(l.useRef)(t);
+    var A = l.useRef(t);
     A.current = t;
     var j;
     var N = l.useCallback(function (e) {
       b.current = e;
       h(A.current, e);
     }, []);
-    var R = Object(i.a)(Object(i.a)({}, g), {}, {
+    var R = i.a(i.a({}, g), {}, {
       visible: a
     });
     if (p) {
@@ -1072,14 +1072,14 @@ var ve = function (e) {
             }
           }
         }
-        j = p(Object(i.a)(Object(i.a)({}, R), {}, {
-          className: _()(ue(f, w), (k = {}, Object(o.a)(k, ue(f, "".concat(w, "-").concat(x)), x), Object(o.a)(k, f, "string" === typeof f), k)),
+        j = p(i.a(i.a({}, R), {}, {
+          className: _()(ue(f, w), (k = {}, o.a(k, ue(f, "".concat(w, "-").concat(x)), x), o.a(k, f, "string" === typeof f), k)),
           style: T
         }), N);
       } else {
-        j = S ? p(Object(i.a)({}, R), N) : !u && I.current ? p(Object(i.a)(Object(i.a)({}, R), {}, {
+        j = S ? p(i.a({}, R), N) : !u && I.current ? p(i.a(i.a({}, R), {}, {
           className: m
-        }), N) : d ? p(Object(i.a)(Object(i.a)({}, R), {}, {
+        }), N) : d ? p(i.a(i.a({}, R), {}, {
           style: {
             display: "none"
           }
@@ -1097,54 +1097,54 @@ var ve = function (e) {
 }(se);
 function be(e) {
   var t;
-  t = e && "object" === Object(p.a)(e) && "key" in e ? e : {
+  t = e && "object" === p.a(e) && "key" in e ? e : {
     key: e
   };
-  return Object(i.a)(Object(i.a)({}, t), {}, {
+  return i.a(i.a({}, t), {}, {
     key: String(t.key)
   });
 }
 function ye() {
-  var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
+  var e = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : [];
   return e.map(be);
 }
 function Ee() {
-  var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
-  var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
+  var e = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : [];
+  var t = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : [];
   var n = [];
   var r = 0;
   var o = t.length;
   var a = ye(e);
   var s = ye(t);
   a.forEach(function (e) {
-    for (var t = !1, a = r; a < o; a += 1) {
+    for (var t = false, a = r; a < o; a += 1) {
       var c = s[a];
       if (c.key === e.key) {
         if (r < a) {
           n = n.concat(s.slice(r, a).map(function (e) {
-            return Object(i.a)(Object(i.a)({}, e), {}, {
+            return i.a(i.a({}, e), {}, {
               status: "add"
             });
           }));
           r = a;
         }
-        n.push(Object(i.a)(Object(i.a)({}, c), {}, {
+        n.push(i.a(i.a({}, c), {}, {
           status: "keep"
         }));
         r += 1;
-        t = !0;
+        t = true;
         break;
       }
     }
     if (!t) {
-      n.push(Object(i.a)(Object(i.a)({}, e), {}, {
+      n.push(i.a(i.a({}, e), {}, {
         status: "remove"
       }));
     }
   });
   if (r < o) {
     n = n.concat(s.slice(r).map(function (e) {
-      return Object(i.a)(Object(i.a)({}, e), {}, {
+      return i.a(i.a({}, e), {}, {
         status: "add"
       });
     }));
@@ -1172,13 +1172,13 @@ function Ee() {
 }
 var Oe = ["eventProps", "visible", "children", "motionName", "motionAppear", "motionEnter", "motionLeave", "motionLeaveImmediately", "motionDeadline", "removeOnLeave", "leavedClassName", "onAppearStart", "onAppearActive", "onAppearEnd", "onEnterStart", "onEnterActive", "onEnterEnd", "onLeaveStart", "onLeaveActive", "onLeaveEnd"];
 !function (e) {
-  var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ve;
+  var t = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : ve;
   var n = function (e) {
-    Object(P.a)(o, e);
-    var n = Object(B.a)(o);
+    P.a(o, e);
+    var n = B.a(o);
     function o() {
       var e;
-      Object(D.a)(this, o);
+      D.a(this, o);
       (e = n.apply(this, arguments)).state = {
         keyEntities: []
       };
@@ -1186,7 +1186,7 @@ var Oe = ["eventProps", "visible", "children", "motionName", "motionAppear", "mo
         e.setState(function (e) {
           return {
             keyEntities: e.keyEntities.map(function (e) {
-              return e.key !== t ? e : Object(i.a)(Object(i.a)({}, e), {}, {
+              return e.key !== t ? e : i.a(i.a({}, e), {}, {
                 status: "removed"
               });
             })
@@ -1195,7 +1195,7 @@ var Oe = ["eventProps", "visible", "children", "motionName", "motionAppear", "mo
       };
       return e;
     }
-    Object(M.a)(o, [{
+    M.a(o, [{
       key: "render",
       value: function () {
         var e = this;
@@ -1204,7 +1204,7 @@ var Oe = ["eventProps", "visible", "children", "motionName", "motionAppear", "mo
         var i = o.component;
         var a = o.children;
         var s = o.onVisibleChanged;
-        var u = Object(c.a)(o, ["component", "children", "onVisibleChanged"]);
+        var u = c.a(o, ["component", "children", "onVisibleChanged"]);
         var d = i || l.Fragment;
         var p = {};
         Oe.forEach(function (e) {
@@ -1214,14 +1214,14 @@ var Oe = ["eventProps", "visible", "children", "motionName", "motionAppear", "mo
         delete u.keys;
         return l.createElement(d, u, n.map(function (n) {
           var o = n.status;
-          var i = Object(c.a)(n, ["status"]);
+          var i = c.a(n, ["status"]);
           var u = "add" === o || "keep" === o;
-          return l.createElement(t, Object(r.a)({}, p, {
+          return l.createElement(t, r.a({}, p, {
             key: i.key,
             visible: u,
             eventProps: i,
             onVisibleChanged: function (t) {
-              if (!(null === s || void 0 === s)) {
+              if (!(null === s || undefined === s)) {
                 s(t, {
                   key: i.key
                 });
@@ -1281,8 +1281,8 @@ function Te(e) {
   }
   var d = {};
   if (s || u || c) {
-    d = Object(i.a)({
-      motionAppear: !0
+    d = i.a({
+      motionAppear: true
     }, Ce({
       motion: s,
       prefixCls: t,
@@ -1290,9 +1290,9 @@ function Te(e) {
       animation: c
     }));
   }
-  return l.createElement(we, Object(r.a)({}, d, {
+  return l.createElement(we, r.a({}, d, {
     visible: n,
-    removeOnLeave: !0
+    removeOnLeave: true
   }), function (e) {
     var n = e.className;
     return l.createElement("div", {
@@ -1303,8 +1303,8 @@ function Te(e) {
     });
   });
 }
-var Se = require("./555/index");
-var Ie = require("../110");
+import Se = require("./555/index");
+import Ie = require("../110");
 var Ae = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -1317,7 +1317,7 @@ var Ae = function __importDefault(module) {
   });
   return defaultExport;
 }(Ie);
-var je = require("../171");
+import je = require("../171");
 var Ne = ["measure", "align", null, "motion"];
 var Re = l.forwardRef(function (e, t) {
   var n = e.visible;
@@ -1338,10 +1338,10 @@ var Re = l.forwardRef(function (e, t) {
   var O = e.onMouseLeave;
   var w = e.onMouseDown;
   var C = e.onTouchStart;
-  var T = Object(l.useRef)();
-  var S = Object(l.useRef)();
-  var I = Object(l.useState)();
-  var A = Object(s.a)(I, 2);
+  var T = l.useRef();
+  var S = l.useRef();
+  var I = l.useState();
+  var A = s.a(I, 2);
   var j = A[0];
   var N = A[1];
   var R = function (e) {
@@ -1349,7 +1349,7 @@ var Re = l.forwardRef(function (e, t) {
       width: 0,
       height: 0
     });
-    var n = Object(s.a)(t, 2);
+    var n = s.a(t, 2);
     var r = n[0];
     var o = n[1];
     return [l.useMemo(function () {
@@ -1380,16 +1380,16 @@ var Re = l.forwardRef(function (e, t) {
       });
     }];
   }(p);
-  var k = Object(s.a)(R, 2);
+  var k = s.a(R, 2);
   var x = k[0];
   var D = k[1];
   var M = function (e, t) {
-    var n = Object(l.useState)(null);
-    var r = Object(s.a)(n, 2);
+    var n = l.useState(null);
+    var r = s.a(n, 2);
     var o = r[0];
     var i = r[1];
-    var a = Object(l.useRef)();
-    var c = Object(l.useRef)(!1);
+    var a = l.useRef();
+    var c = l.useRef(false);
     function u(e) {
       if (!c.current) {
         i(e);
@@ -1398,16 +1398,16 @@ var Re = l.forwardRef(function (e, t) {
     function d() {
       Y.cancel(a.current);
     }
-    Object(l.useEffect)(function () {
+    l.useEffect(function () {
       u("measure");
     }, [e]);
-    Object(l.useEffect)(function () {
+    l.useEffect(function () {
       switch (o) {
         case "measure":
           t();
       }
       if (o) {
-        a.current = Y(Object(je.a)(Ae.a.mark(function e() {
+        a.current = Y(je.a(Ae.a.mark(function e() {
           var t;
           var n;
           return Ae.a.wrap(function (e) {
@@ -1427,9 +1427,9 @@ var Re = l.forwardRef(function (e, t) {
         })));
       }
     }, [o]);
-    Object(l.useEffect)(function () {
+    l.useEffect(function () {
       return function () {
-        c.current = !0;
+        c.current = true;
         d();
       };
     }, []);
@@ -1445,7 +1445,7 @@ var Re = l.forwardRef(function (e, t) {
           }
           return e;
         });
-        if (!(null === e || void 0 === e)) {
+        if (!(null === e || undefined === e)) {
           e();
         }
       });
@@ -1455,13 +1455,13 @@ var Re = l.forwardRef(function (e, t) {
       D(v());
     }
   });
-  var L = Object(s.a)(M, 2);
+  var L = s.a(M, 2);
   var P = L[0];
   var B = L[1];
-  var F = Object(l.useRef)();
+  var F = l.useRef();
   function G() {
     var e;
-    if (!(null === (e = T.current) || void 0 === e)) {
+    if (!(null === (e = T.current) || undefined === e)) {
       e.forceAlign();
     }
   }
@@ -1478,17 +1478,17 @@ var Re = l.forwardRef(function (e, t) {
       } else {
         B(function () {
           var e;
-          if (!(null === (e = F.current) || void 0 === e)) {
+          if (!(null === (e = F.current) || undefined === e)) {
             e.call(F);
           }
         });
       }
-      if (!(null === y || void 0 === y)) {
+      if (!(null === y || undefined === y)) {
         y(e, t);
       }
     }
   }
-  var W = Object(i.a)({}, Ce(e));
+  var W = i.a({}, Ce(e));
   function H() {
     return new Promise(function (e) {
       F.current = e;
@@ -1498,7 +1498,7 @@ var Re = l.forwardRef(function (e, t) {
     var t = W[e];
     W[e] = function (e, n) {
       B();
-      return null === t || void 0 === t ? void 0 : t(e, n);
+      return null === t || undefined === t ? undefined : t(e, n);
     };
   });
   l.useEffect(function () {
@@ -1514,14 +1514,14 @@ var Re = l.forwardRef(function (e, t) {
       }
     };
   });
-  var V = Object(i.a)(Object(i.a)({}, x), {}, {
+  var V = i.a(i.a({}, x), {}, {
     zIndex: d,
-    opacity: "motion" !== P && "stable" !== P && n ? 0 : void 0,
-    pointerEvents: "stable" === P ? void 0 : "none"
+    opacity: "motion" !== P && "stable" !== P && n ? 0 : undefined,
+    pointerEvents: "stable" === P ? undefined : "none"
   }, c);
-  var z = !0;
-  if (!(!(null === m || void 0 === m ? void 0 : m.points) || "align" !== P && "stable" !== P)) {
-    z = !1;
+  var z = true;
+  if (!(!(null === m || undefined === m ? undefined : m.points) || "align" !== P && "stable" !== P)) {
+    z = false;
   }
   var K = u;
   if (l.Children.count(u) > 1) {
@@ -1529,7 +1529,7 @@ var Re = l.forwardRef(function (e, t) {
       className: "".concat(o, "-content")
     }, u);
   }
-  return l.createElement(we, Object(r.a)({
+  return l.createElement(we, r.a({
     visible: n,
     ref: S,
     leavedClassName: "".concat(o, "-hidden")
@@ -1546,7 +1546,7 @@ var Re = l.forwardRef(function (e, t) {
       target: g || v,
       key: "popup",
       ref: T,
-      monitorWindowResize: !0,
+      monitorWindowResize: true,
       disabled: z,
       align: m,
       onAlign: U
@@ -1557,7 +1557,7 @@ var Re = l.forwardRef(function (e, t) {
       onMouseLeave: O,
       onMouseDownCapture: w,
       onTouchStartCapture: C,
-      style: Object(i.a)(Object(i.a)({}, r), V)
+      style: i.a(i.a({}, r), V)
     }, K));
   });
 });
@@ -1569,10 +1569,10 @@ var xe = l.forwardRef(function (e, t) {
   var a = e.zIndex;
   var s = e.children;
   var c = e.mobile;
-  var u = (c = void 0 === c ? {} : c).popupClassName;
+  var u = (c = undefined === c ? {} : c).popupClassName;
   var d = c.popupStyle;
   var p = c.popupMotion;
-  var f = void 0 === p ? {} : p;
+  var f = undefined === p ? {} : p;
   var h = c.popupRender;
   var m = l.useRef();
   l.useImperativeHandle(t, function () {
@@ -1583,7 +1583,7 @@ var xe = l.forwardRef(function (e, t) {
       }
     };
   });
-  var g = Object(i.a)({
+  var g = i.a({
     zIndex: a
   }, d);
   var v = s;
@@ -1595,10 +1595,10 @@ var xe = l.forwardRef(function (e, t) {
   if (h) {
     v = h(v);
   }
-  return l.createElement(we, Object(r.a)({
+  return l.createElement(we, r.a({
     visible: o,
     ref: m,
-    removeOnLeave: !0
+    removeOnLeave: true
   }, f), function (e, t) {
     var r = e.className;
     var o = e.style;
@@ -1606,7 +1606,7 @@ var xe = l.forwardRef(function (e, t) {
     return l.createElement("div", {
       ref: t,
       className: a,
-      style: Object(i.a)(Object(i.a)({}, o), g)
+      style: i.a(i.a({}, o), g)
     }, v);
   });
 });
@@ -1616,28 +1616,28 @@ var Me = ["visible", "mobile"];
 var Le = l.forwardRef(function (e, t) {
   var n = e.visible;
   var o = e.mobile;
-  var a = Object(c.a)(e, Me);
-  var u = Object(l.useState)(n);
-  var p = Object(s.a)(u, 2);
+  var a = c.a(e, Me);
+  var u = l.useState(n);
+  var p = s.a(u, 2);
   var f = p[0];
   var h = p[1];
-  var m = Object(l.useState)(!1);
-  var g = Object(s.a)(m, 2);
+  var m = l.useState(false);
+  var g = s.a(m, 2);
   var _ = g[0];
   var v = g[1];
-  var b = Object(i.a)(Object(i.a)({}, a), {}, {
+  var b = i.a(i.a({}, a), {}, {
     visible: f
   });
-  Object(l.useEffect)(function () {
+  l.useEffect(function () {
     h(n);
     if (n && o) {
       v(d());
     }
   }, [n, o]);
-  var y = _ ? l.createElement(De, Object(r.a)({}, b, {
+  var y = _ ? l.createElement(De, r.a({}, b, {
     mobile: o,
     ref: t
-  })) : l.createElement(ke, Object(r.a)({}, b, {
+  })) : l.createElement(ke, r.a({}, b, {
     ref: t
   }));
   return l.createElement("div", null, l.createElement(Te, b), y);
@@ -1655,29 +1655,29 @@ function Ue(e) {
 var We = ["onClick", "onMouseDown", "onTouchStart", "onMouseEnter", "onMouseLeave", "onFocus", "onBlur", "onContextMenu"];
 var He = function (e) {
   var t = function (t) {
-    Object(P.a)(o, t);
-    var n = Object(B.a)(o);
+    P.a(o, t);
+    var n = B.a(o);
     function o(e) {
       var t;
       var i;
-      Object(D.a)(this, o);
+      D.a(this, o);
       (t = n.call(this, e)).popupRef = l.createRef();
       t.triggerRef = l.createRef();
-      t.attachId = void 0;
-      t.clickOutsideHandler = void 0;
-      t.touchOutsideHandler = void 0;
-      t.contextMenuOutsideHandler1 = void 0;
-      t.contextMenuOutsideHandler2 = void 0;
-      t.mouseDownTimeout = void 0;
-      t.focusTime = void 0;
-      t.preClickTime = void 0;
-      t.preTouchTime = void 0;
-      t.delayTimer = void 0;
-      t.hasPopupMouseDown = void 0;
+      t.attachId = undefined;
+      t.clickOutsideHandler = undefined;
+      t.touchOutsideHandler = undefined;
+      t.contextMenuOutsideHandler1 = undefined;
+      t.contextMenuOutsideHandler2 = undefined;
+      t.mouseDownTimeout = undefined;
+      t.focusTime = undefined;
+      t.preClickTime = undefined;
+      t.preTouchTime = undefined;
+      t.delayTimer = undefined;
+      t.hasPopupMouseDown = undefined;
       t.onMouseEnter = function (e) {
         var n = t.props.mouseEnterDelay;
         t.fireEvents("onMouseEnter", e);
-        t.delaySetPopupVisible(!0, n, n ? null : e);
+        t.delaySetPopupVisible(true, n, n ? null : e);
       };
       t.onMouseMove = function (e) {
         t.fireEvents("onMouseMove", e);
@@ -1685,15 +1685,15 @@ var He = function (e) {
       };
       t.onMouseLeave = function (e) {
         t.fireEvents("onMouseLeave", e);
-        t.delaySetPopupVisible(!1, t.props.mouseLeaveDelay);
+        t.delaySetPopupVisible(false, t.props.mouseLeaveDelay);
       };
       t.onPopupMouseEnter = function () {
         t.clearDelayTimer();
       };
       t.onPopupMouseLeave = function (e) {
         var n;
-        if (!(e.relatedTarget && !e.relatedTarget.setTimeout && K(null === (n = t.popupRef.current) || void 0 === n ? void 0 : n.getElement(), e.relatedTarget))) {
-          t.delaySetPopupVisible(!1, t.props.mouseLeaveDelay);
+        if (!(e.relatedTarget && !e.relatedTarget.setTimeout && K(null === (n = t.popupRef.current) || undefined === n ? undefined : n.getElement(), e.relatedTarget))) {
+          t.delaySetPopupVisible(false, t.props.mouseLeaveDelay);
         }
       };
       t.onFocus = function (e) {
@@ -1701,7 +1701,7 @@ var He = function (e) {
         t.clearDelayTimer();
         if (t.isFocusToShow()) {
           t.focusTime = Date.now();
-          t.delaySetPopupVisible(!0, t.props.focusDelay);
+          t.delaySetPopupVisible(true, t.props.focusDelay);
         }
       };
       t.onMouseDown = function (e) {
@@ -1716,13 +1716,13 @@ var He = function (e) {
         t.fireEvents("onBlur", e);
         t.clearDelayTimer();
         if (t.isBlurToHide()) {
-          t.delaySetPopupVisible(!1, t.props.blurDelay);
+          t.delaySetPopupVisible(false, t.props.blurDelay);
         }
       };
       t.onContextMenu = function (e) {
         e.preventDefault();
         t.fireEvents("onContextMenu", e);
-        t.setPopupVisible(!0, e);
+        t.setPopupVisible(true, e);
       };
       t.onContextMenuClose = function () {
         if (t.isContextMenuToShow()) {
@@ -1761,10 +1761,10 @@ var He = function (e) {
       };
       t.onPopupMouseDown = function () {
         var e;
-        t.hasPopupMouseDown = !0;
+        t.hasPopupMouseDown = true;
         clearTimeout(t.mouseDownTimeout);
         t.mouseDownTimeout = window.setTimeout(function () {
-          t.hasPopupMouseDown = !1;
+          t.hasPopupMouseDown = false;
         }, 0);
         if (t.context) {
           (e = t.context).onPopupMouseDown.apply(e, arguments);
@@ -1791,7 +1791,7 @@ var He = function (e) {
             return n;
           }
         } catch (r) {}
-        return G.a.findDOMNode(Object(L.a)(t));
+        return G.a.findDOMNode(L.a(t));
       };
       t.getPopupClassNameFromAlign = function (e) {
         var n = [];
@@ -1850,7 +1850,7 @@ var He = function (e) {
         }
         S.onMouseDown = t.onPopupMouseDown;
         S.onTouchStart = t.onPopupMouseDown;
-        return l.createElement(Pe, Object(r.a)({
+        return l.createElement(Pe, r.a({
           prefixCls: n,
           destroyPopupOnHide: o,
           visible: w,
@@ -1937,7 +1937,7 @@ var He = function (e) {
       });
       return t;
     }
-    Object(M.a)(o, [{
+    M.a(o, [{
       key: "componentDidMount",
       value: function () {
         this.componentDidUpdate();
@@ -1976,7 +1976,7 @@ var He = function (e) {
       key: "getPopupDomNode",
       value: function () {
         var e;
-        return (null === (e = this.popupRef.current) || void 0 === e ? void 0 : e.getElement()) || null;
+        return (null === (e = this.popupRef.current) || undefined === e ? undefined : e.getElement()) || null;
       }
     }, {
       key: "getPopupAlign",
@@ -1987,7 +1987,7 @@ var He = function (e) {
         var r = e.builtinPlacements;
         return t && r ? function (e, t, n) {
           var r = e[t] || {};
-          return Object(i.a)(Object(i.a)({}, r), n);
+          return i.a(i.a({}, r), n);
         }(r, t, n) : n;
       }
     }, {
@@ -2130,7 +2130,7 @@ var He = function (e) {
       value: function () {
         var e;
         if (this.state.popupVisible) {
-          if (!(null === (e = this.popupRef.current) || void 0 === e)) {
+          if (!(null === (e = this.popupRef.current) || undefined === e)) {
             e.forceAlign();
           }
         }
@@ -2150,7 +2150,7 @@ var He = function (e) {
     }, {
       key: "close",
       value: function () {
-        this.setPopupVisible(!1);
+        this.setPopupVisible(false);
       }
     }, {
       key: "render",
@@ -2204,12 +2204,12 @@ var He = function (e) {
         if (p) {
           d.className = p;
         }
-        var h = Object(i.a)({}, d);
+        var h = i.a({}, d);
         if (function (e) {
           var t;
           var n;
-          var r = Object(f.isMemo)(e) ? e.type.type : e.type;
-          return !("function" === typeof r && !(null === (t = r.prototype) || void 0 === t ? void 0 : t.render)) && !("function" === typeof e && !(null === (n = e.prototype) || void 0 === n ? void 0 : n.render));
+          var r = f.isMemo(e) ? e.type.type : e.type;
+          return !("function" === typeof r && !(null === (t = r.prototype) || undefined === t ? undefined : t.render)) && !("function" === typeof e && !(null === (n = e.prototype) || undefined === n ? undefined : n.render));
         }(u)) {
           h.ref = m(this.triggerRef, u.ref);
         }
@@ -2234,7 +2234,7 @@ var He = function (e) {
       value: function (e, t) {
         var n = e.popupVisible;
         var r = {};
-        if (void 0 !== n && t.popupVisible !== n) {
+        if (undefined !== n && t.popupVisible !== n) {
           r.popupVisible = n;
           r.prevPopupVisible = t.popupVisible;
         }
@@ -2257,15 +2257,15 @@ var He = function (e) {
     focusDelay: 0,
     blurDelay: .15,
     popupStyle: {},
-    destroyPopupOnHide: !1,
+    destroyPopupOnHide: false,
     popupAlign: {},
-    defaultPopupVisible: !1,
-    mask: !1,
-    maskClosable: !0,
+    defaultPopupVisible: false,
+    mask: false,
+    maskClosable: true,
     action: [],
     showAction: [],
     hideAction: [],
-    autoDestroy: !1
+    autoDestroy: false
   };
   return t;
 }(Z);
@@ -2282,17 +2282,17 @@ var ze = function (e, t) {
   var h = e.dropdownStyle;
   var m = e.dropdownClassName;
   var g = e.direction;
-  var v = void 0 === g ? "ltr" : g;
+  var v = undefined === g ? "ltr" : g;
   var b = e.placement;
   var y = e.dropdownMatchSelectWidth;
-  var E = void 0 === y || y;
+  var E = undefined === y || y;
   var O = e.dropdownRender;
   var w = e.dropdownAlign;
   var C = e.getPopupContainer;
   var T = e.empty;
   var S = e.getTriggerDOMNode;
   var I = e.onPopupVisibleChange;
-  var A = Object(c.a)(e, Ve);
+  var A = c.a(e, Ve);
   var j = "".concat(n, "-dropdown");
   var N = u;
   if (O) {
@@ -2346,7 +2346,7 @@ var ze = function (e, t) {
       }
     };
   });
-  var D = Object(i.a)({
+  var D = i.a({
     minWidth: d
   }, h);
   if ("number" === typeof E) {
@@ -2356,7 +2356,7 @@ var ze = function (e, t) {
       D.width = d;
     }
   }
-  return l.createElement(He, Object(r.a)({}, A, {
+  return l.createElement(He, r.a({}, A, {
     showAction: I ? ["click"] : [],
     hideAction: I ? ["click"] : [],
     popupPlacement: b || ("rtl" === v ? "bottomRight" : "bottomLeft"),
@@ -2369,7 +2369,7 @@ var ze = function (e, t) {
     popupAlign: w,
     popupVisible: a,
     getPopupContainer: C,
-    popupClassName: _()(m, Object(o.a)({}, "".concat(j, "-empty"), T)),
+    popupClassName: _()(m, o.a({}, "".concat(j, "-empty"), T)),
     popupStyle: D,
     getTriggerDOMNode: S,
     onPopupVisibleChange: I
@@ -2378,8 +2378,8 @@ var ze = function (e, t) {
 var Ye = l.forwardRef(ze);
 Ye.displayName = "SelectTrigger";
 var Ke = Ye;
-var qe = require("./1476");
-var Xe = require("../519/index");
+import qe = require("./1476");
+import Xe = require("../519/index");
 var Qe = ["prefixCls", "className", "id", "open", "defaultOpen", "options", "children", "mode", "value", "defaultValue", "labelInValue", "showSearch", "inputValue", "searchValue", "filterOption", "filterSort", "optionFilterProp", "autoClearSearchValue", "onSearch", "fieldNames", "allowClear", "clearIcon", "showArrow", "inputIcon", "menuItemSelectedIcon", "disabled", "loading", "defaultActiveFirstOption", "notFoundContent", "optionLabelProp", "backfill", "tabIndex", "getInputElement", "getRawInputElement", "getPopupContainer", "placement", "listHeight", "listItemHeight", "animation", "transitionName", "virtual", "dropdownStyle", "dropdownClassName", "dropdownMatchSelectWidth", "dropdownRender", "dropdownAlign", "showAction", "direction", "tokenSeparators", "tagRender", "onPopupScroll", "onDropdownVisibleChange", "onFocus", "onBlur", "onKeyUp", "onKeyDown", "onMouseDown", "onChange", "onSelect", "onDeselect", "onClear", "internalProps"];
 var Ze = ["removeIcon", "placeholder", "autoFocus", "maxTagCount", "maxTagTextLength", "maxTagPlaceholder", "choiceTransitionName", "onInputKeyDown", "tabIndex"];
 function Je(e) {
@@ -2397,7 +2397,7 @@ function Je(e) {
   function C(e, C) {
     var I;
     var A = e.prefixCls;
-    var j = void 0 === A ? t : A;
+    var j = undefined === A ? t : A;
     var R = e.className;
     var k = e.id;
     var D = e.open;
@@ -2414,9 +2414,9 @@ function Je(e) {
     var z = e.filterOption;
     var Y = e.filterSort;
     var K = e.optionFilterProp;
-    var q = void 0 === K ? "value" : K;
+    var q = undefined === K ? "value" : K;
     var X = e.autoClearSearchValue;
-    var Q = void 0 === X || X;
+    var Q = undefined === X || X;
     var Z = e.onSearch;
     var J = e.fieldNames;
     var $ = e.allowClear;
@@ -2428,7 +2428,7 @@ function Je(e) {
     var ie = e.loading;
     var ae = e.defaultActiveFirstOption;
     var se = e.notFoundContent;
-    var ce = void 0 === se ? "Not Found" : se;
+    var ce = undefined === se ? "Not Found" : se;
     var le = e.optionLabelProp;
     var ue = e.backfill;
     e.tabIndex;
@@ -2437,9 +2437,9 @@ function Je(e) {
     var fe = e.getPopupContainer;
     var he = e.placement;
     var me = e.listHeight;
-    var ge = void 0 === me ? 200 : me;
+    var ge = undefined === me ? 200 : me;
     var _e = e.listItemHeight;
-    var ve = void 0 === _e ? 20 : _e;
+    var ve = undefined === _e ? 20 : _e;
     var be = e.animation;
     var ye = e.transitionName;
     var Ee = e.virtual;
@@ -2449,7 +2449,7 @@ function Je(e) {
     var Te = e.dropdownRender;
     var Se = e.dropdownAlign;
     var Ie = e.showAction;
-    var Ae = void 0 === Ie ? [] : Ie;
+    var Ae = undefined === Ie ? [] : Ie;
     var je = e.direction;
     var Ne = e.tokenSeparators;
     var Re = e.tagRender;
@@ -2465,26 +2465,26 @@ function Je(e) {
     var Ue = e.onDeselect;
     var We = e.onClear;
     var He = e.internalProps;
-    var Ve = void 0 === He ? {} : He;
-    var ze = Object(c.a)(e, Qe);
+    var Ve = undefined === He ? {} : He;
+    var ze = c.a(e, Qe);
     var Ye = Ve.mark === qe.a;
     var Je = w ? w(ze) : ze;
     Ze.forEach(function (e) {
       delete Je[e];
     });
-    var $e = Object(l.useRef)(null);
-    var et = Object(l.useRef)(null);
-    var tt = Object(l.useRef)(null);
-    var nt = Object(l.useRef)(null);
-    var rt = Object(l.useMemo)(function () {
+    var $e = l.useRef(null);
+    var et = l.useRef(null);
+    var tt = l.useRef(null);
+    var nt = l.useRef(null);
+    var rt = l.useMemo(function () {
       return (Ne || []).some(function (e) {
         return ["\n", "\r\n"].includes(e);
       });
     }, [Ne]);
     var ot = function () {
-      var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 10;
-      var t = l.useState(!1);
-      var n = Object(s.a)(t, 2);
+      var e = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : 10;
+      var t = l.useState(false);
+      var n = s.a(t, 2);
       var r = n[0];
       var o = n[1];
       var i = l.useRef(null);
@@ -2505,74 +2505,74 @@ function Je(e) {
       };
       return [r, c, a];
     }();
-    var it = Object(s.a)(ot, 3);
+    var it = s.a(ot, 3);
     var at = it[0];
     var st = it[1];
     var ct = it[2];
-    var lt = Object(l.useState)();
-    var ut = Object(s.a)(lt, 2);
+    var lt = l.useState();
+    var ut = s.a(lt, 2);
     var dt = ut[0];
     var pt = ut[1];
-    Object(l.useEffect)(function () {
-      pt("rc_select_".concat(Object(T.a)()));
+    l.useEffect(function () {
+      pt("rc_select_".concat(T.a()));
     }, []);
     var ft = k || dt;
     var ht = le;
-    if (void 0 === ht) {
+    if (undefined === ht) {
       ht = L ? "label" : "children";
     }
     var mt = "combobox" !== B && U;
     var gt = "tags" === B || "multiple" === B;
-    var _t = void 0 !== W ? W : gt || "combobox" === B;
-    var vt = Object(l.useState)(!1);
-    var bt = Object(s.a)(vt, 2);
+    var _t = undefined !== W ? W : gt || "combobox" === B;
+    var vt = l.useState(false);
+    var bt = s.a(vt, 2);
     var yt = bt[0];
     var Et = bt[1];
-    Object(l.useEffect)(function () {
+    l.useEffect(function () {
       Et(d());
     }, []);
-    var Ot = Object(l.useRef)(null);
+    var Ot = l.useRef(null);
     l.useImperativeHandle(C, function () {
       var e;
       var t;
       var n;
       return {
-        focus: null === (e = tt.current) || void 0 === e ? void 0 : e.focus,
-        blur: null === (t = tt.current) || void 0 === t ? void 0 : t.blur,
-        scrollTo: null === (n = nt.current) || void 0 === n ? void 0 : n.scrollTo
+        focus: null === (e = tt.current) || undefined === e ? undefined : e.focus,
+        blur: null === (t = tt.current) || undefined === t ? undefined : t.blur,
+        scrollTo: null === (n = nt.current) || undefined === n ? undefined : n.scrollTo
       };
     });
     var wt = v(G, {
       value: F
     });
-    var Ct = Object(s.a)(wt, 2);
+    var Ct = s.a(wt, 2);
     var Tt = Ct[0];
     var St = Ct[1];
-    var It = Object(l.useMemo)(function () {
-      return Object(T.e)(Tt, {
+    var It = l.useMemo(function () {
+      return T.e(Tt, {
         labelInValue: mt,
         combobox: "combobox" === B
       });
     }, [Tt, mt]);
-    var At = Object(s.a)(It, 2);
+    var At = s.a(It, 2);
     var jt = At[0];
     var Nt = At[1];
-    var Rt = Object(l.useMemo)(function () {
+    var Rt = l.useMemo(function () {
       return new Set(jt);
     }, [jt]);
-    var kt = Object(l.useState)(null);
-    var xt = Object(s.a)(kt, 2);
+    var kt = l.useState(null);
+    var xt = s.a(kt, 2);
     var Dt = xt[0];
     var Mt = xt[1];
-    var Lt = Object(l.useState)("");
-    var Pt = Object(s.a)(Lt, 2);
+    var Lt = l.useState("");
+    var Pt = s.a(Lt, 2);
     var Bt = Pt[0];
     var Ft = Pt[1];
     var Gt = Bt;
-    if ("combobox" === B && void 0 !== Tt) {
+    if ("combobox" === B && undefined !== Tt) {
       Gt = Tt;
     } else {
-      if (void 0 !== V) {
+      if (undefined !== V) {
         Gt = V;
       } else {
         if (H) {
@@ -2580,9 +2580,9 @@ function Je(e) {
         }
       }
     }
-    var Ut = Object(l.useMemo)(function () {
+    var Ut = l.useMemo(function () {
       var e = L;
-      if (void 0 === e) {
+      if (undefined === e) {
         e = p(P);
       }
       if ("tags" === B && O) {
@@ -2590,7 +2590,7 @@ function Je(e) {
       }
       return e || [];
     }, [L, P, B, Tt]);
-    var Wt = Object(l.useMemo)(function () {
+    var Wt = l.useMemo(function () {
       return f(Ut, e);
     }, [Ut]);
     var Ht = function (e) {
@@ -2610,14 +2610,14 @@ function Je(e) {
         }).filter(Boolean);
       };
     }(Wt);
-    var Vt = Object(l.useMemo)(function () {
+    var Vt = l.useMemo(function () {
       if (!Gt || !_t) {
-        return Object(a.a)(Ut);
+        return a.a(Ut);
       }
       var e = g(Gt, Ut, {
         optionFilterProp: q,
-        filterOption: "combobox" === B && void 0 === z ? function () {
-          return !0;
+        filterOption: "combobox" === B && undefined === z ? function () {
+          return true;
         } : z
       });
       if ("tags" === B && e.every(function (e) {
@@ -2629,17 +2629,17 @@ function Je(e) {
           key: "__RC_SELECT_TAG_PLACEHOLDER__"
         });
       }
-      return Y && Array.isArray(e) ? Object(a.a)(e).sort(Y) : e;
+      return Y && Array.isArray(e) ? a.a(e).sort(Y) : e;
     }, [Ut, Gt, B, _t, Y]);
-    var zt = Object(l.useMemo)(function () {
+    var zt = l.useMemo(function () {
       return f(Vt, e);
     }, [Vt]);
-    Object(l.useEffect)(function () {
+    l.useEffect(function () {
       if (nt.current && nt.current.scrollTo) {
         nt.current.scrollTo(0);
       }
     }, [Gt]);
-    var Yt = Object(l.useMemo)(function () {
+    var Yt = l.useMemo(function () {
       var e = jt.map(function (e) {
         var t = Ht([e]);
         var n = h(e, {
@@ -2648,7 +2648,7 @@ function Je(e) {
           labelInValue: mt,
           optionLabelProp: ht
         });
-        return Object(i.a)(Object(i.a)({}, n), {}, {
+        return i.a(i.a({}, n), {}, {
           disabled: b(e, t)
         });
       });
@@ -2667,7 +2667,7 @@ function Je(e) {
         });
         var r = e.map(function (e) {
           var t = n.get(e.value);
-          return e.isCacheable && t ? Object(i.a)(Object(i.a)({}, e), {}, {
+          return e.isCacheable && t ? i.a(i.a({}, e), {}, {
             label: t
           }) : e;
         });
@@ -2705,14 +2705,14 @@ function Je(e) {
         }
       }
     };
-    var qt = Object(l.useState)([]);
-    var Xt = Object(s.a)(qt, 2);
+    var qt = l.useState([]);
+    var Xt = s.a(qt, 2);
     var Qt = Xt[0];
     var Zt = Xt[1];
     var Jt = function (t) {
       if (!Ye || !Ve.skipTriggerChange) {
         var n = Ht(t);
-        var r = Object(T.f)(Array.from(t), {
+        var r = T.f(Array.from(t), {
           labelInValue: mt,
           options: n,
           getLabeledValue: h,
@@ -2726,7 +2726,7 @@ function Je(e) {
             props: e
           });
           Zt(a.map(function (e, n) {
-            var r = Object(i.a)({}, e);
+            var r = i.a({}, e);
             Object.defineProperty(r, "_INTERNAL_OPTION_VALUE_", {
               get: function () {
                 return t[n];
@@ -2771,22 +2771,22 @@ function Je(e) {
     };
     var en = "combobox" === B && "function" === typeof de && de() || null;
     var tn = "function" === typeof pe && pe();
-    var nn = v(void 0, {
+    var nn = v(undefined, {
       defaultValue: M,
       value: D
     });
-    var rn = Object(s.a)(nn, 2);
+    var rn = s.a(nn, 2);
     var on = rn[0];
     var an = rn[1];
     var sn = on;
     var cn = !ce && !Vt.length;
     if (oe || cn && sn && "combobox" === B) {
-      sn = !1;
+      sn = false;
     }
     var ln;
     var un = !cn && sn;
     var dn = function (e) {
-      var t = void 0 !== e ? e : !sn;
+      var t = undefined !== e ? e : !sn;
       if (!(on === t || oe)) {
         an(t);
         if (xe) {
@@ -2816,7 +2816,7 @@ function Je(e) {
           }).every(function (e) {
             return !e.contains(n) && e !== n;
           })) {
-            r.current.triggerOpen(!1);
+            r.current.triggerOpen(false);
           }
         }
         window.addEventListener("mousedown", t);
@@ -2826,13 +2826,13 @@ function Je(e) {
       }, []);
     })(function () {
       var e;
-      return [$e.current, null === (e = et.current) || void 0 === e ? void 0 : e.getPopupElement()];
+      return [$e.current, null === (e = et.current) || undefined === e ? undefined : e.getPopupElement()];
     }, un, dn);
     var pn = function (e, t, n) {
-      var r = !0;
+      var r = true;
       var o = e;
       Mt(null);
-      var i = n ? null : Object(Xe.g)(e, Ne);
+      var i = n ? null : Xe.g(e, Ne);
       var s = i;
       if ("combobox" === B) {
         if (t) {
@@ -2850,13 +2850,13 @@ function Je(e) {
             return null !== e;
           });
         }
-        var c = Array.from(new Set([].concat(Object(a.a)(jt), Object(a.a)(s))));
+        var c = Array.from(new Set([].concat(a.a(jt), a.a(s))));
         Jt(c);
         c.forEach(function (e) {
-          Kt(e, !0, "input");
+          Kt(e, true, "input");
         });
-        dn(!1);
-        r = !1;
+        dn(false);
+        r = false;
       }
       Ft(o);
       if (Z && Gt !== o) {
@@ -2864,26 +2864,26 @@ function Je(e) {
       }
       return r;
     };
-    Object(l.useEffect)(function () {
+    l.useEffect(function () {
       if (on && oe) {
-        an(!1);
+        an(false);
       }
       if (oe) {
-        st(!1);
+        st(false);
       }
     }, [oe]);
-    Object(l.useEffect)(function () {
+    l.useEffect(function () {
       if (!(sn || gt || "combobox" === B)) {
-        pn("", !1, !1);
+        pn("", false, false);
       }
     }, [sn]);
     var fn = N();
-    var hn = Object(s.a)(fn, 2);
+    var hn = s.a(fn, 2);
     var mn = hn[0];
     var gn = hn[1];
-    var _n = Object(l.useRef)(!1);
+    var _n = l.useRef(false);
     var vn = [];
-    Object(l.useEffect)(function () {
+    l.useEffect(function () {
       return function () {
         vn.forEach(function (e) {
           return clearTimeout(e);
@@ -2891,21 +2891,21 @@ function Je(e) {
         vn.splice(0, vn.length);
       };
     }, []);
-    var bn = Object(l.useState)(0);
-    var yn = Object(s.a)(bn, 2);
+    var bn = l.useState(0);
+    var yn = s.a(bn, 2);
     var En = yn[0];
     var On = yn[1];
-    var wn = void 0 !== ae ? ae : "combobox" !== B;
-    var Cn = Object(l.useState)(null);
-    var Tn = Object(s.a)(Cn, 2);
+    var wn = undefined !== ae ? ae : "combobox" !== B;
+    var Cn = l.useState(null);
+    var Tn = s.a(Cn, 2);
     var Sn = Tn[0];
     var In = Tn[1];
-    var An = Object(l.useState)({});
-    var jn = Object(s.a)(An, 2)[1];
+    var An = l.useState({});
+    var jn = s.a(An, 2)[1];
     S(function () {
       if (un) {
         var e;
-        var t = Math.ceil(null === (e = $e.current) || void 0 === e ? void 0 : e.offsetWidth);
+        var t = Math.ceil(null === (e = $e.current) || undefined === e ? undefined : e.offsetWidth);
         if (!(Sn === t || Number.isNaN(t))) {
           In(t);
         }
@@ -2926,15 +2926,15 @@ function Je(e) {
       height: ge,
       itemHeight: ve,
       onSelect: function (e, t) {
-        $t(e, Object(i.a)(Object(i.a)({}, t), {}, {
+        $t(e, i.a(i.a({}, t), {}, {
           source: "option"
         }));
       },
       onToggleOpen: dn,
       onActiveValue: function (e, t) {
-        var n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+        var n = arguments.length > 2 && undefined !== arguments[2] ? arguments[2] : {};
         var r = n.source;
-        var o = void 0 === r ? "keyboard" : r;
+        var o = undefined === r ? "keyboard" : r;
         On(t);
         if (ue && "combobox" === B && null !== e && "keyboard" === o) {
           Mt(String(e));
@@ -2945,7 +2945,7 @@ function Je(e) {
       onScroll: ke,
       searchValue: Gt,
       menuItemSelectedIcon: re,
-      virtual: !1 !== Ee && !1 !== Ce,
+      virtual: false !== Ee && false !== Ce,
       onMouseEnter: function () {
         jn({});
       },
@@ -2962,16 +2962,16 @@ function Je(e) {
             We();
           }
           Jt([]);
-          pn("", !1, !1);
+          pn("", false, false);
         },
         customizeIcon: ee
       }, "×");
     }
     var kn;
-    var xn = void 0 !== te ? te : ie || !gt && "combobox" !== B;
+    var xn = undefined !== te ? te : ie || !gt && "combobox" !== B;
     if (xn) {
       kn = l.createElement(E.a, {
-        className: _()("".concat(j, "-arrow"), Object(o.a)({}, "".concat(j, "-arrow-loading"), ie)),
+        className: _()("".concat(j, "-arrow"), o.a({}, "".concat(j, "-arrow-loading"), ie)),
         customizeIcon: ne,
         customizeIconProps: {
           loading: ie,
@@ -2982,7 +2982,7 @@ function Je(e) {
         }
       });
     }
-    var Dn = _()(j, R, (I = {}, Object(o.a)(I, "".concat(j, "-focused"), at), Object(o.a)(I, "".concat(j, "-multiple"), gt), Object(o.a)(I, "".concat(j, "-single"), !gt), Object(o.a)(I, "".concat(j, "-allow-clear"), $), Object(o.a)(I, "".concat(j, "-show-arrow"), xn), Object(o.a)(I, "".concat(j, "-disabled"), oe), Object(o.a)(I, "".concat(j, "-loading"), ie), Object(o.a)(I, "".concat(j, "-open"), sn), Object(o.a)(I, "".concat(j, "-customize-input"), en), Object(o.a)(I, "".concat(j, "-show-search"), _t), I));
+    var Dn = _()(j, R, (I = {}, o.a(I, "".concat(j, "-focused"), at), o.a(I, "".concat(j, "-multiple"), gt), o.a(I, "".concat(j, "-single"), !gt), o.a(I, "".concat(j, "-allow-clear"), $), o.a(I, "".concat(j, "-show-arrow"), xn), o.a(I, "".concat(j, "-disabled"), oe), o.a(I, "".concat(j, "-loading"), ie), o.a(I, "".concat(j, "-open"), sn), o.a(I, "".concat(j, "-customize-input"), en), o.a(I, "".concat(j, "-show-search"), _t), I));
     var Mn = l.createElement(Ke, {
       ref: et,
       disabled: oe,
@@ -3007,7 +3007,7 @@ function Je(e) {
       onPopupVisibleChange: ln
     }, tn ? l.cloneElement(tn, {
       ref: m(Ot, tn.props.ref)
-    }) : l.createElement(x, Object(r.a)({}, e, {
+    }) : l.createElement(x, r.a({}, e, {
       domRef: Ot,
       prefixCls: j,
       inputElement: en,
@@ -3026,35 +3026,35 @@ function Je(e) {
       onSearch: pn,
       onSearchSubmit: function (e) {
         if (e && e.trim()) {
-          var t = Array.from(new Set([].concat(Object(a.a)(jt), [e])));
+          var t = Array.from(new Set([].concat(a.a(jt), [e])));
           Jt(t);
           t.forEach(function (e) {
-            Kt(e, !0, "input");
+            Kt(e, true, "input");
           });
           Ft("");
         }
       },
       onSelect: function (e, t) {
-        $t(e, Object(i.a)(Object(i.a)({}, t), {}, {
+        $t(e, i.a(i.a({}, t), {}, {
           source: "selection"
         }));
       },
       tokenWithEnter: rt
     })));
-    return tn ? Mn : l.createElement("div", Object(r.a)({
+    return tn ? Mn : l.createElement("div", r.a({
       className: Dn
     }, Je, {
       ref: $e,
       onMouseDown: function (e) {
         var t;
         var n = e.target;
-        var r = null === (t = et.current) || void 0 === t ? void 0 : t.getPopupElement();
+        var r = null === (t = et.current) || undefined === t ? undefined : t.getPopupElement();
         if (r && r.contains(n)) {
           var o = setTimeout(function () {
             var e;
             var t = vn.indexOf(o);
             if (!(-1 !== t && vn.splice(t, 1), ct(), yt || r.contains(document.activeElement))) {
-              if (!(null === (e = tt.current) || void 0 === e)) {
+              if (!(null === (e = tt.current) || undefined === e)) {
                 e.focus();
               }
             }
@@ -3065,7 +3065,7 @@ function Je(e) {
           for (var i = arguments.length, a = new Array(i > 1 ? i - 1 : 0), s = 1; s < i; s++) {
             a[s - 1] = arguments[s];
           }
-          Be.apply(void 0, [e].concat(a));
+          Be.apply(undefined, [e].concat(a));
         }
       },
       onKeyDown: function (e) {
@@ -3077,15 +3077,15 @@ function Je(e) {
             e.preventDefault();
           }
           if (!sn) {
-            dn(!0);
+            dn(true);
           }
         }
         gn(!!Gt);
         if (r === u.a.BACKSPACE && !n && gt && !Gt && jt.length) {
-          var o = Object(T.c)(Yt, jt);
+          var o = T.c(Yt, jt);
           if (null !== o.removedValue) {
             Jt(o.values);
-            Kt(o.removedValue, !1, "input");
+            Kt(o.removedValue, false, "input");
           }
         }
         for (var i = arguments.length, a = new Array(i > 1 ? i - 1 : 0), s = 1; s < i; s++) {
@@ -3095,7 +3095,7 @@ function Je(e) {
           (t = nt.current).onKeyDown.apply(t, [e].concat(a));
         }
         if (Pe) {
-          Pe.apply(void 0, [e].concat(a));
+          Pe.apply(undefined, [e].concat(a));
         }
       },
       onKeyUp: function (e) {
@@ -3107,31 +3107,31 @@ function Je(e) {
           (o = nt.current).onKeyUp.apply(o, [e].concat(n));
         }
         if (Le) {
-          Le.apply(void 0, [e].concat(n));
+          Le.apply(undefined, [e].concat(n));
         }
       },
       onFocus: function () {
-        st(!0);
+        st(true);
         if (!oe) {
           if (De && !_n.current) {
-            De.apply(void 0, arguments);
+            De.apply(undefined, arguments);
           }
           if (Ae.includes("focus")) {
-            dn(!0);
+            dn(true);
           }
         }
-        _n.current = !0;
+        _n.current = true;
       },
       onBlur: function () {
-        st(!1, function () {
-          _n.current = !1;
-          dn(!1);
+        st(false, function () {
+          _n.current = false;
+          dn(false);
         });
         if (!oe) {
           if (Gt) {
             if ("tags" === B) {
-              pn("", !1, !1);
-              Jt(Array.from(new Set([].concat(Object(a.a)(jt), [Gt]))));
+              pn("", false, false);
+              Jt(Array.from(new Set([].concat(a.a(jt), [Gt]))));
             } else {
               if ("multiple" === B) {
                 Ft("");
@@ -3139,7 +3139,7 @@ function Je(e) {
             }
           }
           if (Me) {
-            Me.apply(void 0, arguments);
+            Me.apply(undefined, arguments);
           }
         }
       }

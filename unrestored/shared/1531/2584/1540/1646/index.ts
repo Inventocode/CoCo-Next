@@ -48,18 +48,18 @@ var K = A.f;
 var q = K;
 var X = !!(z && z.createEvent && l.dispatchEvent);
 var Q = "function" == typeof PromiseRejectionEvent;
-var Z = !1;
+var Z = false;
 var J = R(P, function () {
   var e = y(W);
   var t = e !== String(W);
   if (!t && 66 === M) {
-    return !0;
+    return true;
   }
   if (c && !H.finally) {
-    return !0;
+    return true;
   }
   if (M >= 51 && /native code/.test(e)) {
-    return !1;
+    return false;
   }
   var n = new W(function (e) {
     e(1);
@@ -79,7 +79,7 @@ var ee = function (e) {
 };
 var te = function (e, t) {
   if (!e.notified) {
-    e.notified = !0;
+    e.notified = true;
     var n = e.reactions;
     T(function () {
       for (var r = e.value, o = 1 == e.state, i = 0; n.length > i;) {
@@ -99,7 +99,7 @@ var te = function (e, t) {
               }
               e.rejection = 1;
             }
-            if (!0 === u) {
+            if (true === u) {
               a = r;
             } else {
               if (f) {
@@ -108,7 +108,7 @@ var te = function (e, t) {
               a = u(r);
               if (f) {
                 f.exit();
-                c = !0;
+                c = true;
               }
             }
             if (a === l.promise) {
@@ -131,7 +131,7 @@ var te = function (e, t) {
         }
       }
       e.reactions = [];
-      e.notified = !1;
+      e.notified = false;
       if (t && !e.rejection) {
         re(e);
       }
@@ -144,7 +144,7 @@ var ne = function (e, t, n) {
   if (X) {
     (r = z.createEvent("Event")).promise = t;
     r.reason = n;
-    r.initEvent(e, !1, !0);
+    r.initEvent(e, false, true);
     l.dispatchEvent(r);
   } else {
     r = {
@@ -196,18 +196,18 @@ var ae = function (e, t, n) {
 };
 var se = function (e, t, n) {
   if (!e.done) {
-    e.done = !0;
+    e.done = true;
     if (n) {
       e = n;
     }
     e.value = t;
     e.state = 2;
-    te(e, !0);
+    te(e, true);
   }
 };
 var ce = function e(t, n, r) {
   if (!t.done) {
-    t.done = !0;
+    t.done = true;
     if (r) {
       t = r;
     }
@@ -219,7 +219,7 @@ var ce = function e(t, n, r) {
       if (o) {
         T(function () {
           var r = {
-            done: !1
+            done: false
           };
           try {
             o.call(n, ae(e, r, t), ae(se, r, t));
@@ -230,11 +230,11 @@ var ce = function e(t, n, r) {
       } else {
         t.value = n;
         t.state = 1;
-        te(t, !1);
+        te(t, false);
       }
     } catch (i) {
       se({
-        done: !1
+        done: false
       }, i, t);
     }
   }
@@ -252,13 +252,13 @@ if (J && (H = (W = function (e) {
 }).prototype, (r = function (e) {
   F(this, {
     type: P,
-    done: !1,
-    notified: !1,
-    parent: !1,
+    done: false,
+    notified: false,
+    parent: false,
     reactions: [],
-    rejection: !1,
+    rejection: false,
     state: 0,
-    value: void 0
+    value: undefined
   });
 }).prototype = f(H, {
   then: function (e, t) {
@@ -266,16 +266,16 @@ if (J && (H = (W = function (e) {
     var r = K(w(this, W));
     r.ok = "function" != typeof e || e;
     r.fail = "function" == typeof t && t;
-    r.domain = D ? Y.domain : void 0;
-    n.parent = !0;
+    r.domain = D ? Y.domain : undefined;
+    n.parent = true;
     n.reactions.push(r);
     if (0 != n.state) {
-      te(n, !1);
+      te(n, false);
     }
     return r.promise;
   },
   catch: function (e) {
-    return this.then(void 0, e);
+    return this.then(undefined, e);
   }
 }), o = function () {
   var e = new r();
@@ -294,10 +294,10 @@ if (J && (H = (W = function (e) {
         a.call(n, e, t);
       }).then(e, t);
     }, {
-      unsafe: !0
+      unsafe: true
     });
     p(U, "catch", H.catch, {
-      unsafe: !0
+      unsafe: true
     });
   }
   try {
@@ -308,29 +308,29 @@ if (J && (H = (W = function (e) {
   }
 }
 s({
-  global: !0,
-  wrap: !0,
+  global: true,
+  wrap: true,
   forced: J
 }, {
   Promise: W
 });
-m(W, P, !1, !0);
+m(W, P, false, true);
 g(P);
 i = u(P);
 s({
   target: P,
-  stat: !0,
+  stat: true,
   forced: J
 }, {
   reject: function (e) {
     var t = K(this);
-    t.reject.call(void 0, e);
+    t.reject.call(undefined, e);
     return t.promise;
   }
 });
 s({
   target: P,
-  stat: !0,
+  stat: true,
   forced: c || J
 }, {
   resolve: function (e) {
@@ -339,7 +339,7 @@ s({
 });
 s({
   target: P,
-  stat: !0,
+  stat: true,
   forced: $
 }, {
   all: function (e) {
@@ -354,12 +354,12 @@ s({
       var s = 1;
       E(e, function (e) {
         var c = a++;
-        var l = !1;
-        i.push(void 0);
+        var l = false;
+        i.push(undefined);
         s++;
         n.call(t, e).then(function (e) {
           if (!l) {
-            l = !0;
+            l = true;
             i[c] = e;
             if (! --s) {
               r(i);

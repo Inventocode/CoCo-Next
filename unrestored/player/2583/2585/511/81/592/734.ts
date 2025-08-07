@@ -3,8 +3,8 @@
 var r = function () {
   function t() {}
   t.parseLong = function (t, e) {
-    if (void 0 === e) {
-      e = void 0;
+    if (undefined === e) {
+      e = undefined;
     }
     return parseInt(t, e);
   };

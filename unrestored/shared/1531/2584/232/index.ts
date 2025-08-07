@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.default = void 0;
+exports.default = undefined;
 var r;
 var o = (r = require("./1512")) && r.__esModule ? r : {
   default: r
@@ -21,9 +21,9 @@ exports.default = function (e, t, n) {
   var r = Object.keys(t);
   var a = n || {};
   var s = a.handleMissingStyleName;
-  var c = void 0 === s ? o.default.handleMissingStyleName : s;
+  var c = undefined === s ? o.default.handleMissingStyleName : s;
   var l = a.autoResolveMultipleImports;
-  var u = void 0 === l ? o.default.autoResolveMultipleImports : l;
+  var u = undefined === l ? o.default.autoResolveMultipleImports : l;
   return e ? e.split(" ").filter(function (e) {
     return e;
   }).map(function (e) {

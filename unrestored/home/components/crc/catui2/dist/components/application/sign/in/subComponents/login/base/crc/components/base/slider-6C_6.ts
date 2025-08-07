@@ -45,15 +45,15 @@ var Slider = function Slider(props) {
   var getPercentage = function getPercentage() {
     var value = props.value;
     var _props$min = props.min;
-    var min = _props$min === void 0 ? 0 : _props$min;
+    var min = _props$min === undefined ? 0 : _props$min;
     var _props$max = props.max;
-    var max = _props$max === void 0 ? 100 : _props$max;
+    var max = _props$max === undefined ? 100 : _props$max;
     return (value - min) / (max - min) * 100;
   };
   var percentage = getPercentage();
   return /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_2_react___default.createElement("div", {
     style: {
-      width: (_props$width = props.width) !== null && _props$width !== void 0 ? _props$width : 136
+      width: (_props$width = props.width) !== null && _props$width !== undefined ? _props$width : 136
     },
     onMouseDown: handleMouseDown,
     onMouseUp: handleMouseUp,
@@ -70,7 +70,7 @@ var Slider = function Slider(props) {
     type: "range",
     min: props.min,
     max: props.max,
-    step: (_props$step = props.step) !== null && _props$step !== void 0 ? _props$step : 1,
+    step: (_props$step = props.step) !== null && _props$step !== undefined ? _props$step : 1,
     value: props.value,
     onChange: handleChange
   }), props.tooltip && /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_2_react___default.createElement("span", {

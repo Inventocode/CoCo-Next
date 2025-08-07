@@ -19,8 +19,8 @@ r("replace", function (e, t, n) {
   var r = _ ? "$" : "$0";
   return [function (e, n) {
     var r = l(this);
-    var o = void 0 == e ? void 0 : e[f];
-    return void 0 !== o ? o.call(e, r, n) : t.call(c(r), e, n);
+    var o = undefined == e ? undefined : e[f];
+    return undefined !== o ? o.call(e, r, n) : t.call(c(r), e, n);
   }, function (e, o) {
     var l = i(this);
     var f = c(e);
@@ -55,15 +55,15 @@ r("replace", function (e, t, n) {
     for (var O, w = "", C = 0, T = 0; T < y.length; T++) {
       E = y[T];
       for (var S = c(E[0]), I = h(m(a(E.index), f.length), 0), A = [], j = 1; j < E.length; j++) {
-        A.push(void 0 === (O = E[j]) ? O : String(O));
+        A.push(undefined === (O = E[j]) ? O : String(O));
       }
       var N = E.groups;
       if (_) {
         var R = [S].concat(A, I, f);
-        if (void 0 !== N) {
+        if (undefined !== N) {
           R.push(N);
         }
-        var k = c(o.apply(void 0, R));
+        var k = c(o.apply(undefined, R));
       } else {
         k = d(S, f, I, A, N, o);
       }

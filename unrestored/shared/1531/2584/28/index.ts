@@ -16,10 +16,10 @@ export { y as c };
 export { E as k };
 export { O as m };
 export { w as i };
-require("../51/index");
-var r = require("./773/index");
-var o = require("../31/index");
-var i = require("../13/303/index");
+require("color");
+import r = require("./773/index");
+import o = require("lodash");
+import i = require("../13/303/index");
 var a = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -32,7 +32,7 @@ var a = function __importDefault(module) {
   });
   return defaultExport;
 }(i);
-var s = require("./651");
+import s = require("./651");
 function c(e) {
   return e + "_" + a.a.generate();
 }
@@ -44,7 +44,7 @@ function u() {
   return "undefined" === typeof window;
 }
 function d(e) {
-  return Object(o.isPlainObject)(e) ? JSON.stringify(e) : (null === e || void 0 === e ? void 0 : e.toString()) || "";
+  return o.isPlainObject(e) ? JSON.stringify(e) : (null === e || undefined === e ? undefined : e.toString()) || "";
 }
 function p(e) {
   return "%{COCO_player/".concat(e, "}");
@@ -104,12 +104,12 @@ function O(e, t, n) {
   var o;
   var i = "";
   if (t) {
-    i = n ? null === (r = t[n]) || void 0 === r ? void 0 : r[e] : null === (o = t.defaultMode) || void 0 === o ? void 0 : o[e];
+    i = n ? null === (r = t[n]) || undefined === r ? undefined : r[e] : null === (o = t.defaultMode) || undefined === o ? undefined : o[e];
   }
   return i || "";
 }
 function w(e) {
-  return Object(r.filterXSS)(e);
+  return r.filterXSS(e);
 }
 a.a.characters("0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-_");
 export default u;

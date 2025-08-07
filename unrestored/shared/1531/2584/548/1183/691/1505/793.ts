@@ -1,6 +1,6 @@
 "use strict";
 
-var r = require("react");
+import r = require("react");
 var i = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;

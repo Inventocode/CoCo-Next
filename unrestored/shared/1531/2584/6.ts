@@ -1,7 +1,7 @@
 "use strict";
 
 export { o as a };
-var r = require("./11");
+import r = require("./11");
 function i(e, t) {
   var n = Object.keys(e);
   if (Object.getOwnPropertySymbols) {
@@ -19,8 +19,8 @@ function o(e) {
   for (var t = 1; t < arguments.length; t++) {
     var n = null != arguments[t] ? arguments[t] : {};
     if (t % 2) {
-      i(Object(n), !0).forEach(function (t) {
-        Object(r.a)(e, t, n[t]);
+      i(Object(n), true).forEach(function (t) {
+        r.a(e, t, n[t]);
       });
     } else {
       if (Object.getOwnPropertyDescriptors) {

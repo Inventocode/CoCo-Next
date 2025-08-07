@@ -1,8 +1,8 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
 exports.default = function () {
-  void 0;
+  undefined;
 };

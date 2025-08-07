@@ -28,7 +28,7 @@ var I = _("toStringTag");
 var A = v("TYPED_ARRAY_TAG");
 var j = v("TYPED_ARRAY_CONSTRUCTOR");
 var N = a && !!g && "Opera" !== d(c.opera);
-var R = !1;
+var R = false;
 var k = {
   Int8Array: 1,
   Uint8Array: 1,
@@ -46,7 +46,7 @@ var x = {
 };
 var D = function (e) {
   if (!l(e)) {
-    return !1;
+    return false;
   }
   var t = d(e);
   return u(k, t) || u(x, t);
@@ -54,7 +54,7 @@ var D = function (e) {
 for (r in k) if (i = (o = c[r]) && o.prototype) {
   p(i, j, o);
 } else {
-  N = !1;
+  N = false;
 }
 for (r in x) if (i = (o = c[r]) && o.prototype) {
   p(i, j, o);
@@ -75,9 +75,9 @@ if (N && m(O) !== C) {
   g(O, C);
 }
 if (s && !u(C, I)) {
-  for (r in R = !0, h(C, I, {
+  for (r in R = true, h(C, I, {
     get: function () {
-      return l(this) ? this[A] : void 0;
+      return l(this) ? this[A] : undefined;
     }
   }), k) if (c[r]) {
     p(c[r], A, r);
@@ -142,7 +142,7 @@ module.exports = {
   },
   isView: function (e) {
     if (!l(e)) {
-      return !1;
+      return false;
     }
     var t = d(e);
     return "DataView" === t || u(k, t) || u(x, t);

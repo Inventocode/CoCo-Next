@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.Checkboard = void 0;
+exports.Checkboard = undefined;
 var r = Object.assign || function (e) {
   for (var t = 1; t < arguments.length; t++) {
     var n = arguments[t];

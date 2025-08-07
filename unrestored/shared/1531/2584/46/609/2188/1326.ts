@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.JsonGenerator = void 0;
+exports.JsonGenerator = undefined;
 var r = require("../../../125/195/2013/1102");
 function i(e) {
   return "string" == typeof e || e instanceof String;
@@ -78,7 +78,7 @@ var o = function () {
     if (i(a)) {
       return "start_on_click" === n.type ? a : this.scrub_(e, t, a);
     }
-    if (void 0 == a) {
+    if (undefined == a) {
       return "";
     }
     throw Error("Invalid code generated: " + a);
@@ -156,15 +156,15 @@ var o = function () {
       return "";
     }
     var s = o[1] || 0;
-    var c = !1;
+    var c = false;
     var u = Math.floor(r);
     var l = Math.floor(s);
     if (u <= l) {
       if (u !== l || 0 !== u && 99 !== u) {
-        c = !0;
+        c = true;
         for (var f = 0; f < this.ORDER_OVERRIDES.length; f++) {
           if (this.ORDER_OVERRIDES[f][0] == r && this.ORDER_OVERRIDES[f][1] == s) {
-            c = !1;
+            c = false;
             break;
           }
         }

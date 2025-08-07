@@ -1,7 +1,7 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
 var r = require("./1125");
 var i = require("./1124");
@@ -44,5 +44,5 @@ function o(e, t) {
 }
 exports.default = o;
 o.provides = {
-  text: !0
+  text: true
 };

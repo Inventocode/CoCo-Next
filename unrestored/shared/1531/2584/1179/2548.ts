@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.init_events_blocks = void 0;
+exports.init_events_blocks = undefined;
 var r = require("./2555/579");
 var o = require("./2553/1425");
 exports.init_events_blocks = function (e) {
@@ -11,9 +11,9 @@ exports.init_events_blocks = function (e) {
     type: "start_on_click",
     message0: (0, r.i18n)("start_on_click"),
     args0: [(0, r.create_head_icon)(o.icon_start)],
-    nextStatement: !0,
+    nextStatement: true,
     colour: (0, r.i18n)("BLUE_3"),
-    inputsInline: !0
+    inputsInline: true
   }, {
     type: "start_on_click_2",
     message0: (0, r.i18n)("start_on_click_2"),
@@ -25,14 +25,14 @@ exports.init_events_blocks = function (e) {
       name: "DO"
     }],
     colour: (0, r.i18n)("BLUE_3"),
-    inputsInline: !0
+    inputsInline: true
   }, {
     type: "on_running_group_activated",
     message0: (0, r.i18n)("on_running_group_activated"),
     args0: [(0, r.create_head_icon)(o.icon_start)],
-    nextStatement: !0,
+    nextStatement: true,
     colour: (0, r.i18n)("BLUE_3"),
-    inputsInline: !0
+    inputsInline: true
   }, {
     type: "self_listen",
     message0: (0, r.i18n)("self_listen"),
@@ -48,7 +48,7 @@ exports.init_events_blocks = function (e) {
       name: "DO"
     }],
     colour: (0, r.i18n)("BLUE_3"),
-    inputsInline: !0
+    inputsInline: true
   }, {
     type: "self_broadcast",
     message0: (0, r.i18n)("self_broadcast"),
@@ -57,10 +57,10 @@ exports.init_events_blocks = function (e) {
       name: "message",
       check: "String"
     }],
-    previousStatement: !0,
-    nextStatement: !0,
+    previousStatement: true,
+    nextStatement: true,
     colour: (0, r.i18n)("BLUE_3"),
-    inputsInline: !0
+    inputsInline: true
   }, {
     type: "self_broadcast_and_wait",
     message0: (0, r.i18n)("self_broadcast_and_wait"),
@@ -69,10 +69,10 @@ exports.init_events_blocks = function (e) {
       name: "message",
       check: "String"
     }],
-    previousStatement: !0,
-    nextStatement: !0,
+    previousStatement: true,
+    nextStatement: true,
     colour: (0, r.i18n)("BLUE_3"),
-    inputsInline: !0
+    inputsInline: true
   }, {
     type: "when",
     message0: (0, r.i18n)("when"),
@@ -87,13 +87,13 @@ exports.init_events_blocks = function (e) {
     }],
     tooltip: (0, r.i18n)("WHEN_BLOCK_TOOLTIPS"),
     colour: (0, r.i18n)("BLUE_3"),
-    inputsInline: !0
+    inputsInline: true
   }, {
     type: "terminate",
     message0: (0, r.i18n)("terminate"),
     args0: [],
-    inputsInline: !0,
-    previousStatement: !0,
+    inputsInline: true,
+    previousStatement: true,
     colour: (0, r.i18n)("BLUE_3")
   }];
   e.define_blocks_with_json_array(t);

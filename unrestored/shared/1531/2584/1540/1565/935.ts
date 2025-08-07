@@ -1,5 +1,5 @@
 var r = require("../1742/247/index")("iterator");
-var o = !1;
+var o = false;
 try {
   var i = 0;
   var a = {
@@ -9,7 +9,7 @@ try {
       };
     },
     return: function () {
-      o = !0;
+      o = true;
     }
   };
   a[r] = function () {
@@ -21,16 +21,16 @@ try {
 } catch (s) {}
 module.exports = function (e, t) {
   if (!t && !o) {
-    return !1;
+    return false;
   }
-  var n = !1;
+  var n = false;
   try {
     var i = {};
     i[r] = function () {
       return {
         next: function () {
           return {
-            done: n = !0
+            done: n = true
           };
         }
       };

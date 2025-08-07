@@ -2,11 +2,11 @@
 
 export { l as a };
 export { h as b };
-var r = require("./34/index");
-var i = require("./122");
-var o = require("./65");
-var a = require("./1003");
-var s = require("./128");
+import r = require("./34/index");
+import i = require("./122");
+import o = require("./65");
+import a = require("./1003");
+import s = require("./128");
 var c = function () {
   var e = function (t, n) {
     return (e = Object.setPrototypeOf || {
@@ -38,7 +38,7 @@ var u = function (e) {
     return {
       next: function () {
         if (e && r >= e.length) {
-          e = void 0;
+          e = undefined;
         }
         return {
           value: e && e[r++],
@@ -67,7 +67,7 @@ var l = function () {
     var o = this.data.get_texture(t);
     if (!o) {
       if (r) {
-        var a = new f(e, this.playable_container, this.app, this.events, void 0, void 0, r);
+        var a = new f(e, this.playable_container, this.app, this.events, undefined, undefined, r);
         this.playables.set(e, a);
         return i.b.success(a);
       }
@@ -99,7 +99,7 @@ var l = function () {
     }
     this.playables.delete(e);
     t.destroy({
-      children: !0
+      children: true
     });
   };
   e.prototype.get_playable = function (e) {
@@ -165,7 +165,7 @@ var l = function () {
     try {
       for (var n = u(this.playables.values()), r = n.next(); !r.done; r = n.next()) {
         r.value.destroy({
-          children: !0
+          children: true
         });
       }
     } catch (i) {
@@ -188,7 +188,7 @@ var l = function () {
   e.prototype.destroy = function () {
     this.playables.clear();
     this.playable_container.destroy({
-      children: !0
+      children: true
     });
     this.on_destroy();
   };
@@ -216,12 +216,12 @@ var f = function (e) {
     };
     f.id = t;
     f.app = i;
-    f.is_played = !1;
+    f.is_played = false;
     f.video_frame = new r.t(c);
     if (l) {
       f.generate_error_frame(l);
     }
-    f.set_origin_in_center(!0);
+    f.set_origin_in_center(true);
     f.video_frame.anchor.set(.5, .5);
     f.add_listener("drag_start", function () {
       f.events.fire("video:selected", f);
@@ -241,7 +241,7 @@ var f = function (e) {
     var d = f.app.get_app().view;
     var h = d.width;
     var p = d.height;
-    var _ = u || Object(o.e)({
+    var _ = u || o.e({
       width: f.width,
       height: f.height
     }, {
@@ -269,7 +269,7 @@ var f = function (e) {
       }
       t.currentTime = 0;
       t.play();
-      this.is_played = !0;
+      this.is_played = true;
     }
   };
   t.prototype.resume = function () {
@@ -288,7 +288,7 @@ var f = function (e) {
   };
   t.prototype.set_pixi_scale = function (e, t) {
     var n = e && Math.max(0, e);
-    this.scale.set(n, void 0 !== t ? Math.max(0, t) : n);
+    this.scale.set(n, undefined !== t ? Math.max(0, t) : n);
     this.emit_event("change", {
       scale: this.scale
     });
@@ -333,7 +333,7 @@ var f = function (e) {
       n.removeEventListener("error", this.on_error_handler);
       n.removeEventListener("ended", this.on_complete_handler);
     }
-    this.emit_event("destroy", void 0);
+    this.emit_event("destroy", undefined);
     e.prototype.destroy.call(this, t);
   };
   t.prototype.get_video_element_from_base_texture = function () {
@@ -362,18 +362,18 @@ var d = function (e) {
   function t(t, n, i, a, s) {
     var c = e.call(this) || this;
     c.on_complete_handler = function () {
-      c.ended = !0;
+      c.ended = true;
       if (c.custom_on_complete_handler) {
         c.custom_on_complete_handler();
       }
     };
     c.id = t;
     c.app = a;
-    c.ended = !1;
-    c.is_played = !1;
+    c.ended = false;
+    c.is_played = false;
     c.pivot.set(.5);
     c.animated_actor = new r.a(n);
-    c.animated_actor.loop = !1;
+    c.animated_actor.loop = false;
     c.animated_actor.anchor.set(.5);
     c.animated_actor.onComplete = c.on_complete_handler;
     c.animated_actor.animationSpeed = parseFloat((1 / 6).toFixed(2));
@@ -381,7 +381,7 @@ var d = function (e) {
     var u = c.app.get_app().view;
     var l = u.width;
     var f = u.height;
-    var d = s || Object(o.e)({
+    var d = s || o.e({
       width: c.width,
       height: c.height
     }, {
@@ -398,12 +398,12 @@ var d = function (e) {
   };
   t.prototype.play = function (e) {
     this.on_complete_handler();
-    this.ended = !1;
+    this.ended = false;
     if (e) {
       this.custom_on_complete_handler = e.on_complete;
     }
     this.animated_actor.gotoAndPlay(0);
-    this.is_played = !0;
+    this.is_played = true;
   };
   t.prototype.resume = function () {
     if (this.is_played && !this.ended && !this.animated_actor.playing) {
@@ -435,7 +435,7 @@ var d = function (e) {
   };
   t.prototype.set_pixi_scale = function (e, t) {
     var n = e && Math.max(0, e);
-    this.scale.set(n, void 0 !== t ? Math.max(0, t) : n);
+    this.scale.set(n, undefined !== t ? Math.max(0, t) : n);
   };
   t.prototype.get_scale = function () {
     return {

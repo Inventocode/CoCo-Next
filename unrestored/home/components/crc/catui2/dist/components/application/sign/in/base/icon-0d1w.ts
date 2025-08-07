@@ -124,7 +124,7 @@ var Icon = /*#__PURE__*/function (_React$Component) {
       var autoRotate = _this$props.autoRotate;
       var dropdown = _this$props.dropdown;
       var _this$props$customSty = _this$props.customStyles;
-      var customStyles = _this$props$customSty === void 0 ? {} : _this$props$customSty;
+      var customStyles = _this$props$customSty === undefined ? {} : _this$props$customSty;
       var style = _objectSpread({
         fontSize: "".concat(size, "px")
       }, customStyles);

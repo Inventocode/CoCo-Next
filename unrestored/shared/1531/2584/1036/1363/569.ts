@@ -60,12 +60,12 @@
   }
   function v(e, t) {
     if (!e) {
-      g(e, !0, t, "==", d.ok);
+      g(e, true, t, "==", d.ok);
     }
   }
   function m(e, t, n, r) {
     if (e === t) {
-      return !0;
+      return true;
     }
     if (o(e) && o(t)) {
       return 0 === i(e, t);
@@ -81,26 +81,26 @@
         return 0 === i(new Uint8Array(e.buffer), new Uint8Array(t.buffer));
       }
       if (o(e) !== o(t)) {
-        return !1;
+        return false;
       }
       var s = (r = r || {
         actual: [],
         expected: []
       }).actual.indexOf(e);
       return -1 !== s && s === r.expected.indexOf(t) || (r.actual.push(e), r.expected.push(t), function (e, t, n, r) {
-        if (null === e || void 0 === e || null === t || void 0 === t) {
-          return !1;
+        if (null === e || undefined === e || null === t || undefined === t) {
+          return false;
         }
         if (a.isPrimitive(e) || a.isPrimitive(t)) {
           return e === t;
         }
         if (n && Object.getPrototypeOf(e) !== Object.getPrototypeOf(t)) {
-          return !1;
+          return false;
         }
         var i = y(e);
         var o = y(t);
         if (i && !o || !i && o) {
-          return !1;
+          return false;
         }
         if (i) {
           e = c.call(e);
@@ -112,20 +112,20 @@
         var l = E(e);
         var f = E(t);
         if (l.length !== f.length) {
-          return !1;
+          return false;
         }
         for (l.sort(), f.sort(), u = l.length - 1; u >= 0; u--) {
           if (l[u] !== f[u]) {
-            return !1;
+            return false;
           }
         }
         for (u = l.length - 1; u >= 0; u--) {
           s = l[u];
           if (!m(e[s], t[s], n, r)) {
-            return !1;
+            return false;
           }
         }
-        return !0;
+        return true;
       }(e, t, n, r));
     }
     return n ? e === t : e == t;
@@ -135,17 +135,17 @@
   }
   function b(e, t) {
     if (!e || !t) {
-      return !1;
+      return false;
     }
     if ("[object RegExp]" == Object.prototype.toString.call(t)) {
       return t.test(e);
     }
     try {
       if (e instanceof t) {
-        return !0;
+        return true;
       }
     } catch (n) {}
-    return !Error.isPrototypeOf(t) && !0 === t.call({}, e);
+    return !Error.isPrototypeOf(t) && true === t.call({}, e);
   }
   function w(e, t, n, r) {
     var i;
@@ -185,12 +185,12 @@
     this.operator = e.operator;
     if (e.message) {
       this.message = e.message;
-      this.generatedMessage = !1;
+      this.generatedMessage = false;
     } else {
       this.message = function (e) {
         return _(A(e.actual), 128) + " " + e.operator + " " + _(A(e.expected), 128);
       }(this);
-      this.generatedMessage = !0;
+      this.generatedMessage = true;
     }
     var t = e.stackStartFunction || g;
     if (Error.captureStackTrace) {
@@ -223,22 +223,22 @@
     }
   };
   d.deepEqual = function (e, t, n) {
-    if (!m(e, t, !1)) {
+    if (!m(e, t, false)) {
       g(e, t, n, "deepEqual", d.deepEqual);
     }
   };
   d.deepStrictEqual = function (e, t, n) {
-    if (!m(e, t, !0)) {
+    if (!m(e, t, true)) {
       g(e, t, n, "deepStrictEqual", d.deepStrictEqual);
     }
   };
   d.notDeepEqual = function (e, t, n) {
-    if (m(e, t, !1)) {
+    if (m(e, t, false)) {
       g(e, t, n, "notDeepEqual", d.notDeepEqual);
     }
   };
   d.notDeepStrictEqual = function e(t, n, r) {
-    if (m(t, n, !0)) {
+    if (m(t, n, true)) {
       g(t, n, r, "notDeepStrictEqual", e);
     }
   };
@@ -253,10 +253,10 @@
     }
   };
   d.throws = function (e, t, n) {
-    w(!0, e, t, n);
+    w(true, e, t, n);
   };
   d.doesNotThrow = function (e, t, n) {
-    w(!1, e, t, n);
+    w(false, e, t, n);
   };
   d.ifError = function (e) {
     if (e) {
@@ -265,7 +265,7 @@
   };
   d.strict = r(function e(t, n) {
     if (!t) {
-      g(t, !0, n, "==", e);
+      g(t, true, n, "==", e);
     }
   }, d, {
     equal: d.strictEqual,

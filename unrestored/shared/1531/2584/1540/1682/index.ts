@@ -9,8 +9,8 @@ var c = require("../1675/948");
 r("search", function (e, t, n) {
   return [function (t) {
     var n = i(this);
-    var r = void 0 == t ? void 0 : t[e];
-    return void 0 !== r ? r.call(t, n) : new RegExp(t)[e](s(n));
+    var r = undefined == t ? undefined : t[e];
+    return undefined !== r ? r.call(t, n) : new RegExp(t)[e](s(n));
   }, function (e) {
     var r = o(this);
     var i = s(e);

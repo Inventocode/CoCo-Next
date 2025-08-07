@@ -1,7 +1,7 @@
 "use strict";
 
 module.exports = function (e) {
-  var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+  var t = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : {};
   if (e) {
     for (var n = {
         key: ["source", "protocol", "authority", "userInfo", "user", "password", "host", "port", "relative", "path", "directory", "file", "query", "anchor"],

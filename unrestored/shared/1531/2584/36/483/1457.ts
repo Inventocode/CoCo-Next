@@ -1,1 +1,0 @@
-module.exports = "https://creation.codemao.cn/coconut/web/1.22.0-0/" + "static/media/spin.f1032cee.svg";

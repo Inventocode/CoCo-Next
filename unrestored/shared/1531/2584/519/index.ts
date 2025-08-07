@@ -8,20 +8,20 @@ export { _ as c };
 export { v as g };
 export { b as h };
 export { y as b };
-var r = require("../29");
-var o = require("./772");
-var i = require("../80/index");
-var a = require("../108");
-var s = require("../20");
-var c = require("../397");
-var l = require("../487");
+import r = require("../29");
+import o = require("./772");
+import i = require("../80/index");
+import a = require("../108");
+import s = require("../20");
+import c = require("../397");
+import l = require("../487");
 function u(e, t) {
   var n;
   var r = e.key;
   if ("value" in e) {
     n = e.value;
   }
-  return null !== r && void 0 !== r ? r : void 0 !== n ? n : "rc-index-key-".concat(t);
+  return null !== r && undefined !== r ? r : undefined !== n ? n : "rc-index-key-".concat(t);
 }
 function d(e) {
   var t = e || {};
@@ -32,7 +32,7 @@ function d(e) {
   };
 }
 function p(e) {
-  var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+  var t = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : {};
   var n = t.fieldNames;
   var r = [];
   var o = d(n);
@@ -53,23 +53,23 @@ function p(e) {
       } else {
         r.push({
           key: u(e, r.length),
-          group: !0,
+          group: true,
           data: e,
           label: n
         });
-        c(e[s], !0);
+        c(e[s], true);
       }
     });
   }
-  c(e, !1);
+  c(e, false);
   return r;
 }
 function f(e) {
-  var t = Object(s.a)({}, e);
+  var t = s.a({}, e);
   if (!("props" in t)) {
     Object.defineProperty(t, "props", {
       get: function () {
-        Object(c.a)(!1, "Return type is option instead of Option instance. Please read value directly instead of reading from `props`.");
+        c.a(false, "Return type is option instead of Option instance. Please read value directly instead of reading from `props`.");
         return t;
       }
     });
@@ -77,9 +77,9 @@ function f(e) {
   return t;
 }
 function h(e, t) {
-  var n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+  var n = arguments.length > 2 && undefined !== arguments[2] ? arguments[2] : {};
   var r = n.prevValueOptions;
-  var o = void 0 === r ? [] : r;
+  var o = undefined === r ? [] : r;
   var i = new Map();
   t.forEach(function (e) {
     var t = e.data;
@@ -92,7 +92,7 @@ function h(e, t) {
   return e.map(function (e) {
     var t = i.get(e);
     if (!t) {
-      t = Object(s.a)({}, o.find(function (t) {
+      t = s.a({}, o.find(function (t) {
         return t._INTERNAL_OPTION_VALUE_ === e;
       }));
     }
@@ -108,32 +108,32 @@ var m = function (e, t) {
   var l = {
     value: e
   };
-  var u = o ? r.get(e) : void 0;
-  if (u && "object" === Object(a.a)(u) && "label" in u) {
+  var u = o ? r.get(e) : undefined;
+  if (u && "object" === a.a(u) && "label" in u) {
     l.label = u.label;
     if (s && "string" === typeof u.label && "string" === typeof s[i] && u.label.trim() !== s[i].trim()) {
-      Object(c.a)(!1, "`label` of `value` is not same as `label` in Select options.");
+      c.a(false, "`label` of `value` is not same as `label` in Select options.");
     }
   } else {
     if (s && i in s) {
       l.label = s[i];
     } else {
       l.label = e;
-      l.isCacheable = !0;
+      l.isCacheable = true;
     }
   }
   l.key = l.value;
   return l;
 };
 function g(e) {
-  return Object(l.d)(e).join("");
+  return l.d(e).join("");
 }
 function _(e, t, n) {
   var r;
   var o = n.optionFilterProp;
   var a = n.filterOption;
   var c = [];
-  return !1 === a ? Object(i.a)(t) : (r = "function" === typeof a ? a : function (e) {
+  return false === a ? i.a(t) : (r = "function" === typeof a ? a : function (e) {
     return function (t, n) {
       var r = t.toLowerCase();
       return "options" in n ? g(n.label).toLowerCase().includes(r) : g(n[e]).toLowerCase().includes(r);
@@ -147,7 +147,7 @@ function _(e, t, n) {
           return r(e, t);
         });
         if (n.length) {
-          c.push(Object(s.a)(Object(s.a)({}, t), {}, {
+          c.push(s.a(s.a({}, t), {}, {
             options: n
           }));
         }
@@ -161,9 +161,9 @@ function v(e, t) {
   if (!t || !t.length) {
     return null;
   }
-  var n = !1;
+  var n = false;
   var r = function e(t, r) {
-    var a = Object(o.a)(r);
+    var a = o.a(r);
     var s = a[0];
     var c = a.slice(1);
     if (!s) {
@@ -172,7 +172,7 @@ function v(e, t) {
     var l = t.split(s);
     n = n || l.length > 1;
     return l.reduce(function (t, n) {
-      return [].concat(Object(i.a)(t), Object(i.a)(e(n, c)));
+      return [].concat(i.a(t), i.a(e(n, c)));
     }, []).filter(function (e) {
       return e;
     });
@@ -183,8 +183,8 @@ function b(e, t) {
   return h([e], t)[0].disabled;
 }
 function y(e, t, n, o) {
-  var a = Object(l.d)(t).slice().sort();
-  var s = Object(i.a)(e);
+  var a = l.d(t).slice().sort();
+  var s = i.a(e);
   var c = new Set();
   e.forEach(function (e) {
     if (e.options) {
@@ -199,7 +199,7 @@ function y(e, t, n, o) {
     var t;
     var i = o ? e.value : e;
     if (!c.has(i)) {
-      s.push(o ? (t = {}, Object(r.a)(t, n, e.label), Object(r.a)(t, "value", i), t) : {
+      s.push(o ? (t = {}, r.a(t, n, e.label), r.a(t, "value", i), t) : {
         value: i
       });
     }

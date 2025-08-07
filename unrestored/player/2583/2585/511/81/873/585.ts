@@ -39,7 +39,7 @@ var s = function (t) {
   };
   e.toGrayscaleBuffer = function (t, e, n) {
     for (var r = new Uint8ClampedArray(e * n), i = 0, o = 0, a = t.length; i < a; i += 4, o++) {
-      var s = void 0;
+      var s = undefined;
       if (0 === t[i + 3]) {
         s = 255;
       } else {
@@ -69,14 +69,14 @@ var s = function (t) {
     return this.buffer;
   };
   e.prototype.isCropSupported = function () {
-    return !0;
+    return true;
   };
   e.prototype.crop = function (e, n, r, i) {
     t.prototype.crop.call(this, e, n, r, i);
     return this;
   };
   e.prototype.isRotateSupported = function () {
-    return !0;
+    return true;
   };
   e.prototype.rotateCounterClockwise = function () {
     this.rotate(-90);

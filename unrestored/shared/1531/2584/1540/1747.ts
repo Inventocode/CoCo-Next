@@ -2,8 +2,8 @@
 
 require("./1623/86")({
   target: "URL",
-  proto: !0,
-  enumerable: !0
+  proto: true,
+  enumerable: true
 }, {
   toJSON: function () {
     return URL.prototype.toString.call(this);

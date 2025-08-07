@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.BlockDragSurfaceSvg = void 0;
+exports.BlockDragSurfaceSvg = undefined;
 var r = require("tslib");
 var i = require("inversify");
 var o = require("@kitten-team/gl-matrix");
@@ -12,11 +12,11 @@ var s = require("../../125/index");
 var c = require("../../125/534");
 var u = function () {
   function e(e) {
-    this.SVG_ = void 0;
-    this.drag_group_ = void 0;
-    this.container_ = void 0;
+    this.SVG_ = undefined;
+    this.drag_group_ = undefined;
+    this.container_ = undefined;
     this.scale_ = 1;
-    this.surface_xy_ = void 0;
+    this.surface_xy_ = undefined;
     this.container_ = e;
     this.create_dom();
   }
@@ -34,7 +34,7 @@ var u = function () {
   };
   e.prototype.set_blocks_and_show = function (e) {
     this.clear_additions();
-    if (void 0 != this.drag_group_ && 0 !== this.drag_group_.childNodes.length) {
+    if (undefined != this.drag_group_ && 0 !== this.drag_group_.childNodes.length) {
       console.error("Already dragging a block.");
     }
     if (this.drag_group_ && this.SVG_) {
@@ -60,10 +60,10 @@ var u = function () {
     }
   };
   e.prototype.translate_surface_internal = function () {
-    if (void 0 == this.surface_xy_) {
+    if (undefined == this.surface_xy_) {
       throw new Error("surfaceXY_ can not be undefined");
     }
-    if (void 0 == this.SVG_) {
+    if (undefined == this.SVG_) {
       throw new Error("SVG_ can not be undefined");
     }
     var e = this.surface_xy_[0];
@@ -92,11 +92,11 @@ var u = function () {
   e.prototype.clear_and_hide = function (e) {
     var t = this.get_current_block();
     if (e) {
-      if (void 0 != t) {
+      if (undefined != t) {
         e.appendChild(t);
       }
     } else {
-      if (this.drag_group_ && void 0 != t) {
+      if (this.drag_group_ && undefined != t) {
         this.drag_group_.removeChild(t);
       }
     }
@@ -109,7 +109,7 @@ var u = function () {
         console.error("Drag group was not cleared.");
       }
     }
-    this.surface_xy_ = void 0;
+    this.surface_xy_ = undefined;
   };
   e.prototype.clear_additions = function () {
     if (this.drag_group_) {
@@ -121,7 +121,7 @@ var u = function () {
       }
     }
   };
-  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.utils)], e.prototype, "utils", void 0);
+  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.utils)], e.prototype, "utils", undefined);
   return e = (0, r.__decorate)([(0, i.injectable)()], e);
 }();
 exports.BlockDragSurfaceSvg = u;

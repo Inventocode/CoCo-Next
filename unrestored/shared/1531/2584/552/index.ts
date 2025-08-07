@@ -1,7 +1,7 @@
 "use strict";
 
-var r = require("../11");
-var o = require("react");
+import r = require("../11");
+import o = require("react");
 var i = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -14,7 +14,7 @@ var i = function __importDefault(module) {
   });
   return defaultExport;
 }(o);
-var a = require("../51/index");
+import a = require("color");
 var s = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -27,7 +27,7 @@ var s = function __importDefault(module) {
   });
   return defaultExport;
 }(a);
-var c = require("../8");
+import c = require("../8");
 var l = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -40,10 +40,10 @@ var l = function __importDefault(module) {
   });
   return defaultExport;
 }(c);
-var u = require("../5");
-var d = require("../90");
-var p = require("../199");
-var f = require("./290");
+import u = require("../5");
+import d = require("../90");
+import p = require("../199");
+import f = require("./290");
 var h = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -56,8 +56,8 @@ var h = function __importDefault(module) {
   });
   return defaultExport;
 }(f);
-var m = require("../13/index");
-var g = require("../15");
+import m = require("../13/index");
+import g = require("../15");
 var _ = function (e) {
   var t = e.text;
   var n = e.isSelected;
@@ -67,7 +67,7 @@ var _ = function (e) {
   var c = e.onClick;
   var u = e.sizeType;
   var d = e.disabled;
-  var f = Object(o.useRef)(null);
+  var f = o.useRef(null);
   var _ = function (e, t) {
     var n = "";
     if ("correct" === e) {
@@ -91,25 +91,25 @@ var _ = function (e) {
       return {
         default: {
           color: "inherit",
-          borderColor: Object(g.v)(e),
+          borderColor: g.v(e),
           borderWidth: 1
         },
         selected: {
           color: "inherit",
-          borderColor: Object(g.v)(e),
-          backgroundColor: Object(g.v)(e),
+          borderColor: g.v(e),
+          backgroundColor: g.v(e),
           borderWidth: 1
         },
         correct: {
-          borderColor: Object(g.v)(p.a),
-          color: Object(g.v)(p.a),
-          backgroundColor: Object(g.v)(p.a),
+          borderColor: g.v(p.a),
+          color: g.v(p.a),
+          backgroundColor: g.v(p.a),
           borderWidth: 1
         },
         inCorrect: {
-          borderColor: Object(g.v)(p.d),
-          color: Object(g.v)(p.d),
-          backgroundColor: Object(g.v)(p.d),
+          borderColor: g.v(p.d),
+          color: g.v(p.d),
+          backgroundColor: g.v(p.d),
           borderWidth: 1
         },
         disabled: {
@@ -132,8 +132,8 @@ var _ = function (e) {
   var b = p.g[u];
   return i.a.createElement("div", {
     style: {
-      color: null === v || void 0 === v ? void 0 : v.color,
-      backgroundColor: (null === v || void 0 === v ? void 0 : v.backgroundColor) && Object(g.hb)(null === v || void 0 === v ? void 0 : v.backgroundColor, .1)
+      color: null === v || undefined === v ? undefined : v.color,
+      backgroundColor: (null === v || undefined === v ? undefined : v.backgroundColor) && g.hb(null === v || undefined === v ? undefined : v.backgroundColor, .1)
     },
     className: l()(h.a.defaultCheckbox, "checkbox-widget-box"),
     onClick: function (e) {
@@ -144,9 +144,9 @@ var _ = function (e) {
     }
   }, i.a.createElement("div", {
     style: {
-      backgroundColor: null === v || void 0 === v ? void 0 : v.backgroundColor,
-      borderColor: null === v || void 0 === v ? void 0 : v.borderColor,
-      borderWidth: null === v || void 0 === v ? void 0 : v.borderWidth,
+      backgroundColor: null === v || undefined === v ? undefined : v.backgroundColor,
+      borderColor: null === v || undefined === v ? undefined : v.borderColor,
+      borderWidth: null === v || undefined === v ? undefined : v.borderWidth,
       width: b.innerSize,
       height: b.innerSize,
       fontSize: b.innerSize - 4
@@ -187,7 +187,7 @@ _a = function (e) {
     "data-widget-type": u.C,
     "data-min-width": T.minWidth,
     "data-max-width": T.maxWidth,
-    className: l()(h.a.checkboxWidget, d.b, Object(r.a)({}, h.a.hide, !o)),
+    className: l()(h.a.checkboxWidget, d.b, r.a({}, h.a.hide, !o)),
     style: {
       top: n.y,
       left: n.x,
@@ -195,9 +195,9 @@ _a = function (e) {
       width: m.width,
       minWidth: "".concat(T.minWidth, "px"),
       maxWidth: "".concat(T.maxWidth, "px"),
-      opacity: void 0 === a ? void 0 : a / 100
+      opacity: undefined === a ? undefined : a / 100
     },
-    "data-lock-height": !0
+    "data-lock-height": true
   }, O && i.a.createElement("div", {
     className: h.a.headline,
     onClick: function (e) {

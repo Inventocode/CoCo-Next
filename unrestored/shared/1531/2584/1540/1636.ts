@@ -10,7 +10,7 @@ var l = require("./1659/386/index").f;
 if (o) {
   r({
     target: "Object",
-    proto: !0,
+    proto: true,
     forced: i
   }, {
     __lookupGetter__: function (e) {

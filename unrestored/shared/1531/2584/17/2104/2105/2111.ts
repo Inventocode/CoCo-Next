@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.ChangeEvent = void 0;
+exports.ChangeEvent = undefined;
 var r = require("tslib");
 var i = require("inversify");
 var o = require("../../../125/195/index");
@@ -70,9 +70,9 @@ var s = function (e) {
           var h = f.new_value;
           var p = f.old_value;
           l = e ? h : p;
-          if (void 0 != d && (s = u.get_field(String(d)))) {
+          if (undefined != d && (s = u.get_field(String(d)))) {
             s.call_validator(l);
-            s.set_value(l, !0);
+            s.set_value(l, true);
           }
         } else if (this.is("field_default_value", this._data)) {
           var _ = this._data;
@@ -80,7 +80,7 @@ var s = function (e) {
           h = _.new_value;
           p = _.old_value;
           l = e ? h : p;
-          if (void 0 != A && (s = u.get_field(String(A))) && (0, a.is_field_default_value)(s)) {
+          if (undefined != A && (s = u.get_field(String(A))) && (0, a.is_field_default_value)(s)) {
             s.set_has_been_edited(l);
           }
         } else if (this.is("comment", this._data)) {
@@ -91,15 +91,15 @@ var s = function (e) {
             case "string":
               u.set_comment_text("", l);
               if (u.comment) {
-                u.comment.set_expanded(!0);
+                u.comment.set_expanded(true);
                 u.comment.init_svg();
               }
               break;
             case "undefined":
-              u.set_comment_text(void 0);
+              u.set_comment_text(undefined);
               break;
             default:
-              var v = void 0,
+              var v = undefined,
                 m = parseFloat(l.getAttribute("relativeleft_") || ""),
                 y = parseFloat(l.getAttribute("relativetop_") || "");
               if (!(isNaN(m) || isNaN(y))) {
@@ -108,14 +108,14 @@ var s = function (e) {
                   y: y
                 };
               }
-              u.set_comment_text("", l.getAttribute("id") || void 0, v);
+              u.set_comment_text("", l.getAttribute("id") || undefined, v);
               this.xml.parse_comment_attributes(l, u.comment);
               if (u.comment) {
                 u.comment.init_svg();
               }
           }
         } else if (this.is("collapsed", this._data)) {
-          u.set_collapsed(e ? this._data.new_value : this._data.old_value, !0);
+          u.set_collapsed(e ? this._data.new_value : this._data.old_value, true);
         } else if (this.is("disabled", this._data)) {
           u.set_disabled(e ? this._data.new_value : this._data.old_value);
         } else if (this.is("inline", this._data)) {
@@ -123,13 +123,13 @@ var s = function (e) {
         } else if (this.is("mutation", this._data)) {
           p = e ? this._data.old_value : this._data.new_value;
           if ("undefined" !== typeof (h = e ? this._data.new_value : this._data.old_value)) {
-            if (!(null === (t = u.addMutation) || void 0 === t)) {
-              t.call(u, h, null === (n = this._data.name) || void 0 === n ? void 0 : n.toString());
+            if (!(null === (t = u.addMutation) || undefined === t)) {
+              t.call(u, h, null === (n = this._data.name) || undefined === n ? undefined : n.toString());
             }
           } else {
             if ("undefined" !== typeof p) {
-              if (!(null === (r = u.removeMutation) || void 0 === r)) {
-                r.call(u, p, null === (i = this._data.name) || void 0 === i ? void 0 : i.toString());
+              if (!(null === (r = u.removeMutation) || undefined === r)) {
+                r.call(u, p, null === (i = this._data.name) || undefined === i ? undefined : i.toString());
               }
             }
           }
@@ -148,7 +148,7 @@ var s = function (e) {
               id: w,
               group_stop_at: x
             });
-          } else if (!(null === (o = u.parent_group) || void 0 === o)) {
+          } else if (!(null === (o = u.parent_group) || undefined === o)) {
             o.release();
           }
         } else {

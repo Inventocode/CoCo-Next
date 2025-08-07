@@ -191,10 +191,10 @@ Object.defineProperty(f, "setBlockGroupSnippet", {
     return ve;
   }
 });
-var h = require("../25/index");
-var m = require("../17/index");
-var g = require("../9");
-var _ = require("../4/index");
+import h = require("../25/index");
+import m = require("../17/index");
+import g = require("../9");
+import _ = require("../4/index");
 function v(e) {
   e.insertBlockProfile("phone_vibrate", {
     type: "phone_vibrate",
@@ -204,10 +204,10 @@ function v(e) {
       name: "SECONDS",
       check: ["Number"]
     }],
-    previousStatement: !0,
-    nextStatement: !0,
+    previousStatement: true,
+    nextStatement: true,
     colour: "%{BKY_BLUE_6}",
-    inputsInline: !0
+    inputsInline: true
   });
   e.insertBlockProfile("brightness_set_brightness", {
     type: "brightness_set_brightness",
@@ -217,17 +217,17 @@ function v(e) {
       name: "VALUE",
       check: ["Number"]
     }],
-    previousStatement: !0,
-    nextStatement: !0,
+    previousStatement: true,
+    nextStatement: true,
     colour: "%{BKY_BLUE_6}",
-    inputsInline: !0
+    inputsInline: true
   });
   e.insertBlockProfile("brightness_get_brightness", {
     type: "brightness_get_brightness",
     message0: "%{BKY_BRIGHTNESS_GET_BRIGHTNESS}",
     output: ["Number"],
     colour: "%{BKY_BLUE_6}",
-    inputsInline: !0
+    inputsInline: true
   });
   e.insertBlockProfile("brightness_set_keep_screen_on", {
     type: "brightness_set_keep_screen_on",
@@ -237,17 +237,17 @@ function v(e) {
       name: "VALUE",
       check: ["Boolean"]
     }],
-    previousStatement: !0,
-    nextStatement: !0,
+    previousStatement: true,
+    nextStatement: true,
     colour: "%{BKY_BLUE_6}",
-    inputsInline: !0
+    inputsInline: true
   });
   e.insertBlockProfile("phone_battery_level", {
     type: "phone_battery_level",
     message0: "%{BKY_PHONE_BATTERY_LEVEL}",
     output: ["Number"],
     colour: "%{BKY_BLUE_6}",
-    inputsInline: !0
+    inputsInline: true
   });
 }
 function b(e) {
@@ -263,42 +263,42 @@ function b(e) {
 function y(e) {
   e.insertBlockSnippetGenerator("phone_vibrate", function (t, n) {
     var r = e.valueToCode(t, n, "SECONDS", e.ORDER_FUNCTION_CALL) || "0";
-    return Object(_.n)("startDeviceVibrating", [r + " * 1000"]);
+    return _.n("startDeviceVibrating", [r + " * 1000"]);
   });
   e.insertBlockSnippetGenerator("brightness_set_brightness", function (t, n) {
     var r = e.valueToCode(t, n, "VALUE", e.ORDER_FUNCTION_CALL);
     var o = t.blocks[n];
-    return Object(_.l)(Object(_.j)("brightness.setBrightness", [r]), o, e, !0);
+    return _.l(_.j("brightness.setBrightness", [r]), o, e, true);
   });
   e.insertBlockSnippetGenerator("brightness_get_brightness", function (t, n) {
     var r = t.blocks[n];
-    return Object(_.l)(Object(_.r)("brightness.getBrightness"), r, e, !0, !0);
+    return _.l(_.r("brightness.getBrightness"), r, e, true, true);
   });
   e.insertBlockSnippetGenerator("brightness_set_keep_screen_on", function (t, n) {
     var r = t.blocks[n];
     var o = e.valueToCode(t, n, "VALUE", e.ORDER_FUNCTION_CALL);
-    return Object(_.l)(Object(_.n)("brightness.setKeepScreenOn", [o]), r, e);
+    return _.l(_.n("brightness.setKeepScreenOn", [o]), r, e);
   });
   e.insertBlockSnippetGenerator("phone_battery_level", function (t, n) {
     var r = t.blocks[n];
-    return Object(_.l)(Object(_.r)("device.getBatteryLevel"), r, e, !0, !0);
+    return _.l(_.r("device.getBatteryLevel"), r, e, true, true);
   });
 }
 var E;
-var O = require("../46/index");
+import O = require("../46/index");
 function w(e, t) {
   var n = "%{BKY_BLOCK_TAB_ICON}";
   e.insertBlockProfile("screen_on_open", {
     type: "screen_on_open",
     message0: "%{BKY_SCREEN_ON_OPEN}",
-    args0: [Object(_.e)(n, !0)],
+    args0: [_.e(n, true)],
     message1: "%1",
     args1: [{
       type: "input_statement",
       name: "DO"
     }],
     colour: "%{BKY_EVENTS_HUE}",
-    inputsInline: !0
+    inputsInline: true
   });
   e.insertBlockProfile("screen_on_open_get_param_value", {
     type: "screen_on_open_get_param_value",
@@ -311,7 +311,7 @@ function w(e, t) {
   e.insertBlockProfile("screen_on_open_get_param", {
     type: "screen_on_open_get_param",
     message0: "%{BKY_SCREEN_ON_OPEN_GET_PARAM}",
-    args0: [Object(_.e)(n, !0), {
+    args0: [_.e(n, true), {
       type: "input_value",
       name: "PARAMETER",
       align: "CENTRE",
@@ -325,7 +325,7 @@ function w(e, t) {
       provided_context: "screen_on_open_get_param_value_DO"
     }],
     colour: "%{BKY_EVENTS_HUE}",
-    inputsInline: !0
+    inputsInline: true
   });
   e.insertBlockProfile("screen_navigate_to", {
     type: "screen_navigate_to",
@@ -333,9 +333,9 @@ function w(e, t) {
     args0: [{
       type: "field_coco_dropdown",
       name: "SCREEN_ID",
-      custom: !0,
+      custom: true,
       options: function () {
-        return [].concat(Object(h.a)(Object(O.c)().getScreenList()), [{
+        return [].concat(h.a(O.c().getScreenList()), [{
           type: "line"
         }, {
           type: "basic",
@@ -348,10 +348,10 @@ function w(e, t) {
         }]);
       }
     }],
-    previousStatement: !0,
-    nextStatement: !0,
+    previousStatement: true,
+    nextStatement: true,
     colour: "%{BKY_EVENTS_HUE}",
-    inputsInline: !0
+    inputsInline: true
   });
   e.insertBlockProfile("screen_navigate_to_by_value", {
     type: "screen_navigate_to_by_value",
@@ -359,9 +359,9 @@ function w(e, t) {
     args0: [{
       type: "field_coco_dropdown",
       name: "SCREEN_ID",
-      custom: !0,
+      custom: true,
       options: function () {
-        return [].concat(Object(h.a)(Object(O.c)().getScreenList()), [{
+        return [].concat(h.a(O.c().getScreenList()), [{
           type: "line"
         }, {
           type: "basic",
@@ -377,10 +377,10 @@ function w(e, t) {
       type: "input_value",
       name: "PARAMETER"
     }],
-    previousStatement: !0,
-    nextStatement: !0,
+    previousStatement: true,
+    nextStatement: true,
     colour: "%{BKY_EVENTS_HUE}",
-    inputsInline: !0
+    inputsInline: true
   });
   e.insertBlockProfile("new_screen_navigate_to", {
     type: "new_screen_navigate_to",
@@ -390,10 +390,10 @@ function w(e, t) {
       name: "SCREEN_ID",
       check: ["String", "Number"]
     }],
-    previousStatement: !0,
-    nextStatement: !0,
+    previousStatement: true,
+    nextStatement: true,
     colour: "%{BKY_EVENTS_HUE}",
-    inputsInline: !0
+    inputsInline: true
   });
   e.insertBlockProfile("screen_input", {
     type: "screen_input",
@@ -401,9 +401,9 @@ function w(e, t) {
     args0: [{
       type: "field_coco_dropdown",
       name: "SCREEN_ID",
-      custom: !0,
+      custom: true,
       options: function () {
-        return [].concat(Object(h.a)(Object(O.c)().getScreenList()), [{
+        return [].concat(h.a(O.c().getScreenList()), [{
           type: "line"
         }, {
           type: "basic",
@@ -431,23 +431,23 @@ function w(e, t) {
       type: "input_value",
       name: "PARAMETER"
     }],
-    previousStatement: !0,
-    nextStatement: !0,
+    previousStatement: true,
+    nextStatement: true,
     colour: "%{BKY_EVENTS_HUE}",
-    inputsInline: !0
+    inputsInline: true
   });
 }
 function C(e) {
   e.insertBlockXML("screen_on_open");
   e.insertBlockXML("screen_on_open_get_param");
-  e.insertBlockXML("screen_input", void 0, !0);
+  e.insertBlockXML("screen_input", undefined, true);
   e.insertBlockXML("screen_navigate_to");
   e.insertBlockXML("screen_navigate_to_by_value", "    <value name=\"PARAMETER\">\n  <shadow type=\"text\">\n    <field name=\"TEXT\">参数</field>\n  </shadow>\n</value>");
-  e.insertBlockXML("new_screen_navigate_to", "<value name=\"SCREEN_ID\">\n      <shadow type=\"screen_input\"></shadow>\n    </value>", !0);
-  e.insertBlockXML("new_screen_navigate_to_by_value", "<value name=\"SCREEN_ID\">\n        <shadow type=\"screen_input\"></shadow>\n      </value>\n      <value name=\"PARAMETER\">\n    <shadow type=\"text\">\n      <field name=\"TEXT\">参数</field>\n    </shadow>\n  </value>", !0);
-  e.insertBlockXML("broadcast_on_receive", "<value name=\"BROADCAST\">\n      <shadow type=\"broadcast_input\"></shadow>\n    </value>", !0);
-  e.insertBlockXML("broadcast_send", "<value name=\"BROADCAST\">\n      <shadow type=\"broadcast_input\"></shadow>\n    </value>", !0);
-  e.insertBlockXML("broadcast_send_and_wait", "<value name=\"BROADCAST\">\n      <shadow type=\"broadcast_input\"></shadow>\n    </value>", !0);
+  e.insertBlockXML("new_screen_navigate_to", "<value name=\"SCREEN_ID\">\n      <shadow type=\"screen_input\"></shadow>\n    </value>", true);
+  e.insertBlockXML("new_screen_navigate_to_by_value", "<value name=\"SCREEN_ID\">\n        <shadow type=\"screen_input\"></shadow>\n      </value>\n      <value name=\"PARAMETER\">\n    <shadow type=\"text\">\n      <field name=\"TEXT\">参数</field>\n    </shadow>\n  </value>", true);
+  e.insertBlockXML("broadcast_on_receive", "<value name=\"BROADCAST\">\n      <shadow type=\"broadcast_input\"></shadow>\n    </value>", true);
+  e.insertBlockXML("broadcast_send", "<value name=\"BROADCAST\">\n      <shadow type=\"broadcast_input\"></shadow>\n    </value>", true);
+  e.insertBlockXML("broadcast_send_and_wait", "<value name=\"BROADCAST\">\n      <shadow type=\"broadcast_input\"></shadow>\n    </value>", true);
 }
 function T(e) {
   e.insertBlockSnippetGenerator("screen_input", function (t, n) {
@@ -456,7 +456,7 @@ function T(e) {
   });
   e.insertBlockSnippetGenerator("screen_on_open", function (t, n) {
     var r = e.statementToCode(t, n, "DO");
-    return r ? Object(_.m)("onScreenOpen", [Object(_.o)(e.getDynamicValue("__CURRENT_SCREEN_ID__"))], r) : "";
+    return r ? _.m("onScreenOpen", [_.o(e.getDynamicValue("__CURRENT_SCREEN_ID__"))], r) : "";
   });
   e.insertBlockSnippetGenerator("screen_on_open_get_param_value", function () {
     return "screenOpenParamValue";
@@ -467,27 +467,27 @@ function T(e) {
       return "";
     }
     var o = e.valueToCode(t, n, "PARAMETER", e.ORDER_FUNCTION_CALL);
-    return Object(_.n)("onScreenOpen", [Object(_.o)(e.getDynamicValue("__CURRENT_SCREEN_ID__"))], r, [o]);
+    return _.n("onScreenOpen", [_.o(e.getDynamicValue("__CURRENT_SCREEN_ID__"))], r, [o]);
   });
   e.insertBlockSnippetGenerator("screen_navigate_to", function (t, n) {
-    var r = Object(_.o)(e.getFieldValue(t.blocks[n], "SCREEN_ID") || "");
-    return r === Object(_.o)("nextScreen") ? Object(_.n)("navigateToNextScreen", [Object(_.o)(e.getDynamicValue("__CURRENT_SCREEN_ID__"))]) : r === Object(_.o)("prevScreen") ? Object(_.n)("navigateToPrevScreen", [Object(_.o)(e.getDynamicValue("__CURRENT_SCREEN_ID__"))]) : Object(_.n)("navigateToScreen", [r]);
+    var r = _.o(e.getFieldValue(t.blocks[n], "SCREEN_ID") || "");
+    return r === _.o("nextScreen") ? _.n("navigateToNextScreen", [_.o(e.getDynamicValue("__CURRENT_SCREEN_ID__"))]) : r === _.o("prevScreen") ? _.n("navigateToPrevScreen", [_.o(e.getDynamicValue("__CURRENT_SCREEN_ID__"))]) : _.n("navigateToScreen", [r]);
   });
   e.insertBlockSnippetGenerator("screen_navigate_to_by_value", function (t, n) {
-    var r = Object(_.o)(e.getFieldValue(t.blocks[n], "SCREEN_ID") || "");
+    var r = _.o(e.getFieldValue(t.blocks[n], "SCREEN_ID") || "");
     var o = e.valueToCode(t, n, "PARAMETER", e.ORDER_FUNCTION_CALL);
-    return r === Object(_.o)("nextScreen") ? Object(_.n)("navigateToNextScreen", [Object(_.o)(e.getDynamicValue("__CURRENT_SCREEN_ID__")), o]) : r === Object(_.o)("prevScreen") ? Object(_.n)("navigateToPrevScreen", [Object(_.o)(e.getDynamicValue("__CURRENT_SCREEN_ID__")), o]) : Object(_.n)("navigateToScreen", [r, o]);
+    return r === _.o("nextScreen") ? _.n("navigateToNextScreen", [_.o(e.getDynamicValue("__CURRENT_SCREEN_ID__")), o]) : r === _.o("prevScreen") ? _.n("navigateToPrevScreen", [_.o(e.getDynamicValue("__CURRENT_SCREEN_ID__")), o]) : _.n("navigateToScreen", [r, o]);
   });
   e.insertBlockSnippetGenerator("new_screen_navigate_to", function (t, n) {
     var r = t.blocks[n];
     var o = e.valueToCode(t, n, "SCREEN_ID", e.ORDER_FUNCTION_CALL);
-    return o.includes(Object(_.o)("nextScreen")) ? Object(_.l)(Object(_.n)("navigateToNextScreen", [Object(_.o)(e.getDynamicValue("__CURRENT_SCREEN_ID__"))]), r, e) : o.includes(Object(_.o)("prevScreen")) ? Object(_.l)(Object(_.n)("navigateToPrevScreen", [Object(_.o)(e.getDynamicValue("__CURRENT_SCREEN_ID__"))]), r, e) : Object(_.l)(Object(_.n)("navigateToScreen", [o]), r, e);
+    return o.includes(_.o("nextScreen")) ? _.l(_.n("navigateToNextScreen", [_.o(e.getDynamicValue("__CURRENT_SCREEN_ID__"))]), r, e) : o.includes(_.o("prevScreen")) ? _.l(_.n("navigateToPrevScreen", [_.o(e.getDynamicValue("__CURRENT_SCREEN_ID__"))]), r, e) : _.l(_.n("navigateToScreen", [o]), r, e);
   });
   e.insertBlockSnippetGenerator("new_screen_navigate_to_by_value", function (t, n) {
     var r = t.blocks[n];
     var o = e.valueToCode(t, n, "SCREEN_ID", e.ORDER_FUNCTION_CALL);
     var i = e.valueToCode(t, n, "PARAMETER", e.ORDER_FUNCTION_CALL);
-    return o.includes(Object(_.o)("nextScreen")) ? Object(_.l)(Object(_.n)("navigateToNextScreen", [Object(_.o)(e.getDynamicValue("__CURRENT_SCREEN_ID__")), i]), r, e) : o.includes(Object(_.o)("prevScreen")) ? Object(_.l)(Object(_.n)("navigateToPrevScreen", [Object(_.o)(e.getDynamicValue("__CURRENT_SCREEN_ID__")), i]), r, e) : Object(_.l)(Object(_.n)("navigateToScreen", [o, i]), r, e);
+    return o.includes(_.o("nextScreen")) ? _.l(_.n("navigateToNextScreen", [_.o(e.getDynamicValue("__CURRENT_SCREEN_ID__")), i]), r, e) : o.includes(_.o("prevScreen")) ? _.l(_.n("navigateToPrevScreen", [_.o(e.getDynamicValue("__CURRENT_SCREEN_ID__")), i]), r, e) : _.l(_.n("navigateToScreen", [o, i]), r, e);
   });
 }
 function S(e, t) {
@@ -506,10 +506,10 @@ function S(e, t) {
       type: "input_statement",
       name: "DO"
     }],
-    previousStatement: !0,
-    nextStatement: !0,
+    previousStatement: true,
+    nextStatement: true,
     colour: "%{BKY_CONTROL_HUE}",
-    inputsInline: !0
+    inputsInline: true
   });
   e.insertBlockProfile("sleep", {
     type: "sleep",
@@ -520,10 +520,10 @@ function S(e, t) {
       check: "Number",
       align: "CENTRE"
     }],
-    previousStatement: !0,
-    nextStatement: !0,
+    previousStatement: true,
+    nextStatement: true,
     colour: "%{BKY_CONTROL_HUE}",
-    inputsInline: !0
+    inputsInline: true
   });
   e.insertBlockProfile("loop_conditionally", {
     type: "loop_conditionally",
@@ -540,10 +540,10 @@ function S(e, t) {
       type: "input_statement",
       name: "DO"
     }],
-    previousStatement: !0,
-    nextStatement: !0,
+    previousStatement: true,
+    nextStatement: true,
     colour: "%{BKY_CONTROL_HUE}",
-    inputsInline: !0,
+    inputsInline: true,
     tooltip: "%{BKY_REPEAT_WHEN_TOOLTIP}"
   });
   e.insertBlockProfile("loop_infinitely", {
@@ -556,10 +556,10 @@ function S(e, t) {
       type: "input_statement",
       name: "DO"
     }],
-    previousStatement: !0,
-    nextStatement: !0,
+    previousStatement: true,
+    nextStatement: true,
     colour: "%{BKY_CONTROL_HUE}",
-    inputsInline: !0
+    inputsInline: true
   });
   e.insertBlockProfile("wait_until", {
     type: "wait_until",
@@ -570,29 +570,29 @@ function S(e, t) {
       check: "Boolean",
       align: "CENTRE"
     }],
-    previousStatement: !0,
-    nextStatement: !0,
+    previousStatement: true,
+    nextStatement: true,
     colour: "%{BKY_CONTROL_HUE}",
-    inputsInline: !0
+    inputsInline: true
   });
   e.insertBlockProfile("break_loop", {
     type: "break_loop",
     message0: "%{BKY_BREAK}",
     args0: [],
-    previousStatement: !0,
-    nextStatement: !0,
+    previousStatement: true,
+    nextStatement: true,
     colour: "%{BKY_CONTROL_HUE}",
-    inputsInline: !0,
+    inputsInline: true,
     tooltip: "%{BKY_BREAK_TOOLTIP}"
   });
   e.insertBlockProfile("continue_loop", {
     type: "continue_loop",
     message0: "%{BKY_CONTINUE}",
     args0: [],
-    previousStatement: !0,
-    nextStatement: !0,
+    previousStatement: true,
+    nextStatement: true,
     colour: "%{BKY_CONTROL_HUE}",
-    inputsInline: !0
+    inputsInline: true
   });
   e.insertBlockProfile("console_log", {
     type: "console_log",
@@ -602,10 +602,10 @@ function S(e, t) {
       name: "VALUE",
       align: "CENTRE"
     }],
-    previousStatement: !0,
-    nextStatement: !0,
+    previousStatement: true,
+    nextStatement: true,
     colour: "%{BKY_CONTROL_HUE}",
-    inputsInline: !0,
+    inputsInline: true,
     mutator: "CONSOLE_MUTATOR"
   });
   e.insertBlockProfile("new_console_log", {
@@ -613,7 +613,7 @@ function S(e, t) {
     message0: "%{BKY_NEW_CONSOLE_LOG}",
     args0: [{
       type: "field_coco_dropdown",
-      custom: !0,
+      custom: true,
       name: "TYPE",
       options: [["%{BKY_TO_LOG}", E.LOG], ["%{BKY_TO_ERROR}", E.ERROR], ["%{BKY_TO_WARNING}", E.WARNING]]
     }, {
@@ -621,10 +621,10 @@ function S(e, t) {
       name: "VALUE",
       align: "CENTRE"
     }],
-    previousStatement: !0,
-    nextStatement: !0,
+    previousStatement: true,
+    nextStatement: true,
     colour: "%{BKY_CONTROL_HUE}",
-    inputsInline: !0,
+    inputsInline: true,
     mutator: "CONSOLE_MUTATOR"
   });
   e.insertBlockProfile("console_error", {
@@ -635,10 +635,10 @@ function S(e, t) {
       name: "VALUE",
       align: "CENTRE"
     }],
-    previousStatement: !0,
-    nextStatement: !0,
+    previousStatement: true,
+    nextStatement: true,
     colour: "%{BKY_CONTROL_HUE}",
-    inputsInline: !0,
+    inputsInline: true,
     mutator: "CONSOLE_MUTATOR"
   });
   e.insertBlockProfile("controls_for", {
@@ -668,10 +668,10 @@ function S(e, t) {
       name: "DO",
       provided_context: "controls_for_DO"
     }],
-    previousStatement: !0,
-    nextStatement: !0,
+    previousStatement: true,
+    nextStatement: true,
     colour: "%{BKY_CONTROL_HUE}",
-    inputsInline: !0,
+    inputsInline: true,
     tooltip: "%{BKY_CONTROLS_FOR_TOOLTIP}"
   });
   e.insertBlockProfile("controls_for_closed_range", {
@@ -701,10 +701,10 @@ function S(e, t) {
       name: "DO",
       provided_context: "controls_for_DO"
     }],
-    previousStatement: !0,
-    nextStatement: !0,
+    previousStatement: true,
+    nextStatement: true,
     colour: "%{BKY_CONTROL_HUE}",
-    inputsInline: !0,
+    inputsInline: true,
     tooltip: "%{BKY_CONTROLS_FOR_CLOSED_RANGE_TOOLTIP}"
   });
   e.insertBlockProfile("controls_for_value", {
@@ -734,22 +734,22 @@ function A(e) {
   e.insertBlockSnippetGenerator("loop_conditionally", function (t, n) {
     var r = e.valueToCode(t, n, "CONDITION", e.ORDER_FUNCTION_CALL) || "false";
     var o = e.statementToCode(t, n, "DO");
-    return o ? Object(_.i)("asyncScheduler.loopConditionally", o, [Object(_.g)(r, !0)]) : "";
+    return o ? _.i("asyncScheduler.loopConditionally", o, [_.g(r, true)]) : "";
   });
   e.insertBlockSnippetGenerator("break_loop", function () {
-    return Object(_.i)("asyncScheduler.breakLoop");
+    return _.i("asyncScheduler.breakLoop");
   });
   e.insertBlockSnippetGenerator("continue_loop", function () {
-    return Object(_.i)("asyncScheduler.continueLoop");
+    return _.i("asyncScheduler.continueLoop");
   });
   e.insertBlockSnippetGenerator("loop_finitely", function (t, n) {
     var r = e.valueToCode(t, n, "TIMES", e.ORDER_FUNCTION_CALL);
     var o = e.statementToCode(t, n, "DO");
-    return o ? Object(_.i)("asyncScheduler.loopFinitely", o, [r]) : "";
+    return o ? _.i("asyncScheduler.loopFinitely", o, [r]) : "";
   });
   e.insertBlockSnippetGenerator("loop_infinitely", function (t, n) {
     var r = e.statementToCode(t, n, "DO");
-    return r ? Object(_.i)("asyncScheduler.loopInfinitely", r) : "";
+    return r ? _.i("asyncScheduler.loopInfinitely", r) : "";
   });
   e.insertBlockSnippetGenerator("sleep", function (t, n) {
     var r = e.valueToCode(t, n, "SECONDS", e.ORDER_FUNCTION_CALL) || "0";
@@ -757,7 +757,7 @@ function A(e) {
   });
   e.insertBlockSnippetGenerator("wait_until", function (t, n) {
     var r = e.valueToCode(t, n, "CONDITION", e.ORDER_FUNCTION_CALL) || "false";
-    return Object(_.i)("asyncScheduler.waitUntil", void 0, [Object(_.g)(r, !0)]);
+    return _.i("asyncScheduler.waitUntil", undefined, [_.g(r, true)]);
   });
   e.insertBlockSnippetGenerator("console_log", function (t, n) {
     for (var r = t.blocks[n], o = [e.valueToCode(t, n, "VALUE", e.ORDER_FUNCTION_CALL) || ""], i = r.mutation, a = m.Blink.xml.text_to_dom(i).getAttribute("items"), s = a ? parseInt(a) : 0, c = 0; c < s; c++) {
@@ -767,7 +767,7 @@ function A(e) {
       }
     }
     var u = e.getDynamicValue("__CURRENT_SCREEN_ID__");
-    return Object(_.n)("consoleLog", [Object(_.o)(u), Object(_.o)(r.id)].concat(o));
+    return _.n("consoleLog", [_.o(u), _.o(r.id)].concat(o));
   });
   e.insertBlockSnippetGenerator("new_console_log", function (t, n) {
     for (var r = t.blocks[n], o = e.getFieldValue(r, "TYPE"), i = [e.valueToCode(t, n, "VALUE", e.ORDER_FUNCTION_CALL) || ""], a = r.mutation, s = m.Blink.xml.text_to_dom(a).getAttribute("items"), c = s ? parseInt(s) : 0, l = 0; l < c; l++) {
@@ -785,7 +785,7 @@ function A(e) {
       }
     }
     var p = e.getDynamicValue("__CURRENT_SCREEN_ID__");
-    return Object(_.n)(d, [Object(_.o)(p), Object(_.o)(r.id)].concat(i));
+    return _.n(d, [_.o(p), _.o(r.id)].concat(i));
   });
   e.insertBlockSnippetGenerator("console_error", function (t, n) {
     for (var r = t.blocks[n], o = [e.valueToCode(t, n, "VALUE", e.ORDER_FUNCTION_CALL) || ""], i = r.mutation, a = m.Blink.xml.text_to_dom(i).getAttribute("items"), s = a ? parseInt(a) : 0, c = 0; c < s; c++) {
@@ -795,7 +795,7 @@ function A(e) {
       }
     }
     var u = e.getDynamicValue("__CURRENT_SCREEN_ID__");
-    return Object(_.n)("consoleError", [Object(_.o)(u), Object(_.o)(r.id)].concat(o));
+    return _.n("consoleError", [_.o(u), _.o(r.id)].concat(o));
   });
   e.insertBlockSnippetGenerator("controls_for", function (t, n) {
     var r = e.valueToCode(t, n, "FROM", e.ORDER_FUNCTION_CALL);
@@ -803,7 +803,7 @@ function A(e) {
     var i = e.valueToCode(t, n, "BY", e.ORDER_FUNCTION_CALL);
     var a = e.valueToCode(t, n, "VALUE", e.ORDER_FUNCTION_CALL);
     var s = e.statementToCode(t, n, "DO");
-    return s ? Object(_.i)("asyncScheduler.loopStep", s, [r, o, i], [a]) : "";
+    return s ? _.i("asyncScheduler.loopStep", s, [r, o, i], [a]) : "";
   });
   e.insertBlockSnippetGenerator("controls_for_closed_range", function (t, n) {
     var r = e.valueToCode(t, n, "FROM", e.ORDER_FUNCTION_CALL);
@@ -811,7 +811,7 @@ function A(e) {
     var i = e.valueToCode(t, n, "BY", e.ORDER_FUNCTION_CALL);
     var a = e.valueToCode(t, n, "VALUE", e.ORDER_FUNCTION_CALL);
     var s = e.statementToCode(t, n, "DO");
-    return s ? Object(_.i)("asyncScheduler.loopStepClosedRange", s, [r, o, i], [a]) : "";
+    return s ? _.i("asyncScheduler.loopStepClosedRange", s, [r, o, i], [a]) : "";
   });
   e.insertBlockSnippetGenerator("controls_for_value", function () {
     return "".concat(_.a, "value");
@@ -833,14 +833,14 @@ function j(e) {
           this.remove_input("MUTATE_REMOVE_BUTTON");
         }
         if (!this.get_input("MUTATE_ADD_BUTTON")) {
-          this.append_dummy_input("MUTATE_ADD_BUTTON").append_field(Object(_.p)(), "MUTATE_ADD_BUTTON");
+          this.append_dummy_input("MUTATE_ADD_BUTTON").append_field(_.p(), "MUTATE_ADD_BUTTON");
         }
       } else {
         if (!this.get_input("MUTATE_REMOVE_BUTTON")) {
-          this.append_dummy_input("MUTATE_REMOVE_BUTTON").append_field(Object(_.q)(void 0), "MUTATE_REMOVE_BUTTON");
+          this.append_dummy_input("MUTATE_REMOVE_BUTTON").append_field(_.q(undefined), "MUTATE_REMOVE_BUTTON");
         }
         if (!this.get_input("MUTATE_ADD_BUTTON")) {
-          this.append_dummy_input("MUTATE_ADD_BUTTON").append_field(Object(_.p)(), "MUTATE_ADD_BUTTON");
+          this.append_dummy_input("MUTATE_ADD_BUTTON").append_field(_.p(), "MUTATE_ADD_BUTTON");
         }
       }
       e.events.enable();
@@ -850,7 +850,7 @@ function j(e) {
       var r = "VALUE".concat(this.itemCount_);
       _.b.call(this, r, function () {
         if (!n.get_input("MUTATE_REMOVE_BUTTON")) {
-          n.append_dummy_input("MUTATE_REMOVE_BUTTON", "MUTATE_ADD_BUTTON").append_field(Object(_.q)(void 0), "MUTATE_REMOVE_BUTTON");
+          n.append_dummy_input("MUTATE_REMOVE_BUTTON", "MUTATE_ADD_BUTTON").append_field(_.q(undefined), "MUTATE_REMOVE_BUTTON");
         }
         var e = n.append_value_input(r, "MUTATE_REMOVE_BUTTON");
         n.itemCount_++;
@@ -887,14 +887,14 @@ function N(e, t) {
     args0: [{
       type: "field_coco_dropdown",
       name: "VAR",
-      custom: !0,
+      custom: true,
       advancedOptions: function () {
-        return Object(O.c)().getPrimitiveVariableList(this);
+        return O.c().getPrimitiveVariableList(this);
       }
     }],
-    output: !0,
+    output: true,
     colour: "%{BKY_VARIABLES_HUE}",
-    inputsInline: !0
+    inputsInline: true
   });
   e.insertBlockProfile("variables_set", {
     type: "variables_set",
@@ -902,18 +902,18 @@ function N(e, t) {
     args0: [{
       type: "field_coco_dropdown",
       name: "VAR",
-      custom: !0,
+      custom: true,
       advancedOptions: function () {
-        return Object(O.c)().getPrimitiveVariableList(this);
+        return O.c().getPrimitiveVariableList(this);
       }
     }, {
       type: "input_value",
       name: "VALUE",
       align: "CENTRE"
     }],
-    inputsInline: !0,
-    previousStatement: !0,
-    nextStatement: !0,
+    inputsInline: true,
+    previousStatement: true,
+    nextStatement: true,
     colour: "%{BKY_VARIABLES_HUE}"
   });
   e.insertBlockProfile("variables_change", {
@@ -922,14 +922,14 @@ function N(e, t) {
     args0: [{
       type: "field_coco_dropdown",
       name: "VAR",
-      custom: !0,
+      custom: true,
       advancedOptions: function () {
-        return Object(O.c)().getPrimitiveVariableList(this);
+        return O.c().getPrimitiveVariableList(this);
       }
     }, {
       type: "field_coco_dropdown",
       name: "METHOD",
-      custom: !0,
+      custom: true,
       options: function () {
         return [[t.Msg.INCREASE, "increase"], [t.Msg.DECREASE, "decrease"]];
       }
@@ -939,28 +939,28 @@ function N(e, t) {
       check: ["Number", "String", "Boolean", "Array"],
       align: "CENTRE"
     }],
-    previousStatement: !0,
-    nextStatement: !0,
+    previousStatement: true,
+    nextStatement: true,
     colour: "%{BKY_VARIABLES_HUE}",
-    inputsInline: !0
+    inputsInline: true
   });
 }
 function R(e) {
-  e.insertBlockXML("variables_get", "", !0);
-  e.insertBlockXML("variables_set", "<value name=\"VALUE\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\">0</field>\n        </shadow>\n    </value>", !0);
-  e.insertBlockXML("variables_change", "<value name=\"VALUE\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\">1</field>\n        </shadow>\n    </value>", !0);
+  e.insertBlockXML("variables_get", "", true);
+  e.insertBlockXML("variables_set", "<value name=\"VALUE\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\">0</field>\n        </shadow>\n    </value>", true);
+  e.insertBlockXML("variables_change", "<value name=\"VALUE\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\">1</field>\n        </shadow>\n    </value>", true);
 }
 function k(e) {
   e.insertBlockSnippetGenerator("variables_get", function (t, n) {
     var r = t.blocks[n];
     var o = e.getFieldValue(r, "VAR");
-    return o !== g.h && o ? Object(_.s)("getVariableValue", [Object(_.o)(o)]) : "";
+    return o !== g.h && o ? _.s("getVariableValue", [_.o(o)]) : "";
   });
   e.insertBlockSnippetGenerator("variables_set", function (t, n) {
     var r = t.blocks[n];
     var o = e.valueToCode(t, n, "VALUE", e.ORDER_ASSIGNMENT) || "0";
     var i = e.getFieldValue(r, "VAR") || "";
-    return i !== g.h && i ? Object(_.n)("setVariableValue", [Object(_.o)(i), o]) : "";
+    return i !== g.h && i ? _.n("setVariableValue", [_.o(i), o]) : "";
   });
   e.insertBlockSnippetGenerator("variables_change", function (t, n) {
     var r = t.blocks[n];
@@ -971,7 +971,7 @@ function k(e) {
     if (!isNaN(s)) {
       a = s > 0 ? a : "(".concat(a, ")");
     }
-    return "increase" === o ? Object(_.n)("increaseVariable", [Object(_.o)(i), a]) : "decrease" === o ? Object(_.n)("decreaseVariable", [Object(_.o)(i), a]) : "";
+    return "increase" === o ? _.n("increaseVariable", [_.o(i), a]) : "decrease" === o ? _.n("decreaseVariable", [_.o(i), a]) : "";
   });
 }
 !function (e) {
@@ -986,7 +986,7 @@ var L;
 var P;
 var B;
 var F;
-var G = require("../323");
+import G = require("../323");
 var U = "<shadow type=\"math_number\"><field name=\"NUM\" constraints=\"1,,1\">1</field></shadow>";
 function W(e, t) {
   function n(e) {
@@ -996,10 +996,10 @@ function W(e, t) {
       var o = this.source_block;
       if (o) {
         if ("nth" === e) {
-          if (!(null === (n = o.addMutation) || void 0 === n)) {
+          if (!(null === (n = o.addMutation) || undefined === n)) {
             n.call(o);
           }
-        } else if (!(null === (r = o.removeMutation) || void 0 === r)) {
+        } else if (!(null === (r = o.removeMutation) || undefined === r)) {
           r.call(o);
         }
       }
@@ -1011,14 +1011,14 @@ function W(e, t) {
     args0: [{
       type: "field_coco_dropdown",
       name: "ARRAY",
-      custom: !0,
+      custom: true,
       advancedOptions: function () {
-        return Object(O.c)().getArrayVariableList(this);
+        return O.c().getArrayVariableList(this);
       }
     }],
     output: "Array",
     colour: "%{BKY_LISTS_HUE}",
-    inputsInline: !0
+    inputsInline: true
   });
   e.insertBlockProfile("lists_append", {
     type: "lists_append",
@@ -1032,9 +1032,9 @@ function W(e, t) {
       check: ["Array"]
     }],
     colour: "%{BKY_LISTS_HUE}",
-    inputsInline: !0,
-    previousStatement: !0,
-    nextStatement: !0
+    inputsInline: true,
+    previousStatement: true,
+    nextStatement: true
   });
   e.insertBlockProfile("lists_insert_value", {
     type: "lists_insert_value",
@@ -1054,9 +1054,9 @@ function W(e, t) {
       align: "CENTRE"
     }],
     colour: "%{BKY_LISTS_HUE}",
-    inputsInline: !0,
-    previousStatement: !0,
-    nextStatement: !0
+    inputsInline: true,
+    previousStatement: true,
+    nextStatement: true
   });
   e.insertBlockProfile("array_copy", {
     type: "array_copy",
@@ -1071,9 +1071,9 @@ function W(e, t) {
       check: ["Array"]
     }],
     colour: "%{BKY_LISTS_HUE}",
-    inputsInline: !0,
-    previousStatement: !0,
-    nextStatement: !0
+    inputsInline: true,
+    previousStatement: true,
+    nextStatement: true
   });
   e.insertBlockProfile("array_get_length", {
     type: "array_get_length",
@@ -1085,7 +1085,7 @@ function W(e, t) {
     }],
     output: "Number",
     colour: "%{BKY_LISTS_HUE}",
-    inputsInline: !0
+    inputsInline: true
   });
   e.insertBlockProfile("lists_index_of", {
     type: "lists_index_of",
@@ -1101,7 +1101,7 @@ function W(e, t) {
     }],
     colour: "%{BKY_LISTS_HUE}",
     output: "Number",
-    inputsInline: !0
+    inputsInline: true
   });
   e.insertBlockProfile("lists_is_exist", {
     type: "lists_is_exist",
@@ -1117,7 +1117,7 @@ function W(e, t) {
     }],
     colour: "%{BKY_LISTS_HUE}",
     output: "Boolean",
-    inputsInline: !0
+    inputsInline: true
   });
   e.insertBlockProfile("array_remove_item", {
     type: "array_remove_item",
@@ -1129,7 +1129,7 @@ function W(e, t) {
     }, {
       type: "field_coco_dropdown",
       name: "ITEM_POS",
-      custom: !0,
+      custom: true,
       optOnchange: n,
       options: function () {
         return [[t.Msg.NTH, "nth"], [t.Msg.LAST_ITEM, "lastItem"], [t.Msg.ALL_ITEM, "allItem"]];
@@ -1147,9 +1147,9 @@ function W(e, t) {
       name: "ITEM"
     }],
     colour: "%{BKY_LISTS_HUE}",
-    inputsInline: !0,
-    previousStatement: !0,
-    nextStatement: !0,
+    inputsInline: true,
+    previousStatement: true,
+    nextStatement: true,
     mutator: "ARRAY_ITEM_MUTATOR"
   });
   e.insertBlockProfile("lists_replace", {
@@ -1162,7 +1162,7 @@ function W(e, t) {
     }, {
       type: "field_coco_dropdown",
       name: "ITEM_POS",
-      custom: !0,
+      custom: true,
       optOnchange: n,
       options: function () {
         return [[t.Msg.NTH, "nth"], [t.Msg.LAST_ITEM, "lastItem"]];
@@ -1185,9 +1185,9 @@ function W(e, t) {
       name: "VALUE"
     }],
     colour: "%{BKY_LISTS_HUE}",
-    inputsInline: !0,
-    previousStatement: !0,
-    nextStatement: !0,
+    inputsInline: true,
+    previousStatement: true,
+    nextStatement: true,
     mutator: "ARRAY_ITEM_MUTATOR"
   });
   e.insertBlockProfile("array_get_item", {
@@ -1200,7 +1200,7 @@ function W(e, t) {
     }, {
       type: "field_coco_dropdown",
       name: "ITEM_POS",
-      custom: !0,
+      custom: true,
       optOnchange: n,
       options: function () {
         return [[t.Msg.NTH, "nth"], [t.Msg.LAST_ITEM, "lastItem"]];
@@ -1218,8 +1218,8 @@ function W(e, t) {
       name: "ITEM"
     }],
     colour: "%{BKY_LISTS_HUE}",
-    output: !0,
-    inputsInline: !0,
+    output: true,
+    inputsInline: true,
     mutator: "ARRAY_ITEM_MUTATOR"
   });
   e.insertBlockProfile("array_current_item", {
@@ -1249,33 +1249,33 @@ function W(e, t) {
       name: "DO",
       provided_context: "array_foreach_DO"
     }],
-    previousStatement: !0,
-    nextStatement: !0,
+    previousStatement: true,
+    nextStatement: true,
     colour: "%{BKY_LISTS_HUE}",
-    inputsInline: !0
+    inputsInline: true
   });
 }
 function H(e) {
-  e.insertBlockXML("lists_replace", "\n    <mutation pos='nth'></mutation>\n    <value name=\"ARRAY\">\n      <shadow type=\"array_get\"></shadow>\n    </value>\n    <value name=\"INDEX\">\n      <shadow type=\"math_number\">\n        <field name=\"NUM\" constraints=\"1,,1\">1</field>\n      </shadow>\n    </value>\n    <value name=\"VALUE\">\n      <shadow type=\"math_number\">\n        <field name=\"NUM\">0</field>\n      </shadow>\n    </value>\n    ", !0);
-  e.insertBlockXML("array_remove_item", "\n    <mutation pos='nth'></mutation>\n    <value name=\"ARRAY\">\n      <shadow type=\"array_get\"></shadow>\n    </value>\n    <value name=\"INDEX\">\n      <shadow type=\"math_number\">\n        <field name=\"NUM\" constraints='1,,1'>1</field>\n      </shadow>\n    </value>\n  ", !0);
-  e.insertBlockXML("array_get", void 0, !0);
-  e.insertBlockXML("lists_append", "\n    <value name=\"ARRAY\">\n      <shadow type=\"array_get\"></shadow>\n    </value>\n    <value name=\"VALUE\">\n      <shadow type=\"math_number\">\n        <field name=\"NUM\">0</field>\n      </shadow>\n    </value>\n  ", !0);
-  e.insertBlockXML("lists_insert_value", "\n    <value name=\"ARRAY\">\n      <shadow type=\"array_get\"></shadow>\n    </value>\n    <value name=\"INDEX\">\n      <shadow type=\"math_number\">\n        <field name=\"NUM\" constraints='1,,1'>1</field>\n      </shadow>\n    </value>\n    <value name=\"VALUE\">\n      <shadow type=\"math_number\">\n        <field name=\"NUM\">0</field>\n      </shadow>\n    </value>\n  ", !0);
-  e.insertBlockXML("array_copy", "\n    <value name=\"FROM\">\n      <shadow type=\"array_get\"></shadow>\n    </value>\n    <value name=\"TO\">\n      <shadow type=\"array_get\"></shadow>\n    </value>\n    ", !0);
-  e.insertBlockXML("array_get_item", "\n    <mutation pos='nth'></mutation>\n    <value name=\"ARRAY\">\n      <shadow type=\"array_get\"></shadow>\n    </value>\n    <value name=\"INDEX\">\n      <shadow type=\"math_number\">\n        <field name=\"NUM\" constraints='1,,1'>1</field>\n      </shadow>\n    </value>\n  ", !0);
-  e.insertBlockXML("array_get_length", "\n    <value name=\"ARRAY\">\n      <shadow type=\"array_get\"></shadow>\n    </value>\n    ", !0);
-  e.insertBlockXML("lists_index_of", "\n    <value name=\"ARRAY\">\n      <shadow type=\"array_get\"></shadow>\n    </value>\n    <value name=\"VALUE\">\n      <shadow type=\"math_number\">\n        <field name=\"NUM\">0</field>\n      </shadow>\n    </value>\n  ", !0);
-  e.insertBlockXML("lists_is_exist", "\n    <value name=\"ARRAY\">\n      <shadow type=\"array_get\"></shadow>\n    </value>\n    <value name=\"VALUE\">\n      <shadow type=\"math_number\">\n        <field name=\"NUM\">0</field>\n      </shadow>\n    </value>\n  ", !0);
-  e.insertBlockXML("array_foreach", "<value name=\"ARRAY\">\n      <shadow type=\"array_get\"></shadow>\n    </value>", !0);
+  e.insertBlockXML("lists_replace", "\n    <mutation pos='nth'></mutation>\n    <value name=\"ARRAY\">\n      <shadow type=\"array_get\"></shadow>\n    </value>\n    <value name=\"INDEX\">\n      <shadow type=\"math_number\">\n        <field name=\"NUM\" constraints=\"1,,1\">1</field>\n      </shadow>\n    </value>\n    <value name=\"VALUE\">\n      <shadow type=\"math_number\">\n        <field name=\"NUM\">0</field>\n      </shadow>\n    </value>\n    ", true);
+  e.insertBlockXML("array_remove_item", "\n    <mutation pos='nth'></mutation>\n    <value name=\"ARRAY\">\n      <shadow type=\"array_get\"></shadow>\n    </value>\n    <value name=\"INDEX\">\n      <shadow type=\"math_number\">\n        <field name=\"NUM\" constraints='1,,1'>1</field>\n      </shadow>\n    </value>\n  ", true);
+  e.insertBlockXML("array_get", undefined, true);
+  e.insertBlockXML("lists_append", "\n    <value name=\"ARRAY\">\n      <shadow type=\"array_get\"></shadow>\n    </value>\n    <value name=\"VALUE\">\n      <shadow type=\"math_number\">\n        <field name=\"NUM\">0</field>\n      </shadow>\n    </value>\n  ", true);
+  e.insertBlockXML("lists_insert_value", "\n    <value name=\"ARRAY\">\n      <shadow type=\"array_get\"></shadow>\n    </value>\n    <value name=\"INDEX\">\n      <shadow type=\"math_number\">\n        <field name=\"NUM\" constraints='1,,1'>1</field>\n      </shadow>\n    </value>\n    <value name=\"VALUE\">\n      <shadow type=\"math_number\">\n        <field name=\"NUM\">0</field>\n      </shadow>\n    </value>\n  ", true);
+  e.insertBlockXML("array_copy", "\n    <value name=\"FROM\">\n      <shadow type=\"array_get\"></shadow>\n    </value>\n    <value name=\"TO\">\n      <shadow type=\"array_get\"></shadow>\n    </value>\n    ", true);
+  e.insertBlockXML("array_get_item", "\n    <mutation pos='nth'></mutation>\n    <value name=\"ARRAY\">\n      <shadow type=\"array_get\"></shadow>\n    </value>\n    <value name=\"INDEX\">\n      <shadow type=\"math_number\">\n        <field name=\"NUM\" constraints='1,,1'>1</field>\n      </shadow>\n    </value>\n  ", true);
+  e.insertBlockXML("array_get_length", "\n    <value name=\"ARRAY\">\n      <shadow type=\"array_get\"></shadow>\n    </value>\n    ", true);
+  e.insertBlockXML("lists_index_of", "\n    <value name=\"ARRAY\">\n      <shadow type=\"array_get\"></shadow>\n    </value>\n    <value name=\"VALUE\">\n      <shadow type=\"math_number\">\n        <field name=\"NUM\">0</field>\n      </shadow>\n    </value>\n  ", true);
+  e.insertBlockXML("lists_is_exist", "\n    <value name=\"ARRAY\">\n      <shadow type=\"array_get\"></shadow>\n    </value>\n    <value name=\"VALUE\">\n      <shadow type=\"math_number\">\n        <field name=\"NUM\">0</field>\n      </shadow>\n    </value>\n  ", true);
+  e.insertBlockXML("array_foreach", "<value name=\"ARRAY\">\n      <shadow type=\"array_get\"></shadow>\n    </value>", true);
 }
 function V(e) {
   e.insertBlockSnippetGenerator("array_get", function (t, n) {
     var r = t.blocks[n];
     var o = e.getFieldValue(r, "ARRAY") || "";
-    return Object(_.s)("getVariableValue", [Object(_.o)(o)]);
+    return _.s("getVariableValue", [_.o(o)]);
   });
   var t = function (t, n) {
-    var r = Object(G.a)(n);
+    var r = G.a(n);
     var o = r.blockId && t.blocks[r.blockId];
     return o && e.getFieldValue(o, "ARRAY") || "";
   };
@@ -1284,7 +1284,7 @@ function V(e) {
     var i = e.valueToCode(n, r, "ARRAY", e.ORDER_FUNCTION_CALL);
     var a = t(n, i);
     var s = e.valueToCode(n, r, "VALUE", e.ORDER_FUNCTION_CALL);
-    return Object(_.l)(Object(_.n)("pushArrayItem", [i, s, Object(_.o)(a)]), o, e);
+    return _.l(_.n("pushArrayItem", [i, s, _.o(a)]), o, e);
   });
   e.insertBlockSnippetGenerator("lists_insert_value", function (n, r) {
     var o = n.blocks[r];
@@ -1292,7 +1292,7 @@ function V(e) {
     var a = t(n, i);
     var s = e.valueToCode(n, r, "VALUE", e.ORDER_FUNCTION_CALL);
     var c = e.valueToCode(n, r, "INDEX", e.ORDER_FUNCTION_CALL);
-    return Object(_.l)(Object(_.n)("insertArrayItemByIndex", [i, s, c + " - 1", Object(_.o)(a)]), o, e);
+    return _.l(_.n("insertArrayItemByIndex", [i, s, c + " - 1", _.o(a)]), o, e);
   });
   e.insertBlockSnippetGenerator("array_remove_item", function (n, r) {
     var o = e.valueToCode(n, r, "ARRAY", e.ORDER_FUNCTION_CALL);
@@ -1301,9 +1301,9 @@ function V(e) {
     var s = e.getFieldValue(a, "ITEM_POS") || "";
     if ("nth" === s) {
       var c = e.valueToCode(n, r, "INDEX", e.ORDER_FUNCTION_CALL);
-      return Object(_.l)(Object(_.n)("removeArrayItemByIndex", [o, c + " - 1", Object(_.o)(i)]), a, e);
+      return _.l(_.n("removeArrayItemByIndex", [o, c + " - 1", _.o(i)]), a, e);
     }
-    return "lastItem" === s ? Object(_.l)(Object(_.n)("removeLastArrayItem", [o, Object(_.o)(i)]), a, e) : Object(_.l)(Object(_.n)("removeAllArrayItem", [o, Object(_.o)(i)]), a, e);
+    return "lastItem" === s ? _.l(_.n("removeLastArrayItem", [o, _.o(i)]), a, e) : _.l(_.n("removeAllArrayItem", [o, _.o(i)]), a, e);
   });
   e.insertBlockSnippetGenerator("lists_replace", function (n, r) {
     var o = n.blocks[r];
@@ -1313,39 +1313,39 @@ function V(e) {
     var c = e.valueToCode(n, r, "VALUE", e.ORDER_FUNCTION_CALL);
     if ("nth" === s) {
       var l = e.valueToCode(n, r, "INDEX", e.ORDER_FUNCTION_CALL);
-      return Object(_.l)(Object(_.n)("setArrayItemByIndex", [i, c, l + " - 1", Object(_.o)(a)]), o, e);
+      return _.l(_.n("setArrayItemByIndex", [i, c, l + " - 1", _.o(a)]), o, e);
     }
-    return Object(_.l)(Object(_.n)("setArrayLastItem", [i, c, Object(_.o)(a)]), o, e);
+    return _.l(_.n("setArrayLastItem", [i, c, _.o(a)]), o, e);
   });
   e.insertBlockSnippetGenerator("array_copy", function (n, r) {
     var o = n.blocks[r];
     var i = e.valueToCode(n, r, "FROM", e.ORDER_FUNCTION_CALL);
     var a = e.valueToCode(n, r, "TO", e.ORDER_FUNCTION_CALL);
-    return Object(_.l)(Object(_.n)("copyArray", [i, a, Object(_.o)(t(n, a))]), o, e);
+    return _.l(_.n("copyArray", [i, a, _.o(t(n, a))]), o, e);
   });
   e.insertBlockSnippetGenerator("array_get_item", function (t, n) {
     var r = t.blocks[n];
     var o = e.valueToCode(t, n, "ARRAY", e.ORDER_FUNCTION_CALL);
     if ("nth" === (e.getFieldValue(r, "ITEM_POS") || "")) {
       var i = e.valueToCode(t, n, "INDEX", e.ORDER_FUNCTION_CALL);
-      return Object(_.l)(Object(_.s)("getArrayItemByIndex", [o, i + " - 1"]), r, e, !1, !0);
+      return _.l(_.s("getArrayItemByIndex", [o, i + " - 1"]), r, e, false, true);
     }
-    return Object(_.l)(Object(_.s)("getArrayLastItem", [o]), r, e, !1, !0);
+    return _.l(_.s("getArrayLastItem", [o]), r, e, false, true);
   });
   e.insertBlockSnippetGenerator("array_get_length", function (t, n) {
     var r = e.valueToCode(t, n, "ARRAY", e.ORDER_FUNCTION_CALL);
-    return Object(_.s)("getArrayLength", [r]);
+    return _.s("getArrayLength", [r]);
   });
   e.insertBlockSnippetGenerator("lists_index_of", function (t, n) {
     var r = t.blocks[n];
     var o = e.valueToCode(t, n, "ARRAY", e.ORDER_FUNCTION_CALL);
     var i = e.valueToCode(t, n, "VALUE", e.ORDER_FUNCTION_CALL);
-    return Object(_.l)(Object(_.s)("getArrayItemIndex", [o, i, "1"]), r, e, !1, !0);
+    return _.l(_.s("getArrayItemIndex", [o, i, "1"]), r, e, false, true);
   });
   e.insertBlockSnippetGenerator("lists_is_exist", function (t, n) {
     var r = e.valueToCode(t, n, "ARRAY", e.ORDER_FUNCTION_CALL);
     var o = e.valueToCode(t, n, "VALUE", e.ORDER_FUNCTION_CALL);
-    return Object(_.s)("checkItemInArray", [r, o]);
+    return _.s("checkItemInArray", [r, o]);
   });
   e.insertBlockSnippetGenerator("array_current_item", function () {
     return "arrayCurrentItem";
@@ -1354,7 +1354,7 @@ function V(e) {
     var r = e.valueToCode(t, n, "ARRAY", e.ORDER_FUNCTION_CALL);
     var o = e.valueToCode(t, n, "ARRAY_CURRENT_ITEM", e.ORDER_FUNCTION_CALL);
     var i = e.statementToCode(t, n, "DO");
-    return i ? Object(_.l)(Object(_.i)("asyncScheduler.listForEach", i, [r], [o]), t.blocks[n], e, !0) : "";
+    return i ? _.l(_.i("asyncScheduler.listForEach", i, [r], [o]), t.blocks[n], e, true) : "";
   });
 }
 function z(e) {
@@ -1394,13 +1394,13 @@ function z(e) {
     domToMutation: function () {
       var e;
       this.cacheId = {};
-      var t = null === (e = this.get_field("ITEM_POS")) || void 0 === e ? void 0 : e.get_value();
+      var t = null === (e = this.get_field("ITEM_POS")) || undefined === e ? undefined : e.get_value();
       this.updateShape_("nth" === t ? "add" : "remove");
     },
     mutationToDom: function () {
       var e;
       var t = document.createElement("mutation");
-      var n = null === (e = this.get_field("ITEM_POS")) || void 0 === e ? void 0 : e.get_value();
+      var n = null === (e = this.get_field("ITEM_POS")) || undefined === e ? undefined : e.get_value();
       t.setAttribute("pos", n || "");
       return t;
     }
@@ -1413,20 +1413,20 @@ function Y(e, t) {
     args0: [{
       type: "field_coco_dropdown",
       name: "OBJECT",
-      custom: !0,
+      custom: true,
       advancedOptions: function () {
-        return Object(O.c)().getObjectVariableList(this);
+        return O.c().getObjectVariableList(this);
       }
     }],
     output: "Object",
     colour: "%{BKY_SOUND_HUE}",
-    inputsInline: !0
+    inputsInline: true
   });
   e.insertBlockProfile("object_create", {
     type: "object_create",
     message0: "",
     colour: "%{BKY_SOUND_HUE}",
-    inputsInline: !0,
+    inputsInline: true,
     output: "Object",
     mutator: "OBJECT_CREATE_MUTATOR"
   });
@@ -1446,9 +1446,9 @@ function Y(e, t) {
       name: "VALUE"
     }],
     colour: "%{BKY_SOUND_HUE}",
-    inputsInline: !0,
-    previousStatement: !0,
-    nextStatement: !0
+    inputsInline: true,
+    previousStatement: true,
+    nextStatement: true
   });
   e.insertBlockProfile("object_delete_item", {
     type: "object_delete_item",
@@ -1463,9 +1463,9 @@ function Y(e, t) {
       check: ["String", "Number"]
     }],
     colour: "%{BKY_SOUND_HUE}",
-    inputsInline: !0,
-    previousStatement: !0,
-    nextStatement: !0
+    inputsInline: true,
+    previousStatement: true,
+    nextStatement: true
   });
   e.insertBlockProfile("object_clear", {
     type: "object_clear",
@@ -1476,9 +1476,9 @@ function Y(e, t) {
       check: ["Object"]
     }],
     colour: "%{BKY_SOUND_HUE}",
-    inputsInline: !0,
-    previousStatement: !0,
-    nextStatement: !0
+    inputsInline: true,
+    previousStatement: true,
+    nextStatement: true
   });
   e.insertBlockProfile("object_length", {
     type: "object_length",
@@ -1489,7 +1489,7 @@ function Y(e, t) {
       check: ["Object"]
     }],
     colour: "%{BKY_SOUND_HUE}",
-    inputsInline: !0,
+    inputsInline: true,
     output: "Number"
   });
   e.insertBlockProfile("object_get_item", {
@@ -1505,8 +1505,8 @@ function Y(e, t) {
       check: ["String", "Number"]
     }],
     colour: "%{BKY_SOUND_HUE}",
-    inputsInline: !0,
-    output: !0
+    inputsInline: true,
+    output: true
   });
   e.insertBlockProfile("object_include_key", {
     type: "object_include_key",
@@ -1521,23 +1521,23 @@ function Y(e, t) {
       check: ["String", "Number"]
     }],
     colour: "%{BKY_SOUND_HUE}",
-    inputsInline: !0,
+    inputsInline: true,
     output: "Boolean"
   });
 }
 function K(e) {
-  e.insertBlockXML("object_get", void 0, !0);
-  e.insertBlockXML("object_create", "<mutation items='1'></mutation>", !0);
-  e.insertBlockXML("object_set_item", "<value name=\"OBJECT\">\n      <shadow type=\"object_get\"></shadow>\n    </value>\n    <value name=\"KEY\">\n      <shadow type=\"text\">\n        <field name=\"TEXT\">key</field>\n      </shadow>\n    </value>\n    <value name=\"VALUE\">\n      <shadow type=\"math_number\">\n        <field name=\"NUM\" allow_text=\"true\">0</field>\n      </shadow>\n    </value>", !0);
-  e.insertBlockXML("object_delete_item", "<value name=\"OBJECT\">\n      <shadow type=\"object_get\"></shadow>\n    </value>\n    <value name=\"KEY\">\n      <shadow type=\"text\">\n        <field name=\"TEXT\">key</field>\n      </shadow>\n    </value>", !0);
-  e.insertBlockXML("object_clear", "<value name=\"OBJECT\">\n      <shadow type=\"object_get\"></shadow>\n    </value>", !0);
-  e.insertBlockXML("object_length", "<value name=\"OBJECT\">\n      <shadow type=\"object_get\"></shadow>\n    </value>", !0);
-  e.insertBlockXML("object_get_item", "<value name=\"OBJECT\">\n      <shadow type=\"object_get\"></shadow>\n    </value>\n    <value name=\"KEY\">\n      <shadow type=\"text\">\n        <field name=\"TEXT\">key</field>\n      </shadow>\n    </value>", !0);
-  e.insertBlockXML("object_include_key", "<value name=\"OBJECT\">\n      <shadow type=\"object_get\"></shadow>\n    </value>\n    <value name=\"KEY\">\n      <shadow type=\"text\">\n        <field name=\"TEXT\">key</field>\n      </shadow>\n    </value>", !0);
+  e.insertBlockXML("object_get", undefined, true);
+  e.insertBlockXML("object_create", "<mutation items='1'></mutation>", true);
+  e.insertBlockXML("object_set_item", "<value name=\"OBJECT\">\n      <shadow type=\"object_get\"></shadow>\n    </value>\n    <value name=\"KEY\">\n      <shadow type=\"text\">\n        <field name=\"TEXT\">key</field>\n      </shadow>\n    </value>\n    <value name=\"VALUE\">\n      <shadow type=\"math_number\">\n        <field name=\"NUM\" allow_text=\"true\">0</field>\n      </shadow>\n    </value>", true);
+  e.insertBlockXML("object_delete_item", "<value name=\"OBJECT\">\n      <shadow type=\"object_get\"></shadow>\n    </value>\n    <value name=\"KEY\">\n      <shadow type=\"text\">\n        <field name=\"TEXT\">key</field>\n      </shadow>\n    </value>", true);
+  e.insertBlockXML("object_clear", "<value name=\"OBJECT\">\n      <shadow type=\"object_get\"></shadow>\n    </value>", true);
+  e.insertBlockXML("object_length", "<value name=\"OBJECT\">\n      <shadow type=\"object_get\"></shadow>\n    </value>", true);
+  e.insertBlockXML("object_get_item", "<value name=\"OBJECT\">\n      <shadow type=\"object_get\"></shadow>\n    </value>\n    <value name=\"KEY\">\n      <shadow type=\"text\">\n        <field name=\"TEXT\">key</field>\n      </shadow>\n    </value>", true);
+  e.insertBlockXML("object_include_key", "<value name=\"OBJECT\">\n      <shadow type=\"object_get\"></shadow>\n    </value>\n    <value name=\"KEY\">\n      <shadow type=\"text\">\n        <field name=\"TEXT\">key</field>\n      </shadow>\n    </value>", true);
 }
 function q(e) {
   var t = function (t, n) {
-    var r = Object(G.a)(n);
+    var r = G.a(n);
     var o = r.blockId && t.blocks[r.blockId];
     var i = o && e.getFieldValue(o, "OBJECT");
     return JSON.stringify(i);
@@ -1545,7 +1545,7 @@ function q(e) {
   e.insertBlockSnippetGenerator("object_get", function (t, n) {
     var r = t.blocks[n];
     var o = e.getFieldValue(r, "OBJECT") || "";
-    return Object(_.s)("getVariableValue", [Object(_.o)(o)]);
+    return _.s("getVariableValue", [_.o(o)]);
   });
   e.insertBlockSnippetGenerator("object_create", function (t, n) {
     for (var r = 0, o = "[";;) {
@@ -1559,7 +1559,7 @@ function q(e) {
     }
     o += "]";
     var s = t.blocks[n];
-    return Object(_.l)(Object(_.s)("createTempObject", [o]), s, e, !1, !0);
+    return _.l(_.s("createTempObject", [o]), s, e, false, true);
   });
   e.insertBlockSnippetGenerator("object_set_item", function (n, r) {
     var o = n.blocks[r];
@@ -1567,37 +1567,37 @@ function q(e) {
     var a = e.valueToCode(n, r, "KEY", e.ORDER_FUNCTION_CALL);
     var s = e.valueToCode(n, r, "VALUE", e.ORDER_FUNCTION_CALL);
     var c = t(n, i);
-    return Object(_.l)(Object(_.n)("setObjectItem", [c, i, a, s]), o, e);
+    return _.l(_.n("setObjectItem", [c, i, a, s]), o, e);
   });
   e.insertBlockSnippetGenerator("object_delete_item", function (n, r) {
     var o = n.blocks[r];
     var i = e.valueToCode(n, r, "OBJECT", e.ORDER_FUNCTION_CALL);
     var a = e.valueToCode(n, r, "KEY", e.ORDER_FUNCTION_CALL);
     var s = t(n, i);
-    return Object(_.l)(Object(_.n)("deleteObjectItem", [s, i, a]), o, e);
+    return _.l(_.n("deleteObjectItem", [s, i, a]), o, e);
   });
   e.insertBlockSnippetGenerator("object_get_item", function (t, n) {
     var r = e.valueToCode(t, n, "OBJECT", e.ORDER_FUNCTION_CALL);
     var o = e.valueToCode(t, n, "KEY", e.ORDER_FUNCTION_CALL);
     var i = t.blocks[n];
-    return Object(_.l)(Object(_.s)("getObjectItem", [r, o]), i, e, !1, !0);
+    return _.l(_.s("getObjectItem", [r, o]), i, e, false, true);
   });
   e.insertBlockSnippetGenerator("object_clear", function (n, r) {
     var o = n.blocks[r];
     var i = e.valueToCode(n, r, "OBJECT", e.ORDER_FUNCTION_CALL);
     var a = t(n, i);
-    return Object(_.l)(Object(_.n)("clearObject", [a, i]), o, e);
+    return _.l(_.n("clearObject", [a, i]), o, e);
   });
   e.insertBlockSnippetGenerator("object_length", function (t, n) {
     var r = e.valueToCode(t, n, "OBJECT", e.ORDER_FUNCTION_CALL);
     var o = t.blocks[n];
-    return Object(_.l)(Object(_.s)("getObjectLength", [r]), o, e, !1, !0);
+    return _.l(_.s("getObjectLength", [r]), o, e, false, true);
   });
   e.insertBlockSnippetGenerator("object_include_key", function (t, n) {
     var r = e.valueToCode(t, n, "OBJECT", e.ORDER_FUNCTION_CALL);
     var o = e.valueToCode(t, n, "KEY", e.ORDER_FUNCTION_CALL);
     var i = t.blocks[n];
-    return Object(_.l)(Object(_.s)("checkKeyInObject", [r, o]), i, e, !1, !0);
+    return _.l(_.s("checkKeyInObject", [r, o]), i, e, false, true);
   });
 }
 function X(e) {
@@ -1644,10 +1644,10 @@ function X(e) {
         if (this.get_input("MUTATE_REMOVE_BUTTON")) {
           this.remove_input("MUTATE_REMOVE_BUTTON");
         }
-        this.append_dummy_input("MUTATE_ADD_BUTTON").append_field(Object(_.p)(), "MUTATE_ADD_BUTTON");
+        this.append_dummy_input("MUTATE_ADD_BUTTON").append_field(_.p(), "MUTATE_ADD_BUTTON");
       } else {
-        this.append_dummy_input("MUTATE_REMOVE_BUTTON").append_field(Object(_.q)(void 0), "MUTATE_REMOVE_BUTTON");
-        this.append_dummy_input("MUTATE_ADD_BUTTON").append_field(Object(_.p)(), "MUTATE_ADD_BUTTON");
+        this.append_dummy_input("MUTATE_REMOVE_BUTTON").append_field(_.q(undefined), "MUTATE_REMOVE_BUTTON");
+        this.append_dummy_input("MUTATE_ADD_BUTTON").append_field(_.p(), "MUTATE_ADD_BUTTON");
       }
       e.events.enable();
     },
@@ -1661,7 +1661,7 @@ function X(e) {
         var n = this.itemCount_;
         this.itemCount_++;
         this.updateShape_();
-        var r = Object(_.c)("mutation", {
+        var r = _.c("mutation", {
           block: this,
           old_value: n,
           new_value: this.itemCount_
@@ -1679,7 +1679,7 @@ function X(e) {
         var n = this.itemCount_;
         this.itemCount_--;
         this.updateShape_();
-        var r = Object(_.c)("mutation", {
+        var r = _.c("mutation", {
           block: this,
           old_value: n,
           new_value: this.itemCount_
@@ -1703,7 +1703,7 @@ function Q(e, t) {
   e.insertBlockProfile("app_on_mount", {
     type: "app_on_mount",
     message0: "%{BKY_APP_ON_MOUNT}",
-    args0: [Object(_.e)(n, !0), {
+    args0: [_.e(n, true), {
       type: "input_dummy",
       align: "CENTRE"
     }, {
@@ -1711,15 +1711,15 @@ function Q(e, t) {
       name: "DO"
     }],
     colour: "%{BKY_EVENTS_HUE}",
-    inputsInline: !0
+    inputsInline: true
   });
   e.insertBlockProfile("app_on_switch_background", {
     type: "app_on_switch_background",
     message0: "%{BKY_APP_ON_SWITCH}",
-    args0: [Object(_.e)(n, !0), {
+    args0: [_.e(n, true), {
       type: "field_coco_dropdown",
       name: "APP_STATE",
-      custom: !0,
+      custom: true,
       options: function () {
         return [[t.Msg.APP_BACKGROUND, "background"], [t.Msg.APP_ACTIVE, "active"]];
       }
@@ -1731,7 +1731,7 @@ function Q(e, t) {
       name: "DO"
     }],
     colour: "%{BKY_EVENTS_HUE}",
-    inputsInline: !0
+    inputsInline: true
   });
   e.insertBlockProfile("broadcast_input", {
     type: "broadcast_input",
@@ -1739,9 +1739,9 @@ function Q(e, t) {
     args0: [{
       type: "field_coco_dropdown",
       name: "BROADCAST",
-      custom: !0,
+      custom: true,
       advancedOptions: function () {
-        return Object(O.c)().getBroadcastList(this);
+        return O.c().getBroadcastList(this);
       }
     }],
     colour: "#ffffff",
@@ -1751,7 +1751,7 @@ function Q(e, t) {
   e.insertBlockProfile("broadcast_on_receive", {
     type: "broadcast_on_receive",
     message0: "%{BKY_BROADCAST_ON_RECEIVE}",
-    args0: [Object(_.e)(n, !0), {
+    args0: [_.e(n, true), {
       type: "input_value",
       name: "BROADCAST",
       check: ["String", "Boolean"]
@@ -1763,7 +1763,7 @@ function Q(e, t) {
       name: "DO"
     }],
     colour: "%{BKY_EVENTS_HUE}",
-    inputsInline: !0
+    inputsInline: true
   });
   e.insertBlockProfile("broadcast_send", {
     type: "broadcast_send",
@@ -1773,10 +1773,10 @@ function Q(e, t) {
       name: "BROADCAST",
       check: ["String", "Boolean"]
     }],
-    previousStatement: !0,
-    nextStatement: !0,
+    previousStatement: true,
+    nextStatement: true,
     colour: "%{BKY_EVENTS_HUE}",
-    inputsInline: !0
+    inputsInline: true
   });
   e.insertBlockProfile("broadcast_send_and_wait", {
     type: "broadcast_send_and_wait",
@@ -1786,17 +1786,17 @@ function Q(e, t) {
       name: "BROADCAST",
       check: ["String", "Boolean"]
     }],
-    previousStatement: !0,
-    nextStatement: !0,
+    previousStatement: true,
+    nextStatement: true,
     colour: "%{BKY_EVENTS_HUE}",
-    inputsInline: !0
+    inputsInline: true
   });
 }
 function Z(e) {
   e.insertBlockXML("app_on_mount");
   e.insertBlockXML("app_on_switch_background");
   e.insertBlockXML("when", "\n      <value name=\"CONDITION\">\n        <empty type=\"logic_empty\">\n          <field name=\"BOOL\"></field>\n        </empty>\n      </value>\n      ");
-  e.insertBlockXML("broadcast_input", void 0, !0);
+  e.insertBlockXML("broadcast_input", undefined, true);
 }
 function J(e) {
   var t = function (t, n) {
@@ -1806,12 +1806,12 @@ function J(e) {
   };
   e.insertBlockSnippetGenerator("app_on_mount", function (t, n) {
     var r = e.statementToCode(t, n, "DO");
-    return r ? Object(_.m)("onAppMount", void 0, r) : "";
+    return r ? _.m("onAppMount", undefined, r) : "";
   });
   e.insertBlockSnippetGenerator("app_on_switch_background", function (t, n) {
     var r = t.blocks[n];
     var o = e.statementToCode(t, n, "DO");
-    return o ? "active" === (e.getFieldValue(r, "APP_STATE") || "") ? Object(_.m)("onAppActive", void 0, o) : Object(_.m)("onAppBackground", void 0, o) : "";
+    return o ? "active" === (e.getFieldValue(r, "APP_STATE") || "") ? _.m("onAppActive", undefined, o) : _.m("onAppBackground", undefined, o) : "";
   });
   e.insertBlockSnippetGenerator("broadcast_input", function (t, n) {
     var r = t.blocks[n];
@@ -1819,13 +1819,13 @@ function J(e) {
   });
   e.insertBlockSnippetGenerator("broadcast_on_receive", function (n, r) {
     var o = e.statementToCode(n, r, "DO");
-    return o ? Object(_.m)("onCustomEvent", [t(n, r)], o) : "";
+    return o ? _.m("onCustomEvent", [t(n, r)], o) : "";
   });
   e.insertBlockSnippetGenerator("broadcast_send", function (e, n) {
-    return Object(_.n)("emitCustomEvent", [t(e, n)]);
+    return _.n("emitCustomEvent", [t(e, n)]);
   });
   e.insertBlockSnippetGenerator("broadcast_send_and_wait", function (e, n) {
-    return Object(_.j)("emitCustomEventAndWait", [t(e, n)]);
+    return _.j("emitCustomEventAndWait", [t(e, n)]);
   });
 }
 function $(e) {
@@ -1838,7 +1838,7 @@ function $(e) {
       check: ["Number", "String", "Boolean", "Array"]
     }, {
       type: "field_coco_dropdown",
-      custom: !0,
+      custom: true,
       name: "OP",
       options: [["=", F.EQUAL], ["≠", F.UNEQUAL], ["<", F.LESS_THAN], ["≤", F.LESS_THAN_OR_EQUAL], [">", F.GREATER_THAN], ["≥", F.GREATER_THAN_OR_EQUAL]]
     }, {
@@ -1846,7 +1846,7 @@ function $(e) {
       name: "B",
       check: ["Number", "String", "Boolean", "Array"]
     }],
-    inputsInline: !0,
+    inputsInline: true,
     output: "Boolean",
     colour: "%{BKY_LOGIC_HUE}"
   });
@@ -1860,14 +1860,14 @@ function $(e) {
     }, {
       type: "field_coco_dropdown",
       name: "OP",
-      custom: !0,
+      custom: true,
       options: [["%{BKY_MATH_ADDITION_SYMBOL}", D.ADD], ["%{BKY_MATH_SUBTRACTION_SYMBOL}", D.MINUS], ["%{BKY_MATH_MULTIPLICATION_SYMBOL}", D.MULTIPLY], ["%{BKY_MATH_DIVISION_SYMBOL}", D.DIVIDE], ["%{BKY_MATH_POWER_SYMBOL}", D.POWER]]
     }, {
       type: "input_value",
       name: "B",
       check: "Number"
     }],
-    inputsInline: !0,
+    inputsInline: true,
     output: "Number",
     colour: "%{BKY_MATH_HUE}"
   });
@@ -1887,7 +1887,7 @@ function $(e) {
     }],
     output: "Number",
     colour: "%{BKY_LOGIC_HUE}",
-    inputsInline: !0
+    inputsInline: true
   });
   e.insertBlockProfile("math_number_property", {
     type: "math_number_property",
@@ -1900,10 +1900,10 @@ function $(e) {
     }, {
       type: "field_coco_dropdown",
       name: "PROPERTY",
-      custom: !0,
+      custom: true,
       options: [["%{BKY_MATH_EVEN}", x.EVEN], ["%{BKY_MATH_ODD}", x.ODD], ["%{BKY_MATH_PRIME}", x.PRIME], ["%{BKY_MATH_WHOLE}", x.WHOLE], ["%{BKY_MATH_POSITIVE}", x.POSITIVE], ["%{BKY_MATH_NEGATIVE}", x.NEGATIVE]]
     }],
-    inputsInline: !0,
+    inputsInline: true,
     output: "Boolean",
     colour: "%{BKY_MATH_HUE}"
   });
@@ -1916,7 +1916,7 @@ function $(e) {
       check: "Boolean"
     }, {
       type: "field_coco_dropdown",
-      custom: !0,
+      custom: true,
       name: "OP",
       options: [["%{BKY_LOGIC_OPERATION_AND}", M.AND], ["%{BKY_LOGIC_OPERATION_OR}", M.OR]]
     }, {
@@ -1924,7 +1924,7 @@ function $(e) {
       name: "B",
       check: "Boolean"
     }],
-    inputsInline: !0,
+    inputsInline: true,
     output: "Boolean",
     colour: "%{BKY_LOGIC_HUE}"
   });
@@ -1933,7 +1933,7 @@ function $(e) {
     message0: "%1 %2",
     args0: [{
       type: "field_coco_dropdown",
-      custom: !0,
+      custom: true,
       name: "OP",
       options: [["%{BKY_MATH_SINGLE_OP_ROOT}", L.ROOT], ["%{BKY_MATH_SINGLE_OP_ABSOLUTE}", L.ABS], ["-", L.NEG], ["ln", L.LN], ["log10", L.LOG10], ["e^", L.EXP], ["10^", L.POW10]]
     }, {
@@ -1949,7 +1949,7 @@ function $(e) {
     message0: "%1 %2",
     args0: [{
       type: "field_coco_dropdown",
-      custom: !0,
+      custom: true,
       name: "OP",
       options: [["%{BKY_MATH_ROUND_OPERATOR_ROUND}", B.ROUND], ["%{BKY_MATH_ROUND_OPERATOR_CEIL}", B.CEIL], ["%{BKY_MATH_ROUND_OPERATOR_FLOOR}", B.FLOOR]]
     }, {
@@ -1967,7 +1967,7 @@ function $(e) {
     message0: "%1",
     args0: [{
       type: "field_coco_dropdown",
-      custom: !0,
+      custom: true,
       name: "BOOL",
       options: [["%{BKY_LOGIC_BOOLEAN_TRUE}", "TRUE"], ["%{BKY_LOGIC_BOOLEAN_FALSE}", "FALSE"]]
     }],
@@ -1989,7 +1989,7 @@ function $(e) {
     }],
     output: "Boolean",
     colour: "%{BKY_LOGIC_HUE}",
-    inputsInline: !0
+    inputsInline: true
   });
   e.insertBlockProfile("math_calculate_expression", {
     type: "math_calculate_expression",
@@ -2001,7 +2001,7 @@ function $(e) {
     }],
     output: "Number",
     colour: "%{BKY_LOGIC_HUE}",
-    inputsInline: !0
+    inputsInline: true
   });
   e.insertBlockProfile("text_convert_type", {
     type: "text_convert_type",
@@ -2014,12 +2014,12 @@ function $(e) {
     }, {
       type: "field_coco_dropdown",
       name: "TYPE",
-      custom: !0,
+      custom: true,
       options: [["%{BKY_NUMBER_TYPE}", "number"], ["%{BKY_STRING_TYPE}", "string"], ["%{BKY_BOOLEAN_TYPE}", "boolean"]]
     }],
     output: ["String", "Number", "Boolean"],
     colour: "%{BKY_LOGIC_HUE}",
-    inputsInline: !0
+    inputsInline: true
   });
   e.insertBlockProfile("text_get_length", {
     type: "text_get_length",
@@ -2031,7 +2031,7 @@ function $(e) {
     }],
     output: "Number",
     colour: "%{BKY_LOGIC_HUE}",
-    inputsInline: !0
+    inputsInline: true
   });
   e.insertBlockProfile("text_slice", {
     type: "text_slice",
@@ -2046,7 +2046,7 @@ function $(e) {
       check: ["Number"]
     }],
     output: "String",
-    inputsInline: !0,
+    inputsInline: true,
     colour: "%{BKY_LOGIC_HUE}",
     mutator: "TEXT_SLICE_MUTATOR"
   });
@@ -2064,7 +2064,7 @@ function $(e) {
     }],
     output: "Boolean",
     colour: "%{BKY_LOGIC_HUE}",
-    inputsInline: !0
+    inputsInline: true
   });
   e.insertBlockProfile("text_split_text", {
     type: "text_split_text",
@@ -2080,7 +2080,7 @@ function $(e) {
     }],
     output: "Array",
     colour: "%{BKY_LOGIC_HUE}",
-    inputsInline: !0
+    inputsInline: true
   });
   e.insertBlockProfile("text_shadow", {
     type: "text_shadow",
@@ -2092,7 +2092,7 @@ function $(e) {
     }],
     output: "String",
     colour: "%{BKY_LOGIC_HUE}",
-    inputsInline: !0
+    inputsInline: true
   });
   e.insertBlockProfile("text_rich_text", {
     type: "text_rich_text",
@@ -2104,7 +2104,7 @@ function $(e) {
     }],
     output: "String",
     colour: "%{BKY_LOGIC_HUE}",
-    inputsInline: !0,
+    inputsInline: true,
     extensions: ["text_quotes", "parent_tooltip_when_inline"]
   });
   e.insertBlockProfile("math_shadow_number", {
@@ -2117,7 +2117,7 @@ function $(e) {
     }],
     output: "Number",
     colour: "%{BKY_LOGIC_HUE}",
-    inputsInline: !0
+    inputsInline: true
   });
   e.insertBlockProfile("text_multiline", {
     type: "text_multiline",
@@ -2164,12 +2164,12 @@ function te(e, t) {
       var n = new t({
         type: "field_coco_dropdown",
         name: "OP",
-        custom: !0,
+        custom: true,
         options: [[e.Msg.MATH_TRIG_SIN, P.SIN], [e.Msg.MATH_TRIG_COS, P.COS], [e.Msg.MATH_TRIG_TAN, P.TAN], [e.Msg.MATH_TRIG_ASIN, P.ASIN], [e.Msg.MATH_TRIG_ACOS, P.ACOS], [e.Msg.MATH_TRIG_ATAN, P.ATAN]],
         optOnchange: function (e) {
           var t;
           var n = "SIN" === e || "COS" === e || "TAN" === e;
-          if (null === (t = this.source_block) || void 0 === t ? void 0 : t.updateShape_) {
+          if (null === (t = this.source_block) || undefined === t ? undefined : t.updateShape_) {
             this.source_block.updateShape_(n);
           }
         }
@@ -2177,8 +2177,8 @@ function te(e, t) {
       this.append_dummy_input().append_field(n, "OP");
       this.append_shadow_input("NUM", e.Blocks.math_trig.shadow).set_check("Number");
       this.append_dummy_input("DEGREES").append_field(e.Msg.MATH_DEGREES);
-      this.set_inputs_inline(!0);
-      this.set_output(!0);
+      this.set_inputs_inline(true);
+      this.set_output(true);
     },
     updateShape_: function (t) {
       var n = this.get_input("DEGREES");
@@ -2199,12 +2199,12 @@ function te(e, t) {
       e.events.disable();
       if (1 === this.itemCount_) {
         this.append_dummy_input("TITLE_TAIL").append_field(e.Msg.OPERATORS_TEXT_SELECT_CHANGEABLE_END);
-        this.append_dummy_input("MUTATE_BUTTON").append_field(Object(_.p)(), "MUTATE_BUTTON");
+        this.append_dummy_input("MUTATE_BUTTON").append_field(_.p(), "MUTATE_BUTTON");
       } else {
         this.append_dummy_input("CONTENT_TO").append_field(e.Msg.OPERATORS_TEXT_SELECT_CHANGEABLE_TO);
         this.append_shadow_input("NUM".concat(this.itemCount_ - 1), n);
         this.append_dummy_input("TITLE_TAIL").append_field(e.Msg.OPERATORS_TEXT_SELECT_CHANGEABLE_END);
-        this.append_dummy_input("MUTATE_BUTTON").append_field(Object(_.q)(void 0), "MUTATE_BUTTON");
+        this.append_dummy_input("MUTATE_BUTTON").append_field(_.q(undefined), "MUTATE_BUTTON");
       }
       e.events.enable();
     },
@@ -2218,7 +2218,7 @@ function te(e, t) {
         if (r.get_input("MUTATE_BUTTON")) {
           r.remove_input("MUTATE_BUTTON");
         }
-        r.append_dummy_input("MUTATE_BUTTON").append_field(Object(_.q)(void 0), "MUTATE_BUTTON");
+        r.append_dummy_input("MUTATE_BUTTON").append_field(_.q(undefined), "MUTATE_BUTTON");
         return t;
       }, n, t);
     },
@@ -2232,7 +2232,7 @@ function te(e, t) {
         if (e.get_input("MUTATE_BUTTON")) {
           e.remove_input("MUTATE_BUTTON");
         }
-        e.append_dummy_input("MUTATE_BUTTON").append_field(Object(_.p)(), "MUTATE_BUTTON");
+        e.append_dummy_input("MUTATE_BUTTON").append_field(_.p(), "MUTATE_BUTTON");
       });
     },
     mutationToDom: function () {
@@ -2264,23 +2264,23 @@ function ne(e) {
     var a = r[i];
     var s = e.valueToCode(t, n, "A", a);
     var c = e.valueToCode(t, n, "B", a);
-    return Object(_.s)("mathOperation", [Object(_.o)(i), s, c]);
+    return _.s("mathOperation", [_.o(i), s, c]);
   });
   e.insertBlockSnippetGenerator("math_random_integer", function (t, n) {
     var r = e.valueToCode(t, n, "INPUT_A", e.ORDER_COMMA);
     var o = e.valueToCode(t, n, "INPUT_B", e.ORDER_COMMA);
-    return Object(_.s)("getRandomInteger", [r, o]);
+    return _.s("getRandomInteger", [r, o]);
   });
   e.insertBlockSnippetGenerator("math_number_property", function (t, n) {
     var r = t.blocks[n];
     var o = e.valueToCode(t, n, "NUMBER_TO_CHECK", e.ORDER_MODULUS);
     var i = e.getFieldValue(r, "PROPERTY") || "";
-    return Object(_.s)("determineNumberType", [Object(_.o)(i), o]);
+    return _.s("determineNumberType", [_.o(i), o]);
   });
   e.insertBlockSnippetGenerator("math_check_divisible", function (t, n) {
     var r = e.valueToCode(t, n, "NUMBER_TO_CHECK", e.ORDER_MODULUS);
     var o = e.valueToCode(t, n, "DIVISOR", e.ORDER_MODULUS);
-    return Object(_.s)("checkDivisibility", [r, o]);
+    return _.s("checkDivisibility", [r, o]);
   });
   e.insertBlockSnippetGenerator("logic_operation", function (t, n) {
     var r = t.blocks[n];
@@ -2288,34 +2288,34 @@ function ne(e) {
     var i = "AND" === o ? e.ORDER_LOGICAL_AND : e.ORDER_LOGICAL_OR;
     var a = e.valueToCode(t, n, "A", i) || "false";
     var s = e.valueToCode(t, n, "B", i) || "false";
-    return Object(_.s)("logicOperation", [Object(_.o)(o), a, s]);
+    return _.s("logicOperation", [_.o(o), a, s]);
   });
   e.insertBlockSnippetGenerator("math_calculate_expression", function (t, n) {
     var r = e.valueToCode(t, n, "INPUT", e.ORDER_MEMBER);
-    return Object(_.s)("calculateMathExpression", [r]);
+    return _.s("calculateMathExpression", [r]);
   });
   e.insertBlockSnippetGenerator("math_complex_operation", function (t, n) {
     var r = t.blocks[n];
     var o = e.getFieldValue(r, "OP") || "";
     var i = e.valueToCode(t, n, "NUM", e.ORDER_FUNCTION_CALL);
-    return Object(_.s)("complexMathOperation", [Object(_.o)(o), i]);
+    return _.s("complexMathOperation", [_.o(o), i]);
   });
   e.insertBlockSnippetGenerator("math_modulo", function (t, n) {
     var r = e.valueToCode(t, n, "DIVIDEND", e.ORDER_MODULUS);
     var o = e.valueToCode(t, n, "DIVISOR", e.ORDER_MODULUS);
-    return Object(_.s)("remainderOperation", [r, o]);
+    return _.s("remainderOperation", [r, o]);
   });
   e.insertBlockSnippetGenerator("math_trig", function (t, n) {
     var r = t.blocks[n];
     var o = e.getFieldValue(r, "OP") || "";
     var i = e.valueToCode(t, n, "NUM", e.ORDER_FUNCTION_CALL);
-    return Object(_.s)("mathTrig", [Object(_.o)(o), i]);
+    return _.s("mathTrig", [_.o(o), i]);
   });
   e.insertBlockSnippetGenerator("math_round", function (t, n) {
     var r = t.blocks[n];
     var o = e.getFieldValue(r, "OP") || "";
     var i = e.valueToCode(t, n, "NUM", e.ORDER_FUNCTION_CALL);
-    return Object(_.s)("mathRound", [Object(_.o)(o), i]);
+    return _.s("mathRound", [_.o(o), i]);
   });
   e.insertBlockSnippetGenerator("math_compare", function (t, n) {
     var r = t.blocks[n];
@@ -2323,42 +2323,42 @@ function ne(e) {
     var i = "EQ" === o || "NEQ" === o ? e.ORDER_EQUALITY : e.ORDER_RELATIONAL;
     var a = e.valueToCode(t, n, "A", i);
     var s = e.valueToCode(t, n, "B", i);
-    return Object(_.s)("compareNumbers", [Object(_.o)(o), a, s]);
+    return _.s("compareNumbers", [_.o(o), a, s]);
   });
   e.insertBlockSnippetGenerator("text_convert_type", function (t, n) {
     var r = t.blocks[n];
     var o = e.getFieldValue(r, "TYPE") || "";
     var i = e.valueToCode(t, n, "ORIGINAL_VALUE", e.ORDER_FUNCTION_CALL);
-    return i ? Object(_.s)("convertValueType", [i, Object(_.o)(o)]) : "";
+    return i ? _.s("convertValueType", [i, _.o(o)]) : "";
   });
   e.insertBlockSnippetGenerator("text_slice", function (t, n) {
     var r = e.valueToCode(t, n, "STRING", e.ORDER_MEMBER);
     var o = e.valueToCode(t, n, "NUM0", e.ORDER_COMMA);
     var i = e.valueToCode(t, n, "NUM1", e.ORDER_COMMA);
-    return i ? Object(_.s)("extractString", [r, o, i]) : Object(_.s)("extractString", [r, o]);
+    return i ? _.s("extractString", [r, o, i]) : _.s("extractString", [r, o]);
   });
   e.insertBlockSnippetGenerator("text_join", function (t, n) {
     for (var r = Object.keys(t.connections[n]).length, o = new Array(r), i = 0; i < r; i++) {
       o[i] = e.valueToCode(t, n, "ADD".concat(i), e.ORDER_COMMA) || "''";
     }
-    return Object(_.s)("concatStrings", o);
+    return _.s("concatStrings", o);
   });
   e.insertBlockSnippetGenerator("text_shadow", function (t, n) {
     return e.valueToCode(t, n, "VALUE", e.ORDER_NONE);
   });
   e.insertBlockSnippetGenerator("text_get_length", function (t, n) {
     var r = e.valueToCode(t, n, "VALUE", e.ORDER_FUNCTION_CALL);
-    return Object(_.s)("getStringLength", [r]);
+    return _.s("getStringLength", [r]);
   });
   e.insertBlockSnippetGenerator("text_check_contain", function (t, n) {
     var r = e.valueToCode(t, n, "TEXT1", e.ORDER_FUNCTION_CALL);
     var o = e.valueToCode(t, n, "TEXT2", e.ORDER_COMMA);
-    return Object(_.s)("checkStringContain", [r, o]);
+    return _.s("checkStringContain", [r, o]);
   });
   e.insertBlockSnippetGenerator("text_split_text", function (t, n) {
     var r = e.valueToCode(t, n, "STR_TO_SPLIT", e.ORDER_FUNCTION_CALL) || "''";
     var o = e.valueToCode(t, n, "SPLIT_STR", e.ORDER_COMMA);
-    return Object(_.s)("splitString", [r, o]);
+    return _.s("splitString", [r, o]);
   });
   e.insertBlockSnippetGenerator("text_multiline", function (t, n) {
     var r = t.blocks[n];
@@ -2420,7 +2420,7 @@ function ne(e) {
   e.GREATER_THAN = "GT";
   e.GREATER_THAN_OR_EQUAL = "GTE";
 })(F || (F = {}));
-var re = require("./173");
+import re = require("./173");
 function oe(e) {
   e.insertBlockProfile("procedures_2_param_block", {
     type: "procedures_2_param_block",
@@ -2430,31 +2430,31 @@ function oe(e) {
       name: "param",
       text: "x"
     }],
-    output: !0,
+    output: true,
     colour: "%{BKY_PARAM_BLOCK_COLOR}",
     extensions: ["param_block"]
   });
 }
 function ie(e) {
-  e.insertBlockXML(re.PROCEDURE_BLOCK_TYPES.DEF, "", !0);
-  e.insertBlockXML(re.PROCEDURE_BLOCK_TYPES.CALL_RETURN, "", !0);
-  e.insertBlockXML(re.PROCEDURE_BLOCK_TYPES.CALL_NORETURN, "", !0);
+  e.insertBlockXML(re.PROCEDURE_BLOCK_TYPES.DEF, "", true);
+  e.insertBlockXML(re.PROCEDURE_BLOCK_TYPES.CALL_RETURN, "", true);
+  e.insertBlockXML(re.PROCEDURE_BLOCK_TYPES.CALL_NORETURN, "", true);
 }
 function ae(e) {
   function t(t, n, r) {
     var o = n.blocks[r];
     var i = e.getDynamicValue("__CURRENT_SCREEN_ID__");
     var a = e.getFieldValue(o, "NAME") || "";
-    var s = Object(_.f)(a, i);
+    var s = _.f(a, i);
     var c = Object.keys(o.shadows).filter(function (e) {
       return e.startsWith("ARG");
     }).map(function (t) {
       return e.valueToCode(n, r, t, e.ORDER_ATOMIC);
     });
-    return Object(_.l)("(await Coco.tryExecute(".concat(["".concat(s), JSON.stringify({
+    return _.l("(await Coco.tryExecute(".concat(["".concat(s), JSON.stringify({
       functionName: s,
       screenId: i
-    })].concat(Object(h.a)(c)).join(", "), "))"), o, e, !0, !0);
+    })].concat(h.a(c)).join(", "), "))"), o, e, true, true);
   }
   e.insertBlockSnippetGenerator("procedures_2_param_block", function (t, n) {
     var r = t.blocks[n];
@@ -2472,7 +2472,7 @@ function ae(e) {
     e.setDynamicValue("__DEFINING_PROCEDURE__", "true");
     var s = e.statementToCode(t, n, "STACK");
     e.deleteDynamicValue("__DEFINING_PROCEDURE__");
-    return "async function ".concat(Object(_.f)(i, o), "(").concat(a.join(", "), ") {\n").concat(s, "}\n");
+    return "async function ".concat(_.f(i, o), "(").concat(a.join(", "), ") {\n").concat(s, "}\n");
   });
   e.insertBlockSnippetGenerator(re.PROCEDURE_BLOCK_TYPES.RETURN, function (t, n) {
     var r = t.blocks[n];
@@ -2501,14 +2501,14 @@ function se(e, t) {
     args0: [{
       type: "field_coco_dropdown",
       name: "DATE_TYPE",
-      custom: !0,
+      custom: true,
       options: function () {
         return [[t.Msg.DATE_CURRENT_TIME, "time"], [t.Msg.DATE_CURRENT_YEAR, "year"], [t.Msg.DATE_CURRENT_MONTH, "month"], [t.Msg.DATE_CURRENT_DATE, "date"], [t.Msg.DATE_CURRENT_DAY_NAME, "dayName"], [t.Msg.DATE_CURRENT_DAY_NUM, "day"], [t.Msg.DATE_CURRENT_HOUR, "hour"], [t.Msg.DATE_CURRENT_MINUTE, "minute"], [t.Msg.DATE_CURRENT_SECOND, "second"]];
       }
     }],
     output: ["Number", "String"],
     colour: "%{BKY_BLUE_6}",
-    inputsInline: !0,
+    inputsInline: true,
     tooltip: "%{BKY_DATE_GET_CURRENT_DATE_TOOLTIP}"
   });
   e.insertBlockProfile("date_check_date_is_equal", {
@@ -2525,7 +2525,7 @@ function se(e, t) {
     }],
     output: "Boolean",
     colour: "%{BKY_BLUE_6}",
-    inputsInline: !0
+    inputsInline: true
   });
   e.insertBlockProfile("date_get_date_minus_operation", {
     type: "date_get_date_minus_operation",
@@ -2541,12 +2541,12 @@ function se(e, t) {
     }, {
       type: "field_coco_dropdown",
       name: "OPERATION_TYPE",
-      custom: !0,
+      custom: true,
       options: [["%{BKY_DAYS}", "days"], ["%{BKY_YEAR}", "year"], ["%{BKY_MONTH}", "month"], ["%{BKY_HOUR}", "hour"], ["%{BKY_MINUTE}", "minute"], ["%{BKY_SECOND}", "second"]]
     }],
     output: "Number",
     colour: "%{BKY_BLUE_6}",
-    inputsInline: !0
+    inputsInline: true
   });
 }
 function ce(e) {
@@ -2554,23 +2554,23 @@ function ce(e) {
     var r = t.blocks[n];
     switch (e.getFieldValue(r, "DATE_TYPE")) {
       case "time":
-        return Object(_.s)("getCurrentFormatDateTime");
+        return _.s("getCurrentFormatDateTime");
       case "year":
-        return Object(_.s)("getCurrentYear");
+        return _.s("getCurrentYear");
       case "month":
-        return Object(_.s)("getCurrentMonth");
+        return _.s("getCurrentMonth");
       case "date":
-        return Object(_.s)("getCurrentDate");
+        return _.s("getCurrentDate");
       case "dayName":
-        return Object(_.s)("getCurrentDayName");
+        return _.s("getCurrentDayName");
       case "day":
-        return Object(_.s)("getCurrentDay");
+        return _.s("getCurrentDay");
       case "hour":
-        return Object(_.s)("getCurrentHour");
+        return _.s("getCurrentHour");
       case "minute":
-        return Object(_.s)("getCurrentMinute");
+        return _.s("getCurrentMinute");
       case "second":
-        return Object(_.s)("getCurrentSecond");
+        return _.s("getCurrentSecond");
       default:
         return "";
     }
@@ -2578,20 +2578,20 @@ function ce(e) {
   e.insertBlockSnippetGenerator("date_check_date_is_equal", function (t, n) {
     var r = e.valueToCode(t, n, "DATE_A", e.ORDER_FUNCTION_CALL);
     var o = e.valueToCode(t, n, "DATE_B", e.ORDER_FUNCTION_CALL);
-    return r && o ? Object(_.s)("checkDateIsEqual", [r, o]) : "";
+    return r && o ? _.s("checkDateIsEqual", [r, o]) : "";
   });
   e.insertBlockSnippetGenerator("date_get_date_minus_operation", function (t, n) {
     var r = e.valueToCode(t, n, "DATE_A", e.ORDER_FUNCTION_CALL);
     var o = e.valueToCode(t, n, "DATE_B", e.ORDER_FUNCTION_CALL);
     var i = t.blocks[n];
     var a = e.getFieldValue(i, "OPERATION_TYPE");
-    return a && r && o ? Object(_.s)("getDateOperation", [r, o, Object(_.o)(a)]) : "";
+    return a && r && o ? _.s("getDateOperation", [r, o, _.o(a)]) : "";
   });
 }
-var le = require("../36/index");
-var ue = require("../121/index");
-var de = require("../15");
-var pe = require("../36/85");
+import le = require("../../../../../src/shared/widget/custom/load");
+import ue = require("../121/index");
+import de = require("../15");
+import pe = require("../36/85");
 function fe(e, t) {
   var n;
   if (Array.isArray(e)) {
@@ -2609,7 +2609,7 @@ function fe(e, t) {
       o = "<shadow type=\"widget_boolean\">\n      <field name=\"BOOL\">".concat(t ? "TRUE" : "FALSE", "</field>\n    </shadow>");
       break;
     case "color":
-      o = "<shadow type=\"color_picker\">\n      <field name=\"COLOR_PALETTE\">".concat(Object(de.i)(t) ? "#ffffff" : t, "</field>\n    </shadow>");
+      o = "<shadow type=\"color_picker\">\n      <field name=\"COLOR_PALETTE\">".concat(de.i(t) ? "#ffffff" : t, "</field>\n    </shadow>");
       break;
     case "image":
       o = "<shadow type=\"image_file_list_dropdown\">\n        <field name=\"IMAGE_FILE_ID\">".concat(g.h, "</field>\n      </shadow>");
@@ -2638,8 +2638,8 @@ function fe(e, t) {
 }
 function he(e, t) {
   return t.map(function (t) {
-    var n = Object(pe.a)(e, t.label);
-    if (void 0 === n) {
+    var n = pe.a(e, t.label);
+    if (undefined === n) {
       n = t.label;
     }
     return t.image ? [n, String(t.value), {
@@ -2651,8 +2651,8 @@ function he(e, t) {
     }] : [n, String(t.value)];
   });
 }
-var me = require("./541");
-var ge = require("./652");
+import me = require("./541");
+import ge = require("./652");
 function _e(e, t) {
   !function (e, t) {
     var n = {
@@ -2660,26 +2660,26 @@ function _e(e, t) {
       widgetType: "",
       updateShape_: function () {
         var e = this;
-        var n = Object(le.h)(this.widgetType, this.event);
+        var n = le.h(this.widgetType, this.event);
         if (!n) {
           console.error("WIDGET_EVENT_MUTATOR getWidgetEvent error", this.widgetType, this.event);
-          this.append_statement_input("DO", void 0);
-          this.set_disabled(!0);
+          this.append_statement_input("DO", undefined);
+          this.set_disabled(true);
           this.set_field_value(t.Msg.INVALID_BLOCK, "EVENT");
           return void this.set_colour("#abafb6");
         }
-        this.set_disabled(!1);
+        this.set_disabled(false);
         var r = n.label;
         var o = n.params;
         var i = n.subTypes;
         var a = n.tooltip;
         var s = n.blockOptions;
         var c = n.key;
-        var l = Object(pe.a)(this.widgetType, r);
+        var l = pe.a(this.widgetType, r);
         if (this.isAnyWidget) {
           var u;
-          var d = "任意" + Object(le.k)(this.widgetType);
-          if (!(null === (u = this.get_input("WIDGET_ID_CONTAINER")) || void 0 === u)) {
+          var d = "任意" + le.k(this.widgetType);
+          if (!(null === (u = this.get_input("WIDGET_ID_CONTAINER")) || undefined === u)) {
             u.append_field(d);
           }
         } else {
@@ -2687,28 +2687,28 @@ function _e(e, t) {
           var f = new ue.a({
             type: "field_coco_dropdown",
             name: "WIDGET_ID",
-            custom: !0,
+            custom: true,
             options: function () {
-              return Object(O.c)().getWidgetListByType(e.widgetType);
+              return O.c().getWidgetListByType(e.widgetType);
             }
           });
-          if (!(null === (p = this.get_input("WIDGET_ID_CONTAINER")) || void 0 === p)) {
+          if (!(null === (p = this.get_input("WIDGET_ID_CONTAINER")) || undefined === p)) {
             p.append_field(f, "WIDGET_ID");
           }
         }
         if (a) {
-          var h = Object(pe.a)(this.widgetType, a);
+          var h = pe.a(this.widgetType, a);
           this.set_tooltip(h);
         }
-        if (null === s || void 0 === s ? void 0 : s.icon) {
+        if (null === s || undefined === s ? undefined : s.icon) {
           var m = this.inputList[0].fieldRow[0];
           if (!m || "FieldIcon" !== m.field_type) {
             return;
           }
           m.set_value(t.utils.replace_message_references(s.icon));
         }
-        var g = Object(le.i)(this.widgetType, c);
-        this.append_statement_input("DO", void 0, g);
+        var g = le.i(this.widgetType, c);
+        this.append_statement_input("DO", undefined, g);
         if (i) {
           this.set_field_value(l, "EVENT");
           i.forEach(function (t) {
@@ -2718,7 +2718,7 @@ function _e(e, t) {
             var i = new ue.a({
               type: "field_coco_dropdown",
               name: o,
-              custom: !0,
+              custom: true,
               options: he(e.widgetType, r)
             });
             e.append_dummy_input("", "DO").append_field(i, o);
@@ -2731,12 +2731,12 @@ function _e(e, t) {
           var r = t.label;
           var o = t.dropdown;
           var i = "PARAM_".concat(n);
-          var a = Object(pe.a)(e.widgetType, r);
+          var a = pe.a(e.widgetType, r);
           if (o) {
             var s = new ue.a({
               type: "field_coco_dropdown",
               name: i,
-              custom: !0,
+              custom: true,
               options: he(e.widgetType, o)
             });
             var c = e.append_dummy_input("", "DO");
@@ -2778,17 +2778,17 @@ function _e(e, t) {
         this.param = e.getAttribute("param") || this.param;
         this.event = e.getAttribute("event") || this.event;
         this.widgetType = e.getAttribute("widget_type") || this.widgetType;
-        var n = Object(le.h)(this.widgetType, this.event);
+        var n = le.h(this.widgetType, this.event);
         if (this.widgetType || this.event) {
           if (!n) {
             console.error("WIDGET_EVENT_PARAM_MUTATOR getWidgetEvent error", this.widgetType, this.event, this.param);
-            this.set_output(!0);
-            return void this.set_disabled(!0);
+            this.set_output(true);
+            return void this.set_disabled(true);
           }
-          this.set_disabled(!1);
-          var r = Object(le.i)(this.widgetType, this.event);
+          this.set_disabled(false);
+          var r = le.i(this.widgetType, this.event);
           if (this.param === le.a) {
-            this.set_output(!0, "string", r);
+            this.set_output(true, "string", r);
           } else {
             var o = n.params.find(function (e) {
               return e.key === t.param;
@@ -2797,11 +2797,11 @@ function _e(e, t) {
               return void console.error("WIDGET_EVENT_PARAM_MUTATOR get param error", this.widgetType, this.event, this.param);
             }
             var i = o.valueType;
-            var a = Object(le.g)(i);
-            this.set_output(!0, a, r);
+            var a = le.g(i);
+            this.set_output(true, a, r);
           }
         } else {
-          this.set_output(!0);
+          this.set_output(true);
         }
       },
       mutationToDom: function () {
@@ -2817,7 +2817,7 @@ function _e(e, t) {
     t.define_blocks_with_json_array([{
       type: "widget_event",
       message0: "%{BKY_WIDGET_EVENT_MSG}",
-      args0: [Object(_.e)("%{BKY_BLOCK_TAB_ICON}", !0), {
+      args0: [_.e("%{BKY_BLOCK_TAB_ICON}", true), {
         type: "input_dummy",
         name: "WIDGET_ID_CONTAINER"
       }, {
@@ -2826,7 +2826,7 @@ function _e(e, t) {
         text: ""
       }],
       colour: "%{BKY_EVENTS_HUE}",
-      inputsInline: !0,
+      inputsInline: true,
       mutator: "widget_event_mutator"
     }]);
     t.define_blocks_with_json_array([{
@@ -2837,7 +2837,7 @@ function _e(e, t) {
         name: "PARAM_NAME",
         text: ""
       }],
-      inputsInline: !0,
+      inputsInline: true,
       colour: "%{BKY_PARAM_BLOCK_COLOR}",
       mutator: "widget_event_param_mutator",
       extensions: ["param_block"]
@@ -2850,28 +2850,28 @@ function _e(e, t) {
       updateShape_: function () {
         var e;
         var n = this;
-        var r = Object(le.l)(this.widgetType, this.property);
+        var r = le.l(this.widgetType, this.property);
         if (!r) {
           console.error("WIDGET_GET_MUTATOR getWidgetProperty error", this.widgetType, this.property);
-          this.set_disabled(!0);
-          this.set_output(!0);
+          this.set_disabled(true);
+          this.set_output(true);
           this.set_field_value(t.Msg.INVALID_BLOCK, "PROPERTY");
           return void this.set_colour("#abafb6");
         }
-        this.set_disabled(!1);
+        this.set_disabled(false);
         var o;
         var i;
         var a = r.label;
         var s = r.valueType;
         var c = r.tooltip;
         var l = r.blockOptions;
-        var u = void 0 === l ? {} : l;
-        var d = Object(pe.a)(this.widgetType, a);
+        var u = undefined === l ? {} : l;
+        var d = pe.a(this.widgetType, a);
         this.set_field_value(t.Msg.WIDGET_OF, "PROPERTY");
         if (this.isAnyWidget) {
           var p;
-          var f = Object(le.k)(this.widgetType);
-          if (!(null === (p = this.get_input("WIDGET_ID_CONTAINER")) || void 0 === p)) {
+          var f = le.k(this.widgetType);
+          if (!(null === (p = this.get_input("WIDGET_ID_CONTAINER")) || undefined === p)) {
             p.append_field(f);
           }
           this.append_shadow_input("WIDGET_ID", "<empty type=\"widget_any_id\"></empty>", "PROPERTY");
@@ -2880,21 +2880,21 @@ function _e(e, t) {
           var m = new ue.a({
             type: "field_coco_dropdown",
             name: "WIDGET_ID",
-            custom: !0,
+            custom: true,
             options: function () {
-              return Object(O.c)().getWidgetListByType(n.widgetType);
+              return O.c().getWidgetListByType(n.widgetType);
             }
           });
-          if (!(null === (h = this.get_input("WIDGET_ID_CONTAINER")) || void 0 === h)) {
+          if (!(null === (h = this.get_input("WIDGET_ID_CONTAINER")) || undefined === h)) {
             h.append_field(m, "WIDGET_ID");
           }
         }
-        if ("object" === typeof u.getter && (null === (i = o = u.getter.keys) || void 0 === i ? void 0 : i.length)) {
+        if ("object" === typeof u.getter && (null === (i = o = u.getter.keys) || undefined === i ? undefined : i.length)) {
           var g = [];
           o.forEach(function (e) {
-            var t = Object(le.l)(n.widgetType, e);
+            var t = le.l(n.widgetType, e);
             if (t) {
-              var r = Object(pe.a)(n.widgetType, t.label);
+              var r = pe.a(n.widgetType, t.label);
               g.push([r, e]);
             } else {
               console.error("WIDGET_GET_MUTATOR getWidgetProperty error", n.widgetType, e);
@@ -2903,7 +2903,7 @@ function _e(e, t) {
           this.append_dummy_input().append_field(new ue.a({
             type: "field_coco_dropdown",
             name: "PROPERTY_KEY",
-            custom: !0,
+            custom: true,
             options: function () {
               return g;
             }
@@ -2917,7 +2917,7 @@ function _e(e, t) {
             this.append_dummy_input().append_field(new ue.a({
               type: "field_coco_dropdown",
               name: "POSITION_TYPE",
-              custom: !0,
+              custom: true,
               options: function () {
                 return [[t.Msg.POSITION_X, "positionX"], [t.Msg.POSITION_Y, "positionY"]];
               }
@@ -2933,14 +2933,14 @@ function _e(e, t) {
             this.set_field_value(t.Msg.WIDGET_DISABLED, "PROPERTY");
             break;
           default:
-            if (!(null === (e = o) || void 0 === e ? void 0 : e.length)) {
+            if (!(null === (e = o) || undefined === e ? undefined : e.length)) {
               this.set_field_value("".concat("boolean" === s ? "" : t.Msg.WIDGET_OF, " ").concat(d), "PROPERTY");
             }
         }
-        var _ = Object(le.g)(s);
-        this.set_output(!0, _);
+        var _ = le.g(s);
+        this.set_output(true, _);
         if (c) {
-          var v = Object(pe.a)(this.widgetType, c);
+          var v = pe.a(this.widgetType, c);
           this.set_tooltip(v);
         }
       },
@@ -2972,7 +2972,7 @@ function _e(e, t) {
       }],
       output: ["String"],
       colour: "%{BKY_APPEARANCE_HUE}",
-      inputsInline: !0,
+      inputsInline: true,
       mutator: "widget_get_mutator"
     }]);
   })(0, t);
@@ -2983,14 +2983,14 @@ function _e(e, t) {
       updateShape_: function () {
         var e;
         var n = this;
-        var r = Object(le.l)(this.widgetType, this.property);
+        var r = le.l(this.widgetType, this.property);
         if (!r) {
           console.error("WIDGET_SET_MUTATOR getWidgetProperty error", this.widgetType, this.property);
-          this.set_disabled(!0);
+          this.set_disabled(true);
           this.set_field_value(t.Msg.INVALID_BLOCK, "PROPERTY");
           return void this.set_colour("#abafb6");
         }
-        this.set_disabled(!1);
+        this.set_disabled(false);
         var o;
         var i;
         var a;
@@ -3004,28 +3004,28 @@ function _e(e, t) {
         var h = r.dropdown;
         var g = r.validators;
         var _ = r.blockOptions;
-        var v = void 0 === _ ? {} : _;
-        var b = Object(pe.a)(this.widgetType, d);
-        var y = !1;
+        var v = undefined === _ ? {} : _;
+        var b = pe.a(this.widgetType, d);
+        var y = false;
         if (g && "number" === l) {
           var E = g;
           var w = E.isInteger;
           y = !!w;
-          o = Object(le.p)(E);
-          i = Object(le.n)(E);
+          o = le.p(E);
+          i = le.n(E);
         }
         if (!("__position" !== r.key && "__size" !== r.key)) {
-          y = !0;
+          y = true;
         }
         if ("__visible" !== r.key && "__disabled" !== r.key) {
-          if (!(null === (a = this.get_input("WIDGET_ID_CONTAINER")) || void 0 === a)) {
+          if (!(null === (a = this.get_input("WIDGET_ID_CONTAINER")) || undefined === a)) {
             a.insert_field_at(0, t.Msg.WIDGET_SET);
           }
         }
         if (this.isAnyWidget) {
           var C;
-          var T = Object(le.k)(this.widgetType);
-          if (!(null === (C = this.get_input("WIDGET_ID_CONTAINER")) || void 0 === C)) {
+          var T = le.k(this.widgetType);
+          if (!(null === (C = this.get_input("WIDGET_ID_CONTAINER")) || undefined === C)) {
             C.append_field(T);
           }
           this.append_shadow_input("WIDGET_ID", "<empty type=\"widget_any_id\"></empty>", "PROPERTY");
@@ -3034,30 +3034,30 @@ function _e(e, t) {
           var I = new ue.a({
             type: "field_coco_dropdown",
             name: "WIDGET_ID",
-            custom: !0,
+            custom: true,
             options: function () {
-              return Object(O.c)().getWidgetListByType(n.widgetType);
+              return O.c().getWidgetListByType(n.widgetType);
             }
           });
-          if (!(null === (S = this.get_input("WIDGET_ID_CONTAINER")) || void 0 === S)) {
+          if (!(null === (S = this.get_input("WIDGET_ID_CONTAINER")) || undefined === S)) {
             S.append_field(I, "WIDGET_ID");
           }
         }
-        if ("object" === typeof v.setter && (null === (c = s = v.setter.keys) || void 0 === c ? void 0 : c.length)) {
+        if ("object" === typeof v.setter && (null === (c = s = v.setter.keys) || undefined === c ? undefined : c.length)) {
           var A = [];
           s.forEach(function (e, t) {
-            var r = Object(le.l)(n.widgetType, e);
+            var r = le.l(n.widgetType, e);
             if (r) {
               if (0 === t && "number" === r.valueType) {
                 if (r.validators) {
-                  i = Object(le.n)(r.validators);
-                  o = Object(le.p)(r.validators);
+                  i = le.n(r.validators);
+                  o = le.p(r.validators);
                 }
-                if (!(void 0 !== o || "__width" !== r.key && "__height" !== r.key)) {
+                if (!(undefined !== o || "__width" !== r.key && "__height" !== r.key)) {
                   o = 0;
                 }
               }
-              var a = Object(pe.a)(n.widgetType, r.label);
+              var a = pe.a(n.widgetType, r.label);
               A.push([a, e]);
             } else {
               console.error("WIDGET_GET_MUTATOR getWidgetProperty error", n.widgetType, e);
@@ -3067,12 +3067,12 @@ function _e(e, t) {
           this.append_dummy_input().append_field(new ue.a({
             type: "field_coco_dropdown",
             name: "PROPERTY_KEY",
-            custom: !0,
+            custom: true,
             options: function () {
               return A;
             },
             optOnchange: function (e) {
-              var t = Object(le.l)(n.widgetType, e);
+              var t = le.l(n.widgetType, e);
               if (t) {
                 var r;
                 if ("color" === t.valueType) {
@@ -3085,13 +3085,13 @@ function _e(e, t) {
                   a.set_value(String(t.defaultValue));
                   if ("number" === t.valueType) {
                     if (t.validators) {
-                      o = Object(le.p)(t.validators);
-                      i = Object(le.n)(t.validators);
+                      o = le.p(t.validators);
+                      i = le.n(t.validators);
                     }
-                    if (!(void 0 !== o || "__width" !== t.key && "__height" !== t.key)) {
+                    if (!(undefined !== o || "__width" !== t.key && "__height" !== t.key)) {
                       o = 0;
                     }
-                    a.set_constraints(o, i, y ? 1 : void 0);
+                    a.set_constraints(o, i, y ? 1 : undefined);
                   }
                 }
               }
@@ -3106,7 +3106,7 @@ function _e(e, t) {
             this.append_dummy_input().append_field(new ue.a({
               type: "field_coco_dropdown",
               name: "POSITION_TYPE",
-              custom: !0,
+              custom: true,
               options: function () {
                 return [[t.Msg.POSITION_X, "positionX"], [t.Msg.POSITION_Y, "positionY"]];
               }
@@ -3120,7 +3120,7 @@ function _e(e, t) {
             this.append_dummy_input("", 0).append_field(new ue.a({
               type: "field_coco_dropdown",
               name: "VALUE",
-              custom: !0,
+              custom: true,
               options: function () {
                 return [[t.Msg.SHOW, "show"], [t.Msg.HIDE, "hide"]];
               }
@@ -3135,7 +3135,7 @@ function _e(e, t) {
             this.append_dummy_input("", 0).append_field(new ue.a({
               type: "field_coco_dropdown",
               name: "VALUE",
-              custom: !0,
+              custom: true,
               options: function () {
                 return [[t.Msg.ABLE, "able"], [t.Msg.DISABLED, "disabled"]];
               }
@@ -3147,17 +3147,17 @@ function _e(e, t) {
             });
             break;
           default:
-            if (!(null === (e = s) || void 0 === e ? void 0 : e.length)) {
+            if (!(null === (e = s) || undefined === e ? undefined : e.length)) {
               this.set_field_value("".concat(t.Msg.WIDGET_OF, " ").concat(b, " ").concat(t.Msg.WIDGET_SET_TO), "PROPERTY");
             }
         }
-        var N = Object(le.f)(l, f);
+        var N = le.f(l, f);
         if ("__visible" !== r.key && "__disabled" !== r.key) {
           if (h) {
             var R = new ue.a({
               type: "field_coco_dropdown",
               name: "VALUE",
-              custom: !0,
+              custom: true,
               options: he(this.widgetType, h)
             });
             R.set_value(String(u));
@@ -3165,7 +3165,7 @@ function _e(e, t) {
           } else {
             var k = "";
             if ("string" === l) {
-              k = Object(pe.a)(this.widgetType, String(u));
+              k = pe.a(this.widgetType, String(u));
             }
             var x = fe(l, k || u);
             this.append_shadow_input("VALUE", x).set_check(N);
@@ -3173,7 +3173,7 @@ function _e(e, t) {
         }
         if ("number" === l && (g || "__position" === r.key || "__size" === r.key)) {
           var D = this.get_shadow_field("VALUE");
-          D.set_constraints(o, i, y ? 1 : void 0);
+          D.set_constraints(o, i, y ? 1 : undefined);
           if ("__opacity" === r.key) {
             D.set_controller_option({
               type: m.I.ControllerType.SLIDER,
@@ -3183,7 +3183,7 @@ function _e(e, t) {
           }
         }
         if (p) {
-          var M = Object(pe.a)(this.widgetType, p);
+          var M = pe.a(this.widgetType, p);
           this.set_tooltip(M);
         }
       },
@@ -3213,9 +3213,9 @@ function _e(e, t) {
         name: "PROPERTY",
         text: "property"
       }],
-      previousStatement: !0,
-      nextStatement: !0,
-      inputsInline: !0,
+      previousStatement: true,
+      nextStatement: true,
+      inputsInline: true,
       colour: "%{BKY_APPEARANCE_HUE}",
       mutator: "widget_set_mutator"
     }]);
@@ -3224,21 +3224,21 @@ function _e(e, t) {
     var n = {
       method: "method",
       widgetType: "",
-      isAnyWidget: !1,
+      isAnyWidget: false,
       updateShape_: function () {
         var e = this;
-        var n = Object(le.j)(this.widgetType, this.method);
+        var n = le.j(this.widgetType, this.method);
         if (!n) {
           console.error("WIDGET_METHOD_MUTATOR getWidgetMethod error", this.widgetType, this.method);
-          this.set_disabled(!0);
+          this.set_disabled(true);
           this.append_dummy_input().append_field(t.Msg.INVALID_BLOCK, "METHOD");
           return void this.set_colour("#abafb6");
         }
-        this.set_disabled(!1);
+        this.set_disabled(false);
         var r = this.get_input("WIDGET_ID_CONTAINER");
         if (this.isAnyWidget) {
-          var o = Object(le.k)(this.widgetType);
-          if (!(null === r || void 0 === r)) {
+          var o = le.k(this.widgetType);
+          if (!(null === r || undefined === r)) {
             r.append_field(o);
           }
           this.append_shadow_input("WIDGET_ID", "<empty type=\"widget_any_id\"></empty>");
@@ -3246,7 +3246,7 @@ function _e(e, t) {
             var i = new ue.a({
               type: "field_coco_dropdown",
               name: "DISPLAY",
-              custom: !0,
+              custom: true,
               options: function () {
                 return [[t.Msg.SHOW, "show"], [t.Msg.HIDE, "hide"]];
               }
@@ -3257,7 +3257,7 @@ function _e(e, t) {
             var a = new ue.a({
               type: "field_coco_dropdown",
               name: "DISABLED",
-              custom: !0,
+              custom: true,
               options: function () {
                 return [[t.Msg.ABLE, "able"], [t.Msg.DISABLED, "disabled"]];
               }
@@ -3268,12 +3268,12 @@ function _e(e, t) {
           var s = new ue.a({
             type: "field_coco_dropdown",
             name: "WIDGET_ID",
-            custom: !0,
+            custom: true,
             options: function () {
-              return Object(O.c)().getWidgetListByType(e.widgetType);
+              return O.c().getWidgetListByType(e.widgetType);
             }
           });
-          if (!(null === r || void 0 === r)) {
+          if (!(null === r || undefined === r)) {
             r.append_field(s, "WIDGET_ID");
           }
         }
@@ -3282,16 +3282,16 @@ function _e(e, t) {
         var u = n.params;
         var d = n.tooltip;
         var p = n.blockOptions;
-        var f = void 0 === p ? {} : p;
+        var f = undefined === p ? {} : p;
         var h = n.valueType;
-        if (!1 !== f.callMethodLabel) {
+        if (false !== f.callMethodLabel) {
           var g;
-          var _ = (null === (g = f.callMethodLabel) || void 0 === g ? void 0 : g.toString()) || "";
-          var v = Object(pe.a)(this.widgetType, _) || t.Msg.WIDGET_METHOD_CALL_MSG;
+          var _ = (null === (g = f.callMethodLabel) || undefined === g ? undefined : g.toString()) || "";
+          var v = pe.a(this.widgetType, _) || t.Msg.WIDGET_METHOD_CALL_MSG;
           var b = new ge.FieldLabel({
             text: v
           });
-          if (!(null === r || void 0 === r)) {
+          if (!(null === r || undefined === r)) {
             r.insert_field_at(0, b);
           }
         }
@@ -3305,20 +3305,20 @@ function _e(e, t) {
           this.set_colour(f.color);
         }
         if (h) {
-          this.set_next_statement(!1);
-          this.set_previous_statement(!1);
-          var E = Object(le.g)(h);
-          this.set_output(!0, E);
+          this.set_next_statement(false);
+          this.set_previous_statement(false);
+          var E = le.g(h);
+          this.set_output(true, E);
         }
-        var w = Object(pe.a)(this.widgetType, l);
+        var w = pe.a(this.widgetType, l);
         if (w) {
           this.append_dummy_input().append_field(w, "METHOD");
         }
         if (d) {
-          var C = Object(pe.a)(this.widgetType, d);
+          var C = pe.a(this.widgetType, d);
           this.set_tooltip(C);
         }
-        if (!1 === f.inputsInline) {
+        if (false === f.inputsInline) {
           this.set_inputs_inline(f.inputsInline);
         }
         u.forEach(function (t) {
@@ -3330,13 +3330,13 @@ function _e(e, t) {
           var s = t.key;
           var c = t.dropdown;
           var l = t.controller;
-          var u = Object(pe.a)(e.widgetType, n);
+          var u = pe.a(e.widgetType, n);
           var d = "PARAM_".concat(s);
           if (c) {
             var p = new ue.a({
               type: "field_coco_dropdown",
               name: d,
-              custom: !0,
+              custom: true,
               options: he(e.widgetType, c)
             });
             var f = e.append_dummy_input();
@@ -3347,18 +3347,18 @@ function _e(e, t) {
           } else {
             var h = fe(o, a);
             var g = e.append_shadow_input(d, h);
-            var _ = Object(le.f)(o, i);
+            var _ = le.f(o, i);
             g.set_check(_);
             if (u) {
               g.insert_field_at(0, u, "".concat(d, "_LABEL"));
             }
             if ("number" === o && l) {
               var v = e.get_shadow_field(d);
-              if (!(null === v || void 0 === v)) {
+              if (!(null === v || undefined === v)) {
                 v.set_constraints(l.min, l.max, 1);
               }
               if (l.leftText && l.rightText) {
-                if (!(null === v || void 0 === v)) {
+                if (!(null === v || undefined === v)) {
                   v.set_controller_option({
                     type: m.I.ControllerType.SLIDER,
                     left_text: l.leftText,
@@ -3369,7 +3369,7 @@ function _e(e, t) {
             }
           }
           if (r) {
-            var b = Object(pe.a)(e.widgetType, r);
+            var b = pe.a(e.widgetType, r);
             e.append_dummy_input("").append_field(b, "".concat(d, "_LABEL_AFTER"));
           }
         });
@@ -3396,9 +3396,9 @@ function _e(e, t) {
         type: "input_dummy",
         name: "WIDGET_ID_CONTAINER"
       }],
-      previousStatement: !0,
-      nextStatement: !0,
-      inputsInline: !0,
+      previousStatement: true,
+      nextStatement: true,
+      inputsInline: true,
       colour: "%{BKY_VARIABLES_HUE}",
       mutator: "widget_method_mutator"
     }]);
@@ -3408,16 +3408,16 @@ function _e(e, t) {
     widgetType: "",
     updateShape_: function () {
       var e = this;
-      var t = Object(le.l)(this.widgetType, this.property);
+      var t = le.l(this.widgetType, this.property);
       if (t) {
         var n = t.defaultValue;
         var r = t.dropdown;
         if (r) {
-          this.set_shadow(!0);
+          this.set_shadow(true);
           var o = new ue.a({
             type: "field_coco_dropdown",
             name: "VALUE",
-            custom: !0,
+            custom: true,
             options: function () {
               return he(e.widgetType, r);
             }
@@ -3463,7 +3463,7 @@ function _e(e, t) {
     args0: [{
       type: "field_coco_dropdown",
       name: "BOOL",
-      custom: !0,
+      custom: true,
       options: [["%{BKY_WIDGET_BOOLEAN_TRUE}", "TRUE"], ["%{BKY_WIDGET_BOOLEAN_FALSE}", "FALSE"]]
     }],
     output: "Boolean",
@@ -3497,20 +3497,20 @@ function ve(e) {
       return "";
     }
     var u = e.getFieldValue(o, "WIDGET_ID") || "";
-    u = Object(_.o)(u);
+    u = _.o(u);
     if (l) {
       u = e.valueToCode(t, n, "WIDGET_ID", e.ORDER_FUNCTION_CALL);
     }
-    var d = Object(le.l)(c, s);
+    var d = le.l(c, s);
     if (!d) {
       return "";
     }
     var p;
     var f = d.blockOptions;
-    var h = void 0 === f ? {} : f;
-    if ("object" === typeof h.getter && (null === (p = h.getter.keys) || void 0 === p ? void 0 : p.length)) {
+    var h = undefined === f ? {} : f;
+    if ("object" === typeof h.getter && (null === (p = h.getter.keys) || undefined === p ? undefined : p.length)) {
       s = e.getFieldValue(o, "PROPERTY_KEY") || "";
-      var g = Object(le.l)(c, s);
+      var g = le.l(c, s);
       if (!g) {
         return "";
       }
@@ -3518,23 +3518,23 @@ function ve(e) {
     }
     var v = e.getFieldValue(o, "POSITION_TYPE") || "";
     if ("__opacity" === s) {
-      return Object(_.s)("getWidgetOpacity", [u]);
+      return _.s("getWidgetOpacity", [u]);
     }
     if ("__visible" === s) {
-      return Object(_.s)("getWidgetVisible", [u]);
+      return _.s("getWidgetVisible", [u]);
     }
     if ("__disabled" === s) {
-      return Object(_.s)("getWidgetDisabled", [u]);
+      return _.s("getWidgetDisabled", [u]);
     }
     if ("__width" === s || "__height" === s) {
       var b = "__width" === s ? "getWidgetWidth" : "getWidgetHeight";
-      return Object(_.s)(b, [u]);
+      return _.s(b, [u]);
     }
     if (v) {
       var y = "positionX" === v ? "getWidgetPositionX" : "getWidgetPositionY";
-      return Object(_.s)(y, [u]);
+      return _.s(y, [u]);
     }
-    return "string" === typeof (null === (r = h.getter) || void 0 === r ? void 0 : r.func) ? Object(_.s)(h.getter.func, [u, Object(_.o)(s)]) : Object(_.s)("getProperty", [u, Object(_.o)(s)], Object(le.q)(c));
+    return "string" === typeof (null === (r = h.getter) || undefined === r ? undefined : r.func) ? _.s(h.getter.func, [u, _.o(s)]) : _.s("getProperty", [u, _.o(s)], le.q(c));
   });
   e.insertBlockSnippetGenerator("widget_set", function (t, n) {
     var r;
@@ -3548,20 +3548,20 @@ function ve(e) {
       return "";
     }
     var u = e.getFieldValue(o, "WIDGET_ID") || "";
-    u = Object(_.o)(u);
+    u = _.o(u);
     if (l) {
       u = e.valueToCode(t, n, "WIDGET_ID", e.ORDER_FUNCTION_CALL);
     }
-    var d = Object(le.l)(c, s);
+    var d = le.l(c, s);
     if (!d) {
       return "";
     }
     var p;
     var f = d.blockOptions;
-    var h = void 0 === f ? {} : f;
-    if ("object" === typeof h.setter && (null === (p = h.setter.keys) || void 0 === p ? void 0 : p.length)) {
+    var h = undefined === f ? {} : f;
+    if ("object" === typeof h.setter && (null === (p = h.setter.keys) || undefined === p ? undefined : p.length)) {
       s = e.getFieldValue(o, "PROPERTY_KEY") || "";
-      var g = Object(le.l)(c, s);
+      var g = le.l(c, s);
       if (!g) {
         return "";
       }
@@ -3569,29 +3569,29 @@ function ve(e) {
     }
     var v = e.valueToCode(t, n, "VALUE", e.ORDER_FUNCTION_CALL);
     if (d.dropdown) {
-      v = Object(_.o)(e.getFieldValue(o, "VALUE") || "");
+      v = _.o(e.getFieldValue(o, "VALUE") || "");
     }
     var b = e.getFieldValue(o, "POSITION_TYPE") || "";
     if ("__opacity" === s) {
-      return Object(_.l)(Object(_.n)("setWidgetOpacity", [u, v]), o, e);
+      return _.l(_.n("setWidgetOpacity", [u, v]), o, e);
     }
     if ("__visible" === s) {
       var y = "show" === e.getFieldValue(o, "VALUE");
-      return Object(_.l)(Object(_.n)("setWidgetVisible", [u, y]), o, e);
+      return _.l(_.n("setWidgetVisible", [u, y]), o, e);
     }
     if ("__disabled" === s) {
       var E = "disabled" === e.getFieldValue(o, "VALUE");
-      return Object(_.l)(Object(_.n)("setWidgetAttribute", [u, Object(_.o)("disabled"), E]), o, e);
+      return _.l(_.n("setWidgetAttribute", [u, _.o("disabled"), E]), o, e);
     }
     if ("__width" === s || "__height" === s) {
       var O = "__width" === s ? "setWidgetWidth" : "setWidgetHeight";
-      return Object(_.l)(Object(_.n)(O, [u, v]), o, e);
+      return _.l(_.n(O, [u, v]), o, e);
     }
     if (b) {
       var w = "positionX" === b ? "setWidgetPositionX" : "setWidgetPositionY";
-      return Object(_.l)(Object(_.n)(w, [u, v]), o, e);
+      return _.l(_.n(w, [u, v]), o, e);
     }
-    return "string" === typeof (null === (r = h.setter) || void 0 === r ? void 0 : r.func) ? Object(_.l)(Object(_.n)(h.setter.func, [u, v]), o, e) : Object(_.l)(Object(_.n)("setProperty", [u, Object(_.o)(s), v], void 0, void 0, Object(le.q)(c)), o, e);
+    return "string" === typeof (null === (r = h.setter) || undefined === r ? undefined : r.func) ? _.l(_.n(h.setter.func, [u, v]), o, e) : _.l(_.n("setProperty", [u, _.o(s), v], undefined, undefined, le.q(c)), o, e);
   });
   e.insertBlockSnippetGenerator("widget_event", function (t, n) {
     var r = t.blocks[n];
@@ -3605,14 +3605,14 @@ function ve(e) {
     if (!s || !l) {
       return "";
     }
-    var d = Object(le.h)(l, s);
+    var d = le.h(l, s);
     if (!d) {
       return "";
     }
     var p = d.params;
     var f = d.subTypes;
     var h = [];
-    if (!(null === f || void 0 === f)) {
+    if (!(null === f || undefined === f)) {
       f.forEach(function (t) {
         s += e.getFieldValue(r, "PARAM_".concat(t.key)) || "";
       });
@@ -3624,7 +3624,7 @@ function ve(e) {
       h.push("".concat(_.a).concat(le.a));
     }
     var g = e.statementToCode(t, n, "DO");
-    return g ? Object(_.n)("onWidgetEvent", [Object(_.o)(l), Object(_.o)(s), u ? Object(_.o)(c) : Object(_.o)(o)], g, h, Object(le.q)(l)) : "";
+    return g ? _.n("onWidgetEvent", [_.o(l), _.o(s), u ? _.o(c) : _.o(o)], g, h, le.q(l)) : "";
   });
   e.insertBlockSnippetGenerator("widget_event_param", function (e, t) {
     var n = e.blocks[t].mutation;
@@ -3641,7 +3641,7 @@ function ve(e) {
     if (!a || !s) {
       return "";
     }
-    var l = Object(le.j)(s, a);
+    var l = le.j(s, a);
     if (!l) {
       return "";
     }
@@ -3651,9 +3651,9 @@ function ve(e) {
       d = e.valueToCode(t, n, "WIDGET_ID", e.ORDER_FUNCTION_CALL);
       u.push(d);
     } else {
-      u.push(Object(_.o)(d));
+      u.push(_.o(d));
     }
-    u.push(Object(_.o)(a));
+    u.push(_.o(a));
     var p = l.params;
     var f = l.valueType;
     var h = [];
@@ -3668,25 +3668,25 @@ function ve(e) {
         console.error("widget_method valueToCode error", l);
       }
       if (a) {
-        c = Object(_.o)(e.getFieldValue(r, s) || "");
+        c = _.o(e.getFieldValue(r, s) || "");
       }
       u.push(c);
       h.push(c);
     });
     if ("__setVisible" === l.key) {
       var g = "show" === e.getFieldValue(r, "DISPLAY");
-      return Object(_.l)(Object(_.n)("setWidgetVisible", [d, g]), r, e);
+      return _.l(_.n("setWidgetVisible", [d, g]), r, e);
     }
     if ("__setDisabled" === l.key) {
       var v = "disabled" === e.getFieldValue(r, "DISABLED");
-      return Object(_.l)(Object(_.n)("setWidgetAttribute", [d, Object(_.o)("disabled"), v]), r, e);
+      return _.l(_.n("setWidgetAttribute", [d, _.o("disabled"), v]), r, e);
     }
-    return f ? Object(_.l)(Object(_.r)("callMethod", u), r, e, !0, !0) : Object(_.l)(Object(_.j)("callMethod", u, void 0, void 0, Object(le.q)(s)), r, e);
+    return f ? _.l(_.r("callMethod", u), r, e, true, true) : _.l(_.j("callMethod", u, undefined, undefined, le.q(s)), r, e);
   });
   e.insertBlockSnippetGenerator("widget_color", function (t, n) {
     var r = t.blocks[n];
     var o = e.getFieldValue(r, "COLOR");
-    return Object(_.o)(o);
+    return _.o(o);
   });
   e.insertBlockSnippetGenerator("color_picker", function (t, n) {
     var r;
@@ -3697,16 +3697,16 @@ function ve(e) {
     };
     switch (Number(i.getAttribute("format"))) {
       case m.I.EColorFormat.ColorPalette:
-        r = Object(_.s)("getColorHex", [Object(_.o)(i.getAttribute("color") || "")]);
+        r = _.s("getColorHex", [_.o(i.getAttribute("color") || "")]);
         break;
       case m.I.EColorFormat.ColorString:
-        r = Object(_.s)("getColorHex", [a("COLOR_STRING")]);
+        r = _.s("getColorHex", [a("COLOR_STRING")]);
         break;
       case m.I.EColorFormat.HSVA:
-        r = Object(_.s)("getColorHsva", [a("H"), a("S"), a("V"), a("A")]);
+        r = _.s("getColorHsva", [a("H"), a("S"), a("V"), a("A")]);
         break;
       case m.I.EColorFormat.RGBA:
-        r = Object(_.s)("getColorRgba", [a("R"), a("G"), a("B"), a("A")]);
+        r = _.s("getColorRgba", [a("R"), a("G"), a("B"), a("A")]);
     }
     return r || "";
   });
@@ -3717,10 +3717,10 @@ function ve(e) {
   e.insertBlockSnippetGenerator("widget_dropdown", function (t, n) {
     var r = t.blocks[n];
     var o = e.getFieldValue(r, "VALUE");
-    return Object(_.o)(o);
+    return _.o(o);
   });
   e.insertBlockSnippetGenerator("widget_any_id", function (e, t) {
-    return Object(_.o)("");
+    return _.o("");
   });
 }
 var be = {
@@ -4434,38 +4434,38 @@ var be = {
     CLOUD_TABLE_CLEAR_ALL_TOOLTIP: "清空云数据表所有数据，不可撤销。"
   }
 };
-var ye = require("../6");
-var Ee = require("../27");
-var Oe = require("../40");
-var we = require("./224");
-var Ce = require("./203");
-var Te = require("../57/index");
-var Se = require("../58/index");
-var Ie = require("./326");
-var Ae = require("../125/index");
-var je = require("./480");
+import ye = require("../6");
+import Ee = require("../27");
+import Oe = require("../40");
+import we = require("./224");
+import Ce = require("./203");
+import Te = require("../57/index");
+import Se = require("../58/index");
+import Ie = require("./326");
+import Ae = require("../125/index");
+import je = require("./480");
 var Ne = function (e) {
-  Object(Te.a)(n, e);
-  var t = Object(Se.a)(n);
+  Te.a(n, e);
+  var t = Se.a(n);
   function n(e) {
     var r;
     var o;
-    Object(Ee.a)(this, n);
-    (o = t.call(this, Object(ye.a)(Object(ye.a)({}, e), {}, {
-      opt_value: e.opt_value || (null === (r = e.get_options()[0]) || void 0 === r ? void 0 : r.value) || 0
+    Ee.a(this, n);
+    (o = t.call(this, ye.a(ye.a({}, e), {}, {
+      opt_value: e.opt_value || (null === (r = e.get_options()[0]) || undefined === r ? undefined : r.value) || 0
     }, e.numberOptions))).dropdownConfig = e;
-    o.arrow = void 0;
+    o.arrow = undefined;
     o.menu_items = [];
-    o.menu = void 0;
+    o.menu = undefined;
     o.padding_x = 0;
     o.text_margin = 0;
     return o;
   }
-  Object(Oe.a)(n, [{
+  Oe.a(n, [{
     key: "render_text_element",
     value: function () {
       if (this.text_element && this.field_group) {
-        Object(Ae.remove_children)(this.text_element);
+        Ae.remove_children(this.text_element);
         this.text_element.appendChild(document.createTextNode(this.get_display_text()));
         var e = this.utils.get_cached_width(this.text_element);
         this.text_margin = e < this.theme.renderer.TEXT_MIN_WIDTH_IN_FIELD ? (this.theme.renderer.TEXT_MIN_WIDTH_IN_FIELD - e) / 2 : 0;
@@ -4481,7 +4481,7 @@ var Ne = function (e) {
       var e = this;
       if (this.field_group && this.source_block) {
         if (!this.arrow) {
-          this.arrow = Object(je.draw_arrow)(this.source_block.workspace.options.dropdown.arrow_type);
+          this.arrow = je.draw_arrow(this.source_block.workspace.options.dropdown.arrow_type);
           this.field_group.appendChild(this.arrow);
         }
         this.size_.width += this.source_block.workspace.options.dropdown.padding;
@@ -4490,7 +4490,7 @@ var Ne = function (e) {
         if (this.source_block.is_shadow()) {
           var t = function () {
             var t;
-            var n = null === (t = e.source_block) || void 0 === t ? void 0 : t.get_parent();
+            var n = null === (t = e.source_block) || undefined === t ? undefined : t.get_parent();
             if (n && e.arrow) {
               e.arrow.style.fill = n.get_colour().toString();
             }
@@ -4508,7 +4508,7 @@ var Ne = function (e) {
   }, {
     key: "show_editor",
     value: function () {
-      var e = Object(we.a)(Object(Ce.a)(n.prototype), "show_editor", this).call(this);
+      var e = we.a(Ce.a(n.prototype), "show_editor", this).call(this);
       if (!this.source_block) {
         return e;
       }
@@ -4521,10 +4521,10 @@ var Ne = function (e) {
   }, {
     key: "on_html_input_change",
     value: function () {
-      Object(we.a)(Object(Ce.a)(n.prototype), "on_html_input_change", this).call(this);
+      we.a(Ce.a(n.prototype), "on_html_input_change", this).call(this);
       if (this.html_input) {
         var e;
-        var t = (null === (e = this.workspace_) || void 0 === e ? void 0 : e.get_scale()) || 1;
+        var t = (null === (e = this.workspace_) || undefined === e ? undefined : e.get_scale()) || 1;
         this.html_input.style.paddingLeft = "".concat((this.padding_x + this.text_margin) * t, "px");
       }
       this.highlight_matched();
@@ -4559,14 +4559,14 @@ var Ne = function (e) {
         r(o);
       }
       t.classList.add("blocklyDropdownMenu");
-      var i = Object(Ae.create_dom)("div", {
+      var i = Ae.create_dom("div", {
         style: "position: fixed",
         class: "blocklyWidgetDiv"
       });
       i.appendChild(t);
       document.body.appendChild(i);
       i.style.display = "block";
-      var a = Object(je.position_dropdown)(t, this);
+      var a = je.position_dropdown(t, this);
       i.style.left = "".concat(a[0], "px");
       i.style.top = "".concat(a[1], "px");
       return i;
@@ -4618,21 +4618,21 @@ var Ne = function (e) {
     value: function () {
       var e = this;
       return function () {
-        Object(we.a)(Object(Ce.a)(n.prototype), "widget_dispose", e).call(e)();
+        we.a(Ce.a(n.prototype), "widget_dispose", e).call(e)();
         if (e.menu) {
-          Object(Ae.remove_node)(e.menu);
+          Ae.remove_node(e.menu);
         }
         e.menu_items = [];
-        e.menu = void 0;
+        e.menu = undefined;
         e.widget_div.hide();
       };
     }
   }, {
     key: "dispose",
     value: function () {
-      Object(we.a)(Object(Ce.a)(n.prototype), "dispose", this).call(this);
+      we.a(Ce.a(n.prototype), "dispose", this).call(this);
       if (this.menu) {
-        Object(Ae.remove_node)(this.menu);
+        Ae.remove_node(this.menu);
       }
       this.widget_div.hide_if_owner(this);
     }
@@ -4640,7 +4640,7 @@ var Ne = function (e) {
   return n;
 }(Ie.FieldNumber);
 Ne.field_type = "field_coco_number_dropdown";
-var Re = require("../135");
+import Re = require("../135");
 var ke = Ie.FieldNumber.prototype.show_editor;
 Ie.FieldNumber.prototype.show_editor = function () {
   var e = this;
@@ -4681,18 +4681,18 @@ Ie.FieldNumber.prototype.show_editor = function () {
       },
       type: "SHOW_BLOCKS_SLIDER"
     };
-    Object(O.c)().dispatchAction(f);
+    O.c().dispatchAction(f);
   }
   return t;
 };
 var xe = Ie.FieldNumber.prototype.set_value;
 Ie.FieldNumber.prototype.set_value = function (e) {
   xe.call(this, e);
-  if (Object(O.c)().getSliderVisible()) {
+  if (O.c().getSliderVisible()) {
     if (!e || isNaN(Number(e))) {
       return;
     }
-    Object(O.c)().dispatchAction({
+    O.c().dispatchAction({
       payload: {
         value: e
       },
@@ -4700,21 +4700,21 @@ Ie.FieldNumber.prototype.set_value = function (e) {
     });
   }
 };
-var De = require("./374");
-var Me = require("./500");
-var Le = require("../38/index");
-var Pe = require("../2");
-var Be = require("../28/index");
+import De = require("./374");
+import Me = require("./500");
+import Le = require("../38/index");
+import Pe = require("../2");
+import Be = require("../28/index");
 var Fe = De.FieldTextInput.prototype.show_editor;
 De.FieldTextInput.prototype.show_editor = function () {
   var e;
   var t = this;
   var n = Fe.call(this);
-  if ("text_rich_text" === (null === (e = this.source_block) || void 0 === e ? void 0 : e.type)) {
-    Object(Le.a)(Object(Pe.Bh)({
+  if ("text_rich_text" === (null === (e = this.source_block) || undefined === e ? undefined : e.type)) {
+    Le.a(Pe.Bh({
       content: this.get_value(),
       onConfirm: function (e) {
-        t.set_value(Object(Be.i)(e));
+        t.set_value(Be.i(e));
       }
     }));
     m.Blink.widget_div.hide();
@@ -4723,23 +4723,23 @@ De.FieldTextInput.prototype.show_editor = function () {
 };
 De.FieldTextInput.prototype.get_display_text = function () {
   var e;
-  if ("text_rich_text" === (null === (e = this.source_block) || void 0 === e ? void 0 : e.type)) {
+  if ("text_rich_text" === (null === (e = this.source_block) || undefined === e ? undefined : e.type)) {
     var t = this.get_value();
     var n = document.createElement("div");
     n.innerHTML = t;
     var r = n.innerText;
-    return Object(Be.i)(r);
+    return Be.i(r);
   }
   return Me.Field.prototype.get_display_text.call(this);
 };
-var Ge = require("./726");
+import Ge = require("./726");
 Ge.FieldColour.prototype.show_editor = function () {
   var e;
   var t = this;
   m.Blink.widget_div.hide();
   this.widget_div.show(this, this.widget_dispose.bind(this));
   var n = this.get_absolute_xy();
-  var r = (null === (e = this.source_block) || void 0 === e ? void 0 : e.workspace.get_scale()) || 1;
+  var r = (null === (e = this.source_block) || undefined === e ? undefined : e.workspace.get_scale()) || 1;
   var o = this.get_value();
   var i = window.innerWidth;
   var a = window.innerHeight;
@@ -4753,24 +4753,24 @@ Ge.FieldColour.prototype.show_editor = function () {
   }
   var l = n[1] + s;
   var u = n[0] + c;
-  var d = Object(Pe.hj)({
+  var d = Pe.hj({
     value: o,
     selectValue: function (e) {
       var n;
-      if (!(null === (n = t.border_rect) || void 0 === n)) {
+      if (!(null === (n = t.border_rect) || undefined === n)) {
         n.setAttribute("fill", e);
       }
     },
     setValue: function (e) {
-      t.set_value(Object(de.nb)(e));
+      t.set_value(de.nb(e));
     },
     top: l,
     left: u
   });
-  Object(O.c)().dispatchAction(d);
+  O.c().dispatchAction(d);
 };
 var Ue;
-var We = require("../21/index");
+import We = require("../21/index");
 function He() {
   var e = this;
   this.set_on_block_change(function (t) {
@@ -4778,7 +4778,7 @@ function He() {
       var n = e.get_shadow_field("DOC_KEYS_WRAPPER", "DOC_KEYS");
       if (n) {
         var r;
-        var o = Object(O.c)().getLocalDocumentFieldList(null === (r = t.get_new_value()) || void 0 === r ? void 0 : r.toString(), n);
+        var o = O.c().getLocalDocumentFieldList(null === (r = t.get_new_value()) || undefined === r ? undefined : r.toString(), n);
         n.set_value(o[0].value);
       }
     }
@@ -4791,7 +4791,7 @@ function Ve() {
       var n = e.get_shadow_field("DOC_KEYS_WRAPPER", "DOC_KEYS");
       if (n) {
         var r;
-        var o = Object(O.c)().getCloudDocumentFieldList(null === (r = t.get_new_value()) || void 0 === r ? void 0 : r.toString(), n);
+        var o = O.c().getCloudDocumentFieldList(null === (r = t.get_new_value()) || undefined === r ? undefined : r.toString(), n);
         n.set_value(o[0].value);
       }
     }
@@ -4805,12 +4805,12 @@ function ze() {
       var r = e.get_shadow_field("UPDATE_COLUMN_VALUE", "COLUMNS");
       if (n) {
         var o;
-        var i = Object(O.c)().getCloudDBColumnList(null === (o = t.get_new_value()) || void 0 === o ? void 0 : o.toString(), n);
+        var i = O.c().getCloudDBColumnList(null === (o = t.get_new_value()) || undefined === o ? undefined : o.toString(), n);
         n.set_value(i[0].value);
       }
       if (r) {
         var a;
-        var s = Object(O.c)().getCloudDBColumnList(null === (a = t.get_new_value()) || void 0 === a ? void 0 : a.toString(), r);
+        var s = O.c().getCloudDBColumnList(null === (a = t.get_new_value()) || undefined === a ? undefined : a.toString(), r);
         r.set_value(s[0].value);
       }
     }
@@ -4823,7 +4823,7 @@ function Ye() {
       var n = e.get_shadow_field("COLUMN_WRAPPER", "COLUMN");
       if (n) {
         var r;
-        var o = Object(O.c)().getTableDataColumnList(null === (r = t.get_new_value()) || void 0 === r ? void 0 : r.toString());
+        var o = O.c().getTableDataColumnList(null === (r = t.get_new_value()) || undefined === r ? undefined : r.toString());
         n.set_value(o[0].value);
       }
     }
@@ -4833,10 +4833,10 @@ function Ke() {
   var e = this;
   this.set_on_block_change(function (t) {
     if (!m.Blink.events.is_undoing() && t.type === m.I.BlockEventType.CHANGE && "WIDGET_ID" === t.get_name()) {
-      var n = Object(We.getActorActionInputField)(e);
+      var n = We.getActorActionInputField(e);
       if (n) {
-        var r = Object(O.c)().getActorActionList(t.get_new_value())[0].value || g.h;
-        if (!(null === n || void 0 === n)) {
+        var r = O.c().getActorActionList(t.get_new_value())[0].value || g.h;
+        if (!(null === n || undefined === n)) {
           n.set_value(r);
         }
       }
@@ -4849,7 +4849,7 @@ function qe() {
     if (!m.Blink.events.is_undoing() && t.type === m.I.BlockEventType.CHANGE && "WIDGET_ID" === t.get_name()) {
       var n = e.get_shadow_field("DICT_KEYS_WRAPPER", "KEYS");
       if (n) {
-        var r = Object(O.c)().getCloudDictKeyList(t.get_new_value());
+        var r = O.c().getCloudDictKeyList(t.get_new_value());
         n.set_value(r[0].value);
       }
     }
@@ -4861,7 +4861,7 @@ function Xe() {
     if (!m.Blink.events.is_undoing() && t.type === m.I.BlockEventType.CHANGE && "WIDGET_ID" === t.get_name()) {
       var n = e.get_shadow_field("INPUT_COLUMN", "COLUMNS");
       if (n) {
-        var r = Object(O.c)().getCloudTableColumnList(t.get_new_value());
+        var r = O.c().getCloudTableColumnList(t.get_new_value());
         n.set_value(r[0].value);
       }
     }
@@ -4877,12 +4877,12 @@ function Qe() {
   m.Blink.extensions.register(Ue.UPDATE_COLUMNS_AFTER_SELECT_CLOUD_TABLE, Xe);
   m.Blink.registry.field.register(ue.a.field_type, ue.a);
   m.Blink.registry.field.register(Ne.field_type, Ne);
-  O.e.apply(void 0, [m.Blink, ue.a, s, c, o, i, u, r, a, d, l, p, f].concat(Object(h.a)(Object(g.M)())));
-  var e = Object(O.a)();
+  O.e.apply(undefined, [m.Blink, ue.a, s, c, o, i, u, r, a, d, l, p, f].concat(h.a(g.M())));
+  var e = O.a();
   m.Blink.define_blocks_with_json_array(e);
 }
 function Ze() {
-  var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "zh-CN";
+  var e = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : "zh-CN";
   return be[e];
 }
 !function (e) {

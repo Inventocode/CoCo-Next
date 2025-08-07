@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.StartDragEvent = void 0;
+exports.StartDragEvent = undefined;
 var r = require("tslib");
 var i = require("inversify");
 var o = require("../../../125/195/index");
@@ -11,7 +11,7 @@ var a = function (e) {
   function t(t) {
     var n = e.call(this, t.block) || this;
     n.type = o.BlockEventType.START_DRAG;
-    n._record_undo = !1;
+    n._record_undo = false;
     n.block = t.block;
     n._is_from_flyout = t.is_from_flyout;
     return n;

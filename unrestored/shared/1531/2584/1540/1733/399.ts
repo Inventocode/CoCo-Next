@@ -13,14 +13,14 @@ var l = function (e) {
   var p = 7 == e;
   var f = 5 == e || d;
   return function (h, m, g, _) {
-    for (var v, b, y = i(h), E = o(y), O = r(m, g, 3), w = a(E.length), C = 0, T = _ || s, S = t ? T(h, w) : n || p ? T(h, 0) : void 0; w > C; C++) {
+    for (var v, b, y = i(h), E = o(y), O = r(m, g, 3), w = a(E.length), C = 0, T = _ || s, S = t ? T(h, w) : n || p ? T(h, 0) : undefined; w > C; C++) {
       if ((f || C in E) && (b = O(v = E[C], C, y), e)) {
         if (t) {
           S[C] = b;
         } else if (b) {
           switch (e) {
             case 3:
-              return !0;
+              return true;
             case 5:
               return v;
             case 6:
@@ -31,7 +31,7 @@ var l = function (e) {
         } else {
           switch (e) {
             case 4:
-              return !1;
+              return false;
             case 7:
               c.call(S, v);
           }

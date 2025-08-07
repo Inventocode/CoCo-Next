@@ -43,16 +43,16 @@ var u = function () {
     } else {
       c.luminances = e;
     }
-    if (void 0 === o) {
+    if (undefined === o) {
       c.dataWidth = r;
     }
-    if (void 0 === i) {
+    if (undefined === i) {
       c.dataHeight = n;
     }
-    if (void 0 === u) {
+    if (undefined === u) {
       c.left = 0;
     }
-    if (void 0 === s) {
+    if (undefined === s) {
       c.top = 0;
     }
     if (c.left + r > c.dataWidth || c.top + n > c.dataHeight) {
@@ -66,7 +66,7 @@ var u = function () {
       throw new a.a("Requested row is outside the image: " + t);
     }
     var r = this.getWidth();
-    if (null === e || void 0 === e || e.length < r) {
+    if (null === e || undefined === e || e.length < r) {
       e = new Uint8ClampedArray(r);
     }
     var n = (t + this.top) * this.dataWidth + this.left;
@@ -94,7 +94,7 @@ var u = function () {
     return n;
   };
   e.prototype.isCropSupported = function () {
-    return !0;
+    return true;
   };
   e.prototype.crop = function (t, r, n, o) {
     return new e(this.luminances, n, o, this.dataWidth, this.dataHeight, this.left + t, this.top + r);

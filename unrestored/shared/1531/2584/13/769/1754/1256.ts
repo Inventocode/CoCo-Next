@@ -2,7 +2,7 @@
 
 var r = require("../568");
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
 exports.default = function (e, t, n, r) {
   var o = i.default.unstable_batchedUpdates ? function (e) {

@@ -38,7 +38,7 @@ var h = function (t) {
     return {
       next: function () {
         if (t && n >= t.length) {
-          t = void 0;
+          t = undefined;
         }
         return {
           value: t && t[n++],
@@ -51,11 +51,11 @@ var h = function (t) {
 };
 var l = function (t) {
   function e(e, r) {
-    if (void 0 === e) {
-      e = !1;
+    if (undefined === e) {
+      e = false;
     }
-    if (void 0 === r) {
-      r = !1;
+    if (undefined === r) {
+      r = false;
     }
     var n = t.call(this) || this;
     n.usingCheckDigit = e;
@@ -88,7 +88,7 @@ var l = function (t) {
       this.decodeRowResult += g;
       y = v;
       try {
-        for (u = void 0, A = h(p), E = A.next(), void 0; !E.done; E = A.next()) {
+        for (u = undefined, A = h(p), E = A.next(), undefined; !E.done; E = A.next()) {
           var A;
           var E;
           v += E.value;
@@ -153,12 +153,12 @@ var l = function (t) {
     return new s.a(C, null, 0, [new c.a(N, t), new c.a(D, t)], n.a.CODE_39, new Date().getTime());
   };
   e.findAsteriskPattern = function (t, r) {
-    for (var n = t.getSize(), o = t.getNextSet(0), i = 0, u = o, s = !1, c = r.length, f = o; f < n; f++) {
+    for (var n = t.getSize(), o = t.getNextSet(0), i = 0, u = o, s = false, c = r.length, f = o; f < n; f++) {
       if (t.get(f) !== s) {
         r[i]++;
       } else {
         if (i === c - 1) {
-          if (this.toNarrowWidePattern(r) === e.ASTERISK_ENCODING && t.isRange(Math.max(0, u - Math.floor((f - u) / 2)), u, !1)) {
+          if (this.toNarrowWidePattern(r) === e.ASTERISK_ENCODING && t.isRange(Math.max(0, u - Math.floor((f - u) / 2)), u, false)) {
             return [u, f];
           }
           u += r[0] + r[1];
@@ -184,7 +184,7 @@ var l = function (t) {
     do {
       var a = 2147483647;
       try {
-        for (e = void 0, u = h(t), s = u.next(), void 0; !s.done; s = u.next()) {
+        for (e = undefined, u = h(t), s = u.next(), undefined; !s.done; s = u.next()) {
           var u;
           var s;
           if ((d = s.value) < a && d > i) {

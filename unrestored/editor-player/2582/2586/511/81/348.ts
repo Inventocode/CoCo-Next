@@ -4,7 +4,7 @@ var n = require("./63");
 var o = function () {
   function t() {}
   t.applyMaskPenaltyRule1 = function (e) {
-    return t.applyMaskPenaltyRule1Internal(e, !0) + t.applyMaskPenaltyRule1Internal(e, !1);
+    return t.applyMaskPenaltyRule1Internal(e, true) + t.applyMaskPenaltyRule1Internal(e, false);
   };
   t.applyMaskPenaltyRule2 = function (e) {
     for (var r = 0, n = e.getArray(), o = e.getWidth(), i = e.getHeight(), a = 0; a < i - 1; a++) {
@@ -36,20 +36,20 @@ var o = function () {
     r = Math.min(r, t.length);
     for (var n = e; n < r; n++) {
       if (1 === t[n]) {
-        return !1;
+        return false;
       }
     }
-    return !0;
+    return true;
   };
   t.isWhiteVertical = function (t, e, r, n) {
     r = Math.max(r, 0);
     n = Math.min(n, t.length);
     for (var o = r; o < n; o++) {
       if (1 === t[o][e]) {
-        return !1;
+        return false;
       }
     }
-    return !0;
+    return true;
   };
   t.applyMaskPenaltyRule4 = function (e) {
     for (var r = 0, n = e.getArray(), o = e.getWidth(), i = e.getHeight(), a = 0; a < i; a++) {

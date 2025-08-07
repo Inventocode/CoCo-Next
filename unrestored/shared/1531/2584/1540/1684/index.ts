@@ -13,7 +13,7 @@ var p = Math.min;
 var f = l("startsWith");
 r({
   target: "String",
-  proto: !0,
+  proto: true,
   forced: !(!u && !f && !!function () {
     var e = o(String.prototype, "startsWith");
     return e && !e.writable;
@@ -22,7 +22,7 @@ r({
   startsWith: function (e) {
     var t = a(c(this));
     s(e);
-    var n = i(p(arguments.length > 1 ? arguments[1] : void 0, t.length));
+    var n = i(p(arguments.length > 1 ? arguments[1] : undefined, t.length));
     var r = a(e);
     return d ? d.call(t, r, n) : t.slice(n, n + r.length) === r;
   }

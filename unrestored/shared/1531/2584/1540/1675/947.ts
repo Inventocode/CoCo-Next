@@ -18,7 +18,7 @@ module.exports = function (e, t, n, u) {
     return 7 != ""[e](t);
   });
   var f = p && !i(function () {
-    var t = !1;
+    var t = false;
     var n = /a/;
     if ("split" === e) {
       (n = {}).constructor = {};
@@ -29,7 +29,7 @@ module.exports = function (e, t, n, u) {
       n[d] = /./[d];
     }
     n.exec = function () {
-      t = !0;
+      t = true;
       return null;
     };
     n[d]("");
@@ -40,19 +40,19 @@ module.exports = function (e, t, n, u) {
     var m = t(d, ""[e], function (e, t, n, r, i) {
       var a = t.exec;
       return a === o || a === l.exec ? p && !i ? {
-        done: !0,
+        done: true,
         value: h.call(t, n, r)
       } : {
-        done: !0,
+        done: true,
         value: e.call(n, t, r)
       } : {
-        done: !1
+        done: false
       };
     });
     r(String.prototype, e, m[0]);
     r(l, d, m[1]);
   }
   if (u) {
-    s(l[d], "sham", !0);
+    s(l[d], "sham", true);
   }
 };

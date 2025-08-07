@@ -18,8 +18,8 @@ var h = function () {
     var g = -1;
     try {
       var y = null;
-      var w = !1;
-      var v = void 0;
+      var w = false;
+      var v = undefined;
       do {
         if (h.available() < 4) {
           v = f.a.TERMINATOR;
@@ -32,7 +32,7 @@ var h = function () {
             break;
           case f.a.FNC1_FIRST_POSITION:
           case f.a.FNC1_SECOND_POSITION:
-            w = !0;
+            w = true;
             break;
           case f.a.STRUCTURED_APPEND:
             if (h.available() < 16) {

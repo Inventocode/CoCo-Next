@@ -22,7 +22,7 @@ var p = function (t) {
     return {
       next: function () {
         if (t && n >= t.length) {
-          t = void 0;
+          t = undefined;
         }
         return {
           value: t && t[n++],
@@ -183,10 +183,10 @@ var _ = function () {
     var n = 0;
     var o = this.mappingBitMatrix.getHeight();
     var i = this.mappingBitMatrix.getWidth();
-    var a = !1;
-    var u = !1;
-    var s = !1;
-    var c = !1;
+    var a = false;
+    var u = false;
+    var s = false;
+    var c = false;
     do {
       if (r !== o || 0 !== n || a) {
         if (r !== o - 2 || 0 !== n || 0 === (3 & i) || u) {
@@ -214,25 +214,25 @@ var _ = function () {
               t[e++] = 255 & this.readCorner4(o, i);
               r -= 2;
               n += 2;
-              c = !0;
+              c = true;
             }
           } else {
             t[e++] = 255 & this.readCorner3(o, i);
             r -= 2;
             n += 2;
-            s = !0;
+            s = true;
           }
         } else {
           t[e++] = 255 & this.readCorner2(o, i);
           r -= 2;
           n += 2;
-          u = !0;
+          u = true;
         }
       } else {
         t[e++] = 255 & this.readCorner1(o, i);
         r -= 2;
         n += 2;
-        a = !0;
+        a = true;
       }
     } while (r < o || n < i);
     if (e !== this.version.getTotalCodewords()) {
@@ -461,7 +461,7 @@ var m = function (t) {
     return {
       next: function () {
         if (t && n >= t.length) {
-          t = void 0;
+          t = undefined;
         }
         return {
           value: t && t[n++],
@@ -575,7 +575,7 @@ var C = function (t) {
     return {
       next: function () {
         if (t && n >= t.length) {
-          t = void 0;
+          t = undefined;
         }
         return {
           value: t && t[n++],
@@ -841,7 +841,7 @@ var N = function () {
   t.prototype.decode = function (e, r) {
     var o;
     var a;
-    if (void 0 === r) {
+    if (undefined === r) {
       r = null;
     }
     if (null != r && r.has(i.a.PURE_BARCODE)) {

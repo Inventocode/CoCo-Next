@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.isvalidColorString = exports.red = exports.getContrastingColor = exports.isValidHex = exports.toState = exports.simpleCheckForValidColor = void 0;
+exports.isvalidColorString = exports.red = exports.getContrastingColor = exports.isValidHex = exports.toState = exports.simpleCheckForValidColor = undefined;
 var r = o(require("./2535/index"));
 var i = o(require("../../../225"));
 function o(e) {
@@ -44,7 +44,7 @@ var a = exports.toState = function (e, t) {
 };
 exports.isValidHex = function (e) {
   if ("transparent" === e) {
-    return !0;
+    return true;
   }
   var t = "#" === String(e).charAt(0) ? 1 : 0;
   return e.length !== 4 + t && e.length < 7 + t && (0, i.default)(e).isValid();

@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.inject_comment_filters = exports.inject_extra_filters = exports.FILTER = void 0;
+exports.inject_comment_filters = exports.inject_extra_filters = exports.FILTER = undefined;
 var r = (0, require("tslib").__importStar)(require("../../497/index"));
 exports.FILTER = {
   REPLACEMENT_GLOW: "blocklyReplacementGlowFilter",

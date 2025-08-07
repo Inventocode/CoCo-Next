@@ -1,7 +1,7 @@
 "use strict";
 
 var r = require("../../38/607/494");
-var i = require("../../31/index");
+var i = require("lodash");
 function o(e, t) {
   return e.line - t.line || e.column - t.column;
 }
@@ -82,7 +82,7 @@ module.exports = function (e) {
   var t = e.directives;
   var n = e.problems;
   var r = e.reportUnusedDisableDirectives;
-  var s = void 0 === r ? "off" : r;
+  var s = undefined === r ? "off" : r;
   var c = t.filter(function (e) {
     return "disable" === e.type || "enable" === e.type;
   }).map(function (e) {

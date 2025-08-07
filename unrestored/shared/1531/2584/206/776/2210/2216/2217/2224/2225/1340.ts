@@ -25,7 +25,7 @@ module.exports = function (e, t, n) {
   if (d) {
     i += " (" + r + " !== undefined && typeof " + r + " != 'number') || ";
   }
-  if (!1 === e.opts.unicode) {
+  if (false === e.opts.unicode) {
     i += " " + f + ".length ";
   } else {
     i += " ucs2length(" + f + ") ";
@@ -35,9 +35,9 @@ module.exports = function (e, t, n) {
   var _ = _ || [];
   _.push(i);
   i = "";
-  if (!1 !== e.createErrors) {
+  if (false !== e.createErrors) {
     i += " { keyword: '" + (p || "_limitLength") + "' , dataPath: (dataPath || '') + " + e.errorPath + " , schemaPath: " + e.util.toQuotedString(u) + " , params: { limit: " + r + " } ";
-    if (!1 !== e.opts.messages) {
+    if (false !== e.opts.messages) {
       i += " , message: 'should NOT be ";
       i += "maxLength" == t ? "longer" : "shorter";
       i += " than ";

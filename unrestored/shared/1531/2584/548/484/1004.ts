@@ -2,7 +2,7 @@
 
 function r(e) {
   return function (t) {
-    var n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+    var n = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : {};
     var r = t.match(e.matchPattern);
     if (!r) {
       return null;

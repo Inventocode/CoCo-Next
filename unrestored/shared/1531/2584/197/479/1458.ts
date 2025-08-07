@@ -8,11 +8,11 @@ module.exports = function (e) {
     }
     var i = n[r] = {
       i: r,
-      l: !1,
+      l: false,
       exports: {}
     };
     e[r].call(i.exports, i, i.exports, t);
-    i.l = !0;
+    i.l = true;
     return i.exports;
   }
   var n = {};
@@ -21,8 +21,8 @@ module.exports = function (e) {
   t.d = function (e, n, r) {
     if (!t.o(e, n)) {
       Object.defineProperty(e, n, {
-        configurable: !1,
-        enumerable: !0,
+        configurable: false,
+        enumerable: true,
         get: r
       });
     }
@@ -96,7 +96,7 @@ module.exports = function (e) {
     var v = h ? i : i[n] || (i[n] = {});
     var m = v.prototype;
     var y = h ? r : p ? r[n] : (r[n] || {}).prototype;
-    for (u in h && (c = n), c) if (!((l = !d && y && void 0 !== y[u]) && s(v, u))) {
+    for (u in h && (c = n), c) if (!((l = !d && y && undefined !== y[u]) && s(v, u))) {
       f = l ? y[u] : c[u];
       v[u] = h && "function" != typeof y[u] ? c[u] : A && l ? o(f, r) : g && y[u] == f ? function (e) {
         var t = function (t, n, r) {
@@ -149,7 +149,7 @@ module.exports = function (e) {
   var a = Object.defineProperty;
   t.f = n(4) ? Object.defineProperty : function (e, t, n) {
     r(e);
-    t = o(t, !0);
+    t = o(t, true);
     r(n);
     if (i) {
       try {
@@ -178,7 +178,7 @@ module.exports = function (e) {
     try {
       return !!e();
     } catch (e) {
-      return !0;
+      return true;
     }
   };
 }, function (e, t, n) {
@@ -273,7 +273,7 @@ module.exports = function (e) {
               code: i.status,
               message: o,
               reqId: t,
-              isRequestError: !0
+              isRequestError: true
             });
           }
           try {
@@ -292,7 +292,7 @@ module.exports = function (e) {
   function d() {
     return "http:" === window.location.protocol ? "http:" : "https:";
   }
-  t.__esModule = !0;
+  t.__esModule = true;
   var h = r(n(18));
   var p = r(n(34));
   var _ = r(n(86));
@@ -491,7 +491,7 @@ module.exports = function (e) {
   var v = n(39);
   var m = r(n(91));
 }, function (e, t) {
-  e.exports = !0;
+  e.exports = true;
 }, function (e, t) {
   e.exports = {};
 }, function (e, t, n) {
@@ -508,7 +508,7 @@ module.exports = function (e) {
 }, function (e, t, n) {
   "use strict";
 
-  t.__esModule = !0;
+  t.__esModule = true;
   t.default = function (e, t) {
     if (!(e instanceof t)) {
       throw new TypeError("Cannot call a class as a function");
@@ -517,13 +517,13 @@ module.exports = function (e) {
 }, function (e, t, n) {
   e.exports = {
     default: n(59),
-    __esModule: !0
+    __esModule: true
   };
 }, function (e, t, n) {
   var r = n(20);
   e.exports = function (e, t, n) {
     r(e);
-    if (void 0 === t) {
+    if (undefined === t) {
       return e;
     }
     switch (n) {
@@ -564,7 +564,7 @@ module.exports = function (e) {
   var n = 0;
   var r = Math.random();
   e.exports = function (e) {
-    return "Symbol(".concat(void 0 === e ? "" : e, ")_", (++n + r).toString(36));
+    return "Symbol(".concat(undefined === e ? "" : e, ")_", (++n + r).toString(36));
   };
 }, function (e, t, n) {
   var r = n(7).f;
@@ -573,7 +573,7 @@ module.exports = function (e) {
   e.exports = function (e, t, n) {
     if (e && !i(e = n ? e : e.prototype, o)) {
       r(e, o, {
-        configurable: !0,
+        configurable: true,
         value: t
       });
     }
@@ -593,7 +593,7 @@ module.exports = function (e) {
   };
 }, function (e, t) {
   e.exports = function (e) {
-    if (void 0 == e) {
+    if (undefined == e) {
       throw TypeError("Can't call method on  " + e);
     }
     return e;
@@ -635,7 +635,7 @@ module.exports = function (e) {
   var i = n(0);
   var o = i["__core-js_shared__"] || (i["__core-js_shared__"] = {});
   (e.exports = function (e, t) {
-    return o[e] || (o[e] = void 0 !== t ? t : {});
+    return o[e] || (o[e] = undefined !== t ? t : {});
   })("versions", []).push({
     version: r.version,
     mode: n(13) ? "pure" : "global",
@@ -652,7 +652,7 @@ module.exports = function (e) {
       var t;
       var n;
       this.promise = new e(function (e, r) {
-        if (void 0 !== t || void 0 !== n) {
+        if (undefined !== t || undefined !== n) {
           throw TypeError("Bad Promise constructor");
         }
         t = e;
@@ -665,14 +665,14 @@ module.exports = function (e) {
 }, function (e, t, n) {
   e.exports = {
     default: n(83),
-    __esModule: !0
+    __esModule: true
   };
 }, function (e, t) {
   t.f = Object.getOwnPropertySymbols;
 }, function (e, t, n) {
   e.exports = {
     default: n(88),
-    __esModule: !0
+    __esModule: true
   };
 }, function (e, t, n) {
   t.f = n(2);
@@ -693,7 +693,7 @@ module.exports = function (e) {
 }, function (e, t, n) {
   "use strict";
 
-  t.__esModule = !0;
+  t.__esModule = true;
   t.regionUphostMap = {
     z0: {
       srcUphost: "up.qiniup.com",
@@ -726,7 +726,7 @@ module.exports = function (e) {
 }, function (e, t) {}, function (e, t, n) {
   "use strict";
 
-  var r = n(60)(!0);
+  var r = n(60)(true);
   n(42)(String, "String", function (e) {
     this._t = String(e);
     this._i = 0;
@@ -735,11 +735,11 @@ module.exports = function (e) {
     var t = this._t;
     var n = this._i;
     return n >= t.length ? {
-      value: void 0,
-      done: !0
+      value: undefined,
+      done: true
     } : (e = r(t, n), this._i += e.length, {
       value: e,
-      done: !1
+      done: false
     });
   });
 }, function (e, t, n) {
@@ -780,20 +780,20 @@ module.exports = function (e) {
     };
     var w = t + " Iterator";
     var E = "values" == _;
-    var x = !1;
+    var x = false;
     var C = e.prototype;
     var O = C[f] || C["@@iterator"] || _ && C[_];
     var k = O || b(_);
-    var S = _ ? E ? b("entries") : k : void 0;
+    var S = _ ? E ? b("entries") : k : undefined;
     var T = "Array" == t && C.entries || O;
     if (T && (y = l(T.call(new e()))) !== Object.prototype && y.next) {
-      u(y, w, !0);
+      u(y, w, true);
       if (!(r || "function" == typeof y[f])) {
         a(y, f, h);
       }
     }
     if (E && O && "values" !== O.name) {
-      x = !0;
+      x = true;
       k = function () {
         return O.call(this);
       };
@@ -854,12 +854,12 @@ module.exports = function (e) {
     } else {
       n = c();
     }
-    return void 0 === t ? n : i(n, t);
+    return undefined === t ? n : i(n, t);
   };
 }, function (e, t, n) {
   var r = n(9);
   var i = n(11);
-  var o = n(63)(!1);
+  var o = n(63)(false);
   var a = n(30)("IE_PROTO");
   e.exports = function (e, t) {
     var n;
@@ -913,7 +913,7 @@ module.exports = function (e) {
     var t;
     var n;
     var a;
-    return void 0 === e ? "Undefined" : null === e ? "Null" : "string" == typeof (n = function (e, t) {
+    return undefined === e ? "Undefined" : null === e ? "Null" : "string" == typeof (n = function (e, t) {
       try {
         return e[t];
       } catch (e) {}
@@ -926,7 +926,7 @@ module.exports = function (e) {
   e.exports = function (e, t) {
     var n;
     var a = r(e).constructor;
-    return void 0 === a || void 0 == (n = r(a)[o]) ? t : i(n);
+    return undefined === a || undefined == (n = r(a)[o]) ? t : i(n);
   };
 }, function (e, t, n) {
   var r;
@@ -988,7 +988,7 @@ module.exports = function (e) {
             r = function (e) {
               l.postMessage(e + "", "*");
             };
-            l.addEventListener("message", m, !1);
+            l.addEventListener("message", m, false);
           } else {
             r = "onreadystatechange" in u("script") ? function (e) {
               c.appendChild(u("script")).onreadystatechange = function () {
@@ -1011,12 +1011,12 @@ module.exports = function (e) {
   e.exports = function (e) {
     try {
       return {
-        e: !1,
+        e: false,
         v: e()
       };
     } catch (e) {
       return {
-        e: !0,
+        e: true,
         v: e
       };
     }
@@ -1037,15 +1037,15 @@ module.exports = function (e) {
 }, function (e, t, n) {
   "use strict";
 
-  t.__esModule = !0;
+  t.__esModule = true;
   t.urlSafeBase64Encode = function (e) {
     return (e = function (e) {
       var t = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
-      var n = void 0;
-      var r = void 0;
-      var i = void 0;
-      var o = void 0;
-      var a = void 0;
+      var n = undefined;
+      var r = undefined;
+      var i = undefined;
+      var o = undefined;
+      var a = undefined;
       var s = 0;
       var c = 0;
       var u = "";
@@ -1054,14 +1054,14 @@ module.exports = function (e) {
         return e;
       }
       e = function (e) {
-        if (null === e || void 0 === e) {
+        if (null === e || undefined === e) {
           return "";
         }
         var t;
         var n = e + "";
         var r = "";
-        var i = void 0;
-        var o = void 0;
+        var i = undefined;
+        var o = undefined;
         i = o = 0;
         t = n.length;
         for (var a = 0; a < t; a++) {
@@ -1071,14 +1071,14 @@ module.exports = function (e) {
             o++;
           } else if (s > 127 && s < 2048) {
             c = String.fromCharCode(s >> 6 | 192, 63 & s | 128);
-          } else if (63488 & s ^ !0) {
+          } else if (63488 & s ^ true) {
             c = String.fromCharCode(s >> 12 | 224, s >> 6 & 63 | 128, 63 & s | 128);
           } else {
-            if (64512 & s ^ !0) {
+            if (64512 & s ^ true) {
               throw new RangeError("Unmatched trail surrogate at " + a);
             }
             var u = n.charCodeAt(++a);
-            if (64512 & u ^ !0) {
+            if (64512 & u ^ true) {
               throw new RangeError("Unmatched lead surrogate at " + (a - 1));
             }
             s = ((1023 & s) << 10) + (1023 & u) + 65536;
@@ -1117,12 +1117,12 @@ module.exports = function (e) {
   t.urlSafeBase64Decode = function (e) {
     return function (e) {
       var t = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
-      var n = void 0;
-      var r = void 0;
-      var i = void 0;
-      var o = void 0;
-      var a = void 0;
-      var s = void 0;
+      var n = undefined;
+      var r = undefined;
+      var i = undefined;
+      var o = undefined;
+      var a = undefined;
+      var s = undefined;
       var c = 0;
       var u = 0;
       var l = [];
@@ -1148,8 +1148,8 @@ module.exports = function (e) {
 }, function (e, t, n) {
   "use strict";
 
-  t.__esModule = !0;
-  t.pipeline = t.compressImage = t.exif = t.imageInfo = t.watermark = t.imageMogr2 = t.getUploadUrl = t.filterParams = t.getHeadersForMkFile = t.getResumeUploadedSize = t.getHeadersForChunkUpload = t.createMkFileUrl = t.region = t.upload = void 0;
+  t.__esModule = true;
+  t.pipeline = t.compressImage = t.exif = t.imageInfo = t.watermark = t.imageMogr2 = t.getUploadUrl = t.filterParams = t.getHeadersForMkFile = t.getResumeUploadedSize = t.getHeadersForChunkUpload = t.createMkFileUrl = t.region = t.upload = undefined;
   var r = n(39);
   var i = n(12);
   var o = n(92);
@@ -1217,7 +1217,7 @@ module.exports = function (e) {
       var s = String(i(t));
       var c = r(n);
       var u = s.length;
-      return c < 0 || c >= u ? e ? "" : void 0 : (o = s.charCodeAt(c)) < 55296 || o > 56319 || c + 1 === u || (a = s.charCodeAt(c + 1)) < 56320 || a > 57343 ? e ? s.charAt(c) : o : e ? s.slice(c, c + 2) : a - 56320 + (o - 55296 << 10) + 65536;
+      return c < 0 || c >= u ? e ? "" : undefined : (o = s.charCodeAt(c)) < 55296 || o > 56319 || c + 1 === u || (a = s.charCodeAt(c + 1)) < 56320 || a > 57343 ? e ? s.charAt(c) : o : e ? s.slice(c, c + 2) : a - 56320 + (o - 55296 << 10) + 65536;
     };
   };
 }, function (e, t, n) {
@@ -1260,7 +1260,7 @@ module.exports = function (e) {
       if (e && n != n) {
         for (; u > l;) {
           if ((s = c[l++]) != s) {
-            return !0;
+            return true;
           }
         }
       } else {
@@ -1304,7 +1304,7 @@ module.exports = function (e) {
     var e = this._t;
     var t = this._k;
     var n = this._i++;
-    return !e || n >= e.length ? (this._t = void 0, i(1)) : i(0, "keys" == t ? n : "values" == t ? e[n] : [n, e[n]]);
+    return !e || n >= e.length ? (this._t = undefined, i(1)) : i(0, "keys" == t ? n : "values" == t ? e[n] : [n, e[n]]);
   }, "values");
   o.Arguments = o.Array;
   r("keys");
@@ -1365,7 +1365,7 @@ module.exports = function (e) {
   };
   var F = function (e, t) {
     if (!e._n) {
-      e._n = !0;
+      e._n = true;
       var n = e._c;
       v(function () {
         for (var r = e._v, i = 1 == e._s, o = 0; n.length > o;) {
@@ -1385,7 +1385,7 @@ module.exports = function (e) {
                   }
                   e._h = 1;
                 }
-                if (!0 === s) {
+                if (true === s) {
                   n = r;
                 } else {
                   if (l) {
@@ -1394,7 +1394,7 @@ module.exports = function (e) {
                   n = s(r);
                   if (l) {
                     l.exit();
-                    a = !0;
+                    a = true;
                   }
                 }
                 if (n === t.promise) {
@@ -1418,7 +1418,7 @@ module.exports = function (e) {
           }(n[o++]);
         }
         e._c = [];
-        e._n = !1;
+        e._n = false;
         if (t && !e._h) {
           R(e);
         }
@@ -1451,7 +1451,7 @@ module.exports = function (e) {
         });
         e._h = S || P(e) ? 2 : 1;
       }
-      e._a = void 0;
+      e._a = undefined;
       if (o && t.e) {
         throw t.v;
       }
@@ -1478,20 +1478,20 @@ module.exports = function (e) {
   var M = function (e) {
     var t = this;
     if (!t._d) {
-      t._d = !0;
+      t._d = true;
       (t = t._w || t)._v = e;
       t._s = 2;
       if (!t._a) {
         t._a = t._c.slice();
       }
-      F(t, !0);
+      F(t, true);
     }
   };
   var j = function e(t) {
     var n;
     var r = this;
     if (!r._d) {
-      r._d = !0;
+      r._d = true;
       r = r._w || r;
       try {
         if (r === t) {
@@ -1501,7 +1501,7 @@ module.exports = function (e) {
           v(function () {
             var i = {
               _w: r,
-              _d: !1
+              _d: false
             };
             try {
               n.call(t, u(e, i, 1), u(M, i, 1));
@@ -1512,12 +1512,12 @@ module.exports = function (e) {
         } else {
           r._v = t;
           r._s = 1;
-          F(r, !1);
+          F(r, false);
         }
       } catch (t) {
         M.call({
           _w: r,
-          _d: !1
+          _d: false
         }, t);
       }
     }
@@ -1535,29 +1535,29 @@ module.exports = function (e) {
     };
     (r = function (e) {
       this._c = [];
-      this._a = void 0;
+      this._a = undefined;
       this._s = 0;
-      this._d = !1;
-      this._v = void 0;
+      this._d = false;
+      this._v = undefined;
       this._h = 0;
-      this._n = !1;
+      this._n = false;
     }).prototype = n(78)(k.prototype, {
       then: function (e, t) {
         var n = B(A(this, k));
         n.ok = "function" != typeof e || e;
         n.fail = "function" == typeof t && t;
-        n.domain = S ? x.domain : void 0;
+        n.domain = S ? x.domain : undefined;
         this._c.push(n);
         if (this._a) {
           this._a.push(n);
         }
         if (this._s) {
-          F(this, !1);
+          F(this, false);
         }
         return n.promise;
       },
       catch: function (e) {
-        return this.then(void 0, e);
+        return this.then(undefined, e);
       }
     });
     o = function () {
@@ -1600,14 +1600,14 @@ module.exports = function (e) {
         var n = [];
         var o = 0;
         var a = 1;
-        _(e, !1, function (e) {
+        _(e, false, function (e) {
           var s = o++;
-          var c = !1;
-          n.push(void 0);
+          var c = false;
+          n.push(undefined);
           a++;
           t.resolve(e).then(function (e) {
             if (!c) {
-              c = !0;
+              c = true;
               n[s] = e;
               if (! --a) {
                 r(n);
@@ -1629,7 +1629,7 @@ module.exports = function (e) {
       var n = B(t);
       var r = n.reject;
       var i = y(function () {
-        _(e, !1, function (e) {
+        _(e, false, function (e) {
           t.resolve(e).then(n.resolve, r);
         });
       });
@@ -1641,7 +1641,7 @@ module.exports = function (e) {
   });
 }, function (e, t) {
   e.exports = function (e, t, n, r) {
-    if (!(e instanceof t) || void 0 !== r && r in e) {
+    if (!(e instanceof t) || undefined !== r && r in e) {
       throw TypeError(n + ": incorrect invocation!");
     }
     return e;
@@ -1690,7 +1690,10 @@ module.exports = function (e) {
       return i ? t(r(n)[0], n[1]) : t(n);
     } catch (t) {
       var o = e.return;
-      throw void 0 !== o && r(o.call(e)), t;
+      if (undefined !== o) {
+        r(o.call(e));
+      }
+      throw t;
     }
   };
 }, function (e, t, n) {
@@ -1698,20 +1701,20 @@ module.exports = function (e) {
   var i = n(2)("iterator");
   var o = Array.prototype;
   e.exports = function (e) {
-    return void 0 !== e && (r.Array === e || o[i] === e);
+    return undefined !== e && (r.Array === e || o[i] === e);
   };
 }, function (e, t, n) {
   var r = n(51);
   var i = n(2)("iterator");
   var o = n(14);
   e.exports = n(1).getIteratorMethod = function (e) {
-    if (void 0 != e) {
+    if (undefined != e) {
       return e[i] || e["@@iterator"] || o[r(e)];
     }
   };
 }, function (e, t) {
   e.exports = function (e, t, n) {
-    var r = void 0 === n;
+    var r = undefined === n;
     switch (t.length) {
       case 0:
         return r ? e() : e.call(n);
@@ -1746,10 +1749,15 @@ module.exports = function (e) {
         try {
           i();
         } catch (r) {
-          throw e ? n() : t = void 0, r;
+          if (e) {
+            n();
+          } else {
+            t = undefined;
+          }
+          throw r;
         }
       }
-      t = void 0;
+      t = undefined;
       if (r) {
         r.enter();
       }
@@ -1760,7 +1768,7 @@ module.exports = function (e) {
       };
     } else if (!o || r.navigator && r.navigator.standalone) {
       if (s && s.resolve) {
-        var l = s.resolve(void 0);
+        var l = s.resolve(undefined);
         n = function () {
           l.then(u);
         };
@@ -1770,10 +1778,10 @@ module.exports = function (e) {
         };
       }
     } else {
-      var f = !0;
+      var f = true;
       var d = document.createTextNode("");
       new o(u).observe(d, {
-        characterData: !0
+        characterData: true
       });
       n = function () {
         d.data = f = !f;
@@ -1782,7 +1790,7 @@ module.exports = function (e) {
     return function (r) {
       var i = {
         fn: r,
-        next: void 0
+        next: undefined
       };
       if (t) {
         t.next = i;
@@ -1819,7 +1827,7 @@ module.exports = function (e) {
     var t = "function" == typeof i[e] ? i[e] : r[e];
     if (a && t && !t[s]) {
       o.f(t, s, {
-        configurable: !0,
+        configurable: true,
         get: function () {
           return this;
         }
@@ -1828,11 +1836,11 @@ module.exports = function (e) {
   };
 }, function (e, t, n) {
   var r = n(2)("iterator");
-  var i = !1;
+  var i = false;
   try {
     var o = [7][r]();
     o.return = function () {
-      i = !0;
+      i = true;
     };
     Array.from(o, function () {
       throw 2;
@@ -1840,15 +1848,15 @@ module.exports = function (e) {
   } catch (e) {}
   e.exports = function (e, t) {
     if (!t && !i) {
-      return !1;
+      return false;
     }
-    var n = !1;
+    var n = false;
     try {
       var o = [7];
       var a = o[r]();
       a.next = function () {
         return {
-          done: n = !0
+          done: n = true
         };
       };
       o[r] = function () {
@@ -1937,7 +1945,7 @@ module.exports = function (e) {
 }, function (e, t, n) {
   e.exports = {
     default: n(87),
-    __esModule: !0
+    __esModule: true
   };
 }, function (e, t, n) {
   var r = n(1);
@@ -2093,7 +2101,7 @@ module.exports = function (e) {
           var s = this.byteLength;
           var c = e(t, s);
           var u = s;
-          if (void 0 !== n) {
+          if (undefined !== n) {
             u = e(n, s);
           }
           return c > u ? new ArrayBuffer(0) : (r = u - c, i = new ArrayBuffer(r), o = new Uint8Array(i), a = new Uint8Array(this, c, r), o.set(a), i);
@@ -2286,8 +2294,8 @@ module.exports = function (e) {
       default: e
     };
   }
-  t.__esModule = !0;
-  t.UploadManager = void 0;
+  t.__esModule = true;
+  t.UploadManager = undefined;
   var i = r(n(18));
   var o = r(n(34));
   var a = r(n(17));
@@ -2298,12 +2306,12 @@ module.exports = function (e) {
       var i = this;
       (0, a.default)(this, e);
       this.config = (0, o.default)({
-        useCdnDomain: !0,
-        disableStatisticsReport: !1,
+        useCdnDomain: true,
+        disableStatisticsReport: false,
         retryCount: 3,
-        checkByMD5: !1,
+        checkByMD5: false,
         uphost: null,
-        forceDirect: !1,
+        forceDirect: false,
         concurrentRequestLimit: 3,
         region: null
       }, t.config);
@@ -2318,7 +2326,7 @@ module.exports = function (e) {
       this.xhrHandler = function (e) {
         return i.xhrList.push(e);
       };
-      this.aborted = !1;
+      this.aborted = false;
       this.file = t.file;
       this.key = t.key;
       this.token = t.token;
@@ -2330,7 +2338,7 @@ module.exports = function (e) {
     }
     e.prototype.putFile = function () {
       var e = this;
-      this.aborted = !1;
+      this.aborted = false;
       if (!this.putExtra.fname) {
         this.putExtra.fname = this.file.name;
       }
@@ -2373,7 +2381,7 @@ module.exports = function (e) {
     };
     e.prototype.stop = function () {
       this.clear();
-      this.aborted = !0;
+      this.aborted = true;
     };
     e.prototype.sendLog = function (e, t) {
       this.statisticsLogger.log({
@@ -2572,8 +2580,8 @@ module.exports = function (e) {
       default: e
     };
   }
-  t.__esModule = !0;
-  t.Pool = void 0;
+  t.__esModule = true;
+  t.Pool = undefined;
   var i = r(n(18));
   var o = r(n(17));
   t.Pool = function () {
@@ -2720,7 +2728,7 @@ module.exports = function (e) {
     }
     return o;
   }
-  t.__esModule = !0;
+  t.__esModule = true;
   t.imageView2 = i;
   t.imageMogr2 = o;
   t.watermark = a;
@@ -2737,8 +2745,8 @@ module.exports = function (e) {
     });
   };
   t.pipeline = function (e, t, n) {
-    var s = void 0;
-    var c = void 0;
+    var s = undefined;
+    var c = undefined;
     var u = "";
     if ("[object Array]" === Object.prototype.toString.call(e)) {
       for (var l = 0, f = e.length; l < f; l++) {
@@ -2756,7 +2764,7 @@ module.exports = function (e) {
             u += o(s) + "|";
             break;
           default:
-            c = !0;
+            c = true;
         }
         if (c) {
           throw "fop is wrong in pipeline";
@@ -2782,8 +2790,8 @@ module.exports = function (e) {
       default: e
     };
   }
-  t.__esModule = !0;
-  t.Observable = void 0;
+  t.__esModule = true;
+  t.Observable = undefined;
   var i = r(n(96));
   var o = r(n(17));
   t.Observable = function () {
@@ -2801,8 +2809,8 @@ module.exports = function (e) {
   var a = function () {
     function e(t, n, r) {
       (0, o.default)(this, e);
-      this.isStopped = !1;
-      if ("object" === (void 0 === t ? "undefined" : (0, i.default)(t))) {
+      this.isStopped = false;
+      if ("object" === (undefined === t ? "undefined" : (0, i.default)(t))) {
         this._onNext = t.next;
         this._onError = t.error;
         this._onCompleted = t.complete;
@@ -2819,13 +2827,13 @@ module.exports = function (e) {
     };
     e.prototype.error = function (e) {
       if (!this.isStopped && this._onError) {
-        this.isStopped = !0;
+        this.isStopped = true;
         this._onError(e);
       }
     };
     e.prototype.complete = function (e) {
       if (!this.isStopped && this._onCompleted) {
-        this.isStopped = !0;
+        this.isStopped = true;
         this._onCompleted(e);
       }
     };
@@ -2838,7 +2846,7 @@ module.exports = function (e) {
       this.result = n;
     }
     e.prototype.unsubscribe = function () {
-      this.observer.isStopped = !0;
+      this.observer.isStopped = true;
       this.result();
     };
     return e;
@@ -2851,7 +2859,7 @@ module.exports = function (e) {
       default: e
     };
   }
-  t.__esModule = !0;
+  t.__esModule = true;
   var i = r(n(97));
   var o = r(n(99));
   var a = "function" == typeof o.default && "symbol" == typeof i.default ? function (e) {
@@ -2860,14 +2868,14 @@ module.exports = function (e) {
     return e && "function" == typeof o.default && e.constructor === o.default && e !== o.default.prototype ? "symbol" : typeof e;
   };
   t.default = "function" == typeof o.default && "symbol" === a(i.default) ? function (e) {
-    return void 0 === e ? "undefined" : a(e);
+    return undefined === e ? "undefined" : a(e);
   } : function (e) {
-    return e && "function" == typeof o.default && e.constructor === o.default && e !== o.default.prototype ? "symbol" : void 0 === e ? "undefined" : a(e);
+    return e && "function" == typeof o.default && e.constructor === o.default && e !== o.default.prototype ? "symbol" : undefined === e ? "undefined" : a(e);
   };
 }, function (e, t, n) {
   e.exports = {
     default: n(98),
-    __esModule: !0
+    __esModule: true
   };
 }, function (e, t, n) {
   n(41);
@@ -2876,7 +2884,7 @@ module.exports = function (e) {
 }, function (e, t, n) {
   e.exports = {
     default: n(100),
-    __esModule: !0
+    __esModule: true
   };
 }, function (e, t, n) {
   n(101);
@@ -2963,11 +2971,11 @@ module.exports = function (e) {
       e(H, n, r);
     }
     v(t);
-    n = w(n, !0);
+    n = w(n, true);
     v(r);
-    return i(U, n) ? (r.enumerable ? (i(t, N) && t[N][n] && (t[N][n] = !1), r = x(r, {
-      enumerable: E(0, !1)
-    })) : (i(t, N) || D(t, N, E(1, {})), t[N][n] = !0), W(t, n, r)) : D(t, n, r);
+    return i(U, n) ? (r.enumerable ? (i(t, N) && t[N][n] && (t[N][n] = false), r = x(r, {
+      enumerable: E(0, false)
+    })) : (i(t, N) || D(t, N, E(1, {})), t[N][n] = true), W(t, n, r)) : D(t, n, r);
   };
   var q = function (e, t) {
     v(e);
@@ -2977,16 +2985,16 @@ module.exports = function (e) {
     return e;
   };
   var $ = function (e) {
-    var t = j.call(this, e = w(e, !0));
+    var t = j.call(this, e = w(e, true));
     return !(this === V && i(U, e) && !i(H, e)) && (!(t || !i(this, e) || !i(U, e) || i(this, N) && this[N][e]) || t);
   };
   var J = function (e, t) {
     e = b(e);
-    t = w(t, !0);
+    t = w(t, true);
     if (e !== V || !i(U, t) || i(H, t)) {
       var n = B(e, t);
       if (!(!n || !i(U, t) || i(e, N) && e[N][t])) {
-        n.enumerable = !0;
+        n.enumerable = true;
       }
       return n;
     }
@@ -3012,19 +3020,19 @@ module.exports = function (e) {
       if (this instanceof F) {
         throw TypeError("Symbol is not a constructor!");
       }
-      var e = d(arguments.length > 0 ? arguments[0] : void 0);
+      var e = d(arguments.length > 0 ? arguments[0] : undefined);
       var t = function t(n) {
         if (this === V) {
           t.call(H, n);
         }
         if (i(this, N) && i(this[N], e)) {
-          this[N][e] = !1;
+          this[N][e] = false;
         }
         W(this, e, E(1, n));
       };
       if (o && Q) {
         W(V, e, {
-          configurable: !0,
+          configurable: true,
           set: t
         });
       }
@@ -3038,7 +3046,7 @@ module.exports = function (e) {
     n(25).f = $;
     k.f = ee;
     if (o && !n(13)) {
-      s(V, "propertyIsEnumerable", $, !0);
+      s(V, "propertyIsEnumerable", $, true);
     }
     p.f = function (e) {
       return K(h(e));
@@ -3066,15 +3074,15 @@ module.exports = function (e) {
       }
     },
     useSetter: function () {
-      Q = !0;
+      Q = true;
     },
     useSimple: function () {
-      Q = !1;
+      Q = false;
     }
   });
   a(a.S + a.F * !G, "Object", {
     create: function (e, t) {
-      return void 0 === t ? x(e) : q(x(e), t);
+      return undefined === t ? x(e) : q(x(e), t);
     },
     defineProperty: Y,
     defineProperties: q,
@@ -3102,7 +3110,7 @@ module.exports = function (e) {
           r.push(arguments[i++]);
         }
         n = t = r[1];
-        if ((m(t) || void 0 !== e) && !X(e)) {
+        if ((m(t) || undefined !== e) && !X(e)) {
           if (!g(t)) {
             t = function (e, t) {
               if ("function" == typeof n) {
@@ -3123,8 +3131,8 @@ module.exports = function (e) {
     n(6)(F.prototype, M, F.prototype.valueOf);
   }
   f(F, "Symbol");
-  f(Math, "Math", !0);
-  f(r.JSON, "JSON", !0);
+  f(Math, "Math", true);
+  f(r.JSON, "JSON", true);
 }, function (e, t, n) {
   var r = n(22)("meta");
   var i = n(8);
@@ -3132,7 +3140,7 @@ module.exports = function (e) {
   var a = n(7).f;
   var s = 0;
   var c = Object.isExtensible || function () {
-    return !0;
+    return true;
   };
   var u = !n(10)(function () {
     return c(Object.preventExtensions({}));
@@ -3147,7 +3155,7 @@ module.exports = function (e) {
   };
   var f = e.exports = {
     KEY: r,
-    NEED: !1,
+    NEED: false,
     fastKey: function (e, t) {
       if (!i(e)) {
         return "symbol" == typeof e ? e : ("string" == typeof e ? "S" : "P") + e;
@@ -3166,10 +3174,10 @@ module.exports = function (e) {
     getWeak: function (e, t) {
       if (!o(e, r)) {
         if (!c(e)) {
-          return !0;
+          return true;
         }
         if (!t) {
-          return !1;
+          return false;
         }
         l(e);
       }
@@ -3227,7 +3235,7 @@ module.exports = function (e) {
   var u = Object.getOwnPropertyDescriptor;
   t.f = n(4) ? u : function (e, t) {
     e = o(e);
-    t = a(t, !0);
+    t = a(t, true);
     if (c) {
       try {
         return u(e, t);
@@ -3249,8 +3257,8 @@ module.exports = function (e) {
       default: e
     };
   }
-  t.__esModule = !0;
-  t.StatisticsLogger = void 0;
+  t.__esModule = true;
+  t.StatisticsLogger = undefined;
   var i = r(n(36));
   var o = r(n(17));
   var a = n(12);
@@ -3288,7 +3296,7 @@ module.exports = function (e) {
       default: e
     };
   }
-  t.__esModule = !0;
+  t.__esModule = true;
   var i = r(n(18));
   var o = r(n(34));
   var a = r(n(17));
@@ -3311,7 +3319,7 @@ module.exports = function (e) {
       (0, a.default)(this, e);
       this.config = (0, o.default)({
         quality: .92,
-        noCompressIfLarger: !1
+        noCompressIfLarger: false
       }, n);
       this.file = t;
     }
@@ -3404,7 +3412,7 @@ module.exports = function (e) {
       var d = u;
       a.width = c;
       a.height = u;
-      for (var h = void 0, p = void 0, _ = 0; _ < r; _++) {
+      for (var h = undefined, p = undefined, _ = 0; _ < r; _++) {
         var A = c * o | 0;
         var g = u * o | 0;
         if (_ === r - 1) {
@@ -3463,7 +3471,7 @@ module.exports = function (e) {
             if (p) {
               console.log("Not a valid JPEG");
             }
-            return !1;
+            return false;
           }
           for (var n = 2, r = e.byteLength; n < r;) {
             if (function (e, t) {
@@ -3493,7 +3501,7 @@ module.exports = function (e) {
                 if (p) {
                   console.log("Not a valid JPEG");
                 }
-                return !1;
+                return false;
               }
               for (var n = 2, r = e.byteLength, i = new DOMParser(); n < r - 4;) {
                 if ("http" == l(t, n, 4)) {
@@ -3531,7 +3539,7 @@ module.exports = function (e) {
           };
           (function (e, t) {
             var n = new XMLHttpRequest();
-            n.open("GET", e, !0);
+            n.open("GET", e, true);
             n.responseType = "blob";
             n.onload = function (e) {
               if (!(200 != this.status && 0 !== this.status)) {
@@ -3551,7 +3559,7 @@ module.exports = function (e) {
             n(r.response);
             r = null;
           };
-          r.open("GET", e.src, !0);
+          r.open("GET", e.src, true);
           r.responseType = "arraybuffer";
           r.send(null);
         }
@@ -3575,14 +3583,14 @@ module.exports = function (e) {
         if (p) {
           console.log("Not a valid JPEG");
         }
-        return !1;
+        return false;
       }
       for (var n, r = 2, i = e.byteLength; r < i;) {
         if (255 != t.getUint8(r)) {
           if (p) {
             console.log("Not a valid marker at offset " + r + ", found: " + t.getUint8(r));
           }
-          return !1;
+          return false;
         }
         n = t.getUint8(r + 1);
         if (p) {
@@ -3716,7 +3724,7 @@ module.exports = function (e) {
         if (p) {
           console.log("Not valid EXIF data! " + l(e, t, 4));
         }
-        return !1;
+        return false;
       }
       var n;
       var r;
@@ -3725,28 +3733,28 @@ module.exports = function (e) {
       var a;
       var s = t + 6;
       if (18761 == e.getUint16(s)) {
-        n = !1;
+        n = false;
       } else {
         if (19789 != e.getUint16(s)) {
           if (p) {
             console.log("Not valid TIFF data! (no 0x4949 or 0x4D4D)");
           }
-          return !1;
+          return false;
         }
-        n = !0;
+        n = true;
       }
       if (42 != e.getUint16(s + 2, !n)) {
         if (p) {
           console.log("Not valid TIFF data! (no 0x002A)");
         }
-        return !1;
+        return false;
       }
       var u = e.getUint32(s + 4, !n);
       if (u < 8) {
         if (p) {
           console.log("Not valid TIFF data! (First offset less than 8)", e.getUint32(s + 4, !n));
         }
-        return !1;
+        return false;
       }
       if ((r = c(e, s, s + u, g, n)).ExifIFDPointer) {
         for (i in o = c(e, s, s + r.ExifIFDPointer, A, n)) {
@@ -3865,15 +3873,15 @@ module.exports = function (e) {
               var a = i[o];
               var s = a.nodeName;
               var c = a.nodeValue;
-              if (void 0 !== s) {
+              if (undefined !== s) {
                 t[s] = c;
               }
             }
             var u = r.nodeName;
-            if (void 0 === t[u]) {
+            if (undefined === t[u]) {
               t[u] = d(r);
             } else {
-              if (void 0 === t[u].push) {
+              if (undefined === t[u].push) {
                 var l = t[u];
                 t[u] = [];
                 t[u].push(l);
@@ -3889,11 +3897,11 @@ module.exports = function (e) {
         console.log(e.message);
       }
     }
-    var p = !1;
+    var p = false;
     var _ = function e(t) {
       return t instanceof e ? t : this instanceof e ? void (this.EXIFwrapped = t) : new e(t);
     };
-    if (void 0 !== e && e.exports) {
+    if (undefined !== e && e.exports) {
       t = e.exports = _;
     }
     t.EXIF = _;
@@ -4195,10 +4203,10 @@ module.exports = function (e) {
       15: "category"
     };
     _.enableXmp = function () {
-      _.isXmpEnabled = !0;
+      _.isXmpEnabled = true;
     };
     _.disableXmp = function () {
-      _.isXmpEnabled = !1;
+      _.isXmpEnabled = false;
     };
     _.getData = function (e, t) {
       return !((self.Image && e instanceof self.Image || self.HTMLImageElement && e instanceof self.HTMLImageElement) && !e.complete || (r(e) ? t && t.call(e) : o(e, t), 0));
@@ -4260,7 +4268,7 @@ module.exports = function (e) {
     _.readFromBinaryFile = function (e) {
       return a(e);
     };
-    if (!(void 0 === (i = function () {
+    if (!(undefined === (i = function () {
       return _;
     }.apply(t, [])))) {
       e.exports = i;

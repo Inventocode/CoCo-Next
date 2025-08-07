@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.OTAdapter = void 0;
+exports.OTAdapter = undefined;
 var r = require("./2312/index");
 var i = require("./2316");
 var o = function () {

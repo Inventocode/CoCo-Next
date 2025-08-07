@@ -1,7 +1,7 @@
 "use strict";
 
-var r = require("../10/index");
-var o = require("react");
+import r = require("../10/index");
+import o = require("react");
 var i = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -14,7 +14,7 @@ var i = function __importDefault(module) {
   });
   return defaultExport;
 }(o);
-var a = require("../8");
+import a = require("../8");
 var s = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -29,14 +29,14 @@ var s = function __importDefault(module) {
 }(a);
 require("./866");
 var _a;
-_a = Object(o.memo)(function (e) {
+_a = o.memo(function (e) {
   var t = e.onChange;
   var n = e.checked;
-  var a = Object(o.useState)(n);
-  var c = Object(r.a)(a, 2);
+  var a = o.useState(n);
+  var c = r.a(a, 2);
   var l = c[0];
   var u = c[1];
-  Object(o.useEffect)(function () {
+  o.useEffect(function () {
     u(!!n);
   }, [n]);
   return i.a.createElement("div", {

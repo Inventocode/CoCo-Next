@@ -2,7 +2,7 @@
 
 module.exports = function (e, t, n) {
   var r = "";
-  var i = !0 === e.schema.$async;
+  var i = true === e.schema.$async;
   var o = e.util.schemaHasRulesExcept(e.schema, e.RULES.all, "$ref");
   var a = e.self._getId(e.schema);
   if (e.opts.strictKeywords) {
@@ -18,7 +18,7 @@ module.exports = function (e, t, n) {
   if (e.isTop) {
     r += " var validate = ";
     if (i) {
-      e.async = !0;
+      e.async = true;
       r += "async ";
     }
     r += "function(data, dataPath, parentData, parentDataProperty, rootData) { 'use strict'; ";
@@ -35,17 +35,17 @@ module.exports = function (e, t, n) {
     var p = !e.opts.allErrors;
     var _ = "data" + (l || "");
     var A = "valid" + u;
-    if (!1 === e.schema) {
+    if (false === e.schema) {
       if (e.isTop) {
-        p = !0;
+        p = true;
       } else {
         r += " var " + A + " = false; ";
       }
       (q = q || []).push(r);
       r = "";
-      if (!1 !== e.createErrors) {
+      if (false !== e.createErrors) {
         r += " { keyword: 'false schema' , dataPath: (dataPath || '') + " + e.errorPath + " , schemaPath: " + e.util.toQuotedString(h) + " , params: {} ";
-        if (!1 !== e.opts.messages) {
+        if (false !== e.opts.messages) {
           r += " , message: 'boolean schema is false' ";
         }
         if (e.opts.verbose) {
@@ -85,7 +85,7 @@ module.exports = function (e, t, n) {
     e.baseId = e.baseId || e.rootId;
     delete e.isTop;
     e.dataPathArr = [""];
-    if (void 0 !== e.schema.default && e.opts.useDefaults && e.opts.strictDefaults) {
+    if (undefined !== e.schema.default && e.opts.useDefaults && e.opts.strictDefaults) {
       var m = "default is ignored in the schema root";
       if ("log" !== e.opts.strictDefaults) {
         throw new Error(m);
@@ -112,7 +112,7 @@ module.exports = function (e, t, n) {
   var b = "";
   var w = e.schema.type;
   var E = Array.isArray(w);
-  if (w && e.opts.nullable && !0 === e.schema.nullable) {
+  if (w && e.opts.nullable && true === e.schema.nullable) {
     if (E) {
       if (-1 == w.indexOf("null")) {
         w = w.concat("null");
@@ -120,20 +120,20 @@ module.exports = function (e, t, n) {
     } else {
       if ("null" != w) {
         w = [w, "null"];
-        E = !0;
+        E = true;
       }
     }
   }
   if (E && 1 == w.length) {
     w = w[0];
-    E = !1;
+    E = false;
   }
   if (e.schema.$ref && o) {
     if ("fail" == e.opts.extendRefs) {
       throw new Error("$ref: validation keywords used in schema at path \"" + e.errSchemaPath + "\" (see option extendRefs)");
     }
-    if (!0 !== e.opts.extendRefs) {
-      o = !1;
+    if (true !== e.opts.extendRefs) {
+      o = false;
       e.logger.warn("$ref: keywords ignored in schema at path \"" + e.errSchemaPath + "\"");
     }
   }
@@ -145,13 +145,13 @@ module.exports = function (e, t, n) {
       var x = e.util.coerceToTypes(e.opts.coerceTypes, w);
     }
     var C = e.RULES.types[w];
-    if (x || E || !0 === C || C && !$(C)) {
+    if (x || E || true === C || C && !$(C)) {
       d = e.schemaPath + ".type";
       h = e.errSchemaPath + "/type";
       d = e.schemaPath + ".type";
       h = e.errSchemaPath + "/type";
       var O = E ? "checkDataTypes" : "checkDataType";
-      r += " if (" + e.util[O](w, _, e.opts.strictNumbers, !0) + ") { ";
+      r += " if (" + e.util[O](w, _, e.opts.strictNumbers, true) + ") { ";
       if (x) {
         var k = "dataType" + u;
         var S = "coerced" + u;
@@ -191,11 +191,11 @@ module.exports = function (e, t, n) {
         r += " else {   ";
         (q = q || []).push(r);
         r = "";
-        if (!1 !== e.createErrors) {
+        if (false !== e.createErrors) {
           r += " { keyword: 'type' , dataPath: (dataPath || '') + " + e.errorPath + " , schemaPath: " + e.util.toQuotedString(h) + " , params: { type: '";
           r += E ? "" + w.join(",") : "" + w;
           r += "' } ";
-          if (!1 !== e.opts.messages) {
+          if (false !== e.opts.messages) {
             r += " , message: 'should be ";
             r += E ? "" + w.join(",") : "" + w;
             r += "' ";
@@ -228,11 +228,11 @@ module.exports = function (e, t, n) {
       } else {
         (q = q || []).push(r);
         r = "";
-        if (!1 !== e.createErrors) {
+        if (false !== e.createErrors) {
           r += " { keyword: 'type' , dataPath: (dataPath || '') + " + e.errorPath + " , schemaPath: " + e.util.toQuotedString(h) + " , params: { type: '";
           r += E ? "" + w.join(",") : "" + w;
           r += "' } ";
-          if (!1 !== e.opts.messages) {
+          if (false !== e.opts.messages) {
             r += " , message: 'should be ";
             r += E ? "" + w.join(",") : "" + w;
             r += "' ";
@@ -281,7 +281,7 @@ module.exports = function (e, t, n) {
               var M = Object.keys(f);
               if (M) {
                 for (var j, L = -1, U = M.length - 1; L < U;) {
-                  if (void 0 !== (G = f[j = M[L += 1]]).default) {
+                  if (undefined !== (G = f[j = M[L += 1]]).default) {
                     var H = _ + e.util.getProperty(j);
                     if (e.compositeRule) {
                       if (e.opts.strictDefaults) {
@@ -312,7 +312,7 @@ module.exports = function (e, t, n) {
               if (V) {
                 D = -1;
                 for (var G, z = V.length - 1; D < z;) {
-                  if (void 0 !== (G = V[D += 1]).default) {
+                  if (undefined !== (G = V[D += 1]).default) {
                     H = _ + "[" + D + "]";
                     if (e.compositeRule) {
                       if (e.opts.strictDefaults) {
@@ -365,11 +365,11 @@ module.exports = function (e, t, n) {
             h = e.errSchemaPath + "/type";
             (q = q || []).push(r);
             r = "";
-            if (!1 !== e.createErrors) {
+            if (false !== e.createErrors) {
               r += " { keyword: 'type' , dataPath: (dataPath || '') + " + e.errorPath + " , schemaPath: " + e.util.toQuotedString(h) + " , params: { type: '";
               r += E ? "" + w.join(",") : "" + w;
               r += "' } ";
-              if (!1 !== e.opts.messages) {
+              if (false !== e.opts.messages) {
                 r += " , message: 'should be ";
                 r += E ? "" + w.join(",") : "" + w;
                 r += "' ";
@@ -407,15 +407,15 @@ module.exports = function (e, t, n) {
   function $(e) {
     for (var t = e.rules, n = 0; n < t.length; n++) {
       if (J(t[n])) {
-        return !0;
+        return true;
       }
     }
   }
   function J(t) {
-    return void 0 !== e.schema[t.keyword] || t.implements && function (t) {
+    return undefined !== e.schema[t.keyword] || t.implements && function (t) {
       for (var n = t.implements, r = 0; r < n.length; r++) {
-        if (void 0 !== e.schema[n[r]]) {
-          return !0;
+        if (undefined !== e.schema[n[r]]) {
+          return true;
         }
       }
     }(t);

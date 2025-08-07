@@ -35,7 +35,7 @@ var g = function (t) {
     return {
       next: function () {
         if (t && n >= t.length) {
-          t = void 0;
+          t = undefined;
         }
         return {
           value: t && t[n++],
@@ -58,10 +58,10 @@ var y = function () {
     return new p(o, i);
   };
   t.detect = function (e, r) {
-    for (var n, o, i = new Array(), a = 0, u = 0, s = !1; a < r.getHeight();) {
+    for (var n, o, i = new Array(), a = 0, u = 0, s = false; a < r.getHeight();) {
       var c = t.findVertices(r, a, u);
       if (null != c[0] || null != c[3]) {
-        s = !0;
+        s = true;
         i.push(c);
         if (!e) {
           break;
@@ -77,10 +77,10 @@ var y = function () {
         if (!s) {
           break;
         }
-        s = !1;
+        s = false;
         u = 0;
         try {
-          for (n = void 0, f = g(i), h = f.next(), void 0; !h.done; h = f.next()) {
+          for (n = undefined, f = g(i), h = f.next(), undefined; !h.done; h = f.next()) {
             var f;
             var h;
             var l = h.value;
@@ -129,10 +129,10 @@ var y = function () {
     }
   };
   t.findRowsWithPattern = function (e, r, n, o, i, a) {
-    for (var u = new Array(4), s = !1, c = new Int32Array(a.length); o < r; o += t.ROW_STEP) {
-      if (null != (g = t.findGuardPattern(e, i, o, n, !1, a, c))) {
+    for (var u = new Array(4), s = false, c = new Int32Array(a.length); o < r; o += t.ROW_STEP) {
+      if (null != (g = t.findGuardPattern(e, i, o, n, false, a, c))) {
         for (; o > 0;) {
-          if (null == (p = t.findGuardPattern(e, i, --o, n, !1, a, c))) {
+          if (null == (p = t.findGuardPattern(e, i, --o, n, false, a, c))) {
             o++;
             break;
           }
@@ -140,7 +140,7 @@ var y = function () {
         }
         u[0] = new h.a(g[0], o);
         u[1] = new h.a(g[1], o);
-        s = !0;
+        s = true;
         break;
       }
     }
@@ -148,7 +148,7 @@ var y = function () {
     if (s) {
       for (var l = 0, p = Int32Array.from([Math.trunc(u[0].getX()), Math.trunc(u[1].getX())]); f < r; f++) {
         var g;
-        if (null != (g = t.findGuardPattern(e, p[0], f, n, !1, a, c)) && Math.abs(p[0] - g[0]) < t.MAX_PATTERN_DRIFT && Math.abs(p[1] - g[1]) < t.MAX_PATTERN_DRIFT) {
+        if (null != (g = t.findGuardPattern(e, p[0], f, n, false, a, c)) && Math.abs(p[0] - g[0]) < t.MAX_PATTERN_DRIFT && Math.abs(p[1] - g[1]) < t.MAX_PATTERN_DRIFT) {
           p = g;
           l = 0;
         } else {
@@ -371,10 +371,10 @@ var A = function () {
       if ("%%" === t) {
         return "%";
       }
-      if (void 0 !== e[++r]) {
-        t = i ? parseInt(i.substr(1)) : void 0;
+      if (undefined !== e[++r]) {
+        t = i ? parseInt(i.substr(1)) : undefined;
         var s;
-        var c = a ? parseInt(a.substr(1)) : void 0;
+        var c = a ? parseInt(a.substr(1)) : undefined;
         switch (u) {
           case "s":
             s = e[r];
@@ -399,7 +399,7 @@ var A = function () {
         }
         s = "object" === typeof s ? JSON.stringify(s) : (+s).toString(c);
         for (var f = parseInt(o), h = o && o[0] + "" === "0" ? "0" : " "; s.length < f;) {
-          s = void 0 !== n ? s + h : h + s;
+          s = undefined !== n ? s + h : h + s;
         }
         return s;
       }
@@ -427,7 +427,7 @@ var E = function (t) {
     return {
       next: function () {
         if (t && n >= t.length) {
-          t = void 0;
+          t = undefined;
         }
         return {
           value: t && t[n++],
@@ -519,7 +519,7 @@ var I = function (t) {
     return {
       next: function () {
         if (t && n >= t.length) {
-          t = void 0;
+          t = undefined;
         }
         return {
           value: t && t[n++],
@@ -540,7 +540,7 @@ var S = function (t, e) {
   var i = r.call(t);
   var a = [];
   try {
-    for (; (void 0 === e || e-- > 0) && !(n = i.next()).done;) {
+    for (; (undefined === e || e-- > 0) && !(n = i.next()).done;) {
       a.push(n.value);
     }
   } catch (u) {
@@ -652,7 +652,7 @@ var b = function (t) {
     return {
       next: function () {
         if (t && n >= t.length) {
-          t = void 0;
+          t = undefined;
         }
         return {
           value: t && t[n++],
@@ -713,7 +713,7 @@ var R = function (t) {
         } else if (l < 0 || h.getRowNumber() >= t.getRowCount() || l > f) {
           e[f] = null;
         } else {
-          for (var d = void 0, p = (d = s > 2 ? (s - 2) * l : l) >= f, g = 1; g <= d && !p; g++) {
+          for (var d = undefined, p = (d = s > 2 ? (s - 2) * l : l) >= f, g = 1; g <= d && !p; g++) {
             p = null != e[f - g];
           }
           if (p) {
@@ -886,7 +886,7 @@ var N = function (t) {
     return {
       next: function () {
         if (t && n >= t.length) {
-          t = void 0;
+          t = undefined;
         }
         return {
           value: t && t[n++],
@@ -1063,7 +1063,7 @@ var D = function () {
     }
   };
   t.adjustRowNumber = function (t, e) {
-    return null != e && !(!e.hasValidRowNumber() || e.getBucket() !== t.getBucket()) && (t.setRowNumber(e.getRowNumber()), !0);
+    return null != e && !(!e.hasValidRowNumber() || e.getBucket() !== t.getBucket()) && (t.setRowNumber(e.getRowNumber()), true);
   };
   t.prototype.getBarcodeColumnCount = function () {
     return this.barcodeColumnCount;
@@ -1172,7 +1172,7 @@ var B = function () {
         t.RATIOS_TABLE[e][s.a.BARS_IN_MODULE - o - 1] = Math.fround(i / s.a.MODULES_IN_CODEWORD);
       }
     }
-    this.bSymbolTableReady = !0;
+    this.bSymbolTableReady = true;
   };
   t.getDecodedValue = function (e) {
     var r = t.getDecodedCodewordValue(t.sampleBitCounts(e));
@@ -1228,7 +1228,7 @@ var B = function () {
     }
     return a;
   };
-  t.bSymbolTableReady = !1;
+  t.bSymbolTableReady = false;
   t.RATIOS_TABLE = new Array(s.a.SYMBOL_TABLE.length).map(function (t) {
     return new Array(s.a.BARS_IN_MODULE);
   });
@@ -1246,7 +1246,7 @@ var F = function (t) {
     return {
       next: function () {
         if (t && n >= t.length) {
-          t = void 0;
+          t = undefined;
         }
         return {
           value: t && t[n++],
@@ -1260,12 +1260,12 @@ var F = function (t) {
 var x = function () {
   function t() {}
   t.decode = function (e, r, n, o, i, u, s) {
-    for (var c, f = new _(e, r, n, o, i), h = null, l = null, d = !0;; d = !1) {
+    for (var c, f = new _(e, r, n, o, i), h = null, l = null, d = true;; d = false) {
       if (null != r) {
-        h = t.getRowIndicatorColumn(e, f, r, !0, u, s);
+        h = t.getRowIndicatorColumn(e, f, r, true, u, s);
       }
       if (null != o) {
-        l = t.getRowIndicatorColumn(e, f, o, !1, u, s);
+        l = t.getRowIndicatorColumn(e, f, o, false, u, s);
       }
       if (null == (c = t.merge(h, l))) {
         throw a.a.getNotFoundInstance();
@@ -1282,8 +1282,8 @@ var x = function () {
     c.setDetectionResultColumn(g, l);
     for (var y = null != h, w = 1; w <= g; w++) {
       var v = y ? w : g - w;
-      if (void 0 === c.getDetectionResultColumn(v)) {
-        var m = void 0;
+      if (undefined === c.getDetectionResultColumn(v)) {
+        var m = undefined;
         m = 0 === v || v === g ? new R(f, 0 === v) : new C(f);
         c.setDetectionResultColumn(v, m);
         for (var A = -1, E = A, I = f.getMinY(); I <= f.getMaxY(); I++) {
@@ -1487,7 +1487,7 @@ var x = function () {
         var h = f.value;
         if (null != h) {
           try {
-            for (n = void 0, l = F(h.getCodewords()), d = l.next(), void 0; !d.done; d = l.next()) {
+            for (n = undefined, l = F(h.getCodewords()), d = l.next(), undefined; !d.done; d = l.next()) {
               var l;
               var d;
               var p = d.value;
@@ -1562,7 +1562,7 @@ var x = function () {
     for (var c = 0; t.isValidBarcodeColumn(e, r - u);) {
       r -= u;
       try {
-        for (i = void 0, f = F(e.getDetectionResultColumn(r).getCodewords()), h = f.next(), void 0; !h.done; h = f.next()) {
+        for (i = undefined, f = F(e.getDetectionResultColumn(r).getCodewords()), h = f.next(), undefined; !h.done; h = f.next()) {
           var f;
           var h;
           var l = h.value;
@@ -1726,7 +1726,7 @@ var k = function (t) {
     return {
       next: function () {
         if (t && n >= t.length) {
-          t = void 0;
+          t = undefined;
         }
         return {
           value: t && t[n++],
@@ -1740,21 +1740,21 @@ var k = function (t) {
 var V = function () {
   function t() {}
   t.prototype.decode = function (e, r) {
-    if (void 0 === r) {
+    if (undefined === r) {
       r = null;
     }
-    var n = t.decode(e, r, !1);
+    var n = t.decode(e, r, false);
     if (null == n || 0 === n.length || null == n[0]) {
       throw a.a.getNotFoundInstance();
     }
     return n[0];
   };
   t.prototype.decodeMultiple = function (e, r) {
-    if (void 0 === r) {
+    if (undefined === r) {
       r = null;
     }
     try {
-      return t.decode(e, r, !0);
+      return t.decode(e, r, true);
     } catch (n) {
       if (n instanceof i.a || n instanceof o.a) {
         throw a.a.getNotFoundInstance();
@@ -1771,7 +1771,7 @@ var V = function () {
       for (var h = k(c.getPoints()), l = h.next(); !l.done; l = h.next()) {
         var d = l.value;
         var p = x.decode(c.getBits(), d[4], d[5], d[6], d[7], t.getMinCodewordWidth(d), t.getMaxCodewordWidth(d));
-        var g = new u.a(p.getText(), p.getRawBytes(), void 0, d, n.a.PDF_417);
+        var g = new u.a(p.getText(), p.getRawBytes(), undefined, d, n.a.PDF_417);
         g.putMetadata(f.a.ERROR_CORRECTION_LEVEL, p.getECLevel());
         var w = p.getOther();
         if (null != w) {

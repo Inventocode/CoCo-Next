@@ -1,11 +1,11 @@
 "use strict";
 
-var r = require("../../../337");
-var i = require("../../../19");
-var o = require("../../../103");
-var a = require("../../../430");
+import r = require("../../../337");
+import i = require("../../../19");
+import o = require("../../../103");
+import a = require("../../../430");
 require("../../../50/index");
-var s = require("react");
+import s = require("react");
 var c = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -18,7 +18,7 @@ var c = function __importDefault(module) {
   });
   return defaultExport;
 }(s);
-var u = require("./1505/793");
+import u = require("./1505/793");
 function l(e, t) {
   var n = Object.create(null);
   if (e) {
@@ -26,7 +26,7 @@ function l(e, t) {
       return e;
     }).forEach(function (e) {
       n[e.key] = function (e) {
-        return t && Object(s.isValidElement)(e) ? t(e) : e;
+        return t && s.isValidElement(e) ? t(e) : e;
       }(e);
     });
   }
@@ -71,15 +71,15 @@ function d(e, t, n) {
   }(t, r);
   Object.keys(i).forEach(function (o) {
     var a = i[o];
-    if (Object(s.isValidElement)(a)) {
+    if (s.isValidElement(a)) {
       var c = o in t;
       var u = o in r;
       var l = t[o];
-      var d = Object(s.isValidElement)(l) && !l.props.in;
+      var d = s.isValidElement(l) && !l.props.in;
       if (!u || c && !d) {
         if (u || !c || d) {
-          if (u && c && Object(s.isValidElement)(l)) {
-            i[o] = Object(s.cloneElement)(a, {
+          if (u && c && s.isValidElement(l)) {
+            i[o] = s.cloneElement(a, {
               onExited: n.bind(null, a),
               in: l.props.in,
               exit: f(a, "exit", e),
@@ -87,14 +87,14 @@ function d(e, t, n) {
             });
           }
         } else {
-          i[o] = Object(s.cloneElement)(a, {
-            in: !1
+          i[o] = s.cloneElement(a, {
+            in: false
           });
         }
       } else {
-        i[o] = Object(s.cloneElement)(a, {
+        i[o] = s.cloneElement(a, {
           onExited: n.bind(null, a),
-          in: !0,
+          in: true,
           exit: f(a, "exit", e),
           enter: f(a, "enter", e)
         });
@@ -111,28 +111,28 @@ var h = Object.values || function (e) {
 var p = function (e) {
   function t(t, n) {
     var r;
-    var i = (r = e.call(this, t, n) || this).handleExited.bind(Object(o.a)(r));
+    var i = (r = e.call(this, t, n) || this).handleExited.bind(o.a(r));
     r.state = {
       contextValue: {
-        isMounting: !0
+        isMounting: true
       },
       handleExited: i,
-      firstRender: !0
+      firstRender: true
     };
     return r;
   }
-  Object(a.a)(t, e);
+  a.a(t, e);
   var n = t.prototype;
   n.componentDidMount = function () {
-    this.mounted = !0;
+    this.mounted = true;
     this.setState({
       contextValue: {
-        isMounting: !1
+        isMounting: false
       }
     });
   };
   n.componentWillUnmount = function () {
-    this.mounted = !1;
+    this.mounted = false;
   };
   t.getDerivedStateFromProps = function (e, t) {
     var n;
@@ -141,15 +141,15 @@ var p = function (e) {
     var o = t.handleExited;
     return {
       children: t.firstRender ? (n = e, r = o, l(n.children, function (e) {
-        return Object(s.cloneElement)(e, {
+        return s.cloneElement(e, {
           onExited: r.bind(null, e),
-          in: !0,
+          in: true,
           appear: f(e, "appear", n),
           enter: f(e, "enter", n),
           exit: f(e, "exit", n)
         });
       })) : d(e, i, o),
-      firstRender: !1
+      firstRender: false
     };
   };
   n.handleExited = function (e, t) {
@@ -160,7 +160,7 @@ var p = function (e) {
       }
       if (this.mounted) {
         this.setState(function (t) {
-          var n = Object(i.a)({}, t.children);
+          var n = i.a({}, t.children);
           delete n[e.key];
           return {
             children: n
@@ -173,7 +173,7 @@ var p = function (e) {
     var e = this.props;
     var t = e.component;
     var n = e.childFactory;
-    var i = Object(r.a)(e, ["component", "childFactory"]);
+    var i = r.a(e, ["component", "childFactory"]);
     var o = this.state.contextValue;
     var a = h(this.state.children).map(n);
     delete i.appear;

@@ -25,16 +25,16 @@ var r;
       var r = null;
       var s = null;
       var c = null;
-      var f = !1;
-      var d = !1;
+      var f = false;
+      var d = false;
       if ("string" == typeof e) {
         e = function (e) {
           e = e.replace(o, "").replace(a, "").toLowerCase();
           var t;
-          var n = !1;
+          var n = false;
           if (B[e]) {
             e = B[e];
-            n = !0;
+            n = true;
           } else if ("transparent" == e) {
             return {
               r: 0,
@@ -123,7 +123,7 @@ var r;
               format: n ? "name" : "hex"
             };
           }
-          return !1;
+          return false;
         }(e);
       }
       if ("object" == typeof e) {
@@ -136,7 +136,7 @@ var r;
             g: 255 * F(p, 255),
             b: 255 * F(_, 255)
           };
-          f = !0;
+          f = true;
           d = "%" === String(e.r).substr(-1) ? "prgb" : "rgb";
         } else {
           if (H(e.h) && H(e.s) && H(e.v)) {
@@ -158,7 +158,7 @@ var r;
                 b: 255 * [a, a, c, n, n, s][u]
               };
             }(e.h, r, s);
-            f = !0;
+            f = true;
             d = "hsv";
           } else {
             if (H(e.h) && H(e.s) && H(e.l)) {
@@ -195,7 +195,7 @@ var r;
                   b: 255 * o
                 };
               }(e.h, r, c);
-              f = !0;
+              f = true;
               d = "hsl";
             }
           }
@@ -535,7 +535,7 @@ var r;
       return 1 == this._a ? "rgb(" + c(100 * F(this._r, 255)) + "%, " + c(100 * F(this._g, 255)) + "%, " + c(100 * F(this._b, 255)) + "%)" : "rgba(" + c(100 * F(this._r, 255)) + "%, " + c(100 * F(this._g, 255)) + "%, " + c(100 * F(this._b, 255)) + "%, " + this._roundA + ")";
     },
     toName: function () {
-      return 0 === this._a ? "transparent" : !(this._a < 1) && (D[_(this._r, this._g, this._b, !0)] || !1);
+      return 0 === this._a ? "transparent" : !(this._a < 1) && (D[_(this._r, this._g, this._b, true)] || false);
     },
     toFilter: function (e) {
       var t = "#" + A(this._r, this._g, this._b, this._a);
@@ -550,9 +550,9 @@ var r;
     toString: function (e) {
       var t = !!e;
       e = e || this._format;
-      var n = !1;
+      var n = false;
       var r = this._a < 1 && this._a >= 0;
-      return t || !r || "hex" !== e && "hex6" !== e && "hex3" !== e && "hex4" !== e && "hex8" !== e && "name" !== e ? ("rgb" === e && (n = this.toRgbString()), "prgb" === e && (n = this.toPercentageRgbString()), "hex" !== e && "hex6" !== e || (n = this.toHexString()), "hex3" === e && (n = this.toHexString(!0)), "hex4" === e && (n = this.toHex8String(!0)), "hex8" === e && (n = this.toHex8String()), "name" === e && (n = this.toName()), "hsl" === e && (n = this.toHslString()), "hsv" === e && (n = this.toHsvString()), n || this.toHexString()) : "name" === e && 0 === this._a ? this.toName() : this.toRgbString();
+      return t || !r || "hex" !== e && "hex6" !== e && "hex3" !== e && "hex4" !== e && "hex8" !== e && "name" !== e ? ("rgb" === e && (n = this.toRgbString()), "prgb" === e && (n = this.toPercentageRgbString()), "hex" !== e && "hex6" !== e || (n = this.toHexString()), "hex3" === e && (n = this.toHexString(true)), "hex4" === e && (n = this.toHex8String(true)), "hex8" === e && (n = this.toHex8String()), "name" === e && (n = this.toName()), "hsl" === e && (n = this.toHslString()), "hsv" === e && (n = this.toHsvString()), n || this.toHexString()) : "name" === e && 0 === this._a ? this.toName() : this.toRgbString();
     },
     clone: function () {
       return d(this.toString());
@@ -649,7 +649,7 @@ var r;
     var r;
     var i;
     var o = d.readability(e, t);
-    switch (i = !1, (r = function (e) {
+    switch (i = false, (r = function (e) {
       var t;
       var n;
       t = ((e = e || {
@@ -699,7 +699,7 @@ var r;
     return d.isReadable(e, s, {
       level: o,
       size: a
-    }) || !i ? s : (n.includeFallbackColors = !1, d.mostReadable(e, ["#fff", "#000"], n));
+    }) || !i ? s : (n.includeFallbackColors = false, d.mostReadable(e, ["#fff", "#000"], n));
   };
   var B = d.names = {
     aliceblue: "f0f8ff",
@@ -926,7 +926,7 @@ var r;
   if (module.exports) {
     module.exports = d;
   } else {
-    if (!(void 0 === (r = function () {
+    if (!(undefined === (r = function () {
       return d;
     }.call(exports, require, exports, module)))) {
       module.exports = r;

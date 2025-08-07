@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.BlockRenderer = void 0;
+exports.BlockRenderer = undefined;
 var r = require("tslib");
 var i = require("../../../125/195/index");
 var o = require("../../../4/127");
@@ -27,7 +27,7 @@ var s = function () {
   e.prototype.render_path_start = function (e, t) {
     e.push("m 0," + this.theme.renderer.CORNER_RADIUS);
     e.push(this.CORNER_LEFT_TOP);
-    if (t.is_render_notch() && void 0 != t.previous_connection) {
+    if (t.is_render_notch() && undefined != t.previous_connection) {
       this.render_path_notch_top(e);
     }
   };
@@ -40,8 +40,8 @@ var s = function () {
     e.push(this.theme.renderer.NOTCH_PATH_RIGHT);
   };
   e.prototype.render_edge_shape_right = function (e, t, n, r, i) {
-    if (void 0 === n) {
-      n = !0;
+    if (undefined === n) {
+      n = true;
     }
     var o = i ? Math.min(i / 2, this.edge_width) : this.edge_width;
     var a = t.height;
@@ -96,7 +96,7 @@ var s = function () {
     var n = t.get_full_next_block();
     var r = Math.min(this.theme.renderer.EXECUTION_GROUP_DECORATION_WIDTH, e.width - this.theme.renderer.STATEMENT_MIN_WIDTH - this.theme.renderer.EXECUTION_GROUP_DECORATION_RIGHT_MARGIN);
     if (n) {
-      var i = this.get_decoration_path(1, n.get_original_colour(), n.get_border_colour(), r, !1);
+      var i = this.get_decoration_path(1, n.get_original_colour(), n.get_border_colour(), r, false);
       e.decoration_block_paths.unshift(i);
       e.svg_group.insertBefore(i, e.svg_path);
     }
@@ -118,7 +118,7 @@ var s = function () {
   e.prototype.get_block_padding_y = function (e) {
     return e !== i.InputType.VALUE ? this.theme.renderer.STATEMENT_ROW_PADDING_Y_TO_STATEMENT_BLOCK : this.theme.renderer.STATEMENT_ROW_PADDING_Y_TO_VALUE_BLOCK;
   };
-  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.theme)], e.prototype, "theme", void 0);
+  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.theme)], e.prototype, "theme", undefined);
   return e;
 }();
 exports.BlockRenderer = s;

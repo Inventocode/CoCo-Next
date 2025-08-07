@@ -29,9 +29,9 @@ var l = {
 exports.version = require("./2206").version;
 exports.tokenize = function (e, t) {
   var n = l.get(t);
-  if (!(t && !0 === t.tokens)) {
+  if (!(t && true === t.tokens)) {
     t = Object.assign({}, t, {
-      tokens: !0
+      tokens: true
     });
   }
   return new n(t, e).tokenize();

@@ -4,8 +4,8 @@
   var r = require("./325");
   var i = "object" == typeof exports && exports && !exports.nodeType && exports;
   var o = i && "object" == typeof e && e && !e.nodeType && e;
-  var a = o && o.exports === i ? r.a.Buffer : void 0;
-  var s = a ? a.allocUnsafe : void 0;
+  var a = o && o.exports === i ? r.a.Buffer : undefined;
+  var s = a ? a.allocUnsafe : undefined;
   exports.a = function (e, t) {
     if (t) {
       return e.slice();

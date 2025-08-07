@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.ControllerType = void 0;
+exports.ControllerType = undefined;
 var r = require("tslib");
 !function (e) {
   e.SLIDER = "SLIDER";

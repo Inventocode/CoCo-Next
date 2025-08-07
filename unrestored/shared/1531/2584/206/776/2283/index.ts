@@ -6,17 +6,17 @@ var o = require("../../../1036/1363/569");
 var a = require("./2284");
 var s = require("./2285");
 function c() {
-  return 1 === arguments.length ? Object.assign({}, arguments.length <= 0 ? void 0 : arguments[0]) : "string" === typeof (arguments.length <= 1 ? void 0 : arguments[1]) ? {
-    node: arguments.length <= 0 ? void 0 : arguments[0],
-    message: arguments.length <= 1 ? void 0 : arguments[1],
-    data: arguments.length <= 2 ? void 0 : arguments[2],
-    fix: arguments.length <= 3 ? void 0 : arguments[3]
+  return 1 === arguments.length ? Object.assign({}, arguments.length <= 0 ? undefined : arguments[0]) : "string" === typeof (arguments.length <= 1 ? undefined : arguments[1]) ? {
+    node: arguments.length <= 0 ? undefined : arguments[0],
+    message: arguments.length <= 1 ? undefined : arguments[1],
+    data: arguments.length <= 2 ? undefined : arguments[2],
+    fix: arguments.length <= 3 ? undefined : arguments[3]
   } : {
-    node: arguments.length <= 0 ? void 0 : arguments[0],
-    loc: arguments.length <= 1 ? void 0 : arguments[1],
-    message: arguments.length <= 2 ? void 0 : arguments[2],
-    data: arguments.length <= 3 ? void 0 : arguments[3],
-    fix: arguments.length <= 4 ? void 0 : arguments[4]
+    node: arguments.length <= 0 ? undefined : arguments[0],
+    loc: arguments.length <= 1 ? undefined : arguments[1],
+    message: arguments.length <= 2 ? undefined : arguments[2],
+    data: arguments.length <= 3 ? undefined : arguments[3],
+    fix: arguments.length <= 4 ? undefined : arguments[4]
   };
 }
 function u(e) {
@@ -135,7 +135,7 @@ function _(e, t) {
 module.exports = function (e) {
   return function () {
     var t;
-    var n = c.apply(void 0, arguments);
+    var n = c.apply(undefined, arguments);
     var r = e.messageIds;
     u(n);
     if (n.messageId) {

@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.BlockAnimations = void 0;
+exports.BlockAnimations = undefined;
 var r = require("tslib");
 var i = require("inversify");
 var o = require("@kitten-team/gl-matrix");
@@ -29,7 +29,7 @@ var l = function () {
       a.style.transformOrigin = "left top";
       a.style.overflow = "visible";
       this.utils.set_transform_style(a, i[0], i[1], o);
-      var c = (0, s.clone_node)(n, !0);
+      var c = (0, s.clone_node)(n, true);
       c.setAttribute("transform", "");
       a.appendChild(c);
       r.appendChild(a);
@@ -51,7 +51,7 @@ var l = function () {
   };
   e.prototype.connection_ui_effect = function (e) {
     var t = e.get_svg_root();
-    if (void 0 == t) {
+    if (undefined == t) {
       throw new ReferenceError("Cannot connect ui effect to block without svg root.");
     }
     var n = e.get_workspace();
@@ -96,7 +96,7 @@ var l = function () {
         this.disconnectUiEffectTimeoutId = window.setTimeout(function () {
           e.svg_group.classList.remove("dd");
           var t = e.svg_group.getAttribute("transform");
-          e.svg_group.setAttribute("transform", (void 0 == t ? "" : t) + "skewX(0)");
+          e.svg_group.setAttribute("transform", (undefined == t ? "" : t) + "skewX(0)");
         }, 100);
       }
     }
@@ -105,7 +105,7 @@ var l = function () {
     clearTimeout(this.disconnectUiEffectTimeoutId);
     e.svg_group.classList.remove("dd");
     var t = e.svg_group.getAttribute("transform");
-    e.svg_group.setAttribute("transform", void 0 == t ? "" : t);
+    e.svg_group.setAttribute("transform", undefined == t ? "" : t);
   };
   e.prototype.toolbox_click_effect = function () {};
   e.prototype.block_flash_effect = function (e, t) {
@@ -143,7 +143,7 @@ var l = function () {
         calcMode: "spline",
         keySplines: "0.25,0.1,0.25,1;0.25,0.1,0.25,1"
       });
-      if (!(null === (n = e.svg_path) || void 0 === n)) {
+      if (!(null === (n = e.svg_path) || undefined === n)) {
         n.removeAttribute("fill");
       }
       if (e.is_starting_block()) {
@@ -152,10 +152,10 @@ var l = function () {
         }
       }
       if (e.is_output_block() && e.parent_block) {
-        if (!(null === (r = e.svg_path) || void 0 === r)) {
+        if (!(null === (r = e.svg_path) || undefined === r)) {
           r.setAttribute("stroke", "#FFFFFF");
         }
-        if (!(null === (i = e.svg_path) || void 0 === i)) {
+        if (!(null === (i = e.svg_path) || undefined === i)) {
           i.setAttribute("stroke-width", "2px");
         }
       } else {
@@ -167,12 +167,12 @@ var l = function () {
     if (m) {
       e.svg_group.removeChild(m);
     }
-    if (!(null === (o = e.svg_path) || void 0 === o)) {
+    if (!(null === (o = e.svg_path) || undefined === o)) {
       o.removeAttribute("filter");
     }
     var y;
     var b = e.get_colour().toString();
-    if (!(null === (a = e.svg_path) || void 0 === a)) {
+    if (!(null === (a = e.svg_path) || undefined === a)) {
       a.setAttribute("fill", b);
     }
     if (e.is_starting_block()) {
@@ -181,15 +181,15 @@ var l = function () {
         y.removeAttribute("filter");
       }
     }
-    if (!(null === (l = e.svg_path) || void 0 === l)) {
+    if (!(null === (l = e.svg_path) || undefined === l)) {
       l.setAttribute("stroke", e.get_border_colour().toString());
     }
-    if (!(null === (f = e.svg_path) || void 0 === f)) {
+    if (!(null === (f = e.svg_path) || undefined === f)) {
       f.setAttribute("stroke-width", e.get_stroke_width());
     }
   };
-  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.utils)], e.prototype, "utils", void 0);
-  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.theme)], e.prototype, "theme", void 0);
+  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.utils)], e.prototype, "utils", undefined);
+  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.theme)], e.prototype, "theme", undefined);
   return e = (0, r.__decorate)([(0, i.injectable)()], e);
 }();
 exports.BlockAnimations = l;

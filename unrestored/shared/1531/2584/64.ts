@@ -3,7 +3,7 @@
 export { i as a };
 export { a as b };
 export { s as c };
-var r = require("./13/303/index");
+import r = require("./13/303/index");
 var o = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -24,7 +24,7 @@ function a(e) {
   if (t) {
     var n = document.createRange();
     n.selectNodeContents(e);
-    n.collapse(!1);
+    n.collapse(false);
     t.removeAllRanges();
     t.addRange(n);
   }

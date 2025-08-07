@@ -4,13 +4,13 @@ var r = require("../../842");
 var i = require("./2217/index");
 var o = require("./2251");
 module.exports = function () {
-  var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+  var e = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : {};
   var t = new i(r({
-    meta: !1,
-    useDefaults: !0,
-    validateSchema: !1,
+    meta: false,
+    useDefaults: true,
+    validateSchema: false,
     missingRefs: "ignore",
-    verbose: !0,
+    verbose: true,
     schemaId: "auto"
   }, e));
   t.addMetaSchema(o);

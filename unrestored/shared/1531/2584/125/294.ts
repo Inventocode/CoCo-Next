@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.is_valid_number = exports.lerp = exports.to_radians = exports.clamp = exports.gen_uid = exports.contains = exports.Rect = exports.Size = void 0;
+exports.is_valid_number = exports.lerp = exports.to_radians = exports.clamp = exports.gen_uid = exports.contains = exports.Rect = exports.Size = undefined;
 var r = function (e, t) {
   this.width = e;
   this.height = t;

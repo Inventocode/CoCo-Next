@@ -580,7 +580,7 @@ function __generator(thisArg, body) {
       throw op[1];
     }
     return {
-      value: op[0] ? op[1] : void 0,
+      value: op[0] ? op[1] : undefined,
       done: true
     };
   }
@@ -608,7 +608,7 @@ var CodemaoError = /** @class */function (_super) {
     var _this = _super.call(this, options.message) || this;
     var error_code = options.error_code;
     var _a = options.error_origin_response;
-    var error_origin_response = _a === void 0 ? {
+    var error_origin_response = _a === undefined ? {
       error_code: error_code,
       error_message: options.message,
       error_number: error_code || null
@@ -879,7 +879,7 @@ var CodemaoRequest = /** @class */function () {
     return Object.keys(params).length === 0 ? "" + getConfig().host[this.hostType] + url : "" + getConfig().host[this.hostType] + url + "?" + params_str;
   };
   CodemaoRequest.prototype.dispatch_request = function (options) {
-    return __awaiter(this, void 0, void 0, function () {
+    return __awaiter(this, undefined, undefined, function () {
       var _this = this;
       return __generator(this, function (_a) {
         return [2 /*return*/, new Promise(function (resolve, reject) {
@@ -946,7 +946,7 @@ var CodemaoRequest = /** @class */function () {
                 } else {
                   reject(new CodemaoError({
                     error_code: response.error_code,
-                    error_body: ((_a = response.catastrophe) === null || _a === void 0 ? void 0 : _a.error) || response,
+                    error_body: ((_a = response.catastrophe) === null || _a === undefined ? undefined : _a.error) || response,
                     error_origin_response: response,
                     message: "Get error from " + request_url + "."
                   }));
@@ -1100,7 +1100,7 @@ function check_register_options(options) {
  * @param profile
  */
 function check_agreement_ids(ids) {
-  if (!(ids === null || ids === void 0 ? void 0 : ids.length)) {
+  if (!(ids === null || ids === undefined ? undefined : ids.length)) {
     throw new CodemaoError({
       error_code: ERROR_TYPE.AGREEMENT_IDS,
       message: 'agreement_ids should not be an empty array.'
@@ -1163,7 +1163,7 @@ function check_if_pwd_equals_confirmed_pwd(pwd, pwd_confirm) {
  * @returns {Promise<any>}
  */
 function retry(retries, fn) {
-  return __awaiter(this, void 0, void 0, function () {
+  return __awaiter(this, undefined, undefined, function () {
     var result;
     var err_1;
     return __generator(this, function (_a) {
@@ -1247,7 +1247,7 @@ function is_cookie_exist(cookie) {
   return cookie && cookie !== 'undefined' && cookie !== '' ? true : false;
 }
 function load_script(url, id, timeout) {
-  return __awaiter(this, void 0, void 0, function () {
+  return __awaiter(this, undefined, undefined, function () {
     return __generator(this, function (_a) {
       return [2 /*return*/, new Promise(function (resolve, reject) {
         if (!document.getElementById(id)) {
@@ -1348,7 +1348,7 @@ var CodemaoToken = /** @class */function () {
     });
   }
   CodemaoToken.prototype.dispatch_request = function (options) {
-    return __awaiter(this, void 0, void 0, function () {
+    return __awaiter(this, undefined, undefined, function () {
       return __generator(this, function (_a) {
         return [2 /*return*/, this.request.dispatch_request(options)];
       });
@@ -1373,7 +1373,7 @@ var CodemaoToken = /** @class */function () {
   };
   // Get local access token which stored in cookie.
   CodemaoToken.prototype.get_access = function (authorization) {
-    return __awaiter(this, void 0, void 0, function () {
+    return __awaiter(this, undefined, undefined, function () {
       var _a;
       var res;
       var err_1;
@@ -1422,7 +1422,7 @@ var CodemaoToken = /** @class */function () {
     });
   };
   CodemaoToken.prototype.convert_cookie_to_token = function (authorization) {
-    return __awaiter(this, void 0, void 0, function () {
+    return __awaiter(this, undefined, undefined, function () {
       return __generator(this, function (_a) {
         return [2 /*return*/, this.dispatch_request({
           url: TIGER_TOKEN_API.GET_TOKEN_FROM_OLD_COOKIE,
@@ -1486,7 +1486,7 @@ var CodemaoToken = /** @class */function () {
   };
   // Refresh token from back-end.
   CodemaoToken.prototype.refresh_token = function () {
-    return __awaiter(this, void 0, void 0, function () {
+    return __awaiter(this, undefined, undefined, function () {
       return __generator(this, function (_a) {
         return [2 /*return*/, this.dispatch_request({
           method: 'put',
@@ -1500,7 +1500,7 @@ var CodemaoToken = /** @class */function () {
   };
   // Refresh token from back-end and pass it to cookie.
   CodemaoToken.prototype.refresh = function () {
-    return __awaiter(this, void 0, void 0, function () {
+    return __awaiter(this, undefined, undefined, function () {
       var token_res;
       var err_2;
       return __generator(this, function (_a) {
@@ -1550,7 +1550,7 @@ var CodemaoToken = /** @class */function () {
   return CodemaoToken;
 }();
 function retry_when_token_err(retries, fn) {
-  return __awaiter(this, void 0, void 0, function () {
+  return __awaiter(this, undefined, undefined, function () {
     var result;
     var err_3;
     var error_code;
@@ -1638,7 +1638,7 @@ var CodemaoAuth = /** @class */function () {
         'Product-Code': getAuthConfig().product_code,
         pid: getAuthConfig().pid,
         Platform: getAuthConfig().platform
-      }, PUBLIC_HEADERS), (_a = getInitParams()) === null || _a === void 0 ? void 0 : _a.custom_headers)
+      }, PUBLIC_HEADERS), (_a = getInitParams()) === null || _a === undefined ? undefined : _a.custom_headers)
     });
     this.token = new CodemaoToken();
   }
@@ -1649,7 +1649,7 @@ var CodemaoAuth = /** @class */function () {
    * @returns {Promise<{}>}
    */
   CodemaoAuth.prototype.dispatch_request = function (options) {
-    return __awaiter(this, void 0, void 0, function () {
+    return __awaiter(this, undefined, undefined, function () {
       var _a;
       var _b;
       var _this = this;
@@ -1668,7 +1668,7 @@ var CodemaoAuth = /** @class */function () {
             // eslint-disable-next-line require-atomic-updates
             _a[_b] = _c.sent();
             return [2 /*return*/, retry_when_token_err(retries_when_got_token_err, function () {
-              return __awaiter(_this, void 0, void 0, function () {
+              return __awaiter(_this, undefined, undefined, function () {
                 return __generator(this, function (_a) {
                   return [2 /*return*/, this.request.dispatch_request(options)];
                 });
@@ -1686,7 +1686,7 @@ var CodemaoAuth = /** @class */function () {
    * @param ticket 凭证
    */
   CodemaoAuth.prototype.email_register_send_captcha = function (email, ticket) {
-    return __awaiter(this, void 0, void 0, function () {
+    return __awaiter(this, undefined, undefined, function () {
       return __generator(this, function (_a) {
         validate_email_address(email);
         return [2 /*return*/, this.dispatch_request({
@@ -1708,7 +1708,7 @@ var CodemaoAuth = /** @class */function () {
    * @param  captcha  邮箱注册验证码
    */
   CodemaoAuth.prototype.validate_email_register_captcha = function (email, captcha) {
-    return __awaiter(this, void 0, void 0, function () {
+    return __awaiter(this, undefined, undefined, function () {
       return __generator(this, function (_a) {
         validate_email_address(email);
         return [2 /*return*/, this.dispatch_request({
@@ -1727,7 +1727,7 @@ var CodemaoAuth = /** @class */function () {
    * @param    request_body {captchaTicket: string, password: string, rePassword: string}  待注册邮箱
    */
   CodemaoAuth.prototype.register_email = function (register_params, pid) {
-    return __awaiter(this, void 0, void 0, function () {
+    return __awaiter(this, undefined, undefined, function () {
       var captchaTicket;
       var password;
       var rePassword;
@@ -1755,7 +1755,7 @@ var CodemaoAuth = /** @class */function () {
    * @function   获取所有协议列表
    */
   CodemaoAuth.prototype.get_agreements = function () {
-    return __awaiter(this, void 0, void 0, function () {
+    return __awaiter(this, undefined, undefined, function () {
       return __generator(this, function (_a) {
         return [2 /*return*/, this.dispatch_request({
           url: Api.GET_AGREEMENTS,
@@ -1768,7 +1768,7 @@ var CodemaoAuth = /** @class */function () {
    * @function   获取需签署的协议列表
    */
   CodemaoAuth.prototype.get_agreements_need_sign = function () {
-    return __awaiter(this, void 0, void 0, function () {
+    return __awaiter(this, undefined, undefined, function () {
       return __generator(this, function (_a) {
         return [2 /*return*/, this.dispatch_request({
           url: Api.GET_AGREEMENTS_NEED_SIGN,
@@ -1781,7 +1781,7 @@ var CodemaoAuth = /** @class */function () {
    * @function   签署协议
    */
   CodemaoAuth.prototype.sign_agreements = function (agreement_ids, pid) {
-    return __awaiter(this, void 0, void 0, function () {
+    return __awaiter(this, undefined, undefined, function () {
       return __generator(this, function (_a) {
         return [2 /*return*/, this.dispatch_request({
           url: Api.SIGN_AGREEMENTS,
@@ -1800,7 +1800,7 @@ var CodemaoAuth = /** @class */function () {
    * @param     pid      业务方pid
    */
   CodemaoAuth.prototype.find_latest_protocol_list = function (codeList, pid) {
-    return __awaiter(this, void 0, void 0, function () {
+    return __awaiter(this, undefined, undefined, function () {
       return __generator(this, function (_a) {
         return [2 /*return*/, this.dispatch_request({
           url: Api.FIND_LATEST_PROTOCOL_LIST,
@@ -1820,7 +1820,7 @@ var CodemaoAuth = /** @class */function () {
    * @param     ticket       图形验证码ticket
    */
   CodemaoAuth.prototype.send_voice_captcha = function (captcha_params, ticket, oauth_ticket) {
-    return __awaiter(this, void 0, void 0, function () {
+    return __awaiter(this, undefined, undefined, function () {
       var phone_number;
       var type;
       var register_res;
@@ -1860,7 +1860,7 @@ var CodemaoAuth = /** @class */function () {
    * @param pid
    */
   CodemaoAuth.prototype.register_send_captcha = function (phone_number, ticket, pid) {
-    return __awaiter(this, void 0, void 0, function () {
+    return __awaiter(this, undefined, undefined, function () {
       return __generator(this, function (_a) {
         check_phone_number(phone_number);
         return [2 /*return*/, this.dispatch_request({
@@ -1884,7 +1884,7 @@ var CodemaoAuth = /** @class */function () {
    * @param specific_pid 可选参数，以特定的pid进行这次请求
    */
   CodemaoAuth.prototype.register = function (options, specific_pid) {
-    return __awaiter(this, void 0, void 0, function () {
+    return __awaiter(this, undefined, undefined, function () {
       var pid;
       var register_res;
       return __generator(this, function (_a) {
@@ -1919,7 +1919,7 @@ var CodemaoAuth = /** @class */function () {
    * @param pid
    */
   CodemaoAuth.prototype.login_captcha = function (phone_number, ticket, pid) {
-    return __awaiter(this, void 0, void 0, function () {
+    return __awaiter(this, undefined, undefined, function () {
       return __generator(this, function (_a) {
         check_phone_number(phone_number);
         return [2 /*return*/, this.dispatch_request({
@@ -1944,7 +1944,7 @@ var CodemaoAuth = /** @class */function () {
    * @param specific_pid 可选参数，以特定的pid进行这次请求
    */
   CodemaoAuth.prototype.login_phone = function (phone_number, captcha, specific_pid, agreement_ids) {
-    return __awaiter(this, void 0, void 0, function () {
+    return __awaiter(this, undefined, undefined, function () {
       var pid;
       var login_res;
       return __generator(this, function (_a) {
@@ -1981,7 +1981,7 @@ var CodemaoAuth = /** @class */function () {
    * @param specific_pid 可选参数，以特定的pid进行这次请求
    */
   CodemaoAuth.prototype.login_account = function (identity, password, specific_pid, agreement_ids) {
-    return __awaiter(this, void 0, void 0, function () {
+    return __awaiter(this, undefined, undefined, function () {
       var pid;
       var login_res;
       return __generator(this, function (_a) {
@@ -2016,7 +2016,7 @@ var CodemaoAuth = /** @class */function () {
    * @param appid 可选,不传默认开放平台网页应用登录, 也可传编程猫下各公众号appid，需联系后端账号负责人配置
    */
   CodemaoAuth.prototype.login_wechat = function (code, agreement_ids, specific_pid, appid) {
-    return __awaiter(this, void 0, void 0, function () {
+    return __awaiter(this, undefined, undefined, function () {
       var pid;
       var login_res;
       return __generator(this, function (_a) {
@@ -2049,7 +2049,7 @@ var CodemaoAuth = /** @class */function () {
    * @param specific_pid 可选参数，以特定的pid进行这次请求
    */
   CodemaoAuth.prototype.login_qq = function (code, agreement_ids, specific_pid) {
-    return __awaiter(this, void 0, void 0, function () {
+    return __awaiter(this, undefined, undefined, function () {
       var pid;
       var login_res;
       return __generator(this, function (_a) {
@@ -2082,7 +2082,7 @@ var CodemaoAuth = /** @class */function () {
    * @param oauth_ticket
    */
   CodemaoAuth.prototype.bind_phone_for_third_party = function (phone_number, oauth_ticket) {
-    return __awaiter(this, void 0, void 0, function () {
+    return __awaiter(this, undefined, undefined, function () {
       return __generator(this, function (_a) {
         check_phone_number(phone_number);
         return [2 /*return*/, this.dispatch_request({
@@ -2103,7 +2103,7 @@ var CodemaoAuth = /** @class */function () {
    * @param captcha
    */
   CodemaoAuth.prototype.create_user_for_third_party = function (oauth_ticket, captcha, agreement_ids) {
-    return __awaiter(this, void 0, void 0, function () {
+    return __awaiter(this, undefined, undefined, function () {
       var login_res;
       return __generator(this, function (_a) {
         switch (_a.label) {
@@ -2138,7 +2138,7 @@ var CodemaoAuth = /** @class */function () {
    *
    */
   CodemaoAuth.prototype.logout = function () {
-    return __awaiter(this, void 0, void 0, function () {
+    return __awaiter(this, undefined, undefined, function () {
       var res;
       return __generator(this, function (_a) {
         switch (_a.label) {
@@ -2168,7 +2168,7 @@ var CodemaoAuth = /** @class */function () {
    * @param pid
    */
   CodemaoAuth.prototype.bind_phone_captcha = function (phone_number, ticket, pid) {
-    return __awaiter(this, void 0, void 0, function () {
+    return __awaiter(this, undefined, undefined, function () {
       return __generator(this, function (_a) {
         check_phone_number(phone_number);
         return [2 /*return*/, this.dispatch_request({
@@ -2193,7 +2193,7 @@ var CodemaoAuth = /** @class */function () {
    * @param captcha
    */
   CodemaoAuth.prototype.bind_phone = function (phone_number, captcha) {
-    return __awaiter(this, void 0, void 0, function () {
+    return __awaiter(this, undefined, undefined, function () {
       return __generator(this, function (_a) {
         check_phone_number(phone_number);
         check_captcha(captcha);
@@ -2215,7 +2215,7 @@ var CodemaoAuth = /** @class */function () {
    * @param phone_number
    */
   CodemaoAuth.prototype.bind_phone_check = function (phone_number) {
-    return __awaiter(this, void 0, void 0, function () {
+    return __awaiter(this, undefined, undefined, function () {
       return __generator(this, function (_a) {
         check_phone_number(phone_number);
         return [2 /*return*/, this.dispatch_request({
@@ -2237,7 +2237,7 @@ var CodemaoAuth = /** @class */function () {
    * @param pid
    */
   CodemaoAuth.prototype.rebind_phone_captcha = function (phone_number, old_phone_number, pid) {
-    return __awaiter(this, void 0, void 0, function () {
+    return __awaiter(this, undefined, undefined, function () {
       return __generator(this, function (_a) {
         check_phone_number(phone_number);
         check_phone_number(old_phone_number);
@@ -2261,7 +2261,7 @@ var CodemaoAuth = /** @class */function () {
    * @param captcha
    */
   CodemaoAuth.prototype.rebind_phone = function (phone_number, captcha) {
-    return __awaiter(this, void 0, void 0, function () {
+    return __awaiter(this, undefined, undefined, function () {
       return __generator(this, function (_a) {
         check_phone_number(phone_number);
         check_captcha(captcha);
@@ -2285,7 +2285,7 @@ var CodemaoAuth = /** @class */function () {
    * @param pid
    */
   CodemaoAuth.prototype.reset_pwd_captcha = function (phone_number, ticket, pid) {
-    return __awaiter(this, void 0, void 0, function () {
+    return __awaiter(this, undefined, undefined, function () {
       return __generator(this, function (_a) {
         check_phone_number(phone_number);
         return [2 /*return*/, this.dispatch_request({
@@ -2309,7 +2309,7 @@ var CodemaoAuth = /** @class */function () {
    * @param captcha
    */
   CodemaoAuth.prototype.reset_pwd_token = function (phone_number, captcha) {
-    return __awaiter(this, void 0, void 0, function () {
+    return __awaiter(this, undefined, undefined, function () {
       return __generator(this, function (_a) {
         check_phone_number(phone_number);
         check_captcha(captcha);
@@ -2332,7 +2332,7 @@ var CodemaoAuth = /** @class */function () {
    * @param pwd_confirm
    */
   CodemaoAuth.prototype.reset_pwd = function (ticket, pwd, pwd_confirm) {
-    return __awaiter(this, void 0, void 0, function () {
+    return __awaiter(this, undefined, undefined, function () {
       var request_options;
       var token;
       var err_1;
@@ -2381,7 +2381,7 @@ var CodemaoAuth = /** @class */function () {
    * @param {string} pid
    */
   CodemaoAuth.prototype.send_universal_captcha = function (phone_number, ticket, pid) {
-    return __awaiter(this, void 0, void 0, function () {
+    return __awaiter(this, undefined, undefined, function () {
       return __generator(this, function (_a) {
         check_phone_number(phone_number);
         return [2 /*return*/, this.dispatch_request({
@@ -2405,7 +2405,7 @@ var CodemaoAuth = /** @class */function () {
    * @param {string} captcha
    */
   CodemaoAuth.prototype.verify_universal_captcha = function (phone_number, captcha) {
-    return __awaiter(this, void 0, void 0, function () {
+    return __awaiter(this, undefined, undefined, function () {
       return __generator(this, function (_a) {
         check_phone_number(phone_number);
         check_captcha(captcha);
@@ -2428,7 +2428,7 @@ var CodemaoAuth = /** @class */function () {
    * @param {string} pid
    */
   CodemaoAuth.prototype.login_captcha_silence = function (phone_number, ticket, pid) {
-    return __awaiter(this, void 0, void 0, function () {
+    return __awaiter(this, undefined, undefined, function () {
       return __generator(this, function (_a) {
         check_phone_number(phone_number);
         return [2 /*return*/, this.dispatch_request({
@@ -2462,7 +2462,7 @@ var CodemaoAuth = /** @class */function () {
   //   specific_pid?: string,
   // ): Promise<SilenceLoginResponse>;
   CodemaoAuth.prototype.login_phone_silence = function (first_param, second_param, third_param, agreement_ids) {
-    return __awaiter(this, void 0, void 0, function () {
+    return __awaiter(this, undefined, undefined, function () {
       var phone_number;
       var captcha;
       var
@@ -2482,10 +2482,10 @@ var CodemaoAuth = /** @class */function () {
               specific_pid = third_param || '';
             }
             if (typeof first_param === 'object') {
-              phone_number = (first_param === null || first_param === void 0 ? void 0 : first_param.phone_number) || '';
-              captcha = (first_param === null || first_param === void 0 ? void 0 : first_param.captcha) || '';
+              phone_number = (first_param === null || first_param === undefined ? undefined : first_param.phone_number) || '';
+              captcha = (first_param === null || first_param === undefined ? undefined : first_param.captcha) || '';
               // agreement_ids = first_param?.agreement_ids || undefined;
-              agreement_ids = first_param === null || first_param === void 0 ? void 0 : first_param.agreement_ids;
+              agreement_ids = first_param === null || first_param === undefined ? undefined : first_param.agreement_ids;
               specific_pid = second_param || '';
             }
             check_phone_number(phone_number);
@@ -2512,14 +2512,14 @@ var CodemaoAuth = /** @class */function () {
     });
   };
   CodemaoAuth.prototype.get_access_token = function (authorization) {
-    return __awaiter(this, void 0, void 0, function () {
+    return __awaiter(this, undefined, undefined, function () {
       return __generator(this, function (_a) {
         return [2 /*return*/, this.token.get_access(authorization)];
       });
     });
   };
   CodemaoAuth.prototype.request_with_token = function (options) {
-    return __awaiter(this, void 0, void 0, function () {
+    return __awaiter(this, undefined, undefined, function () {
       var token_options;
       return __generator(this, function (_a) {
         token_options = {
@@ -2536,7 +2536,7 @@ var CodemaoAuth = /** @class */function () {
    * @param username
    */
   CodemaoAuth.prototype.set_username = function (username) {
-    return __awaiter(this, void 0, void 0, function () {
+    return __awaiter(this, undefined, undefined, function () {
       return __generator(this, function (_a) {
         check_username(username);
         return [2 /*return*/, this.dispatch_request({
@@ -2557,7 +2557,7 @@ var CodemaoAuth = /** @class */function () {
    * @param pwd_confirm
    */
   CodemaoAuth.prototype.init_password = function (pwd, pwd_confirm) {
-    return __awaiter(this, void 0, void 0, function () {
+    return __awaiter(this, undefined, undefined, function () {
       return __generator(this, function (_a) {
         check_password(pwd);
         check_password(pwd_confirm);
@@ -2582,7 +2582,7 @@ var CodemaoAuth = /** @class */function () {
    * @param new_pwd_confirm
    */
   CodemaoAuth.prototype.change_pwd_by_old = function (old_pwd, new_pwd, new_pwd_confirm) {
-    return __awaiter(this, void 0, void 0, function () {
+    return __awaiter(this, undefined, undefined, function () {
       var res;
       return __generator(this, function (_a) {
         switch (_a.label) {
@@ -2618,7 +2618,7 @@ var CodemaoAuth = /** @class */function () {
    * @param pid
    */
   CodemaoAuth.prototype.change_pwd_by_phone_captcha = function (phone_number, pid) {
-    return __awaiter(this, void 0, void 0, function () {
+    return __awaiter(this, undefined, undefined, function () {
       return __generator(this, function (_a) {
         check_phone_number(phone_number);
         return [2 /*return*/, this.dispatch_request({
@@ -2641,7 +2641,7 @@ var CodemaoAuth = /** @class */function () {
    * @param pwd
    */
   CodemaoAuth.prototype.change_pwd_by_phone = function (phone_number, captcha, pwd) {
-    return __awaiter(this, void 0, void 0, function () {
+    return __awaiter(this, undefined, undefined, function () {
       var res;
       return __generator(this, function (_a) {
         switch (_a.label) {
@@ -2675,7 +2675,7 @@ var CodemaoAuth = /** @class */function () {
    * @param profile
    */
   CodemaoAuth.prototype.set_profile = function (profile) {
-    return __awaiter(this, void 0, void 0, function () {
+    return __awaiter(this, undefined, undefined, function () {
       return __generator(this, function (_a) {
         if (profile) {
           check_input_existence(profile, ['nickname', 'avatar_url', 'fullname', 'birthday', 'sex', 'qq', 'description', 'grade']);
@@ -2695,7 +2695,7 @@ var CodemaoAuth = /** @class */function () {
    *
    */
   CodemaoAuth.prototype.check_bind_for_third_party = function () {
-    return __awaiter(this, void 0, void 0, function () {
+    return __awaiter(this, undefined, undefined, function () {
       return __generator(this, function (_a) {
         return [2 /*return*/, this.dispatch_request({
           url: Api.CHECK_BIND_FOR_THIRD_PARTY,
@@ -2712,7 +2712,7 @@ var CodemaoAuth = /** @class */function () {
    * @param appid 可选,不传默认开放平台网页应用登录, 也可传编程猫下各公众号appid，需联系后端账号负责人配置
    */
   CodemaoAuth.prototype.bind_wechat = function (code, appid) {
-    return __awaiter(this, void 0, void 0, function () {
+    return __awaiter(this, undefined, undefined, function () {
       return __generator(this, function (_a) {
         return [2 /*return*/, this.dispatch_request({
           url: Api.BIND_WECHAT,
@@ -2731,7 +2731,7 @@ var CodemaoAuth = /** @class */function () {
    *
    */
   CodemaoAuth.prototype.unbind_wechat = function () {
-    return __awaiter(this, void 0, void 0, function () {
+    return __awaiter(this, undefined, undefined, function () {
       return __generator(this, function (_a) {
         return [2 /*return*/, this.dispatch_request({
           url: Api.UNBIND_WECHAT,
@@ -2746,7 +2746,7 @@ var CodemaoAuth = /** @class */function () {
    *
    */
   CodemaoAuth.prototype.bind_qq = function (code, pid, agreement_ids) {
-    return __awaiter(this, void 0, void 0, function () {
+    return __awaiter(this, undefined, undefined, function () {
       return __generator(this, function (_a) {
         return [2 /*return*/, this.dispatch_request({
           url: Api.BIND_QQ,
@@ -2765,7 +2765,7 @@ var CodemaoAuth = /** @class */function () {
    *
    */
   CodemaoAuth.prototype.unbind_qq = function () {
-    return __awaiter(this, void 0, void 0, function () {
+    return __awaiter(this, undefined, undefined, function () {
       return __generator(this, function (_a) {
         return [2 /*return*/, this.dispatch_request({
           url: Api.UNBIND_QQ,
@@ -2780,7 +2780,7 @@ var CodemaoAuth = /** @class */function () {
    *
    */
   CodemaoAuth.prototype.get_profile = function () {
-    return __awaiter(this, void 0, void 0, function () {
+    return __awaiter(this, undefined, undefined, function () {
       return __generator(this, function (_a) {
         return [2 /*return*/, this.dispatch_request({
           url: Api.GET_PROFILE,
@@ -2794,7 +2794,7 @@ var CodemaoAuth = /** @class */function () {
    * 获取主账号信息（私密信息）
    */
   CodemaoAuth.prototype.get_auth = function () {
-    return __awaiter(this, void 0, void 0, function () {
+    return __awaiter(this, undefined, undefined, function () {
       return __generator(this, function (_a) {
         return [2 /*return*/, this.dispatch_request({
           url: Api.GET_AUTH,
@@ -2814,7 +2814,7 @@ var CodemaoAuth = /** @class */function () {
    * @param {string} ticket
    */
   CodemaoAuth.prototype.login_account_ticket = function (identity, password, pid, ticket, agreement_ids) {
-    return __awaiter(this, void 0, void 0, function () {
+    return __awaiter(this, undefined, undefined, function () {
       var login_res;
       return __generator(this, function (_a) {
         switch (_a.label) {
@@ -2843,7 +2843,7 @@ var CodemaoAuth = /** @class */function () {
     });
   };
   CodemaoAuth.prototype.get_grade_list = function () {
-    return __awaiter(this, void 0, void 0, function () {
+    return __awaiter(this, undefined, undefined, function () {
       return __generator(this, function (_a) {
         return [2 /*return*/, this.dispatch_request({
           url: Api.GET_GRADE_LIST,
@@ -2861,7 +2861,7 @@ var auth = /*#__PURE__*/Object.freeze({
   CodemaoAuth: CodemaoAuth
 });
 var getFingerPrint = function () {
-  return __awaiter(void 0, void 0, void 0, function () {
+  return __awaiter(undefined, undefined, undefined, function () {
     return __generator(this, function (_a) {
       return [2 /*return*/, new Promise(function (resolve) {
         var getHash = function () {
@@ -2929,7 +2929,7 @@ var GeetestCaptcha = /** @class */function (_super) {
     return _this;
   }
   GeetestCaptcha.prototype.get_init_params = function () {
-    return __awaiter(this, void 0, void 0, function () {
+    return __awaiter(this, undefined, undefined, function () {
       return __generator(this, function (_a) {
         return [2 /*return*/, PlatformApi.dispatch_request({
           url: PLATFORM_CAPTCHA_API.GET_GEETEST_PARAMS,
@@ -2942,7 +2942,7 @@ var GeetestCaptcha = /** @class */function (_super) {
     });
   };
   GeetestCaptcha.prototype.init_geetest = function (options) {
-    return __awaiter(this, void 0, void 0, function () {
+    return __awaiter(this, undefined, undefined, function () {
       var params;
       var data;
       var _this = this;
@@ -2950,7 +2950,7 @@ var GeetestCaptcha = /** @class */function (_super) {
         switch (_a.label) {
           case 0:
             return [4 /*yield*/, retry(3, function () {
-              return __awaiter(_this, void 0, void 0, function () {
+              return __awaiter(_this, undefined, undefined, function () {
                 return __generator(this, function (_a) {
                   return [2 /*return*/, this.get_init_params()];
                 });
@@ -2969,7 +2969,7 @@ var GeetestCaptcha = /** @class */function (_super) {
                 captcha_obj.onReady(function () {
                   resolve(captcha_obj);
                 }).onSuccess(function () {
-                  return __awaiter(_this, void 0, void 0, function () {
+                  return __awaiter(_this, undefined, undefined, function () {
                     var ticket_res;
                     var error_1;
                     return __generator(this, function (_a) {
@@ -3009,7 +3009,7 @@ var GeetestCaptcha = /** @class */function (_super) {
     });
   };
   GeetestCaptcha.prototype.init = function () {
-    return __awaiter(this, void 0, void 0, function () {
+    return __awaiter(this, undefined, undefined, function () {
       var init_options;
       var _a;
       return __generator(this, function (_b) {
@@ -3039,7 +3039,7 @@ var GeetestCaptcha = /** @class */function (_super) {
     }
   };
   GeetestCaptcha.prototype.get_ticket = function () {
-    return __awaiter(this, void 0, void 0, function () {
+    return __awaiter(this, undefined, undefined, function () {
       var result;
       return __generator(this, function (_a) {
         result = this.captcha_obj.getValidate();
@@ -3090,7 +3090,7 @@ var SMCaptcha = /** @class */function (_super) {
     return _this;
   }
   SMCaptcha.prototype.init = function () {
-    return __awaiter(this, void 0, void 0, function () {
+    return __awaiter(this, undefined, undefined, function () {
       var _a;
       return __generator(this, function (_b) {
         switch (_b.label) {
@@ -3115,7 +3115,7 @@ var SMCaptcha = /** @class */function (_super) {
     });
   };
   SMCaptcha.prototype.init_smCaptcha = function () {
-    return __awaiter(this, void 0, void 0, function () {
+    return __awaiter(this, undefined, undefined, function () {
       var _a;
       var dom_id;
       var success_callback;
@@ -3144,7 +3144,7 @@ var SMCaptcha = /** @class */function (_super) {
               resolve(instance);
             });
             instance.onSuccess(function (data) {
-              return __awaiter(_this, void 0, void 0, function () {
+              return __awaiter(_this, undefined, undefined, function () {
                 var ticket_res;
                 var error_1;
                 return __generator(this, function (_a) {
@@ -3159,16 +3159,16 @@ var SMCaptcha = /** @class */function (_super) {
                       return [4 /*yield*/, this.get_ticket()];
                     case 2:
                       ticket_res = _a.sent();
-                      if (success_callback === null || success_callback === void 0) {
-                        void 0;
+                      if (success_callback === null || success_callback === undefined) {
+                        undefined;
                       } else {
                         success_callback(ticket_res.data.ticket, this.options.product_id || '');
                       }
                       return [3 /*break*/, 4];
                     case 3:
                       error_1 = _a.sent();
-                      if (fail_callback === null || fail_callback === void 0) {
-                        void 0;
+                      if (fail_callback === null || fail_callback === undefined) {
+                        undefined;
                       } else {
                         fail_callback(fallbackParamsMaker('success_callback triggerd fatal error', error_1));
                       }
@@ -3176,8 +3176,8 @@ var SMCaptcha = /** @class */function (_super) {
                     case 4:
                       return [3 /*break*/, 6];
                     case 5:
-                      if (fail_callback === null || fail_callback === void 0) {
-                        void 0;
+                      if (fail_callback === null || fail_callback === undefined) {
+                        undefined;
                       } else {
                         fail_callback(fallbackParamsMaker('incorrect captcha checking', data));
                       }
@@ -3193,16 +3193,16 @@ var SMCaptcha = /** @class */function (_super) {
                 errType: errType,
                 errMsg: errMsg
               });
-              if (fail_callback === null || fail_callback === void 0) {
-                void 0;
+              if (fail_callback === null || fail_callback === undefined) {
+                undefined;
               } else {
                 fail_callback(errorObj);
               }
               reject(errorObj);
             });
             instance.onClose(function () {
-              if (close_callback === null || close_callback === void 0) {
-                void 0;
+              if (close_callback === null || close_callback === undefined) {
+                undefined;
               } else {
                 close_callback();
               }
@@ -3214,14 +3214,14 @@ var SMCaptcha = /** @class */function (_super) {
   };
   SMCaptcha.prototype.show = function () {
     var init_options = this.options.init_options;
-    if (this.options && ['embed', 'float'].includes((init_options === null || init_options === void 0 ? void 0 : init_options.product) || '')) {
+    if (this.options && ['embed', 'float'].includes((init_options === null || init_options === undefined ? undefined : init_options.product) || '')) {
       this.instance.appendTo("#" + this.options.dom_id);
       return;
     }
     this.instance.verify();
   };
   SMCaptcha.prototype.get_ticket = function (rid) {
-    return __awaiter(this, void 0, void 0, function () {
+    return __awaiter(this, undefined, undefined, function () {
       var result;
       return __generator(this, function (_a) {
         result = this.instance.getValidate();
@@ -3270,7 +3270,7 @@ var CmTencentCaptcha = /** @class */function (_super) {
     return _this;
   }
   CmTencentCaptcha.prototype.init = function () {
-    return __awaiter(this, void 0, void 0, function () {
+    return __awaiter(this, undefined, undefined, function () {
       return __generator(this, function (_a) {
         switch (_a.label) {
           case 0:
@@ -3291,12 +3291,12 @@ var CmTencentCaptcha = /** @class */function (_super) {
     });
   };
   CmTencentCaptcha.prototype.initTencentCaptcha = function (dom_id) {
-    return __awaiter(this, void 0, void 0, function () {
+    return __awaiter(this, undefined, undefined, function () {
       var tencentCaptchaCallback;
       var _this = this;
       return __generator(this, function (_a) {
         tencentCaptchaCallback = function (res) {
-          return __awaiter(_this, void 0, void 0, function () {
+          return __awaiter(_this, undefined, undefined, function () {
             var ticket_res;
             var error_1;
             return __generator(this, function (_a) {
@@ -3354,7 +3354,7 @@ var CmTencentCaptcha = /** @class */function (_super) {
     this.captcha_obj.show();
   };
   CmTencentCaptcha.prototype.get_ticket = function (ticket, randstr) {
-    return __awaiter(this, void 0, void 0, function () {
+    return __awaiter(this, undefined, undefined, function () {
       return __generator(this, function (_a) {
         return [2 /*return*/, PlatformApi.dispatch_request({
           url: PLATFORM_CAPTCHA_API.CHECK_AND_GET_TENCENT_TICKET,
@@ -3405,12 +3405,12 @@ var NeteaseCaptcha = /** @class */function (_super) {
     (function () {
       var _a;
       var _b;
-      return __awaiter(this, void 0, void 0, function () {
+      return __awaiter(this, undefined, undefined, function () {
         var offset;
         return __generator(this, function (_c) {
           switch (_c.label) {
             case 0:
-              offset = 0 - (((_b = (_a = that.options) === null || _a === void 0 ? void 0 : _a.init_options) === null || _b === void 0 ? void 0 : _b.width) || defaultNeteaseInitOptions.width) / 2;
+              offset = 0 - (((_b = (_a = that.options) === null || _a === undefined ? undefined : _a.init_options) === null || _b === undefined ? undefined : _b.width) || defaultNeteaseInitOptions.width) / 2;
               if (!(!that.options.dom_id && !document.getElementById(WrapperId))) {
                 return [3 /*break*/, 2];
               }
@@ -3430,7 +3430,7 @@ var NeteaseCaptcha = /** @class */function (_super) {
     return _this;
   }
   NeteaseCaptcha.prototype.init = function () {
-    return __awaiter(this, void 0, void 0, function () {
+    return __awaiter(this, undefined, undefined, function () {
       var _a;
       return __generator(this, function (_b) {
         switch (_b.label) {
@@ -3454,7 +3454,7 @@ var NeteaseCaptcha = /** @class */function (_super) {
     });
   };
   NeteaseCaptcha.prototype.init_NECaptcha = function () {
-    return __awaiter(this, void 0, void 0, function () {
+    return __awaiter(this, undefined, undefined, function () {
       var _a;
       var dom_id;
       var success_callback;
@@ -3476,7 +3476,7 @@ var NeteaseCaptcha = /** @class */function (_super) {
             appendTo: dom_id ? "#" + dom_id : "#" + InnerId
           }, defaultNeteaseInitOptions), init_options), {
             onVerify: function (err, data) {
-              return __awaiter(_this, void 0, void 0, function () {
+              return __awaiter(_this, undefined, undefined, function () {
                 var ticket_res;
                 return __generator(this, function (_a) {
                   switch (_a.label) {
@@ -3484,8 +3484,8 @@ var NeteaseCaptcha = /** @class */function (_super) {
                       if (!err) {
                         return [3 /*break*/, 1];
                       }
-                      if (fail_callback === null || fail_callback === void 0) {
-                        void 0;
+                      if (fail_callback === null || fail_callback === undefined) {
+                        undefined;
                       } else {
                         fail_callback(fallbackParamsMaker('incorrect captcha checking', err));
                       }
@@ -3494,8 +3494,8 @@ var NeteaseCaptcha = /** @class */function (_super) {
                       return [4 /*yield*/, this.get_ticket(data.validate)];
                     case 2:
                       ticket_res = _a.sent();
-                      if (success_callback === null || success_callback === void 0) {
-                        void 0;
+                      if (success_callback === null || success_callback === undefined) {
+                        undefined;
                       } else {
                         success_callback(ticket_res.data.ticket, this.options.product_id || '');
                       }
@@ -3508,15 +3508,15 @@ var NeteaseCaptcha = /** @class */function (_super) {
               });
             },
             onError: function (err) {
-              if (fail_callback === null || fail_callback === void 0) {
-                void 0;
+              if (fail_callback === null || fail_callback === undefined) {
+                undefined;
               } else {
                 fail_callback(fallbackParamsMaker('fatal error occurred', err));
               }
             },
             onClose: function () {
-              if (close_callback === null || close_callback === void 0) {
-                void 0;
+              if (close_callback === null || close_callback === undefined) {
+                undefined;
               } else {
                 close_callback();
               }
@@ -3526,8 +3526,8 @@ var NeteaseCaptcha = /** @class */function (_super) {
             resolve(instance);
           }, function (err) {
             var errorObj = fallbackParamsMaker('some error occurred', err);
-            if (fail_callback === null || fail_callback === void 0) {
-              void 0;
+            if (fail_callback === null || fail_callback === undefined) {
+              undefined;
             } else {
               fail_callback(errorObj);
             }
@@ -3549,7 +3549,7 @@ var NeteaseCaptcha = /** @class */function (_super) {
     }
   };
   NeteaseCaptcha.prototype.get_ticket = function (validate) {
-    return __awaiter(this, void 0, void 0, function () {
+    return __awaiter(this, undefined, undefined, function () {
       return __generator(this, function (_a) {
         return [2 /*return*/, PlatformApi.dispatch_request({
           url: PLATFORM_CAPTCHA_API.CHECK_AND_GET_NETEASE_TICKET,
@@ -3605,7 +3605,7 @@ var AliyunCaptcha = /** @class */function (_super) {
           renderTo: aliyun_captcha_dom_id,
           // 前端滑动验证通过时会触发该回调参数。您可以在该回调参数中将会话ID（sessionId）、签名串（sig）、请求唯一标识（token）字段记录下来，随业务请求一同发送至您的服务端调用验签。
           success: function (data) {
-            return __awaiter(_this, void 0, void 0, function () {
+            return __awaiter(_this, undefined, undefined, function () {
               var ticketData;
               return __generator(this, function (_a) {
                 switch (_a.label) {
@@ -3614,13 +3614,13 @@ var AliyunCaptcha = /** @class */function (_super) {
                   case 1:
                     ticketData = _a.sent();
                     if (ticketData.status === 200) {
-                      if (this === null || this === void 0) {
-                        void 0;
+                      if (this === null || this === undefined) {
+                        undefined;
                       } else {
                         this.success_callback(ticketData.data.ticket, ticketData.data.appid);
                       }
-                      if (this === null || this === void 0) {
-                        void 0;
+                      if (this === null || this === undefined) {
+                        undefined;
                       } else {
                         this.clearMask();
                       }
@@ -3660,7 +3660,7 @@ var AliyunCaptcha = /** @class */function (_super) {
     return _this;
   }
   AliyunCaptcha.prototype.init = function () {
-    return __awaiter(this, void 0, void 0, function () {
+    return __awaiter(this, undefined, undefined, function () {
       return __generator(this, function (_a) {
         switch (_a.label) {
           case 0:
@@ -3681,7 +3681,7 @@ var AliyunCaptcha = /** @class */function (_super) {
     });
   };
   AliyunCaptcha.prototype.initAliyunCaptcha = function () {
-    return __awaiter(this, void 0, void 0, function () {
+    return __awaiter(this, undefined, undefined, function () {
       var aliyunCloseBtn;
       return __generator(this, function (_a) {
         switch (_a.label) {
@@ -3696,8 +3696,8 @@ var AliyunCaptcha = /** @class */function (_super) {
           case 1:
             _a.sent();
             aliyunCloseBtn = document.getElementById(aliyun_captcha_dom_close_id);
-            if (aliyunCloseBtn === null || aliyunCloseBtn === void 0) {
-              void 0;
+            if (aliyunCloseBtn === null || aliyunCloseBtn === undefined) {
+              undefined;
             } else {
               aliyunCloseBtn.addEventListener('click', this.handleOnCancel);
             }
@@ -3720,7 +3720,7 @@ var AliyunCaptcha = /** @class */function (_super) {
     this.initNCCaptcha(aliyun_config);
   };
   AliyunCaptcha.prototype.get_ticket = function (params) {
-    return __awaiter(this, void 0, void 0, function () {
+    return __awaiter(this, undefined, undefined, function () {
       return __generator(this, function (_a) {
         return [2 /*return*/, PlatformApi.dispatch_request({
           url: PLATFORM_CAPTCHA_API.CHECK_AND_GET_ALIYUN_TICKET,
@@ -3757,10 +3757,10 @@ var CodemaoCaptcha = /** @class */function () {
   }
   // 从服务端确定用哪个验证码服务商
   CodemaoCaptcha.prototype.get_rule_from_server = function (identity, scene) {
-    if (scene === void 0) {
+    if (scene === undefined) {
       scene = '';
     }
-    return __awaiter(this, void 0, void 0, function () {
+    return __awaiter(this, undefined, undefined, function () {
       var deviceId;
       var timestamp;
       var res;
@@ -3794,7 +3794,7 @@ var CodemaoCaptcha = /** @class */function () {
   };
   CodemaoCaptcha.prototype.get_captcha = function (options) {
     var _a;
-    return __awaiter(this, void 0, void 0, function () {
+    return __awaiter(this, undefined, undefined, function () {
       var identity;
       var _b;
       var scene;
@@ -3810,7 +3810,7 @@ var CodemaoCaptcha = /** @class */function () {
           case 0:
             identity = options.identity;
             _b = options.scene;
-            scene = _b === void 0 ? '' : _b;
+            scene = _b === undefined ? '' : _b;
             success_callback = options.success_callback;
             fail_callback = options.fail_callback;
             return [4 /*yield*/, this.get_rule_from_server(identity, scene)];
@@ -3825,7 +3825,7 @@ var CodemaoCaptcha = /** @class */function () {
                 // TODO: single if x2 ?
                 if (appid) {
                   // 根据策略执行对应的算法
-                  return [2 /*return*/, (_a = strategyTargetSelector(rule)) === null || _a === void 0 ? void 0 : _a.create(options, {
+                  return [2 /*return*/, (_a = strategyTargetSelector(rule)) === null || _a === undefined ? undefined : _a.create(options, {
                     appid: appid
                   })];
                 }
@@ -3848,7 +3848,7 @@ var DisableCaptcha = /** @class */function () {
     this.fail_callback = fail_callback;
   }
   DisableCaptcha.prototype.init = function () {
-    return __awaiter(this, void 0, void 0, function () {
+    return __awaiter(this, undefined, undefined, function () {
       return __generator(this, function (_a) {
         console.log('DisableCaptcha init');
         return [2 /*return*/];

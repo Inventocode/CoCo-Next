@@ -23,7 +23,7 @@ export { J as n };
 export { ee as i };
 export { ne as m };
 export { oe as q };
-var r = require("../1/index");
+import r = require("regenerator-runtime");
 var o = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -36,15 +36,15 @@ var o = function __importDefault(module) {
   });
   return defaultExport;
 }(r);
-var i = require("../7");
-var a = require("../59/index");
-var s = require("../41");
+import i = require("../7");
+import a = require("../59/index");
+import s = require("../41");
 var c = "".concat(a.a.serverHost, "/coconut");
 function l(e) {
   return u.apply(this, arguments);
 }
 function u() {
-  return (u = Object(i.a)(o.a.mark(function e(t) {
+  return (u = i.a(o.a.mark(function e(t) {
     var n;
     var r;
     var i;
@@ -87,7 +87,7 @@ function d(e) {
   return p.apply(this, arguments);
 }
 function p() {
-  return (p = Object(i.a)(o.a.mark(function e(t) {
+  return (p = i.a(o.a.mark(function e(t) {
     var n;
     var r;
     var i;
@@ -131,7 +131,7 @@ function f(e, t) {
   return h.apply(this, arguments);
 }
 function h() {
-  return (h = Object(i.a)(o.a.mark(function e(t, n) {
+  return (h = i.a(o.a.mark(function e(t, n) {
     var r;
     var i;
     var a;
@@ -176,7 +176,7 @@ function m(e, t) {
   return g.apply(this, arguments);
 }
 function g() {
-  return (g = Object(i.a)(o.a.mark(function e(t, n) {
+  return (g = i.a(o.a.mark(function e(t, n) {
     var r;
     var i;
     var a;
@@ -216,7 +216,7 @@ function _(e, t) {
   return v.apply(this, arguments);
 }
 function v() {
-  return (v = Object(i.a)(o.a.mark(function e(t, n) {
+  return (v = i.a(o.a.mark(function e(t, n) {
     var r;
     var i;
     var a;
@@ -255,7 +255,7 @@ function b(e) {
   return y.apply(this, arguments);
 }
 function y() {
-  return (y = Object(i.a)(o.a.mark(function e(t) {
+  return (y = i.a(o.a.mark(function e(t) {
     var n;
     var r;
     var i;
@@ -287,13 +287,13 @@ function y() {
     }, e);
   }))).apply(this, arguments);
 }
-var E = require("../6");
-var O = require("../11");
-var w = require("../48/119/index");
-var C = require("../48/87");
+import E = require("../6");
+import O = require("../11");
+import w = require("../48/119/index");
+import C = require("../48/87");
 var T = "".concat(a.a.serverHost, "/coconut");
 var S = 405e5;
-var I = Object(O.a)({
+var I = O.a({
   40400100: "用户未授权",
   40400915: "当前用户无操作权限",
   40400916: "行为空或不存在",
@@ -307,7 +307,7 @@ function A(e) {
   return j.apply(this, arguments);
 }
 function j() {
-  return (j = Object(i.a)(o.a.mark(function e(t) {
+  return (j = i.a(o.a.mark(function e(t) {
     var n;
     var r;
     var i;
@@ -353,7 +353,7 @@ function N(e) {
   return R.apply(this, arguments);
 }
 function R() {
-  return (R = Object(i.a)(o.a.mark(function e(t) {
+  return (R = i.a(o.a.mark(function e(t) {
     var n;
     var r;
     var i;
@@ -374,8 +374,8 @@ function R() {
               e.next = 7;
               break;
             }
-            return e.abrupt("return", null === (a = i.data) || void 0 === a ? void 0 : a.records.map(function (e) {
-              return Object(E.a)({
+            return e.abrupt("return", null === (a = i.data) || undefined === a ? undefined : a.records.map(function (e) {
+              return E.a({
                 rowId: e.record_id
               }, e.values);
             }));
@@ -393,7 +393,7 @@ function k(e, t) {
   return x.apply(this, arguments);
 }
 function x() {
-  return (x = Object(i.a)(o.a.mark(function e(t, n) {
+  return (x = i.a(o.a.mark(function e(t, n) {
     var r;
     var i;
     var a;
@@ -406,7 +406,7 @@ function x() {
         switch (e.prev = e.next) {
           case 0:
             e.next = 2;
-            return Object(w.a)("id=".concat(t));
+            return w.a("id=".concat(t));
           case 2:
             r = e.sent;
             i = r.sign;
@@ -425,8 +425,8 @@ function x() {
               e.next = 12;
               break;
             }
-            return e.abrupt("return", null === (d = u.data) || void 0 === d ? void 0 : d.records.map(function (e) {
-              return Object(E.a)({
+            return e.abrupt("return", null === (d = u.data) || undefined === d ? undefined : d.records.map(function (e) {
+              return E.a({
                 rowId: e.record_id
               }, e.values);
             }));
@@ -444,7 +444,7 @@ function D(e) {
   return M.apply(this, arguments);
 }
 function M() {
-  return (M = Object(i.a)(o.a.mark(function e(t) {
+  return (M = i.a(o.a.mark(function e(t) {
     var n;
     var r;
     var i;
@@ -457,7 +457,7 @@ function M() {
         switch (e.prev = e.next) {
           case 0:
             e.next = 2;
-            return Object(w.a)("id=".concat(t, "&limit=500&offset=0"));
+            return w.a("id=".concat(t, "&limit=500&offset=0"));
           case 2:
             n = e.sent;
             r = n.sign;
@@ -469,19 +469,19 @@ function M() {
                 offset: 0,
                 limit: 500
               },
-              headers: Object(E.a)({
+              headers: E.a({
                 env: 1,
                 sign: r,
                 timestamp: i
-              }, Object(C.a)())
+              }, C.a())
             });
           case 8:
             if (c = e.sent, 200 !== (l = c.data).code) {
               e.next = 12;
               break;
             }
-            return e.abrupt("return", null === (u = l.data) || void 0 === u ? void 0 : u.records.map(function (e) {
-              return Object(E.a)({
+            return e.abrupt("return", null === (u = l.data) || undefined === u ? undefined : u.records.map(function (e) {
+              return E.a({
                 rowId: e.record_id
               }, e.values);
             }));
@@ -499,7 +499,7 @@ function L(e, t) {
   return P.apply(this, arguments);
 }
 function P() {
-  return (P = Object(i.a)(o.a.mark(function e(t, n) {
+  return (P = i.a(o.a.mark(function e(t, n) {
     var r;
     var i;
     var a;
@@ -539,7 +539,7 @@ function B(e, t) {
   return F.apply(this, arguments);
 }
 function F() {
-  return (F = Object(i.a)(o.a.mark(function e(t, n) {
+  return (F = i.a(o.a.mark(function e(t, n) {
     var r;
     var i;
     var a;
@@ -578,7 +578,7 @@ function G(e) {
   return U.apply(this, arguments);
 }
 function U() {
-  return (U = Object(i.a)(o.a.mark(function e(t) {
+  return (U = i.a(o.a.mark(function e(t) {
     var n;
     var r;
     var i;
@@ -616,7 +616,7 @@ function W(e, t) {
   return H.apply(this, arguments);
 }
 function H() {
-  return (H = Object(i.a)(o.a.mark(function e(t, n) {
+  return (H = i.a(o.a.mark(function e(t, n) {
     var r;
     var i;
     var a;
@@ -637,18 +637,18 @@ function H() {
               values: n
             };
             e.next = 5;
-            return Object(w.a)("".concat(JSON.stringify(i)));
+            return w.a("".concat(JSON.stringify(i)));
           case 5:
             a = e.sent;
             c = a.sign;
             l = a.timestamp;
             e.next = 10;
             return s.a.post(r, i, {
-              headers: Object(E.a)({
+              headers: E.a({
                 env: 1,
                 sign: c,
                 timestamp: l
-              }, Object(C.a)())
+              }, C.a())
             });
           case 10:
             if (u = e.sent, 200 !== (d = u.data).code) {
@@ -659,14 +659,17 @@ function H() {
               e.next = 17;
               break;
             }
-            throw d.code = S, ae(d), new Error(JSON.stringify({
+            d.code = S;
+            ae(d);
+            throw new Error(JSON.stringify({
               msg: d.msg,
               code: d.code
             }));
           case 17:
             return e.abrupt("return", d.data);
           case 20:
-            throw ae(d), new Error(JSON.stringify({
+            ae(d);
+            throw new Error(JSON.stringify({
               msg: d.msg,
               code: d.code
             }));
@@ -708,7 +711,7 @@ function V(e, t, n, r) {
   return z.apply(this, arguments);
 }
 function z() {
-  return (z = Object(i.a)(o.a.mark(function e(t, n, r, i) {
+  return (z = i.a(o.a.mark(function e(t, n, r, i) {
     var a;
     var c;
     var l;
@@ -735,18 +738,18 @@ function z() {
               }
             };
             e.next = 5;
-            return Object(w.a)("".concat(JSON.stringify(c)));
+            return w.a("".concat(JSON.stringify(c)));
           case 5:
             l = e.sent;
             u = l.sign;
             d = l.timestamp;
             e.next = 10;
             return s.a.put(a, c, {
-              headers: Object(E.a)({
+              headers: E.a({
                 env: 1,
                 sign: u,
                 timestamp: d
-              }, Object(C.a)())
+              }, C.a())
             });
           case 10:
             if (p = e.sent, 200 !== (f = p.data).code) {
@@ -797,7 +800,7 @@ function Y(e, t, n, r, o, i) {
   return K.apply(this, arguments);
 }
 function K() {
-  return (K = Object(i.a)(o.a.mark(function e(t, n, r, i, a, c) {
+  return (K = i.a(o.a.mark(function e(t, n, r, i, a, c) {
     var l;
     var u;
     var d;
@@ -828,18 +831,18 @@ function K() {
               }]
             };
             e.next = 5;
-            return Object(w.a)("".concat(JSON.stringify(u)));
+            return w.a("".concat(JSON.stringify(u)));
           case 5:
             d = e.sent;
             p = d.sign;
             f = d.timestamp;
             e.next = 10;
             return s.a.put(l, u, {
-              headers: Object(E.a)({
+              headers: E.a({
                 env: 1,
                 sign: p,
                 timestamp: f
-              }, Object(C.a)())
+              }, C.a())
             });
           case 10:
             if (h = e.sent, 200 !== (m = h.data).code) {
@@ -890,7 +893,7 @@ function q(e, t, n, r) {
   return X.apply(this, arguments);
 }
 function X() {
-  return (X = Object(i.a)(o.a.mark(function e(t, n, r, i) {
+  return (X = i.a(o.a.mark(function e(t, n, r, i) {
     var a;
     var c;
     var l;
@@ -917,7 +920,7 @@ function X() {
               }
             };
             e.next = 5;
-            return Object(w.a)("".concat(JSON.stringify(c)));
+            return w.a("".concat(JSON.stringify(c)));
           case 5:
             l = e.sent;
             u = l.sign;
@@ -932,11 +935,11 @@ function X() {
                 }]
               }
             }, {
-              headers: Object(E.a)({
+              headers: E.a({
                 env: 1,
                 sign: u,
                 timestamp: d
-              }, Object(C.a)())
+              }, C.a())
             });
           case 10:
             if (p = e.sent, 200 !== (f = p.data).code) {
@@ -945,7 +948,8 @@ function X() {
             }
             return e.abrupt("return", f.data);
           case 16:
-            throw ae(f), new Error(JSON.stringify({
+            ae(f);
+            throw new Error(JSON.stringify({
               msg: f.msg,
               code: f.code
             }));
@@ -987,7 +991,7 @@ function Q(e, t) {
   return Z.apply(this, arguments);
 }
 function Z() {
-  return (Z = Object(i.a)(o.a.mark(function e(t, n) {
+  return (Z = i.a(o.a.mark(function e(t, n) {
     var r;
     var i;
     var a;
@@ -1004,7 +1008,7 @@ function Z() {
           case 0:
             r = "row" === n ? "RECORD" : "COLUMN";
             e.next = 3;
-            return Object(w.a)("id=".concat(t, "&type=").concat(r));
+            return w.a("id=".concat(t, "&type=").concat(r));
           case 3:
             i = e.sent;
             a = i.sign;
@@ -1013,11 +1017,11 @@ function Z() {
             l = "".concat(T, "/clouddb/runtime/").concat(t, "/count?type=").concat(r);
             e.next = 10;
             return s.a.get(l, {
-              headers: Object(E.a)({
+              headers: E.a({
                 env: 1,
                 sign: a,
                 timestamp: c
-              }, Object(C.a)())
+              }, C.a())
             });
           case 10:
             if (u = e.sent, 200 !== (d = u.data).code) {
@@ -1026,7 +1030,8 @@ function Z() {
             }
             return e.abrupt("return", d.data);
           case 16:
-            throw ae(d), new Error(JSON.stringify({
+            ae(d);
+            throw new Error(JSON.stringify({
               msg: d.msg,
               code: d.code
             }));
@@ -1068,7 +1073,7 @@ function J(e) {
   return $.apply(this, arguments);
 }
 function $() {
-  return ($ = Object(i.a)(o.a.mark(function e(t) {
+  return ($ = i.a(o.a.mark(function e(t) {
     var n;
     var r;
     var i;
@@ -1084,7 +1089,7 @@ function $() {
           case 0:
             e.prev = 0;
             e.next = 3;
-            return Object(w.a)("id=".concat(t));
+            return w.a("id=".concat(t));
           case 3:
             n = e.sent;
             r = n.sign;
@@ -1092,10 +1097,10 @@ function $() {
             a = "".concat(T, "/clouddb/v2/runtime/").concat(t, "/clear");
             e.next = 9;
             return s.a.put(a, {}, {
-              headers: Object(E.a)({
+              headers: E.a({
                 sign: r,
                 timestamp: i
-              }, Object(C.a)())
+              }, C.a())
             });
           case 9:
             if (c = e.sent, 200 !== (l = c.data).code) {
@@ -1104,7 +1109,8 @@ function $() {
             }
             return e.abrupt("return", l.data);
           case 15:
-            throw ae(l), new Error(JSON.stringify({
+            ae(l);
+            throw new Error(JSON.stringify({
               msg: l.msg,
               code: l.code
             }));
@@ -1146,7 +1152,7 @@ function ee(e) {
   return te.apply(this, arguments);
 }
 function te() {
-  return (te = Object(i.a)(o.a.mark(function e(t) {
+  return (te = i.a(o.a.mark(function e(t) {
     var n;
     var r;
     var i;
@@ -1190,7 +1196,7 @@ function ne(e, t) {
   return re.apply(this, arguments);
 }
 function re() {
-  return (re = Object(i.a)(o.a.mark(function e(t, n) {
+  return (re = i.a(o.a.mark(function e(t, n) {
     var r;
     var i;
     var a;
@@ -1232,7 +1238,7 @@ function oe(e) {
   return ie.apply(this, arguments);
 }
 function ie() {
-  return (ie = Object(i.a)(o.a.mark(function e(t) {
+  return (ie = i.a(o.a.mark(function e(t) {
     var n;
     var r;
     var i;
@@ -1248,7 +1254,7 @@ function ie() {
               db_ids: t.join(",")
             };
             e.next = 3;
-            return Object(w.a)("ids=[".concat(t.join(","), "]"));
+            return w.a("ids=[".concat(t.join(","), "]"));
           case 3:
             r = e.sent;
             i = r.sign;
@@ -1256,11 +1262,11 @@ function ie() {
             c = "".concat(T, "/clouddb/v2/runtime/list");
             e.next = 9;
             return s.a.get(c, {
-              headers: Object(E.a)({
+              headers: E.a({
                 env: 1,
                 sign: i,
                 timestamp: a
-              }, Object(C.a)()),
+              }, C.a()),
               params: n
             });
           case 9:

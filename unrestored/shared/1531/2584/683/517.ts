@@ -1,14 +1,14 @@
 "use strict";
 
 export { v as a };
-var r = require("./215/index");
-var i = require("./520/index");
-var o = require("./735/index");
-var a = require("./34/index");
-var s = require("../107");
-var c = require("./65");
-var u = require("./122");
-var l = require("./1002");
+import r = require("./215/index");
+import i = require("./520/index");
+import o = require("./735/index");
+import a = require("./34/index");
+import s = require("../107");
+import c = require("./65");
+import u = require("./122");
+import l = require("./1002");
 var f = function () {
   function e(e, t) {
     this.actor = e;
@@ -42,7 +42,7 @@ var d = function () {
     this.hsl = [0, 0, 0];
     this.ctx = this.actor.parent_scene.get_brush_ctx();
     this.fill_path = [];
-    this.is_recording_fill_path = !1;
+    this.is_recording_fill_path = false;
   }
   e.prototype.set_pen_down = function () {
     if (!this.origin_x || !this.origin_y) {
@@ -56,12 +56,12 @@ var d = function () {
     }
   };
   e.prototype.set_pen_up = function () {
-    this.origin_x = void 0;
-    this.origin_y = void 0;
+    this.origin_x = undefined;
+    this.origin_y = undefined;
     this.actor.remove_listener("change", this.update_pen_on_change);
   };
   e.prototype.draw_line = function (e, t) {
-    if (void 0 !== this.origin_x && void 0 !== this.origin_y) {
+    if (undefined !== this.origin_x && undefined !== this.origin_y) {
       var n = this.app.get_app_view_resolution();
       var r = this.ctx;
       if (r) {
@@ -106,29 +106,29 @@ var d = function () {
     this.app.render();
   };
   e.prototype.set_size = function (e) {
-    this.size = Object(r.a)(1, 1e4, e);
+    this.size = r.a(1, 1e4, e);
   };
   e.prototype.set_color = function (e) {
     this.stroke_color = e;
-    this.hsl = Object(c.h)(e);
+    this.hsl = c.h(e);
   };
   e.prototype.set_alpha = function (e) {
-    this.alpha = Object(r.a)(0, 1, e);
+    this.alpha = r.a(0, 1, e);
   };
   e.prototype.set_hue = function (e) {
     if ((e %= 360) < 0) {
       e += 360;
     }
     this.hsl[0] = e;
-    this.stroke_color = Object(c.j)(this.hsl[0], this.hsl[1], this.hsl[2]);
+    this.stroke_color = c.j(this.hsl[0], this.hsl[1], this.hsl[2]);
   };
   e.prototype.set_saturation = function (e) {
-    this.hsl[1] = Object(r.a)(0, 1, e);
-    this.stroke_color = Object(c.j)(this.hsl[0], this.hsl[1], this.hsl[2]);
+    this.hsl[1] = r.a(0, 1, e);
+    this.stroke_color = c.j(this.hsl[0], this.hsl[1], this.hsl[2]);
   };
   e.prototype.set_brightness = function (e) {
-    this.hsl[2] = Object(r.a)(0, 1, e);
-    this.stroke_color = Object(c.j)(this.hsl[0], this.hsl[1], this.hsl[2]);
+    this.hsl[2] = r.a(0, 1, e);
+    this.stroke_color = c.j(this.hsl[0], this.hsl[1], this.hsl[2]);
   };
   e.prototype.get_size = function () {
     return this.size;
@@ -163,7 +163,7 @@ var d = function () {
   };
   e.prototype.set_fill_start = function () {
     if (!this.is_recording_fill_path) {
-      this.is_recording_fill_path = !0;
+      this.is_recording_fill_path = true;
       this.actor.add_listener("change", this.update_fill_point_on_change);
     }
     this.fill_path = [];
@@ -195,7 +195,7 @@ var d = function () {
           e.restore();
           this.actor.parent_scene.should_update_brush();
           this.fill_path = [];
-          this.is_recording_fill_path = !1;
+          this.is_recording_fill_path = false;
           this.actor.remove_listener("change", this.update_fill_point_on_change);
         }
       }
@@ -207,7 +207,7 @@ var d = function () {
       var o = this.app.get_app().stage.toGlobal(this.actor.position);
       var a = o.x;
       var s = o.y;
-      var c = void 0 !== r ? r : this.actor.rotation;
+      var c = undefined !== r ? r : this.actor.rotation;
       i.save();
       i.font = "bold " + t + "px Arial , Microsoft YaHei";
       i.fillStyle = "#" + this.stroke_color;
@@ -225,7 +225,7 @@ var d = function () {
     var e = this.ctx;
     if (e) {
       var t = this.actor;
-      var n = Object(c.d)(t, t.position);
+      var n = c.d(t, t.position);
       var r = this.actor.rotation;
       var i = this.app.get_app_view_resolution();
       var o = this.app.get_app_view_size();
@@ -245,15 +245,15 @@ var d = function () {
   };
   return e;
 }();
-var h = require("./735/913");
+import h = require("./735/913");
 var p = function () {
   function e(e, t, n) {
     this.cached_bounds_points_vertices = {
-      value: void 0,
+      value: undefined,
       dependencies: []
     };
     this.cached_internal_points_vertices = {
-      value: void 0,
+      value: undefined,
       dependencies: []
     };
     this.actor = e;
@@ -267,10 +267,10 @@ var p = function () {
     var e;
     if (this.cached_bounds_points_vertices.value) {
       var t = this.get_state_dependencies();
-      if (Object(h.a)(t, this.cached_bounds_points_vertices.dependencies)) {
+      if (h.a(t, this.cached_bounds_points_vertices.dependencies)) {
         e = this.cached_bounds_points_vertices.value;
       } else {
-        this.cached_bounds_points_vertices.value = void 0;
+        this.cached_bounds_points_vertices.value = undefined;
       }
       return e;
     }
@@ -279,10 +279,10 @@ var p = function () {
     var e;
     if (this.cached_internal_points_vertices.value) {
       var t = this.get_state_dependencies();
-      if (Object(h.a)(t, this.cached_internal_points_vertices.dependencies)) {
+      if (h.a(t, this.cached_internal_points_vertices.dependencies)) {
         e = this.cached_internal_points_vertices.value;
       } else {
-        this.cached_internal_points_vertices.value = void 0;
+        this.cached_internal_points_vertices.value = undefined;
       }
       return e;
     }
@@ -305,8 +305,8 @@ var p = function () {
     var t;
     var n = this;
     e.forEach(function (e) {
-      var r = Object(c.c)(e);
-      var i = Object(c.q)(r, n.actor);
+      var r = c.c(e);
+      var i = c.q(r, n.actor);
       if (t) {
         t.max_x = Math.max(t.max_x, i.x);
         t.min_x = Math.min(t.min_x, i.x);
@@ -464,15 +464,15 @@ var v = function (e) {
     n.type = s.d.Actor;
     n.rotation_type = s.e.ALL;
     n.rotation_value = 0;
-    n.is_vertical_flipped = !1;
-    n.is_horizontal_flipped = !1;
-    n.is_rotation_flipped = !1;
+    n.is_vertical_flipped = false;
+    n.is_horizontal_flipped = false;
+    n.is_rotation_flipped = false;
     n.styles = {};
-    n.is_clone = !1;
+    n.is_clone = false;
     n.min_points_for_collision = 5;
     n.mouse_down_time = 0;
-    n.is_draggable = !0;
-    n.has_drag_protection = !1;
+    n.is_draggable = true;
+    n.has_drag_protection = false;
     n.on_resize = function (e) {
       if (e.target_id === n.app.get_app().stage.name) {
         var t = n.app.get_app_view_size();
@@ -516,8 +516,8 @@ var v = function (e) {
         var s = new a.o(n.position.x + e.x - n.drag_data.old_pos.x, n.position.y + e.y - n.drag_data.old_pos.y);
         n.drag_data.old_pos = e;
         if (n.has_drag_protection) {
-          var u = Object(c.d)(n, s);
-          s.set(Object(r.a)(-i / 2, i / 2, u.x), Object(r.a)(-o / 2, o / 2, u.y));
+          var u = c.d(n, s);
+          s.set(r.a(-i / 2, i / 2, u.x), r.a(-o / 2, o / 2, u.y));
         }
         n.set_pixi_position(s.x, s.y);
         n.app.render();
@@ -543,7 +543,7 @@ var v = function (e) {
     };
     n.drag_end = function (e) {
       var t = new Date().getTime();
-      if (!(e && Object(o.a)(e.type, ["touchendoutside", "mouseupoutside"])) && t - n.mouse_down_time < 1e3) {
+      if (!(e && o.a(e.type, ["touchendoutside", "mouseupoutside"])) && t - n.mouse_down_time < 1e3) {
         var r = n.app.get_app().stage;
         var i = e ? e.data.getLocalPosition(r) : n.position;
         var a = i.x;
@@ -559,7 +559,7 @@ var v = function (e) {
         });
       }
       if (n.drag_data) {
-        n.drag_data = void 0;
+        n.drag_data = undefined;
         if (n.is_draggable) {
           n.events.fire("actor:drag_end", {
             target_id: n.id,
@@ -579,7 +579,7 @@ var v = function (e) {
     };
     n.on_break = function (e) {
       if (!(e && e !== n.id)) {
-        n.drag_data = void 0;
+        n.drag_data = undefined;
       }
     };
     n.events = t.events;
@@ -589,7 +589,7 @@ var v = function (e) {
     n.id = t.actor_id;
     n.name = t.actor_id;
     n.anchor.set(.5, .5);
-    n.interactive = !0;
+    n.interactive = true;
     n.wrapper = new A(n, n.parent_scene);
     var i = n.app.get_app_view_size();
     var u = i.width;
@@ -604,11 +604,11 @@ var v = function (e) {
       n.effects = new l.a(n.app, n);
     }
     n.addListener("mousedown", n.drag_start);
-    n.addListener("mousemove", Object(c.w)(n.drag_move, c.a));
+    n.addListener("mousemove", c.w(n.drag_move, c.a));
     n.addListener("mouseup", n.drag_end);
     n.addListener("mouseupoutside", n.drag_end);
     n.addListener("touchstart", n.drag_start);
-    n.addListener("touchmove", Object(c.w)(n.drag_move, c.a));
+    n.addListener("touchmove", c.w(n.drag_move, c.a));
     n.addListener("touchend", n.drag_end);
     n.addListener("touchendoutside", n.drag_end);
     n.addListener("mousedown", function (e) {
@@ -640,7 +640,7 @@ var v = function (e) {
     });
     n.add_listener("change", function (e) {
       if (e.position && n.current_rotate_around_actor && !n.current_rotate_around_actor.is_rotating) {
-        n.current_rotate_around_actor = void 0;
+        n.current_rotate_around_actor = undefined;
       }
     });
     n.events.event_emitter.addListener("break", n.on_break);
@@ -658,10 +658,10 @@ var v = function (e) {
     this.off(e, t);
   };
   t.prototype.destroy = function () {
-    this.emit_event("destroy", void 0);
+    this.emit_event("destroy", undefined);
     this.wrapper.destroy();
     e.prototype.destroy.call(this, {
-      children: !0
+      children: true
     });
     this.data.clear_actor_cache(this.id);
     this.events.event_emitter.removeListener("break", this.on_break);
@@ -675,8 +675,8 @@ var v = function (e) {
       data: this.data,
       events: this.events
     });
-    n.styles = Object(i.a)(this.styles);
-    n.current_style = Object(i.a)(this.current_style);
+    n.styles = i.a(this.styles);
+    n.current_style = i.a(this.current_style);
     n.texture = this.texture;
     n.position.set(this.position.x, this.position.y);
     n.scale.set(this.scale.x, this.scale.y);
@@ -691,7 +691,7 @@ var v = function (e) {
     n.is_vertical_flipped = this.is_vertical_flipped;
     n.is_horizontal_flipped = this.is_horizontal_flipped;
     n.group = this.group;
-    n.is_clone = !0;
+    n.is_clone = true;
     n.prototype_actor_id = this.id;
     if (this.effects) {
       this.effects.clone_to(n);
@@ -707,10 +707,10 @@ var v = function (e) {
     });
   };
   t.prototype.add_style = function (e) {
-    this.styles[e.style_id] = Object(i.a)(e);
+    this.styles[e.style_id] = i.a(e);
   };
   t.prototype.get_style = function (e) {
-    return Object(i.a)(this.styles[e]);
+    return i.a(this.styles[e]);
   };
   t.prototype.set_current_style = function (e) {
     var t = this.styles[e];
@@ -744,20 +744,20 @@ var v = function (e) {
     if (!n) {
       return new u.a("Cannot find style " + e + ", You should add style first");
     }
-    n.pivot = Object(i.a)(t);
+    n.pivot = i.a(t);
     if (this.current_style && e === this.current_style.style_id) {
       this.set_pixi_pivot(n.pivot.x, n.pivot.y);
     }
   };
   t.prototype.get_current_style = function () {
-    return Object(i.a)(this.current_style);
+    return i.a(this.current_style);
   };
   t.prototype.get_style_ids = function () {
     return Object.keys(this.styles);
   };
   t.prototype.remove_style = function (e) {
     if (this.current_style && e === this.current_style.style_id) {
-      this.current_style = void 0;
+      this.current_style = undefined;
       this.set_pixi_texture(a.y.EMPTY);
       this.set_pixi_pivot(0, 0);
     }
@@ -765,7 +765,7 @@ var v = function (e) {
   };
   t.prototype.set_z_index = function (e) {
     var t = this.parent_scene.get_actor_container();
-    var n = Object(r.a)(0, t.children.length - 1, e);
+    var n = r.a(0, t.children.length - 1, e);
     t.setChildIndex(this.wrapper, n);
   };
   t.prototype.set_position_x = function (e) {
@@ -798,12 +798,12 @@ var v = function (e) {
   };
   t.prototype.set_scale = function (e, t) {
     var n = e;
-    if (void 0 !== n) {
+    if (undefined !== n) {
       n = Math.max(0, n);
       n = this.is_rotation_flipped !== this.is_vertical_flipped ? -1 * n : n;
     }
-    var r = void 0 === t ? e : t;
-    if (void 0 !== r) {
+    var r = undefined === t ? e : t;
+    if (undefined !== r) {
       r = Math.max(0, r);
       r = this.is_horizontal_flipped ? -1 * r : r;
     }
@@ -831,10 +831,10 @@ var v = function (e) {
     this.rotation_value = e;
   };
   t.prototype.set_rotation = function (e) {
-    var t = Object(c.s)(e);
+    var t = c.s(e);
     this.set_rotation_value(t);
     var n = 0;
-    var r = !1;
+    var r = false;
     switch (this.rotation_type) {
       case s.e.ALL:
         n = -t;
@@ -875,7 +875,7 @@ var v = function (e) {
     this.group = e;
   };
   t.prototype.clear_group = function () {
-    this.group = void 0;
+    this.group = undefined;
   };
   t.prototype.set_pivot_by_stage_point = function (e, t) {
     var n = this;
@@ -897,13 +897,13 @@ var v = function (e) {
       n.pivot.x = 0;
       n.pivot.y = 0;
     });
-    var t = Object(c.d)(this, this.position);
+    var t = c.d(this, this.position);
     this.set_pixi_position(t.x, t.y);
     this.set_pixi_pivot(0);
   };
   t.prototype.map_local_point_to_pivot = function (e, t) {
     var n = new a.o(this.position.x - t.x * this.scale.x, this.position.y - t.y * this.scale.y);
-    var r = Object(c.p)(e, this.position, -this.rotation);
+    var r = c.p(e, this.position, -this.rotation);
     var i = r.x - n.x;
     var o = r.y - n.y;
     return new a.o(i / this.scale.x, o / this.scale.y);
@@ -921,7 +921,7 @@ var v = function (e) {
     };
   };
   t.prototype.get_center_position = function () {
-    var e = Object(c.d)(this, this.position);
+    var e = c.d(this, this.position);
     return {
       x: e.x,
       y: -e.y
@@ -1017,18 +1017,18 @@ var v = function (e) {
   };
   t.prototype.check_bumped_other = function (e) {
     if (!this.visible || !e.get_visible()) {
-      return !1;
+      return false;
     }
     if (this.has_left_stage() || e.has_left_stage()) {
-      return !1;
+      return false;
     }
     if (this.parent_scene.id !== e.parent_scene.id) {
-      return !1;
+      return false;
     }
     var t = this.get_vertices();
     var n = e.get_vertices();
     if (!(t.min_x < n.max_x && t.max_x > n.min_x && t.min_y < n.max_y && t.max_y > n.min_y)) {
-      return !1;
+      return false;
     }
     for (var r = {
         left: Math.round(Math.max(t.min_x, n.min_x)),
@@ -1040,25 +1040,25 @@ var v = function (e) {
       for (var c = r.top; c > r.bottom; c -= 2) {
         i.y = c;
         if (this.is_touching(i) && e.is_touching(i) && (o++, this.is_tiny_sprite(this) || this.is_tiny_sprite(e))) {
-          return !0;
+          return true;
         }
         if (o === this.min_points_for_collision) {
-          return !0;
+          return true;
         }
       }
     }
-    return !1;
+    return false;
   };
   t.prototype.check_bumped_color = function (e) {
     return u.b.success(this.bumped_color(e));
   };
   t.prototype.bumped_color = function (e) {
     if (this.has_left_stage() || !this.current_style) {
-      return !1;
+      return false;
     }
     var t = this.get_bounds_in_stage();
     if (0 === t.width || 0 === t.height) {
-      return !1;
+      return false;
     }
     var n = this.data.get_texture_points_position(this.current_style.texture_id);
     return !(!n || 0 === n.length) && this.color_match_texture_points(t, n, e);
@@ -1067,37 +1067,37 @@ var v = function (e) {
     var r = this.app.get_app_view_size();
     var i = r.width;
     var o = r.height;
-    var s = Object(c.f)({
+    var s = c.f({
       width: e.width,
       height: e.height
     });
     var u = this.get_visible();
-    this.visible = !1;
-    var l = Object(c.g)(e, {
+    this.visible = false;
+    var l = c.g(e, {
       width: i,
       height: o
     });
-    this.render_texture.resize(s.width, s.height, !0);
+    this.render_texture.resize(s.width, s.height, true);
     this.app.get_app().renderer.render(this.app.get_app().stage, {
       renderTexture: this.render_texture,
       transform: l
     });
     var f = this.app.get_extract_module().pixels(this.render_texture);
     this.visible = u;
-    for (var d = Object(c.i)(n), h = void 0, p = 0; p < t.length; p++) {
-      var _ = Object(c.c)(t[p]);
-      var A = Object(c.q)(_, this);
-      var g = Object(c.t)(new a.o(A.x - e.x, A.y - e.y));
+    for (var d = c.i(n), h = undefined, p = 0; p < t.length; p++) {
+      var _ = c.c(t[p]);
+      var A = c.q(_, this);
+      var g = c.t(new a.o(A.x - e.x, A.y - e.y));
       var v = Math.floor(g.x);
       var m = Math.floor(g.y);
       if (!(v >= s.width || m >= s.height) && (h = 4 * v + m * s.width * 4, this.color_match(d, f, h))) {
-        return !0;
+        return true;
       }
     }
-    return !1;
+    return false;
   };
   t.prototype.color_match = function (e, t, n) {
-    return void 0 !== t[n] && void 0 !== t[n + 1] && void 0 !== t[n + 2] && (248 & e[0]) === (248 & t[n]) && (248 & e[1]) === (248 & t[n + 1]) && (240 & e[2]) === (240 & t[n + 2]);
+    return undefined !== t[n] && undefined !== t[n + 1] && undefined !== t[n + 2] && (248 & e[0]) === (248 & t[n]) && (248 & e[1]) === (248 & t[n + 1]) && (240 & e[2]) === (240 & t[n + 2]);
   };
   t.prototype.get_bounds_in_stage = function () {
     var e = this.get_vertices();
@@ -1105,10 +1105,10 @@ var v = function (e) {
     var n = t.width;
     var i = t.height;
     var o = {
-      left: Object(r.a)(-n / 2, n / 2, e.min_x - 5),
-      right: Object(r.a)(-n / 2, n / 2, e.max_x + 5),
-      top: Object(r.a)(-i / 2, i / 2, e.min_y - 5),
-      bottom: Object(r.a)(-i / 2, i / 2, e.max_y + 5)
+      left: r.a(-n / 2, n / 2, e.min_x - 5),
+      right: r.a(-n / 2, n / 2, e.max_x + 5),
+      top: r.a(-i / 2, i / 2, e.min_y - 5),
+      bottom: r.a(-i / 2, i / 2, e.max_y + 5)
     };
     return {
       x: Math.round(o.left),
@@ -1124,34 +1124,34 @@ var v = function (e) {
     switch (e) {
       case "collision":
         if (!i) {
-          return !1;
+          return false;
         }
         break;
       case "overstep":
         if (i) {
-          return !0;
+          return true;
         }
     }
     var o = this.pixel_detector.get_texture_bounds_points_vertices();
     if (!o) {
-      return !1;
+      return false;
     }
     var a = this.pixel_detector.check_relation_by_vertices(o, e);
     var s = this.pixel_detector.contains_edge(a, t);
     switch (e) {
       case "collision":
         if (s) {
-          return !0;
+          return true;
         }
         break;
       case "overstep":
         if (!s) {
-          return !1;
+          return false;
         }
     }
     var c = this.pixel_detector.get_texture_internal_points_vertices();
     if (!c) {
-      return !1;
+      return false;
     }
     var u = this.pixel_detector.check_relation_by_vertices(c, e);
     return this.pixel_detector.contains_edge(u, t);
@@ -1194,8 +1194,8 @@ var v = function (e) {
           var g = t;
           if (p % (2 * Math.PI) !== 0) {
             if (0 !== this.pivot.x && 0 !== this.pivot.y) {
-              var v = Object(c.d)(this, this.position);
-              var m = Object(c.p)(this.position, v, p);
+              var v = c.d(this, this.position);
+              var m = c.p(this.position, v, p);
               this.set_pixi_position(m.x, m.y);
             }
             this.set_rotation(h);
@@ -1242,18 +1242,18 @@ var v = function (e) {
   };
   t.prototype.is_touching = function (e) {
     if (!this.current_style) {
-      return !1;
+      return false;
     }
     var t = this.data.get_texture_points_color_data(this.current_style.texture_id);
     if (!t) {
-      return !1;
+      return false;
     }
-    var n = Object(c.r)(e, this);
-    var r = Object(c.f)({
+    var n = c.r(e, this);
+    var r = c.f({
       width: this.texture.width,
       height: this.texture.height
     });
-    var i = Object(c.t)(n);
+    var i = c.t(n);
     return !(i.x > r.width || i.y > r.height || i.x < 0 || i.y < 0) && t[i.y * r.width + i.x] >>> 24 > 0;
   };
   t.prototype.get_vertices = function () {
@@ -1292,24 +1292,24 @@ var v = function (e) {
       this.current_rotate_around_actor = {
         actor_id: e,
         offset: new a.o(this.get_position().x - r.get_position().x, this.get_position().y - r.get_position().y),
-        is_rotating: !0
+        is_rotating: true
       };
     }
-    this.current_rotate_around_actor.is_rotating = !0;
-    if (this.id === (null === (n = r.current_rotate_around_actor) || void 0 === n ? void 0 : n.actor_id)) {
-      var i = Object(c.p)(this.get_position(), r.get_position(), t);
+    this.current_rotate_around_actor.is_rotating = true;
+    if (this.id === (null === (n = r.current_rotate_around_actor) || undefined === n ? undefined : n.actor_id)) {
+      var i = c.p(this.get_position(), r.get_position(), t);
       var o = i.x;
       var s = i.y;
       this.set_position(o, s);
     } else {
-      this.current_rotate_around_actor.offset = Object(c.p)(this.current_rotate_around_actor.offset, {
+      this.current_rotate_around_actor.offset = c.p(this.current_rotate_around_actor.offset, {
         x: 0,
         y: 0
       }, t);
       this.set_position(this.current_rotate_around_actor.offset.x + r.get_position().x, this.current_rotate_around_actor.offset.y + r.get_position().y);
     }
     this.set_rotation(this.get_rotation() + t);
-    this.current_rotate_around_actor.is_rotating = !1;
+    this.current_rotate_around_actor.is_rotating = false;
   };
   return t;
 }(a.t);

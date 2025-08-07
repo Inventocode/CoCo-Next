@@ -8,10 +8,10 @@ var a = function (e) {
     var c = o(i(t));
     var l = r(n);
     var u = c.length;
-    return l < 0 || l >= u ? e ? "" : void 0 : (a = c.charCodeAt(l)) < 55296 || a > 56319 || l + 1 === u || (s = c.charCodeAt(l + 1)) < 56320 || s > 57343 ? e ? c.charAt(l) : a : e ? c.slice(l, l + 2) : s - 56320 + (a - 55296 << 10) + 65536;
+    return l < 0 || l >= u ? e ? "" : undefined : (a = c.charCodeAt(l)) < 55296 || a > 56319 || l + 1 === u || (s = c.charCodeAt(l + 1)) < 56320 || s > 57343 ? e ? c.charAt(l) : a : e ? c.slice(l, l + 2) : s - 56320 + (a - 55296 << 10) + 65536;
   };
 };
 module.exports = {
-  codeAt: a(!1),
-  charAt: a(!0)
+  codeAt: a(false),
+  charAt: a(true)
 };

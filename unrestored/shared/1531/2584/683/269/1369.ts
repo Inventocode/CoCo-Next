@@ -1,7 +1,7 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
 var r = require("./359");
 var i = require("./1366/498");
@@ -32,6 +32,6 @@ exports.typeConstraint = function (e) {
       var r = t.bindings[0].implementationType;
       return e === r;
     }
-    return !1;
+    return false;
   };
 };

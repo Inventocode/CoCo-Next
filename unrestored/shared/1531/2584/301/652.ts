@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.FieldLabel = void 0;
+exports.FieldLabel = undefined;
 var r = require("tslib");
 var i = require("inversify");
 var o = require("../125/294");
@@ -12,7 +12,7 @@ var s = require("../125/474");
 var c = function (e) {
   function t(t) {
     var n = e.call(this, t.text) || this;
-    n.editable = !1;
+    n.editable = false;
     n.field_type = "FieldLabel";
     n.size_ = new o.Size(0, n.theme.renderer.SHADOW_FIELD_HEIGHT);
     n.class_ = t.opt_class;
@@ -41,12 +41,12 @@ var c = function (e) {
       if (!this.visible_) {
         this.text_element.style.display = "none";
       }
-      if (void 0 == this.source_block) {
+      if (undefined == this.source_block) {
         throw new ReferenceError("Field should have source block when init.");
       }
-      if (void 0 != this.source_block) {
+      if (undefined != this.source_block) {
         var e = this.source_block.get_svg_root();
-        if (void 0 == e) {
+        if (undefined == e) {
           throw new ReferenceError("Field should have svg root when init.");
         }
         e.appendChild(this.text_element);

@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.ConflictResolver = void 0;
+exports.ConflictResolver = undefined;
 var r;
 var i = require("tslib");
 var o = require("../../../../../17/640/index");
@@ -17,7 +17,7 @@ var u = function (e) {
   (0, i.__extends)(t, e);
   t.prototype.after_analyze_op = function (e) {
     var t = this.detect_conflict(e);
-    return !t || (t.type === r.Gesture ? (this.interrupt_gesture(t.target), !0) : t.type === r.EditComment ? (this.interrupt_edit_comment(t.target), !0) : t.type === r.EditField ? (this.interrupt_edit_field(t.target), !0) : t.type !== r.UI || (this.interrupt_ui(t.target), !0));
+    return !t || (t.type === r.Gesture ? (this.interrupt_gesture(t.target), true) : t.type === r.EditComment ? (this.interrupt_edit_comment(t.target), true) : t.type === r.EditField ? (this.interrupt_edit_field(t.target), true) : t.type !== r.UI || (this.interrupt_ui(t.target), true));
   };
   t.prototype.get_server_affected_id_list = function (e) {
     var t = this;
@@ -33,13 +33,13 @@ var u = function (e) {
     var t;
     var n = new Set();
     var i = this.Blink.mainWorkspace.current_gesture_;
-    var o = null === i || void 0 === i ? void 0 : i.target_block;
+    var o = null === i || undefined === i ? undefined : i.target_block;
     if (i && o) {
       this.Blink.mainWorkspace.for_each_element_in_stack(o.id, function (e) {
         return n.add(e.id);
       });
       var a = i.block_dragger;
-      if (void 0 !== (null === a || void 0 === a ? void 0 : a.parent_before_drag)) {
+      if (undefined !== (null === a || undefined === a ? undefined : a.parent_before_drag)) {
         this.Blink.mainWorkspace.for_each_element_in_stack(a.parent_before_drag.id, function (e) {
           return n.add(e.id);
         });
@@ -72,7 +72,7 @@ var u = function (e) {
         if (!f) {
           return;
         }
-        if (f.source_block === l || (null === (t = f.source_block) || void 0 === t ? void 0 : t.parent_block) === l) {
+        if (f.source_block === l || (null === (t = f.source_block) || undefined === t ? undefined : t.parent_block) === l) {
           return {
             type: r.EditField,
             target: f
@@ -92,14 +92,14 @@ var u = function (e) {
     this.Blink.events.disable();
     if (this.Blink.runtime_data.editing === e) {
       var n = e.value_before_editing;
-      if (void 0 !== n) {
+      if (undefined !== n) {
         e.set_value(n);
         e.set_html_input_value(n);
       }
-      if (!(null === (t = e.source_block) || void 0 === t)) {
+      if (!(null === (t = e.source_block) || undefined === t)) {
         t.unselect();
       }
-      e.focus(!1);
+      e.focus(false);
     }
     if (this.Blink.widget_div.owner_) {
       this.Blink.widget_div.hide();
@@ -125,9 +125,9 @@ var u = function (e) {
     }));
     try {
       this.Blink.events.disable_listener();
-      var i = null === (t = e.block_dragger) || void 0 === t ? void 0 : t.redo_stack_before_drag.slice();
-      var o = null === (n = e.block_dragger) || void 0 === n ? void 0 : n.undo_stack_before_drag.slice();
-      if (void 0 === i || void 0 === o) {
+      var i = null === (t = e.block_dragger) || undefined === t ? undefined : t.redo_stack_before_drag.slice();
+      var o = null === (n = e.block_dragger) || undefined === n ? undefined : n.undo_stack_before_drag.slice();
+      if (undefined === i || undefined === o) {
         return void console.error("Confilct resolver: cannot get redo stack before drag.");
       }
       e.cancel();
@@ -141,8 +141,8 @@ var u = function (e) {
       this.Blink.events.enable_listener();
     }
   };
-  (0, i.__decorate)([(0, o.lazy_inject)(a.BINDING.Blink)], t.prototype, "Blink", void 0);
-  (0, i.__decorate)([(0, o.lazy_inject)(a.BINDING.GroupEvent)], t.prototype, "group_event_factory", void 0);
+  (0, i.__decorate)([(0, o.lazy_inject)(a.BINDING.Blink)], t.prototype, "Blink", undefined);
+  (0, i.__decorate)([(0, o.lazy_inject)(a.BINDING.GroupEvent)], t.prototype, "group_event_factory", undefined);
   return t;
 }(require("../../../728/1135").BasePlugin);
 exports.ConflictResolver = u;

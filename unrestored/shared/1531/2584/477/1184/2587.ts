@@ -20,14 +20,14 @@
       return Date.now() / 1e3;
     }
   };
-  var a = Object(i.b)() ? function () {
+  var a = i.b() ? function () {
     try {
-      return Object(i.a)(e, "perf_hooks").performance;
+      return i.a(e, "perf_hooks").performance;
     } catch (t) {
       return;
     }
   }() : function () {
-    var e = Object(r.e)().performance;
+    var e = r.e().performance;
     if (e && e.now) {
       return {
         now: function () {
@@ -37,7 +37,7 @@
       };
     }
   }();
-  var s = void 0 === a ? o : {
+  var s = undefined === a ? o : {
     nowSeconds: function () {
       return (a.timeOrigin + a.now()) / 1e3;
     }
@@ -45,7 +45,7 @@
   var c = o.nowSeconds.bind(o);
   var u = s.nowSeconds.bind(s);
   !function () {
-    var e = Object(r.e)().performance;
+    var e = r.e().performance;
     if (e && e.now) {
       var t = e.now();
       var n = Date.now();

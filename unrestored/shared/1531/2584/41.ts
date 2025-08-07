@@ -1,6 +1,6 @@
 "use strict";
 
-var r = require("./186/index");
+import r = require("axios");
 var o = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -13,12 +13,12 @@ var o = function __importDefault(module) {
   });
   return defaultExport;
 }(r);
-var i = require("./23");
-var a = require("./38/index");
-var s = require("./2");
+import i = require("../../../../src/shared/language");
+import a = require("./38/index");
+import s = require("./2");
 var c = o.a.create({
   timeout: 2e4,
-  withCredentials: !0
+  withCredentials: true
 });
 c.interceptors.request.use(function (e) {
   return e;
@@ -30,10 +30,10 @@ c.interceptors.response.use(function (e) {
 }, function (e) {
   var t;
   var n;
-  if (!e.response && (!navigator.onLine || 0 === (null === (t = navigator) || void 0 === t || null === (n = t.connection) || void 0 === n ? void 0 : n.rtt))) {
-    var r = Object(a.b)();
-    Object(a.c)().dispatch(Object(s.mj)({
-      message: Object(i.c)(r, "axios.weakNetworkTips").toString(),
+  if (!e.response && (!navigator.onLine || 0 === (null === (t = navigator) || undefined === t || null === (n = t.connection) || undefined === n ? undefined : n.rtt))) {
+    var r = a.b();
+    a.c().dispatch(s.mj({
+      message: i.c(r, "axios.weakNetworkTips").toString(),
       type: "error"
     }));
   }

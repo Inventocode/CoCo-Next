@@ -37,7 +37,7 @@ function getTheme() {
     var _document;
     var _document$body;
     var _document$body$getAtt2;
-    return (_document$body$getAtt = (_document = document) === null || _document === void 0 ? void 0 : (_document$body = _document.body) === null || _document$body === void 0 ? void 0 : (_document$body$getAtt2 = _document$body.getAttribute('data-theme')) === null || _document$body$getAtt2 === void 0 ? void 0 : _document$body$getAtt2.replace(__WEBPACK_IMPORTED_MODULE_1__defs__.THEME_PREFIX, '')) !== null && _document$body$getAtt !== void 0 ? _document$body$getAtt : __WEBPACK_IMPORTED_MODULE_1__defs__.ThemeTypeEnum.Default;
+    return (_document$body$getAtt = (_document = document) === null || _document === undefined ? undefined : (_document$body = _document.body) === null || _document$body === undefined ? undefined : (_document$body$getAtt2 = _document$body.getAttribute('data-theme')) === null || _document$body$getAtt2 === undefined ? undefined : _document$body$getAtt2.replace(__WEBPACK_IMPORTED_MODULE_1__defs__.THEME_PREFIX, '')) !== null && _document$body$getAtt !== undefined ? _document$body$getAtt : __WEBPACK_IMPORTED_MODULE_1__defs__.ThemeTypeEnum.Default;
   }
   return __WEBPACK_IMPORTED_MODULE_1__defs__.ThemeTypeEnum.Default;
 }
@@ -98,7 +98,7 @@ function getColor(theme, name) {
  */
 function colorHex2DecRgb(color) {
   var _color$replace$match;
-  return (_color$replace$match = color.replace('#', '').match(/(.{2})/g)) === null || _color$replace$match === void 0 ? void 0 : _color$replace$match.map(function (value) {
+  return (_color$replace$match = color.replace('#', '').match(/(.{2})/g)) === null || _color$replace$match === undefined ? undefined : _color$replace$match.map(function (value) {
     return parseInt(value, 16);
   }).join(',');
 }

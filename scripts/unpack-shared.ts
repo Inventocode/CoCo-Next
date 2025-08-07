@@ -20,8 +20,17 @@ unpack({
             searchPath: /^(.*\/)?0(\/index)?$/,
             replace: "react"
         }, {
+            searchPath: /^(.*\/)?1(\/index)?$/,
+            replace: "regenerator-runtime"
+        }, {
+            searchPath: /^(.*\/)?31(\/index)?$/,
+            replace: "lodash"
+        }, {
             searchPath: /^(.*\/)?32(\/index)?$/,
             replace: "ot-json1"
+        }, {
+            searchPath: /^(.*\/)?51(\/index)?$/,
+            replace: "color"
         }, {
             searchPath: /^(.*\/)?93(\/index)?$/,
             replace: "tslib"
@@ -29,17 +38,32 @@ unpack({
             searchPath: /^(.*\/)?134(\/index)?$/,
             replace: "inversify"
         }, {
+            searchPath: /^(.*\/)?186(\/index)?$/,
+            replace: "axios"
+        }, {
             searchPath: /^(.*\/)?204(\/index)?$/,
             replace: "animejs"
         }, {
             searchPath: /^(.*\/)?259(\/index)?$/,
             replace: "@kitten-team/gl-matrix"
         }, {
+            searchPath: /^(.*\/)?411(\/index)?$/,
+            replace: "html2canvas"
+        }, {
             searchPath: /^(.*\/)?458(\/index)?$/,
             replace: "resize-observer-polyfill"
         }, {
             searchPath: /^(.*\/)?481(\/index)?$/,
             replace: "socket.io-client"
+        }, {
+            searchPath: /^(.*\/)?483(\/index)?$/,
+            replace: "antd-mobile"
+        }, {
+            searchPath: /^(.*\/)?553(\/index)?$/,
+            replace: "qrcode"
+        }, {
+            searchPath: /^(.*\/)?781(\/index)?$/,
+            replace: "@vikadata/vika"
         }, {
             searchPath: /^(.*\/)?559(\/index)?$/,
             replace: "hammerjs"
@@ -63,5 +87,14 @@ unpack({
     },
     publicPath: "https://creation.codemao.cn/coconut/web/1.22.0-0/",
     useESImport: false,
-    setPath: SetPath.BY_DEPENDENCY
+    setPath: SetPath.BY_DEPENDENCY,
+    move: {
+        23: "../../src/shared/language",
+        36: "../../src/shared/widget/custom/load",
+        79: "../../src/shared/widget/custom/type",
+        233: "../../src/shared/widget/custom/restrict",
+        345: "../../src/shared/widget/custom/external-module",
+        1531: ".",
+        2584: "../../src/editor/index"
+    }
 })

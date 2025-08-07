@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.SimplifiedCommentBubble = void 0;
+exports.SimplifiedCommentBubble = undefined;
 var r = require("tslib");
 var i = require("inversify");
 var o = require("../../4/127");
@@ -13,7 +13,7 @@ var c = require("../../125/195/index");
 var u = require("../../125/index");
 var l = function () {
   function e() {
-    this.is_showing = !1;
+    this.is_showing = false;
     this.selected_comment = "";
     this.comments = new Map();
   }
@@ -21,17 +21,17 @@ var l = function () {
     var t;
     var n = this;
     if (!this.is_showing) {
-      this.is_showing = !0;
+      this.is_showing = true;
       if (this.events.is_enabled()) {
         this.events.fire(this.ui_event_factory({
           type: c.UIEventType.COMMENT_OPEN,
           workspace_id: e.workspace.id,
-          old_value: !1,
-          new_value: !0,
+          old_value: false,
+          new_value: true,
           block_id: e.id
         }));
       }
-      var r = null === (t = e.get_icon()) || void 0 === t ? void 0 : t.children;
+      var r = null === (t = e.get_icon()) || undefined === t ? undefined : t.children;
       if (r) {
         for (var i = 0; i < r.length; i++) {
           r[i].setAttribute("data-showing", "true");
@@ -63,15 +63,15 @@ var l = function () {
                 }
               });
               e.workspace.remove_change_listener(t);
-              n.is_showing = !1;
+              n.is_showing = false;
               n.comments.clear();
               n.selected_comment = "";
               if (n.events.is_enabled()) {
                 n.events.fire(n.ui_event_factory({
                   type: c.UIEventType.COMMENT_OPEN,
                   workspace_id: e.workspace.id,
-                  old_value: !0,
-                  new_value: !1,
+                  old_value: true,
+                  new_value: false,
                   block_id: e.id
                 }));
               }
@@ -91,7 +91,7 @@ var l = function () {
     if (i && (this.bubble_ || (this.bubble_ = document.createElement("div"), this.bubble_.classList.add("blocklySimplifiedCommentBubble", "blocklySimplifiedCommentBubbleCover"), this.bubble_content_ = document.createElement("div"), this.bubble_content_.classList.add("blocklySimplifiedCommentBubbleContent")), this.bubble_content_)) {
       if ("reset" !== e) {
         if ("remove" === e) {
-          var o = null === (n = null === (c = this.comments.get(t.id)) || void 0 === c ? void 0 : c.parentElement) || void 0 === n ? void 0 : n.parentElement;
+          var o = null === (n = null === (c = this.comments.get(t.id)) || undefined === c ? undefined : c.parentElement) || undefined === n ? undefined : n.parentElement;
           if (o) {
             this.bubble_content_.removeChild(o);
           }
@@ -146,30 +146,30 @@ var l = function () {
           if (o) {
             t.selected_comment = "";
             var a = t.comments.get(o);
-            if (!(null === (e = null === a || void 0 === a ? void 0 : a.parentElement) || void 0 === e)) {
+            if (!(null === (e = null === a || undefined === a ? undefined : a.parentElement) || undefined === e)) {
               e.classList.remove("blocklySimplifiedCommentTextActive");
             }
             if (t.events.is_enabled()) {
               t.events.fire(t.ui_event_factory({
                 type: c.UIEventType.SIMPLIFIED_COMMENT_SELECT,
                 workspace_id: n.workspace.id,
-                old_value: !0,
-                new_value: !1,
+                old_value: true,
+                new_value: false,
                 block_id: o
               }));
             }
             if (o !== n.id) {
               t.selected_comment = n.id;
               var u = t.comments.get(n.id);
-              if (!(null === (r = null === u || void 0 === u ? void 0 : u.parentElement) || void 0 === r)) {
+              if (!(null === (r = null === u || undefined === u ? undefined : u.parentElement) || undefined === r)) {
                 r.classList.add("blocklySimplifiedCommentTextActive");
               }
               if (t.events.is_enabled()) {
                 t.events.fire(t.ui_event_factory({
                   type: c.UIEventType.SIMPLIFIED_COMMENT_SELECT,
                   workspace_id: n.workspace.id,
-                  old_value: !1,
-                  new_value: !0,
+                  old_value: false,
+                  new_value: true,
                   block_id: n.id
                 }));
               }
@@ -177,15 +177,15 @@ var l = function () {
           } else {
             t.selected_comment = n.id;
             var l = t.comments.get(n.id);
-            if (!(null === (i = null === l || void 0 === l ? void 0 : l.parentElement) || void 0 === i)) {
+            if (!(null === (i = null === l || undefined === l ? undefined : l.parentElement) || undefined === i)) {
               i.classList.add("blocklySimplifiedCommentTextActive");
             }
             if (t.events.is_enabled()) {
               t.events.fire(t.ui_event_factory({
                 type: c.UIEventType.SIMPLIFIED_COMMENT_SELECT,
                 workspace_id: n.workspace.id,
-                old_value: !1,
-                new_value: !0,
+                old_value: false,
+                new_value: true,
                 block_id: n.id
               }));
             }
@@ -203,8 +203,8 @@ var l = function () {
           t.events.fire(t.ui_event_factory({
             type: c.UIEventType.SIMPLIFIED_COMMENT_EDIT,
             workspace_id: n.workspace.id,
-            old_value: void 0,
-            new_value: void 0,
+            old_value: undefined,
+            new_value: undefined,
             block_id: n.id
           }));
         }
@@ -218,54 +218,54 @@ var l = function () {
           t.events.fire(t.ui_event_factory({
             type: c.UIEventType.SIMPLIFIED_COMMENT_DELETE,
             workspace_id: n.workspace.id,
-            old_value: void 0,
-            new_value: void 0,
+            old_value: undefined,
+            new_value: undefined,
             block_id: n.id
           }));
         }
-        e.set_comment_text(void 0);
+        e.set_comment_text(undefined);
       });
       var d = new Image();
       d.src = this.Msg.ICON_COMMENT_MORE;
       d.classList.add("blocklySimplifiedCommentMoreButton");
       d.setAttribute("tabindex", "-1");
-      var h = !1;
-      var p = !1;
+      var h = false;
+      var p = false;
       this.events.bind_event_with_checks(d, "focus", n, function () {
         var e;
         var r;
         if (!p) {
           var u;
           var _;
-          p = !0;
+          p = true;
           if (s()) {
             u = t.selected_comment;
             t.selected_comment = n.id;
           }
           if (u && u !== n.id) {
             if (t.events.is_enabled()) {
-              if (!(null === (e = null === (_ = t.comments.get(u)) || void 0 === _ ? void 0 : _.parentElement) || void 0 === e)) {
+              if (!(null === (e = null === (_ = t.comments.get(u)) || undefined === _ ? undefined : _.parentElement) || undefined === e)) {
                 e.classList.remove("blocklySimplifiedCommentTextActive");
               }
               t.events.fire(t.ui_event_factory({
                 type: c.UIEventType.SIMPLIFIED_COMMENT_SELECT,
                 workspace_id: n.workspace.id,
-                old_value: !0,
-                new_value: !1,
+                old_value: true,
+                new_value: false,
                 block_id: u
               }));
             }
           }
           if (t.selected_comment && u !== n.id) {
-            if (!(null === (r = null === (_ = t.comments.get(n.id)) || void 0 === _ ? void 0 : _.parentElement) || void 0 === r)) {
+            if (!(null === (r = null === (_ = t.comments.get(n.id)) || undefined === _ ? undefined : _.parentElement) || undefined === r)) {
               r.classList.add("blocklySimplifiedCommentTextActive");
             }
             if (t.events.is_enabled()) {
               t.events.fire(t.ui_event_factory({
                 type: c.UIEventType.SIMPLIFIED_COMMENT_SELECT,
                 workspace_id: n.workspace.id,
-                old_value: !1,
-                new_value: !0,
+                old_value: false,
+                new_value: true,
                 block_id: n.id
               }));
             }
@@ -276,8 +276,8 @@ var l = function () {
           t.animate_once(f, "showRemoveButtonAnimation");
           t.animate_once(d, "expandMoreButtonAnimation", function () {
             d.style.transform = "rotate(90deg)";
-            h = !0;
-            p = !1;
+            h = true;
+            p = false;
           });
           i.style.opacity = "0.4";
           i.style.left = "26px";
@@ -287,7 +287,7 @@ var l = function () {
       });
       this.events.bind_event_with_checks(d, "blur", n, function () {
         if (!p) {
-          p = !0;
+          p = true;
           t.animate_once(l, "hideEditButtonAnimation", function () {
             return l.style.display = "";
           });
@@ -296,8 +296,8 @@ var l = function () {
           });
           t.animate_once(d, "collapseMoreButtonAnimation", function () {
             d.style.transform = "";
-            h = !1;
-            p = !1;
+            h = false;
+            p = false;
           });
           a.style.opacity = "";
           o.style.marginLeft = "";
@@ -344,9 +344,9 @@ var l = function () {
     e.addEventListener("animationend", r);
     e.classList.add(t);
   };
-  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.events)], e.prototype, "events", void 0);
-  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.UIEvent)], e.prototype, "ui_event_factory", void 0);
-  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.Msg)], e.prototype, "Msg", void 0);
+  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.events)], e.prototype, "events", undefined);
+  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.UIEvent)], e.prototype, "ui_event_factory", undefined);
+  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.Msg)], e.prototype, "Msg", undefined);
   return e = (0, r.__decorate)([(0, i.injectable)()], e);
 }();
 exports.SimplifiedCommentBubble = l;

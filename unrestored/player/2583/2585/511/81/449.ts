@@ -4,7 +4,7 @@ var r = require("./73/index");
 var i = require("./587");
 var o = require("./118");
 var a = require("./401");
-var s = require("./191/index");
+var s = require("./191");
 var u = require("./335");
 var c = require("./37");
 var l = require("./372");
@@ -31,7 +31,7 @@ var h = function () {
     this.image = t;
   }
   t.prototype.detect = function () {
-    return this.detectMirror(!1);
+    return this.detectMirror(false);
   };
   t.prototype.detectMirror = function (t) {
     var e = this.getMatrixCenter();
@@ -115,7 +115,7 @@ var h = function () {
     var n = t;
     var i = t;
     var o = t;
-    var a = !0;
+    var a = true;
     for (this.nbCenterLayers = 1; this.nbCenterLayers < 9; this.nbCenterLayers++) {
       var s = this.getFirstDifferent(e, a, 1, -1);
       var u = this.getFirstDifferent(n, a, 1, 1);
@@ -156,10 +156,10 @@ var h = function () {
     } catch (d) {
       var i = this.image.getWidth() / 2;
       var s = this.image.getHeight() / 2;
-      t = this.getFirstDifferent(new f(i + 7, s - 7), !1, 1, -1).toResultPoint();
-      e = this.getFirstDifferent(new f(i + 7, s + 7), !1, 1, 1).toResultPoint();
-      n = this.getFirstDifferent(new f(i - 7, s + 7), !1, -1, 1).toResultPoint();
-      r = this.getFirstDifferent(new f(i - 7, s - 7), !1, -1, -1).toResultPoint();
+      t = this.getFirstDifferent(new f(i + 7, s - 7), false, 1, -1).toResultPoint();
+      e = this.getFirstDifferent(new f(i + 7, s + 7), false, 1, 1).toResultPoint();
+      n = this.getFirstDifferent(new f(i - 7, s + 7), false, -1, 1).toResultPoint();
+      r = this.getFirstDifferent(new f(i - 7, s - 7), false, -1, -1).toResultPoint();
     }
     var u = o.a.round((t.getX() + r.getX() + e.getX() + n.getX()) / 4);
     var c = o.a.round((t.getY() + r.getY() + e.getY() + n.getY()) / 4);
@@ -170,10 +170,10 @@ var h = function () {
       n = l[2];
       r = l[3];
     } catch (d) {
-      t = this.getFirstDifferent(new f(u + 7, c - 7), !1, 1, -1).toResultPoint();
-      e = this.getFirstDifferent(new f(u + 7, c + 7), !1, 1, 1).toResultPoint();
-      n = this.getFirstDifferent(new f(u - 7, c + 7), !1, -1, 1).toResultPoint();
-      r = this.getFirstDifferent(new f(u - 7, c - 7), !1, -1, -1).toResultPoint();
+      t = this.getFirstDifferent(new f(u + 7, c - 7), false, 1, -1).toResultPoint();
+      e = this.getFirstDifferent(new f(u + 7, c + 7), false, 1, 1).toResultPoint();
+      n = this.getFirstDifferent(new f(u - 7, c + 7), false, -1, 1).toResultPoint();
+      r = this.getFirstDifferent(new f(u - 7, c - 7), false, -1, -1).toResultPoint();
     }
     u = o.a.round((t.getX() + r.getX() + e.getX() + n.getX()) / 4);
     c = o.a.round((t.getY() + r.getY() + e.getY() + n.getY()) / 4);
@@ -204,7 +204,7 @@ var h = function () {
     r = new f(r.getX() + 3, r.getY() + 3);
     var i = this.getColor(r, t);
     if (0 === i) {
-      return !1;
+      return false;
     }
     var o = this.getColor(t, e);
     return o === i && (o = this.getColor(e, n)) === i && (o = this.getColor(n, r)) === i;

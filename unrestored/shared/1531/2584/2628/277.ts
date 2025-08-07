@@ -69,7 +69,7 @@ var c = function (e) {
 }(o);
 var u = function (e) {
   function t(t, n, r, i) {
-    var o = e.call(this, "FORMAT_ERROR", t + " \nLocale: " + n + "\nMessageID: " + (null === r || void 0 === r ? void 0 : r.id) + "\nDefault Message: " + (null === r || void 0 === r ? void 0 : r.defaultMessage) + "\nDescription: " + (null === r || void 0 === r ? void 0 : r.description) + " \n", i) || this;
+    var o = e.call(this, "FORMAT_ERROR", t + " \nLocale: " + n + "\nMessageID: " + (null === r || undefined === r ? undefined : r.id) + "\nDefault Message: " + (null === r || undefined === r ? undefined : r.defaultMessage) + "\nDescription: " + (null === r || undefined === r ? undefined : r.description) + " \n", i) || this;
     o.descriptor = r;
     return o;
   }

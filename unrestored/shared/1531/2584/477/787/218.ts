@@ -5,24 +5,24 @@ export { a };
 export { s as b };
 export { c as d };
 export { u as e };
-var r = require("./720/805");
+import r = require("./720/805");
 var i = new RegExp("^[ \\t]*([0-9a-f]{32})?-?([0-9a-f]{16})?-?([01])?[ \\t]*$");
 function o(e) {
   var t;
-  if (void 0 === e) {
-    e = null === (t = Object(r.b)().getClient()) || void 0 === t ? void 0 : t.getOptions();
+  if (undefined === e) {
+    e = null === (t = r.b().getClient()) || undefined === t ? undefined : t.getOptions();
   }
   return !!e && ("tracesSampleRate" in e || "tracesSampler" in e);
 }
 function a(e) {
   var t = e.match(i);
   if (t) {
-    var n = void 0;
+    var n = undefined;
     if ("1" === t[3]) {
-      n = !0;
+      n = true;
     } else {
       if ("0" === t[3]) {
-        n = !1;
+        n = false;
       }
     }
     return {
@@ -35,10 +35,10 @@ function a(e) {
 function s(e) {
   var t;
   var n;
-  if (void 0 === e) {
-    e = Object(r.b)();
+  if (undefined === e) {
+    e = r.b();
   }
-  return null === (n = null === (t = e) || void 0 === t ? void 0 : t.getScope()) || void 0 === n ? void 0 : n.getTransaction();
+  return null === (n = null === (t = e) || undefined === t ? undefined : t.getScope()) || undefined === n ? undefined : n.getTransaction();
 }
 function c(e) {
   return e / 1e3;

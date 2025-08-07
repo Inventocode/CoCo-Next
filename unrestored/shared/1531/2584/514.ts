@@ -1,8 +1,8 @@
 "use strict";
 
 export { o as a };
-var r = require("react");
-var i = r.createContext(void 0);
+import r = require("react");
+var i = r.createContext(undefined);
 var o = function (e) {
   var t = e.children;
   var n = e.size;

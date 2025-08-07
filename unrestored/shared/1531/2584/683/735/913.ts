@@ -10,11 +10,11 @@ function i(e) {
 function o(e, t, n) {
   for (var r = 0, i = n.length; r < i;) {
     if (e(t, n[r])) {
-      return !0;
+      return true;
     }
     r += 1;
   }
-  return !1;
+  return false;
 }
 function a(e, t) {
   return Object.prototype.hasOwnProperty.call(t, e);
@@ -41,13 +41,13 @@ var h = function () {
 var p = function (e, t) {
   for (var n = 0; n < e.length;) {
     if (e[n] === t) {
-      return !0;
+      return true;
     }
     n += 1;
   }
-  return !1;
+  return false;
 };
-var _ = "function" !== typeof Object.keys || h ? Object(c.a)(function (e) {
+var _ = "function" !== typeof Object.keys || h ? c.a(function (e) {
   if (Object(e) !== e) {
     return [];
   }
@@ -67,7 +67,7 @@ var _ = "function" !== typeof Object.keys || h ? Object(c.a)(function (e) {
     }
   }
   return r;
-}) : Object(c.a)(function (e) {
+}) : c.a(function (e) {
   return Object(e) !== e ? [] : Object.keys(e);
 });
 var A = require("../520/908");
@@ -82,14 +82,14 @@ function g(e, t, n, r) {
 }
 function v(e, t, n, r) {
   if (s(e, t)) {
-    return !0;
+    return true;
   }
-  var i = Object(A.a)(e);
-  if (i !== Object(A.a)(t)) {
-    return !1;
+  var i = A.a(e);
+  if (i !== A.a(t)) {
+    return false;
   }
   if (null == e || null == t) {
-    return !1;
+    return false;
   }
   if ("function" === typeof e["fantasy-land/equals"] || "function" === typeof t["fantasy-land/equals"]) {
     return "function" === typeof e["fantasy-land/equals"] && e["fantasy-land/equals"](t) && "function" === typeof t["fantasy-land/equals"] && t["fantasy-land/equals"](e);
@@ -112,19 +112,19 @@ function v(e, t, n, r) {
     case "Number":
     case "String":
       if (typeof e !== typeof t || !s(e.valueOf(), t.valueOf())) {
-        return !1;
+        return false;
       }
       break;
     case "Date":
       if (!s(e.valueOf(), t.valueOf())) {
-        return !1;
+        return false;
       }
       break;
     case "Error":
       return e.name === t.name && e.message === t.message;
     case "RegExp":
       if (e.source !== t.source || e.global !== t.global || e.ignoreCase !== t.ignoreCase || e.multiline !== t.multiline || e.sticky !== t.sticky || e.unicode !== t.unicode) {
-        return !1;
+        return false;
       }
   }
   for (var o = n.length - 1; o >= 0;) {
@@ -159,24 +159,24 @@ function v(e, t, n, r) {
     case "ArrayBuffer":
       break;
     default:
-      return !1;
+      return false;
   }
   var c = _(e);
   if (c.length !== _(t).length) {
-    return !1;
+    return false;
   }
   var u = n.concat([e]);
   var l = r.concat([t]);
   for (o = c.length - 1; o >= 0;) {
     var f = c[o];
     if (!a(f, t) || !v(t[f], e[f], u, l)) {
-      return !1;
+      return false;
     }
     o -= 1;
   }
-  return !0;
+  return true;
 }
-var m = Object(r.a)(function (e, t) {
+var m = r.a(function (e, t) {
   return v(e, t, [], []);
 });
 exports.a = m;

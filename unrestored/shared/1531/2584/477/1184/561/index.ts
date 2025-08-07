@@ -52,7 +52,7 @@
           i.prototype = i.prototype || {};
           Object.defineProperties(i, {
             __sentry_original__: {
-              enumerable: !1,
+              enumerable: false,
               value: r
             }
           });
@@ -67,7 +67,7 @@
     }).join("&");
   }
   function f(e) {
-    if (Object(o.d)(e)) {
+    if (o.d(e)) {
       var t = e;
       var n = {
         message: t.message,
@@ -79,21 +79,21 @@
       }
       return n;
     }
-    if (Object(o.f)(e)) {
+    if (o.f(e)) {
       var a = e;
       var s = {};
       s.type = a.type;
       try {
-        s.target = Object(o.c)(a.target) ? Object(i.a)(a.target) : Object.prototype.toString.call(a.target);
+        s.target = o.c(a.target) ? i.a(a.target) : Object.prototype.toString.call(a.target);
       } catch (u) {
         s.target = "<unknown>";
       }
       try {
-        s.currentTarget = Object(o.c)(a.currentTarget) ? Object(i.a)(a.currentTarget) : Object.prototype.toString.call(a.currentTarget);
+        s.currentTarget = o.c(a.currentTarget) ? i.a(a.currentTarget) : Object.prototype.toString.call(a.currentTarget);
       } catch (u) {
         s.currentTarget = "<unknown>";
       }
-      for (var c in "undefined" !== typeof CustomEvent && Object(o.g)(e, CustomEvent) && (s.detail = a.detail), a) if (Object.prototype.hasOwnProperty.call(a, c)) {
+      for (var c in "undefined" !== typeof CustomEvent && o.g(e, CustomEvent) && (s.detail = a.detail), a) if (Object.prototype.hasOwnProperty.call(a, c)) {
         s[c] = a[c];
       }
       return s;
@@ -106,23 +106,23 @@
     }(JSON.stringify(e));
   }
   function h(e, t, n) {
-    if (void 0 === t) {
+    if (undefined === t) {
       t = 3;
     }
-    if (void 0 === n) {
+    if (undefined === n) {
       n = 102400;
     }
     var r = A(e, t);
     return d(r) > n ? h(e, t - 1, n) : r;
   }
   function p(t, n) {
-    return "domain" === n && t && "object" === typeof t && t._events ? "[Domain]" : "domainEmitter" === n ? "[DomainEmitter]" : "undefined" !== typeof e && t === e ? "[Global]" : "undefined" !== typeof window && t === window ? "[Window]" : "undefined" !== typeof document && t === document ? "[Document]" : Object(o.l)(t) ? "[SyntheticEvent]" : "number" === typeof t && t !== t ? "[NaN]" : void 0 === t ? "[undefined]" : "function" === typeof t ? "[Function: " + Object(s.a)(t) + "]" : "symbol" === typeof t ? "[" + String(t) + "]" : "bigint" === typeof t ? "[BigInt: " + String(t) + "]" : t;
+    return "domain" === n && t && "object" === typeof t && t._events ? "[Domain]" : "domainEmitter" === n ? "[DomainEmitter]" : "undefined" !== typeof e && t === e ? "[Global]" : "undefined" !== typeof window && t === window ? "[Window]" : "undefined" !== typeof document && t === document ? "[Document]" : o.l(t) ? "[SyntheticEvent]" : "number" === typeof t && t !== t ? "[NaN]" : undefined === t ? "[undefined]" : "function" === typeof t ? "[Function: " + s.a(t) + "]" : "symbol" === typeof t ? "[" + String(t) + "]" : "bigint" === typeof t ? "[BigInt: " + String(t) + "]" : t;
   }
   function _(e, t, n, r) {
-    if (void 0 === n) {
+    if (undefined === n) {
       n = 1 / 0;
     }
-    if (void 0 === r) {
+    if (undefined === r) {
       r = new a.a();
     }
     if (0 === n) {
@@ -138,14 +138,14 @@
           return "[Array]";
         }
         var n = p(e);
-        return Object(o.i)(n) ? n : t;
+        return o.i(n) ? n : t;
       }(t);
     }
-    if (null !== t && void 0 !== t && "function" === typeof t.toJSON) {
+    if (null !== t && undefined !== t && "function" === typeof t.toJSON) {
       return t.toJSON();
     }
     var i = p(t, e);
-    if (Object(o.i)(i)) {
+    if (o.i(i)) {
       return i;
     }
     var s = f(t);
@@ -169,7 +169,7 @@
     }
   }
   function g(e, t) {
-    if (void 0 === t) {
+    if (undefined === t) {
       t = 40;
     }
     var n = Object.keys(f(e));
@@ -178,12 +178,12 @@
       return "[object has no keys]";
     }
     if (n[0].length >= t) {
-      return Object(c.d)(n[0], t);
+      return c.d(n[0], t);
     }
     for (var r = n.length; r > 0; r--) {
       var i = n.slice(0, r).join(", ");
       if (!(i.length > t)) {
-        return r === n.length ? i : Object(c.d)(i, t);
+        return r === n.length ? i : c.d(i, t);
       }
     }
     return "";
@@ -191,11 +191,11 @@
   function v(e) {
     var t;
     var n;
-    if (Object(o.h)(e)) {
+    if (o.h(e)) {
       var i = e;
       var a = {};
       try {
-        for (var s = Object(r.g)(Object.keys(i)), c = s.next(); !c.done; c = s.next()) {
+        for (var s = r.g(Object.keys(i)), c = s.next(); !c.done; c = s.next()) {
           var u = c.value;
           if ("undefined" !== typeof i[u]) {
             a[u] = v(i[u]);

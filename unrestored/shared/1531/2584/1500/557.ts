@@ -1,11 +1,11 @@
 "use strict";
 
-var r = require("../19");
-var o = require("../20");
-var i = require("../33/index");
-var a = require("../54");
-var s = require("react");
-var c = require("../8");
+import r = require("../19");
+import o = require("../20");
+import i = require("../33/index");
+import a = require("../54");
+import s = require("react");
+import c = require("../8");
 var l = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -18,7 +18,7 @@ var l = function __importDefault(module) {
   });
   return defaultExport;
 }(c);
-var u = require("../1504/788");
+import u = require("../1504/788");
 function d(e, t) {
   var n = e.prefixCls;
   var i = e.invalidate;
@@ -33,8 +33,8 @@ function d(e, t) {
   var v = e.display;
   var b = e.order;
   var y = e.component;
-  var E = void 0 === y ? "div" : y;
-  var O = Object(a.a)(e, ["prefixCls", "invalidate", "item", "renderItem", "responsive", "registerSize", "itemKey", "className", "style", "children", "display", "order", "component"]);
+  var E = undefined === y ? "div" : y;
+  var O = a.a(e, ["prefixCls", "invalidate", "item", "renderItem", "responsive", "registerSize", "itemKey", "className", "style", "children", "display", "order", "component"]);
   var w = p && !v;
   function C(e) {
     f(h, e);
@@ -45,24 +45,24 @@ function d(e, t) {
     };
   }, []);
   var T;
-  var S = d && void 0 !== c ? d(c) : _;
+  var S = d && undefined !== c ? d(c) : _;
   if (!i) {
     T = {
       opacity: w ? 0 : 1,
-      height: w ? 0 : void 0,
-      overflowY: w ? "hidden" : void 0,
-      order: p ? b : void 0,
-      pointerEvents: w ? "none" : void 0,
-      position: w ? "absolute" : void 0
+      height: w ? 0 : undefined,
+      overflowY: w ? "hidden" : undefined,
+      order: p ? b : undefined,
+      pointerEvents: w ? "none" : undefined,
+      position: w ? "absolute" : undefined
     };
   }
   var I = {};
   if (w) {
-    I["aria-hidden"] = !0;
+    I["aria-hidden"] = true;
   }
-  var A = s.createElement(E, Object(r.a)({
+  var A = s.createElement(E, r.a({
     className: l()(!i && n, m),
-    style: Object(o.a)(Object(o.a)({}, T), g)
+    style: o.a(o.a({}, T), g)
   }, I, O, {
     ref: t
   }), S);
@@ -98,7 +98,7 @@ function v(e) {
   _.delete(e);
 }
 function b(e) {
-  var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+  var t = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : 1;
   var n = g += 1;
   function r(t) {
     if (0 === t) {
@@ -123,19 +123,19 @@ var y = function (e, t) {
   var n = s.useContext(w);
   if (!n) {
     var o = e.component;
-    var i = void 0 === o ? "div" : o;
-    var c = Object(a.a)(e, ["component"]);
-    return s.createElement(i, Object(r.a)({}, c, {
+    var i = undefined === o ? "div" : o;
+    var c = a.a(e, ["component"]);
+    return s.createElement(i, r.a({}, c, {
       ref: t
     }));
   }
   var u = n.className;
-  var d = Object(a.a)(n, ["className"]);
+  var d = a.a(n, ["className"]);
   var p = e.className;
-  var h = Object(a.a)(e, ["className"]);
+  var h = a.a(e, ["className"]);
   return s.createElement(w.Provider, {
     value: null
-  }, s.createElement(f, Object(r.a)({
+  }, s.createElement(f, r.a({
     ref: t,
     className: l()(u, p)
   }, d, h)));
@@ -149,14 +149,14 @@ function C(e) {
 }
 function T(e, t) {
   var n = e.prefixCls;
-  var c = void 0 === n ? "rc-overflow" : n;
+  var c = undefined === n ? "rc-overflow" : n;
   var d = e.data;
-  var p = void 0 === d ? [] : d;
+  var p = undefined === d ? [] : d;
   var h = e.renderItem;
   var m = e.renderRawItem;
   var g = e.itemKey;
   var _ = e.itemWidth;
-  var v = void 0 === _ ? 10 : _;
+  var v = undefined === _ ? 10 : _;
   var y = e.ssr;
   var E = e.style;
   var O = e.className;
@@ -165,20 +165,20 @@ function T(e, t) {
   var I = e.renderRawRest;
   var A = e.suffix;
   var j = e.component;
-  var N = void 0 === j ? "div" : j;
+  var N = undefined === j ? "div" : j;
   var R = e.itemComponent;
   var k = e.onVisibleChange;
-  var x = Object(a.a)(e, ["prefixCls", "data", "renderItem", "renderRawItem", "itemKey", "itemWidth", "ssr", "style", "className", "maxCount", "renderRest", "renderRawRest", "suffix", "component", "itemComponent", "onVisibleChange"]);
+  var x = a.a(e, ["prefixCls", "data", "renderItem", "renderRawItem", "itemKey", "itemWidth", "ssr", "style", "className", "maxCount", "renderRest", "renderRawRest", "suffix", "component", "itemComponent", "onVisibleChange"]);
   var D = function () {
-    var e = Object(s.useState)({});
-    var t = Object(i.a)(e, 2)[1];
-    var n = Object(s.useRef)([]);
-    var r = Object(s.useRef)(!1);
+    var e = s.useState({});
+    var t = i.a(e, 2)[1];
+    var n = s.useRef([]);
+    var r = s.useRef(false);
     var o = 0;
     var a = 0;
-    Object(s.useEffect)(function () {
+    s.useEffect(function () {
       return function () {
-        r.current = !0;
+        r.current = true;
       };
     }, []);
     return function (e) {
@@ -200,39 +200,39 @@ function T(e, t) {
   }();
   var M = "full" === y;
   var L = D(null);
-  var P = Object(i.a)(L, 2);
+  var P = i.a(L, 2);
   var B = P[0];
   var F = P[1];
   var G = B || 0;
   var U = D(new Map());
-  var W = Object(i.a)(U, 2);
+  var W = i.a(U, 2);
   var H = W[0];
   var V = W[1];
   var z = D(0);
-  var Y = Object(i.a)(z, 2);
+  var Y = i.a(z, 2);
   var K = Y[0];
   var q = Y[1];
   var X = D(0);
-  var Q = Object(i.a)(X, 2);
+  var Q = i.a(X, 2);
   var Z = Q[0];
   var J = Q[1];
   var $ = D(0);
-  var ee = Object(i.a)($, 2);
+  var ee = i.a($, 2);
   var te = ee[0];
   var ne = ee[1];
-  var re = Object(s.useState)(null);
-  var oe = Object(i.a)(re, 2);
+  var re = s.useState(null);
+  var oe = i.a(re, 2);
   var ie = oe[0];
   var ae = oe[1];
-  var se = Object(s.useState)(null);
-  var ce = Object(i.a)(se, 2);
+  var se = s.useState(null);
+  var ce = i.a(se, 2);
   var le = ce[0];
   var ue = ce[1];
   var de = s.useMemo(function () {
     return null === le && M ? Number.MAX_SAFE_INTEGER : le || 0;
   }, [le, B]);
-  var pe = Object(s.useState)(!1);
-  var fe = Object(i.a)(pe, 2);
+  var pe = s.useState(false);
+  var fe = i.a(pe, 2);
   var he = fe[0];
   var me = fe[1];
   var ge = "".concat(c, "-item");
@@ -240,7 +240,7 @@ function T(e, t) {
   var ve = p.length && "responsive" === T;
   var be = "invalidate" === T;
   var ye = ve || "number" === typeof T && p.length > T;
-  var Ee = Object(s.useMemo)(function () {
+  var Ee = s.useMemo(function () {
     var e = p;
     if (ve) {
       e = null === B && M ? p : p.slice(0, Math.min(p.length, G / v));
@@ -251,21 +251,21 @@ function T(e, t) {
     }
     return e;
   }, [p, v, B, T, ve]);
-  var Oe = Object(s.useMemo)(function () {
+  var Oe = s.useMemo(function () {
     return ve ? p.slice(de + 1) : p.slice(Ee.length);
   }, [p, Ee, ve, de]);
-  var we = Object(s.useCallback)(function (e, t) {
+  var we = s.useCallback(function (e, t) {
     var n;
-    return "function" === typeof g ? g(e) : null !== (n = g && (null === e || void 0 === e ? void 0 : e[g])) && void 0 !== n ? n : t;
+    return "function" === typeof g ? g(e) : null !== (n = g && (null === e || undefined === e ? undefined : e[g])) && undefined !== n ? n : t;
   }, [g]);
-  var Ce = Object(s.useCallback)(h || function (e) {
+  var Ce = s.useCallback(h || function (e) {
     return e;
   }, [h]);
   function Te(e, t) {
     ue(e);
     if (!t) {
       me(e < p.length - 1);
-      if (!(null === k || void 0 === k)) {
+      if (!(null === k || undefined === k)) {
         k(e);
       }
     }
@@ -295,8 +295,8 @@ function T(e, t) {
       }
       for (var r = 0; r < t; r += 1) {
         var o = Ie(r);
-        if (void 0 === o) {
-          Te(r - 1, !0);
+        if (undefined === o) {
+          Te(r - 1, true);
           break;
         }
         e += o;
@@ -336,7 +336,7 @@ function T(e, t) {
     var n = we(e, t);
     return s.createElement(w.Provider, {
       key: n,
-      value: Object(o.a)(Object(o.a)({}, Re), {}, {
+      value: o.a(o.a({}, Re), {}, {
         order: t,
         item: e,
         itemKey: n,
@@ -346,7 +346,7 @@ function T(e, t) {
     }, m(e, t));
   } : function (e, t) {
     var n = we(e, t);
-    return s.createElement(f, Object(r.a)({}, Re, {
+    return s.createElement(f, r.a({}, Re, {
       order: t,
       key: n,
       item: e,
@@ -368,24 +368,24 @@ function T(e, t) {
   if (I) {
     if (I) {
       Ne = s.createElement(w.Provider, {
-        value: Object(o.a)(Object(o.a)({}, Re), xe)
+        value: o.a(o.a({}, Re), xe)
       }, I(Oe));
     }
   } else {
     var De = S || C;
-    Ne = s.createElement(f, Object(r.a)({}, Re, xe), "function" === typeof De ? De(Oe) : De);
+    Ne = s.createElement(f, r.a({}, Re, xe), "function" === typeof De ? De(Oe) : De);
   }
-  var Me = s.createElement(N, Object(r.a)({
+  var Me = s.createElement(N, r.a({
     className: l()(!be && c, O),
     style: E,
     ref: t
-  }, x), Ee.map(ke), ye ? Ne : null, A && s.createElement(f, Object(r.a)({}, Re, {
+  }, x), Ee.map(ke), ye ? Ne : null, A && s.createElement(f, r.a({}, Re, {
     order: de,
     className: "".concat(ge, "-suffix"),
     registerSize: function (e, t) {
       ne(t);
     },
-    display: !0,
+    display: true,
     style: je
   }), A));
   if (ve) {

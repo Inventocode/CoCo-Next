@@ -83,8 +83,8 @@ s = function (e) {
 };
 c = function (e) {
   var t;
-  for (t in e) return !1;
-  return !0;
+  for (t in e) return false;
+  return true;
 };
 u = A(function (e, t) {
   var n;

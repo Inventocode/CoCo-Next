@@ -64,12 +64,12 @@ var c = function () {
         for (var f = 0; f < 2; ++f) {
           var h = s - f;
           if (t.isEmpty(n.get(h, c))) {
-            var l = void 0;
+            var l = undefined;
             if (o < e.getSize()) {
               l = e.get(o);
               ++o;
             } else {
-              l = !1;
+              l = false;
             }
             if (255 !== r && a.a.getDataMaskBit(r, h, c)) {
               l = !l;

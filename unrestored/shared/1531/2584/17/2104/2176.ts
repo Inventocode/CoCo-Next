@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.Options = void 0;
+exports.Options = undefined;
 var r = require("tslib");
 var i = require("inversify");
 var o = require("../../1001/213/index");
@@ -15,26 +15,26 @@ var l = function () {
   function e(e) {
     this.disabledPatternId = "";
     this.embossFilterId = "";
-    this.pinch = void 0;
-    this.notch = void 0;
-    this.degrade_translate = void 0;
-    this.tooltip = void 0;
-    this.timer = void 0;
-    this.toolbox_background_class = void 0;
-    this.in_flyout = !1;
+    this.pinch = undefined;
+    this.notch = undefined;
+    this.degrade_translate = undefined;
+    this.tooltip = undefined;
+    this.timer = undefined;
+    this.toolbox_background_class = undefined;
+    this.in_flyout = false;
     var t;
     var n;
     var r;
     var i;
     var o;
     var a = !!e.readOnly;
-    var l = !1;
+    var l = false;
     if (a) {
-      l = !1;
-      t = !1;
-      n = !1;
-      r = !1;
-      i = !1;
+      l = false;
+      t = false;
+      n = false;
+      r = false;
+      i = false;
     } else {
       if (e.toolbox) {
         if ("string" == typeof e.toolbox) {
@@ -44,16 +44,16 @@ var l = function () {
         }
         l = o instanceof Element ? !(!o || !o.getElementsByTagName("category").length) : o.length > 0;
       }
-      if (void 0 == (t = e.collapse)) {
+      if (undefined == (t = e.collapse)) {
         t = l;
       }
-      if (void 0 == (n = e.comments)) {
+      if (undefined == (n = e.comments)) {
         n = l;
       }
-      if (void 0 == (r = e.disable)) {
+      if (undefined == (r = e.disable)) {
         r = l;
       }
-      i = void 0 == e.sounds || e.sounds;
+      i = undefined == e.sounds || e.sounds;
     }
     var f;
     var d;
@@ -62,8 +62,8 @@ var l = function () {
     var _;
     var A = !!e.rtl;
     var g = e.horizontalLayout;
-    if (void 0 == g) {
-      g = !1;
+    if (undefined == g) {
+      g = false;
     }
     if ("number" === typeof e.toolboxPosition) {
       f = e.toolboxPosition;
@@ -71,28 +71,28 @@ var l = function () {
       var v = "end" !== e.toolboxPosition;
       f = g ? v ? u.TOOLBOX_POSITION.TOP : u.TOOLBOX_POSITION.BOTTOM : v === A ? u.TOOLBOX_POSITION.RIGHT : u.TOOLBOX_POSITION.LEFT;
     }
-    if (void 0 !== e.scrollbars) {
+    if (undefined !== e.scrollbars) {
       d = e.scrollbars;
       h = e.scrollbars;
       p = e.scrollbars;
       _ = e.scrollbars;
     } else {
-      if (void 0 == (d = e.scrollable ? e.scrollable.workspace : void 0)) {
+      if (undefined == (d = e.scrollable ? e.scrollable.workspace : undefined)) {
         d = l;
       }
-      if (void 0 == (h = e.scrollable ? e.scrollable.flyout : void 0)) {
+      if (undefined == (h = e.scrollable ? e.scrollable.flyout : undefined)) {
         h = l;
       }
-      if (void 0 == (p = e.show_scrollbars ? e.show_scrollbars.workspace : void 0)) {
+      if (undefined == (p = e.show_scrollbars ? e.show_scrollbars.workspace : undefined)) {
         p = l;
       }
-      if (void 0 == (_ = e.show_scrollbars ? e.show_scrollbars.flyout : void 0)) {
+      if (undefined == (_ = e.show_scrollbars ? e.show_scrollbars.flyout : undefined)) {
         _ = l;
       }
     }
     var m = e.css;
-    if (void 0 == m) {
-      m = !0;
+    if (undefined == m) {
+      m = true;
     }
     var y;
     var b;
@@ -100,8 +100,8 @@ var l = function () {
     if (e.media) {
       w = e.media;
     }
-    y = void 0 == e.oneBasedIndex || !!e.oneBasedIndex;
-    b = void 0 != e.blockly_type ? e.blockly_type : "default";
+    y = undefined == e.oneBasedIndex || !!e.oneBasedIndex;
+    b = undefined != e.blockly_type ? e.blockly_type : "default";
     this.RTL = A;
     this.oneBasedIndex = y;
     this.collapse = t;
@@ -149,19 +149,19 @@ var l = function () {
   e.prototype.parse_zoom_options = function (e) {
     var t = e.zoom || {};
     return {
-      controls: void 0 != t.controls && t.controls,
-      wheel: void 0 != t.wheel && t.wheel,
-      startScale: void 0 == t.startScale ? 1 : t.startScale,
-      maxScale: void 0 == t.maxScale ? 3 : t.maxScale,
-      minScale: void 0 == t.minScale ? .3 : t.minScale,
-      scaleSpeed: void 0 == t.scaleSpeed ? 1.2 : t.scaleSpeed
+      controls: undefined != t.controls && t.controls,
+      wheel: undefined != t.wheel && t.wheel,
+      startScale: undefined == t.startScale ? 1 : t.startScale,
+      maxScale: undefined == t.maxScale ? 3 : t.maxScale,
+      minScale: undefined == t.minScale ? .3 : t.minScale,
+      scaleSpeed: undefined == t.scaleSpeed ? 1.2 : t.scaleSpeed
     };
   };
   e.prototype.parse_grid_options = function (e) {
     var t = e.grid || {};
     return {
       spacing: t.spacing || 35,
-      step: void 0 === t.step ? 4 : t.step,
+      step: undefined === t.step ? 4 : t.step,
       snap: !!t.spacing && !!t.snap
     };
   };
@@ -192,10 +192,10 @@ var l = function () {
   };
   e.prototype.parse_flyout_options = function (e) {
     var t = {
-      auto_close: !0,
-      fixed_width: void 0,
-      min_width: void 0,
-      max_width: void 0,
+      auto_close: true,
+      fixed_width: undefined,
+      min_width: undefined,
+      max_width: undefined,
       corner_radius: 0,
       padding: {
         top: 15,
@@ -212,12 +212,12 @@ var l = function () {
   };
   e.prototype.parse_block_group_options = function (e) {
     if (e.block_group) {
-      return !0 === e.block_group ? {} : e.block_group;
+      return true === e.block_group ? {} : e.block_group;
     }
   };
   e.prototype.parse_auto_resize_options = function (e) {
     if (e.auto_resize) {
-      return !0 === e.auto_resize ? {
+      return true === e.auto_resize ? {
         delay: 0
       } : e.auto_resize;
     }
@@ -228,8 +228,8 @@ var l = function () {
     var r = [u.WorkspaceOptionType.PASTE, u.WorkspaceOptionType.CLEAN_UP, u.WorkspaceOptionType.DELETE_ALL, u.WorkspaceOptionType.COPY_ALL, u.WorkspaceOptionType.GLOBAL_COMMENT];
     var i = [u.BlockOptionType.COPY_AND_PASTE, u.BlockOptionType.COPY, u.BlockOptionType.ADD_COMMENT, u.BlockOptionType.COLLAPSE, u.BlockOptionType.DELETE, u.BlockOptionType.SET_GROUP];
     return {
-      workspace: (null === (t = e.context_menu) || void 0 === t ? void 0 : t.workspace) || r,
-      block: (null === (n = e.context_menu) || void 0 === n ? void 0 : n.block) || i
+      workspace: (null === (t = e.context_menu) || undefined === t ? undefined : t.workspace) || r,
+      block: (null === (n = e.context_menu) || undefined === n ? undefined : n.block) || i
     };
   };
   return e = (0, r.__decorate)([(0, i.injectable)()], e);

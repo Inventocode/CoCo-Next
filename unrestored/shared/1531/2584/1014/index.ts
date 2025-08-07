@@ -35,7 +35,7 @@ function a(e) {
   for (var t = 1; t < arguments.length; t++) {
     var n = null != arguments[t] ? arguments[t] : {};
     if (t % 2) {
-      i(n, !0).forEach(function (t) {
+      i(n, true).forEach(function (t) {
         g(e, t, n[t]);
       });
     } else {
@@ -93,10 +93,10 @@ function c(e, t) {
 function l(e, t) {
   for (var n = 0; n < t.length; n++) {
     var r = t[n];
-    r.enumerable = r.enumerable || !1;
-    r.configurable = !0;
+    r.enumerable = r.enumerable || false;
+    r.configurable = true;
     if ("value" in r) {
-      r.writable = !0;
+      r.writable = true;
     }
     Object.defineProperty(e, r.key, r);
   }
@@ -119,7 +119,7 @@ function p(e) {
   })(e);
 }
 function f(e) {
-  if (void 0 === e) {
+  if (undefined === e) {
     throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
   }
   return e;
@@ -131,8 +131,8 @@ function h(e, t) {
   e.prototype = Object.create(t && t.prototype, {
     constructor: {
       value: e,
-      writable: !0,
-      configurable: !0
+      writable: true,
+      configurable: true
     }
   });
   if (t) {
@@ -149,9 +149,9 @@ function g(e, t, n) {
   if (t in e) {
     Object.defineProperty(e, t, {
       value: n,
-      enumerable: !0,
-      configurable: !0,
-      writable: !0
+      enumerable: true,
+      configurable: true,
+      writable: true
     });
   } else {
     e[t] = n;
@@ -194,10 +194,10 @@ var E = {
   level: "L",
   bgColor: "#FFFFFF",
   fgColor: "#000000",
-  includeMargin: !1
+  includeMargin: false
 };
 function O(e) {
-  var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+  var t = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : 0;
   var n = [];
   e.forEach(function (e, r) {
     var o = null;
@@ -269,9 +269,9 @@ var T = function () {
   try {
     new Path2D().addPath(new Path2D());
   } catch (e) {
-    return !1;
+    return false;
   }
-  return !0;
+  return true;
 }();
 var S = function (e) {
   function t() {
@@ -281,14 +281,14 @@ var S = function (e) {
     for (var r = arguments.length, o = new Array(r), i = 0; i < r; i++) {
       o[i] = arguments[i];
     }
-    g(f(n = d(this, (e = p(t)).call.apply(e, [this].concat(o)))), "_canvas", void 0);
-    g(f(n), "_image", void 0);
+    g(f(n = d(this, (e = p(t)).call.apply(e, [this].concat(o)))), "_canvas", undefined);
+    g(f(n), "_image", undefined);
     g(f(n), "state", {
-      imgLoaded: !1
+      imgLoaded: false
     });
     g(f(n), "handleImageLoad", function () {
       n.setState({
-        imgLoaded: !0
+        imgLoaded: true
       });
     });
     return n;
@@ -307,9 +307,9 @@ var S = function (e) {
     value: function (e) {
       var t;
       var n;
-      if ((null === (t = this.props.imageSettings) || void 0 === t ? void 0 : t.src) !== (null === (n = e.imageSettings) || void 0 === n ? void 0 : n.src)) {
+      if ((null === (t = this.props.imageSettings) || undefined === t ? undefined : t.src) !== (null === (n = e.imageSettings) || undefined === n ? undefined : n.src)) {
         this.setState({
-          imgLoaded: !1
+          imgLoaded: false
         });
       }
     }

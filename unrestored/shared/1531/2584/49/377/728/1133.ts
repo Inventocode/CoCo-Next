@@ -7,9 +7,9 @@ var a;
 var s;
 var c;
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.EventType = exports.is_drop_op = exports.is_pick_op = exports.is_drop_operation = exports.is_pick_operation = exports.is_path_5 = exports.is_path_4 = exports.is_path_3 = exports.is_path_2 = exports.is_path_5_array = exports.is_path_4_array = exports.is_path_3_array = exports.is_path_2_array = exports.PathParams5 = exports.PathParams4 = exports.PathParams3 = exports.PathParams2 = exports.Field_Type = exports.Target_Type = void 0;
+exports.EventType = exports.is_drop_op = exports.is_pick_op = exports.is_drop_operation = exports.is_pick_operation = exports.is_path_5 = exports.is_path_4 = exports.is_path_3 = exports.is_path_2 = exports.is_path_5_array = exports.is_path_4_array = exports.is_path_3_array = exports.is_path_2_array = exports.PathParams5 = exports.PathParams4 = exports.PathParams3 = exports.PathParams2 = exports.Field_Type = exports.Target_Type = undefined;
 (function (e) {
   e[e.blocks = 0] = "blocks";
   e[e.connections = 1] = "connections";
@@ -66,16 +66,16 @@ exports.is_path_5 = function (e) {
   return e.hasOwnProperty("field_attr");
 };
 exports.is_pick_operation = function (e) {
-  return void 0 !== e.p || void 0 !== e.r;
+  return undefined !== e.p || undefined !== e.r;
 };
 exports.is_drop_operation = function (e) {
-  return void 0 !== e.i || void 0 !== e.d;
+  return undefined !== e.i || undefined !== e.d;
 };
 exports.is_pick_op = function (e) {
-  return void 0 !== e.operation.p || void 0 !== e.operation.r;
+  return undefined !== e.operation.p || undefined !== e.operation.r;
 };
 exports.is_drop_op = function (e) {
-  return void 0 !== e.operation.i || void 0 !== e.operation.d;
+  return undefined !== e.operation.i || undefined !== e.operation.d;
 };
 (function (e) {
   e.CONNECT = "connect";

@@ -1,9 +1,9 @@
 "use strict";
 
 export { o as press };
-var r = require("animejs");
+import r = require("animejs");
 function o(e) {
-  return [Object(r.default)({
+  return [r.default({
     targets: "#".concat(e),
     scale: [{
       value: .9,

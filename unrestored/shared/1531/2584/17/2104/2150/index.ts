@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.AngleController = void 0;
+exports.AngleController = undefined;
 var r = require("tslib");
 var i = require("inversify");
 var o = require("./1321");
@@ -14,8 +14,8 @@ var c = function (e) {
     var t = e.call(this) || this;
     t.pointer_elements = [];
     t.base_color = new s.Color("#000000");
-    t.mod = void 0;
-    t.center_position = void 0;
+    t.mod = undefined;
+    t.center_position = undefined;
     t.base_line_height = 1;
     t.angle_interval = 15;
     t.min_degree = -180;
@@ -27,9 +27,9 @@ var c = function (e) {
     var n;
     var r;
     var i;
-    var o = (null === (n = e.source_block) || void 0 === n ? void 0 : n.is_shadow()) ? e.source_block.parent_block : e.source_block;
+    var o = (null === (n = e.source_block) || undefined === n ? undefined : n.is_shadow()) ? e.source_block.parent_block : e.source_block;
     if (o && (this.angle_scale || this.init(), this.owner = e, this.mod = e.mod_, this.base_color = o.get_colour(), this.update_angle_scale(), this.container.style.display = "block", this.position(), this.base_line)) {
-      var a = (null === (i = null === (r = this.owner) || void 0 === r ? void 0 : r.source_block) || void 0 === i ? void 0 : i.get_workspace().get_scale()) || 1;
+      var a = (null === (i = null === (r = this.owner) || undefined === r ? undefined : r.source_block) || undefined === i ? undefined : i.get_workspace().get_scale()) || 1;
       var s = this.base_line.getBoundingClientRect();
       this.center_position = {
         left: s.left,
@@ -134,7 +134,7 @@ var c = function (e) {
   t.prototype.field_to_angle_value = function (e) {
     var t = this.max_degree - this.min_degree;
     var n = e % t;
-    if (!0 === this.mod) {
+    if (true === this.mod) {
       if (n <= this.min_degree) {
         n += t;
       } else {
@@ -175,7 +175,7 @@ var c = function (e) {
       var i = this.center_position.top - n;
       var o = Math.atan2(i, r) / Math.PI * 180;
       o = Math.round(o / this.angle_interval) * this.angle_interval;
-      if (void 0 !== this.mod) {
+      if (undefined !== this.mod) {
         if (this.mod && o === this.min_degree) {
           o += this.angle_interval;
         }

@@ -185,7 +185,7 @@
         });
       }
     };
-    if (!(void 0 === (i = function () {
+    if (!(undefined === (i = function () {
       return s;
     }.call(exports, require, exports, e)))) {
       e.exports = i;

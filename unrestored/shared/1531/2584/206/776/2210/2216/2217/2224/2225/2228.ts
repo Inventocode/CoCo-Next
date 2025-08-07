@@ -16,12 +16,12 @@ module.exports = function (e, t, n) {
   h.level++;
   var _ = "valid" + h.level;
   if (a.every(function (t) {
-    return e.opts.strictKeywords ? "object" == typeof t && Object.keys(t).length > 0 || !1 === t : e.util.schemaHasRules(t, e.RULES.all);
+    return e.opts.strictKeywords ? "object" == typeof t && Object.keys(t).length > 0 || false === t : e.util.schemaHasRules(t, e.RULES.all);
   })) {
     var A = h.baseId;
     r += " var " + d + " = errors; var " + f + " = false;  ";
     var g = e.compositeRule;
-    e.compositeRule = h.compositeRule = !0;
+    e.compositeRule = h.compositeRule = true;
     var v = a;
     if (v) {
       for (var m, y = -1, b = v.length - 1; y < b;) {
@@ -37,9 +37,9 @@ module.exports = function (e, t, n) {
     }
     e.compositeRule = h.compositeRule = g;
     r += " " + p + " if (!" + f + ") {   var err =   ";
-    if (!1 !== e.createErrors) {
+    if (false !== e.createErrors) {
       r += " { keyword: 'anyOf' , dataPath: (dataPath || '') + " + e.errorPath + " , schemaPath: " + e.util.toQuotedString(c) + " , params: {} ";
-      if (!1 !== e.opts.messages) {
+      if (false !== e.opts.messages) {
         r += " , message: 'should match some schema in anyOf' ";
       }
       if (e.opts.verbose) {

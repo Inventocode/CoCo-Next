@@ -36,7 +36,7 @@ var o = this && this.__rest || function (e, t) {
   return n;
 };
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
 var i = require("react");
 var a = require("react");

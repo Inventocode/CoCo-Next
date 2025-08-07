@@ -12,7 +12,7 @@ var d = Math.max;
 var p = Math.min;
 r({
   target: "Array",
-  proto: !0,
+  proto: true,
   forced: !u
 }, {
   splice: function (e, t) {

@@ -5,7 +5,7 @@ function r() {
     for (var e = require("../../206/776/2210/1108/index"), t = e.inspect, i = function (e) {
         return "string" === typeof e ? e : t(e, {
           depth: 10,
-          colors: !0
+          colors: true
         });
       }, o = Array(r.prefix).fill("  ").join(""), a = arguments.length, s = new Array(a), c = 0; c < a; c++) {
       s[c] = arguments[c];
@@ -14,8 +14,8 @@ function r() {
   }
 }
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
 exports.default = r;
-r.quiet = !0;
+r.quiet = true;
 r.prefix = 0;

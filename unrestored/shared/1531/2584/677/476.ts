@@ -8,33 +8,33 @@ var o = {
   icon: "icon-widget-contact-picker",
   title: "widgetName",
   platforms: ["web", "android"],
-  isGlobalWidget: !0,
-  isInvisibleWidget: !0,
+  isGlobalWidget: true,
+  isInvisibleWidget: true,
   properties: [{
     key: "contactName",
     label: "contactName",
     valueType: "string",
     defaultValue: "",
-    readonly: !0
+    readonly: true
   }, {
     key: "phoneNumber",
     label: "phoneNumber",
     valueType: "string",
     defaultValue: "",
-    readonly: !0
+    readonly: true
   }, {
     key: "phoneNumberList",
     label: "phoneNumberList",
     valueType: "array",
     defaultValue: [],
-    readonly: !0,
+    readonly: true,
     tooltip: "phoneNumberListTooltip"
   }, {
     key: "contactAvatar",
     label: "contactAvatar",
     valueType: "string",
     defaultValue: "",
-    readonly: !0,
+    readonly: true,
     tooltip: "contactAvatarTooltip"
   }],
   methods: [{

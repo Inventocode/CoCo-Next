@@ -37,10 +37,10 @@
   function p(e, t) {
     for (var n = e.length - 1; n >= 0; --n) {
       if (e[n].node === t) {
-        return !0;
+        return true;
       }
     }
-    return !1;
+    return false;
   }
   function _(e, t) {
     return new f().traverse(e, t);
@@ -232,7 +232,7 @@
     this.parent[this.key] = e;
   };
   u.prototype.remove = function () {
-    return Array.isArray(this.parent) ? (this.parent.splice(this.key, 1), !0) : (this.replace(null), !1);
+    return Array.isArray(this.parent) ? (this.parent.splice(this.key, 1), true) : (this.replace(null), false);
   };
   f.prototype.path = function () {
     var e;
@@ -276,7 +276,7 @@
   f.prototype.__execute = function (e, t) {
     var n;
     var r;
-    r = void 0;
+    r = undefined;
     n = this.__current;
     this.__current = t;
     this.__state = null;
@@ -414,7 +414,7 @@
       root: e
     }, "root")), n.push(p), r.push(p); n.length;) {
       if ((p = n.pop()) !== m) {
-        if (void 0 !== (f = this.__execute(t.enter, p)) && f !== o && f !== a && f !== s) {
+        if (undefined !== (f = this.__execute(t.enter, p)) && f !== o && f !== a && f !== s) {
           p.ref.replace(f);
           p.node = f;
         }
@@ -455,7 +455,7 @@
             }
           }
         }
-      } else if (p = r.pop(), void 0 !== (f = this.__execute(t.leave, p)) && f !== o && f !== a && f !== s && p.ref.replace(f), this.__state !== s && f !== s || w(p), this.__state === o || f === o) {
+      } else if (p = r.pop(), undefined !== (f = this.__execute(t.leave, p)) && f !== o && f !== a && f !== s && p.ref.replace(f), this.__state !== s && f !== s || w(p), this.__state === o || f === o) {
         return y.root;
       }
     }
@@ -502,7 +502,7 @@
             s += 1;
           }
         }
-        return s === u.length ? r.Break : u[s].extendedRange[0] > e.range[1] ? r.Skip : void 0;
+        return s === u.length ? r.Break : u[s].extendedRange[0] > e.range[1] ? r.Skip : undefined;
       }
     });
     s = 0;
@@ -519,7 +519,7 @@
             s += 1;
           }
         }
-        return s === u.length ? r.Break : u[s].extendedRange[0] > e.range[1] ? r.Skip : void 0;
+        return s === u.length ? r.Break : u[s].extendedRange[0] > e.range[1] ? r.Skip : undefined;
       }
     });
     return e;

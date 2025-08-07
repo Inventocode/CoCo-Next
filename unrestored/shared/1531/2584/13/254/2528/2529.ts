@@ -1,8 +1,8 @@
 var r = require("../2533/1420/index");
 var i = require("../2533/1420/475");
 module.exports = function (e, t, n) {
-  var o = !0;
-  var a = !0;
+  var o = true;
+  var a = true;
   if ("function" != typeof e) {
     throw new TypeError("Expected a function");
   }

@@ -8,8 +8,8 @@ var o = {
   icon: "icon-scan-qr-code",
   title: "widgetNameMsg",
   platforms: ["android", "web"],
-  isGlobalWidget: !0,
-  isInvisibleWidget: !0,
+  isGlobalWidget: true,
+  isInvisibleWidget: true,
   properties: [],
   methods: [{
     key: "scan",

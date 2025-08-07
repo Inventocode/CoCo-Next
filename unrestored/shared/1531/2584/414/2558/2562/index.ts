@@ -31,7 +31,7 @@ var o = this && this.__assign || function () {
   }).apply(this, arguments);
 };
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
 var i = require("react");
 var a = require("../../../75/index");
@@ -83,7 +83,7 @@ var d = function (e) {
   };
   t.prototype.valueRenderedIsNull = function (e) {
     if (this.componentType.isCellRenderer && !this.componentType.isCellRenderer()) {
-      return !1;
+      return false;
     }
     var t = console.error;
     try {
@@ -92,7 +92,7 @@ var d = function (e) {
     } catch (n) {} finally {
       console.error = t;
     }
-    return !1;
+    return false;
   };
   t.prototype.refreshComponent = function (e) {
     this.oldPortal = this.portal;

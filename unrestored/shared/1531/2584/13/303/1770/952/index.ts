@@ -6,7 +6,7 @@ var o;
 var a = require("./1771");
 var s = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_-";
 function c() {
-  o = !1;
+  o = false;
 }
 function u(e) {
   if (e) {

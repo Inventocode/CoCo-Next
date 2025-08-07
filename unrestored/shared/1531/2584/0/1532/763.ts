@@ -4,7 +4,7 @@ var r = Object.getOwnPropertySymbols;
 var i = Object.prototype.hasOwnProperty;
 var o = Object.prototype.propertyIsEnumerable;
 function a(e) {
-  if (null === e || void 0 === e) {
+  if (null === e || undefined === e) {
     throw new TypeError("Object.assign cannot be called with null or undefined");
   }
   return Object(e);
@@ -12,12 +12,12 @@ function a(e) {
 module.exports = function () {
   try {
     if (!Object.assign) {
-      return !1;
+      return false;
     }
     var e = new String("abc");
     e[5] = "de";
     if ("5" === Object.getOwnPropertyNames(e)[0]) {
-      return !1;
+      return false;
     }
     for (var t = {}, n = 0; n < 10; n++) {
       t["_" + String.fromCharCode(n)] = n;
@@ -25,7 +25,7 @@ module.exports = function () {
     if ("0123456789" !== Object.getOwnPropertyNames(t).map(function (e) {
       return t[e];
     }).join("")) {
-      return !1;
+      return false;
     }
     var r = {};
     "abcdefghijklmnopqrst".split("").forEach(function (e) {
@@ -33,7 +33,7 @@ module.exports = function () {
     });
     return "abcdefghijklmnopqrst" === Object.keys(Object.assign({}, r)).join("");
   } catch (i) {
-    return !1;
+    return false;
   }
 }() ? Object.assign : function (e, t) {
   for (var n, s, c = a(e), u = 1; u < arguments.length; u++) {

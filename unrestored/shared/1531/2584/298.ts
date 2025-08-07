@@ -8,8 +8,8 @@ export { O as b };
 export { C as d };
 export { S as e };
 export { A as a };
-var r = require("./6");
-var o = require("./1/index");
+import r = require("./6");
+import o = require("regenerator-runtime");
 var i = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -22,19 +22,19 @@ var i = function __importDefault(module) {
   });
   return defaultExport;
 }(o);
-var a = require("./7");
-var s = require("./60");
-var c = require("./197/index");
-var l = require("./41");
-var u = require("./59/index");
-var d = require("./278");
+import a = require("./7");
+import s = require("./60");
+import c = require("./197/index");
+import l = require("./41");
+import u = require("./59/index");
+import d = require("./278");
 var p = u.a.serverHost;
 var f = u.a.oTServerHost;
 function h(e) {
   return m.apply(this, arguments);
 }
 function m() {
-  return (m = Object(a.a)(i.a.mark(function e(t) {
+  return (m = a.a(i.a.mark(function e(t) {
     var n;
     var r;
     var o;
@@ -49,7 +49,7 @@ function m() {
               type: n.type
             });
             e.next = 4;
-            return Object(c.e)(r, "JSON");
+            return c.e(r, "JSON");
           case 4:
             o = e.sent;
             return e.abrupt("return", o.url);
@@ -65,7 +65,7 @@ function g(e) {
   return _.apply(this, arguments);
 }
 function _() {
-  return (_ = Object(a.a)(i.a.mark(function e(t) {
+  return (_ = a.a(i.a.mark(function e(t) {
     var n;
     var r;
     var o;
@@ -93,16 +93,17 @@ function _() {
               work_source_label: a
             });
           case 4:
-            if (!(null === (u = e.sent) || void 0 === u || null === (c = u.data) || void 0 === c ? void 0 : c.data)) {
+            if (!(null === (u = e.sent) || undefined === u || null === (c = u.data) || undefined === c ? undefined : c.data)) {
               e.next = 8;
               break;
             }
             f = u.data.data.work_id;
             return e.abrupt("return", f);
           case 8:
-            throw console.error("saveProject error"), new Error(d.a.SAVE_PROJECT_ERROR);
+            console.error("saveProject error");
+            throw new Error(d.a.SAVE_PROJECT_ERROR);
           case 12:
-            if (e.prev = 12, e.t0 = e.catch(1), console.error("saveProject error", e.t0), 401 !== (null === (h = e.t0.response) || void 0 === h ? void 0 : h.status)) {
+            if (e.prev = 12, e.t0 = e.catch(1), console.error("saveProject error", e.t0), 401 !== (null === (h = e.t0.response) || undefined === h ? undefined : h.status)) {
               e.next = 17;
               break;
             }
@@ -121,7 +122,7 @@ function v(e) {
   return b.apply(this, arguments);
 }
 function b() {
-  return (b = Object(a.a)(i.a.mark(function e(t) {
+  return (b = a.a(i.a.mark(function e(t) {
     var n;
     var r;
     var o;
@@ -148,7 +149,7 @@ function b() {
               save_type: t.saveType || s.b.ByUser
             });
           case 4:
-            if (null === (u = e.sent) || void 0 === u || null === (c = u.data) || void 0 === c ? void 0 : c.data) {
+            if (null === (u = e.sent) || undefined === u || null === (c = u.data) || undefined === c ? undefined : c.data) {
               e.next = 7;
               break;
             }
@@ -157,7 +158,7 @@ function b() {
             e.next = 14;
             break;
           case 9:
-            if (e.prev = 9, e.t0 = e.catch(1), 401 !== (null === (f = e.t0.response) || void 0 === f ? void 0 : f.status)) {
+            if (e.prev = 9, e.t0 = e.catch(1), 401 !== (null === (f = e.t0.response) || undefined === f ? undefined : f.status)) {
               e.next = 13;
               break;
             }
@@ -176,7 +177,7 @@ function y(e, t, n) {
   return E.apply(this, arguments);
 }
 function E() {
-  return (E = Object(a.a)(i.a.mark(function e(t, n, r) {
+  return (E = a.a(i.a.mark(function e(t, n, r) {
     var o;
     var a;
     var s;
@@ -188,7 +189,7 @@ function E() {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
-            o = "?offset=".concat(t, "&limit=").concat(n) + (void 0 !== r ? "&published=".concat(r) : "");
+            o = "?offset=".concat(t, "&limit=").concat(n) + (undefined !== r ? "&published=".concat(r) : "");
             a = "".concat(p, "/coconut/web/work/list").concat(o);
             e.next = 4;
             return l.a.get(a);
@@ -240,7 +241,7 @@ function O(e, t) {
   return w.apply(this, arguments);
 }
 function w() {
-  return (w = Object(a.a)(i.a.mark(function e(t, n) {
+  return (w = a.a(i.a.mark(function e(t, n) {
     var r;
     var o;
     var a;
@@ -259,7 +260,7 @@ function w() {
               }
             });
           case 2:
-            if (o = e.sent, a = [], !(s = null === o || void 0 === o || null === (r = o.data) || void 0 === r ? void 0 : r.data)) {
+            if (o = e.sent, a = [], !(s = null === o || undefined === o || null === (r = o.data) || undefined === r ? undefined : r.data)) {
               e.next = 10;
               break;
             }
@@ -303,7 +304,7 @@ function C(e) {
   return T.apply(this, arguments);
 }
 function T() {
-  return (T = Object(a.a)(i.a.mark(function e(t) {
+  return (T = a.a(i.a.mark(function e(t) {
     var n;
     var o;
     var a;
@@ -343,7 +344,7 @@ function T() {
             }
             return e.abrupt("return", {
               code: s,
-              data: Object(r.a)(Object(r.a)({}, c), {}, {
+              data: r.a(r.a({}, c), {}, {
                 content: f
               })
             });
@@ -359,7 +360,7 @@ function S(e) {
   return I.apply(this, arguments);
 }
 function I() {
-  return (I = Object(a.a)(i.a.mark(function e(t) {
+  return (I = a.a(i.a.mark(function e(t) {
     var n;
     var r;
     var o;
@@ -400,7 +401,7 @@ function A(e) {
   return j.apply(this, arguments);
 }
 function j() {
-  return (j = Object(a.a)(i.a.mark(function e(t) {
+  return (j = a.a(i.a.mark(function e(t) {
     var n;
     var r;
     return i.a.wrap(function (e) {

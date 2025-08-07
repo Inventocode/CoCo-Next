@@ -3234,7 +3234,7 @@
         try {
           t.from("foo", "utf8");
         } catch (S) {
-          p = !0;
+          p = true;
         }
       }
       h = p ? function (e, n) {

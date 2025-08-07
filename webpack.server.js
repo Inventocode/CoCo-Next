@@ -28,12 +28,13 @@ const config = {
                 },
                 pathRewrite(path) { return path.replace("/proxy/" + target, "") },
                 changeOrigin: true,
-                onProxyRes(response) {
+                onProxyRes(response, request) {
+                    const { host } = request.headers
                     const setCookie = response.headers["set-cookie"]
                     if (setCookie != null) {
                         for (let i = 0; i < setCookie.length; i++) {
                             setCookie[i] = setCookie[i]
-                                .replace(/codemao\.cn/g, "coco.localhost")
+                                .replace(/codemao\.cn/g, host?.split(":")[0] ?? "coco.localhost")
                         }
                     }
                 }

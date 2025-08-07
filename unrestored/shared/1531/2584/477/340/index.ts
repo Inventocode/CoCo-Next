@@ -3,15 +3,15 @@
 export { a };
 export { s as b };
 export { c };
-var r = require("../../36/483/39");
-var i = require("./2592/index");
+import r = require("../../36/483/39");
+import i = require("./2592/index");
 function o(e) {
   for (var t = [], n = 1; n < arguments.length; n++) {
     t[n - 1] = arguments[n];
   }
-  var o = Object(i.a)();
+  var o = i.a();
   if (o && o[e]) {
-    return o[e].apply(o, Object(r.f)(t));
+    return o[e].apply(o, r.f(t));
   }
   throw new Error("No hub defined or " + e + " was not found on the hub, please open a bug report.");
 }

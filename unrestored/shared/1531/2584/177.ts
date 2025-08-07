@@ -14,7 +14,7 @@ export { N as j };
 export { k as g };
 export { D as n };
 export { L as f };
-var r = require("./1/index");
+import r = require("regenerator-runtime");
 var o = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -27,15 +27,15 @@ var o = function __importDefault(module) {
   });
   return defaultExport;
 }(r);
-var i = require("./7");
-var a = require("./35");
-var s = require("./98");
-var c = require("./53");
-var l = require("./59/index");
-var u = require("./41");
+import i = require("./7");
+import a = require("./35");
+import s = require("./98");
+import c = require("./53");
+import l = require("./59/index");
+import u = require("./41");
 function d(e, t, n, r, o, i, l, u, d, p, f, h) {
-  var m = Object(s.d)();
-  var g = Object(s.e)();
+  var m = s.d();
+  var g = s.e();
   var _ = {
     id: e,
     version: c.e,
@@ -59,7 +59,7 @@ function d(e, t, n, r, o, i, l, u, d, p, f, h) {
     return _.variableMap[e.id] = e.defaultValue;
   });
   f.forEach(function (e) {
-    var t = Object(a.Cb)(e);
+    var t = a.Cb(e);
     if (t) {
       _.widgetMap[e] = t;
     }
@@ -76,14 +76,14 @@ function d(e, t, n, r, o, i, l, u, d, p, f, h) {
       return _.variableMap[e.id] = e.defaultValue;
     });
     e.widgetIds.forEach(function (e) {
-      var t = Object(a.Cb)(e);
+      var t = a.Cb(e);
       if (t) {
         _.widgetMap[e] = t;
       }
     });
-    if (!(null === (n = e.invisibleWidgetIds) || void 0 === n)) {
+    if (!(null === (n = e.invisibleWidgetIds) || undefined === n)) {
       n.forEach(function (e) {
-        var t = Object(a.Cb)(e);
+        var t = a.Cb(e);
         if (t) {
           _.widgetMap[e] = t;
         }
@@ -115,7 +115,7 @@ function p(e, t) {
   return f.apply(this, arguments);
 }
 function f() {
-  return (f = Object(i.a)(o.a.mark(function e(t, n) {
+  return (f = i.a(o.a.mark(function e(t, n) {
     var r;
     var i;
     return o.a.wrap(function (e) {
@@ -156,7 +156,7 @@ function h(e) {
   return m.apply(this, arguments);
 }
 function m() {
-  return (m = Object(i.a)(o.a.mark(function e(t) {
+  return (m = i.a(o.a.mark(function e(t) {
     var n;
     var r;
     return o.a.wrap(function (e) {
@@ -189,7 +189,7 @@ function g(e) {
   return _.apply(this, arguments);
 }
 function _() {
-  return (_ = Object(i.a)(o.a.mark(function e(t) {
+  return (_ = i.a(o.a.mark(function e(t) {
     var n;
     var r;
     return o.a.wrap(function (e) {
@@ -222,7 +222,7 @@ function v(e) {
   return b.apply(this, arguments);
 }
 function b() {
-  return (b = Object(i.a)(o.a.mark(function e(t) {
+  return (b = i.a(o.a.mark(function e(t) {
     var n;
     var r;
     return o.a.wrap(function (e) {
@@ -255,7 +255,7 @@ function y(e) {
   return E.apply(this, arguments);
 }
 function E() {
-  return (E = Object(i.a)(o.a.mark(function e(t) {
+  return (E = i.a(o.a.mark(function e(t) {
     var n;
     var r;
     return o.a.wrap(function (e) {
@@ -292,7 +292,7 @@ function O(e, t) {
   return w.apply(this, arguments);
 }
 function w() {
-  return (w = Object(i.a)(o.a.mark(function e(t, n) {
+  return (w = i.a(o.a.mark(function e(t, n) {
     var r;
     return o.a.wrap(function (e) {
       for (;;) {
@@ -325,7 +325,7 @@ function C(e) {
   return T.apply(this, arguments);
 }
 function T() {
-  return (T = Object(i.a)(o.a.mark(function e(t) {
+  return (T = i.a(o.a.mark(function e(t) {
     var n;
     var r;
     return o.a.wrap(function (e) {
@@ -355,7 +355,7 @@ function S(e) {
   return I.apply(this, arguments);
 }
 function I() {
-  return (I = Object(i.a)(o.a.mark(function e(t) {
+  return (I = i.a(o.a.mark(function e(t) {
     var n;
     var r;
     return o.a.wrap(function (e) {
@@ -387,7 +387,7 @@ function A(e) {
   return j.apply(this, arguments);
 }
 function j() {
-  return (j = Object(i.a)(o.a.mark(function e(t) {
+  return (j = i.a(o.a.mark(function e(t) {
     var n;
     var r;
     var i;
@@ -431,7 +431,7 @@ function N(e) {
   return R.apply(this, arguments);
 }
 function R() {
-  return (R = Object(i.a)(o.a.mark(function e(t) {
+  return (R = i.a(o.a.mark(function e(t) {
     var n;
     return o.a.wrap(function (e) {
       for (;;) {
@@ -454,7 +454,7 @@ function k(e) {
   return x.apply(this, arguments);
 }
 function x() {
-  return (x = Object(i.a)(o.a.mark(function e(t) {
+  return (x = i.a(o.a.mark(function e(t) {
     var n;
     var r;
     var i = arguments;
@@ -462,7 +462,7 @@ function x() {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
-            n = i.length > 1 && void 0 !== i[1] ? i[1] : 1;
+            n = i.length > 1 && undefined !== i[1] ? i[1] : 1;
             e.next = 3;
             return u.a.get(l.a.serverHost + "/coconut/web/work/".concat(t, "/load?channel=").concat(n));
           case 3:
@@ -480,7 +480,7 @@ function D(e, t) {
   return M.apply(this, arguments);
 }
 function M() {
-  return (M = Object(i.a)(o.a.mark(function e(t, n) {
+  return (M = i.a(o.a.mark(function e(t, n) {
     var r;
     return o.a.wrap(function (e) {
       for (;;) {
@@ -505,7 +505,7 @@ function L(e) {
   return P.apply(this, arguments);
 }
 function P() {
-  return (P = Object(i.a)(o.a.mark(function e(t) {
+  return (P = i.a(o.a.mark(function e(t) {
     var n;
     return o.a.wrap(function (e) {
       for (;;) {

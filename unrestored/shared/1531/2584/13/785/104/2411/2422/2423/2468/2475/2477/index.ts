@@ -5,7 +5,7 @@ var a = require("../../../../../../../../254/2513/2514/2519/2527/1144");
 var s = require("../../../../../../../../254/2513/2514/2519/2527/762/1146");
 var c = require("../../980");
 module.exports = function (e, t, n) {
-  for (var u = -1, l = (t = r(t, e)).length, f = !1; ++u < l;) {
+  for (var u = -1, l = (t = r(t, e)).length, f = false; ++u < l;) {
     var d = c(t[u]);
     if (!(f = null != e && n(e, d))) {
       break;

@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.OutputBlockRenderer = void 0;
+exports.OutputBlockRenderer = undefined;
 var r = require("tslib");
 var i = require("../../../125/195/index");
 var o = require("../../../125/index");
@@ -73,8 +73,8 @@ var a = function (e) {
   };
   t.prototype.get_layered_value_descendants = function (e, t) {
     var n;
-    if (void 0 === t) {
-      t = !0;
+    if (undefined === t) {
+      t = true;
     }
     if (!e.output_connection) {
       return [];
@@ -82,7 +82,7 @@ var a = function (e) {
     for (var r = [], o = 0; o < e.inputList.length; o++) {
       var a = e.inputList[o];
       if (a.type === i.InputType.VALUE) {
-        var s = null === (n = a.connection) || void 0 === n ? void 0 : n.targetBlock();
+        var s = null === (n = a.connection) || undefined === n ? undefined : n.targetBlock();
         if (!(!s || t && s.is_shadow())) {
           for (var c = this.get_layered_value_descendants(s, t), u = 0; u < c.length; u++) {
             r[u] = r[u] || [];
@@ -95,7 +95,7 @@ var a = function (e) {
     return r;
   };
   t.prototype.select_output_group_children = function (e) {
-    for (var t, n, r = e.origin_block, i = this.get_layered_value_descendants(r, !0), o = [], a = 1; a < i.length; a++) {
+    for (var t, n, r = e.origin_block, i = this.get_layered_value_descendants(r, true), o = [], a = 1; a < i.length; a++) {
       o = o.concat(i[a]);
     }
     var s = function (e) {

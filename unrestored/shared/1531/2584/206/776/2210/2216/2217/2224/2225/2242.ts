@@ -14,7 +14,7 @@ module.exports = function (e, t, n) {
   d.level++;
   var h = "valid" + d.level;
   r += "var " + f + " = errors;";
-  if (e.opts.strictKeywords ? "object" == typeof a && Object.keys(a).length > 0 || !1 === a : e.util.schemaHasRules(a, e.RULES.all)) {
+  if (e.opts.strictKeywords ? "object" == typeof a && Object.keys(a).length > 0 || false === a : e.util.schemaHasRules(a, e.RULES.all)) {
     d.schema = a;
     d.schemaPath = s;
     d.errSchemaPath = c;
@@ -33,7 +33,7 @@ module.exports = function (e, t, n) {
     r += " var startErrs" + i + " = errors; ";
     var w = p;
     var E = e.compositeRule;
-    e.compositeRule = d.compositeRule = !0;
+    e.compositeRule = d.compositeRule = true;
     var x = e.validate(d);
     d.baseId = b;
     if (e.util.varOccurences(x, v) < 2) {
@@ -43,9 +43,9 @@ module.exports = function (e, t, n) {
     }
     e.compositeRule = d.compositeRule = E;
     r += " if (!" + h + ") { for (var " + A + "=startErrs" + i + "; " + A + "<errors; " + A + "++) { vErrors[" + A + "].propertyName = " + p + "; }   var err =   ";
-    if (!1 !== e.createErrors) {
+    if (false !== e.createErrors) {
       r += " { keyword: 'propertyNames' , dataPath: (dataPath || '') + " + e.errorPath + " , schemaPath: " + e.util.toQuotedString(c) + " , params: { propertyName: '" + g + "' } ";
-      if (!1 !== e.opts.messages) {
+      if (false !== e.opts.messages) {
         r += " , message: 'property name \\'" + g + "\\' is invalid' ";
       }
       if (e.opts.verbose) {

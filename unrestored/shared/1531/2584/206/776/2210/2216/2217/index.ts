@@ -21,47 +21,47 @@ g.prototype.validate = function (e, t) {
     n = r.validate || this._compile(r);
   }
   var i = n(t);
-  if (!0 !== n.$async) {
+  if (true !== n.$async) {
     this.errors = n.errors;
   }
   return i;
 };
 g.prototype.compile = function (e, t) {
-  var n = this._addSchema(e, void 0, t);
+  var n = this._addSchema(e, undefined, t);
   return n.validate || this._compile(n);
 };
 g.prototype.addSchema = function (e, t, n, r) {
   if (Array.isArray(e)) {
     for (var o = 0; o < e.length; o++) {
-      this.addSchema(e[o], void 0, n, r);
+      this.addSchema(e[o], undefined, n, r);
     }
     return this;
   }
   var a = this._getId(e);
-  if (void 0 !== a && "string" != typeof a) {
+  if (undefined !== a && "string" != typeof a) {
     throw new Error("schema id must be string");
   }
   E(this, t = i.normalizeId(t || a));
-  this._schemas[t] = this._addSchema(e, n, r, !0);
+  this._schemas[t] = this._addSchema(e, n, r, true);
   return this;
 };
 g.prototype.addMetaSchema = function (e, t, n) {
-  this.addSchema(e, t, n, !0);
+  this.addSchema(e, t, n, true);
   return this;
 };
 g.prototype.validateSchema = function (e, t) {
   var n = e.$schema;
-  if (void 0 !== n && "string" != typeof n) {
+  if (undefined !== n && "string" != typeof n) {
     throw new Error("$schema must be a string");
   }
   if (!(n = n || this._opts.defaultMeta || function (e) {
     var t = e._opts.meta;
-    e._opts.defaultMeta = "object" == typeof t ? e._getId(t) || t : e.getSchema(p) ? p : void 0;
+    e._opts.defaultMeta = "object" == typeof t ? e._getId(t) || t : e.getSchema(p) ? p : undefined;
     return e._opts.defaultMeta;
   }(this))) {
     this.logger.warn("meta-schema not available");
     this.errors = null;
-    return !0;
+    return true;
   }
   var r = this.validate(n, e);
   if (!r && t) {
@@ -89,10 +89,10 @@ g.prototype.getSchema = function (e) {
           var o = n.schema;
           var s = n.root;
           var c = n.baseId;
-          var u = r.call(e, o, s, void 0, c);
+          var u = r.call(e, o, s, undefined, c);
           e._fragments[t] = new a({
             ref: t,
-            fragment: !0,
+            fragment: true,
             schema: o,
             root: s,
             baseId: c,
@@ -147,7 +147,7 @@ g.prototype.errorsText = function (e, t) {
   if (!(e = e || this.errors)) {
     return "No errors";
   }
-  for (var n = void 0 === (t = t || {}).separator ? ", " : t.separator, r = void 0 === t.dataVar ? "data" : t.dataVar, i = "", o = 0; o < e.length; o++) {
+  for (var n = undefined === (t = t || {}).separator ? ", " : t.separator, r = undefined === t.dataVar ? "data" : t.dataVar, i = "", o = 0; o < e.length; o++) {
     var a = e[o];
     if (a) {
       i += r + a.dataPath + " " + a.message + n;
@@ -165,15 +165,15 @@ g.prototype._addSchema = function (e, t, n, r) {
   if (c) {
     return c;
   }
-  r = r || !1 !== this._opts.addUsedSchema;
+  r = r || false !== this._opts.addUsedSchema;
   var u = i.normalizeId(this._getId(e));
   if (u && r) {
     E(this, u);
   }
   var l;
-  var f = !1 !== this._opts.validateSchema && !t;
+  var f = false !== this._opts.validateSchema && !t;
   if (f && !(l = u && u == i.normalizeId(e.$schema))) {
-    this.validateSchema(e, !0);
+    this.validateSchema(e, true);
   }
   var d = i.ids.call(this, e);
   var h = new a({
@@ -188,7 +188,7 @@ g.prototype._addSchema = function (e, t, n, r) {
   }
   this._cache.put(s, h);
   if (f && l) {
-    this.validateSchema(e, !0);
+    this.validateSchema(e, true);
   }
   return h;
 };
@@ -198,14 +198,14 @@ g.prototype._compile = function (e, t) {
     o.schema = e.schema;
     o.errors = null;
     o.root = t || o;
-    if (!0 === e.schema.$async) {
-      o.$async = !0;
+    if (true === e.schema.$async) {
+      o.$async = true;
     }
     return o;
   }
   var n;
   var i;
-  e.compiling = !0;
+  e.compiling = true;
   if (e.meta) {
     n = this._opts;
     this._opts = this._metaOpts;
@@ -213,9 +213,10 @@ g.prototype._compile = function (e, t) {
   try {
     i = r.call(this, e.schema, t, e.localRefs);
   } catch (a) {
-    throw delete e.validate, a;
+    delete e.validate;
+    throw a;
   } finally {
-    e.compiling = !1;
+    e.compiling = false;
     if (e.meta) {
       this._opts = n;
     }
@@ -252,14 +253,14 @@ function g(e) {
   e = this._opts = f.copy(e) || {};
   (function (e) {
     var t = e._opts.logger;
-    if (!1 === t) {
+    if (false === t) {
       e.logger = {
         log: x,
         warn: x,
         error: x
       };
     } else {
-      if (void 0 === t) {
+      if (undefined === t) {
         t = console;
       }
       if (!("object" == typeof t && t.log && t.warn && t.error)) {
@@ -288,9 +289,9 @@ function g(e) {
   }(e);
   e.loopRequired = e.loopRequired || 1 / 0;
   if ("property" == e.errorDataPath) {
-    e._errorDataPathProperty = !0;
+    e._errorDataPathProperty = true;
   }
-  if (void 0 === e.serialize) {
+  if (undefined === e.serialize) {
     e.serialize = s;
   }
   this._metaOpts = function (e) {
@@ -319,16 +320,16 @@ function g(e) {
     var t;
     if (e._opts.$data) {
       t = require("./2250");
-      e.addMetaSchema(t, t.$id, !0);
+      e.addMetaSchema(t, t.$id, true);
     }
-    if (!1 === e._opts.meta) {
+    if (false === e._opts.meta) {
       return;
     }
     var r = require("./1342");
     if (e._opts.$data) {
       r = l(r, A);
     }
-    e.addMetaSchema(r, p, !0);
+    e.addMetaSchema(r, p, true);
     e._refs["http://json-schema.org/schema"] = p;
   })(this);
   if ("object" == typeof e.meta) {

@@ -1,17 +1,17 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.EditableInput = void 0;
+exports.EditableInput = undefined;
 var r = function () {
   function e(e, t) {
     for (var n = 0; n < t.length; n++) {
       var r = t[n];
-      r.enumerable = r.enumerable || !1;
-      r.configurable = !0;
+      r.enumerable = r.enumerable || false;
+      r.configurable = true;
       if ("value" in r) {
-        r.writable = !0;
+        r.writable = true;
       }
       Object.defineProperty(e, r.key, r);
     }
@@ -108,9 +108,9 @@ var l = exports.EditableInput = function (e) {
     e.prototype = Object.create(t && t.prototype, {
       constructor: {
         value: e,
-        enumerable: !1,
-        writable: !0,
-        configurable: !0
+        enumerable: false,
+        writable: true,
+        configurable: true
       }
     });
     if (t) {
@@ -149,9 +149,9 @@ var l = exports.EditableInput = function (e) {
         if (t in e) {
           Object.defineProperty(e, t, {
             value: n,
-            enumerable: !0,
-            configurable: !0,
-            writable: !0
+            enumerable: true,
+            configurable: true,
+            writable: true
           });
         } else {
           e[t] = n;
@@ -196,7 +196,7 @@ var l = exports.EditableInput = function (e) {
           }
         }
       }, {
-        "user-override": !0
+        "user-override": true
       }, this.props);
       return o.default.createElement("div", {
         style: t.wrap

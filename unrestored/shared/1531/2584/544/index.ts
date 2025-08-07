@@ -1,8 +1,8 @@
 "use strict";
 
-var r = require("../11");
-var o = require("../10/index");
-var i = require("../1/index");
+import r = require("../11");
+import o = require("../10/index");
+import i = require("regenerator-runtime");
 var a = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -15,9 +15,9 @@ var a = function __importDefault(module) {
   });
   return defaultExport;
 }(i);
-var s = require("../7");
-var c = require("../27");
-var l = require("react");
+import s = require("../7");
+import c = require("../27");
+import l = require("react");
 var u = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -30,7 +30,7 @@ var u = function __importDefault(module) {
   });
   return defaultExport;
 }(l);
-var d = require("../8");
+import d = require("../8");
 var p = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -43,13 +43,13 @@ var p = function __importDefault(module) {
   });
   return defaultExport;
 }(d);
-var f = require("../5");
-var h = require("../90");
-var m = require("../263");
-var g = require("../13/index");
-var _ = require("../76");
-var v = require("../28/index");
-var b = require("./666");
+import f = require("../5");
+import h = require("../90");
+import m = require("../263");
+import g = require("../13/index");
+import _ = require("../76");
+import v = require("../28/index");
+import b = require("./666");
 var y = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -62,9 +62,9 @@ var y = function __importDefault(module) {
   });
   return defaultExport;
 }(b);
-var E = require("../53");
-var O = require("./667");
-var w = require("./176");
+import E = require("../53");
+import O = require("./667");
+import w = require("./176");
 var C = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -79,11 +79,11 @@ var C = function __importDefault(module) {
 }(w);
 var T = new function e() {
   var t = this;
-  Object(c.a)(this, e);
-  this.urlStore = void 0;
-  this._state = void 0;
+  c.a(this, e);
+  this.urlStore = undefined;
+  this._state = undefined;
   this.execute = function () {
-    var e = Object(s.a)(a.a.mark(function e(n, r) {
+    var e = s.a(a.a.mark(function e(n, r) {
       var o;
       return a.a.wrap(function (e) {
         for (;;) {
@@ -150,8 +150,8 @@ function S(e) {
   var s = n.url;
   var c = n.refreshTimestamp;
   var d = !E.C.test(s);
-  var p = Object(v.c)(s);
-  var f = Object(v.g)();
+  var p = v.c(s);
+  var f = v.g();
   if (f) {
     f = O.webviewRefusedUrl.some(function (e) {
       return s.startsWith(e);
@@ -159,13 +159,13 @@ function S(e) {
   }
   var h;
   var m = s;
-  var g = m.startsWith("http://") && !Object(v.d)();
-  var _ = Object(l.useState)("loading");
-  var b = Object(o.a)(_, 2);
+  var g = m.startsWith("http://") && !v.d();
+  var _ = l.useState("loading");
+  var b = o.a(_, 2);
   var w = b[0];
   var S = b[1];
-  var I = Object(l.useRef)(null);
-  Object(l.useEffect)(function () {
+  var I = l.useRef(null);
+  l.useEffect(function () {
     if (g) {
       S("http-protocol-error");
     } else {
@@ -269,7 +269,7 @@ _a = function (e) {
     "data-max-width": _.e,
     "data-max-height": _.d,
     "data-min-height": m.b,
-    className: p()(C.a.webViewWidget, h.b, Object(r.a)({}, C.a.hide, !o)),
+    className: p()(C.a.webViewWidget, h.b, r.a({}, C.a.hide, !o)),
     style: {
       top: n.y,
       left: n.x,
@@ -279,7 +279,7 @@ _a = function (e) {
       minHeight: "".concat(m.b, "px"),
       maxWidth: "".concat(_.e, "px"),
       maxHeight: "".concat(_.d, "px"),
-      opacity: void 0 === i ? void 0 : i / 100
+      opacity: undefined === i ? undefined : i / 100
     }
   }, (s || d) && u.a.createElement("div", {
     className: C.a.mask

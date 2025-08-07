@@ -57,7 +57,7 @@ var d = function () {
     return new i.a(t, n.toString(), 0 === u.length ? null : u, null);
   };
   t.decodeAsciiSegment = function (t, e, n) {
-    var i = !1;
+    var i = false;
     do {
       var o = t.readBits(8);
       if (0 === o) {
@@ -92,7 +92,7 @@ var d = function () {
           case 234:
             break;
           case 235:
-            i = !0;
+            i = true;
             break;
           case 236:
             e.append("[)>\u001e05\u001d");
@@ -120,7 +120,7 @@ var d = function () {
     return r.ASCII_ENCODE;
   };
   t.decodeC40Segment = function (t, e) {
-    var n = !1;
+    var n = false;
     var r = [];
     var i = 0;
     do {
@@ -145,7 +145,7 @@ var d = function () {
               var u = this.C40_BASIC_SET_CHARS[s];
               if (n) {
                 e.append(String.fromCharCode(u.charCodeAt(0) + 128));
-                n = !1;
+                n = false;
               } else {
                 e.append(u);
               }
@@ -154,7 +154,7 @@ var d = function () {
           case 1:
             if (n) {
               e.append(String.fromCharCode(s + 128));
-              n = !1;
+              n = false;
             } else {
               e.append(String.fromCharCode(s));
             }
@@ -165,7 +165,7 @@ var d = function () {
               u = this.C40_SHIFT2_SET_CHARS[s];
               if (n) {
                 e.append(String.fromCharCode(u.charCodeAt(0) + 128));
-                n = !1;
+                n = false;
               } else {
                 e.append(u);
               }
@@ -175,7 +175,7 @@ var d = function () {
                   e.append(String.fromCharCode(29));
                   break;
                 case 30:
-                  n = !0;
+                  n = true;
                   break;
                 default:
                   throw new c.a();
@@ -186,7 +186,7 @@ var d = function () {
           case 3:
             if (n) {
               e.append(String.fromCharCode(s + 224));
-              n = !1;
+              n = false;
             } else {
               e.append(String.fromCharCode(s + 96));
             }
@@ -199,7 +199,7 @@ var d = function () {
     } while (t.available() > 0);
   };
   t.decodeTextSegment = function (t, e) {
-    var n = !1;
+    var n = false;
     var r = [];
     var i = 0;
     do {
@@ -224,7 +224,7 @@ var d = function () {
               var u = this.TEXT_BASIC_SET_CHARS[s];
               if (n) {
                 e.append(String.fromCharCode(u.charCodeAt(0) + 128));
-                n = !1;
+                n = false;
               } else {
                 e.append(u);
               }
@@ -233,7 +233,7 @@ var d = function () {
           case 1:
             if (n) {
               e.append(String.fromCharCode(s + 128));
-              n = !1;
+              n = false;
             } else {
               e.append(String.fromCharCode(s));
             }
@@ -244,7 +244,7 @@ var d = function () {
               u = this.TEXT_SHIFT2_SET_CHARS[s];
               if (n) {
                 e.append(String.fromCharCode(u.charCodeAt(0) + 128));
-                n = !1;
+                n = false;
               } else {
                 e.append(u);
               }
@@ -254,7 +254,7 @@ var d = function () {
                   e.append(String.fromCharCode(29));
                   break;
                 case 30:
-                  n = !0;
+                  n = true;
                   break;
                 default:
                   throw new c.a();
@@ -269,7 +269,7 @@ var d = function () {
             u = this.TEXT_SHIFT3_SET_CHARS[s];
             if (n) {
               e.append(String.fromCharCode(u.charCodeAt(0) + 128));
-              n = !1;
+              n = false;
             } else {
               e.append(u);
             }

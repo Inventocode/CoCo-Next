@@ -7,7 +7,7 @@
     var WINDOW = "object" === typeof window;
     var root = WINDOW ? window : {};
     if (root.JS_SHA256_NO_WINDOW) {
-      WINDOW = !1;
+      WINDOW = false;
     }
     var WEB_WORKER = !WINDOW && "object" === typeof self;
     var NODE_JS = !root.JS_SHA256_NO_NODE_JS && "object" === typeof process && process.versions && process.versions.node;
@@ -39,7 +39,7 @@
     }
     var createOutputMethod = function (e, t) {
       return function (n) {
-        return new Sha256(t, !0).update(n)[e]();
+        return new Sha256(t, true).update(n)[e]();
       };
     };
     var createMethod = function (e) {
@@ -67,7 +67,7 @@
         if ("string" === typeof e) {
           return crypto.createHash(algorithm).update(e, "utf8").digest("hex");
         }
-        if (null === e || void 0 === e) {
+        if (null === e || undefined === e) {
           throw new Error(ERROR);
         }
         if (e.constructor === ArrayBuffer) {
@@ -79,7 +79,7 @@
     };
     var createHmacOutputMethod = function (e, t) {
       return function (n, r) {
-        return new HmacSha256(n, t, !0).update(r)[e]();
+        return new HmacSha256(n, t, true).update(r)[e]();
       };
     };
     var createHmacMethod = function (e) {
@@ -123,8 +123,8 @@
         this.h7 = 1541459225;
       }
       this.block = this.start = this.bytes = this.hBytes = 0;
-      this.finalized = this.hashed = !1;
-      this.first = !0;
+      this.finalized = this.hashed = false;
+      this.first = true;
       this.is224 = e;
     }
     function HmacSha256(e, t, n) {
@@ -172,7 +172,7 @@
         }
       }
       if (e.length > 64) {
-        e = new Sha256(t, !0).update(e).array();
+        e = new Sha256(t, true).update(e).array();
       }
       var u = [];
       var l = [];
@@ -184,7 +184,7 @@
       Sha256.call(this, t, n);
       this.update(l);
       this.oKeyPad = u;
-      this.inner = !0;
+      this.inner = true;
       this.sharedMemory = n;
     }
     Sha256.prototype.update = function (e) {
@@ -203,11 +203,11 @@
           } else if (!Array.isArray(e) && (!ARRAY_BUFFER || !ArrayBuffer.isView(e))) {
             throw new Error(ERROR);
           }
-          t = !0;
+          t = true;
         }
         for (var r, i, o = 0, a = e.length, s = this.blocks; o < a;) {
           if (this.hashed) {
-            this.hashed = !1;
+            this.hashed = false;
             s[0] = this.block;
             s[16] = s[1] = s[2] = s[3] = s[4] = s[5] = s[6] = s[7] = s[8] = s[9] = s[10] = s[11] = s[12] = s[13] = s[14] = s[15] = 0;
           }
@@ -245,7 +245,7 @@
             this.block = s[16];
             this.start = i - 64;
             this.hash();
-            this.hashed = !0;
+            this.hashed = true;
           } else {
             this.start = i;
           }
@@ -259,7 +259,7 @@
     };
     Sha256.prototype.finalize = function () {
       if (!this.finalized) {
-        this.finalized = !0;
+        this.finalized = true;
         var e = this.blocks;
         var t = this.lastByteIndex;
         e[16] = this.block;
@@ -312,7 +312,7 @@
             A = (i = g[0] - 210244248) - 1521486534 << 0;
             d = i + 143694565 << 0;
           }
-          this.first = !1;
+          this.first = false;
         } else {
           t = (u >>> 2 | u << 30) ^ (u >>> 13 | u << 19) ^ (u >>> 22 | u << 10);
           r = (o = u & l) ^ u & f ^ c;
@@ -393,7 +393,7 @@
     HmacSha256.prototype.finalize = function () {
       Sha256.prototype.finalize.call(this);
       if (this.inner) {
-        this.inner = !1;
+        this.inner = false;
         var e = this.array();
         Sha256.call(this, this.is224, this.sharedMemory);
         this.update(this.oKeyPad);
@@ -403,9 +403,9 @@
     };
     var exports = createMethod();
     exports.sha256 = exports;
-    exports.sha224 = createMethod(!0);
+    exports.sha224 = createMethod(true);
     exports.sha256.hmac = createHmacMethod();
-    exports.sha224.hmac = createHmacMethod(!0);
+    exports.sha224.hmac = createHmacMethod(true);
     if (COMMON_JS) {
       module.exports = exports;
     } else {
@@ -415,7 +415,7 @@
         __WEBPACK_AMD_DEFINE_RESULT__ = function () {
           return exports;
         }.call(exports, require, exports, module);
-        if (!(void 0 === __WEBPACK_AMD_DEFINE_RESULT__)) {
+        if (!(undefined === __WEBPACK_AMD_DEFINE_RESULT__)) {
           module.exports = __WEBPACK_AMD_DEFINE_RESULT__;
         }
       }

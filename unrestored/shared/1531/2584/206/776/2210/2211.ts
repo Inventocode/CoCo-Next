@@ -19,7 +19,7 @@ var i = {
     items: {
       $ref: "#/definitions/overrideConfig"
     },
-    additionalItems: !1
+    additionalItems: false
   },
   parser: {
     type: ["string", "null"]
@@ -59,7 +59,7 @@ var o = {
         items: {
           type: "string"
         },
-        additionalItems: !1
+        additionalItems: false
       }]
     },
     stringOrStringsRequired: {
@@ -70,7 +70,7 @@ var o = {
         items: {
           type: "string"
         },
-        additionalItems: !1,
+        additionalItems: false,
         minItems: 1
       }]
     },
@@ -84,7 +84,7 @@ var o = {
           $ref: "#/definitions/stringOrStrings"
         }
       }, i),
-      additionalProperties: !1
+      additionalProperties: false
     },
     overrideConfig: {
       type: "object",
@@ -97,7 +97,7 @@ var o = {
         }
       }, i),
       required: ["files"],
-      additionalProperties: !1
+      additionalProperties: false
     }
   },
   $ref: "#/definitions/objectConfig"

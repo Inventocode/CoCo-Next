@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.ShadowBlockRenderer = void 0;
+exports.ShadowBlockRenderer = undefined;
 var r = require("tslib");
 var i = require("../../../125/195/index");
 var o = require("../../../1001/213/index");

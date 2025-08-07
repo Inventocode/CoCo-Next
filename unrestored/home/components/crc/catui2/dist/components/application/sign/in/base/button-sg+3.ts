@@ -90,9 +90,9 @@ var Button = /*#__PURE__*/function (_React$Component) {
     Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Object(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default)(_this), "setClass", function () {
       var _this$props = _this.props;
       var _this$props$type = _this$props.type;
-      var type = _this$props$type === void 0 ? 'transparent' : _this$props$type;
+      var type = _this$props$type === undefined ? 'transparent' : _this$props$type;
       var _this$props$size = _this$props.size;
-      var size = _this$props$size === void 0 ? 'md' : _this$props$size;
+      var size = _this$props$size === undefined ? 'md' : _this$props$size;
       return "".concat(type, " size-").concat(size);
     });
     Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Object(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default)(_this), "preventMouseEventWhenDisable", function (type) {
@@ -168,7 +168,7 @@ var Button = /*#__PURE__*/function (_React$Component) {
         onMouseLeave: this.preventMouseEventWhenDisable('leave'),
         onContextMenu: this.preventMouseEventWhenDisable('context'),
         "data-report-click": dataReport,
-        className: ("".concat(isSelected ? 'selected' : '', " ").concat(className !== null && className !== void 0 ? className : '') ? "".concat(isSelected ? 'selected' : '', " ").concat(className !== null && className !== void 0 ? className : '') + " " : "") + __WEBPACK_IMPORTED_MODULE_7_babel_plugin_react_css_modules_dist_browser_getClassName___default("btn ".concat(disable ? 'disabled' : '', " ").concat(this.setClass()), _styleModuleImportMap, {
+        className: ("".concat(isSelected ? 'selected' : '', " ").concat(className !== null && className !== undefined ? className : '') ? "".concat(isSelected ? 'selected' : '', " ").concat(className !== null && className !== undefined ? className : '') + " " : "") + __WEBPACK_IMPORTED_MODULE_7_babel_plugin_react_css_modules_dist_browser_getClassName___default("btn ".concat(disable ? 'disabled' : '', " ").concat(this.setClass()), _styleModuleImportMap, {
           "autoResolveMultipleImports": true,
           "handleMissingStyleName": "throw"
         })

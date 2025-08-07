@@ -23,7 +23,7 @@ var d = String(String).split("String");
   if (e !== r) {
     if (l) {
       if (!f && e[t]) {
-        p = !0;
+        p = true;
       }
     } else {
       delete e[t];

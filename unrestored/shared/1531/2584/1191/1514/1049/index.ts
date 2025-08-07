@@ -8,28 +8,28 @@ function r(e) {
   })(e);
 }
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
 exports.matchesSelector = d;
 exports.matchesSelectorAndParentsTo = function (e, t, n) {
   var r = e;
   do {
     if (d(r, t)) {
-      return !0;
+      return true;
     }
     if (r === n) {
-      return !1;
+      return false;
     }
     r = r.parentNode;
   } while (r);
-  return !1;
+  return false;
 };
 exports.addEvent = function (e, t, n, r) {
   if (!e) {
     return;
   }
   var o = c({
-    capture: !0
+    capture: true
   }, r);
   if (e.addEventListener) {
     e.addEventListener(t, n, o);
@@ -46,7 +46,7 @@ exports.removeEvent = function (e, t, n, r) {
     return;
   }
   var o = c({
-    capture: !0
+    capture: true
   }, r);
   if (e.removeEventListener) {
     e.removeEventListener(t, n, o);
@@ -210,7 +210,7 @@ function c(e) {
   for (var t = 1; t < arguments.length; t++) {
     var n = null != arguments[t] ? arguments[t] : {};
     if (t % 2) {
-      s(Object(n), !0).forEach(function (t) {
+      s(Object(n), true).forEach(function (t) {
         l(e, t, n[t]);
       });
     } else {
@@ -229,9 +229,9 @@ function l(e, t, n) {
   if (t in e) {
     Object.defineProperty(e, t, {
       value: n,
-      enumerable: !0,
-      configurable: !0,
-      writable: !0
+      enumerable: true,
+      configurable: true,
+      writable: true
     });
   } else {
     e[t] = n;

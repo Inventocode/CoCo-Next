@@ -2,16 +2,16 @@
 
 export { u as a };
 export { f as b };
-var r = require("../../../36/483/39");
-var i = require("../926");
-var o = require("../265");
-var a = require("./722");
-var s = require("../350");
-var c = require("./765");
+import r = require("../../../36/483/39");
+import i = require("../926");
+import o = require("../265");
+import a = require("./722");
+import s = require("../350");
+import c = require("./765");
 var u = 1e3;
 var l = function (e) {
   function t(t, n, r, i) {
-    if (void 0 === r) {
+    if (undefined === r) {
       r = "";
     }
     var o = e.call(this, i) || this;
@@ -20,15 +20,15 @@ var l = function (e) {
     o.transactionSpanId = r;
     return o;
   }
-  Object(r.c)(t, e);
+  r.c(t, e);
   t.prototype.add = function (t) {
     var n = this;
     if (t.spanId !== this.transactionSpanId) {
       t.finish = function (e) {
-        t.endTimestamp = "number" === typeof e ? e : Object(i.d)();
+        t.endTimestamp = "number" === typeof e ? e : i.d();
         n._popActivity(t.spanId);
       };
-      if (void 0 === t.endTimestamp) {
+      if (undefined === t.endTimestamp) {
         this._pushActivity(t.spanId);
       }
     }
@@ -38,11 +38,11 @@ var l = function (e) {
 }(a.b);
 var f = function (e) {
   function t(t, n, r, i) {
-    if (void 0 === r) {
+    if (undefined === r) {
       r = u;
     }
-    if (void 0 === i) {
-      i = !1;
+    if (undefined === i) {
+      i = false;
     }
     var a = e.call(this, t, n) || this;
     a._idleHub = n;
@@ -51,7 +51,7 @@ var f = function (e) {
     a.activities = {};
     a._heartbeatTimer = 0;
     a._heartbeatCounter = 0;
-    a._finished = !1;
+    a._finished = false;
     a._beforeFinishCallbacks = [];
     if (n && i) {
       d(n);
@@ -67,20 +67,20 @@ var f = function (e) {
     }, a._idleTimeout);
     return a;
   }
-  Object(r.c)(t, e);
+  r.c(t, e);
   t.prototype.finish = function (t) {
     var n;
     var a;
     var c = this;
-    if (void 0 === t) {
-      t = Object(i.d)();
+    if (undefined === t) {
+      t = i.d();
     }
-    this._finished = !0;
+    this._finished = true;
     this.activities = {};
     if (this.spanRecorder) {
       o.a.log("[Tracing] finishing IdleTransaction", new Date(1e3 * t).toISOString(), this.op);
       try {
-        for (var u = Object(r.g)(this._beforeFinishCallbacks), l = u.next(); !l.done; l = u.next()) {
+        for (var u = r.g(this._beforeFinishCallbacks), l = u.next(); !l.done; l = u.next()) {
           (0, l.value)(this, t);
         }
       } catch (f) {
@@ -100,16 +100,16 @@ var f = function (e) {
       }
       this.spanRecorder.spans = this.spanRecorder.spans.filter(function (e) {
         if (e.spanId === c.spanId) {
-          return !0;
+          return true;
         }
         if (!e.endTimestamp) {
           e.endTimestamp = t;
           e.setStatus(s.a.Cancelled);
-          o.a.log("[Tracing] cancelling span since transaction ended early", JSON.stringify(e, void 0, 2));
+          o.a.log("[Tracing] cancelling span since transaction ended early", JSON.stringify(e, undefined, 2));
         }
         var n = e.startTimestamp < t;
         if (!n) {
-          o.a.log("[Tracing] discarding Span since it happened after Transaction was finished", JSON.stringify(e, void 0, 2));
+          o.a.log("[Tracing] discarding Span since it happened after Transaction was finished", JSON.stringify(e, undefined, 2));
         }
         return n;
       });
@@ -145,10 +145,10 @@ var f = function (e) {
   t.prototype._pushActivity = function (e) {
     if (this._initTimeout) {
       clearTimeout(this._initTimeout);
-      this._initTimeout = void 0;
+      this._initTimeout = undefined;
     }
     o.a.log("[Tracing] pushActivity: " + e);
-    this.activities[e] = !0;
+    this.activities[e] = true;
     o.a.log("[Tracing] new activities count", Object.keys(this.activities).length);
   };
   t.prototype._popActivity = function (e) {
@@ -160,7 +160,7 @@ var f = function (e) {
     }
     if (0 === Object.keys(this.activities).length) {
       var n = this._idleTimeout;
-      var r = Object(i.d)() + n / 1e3;
+      var r = i.d() + n / 1e3;
       setTimeout(function () {
         if (!t._finished) {
           t.finish(r);
@@ -205,7 +205,7 @@ function d(e) {
     var t = e.getScope();
     if (t) {
       if (t.getTransaction()) {
-        t.setSpan(void 0);
+        t.setSpan(undefined);
       }
     }
   }

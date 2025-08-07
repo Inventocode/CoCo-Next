@@ -28,7 +28,7 @@ var r;
     i.default = i;
     module.exports = i;
   } else {
-    if (!(void 0 === (r = function () {
+    if (!(undefined === (r = function () {
       return i;
     }.apply(exports, [])))) {
       module.exports = r;

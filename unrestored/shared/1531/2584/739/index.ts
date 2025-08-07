@@ -1,11 +1,11 @@
 "use strict";
 
-var r = require("../29");
-var i = require("../33/index");
-var o = require("../19");
-var a = require("react");
-var s = require("./1503/index");
-var c = require("../8");
+import r = require("../29");
+import i = require("../33/index");
+import o = require("../19");
+import a = require("react");
+import s = require("./1503/index");
+import c = require("../8");
 var u = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -18,7 +18,7 @@ var u = function __importDefault(module) {
   });
   return defaultExport;
 }(c);
-var l = require("./1010");
+import l = require("./1010");
 var f = {
   adjustX: 1,
   adjustY: 1
@@ -29,14 +29,14 @@ var d = {
 };
 var h = [0, 0];
 function p(e) {
-  return "boolean" === typeof e ? e ? f : d : Object(o.a)(Object(o.a)({}, d), e);
+  return "boolean" === typeof e ? e ? f : d : o.a(o.a({}, d), e);
 }
-var _ = require("../314");
-var A = require("../789");
-var g = require("../610");
-Object(g.a)("success", "processing", "error", "default", "warning");
-var v = Object(g.a)("pink", "red", "yellow", "orange", "cyan", "green", "blue", "purple", "geekblue", "magenta", "volcano", "gold", "lime");
-var m = require("../431");
+import _ = require("../314");
+import A = require("../789");
+import g = require("../610");
+g.a("success", "processing", "error", "default", "warning");
+var v = g.a("pink", "red", "yellow", "orange", "cyan", "green", "blue", "purple", "geekblue", "magenta", "volcano", "gold", "lime");
+import m = require("../431");
 var y = function (e, t) {
   var n = {};
   for (var r in e) if (Object.prototype.hasOwnProperty.call(e, r) && t.indexOf(r) < 0) {
@@ -55,10 +55,10 @@ var y = function (e, t) {
 var b = new RegExp("^(".concat(v.join("|"), ")(-inverse)?$"));
 function w(e, t) {
   var n = e.type;
-  if ((!0 === n.__ANT_BUTTON || !0 === n.__ANT_SWITCH || !0 === n.__ANT_CHECKBOX || "button" === e.type) && e.props.disabled) {
+  if ((true === n.__ANT_BUTTON || true === n.__ANT_SWITCH || true === n.__ANT_CHECKBOX || "button" === e.type) && e.props.disabled) {
     var r = function (e, t) {
       var n = {};
-      var r = Object(o.a)({}, e);
+      var r = o.a({}, e);
       t.forEach(function (t) {
         if (e && t in e) {
           n[t] = e[t];
@@ -72,16 +72,16 @@ function w(e, t) {
     }(e.props.style, ["position", "left", "right", "top", "bottom", "float", "display", "zIndex"]);
     var i = r.picked;
     var s = r.omitted;
-    var c = Object(o.a)(Object(o.a)({
+    var c = o.a(o.a({
       display: "inline-block"
     }, i), {
       cursor: "not-allowed",
       width: e.props.block ? "100%" : null
     });
-    var l = Object(o.a)(Object(o.a)({}, s), {
+    var l = o.a(o.a({}, s), {
       pointerEvents: "none"
     });
-    var f = Object(_.a)(e, {
+    var f = _.a(e, {
       style: l,
       className: null
     });
@@ -105,21 +105,21 @@ var E = a.forwardRef(function (e, t) {
     var s = n.onChange;
     var c = n.postState;
     var u = a.useState(function () {
-      return void 0 !== o ? o : void 0 !== r ? "function" === typeof r ? r() : r : "function" === typeof e ? e() : e;
+      return undefined !== o ? o : undefined !== r ? "function" === typeof r ? r() : r : "function" === typeof e ? e() : e;
     });
-    var l = Object(i.a)(u, 2);
+    var l = i.a(u, 2);
     var f = l[0];
     var d = l[1];
-    var h = void 0 !== o ? o : f;
+    var h = undefined !== o ? o : f;
     if (c) {
       h = c(h);
     }
-    var p = a.useRef(!0);
+    var p = a.useRef(true);
     a.useEffect(function () {
       if (p.current) {
-        p.current = !1;
+        p.current = false;
       } else {
-        if (void 0 === o) {
+        if (undefined === o) {
           d(o);
         }
       }
@@ -130,11 +130,11 @@ var E = a.forwardRef(function (e, t) {
         s(e, h);
       }
     }];
-  }(!1, {
+  }(false, {
     value: e.visible,
     defaultValue: e.defaultVisible
   });
-  var E = Object(i.a)(v, 2);
+  var E = i.a(v, 2);
   var x = E[0];
   var C = E[1];
   var O = function () {
@@ -148,11 +148,11 @@ var E = a.forwardRef(function (e, t) {
     var r = e.autoAdjustOverflow;
     return t || function (e) {
       var t = e.arrowWidth;
-      var n = void 0 === t ? 4 : t;
+      var n = undefined === t ? 4 : t;
       var r = e.horizontalArrowShift;
-      var i = void 0 === r ? 16 : r;
+      var i = undefined === r ? 16 : r;
       var a = e.verticalArrowShift;
-      var s = void 0 === a ? 8 : a;
+      var s = undefined === a ? 8 : a;
       var c = e.autoAdjustOverflow;
       var u = {
         left: {
@@ -205,13 +205,13 @@ var E = a.forwardRef(function (e, t) {
         }
       };
       Object.keys(u).forEach(function (t) {
-        u[t] = e.arrowPointAtCenter ? Object(o.a)(Object(o.a)({}, u[t]), {
+        u[t] = e.arrowPointAtCenter ? o.a(o.a({}, u[t]), {
           overflow: p(c),
           targetOffset: h
-        }) : Object(o.a)(Object(o.a)({}, l.a[t]), {
+        }) : o.a(o.a({}, l.a[t]), {
           overflow: p(c)
         });
-        u[t].ignoreShake = !0;
+        u[t].ignoreShake = true;
       });
       return u;
     }({
@@ -232,23 +232,23 @@ var E = a.forwardRef(function (e, t) {
   var j = d();
   var L = x;
   if (!("visible" in e) && O()) {
-    L = !1;
+    L = false;
   }
   var U;
-  var H = w(Object(_.b)(N) ? N : a.createElement("span", null, N), M);
+  var H = w(_.b(N) ? N : a.createElement("span", null, N), M);
   var V = H.props;
-  var G = u()(V.className, Object(r.a)({}, D || "".concat(M, "-open"), !0));
-  var z = u()(F, (n = {}, Object(r.a)(n, "".concat(M, "-rtl"), "rtl" === g), Object(r.a)(n, "".concat(M, "-").concat(R), R && b.test(R)), n));
+  var G = u()(V.className, r.a({}, D || "".concat(M, "-open"), true));
+  var z = u()(F, (n = {}, r.a(n, "".concat(M, "-rtl"), "rtl" === g), r.a(n, "".concat(M, "-").concat(R), R && b.test(R)), n));
   var Q = P;
   if (R && !b.test(R)) {
-    Q = Object(o.a)(Object(o.a)({}, P), {
+    Q = o.a(o.a({}, P), {
       background: R
     });
     U = {
       background: R
     };
   }
-  return a.createElement(s.a, Object(o.a)({}, T, {
+  return a.createElement(s.a, o.a({}, T, {
     prefixCls: M,
     overlayClassName: z,
     getTooltipContainer: S || I || f,
@@ -263,7 +263,7 @@ var E = a.forwardRef(function (e, t) {
     onVisibleChange: function (t) {
       var n;
       C(!O() && t);
-      if (!(O() || null === (n = e.onVisibleChange) || void 0 === n)) {
+      if (!(O() || null === (n = e.onVisibleChange) || undefined === n)) {
         n.call(e, t);
       }
     },
@@ -301,10 +301,10 @@ var E = a.forwardRef(function (e, t) {
       style: U
     }),
     motion: {
-      motionName: Object(m.b)(j, "zoom-big-fast", e.transitionName),
+      motionName: m.b(j, "zoom-big-fast", e.transitionName),
       motionDeadline: 1e3
     }
-  }), L ? Object(_.a)(H, {
+  }), L ? _.a(H, {
     className: G
   }) : H);
 });
@@ -313,8 +313,8 @@ E.defaultProps = {
   placement: "top",
   mouseEnterDelay: .1,
   mouseLeaveDelay: .1,
-  arrowPointAtCenter: !1,
-  autoAdjustOverflow: !0
+  arrowPointAtCenter: false,
+  autoAdjustOverflow: true
 };
 export { E as a };
 export default E;

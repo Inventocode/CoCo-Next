@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.init_logic_blocks = void 0;
+exports.init_logic_blocks = undefined;
 var r = require("./2555/579");
 exports.init_logic_blocks = function (e) {
   var t = [{
@@ -43,7 +43,7 @@ exports.init_logic_blocks = function (e) {
       name: "B",
       check: ["Number", "String", "Boolean", "Array"]
     }],
-    inputsInline: !0,
+    inputsInline: true,
     output: "Boolean",
     colour: (0, r.i18n)("ORANGE_3"),
     extensions: ["logic_op_tooltip"]
@@ -63,7 +63,7 @@ exports.init_logic_blocks = function (e) {
       name: "B",
       check: "Boolean"
     }],
-    inputsInline: !0,
+    inputsInline: true,
     output: "Boolean",
     colour: (0, r.i18n)("ORANGE_3"),
     extensions: ["logic_op_tooltip"]

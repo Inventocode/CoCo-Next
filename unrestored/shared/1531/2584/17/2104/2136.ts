@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.Events = void 0;
+exports.Events = undefined;
 var r = require("tslib");
 var i = require("inversify");
 var o = require("../642");
@@ -15,9 +15,9 @@ var u = function () {
     this.FIRE_QUEUE_ = [];
     this.disabled_ = 0;
     this.group_ = "";
-    this._record_undo = !0;
-    this._is_undoing = !1;
-    this.enable_filter = !1;
+    this._record_undo = true;
+    this._is_undoing = false;
+    this.enable_filter = false;
     this.listener_disabled = 0;
   }
   e.prototype.set_disabled = function (e) {
@@ -54,7 +54,7 @@ var u = function () {
     }
   };
   e.prototype.fire_now = function () {
-    var e = this.filter(this.FIRE_QUEUE_, !0);
+    var e = this.filter(this.FIRE_QUEUE_, true);
     this.FIRE_QUEUE_.length = 0;
     for (var t = 0; t < e.length; t++) {
       var n = e[t];
@@ -125,7 +125,7 @@ var u = function () {
   };
   e.prototype.clear_pending_undo = function () {
     for (var e = 0; e < this.FIRE_QUEUE_.length; e++) {
-      this.FIRE_QUEUE_[e].set_record_undo(!1);
+      this.FIRE_QUEUE_[e].set_record_undo(false);
     }
   };
   e.prototype.disable = function () {
@@ -162,20 +162,20 @@ var u = function () {
     if (e.type == s.BlockEventType.MOVE || e.type == s.BlockEventType.CREATE) {
       this.disable();
       var t = this.workspace_db.get(e.get_workspace_id());
-      if (void 0 == t) {
+      if (undefined == t) {
         console.error("Trying to enable/disable a block when the workspace disposed.");
         return void this.enable();
       }
       var n = t.get_block_by_id(e.get_block_id());
-      if (void 0 != n) {
+      if (undefined != n) {
         var r = n.get_parent();
         if (r && !r.disabled) {
           for (var i = n.get_descendants(), o = 0; o < i.length; o++) {
-            i[o].set_disabled(!1);
+            i[o].set_disabled(false);
           }
         } else if ((n.output_connection || n.previous_connection) && !t.is_dragging()) {
           do {
-            n.set_disabled(!0);
+            n.set_disabled(true);
             n = n.get_next_block();
           } while (n);
         }
@@ -192,7 +192,7 @@ var u = function () {
         r(e);
       }
     };
-    e.addEventListener(t, o, !1);
+    e.addEventListener(t, o, false);
     var a = {
       original: {
         target: e,
@@ -214,7 +214,7 @@ var u = function () {
           }
         }, c = 0; c < this.touch_manager.TOUCH_MAP[t].length; c++) {
         var u = this.touch_manager.TOUCH_MAP[t][c];
-        e.addEventListener(u, s, !1);
+        e.addEventListener(u, s, false);
         a.additional.push({
           target: e,
           name: u,
@@ -228,14 +228,14 @@ var u = function () {
     var t = e.target;
     var n = e.name;
     var r = e.listener;
-    t.removeEventListener(n, r, !1);
+    t.removeEventListener(n, r, false);
     return r;
   };
   e.prototype.unbind_original = function (e) {
     var t;
     if (e.original) {
       t = this.unbind_event_by_data(e.original);
-      e.original = void 0;
+      e.original = undefined;
     }
     return t;
   };
@@ -266,7 +266,7 @@ var u = function () {
         }
       }
     };
-    e.addEventListener(t, s, !1);
+    e.addEventListener(t, s, false);
     var c = {
       original: {
         target: e,
@@ -289,7 +289,7 @@ var u = function () {
           }
         }, l = 0; l < this.touch_manager.TOUCH_MAP[t].length; l++) {
         var f = this.touch_manager.TOUCH_MAP[t][l];
-        e.addEventListener(f, u, !1);
+        e.addEventListener(f, u, false);
         c.additional.push({
           target: e,
           name: f,
@@ -308,9 +308,9 @@ var u = function () {
   e.prototype.is_listener_enabled = function () {
     return 0 === this.listener_disabled;
   };
-  (0, r.__decorate)([(0, a.lazy_inject)(o.BINDING.touch_manager)], e.prototype, "touch_manager", void 0);
-  (0, r.__decorate)([(0, a.lazy_inject)(o.BINDING.workspace_db)], e.prototype, "workspace_db", void 0);
-  (0, r.__decorate)([(0, a.lazy_inject)(o.BINDING.GroupEvent)], e.prototype, "group_event_factory", void 0);
+  (0, r.__decorate)([(0, a.lazy_inject)(o.BINDING.touch_manager)], e.prototype, "touch_manager", undefined);
+  (0, r.__decorate)([(0, a.lazy_inject)(o.BINDING.workspace_db)], e.prototype, "workspace_db", undefined);
+  (0, r.__decorate)([(0, a.lazy_inject)(o.BINDING.GroupEvent)], e.prototype, "group_event_factory", undefined);
   return e = (0, r.__decorate)([(0, i.injectable)()], e);
 }();
 exports.Events = u;

@@ -1,11 +1,11 @@
 "use strict";
 
 export { i as a };
-var r = require("./203");
+import r = require("./203");
 function i(e, t, n) {
   return (i = "undefined" !== typeof Reflect && Reflect.get ? Reflect.get : function (e, t, n) {
     var i = function (e, t) {
-      for (; !Object.prototype.hasOwnProperty.call(e, t) && null !== (e = Object(r.a)(e));) {
+      for (; !Object.prototype.hasOwnProperty.call(e, t) && null !== (e = r.a(e));) {
         ;
       }
       return e;

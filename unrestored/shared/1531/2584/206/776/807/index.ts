@@ -40,19 +40,19 @@
       e = Object({
         NODE_ENV: "production",
         PUBLIC_URL: "",
-        WDS_SOCKET_HOST: void 0,
-        WDS_SOCKET_PATH: void 0,
-        WDS_SOCKET_PORT: void 0
+        WDS_SOCKET_HOST: undefined,
+        WDS_SOCKET_PATH: undefined,
+        WDS_SOCKET_PORT: undefined
       }).DEBUG;
     }
     return e;
   };
   exports.useColors = function () {
     if ("undefined" !== typeof window && window.process && ("renderer" === window.process.type || window.process.__nwjs)) {
-      return !0;
+      return true;
     }
     if ("undefined" !== typeof navigator && navigator.userAgent && navigator.userAgent.toLowerCase().match(/(edge|trident)\/(\d+)/)) {
-      return !1;
+      return false;
     }
     return "undefined" !== typeof document && document.documentElement && document.documentElement.style && document.documentElement.style.WebkitAppearance || "undefined" !== typeof window && window.console && (window.console.firebug || window.console.exception && window.console.table) || "undefined" !== typeof navigator && navigator.userAgent && navigator.userAgent.toLowerCase().match(/firefox\/(\d+)/) && parseInt(RegExp.$1, 10) >= 31 || "undefined" !== typeof navigator && navigator.userAgent && navigator.userAgent.toLowerCase().match(/applewebkit\/(\d+)/);
   };

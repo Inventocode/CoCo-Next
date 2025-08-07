@@ -1,19 +1,19 @@
 "use strict";
 
 export { _ as a };
-var r = require("react");
+import r = require("react");
 require("../../../50/index");
-var i = require("../../280");
-var o = require("../100");
-var a = require("../../../19");
-var s = require("../270/1043");
-var c = require("../701/index");
+import i = require("../../280");
+import o = require("../100");
+import a = require("../../../19");
+import s = require("../270/1043");
+import c = require("../701/index");
 require("../../../95");
 require("../../../96");
 require("../../../322");
 require("../../../273");
 require("../../../120");
-var u = require("../../../549/1186/365");
+import u = require("../../../549/1186/365");
 var l = {
   0: [0, 40],
   1: [55, 19.6],
@@ -40,7 +40,7 @@ var l = {
   22: [-64, 77],
   23: [-37, 50]
 };
-var f = Object(c.a)(function (e) {
+var f = c.a(function (e) {
   var t = e.spacing(4);
   return {
     clockNumber: {
@@ -68,14 +68,14 @@ var d = function (e) {
   var i = e.index;
   var a = e.isInner;
   var c = f();
-  var u = Object(o.a)(c.clockNumber, t && c.clockNumberSelected);
-  var d = Object(r.useMemo)(function () {
+  var u = o.a(c.clockNumber, t && c.clockNumberSelected);
+  var d = r.useMemo(function () {
     var e = l[i];
     return {
       transform: "translate(".concat(e[0], "px, ").concat(e[1], "px")
     };
   }, [i]);
-  return Object(r.createElement)(s.a, {
+  return r.createElement(s.a, {
     component: "span",
     className: u,
     variant: a ? "body2" : "body1",
@@ -97,7 +97,7 @@ var h = function (e) {
       selected: u(l),
       isInner: !t && (0 === l || l > 12)
     };
-    s.push(Object(r.createElement)(d, Object(a.a)({
+    s.push(r.createElement(d, a.a({
       key: l
     }, h)));
   }
@@ -106,62 +106,62 @@ var h = function (e) {
 var p = function (e) {
   var t = e.value;
   var n = e.utils.formatNumber;
-  return [Object(r.createElement)(d, {
+  return [r.createElement(d, {
     label: n("00"),
     selected: 0 === t,
     index: 12,
     key: 12
-  }), Object(r.createElement)(d, {
+  }), r.createElement(d, {
     label: n("05"),
     selected: 5 === t,
     index: 1,
     key: 1
-  }), Object(r.createElement)(d, {
+  }), r.createElement(d, {
     label: n("10"),
     selected: 10 === t,
     index: 2,
     key: 2
-  }), Object(r.createElement)(d, {
+  }), r.createElement(d, {
     label: n("15"),
     selected: 15 === t,
     index: 3,
     key: 3
-  }), Object(r.createElement)(d, {
+  }), r.createElement(d, {
     label: n("20"),
     selected: 20 === t,
     index: 4,
     key: 4
-  }), Object(r.createElement)(d, {
+  }), r.createElement(d, {
     label: n("25"),
     selected: 25 === t,
     index: 5,
     key: 5
-  }), Object(r.createElement)(d, {
+  }), r.createElement(d, {
     label: n("30"),
     selected: 30 === t,
     index: 6,
     key: 6
-  }), Object(r.createElement)(d, {
+  }), r.createElement(d, {
     label: n("35"),
     selected: 35 === t,
     index: 7,
     key: 7
-  }), Object(r.createElement)(d, {
+  }), r.createElement(d, {
     label: n("40"),
     selected: 40 === t,
     index: 8,
     key: 8
-  }), Object(r.createElement)(d, {
+  }), r.createElement(d, {
     label: n("45"),
     selected: 45 === t,
     index: 9,
     key: 9
-  }), Object(r.createElement)(d, {
+  }), r.createElement(d, {
     label: n("50"),
     selected: 50 === t,
     index: 10,
     key: 10
-  }), Object(r.createElement)(d, {
+  }), r.createElement(d, {
     label: n("55"),
     selected: 55 === t,
     index: 11,
@@ -176,8 +176,8 @@ var _ = function (e) {
   var c = e.ampm;
   var l = e.date;
   var f = e.minutesStep;
-  var d = Object(i.b)();
-  var _ = Object(r.useMemo)(function () {
+  var d = i.b();
+  var _ = r.useMemo(function () {
     switch (t) {
       case u.b.HOURS:
         return {
@@ -188,8 +188,8 @@ var _ = function (e) {
             ampm: Boolean(c)
           }),
           onChange: function (e, t) {
-            var r = Object(u.d)(l, d);
-            var i = Object(u.c)(d.setHours(l, e), r, Boolean(c), d);
+            var r = u.d(l, d);
+            var i = u.c(d.setHours(l, e), r, Boolean(c), d);
             n(i, t);
           }
         };
@@ -223,7 +223,7 @@ var _ = function (e) {
         throw new Error("You must provide the type for TimePickerView");
     }
   }, [c, l, n, o, s, t, d]);
-  return Object(r.createElement)(u.a, Object(a.a)({
+  return r.createElement(u.a, a.a({
     type: t,
     ampm: c,
     minutesStep: f
@@ -231,8 +231,8 @@ var _ = function (e) {
 };
 _.displayName = "TimePickerView";
 _.defaultProps = {
-  ampm: !0,
+  ampm: true,
   minutesStep: 1
 };
-Object(r.memo)(_);
+r.memo(_);
 export default _;

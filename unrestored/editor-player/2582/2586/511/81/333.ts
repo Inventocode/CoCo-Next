@@ -14,13 +14,13 @@ var i = function () {
     return this.height;
   };
   t.prototype.isCropSupported = function () {
-    return !1;
+    return false;
   };
   t.prototype.crop = function (t, e, r, n) {
     throw new o.a("This luminance source does not support cropping.");
   };
   t.prototype.isRotateSupported = function () {
-    return !1;
+    return false;
   };
   t.prototype.rotateCounterClockwise = function () {
     throw new o.a("This luminance source does not support rotation by 90 degrees.");
@@ -32,7 +32,7 @@ var i = function () {
     for (var t = new Uint8ClampedArray(this.width), e = new n.a(), r = 0; r < this.height; r++) {
       for (var o = this.getRow(r, t), i = 0; i < this.width; i++) {
         var a = 255 & o[i];
-        var u = void 0;
+        var u = undefined;
         u = a < 64 ? "#" : a < 128 ? "+" : a < 192 ? "." : " ";
         e.append(u);
       }

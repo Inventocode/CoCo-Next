@@ -20,7 +20,7 @@ var i = {
   dateFormat: "M/D/YYYY",
   dayFormat: "D",
   dateTimeFormat: "M/D/YYYY HH:mm:ss",
-  monthBeforeYear: !0,
+  monthBeforeYear: true,
   previousMonth: "Previous month (PageUp)",
   nextMonth: "Next month (PageDown)",
   previousYear: "Last year (Control + left)",
@@ -35,7 +35,7 @@ var o = {
   rangePlaceholder: ["Start time", "End time"]
 };
 var a = {
-  lang: Object(r.a)({
+  lang: r.a({
     placeholder: "Select date",
     yearPlaceholder: "Select year",
     quarterPlaceholder: "Select quarter",
@@ -46,7 +46,7 @@ var a = {
     rangeMonthPlaceholder: ["Start month", "End month"],
     rangeWeekPlaceholder: ["Start week", "End week"]
   }, i),
-  timePickerLocale: Object(r.a)({}, o)
+  timePickerLocale: r.a({}, o)
 };
 var s = "${label} is not a valid ${type}";
 var c = {

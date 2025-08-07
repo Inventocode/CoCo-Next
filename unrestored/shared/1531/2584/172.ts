@@ -11,7 +11,7 @@ export { d as a };
 export { p as f };
 export { f as c };
 export { h as d };
-var r = require("./5");
+import r = require("./5");
 var o = "icon-widget-list-viewer";
 var i = 360;
 var a = 500;

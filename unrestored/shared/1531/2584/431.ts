@@ -14,7 +14,7 @@ var i = function (e) {
   };
 };
 var o = function (e, t) {
-  return !0 === (null === t || void 0 === t ? void 0 : t.deadline) || "height" === t.propertyName;
+  return true === (null === t || undefined === t ? undefined : t.deadline) || "height" === t.propertyName;
 };
 var a = {
   motionName: "ant-motion-collapse",
@@ -34,7 +34,7 @@ var a = {
   motionDeadline: 500
 };
 var s = function (e, t, n) {
-  return void 0 !== n ? n : "".concat(e, "-").concat(t);
+  return undefined !== n ? n : "".concat(e, "-").concat(t);
 };
 export { a };
 export default a;

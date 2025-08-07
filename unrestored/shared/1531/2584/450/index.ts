@@ -14,9 +14,9 @@ export { k as l };
 export { x as h };
 export { M as j };
 export { P as k };
-var r = require("../47");
-var o = require("../10/index");
-var i = require("../1/index");
+import r = require("../47");
+import o = require("../10/index");
+import i = require("regenerator-runtime");
 var a = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -29,8 +29,8 @@ var a = function __importDefault(module) {
   });
   return defaultExport;
 }(i);
-var s = require("../7");
-var c = require("./282/index");
+import s = require("../7");
+import c = require("./282/index");
 var l = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -43,11 +43,11 @@ var l = function __importDefault(module) {
   });
   return defaultExport;
 }(c);
-var u = require("../23");
-var d = require("../64");
-var p = require("../53");
-var f = require("../9");
-var h = require("../141/311");
+import u = require("../../../../../src/shared/language");
+import d = require("../64");
+import p = require("../53");
+import f = require("../9");
+import h = require("../141/311");
 function m(e, t) {
   var n = document.createElement("a");
   document.body.appendChild(n);
@@ -60,7 +60,7 @@ function g(e) {
   return _.apply(this, arguments);
 }
 function _() {
-  return (_ = Object(s.a)(a.a.mark(function e(t) {
+  return (_ = s.a(a.a.mark(function e(t) {
     return a.a.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
@@ -97,7 +97,7 @@ function v(e) {
   return new Promise(function (n, r) {
     t.onload = function (t) {
       var r;
-      var o = null === (r = t.target) || void 0 === r ? void 0 : r.result;
+      var o = null === (r = t.target) || undefined === r ? undefined : r.result;
       if (o) {
         n(new Blob([o], {
           type: e.type
@@ -126,23 +126,23 @@ function b(e) {
   });
 }
 function y(e) {
-  var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [".gif", ".jpeg", ".png", ".svg", ".gif", ".bmp", ".jpg"];
+  var t = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : [".gif", ".jpeg", ".png", ".svg", ".gif", ".bmp", ".jpg"];
   return t.includes(w(e.name)) ? new Promise(function (t) {
     var n = new window.Image();
-    n.src = Object(h.A)(e);
+    n.src = h.A(e);
     n.onload = function () {
-      t(!0);
+      t(true);
     };
     n.onerror = function () {
-      t(!1);
+      t(false);
     };
-  }) : Promise.resolve(!1);
+  }) : Promise.resolve(false);
 }
 function E(e, t, n) {
   return O.apply(this, arguments);
 }
 function O() {
-  return (O = Object(s.a)(a.a.mark(function e(t, n, r) {
+  return (O = s.a(a.a.mark(function e(t, n, r) {
     var o;
     var i;
     var s;
@@ -156,7 +156,7 @@ function O() {
             s = {
               status: "fail",
               file: t,
-              message: Object(u.c)(n, "illegalFormat").toString()
+              message: u.c(n, "illegalFormat").toString()
             };
             c = {
               status: "success",
@@ -175,17 +175,17 @@ function O() {
             if (".gif" === o) {
               if (Number(t.size) > 10 * i) {
                 c.status = "fail";
-                c.message = Object(u.c)(n, "tooLargeGifImage").toString();
+                c.message = u.c(n, "tooLargeGifImage").toString();
               }
             } else {
               if (Number(t.size) > 5 * i) {
                 c.status = "fail";
-                c.message = Object(u.c)(n, "tooLargeImage").toString();
+                c.message = u.c(n, "tooLargeImage").toString();
               }
             }
             if (!t.name.slice(0, t.name.lastIndexOf(".")).trim()) {
               c.status = "fail";
-              c.message = Object(u.c)(n, "imageNameError").toString();
+              c.message = u.c(n, "imageNameError").toString();
             }
             return e.abrupt("return", c);
           case 15:
@@ -204,7 +204,7 @@ function C(e) {
   return T.apply(this, arguments);
 }
 function T() {
-  return (T = Object(s.a)(a.a.mark(function e(t) {
+  return (T = s.a(a.a.mark(function e(t) {
     var n;
     return a.a.wrap(function (e) {
       for (;;) {
@@ -214,17 +214,17 @@ function T() {
               e.next = 5;
               break;
             }
-            (n = document.createElement("audio")).src = Object(h.A)(t);
+            (n = document.createElement("audio")).src = h.A(t);
             return e.abrupt("return", new Promise(function (e) {
               n.oncanplay = function () {
-                e(!0);
+                e(true);
               };
               n.onerror = function () {
-                e(!1);
+                e(false);
               };
             }));
           case 5:
-            return e.abrupt("return", Promise.resolve(!1));
+            return e.abrupt("return", Promise.resolve(false));
           case 6:
           case "end":
             return e.stop();
@@ -237,7 +237,7 @@ function S(e, t) {
   return I.apply(this, arguments);
 }
 function I() {
-  return (I = Object(s.a)(a.a.mark(function e(t, n) {
+  return (I = s.a(a.a.mark(function e(t, n) {
     var r;
     var o;
     var i;
@@ -249,7 +249,7 @@ function I() {
             o = {
               status: "fail",
               file: t,
-              message: Object(u.c)(n, "illegalFormat").toString()
+              message: u.c(n, "illegalFormat").toString()
             };
             i = {
               status: "success",
@@ -267,11 +267,11 @@ function I() {
           case 8:
             if (Number(t.size) > 10 * r) {
               i.status = "fail";
-              i.message = Object(u.c)(n, "tooLargeSound").toString();
+              i.message = u.c(n, "tooLargeSound").toString();
             }
             if (!t.name.slice(0, t.name.lastIndexOf(".")).trim()) {
               i.status = "fail";
-              i.message = Object(u.c)(n, "soundNameError").toString();
+              i.message = u.c(n, "soundNameError").toString();
             }
             return e.abrupt("return", i);
           case 12:
@@ -286,7 +286,7 @@ function A(e) {
   return j.apply(this, arguments);
 }
 function j() {
-  return (j = Object(s.a)(a.a.mark(function e(t) {
+  return (j = s.a(a.a.mark(function e(t) {
     var n;
     return a.a.wrap(function (e) {
       for (;;) {
@@ -308,7 +308,7 @@ function j() {
   }))).apply(this, arguments);
 }
 function N(e) {
-  var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+  var t = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : 0;
   e = Math.round(e);
   t = Math.round(t);
   if (e < 0) {
@@ -335,7 +335,7 @@ function x(e, t, n, r) {
   return D.apply(this, arguments);
 }
 function D() {
-  return (D = Object(s.a)(a.a.mark(function e(t, n, o, i) {
+  return (D = s.a(a.a.mark(function e(t, n, o, i) {
     var c;
     return a.a.wrap(function (e) {
       for (;;) {
@@ -347,7 +347,7 @@ function D() {
               var d;
               var h = w(n);
               var m = t.name.slice(0, n.length - h.length);
-              var g = Object(r.a)(o);
+              var g = r.a(o);
               try {
                 for (g.s(); !(d = g.n()).done;) {
                   if (!d.value.validator(m)) {
@@ -363,10 +363,10 @@ function D() {
               if (m.length > 20) {
                 m = m.slice(0, 20);
               }
-              var _ = Object(f.ac)(m, i);
+              var _ = f.ac(m, i);
               var v = new FileReader();
               if (c.includes(t.type)) {
-                v.onload = Object(s.a)(a.a.mark(function t() {
+                v.onload = s.a(a.a.mark(function t() {
                   var n;
                   var r;
                   var o;
@@ -393,7 +393,7 @@ function D() {
                                 };
                                 d = l.a.utils.encode_cell(u);
                                 if ((p = o[d]) && p.h) {
-                                  p.w = void 0;
+                                  p.w = undefined;
                                   p.v = p.h;
                                 }
                                 if (p && "s" !== p.t) {
@@ -430,7 +430,7 @@ function D() {
   }))).apply(this, arguments);
 }
 var M = function () {
-  var e = Object(s.a)(a.a.mark(function e(t) {
+  var e = s.a(a.a.mark(function e(t) {
     var n;
     return a.a.wrap(function (e) {
       for (;;) {
@@ -441,7 +441,7 @@ var M = function () {
             return new Promise(function (e, r) {
               var o = new FileReader();
               if (n.includes(t.type)) {
-                o.onload = Object(s.a)(a.a.mark(function t() {
+                o.onload = s.a(a.a.mark(function t() {
                   var n;
                   var i;
                   var s;
@@ -473,7 +473,7 @@ var M = function () {
                                   });
                                 }
                                 if (h && h.h) {
-                                  h.w = void 0;
+                                  h.w = undefined;
                                   h.v = h.h;
                                 }
                                 if (h && "s" !== h.t) {
@@ -484,7 +484,7 @@ var M = function () {
                             m = l.a.utils.sheet_to_json(s, {
                               header: 1
                             });
-                            g = L(m, "test", !0);
+                            g = L(m, "test", true);
                             e(g);
                           } else {
                             r({
@@ -515,7 +515,7 @@ var M = function () {
   };
 }();
 function L(e, t) {
-  var n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+  var n = arguments.length > 2 && undefined !== arguments[2] && arguments[2];
   var r = {
     id: "",
     name: t,
@@ -524,10 +524,10 @@ function L(e, t) {
   };
   var i = {};
   Object.entries(e[0]).forEach(function (e) {
-    var t = Object(o.a)(e, 2);
+    var t = o.a(e, 2);
     var a = t[0];
     var s = t[1];
-    var c = Object(d.a)("COLUMN");
+    var c = d.a("COLUMN");
     i[a] = c;
     r.header[c] = {
       field: s,
@@ -537,9 +537,9 @@ function L(e, t) {
   e.splice(0, 1);
   Object.values(e).forEach(function (e) {
     var t = {};
-    t.rowId = Object(d.a)("ROW");
+    t.rowId = d.a("ROW");
     Object.entries(e).forEach(function (e) {
-      var n = Object(o.a)(e, 2);
+      var n = o.a(e, 2);
       var r = n[0];
       var a = n[1].replace("&#x000d;<br/>", " ");
       var s = i[r];
@@ -553,7 +553,7 @@ function P(e, t) {
   return B.apply(this, arguments);
 }
 function B() {
-  return (B = Object(s.a)(a.a.mark(function e(t, n) {
+  return (B = s.a(a.a.mark(function e(t, n) {
     return a.a.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
@@ -571,13 +571,13 @@ function B() {
                   var r = this.height;
                   i.width = r;
                   i.height = t;
-                  if (!(null === a || void 0 === a)) {
+                  if (!(null === a || undefined === a)) {
                     a.translate(i.width / 2, i.height / 2);
                   }
-                  if (!(null === a || void 0 === a)) {
+                  if (!(null === a || undefined === a)) {
                     a.rotate(n * Math.PI / 180);
                   }
-                  if (!(null === a || void 0 === a)) {
+                  if (!(null === a || undefined === a)) {
                     a.drawImage(o, -t / 2, -r / 2);
                   }
                   e(i.toDataURL());

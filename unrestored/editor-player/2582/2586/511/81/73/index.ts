@@ -18,7 +18,7 @@ var i = function () {
       var r = e;
       return this.x === r.x && this.y === r.y;
     }
-    return !1;
+    return false;
   };
   t.prototype.hashCode = function () {
     return 31 * o.a.floatToIntBits(this.x) + o.a.floatToIntBits(this.y);

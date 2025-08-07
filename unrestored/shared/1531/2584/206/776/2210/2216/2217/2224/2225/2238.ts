@@ -13,21 +13,21 @@ module.exports = function (e, t, n) {
   var d = e.util.copy(e);
   d.level++;
   var h = "valid" + d.level;
-  if (e.opts.strictKeywords ? "object" == typeof a && Object.keys(a).length > 0 || !1 === a : e.util.schemaHasRules(a, e.RULES.all)) {
+  if (e.opts.strictKeywords ? "object" == typeof a && Object.keys(a).length > 0 || false === a : e.util.schemaHasRules(a, e.RULES.all)) {
     d.schema = a;
     d.schemaPath = s;
     d.errSchemaPath = c;
     r += " var " + f + " = errors;  ";
     var p;
     var _ = e.compositeRule;
-    e.compositeRule = d.compositeRule = !0;
-    d.createErrors = !1;
+    e.compositeRule = d.compositeRule = true;
+    d.createErrors = false;
     if (d.opts.allErrors) {
       p = d.opts.allErrors;
-      d.opts.allErrors = !1;
+      d.opts.allErrors = false;
     }
     r += " " + e.validate(d) + " ";
-    d.createErrors = !0;
+    d.createErrors = true;
     if (p) {
       d.opts.allErrors = p;
     }
@@ -36,9 +36,9 @@ module.exports = function (e, t, n) {
     var A = A || [];
     A.push(r);
     r = "";
-    if (!1 !== e.createErrors) {
+    if (false !== e.createErrors) {
       r += " { keyword: 'not' , dataPath: (dataPath || '') + " + e.errorPath + " , schemaPath: " + e.util.toQuotedString(c) + " , params: {} ";
-      if (!1 !== e.opts.messages) {
+      if (false !== e.opts.messages) {
         r += " , message: 'should NOT be valid' ";
       }
       if (e.opts.verbose) {
@@ -65,9 +65,9 @@ module.exports = function (e, t, n) {
     }
   } else {
     r += "  var err =   ";
-    if (!1 !== e.createErrors) {
+    if (false !== e.createErrors) {
       r += " { keyword: 'not' , dataPath: (dataPath || '') + " + e.errorPath + " , schemaPath: " + e.util.toQuotedString(c) + " , params: {} ";
-      if (!1 !== e.opts.messages) {
+      if (false !== e.opts.messages) {
         r += " , message: 'should NOT be valid' ";
       }
       if (e.opts.verbose) {

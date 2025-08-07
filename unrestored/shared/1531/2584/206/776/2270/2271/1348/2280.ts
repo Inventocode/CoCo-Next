@@ -9,7 +9,7 @@
   var u = {}.toString;
   function l(e, t) {
     if (!(e instanceof Object)) {
-      return !1;
+      return false;
     }
     switch (t.structure) {
       case "fields":
@@ -22,13 +22,13 @@
           var s;
           var c;
           for (i in n = {}, r = 0, e) {
-            n[i] = !0;
+            n[i] = true;
             r++;
           }
           for (a in o = 0, s = t.of) {
             c = s[a];
             if (!d(e[a], c)) {
-              return !1;
+              return false;
             }
             if (n[a]) {
               o++;
@@ -52,7 +52,7 @@
           for (n = 0, r = 0, o = (i = t.of).length; r < o; ++r) {
             a = i[r];
             if (!d(e[n], a)) {
-              return !1;
+              return false;
             }
             n++;
           }

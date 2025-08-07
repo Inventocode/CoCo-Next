@@ -23,12 +23,12 @@
   require("./736");
   var i = {};
   function o() {
-    return Object(r.b)() ? e : "undefined" !== typeof window ? window : "undefined" !== typeof self ? self : i;
+    return r.b() ? e : "undefined" !== typeof window ? window : "undefined" !== typeof self ? self : i;
   }
   function a() {
     var e = o();
     var t = e.crypto || e.msCrypto;
-    if (void 0 !== t && t.getRandomValues) {
+    if (undefined !== t && t.getRandomValues) {
       var n = new Uint16Array(8);
       t.getRandomValues(n);
       n[3] = 4095 & n[3] | 16384;

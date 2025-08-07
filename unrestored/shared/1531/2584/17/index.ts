@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.vec2 = exports.I = exports.BU = exports.Blink = void 0;
+exports.vec2 = exports.I = exports.BU = exports.Blink = undefined;
 var r = require("tslib");
 var i = (0, r.__importStar)(require("./533"));
 exports.I = i;
@@ -19,7 +19,7 @@ window.Blockly = exports.Blink;
 exports.BU = (0, r.__importStar)(require("./497/index"));
 var l = require("@kitten-team/gl-matrix");
 Object.defineProperty(exports, "vec2", {
-  enumerable: !0,
+  enumerable: true,
   get: function () {
     return l.vec2;
   }

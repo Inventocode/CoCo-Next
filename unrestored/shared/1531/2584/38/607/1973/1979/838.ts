@@ -130,21 +130,21 @@ function u(e) {
 }
 function l(e) {
   if (!e) {
-    return !1;
+    return false;
   }
   var t = e.length;
   if (t < 9) {
-    return !1;
+    return false;
   }
   if (95 !== e.charCodeAt(t - 1) || 95 !== e.charCodeAt(t - 2) || 111 !== e.charCodeAt(t - 3) || 116 !== e.charCodeAt(t - 4) || 111 !== e.charCodeAt(t - 5) || 114 !== e.charCodeAt(t - 6) || 112 !== e.charCodeAt(t - 7) || 95 !== e.charCodeAt(t - 8) || 95 !== e.charCodeAt(t - 9)) {
-    return !1;
+    return false;
   }
   for (var n = t - 10; n >= 0; n--) {
     if (36 !== e.charCodeAt(n)) {
-      return !1;
+      return false;
     }
   }
-  return !0;
+  return true;
 }
 function f(e, t) {
   return e === t ? 0 : null === e ? 1 : null === t ? -1 : e > t ? 1 : -1;

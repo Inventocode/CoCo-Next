@@ -33,7 +33,7 @@
     });
     return defaultExport;
   }(d);
-  var f = require("../31/index");
+  var f = require("lodash");
   var h = require("../1185");
   var m = require("../13/index");
   var g = require("./154");
@@ -57,7 +57,7 @@
   var w = require("../784/index");
   var C = require("./1483");
   var T = {
-    visible: !1,
+    visible: false,
     position: {
       x: 0,
       y: 0
@@ -71,8 +71,8 @@
       t.selectionEnd = t.selectionStart = n ? 0 : t.value.length;
     });
   }
-  exports.a = Object(a.memo)(function () {
-    var e = Object(l.e)(function (e) {
+  exports.a = a.memo(function () {
+    var e = l.e(function (e) {
       return e.block.storageDialogInfo;
     });
     var t = e.visible;
@@ -81,49 +81,49 @@
     var g = e.maxKeyLength;
     var I = e.data;
     var A = e.onSave;
-    var j = null === n || void 0 === n ? void 0 : n.type;
-    var N = Object(u.a)().formatMessage;
-    var R = Object(a.useRef)(-1);
-    var k = Object(a.useRef)(-1);
-    var x = Object(l.d)();
-    var D = Object(a.useState)([]);
-    var M = Object(i.a)(D, 2);
+    var j = null === n || undefined === n ? undefined : n.type;
+    var N = u.a().formatMessage;
+    var R = a.useRef(-1);
+    var k = a.useRef(-1);
+    var x = l.d();
+    var D = a.useState([]);
+    var M = i.a(D, 2);
     var L = M[0];
     var P = M[1];
-    var B = Object(a.useState)([]);
-    var F = Object(i.a)(B, 2);
+    var B = a.useState([]);
+    var F = i.a(B, 2);
     var G = F[0];
     var U = F[1];
-    var W = Object(a.useState)(-1);
-    var H = Object(i.a)(W, 2);
+    var W = a.useState(-1);
+    var H = i.a(W, 2);
     var V = H[0];
     var z = H[1];
-    var Y = Object(a.useState)(-1);
-    var K = Object(i.a)(Y, 2);
+    var Y = a.useState(-1);
+    var K = i.a(Y, 2);
     var q = K[0];
     var X = K[1];
-    var Q = Object(a.useState)(0);
-    var Z = Object(i.a)(Q, 2);
+    var Q = a.useState(0);
+    var Z = i.a(Q, 2);
     var J = Z[0];
     var $ = Z[1];
-    var ee = Object(a.useState)(!1);
-    var te = Object(i.a)(ee, 2);
+    var ee = a.useState(false);
+    var te = i.a(ee, 2);
     var ne = te[0];
     var re = te[1];
-    var oe = Object(a.useState)(!1);
-    var ie = Object(i.a)(oe, 2);
+    var oe = a.useState(false);
+    var ie = i.a(oe, 2);
     var ae = ie[0];
     var se = ie[1];
-    var ce = Object(a.useState)(!1);
-    var le = Object(i.a)(ce, 2);
+    var ce = a.useState(false);
+    var le = i.a(ce, 2);
     var ue = le[0];
     var de = le[1];
-    var pe = Object(a.useState)(!1);
-    var fe = Object(i.a)(pe, 2);
+    var pe = a.useState(false);
+    var fe = i.a(pe, 2);
     var he = fe[0];
     var me = fe[1];
-    var ge = Object(a.useState)(T);
-    var _e = Object(i.a)(ge, 2);
+    var ge = a.useState(T);
+    var _e = i.a(ge, 2);
     var ve = _e[0];
     var be = _e[1];
     function ye(e) {
@@ -131,22 +131,22 @@
       var n = document.querySelector(".".concat("STORAGE_KEY_VALUE_INPUT_SERIAL_" + t, " input"));
       if (n instanceof HTMLInputElement) {
         R.current = t;
-        S(n, !1);
+        S(n, false);
       }
     }
     function Ee() {
       return {
         value: "",
-        key: Object(E.ac)("key1", G.map(function (e) {
+        key: E.ac("key1", G.map(function (e) {
           return e.key;
         })),
         type: "string",
-        id: Object(b.a)("DOC_KEY")
+        id: b.a("DOC_KEY")
       };
     }
     function Oe(e) {
       G.splice(e, 1);
-      U(Object(r.a)(G));
+      U(r.a(G));
     }
     function we(e, t, n) {
       if (G.find(function (n, r) {
@@ -156,15 +156,15 @@
         return void P([]);
       }
       G[e].key = t.trim();
-      U(Object(r.a)(G));
+      U(r.a(G));
     }
     function Ce(e, t) {
       if (G.find(function (n, r) {
         return r !== e && t.trim() === n.key;
       })) {
         P([e]);
-        x(Object(v.mj)({
-          showPrefixIcon: !1,
+        x(v.mj({
+          showPrefixIcon: false,
           message: N({
             id: "repeatKeyToastMsg"
           })
@@ -180,13 +180,13 @@
         G[e].type = "string";
       }
       G[e].value = t;
-      U(Object(r.a)(G));
+      U(r.a(G));
     }
     function Se() {
       if (A) {
         A(G);
       }
-      x(Object(v.uh)());
+      x(v.uh());
     }
     function Ie(e) {
       return "" !== e && !isNaN(Number(e));
@@ -199,7 +199,7 @@
     }
     function Ne(e, t) {
       G[e].type = t;
-      U(Object(r.a)(G));
+      U(r.a(G));
     }
     function Re(e) {
       var t = e.target;
@@ -218,7 +218,7 @@
           y: r.top - i.top
         };
         be({
-          visible: !0,
+          visible: true,
           position: a,
           type: G[e].type,
           index: e,
@@ -226,17 +226,17 @@
         });
       }
     }
-    Object(a.useEffect)(function () {
-      U(Object(f.cloneDeep)(I));
+    a.useEffect(function () {
+      U(f.cloneDeep(I));
     }, [I]);
-    Object(a.useEffect)(function () {
-      me(!1);
+    a.useEffect(function () {
+      me(false);
     }, [t]);
-    Object(a.useEffect)(function () {
+    a.useEffect(function () {
       function e(t) {
         var n = t.target;
         if (!(n.closest("." + _.a.typeSelectionList) || n.closest("." + _.a.typeFlag))) {
-          be(Object(o.a)({}, T));
+          be(o.a({}, T));
           document.removeEventListener("mousemove", e);
         }
       }
@@ -247,13 +247,13 @@
         document.removeEventListener("mousemove", e);
       };
     }, [ve]);
-    Object(a.useEffect)(function () {
+    a.useEffect(function () {
       var e = {};
       G.forEach(function (t, n) {
         G.slice(n + 1, G.length).forEach(function (r, o) {
           if (r.key && r.key === t.key) {
-            e[o + n + 1] = !0;
-            e[n] = !0;
+            e[o + n + 1] = true;
+            e[n] = true;
           }
         });
       });
@@ -261,57 +261,57 @@
         return Number(e);
       }));
     }, [G]);
-    Object(a.useEffect)(function () {
+    a.useEffect(function () {
       ye(V);
     }, [V]);
     var xe = function (e) {
       re(e);
     };
     var De = function () {
-      re(!1);
-      x(Object(v.wj)(O.c.ImageLibrary, function (e) {
+      re(false);
+      x(v.wj(O.c.ImageLibrary, function (e) {
         var t = e[0];
-        if (null === t || void 0 === t ? void 0 : t.id) {
+        if (null === t || undefined === t ? undefined : t.id) {
           G[q].value = t.id;
-          U(Object(r.a)(G));
+          U(r.a(G));
         }
       }));
     };
     var Me = function () {
-      re(!1);
-      x(Object(v.wj)(O.c.IconLibrary, function (e) {
+      re(false);
+      x(v.wj(O.c.IconLibrary, function (e) {
         var t = e[0];
-        if (null === t || void 0 === t ? void 0 : t.name) {
+        if (null === t || undefined === t ? undefined : t.name) {
           G[q].value = t.name + ".svg";
-          U(Object(r.a)(G));
+          U(r.a(G));
         }
       }));
     };
     var Le = function () {
-      re(!1);
-      x(Object(v.wj)(O.c.SoundLibrary, function (e) {
+      re(false);
+      x(v.wj(O.c.SoundLibrary, function (e) {
         var t = e[0];
-        if (null === t || void 0 === t ? void 0 : t.name) {
+        if (null === t || undefined === t ? undefined : t.name) {
           G[q].value = t.name;
-          U(Object(r.a)(G));
+          U(r.a(G));
         }
       }));
     };
     var Pe = function (e) {
       if (e) {
-        se(!1);
-        de(!1);
+        se(false);
+        de(false);
       }
     };
     var Be = function (e) {
       e.preventDefault();
       k.current = q;
-      se(!0);
+      se(true);
     };
     var Fe = function (e) {
       e.preventDefault();
       k.current = q;
-      de(!0);
+      de(true);
     };
     function Ge(e) {
       var t = G[k.current].key;
@@ -324,26 +324,26 @@
       navigator.clipboard.readText().then(function (t) {
         if ("value" === e) {
           G[k.current].value = t.trim();
-          return void U(Object(r.a)(G));
+          return void U(r.a(G));
         }
         if (G.find(function (e, n) {
           return n !== k.current && t.trim() === e.key;
         })) {
-          x(Object(v.mj)({
-            showPrefixIcon: !1,
+          x(v.mj({
+            showPrefixIcon: false,
             message: N({
               id: "repeatKeyToastMsg"
             })
           }));
         } else {
           G[k.current].key = t.trim();
-          U(Object(r.a)(G));
+          U(r.a(G));
         }
       });
     }
     function We(e) {
       if (g && G.length >= g) {
-        x(Object(v.mj)({
+        x(v.mj({
           message: N({
             id: "cloudDbOverTheMaxKeyTips"
           })
@@ -359,40 +359,40 @@
     function He(e) {
       if ("value" === e) {
         G[k.current].value = "";
-        return void U(Object(r.a)(G));
+        return void U(r.a(G));
       }
       if (G.find(function (e, t) {
         return t !== k.current && "" === e.key;
       })) {
-        x(Object(v.mj)({
-          showPrefixIcon: !1,
+        x(v.mj({
+          showPrefixIcon: false,
           message: N({
             id: "repeatKeyToastMsg"
           })
         }));
       } else {
         G[k.current].key = "";
-        U(Object(r.a)(G));
+        U(r.a(G));
       }
     }
-    Object(a.useEffect)(function () {
+    a.useEffect(function () {
       if (ae || ue) {
         document.addEventListener("mousedown", function e() {
-          se(!1);
-          de(!1);
-          document.removeEventListener("mousedown", e, !0);
-        }, !0);
+          se(false);
+          de(false);
+          document.removeEventListener("mousedown", e, true);
+        }, true);
       }
     }, [ae, ue]);
     return s.a.createElement(m.f, {
       className: _.a.editListDialog,
       visible: t,
-      withPortal: !0,
+      withPortal: true,
       onClose: function () {
-        if (Object(f.isEqual)(G, I)) {
-          x(Object(v.uh)());
+        if (f.isEqual(G, I)) {
+          x(v.uh());
         } else {
-          me(!0);
+          me(true);
         }
       }
     }, s.a.createElement("div", {
@@ -429,7 +429,7 @@
         if (t instanceof HTMLInputElement && n > -1 && t.selectionEnd === t.selectionStart) {
           var r = e.keyCode;
           var o = n;
-          var i = !0;
+          var i = true;
           if (38 === r) {
             o -= 2;
           } else {
@@ -438,7 +438,7 @@
             } else {
               if (37 === r && 0 === t.selectionStart) {
                 o -= 1;
-                i = !1;
+                i = false;
               } else {
                 if (39 === r && t.selectionEnd === t.value.length) {
                   o += 1;
@@ -508,7 +508,7 @@
           onContextMenu: Be
         }, s.a.createElement(m.k, {
           type: "text",
-          isTrimmed: !0,
+          isTrimmed: true,
           className: p()(_.a.listInput, "STORAGE_KEY_VALUE_INPUT_SERIAL_" + 2 * t, L.includes(t) && _.a.error),
           maxLength: 150,
           onClick: Re,
@@ -568,7 +568,7 @@
           onFocus: Ae.bind(null, t, 1),
           className: p()(_.a.listInput, "STORAGE_KEY_VALUE_INPUT_SERIAL_" + (2 * t + 1)),
           maxLength: 8e3,
-          isTrimmed: !0,
+          isTrimmed: true,
           defaultValue: G[t].value,
           onBlur: Te.bind(null, t),
           onClick: Re,
@@ -626,7 +626,7 @@
       className: p()(_.a.addRow, G.length > 12 && _.a.shadow),
       onClick: function () {
         if (g && G.length >= g) {
-          x(Object(v.mj)({
+          x(v.mj({
             message: N({
               id: "cloudDbOverTheMaxKeyTips"
             })
@@ -642,7 +642,7 @@
       type: "icon-add"
     }))), he && s.a.createElement(w.b, {
       onCancel: function () {
-        x(Object(v.uh)());
+        x(v.uh());
       },
       onOk: Se
     }), s.a.createElement("div", {
@@ -652,11 +652,11 @@
     })) : s.a.createElement("span", null, N({
       id: "deprecatedStorageDialogTips"
     })), s.a.createElement(m.d, {
-      className: p()(_.a.save, !1),
+      className: p()(_.a.save, false),
       type: "primary",
       onClick: Se
     }, N({
       id: "save"
-    }), !1)));
+    }), false)));
   });
 }).call(this, require("../795/625/index").setImmediate);

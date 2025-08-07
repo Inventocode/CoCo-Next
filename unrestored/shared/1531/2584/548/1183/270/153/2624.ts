@@ -9,7 +9,7 @@ function r(e) {
   }
   var i;
   var o = t.props[n];
-  for (i in o) if (void 0 === r[i]) {
+  for (i in o) if (undefined === r[i]) {
     r[i] = o[i];
   }
   return r;

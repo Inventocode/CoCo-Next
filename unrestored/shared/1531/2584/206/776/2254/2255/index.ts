@@ -10,23 +10,23 @@ var u = require("./1344").isCommentToken;
 var l = require("./2256/index");
 var f = require("../../965");
 var d = require("../../1343");
-var h = require("../../../../31/index");
+var h = require("lodash");
 function p(e, t, n, r) {
   if (function (e, t) {
     return e.range[0] <= t.range[0] && e.range[1] >= t.range[0] || t.range[0] <= e.range[0] && t.range[1] >= e.range[0];
   }(t, n)) {
-    return !1;
+    return false;
   }
   for (var i = t.range[1] <= n.range[0] ? [t, n] : [n, t], o = c(i, 2), a = o[0], s = o[1], u = e.getLastToken(a) || a, l = e.getFirstToken(s) || s, f = u; f !== l;) {
     var d = e.getTokenAfter(f, {
-      includeComments: !0
+      includeComments: true
     });
     if (f.range[1] !== d.range[0] || r && d !== l && "JSXText" === d.type && /[\t-\r \xA0\u1680\u2000-\u200A\u2028\u2029\u202F\u205F\u3000\uFEFF]/.test(d.value)) {
-      return !0;
+      return true;
     }
     f = d;
   }
-  return !1;
+  return false;
 }
 var _ = function (e) {
   a(n, e);
@@ -129,24 +129,24 @@ var _ = function (e) {
       } else {
         if (("BlockStatement" === e.type || "ClassBody" === e.type) && 0 === e.body.length || "ObjectExpression" === e.type && 0 === e.properties.length || "ArrayExpression" === e.type && 0 === e.elements.length || "SwitchStatement" === e.type && 0 === e.cases.length) {
           t.trailing = this.getTokens(e, {
-            includeComments: !0,
+            includeComments: true,
             filter: u
           });
         }
         for (var n = this.getTokenBefore(e, {
-          includeComments: !0
+          includeComments: true
         }); n && u(n) && !(e.parent && n.start < e.parent.start);) {
           t.leading.push(n);
           n = this.getTokenBefore(n, {
-            includeComments: !0
+            includeComments: true
           });
         }
         for (t.leading.reverse(), n = this.getTokenAfter(e, {
-          includeComments: !0
+          includeComments: true
         }); n && u(n) && !(e.parent && n.end > e.parent.end);) {
           t.trailing.push(n);
           n = this.getTokenAfter(n, {
-            includeComments: !0
+            includeComments: true
           });
         }
       }
@@ -160,7 +160,7 @@ var _ = function (e) {
       var n = this;
       var r = function (e) {
         var t = n.getTokenBefore(e, {
-          includeComments: !0
+          includeComments: true
         });
         return t && u(t) && "Block" === t.type && "*" === t.value.charAt(0) && e.loc.start.line - t.loc.end.line <= 1 ? t : null;
       };
@@ -210,12 +210,12 @@ var _ = function (e) {
   }, {
     key: "isSpaceBetween",
     value: function (e, t) {
-      return p(this, e, t, !1);
+      return p(this, e, t, false);
     }
   }, {
     key: "isSpaceBetweenTokens",
     value: function (e, t) {
-      return p(this, e, t, !0);
+      return p(this, e, t, true);
     }
   }, {
     key: "getLocFromIndex",

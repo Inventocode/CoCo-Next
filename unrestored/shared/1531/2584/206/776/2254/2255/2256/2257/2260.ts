@@ -21,10 +21,10 @@ module.exports = function (e) {
     value: function () {
       for (var e = this.predicate; o(a(n.prototype), "moveNext", this).call(this);) {
         if (e(this.current)) {
-          return !0;
+          return true;
         }
       }
-      return !1;
+      return false;
     }
   }]);
   return n;

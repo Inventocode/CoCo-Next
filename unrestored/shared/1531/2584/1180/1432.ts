@@ -1,12 +1,12 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.loop = exports.conditional = exports.parse = void 0;
+exports.loop = exports.conditional = exports.parse = undefined;
 exports.parse = function e(t, n) {
-  var r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-  var o = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : r;
+  var r = arguments.length > 2 && undefined !== arguments[2] ? arguments[2] : {};
+  var o = arguments.length > 3 && undefined !== arguments[3] ? arguments[3] : r;
   if (Array.isArray(n)) {
     n.forEach(function (n) {
       return e(t, n, r, o);

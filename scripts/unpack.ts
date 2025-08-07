@@ -78,8 +78,6 @@ export async function unpack(config: UnpackConfig): Promise<void> {
             continue
         }
         module.external = movedPath
-        module.path = movedPath.split("/")
-        module.isEntry = false
     }
     unminimize(modules)
     buildModulesDependency(modules)
@@ -259,6 +257,32 @@ function unminimize(modules: ModuleMap): void {
                         break
                 }
             },
+            StringLiteral(path: NodePath<t.StringLiteral>): void {
+                path.node.extra ??= {}
+                path.node.extra["raw"] = JSON.stringify(path.node.value)
+            },
+            CallExpression(path: NodePath<t.CallExpression>): void {
+                const callee: NodePath = path.get("callee")
+                if (!callee.isIdentifier({ name: "Object" })) {
+                    return
+                }
+                const { node, parentPath } = path
+                if (!parentPath.isCallExpression({ callee: node })) {
+                    return
+                }
+                path.replaceWith(node.arguments[0]!)
+            },
+            UnaryExpression(path: NodePath<t.UnaryExpression>): void {
+                const { operator, argument: expression, prefix } = path.node
+                if (!prefix) {
+                    return
+                }
+                if (operator == "!" && t.isNumericLiteral(expression)) {
+                    path.replaceWith(t.booleanLiteral(!expression.value))
+                } else if (operator == "void" && t.isLiteral(expression)) {
+                    path.replaceWith(t.identifier("undefined"))
+                }
+            },
             ReturnStatement(path: NodePath<t.ReturnStatement>): void {
                 const { argument } = path.node
                 if (!t.isSequenceExpression(argument)) {
@@ -268,6 +292,17 @@ function unminimize(modules: ModuleMap): void {
                 path.replaceWithMultiple([
                     ...expressions.slice(0, -1).map(t.expressionStatement),
                     t.returnStatement(expressions.slice(-1)[0])
+                ])
+            },
+            ThrowStatement(path: NodePath<t.ThrowStatement>): void {
+                const { argument } = path.node
+                if (!t.isSequenceExpression(argument)) {
+                    return
+                }
+                const { expressions } = argument
+                path.replaceWithMultiple([
+                    ...expressions.slice(0, -1).map(t.expressionStatement),
+                    t.throwStatement(expressions.slice(-1)[0]!)
                 ])
             },
             IfStatement(path: NodePath<t.IfStatement>): void {
@@ -337,10 +372,6 @@ function unminimize(modules: ModuleMap): void {
                     initPath.replaceWith(lastExpression)
                     path.parentPath.insertBefore(sequenceExpression.expressions.map(t.expressionStatement))
                 }
-            },
-            StringLiteral(path: NodePath<t.StringLiteral>): void {
-                path.node.extra ??= {}
-                path.node.extra["raw"] = JSON.stringify(path.node.value)
             }
         })
         bar.increment()
@@ -356,7 +387,7 @@ function buildModulesDependency(modules: ModuleMap): void {
     const bar = new cliProgress.SingleBar({}, cliProgress.Presets.shades_classic)
     bar.start(Object.keys(modules).length, 0)
     for (const module of Object.values(modules)) {
-        if (module.external != null) {
+        if (module.external != null && !module.external.startsWith(".")) {
             bar.increment()
             continue
         }
@@ -732,7 +763,7 @@ function setModulesPathByDependency(modules: ModuleMap): void {
     while (queue.length > 0) {
         const module = queue.dequeue()
         for (const [key, importedModule] of Object.entries(module.dependency)) {
-            if (importedModule.external != null || visited[key]) {
+            if ((importedModule.external != null && !importedModule.external.startsWith(".")) || visited[key]) {
                 continue
             }
             visited[key] = true
@@ -796,7 +827,7 @@ function shakeUnusedModule(modules: ModuleMap): void {
     const queue: Module[] = entryModules.slice()
     let module: Module | undefined = undefined
     while ((module = queue.shift()) != null) {
-        if (visited.has(module.key) || module.external != null) {
+        if (visited.has(module.key) || (module.external != null && !module.external.startsWith("."))) {
             continue
         }
         visited.add(module.key)
@@ -829,9 +860,6 @@ function transformModulesImport(modules: ModuleMap, config: UnpackConfig): void 
         traverse(module.AST, {
             // 静态导入
             VariableDeclaration(path: NodePath<t.VariableDeclaration>): void {
-                if (!(config.useESImport ?? true)) {
-                    return
-                }
                 if (!path.parentPath.isProgram() || path.node.declarations.length != 1) {
                     return
                 }
@@ -853,6 +881,9 @@ function transformModulesImport(modules: ModuleMap, config: UnpackConfig): void 
                         t.isIdentifier(init.node.callee.property) &&
                         init.node.callee.property.name == "n"
                     ) {
+                        if (!(config.useESImport ?? true)) {
+                            return
+                        }
                         isDefault = true
                     } else if (!(
                         t.isIdentifier(init.node.callee) &&
@@ -881,10 +912,17 @@ function transformModulesImport(modules: ModuleMap, config: UnpackConfig): void 
                             ))
                             defaultImportIdentifiers.push(localNameNodePath.node)
                         } else if (module.AST.program.sourceType == "module") {
-                            path.replaceWith(t.importDeclaration(
-                                [t.importNamespaceSpecifier(localNameNodePath.node)],
-                                t.stringLiteral(importPath)
-                            ))
+                            if (config.useESImport ?? true) {
+                                path.replaceWith(t.importDeclaration(
+                                    [t.importNamespaceSpecifier(localNameNodePath.node)],
+                                    t.stringLiteral(importPath)
+                                ))
+                            } else {
+                                path.replaceWith(t.tsImportEqualsDeclaration(
+                                    localNameNodePath.node,
+                                    t.tsExternalModuleReference(t.stringLiteral(importPath))
+                                ))
+                            }
                         } else {
                             path.replaceWith(
                                 t.variableDeclaration(
@@ -1381,7 +1419,7 @@ function getImportPath(context: Module, imported: Module): string {
         return imported.external
     }
     const contextPath: string[] = context.path.slice()
-    const importedPath: string[] = imported.path.slice()
+    const importedPath: string[] = imported.external?.split("/") ?? imported.path.slice()
     let last: string | undefined = undefined
     while (contextPath.length > 0 && importedPath.length > 0 && contextPath.shift() == (last = importedPath.shift())) {}
     let rootPath: string

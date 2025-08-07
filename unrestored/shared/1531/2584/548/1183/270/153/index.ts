@@ -1,8 +1,8 @@
 "use strict";
 
-var r = require("../../../../19");
-var i = require("../../../../54");
-var o = require("react");
+import r = require("../../../../19");
+import i = require("../../../../54");
+import o = require("react");
 var a = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -16,7 +16,7 @@ var a = function __importDefault(module) {
   return defaultExport;
 }(o);
 require("../../../../50/index");
-var s = require("../../../../16/687");
+import s = require("../../../../16/687");
 var c = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -29,19 +29,19 @@ var c = function __importDefault(module) {
   });
   return defaultExport;
 }(s);
-var u = require("../../701/2591");
-var l = require("./2624");
-var f = require("../../../../549/1186/682/2593");
+import u = require("../../701/2591");
+import l = require("./2624");
+import f = require("../../../../549/1186/682/2593");
 var d = function (e) {
-  var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+  var t = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : {};
   return function (n) {
     var o = t.defaultTheme;
     var s = t.withTheme;
-    var d = void 0 !== s && s;
+    var d = undefined !== s && s;
     var h = t.name;
-    var p = Object(i.a)(t, ["defaultTheme", "withTheme", "name"]);
+    var p = i.a(t, ["defaultTheme", "withTheme", "name"]);
     var _ = h;
-    var A = Object(u.a)(e, Object(r.a)({
+    var A = u.a(e, r.a({
       defaultTheme: o,
       Component: n,
       name: h || n.displayName,
@@ -51,13 +51,13 @@ var d = function (e) {
       e.classes;
       var s;
       var c = e.innerRef;
-      var u = Object(i.a)(e, ["classes", "innerRef"]);
-      var p = A(Object(r.a)({}, n.defaultProps, e));
+      var u = i.a(e, ["classes", "innerRef"]);
+      var p = A(r.a({}, n.defaultProps, e));
       var _ = u;
       if ("string" === typeof h || d) {
-        s = Object(f.a)() || o;
+        s = f.a() || o;
         if (h) {
-          _ = Object(l.a)({
+          _ = l.a({
             theme: s,
             name: h,
             props: u
@@ -67,7 +67,7 @@ var d = function (e) {
           _.theme = s;
         }
       }
-      return a.a.createElement(n, Object(r.a)({
+      return a.a.createElement(n, r.a({
         ref: c || t,
         classes: p
       }, _));
@@ -76,10 +76,10 @@ var d = function (e) {
     return g;
   };
 };
-var h = require("../../701/786/index");
+import h = require("../../701/786/index");
 var _a;
 _a = function (e, t) {
-  return d(e, Object(r.a)({
+  return d(e, r.a({
     defaultTheme: h.a
   }, t));
 };

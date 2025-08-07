@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.BlockDragger = void 0;
+exports.BlockDragger = undefined;
 var r = require("tslib");
 var i = require("inversify");
 var o = require("@kitten-team/gl-matrix");
@@ -33,7 +33,7 @@ var s = function (e) {
     return t;
   };
   t.prototype.update_cursor_during_block_drag = function (e) {
-    if (void 0 != this._workspace && void 0 != this._dragging_block) {
+    if (undefined != this._workspace && undefined != this._dragging_block) {
       if (this._dragging_block.is_deletable()) {
         this._would_delete_block = this._dragged_connection_manager.would_delete_block();
         this._dragging_block.set_delete_style(this._would_delete_block);
@@ -44,13 +44,13 @@ var s = function (e) {
     }
   };
   t.prototype.start_block_drag = function (t) {
-    if (void 0 == this._workspace || void 0 == this._dragging_block) {
+    if (undefined == this._workspace || undefined == this._dragging_block) {
       throw new Error("Block dragger has been disposed.");
     }
     this.redo_stack_before_drag = this._workspace.get_redo_stack().slice();
     this.undo_stack_before_drag = this._workspace.get_undo_stack().slice();
     if (!this.events.get_group()) {
-      this.events.set_group(!0);
+      this.events.set_group(true);
     }
     this.parent_before_drag = this._dragging_block.get_parent();
     if (this.parent_before_drag) {
@@ -66,25 +66,25 @@ var s = function (e) {
     return r;
   };
   t.prototype.end_block_drag = function (e, t) {
-    if (void 0 == this._workspace || void 0 == this._dragging_block) {
+    if (undefined == this._workspace || undefined == this._dragging_block) {
       throw new Error("Block dragger has been disposed.");
     }
     this.drag_block(e, t);
     this._drag_icon_data = [];
     this.block_animations.disconnect_ui_effect_stop(this._dragging_block);
-    this._dragging_block.set_mouse_through_style(!1);
+    this._dragging_block.set_mouse_through_style(false);
     var n = this._workspace.get_toolbox();
-    if (void 0 != n) {
+    if (undefined != n) {
       n.remove_delete_style();
     }
-    var r = void 0;
+    var r = undefined;
     if (this.events.is_enabled()) {
       var i = this._workspace.current_gesture_;
       r = this.end_drag_event_factory({
         block: this._dragging_block,
         is_outside: this._was_outside,
         mouse_position: o.vec2.fromValues(e.clientX, e.clientY),
-        is_from_flyout: (null === i || void 0 === i ? void 0 : i.is_start_from_flyout()) || !1,
+        is_from_flyout: (null === i || undefined === i ? undefined : i.is_start_from_flyout()) || false,
         redo_stack_before_drag: this.redo_stack_before_drag
       });
     }
@@ -94,7 +94,7 @@ var s = function (e) {
     this._dragging_block.bring_to_front();
     if (!this.maybe_delete_block()) {
       this._dragging_block.move_connections(a);
-      this._dragging_block.set_dragging(!1);
+      this._dragging_block.set_dragging(false);
       if (this.events.is_enabled()) {
         var c = this.move_event_factory({
           block: this._dragging_block
@@ -109,14 +109,14 @@ var s = function (e) {
     }
     this.redo_stack_before_drag = [];
     this.undo_stack_before_drag = [];
-    this.parent_before_drag = void 0;
+    this.parent_before_drag = undefined;
     var u = this._workspace;
     this.dispose();
-    if (!(null === u || void 0 === u)) {
-      u.set_resizes_enabled(!0);
+    if (!(null === u || undefined === u)) {
+      u.set_resizes_enabled(true);
     }
     this.events.fire(r);
-    this.events.set_group(!1);
+    this.events.set_group(false);
   };
   t.prototype.drag_related = function () {
     for (var e = 0; e < this._drag_icon_data.length; e++) {
@@ -130,8 +130,8 @@ var s = function (e) {
       this._dragged_connection_manager.dispose();
     }
   };
-  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.insertion_marker_manager)], t.prototype, "insertion_marker_manager", void 0);
-  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.dragged_connection_manager)], t.prototype, "dragged_connection_manager", void 0);
+  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.insertion_marker_manager)], t.prototype, "insertion_marker_manager", undefined);
+  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.dragged_connection_manager)], t.prototype, "dragged_connection_manager", undefined);
   return t = (0, r.__decorate)([(0, i.injectable)()], t);
 }(require("./2127/1317").ElementDragger);
 exports.BlockDragger = s;

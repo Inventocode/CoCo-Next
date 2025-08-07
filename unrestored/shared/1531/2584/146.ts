@@ -18,8 +18,8 @@ export { W as o };
 export { V as m };
 export { Y as n };
 export { q as j };
-var r = require("./6");
-var o = require("./1/index");
+import r = require("./6");
+import o = require("regenerator-runtime");
 var i = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -32,19 +32,19 @@ var i = function __importDefault(module) {
   });
   return defaultExport;
 }(o);
-var a = require("./7");
-var s = require("./28/index");
-var c = require("./41");
-var l = require("./59/index");
-var u = require("./48/87");
-var d = require("./48/119/index");
+import a = require("./7");
+import s = require("./28/index");
+import c = require("./41");
+import l = require("./59/index");
+import u = require("./48/87");
+import d = require("./48/119/index");
 var p = "".concat(l.a.serverHost, "/coconut");
-var f = Object(s.e)() ? "dev" : "prod";
+var f = s.e() ? "dev" : "prod";
 function h(e, t) {
   return m.apply(this, arguments);
 }
 function m() {
-  return (m = Object(a.a)(i.a.mark(function e(t, n) {
+  return (m = a.a(i.a.mark(function e(t, n) {
     var r;
     var o;
     var a;
@@ -84,7 +84,7 @@ function g(e, t) {
   return _.apply(this, arguments);
 }
 function _() {
-  return (_ = Object(a.a)(i.a.mark(function e(t, n) {
+  return (_ = a.a(i.a.mark(function e(t, n) {
     var r;
     var o;
     var a;
@@ -117,7 +117,7 @@ function v(e) {
   return b.apply(this, arguments);
 }
 function b() {
-  return (b = Object(a.a)(i.a.mark(function e(t) {
+  return (b = a.a(i.a.mark(function e(t) {
     var n;
     var r;
     var o;
@@ -150,7 +150,7 @@ function y() {
   return E.apply(this, arguments);
 }
 function E() {
-  return (E = Object(a.a)(i.a.mark(function e() {
+  return (E = a.a(i.a.mark(function e() {
     var t;
     var n;
     var r;
@@ -179,7 +179,7 @@ function O(e, t, n, r) {
   return w.apply(this, arguments);
 }
 function w() {
-  return (w = Object(a.a)(i.a.mark(function e(t, n, r, o) {
+  return (w = a.a(i.a.mark(function e(t, n, r, o) {
     var a;
     var s;
     var l;
@@ -214,7 +214,7 @@ function C(e, t, n, r, o) {
   return T.apply(this, arguments);
 }
 function T() {
-  return (T = Object(a.a)(i.a.mark(function e(t, n, r, o, a) {
+  return (T = a.a(i.a.mark(function e(t, n, r, o, a) {
     var s;
     var l;
     var u;
@@ -252,7 +252,7 @@ function S(e, t, n, r, o) {
   return I.apply(this, arguments);
 }
 function I() {
-  return (I = Object(a.a)(i.a.mark(function e(t, n, r, o, a) {
+  return (I = a.a(i.a.mark(function e(t, n, r, o, a) {
     var s;
     var l;
     var u;
@@ -292,7 +292,7 @@ function A(e, t, n, r) {
   return j.apply(this, arguments);
 }
 function j() {
-  return (j = Object(a.a)(i.a.mark(function e(t, n, r, o) {
+  return (j = a.a(i.a.mark(function e(t, n, r, o) {
     var a;
     var s;
     var l;
@@ -325,7 +325,7 @@ function N(e) {
   return R.apply(this, arguments);
 }
 function R() {
-  return (R = Object(a.a)(i.a.mark(function e(t) {
+  return (R = a.a(i.a.mark(function e(t) {
     var n;
     var r;
     return i.a.wrap(function (e) {
@@ -353,7 +353,7 @@ function k(e, t) {
   return x.apply(this, arguments);
 }
 function x() {
-  return (x = Object(a.a)(i.a.mark(function e(t, n) {
+  return (x = a.a(i.a.mark(function e(t, n) {
     var r;
     var o;
     return i.a.wrap(function (e) {
@@ -383,7 +383,7 @@ function D(e, t) {
   return M.apply(this, arguments);
 }
 function M() {
-  return (M = Object(a.a)(i.a.mark(function e(t, n) {
+  return (M = a.a(i.a.mark(function e(t, n) {
     var r;
     var o;
     return i.a.wrap(function (e) {
@@ -411,7 +411,7 @@ function L(e, t, n) {
   return P.apply(this, arguments);
 }
 function P() {
-  return (P = Object(a.a)(i.a.mark(function e(t, n, r) {
+  return (P = a.a(i.a.mark(function e(t, n, r) {
     var o;
     var a;
     var s;
@@ -442,7 +442,7 @@ function B(e, t) {
   return F.apply(this, arguments);
 }
 function F() {
-  return (F = Object(a.a)(i.a.mark(function e(t, n) {
+  return (F = a.a(i.a.mark(function e(t, n) {
     var o;
     var a;
     var s;
@@ -463,18 +463,18 @@ function F() {
               values: n
             };
             e.next = 5;
-            return Object(d.a)("".concat(JSON.stringify(a)));
+            return d.a("".concat(JSON.stringify(a)));
           case 5:
             s = e.sent;
             l = s.sign;
             h = s.timestamp;
             e.next = 10;
             return c.a.post(o, a, {
-              headers: Object(r.a)({
+              headers: r.a({
                 env: "dev" === f ? 0 : 1,
                 sign: l,
                 timestamp: h
-              }, Object(u.a)())
+              }, u.a())
             });
           case 10:
             if (m = e.sent, 200 !== (g = m.data).code) {
@@ -525,7 +525,7 @@ function G(e, t, n, r) {
   return U.apply(this, arguments);
 }
 function U() {
-  return (U = Object(a.a)(i.a.mark(function e(t, n, o, a) {
+  return (U = a.a(i.a.mark(function e(t, n, o, a) {
     var s;
     var l;
     var h;
@@ -552,7 +552,7 @@ function U() {
               }
             };
             e.next = 5;
-            return Object(d.a)("".concat(JSON.stringify(l)));
+            return d.a("".concat(JSON.stringify(l)));
           case 5:
             h = e.sent;
             m = h.sign;
@@ -567,11 +567,11 @@ function U() {
                 }]
               }
             }, {
-              headers: Object(r.a)({
+              headers: r.a({
                 env: "dev" === f ? 0 : 1,
                 sign: m,
                 timestamp: g
-              }, Object(u.a)())
+              }, u.a())
             });
           case 10:
             if (_ = e.sent, 200 !== (v = _.data).code) {
@@ -622,7 +622,7 @@ function W(e, t, n, r, o, i) {
   return H.apply(this, arguments);
 }
 function H() {
-  return (H = Object(a.a)(i.a.mark(function e(t, n, o, a, s, l) {
+  return (H = a.a(i.a.mark(function e(t, n, o, a, s, l) {
     var h;
     var m;
     var g;
@@ -653,7 +653,7 @@ function H() {
               }]
             };
             e.next = 5;
-            return Object(d.a)("".concat(JSON.stringify(m)));
+            return d.a("".concat(JSON.stringify(m)));
           case 5:
             g = e.sent;
             _ = g.sign;
@@ -672,11 +672,11 @@ function H() {
                 value: l
               }]
             }, {
-              headers: Object(r.a)({
+              headers: r.a({
                 env: "dev" === f ? 0 : 1,
                 sign: _,
                 timestamp: v
-              }, Object(u.a)())
+              }, u.a())
             });
           case 10:
             if (b = e.sent, 200 !== (y = b.data).code) {
@@ -727,7 +727,7 @@ function V(e, t, n, r) {
   return z.apply(this, arguments);
 }
 function z() {
-  return (z = Object(a.a)(i.a.mark(function e(t, n, o, a) {
+  return (z = a.a(i.a.mark(function e(t, n, o, a) {
     var s;
     var l;
     var h;
@@ -754,7 +754,7 @@ function z() {
               }
             };
             e.next = 5;
-            return Object(d.a)("".concat(JSON.stringify(l)));
+            return d.a("".concat(JSON.stringify(l)));
           case 5:
             h = e.sent;
             m = h.sign;
@@ -769,11 +769,11 @@ function z() {
                 }]
               }
             }, {
-              headers: Object(r.a)({
+              headers: r.a({
                 env: "dev" === f ? 0 : 1,
                 sign: m,
                 timestamp: g
-              }, Object(u.a)())
+              }, u.a())
             });
           case 10:
             if (_ = e.sent, 200 !== (v = _.data).code) {
@@ -824,7 +824,7 @@ function Y(e, t) {
   return K.apply(this, arguments);
 }
 function K() {
-  return (K = Object(a.a)(i.a.mark(function e(t, n) {
+  return (K = a.a(i.a.mark(function e(t, n) {
     var o;
     var a;
     var s;
@@ -841,7 +841,7 @@ function K() {
           case 0:
             o = "row" === n ? "RECORD" : "COLUMN";
             e.next = 3;
-            return Object(d.a)("id=".concat(t, "&type=").concat(o));
+            return d.a("id=".concat(t, "&type=").concat(o));
           case 3:
             a = e.sent;
             s = a.sign;
@@ -850,11 +850,11 @@ function K() {
             h = "".concat(p, "/clouddb/runtime/").concat(t, "/count?type=").concat(o);
             e.next = 10;
             return c.a.get(h, {
-              headers: Object(r.a)({
+              headers: r.a({
                 env: "dev" === f ? 0 : 1,
                 sign: s,
                 timestamp: l
-              }, Object(u.a)())
+              }, u.a())
             });
           case 10:
             if (m = e.sent, 200 !== (g = m.data).code) {
@@ -905,7 +905,7 @@ function q(e) {
   return X.apply(this, arguments);
 }
 function X() {
-  return (X = Object(a.a)(i.a.mark(function e(t) {
+  return (X = a.a(i.a.mark(function e(t) {
     var n;
     var r;
     var o;

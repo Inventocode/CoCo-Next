@@ -8,7 +8,7 @@ module.exports = function (e, t, n) {
   var u = t && n || 0;
   var l = t || [];
   var f = (e = e || {}).node || r;
-  var d = void 0 !== e.clockseq ? e.clockseq : i;
+  var d = undefined !== e.clockseq ? e.clockseq : i;
   if (null == f || null == d) {
     var h = o();
     if (null == f) {
@@ -18,13 +18,13 @@ module.exports = function (e, t, n) {
       d = i = 16383 & (h[6] << 8 | h[7]);
     }
   }
-  var p = void 0 !== e.msecs ? e.msecs : new Date().getTime();
-  var _ = void 0 !== e.nsecs ? e.nsecs : c + 1;
+  var p = undefined !== e.msecs ? e.msecs : new Date().getTime();
+  var _ = undefined !== e.nsecs ? e.nsecs : c + 1;
   var A = p - s + (_ - c) / 1e4;
-  if (A < 0 && void 0 === e.clockseq) {
+  if (A < 0 && undefined === e.clockseq) {
     d = d + 1 & 16383;
   }
-  if ((A < 0 || p > s) && void 0 === e.nsecs) {
+  if ((A < 0 || p > s) && undefined === e.nsecs) {
     _ = 0;
   }
   if (_ >= 1e4) {

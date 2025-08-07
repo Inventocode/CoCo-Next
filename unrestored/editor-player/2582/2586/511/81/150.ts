@@ -3,10 +3,10 @@
 var n = require("./117");
 var o = function () {
   function t(t, e, r, o, i, a) {
-    if (void 0 === r) {
+    if (undefined === r) {
       r = null == e ? 0 : 8 * e.length;
     }
-    if (void 0 === a) {
+    if (undefined === a) {
       a = n.a.currentTimeMillis();
     }
     this.text = t;
@@ -17,11 +17,11 @@ var o = function () {
     this.timestamp = a;
     this.text = t;
     this.rawBytes = e;
-    this.numBits = void 0 === r || null === r ? null === e || void 0 === e ? 0 : 8 * e.length : r;
+    this.numBits = undefined === r || null === r ? null === e || undefined === e ? 0 : 8 * e.length : r;
     this.resultPoints = o;
     this.format = i;
     this.resultMetadata = null;
-    this.timestamp = void 0 === a || null === a ? n.a.currentTimeMillis() : a;
+    this.timestamp = undefined === a || null === a ? n.a.currentTimeMillis() : a;
   }
   t.prototype.getText = function () {
     return this.text;

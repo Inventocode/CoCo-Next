@@ -93,7 +93,7 @@ var y = function (e) {
 };
 var E = function (e) {
   var t = e.project.screens.get(e.project.currentScreenIndex);
-  return null === t || void 0 === t ? void 0 : t.id;
+  return null === t || undefined === t ? undefined : t.id;
 };
 var O = function (e, t) {
   return e.project.screens.find(function (e) {

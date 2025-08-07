@@ -1,12 +1,12 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.JsonPythonGenerator = exports.load_json_js_generators_data = exports.load_json_js_generator_tell = exports.load_basic_blocks_json_js_generators = exports.JsonJavaScriptGenerator = void 0;
+exports.JsonPythonGenerator = exports.load_json_js_generators_data = exports.load_json_js_generator_tell = exports.load_basic_blocks_json_js_generators = exports.JsonJavaScriptGenerator = undefined;
 var r = require("./2180");
 Object.defineProperty(exports, "JsonJavaScriptGenerator", {
-  enumerable: !0,
+  enumerable: true,
   get: function () {
     return r.JsonJavaScriptGenerator;
   }
@@ -29,21 +29,21 @@ exports.load_basic_blocks_json_js_generators = function (e) {
 };
 var f = require("./1327");
 Object.defineProperty(exports, "load_json_js_generator_tell", {
-  enumerable: !0,
+  enumerable: true,
   get: function () {
     return f.load_json_js_generator_tell;
   }
 });
 var d = require("./2187");
 Object.defineProperty(exports, "load_json_js_generators_data", {
-  enumerable: !0,
+  enumerable: true,
   get: function () {
     return d.load_json_js_generators_data;
   }
 });
 var h = require("./2188/index");
 Object.defineProperty(exports, "JsonPythonGenerator", {
-  enumerable: !0,
+  enumerable: true,
   get: function () {
     return h.JsonPythonGenerator;
   }

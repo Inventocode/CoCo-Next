@@ -3,12 +3,12 @@
 export { l as c };
 export { d as b };
 export { p as a };
-var r = require("../47");
-var o = require("../5");
-var i = require("../9");
-var a = require("../97");
-var s = require("../77");
-var c = require("../131");
+import r = require("../47");
+import o = require("../5");
+import i = require("../9");
+import a = require("../97");
+import s = require("../77");
+import c = require("../131");
 function l(e, t) {
   for (var n in e) {
     var r = e[n];
@@ -20,7 +20,7 @@ function l(e, t) {
         if (r.type === o.w) {
           var c = r.attributes.sizeType;
           if (c) {
-            var l = Object(i.ob)(c);
+            var l = i.ob(c);
             r.size.height = l.height;
             r.attributes.fontSize = l.fontSize;
           }
@@ -141,7 +141,7 @@ function p(e) {
 function f(e, t, n) {
   var o;
   var i = {};
-  var a = Object(r.a)(e);
+  var a = r.a(e);
   try {
     for (a.s(); !(o = a.n()).done;) {
       var s = o.value;
@@ -172,7 +172,7 @@ function h(e) {
   return t;
 }
 function m() {
-  var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+  var e = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : {};
   var t = [];
   for (var n in e) t.push(e[n]);
   return t;
@@ -197,7 +197,7 @@ function _(e, t) {
   return n;
 }
 function v() {
-  var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+  var e = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : {};
   var t = [];
   var n = [];
   var r = [];

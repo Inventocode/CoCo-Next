@@ -5,10 +5,10 @@ export { c as b };
 export { l as e };
 export { u as d };
 export { d as a };
-var r = require("../11");
-var o = require("../23");
-var i = require("../38/index");
-var a = require("../79");
+import r = require("../11");
+import o = require("../../../../../src/shared/language");
+import i = require("../38/index");
+import a = require("../../../../../src/shared/widget/custom/type");
 function s(e) {
   return "".concat(e, ".__widgetName");
 }
@@ -26,9 +26,9 @@ function l(e) {
     var i = c(t, r);
     n[i] = o;
   });
-  var l = Object(i.b)();
-  var u = Object(r.a)({}, l, n);
-  Object(o.a)(u);
+  var l = i.b();
+  var u = r.a({}, l, n);
+  o.a(u);
 }
 function u(e, t) {
   for (var n in t) {
@@ -40,14 +40,14 @@ function u(e, t) {
     }
     t[n] = i;
   }
-  Object(o.a)(t);
+  o.a(t);
 }
 function d(e, t, n) {
-  if (Object(a.d)(e)) {
+  if (a.d(e)) {
     return t;
   }
   var r = "".concat(e, ".").concat(t);
-  var s = Object(i.b)();
-  return Object(o.c)(s, r, n);
+  var s = i.b();
+  return o.c(s, r, n);
 }
 export default d;

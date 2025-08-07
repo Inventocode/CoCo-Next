@@ -1,5 +1,5 @@
 module.exports = function (e) {
   return function (t) {
-    return null == t ? void 0 : t[e];
+    return null == t ? undefined : t[e];
   };
 };

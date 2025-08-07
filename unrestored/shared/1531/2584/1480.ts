@@ -1,8 +1,8 @@
 "use strict";
 
 export { i as a };
-var r = require("./33/index");
-var o = require("react");
+import r = require("./33/index");
+import o = require("react");
 function i(e, t) {
   var n = t || {};
   var i = n.defaultValue;
@@ -10,21 +10,21 @@ function i(e, t) {
   var s = n.onChange;
   var c = n.postState;
   var l = o.useState(function () {
-    return void 0 !== a ? a : void 0 !== i ? "function" === typeof i ? i() : i : "function" === typeof e ? e() : e;
+    return undefined !== a ? a : undefined !== i ? "function" === typeof i ? i() : i : "function" === typeof e ? e() : e;
   });
-  var u = Object(r.a)(l, 2);
+  var u = r.a(l, 2);
   var d = u[0];
   var p = u[1];
-  var f = void 0 !== a ? a : d;
+  var f = undefined !== a ? a : d;
   if (c) {
     f = c(f);
   }
-  var h = o.useRef(!0);
+  var h = o.useRef(true);
   o.useEffect(function () {
     if (h.current) {
-      h.current = !1;
+      h.current = false;
     } else {
-      if (void 0 === a) {
+      if (undefined === a) {
         p(a);
       }
     }

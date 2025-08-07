@@ -3,7 +3,7 @@ var o = Math.log;
 var i = Math.LN2;
 r({
   target: "Math",
-  stat: !0
+  stat: true
 }, {
   log2: function (e) {
     return o(e) / i;

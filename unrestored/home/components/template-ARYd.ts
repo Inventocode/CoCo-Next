@@ -191,7 +191,7 @@ var SignInDialogView = function (_React$Component) {
     value: function fetchUserInfo() {
       var closeDialogFirst = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : true;
       var loginMethod = arguments[1];
-      return __awaiter(this, void 0, void 0, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.mark(function _callee() {
+      return __awaiter(this, undefined, undefined, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.mark(function _callee() {
         var auth;
         var response;
         var data;

@@ -12,11 +12,11 @@
         }
         var o = t[r] = {
           i: r,
-          l: !1,
+          l: false,
           exports: {}
         };
         e[r].call(o.exports, o, o.exports, n);
-        o.l = !0;
+        o.l = true;
         return o.exports;
       }
       n.m = e;
@@ -24,8 +24,8 @@
       n.d = function (e, t, r) {
         if (!n.o(e, t)) {
           Object.defineProperty(e, t, {
-            configurable: !1,
-            enumerable: !0,
+            configurable: false,
+            enumerable: true,
             get: r
           });
         }
@@ -48,7 +48,7 @@
       "use strict";
 
       Object.defineProperty(t, "__esModule", {
-        value: !0
+        value: true
       });
       var r = n(17);
       var o = n(18);
@@ -107,7 +107,7 @@
         };
       }();
       Object.defineProperty(t, "__esModule", {
-        value: !0
+        value: true
       });
       var o = function (e) {
         function t(t) {
@@ -128,7 +128,7 @@
       var l = {};
       function u(e, t) {
         var n;
-        if (void 0 === t) {
+        if (undefined === t) {
           t = i.ANY;
         }
         if ("string" === typeof e) {
@@ -176,8 +176,8 @@
         return new r(i, t);
       };
       t.find = function e(n, r) {
-        if (void 0 === r) {
-          r = !1;
+        if (undefined === r) {
+          r = false;
         }
         return null == n ? null : null != n[t.DATA_KEY] ? n[t.DATA_KEY].blot : r ? e(n.parentNode, r) : null;
       };
@@ -259,7 +259,7 @@
       c.prototype.push = function (e) {
         var t = this.ops.length;
         var n = this.ops[t - 1];
-        e = i(!0, {}, e);
+        e = i(true, {}, e);
         if ("object" === typeof n) {
           if ("number" === typeof e.delete && "number" === typeof n.delete) {
             this.ops[t - 1] = {
@@ -465,7 +465,7 @@
           } else if (l > 0) {
             r.push(n.next(l));
           } else {
-            if (!1 === e(r, n.next(1).attributes || {}, o)) {
+            if (false === e(r, n.next(1).attributes || {}, o)) {
               return;
             }
             o += 1;
@@ -534,13 +534,13 @@
       };
       var s = function (e) {
         if (!e || "[object Object]" !== r.call(e)) {
-          return !1;
+          return false;
         }
         var t;
         var o = n.call(e, "constructor");
         var i = e.constructor && e.constructor.prototype && n.call(e.constructor.prototype, "isPrototypeOf");
         if (e.constructor && !o && !i) {
-          return !1;
+          return false;
         }
         for (t in e);
         return "undefined" === typeof t || n.call(e, t);
@@ -548,10 +548,10 @@
       var c = function (e, t) {
         if (o && "__proto__" === t.name) {
           o(e, t.name, {
-            enumerable: !0,
-            configurable: !0,
+            enumerable: true,
+            configurable: true,
             value: t.newValue,
-            writable: !0
+            writable: true
           });
         } else {
           e[t.name] = t.newValue;
@@ -578,7 +578,7 @@
         var d = arguments[0];
         var p = 1;
         var f = arguments.length;
-        var h = !1;
+        var h = false;
         for ("boolean" === typeof d && (h = d, d = arguments[1] || {}, p = 2), (null == d || "object" !== typeof d && "function" !== typeof d) && (d = {}); p < f; ++p) {
           if (null != (t = arguments[p])) {
             for (n in t) {
@@ -586,7 +586,7 @@
               if (d !== (o = l(t, n))) {
                 if (h && o && (s(o) || (i = a(o)))) {
                   if (i) {
-                    i = !1;
+                    i = false;
                     u = r && a(r) ? r : [];
                   } else {
                     u = r && s(r) ? r : {};
@@ -613,17 +613,17 @@
       "use strict";
 
       Object.defineProperty(t, "__esModule", {
-        value: !0
+        value: true
       });
-      t.default = t.BlockEmbed = t.bubbleFormats = void 0;
+      t.default = t.BlockEmbed = t.bubbleFormats = undefined;
       var r = function () {
         function e(e, t) {
           for (var n = 0; n < t.length; n++) {
             var r = t[n];
-            r.enumerable = r.enumerable || !1;
-            r.configurable = !0;
+            r.enumerable = r.enumerable || false;
+            r.configurable = true;
             if ("value" in r) {
-              r.writable = !0;
+              r.writable = true;
             }
             Object.defineProperty(e, r.key, r);
           }
@@ -643,15 +643,15 @@
           t = Function.prototype;
         }
         var o = Object.getOwnPropertyDescriptor(t, n);
-        if (void 0 === o) {
+        if (undefined === o) {
           var i = Object.getPrototypeOf(t);
-          return null === i ? void 0 : e(i, n, r);
+          return null === i ? undefined : e(i, n, r);
         }
         if ("value" in o) {
           return o.value;
         }
         var a = o.get;
-        return void 0 !== a ? a.call(r) : void 0;
+        return undefined !== a ? a.call(r) : undefined;
       };
       var i = d(n(3));
       var a = d(n(2));
@@ -682,9 +682,9 @@
         e.prototype = Object.create(t && t.prototype, {
           constructor: {
             value: e,
-            enumerable: !1,
-            writable: !0,
-            configurable: !0
+            enumerable: false,
+            writable: true,
+            configurable: true
           }
         });
         if (t) {
@@ -797,7 +797,7 @@
               }
               var s = this;
               i.reduce(function (e, t) {
-                (s = s.split(e, !0)).insertAt(0, t);
+                (s = s.split(e, true)).insertAt(0, t);
                 return t.length;
               }, e + a.length);
             }
@@ -835,7 +835,7 @@
         }, {
           key: "path",
           value: function (e) {
-            return o(t.prototype.__proto__ || Object.getPrototypeOf(t.prototype), "path", this).call(this, e, !0);
+            return o(t.prototype.__proto__ || Object.getPrototypeOf(t.prototype), "path", this).call(this, e, true);
           }
         }, {
           key: "removeChild",
@@ -846,7 +846,7 @@
         }, {
           key: "split",
           value: function (e) {
-            var n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+            var n = arguments.length > 1 && undefined !== arguments[1] && arguments[1];
             if (n && (0 === e || e >= this.length() - 1)) {
               var r = this.clone();
               return 0 === e ? (this.parent.insertBefore(r, this), this) : (this.parent.insertBefore(r, this.next), r);
@@ -859,7 +859,7 @@
         return t;
       }(s.default.Block);
       function _(e) {
-        var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        var t = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : {};
         return null == e ? t : ("function" === typeof e.formats && (t = (0, i.default)(t, e.formats())), null == e.parent || "scroll" == e.parent.blotName || e.parent.statics.scope !== e.statics.scope ? t : _(e.parent, t));
       }
       g.blotName = "block";
@@ -873,9 +873,9 @@
       "use strict";
 
       Object.defineProperty(t, "__esModule", {
-        value: !0
+        value: true
       });
-      t.default = t.overload = t.expandConfig = void 0;
+      t.default = t.overload = t.expandConfig = undefined;
       var r = "function" === typeof Symbol && "symbol" === typeof Symbol.iterator ? function (e) {
         return typeof e;
       } : function (e) {
@@ -888,15 +888,15 @@
         if (Symbol.iterator in Object(e)) {
           return function (e, t) {
             var n = [];
-            var r = !0;
-            var o = !1;
-            var i = void 0;
+            var r = true;
+            var o = false;
+            var i = undefined;
             try {
-              for (var a, s = e[Symbol.iterator](); !(r = (a = s.next()).done) && (n.push(a.value), !t || n.length !== t); r = !0) {
+              for (var a, s = e[Symbol.iterator](); !(r = (a = s.next()).done) && (n.push(a.value), !t || n.length !== t); r = true) {
                 ;
               }
             } catch (c) {
-              o = !0;
+              o = true;
               i = c;
             } finally {
               try {
@@ -918,10 +918,10 @@
         function e(e, t) {
           for (var n = 0; n < t.length; n++) {
             var r = t[n];
-            r.enumerable = r.enumerable || !1;
-            r.configurable = !0;
+            r.enumerable = r.enumerable || false;
+            r.configurable = true;
             if ("value" in r) {
-              r.writable = !0;
+              r.writable = true;
             }
             Object.defineProperty(e, r.key, r);
           }
@@ -956,9 +956,9 @@
         if (t in e) {
           Object.defineProperty(e, t, {
             value: n,
-            enumerable: !0,
-            configurable: !0,
-            writable: !0
+            enumerable: true,
+            configurable: true,
+            writable: true
           });
         } else {
           e[t] = n;
@@ -974,7 +974,7 @@
       var y = function () {
         function e(t) {
           var n = this;
-          var r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+          var r = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : {};
           v(this, e);
           this.options = E(t, r);
           this.container = this.options.container;
@@ -990,7 +990,7 @@
           this.container.__quill = this;
           this.root = this.addContainer("ql-editor");
           this.root.classList.add("ql-blank");
-          this.root.setAttribute("data-gramm", !1);
+          this.root.setAttribute("data-gramm", false);
           this.scrollingContainer = this.options.scrollingContainer || this.root;
           this.emitter = new c.default();
           this.scroll = u.default.create(this.root, {
@@ -1011,7 +1011,7 @@
           });
           this.emitter.on(c.default.events.SCROLL_UPDATE, function (e, t) {
             var r = n.selection.lastRange;
-            var o = r && 0 === r.length ? r.index : void 0;
+            var o = r && 0 === r.length ? r.index : undefined;
             O.call(n, function () {
               return n.editor.update(null, t, o);
             }, e);
@@ -1029,7 +1029,7 @@
         i(e, null, [{
           key: "debug",
           value: function (e) {
-            if (!0 === e) {
+            if (true === e) {
               e = "log";
             }
             h.default.level(e);
@@ -1051,7 +1051,7 @@
           key: "register",
           value: function (e, t) {
             var n = this;
-            var r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+            var r = arguments.length > 2 && undefined !== arguments[2] && arguments[2];
             if ("string" !== typeof e) {
               var o = e.attrName || e.blotName;
               if ("string" === typeof o) {
@@ -1079,7 +1079,7 @@
         i(e, [{
           key: "addContainer",
           value: function (e) {
-            var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+            var t = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : null;
             if ("string" === typeof e) {
               var n = e;
               (e = document.createElement("div")).classList.add(n);
@@ -1108,12 +1108,12 @@
         }, {
           key: "disable",
           value: function () {
-            this.enable(!1);
+            this.enable(false);
           }
         }, {
           key: "enable",
           value: function () {
-            var e = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
+            var e = !(arguments.length > 0 && undefined !== arguments[0]) || arguments[0];
             this.scroll.enable(e);
             this.container.classList.toggle("ql-disabled", !e);
           }
@@ -1129,9 +1129,9 @@
           key: "format",
           value: function (e, t) {
             var n = this;
-            var r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : c.default.sources.API;
+            var r = arguments.length > 2 && undefined !== arguments[2] ? arguments[2] : c.default.sources.API;
             return O.call(this, function () {
-              var r = n.getSelection(!0);
+              var r = n.getSelection(true);
               var o = new a.default();
               if (null == r) {
                 return o;
@@ -1182,8 +1182,8 @@
         }, {
           key: "getBounds",
           value: function (e) {
-            var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-            var n = void 0;
+            var t = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : 0;
+            var n = undefined;
             n = "number" === typeof e ? this.selection.getBounds(e, t) : this.selection.getBounds(e.index, e.length);
             var r = this.container.getBoundingClientRect();
             return {
@@ -1198,8 +1198,8 @@
         }, {
           key: "getContents",
           value: function () {
-            var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
-            var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.getLength() - e;
+            var e = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : 0;
+            var t = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : this.getLength() - e;
             var n = w(e, t);
             var r = o(n, 2);
             e = r[0];
@@ -1209,8 +1209,8 @@
         }, {
           key: "getFormat",
           value: function () {
-            var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.getSelection(!0);
-            var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+            var e = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : this.getSelection(true);
+            var t = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : 0;
             return "number" === typeof e ? this.editor.getFormat(e, t) : this.editor.getFormat(e.index, e.length);
           }
         }, {
@@ -1236,8 +1236,8 @@
         }, {
           key: "getLines",
           value: function () {
-            var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
-            var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Number.MAX_VALUE;
+            var e = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : 0;
+            var t = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : Number.MAX_VALUE;
             return "number" !== typeof e ? this.scroll.lines(e.index, e.length) : this.scroll.lines(e, t);
           }
         }, {
@@ -1248,7 +1248,7 @@
         }, {
           key: "getSelection",
           value: function () {
-            var e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+            var e = arguments.length > 0 && undefined !== arguments[0] && arguments[0];
             if (e) {
               this.focus();
             }
@@ -1258,8 +1258,8 @@
         }, {
           key: "getText",
           value: function () {
-            var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
-            var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.getLength() - e;
+            var e = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : 0;
+            var t = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : this.getLength() - e;
             var n = w(e, t);
             var r = o(n, 2);
             e = r[0];
@@ -1275,7 +1275,7 @@
           key: "insertEmbed",
           value: function (t, n, r) {
             var o = this;
-            var i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : e.sources.API;
+            var i = arguments.length > 3 && undefined !== arguments[3] ? arguments[3] : e.sources.API;
             return O.call(this, function () {
               return o.editor.insertEmbed(t, n, r);
             }, i, t);
@@ -1341,7 +1341,7 @@
           key: "setContents",
           value: function (e) {
             var t = this;
-            var n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c.default.sources.API;
+            var n = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : c.default.sources.API;
             return O.call(this, function () {
               e = new a.default(e);
               var n = t.getLength();
@@ -1375,14 +1375,14 @@
         }, {
           key: "setText",
           value: function (e) {
-            var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c.default.sources.API;
+            var t = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : c.default.sources.API;
             var n = new a.default().insert(e);
             return this.setContents(n, t);
           }
         }, {
           key: "update",
           value: function () {
-            var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : c.default.sources.USER;
+            var e = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : c.default.sources.USER;
             var t = this.scroll.update(e);
             this.selection.update(e);
             return t;
@@ -1391,22 +1391,22 @@
           key: "updateContents",
           value: function (e) {
             var t = this;
-            var n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c.default.sources.API;
+            var n = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : c.default.sources.API;
             return O.call(this, function () {
               e = new a.default(e);
               return t.editor.applyDelta(e, n);
-            }, n, !0);
+            }, n, true);
           }
         }]);
         return e;
       }();
       function E(e, t) {
-        if ((t = (0, f.default)(!0, {
+        if ((t = (0, f.default)(true, {
           container: e,
           modules: {
-            clipboard: !0,
-            keyboard: !0,
-            history: !0
+            clipboard: true,
+            keyboard: true,
+            history: true
           }
         }, t)).theme && t.theme !== y.DEFAULTS.theme) {
           t.theme = y.import("themes/" + t.theme);
@@ -1416,11 +1416,11 @@
         } else {
           t.theme = m.default;
         }
-        var n = (0, f.default)(!0, {}, t.theme.DEFAULTS);
+        var n = (0, f.default)(true, {}, t.theme.DEFAULTS);
         [n, t].forEach(function (e) {
           e.modules = e.modules || {};
           Object.keys(e.modules).forEach(function (t) {
-            if (!0 === e.modules[t]) {
+            if (true === e.modules[t]) {
               e.modules[t] = {};
             }
           });
@@ -1439,7 +1439,7 @@
             container: t.modules.toolbar
           };
         }
-        t = (0, f.default)(!0, {}, y.DEFAULTS, {
+        t = (0, f.default)(true, {}, y.DEFAULTS, {
           modules: r
         }, n, t);
         ["bounds", "container", "scrollingContainer"].forEach(function (e) {
@@ -1463,7 +1463,7 @@
         var i = this.editor.delta;
         var s = e();
         if (null != o) {
-          if (!0 === n) {
+          if (true === n) {
             n = o.index;
           }
           if (null == r) {
@@ -1525,8 +1525,8 @@
         if (null == e) {
           return null;
         }
-        var i = void 0;
-        var s = void 0;
+        var i = undefined;
+        var s = undefined;
         if (t instanceof a.default) {
           var l = [e.index, e.index + e.length].map(function (e) {
             return t.transformPosition(e, r !== c.default.sources.USER);
@@ -1549,9 +1549,9 @@
         formats: null,
         modules: {},
         placeholder: "",
-        readOnly: !1,
+        readOnly: false,
         scrollingContainer: null,
-        strict: !0,
+        strict: true,
         theme: "default"
       };
       y.events = c.default.events;
@@ -1570,16 +1570,16 @@
       "use strict";
 
       Object.defineProperty(t, "__esModule", {
-        value: !0
+        value: true
       });
       var r = function () {
         function e(e, t) {
           for (var n = 0; n < t.length; n++) {
             var r = t[n];
-            r.enumerable = r.enumerable || !1;
-            r.configurable = !0;
+            r.enumerable = r.enumerable || false;
+            r.configurable = true;
             if ("value" in r) {
-              r.writable = !0;
+              r.writable = true;
             }
             Object.defineProperty(e, r.key, r);
           }
@@ -1599,15 +1599,15 @@
           t = Function.prototype;
         }
         var o = Object.getOwnPropertyDescriptor(t, n);
-        if (void 0 === o) {
+        if (undefined === o) {
           var i = Object.getPrototypeOf(t);
-          return null === i ? void 0 : e(i, n, r);
+          return null === i ? undefined : e(i, n, r);
         }
         if ("value" in o) {
           return o.value;
         }
         var a = o.get;
-        return void 0 !== a ? a.call(r) : void 0;
+        return undefined !== a ? a.call(r) : undefined;
       };
       var i = s(n(7));
       var a = s(n(0));
@@ -1639,9 +1639,9 @@
           e.prototype = Object.create(t && t.prototype, {
             constructor: {
               value: e,
-              enumerable: !1,
-              writable: !0,
-              configurable: !0
+              enumerable: false,
+              writable: true,
+              configurable: true
             }
           });
           if (t) {
@@ -1691,7 +1691,7 @@
       "use strict";
 
       Object.defineProperty(t, "__esModule", {
-        value: !0
+        value: true
       });
       var r;
       var o = n(0);
@@ -1718,9 +1718,9 @@
           e.prototype = Object.create(t && t.prototype, {
             constructor: {
               value: e,
-              enumerable: !1,
-              writable: !0,
-              configurable: !0
+              enumerable: false,
+              writable: true,
+              configurable: true
             }
           });
           if (t) {
@@ -1740,16 +1740,16 @@
       "use strict";
 
       Object.defineProperty(t, "__esModule", {
-        value: !0
+        value: true
       });
       var r = function () {
         function e(e, t) {
           for (var n = 0; n < t.length; n++) {
             var r = t[n];
-            r.enumerable = r.enumerable || !1;
-            r.configurable = !0;
+            r.enumerable = r.enumerable || false;
+            r.configurable = true;
             if ("value" in r) {
-              r.writable = !0;
+              r.writable = true;
             }
             Object.defineProperty(e, r.key, r);
           }
@@ -1769,15 +1769,15 @@
           t = Function.prototype;
         }
         var o = Object.getOwnPropertyDescriptor(t, n);
-        if (void 0 === o) {
+        if (undefined === o) {
           var i = Object.getPrototypeOf(t);
-          return null === i ? void 0 : e(i, n, r);
+          return null === i ? undefined : e(i, n, r);
         }
         if ("value" in o) {
           return o.value;
         }
         var a = o.get;
-        return void 0 !== a ? a.call(r) : void 0;
+        return undefined !== a ? a.call(r) : undefined;
       };
       var i = a(n(54));
       function a(e) {
@@ -1823,9 +1823,9 @@
           e.prototype = Object.create(t && t.prototype, {
             constructor: {
               value: e,
-              enumerable: !1,
-              writable: !0,
-              configurable: !0
+              enumerable: false,
+              writable: true,
+              configurable: true
             }
           });
           if (t) {
@@ -1852,7 +1852,7 @@
               var r = t.node;
               var o = t.handler;
               if (e.target === r || r.contains(e.target)) {
-                o.apply(void 0, [e].concat(n));
+                o.apply(undefined, [e].concat(n));
               }
             });
           }
@@ -1893,10 +1893,10 @@
         }
       }
       Object.defineProperty(t, "__esModule", {
-        value: !0
+        value: true
       });
       var o = function e(t) {
-        var n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        var n = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : {};
         r(this, e);
         this.quill = t;
         this.options = n;
@@ -1907,7 +1907,7 @@
       "use strict";
 
       Object.defineProperty(t, "__esModule", {
-        value: !0
+        value: true
       });
       var r = ["error", "warn", "log", "info"];
       var o = "warn";
@@ -1941,53 +1941,53 @@
           var l;
           var u;
           if (s(e) || s(t)) {
-            return !1;
+            return false;
           }
           if (e.prototype !== t.prototype) {
-            return !1;
+            return false;
           }
           if (i(e)) {
             return !!i(t) && (e = r.call(e), t = r.call(t), a(e, t, n));
           }
           if (c(e)) {
             if (!c(t)) {
-              return !1;
+              return false;
             }
             if (e.length !== t.length) {
-              return !1;
+              return false;
             }
             for (l = 0; l < e.length; l++) {
               if (e[l] !== t[l]) {
-                return !1;
+                return false;
               }
             }
-            return !0;
+            return true;
           }
           try {
             var d = o(e);
             var p = o(t);
           } catch (f) {
-            return !1;
+            return false;
           }
           if (d.length != p.length) {
-            return !1;
+            return false;
           }
           for (d.sort(), p.sort(), l = d.length - 1; l >= 0; l--) {
             if (d[l] != p[l]) {
-              return !1;
+              return false;
             }
           }
           for (l = d.length - 1; l >= 0; l--) {
             u = d[l];
             if (!a(e[u], t[u], n)) {
-              return !1;
+              return false;
             }
           }
           return typeof e === typeof t;
         }(e, t, n));
       };
       function s(e) {
-        return null === e || void 0 === e;
+        return null === e || undefined === e;
       }
       function c(e) {
         return !(!e || "object" !== typeof e || "number" !== typeof e.length) && "function" === typeof e.copy && "function" === typeof e.slice && !(e.length > 0 && "number" !== typeof e[0]);
@@ -1996,12 +1996,12 @@
       "use strict";
 
       Object.defineProperty(t, "__esModule", {
-        value: !0
+        value: true
       });
       var r = n(1);
       var o = function () {
         function e(e, t, n) {
-          if (void 0 === n) {
+          if (undefined === n) {
             n = {};
           }
           this.attrName = e;
@@ -2022,7 +2022,7 @@
           });
         };
         e.prototype.add = function (e, t) {
-          return !!this.canAdd(e, t) && (e.setAttribute(this.keyName, t), !0);
+          return !!this.canAdd(e, t) && (e.setAttribute(this.keyName, t), true);
         };
         e.prototype.canAdd = function (e, t) {
           return null != r.query(e, r.Scope.BLOT & (this.scope | r.Scope.TYPE)) && (null == this.whitelist || ("string" === typeof t ? this.whitelist.indexOf(t.replace(/["']/g, "")) > -1 : this.whitelist.indexOf(t) > -1));
@@ -2041,9 +2041,9 @@
       "use strict";
 
       Object.defineProperty(t, "__esModule", {
-        value: !0
+        value: true
       });
-      t.default = t.Code = void 0;
+      t.default = t.Code = undefined;
       var r = function (e, t) {
         if (Array.isArray(e)) {
           return e;
@@ -2051,15 +2051,15 @@
         if (Symbol.iterator in Object(e)) {
           return function (e, t) {
             var n = [];
-            var r = !0;
-            var o = !1;
-            var i = void 0;
+            var r = true;
+            var o = false;
+            var i = undefined;
             try {
-              for (var a, s = e[Symbol.iterator](); !(r = (a = s.next()).done) && (n.push(a.value), !t || n.length !== t); r = !0) {
+              for (var a, s = e[Symbol.iterator](); !(r = (a = s.next()).done) && (n.push(a.value), !t || n.length !== t); r = true) {
                 ;
               }
             } catch (c) {
-              o = !0;
+              o = true;
               i = c;
             } finally {
               try {
@@ -2081,10 +2081,10 @@
         function e(e, t) {
           for (var n = 0; n < t.length; n++) {
             var r = t[n];
-            r.enumerable = r.enumerable || !1;
-            r.configurable = !0;
+            r.enumerable = r.enumerable || false;
+            r.configurable = true;
             if ("value" in r) {
-              r.writable = !0;
+              r.writable = true;
             }
             Object.defineProperty(e, r.key, r);
           }
@@ -2104,15 +2104,15 @@
           t = Function.prototype;
         }
         var o = Object.getOwnPropertyDescriptor(t, n);
-        if (void 0 === o) {
+        if (undefined === o) {
           var i = Object.getPrototypeOf(t);
-          return null === i ? void 0 : e(i, n, r);
+          return null === i ? undefined : e(i, n, r);
         }
         if ("value" in o) {
           return o.value;
         }
         var a = o.get;
-        return void 0 !== a ? a.call(r) : void 0;
+        return undefined !== a ? a.call(r) : undefined;
       };
       var a = d(n(2));
       var s = d(n(0));
@@ -2142,9 +2142,9 @@
         e.prototype = Object.create(t && t.prototype, {
           constructor: {
             value: e,
-            enumerable: !1,
-            writable: !0,
-            configurable: !0
+            enumerable: false,
+            writable: true,
+            configurable: true
           }
         });
         if (t) {
@@ -2201,7 +2201,7 @@
             if (0 !== n && null != s.default.query(r, s.default.Scope.BLOCK) && (r !== this.statics.blotName || o !== this.statics.formats(this.domNode))) {
               var i = this.newlineIndex(e);
               if (!(i < 0 || i >= e + n)) {
-                var a = this.newlineIndex(e, !0) + 1;
+                var a = this.newlineIndex(e, true) + 1;
                 var c = i - a + 1;
                 var l = this.isolate(a, c);
                 var u = l.next;
@@ -2232,7 +2232,7 @@
         }, {
           key: "newlineIndex",
           value: function (e) {
-            var t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+            var t = arguments.length > 1 && undefined !== arguments[1] && arguments[1];
             if (t) {
               return this.domNode.textContent.slice(0, e).lastIndexOf("\n");
             }
@@ -2274,13 +2274,13 @@
           key: "create",
           value: function (e) {
             var n = i(t.__proto__ || Object.getPrototypeOf(t), "create", this).call(this, e);
-            n.setAttribute("spellcheck", !1);
+            n.setAttribute("spellcheck", false);
             return n;
           }
         }, {
           key: "formats",
           value: function () {
-            return !0;
+            return true;
           }
         }]);
         return t;
@@ -2294,7 +2294,7 @@
       "use strict";
 
       Object.defineProperty(t, "__esModule", {
-        value: !0
+        value: true
       });
       var r = "function" === typeof Symbol && "symbol" === typeof Symbol.iterator ? function (e) {
         return typeof e;
@@ -2308,15 +2308,15 @@
         if (Symbol.iterator in Object(e)) {
           return function (e, t) {
             var n = [];
-            var r = !0;
-            var o = !1;
-            var i = void 0;
+            var r = true;
+            var o = false;
+            var i = undefined;
             try {
-              for (var a, s = e[Symbol.iterator](); !(r = (a = s.next()).done) && (n.push(a.value), !t || n.length !== t); r = !0) {
+              for (var a, s = e[Symbol.iterator](); !(r = (a = s.next()).done) && (n.push(a.value), !t || n.length !== t); r = true) {
                 ;
               }
             } catch (c) {
-              o = !0;
+              o = true;
               i = c;
             } finally {
               try {
@@ -2338,10 +2338,10 @@
         function e(e, t) {
           for (var n = 0; n < t.length; n++) {
             var r = t[n];
-            r.enumerable = r.enumerable || !1;
-            r.configurable = !0;
+            r.enumerable = r.enumerable || false;
+            r.configurable = true;
             if ("value" in r) {
-              r.writable = !0;
+              r.writable = true;
             }
             Object.defineProperty(e, r.key, r);
           }
@@ -2387,7 +2387,7 @@
           key: "applyDelta",
           value: function (e) {
             var t = this;
-            var n = !1;
+            var n = false;
             this.scroll.update();
             var i = this.scroll.length();
             this.scroll.batchStart();
@@ -2400,7 +2400,7 @@
                     image: t.attributes.image
                   }, n);
                 }
-                if (!(null == t.attributes || !0 !== t.attributes.list && !0 !== t.attributes.bullet)) {
+                if (!(null == t.attributes || true !== t.attributes.list && true !== t.attributes.bullet)) {
                   if ((t = (0, h.default)(t)).attributes.list) {
                     t.attributes.list = "ordered";
                   } else {
@@ -2421,11 +2421,11 @@
                 if ("string" === typeof a.insert) {
                   var f = a.insert;
                   if (f.endsWith("\n") && n) {
-                    n = !1;
+                    n = false;
                     f = f.slice(0, -1);
                   }
                   if (e >= i && !f.endsWith("\n")) {
-                    n = !0;
+                    n = true;
                   }
                   t.scroll.insertAt(e, f);
                   var h = t.scroll.line(e);
@@ -2469,7 +2469,7 @@
           key: "formatLine",
           value: function (e, t) {
             var n = this;
-            var r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+            var r = arguments.length > 2 && undefined !== arguments[2] ? arguments[2] : {};
             this.scroll.update();
             Object.keys(r).forEach(function (o) {
               if (null == n.scroll.whitelist || n.scroll.whitelist[o]) {
@@ -2495,7 +2495,7 @@
           key: "formatText",
           value: function (e, t) {
             var n = this;
-            var r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+            var r = arguments.length > 2 && undefined !== arguments[2] ? arguments[2] : {};
             Object.keys(r).forEach(function (o) {
               n.scroll.formatAt(e, t, o, r[o]);
             });
@@ -2516,7 +2516,7 @@
         }, {
           key: "getFormat",
           value: function (e) {
-            var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+            var t = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : 0;
             var n = [];
             var r = [];
             if (0 === t) {
@@ -2566,9 +2566,9 @@
               if (t in e) {
                 Object.defineProperty(e, t, {
                   value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0
+                  enumerable: true,
+                  configurable: true,
+                  writable: true
                 });
               } else {
                 e[t] = n;
@@ -2580,7 +2580,7 @@
           key: "insertText",
           value: function (e, t) {
             var n = this;
-            var r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+            var r = arguments.length > 2 && undefined !== arguments[2] ? arguments[2] : {};
             t = t.replace(/\r\n/g, "\n").replace(/\r/g, "\n");
             this.scroll.insertAt(e, t);
             Object.keys(r).forEach(function (o) {
@@ -2592,10 +2592,10 @@
           key: "isBlank",
           value: function () {
             if (0 == this.scroll.children.length) {
-              return !0;
+              return true;
             }
             if (this.scroll.children.length > 1) {
-              return !1;
+              return false;
             }
             var e = this.scroll.children.head;
             return e.statics.blotName === p.default.blotName && !(e.children.length > 1) && e.children.head instanceof f.default;
@@ -2621,8 +2621,8 @@
         }, {
           key: "update",
           value: function (e) {
-            var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
-            var n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : void 0;
+            var t = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : [];
+            var n = arguments.length > 2 && undefined !== arguments[2] ? arguments[2] : undefined;
             var r = this.delta;
             if (1 === t.length && "characterData" === t[0].type && t[0].target.data.match(v) && c.default.find(t[0].target)) {
               var o = c.default.find(t[0].target);
@@ -2670,9 +2670,9 @@
       "use strict";
 
       Object.defineProperty(t, "__esModule", {
-        value: !0
+        value: true
       });
-      t.default = t.Range = void 0;
+      t.default = t.Range = undefined;
       var r = function (e, t) {
         if (Array.isArray(e)) {
           return e;
@@ -2680,15 +2680,15 @@
         if (Symbol.iterator in Object(e)) {
           return function (e, t) {
             var n = [];
-            var r = !0;
-            var o = !1;
-            var i = void 0;
+            var r = true;
+            var o = false;
+            var i = undefined;
             try {
-              for (var a, s = e[Symbol.iterator](); !(r = (a = s.next()).done) && (n.push(a.value), !t || n.length !== t); r = !0) {
+              for (var a, s = e[Symbol.iterator](); !(r = (a = s.next()).done) && (n.push(a.value), !t || n.length !== t); r = true) {
                 ;
               }
             } catch (c) {
-              o = !0;
+              o = true;
               i = c;
             } finally {
               try {
@@ -2710,10 +2710,10 @@
         function e(e, t) {
           for (var n = 0; n < t.length; n++) {
             var r = t[n];
-            r.enumerable = r.enumerable || !1;
-            r.configurable = !0;
+            r.enumerable = r.enumerable || false;
+            r.configurable = true;
             if ("value" in r) {
-              r.writable = !0;
+              r.writable = true;
             }
             Object.defineProperty(e, r.key, r);
           }
@@ -2753,7 +2753,7 @@
       }
       var p = (0, l(n(10)).default)("quill:selection");
       var f = function e(t) {
-        var n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        var n = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : 0;
         d(this, e);
         this.index = t;
         this.length = n;
@@ -2764,8 +2764,8 @@
           d(this, e);
           this.emitter = n;
           this.scroll = t;
-          this.composing = !1;
-          this.mouseDown = !1;
+          this.composing = false;
+          this.mouseDown = false;
           this.root = this.scroll.domNode;
           this.cursor = i.default.create("cursor", this);
           this.lastRange = this.savedRange = new f(0, 0);
@@ -2810,10 +2810,10 @@
           value: function () {
             var e = this;
             this.root.addEventListener("compositionstart", function () {
-              e.composing = !0;
+              e.composing = true;
             });
             this.root.addEventListener("compositionend", function () {
-              e.composing = !1;
+              e.composing = false;
               if (e.cursor.parent) {
                 var t = e.cursor.restore();
                 if (!t) {
@@ -2830,10 +2830,10 @@
           value: function () {
             var e = this;
             this.emitter.listenDOM("mousedown", document.body, function () {
-              e.mouseDown = !0;
+              e.mouseDown = true;
             });
             this.emitter.listenDOM("mouseup", document.body, function () {
-              e.mouseDown = !1;
+              e.mouseDown = false;
               e.update(c.default.sources.USER);
             });
           }
@@ -2853,7 +2853,7 @@
               var n = this.getNativeRange();
               if (null != n && n.native.collapsed && !i.default.query(e, i.default.Scope.BLOCK)) {
                 if (n.start.node !== this.cursor.textNode) {
-                  var r = i.default.find(n.start.node, !1);
+                  var r = i.default.find(n.start.node, false);
                   if (null == r) {
                     return;
                   }
@@ -2875,11 +2875,11 @@
         }, {
           key: "getBounds",
           value: function (e) {
-            var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+            var t = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : 0;
             var n = this.scroll.length();
             e = Math.min(e, n - 1);
             t = Math.min(e + t, n - 1) - e;
-            var o = void 0;
+            var o = undefined;
             var i = this.scroll.leaf(e);
             var a = r(i, 2);
             var s = a[0];
@@ -2887,7 +2887,7 @@
             if (null == s) {
               return null;
             }
-            var l = s.position(c, !0);
+            var l = s.position(c, true);
             var u = r(l, 2);
             o = u[0];
             c = u[1];
@@ -2901,7 +2901,7 @@
               if (null == s) {
                 return null;
               }
-              var h = s.position(c, !0);
+              var h = s.position(c, true);
               var m = r(h, 2);
               o = m[0];
               c = m[1];
@@ -2909,7 +2909,7 @@
               return d.getBoundingClientRect();
             }
             var g = "left";
-            var _ = void 0;
+            var _ = undefined;
             if (o instanceof Text) {
               if (c < o.data.length) {
                 d.setStart(o, c);
@@ -2973,7 +2973,7 @@
               var n = r(e, 2);
               var o = n[0];
               var a = n[1];
-              var s = i.default.find(o, !0);
+              var s = i.default.find(o, true);
               var c = s.offset(t.scroll);
               return 0 === a ? c : s instanceof i.default.Container ? c + s.length() : c + s.index(o, a);
             });
@@ -3071,9 +3071,9 @@
         }, {
           key: "setNativeRange",
           value: function (e, t) {
-            var n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : e;
-            var r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : t;
-            var o = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+            var n = arguments.length > 2 && undefined !== arguments[2] ? arguments[2] : e;
+            var r = arguments.length > 3 && undefined !== arguments[3] ? arguments[3] : t;
+            var o = arguments.length > 4 && undefined !== arguments[4] && arguments[4];
             p.info("setNativeRange", e, t, n, r);
             if (null == e || null != this.root.parentNode && null != e.parentNode && null != n.parentNode) {
               var i = document.getSelection();
@@ -3109,11 +3109,11 @@
         }, {
           key: "setRange",
           value: function (e) {
-            var t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-            var n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : c.default.sources.API;
+            var t = arguments.length > 1 && undefined !== arguments[1] && arguments[1];
+            var n = arguments.length > 2 && undefined !== arguments[2] ? arguments[2] : c.default.sources.API;
             if ("string" === typeof t) {
               n = t;
-              t = !1;
+              t = false;
             }
             p.info("setRange", e);
             if (null != e) {
@@ -3127,7 +3127,7 @@
         }, {
           key: "update",
           value: function () {
-            var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : c.default.sources.USER;
+            var e = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : c.default.sources.USER;
             var t = this.lastRange;
             var n = this.getRange();
             var o = r(n, 2);
@@ -3157,7 +3157,7 @@
         try {
           t.parentNode;
         } catch (n) {
-          return !1;
+          return false;
         }
         if (t instanceof Text) {
           t = t.parentNode;
@@ -3170,17 +3170,17 @@
       "use strict";
 
       Object.defineProperty(t, "__esModule", {
-        value: !0
+        value: true
       });
       var r;
       var o = function () {
         function e(e, t) {
           for (var n = 0; n < t.length; n++) {
             var r = t[n];
-            r.enumerable = r.enumerable || !1;
-            r.configurable = !0;
+            r.enumerable = r.enumerable || false;
+            r.configurable = true;
             if ("value" in r) {
-              r.writable = !0;
+              r.writable = true;
             }
             Object.defineProperty(e, r.key, r);
           }
@@ -3219,9 +3219,9 @@
           e.prototype = Object.create(t && t.prototype, {
             constructor: {
               value: e,
-              enumerable: !1,
-              writable: !0,
-              configurable: !0
+              enumerable: false,
+              writable: true,
+              configurable: true
             }
           });
           if (t) {
@@ -3241,15 +3241,15 @@
                   t = Function.prototype;
                 }
                 var o = Object.getOwnPropertyDescriptor(t, n);
-                if (void 0 === o) {
+                if (undefined === o) {
                   var i = Object.getPrototypeOf(t);
-                  return null === i ? void 0 : e(i, n, r);
+                  return null === i ? undefined : e(i, n, r);
                 }
                 if ("value" in o) {
                   return o.value;
                 }
                 var a = o.get;
-                return void 0 !== a ? a.call(r) : void 0;
+                return undefined !== a ? a.call(r) : undefined;
               })(t.prototype.__proto__ || Object.getPrototypeOf(t.prototype), "insertInto", this).call(this, e, n);
             } else {
               this.remove();
@@ -3298,7 +3298,7 @@
         };
       }();
       Object.defineProperty(t, "__esModule", {
-        value: !0
+        value: true
       });
       var o = n(44);
       var i = n(30);
@@ -3325,7 +3325,7 @@
           [].slice.call(this.domNode.childNodes).reverse().forEach(function (t) {
             try {
               var n = c(t);
-              e.insertBefore(n, e.children.head || void 0);
+              e.insertBefore(n, e.children.head || undefined);
             } catch (r) {
               if (r instanceof a.ParchmentError) {
                 return;
@@ -3349,10 +3349,10 @@
           return null == e.blotName && e(o) || null != e.blotName && o instanceof e ? [o, i] : o instanceof t ? o.descendant(e, i) : [null, -1];
         };
         t.prototype.descendants = function (e, n, r) {
-          if (void 0 === n) {
+          if (undefined === n) {
             n = 0;
           }
-          if (void 0 === r) {
+          if (undefined === r) {
             r = Number.MAX_VALUE;
           }
           var o = [];
@@ -3421,8 +3421,8 @@
           }
         };
         t.prototype.path = function (e, n) {
-          if (void 0 === n) {
-            n = !1;
+          if (undefined === n) {
+            n = false;
           }
           var r = this.children.find(e, n);
           var o = r[0];
@@ -3440,8 +3440,8 @@
           e.prototype.replace.call(this, n);
         };
         t.prototype.split = function (e, t) {
-          if (void 0 === t) {
-            t = !1;
+          if (undefined === t) {
+            t = false;
           }
           if (!t) {
             if (0 === e) {
@@ -3497,7 +3497,7 @@
               if (null != r.parent) {
                 r.parent.removeChild(n);
               }
-              n.insertBefore(r, t || void 0);
+              n.insertBefore(r, t || undefined);
             }
           });
         };
@@ -3544,7 +3544,7 @@
         };
       }();
       Object.defineProperty(t, "__esModule", {
-        value: !0
+        value: true
       });
       var o = n(12);
       var i = n(31);
@@ -3558,7 +3558,7 @@
         }
         r(t, e);
         t.formats = function (e) {
-          return "string" === typeof this.tagName || (Array.isArray(this.tagName) ? e.tagName.toLowerCase() : void 0);
+          return "string" === typeof this.tagName || (Array.isArray(this.tagName) ? e.tagName.toLowerCase() : undefined);
         };
         t.prototype.format = function (e, t) {
           var n = s.query(e);
@@ -3626,7 +3626,7 @@
         };
       }();
       Object.defineProperty(t, "__esModule", {
-        value: !0
+        value: true
       });
       var o = n(30);
       var i = n(1);
@@ -3636,7 +3636,7 @@
         }
         r(t, e);
         t.value = function (e) {
-          return !0;
+          return true;
         };
         t.prototype.index = function (e, t) {
           return this.domNode === e || this.domNode.compareDocumentPosition(e) & Node.DOCUMENT_POSITION_CONTAINED_BY ? Math.min(t, 1) : -1;
@@ -3650,7 +3650,7 @@
         };
         t.prototype.value = function () {
           var e;
-          (e = {})[this.statics.blotName] = this.statics.value(this.domNode) || !0;
+          (e = {})[this.statics.blotName] = this.statics.value(this.domNode) || true;
           return e;
         };
         t.scope = i.Scope.INLINE_BLOT;
@@ -3669,16 +3669,16 @@
             if ("object" !== typeof t) {
               t = {};
             }
-            var r = o(!0, {}, t);
+            var r = o(true, {}, t);
             for (var i in n || (r = Object.keys(r).reduce(function (e, t) {
               if (null != r[t]) {
                 e[t] = r[t];
               }
               return e;
-            }, {})), e) if (void 0 !== e[i] && void 0 === t[i]) {
+            }, {})), e) if (undefined !== e[i] && undefined === t[i]) {
               r[i] = e[i];
             }
-            return Object.keys(r).length > 0 ? r : void 0;
+            return Object.keys(r).length > 0 ? r : undefined;
           },
           diff: function (e, t) {
             if ("object" !== typeof e) {
@@ -3689,11 +3689,11 @@
             }
             var n = Object.keys(e).concat(Object.keys(t)).reduce(function (n, o) {
               if (!r(e[o], t[o])) {
-                n[o] = void 0 === t[o] ? null : t[o];
+                n[o] = undefined === t[o] ? null : t[o];
               }
               return n;
             }, {});
-            return Object.keys(n).length > 0 ? n : void 0;
+            return Object.keys(n).length > 0 ? n : undefined;
           },
           transform: function (e, t, n) {
             if ("object" !== typeof e) {
@@ -3704,12 +3704,12 @@
                 return t;
               }
               var r = Object.keys(t).reduce(function (n, r) {
-                if (void 0 === e[r]) {
+                if (undefined === e[r]) {
                   n[r] = t[r];
                 }
                 return n;
               }, {});
-              return Object.keys(r).length > 0 ? r : void 0;
+              return Object.keys(r).length > 0 ? r : undefined;
             }
           }
         },
@@ -3828,7 +3828,7 @@
           var f = [];
           var h = "undefined" != typeof t;
           if ("undefined" == typeof c) {
-            c = !0;
+            c = true;
           }
           if ("undefined" == typeof l) {
             l = 1 / 0;
@@ -3916,7 +3916,7 @@
                   g[O] = a(l[O], m - 1);
                   if (!C.enumerable) {
                     Object.defineProperty(g, O, {
-                      enumerable: !1
+                      enumerable: false
                     });
                   }
                 }
@@ -3930,7 +3930,7 @@
                 if (!((C = Object.getOwnPropertyDescriptor(l, T)) && C.enumerable)) {
                   g[T] = a(l[T], m - 1);
                   Object.defineProperty(g, T, {
-                    enumerable: !1
+                    enumerable: false
                   });
                 }
               }
@@ -3982,7 +3982,7 @@
       "use strict";
 
       Object.defineProperty(t, "__esModule", {
-        value: !0
+        value: true
       });
       var r = function (e, t) {
         if (Array.isArray(e)) {
@@ -3991,15 +3991,15 @@
         if (Symbol.iterator in Object(e)) {
           return function (e, t) {
             var n = [];
-            var r = !0;
-            var o = !1;
-            var i = void 0;
+            var r = true;
+            var o = false;
+            var i = undefined;
             try {
-              for (var a, s = e[Symbol.iterator](); !(r = (a = s.next()).done) && (n.push(a.value), !t || n.length !== t); r = !0) {
+              for (var a, s = e[Symbol.iterator](); !(r = (a = s.next()).done) && (n.push(a.value), !t || n.length !== t); r = true) {
                 ;
               }
             } catch (c) {
-              o = !0;
+              o = true;
               i = c;
             } finally {
               try {
@@ -4021,10 +4021,10 @@
         function e(e, t) {
           for (var n = 0; n < t.length; n++) {
             var r = t[n];
-            r.enumerable = r.enumerable || !1;
-            r.configurable = !0;
+            r.enumerable = r.enumerable || false;
+            r.configurable = true;
             if ("value" in r) {
-              r.writable = !0;
+              r.writable = true;
             }
             Object.defineProperty(e, r.key, r);
           }
@@ -4044,15 +4044,15 @@
           t = Function.prototype;
         }
         var o = Object.getOwnPropertyDescriptor(t, n);
-        if (void 0 === o) {
+        if (undefined === o) {
           var i = Object.getPrototypeOf(t);
-          return null === i ? void 0 : e(i, n, r);
+          return null === i ? undefined : e(i, n, r);
         }
         if ("value" in o) {
           return o.value;
         }
         var a = o.get;
-        return void 0 !== a ? a.call(r) : void 0;
+        return undefined !== a ? a.call(r) : undefined;
       };
       var a = f(n(0));
       var s = f(n(8));
@@ -4085,7 +4085,7 @@
           r.emitter = n.emitter;
           if (Array.isArray(n.whitelist)) {
             r.whitelist = n.whitelist.reduce(function (e, t) {
-              e[t] = !0;
+              e[t] = true;
               return e;
             }, {});
           }
@@ -4101,9 +4101,9 @@
           e.prototype = Object.create(t && t.prototype, {
             constructor: {
               value: e,
-              enumerable: !1,
-              writable: !0,
-              configurable: !0
+              enumerable: false,
+              writable: true,
+              configurable: true
             }
           });
           if (t) {
@@ -4117,12 +4117,12 @@
         o(t, [{
           key: "batchStart",
           value: function () {
-            this.batch = !0;
+            this.batch = true;
           }
         }, {
           key: "batchEnd",
           value: function () {
-            this.batch = !1;
+            this.batch = false;
             this.optimize();
           }
         }, {
@@ -4140,7 +4140,7 @@
                 return void this.optimize();
               }
               if (s instanceof d.default) {
-                var h = s.newlineIndex(s.length(), !0);
+                var h = s.newlineIndex(s.length(), true);
                 if (h > -1 && (s = s.split(h + 1)) === f) {
                   return void this.optimize();
                 }
@@ -4159,7 +4159,7 @@
         }, {
           key: "enable",
           value: function () {
-            var e = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
+            var e = !(arguments.length > 0 && undefined !== arguments[0]) || arguments[0];
             this.domNode.setAttribute("contenteditable", e);
           }
         }, {
@@ -4215,8 +4215,8 @@
         }, {
           key: "lines",
           value: function () {
-            var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
-            var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Number.MAX_VALUE;
+            var e = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : 0;
+            var t = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : Number.MAX_VALUE;
             var n = function e(t, n, r) {
               var o = [];
               var i = r;
@@ -4237,9 +4237,9 @@
         }, {
           key: "optimize",
           value: function () {
-            var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
-            var n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-            if (!0 !== this.batch) {
+            var e = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : [];
+            var n = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : {};
+            if (true !== this.batch) {
               i(t.prototype.__proto__ || Object.getPrototypeOf(t.prototype), "optimize", this).call(this, e, n);
               if (e.length > 0) {
                 this.emitter.emit(s.default.events.SCROLL_OPTIMIZE, e, n);
@@ -4254,7 +4254,7 @@
         }, {
           key: "update",
           value: function (e) {
-            if (!0 !== this.batch) {
+            if (true !== this.batch) {
               var n = s.default.sources.USER;
               if ("string" === typeof e) {
                 n = e;
@@ -4284,9 +4284,9 @@
       "use strict";
 
       Object.defineProperty(t, "__esModule", {
-        value: !0
+        value: true
       });
-      t.SHORTKEY = t.default = void 0;
+      t.SHORTKEY = t.default = undefined;
       var r = "function" === typeof Symbol && "symbol" === typeof Symbol.iterator ? function (e) {
         return typeof e;
       } : function (e) {
@@ -4299,15 +4299,15 @@
         if (Symbol.iterator in Object(e)) {
           return function (e, t) {
             var n = [];
-            var r = !0;
-            var o = !1;
-            var i = void 0;
+            var r = true;
+            var o = false;
+            var i = undefined;
             try {
-              for (var a, s = e[Symbol.iterator](); !(r = (a = s.next()).done) && (n.push(a.value), !t || n.length !== t); r = !0) {
+              for (var a, s = e[Symbol.iterator](); !(r = (a = s.next()).done) && (n.push(a.value), !t || n.length !== t); r = true) {
                 ;
               }
             } catch (c) {
-              o = !0;
+              o = true;
               i = c;
             } finally {
               try {
@@ -4329,10 +4329,10 @@
         function e(e, t) {
           for (var n = 0; n < t.length; n++) {
             var r = t[n];
-            r.enumerable = r.enumerable || !1;
-            r.configurable = !0;
+            r.enumerable = r.enumerable || false;
+            r.configurable = true;
             if ("value" in r) {
-              r.writable = !0;
+              r.writable = true;
             }
             Object.defineProperty(e, r.key, r);
           }
@@ -4365,9 +4365,9 @@
         if (t in e) {
           Object.defineProperty(e, t, {
             value: n,
-            enumerable: !0,
-            configurable: !0,
-            writable: !0
+            enumerable: true,
+            configurable: true,
+            writable: true
           });
         } else {
           e[t] = n;
@@ -4409,36 +4409,36 @@
             r.addBinding({
               key: t.keys.BACKSPACE
             }, {
-              collapsed: !0
+              collapsed: true
             }, E);
             r.addBinding({
               key: t.keys.DELETE
             }, {
-              collapsed: !0
+              collapsed: true
             }, O);
           } else {
             r.addBinding({
               key: t.keys.BACKSPACE
             }, {
-              collapsed: !0,
+              collapsed: true,
               prefix: /^.?$/
             }, E);
             r.addBinding({
               key: t.keys.DELETE
             }, {
-              collapsed: !0,
+              collapsed: true,
               suffix: /^.?$/
             }, O);
           }
           r.addBinding({
             key: t.keys.BACKSPACE
           }, {
-            collapsed: !1
+            collapsed: false
           }, w);
           r.addBinding({
             key: t.keys.DELETE
           }, {
-            collapsed: !1
+            collapsed: false
           }, w);
           r.addBinding({
             key: t.keys.BACKSPACE,
@@ -4447,7 +4447,7 @@
             metaKey: null,
             shiftKey: null
           }, {
-            collapsed: !0,
+            collapsed: true,
             offset: 0
           }, E);
           r.listen();
@@ -4460,9 +4460,9 @@
           e.prototype = Object.create(t && t.prototype, {
             constructor: {
               value: e,
-              enumerable: !1,
-              writable: !0,
-              configurable: !0
+              enumerable: false,
+              writable: true,
+              configurable: true
             }
           });
           if (t) {
@@ -4485,8 +4485,8 @@
         i(t, [{
           key: "addBinding",
           value: function (e) {
-            var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-            var n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+            var t = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : {};
+            var n = arguments.length > 2 && undefined !== arguments[2] ? arguments[2] : {};
             var r = I(e);
             if (null == r || null == r.key) {
               return _.warn("Attempted to add invalid keyboard binding", r);
@@ -4542,26 +4542,26 @@
                     };
                     if (a.some(function (t) {
                       if (null != t.collapsed && t.collapsed !== C.collapsed) {
-                        return !1;
+                        return false;
                       }
                       if (null != t.empty && t.empty !== C.empty) {
-                        return !1;
+                        return false;
                       }
                       if (null != t.offset && t.offset !== C.offset) {
-                        return !1;
+                        return false;
                       }
                       if (Array.isArray(t.format)) {
                         if (t.format.every(function (e) {
                           return null == C.format[e];
                         })) {
-                          return !1;
+                          return false;
                         }
                       } else if ("object" === r(t.format) && !Object.keys(t.format).every(function (e) {
-                        return !0 === t.format[e] ? null != C.format[e] : !1 === t.format[e] ? null == C.format[e] : (0, s.default)(t.format[e], C.format[e]);
+                        return true === t.format[e] ? null != C.format[e] : false === t.format[e] ? null == C.format[e] : (0, s.default)(t.format[e], C.format[e]);
                       })) {
-                        return !1;
+                        return false;
                       }
-                      return !(null != t.prefix && !t.prefix.test(C.prefix)) && !(null != t.suffix && !t.suffix.test(C.suffix)) && !0 !== t.handler.call(e, c, C);
+                      return !(null != t.prefix && !t.prefix.test(C.prefix)) && !(null != t.suffix && !t.suffix.test(C.suffix)) && true !== t.handler.call(e, c, C);
                     })) {
                       n.preventDefault();
                     }
@@ -4587,7 +4587,7 @@
             r += n.length + 1;
           }
           var i = this.quill.getLeaf(r);
-          return !(o(i, 1)[0] instanceof d.default.Embed) || (e === b.keys.LEFT ? t ? this.quill.setSelection(n.index - 1, n.length + 1, p.default.sources.USER) : this.quill.setSelection(n.index - 1, p.default.sources.USER) : t ? this.quill.setSelection(n.index, n.length + 1, p.default.sources.USER) : this.quill.setSelection(n.index + n.length + 1, p.default.sources.USER), !1);
+          return !(o(i, 1)[0] instanceof d.default.Embed) || (e === b.keys.LEFT ? t ? this.quill.setSelection(n.index - 1, n.length + 1, p.default.sources.USER) : this.quill.setSelection(n.index - 1, p.default.sources.USER) : t ? this.quill.setSelection(n.index, n.length + 1, p.default.sources.USER) : this.quill.setSelection(n.index + n.length + 1, p.default.sources.USER), false);
         });
         return n;
       }
@@ -4680,7 +4680,7 @@
           key: b.keys.TAB,
           shiftKey: !e,
           format: {
-            "code-block": !0
+            "code-block": true
           },
           handler: function (t) {
             var n = d.default.query("code-block");
@@ -4692,7 +4692,7 @@
             var l = s[1];
             if (null != c) {
               var u = this.quill.getIndex(c);
-              var f = c.newlineIndex(l, !0) + 1;
+              var f = c.newlineIndex(l, true) + 1;
               var h = c.newlineIndex(u + l + i);
               var m = c.domNode.textContent.slice(f, h).split("\n");
               l = 0;
@@ -4727,7 +4727,7 @@
       function S(e) {
         return {
           key: e[0].toUpperCase(),
-          shortKey: !0,
+          shortKey: true,
           handler: function (t, n) {
             this.quill.format(e, !n.format[e], p.default.sources.USER);
           }
@@ -4740,7 +4740,7 @@
           });
         }
         if ("object" === ("undefined" === typeof e ? "undefined" : r(e))) {
-          e = (0, a.default)(e, !1);
+          e = (0, a.default)(e, false);
         }
         if ("string" === typeof e.key) {
           if (null != b.keys[e.key.toUpperCase()]) {
@@ -4779,25 +4779,25 @@
             format: ["blockquote", "indent", "list"],
             handler: function (e, t) {
               if (t.collapsed && 0 !== t.offset) {
-                return !0;
+                return true;
               }
               this.quill.format("indent", "+1", p.default.sources.USER);
             }
           },
           outdent: {
             key: b.keys.TAB,
-            shiftKey: !0,
+            shiftKey: true,
             format: ["blockquote", "indent", "list"],
             handler: function (e, t) {
               if (t.collapsed && 0 !== t.offset) {
-                return !0;
+                return true;
               }
               this.quill.format("indent", "-1", p.default.sources.USER);
             }
           },
           "outdent backspace": {
             key: b.keys.BACKSPACE,
-            collapsed: !0,
+            collapsed: true,
             shiftKey: null,
             metaKey: null,
             ctrlKey: null,
@@ -4809,17 +4809,17 @@
                 this.quill.format("indent", "-1", p.default.sources.USER);
               } else {
                 if (null != t.format.list) {
-                  this.quill.format("list", !1, p.default.sources.USER);
+                  this.quill.format("list", false, p.default.sources.USER);
                 }
               }
             }
           },
-          "indent code-block": T(!0),
-          "outdent code-block": T(!1),
+          "indent code-block": T(true),
+          "outdent code-block": T(false),
           "remove tab": {
             key: b.keys.TAB,
-            shiftKey: !0,
-            collapsed: !0,
+            shiftKey: true,
+            collapsed: true,
             prefix: /\t$/,
             handler: function (e) {
               this.quill.deleteText(e.index - 1, 1, p.default.sources.USER);
@@ -4837,19 +4837,19 @@
           },
           "list empty enter": {
             key: b.keys.ENTER,
-            collapsed: !0,
+            collapsed: true,
             format: ["list"],
-            empty: !0,
+            empty: true,
             handler: function (e, t) {
-              this.quill.format("list", !1, p.default.sources.USER);
+              this.quill.format("list", false, p.default.sources.USER);
               if (t.format.indent) {
-                this.quill.format("indent", !1, p.default.sources.USER);
+                this.quill.format("indent", false, p.default.sources.USER);
               }
             }
           },
           "checklist enter": {
             key: b.keys.ENTER,
-            collapsed: !0,
+            collapsed: true,
             format: {
               list: "checked"
             },
@@ -4871,7 +4871,7 @@
           },
           "header enter": {
             key: b.keys.ENTER,
-            collapsed: !0,
+            collapsed: true,
             format: ["header"],
             suffix: /^$/,
             handler: function (e, t) {
@@ -4889,9 +4889,9 @@
           },
           "list autofill": {
             key: " ",
-            collapsed: !0,
+            collapsed: true,
             format: {
-              list: !1
+              list: false
             },
             prefix: /^\s*?(\d+\.|-|\*|\[ ?\]|\[x\])$/,
             handler: function (e, t) {
@@ -4901,9 +4901,9 @@
               var a = i[0];
               var s = i[1];
               if (s > n) {
-                return !0;
+                return true;
               }
-              var c = void 0;
+              var c = undefined;
               switch (t.prefix.trim()) {
                 case "[]":
                 case "[ ]":
@@ -4931,7 +4931,7 @@
           },
           "code exit": {
             key: b.keys.ENTER,
-            collapsed: !0,
+            collapsed: true,
             format: ["code-block"],
             prefix: /\n\n$/,
             suffix: /^\s+$/,
@@ -4946,10 +4946,10 @@
               this.quill.updateContents(a, p.default.sources.USER);
             }
           },
-          "embed left": y(b.keys.LEFT, !1),
-          "embed left shift": y(b.keys.LEFT, !0),
-          "embed right": y(b.keys.RIGHT, !1),
-          "embed right shift": y(b.keys.RIGHT, !0)
+          "embed left": y(b.keys.LEFT, false),
+          "embed left shift": y(b.keys.LEFT, true),
+          "embed right": y(b.keys.RIGHT, false),
+          "embed right shift": y(b.keys.RIGHT, true)
         }
       };
       t.default = b;
@@ -4958,7 +4958,7 @@
       "use strict";
 
       Object.defineProperty(t, "__esModule", {
-        value: !0
+        value: true
       });
       var r = function (e, t) {
         if (Array.isArray(e)) {
@@ -4967,15 +4967,15 @@
         if (Symbol.iterator in Object(e)) {
           return function (e, t) {
             var n = [];
-            var r = !0;
-            var o = !1;
-            var i = void 0;
+            var r = true;
+            var o = false;
+            var i = undefined;
             try {
-              for (var a, s = e[Symbol.iterator](); !(r = (a = s.next()).done) && (n.push(a.value), !t || n.length !== t); r = !0) {
+              for (var a, s = e[Symbol.iterator](); !(r = (a = s.next()).done) && (n.push(a.value), !t || n.length !== t); r = true) {
                 ;
               }
             } catch (c) {
-              o = !0;
+              o = true;
               i = c;
             } finally {
               try {
@@ -4998,24 +4998,24 @@
           t = Function.prototype;
         }
         var o = Object.getOwnPropertyDescriptor(t, n);
-        if (void 0 === o) {
+        if (undefined === o) {
           var i = Object.getPrototypeOf(t);
-          return null === i ? void 0 : e(i, n, r);
+          return null === i ? undefined : e(i, n, r);
         }
         if ("value" in o) {
           return o.value;
         }
         var a = o.get;
-        return void 0 !== a ? a.call(r) : void 0;
+        return undefined !== a ? a.call(r) : undefined;
       };
       var i = function () {
         function e(e, t) {
           for (var n = 0; n < t.length; n++) {
             var r = t[n];
-            r.enumerable = r.enumerable || !1;
-            r.configurable = !0;
+            r.enumerable = r.enumerable || false;
+            r.configurable = true;
             if ("value" in r) {
-              r.writable = !0;
+              r.writable = true;
             }
             Object.defineProperty(e, r.key, r);
           }
@@ -5063,9 +5063,9 @@
           e.prototype = Object.create(t && t.prototype, {
             constructor: {
               value: e,
-              enumerable: !1,
-              writable: !0,
-              configurable: !0
+              enumerable: false,
+              writable: true,
+              configurable: true
             }
           });
           if (t) {
@@ -5131,9 +5131,9 @@
             if (!this.selection.composing && null != this.parent) {
               var e = this.textNode;
               var n = this.selection.getNativeRange();
-              var o = void 0;
-              var i = void 0;
-              var c = void 0;
+              var o = undefined;
+              var i = undefined;
+              var c = undefined;
               if (null != n && n.start.node === e && n.end.node === e) {
                 var l = [e, n.start.offset, n.end.offset];
                 o = l[0];
@@ -5203,7 +5203,7 @@
       "use strict";
 
       Object.defineProperty(t, "__esModule", {
-        value: !0
+        value: true
       });
       var r = a(n(0));
       var o = n(4);
@@ -5236,9 +5236,9 @@
           e.prototype = Object.create(t && t.prototype, {
             constructor: {
               value: e,
-              enumerable: !1,
-              writable: !0,
-              configurable: !0
+              enumerable: false,
+              writable: true,
+              configurable: true
             }
           });
           if (t) {
@@ -5257,18 +5257,18 @@
       "use strict";
 
       Object.defineProperty(t, "__esModule", {
-        value: !0
+        value: true
       });
-      t.ColorStyle = t.ColorClass = t.ColorAttributor = void 0;
+      t.ColorStyle = t.ColorClass = t.ColorAttributor = undefined;
       var r;
       var o = function () {
         function e(e, t) {
           for (var n = 0; n < t.length; n++) {
             var r = t[n];
-            r.enumerable = r.enumerable || !1;
-            r.configurable = !0;
+            r.enumerable = r.enumerable || false;
+            r.configurable = true;
             if ("value" in r) {
-              r.writable = !0;
+              r.writable = true;
             }
             Object.defineProperty(e, r.key, r);
           }
@@ -5310,9 +5310,9 @@
           e.prototype = Object.create(t && t.prototype, {
             constructor: {
               value: e,
-              enumerable: !1,
-              writable: !0,
-              configurable: !0
+              enumerable: false,
+              writable: true,
+              configurable: true
             }
           });
           if (t) {
@@ -5331,15 +5331,15 @@
                 t = Function.prototype;
               }
               var o = Object.getOwnPropertyDescriptor(t, n);
-              if (void 0 === o) {
+              if (undefined === o) {
                 var i = Object.getPrototypeOf(t);
-                return null === i ? void 0 : e(i, n, r);
+                return null === i ? undefined : e(i, n, r);
               }
               if ("value" in o) {
                 return o.value;
               }
               var a = o.get;
-              return void 0 !== a ? a.call(r) : void 0;
+              return undefined !== a ? a.call(r) : undefined;
             }(t.prototype.__proto__ || Object.getPrototypeOf(t.prototype), "value", this).call(this, e);
             return n.startsWith("rgb(") ? (n = n.replace(/^[^\d]+/, "").replace(/[^\d]+$/, ""), "#" + n.split(",").map(function (e) {
               return ("00" + parseInt(e).toString(16)).slice(-2);
@@ -5361,18 +5361,18 @@
       "use strict";
 
       Object.defineProperty(t, "__esModule", {
-        value: !0
+        value: true
       });
-      t.sanitize = t.default = void 0;
+      t.sanitize = t.default = undefined;
       var r;
       var o = function () {
         function e(e, t) {
           for (var n = 0; n < t.length; n++) {
             var r = t[n];
-            r.enumerable = r.enumerable || !1;
-            r.configurable = !0;
+            r.enumerable = r.enumerable || false;
+            r.configurable = true;
             if ("value" in r) {
-              r.writable = !0;
+              r.writable = true;
             }
             Object.defineProperty(e, r.key, r);
           }
@@ -5392,15 +5392,15 @@
           t = Function.prototype;
         }
         var o = Object.getOwnPropertyDescriptor(t, n);
-        if (void 0 === o) {
+        if (undefined === o) {
           var i = Object.getPrototypeOf(t);
-          return null === i ? void 0 : e(i, n, r);
+          return null === i ? undefined : e(i, n, r);
         }
         if ("value" in o) {
           return o.value;
         }
         var a = o.get;
-        return void 0 !== a ? a.call(r) : void 0;
+        return undefined !== a ? a.call(r) : undefined;
       };
       var a = n(6);
       function s(e, t) {
@@ -5426,9 +5426,9 @@
           e.prototype = Object.create(t && t.prototype, {
             constructor: {
               value: e,
-              enumerable: !1,
-              writable: !0,
-              configurable: !0
+              enumerable: false,
+              writable: true,
+              configurable: true
             }
           });
           if (t) {
@@ -5489,7 +5489,7 @@
       "use strict";
 
       Object.defineProperty(t, "__esModule", {
-        value: !0
+        value: true
       });
       var r = "function" === typeof Symbol && "symbol" === typeof Symbol.iterator ? function (e) {
         return typeof e;
@@ -5500,10 +5500,10 @@
         function e(e, t) {
           for (var n = 0; n < t.length; n++) {
             var r = t[n];
-            r.enumerable = r.enumerable || !1;
-            r.configurable = !0;
+            r.enumerable = r.enumerable || false;
+            r.configurable = true;
             if ("value" in r) {
-              r.writable = !0;
+              r.writable = true;
             }
             Object.defineProperty(e, r.key, r);
           }
@@ -5579,12 +5579,12 @@
               n.setAttribute("data-label", e.textContent);
             }
             n.addEventListener("click", function () {
-              t.selectItem(n, !0);
+              t.selectItem(n, true);
             });
             n.addEventListener("keydown", function (e) {
               switch (e.keyCode) {
                 case i.default.keys.ENTER:
-                  t.selectItem(n, !0);
+                  t.selectItem(n, true);
                   e.preventDefault();
                   break;
                 case i.default.keys.ESCAPE:
@@ -5621,7 +5621,7 @@
             [].slice.call(this.select.options).forEach(function (n) {
               var r = e.buildItem(n);
               t.appendChild(r);
-              if (!0 === n.selected) {
+              if (true === n.selected) {
                 e.selectItem(r);
               }
             });
@@ -5657,14 +5657,14 @@
         }, {
           key: "selectItem",
           value: function (e) {
-            var t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+            var t = arguments.length > 1 && undefined !== arguments[1] && arguments[1];
             var n = this.container.querySelector(".ql-selected");
             if (e !== n && (null != n && n.classList.remove("ql-selected"), null != e && (e.classList.add("ql-selected"), this.select.selectedIndex = [].indexOf.call(e.parentNode.children, e), e.hasAttribute("data-value") ? this.label.setAttribute("data-value", e.getAttribute("data-value")) : this.label.removeAttribute("data-value"), e.hasAttribute("data-label") ? this.label.setAttribute("data-label", e.getAttribute("data-label")) : this.label.removeAttribute("data-label"), t))) {
               if ("function" === typeof Event) {
                 this.select.dispatchEvent(new Event("change"));
               } else if ("object" === ("undefined" === typeof Event ? "undefined" : r(Event))) {
                 var o = document.createEvent("Event");
-                o.initEvent("change", !0, !0);
+                o.initEvent("change", true, true);
                 this.select.dispatchEvent(o);
               }
               this.close();
@@ -5673,7 +5673,7 @@
         }, {
           key: "update",
           value: function () {
-            var e = void 0;
+            var e = undefined;
             if (this.select.selectedIndex > -1) {
               var t = this.container.querySelector(".ql-picker-options").children[this.select.selectedIndex];
               e = this.select.options[this.select.selectedIndex];
@@ -5692,7 +5692,7 @@
       "use strict";
 
       Object.defineProperty(t, "__esModule", {
-        value: !0
+        value: true
       });
       var r = _(n(0));
       var o = _(n(5));
@@ -5733,7 +5733,7 @@
       "use strict";
 
       Object.defineProperty(t, "__esModule", {
-        value: !0
+        value: true
       });
       var r = n(1);
       var o = function () {
@@ -5747,8 +5747,8 @@
           get: function () {
             return this.constructor;
           },
-          enumerable: !0,
-          configurable: !0
+          enumerable: true,
+          configurable: true
         });
         e.create = function (e) {
           if (null == this.tagName) {
@@ -5777,7 +5777,7 @@
           }
         };
         e.prototype.clone = function () {
-          var e = this.domNode.cloneNode(!1);
+          var e = this.domNode.cloneNode(false);
           return r.create(e);
         };
         e.prototype.detach = function () {
@@ -5805,7 +5805,7 @@
           this.parent.insertBefore(o, i);
         };
         e.prototype.insertInto = function (e, t) {
-          if (void 0 === t) {
+          if (undefined === t) {
             t = null;
           }
           if (null != this.parent) {
@@ -5831,7 +5831,7 @@
           return 1;
         };
         e.prototype.offset = function (e) {
-          if (void 0 === e) {
+          if (undefined === e) {
             e = this.parent;
           }
           return null == this.parent || this == e ? 0 : this.parent.children.offset(this) + this.parent.offset(e);
@@ -5878,7 +5878,7 @@
       "use strict";
 
       Object.defineProperty(t, "__esModule", {
-        value: !0
+        value: true
       });
       var r = n(12);
       var o = n(32);
@@ -5969,7 +5969,7 @@
         });
       }
       Object.defineProperty(t, "__esModule", {
-        value: !0
+        value: true
       });
       var i = function (e) {
         function t() {
@@ -5982,7 +5982,7 @@
           });
         };
         t.prototype.add = function (e, t) {
-          return !!this.canAdd(e, t) && (this.remove(e), e.classList.add(this.keyName + "-" + t), !0);
+          return !!this.canAdd(e, t) && (this.remove(e), e.classList.add(this.keyName + "-" + t), true);
         };
         t.prototype.remove = function (e) {
           o(e, this.keyName).forEach(function (t) {
@@ -6028,7 +6028,7 @@
         return t[0] + n;
       }
       Object.defineProperty(t, "__esModule", {
-        value: !0
+        value: true
       });
       var i = function (e) {
         function t() {
@@ -6041,7 +6041,7 @@
           });
         };
         t.prototype.add = function (e, t) {
-          return !!this.canAdd(e, t) && (e.style[o(this.keyName)] = t, !0);
+          return !!this.canAdd(e, t) && (e.style[o(this.keyName)] = t, true);
         };
         t.prototype.remove = function (e) {
           e.style[o(this.keyName)] = "";
@@ -6060,16 +6060,16 @@
       "use strict";
 
       Object.defineProperty(t, "__esModule", {
-        value: !0
+        value: true
       });
       var r = function () {
         function e(e, t) {
           for (var n = 0; n < t.length; n++) {
             var r = t[n];
-            r.enumerable = r.enumerable || !1;
-            r.configurable = !0;
+            r.enumerable = r.enumerable || false;
+            r.configurable = true;
             if ("value" in r) {
-              r.writable = !0;
+              r.writable = true;
             }
             Object.defineProperty(e, r.key, r);
           }
@@ -6126,16 +6126,16 @@
       "use strict";
 
       Object.defineProperty(t, "__esModule", {
-        value: !0
+        value: true
       });
       var r = function () {
         function e(e, t) {
           for (var n = 0; n < t.length; n++) {
             var r = t[n];
-            r.enumerable = r.enumerable || !1;
-            r.configurable = !0;
+            r.enumerable = r.enumerable || false;
+            r.configurable = true;
             if ("value" in r) {
-              r.writable = !0;
+              r.writable = true;
             }
             Object.defineProperty(e, r.key, r);
           }
@@ -6171,7 +6171,7 @@
             return !t || "object" !== typeof t && "function" !== typeof t ? e : t;
           }(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this, e));
           n.contentNode = document.createElement("span");
-          n.contentNode.setAttribute("contenteditable", !1);
+          n.contentNode.setAttribute("contenteditable", false);
           [].slice.call(n.domNode.childNodes).forEach(function (e) {
             n.contentNode.appendChild(e);
           });
@@ -6189,9 +6189,9 @@
           e.prototype = Object.create(t && t.prototype, {
             constructor: {
               value: e,
-              enumerable: !1,
-              writable: !0,
-              configurable: !0
+              enumerable: false,
+              writable: true,
+              configurable: true
             }
           });
           if (t) {
@@ -6210,22 +6210,22 @@
                 t = Function.prototype;
               }
               var o = Object.getOwnPropertyDescriptor(t, n);
-              if (void 0 === o) {
+              if (undefined === o) {
                 var i = Object.getPrototypeOf(t);
-                return null === i ? void 0 : e(i, n, r);
+                return null === i ? undefined : e(i, n, r);
               }
               if ("value" in o) {
                 return o.value;
               }
               var a = o.get;
-              return void 0 !== a ? a.call(r) : void 0;
+              return undefined !== a ? a.call(r) : undefined;
             }(t.prototype.__proto__ || Object.getPrototypeOf(t.prototype), "index", this).call(this, e, n);
           }
         }, {
           key: "restore",
           value: function (e) {
-            var t = void 0;
-            var n = void 0;
+            var t = undefined;
+            var n = undefined;
             var r = e.data.split("﻿").join("");
             if (e === this.leftGuard) {
               if (this.prev instanceof i.default) {
@@ -6283,9 +6283,9 @@
       "use strict";
 
       Object.defineProperty(t, "__esModule", {
-        value: !0
+        value: true
       });
-      t.AlignStyle = t.AlignClass = t.AlignAttribute = void 0;
+      t.AlignStyle = t.AlignClass = t.AlignAttribute = undefined;
       var r;
       var o = n(0);
       var i = (r = o) && r.__esModule ? r : {
@@ -6305,9 +6305,9 @@
       "use strict";
 
       Object.defineProperty(t, "__esModule", {
-        value: !0
+        value: true
       });
-      t.BackgroundStyle = t.BackgroundClass = void 0;
+      t.BackgroundStyle = t.BackgroundClass = undefined;
       var r;
       var o = n(0);
       var i = (r = o) && r.__esModule ? r : {
@@ -6326,9 +6326,9 @@
       "use strict";
 
       Object.defineProperty(t, "__esModule", {
-        value: !0
+        value: true
       });
-      t.DirectionStyle = t.DirectionClass = t.DirectionAttribute = void 0;
+      t.DirectionStyle = t.DirectionClass = t.DirectionAttribute = undefined;
       var r;
       var o = n(0);
       var i = (r = o) && r.__esModule ? r : {
@@ -6348,18 +6348,18 @@
       "use strict";
 
       Object.defineProperty(t, "__esModule", {
-        value: !0
+        value: true
       });
-      t.FontClass = t.FontStyle = void 0;
+      t.FontClass = t.FontStyle = undefined;
       var r;
       var o = function () {
         function e(e, t) {
           for (var n = 0; n < t.length; n++) {
             var r = t[n];
-            r.enumerable = r.enumerable || !1;
-            r.configurable = !0;
+            r.enumerable = r.enumerable || false;
+            r.configurable = true;
             if ("value" in r) {
-              r.writable = !0;
+              r.writable = true;
             }
             Object.defineProperty(e, r.key, r);
           }
@@ -6406,9 +6406,9 @@
           e.prototype = Object.create(t && t.prototype, {
             constructor: {
               value: e,
-              enumerable: !1,
-              writable: !0,
-              configurable: !0
+              enumerable: false,
+              writable: true,
+              configurable: true
             }
           });
           if (t) {
@@ -6427,15 +6427,15 @@
                 t = Function.prototype;
               }
               var o = Object.getOwnPropertyDescriptor(t, n);
-              if (void 0 === o) {
+              if (undefined === o) {
                 var i = Object.getPrototypeOf(t);
-                return null === i ? void 0 : e(i, n, r);
+                return null === i ? undefined : e(i, n, r);
               }
               if ("value" in o) {
                 return o.value;
               }
               var a = o.get;
-              return void 0 !== a ? a.call(r) : void 0;
+              return undefined !== a ? a.call(r) : undefined;
             }(t.prototype.__proto__ || Object.getPrototypeOf(t.prototype), "value", this).call(this, e).replace(/["']/g, "");
           }
         }]);
@@ -6447,9 +6447,9 @@
       "use strict";
 
       Object.defineProperty(t, "__esModule", {
-        value: !0
+        value: true
       });
-      t.SizeStyle = t.SizeClass = void 0;
+      t.SizeStyle = t.SizeClass = undefined;
       var r;
       var o = n(0);
       var i = (r = o) && r.__esModule ? r : {
@@ -6521,17 +6521,17 @@
       "use strict";
 
       Object.defineProperty(t, "__esModule", {
-        value: !0
+        value: true
       });
-      t.getLastChangeIndex = t.default = void 0;
+      t.getLastChangeIndex = t.default = undefined;
       var r = function () {
         function e(e, t) {
           for (var n = 0; n < t.length; n++) {
             var r = t[n];
-            r.enumerable = r.enumerable || !1;
-            r.configurable = !0;
+            r.enumerable = r.enumerable || false;
+            r.configurable = true;
             if ("value" in r) {
-              r.writable = !0;
+              r.writable = true;
             }
             Object.defineProperty(e, r.key, r);
           }
@@ -6567,7 +6567,7 @@
             return !t || "object" !== typeof t && "function" !== typeof t ? e : t;
           }(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this, e, n));
           r.lastRecorded = 0;
-          r.ignoreChange = !1;
+          r.ignoreChange = false;
           r.clear();
           r.quill.on(i.default.events.EDITOR_CHANGE, function (e, t, n, o) {
             if (!(e !== i.default.events.TEXT_CHANGE || r.ignoreChange)) {
@@ -6580,17 +6580,17 @@
           });
           r.quill.keyboard.addBinding({
             key: "Z",
-            shortKey: !0
+            shortKey: true
           }, r.undo.bind(r));
           r.quill.keyboard.addBinding({
             key: "Z",
-            shortKey: !0,
-            shiftKey: !0
+            shortKey: true,
+            shiftKey: true
           }, r.redo.bind(r));
           if (/Win/i.test(navigator.platform)) {
             r.quill.keyboard.addBinding({
               key: "Y",
-              shortKey: !0
+              shortKey: true
             }, r.redo.bind(r));
           }
           return r;
@@ -6602,9 +6602,9 @@
           e.prototype = Object.create(t && t.prototype, {
             constructor: {
               value: e,
-              enumerable: !1,
-              writable: !0,
-              configurable: !0
+              enumerable: false,
+              writable: true,
+              configurable: true
             }
           });
           if (t) {
@@ -6622,9 +6622,9 @@
               var n = this.stack[e].pop();
               this.stack[t].push(n);
               this.lastRecorded = 0;
-              this.ignoreChange = !0;
+              this.ignoreChange = true;
               this.quill.updateContents(n[e], i.default.sources.USER);
-              this.ignoreChange = !1;
+              this.ignoreChange = false;
               var r = c(n[e]);
               this.quill.setSelection(r);
             }
@@ -6674,12 +6674,12 @@
           key: "transform",
           value: function (e) {
             this.stack.undo.forEach(function (t) {
-              t.undo = e.transform(t.undo, !0);
-              t.redo = e.transform(t.redo, !0);
+              t.undo = e.transform(t.undo, true);
+              t.redo = e.transform(t.redo, true);
             });
             this.stack.redo.forEach(function (t) {
-              t.undo = e.transform(t.undo, !0);
-              t.redo = e.transform(t.redo, !0);
+              t.undo = e.transform(t.undo, true);
+              t.redo = e.transform(t.redo, true);
             });
           }
         }, {
@@ -6708,7 +6708,7 @@
       s.DEFAULTS = {
         delay: 1e3,
         maxStack: 100,
-        userOnly: !1
+        userOnly: false
       };
       t.default = s;
       t.getLastChangeIndex = c;
@@ -6716,17 +6716,17 @@
       "use strict";
 
       Object.defineProperty(t, "__esModule", {
-        value: !0
+        value: true
       });
-      t.default = t.BaseTooltip = void 0;
+      t.default = t.BaseTooltip = undefined;
       var r = function () {
         function e(e, t) {
           for (var n = 0; n < t.length; n++) {
             var r = t[n];
-            r.enumerable = r.enumerable || !1;
-            r.configurable = !0;
+            r.enumerable = r.enumerable || false;
+            r.configurable = true;
             if ("value" in r) {
-              r.writable = !0;
+              r.writable = true;
             }
             Object.defineProperty(e, r.key, r);
           }
@@ -6773,9 +6773,9 @@
         e.prototype = Object.create(t && t.prototype, {
           constructor: {
             value: e,
-            enumerable: !1,
-            writable: !0,
-            configurable: !0
+            enumerable: false,
+            writable: true,
+            configurable: true
           }
         });
         if (t) {
@@ -6786,11 +6786,11 @@
           }
         }
       }
-      var _ = [!1, "center", "right", "justify"];
+      var _ = [false, "center", "right", "justify"];
       var v = ["#000000", "#e60000", "#ff9900", "#ffff00", "#008a00", "#0066cc", "#9933ff", "#ffffff", "#facccc", "#ffebcc", "#ffffcc", "#cce8cc", "#cce0f5", "#ebd6ff", "#bbbbbb", "#f06666", "#ffc266", "#ffff66", "#66b966", "#66a3e0", "#c285ff", "#888888", "#a10000", "#b26b00", "#b2b200", "#006100", "#0047b2", "#6b24b2", "#444444", "#5c0000", "#663d00", "#666600", "#003700", "#002966", "#3d1466"];
-      var b = [!1, "serif", "monospace"];
-      var y = ["1", "2", "3", !1];
-      var E = ["small", !1, "large", "huge"];
+      var b = [false, "serif", "monospace"];
+      var y = ["1", "2", "3", false];
+      var E = ["small", false, "large", "huge"];
       var O = function (e) {
         function t(e, n) {
           h(this, t);
@@ -6821,15 +6821,15 @@
                 t = Function.prototype;
               }
               var o = Object.getOwnPropertyDescriptor(t, n);
-              if (void 0 === o) {
+              if (undefined === o) {
                 var i = Object.getPrototypeOf(t);
-                return null === i ? void 0 : e(i, n, r);
+                return null === i ? undefined : e(i, n, r);
               }
               if ("value" in o) {
                 return o.value;
               }
               var a = o.get;
-              return void 0 !== a ? a.call(r) : void 0;
+              return undefined !== a ? a.call(r) : undefined;
             }(t.prototype.__proto__ || Object.getPrototypeOf(t.prototype), "addModule", this).call(this, e);
             if ("toolbar" === e) {
               this.extendToolbar(n);
@@ -6898,7 +6898,7 @@
         }]);
         return t;
       }(c.default);
-      O.DEFAULTS = (0, o.default)(!0, {}, c.default.DEFAULTS, {
+      O.DEFAULTS = (0, o.default)(true, {}, c.default.DEFAULTS, {
         modules: {
           toolbar: {
             handlers: {
@@ -6916,7 +6916,7 @@
                     if (null != t.files && null != t.files[0]) {
                       var n = new FileReader();
                       n.onload = function (n) {
-                        var r = e.quill.getSelection(!0);
+                        var r = e.quill.getSelection(true);
                         e.quill.updateContents(new i.default().retain(r.index).delete(r.length).insert({
                           image: n.target.result
                         }), a.default.sources.USER);
@@ -6970,8 +6970,8 @@
         }, {
           key: "edit",
           value: function () {
-            var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "link";
-            var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+            var e = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : "link";
+            var t = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : null;
             this.root.classList.remove("ql-hidden");
             this.root.classList.add("ql-editing");
             if (null != t) {
@@ -7018,7 +7018,7 @@
                 if (!e) {
                   break;
                 }
-                var n = this.quill.getSelection(!0);
+                var n = this.quill.getSelection(true);
                 if (null != n) {
                   var r = n.index + n.length;
                   this.quill.insertEmbed(r, this.root.getAttribute("data-mode"), e, a.default.sources.USER);
@@ -7035,7 +7035,7 @@
         return t;
       }(p.default);
       function C(e, t) {
-        var n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        var n = arguments.length > 2 && undefined !== arguments[2] && arguments[2];
         t.forEach(function (t) {
           var r = document.createElement("option");
           if (t === n) {
@@ -7052,7 +7052,7 @@
       "use strict";
 
       Object.defineProperty(t, "__esModule", {
-        value: !0
+        value: true
       });
       var r = function () {
         function e() {
@@ -7071,10 +7071,10 @@
         e.prototype.contains = function (e) {
           for (var t, n = this.iterator(); t = n();) {
             if (t === e) {
-              return !0;
+              return true;
             }
           }
-          return !1;
+          return false;
         };
         e.prototype.insertBefore = function (e, t) {
           if (e) {
@@ -7129,7 +7129,7 @@
           }
         };
         e.prototype.iterator = function (e) {
-          if (void 0 === e) {
+          if (undefined === e) {
             e = this.head;
           }
           return function () {
@@ -7141,8 +7141,8 @@
           };
         };
         e.prototype.find = function (e, t) {
-          if (void 0 === t) {
-            t = !1;
+          if (undefined === t) {
+            t = false;
           }
           for (var n, r = this.iterator(); n = r();) {
             var o = n.length();
@@ -7208,16 +7208,16 @@
         };
       }();
       Object.defineProperty(t, "__esModule", {
-        value: !0
+        value: true
       });
       var o = n(17);
       var i = n(1);
       var a = {
-        attributes: !0,
-        characterData: !0,
-        characterDataOldValue: !0,
-        childList: !0,
-        subtree: !0
+        attributes: true,
+        characterData: true,
+        characterDataOldValue: true,
+        childList: true,
+        subtree: true
       };
       var s = function (e) {
         function t(t) {
@@ -7255,10 +7255,10 @@
         };
         t.prototype.optimize = function (t, n) {
           var r = this;
-          if (void 0 === t) {
+          if (undefined === t) {
             t = [];
           }
-          if (void 0 === n) {
+          if (undefined === n) {
             n = {};
           }
           e.prototype.optimize.call(this, n);
@@ -7266,8 +7266,8 @@
             t.push(a.pop());
           }
           for (var s = function e(t, n) {
-              if (void 0 === n) {
-                n = !0;
+              if (undefined === n) {
+                n = true;
               }
               if (null != t && t !== r && null != t.domNode.parentNode) {
                 if (null == t.domNode[i.DATA_KEY].mutations) {
@@ -7289,17 +7289,17 @@
               throw new Error("[Parchment] Maximum optimize iterations reached");
             }
             for (l.forEach(function (e) {
-              var t = i.find(e.target, !0);
+              var t = i.find(e.target, true);
               if (null != t) {
                 if (t.domNode === e.target) {
                   if ("childList" === e.type) {
-                    s(i.find(e.previousSibling, !1));
+                    s(i.find(e.previousSibling, false));
                     [].forEach.call(e.addedNodes, function (e) {
-                      var t = i.find(e, !1);
-                      s(t, !1);
+                      var t = i.find(e, false);
+                      s(t, false);
                       if (t instanceof o.default) {
                         t.children.forEach(function (e) {
-                          s(e, !1);
+                          s(e, false);
                         });
                       }
                     });
@@ -7318,11 +7318,11 @@
         };
         t.prototype.update = function (t, n) {
           var r = this;
-          if (void 0 === n) {
+          if (undefined === n) {
             n = {};
           }
           (t = t || this.observer.takeRecords()).map(function (e) {
-            var t = i.find(e.target, !0);
+            var t = i.find(e.target, true);
             return null == t ? null : null == t.domNode[i.DATA_KEY].mutations ? (t.domNode[i.DATA_KEY].mutations = [e], t) : (t.domNode[i.DATA_KEY].mutations.push(e), null);
           }).forEach(function (e) {
             if (null != e && e !== r && null != e.domNode[i.DATA_KEY]) {
@@ -7363,7 +7363,7 @@
         };
       }();
       Object.defineProperty(t, "__esModule", {
-        value: !0
+        value: true
       });
       var o = n(18);
       var i = n(1);
@@ -7384,7 +7384,7 @@
           } else {
             this.children.forEach(function (e) {
               if (!(e instanceof o.default)) {
-                e = e.wrap(t.blotName, !0);
+                e = e.wrap(t.blotName, true);
               }
               i.attributes.copy(e);
             });
@@ -7407,12 +7407,12 @@
           var o = this.next;
           if (o instanceof t && o.prev === this && function (e, t) {
             if (Object.keys(e).length !== Object.keys(t).length) {
-              return !1;
+              return false;
             }
             for (var n in e) if (e[n] !== t[n]) {
-              return !1;
+              return false;
             }
-            return !0;
+            return true;
           }(r, o.formats())) {
             o.moveChildren(this);
             o.remove();
@@ -7446,7 +7446,7 @@
         };
       }();
       Object.defineProperty(t, "__esModule", {
-        value: !0
+        value: true
       });
       var o = n(18);
       var i = n(1);
@@ -7521,7 +7521,7 @@
         };
       }();
       Object.defineProperty(t, "__esModule", {
-        value: !0
+        value: true
       });
       var o = function (e) {
         function t() {
@@ -7567,7 +7567,7 @@
         };
       }();
       Object.defineProperty(t, "__esModule", {
-        value: !0
+        value: true
       });
       var o = n(19);
       var i = n(1);
@@ -7618,14 +7618,14 @@
           }
         };
         t.prototype.position = function (e, t) {
-          if (void 0 === t) {
-            t = !1;
+          if (undefined === t) {
+            t = false;
           }
           return [this.domNode, e];
         };
         t.prototype.split = function (e, t) {
-          if (void 0 === t) {
-            t = !1;
+          if (undefined === t) {
+            t = false;
           }
           if (!t) {
             if (0 === e) {
@@ -7660,7 +7660,7 @@
       "use strict";
 
       var r = document.createElement("div");
-      r.classList.toggle("test-class", !1);
+      r.classList.toggle("test-class", false);
       if (r.classList.contains("test-class")) {
         var o = DOMTokenList.prototype.toggle;
         DOMTokenList.prototype.toggle = function (e, t) {
@@ -7703,8 +7703,8 @@
         });
       }
       document.addEventListener("DOMContentLoaded", function () {
-        document.execCommand("enableObjectResizing", !1, !1);
-        document.execCommand("autoUrlDetect", !1, !1);
+        document.execCommand("enableObjectResizing", false, false);
+        document.execCommand("autoUrlDetect", false, false);
       });
     }, function (e, t) {
       function n(e, t, a) {
@@ -7907,20 +7907,20 @@
           if ("" === t[t.length - 1][1]) {
             t.pop();
           }
-          var u = !1;
+          var u = false;
           for (r = 1; r < t.length - 1;) {
             if (0 == t[r - 1][0] && 0 == t[r + 1][0]) {
               if (t[r][1].substring(t[r][1].length - t[r - 1][1].length) == t[r - 1][1]) {
                 t[r][1] = t[r - 1][1] + t[r][1].substring(0, t[r][1].length - t[r - 1][1].length);
                 t[r + 1][1] = t[r - 1][1] + t[r + 1][1];
                 t.splice(r - 1, 1);
-                u = !0;
+                u = true;
               } else {
                 if (t[r][1].substring(0, t[r + 1][1].length) == t[r + 1][1]) {
                   t[r - 1][1] += t[r + 1][1];
                   t[r][1] = t[r][1].substring(t[r + 1][1].length) + t[r + 1][1];
                   t.splice(r + 1, 1);
-                  u = !0;
+                  u = true;
                 }
               }
             }
@@ -7982,11 +7982,11 @@
           }(d, a);
         }
         return d = function (e) {
-          for (var t = !1, n = function (e) {
+          for (var t = false, n = function (e) {
               return e.charCodeAt(0) >= 56320 && e.charCodeAt(0) <= 57343;
             }, r = 2; r < e.length; r += 1) {
             if (0 === e[r - 2][0] && (o = e[r - 2][1]).charCodeAt(o.length - 1) >= 55296 && o.charCodeAt(o.length - 1) <= 56319 && -1 === e[r - 1][0] && n(e[r - 1][1]) && 1 === e[r][0] && n(e[r][1])) {
-              t = !0;
+              t = true;
               e[r - 1][1] = e[r - 2][1].slice(-1) + e[r - 1][1];
               e[r][1] = e[r - 2][1].slice(-1) + e[r][1];
               e[r - 2][1] = e[r - 2][1].slice(0, -1);
@@ -8074,7 +8074,7 @@
         return "[object Arguments]" == Object.prototype.toString.call(e);
       }
       function o(e) {
-        return e && "object" == typeof e && "number" == typeof e.length && Object.prototype.hasOwnProperty.call(e, "callee") && !Object.prototype.propertyIsEnumerable.call(e, "callee") || !1;
+        return e && "object" == typeof e && "number" == typeof e.length && Object.prototype.hasOwnProperty.call(e, "callee") && !Object.prototype.propertyIsEnumerable.call(e, "callee") || false;
       }
       (t = e.exports = n ? r : o).supported = r;
       t.unsupported = o;
@@ -8087,7 +8087,7 @@
       function i(e, t, n) {
         this.fn = e;
         this.context = t;
-        this.once = n || !1;
+        this.once = n || false;
       }
       function a() {
         this._events = new o();
@@ -8096,7 +8096,7 @@
       if (Object.create) {
         o.prototype = Object.create(null);
         if (!new o().__proto__) {
-          r = !1;
+          r = false;
         }
       }
       a.prototype.eventNames = function () {
@@ -8131,32 +8131,32 @@
       a.prototype.emit = function (e, t, n, o, i, a) {
         var s = r ? r + e : e;
         if (!this._events[s]) {
-          return !1;
+          return false;
         }
         var c;
         var l;
         var u = this._events[s];
         var d = arguments.length;
         if (u.fn) {
-          switch (u.once && this.removeListener(e, u.fn, void 0, !0), d) {
+          switch (u.once && this.removeListener(e, u.fn, undefined, true), d) {
             case 1:
               u.fn.call(u.context);
-              return !0;
+              return true;
             case 2:
               u.fn.call(u.context, t);
-              return !0;
+              return true;
             case 3:
               u.fn.call(u.context, t, n);
-              return !0;
+              return true;
             case 4:
               u.fn.call(u.context, t, n, o);
-              return !0;
+              return true;
             case 5:
               u.fn.call(u.context, t, n, o, i);
-              return !0;
+              return true;
             case 6:
               u.fn.call(u.context, t, n, o, i, a);
-              return !0;
+              return true;
           }
           for (l = 1, c = new Array(d - 1); l < d; l++) {
             c[l - 1] = arguments[l];
@@ -8166,7 +8166,7 @@
           var p;
           var f = u.length;
           for (l = 0; l < f; l++) {
-            switch (u[l].once && this.removeListener(e, u[l].fn, void 0, !0), d) {
+            switch (u[l].once && this.removeListener(e, u[l].fn, undefined, true), d) {
               case 1:
                 u[l].fn.call(u[l].context);
                 break;
@@ -8189,7 +8189,7 @@
             }
           }
         }
-        return !0;
+        return true;
       };
       a.prototype.on = function (e, t, n) {
         var o = new i(t, n || this);
@@ -8207,7 +8207,7 @@
         return this;
       };
       a.prototype.once = function (e, t, n) {
-        var o = new i(t, n || this, !0);
+        var o = new i(t, n || this, true);
         var a = r ? r + e : e;
         if (this._events[a]) {
           if (this._events[a].fn) {
@@ -8292,9 +8292,9 @@
       "use strict";
 
       Object.defineProperty(t, "__esModule", {
-        value: !0
+        value: true
       });
-      t.matchText = t.matchSpacing = t.matchNewline = t.matchBlot = t.matchAttributor = t.default = void 0;
+      t.matchText = t.matchSpacing = t.matchNewline = t.matchBlot = t.matchAttributor = t.default = undefined;
       var r = "function" === typeof Symbol && "symbol" === typeof Symbol.iterator ? function (e) {
         return typeof e;
       } : function (e) {
@@ -8307,15 +8307,15 @@
         if (Symbol.iterator in Object(e)) {
           return function (e, t) {
             var n = [];
-            var r = !0;
-            var o = !1;
-            var i = void 0;
+            var r = true;
+            var o = false;
+            var i = undefined;
             try {
-              for (var a, s = e[Symbol.iterator](); !(r = (a = s.next()).done) && (n.push(a.value), !t || n.length !== t); r = !0) {
+              for (var a, s = e[Symbol.iterator](); !(r = (a = s.next()).done) && (n.push(a.value), !t || n.length !== t); r = true) {
                 ;
               }
             } catch (c) {
-              o = !0;
+              o = true;
               i = c;
             } finally {
               try {
@@ -8337,10 +8337,10 @@
         function e(e, t) {
           for (var n = 0; n < t.length; n++) {
             var r = t[n];
-            r.enumerable = r.enumerable || !1;
-            r.configurable = !0;
+            r.enumerable = r.enumerable || false;
+            r.configurable = true;
             if ("value" in r) {
-              r.writable = !0;
+              r.writable = true;
             }
             Object.defineProperty(e, r.key, r);
           }
@@ -8377,9 +8377,9 @@
         if (t in e) {
           Object.defineProperty(e, t, {
             value: n,
-            enumerable: !0,
-            configurable: !0,
-            writable: !0
+            enumerable: true,
+            configurable: true,
+            writable: true
           });
         } else {
           e[t] = n;
@@ -8397,10 +8397,10 @@
         var n = {};
         var r = e.style || {};
         if (r.fontStyle && "italic" === A(e).fontStyle) {
-          n.italic = !0;
+          n.italic = true;
         }
         if (r.fontWeight && (A(e).fontWeight.startsWith("bold") || parseInt(A(e).fontWeight) >= 700)) {
-          n.bold = !0;
+          n.bold = true;
         }
         if (Object.keys(n).length > 0) {
           t = I(t, n);
@@ -8449,7 +8449,7 @@
           }(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this, e, n));
           r.quill.root.addEventListener("paste", r.onPaste.bind(r));
           r.container = r.quill.addContainer("ql-clipboard");
-          r.container.setAttribute("contenteditable", !0);
+          r.container.setAttribute("contenteditable", true);
           r.container.setAttribute("tabindex", -1);
           r.matchers = [];
           w.concat(r.options.matchers).forEach(function (e) {
@@ -8469,9 +8469,9 @@
           e.prototype = Object.create(t && t.prototype, {
             constructor: {
               value: e,
-              enumerable: !1,
-              writable: !0,
-              configurable: !0
+              enumerable: false,
+              writable: true,
+              configurable: true
             }
           });
           if (t) {
@@ -8530,7 +8530,7 @@
         }, {
           key: "dangerouslyPasteHTML",
           value: function (e, t) {
-            var n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : l.default.sources.API;
+            var n = arguments.length > 2 && undefined !== arguments[2] ? arguments[2] : l.default.sources.API;
             if ("string" === typeof e) {
               this.quill.setContents(this.convert(e), t);
               this.quill.setSelection(0, l.default.sources.SILENT);
@@ -8610,13 +8610,13 @@
       }
       function N(e) {
         if (0 === e.childNodes.length) {
-          return !1;
+          return false;
         }
         var t = A(e);
         return ["block", "list-item"].indexOf(t.display) > -1;
       }
       function R(e, t, n) {
-        return I(n, e, !0);
+        return I(n, e, true);
       }
       function k(e, t) {
         var n = c.default.Attributor.Attribute.keys(e);
@@ -8627,11 +8627,11 @@
           var n = c.default.query(t, c.default.Scope.ATTRIBUTE);
           if (!(null != n && (i[n.attrName] = n.value(e), i[n.attrName]))) {
             if (!(null == (n = C[t]) || n.attrName !== t && n.keyName !== t)) {
-              i[n.attrName] = n.value(e) || void 0;
+              i[n.attrName] = n.value(e) || undefined;
             }
             if (!(null == (n = T[t]) || n.attrName !== t && n.keyName !== t)) {
               n = T[t];
-              i[n.attrName] = n.value(e) || void 0;
+              i[n.attrName] = n.value(e) || undefined;
             }
           }
         });
@@ -8686,19 +8686,19 @@
           var r = function (e, t) {
             return (t = t.replace(/[^\u00a0]/g, "")).length < 1 && e ? " " : t;
           };
-          n = (n = n.replace(/\r\n/g, " ").replace(/\n/g, " ")).replace(/\s\s+/g, r.bind(r, !0));
+          n = (n = n.replace(/\r\n/g, " ").replace(/\n/g, " ")).replace(/\s\s+/g, r.bind(r, true));
           if (null == e.previousSibling && N(e.parentNode) || null != e.previousSibling && N(e.previousSibling)) {
-            n = n.replace(/^\s+/, r.bind(r, !1));
+            n = n.replace(/^\s+/, r.bind(r, false));
           }
           if (null == e.nextSibling && N(e.parentNode) || null != e.nextSibling && N(e.nextSibling)) {
-            n = n.replace(/\s+$/, r.bind(r, !1));
+            n = n.replace(/\s+$/, r.bind(r, false));
           }
         }
         return t.insert(n);
       }
       S.DEFAULTS = {
         matchers: [],
-        matchVisual: !0
+        matchVisual: true
       };
       t.default = S;
       t.matchAttributor = k;
@@ -8710,17 +8710,17 @@
       "use strict";
 
       Object.defineProperty(t, "__esModule", {
-        value: !0
+        value: true
       });
       var r;
       var o = function () {
         function e(e, t) {
           for (var n = 0; n < t.length; n++) {
             var r = t[n];
-            r.enumerable = r.enumerable || !1;
-            r.configurable = !0;
+            r.enumerable = r.enumerable || false;
+            r.configurable = true;
             if ("value" in r) {
-              r.writable = !0;
+              r.writable = true;
             }
             Object.defineProperty(e, r.key, r);
           }
@@ -8740,15 +8740,15 @@
           t = Function.prototype;
         }
         var o = Object.getOwnPropertyDescriptor(t, n);
-        if (void 0 === o) {
+        if (undefined === o) {
           var i = Object.getPrototypeOf(t);
-          return null === i ? void 0 : e(i, n, r);
+          return null === i ? undefined : e(i, n, r);
         }
         if ("value" in o) {
           return o.value;
         }
         var a = o.get;
-        return void 0 !== a ? a.call(r) : void 0;
+        return undefined !== a ? a.call(r) : undefined;
       };
       var a = n(6);
       function s(e, t) {
@@ -8774,9 +8774,9 @@
           e.prototype = Object.create(t && t.prototype, {
             constructor: {
               value: e,
-              enumerable: !1,
-              writable: !0,
-              configurable: !0
+              enumerable: false,
+              writable: true,
+              configurable: true
             }
           });
           if (t) {
@@ -8803,7 +8803,7 @@
         }, {
           key: "formats",
           value: function () {
-            return !0;
+            return true;
           }
         }]);
         return t;
@@ -8817,9 +8817,9 @@
       "use strict";
 
       Object.defineProperty(t, "__esModule", {
-        value: !0
+        value: true
       });
-      t.addControls = t.default = void 0;
+      t.addControls = t.default = undefined;
       var r = function (e, t) {
         if (Array.isArray(e)) {
           return e;
@@ -8827,15 +8827,15 @@
         if (Symbol.iterator in Object(e)) {
           return function (e, t) {
             var n = [];
-            var r = !0;
-            var o = !1;
-            var i = void 0;
+            var r = true;
+            var o = false;
+            var i = undefined;
             try {
-              for (var a, s = e[Symbol.iterator](); !(r = (a = s.next()).done) && (n.push(a.value), !t || n.length !== t); r = !0) {
+              for (var a, s = e[Symbol.iterator](); !(r = (a = s.next()).done) && (n.push(a.value), !t || n.length !== t); r = true) {
                 ;
               }
             } catch (c) {
-              o = !0;
+              o = true;
               i = c;
             } finally {
               try {
@@ -8857,10 +8857,10 @@
         function e(e, t) {
           for (var n = 0; n < t.length; n++) {
             var r = t[n];
-            r.enumerable = r.enumerable || !1;
-            r.configurable = !0;
+            r.enumerable = r.enumerable || false;
+            r.configurable = true;
             if ("value" in r) {
-              r.writable = !0;
+              r.writable = true;
             }
             Object.defineProperty(e, r.key, r);
           }
@@ -8932,9 +8932,9 @@
           e.prototype = Object.create(t && t.prototype, {
             constructor: {
               value: e,
-              enumerable: !1,
-              writable: !0,
-              configurable: !0
+              enumerable: false,
+              writable: true,
+              configurable: true
             }
           });
           if (t) {
@@ -8972,13 +8972,13 @@
               }
               var o = "SELECT" === e.tagName ? "change" : "click";
               e.addEventListener(o, function (o) {
-                var c = void 0;
+                var c = undefined;
                 if ("SELECT" === e.tagName) {
                   if (e.selectedIndex < 0) {
                     return;
                   }
                   var l = e.options[e.selectedIndex];
-                  c = !l.hasAttribute("selected") && (l.value || !1);
+                  c = !l.hasAttribute("selected") && (l.value || false);
                 } else {
                   c = !e.classList.contains("ql-active") && (e.value || !e.hasAttribute("value"));
                   o.preventDefault();
@@ -8996,9 +8996,9 @@
                     if (t in e) {
                       Object.defineProperty(e, t, {
                         value: n,
-                        enumerable: !0,
-                        configurable: !0,
-                        writable: !0
+                        enumerable: true,
+                        configurable: true,
+                        writable: true
                       });
                     } else {
                       e[t] = n;
@@ -9022,7 +9022,7 @@
               var i = o[0];
               var a = o[1];
               if ("SELECT" === a.tagName) {
-                var s = void 0;
+                var s = undefined;
                 if (null == e) {
                   s = null;
                 } else if (null == t[i]) {
@@ -9038,7 +9038,7 @@
                   a.value = "";
                   a.selectedIndex = -1;
                 } else {
-                  s.selected = !0;
+                  s.selected = true;
                 }
               } else if (null == e) {
                 a.classList.remove("ql-active");
@@ -9081,7 +9081,7 @@
                   r.classList.add("ql-" + t);
                   n.forEach(function (e) {
                     var t = document.createElement("option");
-                    if (!1 !== e) {
+                    if (false !== e) {
                       t.setAttribute("value", e);
                     } else {
                       t.setAttribute("selected", "selected");
@@ -9110,7 +9110,7 @@
                 var n = this.quill.getFormat();
                 Object.keys(n).forEach(function (t) {
                   if (null != a.default.query(t, a.default.Scope.INLINE)) {
-                    e.quill.format(t, !1);
+                    e.quill.format(t, false);
                   }
                 });
               } else {
@@ -9124,7 +9124,7 @@
               this.quill.format("align", "right", s.default.sources.USER);
             } else {
               if (!(e || "right" !== t)) {
-                this.quill.format("align", !1, s.default.sources.USER);
+                this.quill.format("align", false, s.default.sources.USER);
               }
             }
             this.quill.format("direction", e, s.default.sources.USER);
@@ -9142,7 +9142,7 @@
             }
           },
           link: function (e) {
-            if (!0 === e) {
+            if (true === e) {
               e = prompt("Enter link URL:");
             }
             this.quill.format("link", e, s.default.sources.USER);
@@ -9152,7 +9152,7 @@
             var n = this.quill.getFormat(t);
             if ("check" === e) {
               if ("checked" === n.list || "unchecked" === n.list) {
-                this.quill.format("list", !1, s.default.sources.USER);
+                this.quill.format("list", false, s.default.sources.USER);
               } else {
                 this.quill.format("list", "unchecked", s.default.sources.USER);
               }
@@ -9170,17 +9170,17 @@
       "use strict";
 
       Object.defineProperty(t, "__esModule", {
-        value: !0
+        value: true
       });
       var r;
       var o = function () {
         function e(e, t) {
           for (var n = 0; n < t.length; n++) {
             var r = t[n];
-            r.enumerable = r.enumerable || !1;
-            r.configurable = !0;
+            r.enumerable = r.enumerable || false;
+            r.configurable = true;
             if ("value" in r) {
-              r.writable = !0;
+              r.writable = true;
             }
             Object.defineProperty(e, r.key, r);
           }
@@ -9200,15 +9200,15 @@
           t = Function.prototype;
         }
         var o = Object.getOwnPropertyDescriptor(t, n);
-        if (void 0 === o) {
+        if (undefined === o) {
           var i = Object.getPrototypeOf(t);
-          return null === i ? void 0 : e(i, n, r);
+          return null === i ? undefined : e(i, n, r);
         }
         if ("value" in o) {
           return o.value;
         }
         var a = o.get;
-        return void 0 !== a ? a.call(r) : void 0;
+        return undefined !== a ? a.call(r) : undefined;
       };
       var a = n(28);
       var s = function (e) {
@@ -9238,9 +9238,9 @@
           e.prototype = Object.create(t && t.prototype, {
             constructor: {
               value: e,
-              enumerable: !1,
-              writable: !0,
-              configurable: !0
+              enumerable: false,
+              writable: true,
+              configurable: true
             }
           });
           if (t) {
@@ -9282,17 +9282,17 @@
       "use strict";
 
       Object.defineProperty(t, "__esModule", {
-        value: !0
+        value: true
       });
       var r;
       var o = function () {
         function e(e, t) {
           for (var n = 0; n < t.length; n++) {
             var r = t[n];
-            r.enumerable = r.enumerable || !1;
-            r.configurable = !0;
+            r.enumerable = r.enumerable || false;
+            r.configurable = true;
             if ("value" in r) {
-              r.writable = !0;
+              r.writable = true;
             }
             Object.defineProperty(e, r.key, r);
           }
@@ -9336,9 +9336,9 @@
           e.prototype = Object.create(t && t.prototype, {
             constructor: {
               value: e,
-              enumerable: !1,
-              writable: !0,
-              configurable: !0
+              enumerable: false,
+              writable: true,
+              configurable: true
             }
           });
           if (t) {
@@ -9357,15 +9357,15 @@
                 t = Function.prototype;
               }
               var o = Object.getOwnPropertyDescriptor(t, n);
-              if (void 0 === o) {
+              if (undefined === o) {
                 var i = Object.getPrototypeOf(t);
-                return null === i ? void 0 : e(i, n, r);
+                return null === i ? undefined : e(i, n, r);
               }
               if ("value" in o) {
                 return o.value;
               }
               var a = o.get;
-              return void 0 !== a ? a.call(r) : void 0;
+              return undefined !== a ? a.call(r) : undefined;
             })(t.prototype.__proto__ || Object.getPrototypeOf(t.prototype), "selectItem", this).call(this, e, n);
             e = e || this.defaultItem;
             this.label.innerHTML = e.innerHTML;
@@ -9380,16 +9380,16 @@
       "use strict";
 
       Object.defineProperty(t, "__esModule", {
-        value: !0
+        value: true
       });
       var r = function () {
         function e(e, t) {
           for (var n = 0; n < t.length; n++) {
             var r = t[n];
-            r.enumerable = r.enumerable || !1;
-            r.configurable = !0;
+            r.enumerable = r.enumerable || false;
+            r.configurable = true;
             if ("value" in r) {
-              r.writable = !0;
+              r.writable = true;
             }
             Object.defineProperty(e, r.key, r);
           }
@@ -9469,7 +9469,7 @@
       "use strict";
 
       Object.defineProperty(t, "__esModule", {
-        value: !0
+        value: true
       });
       var r = function (e, t) {
         if (Array.isArray(e)) {
@@ -9478,15 +9478,15 @@
         if (Symbol.iterator in Object(e)) {
           return function (e, t) {
             var n = [];
-            var r = !0;
-            var o = !1;
-            var i = void 0;
+            var r = true;
+            var o = false;
+            var i = undefined;
             try {
-              for (var a, s = e[Symbol.iterator](); !(r = (a = s.next()).done) && (n.push(a.value), !t || n.length !== t); r = !0) {
+              for (var a, s = e[Symbol.iterator](); !(r = (a = s.next()).done) && (n.push(a.value), !t || n.length !== t); r = true) {
                 ;
               }
             } catch (c) {
-              o = !0;
+              o = true;
               i = c;
             } finally {
               try {
@@ -9509,24 +9509,24 @@
           t = Function.prototype;
         }
         var o = Object.getOwnPropertyDescriptor(t, n);
-        if (void 0 === o) {
+        if (undefined === o) {
           var i = Object.getPrototypeOf(t);
-          return null === i ? void 0 : e(i, n, r);
+          return null === i ? undefined : e(i, n, r);
         }
         if ("value" in o) {
           return o.value;
         }
         var a = o.get;
-        return void 0 !== a ? a.call(r) : void 0;
+        return undefined !== a ? a.call(r) : undefined;
       };
       var i = function () {
         function e(e, t) {
           for (var n = 0; n < t.length; n++) {
             var r = t[n];
-            r.enumerable = r.enumerable || !1;
-            r.configurable = !0;
+            r.enumerable = r.enumerable || false;
+            r.configurable = true;
             if ("value" in r) {
-              r.writable = !0;
+              r.writable = true;
             }
             Object.defineProperty(e, r.key, r);
           }
@@ -9571,9 +9571,9 @@
         e.prototype = Object.create(t && t.prototype, {
           constructor: {
             value: e,
-            enumerable: !1,
-            writable: !0,
-            configurable: !0
+            enumerable: false,
+            writable: true,
+            configurable: true
           }
         });
         if (t) {
@@ -9585,7 +9585,7 @@
         }
       }
       var _ = [[{
-        header: ["1", "2", "3", !1]
+        header: ["1", "2", "3", false]
       }], ["bold", "italic", "underline", "link"], [{
         list: "ordered"
       }, {
@@ -9612,7 +9612,7 @@
             if (e.container.querySelector(".ql-link")) {
               this.quill.keyboard.addBinding({
                 key: "K",
-                shortKey: !0
+                shortKey: true
               }, function (t, n) {
                 e.handlers.link.call(e, !n.format.link);
               });
@@ -9621,7 +9621,7 @@
         }]);
         return t;
       }(l.default);
-      v.DEFAULTS = (0, a.default)(!0, {}, l.default.DEFAULTS, {
+      v.DEFAULTS = (0, a.default)(true, {}, l.default.DEFAULTS, {
         modules: {
           toolbar: {
             handlers: {
@@ -9637,7 +9637,7 @@
                   }
                   this.quill.theme.tooltip.edit("link", n);
                 } else {
-                  this.quill.format("link", !1);
+                  this.quill.format("link", false);
                 }
               }
             }
@@ -9669,7 +9669,7 @@
               if (null != e.linkRange) {
                 var n = e.linkRange;
                 e.restoreFocus();
-                e.quill.formatText(n, "link", !1, s.default.sources.USER);
+                e.quill.formatText(n, "link", false, s.default.sources.USER);
                 delete e.linkRange;
               }
               t.preventDefault();
@@ -9712,7 +9712,7 @@
       "use strict";
 
       Object.defineProperty(t, "__esModule", {
-        value: !0
+        value: true
       });
       var r = M(n(29));
       var o = n(36);
@@ -9765,7 +9765,7 @@
         "attributors/style/direction": i.DirectionStyle,
         "attributors/style/font": f.FontStyle,
         "attributors/style/size": h.SizeStyle
-      }, !0);
+      }, true);
       r.default.register({
         "formats/align": o.AlignClass,
         "formats/direction": i.DirectionClass,
@@ -9798,24 +9798,24 @@
         "ui/icon-picker": R.default,
         "ui/color-picker": N.default,
         "ui/tooltip": k.default
-      }, !0);
+      }, true);
       t.default = r.default;
     }, function (e, t, n) {
       "use strict";
 
       Object.defineProperty(t, "__esModule", {
-        value: !0
+        value: true
       });
-      t.IndentClass = void 0;
+      t.IndentClass = undefined;
       var r;
       var o = function () {
         function e(e, t) {
           for (var n = 0; n < t.length; n++) {
             var r = t[n];
-            r.enumerable = r.enumerable || !1;
-            r.configurable = !0;
+            r.enumerable = r.enumerable || false;
+            r.configurable = true;
             if ("value" in r) {
-              r.writable = !0;
+              r.writable = true;
             }
             Object.defineProperty(e, r.key, r);
           }
@@ -9835,15 +9835,15 @@
           t = Function.prototype;
         }
         var o = Object.getOwnPropertyDescriptor(t, n);
-        if (void 0 === o) {
+        if (undefined === o) {
           var i = Object.getPrototypeOf(t);
-          return null === i ? void 0 : e(i, n, r);
+          return null === i ? undefined : e(i, n, r);
         }
         if ("value" in o) {
           return o.value;
         }
         var a = o.get;
-        return void 0 !== a ? a.call(r) : void 0;
+        return undefined !== a ? a.call(r) : undefined;
       };
       var a = n(0);
       var s = (r = a) && r.__esModule ? r : {
@@ -9872,9 +9872,9 @@
           e.prototype = Object.create(t && t.prototype, {
             constructor: {
               value: e,
-              enumerable: !1,
-              writable: !0,
-              configurable: !0
+              enumerable: false,
+              writable: true,
+              configurable: true
             }
           });
           if (t) {
@@ -9892,7 +9892,7 @@
               var r = this.value(e) || 0;
               n = "+1" === n ? r + 1 : r - 1;
             }
-            return 0 === n ? (this.remove(e), !0) : i(t.prototype.__proto__ || Object.getPrototypeOf(t.prototype), "add", this).call(this, e, n);
+            return 0 === n ? (this.remove(e), true) : i(t.prototype.__proto__ || Object.getPrototypeOf(t.prototype), "add", this).call(this, e, n);
           }
         }, {
           key: "canAdd",
@@ -9902,7 +9902,7 @@
         }, {
           key: "value",
           value: function (e) {
-            return parseInt(i(t.prototype.__proto__ || Object.getPrototypeOf(t.prototype), "value", this).call(this, e)) || void 0;
+            return parseInt(i(t.prototype.__proto__ || Object.getPrototypeOf(t.prototype), "value", this).call(this, e)) || undefined;
           }
         }]);
         return t;
@@ -9915,7 +9915,7 @@
       "use strict";
 
       Object.defineProperty(t, "__esModule", {
-        value: !0
+        value: true
       });
       var r;
       var o = n(4);
@@ -9942,9 +9942,9 @@
           e.prototype = Object.create(t && t.prototype, {
             constructor: {
               value: e,
-              enumerable: !1,
-              writable: !0,
-              configurable: !0
+              enumerable: false,
+              writable: true,
+              configurable: true
             }
           });
           if (t) {
@@ -9966,17 +9966,17 @@
       "use strict";
 
       Object.defineProperty(t, "__esModule", {
-        value: !0
+        value: true
       });
       var r;
       var o = function () {
         function e(e, t) {
           for (var n = 0; n < t.length; n++) {
             var r = t[n];
-            r.enumerable = r.enumerable || !1;
-            r.configurable = !0;
+            r.enumerable = r.enumerable || false;
+            r.configurable = true;
             if ("value" in r) {
-              r.writable = !0;
+              r.writable = true;
             }
             Object.defineProperty(e, r.key, r);
           }
@@ -10015,9 +10015,9 @@
           e.prototype = Object.create(t && t.prototype, {
             constructor: {
               value: e,
-              enumerable: !1,
-              writable: !0,
-              configurable: !0
+              enumerable: false,
+              writable: true,
+              configurable: true
             }
           });
           if (t) {
@@ -10045,17 +10045,17 @@
       "use strict";
 
       Object.defineProperty(t, "__esModule", {
-        value: !0
+        value: true
       });
-      t.default = t.ListItem = void 0;
+      t.default = t.ListItem = undefined;
       var r = function () {
         function e(e, t) {
           for (var n = 0; n < t.length; n++) {
             var r = t[n];
-            r.enumerable = r.enumerable || !1;
-            r.configurable = !0;
+            r.enumerable = r.enumerable || false;
+            r.configurable = true;
             if ("value" in r) {
-              r.writable = !0;
+              r.writable = true;
             }
             Object.defineProperty(e, r.key, r);
           }
@@ -10075,15 +10075,15 @@
           t = Function.prototype;
         }
         var o = Object.getOwnPropertyDescriptor(t, n);
-        if (void 0 === o) {
+        if (undefined === o) {
           var i = Object.getPrototypeOf(t);
-          return null === i ? void 0 : e(i, n, r);
+          return null === i ? undefined : e(i, n, r);
         }
         if ("value" in o) {
           return o.value;
         }
         var a = o.get;
-        return void 0 !== a ? a.call(r) : void 0;
+        return undefined !== a ? a.call(r) : undefined;
       };
       var i = c(n(0));
       var a = c(n(4));
@@ -10111,9 +10111,9 @@
         e.prototype = Object.create(t && t.prototype, {
           constructor: {
             value: e,
-            enumerable: !1,
-            writable: !0,
-            configurable: !0
+            enumerable: false,
+            writable: true,
+            configurable: true
           }
         });
         if (t) {
@@ -10157,7 +10157,7 @@
         }], [{
           key: "formats",
           value: function (e) {
-            return e.tagName === this.tagName ? void 0 : o(t.__proto__ || Object.getPrototypeOf(t), "formats", this).call(this, e);
+            return e.tagName === this.tagName ? undefined : o(t.__proto__ || Object.getPrototypeOf(t), "formats", this).call(this, e);
           }
         }]);
         return t;
@@ -10199,7 +10199,7 @@
         }, {
           key: "formats",
           value: function (e) {
-            return "OL" === e.tagName ? "ordered" : "UL" === e.tagName ? e.hasAttribute("data-checked") ? "true" === e.getAttribute("data-checked") ? "checked" : "unchecked" : "bullet" : void 0;
+            return "OL" === e.tagName ? "ordered" : "UL" === e.tagName ? e.hasAttribute("data-checked") ? "true" === e.getAttribute("data-checked") ? "checked" : "unchecked" : "bullet" : undefined;
           }
         }]);
         r(t, [{
@@ -10216,9 +10216,9 @@
               if (t in e) {
                 Object.defineProperty(e, t, {
                   value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0
+                  enumerable: true,
+                  configurable: true,
+                  writable: true
                 });
               } else {
                 e[t] = n;
@@ -10271,7 +10271,7 @@
       "use strict";
 
       Object.defineProperty(t, "__esModule", {
-        value: !0
+        value: true
       });
       var r;
       var o = n(56);
@@ -10298,9 +10298,9 @@
           e.prototype = Object.create(t && t.prototype, {
             constructor: {
               value: e,
-              enumerable: !1,
-              writable: !0,
-              configurable: !0
+              enumerable: false,
+              writable: true,
+              configurable: true
             }
           });
           if (t) {
@@ -10322,17 +10322,17 @@
       "use strict";
 
       Object.defineProperty(t, "__esModule", {
-        value: !0
+        value: true
       });
       var r;
       var o = function () {
         function e(e, t) {
           for (var n = 0; n < t.length; n++) {
             var r = t[n];
-            r.enumerable = r.enumerable || !1;
-            r.configurable = !0;
+            r.enumerable = r.enumerable || false;
+            r.configurable = true;
             if ("value" in r) {
-              r.writable = !0;
+              r.writable = true;
             }
             Object.defineProperty(e, r.key, r);
           }
@@ -10371,9 +10371,9 @@
           e.prototype = Object.create(t && t.prototype, {
             constructor: {
               value: e,
-              enumerable: !1,
-              writable: !0,
-              configurable: !0
+              enumerable: false,
+              writable: true,
+              configurable: true
             }
           });
           if (t) {
@@ -10392,21 +10392,21 @@
                 t = Function.prototype;
               }
               var o = Object.getOwnPropertyDescriptor(t, n);
-              if (void 0 === o) {
+              if (undefined === o) {
                 var i = Object.getPrototypeOf(t);
-                return null === i ? void 0 : e(i, n, r);
+                return null === i ? undefined : e(i, n, r);
               }
               if ("value" in o) {
                 return o.value;
               }
               var a = o.get;
-              return void 0 !== a ? a.call(r) : void 0;
+              return undefined !== a ? a.call(r) : undefined;
             }(t.__proto__ || Object.getPrototypeOf(t), "create", this).call(this, e);
           }
         }, {
           key: "formats",
           value: function (e) {
-            return "SUB" === e.tagName ? "sub" : "SUP" === e.tagName ? "super" : void 0;
+            return "SUB" === e.tagName ? "sub" : "SUP" === e.tagName ? "super" : undefined;
           }
         }]);
         return t;
@@ -10420,7 +10420,7 @@
       "use strict";
 
       Object.defineProperty(t, "__esModule", {
-        value: !0
+        value: true
       });
       var r;
       var o = n(6);
@@ -10447,9 +10447,9 @@
           e.prototype = Object.create(t && t.prototype, {
             constructor: {
               value: e,
-              enumerable: !1,
-              writable: !0,
-              configurable: !0
+              enumerable: false,
+              writable: true,
+              configurable: true
             }
           });
           if (t) {
@@ -10471,7 +10471,7 @@
       "use strict";
 
       Object.defineProperty(t, "__esModule", {
-        value: !0
+        value: true
       });
       var r;
       var o = n(6);
@@ -10498,9 +10498,9 @@
           e.prototype = Object.create(t && t.prototype, {
             constructor: {
               value: e,
-              enumerable: !1,
-              writable: !0,
-              configurable: !0
+              enumerable: false,
+              writable: true,
+              configurable: true
             }
           });
           if (t) {
@@ -10522,17 +10522,17 @@
       "use strict";
 
       Object.defineProperty(t, "__esModule", {
-        value: !0
+        value: true
       });
       var r;
       var o = function () {
         function e(e, t) {
           for (var n = 0; n < t.length; n++) {
             var r = t[n];
-            r.enumerable = r.enumerable || !1;
-            r.configurable = !0;
+            r.enumerable = r.enumerable || false;
+            r.configurable = true;
             if ("value" in r) {
-              r.writable = !0;
+              r.writable = true;
             }
             Object.defineProperty(e, r.key, r);
           }
@@ -10552,15 +10552,15 @@
           t = Function.prototype;
         }
         var o = Object.getOwnPropertyDescriptor(t, n);
-        if (void 0 === o) {
+        if (undefined === o) {
           var i = Object.getPrototypeOf(t);
-          return null === i ? void 0 : e(i, n, r);
+          return null === i ? undefined : e(i, n, r);
         }
         if ("value" in o) {
           return o.value;
         }
         var a = o.get;
-        return void 0 !== a ? a.call(r) : void 0;
+        return undefined !== a ? a.call(r) : undefined;
       };
       var a = n(0);
       var s = (r = a) && r.__esModule ? r : {
@@ -10591,9 +10591,9 @@
           e.prototype = Object.create(t && t.prototype, {
             constructor: {
               value: e,
-              enumerable: !1,
-              writable: !0,
-              configurable: !0
+              enumerable: false,
+              writable: true,
+              configurable: true
             }
           });
           if (t) {
@@ -10661,17 +10661,17 @@
       "use strict";
 
       Object.defineProperty(t, "__esModule", {
-        value: !0
+        value: true
       });
       var r;
       var o = function () {
         function e(e, t) {
           for (var n = 0; n < t.length; n++) {
             var r = t[n];
-            r.enumerable = r.enumerable || !1;
-            r.configurable = !0;
+            r.enumerable = r.enumerable || false;
+            r.configurable = true;
             if ("value" in r) {
-              r.writable = !0;
+              r.writable = true;
             }
             Object.defineProperty(e, r.key, r);
           }
@@ -10691,15 +10691,15 @@
           t = Function.prototype;
         }
         var o = Object.getOwnPropertyDescriptor(t, n);
-        if (void 0 === o) {
+        if (undefined === o) {
           var i = Object.getPrototypeOf(t);
-          return null === i ? void 0 : e(i, n, r);
+          return null === i ? undefined : e(i, n, r);
         }
         if ("value" in o) {
           return o.value;
         }
         var a = o.get;
-        return void 0 !== a ? a.call(r) : void 0;
+        return undefined !== a ? a.call(r) : undefined;
       };
       var a = n(4);
       var s = n(27);
@@ -10730,9 +10730,9 @@
           e.prototype = Object.create(t && t.prototype, {
             constructor: {
               value: e,
-              enumerable: !1,
-              writable: !0,
-              configurable: !0
+              enumerable: false,
+              writable: true,
+              configurable: true
             }
           });
           if (t) {
@@ -10761,7 +10761,7 @@
           value: function (e) {
             var n = i(t.__proto__ || Object.getPrototypeOf(t), "create", this).call(this, e);
             n.setAttribute("frameborder", "0");
-            n.setAttribute("allowfullscreen", !0);
+            n.setAttribute("allowfullscreen", true);
             n.setAttribute("src", this.sanitize(e));
             return n;
           }
@@ -10796,17 +10796,17 @@
       "use strict";
 
       Object.defineProperty(t, "__esModule", {
-        value: !0
+        value: true
       });
-      t.default = t.FormulaBlot = void 0;
+      t.default = t.FormulaBlot = undefined;
       var r = function () {
         function e(e, t) {
           for (var n = 0; n < t.length; n++) {
             var r = t[n];
-            r.enumerable = r.enumerable || !1;
-            r.configurable = !0;
+            r.enumerable = r.enumerable || false;
+            r.configurable = true;
             if ("value" in r) {
-              r.writable = !0;
+              r.writable = true;
             }
             Object.defineProperty(e, r.key, r);
           }
@@ -10847,9 +10847,9 @@
         e.prototype = Object.create(t && t.prototype, {
           constructor: {
             value: e,
-            enumerable: !1,
-            writable: !0,
-            configurable: !0
+            enumerable: false,
+            writable: true,
+            configurable: true
           }
         });
         if (t) {
@@ -10874,19 +10874,19 @@
                 t = Function.prototype;
               }
               var o = Object.getOwnPropertyDescriptor(t, n);
-              if (void 0 === o) {
+              if (undefined === o) {
                 var i = Object.getPrototypeOf(t);
-                return null === i ? void 0 : e(i, n, r);
+                return null === i ? undefined : e(i, n, r);
               }
               if ("value" in o) {
                 return o.value;
               }
               var a = o.get;
-              return void 0 !== a ? a.call(r) : void 0;
+              return undefined !== a ? a.call(r) : undefined;
             }(t.__proto__ || Object.getPrototypeOf(t), "create", this).call(this, e);
             if ("string" === typeof e) {
               window.katex.render(e, n, {
-                throwOnError: !1,
+                throwOnError: false,
                 errorColor: "#f00"
               });
               n.setAttribute("data-value", e);
@@ -10917,7 +10917,7 @@
         r(t, null, [{
           key: "register",
           value: function () {
-            i.default.register(d, !0);
+            i.default.register(d, true);
           }
         }]);
         return t;
@@ -10928,17 +10928,17 @@
       "use strict";
 
       Object.defineProperty(t, "__esModule", {
-        value: !0
+        value: true
       });
-      t.default = t.CodeToken = t.CodeBlock = void 0;
+      t.default = t.CodeToken = t.CodeBlock = undefined;
       var r = function () {
         function e(e, t) {
           for (var n = 0; n < t.length; n++) {
             var r = t[n];
-            r.enumerable = r.enumerable || !1;
-            r.configurable = !0;
+            r.enumerable = r.enumerable || false;
+            r.configurable = true;
             if ("value" in r) {
-              r.writable = !0;
+              r.writable = true;
             }
             Object.defineProperty(e, r.key, r);
           }
@@ -10979,9 +10979,9 @@
         e.prototype = Object.create(t && t.prototype, {
           constructor: {
             value: e,
-            enumerable: !1,
-            writable: !0,
-            configurable: !0
+            enumerable: false,
+            writable: true,
+            configurable: true
           }
         });
         if (t) {
@@ -11008,15 +11008,15 @@
                 t = Function.prototype;
               }
               var o = Object.getOwnPropertyDescriptor(t, n);
-              if (void 0 === o) {
+              if (undefined === o) {
                 var i = Object.getPrototypeOf(t);
-                return null === i ? void 0 : e(i, n, r);
+                return null === i ? undefined : e(i, n, r);
               }
               if ("value" in o) {
                 return o.value;
               }
               var a = o.get;
-              return void 0 !== a ? a.call(r) : void 0;
+              return undefined !== a ? a.call(r) : undefined;
             })(t.prototype.__proto__ || Object.getPrototypeOf(t.prototype), "replaceWith", this).call(this, e);
           }
         }, {
@@ -11061,8 +11061,8 @@
         r(t, null, [{
           key: "register",
           value: function () {
-            i.default.register(p, !0);
-            i.default.register(d, !0);
+            i.default.register(p, true);
+            i.default.register(d, true);
           }
         }]);
         r(t, [{
@@ -11161,32 +11161,32 @@
       "use strict";
 
       Object.defineProperty(t, "__esModule", {
-        value: !0
+        value: true
       });
-      t.default = t.BubbleTooltip = void 0;
+      t.default = t.BubbleTooltip = undefined;
       var r = function e(t, n, r) {
         if (null === t) {
           t = Function.prototype;
         }
         var o = Object.getOwnPropertyDescriptor(t, n);
-        if (void 0 === o) {
+        if (undefined === o) {
           var i = Object.getPrototypeOf(t);
-          return null === i ? void 0 : e(i, n, r);
+          return null === i ? undefined : e(i, n, r);
         }
         if ("value" in o) {
           return o.value;
         }
         var a = o.get;
-        return void 0 !== a ? a.call(r) : void 0;
+        return undefined !== a ? a.call(r) : undefined;
       };
       var o = function () {
         function e(e, t) {
           for (var n = 0; n < t.length; n++) {
             var r = t[n];
-            r.enumerable = r.enumerable || !1;
-            r.configurable = !0;
+            r.enumerable = r.enumerable || false;
+            r.configurable = true;
             if ("value" in r) {
-              r.writable = !0;
+              r.writable = true;
             }
             Object.defineProperty(e, r.key, r);
           }
@@ -11230,9 +11230,9 @@
         e.prototype = Object.create(t && t.prototype, {
           constructor: {
             value: e,
-            enumerable: !1,
-            writable: !0,
-            configurable: !0
+            enumerable: false,
+            writable: true,
+            configurable: true
           }
         });
         if (t) {
@@ -11270,7 +11270,7 @@
         }]);
         return t;
       }(c.default);
-      g.DEFAULTS = (0, i.default)(!0, {}, c.default.DEFAULTS, {
+      g.DEFAULTS = (0, i.default)(true, {}, c.default.DEFAULTS, {
         modules: {
           toolbar: {
             handlers: {
@@ -11278,7 +11278,7 @@
                 if (e) {
                   this.quill.theme.tooltip.edit();
                 } else {
-                  this.quill.format("link", !1);
+                  this.quill.format("link", false);
                 }
               }
             }

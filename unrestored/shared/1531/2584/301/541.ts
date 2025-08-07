@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.FieldImage = void 0;
+exports.FieldImage = undefined;
 var r = require("tslib");
 var i = require("inversify");
 var o = require("../1001/213/index");
@@ -13,13 +13,13 @@ var c = function (e) {
   function t(t) {
     var r = e.call(this, t.opt_alt) || this;
     r.field_type = "FieldImage";
-    r.editable = !1;
+    r.editable = false;
     r.src_ = t.src;
     r.width_ = isNaN(Number(t.width)) ? n.DEFAULT_WIDTH : Number(t.width);
     r.height_ = isNaN(Number(t.height)) ? r.width_ : Number(t.height);
     r.size_ = new a.Size(r.width_, r.height_ + 2 * r.theme.renderer.STATEMENT_ROW_PADDING_Y_TO_VALUE_BLOCK);
     r.text_ = "";
-    r.tag = t.opt_tag || void 0;
+    r.tag = t.opt_tag || undefined;
     return r;
   }
   var n;
@@ -32,7 +32,7 @@ var c = function (e) {
     this.size_.height = this.height_ + 2 * this.theme.renderer.STATEMENT_ROW_PADDING_Y_TO_VALUE_BLOCK;
   };
   t.prototype.set_value = function (e) {
-    if (void 0 != e) {
+    if (undefined != e) {
       this.src_ = e;
       if (this.image_element) {
         this.image_element.setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", e || "");
@@ -55,12 +55,12 @@ var c = function (e) {
         this.image_element = this.src_;
         this.field_group.appendChild(this.image_element);
       }
-      if (void 0 == this.source_block) {
+      if (undefined == this.source_block) {
         throw new ReferenceError("Field should have source block before init.");
       }
-      if (void 0 != this.source_block) {
+      if (undefined != this.source_block) {
         var e = this.source_block.get_svg_root();
-        if (void 0 == e) {
+        if (undefined == e) {
           throw new ReferenceError("Field should have svg root before init.");
         }
         e.appendChild(this.field_group);

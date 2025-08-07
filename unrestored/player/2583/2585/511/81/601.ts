@@ -137,7 +137,7 @@ var b = function (t) {
     return {
       next: function () {
         if (t && r >= t.length) {
-          t = void 0;
+          t = undefined;
         }
         return {
           value: t && t[r++],
@@ -191,7 +191,7 @@ var _ = function (t) {
     return {
       next: function () {
         if (t && r >= t.length) {
-          t = void 0;
+          t = undefined;
         }
         return {
           value: t && t[r++],
@@ -354,7 +354,7 @@ var E = function (t) {
     return {
       next: function () {
         if (t && r >= t.length) {
-          t = void 0;
+          t = undefined;
         }
         return {
           value: t && t[r++],
@@ -371,7 +371,7 @@ var O = function () {
   }
   t.prototype.encode = function () {
     for (var e = v.a.getCharCode(" "), n = v.a.getCharCode("\n"), i = r.singletonList(y.INITIAL_STATE), o = 0; o < this.text.length; o++) {
-      var a = void 0;
+      var a = undefined;
       var s = o + 1 < this.text.length ? this.text[o + 1] : 0;
       switch (this.text[o]) {
         case v.a.getCharCode("\r"):
@@ -498,10 +498,10 @@ var O = function () {
     try {
       for (var a = E(t), s = a.next(); !s.done; s = a.next()) {
         var u = s.value;
-        var c = !0;
+        var c = true;
         var l = function (t) {
           if (t.isBetterThanOrEqualTo(u)) {
-            c = !1;
+            c = false;
             return "break";
           }
           if (u.isBetterThanOrEqualTo(t)) {
@@ -511,7 +511,7 @@ var O = function () {
           }
         };
         try {
-          for (r = void 0, d = E(o), f = d.next(), void 0; !f.done; f = d.next()) {
+          for (r = undefined, d = E(o), f = d.next(), undefined; !f.done; f = d.next()) {
             var d;
             var f;
             if ("break" === l(f.value)) {

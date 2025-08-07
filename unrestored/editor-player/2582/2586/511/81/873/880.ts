@@ -8,7 +8,7 @@ var u = require("../221");
 !function () {
   function t() {}
   t.prototype.write = function (e, r, u, s) {
-    if (void 0 === s) {
+    if (undefined === s) {
       s = null;
     }
     if (0 === e.length) {
@@ -20,10 +20,10 @@ var u = require("../221");
     var c = i.a.L;
     var f = t.QUIET_ZONE_SIZE;
     if (null !== s) {
-      if (void 0 !== s.get(n.a.ERROR_CORRECTION)) {
+      if (undefined !== s.get(n.a.ERROR_CORRECTION)) {
         c = i.a.fromString(s.get(n.a.ERROR_CORRECTION).toString());
       }
-      if (void 0 !== s.get(n.a.MARGIN)) {
+      if (undefined !== s.get(n.a.MARGIN)) {
         f = Number.parseInt(s.get(n.a.MARGIN).toString(), 10);
       }
     }
@@ -31,7 +31,7 @@ var u = require("../221");
     return this.renderResult(h, r, u, f);
   };
   t.prototype.writeToDom = function (t, e, r, n, o) {
-    if (void 0 === o) {
+    if (undefined === o) {
       o = null;
     }
     if ("string" === typeof t) {

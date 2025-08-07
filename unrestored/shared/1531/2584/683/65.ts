@@ -23,8 +23,8 @@ export { x as e };
 export { C as a };
 export { O as w };
 export { k as n };
-var r = require("./34/index");
-var i = require("../107");
+import r = require("./34/index");
+import i = require("../107");
 function o(e) {
   return {
     width: Math.floor(.7 * e.width),
@@ -195,7 +195,7 @@ function O(e, t) {
     }
     var o = Date.now();
     if (o - n >= t) {
-      e.apply(void 0, r);
+      e.apply(undefined, r);
       n = o;
     }
   };

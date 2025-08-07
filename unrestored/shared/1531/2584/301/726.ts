@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.FieldColour = void 0;
+exports.FieldColour = undefined;
 var r = require("tslib");
 var i = require("inversify");
 var o = require("../4/127");
@@ -26,7 +26,7 @@ var l = function (e) {
   t.prototype.init = function () {
     var t;
     var n = this;
-    e.prototype.init.call(this, !1);
+    e.prototype.init.call(this, false);
     if (!this.border_rect) {
       this.border_rect = (0, a.create_svg_element)("rect", {
         rx: 4,
@@ -57,7 +57,7 @@ var l = function (e) {
         height: 30,
         fill: "url(#transparentPattern)"
       });
-      if (!(null === (t = this.field_group) || void 0 === t)) {
+      if (!(null === (t = this.field_group) || undefined === t)) {
         t.insertBefore(this.background_transparent_element, this.border_rect);
       }
     }
@@ -78,7 +78,7 @@ var l = function (e) {
       });
     }
     this.colour_ = e;
-    if (!(null === (t = this.border_rect) || void 0 === t)) {
+    if (!(null === (t = this.border_rect) || undefined === t)) {
       t.setAttribute("fill", this.colour_);
     }
     if (n) {
@@ -123,7 +123,7 @@ var l = function (e) {
     if (u[0] > i.width + o[0] - f.width) {
       u[0] = i.width + o[0] - f.width;
     }
-    this.widget_div.position(u[0], u[1], i, o, null === (e = this.source_block) || void 0 === e ? void 0 : e.RTL);
+    this.widget_div.position(u[0], u[1], i, o, null === (e = this.source_block) || undefined === e ? undefined : e.RTL);
     r.addEventListener("click", function (e) {
       var n = e.target;
       if (n.classList.contains("color_selector_item")) {
@@ -139,15 +139,15 @@ var l = function (e) {
     });
   };
   t.prototype.widget_dispose = function () {
-    this.focus(!1);
+    this.focus(false);
     if (this.border_rect) {
       this.border_rect.setAttribute("stroke-width", "1.5");
       this.border_rect.removeAttribute("filter");
     }
-    this.events.set_group(!1);
+    this.events.set_group(false);
   };
   t.prototype.layout = function (e, t) {
-    if (void 0 != this.field_group) {
+    if (undefined != this.field_group) {
       e[0] += this.render_sep;
       this.field_group.setAttribute("transform", "translate(" + e[0] + ", " + (e[1] + (t - this.size_.height) / 2) + ")");
       e[0] += this.size_.width;
@@ -155,7 +155,7 @@ var l = function (e) {
   };
   t.COLUMNS = 7;
   t.COLOURS = ["#ffffff", "#cccccc", "#c0c0c0", "#999999", "#666666", "#333333", "#000000", "#ffcccc", "#ff6666", "#ff0000", "#cc0000", "#990000", "#660000", "#330000", "#ffcc99", "#ff9966", "#ff9900", "#ff6600", "#cc6600", "#993300", "#663300", "#ffff99", "#ffff66", "#ffcc66", "#ffcc33", "#cc9933", "#996633", "#663333", "#ffffcc", "#ffff33", "#ffff00", "#ffcc00", "#999900", "#666600", "#333300", "#99ff99", "#66ff99", "#33ff33", "#33cc00", "#009900", "#006600", "#003300", "#99ffff", "#33ffff", "#66cccc", "#00cccc", "#339999", "#336666", "#003333", "#ccffff", "#66ffff", "#33ccff", "#3366ff", "#3333ff", "#000099", "#000066", "#ccccff", "#9999ff", "#6666cc", "#6633ff", "#6600cc", "#333399", "#330099", "#ffccff", "#ff99ff", "#cc66cc", "#cc33cc", "#993399", "#663366", "#330033"];
-  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.widget_div)], t.prototype, "widget_div", void 0);
+  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.widget_div)], t.prototype, "widget_div", undefined);
   return t = n = (0, r.__decorate)([(0, i.injectable)()], t);
 }(require("./500").Field);
 exports.FieldColour = l;

@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.default = void 0;
+exports.default = undefined;
 var r = require("./1432");
 var o = require("./1433");
 var i = {
@@ -48,7 +48,7 @@ var a = (0, r.conditional)({
       }
     })
   }, {
-    delay: (0, o.readUnsigned)(!0)
+    delay: (0, o.readUnsigned)(true)
   }, {
     transparentColorIndex: (0, o.readByte)()
   }, {
@@ -63,13 +63,13 @@ var s = (0, r.conditional)({
     code: (0, o.readByte)()
   }, {
     descriptor: [{
-      left: (0, o.readUnsigned)(!0)
+      left: (0, o.readUnsigned)(true)
     }, {
-      top: (0, o.readUnsigned)(!0)
+      top: (0, o.readUnsigned)(true)
     }, {
-      width: (0, o.readUnsigned)(!0)
+      width: (0, o.readUnsigned)(true)
     }, {
-      height: (0, o.readUnsigned)(!0)
+      height: (0, o.readUnsigned)(true)
     }, {
       lct: (0, o.readBits)({
         exists: {
@@ -149,9 +149,9 @@ var d = [{
   }]
 }, {
   lsd: [{
-    width: (0, o.readUnsigned)(!0)
+    width: (0, o.readUnsigned)(true)
   }, {
-    height: (0, o.readUnsigned)(!0)
+    height: (0, o.readUnsigned)(true)
   }, {
     gct: (0, o.readBits)({
       exists: {

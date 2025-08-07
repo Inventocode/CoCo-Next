@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.SliderController = void 0;
+exports.SliderController = undefined;
 var r = require("tslib");
 var i = require("inversify");
 var o = require("../../125/294");
@@ -23,7 +23,7 @@ var s = function (e) {
   t.prototype.show = function (e, t) {
     var n;
     if ("number" === typeof e.min_ && "number" === typeof e.max_) {
-      var r = (null === (n = e.source_block) || void 0 === n ? void 0 : n.is_shadow()) ? e.source_block.parent_block : e.source_block;
+      var r = (null === (n = e.source_block) || undefined === n ? undefined : n.is_shadow()) ? e.source_block.parent_block : e.source_block;
       if (r) {
         if (!this.slider) {
           this.init();
@@ -113,7 +113,7 @@ var s = function (e) {
       var t = this.move_slider_handle.bind(this);
       document.addEventListener("mousemove", t);
       document.addEventListener("mouseup", function n() {
-        e.slider_rail_left = void 0;
+        e.slider_rail_left = undefined;
         document.removeEventListener("mousemove", t);
         document.removeEventListener("mouseup", n);
       });
@@ -133,7 +133,7 @@ var s = function (e) {
     var t;
     var n;
     if (this.slider_rail_left) {
-      var r = (null === (n = null === (t = this.owner) || void 0 === t ? void 0 : t.source_block) || void 0 === n ? void 0 : n.get_workspace().get_scale()) || 1;
+      var r = (null === (n = null === (t = this.owner) || undefined === t ? undefined : t.source_block) || undefined === n ? undefined : n.get_workspace().get_scale()) || 1;
       var i = (e - this.slider_rail_left) / r;
       var a = (0, o.clamp)(i, 0, this.slider_width);
       var s = this.max - this.min;

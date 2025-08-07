@@ -29,9 +29,9 @@ module.exports = function (e, t, n) {
   var p = p || [];
   p.push(i);
   i = "";
-  if (!1 !== e.createErrors) {
+  if (false !== e.createErrors) {
     i += " { keyword: '" + (h || "_limitProperties") + "' , dataPath: (dataPath || '') + " + e.errorPath + " , schemaPath: " + e.util.toQuotedString(u) + " , params: { limit: " + r + " } ";
-    if (!1 !== e.opts.messages) {
+    if (false !== e.opts.messages) {
       i += " , message: 'should NOT have ";
       i += "maxProperties" == t ? "more" : "fewer";
       i += " than ";

@@ -11,7 +11,7 @@ var o = function () {
     }
     e.prototype = t;
     var n = new e();
-    e.prototype = void 0;
+    e.prototype = undefined;
     return n;
   };
 }();

@@ -104,8 +104,8 @@ var KittenVideoPlayer = /*#__PURE__*/function (_React$Component) {
     var _this;
     Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_classCallCheck__.default)(this, KittenVideoPlayer);
     _this = _super.call(this, props);
-    Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Object(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default)(_this), "videoElem", void 0);
-    Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Object(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default)(_this), "controlBarElem", void 0);
+    Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Object(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default)(_this), "videoElem", undefined);
+    Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Object(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default)(_this), "controlBarElem", undefined);
     Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Object(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default)(_this), "hideControlbar", function () {
       if (!_this.controlBarElem) {
         return;
@@ -122,8 +122,8 @@ var KittenVideoPlayer = /*#__PURE__*/function (_React$Component) {
       _this.controlBarElem.style.bottom = '0';
       _this.controlBarElem.style.backgroundImage = 'linear-gradient(0deg,#0000008a,transparent)';
     });
-    Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Object(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default)(_this), "videoContainerElem", void 0);
-    Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Object(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default)(_this), "player", void 0);
+    Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Object(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default)(_this), "videoContainerElem", undefined);
+    Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Object(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default)(_this), "player", undefined);
     Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Object(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default)(_this), "maxWatchTime", 0);
     Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Object(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default)(_this), "onResizeStart", function (event, direction, element, delta) {
       var resizableBoxRightOffset = element.getBoundingClientRect().right;
@@ -164,8 +164,8 @@ var KittenVideoPlayer = /*#__PURE__*/function (_React$Component) {
     });
     Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Object(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default)(_this), "onReplayClick", function () {
       var _this$player;
-      if ((_this$player = _this.player) === null || _this$player === void 0) {
-        void 0;
+      if ((_this$player = _this.player) === null || _this$player === undefined) {
+        undefined;
       } else {
         _this$player.play();
       }
@@ -198,7 +198,7 @@ var KittenVideoPlayer = /*#__PURE__*/function (_React$Component) {
       var _this$player2;
       var _this$player3;
       var useConfirmMask = _this.props.useConfirmMask;
-      var player = (_this$player2 = _this.player) === null || _this$player2 === void 0 ? void 0 : _this$player2.getState().player;
+      var player = (_this$player2 = _this.player) === null || _this$player2 === undefined ? undefined : _this$player2.getState().player;
       if (!player || _this.state.closingConfirm || !useConfirmMask || _this.props.confirmPercent != null && player.currentTime / player.duration > _this.props.confirmPercent) {
         _this.closeSelf();
         return;
@@ -206,8 +206,8 @@ var KittenVideoPlayer = /*#__PURE__*/function (_React$Component) {
       if (_this.props.onConfirmMaskShow) {
         _this.props.onConfirmMaskShow();
       }
-      if ((_this$player3 = _this.player) === null || _this$player3 === void 0) {
-        void 0;
+      if ((_this$player3 = _this.player) === null || _this$player3 === undefined) {
+        undefined;
       } else {
         _this$player3.pause();
       }
@@ -219,7 +219,7 @@ var KittenVideoPlayer = /*#__PURE__*/function (_React$Component) {
       try {
         var _this$player4;
         var _this$player4$getStat;
-        var state = (_this$player4 = _this.player) === null || _this$player4 === void 0 ? void 0 : (_this$player4$getStat = _this$player4.getState()) === null || _this$player4$getStat === void 0 ? void 0 : _this$player4$getStat.player;
+        var state = (_this$player4 = _this.player) === null || _this$player4 === undefined ? undefined : (_this$player4$getStat = _this$player4.getState()) === null || _this$player4$getStat === undefined ? undefined : _this$player4$getStat.player;
         if (!state) {
           return;
         }
@@ -269,8 +269,8 @@ var KittenVideoPlayer = /*#__PURE__*/function (_React$Component) {
       if (this.props.getPlayerRef) {
         this.props.getPlayerRef(this.player);
       }
-      if ((_this$player5 = this.player) === null || _this$player5 === void 0) {
-        void 0;
+      if ((_this$player5 = this.player) === null || _this$player5 === undefined) {
+        undefined;
       } else {
         _this$player5.subscribeToStateChange(this.handleStateChange.bind(this));
       }
@@ -296,13 +296,13 @@ var KittenVideoPlayer = /*#__PURE__*/function (_React$Component) {
       if (boundElem) {
         document.body.removeChild(boundElem);
       }
-      if ((_this$videoElem = this.videoElem) === null || _this$videoElem === void 0) {
-        void 0;
+      if ((_this$videoElem = this.videoElem) === null || _this$videoElem === undefined) {
+        undefined;
       } else {
         _this$videoElem.removeEventListener('mouseleave', this.hideControlbar);
       }
-      if ((_this$videoElem2 = this.videoElem) === null || _this$videoElem2 === void 0) {
-        void 0;
+      if ((_this$videoElem2 = this.videoElem) === null || _this$videoElem2 === undefined) {
+        undefined;
       } else {
         _this$videoElem2.removeEventListener('mouseenter', this.showControllber);
       }
@@ -319,7 +319,7 @@ var KittenVideoPlayer = /*#__PURE__*/function (_React$Component) {
           this.setControlBarStyle();
         }
       }
-      if (state.ended !== prevState.ended && state.ended && state.currentTime === state.duration && ((_this$videoContainerE = this.videoContainerElem) === null || _this$videoContainerE === void 0 ? void 0 : _this$videoContainerE.style.display) !== 'none') {
+      if (state.ended !== prevState.ended && state.ended && state.currentTime === state.duration && ((_this$videoContainerE = this.videoContainerElem) === null || _this$videoContainerE === undefined ? undefined : _this$videoContainerE.style.display) !== 'none') {
         this.setState({
           showEndedMask: true
         });
@@ -351,8 +351,8 @@ var KittenVideoPlayer = /*#__PURE__*/function (_React$Component) {
     key: "clickMask",
     value: function clickMask() {
       var _this$player6;
-      if ((_this$player6 = this.player) === null || _this$player6 === void 0) {
-        void 0;
+      if ((_this$player6 = this.player) === null || _this$player6 === undefined) {
+        undefined;
       } else {
         _this$player6.play();
       }
@@ -525,8 +525,8 @@ var KittenVideoPlayer = /*#__PURE__*/function (_React$Component) {
           _this2.setState({
             closingConfirm: false
           });
-          if ((_this2$player = _this2.player) === null || _this2$player === void 0) {
-            void 0;
+          if ((_this2$player = _this2.player) === null || _this2$player === undefined) {
+            undefined;
           } else {
             _this2$player.play();
           }

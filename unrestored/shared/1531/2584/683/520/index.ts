@@ -10,10 +10,10 @@ function i(e, t, n, o) {
       }
       s += 1;
     }
-    for (var c in t[s + 1] = e, n[s + 1] = r, e) r[c] = o ? i(e[c], t, n, !0) : e[c];
+    for (var c in t[s + 1] = e, n[s + 1] = r, e) r[c] = o ? i(e[c], t, n, true) : e[c];
     return r;
   };
-  switch (Object(r.a)(e)) {
+  switch (r.a(e)) {
     case "Object":
       return s({});
     case "Array":
@@ -28,7 +28,7 @@ function i(e, t, n, o) {
   }
 }
 var o = require("./393");
-var a = Object(o.a)(function (e) {
-  return null != e && "function" === typeof e.clone ? e.clone() : i(e, [], [], !0);
+var a = o.a(function (e) {
+  return null != e && "function" === typeof e.clone ? e.clone() : i(e, [], [], true);
 });
 exports.a = a;

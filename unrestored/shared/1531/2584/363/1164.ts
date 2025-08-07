@@ -6,8 +6,8 @@ function i(e, t) {
 }
 function o(e, t, n) {
   if (!(t || r[n])) {
-    e(!1, n);
-    r[n] = !0;
+    e(false, n);
+    r[n] = true;
   }
 }
 exports.a = function (e, t) {

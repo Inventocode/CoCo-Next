@@ -1,10 +1,10 @@
 "use strict";
 
 export { o as a };
-var r = require("./2593");
+import r = require("./2593");
 require("react");
-var i = require("../../../548/1183/701/786/index");
+import i = require("../../../548/1183/701/786/index");
 function o() {
-  return Object(r.a)() || i.a;
+  return r.a() || i.a;
 }
 export default o;

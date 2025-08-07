@@ -1,10 +1,10 @@
 "use strict";
 
 export { i as a };
-var r = require("./316");
+import r = require("./316");
 function i(e, t) {
   try {
-    for (var n = e, r = [], i = 0, a = 0, s = " > ".length, c = void 0; n && i++ < 5 && !("html" === (c = o(n, t)) || i > 1 && a + r.length * s + c.length >= 80);) {
+    for (var n = e, r = [], i = 0, a = 0, s = " > ".length, c = undefined; n && i++ < 5 && !("html" === (c = o(n, t)) || i > 1 && a + r.length * s + c.length >= 80);) {
       r.push(c);
       a += c.length;
       n = n.parentNode;
@@ -28,16 +28,16 @@ function o(e, t) {
     return "";
   }
   f.push(l.tagName.toLowerCase());
-  var d = (null === (n = t) || void 0 === n ? void 0 : n.length) ? t.filter(function (e) {
+  var d = (null === (n = t) || undefined === n ? undefined : n.length) ? t.filter(function (e) {
     return l.getAttribute(e);
   }).map(function (e) {
     return [e, l.getAttribute(e)];
   }) : null;
-  if (null === (i = d) || void 0 === i ? void 0 : i.length) {
+  if (null === (i = d) || undefined === i ? undefined : i.length) {
     d.forEach(function (e) {
       f.push("[" + e[0] + "=\"" + e[1] + "\"]");
     });
-  } else if (l.id && f.push("#" + l.id), (o = l.className) && Object(r.h)(o)) {
+  } else if (l.id && f.push("#" + l.id), (o = l.className) && r.h(o)) {
     for (a = o.split(/\s+/), u = 0; u < a.length; u++) {
       f.push("." + a[u]);
     }

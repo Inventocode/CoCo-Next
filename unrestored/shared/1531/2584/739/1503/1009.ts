@@ -1,7 +1,7 @@
 "use strict";
 
 export { o as a };
-var r = require("../../75/index");
+import r = require("../../75/index");
 var i = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;

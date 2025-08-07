@@ -4,9 +4,9 @@ var i = require("./1238/index");
 var a = require("./750");
 var s = o.process;
 r({
-  global: !0,
-  enumerable: !0,
-  noTargetGet: !0
+  global: true,
+  enumerable: true,
+  noTargetGet: true
 }, {
   queueMicrotask: function (e) {
     var t = a && s.domain;

@@ -28,7 +28,7 @@
           i.prototype = i.prototype || {};
           Object.defineProperties(i, {
             __sentry_original__: {
-              enumerable: !1,
+              enumerable: false,
               value: r
             }
           });
@@ -40,11 +40,11 @@
   function a(e) {
     var t;
     var n;
-    if (Object(i.e)(e)) {
+    if (i.e(e)) {
       var o = e;
       var s = {};
       try {
-        for (var c = Object(r.g)(Object.keys(o)), u = c.next(); !u.done; u = c.next()) {
+        for (var c = r.g(Object.keys(o)), u = c.next(); !u.done; u = c.next()) {
           var l = u.value;
           if ("undefined" !== typeof o[l]) {
             s[l] = a(o[l]);

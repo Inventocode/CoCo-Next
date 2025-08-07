@@ -21,7 +21,7 @@ var o = "http://www.w3.org/2000/svg";
     if (r < 0 || o < 0) {
       throw new n.IllegalArgumentException("Requested dimensions are too small: " + r + "x" + o);
     }
-    var a = i && void 0 !== i.get(n.EncodeHintType.MARGIN) ? Number.parseInt(i.get(n.EncodeHintType.MARGIN).toString(), 10) : t.QUIET_ZONE_SIZE;
+    var a = i && undefined !== i.get(n.EncodeHintType.MARGIN) ? Number.parseInt(i.get(n.EncodeHintType.MARGIN).toString(), 10) : t.QUIET_ZONE_SIZE;
     var u = this.encode(i, e);
     return this.renderResult(u, r, o, a);
   };
@@ -48,7 +48,7 @@ var o = "http://www.w3.org/2000/svg";
   };
   t.prototype.encode = function (t, e) {
     var r = n.QRCodeDecoderErrorCorrectionLevel.L;
-    if (t && void 0 !== t.get(n.EncodeHintType.ERROR_CORRECTION)) {
+    if (t && undefined !== t.get(n.EncodeHintType.ERROR_CORRECTION)) {
       var o = t.get(n.EncodeHintType.ERROR_CORRECTION).toString();
       r = n.QRCodeDecoderErrorCorrectionLevel.fromString(o);
     }

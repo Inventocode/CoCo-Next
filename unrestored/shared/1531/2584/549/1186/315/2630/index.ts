@@ -15,12 +15,12 @@ var h = o.forwardRef(function (e, t) {
   var n = e.children;
   var r = e.container;
   var i = e.disablePortal;
-  var s = void 0 !== i && i;
+  var s = undefined !== i && i;
   var c = e.onRendered;
   var u = o.useState(null);
   var h = u[0];
   var p = u[1];
-  var _ = Object(f.a)(o.isValidElement(n) ? n.ref : null, t);
+  var _ = f.a(o.isValidElement(n) ? n.ref : null, t);
   d(function () {
     if (!s) {
       p(function (e) {
@@ -31,9 +31,9 @@ var h = o.forwardRef(function (e, t) {
   }, [r, s]);
   d(function () {
     if (h && !s) {
-      Object(l.a)(t, h);
+      l.a(t, h);
       return function () {
-        Object(l.a)(t, null);
+        l.a(t, null);
       };
     }
   }, [t, h, s]);
@@ -65,9 +65,9 @@ function E(e) {
   return parseInt(window.getComputedStyle(e)["padding-right"], 10) || 0;
 }
 function x(e, t, n) {
-  var r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : [];
-  var i = arguments.length > 4 ? arguments[4] : void 0;
-  var o = [t, n].concat(Object(m.a)(r));
+  var r = arguments.length > 3 && undefined !== arguments[3] ? arguments[3] : [];
+  var i = arguments.length > 4 ? arguments[4] : undefined;
+  var o = [t, n].concat(m.a(r));
   var a = ["TEMPLATE", "SCRIPT", "STYLE"];
   [].forEach.call(e.children, function (e) {
     if (1 === e.nodeType && -1 === o.indexOf(e) && -1 === a.indexOf(e.tagName)) {
@@ -78,7 +78,7 @@ function x(e, t, n) {
 function C(e, t) {
   var n = -1;
   e.some(function (e, r) {
-    return !!t(e) && (n = r, !0);
+    return !!t(e) && (n = r, true);
   });
   return n;
 }
@@ -89,17 +89,17 @@ function O(e, t) {
   var o = e.container;
   if (!t.disableScrollLock) {
     if (function (e) {
-      var t = Object(u.a)(e);
-      return t.body === e ? Object(b.a)(t).innerWidth > t.documentElement.clientWidth : e.scrollHeight > e.clientHeight;
+      var t = u.a(e);
+      return t.body === e ? b.a(t).innerWidth > t.documentElement.clientWidth : e.scrollHeight > e.clientHeight;
     }(o)) {
-      var a = Object(y.a)();
+      var a = y.a();
       r.push({
         value: o.style.paddingRight,
         key: "padding-right",
         el: o
       });
       o.style["padding-right"] = "".concat(E(o) + a, "px");
-      n = Object(u.a)(o).querySelectorAll(".mui-fixed");
+      n = u.a(o).querySelectorAll(".mui-fixed");
       [].forEach.call(n, function (e) {
         i.push(e.style.paddingRight);
         e.style.paddingRight = "".concat(E(e) + a, "px");
@@ -138,11 +138,11 @@ function O(e, t) {
 }
 var k = function () {
   function e() {
-    Object(g.a)(this, e);
+    g.a(this, e);
     this.modals = [];
     this.containers = [];
   }
-  Object(v.a)(e, [{
+  v.a(e, [{
     key: "add",
     value: function (e, t) {
       var n = this.modals.indexOf(e);
@@ -152,7 +152,7 @@ var k = function () {
       n = this.modals.length;
       this.modals.push(e);
       if (e.modalRef) {
-        w(e.modalRef, !1);
+        w(e.modalRef, false);
       }
       var r = function (e) {
         var t = [];
@@ -163,7 +163,7 @@ var k = function () {
         });
         return t;
       }(t);
-      x(t, e.mountNode, e.modalRef, r, !0);
+      x(t, e.mountNode, e.modalRef, r, true);
       var i = C(this.containers, function (e) {
         return e.container === t;
       });
@@ -203,14 +203,14 @@ var k = function () {
           r.restore();
         }
         if (e.modalRef) {
-          w(e.modalRef, !0);
+          w(e.modalRef, true);
         }
-        x(r.container, e.mountNode, e.modalRef, r.hiddenSiblingNodes, !1);
+        x(r.container, e.mountNode, e.modalRef, r.hiddenSiblingNodes, false);
         this.containers.splice(n, 1);
       } else {
         var i = r.modals[r.modals.length - 1];
         if (i.modalRef) {
-          w(i.modalRef, !1);
+          w(i.modalRef, false);
         }
       }
       return t;
@@ -226,11 +226,11 @@ var k = function () {
 var S = function (e) {
   var t = e.children;
   var n = e.disableAutoFocus;
-  var r = void 0 !== n && n;
+  var r = undefined !== n && n;
   var i = e.disableEnforceFocus;
-  var s = void 0 !== i && i;
+  var s = undefined !== i && i;
   var c = e.disableRestoreFocus;
-  var l = void 0 !== c && c;
+  var l = undefined !== c && c;
   var d = e.getDoc;
   var h = e.isEnabled;
   var p = e.open;
@@ -242,7 +242,7 @@ var S = function (e) {
   var y = o.useCallback(function (e) {
     m.current = a.findDOMNode(e);
   }, []);
-  var b = Object(f.a)(t.ref, y);
+  var b = f.a(t.ref, y);
   var w = o.useRef();
   o.useEffect(function () {
     w.current = p;
@@ -252,7 +252,7 @@ var S = function (e) {
   }
   o.useEffect(function () {
     if (p) {
-      var e = Object(u.a)(m.current);
+      var e = u.a(m.current);
       if (!(r || !m.current || m.current.contains(e.activeElement))) {
         if (!m.current.hasAttribute("tabIndex")) {
           m.current.setAttribute("tabIndex", -1);
@@ -266,13 +266,13 @@ var S = function (e) {
               m.current.focus();
             }
           } else {
-            _.current = !1;
+            _.current = false;
           }
         }
       };
       var n = function (t) {
         if (!s && h() && 9 === t.keyCode && e.activeElement === m.current) {
-          _.current = !0;
+          _.current = true;
           if (t.shiftKey) {
             g.current.focus();
           } else {
@@ -280,15 +280,15 @@ var S = function (e) {
           }
         }
       };
-      e.addEventListener("focus", t, !0);
-      e.addEventListener("keydown", n, !0);
+      e.addEventListener("focus", t, true);
+      e.addEventListener("keydown", n, true);
       var i = setInterval(function () {
         t();
       }, 50);
       return function () {
         clearInterval(i);
-        e.removeEventListener("focus", t, !0);
-        e.removeEventListener("keydown", n, !0);
+        e.removeEventListener("focus", t, true);
+        e.removeEventListener("keydown", n, true);
         if (!l) {
           if (v.current && v.current.focus) {
             v.current.focus();
@@ -327,69 +327,69 @@ var T = {
 };
 var B = o.forwardRef(function (e, t) {
   var n = e.invisible;
-  var a = void 0 !== n && n;
+  var a = undefined !== n && n;
   var s = e.open;
-  var c = Object(r.a)(e, ["invisible", "open"]);
-  return s ? o.createElement("div", Object(i.a)({
-    "aria-hidden": !0,
+  var c = r.a(e, ["invisible", "open"]);
+  return s ? o.createElement("div", i.a({
+    "aria-hidden": true,
     ref: t
   }, c, {
-    style: Object(i.a)({}, T.root, a ? T.invisible : {}, c.style)
+    style: i.a({}, T.root, a ? T.invisible : {}, c.style)
   })) : null;
 });
 var D = new k();
 var I = o.forwardRef(function (e, t) {
-  var n = Object(s.a)();
-  var l = Object(c.a)({
+  var n = s.a();
+  var l = c.a({
     name: "MuiModal",
-    props: Object(i.a)({}, e),
+    props: i.a({}, e),
     theme: n
   });
   var d = l.BackdropComponent;
-  var g = void 0 === d ? B : d;
+  var g = undefined === d ? B : d;
   var v = l.BackdropProps;
   var m = l.children;
   var y = l.closeAfterTransition;
-  var b = void 0 !== y && y;
+  var b = undefined !== y && y;
   var E = l.container;
   var x = l.disableAutoFocus;
-  var C = void 0 !== x && x;
+  var C = undefined !== x && x;
   var O = l.disableBackdropClick;
-  var k = void 0 !== O && O;
+  var k = undefined !== O && O;
   var T = l.disableEnforceFocus;
-  var I = void 0 !== T && T;
+  var I = undefined !== T && T;
   var F = l.disableEscapeKeyDown;
-  var R = void 0 !== F && F;
+  var R = undefined !== F && F;
   var P = l.disablePortal;
-  var N = void 0 !== P && P;
+  var N = undefined !== P && P;
   var M = l.disableRestoreFocus;
-  var j = void 0 !== M && M;
+  var j = undefined !== M && M;
   var L = l.disableScrollLock;
-  var U = void 0 !== L && L;
+  var U = undefined !== L && L;
   var H = l.hideBackdrop;
-  var V = void 0 !== H && H;
+  var V = undefined !== H && H;
   var G = l.keepMounted;
-  var z = void 0 !== G && G;
+  var z = undefined !== G && G;
   var Q = l.manager;
-  var W = void 0 === Q ? D : Q;
+  var W = undefined === Q ? D : Q;
   var K = l.onBackdropClick;
   var X = l.onClose;
   var Y = l.onEscapeKeyDown;
   var q = l.onRendered;
   var $ = l.open;
-  var J = Object(r.a)(l, ["BackdropComponent", "BackdropProps", "children", "closeAfterTransition", "container", "disableAutoFocus", "disableBackdropClick", "disableEnforceFocus", "disableEscapeKeyDown", "disablePortal", "disableRestoreFocus", "disableScrollLock", "hideBackdrop", "keepMounted", "manager", "onBackdropClick", "onClose", "onEscapeKeyDown", "onRendered", "open"]);
-  var Z = o.useState(!0);
+  var J = r.a(l, ["BackdropComponent", "BackdropProps", "children", "closeAfterTransition", "container", "disableAutoFocus", "disableBackdropClick", "disableEnforceFocus", "disableEscapeKeyDown", "disablePortal", "disableRestoreFocus", "disableScrollLock", "hideBackdrop", "keepMounted", "manager", "onBackdropClick", "onClose", "onEscapeKeyDown", "onRendered", "open"]);
+  var Z = o.useState(true);
   var ee = Z[0];
   var te = Z[1];
   var ne = o.useRef({});
   var re = o.useRef(null);
   var ie = o.useRef(null);
-  var oe = Object(f.a)(ie, t);
+  var oe = f.a(ie, t);
   var ae = function (e) {
     return !!e.children && e.children.props.hasOwnProperty("in");
   }(l);
   var se = function () {
-    return Object(u.a)(re.current);
+    return u.a(re.current);
   };
   var ce = function () {
     ne.current.modalRef = ie.current;
@@ -402,7 +402,7 @@ var I = o.forwardRef(function (e, t) {
     });
     ie.current.scrollTop = 0;
   };
-  var le = Object(_.a)(function () {
+  var le = _.a(function () {
     var e = function (e) {
       e = "function" === typeof e ? e() : e;
       return a.findDOMNode(e);
@@ -415,7 +415,7 @@ var I = o.forwardRef(function (e, t) {
   var fe = o.useCallback(function () {
     return W.isTopModal(ce());
   }, [W]);
-  var de = Object(_.a)(function (e) {
+  var de = _.a(function (e) {
     re.current = e;
     if (e) {
       if (q) {
@@ -424,7 +424,7 @@ var I = o.forwardRef(function (e, t) {
       if ($ && fe()) {
         ue();
       } else {
-        w(ie.current, !0);
+        w(ie.current, true);
       }
     }
   });
@@ -466,15 +466,15 @@ var I = o.forwardRef(function (e, t) {
     zIndex: A.a
   });
   var _e = {};
-  if (void 0 === m.props.tabIndex) {
+  if (undefined === m.props.tabIndex) {
     _e.tabIndex = m.props.tabIndex || "-1";
   }
   if (ae) {
-    _e.onEnter = Object(p.a)(function () {
-      te(!1);
+    _e.onEnter = p.a(function () {
+      te(false);
     }, m.props.onEnter);
-    _e.onExited = Object(p.a)(function () {
-      te(!0);
+    _e.onExited = p.a(function () {
+      te(true);
       if (b) {
         he();
       }
@@ -484,7 +484,7 @@ var I = o.forwardRef(function (e, t) {
     ref: de,
     container: E,
     disablePortal: N
-  }, o.createElement("div", Object(i.a)({
+  }, o.createElement("div", i.a({
     ref: oe,
     onKeyDown: function (e) {
       if ("Escape" === e.key && fe()) {
@@ -501,8 +501,8 @@ var I = o.forwardRef(function (e, t) {
     },
     role: "presentation"
   }, J, {
-    style: Object(i.a)({}, pe.root, !$ && ee ? pe.hidden : {}, J.style)
-  }), V ? null : o.createElement(g, Object(i.a)({
+    style: i.a({}, pe.root, !$ && ee ? pe.hidden : {}, J.style)
+  }), V ? null : o.createElement(g, i.a({
     open: $,
     onClick: function (e) {
       if (e.target === e.currentTarget) {

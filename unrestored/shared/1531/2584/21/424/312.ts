@@ -14,16 +14,16 @@ export { w as k };
 export { C as n };
 export { T as b };
 export { S as a };
-var r = require("../../16/index");
-var o = require("../../48/index");
-var i = require("../../28/index");
-var a = require("../../48/72");
-var s = require("../../91");
-var c = require("../../14");
-var l = require("../../15");
-var u = require("../../36/345/114");
+import r = require("../../16/index");
+import o = require("../../48/index");
+import i = require("../../28/index");
+import a = require("../../48/72");
+import s = require("../../91");
+import c = require("../../14");
+import l = require("../../15");
+import u = require("../../36/345/114");
 function d(e, t) {
-  var n = Object(o.a)().getState().screenList;
+  var n = o.a().getState().screenList;
   if ("string" === typeof e || "number" === typeof e) {
     if ("number" === typeof e) {
       var r = e - 1;
@@ -34,7 +34,7 @@ function d(e, t) {
           messageId: "screenIndexNotExist"
         });
       }
-      p(null === i || void 0 === i ? void 0 : i.id, t);
+      p(null === i || undefined === i ? undefined : i.id, t);
     }
     if ("string" === typeof e) {
       var a = e;
@@ -49,7 +49,7 @@ function d(e, t) {
       }
       if (!e.includes("SCREEN")) {
         var l = n.get(s);
-        a = (null === l || void 0 === l ? void 0 : l.id) || "";
+        a = (null === l || undefined === l ? undefined : l.id) || "";
       }
       p(a, t);
     }
@@ -62,16 +62,16 @@ function d(e, t) {
 }
 function p(e, t) {
   if (e) {
-    var n = Object(o.a)();
-    Object(r.b)(function () {
-      n.dispatch(Object(a.t)(e));
-      n.dispatch(Object(a.u)(void 0 !== t ? t : ""));
+    var n = o.a();
+    r.b(function () {
+      n.dispatch(a.t(e));
+      n.dispatch(a.u(undefined !== t ? t : ""));
     });
-    Object(s.b)(e, "screen", "", "");
+    s.b(e, "screen", "", "");
   }
 }
 function f(e, t) {
-  var n = Object(o.a)().getState().screenList;
+  var n = o.a().getState().screenList;
   var r = n.findIndex(function (t) {
     return t.id === e;
   });
@@ -81,7 +81,7 @@ function f(e, t) {
   }
 }
 function h(e, t) {
-  var n = Object(o.a)().getState().screenList;
+  var n = o.a().getState().screenList;
   var r = n.findIndex(function (t) {
     return t.id === e;
   });
@@ -91,13 +91,13 @@ function h(e, t) {
   }
 }
 function m(e) {
-  return Object(o.a)().getState().screenList.find(function (t) {
+  return o.a().getState().screenList.find(function (t) {
     return t.id === e;
   });
 }
 function g(e, t) {
-  if (Object(l.pb)(t)) {
-    Object(o.a)().dispatch(Object(a.x)(e, "backgroundColor", t));
+  if (l.pb(t)) {
+    o.a().dispatch(a.x(e, "backgroundColor", t));
   } else {
     c.a.log({
       type: "warning",
@@ -107,8 +107,8 @@ function g(e, t) {
   }
 }
 function _(e, t) {
-  if (Object(u.d)(t)) {
-    Object(o.a)().dispatch(Object(a.x)(e, "backgroundImage", t));
+  if (u.d(t)) {
+    o.a().dispatch(a.x(e, "backgroundImage", t));
   } else {
     c.a.log({
       messageId: "imageNotExists",
@@ -126,7 +126,7 @@ function v(e) {
 function b(e) {
   var t = m(e);
   if (t) {
-    return t.size.width * Object(i.n)();
+    return t.size.width * i.n();
   }
 }
 function y(e) {

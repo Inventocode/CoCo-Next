@@ -14,20 +14,20 @@ var f = require("../1734/629/index");
 var h = p("isConcatSpreadable");
 var m = f >= 51 || !o(function () {
   var e = [];
-  e[h] = !1;
+  e[h] = false;
   return e.concat()[0] !== e;
 });
 var g = d("concat");
 var _ = function (e) {
   if (!a(e)) {
-    return !1;
+    return false;
   }
   var t = e[h];
-  return void 0 !== t ? !!t : i(e);
+  return undefined !== t ? !!t : i(e);
 };
 r({
   target: "Array",
-  proto: !0,
+  proto: true,
   forced: !m || !g
 }, {
   concat: function (e) {

@@ -4,25 +4,25 @@ export { s as d };
 export { c as b };
 export { l as c };
 export { u as a };
-var r = require("../../47");
-var o = require("../../9");
-var i = require("../../15");
-var a = require("../../48/index");
+import r = require("../../47");
+import o = require("../../9");
+import i = require("../../15");
+import a = require("../../48/index");
 function s(e) {
-  return void 0 !== c(e);
+  return undefined !== c(e);
 }
 function c(e) {
   if ("string" === typeof e) {
     if ("" === e) {
       return e;
     }
-    if (Object(i.U)(e)) {
+    if (i.U(e)) {
       return e;
     }
-    var t = Object(a.a)().getState();
+    var t = a.a().getState();
     var n = t.imageFileMap.get(e);
     if (n) {
-      var s = Object(o.lb)(n);
+      var s = o.lb(n);
       if (s) {
         return s;
       }
@@ -30,7 +30,7 @@ function c(e) {
     if (e.endsWith(".svg")) {
       var c;
       var l = t.iconFileMap;
-      var u = Object(r.a)(l.values());
+      var u = r.a(l.values());
       try {
         for (u.s(); !(c = u.n()).done;) {
           var d = c.value;
@@ -52,14 +52,14 @@ function l(e) {
 }
 function u(e) {
   if ("string" === typeof e) {
-    var t = Object(a.a)().getState();
+    var t = a.a().getState();
     var n = t.iconFileMap;
     var s = n.get(e);
     if (s) {
       return s;
     }
     var c;
-    var l = Object(r.a)(n.values());
+    var l = r.a(n.values());
     try {
       for (l.s(); !(c = l.n()).done;) {
         var u = c.value;
@@ -73,13 +73,13 @@ function u(e) {
       l.f();
     }
     var d = t.imageFileMap.get(e);
-    var p = Object(i.U)(e) ? e : d ? Object(o.lb)(d) : "";
-    return ".svg" === (null === d || void 0 === d ? void 0 : d.extension) ? {
+    var p = i.U(e) ? e : d ? o.lb(d) : "";
+    return ".svg" === (null === d || undefined === d ? undefined : d.extension) ? {
       id: d.id,
       name: d.id,
       source: d.source,
       cdnUrl: p || ""
-    } : (null === p || void 0 === p ? void 0 : p.endsWith(".svg")) ? {
+    } : (null === p || undefined === p ? undefined : p.endsWith(".svg")) ? {
       id: p,
       name: p,
       cdnUrl: p

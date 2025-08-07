@@ -4,7 +4,7 @@ var i = Math.abs;
 var a = Math.sqrt;
 r({
   target: "Math",
-  stat: !0,
+  stat: true,
   forced: !!o && o(1 / 0, NaN) !== 1 / 0
 }, {
   hypot: function (e, t) {

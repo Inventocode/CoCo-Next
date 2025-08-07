@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.register_default_procedure_events = void 0;
+exports.register_default_procedure_events = undefined;
 var r = require("tslib");
 var i = require("../../4/127");
 var o = (0, r.__importStar)(require("../../17/533"));
@@ -58,17 +58,17 @@ exports.register_default_procedure_events = function (e, t) {
     (0, a.assert)(m);
     n.disable();
     if ("undefined" === typeof g && "object" === typeof A) {
-      if (!(null === (o = v.addMutation) || void 0 === o)) {
+      if (!(null === (o = v.addMutation) || undefined === o)) {
         o.call(v, A.param_name);
       }
-      if (void 0 !== A.default_value) {
+      if (undefined !== A.default_value) {
         var y = m.params.length;
-        var b = null === (l = null === (u = v.get_input("" + c.PROCEDURE_BLOCK_INPUT_NAMES.PARAM_PREFIX + y)) || void 0 === u ? void 0 : u.connection) || void 0 === l ? void 0 : l.targetBlock();
+        var b = null === (l = null === (u = v.get_input("" + c.PROCEDURE_BLOCK_INPUT_NAMES.PARAM_PREFIX + y)) || undefined === u ? undefined : u.connection) || undefined === l ? undefined : l.targetBlock();
         (0, a.assert)(b);
         b.set_field_value("=" + A.default_value, c.PROCEDURE_BLOCK_FIELD_NAMES.PARAM_DEFAULT_VALUE);
       }
     } else if ("undefined" === typeof A && "object" === typeof g) {
-      if (!(null === (f = v.removeMutation) || void 0 === f)) {
+      if (!(null === (f = v.removeMutation) || undefined === f)) {
         f.call(v);
       }
     }
@@ -94,14 +94,14 @@ exports.register_default_procedure_events = function (e, t) {
       var l = e.get_block_by_id(i.get_block_id());
       if (l) {
         var f = n.is_record_undo();
-        n.set_record_undo(!1);
+        n.set_record_undo(false);
         var d = (0, s.is_func)(t) ? t() : t;
         if (l.type === c.PROCEDURE_BLOCK_TYPES.DEF) {
           var h = d.load_def_from_block(l);
           (0, a.assert)(h);
           n.disable();
           var p = l.get_field(c.PROCEDURE_BLOCK_FIELD_NAMES.PROCEDURE_NAME);
-          var _ = null === p || void 0 === p ? void 0 : p.get_value();
+          var _ = null === p || undefined === p ? undefined : p.get_value();
           (0, a.assert)(p);
           p.set_value(h.name);
           n.enable();
@@ -115,7 +115,7 @@ exports.register_default_procedure_events = function (e, t) {
           }
           d.update_callers_disabled(e, h.def_id);
         }
-        l.get_descendants(!1, !0).forEach(function (e) {
+        l.get_descendants(false, true).forEach(function (e) {
           if (e.type === c.PROCEDURE_BLOCK_TYPES.CALL_RETURN || e.type === c.PROCEDURE_BLOCK_TYPES.CALL_NORETURN) {
             var t = d.load_caller_from_block(e);
             (0, a.assert)(t);
@@ -133,7 +133,7 @@ exports.register_default_procedure_events = function (e, t) {
   };
   e.add_change_listener(function (r) {
     var i = n.is_record_undo();
-    switch (n.set_record_undo(!1), r.type) {
+    switch (n.set_record_undo(false), r.type) {
       case o.BlockEventType.CREATE:
         if (n.is_undoing() || "flyout:drag" !== r.source) {
           d(r);
@@ -175,7 +175,7 @@ exports.register_default_procedure_events = function (e, t) {
             var l = e.get_block_by_id(r.get_block_id());
             if (l) {
               var d = (0, s.is_func)(t) ? t() : t;
-              var h = l.get_descendants(!1, !0).filter(function (e) {
+              var h = l.get_descendants(false, true).filter(function (e) {
                 return e.type === c.PROCEDURE_BLOCK_TYPES.RETURN && e.get_input("VALUE");
               }).length;
               if (!(h < 1)) {
@@ -212,7 +212,7 @@ exports.register_default_procedure_events = function (e, t) {
                 }
                 var g = function () {
                   var e = n.is_record_undo();
-                  n.set_record_undo(!1);
+                  n.set_record_undo(false);
                   u.forEach(function (e) {
                     return e();
                   });
@@ -241,13 +241,13 @@ exports.register_default_procedure_events = function (e, t) {
               var l = i.get_procedure_by_def(u.id);
               (0, a.assert)(l);
               if ("mutation" === n.element) {
-                if (void 0 !== n.get_new_value()) {
+                if (undefined !== n.get_new_value()) {
                   i.change_return_count(l.name, 1);
                   if (l.return_count > 0) {
                     i.update_callers_disabled(e, l.def_id);
                   }
                 } else {
-                  if (void 0 !== n.get_old_value()) {
+                  if (undefined !== n.get_old_value()) {
                     i.change_return_count(l.name, -1);
                     if (0 === l.return_count) {
                       i.update_callers_disabled(e, l.def_id);
@@ -289,7 +289,7 @@ exports.register_default_procedure_events = function (e, t) {
   e.set_pre_paste(function (e, n, r, i) {
     var o = (0, s.is_func)(t) ? t() : t;
     if (!i) {
-      e = (0, l.load_from_xml)(o, e, !0);
+      e = (0, l.load_from_xml)(o, e, true);
     }
     return {
       xml_block: e,
@@ -304,7 +304,7 @@ exports.register_default_procedure_events = function (e, t) {
       return o.appendChild(e);
     });
     return {
-      xml_blocks: e = Array.from((0, l.load_from_xml)(i, o, !0).children),
+      xml_blocks: e = Array.from((0, l.load_from_xml)(i, o, true).children),
       mouse_position: n,
       is_move_to_default: r
     };

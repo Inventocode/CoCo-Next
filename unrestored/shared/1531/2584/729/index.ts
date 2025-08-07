@@ -1,6 +1,6 @@
 "use strict";
 
-var r = require("react");
+import r = require("react");
 var o = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -13,13 +13,13 @@ var o = function __importDefault(module) {
   });
   return defaultExport;
 }(r);
-var i = require("../16/index");
+import i = require("../16/index");
 require("../710/index");
-var a = require("../155/index");
-var s = require("../6");
-var c = require("../38/66");
-var l = require("./62");
-var u = require("../676/70");
+import a = require("../155/index");
+import s = require("../6");
+import c = require("../38/66");
+import l = require("./62");
+import u = require("../676/70");
 var d = function (e) {
   return {
     type: "SET_ROTATION",
@@ -142,8 +142,8 @@ var S = function (e) {
   return e;
 };
 var I = function () {
-  var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : C;
-  var t = arguments.length > 1 ? arguments[1] : void 0;
+  var e = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : C;
+  var t = arguments.length > 1 ? arguments[1] : undefined;
   switch (t.type) {
     case "SET_EMIT_EVENT":
       return e.set("emitEvent", w(t.payload));
@@ -165,13 +165,13 @@ var I = function () {
     case "SET_VISIBLE_PANEL":
       return e.set("visiblePanel", t.payload);
     case "SET_PHONE_CALL_INFO":
-      return e.set("phoneCallInfo", Object(s.a)(Object(s.a)({}, e.phoneCallInfo), t.payload));
+      return e.set("phoneCallInfo", s.a(s.a({}, e.phoneCallInfo), t.payload));
     default:
       return e;
   }
 };
-var A = Object(a.createStore)(I);
-var j = require("../8");
+var A = a.createStore(I);
+import j = require("../8");
 var N = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -184,39 +184,39 @@ var N = function __importDefault(module) {
   });
   return defaultExport;
 }(j);
-var R = require("../2628/index");
-var k = require("../23");
-var x = require("../10/index");
-var D = require("./1021");
+import R = require("../2628/index");
+import k = require("../../../../../src/shared/language");
+import x = require("../10/index");
+import D = require("./1021");
 var M = function (e) {
-  var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : .001;
+  var t = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : .001;
   return Math.abs(e.x) <= t && Math.abs(e.y) <= t && Math.abs(e.z) <= t;
 };
 var L = new l.g("#f6f4fd");
 function P() {
-  var e = Object(r.useRef)();
-  var t = Object(r.useRef)(0);
-  var n = Object(r.useRef)();
-  var a = Object(r.useState)(!1);
-  var s = Object(x.a)(a, 2);
+  var e = r.useRef();
+  var t = r.useRef(0);
+  var n = r.useRef();
+  var a = r.useState(false);
+  var s = x.a(a, 2);
   var c = s[0];
   var u = s[1];
-  var d = Object(i.d)();
-  var p = Object(i.e)(function (e) {
+  var d = i.d();
+  var p = i.e(function (e) {
     return e;
   });
   n.current = p;
-  Object(r.useEffect)(function () {
+  r.useEffect(function () {
     var t;
     var n = {
-      width: (null === (t = document.getElementById("emulatorCanvasWrapper")) || void 0 === t ? void 0 : t.clientWidth) || 340,
+      width: (null === (t = document.getElementById("emulatorCanvasWrapper")) || undefined === t ? undefined : t.clientWidth) || 340,
       height: 300
     };
     var r = new l.H();
     var o = new l.B(75, n.width / n.height, .1, 1e3);
     var i = new l.R({
-      antialias: !0,
-      alpha: !1
+      antialias: true,
+      alpha: false
     });
     var a = new l.C();
     a.position.set(10, 10, 50);
@@ -227,7 +227,7 @@ function P() {
     o.position.z = 6;
     i.setSize(n.width, n.height);
     i.setClearColor(L);
-    i.autoClear = !1;
+    i.autoClear = false;
     var s = new D.a();
     var c = new l.M().load("/editor/model/background.png");
     r.background = c;
@@ -239,11 +239,11 @@ function P() {
         camera: o,
         phone: t
       };
-      u(!0);
+      u(true);
     });
     return function () {
       i.dispose();
-      e.current = void 0;
+      e.current = undefined;
     };
   }, []);
   var h = new l.O();
@@ -251,8 +251,8 @@ function P() {
   !function (e, t) {
     var n = o.a.useRef();
     var i = o.a.useRef();
-    var a = Object(r.useCallback)(function (t) {
-      if (void 0 !== i.current) {
+    var a = r.useCallback(function (t) {
+      if (undefined !== i.current) {
         var r = t - i.current;
         e(r / 1e3);
       }
@@ -296,7 +296,7 @@ function P() {
       var R = j.y;
       var k = j.z;
       u.position.set(l.s.lerp(S, N, p), l.s.lerp(I, R, p), l.s.lerp(A, k, p));
-      a.clear(!0, !0, !0);
+      a.clear(true, true, true);
       a.render(s, c);
       t.current -= r;
       if (t.current < 0) {
@@ -342,7 +342,7 @@ function P() {
       }
     }
   });
-  var _ = Object(r.useCallback)(function (t) {
+  var _ = r.useCallback(function (t) {
     if (t && e.current) {
       t.appendChild(e.current.renderer.domElement);
     }
@@ -352,9 +352,9 @@ function P() {
     id: "emulatorCanvasWrapper"
   });
 }
-var B = require("../11");
-var F = require("../13/index");
-var G = require("../94/index");
+import B = require("../11");
+import F = require("../13/index");
+import G = require("../94/index");
 var U = {
   rotation: [{
     title: "X 旋转",
@@ -410,19 +410,19 @@ var U = {
 var W = function (e) {
   var t = e.type;
   var n = e.style;
-  var r = Object(i.d)();
-  var a = Object(i.e)(function (e) {
+  var r = i.d();
+  var a = i.e(function (e) {
     return e[t];
   });
   var c = function (e) {
     switch (t) {
       case "rotation":
         return function (t) {
-          r(d(Object(s.a)(Object(s.a)({}, a), {}, Object(B.a)({}, e, t))));
+          r(d(s.a(s.a({}, a), {}, B.a({}, e, t))));
         };
       case "position":
         return function (t) {
-          r(p(Object(s.a)(Object(s.a)({}, a), {}, Object(B.a)({}, e, t))));
+          r(p(s.a(s.a({}, a), {}, B.a({}, e, t))));
         };
     }
   };
@@ -456,14 +456,14 @@ var W = function (e) {
       max: i,
       value: a[n],
       onChange: c(n),
-      isShowRightInput: !0,
+      isShowRightInput: true,
       inputAfter: l
     })));
   })));
 };
 var H = function (e) {
   var t = e.style;
-  var n = Object(i.d)();
+  var n = i.d();
   return o.a.createElement("div", {
     className: "emulator-sensors",
     style: t
@@ -476,7 +476,7 @@ var H = function (e) {
         shake: null
       }));
       window.requestAnimationFrame(function r(o) {
-        if (void 0 === e) {
+        if (undefined === e) {
           e = o;
         }
         var i = o - e;
@@ -510,7 +510,7 @@ var H = function (e) {
   }, "摇一摇"))));
 };
 var V = function () {
-  var e = Object(i.e)(function (e) {
+  var e = i.e(function (e) {
     return e.visiblePanel;
   });
   var t = function (t) {
@@ -530,7 +530,7 @@ var V = function () {
     style: t("SHAKE")
   }));
 };
-var z = require("../702");
+import z = require("../702");
 var Y = [{
   type: "SHAKE",
   icon: "icon-phone-shake",
@@ -546,7 +546,7 @@ var Y = [{
   icon: "icon-phone-move",
   iconSelected: "icon-phone-move-selected",
   name: "emulator.position",
-  spaceLine: !0
+  spaceLine: true
 }, {
   type: "DIAL_CALL",
   icon: "icon-phone-dial-call",
@@ -557,7 +557,7 @@ var Y = [{
   icon: "icon-phone-receive-call",
   iconSelected: "icon-phone-receive-call-selected",
   name: "emulator.receiveCall",
-  spaceLine: !0
+  spaceLine: true
 }, {
   type: "RECEIVE_SMS",
   icon: "icon-phone-receive-sms",
@@ -568,7 +568,7 @@ var K = o.a.memo(function (e) {
   var t = e.icon;
   var n = e.selected;
   var r = e.name;
-  var i = Object(z.a)().formatMessage;
+  var i = z.a().formatMessage;
   return o.a.createElement("div", {
     className: N()("emulator-channel-item", n && "selected")
   }, o.a.createElement("div", {
@@ -582,8 +582,8 @@ var K = o.a.memo(function (e) {
   })));
 });
 var q = o.a.memo(function () {
-  var e = Object(i.d)();
-  var t = Object(i.e)(function (e) {
+  var e = i.d();
+  var t = i.e(function (e) {
     return e;
   });
   return o.a.createElement("div", {
@@ -637,8 +637,8 @@ var q = o.a.memo(function () {
     }));
   })));
 });
-var X = require("./302");
-var Q = require("./115");
+import X = require("./302");
+import Q = require("./115");
 var Z = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -652,9 +652,9 @@ var Z = function __importDefault(module) {
   return defaultExport;
 }(Q);
 var J = function () {
-  var e = Object(i.d)();
-  var t = Object(z.a)().formatMessage;
-  var n = Object(i.e)(function (e) {
+  var e = i.d();
+  var t = z.a().formatMessage;
+  var n = i.e(function (e) {
     return e.phoneCallInfo;
   });
   return o.a.createElement("div", {
@@ -685,10 +685,10 @@ var J = function () {
     className: N()(Z.a.callBtnItem, Z.a.callEnd),
     onClick: function () {
       if ("dialOutCall" === n.callType && n.callStatus !== u.b.IDEL) {
-        Object(X.press)("emulatorDialCallEnd");
+        X.press("emulatorDialCallEnd");
         e(h({
           onPhoneCallEnd: {
-            callingPageVisible: !1,
+            callingPageVisible: false,
             callType: "dialOutCall",
             callStatus: u.b.IDEL
           }
@@ -711,7 +711,7 @@ var J = function () {
     className: N()(Z.a.callBtnItem, Z.a.callConnect),
     onClick: function () {
       if ("dialOutCall" === n.callType && n.callStatus === u.b.RINGING) {
-        Object(X.press)("emulatorDialCallConnect");
+        X.press("emulatorDialCallConnect");
         e(h({
           onPhoneCallConnect: {
             callType: "dialOutCall",
@@ -732,13 +732,13 @@ var J = function () {
   })))));
 };
 var $ = function () {
-  var e = Object(i.d)();
-  var t = Object(z.a)().formatMessage;
-  var n = Object(i.e)(function (e) {
+  var e = i.d();
+  var t = z.a().formatMessage;
+  var n = i.e(function (e) {
     return e.phoneCallInfo;
   });
-  var a = Object(r.useState)(n.incomingPhoneNumber);
-  var s = Object(x.a)(a, 2);
+  var a = r.useState(n.incomingPhoneNumber);
+  var s = x.a(a, 2);
   var c = s[0];
   var l = s[1];
   return o.a.createElement("div", {
@@ -783,10 +783,10 @@ var $ = function () {
     className: N()(Z.a.callBtnItem, Z.a.callEnd),
     onClick: function () {
       if ("incomingCall" === n.callType && n.callStatus !== u.b.IDEL) {
-        Object(X.press)("emulatorReceiveCallEnd");
+        X.press("emulatorReceiveCallEnd");
         e(h({
           onPhoneCallEnd: {
-            callingPageVisible: !1,
+            callingPageVisible: false,
             callType: "incomingCall",
             callStatus: u.b.IDEL
           }
@@ -809,10 +809,10 @@ var $ = function () {
     className: N()(Z.a.callBtnItem, Z.a.callConnect),
     onClick: function () {
       if (n.callStatus === u.b.IDEL && c) {
-        Object(X.press)("emulatorReceiveCallConnect");
+        X.press("emulatorReceiveCallConnect");
         e(h({
           onReceivePhoneCall: {
-            callingPageVisible: !0,
+            callingPageVisible: true,
             phoneNumber: c,
             callType: "incomingCall",
             callStatus: u.b.RINGING
@@ -834,16 +834,16 @@ var $ = function () {
   })))));
 };
 var ee = function () {
-  var e = Object(i.d)();
-  var t = Object(z.a)().formatMessage;
-  var n = Object(r.useState)("123 4567 8901");
-  var a = Object(x.a)(n, 2);
+  var e = i.d();
+  var t = z.a().formatMessage;
+  var n = r.useState("123 4567 8901");
+  var a = x.a(n, 2);
   var s = a[0];
   var c = a[1];
-  var l = Object(r.useState)(t({
+  var l = r.useState(t({
     id: "emulator.smsContentDefault"
   }));
-  var u = Object(x.a)(l, 2);
+  var u = x.a(l, 2);
   var d = u[0];
   var p = u[1];
   return o.a.createElement("div", {
@@ -892,10 +892,10 @@ var ee = function () {
     id: "emulatorReceiveSms",
     onClick: function () {
       if (s && d) {
-        Object(X.press)("emulatorReceiveSms");
+        X.press("emulatorReceiveSms");
         e(h({
           onReceiveSms: {
-            receiveSmsPageVisible: !0,
+            receiveSmsPageVisible: true,
             receiveSmsNumber: s,
             receiveSmsContent: d
           }
@@ -910,15 +910,15 @@ var ee = function () {
 var te = ["SHAKE", "ROTATION", "POSITION"];
 var ne = function (e) {
   var t = e.messageWindow;
-  var n = Object(i.d)();
-  var a = Object(i.e)(function (e) {
+  var n = i.d();
+  var a = i.e(function (e) {
     return e.visiblePanel;
   });
-  var s = Object(i.e)(function (e) {
+  var s = i.e(function (e) {
     return e.language;
   });
-  var c = Object(r.useRef)(null);
-  Object(r.useEffect)(function () {
+  var c = r.useRef(null);
+  r.useEffect(function () {
     if (t) {
       n(function (e) {
         return {
@@ -928,7 +928,7 @@ var ne = function (e) {
       }(t));
     }
   }, [n, t]);
-  Object(r.useEffect)(function () {
+  r.useEffect(function () {
     var e = function (e) {
       var t = e.data;
       var r = t.type;
@@ -940,7 +940,7 @@ var ne = function (e) {
               case "ready":
                 n({
                   type: "PUSH_ALL_DATA",
-                  payload: void 0
+                  payload: undefined
                 });
             }
           }(e, o[e]);

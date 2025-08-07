@@ -88,7 +88,7 @@ function a(e, t) {
                 a.label++;
                 return {
                   value: o[1],
-                  done: !1
+                  done: false
                 };
               case 5:
                 a.label++;
@@ -136,8 +136,8 @@ function a(e, t) {
           throw o[1];
         }
         return {
-          value: o[0] ? o[1] : void 0,
-          done: !0
+          value: o[0] ? o[1] : undefined,
+          done: true
         };
       }([o, s]);
     };
@@ -193,7 +193,7 @@ var f = function () {
 }();
 var d = function () {
   function e(e, t, n) {
-    this._observer = Object(r.upload)(e, t.key, t.token);
+    this._observer = r.upload(e, t.key, t.token);
     this._subObject = n;
   }
   e.prototype.start = function () {
@@ -205,23 +205,23 @@ var d = function () {
   return e;
 }();
 function h(e, t) {
-  return o(this, void 0, void 0, function () {
+  return o(this, undefined, undefined, function () {
     return a(this, function (n) {
       return [2, new Promise(function (n, r) {
         var i = t.async;
-        var o = void 0 === i || i;
+        var o = undefined === i || i;
         var a = t.data;
-        var s = void 0 === a ? null : a;
+        var s = undefined === a ? null : a;
         var c = t.headers;
-        var u = void 0 === c ? {} : c;
+        var u = undefined === c ? {} : c;
         var l = t.method;
-        var f = void 0 === l ? "get" : l;
+        var f = undefined === l ? "get" : l;
         var d = t.timeout;
-        var h = void 0 === d ? 0 : d;
+        var h = undefined === d ? 0 : d;
         var p = t.onprogress;
         var _ = new XMLHttpRequest();
         if (t.withCredentials) {
-          _.withCredentials = !0;
+          _.withCredentials = true;
         }
         _.responseType = "json";
         _.timeout = h;
@@ -261,7 +261,7 @@ function h(e, t) {
 var p = function () {
   function e() {}
   e.prototype.upload = function (e, t, n, r) {
-    return o(this, void 0, void 0, function () {
+    return o(this, undefined, undefined, function () {
       var i;
       var o;
       var s;
@@ -290,7 +290,7 @@ var p = function () {
   return e;
 }();
 var _ = function (e, t) {
-  return o(void 0, void 0, void 0, function () {
+  return o(undefined, undefined, undefined, function () {
     var n;
     var r;
     return a(this, function (i) {
@@ -326,7 +326,7 @@ var _ = function (e, t) {
   });
 };
 var A = function (e, t) {
-  return o(void 0, void 0, void 0, function () {
+  return o(undefined, undefined, undefined, function () {
     var n;
     var r;
     var o;
@@ -342,7 +342,7 @@ var A = function (e, t) {
             cdnName: "aliyun"
           })), {
             headers: r,
-            withCredentials: !0
+            withCredentials: true
           })];
         case 1:
           return [2, {
@@ -376,7 +376,7 @@ var v = function () {
     f.init(e);
   }
   e.prototype.create = function (e, t) {
-    return o(this, void 0, void 0, function () {
+    return o(this, undefined, undefined, function () {
       var n;
       var r;
       var s;
@@ -396,7 +396,7 @@ var v = function () {
       return a(this, function (k) {
         switch (k.label) {
           case 0:
-            if (n = t.onprogress, r = t.timeout, s = void 0 === r ? 2e5 : r, c = t.onsuccess, u = t.onerror, l = t.persistentOption, p = t.insertOnly, !e) {
+            if (n = t.onprogress, r = t.timeout, s = undefined === r ? 2e5 : r, c = t.onsuccess, u = t.onerror, l = t.persistentOption, p = t.insertOnly, !e) {
               if (u) {
                 u("文件不允许为空！");
               }
@@ -415,7 +415,7 @@ var v = function () {
             k.label = 1;
           case 1:
             k.trys.push([1, 3,, 4]);
-            return [4, (S = t.type || "normal", T = m, B = t.authToken, o(void 0, void 0, void 0, function () {
+            return [4, (S = t.type || "normal", T = m, B = t.authToken, o(undefined, undefined, undefined, function () {
               var e;
               var t;
               var n;
@@ -441,7 +441,7 @@ var v = function () {
                       cdnName: "qiniu"
                     })), {
                       headers: n,
-                      withCredentials: !0
+                      withCredentials: true
                     })];
                   case 1:
                     r = a.sent();
@@ -479,7 +479,7 @@ var v = function () {
                 }
               },
               error: function (r) {
-                return o(O, void 0, void 0, function () {
+                return o(O, undefined, undefined, function () {
                   var r;
                   var i;
                   var o;

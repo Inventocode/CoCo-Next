@@ -6,7 +6,7 @@ var s = require("./1738/709").onFreeze;
 var c = Object.freeze;
 r({
   target: "Object",
-  stat: !0,
+  stat: true,
   forced: i(function () {
     c(1);
   }),

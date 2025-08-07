@@ -8,8 +8,8 @@ import a from "../../../shared/1531/2584/75/index";
 import * as s from "../../../shared/1531/2584/28/index";
 import * as u from "../../../shared/1531/2584/15";
 import * as c from "../../../shared/1531/2584/68";
-import * as l from "../../../shared/1531/2584/1/index";
-import d from "../../../shared/1531/2584/1/index";
+import * as l from "regenerator-runtime";
+import d from "regenerator-runtime";
 import * as f from "../../../shared/1531/2584/6";
 import * as h from "../../../shared/1531/2584/7";
 import * as p from "../../../shared/1531/2584/10/index";
@@ -66,15 +66,15 @@ var R = i.memo(function () {
   var s = Object(p.a)(a, 2);
   var u = s[0];
   var l = s[1];
-  var m = Object(r.useState)(!1);
+  var m = Object(r.useState)(false);
   var S = Object(p.a)(m, 2);
   var j = S[0];
   var R = S[1];
-  var N = Object(r.useState)(!1);
+  var N = Object(r.useState)(false);
   var x = Object(p.a)(N, 2);
   var D = x[0];
   var L = x[1];
-  var B = Object(r.useState)(!0);
+  var B = Object(r.useState)(true);
   var P = Object(p.a)(B, 2);
   var U = P[0];
   var F = P[1];
@@ -96,7 +96,7 @@ var R = i.memo(function () {
         for (;;) {
           switch (t.prev = t.next) {
             case 0:
-              if (!(n = null === (e = window.location.pathname.match(/\/player\/([^/]*)/)) || void 0 === e ? void 0 : e[1])) {
+              if (!(n = null === (e = window.location.pathname.match(/\/player\/([^/]*)/)) || undefined === e ? undefined : e[1])) {
                 t.next = 22;
                 break;
               }
@@ -150,13 +150,13 @@ var R = i.memo(function () {
     window.addEventListener("message", function (t) {
       if ("PLAYER_BLOCK_CODE" === t.data.type) {
         G(t.data.payload);
-        F(!1);
+        F(false);
         var e = document.getElementById("editor-iframe");
         if (e) {
           document.body.removeChild(e);
         }
       }
-    }, !1);
+    }, false);
   }, []);
   Object(r.useEffect)(function () {
     if (!U && K.current) {
@@ -164,7 +164,7 @@ var R = i.memo(function () {
         K.current.blockCode = V;
       }
       o(Object(f.a)(Object(f.a)({}, K.current), {}, {
-        shouldOpenEmulator: !0
+        shouldOpenEmulator: true
       }));
       w();
       O();
@@ -185,17 +185,17 @@ var R = i.memo(function () {
       if (Y.current && Y.current >= n) {
         return;
       }
-      R(!0);
+      R(true);
       window.clearTimeout(z.current);
       z.current = window.setTimeout(function () {
-        return R(!1);
+        return R(false);
       }, e.data.duration);
       return void (Y.current = n);
     }
     if (e.type === c.b.DEVICE_NOT_VIBRATE) {
       window.clearTimeout(z.current);
       Y.current = 0;
-      R(!1);
+      R(false);
     } else {
       if (e.type === c.b.EMULATOR && "string" === typeof e.data.visiblePanel) {
         L(!!e.data.visiblePanel);
@@ -253,15 +253,15 @@ var L = i.memo(function () {
   var s = Object(p.a)(a, 2);
   var l = s[0];
   var m = s[1];
-  var y = Object(r.useState)(!1);
+  var y = Object(r.useState)(false);
   var w = Object(p.a)(y, 2);
   var E = w[0];
   var O = w[1];
-  var T = Object(r.useState)(!1);
+  var T = Object(r.useState)(false);
   var S = Object(p.a)(T, 2);
   var j = S[0];
   var M = S[1];
-  var k = Object(r.useState)(!0);
+  var k = Object(r.useState)(true);
   var R = Object(p.a)(k, 2);
   var N = R[0];
   var L = R[1];
@@ -284,7 +284,7 @@ var L = i.memo(function () {
         for (;;) {
           switch (t.prev = t.next) {
             case 0:
-              if (n = null === (e = window.location.pathname.match(/\/player\/([^/]*)/)) || void 0 === e ? void 0 : e[1], (r = Object(u.N)(window.location.href)).workId && (n = r.workId), !n) {
+              if (n = null === (e = window.location.pathname.match(/\/player\/([^/]*)/)) || undefined === e ? undefined : e[1], (r = Object(u.N)(window.location.href)).workId && (n = r.workId), !n) {
                 t.next = 22;
                 break;
               }
@@ -329,17 +329,17 @@ var L = i.memo(function () {
       if (H.current && H.current >= n) {
         return;
       }
-      O(!0);
+      O(true);
       window.clearTimeout(W.current);
       W.current = window.setTimeout(function () {
-        return O(!1);
+        return O(false);
       }, e.data.duration);
       return void (H.current = n);
     }
     if (e.type === c.b.DEVICE_NOT_VIBRATE) {
       window.clearTimeout(W.current);
       H.current = 0;
-      O(!1);
+      O(false);
     } else {
       if (e.type === c.b.EMULATOR && "string" === typeof e.data.visiblePanel) {
         M(!!e.data.visiblePanel);
@@ -354,13 +354,13 @@ var L = i.memo(function () {
     window.addEventListener("message", function (t) {
       if ("PLAYER_BLOCK_CODE" === t.data.type) {
         F(t.data.payload);
-        L(!1);
+        L(false);
         var e = document.getElementById("editor-iframe");
         if (e) {
           document.body.removeChild(e);
         }
       }
-    }, !1);
+    }, false);
   }, []);
   Object(r.useEffect)(function () {
     if (!N && V.current) {
@@ -368,7 +368,7 @@ var L = i.memo(function () {
         V.current.blockCode = U;
       }
       o(Object(f.a)(Object(f.a)({}, V.current), {}, {
-        shouldOpenEmulator: !0
+        shouldOpenEmulator: true
       }));
     }
   }, [U, N]);
@@ -436,7 +436,7 @@ var F = i.memo(function () {
   var e = Object(p.a)(t, 2);
   var n = e[0];
   var o = e[1];
-  var a = Object(r.useState)(!0);
+  var a = Object(r.useState)(true);
   var s = Object(p.a)(a, 2);
   var u = s[0];
   var c = s[1];
@@ -459,7 +459,7 @@ var F = i.memo(function () {
         for (;;) {
           switch (t.prev = t.next) {
             case 0:
-              if (!(n = null === (e = window.location.pathname.match(/\/player\/([^/]*)/)) || void 0 === e ? void 0 : e[1])) {
+              if (!(n = null === (e = window.location.pathname.match(/\/player\/([^/]*)/)) || undefined === e ? undefined : e[1])) {
                 t.next = 22;
                 break;
               }
@@ -508,13 +508,13 @@ var F = i.memo(function () {
     window.addEventListener("message", function (t) {
       if ("PLAYER_BLOCK_CODE" === t.data.type) {
         _(t.data.payload);
-        c(!1);
+        c(false);
         var e = document.getElementById("editor-iframe");
         if (e) {
           document.body.removeChild(e);
         }
       }
-    }, !1);
+    }, false);
   }, []);
   Object(r.useEffect)(function () {
     if (!u && A.current) {
@@ -603,7 +603,7 @@ function X() {
           case 6:
             o = t.sent;
             i.config({
-              debug: !1,
+              debug: false,
               appId: o.appId,
               timestamp: o.timestamp,
               nonceStr: o.nonceStr,
@@ -646,11 +646,11 @@ var q = i.memo(function () {
   var e = Object(p.a)(t, 2);
   var n = e[0];
   var o = e[1];
-  var a = Object(r.useState)(!0);
+  var a = Object(r.useState)(true);
   var s = Object(p.a)(a, 2);
   var c = s[0];
   var l = s[1];
-  var m = Object(r.useState)(!0);
+  var m = Object(r.useState)(true);
   var b = Object(p.a)(m, 2);
   var _ = b[0];
   var y = b[1];
@@ -674,7 +674,7 @@ var q = i.memo(function () {
         for (;;) {
           switch (t.prev = t.next) {
             case 0:
-              if (n = null === (e = window.location.pathname.match(/\/player\/([^/]*)/)) || void 0 === e ? void 0 : e[1], (r = Object(u.N)(window.location.href)).workId && (n = r.workId), !n) {
+              if (n = null === (e = window.location.pathname.match(/\/player\/([^/]*)/)) || undefined === e ? undefined : e[1], (r = Object(u.N)(window.location.href)).workId && (n = r.workId), !n) {
                 t.next = 30;
                 break;
               }
@@ -710,7 +710,7 @@ var q = i.memo(function () {
               t.next = 29;
               return K(s, c, f);
             case 29:
-              l(!1);
+              l(false);
             case 30:
             case "end":
               return t.stop();
@@ -726,13 +726,13 @@ var q = i.memo(function () {
     window.addEventListener("message", function (t) {
       if ("PLAYER_BLOCK_CODE" === t.data.type) {
         T(t.data.payload);
-        y(!1);
+        y(false);
         var e = document.getElementById("editor-iframe");
         if (e) {
           document.body.removeChild(e);
         }
       }
-    }, !1);
+    }, false);
   }, []);
   Object(r.useEffect)(function () {
     if (!_ && A.current) {

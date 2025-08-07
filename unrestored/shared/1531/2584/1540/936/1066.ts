@@ -42,7 +42,7 @@ module.exports = function (e, t, n, u, f, v, b) {
     };
   };
   var C = t + " Iterator";
-  var T = !1;
+  var T = false;
   var S = e.prototype;
   var I = S[g] || S["@@iterator"] || f && S[f];
   var A = !m && I || w(f);
@@ -59,14 +59,14 @@ module.exports = function (e, t, n, u, f, v, b) {
           }
         }
       }
-      s(y, C, !0, !0);
+      s(y, C, true, true);
       if (d) {
         p[C] = _;
       }
     }
   }
   if ("values" == f && I && "values" !== I.name) {
-    T = !0;
+    T = true;
     A = function () {
       return I.call(this);
     };
@@ -88,7 +88,7 @@ module.exports = function (e, t, n, u, f, v, b) {
     } else {
       r({
         target: t,
-        proto: !0,
+        proto: true,
         forced: m || T
       }, E);
     }

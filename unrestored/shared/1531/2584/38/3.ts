@@ -10,18 +10,18 @@ export { f as g };
 export { d as h };
 require("./486/229");
 require("../19");
-var r = require("./486/179");
-var i = require("./486/92");
+import r = require("./486/179");
+import i = require("./486/92");
 require("./486/982");
 var o = function (e) {
   return {
-    done: !0,
+    done: true,
     value: e
   };
 };
 var a = {};
 function s(e) {
-  return Object(r.b)(e) ? "channel" : Object(r.l)(e) ? String(e) : Object(r.d)(e) ? e.name : String(e);
+  return r.b(e) ? "channel" : r.l(e) ? String(e) : r.d(e) ? e.name : String(e);
 }
 function c(e, t, n) {
   var r;
@@ -33,7 +33,8 @@ function c(e, t, n) {
       return o(t);
     }
     if (n && !s) {
-      throw u = a, n;
+      u = a;
+      throw n;
     }
     if (r) {
       r(t);
@@ -45,7 +46,7 @@ function c(e, t, n) {
     s = i.errorState;
     return u === a ? o(t) : c;
   }
-  return Object(i.N)(l, function (e) {
+  return i.N(l, function (e) {
     return l(null, e);
   }, n);
 }
@@ -55,13 +56,13 @@ function u(e, t) {
   }
   var a;
   var u = {
-    done: !1,
-    value: Object(i.i)(e)
+    done: false,
+    value: i.i(e)
   };
   var l = function (e) {
     return {
-      done: !1,
-      value: i.j.apply(void 0, [t].concat(r, [e]))
+      done: false,
+      value: i.j.apply(undefined, [t].concat(r, [e]))
     };
   };
   var f = function (e) {
@@ -90,19 +91,19 @@ function l(e, t) {
   var a;
   var u;
   var l = {
-    done: !1,
-    value: Object(i.i)(e)
+    done: false,
+    value: i.i(e)
   };
   var f = function (e) {
     return {
-      done: !1,
-      value: i.j.apply(void 0, [t].concat(r, [e]))
+      done: false,
+      value: i.j.apply(undefined, [t].concat(r, [e]))
     };
   };
   var d = function (e) {
     return {
-      done: !1,
-      value: Object(i.k)(e)
+      done: false,
+      value: i.k(e)
     };
   };
   var h = function (e) {
@@ -142,11 +143,11 @@ function f(e, t) {
   for (var n = arguments.length, r = new Array(n > 2 ? n - 2 : 0), o = 2; o < n; o++) {
     r[o - 2] = arguments[o];
   }
-  return i.j.apply(void 0, [u, e, t].concat(r));
+  return i.j.apply(undefined, [u, e, t].concat(r));
 }
 function d(e, t) {
   for (var n = arguments.length, r = new Array(n > 2 ? n - 2 : 0), o = 2; o < n; o++) {
     r[o - 2] = arguments[o];
   }
-  return i.j.apply(void 0, [l, e, t].concat(r));
+  return i.j.apply(undefined, [l, e, t].concat(r));
 }

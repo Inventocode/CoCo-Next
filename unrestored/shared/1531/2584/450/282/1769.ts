@@ -8,7 +8,7 @@
     } else if ("undefined" == typeof DO_NOT_EXPORT_JSZIP) {
       JSZipSync = n();
       o = [];
-      if (!(void 0 === (a = "function" === typeof (i = n) ? i.apply(exports, o) : i))) {
+      if (!(undefined === (a = "function" === typeof (i = n) ? i.apply(exports, o) : i))) {
         module.exports = a;
       }
     } else {
@@ -40,7 +40,7 @@
         if (!n[a]) {
           if (!t[a]) {
             if (o) {
-              return o(a, !0);
+              return o(a, true);
             }
             throw new Error("Cannot find module '" + a + "'");
           }
@@ -54,7 +54,7 @@
         }
         return n[a].exports;
       }
-      for (var o = !1, a = 0; a < r.length; a++) {
+      for (var o = false, a = 0; a < r.length; a++) {
         i(r[a]);
       }
       return i;
@@ -218,10 +218,10 @@
       6: [function (e, t, n) {
         "use strict";
 
-        n.base64 = !1;
-        n.binary = !1;
-        n.dir = !1;
-        n.createFolders = !1;
+        n.base64 = false;
+        n.binary = false;
+        n.dir = false;
+        n.createFolders = false;
         n.date = null;
         n.compression = null;
         n.comment = null;
@@ -345,8 +345,8 @@
           for ((t = t || {}).base64 && (e = r.decode(e)), n = (o = new i(e, t)).files, a = 0; a < n.length; a++) {
             s = n[a];
             this.file(s.fileName, s.decompressed, {
-              binary: !0,
-              optimizedBinaryString: !0,
+              binary: true,
+              optimizedBinaryString: true,
               date: s.date,
               dir: s.dir,
               comment: s.fileComment.length ? s.fileComment : null,
@@ -373,7 +373,7 @@
               try {
                 e.from("foo", "utf8");
               } catch (i) {
-                r = !0;
+                r = true;
               }
             }
             n = r ? function (t, n) {
@@ -391,7 +391,7 @@
           t.exports.test = function (t) {
             return e.isBuffer(t);
           };
-        }).call(this, "undefined" !== typeof n ? n : void 0);
+        }).call(this, "undefined" !== typeof n ? n : undefined);
       }, {}],
       12: [function (e, t, n) {
         "use strict";
@@ -429,7 +429,7 @@
         var h = e("./stringWriter");
         var p = e("./uint8ArrayWriter");
         var _ = function (e) {
-          if (e._data instanceof l && (e._data = e._data.getContent(), e.options.binary = !0, e.options.base64 = !1, "uint8array" === i.getTypeOf(e._data))) {
+          if (e._data instanceof l && (e._data = e._data.getContent(), e.options.binary = true, e.options.base64 = false, "uint8array" === i.getTypeOf(e._data))) {
             var t = e._data;
             e._data = new Uint8Array(t.length);
             if (0 !== t.length) {
@@ -460,10 +460,10 @@
         };
         v.prototype = {
           asText: function () {
-            return g.call(this, !0);
+            return g.call(this, true);
           },
           asBinary: function () {
-            return g.call(this, !1);
+            return g.call(this, false);
           },
           asNodeBuffer: function () {
             var e = A(this);
@@ -501,8 +501,8 @@
           var r;
           var o = i.getTypeOf(t);
           if ((n = function (e) {
-            if (!(!0 !== (e = e || {}).base64 || null !== e.binary && void 0 !== e.binary)) {
-              e.binary = !0;
+            if (!(true !== (e = e || {}).base64 || null !== e.binary && undefined !== e.binary)) {
+              e.binary = true;
             }
             (e = y(e, s)).date = e.date || new Date();
             if (null !== e.compression) {
@@ -510,19 +510,19 @@
             }
             return e;
           }(n)).createFolders && (r = w(e))) {
-            E.call(this, r, !0);
+            E.call(this, r, true);
           }
           if (n.dir || null === t || "undefined" === typeof t) {
-            n.base64 = !1;
-            n.binary = !1;
+            n.base64 = false;
+            n.binary = false;
             t = null;
           } else if ("string" === o) {
-            if (n.binary && !n.base64 && !0 !== n.optimizedBinaryString) {
+            if (n.binary && !n.base64 && true !== n.optimizedBinaryString) {
               t = i.string2binary(t);
             }
           } else {
-            n.base64 = !1;
-            n.binary = !0;
+            n.base64 = false;
+            n.binary = true;
             if (!o && !(t instanceof l)) {
               throw new Error("The data of '" + e + "' is in an unsupported format !");
             }
@@ -548,7 +548,7 @@
           t = "undefined" !== typeof t && t;
           if (!this.files[e]) {
             b.call(this, e, null, {
-              dir: !0,
+              dir: true,
               createFolders: t
             });
           }
@@ -632,7 +632,7 @@
           w += m(v.length, 2);
           return {
             fileRecord: a.LOCAL_FILE_HEADER + w + f + v,
-            dirRecord: a.CENTRAL_FILE_HEADER + "\u0014\u0000" + w + m(p.length, 2) + "\u0000\u0000\u0000\u0000" + (!0 === u ? "\u0010\u0000\u0000\u0000" : "\u0000\u0000\u0000\u0000") + m(r, 4) + f + v + p,
+            dirRecord: a.CENTRAL_FILE_HEADER + "\u0014\u0000" + w + m(p.length, 2) + "\u0000\u0000\u0000\u0000" + (true === u ? "\u0010\u0000\u0000\u0000" : "\u0000\u0000\u0000\u0000") + m(r, 4) + f + v + p,
             compressedObject: n
           };
         };
@@ -709,7 +709,7 @@
           },
           generate: function (e) {
             e = y(e || {}, {
-              base64: !0,
+              base64: true,
               compression: "STORE",
               type: "base64",
               comment: null
@@ -849,14 +849,14 @@
         (function (e) {
           "use strict";
 
-          r.base64 = !0;
-          r.array = !0;
-          r.string = !0;
+          r.base64 = true;
+          r.array = true;
+          r.string = true;
           r.arraybuffer = "undefined" !== typeof ArrayBuffer && "undefined" !== typeof Uint8Array;
           r.nodebuffer = "undefined" !== typeof e;
           r.uint8array = "undefined" !== typeof Uint8Array;
           if ("undefined" === typeof ArrayBuffer) {
-            r.blob = !1;
+            r.blob = false;
           } else {
             var t = new ArrayBuffer(0);
             try {
@@ -869,11 +869,11 @@
                 n.append(t);
                 r.blob = 0 === n.getBlob("application/zip").size;
               } catch (i) {
-                r.blob = !1;
+                r.blob = false;
               }
             }
           }
-        }).call(this, "undefined" !== typeof n ? n : void 0);
+        }).call(this, "undefined" !== typeof n ? n : undefined);
       }, {}],
       18: [function (e, t, n) {
         "use strict";
@@ -1074,7 +1074,7 @@
           var i = e.length;
           var a = n.getTypeOf(e);
           var s = 0;
-          var c = !0;
+          var c = true;
           try {
             switch (a) {
               case "uint8array":
@@ -1084,7 +1084,7 @@
                 String.fromCharCode.apply(null, o(0));
             }
           } catch (f) {
-            c = !1;
+            c = false;
           }
           if (!c) {
             for (var u = "", l = 0; l < e.length; l++) {
@@ -1217,7 +1217,7 @@
           return l[r][e](t);
         };
         n.getTypeOf = function (e) {
-          return "string" === typeof e ? "string" : "[object Array]" === Object.prototype.toString.call(e) ? "array" : r.nodebuffer && o.test(e) ? "nodebuffer" : r.uint8array && e instanceof Uint8Array ? "uint8array" : r.arraybuffer && e instanceof ArrayBuffer ? "arraybuffer" : void 0;
+          return "string" === typeof e ? "string" : "[object Array]" === Object.prototype.toString.call(e) ? "array" : r.nodebuffer && o.test(e) ? "nodebuffer" : r.uint8array && e instanceof Uint8Array ? "uint8array" : r.arraybuffer && e instanceof ArrayBuffer ? "arraybuffer" : undefined;
         };
         n.checkSupport = function (e) {
           if (!r[e.toLowerCase()]) {
@@ -1344,7 +1344,7 @@
             this.checkSignature(s.CENTRAL_DIRECTORY_END);
             this.readBlockEndOfCentral();
             if (this.diskNumber === a.MAX_VALUE_16BITS || this.diskWithCentralDirStart === a.MAX_VALUE_16BITS || this.centralDirRecordsOnThisDisk === a.MAX_VALUE_16BITS || this.centralDirRecords === a.MAX_VALUE_16BITS || this.centralDirSize === a.MAX_VALUE_32BITS || this.centralDirOffset === a.MAX_VALUE_32BITS) {
-              this.zip64 = !0;
+              this.zip64 = true;
               if (-1 === (e = this.reader.lastIndexOfSignature(s.ZIP64_CENTRAL_DIRECTORY_LOCATOR))) {
                 throw new Error("Corrupted zip : can't find the ZIP64 end of central directory locator");
               }
@@ -1581,7 +1581,7 @@
           }
           this.err = 0;
           this.msg = "";
-          this.ended = !1;
+          this.ended = false;
           this.chunks = [];
           this.strm = new s();
           this.strm.avail_out = 0;
@@ -1595,7 +1595,7 @@
         };
         function u(e, t) {
           var n = new c(t);
-          n.push(e, !0);
+          n.push(e, true);
           if (n.err) {
             throw n.msg;
           }
@@ -1607,9 +1607,9 @@
           var s = this.strm;
           var c = this.options.chunkSize;
           if (this.ended) {
-            return !1;
+            return false;
           }
-          a = t === ~~t ? t : !0 === t ? 4 : 0;
+          a = t === ~~t ? t : true === t ? 4 : 0;
           s.input = "string" === typeof e ? o.string2buf(e) : e;
           s.next_in = 0;
           s.avail_in = s.input.length;
@@ -1621,8 +1621,8 @@
             }
             if (1 !== (n = r.deflate(s, a)) && 0 !== n) {
               this.onEnd(n);
-              this.ended = !0;
-              return !1;
+              this.ended = true;
+              return false;
             }
             if (0 === s.avail_out || 0 === s.avail_in && 4 === a) {
               if ("string" === this.options.to) {
@@ -1632,7 +1632,7 @@
               }
             }
           } while ((s.avail_in > 0 || 0 === s.avail_out) && 1 !== n);
-          return 4 !== a || (n = r.deflateEnd(this.strm), this.onEnd(n), this.ended = !0, 0 === n);
+          return 4 !== a || (n = r.deflateEnd(this.strm), this.onEnd(n), this.ended = true, 0 === n);
         };
         c.prototype.onData = function (e) {
           this.chunks.push(e);
@@ -1652,11 +1652,11 @@
         n.Deflate = c;
         n.deflate = u;
         n.deflateRaw = function (e, t) {
-          (t = t || {}).raw = !0;
+          (t = t || {}).raw = true;
           return u(e, t);
         };
         n.gzip = function (e, t) {
-          (t = t || {}).gzip = !0;
+          (t = t || {}).gzip = true;
           return u(e, t);
         };
       }, {
@@ -1697,7 +1697,7 @@
           }
           this.err = 0;
           this.msg = "";
-          this.ended = !1;
+          this.ended = false;
           this.chunks = [];
           this.strm = new c();
           this.strm.avail_out = 0;
@@ -1710,7 +1710,7 @@
         };
         function f(e, t) {
           var n = new l(t);
-          n.push(e, !0);
+          n.push(e, true);
           if (n.err) {
             throw n.msg;
           }
@@ -1725,9 +1725,9 @@
           var f = this.strm;
           var d = this.options.chunkSize;
           if (this.ended) {
-            return !1;
+            return false;
           }
-          s = t === ~~t ? t : !0 === t ? a.Z_FINISH : a.Z_NO_FLUSH;
+          s = t === ~~t ? t : true === t ? a.Z_FINISH : a.Z_NO_FLUSH;
           f.input = "string" === typeof e ? o.binstring2buf(e) : e;
           f.next_in = 0;
           f.avail_in = f.input.length;
@@ -1739,8 +1739,8 @@
             }
             if ((n = r.inflate(f, a.Z_NO_FLUSH)) !== a.Z_STREAM_END && n !== a.Z_OK) {
               this.onEnd(n);
-              this.ended = !0;
-              return !1;
+              this.ended = true;
+              return false;
             }
             if (f.next_out && (0 === f.avail_out || n === a.Z_STREAM_END || 0 === f.avail_in && s === a.Z_FINISH)) {
               if ("string" === this.options.to) {
@@ -1761,7 +1761,7 @@
           if (n === a.Z_STREAM_END) {
             s = a.Z_FINISH;
           }
-          return s !== a.Z_FINISH || (n = r.inflateEnd(this.strm), this.onEnd(n), this.ended = !0, n === a.Z_OK);
+          return s !== a.Z_FINISH || (n = r.inflateEnd(this.strm), this.onEnd(n), this.ended = true, n === a.Z_OK);
         };
         l.prototype.onData = function (e) {
           this.chunks.push(e);
@@ -1781,7 +1781,7 @@
         n.Inflate = l;
         n.inflate = f;
         n.inflateRaw = function (e, t) {
-          (t = t || {}).raw = !0;
+          (t = t || {}).raw = true;
           return f(e, t);
         };
         n.ungzip = f;
@@ -1872,17 +1872,17 @@
         "use strict";
 
         var r = e("./common");
-        var i = !0;
-        var o = !0;
+        var i = true;
+        var o = true;
         try {
           String.fromCharCode.apply(null, [0]);
         } catch (u) {
-          i = !1;
+          i = false;
         }
         try {
           String.fromCharCode.apply(null, new Uint8Array(1));
         } catch (u) {
-          o = !1;
+          o = false;
         }
         for (var a = new r.Buf8(256), s = 0; s < 256; s++) {
           a[s] = s >= 252 ? 6 : s >= 248 ? 5 : s >= 240 ? 4 : s >= 224 ? 3 : s >= 192 ? 2 : 1;
@@ -2238,12 +2238,12 @@
               e.lookahead--;
               e.strstart++;
             }
-            if (r && (d(e, !1), 0 === e.strm.avail_out)) {
+            if (r && (d(e, false), 0 === e.strm.avail_out)) {
               return 1;
             }
           }
           e.insert = e.strstart < 2 ? e.strstart : 2;
-          return 4 === t ? (d(e, !0), 0 === e.strm.avail_out ? 3 : 4) : e.last_lit && (d(e, !1), 0 === e.strm.avail_out) ? 1 : 2;
+          return 4 === t ? (d(e, true), 0 === e.strm.avail_out ? 3 : 4) : e.last_lit && (d(e, false), 0 === e.strm.avail_out) ? 1 : 2;
         }
         function m(e, t) {
           for (var n, r, o;;) {
@@ -2286,12 +2286,12 @@
               e.match_available = 0;
               e.match_length = 2;
               e.strstart++;
-              if (r && (d(e, !1), 0 === e.strm.avail_out)) {
+              if (r && (d(e, false), 0 === e.strm.avail_out)) {
                 return 1;
               }
             } else if (e.match_available) {
               if (r = i._tr_tally(e, 0, e.window[e.strstart - 1])) {
-                d(e, !1);
+                d(e, false);
               }
               e.strstart++;
               e.lookahead--;
@@ -2309,7 +2309,7 @@
             e.match_available = 0;
           }
           e.insert = e.strstart < 2 ? e.strstart : 2;
-          return 4 === t ? (d(e, !0), 0 === e.strm.avail_out ? 3 : 4) : e.last_lit && (d(e, !1), 0 === e.strm.avail_out) ? 1 : 2;
+          return 4 === t ? (d(e, true), 0 === e.strm.avail_out ? 3 : 4) : e.last_lit && (d(e, false), 0 === e.strm.avail_out) ? 1 : 2;
         }
         var y;
         var b = function (e, t, n, r, i) {
@@ -2471,15 +2471,15 @@
             e.strstart += e.lookahead;
             e.lookahead = 0;
             var r = e.block_start + n;
-            if ((0 === e.strstart || e.strstart >= r) && (e.lookahead = e.strstart - r, e.strstart = r, d(e, !1), 0 === e.strm.avail_out)) {
+            if ((0 === e.strstart || e.strstart >= r) && (e.lookahead = e.strstart - r, e.strstart = r, d(e, false), 0 === e.strm.avail_out)) {
               return 1;
             }
-            if (e.strstart - e.block_start >= e.w_size - 262 && (d(e, !1), 0 === e.strm.avail_out)) {
+            if (e.strstart - e.block_start >= e.w_size - 262 && (d(e, false), 0 === e.strm.avail_out)) {
               return 1;
             }
           }
           e.insert = 0;
-          return 4 === t ? (d(e, !0), 0 === e.strm.avail_out ? 3 : 4) : (e.strstart > e.block_start && (d(e, !1), e.strm.avail_out), 1);
+          return 4 === t ? (d(e, true), 0 === e.strm.avail_out ? 3 : 4) : (e.strstart > e.block_start && (d(e, false), e.strm.avail_out), 1);
         }), new b(4, 4, 8, 4, v), new b(4, 5, 16, 8, v), new b(4, 6, 32, 32, v), new b(4, 4, 16, 16, m), new b(8, 16, 32, 32, m), new b(8, 16, 128, 128, m), new b(8, 32, 128, 256, m), new b(32, 128, 258, 1024, m), new b(32, 258, 258, 4096, m)];
         n.deflateInit = function (e, t) {
           return C(e, t, 8, 15, 8, 0);
@@ -2654,12 +2654,12 @@
                 n = i._tr_tally(e, 0, e.window[e.strstart]);
                 e.lookahead--;
                 e.strstart++;
-                if (n && (d(e, !1), 0 === e.strm.avail_out)) {
+                if (n && (d(e, false), 0 === e.strm.avail_out)) {
                   return 1;
                 }
               }
               e.insert = 0;
-              return 4 === t ? (d(e, !0), 0 === e.strm.avail_out ? 3 : 4) : e.last_lit && (d(e, !1), 0 === e.strm.avail_out) ? 1 : 2;
+              return 4 === t ? (d(e, true), 0 === e.strm.avail_out ? 3 : 4) : e.last_lit && (d(e, false), 0 === e.strm.avail_out) ? 1 : 2;
             }(r, t) : 3 === r.strategy ? function (e, t) {
               for (var n, r, o, a, s = e.window;;) {
                 if (e.lookahead <= 258) {
@@ -2690,12 +2690,12 @@
                   e.lookahead--;
                   e.strstart++;
                 }
-                if (n && (d(e, !1), 0 === e.strm.avail_out)) {
+                if (n && (d(e, false), 0 === e.strm.avail_out)) {
                   return 1;
                 }
               }
               e.insert = 0;
-              return 4 === t ? (d(e, !0), 0 === e.strm.avail_out ? 3 : 4) : e.last_lit && (d(e, !1), 0 === e.strm.avail_out) ? 1 : 2;
+              return 4 === t ? (d(e, true), 0 === e.strm.avail_out ? 3 : 4) : e.last_lit && (d(e, false), 0 === e.strm.avail_out) ? 1 : 2;
             }(r, t) : y[r.level].func(r, t);
             if (!(3 !== A && 4 !== A)) {
               r.status = 666;
@@ -2706,7 +2706,7 @@
               }
               return 0;
             }
-            if (2 === A && (1 === t ? i._tr_align(r) : 5 !== t && (i._tr_stored_block(r, 0, 0, !1), 3 === t && (l(r.head), 0 === r.lookahead && (r.strstart = 0, r.block_start = 0, r.insert = 0))), f(e), 0 === e.avail_out)) {
+            if (2 === A && (1 === t ? i._tr_align(r) : 5 !== t && (i._tr_stored_block(r, 0, 0, false), 3 === t && (l(r.head), 0 === r.lookahead && (r.strstart = 0, r.block_start = 0, r.insert = 0))), f(e), 0 === e.avail_out)) {
               r.last_flush = -1;
               return 0;
             }
@@ -2738,7 +2738,7 @@
           this.name = "";
           this.comment = "";
           this.hcrc = 0;
-          this.done = !1;
+          this.done = false;
         };
       }, {}],
       34: [function (e, t, n) {
@@ -2959,9 +2959,9 @@
         }
         function u() {
           this.mode = 0;
-          this.last = !1;
+          this.last = false;
           this.wrap = 0;
-          this.havedict = !1;
+          this.havedict = false;
           this.flags = 0;
           this.dmax = 0;
           this.check = 0;
@@ -3014,7 +3014,7 @@
         }
         var p;
         var _;
-        var A = !0;
+        var A = true;
         function g(e) {
           if (A) {
             var t;
@@ -3038,7 +3038,7 @@
             s(2, e.lens, 0, 32, _, 0, e.work, {
               bits: 5
             });
-            A = !1;
+            A = false;
           }
           e.lencode = p;
           e.lenbits = 9;
@@ -3122,7 +3122,7 @@
                   n.mode = 2;
                   break;
                 }
-                if (n.flags = 0, n.head && (n.head.done = !1), !(1 & n.wrap) || (((255 & _) << 8) + (_ >> 8)) % 31) {
+                if (n.flags = 0, n.head && (n.head.done = false), !(1 & n.wrap) || (((255 & _) << 8) + (_ >> 8)) % 31) {
                   e.msg = "incorrect header check";
                   n.mode = 30;
                   break;
@@ -3318,7 +3318,7 @@
                 }
                 if (n.head) {
                   n.head.hcrc = n.flags >> 9 & 1;
-                  n.head.done = !0;
+                  n.head.done = true;
                 }
                 e.adler = n.check = 0;
                 n.mode = 12;
@@ -3855,7 +3855,7 @@
         };
         n.inflateGetHeader = function (e, t) {
           var n;
-          return e && e.state ? 0 === (2 & (n = e.state).wrap) ? -2 : (n.head = t, t.done = !1, 0) : -2;
+          return e && e.state ? 0 === (2 & (n = e.state).wrap) ? -2 : (n.head = t, t.done = false, 0) : -2;
         };
         n.inflateInfo = "pako inflate (from Nodeca project)";
       }, {
@@ -4387,7 +4387,7 @@
             }
           }
         }
-        var R = !1;
+        var R = false;
         function P(e, t, n, i) {
           w(e, 0 + (i ? 1 : 0), 3);
           (function (e, t, n, i) {
@@ -4398,7 +4398,7 @@
             }
             r.arraySet(e.pending_buf, e.window, t, n, e.pending);
             e.pending += n;
-          })(e, t, n, !0);
+          })(e, t, n, true);
         }
         n._tr_init = function (e) {
           if (!R) {
@@ -4455,7 +4455,7 @@
               A = new v(l, a, 0, 30, 15);
               g = new v(new Array(0), s, 0, 19, 7);
             }();
-            R = !0;
+            R = true;
           }
           e.l_desc = new m(e.dyn_ltree, _);
           e.d_desc = new m(e.dyn_dtree, A);

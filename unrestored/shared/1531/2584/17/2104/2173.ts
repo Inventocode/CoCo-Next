@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.RenderedConnection = void 0;
+exports.RenderedConnection = undefined;
 var r = require("tslib");
 var i = require("inversify");
 var o = (0, r.__importDefault)(require("animejs"));
@@ -18,35 +18,35 @@ var d = function () {
     var t = this;
     this.x_ = 0;
     this.y_ = 0;
-    this.hidden_ = !1;
-    this.in_db = !1;
-    this.shadow_dom = void 0;
+    this.hidden_ = false;
+    this.in_db = false;
+    this.shadow_dom = undefined;
     this.can_connect_to_previous = function (e) {
       if (t.target_connection) {
-        return !1;
+        return false;
       }
       if (-1 != t.runtime_data.dragging_connections.indexOf(e)) {
-        return !1;
+        return false;
       }
       var n = t.source_block.get_first_statement_connection();
-      var r = void 0 != n;
+      var r = undefined != n;
       var i = t == n;
       var o = t == t.source_block.next_connection;
       if (r && !i && !o) {
-        return !1;
+        return false;
       }
-      var a = void 0 != t.source_block.previous_connection;
+      var a = undefined != t.source_block.previous_connection;
       if (i && a) {
-        return !0;
+        return true;
       }
       if (o || i && !a) {
         if (!e.target_connection) {
-          return !0;
+          return true;
         }
         var s = e.targetBlock();
         return !!s && !!s.is_insertion_marker() && !s.get_previous_block();
       }
-      return !1;
+      return false;
     };
     this.source_block = e.source;
     this.type = e.type;
@@ -75,13 +75,13 @@ var d = function () {
     var t;
     var n;
     if (this.in_db) {
-      if (!(null === (t = this.db_) || void 0 === t)) {
+      if (!(null === (t = this.db_) || undefined === t)) {
         t.remove_connection(this);
       }
     }
     this.x_ = e[0];
     this.y_ = e[1];
-    if (!(this.hidden_ || null === (n = this.db_) || void 0 === n)) {
+    if (!(this.hidden_ || null === (n = this.db_) || undefined === n)) {
       n.add_connection(this);
     }
   };
@@ -90,16 +90,16 @@ var d = function () {
   };
   e.prototype.highlight = function () {
     var e;
-    var t = null === (e = this.workspace_db.current) || void 0 === e ? void 0 : e.get_options().connection_effect;
+    var t = null === (e = this.workspace_db.current) || undefined === e ? undefined : e.get_options().connection_effect;
     var n = t ? t.color : "#fff";
     if (this.type == c.CONNECTION_TYPE.INPUT_VALUE || this.type === c.CONNECTION_TYPE.OUTPUT_VALUE) {
       this.highlight_input(n);
     } else {
       if (this.type === c.CONNECTION_TYPE.NEXT_STATEMENT) {
-        this.highlight_statement(n, !0);
+        this.highlight_statement(n, true);
       } else {
         if (this.type === c.CONNECTION_TYPE.PREVIOUS_STATEMENT) {
-          this.highlight_statement(n, !1);
+          this.highlight_statement(n, false);
         }
       }
     }
@@ -111,8 +111,8 @@ var d = function () {
     var o = "";
     if (this.target_connection) {
       var a = this.target_connection.source_block.svg_path;
-      var s = void 0;
-      if (void 0 != a) {
+      var s = undefined;
+      if (undefined != a) {
         s = a.getAttribute("d");
       }
       if ("string" === typeof s) {
@@ -182,7 +182,7 @@ var d = function () {
     var t = e.get_svg_root().querySelector("path");
     if (t) {
       var n = t.getAttribute("d").match(/H\s.*?\s/gi);
-      if (void 0 == n) {
+      if (undefined == n) {
         return 0;
       }
       var r = n.map(function (e) {
@@ -206,7 +206,7 @@ var d = function () {
     this.move_to(a.vec2.fromValues(e[0] + this.offset_in_block[0], e[1] + this.offset_in_block[1]));
   };
   e.prototype.tighten = function () {
-    if (void 0 == this.target_connection) {
+    if (undefined == this.target_connection) {
       throw new ReferenceError("Target connection not found.");
     }
     var e = this.target_connection.get_xy();
@@ -221,13 +221,13 @@ var d = function () {
     }
   };
   e.prototype.targetBlock = function () {
-    if (this.is_connected() && void 0 != this.target_connection) {
+    if (this.is_connected() && undefined != this.target_connection) {
       return this.target_connection.get_source_block();
     }
   };
   e.prototype.closest = function (e, t) {
     return this.db_opposite ? this.db_opposite.search_for_closest(this, e, t) : {
-      connection: void 0,
+      connection: undefined,
       radius: e
     };
   };
@@ -239,9 +239,9 @@ var d = function () {
       var o = this;
       var a = o.get_source_block();
       var s = e.get_source_block();
-      var u = !1;
+      var u = false;
       if (o == a.get_first_statement_connection()) {
-        u = !0;
+        u = true;
       }
       if (e.is_connected()) {
         if (u) {
@@ -252,12 +252,12 @@ var d = function () {
       if (o.is_connected()) {
         var l = o.targetBlock();
         var f = o.get_shadow_dom();
-        o.set_shadow_dom(void 0);
+        o.set_shadow_dom(undefined);
         if (l && l.is_shadow()) {
           this.events.disable();
           f = s.is_shadow() ? this.xml.block_to_dom(s) : this.xml.block_to_dom(l);
           l.dispose();
-          l = void 0;
+          l = undefined;
           this.events.enable();
         } else if (o.type == c.CONNECTION_TYPE.NEXT_STATEMENT) {
           if (l && !l.previous_connection) {
@@ -268,7 +268,7 @@ var d = function () {
             if (!h || h.is_shadow()) {
               if (l && l.previous_connection && l.previous_connection.check_type(d.next_connection)) {
                 d.next_connection.connect(l.previous_connection);
-                l = void 0;
+                l = undefined;
               }
               break;
             }
@@ -290,7 +290,7 @@ var d = function () {
                     l.previous_connection.bump_away_from(o);
                   }
                 }
-                i.events.set_group(!1);
+                i.events.set_group(false);
               }
             }
           }, this.theme.blink_params.BUMP_DELAY);
@@ -341,9 +341,9 @@ var d = function () {
     }
     var r = this.target_connection;
     if (r) {
-      r.target_connection = void 0;
-      this.target_connection = void 0;
-      t.set_parent(void 0);
+      r.target_connection = undefined;
+      this.target_connection = undefined;
+      t.set_parent(undefined);
       if (n) {
         n.record_new();
         this.events.fire(n);
@@ -351,7 +351,7 @@ var d = function () {
       if (t.visibility_for_undo && this.events.is_undoing()) {
         t.set_chunk_visibility(t.visibility_for_undo);
         t.update_chunk_visibility();
-        t.visibility_for_undo = void 0;
+        t.visibility_for_undo = undefined;
       }
       if (e.is_rendered()) {
         e.render();
@@ -385,17 +385,17 @@ var d = function () {
         r.render();
       }
       if (this.type === c.CONNECTION_TYPE.INPUT_VALUE && this.source_block.is_collapsed()) {
-        if (!(null === (e = this.target_connection) || void 0 === e)) {
+        if (!(null === (e = this.target_connection) || undefined === e)) {
           e.hide_all();
         }
-        r.set_visible_as_child(!1);
+        r.set_visible_as_child(false);
       }
       this.events.enable();
     }
   };
   e.prototype.neighbours_ = function (e) {
     var t;
-    return (null === (t = this.db_opposite) || void 0 === t ? void 0 : t.get_neighbours(this, e)) || [];
+    return (null === (t = this.db_opposite) || undefined === t ? undefined : t.get_neighbours(this, e)) || [];
   };
   e.prototype.bump_away_from = function (e) {
     if (this.source_block.is_stack_connectable() && e.get_source_block().is_stack_connectable()) {
@@ -403,13 +403,13 @@ var d = function () {
       if (!t || !t.is_dragging()) {
         var n = this.source_block.get_root_block();
         if (!n.is_in_flyout) {
-          var r = !1;
+          var r = false;
           if (!n.is_movable()) {
             if (!(n = e.get_source_block().get_root_block()).is_movable()) {
               return;
             }
             e = this;
-            r = !0;
+            r = true;
           }
           var i = this.runtime_data.selected == n;
           if (!i) {
@@ -432,14 +432,14 @@ var d = function () {
     }
   };
   e.prototype.unhide_all = function () {
-    this.set_hidden(!1);
+    this.set_hidden(false);
     var e = [];
     if (this.type != c.CONNECTION_TYPE.INPUT_VALUE && this.type != c.CONNECTION_TYPE.NEXT_STATEMENT) {
       return e;
     }
     var t = this.targetBlock();
     if (t) {
-      var n = void 0;
+      var n = undefined;
       if (t.is_collapsed()) {
         n = [];
         if (t.output_connection) {
@@ -452,7 +452,7 @@ var d = function () {
           n.push(t.previous_connection);
         }
       } else {
-        n = t.get_connections(!0);
+        n = t.get_connections(true);
       }
       for (var r = 0; r < n.length; r++) {
         e.push.apply(e, n[r].unhide_all());
@@ -465,18 +465,18 @@ var d = function () {
   };
   e.prototype.hide_all = function () {
     var e;
-    this.set_hidden(!0);
+    this.set_hidden(true);
     if (this.target_connection) {
       var t = this.targetBlock();
-      if (void 0 == t) {
+      if (undefined == t) {
         throw new Error("target_block should not be undefined");
       }
       for (var n = t.get_descendants(), r = 0; r < n.length; r++) {
-        for (var i = n[r], o = i.get_connections(!0), a = 0; a < o.length; a++) {
-          o[a].set_hidden(!0);
+        for (var i = n[r], o = i.get_connections(true), a = 0; a < o.length; a++) {
+          o[a].set_hidden(true);
         }
-        if (!(null === (e = i.warning) || void 0 === e)) {
-          e.set_expanded(!1);
+        if (!(null === (e = i.warning) || undefined === e)) {
+          e.set_expanded(false);
         }
       }
     }
@@ -484,49 +484,49 @@ var d = function () {
   e.prototype.is_connection_allowed = function (e, t) {
     return !!e.source_block.is_stack_connectable() && !(this.distance_from(e) > t) && function (e) {
       if (e.get_source_block().is_insertion_marker()) {
-        return !1;
+        return false;
       }
       if (!e.get_source_block().is_rendered()) {
-        return !1;
+        return false;
       }
       if (f.NEED_COLLAPSE_CHILDREN_BLOCKS.includes(e.get_source_block().type) && e.get_source_block().is_collapsed()) {
-        return !1;
+        return false;
       }
       if (e.get_source_block().get_collapsed_surround_parent()) {
-        return !1;
+        return false;
       }
       if ("procedures_2_defnoreturn" == e.source_block.type && e.target_connection && "procedures_2_stable_parameter" == e.target_connection.source_block.type) {
-        return !1;
+        return false;
       }
       if (e.target_connection && e.target_connection.source_block.is_shadow() && "param" === e.target_connection.source_block.element_type) {
-        return !1;
+        return false;
       }
       if (this.can_connect_with_reason(e) != c.CONNECTABLE_TYPE.CAN_CONNECT) {
-        return !1;
+        return false;
       }
       switch (e.type) {
         case c.CONNECTION_TYPE.PREVIOUS_STATEMENT:
           return this.can_connect_to_previous(e);
         case c.CONNECTION_TYPE.OUTPUT_VALUE:
-          return !1;
+          return false;
         case c.CONNECTION_TYPE.INPUT_VALUE:
           if ((t = e.targetBlock()) && e.target_connection && !t.is_movable() && !t.is_shadow()) {
-            return !1;
+            return false;
           }
           break;
         case c.CONNECTION_TYPE.NEXT_STATEMENT:
           var t;
           if ((t = e.targetBlock()) && e.is_connected_to_non_insertion_marker() && !this.source_block.next_connection && !t.is_shadow() && t.next_connection) {
-            return !1;
+            return false;
           }
           break;
         default:
           throw new Error("Unknown connection type in is_connection_allowed");
       }
       if (-1 != this.runtime_data.dragging_connections.indexOf(e)) {
-        return !1;
+        return false;
       }
-      return !0;
+      return true;
     }.call(this, e);
   };
   e.prototype.distance_from = function (e) {
@@ -552,34 +552,34 @@ var d = function () {
     this.shadow_dom = e;
   };
   e.prototype.connect = function (e, t) {
-    if (void 0 === t) {
-      t = !1;
+    if (undefined === t) {
+      t = false;
     }
     if (this.target_connection == e) {
-      return !1;
+      return false;
     }
-    var n = !0;
+    var n = true;
     try {
       this.check_connection(e);
     } catch (o) {
       if (!t) {
         console.error(o);
       }
-      n = !1;
+      n = false;
     }
     if (!n) {
-      return !1;
+      return false;
     }
     var r = this.is_superior() ? this : e;
     var i = this.is_superior() ? e : this;
     r.connect_to_inferior(i);
     i.source_block.update_layer_colour();
-    return !0;
+    return true;
   };
   e.prototype.on_check_changed = function () {
     if (this.is_connected() && this.target_connection && !this.check_type(this.target_connection)) {
       var e = this.is_superior() ? this.targetBlock() : this.source_block;
-      if (void 0 == e) {
+      if (undefined == e) {
         throw new ReferenceError("Connection source block not found.");
       }
       e.unplug();
@@ -649,7 +649,7 @@ var d = function () {
       this.check_ = (0, u.is_array)(e) ? e : [e];
       this.on_check_changed();
     } else {
-      this.check_ = void 0;
+      this.check_ = undefined;
     }
     return this;
   };
@@ -658,14 +658,14 @@ var d = function () {
   };
   e.prototype.check_type = function (e) {
     if (!this.check_ || !e.check_) {
-      return !0;
+      return true;
     }
     for (var t = 0; t < this.check_.length; t++) {
       if (-1 != e.check_.indexOf(this.check_[t])) {
-        return !0;
+        return true;
       }
     }
-    return !1;
+    return false;
   };
   e.prototype.check_connection = function (e) {
     switch (this.can_connect_with_reason(e)) {
@@ -698,7 +698,7 @@ var d = function () {
   };
   e.prototype.remove_shadow = function () {
     if (this.is_superior()) {
-      this.set_shadow_dom(void 0);
+      this.set_shadow_dom(undefined);
       var e = this.targetBlock();
       if (e && e.is_shadow()) {
         this.events.disable();
@@ -708,13 +708,13 @@ var d = function () {
       }
     }
   };
-  (0, r.__decorate)([(0, s.lazy_inject)(s.BINDING.runtime_data)], e.prototype, "runtime_data", void 0);
-  (0, r.__decorate)([(0, s.lazy_inject)(s.BINDING.utils)], e.prototype, "utils", void 0);
-  (0, r.__decorate)([(0, s.lazy_inject)(s.BINDING.events)], e.prototype, "events", void 0);
-  (0, r.__decorate)([(0, s.lazy_inject)(s.BINDING.xml)], e.prototype, "xml", void 0);
-  (0, r.__decorate)([(0, s.lazy_inject)(s.BINDING.theme)], e.prototype, "theme", void 0);
-  (0, r.__decorate)([(0, s.lazy_inject)(s.BINDING.workspace_db)], e.prototype, "workspace_db", void 0);
-  (0, r.__decorate)([(0, s.lazy_inject)(s.BINDING.MoveEvent)], e.prototype, "move_event_factory", void 0);
+  (0, r.__decorate)([(0, s.lazy_inject)(s.BINDING.runtime_data)], e.prototype, "runtime_data", undefined);
+  (0, r.__decorate)([(0, s.lazy_inject)(s.BINDING.utils)], e.prototype, "utils", undefined);
+  (0, r.__decorate)([(0, s.lazy_inject)(s.BINDING.events)], e.prototype, "events", undefined);
+  (0, r.__decorate)([(0, s.lazy_inject)(s.BINDING.xml)], e.prototype, "xml", undefined);
+  (0, r.__decorate)([(0, s.lazy_inject)(s.BINDING.theme)], e.prototype, "theme", undefined);
+  (0, r.__decorate)([(0, s.lazy_inject)(s.BINDING.workspace_db)], e.prototype, "workspace_db", undefined);
+  (0, r.__decorate)([(0, s.lazy_inject)(s.BINDING.MoveEvent)], e.prototype, "move_event_factory", undefined);
   return e = t = (0, r.__decorate)([(0, i.injectable)()], e);
 }();
 exports.RenderedConnection = d;

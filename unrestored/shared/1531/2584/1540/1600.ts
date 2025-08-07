@@ -3,7 +3,7 @@ var o = Math.log;
 var i = Math.LOG10E;
 r({
   target: "Math",
-  stat: !0
+  stat: true
 }, {
   log10: function (e) {
     return o(e) * i;

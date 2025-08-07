@@ -24,10 +24,10 @@ var i = function () {
 }();
 !function (t) {
   function e(e, r) {
-    if (void 0 === e) {
+    if (undefined === e) {
       e = null;
     }
-    if (void 0 === r) {
+    if (undefined === r) {
       r = 500;
     }
     var n = new o.a();

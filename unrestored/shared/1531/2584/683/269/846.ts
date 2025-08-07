@@ -1,7 +1,7 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
 var r = require("./1366/444");
 function i(e) {
@@ -41,7 +41,7 @@ exports.circularDependencyToException = function e(t) {
     }(t, t.serviceIdentifier)) {
       var n = function (e) {
         return function e(t, n) {
-          if (void 0 === n) {
+          if (undefined === n) {
             n = [];
           }
           var r = i(t.serviceIdentifier);

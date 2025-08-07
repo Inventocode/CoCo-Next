@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.default = void 0;
+exports.default = undefined;
 var r = function (e) {
   if (e && e.__esModule) {
     return e;
@@ -71,15 +71,15 @@ function f(e, t) {
       return;
     }
     var n = [];
-    var r = !0;
-    var o = !1;
-    var i = void 0;
+    var r = true;
+    var o = false;
+    var i = undefined;
     try {
-      for (var a, s = e[Symbol.iterator](); !(r = (a = s.next()).done) && (n.push(a.value), !t || n.length !== t); r = !0) {
+      for (var a, s = e[Symbol.iterator](); !(r = (a = s.next()).done) && (n.push(a.value), !t || n.length !== t); r = true) {
         ;
       }
     } catch (c) {
-      o = !0;
+      o = true;
       i = c;
     } finally {
       try {
@@ -131,10 +131,10 @@ function m(e, t) {
 function g(e, t) {
   for (var n = 0; n < t.length; n++) {
     var r = t[n];
-    r.enumerable = r.enumerable || !1;
-    r.configurable = !0;
+    r.enumerable = r.enumerable || false;
+    r.configurable = true;
     if ("value" in r) {
-      r.writable = !0;
+      r.writable = true;
     }
     Object.defineProperty(e, r.key, r);
   }
@@ -148,19 +148,19 @@ function _(e, t) {
 function v(e) {
   var t = function () {
     if ("undefined" === typeof Reflect || !Reflect.construct) {
-      return !1;
+      return false;
     }
     if (Reflect.construct.sham) {
-      return !1;
+      return false;
     }
     if ("function" === typeof Proxy) {
-      return !0;
+      return true;
     }
     try {
       Date.prototype.toString.call(Reflect.construct(Date, [], function () {}));
-      return !0;
+      return true;
     } catch (e) {
-      return !1;
+      return false;
     }
   }();
   return function () {
@@ -179,7 +179,7 @@ function b(e, t) {
   return !t || "object" !== p(t) && "function" !== typeof t ? y(e) : t;
 }
 function y(e) {
-  if (void 0 === e) {
+  if (undefined === e) {
     throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
   }
   return e;
@@ -193,9 +193,9 @@ function O(e, t, n) {
   if (t in e) {
     Object.defineProperty(e, t, {
       value: n,
-      enumerable: !0,
-      configurable: !0,
-      writable: !0
+      enumerable: true,
+      configurable: true,
+      writable: true
     });
   } else {
     e[t] = n;
@@ -221,8 +221,8 @@ var S = function (e) {
     e.prototype = Object.create(t && t.prototype, {
       constructor: {
         value: e,
-        writable: !0,
-        configurable: !0
+        writable: true,
+        configurable: true
       }
     });
     if (t) {
@@ -240,16 +240,16 @@ var S = function (e) {
       n[r] = arguments[r];
     }
     O(y(e = c.call.apply(c, [this].concat(n))), "state", {
-      dragging: !1,
+      dragging: false,
       lastX: NaN,
       lastY: NaN,
       touchIdentifier: null
     });
-    O(y(e), "mounted", !1);
+    O(y(e), "mounted", false);
     O(y(e), "handleDragStart", function (t) {
       e.props.onMouseDown(t);
       if (!e.props.allowAnyClick && "number" === typeof t.button && 0 !== t.button) {
-        return !1;
+        return false;
       }
       var n = e.findDOMNode();
       if (!n || !n.ownerDocument || !n.ownerDocument.body) {
@@ -271,12 +271,12 @@ var S = function (e) {
           var d = (0, s.createCoreData)(y(e), c, u);
           (0, l.default)("DraggableCore: handleDragStart: %j", d);
           (0, l.default)("calling", e.props.onStart);
-          if (!1 !== e.props.onStart(t, d) && !1 !== e.mounted) {
+          if (false !== e.props.onStart(t, d) && false !== e.mounted) {
             if (e.props.enableUserSelectHack) {
               (0, a.addUserSelectStyles)(r);
             }
             e.setState({
-              dragging: !0,
+              dragging: true,
               lastX: c,
               lastY: u
             });
@@ -305,7 +305,7 @@ var S = function (e) {
         }
         var u = (0, s.createCoreData)(y(e), r, o);
         (0, l.default)("DraggableCore: handleDrag: %j", u);
-        if (!1 !== e.props.onDrag(t, u) && !1 !== e.mounted) {
+        if (false !== e.props.onDrag(t, u) && false !== e.mounted) {
           e.setState({
             lastX: r,
             lastY: o
@@ -315,7 +315,7 @@ var S = function (e) {
             e.handleDragStop(new MouseEvent("mouseup"));
           } catch (p) {
             var d = document.createEvent("MouseEvents");
-            d.initMouseEvent("mouseup", !0, !0, window, 0, 0, 0, 0, 0, !1, !1, !1, !1, 0, null);
+            d.initMouseEvent("mouseup", true, true, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
             e.handleDragStop(d);
           }
         }
@@ -328,8 +328,8 @@ var S = function (e) {
           var r = n.x;
           var o = n.y;
           var i = (0, s.createCoreData)(y(e), r, o);
-          if (!1 === e.props.onStop(t, i) || !1 === e.mounted) {
-            return !1;
+          if (false === e.props.onStop(t, i) || false === e.mounted) {
+            return false;
           }
           var c = e.findDOMNode();
           if (c && e.props.enableUserSelectHack) {
@@ -337,7 +337,7 @@ var S = function (e) {
           }
           (0, l.default)("DraggableCore: handleDragStop: %j", i);
           e.setState({
-            dragging: !1,
+            dragging: false,
             lastX: NaN,
             lastY: NaN
           });
@@ -371,18 +371,18 @@ var S = function (e) {
   if (n = [{
     key: "componentDidMount",
     value: function () {
-      this.mounted = !0;
+      this.mounted = true;
       var e = this.findDOMNode();
       if (e) {
         (0, a.addEvent)(e, w.start, this.onTouchStart, {
-          passive: !1
+          passive: false
         });
       }
     }
   }, {
     key: "componentWillUnmount",
     value: function () {
-      this.mounted = !1;
+      this.mounted = false;
       var e = this.findDOMNode();
       if (e) {
         var t = e.ownerDocument;
@@ -391,7 +391,7 @@ var S = function (e) {
         (0, a.removeEvent)(t, C.stop, this.handleDragStop);
         (0, a.removeEvent)(t, w.stop, this.handleDragStop);
         (0, a.removeEvent)(e, w.start, this.onTouchStart, {
-          passive: !1
+          passive: false
         });
         if (this.props.enableUserSelectHack) {
           (0, a.removeUserSelectStyles)(t);
@@ -445,10 +445,10 @@ O(S, "propTypes", {
   transform: c.dontSetMe
 });
 O(S, "defaultProps", {
-  allowAnyClick: !1,
+  allowAnyClick: false,
   cancel: null,
-  disabled: !1,
-  enableUserSelectHack: !0,
+  disabled: false,
+  enableUserSelectHack: true,
   offsetParent: null,
   handle: null,
   grid: null,

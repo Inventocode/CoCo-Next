@@ -3,7 +3,7 @@
 export { u as a };
 export { d as b };
 var r;
-var o = require("./366");
+import o = require("./366");
 var i = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -16,10 +16,10 @@ var i = function __importDefault(module) {
   });
   return defaultExport;
 }(o);
-var a = require("../28/index");
-var s = require("./311");
-var c = require("../59/index");
-var l = Object(c.b)();
+import a = require("../28/index");
+import s = require("./311");
+import c = require("../59/index");
+var l = c.b();
 function u(e, t) {
   i.a.track(e, function (e) {
     if (!e) {
@@ -35,10 +35,10 @@ function d(e) {
 }
 i.a.init({
   server_url: "development" === l || "test" === l ? "https://shence-data.codemao.cn/sa?project=default" : "https://shence-data.codemao.cn/sa?project=production",
-  is_track_single_page: !0,
-  use_client_time: !0,
-  show_log: !!Object(s.q)(window.location.href).showSensorsLog,
-  send_type: Object(a.d)() ? "ajax" : "beacon",
+  is_track_single_page: true,
+  use_client_time: true,
+  show_log: !!s.q(window.location.href).showSensorsLog,
+  send_type: a.d() ? "ajax" : "beacon",
   max_string_length: 5e3,
   heatmap: {
     clickmap: "default",
@@ -46,10 +46,10 @@ i.a.init({
   }
 });
 var p = "editor";
-if (Object(a.d)()) {
+if (a.d()) {
   p = "cordova-player";
 }
-if (null === (r = window.location) || void 0 === r ? void 0 : r.pathname.includes("/player/")) {
+if (null === (r = window.location) || undefined === r ? undefined : r.pathname.includes("/player/")) {
   p = "h5-player";
 }
 i.a.registerPage({

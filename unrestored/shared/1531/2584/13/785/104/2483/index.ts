@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.mergeClasses = void 0;
+exports.mergeClasses = undefined;
 var r = a(require("./1142/index"));
 var i = a(require("./2484/index"));
 var o = Object.assign || function (e) {
@@ -21,7 +21,7 @@ function a(e) {
   };
 }
 var s = exports.mergeClasses = function (e) {
-  var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
+  var t = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : [];
   var n = e.default && (0, i.default)(e.default) || {};
   t.map(function (t) {
     var i = e[t];

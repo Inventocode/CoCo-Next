@@ -24,6 +24,23 @@ const config = {
     module: {
         rules: [
             {
+                test: /\.(t|j)sx?$/,
+                exclude: /node_modules|helper|home/,
+                use: {
+                    loader: "string-replace-loader",
+                    options: {
+                        multiple: [
+                            {
+                                search: /https:\/\/("[\s]*\+[\s]*(_|[0-9]|[a-z]|[A-Z])+[\s]*\+[\s]*")?coco\.codemao\.cn/g,
+                                replace: "\" + location.origin + \""
+                            }, {
+                                search: /https:\/\/"[\s]*\.concat\((_|[0-9]|[a-z]|[A-Z])+[\s]*,[\s]*"coco\.codemao\.cn"\)/g,
+                                replace: "\" + location.origin"
+                            }
+                        ]
+                    }
+                }
+            }, {
                 test: /\.tsx?$/,
                 exclude: /node_modules/,
                 use: {

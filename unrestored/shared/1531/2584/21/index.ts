@@ -1,8 +1,8 @@
 "use strict";
 
-var r = require("./425");
+import r = require("./425");
 export { a as AsyncScheduler } from "./425";
-var o = require("./84");
+import o = require("./84");
 export { a as EEventType } from "./84";
 export { b as addEventListener } from "./84";
 export { xc as removeEventListener } from "./84";
@@ -131,7 +131,7 @@ export { bc as onCloudDictError } from "./84";
 export { W as emitCloudDictError } from "./84";
 export { rc as onTableDataChange } from "./84";
 export { Eb as emitTableDataChange } from "./84";
-var i = require("./424/index");
+import i = require("./424/index");
 export { gd as getButtonWidgetWidth } from "./424/index";
 export { bd as getButtonWidgetPositionX } from "./424/index";
 export { cd as getButtonWidgetPositionY } from "./424/index";

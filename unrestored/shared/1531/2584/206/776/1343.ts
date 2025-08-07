@@ -10,8 +10,8 @@ var c = function () {
     r(this, e);
     this._current = null;
     this._parents = [];
-    this._skipped = !1;
-    this._broken = !1;
+    this._skipped = false;
+    this._broken = false;
     this._visitorKeys = null;
     this._enter = null;
     this._leave = null;
@@ -29,20 +29,20 @@ var c = function () {
   }, {
     key: "break",
     value: function () {
-      this._broken = !0;
+      this._broken = true;
     }
   }, {
     key: "skip",
     value: function () {
-      this._skipped = !0;
+      this._skipped = true;
     }
   }, {
     key: "traverse",
     value: function (e, t) {
       this._current = null;
       this._parents = [];
-      this._skipped = !1;
-      this._broken = !1;
+      this._skipped = false;
+      this._broken = false;
       this._visitorKeys = t.visitorKeys || o.KEYS;
       this._enter = t.enter || s;
       this._leave = t.leave || s;
@@ -54,7 +54,7 @@ var c = function () {
       if (null !== (n = e) && "object" === typeof n && "string" === typeof n.type) {
         var n;
         this._current = e;
-        this._skipped = !1;
+        this._skipped = false;
         this._enter(e, t);
         if (!this._skipped && !this._broken) {
           var r = function (e, t) {

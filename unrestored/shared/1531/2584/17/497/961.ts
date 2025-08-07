@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.shortest_string_length = exports.equals = exports.remove = void 0;
+exports.shortest_string_length = exports.equals = exports.remove = undefined;
 var r = require("../../1001/213/index");
 exports.remove = function (e, t) {
   var n = e.indexOf(t);
@@ -15,14 +15,14 @@ exports.remove = function (e, t) {
 };
 exports.equals = function (e, t) {
   if (!(0, r.is_array)(e) || !(0, r.is_array)(t) || e.length != t.length) {
-    return !1;
+    return false;
   }
   for (var n = 0; n < e.length; n++) {
     if (e[n] !== t[n]) {
-      return !1;
+      return false;
     }
   }
-  return !0;
+  return true;
 };
 exports.shortest_string_length = function (e) {
   return e.length ? e.reduce(function (e, t) {

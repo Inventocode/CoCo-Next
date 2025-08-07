@@ -9,13 +9,13 @@ var u = require("../1660/495");
 var d = require("./627");
 r({
   target: "Reflect",
-  stat: !0,
+  stat: true,
   forced: s(function () {
     var e = function () {};
     var t = c.f(new e(), "a", {
-      configurable: !0
+      configurable: true
     });
-    return !1 !== Reflect.set(e.prototype, "a", 1, t);
+    return false !== Reflect.set(e.prototype, "a", 1, t);
   })
 }, {
   set: function e(t, n, r) {
@@ -31,12 +31,12 @@ r({
       m = d(0);
     }
     if (a(m)) {
-      if (!1 === m.writable || !i(h)) {
-        return !1;
+      if (false === m.writable || !i(h)) {
+        return false;
       }
       if (s = l.f(h, n)) {
-        if (s.get || s.set || !1 === s.writable) {
-          return !1;
+        if (s.get || s.set || false === s.writable) {
+          return false;
         }
         s.value = r;
         c.f(h, n, s);
@@ -44,11 +44,11 @@ r({
         c.f(h, n, d(0, r));
       }
     } else {
-      if (void 0 === (f = m.set)) {
-        return !1;
+      if (undefined === (f = m.set)) {
+        return false;
       }
       f.call(h, r);
     }
-    return !0;
+    return true;
   }
 });

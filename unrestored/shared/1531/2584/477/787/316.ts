@@ -5,7 +5,7 @@ function r(e) {
     case "[object Error]":
     case "[object Exception]":
     case "[object DOMException]":
-      return !0;
+      return true;
     default:
       return d(e, Error);
   }
@@ -38,7 +38,7 @@ function d(e, t) {
   try {
     return e instanceof t;
   } catch (n) {
-    return !1;
+    return false;
   }
 }
 export { r as b };

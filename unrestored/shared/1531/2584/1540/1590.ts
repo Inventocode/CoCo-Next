@@ -4,7 +4,7 @@ var i = Math.log;
 var a = Math.sqrt;
 r({
   target: "Math",
-  stat: !0,
+  stat: true,
   forced: !(o && 1 / o(0) > 0)
 }, {
   asinh: function e(t) {

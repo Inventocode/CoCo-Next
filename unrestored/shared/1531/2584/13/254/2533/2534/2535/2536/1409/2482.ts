@@ -7,7 +7,7 @@ module.exports = function (e, t) {
     if (!r(n)) {
       return e(n, i);
     }
-    for (var o = n.length, a = t ? o : -1, s = Object(n); (t ? a-- : ++a < o) && !1 !== i(s[a], a, s);) {
+    for (var o = n.length, a = t ? o : -1, s = Object(n); (t ? a-- : ++a < o) && false !== i(s[a], a, s);) {
       ;
     }
     return n;

@@ -1,10 +1,10 @@
 "use strict";
 
-var r = require("../20");
-var i = require("../33/index");
-var o = require("../29");
-var a = require("../54");
-var s = require("react");
+import r = require("../20");
+import i = require("../33/index");
+import o = require("../29");
+import a = require("../54");
+import s = require("react");
 var c = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -17,7 +17,7 @@ var c = function __importDefault(module) {
   });
   return defaultExport;
 }(s);
-var u = require("../8");
+import u = require("../8");
 var l = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -30,17 +30,17 @@ var l = function __importDefault(module) {
   });
   return defaultExport;
 }(u);
-var f = require("./780");
-var d = require("../108");
-var h = require("./911/index");
+import f = require("./780");
+import d = require("../108");
+import h = require("./911/index");
 var p = {};
 function _(e, t) {
   0;
 }
 function A(e, t, n) {
   if (!(t || p[n])) {
-    e(!1, n);
-    p[n] = !0;
+    e(false, n);
+    p[n] = true;
   }
 }
 var g = function (e, t) {
@@ -54,14 +54,14 @@ function m(e) {
 }
 function y(e) {
   var t;
-  var n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+  var n = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : {};
   if (!v()) {
     return null;
   }
   var r;
   var i = document.createElement("style");
-  if (null === (t = n.csp) || void 0 === t ? void 0 : t.nonce) {
-    i.nonce = null === (r = n.csp) || void 0 === r ? void 0 : r.nonce;
+  if (null === (t = n.csp) || undefined === t ? undefined : t.nonce) {
+    i.nonce = null === (r = n.csp) || undefined === r ? undefined : r.nonce;
   }
   i.innerHTML = e;
   var o = m(n);
@@ -79,7 +79,7 @@ function y(e) {
 }
 var b = new Map();
 function w(e, t) {
-  var n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+  var n = arguments.length > 2 && undefined !== arguments[2] ? arguments[2] : {};
   var r = m(n);
   if (!b.has(r)) {
     var i = y("", n);
@@ -94,8 +94,8 @@ function w(e, t) {
     var s;
     var c;
     var u;
-    if ((null === (s = n.csp) || void 0 === s ? void 0 : s.nonce) && a.nonce !== (null === (c = n.csp) || void 0 === c ? void 0 : c.nonce)) {
-      a.nonce = null === (u = n.csp) || void 0 === u ? void 0 : u.nonce;
+    if ((null === (s = n.csp) || undefined === s ? undefined : s.nonce) && a.nonce !== (null === (c = n.csp) || undefined === c ? undefined : c.nonce)) {
+      a.nonce = null === (u = n.csp) || undefined === u ? undefined : u.nonce;
     }
     if (a.innerHTML !== e) {
       a.innerHTML = e;
@@ -107,10 +107,10 @@ function w(e, t) {
   return l;
 }
 function E(e) {
-  return "object" === Object(d.a)(e) && "string" === typeof e.name && "string" === typeof e.theme && ("object" === Object(d.a)(e.icon) || "function" === typeof e.icon);
+  return "object" === d.a(e) && "string" === typeof e.name && "string" === typeof e.theme && ("object" === d.a(e.icon) || "function" === typeof e.icon);
 }
 function x() {
-  var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+  var e = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : {};
   return Object.keys(e).reduce(function (t, n) {
     var r = e[n];
     switch (n) {
@@ -125,7 +125,7 @@ function x() {
   }, {});
 }
 function C(e) {
-  return Object(h.a)(e)[0];
+  return h.a(e)[0];
 }
 function O(e) {
   return e ? Array.isArray(e) ? e : [e] : [];
@@ -135,7 +135,7 @@ var S = ["icon", "className", "onClick", "style", "primaryColor", "secondaryColo
 var T = {
   primaryColor: "#333",
   secondaryColor: "#E6E6E6",
-  calculated: !1
+  calculated: false
 };
 var B = function (e) {
   var t;
@@ -146,7 +146,7 @@ var B = function (e) {
   var l = e.style;
   var d = e.primaryColor;
   var h = e.secondaryColor;
-  var p = Object(a.a)(e, S);
+  var p = a.a(e, S);
   var _ = T;
   if (d) {
     _ = {
@@ -155,12 +155,12 @@ var B = function (e) {
     };
   }
   (function () {
-    var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : k;
-    var t = Object(s.useContext)(f.a);
+    var e = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : k;
+    var t = s.useContext(f.a);
     var n = t.csp;
-    Object(s.useEffect)(function () {
+    s.useEffect(function () {
       w(e, "@ant-design-icons", {
-        prepend: !0,
+        prepend: true,
         csp: n
       });
     }, []);
@@ -173,21 +173,21 @@ var B = function (e) {
   }
   var A = i;
   if (A && "function" === typeof A.icon) {
-    A = Object(r.a)(Object(r.a)({}, A), {}, {
+    A = r.a(r.a({}, A), {}, {
       icon: A.icon(_.primaryColor, _.secondaryColor)
     });
   }
   return function e(t, n, i) {
-    return i ? c.a.createElement(t.tag, Object(r.a)(Object(r.a)({
+    return i ? c.a.createElement(t.tag, r.a(r.a({
       key: n
     }, x(t.attrs)), i), (t.children || []).map(function (r, i) {
       return e(r, "".concat(n, "-").concat(t.tag, "-").concat(i));
-    })) : c.a.createElement(t.tag, Object(r.a)({
+    })) : c.a.createElement(t.tag, r.a({
       key: n
     }, x(t.attrs)), (t.children || []).map(function (r, i) {
       return e(r, "".concat(n, "-").concat(t.tag, "-").concat(i));
     }));
-  }(A.icon, "svg-".concat(A.name), Object(r.a)({
+  }(A.icon, "svg-".concat(A.name), r.a({
     className: o,
     onClick: u,
     style: l,
@@ -200,7 +200,7 @@ var B = function (e) {
 };
 B.displayName = "IconReact";
 B.getTwoToneColors = function () {
-  return Object(r.a)({}, T);
+  return r.a({}, T);
 };
 B.setTwoToneColors = function (e) {
   var t = e.primaryColor;
@@ -212,7 +212,7 @@ B.setTwoToneColors = function (e) {
 var D = B;
 function I(e) {
   var t = O(e);
-  var n = Object(i.a)(t, 2);
+  var n = i.a(t, 2);
   var r = n[0];
   var o = n[1];
   return D.setTwoToneColors({
@@ -231,23 +231,23 @@ var R = s.forwardRef(function (e, t) {
   var p = e.tabIndex;
   var _ = e.onClick;
   var A = e.twoToneColor;
-  var g = Object(a.a)(e, F);
+  var g = a.a(e, F);
   var v = s.useContext(f.a).prefixCls;
-  var m = void 0 === v ? "anticon" : v;
-  var y = l()(m, (n = {}, Object(o.a)(n, "".concat(m, "-").concat(u.name), !!u.name), Object(o.a)(n, "".concat(m, "-spin"), !!d || "loading" === u.name), n), c);
+  var m = undefined === v ? "anticon" : v;
+  var y = l()(m, (n = {}, o.a(n, "".concat(m, "-").concat(u.name), !!u.name), o.a(n, "".concat(m, "-spin"), !!d || "loading" === u.name), n), c);
   var b = p;
-  if (void 0 === b && _) {
+  if (undefined === b && _) {
     b = -1;
   }
   var w = h ? {
     msTransform: "rotate(".concat(h, "deg)"),
     transform: "rotate(".concat(h, "deg)")
-  } : void 0;
+  } : undefined;
   var E = O(A);
-  var x = Object(i.a)(E, 2);
+  var x = i.a(E, 2);
   var C = x[0];
   var k = x[1];
-  return s.createElement("span", Object(r.a)(Object(r.a)({
+  return s.createElement("span", r.a(r.a({
     role: "img",
     "aria-label": u.name
   }, g), {}, {

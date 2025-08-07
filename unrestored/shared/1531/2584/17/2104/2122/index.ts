@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.VerticalFlyout = void 0;
+exports.VerticalFlyout = undefined;
 var r = require("tslib");
 var i = require("inversify");
 var o = require("@kitten-team/gl-matrix");
@@ -16,7 +16,7 @@ var l = function (e) {
     var n = e.call(this, t) || this;
     n.excute_after_next_reflow = [];
     n.content_height_ = 0;
-    n.horizontalLayout_ = !1;
+    n.horizontalLayout_ = false;
     n.fixed_width = t.flyout.fixed_width;
     n.width_ = n.fixed_width || 0;
     n.set_auto_close(t.flyout.auto_close);
@@ -71,7 +71,7 @@ var l = function (e) {
     for (var n, r = this, i = o.vec2.fromValues(this.padding_left, 0), a = function (e) {
         for (var t = e.get_descendants(), n = 0; n < t.length; n++) {
           var i = t[n];
-          i.is_in_flyout = !0;
+          i.is_in_flyout = true;
           i.render();
         }
         e.render();
@@ -84,7 +84,7 @@ var l = function (e) {
         var u = o.vec2.fromValues(i[0], i[1]);
         o.vec2.add(u, u, this.theme.renderer.BLOCK_LEFT_TOP);
         if (c.block.is_starting_block()) {
-          o.vec2.add(u, u, [(null === (n = this.targetWorkspace_) || void 0 === n ? void 0 : n.options.flyout.blocks.head_block_offset[0]) || 0, 0]);
+          o.vec2.add(u, u, [(null === (n = this.targetWorkspace_) || undefined === n ? undefined : n.options.flyout.blocks.head_block_offset[0]) || 0, 0]);
         }
         var l = a(c.block);
         l.move_by(u);
@@ -127,10 +127,10 @@ var l = function (e) {
       }
       var n = 0;
       var r = t / i.workspace_.get_scale();
-      if (void 0 !== e.left) {
+      if (undefined !== e.left) {
         n = e.left;
       } else {
-        if (void 0 !== e.right) {
+        if (undefined !== e.right) {
           n = r - e.right - e.width;
         } else {
           if ("center" === e.align) {
@@ -149,9 +149,9 @@ var l = function (e) {
         };
       }
       var u = 0;
-      if (void 0 !== e.top) {
+      if (undefined !== e.top) {
         u = e.top;
-      } else if (void 0 !== e.bottom) {
+      } else if (undefined !== e.bottom) {
         u = ("fixed" === e.position ? i.height_ / i.workspace_.get_scale() : i.content_height_) - e.bottom - e.height;
       }
       return {
@@ -168,7 +168,7 @@ var l = function (e) {
         var s = o.y;
         var c = i.init_flyout_button(e, a, s, r * (e.width_ratio || 1));
         if ("fixed" === e.position) {
-          if (!(null === (n = i.svg_group) || void 0 === n)) {
+          if (!(null === (n = i.svg_group) || undefined === n)) {
             n.appendChild(c);
           }
         }
@@ -183,7 +183,7 @@ var l = function (e) {
         var i = n.y;
         e.move_to(r, i);
       });
-      return void ("fixed" === e.position && (null === (r = this.svg_group) || void 0 === r || r.appendChild(l)));
+      return void ("fixed" === e.position && (null === (r = this.svg_group) || undefined === r || r.appendChild(l)));
     }
     if (e.inline || this.current_item_line) {
       (function () {
@@ -216,7 +216,7 @@ var l = function (e) {
         i.current_item_line.height = Math.max(i.current_item_line.height, e.height);
         if (!e.inline) {
           t[1] += i.current_item_line.height + n;
-          i.current_item_line = void 0;
+          i.current_item_line = undefined;
         }
       })();
     } else {
@@ -293,7 +293,7 @@ var l = function (e) {
     var i = this.xml.block_to_dom(e);
     var a = this.xml.dom_to_block(i, this.targetWorkspace_);
     var c = a.get_svg_root();
-    if (void 0 == c) {
+    if (undefined == c) {
       throw new ReferenceError("Block should have svg root.");
     }
     var u = this.utils.get_injection_div_xy(c);
@@ -325,7 +325,7 @@ var l = function (e) {
     }
   };
   t.prototype.set_metrics = function (e) {
-    if (void 0 != this.workspace_) {
+    if (undefined != this.workspace_) {
       var t = this.get_metrics();
       if (t) {
         if ((0, c.is_number)(e.y)) {
@@ -355,7 +355,7 @@ var l = function (e) {
     this.width_ = 0;
   };
   t.prototype.position = function () {
-    if (void 0 != this.targetWorkspace_) {
+    if (undefined != this.targetWorkspace_) {
       if (this.svg_background_ && this.svg_group) {
         var e = this.targetWorkspace_.get_metrics();
         if (e) {

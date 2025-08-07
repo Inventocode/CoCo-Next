@@ -117,7 +117,7 @@ var V = function () {
   var a;
   var s;
   var c;
-  var l = arguments.length > 0 ? arguments[0] : void 0;
+  var l = arguments.length > 0 ? arguments[0] : undefined;
   var u = this;
   var f = [];
   A(u, {
@@ -126,7 +126,7 @@ var V = function () {
     updateURL: function () {},
     updateSearchParams: U
   });
-  if (void 0 !== l) {
+  if (undefined !== l) {
     if (g(l)) {
       if ("function" === typeof (e = E(l))) {
         for (n = (t = y(l, e)).next; !(r = n.call(t)).done;) {
@@ -195,19 +195,19 @@ s(z, {
     W(arguments.length, 1);
     for (var t = j(this).entries, n = _(e), r = 0; r < t.length;) {
       if (t[r++].key === n) {
-        return !0;
+        return true;
       }
     }
-    return !1;
+    return false;
   },
   set: function (e, t) {
     W(arguments.length, 1);
-    for (var n, r = j(this), o = r.entries, i = !1, a = _(e), s = _(t), c = 0; c < o.length; c++) {
+    for (var n, r = j(this), o = r.entries, i = false, a = _(e), s = _(t), c = 0; c < o.length; c++) {
       if ((n = o[c]).key === a) {
         if (i) {
           o.splice(c--, 1);
         } else {
-          i = !0;
+          i = true;
           n.value = s;
         }
       }
@@ -241,7 +241,7 @@ s(z, {
     r.updateURL();
   },
   forEach: function (e) {
-    for (var t, n = j(this).entries, r = f(e, arguments.length > 1 ? arguments[1] : void 0, 3), o = 0; o < n.length;) {
+    for (var t, n = j(this).entries, r = f(e, arguments.length > 1 ? arguments[1] : undefined, 3), o = 0; o < n.length;) {
       r((t = n[o++]).value, t.key, this);
     }
   },
@@ -255,7 +255,7 @@ s(z, {
     return new H(this, "entries");
   }
 }, {
-  enumerable: !0
+  enumerable: true
 });
 a(z, I, z.entries);
 a(z, "toString", function () {
@@ -265,11 +265,11 @@ a(z, "toString", function () {
   }
   return n.join("&");
 }, {
-  enumerable: !0
+  enumerable: true
 });
 c(V, "URLSearchParams");
 r({
-  global: !0,
+  global: true,
   forced: !i
 }, {
   URLSearchParams: V
@@ -293,9 +293,9 @@ if (!i && "function" == typeof S) {
   };
   if ("function" == typeof w) {
     r({
-      global: !0,
-      enumerable: !0,
-      forced: !0
+      global: true,
+      enumerable: true,
+      forced: true
     }, {
       fetch: function (e) {
         return w(e, arguments.length > 1 ? Y(arguments[1]) : {});
@@ -310,8 +310,8 @@ if (!i && "function" == typeof S) {
     T.constructor = K;
     K.prototype = T;
     r({
-      global: !0,
-      forced: !0
+      global: true,
+      forced: true
     }, {
       Request: K
     });

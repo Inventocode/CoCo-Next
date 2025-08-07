@@ -16,21 +16,21 @@ module.exports = function (e, t, n) {
   var p = "valid" + h.level;
   var _ = e.schema.then;
   var A = e.schema.else;
-  var g = void 0 !== _ && (e.opts.strictKeywords ? "object" == typeof _ && Object.keys(_).length > 0 || !1 === _ : e.util.schemaHasRules(_, e.RULES.all));
-  var v = void 0 !== A && (e.opts.strictKeywords ? "object" == typeof A && Object.keys(A).length > 0 || !1 === A : e.util.schemaHasRules(A, e.RULES.all));
+  var g = undefined !== _ && (e.opts.strictKeywords ? "object" == typeof _ && Object.keys(_).length > 0 || false === _ : e.util.schemaHasRules(_, e.RULES.all));
+  var v = undefined !== A && (e.opts.strictKeywords ? "object" == typeof A && Object.keys(A).length > 0 || false === A : e.util.schemaHasRules(A, e.RULES.all));
   var m = h.baseId;
   if (g || v) {
     var y;
-    h.createErrors = !1;
+    h.createErrors = false;
     h.schema = a;
     h.schemaPath = s;
     h.errSchemaPath = c;
     r += " var " + d + " = errors; var " + f + " = true;  ";
     var b = e.compositeRule;
-    e.compositeRule = h.compositeRule = !0;
+    e.compositeRule = h.compositeRule = true;
     r += "  " + e.validate(h) + " ";
     h.baseId = m;
-    h.createErrors = !0;
+    h.createErrors = true;
     r += "  errors = " + d + "; if (vErrors !== null) { if (" + d + ") vErrors.length = " + d + "; else vErrors = null; }  ";
     e.compositeRule = h.compositeRule = b;
     if (g) {
@@ -68,9 +68,9 @@ module.exports = function (e, t, n) {
       r += " } ";
     }
     r += " if (!" + f + ") {   var err =   ";
-    if (!1 !== e.createErrors) {
+    if (false !== e.createErrors) {
       r += " { keyword: 'if' , dataPath: (dataPath || '') + " + e.errorPath + " , schemaPath: " + e.util.toQuotedString(c) + " , params: { failingKeyword: " + y + " } ";
-      if (!1 !== e.opts.messages) {
+      if (false !== e.opts.messages) {
         r += " , message: 'should match \"' + " + y + " + '\" schema' ";
       }
       if (e.opts.verbose) {

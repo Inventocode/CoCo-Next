@@ -12,52 +12,52 @@ export { m as j };
 export { g as k };
 export { _ as l };
 export { v as i };
-var r = require("../../6");
-var o = require("../../48/index");
-var i = require("../../48/72");
-var a = require("../../14");
+import r = require("../../6");
+import o = require("../../48/index");
+import i = require("../../48/72");
+import a = require("../../14");
 function s(e) {
-  return Object(o.a)().getState().widgetMap.get(e);
+  return o.a().getState().widgetMap.get(e);
 }
 function c(e) {
-  var t = Object(o.a)().getState().widgetMap.get(e);
+  var t = o.a().getState().widgetMap.get(e);
   if (t && t.parentId) {
-    return Object(o.a)().getState().widgetMap.get(t.parentId);
+    return o.a().getState().widgetMap.get(t.parentId);
   }
 }
 function l(e) {
   var t;
-  return null === (t = s(e)) || void 0 === t ? void 0 : t.position;
+  return null === (t = s(e)) || undefined === t ? undefined : t.position;
 }
 function u(e) {
   var t;
-  return null === (t = s(e)) || void 0 === t ? void 0 : t.animationRecord;
+  return null === (t = s(e)) || undefined === t ? undefined : t.animationRecord;
 }
 function d(e) {
   var t;
-  return null === (t = s(e)) || void 0 === t ? void 0 : t.size;
+  return null === (t = s(e)) || undefined === t ? undefined : t.size;
 }
 function p(e) {
   var t;
-  return null === (t = s(e)) || void 0 === t ? void 0 : t.visible;
+  return null === (t = s(e)) || undefined === t ? undefined : t.visible;
 }
 function f(e) {
   var t;
-  return null === (t = s(e)) || void 0 === t ? void 0 : t.attributes;
+  return null === (t = s(e)) || undefined === t ? undefined : t.attributes;
 }
 function h(e, t) {
   var n = s(e);
   if (n) {
-    var a = Object(r.a)(Object(r.a)({}, n), {}, {
-      attributes: Object(r.a)(Object(r.a)({}, n.attributes), t)
+    var a = r.a(r.a({}, n), {}, {
+      attributes: r.a(r.a({}, n.attributes), t)
     });
-    Object(o.a)().dispatch(Object(i.v)(e, a));
+    o.a().dispatch(i.v(e, a));
   }
 }
 function m(e, t) {
   var n = s(e);
   if (n) {
-    if (void 0 !== t.x) {
+    if (undefined !== t.x) {
       if (!a.a.isNumber(t.x, {
         type: "error",
         widgetId: e,
@@ -70,7 +70,7 @@ function m(e, t) {
       }
       t.x = Math.round(t.x);
     }
-    if (void 0 !== t.y) {
+    if (undefined !== t.y) {
       if (!a.a.isNumber(t.y, {
         type: "error",
         widgetId: e,
@@ -83,8 +83,8 @@ function m(e, t) {
       }
       t.y = Math.round(t.y);
     }
-    Object(o.a)().dispatch(Object(i.v)(e, Object(r.a)(Object(r.a)({}, n), {}, {
-      position: Object(r.a)(Object(r.a)({}, n.position), t)
+    o.a().dispatch(i.v(e, r.a(r.a({}, n), {}, {
+      position: r.a(r.a({}, n.position), t)
     })));
   } else {
     console.error("updateWidgetPosition error, widget is undefined");
@@ -93,8 +93,8 @@ function m(e, t) {
 function g(e, t) {
   var n = s(e);
   if (n) {
-    var c = Object(r.a)({}, n.attributes);
-    if (void 0 !== t.height) {
+    var c = r.a({}, n.attributes);
+    if (undefined !== t.height) {
       if (!a.a.isNumber(t.height, {
         type: "error",
         widgetId: e,
@@ -114,7 +114,7 @@ function g(e, t) {
         });
       }
     }
-    if (void 0 !== t.width) {
+    if (undefined !== t.width) {
       if (!a.a.isNumber(t.width, {
         type: "error",
         widgetId: e,
@@ -134,9 +134,9 @@ function g(e, t) {
         });
       }
     }
-    Object(o.a)().dispatch(Object(i.v)(e, Object(r.a)(Object(r.a)({}, n), {}, {
-      attributes: Object(r.a)({}, c),
-      size: Object(r.a)(Object(r.a)({}, n.size), t)
+    o.a().dispatch(i.v(e, r.a(r.a({}, n), {}, {
+      attributes: r.a({}, c),
+      size: r.a(r.a({}, n.size), t)
     })));
   } else {
     console.error("updateWidgetSize error, widget is undefined");
@@ -145,7 +145,7 @@ function g(e, t) {
 function _(e, t) {
   var n = s(e);
   if (n) {
-    Object(o.a)().dispatch(Object(i.v)(e, Object(r.a)(Object(r.a)({}, n), {}, {
+    o.a().dispatch(i.v(e, r.a(r.a({}, n), {}, {
       visible: t
     })));
   }
@@ -153,7 +153,7 @@ function _(e, t) {
 function v(e, t) {
   var n = s(e);
   if (n) {
-    Object(o.a)().dispatch(Object(i.v)(e, Object(r.a)(Object(r.a)({}, n), {}, {
+    o.a().dispatch(i.v(e, r.a(r.a({}, n), {}, {
       opacity: t
     })));
   }

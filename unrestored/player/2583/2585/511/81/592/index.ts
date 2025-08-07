@@ -151,7 +151,7 @@
             break;
           case t.MACRO_PDF417_TERMINATOR:
             n++;
-            r.setLastSegment(!0);
+            r.setLastSegment(true);
             break;
           default:
             throw o.a.getFormatInstance();
@@ -167,7 +167,7 @@
       return n;
     };
     t.textCompaction = function (e, n, r) {
-      for (var i = new Int32Array(2 * (e[0] - n)), o = new Int32Array(2 * (e[0] - n)), a = 0, s = !1; n < e[0] && !s;) {
+      for (var i = new Int32Array(2 * (e[0] - n)), o = new Int32Array(2 * (e[0] - n)), a = 0, s = false; n < e[0] && !s;) {
         var u = e[n++];
         if (u < t.TEXT_COMPACTION_MODE_LATCH) {
           i[a] = u / 30;
@@ -185,7 +185,7 @@
             case t.BEGIN_MACRO_PDF417_OPTIONAL_FIELD:
             case t.MACRO_PDF417_TERMINATOR:
               n--;
-              s = !0;
+              s = true;
               break;
             case t.MODE_SHIFT_TO_BYTE_COMPACTION_MODE:
               i[a] = t.MODE_SHIFT_TO_BYTE_COMPACTION_MODE;
@@ -340,7 +340,7 @@
       var a = new h.a();
       var s = 0;
       var u = 0;
-      var c = !1;
+      var c = false;
       switch (e) {
         case t.BYTE_COMPACTION_MODE_LATCH:
           for (var l = new Int32Array(6), d = n[i++]; i < n[0] && !c;) {
@@ -353,7 +353,7 @@
               case t.BEGIN_MACRO_PDF417_OPTIONAL_FIELD:
               case t.MACRO_PDF417_TERMINATOR:
                 i--;
-                c = !0;
+                c = true;
                 break;
               default:
                 if (s % 5 === 0 && s > 0) {
@@ -388,7 +388,7 @@
                 case t.BEGIN_MACRO_PDF417_OPTIONAL_FIELD:
                 case t.MACRO_PDF417_TERMINATOR:
                   i--;
-                  c = !0;
+                  c = true;
               }
             }
             if (s % 5 === 0 && s > 0) {
@@ -404,10 +404,10 @@
       return i;
     };
     t.numericCompaction = function (e, n, r) {
-      for (var i = 0, o = !1, a = new Int32Array(t.MAX_NUMERIC_CODEWORDS); n < e[0] && !o;) {
+      for (var i = 0, o = false, a = new Int32Array(t.MAX_NUMERIC_CODEWORDS); n < e[0] && !o;) {
         var s = e[n++];
         if (n === e[0]) {
-          o = !0;
+          o = true;
         }
         if (s < t.TEXT_COMPACTION_MODE_LATCH) {
           a[i] = s;
@@ -421,7 +421,7 @@
             case t.BEGIN_MACRO_PDF417_OPTIONAL_FIELD:
             case t.MACRO_PDF417_TERMINATOR:
               n--;
-              o = !0;
+              o = true;
           }
         }
         if ((i % t.MAX_NUMERIC_CODEWORDS === 0 || s === t.NUMERIC_COMPACTION_MODE_LATCH || o) && i > 0) {

@@ -25,11 +25,11 @@ module.exports = function (e, t, n) {
   var h = h || [];
   h.push(i);
   i = "";
-  if (!1 !== e.createErrors) {
+  if (false !== e.createErrors) {
     i += " { keyword: 'pattern' , dataPath: (dataPath || '') + " + e.errorPath + " , schemaPath: " + e.util.toQuotedString(u) + " , params: { pattern:  ";
     i += d ? "" + r : "" + e.util.toQuotedString(s);
     i += "  } ";
-    if (!1 !== e.opts.messages) {
+    if (false !== e.opts.messages) {
       i += " , message: 'should match pattern \"";
       i += d ? "' + " + r + " + '" : "" + e.util.escapeQuotes(s);
       i += "\"' ";

@@ -3,7 +3,7 @@ var o = Math.atanh;
 var i = Math.log;
 r({
   target: "Math",
-  stat: !0,
+  stat: true,
   forced: !(o && 1 / o(-0) < 0)
 }, {
   atanh: function (e) {

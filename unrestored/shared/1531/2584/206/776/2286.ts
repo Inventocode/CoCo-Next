@@ -16,7 +16,7 @@ module.exports = function () {
       }
       if (t in e) {
         e[t].forEach(function (e) {
-          return e.apply(void 0, r);
+          return e.apply(undefined, r);
         });
       }
     },

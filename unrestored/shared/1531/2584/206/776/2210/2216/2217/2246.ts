@@ -8,10 +8,10 @@ module.exports = function e(t, n, i) {
   }
   if ("function" == typeof n) {
     i = n;
-    n = void 0;
+    n = undefined;
   }
   var a = s(t).then(function () {
-    var e = o._addSchema(t, void 0, n);
+    var e = o._addSchema(t, undefined, n);
     return e.validate || function e(t) {
       try {
         return o._compile(t);
@@ -34,7 +34,7 @@ module.exports = function e(t, n, i) {
           if (!u(i)) {
             return s(e).then(function () {
               if (!u(i)) {
-                o.addSchema(e, i, void 0, n);
+                o.addSchema(e, i, undefined, n);
               }
             });
           }
@@ -60,6 +60,6 @@ module.exports = function e(t, n, i) {
     var n = t.$schema;
     return n && !o.getSchema(n) ? e.call(o, {
       $ref: n
-    }, !0) : Promise.resolve();
+    }, true) : Promise.resolve();
   }
 };

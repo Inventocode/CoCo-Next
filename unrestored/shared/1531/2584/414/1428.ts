@@ -2,7 +2,7 @@
 
 var r;
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
 (function (e) {
   e.IdentityCheck = "IdentityCheck";
@@ -15,7 +15,7 @@ var o = function () {
     this.strategyMap = ((e = {})[r.DeepValueCheck] = new a(), e[r.IdentityCheck] = new i(function (e, t) {
       return e === t;
     }), e[r.NoCheck] = new i(function (e, t) {
-      return !1;
+      return false;
     }), e);
   }
   e.prototype.getStrategy = function (e) {
@@ -65,19 +65,19 @@ var a = function () {
     t = e.unwrapStringOrNumber(t);
     n = e.unwrapStringOrNumber(n);
     if (t === n) {
-      return !0;
+      return true;
     }
     if (null === t || null === n || typeof t !== typeof n) {
-      return !1;
+      return false;
     }
     if (e.isNaN(t) && e.isNaN(n)) {
-      return !0;
+      return true;
     }
     if (t instanceof Date) {
       return n instanceof Date && t.valueOf() === n.valueOf();
     }
     if ("function" === typeof t) {
-      return !1;
+      return false;
     }
     if ("object" !== typeof t || t.$$typeof && "Symbol(react.element)" === t.$$typeof.toString()) {
       return t == n;
@@ -85,23 +85,23 @@ var a = function () {
     if (Object.isFrozen(t) || Object.isFrozen(n)) {
       return t === n;
     }
-    var r = void 0 === t.areEquivPropertyTracking;
-    var o = void 0 === n.areEquivPropertyTracking;
+    var r = undefined === t.areEquivPropertyTracking;
+    var o = undefined === n.areEquivPropertyTracking;
     try {
-      var i = void 0;
+      var i = undefined;
       if (r) {
         t.areEquivPropertyTracking = [];
       } else if (t.areEquivPropertyTracking.some(function (e) {
         return e === n;
       })) {
-        return !0;
+        return true;
       }
       if (o) {
         n.areEquivPropertyTracking = [];
       } else if (n.areEquivPropertyTracking.some(function (e) {
         return e === t;
       })) {
-        return !0;
+        return true;
       }
       t.areEquivPropertyTracking.push(n);
       n.areEquivPropertyTracking.push(t);
@@ -113,9 +113,9 @@ var a = function () {
         a[i] = null;
       }
       for (i in a) if (!this.areEquivalent(t[i], n[i])) {
-        return !1;
+        return false;
       }
-      return !0;
+      return true;
     } finally {
       if (r) {
         delete t.areEquivPropertyTracking;

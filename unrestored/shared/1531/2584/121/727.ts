@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.FieldDropdown = void 0;
+exports.FieldDropdown = undefined;
 var r = require("tslib");
 var i = require("inversify");
 var o = require("../4/127");
@@ -18,12 +18,12 @@ var h = require("../301/500");
 var p = require("../301/480");
 var _ = function (e) {
   function t(t) {
-    var n = e.call(this, void 0, t.opt_validator) || this;
+    var n = e.call(this, undefined, t.opt_validator) || this;
     n.field_type = "FieldDropdown";
     n.value_ = "?";
-    n.prefix_field = void 0;
-    n.suffix_field = void 0;
-    n.generate_customized_dropdown = void 0;
+    n.prefix_field = undefined;
+    n.suffix_field = undefined;
+    n.generate_customized_dropdown = undefined;
     n.menu_generator = t.menu_generator;
     n.menu_generator_advanced = t.menu_generator_advanced;
     for (var r = n.get_advanced_options() ? n.get_expanded_advanced_options() : n.get_basic_options(), i = (0, u.is_func)(t.selected_index) ? t.selected_index() : t.selected_index || 0; r[i] && (!n.get_option_value(r[i]) || n.get_option_callback(r[i]));) {
@@ -77,16 +77,16 @@ var _ = function (e) {
         var o = this.size_.height / 2 - 7;
         this.arrow_.setAttribute("transform", "translate(" + i + ", " + o + ")");
         this.size_.width += 12 + n;
-        this.change_editor_style(!1);
+        this.change_editor_style(false);
         if (this.source_block.is_shadow()) {
           this.render_shadow_style();
         } else {
           this.render_not_shadow_style();
         }
-        if (!(null === (e = this.border_rect) || void 0 === e)) {
+        if (!(null === (e = this.border_rect) || undefined === e)) {
           e.setAttribute("height", String(this.size_.height));
         }
-        if (!(null === (t = this.border_rect) || void 0 === t)) {
+        if (!(null === (t = this.border_rect) || undefined === t)) {
           t.setAttribute("width", String(this.size_.width));
         }
       }
@@ -162,7 +162,7 @@ var _ = function (e) {
   t.prototype.render_image_element = function () {
     var e;
     (0, l.assert)(this.field_group);
-    if (this.image_json && !(null === (e = this.image_json) || void 0 === e ? void 0 : e.is_hide)) {
+    if (this.image_json && !(null === (e = this.image_json) || undefined === e ? undefined : e.is_hide)) {
       this.image_element = this.create_image(this.image_json);
       this.field_group.appendChild(this.image_element);
       this.image_element.setAttribute("x", "" + this.size_.width);
@@ -184,7 +184,7 @@ var _ = function (e) {
       } else {
         var t;
         if (!this.show_editor_extend(this)) {
-          this.change_editor_style(!0);
+          this.change_editor_style(true);
           if (this.generate_customized_dropdown) {
             t = this.generate_customized_dropdown();
           } else {
@@ -200,7 +200,7 @@ var _ = function (e) {
       "xlink:href": e.src,
       width: "100%",
       height: "100%"
-    }) : "number" === typeof e.src ? (0, s.get_num_g)(e.src) : (0, s.clone_node)(e.src, !0);
+    }) : "number" === typeof e.src ? (0, s.get_num_g)(e.src) : (0, s.clone_node)(e.src, true);
     var n = e.width || t.getAttribute("width") || 16;
     var r = e.height || Number(t.getAttribute("height")) || 16;
     var i = (0, s.create_svg_element)("svg", {
@@ -212,8 +212,8 @@ var _ = function (e) {
   };
   t.prototype.create_menu_item_div = function (e, t, n, r, i, o, a) {
     var c = this;
-    if (void 0 === o) {
-      o = !0;
+    if (undefined === o) {
+      o = true;
     }
     var u = (0, s.create_div_element)();
     if (n) {
@@ -235,7 +235,7 @@ var _ = function (e) {
     u.dataset.value = t;
     if (t === this.value_) {
       u.classList.add("menu_item_selected");
-      if (!(null === i || void 0 === i)) {
+      if (!(null === i || undefined === i)) {
         i.classList.add("menu_item_selected");
       }
     }
@@ -250,16 +250,16 @@ var _ = function (e) {
         if (r) {
           r.call(c.set_value.bind(c));
         } else {
-          if (void 0 !== t) {
+          if (undefined !== t) {
             c.set_value(t);
           }
         }
         c.widget_div.hide_if_owner(c);
         c.tooltip.hide();
-        c.events.set_group(!1);
+        c.events.set_group(false);
       }
     });
-    if (r || void 0 !== t && o) {
+    if (r || undefined !== t && o) {
       u.addEventListener("touchstart", function () {
         u.classList.add("menu_touch_effect");
       });
@@ -275,10 +275,10 @@ var _ = function (e) {
       return this.create_menu_item_div(e.text, e.value, e.icon, e.callback, t, e.enabled, e.tooltip);
     }
     if (!(0, u.is_old_dropdown_option)(e) && "group" === e.type) {
-      var r = this.create_menu_item_div(e.name, void 0, void 0, void 0, t);
+      var r = this.create_menu_item_div(e.name, undefined, undefined, undefined, t);
       r.classList.add("menu_group");
       r.dataset.group_key = e.value || (0, d.gen_uid)();
-      var i = this.create_dropdown_element(e.options, void 0, r);
+      var i = this.create_dropdown_element(e.options, undefined, r);
       i.classList.add("menu_group_children");
       i.dataset.group_key = r.dataset.group_key;
       r.addEventListener("mouseover", function (e) {
@@ -298,7 +298,7 @@ var _ = function (e) {
       return r;
     }
     if (!(0, u.is_old_dropdown_option)(e) && "image_plus" === e.type) {
-      var c = void 0 === e.index ? void 0 : "number" === typeof e.index ? {
+      var c = undefined === e.index ? undefined : "number" === typeof e.index ? {
         src: e.index
       } : e.index;
       var l = this.create_menu_item_div(e.text || "", e.value, c, e.callback, t, e.enabled, e.tooltip);
@@ -362,21 +362,21 @@ var _ = function (e) {
   t.prototype.update_widget_div_position = function (e) {
     var t = this;
     this.widget_div.show(this, function () {
-      t.focus(!1);
-      t.change_editor_style(!1);
+      t.focus(false);
+      t.change_editor_style(false);
       Array.from(document.querySelectorAll(".menu_group_children")).forEach(function (e) {
         return (0, s.remove_node)(e);
       });
     });
     var n = this.widget_div.DIV;
-    if (!(null === n || void 0 === n)) {
+    if (!(null === n || undefined === n)) {
       n.appendChild(e);
     }
     var r = (0, p.position_dropdown)(e, this);
     this.widget_div.position(r[0], r[1]);
   };
   t.prototype.show_editor_extend = function (e) {
-    return !1;
+    return false;
   };
   t.prototype.change_editor_style = function (e) {
     if (this.source_block) {
@@ -396,7 +396,7 @@ var _ = function (e) {
   };
   t.prototype.set_value = function (e) {
     if (this.get_advanced_options() || this.get_basic_options()) {
-      if (void 0 != e) {
+      if (undefined != e) {
         var t = this.get_option(e);
         var n = t && this.get_option_text(t) || "";
         if (e !== this.value_ || n !== this.text_) {
@@ -405,7 +405,7 @@ var _ = function (e) {
           if (this.source_block) {
             if (this.events.is_enabled()) {
               if (!i) {
-                this.events.set_group(!0);
+                this.events.set_group(true);
               }
               r = this.change_event_factory("field", {
                 block: this.source_block,
@@ -429,17 +429,17 @@ var _ = function (e) {
             return void (this.events.is_enabled() && r && (this.events.fire(r), this.events.set_group(i)));
           }
           this.value_ = "?";
-          this.image_json = void 0;
+          this.image_json = undefined;
           this.set_text("?");
           if (this.events.is_enabled() && r) {
             this.events.fire(r);
             this.events.set_group(i);
           }
         } else {
-          this.change_editor_style(!1);
+          this.change_editor_style(false);
         }
       } else {
-        this.change_editor_style(!1);
+        this.change_editor_style(false);
       }
     }
   };
@@ -453,18 +453,18 @@ var _ = function (e) {
     }
   };
   t.prototype.trim_options = function () {
-    this.prefix_field = void 0;
-    this.suffix_field = void 0;
+    this.prefix_field = undefined;
+    this.suffix_field = undefined;
     if (!this.is_dynamic()) {
-      for (var e = this.get_options(), t = !1, n = 0; n < e.length; n++) {
+      for (var e = this.get_options(), t = false, n = 0; n < e.length; n++) {
         var r = e[n][0];
         if ("string" == typeof r) {
           e[n][0] = this.utils.replace_message_references(r);
         } else {
-          if (r && void 0 != r.alt) {
+          if (r && undefined != r.alt) {
             r.alt = this.utils.replace_message_references(r.alt);
           }
-          t = !0;
+          t = true;
         }
       }
       if (!(t || e.length < 2)) {
@@ -486,7 +486,7 @@ var _ = function (e) {
             var c = e[n][0];
             var u = e[n][1];
             c = c.substring(o, c.length - a);
-            s[n] = [c, u, void 0, void 0, void 0];
+            s[n] = [c, u, undefined, undefined, undefined];
           }
           this.menu_generator = s;
         }
@@ -583,7 +583,7 @@ var _ = function (e) {
     }
     switch (e.type) {
       case "image_plus":
-        return void 0 === e.index ? void 0 : "number" === typeof e.index ? {
+        return undefined === e.index ? undefined : "number" === typeof e.index ? {
           src: e.index
         } : e.index;
       case "basic":
@@ -611,7 +611,7 @@ var _ = function (e) {
   t.prototype.is_dynamic = function () {
     return this.menu_generator_advanced ? (0, u.is_func)(this.menu_generator_advanced) : (0, u.is_func)(this.menu_generator);
   };
-  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.widget_div)], t.prototype, "widget_div", void 0);
+  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.widget_div)], t.prototype, "widget_div", undefined);
   return t = (0, r.__decorate)([(0, i.injectable)()], t);
 }(h.Field);
 exports.FieldDropdown = _;

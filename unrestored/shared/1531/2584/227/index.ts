@@ -5,7 +5,7 @@ export { _ as c };
 export { v as b };
 export { E as a };
 export { O as e };
-var r = require("../1/index");
+import r = require("regenerator-runtime");
 var o = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -18,19 +18,19 @@ var o = function __importDefault(module) {
   });
   return defaultExport;
 }(r);
-var i = require("../7");
-var a = require("../17/index");
-var s = require("./724/index");
-var c = require("./723");
-var l = require("../38/index");
-var u = require("../2");
-var d = require("../15");
-var p = require("../9");
-var f = require("../141/index");
-var h = require("./262");
-var m = require("../26/index");
+import i = require("../7");
+import a = require("../17/index");
+import s = require("./724/index");
+import c = require("./723");
+import l = require("../38/index");
+import u = require("../2");
+import d = require("../15");
+import p = require("../9");
+import f = require("../141/index");
+import h = require("./262");
+import m = require("../26/index");
 function g() {
-  Object.keys(Object(m.h)()).forEach(function (e) {
+  Object.keys(m.h()).forEach(function (e) {
     _(e);
   });
 }
@@ -38,16 +38,16 @@ function _(e) {
   a.Blink.mainWorkspace.register_toolbox_category_callback(e, function () {
     var t = m.g.getToolbox();
     var n = E();
-    return t && n ? b(e, n, !1) : [];
+    return t && n ? b(e, n, false) : [];
   });
   a.Blink.mainWorkspace.register_toolbox_category_callback("ANY_" + e, function () {
-    return m.g.getToolbox() ? b(e, "", !0) : [];
+    return m.g.getToolbox() ? b(e, "", true) : [];
   });
 }
 function v(e) {
   var t = l.d.dispatch;
-  Object(c.register_procedure_blocks)(a.Blink, e, function () {
-    var n = Object(i.a)(o.a.mark(function n(r) {
+  c.register_procedure_blocks(a.Blink, e, function () {
+    var n = i.a(o.a.mark(function n(r) {
       var i;
       var a;
       var s;
@@ -63,7 +63,7 @@ function v(e) {
             case 4:
               s = a.name;
               return n.abrupt("return", new Promise(function (e) {
-                t(Object(u.lj)({
+                t(u.lj({
                   title: "procedureDialogTitle",
                   defaultValue: s,
                   placeholder: "procedureDialogPlaceholder",
@@ -80,19 +80,19 @@ function v(e) {
                     if (e[0].match(/[0-9_]/)) {
                       return "invalidVariableFirstChar";
                     }
-                    if (!Object(d.j)(e)) {
+                    if (!d.j(e)) {
                       return "invalidVariableName";
                     }
-                    return ["函数", "函數", "function"].includes(e) ? "preservedProcedureName" : void 0;
+                    return ["函数", "函數", "function"].includes(e) ? "preservedProcedureName" : undefined;
                   },
                   confirmCallback: function (t) {
                     if (t !== s) {
                       e(t);
                     }
-                    e(void 0);
+                    e(undefined);
                   },
                   cancelCallback: function () {
-                    return e(void 0);
+                    return e(undefined);
                   }
                 }));
               }));
@@ -107,7 +107,7 @@ function v(e) {
       return n.apply(this, arguments);
     };
   }(), function () {
-    var n = Object(i.a)(o.a.mark(function n(r) {
+    var n = i.a(o.a.mark(function n(r) {
       var i;
       var a;
       return o.a.wrap(function (n) {
@@ -121,23 +121,23 @@ function v(e) {
               throw Error("Trying to add param to undefined procedure");
             case 4:
               return n.abrupt("return", new Promise(function (e) {
-                t(Object(u.lj)({
+                t(u.lj({
                   title: "parameterDialogTitle",
                   placeholder: "parameterDialogPlaceholder",
                   maxLength: 20,
                   validator: function (e) {
                     return "" === e ? "emptyParameterName" : a.params.find(function (t) {
                       return t.param_name === e;
-                    }) ? "parameterExists" : e[0].match(/[0-9_]/) ? "invalidVariableFirstChar" : Object(d.j)(e) ? void 0 : "invalidVariableName";
+                    }) ? "parameterExists" : e[0].match(/[0-9_]/) ? "invalidVariableFirstChar" : d.j(e) ? undefined : "invalidVariableName";
                   },
                   confirmCallback: function (t) {
                     return e({
                       param_name: t,
-                      default_value: void 0
+                      default_value: undefined
                     });
                   },
                   cancelCallback: function () {
-                    return e(void 0);
+                    return e(undefined);
                   }
                 }));
               }));
@@ -155,11 +155,11 @@ function v(e) {
   a.Blink.mainWorkspace.register_toolbox_category_callback("PROCEDURE", function () {
     return e().get_all_procedures_xml();
   });
-  Object(s.register_default_procedure_events)(a.Blink.mainWorkspace, e);
+  s.register_default_procedure_events(a.Blink.mainWorkspace, e);
 }
 function b(e, t, n) {
   var r = function (e, t, n) {
-    return Object(p.Cb)(e, t, n);
+    return p.Cb(e, t, n);
   }(e, t, n);
   var o = "<xml>";
   r.forEach(function (e) {
@@ -176,11 +176,11 @@ function O(e) {
   y = e;
   var t = l.d.getState();
   var n = t.project.screens.get(t.project.currentScreenIndex);
-  var r = Object(p.Fb)(e) || Object(h.d)(e);
-  Object(f.a)("BlockCategoryClick", {
+  var r = p.Fb(e) || h.d(e);
+  f.a("BlockCategoryClick", {
     isCooperation: !!t.oTState.collWorkId,
-    screenId: (null === n || void 0 === n ? void 0 : n.id) || "",
-    screenName: (null === n || void 0 === n ? void 0 : n.title) || "",
+    screenId: (null === n || undefined === n ? undefined : n.id) || "",
+    screenName: (null === n || undefined === n ? undefined : n.title) || "",
     blockCategory: r
   });
 }

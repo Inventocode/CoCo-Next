@@ -7,8 +7,8 @@ module.exports = function (e, t, n, o) {
   }
   for (var s = -1, c = t.length; ++s < c;) {
     var u = t[s];
-    var l = o ? o(n[u], e[u], u, n, e) : void 0;
-    if (void 0 === l) {
+    var l = o ? o(n[u], e[u], u, n, e) : undefined;
+    if (undefined === l) {
       l = e[u];
     }
     if (a) {

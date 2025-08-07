@@ -21,9 +21,9 @@ function r(e, t) {
     for (s = 0; s < r.length - 1; s++) {
       if (h < (s + 1.5) / d) {
         h++;
-        f[s] = !0;
+        f[s] = true;
       } else {
-        f[s] = !1;
+        f[s] = false;
       }
     }
     u = o(r, f = i(r, f, t), t);
@@ -50,11 +50,11 @@ function i(e, t, n) {
 function o(e, t, n) {
   for (var r = [0], i = [], o = 0; o < e.length; o++) {
     r[r.length - 1] += e[o].length;
-    if (!0 === t[o]) {
+    if (true === t[o]) {
       r.push(0);
       i.push(e[o].charAt(e[o].length - 1));
     } else {
-      if (!1 === t[o]) {
+      if (false === t[o]) {
         r[r.length - 1]++;
       }
     }
@@ -80,16 +80,16 @@ function o(e, t, n) {
 function a(e, t) {
   for (var n = [], r = 0; r < e.length; r++) {
     n.push(e[r]);
-    if (void 0 != t[r]) {
+    if (undefined != t[r]) {
       n.push(t[r] ? "\n" : " ");
     }
   }
   return n.join("");
 }
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.wrap = exports.string_trim = exports.string_is_empty_or_whitespace = exports.case_insensitive_equals = exports.case_insensitive_compare = void 0;
+exports.wrap = exports.string_trim = exports.string_is_empty_or_whitespace = exports.case_insensitive_equals = exports.case_insensitive_compare = undefined;
 exports.case_insensitive_compare = function (e, t) {
   var n = String(e).toLowerCase();
   var r = String(t).toLowerCase();

@@ -6,7 +6,7 @@ var i = require("./1226/index");
 var a = require("../1667/751");
 var s = i.ArrayBuffer;
 r({
-  global: !0,
+  global: true,
   forced: o.ArrayBuffer !== s
 }, {
   ArrayBuffer: s

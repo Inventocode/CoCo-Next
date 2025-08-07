@@ -1,11 +1,11 @@
 "use strict";
 
 export { a };
-var r = require("../301/203");
-var i = require("../57/770");
-var o = require("../36/461");
+import r = require("../301/203");
+import i = require("../57/770");
+import o = require("../36/461");
 function a(e) {
-  var t = "function" === typeof Map ? new Map() : void 0;
+  var t = "function" === typeof Map ? new Map() : undefined;
   return (a = function (e) {
     if (null === e || (n = e, -1 === Function.toString.call(n).indexOf("[native code]"))) {
       return e;
@@ -21,17 +21,17 @@ function a(e) {
       t.set(e, a);
     }
     function a() {
-      return Object(o.a)(e, arguments, Object(r.a)(this).constructor);
+      return o.a(e, arguments, r.a(this).constructor);
     }
     a.prototype = Object.create(e.prototype, {
       constructor: {
         value: a,
-        enumerable: !1,
-        writable: !0,
-        configurable: !0
+        enumerable: false,
+        writable: true,
+        configurable: true
       }
     });
-    return Object(i.a)(a, e);
+    return i.a(a, e);
   })(e);
 }
 export default a;

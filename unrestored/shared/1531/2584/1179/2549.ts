@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.init_sensing_blocks = void 0;
+exports.init_sensing_blocks = undefined;
 var r = require("./2555/579");
 exports.init_sensing_blocks = function (e) {
   var t = [{
@@ -16,21 +16,21 @@ exports.init_sensing_blocks = function (e) {
     }],
     output: "Number",
     colour: (0, r.i18n)("GREEN_3"),
-    inputsInline: !0
+    inputsInline: true
   }, {
     type: "get_timer",
     message0: (0, r.i18n)("timer"),
     args0: [],
     output: "Number",
     colour: (0, r.i18n)("GREEN_3"),
-    inputsInline: !0
+    inputsInline: true
   }, {
     type: "reset_timer",
     message0: (0, r.i18n)("reset_timer"),
-    previousStatement: !0,
-    nextStatement: !0,
+    previousStatement: true,
+    nextStatement: true,
     colour: (0, r.i18n)("GREEN_3"),
-    inputsInline: !0
+    inputsInline: true
   }];
   e.define_blocks_with_json_array(t);
   Object.assign(e.blocks_xml, {

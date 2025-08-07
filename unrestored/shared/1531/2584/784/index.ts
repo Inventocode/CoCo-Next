@@ -1,7 +1,7 @@
 "use strict";
 
 export { l as a };
-var r = require("react");
+import r = require("react");
 var o = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -14,9 +14,9 @@ var o = function __importDefault(module) {
   });
   return defaultExport;
 }(r);
-var i = require("../702");
-var a = require("../13/index");
-var s = require("./742");
+import i = require("../702");
+import a = require("../13/index");
+import s = require("./742");
 var c = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -33,10 +33,10 @@ function l(e) {
   var t = e.onCancel;
   var n = e.onOk;
   var r = e.title;
-  var s = void 0 === r ? "saveTipsTitle" : r;
+  var s = undefined === r ? "saveTipsTitle" : r;
   var l = e.desc;
-  var u = void 0 === l ? "saveTipsDesc" : l;
-  var d = Object(i.a)().formatMessage;
+  var u = undefined === l ? "saveTipsDesc" : l;
+  var d = i.a().formatMessage;
   return o.a.createElement("div", {
     className: c.a.saveTipsWrapper
   }, o.a.createElement("div", {
@@ -65,6 +65,6 @@ function l(e) {
   })))));
 }
 var _b;
-_b = Object(r.memo)(l);
+_b = r.memo(l);
 export { _b as b };
 export default l;

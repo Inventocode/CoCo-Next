@@ -111,7 +111,7 @@ if (i) {
         z.call(this, e, t << 24 >> 24);
       }
     }, {
-      unsafe: !0
+      unsafe: true
     });
   }
 } else {
@@ -134,7 +134,7 @@ if (i) {
     if (i < 0 || i > r) {
       throw A("Wrong offset");
     }
-    if (i + (n = void 0 === n ? r - i : d(n)) > r) {
+    if (i + (n = undefined === n ? r - i : d(n)) > r) {
       throw A("Wrong length");
     }
     O(this, {
@@ -162,24 +162,24 @@ if (i) {
       return B(this, 1, e)[0];
     },
     getInt16: function (e) {
-      var t = B(this, 2, e, arguments.length > 1 ? arguments[1] : void 0);
+      var t = B(this, 2, e, arguments.length > 1 ? arguments[1] : undefined);
       return (t[1] << 8 | t[0]) << 16 >> 16;
     },
     getUint16: function (e) {
-      var t = B(this, 2, e, arguments.length > 1 ? arguments[1] : void 0);
+      var t = B(this, 2, e, arguments.length > 1 ? arguments[1] : undefined);
       return t[1] << 8 | t[0];
     },
     getInt32: function (e) {
-      return D(B(this, 4, e, arguments.length > 1 ? arguments[1] : void 0));
+      return D(B(this, 4, e, arguments.length > 1 ? arguments[1] : undefined));
     },
     getUint32: function (e) {
-      return D(B(this, 4, e, arguments.length > 1 ? arguments[1] : void 0)) >>> 0;
+      return D(B(this, 4, e, arguments.length > 1 ? arguments[1] : undefined)) >>> 0;
     },
     getFloat32: function (e) {
-      return N(B(this, 4, e, arguments.length > 1 ? arguments[1] : void 0), 23);
+      return N(B(this, 4, e, arguments.length > 1 ? arguments[1] : undefined), 23);
     },
     getFloat64: function (e) {
-      return N(B(this, 8, e, arguments.length > 1 ? arguments[1] : void 0), 52);
+      return N(B(this, 8, e, arguments.length > 1 ? arguments[1] : undefined), 52);
     },
     setInt8: function (e, t) {
       F(this, 1, e, R, t);
@@ -188,22 +188,22 @@ if (i) {
       F(this, 1, e, R, t);
     },
     setInt16: function (e, t) {
-      F(this, 2, e, k, t, arguments.length > 2 ? arguments[2] : void 0);
+      F(this, 2, e, k, t, arguments.length > 2 ? arguments[2] : undefined);
     },
     setUint16: function (e, t) {
-      F(this, 2, e, k, t, arguments.length > 2 ? arguments[2] : void 0);
+      F(this, 2, e, k, t, arguments.length > 2 ? arguments[2] : undefined);
     },
     setInt32: function (e, t) {
-      F(this, 4, e, x, t, arguments.length > 2 ? arguments[2] : void 0);
+      F(this, 4, e, x, t, arguments.length > 2 ? arguments[2] : undefined);
     },
     setUint32: function (e, t) {
-      F(this, 4, e, x, t, arguments.length > 2 ? arguments[2] : void 0);
+      F(this, 4, e, x, t, arguments.length > 2 ? arguments[2] : undefined);
     },
     setFloat32: function (e, t) {
-      F(this, 4, e, M, t, arguments.length > 2 ? arguments[2] : void 0);
+      F(this, 4, e, M, t, arguments.length > 2 ? arguments[2] : undefined);
     },
     setFloat64: function (e, t) {
-      F(this, 8, e, L, t, arguments.length > 2 ? arguments[2] : void 0);
+      F(this, 8, e, L, t, arguments.length > 2 ? arguments[2] : undefined);
     }
   });
 }

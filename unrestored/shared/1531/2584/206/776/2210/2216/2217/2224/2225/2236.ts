@@ -22,7 +22,7 @@ module.exports = function (e, t, n) {
   r += "var " + d + " = errors;var " + f + ";";
   if (Array.isArray(a)) {
     var y = e.schema.additionalItems;
-    if (!1 === y) {
+    if (false === y) {
       r += " " + f + " = " + l + ".length <= " + a.length + "; ";
       var b = c;
       c = e.errSchemaPath + "/additionalItems";
@@ -30,9 +30,9 @@ module.exports = function (e, t, n) {
       var w = w || [];
       w.push(r);
       r = "";
-      if (!1 !== e.createErrors) {
+      if (false !== e.createErrors) {
         r += " { keyword: 'additionalItems' , dataPath: (dataPath || '') + " + e.errorPath + " , schemaPath: " + e.util.toQuotedString(c) + " , params: { limit: " + a.length + " } ";
-        if (!1 !== e.opts.messages) {
+        if (false !== e.opts.messages) {
           r += " , message: 'should NOT have more than " + a.length + " items' ";
         }
         if (e.opts.verbose) {
@@ -64,13 +64,13 @@ module.exports = function (e, t, n) {
     if (x) {
       for (var C, O = -1, k = x.length - 1; O < k;) {
         C = x[O += 1];
-        if (e.opts.strictKeywords ? "object" == typeof C && Object.keys(C).length > 0 || !1 === C : e.util.schemaHasRules(C, e.RULES.all)) {
+        if (e.opts.strictKeywords ? "object" == typeof C && Object.keys(C).length > 0 || false === C : e.util.schemaHasRules(C, e.RULES.all)) {
           r += " " + _ + " = true; if (" + l + ".length > " + O + ") { ";
           var S = l + "[" + O + "]";
           h.schema = C;
           h.schemaPath = s + "[" + O + "]";
           h.errSchemaPath = c + "/" + O;
-          h.errorPath = e.util.getPathExpr(e.errorPath, O, e.opts.jsonPointers, !0);
+          h.errorPath = e.util.getPathExpr(e.errorPath, O, e.opts.jsonPointers, true);
           h.dataPathArr[g] = O;
           var T = e.validate(h);
           h.baseId = m;
@@ -87,12 +87,12 @@ module.exports = function (e, t, n) {
         }
       }
     }
-    if ("object" == typeof y && (e.opts.strictKeywords ? "object" == typeof y && Object.keys(y).length > 0 || !1 === y : e.util.schemaHasRules(y, e.RULES.all))) {
+    if ("object" == typeof y && (e.opts.strictKeywords ? "object" == typeof y && Object.keys(y).length > 0 || false === y : e.util.schemaHasRules(y, e.RULES.all))) {
       h.schema = y;
       h.schemaPath = e.schemaPath + ".additionalItems";
       h.errSchemaPath = e.errSchemaPath + "/additionalItems";
       r += " " + _ + " = true; if (" + l + ".length > " + a.length + ") {  for (var " + A + " = " + a.length + "; " + A + " < " + l + ".length; " + A + "++) { ";
-      h.errorPath = e.util.getPathExpr(e.errorPath, A, e.opts.jsonPointers, !0);
+      h.errorPath = e.util.getPathExpr(e.errorPath, A, e.opts.jsonPointers, true);
       S = l + "[" + A + "]";
       h.dataPathArr[g] = A;
       T = e.validate(h);
@@ -111,12 +111,12 @@ module.exports = function (e, t, n) {
         p += "}";
       }
     }
-  } else if (e.opts.strictKeywords ? "object" == typeof a && Object.keys(a).length > 0 || !1 === a : e.util.schemaHasRules(a, e.RULES.all)) {
+  } else if (e.opts.strictKeywords ? "object" == typeof a && Object.keys(a).length > 0 || false === a : e.util.schemaHasRules(a, e.RULES.all)) {
     h.schema = a;
     h.schemaPath = s;
     h.errSchemaPath = c;
     r += "  for (var " + A + " = 0; " + A + " < " + l + ".length; " + A + "++) { ";
-    h.errorPath = e.util.getPathExpr(e.errorPath, A, e.opts.jsonPointers, !0);
+    h.errorPath = e.util.getPathExpr(e.errorPath, A, e.opts.jsonPointers, true);
     S = l + "[" + A + "]";
     h.dataPathArr[g] = A;
     T = e.validate(h);

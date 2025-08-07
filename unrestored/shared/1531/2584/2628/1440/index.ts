@@ -3,13 +3,13 @@
 export { a as b };
 export { s as a };
 var r;
-var i = require("./253");
-var o = require("../796");
+import i = require("./253");
+import o = require("../796");
 function a(e) {
   return "function" === typeof e;
 }
 function s(e, t, n, r, c, u, l) {
-  if (1 === e.length && Object(i.e)(e[0])) {
+  if (1 === e.length && i.e(e[0])) {
     return [{
       type: 0,
       value: e[0].value
@@ -17,12 +17,12 @@ function s(e, t, n, r, c, u, l) {
   }
   for (var f = [], d = 0, h = e; d < h.length; d++) {
     var p = h[d];
-    if (Object(i.e)(p)) {
+    if (i.e(p)) {
       f.push({
         type: 0,
         value: p.value
       });
-    } else if (Object(i.i)(p)) {
+    } else if (i.i(p)) {
       if ("number" === typeof u) {
         f.push({
           type: 0,
@@ -35,7 +35,7 @@ function s(e, t, n, r, c, u, l) {
         throw new o.d(_, l);
       }
       var A = c[_];
-      if (Object(i.b)(p)) {
+      if (i.b(p)) {
         if (!(A && "string" !== typeof A && "number" !== typeof A)) {
           A = "string" === typeof A || "number" === typeof A ? String(A) : "";
         }
@@ -43,26 +43,26 @@ function s(e, t, n, r, c, u, l) {
           type: "string" === typeof A ? 0 : 1,
           value: A
         });
-      } else if (Object(i.c)(p)) {
-        var g = "string" === typeof p.style ? r.date[p.style] : Object(i.d)(p.style) ? p.style.parsedOptions : void 0;
+      } else if (i.c(p)) {
+        var g = "string" === typeof p.style ? r.date[p.style] : i.d(p.style) ? p.style.parsedOptions : undefined;
         f.push({
           type: 0,
           value: n.getDateTimeFormat(t, g).format(A)
         });
-      } else if (Object(i.l)(p)) {
-        g = "string" === typeof p.style ? r.time[p.style] : Object(i.d)(p.style) ? p.style.parsedOptions : void 0;
+      } else if (i.l(p)) {
+        g = "string" === typeof p.style ? r.time[p.style] : i.d(p.style) ? p.style.parsedOptions : undefined;
         f.push({
           type: 0,
           value: n.getDateTimeFormat(t, g).format(A)
         });
-      } else if (Object(i.f)(p)) {
-        g = "string" === typeof p.style ? r.number[p.style] : Object(i.g)(p.style) ? p.style.parsedOptions : void 0;
+      } else if (i.f(p)) {
+        g = "string" === typeof p.style ? r.number[p.style] : i.g(p.style) ? p.style.parsedOptions : undefined;
         f.push({
           type: 0,
           value: n.getNumberFormat(t, g).format(A)
         });
       } else {
-        if (Object(i.k)(p)) {
+        if (i.k(p)) {
           var v = p.children;
           var m = p.value;
           var y = c[m];
@@ -82,12 +82,12 @@ function s(e, t, n, r, c, u, l) {
             };
           }));
         }
-        if (Object(i.j)(p)) {
+        if (i.j(p)) {
           if (!(w = p.options[A] || p.options.other)) {
             throw new o.b(p.value, A, Object.keys(p.options), l);
           }
           f.push.apply(f, s(w.value, t, n, r, c));
-        } else if (Object(i.h)(p)) {
+        } else if (i.h(p)) {
           var w;
           if (!(w = p.options["=" + A])) {
             if (!Intl.PluralRules) {

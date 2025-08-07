@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.Registry = void 0;
+exports.Registry = undefined;
 var r = require("tslib");
 var i = require("inversify");
 var o = function () {

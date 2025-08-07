@@ -4,7 +4,7 @@ var i = String.fromCharCode;
 var a = String.fromCodePoint;
 r({
   target: "String",
-  stat: !0,
+  stat: true,
   forced: !!a && 1 != a.length
 }, {
   fromCodePoint: function (e) {

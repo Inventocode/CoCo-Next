@@ -14,4 +14,4 @@ var r = {
     onPedometerPermissionFail: "请求权限失败"
   }
 };
-var o = require("./539");
+import o = require("./539");

@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.BINDING = void 0;
+exports.BINDING = undefined;
 exports.BINDING = {
   Blink: Symbol("Blink"),
   block_animations: Symbol("block_animations"),

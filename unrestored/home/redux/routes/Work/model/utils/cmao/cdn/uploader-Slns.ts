@@ -162,7 +162,7 @@ function __generator(thisArg, body) {
       throw op[1];
     }
     return {
-      value: op[0] ? op[1] : void 0,
+      value: op[0] ? op[1] : undefined,
       done: true
     };
   }
@@ -243,19 +243,19 @@ var QiniuUploader = function () {
   return QiniuUploader;
 }();
 function ajax(url, options) {
-  return __awaiter(this, void 0, void 0, function () {
+  return __awaiter(this, undefined, undefined, function () {
     return __generator(this, function (_a) {
       return [2, new Promise(function (resolve, reject) {
         var _a = options.async;
-        var async = _a === void 0 ? true : _a;
+        var async = _a === undefined ? true : _a;
         var _b = options.data;
-        var data = _b === void 0 ? null : _b;
+        var data = _b === undefined ? null : _b;
         var _c = options.headers;
-        var headers = _c === void 0 ? {} : _c;
+        var headers = _c === undefined ? {} : _c;
         var _d = options.method;
-        var method = _d === void 0 ? 'get' : _d;
+        var method = _d === undefined ? 'get' : _d;
         var _e = options.timeout;
-        var timeout = _e === void 0 ? 0 : _e;
+        var timeout = _e === undefined ? 0 : _e;
         var onprogress = options.onprogress;
         var xhr = new XMLHttpRequest();
         if (options.withCredentials) {
@@ -299,7 +299,7 @@ function ajax(url, options) {
 var AliUploader = function () {
   function AliUploader() {}
   AliUploader.prototype.upload = function (file, url, aliUploadParams, uploadConfig) {
-    return __awaiter(this, void 0, void 0, function () {
+    return __awaiter(this, undefined, undefined, function () {
       var onprogress;
       var timeout;
       var formData;
@@ -328,7 +328,7 @@ var AliUploader = function () {
   return AliUploader;
 }();
 var postLog = function (data, timeout) {
-  return __awaiter(void 0, void 0, void 0, function () {
+  return __awaiter(undefined, undefined, undefined, function () {
     var uuid;
     var logData;
     return __generator(this, function (_a) {
@@ -364,7 +364,7 @@ var postLog = function (data, timeout) {
   });
 };
 var fetchAliToken = function (query, authToken) {
-  return __awaiter(void 0, void 0, void 0, function () {
+  return __awaiter(undefined, undefined, undefined, function () {
     var tokenUrl;
     var headers;
     var res;
@@ -398,7 +398,7 @@ var fetchAliToken = function (query, authToken) {
   });
 };
 var fetchQiniuToken = function (type, query, authToken) {
-  return __awaiter(void 0, void 0, void 0, function () {
+  return __awaiter(undefined, undefined, undefined, function () {
     var urlList;
     var tokenUrl;
     var headers;
@@ -479,7 +479,7 @@ var CDNClient = function () {
     configs.init(spec);
   }
   CDNClient.prototype.create = function (file, options) {
-    return __awaiter(this, void 0, void 0, function () {
+    return __awaiter(this, undefined, undefined, function () {
       var onprogress;
       var _a;
       var timeout;
@@ -501,7 +501,7 @@ var CDNClient = function () {
           case 0:
             onprogress = options.onprogress;
             _a = options.timeout;
-            timeout = _a === void 0 ? 200000 : _a;
+            timeout = _a === undefined ? 200000 : _a;
             onsuccess = options.onsuccess;
             onerror = options.onerror;
             persistentOption = options.persistentOption;
@@ -539,7 +539,7 @@ var CDNClient = function () {
                 }
               },
               error: function (err) {
-                return __awaiter(_this, void 0, void 0, function () {
+                return __awaiter(_this, undefined, undefined, function () {
                   var res;
                   var bucketUrl_2;
                   var accessKey;

@@ -31,9 +31,9 @@ module.exports = function (e, t, n) {
   var _ = _ || [];
   _.push(r);
   r = "";
-  if (!1 !== e.createErrors) {
+  if (false !== e.createErrors) {
     r += " { keyword: 'enum' , dataPath: (dataPath || '') + " + e.errorPath + " , schemaPath: " + e.util.toQuotedString(c) + " , params: { allowedValues: schema" + i + " } ";
-    if (!1 !== e.opts.messages) {
+    if (false !== e.opts.messages) {
       r += " , message: 'should be equal to one of the allowed values' ";
     }
     if (e.opts.verbose) {

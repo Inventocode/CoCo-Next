@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.rename_procedures_in_json = exports.delete_from_json = exports.load_from_json = void 0;
+exports.rename_procedures_in_json = exports.delete_from_json = exports.load_from_json = undefined;
 var r = require("../17/497/387");
 var i = require("../301/173");
 var o = require("../1036/754");
@@ -64,19 +64,19 @@ function s(e) {
     if (!_) {
       _ = {
         def_id: s,
-        disabled: !0,
+        disabled: true,
         name: l,
         base_name: l,
         params: [],
         callers_id: [],
         return_count: 0,
-        valid: !0,
+        valid: true,
         created_timestamp: Date.now()
       };
       c[l] = _;
     }
     _.def_id = s;
-    _.disabled = !1;
+    _.disabled = false;
     _.params = d;
     _.return_count = h;
   }
@@ -133,13 +133,13 @@ exports.load_from_json = function (e, t, n) {
             var _ = l.mutation.match(/def_id="([^"]+)"/);
             p = {
               def_id: _ && _[1] || "",
-              disabled: !0,
+              disabled: true,
               name: f,
               base_name: f,
               params: h,
               callers_id: [],
               return_count: 0,
-              valid: !0,
+              valid: true,
               created_timestamp: Date.now()
             };
             c[f] = p;
@@ -148,14 +148,14 @@ exports.load_from_json = function (e, t, n) {
             id: s,
             proc_name: f,
             call_type: l.type === i.PROCEDURE_BLOCK_TYPES.CALL_RETURN ? "call_return" : "call",
-            disabled: !1
+            disabled: false
           };
           p.callers_id.push(s);
         } else {
           if (!t.get_procedure_by_name(f)) {
             var A = t.add_procedure_def(f, "");
             A.params = h;
-            A.disabled = !0;
+            A.disabled = true;
           }
           t.add_caller(f, s, l.type === i.PROCEDURE_BLOCK_TYPES.CALL_RETURN ? "call_return" : "call");
         }

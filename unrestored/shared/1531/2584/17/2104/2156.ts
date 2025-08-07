@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.ConnectionDB = void 0;
+exports.ConnectionDB = undefined;
 var r = require("tslib");
 var i = require("inversify");
 var o = function () {
@@ -18,7 +18,7 @@ var o = function () {
     if (!e.get_source_block().is_in_flyout) {
       var t = this.find_position_for_connection(e);
       this.connections.splice(t, 0, e);
-      e.in_db = !0;
+      e.in_db = true;
     }
   };
   e.prototype.find_connection = function (e) {
@@ -69,7 +69,7 @@ var o = function () {
     if (-1 == t) {
       throw new Error("Unable to find connection in connectionDB.");
     }
-    e.in_db = !1;
+    e.in_db = false;
     this.connections.splice(t, 1);
   };
   e.prototype.get_neighbours = function (e, t) {
@@ -108,7 +108,7 @@ var o = function () {
   e.prototype.search_for_closest = function (e, t, n) {
     if (!e.source_block.is_stack_connectable() || !this.connections.length) {
       return {
-        connection: void 0,
+        connection: undefined,
         radius: t
       };
     }
@@ -116,7 +116,7 @@ var o = function () {
     var i = e.x_;
     e.x_ = i + n[0];
     e.y_ = r + n[1];
-    for (var o, a = this.find_position_for_connection(e), s = void 0, c = t, u = a - 1; u >= 0 && this.is_in_y_range(u, e.y_, t);) {
+    for (var o, a = this.find_position_for_connection(e), s = undefined, c = t, u = a - 1; u >= 0 && this.is_in_y_range(u, e.y_, t);) {
       o = this.connections[u];
       if (e.is_connection_allowed(o, c)) {
         s = o;

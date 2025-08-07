@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.inject_icon_symbols = exports.SYMBOL = void 0;
+exports.inject_icon_symbols = exports.SYMBOL = undefined;
 var r = (0, require("tslib").__importStar)(require("../../497/index"));
 exports.SYMBOL = {
   DEGREE_MARK_MAJOR: "blocklyDegreeMarkMajor",

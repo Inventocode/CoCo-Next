@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.TransformToOp = void 0;
+exports.TransformToOp = undefined;
 var r = require("tslib");
 var i = require("ot-json1");
 var o = require("../../../1036/1363/index");
@@ -23,13 +23,13 @@ var f = function () {
       for (var t = [], n = 1; n < arguments.length; n++) {
         t[n - 1] = arguments[n];
       }
-      console.warn.apply(console, (0, r.__spreadArray)(["Warn when transform to op ", "[" + e + "]: "], t, !1));
+      console.warn.apply(console, (0, r.__spreadArray)(["Warn when transform to op ", "[" + e + "]: "], t, false));
     };
     this.error = function (e) {
       for (var t = [], n = 1; n < arguments.length; n++) {
         t[n - 1] = arguments[n];
       }
-      console.error.apply(console, (0, r.__spreadArray)(["Error when transform to op ", "[" + e + "]: "], t, !1));
+      console.error.apply(console, (0, r.__spreadArray)(["Error when transform to op ", "[" + e + "]: "], t, false));
     };
     this.event_listener = function (e) {
       if (n.Blink.events.is_listener_enabled()) {
@@ -82,12 +82,14 @@ var f = function () {
           t.before_apply_op_to_doc(e);
         });
       } catch (t) {
-        throw this.error("Before apply op to doc", t), Error("Should reverse");
+        this.error("Before apply op to doc", t);
+        throw Error("Should reverse");
       }
       try {
         this.generate_op_callback.call(this, [e]);
       } catch (t) {
-        throw this.error("Applying op to doc", t), Error("Should reverse");
+        this.error("Applying op to doc", t);
+        throw Error("Should reverse");
       }
       try {
         this.plugins.forEach(function (t) {
@@ -148,13 +150,13 @@ var f = function () {
     } catch (s) {
       return void this.error("Before handle event group", s);
     }
-    var t = this.Blink.events.filter(this.cached_events, !0);
+    var t = this.Blink.events.filter(this.cached_events, true);
     var n = (0, l.filter_events)(t);
     this.cached_events = [];
     if (n && 0 !== n.length) {
       if (this.cached_json) {
         this.error("Handle event group", "Handling multi event groups at a time. ");
-        this.cached_json = void 0;
+        this.cached_json = undefined;
       }
       this.cached_json = this.get_current_ws_json();
       var r = null;
@@ -168,13 +170,13 @@ var f = function () {
         this.error("Generating group op", s);
         this.refresh();
       }
-      this.cached_json = void 0;
+      this.cached_json = undefined;
       this.apply_op_to_doc(r);
     }
   };
   e.prototype.start = function () {
     this.Blink.mainWorkspace.remove_change_listener(this.event_listener);
-    this.Blink.mainWorkspace.add_change_listener(this.event_listener, !1);
+    this.Blink.mainWorkspace.add_change_listener(this.event_listener, false);
   };
   e.prototype.stop = function () {
     this.Blink.mainWorkspace.remove_change_listener(this.event_listener);
@@ -182,7 +184,7 @@ var f = function () {
   e.prototype.reset = function () {
     this.current_event_group = "";
     this.cached_events = [];
-    this.cached_json = void 0;
+    this.cached_json = undefined;
   };
   e.prototype.register_plugins = function (e) {
     var t = this;
@@ -262,39 +264,39 @@ var f = function () {
       }
       var c = [];
       if (i.parent_id) {
-        var u = !0;
+        var u = true;
         if (i.input_name) {
           for (var l = t + 1; l < e.length; l++) {
             if ((f = e[l]).type === a.BlockEventType.MOVE && f.get_new_loc().parent_id === i.parent_id && f.get_new_loc().input_name === i.input_name) {
-              u = !1;
+              u = false;
               break;
             }
             if (f.type === a.BlockEventType.CHANGE && "mutation" === f.element && f.get_block_id() === i.parent_id) {
-              u = !1;
+              u = false;
               break;
             }
           }
         }
-        c.push(this.generate_disconnect_op(r, i.parent_id, u ? i.input_name : void 0));
+        c.push(this.generate_disconnect_op(r, i.parent_id, u ? i.input_name : undefined));
       }
       if (s.coordinate) {
         c.push(this.generate_move_op("blocks", r, i.coordinate, s.coordinate));
       }
       if (s.parent_id) {
-        u = !0;
+        u = true;
         if (s.input_name) {
           for (l = t - 1; l >= 0; l--) {
             var f;
             if ((f = e[l]).type === a.BlockEventType.MOVE) {
               var d = f.get_old_loc();
               if (d.parent_id === s.parent_id && d.input_name === s.input_name) {
-                u = !1;
+                u = false;
                 break;
               }
             }
           }
         }
-        c.push(this.generate_connect_op(r, s.parent_id, s.input_name, void 0, u));
+        c.push(this.generate_connect_op(r, s.parent_id, s.input_name, undefined, u));
       }
       return c.reduce(o.type.compose, null);
     } catch (f) {
@@ -307,7 +309,7 @@ var f = function () {
       if (!r) {
         throw Error("Invalid move data on element " + t);
       }
-      var o = !0;
+      var o = true;
       if (n && "boolean" !== typeof n) {
         o = [n[0], n[1]];
       }
@@ -345,13 +347,13 @@ var f = function () {
     }
   };
   e.prototype.generate_connect_op = function (e, t, n, r, a) {
-    if (void 0 === a) {
-      a = !0;
+    if (undefined === a) {
+      a = true;
     }
     try {
       var s = [];
       var c = ["blocks", e, "parent_id"];
-      s.push((0, i.replaceOp)(c, !0, t));
+      s.push((0, i.replaceOp)(c, true, t));
       if (!n) {
         var u = ["connections", t, e];
         var l = {
@@ -555,7 +557,7 @@ var f = function () {
   };
   e.prototype.generate_edit_field_op = function (e, t, n, r) {
     var a;
-    var s = null === (a = this.Blink.mainWorkspace.get_block_by_id(e)) || void 0 === a ? void 0 : a.get_field(t);
+    var s = null === (a = this.Blink.mainWorkspace.get_block_by_id(e)) || undefined === a ? undefined : a.get_field(t);
     if (!s) {
       return null;
     }
@@ -565,14 +567,14 @@ var f = function () {
     }
     var l = (r || this.get_current_ws_json()).blocks[e].fields;
     var f = ["blocks", e, "fields", u];
-    if (void 0 !== l[u]) {
-      return (0, i.replaceOp)(f, !0, n);
+    if (undefined !== l[u]) {
+      return (0, i.replaceOp)(f, true, n);
     }
     var d = {
       TEXT: "NUM",
       NUM: "TEXT"
     }[u];
-    if (d && void 0 !== l[d]) {
+    if (d && undefined !== l[d]) {
       var h = ["blocks", e, "fields", d];
       return [(0, i.removeOp)(h), (0, i.insertOp)(f, n)].reduce(o.type.compose, null);
     }
@@ -664,7 +666,7 @@ var f = function () {
           r.push((0, i.removeOp)(p));
           var _ = ["connections", e, f];
           r.push((0, i.removeOp)(_));
-          var A = void 0;
+          var A = undefined;
           var g = {};
           Object.keys(d.fields).forEach(function (e) {
             A = d.fields[e];
@@ -676,7 +678,7 @@ var f = function () {
           var m = l.Blink.utils.string_to_dom(v);
           m.setAttribute("id", f);
           var y = m.childNodes[0];
-          if (void 0 !== A && "field" === y.nodeName) {
+          if (undefined !== A && "field" === y.nodeName) {
             y.textContent = A;
           }
           Object.keys(g).forEach(function (e) {
@@ -701,7 +703,7 @@ var f = function () {
     }
     return r;
   };
-  (0, r.__decorate)([(0, s.lazy_inject)(s.BINDING.Blink)], e.prototype, "Blink", void 0);
+  (0, r.__decorate)([(0, s.lazy_inject)(s.BINDING.Blink)], e.prototype, "Blink", undefined);
   return e;
 }();
 exports.TransformToOp = f;

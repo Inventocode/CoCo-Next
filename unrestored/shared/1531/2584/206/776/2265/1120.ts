@@ -17,7 +17,7 @@ var s = function () {
     this.reachable = i;
     Object.defineProperty(this, "internal", {
       value: {
-        used: !1,
+        used: false,
         loopedPrevSegments: []
       }
     });
@@ -34,7 +34,7 @@ var s = function () {
   }], [{
     key: "newRoot",
     value: function (t) {
-      return new e(t, [], !0);
+      return new e(t, [], true);
     }
   }, {
     key: "newNext",
@@ -44,7 +44,7 @@ var s = function () {
   }, {
     key: "newUnreachable",
     value: function (t, n) {
-      var r = new e(t, e.flattenUnusedSegments(n), !1);
+      var r = new e(t, e.flattenUnusedSegments(n), false);
       e.markUsed(r);
       return r;
     }
@@ -58,7 +58,7 @@ var s = function () {
     value: function (e) {
       var t;
       if (!e.internal.used) {
-        e.internal.used = !0;
+        e.internal.used = true;
         if (e.reachable) {
           for (t = 0; t < e.allPrevSegments.length; ++t) {
             var n = e.allPrevSegments[t];
@@ -84,13 +84,13 @@ var s = function () {
         var i = e[r];
         if (!t[i.id]) {
           if (i.internal.used) {
-            t[i.id] = !0;
+            t[i.id] = true;
             n.push(i);
           } else {
             for (var o = 0; o < i.allPrevSegments.length; ++o) {
               var a = i.allPrevSegments[o];
               if (!t[a.id]) {
-                t[a.id] = !0;
+                t[a.id] = true;
                 n.push(a);
               }
             }

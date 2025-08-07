@@ -1,7 +1,7 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
 exports.calculateChange = function (e, t, n, r) {
   var i = r.clientWidth;
@@ -11,7 +11,7 @@ exports.calculateChange = function (e, t, n, r) {
   var c = a - (r.getBoundingClientRect().left + window.pageXOffset);
   var u = s - (r.getBoundingClientRect().top + window.pageYOffset);
   if ("vertical" === t) {
-    var l = void 0;
+    var l = undefined;
     if (u < 0) {
       l = 359;
     } else if (u > o) {
@@ -29,7 +29,7 @@ exports.calculateChange = function (e, t, n, r) {
       };
     }
   } else {
-    var f = void 0;
+    var f = undefined;
     if (c < 0) {
       f = 0;
     } else if (c > i) {

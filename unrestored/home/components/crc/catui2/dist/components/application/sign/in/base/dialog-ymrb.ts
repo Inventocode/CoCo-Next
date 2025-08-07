@@ -148,7 +148,7 @@ var Dialog = /*#__PURE__*/function (_React$Component) {
       x: 0,
       y: 0
     });
-    Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Object(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default)(_this), "contentRef", void 0);
+    Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Object(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default)(_this), "contentRef", undefined);
     Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Object(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default)(_this), "triggerBtn", '');
     Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Object(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default)(_this), "closeDialog", function () {
       // 避免触发多次关闭逻辑
@@ -228,8 +228,8 @@ var Dialog = /*#__PURE__*/function (_React$Component) {
         className: ((closeBtn === true ? '' : closeBtn.classname) ? (closeBtn === true ? '' : closeBtn.classname) + " " : "") + "CUI-dialog-btn-close",
         onClick: _this.handleCancel
       }, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_8_react___default.createElement(__WEBPACK_IMPORTED_MODULE_11__icon__.Icon, {
-        id: closeBtn === true ? '#cui_iconnor2' : (_ref = closeBtn.id) !== null && _ref !== void 0 ? _ref : '#cui_iconnor2',
-        size: closeBtn === true ? 12 : (_ref2 = closeBtn.size) !== null && _ref2 !== void 0 ? _ref2 : 12
+        id: closeBtn === true ? '#cui_iconnor2' : (_ref = closeBtn.id) !== null && _ref !== undefined ? _ref : '#cui_iconnor2',
+        size: closeBtn === true ? 12 : (_ref2 = closeBtn.size) !== null && _ref2 !== undefined ? _ref2 : 12
       }));
     });
     Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Object(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default)(_this), "renderHeader", function () {
@@ -283,7 +283,7 @@ var Dialog = /*#__PURE__*/function (_React$Component) {
     });
     Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Object(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default)(_this), "getTOPos", function () {
       var _this$props$top = _this.props.top;
-      var top = _this$props$top === void 0 ? '20%' : _this$props$top; // 不规则值，返回 undefined，居中出现
+      var top = _this$props$top === undefined ? '20%' : _this$props$top; // 不规则值，返回 undefined，居中出现
       if (top === 'center' || !/px$/.test(top) && !/%$/.test(top)) {
         return;
       }
@@ -384,7 +384,7 @@ var Dialog = /*#__PURE__*/function (_React$Component) {
         onClick: maskClose ? this.handleCancel : undefined
       }), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_8_react___default.createElement("div", {
         style: {
-          top: top === 'center' ? undefined : top !== null && top !== void 0 ? top : '20%',
+          top: top === 'center' ? undefined : top !== null && top !== undefined ? top : '20%',
           transformOrigin: centerShowUp ? undefined : this.getTOPos()
         },
         onAnimationEnd: function onAnimationEnd() {
@@ -411,7 +411,7 @@ var Dialog = /*#__PURE__*/function (_React$Component) {
         style: layout === 'custom' ? {
           padding: '0'
         } : undefined
-      }, children), this.renderFooter()))), (_ref3 = isDOM(container) ? container : container === null || container === void 0 ? void 0 : container.current) !== null && _ref3 !== void 0 ? _ref3 : document.body) : null;
+      }, children), this.renderFooter()))), (_ref3 = isDOM(container) ? container : container === null || container === undefined ? undefined : container.current) !== null && _ref3 !== undefined ? _ref3 : document.body) : null;
     }
   }]);
   return Dialog;

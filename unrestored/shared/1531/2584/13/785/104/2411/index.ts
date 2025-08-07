@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.flattenNames = void 0;
+exports.flattenNames = undefined;
 var r = s(require("./2412/index"));
 var i = s(require("../2483/1142/index"));
 var o = s(require("./1395/index"));
@@ -14,7 +14,7 @@ function s(e) {
   };
 }
 var c = exports.flattenNames = function e() {
-  var t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
+  var t = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : [];
   var n = [];
   (0, a.default)(t, function (t) {
     if (Array.isArray(t)) {
@@ -24,7 +24,7 @@ var c = exports.flattenNames = function e() {
     } else {
       if ((0, o.default)(t)) {
         (0, i.default)(t, function (e, t) {
-          if (!0 === e) {
+          if (true === e) {
             n.push(t);
           }
           n.push(t + "-" + e);

@@ -2,9 +2,9 @@
 
 var r = require("./568");
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.default = void 0;
+exports.default = undefined;
 var i = r(require("./746"));
 var o = r(require("react"));
 function a(e, t) {
@@ -24,7 +24,7 @@ function s(e) {
   for (var t = 1; t < arguments.length; t++) {
     var n = null != arguments[t] ? arguments[t] : {};
     if (t % 2) {
-      a(Object(n), !0).forEach(function (t) {
+      a(Object(n), true).forEach(function (t) {
         (0, i.default)(e, t, n[t]);
       });
     } else {

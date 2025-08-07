@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.is = void 0;
+exports.is = undefined;
 var r = function () {
   function e() {
     this.userAgent = (navigator && navigator.userAgent || "").toLowerCase();
@@ -49,7 +49,7 @@ var r = function () {
       return null !== t && this.compare_version(Number(t[1]), e);
     } catch (n) {
       console.warn("cc android", n);
-      return !1;
+      return false;
     }
   };
   e.prototype.ie = function (e) {

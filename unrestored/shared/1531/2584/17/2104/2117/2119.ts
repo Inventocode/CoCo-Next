@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.ContextMenuOptionEvent = void 0;
+exports.ContextMenuOptionEvent = undefined;
 var r = require("tslib");
 var i = require("inversify");
 var o = require("../../../125/195/index");
@@ -11,7 +11,7 @@ var a = function (e) {
   function t(t) {
     var n = e.call(this) || this;
     n.type = o.BlockEventType.CONTEXT_MENU_OPTION;
-    n._record_undo = !1;
+    n._record_undo = false;
     n._workspace_id = t.workspace_id;
     n._option_name = t.option_name;
     n._source = t.source;

@@ -8,7 +8,7 @@ var s = require("../1736/167");
 var c = r.aTypedArray;
 (0, r.exportTypedArrayMethod)("set", function (e) {
   c(this);
-  var t = i(arguments.length > 1 ? arguments[1] : void 0, 1);
+  var t = i(arguments.length > 1 ? arguments[1] : undefined, 1);
   var n = this.length;
   var r = a(e);
   var s = o(r.length);

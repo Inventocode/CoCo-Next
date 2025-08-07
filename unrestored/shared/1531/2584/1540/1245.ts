@@ -18,10 +18,10 @@ a(String, "String", function (e) {
   var n = t.string;
   var o = t.index;
   return o >= n.length ? {
-    value: void 0,
-    done: !0
+    value: undefined,
+    done: true
   } : (e = r(n, o), t.index += e.length, {
     value: e,
-    done: !1
+    done: false
   });
 });

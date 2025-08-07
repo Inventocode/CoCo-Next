@@ -4,15 +4,15 @@ var r = require("../../38/607/806/index");
 var i = require("../../36/2668/2689/703/index");
 var o = require("../../38/607/1970/529");
 var a = require("../../38/607/494");
-var s = require("../../1/index");
+var s = require("regenerator-runtime");
 var c = require("../../38/607/356");
 var u = require("../../38/607/357/index");
 var l = require("../../36/2668/220");
 var f = require("../../36/2668/230");
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.eachChildOf = exports.advancer = exports.readCursor = exports.writeCursor = exports.WriteCursor = exports.ReadCursor = exports.isValidPathItem = void 0;
+exports.eachChildOf = exports.advancer = exports.readCursor = exports.writeCursor = exports.WriteCursor = exports.ReadCursor = exports.isValidPathItem = undefined;
 function d(e, t) {
   if (!e) {
     throw new Error(t);
@@ -35,7 +35,7 @@ exports.isValidPathItem = function (e) {
 };
 var A = function () {
   function e() {
-    var t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
+    var t = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : null;
     l(this, e);
     this.parents = [];
     this.indexes = [];
@@ -110,7 +110,7 @@ var g = function (e) {
     value: function () {
       var e = this.idx + 1;
       if (!this.container || e >= this.container.length || h(this.container[e]) && e + 1 >= this.container.length) {
-        return !1;
+        return false;
       }
       if (h(this.container[e])) {
         e++;
@@ -125,18 +125,18 @@ var g = function (e) {
       } else {
         this.idx = e;
       }
-      return !0;
+      return true;
     }
   }, {
     key: "nextSibling",
     value: function () {
       d(this.parents.length === this.indexes.length / 2);
       if (this.idx > 0 || 0 === this.parents.length) {
-        return !1;
+        return false;
       }
       var e = this.indexes[this.indexes.length - 1] + 1;
       var t = this.parents[this.parents.length - 1];
-      return !(e >= t.length) && (d(!isNaN(e)), this.indexes[this.indexes.length - 1] = e, this.container = t[e], !0);
+      return !(e >= t.length) && (d(!isNaN(e)), this.indexes[this.indexes.length - 1] = e, this.container = t[e], true);
     }
   }, {
     key: "_init",
@@ -235,7 +235,7 @@ var v = function (e) {
   var n = u(a);
   function a() {
     var e;
-    var t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
+    var t = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : null;
     l(this, a);
     (e = n.call(this, t)).pendingDescent = [];
     e._op = t;
@@ -340,7 +340,7 @@ var v = function (e) {
   }, {
     key: "mergeTree",
     value: function (e) {
-      var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : _;
+      var t = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : _;
       if (null !== e) {
         d(Array.isArray(e));
         if (e === this._op) {
@@ -390,7 +390,7 @@ var v = function (e) {
   }, {
     key: "writeMove",
     value: function (e, t) {
-      var n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+      var n = arguments.length > 2 && undefined !== arguments[2] ? arguments[2] : 0;
       return this.writeAtPath(e, "p", n).writeAtPath(t, "d", n);
     }
   }, {
@@ -417,10 +417,10 @@ exports.advancer = function (e, t, n) {
     for (var o; i;) {
       var a = o = e.getKey();
       if (null != r) {
-        var s = !1;
+        var s = false;
         if (t && "number" === typeof a && (o = t(a, e.getComponent())) < 0) {
           o = ~o;
-          s = !0;
+          s = true;
         }
         if (p(o, r)) {
           return null;

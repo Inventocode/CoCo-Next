@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.WorkspaceElement = void 0;
+exports.WorkspaceElement = undefined;
 var r = require("tslib");
 var i = require("@kitten-team/gl-matrix");
 var o = require("../../4/127");
@@ -15,14 +15,14 @@ var u = function () {
     this.id = "";
     this.width = 0;
     this.height = 0;
-    this.rendered = !1;
-    this.deletable_ = !0;
-    this.movable_ = !0;
-    this.editable_ = !0;
-    this.disabled = !1;
+    this.rendered = false;
+    this.deletable_ = true;
+    this.movable_ = true;
+    this.editable_ = true;
+    this.disabled = false;
     this.location_ = i.vec2.create();
     this.visibility_ = a.BlockVisibility.VISIBLE;
-    this.event_initialized = !1;
+    this.event_initialized = false;
     this.svg_group = (0, s.create_svg_element)("g", {});
     this.svg_group.translate_ = "";
     this.workspace = e;
@@ -45,7 +45,7 @@ var u = function () {
     return this.deletable_ && !(this.workspace && this.workspace.get_options().readOnly);
   };
   e.prototype.set_delete_style = function (e) {
-    if (void 0 != this.svg_group) {
+    if (undefined != this.svg_group) {
       if (e) {
         (0, s.add_class_if_necessary)(this.svg_group, "blocklyDraggingDelete");
       } else {
@@ -62,7 +62,7 @@ var u = function () {
     return this.movable_;
   };
   e.prototype.update_movable = function () {
-    if (void 0 == this.svg_group) {
+    if (undefined == this.svg_group) {
       throw new ReferenceError("Cannot update movable to block without svg group.");
     }
     var e = this.svg_group.classList;
@@ -114,7 +114,7 @@ var u = function () {
       if (t && this.rendered) {
         this.block_animations.dispose_ui_effect(this);
       }
-      this.rendered = !1;
+      this.rendered = false;
       (0, s.remove_node)(this.svg_group);
       (0, s.remove_children)(this.svg_group);
       n.resize_contents();
@@ -132,21 +132,21 @@ var u = function () {
     get: function () {
       return !!this.workspace.get_block_drag_surface();
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   e.prototype.get_relative_to_surface_xy = function () {
     var e;
     var t;
-    var n = this.use_drag_surface ? null === (e = this.workspace.get_block_drag_surface()) || void 0 === e ? void 0 : e.get_group() : void 0;
+    var n = this.use_drag_surface ? null === (e = this.workspace.get_block_drag_surface()) || undefined === e ? undefined : e.get_group() : undefined;
     var r = this.svg_group;
-    if (void 0 == r) {
+    if (undefined == r) {
       return i.vec2.create();
     }
     var o = i.vec2.create();
     do {
       i.vec2.add(o, o, this.utils.get_relative_xy(r));
-      if (this.use_drag_surface && (null === (t = this.workspace.get_block_drag_surface()) || void 0 === t ? void 0 : t.get_current_block()) == r) {
+      if (this.use_drag_surface && (null === (t = this.workspace.get_block_drag_surface()) || undefined === t ? undefined : t.get_current_block()) == r) {
         var a = this.workspace.get_block_drag_surface().get_surface_translation();
         i.vec2.add(o, o, [a[0], a[1]]);
       }
@@ -156,7 +156,7 @@ var u = function () {
   };
   e.prototype.translate = function (e) {
     var t = this.svg_group;
-    if (void 0 == t) {
+    if (undefined == t) {
       throw new ReferenceError("Block should have svg root when translating.");
     }
     t.setAttribute("transform", "translate(" + e[0] + ", " + e[1] + ")");
@@ -171,7 +171,7 @@ var u = function () {
       }
       if (this.use_drag_surface) {
         this.translate(e);
-        if (!(null === (t = this.workspace.get_block_drag_surface()) || void 0 === t)) {
+        if (!(null === (t = this.workspace.get_block_drag_surface()) || undefined === t)) {
           t.clear_and_hide(this.workspace.svg_block_canvas_);
         }
       } else {
@@ -180,7 +180,7 @@ var u = function () {
     }
   };
   e.prototype.set_mouse_through_style = function (e) {
-    if (void 0 != this.svg_group) {
+    if (undefined != this.svg_group) {
       if (e) {
         (0, s.add_class_if_necessary)(this.svg_group, "blocklyDraggingMouseThrough");
       } else {
@@ -191,7 +191,7 @@ var u = function () {
     }
   };
   e.prototype.set_dragging = function (e) {
-    if (void 0 != this.svg_group) {
+    if (undefined != this.svg_group) {
       var t = this.svg_group;
       if (e) {
         t.translate_ = "";
@@ -208,7 +208,7 @@ var u = function () {
     var t;
     if (this.svg_group) {
       if (this.use_drag_surface) {
-        if (!(null === (t = this.workspace.get_block_drag_surface()) || void 0 === t)) {
+        if (!(null === (t = this.workspace.get_block_drag_surface()) || undefined === t)) {
           t.translate_surface(e[0], e[1]);
         }
       } else {
@@ -219,13 +219,13 @@ var u = function () {
   };
   e.prototype.bring_to_front = function () {
     var e = this.svg_group;
-    if (void 0 != e && void 0 != e.parentNode) {
+    if (undefined != e && undefined != e.parentNode) {
       e.parentNode.appendChild(e);
     }
   };
   e.prototype.select = function () {
     if (this.runtime_data.selected != this) {
-      var e = void 0;
+      var e = undefined;
       if (this.runtime_data.selected) {
         e = this.runtime_data.selected.id;
         this.events.disable();
@@ -253,9 +253,9 @@ var u = function () {
         type: a.UIEventType.SELECTED,
         workspace_id: this.workspace.id,
         old_value: this.id,
-        new_value: void 0
+        new_value: undefined
       });
-      this.runtime_data.selected = void 0;
+      this.runtime_data.selected = undefined;
       this.events.fire(e);
     }
   };
@@ -266,13 +266,13 @@ var u = function () {
         var t = this.get_relative_to_surface_xy();
         this.clear_transform_attributes();
         var n = this.workspace.get_block_drag_surface();
-        if (!(null === n || void 0 === n)) {
+        if (!(null === n || undefined === n)) {
           n.translate_surface(t[0], t[1]);
         }
-        if (!(null === n || void 0 === n)) {
+        if (!(null === n || undefined === n)) {
           n.set_blocks_and_show(this.svg_group);
         }
-      } else if (!(null === (e = this.workspace.svg_block_canvas_) || void 0 === e)) {
+      } else if (!(null === (e = this.workspace.svg_block_canvas_) || undefined === e)) {
         e.appendChild(this.svg_group);
       }
     }
@@ -302,9 +302,9 @@ var u = function () {
   e.prototype.init_events = function () {
     if (!this.workspace.get_options().readOnly && !this.event_initialized) {
       var e = this.get_svg_root();
-      if (void 0 != e) {
+      if (undefined != e) {
         this.events.bind_event_with_checks(e, "mousedown", this, this.on_mouse_down);
-        this.event_initialized = !0;
+        this.event_initialized = true;
       }
     }
   };
@@ -314,16 +314,16 @@ var u = function () {
   e.prototype.for_each_descendant_element = function (e) {
     e(this);
   };
-  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.context_menu)], e.prototype, "context_menu", void 0);
-  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.runtime_data)], e.prototype, "runtime_data", void 0);
-  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.block_animations)], e.prototype, "block_animations", void 0);
-  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.events)], e.prototype, "events", void 0);
-  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.utils)], e.prototype, "utils", void 0);
-  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.theme)], e.prototype, "theme", void 0);
-  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.MoveEvent)], e.prototype, "move_event_factory", void 0);
-  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.CreateEvent)], e.prototype, "create_event_factory", void 0);
-  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.DeleteEvent)], e.prototype, "delete_event_factory", void 0);
-  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.UIEvent)], e.prototype, "ui_event_factory", void 0);
+  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.context_menu)], e.prototype, "context_menu", undefined);
+  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.runtime_data)], e.prototype, "runtime_data", undefined);
+  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.block_animations)], e.prototype, "block_animations", undefined);
+  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.events)], e.prototype, "events", undefined);
+  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.utils)], e.prototype, "utils", undefined);
+  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.theme)], e.prototype, "theme", undefined);
+  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.MoveEvent)], e.prototype, "move_event_factory", undefined);
+  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.CreateEvent)], e.prototype, "create_event_factory", undefined);
+  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.DeleteEvent)], e.prototype, "delete_event_factory", undefined);
+  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.UIEvent)], e.prototype, "ui_event_factory", undefined);
   return e;
 }();
 exports.WorkspaceElement = u;

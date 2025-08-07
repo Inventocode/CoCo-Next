@@ -1,7 +1,7 @@
 "use strict";
 
 var n = require("./260");
-var o = require("../349");
+var o = require("../349/index");
 var i = function () {
   var t = function (e, r) {
     return (t = Object.setPrototypeOf || {
@@ -24,7 +24,7 @@ var i = function () {
 }();
 !function (t) {
   function e(e, r) {
-    if (void 0 === e) {
+    if (undefined === e) {
       e = 500;
     }
     return t.call(this, new o.a(r), e, r) || this;

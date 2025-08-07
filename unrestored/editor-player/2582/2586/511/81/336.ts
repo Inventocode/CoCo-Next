@@ -42,7 +42,7 @@ var a = function () {
   };
   t.prototype.equals = function (e) {
     if (!(e instanceof t)) {
-      return !1;
+      return false;
     }
     var r = e;
     return this.value === r.value;

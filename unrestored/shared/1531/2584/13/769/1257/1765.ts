@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.default = void 0;
+exports.default = undefined;
 var r = {
   MAC_ENTER: 3,
   BACKSPACE: 8,
@@ -113,7 +113,7 @@ var r = {
   isTextModifyingKeyEvent: function (e) {
     var t = e.keyCode;
     if (e.altKey && !e.ctrlKey || e.metaKey || t >= r.F1 && t <= r.F12) {
-      return !1;
+      return false;
     }
     switch (t) {
       case r.ALT:
@@ -139,23 +139,23 @@ var r = {
       case r.UP:
       case r.WIN_KEY:
       case r.WIN_KEY_RIGHT:
-        return !1;
+        return false;
       default:
-        return !0;
+        return true;
     }
   },
   isCharacterKey: function (e) {
     if (e >= r.ZERO && e <= r.NINE) {
-      return !0;
+      return true;
     }
     if (e >= r.NUM_ZERO && e <= r.NUM_MULTIPLY) {
-      return !0;
+      return true;
     }
     if (e >= r.A && e <= r.Z) {
-      return !0;
+      return true;
     }
     if (-1 !== window.navigator.userAgent.indexOf("WebKit") && 0 === e) {
-      return !0;
+      return true;
     }
     switch (e) {
       case r.SPACE:
@@ -175,9 +175,9 @@ var r = {
       case r.OPEN_SQUARE_BRACKET:
       case r.BACKSLASH:
       case r.CLOSE_SQUARE_BRACKET:
-        return !0;
+        return true;
       default:
-        return !1;
+        return false;
     }
   }
 };

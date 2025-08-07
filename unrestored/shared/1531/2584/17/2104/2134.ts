@@ -1,21 +1,21 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.DraggedConnectionManager = void 0;
+exports.DraggedConnectionManager = undefined;
 var r = require("tslib");
 var i = require("inversify");
 var o = require("../../4/127");
 var a = require("../../125/195/index");
 var s = function () {
   function e() {
-    this.top_block = void 0;
-    this._workspace = void 0;
-    this.local_connection = void 0;
-    this.would_delete_block_ = !1;
+    this.top_block = undefined;
+    this._workspace = undefined;
+    this.local_connection = undefined;
+    this.would_delete_block_ = false;
     this._available_connections = [];
-    this.closest_connection = void 0;
+    this.closest_connection = undefined;
     this.radius_connection = 0;
   }
   e.prototype.would_delete_block = function () {
@@ -28,11 +28,11 @@ var s = function () {
     this._available_connections = this._init_available_connections(e);
   };
   e.prototype.dispose = function () {
-    this.top_block = void 0;
-    this._workspace = void 0;
+    this.top_block = undefined;
+    this._workspace = undefined;
     this._available_connections.length = 0;
-    this.closest_connection = void 0;
-    this.local_connection = void 0;
+    this.closest_connection = undefined;
+    this.local_connection = undefined;
   };
   e.prototype.apply_connections = function () {
     if (this.closest_connection && this.local_connection) {
@@ -73,7 +73,7 @@ var s = function () {
     }
   };
   e.prototype._init_available_connections = function (e) {
-    var t = e.get_connections(!1);
+    var t = e.get_connections(false);
     var n = e.last_connection_in_stack();
     if (n && n != e.next_connection) {
       t.push(n);
@@ -84,8 +84,8 @@ var s = function () {
   };
   e.prototype.update_closest = function (e) {
     var t = this.closest_connection;
-    this.closest_connection = void 0;
-    this.local_connection = void 0;
+    this.closest_connection = undefined;
+    this.local_connection = undefined;
     this.radius_connection = this.theme.blink_params.SNAP_RADIUS;
     for (var n = 0; n < this._available_connections.length; n++) {
       var r = this._available_connections[n];
@@ -98,9 +98,9 @@ var s = function () {
     }
     return t != this.closest_connection;
   };
-  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.block_animations)], e.prototype, "block_animations", void 0);
-  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.runtime_data)], e.prototype, "runtime_data", void 0);
-  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.theme)], e.prototype, "theme", void 0);
+  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.block_animations)], e.prototype, "block_animations", undefined);
+  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.runtime_data)], e.prototype, "runtime_data", undefined);
+  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.theme)], e.prototype, "theme", undefined);
   return e = (0, r.__decorate)([(0, i.injectable)()], e);
 }();
 exports.DraggedConnectionManager = s;

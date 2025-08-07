@@ -6,21 +6,21 @@ var r = Number.isNaN || function (e) {
 };
 function i(e, t) {
   if (e.length !== t.length) {
-    return !1;
+    return false;
   }
   for (var n = 0; n < e.length; n++) {
     i = e[n];
     o = t[n];
     if (!(i === o || r(i) && r(o))) {
-      return !1;
+      return false;
     }
   }
   var i;
   var o;
-  return !0;
+  return true;
 }
 function o(e, t) {
-  if (void 0 === t) {
+  if (undefined === t) {
     t = i;
   }
   var n = null;

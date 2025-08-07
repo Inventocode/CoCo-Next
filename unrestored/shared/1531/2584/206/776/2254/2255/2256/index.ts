@@ -12,7 +12,7 @@ var f = Symbol("tokens");
 var d = Symbol("comments");
 var h = Symbol("indexMap");
 function p(e, t, n, r, i, a, s) {
-  var c = !1;
+  var c = false;
   var u = 0;
   var l = null;
   if ("number" === typeof s) {
@@ -33,13 +33,13 @@ function p(e, t, n, r, i, a, s) {
   return e.createCursor(t, n, r, i, a, c, l, u, -1);
 }
 function _(e, t, n, r, i, a, s) {
-  var c = !1;
+  var c = false;
   var u = 0;
-  var l = !1;
+  var l = false;
   var f = null;
   if ("number" === typeof s) {
     u = 0 | s;
-    l = !0;
+    l = true;
   } else {
     if ("function" === typeof s) {
       f = s;
@@ -128,7 +128,7 @@ module.exports = function () {
     key: "getTokenOrCommentBefore",
     value: function (e, t) {
       return this.getTokenBefore(e, {
-        includeComments: !0,
+        includeComments: true,
         skip: t
       });
     }
@@ -136,7 +136,7 @@ module.exports = function () {
     key: "getTokenOrCommentAfter",
     value: function (e, t) {
       return this.getTokenAfter(e, {
-        includeComments: !0,
+        includeComments: true,
         skip: t
       });
     }
@@ -190,21 +190,21 @@ module.exports = function () {
     key: "getCommentsBefore",
     value: function (e) {
       return g(_(s.backward, this[f], this[d], this[h], -1, e.range[0], {
-        includeComments: !0
+        includeComments: true
       })).reverse();
     }
   }, {
     key: "getCommentsAfter",
     value: function (e) {
       return g(_(s.forward, this[f], this[d], this[h], e.range[1], -1, {
-        includeComments: !0
+        includeComments: true
       }));
     }
   }, {
     key: "getCommentsInside",
     value: function (e) {
       return this.getTokens(e, {
-        includeComments: !0,
+        includeComments: true,
         filter: a
       });
     }

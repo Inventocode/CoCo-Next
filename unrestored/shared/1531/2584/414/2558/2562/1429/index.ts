@@ -21,7 +21,7 @@ var r = this && this.__extends || function () {
   };
 }();
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
 var o = require("../../../1427/872");
 var i = require("./2560");
@@ -94,7 +94,7 @@ var a = function (e) {
     }
     if (r) {
       var o = r[e];
-      return o ? o.apply(r, t) : this.fallbackMethodAvailable(e) ? this.fallbackMethod(e, t && t[0] ? t[0] : {}) : void 0;
+      return o ? o.apply(r, t) : this.fallbackMethodAvailable(e) ? this.fallbackMethod(e, t && t[0] ? t[0] : {}) : undefined;
     }
     setTimeout(function () {
       return n.callMethod(e, t);

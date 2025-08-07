@@ -1,12 +1,12 @@
 module.exports = function (e) {
   try {
     return {
-      error: !1,
+      error: false,
       value: e()
     };
   } catch (t) {
     return {
-      error: !0,
+      error: true,
       value: t
     };
   }

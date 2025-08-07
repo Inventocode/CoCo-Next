@@ -1,7 +1,7 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
 var r = require("../1366/444");
 var i = function () {
@@ -12,14 +12,14 @@ var i = function () {
     return this._map;
   };
   e.prototype.add = function (e, t) {
-    if (null === e || void 0 === e) {
+    if (null === e || undefined === e) {
       throw new Error(r.NULL_ARGUMENT);
     }
-    if (null === t || void 0 === t) {
+    if (null === t || undefined === t) {
       throw new Error(r.NULL_ARGUMENT);
     }
     var n = this._map.get(e);
-    if (void 0 !== n) {
+    if (undefined !== n) {
       n.push(t);
       this._map.set(e, n);
     } else {
@@ -27,17 +27,17 @@ var i = function () {
     }
   };
   e.prototype.get = function (e) {
-    if (null === e || void 0 === e) {
+    if (null === e || undefined === e) {
       throw new Error(r.NULL_ARGUMENT);
     }
     var t = this._map.get(e);
-    if (void 0 !== t) {
+    if (undefined !== t) {
       return t;
     }
     throw new Error(r.KEY_NOT_FOUND);
   };
   e.prototype.remove = function (e) {
-    if (null === e || void 0 === e) {
+    if (null === e || undefined === e) {
       throw new Error(r.NULL_ARGUMENT);
     }
     if (!this._map.delete(e)) {
@@ -58,7 +58,7 @@ var i = function () {
     });
   };
   e.prototype.hasKey = function (e) {
-    if (null === e || void 0 === e) {
+    if (null === e || undefined === e) {
       throw new Error(r.NULL_ARGUMENT);
     }
     return this._map.has(e);

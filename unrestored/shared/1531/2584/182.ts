@@ -7,7 +7,7 @@ export { v as b };
 export { y as g };
 export { O as a };
 export { w as f };
-var r = require("./1/index");
+import r = require("regenerator-runtime");
 var o = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -20,18 +20,18 @@ var o = function __importDefault(module) {
   });
   return defaultExport;
 }(r);
-var i = require("./7");
-var a = require("./9");
-var s = require("./64");
-var c = require("./79");
-var l = require("./41");
-var u = require("./59/index");
+import i = require("./7");
+import a = require("./9");
+import s = require("./64");
+import c = require("../../../../src/shared/widget/custom/type");
+import l = require("./41");
+import u = require("./59/index");
 var d = "".concat(u.a.serverHost, "/coconut");
 function p() {
   return f.apply(this, arguments);
 }
 function f() {
-  return (f = Object(i.a)(o.a.mark(function e() {
+  return (f = i.a(o.a.mark(function e() {
     var t;
     var n;
     var r;
@@ -62,7 +62,7 @@ function h(e, t, n) {
   return m.apply(this, arguments);
 }
 function m() {
-  return (m = Object(i.a)(o.a.mark(function e(t, n, r) {
+  return (m = i.a(o.a.mark(function e(t, n, r) {
     var i;
     var a;
     var s;
@@ -99,7 +99,7 @@ function g(e, t, n) {
   return _.apply(this, arguments);
 }
 function _() {
-  return (_ = Object(i.a)(o.a.mark(function e(t, n, r) {
+  return (_ = i.a(o.a.mark(function e(t, n, r) {
     var i;
     var a;
     var s;
@@ -153,7 +153,7 @@ function v(e) {
   return b.apply(this, arguments);
 }
 function b() {
-  return (b = Object(i.a)(o.a.mark(function e(t) {
+  return (b = i.a(o.a.mark(function e(t) {
     var n;
     var r;
     return o.a.wrap(function (e) {
@@ -184,7 +184,7 @@ function y(e) {
   return E.apply(this, arguments);
 }
 function E() {
-  return (E = Object(i.a)(o.a.mark(function e(t) {
+  return (E = i.a(o.a.mark(function e(t) {
     var n;
     var r;
     var i;
@@ -216,19 +216,19 @@ function E() {
   }))).apply(this, arguments);
 }
 function O(e, t) {
-  var n = Object(a.Db)(e);
+  var n = a.Db(e);
   if (n) {
     var r;
     if (!(t || (r = localStorage.getItem("guestId")))) {
-      r = Object(s.a)("GUEST");
+      r = s.a("GUEST");
       localStorage.setItem("guestId", r);
     }
     var o = 1;
-    if (Object(c.e)(e)) {
+    if (c.e(e)) {
       o = 2;
       e = e.replace(c.a, "");
     } else {
-      if (Object(c.d)(e)) {
+      if (c.d(e)) {
         o = 3;
       }
     }
@@ -244,7 +244,7 @@ function w(e) {
   return C.apply(this, arguments);
 }
 function C() {
-  return (C = Object(i.a)(o.a.mark(function e(t) {
+  return (C = i.a(o.a.mark(function e(t) {
     var n;
     var r;
     var i;

@@ -60,7 +60,7 @@ function A(e, t) {
     case "ArrowFunctionExpression":
       if (n) {
         _(e, t);
-        l.dumpState(t, r, !1);
+        l.dumpState(t, r, false);
       }
       n = e.codePath = new s(e.idGenerator.next(), n, e.onLooped);
       r = s.getState(n);
@@ -81,14 +81,14 @@ function A(e, t) {
             case "LogicalExpression":
               return d(t.operator);
             default:
-              return !1;
+              return false;
           }
         }(t));
       }
       break;
     case "ConditionalExpression":
     case "IfStatement":
-      r.pushChoiceContext("test", !1);
+      r.pushChoiceContext("test", false);
       break;
     case "SwitchStatement":
       r.pushSwitchContext(t.cases.some(f), h(t));
@@ -110,11 +110,11 @@ function A(e, t) {
       break;
     case "LabeledStatement":
       if (!a.test(t.body.type)) {
-        r.pushBreakContext(!1, t.label.name);
+        r.pushBreakContext(false, t.label.name);
       }
   }
   _(e, t);
-  l.dumpState(t, r, !1);
+  l.dumpState(t, r, false);
 }
 function g(e, t) {
   switch (t.type) {
@@ -138,7 +138,7 @@ function g(e, t) {
       e.emitter.emit("onCodePathEnd", n, t);
       l.dumpDot(n);
       if (n = e.codePath = e.codePath.upper) {
-        l.dumpState(t, s.getState(n), !0);
+        l.dumpState(t, s.getState(n), true);
       }
   }
 }
@@ -179,7 +179,7 @@ var v = function () {
               break;
             case "SwitchCase":
               if (i.consequent[0] === t) {
-                r.makeSwitchCaseBody(!1, !i.test);
+                r.makeSwitchCaseBody(false, !i.test);
               }
               break;
             case "TryStatement":
@@ -253,7 +253,7 @@ var v = function () {
       (function (e, t) {
         var n = e.codePath;
         var r = s.getState(n);
-        var i = !1;
+        var i = false;
         switch (t.type) {
           case "IfStatement":
           case "ConditionalExpression":
@@ -269,10 +269,10 @@ var v = function () {
             break;
           case "SwitchCase":
             if (0 === t.consequent.length) {
-              r.makeSwitchCaseBody(!0, !t.test);
+              r.makeSwitchCaseBody(true, !t.test);
             }
             if (r.forkContext.reachable) {
-              i = !0;
+              i = true;
             }
             break;
           case "TryStatement":
@@ -281,22 +281,22 @@ var v = function () {
           case "BreakStatement":
             _(e, t);
             r.makeBreak(t.label && t.label.name);
-            i = !0;
+            i = true;
             break;
           case "ContinueStatement":
             _(e, t);
             r.makeContinue(t.label && t.label.name);
-            i = !0;
+            i = true;
             break;
           case "ReturnStatement":
             _(e, t);
             r.makeReturn();
-            i = !0;
+            i = true;
             break;
           case "ThrowStatement":
             _(e, t);
             r.makeThrow();
-            i = !0;
+            i = true;
             break;
           case "Identifier":
             if (function (e) {
@@ -311,7 +311,7 @@ var v = function () {
                 case "ImportDefaultSpecifier":
                 case "ImportNamespaceSpecifier":
                 case "CatchClause":
-                  return !1;
+                  return false;
                 case "FunctionDeclaration":
                 case "FunctionExpression":
                 case "ArrowFunctionExpression":
@@ -325,11 +325,11 @@ var v = function () {
                 case "AssignmentPattern":
                   return t.key !== e;
                 default:
-                  return !0;
+                  return true;
               }
             }(t)) {
               r.makeFirstThrowablePathInTryBlock();
-              i = !0;
+              i = true;
             }
             break;
           case "CallExpression":
@@ -356,7 +356,7 @@ var v = function () {
         if (!i) {
           _(e, t);
         }
-        l.dumpState(t, r, !0);
+        l.dumpState(t, r, true);
       })(this, e);
       this.original.leaveNode(e);
       g(this, e);

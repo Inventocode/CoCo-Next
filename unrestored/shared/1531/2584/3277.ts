@@ -11,14 +11,14 @@ var r = function () {
   return "".concat(Date.now(), "-").concat(Math.floor(8999999999999 * Math.random()) + 1e12);
 };
 var o = function (t) {
-  var n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1;
+  var n = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : -1;
   return {
     name: t,
     value: n,
     delta: 0,
     entries: [],
     id: r(),
-    isFinal: !1
+    isFinal: false
   };
 };
 var u = function (t, n) {
@@ -29,14 +29,14 @@ var u = function (t, n) {
       });
       e.observe({
         type: t,
-        buffered: !0
+        buffered: true
       });
       return e;
     }
   } catch (t) {}
 };
-var c = !1;
-var s = !1;
+var c = false;
+var s = false;
 var p = function (t) {
   c = !t.persisted;
 };
@@ -45,10 +45,10 @@ var f = function () {
   addEventListener("beforeunload", function () {});
 };
 var d = function (t) {
-  var n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+  var n = arguments.length > 1 && undefined !== arguments[1] && arguments[1];
   if (!s) {
     f();
-    s = !0;
+    s = true;
   }
   addEventListener("visibilitychange", function (n) {
     var e = n.timeStamp;
@@ -59,7 +59,7 @@ var d = function (t) {
       });
     }
   }, {
-    capture: !0,
+    capture: true,
     once: n
   });
 };
@@ -71,7 +71,7 @@ var l = function (t, n, e, i) {
     }
     if (n.value >= 0 && (i || n.isFinal || "hidden" === document.visibilityState)) {
       n.delta = n.value - (a || 0);
-      if (n.delta || n.isFinal || void 0 === a) {
+      if (n.delta || n.isFinal || undefined === a) {
         t(n);
         a = n.value;
       }
@@ -80,7 +80,7 @@ var l = function (t, n, e, i) {
 };
 var v = function (t) {
   var n;
-  var e = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+  var e = arguments.length > 1 && undefined !== arguments[1] && arguments[1];
   var i = o("CLS", 0);
   var a = function (t) {
     if (!t.hadRecentInput) {
@@ -96,19 +96,19 @@ var v = function (t) {
       var e = t.isUnloading;
       r.takeRecords().map(a);
       if (e) {
-        i.isFinal = !0;
+        i.isFinal = true;
       }
       n();
     });
   }
 };
 var m = function () {
-  if (void 0 === i) {
+  if (undefined === i) {
     i = "hidden" === document.visibilityState ? 0 : 1 / 0;
     d(function (t) {
       var n = t.timeStamp;
       return i = n;
-    }, !0);
+    }, true);
   }
   return {
     get timeStamp() {
@@ -123,7 +123,7 @@ var g = function (t) {
   var a = u("paint", function (t) {
     if ("first-contentful-paint" === t.name && t.startTime < i.timeStamp) {
       e.value = t.startTime;
-      e.isFinal = !0;
+      e.isFinal = true;
       e.entries.push(t);
       n();
     }
@@ -139,7 +139,7 @@ var h = function (t) {
     if (t.startTime < e.timeStamp) {
       n.value = t.processingStart - t.startTime;
       n.entries.push(t);
-      n.isFinal = !0;
+      n.isFinal = true;
       r();
     }
   };
@@ -149,13 +149,13 @@ var h = function (t) {
     d(function () {
       a.takeRecords().map(i);
       a.disconnect();
-    }, !0);
+    }, true);
   } else {
     if (window.perfMetrics && window.perfMetrics.onFirstInputDelay) {
       window.perfMetrics.onFirstInputDelay(function (t, i) {
         if (i.timeStamp < e.timeStamp) {
           n.value = t;
-          n.isFinal = !0;
+          n.isFinal = true;
           n.entries = [{
             entryType: "first-input",
             name: i.type,
@@ -175,9 +175,9 @@ var S = function () {
     a = new Promise(function (t) {
       return ["scroll", "keydown", "pointerdown"].map(function (n) {
         addEventListener(n, t, {
-          once: !0,
-          passive: !0,
-          capture: !0
+          once: true,
+          passive: true,
+          capture: true
         });
       });
     });
@@ -186,7 +186,7 @@ var S = function () {
 };
 var y = function (t) {
   var n;
-  var e = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+  var e = arguments.length > 1 && undefined !== arguments[1] && arguments[1];
   var i = o("LCP");
   var a = m();
   var r = function (t) {
@@ -195,7 +195,7 @@ var y = function (t) {
       i.value = e;
       i.entries.push(t);
     } else {
-      i.isFinal = !0;
+      i.isFinal = true;
     }
     n();
   };
@@ -205,12 +205,12 @@ var y = function (t) {
     var s = function () {
       if (!i.isFinal) {
         c.takeRecords().map(r);
-        i.isFinal = !0;
+        i.isFinal = true;
         n();
       }
     };
     S().then(s);
-    d(s, !0);
+    d(s, true);
   }
 };
 var F = function (t) {
@@ -231,7 +231,7 @@ var F = function (t) {
       }();
       e.value = e.delta = n.responseStart;
       e.entries = [n];
-      e.isFinal = !0;
+      e.isFinal = true;
       t(e);
     } catch (t) {}
   };

@@ -1,7 +1,7 @@
 "use strict";
 
-var r = require("../702");
-var o = require("react");
+import r = require("../702");
+import o = require("react");
 var i = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -14,7 +14,7 @@ var i = function __importDefault(module) {
   });
   return defaultExport;
 }(o);
-var a = require("../8");
+import a = require("../8");
 var s = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -27,7 +27,7 @@ var s = function __importDefault(module) {
   });
   return defaultExport;
 }(a);
-var c = require("./154");
+import c = require("./154");
 var l = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -47,7 +47,7 @@ _a = function (e) {
   var o = e.onSelect;
   var a = e.position;
   var c = e.visible;
-  var u = Object(r.a)().formatMessage;
+  var u = r.a().formatMessage;
   function d(e) {
     if (o) {
       o(n, e);

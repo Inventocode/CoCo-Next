@@ -7,9 +7,9 @@ export { l as d };
 export { u as g };
 export { d as c };
 export { p as a };
-var r = require("../11");
-var o = require("../25/index");
-var i = require("ot-json1");
+import r = require("../11");
+import o = require("../25/index");
+import i = require("ot-json1");
 function a(e) {
   for (var t = [], n = [], i = [], a = [{
       path: [],
@@ -18,7 +18,7 @@ function a(e) {
     var c = 0;
     for (c = 0; c < a.length; c++) {
       var l = a[c];
-      var u = Object(o.a)(l.path);
+      var u = o.a(l.path);
       var d = l.op;
       var p = 0;
       var f = function () {
@@ -36,12 +36,12 @@ function a(e) {
             if ("p" === a || "r" === a) {
               t.push({
                 path: o.slice(0),
-                op: Object(r.a)({}, a, e[a])
+                op: r.a({}, a, e[a])
               });
             } else if ("i" === a || "d" === a) {
               n.push({
                 path: o.slice(0),
-                op: Object(r.a)({}, a, e[a])
+                op: r.a({}, a, e[a])
               });
             } else {
               if ("es" !== a && "ena" !== a) {
@@ -49,7 +49,7 @@ function a(e) {
               }
               i.push({
                 path: o.slice(0),
-                op: Object(r.a)({}, a, e[a])
+                op: r.a({}, a, e[a])
               });
             }
           });

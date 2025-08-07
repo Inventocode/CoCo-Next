@@ -90,7 +90,7 @@ function c(e) {
     return {
       next: function () {
         if (e && r >= e.length) {
-          e = void 0;
+          e = undefined;
         }
         return {
           value: e && e[r++],
@@ -111,7 +111,7 @@ function u(e, t) {
   var o = n.call(e);
   var a = [];
   try {
-    for (; (void 0 === t || t-- > 0) && !(r = o.next()).done;) {
+    for (; (undefined === t || t-- > 0) && !(r = o.next()).done;) {
       a.push(r.value);
     }
   } catch (s) {

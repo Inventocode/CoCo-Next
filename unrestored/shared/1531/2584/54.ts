@@ -1,14 +1,14 @@
 "use strict";
 
 export { i as a };
-var r = require("./337");
+import r = require("./337");
 function i(e, t) {
   if (null == e) {
     return {};
   }
   var n;
   var i;
-  var o = Object(r.a)(e, t);
+  var o = r.a(e, t);
   if (Object.getOwnPropertySymbols) {
     var a = Object.getOwnPropertySymbols(e);
     for (i = 0; i < a.length; i++) {

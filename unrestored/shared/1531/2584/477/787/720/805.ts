@@ -5,7 +5,7 @@ export { v as c };
 export { y as b };
 var r;
 var i;
-var o = require("../../../36/483/39");
+import o = require("../../../36/483/39");
 !function (e) {
   e.Ok = "ok";
   e.Exited = "exited";
@@ -18,11 +18,11 @@ var o = require("../../../36/483/39");
   e.Crashed = "crashed";
 })(i || (i = {}));
 var a;
-var s = require("../364");
-var c = require("../926");
-var u = require("../265");
-var l = require("../521");
-var f = require("../316");
+import s = require("../364");
+import c = require("../926");
+import u = require("../265");
+import l = require("../521");
+import f = require("../316");
 !function (e) {
   e.PENDING = "PENDING";
   e.RESOLVED = "RESOLVED";
@@ -41,7 +41,7 @@ var d = function () {
     };
     this._setResult = function (e, n) {
       if (t._state === a.PENDING) {
-        if (Object(f.j)(n)) {
+        if (f.j(n)) {
           n.then(t._resolve, t._reject);
         } else {
           t._state = e;
@@ -66,7 +66,7 @@ var d = function () {
             if (t._state === a.REJECTED && e.onrejected) {
               e.onrejected(t._value);
             }
-            e.done = !0;
+            e.done = true;
           }
         });
       }
@@ -113,7 +113,7 @@ var d = function () {
     var r = this;
     return new e(function (e, i) {
       r._attachHandler({
-        done: !1,
+        done: false,
         onfulfilled: function (n) {
           if (t) {
             try {
@@ -150,13 +150,13 @@ var d = function () {
       var i;
       var o;
       return n.then(function (e) {
-        o = !1;
+        o = false;
         i = e;
         if (t) {
           t();
         }
       }, function (e) {
-        o = !0;
+        o = true;
         i = e;
         if (t) {
           t();
@@ -177,7 +177,7 @@ var d = function () {
 }();
 var h = function () {
   function e() {
-    this._notifyingListeners = !1;
+    this._notifyingListeners = false;
     this._scopeListeners = [];
     this._eventProcessors = [];
     this._breadcrumbs = [];
@@ -189,17 +189,17 @@ var h = function () {
   e.clone = function (t) {
     var n = new e();
     if (t) {
-      n._breadcrumbs = Object(o.f)(t._breadcrumbs);
-      n._tags = Object(o.a)({}, t._tags);
-      n._extra = Object(o.a)({}, t._extra);
-      n._contexts = Object(o.a)({}, t._contexts);
+      n._breadcrumbs = o.f(t._breadcrumbs);
+      n._tags = o.a({}, t._tags);
+      n._extra = o.a({}, t._extra);
+      n._contexts = o.a({}, t._contexts);
       n._user = t._user;
       n._level = t._level;
       n._span = t._span;
       n._session = t._session;
       n._transactionName = t._transactionName;
       n._fingerprint = t._fingerprint;
-      n._eventProcessors = Object(o.f)(t._eventProcessors);
+      n._eventProcessors = o.f(t._eventProcessors);
       n._requestSession = t._requestSession;
     }
     return n;
@@ -232,24 +232,24 @@ var h = function () {
     return this;
   };
   e.prototype.setTags = function (e) {
-    this._tags = Object(o.a)(Object(o.a)({}, this._tags), e);
+    this._tags = o.a(o.a({}, this._tags), e);
     this._notifyScopeListeners();
     return this;
   };
   e.prototype.setTag = function (e, t) {
     var n;
-    this._tags = Object(o.a)(Object(o.a)({}, this._tags), ((n = {})[e] = t, n));
+    this._tags = o.a(o.a({}, this._tags), ((n = {})[e] = t, n));
     this._notifyScopeListeners();
     return this;
   };
   e.prototype.setExtras = function (e) {
-    this._extra = Object(o.a)(Object(o.a)({}, this._extra), e);
+    this._extra = o.a(o.a({}, this._extra), e);
     this._notifyScopeListeners();
     return this;
   };
   e.prototype.setExtra = function (e, t) {
     var n;
-    this._extra = Object(o.a)(Object(o.a)({}, this._extra), ((n = {})[e] = t, n));
+    this._extra = o.a(o.a({}, this._extra), ((n = {})[e] = t, n));
     this._notifyScopeListeners();
     return this;
   };
@@ -276,7 +276,7 @@ var h = function () {
     if (null === t) {
       delete this._contexts[e];
     } else {
-      this._contexts = Object(o.a)(Object(o.a)({}, this._contexts), ((n = {})[e] = t, n));
+      this._contexts = o.a(o.a({}, this._contexts), ((n = {})[e] = t, n));
     }
     this._notifyScopeListeners();
     return this;
@@ -295,7 +295,7 @@ var h = function () {
     var n;
     var r;
     var i = this.getSpan();
-    return (null === (e = i) || void 0 === e ? void 0 : e.transaction) ? null === (t = i) || void 0 === t ? void 0 : t.transaction : (null === (r = null === (n = i) || void 0 === n ? void 0 : n.spanRecorder) || void 0 === r ? void 0 : r.spans[0]) ? i.spanRecorder.spans[0] : void 0;
+    return (null === (e = i) || undefined === e ? undefined : e.transaction) ? null === (t = i) || undefined === t ? undefined : t.transaction : (null === (r = null === (n = i) || undefined === n ? undefined : n.spanRecorder) || undefined === r ? undefined : r.spans[0]) ? i.spanRecorder.spans[0] : undefined;
   };
   e.prototype.setSession = function (e) {
     if (e) {
@@ -318,9 +318,9 @@ var h = function () {
       return n instanceof e ? n : this;
     }
     if (t instanceof e) {
-      this._tags = Object(o.a)(Object(o.a)({}, this._tags), t._tags);
-      this._extra = Object(o.a)(Object(o.a)({}, this._extra), t._extra);
-      this._contexts = Object(o.a)(Object(o.a)({}, this._contexts), t._contexts);
+      this._tags = o.a(o.a({}, this._tags), t._tags);
+      this._extra = o.a(o.a({}, this._extra), t._extra);
+      this._contexts = o.a(o.a({}, this._contexts), t._contexts);
       if (t._user && Object.keys(t._user).length) {
         this._user = t._user;
       }
@@ -334,11 +334,11 @@ var h = function () {
         this._requestSession = t._requestSession;
       }
     } else {
-      if (Object(f.e)(t)) {
+      if (f.e(t)) {
         t = t;
-        this._tags = Object(o.a)(Object(o.a)({}, this._tags), t.tags);
-        this._extra = Object(o.a)(Object(o.a)({}, this._extra), t.extra);
-        this._contexts = Object(o.a)(Object(o.a)({}, this._contexts), t.contexts);
+        this._tags = o.a(o.a({}, this._tags), t.tags);
+        this._extra = o.a(o.a({}, this._extra), t.extra);
+        this._contexts = o.a(o.a({}, this._contexts), t.contexts);
         if (t.user) {
           this._user = t.user;
         }
@@ -361,12 +361,12 @@ var h = function () {
     this._extra = {};
     this._user = {};
     this._contexts = {};
-    this._level = void 0;
-    this._transactionName = void 0;
-    this._fingerprint = void 0;
-    this._requestSession = void 0;
-    this._span = void 0;
-    this._session = void 0;
+    this._level = undefined;
+    this._transactionName = undefined;
+    this._fingerprint = undefined;
+    this._requestSession = undefined;
+    this._span = undefined;
+    this._session = undefined;
     this._notifyScopeListeners();
     return this;
   };
@@ -375,10 +375,10 @@ var h = function () {
     if (n <= 0) {
       return this;
     }
-    var r = Object(o.a)({
-      timestamp: Object(c.b)()
+    var r = o.a({
+      timestamp: c.b()
     }, e);
-    this._breadcrumbs = Object(o.f)(this._breadcrumbs, [r]).slice(-n);
+    this._breadcrumbs = o.f(this._breadcrumbs, [r]).slice(-n);
     this._notifyScopeListeners();
     return this;
   };
@@ -390,16 +390,16 @@ var h = function () {
   e.prototype.applyToEvent = function (e, t) {
     var n;
     if (this._extra && Object.keys(this._extra).length) {
-      e.extra = Object(o.a)(Object(o.a)({}, this._extra), e.extra);
+      e.extra = o.a(o.a({}, this._extra), e.extra);
     }
     if (this._tags && Object.keys(this._tags).length) {
-      e.tags = Object(o.a)(Object(o.a)({}, this._tags), e.tags);
+      e.tags = o.a(o.a({}, this._tags), e.tags);
     }
     if (this._user && Object.keys(this._user).length) {
-      e.user = Object(o.a)(Object(o.a)({}, this._user), e.user);
+      e.user = o.a(o.a({}, this._user), e.user);
     }
     if (this._contexts && Object.keys(this._contexts).length) {
-      e.contexts = Object(o.a)(Object(o.a)({}, this._contexts), e.contexts);
+      e.contexts = o.a(o.a({}, this._contexts), e.contexts);
     }
     if (this._level) {
       e.level = this._level;
@@ -408,24 +408,24 @@ var h = function () {
       e.transaction = this._transactionName;
     }
     if (this._span) {
-      e.contexts = Object(o.a)({
+      e.contexts = o.a({
         trace: this._span.getTraceContext()
       }, e.contexts);
-      var r = null === (n = this._span.transaction) || void 0 === n ? void 0 : n.name;
+      var r = null === (n = this._span.transaction) || undefined === n ? undefined : n.name;
       if (r) {
-        e.tags = Object(o.a)({
+        e.tags = o.a({
           transaction: r
         }, e.tags);
       }
     }
     this._applyFingerprint(e);
-    e.breadcrumbs = Object(o.f)(e.breadcrumbs || [], this._breadcrumbs);
-    e.breadcrumbs = e.breadcrumbs.length > 0 ? e.breadcrumbs : void 0;
-    return this._notifyEventProcessors(Object(o.f)(p(), this._eventProcessors), e, t);
+    e.breadcrumbs = o.f(e.breadcrumbs || [], this._breadcrumbs);
+    e.breadcrumbs = e.breadcrumbs.length > 0 ? e.breadcrumbs : undefined;
+    return this._notifyEventProcessors(o.f(p(), this._eventProcessors), e, t);
   };
   e.prototype._notifyEventProcessors = function (e, t, n, r) {
     var i = this;
-    if (void 0 === r) {
+    if (undefined === r) {
       r = 0;
     }
     return new d(function (a, s) {
@@ -433,8 +433,8 @@ var h = function () {
       if (null === t || "function" !== typeof c) {
         a(t);
       } else {
-        var u = c(Object(o.a)({}, t), n);
-        if (Object(f.j)(u)) {
+        var u = c(o.a({}, t), n);
+        if (f.j(u)) {
           u.then(function (t) {
             return i._notifyEventProcessors(e, t, n, r + 1).then(a);
           }).then(null, s);
@@ -447,11 +447,11 @@ var h = function () {
   e.prototype._notifyScopeListeners = function () {
     var e = this;
     if (!this._notifyingListeners) {
-      this._notifyingListeners = !0;
+      this._notifyingListeners = true;
       this._scopeListeners.forEach(function (t) {
         t(e);
       });
-      this._notifyingListeners = !1;
+      this._notifyingListeners = false;
     }
   };
   e.prototype._applyFingerprint = function (e) {
@@ -466,21 +466,21 @@ var h = function () {
   return e;
 }();
 function p() {
-  var e = Object(s.b)();
+  var e = s.b();
   e.__SENTRY__ = e.__SENTRY__ || {};
   e.__SENTRY__.globalEventProcessors = e.__SENTRY__.globalEventProcessors || [];
   return e.__SENTRY__.globalEventProcessors;
 }
-var _ = require("../435/index");
+import _ = require("../435/index");
 var A = function () {
   function e(e) {
     this.errors = 0;
-    this.sid = Object(s.c)();
+    this.sid = s.c();
     this.duration = 0;
     this.status = r.Ok;
-    this.init = !0;
-    this.ignoreDuration = !1;
-    var t = Object(c.c)();
+    this.init = true;
+    this.ignoreDuration = false;
+    var t = c.c();
     this.timestamp = t;
     this.started = t;
     if (e) {
@@ -488,7 +488,7 @@ var A = function () {
     }
   }
   e.prototype.update = function (e) {
-    if (void 0 === e) {
+    if (undefined === e) {
       e = {};
     }
     if (e.user) {
@@ -499,14 +499,14 @@ var A = function () {
         this.did = e.user.id || e.user.email || e.user.username;
       }
     }
-    this.timestamp = e.timestamp || Object(c.c)();
+    this.timestamp = e.timestamp || c.c();
     if (e.ignoreDuration) {
       this.ignoreDuration = e.ignoreDuration;
     }
     if (e.sid) {
-      this.sid = 32 === e.sid.length ? e.sid : Object(s.c)();
+      this.sid = 32 === e.sid.length ? e.sid : s.c();
     }
-    if (void 0 !== e.init) {
+    if (undefined !== e.init) {
       this.init = e.init;
     }
     if (!this.did && e.did) {
@@ -516,7 +516,7 @@ var A = function () {
       this.started = e.started;
     }
     if (this.ignoreDuration) {
-      this.duration = void 0;
+      this.duration = undefined;
     } else if ("number" === typeof e.duration) {
       this.duration = e.duration;
     } else {
@@ -558,16 +558,16 @@ var A = function () {
     }
   };
   e.prototype.toJSON = function () {
-    return Object(_.a)({
+    return _.a({
       sid: "" + this.sid,
       init: this.init,
       started: new Date(1e3 * this.started).toISOString(),
       timestamp: new Date(1e3 * this.timestamp).toISOString(),
       status: this.status,
       errors: this.errors,
-      did: "number" === typeof this.did || "string" === typeof this.did ? "" + this.did : void 0,
+      did: "number" === typeof this.did || "string" === typeof this.did ? "" + this.did : undefined,
       duration: this.duration,
-      attrs: Object(_.a)({
+      attrs: _.a({
         release: this.release,
         environment: this.environment,
         ip_address: this.ipAddress,
@@ -579,10 +579,10 @@ var A = function () {
 }();
 var g = function () {
   function e(e, t, n) {
-    if (void 0 === t) {
+    if (undefined === t) {
       t = new h();
     }
-    if (void 0 === n) {
+    if (undefined === n) {
       n = 4;
     }
     this._version = n;
@@ -633,10 +633,10 @@ var g = function () {
     return this._stack[this._stack.length - 1];
   };
   e.prototype.captureException = function (e, t) {
-    var n = this._lastEventId = Object(s.c)();
+    var n = this._lastEventId = s.c();
     var r = t;
     if (!t) {
-      var i = void 0;
+      var i = undefined;
       try {
         throw new Error("Sentry syntheticException");
       } catch (e) {
@@ -647,16 +647,16 @@ var g = function () {
         syntheticException: i
       };
     }
-    this._invokeClient("captureException", e, Object(o.a)(Object(o.a)({}, r), {
+    this._invokeClient("captureException", e, o.a(o.a({}, r), {
       event_id: n
     }));
     return n;
   };
   e.prototype.captureMessage = function (e, t, n) {
-    var r = this._lastEventId = Object(s.c)();
+    var r = this._lastEventId = s.c();
     var i = n;
     if (!n) {
-      var a = void 0;
+      var a = undefined;
       try {
         throw new Error(e);
       } catch (c) {
@@ -667,14 +667,14 @@ var g = function () {
         syntheticException: a
       };
     }
-    this._invokeClient("captureMessage", e, t, Object(o.a)(Object(o.a)({}, i), {
+    this._invokeClient("captureMessage", e, t, o.a(o.a({}, i), {
       event_id: r
     }));
     return r;
   };
   e.prototype.captureEvent = function (e, t) {
-    var n = this._lastEventId = Object(s.c)();
-    this._invokeClient("captureEvent", e, Object(o.a)(Object(o.a)({}, t), {
+    var n = this._lastEventId = s.c();
+    this._invokeClient("captureEvent", e, o.a(o.a({}, t), {
       event_id: n
     }));
     return n;
@@ -689,15 +689,15 @@ var g = function () {
     if (r && i) {
       var a = i.getOptions && i.getOptions() || {};
       var u = a.beforeBreadcrumb;
-      var l = void 0 === u ? null : u;
+      var l = undefined === u ? null : u;
       var f = a.maxBreadcrumbs;
-      var d = void 0 === f ? 100 : f;
+      var d = undefined === f ? 100 : f;
       if (!(d <= 0)) {
-        var h = Object(c.b)();
-        var p = Object(o.a)({
+        var h = c.b();
+        var p = o.a({
           timestamp: h
         }, e);
-        var _ = l ? Object(s.a)(function () {
+        var _ = l ? s.a(function () {
           return l(p, t);
         }) : p;
         if (null !== _) {
@@ -780,8 +780,8 @@ var g = function () {
     return this._callExtensionMethod("traceHeaders");
   };
   e.prototype.captureSession = function (e) {
-    if (void 0 === e) {
-      e = !1;
+    if (undefined === e) {
+      e = false;
     }
     if (e) {
       return this.endSession();
@@ -794,11 +794,11 @@ var g = function () {
     var n;
     var r;
     var i;
-    if (!(null === (n = null === (t = null === (e = this.getStackTop()) || void 0 === e ? void 0 : e.scope) || void 0 === t ? void 0 : t.getSession()) || void 0 === n)) {
+    if (!(null === (n = null === (t = null === (e = this.getStackTop()) || undefined === e ? undefined : e.scope) || undefined === t ? undefined : t.getSession()) || undefined === n)) {
       n.close();
     }
     this._sendSessionUpdate();
-    if (!(null === (i = null === (r = this.getStackTop()) || void 0 === r ? void 0 : r.scope) || void 0 === i)) {
+    if (!(null === (i = null === (r = this.getStackTop()) || undefined === r ? undefined : r.scope) || undefined === i)) {
       i.setSession();
     }
   };
@@ -809,8 +809,8 @@ var g = function () {
     var a = i && i.getOptions() || {};
     var c = a.release;
     var u = a.environment;
-    var l = (Object(s.b)().navigator || {}).userAgent;
-    var f = new A(Object(o.a)(Object(o.a)(Object(o.a)({
+    var l = (s.b().navigator || {}).userAgent;
+    var f = new A(o.a(o.a(o.a({
       release: c,
       environment: u
     }, n && {
@@ -849,7 +849,7 @@ var g = function () {
     var a = i.scope;
     var s = i.client;
     if (s && s[e]) {
-      (t = s)[e].apply(t, Object(o.f)(n, [a]));
+      (t = s)[e].apply(t, o.f(n, [a]));
     }
   };
   e.prototype._callExtensionMethod = function (e) {
@@ -866,10 +866,10 @@ var g = function () {
   return e;
 }();
 function v() {
-  var e = Object(s.b)();
+  var e = s.b();
   e.__SENTRY__ = e.__SENTRY__ || {
     extensions: {},
-    hub: void 0
+    hub: undefined
   };
   return e;
 }
@@ -884,12 +884,12 @@ function y() {
   if (!(b(e) && !w(e).isOlderThan(4))) {
     E(e, new g());
   }
-  return Object(l.b)() ? function (e) {
+  return l.b() ? function (e) {
     var t;
     var n;
     var r;
     try {
-      var i = null === (r = null === (n = null === (t = v().__SENTRY__) || void 0 === t ? void 0 : t.extensions) || void 0 === n ? void 0 : n.domain) || void 0 === r ? void 0 : r.active;
+      var i = null === (r = null === (n = null === (t = v().__SENTRY__) || undefined === t ? undefined : t.extensions) || undefined === n ? undefined : n.domain) || undefined === r ? undefined : r.active;
       if (!i) {
         return w(e);
       }
@@ -914,6 +914,6 @@ function w(e) {
   return e.__SENTRY__.hub;
 }
 function E(e, t) {
-  return !!e && (e.__SENTRY__ = e.__SENTRY__ || {}, e.__SENTRY__.hub = t, !0);
+  return !!e && (e.__SENTRY__ = e.__SENTRY__ || {}, e.__SENTRY__.hub = t, true);
 }
 export default g;

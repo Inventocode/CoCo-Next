@@ -1,9 +1,9 @@
 "use strict";
 
 export { a };
-var r = require("./266");
-var i = require("../../2627/285/912");
-var o = require("../../2627/285/210");
+import r = require("./266");
+import i = require("../../2627/285/912");
+import o = require("../../2627/285/210");
 function a(e) {
   var t = {
     r: 0,
@@ -14,17 +14,17 @@ function a(e) {
   var a = null;
   var s = null;
   var c = null;
-  var u = !1;
-  var d = !1;
+  var u = false;
+  var d = false;
   if ("string" === typeof e) {
     e = function (e) {
       if (0 === (e = e.trim().toLowerCase()).length) {
-        return !1;
+        return false;
       }
-      var t = !1;
+      var t = false;
       if (i.a[e]) {
         e = i.a[e];
-        t = !0;
+        t = true;
       } else if ("transparent" === e) {
         return {
           r: 0,
@@ -82,59 +82,59 @@ function a(e) {
       }
       if (n = l.hex8.exec(e)) {
         return {
-          r: Object(r.e)(n[1]),
-          g: Object(r.e)(n[2]),
-          b: Object(r.e)(n[3]),
-          a: Object(r.a)(n[4]),
+          r: r.e(n[1]),
+          g: r.e(n[2]),
+          b: r.e(n[3]),
+          a: r.a(n[4]),
           format: t ? "name" : "hex8"
         };
       }
       if (n = l.hex6.exec(e)) {
         return {
-          r: Object(r.e)(n[1]),
-          g: Object(r.e)(n[2]),
-          b: Object(r.e)(n[3]),
+          r: r.e(n[1]),
+          g: r.e(n[2]),
+          b: r.e(n[3]),
           format: t ? "name" : "hex"
         };
       }
       if (n = l.hex4.exec(e)) {
         return {
-          r: Object(r.e)(n[1] + n[1]),
-          g: Object(r.e)(n[2] + n[2]),
-          b: Object(r.e)(n[3] + n[3]),
-          a: Object(r.a)(n[4] + n[4]),
+          r: r.e(n[1] + n[1]),
+          g: r.e(n[2] + n[2]),
+          b: r.e(n[3] + n[3]),
+          a: r.a(n[4] + n[4]),
           format: t ? "name" : "hex8"
         };
       }
       if (n = l.hex3.exec(e)) {
         return {
-          r: Object(r.e)(n[1] + n[1]),
-          g: Object(r.e)(n[2] + n[2]),
-          b: Object(r.e)(n[3] + n[3]),
+          r: r.e(n[1] + n[1]),
+          g: r.e(n[2] + n[2]),
+          b: r.e(n[3] + n[3]),
           format: t ? "name" : "hex"
         };
       }
-      return !1;
+      return false;
     }(e);
   }
   if ("object" === typeof e) {
     if (f(e.r) && f(e.g) && f(e.b)) {
-      t = Object(r.i)(e.r, e.g, e.b);
-      u = !0;
+      t = r.i(e.r, e.g, e.b);
+      u = true;
       d = "%" === String(e.r).substr(-1) ? "prgb" : "rgb";
     } else {
       if (f(e.h) && f(e.s) && f(e.v)) {
-        a = Object(o.d)(e.s);
-        s = Object(o.d)(e.v);
-        t = Object(r.c)(e.h, a, s);
-        u = !0;
+        a = o.d(e.s);
+        s = o.d(e.v);
+        t = r.c(e.h, a, s);
+        u = true;
         d = "hsv";
       } else {
         if (f(e.h) && f(e.s) && f(e.l)) {
-          a = Object(o.d)(e.s);
-          c = Object(o.d)(e.l);
-          t = Object(r.b)(e.h, a, c);
-          u = !0;
+          a = o.d(e.s);
+          c = o.d(e.l);
+          t = r.b(e.h, a, c);
+          u = true;
           d = "hsl";
         }
       }
@@ -143,7 +143,7 @@ function a(e) {
       n = e.a;
     }
   }
-  n = Object(o.b)(n);
+  n = o.b(n);
   return {
     ok: u,
     format: e.format || d,

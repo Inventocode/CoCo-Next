@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.OptionTypes = void 0;
+exports.OptionTypes = undefined;
 (function (e) {
   e[e.TEXT = 0] = "TEXT";
   e[e.VALUE = 1] = "VALUE";

@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.Blink = void 0;
+exports.Blink = undefined;
 var r = require("tslib");
 var i = require("inversify");
 var o = require("../../../1179/1319");
@@ -27,15 +27,15 @@ var l = function () {
     set: function (e) {
       this.workspace_db.current = e;
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   Object.defineProperty(e.prototype, "di_container", {
     get: function () {
       return (0, c.get_instance)();
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   e.prototype.define_blocks_with_json_array = function (e) {
     for (var t = 0; t < e.length; t++) {
@@ -67,19 +67,19 @@ var l = function () {
     }
     this.Blocks[e] = t;
   };
-  (0, r.__decorate)([(0, u.lazy_inject)(u.BINDING.context_menu)], e.prototype, "context_menu", void 0);
-  (0, r.__decorate)([(0, u.lazy_inject)(u.BINDING.events)], e.prototype, "events", void 0);
-  (0, r.__decorate)([(0, u.lazy_inject)(u.BINDING.extensions)], e.prototype, "extensions", void 0);
-  (0, r.__decorate)([(0, u.lazy_inject)(u.BINDING.Msg)], e.prototype, "Msg", void 0);
-  (0, r.__decorate)([(0, u.lazy_inject)(u.BINDING.registry)], e.prototype, "registry", void 0);
-  (0, r.__decorate)([(0, u.lazy_inject)(u.BINDING.runtime_data)], e.prototype, "runtime_data", void 0);
-  (0, r.__decorate)([(0, u.lazy_inject)(u.BINDING.theme)], e.prototype, "theme", void 0);
-  (0, r.__decorate)([(0, u.lazy_inject)(u.BINDING.tooltip)], e.prototype, "tooltip", void 0);
-  (0, r.__decorate)([(0, u.lazy_inject)(u.BINDING.widget_div)], e.prototype, "widget_div", void 0);
-  (0, r.__decorate)([(0, u.lazy_inject)(u.BINDING.workspace_db)], e.prototype, "workspace_db", void 0);
-  (0, r.__decorate)([(0, u.lazy_inject)(u.BINDING.xml)], e.prototype, "xml", void 0);
-  (0, r.__decorate)([(0, u.lazy_inject)(u.BINDING.json)], e.prototype, "json", void 0);
-  (0, r.__decorate)([(0, u.lazy_inject)(u.BINDING.utils)], e.prototype, "utils", void 0);
+  (0, r.__decorate)([(0, u.lazy_inject)(u.BINDING.context_menu)], e.prototype, "context_menu", undefined);
+  (0, r.__decorate)([(0, u.lazy_inject)(u.BINDING.events)], e.prototype, "events", undefined);
+  (0, r.__decorate)([(0, u.lazy_inject)(u.BINDING.extensions)], e.prototype, "extensions", undefined);
+  (0, r.__decorate)([(0, u.lazy_inject)(u.BINDING.Msg)], e.prototype, "Msg", undefined);
+  (0, r.__decorate)([(0, u.lazy_inject)(u.BINDING.registry)], e.prototype, "registry", undefined);
+  (0, r.__decorate)([(0, u.lazy_inject)(u.BINDING.runtime_data)], e.prototype, "runtime_data", undefined);
+  (0, r.__decorate)([(0, u.lazy_inject)(u.BINDING.theme)], e.prototype, "theme", undefined);
+  (0, r.__decorate)([(0, u.lazy_inject)(u.BINDING.tooltip)], e.prototype, "tooltip", undefined);
+  (0, r.__decorate)([(0, u.lazy_inject)(u.BINDING.widget_div)], e.prototype, "widget_div", undefined);
+  (0, r.__decorate)([(0, u.lazy_inject)(u.BINDING.workspace_db)], e.prototype, "workspace_db", undefined);
+  (0, r.__decorate)([(0, u.lazy_inject)(u.BINDING.xml)], e.prototype, "xml", undefined);
+  (0, r.__decorate)([(0, u.lazy_inject)(u.BINDING.json)], e.prototype, "json", undefined);
+  (0, r.__decorate)([(0, u.lazy_inject)(u.BINDING.utils)], e.prototype, "utils", undefined);
   return e = (0, r.__decorate)([(0, i.injectable)()], e);
 }();
 exports.Blink = l;

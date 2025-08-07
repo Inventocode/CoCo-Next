@@ -2,9 +2,9 @@
 
 var r;
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.OPPOSITE_TYPE = exports.CONNECTABLE_TYPE = exports.CONNECTION_TYPE = exports.OutputShape = void 0;
+exports.OPPOSITE_TYPE = exports.CONNECTABLE_TYPE = exports.CONNECTION_TYPE = exports.OutputShape = undefined;
 (function (e) {
   e[e.ROUND = 0] = "ROUND";
   e[e.HEXAGONAL = 1] = "HEXAGONAL";

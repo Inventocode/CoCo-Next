@@ -14,10 +14,10 @@ module.exports = function (e) {
   var f;
   var h = r(e);
   var m = arguments.length;
-  var g = m > 1 ? arguments[1] : void 0;
-  var _ = void 0 !== g;
+  var g = m > 1 ? arguments[1] : undefined;
+  var _ = undefined !== g;
   var v = a(h);
-  if (void 0 != v && !s(v)) {
+  if (undefined != v && !s(v)) {
     for (f = (p = i(h, v)).next, h = []; !(d = f.call(p)).done;) {
       h.push(d.value);
     }

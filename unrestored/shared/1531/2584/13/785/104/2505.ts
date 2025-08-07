@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.active = void 0;
+exports.active = undefined;
 var r;
 var i = Object.assign || function (e) {
   for (var t = 1; t < arguments.length; t++) {
@@ -36,9 +36,9 @@ function u(e, t) {
   e.prototype = Object.create(t && t.prototype, {
     constructor: {
       value: e,
-      enumerable: !1,
-      writable: !0,
-      configurable: !0
+      enumerable: false,
+      writable: true,
+      configurable: true
     }
   });
   if (t) {
@@ -50,7 +50,7 @@ function u(e, t) {
   }
 }
 var l = exports.active = function (e) {
-  var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "span";
+  var t = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : "span";
   return function (n) {
     function r() {
       var n;
@@ -62,16 +62,16 @@ var l = exports.active = function (e) {
       }
       o = u = c(this, (n = r.__proto__ || Object.getPrototypeOf(r)).call.apply(n, [this].concat(f)));
       u.state = {
-        active: !1
+        active: false
       };
       u.handleMouseDown = function () {
         return u.setState({
-          active: !0
+          active: true
         });
       };
       u.handleMouseUp = function () {
         return u.setState({
-          active: !1
+          active: false
         });
       };
       u.render = function () {

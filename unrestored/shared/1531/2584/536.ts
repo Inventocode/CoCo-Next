@@ -1,8 +1,8 @@
 "use strict";
 
-var r = require("./296");
-var o = require("./31/index");
-var i = require("react");
+import r = require("./296");
+import o = require("lodash");
+import i = require("react");
 var a = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -15,7 +15,7 @@ var a = function __importDefault(module) {
   });
   return defaultExport;
 }(i);
-var s = require("./8");
+import s = require("./8");
 var c = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -28,27 +28,27 @@ var c = function __importDefault(module) {
   });
   return defaultExport;
 }(s);
-var l = require("./13/index");
+import l = require("./13/index");
 require("./13/636");
 var _a;
-_a = Object(i.memo)(function (e) {
+_a = i.memo(function (e) {
   var t = e.onStep;
   var n = e.max;
   var s = e.min;
   var u = e.defaultValue;
   var d = e.disabled;
   var p = e.label;
-  var f = Object(r.a)(e, ["onStep", "max", "min", "defaultValue", "disabled", "label"]);
+  var f = r.a(e, ["onStep", "max", "min", "defaultValue", "disabled", "label"]);
   var h = Number(n) <= Number(u);
   var m = Number(s) >= Number(u);
   var g = Number(u);
-  var _ = Object(i.useCallback)(function (e) {
-    if (!h && Object(o.isFunction)(t)) {
+  var _ = i.useCallback(function (e) {
+    if (!h && o.isFunction(t)) {
       t("".concat(g + 1), e, "up");
     }
   }, [h, t, g]);
-  var v = Object(i.useCallback)(function (e) {
-    if (!m && Object(o.isFunction)(t)) {
+  var v = i.useCallback(function (e) {
+    if (!m && o.isFunction(t)) {
       t("".concat(g - 1), e, "down");
     }
   }, [m, t, g]);

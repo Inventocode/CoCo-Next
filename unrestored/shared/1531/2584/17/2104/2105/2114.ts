@@ -1,16 +1,16 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.EndDragEvent = void 0;
+exports.EndDragEvent = undefined;
 var r = require("tslib");
 var i = require("inversify");
 var o = require("../../../125/195/index");
 var a = function (e) {
   function t(t) {
     var n = e.call(this, t.block) || this;
-    n._record_undo = !1;
+    n._record_undo = false;
     n.type = o.BlockEventType.END_DRAG;
     n.block = t.block;
     n._is_outside = t.is_outside;
@@ -21,7 +21,7 @@ var a = function (e) {
   }
   (0, r.__extends)(t, e);
   t.prototype.get_block_xml = function () {
-    return this.xml.workspace_element_to_dom(this.block, !0);
+    return this.xml.workspace_element_to_dom(this.block, true);
   };
   t.prototype.delete_current = function () {
     this.block.dispose();

@@ -1,13 +1,13 @@
 "use strict";
 
 export { o as a };
-var r = require("../../430");
-var i = require("react");
+import r = require("../../430");
+import i = require("react");
 var o = function (e) {
   function t(t) {
     var n;
     (n = e.call(this, t) || this)._state = null;
-    n._del = !1;
+    n._del = false;
     n._handleChange = function (e) {
       var t = n.state.value;
       var r = e.target.value;
@@ -17,7 +17,7 @@ var o = function (e) {
       var s = t === n.props.format(r);
       n.setState({
         value: r,
-        local: !0
+        local: true
       }, function () {
         var e = i.selectionStart;
         var c = n.props.refuse || /[^\d]+/g;
@@ -49,25 +49,25 @@ var o = function (e) {
     };
     n._hKD = function (e) {
       if ("Delete" === e.code) {
-        n._del = !0;
+        n._del = true;
       }
     };
     n._hKU = function (e) {
       if ("Delete" === e.code) {
-        n._del = !1;
+        n._del = false;
       }
     };
     n.state = {
       value: t.value,
-      local: !0
+      local: true
     };
     return n;
   }
-  Object(r.a)(t, e);
+  r.a(t, e);
   t.getDerivedStateFromProps = function (e, t) {
     return {
       value: t.local ? t.value : e.value,
-      local: !1
+      local: false
     };
   };
   var n = t.prototype;

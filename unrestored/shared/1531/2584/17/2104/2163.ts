@@ -1,15 +1,15 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.FieldLabelSerializable = void 0;
+exports.FieldLabelSerializable = undefined;
 var r = require("tslib");
 var i = require("inversify");
 var o = function (e) {
   function t(t) {
     var n = e.call(this, t) || this;
-    n.editable = !0;
+    n.editable = true;
     n.field_type = "FieldLabelSerializable";
     return n;
   }

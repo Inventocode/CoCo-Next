@@ -7,7 +7,7 @@ var c = o("Reflect", "apply");
 var l = Function.apply;
 r({
   target: "Reflect",
-  stat: !0,
+  stat: true,
   forced: !s(function () {
     c(function () {});
   })

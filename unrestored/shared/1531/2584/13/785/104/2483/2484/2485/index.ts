@@ -21,8 +21,8 @@ var w = require("./2501/index");
 var E = require("../../1142/1390/850/index");
 var x = require("../../../../../254/2513/2514/2515/853/index");
 var C = {};
-C["[object Arguments]"] = C["[object Array]"] = C["[object ArrayBuffer]"] = C["[object DataView]"] = C["[object Boolean]"] = C["[object Date]"] = C["[object Float32Array]"] = C["[object Float64Array]"] = C["[object Int8Array]"] = C["[object Int16Array]"] = C["[object Int32Array]"] = C["[object Map]"] = C["[object Number]"] = C["[object Object]"] = C["[object RegExp]"] = C["[object Set]"] = C["[object String]"] = C["[object Symbol]"] = C["[object Uint8Array]"] = C["[object Uint8ClampedArray]"] = C["[object Uint16Array]"] = C["[object Uint32Array]"] = !0;
-C["[object Error]"] = C["[object Function]"] = C["[object WeakMap]"] = !1;
+C["[object Arguments]"] = C["[object Array]"] = C["[object ArrayBuffer]"] = C["[object DataView]"] = C["[object Boolean]"] = C["[object Date]"] = C["[object Float32Array]"] = C["[object Float64Array]"] = C["[object Int8Array]"] = C["[object Int16Array]"] = C["[object Int32Array]"] = C["[object Map]"] = C["[object Number]"] = C["[object Object]"] = C["[object RegExp]"] = C["[object Set]"] = C["[object String]"] = C["[object Symbol]"] = C["[object Uint8Array]"] = C["[object Uint8ClampedArray]"] = C["[object Uint16Array]"] = C["[object Uint32Array]"] = true;
+C["[object Error]"] = C["[object Function]"] = C["[object WeakMap]"] = false;
 module.exports = function e(t, n, O, k, S, T) {
   var B;
   var D = 1 & n;
@@ -31,7 +31,7 @@ module.exports = function e(t, n, O, k, S, T) {
   if (O) {
     B = S ? O(t, k, S, T) : O(t);
   }
-  if (void 0 !== B) {
+  if (undefined !== B) {
     return B;
   }
   if (!b(t)) {
@@ -80,7 +80,7 @@ module.exports = function e(t, n, O, k, S, T) {
       });
     }
   }
-  var j = R ? void 0 : (F ? I ? h : d : I ? x : E)(t);
+  var j = R ? undefined : (F ? I ? h : d : I ? x : E)(t);
   i(j || t, function (r, i) {
     if (j) {
       r = t[i = r];

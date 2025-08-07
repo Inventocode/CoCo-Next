@@ -89,10 +89,10 @@ var d = function (t) {
   function e(e, n, r) {
     var i = t.call(this, e) || this;
     if (r) {
-      i.remaining = !0;
+      i.remaining = true;
       i.remainingValue = i.remainingValue;
     } else {
-      i.remaining = !1;
+      i.remaining = false;
       i.remainingValue = 0;
     }
     i.newString = n;
@@ -174,7 +174,7 @@ var m = function (t) {
     return {
       next: function () {
         if (t && r >= t.length) {
-          t = void 0;
+          t = undefined;
         }
         return {
           value: t && t[r++],
@@ -355,7 +355,7 @@ var g = function () {
     }
     for (var e = t; e < t + 3; ++e) {
       if (this.information.get(e)) {
-        return !0;
+        return true;
       }
     }
     return this.information.get(t + 3);
@@ -405,14 +405,14 @@ var g = function () {
       var t = this.decodeNumeric(this.current.getPosition());
       this.current.setPosition(t.getNewPosition());
       if (t.isFirstDigitFNC1()) {
-        var e = void 0;
+        var e = undefined;
         e = t.isSecondDigitFNC1() ? new d(this.current.getPosition(), this.buffer.toString()) : new d(this.current.getPosition(), this.buffer.toString(), t.getSecondDigit());
-        return new a(!0, e);
+        return new a(true, e);
       }
       this.buffer.append(t.getFirstDigit());
       if (t.isSecondDigitFNC1()) {
         e = new d(this.current.getPosition(), this.buffer.toString());
-        return new a(!0, e);
+        return new a(true, e);
       }
       this.buffer.append(t.getSecondDigit());
     }
@@ -420,7 +420,7 @@ var g = function () {
       this.current.setAlpha();
       this.current.incrementPosition(4);
     }
-    return new a(!1);
+    return new a(false);
   };
   t.prototype.parseIsoIec646Block = function () {
     for (; this.isStillIsoIec646(this.current.getPosition());) {
@@ -428,7 +428,7 @@ var g = function () {
       this.current.setPosition(t.getNewPosition());
       if (t.isFNC1()) {
         var e = new d(this.current.getPosition(), this.buffer.toString());
-        return new a(!0, e);
+        return new a(true, e);
       }
       this.buffer.append(t.getValue());
     }
@@ -445,7 +445,7 @@ var g = function () {
         this.current.setAlpha();
       }
     }
-    return new a(!1);
+    return new a(false);
   };
   t.prototype.parseAlphaBlock = function () {
     for (; this.isStillAlpha(this.current.getPosition());) {
@@ -453,7 +453,7 @@ var g = function () {
       this.current.setPosition(t.getNewPosition());
       if (t.isFNC1()) {
         var e = new d(this.current.getPosition(), this.buffer.toString());
-        return new a(!0, e);
+        return new a(true, e);
       }
       this.buffer.append(t.getValue());
     }
@@ -470,25 +470,25 @@ var g = function () {
         this.current.setIsoIec646();
       }
     }
-    return new a(!1);
+    return new a(false);
   };
   t.prototype.isStillIsoIec646 = function (t) {
     if (t + 5 > this.information.getSize()) {
-      return !1;
+      return false;
     }
     var e = this.extractNumericValueFromBitArray(t, 5);
     if (e >= 5 && e < 16) {
-      return !0;
+      return true;
     }
     if (t + 7 > this.information.getSize()) {
-      return !1;
+      return false;
     }
     var n = this.extractNumericValueFromBitArray(t, 7);
     if (n >= 64 && n < 116) {
-      return !0;
+      return true;
     }
     if (t + 8 > this.information.getSize()) {
-      return !1;
+      return false;
     }
     var r = this.extractNumericValueFromBitArray(t, 8);
     return r >= 232 && r < 253;
@@ -580,14 +580,14 @@ var g = function () {
   };
   t.prototype.isStillAlpha = function (t) {
     if (t + 5 > this.information.getSize()) {
-      return !1;
+      return false;
     }
     var e = this.extractNumericValueFromBitArray(t, 5);
     if (e >= 5 && e < 16) {
-      return !0;
+      return true;
     }
     if (t + 6 > this.information.getSize()) {
-      return !1;
+      return false;
     }
     var n = this.extractNumericValueFromBitArray(t, 6);
     return n >= 16 && n < 63;
@@ -628,40 +628,40 @@ var g = function () {
   };
   t.prototype.isAlphaTo646ToAlphaLatch = function (t) {
     if (t + 1 > this.information.getSize()) {
-      return !1;
+      return false;
     }
     for (var e = 0; e < 5 && e + t < this.information.getSize(); ++e) {
       if (2 === e) {
         if (!this.information.get(t + 2)) {
-          return !1;
+          return false;
         }
       } else if (this.information.get(t + e)) {
-        return !1;
+        return false;
       }
     }
-    return !0;
+    return true;
   };
   t.prototype.isAlphaOr646ToNumericLatch = function (t) {
     if (t + 3 > this.information.getSize()) {
-      return !1;
+      return false;
     }
     for (var e = t; e < t + 3; ++e) {
       if (this.information.get(e)) {
-        return !1;
+        return false;
       }
     }
-    return !0;
+    return true;
   };
   t.prototype.isNumericToAlphaNumericLatch = function (t) {
     if (t + 1 > this.information.getSize()) {
-      return !1;
+      return false;
     }
     for (var e = 0; e < 4 && e + t < this.information.getSize(); ++e) {
       if (this.information.get(t + e)) {
-        return !1;
+        return false;
       }
     }
-    return !0;
+    return true;
   };
   return t;
 }();

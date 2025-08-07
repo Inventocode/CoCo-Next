@@ -26,7 +26,7 @@ module.exports = function (e, t, n) {
     if (d) {
       l(d, "normal", e);
     }
-    return new u(!0, e);
+    return new u(true, e);
   };
   var C = function (e) {
     return b ? (r(e), E ? O(e[0], e[1], w) : O(e[0], e[1])) : E ? O(e, w) : O(e);
@@ -43,7 +43,7 @@ module.exports = function (e, t, n) {
           return m;
         }
       }
-      return new u(!1);
+      return new u(false);
     }
     d = s(e, p);
   }
@@ -57,5 +57,5 @@ module.exports = function (e, t, n) {
       return m;
     }
   }
-  return new u(!1);
+  return new u(false);
 };

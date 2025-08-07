@@ -72,7 +72,7 @@ function o(e) {
 }
 var a;
 var s;
-var c = require("../31/index");
+import c = require("lodash");
 function u(e, t) {
   if (a) {
     a({
@@ -88,14 +88,14 @@ function f() {
   return !l() && (screen.width < 425 || screen.height < 425 || navigator.userAgent.indexOf("iPhone") >= 0 || navigator.userAgent.indexOf("Android") >= 0 && navigator.userAgent.indexOf("Mobile") >= 0) && navigator.userAgent.indexOf("iPhone") >= 0;
 }
 var d = {
-  audio_recording: !1
+  audio_recording: false
 };
 function h() {
   window.AudioContext = window.AudioContext || window.webkitAudioContext;
   navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mediaDevices && navigator.mediaDevices.getUserMedia;
   window.URL = window.URL || window.webkitURL;
   if (AudioContext && (navigator.getUserMedia || navigator.mediaDevices && navigator.mediaDevices.getUserMedia) && URL) {
-    d.audio_recording = !0;
+    d.audio_recording = true;
   }
   return d;
 }
@@ -111,7 +111,7 @@ function A() {
 function g() {
   return "android" === p();
 }
-var v = require("./1462");
+import v = require("./1462");
 function m() {
   var e;
   var t;
@@ -177,22 +177,22 @@ function m() {
             var r = new ArrayBuffer(44 + 2 * e.length);
             var i = new DataView(r);
             c(i, 0, "RIFF");
-            i.setUint32(4, 36 + 2 * e.length, !0);
+            i.setUint32(4, 36 + 2 * e.length, true);
             c(i, 8, "WAVE");
             c(i, 12, "fmt ");
-            i.setUint32(16, 16, !0);
-            i.setUint16(20, 1, !0);
-            i.setUint16(22, n, !0);
-            i.setUint32(24, t, !0);
-            i.setUint32(28, 4 * t, !0);
-            i.setUint16(32, 2 * n, !0);
-            i.setUint16(34, 16, !0);
+            i.setUint32(16, 16, true);
+            i.setUint16(20, 1, true);
+            i.setUint16(22, n, true);
+            i.setUint32(24, t, true);
+            i.setUint32(28, 4 * t, true);
+            i.setUint16(32, 2 * n, true);
+            i.setUint16(34, 16, true);
             c(i, 36, "data");
-            i.setUint32(40, 2 * e.length, !0);
+            i.setUint32(40, 2 * e.length, true);
             (function (e, t, n) {
               for (var r = 0; r < n.length; r++, t += 2) {
                 var i = Math.max(-1, Math.min(1, n[r]));
-                e.setInt16(t, i < 0 ? 32768 * i : 32767 * i, !0);
+                e.setInt16(t, i < 0 ? 32768 * i : 32767 * i, true);
               }
             })(i, 44, e);
             return i;
@@ -266,7 +266,7 @@ var C = function () {
       getBuffer: [],
       exportWAV: []
     };
-    Object(c.assign)(this.config, t);
+    c.assign(this.config, t);
     this.context = e.context;
     this.node = (this.context.createScriptProcessor || this.context.createJavaScriptNode).call(this.context, this.config.buffer_len, this.config.num_channels, this.config.num_channels);
     this.node.onaudioprocess = function (e) {
@@ -305,8 +305,8 @@ var C = function () {
     get: function () {
       return this._state;
     },
-    enumerable: !0,
-    configurable: !0
+    enumerable: true,
+    configurable: true
   });
   e.prototype.start = function () {
     this.clear();
@@ -423,7 +423,7 @@ var k = function (e, t) {
                 a.label++;
                 return {
                   value: o[1],
-                  done: !1
+                  done: false
                 };
               case 5:
                 a.label++;
@@ -471,8 +471,8 @@ var k = function (e, t) {
           throw o[1];
         }
         return {
-          value: o[0] ? o[1] : void 0,
-          done: !0
+          value: o[0] ? o[1] : undefined,
+          done: true
         };
       }([o, s]);
     };
@@ -480,9 +480,9 @@ var k = function (e, t) {
 };
 (function () {
   function e(e) {
-    this.stream = void 0;
-    this.audio_context = void 0;
-    this.on_stop = void 0;
+    this.stream = undefined;
+    this.audio_context = undefined;
+    this.on_stop = undefined;
     this.sample_rate = 0;
     this.num_channels = 0;
     this.blob_chunks = [];
@@ -495,7 +495,7 @@ var k = function (e, t) {
     }
   }
   e.prototype.init = function (e) {
-    return O(this, void 0, void 0, function () {
+    return O(this, undefined, undefined, function () {
       var t;
       var n;
       var r;
@@ -505,9 +505,20 @@ var k = function (e, t) {
         switch (a.label) {
           case 0:
             if (t = h(), n = {
-              audio: e || !0
+              audio: e || true
             }, !t.audio_recording) {
-              throw _() ? this.recorder_noticer("record_error/pc_browser_not_support") : g() ? this.recorder_noticer("record_error/android_permission_error") : A() && this.recorder_noticer("record_error/ios_permission_error"), new ReferenceError("Browser not supported.");
+              if (_()) {
+                this.recorder_noticer("record_error/pc_browser_not_support");
+              } else {
+                if (g()) {
+                  this.recorder_noticer("record_error/android_permission_error");
+                } else {
+                  if (A()) {
+                    this.recorder_noticer("record_error/ios_permission_error");
+                  }
+                }
+              }
+              throw new ReferenceError("Browser not supported.");
             }
             if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
               return [3, 5];
@@ -520,7 +531,9 @@ var k = function (e, t) {
             r = a.sent();
             return [2, this.create_recorder(r)];
           case 3:
-            throw i = a.sent(), this.check_failed(i), i;
+            i = a.sent();
+            this.check_failed(i);
+            throw i;
           case 4:
             return [3, 6];
           case 5:
@@ -608,7 +621,7 @@ var k = function (e, t) {
     return this.media_stream_recorder;
   };
   e.prototype.start_recording = function () {
-    return O(this, void 0, void 0, function () {
+    return O(this, undefined, undefined, function () {
       return k(this, function (e) {
         switch (e.label) {
           case 0:
@@ -676,7 +689,7 @@ var k = function (e, t) {
     }
   };
   e.prototype.dispose = function () {
-    return O(this, void 0, void 0, function () {
+    return O(this, undefined, undefined, function () {
       return k(this, function (e) {
         switch (e.label) {
           case 0:
@@ -782,7 +795,7 @@ var T = function (e, t) {
                 a.label++;
                 return {
                   value: o[1],
-                  done: !1
+                  done: false
                 };
               case 5:
                 a.label++;
@@ -830,26 +843,26 @@ var T = function (e, t) {
           throw o[1];
         }
         return {
-          value: o[0] ? o[1] : void 0,
-          done: !0
+          value: o[0] ? o[1] : undefined,
+          done: true
         };
       }([o, s]);
     };
   }
 };
-var B = !1;
-var D = !1;
-var I = void 0;
+var B = false;
+var D = false;
+var I = undefined;
 function F(e) {
-  return S(this, void 0, void 0, function () {
+  return S(this, undefined, undefined, function () {
     var t;
     return T(this, function (n) {
       if (!y) {
         y = new AudioContext();
       }
-      return e ? D ? (__DEV__ && console.warn("Volume measurement is already running."), [2]) : (D = !0, E ? (E(e), [2]) : B ? (__DEV__ && console.warn("Volume measurement is already initialized."), [2, y.resume()]) : (t = {
-        video: !1,
-        audio: !0
+      return e ? D ? (__DEV__ && console.warn("Volume measurement is already running."), [2]) : (D = true, E ? (E(e), [2]) : B ? (__DEV__ && console.warn("Volume measurement is already initialized."), [2, y.resume()]) : (t = {
+        video: false,
+        audio: true
       }, h().audio_recording ? (y && (w = (y.createScriptProcessor || y.createJavaScriptNode).call(y, 1024, 1, 1)).connect(y.destination), navigator.mediaDevices.getUserMedia(t).then(function (t) {
         if (y) {
           b = y.createMediaStreamSource(t);
@@ -861,12 +874,12 @@ function F(e) {
             var t = new Uint8Array(n.frequencyBinCount);
             n.getByteFrequencyData(t);
             if (e) {
-              e(Object(c.round)(Object(c.mean)(t)));
+              e(c.round(c.mean(t)));
             }
           };
           b.connect(w);
           b.connect(n);
-          B = !0;
+          B = true;
         }
       }).catch(function (e) {
         switch (e.name) {
@@ -902,35 +915,35 @@ function F(e) {
   });
 }
 function R() {
-  return S(this, void 0, void 0, function () {
+  return S(this, undefined, undefined, function () {
     return T(this, function (e) {
       switch (e.label) {
         case 0:
-          D = !1;
-          B = !1;
-          return x ? (x(), [2]) : (I && I.getTracks()[0].stop(), b && (w && y && w.disconnect(y.destination), b.disconnect(), b = void 0), y ? [4, y.close()] : [3, 2]);
+          D = false;
+          B = false;
+          return x ? (x(), [2]) : (I && I.getTracks()[0].stop(), b && (w && y && w.disconnect(y.destination), b.disconnect(), b = undefined), y ? [4, y.close()] : [3, 2]);
         case 1:
           e.sent();
           e.label = 2;
         case 2:
-          y = void 0;
+          y = undefined;
           return [2];
       }
     });
   });
 }
-var P = require("./779");
-var N = require("./516/index");
+import P = require("./779");
+import N = require("./516/index");
 var M = {};
 var j = {};
 var L = {};
 function U(e, t, n) {
-  if (void 0 === n) {
-    n = !1;
+  if (undefined === n) {
+    n = false;
   }
   var r = new P.Howl({
     src: t,
-    html5: !1,
+    html5: false,
     format: ["mp3", "wav"]
   });
   if (n) {
@@ -945,7 +958,7 @@ function H(e, t, n, r) {
   L[i] = i;
   var o = document.body;
   var a = document.createElement("audio");
-  a.autoplay = !0;
+  a.autoplay = true;
   a.src = e;
   a.style.display = "none";
   a.setAttribute("id", "audio" + i);
@@ -968,14 +981,14 @@ function H(e, t, n, r) {
 }
 function V(e) {
   if (!e) {
-    Object(c.forEach)(M, function (e) {
+    c.forEach(M, function (e) {
       e.stop();
     });
-    Object(c.forEach)(j, function (e) {
+    c.forEach(j, function (e) {
       e.stop();
       e.unload();
     });
-    Object(c.forEach)(L, function (e, t) {
+    c.forEach(L, function (e, t) {
       var n = document.getElementById("audio" + t);
       if (n) {
         n.pause();
@@ -1003,12 +1016,12 @@ var z = {};
 var Q = {};
 var W = {};
 function K(e, t, n) {
-  if (void 0 === n) {
-    n = !1;
+  if (undefined === n) {
+    n = false;
   }
   var r = new P.Howl({
     src: t,
-    html5: !0,
+    html5: true,
     format: ["mp3", "wav"]
   });
   if (n) {
@@ -1019,7 +1032,7 @@ function K(e, t, n) {
   return r;
 }
 function X(e, t, n, r, i) {
-  var o = K(r || Object(N.v4)(), e, !0);
+  var o = K(r || N.v4(), e, true);
   if (o) {
     if ("loaded" === o.state()) {
       return void o.play();
@@ -1049,14 +1062,14 @@ function X(e, t, n, r, i) {
 }
 function Y(e) {
   if (!e) {
-    Object(c.forEach)(z, function (e) {
+    c.forEach(z, function (e) {
       e.stop();
     });
-    Object(c.forEach)(Q, function (e) {
+    c.forEach(Q, function (e) {
       e.stop();
       e.unload();
     });
-    Object(c.forEach)(W, function (e, t) {
+    c.forEach(W, function (e, t) {
       var n = document.getElementById("audio" + t);
       if (n) {
         n.pause();
@@ -1084,12 +1097,12 @@ var $ = {};
 var J = {};
 var Z = {};
 function ee(e, t, n) {
-  if (void 0 === n) {
-    n = !1;
+  if (undefined === n) {
+    n = false;
   }
   var r = new P.Howl({
     src: t,
-    html5: !1,
+    html5: false,
     format: ["mp3", "wav"]
   });
   if (n) {
@@ -1111,7 +1124,7 @@ function te(e) {
         console.warn("Howl not Found");
       }
     } else {
-      Object(c.forEach)(J, function (e, t) {
+      c.forEach(J, function (e, t) {
         e.unload();
         delete J[t];
       });
@@ -1122,14 +1135,14 @@ function te(e) {
 }
 function ne(e) {
   if (!e) {
-    Object(c.forEach)($, function (e) {
+    c.forEach($, function (e) {
       e.stop();
     });
-    Object(c.forEach)(J, function (e) {
+    c.forEach(J, function (e) {
       e.stop();
       e.unload();
     });
-    Object(c.forEach)(Z, function (e, t) {
+    c.forEach(Z, function (e, t) {
       var n = document.getElementById("audio" + t);
       if (n) {
         n.pause();
@@ -1172,7 +1185,7 @@ function ie(e, t) {
       console.warn("Howl not Found");
     }
     return n.rate(t);
-  }(e, t) : void 0;
+  }(e, t) : undefined;
 }
 function oe(e, t) {
   return _() ? function (e, t) {
@@ -1193,14 +1206,14 @@ function oe(e, t) {
       console.warn("Howl not Found");
     }
     return n.volume(t);
-  }(e, t) : void 0;
+  }(e, t) : undefined;
 }
 var ae = {
   load: function (e, t, n) {
-    if (void 0 === n) {
-      n = !1;
+    if (undefined === n) {
+      n = false;
     }
-    return _() ? ee(e, t, n) : g() ? U(e, t, n) : A() ? K(e, t, n) : void 0;
+    return _() ? ee(e, t, n) : g() ? U(e, t, n) : A() ? K(e, t, n) : undefined;
   },
   unload: function (e) {
     if (_()) {
@@ -1319,7 +1332,7 @@ var ae = {
             }
             if ("loaded" !== i.state()) {
               console.warn("Howl load fail");
-              X(i._src, t, n, void 0, r);
+              X(i._src, t, n, undefined, r);
             }
             var o = i.play();
             i.once("end", function () {
@@ -1332,7 +1345,7 @@ var ae = {
               if (n) {
                 n();
               }
-              X(i._src, t, n, void 0, r);
+              X(i._src, t, n, undefined, r);
             });
             i.once("stop", function () {
               if (r) {
@@ -1347,7 +1360,7 @@ var ae = {
   play_url: function (e, t, n, r, i) {
     if (_()) {
       (function (e, t, n, r, i) {
-        var o = ee(r || Object(N.v4)(), e, !0);
+        var o = ee(r || N.v4(), e, true);
         if ("loaded" === o.state()) {
           o.play();
         }
@@ -1376,7 +1389,7 @@ var ae = {
     } else {
       if (g()) {
         (function (e, t, n, r, i) {
-          var o = U(r || N.v4(), e, !0);
+          var o = U(r || N.v4(), e, true);
           if (o) {
             if ("loaded" === o.state()) {
               return void o.play();
@@ -1427,12 +1440,12 @@ var ae = {
   is_playing: function (e) {
     return _() ? function (e) {
       if (!e) {
-        return Object(c.find)($, function (e) {
+        return c.find($, function (e) {
           return e.playing();
         });
       }
       if ("url" === e) {
-        return Object(c.find)(J, function (e) {
+        return c.find(J, function (e) {
           return e.playing();
         });
       }
@@ -1443,7 +1456,7 @@ var ae = {
       console.warn("Howl not Found");
     }(e) : g() ? function (e) {
       if (!e) {
-        return Object(c.find)(M, function (e) {
+        return c.find(M, function (e) {
           return e.playing();
         });
       }
@@ -1456,7 +1469,7 @@ var ae = {
       }
     }(e) : A() ? function (e) {
       if (!e) {
-        return Object(c.find)(z, function (e) {
+        return c.find(z, function (e) {
           return e.playing();
         });
       }
@@ -1467,7 +1480,7 @@ var ae = {
         }
         return t.playing();
       }
-    }(e) : void 0;
+    }(e) : undefined;
   },
   set_rate: ie,
   set_volume: oe,
@@ -1513,27 +1526,27 @@ var ae = {
   },
   get_howl: function (e) {
     return _() ? function (e) {
-      if (void 0 != $[e]) {
+      if (undefined != $[e]) {
         return $[e];
       }
     }(e) : g() ? function (e) {
-      if (void 0 != M[e]) {
+      if (undefined != M[e]) {
         return M[e];
       }
     }(e) : A() ? function (e) {
-      if (void 0 != z[e]) {
+      if (undefined != z[e]) {
         return z[e];
       }
-    }(e) : void 0;
+    }(e) : undefined;
   },
   check_sound: function (e) {
     return _() ? function (e) {
-      return void 0 !== $[e];
+      return undefined !== $[e];
     }(e) : g() ? function (e) {
-      return void 0 !== M[e];
+      return undefined !== M[e];
     }(e) : A() ? function (e) {
-      return void 0 !== z[e];
-    }(e) : void 0;
+      return undefined !== z[e];
+    }(e) : undefined;
   }
 };
 var se = ["A0", "Bb0", "B0", "C1", "Db1", "D1", "Eb1", "E1", "F1", "Gb1", "G1", "Ab1", "A1", "Bb1", "B1", "C2", "Db2", "D2", "Eb2", "E2", "F2", "Gb2", "G2", "Ab2", "A2", "Bb2", "B2", "C3", "Db3", "D3", "Eb3", "E3", "F3", "Gb3", "G3", "Ab3", "A3", "Bb3", "B3", "C4", "Db4", "D4", "Eb4", "E4", "F4", "Gb4", "G4", "Ab4", "A4", "Bb4", "B4", "C5", "Db5", "D5", "Eb5", "E5", "F5", "Gb5", "G5", "Ab5", "A5", "Bb5", "B5", "C6", "Db6", "D6", "Eb6", "E6", "F6", "Gb6", "G6", "Ab6", "A6", "Bb6", "B6", "C7", "Db7", "D7", "Eb7", "E7", "F7", "Gb7", "G7", "Ab7", "A7", "Bb7", "B7", "C8"];
@@ -1556,7 +1569,7 @@ function he(e) {
 function pe(e, t) {
   var n = s + "/" + de(e) + ".mp3";
   var r = c.uniqueId("midi");
-  var i = ae.load(r, n, !0);
+  var i = ae.load(r, n, true);
   if (i) {
     if ("loaded" === i.state()) {
       var o = i.play();

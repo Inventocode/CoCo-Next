@@ -1,7 +1,7 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
 var r;
 var i = Object.assign || function (e) {
@@ -19,13 +19,13 @@ var a = (r = o) && r.__esModule ? r : {
 };
 exports.default = function (e) {
   var t = e.fill;
-  var n = void 0 === t ? "currentColor" : t;
+  var n = undefined === t ? "currentColor" : t;
   var r = e.width;
-  var o = void 0 === r ? 24 : r;
+  var o = undefined === r ? 24 : r;
   var s = e.height;
-  var c = void 0 === s ? 24 : s;
+  var c = undefined === s ? 24 : s;
   var u = e.style;
-  var l = void 0 === u ? {} : u;
+  var l = undefined === u ? {} : u;
   var f = function (e, t) {
     var n = {};
     for (var r in e) if (!(t.indexOf(r) >= 0)) {

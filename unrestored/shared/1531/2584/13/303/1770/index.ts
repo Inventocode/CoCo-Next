@@ -18,7 +18,7 @@ module.exports.worker = function (t) {
   return module.exports;
 };
 module.exports.characters = function (e) {
-  if (void 0 !== e) {
+  if (undefined !== e) {
     r.characters(e);
   }
   return r.shuffled();

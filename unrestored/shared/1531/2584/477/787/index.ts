@@ -22,23 +22,23 @@ Object.defineProperty(r, "Mongo", {
     return G;
   }
 });
-var i = require("../../36/483/39");
-var o = require("./265");
-var a = require("./364");
-var s = require("./720/index");
-var c = require("./764/index");
-var u = require("./350");
-var l = require("./218");
-var f = Object(a.b)();
-var d = require("./521");
-var h = require("./926");
-var p = require("./1168");
+import i = require("../../36/483/39");
+import o = require("./265");
+import a = require("./364");
+import s = require("./720/index");
+import c = require("./764/index");
+import u = require("./350");
+import l = require("./218");
+var f = a.b();
+import d = require("./521");
+import h = require("./926");
+import p = require("./1168");
 var _ = function (e, t, n) {
   var r;
   return function (i) {
     if (t.value >= 0 && (i || n)) {
       t.delta = t.value - (r || 0);
-      if (t.delta || void 0 === r) {
+      if (t.delta || undefined === r) {
         r = t.value;
         e(t);
       }
@@ -48,7 +48,7 @@ var _ = function (e, t, n) {
 var A = function (e, t) {
   return {
     name: e,
-    value: null !== t && void 0 !== t ? t : -1,
+    value: null !== t && undefined !== t ? t : -1,
     delta: 0,
     entries: [],
     id: "v2-" + Date.now() + "-" + (Math.floor(8999999999999 * Math.random()) + 1e12)
@@ -65,7 +65,7 @@ var g = function (e, t) {
       });
       n.observe({
         type: e,
-        buffered: !0
+        buffered: true
       });
       return n;
     }
@@ -76,13 +76,13 @@ var v = function (e, t) {
     if (!("pagehide" !== r.type && "hidden" !== document.visibilityState)) {
       e(r);
       if (t) {
-        removeEventListener("visibilitychange", n, !0);
-        removeEventListener("pagehide", n, !0);
+        removeEventListener("visibilitychange", n, true);
+        removeEventListener("pagehide", n, true);
       }
     }
   };
-  addEventListener("visibilitychange", n, !0);
-  addEventListener("pagehide", n, !0);
+  addEventListener("visibilitychange", n, true);
+  addEventListener("pagehide", n, true);
 };
 var m = -1;
 var y = function () {
@@ -91,7 +91,7 @@ var y = function () {
     v(function (e) {
       var t = e.timeStamp;
       m = t;
-    }, !0);
+    }, true);
   }
   return {
     get firstHiddenTime() {
@@ -100,14 +100,14 @@ var y = function () {
   };
 };
 var b = {};
-var w = Object(a.b)();
+var w = a.b();
 var E = function () {
   function e() {
     var e;
     var t;
     this._measurements = {};
     this._performanceCursor = 0;
-    if (!Object(d.b)() && (null === (e = w) || void 0 === e ? void 0 : e.performance) && (null === (t = w) || void 0 === t ? void 0 : t.document)) {
+    if (!d.b() && (null === (e = w) || undefined === e ? undefined : e.performance) && (null === (t = w) || undefined === t ? undefined : t.document)) {
       if (w.performance.mark) {
         w.performance.mark("sentry-tracing-init");
       }
@@ -125,7 +125,7 @@ var E = function () {
       var i;
       var a;
       var s;
-      var c = Object(l.d)(h.a);
+      var c = l.d(h.a);
       if (w.document && w.document.scripts) {
         for (var u = 0; u < w.document.scripts.length; u++) {
           if ("true" === w.document.scripts[u].dataset.entry) {
@@ -135,8 +135,8 @@ var E = function () {
         }
       }
       w.performance.getEntries().slice(this._performanceCursor).forEach(function (u) {
-        var f = Object(l.d)(u.startTime);
-        var d = Object(l.d)(u.duration);
+        var f = l.d(u.startTime);
+        var d = l.d(u.duration);
         if (!("navigation" === e.op && c + f < e.startTimestamp)) {
           switch (u.entryType) {
             case "navigation":
@@ -198,19 +198,19 @@ var E = function () {
                   C(e, {
                     op: "browser",
                     description: "request",
-                    startTimestamp: n + Object(l.d)(t.requestStart),
-                    endTimestamp: n + Object(l.d)(t.responseEnd)
+                    startTimestamp: n + l.d(t.requestStart),
+                    endTimestamp: n + l.d(t.responseEnd)
                   });
                   C(e, {
                     op: "browser",
                     description: "response",
-                    startTimestamp: n + Object(l.d)(t.responseStart),
-                    endTimestamp: n + Object(l.d)(t.responseEnd)
+                    startTimestamp: n + l.d(t.responseStart),
+                    endTimestamp: n + l.d(t.responseEnd)
                   });
                 })(e, t, n);
               }(e, u, c);
-              a = c + Object(l.d)(u.responseStart);
-              s = c + Object(l.d)(u.requestStart);
+              a = c + l.d(u.responseStart);
+              s = c + l.d(u.requestStart);
               break;
             case "mark":
             case "paint":
@@ -226,7 +226,7 @@ var E = function () {
                 });
                 return o;
               }(e, u, f, d, c);
-              if (void 0 === i && "sentry-tracing-init" === u.name) {
+              if (undefined === i && "sentry-tracing-init" === u.name) {
                 i = h;
               }
               var p = y(),
@@ -277,13 +277,13 @@ var E = function () {
                   });
                   return c;
                 }(e, u, A, f, d, c);
-              if (void 0 === r && (n || "").indexOf(A) > -1) {
+              if (undefined === r && (n || "").indexOf(A) > -1) {
                 r = g;
               }
           }
         }
       });
-      if (void 0 !== r && void 0 !== i) {
+      if (undefined !== r && undefined !== i) {
         C(e, {
           description: "evaluation",
           endTimestamp: i,
@@ -294,7 +294,7 @@ var E = function () {
       this._performanceCursor = Math.max(performance.getEntries().length - 1, 0);
       this._trackNavigator(e);
       if ("pageload" === e.op) {
-        var f = Object(l.d)(h.a);
+        var f = l.d(h.a);
         if ("number" === typeof a) {
           o.a.log("[Measurements] Adding TTFB");
           this._measurements.ttfb = {
@@ -309,7 +309,7 @@ var E = function () {
         ["fcp", "fp", "lcp"].forEach(function (n) {
           if (t._measurements[n] && !(f >= e.startTimestamp)) {
             var r = t._measurements[n].value;
-            var i = f + Object(l.d)(r);
+            var i = f + l.d(r);
             var a = Math.abs(1e3 * (i - e.startTimestamp));
             var s = a - r;
             o.a.log("[Measurements] Normalized " + n + " from " + r + " to " + a + " (" + s + ")");
@@ -319,7 +319,7 @@ var E = function () {
         if (this._measurements["mark.fid"] && this._measurements.fid) {
           C(e, {
             description: "first input delay",
-            endTimestamp: this._measurements["mark.fid"].value + Object(l.d)(this._measurements.fid.value),
+            endTimestamp: this._measurements["mark.fid"].value + l.d(this._measurements.fid.value),
             op: "web.vitals",
             startTimestamp: this._measurements["mark.fid"].value
           });
@@ -336,7 +336,7 @@ var E = function () {
     if (this._lcpEntry) {
       o.a.log("[Measurements] Adding LCP Data");
       if (this._lcpEntry.element) {
-        e.setTag("lcp.element", Object(p.a)(this._lcpEntry.element));
+        e.setTag("lcp.element", p.a(this._lcpEntry.element));
       }
       if (this._lcpEntry.id) {
         e.setTag("lcp.id", this._lcpEntry.id);
@@ -349,7 +349,7 @@ var E = function () {
     if (this._clsEntry && this._clsEntry.sources) {
       o.a.log("[Measurements] Adding CLS Data");
       this._clsEntry.sources.forEach(function (t, n) {
-        return e.setTag("cls.source." + (n + 1), Object(p.a)(t.node));
+        return e.setTag("cls.source." + (n + 1), p.a(t.node));
       });
     }
   };
@@ -385,7 +385,7 @@ var E = function () {
         n = _(e, r, t);
         v(function () {
           s.takeRecords().map(a);
-          n(!0);
+          n(true);
         });
       }
     }(function (t) {
@@ -452,23 +452,23 @@ var E = function () {
           if (!b[i.id]) {
             a.takeRecords().map(o);
             a.disconnect();
-            b[i.id] = !0;
-            n(!0);
+            b[i.id] = true;
+            n(true);
           }
         };
         ["keydown", "click"].forEach(function (e) {
           addEventListener(e, s, {
-            once: !0,
-            capture: !0
+            once: true,
+            capture: true
           });
         });
-        v(s, !0);
+        v(s, true);
       }
     }(function (t) {
       var n = t.entries.pop();
       if (n) {
-        var r = Object(l.d)(h.a);
-        var i = Object(l.d)(n.startTime);
+        var r = l.d(h.a);
+        var i = l.d(n.startTime);
         o.a.log("[Measurements] Adding LCP");
         e._measurements.lcp = {
           value: t.value
@@ -490,7 +490,7 @@ var E = function () {
         if (n && e.startTime < r.firstHiddenTime) {
           i.value = e.processingStart - e.startTime;
           i.entries.push(e);
-          n(!0);
+          n(true);
         }
       };
       var a = g("first-input", o);
@@ -499,13 +499,13 @@ var E = function () {
         v(function () {
           a.takeRecords().map(o);
           a.disconnect();
-        }, !0);
+        }, true);
       }
     }(function (t) {
       var n = t.entries.pop();
       if (n) {
-        var r = Object(l.d)(h.a);
-        var i = Object(l.d)(n.startTime);
+        var r = l.d(h.a);
+        var i = l.d(n.startTime);
         o.a.log("[Measurements] Adding FID");
         e._measurements.fid = {
           value: t.value
@@ -530,35 +530,35 @@ function x(e) {
   if (c && s) {
     C(t, {
       op: "browser",
-      description: null !== a && void 0 !== a ? a : r,
-      startTimestamp: i + Object(l.d)(c),
-      endTimestamp: i + Object(l.d)(s)
+      description: null !== a && undefined !== a ? a : r,
+      startTimestamp: i + l.d(c),
+      endTimestamp: i + l.d(s)
     });
   }
 }
 function C(e, t) {
   var n = t.startTimestamp;
-  var r = Object(i.e)(t, ["startTimestamp"]);
+  var r = i.e(t, ["startTimestamp"]);
   if (n && e.startTimestamp > n) {
     e.startTimestamp = n;
   }
-  return e.startChild(Object(i.a)({
+  return e.startChild(i.a({
     startTimestamp: n
   }, r));
 }
 function O(e) {
   return "number" === typeof e && isFinite(e);
 }
-var k = require("./736");
-var S = require("./1508");
-var T = require("./316");
+import k = require("./736");
+import S = require("./1508");
+import T = require("./316");
 var B = {
-  traceFetch: !0,
-  traceXHR: !0,
+  traceFetch: true,
+  traceXHR: true,
   tracingOrigins: ["localhost", /^\//]
 };
 function D(e) {
-  var t = Object(i.a)(Object(i.a)({}, B), e);
+  var t = i.a(i.a({}, B), e);
   var n = t.traceFetch;
   var r = t.traceXHR;
   var o = t.tracingOrigins;
@@ -570,8 +570,8 @@ function D(e) {
     }
     var t = o;
     s[e] = t.some(function (t) {
-      return Object(k.a)(e, t);
-    }) && !Object(k.a)(e, "sentry_key");
+      return k.a(e, t);
+    }) && !k.a(e, "sentry_key");
     return s[e];
   };
   var f = c;
@@ -582,19 +582,19 @@ function D(e) {
   }
   var d = {};
   if (n) {
-    Object(S.a)({
+    S.a({
       callback: function (e) {
         !function (e, t, n) {
-          if (!Object(l.c)() || !e.fetchData || !t(e.fetchData.url)) {
+          if (!l.c() || !e.fetchData || !t(e.fetchData.url)) {
             return;
           }
           if (e.endTimestamp && e.fetchData.__span) {
             return void ((o = n[e.fetchData.__span]) && (e.response ? o.setHttpStatus(e.response.status) : e.error && o.setStatus(u.a.InternalError), o.finish(), delete n[e.fetchData.__span]));
           }
-          var r = Object(l.b)();
+          var r = l.b();
           if (r) {
             var o = r.startChild({
-              data: Object(i.a)(Object(i.a)({}, e.fetchData), {
+              data: i.a(i.a({}, e.fetchData), {
                 type: "fetch"
               }),
               description: e.fetchData.method + " " + e.fetchData.url,
@@ -605,14 +605,14 @@ function D(e) {
             var a = e.args[0] = e.args[0];
             var s = e.args[1] = e.args[1] || {};
             var c = s.headers;
-            if (Object(T.d)(a, Request)) {
+            if (T.d(a, Request)) {
               c = a.headers;
             }
             if (c) {
               if ("function" === typeof c.append) {
                 c.append("sentry-trace", o.toTraceparent());
               } else {
-                c = Array.isArray(c) ? Object(i.f)(c, [["sentry-trace", o.toTraceparent()]]) : Object(i.a)(Object(i.a)({}, c), {
+                c = Array.isArray(c) ? i.f(c, [["sentry-trace", o.toTraceparent()]]) : i.a(i.a({}, c), {
                   "sentry-trace": o.toTraceparent()
                 });
               }
@@ -629,22 +629,22 @@ function D(e) {
     });
   }
   if (r) {
-    Object(S.a)({
+    S.a({
       callback: function (e) {
         !function (e, t, n) {
           var r;
           var o;
-          if (!Object(l.c)() || (null === (r = e.xhr) || void 0 === r ? void 0 : r.__sentry_own_request__) || !(null === (o = e.xhr) || void 0 === o ? void 0 : o.__sentry_xhr__) || !t(e.xhr.__sentry_xhr__.url)) {
+          if (!l.c() || (null === (r = e.xhr) || undefined === r ? undefined : r.__sentry_own_request__) || !(null === (o = e.xhr) || undefined === o ? undefined : o.__sentry_xhr__) || !t(e.xhr.__sentry_xhr__.url)) {
             return;
           }
           var a = e.xhr.__sentry_xhr__;
           if (e.endTimestamp && e.xhr.__sentry_xhr_span_id__) {
             return void ((c = n[e.xhr.__sentry_xhr_span_id__]) && (c.setHttpStatus(a.status_code), c.finish(), delete n[e.xhr.__sentry_xhr_span_id__]));
           }
-          var s = Object(l.b)();
+          var s = l.b();
           if (s) {
             var c = s.startChild({
-              data: Object(i.a)(Object(i.a)({}, a.data), {
+              data: i.a(i.a({}, a.data), {
                 type: "xhr",
                 method: a.method,
                 url: a.url
@@ -666,17 +666,17 @@ function D(e) {
     });
   }
 }
-var I = Object(a.b)();
-var F = Object(i.a)({
+var I = a.b();
+var F = i.a({
   idleTimeout: c.a,
-  markBackgroundTransactions: !0,
+  markBackgroundTransactions: true,
   maxTransactionDuration: 600,
   routingInstrumentation: function (e, t, n) {
-    if (void 0 === t) {
-      t = !0;
+    if (undefined === t) {
+      t = true;
     }
-    if (void 0 === n) {
-      n = !0;
+    if (undefined === n) {
+      n = true;
     }
     if (I && I.location) {
       var r;
@@ -688,15 +688,15 @@ var F = Object(i.a)({
         });
       }
       if (n) {
-        Object(S.a)({
+        S.a({
           callback: function (t) {
             var n = t.to;
             var a = t.from;
-            if (void 0 === a && i && -1 !== i.indexOf(n)) {
-              i = void 0;
+            if (undefined === a && i && -1 !== i.indexOf(n)) {
+              i = undefined;
             } else {
               if (a !== n) {
-                i = void 0;
+                i = undefined;
                 if (r) {
                   o.a.log("[Tracing] Finishing current transaction with op: " + r.op);
                   r.finish();
@@ -715,21 +715,21 @@ var F = Object(i.a)({
       o.a.warn("Could not initialize routing instrumentation due to invalid location");
     }
   },
-  startTransactionOnLocationChange: !0,
-  startTransactionOnPageLoad: !0
+  startTransactionOnLocationChange: true,
+  startTransactionOnPageLoad: true
 }, B);
 var R = function () {
   function e(t) {
     this.name = e.id;
     this._metrics = new E();
-    this._emitOptionsWarning = !1;
+    this._emitOptionsWarning = false;
     var n = B.tracingOrigins;
     if (t && t.tracingOrigins && Array.isArray(t.tracingOrigins) && 0 !== t.tracingOrigins.length) {
       n = t.tracingOrigins;
     } else {
-      this._emitOptionsWarning = !0;
+      this._emitOptionsWarning = true;
     }
-    this.options = Object(i.a)(Object(i.a)(Object(i.a)({}, F), t), {
+    this.options = i.a(i.a(i.a({}, F), t), {
       tracingOrigins: n
     });
   }
@@ -755,7 +755,7 @@ var R = function () {
     if (c) {
       if (f && f.document) {
         f.document.addEventListener("visibilitychange", function () {
-          var e = Object(l.b)();
+          var e = l.b();
           if (f.document.hidden && e) {
             o.a.log("[Tracing] Transaction: " + u.a.Cancelled + " -> since tab moved to the background, op: " + e.op);
             if (!e.status) {
@@ -789,24 +789,24 @@ var R = function () {
           return t ? t.getAttribute("content") : null;
         }("sentry-trace");
         if (e) {
-          return Object(l.a)(e);
+          return l.a(e);
         }
         return;
-      }() : void 0;
-      var h = Object(i.a)(Object(i.a)(Object(i.a)({}, e), d), {
-        trimEnd: !0
+      }() : undefined;
+      var h = i.a(i.a(i.a({}, e), d), {
+        trimEnd: true
       });
       var p = "function" === typeof r ? r(h) : h;
-      var _ = void 0 === p ? Object(i.a)(Object(i.a)({}, h), {
-        sampled: !1
+      var _ = undefined === p ? i.a(i.a({}, h), {
+        sampled: false
       }) : p;
-      if (!1 === _.sampled) {
+      if (false === _.sampled) {
         o.a.log("[Tracing] Will not send " + _.op + " transaction because of beforeNavigate.");
       }
       o.a.log("[Tracing] Starting " + _.op + " transaction on scope");
       var A = this._getCurrentHub();
-      var g = Object(a.b)().location;
-      var v = Object(s.b)(A, _, c, !0, {
+      var g = a.b().location;
+      var v = s.b(A, _, c, true, {
         location: g
       });
       v.registerBeforeFinishCallback(function (e, n) {
@@ -817,7 +817,7 @@ var R = function () {
             t.setStatus(u.a.DeadlineExceeded);
             t.setTag("maxTransactionDurationExceeded", "true");
           }
-        })(Object(l.e)(f), e, n);
+        })(l.e(f), e, n);
       });
       return v;
     }
@@ -828,7 +828,7 @@ var R = function () {
 }();
 var P = function () {
   function e(t) {
-    if (void 0 === t) {
+    if (undefined === t) {
       t = {};
     }
     this.name = e.id;
@@ -838,7 +838,7 @@ var P = function () {
   e.prototype.setupOnce = function () {
     if (this._router) {
       (function (e, t) {
-        if (void 0 === t) {
+        if (undefined === t) {
           t = [];
         }
         t.forEach(function (t) {
@@ -848,7 +848,7 @@ var P = function () {
               for (var e = [], r = 0; r < arguments.length; r++) {
                 e[r] = arguments[r];
               }
-              return n.call.apply(n, Object(i.f)([this], M(e, t)));
+              return n.call.apply(n, i.f([this], M(e, t)));
             };
             return e;
           }(e, t);
@@ -881,7 +881,7 @@ function N(e, t) {
     case 3:
       return function (n, r, o) {
         var a;
-        var s = null === (a = r.__sentry_transaction) || void 0 === a ? void 0 : a.startChild({
+        var s = null === (a = r.__sentry_transaction) || undefined === a ? undefined : a.startChild({
           description: e.name,
           op: "middleware." + t
         });
@@ -889,16 +889,16 @@ function N(e, t) {
           for (var e, t = [], n = 0; n < arguments.length; n++) {
             t[n] = arguments[n];
           }
-          if (!(null === (e = s) || void 0 === e)) {
+          if (!(null === (e = s) || undefined === e)) {
             e.finish();
           }
-          o.call.apply(o, Object(i.f)([this], t));
+          o.call.apply(o, i.f([this], t));
         });
       };
     case 4:
       return function (n, r, o, a) {
         var s;
-        var c = null === (s = o.__sentry_transaction) || void 0 === s ? void 0 : s.startChild({
+        var c = null === (s = o.__sentry_transaction) || undefined === s ? undefined : s.startChild({
           description: e.name,
           op: "middleware." + t
         });
@@ -906,10 +906,10 @@ function N(e, t) {
           for (var e, t = [], n = 0; n < arguments.length; n++) {
             t[n] = arguments[n];
           }
-          if (!(null === (e = c) || void 0 === e)) {
+          if (!(null === (e = c) || undefined === e)) {
             e.finish();
           }
-          a.call.apply(a, Object(i.f)([this], t));
+          a.call.apply(a, i.f([this], t));
         });
       };
     default:
@@ -923,10 +923,10 @@ function M(e, t) {
     }) : e;
   });
 }
-var j = require("./435/index");
+import j = require("./435/index");
 var L = function () {
   function e(t) {
-    if (void 0 === t) {
+    if (undefined === t) {
       t = {};
     }
     this.name = e.id;
@@ -934,23 +934,23 @@ var L = function () {
   }
   e.prototype.setupOnce = function (e, t) {
     var n;
-    var r = Object(d.c)("pg");
+    var r = d.c("pg");
     if (r) {
-      if (!this._usePgNative || (null === (n = r.native) || void 0 === n ? void 0 : n.Client)) {
+      if (!this._usePgNative || (null === (n = r.native) || undefined === n ? undefined : n.Client)) {
         var i = (this._usePgNative ? r.native : r).Client;
-        Object(j.b)(i.prototype, "query", function (e) {
+        j.b(i.prototype, "query", function (e) {
           return function (n, r, i) {
             var o;
             var a;
             var s;
-            var c = null === (a = null === (o = t().getScope()) || void 0 === o ? void 0 : o.getSpan()) || void 0 === a ? void 0 : a.startChild({
+            var c = null === (a = null === (o = t().getScope()) || undefined === o ? undefined : o.getSpan()) || undefined === a ? undefined : a.startChild({
               description: "string" === typeof n ? n : n.text,
               op: "db"
             });
             if ("function" === typeof i) {
               return e.call(this, n, r, function (e, t) {
                 var n;
-                if (!(null === (n = c) || void 0 === n)) {
+                if (!(null === (n = c) || undefined === n)) {
                   n.finish();
                 }
                 i(e, t);
@@ -959,20 +959,20 @@ var L = function () {
             if ("function" === typeof r) {
               return e.call(this, n, function (e, t) {
                 var n;
-                if (!(null === (n = c) || void 0 === n)) {
+                if (!(null === (n = c) || undefined === n)) {
                   n.finish();
                 }
                 r(e, t);
               });
             }
             var u = "undefined" !== typeof r ? e.call(this, n, r) : e.call(this, n);
-            return Object(T.j)(u) ? u.then(function (e) {
+            return T.j(u) ? u.then(function (e) {
               var t;
-              if (!(null === (t = c) || void 0 === t)) {
+              if (!(null === (t = c) || undefined === t)) {
                 t.finish();
               }
               return e;
-            }) : (null === (s = c) || void 0 === s || s.finish(), u);
+            }) : (null === (s = c) || undefined === s || s.finish(), u);
           };
         });
       } else {
@@ -990,25 +990,25 @@ var U = function () {
     this.name = e.id;
   }
   e.prototype.setupOnce = function (e, t) {
-    var n = Object(d.c)("mysql/lib/Connection.js");
+    var n = d.c("mysql/lib/Connection.js");
     if (n) {
-      Object(j.b)(n, "createQuery", function (e) {
+      j.b(n, "createQuery", function (e) {
         return function (n, r, i) {
           var o;
           var a;
-          var s = null === (a = null === (o = t().getScope()) || void 0 === o ? void 0 : o.getSpan()) || void 0 === a ? void 0 : a.startChild({
+          var s = null === (a = null === (o = t().getScope()) || undefined === o ? undefined : o.getSpan()) || undefined === a ? undefined : a.startChild({
             description: "string" === typeof n ? n : n.sql,
             op: "db"
           });
           return "function" === typeof i ? e.call(this, n, r, function (e, t, n) {
             var r;
-            if (!(null === (r = s) || void 0 === r)) {
+            if (!(null === (r = s) || undefined === r)) {
               r.finish();
             }
             i(e, t, n);
           }) : "function" === typeof r ? e.call(this, n, function (e, t, n) {
             var i;
-            if (!(null === (i = s) || void 0 === i)) {
+            if (!(null === (i = s) || undefined === i)) {
               i.finish();
             }
             r(e, t, n);
@@ -1048,7 +1048,7 @@ var V = {
 };
 var G = function () {
   function e(t) {
-    if (void 0 === t) {
+    if (undefined === t) {
       t = {};
     }
     this.name = e.id;
@@ -1058,7 +1058,7 @@ var G = function () {
   }
   e.prototype.setupOnce = function (e, t) {
     var n = this._useMongoose ? "mongoose" : "mongodb";
-    var r = Object(d.c)(n);
+    var r = d.c(n);
     if (r) {
       this._instrumentOperations(r.Collection, this._operations, t);
     } else {
@@ -1074,29 +1074,29 @@ var G = function () {
   e.prototype._patchOperation = function (e, t, n) {
     if (t in e.prototype) {
       var r = this._getSpanContextFromOperationArguments.bind(this);
-      Object(j.b)(e.prototype, t, function (e) {
+      j.b(e.prototype, t, function (e) {
         return function () {
           for (var o, a, s, c, u = [], l = 0; l < arguments.length; l++) {
             u[l] = arguments[l];
           }
           var f = u[u.length - 1];
           var d = n().getScope();
-          var h = null === (o = d) || void 0 === o ? void 0 : o.getSpan();
+          var h = null === (o = d) || undefined === o ? undefined : o.getSpan();
           if ("function" !== typeof f || "mapReduce" === t && 2 === u.length) {
-            var p = null === (a = h) || void 0 === a ? void 0 : a.startChild(r(this, t, u));
-            var _ = e.call.apply(e, Object(i.f)([this], u));
-            return Object(T.j)(_) ? _.then(function (e) {
+            var p = null === (a = h) || undefined === a ? undefined : a.startChild(r(this, t, u));
+            var _ = e.call.apply(e, i.f([this], u));
+            return T.j(_) ? _.then(function (e) {
               var t;
-              if (!(null === (t = p) || void 0 === t)) {
+              if (!(null === (t = p) || undefined === t)) {
                 t.finish();
               }
               return e;
-            }) : (null === (s = p) || void 0 === s || s.finish(), _);
+            }) : (null === (s = p) || undefined === s || s.finish(), _);
           }
-          var A = null === (c = h) || void 0 === c ? void 0 : c.startChild(r(this, t, u.slice(0, -1)));
-          return e.call.apply(e, Object(i.f)([this], u.slice(0, -1), [function (e, t) {
+          var A = null === (c = h) || undefined === c ? undefined : c.startChild(r(this, t, u.slice(0, -1)));
+          return e.call.apply(e, i.f([this], u.slice(0, -1), [function (e, t) {
             var n;
-            if (!(null === (n = A) || void 0 === n)) {
+            if (!(null === (n = A) || undefined === n)) {
               n.finish();
             }
             f(e, t);
@@ -1123,7 +1123,7 @@ var G = function () {
     }
     try {
       if ("mapReduce" === t) {
-        var c = Object(i.d)(n, 2);
+        var c = i.d(n, 2);
         var u = c[0];
         var l = c[1];
         r[a[0]] = "string" === typeof u ? u : u.name || "<anonymous>";
@@ -1139,8 +1139,8 @@ var G = function () {
   e.id = "Mongo";
   return e;
 }();
-var z = Object(i.a)(Object(i.a)({}, r), {
+var z = i.a(i.a({}, r), {
   BrowserTracing: R
 });
-Object(s.a)();
+s.a();
 export default z;

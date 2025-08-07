@@ -5,7 +5,7 @@ var o = require("./1736/167");
 var i = require("./1557/707");
 r({
   target: "Array",
-  stat: !0,
+  stat: true,
   forced: o(function () {
     function e() {}
     return !(Array.of.call(e) instanceof e);

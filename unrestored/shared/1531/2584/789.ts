@@ -2,10 +2,10 @@
 
 export { g as b };
 export { v as a };
-var r = require("./19");
-var i = require("react");
-var o = require("./29");
-var a = require("./8");
+import r = require("./19");
+import i = require("react");
+import o = require("./29");
+import a = require("./8");
 var s = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -18,7 +18,7 @@ var s = function __importDefault(module) {
   });
   return defaultExport;
 }(a);
-var c = require("./2627/686/index");
+import c = require("./2627/686/index");
 var u = function () {
   var e = (0, i.useContext(g).getPrefixCls)("empty-img-default");
   return i.createElement("svg", {
@@ -115,7 +115,7 @@ var p = function (e) {
   var t = e.className;
   var n = e.prefixCls;
   var a = e.image;
-  var u = void 0 === a ? d : a;
+  var u = undefined === a ? d : a;
   var l = e.description;
   var p = e.children;
   var _ = e.imageStyle;
@@ -135,8 +135,8 @@ var p = function (e) {
       alt: d,
       src: u
     }) : u;
-    return i.createElement("div", Object(r.a)({
-      className: s()(c, (a = {}, Object(o.a)(a, "".concat(c, "-normal"), u === h), Object(o.a)(a, "".concat(c, "-rtl"), "rtl" === y), a), t)
+    return i.createElement("div", r.a({
+      className: s()(c, (a = {}, o.a(a, "".concat(c, "-normal"), u === h), o.a(a, "".concat(c, "-rtl"), "rtl" === y), a), t)
     }, A), i.createElement("div", {
       className: "".concat(c, "-image"),
       style: _

@@ -22,7 +22,7 @@ module.exports = function (e) {
       for (; this.count > 0;) {
         this.count -= 1;
         if (!o(a(n.prototype), "moveNext", this).call(this)) {
-          return !1;
+          return false;
         }
       }
       return o(a(n.prototype), "moveNext", this).call(this);

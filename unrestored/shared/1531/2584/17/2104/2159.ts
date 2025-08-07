@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.WorkspaceDragSurfaceSvg = void 0;
+exports.WorkspaceDragSurfaceSvg = undefined;
 var r = require("tslib");
 var i = require("inversify");
 var o = require("../../4/127");
@@ -11,7 +11,7 @@ var a = require("../../125/index");
 var s = require("../../125/534");
 var c = function () {
   function e(e, t) {
-    this.previous_sibling_ = void 0;
+    this.previous_sibling_ = undefined;
     this.container_ = e;
     this.SVG_ = (0, a.create_svg_element)("svg", {
       xmlns: s.SVG_NS,
@@ -70,7 +70,7 @@ var c = function () {
     if (!t || !n || !(0, a.has_class)(t, "blocklyBlockCanvas") || !(0, a.has_class)(n, "blocklyBubbleCanvas")) {
       throw new Error("Couldn't clear and hide the drag surface.  A node was missing.");
     }
-    if (void 0 != this.previous_sibling_) {
+    if (undefined != this.previous_sibling_) {
       (0, a.insert_after)(t, this.previous_sibling_);
     } else {
       e.insertBefore(t, e.firstChild);
@@ -81,9 +81,9 @@ var c = function () {
       console.error("Drag surface was not cleared.");
     }
     (0, a.set_css_transform)(this.SVG_, "");
-    this.previous_sibling_ = void 0;
+    this.previous_sibling_ = undefined;
   };
-  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.utils)], e.prototype, "utils", void 0);
+  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.utils)], e.prototype, "utils", undefined);
   return e = (0, r.__decorate)([(0, i.injectable)()], e);
 }();
 exports.WorkspaceDragSurfaceSvg = c;

@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.NodeType = void 0;
+exports.NodeType = undefined;
 (function (e) {
   e[e.ELEMENT = 1] = "ELEMENT";
   e[e.ATTRIBUTE = 2] = "ATTRIBUTE";

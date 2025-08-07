@@ -1,24 +1,24 @@
 "use strict";
 
 var r = this && this.__createBinding || (Object.create ? function (e, t, n, r) {
-  if (void 0 === r) {
+  if (undefined === r) {
     r = n;
   }
   Object.defineProperty(e, r, {
-    enumerable: !0,
+    enumerable: true,
     get: function () {
       return t[n];
     }
   });
 } : function (e, t, n, r) {
-  if (void 0 === r) {
+  if (undefined === r) {
     r = n;
   }
   e[r] = t[n];
 });
 var i = this && this.__setModuleDefault || (Object.create ? function (e, t) {
   Object.defineProperty(e, "default", {
-    enumerable: !0,
+    enumerable: true,
     value: t
   });
 } : function (e, t) {
@@ -43,9 +43,9 @@ var a = this && this.__importDefault || function (e) {
   };
 };
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.type = exports.remove = exports.insert = void 0;
+exports.type = exports.remove = exports.insert = undefined;
 var s = require("./1124");
 var c = o(require("./1125"));
 var u = a(require("./2291"));
@@ -100,7 +100,7 @@ exports.remove = function (e, t) {
 };
 var h = require("./1125");
 Object.defineProperty(exports, "makeType", {
-  enumerable: !0,
+  enumerable: true,
   get: function () {
     return h.default;
   }

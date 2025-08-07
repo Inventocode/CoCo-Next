@@ -24,7 +24,7 @@ module.exports = function (e, t, n) {
   var w = Object.keys(b).filter(F);
   var E = e.schema.additionalProperties;
   var x = y.length || w.length;
-  var C = !1 === E;
+  var C = false === E;
   var O = "object" == typeof E && Object.keys(E).length;
   var k = e.opts.removeAdditional;
   var S = C || O || k;
@@ -86,9 +86,9 @@ module.exports = function (e, t, n) {
           c = e.errSchemaPath + "/additionalProperties";
           (ne = ne || []).push(r);
           r = "";
-          if (!1 !== e.createErrors) {
+          if (false !== e.createErrors) {
             r += " { keyword: 'additionalProperties' , dataPath: (dataPath || '') + " + e.errorPath + " , schemaPath: " + e.util.toQuotedString(c) + " , params: { additionalProperty: '" + H + "' } ";
-            if (!1 !== e.opts.messages) {
+            if (false !== e.opts.messages) {
               r += " , message: '";
               if (e.opts._errorDataPathProperty) {
                 r += "is an invalid additional property";
@@ -124,7 +124,7 @@ module.exports = function (e, t, n) {
         if ("failing" == k) {
           r += " var " + f + " = errors;  ";
           var z = e.compositeRule;
-          e.compositeRule = d.compositeRule = !0;
+          e.compositeRule = d.compositeRule = true;
           d.schema = E;
           d.schemaPath = e.schemaPath + ".additionalProperties";
           d.errSchemaPath = e.errSchemaPath + "/additionalProperties";
@@ -176,10 +176,10 @@ module.exports = function (e, t, n) {
     if (X) {
       for (var Y, q = -1, $ = X.length - 1; q < $;) {
         var J = a[Y = X[q += 1]];
-        if (e.opts.strictKeywords ? "object" == typeof J && Object.keys(J).length > 0 || !1 === J : e.util.schemaHasRules(J, e.RULES.all)) {
+        if (e.opts.strictKeywords ? "object" == typeof J && Object.keys(J).length > 0 || false === J : e.util.schemaHasRules(J, e.RULES.all)) {
           var Z = e.util.getProperty(Y);
           Q = l + Z;
-          var ee = K && void 0 !== J.default;
+          var ee = K && undefined !== J.default;
           d.schema = J;
           d.schemaPath = s + Z;
           d.errSchemaPath = c + "/" + e.util.escapeFragment(Y);
@@ -213,9 +213,9 @@ module.exports = function (e, t, n) {
               c = e.errSchemaPath + "/required";
               (ne = ne || []).push(r);
               r = "";
-              if (!1 !== e.createErrors) {
+              if (false !== e.createErrors) {
                 r += " { keyword: 'required' , dataPath: (dataPath || '') + " + e.errorPath + " , schemaPath: " + e.util.toQuotedString(c) + " , params: { missingProperty: '" + re + "' } ";
-                if (!1 !== e.opts.messages) {
+                if (false !== e.opts.messages) {
                   r += " , message: '";
                   if (e.opts._errorDataPathProperty) {
                     r += "is a required property";
@@ -273,7 +273,7 @@ module.exports = function (e, t, n) {
     if (ie) {
       for (var oe, ae = -1, se = ie.length - 1; ae < se;) {
         J = b[oe = ie[ae += 1]];
-        if (e.opts.strictKeywords ? "object" == typeof J && Object.keys(J).length > 0 || !1 === J : e.util.schemaHasRules(J, e.RULES.all)) {
+        if (e.opts.strictKeywords ? "object" == typeof J && Object.keys(J).length > 0 || false === J : e.util.schemaHasRules(J, e.RULES.all)) {
           d.schema = J;
           d.schemaPath = e.schemaPath + ".patternProperties" + e.util.getProperty(oe);
           d.errSchemaPath = e.errSchemaPath + "/patternProperties/" + e.util.escapeFragment(oe);

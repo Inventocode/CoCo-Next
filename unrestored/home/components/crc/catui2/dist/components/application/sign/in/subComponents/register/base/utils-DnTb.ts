@@ -34,7 +34,7 @@ var oldTheme2newThemeMap = {
 };
 function getNewThemeColorName(oldColor) {
   var _oldTheme2newThemeMap;
-  return (_oldTheme2newThemeMap = oldTheme2newThemeMap[oldColor]) !== null && _oldTheme2newThemeMap !== void 0 ? _oldTheme2newThemeMap : 'theme-color-0';
+  return (_oldTheme2newThemeMap = oldTheme2newThemeMap[oldColor]) !== null && _oldTheme2newThemeMap !== undefined ? _oldTheme2newThemeMap : 'theme-color-0';
 }
 
 /***/

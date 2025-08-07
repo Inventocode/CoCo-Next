@@ -1,35 +1,35 @@
 "use strict";
 
 export { A as a };
-var r = require("../../36/483/39");
-var i = require("./316");
-var o = require("./265");
-var a = require("./364");
-var s = require("./435/index");
-var c = require("./435/986");
+import r = require("../../36/483/39");
+import i = require("./316");
+import o = require("./265");
+import a = require("./364");
+import s = require("./435/index");
+import c = require("./435/986");
 function u() {
-  if (!("fetch" in Object(a.b)())) {
-    return !1;
+  if (!("fetch" in a.b())) {
+    return false;
   }
   try {
     new Headers();
     new Request("");
     new Response();
-    return !0;
+    return true;
   } catch (e) {
-    return !1;
+    return false;
   }
 }
 function l(e) {
   return e && /^function fetch\(\)\s+\{\s+\[native code\]\s+\}$/.test(e.toString());
 }
 var f;
-var d = Object(a.b)();
+var d = a.b();
 var h = {};
 var p = {};
 function _(e) {
   if (!p[e]) {
-    switch (p[e] = !0, e) {
+    switch (p[e] = true, e) {
       case "console":
         !function () {
           if (!("console" in d)) {
@@ -37,7 +37,7 @@ function _(e) {
           }
           ["debug", "info", "warn", "error", "log", "assert"].forEach(function (e) {
             if (e in d.console) {
-              Object(s.b)(d.console, e, function (t) {
+              s.b(d.console, e, function (t) {
                 return function () {
                   for (var n = [], r = 0; r < arguments.length; r++) {
                     n[r] = arguments[r];
@@ -61,13 +61,13 @@ function _(e) {
             return;
           }
           var e = g.bind(null, "dom");
-          var t = w(e, !0);
-          d.document.addEventListener("click", t, !1);
-          d.document.addEventListener("keypress", t, !1);
+          var t = w(e, true);
+          d.document.addEventListener("click", t, false);
+          d.document.addEventListener("keypress", t, false);
           ["EventTarget", "Node"].forEach(function (t) {
             var n = d[t] && d[t].prototype;
             if (n && n.hasOwnProperty && n.hasOwnProperty("addEventListener")) {
-              Object(s.b)(n, "addEventListener", function (t) {
+              s.b(n, "addEventListener", function (t) {
                 return function (n, r, i) {
                   if ("click" === n || "keypress" == n) {
                     try {
@@ -86,7 +86,7 @@ function _(e) {
                   return t.call(this, n, r, i);
                 };
               });
-              Object(s.b)(n, "removeEventListener", function (e) {
+              s.b(n, "removeEventListener", function (e) {
                 return function (t, n, r) {
                   if ("click" === t || "keypress" == t) {
                     try {
@@ -96,7 +96,7 @@ function _(e) {
                         o.refCount -= 1;
                         if (o.refCount <= 0) {
                           e.call(this, t, o.handler, r);
-                          o.handler = void 0;
+                          o.handler = undefined;
                           delete i[t];
                         }
                         if (0 === Object.keys(i).length) {
@@ -120,7 +120,7 @@ function _(e) {
           var e = [];
           var t = [];
           var n = XMLHttpRequest.prototype;
-          Object(s.b)(n, "open", function (n) {
+          s.b(n, "open", function (n) {
             return function () {
               for (var r = [], o = 0; o < arguments.length; o++) {
                 r[o] = arguments[o];
@@ -128,11 +128,11 @@ function _(e) {
               var a = this;
               var c = r[1];
               a.__sentry_xhr__ = {
-                method: Object(i.h)(r[0]) ? r[0].toUpperCase() : r[0],
+                method: i.h(r[0]) ? r[0].toUpperCase() : r[0],
                 url: r[1]
               };
-              if (Object(i.h)(c) && "POST" === a.__sentry_xhr__.method && c.match(/sentry_key/)) {
-                a.__sentry_own_request__ = !0;
+              if (i.h(c) && "POST" === a.__sentry_xhr__.method && c.match(/sentry_key/)) {
+                a.__sentry_own_request__ = true;
               }
               var u = function () {
                 if (4 === a.readyState) {
@@ -146,7 +146,7 @@ function _(e) {
                     if (-1 !== n) {
                       e.splice(n);
                       var i = t.splice(n)[0];
-                      if (a.__sentry_xhr__ && void 0 !== i[0]) {
+                      if (a.__sentry_xhr__ && undefined !== i[0]) {
                         a.__sentry_xhr__.body = i[0];
                       }
                     }
@@ -160,7 +160,7 @@ function _(e) {
                 }
               };
               if ("onreadystatechange" in a && "function" === typeof a.onreadystatechange) {
-                Object(s.b)(a, "onreadystatechange", function (e) {
+                s.b(a, "onreadystatechange", function (e) {
                   return function () {
                     for (var t = [], n = 0; n < arguments.length; n++) {
                       t[n] = arguments[n];
@@ -175,7 +175,7 @@ function _(e) {
               return n.apply(a, r);
             };
           });
-          Object(s.b)(n, "send", function (n) {
+          s.b(n, "send", function (n) {
             return function () {
               for (var r = [], i = 0; i < arguments.length; i++) {
                 r[i] = arguments[i];
@@ -196,18 +196,18 @@ function _(e) {
         !function () {
           if (!function () {
             if (!u()) {
-              return !1;
+              return false;
             }
-            var e = Object(a.b)();
+            var e = a.b();
             if (l(e.fetch)) {
-              return !0;
+              return true;
             }
-            var t = !1;
+            var t = false;
             var n = e.document;
             if (n && "function" === typeof n.createElement) {
               try {
                 var r = n.createElement("iframe");
-                r.hidden = !0;
+                r.hidden = true;
                 n.head.appendChild(r);
                 if (r.contentWindow && r.contentWindow.fetch) {
                   t = l(r.contentWindow.fetch);
@@ -221,7 +221,7 @@ function _(e) {
           }()) {
             return;
           }
-          Object(s.b)(d, "fetch", function (e) {
+          s.b(d, "fetch", function (e) {
             return function () {
               for (var t = [], n = 0; n < arguments.length; n++) {
                 t[n] = arguments[n];
@@ -234,18 +234,19 @@ function _(e) {
                 },
                 startTimestamp: Date.now()
               };
-              g("fetch", Object(r.a)({}, i));
+              g("fetch", r.a({}, i));
               return e.apply(d, t).then(function (e) {
-                g("fetch", Object(r.a)(Object(r.a)({}, i), {
+                g("fetch", r.a(r.a({}, i), {
                   endTimestamp: Date.now(),
                   response: e
                 }));
                 return e;
               }, function (e) {
-                throw g("fetch", Object(r.a)(Object(r.a)({}, i), {
+                g("fetch", r.a(r.a({}, i), {
                   endTimestamp: Date.now(),
                   error: e
-                })), e;
+                }));
+                throw e;
               });
             };
           });
@@ -254,7 +255,7 @@ function _(e) {
       case "history":
         !function () {
           if (!function () {
-            var e = Object(a.b)();
+            var e = a.b();
             var t = e.chrome;
             var n = t && t.app && t.app.runtime;
             var r = "history" in e && !!e.history.pushState && !!e.history.replaceState;
@@ -268,7 +269,7 @@ function _(e) {
               for (var t = [], n = 0; n < arguments.length; n++) {
                 t[n] = arguments[n];
               }
-              var r = t.length > 2 ? t[2] : void 0;
+              var r = t.length > 2 ? t[2] : undefined;
               if (r) {
                 var i = f;
                 var o = String(r);
@@ -298,8 +299,8 @@ function _(e) {
               } catch (o) {}
             }
           };
-          Object(s.b)(d.history, "pushState", t);
-          Object(s.b)(d.history, "replaceState", t);
+          s.b(d.history, "pushState", t);
+          s.b(d.history, "replaceState", t);
         }();
         break;
       case "error":
@@ -339,12 +340,12 @@ function g(e, t) {
   var i;
   if (e && h[e]) {
     try {
-      for (var a = Object(r.g)(h[e] || []), s = a.next(); !s.done; s = a.next()) {
+      for (var a = r.g(h[e] || []), s = a.next(); !s.done; s = a.next()) {
         var u = s.value;
         try {
           u(t);
         } catch (l) {
-          o.a.error("Error while triggering instrumentation handler.\nType: " + e + "\nName: " + Object(c.a)(u) + "\nError: " + l);
+          o.a.error("Error while triggering instrumentation handler.\nType: " + e + "\nName: " + c.a(u) + "\nError: " + l);
         }
       }
     } catch (f) {
@@ -365,53 +366,53 @@ function g(e, t) {
   }
 }
 function v(e) {
-  if (void 0 === e) {
+  if (undefined === e) {
     e = [];
   }
-  return "Request" in d && Object(i.d)(e[0], Request) && e[0].method ? String(e[0].method).toUpperCase() : e[1] && e[1].method ? String(e[1].method).toUpperCase() : "GET";
+  return "Request" in d && i.d(e[0], Request) && e[0].method ? String(e[0].method).toUpperCase() : e[1] && e[1].method ? String(e[1].method).toUpperCase() : "GET";
 }
 function m(e) {
-  if (void 0 === e) {
+  if (undefined === e) {
     e = [];
   }
-  return "string" === typeof e[0] ? e[0] : "Request" in d && Object(i.d)(e[0], Request) ? e[0].url : String(e[0]);
+  return "string" === typeof e[0] ? e[0] : "Request" in d && i.d(e[0], Request) ? e[0].url : String(e[0]);
 }
 var y;
 var b;
 function w(e, t) {
-  if (void 0 === t) {
-    t = !1;
+  if (undefined === t) {
+    t = false;
   }
   return function (n) {
     if (n && b !== n && !function (e) {
       if ("keypress" !== e.type) {
-        return !1;
+        return false;
       }
       try {
         var t = e.target;
         if (!t || !t.tagName) {
-          return !0;
+          return true;
         }
         if ("INPUT" === t.tagName || "TEXTAREA" === t.tagName || t.isContentEditable) {
-          return !1;
+          return false;
         }
       } catch (n) {}
-      return !0;
+      return true;
     }(n)) {
       var r = "keypress" === n.type ? "input" : n.type;
-      if (void 0 === y || function (e, t) {
+      if (undefined === y || function (e, t) {
         if (!e) {
-          return !0;
+          return true;
         }
         if (e.type !== t.type) {
-          return !0;
+          return true;
         }
         try {
           if (e.target !== t.target) {
-            return !0;
+            return true;
           }
         } catch (n) {}
-        return !1;
+        return false;
       }(b, n)) {
         e({
           event: n,
@@ -422,7 +423,7 @@ function w(e, t) {
       }
       clearTimeout(y);
       y = d.setTimeout(function () {
-        y = void 0;
+        y = undefined;
       }, 1e3);
     }
   };

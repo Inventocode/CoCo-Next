@@ -4,9 +4,9 @@ export { i as d };
 export { o as c };
 export { a as b };
 export { s as a };
-var r = require("./306");
+import r = require("./306");
 function i(e, t) {
-  if (void 0 === t) {
+  if (undefined === t) {
     t = 0;
   }
   return "string" !== typeof e || 0 === t || e.length <= t ? e : e.substr(0, t) + "...";
@@ -55,6 +55,6 @@ function a(e, t) {
   return n.join(t);
 }
 function s(e, t) {
-  return !!Object(r.k)(e) && (Object(r.j)(t) ? t.test(e) : "string" === typeof t && -1 !== e.indexOf(t));
+  return !!r.k(e) && (r.j(t) ? t.test(e) : "string" === typeof t && -1 !== e.indexOf(t));
 }
 export default s;

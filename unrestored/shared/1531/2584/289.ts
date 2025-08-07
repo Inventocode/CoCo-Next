@@ -3,7 +3,7 @@
 export { s as c };
 export { l as b };
 export { d as a };
-var r = require("./1/index");
+import r = require("regenerator-runtime");
 var o = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -16,13 +16,13 @@ var o = function __importDefault(module) {
   });
   return defaultExport;
 }(r);
-var i = require("./7");
-var a = require("./182");
+import i = require("./7");
+import a = require("./182");
 function s(e) {
   return c.apply(this, arguments);
 }
 function c() {
-  return (c = Object(i.a)(o.a.mark(function e(t) {
+  return (c = i.a(o.a.mark(function e(t) {
     var n;
     var r;
     var i;
@@ -37,16 +37,16 @@ function c() {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
-            if (i = JSON.stringify(t), s = !0, !i.includes("UNSAFE_EXTENSION_") && !(null === t || void 0 === t || null === (n = t.unsafeExtensionWidgetList) || void 0 === n ? void 0 : n.length)) {
+            if (i = JSON.stringify(t), s = true, !i.includes("UNSAFE_EXTENSION_") && !(null === t || undefined === t || null === (n = t.unsafeExtensionWidgetList) || undefined === n ? undefined : n.length)) {
               e.next = 7;
               break;
             }
             console.info("当前作品包含自定义控件");
-            s = !1;
+            s = false;
             e.next = 28;
             break;
           case 7:
-            if (!((null === t || void 0 === t || null === (r = t.extensionWidgetList) || void 0 === r ? void 0 : r.length) > 0)) {
+            if (!((null === t || undefined === t || null === (r = t.extensionWidgetList) || undefined === r ? undefined : r.length) > 0)) {
               e.next = 28;
               break;
             }
@@ -54,7 +54,7 @@ function c() {
             l = 1;
             u = 100;
             e.next = 13;
-            return Object(a.e)(l, u);
+            return a.e(l, u);
           case 13:
             if (d = e.sent, c = c.concat(d.items.map(function (e) {
               return e.resource_url;
@@ -69,7 +69,7 @@ function c() {
               break;
             }
             e.next = 21;
-            return Object(a.e)(l, u);
+            return a.e(l, u);
           case 21:
             f = e.sent;
             c = c.concat(f.items.map(function (e) {
@@ -84,7 +84,7 @@ function c() {
               return !c.includes(e.cdnUrl);
             }).length > 0) {
               console.info("当前作品包含自定义控件");
-              s = !1;
+              s = false;
             }
           case 28:
             if (!s) {
@@ -107,7 +107,7 @@ function l() {
   return u.apply(this, arguments);
 }
 function u() {
-  return (u = Object(i.a)(o.a.mark(function e() {
+  return (u = i.a(o.a.mark(function e() {
     var t;
     var n;
     return o.a.wrap(function (e) {

@@ -1,7 +1,7 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
 var r = require("./444");
 var i = require("../359");
@@ -19,7 +19,7 @@ var s = function () {
 exports.LazyServiceIdentifer = s;
 exports.inject = function (e) {
   return function (t, n, s) {
-    if (void 0 === e) {
+    if (undefined === e) {
       throw new Error(r.UNDEFINED_INJECT_ANNOTATION(t.name));
     }
     var c = new o.Metadata(i.INJECT_TAG, e);

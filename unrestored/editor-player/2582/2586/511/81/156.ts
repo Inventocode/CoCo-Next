@@ -25,7 +25,7 @@ var i = function () {
   }
   t.forBits = function (e) {
     var r = t.FOR_BITS.get(e);
-    if (void 0 === r) {
+    if (undefined === r) {
       throw new o.a();
     }
     return r;
@@ -44,7 +44,7 @@ var i = function () {
   };
   t.prototype.equals = function (e) {
     if (!(e instanceof t)) {
-      return !1;
+      return false;
     }
     var r = e;
     return this.value === r.value;

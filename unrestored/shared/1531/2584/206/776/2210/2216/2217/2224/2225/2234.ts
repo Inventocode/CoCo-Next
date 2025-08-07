@@ -9,7 +9,7 @@ module.exports = function (e, t, n) {
   var c = e.errSchemaPath + "/" + t;
   var u = !e.opts.allErrors;
   var l = "data" + (o || "");
-  if (!1 === e.opts.format) {
+  if (false === e.opts.format) {
     if (u) {
       r += " if (true) { ";
     }
@@ -70,7 +70,7 @@ module.exports = function (e, t, n) {
     var A;
     var g = (A = "object" == typeof _ && !(_ instanceof RegExp) && _.validate) && _.type || "string";
     if (A) {
-      var v = !0 === _.async;
+      var v = true === _.async;
       _ = _.validate;
     }
     if (g != n) {
@@ -97,11 +97,11 @@ module.exports = function (e, t, n) {
   var y = y || [];
   y.push(r);
   r = "";
-  if (!1 !== e.createErrors) {
+  if (false !== e.createErrors) {
     r += " { keyword: 'format' , dataPath: (dataPath || '') + " + e.errorPath + " , schemaPath: " + e.util.toQuotedString(c) + " , params: { format:  ";
     r += d ? "" + f : "" + e.util.toQuotedString(a);
     r += "  } ";
-    if (!1 !== e.opts.messages) {
+    if (false !== e.opts.messages) {
       r += " , message: 'should match format \"";
       r += d ? "' + " + f + " + '" : "" + e.util.escapeQuotes(a);
       r += "\"' ";

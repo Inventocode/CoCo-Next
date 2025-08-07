@@ -1,16 +1,16 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.TouchManager = void 0;
+exports.TouchManager = undefined;
 var r = require("tslib");
 var i = require("inversify");
 var o = require("../../4/127");
 var a = require("../../1001/213/index");
 var s = function () {
   function e() {
-    this._touch_identifier = void 0;
+    this._touch_identifier = undefined;
     this.TOUCH_MAP = a.BrowserFeature.TOUCH_ENABLED ? {
       mousedown: ["touchstart"],
       mousemove: ["touchmove"],
@@ -42,7 +42,7 @@ var s = function () {
     }
   };
   e.prototype.clear_touch_identifier = function () {
-    this._touch_identifier = void 0;
+    this._touch_identifier = undefined;
   };
   e.prototype.should_handle_event = function (e) {
     return !this.is_mouse_or_touch_event(e) || this.check_touch_identifier(e);
@@ -53,7 +53,7 @@ var s = function () {
   };
   e.prototype.check_touch_identifier = function (e) {
     var t = this.get_touch_identifier_from_event(e);
-    return void 0 != this._touch_identifier ? this._touch_identifier == t : ("mousedown" == e.type || "touchstart" == e.type) && (this._touch_identifier = t, !0);
+    return undefined != this._touch_identifier ? this._touch_identifier == t : ("mousedown" == e.type || "touchstart" == e.type) && (this._touch_identifier = t, true);
   };
   e.prototype.set_client_from_touch = function (e) {
     if (this.is_touch_event(e)) {
@@ -89,7 +89,7 @@ var s = function () {
     }
     return t;
   };
-  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.theme)], e.prototype, "theme", void 0);
+  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.theme)], e.prototype, "theme", undefined);
   return e = (0, r.__decorate)([(0, i.injectable)()], e);
 }();
 exports.TouchManager = s;

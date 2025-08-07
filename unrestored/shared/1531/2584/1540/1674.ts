@@ -6,10 +6,10 @@ var i = require("./1675/421");
 var a = require("./1745/310");
 r({
   target: "String",
-  proto: !0,
+  proto: true,
   forced: !require("./1684/1076")("includes")
 }, {
   includes: function (e) {
-    return !!~a(i(this)).indexOf(a(o(e)), arguments.length > 1 ? arguments[1] : void 0);
+    return !!~a(i(this)).indexOf(a(o(e)), arguments.length > 1 ? arguments[1] : undefined);
   }
 });

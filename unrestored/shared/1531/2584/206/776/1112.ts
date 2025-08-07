@@ -45,13 +45,13 @@ module.exports = {
     switch (e) {
       case "off":
         return "off";
-      case !0:
+      case true:
       case "true":
       case "writeable":
       case "writable":
         return "writable";
       case null:
-      case !1:
+      case false:
       case "false":
       case "readable":
       case "readonly":

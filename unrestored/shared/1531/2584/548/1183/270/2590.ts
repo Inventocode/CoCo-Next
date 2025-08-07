@@ -11,25 +11,25 @@ var u = require("./2625/1507");
 var l = require("./234");
 var f = o.forwardRef(function (e, t) {
   var n = e.edge;
-  var s = void 0 !== n && n;
+  var s = undefined !== n && n;
   var c = e.children;
   var f = e.classes;
   var d = e.className;
   var h = e.color;
-  var p = void 0 === h ? "default" : h;
+  var p = undefined === h ? "default" : h;
   var _ = e.disabled;
-  var A = void 0 !== _ && _;
+  var A = undefined !== _ && _;
   var g = e.disableFocusRipple;
-  var v = void 0 !== g && g;
+  var v = undefined !== g && g;
   var m = e.size;
-  var y = void 0 === m ? "medium" : m;
-  var b = Object(i.a)(e, ["edge", "children", "classes", "className", "color", "disabled", "disableFocusRipple", "size"]);
-  return o.createElement(u.a, Object(r.a)({
-    className: Object(a.a)(f.root, d, "default" !== p && f["color".concat(Object(l.a)(p))], A && f.disabled, "small" === y && f["size".concat(Object(l.a)(y))], {
+  var y = undefined === m ? "medium" : m;
+  var b = i.a(e, ["edge", "children", "classes", "className", "color", "disabled", "disableFocusRipple", "size"]);
+  return o.createElement(u.a, r.a({
+    className: a.a(f.root, d, "default" !== p && f["color".concat(l.a(p))], A && f.disabled, "small" === y && f["size".concat(l.a(y))], {
       start: f.edgeStart,
       end: f.edgeEnd
     }[s]),
-    centerRipple: !0,
+    centerRipple: true,
     focusRipple: !v,
     disabled: A,
     ref: t
@@ -37,7 +37,7 @@ var f = o.forwardRef(function (e, t) {
     className: f.label
   }, c));
 });
-exports.a = Object(s.a)(function (e) {
+exports.a = s.a(function (e) {
   return {
     root: {
       textAlign: "center",
@@ -51,7 +51,7 @@ exports.a = Object(s.a)(function (e) {
         duration: e.transitions.duration.shortest
       }),
       "&:hover": {
-        backgroundColor: Object(c.a)(e.palette.action.active, e.palette.action.hoverOpacity),
+        backgroundColor: c.a(e.palette.action.active, e.palette.action.hoverOpacity),
         "@media (hover: none)": {
           backgroundColor: "transparent"
         }
@@ -79,7 +79,7 @@ exports.a = Object(s.a)(function (e) {
     colorPrimary: {
       color: e.palette.primary.main,
       "&:hover": {
-        backgroundColor: Object(c.a)(e.palette.primary.main, e.palette.action.hoverOpacity),
+        backgroundColor: c.a(e.palette.primary.main, e.palette.action.hoverOpacity),
         "@media (hover: none)": {
           backgroundColor: "transparent"
         }
@@ -88,7 +88,7 @@ exports.a = Object(s.a)(function (e) {
     colorSecondary: {
       color: e.palette.secondary.main,
       "&:hover": {
-        backgroundColor: Object(c.a)(e.palette.secondary.main, e.palette.action.hoverOpacity),
+        backgroundColor: c.a(e.palette.secondary.main, e.palette.action.hoverOpacity),
         "@media (hover: none)": {
           backgroundColor: "transparent"
         }

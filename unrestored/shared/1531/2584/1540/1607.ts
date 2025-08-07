@@ -3,7 +3,7 @@ var o = Math.ceil;
 var i = Math.floor;
 r({
   target: "Math",
-  stat: !0
+  stat: true
 }, {
   trunc: function (e) {
     return (e > 0 ? i : o)(e);

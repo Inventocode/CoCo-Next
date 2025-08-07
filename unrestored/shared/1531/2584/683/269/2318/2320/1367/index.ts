@@ -1,7 +1,7 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
 var r = require("../../../359");
 var i = require("../../../715");
@@ -29,10 +29,10 @@ var s = function () {
   e.prototype.hasTag = function (e) {
     for (var t = 0, n = this.metadata; t < n.length; t++) {
       if (n[t].key === e) {
-        return !0;
+        return true;
       }
     }
-    return !1;
+    return false;
   };
   e.prototype.isArray = function () {
     return this.hasTag(r.MULTI_INJECT_TAG);
@@ -49,7 +49,7 @@ var s = function () {
     });
   };
   e.prototype.isOptional = function () {
-    return this.matchesTag(r.OPTIONAL_TAG)(!0);
+    return this.matchesTag(r.OPTIONAL_TAG)(true);
   };
   e.prototype.getNamedTag = function () {
     return this.isNamed() ? this.metadata.filter(function (e) {
@@ -70,10 +70,10 @@ var s = function () {
       for (var r = 0, i = t.metadata; r < i.length; r++) {
         var o = i[r];
         if (o.key === e && o.value === n) {
-          return !0;
+          return true;
         }
       }
-      return !1;
+      return false;
     };
   };
   return e;

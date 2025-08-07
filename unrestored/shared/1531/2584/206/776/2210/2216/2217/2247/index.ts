@@ -13,7 +13,7 @@ module.exports = {
       throw new Error("Keyword " + e + " is not a valid identifier");
     }
     if (t) {
-      this.validateKeyword(t, !0);
+      this.validateKeyword(t, true);
       var o = t.type;
       if (Array.isArray(o)) {
         for (var a = 0; a < o.length; a++) {
@@ -31,7 +31,7 @@ module.exports = {
             }]
           };
         }
-        t.validateSchema = this.compile(s, !0);
+        t.validateSchema = this.compile(s, true);
       }
     }
     function c(e, t, r) {
@@ -52,19 +52,19 @@ module.exports = {
       var c = {
         keyword: e,
         definition: r,
-        custom: !0,
+        custom: true,
         code: i,
         implements: r.implements
       };
       o.rules.push(c);
       n.custom[e] = c;
     }
-    n.keywords[e] = n.all[e] = !0;
+    n.keywords[e] = n.all[e] = true;
     return this;
   },
   get: function (e) {
     var t = this.RULES.custom[e];
-    return t ? t.definition : this.RULES.keywords[e] || !1;
+    return t ? t.definition : this.RULES.keywords[e] || false;
   },
   remove: function (e) {
     var t = this.RULES;
@@ -83,14 +83,14 @@ module.exports = {
   },
   validate: function e(t, n) {
     e.errors = null;
-    var r = this._validateKeyword = this._validateKeyword || this.compile(o, !0);
+    var r = this._validateKeyword = this._validateKeyword || this.compile(o, true);
     if (r(t)) {
-      return !0;
+      return true;
     }
     e.errors = r.errors;
     if (n) {
       throw new Error("custom keyword definition is invalid: " + this.errorsText(r.errors));
     }
-    return !1;
+    return false;
   }
 };

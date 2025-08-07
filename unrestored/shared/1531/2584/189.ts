@@ -14,8 +14,8 @@ var i = {
   icon: "icon-dialog",
   title: "widgetName",
   platforms: ["web", "android", "ios"],
-  isGlobalWidget: !0,
-  isInvisibleWidget: !0,
+  isGlobalWidget: true,
+  isInvisibleWidget: true,
   properties: [{
     key: "style",
     label: "style",
@@ -30,7 +30,7 @@ var i = {
       value: r.styleB
     }],
     blockOptions: {
-      generateBlock: !1
+      generateBlock: false
     }
   }, {
     key: "themeColor",
@@ -39,7 +39,7 @@ var i = {
     editorType: "Color",
     defaultValue: "#2B4BF2",
     blockOptions: {
-      generateBlock: !1
+      generateBlock: false
     }
   }, {
     key: "previewImage",
@@ -48,7 +48,7 @@ var i = {
     editorType: "PreviewImage",
     defaultValue: "",
     blockOptions: {
-      generateBlock: !1
+      generateBlock: false
     }
   }, {
     key: "title",
@@ -56,35 +56,35 @@ var i = {
     valueType: "string",
     editorType: "TextInput",
     defaultValue: "",
-    readonly: !0
+    readonly: true
   }, {
     key: "text",
     label: "text",
     valueType: "string",
     editorType: "TextInput",
     defaultValue: "",
-    readonly: !0
+    readonly: true
   }, {
     key: "image",
     label: "image",
     valueType: "string",
     editorType: "TextInput",
     defaultValue: "",
-    readonly: !0
+    readonly: true
   }, {
     key: "selectedOption",
     label: "selectedOption",
     valueType: "string",
     editorType: "TextInput",
     defaultValue: "",
-    readonly: !0
+    readonly: true
   }, {
     key: "inputText",
     label: "inputText",
     valueType: "string",
     editorType: "TextInput",
     defaultValue: "",
-    readonly: !0
+    readonly: true
   }],
   methods: [{
     key: "message",
@@ -116,10 +116,10 @@ var i = {
       key: "setShowCancelButton",
       label: "setShowCancelButton",
       valueType: "boolean",
-      defaultValue: !0
+      defaultValue: true
     }],
     blockOptions: {
-      inputsInline: !1
+      inputsInline: false
     }
   }, {
     key: "select",
@@ -152,10 +152,10 @@ var i = {
       key: "setShowCancelButton",
       label: "setShowCancelButton",
       valueType: "boolean",
-      defaultValue: !0
+      defaultValue: true
     }],
     blockOptions: {
-      inputsInline: !1
+      inputsInline: false
     }
   }, {
     key: "prompt",
@@ -182,10 +182,10 @@ var i = {
       key: "setShowCancelButton",
       label: "setShowCancelButton",
       valueType: "boolean",
-      defaultValue: !0
+      defaultValue: true
     }],
     blockOptions: {
-      inputsInline: !1
+      inputsInline: false
     }
   }],
   events: [{

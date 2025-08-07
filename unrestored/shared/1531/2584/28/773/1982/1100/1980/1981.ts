@@ -4,7 +4,7 @@ module.exports = function (e, t) {
     e += ";";
   }
   var n = e.length;
-  var i = !1;
+  var i = false;
   var o = 0;
   var a = 0;
   var s = "";
@@ -33,12 +33,12 @@ module.exports = function (e, t) {
         break;
       }
       o = (a = l + 1) + 1;
-      i = !1;
+      i = false;
     } else if ("(" === u) {
-      i = !0;
+      i = true;
     } else {
       if (")" === u) {
-        i = !1;
+        i = false;
       } else {
         if (";" === u) {
           if (!i) {

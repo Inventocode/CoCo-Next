@@ -34,7 +34,7 @@ var l = function (t) {
   }
   h(e, t);
   e.findStartPattern = function (t) {
-    for (var r = t.getSize(), n = t.getNextSet(0), o = 0, i = Int32Array.from([0, 0, 0, 0, 0, 0]), a = n, s = !1, c = n; c < r; c++) {
+    for (var r = t.getSize(), n = t.getNextSet(0), o = 0, i = Int32Array.from([0, 0, 0, 0, 0, 0]), a = n, s = false, c = n; c < r; c++) {
       if (t.get(c) !== s) {
         i[o]++;
       } else {
@@ -46,7 +46,7 @@ var l = function (t) {
               l = d;
             }
           }
-          if (l >= 0 && t.isRange(Math.max(0, a - (c - a) / 2), a, !1)) {
+          if (l >= 0 && t.isRange(Math.max(0, a - (c - a) / 2), a, false)) {
             return Int32Array.from([a, c, l]);
           }
           a += i[0] + i[1];
@@ -79,7 +79,7 @@ var l = function (t) {
   };
   e.prototype.decodeRow = function (t, r, f) {
     var h;
-    var l = f && !0 === f.get(i.a.ASSUME_GS1);
+    var l = f && true === f.get(i.a.ASSUME_GS1);
     var d = e.findStartPattern(r);
     var p = d[2];
     var g = 0;
@@ -97,9 +97,9 @@ var l = function (t) {
       default:
         throw new a.a();
     }
-    for (var w = !1, v = !1, _ = "", m = d[0], A = d[1], E = Int32Array.from([0, 0, 0, 0, 0, 0]), C = 0, I = 0, S = p, T = 0, O = !0, b = !1, R = !1; !w;) {
+    for (var w = false, v = false, _ = "", m = d[0], A = d[1], E = Int32Array.from([0, 0, 0, 0, 0, 0]), C = 0, I = 0, S = p, T = 0, O = true, b = false, R = false; !w;) {
       var N = v;
-      switch (v = !1, C = I, I = e.decodeCode(r, E, A), y[g++] = I, I !== e.CODE_STOP && (O = !0), I !== e.CODE_STOP && (S += ++T * I), m = A, A += E.reduce(function (t, e) {
+      switch (v = false, C = I, I = e.decodeCode(r, E, A), y[g++] = I, I !== e.CODE_STOP && (O = true), I !== e.CODE_STOP && (S += ++T * I), m = A, A += E.reduce(function (t, e) {
         return t + e;
       }, 0), I) {
         case e.CODE_START_A:
@@ -111,12 +111,12 @@ var l = function (t) {
         case e.CODE_CODE_A:
           if (I < 64) {
             _ += R === b ? String.fromCharCode(" ".charCodeAt(0) + I) : String.fromCharCode(" ".charCodeAt(0) + I + 128);
-            R = !1;
+            R = false;
           } else if (I < 96) {
             _ += R === b ? String.fromCharCode(I - 64) : String.fromCharCode(I + 64);
-            R = !1;
+            R = false;
           } else {
-            switch (I !== e.CODE_STOP && (O = !1), I) {
+            switch (I !== e.CODE_STOP && (O = false), I) {
               case e.CODE_FNC_1:
                 if (l) {
                   if (0 === _.length) {
@@ -131,19 +131,19 @@ var l = function (t) {
                 break;
               case e.CODE_FNC_4_A:
                 if (!b && R) {
-                  b = !0;
-                  R = !1;
+                  b = true;
+                  R = false;
                 } else {
                   if (b && R) {
-                    b = !1;
-                    R = !1;
+                    b = false;
+                    R = false;
                   } else {
-                    R = !0;
+                    R = true;
                   }
                 }
                 break;
               case e.CODE_SHIFT:
-                v = !0;
+                v = true;
                 h = e.CODE_CODE_B;
                 break;
               case e.CODE_CODE_B:
@@ -153,16 +153,16 @@ var l = function (t) {
                 h = e.CODE_CODE_C;
                 break;
               case e.CODE_STOP:
-                w = !0;
+                w = true;
             }
           }
           break;
         case e.CODE_CODE_B:
           if (I < 96) {
             _ += R === b ? String.fromCharCode(" ".charCodeAt(0) + I) : String.fromCharCode(" ".charCodeAt(0) + I + 128);
-            R = !1;
+            R = false;
           } else {
-            switch (I !== e.CODE_STOP && (O = !1), I) {
+            switch (I !== e.CODE_STOP && (O = false), I) {
               case e.CODE_FNC_1:
                 if (l) {
                   if (0 === _.length) {
@@ -177,19 +177,19 @@ var l = function (t) {
                 break;
               case e.CODE_FNC_4_B:
                 if (!b && R) {
-                  b = !0;
-                  R = !1;
+                  b = true;
+                  R = false;
                 } else {
                   if (b && R) {
-                    b = !1;
-                    R = !1;
+                    b = false;
+                    R = false;
                   } else {
-                    R = !0;
+                    R = true;
                   }
                 }
                 break;
               case e.CODE_SHIFT:
-                v = !0;
+                v = true;
                 h = e.CODE_CODE_A;
                 break;
               case e.CODE_CODE_A:
@@ -199,7 +199,7 @@ var l = function (t) {
                 h = e.CODE_CODE_C;
                 break;
               case e.CODE_STOP:
-                w = !0;
+                w = true;
             }
           }
           break;
@@ -210,7 +210,7 @@ var l = function (t) {
             }
             _ += I;
           } else {
-            switch (I !== e.CODE_STOP && (O = !1), I) {
+            switch (I !== e.CODE_STOP && (O = false), I) {
               case e.CODE_FNC_1:
                 if (l) {
                   if (0 === _.length) {
@@ -227,7 +227,7 @@ var l = function (t) {
                 h = e.CODE_CODE_B;
                 break;
               case e.CODE_STOP:
-                w = !0;
+                w = true;
             }
           }
       }
@@ -237,7 +237,7 @@ var l = function (t) {
     }
     var D = A - m;
     A = r.getNextUnset(A);
-    if (!r.isRange(A, Math.min(r.getSize(), A + (A - m) / 2), !1)) {
+    if (!r.isRange(A, Math.min(r.getSize(), A + (A - m) / 2), false)) {
       throw new u.a();
     }
     if ((S -= T * C) % 103 !== C) {

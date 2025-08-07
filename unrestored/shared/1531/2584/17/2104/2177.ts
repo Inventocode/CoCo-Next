@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.ScrollbarPair = exports.Scrollbar = void 0;
+exports.ScrollbarPair = exports.Scrollbar = undefined;
 var r = require("tslib");
 var i = require("inversify");
 var o = require("@kitten-team/gl-matrix");
@@ -12,14 +12,14 @@ var s = require("../../125/195/index");
 var c = require("../../125/index");
 var u = function () {
   function e(e, n, r, i, a) {
-    if (void 0 === r) {
-      r = !1;
+    if (undefined === r) {
+      r = false;
     }
-    if (void 0 === i) {
+    if (undefined === i) {
       i = "";
     }
-    if (void 0 === a) {
-      a = !0;
+    if (undefined === a) {
+      a = true;
     }
     this.origin_ = o.vec2.create();
     this.size_ratio_ = 0;
@@ -29,12 +29,12 @@ var u = function () {
     this.handle_length_ = 0;
     this.scroll_view_size_ = 0;
     this.scroll_content_size_ = 0;
-    this.container_visible_ = !0;
-    this.is_visible_ = !0;
+    this.container_visible_ = true;
+    this.is_visible_ = true;
     this.workspace_ = e;
-    this.pair_ = r || !1;
+    this.pair_ = r || false;
     this.horizontal_ = n;
-    this.old_host_metrics_ = void 0;
+    this.old_host_metrics_ = undefined;
     var s = "blocklyScrollbar" + (this.horizontal_ ? "Horizontal" : "Vertical");
     if (i) {
       s += " " + i;
@@ -114,14 +114,14 @@ var u = function () {
       r.y = this.constrain_target_pos(e.viewTop - e.contentTop);
       this.set_handle_position(r.y * this.size_ratio_);
     }
-    if (!(null === (t = this.workspace_) || void 0 === t)) {
+    if (!(null === (t = this.workspace_) || undefined === t)) {
       t.set_metrics(r);
     }
   };
   e.prototype.set_handle_length = function (e) {
     var t;
     this.handle_length_ = e;
-    if (!(null === (t = this.svg_handle_) || void 0 === t)) {
+    if (!(null === (t = this.svg_handle_) || undefined === t)) {
       t.setAttribute(this.length_attribute_, String(this.handle_length_));
     }
   };
@@ -147,10 +147,10 @@ var u = function () {
     var t;
     var n;
     this.scroll_view_size_ = e;
-    if (!(null === (t = this.outer_svg_) || void 0 === t)) {
+    if (!(null === (t = this.outer_svg_) || undefined === t)) {
       t.setAttribute(this.length_attribute_, String(this.scroll_view_size_));
     }
-    if (!(null === (n = this.svg_background_) || void 0 === n)) {
+    if (!(null === (n = this.svg_background_) || undefined === n)) {
       n.setAttribute(this.length_attribute_, String(this.scroll_view_size_));
     }
   };
@@ -158,11 +158,11 @@ var u = function () {
     this.clean_up();
     if (this.on_mouse_down_bar_wrapper_) {
       this.events.unbind_event(this.on_mouse_down_bar_wrapper_);
-      this.on_mouse_down_bar_wrapper_ = void 0;
+      this.on_mouse_down_bar_wrapper_ = undefined;
     }
     if (this.on_mouse_down_handle_wrapper_) {
       this.events.unbind_event(this.on_mouse_down_handle_wrapper_);
-      this.on_mouse_down_handle_wrapper_ = void 0;
+      this.on_mouse_down_handle_wrapper_ = undefined;
     }
     if (this.outer_svg_) {
       (0, c.remove_node)(this.outer_svg_);
@@ -190,7 +190,7 @@ var u = function () {
     }
   };
   e.prototype.update_display = function () {
-    if (void 0 == this.outer_svg_) {
+    if (undefined == this.outer_svg_) {
       throw new Error("outerSvg_ is undefined");
     }
     if (this.opt_visible && this.is_visible() && this.container_visible_) {
@@ -206,7 +206,7 @@ var u = function () {
   };
   e.prototype.on_mouse_up_handle = function () {
     var e;
-    if (!(null === (e = this.workspace_) || void 0 === e)) {
+    if (!(null === (e = this.workspace_) || undefined === e)) {
       e.reset_drag_surface();
     }
     this.touch_manager.clear_touch_identifier();
@@ -215,7 +215,7 @@ var u = function () {
   e.prototype.on_mousedown_handle = function (e) {
     var n;
     var r;
-    if (!(null === (n = this.workspace_) || void 0 === n)) {
+    if (!(null === (n = this.workspace_) || undefined === n)) {
       n.mark_focused();
     }
     this.clean_up();
@@ -223,7 +223,7 @@ var u = function () {
       e.stopPropagation();
     } else {
       this.start_drag_handle = this.handle_position_;
-      if (!(null === (r = this.workspace_) || void 0 === r)) {
+      if (!(null === (r = this.workspace_) || undefined === r)) {
         r.setup_drag_surface();
       }
       this.start_drag_mouse = this.horizontal_ ? e.clientX : e.clientY;
@@ -234,14 +234,14 @@ var u = function () {
     }
   };
   e.prototype.clean_up = function () {
-    this.utils.hide_chaff(!0);
+    this.utils.hide_chaff(true);
     if (t.on_mouse_up_wrapper_) {
       this.events.unbind_event(t.on_mouse_up_wrapper_);
-      t.on_mouse_up_wrapper_ = void 0;
+      t.on_mouse_up_wrapper_ = undefined;
     }
     if (t.on_mouse_move_wrapper_) {
       this.events.unbind_event(t.on_mouse_move_wrapper_);
-      t.on_mouse_move_wrapper_ = void 0;
+      t.on_mouse_move_wrapper_ = undefined;
     }
   };
   e.prototype.on_mouse_down_bar = function (e) {
@@ -356,30 +356,30 @@ var u = function () {
     }
   };
   e.scrollbar_thickness = 15;
-  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.events)], e.prototype, "events", void 0);
-  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.utils)], e.prototype, "utils", void 0);
-  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.touch_manager)], e.prototype, "touch_manager", void 0);
-  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.UIEvent)], e.prototype, "ui_event_factory", void 0);
+  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.events)], e.prototype, "events", undefined);
+  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.utils)], e.prototype, "utils", undefined);
+  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.touch_manager)], e.prototype, "touch_manager", undefined);
+  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.UIEvent)], e.prototype, "ui_event_factory", undefined);
   return e = t = (0, r.__decorate)([(0, i.injectable)()], e);
 }();
 exports.Scrollbar = u;
 var l = function () {
   function e(e, t) {
-    if (void 0 === t) {
-      t = !0;
+    if (undefined === t) {
+      t = true;
     }
-    this.old_host_metrics_ = void 0;
+    this.old_host_metrics_ = undefined;
     this.workspace_ = e;
-    this.h_scroll = new u(e, !0, !0, "blocklyMainWorkspaceScrollbar", t);
-    this.v_scroll = new u(e, !1, !0, "blocklyMainWorkspaceScrollbar", t);
+    this.h_scroll = new u(e, true, true, "blocklyMainWorkspaceScrollbar", t);
+    this.v_scroll = new u(e, false, true, "blocklyMainWorkspaceScrollbar", t);
   }
   e.prototype.set_container_visible = function (e) {
     var t;
     var n;
-    if (!(null === (t = this.h_scroll) || void 0 === t)) {
+    if (!(null === (t = this.h_scroll) || undefined === t)) {
       t.set_container_visible(e);
     }
-    if (!(null === (n = this.v_scroll) || void 0 === n)) {
+    if (!(null === (n = this.v_scroll) || undefined === n)) {
       n.set_container_visible(e);
     }
   };
@@ -387,12 +387,12 @@ var l = function () {
     var e;
     var t;
     delete this.workspace_;
-    this.old_host_metrics_ = void 0;
-    if (!(null === (e = this.h_scroll) || void 0 === e)) {
+    this.old_host_metrics_ = undefined;
+    if (!(null === (e = this.h_scroll) || undefined === e)) {
       e.dispose();
     }
     delete this.h_scroll;
-    if (!(null === (t = this.v_scroll) || void 0 === t)) {
+    if (!(null === (t = this.v_scroll) || undefined === t)) {
       t.dispose();
     }
     delete this.v_scroll;
@@ -403,26 +403,26 @@ var l = function () {
     if (this.workspace_) {
       var n = this.workspace_.get_metrics();
       if (n) {
-        var r = !1;
-        var i = !1;
+        var r = false;
+        var i = false;
         if (this.old_host_metrics_ && this.old_host_metrics_.viewWidth == n.viewWidth && this.old_host_metrics_.viewHeight == n.viewHeight && this.old_host_metrics_.absoluteTop == n.absoluteTop && this.old_host_metrics_.absoluteLeft == n.absoluteLeft) {
           if (!(this.old_host_metrics_ && this.old_host_metrics_.contentWidth == n.contentWidth && this.old_host_metrics_.viewLeft == n.viewLeft && this.old_host_metrics_.contentLeft == n.contentLeft)) {
-            r = !0;
+            r = true;
           }
           if (!(this.old_host_metrics_ && this.old_host_metrics_.contentHeight == n.contentHeight && this.old_host_metrics_.viewTop == n.viewTop && this.old_host_metrics_.contentTop == n.contentTop)) {
-            i = !0;
+            i = true;
           }
         } else {
-          r = !0;
-          i = !0;
+          r = true;
+          i = true;
         }
         if (r) {
-          if (!(null === (e = this.h_scroll) || void 0 === e)) {
+          if (!(null === (e = this.h_scroll) || undefined === e)) {
             e.resize(n);
           }
         }
         if (i) {
-          if (!(null === (t = this.v_scroll) || void 0 === t)) {
+          if (!(null === (t = this.v_scroll) || undefined === t)) {
             t.resize(n);
           }
         }
@@ -487,9 +487,9 @@ var l = function () {
       }
     }
   };
-  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.events)], e.prototype, "events", void 0);
-  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.utils)], e.prototype, "utils", void 0);
-  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.UIEvent)], e.prototype, "ui_event_factory", void 0);
+  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.events)], e.prototype, "events", undefined);
+  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.utils)], e.prototype, "utils", undefined);
+  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.UIEvent)], e.prototype, "ui_event_factory", undefined);
   return e = (0, r.__decorate)([(0, i.injectable)()], e);
 }();
 exports.ScrollbarPair = l;

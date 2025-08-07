@@ -5,7 +5,7 @@ var a = o.parseTag;
 var s = o.parseAttr;
 var c = require("./1101");
 function u(e) {
-  return void 0 === e || null === e;
+  return undefined === e || null === e;
 }
 function l(e) {
   if ((e = function (e) {
@@ -33,7 +33,7 @@ function l(e) {
   } else {
     e.whiteList = i.whiteList;
   }
-  this.attributeWrapSign = !0 === e.singleQuotedAttributeValue ? "'" : i.attributeWrapSign;
+  this.attributeWrapSign = true === e.singleQuotedAttributeValue ? "'" : i.attributeWrapSign;
   e.onTag = e.onTag || i.onTag;
   e.onTagAttr = e.onTagAttr || i.onTagAttr;
   e.onIgnoreTag = e.onIgnoreTag || i.onIgnoreTag;
@@ -41,8 +41,8 @@ function l(e) {
   e.safeAttrValue = e.safeAttrValue || i.safeAttrValue;
   e.escapeHtml = e.escapeHtml || i.escapeHtml;
   this.options = e;
-  if (!1 === e.css) {
-    this.cssFilter = !1;
+  if (false === e.css) {
+    this.cssFilter = false;
   } else {
     e.css = e.css || {};
     this.cssFilter = new r(e.css);
@@ -68,7 +68,7 @@ l.prototype.process = function (e) {
   if (!t.allowCommentTag) {
     e = i.stripCommentTag(e);
   }
-  var A = !1;
+  var A = false;
   if (t.stripIgnoreTagBody) {
     A = i.StripTagBody(t.stripIgnoreTagBody, o);
     o = A.onIgnoreTag;
@@ -109,7 +109,7 @@ l.prototype.process = function (e) {
       var b = s(m.html, function (e, t) {
         var n = -1 !== c.indexOf(y, e);
         var r = l(i, e, t, n);
-        return u(r) ? n ? (t = d(i, e, t, _)) ? e + "=" + p + t + p : e : u(r = f(i, e, t, n)) ? void 0 : r : r;
+        return u(r) ? n ? (t = d(i, e, t, _)) ? e + "=" + p + t + p : e : u(r = f(i, e, t, n)) ? undefined : r : r;
       });
       a = "<" + i;
       if (b) {

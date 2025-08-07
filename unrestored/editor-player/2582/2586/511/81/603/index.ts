@@ -15,7 +15,7 @@ var u = function (t) {
     return {
       next: function () {
         if (t && n >= t.length) {
-          t = void 0;
+          t = undefined;
         }
         return {
           value: t && t[n++],
@@ -306,7 +306,7 @@ var p = function (t) {
     return {
       next: function () {
         if (t && n >= t.length) {
-          t = void 0;
+          t = undefined;
         }
         return {
           value: t && t[n++],
@@ -322,11 +322,11 @@ var g = function () {
     this.field = d.PDF417_GF;
   }
   t.prototype.decode = function (t, e, r) {
-    for (var o, i, a = new s(this.field, t), u = new Int32Array(e), c = !1, f = e; f > 0; f--) {
+    for (var o, i, a = new s(this.field, t), u = new Int32Array(e), c = false, f = e; f > 0; f--) {
       var h = a.evaluateAt(this.field.exp(f));
       u[e - f] = h;
       if (0 !== h) {
-        c = !0;
+        c = true;
       }
     }
     if (!c) {

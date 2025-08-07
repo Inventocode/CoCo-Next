@@ -8,8 +8,8 @@ module.exports = function (e, t) {
   }
   var n;
   var s = e[a];
-  if (void 0 !== s) {
-    if (void 0 === t) {
+  if (undefined !== s) {
+    if (undefined === t) {
       t = "default";
     }
     n = s.call(e, t);
@@ -18,7 +18,7 @@ module.exports = function (e, t) {
     }
     throw TypeError("Can't convert object to primitive value");
   }
-  if (void 0 === t) {
+  if (undefined === t) {
     t = "number";
   }
   return i(e, t);

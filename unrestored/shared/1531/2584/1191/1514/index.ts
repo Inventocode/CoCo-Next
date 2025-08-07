@@ -1,15 +1,15 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
 Object.defineProperty(exports, "DraggableCore", {
-  enumerable: !0,
+  enumerable: true,
   get: function () {
     return u.default;
   }
 });
-exports.default = void 0;
+exports.default = undefined;
 var r = function (e) {
   if (e && e.__esModule) {
     return e;
@@ -125,15 +125,15 @@ function _(e, t) {
       return;
     }
     var n = [];
-    var r = !0;
-    var o = !1;
-    var i = void 0;
+    var r = true;
+    var o = false;
+    var i = undefined;
     try {
-      for (var a, s = e[Symbol.iterator](); !(r = (a = s.next()).done) && (n.push(a.value), !t || n.length !== t); r = !0) {
+      for (var a, s = e[Symbol.iterator](); !(r = (a = s.next()).done) && (n.push(a.value), !t || n.length !== t); r = true) {
         ;
       }
     } catch (c) {
-      o = !0;
+      o = true;
       i = c;
     } finally {
       try {
@@ -194,7 +194,7 @@ function y(e) {
   for (var t = 1; t < arguments.length; t++) {
     var n = null != arguments[t] ? arguments[t] : {};
     if (t % 2) {
-      b(Object(n), !0).forEach(function (t) {
+      b(Object(n), true).forEach(function (t) {
         A(e, t, n[t]);
       });
     } else {
@@ -212,10 +212,10 @@ function y(e) {
 function E(e, t) {
   for (var n = 0; n < t.length; n++) {
     var r = t[n];
-    r.enumerable = r.enumerable || !1;
-    r.configurable = !0;
+    r.enumerable = r.enumerable || false;
+    r.configurable = true;
     if ("value" in r) {
-      r.writable = !0;
+      r.writable = true;
     }
     Object.defineProperty(e, r.key, r);
   }
@@ -238,19 +238,19 @@ function w(e, t) {
 function C(e) {
   var t = function () {
     if ("undefined" === typeof Reflect || !Reflect.construct) {
-      return !1;
+      return false;
     }
     if (Reflect.construct.sham) {
-      return !1;
+      return false;
     }
     if ("function" === typeof Proxy) {
-      return !0;
+      return true;
     }
     try {
       Date.prototype.toString.call(Reflect.construct(Date, [], function () {}));
-      return !0;
+      return true;
     } catch (e) {
-      return !1;
+      return false;
     }
   }();
   return function () {
@@ -269,7 +269,7 @@ function T(e, t) {
   return !t || "object" !== h(t) && "function" !== typeof t ? S(e) : t;
 }
 function S(e) {
-  if (void 0 === e) {
+  if (undefined === e) {
     throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
   }
   return e;
@@ -283,9 +283,9 @@ function A(e, t, n) {
   if (t in e) {
     Object.defineProperty(e, t, {
       value: n,
-      enumerable: !0,
-      configurable: !0,
-      writable: !0
+      enumerable: true,
+      configurable: true,
+      writable: true
     });
   } else {
     e[t] = n;
@@ -300,8 +300,8 @@ var j = function (e) {
     e.prototype = Object.create(t && t.prototype, {
       constructor: {
         value: e,
-        writable: !0,
-        configurable: !0
+        writable: true,
+        configurable: true
       }
     });
     if (t) {
@@ -318,17 +318,17 @@ var j = function (e) {
     })(this, n);
     A(S(r = t.call(this, e)), "onDragStart", function (e, t) {
       (0, d.default)("Draggable: onDragStart: %j", t);
-      if (!1 === r.props.onStart(e, (0, c.createDraggableData)(S(r), t))) {
-        return !1;
+      if (false === r.props.onStart(e, (0, c.createDraggableData)(S(r), t))) {
+        return false;
       }
       r.setState({
-        dragging: !0,
-        dragged: !0
+        dragging: true,
+        dragged: true
       });
     });
     A(S(r), "onDrag", function (e, t) {
       if (!r.state.dragging) {
-        return !1;
+        return false;
       }
       (0, d.default)("Draggable: onDrag: %j", t);
       var n = (0, c.createDraggableData)(S(r), t);
@@ -353,21 +353,21 @@ var j = function (e) {
         n.deltaX = o.x - r.state.x;
         n.deltaY = o.y - r.state.y;
       }
-      if (!1 === r.props.onDrag(e, n)) {
-        return !1;
+      if (false === r.props.onDrag(e, n)) {
+        return false;
       }
       r.setState(o);
     });
     A(S(r), "onDragStop", function (e, t) {
       if (!r.state.dragging) {
-        return !1;
+        return false;
       }
-      if (!1 === r.props.onStop(e, (0, c.createDraggableData)(S(r), t))) {
-        return !1;
+      if (false === r.props.onStop(e, (0, c.createDraggableData)(S(r), t))) {
+        return false;
       }
       (0, d.default)("Draggable: onDragStop: %j", t);
       var n = {
-        dragging: !1,
+        dragging: false,
         slackX: 0,
         slackY: 0
       };
@@ -381,14 +381,14 @@ var j = function (e) {
       r.setState(n);
     });
     r.state = {
-      dragging: !1,
-      dragged: !1,
+      dragging: false,
+      dragged: false,
       x: e.position ? e.position.x : e.defaultPosition.x,
       y: e.position ? e.position.y : e.defaultPosition.y,
       prevPropsPosition: y({}, e.position),
       slackX: 0,
       slackY: 0,
-      isElementSVG: !1
+      isElementSVG: false
     };
     if (!(!e.position || e.onDrag || e.onStop)) {
       console.warn("A `position` was applied to this <Draggable>, without drag handlers. This will make this component effectively undraggable. Please attach `onDrag` or `onStop` handlers so you can adjust the `position` of this element.");
@@ -415,7 +415,7 @@ var j = function (e) {
     value: function () {
       if ("undefined" !== typeof window.SVGElement && this.findDOMNode() instanceof window.SVGElement) {
         this.setState({
-          isElementSVG: !0
+          isElementSVG: true
         });
       }
     }
@@ -423,7 +423,7 @@ var j = function (e) {
     key: "componentWillUnmount",
     value: function () {
       this.setState({
-        dragging: !1
+        dragging: false
       });
     }
   }, {
@@ -483,7 +483,7 @@ A(j, "propTypes", y(y({}, u.default.propTypes), {}, {
     right: o.default.number,
     top: o.default.number,
     bottom: o.default.number
-  }), o.default.string, o.default.oneOf([!1])]),
+  }), o.default.string, o.default.oneOf([false])]),
   defaultClassName: o.default.string,
   defaultClassNameDragging: o.default.string,
   defaultClassNameDragged: o.default.string,
@@ -505,7 +505,7 @@ A(j, "propTypes", y(y({}, u.default.propTypes), {}, {
 }));
 A(j, "defaultProps", y(y({}, u.default.defaultProps), {}, {
   axis: "both",
-  bounds: !1,
+  bounds: false,
   defaultClassName: "react-draggable",
   defaultClassNameDragging: "react-draggable-dragging",
   defaultClassNameDragged: "react-draggable-dragged",

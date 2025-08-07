@@ -2,7 +2,7 @@ var r = require("../1659/241");
 var o = require("./1221");
 module.exports = Object.setPrototypeOf || ("__proto__" in {} ? function () {
   var e;
-  var t = !1;
+  var t = false;
   var n = {};
   try {
     (e = Object.getOwnPropertyDescriptor(Object.prototype, "__proto__").set).call(n, []);
@@ -18,4 +18,4 @@ module.exports = Object.setPrototypeOf || ("__proto__" in {} ? function () {
     }
     return n;
   };
-}() : void 0);
+}() : undefined);

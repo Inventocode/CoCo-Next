@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.CopyToClipboard = void 0;
+exports.CopyToClipboard = undefined;
 var r = i(require("react"));
 var o = i(require("./2545/index"));
 function i(e) {
@@ -74,10 +74,10 @@ function l(e, t) {
 function u(e, t) {
   for (var n = 0; n < t.length; n++) {
     var r = t[n];
-    r.enumerable = r.enumerable || !1;
-    r.configurable = !0;
+    r.enumerable = r.enumerable || false;
+    r.configurable = true;
     if ("value" in r) {
-      r.writable = !0;
+      r.writable = true;
     }
     Object.defineProperty(e, r.key, r);
   }
@@ -91,7 +91,7 @@ function p(e) {
   })(e);
 }
 function f(e) {
-  if (void 0 === e) {
+  if (undefined === e) {
     throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
   }
   return e;
@@ -106,9 +106,9 @@ function m(e, t, n) {
   if (t in e) {
     Object.defineProperty(e, t, {
       value: n,
-      enumerable: !0,
-      configurable: !0,
-      writable: !0
+      enumerable: true,
+      configurable: true,
+      writable: true
     });
   } else {
     e[t] = n;
@@ -150,8 +150,8 @@ var g = function (e) {
     e.prototype = Object.create(t && t.prototype, {
       constructor: {
         value: e,
-        writable: !0,
-        configurable: !0
+        writable: true,
+        configurable: true
       }
     });
     if (t) {
@@ -173,7 +173,7 @@ var g = function (e) {
         for (var t = 1; t < arguments.length; t++) {
           var n = null != arguments[t] ? arguments[t] : {};
           if (t % 2) {
-            s(n, !0).forEach(function (t) {
+            s(n, true).forEach(function (t) {
               m(e, t, n[t]);
             });
           } else {
@@ -201,6 +201,6 @@ var g = function (e) {
 }(r.default.PureComponent);
 exports.CopyToClipboard = g;
 m(g, "defaultProps", {
-  onCopy: void 0,
-  options: void 0
+  onCopy: undefined,
+  options: undefined
 });

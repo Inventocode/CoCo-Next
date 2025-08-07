@@ -42,29 +42,29 @@ var r = {
     outOfRange: "嵌入积木数值超过取值范围"
   }
 };
-var o = require("./6");
-var i = require("./5");
-var a = require("./60");
-var s = require("./82");
-var c = require("./116");
-var l = require("./9");
+import o = require("./6");
+import i = require("./5");
+import a = require("./60");
+import s = require("./82");
+import c = require("./116");
+import l = require("./9");
 var u = {
   type: i.z,
   icon: s.g,
   title: "widgetName",
   contentTextField: "text",
   platforms: ["web", "android", "ios"],
-  isGlobalWidget: !1,
-  isInvisibleWidget: !1,
-  hasAnyWidget: !0,
-  properties: [Object(o.a)({}, l.n), Object(o.a)({}, l.l), {
+  isGlobalWidget: false,
+  isInvisibleWidget: false,
+  hasAnyWidget: true,
+  properties: [o.a({}, l.n), o.a({}, l.l), {
     key: "ButtonTextGroup",
     label: "ButtonTextGroup",
     valueType: "string",
     editorType: "ButtonTextGroup",
     defaultValue: "",
     blockOptions: {
-      generateBlock: !1
+      generateBlock: false
     }
   }, {
     key: "ButtonIconGroup",
@@ -73,7 +73,7 @@ var u = {
     editorType: "ButtonIconGroup",
     defaultValue: "",
     blockOptions: {
-      generateBlock: !1
+      generateBlock: false
     }
   }, {
     key: "ButtonBackground",
@@ -82,24 +82,24 @@ var u = {
     editorType: "ButtonBackground",
     defaultValue: "",
     blockOptions: {
-      generateBlock: !1
+      generateBlock: false
     }
   }, {
     key: "textVisible",
     label: "text",
     valueType: "boolean",
-    defaultValue: !0,
-    hidePropertyEditor: !0,
+    defaultValue: true,
+    hidePropertyEditor: true,
     dropdown: [{
       label: "show",
-      value: !0
+      value: true
     }, {
       label: "hide",
-      value: !1
+      value: false
     }],
     blockOptions: {
       getter: {
-        generateBlock: !1
+        generateBlock: false
       },
       setter: {
         line: "text"
@@ -111,7 +111,7 @@ var u = {
     valueType: "string",
     checkType: ["string", "number", "boolean", "array"],
     defaultValue: "按钮",
-    hidePropertyEditor: !0,
+    hidePropertyEditor: true,
     blockOptions: {
       getter: {
         line: "returnValue"
@@ -122,16 +122,16 @@ var u = {
     label: "textColor",
     valueType: "color",
     defaultValue: s.e,
-    hidePropertyEditor: !0
+    hidePropertyEditor: true
   }, {
     key: "maxFontSize",
     label: "maxFontSize",
     valueType: "number",
     defaultValue: s.h,
-    hidePropertyEditor: !0,
+    hidePropertyEditor: true,
     blockOptions: {
       getter: {
-        generateBlock: !1
+        generateBlock: false
       }
     },
     validators: {
@@ -143,14 +143,14 @@ var u = {
         value: s.l,
         message: "outOfRange"
       },
-      isInteger: !0
+      isInteger: true
     }
   }, {
     key: "textAlign",
     label: "textAlign",
     valueType: "string",
     defaultValue: a.a.CENTER,
-    hidePropertyEditor: !0,
+    hidePropertyEditor: true,
     dropdown: [{
       label: "left",
       value: a.a.LEFT
@@ -163,25 +163,25 @@ var u = {
     }],
     blockOptions: {
       getter: {
-        generateBlock: !1
+        generateBlock: false
       }
     }
   }, {
     key: "iconVisible",
     label: "icon",
     valueType: "boolean",
-    defaultValue: !1,
-    hidePropertyEditor: !0,
+    defaultValue: false,
+    hidePropertyEditor: true,
     dropdown: [{
       label: "show",
-      value: !0
+      value: true
     }, {
       label: "hide",
-      value: !1
+      value: false
     }],
     blockOptions: {
       getter: {
-        generateBlock: !1
+        generateBlock: false
       },
       setter: {
         line: "icon"
@@ -192,10 +192,10 @@ var u = {
     label: "iconId",
     valueType: "icon",
     defaultValue: "",
-    hidePropertyEditor: !0,
+    hidePropertyEditor: true,
     blockOptions: {
       getter: {
-        generateBlock: !1
+        generateBlock: false
       }
     }
   }, {
@@ -203,10 +203,10 @@ var u = {
     label: "iconColor",
     valueType: "color",
     defaultValue: s.d,
-    hidePropertyEditor: !0,
+    hidePropertyEditor: true,
     blockOptions: {
       getter: {
-        generateBlock: !1
+        generateBlock: false
       }
     }
   }, {
@@ -214,58 +214,58 @@ var u = {
     label: "fontFamily",
     valueType: "string",
     defaultValue: s.b,
-    hidePropertyEditor: !0,
+    hidePropertyEditor: true,
     blockOptions: {
-      generateBlock: !1
+      generateBlock: false
     }
   }, {
     key: "allowMinFontSize",
     label: "allowMinFontSize",
     valueType: "number",
     defaultValue: s.o,
-    hidePropertyEditor: !0,
+    hidePropertyEditor: true,
     blockOptions: {
-      generateBlock: !1
+      generateBlock: false
     }
   }, {
     key: "allowMaxFontSize",
     label: "allowMaxFontSize",
     valueType: "number",
     defaultValue: s.l,
-    hidePropertyEditor: !0,
+    hidePropertyEditor: true,
     blockOptions: {
-      generateBlock: !1
+      generateBlock: false
     }
   }, {
     key: "backgroundMode",
     label: "backgroundMode",
     valueType: "string",
     defaultValue: c.a.TEMPLATE,
-    hidePropertyEditor: !0,
+    hidePropertyEditor: true,
     blockOptions: {
-      generateBlock: !1
+      generateBlock: false
     }
   }, {
     key: "templateMode",
     label: "templateMode",
     valueType: "string",
     defaultValue: c.b.RECTANGLE_FILL,
-    hidePropertyEditor: !0,
+    hidePropertyEditor: true,
     blockOptions: {
-      generateBlock: !1
+      generateBlock: false
     }
   }, {
     key: "backgroundColor",
     label: "backgroundColor",
     valueType: "color",
     defaultValue: s.a,
-    hidePropertyEditor: !0,
+    hidePropertyEditor: true,
     blockOptions: {
       setter: {
-        generateBlock: !1
+        generateBlock: false
       },
       getter: {
-        generateBlock: !0
+        generateBlock: true
       }
     }
   }, {
@@ -273,20 +273,20 @@ var u = {
     label: "backgroundImage",
     valueType: "string",
     defaultValue: s.f,
-    hidePropertyEditor: !0,
+    hidePropertyEditor: true,
     blockOptions: {
-      generateBlock: !1
+      generateBlock: false
     }
   }, {
     key: "imageResizeMode",
     label: "imageResizeMode",
     valueType: "string",
     defaultValue: c.c.CONTAIN,
-    hidePropertyEditor: !0,
+    hidePropertyEditor: true,
     blockOptions: {
-      generateBlock: !1
+      generateBlock: false
     }
-  }, Object(o.a)(Object(o.a)({}, l.m), {}, {
+  }, o.a(o.a({}, l.m), {}, {
     blockOptions: {
       setter: {
         line: "general"
@@ -298,7 +298,7 @@ var u = {
     valueType: "number",
     defaultValue: 120,
     blockOptions: {
-      generateBlock: !1
+      generateBlock: false
     },
     validators: {
       lessThan: s.m,
@@ -310,7 +310,7 @@ var u = {
     valueType: "number",
     defaultValue: 40,
     blockOptions: {
-      generateBlock: !1
+      generateBlock: false
     },
     validators: {
       lessThan: s.k,
@@ -321,7 +321,7 @@ var u = {
     label: "",
     valueType: "number",
     defaultValue: 100,
-    readonly: !0,
+    readonly: true,
     blockOptions: {
       setter: {
         keys: ["__height", "__width"]
@@ -350,22 +350,22 @@ var u = {
         label: "rectangleFill",
         value: c.b.RECTANGLE_FILL,
         image: "https://static.codemao.cn/coco/image/button-rect-fill-template.png",
-        isHideFieldImage: !0
+        isHideFieldImage: true
       }, {
         label: "rectangleOutline",
         value: c.b.RECTANGLE_OUTLINE,
         image: "https://static.codemao.cn/coco/image/button-rect-outline-template.png",
-        isHideFieldImage: !0
+        isHideFieldImage: true
       }, {
         label: "circleFill",
         value: c.b.CIRCLE_FILL,
         image: "https://static.codemao.cn/coco/image/button-circle-fill-template.png",
-        isHideFieldImage: !0
+        isHideFieldImage: true
       }, {
         label: "circleOutline",
         value: c.b.CIRCLE_OUTLINE,
         image: "https://static.codemao.cn/coco/image/button-circle-outline-template.png",
-        isHideFieldImage: !0
+        isHideFieldImage: true
       }]
     }, {
       key: "backgroundColor",

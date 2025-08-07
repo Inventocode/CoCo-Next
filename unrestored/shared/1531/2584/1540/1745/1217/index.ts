@@ -18,21 +18,21 @@ module.exports = function (e) {
   var m = o(e);
   var g = "function" == typeof this ? this : Array;
   var _ = arguments.length;
-  var v = _ > 1 ? arguments[1] : void 0;
-  var b = void 0 !== v;
+  var v = _ > 1 ? arguments[1] : undefined;
+  var b = undefined !== v;
   var y = u(m);
   var E = 0;
   if (b) {
-    v = r(v, _ > 2 ? arguments[2] : void 0, 2);
+    v = r(v, _ > 2 ? arguments[2] : undefined, 2);
   }
-  if (void 0 == y || g == Array && a(y)) {
+  if (undefined == y || g == Array && a(y)) {
     for (n = new g(t = s(m.length)); t > E; E++) {
       h = b ? v(m[E], E) : m[E];
       c(n, E, h);
     }
   } else {
     for (f = (p = l(m, y)).next, n = new g(); !(d = f.call(p)).done; E++) {
-      h = b ? i(p, v, [d.value, E], !0) : d.value;
+      h = b ? i(p, v, [d.value, E], true) : d.value;
       c(n, E, h);
     }
   }

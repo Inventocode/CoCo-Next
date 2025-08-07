@@ -44,7 +44,7 @@ var i = this && this.__spreadArrays || function () {
   return r;
 };
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
 var a = require("react");
 var s = require("react");
@@ -61,8 +61,8 @@ var h = function (e) {
     n.changeDetectionService = new d.ChangeDetectionService();
     n.api = null;
     n.portals = [];
-    n.hasPendingPortalUpdate = !1;
-    n.destroyed = !1;
+    n.hasPendingPortalUpdate = false;
+    n.destroyed = false;
     n.SYNCHRONOUS_CHANGE_PROPERTIES = ["context"];
     return n;
   }
@@ -103,7 +103,7 @@ var h = function (e) {
   };
   t.prototype.waitForInstance = function (e, n, r) {
     var o = this;
-    if (void 0 === r) {
+    if (undefined === r) {
       r = Date.now();
     }
     if (this.destroyed) {
@@ -134,11 +134,11 @@ var h = function (e) {
       setTimeout(function () {
         if (e.api) {
           e.forceUpdate(function () {
-            e.hasPendingPortalUpdate = !1;
+            e.hasPendingPortalUpdate = false;
           });
         }
       });
-      this.hasPendingPortalUpdate = !0;
+      this.hasPendingPortalUpdate = true;
     }
   };
   t.prototype.destroyPortal = function (e) {
@@ -163,7 +163,7 @@ var h = function (e) {
   };
   t.prototype.shouldComponentUpdate = function (e) {
     this.processPropsChanges(this.props, e);
-    return !1;
+    return false;
   };
   t.prototype.componentDidUpdate = function (e) {
     this.processPropsChanges(e, this.props);
@@ -232,7 +232,7 @@ var h = function (e) {
       this.api.destroy();
       this.api = null;
     }
-    this.destroyed = !0;
+    this.destroyed = true;
   };
   t.prototype.isDisableStaticMarkup = function () {
     return this.props.disableStaticMarkup;
@@ -268,8 +268,8 @@ var h = function (e) {
   };
   t.MAX_COMPONENT_CREATION_TIME_IN_MS = 1e3;
   t.defaultProps = {
-    legacyComponentRendering: !1,
-    disableStaticMarkup: !1,
+    legacyComponentRendering: false,
+    disableStaticMarkup: false,
     maxComponentCreationTimeMs: t.MAX_COMPONENT_CREATION_TIME_IN_MS
   };
   return t;

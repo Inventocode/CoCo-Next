@@ -1,7 +1,7 @@
 "use strict";
 
 function n(t, e) {
-  if (void 0 === e) {
+  if (undefined === e) {
     e = t.constructor;
   }
   var r = Error.captureStackTrace;
@@ -35,8 +35,8 @@ var i = function (t) {
     var o = t.call(this, e) || this;
     Object.defineProperty(o, "name", {
       value: r.name,
-      enumerable: !1,
-      configurable: !0
+      enumerable: false,
+      configurable: true
     });
     (function (t, e) {
       var r = Object.setPrototypeOf;
@@ -74,8 +74,8 @@ var a = function () {
 }();
 var u = function (t) {
   function e(e) {
-    if (void 0 === e) {
-      e = void 0;
+    if (undefined === e) {
+      e = undefined;
     }
     var r = t.call(this, e) || this;
     r.message = e;

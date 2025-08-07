@@ -35,11 +35,11 @@ Object.defineProperty(i, "checkNormal", {
     return b;
   }
 });
-var a = require("../../25/index");
-var s = require("../../11");
-var c = require("../../5");
-var l = require("animejs");
-var u = require("../../51/index");
+import a = require("../../25/index");
+import s = require("../../11");
+import c = require("../../5");
+import l = require("animejs");
+import u = require("color");
 var d = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -53,21 +53,21 @@ var d = function __importDefault(module) {
   return defaultExport;
 }(u);
 function p(e, t) {
-  return [Object(l.default)({
+  return [l.default({
     targets: "#".concat(e),
     borderColor: d()(t).darken(.3).hex(),
     duration: 2e3
   })];
 }
 function f(e, t) {
-  return [Object(l.default)({
+  return [l.default({
     targets: "#".concat(e),
     backgroundColor: d()(t).darken(.3).alpha(.1).rgb().string(),
     duration: 2e3
   })];
 }
 function h(e) {
-  return [Object(l.default)({
+  return [l.default({
     targets: "#".concat(e, " input"),
     translateX: [-4, 4, -2, 2, -1, 1, 0],
     duration: 300,
@@ -75,7 +75,7 @@ function h(e) {
   })];
 }
 function m(e) {
-  return [Object(l.default)({
+  return [l.default({
     targets: "#".concat(e, " input"),
     translateX: [-4, 4, -2, 2, -1, 1, 0],
     duration: 300,
@@ -83,10 +83,10 @@ function m(e) {
   })];
 }
 var g;
-var _ = require("../../729/302");
+import _ = require("../../729/302");
 function v(e, t) {
   var n = document.querySelectorAll("#".concat(e, " .radio-widget-button"))[t];
-  return n ? [Object(l.default)({
+  return n ? [l.default({
     targets: n,
     scale: [{
       value: .95,
@@ -99,17 +99,17 @@ function v(e, t) {
 }
 function b(e, t) {
   var n = document.querySelectorAll("#".concat(e, " .checkbox-widget-box "))[t];
-  return n ? [Object(l.default)({
+  return n ? [l.default({
     targets: n.querySelector("svg"),
     scale: [.8, 1.2],
     duration: 500
   })] : [];
 }
 g = {};
-Object(s.a)(g, c.w, r);
-Object(s.a)(g, c.d, _);
-Object(s.a)(g, c.C, o);
-Object(s.a)(g, c.g, i);
+s.a(g, c.w, r);
+s.a(g, c.d, _);
+s.a(g, c.C, o);
+s.a(g, c.g, i);
 var y = g;
 var E = new Map();
 function O(e, t, n) {
@@ -120,7 +120,7 @@ function O(e, t, n) {
       i[s - 3] = arguments[s];
     }
     var c = r[n].apply(r, [e].concat(i));
-    E.set(e, [].concat(Object(a.a)(E.get(e) || []), Object(a.a)(c)));
+    E.set(e, [].concat(a.a(E.get(e) || []), a.a(c)));
   }
 }
 function w(e) {

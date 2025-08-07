@@ -16,6 +16,6 @@ var a = 3200;
 var s = "#FFFFFFFF";
 var c = 300;
 var l = 300;
-var u = !1;
-var d = !1;
+var u = false;
+var d = false;
 export default s;

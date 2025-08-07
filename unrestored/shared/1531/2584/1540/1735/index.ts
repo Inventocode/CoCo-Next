@@ -9,5 +9,5 @@ var s = r.aTypedArray;
   var n = s(this);
   var r = n.length;
   var c = i(e, r);
-  return new (a(n))(n.buffer, n.byteOffset + c * n.BYTES_PER_ELEMENT, o((void 0 === t ? r : i(t, r)) - c));
+  return new (a(n))(n.buffer, n.byteOffset + c * n.BYTES_PER_ELEMENT, o((undefined === t ? r : i(t, r)) - c));
 });

@@ -2,19 +2,19 @@
 
 function r() {
   if ("undefined" === typeof Reflect || !Reflect.construct) {
-    return !1;
+    return false;
   }
   if (Reflect.construct.sham) {
-    return !1;
+    return false;
   }
   if ("function" === typeof Proxy) {
-    return !0;
+    return true;
   }
   try {
     Date.prototype.toString.call(Reflect.construct(Date, [], function () {}));
-    return !0;
+    return true;
   } catch (e) {
-    return !1;
+    return false;
   }
 }
 export { r as a };

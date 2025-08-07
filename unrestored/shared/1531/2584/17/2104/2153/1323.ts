@@ -1,17 +1,17 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.BaseNode = void 0;
+exports.BaseNode = undefined;
 var r = require("../../../125/index");
 var i = function () {
   function e(e) {
     this.children_ = [];
-    this.selectable_ = !0;
-    this.selected_ = !1;
-    this.disabled_ = !1;
-    this.expanded_ = !0;
+    this.selectable_ = true;
+    this.selected_ = false;
+    this.disabled_ = false;
+    this.expanded_ = true;
     this.name_ = e || "";
   }
   e.prototype.get_name = function () {
@@ -57,7 +57,7 @@ var i = function () {
   e.prototype.add_child_at = function (e, t) {
     var n = e.get_tree();
     if (n !== this) {
-      if (void 0 != n) {
+      if (undefined != n) {
         n.remove_child(e);
       }
       var i = this.children_[t];
@@ -81,10 +81,10 @@ var i = function () {
     return this.selected_;
   };
   e.prototype.select = function () {
-    this.selected_ = !0;
+    this.selected_ = true;
   };
   e.prototype.unselect = function () {
-    this.selected_ = !1;
+    this.selected_ = false;
   };
   e.prototype.set_disabled = function (e) {
     if (e !== this.disabled_) {

@@ -13,11 +13,11 @@ module.exports = function (e, t) {
   var s;
   var c;
   var l;
-  var u = !1;
+  var u = false;
   if (!t) {
     t = {};
   }
-  n = t.debug || !1;
+  n = t.debug || false;
   try {
     a = r();
     s = document.createRange();
@@ -62,7 +62,7 @@ module.exports = function (e, t) {
     if (!document.execCommand("copy")) {
       throw new Error("copy command was unsuccessful");
     }
-    u = !0;
+    u = true;
   } catch (d) {
     if (n) {
       console.error("unable to copy using execCommand: ", d);
@@ -75,7 +75,7 @@ module.exports = function (e, t) {
       if (t.onCopy) {
         t.onCopy(window.clipboardData);
       }
-      u = !0;
+      u = true;
     } catch (d) {
       if (n) {
         console.error("unable to copy using clipboardData: ", d);

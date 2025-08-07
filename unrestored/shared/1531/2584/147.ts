@@ -8,17 +8,17 @@ export { d as e };
 export { p as d };
 export { f as g };
 var r;
-var o = require("./11");
-var i = require("./76");
-var a = require("./5");
+import o = require("./11");
+import i = require("./76");
+import a = require("./5");
 var s = "icon-widget-radio";
 var c = "#ff2f2fff";
 var l = "#34c958ff";
 var u = "#148cefff";
-var d = !1;
-var p = !1;
+var d = false;
+var p = false;
 r = {};
-Object(o.a)(r, a.s.SMALL, {
+o.a(r, a.s.SMALL, {
   headlineFontSize: 14,
   innerSize: 16,
   optionFontSize: 12,
@@ -27,7 +27,7 @@ Object(o.a)(r, a.s.SMALL, {
   minWidth: 90,
   maxWidth: i.e
 });
-Object(o.a)(r, a.s.MEDIUM, {
+o.a(r, a.s.MEDIUM, {
   headlineFontSize: 16,
   optionFontSize: 14,
   optionPadding: "8px 32px",
@@ -36,7 +36,7 @@ Object(o.a)(r, a.s.MEDIUM, {
   minWidth: 90,
   maxWidth: i.e
 });
-Object(o.a)(r, a.s.LARGE, {
+o.a(r, a.s.LARGE, {
   headlineFontSize: 18,
   optionFontSize: 16,
   optionPadding: "14px 36px",

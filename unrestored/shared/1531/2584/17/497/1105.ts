@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.no_event = exports.is_target_input = exports.is_right_button = void 0;
+exports.no_event = exports.is_target_input = exports.is_right_button = undefined;
 exports.is_right_button = function (e) {
   return 2 == e.button;
 };

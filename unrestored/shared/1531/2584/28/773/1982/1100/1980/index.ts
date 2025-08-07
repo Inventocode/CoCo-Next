@@ -2,7 +2,7 @@ var r = require("../1304");
 var i = require("./1981");
 require("./1305");
 function o(e) {
-  return void 0 === e || null === e;
+  return undefined === e || null === e;
 }
 function a(e) {
   (e = function (e) {
@@ -26,8 +26,8 @@ a.prototype.process = function (e) {
   var s = t.safeAttrValue;
   return i(e, function (e, t, i, c, u) {
     var l = n[i];
-    var f = !1;
-    if (!0 === l) {
+    var f = false;
+    if (true === l) {
       f = l;
     } else {
       if ("function" === typeof l) {
@@ -38,8 +38,8 @@ a.prototype.process = function (e) {
         }
       }
     }
-    if (!0 !== f) {
-      f = !1;
+    if (true !== f) {
+      f = false;
     }
     if (c = s(i, c)) {
       var d;
@@ -49,7 +49,7 @@ a.prototype.process = function (e) {
         source: u,
         isWhite: f
       };
-      return f ? o(d = r(i, c, h)) ? i + ":" + c : d : o(d = a(i, c, h)) ? void 0 : d;
+      return f ? o(d = r(i, c, h)) ? i + ":" + c : d : o(d = a(i, c, h)) ? undefined : d;
     }
   });
 };

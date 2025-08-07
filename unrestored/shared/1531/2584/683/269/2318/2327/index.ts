@@ -1,7 +1,7 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
 var r = require("../../1366/444");
 var i = require("../../580");
@@ -69,7 +69,7 @@ exports.resolve = function (e) {
         }
         if (p) {
           h.cache = d;
-          h.activated = !0;
+          h.activated = true;
         }
         if (_ && null !== t && !t.has(h.id)) {
           t.set(h.id, d);

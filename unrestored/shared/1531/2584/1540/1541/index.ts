@@ -92,9 +92,9 @@ var ae = function (e, t, n) {
   h(e);
   var r = _(t);
   h(n);
-  return u(Z, r) ? (n.enumerable ? (u(e, G) && e[G][r] && (e[G][r] = !1), n = y(n, {
-    enumerable: b(0, !1)
-  })) : (u(e, G) || q(e, G, b(1, {})), e[G][r] = !0), oe(e, r, n)) : q(e, r, n);
+  return u(Z, r) ? (n.enumerable ? (u(e, G) && e[G][r] && (e[G][r] = false), n = y(n, {
+    enumerable: b(0, false)
+  })) : (u(e, G) || q(e, G, b(1, {})), e[G][r] = true), oe(e, r, n)) : q(e, r, n);
 };
 var se = function (e, t) {
   h(e);
@@ -118,7 +118,7 @@ var le = function (e, t) {
   if (n !== V || !u(Z, r) || u(J, r)) {
     var o = K(n, r);
     if (!(!o || !u(Z, r) || u(n, G) && n[G][r])) {
-      o.enumerable = !0;
+      o.enumerable = true;
     }
     return o;
   }
@@ -149,20 +149,20 @@ if (!c) {
     if (this instanceof z) {
       throw TypeError("Symbol is not a constructor");
     }
-    var e = arguments.length && void 0 !== arguments[0] ? v(arguments[0]) : void 0;
+    var e = arguments.length && undefined !== arguments[0] ? v(arguments[0]) : undefined;
     var t = x(e);
     var n = function e(n) {
       if (this === V) {
         e.call(J, n);
       }
       if (u(this, G) && u(this[G], t)) {
-        this[G][t] = !1;
+        this[G][t] = false;
       }
       oe(this, t, b(1, n));
     };
     if (s && re) {
       oe(V, t, {
-        configurable: !0,
+        configurable: true,
         set: n
       });
     }
@@ -183,21 +183,21 @@ if (!c) {
   };
   if (s) {
     q(z.prototype, "description", {
-      configurable: !0,
+      configurable: true,
       get: function () {
         return H(this).description;
       }
     });
     if (!a) {
       j(V, "propertyIsEnumerable", ce, {
-        unsafe: !0
+        unsafe: true
       });
     }
   }
 }
 r({
-  global: !0,
-  wrap: !0,
+  global: true,
+  wrap: true,
   forced: !c,
   sham: !c
 }, {
@@ -208,7 +208,7 @@ F(E(te), function (e) {
 });
 r({
   target: "Symbol",
-  stat: !0,
+  stat: true,
   forced: !c
 }, {
   for: function (e) {
@@ -230,20 +230,20 @@ r({
     }
   },
   useSetter: function () {
-    re = !0;
+    re = true;
   },
   useSimple: function () {
-    re = !1;
+    re = false;
   }
 });
 r({
   target: "Object",
-  stat: !0,
+  stat: true,
   forced: !c,
   sham: !s
 }, {
   create: function (e, t) {
-    return void 0 === t ? y(e) : se(y(e), t);
+    return undefined === t ? y(e) : se(y(e), t);
   },
   defineProperty: ae,
   defineProperties: se,
@@ -251,7 +251,7 @@ r({
 });
 r({
   target: "Object",
-  stat: !0,
+  stat: true,
   forced: !c
 }, {
   getOwnPropertyNames: ue,
@@ -259,7 +259,7 @@ r({
 });
 r({
   target: "Object",
-  stat: !0,
+  stat: true,
   forced: l(function () {
     C.f(1);
   })
@@ -271,7 +271,7 @@ r({
 if (Y) {
   r({
     target: "JSON",
-    stat: !0,
+    stat: true,
     forced: !c || l(function () {
       var e = z();
       return "[null]" != Y([e]) || "{}" != Y({
@@ -284,7 +284,7 @@ if (Y) {
         o.push(arguments[i++]);
       }
       r = t;
-      if ((p(t) || void 0 !== e) && !f(e)) {
+      if ((p(t) || undefined !== e) && !f(e)) {
         if (!d(t)) {
           t = function (e, t) {
             if ("function" == typeof r) {
@@ -305,4 +305,4 @@ if (!z.prototype[U]) {
   A(z.prototype, U, z.prototype.valueOf);
 }
 P(z, "Symbol");
-k[G] = !0;
+k[G] = true;

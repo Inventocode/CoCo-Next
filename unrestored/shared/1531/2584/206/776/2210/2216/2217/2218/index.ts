@@ -12,14 +12,14 @@ function f(e, t, n) {
   var r = h.call(this, e, t, n);
   return r >= 0 ? {
     index: r,
-    compiling: !0
+    compiling: true
   } : (r = this._compilations.length, this._compilations[r] = {
     schema: e,
     root: t,
     baseId: n
   }, {
     index: r,
-    compiling: !1
+    compiling: false
   });
 }
 function d(e, t, n) {
@@ -44,7 +44,7 @@ function _(e) {
   return "var default" + e + " = defaults[" + e + "];";
 }
 function A(e, t) {
-  return void 0 === t[e] ? "" : "var refVal" + e + " = refVal[" + e + "];";
+  return undefined === t[e] ? "" : "var refVal" + e + " = refVal[" + e + "];";
 }
 function g(e) {
   return "var customRule" + e + " = customRules[" + e + "];";
@@ -61,7 +61,7 @@ function v(e, t) {
 module.exports = function e(t, n, h, m) {
   var y = this;
   var b = this._opts;
-  var w = [void 0];
+  var w = [undefined];
   var E = {};
   var x = [];
   var C = {};
@@ -110,9 +110,9 @@ module.exports = function e(t, n, h, m) {
       return e.call(y, t, a, f, d);
     }
     var m;
-    var C = !0 === t.$async;
+    var C = true === t.$async;
     var k = s({
-      isTop: !0,
+      isTop: true,
       schema: t,
       isRoot: h,
       baseId: d,
@@ -142,7 +142,8 @@ module.exports = function e(t, n, h, m) {
       m = new Function("self", "RULES", "formats", "root", "refVal", "defaults", "customRules", "equal", "ucs2length", "ValidationError", k)(y, I, D, n, w, O, S, u, c, l);
       w[0] = m;
     } catch (T) {
-      throw y.logger.error("Error compiling schema, function code:", k), T;
+      y.logger.error("Error compiling schema, function code:", k);
+      throw T;
     }
     m.schema = t;
     m.errors = null;
@@ -150,9 +151,9 @@ module.exports = function e(t, n, h, m) {
     m.refVal = w;
     m.root = h ? m : a;
     if (C) {
-      m.$async = !0;
+      m.$async = true;
     }
-    if (!0 === b.sourceCode) {
+    if (true === b.sourceCode) {
       m.source = {
         code: k,
         patterns: x,
@@ -166,24 +167,24 @@ module.exports = function e(t, n, h, m) {
     var a;
     var s;
     var c = E[i];
-    if (void 0 !== c) {
+    if (undefined !== c) {
       return j(a = w[c], s = "refVal[" + c + "]");
     }
     if (!o && n.refs) {
       var u = n.refs[i];
-      if (void 0 !== u) {
+      if (undefined !== u) {
         return j(a = n.refVal[u], s = M(i, a));
       }
     }
     s = M(i);
     var l = r.call(y, P, n, i);
-    if (void 0 === l) {
+    if (undefined === l) {
       var f = h && h[i];
       if (f) {
         l = r.inlineRef(f, b.inlineRefs) ? f : e.call(y, f, n, h, t);
       }
     }
-    if (void 0 !== l) {
+    if (undefined !== l) {
       (function (e, t) {
         var n = E[e];
         w[n] = t;
@@ -204,7 +205,7 @@ module.exports = function e(t, n, h, m) {
     return "object" == typeof e || "boolean" == typeof e ? {
       code: t,
       schema: e,
-      inline: !0
+      inline: true
     } : {
       code: t,
       $async: e && !!e.$async
@@ -212,7 +213,7 @@ module.exports = function e(t, n, h, m) {
   }
   function L(e) {
     var t = C[e];
-    if (void 0 === t) {
+    if (undefined === t) {
       t = C[e] = x.length;
       x[t] = e;
     }
@@ -231,7 +232,7 @@ module.exports = function e(t, n, h, m) {
         }
         var t = a(e),
           n = k[t];
-        if (void 0 === n) {
+        if (undefined === n) {
           n = k[t] = O.length;
           O[n] = e;
         }
@@ -239,7 +240,7 @@ module.exports = function e(t, n, h, m) {
     }
   }
   function H(e, t, n, r) {
-    if (!1 !== y._opts.validateSchema) {
+    if (false !== y._opts.validateSchema) {
       var i = e.definition.dependencies;
       if (i && !i.every(function (e) {
         return Object.prototype.hasOwnProperty.call(n, e);
@@ -265,15 +266,15 @@ module.exports = function e(t, n, h, m) {
       s = c.call(y, t, n, r);
     } else if (l) {
       s = l.call(y, t, n, r);
-      if (!1 !== b.validateSchema) {
-        y.validateSchema(s, !0);
+      if (false !== b.validateSchema) {
+        y.validateSchema(s, true);
       }
     } else if (u) {
       s = u.call(y, r, e.keyword, t, n);
     } else if (!(s = e.definition.validate)) {
       return;
     }
-    if (void 0 === s) {
+    if (undefined === s) {
       throw new Error("custom keyword \"" + e.keyword + "\"failed to compile");
     }
     var f = S.length;

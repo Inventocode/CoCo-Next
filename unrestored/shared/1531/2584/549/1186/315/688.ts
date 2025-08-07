@@ -1,7 +1,7 @@
 "use strict";
 
 export { o as b };
-var r = require("../../../54");
+import r = require("../../../54");
 var i = {
   easeInOut: "cubic-bezier(0.4, 0, 0.2, 1)",
   easeOut: "cubic-bezier(0.0, 0, 0.2, 1)",
@@ -25,15 +25,15 @@ _a = {
   easing: i,
   duration: o,
   create: function () {
-    var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : ["all"];
-    var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+    var e = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : ["all"];
+    var t = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : {};
     var n = t.duration;
-    var s = void 0 === n ? o.standard : n;
+    var s = undefined === n ? o.standard : n;
     var c = t.easing;
-    var u = void 0 === c ? i.easeInOut : c;
+    var u = undefined === c ? i.easeInOut : c;
     var l = t.delay;
-    var f = void 0 === l ? 0 : l;
-    Object(r.a)(t, ["duration", "easing", "delay"]);
+    var f = undefined === l ? 0 : l;
+    r.a(t, ["duration", "easing", "delay"]);
     return (Array.isArray(e) ? e : [e]).map(function (e) {
       return "".concat(e, " ").concat("string" === typeof s ? s : a(s), " ").concat(u, " ").concat("string" === typeof f ? f : a(f));
     }).join(",");

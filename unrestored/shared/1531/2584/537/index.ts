@@ -1,8 +1,8 @@
 "use strict";
 
-var r = require("../6");
-var o = require("../10/index");
-var i = require("../8");
+import r = require("../6");
+import o = require("../10/index");
+import i = require("../8");
 var a = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -15,7 +15,7 @@ var a = function __importDefault(module) {
   });
   return defaultExport;
 }(i);
-var s = require("react");
+import s = require("react");
 var c = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -28,7 +28,7 @@ var c = function __importDefault(module) {
   });
   return defaultExport;
 }(s);
-var l = require("../75/index");
+import l = require("../75/index");
 var u = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -42,28 +42,28 @@ var u = function __importDefault(module) {
   return defaultExport;
 }(l);
 require("./856");
-var d = require("../94/index");
+import d = require("../94/index");
 var _a;
-_a = Object(s.memo)(function (e) {
+_a = s.memo(function (e) {
   var t = e.className;
   var n = e.style;
   var i = e.visible;
   var l = e.maskClosable;
-  var p = void 0 !== l && l;
+  var p = undefined !== l && l;
   var f = e.mask;
-  var h = void 0 === f || f;
+  var h = undefined === f || f;
   var m = e.onClose;
   var g = e.children;
   var _ = e.showCloseButton;
-  var v = void 0 === _ || _;
+  var v = undefined === _ || _;
   var b = e.withPortal;
-  var y = void 0 !== b && b;
+  var y = undefined !== b && b;
   var E = e.title;
   var O = e.footer;
-  var w = Object(s.useRef)(null);
-  var C = Object(s.useRef)(null);
-  var T = Object(s.useState)(!1);
-  var S = Object(o.a)(T, 2);
+  var w = s.useRef(null);
+  var C = s.useRef(null);
+  var T = s.useState(false);
+  var S = o.a(T, 2);
   S[0];
   var I = S[1];
   var A = document.getElementById("_cocoDialogContainer");
@@ -71,21 +71,21 @@ _a = Object(s.memo)(function (e) {
     (A = document.createElement("div")).id = "_cocoDialogContainer";
     document.body.appendChild(A);
   }
-  var j = Object(s.useCallback)(function () {
+  var j = s.useCallback(function () {
     if (m) {
       m();
     }
   }, [m]);
-  var N = Object(s.useCallback)(function () {
+  var N = s.useCallback(function () {
     if (p) {
       j();
     }
   }, [j, p]);
-  Object(s.useEffect)(function () {
+  s.useEffect(function () {
     var e = w.current;
     var t = function (e) {
       var t;
-      if (!(null === (t = C.current) || void 0 === t ? void 0 : t.contains(e.target))) {
+      if (!(null === (t = C.current) || undefined === t ? undefined : t.contains(e.target))) {
         e.stopPropagation();
       }
     };
@@ -93,14 +93,14 @@ _a = Object(s.memo)(function (e) {
       e.addEventListener("keydown", t);
     }
     return function () {
-      if (!(null === e || void 0 === e)) {
+      if (!(null === e || undefined === e)) {
         e.removeEventListener("keydown", t);
       }
     };
   }, []);
-  Object(s.useEffect)(function () {
+  s.useEffect(function () {
     if (i) {
-      I(!0);
+      I(true);
     }
   }, [i]);
   var R = c.a.createElement("div", {
@@ -108,7 +108,7 @@ _a = Object(s.memo)(function (e) {
     ref: w,
     tabIndex: -1,
     className: a()("coco-dialog", t),
-    style: Object(r.a)({
+    style: r.a({
       display: i ? "block" : "none"
     }, n)
   }, h && c.a.createElement("div", {
@@ -120,7 +120,7 @@ _a = Object(s.memo)(function (e) {
     className: i ? a()("coco-dialog-wrapper", "show") : a()("coco-dialog-wrapper", "hidden"),
     onAnimationEnd: function () {
       if (!i) {
-        I(!1);
+        I(false);
       }
     }
   }, c.a.createElement("div", {

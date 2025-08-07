@@ -46,8 +46,8 @@
     return defaultExport;
   }(p);
   var h = require("./188");
-  exports.a = Object(o.memo)(function () {
-    var t = Object(s.e)(function (e) {
+  exports.a = o.memo(function () {
+    var t = s.e(function (e) {
       return e.block.get("commonInputDialog");
     });
     var n = t.visible;
@@ -55,31 +55,31 @@
     var p = t.placeholder;
     var m = t.defaultValue;
     var g = t.maxLength;
-    var _ = void 0 === g ? 1 / 0 : g;
+    var _ = undefined === g ? 1 / 0 : g;
     var v = t.validator;
     var b = t.confirmCallback;
     var y = t.cancelCallback;
-    var E = Object(a.a)().formatMessage;
-    var O = Object(o.useRef)(null);
-    var w = Object(s.d)();
-    var C = Object(o.useState)("");
-    var T = Object(r.a)(C, 2);
+    var E = a.a().formatMessage;
+    var O = o.useRef(null);
+    var w = s.d();
+    var C = o.useState("");
+    var T = r.a(C, 2);
     var S = T[0];
     var I = T[1];
-    var A = Object(o.useState)(m || "");
-    var j = Object(r.a)(A, 2);
+    var A = o.useState(m || "");
+    var j = r.a(A, 2);
     var N = j[0];
     var R = j[1];
-    Object(o.useEffect)(function () {
+    o.useEffect(function () {
       var t;
       R(m || "");
       if (n) {
-        if (!(null === (t = O.current) || void 0 === t)) {
+        if (!(null === (t = O.current) || undefined === t)) {
           t.focus();
         }
         e(function () {
           var e;
-          if (!(null === (e = O.current) || void 0 === e)) {
+          if (!(null === (e = O.current) || undefined === e)) {
             e.select();
           }
         });
@@ -87,26 +87,26 @@
       }
     }, [n, m]);
     var k = function () {
-      if (!(null === y || void 0 === y)) {
+      if (!(null === y || undefined === y)) {
         y.call(null);
       }
-      w(Object(d.jh)());
+      w(d.jh());
     };
     var x = function () {
       if (!S && N) {
-        if (!(null === b || void 0 === b)) {
+        if (!(null === b || undefined === b)) {
           b.call(null, N);
         }
-        w(Object(d.jh)());
+        w(d.jh());
       }
     };
     return i.a.createElement(u.f, {
       visible: n,
       className: l()(f.a.nameDialog),
       onClose: k,
-      withPortal: !0
+      withPortal: true
     }, i.a.createElement(h.a, {
-      useCapture: !0
+      useCapture: true
     }, i.a.createElement(h.b, {
       keys: "enter",
       callback: x
@@ -125,7 +125,7 @@
         id: p
       }),
       onChange: function (e) {
-        var t = null === v || void 0 === v ? void 0 : v.call(null, e);
+        var t = null === v || undefined === v ? undefined : v.call(null, e);
         R(e);
         I(t || "");
       },

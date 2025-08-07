@@ -1,7 +1,7 @@
 "use strict";
 
 export { i as a };
-var r = require("./770");
+import r = require("./770");
 function i(e, t) {
   if ("function" !== typeof t && null !== t) {
     throw new TypeError("Super expression must either be null or a function");
@@ -9,12 +9,12 @@ function i(e, t) {
   e.prototype = Object.create(t && t.prototype, {
     constructor: {
       value: e,
-      writable: !0,
-      configurable: !0
+      writable: true,
+      configurable: true
     }
   });
   if (t) {
-    Object(r.a)(e, t);
+    r.a(e, t);
   }
 }
 export default i;

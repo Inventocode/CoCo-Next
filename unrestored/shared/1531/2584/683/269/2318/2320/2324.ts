@@ -1,7 +1,7 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
 var r = require("../../1366/index");
 var i = require("../../1366/444");
@@ -13,7 +13,7 @@ var c = require("./1367/index");
 function u(e, t, n, r) {
   var a = e.getConstructorMetadata(n);
   var s = a.compilerGeneratedMetadata;
-  if (void 0 === s) {
+  if (undefined === s) {
     var u = i.MISSING_INJECTABLE_ANNOTATION + " " + t + ".";
     throw new Error(u);
   }
@@ -51,14 +51,14 @@ function u(e, t, n, r) {
 function l(e, t, n, a, s) {
   var u = s[e.toString()] || [];
   var l = f(u);
-  var d = !0 !== l.unmanaged;
+  var d = true !== l.unmanaged;
   var h = a[e];
   var p = l.inject || l.multiInject;
   if ((h = p || h) instanceof r.LazyServiceIdentifer) {
     h = h.unwrap();
   }
   if (d) {
-    if (!t && (h === Object || h === Function || void 0 === h)) {
+    if (!t && (h === Object || h === Function || undefined === h)) {
       var _ = i.MISSING_INJECT_ANNOTATION + " argument " + e + " in class " + n + ".";
       throw new Error(_);
     }
@@ -81,12 +81,12 @@ function f(e) {
   };
 }
 exports.getDependencies = function (e, t) {
-  return u(e, s.getFunctionName(t), t, !1);
+  return u(e, s.getFunctionName(t), t, false);
 };
 exports.getBaseClassDependencyCount = function e(t, n) {
   var r = Object.getPrototypeOf(n.prototype).constructor;
   if (r !== Object) {
-    var i = u(t, s.getFunctionName(r), r, !0);
+    var i = u(t, s.getFunctionName(r), r, true);
     var o = i.map(function (e) {
       return e.metadata.filter(function (e) {
         return e.key === a.UNMANAGED_TAG;

@@ -1,15 +1,15 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.load_json_js_generators_data = void 0;
+exports.load_json_js_generators_data = undefined;
 exports.load_json_js_generators_data = function (e, t) {
   var n = function (e, n) {
     var r;
     return (null === (r = t(n).find(function (t) {
       return t[1] === e;
-    })) || void 0 === r ? void 0 : r[0]) || "?";
+    })) || undefined === r ? undefined : r[0]) || "?";
   };
   e.register("variables_get", function (t, r) {
     var i = e.get_field_value(t.blocks[r], "VAR") || "?";

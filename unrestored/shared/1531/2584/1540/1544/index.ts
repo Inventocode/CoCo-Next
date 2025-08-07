@@ -8,13 +8,13 @@ var s = require("../1738/231");
 var c = require("../1623/300").f;
 var l = require("./1210");
 var u = i.Symbol;
-if (o && "function" == typeof u && (!("description" in u.prototype) || void 0 !== u().description)) {
+if (o && "function" == typeof u && (!("description" in u.prototype) || undefined !== u().description)) {
   var d = {};
   var p = function () {
-    var e = arguments.length < 1 || void 0 === arguments[0] ? void 0 : String(arguments[0]);
-    var t = this instanceof p ? new u(e) : void 0 === e ? u() : u(e);
+    var e = arguments.length < 1 || undefined === arguments[0] ? undefined : String(arguments[0]);
+    var t = this instanceof p ? new u(e) : undefined === e ? u() : u(e);
     if ("" === e) {
-      d[t] = !0;
+      d[t] = true;
     }
     return t;
   };
@@ -25,7 +25,7 @@ if (o && "function" == typeof u && (!("description" in u.prototype) || void 0 !=
   var m = "Symbol(test)" == String(u("test"));
   var g = /^Symbol\((.*)\)[^)]+$/;
   c(f, "description", {
-    configurable: !0,
+    configurable: true,
     get: function () {
       var e = s(this) ? this.valueOf() : this;
       var t = h.call(e);
@@ -33,12 +33,12 @@ if (o && "function" == typeof u && (!("description" in u.prototype) || void 0 !=
         return "";
       }
       var n = m ? t.slice(7, -1) : t.replace(g, "$1");
-      return "" === n ? void 0 : n;
+      return "" === n ? undefined : n;
     }
   });
   r({
-    global: !0,
-    forced: !0
+    global: true,
+    forced: true
   }, {
     Symbol: p
   });

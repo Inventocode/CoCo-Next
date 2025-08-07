@@ -27,7 +27,7 @@ var v = !!g && !i(function () {
     return l < 67;
   }
   if (u) {
-    return !0;
+    return true;
   }
   if (p) {
     return p < 602;
@@ -45,12 +45,12 @@ var v = !!g && !i(function () {
     return (e / 4 | 0) - (t / 4 | 0);
   }), e = 0; e < 516; e++) {
     if (n[e] !== r[e]) {
-      return !0;
+      return true;
     }
   }
 });
 h("sort", function (e) {
-  if (void 0 !== e) {
+  if (undefined !== e) {
     a(e);
   }
   if (v) {
@@ -65,7 +65,7 @@ h("sort", function (e) {
   }
   for (r = c(this, function (e) {
     return function (t, n) {
-      return void 0 !== e ? +e(t, n) || 0 : n !== n ? -1 : t !== t ? 1 : 0 === t && 0 === n ? 1 / t > 0 && 1 / n < 0 ? 1 : -1 : t > n;
+      return undefined !== e ? +e(t, n) || 0 : n !== n ? -1 : t !== t ? 1 : 0 === t && 0 === n ? 1 / t > 0 && 1 / n < 0 ? 1 : -1 : t > n;
     };
   }(e)), t = 0; t < n; t++) {
     this[t] = r[t];

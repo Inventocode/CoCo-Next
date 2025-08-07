@@ -10,18 +10,18 @@ export { f as j };
 export { h as a };
 export { p as e };
 export { _ as d };
-var r = require("../../2627/285/210");
+import r = require("../../2627/285/210");
 function i(e, t, n) {
   return {
-    r: 255 * Object(r.a)(e, 255),
-    g: 255 * Object(r.a)(t, 255),
-    b: 255 * Object(r.a)(n, 255)
+    r: 255 * r.a(e, 255),
+    g: 255 * r.a(t, 255),
+    b: 255 * r.a(n, 255)
   };
 }
 function o(e, t, n) {
-  e = Object(r.a)(e, 255);
-  t = Object(r.a)(t, 255);
-  n = Object(r.a)(n, 255);
+  e = r.a(e, 255);
+  t = r.a(t, 255);
+  n = r.a(n, 255);
   var i = Math.max(e, t, n);
   var o = Math.min(e, t, n);
   var a = 0;
@@ -63,9 +63,9 @@ function s(e, t, n) {
   var i;
   var o;
   var s;
-  e = Object(r.a)(e, 360);
-  t = Object(r.a)(t, 100);
-  n = Object(r.a)(n, 100);
+  e = r.a(e, 360);
+  t = r.a(t, 100);
+  n = r.a(n, 100);
   if (0 === t) {
     o = n;
     s = n;
@@ -84,9 +84,9 @@ function s(e, t, n) {
   };
 }
 function c(e, t, n) {
-  e = Object(r.a)(e, 255);
-  t = Object(r.a)(t, 255);
-  n = Object(r.a)(n, 255);
+  e = r.a(e, 255);
+  t = r.a(t, 255);
+  n = r.a(n, 255);
   var i = Math.max(e, t, n);
   var o = Math.min(e, t, n);
   var a = 0;
@@ -115,9 +115,9 @@ function c(e, t, n) {
   };
 }
 function u(e, t, n) {
-  e = 6 * Object(r.a)(e, 360);
-  t = Object(r.a)(t, 100);
-  n = Object(r.a)(n, 100);
+  e = 6 * r.a(e, 360);
+  t = r.a(t, 100);
+  n = r.a(n, 100);
   var i = Math.floor(e);
   var o = e - i;
   var a = n * (1 - t);
@@ -131,11 +131,11 @@ function u(e, t, n) {
   };
 }
 function l(e, t, n, i) {
-  var o = [Object(r.e)(Math.round(e).toString(16)), Object(r.e)(Math.round(t).toString(16)), Object(r.e)(Math.round(n).toString(16))];
+  var o = [r.e(Math.round(e).toString(16)), r.e(Math.round(t).toString(16)), r.e(Math.round(n).toString(16))];
   return i && o[0].startsWith(o[0].charAt(1)) && o[1].startsWith(o[1].charAt(1)) && o[2].startsWith(o[2].charAt(1)) ? o[0].charAt(0) + o[1].charAt(0) + o[2].charAt(0) : o.join("");
 }
 function f(e, t, n, i, o) {
-  var a = [Object(r.e)(Math.round(e).toString(16)), Object(r.e)(Math.round(t).toString(16)), Object(r.e)(Math.round(n).toString(16)), Object(r.e)(d(i))];
+  var a = [r.e(Math.round(e).toString(16)), r.e(Math.round(t).toString(16)), r.e(Math.round(n).toString(16)), r.e(d(i))];
   return o && a[0].startsWith(a[0].charAt(1)) && a[1].startsWith(a[1].charAt(1)) && a[2].startsWith(a[2].charAt(1)) && a[3].startsWith(a[3].charAt(1)) ? a[0].charAt(0) + a[1].charAt(0) + a[2].charAt(0) + a[3].charAt(0) : a.join("");
 }
 function d(e) {

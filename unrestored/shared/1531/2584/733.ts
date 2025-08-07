@@ -1,7 +1,7 @@
 "use strict";
 
-var r = require("react");
-var o = require("./8");
+import r = require("react");
+import o = require("./8");
 var i = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -38,8 +38,8 @@ _a = function (e) {
     },
     unselectable: "on",
     onClick: c,
-    "aria-hidden": !0
-  }, void 0 !== t ? t : r.createElement("span", {
+    "aria-hidden": true
+  }, undefined !== t ? t : r.createElement("span", {
     className: i()(n.split(/\s+/).map(function (e) {
       return "".concat(e, "-icon");
     }))

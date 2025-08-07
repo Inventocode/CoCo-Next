@@ -45,7 +45,7 @@
       if (t.byteLength < n + (r || 0)) {
         throw new RangeError("'length' is out of bounds");
       }
-      t = void 0 === n && void 0 === r ? new Uint8Array(t) : void 0 === r ? new Uint8Array(t, n) : new Uint8Array(t, n, r);
+      t = undefined === n && undefined === r ? new Uint8Array(t) : undefined === r ? new Uint8Array(t, n) : new Uint8Array(t, n, r);
       if (c.TYPED_ARRAY_SUPPORT) {
         (e = t).__proto__ = c.prototype;
       } else {
@@ -131,7 +131,7 @@
     if (0 === n) {
       return 0;
     }
-    for (var r = !1;;) {
+    for (var r = false;;) {
       switch (t) {
         case "ascii":
         case "latin1":
@@ -139,7 +139,7 @@
           return n;
         case "utf8":
         case "utf-8":
-        case void 0:
+        case undefined:
           return U(e).length;
         case "ucs2":
         case "ucs-2":
@@ -155,19 +155,19 @@
             return U(e).length;
           }
           t = ("" + t).toLowerCase();
-          r = !0;
+          r = true;
       }
     }
   }
   function _(e, t, n) {
-    var r = !1;
-    if (void 0 === t || t < 0) {
+    var r = false;
+    if (undefined === t || t < 0) {
       t = 0;
     }
     if (t > this.length) {
       return "";
     }
-    if (void 0 === n || n > this.length) {
+    if (undefined === n || n > this.length) {
       n = this.length;
     }
     if (n <= 0) {
@@ -200,7 +200,7 @@
             throw new TypeError("Unknown encoding: " + e);
           }
           e = (e + "").toLowerCase();
-          r = !0;
+          r = true;
       }
     }
   }
@@ -260,7 +260,7 @@
     var a = 1;
     var s = e.length;
     var c = t.length;
-    if (void 0 !== r && ("ucs2" === (r = String(r).toLowerCase()) || "ucs-2" === r || "utf16le" === r || "utf-16le" === r)) {
+    if (undefined !== r && ("ucs2" === (r = String(r).toLowerCase()) || "ucs-2" === r || "utf16le" === r || "utf-16le" === r)) {
       if (e.length < 2 || t.length < 2) {
         return -1;
       }
@@ -291,9 +291,9 @@
       }
     } else {
       for (n + c > s && (n = s - c), o = n; o >= 0; o--) {
-        for (var f = !0, d = 0; d < c; d++) {
+        for (var f = true, d = 0; d < c; d++) {
           if (u(e, o + d) !== u(t, d)) {
-            f = !1;
+            f = false;
             break;
           }
         }
@@ -434,7 +434,7 @@
     return c.alloc(+e);
   };
   exports.INSPECT_MAX_BYTES = 50;
-  c.TYPED_ARRAY_SUPPORT = void 0 !== e.TYPED_ARRAY_SUPPORT ? e.TYPED_ARRAY_SUPPORT : function () {
+  c.TYPED_ARRAY_SUPPORT = undefined !== e.TYPED_ARRAY_SUPPORT ? e.TYPED_ARRAY_SUPPORT : function () {
     try {
       var e = new Uint8Array(1);
       e.__proto__ = {
@@ -445,7 +445,7 @@
       };
       return 42 === e.foo() && "function" === typeof e.subarray && 0 === e.subarray(1, 1).byteLength;
     } catch (t) {
-      return !1;
+      return false;
     }
   }();
   exports.kMaxLength = a();
@@ -463,14 +463,14 @@
     if ("undefined" !== typeof Symbol && Symbol.species && c[Symbol.species] === c) {
       Object.defineProperty(c, Symbol.species, {
         value: null,
-        configurable: !0
+        configurable: true
       });
     }
   }
   c.alloc = function (e, t, n) {
     return function (e, t, n, r) {
       l(t);
-      return t <= 0 ? s(e, t) : void 0 !== n ? "string" === typeof r ? s(e, t).fill(n, r) : s(e, t).fill(n) : s(e, t);
+      return t <= 0 ? s(e, t) : undefined !== n ? "string" === typeof r ? s(e, t).fill(n, r) : s(e, t).fill(n) : s(e, t);
     }(null, e, t, n);
   };
   c.allocUnsafe = function (e) {
@@ -511,9 +511,9 @@
       case "ucs-2":
       case "utf16le":
       case "utf-16le":
-        return !0;
+        return true;
       default:
-        return !1;
+        return false;
     }
   };
   c.concat = function (e, t) {
@@ -524,7 +524,7 @@
       return c.alloc(0);
     }
     var n;
-    if (void 0 === t) {
+    if (undefined === t) {
       for (t = 0, n = 0; n < e.length; ++n) {
         t += e[n].length;
       }
@@ -542,7 +542,7 @@
     return r;
   };
   c.byteLength = p;
-  c.prototype._isBuffer = !0;
+  c.prototype._isBuffer = true;
   c.prototype.swap16 = function () {
     var e = this.length;
     if (e % 2 !== 0) {
@@ -602,16 +602,16 @@
     if (!c.isBuffer(e)) {
       throw new TypeError("Argument must be a Buffer");
     }
-    if (void 0 === t) {
+    if (undefined === t) {
       t = 0;
     }
-    if (void 0 === n) {
+    if (undefined === n) {
       n = e ? e.length : 0;
     }
-    if (void 0 === r) {
+    if (undefined === r) {
       r = 0;
     }
-    if (void 0 === i) {
+    if (undefined === i) {
       i = this.length;
     }
     if (t < 0 || n > e.length || r < 0 || i > this.length) {
@@ -642,17 +642,17 @@
     return -1 !== this.indexOf(e, t, n);
   };
   c.prototype.indexOf = function (e, t, n) {
-    return g(this, e, t, n, !0);
+    return g(this, e, t, n, true);
   };
   c.prototype.lastIndexOf = function (e, t, n) {
-    return g(this, e, t, n, !1);
+    return g(this, e, t, n, false);
   };
   c.prototype.write = function (e, t, n, r) {
-    if (void 0 === t) {
+    if (undefined === t) {
       r = "utf8";
       n = this.length;
       t = 0;
-    } else if (void 0 === n && "string" === typeof t) {
+    } else if (undefined === n && "string" === typeof t) {
       r = t;
       n = this.length;
       t = 0;
@@ -663,16 +663,16 @@
       t |= 0;
       if (isFinite(n)) {
         n |= 0;
-        if (void 0 === r) {
+        if (undefined === r) {
           r = "utf8";
         }
       } else {
         r = n;
-        n = void 0;
+        n = undefined;
       }
     }
     var i = this.length - t;
-    if (void 0 === n || n > i) {
+    if (undefined === n || n > i) {
       n = i;
     }
     if (e.length > 0 && (n < 0 || t < 0) || t > this.length) {
@@ -681,7 +681,7 @@
     if (!r) {
       r = "utf8";
     }
-    for (var o = !1;;) {
+    for (var o = false;;) {
       switch (r) {
         case "hex":
           return m(this, e, t, n);
@@ -705,7 +705,7 @@
             throw new TypeError("Unknown encoding: " + r);
           }
           r = ("" + r).toLowerCase();
-          o = !0;
+          o = true;
       }
     }
   };
@@ -819,7 +819,7 @@
         e = r;
       }
     }
-    if ((t = void 0 === t ? r : ~~t) < 0) {
+    if ((t = undefined === t ? r : ~~t) < 0) {
       if ((t += r) < 0) {
         t = 0;
       }
@@ -835,7 +835,7 @@
       (n = this.subarray(e, t)).__proto__ = c.prototype;
     } else {
       var i = t - e;
-      n = new c(i, void 0);
+      n = new c(i, undefined);
       for (var o = 0; o < i; ++o) {
         n[o] = this[o + e];
       }
@@ -958,25 +958,25 @@
     if (!t) {
       D(e, 4, this.length);
     }
-    return i.read(this, e, !0, 23, 4);
+    return i.read(this, e, true, 23, 4);
   };
   c.prototype.readFloatBE = function (e, t) {
     if (!t) {
       D(e, 4, this.length);
     }
-    return i.read(this, e, !1, 23, 4);
+    return i.read(this, e, false, 23, 4);
   };
   c.prototype.readDoubleLE = function (e, t) {
     if (!t) {
       D(e, 8, this.length);
     }
-    return i.read(this, e, !0, 52, 8);
+    return i.read(this, e, true, 52, 8);
   };
   c.prototype.readDoubleBE = function (e, t) {
     if (!t) {
       D(e, 8, this.length);
     }
-    return i.read(this, e, !1, 52, 8);
+    return i.read(this, e, false, 52, 8);
   };
   c.prototype.writeUIntLE = function (e, t, n, r) {
     if (!(e = +e, t |= 0, n |= 0, r)) {
@@ -1022,7 +1022,7 @@
       this[t] = 255 & e;
       this[t + 1] = e >>> 8;
     } else {
-      F(this, e, t, !0);
+      F(this, e, t, true);
     }
     return t + 2;
   };
@@ -1036,7 +1036,7 @@
       this[t] = e >>> 8;
       this[t + 1] = 255 & e;
     } else {
-      F(this, e, t, !1);
+      F(this, e, t, false);
     }
     return t + 2;
   };
@@ -1052,7 +1052,7 @@
       this[t + 1] = e >>> 8;
       this[t] = 255 & e;
     } else {
-      R(this, e, t, !0);
+      R(this, e, t, true);
     }
     return t + 4;
   };
@@ -1068,7 +1068,7 @@
       this[t + 2] = e >>> 8;
       this[t + 3] = 255 & e;
     } else {
-      R(this, e, t, !1);
+      R(this, e, t, false);
     }
     return t + 4;
   };
@@ -1133,7 +1133,7 @@
       this[t] = 255 & e;
       this[t + 1] = e >>> 8;
     } else {
-      F(this, e, t, !0);
+      F(this, e, t, true);
     }
     return t + 2;
   };
@@ -1147,7 +1147,7 @@
       this[t] = e >>> 8;
       this[t + 1] = 255 & e;
     } else {
-      F(this, e, t, !1);
+      F(this, e, t, false);
     }
     return t + 2;
   };
@@ -1163,7 +1163,7 @@
       this[t + 2] = e >>> 16;
       this[t + 3] = e >>> 24;
     } else {
-      R(this, e, t, !0);
+      R(this, e, t, true);
     }
     return t + 4;
   };
@@ -1182,21 +1182,21 @@
       this[t + 2] = e >>> 8;
       this[t + 3] = 255 & e;
     } else {
-      R(this, e, t, !1);
+      R(this, e, t, false);
     }
     return t + 4;
   };
   c.prototype.writeFloatLE = function (e, t, n) {
-    return N(this, e, t, !0, n);
+    return N(this, e, t, true, n);
   };
   c.prototype.writeFloatBE = function (e, t, n) {
-    return N(this, e, t, !1, n);
+    return N(this, e, t, false, n);
   };
   c.prototype.writeDoubleLE = function (e, t, n) {
-    return M(this, e, t, !0, n);
+    return M(this, e, t, true, n);
   };
   c.prototype.writeDoubleBE = function (e, t, n) {
-    return M(this, e, t, !1, n);
+    return M(this, e, t, false, n);
   };
   c.prototype.copy = function (e, t, n, r) {
     if (!n) {
@@ -1268,7 +1268,7 @@
           e = i;
         }
       }
-      if (void 0 !== r && "string" !== typeof r) {
+      if (undefined !== r && "string" !== typeof r) {
         throw new TypeError("encoding must be a string");
       }
       if ("string" === typeof r && !c.isEncoding(r)) {
@@ -1285,7 +1285,7 @@
     }
     var o;
     t >>>= 0;
-    n = void 0 === n ? this.length : n >>> 0;
+    n = undefined === n ? this.length : n >>> 0;
     if (!e) {
       e = 0;
     }

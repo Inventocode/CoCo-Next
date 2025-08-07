@@ -31,7 +31,7 @@ if (a || d.state) {
   };
 } else {
   var b = p("state");
-  f[b] = !0;
+  f[b] = true;
   r = function (e, t) {
     if (u(e, b)) {
       throw new TypeError("Object already initialized");

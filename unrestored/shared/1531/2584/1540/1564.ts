@@ -8,14 +8,14 @@ var s = require("./1623/439");
 var c = require("./1557/821/index");
 r({
   target: "Array",
-  proto: !0
+  proto: true
 }, {
   flatMap: function (e) {
     var t;
     var n = i(this);
     var r = a(n.length);
     s(e);
-    (t = c(n, 0)).length = o(t, n, n, r, 0, 1, e, arguments.length > 1 ? arguments[1] : void 0);
+    (t = c(n, 0)).length = o(t, n, n, r, 0, 1, e, arguments.length > 1 ? arguments[1] : undefined);
     return t;
   }
 });

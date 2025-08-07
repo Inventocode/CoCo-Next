@@ -1,15 +1,15 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.Css = void 0;
+exports.Css = undefined;
 var r = require("tslib");
 var i = require("inversify");
 var o = require("../../4/127");
 var a = function () {
   function e() {
-    this.style_sheet = void 0;
+    this.style_sheet = undefined;
     this.current_cursor = "";
     this.media_path = "";
     this.Cursor = {
@@ -52,7 +52,7 @@ var a = function () {
       }
     }
   };
-  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.css_content)], e.prototype, "CONTENT", void 0);
+  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.css_content)], e.prototype, "CONTENT", undefined);
   return e = (0, r.__decorate)([(0, i.injectable)()], e);
 }();
 exports.Css = a;

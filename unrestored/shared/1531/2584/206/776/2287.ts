@@ -13,10 +13,10 @@ function s() {
 }
 s.applyFixes = function (e, t, n) {
   i("Applying fixes");
-  if (!1 === n) {
+  if (false === n) {
     i("shouldFix parameter was false, not attempting fixes");
     return {
-      fixed: !1,
+      fixed: false,
       messages: t,
       output: e
     };
@@ -31,7 +31,7 @@ s.applyFixes = function (e, t, n) {
     var t = e.fix;
     var n = t.range[0];
     var r = t.range[1];
-    return f >= n || n > r ? (s.push(e), !1) : ((n < 0 && r >= 0 || 0 === n && t.text.startsWith("﻿")) && (d = ""), d += l.slice(Math.max(0, f), Math.max(0, n)), d += t.text, f = r, !0);
+    return f >= n || n > r ? (s.push(e), false) : ((n < 0 && r >= 0 || 0 === n && t.text.startsWith("﻿")) && (d = ""), d += l.slice(Math.max(0, f), Math.max(0, n)), d += t.text, f = r, true);
   }
   t.forEach(function (e) {
     if (Object.prototype.hasOwnProperty.call(e, "fix")) {
@@ -43,14 +43,14 @@ s.applyFixes = function (e, t, n) {
   if (c.length) {
     i("Found fixes to apply");
     var p;
-    var _ = !1;
+    var _ = false;
     var A = r(c.sort(o));
     try {
       for (A.s(); !(p = A.n()).done;) {
         var g = p.value;
         if ("function" !== typeof n || n(g)) {
           h(g);
-          _ = !0;
+          _ = true;
         } else {
           s.push(g);
         }
@@ -69,7 +69,7 @@ s.applyFixes = function (e, t, n) {
   }
   i("No fixes to apply");
   return {
-    fixed: !1,
+    fixed: false,
     messages: t,
     output: u + l
   };

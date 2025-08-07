@@ -60,9 +60,9 @@ module.exports = {
       p(e, {
         type: t,
         id: g++,
-        frozen: void 0
+        frozen: undefined
       });
-      if (void 0 != r) {
+      if (undefined != r) {
         c(r, e[l], {
           that: e,
           AS_ENTRIES: n
@@ -72,8 +72,8 @@ module.exports = {
     var h = f(t);
     var m = function (e, t, n) {
       var r = h(e);
-      var a = o(i(t), !0);
-      if (!0 === a) {
+      var a = o(i(t), true);
+      if (true === a) {
         _(r).set(t, n);
       } else {
         a[r.id] = n;
@@ -84,18 +84,18 @@ module.exports = {
       delete: function (e) {
         var t = h(this);
         if (!a(e)) {
-          return !1;
+          return false;
         }
         var n = o(e);
-        return !0 === n ? _(t).delete(e) : n && u(n, t.id) && delete n[t.id];
+        return true === n ? _(t).delete(e) : n && u(n, t.id) && delete n[t.id];
       },
       has: function (e) {
         var t = h(this);
         if (!a(e)) {
-          return !1;
+          return false;
         }
         var n = o(e);
-        return !0 === n ? _(t).has(e) : n && u(n, t.id);
+        return true === n ? _(t).has(e) : n && u(n, t.id);
       }
     });
     r(d.prototype, n ? {
@@ -103,7 +103,7 @@ module.exports = {
         var t = h(this);
         if (a(e)) {
           var n = o(e);
-          return !0 === n ? _(t).get(e) : n ? n[t.id] : void 0;
+          return true === n ? _(t).get(e) : n ? n[t.id] : undefined;
         }
       },
       set: function (e, t) {
@@ -111,7 +111,7 @@ module.exports = {
       }
     } : {
       add: function (e) {
-        return m(this, e, !0);
+        return m(this, e, true);
       }
     });
     return d;

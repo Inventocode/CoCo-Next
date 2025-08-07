@@ -1,7 +1,7 @@
 var r = require("../../1680/473");
 var o = require("../../1735/257");
 module.exports = function (e) {
-  if (void 0 === e) {
+  if (undefined === e) {
     return 0;
   }
   var t = r(e);

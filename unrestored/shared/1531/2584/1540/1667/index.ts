@@ -26,7 +26,7 @@ var I = /a/g;
 var A = new w(S) !== S;
 var j = f.UNSUPPORTED_Y;
 var N = r && (!A || j || y || E || m(function () {
-  I[O] = !1;
+  I[O] = false;
   return w(S) != S || w(I) == I || "/a/i" != w(S, "i");
 }));
 if (i("RegExp", N)) {
@@ -39,7 +39,7 @@ if (i("RegExp", N)) {
       var l;
       var f = this instanceof R;
       var h = u(e);
-      var m = void 0 === t;
+      var m = undefined === t;
       var v = [];
       var b = e;
       if (!f && h && m && e.constructor === R) {
@@ -51,8 +51,8 @@ if (i("RegExp", N)) {
           t = "flags" in b ? b.flags : p.call(b);
         }
       }
-      e = void 0 === e ? "" : d(e);
-      t = void 0 === t ? "" : d(t);
+      e = undefined === e ? "" : d(e);
+      t = undefined === t ? "" : d(t);
       b = e;
       if (y && "dotAll" in S && (r = !!t && t.indexOf("s") > -1)) {
         t = t.replace(/s/g, "");
@@ -63,20 +63,20 @@ if (i("RegExp", N)) {
       }
       if (E) {
         e = (i = function (e) {
-          for (var t, n = e.length, r = 0, o = "", i = [], a = {}, s = !1, c = !1, l = 0, u = ""; r <= n; r++) {
+          for (var t, n = e.length, r = 0, o = "", i = [], a = {}, s = false, c = false, l = 0, u = ""; r <= n; r++) {
             if ("\\" === (t = e.charAt(r))) {
               t += e.charAt(++r);
             } else if ("]" === t) {
-              s = !1;
+              s = false;
             } else if (!s) {
-              switch (!0) {
+              switch (true) {
                 case "[" === t:
-                  s = !0;
+                  s = true;
                   break;
                 case "(" === t:
                   if (T.test(e.slice(r + 1))) {
                     r += 2;
-                    c = !0;
+                    c = true;
                   }
                   o += t;
                   l++;
@@ -85,9 +85,9 @@ if (i("RegExp", N)) {
                   if ("" === u || g(a, u)) {
                     throw new SyntaxError("Invalid capture group name");
                   }
-                  a[u] = !0;
+                  a[u] = true;
                   i.push([u, l]);
-                  c = !1;
+                  c = false;
                   u = "";
                   continue;
               }
@@ -106,16 +106,16 @@ if (i("RegExp", N)) {
       if (r || o || v.length) {
         l = _(c);
         if (r) {
-          l.dotAll = !0;
+          l.dotAll = true;
           l.raw = R(function (e) {
-            for (var t, n = e.length, r = 0, o = "", i = !1; r <= n; r++) {
+            for (var t, n = e.length, r = 0, o = "", i = false; r <= n; r++) {
               if ("\\" !== (t = e.charAt(r))) {
                 if (i || "." !== t) {
                   if ("[" === t) {
-                    i = !0;
+                    i = true;
                   } else {
                     if ("]" === t) {
-                      i = !1;
+                      i = false;
                     }
                   }
                   o += t;
@@ -130,7 +130,7 @@ if (i("RegExp", N)) {
           }(e), n);
         }
         if (o) {
-          l.sticky = !0;
+          l.sticky = true;
         }
         if (v.length) {
           l.groups = v;
@@ -145,7 +145,7 @@ if (i("RegExp", N)) {
     }, k = function (e) {
       if (!(e in R)) {
         c(R, e, {
-          configurable: !0,
+          configurable: true,
           get: function () {
             return w[e];
           },

@@ -1,15 +1,15 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.FlyoutDragger = void 0;
+exports.FlyoutDragger = undefined;
 var r = require("tslib");
 var i = require("inversify");
 var o = function (e) {
   function t(t) {
     var n = e.call(this, t.get_workspace()) || this;
-    n.horizontal_layout = !1;
+    n.horizontal_layout = false;
     n.scrollbar_ = t.get_scrollbar();
     n.horizontal_layout = t.is_horizontal();
     return n;

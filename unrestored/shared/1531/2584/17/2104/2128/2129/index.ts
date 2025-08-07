@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.onKeyDown_ = exports.Inject = void 0;
+exports.onKeyDown_ = exports.Inject = undefined;
 var r = require("tslib");
 var i = require("@kitten-team/gl-matrix");
 var o = require("../../../../4/127");
@@ -17,7 +17,7 @@ var d = require("../../../497/index");
 var h = require("../../../497/644");
 exports.Inject = function (e, t) {
   if ((0, u.is_string)(e)) {
-    e = document.getElementById(e) || document.querySelector(e) || void 0;
+    e = document.getElementById(e) || document.querySelector(e) || undefined;
   }
   if ((0, u.is_nil)(e) || !l.contains(document, e)) {
     throw new ReferenceError("Error: container is not in current document.");
@@ -29,16 +29,16 @@ exports.Inject = function (e, t) {
   e.appendChild(s);
   var c = _.call(this, s, r);
   var d = function (e, t, n, r, s) {
-    t.parentWorkspace = void 0;
+    t.parentWorkspace = undefined;
     var c = (0, o.get_instance)();
     var u = c.get(o.BINDING.WorkspaceSvg)(t, n, r, s);
-    if (void 0 != t.zoomOptions.startScale) {
+    if (undefined != t.zoomOptions.startScale) {
       u.set_scale(t.zoomOptions.startScale);
     }
     e.appendChild(u.create_dom("blocklyMainBackground"));
     if (!t.has_categories && t.toolbox_config) {
       var d = u.add_flyout("svg");
-      if (void 0 == d) {
+      if (undefined == d) {
         throw new Error("Add flyout failed.");
       }
       l.insert_after(d, e);
@@ -58,7 +58,7 @@ exports.Inject = function (e, t) {
           var f = r.contentTop + r.contentHeight > r.viewHeight + s;
           var d = r.contentLeft + r.contentWidth > (t.RTL ? r.viewWidth : r.viewWidth + o);
           if (c || l || f || d) {
-            for (var h = u.get_top_elements(!1), p = 0; p < h.length; p++) {
+            for (var h = u.get_top_elements(false), p = 0; p < h.length; p++) {
               var _ = h[p];
               var A = _.get_relative_to_surface_xy();
               var g = _.get_height_width();
@@ -95,7 +95,7 @@ exports.Inject = function (e, t) {
           if (n.parent_id) {
             var i = (0, h.get_nested_blocks_with_comment)(t)[0];
             if (i && i.comment && i.rendered) {
-              i.comment.init_svg(!0);
+              i.comment.init_svg(true);
             }
             var o = u.get_block_by_id(n.parent_id);
             if (!o) {
@@ -103,14 +103,14 @@ exports.Inject = function (e, t) {
             }
             var s = (0, h.get_outer_block)(o);
             if ((c = (0, h.get_nested_blocks_with_comment)(s)[0]) && c.comment && c.rendered) {
-              c.comment.init_svg(!0);
+              c.comment.init_svg(true);
             }
           }
           if (r.parent_id) {
             var c;
             s = (0, h.get_outer_block)(t);
             if ((c = (0, h.get_nested_blocks_with_comment)(s)[0]) && c.comment && c.rendered) {
-              c.comment.init_svg(!0);
+              c.comment.init_svg(true);
             }
           }
         }
@@ -146,7 +146,7 @@ exports.Inject = function (e, t) {
   return d;
 };
 var p = function (e, t) {
-  return (0, r.__awaiter)(void 0, void 0, void 0, function () {
+  return (0, r.__awaiter)(undefined, undefined, undefined, function () {
     var i;
     return (0, r.__generator)(this, function (o) {
       switch (o.label) {
@@ -318,21 +318,21 @@ function A(e) {
   var n = t.get(o.BINDING.events);
   var r = t.get(o.BINDING.utils);
   var i = e.get_parent_svg();
-  if (void 0 != i && i.parentNode) {
-    n.bind_event_with_checks(i.parentNode, "contextmenu", void 0, function (e) {
+  if (undefined != i && i.parentNode) {
+    n.bind_event_with_checks(i.parentNode, "contextmenu", undefined, function (e) {
       if (!r.is_target_input(e)) {
         e.preventDefault();
       }
     });
   }
-  var s = n.bind_event_with_checks(window, "resize", void 0, function () {
-    r.hide_chaff(!0);
+  var s = n.bind_event_with_checks(window, "resize", undefined, function () {
+    r.hide_chaff(true);
     r.svg_resize(e);
   });
   e.set_resize_handler_wrapper(s);
   g.call(this);
   var c = e.get_options();
-  if (void 0 != c.toolbox_config) {
+  if (undefined != c.toolbox_config) {
     var l = e.get_toolbox();
     var f = e.get_flyout();
     if ((0, u.is_nil)(l)) {
@@ -373,8 +373,8 @@ function A(e) {
         }
         r.preload();
       };
-      i.push(n.bind_event_with_checks(document, "mousemove", void 0, a, !0));
-      i.push(n.bind_event_with_checks(document, "touchstart", void 0, a, !0));
+      i.push(n.bind_event_with_checks(document, "mousemove", undefined, a, true));
+      i.push(n.bind_event_with_checks(document, "touchstart", undefined, a, true));
     })(c.pathToMedia, e);
   }
 }
@@ -384,20 +384,20 @@ function g() {
     var t = (0, o.get_instance)();
     var n = t.get(o.BINDING.events);
     var r = t.get(o.BINDING.touch_manager);
-    n.bind_event_with_checks(document, "keydown", void 0, v.bind(this));
-    n.bind_event_with_checks(document, "touchend", void 0, r.long_stop.bind(r));
-    n.bind_event_with_checks(document, "touchcancel", void 0, r.long_stop.bind(r));
+    n.bind_event_with_checks(document, "keydown", undefined, v.bind(this));
+    n.bind_event_with_checks(document, "touchend", undefined, r.long_stop.bind(r));
+    n.bind_event_with_checks(document, "touchcancel", undefined, r.long_stop.bind(r));
     if (d.is.ipad()) {
       n.bind_event_with_checks(window, "orientationchange", document, function () {
         e.utils.svg_resize(e.mainWorkspace);
       });
     }
   }
-  this.runtime_data.document_events_bound = !0;
+  this.runtime_data.document_events_bound = true;
 }
 function v(e) {
   if (!this.mainWorkspace.get_options().readOnly && !this.utils.is_target_input(e) && this.mainWorkspace.get_hotkey_enable()) {
-    var t = !1;
+    var t = false;
     if (27 == e.keyCode) {
       this.utils.hide_chaff();
     } else if (8 == e.keyCode || 46 == e.keyCode) {
@@ -406,7 +406,7 @@ function v(e) {
         return;
       }
       if (this.runtime_data.selected && this.runtime_data.selected.is_deletable()) {
-        t = !0;
+        t = true;
       }
     } else if (e.altKey || e.ctrlKey || e.metaKey) {
       if (this.mainWorkspace.is_dragging()) {
@@ -419,7 +419,7 @@ function v(e) {
         } else {
           if (88 == e.keyCode) {
             this.runtime_data.clipboard.copy(this.runtime_data.selected);
-            t = !0;
+            t = true;
           }
         }
       }
@@ -427,11 +427,11 @@ function v(e) {
         var n = this.runtime_data.clipboard.get_content();
         if (n) {
           var r = this.events.get_group();
-          this.events.set_group(r || !0);
+          this.events.set_group(r || true);
           if (Array.isArray(n)) {
-            this.mainWorkspace.paste_extend(n, void 0, !0);
+            this.mainWorkspace.paste_extend(n, undefined, true);
           } else {
-            this.mainWorkspace.paste(n, void 0, !0);
+            this.mainWorkspace.paste(n, undefined, true);
           }
           this.events.set_group(r);
         }
@@ -442,10 +442,10 @@ function v(e) {
     }
     if (t) {
       r = this.events.get_group();
-      this.events.set_group(r || !0);
+      this.events.set_group(r || true);
       this.utils.hide_chaff();
       if (this.runtime_data.selected) {
-        this.runtime_data.selected.dispose(!1, !0);
+        this.runtime_data.selected.dispose(false, true);
       }
       this.events.set_group(r);
     }

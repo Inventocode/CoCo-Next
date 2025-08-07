@@ -31,7 +31,7 @@ var l = i.forwardRef(function (e, t) {
   var h = i.useContext(a.b).getPrefixCls;
   var p = h("popover", n);
   var _ = h();
-  return i.createElement(o.a, Object(r.a)({}, d, {
+  return i.createElement(o.a, r.a({}, d, {
     prefixCls: p,
     ref: t,
     overlay: function (e) {
@@ -41,7 +41,7 @@ var l = i.forwardRef(function (e, t) {
         className: "".concat(e, "-inner-content")
       }, s(f)));
     }(p),
-    transitionName: Object(c.b)(_, "zoom-big", d.transitionName)
+    transitionName: c.b(_, "zoom-big", d.transitionName)
   }));
 });
 l.displayName = "Popover";

@@ -18,7 +18,7 @@ export { M as l };
 export { L as m };
 export { P as h };
 export { B as b };
-var r = require("./1/index");
+import r = require("regenerator-runtime");
 var o = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -31,8 +31,8 @@ var o = function __importDefault(module) {
   });
   return defaultExport;
 }(r);
-var i = require("./7");
-var a = require("./51/index");
+import i = require("./7");
+import a = require("color");
 var s = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -45,9 +45,9 @@ var s = function __importDefault(module) {
   });
   return defaultExport;
 }(a);
-var c = require("./15");
-var l = require("./64");
-var u = require("./287");
+import c = require("./15");
+import l = require("./64");
+import u = require("./287");
 var d = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAC0lEQVQYV2NgAAIAAAUAAarVyFEAAAAASUVORK5CYII=";
 function p(e) {
   var t = e.scenes.get_current_scene();
@@ -67,7 +67,7 @@ function f(e, t, n) {
   return h.apply(this, arguments);
 }
 function h() {
-  return (h = Object(i.a)(o.a.mark(function e(t, n, r) {
+  return (h = i.a(o.a.mark(function e(t, n, r) {
     var i;
     var a;
     return o.a.wrap(function (e) {
@@ -78,7 +78,7 @@ function h() {
               e.next = 7;
               break;
             }
-            i = Object(l.a)("CANVAS_STYLE");
+            i = l.a("CANVAS_STYLE");
             e.next = 5;
             return t.textures.load_texture(i, n);
           case 5:
@@ -110,7 +110,7 @@ function m(e, t) {
   }
 }
 function g(e, t) {
-  if (Object(c.i)(t)) {
+  if (c.i(t)) {
     e.set_background_color(0);
     e.set_background_alpha(0);
   } else {
@@ -123,10 +123,10 @@ function g(e, t) {
     } catch (i) {
       console.error("Color error", i);
     }
-    if (void 0 !== n) {
+    if (undefined !== n) {
       e.set_background_color(n);
     }
-    if (void 0 !== r) {
+    if (undefined !== r) {
       e.set_background_alpha(r);
     }
   }
@@ -147,7 +147,7 @@ function b(e, t, n) {
   return y.apply(this, arguments);
 }
 function y() {
-  return (y = Object(i.a)(o.a.mark(function e(t, n, r) {
+  return (y = i.a(o.a.mark(function e(t, n, r) {
     return o.a.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
@@ -305,7 +305,7 @@ function C(e, t, n, r) {
   return T.apply(this, arguments);
 }
 function T() {
-  return (T = Object(i.a)(o.a.mark(function e(t, n, r, i) {
+  return (T = i.a(o.a.mark(function e(t, n, r, i) {
     var a;
     var s;
     var c;
@@ -346,7 +346,7 @@ function S(e, t, n, r, o, i, a) {
   return I.apply(this, arguments);
 }
 function I() {
-  return (I = Object(i.a)(o.a.mark(function e(t, n, r, i, a, s, c) {
+  return (I = i.a(o.a.mark(function e(t, n, r, i, a, s, c) {
     var l;
     var d;
     var p;
@@ -437,7 +437,7 @@ function N(e, t, n, r) {
   }
 }
 function R(e, t) {
-  var n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 100;
+  var n = arguments.length > 2 && undefined !== arguments[2] ? arguments[2] : 100;
   var r = e.actors.get_actor(t);
   var o = r.is_error;
   var i = r.value;
@@ -465,14 +465,14 @@ function k(e, t, n) {
   }
 }
 function x(e, t, n) {
-  var r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {
+  var r = arguments.length > 3 && undefined !== arguments[3] ? arguments[3] : {
     x: 0,
     y: 0
   };
-  var o = arguments.length > 4 ? arguments[4] : void 0;
-  var i = arguments.length > 5 ? arguments[5] : void 0;
-  var a = arguments.length > 6 ? arguments[6] : void 0;
-  var s = arguments.length > 7 ? arguments[7] : void 0;
+  var o = arguments.length > 4 ? arguments[4] : undefined;
+  var i = arguments.length > 5 ? arguments[5] : undefined;
+  var a = arguments.length > 6 ? arguments[6] : undefined;
+  var s = arguments.length > 7 ? arguments[7] : undefined;
   var c = e.actors.get_actor(t);
   var l = c.is_error;
   var u = c.value;
@@ -503,7 +503,7 @@ function x(e, t, n) {
   }
 }
 function D(e, t) {
-  var n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {
+  var n = arguments.length > 2 && undefined !== arguments[2] ? arguments[2] : {
     x: 0,
     y: 0
   };

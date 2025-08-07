@@ -1,9 +1,9 @@
 "use strict";
 
-var r = require("../../../../337");
-var i = require("../../../../430");
+import r = require("../../../../337");
+import i = require("../../../../430");
 require("../../../../50/index");
-var o = require("react");
+import o = require("react");
 var a = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -16,7 +16,7 @@ var a = function __importDefault(module) {
   });
   return defaultExport;
 }(o);
-var s = require("../../../../75/index");
+import s = require("../../../../75/index");
 var c = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -29,8 +29,8 @@ var c = function __importDefault(module) {
   });
   return defaultExport;
 }(s);
-var u = !1;
-var l = require("./793");
+var u = false;
+import l = require("./793");
 var f = function (e) {
   function t(t, n) {
     var r;
@@ -54,7 +54,7 @@ var f = function (e) {
     r.nextCallback = null;
     return r;
   }
-  Object(i.a)(t, e);
+  i.a(t, e);
   t.getDerivedStateFromProps = function (e, t) {
     return e.in && "unmounted" === t.status ? {
       status: "exited"
@@ -62,7 +62,7 @@ var f = function (e) {
   };
   var n = t.prototype;
   n.componentDidMount = function () {
-    this.updateStatus(!0, this.appearStatus);
+    this.updateStatus(true, this.appearStatus);
   };
   n.componentDidUpdate = function (e) {
     var t = null;
@@ -78,7 +78,7 @@ var f = function (e) {
         }
       }
     }
-    this.updateStatus(!1, t);
+    this.updateStatus(false, t);
   };
   n.componentWillUnmount = function () {
     this.cancelNextCallback();
@@ -92,7 +92,7 @@ var f = function (e) {
     if (null != r && "number" !== typeof r) {
       e = r.exit;
       t = r.enter;
-      n = void 0 !== r.appear ? r.appear : t;
+      n = undefined !== r.appear ? r.appear : t;
     }
     return {
       exit: e,
@@ -101,8 +101,8 @@ var f = function (e) {
     };
   };
   n.updateStatus = function (e, t) {
-    if (void 0 === e) {
-      e = !1;
+    if (undefined === e) {
+      e = false;
     }
     if (null !== t) {
       this.cancelNextCallback();
@@ -154,7 +154,7 @@ var f = function (e) {
     var e = this;
     var t = this.props.exit;
     var n = this.getTimeouts();
-    var r = this.props.nodeRef ? void 0 : c.a.findDOMNode(this);
+    var r = this.props.nodeRef ? undefined : c.a.findDOMNode(this);
     if (t && !u) {
       this.props.onExit(r);
       this.safeSetState({
@@ -189,16 +189,16 @@ var f = function (e) {
   };
   n.setNextCallback = function (e) {
     var t = this;
-    var n = !0;
+    var n = true;
     this.nextCallback = function (r) {
       if (n) {
-        n = !1;
+        n = false;
         t.nextCallback = null;
         e(r);
       }
     };
     this.nextCallback.cancel = function () {
-      n = !1;
+      n = false;
     };
     return this.nextCallback;
   };
@@ -242,7 +242,7 @@ var f = function (e) {
     t.onExiting;
     t.onExited;
     t.nodeRef;
-    var i = Object(r.a)(t, ["children", "in", "mountOnEnter", "unmountOnExit", "appear", "enter", "exit", "timeout", "addEndListener", "onEnter", "onEntering", "onEntered", "onExit", "onExiting", "onExited", "nodeRef"]);
+    var i = r.a(t, ["children", "in", "mountOnEnter", "unmountOnExit", "appear", "enter", "exit", "timeout", "addEndListener", "onEnter", "onEntering", "onEntered", "onExit", "onExiting", "onExited", "nodeRef"]);
     return a.a.createElement(l.a.Provider, {
       value: null
     }, "function" === typeof n ? n(e, i) : a.a.cloneElement(a.a.Children.only(n), i));
@@ -253,12 +253,12 @@ function d() {}
 f.contextType = l.a;
 f.propTypes = {};
 f.defaultProps = {
-  in: !1,
-  mountOnEnter: !1,
-  unmountOnExit: !1,
-  appear: !1,
-  enter: !0,
-  exit: !0,
+  in: false,
+  mountOnEnter: false,
+  unmountOnExit: false,
+  appear: false,
+  enter: true,
+  exit: true,
   onEnter: d,
   onEntering: d,
   onEntered: d,

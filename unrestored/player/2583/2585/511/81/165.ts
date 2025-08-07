@@ -6,12 +6,12 @@ var o = require("./105");
 var a = require("./117");
 var s = function () {
   function t(e, n) {
-    if (void 0 === e) {
+    if (undefined === e) {
       this.size = 0;
       this.bits = new Int32Array(1);
     } else {
       this.size = e;
-      this.bits = void 0 === n || null === n ? t.makeArray(e) : n;
+      this.bits = undefined === n || null === n ? t.makeArray(e) : n;
     }
   }
   t.prototype.getSize = function () {
@@ -97,16 +97,16 @@ var s = function () {
       throw new r.a();
     }
     if (e === t) {
-      return !0;
+      return true;
     }
     e--;
     for (var i = Math.floor(t / 32), o = Math.floor(e / 32), a = this.bits, s = i; s <= o; s++) {
       var u = (2 << (s < o ? 31 : 31 & e)) - (1 << (s > i ? 0 : 31 & t)) & 4294967295;
       if ((a[s] & u) !== (n ? u : 0)) {
-        return !1;
+        return false;
       }
     }
-    return !0;
+    return true;
   };
   t.prototype.appendBit = function (t) {
     this.ensureCapacity(this.size + 1);
@@ -177,7 +177,7 @@ var s = function () {
   };
   t.prototype.equals = function (e) {
     if (!(e instanceof t)) {
-      return !1;
+      return false;
     }
     var n = e;
     return this.size === n.size && i.a.equals(this.bits, n.bits);

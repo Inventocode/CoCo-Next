@@ -8,7 +8,7 @@ module.exports = r ? o : function (e) {
   var t;
   var n;
   var r;
-  return void 0 === e ? "Undefined" : null === e ? "Null" : "string" == typeof (n = function (e, t) {
+  return undefined === e ? "Undefined" : null === e ? "Null" : "string" == typeof (n = function (e, t) {
     try {
       return e[t];
     } catch (n) {}

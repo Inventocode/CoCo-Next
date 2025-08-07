@@ -10,7 +10,7 @@ var r;
     toExpPos: 21,
     LN10: "2.302585092994045684017991454684364207601101488628772976033327900967572609677352480235997205089598298341967784042286"
   };
-  var s = !0;
+  var s = true;
   var c = "[DecimalError] ";
   var u = c + "Invalid argument: ";
   var l = c + "Exponent out of range: ";
@@ -170,7 +170,7 @@ var r;
     var r = n.constructor;
     var i = r.precision;
     var a = i + 5;
-    if (void 0 === e) {
+    if (undefined === e) {
       e = new r(10);
     } else if ((e = new r(e)).s < 1 || e.eq(o)) {
       throw Error(c + "NaN");
@@ -178,7 +178,7 @@ var r;
     if (n.s < 1) {
       throw Error(c + (n.s ? "NaN" : "-Infinity"));
     }
-    return n.eq(o) ? new r(0) : (s = !1, t = y(C(n, a), C(e, a), a), s = !0, k(t, i));
+    return n.eq(o) ? new r(0) : (s = false, t = y(C(n, a), C(e, a), a), s = true, k(t, i));
   };
   A.minus = A.sub = function (e) {
     var t = this;
@@ -193,7 +193,7 @@ var r;
     if (!(e = new r(e)).s) {
       throw Error(c + "NaN");
     }
-    return n.s ? (s = !1, t = y(n, e, 0, 1).times(e), s = !0, n.minus(t)) : k(new r(n), i);
+    return n.s ? (s = false, t = y(n, e, 0, 1).times(e), s = true, n.minus(t)) : k(new r(n), i);
   };
   A.naturalExponential = A.exp = function () {
     return b(this);
@@ -216,7 +216,7 @@ var r;
     var n;
     var r;
     var i = this;
-    if (void 0 !== e && e !== !!e && 1 !== e && 0 !== e) {
+    if (undefined !== e && e !== !!e && 1 !== e && 0 !== e) {
       throw Error(u + e);
     }
     t = w(i) + 1;
@@ -247,7 +247,7 @@ var r;
       }
       throw Error(c + "NaN");
     }
-    for (e = w(u), s = !1, 0 == (i = Math.sqrt(+u)) || i == 1 / 0 ? (((t = m(u.d)).length + e) % 2 == 0 && (t += "0"), i = Math.sqrt(t), e = f((e + 1) / 2) - (e < 0 || e % 2), r = new l(t = i == 1 / 0 ? "5e" + e : (t = i.toExponential()).slice(0, t.indexOf("e") + 1) + e)) : r = new l(i.toString()), i = a = (n = l.precision) + 3;;) {
+    for (e = w(u), s = false, 0 == (i = Math.sqrt(+u)) || i == 1 / 0 ? (((t = m(u.d)).length + e) % 2 == 0 && (t += "0"), i = Math.sqrt(t), e = f((e + 1) / 2) - (e < 0 || e % 2), r = new l(t = i == 1 / 0 ? "5e" + e : (t = i.toExponential()).slice(0, t.indexOf("e") + 1) + e)) : r = new l(i.toString()), i = a = (n = l.precision) + 3;;) {
       r = (o = r).plus(y(u, o, a + 2)).times(.5);
       if (m(o.d).slice(0, a) === (t = m(r.d)).slice(0, a)) {
         t = t.slice(a - 3, a + 1);
@@ -263,7 +263,7 @@ var r;
         a += 4;
       }
     }
-    s = !0;
+    s = true;
     return k(r, n);
   };
   A.times = A.mul = function (e) {
@@ -310,22 +310,22 @@ var r;
     var n = this;
     var r = n.constructor;
     n = new r(n);
-    return void 0 === e ? n : (v(e, 0, 1e9), void 0 === t ? t = r.rounding : v(t, 0, 8), k(n, e + w(n) + 1, t));
+    return undefined === e ? n : (v(e, 0, 1e9), undefined === t ? t = r.rounding : v(t, 0, 8), k(n, e + w(n) + 1, t));
   };
   A.toExponential = function (e, t) {
     var n;
     var r = this;
     var i = r.constructor;
-    if (void 0 === e) {
-      n = T(r, !0);
+    if (undefined === e) {
+      n = T(r, true);
     } else {
       v(e, 0, 1e9);
-      if (void 0 === t) {
+      if (undefined === t) {
         t = i.rounding;
       } else {
         v(t, 0, 8);
       }
-      n = T(r = k(new i(r), e + 1, t), !0, e + 1);
+      n = T(r = k(new i(r), e + 1, t), true, e + 1);
     }
     return n;
   };
@@ -334,7 +334,7 @@ var r;
     var r;
     var i = this;
     var o = i.constructor;
-    return void 0 === e ? T(i) : (v(e, 0, 1e9), void 0 === t ? t = o.rounding : v(t, 0, 8), n = T((r = k(new o(i), e + w(i) + 1, t)).abs(), !1, e + w(r) + 1), i.isneg() && !i.isZero() ? "-" + n : n);
+    return undefined === e ? T(i) : (v(e, 0, 1e9), undefined === t ? t = o.rounding : v(t, 0, 8), n = T((r = k(new o(i), e + w(i) + 1, t)).abs(), false, e + w(r) + 1), i.isneg() && !i.isZero() ? "-" + n : n);
   };
   A.toInteger = A.toint = function () {
     var e = this;
@@ -374,10 +374,10 @@ var r;
     a = l.s;
     if (u) {
       if ((n = h < 0 ? -h : h) <= 9007199254740991) {
-        for (i = new d(o), t = Math.ceil(r / 7 + 4), s = !1; n % 2 && B((i = i.times(l)).d, t), 0 !== (n = f(n / 2));) {
+        for (i = new d(o), t = Math.ceil(r / 7 + 4), s = false; n % 2 && B((i = i.times(l)).d, t), 0 !== (n = f(n / 2));) {
           B((l = l.times(l)).d, t);
         }
-        s = !0;
+        s = true;
         return e.s < 0 ? new d(o).div(i) : k(i, r);
       }
     } else if (a < 0) {
@@ -385,9 +385,9 @@ var r;
     }
     a = a < 0 && 1 & e.d[Math.max(t, n)] ? -1 : 1;
     l.s = 1;
-    s = !1;
+    s = false;
     i = e.times(C(l, r + 12));
-    s = !0;
+    s = true;
     (i = b(i)).s = a;
     return i;
   };
@@ -396,11 +396,11 @@ var r;
     var r;
     var i = this;
     var o = i.constructor;
-    if (void 0 === e) {
+    if (undefined === e) {
       r = T(i, (n = w(i)) <= o.toExpNeg || n >= o.toExpPos);
     } else {
       v(e, 1, 1e9);
-      if (void 0 === t) {
+      if (undefined === t) {
         t = o.rounding;
       } else {
         v(t, 0, 8);
@@ -411,12 +411,12 @@ var r;
   };
   A.toSignificantDigits = A.tosd = function (e, t) {
     var n = this.constructor;
-    if (void 0 === e) {
+    if (undefined === e) {
       e = n.precision;
       t = n.rounding;
     } else {
       v(e, 1, 1e9);
-      if (void 0 === t) {
+      if (undefined === t) {
         t = n.rounding;
       } else {
         v(t, 0, 8);
@@ -568,7 +568,7 @@ var r;
             g = [D[E]];
             v = 1;
           }
-        } while ((E++ < x || void 0 !== g[0]) && y--);
+        } while ((E++ < x || undefined !== g[0]) && y--);
       }
       if (!A[0]) {
         A.shift();
@@ -593,7 +593,7 @@ var r;
     if (!e.s) {
       return new h(o);
     }
-    for (null == t ? (s = !1, c = p) : c = t, a = new h(.03125); e.abs().gte(.1);) {
+    for (null == t ? (s = false, c = p) : c = t, a = new h(.03125); e.abs().gte(.1);) {
       e = e.times(a);
       f += 5;
     }
@@ -605,7 +605,7 @@ var r;
           i = k(i.times(i), c);
         }
         h.precision = p;
-        return null == t ? (s = !0, k(i, p)) : i;
+        return null == t ? (s = true, k(i, p)) : i;
       }
       i = a;
     }
@@ -618,7 +618,11 @@ var r;
   }
   function E(e, t, n) {
     if (t > e.LN10.sd()) {
-      throw s = !0, n && (e.precision = n), Error(c + "LN10 precision limit exceeded");
+      s = true;
+      if (n) {
+        e.precision = n;
+      }
+      throw Error(c + "LN10 precision limit exceeded");
     }
     return k(new e(e.LN10), t);
   }
@@ -650,14 +654,14 @@ var r;
       return new g(0);
     }
     if (null == t) {
-      s = !1;
+      s = false;
       d = v;
     } else {
       d = t;
     }
     if (_.eq(10)) {
       if (null == t) {
-        s = !0;
+        s = true;
       }
       return E(g, d);
     }
@@ -669,7 +673,7 @@ var r;
       f = E(g, d + 2, v).times(a + "");
       _ = C(new g(r + "." + n.slice(1)), d - 10).plus(f);
       g.precision = v;
-      return null == t ? (s = !0, k(_, v)) : _;
+      return null == t ? (s = true, k(_, v)) : _;
     }
     for (; r < 7 && 1 != r || 1 == r && n.charAt(1) > 3;) {
       r = (n = m((_ = _.times(e)).d)).charAt(0);
@@ -684,7 +688,7 @@ var r;
         }
         l = y(l, new g(p), d);
         g.precision = v;
-        return null == t ? (s = !0, k(l, v)) : l;
+        return null == t ? (s = true, k(l, v)) : l;
       }
       l = f;
       i += 2;
@@ -757,9 +761,9 @@ var r;
       }
       i = (r %= 7) - 7 + a;
     }
-    if (void 0 !== n) {
+    if (undefined !== n) {
       c = h / (o = d(10, a - i - 1)) % 10 | 0;
-      u = t < 0 || void 0 !== g[A + 1] || h % o;
+      u = t < 0 || undefined !== g[A + 1] || h % o;
       u = n < 4 ? (c || u) && (0 == n || n == (e.s < 0 ? 3 : 2)) : c > 5 || 5 == c && (4 == n || u || 6 == n && (r > 0 ? i > 0 ? h / d(10, a - i) : 0 : g[A - 1]) % 10 & 1 || n == (e.s < 0 ? 8 : 7));
     }
     if (t < 1 || !g[0]) {
@@ -914,7 +918,7 @@ var r;
   function B(e, t) {
     if (e.length > t) {
       e.length = t;
-      return !0;
+      return true;
     }
   }
   function D(e) {
@@ -926,14 +930,14 @@ var r;
     var r;
     var i = ["precision", 1, 1e9, "rounding", 0, 8, "toExpNeg", -1 / 0, 0, "toExpPos", 0, 1 / 0];
     for (t = 0; t < i.length; t += 3) {
-      if (void 0 !== (r = e[n = i[t]])) {
+      if (undefined !== (r = e[n = i[t]])) {
         if (!(f(r) === r && r >= i[t + 1] && r <= i[t + 2])) {
           throw Error(u + n + ": " + r);
         }
         this[n] = r;
       }
     }
-    if (void 0 !== (r = e[n = "LN10"])) {
+    if (undefined !== (r = e[n = "LN10"])) {
       if (r != Math.LN10) {
         throw Error(u + n + ": " + r);
       }
@@ -999,7 +1003,7 @@ var r;
     o.ROUND_HALF_FLOOR = 8;
     o.clone = e;
     o.config = o.set = D;
-    if (void 0 === t) {
+    if (undefined === t) {
       t = {};
     }
     if (t) {
@@ -1013,7 +1017,7 @@ var r;
     return o;
   }(a)).default = a.Decimal = a;
   o = new a(1);
-  if (!(void 0 === (r = function () {
+  if (!(undefined === (r = function () {
     return a;
   }.call(exports, require, exports, module)))) {
     module.exports = r;

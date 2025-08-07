@@ -6,8 +6,8 @@ export { s as c };
 export { c as f };
 export { l as e };
 export { u as d };
-var r = require("../9");
-var o = require("../301/index");
+import r = require("../9");
+import o = require("../301/index");
 var i = {
   PRIMITIVE: "PRIMITIVE",
   ARRAY: "ARRAY",
@@ -96,13 +96,13 @@ var c = {
   }
 };
 var l = function () {
-  return Object(r.O)();
+  return r.O();
 };
 var u = function (e) {
   var t;
   for (var n in c) if (c[n].id === e) {
     t = c[n].text;
   }
-  return t ? Object(o.b)()[t.slice(6, -1)] : "";
+  return t ? o.b()[t.slice(6, -1)] : "";
 };
 export default a;

@@ -1,7 +1,7 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
 exports.NAMED_TAG = "named";
 exports.NAME_TAG = "name";

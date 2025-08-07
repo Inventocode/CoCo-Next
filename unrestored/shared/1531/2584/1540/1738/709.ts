@@ -7,11 +7,11 @@ var c = require("../1667/631/index");
 var l = require("../1541/1062");
 var u = require("../1541/815");
 var d = require("../1664/826");
-var p = !1;
+var p = false;
 var f = u("meta");
 var h = 0;
 var m = Object.isExtensible || function () {
-  return !0;
+  return true;
 };
 var g = function (e) {
   s(e, f, {
@@ -24,7 +24,7 @@ var g = function (e) {
 var _ = module.exports = {
   enable: function () {
     _.enable = function () {};
-    p = !0;
+    p = true;
     var e = c.f;
     var t = [].splice;
     var n = {};
@@ -41,8 +41,8 @@ var _ = module.exports = {
       };
       r({
         target: "Object",
-        stat: !0,
-        forced: !0
+        stat: true,
+        forced: true
       }, {
         getOwnPropertyNames: l.f
       });
@@ -66,10 +66,10 @@ var _ = module.exports = {
   getWeakData: function (e, t) {
     if (!a(e, f)) {
       if (!m(e)) {
-        return !0;
+        return true;
       }
       if (!t) {
-        return !1;
+        return false;
       }
       g(e);
     }
@@ -82,4 +82,4 @@ var _ = module.exports = {
     return e;
   }
 };
-o[f] = !0;
+o[f] = true;

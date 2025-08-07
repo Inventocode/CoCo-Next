@@ -1,5 +1,5 @@
 "use strict";
 
 exports.a = function () {
-  return !1;
+  return false;
 };

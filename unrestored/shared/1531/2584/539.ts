@@ -8,14 +8,14 @@ var o = {
   icon: "icon-widget-pedometer",
   title: "widgetName",
   platforms: ["android"],
-  isGlobalWidget: !0,
-  isInvisibleWidget: !0,
+  isGlobalWidget: true,
+  isInvisibleWidget: true,
   properties: [{
     key: "stepCount",
     label: "stepCount",
     valueType: "number",
     defaultValue: 0,
-    readonly: !0
+    readonly: true
   }],
   methods: [{
     key: "startStepUpdate",

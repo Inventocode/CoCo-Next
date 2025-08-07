@@ -1,7 +1,7 @@
 "use strict";
 
 export { s as a };
-var r = require("./34/index");
+import r = require("./34/index");
 var i = function () {
   function e(e) {
     this.a = this.solve_a(e[0][0].x, e[0][0].y, e[0][1].x, e[1][0].x, e[1][0].y, e[1][1].x, e[2][0].x, e[2][0].y, e[2][1].x);
@@ -58,7 +58,7 @@ var a = function (e, t) {
   var o = n.call(e);
   var a = [];
   try {
-    for (; (void 0 === t || t-- > 0) && !(r = o.next()).done;) {
+    for (; (undefined === t || t-- > 0) && !(r = o.next()).done;) {
       a.push(r.value);
     }
   } catch (s) {
@@ -117,7 +117,7 @@ var s = function (e) {
       console.error("Length of anchors (" + c + ") exceeds the maximum anchors length (" + this.max_num_anchors + ") which decided when the filter was constructed. ");
       e.slice(0, this.max_num_anchors);
     }
-    var u = null === (s = null === (o = null === (r = this.uniforms.filterGlobals) || void 0 === r ? void 0 : r.uniforms) || void 0 === o ? void 0 : o.outputFrame) || void 0 === s ? void 0 : s.clone();
+    var u = null === (s = null === (o = null === (r = this.uniforms.filterGlobals) || undefined === r ? undefined : r.uniforms) || undefined === o ? undefined : o.outputFrame) || undefined === s ? undefined : s.clone();
     if (u && t && n && (u.pad(-this.padding), u.width > 0 && u.height > 0)) {
       var l = this.compute_target_rect(e, t, n);
       this.padding = Math.max(0, u.left - l.left, u.top - l.top, l.right - (u.left + u.width), l.bottom - (u.top + u.height)) + 5;

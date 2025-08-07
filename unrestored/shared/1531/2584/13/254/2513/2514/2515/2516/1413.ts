@@ -2,8 +2,8 @@
   var r = require("../../../../2533/1420/2530/499/index");
   var i = exports && !exports.nodeType && exports;
   var o = i && "object" == typeof e && e && !e.nodeType && e;
-  var a = o && o.exports === i ? r.Buffer : void 0;
-  var s = a ? a.allocUnsafe : void 0;
+  var a = o && o.exports === i ? r.Buffer : undefined;
+  var s = a ? a.allocUnsafe : undefined;
   e.exports = function (e, t) {
     if (t) {
       return e.slice();

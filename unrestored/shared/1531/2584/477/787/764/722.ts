@@ -2,14 +2,14 @@
 
 export { c as b };
 export { u as a };
-var r = require("../../../36/483/39");
-var i = require("../364");
-var o = require("../926");
-var a = require("../435/index");
-var s = require("../350");
+import r = require("../../../36/483/39");
+import i = require("../364");
+import o = require("../926");
+import a = require("../435/index");
+import s = require("../350");
 var c = function () {
   function e(e) {
-    if (void 0 === e) {
+    if (undefined === e) {
       e = 1e3;
     }
     this.spans = [];
@@ -17,7 +17,7 @@ var c = function () {
   }
   e.prototype.add = function (e) {
     if (this.spans.length > this._maxlen) {
-      e.spanRecorder = void 0;
+      e.spanRecorder = undefined;
     } else {
       this.spans.push(e);
     }
@@ -26,9 +26,9 @@ var c = function () {
 }();
 var u = function () {
   function e(e) {
-    this.traceId = Object(i.c)();
-    this.spanId = Object(i.c)().substring(16);
-    this.startTimestamp = Object(o.d)();
+    this.traceId = i.c();
+    this.spanId = i.c().substring(16);
+    this.startTimestamp = o.d();
     this.tags = {};
     this.data = {};
     if (!e) {
@@ -72,7 +72,7 @@ var u = function () {
     return this.startChild(e);
   };
   e.prototype.startChild = function (t) {
-    var n = new e(Object(r.a)(Object(r.a)({}, t), {
+    var n = new e(r.a(r.a({}, t), {
       parentSpanId: this.spanId,
       sampled: this.sampled,
       traceId: this.traceId
@@ -86,12 +86,12 @@ var u = function () {
   };
   e.prototype.setTag = function (e, t) {
     var n;
-    this.tags = Object(r.a)(Object(r.a)({}, this.tags), ((n = {})[e] = t, n));
+    this.tags = r.a(r.a({}, this.tags), ((n = {})[e] = t, n));
     return this;
   };
   e.prototype.setData = function (e, t) {
     var n;
-    this.data = Object(r.a)(Object(r.a)({}, this.data), ((n = {})[e] = t, n));
+    this.data = r.a(r.a({}, this.data), ((n = {})[e] = t, n));
     return this;
   };
   e.prototype.setStatus = function (e) {
@@ -110,17 +110,17 @@ var u = function () {
     return this.status === s.a.Ok;
   };
   e.prototype.finish = function (e) {
-    this.endTimestamp = "number" === typeof e ? e : Object(o.d)();
+    this.endTimestamp = "number" === typeof e ? e : o.d();
   };
   e.prototype.toTraceparent = function () {
     var e = "";
-    if (void 0 !== this.sampled) {
+    if (undefined !== this.sampled) {
       e = this.sampled ? "-1" : "-0";
     }
     return this.traceId + "-" + this.spanId + e;
   };
   e.prototype.toContext = function () {
-    return Object(a.a)({
+    return a.a({
       data: this.data,
       description: this.description,
       endTimestamp: this.endTimestamp,
@@ -140,41 +140,41 @@ var u = function () {
     var r;
     var i;
     var o;
-    this.data = null !== (t = e.data) && void 0 !== t ? t : {};
+    this.data = null !== (t = e.data) && undefined !== t ? t : {};
     this.description = e.description;
     this.endTimestamp = e.endTimestamp;
     this.op = e.op;
     this.parentSpanId = e.parentSpanId;
     this.sampled = e.sampled;
-    this.spanId = null !== (n = e.spanId) && void 0 !== n ? n : this.spanId;
-    this.startTimestamp = null !== (r = e.startTimestamp) && void 0 !== r ? r : this.startTimestamp;
+    this.spanId = null !== (n = e.spanId) && undefined !== n ? n : this.spanId;
+    this.startTimestamp = null !== (r = e.startTimestamp) && undefined !== r ? r : this.startTimestamp;
     this.status = e.status;
-    this.tags = null !== (i = e.tags) && void 0 !== i ? i : {};
-    this.traceId = null !== (o = e.traceId) && void 0 !== o ? o : this.traceId;
+    this.tags = null !== (i = e.tags) && undefined !== i ? i : {};
+    this.traceId = null !== (o = e.traceId) && undefined !== o ? o : this.traceId;
     return this;
   };
   e.prototype.getTraceContext = function () {
-    return Object(a.a)({
-      data: Object.keys(this.data).length > 0 ? this.data : void 0,
+    return a.a({
+      data: Object.keys(this.data).length > 0 ? this.data : undefined,
       description: this.description,
       op: this.op,
       parent_span_id: this.parentSpanId,
       span_id: this.spanId,
       status: this.status,
-      tags: Object.keys(this.tags).length > 0 ? this.tags : void 0,
+      tags: Object.keys(this.tags).length > 0 ? this.tags : undefined,
       trace_id: this.traceId
     });
   };
   e.prototype.toJSON = function () {
-    return Object(a.a)({
-      data: Object.keys(this.data).length > 0 ? this.data : void 0,
+    return a.a({
+      data: Object.keys(this.data).length > 0 ? this.data : undefined,
       description: this.description,
       op: this.op,
       parent_span_id: this.parentSpanId,
       span_id: this.spanId,
       start_timestamp: this.startTimestamp,
       status: this.status,
-      tags: Object.keys(this.tags).length > 0 ? this.tags : void 0,
+      tags: Object.keys(this.tags).length > 0 ? this.tags : undefined,
       timestamp: this.endTimestamp,
       trace_id: this.traceId
     });

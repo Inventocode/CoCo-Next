@@ -3,7 +3,7 @@ var o = require("./1736/167");
 var i = Math.imul;
 r({
   target: "Math",
-  stat: !0,
+  stat: true,
   forced: o(function () {
     return -5 != i(4294967295, 5) || 2 != i.length;
   })

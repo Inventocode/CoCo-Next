@@ -19,8 +19,8 @@ if (u || d) {
     var e = o(this);
     var t = i(e.source);
     var n = e.flags;
-    return "/" + t + "/" + i(void 0 === n && e instanceof RegExp && !("flags" in c) ? s.call(e) : n);
+    return "/" + t + "/" + i(undefined === n && e instanceof RegExp && !("flags" in c) ? s.call(e) : n);
   }, {
-    unsafe: !0
+    unsafe: true
   });
 }

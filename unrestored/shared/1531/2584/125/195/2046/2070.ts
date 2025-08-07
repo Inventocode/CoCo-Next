@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.THEME_COLOR_MAP = void 0;
+exports.THEME_COLOR_MAP = undefined;
 var r = require("../../../1001/577");
 exports.THEME_COLOR_MAP = {
   RED: new r.Color("#FF604B"),

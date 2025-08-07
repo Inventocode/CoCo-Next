@@ -35,7 +35,7 @@
     return {};
   }
   function h(e, t, n) {
-    return Object(f.c)() ? void 0 !== e.sampled ? (e.setMetadata({
+    return f.c() ? undefined !== e.sampled ? (e.setMetadata({
       transactionSampling: {
         method: o.a.Explicit
       }
@@ -44,7 +44,7 @@
         method: o.a.Sampler,
         rate: Number(r)
       }
-    })) : void 0 !== n.parentSampled ? (r = n.parentSampled, e.setMetadata({
+    })) : undefined !== n.parentSampled ? (r = n.parentSampled, e.setMetadata({
       transactionSampling: {
         method: o.a.Inheritance
       }
@@ -56,45 +56,45 @@
     })), function (e) {
       if (isNaN(e) || "number" !== typeof e && "boolean" !== typeof e) {
         a.a.warn("[Tracing] Given sample rate is invalid. Sample rate must be a boolean or a number between 0 and 1. Got " + JSON.stringify(e) + " of type " + JSON.stringify(typeof e) + ".");
-        return !1;
+        return false;
       }
       if (e < 0 || e > 1) {
         a.a.warn("[Tracing] Given sample rate is invalid. Sample rate must be between 0 and 1. Got " + e + ".");
-        return !1;
+        return false;
       }
-      return !0;
-    }(r) ? r ? (e.sampled = Math.random() < r, e.sampled ? (a.a.log("[Tracing] starting " + e.op + " transaction - " + e.name), e) : (a.a.log("[Tracing] Discarding transaction because it's not included in the random sample (sampling rate = " + Number(r) + ")"), e)) : (a.a.log("[Tracing] Discarding transaction because " + ("function" === typeof t.tracesSampler ? "tracesSampler returned 0 or false" : "a negative sampling decision was inherited or tracesSampleRate is set to 0")), e.sampled = !1, e) : (a.a.warn("[Tracing] Discarding transaction because of invalid sample rate."), e.sampled = !1, e)) : (e.sampled = !1, e);
+      return true;
+    }(r) ? r ? (e.sampled = Math.random() < r, e.sampled ? (a.a.log("[Tracing] starting " + e.op + " transaction - " + e.name), e) : (a.a.log("[Tracing] Discarding transaction because it's not included in the random sample (sampling rate = " + Number(r) + ")"), e)) : (a.a.log("[Tracing] Discarding transaction because " + ("function" === typeof t.tracesSampler ? "tracesSampler returned 0 or false" : "a negative sampling decision was inherited or tracesSampleRate is set to 0")), e.sampled = false, e) : (a.a.warn("[Tracing] Discarding transaction because of invalid sample rate."), e.sampled = false, e)) : (e.sampled = false, e);
     var r;
   }
   function p(e, t) {
     var n;
     var i;
-    var o = (null === (n = this.getClient()) || void 0 === n ? void 0 : n.getOptions()) || {};
+    var o = (null === (n = this.getClient()) || undefined === n ? undefined : n.getOptions()) || {};
     var a = new l.a(e, this);
-    if ((a = h(a, o, Object(r.a)({
+    if ((a = h(a, o, r.a({
       parentSampled: e.parentSampled,
       transactionContext: e
     }, t))).sampled) {
-      a.initSpanRecorder(null === (i = o._experiments) || void 0 === i ? void 0 : i.maxSpans);
+      a.initSpanRecorder(null === (i = o._experiments) || undefined === i ? undefined : i.maxSpans);
     }
     return a;
   }
   function _(e, t, n, i, o) {
     var a;
     var s;
-    var c = (null === (a = e.getClient()) || void 0 === a ? void 0 : a.getOptions()) || {};
+    var c = (null === (a = e.getClient()) || undefined === a ? undefined : a.getOptions()) || {};
     var l = new u.b(t, e, n, i);
-    if ((l = h(l, c, Object(r.a)({
+    if ((l = h(l, c, r.a({
       parentSampled: t.parentSampled,
       transactionContext: t
     }, o))).sampled) {
-      l.initSpanRecorder(null === (s = c._experiments) || void 0 === s ? void 0 : s.maxSpans);
+      l.initSpanRecorder(null === (s = c._experiments) || undefined === s ? undefined : s.maxSpans);
     }
     return l;
   }
   function A() {
     !function () {
-      var e = Object(i.c)();
+      var e = i.c();
       if (e.__SENTRY__) {
         e.__SENTRY__.extensions = e.__SENTRY__.extensions || {};
         if (!e.__SENTRY__.extensions.startTransaction) {
@@ -105,28 +105,28 @@
         }
       }
     }();
-    if (Object(s.b)()) {
+    if (s.b()) {
       (function () {
-        var t = Object(i.c)();
+        var t = i.c();
         if (t.__SENTRY__) {
           var n = {
             mongodb: function () {
-              return new (Object(s.a)(e, "./integrations/mongo").Mongo)();
+              return new (s.a(e, "./integrations/mongo").Mongo)();
             },
             mongoose: function () {
-              return new (Object(s.a)(e, "./integrations/mongo").Mongo)({
-                mongoose: !0
+              return new (s.a(e, "./integrations/mongo").Mongo)({
+                mongoose: true
               });
             },
             mysql: function () {
-              return new (Object(s.a)(e, "./integrations/mysql").Mysql)();
+              return new (s.a(e, "./integrations/mysql").Mysql)();
             },
             pg: function () {
-              return new (Object(s.a)(e, "./integrations/postgres").Postgres)();
+              return new (s.a(e, "./integrations/postgres").Postgres)();
             }
           };
           var o = Object.keys(n).filter(function (e) {
-            return !!Object(s.c)(e);
+            return !!s.c(e);
           }).map(function (e) {
             try {
               return n[e]();
@@ -137,11 +137,11 @@
             return e;
           });
           if (o.length > 0) {
-            t.__SENTRY__.integrations = Object(r.f)(t.__SENTRY__.integrations || [], o);
+            t.__SENTRY__.integrations = r.f(t.__SENTRY__.integrations || [], o);
           }
         }
       })();
     }
-    Object(c.a)();
+    c.a();
   }
 }).call(this, require("../../../155/1167/574")(module));

@@ -145,7 +145,7 @@
         try {
           i.from("foo", "utf8");
         } catch (_l) {
-          b = !0;
+          b = true;
         }
       }
       y = b ? function (e, t) {
@@ -766,7 +766,7 @@
           var S = "";
           if (b = g.match(/^([#0?]+)( ?)\/( ?)([#0?]+)/)) {
             w = Math.min(b[4].length, 7);
-            E = A(x, Math.pow(10, w) - 1, !1);
+            E = A(x, Math.pow(10, w) - 1, false);
             y = "" + k;
             if (" " == (S = O("n", b[1], E[1])).charAt(S.length - 1)) {
               S = S.substr(0, S.length - 1) + "0";
@@ -779,7 +779,7 @@
           }
           if (b = g.match(/^# ([#0?]+)( ?)\/( ?)([#0?]+)/)) {
             w = Math.min(Math.max(b[1].length, b[4].length), 7);
-            return k + ((E = A(x, Math.pow(10, w) - 1, !0))[0] || (E[1] ? "" : "0")) + " " + (E[1] ? i(E[1], w) + b[2] + "/" + b[3] + o(E[2], w) : n(" ", 2 * w + 1 + b[2].length + b[3].length));
+            return k + ((E = A(x, Math.pow(10, w) - 1, true))[0] || (E[1] ? "" : "0")) + " " + (E[1] ? i(E[1], w) + b[2] + "/" + b[3] + o(E[2], w) : n(" ", 2 * w + 1 + b[2].length + b[3].length));
           }
           if (b = g.match(/^[#0?]+$/)) {
             y = s(v, 0);
@@ -937,7 +937,7 @@
           var E = "";
           if (v = d.match(/^([#0?]+)( ?)\/( ?)([#0?]+)/)) {
             m = Math.min(v[4].length, 7);
-            y = A(b, Math.pow(10, m) - 1, !1);
+            y = A(b, Math.pow(10, m) - 1, false);
             g = "" + w;
             if (" " == (E = O("n", v[1], y[1])).charAt(E.length - 1)) {
               E = E.substr(0, E.length - 1) + "0";
@@ -950,7 +950,7 @@
           }
           if (v = d.match(/^# ([#0?]+)( ?)\/( ?)([#0?]+)/)) {
             m = Math.min(Math.max(v[1].length, v[4].length), 7);
-            return w + ((y = A(b, Math.pow(10, m) - 1, !0))[0] || (y[1] ? "" : "0")) + " " + (y[1] ? i(y[1], m) + v[2] + "/" + v[3] + o(y[2], m) : n(" ", 2 * m + 1 + v[2].length + v[3].length));
+            return w + ((y = A(b, Math.pow(10, m) - 1, true))[0] || (y[1] ? "" : "0")) + " " + (y[1] ? i(y[1], m) + v[2] + "/" + v[3] + o(y[2], m) : n(" ", 2 * m + 1 + v[2].length + v[3].length));
           }
           if (v = d.match(/^[#0?]+$/)) {
             g = "" + h;
@@ -986,7 +986,7 @@
         };
       }();
       function k(e) {
-        for (var t = [], n = !1, r = 0, i = 0; r < e.length; ++r) {
+        for (var t = [], n = false, r = 0, i = 0; r < e.length; ++r) {
           switch (e.charCodeAt(r)) {
             case 34:
               n = !n;
@@ -1002,7 +1002,7 @@
           }
         }
         t[t.length] = e.substr(i);
-        if (!0 === n) {
+        if (true === n) {
           throw new Error("Format |" + e + "| unterminated string ");
         }
         return t;
@@ -1034,7 +1034,7 @@
             case "B":
             case "b":
               if ("1" === e.charAt(t + 1) || "2" === e.charAt(t + 1)) {
-                return !0;
+                return true;
               }
             case "M":
             case "D":
@@ -1049,18 +1049,18 @@
             case "s":
             case "e":
             case "g":
-              return !0;
+              return true;
             case "A":
             case "a":
             case "上":
               if ("A/P" === e.substr(t, 3).toUpperCase()) {
-                return !0;
+                return true;
               }
               if ("AM/PM" === e.substr(t, 5).toUpperCase()) {
-                return !0;
+                return true;
               }
               if ("上午/下午" === e.substr(t, 5).toUpperCase()) {
-                return !0;
+                return true;
               }
               ++t;
               break;
@@ -1069,7 +1069,7 @@
                 r += e.charAt(t);
               }
               if (r.match(S)) {
-                return !0;
+                return true;
               }
               break;
             case ".":
@@ -1112,7 +1112,7 @@
               ++t;
           }
         }
-        return !1;
+        return false;
       }
       function B(e, t, n, r) {
         for (var i, o, a, s = [], u = "", l = 0, f = "", d = "t", h = "H"; l < e.length;) {
@@ -1546,41 +1546,41 @@
       var I = /\[(=|>[=]?|<[>=]?)(-?\d+(?:\.\d*)?)\]/;
       function F(e, t) {
         if (null == t) {
-          return !1;
+          return false;
         }
         var n = parseFloat(t[2]);
         switch (t[1]) {
           case "=":
             if (e == n) {
-              return !0;
+              return true;
             }
             break;
           case ">":
             if (e > n) {
-              return !0;
+              return true;
             }
             break;
           case "<":
             if (e < n) {
-              return !0;
+              return true;
             }
             break;
           case "<>":
             if (e != n) {
-              return !0;
+              return true;
             }
             break;
           case ">=":
             if (e >= n) {
-              return !0;
+              return true;
             }
             break;
           case "<=":
             if (e <= n) {
-              return !0;
+              return true;
             }
         }
-        return !1;
+        return false;
       }
       function R(e, t, n) {
         if (null == n) {
@@ -1642,9 +1642,9 @@
         if (c(i[1])) {
           return E(t, n);
         }
-        if (!0 === t) {
+        if (true === t) {
           t = "TRUE";
-        } else if (!1 === t) {
+        } else if (false === t) {
           t = "FALSE";
         } else if ("" === t || null == t) {
           return "";
@@ -1655,7 +1655,7 @@
         if ("number" != typeof t) {
           t = +t || -1;
           for (var n = 0; n < 392; ++n) {
-            if (void 0 != d[n]) {
+            if (undefined != d[n]) {
               if (d[n] == e) {
                 t = n;
                 break;
@@ -1678,7 +1678,7 @@
       };
       e.load_table = function (e) {
         for (var t = 0; 392 != t; ++t) {
-          if (void 0 !== e[t]) {
+          if (undefined !== e[t]) {
             P(e[t], t);
           }
         }
@@ -2007,8 +2007,8 @@
               c = [];
               var p = [];
               for (f = d; f >= 0;) {
-                p[f] = !0;
-                a[f] = !0;
+                p[f] = true;
+                a[f] = true;
                 s[s.length] = f;
                 c.push(e[f]);
                 var _ = n[Math.floor(4 * f / r)];
@@ -2081,7 +2081,7 @@
             } else {
               if (m.size >= 4096) {
                 m.storage = "fat";
-                if (void 0 === t[m.start]) {
+                if (undefined === t[m.start]) {
                   t[m.start] = l(n, m.start, t.fat_addrs, t.ssz);
                 }
                 t[m.start].name = m.name;
@@ -2197,7 +2197,7 @@
         var c = 0;
         var u = 0;
         for (c = t; c >= 0;) {
-          i[c] = !0;
+          i[c] = true;
           o[o.length] = c;
           a.push(e[c]);
           var l = n[Math.floor(4 * c / r)];
@@ -2263,12 +2263,12 @@
       }
       function h(e, t) {
         d(e);
-        for (var n = !1, o = !1, a = e.FullPaths.length - 1; a >= 0; --a) {
+        for (var n = false, o = false, a = e.FullPaths.length - 1; a >= 0; --a) {
           var s = e.FileIndex[a];
           switch (s.type) {
             case 0:
               if (o) {
-                n = !0;
+                n = true;
               } else {
                 e.FileIndex.pop();
                 e.FullPaths.pop();
@@ -2277,16 +2277,16 @@
             case 1:
             case 2:
             case 5:
-              o = !0;
+              o = true;
               if (isNaN(s.R * s.L * s.C)) {
-                n = !0;
+                n = true;
               }
               if (s.R > -1 && s.L > -1 && s.R == s.L) {
-                n = !0;
+                n = true;
               }
               break;
             default:
-              n = !0;
+              n = true;
           }
         }
         if (n || t) {
@@ -2300,9 +2300,9 @@
           }
           for (a = 0; a < l.length; ++a) {
             var f = r(l[a][0]);
-            for (o = !1, u = 0; u < l.length; ++u) {
+            for (o = false, u = 0; u < l.length; ++u) {
               if (l[u][0] === f) {
-                o = !0;
+                o = true;
               }
             }
             if (!o) {
@@ -3047,11 +3047,11 @@
           default:
             throw new Error("Unsupported ZIP Compression method " + s);
         }
-        var m = !1;
+        var m = false;
         if (8 & o) {
           if (134695760 == (u = e.read_shift(4))) {
             u = e.read_shift(4);
-            m = !0;
+            m = true;
           }
           l = e.read_shift(4);
           f = e.read_shift(4);
@@ -3067,7 +3067,7 @@
           ae(m, "Bad CRC32 checksum: " + u + " != " + y);
         }
         ue(r, p, v, {
-          unsafe: !0,
+          unsafe: true,
           mt: c
         });
       }
@@ -3120,15 +3120,15 @@
           var t = e.split("/");
           return t[t.length - ("/" == e.slice(-1) ? 2 : 1)];
         });
-        var i = !1;
+        var i = false;
         if (47 === t.charCodeAt(0)) {
-          i = !0;
+          i = true;
           t = n[0].slice(0, -1) + t;
         } else {
           i = -1 !== t.indexOf("/");
         }
         var o = t.toUpperCase();
-        var a = !0 === i ? n.indexOf(o) : r.indexOf(o);
+        var a = true === i ? n.indexOf(o) : r.indexOf(o);
         if (-1 !== a) {
           return e.FileIndex[a];
         }
@@ -3192,11 +3192,11 @@
               if (e.FileIndex[r] == n) {
                 e.FileIndex.splice(r, 1);
                 e.FullPaths.splice(r, 1);
-                return !0;
+                return true;
               }
             }
           }
-          return !1;
+          return false;
         },
         cfb_mov: function (e, t, n) {
           d(e);
@@ -3206,14 +3206,14 @@
               if (e.FileIndex[o] == r) {
                 e.FileIndex[o].name = i(n);
                 e.FullPaths[o] = n;
-                return !0;
+                return true;
               }
             }
           }
-          return !1;
+          return false;
         },
         cfb_gc: function (e) {
-          h(e, !0);
+          h(e, true);
         },
         ReadShift: Rt,
         CheckField: Mt,
@@ -3277,7 +3277,7 @@
             return chrome.downloads.download({
               url: o,
               filename: e,
-              saveAs: !0
+              saveAs: true
             });
           }
           var a = document.createElement("a");
@@ -3365,14 +3365,14 @@
     function J(e) {
       var t = 0;
       var n = 0;
-      var r = !1;
+      var r = false;
       var i = e.match(/P([0-9\.]+Y)?([0-9\.]+M)?([0-9\.]+D)?T([0-9\.]+H)?([0-9\.]+M)?([0-9\.]+S)?/);
       if (!i) {
         throw new Error("|" + e + "| is not an ISO8601 Duration");
       }
       for (var o = 1; o != i.length; ++o) {
         if (i[o]) {
-          switch (n = 1, o > 3 && (r = !0), i[o].slice(i[o].length - 1)) {
+          switch (n = 1, o > 3 && (r = true), i[o].slice(i[o].length - 1)) {
             case "Y":
               throw new Error("Unsupported ISO Duration Field: " + i[o].slice(i[o].length - 1));
             case "D":
@@ -3700,13 +3700,13 @@
     function Ne(e) {
       switch (e) {
         case 1:
-        case !0:
+        case true:
         case "1":
         case "true":
         case "TRUE":
-          return !0;
+          return true;
         default:
-          return !1;
+          return false;
       }
     }
     var Me = function (e) {
@@ -3735,7 +3735,7 @@
     };
     var je = function (e) {
       for (var t = [], n = 0, r = 0, i = 0; n < e.length;) {
-        switch (r = e.charCodeAt(n++), !0) {
+        switch (r = e.charCodeAt(n++), true) {
           case r < 128:
             t.push(String.fromCharCode(r));
             break;
@@ -3833,7 +3833,7 @@
     var ze = function () {
       var e = {};
       return function (t) {
-        return void 0 !== e[t] ? e[t] : e[t] = new RegExp("<(?:vt:)?" + t + ">([\\s\\S]*?)</(?:vt:)?" + t + ">", "g");
+        return undefined !== e[t] ? e[t] : e[t] = new RegExp("<(?:vt:)?" + t + ">([\\s\\S]*?)</(?:vt:)?" + t + ">", "g");
       };
     }();
     var Qe = /<\/?(?:vt:)?variant>/g;
@@ -4614,7 +4614,7 @@
       }
     }
     function on(e, t, n) {
-      return null == e || null == e.t || "z" == e.t ? "" : void 0 !== e.w ? e.w : ("d" == e.t && !e.z && n && n.dateNF && (e.z = n.dateNF), rn(e, void 0 == t ? e.v : t));
+      return null == e || null == e.t || "z" == e.t ? "" : undefined !== e.w ? e.w : ("d" == e.t && !e.z && n && n.dateNF && (e.z = n.dateNF), rn(e, undefined == t ? e.v : t));
     }
     function an(e, t) {
       var n = t && t.sheet ? t.sheet : "Sheet1";
@@ -4767,9 +4767,9 @@
       return 0 === t ? "" : e.read_shift(t, "dbcs");
     }
     function fn(e, t) {
-      var n = !1;
+      var n = false;
       if (null == t) {
-        n = !0;
+        n = true;
         t = Ut(4 + 2 * e.length);
       }
       t.write_shift(4, e.length);
@@ -4850,12 +4850,12 @@
         }
         return r.createHash("md5").update(e).digest("hex");
       };
-    }({}, "undefined" !== typeof crypto ? crypto : void 0);
+    }({}, "undefined" !== typeof crypto ? crypto : undefined);
     var pn = hn;
     function _n(e, t) {
-      var n = !1;
+      var n = false;
       if (null == t) {
-        n = !0;
+        n = true;
         t = Ut(23 + 4 * e.t.length);
       }
       t.write_shift(1, 1);
@@ -4916,9 +4916,9 @@
       return 0 === t || 4294967295 === t ? "" : e.read_shift(t, "dbcs");
     }
     function En(e, t) {
-      var n = !1;
+      var n = false;
       if (null == t) {
-        n = !0;
+        n = true;
         t = Ut(127);
       }
       t.write_shift(4, e.length > 0 ? e.length : 4294967295);
@@ -5703,7 +5703,7 @@
             return $e("vt:filetime", Je(e));
           }
           throw new Error("Unable to serialize " + e);
-        }(e[r], !0), {
+        }(e[r], true), {
           fmtid: "{D5CDD505-2E9C-101B-9397-08002B2CF9AE}",
           pid: n,
           name: Be(r)
@@ -5765,7 +5765,7 @@
       return 31 === t ? Er(e) : wr(e, 0, n);
     }
     function Cr(e, t, n) {
-      return xr(e, t, !1 === n ? 0 : 4);
+      return xr(e, t, false === n ? 0 : 4);
     }
     function Or(e) {
       return function (e) {
@@ -5923,25 +5923,25 @@
       var h = {};
       for (a = 0; a != i; ++a) {
         if (e.l !== o[a][1]) {
-          var p = !0;
+          var p = true;
           if (a > 0 && t) {
             switch (t[o[a - 1][0]].t) {
               case 2:
                 if (e.l + 2 === o[a][1]) {
                   e.l += 2;
-                  p = !1;
+                  p = false;
                 }
                 break;
               case 80:
               case 4108:
                 if (e.l <= o[a][1]) {
                   e.l = o[a][1];
-                  p = !1;
+                  p = false;
                 }
             }
           }
           if ((!t || 0 == a) && e.l <= o[a][1]) {
-            p = !1;
+            p = false;
             e.l = o[a][1];
           }
           if (p) {
@@ -5951,7 +5951,7 @@
         if (t) {
           var _ = t[o[a][0]];
           h[_.n] = Dr(e, _.t, {
-            raw: !0
+            raw: true
           });
           if ("version" === _.p) {
             h[_.n] = String(h[_.n] >> 16) + "." + ("0000" + String(65535 & h[_.n])).slice(-4);
@@ -6335,11 +6335,11 @@
           return function (e) {
             var t = e.read_shift(4);
             var n = e.l;
-            var r = !1;
+            var r = false;
             if (t > 24) {
               e.l += t - 24;
               if ("795881f43b1d7f48af2c825dc4852763" === e.read_shift(16)) {
-                r = !0;
+                r = true;
               }
               e.l = n;
             }
@@ -6701,7 +6701,7 @@
         return 1 === e.read_shift(1) ? t : 1 === t;
       }(e);
       r.val = i;
-      r.t = !0 === i || !1 === i ? "b" : "e";
+      r.t = true === i || false === i ? "b" : "e";
       return r;
     }
     function Ei(e, t, n, r, i, o) {
@@ -7023,22 +7023,22 @@
           jt(i, 0);
           var o = i.read_shift(1);
           var a = !!(136 & o);
-          var s = !1;
-          var c = !1;
+          var s = false;
+          var c = false;
           switch (o) {
             case 2:
             case 3:
               break;
             case 48:
             case 49:
-              s = !0;
-              a = !0;
+              s = true;
+              a = true;
               break;
             case 131:
             case 139:
               break;
             case 140:
-              c = !0;
+              c = true;
               break;
             case 245:
               break;
@@ -7148,11 +7148,11 @@
                     switch (b.trim().toUpperCase()) {
                       case "Y":
                       case "T":
-                        r[g][m] = !0;
+                        r[g][m] = true;
                         break;
                       case "N":
                       case "F":
-                        r[g][m] = !1;
+                        r[g][m] = false;
                         break;
                       case "":
                       case "?":
@@ -7249,8 +7249,8 @@
           var o = Vt();
           var a = sl(e, {
             header: 1,
-            raw: !0,
-            cellDates: !0
+            raw: true,
+            cellDates: true
           });
           var c = a[0];
           var u = a.slice(1);
@@ -7510,10 +7510,10 @@
                 }
                 break;
               case "C":
-                var x = !1,
-                  C = !1,
-                  O = !1,
-                  k = !1,
+                var x = false,
+                  C = false,
+                  O = false,
+                  k = false,
                   S = -1,
                   T = -1;
                 for (l = 1; l < w.length; ++l) {
@@ -7522,7 +7522,7 @@
                       break;
                     case "X":
                       c = parseInt(w[l].slice(1)) - 1;
-                      C = !0;
+                      C = true;
                       break;
                     case "Y":
                       for (s = parseInt(w[l].slice(1)) - 1, C || (c = 0), o = f.length; o <= s; ++o) {
@@ -7534,10 +7534,10 @@
                         y = y.slice(1, y.length - 1);
                       } else {
                         if ("TRUE" === y) {
-                          y = !0;
+                          y = true;
                         } else {
                           if ("FALSE" === y) {
-                            y = !1;
+                            y = false;
                           } else {
                             if (isNaN(oe(y))) {
                               if (!isNaN(ae(y).getDate())) {
@@ -7555,10 +7555,10 @@
                       if ("undefined" !== typeof cptable && "string" == typeof y && "string" != (i || {}).type && (i || {}).codepage) {
                         y = cptable.utils.decode(i.codepage, y);
                       }
-                      x = !0;
+                      x = true;
                       break;
                     case "E":
-                      k = !0;
+                      k = true;
                       var B = fa(w[l].slice(1), {
                         r: s,
                         c: c
@@ -7566,7 +7566,7 @@
                       f[s][c] = [f[s][c], B];
                       break;
                     case "S":
-                      O = !0;
+                      O = true;
                       f[s][c] = [f[s][c], "S5S"];
                       break;
                     case "G":
@@ -7627,7 +7627,7 @@
                       for (v = w[l].slice(1).split(" "), o = parseInt(v[0], 10); o <= parseInt(v[1], 10); ++o) {
                         m = parseInt(v[2], 10);
                         g[o - 1] = 0 === m ? {
-                          hidden: !0
+                          hidden: true
                         } : {
                           wch: m
                         };
@@ -7648,7 +7648,7 @@
                         A[s].hpx = ko(m);
                       } else {
                         if (0 === m) {
-                          A[s].hidden = !0;
+                          A[s].hidden = true;
                         }
                       }
                       break;
@@ -7825,10 +7825,10 @@
                   break;
                 case 0:
                   if ("TRUE" === l) {
-                    a[r][i] = !0;
+                    a[r][i] = true;
                   } else {
                     if ("FALSE" === l) {
-                      a[r][i] = !1;
+                      a[r][i] = false;
                     } else {
                       if (isNaN(oe(u))) {
                         if (isNaN(ae(u).getDate())) {
@@ -8068,10 +8068,10 @@
         } else {
           if (!("" === e)) {
             if ("TRUE" === e) {
-              t[n][r] = !0;
+              t[n][r] = true;
             } else {
               if ("FALSE" === e) {
-                t[n][r] = !1;
+                t[n][r] = false;
               } else {
                 if (isNaN(oe(e))) {
                   if (isNaN(ae(e).getDate())) {
@@ -8098,7 +8098,7 @@
         59: 1
       };
       function r(e) {
-        for (var r = {}, i = !1, o = 0, a = 0; o < e.length; ++o) {
+        for (var r = {}, i = false, o = 0, a = 0; o < e.length; ++o) {
           if (34 == (a = e.charCodeAt(o))) {
             i = !i;
           } else {
@@ -8155,7 +8155,7 @@
         var l = 0;
         var f = 0;
         var d = i.charCodeAt(0);
-        var h = !1;
+        var h = false;
         var p = 0;
         e = e.replace(/\r\n/gm, "\n");
         var _ = null != n.dateNF ? function (e) {
@@ -8192,10 +8192,10 @@
             }
           } else if ("TRUE" == t) {
             r.t = "b";
-            r.v = !0;
+            r.v = true;
           } else if ("FALSE" == t) {
             r.t = "b";
-            r.v = !1;
+            r.v = false;
           } else if (isNaN(u = oe(t))) {
             if (!isNaN(ae(t).getDate()) || _ && t.match(_)) {
               r.z = n.dateNF || D._table[14];
@@ -8254,7 +8254,7 @@
                 r.t = "n";
                 r.v = W(te(t, i));
               }
-              if (!1 !== n.cellText) {
+              if (false !== n.cellText) {
                 r.w = D.format(r.z, r.v instanceof Date ? W(r.v) : r.v);
               }
               if (!n.cellNF) {
@@ -8266,7 +8266,7 @@
             }
           } else {
             r.t = "n";
-            if (!1 !== n.cellText) {
+            if (false !== n.cellText) {
               r.w = t;
             }
             r.v = u;
@@ -8294,7 +8294,7 @@
           if (p == d) {
             ++c;
           } else if (c = 0, ++s, n.sheetRows && n.sheetRows <= s) {
-            return !0;
+            return true;
           }
         }
         e: for (; f < e.length; ++f) {
@@ -8436,7 +8436,7 @@
             throw new Error("Unrecognized LOTUS BOF " + e[2]);
           }
           n.Enum = s;
-          n.qpro = !0;
+          n.qpro = true;
           e.l = 0;
         }
         (function (e, t, n) {
@@ -8460,7 +8460,7 @@
               case 0:
                 n.vers = t;
                 if (t >= 4096) {
-                  n.qpro = !0;
+                  n.qpro = true;
                 }
                 break;
               case 6:
@@ -9017,7 +9017,7 @@
             var t = {};
             var n = e.match(ye);
             var r = 0;
-            var i = !1;
+            var i = false;
             if (n) {
               for (; r != n.length; ++r) {
                 var o = Ee(n[r]);
@@ -9125,10 +9125,10 @@
                   case "</extLst>":
                     break;
                   case "<ext":
-                    i = !0;
+                    i = true;
                     break;
                   case "</ext>":
-                    i = !1;
+                    i = false;
                     break;
                   default:
                     if (47 !== o[0].charCodeAt(1) && !i) {
@@ -9255,9 +9255,9 @@
       return n.join("");
     }
     var eo = function (e, t) {
-      var n = !1;
+      var n = false;
       if (null == t) {
-        n = !0;
+        n = true;
         t = Ut(15 + 4 * e.t.length);
       }
       t.write_shift(1, 0);
@@ -9338,7 +9338,7 @@
       r.Flags = 63 & e.read_shift(4);
       e.l += 4;
       r.AlgID = e.read_shift(4);
-      var i = !1;
+      var i = false;
       switch (r.AlgID) {
         case 26126:
         case 26127:
@@ -9815,7 +9815,7 @@
         }(c, u, s), (c = o.match(r)) && function (e, t, n, r) {
           t.Fonts = [];
           var i = {};
-          var o = !1;
+          var o = false;
           (e[0].match(ye) || []).forEach(function (e) {
             var a = Ee(e);
             switch (xe(a[0])) {
@@ -9967,20 +9967,20 @@
               case "</color>":
                 break;
               case "<AlternateContent":
-                o = !0;
+                o = true;
                 break;
               case "</AlternateContent>":
-                o = !1;
+                o = false;
                 break;
               case "<extLst":
               case "<extLst>":
               case "</extLst>":
                 break;
               case "<ext":
-                o = !0;
+                o = true;
                 break;
               case "</ext>":
-                o = !1;
+                o = false;
                 break;
               default:
                 if (r && r.WTF && !o) {
@@ -9991,7 +9991,7 @@
         }(c, u, a, s), (c = o.match(n)) && function (e, t, n, r) {
           t.Fills = [];
           var i = {};
-          var o = !1;
+          var o = false;
           (e[0].match(ye) || []).forEach(function (e) {
             var n = Ee(e);
             switch (xe(n[0])) {
@@ -10072,10 +10072,10 @@
               case "</extLst>":
                 break;
               case "<ext":
-                o = !0;
+                o = true;
                 break;
               case "</ext>":
-                o = !1;
+                o = false;
                 break;
               default:
                 if (r && r.WTF && !o) {
@@ -10086,7 +10086,7 @@
         }(c, u, 0, s), (c = o.match(i)) && function (e, t, n, r) {
           t.Borders = [];
           var i = {};
-          var o = !1;
+          var o = false;
           (e[0].match(ye) || []).forEach(function (e) {
             var n = Ee(e);
             switch (xe(n[0])) {
@@ -10164,10 +10164,10 @@
               case "</extLst>":
                 break;
               case "<ext":
-                o = !0;
+                o = true;
                 break;
               case "</ext>":
-                o = !1;
+                o = false;
                 break;
               default:
                 if (r && r.WTF && !o) {
@@ -10178,7 +10178,7 @@
         }(c, u, 0, s), (c = o.match(t)) && function (e, t, n) {
           var r;
           t.CellXf = [];
-          var i = !1;
+          var i = false;
           (e[0].match(ye) || []).forEach(function (e) {
             var o = Ee(e);
             var a = 0;
@@ -10239,20 +10239,20 @@
               case "<protection/>":
                 break;
               case "<AlternateContent":
-                i = !0;
+                i = true;
                 break;
               case "</AlternateContent>":
-                i = !1;
+                i = false;
                 break;
               case "<extLst":
               case "<extLst>":
               case "</extLst>":
                 break;
               case "<ext":
-                i = !0;
+                i = true;
                 break;
               case "</ext>":
-                i = !1;
+                i = false;
                 break;
               default:
                 if (n && n.WTF && !i) {
@@ -11002,21 +11002,21 @@
         c: 0
       };
       function n(e, n, r, i) {
-        var o = !1;
-        var a = !1;
+        var o = false;
+        var a = false;
         if (0 == r.length) {
-          a = !0;
+          a = true;
         } else {
           if ("[" == r.charAt(0)) {
-            a = !0;
+            a = true;
             r = r.slice(1, -1);
           }
         }
         if (0 == i.length) {
-          o = !0;
+          o = true;
         } else {
           if ("[" == i.charAt(0)) {
-            o = !0;
+            o = true;
             i = i.slice(1, -1);
           }
         }
@@ -12258,12 +12258,12 @@
               var I = r.sharedf[Zt(s)];
               f.push($a(I, l, D, r, i));
             } else {
-              var F = !1;
+              var F = false;
               for (o = 0; o != r.arrayf.length; ++o) {
                 a = r.arrayf[o];
                 if (!(s.c < a[0].s.c || s.c > a[0].e.c) && !(s.r < a[0].s.r || s.r > a[0].e.r)) {
                   f.push($a(a[1], l, D, r, i));
-                  F = !0;
+                  F = true;
                   break;
                 }
               }
@@ -12318,15 +12318,15 @@
             throw new Error("Unrecognized Formula Token: " + String(m));
         }
         if (3 != i.biff && _ >= 0 && -1 == ["PtgAttrSpace", "PtgAttrSpaceSemi", "PtgAttrGoto"].indexOf(e[0][g][0])) {
-          var R = !0;
+          var R = true;
           switch ((m = e[0][_])[1][0]) {
             case 4:
-              R = !1;
+              R = false;
             case 0:
               A = ie(" ", m[1][1]);
               break;
             case 5:
-              R = !1;
+              R = false;
             case 1:
               A = ie("\r", m[1][1]);
               break;
@@ -13809,7 +13809,7 @@
         }
       }
       if (t.hidden) {
-        n.hidden = !0;
+        n.hidden = true;
       }
       return n;
     }
@@ -13882,7 +13882,7 @@
         if ("d" === e.t && "string" === typeof e.v) {
           e.v = te(e.v);
         }
-        if (!r || !1 !== r.cellText) {
+        if (!r || false !== r.cellText) {
           try {
             if (null == D._table[t]) {
               D.load(P[t] || "General", t);
@@ -13900,7 +13900,7 @@
                 var a = W(e.v);
                 e.w = (0 | a) === a ? D._general_int(a) : D._general_num(a);
               } else {
-                if (void 0 === e.v) {
+                if (undefined === e.v) {
                   return "";
                 }
                 e.w = D._general(e.v, ps);
@@ -14018,7 +14018,7 @@
               t.Views[n].zoom = +r.zoomScale;
             }
             if (Ne(r.rightToLeft)) {
-              t.Views[n].RTL = !0;
+              t.Views[n].RTL = true;
             }
           });
         })(_[1], i);
@@ -14028,14 +14028,14 @@
         var g = u.match(Os);
         if (g) {
           (function (e, t) {
-            for (var n = !1, r = 0; r != t.length; ++r) {
-              var i = Ee(t[r], !0);
+            for (var n = false, r = 0; r != t.length; ++r) {
+              var i = Ee(t[r], true);
               if (i.hidden) {
                 i.hidden = Ne(i.hidden);
               }
               var o = parseInt(i.min, 10) - 1;
               var a = parseInt(i.max, 10) - 1;
-              for (delete i.min, delete i.max, i.width = +i.width, !n && i.width && (n = !0, xo(i.width)), Co(i); o <= a;) {
+              for (delete i.min, delete i.max, i.width = +i.width, !n && i.width && (n = true, xo(i.width)), Co(i); o <= a;) {
                 e[o++] = re(i);
               }
             }
@@ -14064,7 +14064,7 @@
       if (b) {
         (function (e, t, n) {
           for (var r = Array.isArray(e), i = 0; i != t.length; ++i) {
-            var o = Ee(Me(t[i]), !0);
+            var o = Ee(Me(t[i]), true);
             if (!o.ref) {
               return;
             }
@@ -14099,7 +14099,7 @@
                   if (!e[c][u]) {
                     e[c][u] = {
                       t: "z",
-                      v: void 0
+                      v: undefined
                     };
                   }
                   e[c][u].l = o;
@@ -14107,7 +14107,7 @@
                   if (!e[l]) {
                     e[l] = {
                       t: "z",
-                      v: void 0
+                      v: undefined
                     };
                   }
                   e[l].l = o;
@@ -14173,7 +14173,7 @@
     var Rs = ["formatColumns", "formatRows", "formatCells", "insertColumns", "insertRows", "insertHyperlinks", "deleteColumns", "deleteRows", "sort", "autoFilter", "pivotTables"];
     var Ps = /<(?:\w:)?sheetView(?:[^>a-z][^>]*)?\/?>/;
     function Ns(e, t, n, r) {
-      if (void 0 === e.v && "string" !== typeof e.f || "z" === e.t) {
+      if (undefined === e.v && "string" !== typeof e.f || "z" === e.t) {
         return "";
       }
       var i = "";
@@ -14264,14 +14264,14 @@
       var o = Ve("v");
       var a = Ve("f");
       return function (s, c, u, l, f, d) {
-        for (var h, p, _, A, g, v = 0, m = "", y = [], b = [], w = 0, E = 0, x = 0, C = "", O = 0, k = 0, S = 0, T = 0, B = Array.isArray(d.CellXf), I = [], F = [], R = Array.isArray(c), P = [], N = {}, M = !1, j = !!u.sheetStubs, L = s.split(t), U = 0, H = L.length; U != H; ++U) {
+        for (var h, p, _, A, g, v = 0, m = "", y = [], b = [], w = 0, E = 0, x = 0, C = "", O = 0, k = 0, S = 0, T = 0, B = Array.isArray(d.CellXf), I = [], F = [], R = Array.isArray(c), P = [], N = {}, M = false, j = !!u.sheetStubs, L = s.split(t), U = 0, H = L.length; U != H; ++U) {
           var V = (m = L[U].trim()).length;
           if (0 !== V) {
             for (v = 0; v < V && 62 !== m.charCodeAt(v); ++v) {
               ;
             }
             ++v;
-            O = null != (p = Ee(m.slice(0, v), !0)).r ? parseInt(p.r, 10) : O + 1;
+            O = null != (p = Ee(m.slice(0, v), true)).r ? parseInt(p.r, 10) : O + 1;
             k = -1;
             if (!(u.sheetRows && u.sheetRows < O)) {
               if (l.s.r > O - 1) {
@@ -14282,18 +14282,18 @@
               }
               if (u && u.cellStyles) {
                 N = {};
-                M = !1;
+                M = false;
                 if (p.ht) {
-                  M = !0;
+                  M = true;
                   N.hpt = parseFloat(p.ht);
                   N.hpx = ko(N.hpt);
                 }
                 if ("1" == p.hidden) {
-                  M = !0;
-                  N.hidden = !0;
+                  M = true;
+                  N.hidden = true;
                 }
                 if (null != p.outlineLevel) {
-                  M = !0;
+                  M = true;
                   N.level = +p.outlineLevel;
                 }
                 if (M) {
@@ -14323,7 +14323,7 @@
                     ;
                   }
                   ++E;
-                  if (!(p = Ee(m.slice(0, E), !0)).r) {
+                  if (!(p = Ee(m.slice(0, E), true)).r) {
                     p.r = Zt({
                       r: O - 1,
                       c: k
@@ -14364,7 +14364,7 @@
                       }
                     }
                   }
-                  if (null == p.t && void 0 === h.v) {
+                  if (null == p.t && undefined === h.v) {
                     if (h.f || h.F) {
                       h.v = 0;
                       h.t = "n";
@@ -14434,14 +14434,14 @@
                       }
                       break;
                     case "e":
-                      if (!(u && !1 === u.cellText)) {
+                      if (!(u && false === u.cellText)) {
                         h.w = h.v;
                       }
                       h.v = Wn[h.v];
                   }
                   S = T = 0;
                   g = null;
-                  if (B && void 0 !== p.s && null != (g = d.CellXf[p.s])) {
+                  if (B && undefined !== p.s && null != (g = d.CellXf[p.s])) {
                     if (null != g.numFmtId) {
                       S = g.numFmtId;
                     }
@@ -14502,7 +14502,7 @@
       c["!comments"] = [];
       var f = [];
       !function (e, t, n, r, i) {
-        var o = !1;
+        var o = false;
         var a = {};
         var s = null;
         if ("xlsx" !== r.bookType && t.vbaraw) {
@@ -14512,7 +14512,7 @@
               c = t.Workbook.Sheets[n].CodeName || c;
             }
           } catch (_l) {}
-          o = !0;
+          o = true;
           a.codeName = je(Be(c));
         }
         if (e && e["!outline"]) {
@@ -14588,7 +14588,7 @@
           for (s = [], l = Yt(d), h = c.s.c; h <= c.e.c; ++h) {
             i = f[h] + l;
             var v = _ ? (e[d] || [])[h] : e[i];
-            if (void 0 !== v) {
+            if (undefined !== v) {
               if (null != (u = Ns(v, i, e, t))) {
                 s.push(u);
               }
@@ -14755,7 +14755,7 @@
       if (null != c["!margins"]) {
         o[o.length] = (vs(h = c["!margins"]), $e("pageMargins", null, h));
       }
-      if (!(t && !t.ignoreEC && void 0 != t.ignoreEC)) {
+      if (!(t && !t.ignoreEC && undefined != t.ignoreEC)) {
         o[o.length] = Ye("ignoredErrors", $e("ignoredError", null, {
           numberStoredAsText: 1,
           sqref: u
@@ -14852,8 +14852,8 @@
     var Qs = Dn;
     var Ws = ["left", "right", "top", "bottom", "header", "footer"];
     function Ks(e, t, n, r, i, o, a) {
-      if (void 0 === t.v) {
-        return !1;
+      if (undefined === t.v) {
+        return false;
       }
       var s = "";
       switch (t.t) {
@@ -14924,7 +14924,7 @@
               }(t, c));
             }
           }
-          return !0;
+          return true;
         case "n":
           if (t.v == (0 | t.v) && t.v > -1e3 && t.v < 1e3) {
             if (a) {
@@ -14967,7 +14967,7 @@
               }(t, c));
             }
           }
-          return !0;
+          return true;
         case "b":
           c.t = "b";
           if (a) {
@@ -14989,7 +14989,7 @@
               return n;
             }(t, c));
           }
-          return !0;
+          return true;
         case "e":
           c.t = "e";
           if (a) {
@@ -15013,7 +15013,7 @@
               return n;
             }(t, c));
           }
-          return !0;
+          return true;
       }
       if (a) {
         Gt(e, "BrtShortBlank", function (e, t, n) {
@@ -15030,7 +15030,7 @@
           return gn(t, n);
         }(0, c));
       }
-      return !0;
+      return true;
     }
     function Xs(e, t) {
       if (t && t["!merges"]) {
@@ -15148,7 +15148,7 @@
           }
           t.write_shift(2, e.password ? fo(e.password) : 0);
           t.write_shift(4, 1);
-          [["objects", !1], ["scenarios", !1], ["formatCells", !0], ["formatColumns", !0], ["formatRows", !0], ["insertColumns", !0], ["insertRows", !0], ["insertHyperlinks", !0], ["deleteColumns", !0], ["deleteRows", !0], ["selectLockedCells", !1], ["sort", !0], ["autoFilter", !0], ["pivotTables", !0], ["selectUnlockedCells", !1]].forEach(function (n) {
+          [["objects", false], ["scenarios", false], ["formatCells", true], ["formatColumns", true], ["formatRows", true], ["insertColumns", true], ["insertRows", true], ["insertHyperlinks", true], ["deleteColumns", true], ["deleteRows", true], ["selectLockedCells", false], ["sort", true], ["autoFilter", true], ["pivotTables", true], ["selectUnlockedCells", false]].forEach(function (n) {
             if (n[1]) {
               t.write_shift(4, null == e[n[0]] || e[n[0]] ? 0 : 1);
             } else {
@@ -15214,7 +15214,7 @@
         for (var l = o.s.r; l <= u; ++l) {
           a = Yt(l);
           Us(e, t, o, l);
-          var f = !1;
+          var f = false;
           if (l <= o.e.r) {
             for (var d = o.s.c; d <= o.e.c; ++d) {
               if (l === o.s.r) {
@@ -15225,7 +15225,7 @@
               if (h) {
                 f = Ks(e, h, l, d, r, t, f);
               } else {
-                f = !1;
+                f = false;
               }
             }
           }
@@ -15283,7 +15283,7 @@
           return t;
         }(a["!margins"]));
       }
-      if (!(t && !t.ignoreEC && void 0 != t.ignoreEC)) {
+      if (!(t && !t.ignoreEC && undefined != t.ignoreEC)) {
         qs(i, a);
       }
       (function (e, t, n, r) {
@@ -15361,8 +15361,8 @@
       xmlns: tt.main[0],
       "xmlns:r": tt.r
     });
-    var nc = [["allowRefreshQuery", !1, "bool"], ["autoCompressPictures", !0, "bool"], ["backupFile", !1, "bool"], ["checkCompatibility", !1, "bool"], ["CodeName", ""], ["date1904", !1, "bool"], ["defaultThemeVersion", 0, "int"], ["filterPrivacy", !1, "bool"], ["hidePivotFieldList", !1, "bool"], ["promptedSolutions", !1, "bool"], ["publishItems", !1, "bool"], ["refreshAllConnections", !1, "bool"], ["saveExternalLinkValues", !0, "bool"], ["showBorderUnselectedTables", !0, "bool"], ["showInkAnnotation", !0, "bool"], ["showObjects", "all"], ["showPivotChartFilter", !1, "bool"], ["updateLinks", "userSet"]];
-    var rc = [["activeTab", 0, "int"], ["autoFilterDateGrouping", !0, "bool"], ["firstSheet", 0, "int"], ["minimized", !1, "bool"], ["showHorizontalScroll", !0, "bool"], ["showSheetTabs", !0, "bool"], ["showVerticalScroll", !0, "bool"], ["tabRatio", 600, "int"], ["visibility", "visible"]];
+    var nc = [["allowRefreshQuery", false, "bool"], ["autoCompressPictures", true, "bool"], ["backupFile", false, "bool"], ["checkCompatibility", false, "bool"], ["CodeName", ""], ["date1904", false, "bool"], ["defaultThemeVersion", 0, "int"], ["filterPrivacy", false, "bool"], ["hidePivotFieldList", false, "bool"], ["promptedSolutions", false, "bool"], ["publishItems", false, "bool"], ["refreshAllConnections", false, "bool"], ["saveExternalLinkValues", true, "bool"], ["showBorderUnselectedTables", true, "bool"], ["showInkAnnotation", true, "bool"], ["showObjects", "all"], ["showPivotChartFilter", false, "bool"], ["updateLinks", "userSet"]];
+    var rc = [["activeTab", 0, "int"], ["autoFilterDateGrouping", true, "bool"], ["firstSheet", 0, "int"], ["minimized", false, "bool"], ["showHorizontalScroll", true, "bool"], ["showSheetTabs", true, "bool"], ["showVerticalScroll", true, "bool"], ["tabRatio", 600, "int"], ["visibility", "visible"]];
     var ic = [];
     var oc = [["calcCompleted", "true"], ["calcMode", "auto"], ["calcOnSave", "true"], ["concurrentCalc", "true"], ["fullCalcOnLoad", "false"], ["fullPrecision", "true"], ["iterate", "false"], ["iterateCount", "100"], ["iterateDelta", "0.001"], ["refMode", "A1"]];
     function ac(e, t) {
@@ -15418,17 +15418,17 @@
     function lc(e, t) {
       if (e.length > 31) {
         if (t) {
-          return !1;
+          return false;
         }
         throw new Error("Sheet names cannot exceed 31 chars");
       }
-      var n = !0;
+      var n = true;
       uc.forEach(function (r) {
         if (-1 != e.indexOf(r)) {
           if (!t) {
             throw new Error("Sheet name cannot contain : \\ / ? * [ ]");
           }
-          n = !1;
+          n = false;
         }
       });
       return n;
@@ -15653,7 +15653,7 @@
           xmlns: ""
         };
         var r = [];
-        var i = !1;
+        var i = false;
         if (!t) {
           t = {};
         }
@@ -15741,19 +15741,19 @@
               break;
             case 35:
               r.push(s);
-              i = !0;
+              i = true;
               break;
             case 36:
               r.pop();
-              i = !1;
+              i = false;
               break;
             case 37:
               r.push(s);
-              i = !0;
+              i = true;
               break;
             case 38:
               r.pop();
-              i = !1;
+              i = false;
               break;
             case 16:
               break;
@@ -15784,7 +15784,7 @@
           Names: [],
           xmlns: ""
         };
-        var r = !1;
+        var r = false;
         var i = "xmlns";
         var o = {};
         var a = 0;
@@ -15879,10 +15879,10 @@
               break;
             case "<definedNames>":
             case "<definedNames":
-              r = !0;
+              r = true;
               break;
             case "</definedNames>":
-              r = !1;
+              r = false;
               break;
             case "<definedName":
               (o = {}).Name = Me(u.name);
@@ -15893,7 +15893,7 @@
                 o.Sheet = +u.localSheetId;
               }
               if (Ne(u.hidden || "0")) {
-                o.Hidden = !0;
+                o.Hidden = true;
               }
               a = c + s.length;
               break;
@@ -15948,19 +15948,19 @@
             case "<extLst/>":
               break;
             case "<ext":
-              r = !0;
+              r = true;
               break;
             case "</ext>":
-              r = !1;
+              r = false;
               break;
             case "<ArchID":
               break;
             case "<AlternateContent":
             case "<AlternateContent>":
-              r = !0;
+              r = true;
               break;
             case "</AlternateContent>":
-              r = !1;
+              r = false;
               break;
             case "<revisionPtr":
               break;
@@ -16011,13 +16011,13 @@
           }
         };
         var y = [];
-        var b = !1;
-        var w = !1;
+        var b = false;
+        var w = false;
         var E = [];
         s.biff = 12;
         s["!row"] = 0;
         var x = 0;
-        var C = !1;
+        var C = false;
         var O = [];
         var k = {};
         var S = s.supbooks || i.supbooks || [[]];
@@ -16033,7 +16033,7 @@
         }
         var B = [];
         var I = [];
-        var F = !1;
+        var F = false;
         au[16] = {
           n: "BrtShortReal",
           f: Gs
@@ -16047,7 +16047,7 @@
               case 0:
                 u = e;
                 if (s.sheetRows && s.sheetRows <= u.r) {
-                  w = !0;
+                  w = true;
                 }
                 A = Yt(d = u.r);
                 s["!row"] = u.r;
@@ -16090,7 +16090,7 @@
                     break;
                   case "e":
                     l.v = e[1];
-                    if (!1 !== s.cellText) {
+                    if (false !== s.cellText) {
                       l.w = Qn[l.v];
                     }
                     break;
@@ -16099,11 +16099,11 @@
                     l.v = e[1];
                 }
                 if ((f = a.CellXf[e[0].iStyleRef]) && ys(l, f.numFmtId, null, s, o, a), h = -1 == e[0].c ? h + 1 : e[0].c, s.dense ? (v[d] || (v[d] = []), v[d][h] = l) : v[$t(h) + A] = l, s.cellFormula) {
-                  for (C = !1, x = 0; x < O.length; ++x) {
+                  for (C = false, x = 0; x < O.length; ++x) {
                     var R = O[x];
                     if (u.r >= R[0].s.r && u.r <= R[0].e.r && h >= R[0].s.c && h <= R[0].e.c) {
                       l.F = tn(R[0]);
-                      C = !0;
+                      C = true;
                     }
                   }
                   if (!C && e.length > 3) {
@@ -16125,7 +16125,7 @@
                 }
                 l = {
                   t: "z",
-                  v: void 0
+                  v: undefined
                 };
                 h = -1 == e[0].c ? h + 1 : e[0].c;
                 if (s.dense) {
@@ -16163,7 +16163,7 @@
                       if (!v[d][h]) {
                         v[d][h] = {
                           t: "z",
-                          v: void 0
+                          v: undefined
                         };
                       }
                       v[d][h].l = e;
@@ -16175,7 +16175,7 @@
                       if (!v[p]) {
                         v[p] = {
                           t: "z",
-                          v: void 0
+                          v: undefined
                         };
                       }
                       v[p].l = e;
@@ -16215,7 +16215,7 @@
                     level: e.level
                   };
                   if (!F) {
-                    F = !0;
+                    F = true;
                     xo(e.w / 256);
                   }
                   Co(B[e.e + 1]);
@@ -16245,7 +16245,7 @@
                   i.Views[0] = {};
                 }
                 if (e.RTL) {
-                  i.Views[0].RTL = !0;
+                  i.Views[0].RTL = true;
                 }
                 break;
               case 485:
@@ -16307,18 +16307,18 @@
               case 1045:
                 break;
               case 35:
-                b = !0;
+                b = true;
                 break;
               case 36:
-                b = !1;
+                b = false;
                 break;
               case 37:
                 y.push(t);
-                b = !0;
+                b = true;
                 break;
               case 38:
                 y.pop();
-                b = !1;
+                b = false;
                 break;
               default:
                 if ((t || "").indexOf("Begin") > 0) {
@@ -16384,7 +16384,7 @@
           "!rel": ""
         };
         var a = [];
-        var s = !1;
+        var s = false;
         Ht(e, function (e, r, c) {
           switch (c) {
             case 550:
@@ -16408,10 +16408,10 @@
             case 3072:
               break;
             case 35:
-              s = !0;
+              s = true;
               break;
             case 36:
-              s = !1;
+              s = false;
               break;
             case 37:
               a.push(r);
@@ -16470,7 +16470,7 @@
         r.CellXf = [];
         r.Fonts = [];
         var o = [];
-        var a = !1;
+        var a = false;
         Ht(e, function (e, i, s) {
           switch (s) {
             case 44:
@@ -16505,18 +16505,18 @@
             case 3072:
               break;
             case 35:
-              a = !0;
+              a = true;
               break;
             case 36:
-              a = !1;
+              a = false;
               break;
             case 37:
               o.push(i);
-              a = !0;
+              a = true;
               break;
             case 38:
               o.pop();
-              a = !1;
+              a = false;
               break;
             default:
               if ((i || "").indexOf("Begin") > 0) {
@@ -16534,7 +16534,7 @@
     function Ec(e, t, n) {
       return ".bin" === t.slice(-4) ? function (e, t) {
         var n = [];
-        var r = !1;
+        var r = false;
         Ht(e, function (e, i, o) {
           switch (o) {
             case 159:
@@ -16545,12 +16545,12 @@
               n.push(e);
               break;
             case 160:
-              return !0;
+              return true;
             case 35:
-              r = !0;
+              r = true;
               break;
             case 36:
-              r = !1;
+              r = false;
               break;
             default:
               if (i.indexOf("Begin") > 0 || i.indexOf("End"), !r || t.WTF) {
@@ -16586,7 +16586,7 @@
         var n = [];
         var r = [];
         var i = {};
-        var o = !1;
+        var o = false;
         Ht(e, function (e, a, s) {
           switch (s) {
             case 632:
@@ -16613,10 +16613,10 @@
             case 3072:
               break;
             case 35:
-              o = !0;
+              o = true;
               break;
             case 36:
-              o = !1;
+              o = false;
               break;
             case 37:
             case 38:
@@ -16738,7 +16738,7 @@
             return e;
           }
           var i = r || {};
-          var o = !1;
+          var o = false;
           Ht(e, function (e, t, n) {
             switch (n) {
               case 359:
@@ -16764,10 +16764,10 @@
               case 587:
                 break;
               case 35:
-                o = !0;
+                o = true;
                 break;
               case 36:
-                o = !1;
+                o = false;
                 break;
               default:
                 if ((t || "").indexOf("Begin") > 0) {
@@ -16871,7 +16871,7 @@
     }
     function Nc(e, t, n) {
       if ("z" !== e.t) {
-        if (!n || !1 !== n.cellText) {
+        if (!n || false !== n.cellText) {
           try {
             if ("e" === e.t) {
               e.w = e.w || Qn[e.v];
@@ -16934,7 +16934,7 @@
       u = u || {};
       var h = [];
       var p = 0;
-      for (void 0 === f && s && (f = s.StyleID), void 0 === f && a && (f = a.StyleID); void 0 !== o[f] && (o[f].nf && (l = o[f].nf), o[f].Interior && h.push(o[f].Interior), o[f].Parent);) {
+      for (undefined === f && s && (f = s.StyleID), undefined === f && a && (f = a.StyleID); undefined !== o[f] && (o[f].nf && (l = o[f].nf), o[f].Interior && h.push(o[f].Interior), o[f].Parent);) {
         f = o[f].Parent;
       }
       switch (n.Type) {
@@ -16963,7 +16963,7 @@
             l = "yyyy-mm-dd";
           }
         case "Number":
-          if (void 0 === r.v) {
+          if (undefined === r.v) {
             r.v = +e;
           }
           if (!r.t) {
@@ -16973,7 +16973,7 @@
         case "Error":
           r.t = "e";
           r.v = Wn[e];
-          if (!1 !== u.cellText) {
+          if (false !== u.cellText) {
             r.w = e;
           }
           break;
@@ -16986,7 +16986,7 @@
           }
       }
       Nc(r, l, u);
-      if (!1 !== u.cellFormula) {
+      if (false !== u.cellFormula) {
         if (r.Formula) {
           var _ = ke(r.Formula);
           if (61 == _.charCodeAt(0)) {
@@ -17018,14 +17018,14 @@
         });
         r.s = d;
       }
-      if (void 0 !== r.StyleID) {
+      if (undefined !== r.StyleID) {
         r.ixfe = r.StyleID;
       }
     }
     function Lc(e) {
       e.t = e.v || "";
       e.t = e.t.replace(/\r\n/g, "\n").replace(/\r/g, "\n");
-      e.v = e.w = e.ixfe = void 0;
+      e.v = e.w = e.ixfe = undefined;
     }
     function Uc(e) {
       if (m && i.isBuffer(e)) {
@@ -17049,11 +17049,11 @@
       }
       var i;
       var o = r.slice(0, 1024).toLowerCase();
-      var a = !1;
+      var a = false;
       if (-1 == o.indexOf("<?xml")) {
         ["html", "table", "head", "meta", "script", "style", "div"].forEach(function (e) {
           if (o.indexOf("<" + e) >= 0) {
-            a = !0;
+            a = true;
           }
         });
       }
@@ -17095,7 +17095,7 @@
       var P = [];
       var N = {};
       var M = [];
-      var j = !1;
+      var j = false;
       var L = [];
       var U = [];
       var H = {};
@@ -17104,7 +17104,7 @@
       var z = {
         Sheets: [],
         WBProps: {
-          date1904: !1
+          date1904: false
         }
       };
       var Q = {};
@@ -17119,7 +17119,7 @@
                   throw new Error("Bad state: " + s.join("|"));
                 }
               } else if ("/" !== i[0].charAt(i[0].length - 2)) {
-                c.push([i[3], !0]);
+                c.push([i[3], true]);
               }
               break;
             }
@@ -17142,7 +17142,7 @@
               if (P.length > 0) {
                 A.c = P;
               }
-              if ((!n.sheetRows || n.sheetRows > b) && void 0 !== A.v) {
+              if ((!n.sheetRows || n.sheetRows > b) && undefined !== A.v) {
                 if (n.dense) {
                   if (!d[b]) {
                     d[b] = [];
@@ -17245,7 +17245,7 @@
                 U[b] = H;
               }
               if ("1" == g.Hidden) {
-                H.hidden = !0;
+                H.hidden = true;
                 U[b] = H;
               }
             }
@@ -17286,7 +17286,7 @@
                 }
               };
               b = y = 0;
-              c.push([i[3], !1]);
+              c.push([i[3], false]);
               s = Fc(i[0]);
               h = ke(s.Name);
               d = n.dense ? [] : {};
@@ -17310,9 +17310,9 @@
                 break;
               }
               Fc(i[0]);
-              c.push([i[3], !1]);
+              c.push([i[3], false]);
               M = [];
-              j = !1;
+              j = false;
             }
             break;
           case "style":
@@ -17343,8 +17343,8 @@
             if ("table" !== c[c.length - 1][0]) {
               break;
             }
-            if ((u = Fc(i[0])).Hidden && (u.hidden = !0, delete u.Hidden), u.Width && (u.wpx = parseInt(u.Width, 10)), !j && u.wpx > 10) {
-              j = !0;
+            if ((u = Fc(i[0])).Hidden && (u.hidden = true, delete u.Hidden), u.Width && (u.wpx = parseInt(u.Width, 10)), !j && u.wpx > 10) {
+              j = true;
               mo = 6;
               for (var q = 0; q < M.length; ++q) {
                 if (M[q]) {
@@ -17451,7 +17451,7 @@
                 throw new Error("Bad state: " + s.join("|"));
               }
             } else {
-              c.push([i[3], !1]);
+              c.push([i[3], false]);
             }
             break;
           case "comment":
@@ -17462,7 +17462,7 @@
               Lc(N);
               P.push(N);
             } else {
-              c.push([i[3], !1]);
+              c.push([i[3], false]);
               N = {
                 a: (s = Fc(i[0])).Author
               };
@@ -17478,7 +17478,7 @@
               d["!autofilter"] = {
                 ref: fa(ee.Range).replace(/\$/g, "")
               };
-              c.push([i[3], !0]);
+              c.push([i[3], true]);
             }
             break;
           case "name":
@@ -17489,7 +17489,7 @@
                 throw new Error("Bad state: " + s.join("|"));
               }
             } else if ("/" !== i[0].charAt(i[0].length - 2)) {
-              c.push([i[3], !0]);
+              c.push([i[3], true]);
             }
             break;
           case "pixelsperinch":
@@ -17517,7 +17517,7 @@
                 throw new Error("Bad state: " + s.join("|"));
               }
             } else if ("/" !== i[0].charAt(i[0].length - 2)) {
-              c.push([i[3], !0]);
+              c.push([i[3], true]);
             }
             break;
           default:
@@ -17527,7 +17527,7 @@
             if (0 == c.length && "uof" == i[3]) {
               return Cu(r, n);
             }
-            var te = !0;
+            var te = true;
             switch (c[c.length - 1][0]) {
               case "officedocumentsettings":
                 switch (i[3]) {
@@ -17543,7 +17543,7 @@
                   case "readonlyrecommended":
                     break;
                   default:
-                    te = !1;
+                    te = false;
                 }
                 break;
               case "componentoptions":
@@ -17558,13 +17558,13 @@
                   case "nextsheetnumber":
                     break;
                   default:
-                    te = !1;
+                    te = false;
                 }
                 break;
               case "excelworkbook":
                 switch (i[3]) {
                   case "date1904":
-                    z.WBProps.date1904 = !0;
+                    z.WBProps.date1904 = true;
                     break;
                   case "windowheight":
                   case "windowwidth":
@@ -17613,7 +17613,7 @@
                   case "embedsavesmarttags":
                     break;
                   default:
-                    te = !1;
+                    te = false;
                 }
                 break;
               case "workbookoptions":
@@ -17623,7 +17623,7 @@
                   case "width":
                     break;
                   default:
-                    te = !1;
+                    te = false;
                 }
                 break;
               case "worksheetoptions":
@@ -17680,7 +17680,7 @@
                     if (!z.Views[0]) {
                       z.Views[0] = {};
                     }
-                    z.Views[0].RTL = !0;
+                    z.Views[0].RTL = true;
                     break;
                   case "freezepanes":
                   case "frozennosplit":
@@ -17751,7 +17751,7 @@
                   case "protectcontents":
                     break;
                   default:
-                    te = !1;
+                    te = false;
                 }
                 break;
               case "pivottable":
@@ -17804,7 +17804,7 @@
                   case "calculation":
                     break;
                   default:
-                    te = !1;
+                    te = false;
                 }
                 break;
               case "pagebreaks":
@@ -17818,7 +17818,7 @@
                   case "rowend":
                     break;
                   default:
-                    te = !1;
+                    te = false;
                 }
                 break;
               case "autofilter":
@@ -17829,7 +17829,7 @@
                   case "autofilteror":
                     break;
                   default:
-                    te = !1;
+                    te = false;
                 }
                 break;
               case "querytable":
@@ -17867,7 +17867,7 @@
                   case "versionlastrefresh":
                     break;
                   default:
-                    te = !1;
+                    te = false;
                 }
                 break;
               case "datavalidation":
@@ -17897,7 +17897,7 @@
                   case "cellrangelist":
                     break;
                   default:
-                    te = !1;
+                    te = false;
                 }
                 break;
               case "sorting":
@@ -17928,7 +17928,7 @@
                   case "format":
                     break;
                   default:
-                    te = !1;
+                    te = false;
                 }
                 break;
               case "mapinfo":
@@ -17956,13 +17956,13 @@
                   case "row":
                     break;
                   default:
-                    te = !1;
+                    te = false;
                 }
                 break;
               case "smarttags":
                 break;
               default:
-                te = !1;
+                te = false;
             }
             if (te) {
               break;
@@ -18040,7 +18040,7 @@
               if ("number" == typeof i) {
                 i = String(i);
               } else {
-                if (!0 === i || !1 === i) {
+                if (true === i || false === i) {
                   i = i ? "1" : "0";
                 } else {
                   if (i instanceof Date) {
@@ -18085,7 +18085,7 @@
                   a = "float";
                   o = String(o);
                 } else {
-                  if (!0 === o || !1 === o) {
+                  if (true === o || false === o) {
                     a = "boolean";
                     o = o ? "1" : "0";
                   } else {
@@ -18107,7 +18107,7 @@
                   o = "float";
                   r = String(r);
                 } else {
-                  if (!0 === r || !1 === r) {
+                  if (true === r || false === r) {
                     o = "boolean";
                     r = r ? "1" : "0";
                   } else {
@@ -18140,7 +18140,7 @@
       });
     }
     function Wc(e, t, n, r, i, o, a) {
-      if (!e || void 0 == e.v && void 0 == e.f) {
+      if (!e || undefined == e.v && undefined == e.f) {
         return "";
       }
       var s = {};
@@ -18287,11 +18287,11 @@
         }
         for (var c = Array.isArray(e), u = i.s.r; u <= i.e.r; ++u) {
           for (var l = [Kc(u, (e["!rows"] || [])[u])], f = i.s.c; f <= i.e.c; ++f) {
-            var d = !1;
+            var d = false;
             for (a = 0; a != o.length; ++a) {
               if (!(o[a].s.c > f) && !(o[a].s.r > u) && !(o[a].e.c < f) && !(o[a].e.r < u)) {
                 if (!(o[a].s.c == f && o[a].s.r == u)) {
-                  d = !0;
+                  d = true;
                 }
                 break;
               }
@@ -18528,7 +18528,7 @@
             throw _l;
           }
         }
-        if (!t || !1 !== t.cellText) {
+        if (!t || false !== t.cellText) {
           try {
             if ("e" === e.t) {
               e.w = e.w || Qn[e.v];
@@ -18594,13 +18594,13 @@
       var y = "";
       var b = {};
       var w = [];
-      var E = !0;
+      var E = true;
       var x = [];
       var C = [];
       var O = {
         Sheets: [],
         WBProps: {
-          date1904: !1
+          date1904: false
         },
         Views: [{}]
       };
@@ -18609,7 +18609,7 @@
         return e < 8 ? zn[e] : e < 64 && C[e - 8] || zn[e];
       };
       var T = function (e, t, n) {
-        if (!(U > 1) && (n.sheetRows && e.r >= n.sheetRows && (E = !1), E)) {
+        if (!(U > 1) && (n.sheetRows && e.r >= n.sheetRows && (E = false), E)) {
           if (n.cellStyles && t.XF && t.XF.data) {
             (function (e, t, n) {
               var r;
@@ -18683,7 +18683,7 @@
         }
       };
       var B = {
-        enc: !1,
+        enc: false,
         sbcch: 0,
         snames: [],
         sharedf: b,
@@ -18703,7 +18703,7 @@
       var F = [];
       var R = [];
       var P = [];
-      var N = !1;
+      var N = false;
       var M = [];
       M.SheetNames = B.snames;
       M.sharedf = B.sharedf;
@@ -18718,7 +18718,7 @@
       var z = [];
       B.codepage = 1200;
       d(1200);
-      for (var Q = !1; e.l < e.length - 1;) {
+      for (var Q = false; e.l < e.length - 1;) {
         var W = e.l;
         var K = e.read_shift(2);
         if (0 === K && "EOF" === L) {
@@ -18753,7 +18753,7 @@
               n.opts.Date1904 = O.WBProps.date1904 = $;
               break;
             case "WriteProtect":
-              n.opts.WriteProtect = !0;
+              n.opts.WriteProtect = true;
               break;
             case "FilePass":
               if (B.enc || (e.l = 0), B.enc = $, !t.password) {
@@ -18784,7 +18784,7 @@
                   Z = 1252;
               }
               d(B.codepage = Z);
-              Q = !0;
+              Q = true;
               break;
             case "RRTabId":
               B.rrtabid = $;
@@ -18946,7 +18946,7 @@
               }[$.BIFFVer] || 8), 8 == B.biff && 0 == $.BIFFVer && 16 == $.dt && (B.biff = 2), U++) {
                 break;
               }
-              if (E = !0, h = t.dense ? [] : {}, B.biff < 8 && !Q && (Q = !0, d(B.codepage = t.codepage || 1252)), B.biff < 5) {
+              if (E = true, h = t.dense ? [] : {}, B.biff < 8 && !Q && (Q = true, d(B.codepage = t.codepage || 1252)), B.biff < 5) {
                 if ("" === v) {
                   v = "Sheet1";
                 }
@@ -18983,7 +18983,7 @@
               R = [];
               P = [];
               0;
-              N = !1;
+              N = false;
               k = {
                 Hidden: (p[W] || {
                   hs: 0
@@ -19330,7 +19330,7 @@
                       width: $.w / 256
                     };
                     if (!N) {
-                      N = !0;
+                      N = true;
                       xo($.w / 256);
                     }
                     Co(R[$.e + 1]);
@@ -19344,7 +19344,7 @@
                   }
                   if ($.hidden) {
                     P[$.r] = pe;
-                    pe.hidden = !0;
+                    pe.hidden = true;
                   }
                   if ($.hpt) {
                     P[$.r] = pe;
@@ -19370,7 +19370,7 @@
                   break;
                 case "Window2":
                   if ($.RTL) {
-                    O.Views[0].RTL = !0;
+                    O.Views[0].RTL = true;
                   }
                   break;
                 case "Header":
@@ -19715,7 +19715,7 @@
         n.Themes = f;
       }
       n.Metadata = {};
-      if (void 0 !== l) {
+      if (undefined !== l) {
         n.Metadata.Country = l;
       }
       if (M.names.length > 0) {
@@ -19930,7 +19930,7 @@
             n.level = 7 & o;
           }
           if (16 & o) {
-            n.hidden = !0;
+            n.hidden = true;
           }
           if (32 & o) {
             n.hpt = i / 20;
@@ -23915,7 +23915,7 @@
             t.level = 7 & r;
           }
           if (32 & r) {
-            t.hidden = !0;
+            t.hidden = true;
           }
           if (64 & r) {
             t.hpt = n / 20;
@@ -24260,7 +24260,7 @@
               } catch (_l) {
                 return;
               }
-              var a = pe(i, "theme/theme/theme1.xml", !0);
+              var a = pe(i, "theme/theme/theme1.xml", true);
               if (a) {
                 return ea(a, n);
               }
@@ -24461,7 +24461,7 @@
         n: "ShtProps",
         f: function (e, t, n) {
           var r = {
-            area: !1
+            area: false
           };
           if (5 != n.biff) {
             e.l += t;
@@ -24470,7 +24470,7 @@
           var i = e.read_shift(1);
           e.l += 3;
           if (16 & i) {
-            r.area = !0;
+            r.area = true;
           }
           return r;
         }
@@ -24998,12 +24998,12 @@
       lu(i, 2057, _i(0, 16, t));
       lu(i, "CalcMode", Gr(1));
       lu(i, "CalcCount", Gr(100));
-      lu(i, "CalcRefMode", Hr(!0));
-      lu(i, "CalcIter", Hr(!1));
+      lu(i, "CalcRefMode", Hr(true));
+      lu(i, "CalcIter", Hr(false));
       lu(i, "CalcDelta", Fn(.001));
-      lu(i, "CalcSaveRecalc", Hr(!0));
-      lu(i, "PrintRowCol", Hr(!1));
-      lu(i, "PrintGrid", Hr(!1));
+      lu(i, "CalcSaveRecalc", Hr(true));
+      lu(i, "PrintRowCol", Hr(false));
+      lu(i, "PrintGrid", Hr(false));
       lu(i, "GridSet", Gr(1));
       lu(i, "Guts", function (e) {
         var t = Ut(8);
@@ -25012,8 +25012,8 @@
         t.write_shift(2, e[1] ? e[1] + 1 : 0);
         return t;
       }([0, 0]));
-      lu(i, "HCenter", Hr(!1));
-      lu(i, "VCenter", Hr(!1));
+      lu(i, "HCenter", Hr(false));
+      lu(i, "VCenter", Hr(false));
       lu(i, 512, function (e, t) {
         var n = 8 != t.biff && t.biff ? 2 : 4;
         var r = Ut(2 * n + 6);
@@ -25165,11 +25165,11 @@
         lu(r, "CodeName", $r(a.CodeName || "ThisWorkbook"));
       }
       lu(r, "BuiltInFnGroupCount", Gr(17));
-      lu(r, "WinProtect", Hr(!1));
-      lu(r, "Protect", Hr(!1));
+      lu(r, "WinProtect", Hr(false));
+      lu(r, "Protect", Hr(false));
       lu(r, "Password", Gr(0));
       if (s) {
-        lu(r, "Prot4Rev", Hr(!1));
+        lu(r, "Prot4Rev", Hr(false));
       }
       if (s) {
         lu(r, "Prot4RevPass", Gr(0));
@@ -25187,14 +25187,14 @@
         e.write_shift(2, 500);
         return e;
       }());
-      lu(r, "Backup", Hr(!1));
+      lu(r, "Backup", Hr(false));
       lu(r, "HideObj", Gr(0));
       lu(r, "Date1904", Hr("true" == function (e) {
         return e.Workbook && e.Workbook.WBProps && Ne(e.Workbook.WBProps.date1904) ? "true" : "false";
       }(e)));
-      lu(r, "CalcPrecision", Hr(!0));
+      lu(r, "CalcPrecision", Hr(true));
       if (s) {
-        lu(r, "RefreshAll", Hr(!1));
+        lu(r, "RefreshAll", Hr(false));
       }
       lu(r, "BookBool", Gr(0));
       pu(r, 0, n);
@@ -25213,7 +25213,7 @@
         for (var n = 0; n < 16; ++n) {
           lu(e, "XF", bi({
             numFmtId: 0,
-            style: !0
+            style: true
           }, 0, t));
         }
         t.cellXfs.forEach(function (n) {
@@ -25221,7 +25221,7 @@
         });
       })(r, n);
       if (s) {
-        lu(r, "UsesELFs", Hr(!1));
+        lu(r, "UsesELFs", Hr(false));
       }
       var u = r.end();
       var l = Vt();
@@ -25443,13 +25443,13 @@
                         if ("TRUE" === m) {
                           C = {
                             t: "b",
-                            v: !0
+                            v: true
                           };
                         } else {
                           if ("FALSE" === m) {
                             C = {
                               t: "b",
-                              v: !1
+                              v: false
                             };
                           } else {
                             if (isNaN(oe(m))) {
@@ -25633,7 +25633,7 @@
             continue;
           }
           h[_] = {
-            hidden: !0
+            hidden: true
           };
         }
         var b = y.children;
@@ -25675,13 +25675,13 @@
                   if ("TRUE" === E) {
                     O = {
                       t: "b",
-                      v: !0
+                      v: true
                     };
                   } else {
                     if ("FALSE" === E) {
                       O = {
                         t: "b",
-                        v: !1
+                        v: false
                       };
                     } else {
                       if (isNaN(oe(E))) {
@@ -25709,7 +25709,7 @@
                 }
               }
             }
-            if (void 0 === O.z && null != x) {
+            if (undefined === O.z && null != x) {
               O.z = x;
             }
             if (r.dense) {
@@ -25829,8 +25829,8 @@
         var j = {};
         var L = "";
         var U = 0;
-        var H = !1;
-        var V = !1;
+        var H = false;
+        var V = false;
         var G = 0;
         for (Hc.lastIndex = 0, f = f.replace(/<!--([\s\S]*?)-->/gm, "").replace(/<!DOCTYPE[^\[]*\[[^\]]*\]>/gm, ""); u = Hc.exec(f);) {
           switch (u[3] = u[3].replace(/_.*$/, "")) {
@@ -25859,17 +25859,17 @@
                 }
                 g.push(s.name);
                 A[s.name] = v;
-                V = !1;
+                V = false;
               } else {
                 if ("/" !== u[0].charAt(u[0].length - 2)) {
-                  s = Ee(u[0], !1);
+                  s = Ee(u[0], false);
                   E = x = -1;
                   C.s.r = C.s.c = 1e7;
                   C.e.r = C.e.c = 0;
                   v = i.dense ? [] : {};
                   S = [];
                   B = [];
-                  V = !0;
+                  V = true;
                 }
               }
               break;
@@ -25887,7 +25887,7 @@
                 D = 1;
                 break;
               }
-              if ((c = Ee(u[0], !1))["行号"] ? E = c["行号"] - 1 : -1 == E && (E = 0), (D = +c["number-rows-repeated"] || 1) < 10) {
+              if ((c = Ee(u[0], false))["行号"] ? E = c["行号"] - 1 : -1 == E && (E = 0), (D = +c["number-rows-repeated"] || 1) < 10) {
                 for (G = 0; G < D; ++G) {
                   if (O > 0) {
                     B[E + G] = {
@@ -25926,7 +25926,7 @@
             case "数据":
               if ("/" === u[0].charAt(u[0].length - 2)) {
                 ++x;
-                m = Ee(u[0], !1);
+                m = Ee(u[0], false);
                 I = parseInt(m["number-columns-repeated"] || "1", 10);
                 l = {
                   t: "z",
@@ -25969,7 +25969,7 @@
                 M = [];
                 j = {};
                 l = {
-                  t: (m = Ee(u[0], !1))["数据类型"] || m["value-type"],
+                  t: (m = Ee(u[0], false))["数据类型"] || m["value-type"],
                   v: null
                 };
                 if (i.cellFormula) {
@@ -26048,7 +26048,7 @@
                     }
                 }
               } else {
-                H = !1;
+                H = false;
                 if ("s" === l.t) {
                   l.v = y || "";
                   if (w.length) {
@@ -26063,7 +26063,7 @@
                   l.c = M;
                   M = [];
                 }
-                if (y && !1 !== i.cellText) {
+                if (y && false !== i.cellText) {
                   l.w = y;
                 }
                 if (H) {
@@ -26115,7 +26115,7 @@
                   throw "Bad state: " + o;
                 }
               } else if ("/" !== u[0].charAt(u[0].length - 2)) {
-                d.push([u[3], !0]);
+                d.push([u[3], true]);
               }
               break;
             case "annotation":
@@ -26130,7 +26130,7 @@
                 j.a = L;
                 M.push(j);
               } else if ("/" !== u[0].charAt(u[0].length - 2)) {
-                d.push([u[3], !1]);
+                d.push([u[3], false]);
               }
               L = "";
               U = 0;
@@ -26167,7 +26167,7 @@
                   throw "Bad state: " + o;
                 }
               } else if ("/" !== u[0].charAt(u[0].length - 2)) {
-                d.push([u[3], !1]);
+                d.push([u[3], false]);
               }
               y = "";
               b = 0;
@@ -26188,8 +26188,8 @@
                 }
               } else if ("/" !== u[0].charAt(u[0].length - 2)) {
                 p = "";
-                h = Ee(u[0], !1);
-                d.push([u[3], !0]);
+                h = Ee(u[0], false);
+                d.push([u[3], true]);
               }
               break;
             case "script":
@@ -26211,7 +26211,7 @@
               switch (d[d.length - 1][0]) {
                 case "time-style":
                 case "date-style":
-                  a = Ee(u[0], !1);
+                  a = Ee(u[0], false);
                   p += t[u[3]]["long" === a.style ? 1 : 0];
               }
               break;
@@ -26231,7 +26231,7 @@
               switch (d[d.length - 1][0]) {
                 case "time-style":
                 case "date-style":
-                  a = Ee(u[0], !1);
+                  a = Ee(u[0], false);
                   p += t[u[3]]["long" === a.style ? 1 : 0];
               }
               break;
@@ -26255,7 +26255,7 @@
               }
               break;
             case "named-range":
-              N = ds((a = Ee(u[0], !1))["cell-range-address"]);
+              N = ds((a = Ee(u[0], false))["cell-range-address"]);
               var K = {
                 Name: a.name,
                 Ref: N[0] + "!" + N[1]
@@ -26298,7 +26298,7 @@
                 break;
               }
               if ("/" !== u[1] || m && m["string-value"]) {
-                Ee(u[0], !1);
+                Ee(u[0], false);
                 b = u.index + u[0].length;
               } else {
                 var X = e(f.slice(b, u.index));
@@ -26407,7 +26407,7 @@
               break;
             case "a":
               if ("/" !== u[1]) {
-                if (!(P = Ee(u[0], !1)).href) {
+                if (!(P = Ee(u[0], false)).href) {
                   break;
                 }
                 P.Target = P.href;
@@ -26465,7 +26465,7 @@
               case "manifest":
                 break;
               case "file-entry":
-                if ("/" == (r = Ee(n[0], !1)).path && "application/vnd.oasis.opendocument.spreadsheet" !== r.type) {
+                if ("/" == (r = Ee(n[0], false)).path && "application/vnd.oasis.opendocument.spreadsheet" !== r.type) {
                   throw new Error("This OpenDocument is not a spreadsheet");
                 }
                 break;
@@ -26533,13 +26533,13 @@
             i.push(e);
           }
           for (; a <= s.e.c; ++a) {
-            var f = !1;
+            var f = false;
             var d = {};
             var h = "";
             for (u = 0; u != c.length; ++u) {
               if (!(c[u].s.c > a) && !(c[u].s.r > o) && !(c[u].e.c < a) && !(c[u].e.r < o)) {
                 if (!(c[u].s.c == a && c[u].s.r == o)) {
-                  f = !0;
+                  f = true;
                 }
                 d["table:number-columns-spanned"] = c[u].e.c - c[u].s.c + 1;
                 d["table:number-rows-spanned"] = c[u].e.r - c[u].s.r + 1;
@@ -26762,7 +26762,7 @@
       return function (t) {
         for (var n = 0; n != e.length; ++n) {
           var r = e[n];
-          if (void 0 === t[r[0]]) {
+          if (undefined === t[r[0]]) {
             t[r[0]] = r[1];
           }
           if ("n" === r[2]) {
@@ -26772,15 +26772,15 @@
       };
     }
     var Uu = function (e) {
-      Lu([["cellNF", !1], ["cellHTML", !0], ["cellFormula", !0], ["cellStyles", !1], ["cellText", !0], ["cellDates", !1], ["sheetStubs", !1], ["sheetRows", 0, "n"], ["bookDeps", !1], ["bookSheets", !1], ["bookProps", !1], ["bookFiles", !1], ["bookVBA", !1], ["password", ""], ["WTF", !1]])(e);
+      Lu([["cellNF", false], ["cellHTML", true], ["cellFormula", true], ["cellStyles", false], ["cellText", true], ["cellDates", false], ["sheetStubs", false], ["sheetRows", 0, "n"], ["bookDeps", false], ["bookSheets", false], ["bookProps", false], ["bookFiles", false], ["bookVBA", false], ["password", ""], ["WTF", false]])(e);
     };
-    var Hu = Lu([["cellDates", !1], ["bookSST", !1], ["bookType", "xlsx"], ["compression", !1], ["WTF", !1]]);
+    var Hu = Lu([["cellDates", false], ["bookSST", false], ["bookType", "xlsx"], ["compression", false], ["WTF", false]]);
     function Vu(e) {
       return Jn.WS.indexOf(e) > -1 ? "sheet" : Jn.CS && e == Jn.CS ? "chart" : Jn.DS && e == Jn.DS ? "dialog" : Jn.MS && e == Jn.MS ? "macro" : e && e.length ? e : "sheet";
     }
     function Gu(e, t, n, r, i, o, a, s, c, u, l, f) {
       try {
-        o[r] = er(pe(e, n, !0), t);
+        o[r] = er(pe(e, n, true), t);
         var d;
         var h = he(e, t);
         switch (s) {
@@ -26799,9 +26799,9 @@
                 }
                 var n = (e.match(/<c:chart [^>]*r:id="([^"]*)"/) || ["", ""])[1];
                 return t["!id"][n].Target;
-              }(pe(e, p, !0), er(pe(e, _, !0), p)), p),
+              }(pe(e, p, true), er(pe(e, _, true), p)), p),
               g = Zn(A);
-            d = tc(pe(e, A, !0), 0, 0, er(pe(e, g, !0), A), 0, d);
+            d = tc(pe(e, A, true), 0, 0, er(pe(e, g, true), A), 0, d);
             break;
           case "macro":
             m = t;
@@ -26828,7 +26828,7 @@
           H(o[r]).forEach(function (n) {
             if (o[r][n].Type == Jn.CMNT) {
               var i = ge(o[r][n].Target, t);
-              if (!(v = xc(he(e, i, !0), i, c)) || !v.length) {
+              if (!(v = xc(he(e, i, true), i, c)) || !v.length) {
                 return;
               }
               !function (e, t) {
@@ -26958,7 +26958,7 @@
               n[r.Extension] = r.ContentType;
               break;
             case "<Override":
-              if (void 0 !== t[Kn[r.ContentType]]) {
+              if (undefined !== t[Kn[r.ContentType]]) {
                 t[Kn[r.ContentType]].push(r.PartName);
               }
           }
@@ -26973,19 +26973,19 @@
         delete t.calcchains;
         return t;
       }(pe(e, "[Content_Types].xml"));
-      var a = !1;
-      if (0 === o.workbooks.length && he(e, r = "xl/workbook.xml", !0)) {
+      var a = false;
+      if (0 === o.workbooks.length && he(e, r = "xl/workbook.xml", true)) {
         o.workbooks.push(r);
       }
       if (0 === o.workbooks.length) {
-        if (!he(e, r = "xl/workbook.bin", !0)) {
+        if (!he(e, r = "xl/workbook.bin", true)) {
           throw new Error("Could not find workbook");
         }
         o.workbooks.push(r);
-        a = !0;
+        a = true;
       }
       if ("bin" == o.workbooks[0].slice(-3)) {
-        a = !0;
+        a = true;
       }
       var s = {};
       var c = {};
@@ -27003,7 +27003,7 @@
         if (t.cellStyles && o.themes.length) {
           s = function (e, t, n) {
             return ea(e, n);
-          }(pe(e, o.themes[0].replace(/^\//, ""), !0) || "", o.themes[0], t);
+          }(pe(e, o.themes[0].replace(/^\//, ""), true) || "", o.themes[0], t);
         }
         if (o.style) {
           c = wc(he(e, zu(o.style)), o.style, s, t);
@@ -27019,10 +27019,10 @@
       var l = {};
       var f = "";
       if (o.coreprops.length) {
-        if (f = he(e, zu(o.coreprops[0]), !0)) {
+        if (f = he(e, zu(o.coreprops[0]), true)) {
           l = ur(f);
         }
-        if (0 !== o.extprops.length && (f = he(e, zu(o.extprops[0]), !0))) {
+        if (0 !== o.extprops.length && (f = he(e, zu(o.extprops[0]), true))) {
           (function (e, t, n) {
             var r = {};
             if (!t) {
@@ -27055,7 +27055,7 @@
       }
       var d = {};
       if (!(t.bookSheets && !t.bookProps)) {
-        if (0 !== o.custprops.length && (f = pe(e, zu(o.custprops[0]), !0))) {
+        if (0 !== o.custprops.length && (f = pe(e, zu(o.custprops[0]), true))) {
           d = function (e, t) {
             var n = {};
             var r = "";
@@ -27156,7 +27156,7 @@
       if (!fe(e, E)) {
         E = "xl/_rels/workbook." + b + ".rels";
       }
-      var x = er(pe(e, E, !0), E);
+      var x = er(pe(e, E, true), E);
       if (x) {
         x = function (e, t) {
           if (!e) {
@@ -27175,7 +27175,7 @@
           return e && 0 !== e.length ? e : null;
         }(x, u.Sheets);
       }
-      var C = he(e, "xl/worksheets/sheet.xml", !0) ? 1 : 0;
+      var C = he(e, "xl/worksheets/sheet.xml", true) ? 1 : 0;
       e: for (g = 0; g != l.Worksheets; ++g) {
         var O = "sheet";
         if (x && x[g]) {
@@ -27205,7 +27205,7 @@
               break;
             default:
               if (Array.isArray && Array.isArray(t.sheets)) {
-                for (var k = !1, S = 0; S != t.sheets.length; ++S) {
+                for (var k = false, S = 0; S != t.sheets.length; ++S) {
                   if ("number" == typeof t.sheets[S] && t.sheets[S] == g) {
                     k = 1;
                   }
@@ -27240,10 +27240,10 @@
       }
       if (t && t.bookVBA) {
         if (o.vba.length > 0) {
-          h.vbaraw = he(e, zu(o.vba[0]), !0);
+          h.vbaraw = he(e, zu(o.vba[0]), true);
         } else {
           if (o.defaults && "application/vnd.ms-office.vbaProject" === o.defaults.bin) {
-            h.vbaraw = he(e, "xl/vbaProject.bin", !0);
+            h.vbaraw = he(e, "xl/vbaProject.bin", true);
           }
         }
       }
@@ -27414,10 +27414,10 @@
         for (var o = 0; o != sr.length; ++o) {
           var a = sr[o];
           var s = n.Props && null != n.Props[a[1]] ? n.Props[a[1]] : e ? e[a[1]] : null;
-          if (!0 === s) {
+          if (true === s) {
             s = "1";
           } else {
-            if (!1 === s) {
+            if (false === s) {
               s = "0";
             } else {
               if ("number" == typeof s) {
@@ -27460,7 +27460,7 @@
         t[t.length] = ve;
         t[t.length] = pr;
         dr.forEach(function (r) {
-          if (void 0 !== e[r[1]]) {
+          if (undefined !== e[r[1]]) {
             var i;
             switch (r[2]) {
               case "string":
@@ -27469,7 +27469,7 @@
               case "bool":
                 i = e[r[1]] ? "true" : "false";
             }
-            if (void 0 !== i) {
+            if (undefined !== i) {
               t[t.length] = n(r[0], i);
             }
           }
@@ -27503,13 +27503,13 @@
         }
         if (f) {
           var d = f["!comments"];
-          var h = !1;
+          var h = false;
           if (d && d.length > 0) {
             var p = "xl/comments" + s + "." + n;
             _e(o, p, Bc(d, p, t));
             i.comments.push(p);
             ir(l, -1, "../comments" + s + "." + n, Jn.CMNT);
-            h = !0;
+            h = true;
           }
           if (f["!legacy"] && h) {
             _e(o, "xl/drawings/vmlDrawing" + s + ".vml", oa(s, f["!comments"]));
@@ -27624,13 +27624,13 @@
           switch (t.type) {
             case "base64":
               n = new se(e, {
-                base64: !0
+                base64: true
               });
               break;
             case "binary":
             case "array":
               n = new se(e, {
-                base64: !1
+                base64: false
               });
               break;
             case "buffer":
@@ -27691,11 +27691,11 @@
       }
       var n;
       var r = e;
-      var o = !1;
+      var o = false;
       var a = t || {};
       if (a.cellStyles) {
-        a.cellNF = !0;
-        a.sheetStubs = !0;
+        a.cellNF = true;
+        a.sheetStubs = true;
       }
       ps = {};
       if (a.dateNF) {
@@ -27728,7 +27728,7 @@
         }(e);
       }
       if ("string" == a.type) {
-        o = !0;
+        o = true;
         a.type = "binary";
         a.codepage = 65001;
         r = function (e) {
@@ -27767,7 +27767,7 @@
             return function (e, t) {
               var n = t || {};
               var r = !!n.WTF;
-              n.WTF = !0;
+              n.WTF = true;
               try {
                 var i = ji.to_workbook(e, n);
                 n.WTF = r;
@@ -27919,8 +27919,8 @@
       fc(e);
       var n = t || {};
       if (n.cellStyles) {
-        n.cellNF = !0;
-        n.sheetStubs = !0;
+        n.cellNF = true;
+        n.sheetStubs = true;
       }
       if ("array" == n.type) {
         n.type = "binary";
@@ -28067,14 +28067,14 @@
       var c = Yt(n);
       var u = s.defval;
       var l = s.raw || !Object.prototype.hasOwnProperty.call(s, "raw");
-      var f = !0;
+      var f = true;
       var d = 1 === i ? [] : {};
       if (1 !== i) {
         if (Object.defineProperty) {
           try {
             Object.defineProperty(d, "__rowNum__", {
               value: n,
-              enumerable: !1
+              enumerable: false
             });
           } catch (_l) {
             d.__rowNum__ = n;
@@ -28086,7 +28086,7 @@
       if (!a || e[n]) {
         for (var h = t.s.c; h <= t.e.c; ++h) {
           var p = a ? e[n][h] : e[r[h] + c];
-          if (void 0 !== p && void 0 !== p.t) {
+          if (undefined !== p && undefined !== p.t) {
             var _ = p.v;
             switch (p.t) {
               case "z":
@@ -28095,7 +28095,7 @@
                 }
                 continue;
               case "e":
-                _ = void 0;
+                _ = undefined;
                 break;
               case "s":
               case "d":
@@ -28107,7 +28107,7 @@
             }
             if (null != o[h]) {
               if (null == _) {
-                if (void 0 !== u) {
+                if (undefined !== u) {
                   d[o[h]] = u;
                 } else {
                   if (!l || null !== _) {
@@ -28119,11 +28119,11 @@
                 d[o[h]] = l || s.rawNumbers && "n" == p.t ? _ : on(p, _, s);
               }
               if (null != _) {
-                f = !1;
+                f = false;
               }
             }
           } else {
-            if (void 0 === u) {
+            if (undefined === u) {
               continue;
             }
             if (null != o[h]) {
@@ -28209,7 +28209,7 @@
       }
       for (g = c.s.r + i; g <= c.e.r; ++g) {
         var y = al(e, c, g, d, r, o, A, u);
-        if (!1 === y.isempty || (1 === r ? !1 !== u.blankrows : u.blankrows)) {
+        if (false === y.isempty || (1 === r ? false !== u.blankrows : u.blankrows)) {
           h[p++] = y.row;
         }
       }
@@ -28218,13 +28218,13 @@
     }
     var cl = /"/g;
     function ul(e, t, n, r, i, o, a, s) {
-      for (var c = !0, u = [], l = "", f = Yt(n), d = t.s.c; d <= t.e.c; ++d) {
+      for (var c = true, u = [], l = "", f = Yt(n), d = t.s.c; d <= t.e.c; ++d) {
         if (r[d]) {
           var h = s.dense ? (e[n] || [])[d] : e[r[d] + f];
           if (null == h) {
             l = "";
           } else if (null != h.v) {
-            c = !1;
+            c = false;
             l = "" + (s.rawNumbers && "n" == h.t ? h.v : on(h, null, s));
             for (var p = 0, _ = 0; p !== l.length; ++p) {
               if ((_ = l.charCodeAt(p)) === i || _ === o || 34 === _ || s.forceQuotes) {
@@ -28238,7 +28238,7 @@
           } else if (null == h.f || h.F) {
             l = "";
           } else {
-            c = !1;
+            c = false;
             if ((l = "=" + h.f).indexOf(",") >= 0) {
               l = "\"" + l.replace(cl, "\"\"") + "\"";
             }
@@ -28246,7 +28246,7 @@
           u.push(l);
         }
       }
-      return !1 === s.blankrows && c ? null : u.join(a);
+      return false === s.blankrows && c ? null : u.join(a);
     }
     function ll(e, t) {
       var n = [];
@@ -28255,9 +28255,9 @@
         return "";
       }
       var i = nn(e["!ref"]);
-      var o = void 0 !== r.FS ? r.FS : ",";
+      var o = undefined !== r.FS ? r.FS : ",";
       var a = o.charCodeAt(0);
-      var s = void 0 !== r.RS ? r.RS : "\n";
+      var s = undefined !== r.RS ? r.RS : "\n";
       var c = s.charCodeAt(0);
       var u = new RegExp(("|" == o ? "\\|" : o) + "+$");
       var l = "";
@@ -28314,7 +28314,7 @@
         for (a = Yt(l), i = o.s.c; i <= o.e.c; ++i) {
           n = s[i] + a;
           r = "";
-          if (void 0 !== (t = u ? (e[l] || [])[i] : e[n])) {
+          if (undefined !== (t = u ? (e[l] || [])[i] : e[n])) {
             if (null != t.F) {
               n = t.F;
               if (!t.f) {
@@ -28335,10 +28335,10 @@
                 r = "" + t.v;
               } else if ("b" == t.t) {
                 r = t.v ? "TRUE" : "FALSE";
-              } else if (void 0 !== t.w) {
+              } else if (undefined !== t.w) {
                 r = "'" + t.w;
               } else {
-                if (void 0 === t.v) {
+                if (undefined === t.v) {
                   continue;
                 }
                 r = "s" == t.t ? "'" + t.v : "" + t.v;
@@ -28528,7 +28528,7 @@
       };
       e.book_append_sheet = function (e, t, n) {
         if (!n) {
-          for (var r = 1; r <= 65535 && -1 != e.SheetNames.indexOf(n = "Sheet" + r); ++r, n = void 0) {
+          for (var r = 1; r <= 65535 && -1 != e.SheetNames.indexOf(n = "Sheet" + r); ++r, n = undefined) {
             ;
           }
         }
@@ -28624,7 +28624,7 @@
         t.stream = {
           to_json: function (t, n) {
             var r = e({
-              objectMode: !0
+              objectMode: true
             });
             if (null == t || null == t["!ref"]) {
               r.push(null);
@@ -28702,7 +28702,7 @@
               for (; g <= l.e.r;) {
                 var e = al(t, l, g, p, o, s, A, f);
                 ++g;
-                if (!1 === e.isempty || (1 === o ? !1 !== f.blankrows : f.blankrows)) {
+                if (false === e.isempty || (1 === o ? false !== f.blankrows : f.blankrows)) {
                   r.push(e.row);
                   break;
                 }
@@ -28720,11 +28720,11 @@
             i.dense = Array.isArray(t);
             r.push(mu._preamble(t, s, i));
             var c = s.s.r;
-            var u = !1;
+            var u = false;
             r._read = function () {
               if (c > s.e.r) {
                 if (!u) {
-                  u = !0;
+                  u = true;
                   r.push("</table>" + a);
                 }
                 return r.push(null);
@@ -28745,9 +28745,9 @@
               return r;
             }
             var o = nn(t["!ref"]);
-            var a = void 0 !== i.FS ? i.FS : ",";
+            var a = undefined !== i.FS ? i.FS : ",";
             var s = a.charCodeAt(0);
-            var c = void 0 !== i.RS ? i.RS : "\n";
+            var c = undefined !== i.RS ? i.RS : "\n";
             var u = c.charCodeAt(0);
             var l = new RegExp(("|" == a ? "\\|" : a) + "+$");
             var f = "";
@@ -28759,10 +28759,10 @@
               }
             }
             var A = o.s.r;
-            var g = !1;
+            var g = false;
             r._read = function () {
               if (!g) {
-                g = !0;
+                g = true;
                 return r.push("﻿");
               }
               for (; A <= o.e.r;) {
@@ -28775,7 +28775,7 @@
                   break;
                 }
               }
-              return A > o.e.r ? r.push(null) : void 0;
+              return A > o.e.r ? r.push(null) : undefined;
             };
             return r;
           }

@@ -1,30 +1,30 @@
 "use strict";
 
 export { f as a };
-var r = require("../../19");
-var i = require("../../95");
-var o = require("../../96");
-var a = require("../../120");
-var s = require("../../140");
-var c = require("react");
+import r = require("../../19");
+import i = require("../../95");
+import o = require("../../96");
+import a = require("../../120");
+import s = require("../../140");
+import c = require("react");
 var u = require("../605").a;
-var l = require("./910");
+import l = require("./910");
 var f = function (e) {
-  Object(a.a)(n, e);
-  var t = Object(s.a)(n);
+  a.a(n, e);
+  var t = s.a(n);
   function n() {
-    Object(i.a)(this, n);
+    i.a(this, n);
     return t.apply(this, arguments);
   }
-  Object(o.a)(n, [{
+  o.a(n, [{
     key: "getLocale",
     value: function () {
       var e = this.props;
       var t = e.componentName;
-      var n = e.defaultLocale || u[null !== t && void 0 !== t ? t : "global"];
+      var n = e.defaultLocale || u[null !== t && undefined !== t ? t : "global"];
       var i = this.context;
       var o = t && i ? i[t] : {};
-      return Object(r.a)(Object(r.a)({}, n instanceof Function ? n() : n), o || {});
+      return r.a(r.a({}, n instanceof Function ? n() : n), o || {});
     }
   }, {
     key: "getLocaleCode",

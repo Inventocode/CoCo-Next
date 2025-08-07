@@ -17,15 +17,15 @@
       }(e) || function (e, t) {
         if ("undefined" != typeof Symbol && Symbol.iterator in Object(e)) {
           var n = [];
-          var r = !0;
-          var i = !1;
-          var o = void 0;
+          var r = true;
+          var i = false;
+          var o = undefined;
           try {
-            for (var a, s = e[Symbol.iterator](); !(r = (a = s.next()).done) && (n.push(a.value), !t || n.length !== t); r = !0) {
+            for (var a, s = e[Symbol.iterator](); !(r = (a = s.next()).done) && (n.push(a.value), !t || n.length !== t); r = true) {
               ;
             }
           } catch (e) {
-            i = !0;
+            i = true;
             o = e;
           } finally {
             try {
@@ -66,7 +66,7 @@
         if ("Object" === n && e.constructor) {
           n = e.constructor.name;
         }
-        return "Map" === n || "Set" === n ? Array.from(e) : "Arguments" === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n) ? o(e, t) : void 0;
+        return "Map" === n || "Set" === n ? Array.from(e) : "Arguments" === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n) ? o(e, t) : undefined;
       }
     }
     function o(e, t) {
@@ -91,9 +91,9 @@
             s: o,
             n: function () {
               return r >= e.length ? {
-                done: !0
+                done: true
               } : {
-                done: !1,
+                done: false,
                 value: e[r++]
               };
             },
@@ -106,8 +106,8 @@
         throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
       }
       var a;
-      var s = !0;
-      var c = !1;
+      var s = true;
+      var c = false;
       return {
         s: function () {
           n = e[Symbol.iterator]();
@@ -118,7 +118,7 @@
           return e;
         },
         e: function (e) {
-          c = !0;
+          c = true;
           a = e;
         },
         f: function () {
@@ -191,10 +191,10 @@
         function p(e, t) {
           for (var n = e.length - 1; n >= 0; --n) {
             if (e[n].node === t) {
-              return !0;
+              return true;
             }
           }
-          return !1;
+          return false;
         }
         function _(e, t) {
           return new f().traverse(e, t);
@@ -386,7 +386,7 @@
           this.parent[this.key] = e;
         };
         u.prototype.remove = function () {
-          return Array.isArray(this.parent) ? (this.parent.splice(this.key, 1), !0) : (this.replace(null), !1);
+          return Array.isArray(this.parent) ? (this.parent.splice(this.key, 1), true) : (this.replace(null), false);
         };
         f.prototype.path = function () {
           var e;
@@ -430,7 +430,7 @@
         f.prototype.__execute = function (e, t) {
           var n;
           var r;
-          r = void 0;
+          r = undefined;
           n = this.__current;
           this.__current = t;
           this.__state = null;
@@ -568,7 +568,7 @@
             root: e
           }, "root")), n.push(p), r.push(p); n.length;) {
             if ((p = n.pop()) !== m) {
-              if (void 0 !== (f = this.__execute(t.enter, p)) && f !== o && f !== a && f !== s) {
+              if (undefined !== (f = this.__execute(t.enter, p)) && f !== o && f !== a && f !== s) {
                 p.ref.replace(f);
                 p.node = f;
               }
@@ -609,7 +609,7 @@
                   }
                 }
               }
-            } else if (p = r.pop(), void 0 !== (f = this.__execute(t.leave, p)) && f !== o && f !== a && f !== s && p.ref.replace(f), this.__state !== s && f !== s || w(p), this.__state === o || f === o) {
+            } else if (p = r.pop(), undefined !== (f = this.__execute(t.leave, p)) && f !== o && f !== a && f !== s && p.ref.replace(f), this.__state !== s && f !== s || w(p), this.__state === o || f === o) {
               return y.root;
             }
           }
@@ -656,7 +656,7 @@
                   s += 1;
                 }
               }
-              return s === u.length ? r.Break : u[s].extendedRange[0] > e.range[1] ? r.Skip : void 0;
+              return s === u.length ? r.Break : u[s].extendedRange[0] > e.range[1] ? r.Skip : undefined;
             }
           });
           s = 0;
@@ -673,7 +673,7 @@
                   s += 1;
                 }
               }
-              return s === u.length ? r.Break : u[s].extendedRange[0] > e.range[1] ? r.Skip : void 0;
+              return s === u.length ? r.Break : u[s].extendedRange[0] > e.range[1] ? r.Skip : undefined;
             }
           });
           return e;
@@ -780,7 +780,7 @@
           return {
             SyntaxError: e,
             parse: function (t, n) {
-              n = void 0 !== n ? n : {};
+              n = undefined !== n ? n : {};
               var r;
               var i;
               var o;
@@ -790,27 +790,27 @@
                 start: ye
               };
               var u = ye;
-              var l = _e(" ", !1);
+              var l = _e(" ", false);
               var f = /^[^ [\],():#!=><~+.]/;
-              var d = Ae([" ", "[", "]", ",", "(", ")", ":", "#", "!", "=", ">", "<", "~", "+", "."], !0, !1);
-              var h = _e(">", !1);
-              var p = _e("~", !1);
-              var _ = _e("+", !1);
-              var A = _e(",", !1);
-              var g = _e("!", !1);
-              var v = _e("*", !1);
-              var m = _e("#", !1);
-              var y = _e("[", !1);
-              var b = _e("]", !1);
+              var d = Ae([" ", "[", "]", ",", "(", ")", ":", "#", "!", "=", ">", "<", "~", "+", "."], true, false);
+              var h = _e(">", false);
+              var p = _e("~", false);
+              var _ = _e("+", false);
+              var A = _e(",", false);
+              var g = _e("!", false);
+              var v = _e("*", false);
+              var m = _e("#", false);
+              var y = _e("[", false);
+              var b = _e("]", false);
               var w = /^[><!]/;
-              var E = Ae([">", "<", "!"], !1, !1);
-              var x = _e("=", !1);
+              var E = Ae([">", "<", "!"], false, false);
+              var x = _e("=", false);
               var C = function (e) {
                 return (e || "") + "=";
               };
               var O = /^[><]/;
-              var k = Ae([">", "<"], !1, !1);
-              var S = _e(".", !1);
+              var k = Ae([">", "<"], false, false);
+              var S = _e(".", false);
               var T = function (e, t, n) {
                 return {
                   type: "attribute",
@@ -819,10 +819,10 @@
                   value: n
                 };
               };
-              var B = _e("\"", !1);
+              var B = _e("\"", false);
               var D = /^[^\\"]/;
-              var I = Ae(["\\", "\""], !0, !1);
-              var F = _e("\\", !1);
+              var I = Ae(["\\", "\""], true, false);
+              var F = _e("\\", false);
               var R = {
                 type: "any"
               };
@@ -853,33 +853,33 @@
                 };
                 var t;
               };
-              var M = _e("'", !1);
+              var M = _e("'", false);
               var j = /^[^\\']/;
-              var L = Ae(["\\", "'"], !0, !1);
+              var L = Ae(["\\", "'"], true, false);
               var U = /^[0-9]/;
-              var H = Ae([["0", "9"]], !1, !1);
-              var V = _e("type(", !1);
+              var H = Ae([["0", "9"]], false, false);
+              var V = _e("type(", false);
               var G = /^[^ )]/;
-              var z = Ae([" ", ")"], !0, !1);
-              var Q = _e(")", !1);
+              var z = Ae([" ", ")"], true, false);
+              var Q = _e(")", false);
               var W = /^[imsu]/;
-              var K = Ae(["i", "m", "s", "u"], !1, !1);
-              var X = _e("/", !1);
+              var K = Ae(["i", "m", "s", "u"], false, false);
+              var X = _e("/", false);
               var Y = /^[^\/]/;
-              var q = Ae(["/"], !0, !1);
-              var $ = _e(":not(", !1);
-              var J = _e(":matches(", !1);
-              var Z = _e(":has(", !1);
-              var ee = _e(":first-child", !1);
-              var te = _e(":last-child", !1);
-              var ne = _e(":nth-child(", !1);
-              var re = _e(":nth-last-child(", !1);
-              var ie = _e(":", !1);
-              var oe = _e("statement", !0);
-              var ae = _e("expression", !0);
-              var se = _e("declaration", !0);
-              var ce = _e("function", !0);
-              var ue = _e("pattern", !0);
+              var q = Ae(["/"], true, false);
+              var $ = _e(":not(", false);
+              var J = _e(":matches(", false);
+              var Z = _e(":has(", false);
+              var ee = _e(":first-child", false);
+              var te = _e(":last-child", false);
+              var ne = _e(":nth-child(", false);
+              var re = _e(":nth-last-child(", false);
+              var ie = _e(":", false);
+              var oe = _e("statement", true);
+              var ae = _e("expression", true);
+              var se = _e("declaration", true);
+              var ce = _e("function", true);
+              var ue = _e("pattern", true);
               var le = 0;
               var fe = [{
                 line: 1,
@@ -968,7 +968,7 @@
                 return o ? (le = o.nextPos, o.result) : (e = le, (t = be()) !== s && (n = xe()) !== s && be() !== s ? e = t = 1 === (r = n).length ? r[0] : {
                   type: "matches",
                   selectors: r
-                } : (le = e, e = s), e === s && (e = le, (t = be()) !== s && (t = void 0), e = t), pe[i] = {
+                } : (le = e, e = s), e === s && (e = le, (t = be()) !== s && (t = undefined), e = t), pe[i] = {
                   nextPos: le,
                   result: e
                 }, e);
@@ -1199,7 +1199,7 @@
                       selectors: a
                     };
                     if (o) {
-                      c.subject = !0;
+                      c.subject = true;
                     }
                     e = n = c;
                   } else {
@@ -2113,9 +2113,15 @@
               if ((r = u()) !== s && le === t.length) {
                 return r;
               }
-              throw r !== s && le < t.length && me({
-                type: "end"
-              }), i = he, o = de < t.length ? t.charAt(de) : null, a = de < t.length ? ve(de, de + 1) : ve(de, de), new e(e.buildMessage(i, o), i, o, a);
+              if (r !== s && le < t.length) {
+                me({
+                  type: "end"
+                });
+              }
+              i = he;
+              o = de < t.length ? t.charAt(de) : null;
+              a = de < t.length ? ve(de, de + 1) : ve(de, de);
+              throw new e(e.buildMessage(i, o), i, o, a);
             }
           };
         }();
@@ -2123,14 +2129,14 @@
     });
     function l(t, n, r, i) {
       if (!n) {
-        return !0;
+        return true;
       }
       if (!t) {
-        return !1;
+        return false;
       }
       switch (r || (r = []), n.type) {
         case "wildcard":
-          return !0;
+          return true;
         case "identifier":
           return n.value.toLowerCase() === t.type.toLowerCase();
         case "field":
@@ -2141,7 +2147,7 @@
               return t === n;
             }
             if (null == n) {
-              return !1;
+              return false;
             }
             var i = n[r[0]];
             var o = r.slice(1);
@@ -2151,7 +2157,7 @@
               try {
                 for (c.s(); !(s = c.n()).done;) {
                   if (e(t, s.value, o)) {
-                    return !0;
+                    return true;
                   }
                 }
               } catch (e) {
@@ -2159,7 +2165,7 @@
               } finally {
                 c.f();
               }
-              return !1;
+              return false;
             }
             return e(t, i, o);
           }(t, s, o);
@@ -2170,7 +2176,7 @@
             for (f.s(); !(u = f.n()).done;) {
               var d = u.value;
               if (l(t, d, r, i)) {
-                return !0;
+                return true;
               }
             }
           } catch (e) {
@@ -2178,7 +2184,7 @@
           } finally {
             f.f();
           }
-          return !1;
+          return false;
         case "compound":
           var A,
             g = a(n.selectors);
@@ -2186,7 +2192,7 @@
             for (g.s(); !(A = g.n()).done;) {
               var v = A.value;
               if (!l(t, v, r, i)) {
-                return !1;
+                return false;
               }
             }
           } catch (e) {
@@ -2194,7 +2200,7 @@
           } finally {
             g.f();
           }
-          return !0;
+          return true;
         case "not":
           var m,
             y = a(n.selectors);
@@ -2202,7 +2208,7 @@
             for (y.s(); !(m = y.n()).done;) {
               var b = m.value;
               if (l(t, b, r, i)) {
-                return !1;
+                return false;
               }
             }
           } catch (e) {
@@ -2210,7 +2216,7 @@
           } finally {
             y.f();
           }
-          return !0;
+          return true;
         case "has":
           var w = function () {
             var e;
@@ -2257,11 +2263,11 @@
           if (l(t, n.right, r, i)) {
             for (var E = 0, x = r.length; E < x; ++E) {
               if (l(r[E], n.left, r.slice(E + 1), i)) {
-                return !0;
+                return true;
               }
             }
           }
-          return !1;
+          return false;
         case "attribute":
           var C = function (e, t) {
             var n;
@@ -2282,7 +2288,7 @@
             return e;
           }(t, n.name);
           switch (n.operator) {
-            case void 0:
+            case undefined:
               return null != C;
             case "=":
               switch (n.value.type) {
@@ -2330,13 +2336,13 @@
           switch (n.name.toLowerCase()) {
             case "statement":
               if ("Statement" === t.type.slice(-9)) {
-                return !0;
+                return true;
               }
             case "declaration":
               return "Declaration" === t.type.slice(-11);
             case "pattern":
               if ("Pattern" === t.type.slice(-7)) {
-                return !0;
+                return true;
               }
             case "expression":
               return "Expression" === t.type.slice(-10) || "Literal" === t.type.slice(-7) || "Identifier" === t.type && (0 === r.length || "MetaProperty" !== r[0].type) || "MetaProperty" === t.type;
@@ -2359,7 +2365,7 @@
     function h(e, t, r, i, o) {
       var s = n(r, 1)[0];
       if (!s) {
-        return !1;
+        return false;
       }
       var c;
       var u = a(f(s, o));
@@ -2371,8 +2377,8 @@
             if (p < 0) {
               continue;
             }
-            var _ = void 0;
-            var A = void 0;
+            var _ = undefined;
+            var A = undefined;
             if ("LEFT_SIDE" === i) {
               _ = 0;
               A = p;
@@ -2382,7 +2388,7 @@
             }
             for (var g = _; g < A; ++g) {
               if (d(h[g]) && l(h[g], t, r, o)) {
-                return !0;
+                return true;
               }
             }
           }
@@ -2392,12 +2398,12 @@
       } finally {
         u.f();
       }
-      return !1;
+      return false;
     }
     function p(e, t, r, i, o) {
       var s = n(r, 1)[0];
       if (!s) {
-        return !1;
+        return false;
       }
       var c;
       var u = a(f(s, o));
@@ -2410,10 +2416,10 @@
               continue;
             }
             if ("LEFT_SIDE" === i && p > 0 && d(h[p - 1]) && l(h[p - 1], t, r, o)) {
-              return !0;
+              return true;
             }
             if ("RIGHT_SIDE" === i && p < h.length - 1 && d(h[p + 1]) && l(h[p + 1], t, r, o)) {
-              return !0;
+              return true;
             }
           }
         }
@@ -2422,12 +2428,12 @@
       } finally {
         u.f();
       }
-      return !1;
+      return false;
     }
     function _(e, t, r, i) {
       var o = n(t, 1)[0];
       if (!o) {
-        return !1;
+        return false;
       }
       var s;
       var c = a(f(o, i));
@@ -2437,7 +2443,7 @@
           if (Array.isArray(u)) {
             var l = u.indexOf(e);
             if (l >= 0 && l === r(u.length)) {
-              return !0;
+              return true;
             }
           }
         }
@@ -2446,7 +2452,7 @@
       } finally {
         c.f();
       }
-      return !1;
+      return false;
     }
     function A(t, i) {
       if (null == t || "object" != e(t)) {

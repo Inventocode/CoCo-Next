@@ -8,8 +8,8 @@ function r(e) {
   })(e);
 }
 export { o as a };
-var i = require("../292");
+import i = require("../292");
 function o(e, t) {
-  return !t || "object" !== r(t) && "function" !== typeof t ? Object(i.a)(e) : t;
+  return !t || "object" !== r(t) && "function" !== typeof t ? i.a(e) : t;
 }
 export default o;

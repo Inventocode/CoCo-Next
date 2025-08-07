@@ -34,4 +34,4 @@ var r = {
     buttonText: "按钮文案"
   }
 };
-var o = require("./189");
+import o = require("./189");

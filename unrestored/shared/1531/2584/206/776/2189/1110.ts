@@ -7,7 +7,7 @@ var o = function () {
     r(this, e);
     this.identifier = t;
     this.from = n;
-    this.tainted = !1;
+    this.tainted = false;
     this.resolved = null;
     this.flag = i;
     if (this.isWrite()) {

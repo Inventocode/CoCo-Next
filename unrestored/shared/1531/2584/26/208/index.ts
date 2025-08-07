@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.ProcedureManager = exports.register_procedure_json_generator = exports.register_procedure_generator = exports.PROCEDURE_BLOCK_FIELD_NAMES = exports.PROCEDURE_BLOCK_INPUT_NAMES = exports.PROCEDURE_BLOCK_TYPES = void 0;
+exports.ProcedureManager = exports.register_procedure_json_generator = exports.register_procedure_generator = exports.PROCEDURE_BLOCK_FIELD_NAMES = exports.PROCEDURE_BLOCK_INPUT_NAMES = exports.PROCEDURE_BLOCK_TYPES = undefined;
 var r = require("tslib");
 var i = require("../../4/127");
 var o = require("../../17/497/387");
@@ -16,33 +16,33 @@ var f = require("../../1036/754");
 (0, r.__exportStar)(require("./2108"), exports);
 var d = require("../../301/173");
 Object.defineProperty(exports, "PROCEDURE_BLOCK_TYPES", {
-  enumerable: !0,
+  enumerable: true,
   get: function () {
     return d.PROCEDURE_BLOCK_TYPES;
   }
 });
 Object.defineProperty(exports, "PROCEDURE_BLOCK_INPUT_NAMES", {
-  enumerable: !0,
+  enumerable: true,
   get: function () {
     return d.PROCEDURE_BLOCK_INPUT_NAMES;
   }
 });
 Object.defineProperty(exports, "PROCEDURE_BLOCK_FIELD_NAMES", {
-  enumerable: !0,
+  enumerable: true,
   get: function () {
     return d.PROCEDURE_BLOCK_FIELD_NAMES;
   }
 });
 var h = require("./2109");
 Object.defineProperty(exports, "register_procedure_generator", {
-  enumerable: !0,
+  enumerable: true,
   get: function () {
     return h.register_procedure_generator;
   }
 });
 var p = require("./2110");
 Object.defineProperty(exports, "register_procedure_json_generator", {
-  enumerable: !0,
+  enumerable: true,
   get: function () {
     return p.register_procedure_json_generator;
   }
@@ -87,7 +87,7 @@ var _ = function () {
           o.forEach(function (e) {
             var t = document.createElement("procedures_2_parameter_shadow");
             t.setAttribute("name", e.param_name);
-            if (void 0 !== e.default_value) {
+            if (undefined !== e.default_value) {
               t.setAttribute("value", e.default_value);
             } else {
               t.setAttribute("value", "0");
@@ -96,7 +96,7 @@ var _ = function () {
           });
           e.push(a);
           if (n.return_count > 0) {
-            var l = a.cloneNode(!0);
+            var l = a.cloneNode(true);
             l.setAttribute("type", s.PROCEDURE_BLOCK_TYPES.CALL_RETURN);
             e.push(l);
           }
@@ -127,7 +127,7 @@ var _ = function () {
     var n = this;
     var r = (0, i.get_instance)().get(i.BINDING.events);
     var a = r.get_group();
-    r.set_group(!1);
+    r.set_group(false);
     r.disable();
     var s = this.get_procedure_by_def(t);
     (0, o.assert)(s);
@@ -150,7 +150,7 @@ var _ = function () {
   e.prototype.update_params = function (e, t, n, r) {
     var a = (0, i.get_instance)().get(i.BINDING.events);
     var s = a.get_group();
-    a.set_group(!1);
+    a.set_group(false);
     a.disable();
     var c = this.procedures[t];
     (0, o.assert)(c, "Trying to update param on inexistent procedure");
@@ -160,12 +160,12 @@ var _ = function () {
       var a = e.get_block_by_id(t);
       if (a) {
         if ("increase" === n) {
-          if (!(null === (i = a.addMutation) || void 0 === i)) {
+          if (!(null === (i = a.addMutation) || undefined === i)) {
             i.call(a, r.default_value);
           }
         } else {
           if ("decrease" === n) {
-            if (!(null === (o = a.removeMutation) || void 0 === o)) {
+            if (!(null === (o = a.removeMutation) || undefined === o)) {
               o.call(a);
             }
           }
@@ -181,7 +181,7 @@ var _ = function () {
   e.prototype.update_procedure_name = function (e, t, n) {
     var r = (0, i.get_instance)().get(i.BINDING.events);
     var a = r.get_group();
-    r.set_group(!1);
+    r.set_group(false);
     var s = r.is_record_undo();
     var c = this.procedures[n];
     (0, o.assert)(c, "Rename render should be called after rename data");
@@ -191,16 +191,16 @@ var _ = function () {
       if (i) {
         var a = i.get_field("NAME");
         (0, o.assert)(a);
-        r.set_record_undo(!1);
+        r.set_record_undo(false);
         a.set_value(n);
         var c = i.get_collapsed_surround_parent();
         if (c) {
-          i.update_collapsed(!0);
+          i.update_collapsed(true);
           if (c === i || u.includes(c.id)) {
             return;
           }
           u.push(c.id);
-          c.update_collapsed(!0);
+          c.update_collapsed(true);
         }
         r.set_record_undo(s);
       }
@@ -211,15 +211,15 @@ var _ = function () {
     r.set_group(a);
   };
   e.prototype.add_procedure = function (e) {
-    (0, o.assert)(void 0 == this.procedures[e], "Duplicated procedure name");
+    (0, o.assert)(undefined == this.procedures[e], "Duplicated procedure name");
     var t = {
       def_id: "",
-      disabled: !0,
+      disabled: true,
       name: e,
       params: [],
       callers_id: [],
       return_count: 0,
-      valid: !1,
+      valid: false,
       base_name: e,
       created_timestamp: Date.now()
     };
@@ -238,7 +238,7 @@ var _ = function () {
       n = this.add_procedure(e);
     }
     n.def_id = t;
-    n.disabled = !1;
+    n.disabled = false;
     if (!n.valid) {
       this.soft_recover(n);
     }
@@ -253,14 +253,14 @@ var _ = function () {
       this.soft_recover(r);
     }
     if (this.callers[t]) {
-      this.callers[t].disabled = !1;
+      this.callers[t].disabled = false;
       return this.callers[t];
     }
     var i = {
       id: t,
       proc_name: r.name,
       call_type: n,
-      disabled: !1
+      disabled: false
     };
     this.callers[t] = i;
     r.callers_id.push(t);
@@ -305,8 +305,8 @@ var _ = function () {
       }).map(function (e) {
         var t = e.connection && e.connection.targetBlock();
         return {
-          param_name: (null === t || void 0 === t ? void 0 : t.get_field_value(s.PROCEDURE_BLOCK_FIELD_NAMES.PARAM_NAME)) || "",
-          default_value: (null === t || void 0 === t ? void 0 : t.get_field_value(s.PROCEDURE_BLOCK_FIELD_NAMES.PARAM_DEFAULT_VALUE)) || void 0
+          param_name: (null === t || undefined === t ? undefined : t.get_field_value(s.PROCEDURE_BLOCK_FIELD_NAMES.PARAM_NAME)) || "",
+          default_value: (null === t || undefined === t ? undefined : t.get_field_value(s.PROCEDURE_BLOCK_FIELD_NAMES.PARAM_DEFAULT_VALUE)) || undefined
         };
       });
       n.return_count = e.get_descendants().filter(function (e) {
@@ -326,7 +326,7 @@ var _ = function () {
     var t = this;
     var n = this.get_procedure_by_def(e);
     if (n) {
-      n.disabled = !0;
+      n.disabled = true;
       if (n.callers_id.every(function (e) {
         return t.callers[e].disabled;
       })) {
@@ -338,14 +338,14 @@ var _ = function () {
   e.prototype.soft_delete = function (e) {
     var t = e.name;
     this.rename_procedure(t, e.def_id);
-    e.valid = !1;
+    e.valid = false;
     e.base_name = t;
   };
   e.prototype.soft_recover = function (e) {
     if (e.base_name !== e.name) {
       this.rename_procedure(e.name, (0, f.get_legal_procedure_name)(e.base_name, this.get_occupied_procedure_names()));
     }
-    e.valid = !0;
+    e.valid = true;
     e.base_name = e.name;
   };
   e.prototype.delete_param = function (e, t) {
@@ -363,7 +363,7 @@ var _ = function () {
     if (n) {
       var r = this.procedures[n.proc_name];
       (0, o.assert)(r);
-      n.disabled = !0;
+      n.disabled = true;
       if (r.disabled && r.callers_id.every(function (e) {
         return t.callers[e].disabled;
       })) {

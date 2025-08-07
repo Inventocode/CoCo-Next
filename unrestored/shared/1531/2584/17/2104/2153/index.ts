@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.Toolbox = void 0;
+exports.Toolbox = undefined;
 var r = require("tslib");
 var i = require("inversify");
 var o = require("../../../4/127");
@@ -18,9 +18,9 @@ var h = function (e) {
   function t(t) {
     var n = e.call(this) || this;
     n.get_node_from_event_ = function (e) {
-      for (var t = e.target; void 0 != t;) {
+      for (var t = e.target; undefined != t;) {
         var r = n.find_node_by_name(t.id);
-        if (void 0 != r) {
+        if (undefined != r) {
           return r;
         }
         if (t == n.children_container_) {
@@ -38,7 +38,7 @@ var h = function (e) {
       RTL: t.RTL,
       toolboxPosition: r.toolboxPosition,
       blockly_type: r.blockly_type,
-      id: void 0
+      id: undefined
     });
     n.flyout = n.vertical_flyout_factory(i);
     return n;
@@ -65,10 +65,10 @@ var h = function (e) {
       var n = t.get_options();
       var r = this.workspace_.get_workspace_drag_surface();
       var i = r && r.get_svg();
-      if (void 0 != i) {
+      if (undefined != i) {
         this.html_div = (0, c.create_dom)("div", "blocklyToolboxDiv");
         this.html_div.setAttribute("dir", t.RTL ? "RTL" : "LTR");
-        if (void 0 !== n.toolbox_background_class) {
+        if (undefined !== n.toolbox_background_class) {
           this.html_div.classList.add(n.toolbox_background_class);
         } else {
           this.html_div.style.background = this.theme.flyout.BACKGROUND_COLOR.toString();
@@ -86,7 +86,7 @@ var h = function (e) {
           e.mousedown_time = Date.now();
         });
         this.events.bind_event(this.html_div, "touchmove", this, function () {
-          e.mousedown_time = void 0;
+          e.mousedown_time = undefined;
         });
         var o = (0, u.throttle)(function (t) {
           return e.handle_mousedown(t);
@@ -95,7 +95,7 @@ var h = function (e) {
           if (e.mousedown_time && Date.now() - e.mousedown_time < 200) {
             o(t);
           }
-          e.mousedown_time = void 0;
+          e.mousedown_time = undefined;
         });
       } else {
         console.warn("Ref SVG not Found.");
@@ -104,10 +104,10 @@ var h = function (e) {
   };
   t.prototype.handle_mousedown = function (e) {
     if (this.utils.is_right_button(e) || e.target == this.html_div) {
-      this.utils.hide_chaff(!1);
+      this.utils.hide_chaff(false);
       return void this.touch_manager.clear_touch_identifier();
     }
-    this.utils.hide_chaff(!0);
+    this.utils.hide_chaff(true);
     var t = this.get_node_from_event_(e);
     if (t && !t.is_disabled()) {
       if (t.is_selected()) {
@@ -141,15 +141,15 @@ var h = function (e) {
     });
   };
   t.prototype.sync_nodes_ = function (e, t) {
-    for (var n, r = 0, i = void 0; r < e.childNodes.length; r++) {
+    for (var n, r = 0, i = undefined; r < e.childNodes.length; r++) {
       if ((i = e.childNodes[r]) instanceof Element) {
         switch (i.tagName.toUpperCase()) {
           case "SEP":
-            if (void 0 == n) {
+            if (undefined == n) {
               break;
             }
             var o = i.getAttribute("gap");
-            if (void 0 != o) {
+            if (undefined != o) {
               n.setAttribute("gap", o);
             }
             break;
@@ -164,27 +164,27 @@ var h = function (e) {
     }
   };
   t.prototype.sync_trees_ = function (e) {
-    for (var t, n, r = 0, i = void 0; r < e.childNodes.length; r++) {
+    for (var t, n, r = 0, i = undefined; r < e.childNodes.length; r++) {
       if ((i = e.childNodes[r]) instanceof Element) {
         switch (i.tagName.toUpperCase()) {
           case "CATEGORY":
             var o = i.getAttribute("name");
-            if (void 0 == o) {
+            if (undefined == o) {
               throw new ReferenceError("Child node does not have name.");
             }
-            var a = i.getAttribute("text") || void 0,
+            var a = i.getAttribute("text") || undefined,
               s = i.getAttribute("color"),
-              c = s && (null === (t = this.theme.get_color(s)) || void 0 === t ? void 0 : t.fill.toString()) || s || void 0,
-              u = i.getAttribute("flyout_background") || void 0,
-              l = i.getAttribute("element_classname") || void 0,
-              f = i.getAttribute("element_disabled_classname") || void 0,
-              h = i.getAttribute("element_classname_selected") || void 0,
-              p = i.getAttribute("element_style") || void 0,
-              _ = i.getAttribute("element_selected_style") || void 0,
-              A = i.getAttribute("icon") || void 0,
-              g = i.getAttribute("selected_icon") || void 0,
-              v = i.getAttribute("icon_html") || void 0,
-              m = i.getAttribute("icon_selected_html") || void 0,
+              c = s && (null === (t = this.theme.get_color(s)) || undefined === t ? undefined : t.fill.toString()) || s || undefined,
+              u = i.getAttribute("flyout_background") || undefined,
+              l = i.getAttribute("element_classname") || undefined,
+              f = i.getAttribute("element_disabled_classname") || undefined,
+              h = i.getAttribute("element_classname_selected") || undefined,
+              p = i.getAttribute("element_style") || undefined,
+              _ = i.getAttribute("element_selected_style") || undefined,
+              A = i.getAttribute("icon") || undefined,
+              g = i.getAttribute("selected_icon") || undefined,
+              v = i.getAttribute("icon_html") || undefined,
+              m = i.getAttribute("icon_selected_html") || undefined,
               y = new d.TreeNode({
                 text: a,
                 name: o,
@@ -211,14 +211,14 @@ var h = function (e) {
             } else {
               this.sync_nodes_(i, y);
               if (0 === y.get_blocks().length) {
-                y.set_disabled(!0);
+                y.set_disabled(true);
               }
             }
             n = i;
             this.add(y);
             break;
           case "SEP":
-            if (console.error("TreeSeparator is not implemented currently. "), void 0 == n) {
+            if (console.error("TreeSeparator is not implemented currently. "), undefined == n) {
               break;
             }
         }
@@ -226,9 +226,9 @@ var h = function (e) {
     }
   };
   t.prototype.position = function () {
-    if (void 0 != this.html_div) {
+    if (undefined != this.html_div) {
       if (this.workspace_) {
-        if (void 0 != this.workspace_.get_parent_svg()) {
+        if (undefined != this.workspace_.get_parent_svg()) {
           if (this.toolbox_position == a.TOOLBOX_POSITION.RIGHT) {
             this.html_div.style.top = "0";
             this.html_div.style.right = "0";
@@ -244,7 +244,7 @@ var h = function (e) {
     }
   };
   t.prototype.get_client_rect = function () {
-    if (void 0 != this.html_div) {
+    if (undefined != this.html_div) {
       var e = this.html_div.getBoundingClientRect();
       var t = this.workspace_.get_options().delete_area_margin;
       var n = e.left;
@@ -264,7 +264,7 @@ var h = function (e) {
     e.prototype.dispose.call(this);
     this.flyout.dispose();
     (0, c.remove_node)(this.html_div);
-    this.workspace_ = void 0;
+    this.workspace_ = undefined;
   };
   t.prototype.get_selected = function () {
     return this.selected_node;
@@ -280,7 +280,7 @@ var h = function (e) {
       if (this.events.is_enabled()) {
         this.events.fire(this.ui_event_factory({
           type: a.UIEventType.CATEGORY_WILL_CHANGE,
-          workspace_id: (null === (t = this.workspace_) || void 0 === t ? void 0 : t.id) || "",
+          workspace_id: (null === (t = this.workspace_) || undefined === t ? undefined : t.id) || "",
           old_value: r,
           new_value: e
         }));
@@ -291,7 +291,7 @@ var h = function (e) {
       var i = [];
       if (e) {
         e.select();
-        i = e.get_blocks(!0);
+        i = e.get_blocks(true);
       }
       if (e && i && i.length > 0) {
         var o = e.get_flyout_background_color();
@@ -315,7 +315,7 @@ var h = function (e) {
       if (this.events.is_enabled()) {
         this.events.fire(this.ui_event_factory({
           type: a.UIEventType.CATEGORY,
-          workspace_id: (null === (n = this.workspace_) || void 0 === n ? void 0 : n.id) || "",
+          workspace_id: (null === (n = this.workspace_) || undefined === n ? undefined : n.id) || "",
           old_value: r,
           new_value: e
         }));
@@ -326,9 +326,9 @@ var h = function (e) {
     this.set_selected_item();
   };
   t.prototype.refresh_selection = function () {
-    if (void 0 != this.selected_node) {
+    if (undefined != this.selected_node) {
       var e = this.selected_node.get_blocks();
-      if (void 0 != e) {
+      if (undefined != e) {
         this.flyout.show(e);
       }
     }
@@ -350,13 +350,13 @@ var h = function (e) {
   t.prototype.new_node = function (e) {
     return new d.TreeNode(e);
   };
-  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.events)], t.prototype, "events", void 0);
-  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.utils)], t.prototype, "utils", void 0);
-  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.touch_manager)], t.prototype, "touch_manager", void 0);
-  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.block_animations)], t.prototype, "block_animations", void 0);
-  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.theme)], t.prototype, "theme", void 0);
-  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.VerticalFlyout)], t.prototype, "vertical_flyout_factory", void 0);
-  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.UIEvent)], t.prototype, "ui_event_factory", void 0);
+  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.events)], t.prototype, "events", undefined);
+  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.utils)], t.prototype, "utils", undefined);
+  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.touch_manager)], t.prototype, "touch_manager", undefined);
+  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.block_animations)], t.prototype, "block_animations", undefined);
+  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.theme)], t.prototype, "theme", undefined);
+  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.VerticalFlyout)], t.prototype, "vertical_flyout_factory", undefined);
+  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.UIEvent)], t.prototype, "ui_event_factory", undefined);
   return t = (0, r.__decorate)([(0, i.injectable)()], t);
 }(f.BaseNode);
 exports.Toolbox = h;

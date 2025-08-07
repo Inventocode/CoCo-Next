@@ -129,7 +129,7 @@ export { Mt as W };
 export { Lt as rc };
 export { Pt as Eb };
 var r;
-var o = require("../1/index");
+import o = require("regenerator-runtime");
 var i = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -142,9 +142,9 @@ var i = function __importDefault(module) {
   });
   return defaultExport;
 }(o);
-var a = require("../7");
-var s = require("../15");
-var c = require("../48/index");
+import a = require("../7");
+import s = require("../15");
+import c = require("../48/index");
 var l = new Map();
 var u = "!@_APP_@!";
 function d(e) {
@@ -192,14 +192,14 @@ function m(e, t) {
   }
   var i = h(e, t);
   i.forEach(function (e) {
-    e.call.apply(e, [void 0].concat(r));
+    e.call.apply(e, [undefined].concat(r));
   });
 }
 function g(e, t) {
   return _.apply(this, arguments);
 }
 function _() {
-  return (_ = Object(a.a)(i.a.mark(function e(t, n) {
+  return (_ = a.a(i.a.mark(function e(t, n) {
     var r;
     var o;
     var a;
@@ -215,7 +215,7 @@ function _() {
             s = h(t, n);
             e.next = 4;
             return Promise.all(s.map(function (e) {
-              return e.call.apply(e, [void 0].concat(o));
+              return e.call.apply(e, [undefined].concat(o));
             }));
           case 4:
           case "end":
@@ -244,7 +244,7 @@ function w(e) {
   return C.apply(this, arguments);
 }
 function C() {
-  return (C = Object(a.a)(i.a.mark(function e(t) {
+  return (C = a.a(i.a.mark(function e(t) {
     return i.a.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
@@ -263,7 +263,7 @@ function T(e) {
   return S.apply(this, arguments);
 }
 function S() {
-  return (S = Object(a.a)(i.a.mark(function e(t) {
+  return (S = a.a(i.a.mark(function e(t) {
     var n;
     var o;
     var a;
@@ -273,12 +273,12 @@ function S() {
         switch (e.prev = e.next) {
           case 0:
             e.next = 2;
-            return Object(s.lb)(10);
+            return s.lb(10);
           case 2:
             for (n = c.length, o = new Array(n > 1 ? n - 1 : 0), a = 1; a < n; a++) {
               o[a - 1] = c[a];
             }
-            m.apply(void 0, [r.CUSTOM, t].concat(o));
+            m.apply(undefined, [r.CUSTOM, t].concat(o));
           case 4:
           case "end":
             return e.stop();
@@ -337,7 +337,7 @@ function N() {
   return R.apply(this, arguments);
 }
 function R() {
-  return (R = Object(a.a)(i.a.mark(function e() {
+  return (R = a.a(i.a.mark(function e() {
     return i.a.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
@@ -663,7 +663,7 @@ function St(e, t, n) {
   return It.apply(this, arguments);
 }
 function It() {
-  return (It = Object(a.a)(i.a.mark(function e(t, n, o) {
+  return (It = a.a(i.a.mark(function e(t, n, o) {
     var a;
     var s;
     var l;
@@ -675,12 +675,12 @@ function It() {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
-            for (a = [t, n, o].join("_@@_"), s = Object(c.a)().getState().currentScreenId, l = f.length, u = new Array(l > 3 ? l - 3 : 0), d = 3; d < l; d++) {
+            for (a = [t, n, o].join("_@@_"), s = c.a().getState().currentScreenId, l = f.length, u = new Array(l > 3 ? l - 3 : 0), d = 3; d < l; d++) {
               u[d - 3] = f[d];
             }
-            m.apply(void 0, [r.WIDGET_EVENT, a].concat(u));
+            m.apply(undefined, [r.WIDGET_EVENT, a].concat(u));
             p = [t, n, s].join("_@@_");
-            m.apply(void 0, [r.WIDGET_EVENT, p, o].concat(u));
+            m.apply(undefined, [r.WIDGET_EVENT, p, o].concat(u));
           case 6:
           case "end":
             return e.stop();
@@ -693,7 +693,7 @@ function At(e, t) {
   return jt.apply(this, arguments);
 }
 function jt() {
-  return (jt = Object(a.a)(i.a.mark(function e(t, n) {
+  return (jt = a.a(i.a.mark(function e(t, n) {
     var o;
     var a;
     var s;
@@ -709,7 +709,7 @@ function jt() {
             c = t + "_@@_" + n + "_@@_";
             Array.from(l.keys()).forEach(function (e) {
               if (e.startsWith(c)) {
-                m.apply(void 0, [r.WIDGET_EVENT, e].concat(a));
+                m.apply(undefined, [r.WIDGET_EVENT, e].concat(a));
               }
             });
           case 3:
@@ -728,12 +728,12 @@ function Rt(e, t) {
 }
 function kt(e, t) {
   var n = [JSON.parse(t).errorInfo];
-  m.apply(void 0, [r.CLOUD_TABLE_ERROR, e].concat(n));
+  m.apply(undefined, [r.CLOUD_TABLE_ERROR, e].concat(n));
 }
 function xt(e) {
   var t = JSON.parse(e);
   var n = [t.cloudDBName, t.errorInfo];
-  m.apply(void 0, [r.CLOUD_DB_ERROR, u].concat(n));
+  m.apply(undefined, [r.CLOUD_DB_ERROR, u].concat(n));
 }
 function Dt(e, t) {
   p(r.CLOUD_DICT_ERROR, e, t);

@@ -18,14 +18,14 @@ module.exports = function (e, t) {
     for (u in t) {
       p = t[u];
       d = e.noTargetGet ? (f = o(n, u)) && f.value : n[u];
-      if (!l(m ? u : h + (g ? "." : "#") + u, e.forced) && void 0 !== d) {
+      if (!l(m ? u : h + (g ? "." : "#") + u, e.forced) && undefined !== d) {
         if (typeof p === typeof d) {
           continue;
         }
         c(p, d);
       }
       if (e.sham || d && d.sham) {
-        i(p, "sham", !0);
+        i(p, "sham", true);
       }
       a(n, u, p, e);
     }

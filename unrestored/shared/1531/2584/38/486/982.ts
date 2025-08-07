@@ -3,8 +3,8 @@
 var r = require("./229");
 exports.a = function (e, t) {
   var n;
-  if (void 0 === t) {
-    t = !0;
+  if (undefined === t) {
+    t = true;
   }
   var i = new Promise(function (r) {
     n = setTimeout(r, e, t);

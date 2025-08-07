@@ -82,7 +82,7 @@ if (i) {
   }
   r({
     target: "Object",
-    stat: !0,
+    stat: true,
     forced: !F
   }, {
     getOwnPropertyDescriptor: Q,
@@ -102,7 +102,7 @@ if (i) {
         get: function () {
           return function (e, t) {
             var n = R(e);
-            return n.view[c](t * i + n.byteOffset, !0);
+            return n.view[c](t * i + n.byteOffset, true);
           }(this, t);
         },
         set: function (e) {
@@ -111,17 +111,17 @@ if (i) {
             if (n) {
               r = (r = M(r)) < 0 ? 0 : r > 255 ? 255 : 255 & r;
             }
-            o.view[u](t * i + o.byteOffset, r, !0);
+            o.view[u](t * i + o.byteOffset, r, true);
           }(this, t, e);
         },
-        enumerable: !0
+        enumerable: true
       });
     };
     if (F) {
       if (a) {
         g = t(function (e, t, n, r) {
           l(e, g, s);
-          return N(b(t) ? q(t) ? void 0 !== r ? new p(t, m(n, i), r) : void 0 !== n ? new p(t, m(n, i)) : new p(t) : z(t) ? Y(g, t) : C.call(g, t) : new p(h(t)), e, g);
+          return N(b(t) ? q(t) ? undefined !== r ? new p(t, m(n, i), r) : undefined !== n ? new p(t, m(n, i)) : new p(t) : z(t) ? Y(g, t) : C.call(g, t) : new p(h(t)), e, g);
         });
         if (O) {
           O(g, W);
@@ -148,7 +148,7 @@ if (i) {
           o = t;
           d = m(n, i);
           var p = t.byteLength;
-          if (void 0 === r) {
+          if (undefined === r) {
             if (p % i) {
               throw L("Wrong length");
             }
@@ -187,7 +187,7 @@ if (i) {
     }
     v[s] = g;
     r({
-      global: !0,
+      global: true,
       forced: g != p,
       sham: !F
     }, v);

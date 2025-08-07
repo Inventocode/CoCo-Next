@@ -105,7 +105,7 @@ var p = function () {
 }();
 var m = function (t) {
   function e(e) {
-    if (void 0 === e) {
+    if (undefined === e) {
       e = 32;
     }
     var n = t.call(this) || this;

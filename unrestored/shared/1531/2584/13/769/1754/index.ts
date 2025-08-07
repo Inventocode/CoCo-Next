@@ -3,7 +3,7 @@
 var r = require("../1046/index");
 var i = require("../568");
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
 exports.default = function (e) {
   var t;
@@ -12,19 +12,19 @@ exports.default = function (e) {
     var t = function (e) {
       var t = function () {
         if ("undefined" === typeof Reflect || !Reflect.construct) {
-          return !1;
+          return false;
         }
         if (Reflect.construct.sham) {
-          return !1;
+          return false;
         }
         if ("function" === typeof Proxy) {
-          return !0;
+          return true;
         }
         try {
           Date.prototype.toString.call(Reflect.construct(Date, [], function () {}));
-          return !0;
+          return true;
         } catch (e) {
-          return !1;
+          return false;
         }
       }();
       return function () {
@@ -129,7 +129,7 @@ exports.default = function (e) {
         r.setState({
           value: t
         }, function () {
-          return r.onEnd(!0);
+          return r.onEnd(true);
         });
       };
       r.saveSlider = function (e) {
@@ -345,11 +345,11 @@ exports.default = function (e) {
     onBeforeChange: E,
     onChange: E,
     onAfterChange: E,
-    included: !0,
-    disabled: !1,
-    dots: !1,
-    vertical: !1,
-    reverse: !1,
+    included: true,
+    disabled: false,
+    dots: false,
+    vertical: false,
+    reverse: false,
     trackStyle: [{}],
     handleStyle: [{}],
     railStyle: {},
@@ -391,7 +391,7 @@ function w(e) {
   for (var t = 1; t < arguments.length; t++) {
     var n = null != arguments[t] ? arguments[t] : {};
     if (t % 2) {
-      b(Object(n), !0).forEach(function (t) {
+      b(Object(n), true).forEach(function (t) {
         (0, a.default)(e, t, n[t]);
       });
     } else {

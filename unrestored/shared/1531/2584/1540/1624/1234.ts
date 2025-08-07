@@ -14,6 +14,6 @@ var s = function (e) {
   };
 };
 module.exports = {
-  entries: s(!0),
-  values: s(!1)
+  entries: s(true),
+  values: s(false)
 };

@@ -2,22 +2,22 @@
 
 export { o as a };
 export { a as b };
-var r = require("./6");
+import r = require("./6");
 function o(e, t) {
-  var n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-  var o = Object(r.a)({
-    isFold: !0,
+  var n = arguments.length > 2 && undefined !== arguments[2] ? arguments[2] : {};
+  var o = r.a({
+    isFold: true,
     screenId: "GLOBAL",
-    isWatching: !0,
-    selected: !0
+    isWatching: true,
+    selected: true
   }, n);
-  var i = Object(r.a)(Object(r.a)({
+  var i = r.a(r.a({
     type: e
   }, o), t);
   if (i.isWatching) {
-    i.selected = !0;
+    i.selected = true;
   } else {
-    i.selected = !1;
+    i.selected = false;
   }
   return i;
 }

@@ -58,11 +58,11 @@
   function d(e, t) {
     switch (e[0]) {
       case "[":
-        return c(e, !0);
+        return c(e, true);
       case "(":
-        return u(e, !0);
+        return u(e, true);
       case "{":
-        return l(e, !0);
+        return l(e, true);
       default:
         return f(e, t);
     }

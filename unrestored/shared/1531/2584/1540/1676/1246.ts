@@ -9,12 +9,12 @@ var c = function (e) {
     var u;
     var d = o(a(t));
     var p = d.length;
-    var f = void 0 === c ? " " : o(c);
+    var f = undefined === c ? " " : o(c);
     var h = r(n);
     return h <= p || "" == f ? d : (l = h - p, (u = i.call(f, s(l / f.length))).length > l && (u = u.slice(0, l)), e ? d + u : u + d);
   };
 };
 module.exports = {
-  start: c(!1),
-  end: c(!0)
+  start: c(false),
+  end: c(true)
 };

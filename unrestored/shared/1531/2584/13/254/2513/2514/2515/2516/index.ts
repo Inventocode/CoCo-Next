@@ -20,8 +20,8 @@ module.exports = function (e, t, n, v, m, y, b) {
   if (x) {
     r(e, n, x);
   } else {
-    var C = y ? y(w, E, n + "", e, t, b) : void 0;
-    var O = void 0 === C;
+    var C = y ? y(w, E, n + "", e, t, b) : undefined;
+    var O = undefined === C;
     if (O) {
       var k = u(E);
       var S = !k && f(E);
@@ -35,12 +35,12 @@ module.exports = function (e, t, n, v, m, y, b) {
             C = a(w);
           } else {
             if (S) {
-              O = !1;
-              C = i(E, !0);
+              O = false;
+              C = i(E, true);
             } else {
               if (T) {
-                O = !1;
-                C = o(E, !0);
+                O = false;
+                C = o(E, true);
               } else {
                 C = [];
               }
@@ -58,7 +58,7 @@ module.exports = function (e, t, n, v, m, y, b) {
             }
           }
         } else {
-          O = !1;
+          O = false;
         }
       }
     }

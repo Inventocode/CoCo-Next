@@ -28,7 +28,7 @@ module.exports = function (e, t, n) {
     } : "delete" == e ? function (e) {
       return !(g && !u(e)) && t.call(this, 0 === e ? 0 : e);
     } : "get" == e ? function (e) {
-      return g && !u(e) ? void 0 : t.call(this, 0 === e ? 0 : e);
+      return g && !u(e) ? undefined : t.call(this, 0 === e ? 0 : e);
     } : "has" == e ? function (e) {
       return !(g && !u(e)) && t.call(this, 0 === e ? 0 : e);
     } : function (e, n) {
@@ -41,7 +41,7 @@ module.exports = function (e, t, n) {
   })))) {
     y = n.getConstructor(t, e, m, _);
     s.enable();
-  } else if (i(e, !0)) {
+  } else if (i(e, true)) {
     var w = new y();
     var C = w[_](g ? {} : -0, 1) != w;
     var T = d(function () {
@@ -60,7 +60,7 @@ module.exports = function (e, t, n) {
       (y = t(function (t, n) {
         l(t, y, e);
         var r = h(new v(), t, y);
-        if (void 0 != n) {
+        if (undefined != n) {
           c(n, r[_], {
             that: r,
             AS_ENTRIES: m
@@ -86,7 +86,7 @@ module.exports = function (e, t, n) {
   }
   E[e] = y;
   r({
-    global: !0,
+    global: true,
     forced: y != v
   }, E);
   f(y, e);

@@ -7,7 +7,7 @@ var a = require("./400");
 var s = require("./349");
 var u = require("./406");
 var c = require("./37");
-var l = require("./404");
+var l = require("./404/index");
 var d = require("./507");
 var f = function (t) {
   var e = "function" === typeof Symbol && Symbol.iterator;
@@ -20,7 +20,7 @@ var f = function (t) {
     return {
       next: function () {
         if (t && r >= t.length) {
-          t = void 0;
+          t = undefined;
         }
         return {
           value: t && t[r++],
@@ -38,17 +38,17 @@ var h = function () {
     return this.decodeInternal(t);
   };
   t.prototype.decodeWithState = function (t) {
-    if (!(null !== this.readers && void 0 !== this.readers)) {
+    if (!(null !== this.readers && undefined !== this.readers)) {
       this.setHints(null);
     }
     return this.decodeInternal(t);
   };
   t.prototype.setHints = function (t) {
     this.hints = t;
-    var e = null !== t && void 0 !== t && void 0 !== t.get(r.a.TRY_HARDER);
-    var n = null === t || void 0 === t ? null : t.get(r.a.POSSIBLE_FORMATS);
+    var e = null !== t && undefined !== t && undefined !== t.get(r.a.TRY_HARDER);
+    var n = null === t || undefined === t ? null : t.get(r.a.POSSIBLE_FORMATS);
     var c = new Array();
-    if (null !== n && void 0 !== n) {
+    if (null !== n && undefined !== n) {
       var d = n.some(function (t) {
         return t === i.a.UPC_A || t === i.a.UPC_E || t === i.a.EAN_13 || t === i.a.EAN_8 || t === i.a.CODABAR || t === i.a.CODE_39 || t === i.a.CODE_93 || t === i.a.CODE_128 || t === i.a.ITF || t === i.a.RSS_14 || t === i.a.RSS_EXPANDED;
       });

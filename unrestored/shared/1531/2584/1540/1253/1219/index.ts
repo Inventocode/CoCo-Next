@@ -13,7 +13,7 @@ module.exports = function (e, t, n) {
   e.prototype = o(r, {
     next: i(1, n)
   });
-  a(e, l, !1, !0);
+  a(e, l, false, true);
   s[l] = c;
   return e;
 };

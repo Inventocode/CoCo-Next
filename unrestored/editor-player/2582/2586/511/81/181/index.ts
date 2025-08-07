@@ -25,11 +25,11 @@ var a = function () {
 }();
 var u = function (t) {
   function e(e, r) {
-    if (void 0 === e) {
-      e = void 0;
+    if (undefined === e) {
+      e = undefined;
     }
-    if (void 0 === r) {
-      r = void 0;
+    if (undefined === r) {
+      r = undefined;
     }
     var n = t.call(this, r) || this;
     n.index = e;
@@ -51,7 +51,7 @@ var s = function (t) {
     return {
       next: function () {
         if (t && n >= t.length) {
-          t = void 0;
+          t = undefined;
         }
         return {
           value: t && t[n++],
@@ -112,26 +112,26 @@ var c = function () {
   };
   t.equals = function (t, e) {
     if (!t) {
-      return !1;
+      return false;
     }
     if (!e) {
-      return !1;
+      return false;
     }
     if (!t.length) {
-      return !1;
+      return false;
     }
     if (!e.length) {
-      return !1;
+      return false;
     }
     if (t.length !== e.length) {
-      return !1;
+      return false;
     }
     for (var r = 0, n = t.length; r < n; r++) {
       if (t[r] !== e[r]) {
-        return !1;
+        return false;
       }
     }
-    return !0;
+    return true;
   };
   t.hashCode = function (t) {
     var e;
@@ -184,7 +184,7 @@ var c = function () {
     return i;
   };
   t.binarySearch = function (e, r, n) {
-    if (void 0 === n) {
+    if (undefined === n) {
       n = t.numberComparator;
     }
     for (var o = 0, i = e.length - 1; o <= i;) {

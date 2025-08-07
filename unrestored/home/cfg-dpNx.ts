@@ -24,7 +24,7 @@ function getEnvironment() {
  */
 function config() {
   var env = getEnvironment();
-  var prefix = void 0;
+  var prefix = undefined;
   switch (env) {
     case 'test':
       prefix = 'test-';

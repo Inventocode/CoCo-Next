@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.FieldTextDropdown = void 0;
+exports.FieldTextDropdown = undefined;
 var r = require("tslib");
 var i = require("inversify");
 var o = require("../../125/index");
@@ -13,7 +13,7 @@ var c = function (e) {
   function t(t) {
     var n;
     var r = e.call(this, {
-      text: (null === (n = t()[0]) || void 0 === n ? void 0 : n.value) || ""
+      text: (null === (n = t()[0]) || undefined === n ? undefined : n.value) || ""
     }) || this;
     r.get_options = t;
     r.field_type = "FieldTextDropdown";
@@ -32,10 +32,10 @@ var c = function (e) {
       this.update_height();
       this.render_text_element();
       this.render_arrow();
-      if (!(null === (e = this.border_rect) || void 0 === e)) {
+      if (!(null === (e = this.border_rect) || undefined === e)) {
         e.setAttribute("width", String(this.size_.width));
       }
-      if (!(null === (t = this.border_rect) || void 0 === t)) {
+      if (!(null === (t = this.border_rect) || undefined === t)) {
         t.setAttribute("height", String(this.size_.height));
       }
     }
@@ -65,7 +65,7 @@ var c = function (e) {
       if (this.source_block.is_shadow()) {
         var t = function () {
           var t;
-          var n = null === (t = e.source_block) || void 0 === t ? void 0 : t.get_parent();
+          var n = null === (t = e.source_block) || undefined === t ? undefined : t.get_parent();
           if (n && e.arrow) {
             e.arrow.style.fill = n.get_colour().toString();
           }
@@ -88,7 +88,7 @@ var c = function (e) {
         (0, o.remove_node)(t.menu);
       }
       t.menu_items = [];
-      t.menu = void 0;
+      t.menu = undefined;
     };
   };
   t.prototype.show_editor = function () {

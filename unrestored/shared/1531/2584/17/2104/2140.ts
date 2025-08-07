@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.RuntimeData = void 0;
+exports.RuntimeData = undefined;
 var r = require("tslib");
 var i = require("inversify");
 var o = (0, r.__importStar)(require("hammerjs"));
@@ -12,12 +12,12 @@ var s = require("../../125/index");
 var c = function () {
   function e() {
     var e = this;
-    this.selected = void 0;
-    this.editing = void 0;
+    this.selected = undefined;
+    this.editing = undefined;
     this.pasting_count = 0;
     this.dragging_connections = [];
     this.hide_chaff_effects = [];
-    this.document_events_bound = !1;
+    this.document_events_bound = false;
     this.before_scale = 1;
     this.pinch_listener = function (t) {
       var n = e.workspace_db.current;
@@ -69,21 +69,21 @@ var c = function () {
     var t;
     var n;
     if (this.pinch_recognizer) {
-      if (!(null === (e = this.hammer_manager) || void 0 === e)) {
+      if (!(null === (e = this.hammer_manager) || undefined === e)) {
         e.remove(this.pinch_recognizer);
       }
     }
-    if (!(null === (t = this.hammer_manager) || void 0 === t)) {
+    if (!(null === (t = this.hammer_manager) || undefined === t)) {
       t.off("pinch", this.pinch_listener);
     }
-    if (!(null === (n = this.hammer_manager) || void 0 === n)) {
+    if (!(null === (n = this.hammer_manager) || undefined === n)) {
       n.off("pinchend", this.pinchend_listener);
     }
   };
   e.prototype.cancel_gesture_when_multi_touch = function () {
     var e;
     var t = this;
-    if (!(null === (e = this.workspace_db.current) || void 0 === e)) {
+    if (!(null === (e = this.workspace_db.current) || undefined === e)) {
       e.get_parent_svg().addEventListener("touchmove", function (e) {
         var n = t.workspace_db.current;
         if (e.touches.length > 1 && n.current_gesture_) {
@@ -92,7 +92,7 @@ var c = function () {
       });
     }
   };
-  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.workspace_db)], e.prototype, "workspace_db", void 0);
+  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.workspace_db)], e.prototype, "workspace_db", undefined);
   return e = (0, r.__decorate)([(0, i.injectable)()], e);
 }();
 exports.RuntimeData = c;
@@ -101,8 +101,8 @@ var u = function () {
   e.prototype.get_content = function () {
     if (this.content) {
       return Array.isArray(this.content) ? this.content.map(function (e) {
-        return (0, s.clone_node)(e, !0);
-      }) : (0, s.clone_node)(this.content, !0);
+        return (0, s.clone_node)(e, true);
+      }) : (0, s.clone_node)(this.content, true);
     }
   };
   e.prototype.copy = function (e) {
@@ -120,9 +120,9 @@ var u = function () {
   };
   e.prototype.duplicate = function (e) {
     var t = this.copy(e);
-    e.get_workspace().paste((0, s.clone_node)(t, !0));
+    e.get_workspace().paste((0, s.clone_node)(t, true));
     return t;
   };
-  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.xml)], e.prototype, "xml", void 0);
+  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.xml)], e.prototype, "xml", undefined);
   return e;
 }();

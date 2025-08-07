@@ -52,7 +52,7 @@ var r = "ASYNC_INITIAL_CLOUD_SPACE_DATA";
 var o = function () {
   return {
     type: r,
-    payload: void 0
+    payload: undefined
   };
 };
 var i = "UPDATE_CLOUD_SPACE_DICT_LIST";
@@ -72,7 +72,7 @@ var c = function (e) {
 var l = "ASYNC_FETCH_CLOUD_SPACE_LIST";
 var u = function () {
   return {
-    payload: void 0,
+    payload: undefined,
     type: l
   };
 };

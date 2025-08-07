@@ -109,7 +109,7 @@ export { Ft as xb };
 export { Gt as eb };
 export { Ut as o };
 var r;
-var o = require("./1/index");
+import o = require("regenerator-runtime");
 var i = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -122,25 +122,25 @@ var i = function __importDefault(module) {
   });
   return defaultExport;
 }(o);
-var a = require("./7");
-var s = require("./10/index");
-var c = require("./11");
-var l = require("./6");
-var u = require("./25/index");
-var d = require("./47");
-var p = require("./42/index");
-var f = require("./5");
-var h = require("./64");
-var m = require("./15");
-var g = require("./83");
-var _ = require("./313");
-var v = require("./97");
-var b = require("./190");
-var y = require("./133/index");
-var E = require("./76");
-var O = require("./38/index");
-var w = require("./26/index");
-var C = require("./53");
+import a = require("./7");
+import s = require("./10/index");
+import c = require("./11");
+import l = require("./6");
+import u = require("./25/index");
+import d = require("./47");
+import p = require("./42/index");
+import f = require("./5");
+import h = require("./64");
+import m = require("./15");
+import g = require("./83");
+import _ = require("./313");
+import v = require("./97");
+import b = require("./190");
+import y = require("./133/index");
+import E = require("./76");
+import O = require("./38/index");
+import w = require("./26/index");
+import C = require("./53");
 !function (e) {
   e[e.UI = 0] = "UI";
   e[e.STAGE = 1] = "STAGE";
@@ -192,7 +192,7 @@ function R(e) {
 }
 function k(e) {
   var t;
-  if (!(null === (t = S.get(e)) || void 0 === t)) {
+  if (!(null === (t = S.get(e)) || undefined === t)) {
     t.forEach(function (t) {
       !function (e, t) {
         if (T.has(t)) {
@@ -249,7 +249,7 @@ function L(e) {
   var t = Se(e);
   if (t && (t.type === f.y || t.type === f.B || t.type === f.l)) {
     var n = t.attributes.fields;
-    return void 0 === n ? [] : n;
+    return undefined === n ? [] : n;
   }
   return [];
 }
@@ -273,9 +273,9 @@ function U(e) {
   var t = Se(e);
   return t && t.type === f.j ? t.attributes.cloudDictId : null;
 }
-var W = require("./17/index");
-var H = require("./60");
-var V = require("./36/85");
+import W = require("./17/index");
+import H = require("./60");
+import V = require("./36/85");
 var z = ["Size", "Coordinate", "VisibleSwitch", "WidgetOpacity"];
 var Y = ["size", "position", "visible", "opacity"];
 var K = {
@@ -286,20 +286,20 @@ var K = {
   validators: {
     lessThan: H.j,
     greaterThan: H.r,
-    isInteger: !0
+    isInteger: true
   }
 };
 var q = {
   key: "__visible",
   label: "",
   valueType: "boolean",
-  defaultValue: !0
+  defaultValue: true
 };
 var X = {
   key: "__disabled",
   label: "",
   valueType: "boolean",
-  defaultValue: !1
+  defaultValue: false
 };
 function Q(e) {
   var t = e.property;
@@ -344,7 +344,7 @@ function J(e, t) {
       c.style.fontFamily = "NotoSansCJKsc-Medium, NotoSansCJKsc";
       c.style.color = "#82778C";
       c.style.marginLeft = "8px";
-      var l = Object(V.a)(t, i) || i;
+      var l = V.a(t, i) || i;
       c.innerText = l;
       var u = document.createElement("div");
       u.style.flex = "1";
@@ -354,7 +354,7 @@ function J(e, t) {
       a.appendChild(s);
       a.appendChild(c);
       a.appendChild(u);
-      if (!(null === (n = r) || void 0 === n)) {
+      if (!(null === (n = r) || undefined === n)) {
         n.appendChild(a);
       }
       W.Blink.mainWorkspace.register_flyout_button(o, function () {
@@ -400,9 +400,9 @@ function $(e) {
   }], t);
   return "<label type=\"".concat(o, "\"></label>");
 }
-var ee = require("./31/index");
-var te = require("./38/3");
-var ne = require("./38/22");
+import ee = require("lodash");
+import te = require("./38/3");
+import ne = require("./38/22");
 var re = i.a.mark(_e);
 var oe = i.a.mark(ve);
 var ie = i.a.mark(be);
@@ -439,15 +439,15 @@ function me(e) {
   for (var n in e) {
     var r = e[n];
     if (r.type === f.j && r.attributes.cloudDictId !== se) {
-      t.push(Object(ee.cloneDeep)(r));
+      t.push(ee.cloneDeep(r));
       r.attributes.cloudDictId = se;
     }
     if (r.type === f.k && r.attributes.cloudTableId !== se) {
-      t.push(Object(ee.cloneDeep)(r));
+      t.push(ee.cloneDeep(r));
       r.attributes.cloudTableId = se;
     }
     if (r.type === f.A && "number" === typeof r.attributes.dataSource) {
-      t.push(Object(ee.cloneDeep)(r));
+      t.push(ee.cloneDeep(r));
       r.attributes.dataSource = "";
     }
   }
@@ -465,14 +465,14 @@ function _e() {
       switch (r.prev = r.next) {
         case 0:
           r.next = 2;
-          return Object(te.f)(ne.p);
+          return te.f(ne.p);
         case 2:
           e = r.sent;
           t = fe();
           n = t.map(function (e) {
             return e.attributes.cloudDictId;
           });
-          return r.abrupt("return", Object(m.r)(n, Object(u.a)(e)).filter(function (e) {
+          return r.abrupt("return", m.r(n, u.a(e)).filter(function (e) {
             return e !== se;
           }));
         case 6:
@@ -490,11 +490,11 @@ function ve() {
       switch (n.prev = n.next) {
         case 0:
           n.next = 2;
-          return Object(te.f)(ne.q);
+          return te.f(ne.q);
         case 2:
           e = n.sent;
           t = he();
-          return n.abrupt("return", Object(m.r)(t, Object(u.a)(e)).filter(function (e) {
+          return n.abrupt("return", m.r(t, u.a(e)).filter(function (e) {
             return e !== se;
           }));
         case 5:
@@ -513,14 +513,14 @@ function be() {
       switch (r.prev = r.next) {
         case 0:
           r.next = 2;
-          return Object(te.f)(ne.p);
+          return te.f(ne.p);
         case 2:
           e = r.sent;
           t = fe();
           n = t.map(function (e) {
             return e.attributes.cloudDictId;
           });
-          return r.abrupt("return", Object(m.r)(Object(u.a)(e), n).filter(function (e) {
+          return r.abrupt("return", m.r(u.a(e), n).filter(function (e) {
             return e !== se;
           }));
         case 6:
@@ -538,11 +538,11 @@ function ye() {
       switch (n.prev = n.next) {
         case 0:
           n.next = 2;
-          return Object(te.f)(ne.q);
+          return te.f(ne.q);
         case 2:
           e = n.sent;
           t = he();
-          return n.abrupt("return", Object(m.r)(Object(u.a)(e), t).filter(function (e) {
+          return n.abrupt("return", m.r(u.a(e), t).filter(function (e) {
             return e !== se;
           }));
         case 5:
@@ -561,7 +561,7 @@ function Ee(e) {
         var t = Se(e);
         if (t) {
           var n;
-          var r = (null === (n = N(t.type)) || void 0 === n ? void 0 : n.contentTextField) || "";
+          var r = (null === (n = N(t.type)) || undefined === n ? undefined : n.contentTextField) || "";
           return t.attributes[r] || "";
         }
       }(e).replace(C.E, "").substr(0, 20);
@@ -578,20 +578,20 @@ function Oe(e, t) {
     if (t) {
       t.widgetIds.forEach(function (t) {
         var r = Se(t);
-        if ((null === r || void 0 === r ? void 0 : r.type) === e) {
+        if ((null === r || undefined === r ? undefined : r.type) === e) {
           n.push(r);
         }
       });
       t.invisibleWidgetIds.forEach(function (t) {
         var r = Se(t);
-        if ((null === r || void 0 === r ? void 0 : r.type) === e) {
+        if ((null === r || undefined === r ? undefined : r.type) === e) {
           n.push(r);
         }
       });
     }
     je().forEach(function (t) {
       var r = Se(t);
-      if ((null === r || void 0 === r ? void 0 : r.type) === e) {
+      if ((null === r || undefined === r ? undefined : r.type) === e) {
         n.push(r);
       }
     });
@@ -602,10 +602,10 @@ function Oe(e, t) {
   });
 }
 function we() {
-  var e = !1;
+  var e = false;
   p.g.forEach(function (t) {
-    if ((null === t || void 0 === t ? void 0 : t.type) === f.A && "number" === typeof t.attributes.dataSource) {
-      e = !0;
+    if ((null === t || undefined === t ? undefined : t.type) === f.A && "number" === typeof t.attributes.dataSource) {
+      e = true;
     }
   });
   return e;
@@ -636,12 +636,12 @@ function Ae(e) {
   var t;
   var n = [];
   var r = p.g.keys();
-  var o = Object(d.a)(r);
+  var o = d.a(r);
   try {
     for (o.s(); !(t = o.n()).done;) {
       var i;
       var a = t.value;
-      if ((null === (i = p.g.get(a)) || void 0 === i ? void 0 : i.parentId) === e) {
+      if ((null === (i = p.g.get(a)) || undefined === i ? undefined : i.parentId) === e) {
         n.push(a);
       }
     }
@@ -695,20 +695,20 @@ function Me(e) {
   if (t) {
     t.widgetIds.forEach(function (t) {
       var r;
-      if ((null === (r = Se(t)) || void 0 === r ? void 0 : r.type) === e) {
+      if ((null === (r = Se(t)) || undefined === r ? undefined : r.type) === e) {
         n.push(t);
       }
     });
     t.invisibleWidgetIds.forEach(function (t) {
       var r;
-      if ((null === (r = Se(t)) || void 0 === r ? void 0 : r.type) === e) {
+      if ((null === (r = Se(t)) || undefined === r ? undefined : r.type) === e) {
         n.push(t);
       }
     });
   }
   je().forEach(function (t) {
     var r;
-    if ((null === (r = Se(t)) || void 0 === r ? void 0 : r.type) === e) {
+    if ((null === (r = Se(t)) || undefined === r ? undefined : r.type) === e) {
       n.push(t);
     }
   });
@@ -718,8 +718,8 @@ function Le(e) {
   for (var t in p.g.clear(), e) p.g.set(t, e[t]);
 }
 function Pe(e) {
-  var t = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-  var n = arguments.length > 2 ? arguments[2] : void 0;
+  var t = !(arguments.length > 1 && undefined !== arguments[1]) || arguments[1];
+  var n = arguments.length > 2 ? arguments[2] : undefined;
   var r = [];
   var o = Se(e);
   if (o) {
@@ -733,7 +733,7 @@ function Pe(e) {
     };
     var a = i(o);
     r.push(a);
-    var s = Object(h.a)(o.type);
+    var s = h.a(o.type);
     a.id = s;
     if (o.title) {
       var c = vt(o.type, Me(o.type), o.title);
@@ -748,14 +748,14 @@ function Pe(e) {
       var d = Se(a.parentId);
       if (d) {
         var p = d;
-        p.widgetIds = [].concat(Object(u.a)(p.widgetIds), [s]);
+        p.widgetIds = [].concat(u.a(p.widgetIds), [s]);
       }
     }
     if (o.type === f.f) {
       var m = a;
       m.widgetIds = [];
       o.widgetIds.forEach(function (e) {
-        var t = Pe(e, !0, s);
+        var t = Pe(e, true, s);
         if (t.length) {
           var n = t[0];
           r.push(n);
@@ -767,7 +767,7 @@ function Pe(e) {
     if (o.type === f.x || o.type === f.A) {
       var g = a;
       for (var _ in g.widgetIds = [], o.attributes.templateSlotMap) {
-        var v = Pe(o.attributes.templateSlotMap[_].widgetId, !0, s);
+        var v = Pe(o.attributes.templateSlotMap[_].widgetId, true, s);
         if (v.length) {
           var b = v[0];
           r.push(b);
@@ -796,7 +796,7 @@ function Be(e, t, n) {
         return t;
       }(r);
       [].push(o);
-      var i = Object(h.a)(r.type);
+      var i = h.a(r.type);
       o.id = i;
       var a = t.indexOf(e);
       if (a > -1) {
@@ -849,7 +849,7 @@ function Ge(e, t) {
 function Ue(e, t, n) {
   var r = Se(e);
   if (r) {
-    r.attributes = Object(l.a)(Object(l.a)({}, r.attributes), {}, Object(c.a)({}, t, n));
+    r.attributes = l.a(l.a({}, r.attributes), {}, c.a({}, t, n));
   }
 }
 function We(e, t) {
@@ -891,7 +891,7 @@ function Ye(e) {
 function Ke(e) {
   var t = [];
   Array.from(p.g).forEach(function (n) {
-    var r = Object(s.a)(n, 2);
+    var r = s.a(n, 2);
     r[0];
     var o = r[1];
     if (o.type === f.a && o.attributes.actionList.some(function (t) {
@@ -971,10 +971,10 @@ function $e() {
   return p.a;
 }
 function et() {
-  var e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+  var e = arguments.length > 0 && undefined !== arguments[0] && arguments[0];
   var t = {};
   p.a.forEach(function (n) {
-    t[n.id] = Object(l.a)(Object(l.a)({}, n), {}, {
+    t[n.id] = l.a(l.a({}, n), {}, {
       cdnUrl: e && n.source || n.cdnUrl
     });
   });
@@ -987,7 +987,7 @@ function nt(e) {
   var t = p.a.find(function (t) {
     return t.id === e;
   });
-  return (null === t || void 0 === t ? void 0 : t.source) || (null === t || void 0 === t ? void 0 : t.cdnUrl);
+  return (null === t || undefined === t ? undefined : t.source) || (null === t || undefined === t ? undefined : t.cdnUrl);
 }
 function rt(e) {
   return p.a.find(function (t) {
@@ -1001,21 +1001,21 @@ function ot(e, t) {
 }
 function it(e) {
   if ("string" === typeof e) {
-    if (Object(m.U)(e)) {
+    if (m.U(e)) {
       return e;
     }
     var t = rt(e);
     if (t) {
-      return (null === t || void 0 === t ? void 0 : t.source) || (null === t || void 0 === t ? void 0 : t.cdnUrl);
+      return (null === t || undefined === t ? undefined : t.source) || (null === t || undefined === t ? undefined : t.cdnUrl);
     }
     var n = ht().find(function (t) {
       return t.name + ".svg" === e || t.id === e;
     });
-    return n ? (null === n || void 0 === n ? void 0 : n.source) || (null === n || void 0 === n ? void 0 : n.cdnUrl) : void 0;
+    return n ? (null === n || undefined === n ? undefined : n.source) || (null === n || undefined === n ? undefined : n.cdnUrl) : undefined;
   }
 }
 function at(e, t) {
-  if (void 0 !== t) {
+  if (undefined !== t) {
     p.a.splice(t, 0, e);
   } else {
     p.a.push(e);
@@ -1034,7 +1034,7 @@ function ct(e, t) {
     return t.groupId === e;
   }).forEach(function (e) {
     e.groupId = t;
-    if (void 0 !== e.groupImageIndex) {
+    if (undefined !== e.groupImageIndex) {
       e.id = "".concat(t, "-").concat(e.groupImageIndex + 1).concat(e.extension);
     }
   });
@@ -1131,15 +1131,15 @@ function yt(e, t, n) {
   });
   var o = n.replace(C.E, "");
   o = o.trim();
-  return o = vt(t, r, o = Object(b.c)(o, 40));
+  return o = vt(t, r, o = b.c(o, 40));
 }
 function Et(e) {
-  var t = e.slice(0, e.lastIndexOf(".") < 0 ? void 0 : e.lastIndexOf("."));
-  var n = Object(m.I)(e);
+  var t = e.slice(0, e.lastIndexOf(".") < 0 ? undefined : e.lastIndexOf("."));
+  var n = m.I(e);
   var r = [];
   $e().forEach(function (e) {
     if (e.extension === n) {
-      r.push(e.id.slice(0, e.id.lastIndexOf(".") < 0 ? void 0 : e.id.lastIndexOf(".")));
+      r.push(e.id.slice(0, e.id.lastIndexOf(".") < 0 ? undefined : e.id.lastIndexOf(".")));
     }
   });
   return mt(t, r) + n;
@@ -1148,7 +1148,7 @@ function Ot(e) {
   return wt.apply(this, arguments);
 }
 function wt() {
-  return (wt = Object(a.a)(i.a.mark(function e(t) {
+  return (wt = a.a(i.a.mark(function e(t) {
     var n;
     var r;
     var o;
@@ -1158,7 +1158,7 @@ function wt() {
           case 0:
             n = Et(t.name);
             e.next = 3;
-            return Object(m.ob)(t);
+            return m.ob(t);
           case 3:
             if (!(r = e.sent)) {
               e.next = 8;
@@ -1168,7 +1168,7 @@ function wt() {
               cdnUrl: "",
               id: n,
               source: r,
-              extension: Object(m.I)(t.name)
+              extension: m.I(t.name)
             });
             return e.abrupt("return", o);
           case 8:
@@ -1184,13 +1184,13 @@ function wt() {
 function Ct(e) {
   p.a.length = 0;
   var t;
-  var n = Object(d.a)(e);
+  var n = d.a(e);
   try {
     for (n.s(); !(t = n.n()).done;) {
       var r = t.value;
       var o = r.source;
-      if (o && Object(m.R)(o)) {
-        r.source = Object(m.n)(o);
+      if (o && m.R(o)) {
+        r.source = m.n(o);
       }
       p.a.push(r);
     }
@@ -1204,7 +1204,7 @@ function Tt() {
   return St.apply(this, arguments);
 }
 function St() {
-  return (St = Object(a.a)(i.a.mark(function e() {
+  return (St = a.a(i.a.mark(function e() {
     var t;
     var n;
     var r;
@@ -1217,7 +1217,7 @@ function St() {
         switch (e.prev = e.next) {
           case 0:
             t = [];
-            n = Object(d.a)(p.a);
+            n = d.a(p.a);
             e.prev = 2;
             n.s();
           case 4:
@@ -1225,12 +1225,12 @@ function St() {
               e.next = 18;
               break;
             }
-            if (o = r.value, a = Object(l.a)({}, o), s = a.cdnUrl, c = a.source, s || !c || !Object(m.P)(c)) {
+            if (o = r.value, a = l.a({}, o), s = a.cdnUrl, c = a.source, s || !c || !m.P(c)) {
               e.next = 14;
               break;
             }
             e.next = 11;
-            return Object(m.d)(c);
+            return m.d(c);
           case 11:
             a.source = e.sent;
             e.next = 15;
@@ -1269,7 +1269,7 @@ function It() {
   return At.apply(this, arguments);
 }
 function At() {
-  return (At = Object(a.a)(i.a.mark(function e() {
+  return (At = a.a(i.a.mark(function e() {
     var t;
     var n;
     var r;
@@ -1284,7 +1284,7 @@ function At() {
           case 0:
             t = O.d.getState().resource.soundFileList.toJS();
             n = [];
-            r = Object(d.a)(t);
+            r = d.a(t);
             e.prev = 3;
             r.s();
           case 5:
@@ -1292,12 +1292,12 @@ function At() {
               e.next = 19;
               break;
             }
-            if (a = o.value, s = Object(l.a)({}, a), c = s.cdnUrl, u = s.source, c || !u || !Object(m.P)(u)) {
+            if (a = o.value, s = l.a({}, a), c = s.cdnUrl, u = s.source, c || !u || !m.P(u)) {
               e.next = 15;
               break;
             }
             e.next = 12;
-            return Object(m.d)(u);
+            return m.d(u);
           case 12:
             s.source = e.sent;
             e.next = 16;
@@ -1336,7 +1336,7 @@ function jt() {
   return Nt.apply(this, arguments);
 }
 function Nt() {
-  return (Nt = Object(a.a)(i.a.mark(function e() {
+  return (Nt = a.a(i.a.mark(function e() {
     var t;
     var n;
     var r;
@@ -1351,7 +1351,7 @@ function Nt() {
           case 0:
             t = O.d.getState().resource.iconFileList.toJS();
             n = [];
-            r = Object(d.a)(t);
+            r = d.a(t);
             e.prev = 3;
             r.s();
           case 5:
@@ -1359,12 +1359,12 @@ function Nt() {
               e.next = 19;
               break;
             }
-            if (a = o.value, s = Object(l.a)({}, a), c = s.cdnUrl, u = s.source, c || !u || !Object(m.P)(u)) {
+            if (a = o.value, s = l.a({}, a), c = s.cdnUrl, u = s.source, c || !u || !m.P(u)) {
               e.next = 15;
               break;
             }
             e.next = 12;
-            return Object(m.d)(u);
+            return m.d(u);
           case 12:
             s.source = e.sent;
             e.next = 16;
@@ -1417,7 +1417,7 @@ function Rt(e) {
 }
 function kt(e) {
   var t = document.getElementById(e);
-  return (null === t || void 0 === t ? void 0 : t.dataset.clickType) === C.h.CLICK;
+  return (null === t || undefined === t ? undefined : t.dataset.clickType) === C.h.CLICK;
 }
 function xt(e) {
   p.g.forEach(function (t) {
@@ -1450,11 +1450,11 @@ function Mt(e, t) {
 function Lt(e) {
   var t;
   var n = O.d.getState().project.screens;
-  var r = Object(d.a)(n);
+  var r = d.a(n);
   try {
     for (r.s(); !(t = r.n()).done;) {
       if (t.value.backgroundImage === e) {
-        return !0;
+        return true;
       }
     }
   } catch (o) {
@@ -1462,7 +1462,7 @@ function Lt(e) {
   } finally {
     r.f();
   }
-  return !1;
+  return false;
 }
 function Pt(e) {
   return Array.from(p.g).some(function (t) {
@@ -1480,7 +1480,7 @@ function Bt(e) {
 }
 function Ft(e) {
   return p.a.find(function (t) {
-    return (null === t || void 0 === t ? void 0 : t.cdnUrl) === (null === e || void 0 === e ? void 0 : e.cdnUrl) && t.groupId === e.id;
+    return (null === t || undefined === t ? undefined : t.cdnUrl) === (null === e || undefined === e ? undefined : e.cdnUrl) && t.groupId === e.id;
   });
 }
 function Gt(e, t, n) {
@@ -1488,6 +1488,6 @@ function Gt(e, t, n) {
 }
 function Ut(e, t) {
   var n = rt(t);
-  return (null === n || void 0 === n ? void 0 : n.groupId) === e;
+  return (null === n || undefined === n ? undefined : n.groupId) === e;
 }
 export default pe;

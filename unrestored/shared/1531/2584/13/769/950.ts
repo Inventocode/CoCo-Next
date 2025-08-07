@@ -1,7 +1,7 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
 exports.warning = i;
 exports.note = o;
@@ -13,7 +13,7 @@ exports.warningOnce = s;
 exports.noteOnce = function (e, t) {
   a(o, e, t);
 };
-exports.default = void 0;
+exports.default = undefined;
 var r = {};
 function i(e, t) {
   0;
@@ -23,8 +23,8 @@ function o(e, t) {
 }
 function a(e, t, n) {
   if (!(t || r[n])) {
-    e(!1, n);
-    r[n] = !0;
+    e(false, n);
+    r[n] = true;
   }
 }
 function s(e, t) {

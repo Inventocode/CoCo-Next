@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.FieldNumber = void 0;
+exports.FieldNumber = undefined;
 var r = require("tslib");
 var i = require("inversify");
 var o = require("../4/127");
@@ -18,16 +18,16 @@ var f = function (e) {
       text: t.opt_value && !isNaN(t.opt_value) ? String(t.opt_value) : "0",
       opt_validator: t.opt_validator
     }) || this;
-    n.controller_option = void 0;
-    n.controller = void 0;
+    n.controller_option = undefined;
+    n.controller = undefined;
     n.min_ = -1 / 0;
     n.max_ = 1 / 0;
     n.precision_ = 0;
-    n.should_show_quote = !1;
+    n.should_show_quote = false;
     n.field_type = "FieldNumber";
     n.set_constraints(t.opt_min, t.opt_max, t.opt_precision);
-    n.allow_text = void 0;
-    n.controller_option = t.opt_controller || void 0;
+    n.allow_text = undefined;
+    n.controller_option = t.opt_controller || undefined;
     if (t.opt_controller) {
       n.set_controller_option(t.opt_controller);
     }
@@ -87,7 +87,7 @@ var f = function (e) {
       t = Math.round(t / Number(this.precision_)) * Number(this.precision_);
     }
     if (!this.exceptions || -1 === this.exceptions.indexOf(t)) {
-      if (void 0 != this.mod_ && t !== 1 / 0 && t !== -1 / 0) {
+      if (undefined != this.mod_ && t !== 1 / 0 && t !== -1 / 0) {
         var n = Number(this.max_);
         var r = Number(this.min_);
         var i = n - r;
@@ -115,28 +115,28 @@ var f = function (e) {
     return String(t);
   };
   t.prototype.set_allow_text = function (e) {
-    if ("undefined" === typeof this.allow_text && void 0 !== e) {
+    if ("undefined" === typeof this.allow_text && undefined !== e) {
       this.allow_text = e;
     }
   };
   t.prototype.update_allow_text = function () {
     var e;
     var t;
-    if ("undefined" === typeof this.allow_text && (null === (e = this.source_block) || void 0 === e ? void 0 : e.parent_block)) {
-      var r = !1;
+    if ("undefined" === typeof this.allow_text && (null === (e = this.source_block) || undefined === e ? undefined : e.parent_block)) {
+      var r = false;
       var i = this.source_block.parent_block;
-      var o = null === (t = i.get_input_with_block(this.source_block)) || void 0 === t ? void 0 : t.name;
+      var o = null === (t = i.get_input_with_block(this.source_block)) || undefined === t ? undefined : t.name;
       if (n.WHITE_LIST_BLOCKS.includes(i.type) || Object.keys(n.WHITE_LIST_SPECIAL).includes(i.type) && n.WHITE_LIST_SPECIAL[i.type] === o) {
-        r = !0;
+        r = true;
       }
       this.set_allow_text(r);
     }
   };
   t.prototype.set_mod = function (e) {
-    this.mod_ = e ? "true" === e : void 0;
+    this.mod_ = e ? "true" === e : undefined;
   };
   t.prototype.set_exceptions = function (e) {
-    this.exceptions = e || void 0;
+    this.exceptions = e || undefined;
   };
   t.prototype.widget_dispose = function () {
     var t = this;
@@ -197,7 +197,7 @@ var f = function (e) {
       this.text_element.appendChild(t);
       this.update_width();
       var r = n.LEFT_QUOTE_X + n.QUOTE_WIDTH + this.size_.width;
-      if (!(null === (e = this.quote_right) || void 0 === e)) {
+      if (!(null === (e = this.quote_right) || undefined === e)) {
         e.setAttribute("transform", "translate(" + r + ", " + n.QUOTE_Y + ")");
       }
     } else {
@@ -249,16 +249,16 @@ var f = function (e) {
     }
     this.workspace_ = this.source_block.get_workspace();
     this.widget_div.show(this, function () {
-      n.focus(!1);
+      n.focus(false);
       if (n.runtime_data.editing === n) {
-        n.focus(!1);
+        n.focus(false);
       }
       if (t) {
         t();
       }
       n.widget_dispose()();
     });
-    if (void 0 == this.widget_div.DIV) {
+    if (undefined == this.widget_div.DIV) {
       throw new Error("DIV is undefined");
     }
     this.html_input = this.widget_create();
@@ -280,9 +280,9 @@ var f = function (e) {
     cloud_lists_insert_value: "VALUE",
     cloud_lists_replace: "VALUE"
   };
-  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.slider_controller)], t.prototype, "slider_controller", void 0);
-  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.angle_controller)], t.prototype, "angle_controller", void 0);
-  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.color_controller)], t.prototype, "color_controller", void 0);
+  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.slider_controller)], t.prototype, "slider_controller", undefined);
+  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.angle_controller)], t.prototype, "angle_controller", undefined);
+  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.color_controller)], t.prototype, "color_controller", undefined);
   return t = n = (0, r.__decorate)([(0, i.injectable)()], t);
 }(require("./374").FieldTextInput);
 exports.FieldNumber = f;

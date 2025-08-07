@@ -45,7 +45,7 @@
     return a;
   };
   exports.deprecate = function (n, r) {
-    if ("undefined" !== typeof e && !0 === e.noDeprecation) {
+    if ("undefined" !== typeof e && true === e.noDeprecation) {
       return n;
     }
     if ("undefined" === typeof e) {
@@ -53,7 +53,7 @@
         return exports.deprecate(n, r).apply(this, arguments);
       };
     }
-    var i = !1;
+    var i = false;
     return function () {
       if (!i) {
         if (e.throwDeprecation) {
@@ -64,7 +64,7 @@
         } else {
           console.error(r);
         }
-        i = !0;
+        i = true;
       }
       return n.apply(this, arguments);
     };
@@ -90,16 +90,16 @@
       }
     }
     if (v(r.showHidden)) {
-      r.showHidden = !1;
+      r.showHidden = false;
     }
     if (v(r.depth)) {
       r.depth = 2;
     }
     if (v(r.colors)) {
-      r.colors = !1;
+      r.colors = false;
     }
     if (v(r.customInspect)) {
-      r.customInspect = !0;
+      r.customInspect = true;
     }
     if (r.colors) {
       r.stylize = c;
@@ -146,7 +146,7 @@
     var s = function (e) {
       var t = {};
       e.forEach(function (e, n) {
-        t[e] = !0;
+        t[e] = true;
       });
       return t;
     }(a);
@@ -173,10 +173,10 @@
     }
     var u;
     var y = "";
-    var x = !1;
+    var x = false;
     var C = ["{", "}"];
     if (h(n)) {
-      x = !0;
+      x = true;
       C = ["[", "]"];
     }
     if (E(n)) {
@@ -194,14 +194,14 @@
     return 0 !== a.length || x && 0 != n.length ? r < 0 ? m(n) ? e.stylize(RegExp.prototype.toString.call(n), "regexp") : e.stylize("[Object]", "special") : (e.seen.push(n), u = x ? function (e, t, n, r, i) {
       for (var o = [], a = 0, s = t.length; a < s; ++a) {
         if (S(t, String(a))) {
-          o.push(d(e, t, n, r, String(a), !0));
+          o.push(d(e, t, n, r, String(a), true));
         } else {
           o.push("");
         }
       }
       i.forEach(function (i) {
         if (!i.match(/^\d+$/)) {
-          o.push(d(e, t, n, r, i, !0));
+          o.push(d(e, t, n, r, i, true));
         }
       });
       return o;
@@ -281,7 +281,7 @@
     return "string" === typeof e;
   }
   function v(e) {
-    return void 0 === e;
+    return undefined === e;
   }
   function m(e) {
     return y(e) && "[object RegExp]" === x(e);
@@ -309,9 +309,9 @@
       o = Object({
         NODE_ENV: "production",
         PUBLIC_URL: "",
-        WDS_SOCKET_HOST: void 0,
-        WDS_SOCKET_PATH: void 0,
-        WDS_SOCKET_PORT: void 0
+        WDS_SOCKET_HOST: undefined,
+        WDS_SOCKET_PATH: undefined,
+        WDS_SOCKET_PORT: undefined
       }).NODE_DEBUG || "";
     }
     n = n.toUpperCase();
@@ -397,7 +397,7 @@
     }
     return e;
   };
-  var T = "undefined" !== typeof Symbol ? Symbol("util.promisify.custom") : void 0;
+  var T = "undefined" !== typeof Symbol ? Symbol("util.promisify.custom") : undefined;
   function B(e, t) {
     if (!e) {
       var n = new Error("Promise was rejected with a falsy value");
@@ -417,9 +417,9 @@
       }
       Object.defineProperty(t, T, {
         value: t,
-        enumerable: !1,
-        writable: !1,
-        configurable: !0
+        enumerable: false,
+        writable: false,
+        configurable: true
       });
       return t;
     }
@@ -448,9 +448,9 @@
     if (T) {
       Object.defineProperty(t, T, {
         value: t,
-        enumerable: !1,
-        writable: !1,
-        configurable: !0
+        enumerable: false,
+        writable: false,
+        configurable: true
       });
     }
     return Object.defineProperties(t, r(e));

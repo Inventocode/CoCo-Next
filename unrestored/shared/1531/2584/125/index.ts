@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.get_num_g = exports.reset_all_block_id = exports.insert_before = exports.insert_after = exports.clone_node = exports.get_size_attr = exports.get_translate = exports.update_visibility_class = exports.add_class_if_necessary = exports.remove_class_if_necessary = exports.is_in_same_shadow = exports.is_inside_shadow = exports.is_parent = exports.xmlstr_to_dom = exports.contains = exports.has_class = exports.get_owner_document = exports.get_viewport_bbox = exports.get_viewport_size = exports.get_document_scroll = exports.remove_children = exports.create_dom = exports.get_page_offset = exports.parse_to_SVG = exports.parse_to_DOM = exports.remove_class = exports.add_class = exports.create_font_icon = exports.create_div_element = exports.create_svg_element = exports.set_css_transform = exports.remove_attribute = exports.remove_node = exports.XLINK_NS = exports.SVG_NS = void 0;
+exports.get_num_g = exports.reset_all_block_id = exports.insert_before = exports.insert_after = exports.clone_node = exports.get_size_attr = exports.get_translate = exports.update_visibility_class = exports.add_class_if_necessary = exports.remove_class_if_necessary = exports.is_in_same_shadow = exports.is_inside_shadow = exports.is_parent = exports.xmlstr_to_dom = exports.contains = exports.has_class = exports.get_owner_document = exports.get_viewport_bbox = exports.get_viewport_size = exports.get_document_scroll = exports.remove_children = exports.create_dom = exports.get_page_offset = exports.parse_to_SVG = exports.parse_to_DOM = exports.remove_class = exports.add_class = exports.create_font_icon = exports.create_div_element = exports.create_svg_element = exports.set_css_transform = exports.remove_attribute = exports.remove_node = exports.XLINK_NS = exports.SVG_NS = undefined;
 var r = require("tslib");
 var i = require("@kitten-team/gl-matrix");
 var o = require("./195/index");
@@ -15,7 +15,7 @@ var l = require("./474");
 exports.SVG_NS = "http://www.w3.org/2000/svg";
 exports.XLINK_NS = "http://www.w3.org/1999/xlink";
 function f(e, n, r) {
-  if (void 0 === n) {
+  if (undefined === n) {
     n = {};
   }
   var i = document.createElementNS(exports.SVG_NS, e);
@@ -44,7 +44,7 @@ function h(e) {
       return "function" == typeof e.item;
     }
   }
-  return !1;
+  return false;
 }
 function p() {
   var e = window.document.body;
@@ -53,11 +53,11 @@ function p() {
 function _(e, t) {
   for (var n = t; n;) {
     if (e === n) {
-      return !0;
+      return true;
     }
     n = n.parentElement;
   }
-  return !1;
+  return false;
 }
 function A(e, t) {
   if (e.classList.contains(t)) {
@@ -76,7 +76,7 @@ exports.remove_node = function (e) {
 };
 exports.remove_attribute = function (e, t) {
   if (l.is.ie(">=10")) {
-    e.setAttribute(t, void 0);
+    e.setAttribute(t, undefined);
   } else {
     e.removeAttribute(t);
   }
@@ -104,15 +104,15 @@ exports.create_font_icon = function (e, t) {
 };
 exports.add_class = function (e, t) {
   var n = e.getAttribute("class") || "";
-  return -1 == (" " + n + " ").indexOf(" " + t + " ") && (n && (n += " "), e.setAttribute("class", n + t), !0);
+  return -1 == (" " + n + " ").indexOf(" " + t + " ") && (n && (n += " "), e.setAttribute("class", n + t), true);
 };
 exports.remove_class = function (e, t) {
   if (!e || !t) {
-    return !1;
+    return false;
   }
   var n = e.getAttribute("class");
-  if (void 0 == n || -1 == (" " + n + " ").indexOf(" " + t + " ")) {
-    return !1;
+  if (undefined == n || -1 == (" " + n + " ").indexOf(" " + t + " ")) {
+    return false;
   }
   for (var r = n.split(/\s+/), i = 0; i < r.length; i++) {
     if (!(r[i] && r[i] != t)) {
@@ -125,7 +125,7 @@ exports.remove_class = function (e, t) {
   } else {
     e.removeAttribute("class");
   }
-  return !0;
+  return true;
 };
 exports.parse_to_DOM = function (e) {
   var t = document.createElement("div");
@@ -192,7 +192,7 @@ exports.create_dom = function (e, t, n) {
   return i;
 };
 exports.remove_children = function (e) {
-  for (var t = e.firstChild; void 0 != t;) {
+  for (var t = e.firstChild; undefined != t;) {
     e.removeChild(t);
     t = e.firstChild;
   }
@@ -229,7 +229,7 @@ exports.has_class = function (e, t) {
 };
 exports.contains = function (e, t) {
   if (!e || !t) {
-    return !1;
+    return false;
   }
   if (e.contains && t.nodeType == o.NodeType.ELEMENT) {
     return e == t || e.contains(t);
@@ -247,18 +247,18 @@ exports.xmlstr_to_dom = function (e) {
 };
 exports.is_parent = _;
 exports.is_inside_shadow = function (e) {
-  for (var t = null === e || void 0 === e ? void 0 : e.parentElement; t;) {
+  for (var t = null === e || undefined === e ? undefined : e.parentElement; t;) {
     if (t.classList.contains("blocklyShadow")) {
-      return !0;
+      return true;
     }
     t = t.parentElement;
   }
-  return !1;
+  return false;
 };
 exports.is_in_same_shadow = function (e, t) {
   for (var n = e.parentElement; n;) {
     if (!n) {
-      return !1;
+      return false;
     }
     if (n.classList.contains("blocklyShadow")) {
       break;
@@ -329,7 +329,7 @@ exports.insert_after = function (e, t) {
 };
 exports.insert_before = function (e, t) {
   var n = t.parentNode;
-  if (void 0 == n) {
+  if (undefined == n) {
     throw new ReferenceError("Reference node has no parent.");
   }
   n.insertBefore(e, t);
@@ -348,7 +348,7 @@ exports.reset_all_block_id = function (e) {
   function r(e) {
     if (e.attributes) {
       var i = e.getAttribute("id");
-      for (var o in i && (t[i] = !0, n[i] = c.gen_uid()), e.childNodes) if ("object" === typeof e.childNodes[o]) {
+      for (var o in i && (t[i] = true, n[i] = c.gen_uid()), e.childNodes) if ("object" === typeof e.childNodes[o]) {
         r(e.childNodes[o]);
       }
     }

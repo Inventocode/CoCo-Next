@@ -8,13 +8,13 @@ var a = function () {
     this.image = e;
     this.height = e.getHeight();
     this.width = e.getWidth();
-    if (!(void 0 !== r && null !== r)) {
+    if (!(undefined !== r && null !== r)) {
       r = t.INIT_SIZE;
     }
-    if (!(void 0 !== n && null !== n)) {
+    if (!(undefined !== n && null !== n)) {
       n = e.getWidth() / 2 | 0;
     }
-    if (!(void 0 !== o && null !== o)) {
+    if (!(undefined !== o && null !== o)) {
       o = e.getHeight() / 2 | 0;
     }
     var a = r / 2 | 0;
@@ -27,13 +27,13 @@ var a = function () {
     }
   }
   t.prototype.detect = function () {
-    for (var t = this.leftInit, e = this.rightInit, r = this.upInit, n = this.downInit, o = !1, a = !0, u = !1, s = !1, c = !1, f = !1, h = !1, l = this.width, d = this.height; a;) {
-      a = !1;
-      for (var p = !0; (p || !s) && e < l;) {
-        if (p = this.containsBlackPoint(r, n, e, !1)) {
+    for (var t = this.leftInit, e = this.rightInit, r = this.upInit, n = this.downInit, o = false, a = true, u = false, s = false, c = false, f = false, h = false, l = this.width, d = this.height; a;) {
+      a = false;
+      for (var p = true; (p || !s) && e < l;) {
+        if (p = this.containsBlackPoint(r, n, e, false)) {
           e++;
-          a = !0;
-          s = !0;
+          a = true;
+          s = true;
         } else {
           if (!s) {
             e++;
@@ -41,14 +41,14 @@ var a = function () {
         }
       }
       if (e >= l) {
-        o = !0;
+        o = true;
         break;
       }
-      for (var g = !0; (g || !c) && n < d;) {
-        if (g = this.containsBlackPoint(t, e, n, !0)) {
+      for (var g = true; (g || !c) && n < d;) {
+        if (g = this.containsBlackPoint(t, e, n, true)) {
           n++;
-          a = !0;
-          c = !0;
+          a = true;
+          c = true;
         } else {
           if (!c) {
             n++;
@@ -56,14 +56,14 @@ var a = function () {
         }
       }
       if (n >= d) {
-        o = !0;
+        o = true;
         break;
       }
-      for (var y = !0; (y || !f) && t >= 0;) {
-        if (y = this.containsBlackPoint(r, n, t, !1)) {
+      for (var y = true; (y || !f) && t >= 0;) {
+        if (y = this.containsBlackPoint(r, n, t, false)) {
           t--;
-          a = !0;
-          f = !0;
+          a = true;
+          f = true;
         } else {
           if (!f) {
             t--;
@@ -71,14 +71,14 @@ var a = function () {
         }
       }
       if (t < 0) {
-        o = !0;
+        o = true;
         break;
       }
-      for (var w = !0; (w || !h) && r >= 0;) {
-        if (w = this.containsBlackPoint(t, e, r, !0)) {
+      for (var w = true; (w || !h) && r >= 0;) {
+        if (w = this.containsBlackPoint(t, e, r, true)) {
           r--;
-          a = !0;
-          h = !0;
+          a = true;
+          h = true;
         } else {
           if (!h) {
             r--;
@@ -86,11 +86,11 @@ var a = function () {
         }
       }
       if (r < 0) {
-        o = !0;
+        o = true;
         break;
       }
       if (a) {
-        u = !0;
+        u = true;
       }
     }
     if (!o && u) {
@@ -152,17 +152,17 @@ var a = function () {
     if (n) {
       for (var i = t; i <= e; i++) {
         if (o.get(i, r)) {
-          return !0;
+          return true;
         }
       }
     } else {
       for (var a = t; a <= e; a++) {
         if (o.get(r, a)) {
-          return !0;
+          return true;
         }
       }
     }
-    return !1;
+    return false;
   };
   t.INIT_SIZE = 10;
   t.CORR = 1;

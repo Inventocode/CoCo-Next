@@ -18,10 +18,10 @@ function o() {
 }
 exports.parse = m;
 exports.resolve = function (e, t) {
-  return m(e, !1, !0).resolve(t);
+  return m(e, false, true).resolve(t);
 };
 exports.resolveObject = function (e, t) {
-  return e ? m(e, !1, !0).resolveObject(t) : t;
+  return e ? m(e, false, true).resolveObject(t) : t;
 };
 exports.format = function (e) {
   if (i.isString(e)) {
@@ -40,24 +40,24 @@ var d = ["/", "?", "#"];
 var h = /^[+a-z0-9A-Z_-]{0,63}$/;
 var p = /^([+a-z0-9A-Z_-]{0,63})(.*)$/;
 var _ = {
-  javascript: !0,
-  "javascript:": !0
+  javascript: true,
+  "javascript:": true
 };
 var A = {
-  javascript: !0,
-  "javascript:": !0
+  javascript: true,
+  "javascript:": true
 };
 var g = {
-  http: !0,
-  https: !0,
-  ftp: !0,
-  gopher: !0,
-  file: !0,
-  "http:": !0,
-  "https:": !0,
-  "ftp:": !0,
-  "gopher:": !0,
-  "file:": !0
+  http: true,
+  https: true,
+  ftp: true,
+  gopher: true,
+  file: true,
+  "http:": true,
+  "https:": true,
+  "ftp:": true,
+  "gopher:": true,
+  "file:": true
 };
 var v = require("./1991/index");
 function m(e, t, n) {
@@ -106,7 +106,7 @@ o.prototype.parse = function (e, t, n) {
     var E = "//" === m.substr(0, 2);
     if (!(!E || b && A[b])) {
       m = m.substr(2);
-      this.slashes = !0;
+      this.slashes = true;
     }
   }
   if (!A[b] && (E || b && !g[b])) {
@@ -136,7 +136,7 @@ o.prototype.parse = function (e, t, n) {
     this.hostname = this.hostname || "";
     var T = "[" === this.hostname[0] && "]" === this.hostname[this.hostname.length - 1];
     if (!T) {
-      for (k = 0, B = this.hostname.split(/\./), D = B.length, void 0; k < D; k++) {
+      for (k = 0, B = this.hostname.split(/\./), D = B.length, undefined; k < D; k++) {
         var B;
         var D;
         var I = B[k];
@@ -238,7 +238,7 @@ o.prototype.format = function () {
   var t = this.protocol || "";
   var n = this.pathname || "";
   var r = this.hash || "";
-  var o = !1;
+  var o = false;
   var a = "";
   if (this.host) {
     o = e + this.host;
@@ -257,7 +257,7 @@ o.prototype.format = function () {
   if (t && ":" !== t.substr(-1)) {
     t += ":";
   }
-  if (this.slashes || (!t || g[t]) && !1 !== o) {
+  if (this.slashes || (!t || g[t]) && false !== o) {
     o = "//" + (o || "");
     if (n && "/" !== n.charAt(0)) {
       n = "/" + n;
@@ -278,12 +278,12 @@ o.prototype.format = function () {
   })) + (s = s.replace("#", "%23")) + r;
 };
 o.prototype.resolve = function (e) {
-  return this.resolveObject(m(e, !1, !0)).format();
+  return this.resolveObject(m(e, false, true)).format();
 };
 o.prototype.resolveObject = function (e) {
   if (i.isString(e)) {
     var t = new o();
-    t.parse(e, !1, !0);
+    t.parse(e, false, true);
     e = t;
   }
   for (var n = new o(), r = Object.keys(this), a = 0; a < r.length; a++) {

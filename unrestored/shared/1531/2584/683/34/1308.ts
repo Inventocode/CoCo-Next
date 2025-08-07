@@ -11,7 +11,7 @@ function r(e, t, n) {
   var h;
   var p = t && t.length;
   var A = p ? t[0] * n : e.length;
-  var g = i(e, 0, A, n, !0);
+  var g = i(e, 0, A, n, true);
   var v = [];
   if (!g || g.next === g.prev) {
     return v;
@@ -27,8 +27,8 @@ function r(e, t, n) {
       for (o = 0, a = t.length; o < a; o++) {
         s = t[o] * r;
         c = o < a - 1 ? t[o + 1] * r : e.length;
-        if ((u = i(e, s, c, r, !1)) === u.next) {
-          u.steiner = !0;
+        if ((u = i(e, s, c, r, false)) === u.next) {
+          u.steiner = true;
         }
         l.push(_(u));
       }
@@ -88,7 +88,7 @@ function o(e, t) {
   var n;
   var r = e;
   do {
-    n = !1;
+    n = false;
     if (r.steiner || !m(r, r.next) && 0 !== v(r.prev, r, r.next)) {
       r = r.next;
     } else {
@@ -96,7 +96,7 @@ function o(e, t) {
       if ((r = t = r.prev) === r.next) {
         break;
       }
-      n = !0;
+      n = true;
     }
   } while (n || r !== t);
   return t;
@@ -189,46 +189,46 @@ function s(e) {
   var n = e;
   var r = e.next;
   if (v(t, n, r) >= 0) {
-    return !1;
+    return false;
   }
   for (var i = t.x, o = n.x, a = r.x, s = t.y, c = n.y, u = r.y, l = i < o ? i < a ? i : a : o < a ? o : a, f = s < c ? s < u ? s : u : c < u ? c : u, d = i > o ? i > a ? i : a : o > a ? o : a, h = s > c ? s > u ? s : u : c > u ? c : u, p = r.next; p !== t;) {
     if (p.x >= l && p.x <= d && p.y >= f && p.y <= h && A(i, s, o, c, a, u, p.x, p.y) && v(p.prev, p, p.next) >= 0) {
-      return !1;
+      return false;
     }
     p = p.next;
   }
-  return !0;
+  return true;
 }
 function c(e, t, n, r) {
   var i = e.prev;
   var o = e;
   var a = e.next;
   if (v(i, o, a) >= 0) {
-    return !1;
+    return false;
   }
   for (var s = i.x, c = o.x, u = a.x, l = i.y, f = o.y, d = a.y, h = s < c ? s < u ? s : u : c < u ? c : u, _ = l < f ? l < d ? l : d : f < d ? f : d, g = s > c ? s > u ? s : u : c > u ? c : u, m = l > f ? l > d ? l : d : f > d ? f : d, y = p(h, _, t, n, r), b = p(g, m, t, n, r), w = e.prevZ, E = e.nextZ; w && w.z >= y && E && E.z <= b;) {
     if (w.x >= h && w.x <= g && w.y >= _ && w.y <= m && w !== i && w !== a && A(s, l, c, f, u, d, w.x, w.y) && v(w.prev, w, w.next) >= 0) {
-      return !1;
+      return false;
     }
     w = w.prevZ;
     if (E.x >= h && E.x <= g && E.y >= _ && E.y <= m && E !== i && E !== a && A(s, l, c, f, u, d, E.x, E.y) && v(E.prev, E, E.next) >= 0) {
-      return !1;
+      return false;
     }
     E = E.nextZ;
   }
   for (; w && w.z >= y;) {
     if (w.x >= h && w.x <= g && w.y >= _ && w.y <= m && w !== i && w !== a && A(s, l, c, f, u, d, w.x, w.y) && v(w.prev, w, w.next) >= 0) {
-      return !1;
+      return false;
     }
     w = w.prevZ;
   }
   for (; E && E.z <= b;) {
     if (E.x >= h && E.x <= g && E.y >= _ && E.y <= m && E !== i && E !== a && A(s, l, c, f, u, d, E.x, E.y) && v(E.prev, E, E.next) >= 0) {
-      return !1;
+      return false;
     }
     E = E.nextZ;
   }
-  return !0;
+  return true;
 }
 function u(e, t, n) {
   var r = e;
@@ -335,14 +335,14 @@ function g(e, t) {
     var n = e;
     do {
       if (n.i !== e.i && n.next.i !== e.i && n.i !== t.i && n.next.i !== t.i && y(n, n.next, e, t)) {
-        return !0;
+        return true;
       }
       n = n.next;
     } while (n !== e);
-    return !1;
+    return false;
   }(e, t) && (E(e, t) && E(t, e) && function (e, t) {
     var n = e;
-    var r = !1;
+    var r = false;
     var i = (e.x + t.x) / 2;
     var o = (e.y + t.y) / 2;
     do {
@@ -423,7 +423,7 @@ function k(e, t, n) {
   this.z = 0;
   this.prevZ = null;
   this.nextZ = null;
-  this.steiner = !1;
+  this.steiner = false;
 }
 function S(e, t, n, r) {
   for (var i = 0, o = t, a = n - r; o < n; o += r) {

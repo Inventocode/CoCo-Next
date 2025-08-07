@@ -11,7 +11,7 @@ var u = i.entries;
 var d = o.aTypedArray;
 var p = o.exportTypedArrayMethod;
 var f = s && s.prototype[a];
-var h = !!f && ("values" == f.name || void 0 == f.name);
+var h = !!f && ("values" == f.name || undefined == f.name);
 var m = function () {
   return c.call(d(this));
 };

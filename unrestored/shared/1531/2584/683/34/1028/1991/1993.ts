@@ -16,7 +16,7 @@ module.exports = function (e, t, n, s) {
   t = t || "&";
   n = n || "=";
   if (null === e) {
-    e = void 0;
+    e = undefined;
   }
   return "object" === typeof e ? o(a(e), function (a) {
     var s = encodeURIComponent(r(a)) + n;

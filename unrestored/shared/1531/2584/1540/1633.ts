@@ -4,7 +4,7 @@ var i = require("./1738/231");
 var a = Object.isFrozen;
 r({
   target: "Object",
-  stat: !0,
+  stat: true,
   forced: o(function () {
     a(1);
   })

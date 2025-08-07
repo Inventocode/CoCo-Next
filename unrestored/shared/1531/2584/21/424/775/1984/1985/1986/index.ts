@@ -29,63 +29,63 @@ var c = {
 };
 var u = [0, 0, 0, 3, 4, 5, 10, 10, 14, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 10, 0, 1, 1, 1, 2, 7, 0, 0, 2, 1, 1, 1, 2, 0, 0, 3, 0, 1, 6, 9, 9, 11, 12, 13, 12, 8];
 var l = {
-  0: !0,
-  1: !0,
-  3: !0,
-  4: !0,
-  6: !0,
-  8: !0,
-  9: !0,
-  12: !0,
-  13: !0,
-  14: !0
+  0: true,
+  1: true,
+  3: true,
+  4: true,
+  6: true,
+  8: true,
+  9: true,
+  12: true,
+  13: true,
+  14: true
 };
 var f = {
-  0: !0,
-  1: !0,
-  2: !0,
-  3: !0,
-  4: !0,
-  5: !0,
-  6: !0,
-  7: !0,
-  8: !0,
-  9: !0,
-  10: !0,
-  11: !0,
-  12: !0,
-  13: !0
+  0: true,
+  1: true,
+  2: true,
+  3: true,
+  4: true,
+  5: true,
+  6: true,
+  7: true,
+  8: true,
+  9: true,
+  10: true,
+  11: true,
+  12: true,
+  13: true
 };
 var d = {
-  0: !0,
-  3: !0,
-  4: !0,
-  8: !0,
-  12: !0,
-  13: !0
+  0: true,
+  3: true,
+  4: true,
+  8: true,
+  12: true,
+  13: true
 };
 var h = {};
 var p = {
-  0: !0,
-  1: !0,
-  3: !0,
-  4: !0,
-  6: !0,
-  8: !0,
-  12: !0,
-  13: !0
+  0: true,
+  1: true,
+  3: true,
+  4: true,
+  6: true,
+  8: true,
+  12: true,
+  13: true
 };
 var _ = {
-  1: !0
+  1: true
 };
 var A = [[], ["1", "2", "3", "7", "8", "9", "4", "5", "6", "+", "-", "*", "/", "(", ")", "^", "!", "P", "C", "e", "0", ".", ",", "n", " "], ["pi", "ln", "Pi"], ["sin", "cos", "tan", "Del", "int", "Mod", "log", "pow"], ["asin", "acos", "atan", "cosh", "root", "tanh", "sinh"], ["acosh", "atanh", "asinh", "Sigma"]];
 function g(e, t, n, r) {
   for (var i = 0; i < r; i++) {
     if (e[n + i] !== t[i]) {
-      return !1;
+      return false;
     }
   }
-  return !0;
+  return true;
 }
 r.addToken = function (e) {
   for (var t = 0; t < e.length; t++) {
@@ -150,7 +150,7 @@ r.lex = function (e, t) {
     for (var t, n, i, l = [], f = e.length, d = 0; d < f; d++) {
       if (!(d < f - 1 && " " === e[d] && " " === e[d + 1])) {
         for (t = "", n = e.length - d > A.length - 2 ? A.length - 1 : e.length - d; n > 0; n--) {
-          if (void 0 !== A[n]) {
+          if (undefined !== A[n]) {
             for (i = 0; i < A[n].length; i++) {
               if (g(e, A[n][i], d, n)) {
                 t = A[n][i];
@@ -190,8 +190,9 @@ r.lex = function (e, t) {
       var M = b[b.length - 1];
       for (D = w.length; D-- && 0 === w[D];) {
         if (-1 !== [0, 2, 3, 4, 5, 9, 11, 12, 13].indexOf(F)) {
-          if (!0 !== x[F]) {
-            throw console.log(e, B, T, x), new r.Exception(I + " is not allowed after " + k);
+          if (true !== x[F]) {
+            console.log(e, B, T, x);
+            throw new r.Exception(I + " is not allowed after " + k);
           }
           b.push(m);
           x = f;
@@ -199,10 +200,10 @@ r.lex = function (e, t) {
           i(w, -1).pop();
         }
       }
-      if (!0 !== x[F]) {
+      if (true !== x[F]) {
         throw new r.Exception(I + " is not allowed after " + k);
       }
-      if (!0 === O[F]) {
+      if (true === O[F]) {
         F = 2;
         R = r.math.mul;
         N = "&times;";
@@ -271,7 +272,7 @@ r.lex = function (e, t) {
         i(w, 1);
         O = h;
         M.value += R;
-        M.hasDec = !0;
+        M.hasDec = true;
       } else if (7 === F) {
         x = f;
         O = p;
@@ -353,7 +354,7 @@ r.lex = function (e, t) {
     b.push(m);
     i(w, -1).pop();
   }
-  if (!0 !== x[5]) {
+  if (true !== x[5]) {
     throw new r.Exception("complete the expression");
   }
   for (; C--;) {

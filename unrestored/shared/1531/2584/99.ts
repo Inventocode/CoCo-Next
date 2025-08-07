@@ -7,7 +7,7 @@ export { j as f };
 export { N as d };
 export { R as e };
 export { k as a };
-var r = require("./1/index");
+import r = require("regenerator-runtime");
 var o = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -20,22 +20,22 @@ var o = function __importDefault(module) {
   });
   return defaultExport;
 }(r);
-var i = require("./10/index");
-var a = require("./6");
-var s = require("./25/index");
-var c = require("./7");
-var l = require("./31/index");
-var u = require("./38/index");
-var d = require("./9");
-var p = require("./26/index");
-var f = require("./5");
-var h = require("./98");
-var m = require("./38/375");
+import i = require("./10/index");
+import a = require("./6");
+import s = require("./25/index");
+import c = require("./7");
+import l = require("lodash");
+import u = require("./38/index");
+import d = require("./9");
+import p = require("./26/index");
+import f = require("./5");
+import h = require("./98");
+import m = require("./38/375");
 function g(e) {
   return _.apply(this, arguments);
 }
 function _() {
-  return (_ = Object(c.a)(o.a.mark(function e(t) {
+  return (_ = c.a(o.a.mark(function e(t) {
     var n;
     var r;
     var i;
@@ -68,16 +68,16 @@ function _() {
             g = i.globalObjectList;
             _ = i.version;
             b = i.projectSource;
-            y = null === (n = r.common.userInfo) || void 0 === n ? void 0 : n.id;
+            y = null === (n = r.common.userInfo) || undefined === n ? undefined : n.id;
             C = w(r.project.screens);
             T = r.project.screens.map(function (e) {
               return e.id;
             }).toJSON();
             S = p.z.getWorkspacesRecord();
             I = E(S, m);
-            A = Object(l.cloneDeep)(O(I));
-            j = Object(h.d)();
-            N = Object(h.e)();
+            A = l.cloneDeep(O(I));
+            j = h.d();
+            N = h.e();
             e.t0 = l.cloneDeep;
             e.t1 = y;
             e.t2 = a;
@@ -86,15 +86,15 @@ function _() {
             e.t5 = T;
             e.t6 = S;
             e.next = 19;
-            return Object(d.H)();
+            return d.H();
           case 19:
             e.t7 = e.sent;
             e.next = 22;
-            return Object(d.I)();
+            return d.I();
           case 22:
             e.t8 = e.sent;
             e.next = 25;
-            return Object(d.G)();
+            return d.G();
           case 25:
             e.t9 = e.sent;
             e.t10 = v();
@@ -160,25 +160,25 @@ function v() {
   });
   r.forEach(function (e) {
     e.widgetIds.forEach(function (e) {
-      var t = Object(d.Bb)(e);
-      if ((null === t || void 0 === t ? void 0 : t.type) === f.H || (null === t || void 0 === t ? void 0 : t.type) === f.z || (null === t || void 0 === t ? void 0 : t.type) === f.w) {
+      var t = d.Bb(e);
+      if ((null === t || undefined === t ? undefined : t.type) === f.H || (null === t || undefined === t ? undefined : t.type) === f.z || (null === t || undefined === t ? undefined : t.type) === f.w) {
         var r = t.attributes.fontFamily;
         if (!i[r]) {
           if (n[r].cdnUrl) {
             o.push(n[r]);
           }
-          i[r] = !0;
+          i[r] = true;
         }
       }
       if (t && t.attributes && "EXTENSION_QUILL_RICH_TEXT_WIDGET" === t.type) {
         var a = t.attributes.content;
-        var s = void 0 === a ? "" : a;
-        Object(m.a)(s).forEach(function (e) {
+        var s = undefined === a ? "" : a;
+        m.a(s).forEach(function (e) {
           if (!i[e]) {
             if (n[e].cdnUrl) {
               o.push(n[e]);
             }
-            i[e] = !0;
+            i[e] = true;
           }
         });
       }
@@ -190,7 +190,7 @@ function b() {
   return y.apply(this, arguments);
 }
 function y() {
-  return (y = Object(c.a)(o.a.mark(function e() {
+  return (y = c.a(o.a.mark(function e() {
     var t;
     var n;
     var r;
@@ -224,7 +224,7 @@ function y() {
             c = r.globalWidgetIds;
             m = r.version;
             g = r.globalObjectList;
-            _ = null === (t = n.common.userInfo) || void 0 === t ? void 0 : t.id;
+            _ = null === (t = n.common.userInfo) || undefined === t ? undefined : t.id;
             v = C(n.cloudSpace.cloudDictKeysList);
             b = S(n.cloudSpace.cloudTableColumnList);
             y = I(n.cloudSpace.cloudTableDataList);
@@ -235,8 +235,8 @@ function y() {
               return e.id;
             }).toJSON();
             R = p.z.getWorkspacesRecord();
-            k = Object(h.d)();
-            x = Object(h.e)();
+            k = h.d();
+            x = h.e();
             e.t0 = l.cloneDeep;
             e.t1 = _;
             e.t2 = i;
@@ -245,15 +245,15 @@ function y() {
             e.t5 = N;
             e.t6 = R;
             e.next = 22;
-            return Object(d.H)();
+            return d.H();
           case 22:
             e.t7 = e.sent;
             e.next = 25;
-            return Object(d.I)();
+            return d.I();
           case 25:
             e.t8 = e.sent;
             e.next = 28;
-            return Object(d.G)();
+            return d.G();
           case 28:
             e.t9 = e.sent;
             e.t10 = a;
@@ -313,7 +313,7 @@ function E(e, t) {
   var n = [];
   Object.keys(e).forEach(function (t) {
     var r;
-    var o = null === (r = e[t].workspaceJson) || void 0 === r ? void 0 : r.blocks;
+    var o = null === (r = e[t].workspaceJson) || undefined === r ? undefined : r.blocks;
     if (o) {
       Object.keys(o).forEach(function (e) {
         var t = o[e].fields.WIDGET_ID;
@@ -323,14 +323,14 @@ function E(e, t) {
       });
     }
   });
-  return [].concat(Object(s.a)(t.filter(function (e) {
+  return [].concat(s.a(t.filter(function (e) {
     return !e.startsWith(f.l);
   })), n);
 }
 function O(e) {
   var t = {};
   e.forEach(function (e) {
-    var n = Object(d.Bb)(e);
+    var n = d.Bb(e);
     if (n && n.type) {
       t[e] = n;
     }
@@ -353,7 +353,7 @@ function C(e) {
   return t;
 }
 function T(e) {
-  return Object(s.a)(e);
+  return s.a(e);
 }
 function S(e) {
   var t = {};
@@ -371,18 +371,18 @@ function I(e) {
 }
 function A(e) {
   var t;
-  var n = Object(l.cloneDeep)(Object(a.a)(Object(a.a)({}, e), {}, {
+  var n = l.cloneDeep(a.a(a.a({}, e), {}, {
     widgets: {}
   }));
   e.widgetIds.forEach(function (e) {
-    var t = Object(d.Bb)(e);
+    var t = d.Bb(e);
     if (t) {
       n.widgets[e] = t;
     }
   });
-  if (!(null === (t = e.invisibleWidgetIds) || void 0 === t)) {
+  if (!(null === (t = e.invisibleWidgetIds) || undefined === t)) {
     t.forEach(function (e) {
-      var t = Object(d.Bb)(e);
+      var t = d.Bb(e);
       if (t) {
         n.widgets[e] = t;
       }
@@ -393,15 +393,15 @@ function A(e) {
 function j(e) {
   var t = {};
   Object.entries(e).forEach(function (e) {
-    var n = Object(i.a)(e, 2);
+    var n = i.a(e, 2);
     n[0];
     var r = n[1];
-    t = Object(a.a)(Object(a.a)({}, t), r.widgets);
+    t = a.a(a.a({}, t), r.widgets);
   });
   return t;
 }
 function N(e) {
-  var t = Object(l.cloneDeep)(e);
+  var t = l.cloneDeep(e);
   if (!t.invisibleWidgetIds) {
     t.invisibleWidgetIds = [];
   }

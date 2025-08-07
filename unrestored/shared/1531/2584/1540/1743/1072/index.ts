@@ -43,7 +43,7 @@ if (!(h && m)) {
       t.push(arguments[r++]);
     }
     y[++b] = function () {
-      ("function" == typeof e ? e : Function(e)).apply(void 0, t);
+      ("function" == typeof e ? e : Function(e)).apply(undefined, t);
     };
     o(b);
     return b;
@@ -68,7 +68,7 @@ if (!(h && m)) {
       } else {
         if (s.addEventListener && "function" == typeof postMessage && !s.importScripts && r && "file:" !== r.protocol && !c(C)) {
           o = C;
-          s.addEventListener("message", w, !1);
+          s.addEventListener("message", w, false);
         } else {
           o = "onreadystatechange" in d("script") ? function (e) {
             u.appendChild(d("script")).onreadystatechange = function () {

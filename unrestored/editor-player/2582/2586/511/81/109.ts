@@ -3,7 +3,7 @@
 var n = require("./126");
 var o = function () {
   function t(t) {
-    if (void 0 === t) {
+    if (undefined === t) {
       t = "";
     }
     this.value = t;

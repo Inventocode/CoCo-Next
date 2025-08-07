@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.Json = void 0;
+exports.Json = undefined;
 var r = require("tslib");
 var i = require("inversify");
 var o = require("@kitten-team/gl-matrix");
@@ -22,7 +22,7 @@ var h = function () {
     var r = e.get_relative_position();
     return {
       id: e.id,
-      parent_id: void 0 === t ? null : t.id,
+      parent_id: undefined === t ? null : t.id,
       text: e.get_text(),
       pinned: e.is_expanded(),
       size: [n.width, n.height],
@@ -89,7 +89,7 @@ var h = function () {
       c.fieldRow.forEach(function (e) {
         if (e.editable && "string" === typeof e.name) {
           if ((0, l.is_field_number)(e)) {
-            var t = void 0;
+            var t = undefined;
             t = e.allow_text && !(0, u.is_valid_number)(e.get_value()) ? "TEXT" : e.name;
             r[t] = e.get_value();
             i[t] = {
@@ -100,7 +100,7 @@ var h = function () {
             };
             var n = e.get_controller_option();
             if (n) {
-              if (void 0 === o[e.name]) {
+              if (undefined === o[e.name]) {
                 o[e.name] = {};
               }
               o[t].controller_type = n.type;
@@ -116,7 +116,7 @@ var h = function () {
             }
           } else if ((0, l.is_field_default_value)(e)) {
             r[e.name] = e.get_value();
-            if (void 0 === o[e.name]) {
+            if (undefined === o[e.name]) {
               o[e.name] = {};
             }
             o[e.name].has_been_edited = e.get_has_been_edited();
@@ -126,10 +126,10 @@ var h = function () {
         }
       });
       if (c.name) {
-        var h = null === (f = c.connection) || void 0 === f ? void 0 : f.get_shadow_string();
+        var h = null === (f = c.connection) || undefined === f ? undefined : f.get_shadow_string();
         a[c.name] = h || "";
       }
-      var p = null === (d = c.connection) || void 0 === d ? void 0 : d.targetBlock();
+      var p = null === (d = c.connection) || undefined === d ? undefined : d.targetBlock();
       if (p) {
         var _ = t.block_to_json(p);
         t.merge_workspace_data(n, _);
@@ -148,7 +148,7 @@ var h = function () {
     n.blocks[e.id] = {
       type: e.type,
       id: e.id,
-      comment: void 0 === e.comment ? null : e.comment.id,
+      comment: undefined === e.comment ? null : e.comment.id,
       is_shadow: e.is_shadow(),
       collapsed: e.is_collapsed(),
       disabled: e.disabled,
@@ -163,7 +163,7 @@ var h = function () {
       field_extra_attr: o,
       mutation: f,
       is_output: !!e.output_connection,
-      parent_id: void 0 === e.parent_block ? null : e.parent_block.id
+      parent_id: undefined === e.parent_block ? null : e.parent_block.id
     };
     var d = e.get_next_block();
     if (d) {
@@ -182,25 +182,25 @@ var h = function () {
       connections: {},
       comments: {}
     };
-    e.get_top_blocks(!1).forEach(function (e) {
+    e.get_top_blocks(false).forEach(function (e) {
       var r = t.block_to_json(e);
       t.merge_workspace_data(n, r);
     });
-    e.get_top_comments(!1).forEach(function (e) {
+    e.get_top_comments(false).forEach(function (e) {
       n.comments[e.id] = t.comment_to_json(e);
     });
     return n;
   };
   e.prototype.json_to_block_headless = function (e, t, n) {
-    if (void 0 === n) {
-      n = !0;
+    if (undefined === n) {
+      n = true;
     }
     var r = t.new_block(e.type, e.id);
     return this.parse_block_data(e, r, n);
   };
   e.prototype.parse_block_data = function (e, t, n) {
-    if (void 0 === n) {
-      n = !0;
+    if (undefined === n) {
+      n = true;
     }
     if (null !== e.is_shadow) {
       t.set_shadow(e.is_shadow);
@@ -225,22 +225,22 @@ var h = function () {
     t.inputList.forEach(function (t) {
       var n;
       t.fieldRow.forEach(function (t) {
-        if (t.editable && void 0 !== t.name) {
+        if (t.editable && undefined !== t.name) {
           var n = t.name;
           if ((0, l.is_field_number)(t)) {
-            if (void 0 === e.fields.NUM && void 0 !== e.fields.TEXT) {
+            if (undefined === e.fields.NUM && undefined !== e.fields.TEXT) {
               n = "TEXT";
-              t.set_allow_text(!0);
+              t.set_allow_text(true);
             }
             var r;
             var i = e.field_constraints[n];
-            if (void 0 !== i) {
+            if (undefined !== i) {
               t.set_constraints(i.min, i.max, i.precision);
               if (null !== i.mod) {
                 t.mod_ = i.mod;
               }
             }
-            if (void 0 !== (r = e.field_extra_attr && e.field_extra_attr[n]) && void 0 !== r.controller_type) {
+            if (undefined !== (r = e.field_extra_attr && e.field_extra_attr[n]) && undefined !== r.controller_type) {
               if ("SLIDER" === r.controller_type) {
                 t.set_controller_option({
                   type: s.ControllerType.SLIDER,
@@ -263,21 +263,21 @@ var h = function () {
             }
           }
           if ((0, l.is_field_default_value)(t)) {
-            if (void 0 !== (r = e.field_extra_attr && e.field_extra_attr[n]) && void 0 !== r.has_been_edited) {
+            if (undefined !== (r = e.field_extra_attr && e.field_extra_attr[n]) && undefined !== r.has_been_edited) {
               var o = r.has_been_edited;
               t.set_has_been_edited(o);
             }
           }
           var a = e.fields[n];
-          if (void 0 !== a) {
-            if (void 0 !== t.call_validator(a) && "FieldImage" !== t.field_type) {
+          if (undefined !== a) {
+            if (undefined !== t.call_validator(a) && "FieldImage" !== t.field_type) {
               t.set_value(a);
             }
           }
         }
       });
       if (t.connection && e.shadows[t.name]) {
-        if (null === (n = t.connection.targetBlock()) || void 0 === n ? void 0 : n.is_shadow()) {
+        if (null === (n = t.connection.targetBlock()) || undefined === n ? undefined : n.is_shadow()) {
           t.connection.remove_shadow();
         }
         t.connection.set_shadow_from_string(e.shadows[t.name]);
@@ -289,9 +289,9 @@ var h = function () {
     return t;
   };
   e.prototype.comment_json_to_dom = function (e) {
-    var t = (0, f.create_dom)("comment", void 0, e.text);
+    var t = (0, f.create_dom)("comment", undefined, e.text);
     if (null !== e.color_theme) {
-      t.setAttribute("pinned", "" + (e.pinned || !1));
+      t.setAttribute("pinned", "" + (e.pinned || false));
     }
     if (e.size) {
       t.setAttribute("h", "" + e.size[1]);
@@ -321,7 +321,7 @@ var h = function () {
       (0, c.assert)(r.comment, "Create block comment failed.");
       n = r.comment;
     } else {
-      n = t.new_workspace_comment(void 0, e.id);
+      n = t.new_workspace_comment(undefined, e.id);
     }
     if (null !== e.text) {
       n.set_text(e.text);
@@ -343,7 +343,7 @@ var h = function () {
     }
     var i = e.color_theme;
     if ((0, l.is_comment_theme)(i)) {
-      n.set_color_theme(i, !0);
+      n.set_color_theme(i, true);
     }
     return n;
   };
@@ -355,7 +355,7 @@ var h = function () {
     var a = [];
     if (r) {
       Object.keys(r).forEach(function (e) {
-        n.json_to_block_headless(r[e], t, !1);
+        n.json_to_block_headless(r[e], t, false);
         a.push(e);
       });
     }
@@ -398,7 +398,7 @@ var h = function () {
       });
       a.forEach(function (e) {
         var n;
-        if (!(null === (n = t.get_block_by_id(e)) || void 0 === n)) {
+        if (!(null === (n = t.get_block_by_id(e)) || undefined === n)) {
           n.respawn_all_shadows();
         }
       });
@@ -412,18 +412,18 @@ var h = function () {
     return a;
   };
   e.prototype.try_connect = function (e, t, n) {
-    if (t.connect(e, !0)) {
+    if (t.connect(e, true)) {
       if (n && e.source_block.is_shadow()) {
-        this.parse_block_data(n[e.source_block.id], e.source_block, !1);
+        this.parse_block_data(n[e.source_block.id], e.source_block, false);
       }
     } else {
       if (this.runtime_data.is_pasting()) {
-        e.source_block.dispose(!1, !1);
+        e.source_block.dispose(false, false);
       } else {
-        for (var r = e.source_block.get_descendants(!1), i = r.length - 1; i >= 0; i--) {
+        for (var r = e.source_block.get_descendants(false), i = r.length - 1; i >= 0; i--) {
           r[i].init_svg();
           r[i].update_collapsed();
-          r[i].render(!1);
+          r[i].render(false);
         }
       }
       t.respawn_shadow();
@@ -432,11 +432,11 @@ var h = function () {
   e.prototype.json_to_workspace = function (e, t) {
     var n = this.events.get_group();
     if (!n) {
-      this.events.set_group(!0);
+      this.events.set_group(true);
     }
     var r = t.is_resizes_enabled();
     if (r) {
-      t.set_resizes_enabled(!1);
+      t.set_resizes_enabled(false);
     }
     this.utils.start_text_cache();
     var i = [];
@@ -451,10 +451,10 @@ var h = function () {
     } finally {
       this.events.enable();
       if (!n) {
-        this.events.set_group(!1);
+        this.events.set_group(false);
       }
       if (r) {
-        t.set_resizes_enabled(!0);
+        t.set_resizes_enabled(true);
       }
       this.utils.stop_text_cache();
     }
@@ -462,17 +462,17 @@ var h = function () {
   };
   e.prototype.render_blocks_and_comments = function (e, t, n) {
     var r = this;
-    e.get_top_blocks(!1).forEach(function (e) {
+    e.get_top_blocks(false).forEach(function (e) {
       if (!(t.indexOf(e.id) < 0)) {
         r.events.disable();
         try {
-          e.set_connections_hidden(!0);
-          for (var i = e.get_descendants(!1), a = i.length - 1; a >= 0; a--) {
+          e.set_connections_hidden(true);
+          for (var i = e.get_descendants(false), a = i.length - 1; a >= 0; a--) {
             i[a].init_svg();
           }
           for (a = i.length - 1; a >= 0; a--) {
             i[a].update_collapsed();
-            i[a].render(!1);
+            i[a].render(false);
           }
           for (a = i.length - 1; a >= 0; a--) {
             var s = i[a];
@@ -485,8 +485,8 @@ var h = function () {
             e.move_by(o.vec2.fromValues(c.location[0], c.location[1]));
           }
           window.setTimeout(function () {
-            if (void 0 != e && void 0 != e.get_workspace()) {
-              e.set_connections_hidden(!1);
+            if (undefined != e && undefined != e.get_workspace()) {
+              e.set_connections_hidden(false);
             }
           }, 1);
         } finally {
@@ -500,7 +500,7 @@ var h = function () {
         }
       }
     });
-    e.get_top_comments(!1).forEach(function (e) {
+    e.get_top_comments(false).forEach(function (e) {
       if (!(t.indexOf(e.id) < 0)) {
         e.init_svg();
       }
@@ -538,7 +538,7 @@ var h = function () {
     var i = [];
     (function e(t, n) {
       var r = n[t];
-      if (void 0 !== r && (i.push(t), Object.keys(r).length)) {
+      if (undefined !== r && (i.push(t), Object.keys(r).length)) {
         for (var o in r) e(o, n);
       }
     })(t, e.connections);
@@ -568,7 +568,7 @@ var h = function () {
         var a = e.childNodes[o];
         var c = a.tagName.toLowerCase();
         if ("block" === c) {
-          var l = this.block_dom_to_json(a, void 0, r);
+          var l = this.block_dom_to_json(a, undefined, r);
           this.merge_workspace_data(n, l);
         } else if ("comment" === c) {
           var f = a.getAttribute("id") || (0, u.gen_uid)();
@@ -587,7 +587,7 @@ var h = function () {
     return n;
   };
   e.prototype.block_dom_to_json = function (e, t, n) {
-    if (void 0 === n) {
+    if (undefined === n) {
       n = new Set();
     }
     var r = {
@@ -644,7 +644,7 @@ var h = function () {
                   }
                 }
               } else {
-                for (var E = m.getAttribute("name") || "", x = void 0, C = void 0, b = 0; b < m.childNodes.length; b++) {
+                for (var E = m.getAttribute("name") || "", x = undefined, C = undefined, b = 0; b < m.childNodes.length; b++) {
                   if (m.childNodes[b].nodeType !== s.NodeType.TEXT) {
                     var O;
                     var k;
@@ -727,10 +727,10 @@ var h = function () {
     };
     return r;
   };
-  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.events)], e.prototype, "events", void 0);
-  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.utils)], e.prototype, "utils", void 0);
-  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.runtime_data)], e.prototype, "runtime_data", void 0);
-  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.CreateEvent)], e.prototype, "create_event_factory", void 0);
+  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.events)], e.prototype, "events", undefined);
+  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.utils)], e.prototype, "utils", undefined);
+  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.runtime_data)], e.prototype, "runtime_data", undefined);
+  (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.CreateEvent)], e.prototype, "create_event_factory", undefined);
   return e = (0, r.__decorate)([(0, i.injectable)()], e);
 }();
 exports.Json = h;

@@ -2,7 +2,7 @@
 
 export { h as a };
 export { m as b };
-var r = require("react");
+import r = require("react");
 var o = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -15,12 +15,12 @@ var o = function __importDefault(module) {
   });
   return defaultExport;
 }(r);
-var i = require("../5");
-var a = require("../42/index");
-var s = require("../64");
-var c = require("../205");
-var l = require("../35");
-var u = require("./670");
+import i = require("../5");
+import a = require("../42/index");
+import s = require("../64");
+import c = require("../205");
+import l = require("../35");
+import u = require("./670");
 var d = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -33,7 +33,7 @@ var d = function __importDefault(module) {
   });
   return defaultExport;
 }(u);
-var p = require("../76");
+import p = require("../76");
 function f(e) {
   var t = e.id;
   var n = e.widgetIds;
@@ -50,8 +50,8 @@ function f(e) {
       h.push(n);
     }
   });
-  var m = Object(l.hb)(p);
-  var g = (null === m || void 0 === m ? void 0 : m.source) || (null === m || void 0 === m ? void 0 : m.cdnUrl);
+  var m = l.hb(p);
+  var g = (null === m || undefined === m ? undefined : m.source) || (null === m || undefined === m ? undefined : m.cdnUrl);
   if (!(g || !p.includes("://") && !p.includes("data:image/"))) {
     g = p;
   }
@@ -70,14 +70,14 @@ function f(e) {
       backgroundSize: f === c.a.STRETCH ? "100% 100%" : f
     }
   }, h.map(function (e) {
-    return Object(a.f)({
+    return a.f({
       widget: e
     });
   }));
 }
 function h(e) {
   return {
-    id: Object(s.a)(i.D),
+    id: s.a(i.D),
     title: e,
     type: i.D,
     position: {

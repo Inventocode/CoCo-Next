@@ -15,7 +15,7 @@ module.exports = {
   Validation: o(function (e) {
     this.message = "validation failed";
     this.errors = e;
-    this.ajv = this.validation = !0;
+    this.ajv = this.validation = true;
   }),
   MissingRef: o(i)
 };

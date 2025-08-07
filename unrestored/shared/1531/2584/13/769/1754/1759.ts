@@ -2,9 +2,9 @@
 
 var r = require("../568");
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.default = void 0;
+exports.default = undefined;
 var i = r(require("../746"));
 var o = r(require("../1046/1081"));
 var a = r(require("react"));
@@ -26,7 +26,7 @@ function u(e) {
   for (var t = 1; t < arguments.length; t++) {
     var n = null != arguments[t] ? arguments[t] : {};
     if (t % 2) {
-      c(Object(n), !0).forEach(function (t) {
+      c(Object(n), true).forEach(function (t) {
         (0, i.default)(e, t, n[t]);
       });
     } else {
@@ -65,7 +65,7 @@ var l = function (e) {
       return null;
     }
     var y = !l && e === f || l && e <= f && e >= d;
-    var b = (0, s.default)((h = {}, (0, i.default)(h, "".concat(t, "-text"), !0), (0, i.default)(h, "".concat(t, "-text-active"), y), h));
+    var b = (0, s.default)((h = {}, (0, i.default)(h, "".concat(t, "-text"), true), (0, i.default)(h, "".concat(t, "-text-active"), y), h));
     var w = (0, i.default)({
       marginBottom: "-50%"
     }, r ? "top" : "bottom", "".concat((e - p) / g * 100, "%"));

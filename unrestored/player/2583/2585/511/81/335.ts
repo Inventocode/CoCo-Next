@@ -1,7 +1,7 @@
 "use strict";
 
-var r = require("./191/index");
-var i = require("./274");
+var r = require("./191");
+var i = require("./274/index");
 var o = require("./408");
 var a = require("./221");
 var s = function () {
@@ -9,11 +9,11 @@ var s = function () {
     this.field = t;
   }
   t.prototype.decode = function (t, e) {
-    for (var n = this.field, a = new i.a(n, t), s = new Int32Array(e), u = !0, c = 0; c < e; c++) {
+    for (var n = this.field, a = new i.a(n, t), s = new Int32Array(e), u = true, c = 0; c < e; c++) {
       var l = a.evaluateAt(n.exp(c + n.getGeneratorBase()));
       s[s.length - 1 - c] = l;
       if (0 !== l) {
-        u = !1;
+        u = false;
       }
     }
     if (!u) {

@@ -1,6 +1,6 @@
 var r = require("./2543/1424");
 function o(e, t) {
-  if (void 0 == e.length) {
+  if (undefined == e.length) {
     throw new Error(e.length + "/" + t);
   }
   for (var n = 0; n < e.length && 0 == e[n];) {

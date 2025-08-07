@@ -3,7 +3,7 @@ var i = require("./1099");
 var o = require("./1971");
 var a = require("./1972");
 function s(t) {
-  var n = "function" === typeof Map ? new Map() : void 0;
+  var n = "function" === typeof Map ? new Map() : undefined;
   module.exports = s = function (e) {
     if (null === e || !o(e)) {
       return e;
@@ -23,9 +23,9 @@ function s(t) {
     t.prototype = Object.create(e.prototype, {
       constructor: {
         value: t,
-        enumerable: !1,
-        writable: !0,
-        configurable: !0
+        enumerable: false,
+        writable: true,
+        configurable: true
       }
     });
     return i(t, e);

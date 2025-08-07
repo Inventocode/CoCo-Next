@@ -1,9 +1,9 @@
 "use strict";
 
 export { u as a };
-var r = require("./215/index");
-var i = require("./34/index");
-var o = require("./65");
+import r = require("./215/index");
+import i = require("./34/index");
+import o = require("./65");
 var a = function () {
   var e = function (t, n) {
     return (e = Object.setPrototypeOf || {
@@ -101,7 +101,7 @@ var c = function (e, t) {
                 a.label++;
                 return {
                   value: o[1],
-                  done: !1
+                  done: false
                 };
               case 5:
                 a.label++;
@@ -149,8 +149,8 @@ var c = function (e, t) {
           throw o[1];
         }
         return {
-          value: o[0] ? o[1] : void 0,
-          done: !0
+          value: o[0] ? o[1] : undefined,
+          done: true
         };
       }([o, s]);
     };
@@ -159,15 +159,15 @@ var c = function (e, t) {
 var u = function (e) {
   function t(t, n, a, s) {
     var c = e.call(this) || this;
-    c.is_draggable = !0;
-    c.is_origin_in_center = !1;
+    c.is_draggable = true;
+    c.is_origin_in_center = false;
     c.drag_start = function (e) {
       if (c.is_draggable) {
         c.drag_data = {
           event_data: e.data,
           old_pos: e.data.getLocalPosition(c.parent)
         };
-        c.emit_event("drag_start", void 0);
+        c.emit_event("drag_start", undefined);
       }
     };
     c.drag_move = function () {
@@ -176,7 +176,7 @@ var u = function (e) {
         var t = c.app.get_app().view;
         var n = t.width;
         var o = t.height;
-        e.set(Object(r.a)(-n / 2, n / 2, e.x), Object(r.a)(-o / 2, o / 2, e.y));
+        e.set(r.a(-n / 2, n / 2, e.x), r.a(-o / 2, o / 2, e.y));
         var a = new i.o(c.position.x + e.x - c.drag_data.old_pos.x, c.position.y + e.y - c.drag_data.old_pos.y);
         c.drag_data.old_pos = e;
         var s = c.getBounds();
@@ -196,41 +196,41 @@ var u = function (e) {
         var f = n / 2 + u.right;
         var d = -o / 2 + u.top;
         var h = o / 2 + u.bottom;
-        a.x = Object(r.a)(Math.min(l, f), Math.max(l, f), a.x);
-        a.y = Object(r.a)(Math.min(d, h), Math.max(d, h), a.y);
+        a.x = r.a(Math.min(l, f), Math.max(l, f), a.x);
+        a.y = r.a(Math.min(d, h), Math.max(d, h), a.y);
         c.position.set(a.x, a.y);
         c.emit_event("change", {
           position: c.position
         });
-        c.emit_event("drag_move", void 0);
+        c.emit_event("drag_move", undefined);
         c.app.render();
       }
     };
     c.drag_end = function () {
       if (c.drag_data) {
-        c.drag_data = void 0;
+        c.drag_data = undefined;
         c.app.render();
         if (c.is_draggable) {
-          c.emit_event("drag_end", void 0);
+          c.emit_event("drag_end", undefined);
         }
       }
     };
     c.on_break = function (e) {
       if (!(e && e !== c.id)) {
-        c.drag_data = void 0;
+        c.drag_data = undefined;
       }
     };
     c.app = a;
     c.events = s;
     c.id = t;
-    c.interactive = !0;
+    c.interactive = true;
     c.setParent(n);
     c.addListener("mousedown", c.drag_start);
-    c.addListener("mousemove", Object(o.w)(c.drag_move, o.a));
+    c.addListener("mousemove", o.w(c.drag_move, o.a));
     c.addListener("mouseup", c.drag_end);
     c.addListener("mouseupoutside", c.drag_end);
     c.addListener("touchstart", c.drag_start);
-    c.addListener("touchmove", Object(o.w)(c.drag_move, o.a));
+    c.addListener("touchmove", o.w(c.drag_move, o.a));
     c.addListener("touchend", c.drag_end);
     c.addListener("touchendoutside", c.drag_end);
     c.events.event_emitter.addListener("break", c.on_break);
@@ -248,7 +248,7 @@ var u = function (e) {
     this.off(e, t);
   };
   t.prototype.load_texture = function (e) {
-    return s(this, void 0, void 0, function () {
+    return s(this, undefined, undefined, function () {
       var t;
       return c(this, function (n) {
         return e && i.B.TextureCache[e] ? [2, i.B.TextureCache[e]] : e && i.B.BaseTextureCache[e] ? [2, new i.y(i.B.BaseTextureCache[e])] : (t = e ? i.y.from(e) : i.y.EMPTY).valid ? [2, t] : [2, new Promise(function (e, n) {
@@ -259,7 +259,7 @@ var u = function (e) {
             e(t);
           });
           t.baseTexture.on("error", function (e) {
-            t.destroy(!0);
+            t.destroy(true);
             n(e);
           });
         })];
@@ -297,7 +297,7 @@ var u = function (e) {
     return !!this.drag_data;
   };
   t.prototype.destroy = function (t) {
-    this.emit_event("destroy", void 0);
+    this.emit_event("destroy", undefined);
     e.prototype.destroy.call(this, t);
     this.events.event_emitter.removeListener("break", this.on_break);
   };

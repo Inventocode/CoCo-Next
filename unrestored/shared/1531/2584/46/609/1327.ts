@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.load_json_js_generator_tell = exports.load_json_js_generators_control = void 0;
+exports.load_json_js_generator_tell = exports.load_json_js_generators_control = undefined;
 exports.load_json_js_generators_control = function (e) {
   e.register("repeat_forever", function (t, n) {
     return "while(true) {\n" + e.statement_to_code(t, n, "DO") + "}\n";
@@ -48,13 +48,13 @@ exports.load_json_js_generator_tell = function (e, t) {
     var o = e.get_field_value(n.blocks[r], "sprite");
     return "call_events_of('" + ((null === (i = t().find(function (e) {
       return e[1] === o;
-    })) || void 0 === i ? void 0 : i[0]) || "?") + "'), function() {\n" + e.statement_to_code(n, r, "DO") + "});\n";
+    })) || undefined === i ? undefined : i[0]) || "?") + "'), function() {\n" + e.statement_to_code(n, r, "DO") + "});\n";
   });
   e.register("sync_tell", function (n, r) {
     var i;
     var o = e.get_field_value(n.blocks[r], "sprite");
     return "call_sync_events_of('" + ((null === (i = t().find(function (e) {
       return e[1] === o;
-    })) || void 0 === i ? void 0 : i[0]) || "?") + "'), function() {\n" + e.statement_to_code(n, r, "DO") + "});\n";
+    })) || undefined === i ? undefined : i[0]) || "?") + "'), function() {\n" + e.statement_to_code(n, r, "DO") + "});\n";
   });
 };

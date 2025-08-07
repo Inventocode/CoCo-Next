@@ -2,7 +2,7 @@
 
 export { i as b };
 export { o as a };
-var r = require("react");
+import r = require("react");
 var i = r.isValidElement;
 function o(e, t) {
   return function (e, t, n) {

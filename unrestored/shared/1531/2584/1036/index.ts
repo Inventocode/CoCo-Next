@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.effect_of_update_disabled = exports.effect_of_update_param = exports.effect_of_rename_proc = exports.update_after_set_disabled = exports.update_after_set_field_value = exports.update_after_mutation = void 0;
+exports.effect_of_update_disabled = exports.effect_of_update_param = exports.effect_of_rename_proc = exports.update_after_set_disabled = exports.update_after_set_field_value = exports.update_after_mutation = undefined;
 var r = require("ot-json1");
 var o = require("./1363/index");
 var i = require("../4/127");
@@ -26,11 +26,11 @@ function c(e, t, n, a, s, c) {
     var y = ["blocks", _.id, "mutation"];
     g.push((0, r.replaceOp)(y, v, b));
     var E = p.current.get_block_by_id(n);
-    var O = void 0;
+    var O = undefined;
     var w = "";
     var C = "";
     if (E) {
-      var T = null === (u = null === (l = E.get_input(s)) || void 0 === l ? void 0 : l.connection) || void 0 === u ? void 0 : u.targetBlock();
+      var T = null === (u = null === (l = E.get_input(s)) || undefined === l ? undefined : l.connection) || undefined === u ? undefined : u.targetBlock();
       if (!T) {
         return null;
       }
@@ -104,7 +104,7 @@ function c(e, t, n, a, s, c) {
           delete t.connections[M.id][e];
           delete t.blocks[M.id].shadows[s];
           var c = ["blocks", M.id, "parent_id"];
-          D.push((0, r.replaceOp)(c, !0, null));
+          D.push((0, r.replaceOp)(c, true, null));
           var l = ["connections", M.id, e];
           D.push((0, r.removeOp)(l));
           var u = ["blocks", M.id, "shadows", s];
@@ -126,7 +126,7 @@ function l(e, t, n, a) {
   }
   var u = e.mutation;
   var d = s.string_to_dom(u);
-  if (void 0 !== d.getAttribute(t.toLowerCase())) {
+  if (undefined !== d.getAttribute(t.toLowerCase())) {
     d.setAttribute(t.toLowerCase(), a);
     var p = s.dom_to_string(d);
     e.mutation = p;
@@ -171,7 +171,7 @@ exports.effect_of_update_param = function (e, t, n, r) {
         var i = u.string_to_dom(o);
         var s = document.createElement("procedures_2_parameter_shadow");
         s.setAttribute("name", n.param_name);
-        var l = void 0 !== n.default_value ? n.default_value : "0";
+        var l = undefined !== n.default_value ? n.default_value : "0";
         s.setAttribute("value", l);
         i.appendChild(s);
         var p = i.children.length - 1;

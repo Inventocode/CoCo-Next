@@ -13,17 +13,17 @@ module.exports = !u || o(function () {
   if (r && 1 !== u({
     b: 1
   }, u(d({}, "a", {
-    enumerable: !0,
+    enumerable: true,
     get: function () {
       d(this, "b", {
         value: 3,
-        enumerable: !1
+        enumerable: false
       });
     }
   }), {
     b: 2
   })).b) {
-    return !0;
+    return true;
   }
   var e = {};
   var t = {};

@@ -1,7 +1,7 @@
 "use strict";
 
 export { p as a };
-var r = require("../../1/index");
+import r = require("regenerator-runtime");
 var o = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -14,18 +14,18 @@ var o = function __importDefault(module) {
   });
   return defaultExport;
 }(r);
-var i = require("../../7");
-var a = require("./774/index");
-var s = require("../../41");
-var c = require("../../59/index");
+import i = require("../../7");
+import a = require("./774/index");
+import s = require("../../41");
+import c = require("../../59/index");
 var l = "".concat(c.a.serverHost, "/coconut");
-var u = !1;
+var u = false;
 var d = 0;
 function p(e) {
   return f.apply(this, arguments);
 }
 function f() {
-  return (f = Object(i.a)(o.a.mark(function e(t) {
+  return (f = i.a(o.a.mark(function e(t) {
     var n;
     var r;
     return o.a.wrap(function (e) {
@@ -41,7 +41,7 @@ function f() {
           case 3:
             "pBlYqXbJDu";
             n = Math.round(Date.now() / 1e3) + d;
-            r = Object(a.sha256)("".concat("pBlYqXbJDu").concat(n).concat(t)).toLocaleUpperCase();
+            r = a.sha256("".concat("pBlYqXbJDu").concat(n).concat(t)).toLocaleUpperCase();
             return e.abrupt("return", {
               sign: r,
               timestamp: n
@@ -58,7 +58,7 @@ function h() {
   return m.apply(this, arguments);
 }
 function m() {
-  return (m = Object(i.a)(o.a.mark(function e() {
+  return (m = i.a(o.a.mark(function e() {
     var t;
     var n;
     var r;
@@ -73,7 +73,7 @@ function m() {
               try {
                 r = Math.round(Date.now() / 1e3);
                 d = n.data - r;
-                u = !0;
+                u = true;
               } catch (o) {}
             }
           case 5:

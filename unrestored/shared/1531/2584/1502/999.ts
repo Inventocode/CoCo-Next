@@ -1,7 +1,7 @@
 "use strict";
 
-var r = require("react");
-var i = require("../75/index");
+import r = require("react");
+import i = require("../75/index");
 var o = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -14,30 +14,30 @@ var o = function __importDefault(module) {
   });
   return defaultExport;
 }(i);
-var a = require("./378");
-var s = Object(r.forwardRef)(function (e, t) {
+import a = require("./378");
+var s = r.forwardRef(function (e, t) {
   var n = e.didUpdate;
   var i = e.getContainer;
   var s = e.children;
-  var c = Object(r.useRef)();
-  Object(r.useImperativeHandle)(t, function () {
+  var c = r.useRef();
+  r.useImperativeHandle(t, function () {
     return {};
   });
-  var u = Object(r.useRef)(!1);
-  if (!u.current && Object(a.a)()) {
+  var u = r.useRef(false);
+  if (!u.current && a.a()) {
     c.current = i();
-    u.current = !0;
+    u.current = true;
   }
-  Object(r.useEffect)(function () {
-    if (!(null === n || void 0 === n)) {
+  r.useEffect(function () {
+    if (!(null === n || undefined === n)) {
       n(e);
     }
   });
-  Object(r.useEffect)(function () {
+  r.useEffect(function () {
     return function () {
       var e;
       var t;
-      if (!(null === (e = c.current) || void 0 === e || null === (t = e.parentNode) || void 0 === t)) {
+      if (!(null === (e = c.current) || undefined === e || null === (t = e.parentNode) || undefined === t)) {
         t.removeChild(c.current);
       }
     };

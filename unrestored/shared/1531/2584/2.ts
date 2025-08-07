@@ -521,26 +521,26 @@ export { j as Cb } from "./161";
 export { I as Bg } from "./161";
 export { l as Eb } from "./161";
 export { K as Eg } from "./161";
-var r = require("./6");
+import r = require("./6");
 var o = "SET_APP_LANGUAGE";
 var i = "UPDATE_EDIT_AREA";
 var a = function () {
   return {
-    payload: void 0,
+    payload: undefined,
     type: i
   };
 };
 var s = "UPDATE_PREVIEW_AREA";
 var c = function () {
   return {
-    payload: void 0,
+    payload: undefined,
     type: s
   };
 };
 var l = "UPDATE_EXTENSION_WIDGET_LIST";
 var u = function () {
   return {
-    payload: void 0,
+    payload: undefined,
     type: l
   };
 };
@@ -554,7 +554,7 @@ var p = function (e) {
 var f = "HIDE_COMMON_TOAST_INFO";
 var h = function () {
   return {
-    payload: void 0,
+    payload: undefined,
     type: f
   };
 };
@@ -568,7 +568,7 @@ var g = function (e) {
 var _ = "SET_FETCH_USER_INFO_DONE";
 var v = function () {
   return {
-    payload: !0,
+    payload: true,
     type: _
   };
 };
@@ -597,7 +597,7 @@ var T = "CLOSE_CONFIRM_DIALOG";
 var S = function () {
   return {
     type: T,
-    payload: void 0
+    payload: undefined
   };
 };
 var I = "OPEN_ICON_LIB_DIALOG";
@@ -616,14 +616,14 @@ var R = "HIDE_IMPORT_FAIL_TOAST";
 var k = function () {
   return {
     type: R,
-    payload: void 0
+    payload: undefined
   };
 };
 var x = "CLOSE_PROJECT_DIALOG";
 var D = function () {
   return {
     type: x,
-    payload: void 0
+    payload: undefined
   };
 };
 var M = "OPEN_PROJECT_DIALOG";
@@ -673,7 +673,7 @@ var Y = function (e) {
 var K = "ASYNC_CANCEL_SAVE_PROJECT";
 var q = function () {
   return {
-    payload: void 0,
+    payload: undefined,
     type: K
   };
 };
@@ -688,7 +688,7 @@ var Z = "CLEAR_CONSOLE_MESSAGE";
 var J = function () {
   return {
     type: Z,
-    payload: void 0
+    payload: undefined
   };
 };
 var $ = "SET_CONSOLE_HEIGHT";
@@ -712,7 +712,7 @@ var re = "HIDE_STAGE_TOAST";
 var oe = function () {
   return {
     type: re,
-    payload: void 0
+    payload: undefined
   };
 };
 var ie = "SET_ACTOR_DRAGGING";
@@ -735,7 +735,7 @@ var le = "CLOSE_SIGN_IN_DIALOG";
 var ue = function () {
   return {
     type: le,
-    payload: void 0
+    payload: undefined
   };
 };
 var de = "SET_STAGE_RULER_VISIBLE";
@@ -798,7 +798,7 @@ var Ie = "HIDE_GRID_DIALOG";
 var Ae = function () {
   return {
     type: Ie,
-    payload: void 0
+    payload: undefined
   };
 };
 var je = "SET_GRID_COPIED_CONTENT";
@@ -910,7 +910,7 @@ var tt = "ASYNC_INITIAL_MY_EXTENSION_WIDGETS";
 var nt = function () {
   return {
     type: tt,
-    payload: void 0
+    payload: undefined
   };
 };
 var rt = "REPLACE_MY_EXTENSION_WIDGETS";
@@ -1020,7 +1020,7 @@ var It = "HIDE_TABLE_DATA_DIALOG";
 var At = function () {
   return {
     type: It,
-    payload: void 0
+    payload: undefined
   };
 };
 var jt = "SHOW_CREATE_TABLE_DATA_DIALOG";
@@ -1034,7 +1034,7 @@ var Rt = "HIDE_CREATE_TABLE_DATA_DIALOG";
 var kt = function () {
   return {
     type: Rt,
-    payload: void 0
+    payload: undefined
   };
 };
 var xt = "OPEN_RICH_TEXT_EDITOR_DIALOG";
@@ -1048,13 +1048,13 @@ var Mt = "CLOSE_RICH_TEXT_EDITOR_DIALOG";
 var Lt = function () {
   return {
     type: Mt,
-    payload: void 0
+    payload: undefined
   };
 };
 var Pt = "ASYNC_GET_TEMPLATE_LIST";
 var Bt = function () {
   return {
-    payload: void 0,
+    payload: undefined,
     type: Pt
   };
 };
@@ -1068,7 +1068,7 @@ var Gt = function (e) {
 var Ut = "ASYNC_GET_COURSE_LIST";
 var Wt = function () {
   return {
-    payload: void 0,
+    payload: undefined,
     type: Ut
   };
 };
@@ -1094,13 +1094,13 @@ var qt = function (e) {
   };
 };
 var Xt = {
-  withClose: !1,
-  visible: !0
+  withClose: false,
+  visible: true
 };
 var Qt = "ADD_FLOAT_ICON";
 var Zt = function (e) {
   return {
-    payload: Object(r.a)(Object(r.a)({}, Xt), e),
+    payload: r.a(r.a({}, Xt), e),
     type: Qt
   };
 };
@@ -1116,7 +1116,7 @@ var tn = function (e, t) {
   return {
     payload: {
       name: e,
-      icon: Object(r.a)(Object(r.a)({}, Xt), t)
+      icon: r.a(r.a({}, Xt), t)
     },
     type: en
   };
@@ -1140,7 +1140,7 @@ var an = function (e) {
 };
 function sn(e, t) {
   return new Promise(function (n, o) {
-    var i = Object(r.a)(Object(r.a)({}, t), {}, {
+    var i = r.a(r.a({}, t), {}, {
       reject: o,
       resolve: n
     });
@@ -1211,7 +1211,7 @@ var bn = function (e) {
 var yn = "ASYNC_PACKAGE_PROJECT";
 var En = function () {
   return {
-    payload: void 0,
+    payload: undefined,
     type: yn
   };
 };
@@ -1318,7 +1318,7 @@ var zn = function (e) {
 };
 var Yn = "ASYNC_CREATE_PROJECT";
 var Kn = function () {
-  var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+  var e = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : {};
   var t = e.json;
   var n = e.jsonFrom;
   var r = e.lastSavedTime;
@@ -1631,14 +1631,14 @@ var Qr = function (e, t) {
 var Zr = "START_PLAYING_PROJECT";
 var Jr = function () {
   return {
-    payload: void 0,
+    payload: undefined,
     type: Zr
   };
 };
 var $r = "STOP_PLAYING_PROJECT";
 var eo = function () {
   return {
-    payload: void 0,
+    payload: undefined,
     type: $r
   };
 };
@@ -1938,7 +1938,7 @@ var $o = "CLOSE_CONTEXT_MENU";
 var ei = function () {
   return {
     type: $o,
-    payload: void 0
+    payload: undefined
   };
 };
 var ti = "ASYNC_COPY_WIDGET_TO_SCREEN";
@@ -1955,7 +1955,7 @@ var ri = "CLEAR_PROJECT";
 var oi = function () {
   return {
     type: ri,
-    payload: void 0
+    payload: undefined
   };
 };
 var ii = "ASYNC_INSERT_BRUSH_WIDGET";
@@ -2057,7 +2057,7 @@ var Si = "ASYNC_INITIAL_CLOUD_DB_DATA";
 var Ii = function () {
   return {
     type: Si,
-    payload: void 0
+    payload: undefined
   };
 };
 var Ai = "ASYNC_UPDATE_CLOUD_DATABASE_FIELDS";
@@ -2127,7 +2127,7 @@ var Ui = "ASYNC_INITIAL_CLOUD_DB_WIDGET";
 var Wi = function () {
   return {
     type: Ui,
-    payload: void 0
+    payload: undefined
   };
 };
 var Hi = "SET_PROJECT_SHARE_INFO";
@@ -2164,7 +2164,7 @@ var Zi = "SHOW_BLOCKS_DROPDOWN";
 var Ji = "HIDE_BLOCKS_DROPDOWN";
 var $i = function () {
   return {
-    payload: void 0,
+    payload: undefined,
     type: Ji
   };
 };
@@ -2172,7 +2172,7 @@ var ea = "SHOW_BLOCKS_SLIDER";
 var ta = "HIDE_BLOCKS_SLIDER";
 var na = function () {
   return {
-    payload: void 0,
+    payload: undefined,
     type: ta
   };
 };
@@ -2187,7 +2187,7 @@ var ia = function (e) {
 var aa = "HIDE_CREATE_DYNAMIC_DATA_DIALOG";
 var sa = function () {
   return {
-    payload: void 0,
+    payload: undefined,
     type: aa
   };
 };
@@ -2201,7 +2201,7 @@ var la = function (e) {
 var ua = "HIDE_COMMON_INPUT_DIALOG";
 var da = function () {
   return {
-    payload: void 0,
+    payload: undefined,
     type: ua
   };
 };
@@ -2215,7 +2215,7 @@ var fa = function (e) {
 var ha = "HIDE_EDIT_ARRAY_DIALOG";
 var ma = function () {
   return {
-    payload: void 0,
+    payload: undefined,
     type: ha
   };
 };
@@ -2229,7 +2229,7 @@ var _a = function (e) {
 var va = "HIDE_EDIT_OBJECT_DIALOG";
 var ba = function () {
   return {
-    payload: void 0,
+    payload: undefined,
     type: va
   };
 };
@@ -2255,7 +2255,7 @@ var Ca = "HIDE_DOCUMENT_DIALOG";
 var Ta = function () {
   return {
     type: Ca,
-    payload: void 0
+    payload: undefined
   };
 };
 var Sa = "ASYNC_OPEN_TOAST_ON_NOT_SELECT_DOCUMENT";
@@ -2279,7 +2279,7 @@ var Na = "HIDE_BLOCK_PALETTE";
 var Ra = function () {
   return {
     type: Na,
-    payload: void 0
+    payload: undefined
   };
 };
 var ka = "SET_FLYOUT_VISIBLE";
@@ -2337,12 +2337,12 @@ var za = "RESET_DATA_WATCH_VALUE";
 var Ya = function () {
   return {
     type: za,
-    payload: void 0
+    payload: undefined
   };
 };
 var Ka = "CLEAR_DATA_WATCH_VALUE";
 var qa = function () {
-  var e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+  var e = arguments.length > 0 && undefined !== arguments[0] && arguments[0];
   return {
     type: Ka,
     payload: e
@@ -2372,7 +2372,7 @@ var $a = "HIDE_DATAWATCH_TOAST";
 var es = function () {
   return {
     type: $a,
-    payload: void 0
+    payload: undefined
   };
 };
 var ts = "SHOW_RESOURCE_LIBRARY_DIALOG";
@@ -2392,7 +2392,7 @@ var rs = "HIDE_RESOURCE_LIBRARY_DIALOG";
 var os = function () {
   return {
     type: rs,
-    payload: void 0
+    payload: undefined
   };
 };
 var is = "TOGGLE_RESOURCE_LIBRARY_DIALOG_VISIBLE";
@@ -2407,7 +2407,7 @@ var as = function (e) {
 var ss = "UPDATE_RESOURCE_LIBRARY_AREA";
 var cs = function () {
   return {
-    payload: void 0,
+    payload: undefined,
     type: ss
   };
 };
@@ -2656,6 +2656,6 @@ var oc = function (e) {
     type: rc
   };
 };
-var ic = require("./38/341");
-var ac = require("./161");
+import ic = require("./38/341");
+import ac = require("./161");
 export default Bo;

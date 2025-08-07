@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.BaseEvent = void 0;
+exports.BaseEvent = undefined;
 var r = require("tslib");
 var i = require("../../../4/127");
 var o = function () {
@@ -13,11 +13,11 @@ var o = function () {
     this._record_undo = this.events.is_record_undo();
   }
   e.prototype.is_null = function () {
-    return !1;
+    return false;
   };
   e.prototype._get_event_workspace = function () {
     var e = this.workspace_db.get(this._workspace_id);
-    if (void 0 == e) {
+    if (undefined == e) {
       throw Error("Workspace is undefined. Event must have been generated from real Blockly events.");
     }
     return e;
@@ -38,10 +38,10 @@ var o = function () {
     return this._block_id;
   };
   e.prototype.serialize = function () {};
-  (0, r.__decorate)([(0, i.lazy_inject)(i.BINDING.events)], e.prototype, "events", void 0);
-  (0, r.__decorate)([(0, i.lazy_inject)(i.BINDING.xml)], e.prototype, "xml", void 0);
-  (0, r.__decorate)([(0, i.lazy_inject)(i.BINDING.json)], e.prototype, "json", void 0);
-  (0, r.__decorate)([(0, i.lazy_inject)(i.BINDING.workspace_db)], e.prototype, "workspace_db", void 0);
+  (0, r.__decorate)([(0, i.lazy_inject)(i.BINDING.events)], e.prototype, "events", undefined);
+  (0, r.__decorate)([(0, i.lazy_inject)(i.BINDING.xml)], e.prototype, "xml", undefined);
+  (0, r.__decorate)([(0, i.lazy_inject)(i.BINDING.json)], e.prototype, "json", undefined);
+  (0, r.__decorate)([(0, i.lazy_inject)(i.BINDING.workspace_db)], e.prototype, "workspace_db", undefined);
   return e;
 }();
 exports.BaseEvent = o;

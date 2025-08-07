@@ -19,7 +19,7 @@ var h = function () {
   return 0 !== e.lastIndex || 0 !== t.lastIndex;
 }();
 var m = i.UNSUPPORTED_Y || i.BROKEN_CARET;
-var g = void 0 !== /()??/.exec("")[1];
+var g = undefined !== /()??/.exec("")[1];
 if (h || g || m || l || u) {
   f = function (e) {
     var t;
@@ -81,8 +81,8 @@ if (h || g || m || l || u) {
     if (g && a && a.length > 1) {
       p.call(a[0], n, function () {
         for (l = 1; l < arguments.length - 2; l++) {
-          if (void 0 === arguments[l]) {
-            a[l] = void 0;
+          if (undefined === arguments[l]) {
+            a[l] = undefined;
           }
         }
       });

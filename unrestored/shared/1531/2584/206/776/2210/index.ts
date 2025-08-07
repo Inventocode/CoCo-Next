@@ -6,7 +6,7 @@
   var o = require("../../../38/607/624/index");
   var a = require("../1187");
   var s = require("./1108/index");
-  var c = require("../../../31/index");
+  var c = require("lodash");
   var u = require("./2211");
   var l = require("../1333/index");
   var f = require("./756/index");
@@ -61,7 +61,7 @@
     }
   }
   function b(e, t, n) {
-    var r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
+    var r = arguments.length > 3 && undefined !== arguments[3] ? arguments[3] : null;
     try {
       var i = m(n);
       if (0 !== i) {
@@ -73,7 +73,7 @@
     }
   }
   function w(e, t) {
-    var n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : _;
+    var n = arguments.length > 2 && undefined !== arguments[2] ? arguments[2] : _;
     if (e) {
       Object.keys(e).forEach(function (e) {
         if (!(n(e) || l.get(e) || null)) {
@@ -84,7 +84,7 @@
     }
   }
   function E(e, t) {
-    var n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : _;
+    var n = arguments.length > 2 && undefined !== arguments[2] ? arguments[2] : _;
     if (e) {
       Object.keys(e).forEach(function (r) {
         b(n(r) || f.get(r) || null, r, e[r], t);
@@ -92,7 +92,7 @@
     }
   }
   function x(e) {
-    var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+    var t = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : null;
     if (e) {
       Object.entries(e).forEach(function (e) {
         var n = o(e, 2);
@@ -135,7 +135,7 @@
     t.emitWarning("".concat(i, " (found in \"").concat(r, "\")"), "DeprecationWarning", n);
   });
   function S(e) {
-    var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+    var t = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : null;
     if (!(r = r || h.compile(u))(e)) {
       throw new Error("ESLint configuration in ".concat(t, " is invalid:\n").concat(O(r.errors)));
     }

@@ -6,9 +6,9 @@ export { a as d };
 export { c as b };
 export { l as c };
 export { u as e };
-var r = require("./31/index");
+import r = require("lodash");
 function o(e) {
-  var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 10;
+  var t = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : 10;
   return e.substr(0, t) + (e.length > t ? "..." : "");
 }
 function i(e) {
@@ -25,12 +25,12 @@ function i(e) {
     t.addRange(r);
     document.execCommand("Copy");
     n.remove();
-    return !0;
+    return true;
   }
-  return !1;
+  return false;
 }
 function a(e) {
-  return Object(r.isArray)(e) || Object(r.isPlainObject)(e) ? s(e, null, 2).replace(new RegExp("\"".concat(31, "...OBJECT").concat(30, "\""), "g"), "{...}").replace(new RegExp("\"".concat(31, "...ARRAY").concat(30, "\""), "g"), "[...]") : "".concat(e);
+  return r.isArray(e) || r.isPlainObject(e) ? s(e, null, 2).replace(new RegExp("\"".concat(31, "...OBJECT").concat(30, "\""), "g"), "{...}").replace(new RegExp("\"".concat(31, "...ARRAY").concat(30, "\""), "g"), "[...]") : "".concat(e);
 }
 function s(e, t, n, o) {
   return JSON.stringify(e, function (e, t) {
@@ -38,7 +38,7 @@ function s(e, t, n, o) {
     var o = [];
     if (!t) {
       t = function () {
-        return Object(r.isArray)(this) ? "".concat(31, "...ARRAY").concat(30) : "".concat(31, "...OBJECT").concat(30);
+        return r.isArray(this) ? "".concat(31, "...ARRAY").concat(30) : "".concat(31, "...OBJECT").concat(30);
       };
     }
     return function (r, i) {
@@ -76,10 +76,10 @@ function l(e, t) {
   return n;
 }
 function u(e) {
-  var t = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+  var t = !(arguments.length > 1 && undefined !== arguments[1]) || arguments[1];
   var n = function () {
-    return Object(r.isArray)(this) ? "[...]" : "{...}";
+    return r.isArray(this) ? "[...]" : "{...}";
   };
-  return "object" !== typeof e ? e.toString() : Array.isArray(e) ? t ? s(e, void 0, void 0, n).replace(/"([^"]+)"/g, "$1") : s(e, void 0, void 0, n) : s(e, void 0, void 0, n).replace(/([^"]+):"([^"]+)"/g, "$1:$2").replaceAll("\"[...]\"", "[...]").replaceAll("\"{...}\"", "{...}");
+  return "object" !== typeof e ? e.toString() : Array.isArray(e) ? t ? s(e, undefined, undefined, n).replace(/"([^"]+)"/g, "$1") : s(e, undefined, undefined, n) : s(e, undefined, undefined, n).replace(/([^"]+):"([^"]+)"/g, "$1:$2").replaceAll("\"[...]\"", "[...]").replaceAll("\"{...}\"", "{...}");
 }
 export default i;

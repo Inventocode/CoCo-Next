@@ -8,7 +8,7 @@ export { g as b };
 export { v as f };
 export { y as e };
 var r;
-var o = require("../1/index");
+import o = require("regenerator-runtime");
 var i = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -21,9 +21,9 @@ var i = function __importDefault(module) {
   });
   return defaultExport;
 }(o);
-var a = require("../6");
-var s = require("../7");
-var c = require("../41");
+import a = require("../6");
+import s = require("../7");
+import c = require("../41");
 var l = require("../59/index").a.socketHost;
 function u() {
   var e = {};
@@ -47,7 +47,7 @@ function p(e, t, n) {
   return f.apply(this, arguments);
 }
 function f() {
-  return (f = Object(s.a)(i.a.mark(function e(t, n, r) {
+  return (f = s.a(i.a.mark(function e(t, n, r) {
     var o;
     var s;
     return i.a.wrap(function (e) {
@@ -60,7 +60,7 @@ function f() {
               user_limit: r
             };
             e.next = 3;
-            return c.a.post(l + "/coconut/room", Object(a.a)({}, o), {
+            return c.a.post(l + "/coconut/room", a.a({}, o), {
               headers: u()
             });
           case 3:
@@ -83,7 +83,7 @@ function h(e) {
   return m.apply(this, arguments);
 }
 function m() {
-  return (m = Object(s.a)(i.a.mark(function e(t) {
+  return (m = s.a(i.a.mark(function e(t) {
     var n;
     var r;
     return i.a.wrap(function (e) {
@@ -94,7 +94,7 @@ function m() {
               username: t
             };
             e.next = 3;
-            return c.a.put(l + "/coconut/room/username", Object(a.a)({}, n), {
+            return c.a.put(l + "/coconut/room/username", a.a({}, n), {
               headers: u()
             });
           case 3:
@@ -117,7 +117,7 @@ function g(e) {
   return _.apply(this, arguments);
 }
 function _() {
-  return (_ = Object(s.a)(i.a.mark(function e(t) {
+  return (_ = s.a(i.a.mark(function e(t) {
     var n;
     return i.a.wrap(function (e) {
       for (;;) {
@@ -147,7 +147,7 @@ function v(e) {
   return b.apply(this, arguments);
 }
 function b() {
-  return (b = Object(s.a)(i.a.mark(function e(t) {
+  return (b = s.a(i.a.mark(function e(t) {
     var n;
     return i.a.wrap(function (e) {
       for (;;) {
@@ -177,7 +177,7 @@ function y(e) {
   return E.apply(this, arguments);
 }
 function E() {
-  return (E = Object(s.a)(i.a.mark(function e(t) {
+  return (E = s.a(i.a.mark(function e(t) {
     var n;
     return i.a.wrap(function (e) {
       for (;;) {

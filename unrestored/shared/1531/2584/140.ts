@@ -1,36 +1,36 @@
 "use strict";
 
 export { o as a };
-var r = require("./273");
-var i = require("./322");
+import r = require("./273");
+import i = require("./322");
 function o(e) {
   var t = function () {
     if ("undefined" === typeof Reflect || !Reflect.construct) {
-      return !1;
+      return false;
     }
     if (Reflect.construct.sham) {
-      return !1;
+      return false;
     }
     if ("function" === typeof Proxy) {
-      return !0;
+      return true;
     }
     try {
       Date.prototype.toString.call(Reflect.construct(Date, [], function () {}));
-      return !0;
+      return true;
     } catch (e) {
-      return !1;
+      return false;
     }
   }();
   return function () {
     var n;
-    var o = Object(r.a)(e);
+    var o = r.a(e);
     if (t) {
-      var a = Object(r.a)(this).constructor;
+      var a = r.a(this).constructor;
       n = Reflect.construct(o, arguments, a);
     } else {
       n = o.apply(this, arguments);
     }
-    return Object(i.a)(this, n);
+    return i.a(this, n);
   };
 }
 export default o;

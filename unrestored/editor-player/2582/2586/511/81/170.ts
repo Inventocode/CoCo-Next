@@ -11,12 +11,12 @@ var s = function () {
     try {
       return this.doDecode(t, e);
     } catch (d) {
-      if (e && !0 === e.get(o.a.TRY_HARDER) && t.isRotateSupported()) {
+      if (e && true === e.get(o.a.TRY_HARDER) && t.isRotateSupported()) {
         var r = t.rotateCounterClockwise();
         var n = this.doDecode(r, e);
         var s = n.getResultMetadata();
         var c = 270;
-        if (null !== s && !0 === s.get(i.a.ORIENTATION)) {
+        if (null !== s && true === s.get(i.a.ORIENTATION)) {
           c += s.get(i.a.ORIENTATION) % 360;
         }
         n.putMetadata(i.a.ORIENTATION, c);
@@ -37,7 +37,7 @@ var s = function () {
     var s = t.getWidth();
     var c = t.getHeight();
     var f = new n.a(s);
-    var h = e && !0 === e.get(o.a.TRY_HARDER);
+    var h = e && true === e.get(o.a.TRY_HARDER);
     var l = Math.max(1, c >> (h ? 8 : 5));
     r = h ? c : 15;
     for (var d = Math.trunc(c / 2), p = 0; p < r; p++) {
@@ -52,7 +52,7 @@ var s = function () {
         continue;
       }
       for (var w = function (t) {
-          if (1 === t && (f.reverse(), e && !0 === e.get(o.a.NEED_RESULT_POINT_CALLBACK))) {
+          if (1 === t && (f.reverse(), e && true === e.get(o.a.NEED_RESULT_POINT_CALLBACK))) {
             var r = new Map();
             e.forEach(function (t, e) {
               return r.set(e, t);

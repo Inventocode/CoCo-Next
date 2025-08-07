@@ -8,9 +8,9 @@ module.exports = function (e) {
         s: n,
         n: function () {
           return t >= e.length ? {
-            done: !0
+            done: true
           } : {
-            done: !1,
+            done: false,
             value: e[t++]
           };
         },
@@ -24,8 +24,8 @@ module.exports = function (e) {
   }
   var i;
   var o;
-  var a = !0;
-  var s = !1;
+  var a = true;
+  var s = false;
   return {
     s: function () {
       i = e[Symbol.iterator]();
@@ -36,7 +36,7 @@ module.exports = function (e) {
       return e;
     },
     e: function (e) {
-      s = !0;
+      s = true;
       o = e;
     },
     f: function () {

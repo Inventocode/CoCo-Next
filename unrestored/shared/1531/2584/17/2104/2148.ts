@@ -1,9 +1,9 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: !0
+  value: true
 });
-exports.Xml = void 0;
+exports.Xml = undefined;
 var r = require("tslib");
 var i = require("inversify");
 var o = require("@kitten-team/gl-matrix");
@@ -19,13 +19,13 @@ var d = function () {
     this.scoped_connections = [];
   }
   e.prototype.workspace_to_dom = function (e, t) {
-    for (var n = f.create_dom("xml"), r = e.get_top_blocks(!0), i = 0; i < r.length; i++) {
+    for (var n = f.create_dom("xml"), r = e.get_top_blocks(true), i = 0; i < r.length; i++) {
       var o = r[i];
       if (!(o.is_insertion_marker() || o.parent_group)) {
         n.appendChild(this.block_to_dom_with_xy(o, t));
       }
     }
-    var a = e.get_top_comments(!0);
+    var a = e.get_top_comments(true);
     for (i = 0; i < a.length; i++) {
       var s = a[i];
       n.appendChild(this.comment_to_dom_with_xy(s, t));
@@ -38,17 +38,17 @@ var d = function () {
     var r = e.childNodes.length;
     var i = this.events.get_group();
     if (!i) {
-      this.events.set_group(!0);
+      this.events.set_group(true);
     }
     var a = t.is_resizes_enabled();
     if (a) {
-      t.set_resizes_enabled(!1);
+      t.set_resizes_enabled(false);
     }
     try {
       for (var s = 0; s < r; s++) {
         var u = e.childNodes[s];
         var l = u.nodeName.toLowerCase();
-        var f = void 0;
+        var f = undefined;
         if ("block" == l || "shadow" == l && !this.events.is_record_undo() || "empty" == l && !this.events.is_record_undo()) {
           f = this.dom_to_block(u, t);
         } else {
@@ -76,12 +76,12 @@ var d = function () {
       }
     } finally {
       if (!i) {
-        this.events.set_group(!1);
+        this.events.set_group(false);
       }
       this.utils.stop_text_cache();
     }
     if (a) {
-      t.set_resizes_enabled(!0);
+      t.set_resizes_enabled(true);
     }
     return n;
   };
@@ -99,15 +99,15 @@ var d = function () {
       if (e.group_type !== a.BlockGroupType.EXECUTION) {
         return i;
       }
-      var l = null === (n = e.next_connection) || void 0 === n ? void 0 : n.targetBlock();
+      var l = null === (n = e.next_connection) || undefined === n ? undefined : n.targetBlock();
       var d = l && this.block_to_dom(l, t);
       if (d) {
         d.setAttribute(a.BLOCK_GROUP_STOPPED_XML_TAG, "true");
         var h = i.querySelector("next[" + a.LAST_NEXT_XML_TAG + "=\"true\"]");
-        if (!(null === h || void 0 === h)) {
+        if (!(null === h || undefined === h)) {
           h.removeAttribute(a.LAST_NEXT_XML_TAG);
         }
-        if (!(null === h || void 0 === h)) {
+        if (!(null === h || undefined === h)) {
           h.appendChild(d);
         }
       }
@@ -141,11 +141,11 @@ var d = function () {
       i.setAttribute("visible", e.visibility_);
     }
     if (e.data) {
-      var m = f.create_dom("data", void 0, e.data);
+      var m = f.create_dom("data", undefined, e.data);
       i.appendChild(m);
     }
     for (_ = 0; _ < e.inputList.length; _++) {
-      var y = !0;
+      var y = true;
       if ((A = e.inputList[_]).type != a.InputType.DUMMY && A.connection) {
         var b = A.connection.targetBlock();
         if (A.type == a.InputType.VALUE) {
@@ -165,7 +165,7 @@ var d = function () {
           if (o) {
             o.appendChild(this.block_to_dom(b, t));
           }
-          y = !1;
+          y = false;
         }
         if (o) {
           o.setAttribute("name", A.name);
@@ -179,23 +179,23 @@ var d = function () {
       i.setAttribute("inline", String(e.inputs_inline));
     }
     if (e.is_collapsed()) {
-      i.setAttribute("collapsed", String(!0));
+      i.setAttribute("collapsed", String(true));
     }
     if (e.disabled) {
-      i.setAttribute("disabled", String(!0));
+      i.setAttribute("disabled", String(true));
     }
     if (!e.deletable_) {
-      i.setAttribute("deletable", String(!1));
+      i.setAttribute("deletable", String(false));
     }
     if (!e.movable_) {
-      i.setAttribute("movable", String(!1));
+      i.setAttribute("movable", String(false));
     }
     if (!e.editable_) {
-      i.setAttribute("editable", String(!1));
+      i.setAttribute("editable", String(false));
     }
-    var E = null === (r = e.next_connection) || void 0 === r ? void 0 : r.targetBlock();
+    var E = null === (r = e.next_connection) || undefined === r ? undefined : r.targetBlock();
     if (E) {
-      var x = f.create_dom("next", void 0, this.block_to_dom(E, t));
+      var x = f.create_dom("next", undefined, this.block_to_dom(E, t));
       i.appendChild(x);
     } else if (e.next_connection) {
       var C = e.get_root_block();
@@ -214,7 +214,7 @@ var d = function () {
   };
   e.prototype.field_to_dom = function (e, t) {
     if (e.name && e.editable) {
-      var n = f.create_dom("field", void 0, String(e.get_value()));
+      var n = f.create_dom("field", undefined, String(e.get_value()));
       var r = e.name;
       if ((0, c.is_field_number)(e)) {
         r = this.field_number_to_dom(e, n);
@@ -229,13 +229,13 @@ var d = function () {
   e.prototype.field_number_to_dom = function (e, t) {
     var n = [e.min_, e.max_, e.precision_, e.mod_].join(",");
     t.setAttribute("constraints", n);
-    if (void 0 != e.exceptions) {
+    if (undefined != e.exceptions) {
       var r = e.exceptions.join(",");
       t.setAttribute("exceptions", r);
     }
     var i = e.get_controller_option();
     if (i) {
-      var o = void 0;
+      var o = undefined;
       o = i.type === a.ControllerType.SLIDER ? [i.type, i.left_text, i.right_text].join(",") : i.type === a.ControllerType.COLOR_PICKER ? [i.type, i.color_format, i.line].join(",") : i.type;
       t.setAttribute("controller", o);
     }
@@ -253,7 +253,7 @@ var d = function () {
     t.setAttribute("has_been_edited", String(n));
   };
   e.prototype.clone_shadow = function (e) {
-    for (var t, n = e = f.clone_node(e, !0); n;) {
+    for (var t, n = e = f.clone_node(e, true); n;) {
       if (n.firstChild) {
         n = n.firstChild;
       } else {
@@ -286,22 +286,22 @@ var d = function () {
         var o = r[i];
         var a = o[0];
         var s = o[1];
-        if (!s.connect(a, !0)) {
+        if (!s.connect(a, true)) {
           this.handle_unconnectable_child_block(a.source_block, s);
         }
       }
       if (t.rendered) {
-        n.set_connections_hidden(!0);
-        var c = n.get_descendants(!1);
+        n.set_connections_hidden(true);
+        var c = n.get_descendants(false);
         for (i = c.length - 1; i >= 0; i--) {
           c[i].respawn_all_shadows();
         }
-        for (i = (c = n.get_descendants(!1)).length - 1; i >= 0; i--) {
+        for (i = (c = n.get_descendants(false)).length - 1; i >= 0; i--) {
           c[i].init_svg();
         }
         for (i = c.length - 1; i >= 0; i--) {
           c[i].update_collapsed();
-          c[i].render(!1);
+          c[i].render(false);
         }
         for (i = c.length - 1; i >= 0; i--) {
           if ((f = c[i]).comment) {
@@ -322,10 +322,10 @@ var d = function () {
           });
         }
         window.setTimeout(function () {
-          if (void 0 != n && void 0 != n.get_workspace()) {
-            n.set_connections_hidden(!1);
+          if (undefined != n && undefined != n.get_workspace()) {
+            n.set_connections_hidden(false);
             for (var e = 0, t = u; e < t.length; e++) {
-              t[e].block.set_connections_hidden(!1);
+              t[e].block.set_connections_hidden(false);
             }
           }
         }, 1);
@@ -343,10 +343,10 @@ var d = function () {
   };
   e.prototype.dom_to_block_headless = function (e, t, n) {
     var r = e.getAttribute("type");
-    if (void 0 == r) {
+    if (undefined == r) {
       throw new ReferenceError("Block type unspecified.");
     }
-    var i = e.getAttribute("id") || n || void 0;
+    var i = e.getAttribute("id") || n || undefined;
     var o = e.nodeName.toLowerCase();
     var s = t.new_block(r, i);
     var c = e.getAttribute(a.BLOCK_GROUP_ID_XML_TAG);
@@ -357,7 +357,7 @@ var d = function () {
     if ("true" === e.getAttribute(a.BLOCK_GROUP_STOPPED_XML_TAG)) {
       for (var f = this.grouped_blocks.length - 1; f >= 0; f--) {
         var d = this.grouped_blocks[f];
-        if (!(d.block.is_starting_block() || d.block.is_output_block() || void 0 !== d.group_stop_at)) {
+        if (!(d.block.is_starting_block() || d.block.is_output_block() || undefined !== d.group_stop_at)) {
           d.group_stop_at = c || s.id;
         }
       }
@@ -372,7 +372,7 @@ var d = function () {
     for (f = 0; f < e.childNodes.length; f++) {
       var h = e.childNodes[f];
       if (h.nodeType != a.NodeType.TEXT) {
-        for (var p = void 0, _ = void 0, A = 0; A < h.childNodes.length; A++) {
+        for (var p = undefined, _ = undefined, A = 0; A < h.childNodes.length; A++) {
           var g = h.childNodes[A];
           if (g.nodeType == a.NodeType.ELEMENT) {
             var v = g.nodeName.toLowerCase();
@@ -389,13 +389,13 @@ var d = function () {
           case "mutation":
             if (s.domToMutation) {
               s.domToMutation(h);
-              if (void 0 != s.init_svg) {
+              if (undefined != s.init_svg) {
                 s.init_svg();
               }
             }
             break;
           case "comment":
-            s.set_comment_text("", h.getAttribute("id") || void 0);
+            s.set_comment_text("", h.getAttribute("id") || undefined);
             this.parse_comment_attributes(h, s.comment);
             break;
           case "data":
@@ -449,7 +449,7 @@ var d = function () {
     }
     var O = e.getAttribute("visible");
     if (O) {
-      var k = void 0;
+      var k = undefined;
       k = "false" === O || O === a.BlockVisibility.TRANSLUCENT ? a.BlockVisibility.TRANSLUCENT : "hidden" === O ? a.BlockVisibility.HIDDEN : a.BlockVisibility.VISIBLE;
       s.set_chunk_visibility(k);
     }
@@ -460,9 +460,9 @@ var d = function () {
           console.error("Shadow block not allowed non-shadow child.");
         }
       }
-      s.set_shadow(!0);
+      s.set_shadow(true);
       if ("empty" === o) {
-        s.set_editable(!1);
+        s.set_editable(false);
       }
     }
     var T = e.getAttribute("collapsed");
@@ -484,19 +484,19 @@ var d = function () {
   e.prototype.parse_connection = function (e, t, n, r) {
     var i;
     if (n) {
-      if (null === (i = t.targetBlock()) || void 0 === i ? void 0 : i.is_shadow()) {
+      if (null === (i = t.targetBlock()) || undefined === i ? undefined : i.is_shadow()) {
         t.remove_shadow();
       }
       t.set_shadow_dom(n);
     }
     if (r) {
-      var o = this.dom_to_block_headless(r, e, void 0);
+      var o = this.dom_to_block_headless(r, e, undefined);
       var a = o.output_connection || o.previous_connection;
       if (a) {
         if (a.context) {
           this.scoped_connections.push([a, t]);
         } else {
-          if (!t.connect(a, !0)) {
+          if (!t.connect(a, true)) {
             this.handle_unconnectable_child_block(o, t);
           }
         }
@@ -507,19 +507,19 @@ var d = function () {
   };
   e.prototype.handle_unconnectable_child_block = function (e, t) {
     if (this.runtime_data.is_pasting()) {
-      e.dispose(!1, !1);
+      e.dispose(false, false);
     } else {
-      for (var n = e.get_descendants(!1), r = n.length - 1; r >= 0; r--) {
+      for (var n = e.get_descendants(false), r = n.length - 1; r >= 0; r--) {
         n[r].init_svg();
         n[r].update_collapsed();
-        n[r].render(!1);
+        n[r].render(false);
       }
     }
     t.respawn_shadow();
   };
   e.prototype.parse_child_field = function (e, t) {
     var n = e.getAttribute("name");
-    if (void 0 != n) {
+    if (undefined != n) {
       if ("true" === e.getAttribute("allow_text") && "NUM" !== n) {
         n = "NUM";
       }
@@ -544,7 +544,7 @@ var d = function () {
             r.set_exceptions(l);
           }
           var f = e.getAttribute("allow_text");
-          var d = void 0;
+          var d = undefined;
           if (f) {
             d = "true" === f;
           }
@@ -553,7 +553,7 @@ var d = function () {
           }
           var h = e.getAttribute("controller");
           if (h) {
-            var p = void 0;
+            var p = undefined;
             p = "SLIDER" === (l = h.split(","))[0] ? {
               type: a.ControllerType.SLIDER,
               left_text: l[1],
@@ -575,7 +575,7 @@ var d = function () {
           }
         }
         var A = r.call_validator(i);
-        if (void 0 != A && "FieldImage" !== r.field_type) {
+        if (undefined != A && "FieldImage" !== r.field_type) {
           r.set_value(A);
         }
       }
@@ -590,21 +590,21 @@ var d = function () {
   e.prototype.block_to_dom_with_xy = function (e, t) {
     var n;
     var r = this.block_to_dom(e, t);
-    var i = (null === (n = e.parent_group) || void 0 === n ? void 0 : n.get_relative_to_surface_xy()) || e.get_relative_to_surface_xy();
+    var i = (null === (n = e.parent_group) || undefined === n ? undefined : n.get_relative_to_surface_xy()) || e.get_relative_to_surface_xy();
     r.setAttribute("x", String(Math.round(i[0])));
     r.setAttribute("y", String(Math.round(i[1])));
     return r;
   };
   e.prototype.filter_undefined_blocks = function (e, t) {
-    if (void 0 === t) {
-      t = !1;
+    if (undefined === t) {
+      t = false;
     }
-    for (var n = !1, r = e.querySelectorAll("block"), i = 0; i < r.length; i++) {
+    for (var n = false, r = e.querySelectorAll("block"), i = 0; i < r.length; i++) {
       var o = r[i];
       var a = o.getAttribute("type");
       if (!this.Blink.Blocks[a]) {
         if (!n) {
-          n = !0;
+          n = true;
         }
         var s = o.parentElement;
         switch (s.nodeName) {
@@ -632,15 +632,15 @@ var d = function () {
     return n;
   };
   e.prototype.dom_to_workspace_comment = function (e, t) {
-    var n = e.getAttribute("id") || void 0;
-    var r = t.new_workspace_comment(void 0, n);
+    var n = e.getAttribute("id") || undefined;
+    var r = t.new_workspace_comment(undefined, n);
     this.parse_comment_attributes(e, r);
     r.init_svg();
     return r;
   };
   e.prototype.comment_to_dom = function (e, t) {
     var n = e.get_text();
-    var r = f.create_dom("comment", void 0, n);
+    var r = f.create_dom("comment", undefined, n);
     r.setAttribute("pinned", String(e.is_expanded()));
     var i = e.get_bubble_size();
     r.setAttribute("h", String(i.height));
@@ -678,7 +678,7 @@ var d = function () {
       }
       var l = e.getAttribute("color_theme");
       if ((0, c.is_comment_theme)(l)) {
-        t.set_color_theme(l, !0);
+        t.set_color_theme(l, true);
       }
     }
   };
@@ -692,11 +692,11 @@ var d = function () {
   e.prototype.workspace_element_to_dom_with_xy = function (e, t) {
     return (0, c.is_block_svg)(e) ? this.block_to_dom_with_xy(e, t) : (0, c.is_workspace_comment)(e) ? this.comment_to_dom_with_xy(e, t) : (console.error("Undefined workspace element: " + e), f.create_dom("element"));
   };
-  (0, r.__decorate)([(0, s.lazy_inject)(s.BINDING.events)], e.prototype, "events", void 0);
-  (0, r.__decorate)([(0, s.lazy_inject)(s.BINDING.Blink)], e.prototype, "Blink", void 0);
-  (0, r.__decorate)([(0, s.lazy_inject)(s.BINDING.utils)], e.prototype, "utils", void 0);
-  (0, r.__decorate)([(0, s.lazy_inject)(s.BINDING.runtime_data)], e.prototype, "runtime_data", void 0);
-  (0, r.__decorate)([(0, s.lazy_inject)(s.BINDING.CreateEvent)], e.prototype, "create_event_factory", void 0);
+  (0, r.__decorate)([(0, s.lazy_inject)(s.BINDING.events)], e.prototype, "events", undefined);
+  (0, r.__decorate)([(0, s.lazy_inject)(s.BINDING.Blink)], e.prototype, "Blink", undefined);
+  (0, r.__decorate)([(0, s.lazy_inject)(s.BINDING.utils)], e.prototype, "utils", undefined);
+  (0, r.__decorate)([(0, s.lazy_inject)(s.BINDING.runtime_data)], e.prototype, "runtime_data", undefined);
+  (0, r.__decorate)([(0, s.lazy_inject)(s.BINDING.CreateEvent)], e.prototype, "create_event_factory", undefined);
   return e = (0, r.__decorate)([(0, i.injectable)()], e);
 }();
 exports.Xml = d;

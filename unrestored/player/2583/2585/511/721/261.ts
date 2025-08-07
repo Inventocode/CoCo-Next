@@ -96,7 +96,7 @@ var c = function (t, e) {
                 a.label++;
                 return {
                   value: o[1],
-                  done: !1
+                  done: false
                 };
               case 5:
                 a.label++;
@@ -144,8 +144,8 @@ var c = function (t, e) {
           throw o[1];
         }
         return {
-          value: o[0] ? o[1] : void 0,
-          done: !0
+          value: o[0] ? o[1] : undefined,
+          done: true
         };
       }([o, s]);
     };
@@ -162,7 +162,7 @@ var l = function (t) {
     return {
       next: function () {
         if (t && r >= t.length) {
-          t = void 0;
+          t = undefined;
         }
         return {
           value: t && t[r++],
@@ -180,10 +180,10 @@ var d = {
 };
 var f = function () {
   function t(t, e, n) {
-    if (void 0 === e) {
+    if (undefined === e) {
       e = new Map();
     }
-    if (void 0 === n) {
+    if (undefined === n) {
       n = {};
     }
     this.reader = t;
@@ -194,8 +194,8 @@ var f = function () {
     set: function (t) {
       this.hints.set(r.DecodeHintType.POSSIBLE_FORMATS, t);
     },
-    enumerable: !1,
-    configurable: !0
+    enumerable: false,
+    configurable: true
   });
   t.addVideoSource = function (t, e) {
     try {
@@ -205,7 +205,7 @@ var f = function () {
     }
   };
   t.mediaStreamSetTorch = function (t, e) {
-    return u(this, void 0, void 0, function () {
+    return u(this, undefined, undefined, function () {
       return c(this, function (n) {
         switch (n.label) {
           case 0:
@@ -230,7 +230,7 @@ var f = function () {
       for (var o = l(i), a = o.next(); !a.done; a = o.next()) {
         var s = a.value;
         if (t.mediaStreamIsTorchCompatibleTrack(s)) {
-          return !0;
+          return true;
         }
       }
     } catch (u) {
@@ -248,7 +248,7 @@ var f = function () {
         }
       }
     }
-    return !1;
+    return false;
   };
   t.mediaStreamIsTorchCompatibleTrack = function (t) {
     try {
@@ -256,7 +256,7 @@ var f = function () {
     } catch (e) {
       console.error(e);
       console.warn("Your browser may be not fully compatible with WebRTC and/or ImageCapture specs. Torch will not be available.");
-      return !1;
+      return false;
     }
   };
   t.isVideoPlaying = function (t) {
@@ -353,18 +353,18 @@ var f = function () {
     return n;
   };
   t.tryPlayVideo = function (e) {
-    return u(this, void 0, void 0, function () {
+    return u(this, undefined, undefined, function () {
       var n;
       return c(this, function (r) {
         switch (r.label) {
           case 0:
-            if (null === e || void 0 === e ? void 0 : e.ended) {
+            if (null === e || undefined === e ? undefined : e.ended) {
               console.error("Trying to play video that has ended.");
-              return [2, !1];
+              return [2, false];
             }
             if (t.isVideoPlaying(e)) {
               console.warn("Trying to play video that is already playing.");
-              return [2, !0];
+              return [2, true];
             }
             r.label = 1;
           case 1:
@@ -372,11 +372,11 @@ var f = function () {
             return [4, e.play()];
           case 2:
             r.sent();
-            return [2, !0];
+            return [2, true];
           case 3:
             n = r.sent();
             console.warn("It was not possible to play the video.", n);
-            return [2, !1];
+            return [2, false];
           case 4:
             return [2];
         }
@@ -399,10 +399,10 @@ var f = function () {
   t.destroyImageElement = function (t) {
     t.src = "";
     t.removeAttribute("src");
-    t = void 0;
+    t = undefined;
   };
   t.listVideoInputDevices = function () {
-    return u(this, void 0, void 0, function () {
+    return u(this, undefined, undefined, function () {
       var t;
       var e;
       var n;
@@ -465,7 +465,7 @@ var f = function () {
     });
   };
   t.findDeviceById = function (e) {
-    return u(this, void 0, void 0, function () {
+    return u(this, undefined, undefined, function () {
       var n;
       return c(this, function (r) {
         switch (r.label) {
@@ -502,16 +502,16 @@ var f = function () {
     t.streamTracker = [];
   };
   t.playVideoOnLoadAsync = function (e, n) {
-    return u(this, void 0, void 0, function () {
+    return u(this, undefined, undefined, function () {
       return c(this, function (r) {
         switch (r.label) {
           case 0:
             return [4, t.tryPlayVideo(e)];
           case 1:
-            return r.sent() ? [2, !0] : [2, new Promise(function (r, i) {
+            return r.sent() ? [2, true] : [2, new Promise(function (r, i) {
               var o = setTimeout(function () {
                 if (!t.isVideoPlaying(e)) {
-                  i(!1);
+                  i(false);
                   e.removeEventListener("canplay", a);
                 }
               }, n);
@@ -529,10 +529,10 @@ var f = function () {
     });
   };
   t.attachStreamToVideo = function (e, n, r) {
-    if (void 0 === r) {
+    if (undefined === r) {
       r = 5e3;
     }
-    return u(this, void 0, void 0, function () {
+    return u(this, undefined, undefined, function () {
       var i;
       return c(this, function (o) {
         switch (o.label) {
@@ -572,7 +572,7 @@ var f = function () {
     t.getVideoTracks().forEach(function (t) {
       return t.stop();
     });
-    t = void 0;
+    t = undefined;
   };
   t.prototype.decode = function (e) {
     var n = t.createCanvasFromMediaElement(e);
@@ -586,7 +586,7 @@ var f = function () {
     return this.decodeBitmap(n);
   };
   t.prototype.decodeFromImageElement = function (e) {
-    return u(this, void 0, void 0, function () {
+    return u(this, undefined, undefined, function () {
       var n;
       return c(this, function (i) {
         switch (i.label) {
@@ -603,7 +603,7 @@ var f = function () {
     });
   };
   t.prototype.decodeFromImageUrl = function (e) {
-    return u(this, void 0, void 0, function () {
+    return u(this, undefined, undefined, function () {
       var n;
       return c(this, function (i) {
         switch (i.label) {
@@ -628,7 +628,7 @@ var f = function () {
     });
   };
   t.prototype.decodeFromConstraints = function (e, n, r) {
-    return u(this, void 0, void 0, function () {
+    return u(this, undefined, undefined, function () {
       var i;
       var o;
       return c(this, function (a) {
@@ -653,7 +653,7 @@ var f = function () {
     });
   };
   t.prototype.decodeFromStream = function (e, n, r) {
-    return u(this, void 0, void 0, function () {
+    return u(this, undefined, undefined, function () {
       var i;
       var o;
       var a;
@@ -683,7 +683,7 @@ var f = function () {
                 d.stop();
               },
               streamVideoConstraintsApply: function (t, e) {
-                return u(this, void 0, void 0, function () {
+                return u(this, undefined, undefined, function () {
                   var n;
                   var r;
                   var i;
@@ -744,11 +744,11 @@ var f = function () {
               }
             });
             if (t.mediaStreamIsTorchCompatible(e)) {
-              p = null === f || void 0 === f ? void 0 : f.find(function (e) {
+              p = null === f || undefined === f ? undefined : f.find(function (e) {
                 return t.mediaStreamIsTorchCompatibleTrack(e);
               });
               m = function (e) {
-                return u(g, void 0, void 0, function () {
+                return u(g, undefined, undefined, function () {
                   return c(this, function (n) {
                     switch (n.label) {
                       case 0:
@@ -763,7 +763,7 @@ var f = function () {
               h.switchTorch = m;
               b = function () {
                 d.stop();
-                m(!1);
+                m(false);
               };
               h.stop = b;
             }
@@ -773,7 +773,7 @@ var f = function () {
     });
   };
   t.prototype.decodeFromVideoDevice = function (e, n, r) {
-    return u(this, void 0, void 0, function () {
+    return u(this, undefined, undefined, function () {
       var i;
       return c(this, function (o) {
         switch (o.label) {
@@ -796,7 +796,7 @@ var f = function () {
     });
   };
   t.prototype.decodeFromVideoElement = function (e, n) {
-    return u(this, void 0, void 0, function () {
+    return u(this, undefined, undefined, function () {
       var i;
       var o;
       return c(this, function (a) {
@@ -816,7 +816,7 @@ var f = function () {
     });
   };
   t.prototype.decodeFromVideoUrl = function (e, n) {
-    return u(this, void 0, void 0, function () {
+    return u(this, undefined, undefined, function () {
       var i;
       var o;
       var a;
@@ -840,7 +840,7 @@ var f = function () {
     });
   };
   t.prototype.decodeOnceFromConstraints = function (t, e) {
-    return u(this, void 0, void 0, function () {
+    return u(this, undefined, undefined, function () {
       var n;
       return c(this, function (r) {
         switch (r.label) {
@@ -856,7 +856,7 @@ var f = function () {
     });
   };
   t.prototype.decodeOnceFromStream = function (e, n) {
-    return u(this, void 0, void 0, function () {
+    return u(this, undefined, undefined, function () {
       var r;
       var i;
       return c(this, function (o) {
@@ -884,7 +884,7 @@ var f = function () {
     });
   };
   t.prototype.decodeOnceFromVideoDevice = function (t, e) {
-    return u(this, void 0, void 0, function () {
+    return u(this, undefined, undefined, function () {
       var n;
       return c(this, function (r) {
         switch (r.label) {
@@ -906,7 +906,7 @@ var f = function () {
     });
   };
   t.prototype.decodeOnceFromVideoElement = function (e) {
-    return u(this, void 0, void 0, function () {
+    return u(this, undefined, undefined, function () {
       var n;
       var i;
       return c(this, function (o) {
@@ -928,7 +928,7 @@ var f = function () {
     });
   };
   t.prototype.decodeOnceFromVideoUrl = function (e) {
-    return u(this, void 0, void 0, function () {
+    return u(this, undefined, undefined, function () {
       var n;
       var i;
       return c(this, function (o) {
@@ -956,14 +956,14 @@ var f = function () {
   };
   t.prototype.scanOneResult = function (t, e, n, i) {
     var o = this;
-    if (void 0 === e) {
-      e = !0;
+    if (undefined === e) {
+      e = true;
     }
-    if (void 0 === n) {
-      n = !0;
+    if (undefined === n) {
+      n = true;
     }
-    if (void 0 === i) {
-      i = !0;
+    if (undefined === i) {
+      i = true;
     }
     return new Promise(function (a, s) {
       o.scan(t, function (t, o, u) {
@@ -997,13 +997,13 @@ var f = function () {
     }
     var u;
     var c = function () {
-      s = void 0;
-      a = void 0;
+      s = undefined;
+      a = undefined;
     };
-    var l = !1;
+    var l = false;
     var d = {
       stop: function () {
-        l = !0;
+        l = true;
         clearTimeout(u);
         c();
         if (i) {
@@ -1016,10 +1016,10 @@ var f = function () {
         try {
           t.drawImageOnCanvas(s, e);
           var h = o.decodeFromCanvas(a);
-          n(h, void 0, d);
+          n(h, undefined, d);
           u = setTimeout(f, o.options.delayBetweenScanSuccess);
         } catch (g) {
-          n(void 0, g, d);
+          n(undefined, g, d);
           var p = g instanceof r.ChecksumException;
           var m = g instanceof r.FormatException;
           var b = g instanceof r.NotFoundException;
@@ -1036,7 +1036,7 @@ var f = function () {
     return d;
   };
   t.prototype._decodeOnLoadImage = function (e) {
-    return u(this, void 0, void 0, function () {
+    return u(this, undefined, undefined, function () {
       return c(this, function (n) {
         switch (n.label) {
           case 0:
@@ -1051,7 +1051,7 @@ var f = function () {
     });
   };
   t.prototype.getUserMedia = function (e) {
-    return u(this, void 0, void 0, function () {
+    return u(this, undefined, undefined, function () {
       var n;
       return c(this, function (r) {
         switch (r.label) {

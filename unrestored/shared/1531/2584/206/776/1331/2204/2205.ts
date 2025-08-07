@@ -52,7 +52,7 @@ p.prototype = {
       e.value = this._code.slice(e.start, e.end);
     } else if (n === f.string) {
       if (t.jsxAttrValueToken) {
-        t.jsxAttrValueToken = !1;
+        t.jsxAttrValueToken = false;
         e.type = h;
       } else {
         e.type = u;

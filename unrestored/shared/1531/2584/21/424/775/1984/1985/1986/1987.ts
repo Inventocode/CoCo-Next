@@ -4,7 +4,7 @@ var r = function (e) {
   this.value = e;
 };
 r.math = {
-  isDegree: !0,
+  isDegree: true,
   acos: function (e) {
     return r.math.isDegree ? 180 / Math.PI * Math.acos(e) : Math.acos(e);
   },

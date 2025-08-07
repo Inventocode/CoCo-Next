@@ -1,23 +1,23 @@
 "use strict";
 
 export { _ as a };
-var r = require("../../../36/483/39");
-var i = require("../../1184/2620");
-var o = require("../../1184/394");
-var a = require("../../1184/2587");
-var s = require("../../1184/905");
-var c = require("./904");
-var u = require("../../1184/1027");
-var l = require("../../1184/561/index");
+import r = require("../../../36/483/39");
+import i = require("../../1184/2620");
+import o = require("../../1184/394");
+import a = require("../../1184/2587");
+import s = require("../../1184/905");
+import c = require("./904");
+import u = require("../../1184/1027");
+import l = require("../../1184/561/index");
 var f = function () {
   function e(e) {
     this.errors = 0;
-    this.sid = Object(o.i)();
+    this.sid = o.i();
     this.duration = 0;
     this.status = i.a.Ok;
-    this.init = !0;
-    this.ignoreDuration = !1;
-    var t = Object(a.b)();
+    this.init = true;
+    this.ignoreDuration = false;
+    var t = a.b();
     this.timestamp = t;
     this.started = t;
     if (e) {
@@ -25,7 +25,7 @@ var f = function () {
     }
   }
   e.prototype.update = function (e) {
-    if (void 0 === e) {
+    if (undefined === e) {
       e = {};
     }
     if (e.user) {
@@ -36,14 +36,14 @@ var f = function () {
         this.did = e.user.id || e.user.email || e.user.username;
       }
     }
-    this.timestamp = e.timestamp || Object(a.b)();
+    this.timestamp = e.timestamp || a.b();
     if (e.ignoreDuration) {
       this.ignoreDuration = e.ignoreDuration;
     }
     if (e.sid) {
-      this.sid = 32 === e.sid.length ? e.sid : Object(o.i)();
+      this.sid = 32 === e.sid.length ? e.sid : o.i();
     }
-    if (void 0 !== e.init) {
+    if (undefined !== e.init) {
       this.init = e.init;
     }
     if (!this.did && e.did) {
@@ -53,7 +53,7 @@ var f = function () {
       this.started = e.started;
     }
     if (this.ignoreDuration) {
-      this.duration = void 0;
+      this.duration = undefined;
     } else if ("number" === typeof e.duration) {
       this.duration = e.duration;
     } else {
@@ -95,16 +95,16 @@ var f = function () {
     }
   };
   e.prototype.toJSON = function () {
-    return Object(l.a)({
+    return l.a({
       sid: "" + this.sid,
       init: this.init,
       started: new Date(1e3 * this.started).toISOString(),
       timestamp: new Date(1e3 * this.timestamp).toISOString(),
       status: this.status,
       errors: this.errors,
-      did: "number" === typeof this.did || "string" === typeof this.did ? "" + this.did : void 0,
+      did: "number" === typeof this.did || "string" === typeof this.did ? "" + this.did : undefined,
       duration: this.duration,
-      attrs: Object(l.a)({
+      attrs: l.a({
         release: this.release,
         environment: this.environment,
         ip_address: this.ipAddress,
@@ -116,10 +116,10 @@ var f = function () {
 }();
 var d = function () {
   function e(e, t, n) {
-    if (void 0 === t) {
+    if (undefined === t) {
       t = new u.a();
     }
-    if (void 0 === n) {
+    if (undefined === n) {
       n = 4;
     }
     this._version = n;
@@ -170,10 +170,10 @@ var d = function () {
     return this._stack[this._stack.length - 1];
   };
   e.prototype.captureException = function (e, t) {
-    var n = this._lastEventId = Object(o.i)();
+    var n = this._lastEventId = o.i();
     var i = t;
     if (!t) {
-      var a = void 0;
+      var a = undefined;
       try {
         throw new Error("Sentry syntheticException");
       } catch (e) {
@@ -184,16 +184,16 @@ var d = function () {
         syntheticException: a
       };
     }
-    this._invokeClient("captureException", e, Object(r.a)(Object(r.a)({}, i), {
+    this._invokeClient("captureException", e, r.a(r.a({}, i), {
       event_id: n
     }));
     return n;
   };
   e.prototype.captureMessage = function (e, t, n) {
-    var i = this._lastEventId = Object(o.i)();
+    var i = this._lastEventId = o.i();
     var a = n;
     if (!n) {
-      var s = void 0;
+      var s = undefined;
       try {
         throw new Error(e);
       } catch (c) {
@@ -204,14 +204,14 @@ var d = function () {
         syntheticException: s
       };
     }
-    this._invokeClient("captureMessage", e, t, Object(r.a)(Object(r.a)({}, a), {
+    this._invokeClient("captureMessage", e, t, r.a(r.a({}, a), {
       event_id: i
     }));
     return i;
   };
   e.prototype.captureEvent = function (e, t) {
-    var n = this._lastEventId = Object(o.i)();
-    this._invokeClient("captureEvent", e, Object(r.a)(Object(r.a)({}, t), {
+    var n = this._lastEventId = o.i();
+    this._invokeClient("captureEvent", e, r.a(r.a({}, t), {
       event_id: n
     }));
     return n;
@@ -226,15 +226,15 @@ var d = function () {
     if (i && s) {
       var c = s.getOptions && s.getOptions() || {};
       var u = c.beforeBreadcrumb;
-      var l = void 0 === u ? null : u;
+      var l = undefined === u ? null : u;
       var f = c.maxBreadcrumbs;
-      var d = void 0 === f ? 100 : f;
+      var d = undefined === f ? 100 : f;
       if (!(d <= 0)) {
-        var h = Object(a.a)();
-        var p = Object(r.a)({
+        var h = a.a();
+        var p = r.a({
           timestamp: h
         }, e);
-        var _ = l ? Object(o.c)(function () {
+        var _ = l ? o.c(function () {
           return l(p, t);
         }) : p;
         if (null !== _) {
@@ -317,8 +317,8 @@ var d = function () {
     return this._callExtensionMethod("traceHeaders");
   };
   e.prototype.captureSession = function (e) {
-    if (void 0 === e) {
-      e = !1;
+    if (undefined === e) {
+      e = false;
     }
     if (e) {
       return this.endSession();
@@ -331,11 +331,11 @@ var d = function () {
     var n;
     var r;
     var i;
-    if (!(null === (n = null === (t = null === (e = this.getStackTop()) || void 0 === e ? void 0 : e.scope) || void 0 === t ? void 0 : t.getSession()) || void 0 === n)) {
+    if (!(null === (n = null === (t = null === (e = this.getStackTop()) || undefined === e ? undefined : e.scope) || undefined === t ? undefined : t.getSession()) || undefined === n)) {
       n.close();
     }
     this._sendSessionUpdate();
-    if (!(null === (i = null === (r = this.getStackTop()) || void 0 === r ? void 0 : r.scope) || void 0 === i)) {
+    if (!(null === (i = null === (r = this.getStackTop()) || undefined === r ? undefined : r.scope) || undefined === i)) {
       i.setSession();
     }
   };
@@ -346,8 +346,8 @@ var d = function () {
     var s = a && a.getOptions() || {};
     var c = s.release;
     var u = s.environment;
-    var l = (Object(o.e)().navigator || {}).userAgent;
-    var d = new f(Object(r.a)(Object(r.a)(Object(r.a)({
+    var l = (o.e().navigator || {}).userAgent;
+    var d = new f(r.a(r.a(r.a({
       release: c,
       environment: u
     }, n && {
@@ -386,7 +386,7 @@ var d = function () {
     var a = o.scope;
     var s = o.client;
     if (s && s[e]) {
-      (t = s)[e].apply(t, Object(r.f)(n, [a]));
+      (t = s)[e].apply(t, r.f(n, [a]));
     }
   };
   e.prototype._callExtensionMethod = function (e) {
@@ -403,10 +403,10 @@ var d = function () {
   return e;
 }();
 function h() {
-  var e = Object(o.e)();
+  var e = o.e();
   e.__SENTRY__ = e.__SENTRY__ || {
     extensions: {},
-    hub: void 0
+    hub: undefined
   };
   return e;
 }
@@ -421,12 +421,12 @@ function _() {
   if (!(A(e) && !g(e).isOlderThan(4))) {
     v(e, new d());
   }
-  return Object(c.b)() ? function (e) {
+  return c.b() ? function (e) {
     var t;
     var n;
     var r;
     try {
-      var i = null === (r = null === (n = null === (t = h().__SENTRY__) || void 0 === t ? void 0 : t.extensions) || void 0 === n ? void 0 : n.domain) || void 0 === r ? void 0 : r.active;
+      var i = null === (r = null === (n = null === (t = h().__SENTRY__) || undefined === t ? undefined : t.extensions) || undefined === n ? undefined : n.domain) || undefined === r ? undefined : r.active;
       if (!i) {
         return g(e);
       }
@@ -451,6 +451,6 @@ function g(e) {
   return e.__SENTRY__.hub;
 }
 function v(e, t) {
-  return !!e && (e.__SENTRY__ = e.__SENTRY__ || {}, e.__SENTRY__.hub = t, !0);
+  return !!e && (e.__SENTRY__ = e.__SENTRY__ || {}, e.__SENTRY__.hub = t, true);
 }
 export default _;

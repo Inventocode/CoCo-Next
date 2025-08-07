@@ -12,7 +12,7 @@
       i = {};
     }
     if (null == i.explicit) {
-      i.explicit = !1;
+      i.explicit = false;
     }
     if (null == i.customTypes) {
       i.customTypes = {};
