@@ -23,8 +23,8 @@ var o = function __importDefault(module) {
 }(r);
 import i = require("./10/index");
 import a = require("./7");
-import s = require("./38/index");
-import c = require("./2");
+import s = require("../../../../src/shared/events/actions");
+import c = require("../../../../src/shared/events/messages-wrapper");
 import l = require("./99");
 var u = function () {
   var e;

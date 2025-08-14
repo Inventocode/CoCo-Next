@@ -6,7 +6,7 @@ export { f as a };
 export { format as c };
 export { g as f };
 export { _ as d };
-import r = require("../../unrestored/shared/1531/2584/6");
+import r = require("../../../unrestored/shared/1531/2584/6");
 import o = require("react");
 var i = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
@@ -20,8 +20,8 @@ var i = function __importDefault(module) {
   });
   return defaultExport;
 }(o);
-import a = require("../../unrestored/shared/1531/2584/2628/index");
-import s = require("../../unrestored/shared/1531/2584/10/index");
+import a = require("../../../unrestored/shared/1531/2584/2628/index");
+import s = require("../../../unrestored/shared/1531/2584/10/index");
 var c = {
   mustToBeString: "{name} 必须是字符串",
   mustToBeNumber: "{name} 必须是数值",

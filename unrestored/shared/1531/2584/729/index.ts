@@ -15,7 +15,7 @@ var o = function __importDefault(module) {
 }(r);
 import i = require("../16/index");
 require("../710/index");
-import a = require("../155/index");
+import a = require("redux");
 import s = require("../6");
 import c = require("../38/66");
 import l = require("./62");
@@ -185,7 +185,7 @@ var N = function __importDefault(module) {
   return defaultExport;
 }(j);
 import R = require("../2628/index");
-import k = require("../../../../../src/shared/language");
+import k = require("../../../../../src/shared/ui/language");
 import x = require("../10/index");
 import D = require("./1021");
 var M = function (e) {

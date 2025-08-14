@@ -49,7 +49,7 @@
     });
     return defaultExport;
   }(g);
-  var v = require("../2");
+  var v = require("../../../../../src/shared/events/messages-wrapper");
   var b = require("../64");
   var y = require("../5");
   var E = require("../9");

@@ -2,7 +2,7 @@
 
 export { d as a };
 import r = require("./6");
-import o = require("../../../../src/shared/language");
+import o = require("../../../../src/shared/ui/language");
 import i = require("./21/index");
 import a = require("./28/index");
 import s = require("./55");

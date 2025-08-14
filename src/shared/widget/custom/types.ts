@@ -6,6 +6,7 @@ export interface Exports {
 export type Types = {
     type: string
     title: string
+    contentTextField?: string
     icon: string
 	version?: `${number}.${number}.${number}` | string | undefined
     docs?: {
@@ -58,7 +59,7 @@ export type PropertyTypes = {
 
 export type PropertyValueTypes = {
     editorType?: EditorType | undefined
-} & CommonAfferentValueTypes | DropdownTypes
+} & CommonAfferentValueTypes & DropdownTypes
 
 export type PropertyBlockOptionsTypes = {
     generateBlock?: boolean | undefined
@@ -155,7 +156,7 @@ export type CommonAfferentValueTypes = {
 }
 
 export type DropdownTypes = {
-    dropdown: DropdownItemTypes[]
+    dropdown?: DropdownItemTypes[] | undefined
 }
 
 export type DropdownItemTypes = {
@@ -194,20 +195,20 @@ export type Utils = {
 
 export const widgetRequire: (id: string) => unknown
 
-export interface Widget {
+interface WidgetInstance {
     widgetLog(this: this, message: string): void
     widgetWarn(this: this, message: string): void
     widgetError(this: this, message: string): void
     emit(this: this, key: string, ...args: unknown[]): void
 }
 
-export interface InvisibleWidget extends Widget {
+export interface InvisibleWidget extends WidgetInstance {
     widgetInterrupt(this: this, message: string): void
 }
 
-export interface VisibleWidget extends Widget {
+export interface VisibleWidget extends WidgetInstance {
     setProps(this: this, props: Record<string, unknown>): void
-    public render(this: this): ReactNode
+    render(this: this): ReactNode
 }
 
 export interface WidgetProps {
@@ -221,3 +222,5 @@ export interface VisibleWidgetProps extends WidgetProps {
     __width: number
     __height: number
 }
+
+export type Widget = new (props: Record<string, any>) => WidgetInstance

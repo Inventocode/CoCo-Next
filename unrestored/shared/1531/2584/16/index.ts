@@ -383,7 +383,7 @@ function O(e, t) {
   }
   return true;
 }
-import k = require("../155/index");
+import k = require("redux");
 function S(e) {
   return function (t, n) {
     var r = e(t, n);

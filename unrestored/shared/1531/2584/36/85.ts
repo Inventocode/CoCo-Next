@@ -6,8 +6,8 @@ export { l as e };
 export { u as d };
 export { d as a };
 import r = require("../11");
-import o = require("../../../../../src/shared/language");
-import i = require("../38/index");
+import o = require("../../../../../src/shared/ui/language");
+import i = require("../../../../../src/shared/events/actions");
 import a = require("../../../../../src/shared/widget/custom/type");
 function s(e) {
   return "".concat(e, ".__widgetName");

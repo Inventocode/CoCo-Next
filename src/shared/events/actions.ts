@@ -2,17 +2,17 @@
 
 export { xl as d };
 export { Dl as c };
-export { Ml as a };
+export { dispatch as a };
 export { Ll as b };
-import r = require("../155/index");
-import o = require("./486/index");
-import i = require("../25/index");
-import a = require("../6");
-import s = require("./66");
-import c = require("../2");
-import l = require("../18");
-import u = require("../../../../../src/shared/widget/custom/type");
-import d = require("../78");
+import r = require("redux");
+import o = require("../../../unrestored/shared/1531/2584/38/486/index");
+import i = require("../../../unrestored/shared/1531/2584/25/index");
+import a = require("../../../unrestored/shared/1531/2584/6");
+import s = require("../../../unrestored/shared/1531/2584/38/66");
+import c = require("./messages-wrapper");
+import l = require("../../../unrestored/shared/1531/2584/18");
+import u = require("../widget/custom/type");
+import d = require("../../../unrestored/shared/1531/2584/78");
 var p = window.localStorage.getItem("LANGUAGE") || navigator.language;
 var f = {
   visible: false,
@@ -496,8 +496,8 @@ var F = function () {
   }
 };
 import G = require("lodash");
-import U = require("../60");
-import W = require("../53");
+import U = require("../../../unrestored/shared/1531/2584/60");
+import W = require("../../../unrestored/shared/1531/2584/53");
 var H = s.a.Record({
   position: {
     x: 0,
@@ -1288,7 +1288,7 @@ var Ae = function () {
       return e;
   }
 };
-import je = require("../47");
+import je = require("../../../unrestored/shared/1531/2584/47");
 var Ne = s.a.Record({
   configs: {},
   variableList: s.a.List([]),
@@ -1394,7 +1394,7 @@ var Pe = function () {
       return e;
   }
 };
-import Be = require("../102");
+import Be = require("../../../unrestored/shared/1531/2584/102");
 var Fe = s.a.Record({
   editorInviteUrl: "",
   readOnlyInviteUrl: "",
@@ -1440,7 +1440,7 @@ var Ue = function () {
 var We = {
   visible: false,
   multiple: false,
-  mode: require("../68").c.ResourceLibrary,
+  mode: require("../../../unrestored/shared/1531/2584/68").c.ResourceLibrary,
   sidebarType: undefined,
   setTab: undefined
 };
@@ -1593,7 +1593,7 @@ var et = function () {
       return e;
   }
 };
-import tt = require("./341");
+import tt = require("../../../unrestored/shared/1531/2584/38/341");
 var nt = s.a.Record({
   header: {
     logo: l.j.Show,
@@ -1646,7 +1646,7 @@ var rt = function () {
       return e;
   }
 };
-import ot = require("../161");
+import ot = require("../../../unrestored/shared/1531/2584/161");
 var it = s.a.Record({
   cloudDictList: [],
   cloudTableList: [],
@@ -1817,16 +1817,16 @@ var Ct = function __importDefault(module) {
   });
   return defaultExport;
 }(wt);
-import Tt = require("./3");
-import St = require("../7");
-import It = require("../10/index");
-import At = require("../11");
-import jt = require("../2627/index");
-import Nt = require("./607/index");
-import Rt = require("../623");
-import kt = require("../14");
-import xt = require("../41");
-import Dt = require("../59/index");
+import Tt = require("../../../unrestored/shared/1531/2584/38/3");
+import St = require("../../../unrestored/shared/1531/2584/7");
+import It = require("../../../unrestored/shared/1531/2584/10/index");
+import At = require("../../../unrestored/shared/1531/2584/11");
+import jt = require("../../../unrestored/shared/1531/2584/2627/index");
+import Nt = require("../../../unrestored/shared/1531/2584/38/607/index");
+import Rt = require("../../../unrestored/shared/1531/2584/623");
+import kt = require("../../../unrestored/shared/1531/2584/14");
+import xt = require("../../../unrestored/shared/1531/2584/41");
+import Dt = require("../../../unrestored/shared/1531/2584/59/index");
 var Mt = "".concat(Dt.a.serverHost, "/coconut");
 function Lt(e) {
   return Pt.apply(this, arguments);
@@ -2128,25 +2128,25 @@ function Xt() {
     }, e);
   }))).apply(this, arguments);
 }
-import Qt = require("../177");
-import Zt = require("../298");
-import Jt = require("../26/index");
-import $t = require("./139");
-import en = require("../197/index");
-import tn = require("../141/index");
-import nn = require("../550/index");
-import rn = require("../327");
-import on = require("../9");
-import an = require("../214");
-import sn = require("../305");
-import cn = require("../5");
-import ln = require("../64");
-import un = require("../../../../../src/shared/language");
-import dn = require("../24/index");
-import pn = require("../49/index");
-import fn = require("../15");
-import hn = require("../99");
-import mn = require("../144");
+import Qt = require("../../../unrestored/shared/1531/2584/177");
+import Zt = require("../../../unrestored/shared/1531/2584/298");
+import Jt = require("../../../unrestored/shared/1531/2584/26/index");
+import $t = require("../../../unrestored/shared/1531/2584/38/139");
+import en = require("../../../unrestored/shared/1531/2584/197/index");
+import tn = require("../../../unrestored/shared/1531/2584/141/index");
+import nn = require("../../../unrestored/shared/1531/2584/550/index");
+import rn = require("../../../unrestored/shared/1531/2584/327");
+import on = require("../../../unrestored/shared/1531/2584/9");
+import an = require("../../../unrestored/shared/1531/2584/214");
+import sn = require("../../../unrestored/shared/1531/2584/305");
+import cn = require("../../../unrestored/shared/1531/2584/5");
+import ln = require("../../../unrestored/shared/1531/2584/64");
+import un = require("../ui/language");
+import dn = require("../../../unrestored/shared/1531/2584/24/index");
+import pn = require("../../../unrestored/shared/1531/2584/49/index");
+import fn = require("../../../unrestored/shared/1531/2584/15");
+import hn = require("../../../unrestored/shared/1531/2584/99");
+import mn = require("../../../unrestored/shared/1531/2584/144");
 function gn(e) {
   window.localStorage.removeItem("@__INITIALIZED__".concat(e));
   var t = "@".concat(e, "_DOCUMENT");
@@ -2156,14 +2156,14 @@ function gn(e) {
     }
   });
 }
-import _n = require("../129");
-import vn = require("../../../../../src/shared/widget/custom/load");
-import bn = require("../98");
-import yn = require("../182");
-import En = require("./376");
-import On = require("./217/index");
-import wn = require("../146");
-import Cn = require("./512");
+import _n = require("../../../unrestored/shared/1531/2584/129");
+import vn = require("../widget/custom/load");
+import bn = require("../../../unrestored/shared/1531/2584/98");
+import yn = require("../../../unrestored/shared/1531/2584/182");
+import En = require("../../../unrestored/shared/1531/2584/38/376");
+import On = require("../../../unrestored/shared/1531/2584/38/217/index");
+import wn = require("../../../unrestored/shared/1531/2584/146");
+import Cn = require("../../../unrestored/shared/1531/2584/38/512");
 var Tn = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -2176,16 +2176,16 @@ var Tn = function __importDefault(module) {
   });
   return defaultExport;
 }(Cn);
-import Sn = require("../407");
-import In = require("./343");
-import An = require("./375");
-import jn = require("../../../../../src/shared/widget/custom/restrict");
-import Nn = require("../143");
-import Rn = require("../391/index");
-import kn = require("../21/index");
-import xn = require("../174");
-import Dn = require("./142");
-import Mn = require("../112");
+import Sn = require("../../../unrestored/shared/1531/2584/407");
+import In = require("../../../unrestored/shared/1531/2584/38/343");
+import An = require("../../../unrestored/shared/1531/2584/38/375");
+import jn = require("../widget/custom/restrict");
+import Nn = require("../../../unrestored/shared/1531/2584/143");
+import Rn = require("../../../unrestored/shared/1531/2584/391/index");
+import kn = require("../../../unrestored/shared/1531/2584/21/index");
+import xn = require("../../../unrestored/shared/1531/2584/174");
+import Dn = require("../../../unrestored/shared/1531/2584/38/142");
+import Mn = require("../../../unrestored/shared/1531/2584/112");
 function Ln() {
   var e;
   var t = xl.getState();
@@ -2362,9 +2362,9 @@ function Gn() {
   var e = Ln();
   return Dn.a.removeItem(e);
 }
-import Un = require("../42/index");
-import Wn = require("./113");
-import Hn = require("../278");
+import Un = require("../../../unrestored/shared/1531/2584/42/index");
+import Wn = require("../../../unrestored/shared/1531/2584/38/113");
+import Hn = require("../../../unrestored/shared/1531/2584/278");
 var Vn = Ct.a.mark(Yn);
 var zn = Ct.a.mark(Kn);
 function Yn(e, t) {
@@ -2448,8 +2448,8 @@ function qn(e) {
 }
 var Xn;
 var Qn;
-import Zn = require("../35");
-import Jn = require("./668/index");
+import Zn = require("../../../unrestored/shared/1531/2584/35");
+import Jn = require("../../../unrestored/shared/1531/2584/38/668/index");
 var $n = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -2462,7 +2462,7 @@ var $n = function __importDefault(module) {
   });
   return defaultExport;
 }(Jn);
-import er = require("./2629");
+import er = require("../../../unrestored/shared/1531/2584/38/2629");
 var tr = [];
 var nr = false;
 var rr = false;
@@ -2793,7 +2793,7 @@ function mr(e) {
   e.callback(e.file);
 }
 var gr;
-import _r = require("./22");
+import _r = require("../../../unrestored/shared/1531/2584/38/22");
 var vr = Ct.a.mark(Fr);
 var br = Ct.a.mark(Gr);
 var yr = Ct.a.mark(Hr);
@@ -4276,9 +4276,9 @@ var bo = function __importDefault(module) {
   });
   return defaultExport;
 }(vo);
-import yo = require("../27");
-import Eo = require("../40");
-import Oo = require("../75/index");
+import yo = require("../../../unrestored/shared/1531/2584/27");
+import Eo = require("../../../unrestored/shared/1531/2584/40");
+import Oo = require("../../../unrestored/shared/1531/2584/75/index");
 var wo = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -4291,7 +4291,7 @@ var wo = function __importDefault(module) {
   });
   return defaultExport;
 }(Oo);
-import Co = require("../8");
+import Co = require("../../../unrestored/shared/1531/2584/8");
 var To = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -4304,8 +4304,8 @@ var To = function __importDefault(module) {
   });
   return defaultExport;
 }(Co);
-import So = require("../13/index");
-import Io = require("../267");
+import So = require("../../../unrestored/shared/1531/2584/13/index");
+import Io = require("../../../unrestored/shared/1531/2584/267");
 var Ao = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default;
@@ -4318,7 +4318,7 @@ var Ao = function __importDefault(module) {
   });
   return defaultExport;
 }(Io);
-import jo = require("../188");
+import jo = require("../../../unrestored/shared/1531/2584/188");
 var No = function (e) {
   var t = e.title;
   var n = e.onConfirm;
@@ -11769,7 +11769,7 @@ function wc() {
   }, qa);
 }
 var Cc;
-import Tc = require("../296");
+import Tc = require("../../../unrestored/shared/1531/2584/296");
 var Sc = Ct.a.mark(Hc);
 var Ic = Ct.a.mark(Vc);
 var Ac = Ct.a.mark(zc);
@@ -12555,8 +12555,8 @@ function cl() {
   }, Wc);
 }
 var ll;
-import ul = require("../477/index");
-import dl = require("../463");
+import ul = require("../../../unrestored/shared/1531/2584/477/index");
+import dl = require("../../../unrestored/shared/1531/2584/463");
 var pl = Ct.a.mark(gl);
 var fl = Ct.a.mark(_l);
 var hl = Ct.a.mark(vl);
@@ -12764,10 +12764,9 @@ function Dl() {
   return xl;
 }
 kl.run(Rl);
-var Ml = function (e) {
+export function dispatch(e) {
   return xl.dispatch(e);
 };
 function Ll() {
   return xl.getState().common.language;
 }
-export default Ml;

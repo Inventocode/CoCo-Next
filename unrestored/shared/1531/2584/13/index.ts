@@ -400,7 +400,7 @@ var k = function __importDefault(module) {
   });
   return defaultExport;
 }(R);
-import x = require("../2");
+import x = require("../../../../../src/shared/events/messages-wrapper");
 import D = require("../133/342");
 import M = require("../15");
 require("./646");

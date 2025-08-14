@@ -3,7 +3,7 @@
 export { oe as b };
 export { ie as a };
 import r = require("../38/66");
-import o = require("../155/index");
+import o = require("redux");
 import i = require("../38/486/index");
 import a = require("../38/343");
 import s = require("../11");

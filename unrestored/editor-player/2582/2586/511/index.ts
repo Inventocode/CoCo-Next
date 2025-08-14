@@ -913,7 +913,7 @@ function Et() {
   return window.QRScanner;
 }
 var Tt;
-import * as jt from "../../../../../src/shared/language";
+import * as jt from "../../../../../src/shared/ui/language";
 import * as St from "./249";
 import At from "./249";
 function kt(t) {

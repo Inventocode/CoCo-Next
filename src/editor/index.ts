@@ -143,7 +143,7 @@ require("../../unrestored/shared/1531/2584/1540/index");
 import w = require("../../unrestored/shared/1531/2584/2628/index");
 require("../../unrestored/shared/1531/2584/710/index");
 import C = require("../../unrestored/shared/1531/2584/188");
-import T = require("../shared/language");
+import T = require("../shared/ui/language");
 import S = require("../../unrestored/shared/1531/2584/10/index");
 import I = require("../../unrestored/shared/1531/2584/739/index");
 import A = require("../../unrestored/shared/1531/2584/702");
@@ -458,7 +458,7 @@ var H = {
 };
 var V;
 import z = require("../../unrestored/shared/1531/2584/13/index");
-import Y = require("../../unrestored/shared/1531/2584/2");
+import Y = require("../shared/events/messages-wrapper");
 import K = require("../../unrestored/shared/1531/2584/18");
 import q = require("../../unrestored/shared/1531/2584/450/index");
 import X = require("../../unrestored/shared/1531/2584/27");
@@ -37980,7 +37980,7 @@ var Mg = [{
   url: "https://codemao.yuque.com/kzbwh0/coco_guide/ako277is0gzrm4ig"
 }];
 import Lg = require("../../unrestored/shared/1531/2584/125/index");
-import Pg = require("../../unrestored/shared/1531/2584/38/index");
+import Pg = require("../shared/events/actions");
 function Bg(e) {
   var t = Object(Pg.b)();
   return [{
@@ -70059,7 +70059,7 @@ var xk = function (e) {
   }), " ", React.createElement("br", null))));
 };
 import Dk = require("../../unrestored/shared/1531/2584/430");
-import Mk = require("../../unrestored/shared/1531/2584/155/index");
+import Mk = require("redux");
 function Lk(e, t) {
   var n = Object(React.useState)(function () {
     return {

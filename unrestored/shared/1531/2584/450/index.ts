@@ -43,7 +43,7 @@ var l = function __importDefault(module) {
   });
   return defaultExport;
 }(c);
-import u = require("../../../../../src/shared/language");
+import u = require("../../../../../src/shared/ui/language");
 import d = require("../64");
 import p = require("../53");
 import f = require("../9");

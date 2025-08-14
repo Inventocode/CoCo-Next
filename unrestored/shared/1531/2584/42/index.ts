@@ -39,7 +39,7 @@ import l = require("../15");
 import u = require("../5");
 import d = require("../10/index");
 import p = require("../16/index");
-import f = require("../2");
+import f = require("../../../../../src/shared/events/messages-wrapper");
 require("./847");
 import h = require("../9");
 import m = require("./669/index");

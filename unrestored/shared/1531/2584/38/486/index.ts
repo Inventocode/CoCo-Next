@@ -5,7 +5,7 @@ var i = require("../../19");
 var o = require("../../337");
 var a = require("./179");
 var s = require("./92");
-var c = require("../../155/index");
+var c = require("redux");
 function u() {
   var e = {};
   e.promise = new Promise(function (t, n) {

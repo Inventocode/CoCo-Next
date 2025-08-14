@@ -38,6 +38,9 @@ unpack({
             searchPath: /^(.*\/)?134(\/index)?$/,
             replace: "inversify"
         }, {
+            searchPath: /^(.*\/)?155(\/index)?$/,
+            replace: "redux"
+        }, {
             searchPath: /^(.*\/)?186(\/index)?$/,
             replace: "axios"
         }, {
@@ -89,8 +92,10 @@ unpack({
     useESImport: false,
     setPath: SetPath.BY_DEPENDENCY,
     move: {
-        23: "../../src/shared/language",
+        2: "../../src/shared/events/messages-wrapper",
+        23: "../../src/shared/ui/language",
         36: "../../src/shared/widget/custom/load",
+        38: "../../src/shared/events/actions",
         79: "../../src/shared/widget/custom/type",
         233: "../../src/shared/widget/custom/restrict",
         345: "../../src/shared/widget/custom/external-module",

@@ -734,12 +734,12 @@ function ve(e, t, n) {
   var r = J.moveOp(X.a(ie(e, t)), X.a(ie(e, n)));
   $.a.applyClient(r);
 }
-import be = require("../2");
+import be = require("../../../../../src/shared/events/messages-wrapper");
 import ye = require("../9");
-import Ee = require("../38/index");
+import Ee = require("../../../../../src/shared/events/actions");
 import Oe = require("../43");
 import we = require("../../../../../src/shared/widget/custom/type");
-import Ce = require("../../../../../src/shared/language");
+import Ce = require("../../../../../src/shared/ui/language");
 import Te = require("../../../../../src/shared/widget/custom/load");
 function Se(e) {
   if (ce(e.path)) {

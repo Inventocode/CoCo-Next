@@ -4702,8 +4702,8 @@ Ie.FieldNumber.prototype.set_value = function (e) {
 };
 import De = require("./374");
 import Me = require("./500");
-import Le = require("../38/index");
-import Pe = require("../2");
+import Le = require("../../../../../src/shared/events/actions");
+import Pe = require("../../../../../src/shared/events/messages-wrapper");
 import Be = require("../28/index");
 var Fe = De.FieldTextInput.prototype.show_editor;
 De.FieldTextInput.prototype.show_editor = function () {

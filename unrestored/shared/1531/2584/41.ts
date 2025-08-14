@@ -13,9 +13,9 @@ var o = function __importDefault(module) {
   });
   return defaultExport;
 }(r);
-import i = require("../../../../src/shared/language");
-import a = require("./38/index");
-import s = require("./2");
+import i = require("../../../../src/shared/ui/language");
+import a = require("../../../../src/shared/events/actions");
+import s = require("../../../../src/shared/events/messages-wrapper");
 var c = o.a.create({
   timeout: 2e4,
   withCredentials: true

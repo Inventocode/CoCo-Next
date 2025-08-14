@@ -33,7 +33,7 @@ import a = require("../27");
 import s = require("../40");
 import c = require("../17/index");
 import l = require("../9");
-import u = require("../../../../../src/shared/language");
+import u = require("../../../../../src/shared/ui/language");
 import d = require("../301/index");
 import p = require("../5");
 import f = require("../15");
@@ -558,11 +558,11 @@ var z = function __importDefault(module) {
 }(V);
 import Y = require("../7");
 import K = require("./208/index");
-import q = require("../38/index");
+import q = require("../../../../../src/shared/events/actions");
 import X = require("../53");
 import Q = require("../47");
 import Z = require("../4/127");
-import J = require("../2");
+import J = require("../../../../../src/shared/events/messages-wrapper");
 !function (e) {
   e.PNG = "dataurl+png";
   e.SVG_ASCII = "dataurl+ascii";

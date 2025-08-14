@@ -914,7 +914,7 @@ import q = require("../../91");
 import X = require("../../68");
 import Q = require("../../48/index");
 import Z = require("../../9");
-import J = require("../../38/index");
+import J = require("../../../../../../src/shared/events/actions");
 import $ = require("../../64");
 import ee = require("../../38/142");
 function te(e) {

@@ -31,7 +31,7 @@
     return defaultExport;
   }(c);
   var u = require("./13/index");
-  var d = require("./2");
+  var d = require("../../../../src/shared/events/messages-wrapper");
   var p = require("./101");
   var f = function __importDefault(module) {
     var defaultExport = module && module.__esModule ? function () {
