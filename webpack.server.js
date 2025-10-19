@@ -9,7 +9,7 @@ const config = {
     devServer: {
         port: 7090,
         static: path.resolve(__dirname, "dist", "coco.codemao.cn"),
-        // open: "http://coco.localhost:7090",
+        open: "http://coco-next.localhost:7090",
         historyApiFallback: {
             rewrites: [
                 {
