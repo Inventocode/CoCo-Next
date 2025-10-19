@@ -33,7 +33,6 @@
     "@types/js-priority-queue": "0.0.9",
     "@types/lodash": "^4.0.0",
     "@types/node": "^24.0.0",
-    "@types/punycode": "^1.0.0",
     "@types/qrcode": "^1.0.0",
     "@types/react": "^16.0.0",
     "@types/react-css-modules": "^4.0.0",
