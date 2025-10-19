@@ -1,11 +1,18 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：R5+Y
+ */
+
 "use strict";
 
 /* unused harmony export ScreenCase */
 /* unused harmony export VIDEO_DEFAULT_HEIGHT_IN_CASE */
 /* unused harmony export getScreenCase */
 /* harmony export (binding) */
-export { videoExtraHeight };
 /* unused harmony export videoDefaultPositionOffsetX */
+/* harmony export (binding) */
+export { videoExtraHeight };
 /* harmony export (binding) */
 export { videoDefaultRatio };
 /* harmony export (binding) */
@@ -18,10 +25,9 @@ export { videoDefaultPositionLeft };
 export { videoDefaultPositionTop };
 /* harmony export (binding) */
 export { videoMinHeight };
-/* harmony export (binding) */
-export { videoMinWidth };
 /* unused harmony export videoMaxHeight */
 /* harmony import */
+export { videoMinWidth };
 import * as __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_defineProperty__ from "@babel/runtime/helpers/esm/defineProperty";
 var _VIDEO_DEFAULT_HEIGHT;
 var ScreenCase;
@@ -31,7 +37,12 @@ var ScreenCase;
   ScreenCase[ScreenCase["MID"] = 3] = "MID";
   ScreenCase[ScreenCase["LARGE"] = 4] = "LARGE";
 })(ScreenCase || (ScreenCase = {}));
-var VIDEO_DEFAULT_HEIGHT_IN_CASE = (_VIDEO_DEFAULT_HEIGHT = {}, Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_defineProperty__.default)(_VIDEO_DEFAULT_HEIGHT, ScreenCase.SMALL, 270), Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_defineProperty__.default)(_VIDEO_DEFAULT_HEIGHT, ScreenCase.MID_SMALL, 324), Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_defineProperty__.default)(_VIDEO_DEFAULT_HEIGHT, ScreenCase.MID, 385), Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_defineProperty__.default)(_VIDEO_DEFAULT_HEIGHT, ScreenCase.LARGE, 450), _VIDEO_DEFAULT_HEIGHT);
+_VIDEO_DEFAULT_HEIGHT = {};
+__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_defineProperty__.default(_VIDEO_DEFAULT_HEIGHT, ScreenCase.SMALL, 270);
+__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_defineProperty__.default(_VIDEO_DEFAULT_HEIGHT, ScreenCase.MID_SMALL, 324);
+__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_defineProperty__.default(_VIDEO_DEFAULT_HEIGHT, ScreenCase.MID, 385);
+__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_defineProperty__.default(_VIDEO_DEFAULT_HEIGHT, ScreenCase.LARGE, 450);
+var VIDEO_DEFAULT_HEIGHT_IN_CASE = _VIDEO_DEFAULT_HEIGHT;
 function getScreenCase() {
   var avaliableWidth = window.innerWidth;
   if (avaliableWidth <= 1024) {

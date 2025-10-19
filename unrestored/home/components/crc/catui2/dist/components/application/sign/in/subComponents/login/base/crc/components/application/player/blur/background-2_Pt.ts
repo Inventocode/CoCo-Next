@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：2/Pt
+ */
+
 "use strict";
 
 /* unused harmony export PlayerBlurBackground */
@@ -21,8 +27,8 @@ var PlayerBlurBackground = function PlayerBlurBackground(props) {
   var imgSrc = props.imgSrc;
   var style = props.style;
   var outterStyle = Object.assign({
-    backgroundImage: __WEBPACK_IMPORTED_MODULE_1__common_util__.isIos ? "url(".concat(imgSrc, ")") : '',
-    backgroundColor: __WEBPACK_IMPORTED_MODULE_1__common_util__.isCssFilterBlurCompatible ? 'black' : ''
+    backgroundImage: __WEBPACK_IMPORTED_MODULE_1__common_util__.isIos ? "url(".concat(imgSrc, ")") : "",
+    backgroundColor: __WEBPACK_IMPORTED_MODULE_1__common_util__.isCssFilterBlurCompatible ? "black" : ""
   }, style);
   return /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react___default.createElement("div", {
     className: "CUI-player-blur-background-background",

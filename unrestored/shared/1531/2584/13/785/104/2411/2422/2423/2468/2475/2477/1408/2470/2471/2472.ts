@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：2472
+ */
+
 var r = require("../../../../../../../../../../../254/2513/2514/2515/973/2435/1153/index");
 function i(e, t) {
   if ("function" != typeof e || null != t && "function" != typeof t) {

@@ -1,25 +1,31 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：hVAD
+ */
+
 "use strict";
 
 /* harmony export (immutable) */
-export { getUrlParams };
 /* unused harmony export getOriginPrefix */
 /* harmony export (immutable) */
-export { getCommunityAccountSettingUrl };
+export { getUrlParams };
 /* harmony import */
+export { getCommunityAccountSettingUrl };
 import * as __WEBPACK_IMPORTED_MODULE_0__cfg__ from "../cfg-dpNx";
 function getUrlSearchParams(queryString) {
   var searchParams = new URLSearchParams(queryString);
-  var key = 'inviteCode';
+  var key = "inviteCode";
   var value = searchParams.get(key);
   // inviteCode字段内带有空格和描述型文字，在这里去掉
   if (value) {
-    searchParams.set(key, value.split(' ')[0]);
+    searchParams.set(key, value.split(" ")[0]);
   }
   return searchParams;
 }
 function getUrlParams(url) {
   var obj = {};
-  var queryString = url.split('?')[1];
+  var queryString = url.split("?")[1];
   if (!queryString) {
     return {};
   }
@@ -30,19 +36,19 @@ function getUrlParams(url) {
   return obj;
 }
 function getOriginPrefix() {
-  var evn = Object(__WEBPACK_IMPORTED_MODULE_0__cfg__.config)().env;
-  var prefix = '';
-  if (evn === 'dev') {
-    prefix = 'dev-';
-  } else if (evn === 'test') {
-    prefix = 'test-';
-  } else if (evn === 'staging') {
-    prefix = 'staging-';
+  var evn = __WEBPACK_IMPORTED_MODULE_0__cfg__.config().env;
+  var prefix = "";
+  if (evn === "dev") {
+    prefix = "dev-";
+  } else if (evn === "test") {
+    prefix = "test-";
+  } else if (evn === "staging") {
+    prefix = "staging-";
   }
   return prefix;
 }
 function getCommunityAccountSettingUrl() {
-  return 'https://' + getOriginPrefix() + 'shequ.codemao.cn/setting';
+  return "https://" + getOriginPrefix() + "shequ.codemao.cn/setting";
 }
 
 /***/

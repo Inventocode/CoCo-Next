@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：614
+ */
+
 module.exports = {
   wrapper: "Player_wrapper__2nUp9",
   deviceFrameWrapper: "Player_deviceFrameWrapper__2Slra",

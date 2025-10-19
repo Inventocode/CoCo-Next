@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：YqO9
+ */
+
 "use strict";
 
 /* harmony import */
@@ -66,19 +72,19 @@ var formatNumberOnBlurEvent = function formatNumberOnBlurEvent(value, max, min) 
   return number.toString();
 };
 var formatNumberValueOnChangeEvent = function formatNumberValueOnChangeEvent(value, max) {
-  var status = 'success';
+  var status = "success";
   if (!numberRegEx.test(value)) {
-    status = 'fail';
+    status = "fail";
   }
   var number = parseFloat(value);
   // 超过最大值会报错，但超过最小值不会
   if (max && number > max) {
-    status = 'fail';
+    status = "fail";
     number = max;
   }
   return {
     status: status,
-    value: isNaN(number) ? '' : number.toString()
+    value: isNaN(number) ? "" : number.toString()
   };
 };
 var formatNumberRulesOnChangeEvent = function formatNumberRulesOnChangeEvent(value, oldValue, rules) {
@@ -91,7 +97,7 @@ var formatNumberRulesOnChangeEvent = function formatNumberRulesOnChangeEvent(val
       var result = value.match(rule.rule);
       if (!result) {
         return {
-          status: 'fail',
+          status: "fail",
           value: oldValue,
           massage: rule.message
         };
@@ -112,13 +118,13 @@ var formatNumberRulesOnChangeEvent = function formatNumberRulesOnChangeEvent(val
     }
   }
   return {
-    status: 'success',
+    status: "success",
     value: value
   };
 };
 var formatOnChangeEvent = function formatOnChangeEvent(value, oldInputValueRef, maxLength, rules) {
   var oldValue = oldInputValueRef.current;
-  if (value !== '') {
+  if (value !== "") {
     // rule verify
     if (rules) {
       var _iteratorNormalCompletion2 = true;
@@ -130,7 +136,7 @@ var formatOnChangeEvent = function formatOnChangeEvent(value, oldInputValueRef, 
           var result = value.match(rule.rule);
           if (!result) {
             return {
-              status: 'fail',
+              status: "fail",
               value: oldValue,
               massage: rule.message
             };
@@ -155,16 +161,16 @@ var formatOnChangeEvent = function formatOnChangeEvent(value, oldInputValueRef, 
     if (maxLength && (value.length <= maxLength || value.length < oldValue.length)) {
       oldInputValueRef.current = value;
       return {
-        status: 'success',
+        status: "success",
         value: value
       };
     }
     // maxLength verify
     if (maxLength !== undefined && value.length > oldValue.length) {
       return {
-        status: 'fail',
+        status: "fail",
         value: oldValue,
-        massage: 'The maximum support length is exceeded'
+        massage: "The maximum support length is exceeded"
       };
     }
   }
@@ -186,12 +192,12 @@ var formatOnChangeEvent = function formatOnChangeEvent(value, oldInputValueRef, 
     }
     oldInputValueRef.current = newInputValue;
     return {
-      status: 'success',
+      status: "success",
       value: newInputValue
     };
   }
   return {
-    status: 'success',
+    status: "success",
     value: value
   };
 };
@@ -219,7 +225,7 @@ var Input = function Input(props, ref) {
   var maxLength = props.maxLength;
   var disabled = props.disabled;
   var _props$type = props.type;
-  var type = _props$type === undefined ? 'text' : _props$type;
+  var type = _props$type === undefined ? "text" : _props$type;
   var dependency = props.dependency;
   var rules = props.rules;
   var _props$readOnly = props.readOnly;
@@ -227,44 +233,44 @@ var Input = function Input(props, ref) {
   var _props$isTrimmed = props.isTrimmed;
   var isTrimmed = _props$isTrimmed === undefined ? false : _props$isTrimmed;
   var clearButtonVisible = props.clearButtonVisible;
-  var _useState = Object(__WEBPACK_IMPORTED_MODULE_0_react__.useState)(false);
+  var _useState = __WEBPACK_IMPORTED_MODULE_0_react__.useState(false);
   var _useState2 = _slicedToArray(_useState, 2);
   var isFocused = _useState2[0];
   var setIsFocused = _useState2[1];
-  var _useState3 = Object(__WEBPACK_IMPORTED_MODULE_0_react__.useState)(false);
+  var _useState3 = __WEBPACK_IMPORTED_MODULE_0_react__.useState(false);
   var _useState4 = _slicedToArray(_useState3, 2);
   var isWarningAnimation = _useState4[0];
   var setWarningAnimation = _useState4[1];
-  var inputRef = Object(__WEBPACK_IMPORTED_MODULE_0_react__.useRef)(null);
-  var oldInputValueRef = Object(__WEBPACK_IMPORTED_MODULE_0_react__.useRef)(''); // 记录input 框改变前的value
-  var _useState5 = Object(__WEBPACK_IMPORTED_MODULE_0_react__.useState)(!!defaultValue || !!value);
+  var inputRef = __WEBPACK_IMPORTED_MODULE_0_react__.useRef(null);
+  var oldInputValueRef = __WEBPACK_IMPORTED_MODULE_0_react__.useRef(""); // 记录input 框改变前的value
+  var _useState5 = __WEBPACK_IMPORTED_MODULE_0_react__.useState(!!defaultValue || !!value);
   var _useState6 = _slicedToArray(_useState5, 2);
   var isEmptyValue = _useState6[0];
   var setIsEmptyValue = _useState6[1];
-  var isCompositionEnd = Object(__WEBPACK_IMPORTED_MODULE_0_react__.useRef)(true);
+  var isCompositionEnd = __WEBPACK_IMPORTED_MODULE_0_react__.useRef(true);
   // 记录上一次输入框数据
   // NOTE: reset input value when dependency changed
-  Object(__WEBPACK_IMPORTED_MODULE_0_react__.useEffect)(function () {
+  __WEBPACK_IMPORTED_MODULE_0_react__.useEffect(function () {
     var inputEl = inputRef.current;
     if (value === undefined && inputEl) {
-      inputEl.value = defaultValue === undefined ? '' : defaultValue.toString().substr(0, maxLength || Infinity);
+      inputEl.value = defaultValue === undefined ? "" : defaultValue.toString().substr(0, maxLength || Infinity);
       setIsEmptyValue(!inputEl.value);
     } else if (value) {
       setIsEmptyValue(false);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [inputRef, dependency, value, defaultValue]);
-  Object(__WEBPACK_IMPORTED_MODULE_0_react__.useEffect)(function () {
+  __WEBPACK_IMPORTED_MODULE_0_react__.useEffect(function () {
     var inputEl = inputRef.current;
     if (value !== undefined && inputEl) {
       inputEl.value = value.toString().substr(0, maxLength);
     }
   }, [inputRef, value, maxLength]);
-  Object(__WEBPACK_IMPORTED_MODULE_0_react__.useImperativeHandle)(ref, function () {
+  __WEBPACK_IMPORTED_MODULE_0_react__.useImperativeHandle(ref, function () {
     if (inputRef.current) {
       return {
         input: inputRef.current,
-        value: inputRef.current.value || '',
+        value: inputRef.current.value || "",
         focus: function focus() {
           return inputRef.current.focus();
         },
@@ -278,7 +284,7 @@ var Input = function Input(props, ref) {
     }
     return {
       input: inputRef.current,
-      value: ''
+      value: ""
     };
   });
   var handleChangeWhenNumberType = function handleChangeWhenNumberType(e) {
@@ -289,7 +295,7 @@ var Input = function Input(props, ref) {
     var inputValue = inputEL.value;
     if (rules) {
       var _formatResult = formatNumberRulesOnChangeEvent(inputValue, oldInputValueRef.current, rules);
-      if (_formatResult.status === 'fail') {
+      if (_formatResult.status === "fail") {
         handleFormatResult(_formatResult);
         inputEL.value = _formatResult.value;
         return;
@@ -297,7 +303,7 @@ var Input = function Input(props, ref) {
     }
     if (minusRegEx.test(inputValue)) {
       // 多个 “-” 号改为一个 “-” 号
-      inputEL.value = '-';
+      inputEL.value = "-";
       return;
     }
     var formatResult = formatNumberValueOnChangeEvent(inputValue, max);
@@ -308,7 +314,7 @@ var Input = function Input(props, ref) {
       return;
     }
     if (onChange) {
-      onChange(formatResult.value || '0', e);
+      onChange(formatResult.value || "0", e);
     }
   };
   var handleChangeWhenTextType = function handleChangeWhenTextType(e) {
@@ -335,14 +341,14 @@ var Input = function Input(props, ref) {
   };
   var handleChange = function handleChange(e) {
     setIsEmptyValue(!e.target.value);
-    if (type === 'number') {
+    if (type === "number") {
       handleChangeWhenNumberType(e);
     } else {
       handleChangeWhenTextType(e);
     }
   };
   var handleFormatResult = function handleFormatResult(result) {
-    if (result.status === 'fail') {
+    if (result.status === "fail") {
       if (!animationTimeId) {
         setWarningAnimation(true);
         animationTimeId = setTimeout(function () {
@@ -354,13 +360,13 @@ var Input = function Input(props, ref) {
       setWarningAnimation(false);
     }
   };
-  var handleFocus = Object(__WEBPACK_IMPORTED_MODULE_0_react__.useCallback)(function (e) {
+  var handleFocus = __WEBPACK_IMPORTED_MODULE_0_react__.useCallback(function (e) {
     setIsFocused(true);
     if (onFocus) {
       onFocus(e);
     }
   }, [onFocus]);
-  var handleBlur = Object(__WEBPACK_IMPORTED_MODULE_0_react__.useCallback)(function (e) {
+  var handleBlur = __WEBPACK_IMPORTED_MODULE_0_react__.useCallback(function (e) {
     setIsFocused(false);
     var inputEL = inputRef.current;
     if (!inputEL) {
@@ -368,7 +374,7 @@ var Input = function Input(props, ref) {
     }
     var previousV = inputEL.value;
     var lastV = inputEL.value;
-    if (type === 'number') {
+    if (type === "number") {
       lastV = formatNumberOnBlurEvent(previousV, max, min);
     }
     if (isTrimmed) {
@@ -399,7 +405,7 @@ var Input = function Input(props, ref) {
     e.stopPropagation();
     e.preventDefault();
     if (inputEl) {
-      inputEl.value = '';
+      inputEl.value = "";
       inputEl.focus();
       setIsEmptyValue(true);
       if (onClearCallback) {
@@ -426,11 +432,11 @@ var Input = function Input(props, ref) {
     value: value
   };
   return __WEBPACK_IMPORTED_MODULE_0_react___default.createElement("div", {
-    className: __WEBPACK_IMPORTED_MODULE_1_classnames___default('coco-input', className, {
-      'coco-input-focus': isFocused,
-      'coco-input-disabled': disabled,
-      'coco-input-warning': warning,
-      'coco-input-warning-animation': isWarningAnimation
+    className: __WEBPACK_IMPORTED_MODULE_1_classnames___default("coco-input", className, {
+      "coco-input-focus": isFocused,
+      "coco-input-disabled": disabled,
+      "coco-input-warning": warning,
+      "coco-input-warning-animation": isWarningAnimation
     }),
     style: style
   }, before, __WEBPACK_IMPORTED_MODULE_0_react___default.createElement("input", Object.assign({

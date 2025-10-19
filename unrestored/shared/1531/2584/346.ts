@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：346
+ */
+
 module.exports = {
   dataViewerGrid: "styles_dataViewerGrid__18qx8",
   gridInfo: "styles_gridInfo__31E01",

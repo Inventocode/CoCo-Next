@@ -1,15 +1,21 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：602
+ */
+
 "use strict";
 
-var r = require("./74");
-var i = require("./118");
-var o = require("./37");
-var a = require("./150");
-var s = require("./117");
-var u = require("./509/351");
-var c = require("./509/409");
-var l = require("./509/604");
-var d = require("./509/382");
-var f = require("./165");
+var r = require("../74");
+var i = require("../118");
+var o = require("../37");
+var a = require("../150");
+var s = require("../117");
+var u = require("./351");
+var c = require("./409");
+var l = require("./604");
+var d = require("./382");
+var f = require("../165");
 var h = function () {
   function t() {}
   t.buildBitArray = function (t) {
@@ -44,7 +50,7 @@ var h = function () {
   };
   return t;
 }();
-var p = require("./600");
+var p = require("../600/index");
 var m = function () {
   function t(t, e, n, r) {
     this.leftchar = t;
@@ -493,7 +499,7 @@ var _ = function (t) {
   };
   e.constructResult = function (t) {
     var e = h.buildBitArray(t);
-    var n = Object(p.a)(e).parseInformation();
+    var n = p.a(e).parseInformation();
     var i = t[0].getFinderPattern().getResultPoints();
     var o = t[t.length - 1].getFinderPattern().getResultPoints();
     var s = [i[0], i[1], o[0], o[1]];

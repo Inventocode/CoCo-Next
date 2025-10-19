@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：511
+ */
+
 "use strict";
 
 var r;
@@ -18,7 +24,7 @@ import g from "axios";
 import "../../../../shared/1531/2584/710/index";
 import * as v from "../../../../../src/shared/widget/custom/load";
 import * as _ from "../../../../../src/shared/widget/custom/type";
-import * as y from "../../../../shared/1531/2584/98";
+import * as y from "../../../../../src/shared/widget/custom/storage";
 import * as w from "../../../../shared/1531/2584/15";
 import * as E from "../../../../shared/1531/2584/676/index";
 import * as O from "../../../../shared/1531/2584/27";
@@ -30,7 +36,7 @@ var C = [];
 var j = function () {};
 var M = {
   callNumber: function (t) {
-    if (Object(I.d)()) {
+    if (I.d()) {
       window.cordova.plugins.phonedialer.call(t, j, function (t) {
         console.error("应用需要开启电话权限");
         var e = window.cordova.plugins.permissions;
@@ -48,7 +54,7 @@ var M = {
     }
   },
   dialNumber: function (t) {
-    if (Object(I.d)()) {
+    if (I.d()) {
       window.cordova.plugins.phonedialer.dial(t, j, function (t) {
         return console.error(t);
       }, false);
@@ -58,7 +64,7 @@ var M = {
   },
   onCall: function (t) {
     var e;
-    if (Object(I.d)()) {
+    if (I.d()) {
       C.push(t);
       if (!(null === (e = window.CallTrap) || undefined === e)) {
         e.onCall(function (t) {
@@ -76,11 +82,11 @@ import * as R from "../../../../shared/1531/2584/48/index";
 import * as N from "../../../../shared/1531/2584/38/217/index";
 import * as x from "../../../../shared/1531/2584/676/70";
 var D = function (t) {
-  Object(A.a)(n, t);
-  var e = Object(S.a)(n);
+  A.a(n, t);
+  var e = S.a(n);
   function n(t) {
     var o;
-    Object(O.a)(this, n);
+    O.a(this, n);
     (o = e.call(this, t)).phoneNumber = undefined;
     o.oldState = "";
     o.isIncomingCall = false;
@@ -119,15 +125,15 @@ var D = function (t) {
     });
     return o;
   }
-  Object(T.a)(n, [{
+  T.a(n, [{
     key: "callNumber",
     value: function () {
       if (this.phoneNumber) {
-        if (Object(I.g)()) {
-          if (Object(R.a)().getState().emulatorPhoneInfo.callingPageVisible) {
+        if (I.g()) {
+          if (R.a().getState().emulatorPhoneInfo.callingPageVisible) {
             this.widgetWarn("callNumberRepeat");
           } else {
-            Object(R.a)().dispatch(Object(k.s)({
+            R.a().dispatch(k.s({
               phoneDialWidgetId: this.__widgetId,
               callingPageVisible: true,
               phoneNumber: this.phoneNumber,
@@ -135,7 +141,7 @@ var D = function (t) {
               callStatus: x.b.RINGING
             }));
             this.emit("onPhoneCallStart");
-            Object(N.b)({
+            N.b({
               phoneCallInfo: {
                 callType: "dialOutCall",
                 dialOutPhoneNumber: this.phoneNumber,
@@ -144,7 +150,7 @@ var D = function (t) {
             });
           }
         } else {
-          if (!Object(I.d)()) {
+          if (!I.d()) {
             r = this.__widgetId;
             M.callNumber(this.phoneNumber);
           }
@@ -161,11 +167,11 @@ var D = function (t) {
   }, {
     key: "dialNumber",
     value: function () {
-      if (Object(I.g)()) {
-        if (Object(R.a)().getState().emulatorPhoneInfo.dialPageVisible) {
+      if (I.g()) {
+        if (R.a().getState().emulatorPhoneInfo.dialPageVisible) {
           this.widgetWarn("dialNumberRepeat");
         }
-        return void Object(R.a)().dispatch(Object(k.s)({
+        return void R.a().dispatch(k.s({
           phoneDialWidgetId: this.__widgetId,
           dialPageVisible: true,
           phoneNumber: this.phoneNumber
@@ -210,11 +216,11 @@ var B = {
   }
 };
 var P = function (t) {
-  Object(A.a)(n, t);
-  var e = Object(S.a)(n);
+  A.a(n, t);
+  var e = S.a(n);
   function n(t) {
     var r;
-    Object(O.a)(this, n);
+    O.a(this, n);
     (r = e.call(this, t)).contactName = undefined;
     r.phoneNumber = undefined;
     r.contactAvatar = undefined;
@@ -225,11 +231,11 @@ var P = function (t) {
     r.phoneNumberList = t.phoneNumberList;
     return r;
   }
-  Object(T.a)(n, [{
+  T.a(n, [{
     key: "pickContact",
     value: function () {
       var t = this;
-      if (Object(I.d)()) {
+      if (I.d()) {
         B.pickContact(function (e, n, r, i) {
           t.contactName = e;
           t.phoneNumber = n;
@@ -238,7 +244,7 @@ var P = function (t) {
           t.emit("onContactPickerSelected", e, n, r);
         });
       } else {
-        Object(R.a)().dispatch(Object(k.s)({
+        R.a().dispatch(k.s({
           contactWidgetId: this.__widgetId,
           contactPageVisible: true
         }));
@@ -253,7 +259,7 @@ var W = function () {};
 var H = {
   openMessage: function (t, e) {
     if (t) {
-      if (Object(I.d)()) {
+      if (I.d()) {
         window.sms.send(t, e, {
           replaceLineBreaks: false,
           android: {
@@ -261,7 +267,7 @@ var H = {
           }
         }, W, W);
       } else {
-        if (Object(I.b)()) {
+        if (I.b()) {
           window.location.href = "sms:".concat(t, "?body=").concat(e);
         } else {
           window.location.href = "sms:".concat(t, "&body=").concat(e);
@@ -270,7 +276,7 @@ var H = {
     }
   },
   sendMessage: function (t, e, n, r) {
-    if (Object(I.d)()) {
+    if (I.d()) {
       window.sms.send(t, e, {
         replaceLineBreaks: false,
         android: {
@@ -292,7 +298,7 @@ var H = {
         });
       });
     } else {
-      if (Object(I.b)()) {
+      if (I.b()) {
         window.location.href = "sms:".concat(t, "?body=").concat(e);
       } else {
         window.location.href = "sms:".concat(t, "&body=").concat(e);
@@ -301,7 +307,7 @@ var H = {
   },
   startWatchReceiveSms: function () {
     var t;
-    if (Object(I.d)()) {
+    if (I.d()) {
       if (!(null === (t = window.SMSReceive) || undefined === t)) {
         t.startWatch(W, function () {
           return console.warn("sms receive: failed to start watching");
@@ -310,7 +316,7 @@ var H = {
     }
   },
   onCall: function (t) {
-    if (Object(I.d)()) {
+    if (I.d()) {
       F.push(t);
       document.addEventListener("onSMSArrive", function (t) {
         var e = t.data;
@@ -323,11 +329,11 @@ var H = {
 };
 var V = false;
 var G = function (t) {
-  Object(A.a)(n, t);
-  var e = Object(S.a)(n);
+  A.a(n, t);
+  var e = S.a(n);
   function n(t) {
     var r;
-    Object(O.a)(this, n);
+    O.a(this, n);
     (r = e.call(this, t)).phoneNumber = undefined;
     r.smsContent = undefined;
     r.phoneNumber = t.phoneNumber;
@@ -341,13 +347,13 @@ var G = function (t) {
     });
     return r;
   }
-  Object(T.a)(n, [{
+  T.a(n, [{
     key: "sendSms",
     value: function () {
       var t = this;
       if (this.phoneNumber) {
         if (this.smsContent) {
-          return Object(I.g)() ? (this.emit("onSendSmsSuccess", this.smsContent, this.phoneNumber), void this.widgetLog("sendSmsLog", {
+          return I.g() ? (this.emit("onSendSmsSuccess", this.smsContent, this.phoneNumber), void this.widgetLog("sendSmsLog", {
             phoneNumber: this.phoneNumber
           })) : void H.sendMessage(this.phoneNumber, this.smsContent, function (e, n) {
             return t.emit("onSendSmsSuccess", e, n);
@@ -363,8 +369,8 @@ var G = function (t) {
   }, {
     key: "openSms",
     value: function () {
-      if (Object(I.g)()) {
-        Object(R.a)().dispatch(Object(k.s)({
+      if (I.g()) {
+        R.a().dispatch(k.s({
           smsWidgetId: this.__widgetId,
           sendSmsPageVisible: true,
           sendSmsNumber: this.phoneNumber,
@@ -387,7 +393,7 @@ import J from "color";
 import * as Q from "../../../../shared/1531/2584/189";
 import * as $ from "animejs";
 function tt(t, e) {
-  return [Object($.default)({
+  return [$.default({
     targets: "#".concat(t),
     keyframes: [{
       scale: 1
@@ -450,9 +456,9 @@ var at = {
     at.style = t;
   },
   setThemeColor: function (t) {
-    var e = Object(w.hb)(t, .4);
-    var n = Object(w.hb)(t, .04);
-    var r = Object(w.ib)(t, .3);
+    var e = w.hb(t, .4);
+    var n = w.hb(t, .04);
+    var r = w.ib(t, .3);
     var i = J(t).toString();
     document.documentElement.style.setProperty("--dialog-theme-color", i);
     document.documentElement.style.setProperty("--dialog-theme-color-medium", e);
@@ -519,7 +525,7 @@ var at = {
         e = function () {
           n.classList.remove(it.container);
         };
-        Object($.default)({
+        $.default({
           targets: "#".concat(t),
           opacity: 0,
           duration: 300,
@@ -681,11 +687,11 @@ var st = at;
 import * as ut from "../../../../shared/1531/2584/21/index";
 import * as ct from "../../../../shared/1531/2584/9";
 var lt = function (t) {
-  Object(A.a)(n, t);
-  var e = Object(S.a)(n);
+  A.a(n, t);
+  var e = S.a(n);
   function n(t) {
     var r;
-    Object(O.a)(this, n);
+    O.a(this, n);
     (r = e.call(this, t)).style = undefined;
     r.themeColor = undefined;
     r.title = undefined;
@@ -702,7 +708,7 @@ var lt = function (t) {
     r.inputText = t.inputText;
     return r;
   }
-  Object(T.a)(n, [{
+  T.a(n, [{
     key: "message",
     value: function (t, e, n, r, i) {
       var o = this;
@@ -711,10 +717,10 @@ var lt = function (t) {
       this.image = r;
       st.setStyle(this.style);
       st.setThemeColor(this.themeColor);
-      var a = Object(R.a)().getState().imageFileMap.get(r);
-      var s = Object(w.U)(r) ? r : a ? Object(ct.lb)(a) : "";
+      var a = R.a().getState().imageFileMap.get(r);
+      var s = w.U(r) ? r : a ? ct.lb(a) : "";
       var u = function (t) {
-        Object(ut.emitWidgetEvent)(Q.a, "onClickButton", o.__widgetId, t);
+        ut.emitWidgetEvent(Q.a, "onClickButton", o.__widgetId, t);
       };
       st.message({
         title: t,
@@ -740,9 +746,9 @@ var lt = function (t) {
         showCancelButton: i
       }, function (t) {
         o.selectedOption = t;
-        Object(ut.emitWidgetEvent)(Q.a, "onSelectOption", o.__widgetId, t);
+        ut.emitWidgetEvent(Q.a, "onSelectOption", o.__widgetId, t);
       }, function () {
-        Object(ut.emitWidgetEvent)(Q.a, "onCancelSelection", o.__widgetId);
+        ut.emitWidgetEvent(Q.a, "onCancelSelection", o.__widgetId);
       });
     }
   }, {
@@ -760,9 +766,9 @@ var lt = function (t) {
         showCancelButton: r
       }, function (t) {
         i.inputText = t;
-        Object(ut.emitWidgetEvent)(Q.a, "onFinishInput", i.__widgetId, t);
+        ut.emitWidgetEvent(Q.a, "onFinishInput", i.__widgetId, t);
       }, function () {
-        Object(ut.emitWidgetEvent)(Q.a, "onCancelInput", i.__widgetId);
+        ut.emitWidgetEvent(Q.a, "onCancelInput", i.__widgetId);
       });
     }
   }]);
@@ -778,11 +784,11 @@ var pt = {
   "30%": "H"
 };
 var mt = function (t) {
-  Object(A.a)(n, t);
-  var e = Object(S.a)(n);
+  A.a(n, t);
+  var e = S.a(n);
   function n(t) {
     var r;
-    Object(O.a)(this, n);
+    O.a(this, n);
     (r = e.call(this, t)).image = "";
     r.width = 300;
     r.dark = undefined;
@@ -795,7 +801,7 @@ var mt = function (t) {
     r.margin = t.margin;
     return r;
   }
-  Object(T.a)(n, [{
+  T.a(n, [{
     key: "textToDataUrl",
     value: function (t) {
       var e;
@@ -834,11 +840,11 @@ var mt = function (t) {
 import * as bt from "../../../../shared/1531/2584/680";
 import * as gt from "../../../../shared/1531/2584/36/345/392";
 var vt = function (t) {
-  Object(A.a)(n, t);
-  var e = Object(S.a)(n);
+  A.a(n, t);
+  var e = S.a(n);
   function n(t) {
     var r;
-    Object(O.a)(this, n);
+    O.a(this, n);
     (r = e.call(this, t)).stride = undefined;
     r.stepCount = undefined;
     r.isStopStep = undefined;
@@ -848,11 +854,11 @@ var vt = function (t) {
     r.resetStepCount();
     return r;
   }
-  Object(T.a)(n, [{
+  T.a(n, [{
     key: "startStepUpdate",
     value: function () {
       var t = this;
-      if (!Object(I.g)()) {
+      if (!I.g()) {
         var e = 0;
         gt.default.start(function (n) {
           if (t.isStopStep && ++e % 2 === 0) {
@@ -877,7 +883,7 @@ var vt = function (t) {
   }, {
     key: "stopStepUpdate",
     value: function () {
-      if (!Object(I.g)()) {
+      if (!I.g()) {
         gt.default.stop();
         this.isStopStep = true;
       }
@@ -886,7 +892,7 @@ var vt = function (t) {
     key: "resetStepCount",
     value: function () {
       var t = this;
-      if (!Object(I.g)()) {
+      if (!I.g()) {
         this.stepCount = 0;
         this.stepInStopTime = 0;
         this.emit("onStepCountChange", 0);
@@ -919,27 +925,27 @@ import It from "./249";
 function Ct(t) {
   switch (t) {
     case Tt.UNEXPECTED_ERROR:
-      return Object(At.c)(At.b, "ScanQrCode.Error.UnexpectedError");
+      return At.c(At.b, "ScanQrCode.Error.UnexpectedError");
     case Tt.CAMERA_ACCESS_DENIED:
-      return Object(At.c)(At.b, "ScanQrCode.Error.CameraAccessDenied");
+      return At.c(At.b, "ScanQrCode.Error.CameraAccessDenied");
     case Tt.CAMERA_ACCESS_RESTRICTED:
-      return Object(At.c)(At.b, "ScanQrCode.Error.CameraAccessRestricted");
+      return At.c(At.b, "ScanQrCode.Error.CameraAccessRestricted");
     case Tt.BACK_CAMERA_UNAVAILABLE:
-      return Object(At.c)(At.b, "ScanQrCode.Error.BackCameraUnavailable");
+      return At.c(At.b, "ScanQrCode.Error.BackCameraUnavailable");
     case Tt.FRONT_CAMERA_UNAVAILABLE:
-      return Object(At.c)(At.b, "ScanQrCode.Error.FrontCameraUnavailable");
+      return At.c(At.b, "ScanQrCode.Error.FrontCameraUnavailable");
     case Tt.CAMERA_UNAVAILABLE:
-      return Object(At.c)(At.b, "ScanQrCode.Error.CameraUnavailable");
+      return At.c(At.b, "ScanQrCode.Error.CameraUnavailable");
     case Tt.SCAN_CANCELED:
-      return Object(At.c)(At.b, "ScanQrCode.Error.ScanCanceled");
+      return At.c(At.b, "ScanQrCode.Error.ScanCanceled");
     case Tt.LIGHT_UNAVAILABLE:
-      return Object(At.c)(At.b, "ScanQrCode.Error.LightUnavailable");
+      return At.c(At.b, "ScanQrCode.Error.LightUnavailable");
     case Tt.OPEN_SETTINGS_UNAVAILABLE:
-      return Object(At.c)(At.b, "ScanQrCode.Error.SettingsUnavailable");
+      return At.c(At.b, "ScanQrCode.Error.SettingsUnavailable");
     case Tt.NOT_FOUND:
-      return Object(At.c)(At.b, "ScanQrCode.Error.NotFound");
+      return At.c(At.b, "ScanQrCode.Error.NotFound");
     default:
-      return Object(At.c)(At.b, "ScanQrCode.Error.UnexpectedError");
+      return At.c(At.b, "ScanQrCode.Error.UnexpectedError");
   }
 }
 !function (t) {
@@ -967,11 +973,11 @@ import Pt from "./901";
 import * as Ut from "./902";
 import Ft from "./902";
 var Wt = function (t) {
-  Object(A.a)(n, t);
-  var e = Object(S.a)(n);
+  A.a(n, t);
+  var e = S.a(n);
   function n() {
     var t;
-    Object(O.a)(this, n);
+    O.a(this, n);
     for (var r = arguments.length, i = new Array(r), o = 0; o < r; o++) {
       i[o] = arguments[o];
     }
@@ -980,7 +986,7 @@ var Wt = function (t) {
     t.QRCodeScanner = Ot();
     return t;
   }
-  Object(T.a)(n, [{
+  T.a(n, [{
     key: "showCameraPreview",
     value: function () {
       document.body.style.backgroundColor = "rgba(255, 255, 255, 0)";
@@ -1034,14 +1040,14 @@ var Wt = function (t) {
       var t = this;
       if (!this.previewPage) {
         var e = function () {
-          var e = Object(d.a)(u.mark(function e() {
+          var e = d.a(u.mark(function e() {
             return u.wrap(function (e) {
               for (;;) {
                 switch (e.prev = e.next) {
                   case 0:
                     e.next = 2;
-                    return Object(ut.getCameraChoosePhoto)(function () {
-                      var e = Object(d.a)(u.mark(function e(n) {
+                    return ut.getCameraChoosePhoto(function () {
+                      var e = d.a(u.mark(function e(n) {
                         return u.wrap(function (e) {
                           for (;;) {
                             switch (e.prev = e.next) {
@@ -1073,7 +1079,7 @@ var Wt = function (t) {
             return e.apply(this, arguments);
           };
         }();
-        var n = "\n        <img class=".concat(It.scanning, " src=").concat(Mt, " />\n        <p class=").concat(It.text, ">\n          ").concat(Object(At.c)(At.b, "ScanQrCode.tip"), "\n        </p>\n        <div class=").concat(It.error, " style=\"display:none;\">\n          <div>\n            <img src=").concat(xt, " />\n            <p>网络不佳，二维码识别失败</p>\n          </div>\n        </div>\n        <div class=\"").concat(It.largeBtn, " ").concat(It.photoBtn, "\">\n          <img src=").concat(Ft, " />\n        </div>\n        <div class=\"").concat(It.smallBtn, " ").concat(It.returnBtn, "\">\n          <img src=").concat(Rt, " />\n        </div>\n        <div class=\"").concat(It.largeBtn, " ").concat(It.lightBtn, "\">\n          <img src=").concat(Lt, " />\n        </div>\n      ");
+        var n = "\n        <img class=".concat(It.scanning, " src=").concat(Mt, " />\n        <p class=").concat(It.text, ">\n          ").concat(At.c(At.b, "ScanQrCode.tip"), "\n        </p>\n        <div class=").concat(It.error, " style=\"display:none;\">\n          <div>\n            <img src=").concat(xt, " />\n            <p>网络不佳，二维码识别失败</p>\n          </div>\n        </div>\n        <div class=\"").concat(It.largeBtn, " ").concat(It.photoBtn, "\">\n          <img src=").concat(Ft, " />\n        </div>\n        <div class=\"").concat(It.smallBtn, " ").concat(It.returnBtn, "\">\n          <img src=").concat(Rt, " />\n        </div>\n        <div class=\"").concat(It.largeBtn, " ").concat(It.lightBtn, "\">\n          <img src=").concat(Lt, " />\n        </div>\n      ");
         var r = document.createElement("div");
         r.id = "SCANNER_PREVIEW_CONTAINER_ID";
         r.className = It.container;
@@ -1119,7 +1125,7 @@ var Wt = function (t) {
     key: "scan",
     value: function () {
       var t = this;
-      if (Object(I.d)()) {
+      if (I.d()) {
         this.QRCodeScanner.prepare(function (e, n) {
           if (e) {
             t.showErrorMessage();
@@ -1143,7 +1149,7 @@ var Wt = function (t) {
   }, {
     key: "decodeImage",
     value: function () {
-      var t = Object(d.a)(u.mark(function t(e) {
+      var t = d.a(u.mark(function t(e) {
         var n;
         var r;
         return u.wrap(function (t) {
@@ -1182,7 +1188,7 @@ var Wt = function (t) {
   }, {
     key: "scanImage",
     value: function () {
-      var t = Object(d.a)(u.mark(function t(e) {
+      var t = d.a(u.mark(function t(e) {
         var n;
         var r;
         var i;
@@ -1191,10 +1197,10 @@ var Wt = function (t) {
             switch (t.prev = t.next) {
               case 0:
                 n = "";
-                if (Object(w.U)(e)) {
+                if (w.U(e)) {
                   n = e;
                 } else {
-                  r = Object(R.a)().getState().imageFileMap;
+                  r = R.a().getState().imageFileMap;
                   i = r.get(e);
                   n = (null === i || undefined === i ? undefined : i.cdnUrl) || "";
                 }
@@ -1215,20 +1221,20 @@ var Wt = function (t) {
 }(v.c);
 import * as Ht from "../../../../shared/1531/2584/673";
 var Vt = function (t) {
-  Object(A.a)(n, t);
-  var e = Object(S.a)(n);
+  A.a(n, t);
+  var e = S.a(n);
   function n() {
-    Object(O.a)(this, n);
+    O.a(this, n);
     return e.apply(this, arguments);
   }
   return n;
 }(v.d);
 import * as Gt from "../../../../shared/1531/2584/675";
 var zt = function (t) {
-  Object(A.a)(n, t);
-  var e = Object(S.a)(n);
+  A.a(n, t);
+  var e = S.a(n);
   function n() {
-    Object(O.a)(this, n);
+    O.a(this, n);
     return e.apply(this, arguments);
   }
   return n;
@@ -1237,16 +1243,16 @@ import * as Yt from "../../../../shared/1531/2584/36/345/114";
 import * as Kt from "../../../../shared/1531/2584/14";
 import * as Xt from "../../../../shared/1531/2584/116";
 var qt = function (t) {
-  Object(A.a)(n, t);
-  var e = Object(S.a)(n);
+  A.a(n, t);
+  var e = S.a(n);
   function n(t) {
     var r;
-    Object(O.a)(this, n);
+    O.a(this, n);
     (r = e.call(this, t)).templateMode = undefined;
     r.templateMode = t.templateMode;
     return r;
   }
-  Object(T.a)(n, [{
+  T.a(n, [{
     key: "setTemplateMode",
     value: function (t, e) {
       this.setProps({
@@ -1258,7 +1264,7 @@ var qt = function (t) {
   }, {
     key: "setBackgroundImage",
     value: function (t) {
-      var e = Object(Yt.b)(t);
+      var e = Yt.b(t);
       if (e) {
         this.setProps({
           backgroundMode: Xt.a.IMAGE,
@@ -1277,16 +1283,16 @@ var qt = function (t) {
 }(v.d);
 import * as Zt from "../../../../shared/1531/2584/77";
 var Jt = function (t) {
-  Object(A.a)(n, t);
-  var e = Object(S.a)(n);
+  A.a(n, t);
+  var e = S.a(n);
   function n(t) {
     var r;
-    Object(O.a)(this, n);
+    O.a(this, n);
     (r = e.call(this, t)).templateMode = undefined;
     r.templateMode = t.templateMode;
     return r;
   }
-  Object(T.a)(n, [{
+  T.a(n, [{
     key: "setTemplateMode",
     value: function (t, e) {
       this.setProps({
@@ -1298,7 +1304,7 @@ var Jt = function (t) {
   }, {
     key: "setBackgroundImage",
     value: function (t) {
-      var e = Object(Yt.b)(t);
+      var e = Yt.b(t);
       if (e) {
         this.setProps({
           backgroundMode: Zt.a.IMAGE,
@@ -1323,23 +1329,23 @@ var ne = window.XMLHttpRequest;
 var re = ne.prototype.open;
 var ie = window.fetch;
 var oe = function (t) {
-  Object(A.a)(n, t);
-  var e = Object(S.a)(n);
+  A.a(n, t);
+  var e = S.a(n);
   function n(t, r) {
     var i;
-    Object(O.a)(this, n);
-    return new URL(t).hostname.includes("codemao") ? (i = e.call(this, "wss://websocket.com", r), Object(te.a)(i)) : e.call(this, t, r);
+    O.a(this, n);
+    return new URL(t).hostname.includes("codemao") ? (i = e.call(this, "wss://websocket.com", r), te.a(i)) : e.call(this, t, r);
   }
   return n;
 }(ee);
 var ae = function (t) {
-  Object(A.a)(n, t);
-  var e = Object(S.a)(n);
+  A.a(n, t);
+  var e = S.a(n);
   function n() {
-    Object(O.a)(this, n);
+    O.a(this, n);
     return e.apply(this, arguments);
   }
-  Object(T.a)(n, [{
+  T.a(n, [{
     key: "open",
     value: function (t, e, n, r, i) {
       return re.apply(this, [t, e, null === n || undefined === n || n, r, i]);
@@ -1424,16 +1430,16 @@ var ge = [{
   number: "#",
   letter: ""
 }];
-var ve = Object(f.memo)(function () {
-  var t = Object(p.d)();
-  var e = Object(p.e)(function (t) {
+var ve = f.memo(function () {
+  var t = p.d();
+  var e = p.e(function (t) {
     return t.emulatorPhoneInfo;
   });
-  var n = Object(f.useState)("");
-  var r = Object(c.a)(n, 2);
+  var n = f.useState("");
+  var r = c.a(n, 2);
   var i = r[0];
   var o = r[1];
-  Object(f.useEffect)(function () {
+  f.useEffect(function () {
     o(e.phoneNumber);
   }, [e.phoneNumber]);
   var a = function (t) {
@@ -1444,7 +1450,7 @@ var ve = Object(f.memo)(function () {
   }, h.createElement("div", {
     className: be.backBox,
     onClick: function () {
-      t(Object(k.s)({
+      t(k.s({
         dialPageVisible: false
       }));
     }
@@ -1470,15 +1476,15 @@ var ve = Object(f.memo)(function () {
     className: q(be.keyItem, be.callBtn),
     onClick: function () {
       if (i) {
-        t(Object(k.s)({
+        t(k.s({
           dialPageVisible: false,
           callingPageVisible: true,
           callType: "dialOutCall",
           phoneNumber: i,
           callStatus: x.b.RINGING
         }));
-        Object(ut.emitWidgetEvent)(x.c, "onPhoneCallStart", e.phoneDialWidgetId);
-        Object(N.b)({
+        ut.emitWidgetEvent(x.c, "onPhoneCallStart", e.phoneDialWidgetId);
+        N.b({
           phoneCallInfo: {
             callType: "dialOutCall",
             dialOutPhoneNumber: i,
@@ -1501,17 +1507,17 @@ var ve = Object(f.memo)(function () {
   }, "x"))));
 });
 import * as _e from "../../../../shared/1531/2584/702";
-var ye = Object(f.memo)(function () {
-  var t = Object(p.d)();
-  var e = Object(_e.a)().formatMessage;
-  var n = Object(p.e)(function (t) {
+var ye = f.memo(function () {
+  var t = p.d();
+  var e = _e.a().formatMessage;
+  var n = p.e(function (t) {
     return t.emulatorPhoneInfo;
   });
-  var r = Object(f.useState)(0);
-  var i = Object(c.a)(r, 2);
+  var r = f.useState(0);
+  var i = c.a(r, 2);
   var o = i[0];
   var a = i[1];
-  Object(f.useEffect)(function () {
+  f.useEffect(function () {
     if (ce) {
       clearInterval(ce);
     }
@@ -1535,12 +1541,12 @@ var ye = Object(f.memo)(function () {
     return "".concat(e < 10 ? "0" : "").concat(e, " : ").concat(n < 10 ? "0" : "").concat(n);
   };
   var u = function () {
-    t(Object(k.s)({
+    t(k.s({
       callingPageVisible: false,
       callStatus: x.b.IDEL
     }));
-    Object(ut.emitWidgetEvent)(x.c, "onPhoneCallEnd", n.phoneDialWidgetId, x.a.DIAL_OUT_CALL_END);
-    Object(N.b)({
+    ut.emitWidgetEvent(x.c, "onPhoneCallEnd", n.phoneDialWidgetId, x.a.DIAL_OUT_CALL_END);
+    N.b({
       phoneCallInfo: {
         callType: "dialOutCall",
         callStatus: x.b.IDEL
@@ -1548,23 +1554,23 @@ var ye = Object(f.memo)(function () {
     });
   };
   var l = function () {
-    Object(ut.emitWidgetEventType)(x.c, "onPhoneCallEnd", n.callStatus === x.b.RINGING ? x.a.INCOMING_CALL_REFUSE_END : x.a.INCOMING_CALL_CONNECT_END);
-    t(Object(k.s)({
+    ut.emitWidgetEventType(x.c, "onPhoneCallEnd", n.callStatus === x.b.RINGING ? x.a.INCOMING_CALL_REFUSE_END : x.a.INCOMING_CALL_CONNECT_END);
+    t(k.s({
       callingPageVisible: false,
       callStatus: x.b.IDEL
     }));
-    Object(N.b)({
+    N.b({
       phoneCallInfo: {
         callStatus: x.b.IDEL
       }
     });
   };
   var d = function () {
-    t(Object(k.s)({
+    t(k.s({
       callStatus: x.b.OFFHOOK
     }));
-    Object(ut.emitWidgetEventType)(x.c, "onConnectReceivePhoneCall");
-    Object(N.b)({
+    ut.emitWidgetEventType(x.c, "onConnectReceivePhoneCall");
+    N.b({
       phoneCallInfo: {
         callStatus: x.b.OFFHOOK
       }
@@ -1651,29 +1657,29 @@ var Ee = [{
   name: "星能兔",
   number: "123 4567 8905"
 }];
-var Oe = Object(f.memo)(function () {
-  var t = Object(p.d)();
-  var e = Object(p.e)(function (t) {
+var Oe = f.memo(function () {
+  var t = p.d();
+  var e = p.e(function (t) {
     return t.emulatorPhoneInfo;
   });
   var n = function (n, r, i) {
-    t(Object(k.s)({
+    t(k.s({
       contactPageVisible: false
     }));
-    Object(ut.setProperties)(e.contactWidgetId, {
+    ut.setProperties(e.contactWidgetId, {
       contactName: n,
       phoneNumber: r,
       phoneNumberList: [r],
       contactAvatar: i
     });
-    Object(ut.emitWidgetEvent)(we.a, "onContactPickerSelected", e.contactWidgetId, n, r);
+    ut.emitWidgetEvent(we.a, "onContactPickerSelected", e.contactWidgetId, n, r);
   };
   return h.createElement("div", {
     className: q(be.contactBox, !e.contactPageVisible && be.contactBoxHide)
   }, h.createElement("div", {
     className: be.backBox,
     onClick: function () {
-      t(Object(k.s)({
+      t(k.s({
         contactPageVisible: false
       }));
     }
@@ -1702,31 +1708,31 @@ var Oe = Object(f.memo)(function () {
   })));
 });
 import * as Te from "../../../../shared/1531/2584/678/360";
-var Ae = Object(f.memo)(function () {
-  var t = Object(p.d)();
-  var e = Object(_e.a)().formatMessage;
-  var n = Object(p.e)(function (t) {
+var Ae = f.memo(function () {
+  var t = p.d();
+  var e = _e.a().formatMessage;
+  var n = p.e(function (t) {
     return t.emulatorPhoneInfo;
   });
-  var r = Object(f.useState)(n.sendSmsNumber);
-  var i = Object(c.a)(r, 2);
+  var r = f.useState(n.sendSmsNumber);
+  var i = c.a(r, 2);
   var o = i[0];
   var a = i[1];
-  var s = Object(f.useState)(n.sendSmsContent);
-  var u = Object(c.a)(s, 2);
+  var s = f.useState(n.sendSmsContent);
+  var u = c.a(s, 2);
   var l = u[0];
   var d = u[1];
-  var m = Object(f.useState)([]);
-  var b = Object(c.a)(m, 2);
+  var m = f.useState([]);
+  var b = c.a(m, 2);
   var g = b[0];
   var v = b[1];
-  var _ = Object(f.useState)(1);
-  var y = Object(c.a)(_, 2);
+  var _ = f.useState(1);
+  var y = c.a(_, 2);
   var w = y[0];
   var E = y[1];
-  var O = Object(f.useRef)(null);
-  var T = Object(f.useRef)(null);
-  Object(f.useEffect)(function () {
+  var O = f.useRef(null);
+  var T = f.useRef(null);
+  f.useEffect(function () {
     if (n.sendSmsPageVisible) {
       a(n.sendSmsNumber);
       d(n.sendSmsContent);
@@ -1739,7 +1745,7 @@ var Ae = Object(f.memo)(function () {
     className: be.backBox
   }, h.createElement("div", {
     onClick: function () {
-      t(Object(k.s)({
+      t(k.s({
         sendSmsPageVisible: false
       }));
     }
@@ -1792,10 +1798,10 @@ var Ae = Object(f.memo)(function () {
     onClick: function () {
       if (o && l) {
         v(g.concat(l));
-        Object(ut.emitWidgetEvent)(Te.a, "onSendSmsSuccess", n.smsWidgetId, l, o);
+        ut.emitWidgetEvent(Te.a, "onSendSmsSuccess", n.smsWidgetId, l, o);
         d("");
         E(1);
-        var t = Object(ut.getWidgetInstance)(n.smsWidgetId);
+        var t = ut.getWidgetInstance(n.smsWidgetId);
         if (t) {
           t.widgetLog("sendSmsLog", {
             phoneNumber: o
@@ -1820,19 +1826,19 @@ var Ae = Object(f.memo)(function () {
     type: "icon-phone-send-sms"
   }))));
 });
-var Se = Object(f.memo)(function () {
-  var t = Object(p.d)();
-  var e = Object(_e.a)().formatMessage;
-  var n = Object(p.e)(function (t) {
+var Se = f.memo(function () {
+  var t = p.d();
+  var e = _e.a().formatMessage;
+  var n = p.e(function (t) {
     return t.emulatorPhoneInfo;
   });
-  Object(f.useEffect)(function () {
+  f.useEffect(function () {
     if (de) {
       clearTimeout(de);
     }
     if (n.receiveSmsPageVisible) {
       de = setTimeout(function () {
-        t(Object(k.s)({
+        t(k.s({
           receiveSmsPageVisible: false
         }));
       }, 2e3);
@@ -1863,14 +1869,14 @@ var Se = Object(f.memo)(function () {
     className: be.smsContent
   }, n.receiveSmsContent));
 });
-var Ie = Object(f.memo)(function () {
+var Ie = f.memo(function () {
   return h.createElement("div", {
     className: be.screenMask,
     id: "cocoScreenMask"
   });
 });
-var Ce = Object(f.memo)(function () {
-  var t = Object(p.e)(function (t) {
+var Ce = f.memo(function () {
+  var t = p.e(function (t) {
     return t.language;
   });
   return h.createElement(he.b, {
@@ -1940,7 +1946,7 @@ var Me = function () {
   }), " "));
 };
 var ke = h.memo(function () {
-  var t = Object(p.e)(function (t) {
+  var t = p.e(function (t) {
     return t.currentScreenId;
   });
   if (!t) {
@@ -1969,11 +1975,11 @@ N.a.instance.addEventListener("accelerometerUpdate", function (t) {
   Ne = t;
 });
 var xe = function (t) {
-  Object(A.a)(n, t);
-  var e = Object(S.a)(n);
+  A.a(n, t);
+  var e = S.a(n);
   function n(t) {
     var r;
-    Object(O.a)(this, n);
+    O.a(this, n);
     (r = e.call(this)).options = t;
     r.emitTimer = undefined;
     r.emitReading = function () {
@@ -1981,7 +1987,7 @@ var xe = function (t) {
     };
     return r;
   }
-  Object(T.a)(n, [{
+  T.a(n, [{
     key: "x",
     get: function () {
       return Ne.x;
@@ -2023,11 +2029,11 @@ N.a.instance.addEventListener("magnetometerUpdate", function (t) {
   De = t;
 });
 var Le = function (t) {
-  Object(A.a)(n, t);
-  var e = Object(S.a)(n);
+  A.a(n, t);
+  var e = S.a(n);
   function n(t) {
     var r;
-    Object(O.a)(this, n);
+    O.a(this, n);
     (r = e.call(this)).options = t;
     r.emitTimer = undefined;
     r.emitReading = function () {
@@ -2035,7 +2041,7 @@ var Le = function (t) {
     };
     return r;
   }
-  Object(T.a)(n, [{
+  T.a(n, [{
     key: "x",
     get: function () {
       return De.x;
@@ -2073,7 +2079,7 @@ function Be() {
   window.Magnetometer = Le;
   N.a.instance.emitToParent("ready");
   N.a.instance.addEventListener("shake", function () {
-    Object(ut.emitDeviceShake)();
+    ut.emitDeviceShake();
   });
 }
 var Pe = {
@@ -2102,7 +2108,7 @@ function Fe(t) {
   return We.apply(this, arguments);
 }
 function We() {
-  return (We = Object(d.a)(u.mark(function t(e) {
+  return (We = d.a(u.mark(function t(e) {
     var n;
     return u.wrap(function (t) {
       for (;;) {
@@ -2110,7 +2116,7 @@ function We() {
           case 0:
             t.next = 2;
             return Promise.all(e.map(function () {
-              var t = Object(d.a)(u.mark(function t(e) {
+              var t = d.a(u.mark(function t(e) {
                 var n;
                 return u.wrap(function (t) {
                   for (;;) {
@@ -2120,7 +2126,7 @@ function We() {
                         return g.get("".concat(e.cdnUrl, "?t=").concat(Math.random()));
                       case 2:
                         n = t.sent;
-                        return t.abrupt("return", Object(l.a)(Object(l.a)({}, e), {}, {
+                        return t.abrupt("return", l.a(l.a({}, e), {}, {
                           code: n.data
                         }));
                       case 4:
@@ -2149,7 +2155,7 @@ function He(t, e) {
   return Ve.apply(this, arguments);
 }
 function Ve() {
-  return (Ve = Object(d.a)(u.mark(function t(e, n) {
+  return (Ve = d.a(u.mark(function t(e, n) {
     var r;
     var i;
     var o;
@@ -2164,7 +2170,7 @@ function Ve() {
         switch (t.prev = t.next) {
           case 0:
             o = function () {
-              return (o = Object(d.a)(u.mark(function t(e, n) {
+              return (o = d.a(u.mark(function t(e, n) {
                 var i;
                 var o;
                 var a;
@@ -2173,7 +2179,7 @@ function Ve() {
                     switch (t.prev = t.next) {
                       case 0:
                         t.next = 2;
-                        return Object(v.r)(n, e.startsWith(_.a), fe.require);
+                        return v.r(n, e.startsWith(_.a), fe.require);
                       case 2:
                         i = t.sent;
                         o = i.types;
@@ -2206,8 +2212,8 @@ function Ve() {
             for (a in n) {
               s = n[a];
               c = s.type;
-              if (Object(v.q)(c)) {
-                f = Object(l.a)(Object(l.a)({}, s.attributes), {}, {
+              if (v.q(c)) {
+                f = l.a(l.a({}, s.attributes), {}, {
                   __widgetId: s.id,
                   __widgetType: s.type,
                   __width: s.size.width,
@@ -2231,7 +2237,7 @@ function Ge(t) {
     var n = t[e];
     var r = n.type;
     if (Pe[r]) {
-      var i = Object(l.a)(Object(l.a)({}, n.attributes), {}, {
+      var i = l.a(l.a({}, n.attributes), {}, {
         __widgetId: n.id,
         __widgetType: n.type,
         __width: n.size.width,
@@ -2246,7 +2252,7 @@ function ze(t) {
   return Ye.apply(this, arguments);
 }
 function Ye() {
-  return (Ye = Object(d.a)(u.mark(function t(e) {
+  return (Ye = d.a(u.mark(function t(e) {
     var n;
     var r;
     var i;
@@ -2264,7 +2270,7 @@ function Ye() {
       for (;;) {
         switch (t.prev = t.next) {
           case 0:
-            if (n = e.id, r = e.blockCode, i = e.shouldOpenEmulator, s = e.extensionWidgetList, c = e.unsafeExtensionWidgetList, l = e.fontFileMap, d = Object(a.a)(e, ["id", "blockCode", "shouldOpenEmulator", "extensionWidgetList", "unsafeExtensionWidgetList", "fontFileMap"]), (f = e.apiToken || e["x-coconut-authorization"] || "") || console.warn("api token not set. some api call may fail."), Ge(h = d.widgetMap), p = [], !(null === s || undefined === s ? undefined : s.length)) {
+            if (n = e.id, r = e.blockCode, i = e.shouldOpenEmulator, s = e.extensionWidgetList, c = e.unsafeExtensionWidgetList, l = e.fontFileMap, d = a.a(e, ["id", "blockCode", "shouldOpenEmulator", "extensionWidgetList", "unsafeExtensionWidgetList", "fontFileMap"]), (f = e.apiToken || e["x-coconut-authorization"] || "") || console.warn("api token not set. some api call may fail."), Ge(h = d.widgetMap), p = [], !(null === s || undefined === s ? undefined : s.length)) {
               t.next = 11;
               break;
             }
@@ -2272,16 +2278,16 @@ function Ye() {
             return Fe(s);
           case 9:
             m = t.sent;
-            p.push.apply(p, Object(o.a)(m));
+            p.push.apply(p, o.a(m));
           case 11:
-            if ((null === c || undefined === c ? undefined : c.length) && p.push.apply(p, Object(o.a)(c)), !p.length) {
+            if ((null === c || undefined === c ? undefined : c.length) && p.push.apply(p, o.a(c)), !p.length) {
               t.next = 15;
               break;
             }
             t.next = 15;
             return He(p, h);
           case 15:
-            Object(R.b)(d);
+            R.b(d);
             if (i) {
               Be();
             }
@@ -2291,7 +2297,7 @@ function Ye() {
                 authorization: f,
                 device: {
                   groupId: Ue(),
-                  platform: Object(I.l)(),
+                  platform: I.l(),
                   origin: "coconut"
                 }
               }
@@ -2311,7 +2317,7 @@ function Ye() {
               break;
             }
             t.next = 30;
-            return Object(w.ab)("https://static.codemao.cn/appcraft/modules/quilljs/1.3.7/quill.snow.css");
+            return w.ab("https://static.codemao.cn/appcraft/modules/quilljs/1.3.7/quill.snow.css");
           case 30:
             window.eval = function () {};
             g = ut.generateAsyncScheduler();
@@ -2320,7 +2326,7 @@ function Ye() {
             window.addEventListener("message", function (t) {
               var e = t.data;
               if ("deviceEvent" === e.type) {
-                ut.emitEvent.apply(ut, Object(o.a)(e.args));
+                ut.emitEvent.apply(ut, o.a(e.args));
               }
             });
           case 35:
@@ -2331,25 +2337,25 @@ function Ye() {
     }, t);
   }))).apply(this, arguments);
 }
-Object(v.s)(E);
-Object(v.s)(L);
-Object(v.s)(U);
-Object(v.s)(z);
-Object(v.s)(dt);
-Object(v.s)(bt);
-Object(v.s)(_t);
-Object(v.s)(Qt);
-Object(v.s)(Ht);
-Object(v.s)($t);
-Object(v.s)(Gt);
+v.s(E);
+v.s(L);
+v.s(U);
+v.s(z);
+v.s(dt);
+v.s(bt);
+v.s(_t);
+v.s(Qt);
+v.s(Ht);
+v.s($t);
+v.s(Gt);
 var _a;
 _a = h.memo(function (t) {
-  var e = Object(f.useState)(false);
-  var n = Object(c.a)(e, 2);
+  var e = f.useState(false);
+  var n = c.a(e, 2);
   var r = n[0];
   var i = n[1];
   var o = function () {
-    var e = Object(d.a)(u.mark(function e() {
+    var e = d.a(u.mark(function e() {
       return u.wrap(function (e) {
         for (;;) {
           switch (e.prev = e.next) {
@@ -2370,11 +2376,11 @@ _a = h.memo(function (t) {
       return e.apply(this, arguments);
     };
   }();
-  Object(f.useEffect)(function () {
+  f.useEffect(function () {
     o();
   }, []);
   return r ? h.createElement(p.a, {
-    store: Object(R.a)()
+    store: R.a()
   }, h.createElement(ke, null)) : null;
 });
 export { _a as a };

@@ -1,8 +1,14 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：4q1J
+ */
+
 "use strict";
 
 /* harmony export (binding) */
-export { createOptions };
 /* harmony import */
+export { createOptions };
 import * as __WEBPACK_IMPORTED_MODULE_0_react__ from "react";
 /* harmony import */
 import __WEBPACK_IMPORTED_MODULE_0_react___default from "react";
@@ -29,16 +35,16 @@ var createOptions = function createOptions(config) {
   }, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react___default.createElement(__WEBPACK_IMPORTED_MODULE_2__button__.Button, {
     type: "secondary",
     onClick: config.onCancel
-  }, (_config$cancelText = config.cancelText) !== null && _config$cancelText !== undefined ? _config$cancelText : '取消'), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react___default.createElement(__WEBPACK_IMPORTED_MODULE_2__button__.Button, {
+  }, (_config$cancelText = config.cancelText) !== null && _config$cancelText !== undefined ? _config$cancelText : "取消"), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react___default.createElement(__WEBPACK_IMPORTED_MODULE_2__button__.Button, {
     type: "secondary",
     onClick: config.onSecondary
-  }, (_config$secondaryText = config.secondaryText) !== null && _config$secondaryText !== undefined ? _config$secondaryText : '不保存'), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react___default.createElement(__WEBPACK_IMPORTED_MODULE_2__button__.Button, {
+  }, (_config$secondaryText = config.secondaryText) !== null && _config$secondaryText !== undefined ? _config$secondaryText : "不保存"), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react___default.createElement(__WEBPACK_IMPORTED_MODULE_2__button__.Button, {
     type: "primary",
     margin: "0 0 0 16px",
     onClick: config.onPrimary
-  }, (_config$primaryText = config.primaryText) !== null && _config$primaryText !== undefined ? _config$primaryText : '保存'));
-  var div = document.createElement('div');
-  div.className = 'CUI-dialog-options-dialog';
+  }, (_config$primaryText = config.primaryText) !== null && _config$primaryText !== undefined ? _config$primaryText : "保存"));
+  var div = document.createElement("div");
+  div.className = "CUI-dialog-options-dialog";
   document.body.appendChild(div);
   var OptionsDialog = /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react___default.createElement(__WEBPACK_IMPORTED_MODULE_3____.Dialog, {
     show: true,
@@ -52,7 +58,7 @@ var createOptions = function createOptions(config) {
     container: div,
     onOpen: config.onOpen,
     onClose: config.onClose
-  }, typeof config.content === 'function' ? config.content() : config.content);
+  }, typeof config.content === "function" ? config.content() : config.content);
   __WEBPACK_IMPORTED_MODULE_1_react_dom___default.render(OptionsDialog, div);
   var hadDestroied = false;
   return function () {

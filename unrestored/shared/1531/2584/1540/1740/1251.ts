@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：1251
+ */
+
 module.exports = {
   CSSRuleList: 0,
   CSSStyleDeclaration: 0,

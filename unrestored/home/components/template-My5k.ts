@@ -1,8 +1,14 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：My5k
+ */
+
 "use strict";
 
 /* harmony export (binding) */
-export { MenuView };
 /* harmony import */
+export { MenuView };
 import * as __WEBPACK_IMPORTED_MODULE_0_react__ from "react";
 /* harmony import */
 import __WEBPACK_IMPORTED_MODULE_0_react___default from "react";
@@ -109,43 +115,43 @@ var MenuView = function (_React$Component) {
   }, {
     key: "handleOpenDiscoverUrl",
     value: function handleOpenDiscoverUrl() {
-      var _config = Object(__WEBPACK_IMPORTED_MODULE_5__cfg__.config)();
+      var _config = __WEBPACK_IMPORTED_MODULE_5__cfg__.config();
       var discoverUrl = _config.discoverUrl;
       window.open(discoverUrl, Date.now().toString());
     }
   }, {
     key: "render_navLink",
     value: function render_navLink(url, content, icon) {
-      var current_url = '/' + location.pathname.split('/').pop();
+      var current_url = "/" + location.pathname.split("/").pop();
       var active = current_url === url;
       // 主页
-      if (url === '/home') {
-        active = current_url === '/' || current_url === '/home';
+      if (url === "/home") {
+        active = current_url === "/" || current_url === "/home";
       }
       return __WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_3_react_router_dom__.NavLink, {
         to: url,
-        styleName: __WEBPACK_IMPORTED_MODULE_1_classnames___default('menuItem', active && 'active')
+        styleName: __WEBPACK_IMPORTED_MODULE_1_classnames___default("menuItem", active && "active")
       }, __WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_4__IconFont__.default, {
         type: icon,
-        styleName: 'menuIcon'
+        styleName: "menuIcon"
       }), content);
     }
   }, {
     key: "render",
     value: function render() {
       return __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-        styleName: 'menu'
-      }, this.render_navLink('/home', '主页', 'icon-home'), this.render_navLink('/work', '我的作品', 'icon-work'), __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-        styleName: 'menuItem',
+        styleName: "menu"
+      }, this.render_navLink("/home", "主页", "icon-home"), this.render_navLink("/work", "我的作品", "icon-work"), __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
+        styleName: "menuItem",
         onClick: this.handleOpenDiscoverUrl
       }, __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-        styleName: 'discover'
+        styleName: "discover"
       }, __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", null, __WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_4__IconFont__.default, {
-        type: 'icon-discover',
-        styleName: 'menuIcon'
-      }), "\u53D1\u73B0"), __WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_4__IconFont__.default, {
-        type: 'icon-discover-arrow',
-        styleName: 'menuArrow'
+        type: "icon-discover",
+        styleName: "menuIcon"
+      }), "发现"), __WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_4__IconFont__.default, {
+        type: "icon-discover-arrow",
+        styleName: "menuArrow"
       }))));
     }
   }]);

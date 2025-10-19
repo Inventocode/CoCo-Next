@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：1982
+ */
+
 var r = require("./1100/index").FilterCSS;
 var i = require("../1303");
 var o = require("../1306");

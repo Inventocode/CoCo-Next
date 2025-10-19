@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：26
+ */
+
 "use strict";
 
 export { b } from "../227/262";
@@ -34,7 +40,7 @@ import s = require("../40");
 import c = require("../17/index");
 import l = require("../9");
 import u = require("../../../../../src/shared/ui/language");
-import d = require("../301/index");
+import d = require("../../../../../src/editor/block/generate");
 import p = require("../5");
 import f = require("../15");
 var h = new (function () {

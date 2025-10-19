@@ -180,7 +180,7 @@ function D(e) {
   return _.abort(e);
 }
 import * as M from "../../../../unrestored/shared/1531/2584/28/index"
-if (!Object(M.d)()) {
+if (!M.d()) {
   var L = {};
   var P = function (e) {
     var t = L[e];
@@ -255,7 +255,7 @@ if (!Object(M.d)()) {
 import * as F from "../../../../unrestored/shared/1531/2584/15"
 function G(e, t, n, r) {
   var o;
-  if (!((null === (o = e.url) || undefined === o ? undefined : o.includes("codemao.cn")) || Object(F.O)(e.url || ""))) {
+  if (!((null === (o = e.url) || undefined === o ? undefined : o.includes("codemao.cn")) || F.O(e.url || ""))) {
     window.CordovaWebsocketPlugin.wsConnect(e, function (e) {
       t(e);
     }, function (e) {
@@ -318,7 +318,7 @@ Axios.interceptors.request.use(function (e) {
   if (e.baseURL) {
     t = e.baseURL + t.slice(1);
   }
-  return Object(F.Y)(t) ? e : Promise.reject(new Error("auth failed"));
+  return F.Y(t) ? e : Promise.reject(new Error("auth failed"));
 }, function (e) {
   return Promise.reject(e);
 })

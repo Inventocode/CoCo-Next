@@ -11,6 +11,7 @@ const config = merge(common, server, {
     devServer: {
         static: path.resolve(__dirname, "static")
     },
+    devtool: "eval-source-map",
     module: {
         rules: [
             {

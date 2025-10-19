@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：331
+ */
+
 module.exports = {
   soundLibraryItem: "style_soundLibraryItem__2IxX7",
   selected: "style_selected__3j5zE",

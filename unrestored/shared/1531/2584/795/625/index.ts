@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：625
+ */
+
 (function (e) {
   var r = "undefined" !== typeof e && e || "undefined" !== typeof self && self || window;
   var i = Function.prototype.apply;

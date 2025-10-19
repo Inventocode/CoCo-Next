@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：1424
+ */
+
 for (var n = {
     glog: function (e) {
       if (e < 1) {

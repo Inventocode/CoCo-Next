@@ -1,8 +1,14 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：18y6
+ */
+
 "use strict";
 
 /* harmony export (binding) */
-export { ForgetPasswordPageContainer };
 /* harmony import */
+export { ForgetPasswordPageContainer };
 import * as __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__ from "@babel/runtime/helpers/esm/slicedToArray";
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_1_react__ from "react";
@@ -22,8 +28,8 @@ var ForgetPasswordPageContainer = function ForgetPasswordPageContainer(props) {
   var switchView = props.switchView;
   var reportMethod = props.reportMethod;
   var handleClose = props.handleClose;
-  var _useState = Object(__WEBPACK_IMPORTED_MODULE_1_react__.useState)(false);
-  var _useState2 = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default)(_useState, 2);
+  var _useState = __WEBPACK_IMPORTED_MODULE_1_react__.useState(false);
+  var _useState2 = __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default(_useState, 2);
   var resetSuccess = _useState2[0];
   var setResetSuccess = _useState2[1];
   return /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1_react__.createElement(__WEBPACK_IMPORTED_MODULE_1_react__.Fragment, null, resetSuccess ? /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1_react__.createElement(__WEBPACK_IMPORTED_MODULE_2__Confirm__.ConfirmComponent, {

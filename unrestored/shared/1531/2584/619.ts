@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：619
+ */
+
 module.exports = {
   importFailToast: "ImportFailToast_importFailToast__3tVmI",
   title: "ImportFailToast_title__3ROKD",

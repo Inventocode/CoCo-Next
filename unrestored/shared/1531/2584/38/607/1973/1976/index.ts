@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：1976
+ */
+
 var r = require("../1979/838");
 var i = require("./1977");
 var o = require("./1302").ArraySet;

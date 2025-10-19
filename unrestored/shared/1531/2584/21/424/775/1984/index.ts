@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：1984
+ */
+
 var r = require("./1985/index");
 r.prototype.postfixEval = function (e) {
   "use strict";

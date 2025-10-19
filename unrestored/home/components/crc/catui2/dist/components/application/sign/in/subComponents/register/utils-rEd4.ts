@@ -1,12 +1,18 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：rEd4
+ */
+
 "use strict";
 
+/* harmony export (immutable) */
 /* harmony export (immutable) */
 export { validatePhoneNumber };
 /* harmony export (immutable) */
 export { validCode };
-/* harmony export (immutable) */
-export { validatePassword };
 /* unused harmony export validateEmail */
+export { validatePassword };
 function validatePhoneNumber(phone) {
   return /^1[3456789]\d{9}$/.test(phone);
 }

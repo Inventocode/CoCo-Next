@@ -1,8 +1,15 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：PqOj
+ */
+
 "use strict";
 
 /* unused harmony export SMS_COUNT_DOWN */
 /* harmony export (binding) */
-export { ContentView }; // 短信验证码倒计时（短信登录、注册、重置密码共用一个计时器）
+// 短信验证码倒计时（短信登录、注册、重置密码共用一个计时器）
+export { ContentView };
 var SMS_COUNT_DOWN = 60;
 var ContentView;
 (function (ContentView) {

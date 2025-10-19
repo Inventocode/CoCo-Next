@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：1979
+ */
+
 var r = require("../1300/index").SourceMapGenerator;
 var i = require("./838");
 var o = /(\r?\n)/;

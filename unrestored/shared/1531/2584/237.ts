@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：237
+ */
+
 module.exports = {
   wrapper: "VariablePanel_wrapper__1CUZM",
   addBtn: "VariablePanel_addBtn__8tx7Q",

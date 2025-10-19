@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：137
+ */
+
 module.exports = {
   container: "StyleDialog_container__3z84w",
   title: "StyleDialog_title__3VmNA",

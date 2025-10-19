@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：2461
+ */
+
 var r = require("../../../../../../2483/2484/2485/1401");
 var i = Object.prototype.hasOwnProperty;
 module.exports = function (e, t, n, o, a, s) {

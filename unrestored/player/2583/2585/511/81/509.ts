@@ -1,7 +1,13 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：509
+ */
+
 "use strict";
 
-var r = require("./351");
-var i = require("./409");
+var r = require("./602/351");
+var i = require("./602/409");
 var o = function () {
   var t = function (e, n) {
     return (t = Object.setPrototypeOf || {
@@ -41,17 +47,17 @@ var a = function (t) {
   };
   return e;
 }(i.a);
-var s = require("../150");
-var u = require("../124");
-var c = require("../37");
-var l = require("../109");
-var d = require("../74");
-var f = require("../73/index");
-var h = require("./604");
-var p = require("../118");
-var m = require("./382");
-var b = require("../117");
-var g = require("../170");
+var s = require("./150");
+var u = require("./124");
+var c = require("./37");
+var l = require("./109");
+var d = require("./74");
+var f = require("./73/index");
+var h = require("./602/604");
+var p = require("./118");
+var m = require("./602/382");
+var b = require("./117");
+var g = require("./170");
 var v = function () {
   var t = function (e, n) {
     return (t = Object.setPrototypeOf || {

@@ -1,8 +1,14 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：274
+ */
+
 "use strict";
 
-var r = require("./412");
-var i = require("../117");
-var o = require("../63");
+var r = require("./191/412");
+var i = require("./117");
+var o = require("./63");
 var a = function () {
   function t(t, e) {
     if (0 === e.length) {

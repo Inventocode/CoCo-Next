@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：1988
+ */
+
 (function (e, t) {
   !function (e, n) {
     "use strict";

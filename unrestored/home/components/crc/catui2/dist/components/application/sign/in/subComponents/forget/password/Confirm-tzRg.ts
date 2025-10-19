@@ -1,8 +1,14 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：tzRg
+ */
+
 "use strict";
 
 /* harmony export (binding) */
-export { ConfirmComponent };
 /* harmony import */
+export { ConfirmComponent };
 import * as __WEBPACK_IMPORTED_MODULE_0_react__ from "react";
 /* harmony import */
 import __WEBPACK_IMPORTED_MODULE_0_react___default from "react";
@@ -29,14 +35,14 @@ var ConfirmComponent = function ConfirmComponent(props) {
     size: 92
   }), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", null, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
     className: "CUI-sign-in-dialog-text-main"
-  }, Object(__WEBPACK_IMPORTED_MODULE_4__i18n__.getLanguage)('sign_in_dialog/forget_password/success')), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
+  }, __WEBPACK_IMPORTED_MODULE_4__i18n__.getLanguage("sign_in_dialog/forget_password/success")), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
     className: "CUI-sign-in-dialog-text-second"
-  }, Object(__WEBPACK_IMPORTED_MODULE_4__i18n__.getLanguage)('sign_in_dialog/forget_password/login_notice'))), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_1__base_button__.Button, {
+  }, __WEBPACK_IMPORTED_MODULE_4__i18n__.getLanguage("sign_in_dialog/forget_password/login_notice"))), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_1__base_button__.Button, {
     height: "44px",
     onClick: onCompleteClick,
     className: "CUI-sign-in-dialog-sign-in-btn",
-    "data-report": '\u7528\u6237\u4FE1\u606F-\u53BB\u767B\u5F55'
-  }, Object(__WEBPACK_IMPORTED_MODULE_4__i18n__.getLanguage)('sign_in_dialog/go_to_login')));
+    "data-report": "用户信息-去登录"
+  }, __WEBPACK_IMPORTED_MODULE_4__i18n__.getLanguage("sign_in_dialog/go_to_login")));
 };
 
 /***/

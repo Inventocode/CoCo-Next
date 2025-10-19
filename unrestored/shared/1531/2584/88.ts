@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：88
+ */
+
 module.exports = {
   formGroup: "StyleForm_formGroup__2N4hZ",
   formItemWrapper: "StyleForm_formItemWrapper__xbhBj",

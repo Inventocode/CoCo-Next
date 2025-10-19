@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：jHHw
+ */
+
 "use strict";
 
 /* unused harmony export PlayerCover */
@@ -16,11 +22,11 @@ var PlayerCover = function PlayerCover(props) {
   var onSignInBtnClick = props.onSignInBtnClick;
   var userInfo = props.userInfo;
   var _props$signInBtnText = props.signInBtnText;
-  var signInBtnText = _props$signInBtnText === undefined ? '立即登录' : _props$signInBtnText;
+  var signInBtnText = _props$signInBtnText === undefined ? "立即登录" : _props$signInBtnText;
   var _props$signInTipText = props.signInTipText;
-  var signInTipText = _props$signInTipText === undefined ? '你还未登录，登录后体验更棒哦～' : _props$signInTipText;
+  var signInTipText = _props$signInTipText === undefined ? "你还未登录，登录后体验更棒哦～" : _props$signInTipText;
   var _props$playBtnTipText = props.playBtnTipText;
-  var playBtnTipText = _props$playBtnTipText === undefined ? '' : _props$playBtnTipText;
+  var playBtnTipText = _props$playBtnTipText === undefined ? "" : _props$playBtnTipText;
   var _props$showSignInBtn = props.showSignInBtn;
   var showSignInBtn = _props$showSignInBtn === undefined ? true : _props$showSignInBtn;
   var _props$showPlayBtn = props.showPlayBtn;

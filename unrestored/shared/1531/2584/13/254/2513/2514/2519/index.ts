@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：2519
+ */
+
 var r = require("./2520/index");
 var i = require("./2527/index");
 module.exports = function (e) {

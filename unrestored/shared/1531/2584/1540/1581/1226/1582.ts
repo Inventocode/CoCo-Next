@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：1582
+ */
+
 var n = Math.abs;
 var r = Math.pow;
 var o = Math.floor;

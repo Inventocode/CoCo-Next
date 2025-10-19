@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：inl5
+ */
+
 "use strict";
 
 /* unused harmony export RiskyContentError */
@@ -5,8 +11,8 @@
 /* unused harmony export getFileExtension */
 /* unused harmony export uploadFileToCdn */
 /* harmony export (immutable) */
-export { uploadProjectJsonToCdn };
 /* harmony import */
+export { uploadProjectJsonToCdn };
 import * as __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator__ from "@babel/runtime/regenerator";
 /* harmony import */
 import __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default from "@babel/runtime/regenerator";
@@ -77,7 +83,7 @@ var __awaiter = this && this.__awaiter || function (thisArg, _arguments, P, gene
     step((generator = generator.apply(thisArg, _arguments || [])).next());
   });
 };
-var cfg = Object(__WEBPACK_IMPORTED_MODULE_3__cfg__.config)();
+var cfg = __WEBPACK_IMPORTED_MODULE_3__cfg__.config();
 var uploadClient = new __WEBPACK_IMPORTED_MODULE_1__cmao_cdn_uploader__.default({
   env: cfg.env,
   projectName: cfg.productCode,
@@ -96,20 +102,20 @@ var RiskyContentError = function (_Error) {
   }
   return RiskyContentError;
 }(Error);
-__WEBPACK_IMPORTED_MODULE_2_shortid___default.characters('0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-_');
+__WEBPACK_IMPORTED_MODULE_2_shortid___default.characters("0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-_");
 function generateID(prefix) {
   var id = __WEBPACK_IMPORTED_MODULE_2_shortid___default.generate();
-  return prefix + '_' + id;
+  return prefix + "_" + id;
 }
 function getFileExtension(fileName) {
-  var index = fileName.lastIndexOf('.');
+  var index = fileName.lastIndexOf(".");
   if (index > -1) {
     return fileName.slice(index).toLowerCase();
   }
-  return '';
+  return "";
 }
 function uploadFileToCdn(file) {
-  var fileType = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'IMAGE';
+  var fileType = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "IMAGE";
   return __awaiter(this, undefined, undefined, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.mark(function _callee() {
     var fileName;
     var result;
@@ -117,12 +123,12 @@ function uploadFileToCdn(file) {
       while (1) {
         switch (_context.prev = _context.next) {
           case 0:
-            fileName = file instanceof File ? file.name : '';
+            fileName = file instanceof File ? file.name : "";
             _context.next = 3;
             return new Promise(function (resolve, reject) {
               uploadClient.create(file, {
                 // FIXED: file.name有特殊符号（[、]、...）时，请求上传会失败，临时用随机ID代替
-                filename: cfg.productCode + '/' + generateID(fileType) + '_' + Date.now() + getFileExtension(fileName),
+                filename: cfg.productCode + "/" + generateID(fileType) + "_" + Date.now() + getFileExtension(fileName),
                 onsuccess: function onsuccess(res) {
                   return resolve(res);
                 },
@@ -137,9 +143,9 @@ function uploadFileToCdn(file) {
             });
           case 3:
             result = _context.sent;
-            return _context.abrupt('return', result);
+            return _context.abrupt("return", result);
           case 5:
-          case 'end':
+          case "end":
             return _context.stop();
         }
       }
@@ -156,18 +162,18 @@ function uploadProjectJsonToCdn(content) {
         switch (_context2.prev = _context2.next) {
           case 0:
             blob = new Blob([content], {
-              type: 'application/json,charset=utf-8;'
+              type: "application/json,charset=utf-8;"
             });
-            file = new File([blob], 'project.json', {
+            file = new File([blob], "project.json", {
               type: blob.type
             });
             _context2.next = 4;
-            return uploadFileToCdn(file, 'JSON');
+            return uploadFileToCdn(file, "JSON");
           case 4:
             result = _context2.sent;
-            return _context2.abrupt('return', result.url);
+            return _context2.abrupt("return", result.url);
           case 6:
-          case 'end':
+          case "end":
             return _context2.stop();
         }
       }

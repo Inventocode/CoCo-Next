@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：1977
+ */
+
 exports.GREATEST_LOWER_BOUND = 1;
 exports.LEAST_UPPER_BOUND = 2;
 exports.search = function (e, n, r, i) {

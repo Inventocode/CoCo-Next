@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：198
+ */
+
 module.exports = {
   packageEditorContainer: "PackageEditor_packageEditorContainer__20PJk",
   packageContent: "PackageEditor_packageContent__3hAzj",

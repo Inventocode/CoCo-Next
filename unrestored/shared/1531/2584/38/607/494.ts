@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：494
+ */
+
 var r = require("./806/1098");
 module.exports = function (e) {
   if ("undefined" === typeof Symbol || null == e[Symbol.iterator]) {

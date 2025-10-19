@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：FSbX
+ */
+
 "use strict";
 
 /* harmony import */
@@ -16,7 +22,7 @@ var mapStateToProps = function mapStateToProps(state, ownProps) {
   };
 };
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
-  return Object(__WEBPACK_IMPORTED_MODULE_0_redux__.bindActionCreators)({
+  return __WEBPACK_IMPORTED_MODULE_0_redux__.bindActionCreators({
     quitCollWorkAction: __WEBPACK_IMPORTED_MODULE_3__routes_Work_model_actions__.quitCollWorkAction,
     renameWorkAction: __WEBPACK_IMPORTED_MODULE_3__routes_Work_model_actions__.renameWorkAction,
     deleteWorkAction: __WEBPACK_IMPORTED_MODULE_3__routes_Work_model_actions__.deleteWorkAction,
@@ -26,5 +32,5 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   }, dispatch);
 };
 /* harmony default export */
-export default Object(__WEBPACK_IMPORTED_MODULE_1_react_redux__.connect)(mapStateToProps, mapDispatchToProps)(__WEBPACK_IMPORTED_MODULE_2__template__.WorkItemView);
+export default __WEBPACK_IMPORTED_MODULE_1_react_redux__.connect(mapStateToProps, mapDispatchToProps)(__WEBPACK_IMPORTED_MODULE_2__template__.WorkItemView);
 /***/

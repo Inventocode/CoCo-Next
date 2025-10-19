@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：iV4c
+ */
+
 "use strict";
 
 /* harmony import */
@@ -70,73 +76,73 @@ var possibleConstructorReturn = function (self, call) {
 };
 var styles = {
   base: {
-    position: 'absolute',
-    userSelect: 'none',
-    MsUserSelect: 'none'
+    position: "absolute",
+    userSelect: "none",
+    MsUserSelect: "none"
   },
   top: {
-    width: '100%',
-    height: '10px',
-    top: '-5px',
-    left: '0px',
-    cursor: 'row-resize'
+    width: "100%",
+    height: "10px",
+    top: "-5px",
+    left: "0px",
+    cursor: "row-resize"
   },
   right: {
-    width: '10px',
-    height: '100%',
-    top: '0px',
-    right: '-5px',
-    cursor: 'col-resize'
+    width: "10px",
+    height: "100%",
+    top: "0px",
+    right: "-5px",
+    cursor: "col-resize"
   },
   bottom: {
-    width: '100%',
-    height: '10px',
-    bottom: '-5px',
-    left: '0px',
-    cursor: 'row-resize'
+    width: "100%",
+    height: "10px",
+    bottom: "-5px",
+    left: "0px",
+    cursor: "row-resize"
   },
   left: {
-    width: '10px',
-    height: '100%',
-    top: '0px',
-    left: '-5px',
-    cursor: 'col-resize'
+    width: "10px",
+    height: "100%",
+    top: "0px",
+    left: "-5px",
+    cursor: "col-resize"
   },
   topRight: {
-    width: '20px',
-    height: '20px',
-    position: 'absolute',
-    right: '-10px',
-    top: '-10px',
-    cursor: 'ne-resize'
+    width: "20px",
+    height: "20px",
+    position: "absolute",
+    right: "-10px",
+    top: "-10px",
+    cursor: "ne-resize"
   },
   bottomRight: {
-    width: '20px',
-    height: '20px',
-    position: 'absolute',
-    right: '-10px',
-    bottom: '-10px',
-    cursor: 'se-resize'
+    width: "20px",
+    height: "20px",
+    position: "absolute",
+    right: "-10px",
+    bottom: "-10px",
+    cursor: "se-resize"
   },
   bottomLeft: {
-    width: '20px',
-    height: '20px',
-    position: 'absolute',
-    left: '-10px',
-    bottom: '-10px',
-    cursor: 'sw-resize'
+    width: "20px",
+    height: "20px",
+    position: "absolute",
+    left: "-10px",
+    bottom: "-10px",
+    cursor: "sw-resize"
   },
   topLeft: {
-    width: '20px',
-    height: '20px',
-    position: 'absolute',
-    left: '-10px',
-    top: '-10px',
-    cursor: 'nw-resize'
+    width: "20px",
+    height: "20px",
+    position: "absolute",
+    left: "-10px",
+    top: "-10px",
+    cursor: "nw-resize"
   }
 };
 var Resizer = function (props) {
-  return Object(__WEBPACK_IMPORTED_MODULE_0_react__.createElement)('div', {
+  return __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
     className: props.className,
     style: _extends({}, styles.base, styles[props.direction], props.replaceStyles || {}),
     onMouseDown: function onMouseDown(e) {
@@ -148,16 +154,16 @@ var Resizer = function (props) {
   }, props.children);
 };
 var userSelectNone = {
-  userSelect: 'none',
-  MozUserSelect: 'none',
-  WebkitUserSelect: 'none',
-  MsUserSelect: 'none'
+  userSelect: "none",
+  MozUserSelect: "none",
+  WebkitUserSelect: "none",
+  MsUserSelect: "none"
 };
 var userSelectAuto = {
-  userSelect: 'auto',
-  MozUserSelect: 'auto',
-  WebkitUserSelect: 'auto',
-  MsUserSelect: 'auto'
+  userSelect: "auto",
+  MozUserSelect: "auto",
+  WebkitUserSelect: "auto",
+  MsUserSelect: "auto"
 };
 var clamp = function clamp(n, min, max) {
   return Math.max(Math.min(n, max), min);
@@ -174,31 +180,31 @@ var endsWith = function endsWith(str, searchStr) {
   return str.substr(str.length - searchStr.length, searchStr.length) === searchStr;
 };
 var getStringSize = function getStringSize(n) {
-  if (n.toString() === 'auto') {
+  if (n.toString() === "auto") {
     return n.toString();
   }
-  if (endsWith(n.toString(), 'px')) {
+  if (endsWith(n.toString(), "px")) {
     return n.toString();
   }
-  if (endsWith(n.toString(), '%')) {
+  if (endsWith(n.toString(), "%")) {
     return n.toString();
   }
-  if (endsWith(n.toString(), 'vh')) {
+  if (endsWith(n.toString(), "vh")) {
     return n.toString();
   }
-  if (endsWith(n.toString(), 'vw')) {
+  if (endsWith(n.toString(), "vw")) {
     return n.toString();
   }
-  if (endsWith(n.toString(), 'vmax')) {
+  if (endsWith(n.toString(), "vmax")) {
     return n.toString();
   }
-  if (endsWith(n.toString(), 'vmin')) {
+  if (endsWith(n.toString(), "vmin")) {
     return n.toString();
   }
-  return n + 'px';
+  return n + "px";
 };
-var definedProps = ['style', 'className', 'grid', 'snap', 'bounds', 'size', 'defaultSize', 'minWidth', 'minHeight', 'maxWidth', 'maxHeight', 'lockAspectRatio', 'lockAspectRatioExtraWidth', 'lockAspectRatioExtraHeight', 'enable', 'handleStyles', 'handleClasses', 'handleWrapperStyle', 'handleWrapperClass', 'children', 'onResizeStart', 'onResize', 'onResizeStop', 'handleComponent', 'scale', 'resizeRatio'];
-var baseClassName = '__resizable_base__';
+var definedProps = ["style", "className", "grid", "snap", "bounds", "size", "defaultSize", "minWidth", "minHeight", "maxWidth", "maxHeight", "lockAspectRatio", "lockAspectRatioExtraWidth", "lockAspectRatioExtraHeight", "enable", "handleStyles", "handleClasses", "handleWrapperStyle", "handleWrapperClass", "children", "onResizeStart", "onResize", "onResizeStop", "handleComponent", "scale", "resizeRatio"];
+var baseClassName = "__resizable_base__";
 var Resizable = function (_React$Component) {
   inherits(Resizable, _React$Component);
   function Resizable(props) {
@@ -206,10 +212,10 @@ var Resizable = function (_React$Component) {
     var _this = possibleConstructorReturn(this, (Resizable.__proto__ || Object.getPrototypeOf(Resizable)).call(this, props));
     _this.state = {
       isResizing: false,
-      resizeCursor: 'auto',
-      width: typeof (_this.propsSize && _this.propsSize.width) === 'undefined' ? 'auto' : _this.propsSize && _this.propsSize.width,
-      height: typeof (_this.propsSize && _this.propsSize.height) === 'undefined' ? 'auto' : _this.propsSize && _this.propsSize.height,
-      direction: 'right',
+      resizeCursor: "auto",
+      width: typeof (_this.propsSize && _this.propsSize.width) === "undefined" ? "auto" : _this.propsSize && _this.propsSize.width,
+      height: typeof (_this.propsSize && _this.propsSize.height) === "undefined" ? "auto" : _this.propsSize && _this.propsSize.height,
+      direction: "right",
       original: {
         x: 0,
         y: 0,
@@ -221,17 +227,17 @@ var Resizable = function (_React$Component) {
     _this.onResizeStart = _this.onResizeStart.bind(_this);
     _this.onMouseMove = _this.onMouseMove.bind(_this);
     _this.onMouseUp = _this.onMouseUp.bind(_this);
-    if (typeof window !== 'undefined') {
-      window.addEventListener('mouseup', _this.onMouseUp);
-      window.addEventListener('mousemove', _this.onMouseMove);
-      window.addEventListener('mouseleave', _this.onMouseUp);
-      window.addEventListener('touchmove', _this.onMouseMove);
-      window.addEventListener('touchend', _this.onMouseUp);
+    if (typeof window !== "undefined") {
+      window.addEventListener("mouseup", _this.onMouseUp);
+      window.addEventListener("mousemove", _this.onMouseMove);
+      window.addEventListener("mouseleave", _this.onMouseUp);
+      window.addEventListener("touchmove", _this.onMouseMove);
+      window.addEventListener("touchend", _this.onMouseUp);
     }
     return _this;
   }
   createClass(Resizable, [{
-    key: 'updateExtendsProps',
+    key: "updateExtendsProps",
     value: function updateExtendsProps(props) {
       this.extendsProps = Object.keys(props).reduce(function (acc, key) {
         if (definedProps.indexOf(key) !== -1) {
@@ -242,7 +248,7 @@ var Resizable = function (_React$Component) {
       }, {});
     }
   }, {
-    key: 'getParentSize',
+    key: "getParentSize",
     value: function getParentSize() {
       var base = this.base;
       if (!base) {
@@ -255,18 +261,18 @@ var Resizable = function (_React$Component) {
       var wrapChanged = false;
       var wrap = this.parentNode.style.flexWrap;
       var minWidth = base.style.minWidth;
-      if (wrap !== 'wrap') {
+      if (wrap !== "wrap") {
         wrapChanged = true;
-        this.parentNode.style.flexWrap = 'wrap';
+        this.parentNode.style.flexWrap = "wrap";
         // HACK: Use relative to get parent padding size
       }
-      base.style.position = 'relative';
-      base.style.minWidth = '100%';
+      base.style.position = "relative";
+      base.style.minWidth = "100%";
       var size = {
         width: base.offsetWidth,
         height: base.offsetHeight
       };
-      base.style.position = 'absolute';
+      base.style.position = "absolute";
       if (wrapChanged) {
         this.parentNode.style.flexWrap = wrap;
       }
@@ -274,7 +280,7 @@ var Resizable = function (_React$Component) {
       return size;
     }
   }, {
-    key: 'componentDidMount',
+    key: "componentDidMount",
     value: function componentDidMount() {
       var size = this.size;
       this.setState({
@@ -288,13 +294,13 @@ var Resizable = function (_React$Component) {
       if (this.base) {
         return;
       }
-      var element = document.createElement('div');
-      element.style.width = '100%';
-      element.style.height = '100%';
-      element.style.position = 'absolute';
-      element.style.transform = 'scale(0, 0)';
-      element.style.left = '0';
-      element.style.flex = '0';
+      var element = document.createElement("div");
+      element.style.width = "100%";
+      element.style.height = "100%";
+      element.style.position = "absolute";
+      element.style.transform = "scale(0, 0)";
+      element.style.left = "0";
+      element.style.flex = "0";
       if (element.classList) {
         element.classList.add(baseClassName);
       } else {
@@ -303,19 +309,19 @@ var Resizable = function (_React$Component) {
       parent.appendChild(element);
     }
   }, {
-    key: 'componentWillReceiveProps',
+    key: "componentWillReceiveProps",
     value: function componentWillReceiveProps(next) {
       this.updateExtendsProps(next);
     }
   }, {
-    key: 'componentWillUnmount',
+    key: "componentWillUnmount",
     value: function componentWillUnmount() {
-      if (typeof window !== 'undefined') {
-        window.removeEventListener('mouseup', this.onMouseUp);
-        window.removeEventListener('mousemove', this.onMouseMove);
-        window.removeEventListener('mouseleave', this.onMouseUp);
-        window.removeEventListener('touchmove', this.onMouseMove);
-        window.removeEventListener('touchend', this.onMouseUp);
+      if (typeof window !== "undefined") {
+        window.removeEventListener("mouseup", this.onMouseUp);
+        window.removeEventListener("mousemove", this.onMouseMove);
+        window.removeEventListener("mouseleave", this.onMouseUp);
+        window.removeEventListener("touchmove", this.onMouseMove);
+        window.removeEventListener("touchend", this.onMouseUp);
         var parent = this.parentNode;
         var base = this.base;
         if (!base || !parent) {
@@ -328,13 +334,13 @@ var Resizable = function (_React$Component) {
       }
     }
   }, {
-    key: 'calculateNewSize',
+    key: "calculateNewSize",
     value: function calculateNewSize(newSize, kind) {
       var propsSize = this.propsSize && this.propsSize[kind];
-      return this.state[kind] === 'auto' && this.state.original[kind] === newSize && (typeof propsSize === 'undefined' || propsSize === 'auto') ? 'auto' : newSize;
+      return this.state[kind] === "auto" && this.state.original[kind] === newSize && (typeof propsSize === "undefined" || propsSize === "auto") ? "auto" : newSize;
     }
   }, {
-    key: 'onResizeStart',
+    key: "onResizeStart",
     value: function onResizeStart(event, direction) {
       var clientX = 0;
       var clientY = 0;
@@ -358,12 +364,12 @@ var Resizable = function (_React$Component) {
 
       // Fix #168
       if (this.props.size) {
-        if (typeof this.props.size.height !== 'undefined' && this.props.size.height !== this.state.height) {
+        if (typeof this.props.size.height !== "undefined" && this.props.size.height !== this.state.height) {
           this.setState({
             height: this.props.size.height
           });
         }
-        if (typeof this.props.size.width !== 'undefined' && this.props.size.width !== this.state.width) {
+        if (typeof this.props.size.width !== "undefined" && this.props.size.width !== this.state.width) {
           this.setState({
             width: this.props.size.width
           });
@@ -382,7 +388,7 @@ var Resizable = function (_React$Component) {
       });
     }
   }, {
-    key: 'onMouseMove',
+    key: "onMouseMove",
     value: function onMouseMove(event) {
       if (!this.state.isResizing) {
         return;
@@ -408,27 +414,27 @@ var Resizable = function (_React$Component) {
 
       // TODO: refactor
       var parentSize = this.getParentSize();
-      if (maxWidth && typeof maxWidth === 'string' && endsWith(maxWidth, '%')) {
-        var _ratio = Number(maxWidth.replace('%', '')) / 100;
+      if (maxWidth && typeof maxWidth === "string" && endsWith(maxWidth, "%")) {
+        var _ratio = Number(maxWidth.replace("%", "")) / 100;
         maxWidth = parentSize.width * _ratio;
       }
-      if (maxHeight && typeof maxHeight === 'string' && endsWith(maxHeight, '%')) {
-        var _ratio2 = Number(maxHeight.replace('%', '')) / 100;
+      if (maxHeight && typeof maxHeight === "string" && endsWith(maxHeight, "%")) {
+        var _ratio2 = Number(maxHeight.replace("%", "")) / 100;
         maxHeight = parentSize.height * _ratio2;
       }
-      if (minWidth && typeof minWidth === 'string' && endsWith(minWidth, '%')) {
-        var _ratio3 = Number(minWidth.replace('%', '')) / 100;
+      if (minWidth && typeof minWidth === "string" && endsWith(minWidth, "%")) {
+        var _ratio3 = Number(minWidth.replace("%", "")) / 100;
         minWidth = parentSize.width * _ratio3;
       }
-      if (minHeight && typeof minHeight === 'string' && endsWith(minHeight, '%')) {
-        var _ratio4 = Number(minHeight.replace('%', '')) / 100;
+      if (minHeight && typeof minHeight === "string" && endsWith(minHeight, "%")) {
+        var _ratio4 = Number(minHeight.replace("%", "")) / 100;
         minHeight = parentSize.height * _ratio4;
       }
-      maxWidth = typeof maxWidth === 'undefined' ? undefined : Number(maxWidth);
-      maxHeight = typeof maxHeight === 'undefined' ? undefined : Number(maxHeight);
-      minWidth = typeof minWidth === 'undefined' ? undefined : Number(minWidth);
-      minHeight = typeof minHeight === 'undefined' ? undefined : Number(minHeight);
-      var ratio = typeof lockAspectRatio === 'number' ? lockAspectRatio : original.width / original.height;
+      maxWidth = typeof maxWidth === "undefined" ? undefined : Number(maxWidth);
+      maxHeight = typeof maxHeight === "undefined" ? undefined : Number(maxHeight);
+      minWidth = typeof minWidth === "undefined" ? undefined : Number(minWidth);
+      minHeight = typeof minHeight === "undefined" ? undefined : Number(minHeight);
+      var ratio = typeof lockAspectRatio === "number" ? lockAspectRatio : original.width / original.height;
       var newWidth = original.width;
       var newHeight = original.height;
       if (/right/i.test(direction)) {
@@ -455,7 +461,7 @@ var Resizable = function (_React$Component) {
           newWidth = (newHeight - lockAspectRatioExtraHeight) * ratio + lockAspectRatioExtraWidth;
         }
       }
-      if (this.props.bounds === 'parent') {
+      if (this.props.bounds === "parent") {
         var parent = this.parentNode;
         if (parent instanceof HTMLElement) {
           var parentRect = parent.getBoundingClientRect();
@@ -469,8 +475,8 @@ var Resizable = function (_React$Component) {
           maxWidth = maxWidth && maxWidth < boundWidth ? maxWidth : boundWidth;
           maxHeight = maxHeight && maxHeight < boundHeight ? maxHeight : boundHeight;
         }
-      } else if (this.props.bounds === 'window') {
-        if (typeof window !== 'undefined') {
+      } else if (this.props.bounds === "window") {
+        if (typeof window !== "undefined") {
           var _resizable$getBoundin2 = this.resizable.getBoundingClientRect();
           var _left2 = _resizable$getBoundin2.left;
           var _top2 = _resizable$getBoundin2.top;
@@ -494,10 +500,10 @@ var Resizable = function (_React$Component) {
         maxWidth = maxWidth && maxWidth < _boundWidth2 ? maxWidth : _boundWidth2;
         maxHeight = maxHeight && maxHeight < _boundHeight2 ? maxHeight : _boundHeight2;
       }
-      var computedMinWidth = typeof minWidth === 'undefined' ? 10 : minWidth;
-      var computedMaxWidth = typeof maxWidth === 'undefined' || maxWidth < 0 ? newWidth : maxWidth;
-      var computedMinHeight = typeof minHeight === 'undefined' ? 10 : minHeight;
-      var computedMaxHeight = typeof maxHeight === 'undefined' || maxHeight < 0 ? newHeight : maxHeight;
+      var computedMinWidth = typeof minWidth === "undefined" ? 10 : minWidth;
+      var computedMaxWidth = typeof maxWidth === "undefined" || maxWidth < 0 ? newWidth : maxWidth;
+      var computedMinHeight = typeof minHeight === "undefined" ? 10 : minHeight;
+      var computedMaxHeight = typeof maxHeight === "undefined" || maxHeight < 0 ? newHeight : maxHeight;
       if (lockAspectRatio) {
         var extraMinWidth = (computedMinHeight - lockAspectRatioExtraHeight) * ratio + lockAspectRatioExtraWidth;
         var extraMaxWidth = (computedMaxHeight - lockAspectRatioExtraHeight) * ratio + lockAspectRatioExtraWidth;
@@ -529,24 +535,24 @@ var Resizable = function (_React$Component) {
         width: newWidth - original.width,
         height: newHeight - original.height
       };
-      if (width && typeof width === 'string' && endsWith(width, '%')) {
+      if (width && typeof width === "string" && endsWith(width, "%")) {
         var percent = newWidth / parentSize.width * 100;
-        newWidth = percent + '%';
+        newWidth = percent + "%";
       }
-      if (height && typeof height === 'string' && endsWith(height, '%')) {
+      if (height && typeof height === "string" && endsWith(height, "%")) {
         var _percent = newHeight / parentSize.height * 100;
-        newHeight = _percent + '%';
+        newHeight = _percent + "%";
       }
       this.setState({
-        width: this.calculateNewSize(newWidth, 'width'),
-        height: this.calculateNewSize(newHeight, 'height')
+        width: this.calculateNewSize(newWidth, "width"),
+        height: this.calculateNewSize(newHeight, "height")
       });
       if (this.props.onResize) {
         this.props.onResize(event, direction, this.resizable, delta);
       }
     }
   }, {
-    key: 'onMouseUp',
+    key: "onMouseUp",
     value: function onMouseUp(event) {
       var _state2 = this.state;
       var isResizing = _state2.isResizing;
@@ -567,11 +573,11 @@ var Resizable = function (_React$Component) {
       }
       this.setState({
         isResizing: false,
-        resizeCursor: 'auto'
+        resizeCursor: "auto"
       });
     }
   }, {
-    key: 'updateSize',
+    key: "updateSize",
     value: function updateSize(size) {
       this.setState({
         width: size.width,
@@ -579,7 +585,7 @@ var Resizable = function (_React$Component) {
       });
     }
   }, {
-    key: 'renderResizer',
+    key: "renderResizer",
     value: function renderResizer() {
       var _this2 = this;
       var _props3 = this.props;
@@ -594,71 +600,71 @@ var Resizable = function (_React$Component) {
       }
       var resizers = Object.keys(enable).map(function (dir) {
         if (enable[dir] !== false) {
-          return Object(__WEBPACK_IMPORTED_MODULE_0_react__.createElement)(Resizer, {
+          return __WEBPACK_IMPORTED_MODULE_0_react__.createElement(Resizer, {
             key: dir,
             direction: dir,
             onResizeStart: _this2.onResizeStart,
             replaceStyles: handleStyles && handleStyles[dir],
             className: handleClasses && handleClasses[dir]
-          }, handleComponent && handleComponent[dir] ? Object(__WEBPACK_IMPORTED_MODULE_0_react__.createElement)(handleComponent[dir]) : null);
+          }, handleComponent && handleComponent[dir] ? __WEBPACK_IMPORTED_MODULE_0_react__.createElement(handleComponent[dir]) : null);
         }
         return null;
       });
       // #93 Wrap the resize box in span (will not break 100% width/height)
-      return Object(__WEBPACK_IMPORTED_MODULE_0_react__.createElement)('span', {
+      return __WEBPACK_IMPORTED_MODULE_0_react__.createElement("span", {
         className: handleWrapperClass,
         style: handleWrapperStyle
       }, resizers);
     }
   }, {
-    key: 'render',
+    key: "render",
     value: function render() {
       var _this3 = this;
       var userSelect = this.state.isResizing ? userSelectNone : userSelectAuto;
-      return Object(__WEBPACK_IMPORTED_MODULE_0_react__.createElement)('div', _extends({
+      return __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", _extends({
         ref: function ref(c) {
           if (c) {
             _this3.resizable = c;
           }
         },
         style: _extends({
-          position: 'relative'
+          position: "relative"
         }, userSelect, this.props.style, this.sizeStyle, {
           maxWidth: this.props.maxWidth,
           maxHeight: this.props.maxHeight,
           minWidth: this.props.minWidth,
           minHeight: this.props.minHeight,
-          boxSizing: 'border-box'
+          boxSizing: "border-box"
         }),
         className: this.props.className
-      }, this.extendsProps), this.state.isResizing && Object(__WEBPACK_IMPORTED_MODULE_0_react__.createElement)('div', {
+      }, this.extendsProps), this.state.isResizing && __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
         style: {
-          height: '100%',
-          width: '100%',
-          backgroundColor: 'rgba(0,0,0,0)',
-          cursor: '' + (this.state.resizeCursor || 'auto'),
-          opacity: '0',
-          position: 'fixed',
-          zIndex: '9999',
-          top: '0',
-          left: '0',
-          bottom: '0',
-          right: '0'
+          height: "100%",
+          width: "100%",
+          backgroundColor: "rgba(0,0,0,0)",
+          cursor: "" + (this.state.resizeCursor || "auto"),
+          opacity: "0",
+          position: "fixed",
+          zIndex: "9999",
+          top: "0",
+          left: "0",
+          bottom: "0",
+          right: "0"
         }
       }), this.props.children, this.renderResizer());
     }
   }, {
-    key: 'parentNode',
+    key: "parentNode",
     get: function get$$1() {
       return this.resizable.parentNode;
     }
   }, {
-    key: 'propsSize',
+    key: "propsSize",
     get: function get$$1() {
       return this.props.size || this.props.defaultSize;
     }
   }, {
-    key: 'base',
+    key: "base",
     get: function get$$1() {
       var parent = this.parentNode;
       if (!parent) {
@@ -676,22 +682,22 @@ var Resizable = function (_React$Component) {
       return undefined;
     }
   }, {
-    key: 'size',
+    key: "size",
     get: function get$$1() {
       var width = 0;
       var height = 0;
-      if (typeof window !== 'undefined') {
+      if (typeof window !== "undefined") {
         var orgWidth = this.resizable.offsetWidth;
         var orgHeight = this.resizable.offsetHeight;
         // HACK: Set position `relative` to get parent size.
         //       This is because when re-resizable set `absolute`, I can not get base width correctly.
         var orgPosition = this.resizable.style.position;
-        if (orgPosition !== 'relative') {
-          this.resizable.style.position = 'relative';
+        if (orgPosition !== "relative") {
+          this.resizable.style.position = "relative";
         }
         // INFO: Use original width or height if set auto.
-        width = this.resizable.style.width !== 'auto' ? this.resizable.offsetWidth : orgWidth;
-        height = this.resizable.style.height !== 'auto' ? this.resizable.offsetHeight : orgHeight;
+        width = this.resizable.style.width !== "auto" ? this.resizable.offsetWidth : orgWidth;
+        height = this.resizable.style.height !== "auto" ? this.resizable.offsetHeight : orgHeight;
         // Restore original position
         this.resizable.style.position = orgPosition;
       }
@@ -701,27 +707,27 @@ var Resizable = function (_React$Component) {
       };
     }
   }, {
-    key: 'sizeStyle',
+    key: "sizeStyle",
     get: function get$$1() {
       var _this4 = this;
       var size = this.props.size;
       var getSize = function getSize(key) {
-        if (typeof _this4.state[key] === 'undefined' || _this4.state[key] === 'auto') {
-          return 'auto';
+        if (typeof _this4.state[key] === "undefined" || _this4.state[key] === "auto") {
+          return "auto";
         }
-        if (_this4.propsSize && _this4.propsSize[key] && endsWith(_this4.propsSize[key].toString(), '%')) {
-          if (endsWith(_this4.state[key].toString(), '%')) {
+        if (_this4.propsSize && _this4.propsSize[key] && endsWith(_this4.propsSize[key].toString(), "%")) {
+          if (endsWith(_this4.state[key].toString(), "%")) {
             return _this4.state[key].toString();
           }
           var parentSize = _this4.getParentSize();
-          var value = Number(_this4.state[key].toString().replace('px', ''));
+          var value = Number(_this4.state[key].toString().replace("px", ""));
           var percent = value / parentSize[key] * 100;
-          return percent + '%';
+          return percent + "%";
         }
         return getStringSize(_this4.state[key]);
       };
-      var width = size && typeof size.width !== 'undefined' && !this.state.isResizing ? getStringSize(size.width) : getSize('width');
-      var height = size && typeof size.height !== 'undefined' && !this.state.isResizing ? getStringSize(size.height) : getSize('height');
+      var width = size && typeof size.width !== "undefined" && !this.state.isResizing ? getStringSize(size.width) : getSize("width");
+      var height = size && typeof size.height !== "undefined" && !this.state.isResizing ? getStringSize(size.height) : getSize("height");
       return {
         width: width,
         height: height

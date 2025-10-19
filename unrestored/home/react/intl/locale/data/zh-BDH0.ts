@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：BDH0
+ */
+
 !function (e, t) {
   if (true) {
     module.exports = t();

@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：18pj
+ */
+
 "use strict";
 
 /* unused harmony export showCodemaoAgreement */
@@ -21,7 +27,7 @@ import __WEBPACK_IMPORTED_MODULE_3_react_dom___default from "react-dom";
  * @return closeFn 关闭友好协议模块的方法
  */
 var showCodemaoAgreement = /*#__PURE__*/function () {
-  var _ref = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default)(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.mark(function _callee(options) {
+  var _ref = __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.mark(function _callee(options) {
     var CodemaoAgreement;
     var div;
     var closeFn;
@@ -36,7 +42,7 @@ var showCodemaoAgreement = /*#__PURE__*/function () {
                 };
               });
             });
-            div = document.createElement('div');
+            div = document.createElement("div");
             document.body.appendChild(div);
             closeFn = function closeFn() {
               __WEBPACK_IMPORTED_MODULE_3_react_dom___default.unmountComponentAtNode(div);

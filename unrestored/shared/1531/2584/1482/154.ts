@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：154
+ */
+
 module.exports = {
   editListDialog: "StorageDialog_editListDialog__2UZiB",
   summary: "StorageDialog_summary__2ny0-",

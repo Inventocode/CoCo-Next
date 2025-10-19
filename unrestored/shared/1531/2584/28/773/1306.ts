@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：1306
+ */
+
 var r = require("./1982/1101");
 function i(e) {
   var t;

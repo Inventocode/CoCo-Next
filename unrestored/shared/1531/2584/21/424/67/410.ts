@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：410
+ */
+
 "use strict";
 
 export { ze as c };
@@ -33,7 +39,7 @@ import c = require("../../../5");
 import l = require("../../../15");
 import u = require("../../../205");
 import d = require("../../../9");
-import p = require("../../../98");
+import p = require("../../../../../../../src/shared/widget/custom/storage");
 import f = require("../../../../../../../src/shared/widget/custom/load");
 import h = require("../../../11");
 import m = require("../../../8");

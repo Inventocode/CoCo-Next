@@ -1,8 +1,14 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：sEiI
+ */
+
 "use strict";
 
 /* harmony export (binding) */
-export { Header };
 /* harmony import */
+export { Header };
 import * as __WEBPACK_IMPORTED_MODULE_0_redux__ from "redux";
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_1_react_redux__ from "react-redux";
@@ -27,13 +33,13 @@ var mapStateToProps = function mapStateToProps(state, ownProps) {
   };
 };
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
-  return Object(__WEBPACK_IMPORTED_MODULE_0_redux__.bindActionCreators)({
+  return __WEBPACK_IMPORTED_MODULE_0_redux__.bindActionCreators({
     setCourseListVisibleAction: __WEBPACK_IMPORTED_MODULE_3__routes_Home_model_actions__.setCourseListVisibleAction,
     asyncSetUserInfoAction: __WEBPACK_IMPORTED_MODULE_4__redux_main_actions__.asyncSetUserInfoAction,
     setSignDialogVisibleAction: __WEBPACK_IMPORTED_MODULE_4__redux_main_actions__.setSignDialogVisibleAction,
     setCourseDialogVisibleAction: __WEBPACK_IMPORTED_MODULE_4__redux_main_actions__.setCourseDialogVisibleAction
   }, dispatch);
 };
-var Header = Object(__WEBPACK_IMPORTED_MODULE_1_react_redux__.connect)(mapStateToProps, mapDispatchToProps)(__WEBPACK_IMPORTED_MODULE_2__template__.HeaderView);
+var Header = __WEBPACK_IMPORTED_MODULE_1_react_redux__.connect(mapStateToProps, mapDispatchToProps)(__WEBPACK_IMPORTED_MODULE_2__template__.HeaderView);
 
 /***/

@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：802
+ */
+
 module.exports = {
   tableDataDialog: "TableDataDialog_tableDataDialog__4V5Ab",
   defaultData: "TableDataDialog_defaultData__1RHy2",

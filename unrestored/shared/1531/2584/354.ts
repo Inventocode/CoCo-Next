@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：354
+ */
+
 module.exports = {
   packageQrCodeDialog: "PackageQrCode_packageQrCodeDialog__2SzPS",
   packageInfo: "PackageQrCode_packageInfo__f2eSu",

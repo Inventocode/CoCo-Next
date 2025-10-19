@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：H1i2
+ */
+
 "use strict";
 
 /* unused harmony export PlayerLoader */
@@ -41,28 +47,28 @@ var _styleModuleImportMap = {
   }
 };
 var CLOUDS_MAP = {
-  'cloud-1': 2.027,
-  'cloud-2': 2.1428,
-  'cloud-3': 1.7045,
-  'cloud-4': 1.4423,
-  'cloud-5': 1.3157,
-  'cloud-1-copy': 2.027,
-  'cloud-2-copy': 2.1428,
-  'cloud-3-copy': 1.7045,
-  'cloud-4-copy': 1.4423,
-  'cloud-5-copy': 1.3157
+  "cloud-1": 2.027,
+  "cloud-2": 2.1428,
+  "cloud-3": 1.7045,
+  "cloud-4": 1.4423,
+  "cloud-5": 1.3157,
+  "cloud-1-copy": 2.027,
+  "cloud-2-copy": 2.1428,
+  "cloud-3-copy": 1.7045,
+  "cloud-4-copy": 1.4423,
+  "cloud-5-copy": 1.3157
 };
 var PlayerLoader = function PlayerLoader(props) {
   var percent = props.percent;
   var promptText = props.promptText;
   var style = props.style;
-  var status = props.status ? props.status : 'loading';
-  var loader = Object(__WEBPACK_IMPORTED_MODULE_2_react__.useRef)(null);
-  var _useState = Object(__WEBPACK_IMPORTED_MODULE_2_react__.useState)(1);
-  var _useState2 = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default)(_useState, 2);
+  var status = props.status ? props.status : "loading";
+  var loader = __WEBPACK_IMPORTED_MODULE_2_react__.useRef(null);
+  var _useState = __WEBPACK_IMPORTED_MODULE_2_react__.useState(1);
+  var _useState2 = __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default(_useState, 2);
   var animationDurRatio = _useState2[0];
   var setAnimationDurRatio = _useState2[1];
-  Object(__WEBPACK_IMPORTED_MODULE_2_react__.useEffect)(function () {
+  __WEBPACK_IMPORTED_MODULE_2_react__.useEffect(function () {
     var loaderEl = loader.current;
     var updateAnimationDur = function updateAnimationDur() {
       if (!loaderEl) {
@@ -74,9 +80,9 @@ var PlayerLoader = function PlayerLoader(props) {
       }
     };
     updateAnimationDur();
-    window.addEventListener('resize', updateAnimationDur);
+    window.addEventListener("resize", updateAnimationDur);
     return function () {
-      window.removeEventListener('resize', updateAnimationDur);
+      window.removeEventListener("resize", updateAnimationDur);
     };
   }, []);
   var getClouds = function getClouds(CLOUDS_MAP) {
@@ -85,7 +91,7 @@ var PlayerLoader = function PlayerLoader(props) {
       res.push(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_2_react___default.createElement("div", {
         key: cloudName,
         style: {
-          animationDuration: "".concat(status === 'loading' ? CLOUDS_MAP[cloudName] * animationDurRatio : 0, "s")
+          animationDuration: "".concat(status === "loading" ? CLOUDS_MAP[cloudName] * animationDurRatio : 0, "s")
         },
         className: __WEBPACK_IMPORTED_MODULE_1_babel_plugin_react_css_modules_dist_browser_getClassName___default(cloudName, _styleModuleImportMap, {
           "autoResolveMultipleImports": true,
@@ -101,18 +107,18 @@ var PlayerLoader = function PlayerLoader(props) {
     style: style
   }, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_2_react___default.createElement("div", null, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_2_react___default.createElement("div", {
     className: "CUI-player-loader-animation"
-  }, Object(__WEBPACK_IMPORTED_MODULE_2_react__.useMemo)(function () {
+  }, __WEBPACK_IMPORTED_MODULE_2_react__.useMemo(function () {
     return getClouds(CLOUDS_MAP);
   }, [status]), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_2_react___default.createElement("div", {
     className: "CUI-player-loader-progress-bar"
-  }, Object(__WEBPACK_IMPORTED_MODULE_2_react__.useMemo)(function () {
+  }, __WEBPACK_IMPORTED_MODULE_2_react__.useMemo(function () {
     return /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_2_react___default.createElement("div", {
-      className: __WEBPACK_IMPORTED_MODULE_1_babel_plugin_react_css_modules_dist_browser_getClassName___default("".concat(status === 'loading' ? 'bird' : 'cry'), _styleModuleImportMap, {
+      className: __WEBPACK_IMPORTED_MODULE_1_babel_plugin_react_css_modules_dist_browser_getClassName___default("".concat(status === "loading" ? "bird" : "cry"), _styleModuleImportMap, {
         "autoResolveMultipleImports": true,
         "handleMissingStyleName": "throw"
       })
     });
-  }, [status]), status === 'loading' && /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_2_react___default.createElement(__WEBPACK_IMPORTED_MODULE_3__base_progress_bar_index__.ProgressBar, {
+  }, [status]), status === "loading" && /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_2_react___default.createElement(__WEBPACK_IMPORTED_MODULE_3__base_progress_bar_index__.ProgressBar, {
     width: 238,
     height: 4,
     barColor: "#D1D1EE",

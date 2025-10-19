@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：744
+ */
+
 module.exports = {
   ImageLibraryItem: "style_ImageLibraryItem__3DbKR",
   selected: "style_selected__2Uupi",

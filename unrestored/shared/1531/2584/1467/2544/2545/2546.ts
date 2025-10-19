@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：2546
+ */
+
 module.exports = function () {
   var e = document.getSelection();
   if (!e.rangeCount) {

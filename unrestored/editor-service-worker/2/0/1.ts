@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：1
+ */
+
 var n = function (t) {
   "use strict";
 
@@ -10,9 +16,9 @@ var n = function (t) {
   function c(t, e, r) {
     Object.defineProperty(t, e, {
       value: r,
-      enumerable: !0,
-      configurable: !0,
-      writable: !0
+      enumerable: true,
+      configurable: true,
+      writable: true
     });
     return t[e];
   }
@@ -54,7 +60,8 @@ var n = function (t) {
             r.sent = r._sent = r.arg;
           } else if ("throw" === r.method) {
             if ("suspendedStart" === n) {
-              throw n = "completed", r.arg;
+              n = "completed";
+              throw r.arg;
             }
             r.dispatchException(r.arg);
           } else if ("return" === r.method) {
@@ -63,7 +70,8 @@ var n = function (t) {
           n = "executing";
           var u = s(t, e, r);
           if ("normal" === u.type) {
-            if (n = r.done ? "completed" : "suspendedYield", u.arg === f) {
+            n = r.done ? "completed" : "suspendedYield";
+            if (u.arg === f) {
               continue;
             }
             return {
@@ -147,7 +155,8 @@ var n = function (t) {
   function x(t, e) {
     var r = t.iterator[e.method];
     if (undefined === r) {
-      if (e.delegate = null, "throw" === e.method) {
+      e.delegate = null;
+      if ("throw" === e.method) {
         if (t.iterator.return && (e.method = "return", e.arg = undefined, x(t, e), "throw" === e.method)) {
           return f;
         }
@@ -190,7 +199,7 @@ var n = function (t) {
       tryLoc: "root"
     }];
     t.forEach(b, this);
-    this.reset(!0);
+    this.reset(true);
   }
   function O(t) {
     if (t) {
@@ -207,12 +216,12 @@ var n = function (t) {
           for (; ++n < t.length;) {
             if (r.call(t, n)) {
               e.value = t[n];
-              e.done = !1;
+              e.done = false;
               return e;
             }
           }
           e.value = undefined;
-          e.done = !0;
+          e.done = true;
           return e;
         };
         return i.next = i;
@@ -225,7 +234,7 @@ var n = function (t) {
   function _() {
     return {
       value: undefined,
-      done: !0
+      done: true
     };
   }
   h.prototype = g.constructor = p;
@@ -281,11 +290,11 @@ var n = function (t) {
         var n = e.pop();
         if (n in t) {
           r.value = n;
-          r.done = !1;
+          r.done = false;
           return r;
         }
       }
-      r.done = !0;
+      r.done = true;
       return r;
     };
   };
@@ -293,14 +302,22 @@ var n = function (t) {
   E.prototype = {
     constructor: E,
     reset: function (t) {
-      if (this.prev = 0, this.next = 0, this.sent = this._sent = undefined, this.done = !1, this.delegate = null, this.method = "next", this.arg = undefined, this.tryEntries.forEach(L), !t) {
+      this.prev = 0;
+      this.next = 0;
+      this.sent = this._sent = undefined;
+      this.done = false;
+      this.delegate = null;
+      this.method = "next";
+      this.arg = undefined;
+      this.tryEntries.forEach(L);
+      if (!t) {
         for (var e in this) if ("t" === e.charAt(0) && r.call(this, e) && !isNaN(+e.slice(1))) {
           this[e] = undefined;
         }
       }
     },
     stop: function () {
-      this.done = !0;
+      this.done = true;
       var t = this.tryEntries[0].completion;
       if ("throw" === t.type) {
         throw t.arg;
@@ -333,14 +350,14 @@ var n = function (t) {
           var u = r.call(i, "finallyLoc");
           if (c && u) {
             if (this.prev < i.catchLoc) {
-              return n(i.catchLoc, !0);
+              return n(i.catchLoc, true);
             }
             if (this.prev < i.finallyLoc) {
               return n(i.finallyLoc);
             }
           } else if (c) {
             if (this.prev < i.catchLoc) {
-              return n(i.catchLoc, !0);
+              return n(i.catchLoc, true);
             }
           } else {
             if (!u) {

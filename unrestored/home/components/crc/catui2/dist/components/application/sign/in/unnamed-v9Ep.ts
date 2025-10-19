@@ -1,5 +1,12 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：v9Ep
+ */
+
 "use strict";
 
+/* harmony export (binding) */
 /* harmony export (binding) */
 export { api as CodemaoApi };
 /* harmony export (binding) */
@@ -14,56 +21,55 @@ export { utils as U };
 export { auth };
 /* harmony export (binding) */
 export { index as captcha };
-/* harmony export (binding) */
 export { init$1 as init };
 var configs = {
   dev: {
-    env: 'dev',
+    env: "dev",
     host: {
-      tiger: 'https://backend-dev.codemao.cn',
-      platform: 'https://dev-open-service.codemao.cn'
+      tiger: "https://backend-dev.codemao.cn",
+      platform: "https://dev-open-service.codemao.cn"
     },
-    domain: '.codemao.cn'
+    domain: ".codemao.cn"
   },
   staging: {
-    env: 'staging',
+    env: "staging",
     host: {
-      tiger: 'https://backend-test.codemao.cn',
-      platform: 'https://staging-open-service.codemao.cn'
+      tiger: "https://backend-test.codemao.cn",
+      platform: "https://staging-open-service.codemao.cn"
     },
-    domain: '.codemao.cn'
+    domain: ".codemao.cn"
   },
   prod: {
-    env: 'prod',
+    env: "prod",
     host: {
-      tiger: 'https://api.codemao.cn',
-      platform: 'https://open-service.codemao.cn'
+      tiger: "https://api.codemao.cn",
+      platform: "https://open-service.codemao.cn"
     },
-    domain: '.codemao.cn'
+    domain: ".codemao.cn"
   },
-  'api-test': {
-    env: 'api-test',
+  "api-test": {
+    env: "api-test",
     host: {
-      tiger: 'https://test-api.codemao.cn',
-      platform: 'https://test-open-service.codemao.cn'
+      tiger: "https://test-api.codemao.cn",
+      platform: "https://test-open-service.codemao.cn"
     },
-    domain: '.codemao.cn'
+    domain: ".codemao.cn"
   },
   test: {
-    env: 'test',
+    env: "test",
     host: {
-      tiger: 'https://test-api.codemao.cn',
-      platform: 'https://test-open-service.codemao.cn'
+      tiger: "https://test-api.codemao.cn",
+      platform: "https://test-open-service.codemao.cn"
     },
-    domain: '.codemao.cn'
+    domain: ".codemao.cn"
   },
   press: {
-    env: 'press',
+    env: "press",
     host: {
-      tiger: 'https://press-api.codemao.cn',
-      platform: 'https://press-open-service.codemao.cn'
+      tiger: "https://press-api.codemao.cn",
+      platform: "https://press-open-service.codemao.cn"
     },
-    domain: '.codemao.cn'
+    domain: ".codemao.cn"
   }
 };
 
@@ -313,84 +319,84 @@ var version = "0.16.0";
 
 // All Account 3.0 apis for web.
 var Api = {
-  REGISTER_SEND_CAPTCHA: '/tiger/v3/web/accounts/captcha/register/phone/with-agreement',
-  REGISTER: '/tiger/v3/web/accounts/register/phone/with-agreement',
-  LOGIN_CAPTCHA: '/tiger/v3/web/accounts/captcha/login/post-process',
-  LOGIN_PHONE: '/tiger/v3/web/accounts/phone/login/post-process',
-  LOGIN_ACCOUNT: '/tiger/v3/web/accounts/login',
-  LOGIN_WECHAT: '/tiger/v3/web/accounts/oauth/wechat',
-  LOGIN_QQ: '/tiger/v3/web/accounts/oauth/qq',
-  BIND_PHONE_FOR_THIRD_PARTY: '/tiger/v3/web/accounts/captcha/oauth',
-  CREATE_USER_FOR_THIRD_PARTY: '/tiger/v3/web/accounts/oauth/third-party',
-  SET_USERNAME: '/tiger/v3/web/accounts/username',
-  BIND_PHONE_CAPTCHA: '/tiger/v3/web/accounts/captcha/phone/bind',
-  BIND_PHONE: '/tiger/v3/web/accounts/phone/bind',
-  BIND_PHONE_CHECK: '/tiger/v3/web/accounts/phone/check',
-  REBIND_PHONE_CAPTCHA: '/tiger/v3/web/accounts/captcha/phone/change',
-  REBIND_PHONE: '/tiger/v3/web/accounts/phone/change',
-  CHANGE_PWD_BY_OLD: '/tiger/v3/web/accounts/password',
-  CHNAGE_PWD_BY_PHONE_CAPTCHA: '/tiger/v3/web/accounts/captcha/password/update',
-  CHANGE_PWD_BY_PHONE: '/tiger/v3/web/accounts/password/phone',
-  INIT_PASSWORD: '/tiger/v3/web/accounts/password/setting',
-  RESET_PWD_CAPTCHA: '/tiger/v3/web/accounts/captcha/password/reset',
-  RESET_PWD_TOKEN: '/tiger/v3/web/accounts/captcha/password/check',
-  RESET_PWD: '/tiger/v3/web/accounts/password/reset',
-  SET_PROFILE: '/tiger/v3/web/accounts/info',
-  CHECK_BIND_FOR_THIRD_PARTY: '/tiger/v3/web/accounts/oauths',
-  BIND_WECHAT: '/tiger/v3/web/accounts/oauth/wechat/bind',
-  UNBIND_WECHAT: '/tiger/v3/web/accounts/oauth/wechat/unbind',
-  BIND_QQ: '/tiger/v3/web/accounts/oauth/qq/bind',
-  UNBIND_QQ: '/tiger/v3/web/accounts/oauth/qq/unbind',
-  GET_PROFILE: '/tiger/v3/web/accounts/profile',
-  GET_AUTH: '/tiger/v3/web/accounts/privacy',
+  REGISTER_SEND_CAPTCHA: "/tiger/v3/web/accounts/captcha/register/phone/with-agreement",
+  REGISTER: "/tiger/v3/web/accounts/register/phone/with-agreement",
+  LOGIN_CAPTCHA: "/tiger/v3/web/accounts/captcha/login/post-process",
+  LOGIN_PHONE: "/tiger/v3/web/accounts/phone/login/post-process",
+  LOGIN_ACCOUNT: "/tiger/v3/web/accounts/login",
+  LOGIN_WECHAT: "/tiger/v3/web/accounts/oauth/wechat",
+  LOGIN_QQ: "/tiger/v3/web/accounts/oauth/qq",
+  BIND_PHONE_FOR_THIRD_PARTY: "/tiger/v3/web/accounts/captcha/oauth",
+  CREATE_USER_FOR_THIRD_PARTY: "/tiger/v3/web/accounts/oauth/third-party",
+  SET_USERNAME: "/tiger/v3/web/accounts/username",
+  BIND_PHONE_CAPTCHA: "/tiger/v3/web/accounts/captcha/phone/bind",
+  BIND_PHONE: "/tiger/v3/web/accounts/phone/bind",
+  BIND_PHONE_CHECK: "/tiger/v3/web/accounts/phone/check",
+  REBIND_PHONE_CAPTCHA: "/tiger/v3/web/accounts/captcha/phone/change",
+  REBIND_PHONE: "/tiger/v3/web/accounts/phone/change",
+  CHANGE_PWD_BY_OLD: "/tiger/v3/web/accounts/password",
+  CHNAGE_PWD_BY_PHONE_CAPTCHA: "/tiger/v3/web/accounts/captcha/password/update",
+  CHANGE_PWD_BY_PHONE: "/tiger/v3/web/accounts/password/phone",
+  INIT_PASSWORD: "/tiger/v3/web/accounts/password/setting",
+  RESET_PWD_CAPTCHA: "/tiger/v3/web/accounts/captcha/password/reset",
+  RESET_PWD_TOKEN: "/tiger/v3/web/accounts/captcha/password/check",
+  RESET_PWD: "/tiger/v3/web/accounts/password/reset",
+  SET_PROFILE: "/tiger/v3/web/accounts/info",
+  CHECK_BIND_FOR_THIRD_PARTY: "/tiger/v3/web/accounts/oauths",
+  BIND_WECHAT: "/tiger/v3/web/accounts/oauth/wechat/bind",
+  UNBIND_WECHAT: "/tiger/v3/web/accounts/oauth/wechat/unbind",
+  BIND_QQ: "/tiger/v3/web/accounts/oauth/qq/bind",
+  UNBIND_QQ: "/tiger/v3/web/accounts/oauth/qq/unbind",
+  GET_PROFILE: "/tiger/v3/web/accounts/profile",
+  GET_AUTH: "/tiger/v3/web/accounts/privacy",
   // 获取年级信息
-  GET_GRADE_LIST: '/tiger/v3/web/accounts/grade-list',
-  LOGOUT: '/tiger/v3/web/accounts/logout',
-  SEND_UNIVERSAL_CAPTCHA: '/tiger/v3/web/accounts/captcha/common',
-  VERIFY_UNIVERSAL_CAPTCHA: '/tiger/v3/web/accounts/captcha/common/check',
-  LOGIN_CAPTCHA_SILENCE: '/tiger/v3/web/accounts/captcha/login/silence',
-  LOGIN_PHONE_SILENCE: '/tiger/v3/web/accounts/phone/login/silence',
-  LOGIN_ACCOUNT_TICKET: '/tiger/v3/web/accounts/login/security',
+  GET_GRADE_LIST: "/tiger/v3/web/accounts/grade-list",
+  LOGOUT: "/tiger/v3/web/accounts/logout",
+  SEND_UNIVERSAL_CAPTCHA: "/tiger/v3/web/accounts/captcha/common",
+  VERIFY_UNIVERSAL_CAPTCHA: "/tiger/v3/web/accounts/captcha/common/check",
+  LOGIN_CAPTCHA_SILENCE: "/tiger/v3/web/accounts/captcha/login/silence",
+  LOGIN_PHONE_SILENCE: "/tiger/v3/web/accounts/phone/login/silence",
+  LOGIN_ACCOUNT_TICKET: "/tiger/v3/web/accounts/login/security",
   // 邮箱验证码发送
-  SEND_EMAIL_REGISTERATION_CAPTCHA: '/tiger/v3/web/accounts/email/captcha/send',
+  SEND_EMAIL_REGISTERATION_CAPTCHA: "/tiger/v3/web/accounts/email/captcha/send",
   // 验证邮箱验证码
-  VERIFY_EMAIL_REGISTERATION_CAPTCHA: '/tiger/v3/web/accounts/email/captcha/check',
+  VERIFY_EMAIL_REGISTERATION_CAPTCHA: "/tiger/v3/web/accounts/email/captcha/check",
   // 邮箱注册
-  REGISTER_BY_EMAIL: '/tiger/v3/web/accounts/email/register',
+  REGISTER_BY_EMAIL: "/tiger/v3/web/accounts/email/register",
   // 获取协议列表
-  GET_AGREEMENTS: '/tiger/v3/web/accounts/agreements',
+  GET_AGREEMENTS: "/tiger/v3/web/accounts/agreements",
   // 获取需签署的协议列表
-  GET_AGREEMENTS_NEED_SIGN: '/tiger/v3/web/accounts/agreements/need-sign',
+  GET_AGREEMENTS_NEED_SIGN: "/tiger/v3/web/accounts/agreements/need-sign",
   // 签署协议列表
-  SIGN_AGREEMENTS: '/tiger/v3/web/accounts/agreements/sign',
+  SIGN_AGREEMENTS: "/tiger/v3/web/accounts/agreements/sign",
   // 语音验证码
-  VOICE_CAPTCHA: '/tiger/v3/web/accounts/voice/captcha/send',
+  VOICE_CAPTCHA: "/tiger/v3/web/accounts/voice/captcha/send",
   // 查询最新协议-免登录开放接口
-  FIND_LATEST_PROTOCOL_LIST: '/tiger/v3/web/accounts/protocol/list'
+  FIND_LATEST_PROTOCOL_LIST: "/tiger/v3/web/accounts/protocol/list"
 };
 var TIGER_CAPTCHA_API = {
-  GET_RULE: '/tiger/captcha/graph/rule',
-  GET_GEETEST_PARAMS: '/tiger/captcha/graph/geetest/register_slide',
-  CHECK_AND_GET_GEETEST_TICKET: '/tiger/captcha/graph/tickets/geetest',
-  CHECK_AND_GET_WATERPROOFWALL_TICKET: '/tiger/captcha/graph/tickets/waterproof-wall'
+  GET_RULE: "/tiger/captcha/graph/rule",
+  GET_GEETEST_PARAMS: "/tiger/captcha/graph/geetest/register_slide",
+  CHECK_AND_GET_GEETEST_TICKET: "/tiger/captcha/graph/tickets/geetest",
+  CHECK_AND_GET_WATERPROOFWALL_TICKET: "/tiger/captcha/graph/tickets/waterproof-wall"
 };
 var PLATFORM_CAPTCHA_API = {
-  GET_RULE: '/captcha/rule/v3',
-  GET_GEETEST_PARAMS: '/captcha/geetest/register',
-  CHECK_AND_GET_GEETEST_TICKET: '/captcha/geetest/verify',
-  CHECK_AND_GET_TENCENT_TICKET: '/captcha/tencent',
-  CHECK_AND_GET_NEXTDATA_TICKET: '/captcha/nextdata',
-  CHECK_AND_GET_NETEASE_TICKET: '/captcha/netease',
-  CHECK_AND_GET_ALIYUN_TICKET: '/captcha/aliyun'
+  GET_RULE: "/captcha/rule/v3",
+  GET_GEETEST_PARAMS: "/captcha/geetest/register",
+  CHECK_AND_GET_GEETEST_TICKET: "/captcha/geetest/verify",
+  CHECK_AND_GET_TENCENT_TICKET: "/captcha/tencent",
+  CHECK_AND_GET_NEXTDATA_TICKET: "/captcha/nextdata",
+  CHECK_AND_GET_NETEASE_TICKET: "/captcha/netease",
+  CHECK_AND_GET_ALIYUN_TICKET: "/captcha/aliyun"
 };
 var TIGER_TOKEN_API = {
-  REFRESH_TOKEN: '/tiger/v3/web/accounts/tokens/refresh',
-  DELETE_TOKEN: '/tiger/v3/web/accounts/tokens',
-  GET_TOKEN_FROM_OLD_COOKIE: '/tiger/v3/web/accounts/tokens/convert'
+  REFRESH_TOKEN: "/tiger/v3/web/accounts/tokens/refresh",
+  DELETE_TOKEN: "/tiger/v3/web/accounts/tokens",
+  GET_TOKEN_FROM_OLD_COOKIE: "/tiger/v3/web/accounts/tokens/convert"
 };
 var PUBLIC_HEADERS = {
-  Net: navigator.connection ? navigator.connection.effectiveType : '',
-  'SDK-Account-Version': version
+  Net: navigator.connection ? navigator.connection.effectiveType : "",
+  "SDK-Account-Version": version
 };
 var api = /*#__PURE__*/Object.freeze({
   __proto__: null,
@@ -517,10 +523,12 @@ function __generator(thisArg, body) {
     }
     while (_) {
       try {
-        if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) {
+        f = 1;
+        if (y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) {
           return t;
         }
-        if (y = 0, t) {
+        y = 0;
+        if (t) {
           op = [op[0] & 2, t.value];
         }
         switch (op[0]) {
@@ -634,191 +642,191 @@ var CodemaoConsoleError = /** @class */function () {
 var BackendError = {
   AC3_0: {
     error_code: ERROR_TYPE.PHONE_REGISTERED,
-    message: 'Phone number is registered.'
+    message: "Phone number is registered."
   },
   AC3_1: {
     error_code: ERROR_TYPE.PHONE_UNREGISTERED,
-    message: 'Phone number is unregistered.'
+    message: "Phone number is unregistered."
   },
   AC3_2: {
     error_code: ERROR_TYPE.USER_NOT_EXIST_OR_PWD_WRONG,
-    message: 'User doesn\'t exist or password is wrong.'
+    message: "User doesn't exist or password is wrong."
   },
   AC3_3: {
     error_code: ERROR_TYPE.USER_NOT_EXIST,
-    message: 'User doesn\'t exist.'
+    message: "User doesn't exist."
   },
   AC3_4: {
     error_code: ERROR_TYPE.CANNOT_SET_FUTURE_DATE,
-    message: 'Cannot set a future date.'
+    message: "Cannot set a future date."
   },
   AC3_5: {
     error_code: ERROR_TYPE.CANNOT_SET_USERNAME_REPEATEDLY,
-    message: 'Cannot set the username repeatedly.'
+    message: "Cannot set the username repeatedly."
   },
   AC3_6: {
     error_code: ERROR_TYPE.USERNAME_EXIST,
-    message: 'Username is already existed.'
+    message: "Username is already existed."
   },
   AC3_7: {
     error_code: ERROR_TYPE.NEED_TO_BIND_PHONE,
-    message: 'User need to bind a phone.'
+    message: "User need to bind a phone."
   },
   AC3_8: {
     error_code: ERROR_TYPE.USE_BOUND_PHONE_TO_RECEIVE_CAPTCHA,
-    message: 'Need to use the bound phone to receive the captcha.'
+    message: "Need to use the bound phone to receive the captcha."
   },
   AC3_9: {
     error_code: ERROR_TYPE.WRONG_OLD_PWD,
-    message: 'Wrong old password.'
+    message: "Wrong old password."
   },
   AC3_10: {
     error_code: ERROR_TYPE.PWDS_DO_NOT_MATCH,
-    message: 'Passwords do not match.'
+    message: "Passwords do not match."
   },
   AC3_11: {
     error_code: ERROR_TYPE.INIT_PWD_CAN_SET_ONLY_ONCE,
-    message: 'Init-password can be set only once.'
+    message: "Init-password can be set only once."
   },
   AC3_12: {
     error_code: ERROR_TYPE.NEED_PRIMARY_ACCOUNT,
-    message: 'Primary account should exist.(one of email, username and phone number).'
+    message: "Primary account should exist.(one of email, username and phone number)."
   },
   AC3_13: {
     error_code: ERROR_TYPE.VERIFY_CAPTCHA_FAIL,
-    message: 'Fail when verifying the captcha.'
+    message: "Fail when verifying the captcha."
   },
   AC3_14: {
     error_code: ERROR_TYPE.USER_PHONE_BOUND,
-    message: 'User has bound a phone.'
+    message: "User has bound a phone."
   },
   AC3_15: {
     error_code: ERROR_TYPE.OLD_PHONE_WRONG,
-    message: 'Old phone number is wrong.'
+    message: "Old phone number is wrong."
   },
   AC3_16: {
     error_code: ERROR_TYPE.ILLEGAL_OPERATION,
-    message: 'Operation is illegal.'
+    message: "Operation is illegal."
   },
   AC3_17: {
     error_code: ERROR_TYPE.CANNOT_BIND_OLD_PHONE,
-    message: 'Cannot bind phone with a old phone number.'
+    message: "Cannot bind phone with a old phone number."
   },
   AC3_18: {
     error_code: ERROR_TYPE.ILLEGAL_OAUTH_TICKET,
-    message: 'Oauth_ticket is illegal.'
+    message: "Oauth_ticket is illegal."
   },
   AC3_19: {
     error_code: ERROR_TYPE.ILLEGAL_AUTHORIZATION_CATEGORY,
-    message: 'Authorization category is illegal.'
+    message: "Authorization category is illegal."
   },
   AC3_20: {
     error_code: ERROR_TYPE.THIRD_PARTY_ACCOUNT_BOUND,
-    message: 'Third-party account has been bound.'
+    message: "Third-party account has been bound."
   },
   AC3_21: {
     error_code: ERROR_TYPE.AUTHORIZATION_ACCOUNT_BOUND,
-    message: 'Account has been bound with the the same authorization account.'
+    message: "Account has been bound with the the same authorization account."
   },
   AC3_22: {
     error_code: ERROR_TYPE.BIND_PHONE_OR_SET_USERNAME_AND_PWD,
-    message: 'Please bind a phone or set the username.'
+    message: "Please bind a phone or set the username."
   },
   AC3_23: {
     error_code: ERROR_TYPE.SEND_CAPTCHA_TOO_FRUQUENTLY,
-    message: 'Request captchas too fruquently.'
+    message: "Request captchas too fruquently."
   },
   AC3_24: {
     error_code: ERROR_TYPE.ILLEGAL_PID,
-    message: 'Pid is illegal.'
+    message: "Pid is illegal."
   },
   AC3_25: {
     error_code: ERROR_TYPE.NICKNAME_EXIST,
-    message: 'Nickname is already existed.'
+    message: "Nickname is already existed."
   },
   AC3_26: {
     error_code: ERROR_TYPE.PHONE_BOUND_BY_OTHER_ACCOUNT,
-    message: 'Phone has been bound by other account.'
+    message: "Phone has been bound by other account."
   },
   AC3_27: {
     error_code: ERROR_TYPE.WRONG_TICKET,
-    message: 'Ticket is wrong.'
+    message: "Ticket is wrong."
   },
   AC3_44: {
     error_code: ERROR_TYPE.ACCOUNT_HAS_BLOCKED,
-    message: 'Account has blocked in blacklist.'
+    message: "Account has blocked in blacklist."
   },
   AC3_48: {
     error_code: ERROR_TYPE.RECEIVABLE_CAPTCHA_TIMES_LIMITTED,
-    message: 'Reached the specified limitation of sending times.'
+    message: "Reached the specified limitation of sending times."
   },
   AC3_61: {
     error_code: ERROR_TYPE.EMAIL_HAS_REGISTERED,
-    message: 'Email has registered.'
+    message: "Email has registered."
   },
   C_1: {
     error_code: ERROR_TYPE.QQ_ERROR_RECEIVED,
-    message: 'Receive error from QQ when login with it.'
+    message: "Receive error from QQ when login with it."
   },
   C_2: {
     error_code: ERROR_TYPE.WECHAR_ERROR_RECEIVED,
-    message: 'Receive error from WeChat when login with it.'
+    message: "Receive error from WeChat when login with it."
   },
   GCAP_1: {
     error_code: ERROR_TYPE.INVALID_CAPTCHA,
-    message: 'Invalid Ticket.'
+    message: "Invalid Ticket."
   },
-  '10000000': {
+  "10000000": {
     error_code: ERROR_TYPE.TOKEN_INVALID,
-    message: 'Access token is invalid.'
+    message: "Access token is invalid."
   },
-  '10000001': {
+  "10000001": {
     error_code: ERROR_TYPE.REFRESH_TOKEN_INVALID,
-    message: 'Refresh token is invalid.'
+    message: "Refresh token is invalid."
   },
-  '10000002': {
+  "10000002": {
     error_code: ERROR_TYPE.COOKIE_INVALID,
-    message: 'Fail to convert cookie to token.'
+    message: "Fail to convert cookie to token."
   },
-  '10017001': {
+  "10017001": {
     error_code: ERROR_TYPE.Appid_NotFound,
-    message: 'AppidNotFoundException'
+    message: "AppidNotFoundException"
   },
-  '10017002': {
+  "10017002": {
     error_code: ERROR_TYPE.Default_CaptchaRule_NotFound,
-    message: 'DefaultCaptchaRuleNotFoundException'
+    message: "DefaultCaptchaRuleNotFoundException"
   },
-  '10017003': {
+  "10017003": {
     error_code: ERROR_TYPE.TencentCaptcha_Exception,
-    message: 'TencentCaptchaException'
+    message: "TencentCaptchaException"
   },
-  '10017004': {
+  "10017004": {
     error_code: ERROR_TYPE.GeetestCaptcha_Exception,
-    message: 'GeetestCaptchaException'
+    message: "GeetestCaptchaException"
   }
 };
 var initParamsRuleAlias = {
   pid: {
     required: true,
-    types: ['string']
+    types: ["string"]
   },
   appid: {
     required: true,
-    types: ['string', 'number']
+    types: ["string", "number"]
   },
   product_code: {
     required: true,
-    types: ['string', 'number']
+    types: ["string", "number"]
   }
 };
 var initParamsValidateHelper = function ($config) {
   if (!$config) {
-    throw new Error('you should specify a config to init Iris auth module');
+    throw new Error("you should specify a config to init Iris auth module");
   }
   Object.keys(initParamsRuleAlias).forEach(function (rule_key) {
-    if (rule_key !== 'platform') {
+    if (rule_key !== "platform") {
       var value = $config[rule_key];
-      if (initParamsRuleAlias[rule_key].required && !value && value !== '') {
+      if (initParamsRuleAlias[rule_key].required && !value && value !== "") {
         throw new CodemaoError({
           error_code: ERROR_TYPE.INVALID_INIT_PARAMS,
           message: rule_key + " is required,but got null or undefined"
@@ -828,7 +836,7 @@ var initParamsValidateHelper = function ($config) {
       if (!initParamsRuleAlias[rule_key].types.includes(type)) {
         throw new CodemaoError({
           error_code: ERROR_TYPE.INVALID_INIT_PARAMS,
-          message: rule_key + " should be type of " + initParamsRuleAlias[rule_key].type.join(' or ') + ",but got " + type
+          message: rule_key + " should be type of " + initParamsRuleAlias[rule_key].type.join(" or ") + ",but got " + type
         });
       }
     }
@@ -845,7 +853,7 @@ var setInitParams = function (initParams) {
   _initParams = initParams;
 };
 // IrisConfig
-var _config = configs['prod'];
+var _config = configs["prod"];
 var getConfig = function () {
   return _config;
 };
@@ -866,7 +874,7 @@ var setAuthConfig = function (config) {
  */
 var CodemaoRequest = /** @class */function () {
   function CodemaoRequest(config) {
-    this.hostType = config && config.hostType || 'tiger';
+    this.hostType = config && config.hostType || "tiger";
     this.timeout = config && config.timeout || 20000;
     this.public_headers = config && config.public_headers;
   }
@@ -875,7 +883,7 @@ var CodemaoRequest = /** @class */function () {
       return params[key];
     }).map(function (key) {
       return key + "=" + params[key];
-    }).join('&');
+    }).join("&");
     return Object.keys(params).length === 0 ? "" + getConfig().host[this.hostType] + url : "" + getConfig().host[this.hostType] + url + "?" + params_str;
   };
   CodemaoRequest.prototype.dispatch_request = function (options) {
@@ -890,10 +898,10 @@ var CodemaoRequest = /** @class */function () {
           var params = options.params || {};
           var compatibleHeaders = {};
           if (getInitParams().auth_version) {
-            compatibleHeaders['Auth-Version'] = getInitParams().auth_version;
+            compatibleHeaders["Auth-Version"] = getInitParams().auth_version;
           }
           if (getInitParams().client_id) {
-            compatibleHeaders['Client-ID'] = getInitParams().client_id;
+            compatibleHeaders["Client-ID"] = getInitParams().client_id;
           }
           var headers = __assign(__assign(__assign({}, _this.public_headers), options.headers), compatibleHeaders);
           var request_url = without_base_url ? url : _this.get_complete_url(url, params);
@@ -902,7 +910,7 @@ var CodemaoRequest = /** @class */function () {
           request.open(method.toUpperCase(), request_url, true);
           // Data will be sent with json Content-Type
           if (data) {
-            request.setRequestHeader('Content-Type', 'application/json;charset=utf-8');
+            request.setRequestHeader("Content-Type", "application/json;charset=utf-8");
           }
           request.timeout = getInitParams().requestTimeout || _this.timeout;
           request.withCredentials = true;
@@ -915,7 +923,7 @@ var CodemaoRequest = /** @class */function () {
             // handled by onerror instead
             // With one exception: request that using file: protocol, most browsers
             // will return status as 0 even though it's a successful request
-            if (request.status === 0 && !(request.responseURL && request.responseURL.indexOf('file:') === 0)) {
+            if (request.status === 0 && !(request.responseURL && request.responseURL.indexOf("file:") === 0)) {
               return;
             }
             if (request.status >= 200 && request.status <= 300) {
@@ -964,7 +972,7 @@ var CodemaoRequest = /** @class */function () {
             // onerror should only fire if it's a network error
             reject(new CodemaoError({
               error_code: ERROR_TYPE.REQUEST_ERROR,
-              message: 'Network error.'
+              message: "Network error."
             }));
             // Clean up request.
             // request = null;
@@ -979,15 +987,15 @@ var CodemaoRequest = /** @class */function () {
             // request = null;
           };
           try {
-            if ('setRequestHeader' in request) {
+            if ("setRequestHeader" in request) {
               Object.keys(headers).forEach(function (val) {
                 request.setRequestHeader(val, headers[val]);
               });
             }
           } catch (error) {
             console.error(error);
-            console.log('headers is ', headers);
-            throw new Error('Iris Error: 设置请求头时出错，请检查请求头，不能含有中文');
+            console.log("headers is ", headers);
+            throw new Error("Iris Error: 设置请求头时出错，请检查请求头，不能含有中文");
           }
           if (data) {
             request.send(JSON.stringify(data));
@@ -1002,7 +1010,7 @@ var CodemaoRequest = /** @class */function () {
 }();
 var TigerApi = new CodemaoRequest();
 var PlatformApi = new CodemaoRequest({
-  hostType: 'platform'
+  hostType: "platform"
 });
 
 // Function to check if input params' properties are valid.
@@ -1010,7 +1018,7 @@ function check_input_existence(obj, check_properties) {
   if (obj) {
     Object.keys(obj).map(function (property) {
       if (check_properties.indexOf(property) === -1) {
-        new CodemaoConsoleError("\u8BF7\u786E\u8BA4 " + property + " \u53C2\u6570\u662F\u5426\u5408\u6CD5");
+        new CodemaoConsoleError("请确认 " + property + " 参数是否合法");
       }
     });
   }
@@ -1037,27 +1045,27 @@ function check(property_name, pattern, error_code) {
   };
 }
 // Function to check phone number
-var check_phone_number = check('phone_number', phone_number_pattern, ERROR_TYPE.INVALID_PHONE_NUMBER);
+var check_phone_number = check("phone_number", phone_number_pattern, ERROR_TYPE.INVALID_PHONE_NUMBER);
 //
-var validate_email_address = check('email_address', email_address_pattern, ERROR_TYPE.INVALID_EMAIL_ADDRESS);
+var validate_email_address = check("email_address", email_address_pattern, ERROR_TYPE.INVALID_EMAIL_ADDRESS);
 // Function to check captcha
-var check_captcha = check('captcha', captcha_pattern, ERROR_TYPE.INVALID_CAPTCHA);
+var check_captcha = check("captcha", captcha_pattern, ERROR_TYPE.INVALID_CAPTCHA);
 // Function to check password
-var check_password = check('password', password_pattern, ERROR_TYPE.INVALID_PASSWORD);
+var check_password = check("password", password_pattern, ERROR_TYPE.INVALID_PASSWORD);
 // Function to check username
-var check_username = check('username', username_pattern, ERROR_TYPE.INVALID_USERNAME);
+var check_username = check("username", username_pattern, ERROR_TYPE.INVALID_USERNAME);
 // Function to check nickname
-var check_nickname = check('nickname', nickname_pattern, ERROR_TYPE.INVALID_NICKNAME);
+var check_nickname = check("nickname", nickname_pattern, ERROR_TYPE.INVALID_NICKNAME);
 // Function to check fullname
-var check_fullname = check('fullname', fullname_pattern, ERROR_TYPE.INVALID_FULLNAME);
+var check_fullname = check("fullname", fullname_pattern, ERROR_TYPE.INVALID_FULLNAME);
 // Function to check qq
-var check_qq = check('qq', qq_pattern, ERROR_TYPE.INVALID_QQ);
+var check_qq = check("qq", qq_pattern, ERROR_TYPE.INVALID_QQ);
 // Function to check description
 function check_description(description) {
   if (description.length > 50) {
     throw new CodemaoError({
       error_code: ERROR_TYPE.INVALID_DESCRIPTION,
-      message: 'Invalid description, it should contains only 0 - 50 characters.'
+      message: "Invalid description, it should contains only 0 - 50 characters."
     });
   }
 }
@@ -1103,7 +1111,7 @@ function check_agreement_ids(ids) {
   if (!(ids === null || ids === undefined ? undefined : ids.length)) {
     throw new CodemaoError({
       error_code: ERROR_TYPE.AGREEMENT_IDS,
-      message: 'agreement_ids should not be an empty array.'
+      message: "agreement_ids should not be an empty array."
     });
   }
 }
@@ -1150,7 +1158,7 @@ function check_if_pwd_equals_confirmed_pwd(pwd, pwd_confirm) {
   if (pwd !== pwd_confirm) {
     throw new CodemaoError({
       error_code: ERROR_TYPE.PWD_IS_NOT_EQUAL_TO_CONFIRMED_PWD,
-      message: 'Password is not equal to confirmed password.'
+      message: "Password is not equal to confirmed password."
     });
   }
 }
@@ -1180,7 +1188,7 @@ function retry(retries, fn) {
             return [2 /*return*/, retry(retries - 1, fn)];
           } else {
             throw new CodemaoError({
-              message: 'Get geetest init params fail, please reload the page or try again later.'
+              message: "Get geetest init params fail, please reload the page or try again later."
             });
           }
         case 3:
@@ -1203,8 +1211,8 @@ function set_cookie(options) {
 // Function to get cookie by name.
 function get_cookie(name) {
   var cookies = {};
-  document.cookie.split(';').forEach(function (cookie) {
-    var first_equal_mark_position = cookie.indexOf('=');
+  document.cookie.split(";").forEach(function (cookie) {
+    var first_equal_mark_position = cookie.indexOf("=");
     var key = cookie.slice(0, first_equal_mark_position);
     var value = cookie.slice(first_equal_mark_position + 1);
     cookies[key.trim()] = value;
@@ -1215,7 +1223,7 @@ function get_cookie(name) {
 function clear_cookie(name, domain) {
   set_cookie({
     name: name,
-    value: '',
+    value: "",
     domain: domain,
     max_age: -999999
   });
@@ -1223,8 +1231,8 @@ function clear_cookie(name, domain) {
 // Function to generate the cookie name according to the env.
 function get_cookie_name(type) {
   var env = getConfig().env;
-  var prefix = env === 'prod' ? '' : env + "-";
-  if (type === 'token_type') {
+  var prefix = env === "prod" ? "" : env + "-";
+  if (type === "token_type") {
     /**
      * All possible result
      * 1. prod -- token-type
@@ -1244,7 +1252,7 @@ function get_cookie_name(type) {
   return "" + prefix + type + "-token";
 }
 function is_cookie_exist(cookie) {
-  return cookie && cookie !== 'undefined' && cookie !== '' ? true : false;
+  return cookie && cookie !== "undefined" && cookie !== "" ? true : false;
 }
 function load_script(url, id, timeout) {
   return __awaiter(this, undefined, undefined, function () {
@@ -1258,8 +1266,8 @@ function load_script(url, id, timeout) {
               clearTimeout(timer_1);
             }, timeout * 1000);
           }
-          var script = document.createElement('script');
-          script.type = 'text/javascript';
+          var script = document.createElement("script");
+          script.type = "text/javascript";
           script.onload = function () {
             resolve();
             if (timer_1) {
@@ -1268,8 +1276,8 @@ function load_script(url, id, timeout) {
           };
           script.id = id;
           script.src = url;
-          script.setAttribute('defer', '');
-          document.getElementsByTagName('head')[0].appendChild(script);
+          script.setAttribute("defer", "");
+          document.getElementsByTagName("head")[0].appendChild(script);
         } else {
           resolve();
         }
@@ -1284,23 +1292,23 @@ function appendDomNode(domNodeType, opts, style) {
   return new Promise(function (resolve, reject) {
     var node = document.createElement(domNodeType);
     node.onload = function () {
-      resolve(!!1);
+      resolve(!false);
     };
     node.onerror = function () {
-      reject(!!0);
+      reject(!true);
     };
     if (opts) {
       Object.keys(opts).forEach(function (keyname) {
         var value = opts[keyname];
-        if (keyname !== 'innerHTML' && keyname !== 'style') {
-          node.setAttribute(keyname, typeof value !== 'string' ? JSON.stringify(value) : value);
+        if (keyname !== "innerHTML" && keyname !== "style") {
+          node.setAttribute(keyname, typeof value !== "string" ? JSON.stringify(value) : value);
         }
       });
     }
     node.innerHTML = opts.innerHTML;
-    node.setAttribute('style', style || '');
+    node.setAttribute("style", style || "");
     document.body.appendChild(node);
-    resolve(!!1);
+    resolve(!false);
   });
 }
 function simpleHash(tag) {
@@ -1342,7 +1350,7 @@ var CodemaoToken = /** @class */function () {
   function CodemaoToken() {
     this.request = new CodemaoRequest({
       public_headers: __assign({
-        'Product-Code': getAuthConfig().product_code,
+        "Product-Code": getAuthConfig().product_code,
         Platform: getAuthConfig().platform
       }, PUBLIC_HEADERS)
     });
@@ -1356,18 +1364,18 @@ var CodemaoToken = /** @class */function () {
   };
   // Get the full access token -- 'type access-token'
   CodemaoToken.prototype.get_complete_access_token = function () {
-    var token_type = get_cookie(get_cookie_name('token_type'));
-    var access_token = get_cookie(get_cookie_name('access'));
+    var token_type = get_cookie(get_cookie_name("token_type"));
+    var access_token = get_cookie(get_cookie_name("access"));
     if (is_cookie_exist(token_type) && is_cookie_exist(access_token)) {
       return token_type + " " + access_token;
     } else {
       // Clear the previous access & type cookie.
       var domain = getConfig().domain;
-      clear_cookie(get_cookie_name('access'), domain);
-      clear_cookie(get_cookie_name('token_type'), domain);
+      clear_cookie(get_cookie_name("access"), domain);
+      clear_cookie(get_cookie_name("token_type"), domain);
       throw new CodemaoError({
         error_code: ERROR_TYPE.NO_TOKEN,
-        message: 'NO Token(cookie might have been expired). Please login.'
+        message: "NO Token(cookie might have been expired). Please login."
       });
     }
   };
@@ -1382,11 +1390,11 @@ var CodemaoToken = /** @class */function () {
           case 0:
             _a = this.check();
             switch (_a) {
-              case 'ACCESS_EXIST':
+              case "ACCESS_EXIST":
                 return [3 /*break*/, 1];
-              case 'REFRESH_EXIST':
+              case "REFRESH_EXIST":
                 return [3 /*break*/, 2];
-              case 'NO_TOKEN':
+              case "NO_TOKEN":
                 return [3 /*break*/, 4];
             }
             return [3 /*break*/, 7];
@@ -1413,7 +1421,7 @@ var CodemaoToken = /** @class */function () {
             this.clear();
             throw new CodemaoError({
               error_code: ERROR_TYPE.NO_TOKEN,
-              message: 'NO Token. Please login.'
+              message: "NO Token. Please login."
             });
           case 7:
             return [2 /*return*/];
@@ -1426,7 +1434,7 @@ var CodemaoToken = /** @class */function () {
       return __generator(this, function (_a) {
         return [2 /*return*/, this.dispatch_request({
           url: TIGER_TOKEN_API.GET_TOKEN_FROM_OLD_COOKIE,
-          method: 'post',
+          method: "post",
           headers: authorization ? {
             Authorization: "Bearer " + authorization
           } : {}
@@ -1437,14 +1445,14 @@ var CodemaoToken = /** @class */function () {
   // Get local refresh token which stored in cookie.
   CodemaoToken.prototype.get_refresh = function () {
     if (getInitParams().auth_version) {
-      if (this.check() === 'NO_TOKEN') {
+      if (this.check() === "NO_TOKEN") {
         throw new CodemaoError({
           error_code: ERROR_TYPE.NO_TOKEN,
-          message: 'NO Token. Please login.'
+          message: "NO Token. Please login."
         });
       }
     }
-    return get_cookie(get_cookie_name('refresh'));
+    return get_cookie(get_cookie_name("refresh"));
   };
   // Pass the token to cookie.
   // Every time after auth.login_xxx() & refresh().
@@ -1455,29 +1463,29 @@ var CodemaoToken = /** @class */function () {
     // Set access token to cookie.
     if (access && access.token && access.type && access.expires_in) {
       set_cookie({
-        name: get_cookie_name('access'),
+        name: get_cookie_name("access"),
         value: access.token,
         domain: domain,
         max_age: access.expires_in
       });
       // Set token type to cookie.
       set_cookie({
-        name: get_cookie_name('token_type'),
+        name: get_cookie_name("token_type"),
         value: access.type,
         domain: domain,
         max_age: access.expires_in
       });
     } else {
-      console.warn('Unexpected access token response from back-end: ', access);
+      console.warn("Unexpected access token response from back-end: ", access);
     }
     // Check if refresh_token exists.
     // Set it to cookie if it exists.
     if (refresh) {
       if (!refresh.token || !refresh.expires_in) {
-        console.warn('Unexpected refresh token response from back-end: ', refresh);
+        console.warn("Unexpected refresh token response from back-end: ", refresh);
       }
       set_cookie({
-        name: get_cookie_name('refresh'),
+        name: get_cookie_name("refresh"),
         value: refresh.token,
         domain: domain,
         max_age: refresh.expires_in
@@ -1489,7 +1497,7 @@ var CodemaoToken = /** @class */function () {
     return __awaiter(this, undefined, undefined, function () {
       return __generator(this, function (_a) {
         return [2 /*return*/, this.dispatch_request({
-          method: 'put',
+          method: "put",
           url: TIGER_TOKEN_API.REFRESH_TOKEN,
           data: {
             refresh_token: this.get_refresh()
@@ -1528,24 +1536,24 @@ var CodemaoToken = /** @class */function () {
   // Check if it's necessary to refresh token.
   CodemaoToken.prototype.check = function () {
     // access_token is not expired
-    if (is_cookie_exist(get_cookie(get_cookie_name('access'))) && is_cookie_exist(get_cookie(get_cookie_name('token_type')))) {
-      return 'ACCESS_EXIST';
+    if (is_cookie_exist(get_cookie(get_cookie_name("access"))) && is_cookie_exist(get_cookie(get_cookie_name("token_type")))) {
+      return "ACCESS_EXIST";
     }
     // access_token expired, refresh_token is not expired.
-    if (is_cookie_exist(get_cookie(get_cookie_name('refresh')))) {
-      return 'REFRESH_EXIST';
+    if (is_cookie_exist(get_cookie(get_cookie_name("refresh")))) {
+      return "REFRESH_EXIST";
     }
     // both of them are expired.
     // or,
     // someone tries to request the api without login.
-    return 'NO_TOKEN';
+    return "NO_TOKEN";
   };
   // Clear local token through setting cookie.
   CodemaoToken.prototype.clear = function () {
     var domain = getConfig().domain;
-    clear_cookie(get_cookie_name('access'), domain);
-    clear_cookie(get_cookie_name('token_type'), domain);
-    clear_cookie(get_cookie_name('refresh'), domain);
+    clear_cookie(get_cookie_name("access"), domain);
+    clear_cookie(get_cookie_name("token_type"), domain);
+    clear_cookie(get_cookie_name("refresh"), domain);
   };
   return CodemaoToken;
 }();
@@ -1585,17 +1593,17 @@ function retry_when_token_err(retries, fn) {
 var _instance;
 function init(params) {
   if (!params.appid) {
-    params.appid = '';
+    params.appid = "";
   }
   initParamsValidateHelper(params);
   setAuthConfig(params);
-  if (['pid', 'appid', 'product_code', 'platform'].every(function (param) {
+  if (["pid", "appid", "product_code", "platform"].every(function (param) {
     return hasProperty(param, getAuthConfig());
   })) {
     _instance = new CodemaoAuth();
     return _instance;
   } else {
-    throw new Error('Auth init fail.Check init params.');
+    throw new Error("Auth init fail.Check init params.");
   }
 }
 /**
@@ -1606,7 +1614,7 @@ function init(params) {
  */
 var mergeHeaderConf = function (originalHeader, assertion, specifiedNewHeader) {
   return assertion !== false ? __assign(__assign(__assign({}, originalHeader), {
-    'X-Captcha-Id': getAuthConfig().appid || ''
+    "X-Captcha-Id": getAuthConfig().appid || ""
   }), specifiedNewHeader) : originalHeader;
 };
 // TODO hi,buddys！后续希望大家不要再使用英文写注释了。
@@ -1624,7 +1632,7 @@ function get_auth_instance() {
   // 没有实例
   if (!_instance) {
     throw new CodemaoError({
-      message: 'Iris SDK error: Please run init() correctly, before get_auth_instance().'
+      message: "Iris SDK error: Please run init() correctly, before get_auth_instance()."
     });
   }
   return _instance;
@@ -1635,7 +1643,7 @@ var CodemaoAuth = /** @class */function () {
     var _a;
     this.request = new CodemaoRequest({
       public_headers: __assign(__assign({
-        'Product-Code': getAuthConfig().product_code,
+        "Product-Code": getAuthConfig().product_code,
         pid: getAuthConfig().pid,
         Platform: getAuthConfig().platform
       }, PUBLIC_HEADERS), (_a = getInitParams()) === null || _a === undefined ? undefined : _a.custom_headers)
@@ -1662,7 +1670,7 @@ var CodemaoAuth = /** @class */function () {
             options.headers = options.headers || {};
             // eslint-disable-next-line require-atomic-updates
             _a = options.headers;
-            _b = 'Authorization';
+            _b = "Authorization";
             return [4 /*yield*/, this.token.get_access()];
           case 1:
             // eslint-disable-next-line require-atomic-updates
@@ -1691,12 +1699,12 @@ var CodemaoAuth = /** @class */function () {
         validate_email_address(email);
         return [2 /*return*/, this.dispatch_request({
           url: Api.SEND_EMAIL_REGISTERATION_CAPTCHA,
-          method: 'post',
+          method: "post",
           data: {
             email: email
           },
           headers: mergeHeaderConf({
-            'X-Captcha-Ticket': ticket
+            "X-Captcha-Ticket": ticket
           })
         })];
       });
@@ -1713,7 +1721,7 @@ var CodemaoAuth = /** @class */function () {
         validate_email_address(email);
         return [2 /*return*/, this.dispatch_request({
           url: Api.VERIFY_EMAIL_REGISTERATION_CAPTCHA,
-          method: 'post',
+          method: "post",
           data: {
             email: email,
             captcha: captcha
@@ -1740,7 +1748,7 @@ var CodemaoAuth = /** @class */function () {
         check_if_pwd_equals_confirmed_pwd(password, rePassword);
         return [2 /*return*/, this.dispatch_request({
           url: Api.REGISTER_BY_EMAIL,
-          method: 'post',
+          method: "post",
           data: {
             captchaTicket: captchaTicket,
             password: password,
@@ -1759,7 +1767,7 @@ var CodemaoAuth = /** @class */function () {
       return __generator(this, function (_a) {
         return [2 /*return*/, this.dispatch_request({
           url: Api.GET_AGREEMENTS,
-          method: 'get'
+          method: "get"
         })];
       });
     });
@@ -1772,7 +1780,7 @@ var CodemaoAuth = /** @class */function () {
       return __generator(this, function (_a) {
         return [2 /*return*/, this.dispatch_request({
           url: Api.GET_AGREEMENTS_NEED_SIGN,
-          method: 'get'
+          method: "get"
         })];
       });
     });
@@ -1785,7 +1793,7 @@ var CodemaoAuth = /** @class */function () {
       return __generator(this, function (_a) {
         return [2 /*return*/, this.dispatch_request({
           url: Api.SIGN_AGREEMENTS,
-          method: 'post',
+          method: "post",
           data: {
             agreement_ids: agreement_ids,
             pid: pid
@@ -1804,7 +1812,7 @@ var CodemaoAuth = /** @class */function () {
       return __generator(this, function (_a) {
         return [2 /*return*/, this.dispatch_request({
           url: Api.FIND_LATEST_PROTOCOL_LIST,
-          method: 'post',
+          method: "post",
           data: {
             codeList: codeList,
             pid: pid
@@ -1832,14 +1840,14 @@ var CodemaoAuth = /** @class */function () {
             check_phone_number(phone_number);
             return [4 /*yield*/, this.dispatch_request({
               url: Api.VOICE_CAPTCHA,
-              method: 'post',
+              method: "post",
               data: {
                 phone_number: phone_number,
                 type: type.toUpperCase(),
                 oauth_ticket: oauth_ticket
               },
               headers: mergeHeaderConf({
-                'X-Captcha-Ticket': ticket
+                "X-Captcha-Ticket": ticket
               })
             })];
           case 1:
@@ -1865,13 +1873,13 @@ var CodemaoAuth = /** @class */function () {
         check_phone_number(phone_number);
         return [2 /*return*/, this.dispatch_request({
           url: Api.REGISTER_SEND_CAPTCHA,
-          method: 'post',
+          method: "post",
           data: {
             phone_number: phone_number,
             pid: pid
           },
           headers: mergeHeaderConf({
-            'X-Captcha-Ticket': ticket
+            "X-Captcha-Ticket": ticket
           })
         })];
       });
@@ -1891,12 +1899,12 @@ var CodemaoAuth = /** @class */function () {
         switch (_a.label) {
           case 0:
             // TODO: 该方法主要校验存在性，check_register_options已做，不需要
-            check_input_existence(options, ['phone_number', 'captcha', 'password', 'agreement_ids']);
+            check_input_existence(options, ["phone_number", "captcha", "password", "agreement_ids"]);
             check_register_options(options);
             pid = specific_pid || getAuthConfig().pid;
             return [4 /*yield*/, this.dispatch_request({
               url: Api.REGISTER,
-              method: 'post',
+              method: "post",
               data: __assign(__assign({}, options), {
                 pid: pid
               })
@@ -1924,13 +1932,13 @@ var CodemaoAuth = /** @class */function () {
         check_phone_number(phone_number);
         return [2 /*return*/, this.dispatch_request({
           url: Api.LOGIN_CAPTCHA,
-          method: 'post',
+          method: "post",
           data: {
             phone_number: phone_number,
             pid: pid
           },
           headers: mergeHeaderConf({
-            'X-Captcha-Ticket': ticket
+            "X-Captcha-Ticket": ticket
           })
         })];
       });
@@ -1955,7 +1963,7 @@ var CodemaoAuth = /** @class */function () {
             pid = specific_pid || getAuthConfig().pid;
             return [4 /*yield*/, this.dispatch_request({
               url: Api.LOGIN_PHONE,
-              method: 'post',
+              method: "post",
               data: {
                 phone_number: phone_number,
                 captcha: captcha,
@@ -1990,7 +1998,7 @@ var CodemaoAuth = /** @class */function () {
             pid = specific_pid || getAuthConfig().pid;
             return [4 /*yield*/, this.dispatch_request({
               url: Api.LOGIN_ACCOUNT,
-              method: 'post',
+              method: "post",
               data: {
                 identity: identity,
                 password: password,
@@ -2025,7 +2033,7 @@ var CodemaoAuth = /** @class */function () {
             pid = specific_pid || getAuthConfig().pid;
             return [4 /*yield*/, this.dispatch_request({
               url: Api.LOGIN_WECHAT,
-              method: 'post',
+              method: "post",
               data: {
                 code: code,
                 pid: pid,
@@ -2058,7 +2066,7 @@ var CodemaoAuth = /** @class */function () {
             pid = specific_pid || getAuthConfig().pid;
             return [4 /*yield*/, this.dispatch_request({
               url: Api.LOGIN_QQ,
-              method: 'post',
+              method: "post",
               data: {
                 code: code,
                 pid: pid,
@@ -2087,7 +2095,7 @@ var CodemaoAuth = /** @class */function () {
         check_phone_number(phone_number);
         return [2 /*return*/, this.dispatch_request({
           url: Api.BIND_PHONE_FOR_THIRD_PARTY,
-          method: 'post',
+          method: "post",
           data: {
             phone_number: phone_number,
             oauth_ticket: oauth_ticket
@@ -2113,7 +2121,7 @@ var CodemaoAuth = /** @class */function () {
             }
             return [4 /*yield*/, this.dispatch_request({
               url: Api.CREATE_USER_FOR_THIRD_PARTY,
-              method: 'post',
+              method: "post",
               data: captcha ? {
                 oauth_ticket: oauth_ticket,
                 captcha: captcha,
@@ -2145,7 +2153,7 @@ var CodemaoAuth = /** @class */function () {
           case 0:
             return [4 /*yield*/, this.dispatch_request({
               url: Api.LOGOUT,
-              method: 'post',
+              method: "post",
               data: {
                 refresh_token: this.token.get_refresh()
               },
@@ -2173,13 +2181,13 @@ var CodemaoAuth = /** @class */function () {
         check_phone_number(phone_number);
         return [2 /*return*/, this.dispatch_request({
           url: Api.BIND_PHONE_CAPTCHA,
-          method: 'post',
+          method: "post",
           data: {
             phone_number: phone_number,
             pid: pid
           },
           headers: mergeHeaderConf({
-            'X-Captcha-Ticket': ticket
+            "X-Captcha-Ticket": ticket
           }),
           with_token: true
         })];
@@ -2199,7 +2207,7 @@ var CodemaoAuth = /** @class */function () {
         check_captcha(captcha);
         return [2 /*return*/, this.dispatch_request({
           url: Api.BIND_PHONE,
-          method: 'patch',
+          method: "patch",
           data: {
             phone_number: phone_number,
             captcha: captcha
@@ -2220,7 +2228,7 @@ var CodemaoAuth = /** @class */function () {
         check_phone_number(phone_number);
         return [2 /*return*/, this.dispatch_request({
           url: Api.BIND_PHONE_CHECK,
-          method: 'get',
+          method: "get",
           params: {
             phone_number: phone_number
           },
@@ -2243,7 +2251,7 @@ var CodemaoAuth = /** @class */function () {
         check_phone_number(old_phone_number);
         return [2 /*return*/, this.dispatch_request({
           url: Api.REBIND_PHONE_CAPTCHA,
-          method: 'post',
+          method: "post",
           data: {
             phone_number: phone_number,
             old_phone_number: old_phone_number,
@@ -2267,7 +2275,7 @@ var CodemaoAuth = /** @class */function () {
         check_captcha(captcha);
         return [2 /*return*/, this.dispatch_request({
           url: Api.REBIND_PHONE,
-          method: 'patch',
+          method: "patch",
           data: {
             phone_number: phone_number,
             captcha: captcha
@@ -2290,13 +2298,13 @@ var CodemaoAuth = /** @class */function () {
         check_phone_number(phone_number);
         return [2 /*return*/, this.dispatch_request({
           url: Api.RESET_PWD_CAPTCHA,
-          method: 'post',
+          method: "post",
           data: {
             phone_number: phone_number,
             pid: pid
           },
           headers: mergeHeaderConf({
-            'X-Captcha-Ticket': ticket
+            "X-Captcha-Ticket": ticket
           })
         })];
       });
@@ -2315,7 +2323,7 @@ var CodemaoAuth = /** @class */function () {
         check_captcha(captcha);
         return [2 /*return*/, this.dispatch_request({
           url: Api.RESET_PWD_TOKEN,
-          method: 'post',
+          method: "post",
           data: {
             phone_number: phone_number,
             captcha: captcha
@@ -2344,7 +2352,7 @@ var CodemaoAuth = /** @class */function () {
             check_if_pwd_equals_confirmed_pwd(pwd, pwd_confirm);
             request_options = {
               url: Api.RESET_PWD,
-              method: 'patch',
+              method: "patch",
               data: {
                 ticket: ticket,
                 password: pwd,
@@ -2360,10 +2368,10 @@ var CodemaoAuth = /** @class */function () {
             return [3 /*break*/, 4];
           case 3:
             err_1 = _a.sent();
-            token = '';
+            token = "";
             return [3 /*break*/, 4];
           case 4:
-            if (token !== '') {
+            if (token !== "") {
               Object.assign(request_options, {
                 with_token: true
               });
@@ -2386,13 +2394,13 @@ var CodemaoAuth = /** @class */function () {
         check_phone_number(phone_number);
         return [2 /*return*/, this.dispatch_request({
           url: Api.SEND_UNIVERSAL_CAPTCHA,
-          method: 'post',
+          method: "post",
           data: {
             phone_number: phone_number,
             pid: pid
           },
           headers: mergeHeaderConf({
-            'X-Captcha-Ticket': ticket
+            "X-Captcha-Ticket": ticket
           })
         })];
       });
@@ -2411,7 +2419,7 @@ var CodemaoAuth = /** @class */function () {
         check_captcha(captcha);
         return [2 /*return*/, this.dispatch_request({
           url: Api.VERIFY_UNIVERSAL_CAPTCHA,
-          method: 'post',
+          method: "post",
           data: {
             phone_number: phone_number,
             captcha: captcha
@@ -2433,13 +2441,13 @@ var CodemaoAuth = /** @class */function () {
         check_phone_number(phone_number);
         return [2 /*return*/, this.dispatch_request({
           url: Api.LOGIN_CAPTCHA_SILENCE,
-          method: 'post',
+          method: "post",
           data: {
             phone_number: phone_number,
             pid: pid
           },
           headers: mergeHeaderConf({
-            'X-Captcha-Ticket': ticket
+            "X-Captcha-Ticket": ticket
           })
         })];
       });
@@ -2473,27 +2481,27 @@ var CodemaoAuth = /** @class */function () {
       return __generator(this, function (_a) {
         switch (_a.label) {
           case 0:
-            phone_number = '';
-            captcha = '';
-            specific_pid = '';
-            if (typeof first_param === 'string') {
-              phone_number = first_param || '';
-              captcha = second_param || '';
-              specific_pid = third_param || '';
+            phone_number = "";
+            captcha = "";
+            specific_pid = "";
+            if (typeof first_param === "string") {
+              phone_number = first_param || "";
+              captcha = second_param || "";
+              specific_pid = third_param || "";
             }
-            if (typeof first_param === 'object') {
-              phone_number = (first_param === null || first_param === undefined ? undefined : first_param.phone_number) || '';
-              captcha = (first_param === null || first_param === undefined ? undefined : first_param.captcha) || '';
+            if (typeof first_param === "object") {
+              phone_number = (first_param === null || first_param === undefined ? undefined : first_param.phone_number) || "";
+              captcha = (first_param === null || first_param === undefined ? undefined : first_param.captcha) || "";
               // agreement_ids = first_param?.agreement_ids || undefined;
               agreement_ids = first_param === null || first_param === undefined ? undefined : first_param.agreement_ids;
-              specific_pid = second_param || '';
+              specific_pid = second_param || "";
             }
             check_phone_number(phone_number);
             check_captcha(captcha);
             pid = specific_pid || getAuthConfig().pid;
             return [4 /*yield*/, this.dispatch_request({
               url: Api.LOGIN_PHONE_SILENCE,
-              method: 'post',
+              method: "post",
               data: {
                 phone_number: phone_number,
                 captcha: captcha,
@@ -2541,7 +2549,7 @@ var CodemaoAuth = /** @class */function () {
         check_username(username);
         return [2 /*return*/, this.dispatch_request({
           url: Api.SET_USERNAME,
-          method: 'patch',
+          method: "patch",
           data: {
             username: username
           },
@@ -2564,7 +2572,7 @@ var CodemaoAuth = /** @class */function () {
         check_if_pwd_equals_confirmed_pwd(pwd, pwd_confirm);
         return [2 /*return*/, this.dispatch_request({
           url: Api.INIT_PASSWORD,
-          method: 'patch',
+          method: "patch",
           data: {
             password: pwd,
             confirm_password: pwd_confirm
@@ -2593,7 +2601,7 @@ var CodemaoAuth = /** @class */function () {
             check_if_pwd_equals_confirmed_pwd(new_pwd, new_pwd_confirm);
             return [4 /*yield*/, this.dispatch_request({
               url: Api.CHANGE_PWD_BY_OLD,
-              method: 'patch',
+              method: "patch",
               data: {
                 old_password: old_pwd,
                 password: new_pwd,
@@ -2623,7 +2631,7 @@ var CodemaoAuth = /** @class */function () {
         check_phone_number(phone_number);
         return [2 /*return*/, this.dispatch_request({
           url: Api.CHNAGE_PWD_BY_PHONE_CAPTCHA,
-          method: 'post',
+          method: "post",
           data: {
             phone_number: phone_number,
             pid: pid
@@ -2651,7 +2659,7 @@ var CodemaoAuth = /** @class */function () {
             check_password(pwd);
             return [4 /*yield*/, this.dispatch_request({
               url: Api.CHANGE_PWD_BY_PHONE,
-              method: 'patch',
+              method: "patch",
               data: {
                 phone_number: phone_number,
                 captcha: captcha,
@@ -2678,12 +2686,12 @@ var CodemaoAuth = /** @class */function () {
     return __awaiter(this, undefined, undefined, function () {
       return __generator(this, function (_a) {
         if (profile) {
-          check_input_existence(profile, ['nickname', 'avatar_url', 'fullname', 'birthday', 'sex', 'qq', 'description', 'grade']);
+          check_input_existence(profile, ["nickname", "avatar_url", "fullname", "birthday", "sex", "qq", "description", "grade"]);
           check_profile(profile);
         }
         return [2 /*return*/, this.dispatch_request({
           url: Api.SET_PROFILE,
-          method: 'patch',
+          method: "patch",
           data: __assign({}, profile),
           with_token: true
         })];
@@ -2699,7 +2707,7 @@ var CodemaoAuth = /** @class */function () {
       return __generator(this, function (_a) {
         return [2 /*return*/, this.dispatch_request({
           url: Api.CHECK_BIND_FOR_THIRD_PARTY,
-          method: 'get',
+          method: "get",
           with_token: true
         })];
       });
@@ -2716,7 +2724,7 @@ var CodemaoAuth = /** @class */function () {
       return __generator(this, function (_a) {
         return [2 /*return*/, this.dispatch_request({
           url: Api.BIND_WECHAT,
-          method: 'post',
+          method: "post",
           data: {
             code: code,
             appid: appid
@@ -2735,7 +2743,7 @@ var CodemaoAuth = /** @class */function () {
       return __generator(this, function (_a) {
         return [2 /*return*/, this.dispatch_request({
           url: Api.UNBIND_WECHAT,
-          method: 'patch',
+          method: "patch",
           with_token: true
         })];
       });
@@ -2750,7 +2758,7 @@ var CodemaoAuth = /** @class */function () {
       return __generator(this, function (_a) {
         return [2 /*return*/, this.dispatch_request({
           url: Api.BIND_QQ,
-          method: 'post',
+          method: "post",
           data: {
             code: code,
             agreement_ids: agreement_ids
@@ -2769,7 +2777,7 @@ var CodemaoAuth = /** @class */function () {
       return __generator(this, function (_a) {
         return [2 /*return*/, this.dispatch_request({
           url: Api.UNBIND_QQ,
-          method: 'patch',
+          method: "patch",
           with_token: true
         })];
       });
@@ -2784,7 +2792,7 @@ var CodemaoAuth = /** @class */function () {
       return __generator(this, function (_a) {
         return [2 /*return*/, this.dispatch_request({
           url: Api.GET_PROFILE,
-          method: 'get',
+          method: "get",
           with_token: true
         })];
       });
@@ -2798,7 +2806,7 @@ var CodemaoAuth = /** @class */function () {
       return __generator(this, function (_a) {
         return [2 /*return*/, this.dispatch_request({
           url: Api.GET_AUTH,
-          method: 'get',
+          method: "get",
           with_token: true
         })];
       });
@@ -2821,7 +2829,7 @@ var CodemaoAuth = /** @class */function () {
           case 0:
             return [4 /*yield*/, this.dispatch_request({
               url: Api.LOGIN_ACCOUNT_TICKET,
-              method: 'post',
+              method: "post",
               data: {
                 identity: identity,
                 password: password,
@@ -2829,7 +2837,7 @@ var CodemaoAuth = /** @class */function () {
                 agreement_ids: agreement_ids || [-1]
               },
               headers: mergeHeaderConf({
-                'X-Captcha-Ticket': ticket
+                "X-Captcha-Ticket": ticket
               })
             })];
           case 1:
@@ -2847,7 +2855,7 @@ var CodemaoAuth = /** @class */function () {
       return __generator(this, function (_a) {
         return [2 /*return*/, this.dispatch_request({
           url: Api.GET_GRADE_LIST,
-          method: 'get'
+          method: "get"
         })];
       });
     });
@@ -2865,15 +2873,15 @@ var getFingerPrint = function () {
     return __generator(this, function (_a) {
       return [2 /*return*/, new Promise(function (resolve) {
         var getHash = function () {
-          if (typeof Fingerprint2 !== 'undefined') {
+          if (typeof Fingerprint2 !== "undefined") {
             Fingerprint2.get(function (components) {
               var values = components.map(function (component) {
                 return component.value;
               });
-              resolve(Fingerprint2.x64hash128(values.join(''), 31));
+              resolve(Fingerprint2.x64hash128(values.join(""), 31));
             });
           } else {
-            resolve('');
+            resolve("");
           }
         };
         if (window.requestIdleCallback) {
@@ -2892,19 +2900,19 @@ var BasicCaptcha = /** @class */function () {
   return BasicCaptcha;
 }();
 var captchaResourceUrls = {
-  FINGER_PRINT_2: 'https://static.codemao.cn/iris/fingerprint2.min.js',
+  FINGER_PRINT_2: "https://static.codemao.cn/iris/fingerprint2.min.js",
   // 极验
-  GEETEST: 'https://static.codemao.cn/arch/gt.js',
+  GEETEST: "https://static.codemao.cn/arch/gt.js",
   // 腾讯
-  TENCENT: 'https://turing.captcha.qcloud.com/TCaptcha.js',
+  TENCENT: "https://turing.captcha.qcloud.com/TCaptcha.js",
   // 数美
-  NEXTDATA: 'https://static.codemao.cn/arch/smcp.min.js',
+  NEXTDATA: "https://static.codemao.cn/arch/smcp.min.js",
   // 数美（连接新加机房）
   // NEXTDATA_ABROAD: 'https://static.codemao.cn/arch/smcp.min.js',
   // 网易
-  NETEASE: 'https://static.codemao.cn/arch/netease-load.min.js',
+  NETEASE: "https://static.codemao.cn/arch/netease-load.min.js",
   // 阿里云
-  ALIYUN: 'https://g.alicdn.com/AWSC/AWSC/awsc.js'
+  ALIYUN: "https://g.alicdn.com/AWSC/AWSC/awsc.js"
 };
 var fallbackParamsMaker = function (reminder, errorObject) {
   return {
@@ -2913,14 +2921,14 @@ var fallbackParamsMaker = function (reminder, errorObject) {
   };
 };
 var defaultGeetestInitOptions = {
-  product: 'bind',
-  width: '300px'
+  product: "bind",
+  width: "300px"
 };
 var GeetestCaptcha = /** @class */function (_super) {
   __extends(GeetestCaptcha, _super);
   function GeetestCaptcha(options) {
     var _this = _super.call(this, options) || this;
-    _this.product_id = options.product_id || '';
+    _this.product_id = options.product_id || "";
     _this.dom_id = options.dom_id;
     _this.success_callback = options.success_callback;
     _this.init_options = options.init_options;
@@ -2933,7 +2941,7 @@ var GeetestCaptcha = /** @class */function (_super) {
       return __generator(this, function (_a) {
         return [2 /*return*/, PlatformApi.dispatch_request({
           url: PLATFORM_CAPTCHA_API.GET_GEETEST_PARAMS,
-          method: 'post',
+          method: "post",
           data: {
             appid: this.product_id
           }
@@ -2996,7 +3004,7 @@ var GeetestCaptcha = /** @class */function (_super) {
                   if (_this.fail_callback) {
                     _this.fail_callback();
                   }
-                  throw new Error('Got error in Geetest captcha.');
+                  throw new Error("Got error in Geetest captcha.");
                 }).onClose(function () {
                   if (!_this.captcha_obj.getValidate() && _this.close_callback) {
                     _this.close_callback();
@@ -3016,7 +3024,7 @@ var GeetestCaptcha = /** @class */function (_super) {
         switch (_b.label) {
           case 0:
             init_options = this.init_options || defaultGeetestInitOptions;
-            return [4 /*yield*/, load_script(captchaResourceUrls.GEETEST, 'geetest-captcha')];
+            return [4 /*yield*/, load_script(captchaResourceUrls.GEETEST, "geetest-captcha")];
           case 1:
             _b.sent();
             _a = this;
@@ -3030,7 +3038,7 @@ var GeetestCaptcha = /** @class */function (_super) {
   };
   GeetestCaptcha.prototype.show = function () {
     // Show the captcha.
-    if (this.init_options && this.init_options.product !== 'bind') {
+    if (this.init_options && this.init_options.product !== "bind") {
       this.captcha_obj.appendTo("#" + this.dom_id);
       // When product is 'bind', it need to use verify() to show the captcha.
       return;
@@ -3045,7 +3053,7 @@ var GeetestCaptcha = /** @class */function (_super) {
         result = this.captcha_obj.getValidate();
         return [2 /*return*/, PlatformApi.dispatch_request({
           url: PLATFORM_CAPTCHA_API.CHECK_AND_GET_GEETEST_TICKET,
-          method: 'post',
+          method: "post",
           data: {
             geetest_challenge: result.geetest_challenge,
             geetest_validate: result.geetest_validate,
@@ -3077,7 +3085,7 @@ var GeetestCaptcha = /** @class */function (_super) {
 
 // 数美文档 📖 https://help.ishumei.com/docs/tw/captcha/WEB
 var defaultSMInitOptions = {
-  product: 'popup',
+  product: "popup",
   width: 300
 };
 var SMCaptcha = /** @class */function (_super) {
@@ -3095,10 +3103,10 @@ var SMCaptcha = /** @class */function (_super) {
       return __generator(this, function (_b) {
         switch (_b.label) {
           case 0:
-            if (!(typeof initSMCaptcha === 'undefined')) {
+            if (!(typeof initSMCaptcha === "undefined")) {
               return [3 /*break*/, 2];
             }
-            return [4 /*yield*/, load_script(captchaResourceUrls.NEXTDATA, 'SM_GT')];
+            return [4 /*yield*/, load_script(captchaResourceUrls.NEXTDATA, "SM_GT")];
           case 1:
             _b.sent();
             _b.label = 2;
@@ -3135,10 +3143,10 @@ var SMCaptcha = /** @class */function (_super) {
             appendTo: dom_id && "#" + dom_id,
             appid: _this.options.product_id
           }, defaultSMInitOptions), init_options), {
-            organization: 'sXoTexBWs1dfyzt8eTev'
+            organization: "sXoTexBWs1dfyzt8eTev"
           }), function (instance) {
             if (!instance) {
-              throw new Error('shumei captcha init failed message: can not get instance');
+              throw new Error("shumei captcha init failed message: can not get instance");
             }
             instance.onReady(function () {
               resolve(instance);
@@ -3162,7 +3170,7 @@ var SMCaptcha = /** @class */function (_super) {
                       if (success_callback === null || success_callback === undefined) {
                         undefined;
                       } else {
-                        success_callback(ticket_res.data.ticket, this.options.product_id || '');
+                        success_callback(ticket_res.data.ticket, this.options.product_id || "");
                       }
                       return [3 /*break*/, 4];
                     case 3:
@@ -3170,7 +3178,7 @@ var SMCaptcha = /** @class */function (_super) {
                       if (fail_callback === null || fail_callback === undefined) {
                         undefined;
                       } else {
-                        fail_callback(fallbackParamsMaker('success_callback triggerd fatal error', error_1));
+                        fail_callback(fallbackParamsMaker("success_callback triggerd fatal error", error_1));
                       }
                       return [3 /*break*/, 4];
                     case 4:
@@ -3179,7 +3187,7 @@ var SMCaptcha = /** @class */function (_super) {
                       if (fail_callback === null || fail_callback === undefined) {
                         undefined;
                       } else {
-                        fail_callback(fallbackParamsMaker('incorrect captcha checking', data));
+                        fail_callback(fallbackParamsMaker("incorrect captcha checking", data));
                       }
                       _a.label = 6;
                     case 6:
@@ -3189,7 +3197,7 @@ var SMCaptcha = /** @class */function (_super) {
               });
             });
             instance.onError(function (errType, errMsg) {
-              var errorObj = fallbackParamsMaker('some error occurred', {
+              var errorObj = fallbackParamsMaker("some error occurred", {
                 errType: errType,
                 errMsg: errMsg
               });
@@ -3214,7 +3222,7 @@ var SMCaptcha = /** @class */function (_super) {
   };
   SMCaptcha.prototype.show = function () {
     var init_options = this.options.init_options;
-    if (this.options && ['embed', 'float'].includes((init_options === null || init_options === undefined ? undefined : init_options.product) || '')) {
+    if (this.options && ["embed", "float"].includes((init_options === null || init_options === undefined ? undefined : init_options.product) || "")) {
       this.instance.appendTo("#" + this.options.dom_id);
       return;
     }
@@ -3227,7 +3235,7 @@ var SMCaptcha = /** @class */function (_super) {
         result = this.instance.getValidate();
         return [2 /*return*/, PlatformApi.dispatch_request({
           url: PLATFORM_CAPTCHA_API.CHECK_AND_GET_NEXTDATA_TICKET,
-          method: 'post',
+          method: "post",
           data: {
             rid: result.rid,
             appid: this.options.product_id
@@ -3261,7 +3269,7 @@ var CmTencentCaptcha = /** @class */function (_super) {
   __extends(CmTencentCaptcha, _super);
   function CmTencentCaptcha(options) {
     var _this = _super.call(this, options) || this;
-    _this.product_id = options.product_id || '';
+    _this.product_id = options.product_id || "";
     _this.dom_id = options.dom_id;
     _this.success_callback = options.success_callback;
     _this.fail_callback = options.fail_callback;
@@ -3274,10 +3282,10 @@ var CmTencentCaptcha = /** @class */function (_super) {
       return __generator(this, function (_a) {
         switch (_a.label) {
           case 0:
-            if (!(typeof TencentCaptcha === 'undefined')) {
+            if (!(typeof TencentCaptcha === "undefined")) {
               return [3 /*break*/, 2];
             }
-            return [4 /*yield*/, load_script(captchaResourceUrls.TENCENT, 'TENCENT_GT')];
+            return [4 /*yield*/, load_script(captchaResourceUrls.TENCENT, "TENCENT_GT")];
           case 1:
             _a.sent();
             _a.label = 2;
@@ -3358,7 +3366,7 @@ var CmTencentCaptcha = /** @class */function (_super) {
       return __generator(this, function (_a) {
         return [2 /*return*/, PlatformApi.dispatch_request({
           url: PLATFORM_CAPTCHA_API.CHECK_AND_GET_TENCENT_TICKET,
-          method: 'post',
+          method: "post",
           data: {
             appid: this.product_id,
             tencentTicket: ticket,
@@ -3387,11 +3395,11 @@ var CmTencentCaptcha = /** @class */function (_super) {
 
 // 网易文档 📖 https://support.dun.163.com/documents/15588062143475712?docId=294963579379175424&locale=zh-CN
 var defaultNeteaseInitOptions = {
-  mode: 'popup',
+  mode: "popup",
   width: 300
 };
-var WrapperId = simpleHash('mask');
-var InnerId = simpleHash('inner');
+var WrapperId = simpleHash("mask");
+var InnerId = simpleHash("inner");
 var NeteaseCaptcha = /** @class */function (_super) {
   __extends(NeteaseCaptcha, _super);
   function NeteaseCaptcha(opts) {
@@ -3414,7 +3422,7 @@ var NeteaseCaptcha = /** @class */function (_super) {
               if (!(!that.options.dom_id && !document.getElementById(WrapperId))) {
                 return [3 /*break*/, 2];
               }
-              return [4 /*yield*/, appendDomNode('div', {
+              return [4 /*yield*/, appendDomNode("div", {
                 id: WrapperId,
                 innerHTML: "<div style=\"position: absolute; width: 2px; height: 2px; left: 50%; top: 50%; transform: translate(-50%, -50%); margin: " + offset + "px 0 0 " + offset + "px\" id=\"" + InnerId + "\"/>"
               }, "position: fixed;\n          left: 0px;\n          top: 0px;\n          height: 100vh;\n          width: 100vw;\n          background: rgba(0, 0, 0, .5);\n          z-index: 999;")];
@@ -3435,10 +3443,10 @@ var NeteaseCaptcha = /** @class */function (_super) {
       return __generator(this, function (_b) {
         switch (_b.label) {
           case 0:
-            if (!(typeof initNECaptcha === 'undefined')) {
+            if (!(typeof initNECaptcha === "undefined")) {
               return [3 /*break*/, 2];
             }
-            return [4 /*yield*/, load_script(captchaResourceUrls.NETEASE, 'NETEASE_GT')];
+            return [4 /*yield*/, load_script(captchaResourceUrls.NETEASE, "NETEASE_GT")];
           case 1:
             _b.sent();
             _b.label = 2;
@@ -3487,7 +3495,7 @@ var NeteaseCaptcha = /** @class */function (_super) {
                       if (fail_callback === null || fail_callback === undefined) {
                         undefined;
                       } else {
-                        fail_callback(fallbackParamsMaker('incorrect captcha checking', err));
+                        fail_callback(fallbackParamsMaker("incorrect captcha checking", err));
                       }
                       return [3 /*break*/, 3];
                     case 1:
@@ -3497,7 +3505,7 @@ var NeteaseCaptcha = /** @class */function (_super) {
                       if (success_callback === null || success_callback === undefined) {
                         undefined;
                       } else {
-                        success_callback(ticket_res.data.ticket, this.options.product_id || '');
+                        success_callback(ticket_res.data.ticket, this.options.product_id || "");
                       }
                       this.clearMask();
                       _a.label = 3;
@@ -3511,7 +3519,7 @@ var NeteaseCaptcha = /** @class */function (_super) {
               if (fail_callback === null || fail_callback === undefined) {
                 undefined;
               } else {
-                fail_callback(fallbackParamsMaker('fatal error occurred', err));
+                fail_callback(fallbackParamsMaker("fatal error occurred", err));
               }
             },
             onClose: function () {
@@ -3525,7 +3533,7 @@ var NeteaseCaptcha = /** @class */function (_super) {
           }), function (instance) {
             resolve(instance);
           }, function (err) {
-            var errorObj = fallbackParamsMaker('some error occurred', err);
+            var errorObj = fallbackParamsMaker("some error occurred", err);
             if (fail_callback === null || fail_callback === undefined) {
               undefined;
             } else {
@@ -3553,7 +3561,7 @@ var NeteaseCaptcha = /** @class */function (_super) {
       return __generator(this, function (_a) {
         return [2 /*return*/, PlatformApi.dispatch_request({
           url: PLATFORM_CAPTCHA_API.CHECK_AND_GET_NETEASE_TICKET,
-          method: 'post',
+          method: "post",
           data: {
             validate: validate,
             appid: this.options.product_id
@@ -3581,11 +3589,11 @@ var NeteaseCaptcha = /** @class */function (_super) {
   return NeteaseCaptcha;
 }(BasicCaptcha);
 var aliyun_config = {
-  appkey: 'FFFF00000000017E8E25',
-  scene: 'nc_login_h5'
+  appkey: "FFFF00000000017E8E25",
+  scene: "nc_login_h5"
 };
-var aliyun_captcha_dom_id = 'aliyun_captcha_dom_id';
-var aliyun_captcha_dom_wrapper_id = 'aliyun_captcha_dom_wrapper_id';
+var aliyun_captcha_dom_id = "aliyun_captcha_dom_id";
+var aliyun_captcha_dom_wrapper_id = "aliyun_captcha_dom_wrapper_id";
 var aliyun_captcha_dom_close_id = "aliyun_captcha_dom_close_id";
 var AliyunCaptcha = /** @class */function (_super) {
   __extends(AliyunCaptcha, _super);
@@ -3599,7 +3607,7 @@ var AliyunCaptcha = /** @class */function (_super) {
     };
     // 滑块验证
     _this.initNCCaptcha = function (config) {
-      AWSC.use('nc', function (state, module) {
+      AWSC.use("nc", function (state, module) {
         // 初始化
         window.nc = module.init(__assign(__assign({}, config), {
           renderTo: aliyun_captcha_dom_id,
@@ -3639,19 +3647,19 @@ var AliyunCaptcha = /** @class */function (_super) {
             if (_this.fail_callback) {
               _this.fail_callback(failCode);
             }
-            throw new Error('验证失败');
+            throw new Error("验证失败");
           },
           // 验证码加载出现异常时触发该回调参数。
           error: function (errorCode) {
             if (_this.fail_callback) {
               _this.fail_callback(errorCode);
             }
-            throw new Error('验证异常');
+            throw new Error("验证异常");
           }
         }));
       });
     };
-    _this.product_id = options.product_id || '';
+    _this.product_id = options.product_id || "";
     _this.dom_id = options.dom_id;
     _this.success_callback = options.success_callback;
     _this.fail_callback = options.fail_callback;
@@ -3664,10 +3672,10 @@ var AliyunCaptcha = /** @class */function (_super) {
       return __generator(this, function (_a) {
         switch (_a.label) {
           case 0:
-            if (!(typeof AWSC === 'undefined')) {
+            if (!(typeof AWSC === "undefined")) {
               return [3 /*break*/, 2];
             }
-            return [4 /*yield*/, load_script(captchaResourceUrls.ALIYUN, 'ALIYUN_GT')];
+            return [4 /*yield*/, load_script(captchaResourceUrls.ALIYUN, "ALIYUN_GT")];
           case 1:
             _a.sent();
             _a.label = 2;
@@ -3689,9 +3697,9 @@ var AliyunCaptcha = /** @class */function (_super) {
             if (!!document.getElementById(aliyun_captcha_dom_id)) {
               return [3 /*break*/, 2];
             }
-            return [4 /*yield*/, appendDomNode('div', {
+            return [4 /*yield*/, appendDomNode("div", {
               id: aliyun_captcha_dom_wrapper_id,
-              innerHTML: "\n            <div\n              style=\"position: absolute; display: flex; flex-direction: column; padding-top: 20px; justify-content: flex-start; align-items: center; width: 400px; height: 130px; background-color: #fff; left: 50%; top: 50%; transform: translate(-50%, -50%);\"\n            >\n              <div style=\"font-size: 20px\">\u62D6\u52A8\u4E0B\u65B9\u6ED1\u5757\u5B8C\u6210\u9A8C\u8BC1</div>\n              <div\n                style=\"display: flex; justify-content: center; align-items: center; bottom: 20px\"\n                id=\"" + aliyun_captcha_dom_id + "\"\n              >\n              </div>\n              <div id=\"" + aliyun_captcha_dom_close_id + "\" style=\"cursor: pointer; color: blue; position: absolute; top: 20px; right: 20px\">\u5173\u95ED</div>\n            </div>\n          "
+              innerHTML: "\n            <div\n              style=\"position: absolute; display: flex; flex-direction: column; padding-top: 20px; justify-content: flex-start; align-items: center; width: 400px; height: 130px; background-color: #fff; left: 50%; top: 50%; transform: translate(-50%, -50%);\"\n            >\n              <div style=\"font-size: 20px\">拖动下方滑块完成验证</div>\n              <div\n                style=\"display: flex; justify-content: center; align-items: center; bottom: 20px\"\n                id=\"" + aliyun_captcha_dom_id + "\"\n              >\n              </div>\n              <div id=\"" + aliyun_captcha_dom_close_id + "\" style=\"cursor: pointer; color: blue; position: absolute; top: 20px; right: 20px\">关闭</div>\n            </div>\n          "
             }, "position: fixed;\n        left: 0px;\n        top: 0px;\n        height: 100vh;\n        width: 100vw;\n        background: rgba(0, 0, 0, .5);\n        z-index: 999;")];
           case 1:
             _a.sent();
@@ -3699,7 +3707,7 @@ var AliyunCaptcha = /** @class */function (_super) {
             if (aliyunCloseBtn === null || aliyunCloseBtn === undefined) {
               undefined;
             } else {
-              aliyunCloseBtn.addEventListener('click', this.handleOnCancel);
+              aliyunCloseBtn.addEventListener("click", this.handleOnCancel);
             }
             _a.label = 2;
           case 2:
@@ -3724,7 +3732,7 @@ var AliyunCaptcha = /** @class */function (_super) {
       return __generator(this, function (_a) {
         return [2 /*return*/, PlatformApi.dispatch_request({
           url: PLATFORM_CAPTCHA_API.CHECK_AND_GET_ALIYUN_TICKET,
-          method: 'post',
+          method: "post",
           data: __assign({
             appKey: aliyun_config.appkey,
             scene: aliyun_config.scene
@@ -3758,7 +3766,7 @@ var CodemaoCaptcha = /** @class */function () {
   // 从服务端确定用哪个验证码服务商
   CodemaoCaptcha.prototype.get_rule_from_server = function (identity, scene) {
     if (scene === undefined) {
-      scene = '';
+      scene = "";
     }
     return __awaiter(this, undefined, undefined, function () {
       var deviceId;
@@ -3767,7 +3775,7 @@ var CodemaoCaptcha = /** @class */function () {
       return __generator(this, function (_a) {
         switch (_a.label) {
           case 0:
-            return [4 /*yield*/, load_script(captchaResourceUrls.FINGER_PRINT_2, 'finger-print', 10)];
+            return [4 /*yield*/, load_script(captchaResourceUrls.FINGER_PRINT_2, "finger-print", 10)];
           case 1:
             _a.sent();
             return [4 /*yield*/, getFingerPrint()];
@@ -3776,7 +3784,7 @@ var CodemaoCaptcha = /** @class */function () {
             timestamp = "" + new Date().getTime() / 1000;
             return [4 /*yield*/, PlatformApi.dispatch_request({
               url: PLATFORM_CAPTCHA_API.GET_RULE,
-              method: 'post',
+              method: "post",
               data: {
                 identity: identity,
                 scene: scene,
@@ -3810,7 +3818,7 @@ var CodemaoCaptcha = /** @class */function () {
           case 0:
             identity = options.identity;
             _b = options.scene;
-            scene = _b === undefined ? '' : _b;
+            scene = _b === undefined ? "" : _b;
             success_callback = options.success_callback;
             fail_callback = options.fail_callback;
             return [4 /*yield*/, this.get_rule_from_server(identity, scene)];
@@ -3850,14 +3858,14 @@ var DisableCaptcha = /** @class */function () {
   DisableCaptcha.prototype.init = function () {
     return __awaiter(this, undefined, undefined, function () {
       return __generator(this, function (_a) {
-        console.log('DisableCaptcha init');
+        console.log("DisableCaptcha init");
         return [2 /*return*/];
       });
     });
   };
   DisableCaptcha.prototype.show = function () {
     if (this.ticket) {
-      this.success_callback(this.ticket, '');
+      this.success_callback(this.ticket, "");
     } else {
       if (this.fail_callback) {
         this.fail_callback();
@@ -3869,17 +3877,17 @@ var DisableCaptcha = /** @class */function () {
 // 策略分配
 var strategyTargetSelector = function (contextKeyWhoNamedRuleByBackend) {
   switch (contextKeyWhoNamedRuleByBackend) {
-    case 'GEETEST':
+    case "GEETEST":
       return GeetestCaptcha;
-    case 'TENCENT':
+    case "TENCENT":
       return CmTencentCaptcha;
-    case 'NETEASE':
+    case "NETEASE":
       return NeteaseCaptcha;
-    case 'NEXTDATA':
+    case "NEXTDATA":
       return SMCaptcha;
-    case 'ALIYUN':
+    case "ALIYUN":
       return AliyunCaptcha;
-    case 'DEFAULT':
+    case "DEFAULT":
       return DisableCaptcha;
   }
 };

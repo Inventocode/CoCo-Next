@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：1223
+ */
+
 var n = Math.floor;
 var r = function (e, t) {
   for (var n, r, o = e.length, i = 1; i < o;) {

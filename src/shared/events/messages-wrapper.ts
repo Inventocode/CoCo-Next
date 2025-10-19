@@ -7,8 +7,8 @@ export { s as Se };
 export { c as Uj };
 export { UPDATE_EXTENSION_WIDGET_LIST as Re };
 export { wrapUpdateExtensionWidgetList as Rj };
-export { d as re };
-export { p as mj };
+export { SHOW_COMMON_TOAST_INFO as re };
+export { wrapShowCommonToastInfo as mj };
 export { f as pc };
 export { h as kh };
 export { m as he };
@@ -542,15 +542,17 @@ export function wrapUpdateExtensionWidgetList() {
   return {
     payload: undefined,
     type: UPDATE_EXTENSION_WIDGET_LIST
-  };
-};
-var d = "SHOW_COMMON_TOAST_INFO";
-var p = function (e) {
+  }
+}
+
+const SHOW_COMMON_TOAST_INFO = "SHOW_COMMON_TOAST_INFO"
+export function wrapShowCommonToastInfo(e) {
   return {
     payload: e,
-    type: d
-  };
-};
+    type: SHOW_COMMON_TOAST_INFO
+  }
+}
+
 var f = "HIDE_COMMON_TOAST_INFO";
 var h = function () {
   return {

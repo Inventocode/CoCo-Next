@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：742
+ */
+
 module.exports = {
   saveTipsWrapper: "styles_saveTipsWrapper__1fMtC",
   saveTipsMask: "styles_saveTipsMask__3Mffu",

@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：406
+ */
+
 "use strict";
 
 var r = require("./74");
@@ -8,7 +14,7 @@ var s = require("./150");
 var u = require("./169");
 var c = require("./117");
 var l = require("./164");
-var d = require("./191");
+var d = require("./191/index");
 var f = require("./335");
 var h = require("./56");
 var p = function (t) {

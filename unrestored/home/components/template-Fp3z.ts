@@ -1,8 +1,14 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：Fp3z
+ */
+
 "use strict";
 
 /* harmony export (binding) */
-export { CommonToastView };
 /* harmony import */
+export { CommonToastView };
 import * as __WEBPACK_IMPORTED_MODULE_0_react__ from "react";
 /* harmony import */
 import __WEBPACK_IMPORTED_MODULE_0_react___default from "react";
@@ -146,7 +152,7 @@ var CommonToastView = function (_React$Component) {
         message: message,
         onClose: this.handleClose,
         showPrefixIcon: showPrefixIcon,
-        styleName: 'cocoToast',
+        styleName: "cocoToast",
         showCloseIcon: showCloseIcon
       });
     }

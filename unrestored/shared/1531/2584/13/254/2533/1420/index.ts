@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：1420
+ */
+
 var r = require("./475");
 var i = require("./2530/index");
 var o = require("./2531/index");

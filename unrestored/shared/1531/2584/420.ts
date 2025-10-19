@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：420
+ */
+
 module.exports = {
   container: "style_container__3NYKn",
   addOption: "style_addOption__2Y-wn",

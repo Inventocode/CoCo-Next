@@ -1,8 +1,14 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：sdA1
+ */
+
 "use strict";
 
 /* harmony export (binding) */
-export { Menu };
 /* harmony import */
+export { Menu };
 import * as __WEBPACK_IMPORTED_MODULE_0_redux__ from "redux";
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_1_react_redux__ from "react-redux";
@@ -21,8 +27,8 @@ var mapStateToProps = function mapStateToProps(state, ownProps) {
   return {};
 };
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
-  return Object(__WEBPACK_IMPORTED_MODULE_0_redux__.bindActionCreators)({}, dispatch);
+  return __WEBPACK_IMPORTED_MODULE_0_redux__.bindActionCreators({}, dispatch);
 };
-var Menu = Object(__WEBPACK_IMPORTED_MODULE_2_react_router__.withRouter)(Object(__WEBPACK_IMPORTED_MODULE_1_react_redux__.connect)(mapStateToProps, mapDispatchToProps)(__WEBPACK_IMPORTED_MODULE_3__template__.MenuView));
+var Menu = __WEBPACK_IMPORTED_MODULE_2_react_router__.withRouter(__WEBPACK_IMPORTED_MODULE_1_react_redux__.connect(mapStateToProps, mapDispatchToProps)(__WEBPACK_IMPORTED_MODULE_3__template__.MenuView));
 
 /***/

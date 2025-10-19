@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：566
+ */
+
 module.exports = {
   flexSc: "DataWatch_flexSc__7ctNY",
   wrapper: "DataWatch_wrapper__1qka4",

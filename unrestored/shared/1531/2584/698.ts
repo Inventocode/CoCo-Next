@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：698
+ */
+
 module.exports = {
   wrapper: "RightSideMenu_wrapper__pn2lJ",
   itemMenu: "RightSideMenu_itemMenu__2wrm-",

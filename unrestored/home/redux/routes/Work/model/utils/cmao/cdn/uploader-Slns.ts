@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：Slns
+ */
+
 "use strict";
 
 /* harmony import */
@@ -99,10 +105,12 @@ function __generator(thisArg, body) {
     }
     while (_) {
       try {
-        if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) {
+        f = 1;
+        if (y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) {
           return t;
         }
-        if (y = 0, t) {
+        y = 0;
+        if (t) {
           op = [op[0] & 2, t.value];
         }
         switch (op[0]) {
@@ -206,13 +214,13 @@ var config = function () {
       var env$$1 = spec.env;
       var customConfig = spec.config;
       switch (env$$1) {
-        case 'dev':
+        case "dev":
           _config = devConfig;
           break;
-        case 'staging':
+        case "staging":
           _config = stagingConfig;
           break;
-        case 'test':
+        case "test":
           _config = testConfig;
           break;
         default:
@@ -231,7 +239,7 @@ var config = function () {
 var configs = config();
 var QiniuUploader = function () {
   function QiniuUploader(file, uploadParams, subObject) {
-    this._observer = Object(__WEBPACK_IMPORTED_MODULE_0_qiniu_js__.upload)(file, uploadParams.key, uploadParams.token);
+    this._observer = __WEBPACK_IMPORTED_MODULE_0_qiniu_js__.upload(file, uploadParams.key, uploadParams.token);
     this._subObject = subObject;
   }
   QiniuUploader.prototype.start = function () {
@@ -253,7 +261,7 @@ function ajax(url, options) {
         var _c = options.headers;
         var headers = _c === undefined ? {} : _c;
         var _d = options.method;
-        var method = _d === undefined ? 'get' : _d;
+        var method = _d === undefined ? "get" : _d;
         var _e = options.timeout;
         var timeout = _e === undefined ? 0 : _e;
         var onprogress = options.onprogress;
@@ -261,13 +269,13 @@ function ajax(url, options) {
         if (options.withCredentials) {
           xhr.withCredentials = true;
         }
-        xhr.responseType = 'json';
+        xhr.responseType = "json";
         xhr.timeout = timeout;
         xhr.ontimeout = function () {
           reject(new Error("the request timeout " + timeout + "ms"));
         };
         xhr.onerror = function () {
-          reject(new Error('unknown error'));
+          reject(new Error("unknown error"));
         };
         if (xhr.upload && onprogress) {
           xhr.upload.onprogress = onprogress;
@@ -277,12 +285,12 @@ function ajax(url, options) {
             if (xhr.status >= 200 && xhr.status < 300) {
               resolve(xhr.response);
             } else {
-              var err = new Error('this request is error');
+              var err = new Error("this request is error");
               reject(err);
             }
           }
         };
-        console.log('xhr type', method);
+        console.log("xhr type", method);
         xhr.open(method, url, async);
         Object.keys(headers).forEach(function (key) {
           xhr.setRequestHeader(key, headers[key]);
@@ -312,9 +320,9 @@ var AliUploader = function () {
             Object.keys(aliUploadParams).forEach(function (key) {
               formData.append(key, aliUploadParams[key]);
             });
-            formData.append('file', file);
+            formData.append("file", file);
             return [4, ajax(url, {
-              method: 'post',
+              method: "post",
               data: formData,
               onprogress: onprogress,
               timeout: timeout
@@ -332,20 +340,20 @@ var postLog = function (data, timeout) {
     var uuid;
     var logData;
     return __generator(this, function (_a) {
-      uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+      uuid = "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, function (c) {
         var d = new Date().getTime();
         var r = (d + Math.random() * 16) % 16 | 0;
         d = Math.floor(d / 16);
-        return (c === 'x' ? r : r & 0x3 | 0x8).toString(16);
+        return (c === "x" ? r : r & 0x3 | 0x8).toString(16);
       });
       logData = {
         data: {
           m: {
             d: 1,
-            p: 'sysinfo'
+            p: "sysinfo"
           },
           b: [{
-            e: 'cdn_upload',
+            e: "cdn_upload",
             i: uuid,
             t: parseInt("" + new Date().getTime() / 1000, 10),
             d: {
@@ -356,7 +364,7 @@ var postLog = function (data, timeout) {
         type: 0
       };
       return [2, ajax("https://collection.codemao.cn/report/" + configs.get().pid, {
-        method: 'post',
+        method: "post",
         data: JSON.stringify(logData),
         timeout: timeout || 20000
       })];
@@ -374,10 +382,10 @@ var fetchAliToken = function (query, authToken) {
           tokenUrl = configs.get().api + "/cdn/qi-niu/tokens/uploading";
           headers = {};
           if (authToken) {
-            headers['Authorization'] = authToken;
+            headers["Authorization"] = authToken;
           }
           return [4, ajax(parseQueryString(tokenUrl, __assign(__assign({}, query), {
-            cdnName: 'aliyun'
+            cdnName: "aliyun"
           })), {
             headers: headers,
             withCredentials: true
@@ -418,17 +426,17 @@ var fetchQiniuToken = function (type, query, authToken) {
           tokenUrl = urlList[type];
           headers = {};
           if (authToken) {
-            headers['Authorization'] = authToken;
+            headers["Authorization"] = authToken;
           }
           return [4, ajax(parseQueryString(tokenUrl, __assign(__assign({}, query), {
-            cdnName: 'qiniu'
+            cdnName: "qiniu"
           })), {
             headers: headers,
             withCredentials: true
           })];
         case 1:
           res = _a.sent();
-          if (type === 'normal') {
+          if (type === "normal") {
             return [2, {
               filePath: res.tokens[0].file_path,
               token: res.tokens[0].token,
@@ -440,7 +448,7 @@ var fetchQiniuToken = function (type, query, authToken) {
           token = res.token;
           bucket_url = res.bucket_url;
           bucket = res.bucket;
-          if (type === 'transcode') {
+          if (type === "transcode") {
             return [2, {
               filePath: file_path,
               token: token,
@@ -462,16 +470,16 @@ var fetchQiniuToken = function (type, query, authToken) {
 };
 var parseQueryString = function (url, query) {
   var queryStr = Object.keys(query).filter(function (key) {
-    return typeof query[key] !== 'undefined';
+    return typeof query[key] !== "undefined";
   }).map(function (key) {
     return key + "=" + query[key];
-  }).join('&');
+  }).join("&");
   return url + "?" + queryStr;
 };
 var CDNClient = function () {
   function CDNClient(spec) {
     this.ali = new AliUploader();
-    this.region = 'hd';
+    this.region = "hd";
     this.projectName = spec.projectName;
     if (spec.region) {
       this.region = spec.region;
@@ -508,24 +516,24 @@ var CDNClient = function () {
             insertOnly = options.insertOnly;
             if (!file) {
               if (onerror) {
-                onerror('文件不允许为空！');
+                onerror("文件不允许为空！");
               }
               return [2];
             }
-            filename = options.filename || file.name || Date.now() + "." + (file.type || '');
+            filename = options.filename || file.name || Date.now() + "." + (file.type || "");
             tokenQuery = {
               projectName: this.projectName,
               filePaths: filename,
               filePath: filename,
               tokensCount: 1,
-              fileSign: 'p1',
-              insertOnly: typeof insertOnly === 'undefined' ? true : insertOnly,
+              fileSign: "p1",
+              insertOnly: typeof insertOnly === "undefined" ? true : insertOnly,
               persistentOption: persistentOption
             };
             _b.label = 1;
           case 1:
             _b.trys.push([1, 3,, 4]);
-            return [4, fetchQiniuToken(options.type || 'normal', tokenQuery, options.authToken)];
+            return [4, fetchQiniuToken(options.type || "normal", tokenQuery, options.authToken)];
           case 2:
             tokenData_1 = _b.sent();
             bucketUrl_1 = tokenData_1.bucketUrl;
@@ -579,17 +587,17 @@ var CDNClient = function () {
                         _a.sent();
                         fileUrl = "" + bucketUrl_2 + filename_1;
                         postLog([{
-                          cdn: 'qiniu',
+                          cdn: "qiniu",
                           bucket: bucket_2,
                           file_path: filename_1,
-                          region: 'hd',
-                          source: '',
+                          region: "hd",
+                          source: "",
                           status: 0
                         }, {
-                          cdn: 'aliyun',
+                          cdn: "aliyun",
                           bucket: bucket_2,
                           file_path: filename_1,
-                          region: 'hd',
+                          region: "hd",
                           source: fileUrl,
                           status: 1
                         }]);
@@ -615,7 +623,7 @@ var CDNClient = function () {
               complete: function (res) {
                 var fileUrl = bucketUrl_1 + filePath_1;
                 postLog([{
-                  cdn: 'qiniu',
+                  cdn: "qiniu",
                   bucket: bucket_1,
                   file_path: filePath_1,
                   region: _this.region,
@@ -627,22 +635,22 @@ var CDNClient = function () {
                   filename: filename,
                   hash: res.hash
                 };
-                if (options.type === 'transcode') {
+                if (options.type === "transcode") {
                   var transcodeUrl = "" + bucketUrl_1 + tokenData_1.transcodePath;
                   postLog([{
-                    cdn: 'qiniu',
+                    cdn: "qiniu",
                     bucket: bucketUrl_1,
                     file_path: tokenData_1.transcodePath,
-                    region: 'hd',
+                    region: "hd",
                     source: transcodeUrl,
                     status: 1
                   }]);
-                  returnData['transcodeUrl'] = transcodeUrl;
+                  returnData["transcodeUrl"] = transcodeUrl;
                 }
-                if (options.type === 'slice') {
-                  returnData['sliceUrl'] = "" + bucketUrl_1 + tokenData_1.m3u8Path;
+                if (options.type === "slice") {
+                  returnData["sliceUrl"] = "" + bucketUrl_1 + tokenData_1.m3u8Path;
                 }
-                console.log('done', res);
+                console.log("done", res);
                 if (onsuccess) {
                   onsuccess(returnData);
                 }

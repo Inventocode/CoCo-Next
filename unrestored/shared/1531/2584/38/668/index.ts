@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：668
+ */
+
 var r = require("./1138");
 var o = [];
 module.exports = function () {

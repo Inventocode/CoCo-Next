@@ -1,10 +1,16 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：191
+ */
+
 "use strict";
 
-var r = require("./274/index");
-var i = require("./274/412");
-var o = require("./105");
-var a = require("./63");
-var s = require("./451");
+var r = require("../274");
+var i = require("./412");
+var o = require("../105");
+var a = require("../63");
+var s = require("../451");
 var u = function () {
   var t = function (e, n) {
     return (t = Object.setPrototypeOf || {

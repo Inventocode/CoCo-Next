@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：XdPl
+ */
+
 "use strict";
 
 /* harmony import */
@@ -25,16 +31,16 @@ var Button = function Button(props) {
   var danger = props.danger;
   var children = props.children;
   var _props$shape = props.shape;
-  var shape = _props$shape === undefined ? 'circle' : _props$shape;
+  var shape = _props$shape === undefined ? "circle" : _props$shape;
   var generateClassName = function generateClassName() {
-    var basic = 'coco-button-';
-    var typeClass = type ? basic + type : '';
-    var dangerClass = danger ? basic + 'dangerous' : '';
-    var shapeClass = shape ? basic + shape : '';
-    return typeClass + ' ' + dangerClass + ' ' + shapeClass;
+    var basic = "coco-button-";
+    var typeClass = type ? basic + type : "";
+    var dangerClass = danger ? basic + "dangerous" : "";
+    var shapeClass = shape ? basic + shape : "";
+    return typeClass + " " + dangerClass + " " + shapeClass;
   };
   return __WEBPACK_IMPORTED_MODULE_1_react___default.createElement("button", {
-    className: __WEBPACK_IMPORTED_MODULE_0_classnames___default('coco-button', generateClassName(), className),
+    className: __WEBPACK_IMPORTED_MODULE_0_classnames___default("coco-button", generateClassName(), className),
     disabled: disabled,
     style: style,
     onClick: onClick
@@ -43,5 +49,5 @@ var Button = function Button(props) {
   }), children);
 };
 /* harmony default export */
-export default Object(__WEBPACK_IMPORTED_MODULE_1_react__.memo)(Button);
+export default __WEBPACK_IMPORTED_MODULE_1_react__.memo(Button);
 /***/

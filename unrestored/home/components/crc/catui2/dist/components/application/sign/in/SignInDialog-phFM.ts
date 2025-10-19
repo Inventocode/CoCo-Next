@@ -1,8 +1,14 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：phFM
+ */
+
 "use strict";
 
 /* harmony export (binding) */
-export { SignInDialog };
 /* harmony import */
+export { SignInDialog };
 import * as __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__ from "@babel/runtime/helpers/esm/slicedToArray";
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_1_react__ from "react";
@@ -30,19 +36,19 @@ var useState = __WEBPACK_IMPORTED_MODULE_1_react__.useState;
 var useEffect = __WEBPACK_IMPORTED_MODULE_1_react__.useEffect;
 var SignInDialog = function SignInDialog(props) {
   var _useState = useState(__WEBPACK_IMPORTED_MODULE_4__def__.ContentView.LOGIN);
-  var _useState2 = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default)(_useState, 2);
+  var _useState2 = __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default(_useState, 2);
   var contentView = _useState2[0];
   var setContentView = _useState2[1];
   var _useState3 = useState(false);
-  var _useState4 = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default)(_useState3, 2);
+  var _useState4 = __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default(_useState3, 2);
   var isRequesting = _useState4[0];
   var setIsrequesting = _useState4[1];
   var _useState5 = useState(0);
-  var _useState6 = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default)(_useState5, 2);
+  var _useState6 = __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default(_useState5, 2);
   var smsTimeStamp = _useState6[0];
   var setSmsTimeStamp = _useState6[1];
   var _useState7 = useState(props.show);
-  var _useState8 = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default)(_useState7, 2);
+  var _useState8 = __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default(_useState7, 2);
   var show = _useState8[0];
   var setShow = _useState8[1];
   var onlyLogin = props.onlyLogin;
@@ -58,13 +64,13 @@ var SignInDialog = function SignInDialog(props) {
   var onCloseAnimationEnd = props.onCloseAnimationEnd;
   var reportMethod = props.reportMethod;
   var disableThirdParty = props.disableThirdParty;
-  Object(__WEBPACK_IMPORTED_MODULE_8__i18n__.setLanguage)(props.language || '');
+  __WEBPACK_IMPORTED_MODULE_8__i18n__.setLanguage(props.language || "");
   useEffect(function () {
     setShow(props.show);
   }, [props.show]);
   var switchView = function switchView(view) {
     if (reportMethod) {
-      reportMethod('\u7528\u6237\u4FE1\u606F-'.concat(contentView === __WEBPACK_IMPORTED_MODULE_4__def__.ContentView.LOGIN ? '登录' : contentView === __WEBPACK_IMPORTED_MODULE_4__def__.ContentView.REGISTER ? '注册' : '找回密码'));
+      reportMethod("用户信息-".concat(contentView === __WEBPACK_IMPORTED_MODULE_4__def__.ContentView.LOGIN ? "登录" : contentView === __WEBPACK_IMPORTED_MODULE_4__def__.ContentView.REGISTER ? "注册" : "找回密码"));
     }
     setContentView(view);
   };
@@ -72,7 +78,7 @@ var SignInDialog = function SignInDialog(props) {
     if (onCloseAnimationEnd) {
       onCloseAnimationEnd();
     } else {
-      console.log('close');
+      console.log("close");
     }
   };
   var closeBtnHandler = function closeBtnHandler() {
@@ -149,7 +155,7 @@ var SignInDialog = function SignInDialog(props) {
 };
 SignInDialog.defaultProps = {
   onlyLogin: false,
-  language: 'zh',
+  language: "zh",
   onCloseAnimationEnd: function onCloseAnimationEnd() {
     return undefined;
   },

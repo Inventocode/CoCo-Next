@@ -2,9 +2,9 @@
 
 export { Qe as d };
 export { Ze as b };
-export { b as a } from "../46/index";
-export { d as c } from "../46/index";
-export { f as e } from "../46/index";
+export { b as a } from "../../../unrestored/shared/1531/2584/46/index";
+export { d as c } from "../../../unrestored/shared/1531/2584/46/index";
+export { f as e } from "../../../unrestored/shared/1531/2584/46/index";
 var r = {};
 Object.defineProperty(r, "setBlockGroupProfile", {
   get: function () {
@@ -191,10 +191,10 @@ Object.defineProperty(f, "setBlockGroupSnippet", {
     return ve;
   }
 });
-import h = require("../25/index");
-import m = require("../17/index");
-import g = require("../9");
-import _ = require("../4/index");
+import h = require("../../../unrestored/shared/1531/2584/25/index");
+import m = require("../../../unrestored/shared/1531/2584/17/index");
+import g = require("../../../unrestored/shared/1531/2584/9");
+import _ = require("../../../unrestored/shared/1531/2584/4/index");
 function v(e) {
   e.insertBlockProfile("phone_vibrate", {
     type: "phone_vibrate",
@@ -285,7 +285,7 @@ function y(e) {
   });
 }
 var E;
-import O = require("../46/index");
+import O = require("../../../unrestored/shared/1531/2584/46/index");
 function w(e, t) {
   var n = "%{BKY_BLOCK_TAB_ICON}";
   e.insertBlockProfile("screen_on_open", {
@@ -986,7 +986,7 @@ var L;
 var P;
 var B;
 var F;
-import G = require("../323");
+import G = require("../../../unrestored/shared/1531/2584/323");
 var U = "<shadow type=\"math_number\"><field name=\"NUM\" constraints=\"1,,1\">1</field></shadow>";
 function W(e, t) {
   function n(e) {
@@ -2420,7 +2420,7 @@ function ne(e) {
   e.GREATER_THAN = "GT";
   e.GREATER_THAN_OR_EQUAL = "GTE";
 })(F || (F = {}));
-import re = require("./173");
+import re = require("../../../unrestored/shared/1531/2584/301/173");
 function oe(e) {
   e.insertBlockProfile("procedures_2_param_block", {
     type: "procedures_2_param_block",
@@ -2588,53 +2588,54 @@ function ce(e) {
     return a && r && o ? _.s("getDateOperation", [r, o, _.o(a)]) : "";
   });
 }
-import le = require("../../../../../src/shared/widget/custom/load");
-import ue = require("../121/index");
-import de = require("../15");
-import pe = require("../36/85");
-function fe(e, t) {
-  var n;
-  if (Array.isArray(e)) {
-    var r = typeof t;
-    n = "number" === r || "string" === r || "boolean" === r && e.includes(r) ? r : e[0];
+import LoadCustomWidget = require("../../shared/widget/custom/load");
+import ue = require("../../../unrestored/shared/1531/2584/121/index");
+import de = require("../../../unrestored/shared/1531/2584/15");
+import pe = require("../../../unrestored/shared/1531/2584/36/85");
+
+import * as CustomWidgetTypes from "../../shared/widget/custom/types"
+
+function getCustomWidgetBlockParamShadow(valueType: CustomWidgetTypes.ValueType, defaultValue: number | string | boolean) {
+  let defaultValueType
+  if (Array.isArray(valueType)) {
+    const typeofDefaultValue = typeof defaultValue
+    defaultValueType = "number" === typeofDefaultValue || "string" === typeofDefaultValue || "boolean" === typeofDefaultValue && valueType.includes(typeofDefaultValue) ? typeofDefaultValue : valueType[0]
   } else {
-    n = e;
+    defaultValueType = valueType
   }
-  var o = "<shadow type=\"text\">\n    <field name=\"TEXT\">".concat(t, "</field>\n  </shadow>");
-  switch (n) {
+  let shadow = `<shadow type="text">\n    <field name="TEXT">${defaultValue}</field>\n  </shadow>`
+  switch (defaultValueType) {
     case "number":
-      o = "<shadow type=\"math_number\">\n      <field name=\"NUM\">".concat(t, "</field>\n    </shadow>");
+      shadow = `<shadow type="math_number">\n      <field name="NUM">${defaultValue}</field>\n    </shadow>`
       break;
     case "boolean":
-      o = "<shadow type=\"widget_boolean\">\n      <field name=\"BOOL\">".concat(t ? "TRUE" : "FALSE", "</field>\n    </shadow>");
+      shadow = `<shadow type="widget_boolean">\n      <field name="BOOL">${defaultValue ? "TRUE" : "FALSE"}</field>\n    </shadow>`
       break;
     case "color":
-      o = "<shadow type=\"color_picker\">\n      <field name=\"COLOR_PALETTE\">".concat(de.i(t) ? "#ffffff" : t, "</field>\n    </shadow>");
+      shadow = `<shadow type="color_picker">\n      <field name="COLOR_PALETTE">${de.i(defaultValue) ? "#ffffff" : defaultValue}</field>\n    </shadow>`
       break;
     case "image":
-      o = "<shadow type=\"image_file_list_dropdown\">\n        <field name=\"IMAGE_FILE_ID\">".concat(g.h, "</field>\n      </shadow>");
+      shadow = `<shadow type="image_file_list_dropdown">\n        <field name="IMAGE_FILE_ID">${g.h}</field>\n      </shadow>`
       break;
     case "icon":
-      o = "<shadow type=\"icon_file_list_dropdown\">\n          <field name=\"ICON_FILE_ID\">".concat(g.h, "</field>\n        </shadow>");
+      shadow = `<shadow type="icon_file_list_dropdown">\n          <field name="ICON_FILE_ID">${g.h}</field>\n        </shadow>`
       break;
     case "multilineString":
-      o = "<shadow type=\"text_multiline\">\n        <field name=\"TEXT\">".concat(t, "</field>\n      </shadow>");
+      shadow = `<shadow type="text_multiline">\n        <field name="TEXT">${defaultValue}</field>\n      </shadow>`
       break;
     case "richTextString":
-      o = "<shadow type=\"text_rich_text\">\n          <field name=\"TEXT\">".concat(function (e) {
-        var t = {
+      shadow = `<shadow type="text_rich_text">\n          <field name="TEXT">${(defaultValue => {
+        const ESECAP_MAP = {
           "&": "&amp;",
           "\"": "&quot;",
           "'": "&apos;",
           "<": "&lt;",
           ">": "&gt;"
-        };
-        return e.replace(/[&"'<>]/g, function (e) {
-          return t[e];
-        });
-      }(t), "</field>\n        </shadow>");
+        }
+        return defaultValue.replace(/[&"'<>]/g, char => ESECAP_MAP[(char as keyof typeof ESECAP_MAP)])
+      })(defaultValue as string)}</field>\n        </shadow>`
   }
-  return o;
+  return shadow
 }
 function he(e, t) {
   return t.map(function (t) {
@@ -2651,8 +2652,8 @@ function he(e, t) {
     }] : [n, String(t.value)];
   });
 }
-import me = require("./541");
-import ge = require("./652");
+import me = require("../../../unrestored/shared/1531/2584/301/541");
+import ge = require("../../../unrestored/shared/1531/2584/301/652");
 function _e(e, t) {
   !function (e, t) {
     var n = {
@@ -2660,7 +2661,7 @@ function _e(e, t) {
       widgetType: "",
       updateShape_: function () {
         var e = this;
-        var n = le.h(this.widgetType, this.event);
+        var n = LoadCustomWidget.h(this.widgetType, this.event);
         if (!n) {
           console.error("WIDGET_EVENT_MUTATOR getWidgetEvent error", this.widgetType, this.event);
           this.append_statement_input("DO", undefined);
@@ -2678,7 +2679,7 @@ function _e(e, t) {
         var l = pe.a(this.widgetType, r);
         if (this.isAnyWidget) {
           var u;
-          var d = "任意" + le.k(this.widgetType);
+          var d = "任意" + LoadCustomWidget.getWidgetTitle(this.widgetType);
           if (!(null === (u = this.get_input("WIDGET_ID_CONTAINER")) || undefined === u)) {
             u.append_field(d);
           }
@@ -2707,7 +2708,7 @@ function _e(e, t) {
           }
           m.set_value(t.utils.replace_message_references(s.icon));
         }
-        var g = le.i(this.widgetType, c);
+        var g = LoadCustomWidget.i(this.widgetType, c);
         this.append_statement_input("DO", undefined, g);
         if (i) {
           this.set_field_value(l, "EVENT");
@@ -2749,9 +2750,9 @@ function _e(e, t) {
           }
         });
         if (this.isAnyWidget) {
-          var _ = le.a;
+          var _ = LoadCustomWidget.a;
           var v = "PARAM_".concat(_);
-          var b = le.b;
+          var b = LoadCustomWidget.b;
           this.append_shadow_input(v, "<shadow type=\"widget_event_param\">\n          <field name=\"PARAM_NAME\">".concat(b, "</field>\n          <mutation widget_type=\"").concat(this.widgetType, "\" event=\"").concat(this.event, "\" param=\"").concat(_, "\"></mutation>\n        </shadow>"), "DO");
         }
       },
@@ -2778,7 +2779,7 @@ function _e(e, t) {
         this.param = e.getAttribute("param") || this.param;
         this.event = e.getAttribute("event") || this.event;
         this.widgetType = e.getAttribute("widget_type") || this.widgetType;
-        var n = le.h(this.widgetType, this.event);
+        var n = LoadCustomWidget.h(this.widgetType, this.event);
         if (this.widgetType || this.event) {
           if (!n) {
             console.error("WIDGET_EVENT_PARAM_MUTATOR getWidgetEvent error", this.widgetType, this.event, this.param);
@@ -2786,8 +2787,8 @@ function _e(e, t) {
             return void this.set_disabled(true);
           }
           this.set_disabled(false);
-          var r = le.i(this.widgetType, this.event);
-          if (this.param === le.a) {
+          var r = LoadCustomWidget.i(this.widgetType, this.event);
+          if (this.param === LoadCustomWidget.a) {
             this.set_output(true, "string", r);
           } else {
             var o = n.params.find(function (e) {
@@ -2797,7 +2798,7 @@ function _e(e, t) {
               return void console.error("WIDGET_EVENT_PARAM_MUTATOR get param error", this.widgetType, this.event, this.param);
             }
             var i = o.valueType;
-            var a = le.g(i);
+            var a = LoadCustomWidget.g(i);
             this.set_output(true, a, r);
           }
         } else {
@@ -2850,7 +2851,7 @@ function _e(e, t) {
       updateShape_: function () {
         var e;
         var n = this;
-        var r = le.l(this.widgetType, this.property);
+        var r = LoadCustomWidget.l(this.widgetType, this.property);
         if (!r) {
           console.error("WIDGET_GET_MUTATOR getWidgetProperty error", this.widgetType, this.property);
           this.set_disabled(true);
@@ -2870,7 +2871,7 @@ function _e(e, t) {
         this.set_field_value(t.Msg.WIDGET_OF, "PROPERTY");
         if (this.isAnyWidget) {
           var p;
-          var f = le.k(this.widgetType);
+          var f = LoadCustomWidget.getWidgetTitle(this.widgetType);
           if (!(null === (p = this.get_input("WIDGET_ID_CONTAINER")) || undefined === p)) {
             p.append_field(f);
           }
@@ -2892,7 +2893,7 @@ function _e(e, t) {
         if ("object" === typeof u.getter && (null === (i = o = u.getter.keys) || undefined === i ? undefined : i.length)) {
           var g = [];
           o.forEach(function (e) {
-            var t = le.l(n.widgetType, e);
+            var t = LoadCustomWidget.l(n.widgetType, e);
             if (t) {
               var r = pe.a(n.widgetType, t.label);
               g.push([r, e]);
@@ -2937,7 +2938,7 @@ function _e(e, t) {
               this.set_field_value("".concat("boolean" === s ? "" : t.Msg.WIDGET_OF, " ").concat(d), "PROPERTY");
             }
         }
-        var _ = le.g(s);
+        var _ = LoadCustomWidget.g(s);
         this.set_output(true, _);
         if (c) {
           var v = pe.a(this.widgetType, c);
@@ -2983,7 +2984,7 @@ function _e(e, t) {
       updateShape_: function () {
         var e;
         var n = this;
-        var r = le.l(this.widgetType, this.property);
+        var r = LoadCustomWidget.l(this.widgetType, this.property);
         if (!r) {
           console.error("WIDGET_SET_MUTATOR getWidgetProperty error", this.widgetType, this.property);
           this.set_disabled(true);
@@ -3011,8 +3012,8 @@ function _e(e, t) {
           var E = g;
           var w = E.isInteger;
           y = !!w;
-          o = le.p(E);
-          i = le.n(E);
+          o = LoadCustomWidget.p(E);
+          i = LoadCustomWidget.n(E);
         }
         if (!("__position" !== r.key && "__size" !== r.key)) {
           y = true;
@@ -3024,7 +3025,7 @@ function _e(e, t) {
         }
         if (this.isAnyWidget) {
           var C;
-          var T = le.k(this.widgetType);
+          var T = LoadCustomWidget.getWidgetTitle(this.widgetType);
           if (!(null === (C = this.get_input("WIDGET_ID_CONTAINER")) || undefined === C)) {
             C.append_field(T);
           }
@@ -3046,12 +3047,12 @@ function _e(e, t) {
         if ("object" === typeof v.setter && (null === (c = s = v.setter.keys) || undefined === c ? undefined : c.length)) {
           var A = [];
           s.forEach(function (e, t) {
-            var r = le.l(n.widgetType, e);
+            var r = LoadCustomWidget.l(n.widgetType, e);
             if (r) {
               if (0 === t && "number" === r.valueType) {
                 if (r.validators) {
-                  i = le.n(r.validators);
-                  o = le.p(r.validators);
+                  i = LoadCustomWidget.n(r.validators);
+                  o = LoadCustomWidget.p(r.validators);
                 }
                 if (!(undefined !== o || "__width" !== r.key && "__height" !== r.key)) {
                   o = 0;
@@ -3072,7 +3073,7 @@ function _e(e, t) {
               return A;
             },
             optOnchange: function (e) {
-              var t = le.l(n.widgetType, e);
+              var t = LoadCustomWidget.l(n.widgetType, e);
               if (t) {
                 var r;
                 if ("color" === t.valueType) {
@@ -3085,8 +3086,8 @@ function _e(e, t) {
                   a.set_value(String(t.defaultValue));
                   if ("number" === t.valueType) {
                     if (t.validators) {
-                      o = le.p(t.validators);
-                      i = le.n(t.validators);
+                      o = LoadCustomWidget.p(t.validators);
+                      i = LoadCustomWidget.n(t.validators);
                     }
                     if (!(undefined !== o || "__width" !== t.key && "__height" !== t.key)) {
                       o = 0;
@@ -3151,7 +3152,7 @@ function _e(e, t) {
               this.set_field_value("".concat(t.Msg.WIDGET_OF, " ").concat(b, " ").concat(t.Msg.WIDGET_SET_TO), "PROPERTY");
             }
         }
-        var N = le.f(l, f);
+        var N = LoadCustomWidget.getCheckType(l, f);
         if ("__visible" !== r.key && "__disabled" !== r.key) {
           if (h) {
             var R = new ue.a({
@@ -3167,7 +3168,7 @@ function _e(e, t) {
             if ("string" === l) {
               k = pe.a(this.widgetType, String(u));
             }
-            var x = fe(l, k || u);
+            var x = getCustomWidgetBlockParamShadow(l, k || u);
             this.append_shadow_input("VALUE", x).set_check(N);
           }
         }
@@ -3227,7 +3228,7 @@ function _e(e, t) {
       isAnyWidget: false,
       updateShape_: function () {
         var e = this;
-        var n = le.j(this.widgetType, this.method);
+        var n = LoadCustomWidget.getWidgetMethodTypes(this.widgetType, this.method);
         if (!n) {
           console.error("WIDGET_METHOD_MUTATOR getWidgetMethod error", this.widgetType, this.method);
           this.set_disabled(true);
@@ -3237,11 +3238,11 @@ function _e(e, t) {
         this.set_disabled(false);
         var r = this.get_input("WIDGET_ID_CONTAINER");
         if (this.isAnyWidget) {
-          var o = le.k(this.widgetType);
+          var o = LoadCustomWidget.getWidgetTitle(this.widgetType);
           if (!(null === r || undefined === r)) {
             r.append_field(o);
           }
-          this.append_shadow_input("WIDGET_ID", "<empty type=\"widget_any_id\"></empty>");
+          this.append_shadow_input("WIDGET_ID", `<empty type="widget_any_id"></empty>`)
           if ("__setVisible" === n.key) {
             var i = new ue.a({
               type: "field_coco_dropdown",
@@ -3307,7 +3308,7 @@ function _e(e, t) {
         if (h) {
           this.set_next_statement(false);
           this.set_previous_statement(false);
-          var E = le.g(h);
+          var E = LoadCustomWidget.g(h);
           this.set_output(true, E);
         }
         var w = pe.a(this.widgetType, l);
@@ -3321,56 +3322,57 @@ function _e(e, t) {
         if (false === f.inputsInline) {
           this.set_inputs_inline(f.inputsInline);
         }
-        u.forEach(function (t) {
-          var n = t.label;
-          var r = t.labelAfter;
-          var o = t.valueType;
-          var i = t.checkType;
-          var a = t.defaultValue;
-          var s = t.key;
-          var c = t.dropdown;
-          var l = t.controller;
-          var u = pe.a(e.widgetType, n);
-          var d = "PARAM_".concat(s);
-          if (c) {
+        u.forEach(({
+          label,
+          labelAfter,
+          valueType,
+          checkType,
+          defaultValue,
+          key,
+          dropdown,
+          controller
+        }) => {
+          var u = pe.a(e.widgetType, label);
+          var paramKey = "PARAM_".concat(key);
+          if (dropdown) {
             var p = new ue.a({
               type: "field_coco_dropdown",
-              name: d,
+              name: paramKey,
               custom: true,
-              options: he(e.widgetType, c)
+              options: he(e.widgetType, dropdown)
             });
             var f = e.append_dummy_input();
             if (u) {
-              f.append_field(u, "".concat(d, "_LABEL"));
+              f.append_field(u, "".concat(paramKey, "_LABEL"));
             }
-            f.append_field(p, d);
+            f.append_field(p, paramKey);
           } else {
-            var h = fe(o, a);
-            var g = e.append_shadow_input(d, h);
-            var _ = le.f(o, i);
+            const shadow = getCustomWidgetBlockParamShadow(valueType, defaultValue);
+            var g = e.append_shadow_input(paramKey, shadow);
+            var _ = LoadCustomWidget.getCheckType(valueType, checkType);
             g.set_check(_);
             if (u) {
-              g.insert_field_at(0, u, "".concat(d, "_LABEL"));
+              g.insert_field_at(0, u, "".concat(paramKey, "_LABEL"));
             }
-            if ("number" === o && l) {
-              var v = e.get_shadow_field(d);
+            if ("number" === valueType && controller) {
+              var v = e.get_shadow_field(paramKey);
               if (!(null === v || undefined === v)) {
-                v.set_constraints(l.min, l.max, 1);
+                v.set_constraints(controller.min, controller.max, 1);
               }
-              if (l.leftText && l.rightText) {
+              if (controller.leftText && controller.rightText) {
                 if (!(null === v || undefined === v)) {
                   v.set_controller_option({
                     type: m.I.ControllerType.SLIDER,
-                    left_text: l.leftText,
-                    right_text: l.rightText
+                    left_text: controller.leftText,
+                    right_text: controller.rightText
                   });
                 }
               }
             }
           }
-          if (r) {
-            var b = pe.a(e.widgetType, r);
-            e.append_dummy_input("").append_field(b, "".concat(d, "_LABEL_AFTER"));
+          if (labelAfter) {
+            var b = pe.a(e.widgetType, labelAfter);
+            e.append_dummy_input("").append_field(b, "".concat(paramKey, "_LABEL_AFTER"));
           }
         });
       },
@@ -3408,7 +3410,7 @@ function _e(e, t) {
     widgetType: "",
     updateShape_: function () {
       var e = this;
-      var t = le.l(this.widgetType, this.property);
+      var t = LoadCustomWidget.l(this.widgetType, this.property);
       if (t) {
         var n = t.defaultValue;
         var r = t.dropdown;
@@ -3501,7 +3503,7 @@ function ve(e) {
     if (l) {
       u = e.valueToCode(t, n, "WIDGET_ID", e.ORDER_FUNCTION_CALL);
     }
-    var d = le.l(c, s);
+    var d = LoadCustomWidget.l(c, s);
     if (!d) {
       return "";
     }
@@ -3510,7 +3512,7 @@ function ve(e) {
     var h = undefined === f ? {} : f;
     if ("object" === typeof h.getter && (null === (p = h.getter.keys) || undefined === p ? undefined : p.length)) {
       s = e.getFieldValue(o, "PROPERTY_KEY") || "";
-      var g = le.l(c, s);
+      var g = LoadCustomWidget.l(c, s);
       if (!g) {
         return "";
       }
@@ -3534,7 +3536,7 @@ function ve(e) {
       var y = "positionX" === v ? "getWidgetPositionX" : "getWidgetPositionY";
       return _.s(y, [u]);
     }
-    return "string" === typeof (null === (r = h.getter) || undefined === r ? undefined : r.func) ? _.s(h.getter.func, [u, _.o(s)]) : _.s("getProperty", [u, _.o(s)], le.q(c));
+    return "string" === typeof (null === (r = h.getter) || undefined === r ? undefined : r.func) ? _.s(h.getter.func, [u, _.o(s)]) : _.s("getProperty", [u, _.o(s)], LoadCustomWidget.q(c));
   });
   e.insertBlockSnippetGenerator("widget_set", function (t, n) {
     var r;
@@ -3552,7 +3554,7 @@ function ve(e) {
     if (l) {
       u = e.valueToCode(t, n, "WIDGET_ID", e.ORDER_FUNCTION_CALL);
     }
-    var d = le.l(c, s);
+    var d = LoadCustomWidget.l(c, s);
     if (!d) {
       return "";
     }
@@ -3561,7 +3563,7 @@ function ve(e) {
     var h = undefined === f ? {} : f;
     if ("object" === typeof h.setter && (null === (p = h.setter.keys) || undefined === p ? undefined : p.length)) {
       s = e.getFieldValue(o, "PROPERTY_KEY") || "";
-      var g = le.l(c, s);
+      var g = LoadCustomWidget.l(c, s);
       if (!g) {
         return "";
       }
@@ -3591,7 +3593,7 @@ function ve(e) {
       var w = "positionX" === b ? "setWidgetPositionX" : "setWidgetPositionY";
       return _.l(_.n(w, [u, v]), o, e);
     }
-    return "string" === typeof (null === (r = h.setter) || undefined === r ? undefined : r.func) ? _.l(_.n(h.setter.func, [u, v]), o, e) : _.l(_.n("setProperty", [u, _.o(s), v], undefined, undefined, le.q(c)), o, e);
+    return "string" === typeof (null === (r = h.setter) || undefined === r ? undefined : r.func) ? _.l(_.n(h.setter.func, [u, v]), o, e) : _.l(_.n("setProperty", [u, _.o(s), v], undefined, undefined, LoadCustomWidget.q(c)), o, e);
   });
   e.insertBlockSnippetGenerator("widget_event", function (t, n) {
     var r = t.blocks[n];
@@ -3605,7 +3607,7 @@ function ve(e) {
     if (!s || !l) {
       return "";
     }
-    var d = le.h(l, s);
+    var d = LoadCustomWidget.h(l, s);
     if (!d) {
       return "";
     }
@@ -3621,10 +3623,10 @@ function ve(e) {
       h.push("".concat(_.a).concat(e.key));
     });
     if (u) {
-      h.push("".concat(_.a).concat(le.a));
+      h.push("".concat(_.a).concat(LoadCustomWidget.a));
     }
     var g = e.statementToCode(t, n, "DO");
-    return g ? _.n("onWidgetEvent", [_.o(l), _.o(s), u ? _.o(c) : _.o(o)], g, h, le.q(l)) : "";
+    return g ? _.n("onWidgetEvent", [_.o(l), _.o(s), u ? _.o(c) : _.o(o)], g, h, LoadCustomWidget.q(l)) : "";
   });
   e.insertBlockSnippetGenerator("widget_event_param", function (e, t) {
     var n = e.blocks[t].mutation;
@@ -3641,7 +3643,7 @@ function ve(e) {
     if (!a || !s) {
       return "";
     }
-    var l = le.j(s, a);
+    var l = LoadCustomWidget.j(s, a);
     if (!l) {
       return "";
     }
@@ -3681,7 +3683,7 @@ function ve(e) {
       var v = "disabled" === e.getFieldValue(r, "DISABLED");
       return _.l(_.n("setWidgetAttribute", [d, _.o("disabled"), v]), r, e);
     }
-    return f ? _.l(_.r("callMethod", u), r, e, true, true) : _.l(_.j("callMethod", u, undefined, undefined, le.q(s)), r, e);
+    return f ? _.l(_.r("callMethod", u), r, e, true, true) : _.l(_.j("callMethod", u, undefined, undefined, LoadCustomWidget.q(s)), r, e);
   });
   e.insertBlockSnippetGenerator("widget_color", function (t, n) {
     var r = t.blocks[n];
@@ -4434,16 +4436,16 @@ var be = {
     CLOUD_TABLE_CLEAR_ALL_TOOLTIP: "清空云数据表所有数据，不可撤销。"
   }
 };
-import ye = require("../6");
-import Ee = require("../27");
-import Oe = require("../40");
-import we = require("./224");
-import Ce = require("./203");
-import Te = require("../57/index");
-import Se = require("../58/index");
-import Ie = require("./326");
-import Ae = require("../125/index");
-import je = require("./480");
+import ye = require("../../../unrestored/shared/1531/2584/6");
+import Ee = require("../../../unrestored/shared/1531/2584/27");
+import Oe = require("../../../unrestored/shared/1531/2584/40");
+import we = require("../../../unrestored/shared/1531/2584/301/224");
+import Ce = require("../../../unrestored/shared/1531/2584/301/203");
+import Te = require("../../../unrestored/shared/1531/2584/57/index");
+import Se = require("../../../unrestored/shared/1531/2584/58/index");
+import Ie = require("../../../unrestored/shared/1531/2584/301/326");
+import Ae = require("../../../unrestored/shared/1531/2584/125/index");
+import je = require("../../../unrestored/shared/1531/2584/301/480");
 var Ne = function (e) {
   Te.a(n, e);
   var t = Se.a(n);
@@ -4640,7 +4642,7 @@ var Ne = function (e) {
   return n;
 }(Ie.FieldNumber);
 Ne.field_type = "field_coco_number_dropdown";
-import Re = require("../135");
+import Re = require("../../../unrestored/shared/1531/2584/135");
 var ke = Ie.FieldNumber.prototype.show_editor;
 Ie.FieldNumber.prototype.show_editor = function () {
   var e = this;
@@ -4700,11 +4702,11 @@ Ie.FieldNumber.prototype.set_value = function (e) {
     });
   }
 };
-import De = require("./374");
-import Me = require("./500");
-import Le = require("../../../../../src/shared/events/actions");
-import Pe = require("../../../../../src/shared/events/messages-wrapper");
-import Be = require("../28/index");
+import De = require("../../../unrestored/shared/1531/2584/301/374");
+import Me = require("../../../unrestored/shared/1531/2584/301/500");
+import Le = require("../../shared/events/actions");
+import Pe = require("../../shared/events/messages-wrapper");
+import Be = require("../../../unrestored/shared/1531/2584/28/index");
 var Fe = De.FieldTextInput.prototype.show_editor;
 De.FieldTextInput.prototype.show_editor = function () {
   var e;
@@ -4732,7 +4734,7 @@ De.FieldTextInput.prototype.get_display_text = function () {
   }
   return Me.Field.prototype.get_display_text.call(this);
 };
-import Ge = require("./726");
+import Ge = require("../../../unrestored/shared/1531/2584/301/726");
 Ge.FieldColour.prototype.show_editor = function () {
   var e;
   var t = this;
@@ -4770,7 +4772,7 @@ Ge.FieldColour.prototype.show_editor = function () {
   O.c().dispatchAction(d);
 };
 var Ue;
-import We = require("../21/index");
+import We = require("../../../unrestored/shared/1531/2584/21/index");
 function He() {
   var e = this;
   this.set_on_block_change(function (t) {

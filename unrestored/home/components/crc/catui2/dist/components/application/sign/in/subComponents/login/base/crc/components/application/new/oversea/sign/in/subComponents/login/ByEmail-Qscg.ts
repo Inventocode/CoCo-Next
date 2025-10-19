@@ -1,8 +1,14 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：Qscg
+ */
+
 "use strict";
 
 /* harmony export (binding) */
-export { ByEmailComponent };
 /* harmony import */
+export { ByEmailComponent };
 import * as __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__ from "@babel/runtime/helpers/esm/asyncToGenerator";
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__ from "@babel/runtime/helpers/esm/slicedToArray";
@@ -41,11 +47,11 @@ var ByEmailComponent = function ByEmailComponent(props) {
   var isRequesting = props.isRequesting;
   var setIsRequesting = props.setIsRequesting;
   var _useState = useState(true);
-  var _useState2 = Object(__WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default)(_useState, 2);
+  var _useState2 = __WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default(_useState, 2);
   var disableLogin = _useState2[0];
   var setDisableLogin = _useState2[1];
   var _useState3 = useState(undefined);
-  var _useState4 = Object(__WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default)(_useState3, 2);
+  var _useState4 = __WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default(_useState3, 2);
   var error = _useState4[0];
   var setError = _useState4[1];
   var isDestroy = useRef(false);
@@ -70,7 +76,7 @@ var ByEmailComponent = function ByEmailComponent(props) {
     }
   }, [error, isEmailErr]);
   var onLoginClick = /*#__PURE__*/function () {
-    var _ref = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default)(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_2__babel_runtime_regenerator___default.mark(function _callee() {
+    var _ref = __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_2__babel_runtime_regenerator___default.mark(function _callee() {
       var email;
       var password;
       var result;
@@ -86,23 +92,23 @@ var ByEmailComponent = function ByEmailComponent(props) {
             case 2:
               email = emailInputEl.value;
               password = passwordInputEl.value;
-              if (Object(__WEBPACK_IMPORTED_MODULE_4__utils__.validateEmail)(email)) {
+              if (__WEBPACK_IMPORTED_MODULE_4__utils__.validateEmail(email)) {
                 _context.next = 7;
                 break;
               }
               setError({
-                msg: Object(__WEBPACK_IMPORTED_MODULE_9__i18n__.getLanguage)('sign_in_dialog/error/email/format'),
+                msg: __WEBPACK_IMPORTED_MODULE_9__i18n__.getLanguage("sign_in_dialog/error/email/format"),
                 type: __WEBPACK_IMPORTED_MODULE_8__auth__.AuthErrorType.EMAIL
               });
               return _context.abrupt("return");
             case 7:
               ;
-              if (Object(__WEBPACK_IMPORTED_MODULE_4__utils__.validatePassword)(password)) {
+              if (__WEBPACK_IMPORTED_MODULE_4__utils__.validatePassword(password)) {
                 _context.next = 11;
                 break;
               }
               setError({
-                msg: Object(__WEBPACK_IMPORTED_MODULE_9__i18n__.getLanguage)('sign_in_dialog/error/password/format'),
+                msg: __WEBPACK_IMPORTED_MODULE_9__i18n__.getLanguage("sign_in_dialog/error/password/format"),
                 type: __WEBPACK_IMPORTED_MODULE_8__auth__.AuthErrorType.PWD
               });
               return _context.abrupt("return");
@@ -110,7 +116,7 @@ var ByEmailComponent = function ByEmailComponent(props) {
               ;
               setIsRequesting(true);
               _context.next = 15;
-              return Object(__WEBPACK_IMPORTED_MODULE_8__auth__.handleLoginByEmail)({
+              return __WEBPACK_IMPORTED_MODULE_8__auth__.handleLoginByEmail({
                 email: email,
                 password: password
               });
@@ -145,8 +151,8 @@ var ByEmailComponent = function ByEmailComponent(props) {
     clearBtn: true,
     inputStyle: {
       fontSize: 18,
-      width: '352px',
-      height: '44px'
+      width: "352px",
+      height: "44px"
     },
     maxLength: 100,
     isError: isEmailErr(),
@@ -156,7 +162,7 @@ var ByEmailComponent = function ByEmailComponent(props) {
         setError(undefined);
       }
     },
-    label: Object(__WEBPACK_IMPORTED_MODULE_9__i18n__.getLanguage)('sign_in_dialog/placeholder/email'),
+    label: __WEBPACK_IMPORTED_MODULE_9__i18n__.getLanguage("sign_in_dialog/placeholder/email"),
     autoComplete: "on",
     getInputEl: function getInputEl(el) {
       emailInputEl = el;
@@ -164,7 +170,7 @@ var ByEmailComponent = function ByEmailComponent(props) {
     },
     onBlur: function onBlur() {
       if (props.reportMethod) {
-        props.reportMethod('用户信息-输入账号');
+        props.reportMethod("用户信息-输入账号");
       }
     }
   }), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_3_react__.createElement("div", {
@@ -173,8 +179,8 @@ var ByEmailComponent = function ByEmailComponent(props) {
     clearBtn: true,
     inputStyle: {
       fontSize: 18,
-      width: '352px',
-      height: '44px'
+      width: "352px",
+      height: "44px"
     },
     maxLength: 20,
     onEnterDown: onLoginClick,
@@ -186,15 +192,15 @@ var ByEmailComponent = function ByEmailComponent(props) {
       }
     },
     type: "password",
-    label: Object(__WEBPACK_IMPORTED_MODULE_9__i18n__.getLanguage)('sign_in_dialog/placeholder/password'),
-    topLabel: Object(__WEBPACK_IMPORTED_MODULE_9__i18n__.getLanguage)('sign_in_dialog/placeholder/password_tip'),
+    label: __WEBPACK_IMPORTED_MODULE_9__i18n__.getLanguage("sign_in_dialog/placeholder/password"),
+    topLabel: __WEBPACK_IMPORTED_MODULE_9__i18n__.getLanguage("sign_in_dialog/placeholder/password_tip"),
     autoComplete: "on",
     getInputEl: function getInputEl(el) {
       passwordInputEl = el;
     },
     onBlur: function onBlur() {
       if (props.reportMethod) {
-        props.reportMethod('用户信息-输入密码');
+        props.reportMethod("用户信息-输入密码");
       }
     }
   }), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_3_react__.createElement("div", {
@@ -206,13 +212,13 @@ var ByEmailComponent = function ByEmailComponent(props) {
     onClick: onLoginClick,
     disable: disableLogin,
     className: "CUI-new-oversea-sign-in-dialog-sign-in-btn",
-    "data-report": "\u7528\u6237\u4FE1\u606F-\u90AE\u7BB1\u767B\u5F55"
+    "data-report": "用户信息-邮箱登录"
   }, isRequesting ? /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_3_react__.createElement(__WEBPACK_IMPORTED_MODULE_7__base_spinner__.Spinner, {
     size: 18,
     themeColor: "10"
   }) : /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_3_react__.createElement("span", {
     className: "CUI-new-oversea-sign-in-dialog-btn-text"
-  }, Object(__WEBPACK_IMPORTED_MODULE_9__i18n__.getLanguage)('sign_in_dialog/login'))));
+  }, __WEBPACK_IMPORTED_MODULE_9__i18n__.getLanguage("sign_in_dialog/login"))));
 };
 ByEmailComponent.defaultProps = {
   onEmailLoginSuccess: function onEmailLoginSuccess() {

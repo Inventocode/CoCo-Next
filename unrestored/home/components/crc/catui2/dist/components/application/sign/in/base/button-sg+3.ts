@@ -1,8 +1,14 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：sg+3
+ */
+
 "use strict";
 
 /* harmony export (binding) */
-export { Button };
 /* harmony import */
+export { Button };
 import * as __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_classCallCheck__ from "@babel/runtime/helpers/esm/classCallCheck";
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_createClass__ from "@babel/runtime/helpers/esm/createClass";
@@ -49,15 +55,15 @@ var _styleModuleImportMap = {
 function _createSuper(Derived) {
   var hasNativeReflectConstruct = _isNativeReflectConstruct();
   return function _createSuperInternal() {
-    var Super = Object(__WEBPACK_IMPORTED_MODULE_5__babel_runtime_helpers_esm_getPrototypeOf__.default)(Derived);
+    var Super = __WEBPACK_IMPORTED_MODULE_5__babel_runtime_helpers_esm_getPrototypeOf__.default(Derived);
     var result;
     if (hasNativeReflectConstruct) {
-      var NewTarget = Object(__WEBPACK_IMPORTED_MODULE_5__babel_runtime_helpers_esm_getPrototypeOf__.default)(this).constructor;
+      var NewTarget = __WEBPACK_IMPORTED_MODULE_5__babel_runtime_helpers_esm_getPrototypeOf__.default(this).constructor;
       result = Reflect.construct(Super, arguments, NewTarget);
     } else {
       result = Super.apply(this, arguments);
     }
-    return Object(__WEBPACK_IMPORTED_MODULE_4__babel_runtime_helpers_esm_possibleConstructorReturn__.default)(this, result);
+    return __WEBPACK_IMPORTED_MODULE_4__babel_runtime_helpers_esm_possibleConstructorReturn__.default(this, result);
   };
 }
 function _isNativeReflectConstruct() {
@@ -78,24 +84,24 @@ function _isNativeReflectConstruct() {
   }
 }
 var Button = /*#__PURE__*/function (_React$Component) {
-  Object(__WEBPACK_IMPORTED_MODULE_3__babel_runtime_helpers_esm_inherits__.default)(Button, _React$Component);
+  __WEBPACK_IMPORTED_MODULE_3__babel_runtime_helpers_esm_inherits__.default(Button, _React$Component);
   var _super = _createSuper(Button);
   function Button() {
     var _this;
-    Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_classCallCheck__.default)(this, Button);
+    __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_classCallCheck__.default(this, Button);
     for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
       args[_key] = arguments[_key];
     }
     _this = _super.call.apply(_super, [this].concat(args));
-    Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Object(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default)(_this), "setClass", function () {
+    __WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default(_this), "setClass", function () {
       var _this$props = _this.props;
       var _this$props$type = _this$props.type;
-      var type = _this$props$type === undefined ? 'transparent' : _this$props$type;
+      var type = _this$props$type === undefined ? "transparent" : _this$props$type;
       var _this$props$size = _this$props.size;
-      var size = _this$props$size === undefined ? 'md' : _this$props$size;
+      var size = _this$props$size === undefined ? "md" : _this$props$size;
       return "".concat(type, " size-").concat(size);
     });
-    Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Object(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default)(_this), "preventMouseEventWhenDisable", function (type) {
+    __WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default(_this), "preventMouseEventWhenDisable", function (type) {
       return function (e) {
         if (_this.props.disable) {
           return;
@@ -105,34 +111,34 @@ var Button = /*#__PURE__*/function (_React$Component) {
         var onContextMenu = _this$props2.onContextMenu;
         var onMouseEnter = _this$props2.onMouseEnter;
         var onMouseLeave = _this$props2.onMouseLeave;
-        if (type === 'click' && onClick) {
+        if (type === "click" && onClick) {
           onClick(e);
           return;
         }
-        if (type === 'context' && onContextMenu) {
+        if (type === "context" && onContextMenu) {
           onContextMenu(e);
           return;
         }
-        if (type === 'enter' && onMouseEnter) {
+        if (type === "enter" && onMouseEnter) {
           onMouseEnter(e);
           return;
         }
-        if (type === 'leave' && onMouseLeave) {
+        if (type === "leave" && onMouseLeave) {
           onMouseLeave(e);
           return;
         }
       };
     });
-    Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Object(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default)(_this), "inserSpaceIfTwoText", function () {
+    __WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default(_this), "inserSpaceIfTwoText", function () {
       var children = _this.props.children;
-      if (typeof children === 'string' && children.length === 2 && /^(?:[\u3400-\u4DB5\u4E00-\u9FEA\uFA0E\uFA0F\uFA11\uFA13\uFA14\uFA1F\uFA21\uFA23\uFA24\uFA27-\uFA29]|[\uD840-\uD868\uD86A-\uD86C\uD86F-\uD872\uD874-\uD879][\uDC00-\uDFFF]|\uD869[\uDC00-\uDED6\uDF00-\uDFFF]|\uD86D[\uDC00-\uDF34\uDF40-\uDFFF]|\uD86E[\uDC00-\uDC1D\uDC20-\uDFFF]|\uD873[\uDC00-\uDEA1\uDEB0-\uDFFF]|\uD87A[\uDC00-\uDFE0])+$/.test(children)) {
-        return children.split('').join(' ');
+      if (typeof children === "string" && children.length === 2 && /^(?:[\u3400-\u4DB5\u4E00-\u9FEA\uFA0E\uFA0F\uFA11\uFA13\uFA14\uFA1F\uFA21\uFA23\uFA24\uFA27-\uFA29]|[\uD840-\uD868\uD86A-\uD86C\uD86F-\uD872\uD874-\uD879][\uDC00-\uDFFF]|\uD869[\uDC00-\uDED6\uDF00-\uDFFF]|\uD86D[\uDC00-\uDF34\uDF40-\uDFFF]|\uD86E[\uDC00-\uDC1D\uDC20-\uDFFF]|\uD873[\uDC00-\uDEA1\uDEB0-\uDFFF]|\uD87A[\uDC00-\uDFE0])+$/.test(children)) {
+        return children.split("").join(" ");
       }
       return children;
     });
     return _this;
   }
-  Object(__WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_createClass__.default)(Button, [{
+  __WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_createClass__.default(Button, [{
     key: "render",
     value: function render() {
       var _this$props3 = this.props;
@@ -159,16 +165,16 @@ var Button = /*#__PURE__*/function (_React$Component) {
       }, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_8_react___default.createElement("div", {
         id: this.props.id,
         style: {
-          borderRadius: borderRadius ? borderRadius : '',
+          borderRadius: borderRadius ? borderRadius : "",
           backgroundColor: bgColor || undefined,
           padding: padding
         },
-        onClick: this.preventMouseEventWhenDisable('click'),
-        onMouseEnter: this.preventMouseEventWhenDisable('enter'),
-        onMouseLeave: this.preventMouseEventWhenDisable('leave'),
-        onContextMenu: this.preventMouseEventWhenDisable('context'),
+        onClick: this.preventMouseEventWhenDisable("click"),
+        onMouseEnter: this.preventMouseEventWhenDisable("enter"),
+        onMouseLeave: this.preventMouseEventWhenDisable("leave"),
+        onContextMenu: this.preventMouseEventWhenDisable("context"),
         "data-report-click": dataReport,
-        className: ("".concat(isSelected ? 'selected' : '', " ").concat(className !== null && className !== undefined ? className : '') ? "".concat(isSelected ? 'selected' : '', " ").concat(className !== null && className !== undefined ? className : '') + " " : "") + __WEBPACK_IMPORTED_MODULE_7_babel_plugin_react_css_modules_dist_browser_getClassName___default("btn ".concat(disable ? 'disabled' : '', " ").concat(this.setClass()), _styleModuleImportMap, {
+        className: ("".concat(isSelected ? "selected" : "", " ").concat(className !== null && className !== undefined ? className : "") ? "".concat(isSelected ? "selected" : "", " ").concat(className !== null && className !== undefined ? className : "") + " " : "") + __WEBPACK_IMPORTED_MODULE_7_babel_plugin_react_css_modules_dist_browser_getClassName___default("btn ".concat(disable ? "disabled" : "", " ").concat(this.setClass()), _styleModuleImportMap, {
           "autoResolveMultipleImports": true,
           "handleMissingStyleName": "throw"
         })
@@ -179,9 +185,9 @@ var Button = /*#__PURE__*/function (_React$Component) {
   }]);
   return Button;
 }(__WEBPACK_IMPORTED_MODULE_8_react___default.Component);
-Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Button, "defaultProps", {
-  type: 'transparent',
-  size: 'md'
+__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default(Button, "defaultProps", {
+  type: "transparent",
+  size: "md"
 });
 
 /***/

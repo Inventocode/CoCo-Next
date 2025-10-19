@@ -1,8 +1,14 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：0eKj
+ */
+
 "use strict";
 
 /* harmony export (binding) */
-export { LoginPageContainer };
 /* harmony import */
+export { LoginPageContainer };
 import * as __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__ from "@babel/runtime/helpers/esm/asyncToGenerator";
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__ from "@babel/runtime/helpers/esm/slicedToArray";
@@ -101,11 +107,11 @@ var LoginPageContainer = function LoginPageContainer(props) {
   var reportMethod = props.reportMethod;
   var disableThirdParty = props.disableThirdParty;
   var _useState = useState(LoginMethod.BY_PASSWORD);
-  var _useState2 = Object(__WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default)(_useState, 2);
+  var _useState2 = __WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default(_useState, 2);
   var loginMethod = _useState2[0];
   var setLoginMethod = _useState2[1];
   var _useState3 = useState(false);
-  var _useState4 = Object(__WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default)(_useState3, 2);
+  var _useState4 = __WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default(_useState3, 2);
   var agreementChecked = _useState4[0];
   var setAgreementChecked = _useState4[1];
   var onTabClick = function onTabClick(nextLoginMethod) {
@@ -117,29 +123,29 @@ var LoginPageContainer = function LoginPageContainer(props) {
   var signinByQQ = function signinByQQ() {
     if (!agreementChecked) {
       __WEBPACK_IMPORTED_MODULE_6__base_toast__.message.custom({
-        colorType: 'dark',
-        content: '请阅读并同意用户协议、隐私协议、儿童隐私保护协议'
+        colorType: "dark",
+        content: "请阅读并同意用户协议、隐私协议、儿童隐私保护协议"
       });
       return;
     }
-    signinByThirdParty('qq').catch(function (err) {
+    signinByThirdParty("qq").catch(function (err) {
       return console.log(err);
     });
   };
   var signinByWechat = function signinByWechat() {
     if (!agreementChecked) {
       __WEBPACK_IMPORTED_MODULE_6__base_toast__.message.custom({
-        colorType: 'dark',
-        content: '请阅读并同意用户协议、隐私协议、儿童隐私保护协议'
+        colorType: "dark",
+        content: "请阅读并同意用户协议、隐私协议、儿童隐私保护协议"
       });
       return;
     }
-    signinByThirdParty('wechat').catch(function (err) {
+    signinByThirdParty("wechat").catch(function (err) {
       return console.log(err);
     });
   };
   var signinByThirdParty = /*#__PURE__*/function () {
-    var _ref = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default)(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_3__babel_runtime_regenerator___default.mark(function _callee3(loginMethod) {
+    var _ref = __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_3__babel_runtime_regenerator___default.mark(function _callee3(loginMethod) {
       var prefix;
       var redirectUrl;
       var url;
@@ -150,22 +156,22 @@ var LoginPageContainer = function LoginPageContainer(props) {
         while (1) {
           switch (_context3.prev = _context3.next) {
             case 0:
-              prefix = Object(__WEBPACK_IMPORTED_MODULE_10__cfg__.getConfig)().thirdPartyLoginPrefix;
-              redirectUrl = Object(__WEBPACK_IMPORTED_MODULE_10__cfg__.getConfig)().redirectUrl;
-              url = '';
-              appid = '';
-              pid = Object(__WEBPACK_IMPORTED_MODULE_8__auth__.getAuthModule)().getPid();
-              if (loginMethod === 'qq') {
-                appid = Object(__WEBPACK_IMPORTED_MODULE_10__cfg__.getConfig)().qqAppId;
+              prefix = __WEBPACK_IMPORTED_MODULE_10__cfg__.getConfig().thirdPartyLoginPrefix;
+              redirectUrl = __WEBPACK_IMPORTED_MODULE_10__cfg__.getConfig().redirectUrl;
+              url = "";
+              appid = "";
+              pid = __WEBPACK_IMPORTED_MODULE_8__auth__.getAuthModule().getPid();
+              if (loginMethod === "qq") {
+                appid = __WEBPACK_IMPORTED_MODULE_10__cfg__.getConfig().qqAppId;
                 url = "".concat(prefix, "/get-qq-code.html?appid=").concat(appid, "&pid=").concat(pid, "&redirect_uri=").concat(redirectUrl, "/static/third_login-v3.html");
               } else {
-                appid = Object(__WEBPACK_IMPORTED_MODULE_10__cfg__.getConfig)().wechatAppId;
+                appid = __WEBPACK_IMPORTED_MODULE_10__cfg__.getConfig().wechatAppId;
                 url = "".concat(prefix, "/get-weixin-code.html?appid=").concat(appid, "&scope=snsapi_login&state=").concat(Date.now(), "&pid=").concat(pid, "&redirect_uri=").concat(redirectUrl, "/static/third_login-v3.html");
               }
               url = "".concat(url, "?product_code=kitten+from=").concat(location.origin);
-              window.open(url, 'newwindow', 'height=580, width=600, top=200, left=300, toolbar=no,' + 'menubar=no, scrollbars=no, resizable=no,location=no, status=no'); // 监听message事件
+              window.open(url, "newwindow", "height=580, width=600, top=200, left=300, toolbar=no," + "menubar=no, scrollbars=no, resizable=no,location=no, status=no"); // 监听message事件
               messageListener = /*#__PURE__*/function () {
-                var _ref2 = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default)(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_3__babel_runtime_regenerator___default.mark(function _callee2(e) {
+                var _ref2 = __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_3__babel_runtime_regenerator___default.mark(function _callee2(e) {
                   var data;
                   var _data;
                   return __WEBPACK_IMPORTED_MODULE_3__babel_runtime_regenerator___default.wrap(function _callee2$(_context2) {
@@ -181,17 +187,17 @@ var LoginPageContainer = function LoginPageContainer(props) {
                             _context2.next = 5;
                             break;
                           }
-                          window.removeEventListener('message', messageListener);
+                          window.removeEventListener("message", messageListener);
                           return _context2.abrupt("return");
                         case 5:
-                          Object(__WEBPACK_IMPORTED_MODULE_8__auth__.getAuthModule)().getAuth().create_user_for_third_party(data.oauth_ticket).then(/*#__PURE__*/Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default)(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_3__babel_runtime_regenerator___default.mark(function _callee() {
+                          __WEBPACK_IMPORTED_MODULE_8__auth__.getAuthModule().getAuth().create_user_for_third_party(data.oauth_ticket).then(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_3__babel_runtime_regenerator___default.mark(function _callee() {
                             var data;
                             return __WEBPACK_IMPORTED_MODULE_3__babel_runtime_regenerator___default.wrap(function _callee$(_context) {
                               while (1) {
                                 switch (_context.prev = _context.next) {
                                   case 0:
                                     _context.next = 2;
-                                    return Object(__WEBPACK_IMPORTED_MODULE_8__auth__.getAuthModule)().getProfile();
+                                    return __WEBPACK_IMPORTED_MODULE_8__auth__.getAuthModule().getProfile();
                                   case 2:
                                     _context.next = 4;
                                     return _context.sent.data;
@@ -203,10 +209,10 @@ var LoginPageContainer = function LoginPageContainer(props) {
                                         userId: data.id.toString(),
                                         avatar: data.avatar_url,
                                         authType: __WEBPACK_IMPORTED_MODULE_8__auth__.AuthType.CODEMAO,
-                                        source: loginMethod === 'qq' ? 'qq-login' : 'wc-login'
+                                        source: loginMethod === "qq" ? "qq-login" : "wc-login"
                                       });
                                     }
-                                    window.removeEventListener('message', messageListener);
+                                    window.removeEventListener("message", messageListener);
                                   case 7:
                                   case "end":
                                     return _context.stop();
@@ -217,7 +223,7 @@ var LoginPageContainer = function LoginPageContainer(props) {
                             console.error(e);
                             if (props.onThirdPartyLoginFailure) {
                               props.onThirdPartyLoginFailure({
-                                source: loginMethod === 'qq' ? 'qq-login' : 'wc-login',
+                                source: loginMethod === "qq" ? "qq-login" : "wc-login",
                                 isSuccess: false,
                                 error: e
                               });
@@ -228,7 +234,7 @@ var LoginPageContainer = function LoginPageContainer(props) {
                         case 8:
                           _context2.prev = 8;
                           _context2.next = 11;
-                          return Object(__WEBPACK_IMPORTED_MODULE_8__auth__.getAuthModule)().getProfile();
+                          return __WEBPACK_IMPORTED_MODULE_8__auth__.getAuthModule().getProfile();
                         case 11:
                           _context2.next = 13;
                           return _context2.sent.data;
@@ -240,10 +246,10 @@ var LoginPageContainer = function LoginPageContainer(props) {
                               userId: _data.id.toString(),
                               avatar: _data.avatar_url,
                               authType: __WEBPACK_IMPORTED_MODULE_8__auth__.AuthType.CODEMAO,
-                              source: loginMethod === 'qq' ? 'qq-login' : 'wc-login'
+                              source: loginMethod === "qq" ? "qq-login" : "wc-login"
                             });
                           }
-                          window.removeEventListener('message', messageListener);
+                          window.removeEventListener("message", messageListener);
                           _context2.next = 21;
                           break;
                         case 18:
@@ -251,7 +257,7 @@ var LoginPageContainer = function LoginPageContainer(props) {
                           _context2.t0 = _context2["catch"](8);
                           if (props.onThirdPartyLoginFailure) {
                             props.onThirdPartyLoginFailure({
-                              source: loginMethod === 'qq' ? 'qq-login' : 'wc-login',
+                              source: loginMethod === "qq" ? "qq-login" : "wc-login",
                               isSuccess: false,
                               error: _context2.t0
                             });
@@ -267,7 +273,7 @@ var LoginPageContainer = function LoginPageContainer(props) {
                   return _ref2.apply(this, arguments);
                 };
               }();
-              window.addEventListener('message', messageListener);
+              window.addEventListener("message", messageListener);
             case 10:
             case "end":
               return _context3.stop();
@@ -288,17 +294,17 @@ var LoginPageContainer = function LoginPageContainer(props) {
     className: "CUI-sign-in-dialog-tab-wrap"
   }, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_4_react__.createElement("div", {
     onClick: onTabClick.bind(_this, LoginMethod.BY_PASSWORD),
-    className: __WEBPACK_IMPORTED_MODULE_2_babel_plugin_react_css_modules_dist_browser_getClassName___default("tab clickable ".concat(loginMethod === LoginMethod.BY_PASSWORD ? 'tab-seleted' : 'tab-unseleted'), _styleModuleImportMap, {
+    className: __WEBPACK_IMPORTED_MODULE_2_babel_plugin_react_css_modules_dist_browser_getClassName___default("tab clickable ".concat(loginMethod === LoginMethod.BY_PASSWORD ? "tab-seleted" : "tab-unseleted"), _styleModuleImportMap, {
       "autoResolveMultipleImports": true,
       "handleMissingStyleName": "throw"
     })
-  }, Object(__WEBPACK_IMPORTED_MODULE_9__i18n__.getLanguage)('sign_in_dialog/sign_in_with_password')), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_4_react__.createElement("div", {
+  }, __WEBPACK_IMPORTED_MODULE_9__i18n__.getLanguage("sign_in_dialog/sign_in_with_password")), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_4_react__.createElement("div", {
     onClick: onTabClick.bind(_this, LoginMethod.BY_SMS),
-    className: __WEBPACK_IMPORTED_MODULE_2_babel_plugin_react_css_modules_dist_browser_getClassName___default("tab clickable ".concat(loginMethod === LoginMethod.BY_SMS ? 'tab-seleted' : 'tab-unseleted'), _styleModuleImportMap, {
+    className: __WEBPACK_IMPORTED_MODULE_2_babel_plugin_react_css_modules_dist_browser_getClassName___default("tab clickable ".concat(loginMethod === LoginMethod.BY_SMS ? "tab-seleted" : "tab-unseleted"), _styleModuleImportMap, {
       "autoResolveMultipleImports": true,
       "handleMissingStyleName": "throw"
     })
-  }, Object(__WEBPACK_IMPORTED_MODULE_9__i18n__.getLanguage)('sign_in_dialog/sign_in_with_sms'))), loginMethod === LoginMethod.BY_PASSWORD && /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_4_react__.createElement(__WEBPACK_IMPORTED_MODULE_11__ByPassword__.ByPasswordComponent, {
+  }, __WEBPACK_IMPORTED_MODULE_9__i18n__.getLanguage("sign_in_dialog/sign_in_with_sms"))), loginMethod === LoginMethod.BY_PASSWORD && /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_4_react__.createElement(__WEBPACK_IMPORTED_MODULE_11__ByPassword__.ByPasswordComponent, {
     isRequesting: isRequesting,
     setIsRequesting: setIsRequesting,
     onPasswordLoginSuccess: onPasswordLoginSuccess,
@@ -323,7 +329,7 @@ var LoginPageContainer = function LoginPageContainer(props) {
   }, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_4_react__.createElement("span", {
     className: "CUI-sign-in-dialog-third-party-btn",
     onClick: signinByWechat,
-    "data-report-click": "\u7528\u6237\u4FE1\u606F-\u5FAE\u4FE1\u767B\u5F55"
+    "data-report-click": "用户信息-微信登录"
   }, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_4_react__.createElement(__WEBPACK_IMPORTED_MODULE_5__base_icon__.Icon, {
     id: "#cui_iconweixin",
     size: 37,
@@ -331,7 +337,7 @@ var LoginPageContainer = function LoginPageContainer(props) {
   })), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_4_react__.createElement("span", {
     className: "CUI-sign-in-dialog-third-party-btn",
     onClick: signinByQQ,
-    "data-report-click": "\u7528\u6237\u4FE1\u606F-QQ\u767B\u5F55"
+    "data-report-click": "用户信息-QQ登录"
   }, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_4_react__.createElement(__WEBPACK_IMPORTED_MODULE_5__base_icon__.Icon, {
     id: "#cui_iconQQ1",
     size: 37
@@ -342,12 +348,12 @@ var LoginPageContainer = function LoginPageContainer(props) {
   }, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_4_react__.createElement("span", {
     className: "CUI-sign-in-dialog-left CUI-sign-in-dialog-clickable CUI-sign-in-dialog-tab-text",
     onClick: switchView.bind(_this, __WEBPACK_IMPORTED_MODULE_7__def__.ContentView.FORGET_PASSWORD)
-  }, Object(__WEBPACK_IMPORTED_MODULE_9__i18n__.getLanguage)('sign_in_dialog/find_password'))), "|", /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_4_react__.createElement("span", {
+  }, __WEBPACK_IMPORTED_MODULE_9__i18n__.getLanguage("sign_in_dialog/find_password"))), "|", /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_4_react__.createElement("span", {
     className: "CUI-sign-in-dialog-text-wrap"
   }, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_4_react__.createElement("span", {
     className: "CUI-sign-in-dialog-right CUI-sign-in-dialog-clickable CUI-sign-in-dialog-tab-text",
     onClick: switchView.bind(_this, __WEBPACK_IMPORTED_MODULE_7__def__.ContentView.REGISTER)
-  }, Object(__WEBPACK_IMPORTED_MODULE_9__i18n__.getLanguage)('sign_in_dialog/sign_up_account'))))));
+  }, __WEBPACK_IMPORTED_MODULE_9__i18n__.getLanguage("sign_in_dialog/sign_up_account"))))));
 };
 LoginPageContainer.defaultProps = {
   onPasswordLoginSuccess: function onPasswordLoginSuccess() {

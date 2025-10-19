@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：cpGA
+ */
+
 !function (t, e) {
   if (true) {
     module.exports = e();
@@ -20,11 +26,11 @@
       }
       var o = n[r] = {
         i: r,
-        l: !1,
+        l: false,
         exports: {}
       };
       t[r].call(o.exports, o, o.exports, e);
-      o.l = !0;
+      o.l = true;
       return o.exports;
     }
     var n = {};
@@ -33,8 +39,8 @@
     e.d = function (t, n, r) {
       if (!e.o(t, n)) {
         Object.defineProperty(t, n, {
-          configurable: !1,
-          enumerable: !0,
+          configurable: false,
+          enumerable: true,
           get: r
         });
       }
@@ -160,7 +166,10 @@
     var i = n(29);
     var a = Object.defineProperty;
     e.f = n(4) ? Object.defineProperty : function (t, e, n) {
-      if (r(t), e = i(e, !0), r(n), o) {
+      r(t);
+      e = i(e, true);
+      r(n);
+      if (o) {
         try {
           return a(t, e, n);
         } catch (t) {}
@@ -187,7 +196,7 @@
       try {
         return !!t();
       } catch (t) {
-        return !0;
+        return true;
       }
     };
   }, function (t, e, n) {
@@ -282,7 +291,7 @@
                 code: o.status,
                 message: i,
                 reqId: e,
-                isRequestError: !0
+                isRequestError: true
               });
             }
             try {
@@ -301,7 +310,7 @@
     function h() {
       return "http:" === window.location.protocol ? "http:" : "https:";
     }
-    e.__esModule = !0;
+    e.__esModule = true;
     var p = r(n(18));
     var d = r(n(34));
     var g = r(n(86));
@@ -500,7 +509,7 @@
     var y = n(39);
     var b = r(n(91));
   }, function (t, e) {
-    t.exports = !0;
+    t.exports = true;
   }, function (t, e) {
     t.exports = {};
   }, function (t, e, n) {
@@ -517,7 +526,7 @@
   }, function (t, e, n) {
     "use strict";
 
-    e.__esModule = !0;
+    e.__esModule = true;
     e.default = function (t, e) {
       if (!(t instanceof e)) {
         throw new TypeError("Cannot call a class as a function");
@@ -526,12 +535,13 @@
   }, function (t, e, n) {
     t.exports = {
       default: n(59),
-      __esModule: !0
+      __esModule: true
     };
   }, function (t, e, n) {
     var r = n(20);
     t.exports = function (t, e, n) {
-      if (r(t), undefined === e) {
+      r(t);
+      if (undefined === e) {
         return t;
       }
       switch (n) {
@@ -581,7 +591,7 @@
     t.exports = function (t, e, n) {
       if (t && !o(t = n ? t : t.prototype, i)) {
         r(t, i, {
-          configurable: !0,
+          configurable: true,
           value: e
         });
       }
@@ -673,14 +683,14 @@
   }, function (t, e, n) {
     t.exports = {
       default: n(83),
-      __esModule: !0
+      __esModule: true
     };
   }, function (t, e) {
     e.f = Object.getOwnPropertySymbols;
   }, function (t, e, n) {
     t.exports = {
       default: n(88),
-      __esModule: !0
+      __esModule: true
     };
   }, function (t, e, n) {
     e.f = n(2);
@@ -701,7 +711,7 @@
   }, function (t, e, n) {
     "use strict";
 
-    e.__esModule = !0;
+    e.__esModule = true;
     e.regionUphostMap = {
       z0: {
         srcUphost: "up.qiniup.com",
@@ -734,7 +744,7 @@
   }, function (t, e) {}, function (t, e, n) {
     "use strict";
 
-    var r = n(60)(!0);
+    var r = n(60)(true);
     n(42)(String, "String", function (t) {
       this._t = String(t);
       this._i = 0;
@@ -744,10 +754,10 @@
       var n = this._i;
       return n >= e.length ? {
         value: undefined,
-        done: !0
+        done: true
       } : (t = r(e, n), this._i += t.length, {
         value: t,
-        done: !1
+        done: false
       });
     });
   }, function (t, e, n) {
@@ -788,20 +798,36 @@
       };
       var S = e + " Iterator";
       var P = "values" == g;
-      var _ = !1;
+      var _ = false;
       var C = t.prototype;
       var U = C[l] || C["@@iterator"] || g && C[g];
       var F = U || x(g);
       var I = g ? P ? x("entries") : F : undefined;
       var k = "Array" == e && C.entries || U;
-      if (k && (w = f(k.call(new t()))) !== Object.prototype && w.next && (c(w, S, !0), r || "function" == typeof w[l] || a(w, l, p)), P && U && "values" !== U.name && (_ = !0, F = function () {
-        return U.call(this);
-      }), r && !v || !h && !_ && C[l] || a(C, l, F), s[e] = F, s[S] = p, g) {
-        if (y = {
+      if (k && (w = f(k.call(new t()))) !== Object.prototype && w.next) {
+        c(w, S, true);
+        if (!(r || "function" == typeof w[l])) {
+          a(w, l, p);
+        }
+      }
+      if (P && U && "values" !== U.name) {
+        _ = true;
+        F = function () {
+          return U.call(this);
+        };
+      }
+      if (!(r && !v || !h && !_ && C[l])) {
+        a(C, l, F);
+      }
+      s[e] = F;
+      s[S] = p;
+      if (g) {
+        y = {
           values: P ? F : x("values"),
           keys: m ? F : x("keys"),
           entries: I
-        }, v) {
+        };
+        if (v) {
           for (b in y) if (!(b in C)) {
             i(C, b, y[b]);
           }
@@ -831,7 +857,7 @@
       var t;
       var e = n(28)("iframe");
       var r = i.length;
-      for (e.style.display = "none", n(49).appendChild(e), e.src = "javascript:", (t = e.contentWindow.document).open(), t.write("<script>document.F=Object<\/script>"), t.close(), u = t.F; r--;) {
+      for (e.style.display = "none", n(49).appendChild(e), e.src = "javascript:", (t = e.contentWindow.document).open(), t.write("<script>document.F=Object</script>"), t.close(), u = t.F; r--;) {
         delete u.prototype[i[r]];
       }
       return u();
@@ -851,7 +877,7 @@
   }, function (t, e, n) {
     var r = n(9);
     var o = n(11);
-    var i = n(63)(!1);
+    var i = n(63)(false);
     var a = n(30)("IE_PROTO");
     t.exports = function (t, e) {
       var n;
@@ -980,7 +1006,7 @@
               r = function (t) {
                 f.postMessage(t + "", "*");
               };
-              f.addEventListener("message", b, !1);
+              f.addEventListener("message", b, false);
             } else {
               r = "onreadystatechange" in c("script") ? function (t) {
                 u.appendChild(c("script")).onreadystatechange = function () {
@@ -1003,12 +1029,12 @@
     t.exports = function (t) {
       try {
         return {
-          e: !1,
+          e: false,
           v: t()
         };
       } catch (t) {
         return {
-          e: !0,
+          e: true,
           v: t
         };
       }
@@ -1018,7 +1044,8 @@
     var o = n(8);
     var i = n(33);
     t.exports = function (t, e) {
-      if (r(t), o(e) && e.constructor === t) {
+      r(t);
+      if (o(e) && e.constructor === t) {
         return e;
       }
       var n = i.f(t);
@@ -1028,7 +1055,7 @@
   }, function (t, e, n) {
     "use strict";
 
-    e.__esModule = !0;
+    e.__esModule = true;
     e.urlSafeBase64Encode = function (t) {
       return (t = function (t) {
         var e = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
@@ -1065,14 +1092,14 @@
               o++;
             } else if (s > 127 && s < 2048) {
               u = String.fromCharCode(s >> 6 | 192, 63 & s | 128);
-            } else if (63488 & s ^ !0) {
+            } else if (63488 & s ^ true) {
               u = String.fromCharCode(s >> 12 | 224, s >> 6 & 63 | 128, 63 & s | 128);
             } else {
-              if (64512 & s ^ !0) {
+              if (64512 & s ^ true) {
                 throw new RangeError("Unmatched trail surrogate at " + a);
               }
               var c = e.charCodeAt(++a);
-              if (64512 & c ^ !0) {
+              if (64512 & c ^ true) {
                 throw new RangeError("Unmatched lead surrogate at " + (a - 1));
               }
               s = ((1023 & s) << 10) + (1023 & c) + 65536;
@@ -1151,7 +1178,7 @@
   }, function (t, e, n) {
     "use strict";
 
-    e.__esModule = !0;
+    e.__esModule = true;
     e.pipeline = e.compressImage = e.exif = e.imageInfo = e.watermark = e.imageMogr2 = e.getUploadUrl = e.filterParams = e.getHeadersForMkFile = e.getResumeUploadedSize = e.getHeadersForChunkUpload = e.createMkFileUrl = e.region = e.upload = undefined;
     var r = n(39);
     var o = n(12);
@@ -1263,7 +1290,7 @@
         if (t && n != n) {
           for (; c > f;) {
             if ((s = u[f++]) != s) {
-              return !0;
+              return true;
             }
           }
         } else {
@@ -1368,7 +1395,7 @@
     };
     var T = function (t, e) {
       if (!t._n) {
-        t._n = !0;
+        t._n = true;
         var n = t._c;
         y(function () {
           for (var r = t._v, o = 1 == t._s, i = 0; n.length > i;) {
@@ -1388,7 +1415,7 @@
                     }
                     t._h = 1;
                   }
-                  if (!0 === s) {
+                  if (true === s) {
                     n = r;
                   } else {
                     if (f) {
@@ -1397,7 +1424,7 @@
                     n = s(r);
                     if (f) {
                       f.exit();
-                      a = !0;
+                      a = true;
                     }
                   }
                   if (n === e.promise) {
@@ -1421,7 +1448,7 @@
             }(n[i++]);
           }
           t._c = [];
-          t._n = !1;
+          t._n = false;
           if (e && !t._h) {
             R(t);
           }
@@ -1435,22 +1462,27 @@
         var r;
         var o = t._v;
         var i = A(t);
-        if (i && (e = w(function () {
-          if (I) {
-            _.emit("unhandledRejection", o, t);
-          } else {
-            if (n = u.onunhandledrejection) {
-              n({
-                promise: t,
-                reason: o
-              });
+        if (i) {
+          e = w(function () {
+            if (I) {
+              _.emit("unhandledRejection", o, t);
             } else {
-              if ((r = u.console) && r.error) {
-                r.error("Unhandled promise rejection", o);
+              if (n = u.onunhandledrejection) {
+                n({
+                  promise: t,
+                  reason: o
+                });
+              } else {
+                if ((r = u.console) && r.error) {
+                  r.error("Unhandled promise rejection", o);
+                }
               }
             }
-          }
-        }), t._h = I || A(t) ? 2 : 1), t._a = undefined, i && e.e) {
+          });
+          t._h = I || A(t) ? 2 : 1;
+        }
+        t._a = undefined;
+        if (i && e.e) {
           throw e.v;
         }
       });
@@ -1476,20 +1508,20 @@
     var D = function (t) {
       var e = this;
       if (!e._d) {
-        e._d = !0;
+        e._d = true;
         (e = e._w || e)._v = t;
         e._s = 2;
         if (!e._a) {
           e._a = e._c.slice();
         }
-        T(e, !0);
+        T(e, true);
       }
     };
     var j = function (t) {
       var e;
       var n = this;
       if (!n._d) {
-        n._d = !0;
+        n._d = true;
         n = n._w || n;
         try {
           if (n === t) {
@@ -1499,7 +1531,7 @@
             y(function () {
               var r = {
                 _w: n,
-                _d: !1
+                _d: false
               };
               try {
                 e.call(t, c(j, r, 1), c(D, r, 1));
@@ -1510,12 +1542,12 @@
           } else {
             n._v = t;
             n._s = 1;
-            T(n, !1);
+            T(n, false);
           }
         } catch (t) {
           D.call({
             _w: n,
-            _d: !1
+            _d: false
           }, t);
         }
       }
@@ -1535,10 +1567,10 @@
         this._c = [];
         this._a = undefined;
         this._s = 0;
-        this._d = !1;
+        this._d = false;
         this._v = undefined;
         this._h = 0;
-        this._n = !1;
+        this._n = false;
       }).prototype = n(78)(F.prototype, {
         then: function (t, e) {
           var n = E(m(this, F));
@@ -1550,7 +1582,7 @@
             this._a.push(n);
           }
           if (this._s) {
-            T(this, !1);
+            T(this, false);
           }
           return n.promise;
         },
@@ -1598,14 +1630,14 @@
           var n = [];
           var i = 0;
           var a = 1;
-          g(t, !1, function (t) {
+          g(t, false, function (t) {
             var s = i++;
-            var u = !1;
+            var u = false;
             n.push(undefined);
             a++;
             e.resolve(t).then(function (t) {
               if (!u) {
-                u = !0;
+                u = true;
                 n[s] = t;
                 if (! --a) {
                   r(n);
@@ -1627,7 +1659,7 @@
         var n = E(e);
         var r = n.reject;
         var o = w(function () {
-          g(t, !1, function (t) {
+          g(t, false, function (t) {
             e.resolve(t).then(n.resolve, r);
           });
         });
@@ -1688,7 +1720,10 @@
         return o ? e(r(n)[0], n[1]) : e(n);
       } catch (e) {
         var i = t.return;
-        throw undefined !== i && r(i.call(t)), e;
+        if (undefined !== i) {
+          r(i.call(t));
+        }
+        throw e;
       }
     };
   }, function (t, e, n) {
@@ -1744,7 +1779,12 @@
           try {
             o();
           } catch (r) {
-            throw t ? n() : e = undefined, r;
+            if (t) {
+              n();
+            } else {
+              e = undefined;
+            }
+            throw r;
           }
         }
         e = undefined;
@@ -1768,10 +1808,10 @@
           };
         }
       } else {
-        var l = !0;
+        var l = true;
         var h = document.createTextNode("");
         new i(c).observe(h, {
-          characterData: !0
+          characterData: true
         });
         n = function () {
           h.data = l = !l;
@@ -1817,7 +1857,7 @@
       var e = "function" == typeof o[t] ? o[t] : r[t];
       if (a && e && !e[s]) {
         i.f(e, s, {
-          configurable: !0,
+          configurable: true,
           get: function () {
             return this;
           }
@@ -1826,11 +1866,11 @@
     };
   }, function (t, e, n) {
     var r = n(2)("iterator");
-    var o = !1;
+    var o = false;
     try {
       var i = [7][r]();
       i.return = function () {
-        o = !0;
+        o = true;
       };
       Array.from(i, function () {
         throw 2;
@@ -1838,15 +1878,15 @@
     } catch (t) {}
     t.exports = function (t, e) {
       if (!e && !o) {
-        return !1;
+        return false;
       }
-      var n = !1;
+      var n = false;
       try {
         var i = [7];
         var a = i[r]();
         a.next = function () {
           return {
-            done: n = !0
+            done: n = true
           };
         };
         i[r] = function () {
@@ -1935,7 +1975,7 @@
   }, function (t, e, n) {
     t.exports = {
       default: n(87),
-      __esModule: !0
+      __esModule: true
     };
   }, function (t, e, n) {
     var r = n(1);
@@ -2030,7 +2070,8 @@
           for (o = (t = t.substring(r - 64)).length, i = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], r = 0; r < o; r += 1) {
             i[r >> 2] |= t.charCodeAt(r) << (r % 4 << 3);
           }
-          if (i[r >> 2] |= 128 << (r % 4 << 3), r > 55) {
+          i[r >> 2] |= 128 << (r % 4 << 3);
+          if (r > 55) {
             for (e(f, i), r = 0; r < 16; r += 1) {
               i[r] = 0;
             }
@@ -2159,7 +2200,8 @@
           var o;
           var i;
           var a = n;
-          if (t[a >> 2] |= 128 << (a % 4 << 3), a > 55) {
+          t[a >> 2] |= 128 << (a % 4 << 3);
+          if (a > 55) {
             for (e(this._hash, t), a = 0; a < 16; a += 1) {
               t[a] = 0;
             }
@@ -2257,7 +2299,8 @@
             for (o = (t = n - 64 < c ? t.subarray(n - 64) : new Uint8Array(0)).length, i = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], n = 0; n < o; n += 1) {
               i[n >> 2] |= t[n] << (n % 4 << 3);
             }
-            if (i[n >> 2] |= 128 << (n % 4 << 3), n > 55) {
+            i[n >> 2] |= 128 << (n % 4 << 3);
+            if (n > 55) {
               for (e(f, i), n = 0; n < 16; n += 1) {
                 i[n] = 0;
               }
@@ -2283,7 +2326,7 @@
         default: t
       };
     }
-    e.__esModule = !0;
+    e.__esModule = true;
     e.UploadManager = undefined;
     var o = r(n(18));
     var i = r(n(34));
@@ -2295,12 +2338,12 @@
         var o = this;
         (0, a.default)(this, t);
         this.config = (0, i.default)({
-          useCdnDomain: !0,
-          disableStatisticsReport: !1,
+          useCdnDomain: true,
+          disableStatisticsReport: false,
           retryCount: 3,
-          checkByMD5: !1,
+          checkByMD5: false,
           uphost: null,
-          forceDirect: !1,
+          forceDirect: false,
           concurrentRequestLimit: 3,
           region: null
         }, e.config);
@@ -2315,7 +2358,7 @@
         this.xhrHandler = function (t) {
           return o.xhrList.push(t);
         };
-        this.aborted = !1;
+        this.aborted = false;
         this.file = e.file;
         this.key = e.key;
         this.token = e.token;
@@ -2327,7 +2370,11 @@
       }
       t.prototype.putFile = function () {
         var t = this;
-        if (this.aborted = !1, this.putExtra.fname || (this.putExtra.fname = this.file.name), !this.putExtra.mimeType || !this.putExtra.mimeType.length || (0, s.isContainFileMimeType)(this.file.type, this.putExtra.mimeType)) {
+        this.aborted = false;
+        if (!this.putExtra.fname) {
+          this.putExtra.fname = this.file.name;
+        }
+        if (!this.putExtra.mimeType || !this.putExtra.mimeType.length || (0, s.isContainFileMimeType)(this.file.type, this.putExtra.mimeType)) {
           var e = (0, s.getUploadUrl)(this.config, this.token).then(function (e) {
             t.uploadUrl = e;
             t.uploadAt = new Date().getTime();
@@ -2339,7 +2386,8 @@
               t.sendLog(e.reqId, 200);
             }
           }, function (e) {
-            if (t.clear(), e.isRequestError && !t.config.disableStatisticsReport) {
+            t.clear();
+            if (e.isRequestError && !t.config.disableStatisticsReport) {
               var n = t.aborted ? "" : e.reqId;
               var r = t.aborted ? -2 : e.code;
               t.sendLog(n, r);
@@ -2365,7 +2413,7 @@
       };
       t.prototype.stop = function () {
         this.clear();
-        this.aborted = !0;
+        this.aborted = true;
       };
       t.prototype.sendLog = function (t, e) {
         this.statisticsLogger.log({
@@ -2564,7 +2612,7 @@
         default: t
       };
     }
-    e.__esModule = !0;
+    e.__esModule = true;
     e.Pool = undefined;
     var o = r(n(18));
     var i = r(n(17));
@@ -2712,7 +2760,7 @@
       }
       return i;
     }
-    e.__esModule = !0;
+    e.__esModule = true;
     e.imageView2 = o;
     e.imageMogr2 = i;
     e.watermark = a;
@@ -2748,7 +2796,7 @@
               c += i(s) + "|";
               break;
             default:
-              u = !0;
+              u = true;
           }
           if (u) {
             throw "fop is wrong in pipeline";
@@ -2774,7 +2822,7 @@
         default: t
       };
     }
-    e.__esModule = !0;
+    e.__esModule = true;
     e.Observable = undefined;
     var o = r(n(96));
     var i = r(n(17));
@@ -2793,7 +2841,7 @@
     var a = function () {
       function t(e, n, r) {
         (0, i.default)(this, t);
-        this.isStopped = !1;
+        this.isStopped = false;
         if ("object" === (undefined === e ? "undefined" : (0, o.default)(e))) {
           this._onNext = e.next;
           this._onError = e.error;
@@ -2811,13 +2859,13 @@
       };
       t.prototype.error = function (t) {
         if (!this.isStopped && this._onError) {
-          this.isStopped = !0;
+          this.isStopped = true;
           this._onError(t);
         }
       };
       t.prototype.complete = function (t) {
         if (!this.isStopped && this._onCompleted) {
-          this.isStopped = !0;
+          this.isStopped = true;
           this._onCompleted(t);
         }
       };
@@ -2830,7 +2878,7 @@
         this.result = n;
       }
       t.prototype.unsubscribe = function () {
-        this.observer.isStopped = !0;
+        this.observer.isStopped = true;
         this.result();
       };
       return t;
@@ -2843,7 +2891,7 @@
         default: t
       };
     }
-    e.__esModule = !0;
+    e.__esModule = true;
     var o = r(n(97));
     var i = r(n(99));
     var a = "function" == typeof i.default && "symbol" == typeof o.default ? function (t) {
@@ -2859,7 +2907,7 @@
   }, function (t, e, n) {
     t.exports = {
       default: n(98),
-      __esModule: !0
+      __esModule: true
     };
   }, function (t, e, n) {
     n(41);
@@ -2868,7 +2916,7 @@
   }, function (t, e, n) {
     t.exports = {
       default: n(100),
-      __esModule: !0
+      __esModule: true
     };
   }, function (t, e, n) {
     n(101);
@@ -2955,11 +3003,11 @@
         Y(q, e, n);
       }
       y(t);
-      e = S(e, !0);
+      e = S(e, true);
       y(n);
-      return o(G, e) ? (n.enumerable ? (o(t, L) && t[L][e] && (t[L][e] = !1), n = _(n, {
-        enumerable: P(0, !1)
-      })) : (o(t, L) || M(t, L, P(1, {})), t[L][e] = !0), W(t, e, n)) : M(t, e, n);
+      return o(G, e) ? (n.enumerable ? (o(t, L) && t[L][e] && (t[L][e] = false), n = _(n, {
+        enumerable: P(0, false)
+      })) : (o(t, L) || M(t, L, P(1, {})), t[L][e] = true), W(t, e, n)) : M(t, e, n);
     };
     var K = function (t, e) {
       y(t);
@@ -2969,14 +3017,16 @@
       return t;
     };
     var $ = function (t) {
-      var e = j.call(this, t = S(t, !0));
+      var e = j.call(this, t = S(t, true));
       return !(this === N && o(G, t) && !o(q, t)) && (!(e || !o(this, t) || !o(G, t) || o(this, L) && this[L][t]) || e);
     };
     var Q = function (t, e) {
-      if (t = x(t), e = S(e, !0), t !== N || !o(G, e) || o(q, e)) {
+      t = x(t);
+      e = S(e, true);
+      if (t !== N || !o(G, e) || o(q, e)) {
         var n = E(t, e);
         if (!(!n || !o(G, e) || o(t, L) && t[L][e])) {
-          n.enumerable = !0;
+          n.enumerable = true;
         }
         return n;
       }
@@ -3008,13 +3058,13 @@
             e.call(q, n);
           }
           if (o(this, L) && o(this[L], t)) {
-            this[L][t] = !1;
+            this[L][t] = false;
           }
           W(this, t, P(1, n));
         };
         if (i && V) {
           W(N, t, {
-            configurable: !0,
+            configurable: true,
             set: e
           });
         }
@@ -3028,7 +3078,7 @@
       n(25).f = $;
       F.f = tt;
       if (i && !n(13)) {
-        s(N, "propertyIsEnumerable", $, !0);
+        s(N, "propertyIsEnumerable", $, true);
       }
       d.f = function (t) {
         return J(p(t));
@@ -3056,10 +3106,10 @@
         }
       },
       useSetter: function () {
-        V = !0;
+        V = true;
       },
       useSimple: function () {
-        V = !1;
+        V = false;
       }
     });
     a(a.S + a.F * !z, "Object", {
@@ -3091,10 +3141,14 @@
           for (var e, n, r = [t], o = 1; arguments.length > o;) {
             r.push(arguments[o++]);
           }
-          if (n = e = r[1], (b(e) || undefined !== t) && !X(t)) {
+          n = e = r[1];
+          if ((b(e) || undefined !== t) && !X(t)) {
             if (!v(e)) {
               e = function (t, e) {
-                if ("function" == typeof n && (e = n.call(this, t, e)), !X(e)) {
+                if ("function" == typeof n) {
+                  e = n.call(this, t, e);
+                }
+                if (!X(e)) {
                   return e;
                 }
               };
@@ -3109,8 +3163,8 @@
       n(6)(T.prototype, D, T.prototype.valueOf);
     }
     l(T, "Symbol");
-    l(Math, "Math", !0);
-    l(r.JSON, "JSON", !0);
+    l(Math, "Math", true);
+    l(r.JSON, "JSON", true);
   }, function (t, e, n) {
     var r = n(22)("meta");
     var o = n(8);
@@ -3118,7 +3172,7 @@
     var a = n(7).f;
     var s = 0;
     var u = Object.isExtensible || function () {
-      return !0;
+      return true;
     };
     var c = !n(10)(function () {
       return u(Object.preventExtensions({}));
@@ -3133,7 +3187,7 @@
     };
     var l = t.exports = {
       KEY: r,
-      NEED: !1,
+      NEED: false,
       fastKey: function (t, e) {
         if (!o(t)) {
           return "symbol" == typeof t ? t : ("string" == typeof t ? "S" : "P") + t;
@@ -3152,10 +3206,10 @@
       getWeak: function (t, e) {
         if (!i(t, r)) {
           if (!u(t)) {
-            return !0;
+            return true;
           }
           if (!e) {
-            return !1;
+            return false;
           }
           f(t);
         }
@@ -3212,7 +3266,9 @@
     var u = n(43);
     var c = Object.getOwnPropertyDescriptor;
     e.f = n(4) ? c : function (t, e) {
-      if (t = i(t), e = a(e, !0), u) {
+      t = i(t);
+      e = a(e, true);
+      if (u) {
         try {
           return c(t, e);
         } catch (t) {}
@@ -3233,7 +3289,7 @@
         default: t
       };
     }
-    e.__esModule = !0;
+    e.__esModule = true;
     e.StatisticsLogger = undefined;
     var o = r(n(36));
     var i = r(n(17));
@@ -3272,7 +3328,7 @@
         default: t
       };
     }
-    e.__esModule = !0;
+    e.__esModule = true;
     var o = r(n(18));
     var i = r(n(34));
     var a = r(n(17));
@@ -3295,7 +3351,7 @@
         (0, a.default)(this, t);
         this.config = (0, i.default)({
           quality: .92,
-          noCompressIfLarger: !1
+          noCompressIfLarger: false
         }, n);
         this.file = e;
       }
@@ -3440,11 +3496,14 @@
           t.exifdata = r || {};
           var o = function (t) {
             var e = new DataView(t);
-            if (d && console.log("Got file of length " + t.byteLength), 255 != e.getUint8(0) || 216 != e.getUint8(1)) {
+            if (d) {
+              console.log("Got file of length " + t.byteLength);
+            }
+            if (255 != e.getUint8(0) || 216 != e.getUint8(1)) {
               if (d) {
                 console.log("Not a valid JPEG");
               }
-              return !1;
+              return false;
             }
             for (var n = 2, r = t.byteLength; n < r;) {
               if (function (t, e) {
@@ -3462,15 +3521,19 @@
               n++;
             }
           }(n);
-          if (t.iptcdata = o || {}, g.isXmpEnabled) {
+          t.iptcdata = o || {};
+          if (g.isXmpEnabled) {
             var i = function (t) {
               if ("DOMParser" in self) {
                 var e = new DataView(t);
-                if (d && console.log("Got file of length " + t.byteLength), 255 != e.getUint8(0) || 216 != e.getUint8(1)) {
+                if (d) {
+                  console.log("Got file of length " + t.byteLength);
+                }
+                if (255 != e.getUint8(0) || 216 != e.getUint8(1)) {
                   if (d) {
                     console.log("Not a valid JPEG");
                   }
-                  return !1;
+                  return false;
                 }
                 for (var n = 2, r = t.byteLength, o = new DOMParser(); n < r - 4;) {
                   if ("http" == f(e, n, 4)) {
@@ -3479,7 +3542,7 @@
                     var s = f(e, i, a);
                     var u = s.indexOf("xmpmeta>") + 8;
                     var c = (s = s.substring(s.indexOf("<x:xmpmeta"), u)).indexOf("x:xmpmeta") + 10;
-                    s = s.slice(0, c) + 'xmlns:Iptc4xmpCore="http://iptc.org/std/Iptc4xmpCore/1.0/xmlns/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tiff="http://ns.adobe.com/tiff/1.0/" xmlns:plus="http://schemas.android.com/apk/lib/com.google.android.gms.plus" xmlns:ext="http://www.gettyimages.com/xsltExtension/1.0" xmlns:exif="http://ns.adobe.com/exif/1.0/" xmlns:stEvt="http://ns.adobe.com/xap/1.0/sType/ResourceEvent#" xmlns:stRef="http://ns.adobe.com/xap/1.0/sType/ResourceRef#" xmlns:crs="http://ns.adobe.com/camera-raw-settings/1.0/" xmlns:xapGImg="http://ns.adobe.com/xap/1.0/g/img/" xmlns:Iptc4xmpExt="http://iptc.org/std/Iptc4xmpExt/2008-02-29/" ' + s.slice(c);
+                    s = s.slice(0, c) + "xmlns:Iptc4xmpCore=\"http://iptc.org/std/Iptc4xmpCore/1.0/xmlns/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:tiff=\"http://ns.adobe.com/tiff/1.0/\" xmlns:plus=\"http://schemas.android.com/apk/lib/com.google.android.gms.plus\" xmlns:ext=\"http://www.gettyimages.com/xsltExtension/1.0\" xmlns:exif=\"http://ns.adobe.com/exif/1.0/\" xmlns:stEvt=\"http://ns.adobe.com/xap/1.0/sType/ResourceEvent#\" xmlns:stRef=\"http://ns.adobe.com/xap/1.0/sType/ResourceRef#\" xmlns:crs=\"http://ns.adobe.com/camera-raw-settings/1.0/\" xmlns:xapGImg=\"http://ns.adobe.com/xap/1.0/g/img/\" xmlns:Iptc4xmpExt=\"http://iptc.org/std/Iptc4xmpExt/2008-02-29/\" " + s.slice(c);
                     return p(o.parseFromString(s, "text/xml"));
                   }
                   n++;
@@ -3508,7 +3571,7 @@
             };
             (function (t, e) {
               var n = new XMLHttpRequest();
-              n.open("GET", t, !0);
+              n.open("GET", t, true);
               n.responseType = "blob";
               n.onload = function (t) {
                 if (!(200 != this.status && 0 !== this.status)) {
@@ -3528,7 +3591,7 @@
               n(r.response);
               r = null;
             };
-            r.open("GET", t.src, !0);
+            r.open("GET", t.src, true);
             r.responseType = "arraybuffer";
             r.send(null);
           }
@@ -3545,20 +3608,27 @@
       }
       function a(t) {
         var e = new DataView(t);
-        if (d && console.log("Got file of length " + t.byteLength), 255 != e.getUint8(0) || 216 != e.getUint8(1)) {
+        if (d) {
+          console.log("Got file of length " + t.byteLength);
+        }
+        if (255 != e.getUint8(0) || 216 != e.getUint8(1)) {
           if (d) {
             console.log("Not a valid JPEG");
           }
-          return !1;
+          return false;
         }
         for (var n, r = 2, o = t.byteLength; r < o;) {
           if (255 != e.getUint8(r)) {
             if (d) {
               console.log("Not a valid marker at offset " + r + ", found: " + e.getUint8(r));
             }
-            return !1;
+            return false;
           }
-          if (n = e.getUint8(r + 1), d && console.log(n), 225 == n) {
+          n = e.getUint8(r + 1);
+          if (d) {
+            console.log(n);
+          }
+          if (225 == n) {
             if (d) {
               console.log("Found 0xFFE1 marker");
             }
@@ -3686,7 +3756,7 @@
           if (d) {
             console.log("Not valid EXIF data! " + f(t, e, 4));
           }
-          return !1;
+          return false;
         }
         var n;
         var r;
@@ -3695,28 +3765,28 @@
         var a;
         var s = e + 6;
         if (18761 == t.getUint16(s)) {
-          n = !1;
+          n = false;
         } else {
           if (19789 != t.getUint16(s)) {
             if (d) {
               console.log("Not valid TIFF data! (no 0x4949 or 0x4D4D)");
             }
-            return !1;
+            return false;
           }
-          n = !0;
+          n = true;
         }
         if (42 != t.getUint16(s + 2, !n)) {
           if (d) {
             console.log("Not valid TIFF data! (no 0x002A)");
           }
-          return !1;
+          return false;
         }
         var c = t.getUint32(s + 4, !n);
         if (c < 8) {
           if (d) {
             console.log("Not valid TIFF data! (First offset less than 8)", t.getUint32(s + 4, !n));
           }
-          return !1;
+          return false;
         }
         if ((r = u(t, s, s + c, v, n)).ExifIFDPointer) {
           for (o in i = u(t, s, s + r.ExifIFDPointer, m, n)) {
@@ -3859,7 +3929,7 @@
           console.log(t.message);
         }
       }
-      var d = !1;
+      var d = false;
       var g = function (t) {
         return t instanceof g ? t : this instanceof g ? void (this.EXIFwrapped = t) : new g(t);
       };
@@ -4165,10 +4235,10 @@
         15: "category"
       };
       g.enableXmp = function () {
-        g.isXmpEnabled = !0;
+        g.isXmpEnabled = true;
       };
       g.disableXmp = function () {
-        g.isXmpEnabled = !1;
+        g.isXmpEnabled = false;
       };
       g.getData = function (t, e) {
         return !((self.Image && t instanceof self.Image || self.HTMLImageElement && t instanceof self.HTMLImageElement) && !t.complete || (r(t) ? e && e.call(t) : i(t, e), 0));

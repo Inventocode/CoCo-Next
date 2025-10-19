@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：602
+ */
+
 "use strict";
 
 var n = require("./74");
@@ -493,7 +499,7 @@ var _ = function (t) {
   };
   e.constructResult = function (t) {
     var e = d.buildBitArray(t);
-    var r = Object(p.a)(e).parseInformation();
+    var r = p.a(e).parseInformation();
     var o = t[0].getFinderPattern().getResultPoints();
     var i = t[t.length - 1].getFinderPattern().getResultPoints();
     var u = [o[0], o[1], i[0], i[1]];

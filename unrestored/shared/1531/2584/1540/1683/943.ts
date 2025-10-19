@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：943
+ */
+
 var r = require("../1659/241");
 var o = require("../1623/439");
 var i = require("../1742/247/index")("species");

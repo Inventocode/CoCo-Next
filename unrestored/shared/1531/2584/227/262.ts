@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：262
+ */
+
 "use strict";
 
 export { i as b };
@@ -7,7 +13,7 @@ export { c as f };
 export { l as e };
 export { u as d };
 import r = require("../9");
-import o = require("../301/index");
+import o = require("../../../../../src/editor/block/generate");
 var i = {
   PRIMITIVE: "PRIMITIVE",
   ARRAY: "ARRAY",

@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：338
+ */
+
 module.exports = {
   hide: "ConsolePanel_hide__ema1i",
   container: "ConsolePanel_container__sYMKI",

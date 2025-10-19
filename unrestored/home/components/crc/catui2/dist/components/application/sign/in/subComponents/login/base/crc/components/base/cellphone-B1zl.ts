@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：B1zl
+ */
+
 "use strict";
 
 /* unused harmony export CellPhone */
@@ -20,7 +26,7 @@ import * as __WEBPACK_IMPORTED_MODULE_6__Light__ from "./Light-6PrI";
 var _excluded = ["onDeviceOrientation"];
 var CellPhone = function CellPhone(_ref) {
   var onDeviceOrientation = _ref.onDeviceOrientation;
-  var props = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_objectWithoutProperties__.default)(_ref, _excluded);
+  var props = __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_objectWithoutProperties__.default(_ref, _excluded);
   return /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1_react___default.createElement("div", props, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1_react___default.createElement(__WEBPACK_IMPORTED_MODULE_2_react_three_fiber__.Canvas, {
     shadowMap: true
   }, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1_react___default.createElement(__WEBPACK_IMPORTED_MODULE_6__Light__.Light, {

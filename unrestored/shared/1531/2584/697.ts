@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：697
+ */
+
 module.exports = {
   layout: "ResizableLayout_layout__jfiKe",
   resizable: "ResizableLayout_resizable__3FYyj",

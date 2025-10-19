@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：574
+ */
+
 module.exports = function (e) {
   if (!e.webpackPolyfill) {
     var t = Object.create(e);

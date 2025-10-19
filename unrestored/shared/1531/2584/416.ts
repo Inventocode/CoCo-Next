@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：416
+ */
+
 module.exports = {
   formGroup: "UploadImage_formGroup__iB1_1",
   formItemWrapper: "UploadImage_formItemWrapper__37p98",

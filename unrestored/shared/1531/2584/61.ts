@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：61
+ */
+
 "use strict";
 
 export { f as d };
@@ -14,7 +20,7 @@ export { C as k };
 export { T as l };
 import r = require("./6");
 import o = require("./25/index");
-import i = require("./98");
+import i = require("../../../../src/shared/widget/custom/storage");
 import a = require("../../../../src/shared/widget/custom/load");
 import s = require("./5");
 import c = require("./76");

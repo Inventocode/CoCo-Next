@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：zVV7
+ */
+
 "use strict";
 
 /* harmony import */
@@ -20,23 +26,23 @@ var IconFont = function IconFont(props) {
   var subClassName = props.subClassName;
   var twoTone = props.twoTone;
   var content = __WEBPACK_IMPORTED_MODULE_0_react___default.createElement("use", {
-    xlinkHref: '#' + type
+    xlinkHref: "#" + type
   });
   if (twoTone) {
     var paths = [];
     var symbol = document.getElementById(type);
     if (symbol) {
-      symbol.querySelectorAll('path').forEach(function (el) {
+      symbol.querySelectorAll("path").forEach(function (el) {
         return paths.push(el);
       });
       content = __WEBPACK_IMPORTED_MODULE_0_react___default.createElement("svg", {
-        viewBox: symbol.getAttribute('viewBox') || undefined
+        viewBox: symbol.getAttribute("viewBox") || undefined
       }, paths.map(function (path, i) {
         return __WEBPACK_IMPORTED_MODULE_0_react___default.createElement("path", {
           fill: i === 0 && subColor ? subColor : undefined,
           className: i === 0 && subClassName ? subClassName : undefined,
           key: i,
-          d: path.getAttribute('d') || undefined
+          d: path.getAttribute("d") || undefined
         });
       }));
     }
@@ -51,7 +57,7 @@ var IconFont = function IconFont(props) {
     focusable: "false"
   }, content));
 };
-IconFont.displayName = 'IconFont';
+IconFont.displayName = "IconFont";
 /* harmony default export */
 export default IconFont;
 /***/

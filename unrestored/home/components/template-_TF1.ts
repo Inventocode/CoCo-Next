@@ -1,8 +1,14 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：/TF1
+ */
+
 "use strict";
 
 /* harmony export (binding) */
-export { ConfirmDialogView };
 /* harmony import */
+export { ConfirmDialogView };
 import * as __WEBPACK_IMPORTED_MODULE_0_react__ from "react";
 /* harmony import */
 import __WEBPACK_IMPORTED_MODULE_0_react___default from "react";
@@ -157,9 +163,9 @@ var ConfirmDialogView = function (_React$Component) {
       var className = _props$confirmDialogI.className;
       var isDangerous = _props$confirmDialogI.isDangerous;
       var _props$confirmDialogI2 = _props$confirmDialogI.cancelText;
-      var cancelText = _props$confirmDialogI2 === undefined ? '取消' : _props$confirmDialogI2;
+      var cancelText = _props$confirmDialogI2 === undefined ? "取消" : _props$confirmDialogI2;
       var _props$confirmDialogI3 = _props$confirmDialogI.allowText;
-      var allowText = _props$confirmDialogI3 === undefined ? '确认' : _props$confirmDialogI3;
+      var allowText = _props$confirmDialogI3 === undefined ? "确认" : _props$confirmDialogI3;
       var denyText = _props$confirmDialogI.denyText;
       var _props$confirmDialogI4 = _props$confirmDialogI.cancelBtnVisible;
       var cancelBtnVisible = _props$confirmDialogI4 === undefined ? true : _props$confirmDialogI4;

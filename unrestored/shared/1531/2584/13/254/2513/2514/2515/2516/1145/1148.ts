@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：1148
+ */
+
 (function (e) {
   var r = require("../../../../../2533/1420/2530/499/1389");
   var i = exports && !exports.nodeType && exports;

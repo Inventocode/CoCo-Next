@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：622
+ */
+
 module.exports = {
   ReleaseInfoDialog: "style_ReleaseInfoDialog__1tjfC",
   left: "style_left__2WBVn",

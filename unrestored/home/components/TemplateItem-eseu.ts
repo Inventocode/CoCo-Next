@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：eseu
+ */
+
 "use strict";
 
 /* harmony import */
@@ -10,8 +16,8 @@ var mapStateToProps = function mapStateToProps(state, ownProps) {
   return {};
 };
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
-  return Object(__WEBPACK_IMPORTED_MODULE_0_redux__.bindActionCreators)({}, dispatch);
+  return __WEBPACK_IMPORTED_MODULE_0_redux__.bindActionCreators({}, dispatch);
 };
 /* harmony default export */
-export default Object(__WEBPACK_IMPORTED_MODULE_1_react_redux__.connect)(mapStateToProps, mapDispatchToProps)(__WEBPACK_IMPORTED_MODULE_2__template__.TemplateItemView);
+export default __WEBPACK_IMPORTED_MODULE_1_react_redux__.connect(mapStateToProps, mapDispatchToProps)(__WEBPACK_IMPORTED_MODULE_2__template__.TemplateItemView);
 /***/

@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：282
+ */
+
 (function (r, i, o) {
   (function (t) {
     t.version = "0.17.1";

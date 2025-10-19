@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：283
+ */
+
 module.exports = {
   shareToOthers: "style_shareToOthers__u6OY7",
   qrWrapper: "style_qrWrapper__1uWkX",

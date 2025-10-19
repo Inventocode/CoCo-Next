@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：615
+ */
+
 module.exports = {
   dataViewerGrid: "GridDialog_dataViewerGrid__3V352",
   gridName: "GridDialog_gridName__3jASp",

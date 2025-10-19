@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：hCpk
+ */
+
 "use strict";
 
 /* harmony import */
@@ -23,7 +29,7 @@ var mapStateToProps = function mapStateToProps(state, ownProps) {
   };
 };
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
-  return Object(__WEBPACK_IMPORTED_MODULE_0_redux__.bindActionCreators)({
+  return __WEBPACK_IMPORTED_MODULE_0_redux__.bindActionCreators({
     getBannerListAction: __WEBPACK_IMPORTED_MODULE_3__model_actions__.getBannerListAction,
     getTopicListAction: __WEBPACK_IMPORTED_MODULE_3__model_actions__.getTopicListAction,
     getCourseListAction: __WEBPACK_IMPORTED_MODULE_3__model_actions__.getCourseListAction,
@@ -36,5 +42,5 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   }, dispatch);
 };
 /* harmony default export */
-export default Object(__WEBPACK_IMPORTED_MODULE_1_react_redux__.connect)(mapStateToProps, mapDispatchToProps)(__WEBPACK_IMPORTED_MODULE_2__template__.HomeView);
+export default __WEBPACK_IMPORTED_MODULE_1_react_redux__.connect(mapStateToProps, mapDispatchToProps)(__WEBPACK_IMPORTED_MODULE_2__template__.HomeView);
 /***/

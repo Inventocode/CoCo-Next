@@ -1,8 +1,14 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：MRah
+ */
+
 "use strict";
 
 /* harmony export (binding) */
-export { RegisterContainer };
 /* harmony import */
+export { RegisterContainer };
 import * as __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__ from "@babel/runtime/helpers/esm/asyncToGenerator";
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__ from "@babel/runtime/helpers/esm/slicedToArray";
@@ -45,11 +51,11 @@ var RegisterContainer = function RegisterContainer(props) {
   var switchView = props.switchView;
   var setResetSuccess = props.setResetSuccess;
   var _useState = useState(true);
-  var _useState2 = Object(__WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default)(_useState, 2);
+  var _useState2 = __WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default(_useState, 2);
   var disableRegister = _useState2[0];
   var setDisableRegister = _useState2[1];
   var _useState3 = useState(undefined);
-  var _useState4 = Object(__WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default)(_useState3, 2);
+  var _useState4 = __WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default(_useState3, 2);
   var error = _useState4[0];
   var setError = _useState4[1];
   var isDestory = useRef(false);
@@ -69,10 +75,10 @@ var RegisterContainer = function RegisterContainer(props) {
     };
   });
   var updateRegisterBtn = function updateRegisterBtn() {
-    setDisableRegister(emailInputEl.value === '' || passwordInputEl.value.length < 6);
+    setDisableRegister(emailInputEl.value === "" || passwordInputEl.value.length < 6);
   };
   var onRegisterClick = /*#__PURE__*/function () {
-    var _ref = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default)(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_2__babel_runtime_regenerator___default.mark(function _callee() {
+    var _ref = __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_2__babel_runtime_regenerator___default.mark(function _callee() {
       var email;
       var password;
       var result;
@@ -89,30 +95,30 @@ var RegisterContainer = function RegisterContainer(props) {
               setError(undefined);
               email = emailInputEl.value;
               password = passwordInputEl.value;
-              if (Object(__WEBPACK_IMPORTED_MODULE_9__utils__.validateEmail)(email)) {
+              if (__WEBPACK_IMPORTED_MODULE_9__utils__.validateEmail(email)) {
                 _context.next = 8;
                 break;
               }
               setError({
-                msg: Object(__WEBPACK_IMPORTED_MODULE_10__i18n__.getLanguage)('sign_in_dialog/error/email/format'),
+                msg: __WEBPACK_IMPORTED_MODULE_10__i18n__.getLanguage("sign_in_dialog/error/email/format"),
                 type: __WEBPACK_IMPORTED_MODULE_8__auth__.AuthErrorType.EMAIL
               });
               return _context.abrupt("return");
             case 8:
               ;
-              if (Object(__WEBPACK_IMPORTED_MODULE_9__utils__.validatePassword)(password)) {
+              if (__WEBPACK_IMPORTED_MODULE_9__utils__.validatePassword(password)) {
                 _context.next = 12;
                 break;
               }
               setError({
-                msg: Object(__WEBPACK_IMPORTED_MODULE_10__i18n__.getLanguage)('sign_in_dialog/error/password/format'),
+                msg: __WEBPACK_IMPORTED_MODULE_10__i18n__.getLanguage("sign_in_dialog/error/password/format"),
                 type: __WEBPACK_IMPORTED_MODULE_8__auth__.AuthErrorType.PWD
               });
               return _context.abrupt("return");
             case 12:
               setIsRequesting(true);
               _context.next = 15;
-              return Object(__WEBPACK_IMPORTED_MODULE_8__auth__.handleRegisterByEmail)({
+              return __WEBPACK_IMPORTED_MODULE_8__auth__.handleRegisterByEmail({
                 email: email,
                 password: password
               });
@@ -143,8 +149,8 @@ var RegisterContainer = function RegisterContainer(props) {
     autofocus: true,
     inputStyle: {
       fontSize: 18,
-      width: '352px',
-      height: '44px'
+      width: "352px",
+      height: "44px"
     },
     clearBtn: true,
     maxLength: 100,
@@ -155,26 +161,26 @@ var RegisterContainer = function RegisterContainer(props) {
         setError(undefined);
       }
     },
-    label: Object(__WEBPACK_IMPORTED_MODULE_10__i18n__.getLanguage)('sign_in_dialog/placeholder/email'),
+    label: __WEBPACK_IMPORTED_MODULE_10__i18n__.getLanguage("sign_in_dialog/placeholder/email"),
     autoComplete: "on",
     getInputEl: function getInputEl(el) {
       emailInputEl = el;
     },
     onBlur: function onBlur() {
       if (props.reportMethod) {
-        props.reportMethod('用户信息-邮箱');
+        props.reportMethod("用户信息-邮箱");
       }
     }
   }), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_3_react__.createElement("div", {
     className: "CUI-oversea-sign-in-dialog-input-error"
-  }, isEmailErr() && error && error.msg, error && error.msg === Object(__WEBPACK_IMPORTED_MODULE_10__i18n__.getLanguage)('sign_in_dialog/error/phone/registered') && /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_3_react__.createElement("span", {
+  }, isEmailErr() && error && error.msg, error && error.msg === __WEBPACK_IMPORTED_MODULE_10__i18n__.getLanguage("sign_in_dialog/error/phone/registered") && /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_3_react__.createElement("span", {
     className: "CUI-oversea-sign-in-dialog-link",
     onClick: switchView.bind(_this, __WEBPACK_IMPORTED_MODULE_4__def__.ContentView.LOGIN)
-  }, Object(__WEBPACK_IMPORTED_MODULE_10__i18n__.getLanguage)('sign_in_dialog/login_now'))), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_3_react__.createElement(__WEBPACK_IMPORTED_MODULE_5__base_input__.Input, {
+  }, __WEBPACK_IMPORTED_MODULE_10__i18n__.getLanguage("sign_in_dialog/login_now"))), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_3_react__.createElement(__WEBPACK_IMPORTED_MODULE_5__base_input__.Input, {
     inputStyle: {
       fontSize: 18,
-      width: '352px',
-      height: '44px'
+      width: "352px",
+      height: "44px"
     },
     clearBtn: true,
     onEnterDown: onRegisterClick,
@@ -186,7 +192,7 @@ var RegisterContainer = function RegisterContainer(props) {
       }
     },
     type: "password",
-    label: Object(__WEBPACK_IMPORTED_MODULE_10__i18n__.getLanguage)('sign_in_dialog/placeholder/password_n_tip'),
+    label: __WEBPACK_IMPORTED_MODULE_10__i18n__.getLanguage("sign_in_dialog/placeholder/password_n_tip"),
     autoComplete: "on",
     getInputEl: function getInputEl(el) {
       passwordInputEl = el;
@@ -195,11 +201,11 @@ var RegisterContainer = function RegisterContainer(props) {
       if ((passwordInputEl.value.length < 6 || passwordInputEl.value.length > 20) && passwordInputEl.value.length > 0) {
         setError({
           type: __WEBPACK_IMPORTED_MODULE_8__auth__.AuthErrorType.PWD,
-          msg: Object(__WEBPACK_IMPORTED_MODULE_10__i18n__.getLanguage)('sign_in_dialog/error/password/format')
+          msg: __WEBPACK_IMPORTED_MODULE_10__i18n__.getLanguage("sign_in_dialog/error/password/format")
         });
       }
       if (props.reportMethod) {
-        props.reportMethod('用户信息-注册设置密码');
+        props.reportMethod("用户信息-注册设置密码");
       }
     }
   }), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_3_react__.createElement("div", {
@@ -212,22 +218,22 @@ var RegisterContainer = function RegisterContainer(props) {
     className: "CUI-oversea-sign-in-dialog-sign-in-btn",
     disable: disableRegister,
     onClick: onRegisterClick,
-    "data-report": "\u7528\u6237\u4FE1\u606F-\u6CE8\u518C\u5B8C\u6210"
+    "data-report": "用户信息-注册完成"
   }, isRequesting ? /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_3_react__.createElement(__WEBPACK_IMPORTED_MODULE_7__base_spinner__.Spinner, {
     size: 18,
     themeColor: "10"
   }) : /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_3_react__.createElement("span", {
     className: "CUI-oversea-sign-in-dialog-btn-text"
-  }, Object(__WEBPACK_IMPORTED_MODULE_10__i18n__.getLanguage)('sign_in_dialog/register')))), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_3_react__.createElement("div", {
+  }, __WEBPACK_IMPORTED_MODULE_10__i18n__.getLanguage("sign_in_dialog/register")))), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_3_react__.createElement("div", {
     className: "CUI-oversea-sign-in-dialog-footer"
   }, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_3_react__.createElement("div", {
     className: "CUI-oversea-sign-in-dialog-divide-line"
-  }, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_3_react__.createElement("b", null), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_3_react__.createElement("span", null, "\u2022"), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_3_react__.createElement("b", null)), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_3_react__.createElement(__WEBPACK_IMPORTED_MODULE_6__base_button__.Button, {
+  }, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_3_react__.createElement("b", null), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_3_react__.createElement("span", null, "•"), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_3_react__.createElement("b", null)), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_3_react__.createElement(__WEBPACK_IMPORTED_MODULE_6__base_button__.Button, {
     height: "44px",
     width: "calc(100% - 80px)",
     onClick: switchView.bind(_this, __WEBPACK_IMPORTED_MODULE_4__def__.ContentView.LOGIN),
     type: "secondary"
-  }, Object(__WEBPACK_IMPORTED_MODULE_10__i18n__.getLanguage)('sign_in_dialog/already_has_account'))));
+  }, __WEBPACK_IMPORTED_MODULE_10__i18n__.getLanguage("sign_in_dialog/already_has_account"))));
 };
 RegisterContainer.defaultProps = {
   reportMethod: function reportMethod() {

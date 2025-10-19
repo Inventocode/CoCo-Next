@@ -1,9 +1,9 @@
 "use strict";
 
-export { xl as d };
-export { Dl as c };
+export { store as d };
+export { getStore as c };
 export { dispatch as a };
-export { Ll as b };
+export { getLanguage as b };
 import r = require("redux");
 import o = require("../../../unrestored/shared/1531/2584/38/486/index");
 import i = require("../../../unrestored/shared/1531/2584/25/index");
@@ -11,7 +11,7 @@ import a = require("../../../unrestored/shared/1531/2584/6");
 import s = require("../../../unrestored/shared/1531/2584/38/66");
 import c = require("./messages-wrapper");
 import l = require("../../../unrestored/shared/1531/2584/18");
-import u = require("../widget/custom/type");
+import * as CustomWidgetType from "../widget/custom/type"
 import d = require("../../../unrestored/shared/1531/2584/78");
 var p = window.localStorage.getItem("LANGUAGE") || navigator.language;
 var f = {
@@ -245,7 +245,7 @@ function x(e, t) {
   var n = t.payload.widgetTypes;
   return e.update("myExtensionWidgets", function (e) {
     return e.filter(function (e) {
-      return !n.includes(u.c(e.type, true));
+      return !n.includes(CustomWidgetType.standardize(e.type, true));
     });
   });
 }
@@ -1825,7 +1825,7 @@ import jt = require("../../../unrestored/shared/1531/2584/2627/index");
 import Nt = require("../../../unrestored/shared/1531/2584/38/607/index");
 import Rt = require("../../../unrestored/shared/1531/2584/623");
 import kt = require("../../../unrestored/shared/1531/2584/14");
-import xt = require("../../../unrestored/shared/1531/2584/41");
+import xt = require("../utils/network/axios-with-credentials");
 import Dt = require("../../../unrestored/shared/1531/2584/59/index");
 var Mt = "".concat(Dt.a.serverHost, "/coconut");
 function Lt(e) {
@@ -2141,7 +2141,7 @@ import an = require("../../../unrestored/shared/1531/2584/214");
 import sn = require("../../../unrestored/shared/1531/2584/305");
 import cn = require("../../../unrestored/shared/1531/2584/5");
 import ln = require("../../../unrestored/shared/1531/2584/64");
-import un = require("../ui/language");
+import Language = require("../ui/language");
 import dn = require("../../../unrestored/shared/1531/2584/24/index");
 import pn = require("../../../unrestored/shared/1531/2584/49/index");
 import fn = require("../../../unrestored/shared/1531/2584/15");
@@ -2158,8 +2158,8 @@ function gn(e) {
 }
 import _n = require("../../../unrestored/shared/1531/2584/129");
 import vn = require("../widget/custom/load");
-import bn = require("../../../unrestored/shared/1531/2584/98");
-import yn = require("../../../unrestored/shared/1531/2584/182");
+import bn = require("../widget/custom/storage");
+import * as WidgetShop from "../widget/custom/shop"
 import En = require("../../../unrestored/shared/1531/2584/38/376");
 import On = require("../../../unrestored/shared/1531/2584/38/217/index");
 import wn = require("../../../unrestored/shared/1531/2584/146");
@@ -2188,13 +2188,13 @@ import Dn = require("../../../unrestored/shared/1531/2584/38/142");
 import Mn = require("../../../unrestored/shared/1531/2584/112");
 function Ln() {
   var e;
-  var t = xl.getState();
+  var t = store.getState();
   var n = t.project.id;
   var r = null === (e = t.common.userInfo) || undefined === e ? undefined : e.id;
   return "".concat("DATA_WATCH_VARIABLE_LIST", "_").concat(r, "_").concat(n);
 }
 function Pn() {
-  var e = xl.getState().dataWatch.variableList;
+  var e = store.getState().dataWatch.variableList;
   var t = [];
   try {
     var n;
@@ -2236,7 +2236,7 @@ function Bn() {
 }
 function Fn(e) {
   var t;
-  var n = xl.getState();
+  var n = store.getState();
   var r = n.project.screens;
   var o = n.project.id;
   var i = [];
@@ -2354,8 +2354,8 @@ function Fn(e) {
   }
   for (var u = 0, d = i; u < d.length; u++) {
     var p = d[u];
-    xl.dispatch(c.Pj(p.id, "isWatching", true));
-    xl.dispatch(c.Pj(p.id, "selected", true));
+    store.dispatch(c.Pj(p.id, "isWatching", true));
+    store.dispatch(c.Pj(p.id, "selected", true));
   }
 }
 function Gn() {
@@ -2956,7 +2956,7 @@ function Gr(e) {
         case 34:
           y.next = 36;
           return Tt.e(c.mj({
-            message: un.c(i, "importImageSuccess").toString(),
+            message: Language.c(i, "importImageSuccess").toString(),
             duration: 1e3,
             type: "success"
           }));
@@ -3388,7 +3388,7 @@ function qr(e) {
         case 31:
           _.next = 33;
           return Tt.e(c.mj({
-            message: un.c(i, "importSoundSuccess").toString(),
+            message: Language.c(i, "importSoundSuccess").toString(),
             type: "success"
           }));
         case 33:
@@ -3774,7 +3774,7 @@ function ro(e) {
         case 26:
           g.next = 28;
           return Tt.e(c.mj({
-            message: un.c(o, "importImageSuccess").toString(),
+            message: Language.c(o, "importImageSuccess").toString(),
             duration: 1e3,
             type: "success"
           }));
@@ -4563,12 +4563,12 @@ function ti() {
           t.next = 5;
           return Tt.e(c.zh({
             onConfirm: function () {
-              xl.dispatch(c.Ch());
+              store.dispatch(c.Ch());
             },
-            allowText: un.c(e, "cloudSpace.login").toString(),
-            cancelText: un.c(e, "cloudSpace.cancelLogin").toString(),
-            title: un.c(e, "cloudSpace.NotLoginTitle").toString(),
-            content: un.c(e, "cloudSpace.notLoginDescription").toString()
+            allowText: Language.c(e, "cloudSpace.login").toString(),
+            cancelText: Language.c(e, "cloudSpace.cancelLogin").toString(),
+            title: Language.c(e, "cloudSpace.NotLoginTitle").toString(),
+            content: Language.c(e, "cloudSpace.notLoginDescription").toString()
           }));
         case 5:
         case "end":
@@ -4606,12 +4606,12 @@ function ni(e) {
           });
           o.next = 7;
           return Tt.e(c.zh({
-            allowText: un.c(t, "know").toString(),
-            title: un.c(t, "cloudSpace.dataSourceNotExistDesc").toString(),
+            allowText: Language.c(t, "know").toString(),
+            title: Language.c(t, "cloudSpace.dataSourceNotExistDesc").toString(),
             content: r,
             cancelBtnVisible: false,
             onConfirm: function () {
-              xl.dispatch(c.Ij(new Date().getTime()));
+              store.dispatch(c.Ij(new Date().getTime()));
             }
           }));
         case 7:
@@ -4634,7 +4634,7 @@ function ri(e, t) {
           return Tt.f(_r.s);
         case 2:
           n = a.sent;
-          r = un.c(n, t) ? un.c(n, t) : t;
+          r = Language.c(n, t) ? Language.c(n, t) : t;
           o = e.map(function (e) {
             return bo.a.createElement("div", {
               className: "removedCloudDB",
@@ -4651,7 +4651,7 @@ function ri(e, t) {
             children: [o]
           });
           Ro.appendDialog({
-            allowText: un.c(n, "know").toString(),
+            allowText: Language.c(n, "know").toString(),
             title: "以下控件绑定的云数据源发生异常(".concat(r, ")，请重新绑定"),
             content: i,
             cancelBtnVisible: false
@@ -4676,7 +4676,7 @@ function oi(e, t) {
           return Tt.f(_r.s);
         case 2:
           n = a.sent;
-          r = un.c(n, t);
+          r = Language.c(n, t);
           o = e.map(function (e) {
             return bo.a.createElement("div", {
               className: "removedCloudDB",
@@ -4693,8 +4693,8 @@ function oi(e, t) {
             children: [o]
           });
           Ro.appendDialog({
-            allowText: un.c(n, "know").toString(),
-            title: un.c(n, "cloudSpace.dataSourceExceedLimitError", {
+            allowText: Language.c(n, "know").toString(),
+            title: Language.c(n, "cloudSpace.dataSourceExceedLimitError", {
               type: r
             }).toString(),
             content: i,
@@ -6096,7 +6096,7 @@ function Qa(e) {
           return Tt.f(_r.C);
         case 6:
           i = p.sent;
-          a = on.B(un.c(o, "defaultScreenTitle").toString(), i);
+          a = on.B(Language.c(o, "defaultScreenTitle").toString(), i);
           s = on.A(a);
           l = i.size;
           u = Jt.z.addWorkspaceData({
@@ -6130,9 +6130,9 @@ function Qa(e) {
   }, Ai);
 }
 function Za(e) {
-  var t = on.A(un.c(e, "defaultScreenTitle").toString());
+  var t = on.A(Language.c(e, "defaultScreenTitle").toString());
   return {
-    title: un.c(e, "newProjectTitle").toString(),
+    title: Language.c(e, "newProjectTitle").toString(),
     version: W.e,
     blockly: At.a({}, t.id, {
       screenId: t.id,
@@ -6178,7 +6178,7 @@ function Ja(e) {
           r.next = 9;
           return Tt.e(c.zh({
             title: "error",
-            content: un.c(n, "MyProject.projectHasDeleted").toString(),
+            content: Language.c(n, "MyProject.projectHasDeleted").toString(),
             cancelBtnVisible: false
           }));
         case 9:
@@ -6192,7 +6192,7 @@ function Ja(e) {
           r.next = 14;
           return Tt.e(c.zh({
             title: "error",
-            content: un.c(n, "MyProject.projectHasNoRermission").toString(),
+            content: Language.c(n, "MyProject.projectHasNoRermission").toString(),
             cancelBtnVisible: false
           }));
         case 14:
@@ -6205,8 +6205,8 @@ function Ja(e) {
           }
           r.next = 19;
           return Tt.e(c.zh({
-            title: un.c(n, "OT.editPermissionLostTitle").toString(),
-            content: un.c(n, "OT.editPermissionLostDescription").toString(),
+            title: Language.c(n, "OT.editPermissionLostTitle").toString(),
+            content: Language.c(n, "OT.editPermissionLostDescription").toString(),
             cancelBtnVisible: false
           }));
         case 19:
@@ -6606,7 +6606,7 @@ function rs(e) {
           S = e.cloudDictList;
           I = e.cloudTableList;
           $.next = 5;
-          return Tt.b(vn.x, _, b);
+          return Tt.b(vn.loadWidgetFromStorage, _, b);
         case 5:
           A = hn.f(e.screens);
           $.next = 8;
@@ -7206,7 +7206,7 @@ function ls(e) {
           o.next = 10;
           return Tt.e(c.mj({
             type: "error",
-            message: un.c(t, "notHavePermissionToDeleteCloudDb").toString()
+            message: Language.c(t, "notHavePermissionToDeleteCloudDb").toString()
           }));
         case 10:
           r = false;
@@ -7245,7 +7245,7 @@ function us(e) {
           o.next = 11;
           return Tt.e(c.mj({
             type: "error",
-            message: un.c(t, "cloudDbCountOverflowTitle").toString()
+            message: Language.c(t, "cloudDbCountOverflowTitle").toString()
           }));
         case 11:
           r = false;
@@ -7259,7 +7259,7 @@ function us(e) {
           o.next = 17;
           return Tt.e(c.mj({
             type: "error",
-            message: un.c(t, "notHavePermissionToAddCloudDb").toString()
+            message: Language.c(t, "notHavePermissionToAddCloudDb").toString()
           }));
         case 17:
           r = false;
@@ -7423,7 +7423,7 @@ function ps(e, t, n) {
       switch (b.prev = b.next) {
         case 0:
           u = function (e) {
-            return "string" === typeof e ? un.f(r, e) : (e.constructor !== Array && e.constructor !== Object || Object.entries(e).forEach(function (t) {
+            return "string" === typeof e ? Language.f(r, e) : (e.constructor !== Array && e.constructor !== Object || Object.entries(e).forEach(function (t) {
               var n = It.a(t, 2);
               var r = n[0];
               var o = n[1];
@@ -7468,7 +7468,7 @@ function ps(e, t, n) {
             h = l[m];
             h = on.D(e, d, h);
           } else {
-            f = null === (g = un.c(r, s.title)) || undefined === g ? undefined : g.toString();
+            f = null === (g = Language.c(r, s.title)) || undefined === g ? undefined : g.toString();
             f = on.D(e, d, f);
           }
           _ = ln.a(e);
@@ -7716,7 +7716,7 @@ function ms(e) {
         case 54:
           f = v.sent;
           v.next = 57;
-          return Tt.b(wn.b, un.c(f, "cloudDb.defaultName").toString(), hn.a(p) ? p : "");
+          return Tt.b(wn.b, Language.c(f, "cloudDb.defaultName").toString(), hn.a(p) ? p : "");
         case 57:
           if ((h = v.sent).id) {
             v.next = 62;
@@ -7725,7 +7725,7 @@ function ms(e) {
           v.next = 61;
           return Tt.e(c.mj({
             type: "error",
-            message: un.c(f, "cloudDBWidget.generateError").toString()
+            message: Language.c(f, "cloudDBWidget.generateError").toString()
           }));
         case 61:
           return v.abrupt("return");
@@ -7780,7 +7780,7 @@ function ms(e) {
           v.next = 81;
           return Tt.b(bs, n, l);
         case 81:
-          yn.a(l.type, null === u || undefined === u ? undefined : u.id);
+          WidgetShop.reportUse(l.type, null === u || undefined === u ? undefined : u.id);
           return v.abrupt("return", l);
         case 83:
         case "end":
@@ -7809,7 +7809,7 @@ function gs(e) {
           return Tt.f(_r.t);
         case 4:
           if (n = l.sent, !(r = n.find(function (e) {
-            return u.c(e.type, true) === t;
+            return CustomWidgetType.standardize(e.type, true) === t;
           }))) {
             l.next = 11;
             break;
@@ -7827,10 +7827,10 @@ function gs(e) {
           l.next = 16;
           return Tt.e(c.mj({
             type: "error",
-            message: un.c(o, "WidgetList.addFailureToast").toString()
+            message: Language.c(o, "WidgetList.addFailureToast").toString()
           }));
         case 16:
-          if (u.e(t)) {
+          if (CustomWidgetType.isSafeExtensions(t)) {
             a = bn.f(t);
             s = {
               id: a.id,
@@ -7892,10 +7892,10 @@ function _s(e, t, n) {
           return f.abrupt("return");
         case 17:
           p.parentId = t;
-          p.title = un.c(r, u.titleMessageId).toString();
+          p.title = Language.c(r, u.titleMessageId).toString();
           p.attributes = a.a(a.a({}, p.attributes), u.attributes);
           if (p.type === cn.H) {
-            p.attributes.content = un.c(r, u.contentMessageId || "").toString();
+            p.attributes.content = Language.c(r, u.contentMessageId || "").toString();
             p.attributes.textAlign = "left";
           }
           f.next = 23;
@@ -7947,8 +7947,8 @@ function vs(e) {
             a.next = 11;
             break;
           }
-          o = null === (r = un.c(t, n.title)) || undefined === r ? undefined : r.toString();
-          i = un.c(t, "WidgetList.addSuccessToast", {
+          o = null === (r = Language.c(t, n.title)) || undefined === r ? undefined : r.toString();
+          i = Language.c(t, "WidgetList.addSuccessToast", {
             widgetTitle: o
           }).toString();
           a.next = 11;
@@ -7988,7 +7988,7 @@ function bs(e, t) {
           return Tt.f(_r.u);
         case 11:
           a = c.sent;
-          s = null === (n = un.c(r, o.previewAreaWidgetTitle)) || undefined === n ? undefined : n.toString();
+          s = null === (n = Language.c(r, o.previewAreaWidgetTitle)) || undefined === n ? undefined : n.toString();
           tn.a("AddWidgetToStage", {
             screenId: e,
             screenName: (null === i || undefined === i ? undefined : i.title) || "",
@@ -8188,11 +8188,11 @@ function ws() {
             return wn.j(t);
           case 4:
             if (n = e.sent) {
-              r = xl.getState().common.language;
-              xl.dispatch(c.mj({
+              r = store.getState().common.language;
+              store.dispatch(c.mj({
                 type: "error",
                 duration: 4e3,
-                message: un.c(r, n).toString()
+                message: Language.c(r, n).toString()
               }));
             }
           case 6:
@@ -8360,7 +8360,7 @@ function Ts(e, t) {
           return Tt.e(c.mj({
             duration: 4e3,
             showPrefixIcon: false,
-            message: un.c(r, "project.saving").toString()
+            message: Language.c(r, "project.saving").toString()
           }));
         case 40:
           C.next = 42;
@@ -8614,7 +8614,7 @@ function As(e) {
             var t;
             var r = e.type;
             var o = bn.f(r);
-            if (r.includes(u.b) && o) {
+            if (r.includes(CustomWidgetType.UNSAFE_EXTENSION_PREFIX) && o) {
               var c = o;
               jn.a.forEach(function (e) {
                 var t;
@@ -8632,7 +8632,7 @@ function As(e) {
                 } else {
                   var p = on.Db(r);
                   if (p) {
-                    var f = un.c(n, p.title);
+                    var f = Language.c(n, p.title);
                     s.add(f);
                   }
                 }
@@ -8645,9 +8645,9 @@ function As(e) {
           }
           f.next = 21;
           return Tt.e(c.zh({
-            allowText: un.c(n, "cloudDb.know").toString(),
+            allowText: Language.c(n, "cloudDb.know").toString(),
             title: "error",
-            content: un.c(n, "Play.widgetNotSupportsForbiddenKeywords", {
+            content: Language.c(n, "Play.widgetNotSupportsForbiddenKeywords", {
               widgetTypeNames: Array.from(i).join("、"),
               keywords: Array.from(a).join("、")
             }).toString(),
@@ -8664,7 +8664,7 @@ function As(e) {
           return Tt.e(c.mj({
             type: "info",
             duration: 4e3,
-            message: un.c(n, "Play.widgetNotSupportsWebPlatform", {
+            message: Language.c(n, "Play.widgetNotSupportsWebPlatform", {
               widgetTypeNames: Array.from(s).join("、")
             }).toString()
           }));
@@ -8700,7 +8700,7 @@ function As(e) {
             type: "lintError",
             screenId: f.t0.screenId,
             blockId: f.t0.blockId,
-            message: un.c(n, f.t0.message, f.t0.data) + ""
+            message: Language.c(n, f.t0.message, f.t0.data) + ""
           };
           f.next = 46;
           return Tt.e(c.nf(p));
@@ -8756,7 +8756,7 @@ function js(e) {
             type: "warning",
             screenId: "",
             blockId: "",
-            message: un.c(t, "slider.maxValueEqualMinValue", {
+            message: Language.c(t, "slider.maxValueEqualMinValue", {
               title: o.title
             }).toString()
           };
@@ -8771,7 +8771,7 @@ function js(e) {
             type: "warning",
             screenId: "",
             blockId: "",
-            message: un.c(t, "slider.stepGreaterThanRange", {
+            message: Language.c(t, "slider.stepGreaterThanRange", {
               title: o.title
             }).toString()
           };
@@ -9731,7 +9731,7 @@ function Ys(e) {
     for (;;) {
       switch (f.prev = f.next) {
         case 0:
-          if (t = e.payload, n = t.widgetId, r = t.key, o = t.value, on.Vb(n, r, o), i = xl.getState().project.id, n.includes(cn.G) && "db" === r && xn.a.get(n).then(function (e) {
+          if (t = e.payload, n = t.widgetId, r = t.key, o = t.value, on.Vb(n, r, o), i = store.getState().project.id, n.includes(cn.G) && "db" === r && xn.a.get(n).then(function (e) {
             if (e) {
               Tt.e(c.Pj(n, "value", e));
             } else {
@@ -9785,7 +9785,7 @@ function Ys(e) {
               d = on.C(n, s.type, d);
             } else {
               p = l.previewAreaWidgetTitle;
-              p = un.d(p);
+              p = Language.d(p);
               d = on.C(n, s.type, p);
             }
             if (u !== d) {
@@ -10005,7 +10005,7 @@ function Js() {
           t = 1;
           n = 100;
           d.next = 6;
-          return Tt.b(yn.c, t, n);
+          return Tt.b(WidgetShop.boughtList, t, n);
         case 6:
           if (r = d.sent, o = r.list, i = r.total, a = Math.ceil(i / n), e = e.concat(o), !(a > 1)) {
             d.next = 22;
@@ -10018,7 +10018,7 @@ function Js() {
             break;
           }
           d.next = 16;
-          return Tt.b(yn.c, t, n);
+          return Tt.b(WidgetShop.boughtList, t, n);
         case 16:
           s = d.sent;
           l = s.list;
@@ -10128,7 +10128,7 @@ function ec(e, t) {
           return Tt.e(c.jf(i.id, d.id));
         case 18:
           if (!d.parentId) {
-            yn.a(d.type, null === r || undefined === r ? undefined : r.id);
+            WidgetShop.reportUse(d.type, null === r || undefined === r ? undefined : r.id);
           }
         case 19:
           f.next = 13;
@@ -10233,7 +10233,7 @@ function tc(e) {
           return Tt.e(c.jf(s, p.id));
         case 34:
           if (!p.parentId) {
-            yn.a(p.type, null === r || undefined === r ? undefined : r.id);
+            WidgetShop.reportUse(p.type, null === r || undefined === r ? undefined : r.id);
           }
         case 35:
           _.next = 15;
@@ -10310,7 +10310,7 @@ function nc(e) {
           E.next = 17;
           return Tt.f(_r.J);
         case 17:
-          if (f = E.sent, h = s.widget.attributes, m = s.widget.isGlobalWidget, g = s.title ? on.D(o, p.widgetIds, un.c(l, s.title).toString()) : "", _ = ln.a(o), v = {
+          if (f = E.sent, h = s.widget.attributes, m = s.widget.isGlobalWidget, g = s.title ? on.D(o, p.widgetIds, Language.c(l, s.title).toString()) : "", _ = ln.a(o), v = {
             id: _,
             title: g,
             type: cn.c,
@@ -10344,7 +10344,7 @@ function nc(e) {
           if (!(null === (y = pn.oTHelper.widget) || undefined === y)) {
             y.clientOp.addBrushAndActorWidgetOp(p.id, v, b.id, i.a(b.widgetIds));
           }
-          yn.a(v.type, null === f || undefined === f ? undefined : f.id);
+          WidgetShop.reportUse(v.type, null === f || undefined === f ? undefined : f.id);
         case 39:
         case "end":
           return E.stop();
@@ -10409,10 +10409,10 @@ function rc(e) {
         case 20:
           if (f = E.sent, h = G.cloneDeep(s.widget.attributes), m = s.widget.isGlobalWidget, h.actionList.push({
             id: ln.a(Nn.a),
-            name: un.c(l, "ActorStyleDialog.defaultActionName").toString(),
+            name: Language.c(l, "ActorStyleDialog.defaultActionName").toString(),
             styleList: [],
             interval: 200
-          }), g = s.title ? on.D(a, p.widgetIds, un.c(l, s.title).toString()) : "", _ = ln.a(a), v = {
+          }), g = s.title ? on.D(a, p.widgetIds, Language.c(l, s.title).toString()) : "", _ = ln.a(a), v = {
             id: _,
             title: g,
             type: cn.a,
@@ -10449,7 +10449,7 @@ function rc(e) {
           if (!(null === (y = pn.oTHelper.widget) || undefined === y)) {
             y.clientOp.addBrushAndActorWidgetOp(p.id, v, b.id, i.a(b.widgetIds));
           }
-          yn.a(v.type, null === f || undefined === f ? undefined : f.id);
+          WidgetShop.reportUse(v.type, null === f || undefined === f ? undefined : f.id);
         case 43:
         case "end":
           return E.stop();
@@ -10514,7 +10514,7 @@ function oc(e) {
         case 25:
           l.next = 27;
           return Tt.e(c.mj({
-            message: un.c(o, "theBlockHasBeRemoved").toString(),
+            message: Language.c(o, "theBlockHasBeRemoved").toString(),
             showCloseIcon: false,
             showPrefixIcon: false,
             type: "error"
@@ -10780,7 +10780,7 @@ function uc() {
             break;
           }
           r = function () {
-            return xl.dispatch(c.Ii(true));
+            return store.dispatch(c.Ii(true));
           };
           o.next = 21;
           return Tt.e(c.kj(true, "pack", r));
@@ -10847,12 +10847,12 @@ function pc() {
           t.next = 5;
           return Tt.e(c.zh({
             onConfirm: function () {
-              xl.dispatch(c.Ch());
+              store.dispatch(c.Ch());
             },
-            allowText: un.c(e, "cloudDbUserLogin").toString(),
-            cancelText: un.c(e, "cloudDbUserCancelLogin").toString(),
-            title: un.c(e, "cloudDbUserNotLoginTitle").toString(),
-            content: un.c(e, "cloudDbUserNotLoginDescription").toString()
+            allowText: Language.c(e, "cloudDbUserLogin").toString(),
+            cancelText: Language.c(e, "cloudDbUserCancelLogin").toString(),
+            title: Language.c(e, "cloudDbUserNotLoginTitle").toString(),
+            content: Language.c(e, "cloudDbUserNotLoginDescription").toString()
           }));
         case 5:
         case "end":
@@ -11077,8 +11077,8 @@ function fc() {
           O.f();
           return k.finish(100);
         case 103:
-          I = un.d("cloudDbCountOverflowTitle");
-          A = un.d("cloudDbCountOverflowDescription", {
+          I = Language.d("cloudDbCountOverflowTitle");
+          A = Language.d("cloudDbCountOverflowDescription", {
             workDbCount: l.length.toString(),
             selfDbCount: a.length.toString(),
             maxCount: sn.f.toString()
@@ -11096,8 +11096,8 @@ function fc() {
           });
         case 106:
           if (o) {
-            j = un.d("cloudDbNameConflictTitle");
-            N = un.d("cloudDbNameConflictDescription");
+            j = Language.d("cloudDbNameConflictTitle");
+            N = Language.d("cloudDbNameConflictDescription");
             jt.a.info({
               title: j,
               icon: null,
@@ -11172,7 +11172,7 @@ function hc() {
           });
           a.next = 20;
           return Tt.e(c.mj({
-            message: un.c(e, "cloudDb.noLoginError").toString(),
+            message: Language.c(e, "cloudDb.noLoginError").toString(),
             type: "info"
           }));
         case 20:
@@ -11204,8 +11204,8 @@ function hc() {
                 Jt.g.updateToolBoxWidgetTitle(n, s);
                 Jt.y(e.id, s, "CLOUD_DB");
                 on.Vb(n, "name", s);
-                xl.dispatch(c.Uj());
-                xl.dispatch(c.Qj());
+                store.dispatch(c.Uj());
+                store.dispatch(c.Qj());
               }
               if (e.attributes.primaryKey !== a.primary_column) {
                 i = true;
@@ -11213,7 +11213,7 @@ function hc() {
               }
               if (JSON.stringify(e.attributes.columns) !== JSON.stringify(a.columns)) {
                 i = true;
-                xl.dispatch(c.zg(t, a.columns));
+                store.dispatch(c.zg(t, a.columns));
               }
             } else {
               o = true;
@@ -11226,9 +11226,9 @@ function hc() {
           }
           a.next = 34;
           return Tt.e(c.zh({
-            allowText: un.c(e, "cloudDb.know").toString(),
-            title: un.c(e, "cloudDb.dataRemoveTitle").toString(),
-            content: un.c(e, "cloudDb.dataRemoveContent").toString(),
+            allowText: Language.c(e, "cloudDb.know").toString(),
+            title: Language.c(e, "cloudDb.dataRemoveTitle").toString(),
+            content: Language.c(e, "cloudDb.dataRemoveContent").toString(),
             cancelBtnVisible: false
           }));
         case 34:
@@ -11241,7 +11241,7 @@ function hc() {
           }
           a.next = 39;
           return Tt.e(c.mj({
-            message: un.c(e, "cloudDb.dataChangeNotice").toString(),
+            message: Language.c(e, "cloudDb.dataChangeNotice").toString(),
             type: "error"
           }));
         case 39:
@@ -11474,7 +11474,7 @@ function _c(e) {
           i = s.sent;
           s.next = 31;
           return Tt.e(c.mj({
-            message: un.c(i, "History.revertSuccess").toString(),
+            message: Language.c(i, "History.revertSuccess").toString(),
             type: "success"
           }));
         case 31:
@@ -11801,7 +11801,7 @@ function Hc() {
           n.next = 5;
           return Tt.e(c.mj({
             type: "error",
-            message: (null === (e = un.c(t, "noSelectDoc")) || undefined === e ? undefined : e.toString()) || "",
+            message: (null === (e = Language.c(t, "noSelectDoc")) || undefined === e ? undefined : e.toString()) || "",
             showCloseIcon: false
           }));
         case 5:
@@ -12046,7 +12046,7 @@ function qc(e) {
           d.next = 13;
           return Tt.e(c.Pj(r, "defaultValue", a));
         case 13:
-          if (xl.getState().project.playing) {
+          if (store.getState().project.playing) {
             d.next = 17;
             break;
           }
@@ -12105,7 +12105,7 @@ function Xc(e) {
           d.next = 13;
           return Tt.e(c.Pj(r, "defaultValue", a));
         case 13:
-          if (xl.getState().project.playing) {
+          if (store.getState().project.playing) {
             d.next = 17;
             break;
           }
@@ -12191,7 +12191,7 @@ function Jc(e) {
           d.next = 11;
           return Tt.e(c.Pj(r, "defaultValue", a));
         case 11:
-          if (xl.getState().project.playing) {
+          if (store.getState().project.playing) {
             d.next = 15;
             break;
           }
@@ -12759,14 +12759,17 @@ if (!window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) {
   window.compose;
 }
 var kl = o.a();
-var xl = r.createStore(Ot, r.applyMiddleware(kl));
-function Dl() {
-  return xl;
+var store = r.createStore(Ot, r.applyMiddleware(kl));
+
+export function getStore() {
+  return store
 }
+
 kl.run(Rl);
 export function dispatch(e) {
-  return xl.dispatch(e);
-};
-function Ll() {
-  return xl.getState().common.language;
+  return store.dispatch(e);
+}
+
+export function getLanguage(): Language.Language {
+  return store.getState().common.language
 }

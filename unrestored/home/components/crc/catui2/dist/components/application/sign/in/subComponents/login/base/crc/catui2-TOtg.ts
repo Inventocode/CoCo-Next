@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：TOtg
+ */
+
 "use strict";
 
 /* harmony import */
@@ -103,8 +109,8 @@ import * as __WEBPACK_IMPORTED_MODULE_27__components_application_kitten_video_pl
 /* ========= 其他方法 ========= */
 // some easter egg maybe?
 var styledLog = function styledLog(msg) {
-  return console.log("%c ".concat(msg, " %c %c"), 'border-radius:5px;padding:2px;font-weight:bold;background:#1fb6ff;color:white;', '', '');
+  return console.log("%c ".concat(msg, " %c %c"), "border-radius:5px;padding:2px;font-weight:bold;background:#1fb6ff;color:white;", "", "");
 };
-styledLog('Built with CatUI 2 🐱');
+styledLog("Built with CatUI 2 🐱");
 
 /***/

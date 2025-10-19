@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：396
+ */
+
 module.exports = {
   inputRow: "style_inputRow__1hfPD",
   mask: "style_mask__7vbTr",

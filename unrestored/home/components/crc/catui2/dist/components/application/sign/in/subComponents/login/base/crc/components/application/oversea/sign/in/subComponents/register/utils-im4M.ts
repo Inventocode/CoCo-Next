@@ -1,10 +1,16 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：im4M
+ */
+
 "use strict";
 
 /* unused harmony export validatePhoneNumber */
 /* unused harmony export validCode */
 /* harmony export (immutable) */
-export { validatePassword };
 /* harmony export (immutable) */
+export { validatePassword };
 export { validateEmail };
 function validatePhoneNumber(phone) {
   return /^1[3456789]\d{9}$/.test(phone);

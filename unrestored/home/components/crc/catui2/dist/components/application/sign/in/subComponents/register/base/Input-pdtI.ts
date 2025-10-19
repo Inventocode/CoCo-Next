@@ -1,8 +1,14 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：pdtI
+ */
+
 "use strict";
 
 /* harmony export (binding) */
-export { Input };
 /* harmony import */
+export { Input };
 import * as __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_classCallCheck__ from "@babel/runtime/helpers/esm/classCallCheck";
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_createClass__ from "@babel/runtime/helpers/esm/createClass";
@@ -60,15 +66,15 @@ var _styleModuleImportMap = {
 function _createSuper(Derived) {
   var hasNativeReflectConstruct = _isNativeReflectConstruct();
   return function _createSuperInternal() {
-    var Super = Object(__WEBPACK_IMPORTED_MODULE_5__babel_runtime_helpers_esm_getPrototypeOf__.default)(Derived);
+    var Super = __WEBPACK_IMPORTED_MODULE_5__babel_runtime_helpers_esm_getPrototypeOf__.default(Derived);
     var result;
     if (hasNativeReflectConstruct) {
-      var NewTarget = Object(__WEBPACK_IMPORTED_MODULE_5__babel_runtime_helpers_esm_getPrototypeOf__.default)(this).constructor;
+      var NewTarget = __WEBPACK_IMPORTED_MODULE_5__babel_runtime_helpers_esm_getPrototypeOf__.default(this).constructor;
       result = Reflect.construct(Super, arguments, NewTarget);
     } else {
       result = Super.apply(this, arguments);
     }
-    return Object(__WEBPACK_IMPORTED_MODULE_4__babel_runtime_helpers_esm_possibleConstructorReturn__.default)(this, result);
+    return __WEBPACK_IMPORTED_MODULE_4__babel_runtime_helpers_esm_possibleConstructorReturn__.default(this, result);
   };
 }
 function _isNativeReflectConstruct() {
@@ -90,26 +96,26 @@ function _isNativeReflectConstruct() {
 }
 var HINT_PADDING_OFFSET_Y = 12;
 var Input = /*#__PURE__*/function (_React$Component) {
-  Object(__WEBPACK_IMPORTED_MODULE_3__babel_runtime_helpers_esm_inherits__.default)(Input, _React$Component);
+  __WEBPACK_IMPORTED_MODULE_3__babel_runtime_helpers_esm_inherits__.default(Input, _React$Component);
   var _super = _createSuper(Input);
   function Input(props) {
     var _this$props$value$toS;
     var _this$props$value;
     var _this;
-    Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_classCallCheck__.default)(this, Input);
+    __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_classCallCheck__.default(this, Input);
     _this = _super.call(this, props);
-    Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Object(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default)(_this), "input", null);
-    Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Object(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default)(_this), "hint", null);
-    Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Object(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default)(_this), "hintTimer", null);
-    Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Object(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default)(_this), "mousePos", {
+    __WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default(_this), "input", null);
+    __WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default(_this), "hint", null);
+    __WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default(_this), "hintTimer", null);
+    __WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default(_this), "mousePos", {
       left: 0,
       top: 0
     });
-    Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Object(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default)(_this), "valueBeforeFocus", '');
-    Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Object(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default)(_this), "inputWrap", null);
-    Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Object(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default)(_this), "isOnComposition", false);
-    Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Object(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default)(_this), "valueBeforeChineseInput", '');
-    Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Object(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default)(_this), "clearInput", function () {
+    __WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default(_this), "valueBeforeFocus", "");
+    __WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default(_this), "inputWrap", null);
+    __WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default(_this), "isOnComposition", false);
+    __WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default(_this), "valueBeforeChineseInput", "");
+    __WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default(_this), "clearInput", function () {
       if (_this.props.label) {
         _this.setState({
           showLabel: true
@@ -118,15 +124,15 @@ var Input = /*#__PURE__*/function (_React$Component) {
       if (!_this.input) {
         return;
       }
-      fireChangeEvent(_this.input, ''); // 异步保持 focus，否则会丢失。
+      fireChangeEvent(_this.input, ""); // 异步保持 focus，否则会丢失。
       setTimeout(function () {
         var _this$input;
         return (_this$input = _this.input) === null || _this$input === undefined ? undefined : _this$input.focus();
       });
     });
-    Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Object(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default)(_this), "renderIcons", function (type) {
-      var icons = type === 'su' ? _this.props.iconsSuffix : _this.props.iconsPrefix;
-      if (typeof icons === 'function') {
+    __WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default(_this), "renderIcons", function (type) {
+      var icons = type === "su" ? _this.props.iconsSuffix : _this.props.iconsPrefix;
+      if (typeof icons === "function") {
         return icons();
       }
       if (Array.isArray(icons) && isIconType(icons)) {
@@ -137,7 +143,7 @@ var Input = /*#__PURE__*/function (_React$Component) {
       }
       return null;
     });
-    Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Object(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default)(_this), "__renderIcons", function (icons) {
+    __WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default(_this), "__renderIcons", function (icons) {
       return icons.map(function (icon, index) {
         return /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_8_react___default.createElement(__WEBPACK_IMPORTED_MODULE_8_react___default.Fragment, {
           key: index
@@ -147,7 +153,7 @@ var Input = /*#__PURE__*/function (_React$Component) {
             return (_icon$onClick = icon.onClick) === null || _icon$onClick === undefined ? undefined : _icon$onClick.call(icon, event);
           },
           style: {
-            cursor: icon.onClick ? 'pointer' : ''
+            cursor: icon.onClick ? "pointer" : ""
           }
         }, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_8_react___default.createElement(__WEBPACK_IMPORTED_MODULE_9__icon__.Icon, {
           id: icon.img,
@@ -158,13 +164,13 @@ var Input = /*#__PURE__*/function (_React$Component) {
         }));
       });
     });
-    Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Object(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default)(_this), "renderLintAlert", function () {
+    __WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default(_this), "renderLintAlert", function () {
       var lintAlert = _this.props.lintAlert;
       return /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_8_react___default.createElement("div", {
         className: "CUI-input-lint-wrap"
-      }, typeof lintAlert === 'function' ? lintAlert() : lintAlert);
+      }, typeof lintAlert === "function" ? lintAlert() : lintAlert);
     });
-    Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Object(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default)(_this), "onPointerEnterAction", function () {
+    __WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default(_this), "onPointerEnterAction", function () {
       if (!_this.hint || !_this.props.tooltip) {
         return;
       }
@@ -177,11 +183,11 @@ var Input = /*#__PURE__*/function (_React$Component) {
         var top = _this$mousePos.top;
         _this.hint.style.left = "".concat(left, "px");
         _this.hint.style.top = "".concat(top, "px");
-        _this.hint.style.visibility = 'visible';
+        _this.hint.style.visibility = "visible";
       }, 1000);
     });
-    Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Object(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default)(_this), "onPointerMoveAction", function (e) {
-      if (_this.props.hintYDirection === 'up') {
+    __WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default(_this), "onPointerMoveAction", function (e) {
+      if (_this.props.hintYDirection === "up") {
         var _this$hint;
         var height = (_this$hint = _this.hint) === null || _this$hint === undefined ? undefined : _this$hint.getBoundingClientRect().height;
         _this.mousePos = {
@@ -195,15 +201,15 @@ var Input = /*#__PURE__*/function (_React$Component) {
         };
       }
     });
-    Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Object(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default)(_this), "onPointerLeaveAction", function () {
+    __WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default(_this), "onPointerLeaveAction", function () {
       if (_this.hintTimer) {
         clearTimeout(_this.hintTimer);
       }
       if (_this.hint) {
-        _this.hint.setAttribute('style', 'visibility:hidden');
+        _this.hint.setAttribute("style", "visibility:hidden");
       }
     });
-    Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Object(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default)(_this), "onChange", function (e) {
+    __WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default(_this), "onChange", function (e) {
       var value = e.target.value;
       _this.setState({
         _value: value
@@ -216,60 +222,60 @@ var Input = /*#__PURE__*/function (_React$Component) {
       var lintTrigger = _this$props.lintTrigger;
       var clearBtn = _this$props.clearBtn;
       var lintState = true;
-      if (lintTrigger === 'change' && value) {
+      if (lintTrigger === "change" && value) {
         lintState = _this.lintValue(value);
       }
       _this.setState({
-        lintState: lintState ? 'pass' : 'error',
-        showClearBtn: clearBtn ? value !== '' : false
+        lintState: lintState ? "pass" : "error",
+        showClearBtn: clearBtn ? value !== "" : false
       });
       if (onChange) {
         onChange(e, lintState);
       }
     });
-    Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Object(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default)(_this), "onFocus", function (e) {
+    __WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default(_this), "onFocus", function (e) {
       _this.valueBeforeFocus = e.target.value;
       _this.setState({
-        inputStatus: 'focus',
+        inputStatus: "focus",
         showLabel: true
       });
       if (_this.props.onFocus) {
         _this.props.onFocus(e);
       }
     });
-    Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Object(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default)(_this), "onBlur", function (e) {
+    __WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default(_this), "onBlur", function (e) {
       _this.setState({
-        inputStatus: '',
-        showLabel: e.target.value === ''
+        inputStatus: "",
+        showLabel: e.target.value === ""
       });
-      if (_this.props.lintTrigger === 'blur') {
+      if (_this.props.lintTrigger === "blur") {
         _this.lintValue(e.target.value);
       }
       if (_this.props.onBlur) {
         _this.props.onBlur(e, _this.valueBeforeFocus);
       }
     });
-    Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Object(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default)(_this), "onComposition", function (e) {
+    __WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default(_this), "onComposition", function (e) {
       e.persist();
-      if (e.type === 'compositionstart') {
+      if (e.type === "compositionstart") {
         _this.isOnComposition = true; // 由于中文输入会导致state._value长度失控，因此存储输入中文之前的input长度，在中文输入结束后更新
         _this.valueBeforeChineseInput = _this.state._value;
       }
-      if (e.type === 'compositionend') {
+      if (e.type === "compositionend") {
         // compositionend 在 change 之后触发，这就贼TM恶心
         _this.isOnComposition = false;
-        _this.valueBeforeChineseInput = '';
+        _this.valueBeforeChineseInput = "";
         _this.onChange(e);
       }
     });
-    Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Object(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default)(_this), "getLabelTO", function () {
+    __WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default(_this), "getLabelTO", function () {
       var _this$props2 = _this.props;
       var inputStyle = _this$props2.inputStyle;
       var size = _this$props2.size;
-      var offsetY = (inputStyle === null || inputStyle === undefined ? undefined : inputStyle.height) && parseInt(inputStyle.height) || size === 'lg' && 44 || size === 'md' && 36 || size === 'sm' && 28 || 36; // * 2 + 12 较为居中
+      var offsetY = (inputStyle === null || inputStyle === undefined ? undefined : inputStyle.height) && parseInt(inputStyle.height) || size === "lg" && 44 || size === "md" && 36 || size === "sm" && 28 || 36; // * 2 + 12 较为居中
       return "28px ".concat(-offsetY * 2 + 12, "px");
     });
-    Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Object(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default)(_this), "lintValue", function (value) {
+    __WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default(_this), "lintValue", function (value) {
       var linter = _this.props.linter;
       if (linter && !linter(value)) {
         var _this$inputWrap;
@@ -278,43 +284,43 @@ var Input = /*#__PURE__*/function (_React$Component) {
           undefined;
         } else {
           _this$inputWrap.animate([{
-            backgroundColor: 'rgba(255,239,237,0)',
-            boxShadow: '0 0 0 1px rgba(255,124,107,0)'
+            backgroundColor: "rgba(255,239,237,0)",
+            boxShadow: "0 0 0 1px rgba(255,124,107,0)"
           }, {
-            backgroundColor: 'rgba(255,239,237,1)',
-            boxShadow: '0 0 0 1px rgba(255,124,107,1)'
+            backgroundColor: "rgba(255,239,237,1)",
+            boxShadow: "0 0 0 1px rgba(255,124,107,1)"
           }, {
-            backgroundColor: 'rgba(255,239,237,0)',
-            boxShadow: '0 0 0 1px rgba(255,124,107,0)'
+            backgroundColor: "rgba(255,239,237,0)",
+            boxShadow: "0 0 0 1px rgba(255,124,107,0)"
           }, {
-            backgroundColor: 'rgba(255,239,237,1)',
-            boxShadow: '0 0 0 1px rgba(255,124,107,1)'
+            backgroundColor: "rgba(255,239,237,1)",
+            boxShadow: "0 0 0 1px rgba(255,124,107,1)"
           }, {
-            backgroundColor: 'rgba(255,239,237,0)',
-            boxShadow: '0 0 0 1px rgba(255,124,107,0)'
+            backgroundColor: "rgba(255,239,237,0)",
+            boxShadow: "0 0 0 1px rgba(255,124,107,0)"
           }], {
             // timing options
             duration: 750,
-            easing: 'cubic-bezier(0.2, 0, 0.2, 1)'
+            easing: "cubic-bezier(0.2, 0, 0.2, 1)"
           });
         }
         _this.setState({
-          lintState: 'error'
+          lintState: "error"
         });
         return false;
       }
       return true;
     });
     _this.state = {
-      _value: (_this$props$value$toS = (_this$props$value = _this.props.value) === null || _this$props$value === undefined ? undefined : _this$props$value.toString()) !== null && _this$props$value$toS !== undefined ? _this$props$value$toS : '',
+      _value: (_this$props$value$toS = (_this$props$value = _this.props.value) === null || _this$props$value === undefined ? undefined : _this$props$value.toString()) !== null && _this$props$value$toS !== undefined ? _this$props$value$toS : "",
       showClearBtn: false,
       showLabel: _this.props.value ? false : true,
-      inputStatus: '',
-      lintState: 'pass'
+      inputStatus: "",
+      lintState: "pass"
     };
     return _this;
   }
-  Object(__WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_createClass__.default)(Input, [{
+  __WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_createClass__.default(Input, [{
     key: "componentDidMount",
     value: function componentDidMount() {
       var _this$props3 = this.props;
@@ -366,7 +372,7 @@ var Input = /*#__PURE__*/function (_React$Component) {
       var inputStatus = _this$state.inputStatus;
       var lintState = _this$state.lintState;
       var _value = _this$state._value;
-      var hintPrefix = this.props.valuePrefix ? "".concat(this.props.valuePrefix) : '';
+      var hintPrefix = this.props.valuePrefix ? "".concat(this.props.valuePrefix) : "";
       return /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_8_react___default.createElement(__WEBPACK_IMPORTED_MODULE_8_react___default.Fragment, null, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_8_react___default.createElement("div", {
         tabIndex: -1,
         style: inputStyle,
@@ -376,15 +382,15 @@ var Input = /*#__PURE__*/function (_React$Component) {
         ref: function ref(el) {
           return _this2.inputWrap = el;
         },
-        className: (className ? className + " " : "") + __WEBPACK_IMPORTED_MODULE_7_babel_plugin_react_css_modules_dist_browser_getClassName___default("wrap ".concat(type === 'textarea' ? 'type-ta' : 'type-i', " size-").concat(size, " ").concat(disable ? 'disabled' : '', " ").concat(inputStatus, " ").concat(isError || lintState === 'error' ? 'error' : ''), _styleModuleImportMap, {
+        className: (className ? className + " " : "") + __WEBPACK_IMPORTED_MODULE_7_babel_plugin_react_css_modules_dist_browser_getClassName___default("wrap ".concat(type === "textarea" ? "type-ta" : "type-i", " size-").concat(size, " ").concat(disable ? "disabled" : "", " ").concat(inputStatus, " ").concat(isError || lintState === "error" ? "error" : ""), _styleModuleImportMap, {
           "autoResolveMultipleImports": true,
           "handleMissingStyleName": "throw"
         })
       }, this.props.iconsPrefix ? /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_8_react___default.createElement("div", {
         className: "CUI-input-icns CUI-input-prefix"
-      }, this.renderIcons('pre')) : null, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_8_react___default.createElement("div", {
+      }, this.renderIcons("pre")) : null, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_8_react___default.createElement("div", {
         className: "CUI-input-input-section"
-      }, type === 'textarea' ? /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_8_react___default.createElement("textarea", {
+      }, type === "textarea" ? /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_8_react___default.createElement("textarea", {
         autoFocus: autofocus,
         maxLength: maxLength,
         ref: function ref(_ref) {
@@ -398,7 +404,7 @@ var Input = /*#__PURE__*/function (_React$Component) {
         onCompositionEnd: this.onComposition,
         value: _value,
         readOnly: disable,
-        className: __WEBPACK_IMPORTED_MODULE_7_babel_plugin_react_css_modules_dist_browser_getClassName___default("common-textarea ".concat(disable ? 'disabled' : ''), _styleModuleImportMap, {
+        className: __WEBPACK_IMPORTED_MODULE_7_babel_plugin_react_css_modules_dist_browser_getClassName___default("common-textarea ".concat(disable ? "disabled" : ""), _styleModuleImportMap, {
           "autoResolveMultipleImports": true,
           "handleMissingStyleName": "throw"
         })
@@ -425,7 +431,7 @@ var Input = /*#__PURE__*/function (_React$Component) {
         type: type,
         autoComplete: autoComplete,
         size: placeholderSize,
-        className: __WEBPACK_IMPORTED_MODULE_7_babel_plugin_react_css_modules_dist_browser_getClassName___default("common-input ".concat(disable ? 'disabled' : ''), _styleModuleImportMap, {
+        className: __WEBPACK_IMPORTED_MODULE_7_babel_plugin_react_css_modules_dist_browser_getClassName___default("common-input ".concat(disable ? "disabled" : ""), _styleModuleImportMap, {
           "autoResolveMultipleImports": true,
           "handleMissingStyleName": "throw"
         })
@@ -436,19 +442,19 @@ var Input = /*#__PURE__*/function (_React$Component) {
           opacity: 1
         } : {
           opacity: 0,
-          pointerEvents: 'none'
+          pointerEvents: "none"
         },
         className: "CUI-input-clear-btn",
         onClick: this.clearInput
       }, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_8_react___default.createElement(__WEBPACK_IMPORTED_MODULE_9__icon__.Icon, {
         id: "#cui_iconnor2",
         size: 12
-      })), this.renderIcons('su')), label !== undefined && /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_8_react___default.createElement("div", {
+      })), this.renderIcons("su")), label !== undefined && /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_8_react___default.createElement("div", {
         style: {
-          display: this.state.showLabel ? 'block' : 'none',
+          display: this.state.showLabel ? "block" : "none",
           transformOrigin: this.getLabelTO()
         },
-        className: __WEBPACK_IMPORTED_MODULE_7_babel_plugin_react_css_modules_dist_browser_getClassName___default("label ".concat(inputStatus, " ").concat(isError || lintState === 'error' ? 'error' : ''), _styleModuleImportMap, {
+        className: __WEBPACK_IMPORTED_MODULE_7_babel_plugin_react_css_modules_dist_browser_getClassName___default("label ".concat(inputStatus, " ").concat(isError || lintState === "error" ? "error" : ""), _styleModuleImportMap, {
           "autoResolveMultipleImports": true,
           "handleMissingStyleName": "throw"
         })
@@ -460,11 +466,11 @@ var Input = /*#__PURE__*/function (_React$Component) {
           return _ref3 && (_this2.hint = _ref3);
         },
         style: {
-          visibility: 'hidden'
+          visibility: "hidden"
         }
-      }, hintPrefix, _value, this.props.valueSuffix), type === 'textarea' && /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_8_react___default.createElement("div", {
+      }, hintPrefix, _value, this.props.valueSuffix), type === "textarea" && /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_8_react___default.createElement("div", {
         className: "CUI-input-limit"
-      }, this.valueBeforeChineseInput ? this.valueBeforeChineseInput : _value.length, "/", maxLength)), lintState === 'error' && this.renderLintAlert());
+      }, this.valueBeforeChineseInput ? this.valueBeforeChineseInput : _value.length, "/", maxLength)), lintState === "error" && this.renderLintAlert());
     }
   }], [{
     key: "getDerivedStateFromProps",
@@ -479,15 +485,15 @@ var Input = /*#__PURE__*/function (_React$Component) {
   }]);
   return Input;
 }(__WEBPACK_IMPORTED_MODULE_8_react___default.Component);
-Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Input, "defaultProps", {
-  size: 'md',
-  type: 'text',
-  lintTrigger: 'blur',
-  align: 'left',
+__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default(Input, "defaultProps", {
+  size: "md",
+  type: "text",
+  lintTrigger: "blur",
+  align: "left",
   maxLength: 500
 });
-Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Input, "SearchInput", undefined);
-Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Input, "UnderlineInput", undefined);
+__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default(Input, "SearchInput", undefined);
+__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default(Input, "UnderlineInput", undefined);
 function isIconType(icons) {
   var flag = false;
   for (var i = 0; i < icons.length; i++) {
@@ -506,7 +512,7 @@ function fireChangeEvent(input, value) {
   }
   var lastValue = input.value;
   input.value = value;
-  var evt = new Event('change', {
+  var evt = new Event("change", {
     bubbles: true
   });
   if (input === null || input === undefined) {

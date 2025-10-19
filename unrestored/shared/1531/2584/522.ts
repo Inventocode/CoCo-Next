@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：522
+ */
+
 module.exports = {
   container: "ProjectDialog_container__3MHJe",
   wrapper: "ProjectDialog_wrapper__1qRa_",

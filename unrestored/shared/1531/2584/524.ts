@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：524
+ */
+
 module.exports = {
   resourceLayout: "style_resourceLayout__1NSyP",
   header: "style_header__3b4qF",

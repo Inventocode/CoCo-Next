@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：818
+ */
+
 var r = require("../1736/167");
 var o = /#|\.prototype\./;
 var i = function (e, t) {

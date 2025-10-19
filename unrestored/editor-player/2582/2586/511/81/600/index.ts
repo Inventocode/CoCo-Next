@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：600
+ */
+
 "use strict";
 
 export { b as a };
@@ -487,7 +493,8 @@ function b(t) {
         return new O(t, "320", "17");
     }
   } catch (e) {
-    throw console.log(e), new n.a("unknown decoder: " + t);
+    console.log(e);
+    throw new n.a("unknown decoder: " + t);
   }
 }
 export default b;

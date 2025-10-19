@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：i56T
+ */
+
 "use strict";
 
 /* unused harmony export PhoneBindDialog */
@@ -23,21 +29,21 @@ var useState = __WEBPACK_IMPORTED_MODULE_1_react__.useState;
 var useEffect = __WEBPACK_IMPORTED_MODULE_1_react__.useEffect;
 var PhoneBindDialog = function PhoneBindDialog(props) {
   var _useState = useState(false);
-  var _useState2 = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default)(_useState, 2);
+  var _useState2 = __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default(_useState, 2);
   var isRequesting = _useState2[0];
   var setIsrequesting = _useState2[1];
   var _useState3 = useState(0);
-  var _useState4 = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default)(_useState3, 2);
+  var _useState4 = __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default(_useState3, 2);
   var smsTimeStamp = _useState4[0];
   var setSmsTimeStamp = _useState4[1];
   var _useState5 = useState(props.show);
-  var _useState6 = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default)(_useState5, 2);
+  var _useState6 = __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default(_useState5, 2);
   var show = _useState6[0];
   var setShow = _useState6[1];
   var onCloseAnimationEnd = props.onCloseAnimationEnd;
   var reportMethod = props.reportMethod;
   var onSuccess = props.onSuccess;
-  Object(__WEBPACK_IMPORTED_MODULE_5__i18n__.setLanguage)(props.language || '');
+  __WEBPACK_IMPORTED_MODULE_5__i18n__.setLanguage(props.language || "");
   useEffect(function () {
     setShow(props.show);
   }, [props.show]);
@@ -45,7 +51,7 @@ var PhoneBindDialog = function PhoneBindDialog(props) {
     if (onCloseAnimationEnd) {
       onCloseAnimationEnd();
     } else {
-      console.log('close');
+      console.log("close");
     }
   };
   var closeBtnHandler = function closeBtnHandler() {
@@ -96,7 +102,7 @@ var PhoneBindDialog = function PhoneBindDialog(props) {
   })));
 };
 PhoneBindDialog.defaultProps = {
-  language: 'zh',
+  language: "zh",
   onCloseAnimationEnd: function onCloseAnimationEnd() {
     return undefined;
   },

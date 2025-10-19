@@ -1,8 +1,14 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：pmLg
+ */
+
 "use strict";
 
 /* harmony export (binding) */
-export { message };
 /* harmony import */
+export { message };
 import * as __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_extends__ from "@babel/runtime/helpers/esm/extends";
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_1_react__ from "react";
@@ -16,10 +22,10 @@ import __WEBPACK_IMPORTED_MODULE_2_react_dom___default from "react-dom";
 import * as __WEBPACK_IMPORTED_MODULE_3__Toast__ from "./Toast-tTv1";
 var fakeDiv;
 var GLOBAL_WRAPPER;
-if (typeof window !== 'undefined') {
-  fakeDiv = document.createElement('div');
-  GLOBAL_WRAPPER = document.createElement('div');
-  GLOBAL_WRAPPER.className = 'CUI-toast-wrapper';
+if (typeof window !== "undefined") {
+  fakeDiv = document.createElement("div");
+  GLOBAL_WRAPPER = document.createElement("div");
+  GLOBAL_WRAPPER.className = "CUI-toast-wrapper";
   fakeDiv.appendChild(GLOBAL_WRAPPER);
   document.body.appendChild(fakeDiv);
 }
@@ -66,7 +72,7 @@ function toastFactory(type, config) {
     }
     ToastManager.remove(id);
   };
-  var toast = /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1_react___default.createElement(__WEBPACK_IMPORTED_MODULE_3__Toast__.Toast, Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_extends__.default)({}, config, {
+  var toast = /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1_react___default.createElement(__WEBPACK_IMPORTED_MODULE_3__Toast__.Toast, __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_extends__.default({}, config, {
     key: "toast-".concat(id),
     type: type,
     getToastDOM: function getToastDOM(ref) {
@@ -76,8 +82,8 @@ function toastFactory(type, config) {
       if (ref) {
         destroy = function destroy() {
           // 销毁之后 DOM 也不存在了，就不需要取消事件了
-          ref.addEventListener('animationend', _onClose);
-          ref.className += ' CUI-toast-destroy';
+          ref.addEventListener("animationend", _onClose);
+          ref.className += " CUI-toast-destroy";
         };
       }
     },
@@ -90,19 +96,19 @@ function toastFactory(type, config) {
   return id;
 }
 function createCustomToast(config) {
-  return toastFactory('custom', config);
+  return toastFactory("custom", config);
 }
 function createInfoToast(config) {
-  return toastFactory('info', config);
+  return toastFactory("info", config);
 }
 function createSuccessToast(config) {
-  return toastFactory('success', config);
+  return toastFactory("success", config);
 }
 function createWarningToast(config) {
-  return toastFactory('warning', config);
+  return toastFactory("warning", config);
 }
 function createErrorToast(config) {
-  return toastFactory('error', config);
+  return toastFactory("error", config);
 }
 function updateToast(id, config) {
   var index = ToastManager.toastList.findIndex(function (toastTuple) {
@@ -112,7 +118,7 @@ function updateToast(id, config) {
     return undefined;
   }
   var oldToast = ToastManager.toastList[index];
-  var newToast = /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1_react___default.createElement(__WEBPACK_IMPORTED_MODULE_3__Toast__.Toast, Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_extends__.default)({}, config, {
+  var newToast = /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1_react___default.createElement(__WEBPACK_IMPORTED_MODULE_3__Toast__.Toast, __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_extends__.default({}, config, {
     key: "toast-".concat(id),
     type: oldToast[1].props.type,
     getToastDOM: oldToast[1].props.getToastDOM,

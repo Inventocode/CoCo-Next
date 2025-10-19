@@ -1,17 +1,23 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：P22Q
+ */
+
 "use strict";
 
 /* harmony export (immutable) */
-export { setTheme };
 /* harmony export (immutable) */
-export { getTheme };
+export { setTheme };
 /* unused harmony export getThemeColorSet */
 /* unused harmony export getSupColor */
 /* unused harmony export getGreyColor */
 /* harmony export (immutable) */
-export { getColor };
+export { getTheme };
 /* unused harmony export colorHex2DecRgb */
 /* unused harmony export colorDecRgb2Hex */
 /* harmony import */
+export { getColor };
 import * as __WEBPACK_IMPORTED_MODULE_0__common_util__ from "./common/util-Yw5u";
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_1__defs__ from "./defs-nq58";
@@ -26,18 +32,18 @@ export { ColorEnum } from "./defs-nq58";
 /* harmony namespace reexport (by used) */
 export { ThemeTypeEnum } from "./defs-nq58";
 function setTheme(theme) {
-  if (typeof window !== 'undefined') {
-    document.body.setAttribute('data-theme', "".concat(__WEBPACK_IMPORTED_MODULE_1__defs__.THEME_PREFIX).concat(theme));
+  if (typeof window !== "undefined") {
+    document.body.setAttribute("data-theme", "".concat(__WEBPACK_IMPORTED_MODULE_1__defs__.THEME_PREFIX).concat(theme));
   }
   injectFilterDef(theme);
 }
 function getTheme() {
-  if (typeof window !== 'undefined') {
+  if (typeof window !== "undefined") {
     var _document$body$getAtt;
     var _document;
     var _document$body;
     var _document$body$getAtt2;
-    return (_document$body$getAtt = (_document = document) === null || _document === undefined ? undefined : (_document$body = _document.body) === null || _document$body === undefined ? undefined : (_document$body$getAtt2 = _document$body.getAttribute('data-theme')) === null || _document$body$getAtt2 === undefined ? undefined : _document$body$getAtt2.replace(__WEBPACK_IMPORTED_MODULE_1__defs__.THEME_PREFIX, '')) !== null && _document$body$getAtt !== undefined ? _document$body$getAtt : __WEBPACK_IMPORTED_MODULE_1__defs__.ThemeTypeEnum.Default;
+    return (_document$body$getAtt = (_document = document) === null || _document === undefined ? undefined : (_document$body = _document.body) === null || _document$body === undefined ? undefined : (_document$body$getAtt2 = _document$body.getAttribute("data-theme")) === null || _document$body$getAtt2 === undefined ? undefined : _document$body$getAtt2.replace(__WEBPACK_IMPORTED_MODULE_1__defs__.THEME_PREFIX, "")) !== null && _document$body$getAtt !== undefined ? _document$body$getAtt : __WEBPACK_IMPORTED_MODULE_1__defs__.ThemeTypeEnum.Default;
   }
   return __WEBPACK_IMPORTED_MODULE_1__defs__.ThemeTypeEnum.Default;
 }
@@ -45,16 +51,16 @@ function getThemeColorSet(theme) {
   return __WEBPACK_IMPORTED_MODULE_2__themeColor__.themes[theme];
 }
 function __formatColor__(color) {
-  var type = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'rgb';
+  var type = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "rgb";
   if (!color) {
-    return '';
+    return "";
   }
-  if (type === 'rgb') {
+  if (type === "rgb") {
     return color;
   } else {
-    return color.split(',').reduce(function (str, value) {
+    return color.split(",").reduce(function (str, value) {
       return str += Number(value).toString(16);
-    }, '');
+    }, "");
   }
 }
 function __getColor__(setType) {
@@ -65,16 +71,16 @@ function __getColor__(setType) {
    * @return {string} 色值结果，如果色名不存在，返回空字符串
    */
   return function (name) {
-    var type = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'rgb';
-    var set = setType === 'sup' ? __WEBPACK_IMPORTED_MODULE_3__supColor__.themeSupColor : __WEBPACK_IMPORTED_MODULE_4__greyColor__.themeGreyColor;
+    var type = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "rgb";
+    var set = setType === "sup" ? __WEBPACK_IMPORTED_MODULE_3__supColor__.themeSupColor : __WEBPACK_IMPORTED_MODULE_4__greyColor__.themeGreyColor;
     var color = set[name];
     return __formatColor__(color, type);
   };
 }
 /* 获取补充色 */
-var getSupColor = __getColor__('sup');
+var getSupColor = __getColor__("sup");
 /* 获取灰色 */
-var getGreyColor = __getColor__('grey');
+var getGreyColor = __getColor__("grey");
 /**
  * @description 获取指定主题色下某个颜色的色值
  * @param {string} theme 主题
@@ -83,10 +89,10 @@ var getGreyColor = __getColor__('grey');
  * @returns {string} 返回指定进制下的色值，如果颜色不存在，返回空字符串
  */
 function getColor(theme, name) {
-  var type = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 'rgb';
+  var type = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : "rgb";
   var colorSet = __WEBPACK_IMPORTED_MODULE_2__themeColor__.themes[theme];
   if (!colorSet) {
-    return '';
+    return "";
   }
   var color = colorSet[name];
   return __formatColor__(color, type);
@@ -98,9 +104,9 @@ function getColor(theme, name) {
  */
 function colorHex2DecRgb(color) {
   var _color$replace$match;
-  return (_color$replace$match = color.replace('#', '').match(/(.{2})/g)) === null || _color$replace$match === undefined ? undefined : _color$replace$match.map(function (value) {
+  return (_color$replace$match = color.replace("#", "").match(/(.{2})/g)) === null || _color$replace$match === undefined ? undefined : _color$replace$match.map(function (value) {
     return parseInt(value, 16);
-  }).join(',');
+  }).join(",");
 }
 /**
  * @description 10进制rgb格式色值转16进制格式
@@ -108,33 +114,33 @@ function colorHex2DecRgb(color) {
  * @returns {string} 转化结果
  */
 function colorDecRgb2Hex(color) {
-  return color.split(',').map(function (value) {
+  return color.split(",").map(function (value) {
     return Number(value).toString(16);
-  }).join('');
+  }).join("");
 }
-var COMMON_THEME_FILTER = 'cui_common_theme_filter';
-var SVG_CONTAINER = 'cui_filter_svg';
+var COMMON_THEME_FILTER = "cui_common_theme_filter";
+var SVG_CONTAINER = "cui_filter_svg";
 function injectFilterDef(theme) {
   var filterContainer = document.getElementById(SVG_CONTAINER);
   if (!filterContainer) {
-    filterContainer = document.createElement('svg');
+    filterContainer = document.createElement("svg");
     filterContainer.id = SVG_CONTAINER;
-    filterContainer.style.display = 'block';
-    filterContainer.setAttribute('width', '0');
-    filterContainer.setAttribute('height', '0');
-    filterContainer.innerHTML = '<defs></defs>';
+    filterContainer.style.display = "block";
+    filterContainer.setAttribute("width", "0");
+    filterContainer.setAttribute("height", "0");
+    filterContainer.innerHTML = "<defs></defs>";
     document.body.insertBefore(filterContainer, document.body.childNodes[0]);
   }
   if (!filterContainer) {
     return;
   }
-  var defs = filterContainer.querySelector('defs');
+  var defs = filterContainer.querySelector("defs");
   if (defs) {
     var prevCommonFilter = defs.querySelector("#".concat(COMMON_THEME_FILTER));
     if (prevCommonFilter) {
       prevCommonFilter.remove();
     }
-    var newCommonFilter = Object(__WEBPACK_IMPORTED_MODULE_0__common_util__.parseToSvg)(getFilterDom("#".concat(theme === __WEBPACK_IMPORTED_MODULE_1__defs__.ThemeTypeEnum.Yellow ? getColor(theme, __WEBPACK_IMPORTED_MODULE_1__defs__.ColorEnum.TCYS2, '16') : getColor(theme, __WEBPACK_IMPORTED_MODULE_1__defs__.ColorEnum.TC1, '16'))));
+    var newCommonFilter = __WEBPACK_IMPORTED_MODULE_0__common_util__.parseToSvg(getFilterDom("#".concat(theme === __WEBPACK_IMPORTED_MODULE_1__defs__.ThemeTypeEnum.Yellow ? getColor(theme, __WEBPACK_IMPORTED_MODULE_1__defs__.ColorEnum.TCYS2, "16") : getColor(theme, __WEBPACK_IMPORTED_MODULE_1__defs__.ColorEnum.TC1, "16"))));
     defs.appendChild(newCommonFilter);
   }
 }

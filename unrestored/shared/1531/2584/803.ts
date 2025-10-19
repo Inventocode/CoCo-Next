@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：803
+ */
+
 module.exports = {
   IconLibraryItem: "style_IconLibraryItem__1pnTx",
   selected: "style_selected__svnYm",

@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：V8ar
+ */
+
 // removed by extract-text-webpack-plugin
 module.exports = {
   "playVideoBox": "playVideoBox_3R8bQ",

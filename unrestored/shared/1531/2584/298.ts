@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：298
+ */
+
 "use strict";
 
 export { h };
@@ -25,7 +31,7 @@ var i = function __importDefault(module) {
 import a = require("./7");
 import s = require("./60");
 import c = require("./197/index");
-import l = require("./41");
+import l = require("../../../../src/shared/utils/network/axios-with-credentials");
 import u = require("./59/index");
 import d = require("./278");
 var p = u.a.serverHost;

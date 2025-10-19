@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：2586
+ */
+
 "use strict";
 
 import * as r from "react";
@@ -13,12 +19,12 @@ import * as d from "../../../shared/1531/2584/10/index";
 import * as f from "./511/index";
 import * as h from "../../../shared/1531/2584/177";
 var p = i.memo(function () {
-  var t = Object(r.useState)();
-  var e = Object(d.a)(t, 2);
+  var t = r.useState();
+  var e = d.a(t, 2);
   var n = e[0];
   var o = e[1];
   function a() {
-    return (a = Object(l.a)(u.mark(function t() {
+    return (a = l.a(u.mark(function t() {
       var e;
       var n;
       var r;
@@ -34,11 +40,11 @@ var p = i.memo(function () {
             case 4:
               t.t0 = JSON;
               t.next = 7;
-              return Object(h.h)(n);
+              return h.h(n);
             case 7:
               t.t1 = t.sent;
               r = t.t0.parse.call(t.t0, t.t1);
-              o(Object(c.a)(Object(c.a)({}, r), {}, {
+              o(c.a(c.a({}, r), {}, {
                 shouldOpenEmulator: true
               }));
             case 10:
@@ -49,7 +55,7 @@ var p = i.memo(function () {
       }, t);
     }))).apply(this, arguments);
   }
-  Object(r.useEffect)(function () {
+  r.useEffect(function () {
     !function () {
       a.apply(this, arguments);
     }();

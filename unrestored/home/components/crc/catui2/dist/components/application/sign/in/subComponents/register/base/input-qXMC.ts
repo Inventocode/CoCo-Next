@@ -1,8 +1,14 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：qXMC
+ */
+
 "use strict";
 
 /* harmony export (binding) */
-export { Input };
 /* harmony import */
+export { Input };
 import * as __WEBPACK_IMPORTED_MODULE_0__Input__ from "./Input-pdtI";
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_1__UnderlineInput__ from "./UnderlineInput-yc4Q";

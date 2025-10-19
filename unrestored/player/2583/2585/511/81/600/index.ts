@@ -1,9 +1,15 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：600
+ */
+
 "use strict";
 
 export { C as a };
-import * as r from "./221";
-import * as i from "./453/465";
-import * as o from "./453/index";
+import * as r from "../221";
+import * as i from "./465";
+import * as o from "../453";
 var a = function () {
   var t = function (e, n) {
     return (t = Object.setPrototypeOf || {
@@ -61,7 +67,7 @@ var s = function (t) {
   e.GTIN_SIZE = 40;
   return e;
 }(o.a);
-import * as u from "./109";
+import * as u from "../109";
 var c = function () {
   var t = function (e, n) {
     return (t = Object.setPrototypeOf || {
@@ -169,7 +175,7 @@ var p = function (t) {
   };
   return e;
 }(s);
-import * as m from "./37";
+import * as m from "../37";
 var b = function () {
   var t = function (e, n) {
     return (t = Object.setPrototypeOf || {
@@ -487,7 +493,8 @@ function C(t) {
         return new I(t, "320", "17");
     }
   } catch (e) {
-    throw console.log(e), new r.a("unknown decoder: " + t);
+    console.log(e);
+    throw new r.a("unknown decoder: " + t);
   }
 }
 export default C;

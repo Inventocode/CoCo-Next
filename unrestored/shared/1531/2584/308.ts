@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：308
+ */
+
 module.exports = {
   soundMallItem: "style_soundMallItem__1xXHP",
   selected: "style_selected__2cgIT",

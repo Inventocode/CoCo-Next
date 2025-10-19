@@ -1,8 +1,14 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：5bi6
+ */
+
 "use strict";
 
 /* harmony export (binding) */
-export { ForgetPasswordPageContainer };
 /* harmony import */
+export { ForgetPasswordPageContainer };
 import * as __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__ from "@babel/runtime/helpers/esm/slicedToArray";
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_1_babel_plugin_react_css_modules_dist_browser_getClassName__ from "babel-plugin-react-css-modules/dist/browser/getClassName";
@@ -76,16 +82,16 @@ var ForgetPasswordPageContainer = function ForgetPasswordPageContainer(props) {
   var setIsRequesting = props.setIsRequesting;
   var switchView = props.switchView;
   var reportMethod = props.reportMethod;
-  var _useState = Object(__WEBPACK_IMPORTED_MODULE_2_react__.useState)(undefined);
-  var _useState2 = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default)(_useState, 2);
+  var _useState = __WEBPACK_IMPORTED_MODULE_2_react__.useState(undefined);
+  var _useState2 = __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default(_useState, 2);
   var ticket = _useState2[0];
   var setTicket = _useState2[1];
-  var _useState3 = Object(__WEBPACK_IMPORTED_MODULE_2_react__.useState)(false);
-  var _useState4 = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default)(_useState3, 2);
+  var _useState3 = __WEBPACK_IMPORTED_MODULE_2_react__.useState(false);
+  var _useState4 = __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default(_useState3, 2);
   var resetSuccess = _useState4[0];
   var setResetSuccess = _useState4[1];
   return /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_2_react__.createElement(__WEBPACK_IMPORTED_MODULE_2_react__.Fragment, null, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_2_react__.createElement("div", {
-    className: __WEBPACK_IMPORTED_MODULE_1_babel_plugin_react_css_modules_dist_browser_getClassName___default(resetSuccess ? 'fully-content' : 'content', _styleModuleImportMap, {
+    className: __WEBPACK_IMPORTED_MODULE_1_babel_plugin_react_css_modules_dist_browser_getClassName___default(resetSuccess ? "fully-content" : "content", _styleModuleImportMap, {
       "autoResolveMultipleImports": true,
       "handleMissingStyleName": "throw"
     })
@@ -93,7 +99,7 @@ var ForgetPasswordPageContainer = function ForgetPasswordPageContainer(props) {
     className: "CUI-sign-in-dialog-tab-wrap"
   }, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_2_react__.createElement("div", {
     className: "CUI-sign-in-dialog-tab"
-  }, Object(__WEBPACK_IMPORTED_MODULE_4__i18n__.getLanguage)('sign_in_dialog/reset_password'))), resetSuccess ? /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_2_react__.createElement(__WEBPACK_IMPORTED_MODULE_7__Confirm__.ConfirmComponent, {
+  }, __WEBPACK_IMPORTED_MODULE_4__i18n__.getLanguage("sign_in_dialog/reset_password"))), resetSuccess ? /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_2_react__.createElement(__WEBPACK_IMPORTED_MODULE_7__Confirm__.ConfirmComponent, {
     switchView: switchView
   }) : ticket ? /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_2_react__.createElement(__WEBPACK_IMPORTED_MODULE_5__SetPassword__.SetPasswordComponent, {
     isRequesting: isRequesting,
@@ -118,7 +124,7 @@ var ForgetPasswordPageContainer = function ForgetPasswordPageContainer(props) {
   }, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_2_react__.createElement("span", {
     className: "CUI-sign-in-dialog-tab-text CUI-sign-in-dialog-center CUI-sign-in-dialog-clickable",
     onClick: switchView.bind(_this, __WEBPACK_IMPORTED_MODULE_3__def__.ContentView.LOGIN)
-  }, Object(__WEBPACK_IMPORTED_MODULE_4__i18n__.getLanguage)('sign_in_dialog/back_to_login'))))));
+  }, __WEBPACK_IMPORTED_MODULE_4__i18n__.getLanguage("sign_in_dialog/back_to_login"))))));
 };
 ForgetPasswordPageContainer.defaultProps = {
   reportMethod: function reportMethod() {

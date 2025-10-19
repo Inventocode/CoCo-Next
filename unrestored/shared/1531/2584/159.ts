@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：159
+ */
+
 module.exports = {
   cloudDBManager: "styles_cloudDBManager__23tv1",
   managerTitle: "styles_managerTitle__2-kh8",

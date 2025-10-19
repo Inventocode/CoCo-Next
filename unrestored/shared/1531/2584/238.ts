@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：238
+ */
+
 module.exports = {
   container: "BuckSelect_container__1qXsi",
   leftSelect: "BuckSelect_leftSelect__2jCru",

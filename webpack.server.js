@@ -10,6 +10,14 @@ const config = {
         port: 7090,
         static: path.resolve(__dirname, "dist", "coco.codemao.cn"),
         // open: "http://coco.localhost:7090",
+        historyApiFallback: {
+            rewrites: [
+                {
+                    from: /^\/editor\/player\/\d+(\/(index(\.html)?)?)?$/,
+                    to: "/editor/player/index.html"
+                }
+            ]
+        },
         proxy: [
             ...[
                 "https://api-creation.codemao.cn",
@@ -17,6 +25,7 @@ const config = {
                 "https://socketcoll.codemao.cn",
                 "https://open-service.codemao.cn",
                 "https://shence-data.codemao.cn",
+                "https://sentry.codemao.cn",
                 "wss://socketcv.codemao.cn:9096"
             ].map(target => /** @type {webpackDevServer.ProxyConfigArrayItem} */({
                 context: "/proxy/" + target,
@@ -38,16 +47,7 @@ const config = {
                         }
                     }
                 }
-            })),
-            {
-                context: pathname => /\/editor\/player\/[0-9]+/.test(pathname),
-                target: "http://localhost:7090",
-                headers: {
-                    "Origin": "https://coco.codemao.cn",
-                    "Referer": "https://coco.codemao.cn/"
-                },
-                pathRewrite(__path) { return "/editor/player/" }
-            }
+            }))
         ]
     }
 }

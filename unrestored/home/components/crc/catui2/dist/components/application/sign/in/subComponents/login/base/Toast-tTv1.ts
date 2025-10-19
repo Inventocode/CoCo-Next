@@ -1,8 +1,14 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：tTv1
+ */
+
 "use strict";
 
 /* harmony export (binding) */
-export { Toast };
 /* harmony import */
+export { Toast };
 import * as __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__ from "@babel/runtime/helpers/esm/slicedToArray";
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_1_babel_plugin_react_css_modules_dist_browser_getClassName__ from "babel-plugin-react-css-modules/dist/browser/getClassName";
@@ -42,22 +48,22 @@ var Toast = function Toast(props) {
   var content = props.content;
   var onClose = props.onClose;
   var duration = props.duration;
-  var _useState = Object(__WEBPACK_IMPORTED_MODULE_2_react__.useState)(false);
-  var _useState2 = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default)(_useState, 2);
+  var _useState = __WEBPACK_IMPORTED_MODULE_2_react__.useState(false);
+  var _useState2 = __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default(_useState, 2);
   var isClosing = _useState2[0];
   var setIsClosing = _useState2[1];
-  var _useState3 = Object(__WEBPACK_IMPORTED_MODULE_2_react__.useState)();
-  var _useState4 = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default)(_useState3, 2);
+  var _useState3 = __WEBPACK_IMPORTED_MODULE_2_react__.useState();
+  var _useState4 = __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default(_useState3, 2);
   var clickType = _useState4[0];
   var setClickType = _useState4[1];
-  var toastRef = Object(__WEBPACK_IMPORTED_MODULE_2_react__.useRef)(null);
-  var timer = Object(__WEBPACK_IMPORTED_MODULE_2_react__.useRef)();
-  Object(__WEBPACK_IMPORTED_MODULE_2_react__.useEffect)(function () {
+  var toastRef = __WEBPACK_IMPORTED_MODULE_2_react__.useRef(null);
+  var timer = __WEBPACK_IMPORTED_MODULE_2_react__.useRef();
+  __WEBPACK_IMPORTED_MODULE_2_react__.useEffect(function () {
     return props.getToastDOM && props.getToastDOM(toastRef.current);
   });
-  Object(__WEBPACK_IMPORTED_MODULE_2_react__.useEffect)(function () {
+  __WEBPACK_IMPORTED_MODULE_2_react__.useEffect(function () {
     var toastEl = toastRef.current;
-    if (duration !== 'persist') {
+    if (duration !== "persist") {
       if (timer.current) {
         clearTimeout(timer.current);
       }
@@ -68,14 +74,14 @@ var Toast = function Toast(props) {
     }
     return function () {
       if (toastEl && onClose) {
-        toastEl.removeEventListener('animationend', onClose);
+        toastEl.removeEventListener("animationend", onClose);
       }
     };
   }, [duration]);
-  Object(__WEBPACK_IMPORTED_MODULE_2_react__.useEffect)(function () {
+  __WEBPACK_IMPORTED_MODULE_2_react__.useEffect(function () {
     var toastEl = toastRef.current;
     if (isClosing && toastEl && onClose) {
-      toastEl.addEventListener('animationend', onClose);
+      toastEl.addEventListener("animationend", onClose);
     }
   }, [isClosing, onClose]);
   var handleClickBtn = function handleClickBtn(type) {
@@ -85,21 +91,21 @@ var Toast = function Toast(props) {
       var onRetry = props.onRetry;
       var onIgnore = props.onIgnore;
       switch (clickType) {
-        case 'retry':
+        case "retry":
           {
             if (onRetry) {
               onRetry();
             }
             break;
           }
-        case 'ignore':
+        case "ignore":
           {
             if (onIgnore) {
               onIgnore();
             }
             break;
           }
-        case 'cancel':
+        case "cancel":
           {
             if (onCancel) {
               onCancel();
@@ -113,25 +119,25 @@ var Toast = function Toast(props) {
     };
   };
   var getIconId = function getIconId() {
-    if (props.type === 'info') {
-      return '#icon_chaxun';
+    if (props.type === "info") {
+      return "#icon_chaxun";
     }
-    if (props.type === 'error') {
-      return '#iconiconshibai';
+    if (props.type === "error") {
+      return "#iconiconshibai";
     }
-    if (props.type === 'warning') {
-      return '#iconalert_warningx';
+    if (props.type === "warning") {
+      return "#iconalert_warningx";
     }
-    return '#iconiconchenggong';
+    return "#iconiconchenggong";
   };
   var renderIcon = function renderIcon() {
-    if (props.type === 'custom' && !props.icon) {
+    if (props.type === "custom" && !props.icon) {
       return null;
     }
-    if (props.type === 'custom') {
+    if (props.type === "custom") {
       return /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_2_react___default.createElement("div", {
         className: "CUI-toast-icon"
-      }, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_2_react___default.isValidElement(props.icon) ? props.icon : typeof props.icon === 'function' ? props.icon() : null);
+      }, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_2_react___default.isValidElement(props.icon) ? props.icon : typeof props.icon === "function" ? props.icon() : null);
     }
     return /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_2_react___default.createElement("div", {
       className: "CUI-toast-icon"
@@ -144,7 +150,7 @@ var Toast = function Toast(props) {
     if (!props.btn) {
       return null;
     }
-    if (typeof props.btn === 'function') {
+    if (typeof props.btn === "function") {
       return /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_2_react___default.createElement("div", {
         className: "CUI-toast-btn"
       }, props.btn());
@@ -160,35 +166,35 @@ var Toast = function Toast(props) {
       var _props$btn3;
       var _props$btn4;
       var btns = [];
-      if ((_props$btn = props.btn) !== null && _props$btn !== undefined && _props$btn.includes('retry')) {
+      if ((_props$btn = props.btn) !== null && _props$btn !== undefined && _props$btn.includes("retry")) {
         var retry = /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_2_react___default.createElement("span", {
           key: "retry",
           className: "CUI-toast-btn-retry",
-          onClick: handleClickBtn('retry')
-        }, "\u91CD\u8BD5");
+          onClick: handleClickBtn("retry")
+        }, "重试");
         btns.push(retry);
       }
-      if ((_props$btn2 = props.btn) !== null && _props$btn2 !== undefined && _props$btn2.includes('ignore')) {
+      if ((_props$btn2 = props.btn) !== null && _props$btn2 !== undefined && _props$btn2.includes("ignore")) {
         var ignore = /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_2_react___default.createElement("span", {
           key: "ignore",
           className: "CUI-toast-btn-ignore",
-          onClick: handleClickBtn('ignore')
-        }, "\u5FFD\u7565");
+          onClick: handleClickBtn("ignore")
+        }, "忽略");
         btns.push(ignore);
       }
-      if ((_props$btn3 = props.btn) !== null && _props$btn3 !== undefined && _props$btn3.includes('cancel')) {
+      if ((_props$btn3 = props.btn) !== null && _props$btn3 !== undefined && _props$btn3.includes("cancel")) {
         var cancel = /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_2_react___default.createElement("span", {
           key: "cancel",
           className: "CUI-toast-btn-cancel",
-          onClick: handleClickBtn('cancel')
-        }, "\u53D6\u6D88");
+          onClick: handleClickBtn("cancel")
+        }, "取消");
         btns.push(cancel);
       }
-      if ((_props$btn4 = props.btn) !== null && _props$btn4 !== undefined && _props$btn4.includes('close')) {
+      if ((_props$btn4 = props.btn) !== null && _props$btn4 !== undefined && _props$btn4.includes("close")) {
         var close = /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_2_react___default.createElement("span", {
           key: "close",
           className: "CUI-toast-btn-close",
-          onClick: handleClickBtn('close')
+          onClick: handleClickBtn("close")
         }, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_2_react___default.createElement(__WEBPACK_IMPORTED_MODULE_3__crc_catui2__.Icon, {
           size: 16,
           id: "#cui_iconnor2"
@@ -203,10 +209,10 @@ var Toast = function Toast(props) {
   return /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_2_react___default.createElement("div", {
     ref: toastRef,
     style: {
-      padding: props.type !== 'custom' || props.icon ? '9px 32px' : '9px 24px',
-      minHeight: props.type !== 'custom' || props.icon ? 48 : 40
+      padding: props.type !== "custom" || props.icon ? "9px 32px" : "9px 24px",
+      minHeight: props.type !== "custom" || props.icon ? 48 : 40
     },
-    className: __WEBPACK_IMPORTED_MODULE_1_babel_plugin_react_css_modules_dist_browser_getClassName___default("container ".concat(props.colorType, " ").concat(isClosing ? 'closing' : ''), _styleModuleImportMap, {
+    className: __WEBPACK_IMPORTED_MODULE_1_babel_plugin_react_css_modules_dist_browser_getClassName___default("container ".concat(props.colorType, " ").concat(isClosing ? "closing" : ""), _styleModuleImportMap, {
       "autoResolveMultipleImports": true,
       "handleMissingStyleName": "throw"
     })
@@ -215,7 +221,7 @@ var Toast = function Toast(props) {
   }, content), renderBtn());
 };
 Toast.defaultProps = {
-  colorType: 'light'
+  colorType: "light"
 };
 
 /***/

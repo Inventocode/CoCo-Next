@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：349
+ */
+
 "use strict";
 
 var r = require("./74");
@@ -469,8 +475,8 @@ var T = function (t) {
   };
   return e;
 }(l.a);
-var A = require("./602");
-var S = require("./509/index");
+var A = require("./602/index");
+var S = require("./509");
 var I = function () {
   var t = function (e, n) {
     return (t = Object.setPrototypeOf || {

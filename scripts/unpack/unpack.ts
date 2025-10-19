@@ -413,12 +413,16 @@ function buildModulesDependency(modules: ModuleMap): void {
                 if (path.node.declarations.length != 1) {
                     return
                 }
+                if (path.node.leadingComments?.some(comment => comment.value.includes("harmony import"))) {
+                    module.AST.program.sourceType = "module"
+                }
                 for (const declaration of path.get("declarations")) {
                     const localNameNodePath: NodePath = declaration.get("id")
                     if (!localNameNodePath.isIdentifier()) {
                         continue
                     }
                     if (localNameNodePath.node.name.endsWith("_default")) {
+                        module.AST.program.sourceType = "module"
                         continue
                     }
                     const localName: string = localNameNodePath.node.name
@@ -545,6 +549,7 @@ function buildModulesDependency(modules: ModuleMap): void {
                 if (newName == undefined) {
                     return
                 }
+                importedModule.AST.program.sourceType = "module"
                 property.node.trailingComments = []
                 Object.defineProperty(importedModule.exportsNameMap, oldName, {
                     value: newName,
@@ -597,6 +602,7 @@ function buildModulesDependency(modules: ModuleMap): void {
                 } else if (localItemNameNodePath.isStringLiteral()) {
                     localItemName = localItemNameNodePath.node.value
                 }
+                module.AST.program.sourceType = "module"
                 if (!Object.hasOwn(importedModule.exportsNameMap, localItemName)) {
                     Object.defineProperty(importedModule.exportsNameMap, localItemName, {
                         get(): string | undefined {
@@ -604,6 +610,7 @@ function buildModulesDependency(modules: ModuleMap): void {
                         },
                         set(value: string): void {
                             module.exportsNameMap[exportedName] = value
+                            importedModule.AST.program.sourceType = "module"
                         },
                         configurable: true,
                         enumerable: true
@@ -1204,13 +1211,21 @@ function transformModulesExport(modules: ModuleMap): void {
                 if (!calleePath.isMemberExpression({ computed: false })) {
                     return
                 }
-                const calleeObject: NodePath = calleePath.get("object")
-                const calleeProperty: NodePath = calleePath.get("property")
-                if (
+                const calleeObject = calleePath.get("object")
+                const calleeProperty = calleePath.get("property")
+                const args = path.get("arguments")
+                if ((
                     calleeObject.isIdentifier({ name: module.args[2] }) &&
                     calleeObject.scope.getBinding(calleeObject.node.name) == null &&
                     calleeProperty.isIdentifier({ name: "r" })
-                ) {
+                ) || (
+                    module.AST.program.sourceType == "module" &&
+                    calleeObject.isIdentifier({ name: "Object" }) &&
+                    calleeProperty.isIdentifier({ name: "defineProperty" }) &&
+                    args[0]?.isIdentifier({ name: module.args[1] }) &&
+                    args[0].scope.getBinding(module.args[1]!) == null &&
+                    args[1]?.isStringLiteral({ value: "__esModule" })
+                )) {
                     if (module.AST.program.sourceType == "module") {
                         path.remove()
                     } else {
@@ -1460,7 +1475,14 @@ async function writeModules(basePath: string, modules: ModuleMap): Promise<void>
             let filePath: string = path.resolve(basePath, ...module.path)
             filePath += ".ts"
             await fs.mkdir(path.dirname(filePath), { recursive: true })
-            await fs.writeFile(filePath, generate(module.AST).code)
+            await fs.writeFile(filePath, [
+                "/** ",
+                " * 由 CoCo 源代码计划解包器解包",
+                " *",
+                ` * 模块 ID：${module.key}`,
+                " */",
+                ""
+            ].map(line => `${line}\n`).join("") + generate(module.AST).code)
             bar.increment()
         })())
     }

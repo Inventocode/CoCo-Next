@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：1756
+ */
+
 var r = require("./1757");
 function i(t, n, o) {
   if ("undefined" !== typeof Reflect && Reflect.get) {

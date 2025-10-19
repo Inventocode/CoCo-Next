@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：261
+ */
+
 "use strict";
 
 export { f as a };
@@ -645,7 +651,9 @@ var f = function () {
           case 3:
             return [2, a.sent()];
           case 4:
-            throw o = a.sent(), t.disposeMediaStream(i), o;
+            o = a.sent();
+            t.disposeMediaStream(i);
+            throw o;
           case 5:
             return [2];
         }

@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：271
+ */
+
 module.exports = {
   widgetMallDialog: "WidgetMallDialog_widgetMallDialog__1URzI",
   widgetLabel: "WidgetMallDialog_widgetLabel__1fptD",

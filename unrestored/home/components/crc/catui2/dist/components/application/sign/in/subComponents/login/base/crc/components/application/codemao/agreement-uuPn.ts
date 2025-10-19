@@ -1,8 +1,14 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：uuPn
+ */
+
 "use strict";
 
 /* harmony export (binding) */
-export { CodemaoAgreement };
 /* harmony import */
+export { CodemaoAgreement };
 import * as __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__ from "@babel/runtime/helpers/esm/slicedToArray";
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_1_react__ from "react";
@@ -24,8 +30,8 @@ var CodemaoAgreement = function CodemaoAgreement(props) {
   var _onSignSuccess = props.onSignSuccess;
   var onSignError = props.onSignError;
   var entryDialogText = props.entryDialogText;
-  var _useState = Object(__WEBPACK_IMPORTED_MODULE_1_react__.useState)(SignStatus.ENTRY);
-  var _useState2 = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default)(_useState, 2);
+  var _useState = __WEBPACK_IMPORTED_MODULE_1_react__.useState(SignStatus.ENTRY);
+  var _useState2 = __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default(_useState, 2);
   var status = _useState2[0];
   var setStatus = _useState2[1];
   var onDialogClose = function onDialogClose() {

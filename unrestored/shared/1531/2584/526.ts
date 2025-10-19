@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：526
+ */
+
 module.exports = {
   container: "TableDataWatch_container__1RVpj",
   wrapper: "TableDataWatch_wrapper__3KtlN",

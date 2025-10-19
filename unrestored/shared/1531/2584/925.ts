@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：925
+ */
+
 module.exports = {
   imageEditor: "style_imageEditor__27LIP",
   imageEditorMain: "style_imageEditorMain__3kUyb",

@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：GlfS
+ */
+
 "use strict";
 
 /* harmony import */
@@ -55,7 +61,7 @@ var _slicedToArray = function () {
 }();
 var Alert = function Alert(props) {
   var _props$type = props.type;
-  var type = _props$type === undefined ? 'info' : _props$type;
+  var type = _props$type === undefined ? "info" : _props$type;
   var message = props.message;
   var _props$showPrefixIcon = props.showPrefixIcon;
   var showPrefixIcon = _props$showPrefixIcon === undefined ? false : _props$showPrefixIcon;
@@ -65,36 +71,36 @@ var Alert = function Alert(props) {
   var onClose = props.onClose;
   var icon = props.icon;
   var className = props.className;
-  var _useState = Object(__WEBPACK_IMPORTED_MODULE_1_react__.useState)(true);
+  var _useState = __WEBPACK_IMPORTED_MODULE_1_react__.useState(true);
   var _useState2 = _slicedToArray(_useState, 2);
   var stateVisible = _useState2[0];
   var setStateVisible = _useState2[1];
-  Object(__WEBPACK_IMPORTED_MODULE_1_react__.useLayoutEffect)(function () {
+  __WEBPACK_IMPORTED_MODULE_1_react__.useLayoutEffect(function () {
     if (visible !== undefined) {
       setStateVisible(visible);
     }
   }, [visible]);
-  var toSetStateVisible = Object(__WEBPACK_IMPORTED_MODULE_1_react__.useCallback)(function (v) {
+  var toSetStateVisible = __WEBPACK_IMPORTED_MODULE_1_react__.useCallback(function (v) {
     if (visible !== undefined) {
       return;
     }
     setStateVisible(v);
   }, [visible]);
-  var typeObj = Object(__WEBPACK_IMPORTED_MODULE_1_react__.useMemo)(function () {
-    var iconType = '';
-    var typeClass = '';
+  var typeObj = __WEBPACK_IMPORTED_MODULE_1_react__.useMemo(function () {
+    var iconType = "";
+    var typeClass = "";
     switch (type) {
-      case 'success':
-        iconType = 'icon-alert-success';
-        typeClass = 'coco-alert-success';
+      case "success":
+        iconType = "icon-alert-success";
+        typeClass = "coco-alert-success";
         break;
-      case 'error':
-        iconType = 'icon-alert-error';
-        typeClass = 'coco-alert-error';
+      case "error":
+        iconType = "icon-alert-error";
+        typeClass = "coco-alert-error";
         break;
-      case 'info':
-        iconType = 'icon-alert-info';
-        typeClass = 'coco-alert-info';
+      case "info":
+        iconType = "icon-alert-info";
+        typeClass = "coco-alert-info";
         break;
     }
     return {
@@ -104,14 +110,14 @@ var Alert = function Alert(props) {
       className: typeClass
     };
   }, [type]);
-  var handleClose = Object(__WEBPACK_IMPORTED_MODULE_1_react__.useCallback)(function () {
+  var handleClose = __WEBPACK_IMPORTED_MODULE_1_react__.useCallback(function () {
     toSetStateVisible(false);
     if (onClose) {
       onClose();
     }
   }, [onClose, toSetStateVisible]);
   return __WEBPACK_IMPORTED_MODULE_1_react___default.createElement("div", {
-    className: __WEBPACK_IMPORTED_MODULE_0_classnames___default('coco-alert', typeObj.className, className, !stateVisible && 'coco-alert-hide')
+    className: __WEBPACK_IMPORTED_MODULE_0_classnames___default("coco-alert", typeObj.className, className, !stateVisible && "coco-alert-hide")
   }, __WEBPACK_IMPORTED_MODULE_1_react___default.createElement("div", {
     className: "coco-alert-content"
   }, __WEBPACK_IMPORTED_MODULE_1_react___default.createElement("div", {
@@ -124,5 +130,5 @@ var Alert = function Alert(props) {
   })));
 };
 /* harmony default export */
-export default Object(__WEBPACK_IMPORTED_MODULE_1_react__.memo)(Alert);
+export default __WEBPACK_IMPORTED_MODULE_1_react__.memo(Alert);
 /***/

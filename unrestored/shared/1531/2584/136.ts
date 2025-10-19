@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：136
+ */
+
 module.exports = {
   oTButton: "style_oTButton__3Iy-r",
   collIconWrapper: "style_collIconWrapper__3sgII",

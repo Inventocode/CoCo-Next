@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：1702
+ */
+
 var r = require("../../1680/473");
 module.exports = function (e) {
   var t = r(e);

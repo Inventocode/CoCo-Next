@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：196
+ */
+
 module.exports = {
   categoryItem: "WidgetList_categoryItem__1o_mN",
   categoryHeader: "WidgetList_categoryHeader__23-do",

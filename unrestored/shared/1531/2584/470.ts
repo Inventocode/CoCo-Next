@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：470
+ */
+
 module.exports = {
   wrapper: "SearchInput_wrapper__3Uo7M",
   header: "SearchInput_header__25Cf5",

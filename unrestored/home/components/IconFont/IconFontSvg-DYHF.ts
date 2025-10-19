@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：DYHF
+ */
+
 "use strict";
 
 /* harmony import */
@@ -11,7 +17,7 @@ var IconFontSVG = function IconFontSVG() {
     height: "0",
     "data-html2canvas-ignore": "true",
     style: {
-      position: 'absolute'
+      position: "absolute"
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.createElement("symbol", {
     id: "icon-help",

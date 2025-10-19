@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：119
+ */
+
 "use strict";
 
 export { p as a };
@@ -16,7 +22,7 @@ var o = function __importDefault(module) {
 }(r);
 import i = require("../../7");
 import a = require("./774/index");
-import s = require("../../41");
+import s = require("../../../../../../src/shared/utils/network/axios-with-credentials");
 import c = require("../../59/index");
 var l = "".concat(c.a.serverHost, "/coconut");
 var u = false;

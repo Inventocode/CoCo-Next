@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：2252
+ */
+
 var r = require("../../../../38/607/806/index");
 module.exports = function (e) {
   function t(e) {

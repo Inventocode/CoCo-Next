@@ -71,6 +71,9 @@ unpack({
             searchPath: /^(.*\/)?559(\/index)?$/,
             replace: "hammerjs"
         }, {
+            searchPath: /^(.*\/)?1989(\/index)?$/,
+            replace: "punycode"
+        }, {
             searchPath: /^(.*\/)?2102(\/index)?$/,
             replace: "inversify-inject-decorators"
         }, {
@@ -96,8 +99,12 @@ unpack({
         23: "../../src/shared/ui/language",
         36: "../../src/shared/widget/custom/load",
         38: "../../src/shared/events/actions",
+        41: "../../src/shared/utils/network/axios-with-credentials",
         79: "../../src/shared/widget/custom/type",
+        98: "../../src/shared/widget/custom/storage",
+        182: "../../src/shared/widget/custom/shop",
         233: "../../src/shared/widget/custom/restrict",
+        301: "../../src/editor/block/generate",
         345: "../../src/shared/widget/custom/external-module",
         1531: ".",
         2584: "../../src/editor/index"

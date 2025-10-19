@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：946
+ */
+
 var r = require("../1680/473");
 var o = require("./310");
 var i = require("../1675/421");

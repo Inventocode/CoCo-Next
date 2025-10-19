@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：353
+ */
+
 module.exports = {
   imageLayout: "style_imageLayout__3KjeS",
   imageLayoutMain: "style_imageLayoutMain__3r2Gx",

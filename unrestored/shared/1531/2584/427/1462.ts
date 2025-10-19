@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：1462
+ */
+
 (function (t) {
   var n = !!(t === t.window && t.URL && t.Blob && t.Worker);
   function r(e, r) {

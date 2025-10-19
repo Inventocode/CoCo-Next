@@ -1,8 +1,14 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：kehq
+ */
+
 "use strict";
 
 /* harmony export (binding) */
-export { CourseDialogView };
 /* harmony import */
+export { CourseDialogView };
 import * as __WEBPACK_IMPORTED_MODULE_0_react__ from "react";
 /* harmony import */
 import __WEBPACK_IMPORTED_MODULE_0_react___default from "react";
@@ -117,7 +123,7 @@ var CourseDialogView = function (_React$Component) {
         visible: true
       });
       this.props.setCourseDialogVisibleAction(false);
-      Object(__WEBPACK_IMPORTED_MODULE_4__sensorsData__.sensorsCustomReport)('CourseClick', {
+      __WEBPACK_IMPORTED_MODULE_4__sensorsData__.sensorsCustomReport("CourseClick", {
         course_id: id
       });
     }
@@ -132,44 +138,44 @@ var CourseDialogView = function (_React$Component) {
         withPortal: true,
         visible: courseDialogVisible,
         showCloseButton: true,
-        className: '',
-        title: "\u5165\u95E8\u6559\u7A0B",
-        styleName: 'courseDialog',
+        className: "",
+        title: "入门教程",
+        styleName: "courseDialog",
         onClose: this.handleClose
       }, __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-        styleName: 'courseList'
+        styleName: "courseList"
       }, courseList.map(function (item) {
         return __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-          styleName: 'courseItem',
+          styleName: "courseItem",
           key: item.id,
           onClick: function onClick() {
             return _this2.handlePlayCourse(item.id);
           }
         }, __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-          styleName: 'courseImage'
+          styleName: "courseImage"
         }, __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-          styleName: 'image',
+          styleName: "image",
           style: {
             backgroundImage: "url(" + item.preview + ")"
           }
         }), __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-          styleName: 'mask'
+          styleName: "mask"
         }, __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-          styleName: 'playBox'
+          styleName: "playBox"
         }, __WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_3__IconFont__.default, {
-          type: 'icon-play'
+          type: "icon-play"
         })))), __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-          styleName: 'courseName'
+          styleName: "courseName"
         }, item.title), __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-          styleName: 'courseDesc'
+          styleName: "courseDesc"
         }, item.course_intro));
       }), __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-        styleName: 'courseMore'
+        styleName: "courseMore"
       }, __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-        styleName: 'moreImage'
+        styleName: "moreImage"
       }), __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-        styleName: 'moreTips'
-      }, "\u66F4\u591A\u7CBE\u5F69\uFF0C\u656C\u8BF7\u671F\u5F85"))));
+        styleName: "moreTips"
+      }, "更多精彩，敬请期待"))));
     }
   }]);
   return CourseDialogView;

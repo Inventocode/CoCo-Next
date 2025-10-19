@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：618
+ */
+
 module.exports = {
   packageProgress: "PackageProgress_packageProgress__mH-0N",
   circle: "PackageProgress_circle__hZ-ze",

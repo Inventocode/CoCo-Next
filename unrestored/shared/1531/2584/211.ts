@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：211
+ */
+
 module.exports = {
   wrapper: "ScreenList_wrapper__nhsQ3",
   stageMask: "ScreenList_stageMask__1Tj1H",

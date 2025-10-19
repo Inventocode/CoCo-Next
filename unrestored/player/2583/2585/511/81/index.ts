@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：81
+ */
+
 "use strict";
 
 import "./873/index";
@@ -63,8 +69,8 @@ import "./452";
 import "./126";
 import "./118";
 import "./401";
-import "./191";
-import "./274/index";
+import "./191/index";
+import "./274";
 import "./335";
 import "./456";
 import * as g from "./406";
@@ -105,9 +111,9 @@ import "./402/index";
 import "./503";
 import "./505";
 import "./504";
-import "./509/index";
-import "./602";
-import "./453/index";
-import "./600";
+import "./509";
+import "./602/index";
+import "./453";
+import "./600/index";
 import * as O from "./349";
 export { a as MultiFormatOneDReader } from "./349";

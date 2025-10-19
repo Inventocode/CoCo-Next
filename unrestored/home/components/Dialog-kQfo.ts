@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：kQfo
+ */
+
 "use strict";
 
 /* harmony import */
@@ -57,7 +63,7 @@ var _slicedToArray = function () {
     }
   };
 }();
-var DIALOG_CONTAINER_ID = '_cocoDialogContainer';
+var DIALOG_CONTAINER_ID = "_cocoDialogContainer";
 var Dialog = function Dialog(props) {
   var className = props.className;
   var style = props.style;
@@ -74,27 +80,27 @@ var Dialog = function Dialog(props) {
   var withPortal = _props$withPortal === undefined ? false : _props$withPortal;
   var title = props.title;
   var footer = props.footer;
-  var _useState = Object(__WEBPACK_IMPORTED_MODULE_1_react__.useState)(false);
+  var _useState = __WEBPACK_IMPORTED_MODULE_1_react__.useState(false);
   var _useState2 = _slicedToArray(_useState, 2);
   var display = _useState2[0];
   var setDisplay = _useState2[1]; // 创建一个放置 dialog 的容器
   var container = document.getElementById(DIALOG_CONTAINER_ID);
   if (!container) {
-    container = document.createElement('div');
+    container = document.createElement("div");
     container.id = DIALOG_CONTAINER_ID;
     document.body.appendChild(container);
   }
-  var handleClickClose = Object(__WEBPACK_IMPORTED_MODULE_1_react__.useCallback)(function () {
+  var handleClickClose = __WEBPACK_IMPORTED_MODULE_1_react__.useCallback(function () {
     if (onClose) {
       onClose();
     }
   }, [onClose]);
-  var handleMaskClick = Object(__WEBPACK_IMPORTED_MODULE_1_react__.useCallback)(function () {
+  var handleMaskClick = __WEBPACK_IMPORTED_MODULE_1_react__.useCallback(function () {
     if (maskClosable) {
       handleClickClose();
     }
   }, [handleClickClose, maskClosable]);
-  Object(__WEBPACK_IMPORTED_MODULE_1_react__.useEffect)(function () {
+  __WEBPACK_IMPORTED_MODULE_1_react__.useEffect(function () {
     if (visible) {
       setDisplay(true);
     }
@@ -107,20 +113,20 @@ var Dialog = function Dialog(props) {
   var dialog = __WEBPACK_IMPORTED_MODULE_1_react___default.createElement("div", {
     "data-html2canvas-ignore": "true",
     tabIndex: -1,
-    className: __WEBPACK_IMPORTED_MODULE_0_classnames___default('coco-dialog', className),
+    className: __WEBPACK_IMPORTED_MODULE_0_classnames___default("coco-dialog", className),
     style: Object.assign({
-      display: visible ? 'block' : 'none'
+      display: visible ? "block" : "none"
     }, style)
   }, mask && __WEBPACK_IMPORTED_MODULE_1_react___default.createElement("div", {
-    className: visible ? 'coco-dialog-mask' : __WEBPACK_IMPORTED_MODULE_0_classnames___default('coco-dialog-mask', 'hidden'),
+    className: visible ? "coco-dialog-mask" : __WEBPACK_IMPORTED_MODULE_0_classnames___default("coco-dialog-mask", "hidden"),
     onClick: handleMaskClick
   }), __WEBPACK_IMPORTED_MODULE_1_react___default.createElement("div", {
     className: "coco-dialog-scroll"
   }, __WEBPACK_IMPORTED_MODULE_1_react___default.createElement("div", {
-    className: visible ? __WEBPACK_IMPORTED_MODULE_0_classnames___default('coco-dialog-wrapper', 'show') : __WEBPACK_IMPORTED_MODULE_0_classnames___default('coco-dialog-wrapper', 'hidden'),
+    className: visible ? __WEBPACK_IMPORTED_MODULE_0_classnames___default("coco-dialog-wrapper", "show") : __WEBPACK_IMPORTED_MODULE_0_classnames___default("coco-dialog-wrapper", "hidden"),
     onAnimationEnd: animationEnd
   }, __WEBPACK_IMPORTED_MODULE_1_react___default.createElement("div", {
-    className: title && showCloseButton ? 'coco-dialog-title' : ''
+    className: title && showCloseButton ? "coco-dialog-title" : ""
   }, title && __WEBPACK_IMPORTED_MODULE_1_react___default.createElement("div", null, title), showCloseButton && __WEBPACK_IMPORTED_MODULE_1_react___default.createElement("span", {
     className: "coco-dialog-close",
     onClick: handleClickClose
@@ -138,5 +144,5 @@ var Dialog = function Dialog(props) {
   }
 };
 /* harmony default export */
-export default Object(__WEBPACK_IMPORTED_MODULE_1_react__.memo)(Dialog);
+export default __WEBPACK_IMPORTED_MODULE_1_react__.memo(Dialog);
 /***/

@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：417
+ */
+
 module.exports = {
   wrapper: "WidgetEditor_wrapper__3PjzL",
   hide: "WidgetEditor_hide__jUUhL",

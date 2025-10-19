@@ -7,6 +7,7 @@
         "skipLibCheck": true,
         "module": "preserve",
         "moduleResolution": "bundler",
+        "sourceMap": true,
         "resolveJsonModule": true,
         "esModuleInterop": true,
         "strict": true,
@@ -19,7 +20,10 @@
         "noPropertyAccessFromIndexSignature": true,
         "noUncheckedIndexedAccess": true,
         "noUnusedLocals": true,
-        "noUnusedParameters": true
+        "noUnusedParameters": true,
+        "types": [
+            "./node_modules/network-information-types"
+        ]
     },
     "include": ["src/**/*", "unrestored/**/*", "scripts/**/*", "helper/**/*", "src/shared/widget/custom/.ts"],
     "exclude": ["node_modules", "public"]

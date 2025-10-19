@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：163
+ */
+
 module.exports = {
   imageLibrary: "style_imageLibrary__1e22e",
   mall: "style_mall__uI2xp",

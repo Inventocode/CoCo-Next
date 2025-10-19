@@ -1,12 +1,18 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：2V4L
+ */
+
 "use strict";
 
+/* harmony export (binding) */
 /* harmony export (binding) */
 export { getHomeAllWorkList };
 /* harmony export (binding) */
 export { getCreateWorkList };
 /* harmony export (binding) */
 export { getCollWorkList };
-/* harmony export (binding) */
 export { getDeleteWorkList };
 var getHomeAllWorkList = function getHomeAllWorkList(state) {
   return state.home_reducer.workList;

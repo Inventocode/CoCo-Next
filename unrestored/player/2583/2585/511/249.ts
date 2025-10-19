@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：249
+ */
+
 module.exports = {
   container: "style_container__1lvie",
   error: "style_error__3UB-h",

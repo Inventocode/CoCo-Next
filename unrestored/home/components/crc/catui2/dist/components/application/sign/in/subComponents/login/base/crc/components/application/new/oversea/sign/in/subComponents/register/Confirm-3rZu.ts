@@ -1,8 +1,14 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：3rZu
+ */
+
 "use strict";
 
 /* harmony export (binding) */
-export { ConfirmComponent };
 /* harmony import */
+export { ConfirmComponent };
 import * as __WEBPACK_IMPORTED_MODULE_0_react__ from "react";
 /* harmony import */
 import __WEBPACK_IMPORTED_MODULE_0_react___default from "react";
@@ -28,7 +34,7 @@ var ConfirmComponent = function ConfirmComponent(props) {
     className: "CUI-new-oversea-sign-in-dialog-text-main"
   }, successText), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
     className: "CUI-new-oversea-sign-in-dialog-text-second"
-  }, Object(__WEBPACK_IMPORTED_MODULE_2__i18n__.getLanguage)('sign_in_dialog/welcome')), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_1__base_button__.Button, {
+  }, __WEBPACK_IMPORTED_MODULE_2__i18n__.getLanguage("sign_in_dialog/welcome")), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_1__base_button__.Button, {
     height: "44px",
     width: "calc(100% - 80px)",
     type: "primary",

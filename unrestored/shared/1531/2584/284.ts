@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：284
+ */
+
 module.exports = {
   tableDataTitle: "styles_tableDataTitle__3_CpW",
   backIcon: "styles_backIcon__1VS-4",

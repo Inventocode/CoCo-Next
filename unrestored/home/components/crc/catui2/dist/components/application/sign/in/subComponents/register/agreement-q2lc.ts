@@ -1,8 +1,14 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：q2lc
+ */
+
 "use strict";
 
 /* harmony export (binding) */
-export { AgreementContainer };
 /* harmony import */
+export { AgreementContainer };
 import * as __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__ from "@babel/runtime/helpers/esm/slicedToArray";
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_1_babel_plugin_react_css_modules_dist_browser_getClassName__ from "babel-plugin-react-css-modules/dist/browser/getClassName";
@@ -63,8 +69,8 @@ var _styleModuleImportMap = {
 var AgreementContainer = function AgreementContainer(props) {
   var onCheckChange = props.onCheckChange;
   var style = props.style;
-  var _useState = Object(__WEBPACK_IMPORTED_MODULE_2_react__.useState)(false);
-  var _useState2 = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default)(_useState, 2);
+  var _useState = __WEBPACK_IMPORTED_MODULE_2_react__.useState(false);
+  var _useState2 = __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default(_useState, 2);
   var agreementChecked = _useState2[0];
   var setAgreementChecked = _useState2[1];
   var handleCheckChange = function handleCheckChange() {
@@ -73,13 +79,13 @@ var AgreementContainer = function AgreementContainer(props) {
   };
   return /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_2_react__.createElement(__WEBPACK_IMPORTED_MODULE_2_react__.Fragment, null, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_2_react__.createElement("div", {
     style: style,
-    className: __WEBPACK_IMPORTED_MODULE_1_babel_plugin_react_css_modules_dist_browser_getClassName___default('agreement-container', _styleModuleImportMap, {
+    className: __WEBPACK_IMPORTED_MODULE_1_babel_plugin_react_css_modules_dist_browser_getClassName___default("agreement-container", _styleModuleImportMap, {
       "autoResolveMultipleImports": true,
       "handleMissingStyleName": "throw"
     })
   }, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_2_react__.createElement("div", {
     onClick: handleCheckChange,
-    className: __WEBPACK_IMPORTED_MODULE_1_babel_plugin_react_css_modules_dist_browser_getClassName___default("check-box ".concat(agreementChecked ? 'agree' : ''), _styleModuleImportMap, {
+    className: __WEBPACK_IMPORTED_MODULE_1_babel_plugin_react_css_modules_dist_browser_getClassName___default("check-box ".concat(agreementChecked ? "agree" : ""), _styleModuleImportMap, {
       "autoResolveMultipleImports": true,
       "handleMissingStyleName": "throw"
     })
@@ -87,19 +93,19 @@ var AgreementContainer = function AgreementContainer(props) {
     id: "#cui_check",
     size: 8,
     color: "#ffffff"
-  })), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_2_react__.createElement("p", null, "\u6211\u5DF2\u9605\u8BFB\u5E76\u540C\u610F", /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_2_react__.createElement("a", {
+  })), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_2_react__.createElement("p", null, "我已阅读并同意", /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_2_react__.createElement("a", {
     href: "https://static-platform.codemao.cn/926/protocols/_userserviceProtocol.html",
     target: "_blank",
     rel: "noreferrer"
-  }, "\u300A\u7528\u6237\u534F\u8BAE\u300B"), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_2_react__.createElement("a", {
+  }, "《用户协议》"), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_2_react__.createElement("a", {
     href: "https://static-platform.codemao.cn/926/protocols/_privacyProtocol.html",
     target: "_blank",
     rel: "noreferrer"
-  }, "\u300A\u9690\u79C1\u534F\u8BAE\u300B"), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_2_react__.createElement("a", {
+  }, "《隐私协议》"), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_2_react__.createElement("a", {
     href: "https://static-platform.codemao.cn/926/protocols/_childrenPrivacyProtectProtocol.html",
     target: "_blank",
     rel: "noreferrer"
-  }, "\u300A\u513F\u7AE5\u9690\u79C1\u4FDD\u62A4\u534F\u8BAE\u300B"))));
+  }, "《儿童隐私保护协议》"))));
 };
 
 /***/

@@ -1,8 +1,14 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：+NBU
+ */
+
 "use strict";
 
 /* harmony export (binding) */
-export { PreviewTemplateView };
 /* harmony import */
+export { PreviewTemplateView };
 import * as __WEBPACK_IMPORTED_MODULE_0_react__ from "react";
 /* harmony import */
 import __WEBPACK_IMPORTED_MODULE_0_react___default from "react";
@@ -106,7 +112,7 @@ var PreviewTemplateView = function (_React$Component) {
   function PreviewTemplateView(props) {
     _classCallCheck(this, PreviewTemplateView);
     var _this = _possibleConstructorReturn(this, (PreviewTemplateView.__proto__ || Object.getPrototypeOf(PreviewTemplateView)).call(this, props));
-    _this.templateColor = ['blue', 'yellow', 'purple'];
+    _this.templateColor = ["blue", "yellow", "purple"];
     _this.handleTemplateClick = _this.handleTemplateClick.bind(_this);
     _this.handleQuitPreview = _this.handleQuitPreview.bind(_this);
     _this.handleRefreshIframe = _this.handleRefreshIframe.bind(_this);
@@ -132,20 +138,20 @@ var PreviewTemplateView = function (_React$Component) {
         id: id,
         visible: true
       });
-      Object(__WEBPACK_IMPORTED_MODULE_7__sensorsData__.sensorsCustomReport)('TemplateClick', {
+      __WEBPACK_IMPORTED_MODULE_7__sensorsData__.sensorsCustomReport("TemplateClick", {
         template_name: name
       });
     }
   }, {
     key: "handleRefreshIframe",
     value: function handleRefreshIframe() {
-      var iframe = document.getElementById('player');
+      var iframe = document.getElementById("player");
       iframe.src = iframe.src;
     }
   }, {
     key: "handleOpenTemplate",
     value: function handleOpenTemplate(id) {
-      var _config = Object(__WEBPACK_IMPORTED_MODULE_5__cfg__.config)();
+      var _config = __WEBPACK_IMPORTED_MODULE_5__cfg__.config();
       var cocoEditorUrl = _config.cocoEditorUrl;
       window.open(cocoEditorUrl + "?templateId=" + id, Date.now().toString());
     }
@@ -169,51 +175,51 @@ var PreviewTemplateView = function (_React$Component) {
         return b.ordinal - a.ordinal;
       });
       return __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-        styleName: 'previewTemplate'
+        styleName: "previewTemplate"
       }, __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-        styleName: 'templateList'
+        styleName: "templateList"
       }, list.map(function (item, index) {
         return __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
           key: item.id,
           onClick: function onClick() {
             return _this2.handleTemplateClick(item.id, item.name);
           },
-          styleName: __WEBPACK_IMPORTED_MODULE_1_classnames___default('templateItem', _this2.templateColor[index], item.id === template.id && 'active')
+          styleName: __WEBPACK_IMPORTED_MODULE_1_classnames___default("templateItem", _this2.templateColor[index], item.id === template.id && "active")
         }, __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-          styleName: 'imageBox'
+          styleName: "imageBox"
         }, __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-          styleName: 'image',
+          styleName: "image",
           style: {
             backgroundImage: "url(" + item.preview_url2 + ")"
           }
         }, __WEBPACK_IMPORTED_MODULE_0_react__.createElement("img", {
           src: item.gif_url,
           alt: item.name,
-          styleName: 'gif'
+          styleName: "gif"
         }))), __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-          styleName: 'name'
+          styleName: "name"
         }, item.name), __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-          styleName: 'desc'
+          styleName: "desc"
         }, item.description, " "));
       })), __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-        styleName: 'quitPreviewBtn',
+        styleName: "quitPreviewBtn",
         onClick: this.handleQuitPreview
       }, __WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_6__IconFont__.default, {
-        type: 'icon-quit',
-        styleName: 'icon'
-      }), "\u9000\u51FA\u9884\u89C8"), __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-        styleName: 'previewBtnBox'
+        type: "icon-quit",
+        styleName: "icon"
+      }), "退出预览"), __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
+        styleName: "previewBtnBox"
       }, __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-        styleName: 'btnItem',
+        styleName: "btnItem",
         onClick: this.handleRefreshIframe
       }, __WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_6__IconFont__.default, {
-        type: 'icon-refresh'
+        type: "icon-refresh"
       })), __WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_2_antd__.Dropdown, {
-        placement: 'top',
+        placement: "top",
         overlay: __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-          styleName: 'dropdown'
+          styleName: "dropdown"
         }, __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-          styleName: 'qrcodeImage'
+          styleName: "qrcodeImage"
         }, __WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_3_qrcode_react__.default, {
           value: template.player_url,
           size: 150,
@@ -221,26 +227,26 @@ var PreviewTemplateView = function (_React$Component) {
           imageSettings: {
             width: 40,
             height: 40,
-            src: 'https://static.codemao.cn/coco/image/share-dialog/qrlogo.png'
+            src: "https://static.codemao.cn/coco/image/share-dialog/qrlogo.png"
           }
-        })), __WEBPACK_IMPORTED_MODULE_0_react__.createElement("span", null, "\u624B\u673A\u626B\u7801\uFF0C\u7ACB\u5373\u4F53\u9A8C"))
+        })), __WEBPACK_IMPORTED_MODULE_0_react__.createElement("span", null, "手机扫码，立即体验"))
       }, __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-        styleName: 'btnItem'
+        styleName: "btnItem"
       }, __WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_6__IconFont__.default, {
-        type: 'icon-qrcode'
+        type: "icon-qrcode"
       }))), __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-        styleName: 'howBtn',
+        styleName: "howBtn",
         onClick: function onClick() {
           return _this2.handleOpenTemplate(template.id);
         }
-      }, "\u53BB\u770B\u770B\u600E\u4E48\u505A", __WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_6__IconFont__.default, {
-        type: 'icon-right',
-        styleName: 'icon'
+      }, "去看看怎么做", __WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_6__IconFont__.default, {
+        type: "icon-right",
+        styleName: "icon"
       }))), __WEBPACK_IMPORTED_MODULE_0_react__.createElement("iframe", {
         src: template.player_url,
-        id: 'player',
+        id: "player",
         width: "100%",
-        height: '100%',
+        height: "100%",
         frameBorder: 0
       }));
     }

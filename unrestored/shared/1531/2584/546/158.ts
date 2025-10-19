@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：158
+ */
+
 module.exports = {
   hide: "style_hide__Y6gh1",
   "coco-widget-wrapper": "style_coco-widget-wrapper__1ESr6",

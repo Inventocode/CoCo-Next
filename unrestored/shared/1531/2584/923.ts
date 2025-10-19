@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：923
+ */
+
 module.exports = {
   toastWrapper: "Toast_toastWrapper__1ZDgw",
   toast: "Toast_toast__2P2Z6",

@@ -1,8 +1,14 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：KKeI
+ */
+
 "use strict";
 
 /* harmony export (binding) */
-export { RegisterContainer };
 /* harmony import */
+export { RegisterContainer };
 import * as __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__ from "@babel/runtime/helpers/esm/asyncToGenerator";
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__ from "@babel/runtime/helpers/esm/slicedToArray";
@@ -96,20 +102,20 @@ var RegisterContainer = function RegisterContainer(props) {
   var switchView = props.switchView;
   var setResetSuccess = props.setResetSuccess;
   var _useState = useState(true);
-  var _useState2 = Object(__WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default)(_useState, 2);
+  var _useState2 = __WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default(_useState, 2);
   var disableRegister = _useState2[0];
   var setDisableRegister = _useState2[1];
   var _useState3 = useState(0);
-  var _useState4 = Object(__WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default)(_useState3, 2);
+  var _useState4 = __WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default(_useState3, 2);
   var smsCountDown = _useState4[0];
   var setSmsCountDown = _useState4[1];
   var _useState5 = useState(undefined);
-  var _useState6 = Object(__WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default)(_useState5, 2);
+  var _useState6 = __WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default(_useState5, 2);
   var error = _useState6[0];
   var setError = _useState6[1];
   var isDestory = useRef(false);
   var _useState7 = useState(false);
-  var _useState8 = Object(__WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default)(_useState7, 2);
+  var _useState8 = __WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default(_useState7, 2);
   var agreementChecked = _useState8[0];
   var setAgreementChecked = _useState8[1];
   var isPhoneErr = useCallback(function () {
@@ -158,10 +164,10 @@ var RegisterContainer = function RegisterContainer(props) {
     };
   }, [isSmsCodeErr, isPhoneErr, smsTimeStamp]);
   var updateRegisterBtn = function updateRegisterBtn() {
-    setDisableRegister(phoneInputEl.value === '' || passwordInputEl.value.length < 6 || smsCodeInputEl.value === '' || !agreementChecked);
+    setDisableRegister(phoneInputEl.value === "" || passwordInputEl.value.length < 6 || smsCodeInputEl.value === "" || !agreementChecked);
   };
   var onRegisterClick = /*#__PURE__*/function () {
-    var _ref = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default)(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_3__babel_runtime_regenerator___default.mark(function _callee() {
+    var _ref = __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_3__babel_runtime_regenerator___default.mark(function _callee() {
       var phone;
       var code;
       var password;
@@ -178,23 +184,23 @@ var RegisterContainer = function RegisterContainer(props) {
             case 2:
               setError(undefined);
               phone = phoneInputEl.value;
-              if (Object(__WEBPACK_IMPORTED_MODULE_10__utils__.validatePhoneNumber)(phone)) {
+              if (__WEBPACK_IMPORTED_MODULE_10__utils__.validatePhoneNumber(phone)) {
                 _context.next = 7;
                 break;
               }
               setError({
-                msg: Object(__WEBPACK_IMPORTED_MODULE_11__i18n__.getLanguage)('sign_in_dialog/error/phone/format'),
+                msg: __WEBPACK_IMPORTED_MODULE_11__i18n__.getLanguage("sign_in_dialog/error/phone/format"),
                 type: __WEBPACK_IMPORTED_MODULE_9__auth__.AuthErrorType.PHONE
               });
               return _context.abrupt("return");
             case 7:
               code = smsCodeInputEl.value;
-              if (Object(__WEBPACK_IMPORTED_MODULE_10__utils__.validCode)(code)) {
+              if (__WEBPACK_IMPORTED_MODULE_10__utils__.validCode(code)) {
                 _context.next = 11;
                 break;
               }
               setError({
-                msg: Object(__WEBPACK_IMPORTED_MODULE_11__i18n__.getLanguage)('sign_in_dialog/error/sms_code/fail'),
+                msg: __WEBPACK_IMPORTED_MODULE_11__i18n__.getLanguage("sign_in_dialog/error/sms_code/fail"),
                 type: __WEBPACK_IMPORTED_MODULE_9__auth__.AuthErrorType.SMS_CODE
               });
               return _context.abrupt("return");
@@ -203,7 +209,7 @@ var RegisterContainer = function RegisterContainer(props) {
               password = passwordInputEl.value;
               _context.prev = 13;
               _context.next = 16;
-              return Object(__WEBPACK_IMPORTED_MODULE_9__auth__.handleRegister)({
+              return __WEBPACK_IMPORTED_MODULE_9__auth__.handleRegister({
                 phone: phone,
                 password: password,
                 code: code
@@ -234,7 +240,7 @@ var RegisterContainer = function RegisterContainer(props) {
               _context.t0 = _context["catch"](13);
               if (props.onRegisterFailure) {
                 props.onRegisterFailure({
-                  source: 'register',
+                  source: "register",
                   isSuccess: false,
                   error: _context.t0
                 });
@@ -254,7 +260,7 @@ var RegisterContainer = function RegisterContainer(props) {
     setIsRequesting(false);
   };
   var onGetCodeClick = /*#__PURE__*/function () {
-    var _ref2 = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default)(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_3__babel_runtime_regenerator___default.mark(function _callee2() {
+    var _ref2 = __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_3__babel_runtime_regenerator___default.mark(function _callee2() {
       var phone;
       var e;
       return __WEBPACK_IMPORTED_MODULE_3__babel_runtime_regenerator___default.wrap(function _callee2$(_context2) {
@@ -269,18 +275,18 @@ var RegisterContainer = function RegisterContainer(props) {
             case 2:
               setError(undefined);
               phone = phoneInputEl.value;
-              if (Object(__WEBPACK_IMPORTED_MODULE_10__utils__.validatePhoneNumber)(phone)) {
+              if (__WEBPACK_IMPORTED_MODULE_10__utils__.validatePhoneNumber(phone)) {
                 _context2.next = 7;
                 break;
               }
               setError({
-                msg: Object(__WEBPACK_IMPORTED_MODULE_11__i18n__.getLanguage)('sign_in_dialog/error/phone/format'),
+                msg: __WEBPACK_IMPORTED_MODULE_11__i18n__.getLanguage("sign_in_dialog/error/phone/format"),
                 type: __WEBPACK_IMPORTED_MODULE_9__auth__.AuthErrorType.PHONE
               });
               return _context2.abrupt("return");
             case 7:
               _context2.next = 9;
-              return Object(__WEBPACK_IMPORTED_MODULE_9__auth__.handleSendSmsCode)(phone, 'register', getCaptchaFallback);
+              return __WEBPACK_IMPORTED_MODULE_9__auth__.handleSendSmsCode(phone, "register", getCaptchaFallback);
             case 9:
               e = _context2.sent;
               if (e) {
@@ -302,27 +308,27 @@ var RegisterContainer = function RegisterContainer(props) {
   var renderGetCode = function renderGetCode() {
     return /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_4_react__.createElement("span", {
       onClick: onGetCodeClick,
-      "data-report-click": "\u7528\u6237\u4FE1\u606F-\u6CE8\u518C\u9A8C\u8BC1\u7801",
-      className: __WEBPACK_IMPORTED_MODULE_2_babel_plugin_react_css_modules_dist_browser_getClassName___default("get-code ".concat(smsCountDown ? 'disable' : 'enable'), _styleModuleImportMap, {
+      "data-report-click": "用户信息-注册验证码",
+      className: __WEBPACK_IMPORTED_MODULE_2_babel_plugin_react_css_modules_dist_browser_getClassName___default("get-code ".concat(smsCountDown ? "disable" : "enable"), _styleModuleImportMap, {
         "autoResolveMultipleImports": true,
         "handleMissingStyleName": "throw"
       })
-    }, Object(__WEBPACK_IMPORTED_MODULE_11__i18n__.getLanguage)('sign_in_dialog/btn_code'), smsCountDown ? "(".concat(smsCountDown, ")") : '');
+    }, __WEBPACK_IMPORTED_MODULE_11__i18n__.getLanguage("sign_in_dialog/btn_code"), smsCountDown ? "(".concat(smsCountDown, ")") : "");
   };
   return /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_4_react__.createElement(__WEBPACK_IMPORTED_MODULE_4_react__.Fragment, null, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_4_react__.createElement("div", {
     className: "CUI-sign-in-dialog-tab-wrap"
   }, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_4_react__.createElement("div", {
     className: "CUI-sign-in-dialog-tab"
-  }, Object(__WEBPACK_IMPORTED_MODULE_11__i18n__.getLanguage)('sign_in_dialog/new_user_sign_up'))), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_4_react__.createElement("form", {
+  }, __WEBPACK_IMPORTED_MODULE_11__i18n__.getLanguage("sign_in_dialog/new_user_sign_up"))), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_4_react__.createElement("form", {
     style: {
-      height: '208px'
+      height: "208px"
     }
   }, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_4_react__.createElement(__WEBPACK_IMPORTED_MODULE_6__base_input__.Input, {
     autofocus: true,
     inputStyle: {
       fontSize: 18,
-      width: '352px',
-      height: '44px'
+      width: "352px",
+      height: "44px"
     },
     clearBtn: true,
     maxLength: 100,
@@ -333,26 +339,26 @@ var RegisterContainer = function RegisterContainer(props) {
         setError(undefined);
       }
     },
-    label: Object(__WEBPACK_IMPORTED_MODULE_11__i18n__.getLanguage)('sign_in_dialog/placeholder/mobile_phone'),
+    label: __WEBPACK_IMPORTED_MODULE_11__i18n__.getLanguage("sign_in_dialog/placeholder/mobile_phone"),
     autoComplete: "on",
     getInputEl: function getInputEl(el) {
       phoneInputEl = el;
     },
     onBlur: function onBlur() {
       if (props.reportMethod) {
-        props.reportMethod('用户信息-注册手机号');
+        props.reportMethod("用户信息-注册手机号");
       }
     }
   }), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_4_react__.createElement("div", {
     className: "CUI-sign-in-dialog-input-error"
-  }, isPhoneErr() && error && error.msg, error && error.msg === Object(__WEBPACK_IMPORTED_MODULE_11__i18n__.getLanguage)('sign_in_dialog/error/phone/registered') && /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_4_react__.createElement("span", {
+  }, isPhoneErr() && error && error.msg, error && error.msg === __WEBPACK_IMPORTED_MODULE_11__i18n__.getLanguage("sign_in_dialog/error/phone/registered") && /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_4_react__.createElement("span", {
     className: "CUI-sign-in-dialog-link",
     onClick: switchView.bind(_this, __WEBPACK_IMPORTED_MODULE_5__def__.ContentView.LOGIN)
-  }, Object(__WEBPACK_IMPORTED_MODULE_11__i18n__.getLanguage)('sign_in_dialog/login_now'))), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_4_react__.createElement(__WEBPACK_IMPORTED_MODULE_6__base_input__.Input, {
+  }, __WEBPACK_IMPORTED_MODULE_11__i18n__.getLanguage("sign_in_dialog/login_now"))), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_4_react__.createElement(__WEBPACK_IMPORTED_MODULE_6__base_input__.Input, {
     inputStyle: {
       fontSize: 18,
-      width: '352px',
-      height: '44px'
+      width: "352px",
+      height: "44px"
     },
     clearBtn: true,
     onEnterDown: onRegisterClick,
@@ -364,7 +370,7 @@ var RegisterContainer = function RegisterContainer(props) {
       }
     },
     type: "password",
-    label: Object(__WEBPACK_IMPORTED_MODULE_11__i18n__.getLanguage)('sign_in_dialog/placeholder/password_n_tip'),
+    label: __WEBPACK_IMPORTED_MODULE_11__i18n__.getLanguage("sign_in_dialog/placeholder/password_n_tip"),
     autoComplete: "on",
     getInputEl: function getInputEl(el) {
       passwordInputEl = el;
@@ -373,11 +379,11 @@ var RegisterContainer = function RegisterContainer(props) {
       if ((passwordInputEl.value.length < 6 || passwordInputEl.value.length > 20) && passwordInputEl.value.length > 0) {
         setError({
           type: __WEBPACK_IMPORTED_MODULE_9__auth__.AuthErrorType.PWD,
-          msg: Object(__WEBPACK_IMPORTED_MODULE_11__i18n__.getLanguage)('sign_in_dialog/error/password/format')
+          msg: __WEBPACK_IMPORTED_MODULE_11__i18n__.getLanguage("sign_in_dialog/error/password/format")
         });
       }
       if (props.reportMethod) {
-        props.reportMethod('用户信息-注册设置密码');
+        props.reportMethod("用户信息-注册设置密码");
       }
     }
   }), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_4_react__.createElement("div", {
@@ -385,8 +391,8 @@ var RegisterContainer = function RegisterContainer(props) {
   }, isPasswordCodeErr() && error && error.msg), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_4_react__.createElement(__WEBPACK_IMPORTED_MODULE_6__base_input__.Input, {
     inputStyle: {
       fontSize: 18,
-      width: '352px',
-      height: '44px'
+      width: "352px",
+      height: "44px"
     },
     onEnterDown: onRegisterClick,
     isError: isSmsCodeErr(),
@@ -396,7 +402,7 @@ var RegisterContainer = function RegisterContainer(props) {
         setError(undefined);
       }
     },
-    label: Object(__WEBPACK_IMPORTED_MODULE_11__i18n__.getLanguage)('sign_in_dialog/placeholder/code'),
+    label: __WEBPACK_IMPORTED_MODULE_11__i18n__.getLanguage("sign_in_dialog/placeholder/code"),
     autoComplete: "off",
     maxLength: 10,
     getInputEl: function getInputEl(el) {
@@ -407,7 +413,7 @@ var RegisterContainer = function RegisterContainer(props) {
     iconsSuffix: renderGetCode(),
     onBlur: function onBlur() {
       if (props.reportMethod) {
-        props.reportMethod('用户信息-注册验证码');
+        props.reportMethod("用户信息-注册验证码");
       }
     }
   }), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_4_react__.createElement("div", {
@@ -415,7 +421,7 @@ var RegisterContainer = function RegisterContainer(props) {
   }, isSmsCodeErr() && error && error.msg), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_4_react__.createElement("div", {
     className: "CUI-sign-in-dialog-submit-error",
     style: {
-      bottom: '20px'
+      bottom: "20px"
     }
   }, isOtherErr() && error && error.msg)), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_4_react__.createElement(__WEBPACK_IMPORTED_MODULE_7__base_button__.Button, {
     height: "44px",
@@ -423,16 +429,16 @@ var RegisterContainer = function RegisterContainer(props) {
     className: "CUI-sign-in-dialog-sign-in-btn",
     disable: disableRegister,
     onClick: onRegisterClick,
-    "data-report": "\u7528\u6237\u4FE1\u606F-\u6CE8\u518C\u5B8C\u6210"
+    "data-report": "用户信息-注册完成"
   }, isRequesting ? /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_4_react__.createElement(__WEBPACK_IMPORTED_MODULE_8__base_spinner__.Spinner, {
     size: 18,
     themeColor: "10"
   }) : /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_4_react__.createElement("span", {
     className: "CUI-sign-in-dialog-btn-text"
-  }, Object(__WEBPACK_IMPORTED_MODULE_11__i18n__.getLanguage)('sign_in_dialog/register'))), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_4_react__.createElement(__WEBPACK_IMPORTED_MODULE_13__agreement__.AgreementContainer, {
+  }, __WEBPACK_IMPORTED_MODULE_11__i18n__.getLanguage("sign_in_dialog/register"))), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_4_react__.createElement(__WEBPACK_IMPORTED_MODULE_13__agreement__.AgreementContainer, {
     onCheckChange: setAgreementChecked,
     style: {
-      marginTop: '12px'
+      marginTop: "12px"
     }
   }));
 };

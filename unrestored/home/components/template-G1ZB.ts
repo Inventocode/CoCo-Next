@@ -1,8 +1,14 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：G1ZB
+ */
+
 "use strict";
 
 /* harmony export (binding) */
-export { HeaderView };
 /* harmony import */
+export { HeaderView };
 import * as __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator__ from "@babel/runtime/regenerator";
 /* harmony import */
 import __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default from "@babel/runtime/regenerator";
@@ -134,23 +140,23 @@ var __awaiter = this && this.__awaiter || function (thisArg, _arguments, P, gene
 };
 import * as styles from "./styles-ZbQe";
 var serviceAgreementList = [{
-  label: '用户协议',
-  link: 'https://static-platform.codemao.cn/926/protocols/7KeVbBdw_userserviceProtocol.html'
+  label: "用户协议",
+  link: "https://static-platform.codemao.cn/926/protocols/7KeVbBdw_userserviceProtocol.html"
 }, {
-  label: '隐私协议',
-  link: 'https://static-platform.codemao.cn/926/protocols/7KeVbBdw_privacyProtocol.html'
+  label: "隐私协议",
+  link: "https://static-platform.codemao.cn/926/protocols/7KeVbBdw_privacyProtocol.html"
 }, {
-  label: '儿童隐私保护协议',
-  link: 'https://static-platform.codemao.cn/926/protocols/7KeVbBdw_childrenPrivacyProtectProtocol.html'
+  label: "儿童隐私保护协议",
+  link: "https://static-platform.codemao.cn/926/protocols/7KeVbBdw_childrenPrivacyProtectProtocol.html"
 }, {
-  label: '个人信息保护政策摘要',
-  link: 'https://static-platform.codemao.cn/926/protocols/7KeVbBdw_informationProtectionPolicySummary.html'
+  label: "个人信息保护政策摘要",
+  link: "https://static-platform.codemao.cn/926/protocols/7KeVbBdw_informationProtectionPolicySummary.html"
 }, {
-  label: '个人信息收集清单',
-  link: 'https://static-platform.codemao.cn/926/protocols/7KeVbBdw_informationCollectionList.html'
+  label: "个人信息收集清单",
+  link: "https://static-platform.codemao.cn/926/protocols/7KeVbBdw_informationCollectionList.html"
 }, {
-  label: '个人信息共享清单',
-  link: 'https://static-platform.codemao.cn/926/protocols/7KeVbBdw_informationSharingList.html'
+  label: "个人信息共享清单",
+  link: "https://static-platform.codemao.cn/926/protocols/7KeVbBdw_informationSharingList.html"
 }];
 var HeaderView = function (_React$Component) {
   _inherits(HeaderView, _React$Component);
@@ -174,7 +180,7 @@ var HeaderView = function (_React$Component) {
     value: function handleLogin() {
       this.props.setSignDialogVisibleAction(true);
       // 点击登录按钮埋点
-      Object(__WEBPACK_IMPORTED_MODULE_7__sensorsData__.sensorsCustomReport)('LoginButtonClick');
+      __WEBPACK_IMPORTED_MODULE_7__sensorsData__.sensorsCustomReport("LoginButtonClick");
     }
   }, {
     key: "handleLoginOut",
@@ -186,7 +192,7 @@ var HeaderView = function (_React$Component) {
               case 0:
                 _context.prev = 0;
                 _context.next = 3;
-                return Object(__WEBPACK_IMPORTED_MODULE_3__crc_catui2_dist_components_application_sign_in_dialog__.getAuthModule)().logout();
+                return __WEBPACK_IMPORTED_MODULE_3__crc_catui2_dist_components_application_sign_in_dialog__.getAuthModule().logout();
               case 3:
                 this.props.asyncSetUserInfoAction(null);
                 _context.next = 9;
@@ -194,7 +200,7 @@ var HeaderView = function (_React$Component) {
               case 6:
                 _context.prev = 6;
                 _context.t0 = _context["catch"](0);
-                console.error('logout ', _context.t0);
+                console.error("logout ", _context.t0);
               case 9:
               case "end":
                 return _context.stop();
@@ -227,12 +233,12 @@ var HeaderView = function (_React$Component) {
   }, {
     key: "handleDocument",
     value: function handleDocument() {
-      window.open('https://codemao.yuque.com/kzbwh0/ogrtbo', Date.now().toString());
+      window.open("https://codemao.yuque.com/kzbwh0/ogrtbo", Date.now().toString());
     }
   }, {
     key: "handleFeedback",
     value: function handleFeedback() {
-      window.open('https://ozbws9i1yf.feishu.cn/share/base/form/shrcn5xCRSVjUiO4YnIrNRRdUDd', Date.now().toString());
+      window.open("https://ozbws9i1yf.feishu.cn/share/base/form/shrcn5xCRSVjUiO4YnIrNRRdUDd", Date.now().toString());
     }
   }, {
     key: "renderUserInfo",
@@ -240,13 +246,13 @@ var HeaderView = function (_React$Component) {
       if (userInfo) {
         return __WEBPACK_IMPORTED_MODULE_1_react__.createElement("div", null, __WEBPACK_IMPORTED_MODULE_1_react__.createElement(__WEBPACK_IMPORTED_MODULE_4_antd__.Dropdown, {
           overlay: __WEBPACK_IMPORTED_MODULE_1_react__.createElement("div", {
-            styleName: 'dropdown'
+            styleName: "dropdown"
           }, __WEBPACK_IMPORTED_MODULE_1_react__.createElement("div", {
             styleName: "dropdownItem",
             onClick: function onClick() {
-              return window.open(Object(__WEBPACK_IMPORTED_MODULE_8__utils_url__.getCommunityAccountSettingUrl)(), '_blank');
+              return window.open(__WEBPACK_IMPORTED_MODULE_8__utils_url__.getCommunityAccountSettingUrl(), "_blank");
             }
-          }, "\u8D26\u53F7\u8BBE\u7F6E"), __WEBPACK_IMPORTED_MODULE_1_react__.createElement(__WEBPACK_IMPORTED_MODULE_4_antd__.Dropdown, {
+          }, "账号设置"), __WEBPACK_IMPORTED_MODULE_1_react__.createElement(__WEBPACK_IMPORTED_MODULE_4_antd__.Dropdown, {
             overlay: __WEBPACK_IMPORTED_MODULE_1_react__.createElement("div", {
               styleName: "dropdown agreementDropdown"
             }, serviceAgreementList.map(function (item, index) {
@@ -254,36 +260,36 @@ var HeaderView = function (_React$Component) {
                 key: index,
                 styleName: "dropdownItem",
                 onClick: function onClick() {
-                  return window.open(item.link, '_blank');
+                  return window.open(item.link, "_blank");
                 }
               }, item.label);
             })),
             placement: "topLeft"
           }, __WEBPACK_IMPORTED_MODULE_1_react__.createElement("div", {
             styleName: "dropdownItem"
-          }, "\u670D\u52A1\u534F\u8BAE", __WEBPACK_IMPORTED_MODULE_1_react__.createElement("span", {
+          }, "服务协议", __WEBPACK_IMPORTED_MODULE_1_react__.createElement("span", {
             styleName: "subMenuArrow"
-          }, "\u25B6"))), __WEBPACK_IMPORTED_MODULE_1_react__.createElement("div", {
-            styleName: 'dropdownItem',
+          }, "▶"))), __WEBPACK_IMPORTED_MODULE_1_react__.createElement("div", {
+            styleName: "dropdownItem",
             onClick: this.handleLoginOut
-          }, "\u9000\u51FA\u767B\u5F55")),
-          trigger: ['click']
+          }, "退出登录")),
+          trigger: ["click"]
         }, __WEBPACK_IMPORTED_MODULE_1_react__.createElement("div", {
-          styleName: 'userInfo'
+          styleName: "userInfo"
         }, __WEBPACK_IMPORTED_MODULE_1_react__.createElement("div", {
-          styleName: 'userAvatar',
+          styleName: "userAvatar",
           style: {
             backgroundImage: "url(" + userInfo.avatar + ")"
           }
         }), __WEBPACK_IMPORTED_MODULE_1_react__.createElement(__WEBPACK_IMPORTED_MODULE_6__IconFont__.default, {
-          type: 'icon-dropdown-down',
-          styleName: 'iconDown'
+          type: "icon-dropdown-down",
+          styleName: "iconDown"
         }))));
       }
       return __WEBPACK_IMPORTED_MODULE_1_react__.createElement("div", {
-        styleName: 'userLogin',
+        styleName: "userLogin",
         onClick: this.handleLogin
-      }, "\u767B\u5F55");
+      }, "登录");
     }
   }, {
     key: "render",
@@ -293,38 +299,38 @@ var HeaderView = function (_React$Component) {
       var userInfo = _props2.userInfo;
       var helpDropdownVisible = this.state.helpDropdownVisible;
       return __WEBPACK_IMPORTED_MODULE_1_react__.createElement("div", {
-        styleName: 'header'
+        styleName: "header"
       }, __WEBPACK_IMPORTED_MODULE_1_react__.createElement("div", {
-        styleName: 'left'
+        styleName: "left"
       }, __WEBPACK_IMPORTED_MODULE_1_react__.createElement("img", {
-        src: 'https://creation.codemao.cn/coco/home/logo.png',
-        styleName: 'logoImg',
+        src: "https://creation.codemao.cn/coco/home/logo.png",
+        styleName: "logoImg",
         alt: ""
       }), __WEBPACK_IMPORTED_MODULE_1_react__.createElement("div", {
-        styleName: 'iconItem'
+        styleName: "iconItem"
       }, __WEBPACK_IMPORTED_MODULE_1_react__.createElement(__WEBPACK_IMPORTED_MODULE_4_antd__.Dropdown, {
         overlay: __WEBPACK_IMPORTED_MODULE_1_react__.createElement("div", {
-          styleName: 'dropdown'
+          styleName: "dropdown"
         }, __WEBPACK_IMPORTED_MODULE_1_react__.createElement("div", {
-          styleName: __WEBPACK_IMPORTED_MODULE_5_classnames___default('dropdownItem', (!userInfo || userInfo.isNewUser || courseListVisible) && 'disabled'),
+          styleName: __WEBPACK_IMPORTED_MODULE_5_classnames___default("dropdownItem", (!userInfo || userInfo.isNewUser || courseListVisible) && "disabled"),
           onClick: this.handleShowCourse
-        }, "\u5165\u95E8\u6559\u7A0B"), __WEBPACK_IMPORTED_MODULE_1_react__.createElement("div", {
-          styleName: 'dropdownItem',
+        }, "入门教程"), __WEBPACK_IMPORTED_MODULE_1_react__.createElement("div", {
+          styleName: "dropdownItem",
           onClick: this.handleDocument
-        }, "\u5E2E\u52A9\u6587\u6863")),
+        }, "帮助文档")),
         onVisibleChange: this.handleHelpDropdownVisibleChange,
         visible: helpDropdownVisible,
-        trigger: ['click']
+        trigger: ["click"]
       }, __WEBPACK_IMPORTED_MODULE_1_react__.createElement("div", null, __WEBPACK_IMPORTED_MODULE_1_react__.createElement(__WEBPACK_IMPORTED_MODULE_6__IconFont__.default, {
-        type: 'icon-help'
+        type: "icon-help"
       }), __WEBPACK_IMPORTED_MODULE_1_react__.createElement(__WEBPACK_IMPORTED_MODULE_6__IconFont__.default, {
-        type: 'icon-dropdown-down',
-        styleName: 'iconDown'
+        type: "icon-dropdown-down",
+        styleName: "iconDown"
       })))), __WEBPACK_IMPORTED_MODULE_1_react__.createElement("div", {
-        styleName: 'iconItem',
+        styleName: "iconItem",
         onClick: this.handleFeedback
       }, __WEBPACK_IMPORTED_MODULE_1_react__.createElement(__WEBPACK_IMPORTED_MODULE_6__IconFont__.default, {
-        type: 'icon-feedback'
+        type: "icon-feedback"
       }))), this.renderUserInfo(userInfo));
     }
   }]);

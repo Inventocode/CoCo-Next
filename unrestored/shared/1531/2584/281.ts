@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：281
+ */
+
 module.exports = {
   wrapper: "PreviewArea_wrapper__2g99u",
   side: "PreviewArea_side__3XTRT",

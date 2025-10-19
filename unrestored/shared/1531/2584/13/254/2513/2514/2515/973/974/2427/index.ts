@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：2427
+ */
+
 var r = require("./975");
 var i = Array.prototype.splice;
 module.exports = function (e) {

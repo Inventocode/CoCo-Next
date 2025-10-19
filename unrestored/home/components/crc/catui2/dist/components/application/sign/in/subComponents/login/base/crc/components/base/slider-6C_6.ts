@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：6C/6
+ */
+
 "use strict";
 
 /* unused harmony export Slider */
@@ -27,8 +33,8 @@ var _styleModuleImportMap = {
 var Slider = function Slider(props) {
   var _props$width;
   var _props$step;
-  var _useState = Object(__WEBPACK_IMPORTED_MODULE_2_react__.useState)('');
-  var _useState2 = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default)(_useState, 2);
+  var _useState = __WEBPACK_IMPORTED_MODULE_2_react__.useState("");
+  var _useState2 = __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default(_useState, 2);
   var state = _useState2[0];
   var setState = _useState2[1];
   var handleChange = function handleChange(e) {
@@ -37,10 +43,10 @@ var Slider = function Slider(props) {
     }
   };
   var handleMouseDown = function handleMouseDown() {
-    return setState('sliding');
+    return setState("sliding");
   };
   var handleMouseUp = function handleMouseUp() {
-    return setState('');
+    return setState("");
   };
   var getPercentage = function getPercentage() {
     var value = props.value;
@@ -57,7 +63,7 @@ var Slider = function Slider(props) {
     },
     onMouseDown: handleMouseDown,
     onMouseUp: handleMouseUp,
-    className: (props.wrapClassName ? props.wrapClassName + " " : "") + __WEBPACK_IMPORTED_MODULE_1_babel_plugin_react_css_modules_dist_browser_getClassName___default("slider-wrap ".concat(state, " ").concat(props.disabled ? 'disabled' : ''), _styleModuleImportMap, {
+    className: (props.wrapClassName ? props.wrapClassName + " " : "") + __WEBPACK_IMPORTED_MODULE_1_babel_plugin_react_css_modules_dist_browser_getClassName___default("slider-wrap ".concat(state, " ").concat(props.disabled ? "disabled" : ""), _styleModuleImportMap, {
       "autoResolveMultipleImports": true,
       "handleMissingStyleName": "throw"
     })

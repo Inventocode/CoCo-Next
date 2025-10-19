@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：MTtJ
+ */
+
 "use strict";
 
 /* unused harmony export NewOverseaSignInDialog */
@@ -29,28 +35,28 @@ var useState = __WEBPACK_IMPORTED_MODULE_1_react__.useState;
 var useEffect = __WEBPACK_IMPORTED_MODULE_1_react__.useEffect;
 var NewOverseaSignInDialog = function NewOverseaSignInDialog(props) {
   var _useState = useState(__WEBPACK_IMPORTED_MODULE_4__def__.ContentView.LOGIN);
-  var _useState2 = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default)(_useState, 2);
+  var _useState2 = __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default(_useState, 2);
   var contentView = _useState2[0];
   var setContentView = _useState2[1];
   var _useState3 = useState(false);
-  var _useState4 = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default)(_useState3, 2);
+  var _useState4 = __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default(_useState3, 2);
   var isRequesting = _useState4[0];
   var setIsRequesting = _useState4[1];
   var _useState5 = useState(props.show);
-  var _useState6 = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default)(_useState5, 2);
+  var _useState6 = __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default(_useState5, 2);
   var show = _useState6[0];
   var setShow = _useState6[1];
   var onEmailLoginSuccess = props.onEmailLoginSuccess;
   var onCloseAnimationEnd = props.onCloseAnimationEnd;
   var reportMethod = props.reportMethod;
   var onRegisterSuccess = props.onRegisterSuccess;
-  Object(__WEBPACK_IMPORTED_MODULE_8__i18n__.setLanguage)(props.language || '');
+  __WEBPACK_IMPORTED_MODULE_8__i18n__.setLanguage(props.language || "");
   useEffect(function () {
     setShow(props.show);
   }, [props.show]);
   var switchView = function switchView(view) {
     if (reportMethod) {
-      reportMethod('\u7528\u6237\u4FE1\u606F-'.concat(contentView === __WEBPACK_IMPORTED_MODULE_4__def__.ContentView.LOGIN ? '登录' : contentView === __WEBPACK_IMPORTED_MODULE_4__def__.ContentView.REGISTER ? '注册' : '找回密码'));
+      reportMethod("用户信息-".concat(contentView === __WEBPACK_IMPORTED_MODULE_4__def__.ContentView.LOGIN ? "登录" : contentView === __WEBPACK_IMPORTED_MODULE_4__def__.ContentView.REGISTER ? "注册" : "找回密码"));
     }
     setContentView(view);
   };
@@ -113,7 +119,7 @@ var NewOverseaSignInDialog = function NewOverseaSignInDialog(props) {
   })));
 };
 NewOverseaSignInDialog.defaultProps = {
-  language: 'en',
+  language: "en",
   onCloseAnimationEnd: function onCloseAnimationEnd() {
     return undefined;
   },

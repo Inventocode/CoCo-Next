@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：2493
+ */
+
 var n = Object.prototype.hasOwnProperty;
 module.exports = function (e) {
   var t = e.length;

@@ -1,6 +1,12 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：1028
+ */
+
 "use strict";
 
-var r = require("./1989");
+var r = require("punycode");
 var i = require("./1990");
 function o() {
   this.protocol = null;

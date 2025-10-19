@@ -1,8 +1,14 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：GoM7
+ */
+
 "use strict";
 
 /* harmony export (binding) */
-export { IntlWrapperComponent };
 /* harmony import */
+export { IntlWrapperComponent };
 import * as __WEBPACK_IMPORTED_MODULE_0_intl__ from "intl";
 /* harmony import */
 import __WEBPACK_IMPORTED_MODULE_0_intl___default from "intl";
@@ -78,7 +84,7 @@ var IntlWrapper = function (_React$Component) {
 
     // Codemao: use zh as the default language.
     var _this = _possibleConstructorReturn(this, (IntlWrapper.__proto__ || Object.getPrototypeOf(IntlWrapper)).call(this, props));
-    var system_lang = 'zh';
+    var system_lang = "zh";
     var init_language = system_lang;
     var init_locale = __WEBPACK_IMPORTED_MODULE_5__i18n__.language_list[init_language].intl_lang_name;
     var init_messages = __WEBPACK_IMPORTED_MODULE_5__i18n__.language_list[init_language].language;
@@ -89,7 +95,7 @@ var IntlWrapper = function (_React$Component) {
     return _this;
   }
   _createClass(IntlWrapper, [{
-    key: 'componentWillReceiveProps',
+    key: "componentWillReceiveProps",
     value: function componentWillReceiveProps(nextProps) {
       if (nextProps.language == this.props.language) {
         return;
@@ -102,7 +108,7 @@ var IntlWrapper = function (_React$Component) {
       });
     }
   }, {
-    key: 'render',
+    key: "render",
     value: function render() {
       return __WEBPACK_IMPORTED_MODULE_1_react__.createElement(__WEBPACK_IMPORTED_MODULE_4_react_intl__.IntlProvider, {
         locale: this.state.locale,
@@ -118,8 +124,8 @@ function mapStateToProps(state) {
   };
 }
 function mapDispatchToProps(dispatch) {
-  return Object(__WEBPACK_IMPORTED_MODULE_3_redux__.bindActionCreators)({}, dispatch);
+  return __WEBPACK_IMPORTED_MODULE_3_redux__.bindActionCreators({}, dispatch);
 }
-var IntlWrapperComponent = Object(__WEBPACK_IMPORTED_MODULE_2_react_redux__.connect)(mapStateToProps, mapDispatchToProps)(IntlWrapper);
+var IntlWrapperComponent = __WEBPACK_IMPORTED_MODULE_2_react_redux__.connect(mapStateToProps, mapDispatchToProps)(IntlWrapper);
 
 /***/

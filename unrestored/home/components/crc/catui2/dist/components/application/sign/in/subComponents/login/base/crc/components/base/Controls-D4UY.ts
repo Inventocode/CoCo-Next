@@ -1,8 +1,14 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：D4UY
+ */
+
 "use strict";
 
 /* harmony export (binding) */
-export { Controls };
 /* harmony import */
+export { Controls };
 import * as __WEBPACK_IMPORTED_MODULE_0_react__ from "react";
 /* harmony import */
 import __WEBPACK_IMPORTED_MODULE_0_react___default from "react";
@@ -12,17 +18,17 @@ import * as __WEBPACK_IMPORTED_MODULE_1_react_three_fiber__ from "@react-three/f
 import * as __WEBPACK_IMPORTED_MODULE_2_three_examples_jsm_controls_OrbitControls__ from "three/examples/jsm/controls/OrbitControls";
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_3__common_hooks_useEventListener__ from "./common/hooks/useEventListener-I2hg";
-Object(__WEBPACK_IMPORTED_MODULE_1_react_three_fiber__.extend)({
+__WEBPACK_IMPORTED_MODULE_1_react_three_fiber__.extend({
   OrbitControls: __WEBPACK_IMPORTED_MODULE_2_three_examples_jsm_controls_OrbitControls__.OrbitControls
 });
 var Controls = function Controls(_ref) {
   var onDeviceOrientation = _ref.onDeviceOrientation;
   var ref = __WEBPACK_IMPORTED_MODULE_0_react__.useRef();
-  var _useThree = Object(__WEBPACK_IMPORTED_MODULE_1_react_three_fiber__.useThree)();
+  var _useThree = __WEBPACK_IMPORTED_MODULE_1_react_three_fiber__.useThree();
   var camera = _useThree.camera;
   var gl = _useThree.gl;
-  Object(__WEBPACK_IMPORTED_MODULE_0_react__.useEffect)(function () {
-    gl.domElement.style.outline = 'none';
+  __WEBPACK_IMPORTED_MODULE_0_react__.useEffect(function () {
+    gl.domElement.style.outline = "none";
     var orbitControls = ref.current;
     orbitControls.enableKeys = false;
     orbitControls.enableZoom = false;
@@ -32,7 +38,7 @@ var Controls = function Controls(_ref) {
     orbitControls.maxPolarAngle = Math.PI;
     orbitControls.minPolarAngle = -Math.PI;
   }, [camera, gl]);
-  Object(__WEBPACK_IMPORTED_MODULE_1_react_three_fiber__.useFrame)(function () {
+  __WEBPACK_IMPORTED_MODULE_1_react_three_fiber__.useFrame(function () {
     var _ref$current;
     if ((_ref$current = ref.current) === null || _ref$current === undefined) {
       undefined;
@@ -55,7 +61,7 @@ var Controls = function Controls(_ref) {
       gamma: gamma
     });
   });
-  Object(__WEBPACK_IMPORTED_MODULE_3__common_hooks_useEventListener__.useEventListener)(document, 'pointerup', function () {
+  __WEBPACK_IMPORTED_MODULE_3__common_hooks_useEventListener__.useEventListener(document, "pointerup", function () {
     var orbitControls = ref.current;
     orbitControls.reset();
   });

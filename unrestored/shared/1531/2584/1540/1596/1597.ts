@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：1597
+ */
+
 var r = require("../1592/1069");
 var o = Math.abs;
 var i = Math.pow;

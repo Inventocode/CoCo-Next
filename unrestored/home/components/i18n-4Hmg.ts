@@ -1,9 +1,15 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：4Hmg
+ */
+
 "use strict";
 
 /* unused harmony export LanguageEnum */
 /* harmony export (binding) */
-export { language_list };
 /* harmony import */
+export { language_list };
 import * as __WEBPACK_IMPORTED_MODULE_0_react_intl__ from "react-intl";
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_1_react_intl_locale_data_en__ from "../react/intl/locale/data/en-TCl6";
@@ -29,7 +35,7 @@ function _toConsumableArray(arr) {
     return Array.from(arr);
   }
 }
-Object(__WEBPACK_IMPORTED_MODULE_0_react_intl__.addLocaleData)([].concat(_toConsumableArray(__WEBPACK_IMPORTED_MODULE_1_react_intl_locale_data_en__), _toConsumableArray(__WEBPACK_IMPORTED_MODULE_2_react_intl_locale_data_zh__)));
+__WEBPACK_IMPORTED_MODULE_0_react_intl__.addLocaleData([].concat(_toConsumableArray(__WEBPACK_IMPORTED_MODULE_1_react_intl_locale_data_en__), _toConsumableArray(__WEBPACK_IMPORTED_MODULE_2_react_intl_locale_data_zh__)));
 var LanguageEnum;
 (function (LanguageEnum) {
   LanguageEnum["zh"] = "zh";
@@ -38,15 +44,15 @@ var LanguageEnum;
 })(LanguageEnum || (LanguageEnum = {}));
 var language_list = {
   zh: {
-    intl_lang_name: 'zh',
+    intl_lang_name: "zh",
     language: __WEBPACK_IMPORTED_MODULE_3__zh_CN__.zh_CN
   },
   tw: {
-    intl_lang_name: 'zh-Hant',
+    intl_lang_name: "zh-Hant",
     language: __WEBPACK_IMPORTED_MODULE_5__zh_TW__.zh_TW
   },
   en: {
-    intl_lang_name: 'en',
+    intl_lang_name: "en",
     language: __WEBPACK_IMPORTED_MODULE_4__en_US__.en_US
   }
 };

@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：328
+ */
+
 module.exports = {
   wrapper: "WidgetPanel_wrapper__2VUPf",
   widgetTree: "WidgetPanel_widgetTree__2E1rc",

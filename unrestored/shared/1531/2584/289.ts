@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：289
+ */
+
 "use strict";
 
 export { s as c };
@@ -17,7 +23,7 @@ var o = function __importDefault(module) {
   return defaultExport;
 }(r);
 import i = require("./7");
-import a = require("./182");
+import a = require("../../../../src/shared/widget/custom/shop");
 function s(e) {
   return c.apply(this, arguments);
 }

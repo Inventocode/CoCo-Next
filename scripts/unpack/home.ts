@@ -107,5 +107,6 @@ unpack({
     output: {
         path: path.resolve("unrestored", "home")
     },
+    publicPath: "https://creation.codemao.cn/coco/home/dist/",
     setPath: SetPath.BY_IMPORT_NAME
 })

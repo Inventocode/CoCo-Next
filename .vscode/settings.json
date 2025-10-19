@@ -2,6 +2,7 @@
     "cSpell.words": [
         "animejs",
         "aqara",
+        "bcmcdn",
         "chunkhash",
         "codemao",
         "eventorder",
@@ -17,5 +18,11 @@
         "unminimizing",
         "vika",
         "vikadata"
-    ]
+    ],
+    "explorer.fileNesting.enabled": true,
+    "explorer.fileNesting.patterns": {
+        "webpack.common.*": "webpack.*",
+        "tsconfig.json": "tsconfig.*.json",
+        "package.json": "package-lock.json"
+    },
 }

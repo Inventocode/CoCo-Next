@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：49
+ */
+
 "use strict";
 
 export { In as oTHelper };
@@ -2296,7 +2302,7 @@ function gn() {
     }, e);
   }))).apply(this, arguments);
 }
-import _n = require("../98");
+import _n = require("../../../../../src/shared/widget/custom/storage");
 function vn(e) {
   var t;
   if (2 === (t = e.path).length && "unsafeExtensionWidgetList" === t[0]) {

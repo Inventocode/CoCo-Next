@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：1039
+ */
+
 module.exports = {
   wrapper: "DevTools_wrapper__1OwK-",
   dataWatchContainer: "DevTools_dataWatchContainer__P8VJb",

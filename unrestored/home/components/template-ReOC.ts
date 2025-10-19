@@ -1,8 +1,14 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：ReOC
+ */
+
 "use strict";
 
 /* harmony export (binding) */
-export { PlayCourseVideoView };
 /* harmony import */
+export { PlayCourseVideoView };
 import * as __WEBPACK_IMPORTED_MODULE_0_react__ from "react";
 /* harmony import */
 import __WEBPACK_IMPORTED_MODULE_0_react___default from "react";
@@ -126,7 +132,7 @@ var PlayCourseVideoView = function (_React$Component) {
   }, {
     key: "openCourseInEditor",
     value: function openCourseInEditor(id) {
-      var _config = Object(__WEBPACK_IMPORTED_MODULE_2__cfg__.config)();
+      var _config = __WEBPACK_IMPORTED_MODULE_2__cfg__.config();
       var cocoEditorUrl = _config.cocoEditorUrl;
       window.open(cocoEditorUrl + "?courseId=" + id, Date.now().toString());
       this.quitPlayCourse();
@@ -154,7 +160,7 @@ var PlayCourseVideoView = function (_React$Component) {
         this.setState({
           isEnd: false
         });
-        Object(__WEBPACK_IMPORTED_MODULE_4__sensorsData__.sensorsCustomReport)('CourseClick', {
+        __WEBPACK_IMPORTED_MODULE_4__sensorsData__.sensorsCustomReport("CourseClick", {
           course_id: nextId
         });
       }
@@ -203,76 +209,76 @@ var PlayCourseVideoView = function (_React$Component) {
         return null;
       }
       return __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-        styleName: 'playVideoBox'
+        styleName: "playVideoBox"
       }, __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-        styleName: 'content'
+        styleName: "content"
       }, __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-        styleName: 'videoTitle'
+        styleName: "videoTitle"
       }, __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-        styleName: 'title'
+        styleName: "title"
       }, course.title), __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-        styleName: 'icon',
+        styleName: "icon",
         onClick: this.quitPlayCourse
       }, __WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_3__IconFont__.default, {
-        type: 'icon-close'
+        type: "icon-close"
       }))), __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-        styleName: 'videoBox'
+        styleName: "videoBox"
       }, isPause && __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-        styleName: 'playBox'
+        styleName: "playBox"
       }, __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-        styleName: 'playIcon',
+        styleName: "playIcon",
         onClick: this.handlePlay
       }, __WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_3__IconFont__.default, {
-        type: 'icon-play',
-        styleName: 'play'
-      })), "\u64AD\u653E"), isEnd && __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-        styleName: 'playBox'
+        type: "icon-play",
+        styleName: "play"
+      })), "播放"), isEnd && __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
+        styleName: "playBox"
       }, __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-        styleName: 'playIconBox'
+        styleName: "playIconBox"
       }, __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-        styleName: 'playIconItem'
+        styleName: "playIconItem"
       }, __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-        styleName: 'playIcon',
+        styleName: "playIcon",
         onClick: this.handlePlay
       }, __WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_3__IconFont__.default, {
-        type: 'icon-replay',
-        styleName: 'replay'
-      })), "\u91CD\u64AD"), !isLast && __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-        styleName: 'playIconItem'
+        type: "icon-replay",
+        styleName: "replay"
+      })), "重播"), !isLast && __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
+        styleName: "playIconItem"
       }, __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-        styleName: 'playIcon',
+        styleName: "playIcon",
         onClick: this.handleNextCourse
       }, __WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_3__IconFont__.default, {
-        type: 'icon-next-video',
-        styleName: 'nextVideo'
-      })), "\u4E0B\u4E00\u8282")), __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-        styleName: 'openWorkBtn',
+        type: "icon-next-video",
+        styleName: "nextVideo"
+      })), "下一节")), __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
+        styleName: "openWorkBtn",
         onClick: function onClick() {
           return _this2.openCourseInEditor(course.id);
         }
-      }, "\u8FB9\u770B\u8FB9\u505A")), __WEBPACK_IMPORTED_MODULE_0_react__.createElement("video", {
+      }, "边看边做")), __WEBPACK_IMPORTED_MODULE_0_react__.createElement("video", {
         ref: function ref(e) {
           return _this2.videoRef = e;
         },
         src: course.video_url,
-        styleName: 'video',
+        styleName: "video",
         autoPlay: true,
         controls: true,
         onPlay: this.onPlay,
         onPause: this.onPause,
         onEnded: this.onEnded
       })), __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-        styleName: 'courseInfo'
+        styleName: "courseInfo"
       }, __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", null, __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-        styleName: 'title'
+        styleName: "title"
       }, course.title), __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-        styleName: 'desc'
+        styleName: "desc"
       }, course.course_intro)), __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-        styleName: 'btn',
+        styleName: "btn",
         onClick: function onClick() {
           return _this2.openCourseInEditor(course.id);
         }
-      }, "\u8FB9\u770B\u8FB9\u505A"))));
+      }, "边看边做"))));
     }
   }]);
   return PlayCourseVideoView;

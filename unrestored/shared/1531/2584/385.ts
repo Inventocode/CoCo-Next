@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：385
+ */
+
 module.exports = {
   cloudDBPublishDialog: "styles_cloudDBPublishDialog__36Gy2",
   container: "styles_container__5dZt7",

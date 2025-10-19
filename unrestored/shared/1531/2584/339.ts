@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：339
+ */
+
 module.exports = {
   SoundLayoutItem: "style_SoundLayoutItem__zbnsH",
   delete: "style_delete__1V7tf",

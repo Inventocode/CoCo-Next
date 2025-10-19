@@ -1,8 +1,14 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：Gjqo
+ */
+
 "use strict";
 
 /* harmony export (binding) */
-export { ConfirmComponent };
 /* harmony import */
+export { ConfirmComponent };
 import * as __WEBPACK_IMPORTED_MODULE_0_react__ from "react";
 /* harmony import */
 import __WEBPACK_IMPORTED_MODULE_0_react___default from "react";
@@ -26,17 +32,17 @@ var ConfirmComponent = function ConfirmComponent(props) {
     className: "CUI-oversea-sign-in-dialog-text-area"
   }, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
     className: "CUI-oversea-sign-in-dialog-text-main"
-  }, Object(__WEBPACK_IMPORTED_MODULE_2__i18n__.getLanguage)('sign_in_dialog/verify_email/email_title')), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
+  }, __WEBPACK_IMPORTED_MODULE_2__i18n__.getLanguage("sign_in_dialog/verify_email/email_title")), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
     className: "CUI-oversea-sign-in-dialog-text-second"
-  }, Object(__WEBPACK_IMPORTED_MODULE_2__i18n__.getLanguage)('sign_in_dialog/verify_email/email_success_content_1')), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
+  }, __WEBPACK_IMPORTED_MODULE_2__i18n__.getLanguage("sign_in_dialog/verify_email/email_success_content_1")), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
     className: "CUI-oversea-sign-in-dialog-text-second"
-  }, Object(__WEBPACK_IMPORTED_MODULE_2__i18n__.getLanguage)('sign_in_dialog/verify_email/email_success_content_2'))), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_1__base_button__.Button, {
+  }, __WEBPACK_IMPORTED_MODULE_2__i18n__.getLanguage("sign_in_dialog/verify_email/email_success_content_2"))), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_1__base_button__.Button, {
     height: "44px",
     width: "100%",
     onClick: onCompleteClick,
     type: "secondary",
-    "data-report": '\u7528\u6237\u4FE1\u606F-\u6CE8\u518C\u6210\u529F\u786E\u5B9A'
-  }, Object(__WEBPACK_IMPORTED_MODULE_2__i18n__.getLanguage)('sign_in_dialog/register/confirm'))));
+    "data-report": "用户信息-注册成功确定"
+  }, __WEBPACK_IMPORTED_MODULE_2__i18n__.getLanguage("sign_in_dialog/register/confirm"))));
 };
 
 /***/

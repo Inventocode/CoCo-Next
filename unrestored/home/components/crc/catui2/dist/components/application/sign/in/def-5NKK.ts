@@ -1,8 +1,14 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：5NKK
+ */
+
 "use strict";
 
 /* harmony export (binding) */
-export { AuthType };
 /* harmony export (binding) */
+export { AuthType };
 export { AuthErrorType };
 var AuthType;
 (function (AuthType) {

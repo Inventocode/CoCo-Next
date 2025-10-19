@@ -1,8 +1,14 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：X+ss
+ */
+
 "use strict";
 
 /* harmony export (binding) */
-export { LoginPageContainer };
 /* harmony import */
+export { LoginPageContainer };
 import * as __WEBPACK_IMPORTED_MODULE_0_babel_plugin_react_css_modules_dist_browser_getClassName__ from "babel-plugin-react-css-modules/dist/browser/getClassName";
 /* harmony import */
 import __WEBPACK_IMPORTED_MODULE_0_babel_plugin_react_css_modules_dist_browser_getClassName___default from "babel-plugin-react-css-modules/dist/browser/getClassName";
@@ -85,18 +91,18 @@ var LoginPageContainer = function LoginPageContainer(props) {
     className: "CUI-new-oversea-sign-in-dialog-text-wrap"
   }, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1_react__.createElement("span", {
     onClick: !isRequesting ? switchView.bind(_this, __WEBPACK_IMPORTED_MODULE_2__def__.ContentView.FORGET_PASSWORD) : undefined,
-    className: __WEBPACK_IMPORTED_MODULE_0_babel_plugin_react_css_modules_dist_browser_getClassName___default("center clickable tab-text ".concat(isRequesting ? 'disable-btn' : ''), _styleModuleImportMap, {
+    className: __WEBPACK_IMPORTED_MODULE_0_babel_plugin_react_css_modules_dist_browser_getClassName___default("center clickable tab-text ".concat(isRequesting ? "disable-btn" : ""), _styleModuleImportMap, {
       "autoResolveMultipleImports": true,
       "handleMissingStyleName": "throw"
     })
-  }, Object(__WEBPACK_IMPORTED_MODULE_3__i18n__.getLanguage)('sign_in_dialog/forget_password/entry')))), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1_react__.createElement(__WEBPACK_IMPORTED_MODULE_4__base_button__.Button, {
+  }, __WEBPACK_IMPORTED_MODULE_3__i18n__.getLanguage("sign_in_dialog/forget_password/entry")))), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1_react__.createElement(__WEBPACK_IMPORTED_MODULE_4__base_button__.Button, {
     disable: isRequesting,
     height: "44px",
     width: "calc(100% - 80px)",
     onClick: switchView.bind(_this, __WEBPACK_IMPORTED_MODULE_2__def__.ContentView.REGISTER),
     type: "transparent",
     className: "CUI-new-oversea-sign-in-dialog-switch-btn"
-  }, Object(__WEBPACK_IMPORTED_MODULE_3__i18n__.getLanguage)('sign_in_dialog/create_new_register'))));
+  }, __WEBPACK_IMPORTED_MODULE_3__i18n__.getLanguage("sign_in_dialog/create_new_register"))));
 };
 LoginPageContainer.defaultProps = {
   onEmailLoginSuccess: function onEmailLoginSuccess() {

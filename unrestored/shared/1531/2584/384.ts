@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：384
+ */
+
 module.exports = {
   container: "WatchItemDetail_container__1INMW",
   header: "WatchItemDetail_header__3c0UR",

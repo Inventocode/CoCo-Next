@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：634
+ */
+
 var r = require("../1659/241");
 var o = require("./1221");
 module.exports = Object.setPrototypeOf || ("__proto__" in {} ? function () {

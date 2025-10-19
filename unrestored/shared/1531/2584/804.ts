@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：804
+ */
+
 module.exports = {
   dialog: "PermissionDialog_dialog__1zySM",
   permissionImage: "PermissionDialog_permissionImage__2BieN",

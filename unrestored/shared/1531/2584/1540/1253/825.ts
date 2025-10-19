@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：825
+ */
+
 var r = require("../1641/1065");
 var o = require("../1608/705");
 var i = require("../1742/247/index")("toStringTag");

@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：101
+ */
+
 module.exports = {
   wrapper: "BlockEditor_wrapper__3A0d7",
   blocklyWorkspace: "BlockEditor_blocklyWorkspace__3Xql1",

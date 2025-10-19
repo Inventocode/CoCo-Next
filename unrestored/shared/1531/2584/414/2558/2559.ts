@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：2559
+ */
+
 "use strict";
 
 var r = this && this.__extends || function () {

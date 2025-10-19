@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：3Cpi
+ */
+
 "use strict";
 
 /* unused harmony export QRCodeCanvas */
@@ -793,10 +799,10 @@ function QRCodeCanvas(props) {
   } = _a;
   const otherProps = __objRest(_a, ["value", "size", "level", "bgColor", "fgColor", "includeMargin", "style", "imageSettings"]);
   const imgSrc = imageSettings == null ? undefined : imageSettings.src;
-  const _canvas = Object(__WEBPACK_IMPORTED_MODULE_0_react__.useRef)(null);
-  const _image = Object(__WEBPACK_IMPORTED_MODULE_0_react__.useRef)(null);
-  const [isImgLoaded, setIsImageLoaded] = Object(__WEBPACK_IMPORTED_MODULE_0_react__.useState)(false);
-  Object(__WEBPACK_IMPORTED_MODULE_0_react__.useEffect)(() => {
+  const _canvas = __WEBPACK_IMPORTED_MODULE_0_react__.useRef(null);
+  const _image = __WEBPACK_IMPORTED_MODULE_0_react__.useRef(null);
+  const [isImgLoaded, setIsImageLoaded] = __WEBPACK_IMPORTED_MODULE_0_react__.useState(false);
+  __WEBPACK_IMPORTED_MODULE_0_react__.useEffect(() => {
     if (_canvas.current != null) {
       const canvas = _canvas.current;
       const ctx = canvas.getContext("2d");
@@ -837,7 +843,7 @@ function QRCodeCanvas(props) {
       }
     }
   });
-  Object(__WEBPACK_IMPORTED_MODULE_0_react__.useEffect)(() => {
+  __WEBPACK_IMPORTED_MODULE_0_react__.useEffect(() => {
     setIsImageLoaded(false);
   }, [imgSrc]);
   const canvasStyle = __spreadValues({

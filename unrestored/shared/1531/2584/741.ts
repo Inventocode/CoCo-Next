@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：741
+ */
+
 module.exports = {
   container: "Notice_container__6Feqw",
   error: "Notice_error__1kxwP",

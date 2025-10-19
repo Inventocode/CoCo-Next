@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：424
+ */
+
 "use strict";
 
 export { s as gd };
@@ -2873,7 +2879,7 @@ function ao(e, t) {
 }
 import so = require("./312");
 import co = require("../../11");
-import lo = require("../../98");
+import lo = require("../../../../../../src/shared/widget/custom/storage");
 import uo = require("../../../../../../src/shared/widget/custom/load");
 import po = require("../../36/85");
 function fo(e) {
@@ -6967,7 +6973,7 @@ function ml() {
     }, e, null, [[0, 6]]);
   }))).apply(this, arguments);
 }
-import gl = require("../../41");
+import gl = require("../../../../../../src/shared/utils/network/axios-with-credentials");
 function _l(e) {
   return vl.apply(this, arguments);
 }

@@ -1,8 +1,14 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：+DtV
+ */
+
 "use strict";
 
 /* harmony export (binding) */
-export { HomeView };
 /* harmony import */
+export { HomeView };
 import * as __WEBPACK_IMPORTED_MODULE_0_react__ from "react";
 /* harmony import */
 import __WEBPACK_IMPORTED_MODULE_0_react___default from "react";
@@ -110,7 +116,7 @@ var HomeView = function (_React$Component) {
   function HomeView(props) {
     _classCallCheck(this, HomeView);
     var _this = _possibleConstructorReturn(this, (HomeView.__proto__ || Object.getPrototypeOf(HomeView)).call(this, props));
-    _this.templateColor = ['blue', 'yellow', 'purple'];
+    _this.templateColor = ["blue", "yellow", "purple"];
     _this.state = {
       isScrolled: false,
       showCourseAnimation: false
@@ -146,7 +152,7 @@ var HomeView = function (_React$Component) {
   }, {
     key: "handleNavToCocoEditor",
     value: function handleNavToCocoEditor() {
-      var _config = Object(__WEBPACK_IMPORTED_MODULE_4__cfg__.config)();
+      var _config = __WEBPACK_IMPORTED_MODULE_4__cfg__.config();
       var cocoEditorUrl = _config.cocoEditorUrl;
       window.open(cocoEditorUrl, Date.now().toString());
     }
@@ -163,7 +169,7 @@ var HomeView = function (_React$Component) {
   }, {
     key: "handleBannerClick",
     value: function handleBannerClick(url, id) {
-      Object(__WEBPACK_IMPORTED_MODULE_9__sensorsData__.sensorsCustomReport)('BannerClick', {
+      __WEBPACK_IMPORTED_MODULE_9__sensorsData__.sensorsCustomReport("BannerClick", {
         banner_id: id
       });
       window.open(url, Date.now().toString());
@@ -171,7 +177,7 @@ var HomeView = function (_React$Component) {
   }, {
     key: "handleTopicClick",
     value: function handleTopicClick(url, id) {
-      Object(__WEBPACK_IMPORTED_MODULE_9__sensorsData__.sensorsCustomReport)('TopicClick', {
+      __WEBPACK_IMPORTED_MODULE_9__sensorsData__.sensorsCustomReport("TopicClick", {
         topic_id: id
       });
       window.open(url, Date.now().toString());
@@ -182,9 +188,9 @@ var HomeView = function (_React$Component) {
       this.props.setCourseListVisibleAction(false);
       this.props.setCommonToastAction({
         visible: true,
-        message: '视频已收起，可在帮助中再次打开'
+        message: "视频已收起，可在帮助中再次打开"
       });
-      localStorage.setItem('homeCourseListVisible', 'hide');
+      localStorage.setItem("homeCourseListVisible", "hide");
       // 收起入门教程样式
       this.setState({
         showCourseAnimation: true
@@ -197,7 +203,7 @@ var HomeView = function (_React$Component) {
         id: id,
         visible: true
       });
-      Object(__WEBPACK_IMPORTED_MODULE_9__sensorsData__.sensorsCustomReport)('CourseClick', {
+      __WEBPACK_IMPORTED_MODULE_9__sensorsData__.sensorsCustomReport("CourseClick", {
         course_id: id
       });
     }
@@ -208,7 +214,7 @@ var HomeView = function (_React$Component) {
         id: id,
         visible: true
       });
-      Object(__WEBPACK_IMPORTED_MODULE_9__sensorsData__.sensorsCustomReport)('TemplateClick', {
+      __WEBPACK_IMPORTED_MODULE_9__sensorsData__.sensorsCustomReport("TemplateClick", {
         template_name: name
       });
     }
@@ -217,7 +223,7 @@ var HomeView = function (_React$Component) {
     value: function prevTemplate() {
       this.templateListRef.scrollBy({
         left: -240 * 4,
-        behavior: 'smooth'
+        behavior: "smooth"
       });
     }
   }, {
@@ -225,7 +231,7 @@ var HomeView = function (_React$Component) {
     value: function nextTemplate() {
       this.templateListRef.scrollBy({
         left: 240 * 4,
-        behavior: 'smooth'
+        behavior: "smooth"
       });
     }
   }, {
@@ -262,38 +268,38 @@ var HomeView = function (_React$Component) {
           return _this2.homePageRef = e;
         }
       }, userInfo && !userInfo.isNewUser && __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-        styleName: __WEBPACK_IMPORTED_MODULE_1_classnames___default('createBox', isScrolled && 'shadow')
+        styleName: __WEBPACK_IMPORTED_MODULE_1_classnames___default("createBox", isScrolled && "shadow")
       }, __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-        styleName: 'createItem',
+        styleName: "createItem",
         onClick: this.handleNavToCocoEditor
       }, __WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_7__components_IconFont__.default, {
-        type: 'icon-create-app',
-        styleName: 'createIcon'
-      }), "\u5E94\u7528\u521B\u4F5C"), __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-        styleName: __WEBPACK_IMPORTED_MODULE_1_classnames___default('createItem', 'disabled')
+        type: "icon-create-app",
+        styleName: "createIcon"
+      }), "应用创作"), __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
+        styleName: __WEBPACK_IMPORTED_MODULE_1_classnames___default("createItem", "disabled")
       }, __WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_7__components_IconFont__.default, {
-        type: 'icon-create-web',
-        styleName: 'createIcon'
-      }), "\u7F51\u9875\u642D\u5EFA", __WEBPACK_IMPORTED_MODULE_0_react__.createElement("span", {
-        styleName: 'tips'
-      }, "\uFF08\u656C\u8BF7\u671F\u5F85\uFF09"))), __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-        styleName: __WEBPACK_IMPORTED_MODULE_1_classnames___default('center', (!userInfo || userInfo.isNewUser) && 'newUser')
+        type: "icon-create-web",
+        styleName: "createIcon"
+      }), "网页搭建", __WEBPACK_IMPORTED_MODULE_0_react__.createElement("span", {
+        styleName: "tips"
+      }, "（敬请期待）"))), __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
+        styleName: __WEBPACK_IMPORTED_MODULE_1_classnames___default("center", (!userInfo || userInfo.isNewUser) && "newUser")
       }, __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-        styleName: __WEBPACK_IMPORTED_MODULE_1_classnames___default('bannerBox', bannerList.length === 0 && 'hide')
+        styleName: __WEBPACK_IMPORTED_MODULE_1_classnames___default("bannerBox", bannerList.length === 0 && "hide")
       }, bannerList.length > 1 && __WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_0_react__.Fragment, null, __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-        styleName: 'bannerPrev',
+        styleName: "bannerPrev",
         onClick: function onClick() {
           return _this2.handlePrevBanner();
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_7__components_IconFont__.default, {
-        type: 'icon-next'
+        type: "icon-next"
       })), __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-        styleName: 'bannerNext',
+        styleName: "bannerNext",
         onClick: function onClick() {
           return _this2.handleNextBanner();
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_7__components_IconFont__.default, {
-        type: 'icon-next'
+        type: "icon-next"
       }))), __WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_2_antd__.Carousel, {
         autoplay: true,
         speed: 800,
@@ -307,16 +313,16 @@ var HomeView = function (_React$Component) {
           onClick: function onClick() {
             return _this2.handleBannerClick(item.target_url, item.id);
           },
-          styleName: 'bannerItem',
+          styleName: "bannerItem",
           key: item.id
         }, __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-          styleName: 'image',
+          styleName: "image",
           style: {
             backgroundImage: "url(" + item.preview_url + ")"
           }
         }));
       }))), __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-        styleName: __WEBPACK_IMPORTED_MODULE_1_classnames___default('noticeBox', topicList.length === 0 && 'hide')
+        styleName: __WEBPACK_IMPORTED_MODULE_1_classnames___default("noticeBox", topicList.length === 0 && "hide")
       }, __WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_2_antd__.Carousel, {
         autoplay: true,
         vertical: true,
@@ -325,103 +331,103 @@ var HomeView = function (_React$Component) {
         pauseOnHover: false
       }, topicList.map(function (item) {
         return __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-          styleName: 'noticeItem',
+          styleName: "noticeItem",
           key: item.id,
           onClick: function onClick() {
             return _this2.handleTopicClick(item.target_url, item.id);
           }
         }, __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-          styleName: 'noticeChar'
+          styleName: "noticeChar"
         }, "#"), __WEBPACK_IMPORTED_MODULE_0_react__.createElement("span", null, item.title));
       }))), __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-        styleName: __WEBPACK_IMPORTED_MODULE_1_classnames___default('courseBox', userInfo && !userInfo.isNewUser && courseListVisible === false && !showCourseAnimation && 'hidden', showCourseAnimation && 'animation')
+        styleName: __WEBPACK_IMPORTED_MODULE_1_classnames___default("courseBox", userInfo && !userInfo.isNewUser && courseListVisible === false && !showCourseAnimation && "hidden", showCourseAnimation && "animation")
       }, __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-        styleName: 'titleBox'
+        styleName: "titleBox"
       }, __WEBPACK_IMPORTED_MODULE_0_react__.createElement("h2", {
-        styleName: 'title'
-      }, "\u65B0\u624B\u5165\u95E8"), userInfo && !userInfo.isNewUser && __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-        styleName: 'finish'
+        styleName: "title"
+      }, "新手入门"), userInfo && !userInfo.isNewUser && __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
+        styleName: "finish"
       }, __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-        styleName: __WEBPACK_IMPORTED_MODULE_1_classnames___default('checkbox', courseListVisible === false && 'checked'),
+        styleName: __WEBPACK_IMPORTED_MODULE_1_classnames___default("checkbox", courseListVisible === false && "checked"),
         onClick: this.handleHideCourseList
       }, courseListVisible === false && __WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_7__components_IconFont__.default, {
-        type: 'icon-selected'
-      })), "\u6211\u5DF2\u770B\u5B8C")), __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-        styleName: 'courseList'
+        type: "icon-selected"
+      })), "我已看完")), __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
+        styleName: "courseList"
       }, courseList.map(function (item) {
         return __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-          styleName: 'courseItem',
+          styleName: "courseItem",
           key: item.id,
           onClick: function onClick() {
             return _this2.handlePlayCourse(item.id);
           }
         }, __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-          styleName: 'courseImage'
+          styleName: "courseImage"
         }, __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-          styleName: 'image',
+          styleName: "image",
           style: {
             backgroundImage: "url(" + item.preview + ")"
           }
         }), __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-          styleName: 'mask'
+          styleName: "mask"
         }, __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-          styleName: 'playBox'
+          styleName: "playBox"
         }, __WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_7__components_IconFont__.default, {
-          type: 'icon-play'
+          type: "icon-play"
         })))), __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-          styleName: 'courseName'
+          styleName: "courseName"
         }, item.title), __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-          styleName: 'courseDesc'
+          styleName: "courseDesc"
         }, item.course_intro));
       }))), (!userInfo || userInfo.isNewUser) && __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-        styleName: 'newUserTemplate'
+        styleName: "newUserTemplate"
       }, __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-        styleName: 'templateTitle'
+        styleName: "templateTitle"
       }, __WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_7__components_IconFont__.default, {
-        type: 'icon-template',
-        styleName: 'titleIcon'
+        type: "icon-template",
+        styleName: "titleIcon"
       }), __WEBPACK_IMPORTED_MODULE_0_react__.createElement("h2", {
-        styleName: 'title'
-      }, "\u4ECE\u6A21\u7248\u5F00\u59CB\u63A2\u7D22")), __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-        styleName: 'templateList'
+        styleName: "title"
+      }, "从模版开始探索")), __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
+        styleName: "templateList"
       }, newUserTemplateList.map(function (item, index) {
         return __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
           key: item.id,
-          styleName: __WEBPACK_IMPORTED_MODULE_1_classnames___default('templateItem', _this2.templateColor[index]),
+          styleName: __WEBPACK_IMPORTED_MODULE_1_classnames___default("templateItem", _this2.templateColor[index]),
           onClick: function onClick() {
             return _this2.handlePreviewTemplate(item.id, item.name);
           }
         }, __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-          styleName: 'imageBox'
+          styleName: "imageBox"
         }, __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-          styleName: 'image',
+          styleName: "image",
           style: {
             backgroundImage: "url(" + item.preview_url2 + ")"
           }
         }, __WEBPACK_IMPORTED_MODULE_0_react__.createElement("img", {
           src: item.gif_url,
           alt: item.name,
-          styleName: 'gif'
+          styleName: "gif"
         }))), __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-          styleName: 'name'
+          styleName: "name"
         }, item.name), __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-          styleName: 'desc'
+          styleName: "desc"
         }, item.description, " "), __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-          styleName: 'previewBtn'
+          styleName: "previewBtn"
         }, __WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_7__components_IconFont__.default, {
-          type: 'icon-play'
-        }), "\u73A9\u4E00\u73A9"));
+          type: "icon-play"
+        }), "玩一玩"));
       }))), userInfo && !userInfo.isNewUser && __WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_0_react__.Fragment, null, __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-        styleName: 'myWork'
+        styleName: "myWork"
       }, __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-        styleName: 'titleBox'
+        styleName: "titleBox"
       }, __WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_7__components_IconFont__.default, {
-        type: 'icon-lately-work',
-        styleName: 'titleIcon'
+        type: "icon-lately-work",
+        styleName: "titleIcon"
       }), __WEBPACK_IMPORTED_MODULE_0_react__.createElement("h2", {
-        styleName: 'title'
-      }, "\u6700\u8FD1\u4F5C\u54C1")), workList.length > 0 && __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-        styleName: 'workList'
+        styleName: "title"
+      }, "最近作品")), workList.length > 0 && __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
+        styleName: "workList"
       }, workList.map(function (item) {
         return __WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_6__components_WorkItem__.default, {
           key: item.work_id,
@@ -430,43 +436,43 @@ var HomeView = function (_React$Component) {
           callback: _this2.props.getWorkListAction
         });
       })), workList.length === 0 && __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-        styleName: 'workListNoData'
-      }, __WEBPACK_IMPORTED_MODULE_0_react__.createElement("span", null, "\u4F60\u8FD8\u672A\u521B\u4F5C\u4EFB\u4F55\u4F5C\u54C1"), __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-        styleName: 'createBtn',
+        styleName: "workListNoData"
+      }, __WEBPACK_IMPORTED_MODULE_0_react__.createElement("span", null, "你还未创作任何作品"), __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
+        styleName: "createBtn",
         onClick: this.handleNavToCocoEditor
-      }, "\u53BB\u521B\u4F5C ", __WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_7__components_IconFont__.default, {
-        type: 'icon-button-arrow',
-        styleName: 'icon'
+      }, "去创作 ", __WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_7__components_IconFont__.default, {
+        type: "icon-button-arrow",
+        styleName: "icon"
       })))), __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-        styleName: 'oldUserTemplate'
+        styleName: "oldUserTemplate"
       }, __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-        styleName: 'titleBox'
+        styleName: "titleBox"
       }, __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-        styleName: 'templateTitle'
+        styleName: "templateTitle"
       }, __WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_7__components_IconFont__.default, {
-        type: 'icon-template',
-        styleName: 'titleIcon'
+        type: "icon-template",
+        styleName: "titleIcon"
       }), __WEBPACK_IMPORTED_MODULE_0_react__.createElement("h2", {
-        styleName: 'title'
-      }, "\u4ECE\u6A21\u7248\u5F00\u59CB\u63A2\u7D22")), __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-        styleName: 'pageBtn'
+        styleName: "title"
+      }, "从模版开始探索")), __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
+        styleName: "pageBtn"
       }, __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-        styleName: __WEBPACK_IMPORTED_MODULE_1_classnames___default('btnItem'),
+        styleName: __WEBPACK_IMPORTED_MODULE_1_classnames___default("btnItem"),
         onClick: function onClick() {
           return _this2.prevTemplate();
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_7__components_IconFont__.default, {
-        type: 'icon-next',
-        styleName: 'prev'
+        type: "icon-next",
+        styleName: "prev"
       })), __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-        styleName: 'btnItem',
+        styleName: "btnItem",
         onClick: function onClick() {
           return _this2.nextTemplate();
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_7__components_IconFont__.default, {
-        type: 'icon-next'
+        type: "icon-next"
       })))), __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-        styleName: 'templateList',
+        styleName: "templateList",
         ref: function ref(e) {
           return _this2.templateListRef = e;
         }
@@ -476,15 +482,15 @@ var HomeView = function (_React$Component) {
           item: item
         });
       }))))), (!userInfo || userInfo.isNewUser) && __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-        styleName: 'startWork'
+        styleName: "startWork"
       }, __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-        styleName: 'title'
-      }, "\u65E0\u5C3D\u7684\u60F3\u6CD5\uFF0C\u4ECE\u8FD9\u91CC\u5F00\u59CB\u521B\u9020\u3002"), __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-        styleName: 'startBtn',
+        styleName: "title"
+      }, "无尽的想法，从这里开始创造。"), __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
+        styleName: "startBtn",
         onClick: this.handleNavToCocoEditor
-      }, "\u5F00\u59CB\u521B\u4F5C", __WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_7__components_IconFont__.default, {
-        type: 'icon-button-arrow',
-        styleName: 'startIcon'
+      }, "开始创作", __WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_7__components_IconFont__.default, {
+        type: "icon-button-arrow",
+        styleName: "startIcon"
       }))));
     }
   }]);

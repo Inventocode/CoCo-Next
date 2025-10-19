@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：HKeg
+ */
+
 "use strict";
 
 /* unused harmony export PlayerMenu */
@@ -36,8 +42,8 @@ var PlayerMenu = function PlayerMenu(props) {
   var itemHeight = props.itemHeight ? props.itemHeight : 36;
   var spaceBettwen = props.spaceBettwen ? props.spaceBettwen : 20;
   var circleHeight = itemHeight;
-  var _useState = Object(__WEBPACK_IMPORTED_MODULE_2_react__.useState)(initMenuOn);
-  var _useState2 = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default)(_useState, 2);
+  var _useState = __WEBPACK_IMPORTED_MODULE_2_react__.useState(initMenuOn);
+  var _useState2 = __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default(_useState, 2);
   var isMenuOn = _useState2[0];
   var setMenuOn = _useState2[1];
   var legalChildNum = 0;
@@ -48,7 +54,7 @@ var PlayerMenu = function PlayerMenu(props) {
       return;
     }
     if (child.type !== __WEBPACK_IMPORTED_MODULE_4__crc_catui2__.PlayerMenuItem) {
-      console.error(['catUI2:The Menu component doesn\'t accept other element as a child.', 'Consider providing a MenuItem instead.'].join('\n'));
+      console.error(["catUI2:The Menu component doesn't accept other element as a child.", "Consider providing a MenuItem instead."].join("\n"));
     } else {
       legalChildNum++;
       return child.type === __WEBPACK_IMPORTED_MODULE_4__crc_catui2__.PlayerMenuItem && /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_2_react___default.createElement("div", {
@@ -59,7 +65,7 @@ var PlayerMenu = function PlayerMenu(props) {
           marginRight: "".concat(isMenuOn ? spaceBettwen + menuHeight - circleHeight : -circleHeight / 2, "px"),
           transition: "".concat(isMenuOn ? 1.2 * (TRANSITIONDURATION * (index + 1)) / TOTALCHILDNUM : 1.4 * TRANSITIONDURATION - TRANSITIONDURATION * (index + 1) / TOTALCHILDNUM, "s ").concat(isMenuOn ? 0.3 * TRANSITIONDURATION * (index + 1) / TOTALCHILDNUM : 0.3 * TRANSITIONDURATION * (1 - (index + 1)) / TOTALCHILDNUM, "s opacity ease-in-out, margin-right ").concat(0.8 * TRANSITIONDURATION, "s ").concat(0.1 * TRANSITIONDURATION, "s ease-in-out")
         },
-        className: __WEBPACK_IMPORTED_MODULE_1_babel_plugin_react_css_modules_dist_browser_getClassName___default("item ".concat(isMenuOn ? 'item-on' : ''), _styleModuleImportMap, {
+        className: __WEBPACK_IMPORTED_MODULE_1_babel_plugin_react_css_modules_dist_browser_getClassName___default("item ".concat(isMenuOn ? "item-on" : ""), _styleModuleImportMap, {
           "autoResolveMultipleImports": true,
           "handleMissingStyleName": "throw"
         })
@@ -74,8 +80,8 @@ var PlayerMenu = function PlayerMenu(props) {
   }, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_2_react___default.createElement("div", {
     className: "CUI-player-menu-menu",
     style: {
-      top: '0',
-      right: '0',
+      top: "0",
+      right: "0",
       height: "".concat(menuHeight, "px"),
       width: "".concat(isMenuOn ? (legalChildNum + 1) * (menuHeight + spaceBettwen) - spaceBettwen : menuHeight, "px"),
       borderRadius: "".concat(menuHeight / 2, "px"),
@@ -91,7 +97,7 @@ var PlayerMenu = function PlayerMenu(props) {
     onClick: function onClick() {
       setMenuOn(!isMenuOn);
     },
-    className: __WEBPACK_IMPORTED_MODULE_1_babel_plugin_react_css_modules_dist_browser_getClassName___default("button ".concat(isMenuOn ? 'button-on' : ''), _styleModuleImportMap, {
+    className: __WEBPACK_IMPORTED_MODULE_1_babel_plugin_react_css_modules_dist_browser_getClassName___default("button ".concat(isMenuOn ? "button-on" : ""), _styleModuleImportMap, {
       "autoResolveMultipleImports": true,
       "handleMissingStyleName": "throw"
     })

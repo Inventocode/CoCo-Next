@@ -1,7 +1,13 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：335
+ */
+
 "use strict";
 
-var r = require("./191");
-var i = require("./274/index");
+var r = require("./191/index");
+var i = require("./274");
 var o = require("./408");
 var a = require("./221");
 var s = function () {

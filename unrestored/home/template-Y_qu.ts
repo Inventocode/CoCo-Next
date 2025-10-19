@@ -1,8 +1,14 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：Y/qu
+ */
+
 "use strict";
 
 /* harmony export (binding) */
-export { ViewRouterComponent };
 /* harmony import */
+export { ViewRouterComponent };
 import * as __WEBPACK_IMPORTED_MODULE_0_react__ from "react";
 /* harmony import */
 import __WEBPACK_IMPORTED_MODULE_0_react___default from "react";
@@ -92,7 +98,7 @@ var Work = __WEBPACK_IMPORTED_MODULE_12_react_loadable__({
   loading: function loading() {
     return __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
       style: {
-        height: '400px'
+        height: "400px"
       }
     });
   }
@@ -104,23 +110,23 @@ var ViewRouterComponent = function (_React$Component) {
     return _possibleConstructorReturn(this, (ViewRouterComponent.__proto__ || Object.getPrototypeOf(ViewRouterComponent)).call(this, props));
   }
   _createClass(ViewRouterComponent, [{
-    key: 'componentDidMount',
+    key: "componentDidMount",
     value: function componentDidMount() {
       this.props.getTemplateListAction();
       this.props.getCourseListAction();
     }
   }, {
-    key: 'render',
+    key: "render",
     value: function render() {
       var _props = this.props;
       var playCourseInfo = _props.playCourseInfo;
       var courseDialogVisible = _props.courseDialogVisible;
       return __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
         style: {
-          minWidth: '990px'
+          minWidth: "990px"
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_2__components_Header__.Header, null), __WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_3__components_IconFont_IconFontSvg__.default, null), __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-        className: playCourseInfo.visible || courseDialogVisible ? 'blur' : ''
+        className: playCourseInfo.visible || courseDialogVisible ? "blur" : ""
       }, __WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_4__components_Menu__.Menu, null), __WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_1_react_router_dom__.Switch, null, __WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_1_react_router_dom__.Route, {
         path: "/home",
         exact: true,

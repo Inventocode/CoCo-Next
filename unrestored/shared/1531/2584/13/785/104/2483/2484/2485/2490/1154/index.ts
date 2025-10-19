@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：1154
+ */
+
 var r = require("./2462");
 var i = require("./1404");
 var o = Object.prototype.propertyIsEnumerable;

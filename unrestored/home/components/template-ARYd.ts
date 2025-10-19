@@ -1,8 +1,14 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：ARYd
+ */
+
 "use strict";
 
 /* harmony export (binding) */
-export { SignInDialogView };
 /* harmony import */
+export { SignInDialogView };
 import * as __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator__ from "@babel/runtime/regenerator";
 /* harmony import */
 import __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default from "@babel/runtime/regenerator";
@@ -137,31 +143,31 @@ var __awaiter = this && this.__awaiter || function (thisArg, _arguments, P, gene
 import * as styles from "./styles-xr0F";
 function detectCatLanguage(language) {
   switch (language) {
-    case 'zh':
-    case 'zh-CN':
-      return 'zh';
-    case 'tw':
-    case 'zh-TW':
-      return 'tw';
-    case 'en':
-    case 'en-US':
-      return 'en';
+    case "zh":
+    case "zh-CN":
+      return "zh";
+    case "tw":
+    case "zh-TW":
+      return "tw";
+    case "en":
+    case "en-US":
+      return "en";
     default:
-      return 'en';
+      return "en";
   }
 }
 function detectCatEnv() {
-  switch (Object(__WEBPACK_IMPORTED_MODULE_7__cfg__.config)().env) {
-    case 'dev':
-      return 'development';
-    case 'test':
-      return 'test';
-    case 'staging':
-      return 'staging';
-    case 'prod':
-      return 'production';
+  switch (__WEBPACK_IMPORTED_MODULE_7__cfg__.config().env) {
+    case "dev":
+      return "development";
+    case "test":
+      return "test";
+    case "staging":
+      return "staging";
+    case "prod":
+      return "production";
     default:
-      return 'development';
+      return "development";
   }
 }
 var SignInDialogView = function (_React$Component) {
@@ -177,13 +183,13 @@ var SignInDialogView = function (_React$Component) {
     key: "componentDidMount",
     value: function componentDidMount() {
       var _this2 = this;
-      Object(__WEBPACK_IMPORTED_MODULE_3__crc_catui2_dist_cfg__.setEnv)(detectCatEnv());
-      Object(__WEBPACK_IMPORTED_MODULE_5__crc_catui2_dist_themes__.setTheme)(__WEBPACK_IMPORTED_MODULE_5__crc_catui2_dist_themes__.ThemeTypeEnum.Violet);
-      var auth = Object(__WEBPACK_IMPORTED_MODULE_2__crc_catui2_dist_components_application_sign_in_dialog__.getAuthModule)();
+      __WEBPACK_IMPORTED_MODULE_3__crc_catui2_dist_cfg__.setEnv(detectCatEnv());
+      __WEBPACK_IMPORTED_MODULE_5__crc_catui2_dist_themes__.setTheme(__WEBPACK_IMPORTED_MODULE_5__crc_catui2_dist_themes__.ThemeTypeEnum.Violet);
+      var auth = __WEBPACK_IMPORTED_MODULE_2__crc_catui2_dist_components_application_sign_in_dialog__.getAuthModule();
       auth.init().then(function () {
         // COCO登录
-        auth.initIris(Object(__WEBPACK_IMPORTED_MODULE_7__cfg__.config)().pid, 'appcraft');
-        _this2.fetchUserInfo(false, '');
+        auth.initIris(__WEBPACK_IMPORTED_MODULE_7__cfg__.config().pid, "appcraft");
+        _this2.fetchUserInfo(false, "");
       });
     }
   }, {
@@ -202,7 +208,7 @@ var SignInDialogView = function (_React$Component) {
                 if (closeDialogFirst) {
                   this.props.setSignDialogVisibleAction(false);
                 }
-                auth = Object(__WEBPACK_IMPORTED_MODULE_2__crc_catui2_dist_components_application_sign_in_dialog__.getAuthModule)();
+                auth = __WEBPACK_IMPORTED_MODULE_2__crc_catui2_dist_components_application_sign_in_dialog__.getAuthModule();
                 _context.prev = 2;
                 _context.next = 5;
                 return auth.checkAuthLogin();
@@ -219,24 +225,24 @@ var SignInDialogView = function (_React$Component) {
                   avatar: data.avatar_url
                 });
                 // 神策用户关联
-                Object(__WEBPACK_IMPORTED_MODULE_8__sensorsData__.sensorsLoginReport)(data.id);
+                __WEBPACK_IMPORTED_MODULE_8__sensorsData__.sensorsLoginReport(data.id);
                 if (loginMethod) {
-                  Object(__WEBPACK_IMPORTED_MODULE_8__sensorsData__.sensorsCustomReport)('LoginResult', {
+                  __WEBPACK_IMPORTED_MODULE_8__sensorsData__.sensorsCustomReport("LoginResult", {
                     loginMethod: loginMethod,
                     isSuccess: true,
                     isRegister: !closeDialogFirst,
-                    failReason: ''
+                    failReason: ""
                   });
                 }
                 return _context.abrupt("return", true);
               case 14:
                 this.props.asyncSetUserInfoAction(null);
                 if (loginMethod) {
-                  Object(__WEBPACK_IMPORTED_MODULE_8__sensorsData__.sensorsCustomReport)('LoginResult', {
+                  __WEBPACK_IMPORTED_MODULE_8__sensorsData__.sensorsCustomReport("LoginResult", {
                     loginMethod: loginMethod,
                     isSuccess: false,
                     isRegister: !closeDialogFirst,
-                    failReason: ''
+                    failReason: ""
                   });
                 }
               case 16:
@@ -249,7 +255,7 @@ var SignInDialogView = function (_React$Component) {
                 // console.error('fetchUserInfo ', error);
                 this.props.setUserInfoFetchDoneAction();
                 if (loginMethod) {
-                  Object(__WEBPACK_IMPORTED_MODULE_8__sensorsData__.sensorsCustomReport)('LoginResult', {
+                  __WEBPACK_IMPORTED_MODULE_8__sensorsData__.sensorsCustomReport("LoginResult", {
                     loginMethod: loginMethod,
                     isSuccess: false,
                     isRegister: !closeDialogFirst,
@@ -273,11 +279,11 @@ var SignInDialogView = function (_React$Component) {
     key: "handleLoginFailure",
     value: function handleLoginFailure(loginResult) {
       if (loginResult) {
-        Object(__WEBPACK_IMPORTED_MODULE_8__sensorsData__.sensorsCustomReport)('LoginResult', {
-          loginMethod: loginResult.source || '',
+        __WEBPACK_IMPORTED_MODULE_8__sensorsData__.sensorsCustomReport("LoginResult", {
+          loginMethod: loginResult.source || "",
           isSuccess: false,
-          isRegister: loginResult.source === 'register',
-          failReason: loginResult.error.msg || ''
+          isRegister: loginResult.source === "register",
+          failReason: loginResult.error.msg || ""
         });
       }
     }
@@ -294,13 +300,13 @@ var SignInDialogView = function (_React$Component) {
         return null;
       }
       return __WEBPACK_IMPORTED_MODULE_1_react__.createElement(__WEBPACK_IMPORTED_MODULE_2__crc_catui2_dist_components_application_sign_in_dialog__.SignInDialog, {
-        language: detectCatLanguage('zh'),
+        language: detectCatLanguage("zh"),
         show: true,
         onCloseAnimationEnd: this.handleClose,
-        onSmsLoginSuccess: this.handleLoginSuccess.bind(null, true, 'sms-login'),
-        onPasswordLoginSuccess: this.handleLoginSuccess.bind(null, true, 'pwd-login'),
-        onThirdPartyLoginSuccess: this.handleLoginSuccess.bind(null, true, 'third-login'),
-        onRegisterSuccess: this.handleLoginSuccess.bind(null, false, 'pwd-login'),
+        onSmsLoginSuccess: this.handleLoginSuccess.bind(null, true, "sms-login"),
+        onPasswordLoginSuccess: this.handleLoginSuccess.bind(null, true, "pwd-login"),
+        onThirdPartyLoginSuccess: this.handleLoginSuccess.bind(null, true, "third-login"),
+        onRegisterSuccess: this.handleLoginSuccess.bind(null, false, "pwd-login"),
         onPasswordLoginFailure: this.handleLoginFailure,
         onSmsLoginFailure: this.handleLoginFailure,
         onThirdPartyLoginFailure: this.handleLoginFailure,

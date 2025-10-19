@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：1046
+ */
+
 var r = require("./1081");
 function i() {
   if ("function" !== typeof WeakMap) {

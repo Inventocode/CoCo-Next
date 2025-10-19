@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：492
+ */
+
 module.exports = {
   container: "CreateProject_container__2ek3w",
   itemContainer: "CreateProject_itemContainer__EWdh9",

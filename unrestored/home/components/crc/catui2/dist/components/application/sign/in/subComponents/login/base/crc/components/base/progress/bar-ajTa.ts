@@ -1,8 +1,14 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：ajTa
+ */
+
 "use strict";
 
 /* harmony export (binding) */
-export { ProgressBar };
 /* harmony import */
+export { ProgressBar };
 import * as __WEBPACK_IMPORTED_MODULE_0_react__ from "react";
 /* harmony import */
 import __WEBPACK_IMPORTED_MODULE_0_react___default from "react";
@@ -30,10 +36,10 @@ var ProgressBar = function ProgressBar(props) {
   var barBorderStyle = props.barBorderStyle;
   var strokeColor = props.strokeColor;
   var legalHeight = getLegalnumber(height);
-  var underpainting = Object(__WEBPACK_IMPORTED_MODULE_1__themes__.getColor)(Object(__WEBPACK_IMPORTED_MODULE_1__themes__.getTheme)(), __WEBPACK_IMPORTED_MODULE_1__themes__.ColorEnum.TC7, '16');
-  var mainColor = Object(__WEBPACK_IMPORTED_MODULE_1__themes__.getColor)(Object(__WEBPACK_IMPORTED_MODULE_1__themes__.getTheme)(), __WEBPACK_IMPORTED_MODULE_1__themes__.ColorEnum.TC0, '16');
+  var underpainting = __WEBPACK_IMPORTED_MODULE_1__themes__.getColor(__WEBPACK_IMPORTED_MODULE_1__themes__.getTheme(), __WEBPACK_IMPORTED_MODULE_1__themes__.ColorEnum.TC7, "16");
+  var mainColor = __WEBPACK_IMPORTED_MODULE_1__themes__.getColor(__WEBPACK_IMPORTED_MODULE_1__themes__.getTheme(), __WEBPACK_IMPORTED_MODULE_1__themes__.ColorEnum.TC0, "16");
   var barStyle = {
-    marginTop: noText ? undefined : '21px',
+    marginTop: noText ? undefined : "21px",
     width: "".concat(getLegalnumber(width), "px"),
     height: "".concat(legalHeight !== null && legalHeight !== undefined ? legalHeight : 8, "px"),
     border: barBorderStyle,

@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：700
+ */
+
 module.exports = {
   sliderImageDialog: "styles_sliderImageDialog__1fFwX",
   sliderImage: "styles_sliderImage__VjS9Q",

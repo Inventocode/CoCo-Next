@@ -1,8 +1,14 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：KI63
+ */
+
 "use strict";
 
 /* harmony export (binding) */
-export { TemplateItemView };
 /* harmony import */
+export { TemplateItemView };
 import * as __WEBPACK_IMPORTED_MODULE_0_react__ from "react";
 /* harmony import */
 import __WEBPACK_IMPORTED_MODULE_0_react___default from "react";
@@ -109,10 +115,10 @@ var TemplateItemView = function (_React$Component) {
   }, {
     key: "handleTemplateClick",
     value: function handleTemplateClick(id, name) {
-      Object(__WEBPACK_IMPORTED_MODULE_3__sensorsData__.sensorsCustomReport)('TemplateClick', {
+      __WEBPACK_IMPORTED_MODULE_3__sensorsData__.sensorsCustomReport("TemplateClick", {
         template_name: name
       });
-      var _config = Object(__WEBPACK_IMPORTED_MODULE_2__cfg__.config)();
+      var _config = __WEBPACK_IMPORTED_MODULE_2__cfg__.config();
       var cocoEditorUrl = _config.cocoEditorUrl;
       window.open(cocoEditorUrl + "?templateId=" + id, Date.now().toString());
     }
@@ -122,19 +128,19 @@ var TemplateItemView = function (_React$Component) {
       var _this2 = this;
       var item = this.props.item;
       return __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-        styleName: 'templateItem',
+        styleName: "templateItem",
         onClick: function onClick() {
           return _this2.handleTemplateClick(item.id, item.name);
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-        styleName: 'image',
+        styleName: "image",
         style: {
           backgroundImage: "url(" + item.preview_url + ")"
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react__.createElement("img", {
         src: item.gif_url,
         alt: item.name,
-        styleName: 'gif'
+        styleName: "gif"
       })));
     }
   }]);

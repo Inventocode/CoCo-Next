@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：1981
+ */
+
 var r = require("./1305");
 module.exports = function (e, t) {
   if (";" !== (e = r.trimRight(e))[e.length - 1]) {

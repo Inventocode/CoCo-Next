@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：193
+ */
+
 module.exports = {
   historyDialog: "historyDialog_historyDialog__1Wnw7",
   historyPreview: "historyDialog_historyPreview__1G_0g",

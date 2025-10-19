@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：176
+ */
+
 module.exports = {
   hide: "style_hide__2Fb-b",
   "coco-widget-wrapper": "style_coco-widget-wrapper__60dp3",

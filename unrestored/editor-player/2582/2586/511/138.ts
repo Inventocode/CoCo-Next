@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：138
+ */
+
 module.exports = {
   container: "style_container__Wb2Q8",
   fadeIn: "style_fadeIn__2YzYL",

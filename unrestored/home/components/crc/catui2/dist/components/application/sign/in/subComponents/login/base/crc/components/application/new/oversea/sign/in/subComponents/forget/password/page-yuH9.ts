@@ -1,8 +1,14 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：yuH9
+ */
+
 "use strict";
 
 /* harmony export (binding) */
-export { ForgetPasswordPageContainer };
 /* harmony import */
+export { ForgetPasswordPageContainer };
 import * as __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__ from "@babel/runtime/helpers/esm/slicedToArray";
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_1_react__ from "react";
@@ -26,12 +32,12 @@ var ForgetPasswordPageContainer = function ForgetPasswordPageContainer(props) {
   var setIsRequesting = props.setIsRequesting;
   var switchView = props.switchView;
   var reportMethod = props.reportMethod;
-  var _useState = Object(__WEBPACK_IMPORTED_MODULE_1_react__.useState)(false);
-  var _useState2 = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default)(_useState, 2);
+  var _useState = __WEBPACK_IMPORTED_MODULE_1_react__.useState(false);
+  var _useState2 = __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default(_useState, 2);
   var resetSuccess = _useState2[0];
   var setResetSuccess = _useState2[1];
-  var _useState3 = Object(__WEBPACK_IMPORTED_MODULE_1_react__.useState)(3);
-  var _useState4 = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default)(_useState3, 2);
+  var _useState3 = __WEBPACK_IMPORTED_MODULE_1_react__.useState(3);
+  var _useState4 = __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default(_useState3, 2);
   var second = _useState4[0];
   var setSecond = _useState4[1];
   var setIsResetSuccess = function setIsResetSuccess() {
@@ -48,8 +54,8 @@ var ForgetPasswordPageContainer = function ForgetPasswordPageContainer(props) {
   };
   return /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1_react__.createElement(__WEBPACK_IMPORTED_MODULE_1_react__.Fragment, null, resetSuccess ? /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1_react__.createElement(__WEBPACK_IMPORTED_MODULE_3__Confirm__.ConfirmComponent, {
     handleConfirm: switchView.bind(_this, __WEBPACK_IMPORTED_MODULE_2__def__.ContentView.LOGIN),
-    successText: Object(__WEBPACK_IMPORTED_MODULE_4__i18n__.getLanguage)('sign_in_dialog/reset/success'),
-    buttonText: Object(__WEBPACK_IMPORTED_MODULE_4__i18n__.getLanguage)('sign_in_dialog/login'),
+    successText: __WEBPACK_IMPORTED_MODULE_4__i18n__.getLanguage("sign_in_dialog/reset/success"),
+    buttonText: __WEBPACK_IMPORTED_MODULE_4__i18n__.getLanguage("sign_in_dialog/login"),
     second: second
   }) : /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1_react__.createElement(__WEBPACK_IMPORTED_MODULE_5__VerifyEmail__.VerifyEmailComponent, {
     isRequesting: isRequesting,

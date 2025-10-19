@@ -1,8 +1,14 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：p9/9
+ */
+
 "use strict";
 
 /* harmony export (binding) */
-export { createWarning };
 /* harmony import */
+export { createWarning };
 import * as __WEBPACK_IMPORTED_MODULE_0_react__ from "react";
 /* harmony import */
 import __WEBPACK_IMPORTED_MODULE_0_react___default from "react";
@@ -24,15 +30,15 @@ var createWarning = function createWarning(config) {
     height: 36,
     type: "secondary",
     onClick: config.onCancel
-  }, (_config$cancelText = config.cancelText) !== null && _config$cancelText !== undefined ? _config$cancelText : '取消'), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react___default.createElement(__WEBPACK_IMPORTED_MODULE_2__button__.Button, {
+  }, (_config$cancelText = config.cancelText) !== null && _config$cancelText !== undefined ? _config$cancelText : "取消"), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react___default.createElement(__WEBPACK_IMPORTED_MODULE_2__button__.Button, {
     width: 110,
     height: 36,
     margin: "0 0 0 20px",
     type: "danger",
     onClick: config.onOk
-  }, (_config$okText = config.okText) !== null && _config$okText !== undefined ? _config$okText : '确认'));
-  var div = document.createElement('div');
-  div.className = 'CUI-dialog-warning-dialog';
+  }, (_config$okText = config.okText) !== null && _config$okText !== undefined ? _config$okText : "确认"));
+  var div = document.createElement("div");
+  div.className = "CUI-dialog-warning-dialog";
   document.body.appendChild(div);
   var WarningDialog = /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react___default.createElement(__WEBPACK_IMPORTED_MODULE_3____.Dialog, {
     show: true,
@@ -46,7 +52,7 @@ var createWarning = function createWarning(config) {
     container: div,
     onOpen: config.onOpen,
     onClose: config.onClose
-  }, typeof config.content === 'function' ? config.content() : config.content);
+  }, typeof config.content === "function" ? config.content() : config.content);
   __WEBPACK_IMPORTED_MODULE_1_react_dom___default.render(WarningDialog, div);
   var hadDestroied = false;
   return function () {

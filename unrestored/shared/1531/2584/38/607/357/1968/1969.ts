@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：1969
+ */
+
 function n(t) {
   if ("function" === typeof Symbol && "symbol" === typeof Symbol.iterator) {
     module.exports = n = function (e) {

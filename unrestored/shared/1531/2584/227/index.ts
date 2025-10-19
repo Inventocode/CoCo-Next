@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：227
+ */
+
 "use strict";
 
 export { g as d };

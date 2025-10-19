@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：471
+ */
+
 module.exports = {
   courseDialog: "styles_courseDialog__2laZ_",
   courseList: "styles_courseList__1_O8S",

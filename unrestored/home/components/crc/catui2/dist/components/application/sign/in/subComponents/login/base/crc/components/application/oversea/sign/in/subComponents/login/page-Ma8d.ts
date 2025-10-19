@@ -1,8 +1,14 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：Ma8d
+ */
+
 "use strict";
 
 /* harmony export (binding) */
-export { LoginPageContainer };
 /* harmony import */
+export { LoginPageContainer };
 import * as __WEBPACK_IMPORTED_MODULE_0_react__ from "react";
 /* harmony import */
 import __WEBPACK_IMPORTED_MODULE_0_react___default from "react";
@@ -41,14 +47,14 @@ var LoginPageContainer = function LoginPageContainer(props) {
   }, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react__.createElement("span", {
     className: "CUI-oversea-sign-in-dialog-center CUI-oversea-sign-in-dialog-clickable CUI-oversea-sign-in-dialog-tab-text",
     onClick: switchView.bind(_this, __WEBPACK_IMPORTED_MODULE_1__def__.ContentView.FORGET_PASSWORD)
-  }, Object(__WEBPACK_IMPORTED_MODULE_2__i18n__.getLanguage)('sign_in_dialog/forget_password/entry')))), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
+  }, __WEBPACK_IMPORTED_MODULE_2__i18n__.getLanguage("sign_in_dialog/forget_password/entry")))), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
     className: "CUI-oversea-sign-in-dialog-divide-line"
-  }, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react__.createElement("b", null), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react__.createElement("span", null, '\u2022'), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react__.createElement("b", null)), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_3__base_button__.Button, {
+  }, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react__.createElement("b", null), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react__.createElement("span", null, "•"), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react__.createElement("b", null)), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_3__base_button__.Button, {
     height: "44px",
     width: "calc(100% - 80px)",
     onClick: switchView.bind(_this, __WEBPACK_IMPORTED_MODULE_1__def__.ContentView.REGISTER),
     type: "secondary"
-  }, Object(__WEBPACK_IMPORTED_MODULE_2__i18n__.getLanguage)('sign_in_dialog/create_account'))));
+  }, __WEBPACK_IMPORTED_MODULE_2__i18n__.getLanguage("sign_in_dialog/create_account"))));
 };
 LoginPageContainer.defaultProps = {
   onEmailLoginSuccess: function onEmailLoginSuccess() {

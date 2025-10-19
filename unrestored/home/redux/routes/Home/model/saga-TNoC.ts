@@ -1,8 +1,14 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：TNoC
+ */
+
 "use strict";
 
 /* harmony export (immutable) */
-export { homeSaga };
 /* harmony import */
+export { homeSaga };
 import * as __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator__ from "@babel/runtime/regenerator";
 /* harmony import */
 import __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default from "@babel/runtime/regenerator";
@@ -31,7 +37,7 @@ function handleGetBannerList() {
     while (1) {
       switch (_context.prev = _context.next) {
         case 0:
-          url = Object(__WEBPACK_IMPORTED_MODULE_5__utils__.get_api_prefix)() + '/coconut/banner/list';
+          url = __WEBPACK_IMPORTED_MODULE_5__utils__.get_api_prefix() + "/coconut/banner/list";
           _context.prev = 1;
           _context.next = 4;
           return __WEBPACK_IMPORTED_MODULE_3_axios___default.get(url, {
@@ -40,7 +46,7 @@ function handleGetBannerList() {
             return res.data;
           }).catch(function (err) {
             if (false) {
-              console.log('fetch banner list failed, detail:', err);
+              console.log("fetch banner list failed, detail:", err);
             }
             throw err;
           });
@@ -51,18 +57,18 @@ function handleGetBannerList() {
             break;
           }
           _context.next = 8;
-          return Object(__WEBPACK_IMPORTED_MODULE_2_redux_saga_effects__.put)(__WEBPACK_IMPORTED_MODULE_4__actions__.setBannerListAction(result.data));
+          return __WEBPACK_IMPORTED_MODULE_2_redux_saga_effects__.put(__WEBPACK_IMPORTED_MODULE_4__actions__.setBannerListAction(result.data));
         case 8:
           _context.next = 13;
           break;
         case 10:
           _context.prev = 10;
-          _context.t0 = _context['catch'](1);
+          _context.t0 = _context["catch"](1);
           if (false) {
-            console.log('fetch banner list error, detail', _context.t0);
+            console.log("fetch banner list error, detail", _context.t0);
           }
         case 13:
-        case 'end':
+        case "end":
           return _context.stop();
       }
     }
@@ -75,7 +81,7 @@ function handleGetTopicList() {
     while (1) {
       switch (_context2.prev = _context2.next) {
         case 0:
-          url = Object(__WEBPACK_IMPORTED_MODULE_5__utils__.get_api_prefix)() + '/coconut/topic/list';
+          url = __WEBPACK_IMPORTED_MODULE_5__utils__.get_api_prefix() + "/coconut/topic/list";
           _context2.prev = 1;
           _context2.next = 4;
           return __WEBPACK_IMPORTED_MODULE_3_axios___default.get(url, {
@@ -84,7 +90,7 @@ function handleGetTopicList() {
             return res.data;
           }).catch(function (err) {
             if (false) {
-              console.log('fetch topic list failed, detail:', err);
+              console.log("fetch topic list failed, detail:", err);
             }
             throw err;
           });
@@ -95,18 +101,18 @@ function handleGetTopicList() {
             break;
           }
           _context2.next = 8;
-          return Object(__WEBPACK_IMPORTED_MODULE_2_redux_saga_effects__.put)(__WEBPACK_IMPORTED_MODULE_4__actions__.setTopicListAction(result.data.items));
+          return __WEBPACK_IMPORTED_MODULE_2_redux_saga_effects__.put(__WEBPACK_IMPORTED_MODULE_4__actions__.setTopicListAction(result.data.items));
         case 8:
           _context2.next = 13;
           break;
         case 10:
           _context2.prev = 10;
-          _context2.t0 = _context2['catch'](1);
+          _context2.t0 = _context2["catch"](1);
           if (false) {
-            console.log('fetch topic list error, detail', _context2.t0);
+            console.log("fetch topic list error, detail", _context2.t0);
           }
         case 13:
-        case 'end':
+        case "end":
           return _context2.stop();
       }
     }
@@ -119,7 +125,7 @@ function handleGetCourseList() {
     while (1) {
       switch (_context3.prev = _context3.next) {
         case 0:
-          url = Object(__WEBPACK_IMPORTED_MODULE_5__utils__.get_api_prefix)() + '/coconut/primary-course/list';
+          url = __WEBPACK_IMPORTED_MODULE_5__utils__.get_api_prefix() + "/coconut/primary-course/list";
           _context3.prev = 1;
           _context3.next = 4;
           return __WEBPACK_IMPORTED_MODULE_3_axios___default.get(url, {
@@ -128,7 +134,7 @@ function handleGetCourseList() {
             return res.data;
           }).catch(function (err) {
             if (false) {
-              console.log('fetch course list failed, detail:', err);
+              console.log("fetch course list failed, detail:", err);
             }
             throw err;
           });
@@ -139,18 +145,18 @@ function handleGetCourseList() {
             break;
           }
           _context3.next = 8;
-          return Object(__WEBPACK_IMPORTED_MODULE_2_redux_saga_effects__.put)(__WEBPACK_IMPORTED_MODULE_4__actions__.setCourseListAction(result.data.items));
+          return __WEBPACK_IMPORTED_MODULE_2_redux_saga_effects__.put(__WEBPACK_IMPORTED_MODULE_4__actions__.setCourseListAction(result.data.items));
         case 8:
           _context3.next = 13;
           break;
         case 10:
           _context3.prev = 10;
-          _context3.t0 = _context3['catch'](1);
+          _context3.t0 = _context3["catch"](1);
           if (false) {
-            console.log('fetch course list error, detail', _context3.t0);
+            console.log("fetch course list error, detail", _context3.t0);
           }
         case 13:
-        case 'end':
+        case "end":
           return _context3.stop();
       }
     }
@@ -164,7 +170,7 @@ function handleGetTemplateList() {
     while (1) {
       switch (_context4.prev = _context4.next) {
         case 0:
-          url = Object(__WEBPACK_IMPORTED_MODULE_5__utils__.get_api_prefix)() + '/coconut/sample/list';
+          url = __WEBPACK_IMPORTED_MODULE_5__utils__.get_api_prefix() + "/coconut/sample/list";
           _context4.prev = 1;
           _context4.next = 4;
           return __WEBPACK_IMPORTED_MODULE_3_axios___default.get(url, {
@@ -173,7 +179,7 @@ function handleGetTemplateList() {
             return res.data;
           }).catch(function (err) {
             if (false) {
-              console.log('fetch template list failed, detail:', err);
+              console.log("fetch template list failed, detail:", err);
             }
             throw err;
           });
@@ -190,18 +196,18 @@ function handleGetTemplateList() {
             return Math.random() > 0.5 ? -1 : 1;
           });
           _context4.next = 10;
-          return Object(__WEBPACK_IMPORTED_MODULE_2_redux_saga_effects__.put)(__WEBPACK_IMPORTED_MODULE_4__actions__.setTemplateListAction(list));
+          return __WEBPACK_IMPORTED_MODULE_2_redux_saga_effects__.put(__WEBPACK_IMPORTED_MODULE_4__actions__.setTemplateListAction(list));
         case 10:
           _context4.next = 15;
           break;
         case 12:
           _context4.prev = 12;
-          _context4.t0 = _context4['catch'](1);
+          _context4.t0 = _context4["catch"](1);
           if (false) {
-            console.log('fetch template list error, detail', _context4.t0);
+            console.log("fetch template list error, detail", _context4.t0);
           }
         case 15:
-        case 'end':
+        case "end":
           return _context4.stop();
       }
     }
@@ -214,7 +220,7 @@ function handleGetWorkList() {
     while (1) {
       switch (_context5.prev = _context5.next) {
         case 0:
-          url = Object(__WEBPACK_IMPORTED_MODULE_5__utils__.get_api_prefix)() + '/coconut/web/work/list/all?limit=20';
+          url = __WEBPACK_IMPORTED_MODULE_5__utils__.get_api_prefix() + "/coconut/web/work/list/all?limit=20";
           _context5.prev = 1;
           _context5.next = 4;
           return __WEBPACK_IMPORTED_MODULE_3_axios___default.get(url, {
@@ -223,7 +229,7 @@ function handleGetWorkList() {
             return res.data;
           }).catch(function (err) {
             if (false) {
-              console.log('fetch work list failed, detail:', err);
+              console.log("fetch work list failed, detail:", err);
             }
             throw err;
           });
@@ -239,18 +245,18 @@ function handleGetWorkList() {
             item.work_id = item.work_id || item.id;
           });
           _context5.next = 9;
-          return Object(__WEBPACK_IMPORTED_MODULE_2_redux_saga_effects__.put)(__WEBPACK_IMPORTED_MODULE_4__actions__.setWorkListAction(result.data.items));
+          return __WEBPACK_IMPORTED_MODULE_2_redux_saga_effects__.put(__WEBPACK_IMPORTED_MODULE_4__actions__.setWorkListAction(result.data.items));
         case 9:
           _context5.next = 14;
           break;
         case 11:
           _context5.prev = 11;
-          _context5.t0 = _context5['catch'](1);
+          _context5.t0 = _context5["catch"](1);
           if (false) {
-            console.log('fetch work list error, detail', _context5.t0);
+            console.log("fetch work list error, detail", _context5.t0);
           }
         case 14:
-        case 'end':
+        case "end":
           return _context5.stop();
       }
     }
@@ -262,21 +268,21 @@ function homeSaga() {
       switch (_context6.prev = _context6.next) {
         case 0:
           _context6.next = 2;
-          return Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga__.takeLatest)(__WEBPACK_IMPORTED_MODULE_4__actions__.GET_BANNER_LIST_ACTION, handleGetBannerList);
+          return __WEBPACK_IMPORTED_MODULE_1_redux_saga__.takeLatest(__WEBPACK_IMPORTED_MODULE_4__actions__.GET_BANNER_LIST_ACTION, handleGetBannerList);
         case 2:
           _context6.next = 4;
-          return Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga__.takeLatest)(__WEBPACK_IMPORTED_MODULE_4__actions__.GET_TOPIC_LIST_ACTION, handleGetTopicList);
+          return __WEBPACK_IMPORTED_MODULE_1_redux_saga__.takeLatest(__WEBPACK_IMPORTED_MODULE_4__actions__.GET_TOPIC_LIST_ACTION, handleGetTopicList);
         case 4:
           _context6.next = 6;
-          return Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga__.takeLatest)(__WEBPACK_IMPORTED_MODULE_4__actions__.GET_COURSE_LIST_ACTION, handleGetCourseList);
+          return __WEBPACK_IMPORTED_MODULE_1_redux_saga__.takeLatest(__WEBPACK_IMPORTED_MODULE_4__actions__.GET_COURSE_LIST_ACTION, handleGetCourseList);
         case 6:
           _context6.next = 8;
-          return Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga__.takeLatest)(__WEBPACK_IMPORTED_MODULE_4__actions__.GET_TEMPLATE_LIST_ACTION, handleGetTemplateList);
+          return __WEBPACK_IMPORTED_MODULE_1_redux_saga__.takeLatest(__WEBPACK_IMPORTED_MODULE_4__actions__.GET_TEMPLATE_LIST_ACTION, handleGetTemplateList);
         case 8:
           _context6.next = 10;
-          return Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga__.takeLatest)(__WEBPACK_IMPORTED_MODULE_4__actions__.GET_WORK_LIST_ACTION, handleGetWorkList);
+          return __WEBPACK_IMPORTED_MODULE_1_redux_saga__.takeLatest(__WEBPACK_IMPORTED_MODULE_4__actions__.GET_WORK_LIST_ACTION, handleGetWorkList);
         case 10:
-        case 'end':
+        case "end":
           return _context6.stop();
       }
     }

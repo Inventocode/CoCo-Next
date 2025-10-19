@@ -63,7 +63,11 @@ function proxyWebSocket(): void {
 }
 
 function needsProxy(url: URL): boolean {
-    if (url.hostname == "static.codemao.cn") {
+    if (
+        url.hostname == "static.codemao.cn" ||
+        url.hostname == "creation.codemao.cn" ||
+        url.hostname.endsWith("bcmcdn.com")
+    ) {
         return false
     }
     return url.hostname.endsWith(".codemao.cn")

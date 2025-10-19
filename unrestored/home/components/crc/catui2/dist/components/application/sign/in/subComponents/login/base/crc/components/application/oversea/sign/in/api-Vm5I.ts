@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：Vm5I
+ */
+
 "use strict";
 
 /* unused harmony export ErrorSign */
@@ -7,13 +13,13 @@
 /* unused harmony export handleGetUserInfo */
 /* unused harmony export checkAuthLogin */
 /* harmony export (immutable) */
-export { handleLoginByEmail };
 /* unused harmony export handleLogout */
 /* harmony export (immutable) */
-export { handleRegisterByEmail };
+export { handleLoginByEmail };
 /* harmony export (immutable) */
-export { handleResetPwd };
+export { handleRegisterByEmail };
 /* harmony import */
+export { handleResetPwd };
 import * as __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__ from "@babel/runtime/helpers/esm/asyncToGenerator";
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator__ from "@babel/runtime/regenerator";
@@ -53,27 +59,27 @@ var getErroMsgAndType = function getErroMsgAndType(errorCode) {
   var type = __WEBPACK_IMPORTED_MODULE_5__def__.AuthErrorType.OTHER;
   switch (errorCode) {
     case ErrorSign.NETWORK_ERROR:
-      msg = Object(__WEBPACK_IMPORTED_MODULE_4__i18n__.getLanguage)('sign_in_dialog/error/other/network');
+      msg = __WEBPACK_IMPORTED_MODULE_4__i18n__.getLanguage("sign_in_dialog/error/other/network");
       break;
     case ErrorSign.LOGIN_ERROR:
-      msg = Object(__WEBPACK_IMPORTED_MODULE_4__i18n__.getLanguage)('sign_in_dialog/error/other/acc_or_pwd');
+      msg = __WEBPACK_IMPORTED_MODULE_4__i18n__.getLanguage("sign_in_dialog/error/other/acc_or_pwd");
       break;
     case ErrorSign.EMAIL_OFTEN_ERROR:
-      msg = Object(__WEBPACK_IMPORTED_MODULE_4__i18n__.getLanguage)('sign_in_dialog/error/email/email_often');
+      msg = __WEBPACK_IMPORTED_MODULE_4__i18n__.getLanguage("sign_in_dialog/error/email/email_often");
       break;
     case ErrorSign.EXIST_ERROR:
-      msg = Object(__WEBPACK_IMPORTED_MODULE_4__i18n__.getLanguage)('sign_in_dialog/error/email/exist');
+      msg = __WEBPACK_IMPORTED_MODULE_4__i18n__.getLanguage("sign_in_dialog/error/email/exist");
       type = __WEBPACK_IMPORTED_MODULE_5__def__.AuthErrorType.EMAIL;
       break;
     case ErrorSign.NOT_EXIST_ERROR:
-      msg = Object(__WEBPACK_IMPORTED_MODULE_4__i18n__.getLanguage)('sign_in_dialog/error/email/not_exist');
+      msg = __WEBPACK_IMPORTED_MODULE_4__i18n__.getLanguage("sign_in_dialog/error/email/not_exist");
       type = __WEBPACK_IMPORTED_MODULE_5__def__.AuthErrorType.EMAIL;
       break;
     case ErrorSign.RESET_LIMIT_ERROR:
-      msg = Object(__WEBPACK_IMPORTED_MODULE_4__i18n__.getLanguage)('sign_in_dialog/error/email/send_exceed_limit');
+      msg = __WEBPACK_IMPORTED_MODULE_4__i18n__.getLanguage("sign_in_dialog/error/email/send_exceed_limit");
       break;
     default:
-      msg = Object(__WEBPACK_IMPORTED_MODULE_4__i18n__.getLanguage)('sign_in_dialog/error/other/network');
+      msg = __WEBPACK_IMPORTED_MODULE_4__i18n__.getLanguage("sign_in_dialog/error/other/network");
       break;
   }
   return {
@@ -85,21 +91,21 @@ function requestUserInfo() {
   return _requestUserInfo.apply(this, arguments);
 }
 function _requestUserInfo() {
-  _requestUserInfo = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default)(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.mark(function _callee3() {
+  _requestUserInfo = __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.mark(function _callee3() {
     var url;
     var requestConfig;
     return __WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.wrap(function _callee3$(_context3) {
       while (1) {
         switch (_context3.prev = _context3.next) {
           case 0:
-            url = "".concat(Object(__WEBPACK_IMPORTED_MODULE_3__cfg__.getConfig)().overseaApi.host, "/tiger/user");
+            url = "".concat(__WEBPACK_IMPORTED_MODULE_3__cfg__.getConfig().overseaApi.host, "/tiger/user");
             requestConfig = {
               url: url,
-              method: 'get',
+              method: "get",
               withCredentials: true
             };
             return _context3.abrupt("return", __WEBPACK_IMPORTED_MODULE_2_axios___default(requestConfig).then(/*#__PURE__*/function () {
-              var _ref = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default)(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.mark(function _callee(res) {
+              var _ref = __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.mark(function _callee(res) {
                 return __WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.wrap(function _callee$(_context) {
                   while (1) {
                     switch (_context.prev = _context.next) {
@@ -128,7 +134,7 @@ function _requestUserInfo() {
                 return _ref.apply(this, arguments);
               };
             }()).catch(/*#__PURE__*/function () {
-              var _ref2 = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default)(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.mark(function _callee2(error) {
+              var _ref2 = __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.mark(function _callee2(error) {
                 return __WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.wrap(function _callee2$(_context2) {
                   while (1) {
                     switch (_context2.prev = _context2.next) {
@@ -158,17 +164,17 @@ function requestLoginByEmail(_x) {
   return _requestLoginByEmail.apply(this, arguments);
 }
 function _requestLoginByEmail() {
-  _requestLoginByEmail = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default)(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.mark(function _callee6(loginData) {
+  _requestLoginByEmail = __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.mark(function _callee6(loginData) {
     var url;
     var requestConfig;
     return __WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.wrap(function _callee6$(_context6) {
       while (1) {
         switch (_context6.prev = _context6.next) {
           case 0:
-            url = "".concat(Object(__WEBPACK_IMPORTED_MODULE_3__cfg__.getConfig)().overseaApi.host, "/tiger/accounts/login");
+            url = "".concat(__WEBPACK_IMPORTED_MODULE_3__cfg__.getConfig().overseaApi.host, "/tiger/accounts/login");
             requestConfig = {
               url: url,
-              method: 'POST',
+              method: "POST",
               withCredentials: true,
               data: {
                 identity: loginData.email,
@@ -177,7 +183,7 @@ function _requestLoginByEmail() {
               }
             };
             return _context6.abrupt("return", __WEBPACK_IMPORTED_MODULE_2_axios___default(requestConfig).then(/*#__PURE__*/function () {
-              var _ref3 = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default)(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.mark(function _callee4(res) {
+              var _ref3 = __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.mark(function _callee4(res) {
                 return __WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.wrap(function _callee4$(_context4) {
                   while (1) {
                     switch (_context4.prev = _context4.next) {
@@ -200,13 +206,13 @@ function _requestLoginByEmail() {
                 return _ref3.apply(this, arguments);
               };
             }()).catch(/*#__PURE__*/function () {
-              var _ref4 = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default)(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.mark(function _callee5(error) {
+              var _ref4 = __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.mark(function _callee5(error) {
                 return __WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.wrap(function _callee5$(_context5) {
                   while (1) {
                     switch (_context5.prev = _context5.next) {
                       case 0:
                         _context5.t0 = error.response.data.error_code;
-                        _context5.next = _context5.t0 === 'AC_0' ? 3 : _context5.t0 === 'AC_1' ? 3 : _context5.t0 === 'AC_45' ? 3 : 4;
+                        _context5.next = _context5.t0 === "AC_0" ? 3 : _context5.t0 === "AC_1" ? 3 : _context5.t0 === "AC_45" ? 3 : 4;
                         break;
                       case 3:
                         throw getErroMsgAndType(ErrorSign.LOGIN_ERROR);
@@ -236,7 +242,7 @@ function requestRegisterByEmail(_x2) {
   return _requestRegisterByEmail.apply(this, arguments);
 }
 function _requestRegisterByEmail() {
-  _requestRegisterByEmail = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default)(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.mark(function _callee9(registerData) {
+  _requestRegisterByEmail = __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.mark(function _callee9(registerData) {
     var url;
     var pid;
     var requestConfig;
@@ -244,21 +250,21 @@ function _requestRegisterByEmail() {
       while (1) {
         switch (_context9.prev = _context9.next) {
           case 0:
-            url = "".concat(Object(__WEBPACK_IMPORTED_MODULE_3__cfg__.getConfig)().overseaApi.host, "/tiger/accounts/register/email");
+            url = "".concat(__WEBPACK_IMPORTED_MODULE_3__cfg__.getConfig().overseaApi.host, "/tiger/accounts/register/email");
             pid = getOverseaPid();
             requestConfig = {
               url: url,
-              method: 'post',
+              method: "post",
               withCredentials: true,
               data: {
                 email: registerData.email,
                 password: registerData.password,
-                language: 'en',
+                language: "en",
                 pid: pid
               }
             };
             return _context9.abrupt("return", __WEBPACK_IMPORTED_MODULE_2_axios___default(requestConfig).then(/*#__PURE__*/function () {
-              var _ref5 = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default)(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.mark(function _callee7(res) {
+              var _ref5 = __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.mark(function _callee7(res) {
                 return __WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.wrap(function _callee7$(_context7) {
                   while (1) {
                     switch (_context7.prev = _context7.next) {
@@ -281,13 +287,13 @@ function _requestRegisterByEmail() {
                 return _ref5.apply(this, arguments);
               };
             }()).catch(/*#__PURE__*/function () {
-              var _ref6 = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default)(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.mark(function _callee8(error) {
+              var _ref6 = __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.mark(function _callee8(error) {
                 return __WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.wrap(function _callee8$(_context8) {
                   while (1) {
                     switch (_context8.prev = _context8.next) {
                       case 0:
                         _context8.t0 = error.response.data.error_code;
-                        _context8.next = _context8.t0 === 'AC_13' ? 3 : _context8.t0 === 'AC_11' ? 4 : 5;
+                        _context8.next = _context8.t0 === "AC_13" ? 3 : _context8.t0 === "AC_11" ? 4 : 5;
                         break;
                       case 3:
                         throw getErroMsgAndType(ErrorSign.EXIST_ERROR);
@@ -319,25 +325,25 @@ function requestResetPwd(_x3) {
   return _requestResetPwd.apply(this, arguments);
 }
 function _requestResetPwd() {
-  _requestResetPwd = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default)(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.mark(function _callee12(email) {
+  _requestResetPwd = __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.mark(function _callee12(email) {
     var url;
     var requestConfig;
     return __WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.wrap(function _callee12$(_context12) {
       while (1) {
         switch (_context12.prev = _context12.next) {
           case 0:
-            url = "".concat(Object(__WEBPACK_IMPORTED_MODULE_3__cfg__.getConfig)().overseaApi.host, "/tiger/accounts/password/reset/email");
+            url = "".concat(__WEBPACK_IMPORTED_MODULE_3__cfg__.getConfig().overseaApi.host, "/tiger/accounts/password/reset/email");
             requestConfig = {
               url: url,
-              method: 'post',
+              method: "post",
               withCredentials: true,
               data: {
                 email: email,
-                language: 'en'
+                language: "en"
               }
             };
             return _context12.abrupt("return", __WEBPACK_IMPORTED_MODULE_2_axios___default(requestConfig).then(/*#__PURE__*/function () {
-              var _ref7 = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default)(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.mark(function _callee10(res) {
+              var _ref7 = __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.mark(function _callee10(res) {
                 return __WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.wrap(function _callee10$(_context10) {
                   while (1) {
                     switch (_context10.prev = _context10.next) {
@@ -360,13 +366,13 @@ function _requestResetPwd() {
                 return _ref7.apply(this, arguments);
               };
             }()).catch(/*#__PURE__*/function () {
-              var _ref8 = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default)(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.mark(function _callee11(error) {
+              var _ref8 = __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.mark(function _callee11(error) {
                 return __WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.wrap(function _callee11$(_context11) {
                   while (1) {
                     switch (_context11.prev = _context11.next) {
                       case 0:
                         _context11.t0 = error.response.data.error_code;
-                        _context11.next = _context11.t0 === 'AC_27' ? 3 : _context11.t0 === 'AC_43' ? 4 : 5;
+                        _context11.next = _context11.t0 === "AC_27" ? 3 : _context11.t0 === "AC_43" ? 4 : 5;
                         break;
                       case 3:
                         throw getErroMsgAndType(ErrorSign.NOT_EXIST_ERROR);
@@ -398,21 +404,21 @@ function requestLogout() {
   return _requestLogout.apply(this, arguments);
 }
 function _requestLogout() {
-  _requestLogout = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default)(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.mark(function _callee15() {
+  _requestLogout = __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.mark(function _callee15() {
     var url;
     var requestConfig;
     return __WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.wrap(function _callee15$(_context15) {
       while (1) {
         switch (_context15.prev = _context15.next) {
           case 0:
-            url = "".concat(Object(__WEBPACK_IMPORTED_MODULE_3__cfg__.getConfig)().overseaApi.host, "/tiger/accounts/logout");
+            url = "".concat(__WEBPACK_IMPORTED_MODULE_3__cfg__.getConfig().overseaApi.host, "/tiger/accounts/logout");
             requestConfig = {
               url: url,
-              method: 'POST',
+              method: "POST",
               withCredentials: true
             };
             return _context15.abrupt("return", __WEBPACK_IMPORTED_MODULE_2_axios___default(requestConfig).then(/*#__PURE__*/function () {
-              var _ref9 = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default)(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.mark(function _callee13(res) {
+              var _ref9 = __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.mark(function _callee13(res) {
                 var data;
                 var statusText;
                 return __WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.wrap(function _callee13$(_context13) {
@@ -441,7 +447,7 @@ function _requestLogout() {
               return function (_x15) {
                 return _ref9.apply(this, arguments);
               };
-            }()).catch(/*#__PURE__*/Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default)(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.mark(function _callee14() {
+            }()).catch(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.mark(function _callee14() {
               return __WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.wrap(function _callee14$(_context14) {
                 while (1) {
                   switch (_context14.prev = _context14.next) {
@@ -467,7 +473,7 @@ function handleGetUserInfo() {
   return _handleGetUserInfo.apply(this, arguments);
 }
 function _handleGetUserInfo() {
-  _handleGetUserInfo = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default)(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.mark(function _callee16() {
+  _handleGetUserInfo = __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.mark(function _callee16() {
     var authInfo;
     var nickname;
     var id;
@@ -513,7 +519,7 @@ function checkAuthLogin() {
   return _checkAuthLogin.apply(this, arguments);
 }
 function _checkAuthLogin() {
-  _checkAuthLogin = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default)(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.mark(function _callee17() {
+  _checkAuthLogin = __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.mark(function _callee17() {
     return __WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.wrap(function _callee17$(_context17) {
       while (1) {
         switch (_context17.prev = _context17.next) {
@@ -535,7 +541,7 @@ function handleLoginByEmail(_x4) {
   return _handleLoginByEmail.apply(this, arguments);
 }
 function _handleLoginByEmail() {
-  _handleLoginByEmail = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default)(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.mark(function _callee18(loginData) {
+  _handleLoginByEmail = __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.mark(function _callee18(loginData) {
     var authInfo;
     var nickname;
     var id;
@@ -581,7 +587,7 @@ function handleLogout() {
   return _handleLogout.apply(this, arguments);
 }
 function _handleLogout() {
-  _handleLogout = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default)(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.mark(function _callee19() {
+  _handleLogout = __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.mark(function _callee19() {
     return __WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.wrap(function _callee19$(_context19) {
       while (1) {
         switch (_context19.prev = _context19.next) {
@@ -613,7 +619,7 @@ function handleRegisterByEmail(_x5) {
   return _handleRegisterByEmail.apply(this, arguments);
 }
 function _handleRegisterByEmail() {
-  _handleRegisterByEmail = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default)(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.mark(function _callee20(registerData) {
+  _handleRegisterByEmail = __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.mark(function _callee20(registerData) {
     return __WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.wrap(function _callee20$(_context20) {
       while (1) {
         switch (_context20.prev = _context20.next) {
@@ -645,7 +651,7 @@ function handleResetPwd(_x6) {
   return _handleResetPwd.apply(this, arguments);
 }
 function _handleResetPwd() {
-  _handleResetPwd = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default)(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.mark(function _callee21(email) {
+  _handleResetPwd = __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.mark(function _callee21(email) {
     return __WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.wrap(function _callee21$(_context21) {
       while (1) {
         switch (_context21.prev = _context21.next) {

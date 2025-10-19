@@ -1,8 +1,14 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：P9xH
+ */
+
 "use strict";
 
 /* harmony export (binding) */
-export { WorkItemView };
 /* harmony import */
+export { WorkItemView };
 import * as __WEBPACK_IMPORTED_MODULE_0_react__ from "react";
 /* harmony import */
 import __WEBPACK_IMPORTED_MODULE_0_react___default from "react";
@@ -138,26 +144,26 @@ var WorkItemView = function (_React$Component) {
     key: "handleSelfOpenWork",
     value: function handleSelfOpenWork() {
       if (this.props.workType !== __WEBPACK_IMPORTED_MODULE_8__routes_Work_model_interface__.EWorkType.DELETE) {
-        var _config = Object(__WEBPACK_IMPORTED_MODULE_4__cfg__.config)();
+        var _config = __WEBPACK_IMPORTED_MODULE_4__cfg__.config();
         var cocoEditorUrl = _config.cocoEditorUrl;
         var id = this.props.item.work_id;
         var role = this.props.item.role;
         // 打开作品埋点
-        Object(__WEBPACK_IMPORTED_MODULE_9__sensorsData__.sensorsCustomReport)('OpenWork', {
+        __WEBPACK_IMPORTED_MODULE_9__sensorsData__.sensorsCustomReport("OpenWork", {
           workId: id,
           // 上报 1:我创建的 2:我参与的
           workType: role === 1 ? 1 : 2,
           // workName: projectName,
           isSuccess: true,
-          failReason: ''
+          failReason: ""
         });
-        window.open(cocoEditorUrl + "?workId=" + id, '_self');
+        window.open(cocoEditorUrl + "?workId=" + id, "_self");
       }
     }
   }, {
     key: "handleOpenWork",
     value: function handleOpenWork() {
-      var _config2 = Object(__WEBPACK_IMPORTED_MODULE_4__cfg__.config)();
+      var _config2 = __WEBPACK_IMPORTED_MODULE_4__cfg__.config();
       var cocoEditorUrl = _config2.cocoEditorUrl;
       this.setState({
         dropdownVisible: false
@@ -166,13 +172,13 @@ var WorkItemView = function (_React$Component) {
       var role = this.props.item.role;
       setTimeout(function () {
         // 打开作品埋点
-        Object(__WEBPACK_IMPORTED_MODULE_9__sensorsData__.sensorsCustomReport)('OpenWork', {
+        __WEBPACK_IMPORTED_MODULE_9__sensorsData__.sensorsCustomReport("OpenWork", {
           workId: id,
           // 上报 1:我创建的 2:我参与的
           workType: role === 1 ? 1 : 2,
           // workName: projectName,
           isSuccess: true,
-          failReason: ''
+          failReason: ""
         });
         window.open(cocoEditorUrl + "?workId=" + id, Date.now().toString());
       }, 10);
@@ -204,8 +210,8 @@ var WorkItemView = function (_React$Component) {
         this.props.setConfirmDialogInfoAction({
           visible: true,
           isDangerous: true,
-          title: "\u662F\u5426\u9000\u51FA\u201C" + this.props.item.name + "\u201D\u534F\u4F5C\uFF1F",
-          content: '退出后, 该作品将不在作品管理页中显示',
+          title: "是否退出“" + this.props.item.name + "”协作？",
+          content: "退出后, 该作品将不在作品管理页中显示",
           onConfirm: function onConfirm() {
             return _this3.props.quitCollWorkAction({
               id: id,
@@ -293,93 +299,93 @@ var WorkItemView = function (_React$Component) {
       var item = _props2.item;
       var workType = _props2.workType;
       return __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-        styleName: 'workItem'
+        styleName: "workItem"
       }, __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-        styleName: __WEBPACK_IMPORTED_MODULE_2_classnames___default('workImage', item.cover_url && item.preview_url && 'cover'),
+        styleName: __WEBPACK_IMPORTED_MODULE_2_classnames___default("workImage", item.cover_url && item.preview_url && "cover"),
         onClick: function onClick() {
           return _this5.handleSelfOpenWork();
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-        styleName: 'image',
+        styleName: "image",
         style: {
           backgroundImage: "url(" + (item.cover_url || item.preview_url) + ")"
         }
       }), (item.is_coll_work || workType === __WEBPACK_IMPORTED_MODULE_8__routes_Work_model_interface__.EWorkType.COLL) && __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-        styleName: 'workType'
+        styleName: "workType"
       }, item.role === 1 && __WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_5__IconFont__.default, {
-        type: 'icon-star',
-        styleName: 'icon'
+        type: "icon-star",
+        styleName: "icon"
       }), __WEBPACK_IMPORTED_MODULE_0_react__.createElement("span", {
-        styleName: 'workTypeText'
-      }, "\u534F\u4F5C")), workType === __WEBPACK_IMPORTED_MODULE_8__routes_Work_model_interface__.EWorkType.DELETE && __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-        styleName: 'workDelete',
+        styleName: "workTypeText"
+      }, "协作")), workType === __WEBPACK_IMPORTED_MODULE_8__routes_Work_model_interface__.EWorkType.DELETE && __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
+        styleName: "workDelete",
         onClick: function onClick(e) {
           e.preventDefault();
           _this5.handleAgainDeleteWork();
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_5__IconFont__.default, {
-        type: 'icon-delete'
+        type: "icon-delete"
       }))), __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-        styleName: 'workName'
+        styleName: "workName"
       }, !inputVisible && __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-        styleName: 'name',
+        styleName: "name",
         onDoubleClick: function onDoubleClick() {
           return _this5.handleDoubleClick();
         }
       }, item.name), __WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_7__Input__.default, {
-        styleName: inputVisible ? 'inputVisible' : 'inputHidden',
+        styleName: inputVisible ? "inputVisible" : "inputHidden",
         ref: function ref(e) {
           return _this5.inputRef = e;
         },
-        defaultValue: item.name || '',
+        defaultValue: item.name || "",
         isTrimmed: true,
-        placeholder: "\u8BF7\u8F93\u5165\u4F5C\u54C1\u540D\u79F0",
+        placeholder: "请输入作品名称",
         rules: [{
           rule: projectNameRegEx
         }],
         maxLength: 20,
         onBlur: this.handleWorkTitleBlur
       }), workType === __WEBPACK_IMPORTED_MODULE_8__routes_Work_model_interface__.EWorkType.DELETE ? __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-        styleName: 'recoverBtn',
+        styleName: "recoverBtn",
         onClick: function onClick() {
           return _this5.handleRecoverDeletedWork();
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_5__IconFont__.default, {
-        type: 'icon-recover'
+        type: "icon-recover"
       })) : __WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_1_antd__.Dropdown, {
         overlay: __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-          styleName: 'dropdown'
+          styleName: "dropdown"
         }, __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-          styleName: 'dropdownItem',
+          styleName: "dropdownItem",
           onClick: function onClick() {
             return _this5.handleOpenWork();
           }
-        }, "\u65B0\u6807\u7B7E\u9875\u6253\u5F00"), item.role === 1 && __WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_0_react__.Fragment, null, __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-          styleName: 'dropdownItem',
+        }, "新标签页打开"), item.role === 1 && __WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_0_react__.Fragment, null, __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
+          styleName: "dropdownItem",
           onClick: function onClick() {
             return _this5.handleRenameWork();
           }
-        }, "\u91CD\u547D\u540D"), __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-          styleName: 'dropdownItem',
+        }, "重命名"), __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
+          styleName: "dropdownItem",
           onClick: function onClick() {
             return _this5.handleDeleteWork();
           }
-        }, "\u5220\u9664")), (item.is_coll_work && item.role === 2 || workType === __WEBPACK_IMPORTED_MODULE_8__routes_Work_model_interface__.EWorkType.COLL) && __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-          styleName: 'dropdownItem',
+        }, "删除")), (item.is_coll_work && item.role === 2 || workType === __WEBPACK_IMPORTED_MODULE_8__routes_Work_model_interface__.EWorkType.COLL) && __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
+          styleName: "dropdownItem",
           onClick: function onClick() {
             return _this5.handleQuitCollWork();
           }
-        }, "\u9000\u51FA\u534F\u4F5C")),
+        }, "退出协作")),
         onVisibleChange: this.handleDropdownVisibleChange,
         visible: dropdownVisible,
-        trigger: ['click']
+        trigger: ["click"]
       }, inputVisible ? __WEBPACK_IMPORTED_MODULE_0_react__.createElement("span", null) : __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-        styleName: 'moreBtn'
+        styleName: "moreBtn"
       }, __WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_5__IconFont__.default, {
-        type: 'icon-more'
+        type: "icon-more"
       })))), __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-        styleName: 'workTime'
-      }, Object(__WEBPACK_IMPORTED_MODULE_6__utils__.formatTimestamp)(item.updated_at || item.update_time)));
+        styleName: "workTime"
+      }, __WEBPACK_IMPORTED_MODULE_6__utils__.formatTimestamp(item.updated_at || item.update_time)));
     }
   }]);
   return WorkItemView;

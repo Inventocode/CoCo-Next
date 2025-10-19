@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：800
+ */
+
 module.exports = {
   wrapper: "MiniConsole_wrapper__22Tby",
   errorWarning: "MiniConsole_errorWarning__2yXrL",

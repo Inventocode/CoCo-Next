@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：Pv6Z
+ */
+
 "use strict";
 
 /* harmony import */
@@ -27,7 +33,7 @@ function map_state(state) {
   };
 }
 function map_dispatch(dispatch) {
-  return Object(__WEBPACK_IMPORTED_MODULE_1_redux__.bindActionCreators)({
+  return __WEBPACK_IMPORTED_MODULE_1_redux__.bindActionCreators({
     getCreateWorkListAction: __WEBPACK_IMPORTED_MODULE_3__model_actions__.getCreateWorkListAction,
     getCollWorkListAction: __WEBPACK_IMPORTED_MODULE_3__model_actions__.getCollWorkListAction,
     getDeleteWorkListAction: __WEBPACK_IMPORTED_MODULE_3__model_actions__.getDeleteWorkListAction,
@@ -37,5 +43,5 @@ function map_dispatch(dispatch) {
   }, dispatch);
 }
 /* harmony default export */
-export default Object(__WEBPACK_IMPORTED_MODULE_0_react_redux__.connect)(map_state, map_dispatch)(__WEBPACK_IMPORTED_MODULE_2__template__.WorkView);
+export default __WEBPACK_IMPORTED_MODULE_0_react_redux__.connect(map_state, map_dispatch)(__WEBPACK_IMPORTED_MODULE_2__template__.WorkView);
 /***/

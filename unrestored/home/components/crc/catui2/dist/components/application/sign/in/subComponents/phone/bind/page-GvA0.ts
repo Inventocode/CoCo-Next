@@ -1,8 +1,14 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：GvA0
+ */
+
 "use strict";
 
 /* harmony export (binding) */
-export { PhoneBindPageContainer };
 /* harmony import */
+export { PhoneBindPageContainer };
 import * as __WEBPACK_IMPORTED_MODULE_0_babel_plugin_react_css_modules_dist_browser_getClassName__ from "babel-plugin-react-css-modules/dist/browser/getClassName";
 /* harmony import */
 import __WEBPACK_IMPORTED_MODULE_0_babel_plugin_react_css_modules_dist_browser_getClassName___default from "babel-plugin-react-css-modules/dist/browser/getClassName";
@@ -68,7 +74,7 @@ var PhoneBindPageContainer = function PhoneBindPageContainer(props) {
   var reportMethod = props.reportMethod;
   var onSuccess = props.onSuccess;
   return /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1_react__.createElement(__WEBPACK_IMPORTED_MODULE_1_react__.Fragment, null, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1_react__.createElement("div", {
-    className: __WEBPACK_IMPORTED_MODULE_0_babel_plugin_react_css_modules_dist_browser_getClassName___default('content', _styleModuleImportMap, {
+    className: __WEBPACK_IMPORTED_MODULE_0_babel_plugin_react_css_modules_dist_browser_getClassName___default("content", _styleModuleImportMap, {
       "autoResolveMultipleImports": true,
       "handleMissingStyleName": "throw"
     })
@@ -76,7 +82,7 @@ var PhoneBindPageContainer = function PhoneBindPageContainer(props) {
     className: "CUI-sign-in-dialog-tab-wrap"
   }, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1_react__.createElement("div", {
     className: "CUI-sign-in-dialog-tab"
-  }, Object(__WEBPACK_IMPORTED_MODULE_2__i18n__.getLanguage)('sign_in_dialog/bind_phone'))), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1_react__.createElement(__WEBPACK_IMPORTED_MODULE_3__VerifyPhone__.VerifyPhoneComponent, {
+  }, __WEBPACK_IMPORTED_MODULE_2__i18n__.getLanguage("sign_in_dialog/bind_phone"))), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1_react__.createElement(__WEBPACK_IMPORTED_MODULE_3__VerifyPhone__.VerifyPhoneComponent, {
     smsTimeStamp: smsTimeStamp,
     setSmsTimeStamp: setSmsTimeStamp,
     isRequesting: isRequesting,

@@ -1,5 +1,12 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：0bWe
+ */
+
 "use strict";
 
+/* harmony export (immutable) */
 /* harmony export (immutable) */
 export { handleLoginByPassword };
 /* harmony export (immutable) */
@@ -12,9 +19,8 @@ export { handleRegister };
 export { handleResetPwdToken };
 /* harmony export (immutable) */
 export { handleResetPwd };
-/* harmony export (immutable) */
-export { handleBindPhone };
 /* harmony import */
+export { handleBindPhone };
 import * as __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__ from "@babel/runtime/helpers/esm/asyncToGenerator";
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator__ from "@babel/runtime/regenerator";
@@ -28,7 +34,7 @@ function handleLoginByPassword(_x) {
   return _handleLoginByPassword.apply(this, arguments);
 }
 function _handleLoginByPassword() {
-  _handleLoginByPassword = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default)(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.mark(function _callee2(param) {
+  _handleLoginByPassword = __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.mark(function _callee2(param) {
     var username;
     var password;
     var getCaptchaFallback;
@@ -51,8 +57,8 @@ function _handleLoginByPassword() {
             _context2.next = 4;
             return new Promise(function (resolve) {
               try {
-                Object(__WEBPACK_IMPORTED_MODULE_2__iris__.getAuthModule)().getCaptcha(username, '', true, /*#__PURE__*/function () {
-                  var _ref = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default)(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.mark(function _callee(ticket) {
+                __WEBPACK_IMPORTED_MODULE_2__iris__.getAuthModule().getCaptcha(username, "", true, /*#__PURE__*/function () {
+                  var _ref = __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.mark(function _callee(ticket) {
                     return __WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.wrap(function _callee$(_context) {
                       while (1) {
                         switch (_context.prev = _context.next) {
@@ -70,8 +76,8 @@ function _handleLoginByPassword() {
                   };
                 }(), getCaptchaFallback, getCaptchaFallback);
               } catch (err) {
-                e = Object(__WEBPACK_IMPORTED_MODULE_2__iris__.getAuthModule)().getErrorMsgType(err);
-                resolve('');
+                e = __WEBPACK_IMPORTED_MODULE_2__iris__.getAuthModule().getErrorMsgType(err);
+                resolve("");
               }
             });
           case 4:
@@ -83,7 +89,7 @@ function _handleLoginByPassword() {
             throw e;
           case 7:
             _context2.next = 9;
-            return Object(__WEBPACK_IMPORTED_MODULE_2__iris__.getAuthModule)().getAuth().login_account_ticket(username, password, Object(__WEBPACK_IMPORTED_MODULE_2__iris__.getAuthModule)().getPid(), ticket);
+            return __WEBPACK_IMPORTED_MODULE_2__iris__.getAuthModule().getAuth().login_account_ticket(username, password, __WEBPACK_IMPORTED_MODULE_2__iris__.getAuthModule().getPid(), ticket);
           case 9:
             _yield$getAuthModule$ = _context2.sent;
             data = _yield$getAuthModule$.data;
@@ -105,7 +111,7 @@ function _handleLoginByPassword() {
             _context2.t0 = _context2["catch"](0);
             return _context2.abrupt("return", {
               isSuccess: false,
-              error: Object(__WEBPACK_IMPORTED_MODULE_2__iris__.getAuthModule)().getErrorMsgType(_context2.t0)
+              error: __WEBPACK_IMPORTED_MODULE_2__iris__.getAuthModule().getErrorMsgType(_context2.t0)
             });
           case 18:
           case "end":
@@ -120,7 +126,7 @@ function handleLoginBySms(_x2) {
   return _handleLoginBySms.apply(this, arguments);
 }
 function _handleLoginBySms() {
-  _handleLoginBySms = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default)(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.mark(function _callee3(param) {
+  _handleLoginBySms = __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.mark(function _callee3(param) {
     var phone;
     var code;
     var _yield$getAuthModule$2;
@@ -137,7 +143,7 @@ function _handleLoginBySms() {
             phone = param.phone;
             code = param.code;
             _context3.next = 4;
-            return Object(__WEBPACK_IMPORTED_MODULE_2__iris__.getAuthModule)().getAuth().login_phone(phone, code);
+            return __WEBPACK_IMPORTED_MODULE_2__iris__.getAuthModule().getAuth().login_phone(phone, code);
           case 4:
             _yield$getAuthModule$2 = _context3.sent;
             data = _yield$getAuthModule$2.data;
@@ -159,7 +165,7 @@ function _handleLoginBySms() {
             _context3.t0 = _context3["catch"](0);
             return _context3.abrupt("return", {
               isSuccess: false,
-              error: Object(__WEBPACK_IMPORTED_MODULE_2__iris__.getAuthModule)().getErrorMsgType(_context3.t0)
+              error: __WEBPACK_IMPORTED_MODULE_2__iris__.getAuthModule().getErrorMsgType(_context3.t0)
             });
           case 13:
           case "end":
@@ -174,7 +180,7 @@ function handleSendSmsCode(_x3, _x4, _x5) {
   return _handleSendSmsCode.apply(this, arguments);
 }
 function _handleSendSmsCode() {
-  _handleSendSmsCode = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default)(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.mark(function _callee4(phone, type, getCaptchaFallback) {
+  _handleSendSmsCode = __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.mark(function _callee4(phone, type, getCaptchaFallback) {
     var pid;
     var e;
     var ticket;
@@ -182,16 +188,16 @@ function _handleSendSmsCode() {
       while (1) {
         switch (_context4.prev = _context4.next) {
           case 0:
-            pid = Object(__WEBPACK_IMPORTED_MODULE_2__iris__.getAuthModule)().getPid();
+            pid = __WEBPACK_IMPORTED_MODULE_2__iris__.getAuthModule().getPid();
             _context4.next = 3;
             return new Promise(function (resolve) {
               try {
-                Object(__WEBPACK_IMPORTED_MODULE_2__iris__.getAuthModule)().getCaptcha(phone, '', true, function (ticket) {
+                __WEBPACK_IMPORTED_MODULE_2__iris__.getAuthModule().getCaptcha(phone, "", true, function (ticket) {
                   return resolve(ticket);
                 }, getCaptchaFallback, getCaptchaFallback);
               } catch (err) {
-                e = Object(__WEBPACK_IMPORTED_MODULE_2__iris__.getAuthModule)().getErrorMsgType(err);
-                resolve('');
+                e = __WEBPACK_IMPORTED_MODULE_2__iris__.getAuthModule().getErrorMsgType(err);
+                resolve("");
               }
             });
           case 3:
@@ -203,40 +209,40 @@ function _handleSendSmsCode() {
             return _context4.abrupt("return", e);
           case 6:
             _context4.prev = 6;
-            if (!(type === 'login')) {
+            if (!(type === "login")) {
               _context4.next = 10;
               break;
             }
             _context4.next = 10;
-            return Object(__WEBPACK_IMPORTED_MODULE_2__iris__.getAuthModule)().getAuth().login_captcha(phone, ticket, pid);
+            return __WEBPACK_IMPORTED_MODULE_2__iris__.getAuthModule().getAuth().login_captcha(phone, ticket, pid);
           case 10:
-            if (!(type === 'register')) {
+            if (!(type === "register")) {
               _context4.next = 13;
               break;
             }
             _context4.next = 13;
-            return Object(__WEBPACK_IMPORTED_MODULE_2__iris__.getAuthModule)().getAuth().register_send_captcha(phone, ticket, pid);
+            return __WEBPACK_IMPORTED_MODULE_2__iris__.getAuthModule().getAuth().register_send_captcha(phone, ticket, pid);
           case 13:
-            if (!(type === 'reset')) {
+            if (!(type === "reset")) {
               _context4.next = 16;
               break;
             }
             _context4.next = 16;
-            return Object(__WEBPACK_IMPORTED_MODULE_2__iris__.getAuthModule)().getAuth().reset_pwd_captcha(phone, ticket, pid);
+            return __WEBPACK_IMPORTED_MODULE_2__iris__.getAuthModule().getAuth().reset_pwd_captcha(phone, ticket, pid);
           case 16:
-            if (!(type === 'phoneBind')) {
+            if (!(type === "phoneBind")) {
               _context4.next = 19;
               break;
             }
             _context4.next = 19;
-            return Object(__WEBPACK_IMPORTED_MODULE_2__iris__.getAuthModule)().getAuth().bind_phone_captcha(phone, ticket, pid);
+            return __WEBPACK_IMPORTED_MODULE_2__iris__.getAuthModule().getAuth().bind_phone_captcha(phone, ticket, pid);
           case 19:
             _context4.next = 24;
             break;
           case 21:
             _context4.prev = 21;
             _context4.t0 = _context4["catch"](6);
-            return _context4.abrupt("return", Object(__WEBPACK_IMPORTED_MODULE_2__iris__.getAuthModule)().getErrorMsgType(_context4.t0));
+            return _context4.abrupt("return", __WEBPACK_IMPORTED_MODULE_2__iris__.getAuthModule().getErrorMsgType(_context4.t0));
           case 24:
           case "end":
             return _context4.stop();
@@ -250,7 +256,7 @@ function handleRegister(_x6) {
   return _handleRegister.apply(this, arguments);
 }
 function _handleRegister() {
-  _handleRegister = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default)(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.mark(function _callee5(param) {
+  _handleRegister = __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.mark(function _callee5(param) {
     var phone;
     var password;
     var code;
@@ -270,7 +276,7 @@ function _handleRegister() {
             code = param.code;
             _context5.prev = 1;
             _context5.next = 4;
-            return Object(__WEBPACK_IMPORTED_MODULE_2__iris__.getAuthModule)().getAgreements();
+            return __WEBPACK_IMPORTED_MODULE_2__iris__.getAuthModule().getAgreements();
           case 4:
             agreementIds = _context5.sent;
             if (!(!agreementIds || agreementIds.length === 0)) {
@@ -279,11 +285,11 @@ function _handleRegister() {
             }
             return _context5.abrupt("return", {
               isSuccess: false,
-              error: Object(__WEBPACK_IMPORTED_MODULE_2__iris__.getAuthModule)().getErrorMsgType('sign_in_dialog/error/other/network')
+              error: __WEBPACK_IMPORTED_MODULE_2__iris__.getAuthModule().getErrorMsgType("sign_in_dialog/error/other/network")
             });
           case 7:
             _context5.next = 9;
-            return Object(__WEBPACK_IMPORTED_MODULE_2__iris__.getAuthModule)().getAuth().register({
+            return __WEBPACK_IMPORTED_MODULE_2__iris__.getAuthModule().getAuth().register({
               phone_number: phone,
               password: password,
               captcha: code,
@@ -310,7 +316,7 @@ function _handleRegister() {
             _context5.t0 = _context5["catch"](1);
             return _context5.abrupt("return", {
               isSuccess: false,
-              error: Object(__WEBPACK_IMPORTED_MODULE_2__iris__.getAuthModule)().getErrorMsgType(_context5.t0)
+              error: __WEBPACK_IMPORTED_MODULE_2__iris__.getAuthModule().getErrorMsgType(_context5.t0)
             });
           case 18:
           case "end":
@@ -325,7 +331,7 @@ function handleResetPwdToken(_x7) {
   return _handleResetPwdToken.apply(this, arguments);
 }
 function _handleResetPwdToken() {
-  _handleResetPwdToken = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default)(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.mark(function _callee6(param) {
+  _handleResetPwdToken = __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.mark(function _callee6(param) {
     var phone;
     var code;
     var _yield$getAuthModule$4;
@@ -339,7 +345,7 @@ function _handleResetPwdToken() {
             phone = param.phone;
             code = param.code;
             _context6.next = 4;
-            return Object(__WEBPACK_IMPORTED_MODULE_2__iris__.getAuthModule)().getAuth().reset_pwd_token(phone, code);
+            return __WEBPACK_IMPORTED_MODULE_2__iris__.getAuthModule().getAuth().reset_pwd_token(phone, code);
           case 4:
             _yield$getAuthModule$4 = _context6.sent;
             data = _yield$getAuthModule$4.data;
@@ -348,7 +354,7 @@ function _handleResetPwdToken() {
           case 10:
             _context6.prev = 10;
             _context6.t0 = _context6["catch"](0);
-            return _context6.abrupt("return", Object(__WEBPACK_IMPORTED_MODULE_2__iris__.getAuthModule)().getErrorMsgType(_context6.t0));
+            return _context6.abrupt("return", __WEBPACK_IMPORTED_MODULE_2__iris__.getAuthModule().getErrorMsgType(_context6.t0));
           case 13:
           case "end":
             return _context6.stop();
@@ -362,7 +368,7 @@ function handleResetPwd(_x8) {
   return _handleResetPwd.apply(this, arguments);
 }
 function _handleResetPwd() {
-  _handleResetPwd = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default)(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.mark(function _callee7(param) {
+  _handleResetPwd = __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.mark(function _callee7(param) {
     var password;
     var passwordConfirm;
     var ticket;
@@ -375,7 +381,7 @@ function _handleResetPwd() {
             passwordConfirm = param.passwordConfirm;
             ticket = param.ticket;
             _context7.next = 4;
-            return Object(__WEBPACK_IMPORTED_MODULE_2__iris__.getAuthModule)().getAuth().reset_pwd(ticket, password, passwordConfirm);
+            return __WEBPACK_IMPORTED_MODULE_2__iris__.getAuthModule().getAuth().reset_pwd(ticket, password, passwordConfirm);
           case 4:
             return _context7.abrupt("return", {
               isSuccess: true
@@ -385,7 +391,7 @@ function _handleResetPwd() {
             _context7.t0 = _context7["catch"](0);
             return _context7.abrupt("return", {
               isSuccess: false,
-              error: Object(__WEBPACK_IMPORTED_MODULE_2__iris__.getAuthModule)().getErrorMsgType(_context7.t0)
+              error: __WEBPACK_IMPORTED_MODULE_2__iris__.getAuthModule().getErrorMsgType(_context7.t0)
             });
           case 10:
           case "end":
@@ -400,7 +406,7 @@ function handleBindPhone(_x9) {
   return _handleBindPhone.apply(this, arguments);
 }
 function _handleBindPhone() {
-  _handleBindPhone = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default)(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.mark(function _callee8(param) {
+  _handleBindPhone = __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1__babel_runtime_regenerator___default.mark(function _callee8(param) {
     var phone;
     var code;
     var result;
@@ -412,14 +418,14 @@ function _handleBindPhone() {
             phone = param.phone;
             code = param.code;
             _context8.next = 4;
-            return Object(__WEBPACK_IMPORTED_MODULE_2__iris__.getAuthModule)().getAuth().bind_phone(phone, code);
+            return __WEBPACK_IMPORTED_MODULE_2__iris__.getAuthModule().getAuth().bind_phone(phone, code);
           case 4:
             result = _context8.sent;
             return _context8.abrupt("return", result.statusText);
           case 8:
             _context8.prev = 8;
             _context8.t0 = _context8["catch"](0);
-            return _context8.abrupt("return", Object(__WEBPACK_IMPORTED_MODULE_2__iris__.getAuthModule)().getErrorMsgType(_context8.t0));
+            return _context8.abrupt("return", __WEBPACK_IMPORTED_MODULE_2__iris__.getAuthModule().getErrorMsgType(_context8.t0));
           case 11:
           case "end":
             return _context8.stop();

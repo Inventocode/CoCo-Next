@@ -1,19 +1,25 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：dpNx
+ */
+
 "use strict";
 
 /* harmony export (immutable) */
-export { getEnvironment };
 /* harmony export (immutable) */
+export { getEnvironment };
 export { config };
 function getEnvironment() {
   var hostname = window.location.hostname;
-  if (hostname.startsWith('dev') || hostname === 'localhost') {
-    return 'dev';
-  } else if (hostname.startsWith('test')) {
-    return 'test';
-  } else if (hostname.startsWith('staging')) {
-    return 'staging';
+  if (hostname.startsWith("dev") || hostname === "localhost") {
+    return "dev";
+  } else if (hostname.startsWith("test")) {
+    return "test";
+  } else if (hostname.startsWith("staging")) {
+    return "staging";
   } else {
-    return 'prod';
+    return "prod";
   }
 }
 /**
@@ -26,29 +32,29 @@ function config() {
   var env = getEnvironment();
   var prefix = undefined;
   switch (env) {
-    case 'test':
-      prefix = 'test-';
+    case "test":
+      prefix = "test-";
       break;
-    case 'staging':
-      prefix = 'staging-';
+    case "staging":
+      prefix = "staging-";
       break;
-    case 'dev':
-      prefix = 'dev-';
+    case "dev":
+      prefix = "dev-";
       break;
-    case 'prod':
+    case "prod":
     default:
-      prefix = '';
+      prefix = "";
       break;
   }
   return {
     env: env,
-    pid: '7KeVbBdw',
-    productCode: 'appcraft',
-    cocoEditorUrl: 'https://' + prefix + 'coco.codemao.cn/editor',
-    discoverUrl: 'https://shequ.codemao.cn/gallery/14700',
-    backendHost: 'https://' + prefix + 'api-creation.codemao.cn',
-    oTServerHost: 'https://' + prefix + 'socketcoll.codemao.cn',
-    openServiceHost: 'https://' + prefix + 'open-service.codemao.cn'
+    pid: "7KeVbBdw",
+    productCode: "appcraft",
+    cocoEditorUrl: "https://" + prefix + "coco.codemao.cn/editor",
+    discoverUrl: "https://shequ.codemao.cn/gallery/14700",
+    backendHost: "https://" + prefix + "api-creation.codemao.cn",
+    oTServerHost: "https://" + prefix + "socketcoll.codemao.cn",
+    openServiceHost: "https://" + prefix + "open-service.codemao.cn"
   };
 }
 

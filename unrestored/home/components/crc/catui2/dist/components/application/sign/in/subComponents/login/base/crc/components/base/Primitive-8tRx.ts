@@ -1,8 +1,14 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：8tRx
+ */
+
 "use strict";
 
 /* harmony export (immutable) */
-export { Primitive };
 /* harmony import */
+export { Primitive };
 import * as __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_extends__ from "@babel/runtime/helpers/esm/extends";
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_objectWithoutProperties__ from "@babel/runtime/helpers/esm/objectWithoutProperties";
@@ -20,41 +26,41 @@ var _excluded = ["url", "position"];
 function Primitive(_ref) {
   var url = _ref.url;
   var position = _ref.position;
-  var props = Object(__WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_objectWithoutProperties__.default)(_ref, _excluded);
-  var gltf = Object(__WEBPACK_IMPORTED_MODULE_3_react_three_fiber__.useLoader)(__WEBPACK_IMPORTED_MODULE_4_three_examples_jsm_loaders_GLTFLoader__.GLTFLoader, url);
-  var _useGraph = Object(__WEBPACK_IMPORTED_MODULE_3_react_three_fiber__.useGraph)(gltf.scene);
+  var props = __WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_objectWithoutProperties__.default(_ref, _excluded);
+  var gltf = __WEBPACK_IMPORTED_MODULE_3_react_three_fiber__.useLoader(__WEBPACK_IMPORTED_MODULE_4_three_examples_jsm_loaders_GLTFLoader__.GLTFLoader, url);
+  var _useGraph = __WEBPACK_IMPORTED_MODULE_3_react_three_fiber__.useGraph(gltf.scene);
   var nodes = _useGraph.nodes;
   var materials = _useGraph.materials;
-  var grabbing = Object(__WEBPACK_IMPORTED_MODULE_2_react__.useRef)(false);
-  Object(__WEBPACK_IMPORTED_MODULE_5__common_hooks_useEventListener__.useEventListener)(document, 'pointerup', function () {
+  var grabbing = __WEBPACK_IMPORTED_MODULE_2_react__.useRef(false);
+  __WEBPACK_IMPORTED_MODULE_5__common_hooks_useEventListener__.useEventListener(document, "pointerup", function () {
     if (!grabbing.current) {
       return;
     }
-    document.documentElement.style.cursor = 'default';
+    document.documentElement.style.cursor = "default";
     grabbing.current = false;
   });
-  return /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_2_react___default.createElement("primitive", Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_extends__.default)({}, props, {
+  return /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_2_react___default.createElement("primitive", __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_extends__.default({}, props, {
     object: gltf.scene,
     position: position,
     onPointerEnter: function onPointerEnter() {
       if (grabbing.current) {
         return;
       }
-      document.documentElement.style.cursor = 'grab';
+      document.documentElement.style.cursor = "grab";
     },
     onPointerLeave: function onPointerLeave() {
       if (grabbing.current) {
         return;
       }
-      document.documentElement.style.cursor = 'default';
+      document.documentElement.style.cursor = "default";
     },
     onPointerDown: function onPointerDown() {
       grabbing.current = true;
-      document.documentElement.style.cursor = 'grabbing';
+      document.documentElement.style.cursor = "grabbing";
     },
     onPointerUp: function onPointerUp(e) {
       grabbing.current = false;
-      document.documentElement.style.cursor = 'grab';
+      document.documentElement.style.cursor = "grab";
       e.stopPropagation();
     }
   }));

@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：621
+ */
+
 module.exports = {
   iconMallItem: "style_iconMallItem__3kEsD",
   selected: "style_selected__2ybjq",

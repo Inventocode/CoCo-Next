@@ -1,8 +1,14 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：bbgg
+ */
+
 "use strict";
 
 /* harmony export (binding) */
-export { createInfo };
 /* harmony import */
+export { createInfo };
 import * as __WEBPACK_IMPORTED_MODULE_0_react__ from "react";
 /* harmony import */
 import __WEBPACK_IMPORTED_MODULE_0_react___default from "react";
@@ -23,9 +29,9 @@ var createInfo = function createInfo(config) {
     height: 36,
     type: "primary",
     onClick: config.onOk
-  }, (_config$okText = config.okText) !== null && _config$okText !== undefined ? _config$okText : '确认');
-  var div = document.createElement('div');
-  div.className = 'CUI-dialog-warning-dialog';
+  }, (_config$okText = config.okText) !== null && _config$okText !== undefined ? _config$okText : "确认");
+  var div = document.createElement("div");
+  div.className = "CUI-dialog-warning-dialog";
   document.body.appendChild(div);
   var InfoDialog = /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react___default.createElement(__WEBPACK_IMPORTED_MODULE_3____.Dialog, {
     show: true,
@@ -40,7 +46,7 @@ var createInfo = function createInfo(config) {
     onOpen: config.onOpen,
     onCancel: config.onOk,
     onClose: config.onClose
-  }, typeof config.content === 'function' ? config.content() : config.content);
+  }, typeof config.content === "function" ? config.content() : config.content);
   __WEBPACK_IMPORTED_MODULE_1_react_dom___default.render(InfoDialog, div);
   var hadDestroied = false;
   return function () {

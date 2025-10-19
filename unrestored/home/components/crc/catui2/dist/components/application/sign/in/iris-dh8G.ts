@@ -1,10 +1,16 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：dh8G
+ */
+
 "use strict";
 
 /* unused harmony export NOT_LOGIN_MSG */
 /* unused harmony export NETWORK_ERROR_MSG */
 /* harmony export (immutable) */
-export { getAuthModule };
 /* harmony import */
+export { getAuthModule };
 import * as __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__ from "@babel/runtime/helpers/esm/asyncToGenerator";
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_classCallCheck__ from "@babel/runtime/helpers/esm/classCallCheck";
@@ -22,19 +28,19 @@ import * as __WEBPACK_IMPORTED_MODULE_5__i18n__ from "./i18n-FsOf";
 import * as __WEBPACK_IMPORTED_MODULE_6__cfg__ from "../../../../cfg-OT5r";
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_7__def__ from "./def-5NKK";
-var NOT_LOGIN_MSG = 'NOT_LOGIN';
-var NETWORK_ERROR_MSG = 'NETWORK_ERROR';
+var NOT_LOGIN_MSG = "NOT_LOGIN";
+var NETWORK_ERROR_MSG = "NETWORK_ERROR";
 var authModule;
 var AuthModule = /*#__PURE__*/function () {
   function AuthModule() {
     var _this = this;
-    Object(__WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_classCallCheck__.default)(this, AuthModule);
-    Object(__WEBPACK_IMPORTED_MODULE_3__babel_runtime_helpers_esm_defineProperty__.default)(this, "iris", undefined);
-    Object(__WEBPACK_IMPORTED_MODULE_3__babel_runtime_helpers_esm_defineProperty__.default)(this, "codemaoAuth", undefined);
-    Object(__WEBPACK_IMPORTED_MODULE_3__babel_runtime_helpers_esm_defineProperty__.default)(this, "codemaoCaptcha", undefined);
-    Object(__WEBPACK_IMPORTED_MODULE_3__babel_runtime_helpers_esm_defineProperty__.default)(this, "pid", '');
-    Object(__WEBPACK_IMPORTED_MODULE_3__babel_runtime_helpers_esm_defineProperty__.default)(this, "getCaptcha", /*#__PURE__*/function () {
-      var _ref = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default)(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_4__babel_runtime_regenerator___default.mark(function _callee(identity, domId, show, successCallback, failCallback, closeCallback) {
+    __WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_classCallCheck__.default(this, AuthModule);
+    __WEBPACK_IMPORTED_MODULE_3__babel_runtime_helpers_esm_defineProperty__.default(this, "iris", undefined);
+    __WEBPACK_IMPORTED_MODULE_3__babel_runtime_helpers_esm_defineProperty__.default(this, "codemaoAuth", undefined);
+    __WEBPACK_IMPORTED_MODULE_3__babel_runtime_helpers_esm_defineProperty__.default(this, "codemaoCaptcha", undefined);
+    __WEBPACK_IMPORTED_MODULE_3__babel_runtime_helpers_esm_defineProperty__.default(this, "pid", "");
+    __WEBPACK_IMPORTED_MODULE_3__babel_runtime_helpers_esm_defineProperty__.default(this, "getCaptcha", /*#__PURE__*/function () {
+      var _ref = __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_4__babel_runtime_regenerator___default.mark(function _callee(identity, domId, show, successCallback, failCallback, closeCallback) {
         var captcha;
         return __WEBPACK_IMPORTED_MODULE_4__babel_runtime_regenerator___default.wrap(function _callee$(_context) {
           while (1) {
@@ -44,7 +50,7 @@ var AuthModule = /*#__PURE__*/function () {
                   _context.next = 2;
                   break;
                 }
-                throw Error('codemaoCaptcha is not initialized.');
+                throw Error("codemaoCaptcha is not initialized.");
               case 2:
                 _context.next = 4;
                 return _this.codemaoCaptcha.get_captcha({
@@ -54,7 +60,7 @@ var AuthModule = /*#__PURE__*/function () {
                   fail_callback: failCallback,
                   close_callback: closeCallback,
                   init_options: {
-                    product: 'bind',
+                    product: "bind",
                     // 隐藏式按钮，直接弹出滑动验证
                     https: true // 必须设置https为true，否则极验会使用页面协议。(Kitten客户端协议名为'chrome-extension://')
                   }
@@ -85,9 +91,9 @@ var AuthModule = /*#__PURE__*/function () {
         return _ref.apply(this, arguments);
       };
     }());
-    Object(__WEBPACK_IMPORTED_MODULE_3__babel_runtime_helpers_esm_defineProperty__.default)(this, "getErrorMsgType", function (error) {
+    __WEBPACK_IMPORTED_MODULE_3__babel_runtime_helpers_esm_defineProperty__.default(this, "getErrorMsgType", function (error) {
       if (!_this.iris) {
-        throw Error('Iris is not initialized.');
+        throw Error("Iris is not initialized.");
       }
       var errorCode = error.error_code;
       var message = error.message;
@@ -96,46 +102,46 @@ var AuthModule = /*#__PURE__*/function () {
       var msg;
       switch (errorCode) {
         case ERROR.PWD_IS_NOT_EQUAL_TO_CONFIRMED_PWD:
-          msg = 'sign_in_dialog/error/password_confirm/not_same';
+          msg = "sign_in_dialog/error/password_confirm/not_same";
           break;
         case ERROR.PHONE_UNREGISTERED:
-          msg = 'sign_in_dialog/error/phone/unregisterd';
+          msg = "sign_in_dialog/error/phone/unregisterd";
           break;
         case ERROR.INVALID_PHONE_NUMBER:
-          msg = 'sign_in_dialog/error/phone/format';
+          msg = "sign_in_dialog/error/phone/format";
           break;
         case ERROR.INVALID_PASSWORD:
-          msg = 'sign_in_dialog/error/password/format';
+          msg = "sign_in_dialog/error/password/format";
           break;
         case ERROR.USER_NOT_EXIST:
         case ERROR.USER_NOT_EXIST_OR_PWD_WRONG:
-          msg = 'sign_in_dialog/error/other/acc_or_pwd';
+          msg = "sign_in_dialog/error/other/acc_or_pwd";
           break;
         case ERROR.INVALID_CAPTCHA:
         case ERROR.VERIFY_CAPTCHA_FAIL:
-          msg = 'sign_in_dialog/error/sms_code/fail';
+          msg = "sign_in_dialog/error/sms_code/fail";
           break;
         case ERROR.SEND_CAPTCHA_TOO_FRUQUENTLY:
-          msg = 'sign_in_dialog/error/sms_code/frequent_resend';
+          msg = "sign_in_dialog/error/sms_code/frequent_resend";
           break;
         case ERROR.PHONE_REGISTERED:
         case ERROR.PHONE_BOUND_BY_OTHER_ACCOUNT:
-          msg = 'sign_in_dialog/phone_bound_by_other_account';
+          msg = "sign_in_dialog/phone_bound_by_other_account";
           break;
         default:
-          msg = 'sign_in_dialog/error/other/network';
+          msg = "sign_in_dialog/error/other/network";
           break;
       }
       return {
-        msg: Object(__WEBPACK_IMPORTED_MODULE_5__i18n__.getLanguage)(msg),
+        msg: __WEBPACK_IMPORTED_MODULE_5__i18n__.getLanguage(msg),
         type: _this.getErrorTypeByMsg(msg)
       };
     });
   }
-  Object(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_createClass__.default)(AuthModule, [{
+  __WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_createClass__.default(AuthModule, [{
     key: "init",
     value: function () {
-      var _init = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default)(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_4__babel_runtime_regenerator___default.mark(function _callee2() {
+      var _init = __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_4__babel_runtime_regenerator___default.mark(function _callee2() {
         var module;
         return __WEBPACK_IMPORTED_MODULE_4__babel_runtime_regenerator___default.wrap(function _callee2$(_context2) {
           while (1) {
@@ -169,24 +175,24 @@ var AuthModule = /*#__PURE__*/function () {
   }, {
     key: "initIris",
     value: function initIris(pid, productCode) {
-      var platform = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 'web';
+      var platform = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : "web";
       var isInt = arguments.length > 3 ? arguments[3] : undefined;
       if (!this.iris) {
-        throw Error('Iris is not initialized.');
+        throw Error("Iris is not initialized.");
       }
-      var env = Object(__WEBPACK_IMPORTED_MODULE_6__cfg__.getConfig)().irisEnv;
+      var env = __WEBPACK_IMPORTED_MODULE_6__cfg__.getConfig().irisEnv;
       this.pid = pid;
       this.iris.init({
         env: env,
-        domain: env === 'dev' ? '' : '.codemao.cn',
+        domain: env === "dev" ? "" : ".codemao.cn",
         // 本地调试时需要设置为空
-        host: isInt ? Object(__WEBPACK_IMPORTED_MODULE_6__cfg__.getConfig)().iris.overseaHost : Object(__WEBPACK_IMPORTED_MODULE_6__cfg__.getConfig)().iris.host
+        host: isInt ? __WEBPACK_IMPORTED_MODULE_6__cfg__.getConfig().iris.overseaHost : __WEBPACK_IMPORTED_MODULE_6__cfg__.getConfig().iris.host
       });
       this.codemaoAuth = this.iris.auth.init({
         pid: pid,
         product_code: productCode,
         platform: platform,
-        appid: ''
+        appid: ""
       });
       this.codemaoCaptcha = new this.iris.captcha.CodemaoCaptcha({
         pid: pid
@@ -198,7 +204,7 @@ var AuthModule = /*#__PURE__*/function () {
     // 获取账号模块
     function getAuth() {
       if (!this.codemaoAuth) {
-        throw Error('Iris is not initialized.');
+        throw Error("Iris is not initialized.");
       }
       return this.codemaoAuth;
     }
@@ -214,7 +220,7 @@ var AuthModule = /*#__PURE__*/function () {
   }, {
     key: "getErrorTypeByMsg",
     value: function getErrorTypeByMsg(errMsg) {
-      var prefix = 'sign_in_dialog/error/';
+      var prefix = "sign_in_dialog/error/";
       return Object.values(__WEBPACK_IMPORTED_MODULE_7__def__.AuthErrorType).find(function (type) {
         return errMsg.startsWith("".concat(prefix).concat(type, "/"));
       }) || __WEBPACK_IMPORTED_MODULE_7__def__.AuthErrorType.OTHER;
@@ -222,7 +228,7 @@ var AuthModule = /*#__PURE__*/function () {
   }, {
     key: "logout",
     value: function () {
-      var _logout = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default)(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_4__babel_runtime_regenerator___default.mark(function _callee3() {
+      var _logout = __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_4__babel_runtime_regenerator___default.mark(function _callee3() {
         return __WEBPACK_IMPORTED_MODULE_4__babel_runtime_regenerator___default.wrap(function _callee3$(_context3) {
           while (1) {
             switch (_context3.prev = _context3.next) {
@@ -243,7 +249,7 @@ var AuthModule = /*#__PURE__*/function () {
   }, {
     key: "getProfile",
     value: function () {
-      var _getProfile = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default)(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_4__babel_runtime_regenerator___default.mark(function _callee4() {
+      var _getProfile = __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_4__babel_runtime_regenerator___default.mark(function _callee4() {
         return __WEBPACK_IMPORTED_MODULE_4__babel_runtime_regenerator___default.wrap(function _callee4$(_context4) {
           while (1) {
             switch (_context4.prev = _context4.next) {
@@ -264,7 +270,7 @@ var AuthModule = /*#__PURE__*/function () {
   }, {
     key: "checkAuthLogin",
     value: function () {
-      var _checkAuthLogin = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default)(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_4__babel_runtime_regenerator___default.mark(function _callee5() {
+      var _checkAuthLogin = __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_4__babel_runtime_regenerator___default.mark(function _callee5() {
         var errorCode;
         var message;
         return __WEBPACK_IMPORTED_MODULE_4__babel_runtime_regenerator___default.wrap(function _callee5$(_context5) {
@@ -287,7 +293,7 @@ var AuthModule = /*#__PURE__*/function () {
                 _context5.t0 = _context5["catch"](2);
                 errorCode = _context5.t0.error_code;
                 message = _context5.t0.message;
-                if (!(errorCode === this.iris.ERROR.NO_TOKEN || errorCode === 'E_0' || message === NOT_LOGIN_MSG)) {
+                if (!(errorCode === this.iris.ERROR.NO_TOKEN || errorCode === "E_0" || message === NOT_LOGIN_MSG)) {
                   _context5.next = 13;
                   break;
                 }
@@ -309,7 +315,7 @@ var AuthModule = /*#__PURE__*/function () {
   }, {
     key: "getAgreements",
     value: function () {
-      var _getAgreements = Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default)(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_4__babel_runtime_regenerator___default.mark(function _callee6() {
+      var _getAgreements = __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_4__babel_runtime_regenerator___default.mark(function _callee6() {
         var agreementsData;
         var idsData;
         var agreementIds;

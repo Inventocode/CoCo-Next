@@ -1,8 +1,14 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：fL6I
+ */
+
 "use strict";
 
 /* harmony export (binding) */
-export { KittenVideoPlayer };
 /* harmony import */
+export { KittenVideoPlayer };
 import * as __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_classCallCheck__ from "@babel/runtime/helpers/esm/classCallCheck";
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_createClass__ from "@babel/runtime/helpers/esm/createClass";
@@ -68,15 +74,15 @@ var _styleModuleImportMap = {
 function _createSuper(Derived) {
   var hasNativeReflectConstruct = _isNativeReflectConstruct();
   return function _createSuperInternal() {
-    var Super = Object(__WEBPACK_IMPORTED_MODULE_5__babel_runtime_helpers_esm_getPrototypeOf__.default)(Derived);
+    var Super = __WEBPACK_IMPORTED_MODULE_5__babel_runtime_helpers_esm_getPrototypeOf__.default(Derived);
     var result;
     if (hasNativeReflectConstruct) {
-      var NewTarget = Object(__WEBPACK_IMPORTED_MODULE_5__babel_runtime_helpers_esm_getPrototypeOf__.default)(this).constructor;
+      var NewTarget = __WEBPACK_IMPORTED_MODULE_5__babel_runtime_helpers_esm_getPrototypeOf__.default(this).constructor;
       result = Reflect.construct(Super, arguments, NewTarget);
     } else {
       result = Super.apply(this, arguments);
     }
-    return Object(__WEBPACK_IMPORTED_MODULE_4__babel_runtime_helpers_esm_possibleConstructorReturn__.default)(this, result);
+    return __WEBPACK_IMPORTED_MODULE_4__babel_runtime_helpers_esm_possibleConstructorReturn__.default(this, result);
   };
 }
 function _isNativeReflectConstruct() {
@@ -96,36 +102,36 @@ function _isNativeReflectConstruct() {
     return false;
   }
 }
-var BOUND_ELEM_ID = 'CUI-kitten-video-player-bound';
+var BOUND_ELEM_ID = "CUI-kitten-video-player-bound";
 var KittenVideoPlayer = /*#__PURE__*/function (_React$Component) {
-  Object(__WEBPACK_IMPORTED_MODULE_3__babel_runtime_helpers_esm_inherits__.default)(KittenVideoPlayer, _React$Component);
+  __WEBPACK_IMPORTED_MODULE_3__babel_runtime_helpers_esm_inherits__.default(KittenVideoPlayer, _React$Component);
   var _super = _createSuper(KittenVideoPlayer);
   function KittenVideoPlayer(props) {
     var _this;
-    Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_classCallCheck__.default)(this, KittenVideoPlayer);
+    __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_classCallCheck__.default(this, KittenVideoPlayer);
     _this = _super.call(this, props);
-    Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Object(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default)(_this), "videoElem", undefined);
-    Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Object(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default)(_this), "controlBarElem", undefined);
-    Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Object(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default)(_this), "hideControlbar", function () {
+    __WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default(_this), "videoElem", undefined);
+    __WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default(_this), "controlBarElem", undefined);
+    __WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default(_this), "hideControlbar", function () {
       if (!_this.controlBarElem) {
         return;
       }
-      _this.controlBarElem.style.height = '0px';
-      _this.controlBarElem.style.bottom = '-4px';
-      _this.controlBarElem.style.backgroundImage = 'linear-gradient(0deg,transparent,transparent)';
+      _this.controlBarElem.style.height = "0px";
+      _this.controlBarElem.style.bottom = "-4px";
+      _this.controlBarElem.style.backgroundImage = "linear-gradient(0deg,transparent,transparent)";
     });
-    Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Object(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default)(_this), "showControllber", function () {
+    __WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default(_this), "showControllber", function () {
       if (!_this.controlBarElem) {
         return;
       }
-      _this.controlBarElem.style.height = '70px';
-      _this.controlBarElem.style.bottom = '0';
-      _this.controlBarElem.style.backgroundImage = 'linear-gradient(0deg,#0000008a,transparent)';
+      _this.controlBarElem.style.height = "70px";
+      _this.controlBarElem.style.bottom = "0";
+      _this.controlBarElem.style.backgroundImage = "linear-gradient(0deg,#0000008a,transparent)";
     });
-    Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Object(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default)(_this), "videoContainerElem", undefined);
-    Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Object(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default)(_this), "player", undefined);
-    Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Object(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default)(_this), "maxWatchTime", 0);
-    Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Object(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default)(_this), "onResizeStart", function (event, direction, element, delta) {
+    __WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default(_this), "videoContainerElem", undefined);
+    __WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default(_this), "player", undefined);
+    __WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default(_this), "maxWatchTime", 0);
+    __WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default(_this), "onResizeStart", function (event, direction, element, delta) {
       var resizableBoxRightOffset = element.getBoundingClientRect().right;
       var resizableBoxBottomOffset = element.getBoundingClientRect().bottom;
       var resizableBoxWidth = element.offsetWidth;
@@ -140,29 +146,29 @@ var KittenVideoPlayer = /*#__PURE__*/function (_React$Component) {
       if (_this.setResizableBoxOriginData) {
         _this.setResizableBoxOriginData(resizableBoxRightOffset, resizableBoxBottomOffset, resizableBoxWidth, resizableBoxHeight);
       }
-      if (direction === 'top' || direction === 'topLeft') {
+      if (direction === "top" || direction === "topLeft") {
         _this.lockResizableBox(height + top, width + left);
         return;
       }
-      if (direction === 'left' || direction === 'bottomLeft') {
+      if (direction === "left" || direction === "bottomLeft") {
         _this.lockResizableBox(height + (document.body.clientHeight - bottom), width + left);
         return;
       }
-      if (direction === 'topRight') {
+      if (direction === "topRight") {
         _this.lockResizableBox(height + top, width + (document.body.clientWidth - right));
         return;
       }
-      if (direction === 'right' || direction === 'bottom' || direction === 'bottomRight') {
+      if (direction === "right" || direction === "bottom" || direction === "bottomRight") {
         _this.lockResizableBox(height + (document.body.clientHeight - bottom), width + (document.body.clientWidth - right));
         return;
       }
     });
-    Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Object(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default)(_this), "onResize", function (event, direction, element, delta) {
+    __WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default(_this), "onResize", function (event, direction, element, delta) {
       if (_this.setResizableBoxPosition) {
         _this.setResizableBoxPosition(direction, delta);
       }
     });
-    Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Object(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default)(_this), "onReplayClick", function () {
+    __WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default(_this), "onReplayClick", function () {
       var _this$player;
       if ((_this$player = _this.player) === null || _this$player === undefined) {
         undefined;
@@ -170,7 +176,7 @@ var KittenVideoPlayer = /*#__PURE__*/function (_React$Component) {
         _this$player.play();
       }
     });
-    Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Object(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default)(_this), "setDraggablePosition", function (event, data) {
+    __WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default(_this), "setDraggablePosition", function (event, data) {
       _this.setState({
         videoPosition: {
           x: data.x,
@@ -178,12 +184,12 @@ var KittenVideoPlayer = /*#__PURE__*/function (_React$Component) {
         }
       });
     });
-    Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Object(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default)(_this), "handleMiniPlayer", function () {
+    __WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default(_this), "handleMiniPlayer", function () {
       if (_this.props.onMinimizeBtnClick) {
         _this.props.onMinimizeBtnClick(_this.player);
       }
     });
-    Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Object(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default)(_this), "closeSelf", function () {
+    __WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default(_this), "closeSelf", function () {
       var _this$props = _this.props;
       var onClose = _this$props.onClose;
       var reportMaxWatchTimeRepo = _this$props.reportMaxWatchTimeRepo;
@@ -194,7 +200,7 @@ var KittenVideoPlayer = /*#__PURE__*/function (_React$Component) {
         onClose(_this.player);
       }
     });
-    Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Object(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default)(_this), "handleClosePlayer", function () {
+    __WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default(_this), "handleClosePlayer", function () {
       var _this$player2;
       var _this$player3;
       var useConfirmMask = _this.props.useConfirmMask;
@@ -215,7 +221,7 @@ var KittenVideoPlayer = /*#__PURE__*/function (_React$Component) {
         closingConfirm: true
       });
     });
-    Object(__WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default)(Object(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default)(_this), "getRemainPercent", function () {
+    __WEBPACK_IMPORTED_MODULE_6__babel_runtime_helpers_esm_defineProperty__.default(__WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__.default(_this), "getRemainPercent", function () {
       try {
         var _this$player4;
         var _this$player4$getStat;
@@ -253,16 +259,16 @@ var KittenVideoPlayer = /*#__PURE__*/function (_React$Component) {
       }
     }; // 在body插入一个div并作为视频播放器拖拽的边界限制元素，卸载播放器组件时应删除该元素
     // 不使用body作为边界元素是因为有些项目的body宽高不一定为100%
-    var boundElem = document.createElement('div');
+    var boundElem = document.createElement("div");
     boundElem.id = BOUND_ELEM_ID;
-    boundElem.style.position = 'fixed';
-    boundElem.style.zIndex = '-999999';
-    boundElem.style.width = '100%';
-    boundElem.style.height = '100%';
+    boundElem.style.position = "fixed";
+    boundElem.style.zIndex = "-999999";
+    boundElem.style.width = "100%";
+    boundElem.style.height = "100%";
     document.body.appendChild(boundElem);
     return _this;
   }
-  Object(__WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_createClass__.default)(KittenVideoPlayer, [{
+  __WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_createClass__.default(KittenVideoPlayer, [{
     key: "componentDidMount",
     value: function componentDidMount() {
       var _this$player5;
@@ -278,10 +284,10 @@ var KittenVideoPlayer = /*#__PURE__*/function (_React$Component) {
         boundWidth: document.body.clientWidth,
         boundHeight: document.body.clientHeight
       });
-      this.videoElem = document.getElementsByClassName('CUI-kitten-video-player-video_wrap')[0];
-      this.controlBarElem = document.getElementsByClassName('video-react-control-bar')[0];
-      this.videoElem.addEventListener('mouseleave', this.hideControlbar);
-      this.videoElem.addEventListener('mouseenter', this.showControllber);
+      this.videoElem = document.getElementsByClassName("CUI-kitten-video-player-video_wrap")[0];
+      this.controlBarElem = document.getElementsByClassName("video-react-control-bar")[0];
+      this.videoElem.addEventListener("mouseleave", this.hideControlbar);
+      this.videoElem.addEventListener("mouseenter", this.showControllber);
       this.hideControlbar();
       if (this.props.onPlayerInit) {
         this.props.onPlayerInit();
@@ -299,12 +305,12 @@ var KittenVideoPlayer = /*#__PURE__*/function (_React$Component) {
       if ((_this$videoElem = this.videoElem) === null || _this$videoElem === undefined) {
         undefined;
       } else {
-        _this$videoElem.removeEventListener('mouseleave', this.hideControlbar);
+        _this$videoElem.removeEventListener("mouseleave", this.hideControlbar);
       }
       if ((_this$videoElem2 = this.videoElem) === null || _this$videoElem2 === undefined) {
         undefined;
       } else {
-        _this$videoElem2.removeEventListener('mouseenter', this.showControllber);
+        _this$videoElem2.removeEventListener("mouseenter", this.showControllber);
       }
     }
   }, {
@@ -319,7 +325,7 @@ var KittenVideoPlayer = /*#__PURE__*/function (_React$Component) {
           this.setControlBarStyle();
         }
       }
-      if (state.ended !== prevState.ended && state.ended && state.currentTime === state.duration && ((_this$videoContainerE = this.videoContainerElem) === null || _this$videoContainerE === undefined ? undefined : _this$videoContainerE.style.display) !== 'none') {
+      if (state.ended !== prevState.ended && state.ended && state.currentTime === state.duration && ((_this$videoContainerE = this.videoContainerElem) === null || _this$videoContainerE === undefined ? undefined : _this$videoContainerE.style.display) !== "none") {
         this.setState({
           showEndedMask: true
         });
@@ -341,11 +347,11 @@ var KittenVideoPlayer = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "setControlBarStyle",
     value: function setControlBarStyle() {
-      var controlBar = document.getElementsByClassName('video-react-control-bar');
+      var controlBar = document.getElementsByClassName("video-react-control-bar");
       if (!controlBar) {
         return;
       }
-      controlBar[0].classList.add('float_bottom');
+      controlBar[0].classList.add("float_bottom");
     }
   }, {
     key: "clickMask",
@@ -371,23 +377,23 @@ var KittenVideoPlayer = /*#__PURE__*/function (_React$Component) {
       var x;
       var y;
       switch (handlePosition) {
-        case 'left':
+        case "left":
           x = this.state.videoOriginRightOffset - (this.state.resizableBoxOriginWidth + videoDeltaOffset.width);
           y = this.state.videoPosition.y;
           break;
-        case 'top':
+        case "top":
           x = this.state.videoOriginRightOffset - (this.state.resizableBoxOriginWidth + videoDeltaOffset.height * 16 / 9);
           y = this.state.videoOriginBottomOffset - (this.state.resizableBoxOriginHeight + videoDeltaOffset.height);
           break;
-        case 'bottomLeft':
+        case "bottomLeft":
           x = this.state.videoOriginRightOffset - (this.state.resizableBoxOriginWidth + videoDeltaOffset.width);
           y = this.state.videoPosition.y;
           break;
-        case 'topLeft':
+        case "topLeft":
           x = this.state.videoOriginRightOffset - (this.state.resizableBoxOriginWidth + videoDeltaOffset.height * 16 / 9);
           y = this.state.videoOriginBottomOffset - (this.state.resizableBoxOriginHeight + videoDeltaOffset.height);
           break;
-        case 'topRight':
+        case "topRight":
           x = this.state.videoPosition.x;
           y = this.state.videoOriginBottomOffset - (this.state.resizableBoxOriginHeight + videoDeltaOffset.height);
           break;
@@ -431,7 +437,7 @@ var KittenVideoPlayer = /*#__PURE__*/function (_React$Component) {
       }, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_8_react__.createElement(__WEBPACK_IMPORTED_MODULE_10_react_draggable___default, {
         allowAnyClick: true,
         defaultClassName: "CUI-kitten-video-player-draggable",
-        handle: '.CUI-kitten-video-handler',
+        handle: ".CUI-kitten-video-handler",
         bounds: "#".concat(BOUND_ELEM_ID),
         position: this.state.videoPosition,
         onDrag: this.setDraggablePosition.bind(this)
@@ -452,7 +458,7 @@ var KittenVideoPlayer = /*#__PURE__*/function (_React$Component) {
       }, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_8_react__.createElement("div", {
         className: "CUI-kitten-video-player-video_wrap",
         style: {
-          width: '100%'
+          width: "100%"
         }
       }, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_8_react__.createElement("div", {
         className: "CUI-kitten-video-handler CUI-kitten-video-player-video_header"
@@ -494,28 +500,28 @@ var KittenVideoPlayer = /*#__PURE__*/function (_React$Component) {
         className: "CUI-video-finish-mask"
       }, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_8_react__.createElement("div", {
         className: "CUI-video-finish-mask-title"
-      }, "\u606D\u559C\u4F60\u770B\u5B8C\u4E86\u672C\u8282\u8BFE\u7A0B"), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_8_react__.createElement("div", {
+      }, "恭喜你看完了本节课程"), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_8_react__.createElement("div", {
         className: "CUI-video-finish-mask-text"
-      }, "\u5FEB\u53BB\u521B\u4F5C\u5C5E\u4E8E\u81EA\u5DF1\u7684\u4F5C\u54C1\u5427\uFF01"), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_8_react__.createElement("div", {
+      }, "快去创作属于自己的作品吧！"), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_8_react__.createElement("div", {
         className: "CUI-video-finish-mask-text"
-      }, "\u70B9\u51FB\u7F51\u9875\u53F3\u4E0A\u89D2\u7684\u3010\u4FDD\u5B58\u3011\u6309\u94AE\uFF0C\u50A8\u5B58\u4E91\u7AEF\u4E0D\u4E22\u5931\u54E6\uFF01"), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_8_react__.createElement("div", {
+      }, "点击网页右上角的【保存】按钮，储存云端不丢失哦！"), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_8_react__.createElement("div", {
         className: "CUI-finish-mask-btn CUI-replay-icon",
         onClick: this.onReplayClick,
         "data-report-click": reportReplayClick
-      }, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_8_react__.createElement("span", null, "\u518D\u770B\u4E00\u904D"))) : this.state.closingConfirm ? /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_8_react__.createElement("div", {
+      }, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_8_react__.createElement("span", null, "再看一遍"))) : this.state.closingConfirm ? /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_8_react__.createElement("div", {
         className: "CUI-kitten-video-player-video-react-pause-mask CUI-kitten-video-player-paused CUI-kitten-video-player-closing"
       }, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_8_react__.createElement("img", {
         className: "CUI-kitten-video-player-end-mask-img",
         src: require("./unnamed-TkkK")
       }), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_8_react__.createElement("div", {
         className: "CUI-kitten-video-player-end-mask-title"
-      }, "\u771F\u7684\u4E0D\u518D\u575A\u6301\u4E00\u4E0B\u4E48\uFF1F"), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_8_react__.createElement("div", {
+      }, "真的不再坚持一下么？"), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_8_react__.createElement("div", {
         className: "CUI-kitten-video-player-end-mask-text"
-      }, "\u8FD8\u5269\u4E0B", this.getRemainPercent(), "%\u5C31\u5B8C\u6210\u4E86"), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_8_react__.createElement("div", null, ' ', /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_8_react__.createElement(__WEBPACK_IMPORTED_MODULE_12__components_base_button__.Button, {
+      }, "还剩下", this.getRemainPercent(), "%就完成了"), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_8_react__.createElement("div", null, " ", /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_8_react__.createElement(__WEBPACK_IMPORTED_MODULE_12__components_base_button__.Button, {
         type: "secondary",
         margin: "0 18px 0 0",
         onClick: this.closeSelf
-      }, "\u575A\u6301\u9000\u51FA"), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_8_react__.createElement(__WEBPACK_IMPORTED_MODULE_12__components_base_button__.Button, {
+      }, "坚持退出"), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_8_react__.createElement(__WEBPACK_IMPORTED_MODULE_12__components_base_button__.Button, {
         type: "primary",
         onClick: function onClick() {
           var _this2$player;
@@ -531,14 +537,14 @@ var KittenVideoPlayer = /*#__PURE__*/function (_React$Component) {
             _this2$player.play();
           }
         }
-      }, "\u7EE7\u7EED\u5B66\u4E60"))) : /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_8_react__.createElement("div", {
+      }, "继续学习"))) : /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_8_react__.createElement("div", {
         onClick: this.clickMask.bind(this),
-        className: __WEBPACK_IMPORTED_MODULE_7_babel_plugin_react_css_modules_dist_browser_getClassName___default("video-react-pause-mask ".concat(this.state.paused ? 'paused' : 'playing'), _styleModuleImportMap, {
+        className: __WEBPACK_IMPORTED_MODULE_7_babel_plugin_react_css_modules_dist_browser_getClassName___default("video-react-pause-mask ".concat(this.state.paused ? "paused" : "playing"), _styleModuleImportMap, {
           "autoResolveMultipleImports": true,
           "handleMissingStyleName": "throw"
         })
       }, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_8_react__.createElement("div", {
-        className: __WEBPACK_IMPORTED_MODULE_7_babel_plugin_react_css_modules_dist_browser_getClassName___default('mask-icon', _styleModuleImportMap, {
+        className: __WEBPACK_IMPORTED_MODULE_7_babel_plugin_react_css_modules_dist_browser_getClassName___default("mask-icon", _styleModuleImportMap, {
           "autoResolveMultipleImports": true,
           "handleMissingStyleName": "throw"
         })

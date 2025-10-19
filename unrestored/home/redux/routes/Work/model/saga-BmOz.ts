@@ -1,10 +1,16 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：BmOz
+ */
+
 "use strict";
 
 /* unused harmony export getWorkBcmUrl */
 /* unused harmony export getWorkBcmJson */
 /* harmony export (immutable) */
-export { workSaga };
 /* harmony import */
+export { workSaga };
 import * as __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator__ from "@babel/runtime/regenerator";
 /* harmony import */
 import __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default from "@babel/runtime/regenerator";
@@ -89,9 +95,9 @@ function handleGetCreateWorkList(action) {
           _action$payload = action.payload;
           name = _action$payload.name;
           offset = _action$payload.offset;
-          url = Object(__WEBPACK_IMPORTED_MODULE_8__utils__.get_api_prefix)() + '/coconut/web/work/list?status=1&offset=' + offset * LIMIT + '&limit=' + LIMIT;
+          url = __WEBPACK_IMPORTED_MODULE_8__utils__.get_api_prefix() + "/coconut/web/work/list?status=1&offset=" + offset * LIMIT + "&limit=" + LIMIT;
           if (name) {
-            url += '&name=' + name;
+            url += "&name=" + name;
           }
           _context.prev = 3;
           _context.next = 6;
@@ -101,7 +107,7 @@ function handleGetCreateWorkList(action) {
             return res.data;
           }).catch(function (err) {
             if (false) {
-              console.log('fetch create work list failed, detail:', err);
+              console.log("fetch create work list failed, detail:", err);
             }
             throw err;
           });
@@ -113,11 +119,11 @@ function handleGetCreateWorkList(action) {
           }
           data = result.data;
           _context.next = 11;
-          return Object(__WEBPACK_IMPORTED_MODULE_3_redux_saga_effects__.put)(__WEBPACK_IMPORTED_MODULE_5__actions__.setCreateWorkOffsetAction(offset));
+          return __WEBPACK_IMPORTED_MODULE_3_redux_saga_effects__.put(__WEBPACK_IMPORTED_MODULE_5__actions__.setCreateWorkOffsetAction(offset));
         case 11:
           _context.t0 = __WEBPACK_IMPORTED_MODULE_1_lodash_cloneDeep___default;
           _context.next = 14;
-          return Object(__WEBPACK_IMPORTED_MODULE_3_redux_saga_effects__.select)(__WEBPACK_IMPORTED_MODULE_7__redux_selectors__.getCreateWorkList);
+          return __WEBPACK_IMPORTED_MODULE_3_redux_saga_effects__.select(__WEBPACK_IMPORTED_MODULE_7__redux_selectors__.getCreateWorkList);
         case 14:
           _context.t1 = _context.sent;
           createWorkList = (0, _context.t0)(_context.t1);
@@ -131,37 +137,37 @@ function handleGetCreateWorkList(action) {
             break;
           }
           _context.next = 20;
-          return Object(__WEBPACK_IMPORTED_MODULE_3_redux_saga_effects__.put)(__WEBPACK_IMPORTED_MODULE_5__actions__.setCreateWorkListAction(data.items));
+          return __WEBPACK_IMPORTED_MODULE_3_redux_saga_effects__.put(__WEBPACK_IMPORTED_MODULE_5__actions__.setCreateWorkListAction(data.items));
         case 20:
           _context.next = 24;
           break;
         case 22:
           _context.next = 24;
-          return Object(__WEBPACK_IMPORTED_MODULE_3_redux_saga_effects__.put)(__WEBPACK_IMPORTED_MODULE_5__actions__.setCreateWorkListAction(createWorkList.concat(data.items)));
+          return __WEBPACK_IMPORTED_MODULE_3_redux_saga_effects__.put(__WEBPACK_IMPORTED_MODULE_5__actions__.setCreateWorkListAction(createWorkList.concat(data.items)));
         case 24:
           if (!(data.items.length === 0 || data.offset + LIMIT >= data.total)) {
             _context.next = 29;
             break;
           }
           _context.next = 27;
-          return Object(__WEBPACK_IMPORTED_MODULE_3_redux_saga_effects__.put)(__WEBPACK_IMPORTED_MODULE_5__actions__.setCreateWorkIsLoadedAction(true));
+          return __WEBPACK_IMPORTED_MODULE_3_redux_saga_effects__.put(__WEBPACK_IMPORTED_MODULE_5__actions__.setCreateWorkIsLoadedAction(true));
         case 27:
           _context.next = 31;
           break;
         case 29:
           _context.next = 31;
-          return Object(__WEBPACK_IMPORTED_MODULE_3_redux_saga_effects__.put)(__WEBPACK_IMPORTED_MODULE_5__actions__.setCreateWorkIsLoadedAction(false));
+          return __WEBPACK_IMPORTED_MODULE_3_redux_saga_effects__.put(__WEBPACK_IMPORTED_MODULE_5__actions__.setCreateWorkIsLoadedAction(false));
         case 31:
           _context.next = 36;
           break;
         case 33:
           _context.prev = 33;
-          _context.t2 = _context['catch'](3);
+          _context.t2 = _context["catch"](3);
           if (false) {
-            console.log('fetch create work list error, detail', _context.t2);
+            console.log("fetch create work list error, detail", _context.t2);
           }
         case 36:
-        case 'end':
+        case "end":
           return _context.stop();
       }
     }
@@ -187,7 +193,7 @@ function handleGetCollWorkList(action) {
           //   url += `&name=${name}`;
           // }
           // TODO 我参与的 暂时用老接口
-          url = Object(__WEBPACK_IMPORTED_MODULE_8__utils__.get_coll_prefix)() + '/coll/coco/coll_works?current_page=' + offset + '&page_size=' + LIMIT;
+          url = __WEBPACK_IMPORTED_MODULE_8__utils__.get_coll_prefix() + "/coll/coco/coll_works?current_page=" + offset + "&page_size=" + LIMIT;
           _context2.prev = 2;
           _context2.next = 5;
           return __WEBPACK_IMPORTED_MODULE_4_axios___default.get(url, {
@@ -196,7 +202,7 @@ function handleGetCollWorkList(action) {
             return res.data;
           }).catch(function (err) {
             if (false) {
-              console.log('fetch coll work list failed, detail:', err);
+              console.log("fetch coll work list failed, detail:", err);
             }
             throw err;
           });
@@ -208,11 +214,11 @@ function handleGetCollWorkList(action) {
           }
           data = result.data;
           _context2.next = 10;
-          return Object(__WEBPACK_IMPORTED_MODULE_3_redux_saga_effects__.put)(__WEBPACK_IMPORTED_MODULE_5__actions__.setCollWorkOffsetAction(offset));
+          return __WEBPACK_IMPORTED_MODULE_3_redux_saga_effects__.put(__WEBPACK_IMPORTED_MODULE_5__actions__.setCollWorkOffsetAction(offset));
         case 10:
           _context2.t0 = __WEBPACK_IMPORTED_MODULE_1_lodash_cloneDeep___default;
           _context2.next = 13;
-          return Object(__WEBPACK_IMPORTED_MODULE_3_redux_saga_effects__.select)(__WEBPACK_IMPORTED_MODULE_7__redux_selectors__.getCollWorkList);
+          return __WEBPACK_IMPORTED_MODULE_3_redux_saga_effects__.select(__WEBPACK_IMPORTED_MODULE_7__redux_selectors__.getCollWorkList);
         case 13:
           _context2.t1 = _context2.sent;
           collWorkList = (0, _context2.t0)(_context2.t1);
@@ -226,37 +232,37 @@ function handleGetCollWorkList(action) {
             break;
           }
           _context2.next = 19;
-          return Object(__WEBPACK_IMPORTED_MODULE_3_redux_saga_effects__.put)(__WEBPACK_IMPORTED_MODULE_5__actions__.setCollWorkListAction(data.items));
+          return __WEBPACK_IMPORTED_MODULE_3_redux_saga_effects__.put(__WEBPACK_IMPORTED_MODULE_5__actions__.setCollWorkListAction(data.items));
         case 19:
           _context2.next = 23;
           break;
         case 21:
           _context2.next = 23;
-          return Object(__WEBPACK_IMPORTED_MODULE_3_redux_saga_effects__.put)(__WEBPACK_IMPORTED_MODULE_5__actions__.setCollWorkListAction(collWorkList.concat(data.items)));
+          return __WEBPACK_IMPORTED_MODULE_3_redux_saga_effects__.put(__WEBPACK_IMPORTED_MODULE_5__actions__.setCollWorkListAction(collWorkList.concat(data.items)));
         case 23:
           if (!(data.items.length === 0 || data.currentPage * LIMIT >= data.total)) {
             _context2.next = 28;
             break;
           }
           _context2.next = 26;
-          return Object(__WEBPACK_IMPORTED_MODULE_3_redux_saga_effects__.put)(__WEBPACK_IMPORTED_MODULE_5__actions__.setCollWorkIsLoadedAction(true));
+          return __WEBPACK_IMPORTED_MODULE_3_redux_saga_effects__.put(__WEBPACK_IMPORTED_MODULE_5__actions__.setCollWorkIsLoadedAction(true));
         case 26:
           _context2.next = 30;
           break;
         case 28:
           _context2.next = 30;
-          return Object(__WEBPACK_IMPORTED_MODULE_3_redux_saga_effects__.put)(__WEBPACK_IMPORTED_MODULE_5__actions__.setCollWorkIsLoadedAction(false));
+          return __WEBPACK_IMPORTED_MODULE_3_redux_saga_effects__.put(__WEBPACK_IMPORTED_MODULE_5__actions__.setCollWorkIsLoadedAction(false));
         case 30:
           _context2.next = 35;
           break;
         case 32:
           _context2.prev = 32;
-          _context2.t2 = _context2['catch'](2);
+          _context2.t2 = _context2["catch"](2);
           if (false) {
-            console.log('fetch coll work list error, detail', _context2.t2);
+            console.log("fetch coll work list error, detail", _context2.t2);
           }
         case 35:
-        case 'end':
+        case "end":
           return _context2.stop();
       }
     }
@@ -274,7 +280,7 @@ function handleGetDeleteWorkList(action) {
       switch (_context3.prev = _context3.next) {
         case 0:
           offset = action.payload.offset;
-          url = Object(__WEBPACK_IMPORTED_MODULE_8__utils__.get_api_prefix)() + '/coconut/web/work/list?status=-99&offset=' + offset * LIMIT + '&limit=' + LIMIT;
+          url = __WEBPACK_IMPORTED_MODULE_8__utils__.get_api_prefix() + "/coconut/web/work/list?status=-99&offset=" + offset * LIMIT + "&limit=" + LIMIT;
           _context3.prev = 2;
           _context3.next = 5;
           return __WEBPACK_IMPORTED_MODULE_4_axios___default.get(url, {
@@ -283,7 +289,7 @@ function handleGetDeleteWorkList(action) {
             return res.data;
           }).catch(function (err) {
             if (false) {
-              console.log('fetch delete work list failed, detail:', err);
+              console.log("fetch delete work list failed, detail:", err);
             }
             throw err;
           });
@@ -295,11 +301,11 @@ function handleGetDeleteWorkList(action) {
           }
           data = result.data;
           _context3.next = 10;
-          return Object(__WEBPACK_IMPORTED_MODULE_3_redux_saga_effects__.put)(__WEBPACK_IMPORTED_MODULE_5__actions__.setDeleteWorkOffsetAction(offset));
+          return __WEBPACK_IMPORTED_MODULE_3_redux_saga_effects__.put(__WEBPACK_IMPORTED_MODULE_5__actions__.setDeleteWorkOffsetAction(offset));
         case 10:
           _context3.t0 = __WEBPACK_IMPORTED_MODULE_1_lodash_cloneDeep___default;
           _context3.next = 13;
-          return Object(__WEBPACK_IMPORTED_MODULE_3_redux_saga_effects__.select)(__WEBPACK_IMPORTED_MODULE_7__redux_selectors__.getDeleteWorkList);
+          return __WEBPACK_IMPORTED_MODULE_3_redux_saga_effects__.select(__WEBPACK_IMPORTED_MODULE_7__redux_selectors__.getDeleteWorkList);
         case 13:
           _context3.t1 = _context3.sent;
           deleteWorkList = (0, _context3.t0)(_context3.t1);
@@ -313,37 +319,37 @@ function handleGetDeleteWorkList(action) {
             break;
           }
           _context3.next = 19;
-          return Object(__WEBPACK_IMPORTED_MODULE_3_redux_saga_effects__.put)(__WEBPACK_IMPORTED_MODULE_5__actions__.setDeleteWorkListAction(data.items));
+          return __WEBPACK_IMPORTED_MODULE_3_redux_saga_effects__.put(__WEBPACK_IMPORTED_MODULE_5__actions__.setDeleteWorkListAction(data.items));
         case 19:
           _context3.next = 23;
           break;
         case 21:
           _context3.next = 23;
-          return Object(__WEBPACK_IMPORTED_MODULE_3_redux_saga_effects__.put)(__WEBPACK_IMPORTED_MODULE_5__actions__.setDeleteWorkListAction(deleteWorkList.concat(data.items)));
+          return __WEBPACK_IMPORTED_MODULE_3_redux_saga_effects__.put(__WEBPACK_IMPORTED_MODULE_5__actions__.setDeleteWorkListAction(deleteWorkList.concat(data.items)));
         case 23:
           if (!(data.items.length === 0 || data.offset + LIMIT >= data.total)) {
             _context3.next = 28;
             break;
           }
           _context3.next = 26;
-          return Object(__WEBPACK_IMPORTED_MODULE_3_redux_saga_effects__.put)(__WEBPACK_IMPORTED_MODULE_5__actions__.setDeleteWorkIsLoadedAction(true));
+          return __WEBPACK_IMPORTED_MODULE_3_redux_saga_effects__.put(__WEBPACK_IMPORTED_MODULE_5__actions__.setDeleteWorkIsLoadedAction(true));
         case 26:
           _context3.next = 30;
           break;
         case 28:
           _context3.next = 30;
-          return Object(__WEBPACK_IMPORTED_MODULE_3_redux_saga_effects__.put)(__WEBPACK_IMPORTED_MODULE_5__actions__.setDeleteWorkIsLoadedAction(false));
+          return __WEBPACK_IMPORTED_MODULE_3_redux_saga_effects__.put(__WEBPACK_IMPORTED_MODULE_5__actions__.setDeleteWorkIsLoadedAction(false));
         case 30:
           _context3.next = 35;
           break;
         case 32:
           _context3.prev = 32;
-          _context3.t2 = _context3['catch'](2);
+          _context3.t2 = _context3["catch"](2);
           if (false) {
-            console.log('fetch delete work list error, detail', _context3.t2);
+            console.log("fetch delete work list error, detail", _context3.t2);
           }
         case 35:
-        case 'end':
+        case "end":
           return _context3.stop();
       }
     }
@@ -369,7 +375,7 @@ function handleQuitCollWork(action) {
           id = _action$payload3.id;
           userId = _action$payload3.userId;
           workType = _action$payload3.workType;
-          url = Object(__WEBPACK_IMPORTED_MODULE_8__utils__.get_coll_prefix)() + '/coll/coco/collaborator/' + id + '?work_id=' + id + '&coll_user_id=' + userId;
+          url = __WEBPACK_IMPORTED_MODULE_8__utils__.get_coll_prefix() + "/coll/coco/collaborator/" + id + "?work_id=" + id + "&coll_user_id=" + userId;
           _context4.prev = 2;
           _context4.next = 5;
           return __WEBPACK_IMPORTED_MODULE_4_axios___default.delete(url, {
@@ -378,7 +384,7 @@ function handleQuitCollWork(action) {
             return res.data;
           }).catch(function (err) {
             if (false) {
-              console.log('fetch quit coll work failed, detail:', err);
+              console.log("fetch quit coll work failed, detail:", err);
             }
             throw err;
           });
@@ -394,7 +400,7 @@ function handleQuitCollWork(action) {
           }
           _context4.t0 = __WEBPACK_IMPORTED_MODULE_1_lodash_cloneDeep___default;
           _context4.next = 11;
-          return Object(__WEBPACK_IMPORTED_MODULE_3_redux_saga_effects__.select)(__WEBPACK_IMPORTED_MODULE_7__redux_selectors__.getHomeAllWorkList);
+          return __WEBPACK_IMPORTED_MODULE_3_redux_saga_effects__.select(__WEBPACK_IMPORTED_MODULE_7__redux_selectors__.getHomeAllWorkList);
         case 11:
           _context4.t1 = _context4.sent;
           homeWorkList = (0, _context4.t0)(_context4.t1);
@@ -402,7 +408,7 @@ function handleQuitCollWork(action) {
             return item.work_id !== id;
           });
           _context4.next = 16;
-          return Object(__WEBPACK_IMPORTED_MODULE_3_redux_saga_effects__.put)(Object(__WEBPACK_IMPORTED_MODULE_11__Home_model_actions__.setWorkListAction)(list));
+          return __WEBPACK_IMPORTED_MODULE_3_redux_saga_effects__.put(__WEBPACK_IMPORTED_MODULE_11__Home_model_actions__.setWorkListAction(list));
         case 16:
           if (!(workType === __WEBPACK_IMPORTED_MODULE_10__interface__.EWorkType.COLL)) {
             _context4.next = 25;
@@ -410,7 +416,7 @@ function handleQuitCollWork(action) {
           }
           _context4.t2 = __WEBPACK_IMPORTED_MODULE_1_lodash_cloneDeep___default;
           _context4.next = 20;
-          return Object(__WEBPACK_IMPORTED_MODULE_3_redux_saga_effects__.select)(__WEBPACK_IMPORTED_MODULE_7__redux_selectors__.getCollWorkList);
+          return __WEBPACK_IMPORTED_MODULE_3_redux_saga_effects__.select(__WEBPACK_IMPORTED_MODULE_7__redux_selectors__.getCollWorkList);
         case 20:
           _context4.t3 = _context4.sent;
           collWorkList = (0, _context4.t2)(_context4.t3);
@@ -418,18 +424,18 @@ function handleQuitCollWork(action) {
             return item.work_id !== id;
           });
           _context4.next = 25;
-          return Object(__WEBPACK_IMPORTED_MODULE_3_redux_saga_effects__.put)(__WEBPACK_IMPORTED_MODULE_5__actions__.setCollWorkListAction(_list));
+          return __WEBPACK_IMPORTED_MODULE_3_redux_saga_effects__.put(__WEBPACK_IMPORTED_MODULE_5__actions__.setCollWorkListAction(_list));
         case 25:
           _context4.next = 30;
           break;
         case 27:
           _context4.prev = 27;
-          _context4.t4 = _context4['catch'](2);
+          _context4.t4 = _context4["catch"](2);
           if (false) {
-            console.log('fetch quit coll work error, detail', _context4.t4);
+            console.log("fetch quit coll work error, detail", _context4.t4);
           }
         case 30:
-        case 'end':
+        case "end":
           return _context4.stop();
       }
     }
@@ -457,7 +463,7 @@ function handleDeleteWork(action) {
           id = _action$payload4.id;
           workType = _action$payload4.workType;
           callback = _action$payload4.callback;
-          url = Object(__WEBPACK_IMPORTED_MODULE_8__utils__.get_api_prefix)() + '/coconut/web/work/' + id;
+          url = __WEBPACK_IMPORTED_MODULE_8__utils__.get_api_prefix() + "/coconut/web/work/" + id;
           _context5.prev = 2;
           _context5.next = 5;
           return __WEBPACK_IMPORTED_MODULE_4_axios___default.delete(url, {
@@ -466,7 +472,7 @@ function handleDeleteWork(action) {
             return res.data;
           }).catch(function (err) {
             if (false) {
-              console.log('fetch delete work failed, detail:', err);
+              console.log("fetch delete work failed, detail:", err);
             }
             throw err;
           });
@@ -482,7 +488,7 @@ function handleDeleteWork(action) {
           }
           _context5.t0 = __WEBPACK_IMPORTED_MODULE_1_lodash_cloneDeep___default;
           _context5.next = 11;
-          return Object(__WEBPACK_IMPORTED_MODULE_3_redux_saga_effects__.select)(__WEBPACK_IMPORTED_MODULE_7__redux_selectors__.getHomeAllWorkList);
+          return __WEBPACK_IMPORTED_MODULE_3_redux_saga_effects__.select(__WEBPACK_IMPORTED_MODULE_7__redux_selectors__.getHomeAllWorkList);
         case 11:
           _context5.t1 = _context5.sent;
           homeWorkList = (0, _context5.t0)(_context5.t1);
@@ -494,7 +500,7 @@ function handleDeleteWork(action) {
             break;
           }
           _context5.next = 17;
-          return Object(__WEBPACK_IMPORTED_MODULE_3_redux_saga_effects__.put)(Object(__WEBPACK_IMPORTED_MODULE_11__Home_model_actions__.setWorkListAction)(list));
+          return __WEBPACK_IMPORTED_MODULE_3_redux_saga_effects__.put(__WEBPACK_IMPORTED_MODULE_11__Home_model_actions__.setWorkListAction(list));
         case 17:
           _context5.next = 20;
           break;
@@ -510,7 +516,7 @@ function handleDeleteWork(action) {
           }
           _context5.t2 = __WEBPACK_IMPORTED_MODULE_1_lodash_cloneDeep___default;
           _context5.next = 24;
-          return Object(__WEBPACK_IMPORTED_MODULE_3_redux_saga_effects__.select)(__WEBPACK_IMPORTED_MODULE_7__redux_selectors__.getCreateWorkList);
+          return __WEBPACK_IMPORTED_MODULE_3_redux_saga_effects__.select(__WEBPACK_IMPORTED_MODULE_7__redux_selectors__.getCreateWorkList);
         case 24:
           _context5.t3 = _context5.sent;
           createWorkList = (0, _context5.t2)(_context5.t3);
@@ -518,7 +524,7 @@ function handleDeleteWork(action) {
             return item.work_id !== id;
           });
           _context5.next = 29;
-          return Object(__WEBPACK_IMPORTED_MODULE_3_redux_saga_effects__.put)(__WEBPACK_IMPORTED_MODULE_5__actions__.setCreateWorkListAction(_list2));
+          return __WEBPACK_IMPORTED_MODULE_3_redux_saga_effects__.put(__WEBPACK_IMPORTED_MODULE_5__actions__.setCreateWorkListAction(_list2));
         case 29:
           if (!(workType === __WEBPACK_IMPORTED_MODULE_10__interface__.EWorkType.COLL)) {
             _context5.next = 38;
@@ -526,7 +532,7 @@ function handleDeleteWork(action) {
           }
           _context5.t4 = __WEBPACK_IMPORTED_MODULE_1_lodash_cloneDeep___default;
           _context5.next = 33;
-          return Object(__WEBPACK_IMPORTED_MODULE_3_redux_saga_effects__.select)(__WEBPACK_IMPORTED_MODULE_7__redux_selectors__.getCollWorkList);
+          return __WEBPACK_IMPORTED_MODULE_3_redux_saga_effects__.select(__WEBPACK_IMPORTED_MODULE_7__redux_selectors__.getCollWorkList);
         case 33:
           _context5.t5 = _context5.sent;
           collWorkList = (0, _context5.t4)(_context5.t5);
@@ -534,29 +540,29 @@ function handleDeleteWork(action) {
             return item.work_id !== id;
           });
           _context5.next = 38;
-          return Object(__WEBPACK_IMPORTED_MODULE_3_redux_saga_effects__.put)(__WEBPACK_IMPORTED_MODULE_5__actions__.setCollWorkListAction(_list3));
+          return __WEBPACK_IMPORTED_MODULE_3_redux_saga_effects__.put(__WEBPACK_IMPORTED_MODULE_5__actions__.setCollWorkListAction(_list3));
         case 38:
           _context5.next = 40;
-          return Object(__WEBPACK_IMPORTED_MODULE_3_redux_saga_effects__.put)(Object(__WEBPACK_IMPORTED_MODULE_6__redux_main_actions__.setCommonToastAction)({
+          return __WEBPACK_IMPORTED_MODULE_3_redux_saga_effects__.put(__WEBPACK_IMPORTED_MODULE_6__redux_main_actions__.setCommonToastAction({
             visible: true,
-            message: '作品移至回收站'
+            message: "作品移至回收站"
           }));
         case 40:
           _context5.next = 47;
           break;
         case 42:
           _context5.prev = 42;
-          _context5.t6 = _context5['catch'](2);
+          _context5.t6 = _context5["catch"](2);
           if (false) {
-            console.log('fetch delete work error, detail', _context5.t6);
+            console.log("fetch delete work error, detail", _context5.t6);
           }
           _context5.next = 47;
-          return Object(__WEBPACK_IMPORTED_MODULE_3_redux_saga_effects__.put)(Object(__WEBPACK_IMPORTED_MODULE_6__redux_main_actions__.setCommonToastAction)({
+          return __WEBPACK_IMPORTED_MODULE_3_redux_saga_effects__.put(__WEBPACK_IMPORTED_MODULE_6__redux_main_actions__.setCommonToastAction({
             visible: true,
-            message: '删除作品失败'
+            message: "删除作品失败"
           }));
         case 47:
-        case 'end':
+        case "end":
           return _context5.stop();
       }
     }
@@ -578,7 +584,7 @@ function handleRecoverDeleteWork(action) {
           _action$payload5 = action.payload;
           id = _action$payload5.id;
           callback = _action$payload5.callback;
-          url = Object(__WEBPACK_IMPORTED_MODULE_8__utils__.get_api_prefix)() + '/coconut/web/work/' + id + '/recover';
+          url = __WEBPACK_IMPORTED_MODULE_8__utils__.get_api_prefix() + "/coconut/web/work/" + id + "/recover";
           _context6.prev = 2;
           _context6.next = 5;
           return __WEBPACK_IMPORTED_MODULE_4_axios___default.patch(url, {}, {
@@ -587,7 +593,7 @@ function handleRecoverDeleteWork(action) {
             return res.data;
           }).catch(function (err) {
             if (false) {
-              console.log('fetch delete work failed, detail:', err);
+              console.log("fetch delete work failed, detail:", err);
             }
             throw err;
           });
@@ -599,7 +605,7 @@ function handleRecoverDeleteWork(action) {
           }
           _context6.t0 = __WEBPACK_IMPORTED_MODULE_1_lodash_cloneDeep___default;
           _context6.next = 10;
-          return Object(__WEBPACK_IMPORTED_MODULE_3_redux_saga_effects__.select)(__WEBPACK_IMPORTED_MODULE_7__redux_selectors__.getDeleteWorkList);
+          return __WEBPACK_IMPORTED_MODULE_3_redux_saga_effects__.select(__WEBPACK_IMPORTED_MODULE_7__redux_selectors__.getDeleteWorkList);
         case 10:
           _context6.t1 = _context6.sent;
           deleteWorkList = (0, _context6.t0)(_context6.t1);
@@ -607,27 +613,27 @@ function handleRecoverDeleteWork(action) {
             return item.work_id !== id;
           });
           _context6.next = 15;
-          return Object(__WEBPACK_IMPORTED_MODULE_3_redux_saga_effects__.put)(__WEBPACK_IMPORTED_MODULE_5__actions__.setDeleteWorkListAction(list));
+          return __WEBPACK_IMPORTED_MODULE_3_redux_saga_effects__.put(__WEBPACK_IMPORTED_MODULE_5__actions__.setDeleteWorkListAction(list));
         case 15:
           if (callback) {
             callback();
           }
           _context6.next = 18;
-          return Object(__WEBPACK_IMPORTED_MODULE_3_redux_saga_effects__.put)(Object(__WEBPACK_IMPORTED_MODULE_6__redux_main_actions__.setCommonToastAction)({
+          return __WEBPACK_IMPORTED_MODULE_3_redux_saga_effects__.put(__WEBPACK_IMPORTED_MODULE_6__redux_main_actions__.setCommonToastAction({
             visible: true,
-            message: '作品已恢复'
+            message: "作品已恢复"
           }));
         case 18:
           _context6.next = 23;
           break;
         case 20:
           _context6.prev = 20;
-          _context6.t2 = _context6['catch'](2);
+          _context6.t2 = _context6["catch"](2);
           if (false) {
-            console.log('fetch delete work error, detail', _context6.t2);
+            console.log("fetch delete work error, detail", _context6.t2);
           }
         case 23:
-        case 'end':
+        case "end":
           return _context6.stop();
       }
     }
@@ -645,7 +651,7 @@ function handleAgainDeleteWork(action) {
       switch (_context7.prev = _context7.next) {
         case 0:
           id = action.payload;
-          url = Object(__WEBPACK_IMPORTED_MODULE_8__utils__.get_api_prefix)() + '/coconut/web/work/' + id + '/permanently';
+          url = __WEBPACK_IMPORTED_MODULE_8__utils__.get_api_prefix() + "/coconut/web/work/" + id + "/permanently";
           _context7.prev = 2;
           _context7.next = 5;
           return __WEBPACK_IMPORTED_MODULE_4_axios___default.delete(url, {
@@ -654,7 +660,7 @@ function handleAgainDeleteWork(action) {
             return res.data;
           }).catch(function (err) {
             if (false) {
-              console.log('fetch delete work failed, detail:', err);
+              console.log("fetch delete work failed, detail:", err);
             }
             throw err;
           });
@@ -666,7 +672,7 @@ function handleAgainDeleteWork(action) {
           }
           _context7.t0 = __WEBPACK_IMPORTED_MODULE_1_lodash_cloneDeep___default;
           _context7.next = 10;
-          return Object(__WEBPACK_IMPORTED_MODULE_3_redux_saga_effects__.select)(__WEBPACK_IMPORTED_MODULE_7__redux_selectors__.getDeleteWorkList);
+          return __WEBPACK_IMPORTED_MODULE_3_redux_saga_effects__.select(__WEBPACK_IMPORTED_MODULE_7__redux_selectors__.getDeleteWorkList);
         case 10:
           _context7.t1 = _context7.sent;
           deleteWorkList = (0, _context7.t0)(_context7.t1);
@@ -674,24 +680,24 @@ function handleAgainDeleteWork(action) {
             return item.work_id !== id;
           });
           _context7.next = 15;
-          return Object(__WEBPACK_IMPORTED_MODULE_3_redux_saga_effects__.put)(__WEBPACK_IMPORTED_MODULE_5__actions__.setDeleteWorkListAction(list));
+          return __WEBPACK_IMPORTED_MODULE_3_redux_saga_effects__.put(__WEBPACK_IMPORTED_MODULE_5__actions__.setDeleteWorkListAction(list));
         case 15:
           _context7.next = 17;
-          return Object(__WEBPACK_IMPORTED_MODULE_3_redux_saga_effects__.put)(Object(__WEBPACK_IMPORTED_MODULE_6__redux_main_actions__.setCommonToastAction)({
+          return __WEBPACK_IMPORTED_MODULE_3_redux_saga_effects__.put(__WEBPACK_IMPORTED_MODULE_6__redux_main_actions__.setCommonToastAction({
             visible: true,
-            message: '作品已删除'
+            message: "作品已删除"
           }));
         case 17:
           _context7.next = 22;
           break;
         case 19:
           _context7.prev = 19;
-          _context7.t2 = _context7['catch'](2);
+          _context7.t2 = _context7["catch"](2);
           if (false) {
-            console.log('fetch delete work error, detail', _context7.t2);
+            console.log("fetch delete work error, detail", _context7.t2);
           }
         case 22:
-        case 'end':
+        case "end":
           return _context7.stop();
       }
     }
@@ -705,7 +711,7 @@ function handleClearDeleteWork() {
     while (1) {
       switch (_context8.prev = _context8.next) {
         case 0:
-          url = Object(__WEBPACK_IMPORTED_MODULE_8__utils__.get_api_prefix)() + '/coconut/web/work/permanently';
+          url = __WEBPACK_IMPORTED_MODULE_8__utils__.get_api_prefix() + "/coconut/web/work/permanently";
           _context8.prev = 1;
           _context8.next = 4;
           return __WEBPACK_IMPORTED_MODULE_4_axios___default.delete(url, {
@@ -714,7 +720,7 @@ function handleClearDeleteWork() {
             return res.data;
           }).catch(function (err) {
             if (false) {
-              console.log('fetch clear delete work failed, detail:', err);
+              console.log("fetch clear delete work failed, detail:", err);
             }
             throw err;
           });
@@ -725,18 +731,18 @@ function handleClearDeleteWork() {
             break;
           }
           _context8.next = 8;
-          return Object(__WEBPACK_IMPORTED_MODULE_3_redux_saga_effects__.put)(__WEBPACK_IMPORTED_MODULE_5__actions__.setDeleteWorkListAction([]));
+          return __WEBPACK_IMPORTED_MODULE_3_redux_saga_effects__.put(__WEBPACK_IMPORTED_MODULE_5__actions__.setDeleteWorkListAction([]));
         case 8:
           _context8.next = 13;
           break;
         case 10:
           _context8.prev = 10;
-          _context8.t0 = _context8['catch'](1);
+          _context8.t0 = _context8["catch"](1);
           if (false) {
-            console.log('fetch clear delete work error, detail', _context8.t0);
+            console.log("fetch clear delete work error, detail", _context8.t0);
           }
         case 13:
-        case 'end':
+        case "end":
           return _context8.stop();
       }
     }
@@ -765,7 +771,7 @@ function handleRenameWork(action) {
           workType = _action$payload6.workType;
           callback = _action$payload6.callback;
           _context9.prev = 1;
-          url = Object(__WEBPACK_IMPORTED_MODULE_8__utils__.get_api_prefix)() + '/work/works/' + id + '/rename';
+          url = __WEBPACK_IMPORTED_MODULE_8__utils__.get_api_prefix() + "/work/works/" + id + "/rename";
           _context9.next = 5;
           return __WEBPACK_IMPORTED_MODULE_4_axios___default.patch(url, {
             name: name,
@@ -776,7 +782,7 @@ function handleRenameWork(action) {
             return res.data;
           }).catch(function (err) {
             if (false) {
-              console.log('fetch rename work failed, detail:', err);
+              console.log("fetch rename work failed, detail:", err);
             }
             throw err;
           });
@@ -792,7 +798,7 @@ function handleRenameWork(action) {
           }
           _context9.t0 = __WEBPACK_IMPORTED_MODULE_1_lodash_cloneDeep___default;
           _context9.next = 11;
-          return Object(__WEBPACK_IMPORTED_MODULE_3_redux_saga_effects__.select)(__WEBPACK_IMPORTED_MODULE_7__redux_selectors__.getHomeAllWorkList);
+          return __WEBPACK_IMPORTED_MODULE_3_redux_saga_effects__.select(__WEBPACK_IMPORTED_MODULE_7__redux_selectors__.getHomeAllWorkList);
         case 11:
           _context9.t1 = _context9.sent;
           homeWorkList = (0, _context9.t0)(_context9.t1);
@@ -802,7 +808,7 @@ function handleRenameWork(action) {
             }
           });
           _context9.next = 16;
-          return Object(__WEBPACK_IMPORTED_MODULE_3_redux_saga_effects__.put)(Object(__WEBPACK_IMPORTED_MODULE_11__Home_model_actions__.setWorkListAction)(homeWorkList));
+          return __WEBPACK_IMPORTED_MODULE_3_redux_saga_effects__.put(__WEBPACK_IMPORTED_MODULE_11__Home_model_actions__.setWorkListAction(homeWorkList));
         case 16:
           if (!(workType === __WEBPACK_IMPORTED_MODULE_10__interface__.EWorkType.CREATE)) {
             _context9.next = 25;
@@ -810,7 +816,7 @@ function handleRenameWork(action) {
           }
           _context9.t2 = __WEBPACK_IMPORTED_MODULE_1_lodash_cloneDeep___default;
           _context9.next = 20;
-          return Object(__WEBPACK_IMPORTED_MODULE_3_redux_saga_effects__.select)(__WEBPACK_IMPORTED_MODULE_7__redux_selectors__.getCreateWorkList);
+          return __WEBPACK_IMPORTED_MODULE_3_redux_saga_effects__.select(__WEBPACK_IMPORTED_MODULE_7__redux_selectors__.getCreateWorkList);
         case 20:
           _context9.t3 = _context9.sent;
           createWorkList = (0, _context9.t2)(_context9.t3);
@@ -820,10 +826,10 @@ function handleRenameWork(action) {
             }
           });
           _context9.next = 25;
-          return Object(__WEBPACK_IMPORTED_MODULE_3_redux_saga_effects__.put)(__WEBPACK_IMPORTED_MODULE_5__actions__.setCreateWorkListAction(createWorkList));
+          return __WEBPACK_IMPORTED_MODULE_3_redux_saga_effects__.put(__WEBPACK_IMPORTED_MODULE_5__actions__.setCreateWorkListAction(createWorkList));
         case 25:
           _context9.next = 27;
-          return Object(__WEBPACK_IMPORTED_MODULE_3_redux_saga_effects__.call)(getWorkBcmUrl, id);
+          return __WEBPACK_IMPORTED_MODULE_3_redux_saga_effects__.call(getWorkBcmUrl, id);
         case 27:
           bcmUrl = _context9.sent;
           if (!bcmUrl) {
@@ -831,35 +837,35 @@ function handleRenameWork(action) {
             break;
           }
           _context9.next = 31;
-          return Object(__WEBPACK_IMPORTED_MODULE_3_redux_saga_effects__.call)(getWorkBcmJson, bcmUrl);
+          return __WEBPACK_IMPORTED_MODULE_3_redux_saga_effects__.call(getWorkBcmJson, bcmUrl);
         case 31:
           json = _context9.sent;
           json.title = name;
           _context9.next = 35;
-          return Object(__WEBPACK_IMPORTED_MODULE_3_redux_saga_effects__.call)(updateProject, {
+          return __WEBPACK_IMPORTED_MODULE_3_redux_saga_effects__.call(updateProject, {
             id: id,
             name: name,
             content: json
           });
         case 35:
-          return _context9.abrupt('return');
+          return _context9.abrupt("return");
         case 36:
           _context9.next = 38;
-          return Object(__WEBPACK_IMPORTED_MODULE_3_redux_saga_effects__.put)(Object(__WEBPACK_IMPORTED_MODULE_6__redux_main_actions__.setCommonToastAction)({
+          return __WEBPACK_IMPORTED_MODULE_3_redux_saga_effects__.put(__WEBPACK_IMPORTED_MODULE_6__redux_main_actions__.setCommonToastAction({
             visible: true,
-            message: '作品重命名失败，请重试'
+            message: "作品重命名失败，请重试"
           }));
         case 38:
           _context9.next = 43;
           break;
         case 40:
           _context9.prev = 40;
-          _context9.t4 = _context9['catch'](1);
+          _context9.t4 = _context9["catch"](1);
           if (false) {
-            console.log('fetch rename work error, detail', _context9.t4);
+            console.log("fetch rename work error, detail", _context9.t4);
           }
         case 43:
-        case 'end':
+        case "end":
           return _context9.stop();
       }
     }
@@ -873,7 +879,7 @@ function getWorkBcmUrl(id) {
       while (1) {
         switch (_context10.prev = _context10.next) {
           case 0:
-            url = Object(__WEBPACK_IMPORTED_MODULE_8__utils__.get_api_prefix)() + '/coconut/web/work/' + id + '/content';
+            url = __WEBPACK_IMPORTED_MODULE_8__utils__.get_api_prefix() + "/coconut/web/work/" + id + "/content";
             _context10.prev = 1;
             _context10.next = 4;
             return __WEBPACK_IMPORTED_MODULE_4_axios___default.get(url, {
@@ -882,7 +888,7 @@ function getWorkBcmUrl(id) {
               return res.data;
             }).catch(function (err) {
               if (false) {
-                console.log('fetch delete work list failed, detail:', err);
+                console.log("fetch delete work list failed, detail:", err);
               }
               throw err;
             });
@@ -892,18 +898,18 @@ function getWorkBcmUrl(id) {
               _context10.next = 7;
               break;
             }
-            return _context10.abrupt('return', result.data.bcm_url);
+            return _context10.abrupt("return", result.data.bcm_url);
           case 7:
             _context10.next = 12;
             break;
           case 9:
             _context10.prev = 9;
-            _context10.t0 = _context10['catch'](1);
+            _context10.t0 = _context10["catch"](1);
             if (false) {
-              console.log('fetch delete work list error, detail', _context10.t0);
+              console.log("fetch delete work list error, detail", _context10.t0);
             }
           case 12:
-          case 'end':
+          case "end":
             return _context10.stop();
         }
       }
@@ -926,9 +932,9 @@ function getWorkBcmJson(bcmUrl) {
             return bcmRes.json();
           case 5:
             json = _context11.sent;
-            return _context11.abrupt('return', json);
+            return _context11.abrupt("return", json);
           case 7:
-          case 'end':
+          case "end":
             return _context11.stop();
         }
       }
@@ -951,29 +957,29 @@ function updateProject(params) {
             id = params.id;
             _context12.prev = 1;
             _context12.next = 4;
-            return Object(__WEBPACK_IMPORTED_MODULE_9__utils_uploader__.uploadProjectJsonToCdn)(JSON.stringify(content));
+            return __WEBPACK_IMPORTED_MODULE_9__utils_uploader__.uploadProjectJsonToCdn(JSON.stringify(content));
           case 4:
             bcmUrl = _context12.sent;
             _context12.next = 7;
-            return __WEBPACK_IMPORTED_MODULE_4_axios___default.put(Object(__WEBPACK_IMPORTED_MODULE_8__utils__.get_api_prefix)() + '/coconut/web/work', {
+            return __WEBPACK_IMPORTED_MODULE_4_axios___default.put(__WEBPACK_IMPORTED_MODULE_8__utils__.get_api_prefix() + "/coconut/web/work", {
               id: id,
               name: name,
               bcm_url: bcmUrl,
               // cover_url: '', // 封面图
-              archive_version: '0.1.0',
+              archive_version: "0.1.0",
               save_type: 1
             }, {
               withCredentials: true
             });
           case 7:
             result = _context12.sent;
-            return _context12.abrupt('return', result);
+            return _context12.abrupt("return", result);
           case 11:
             _context12.prev = 11;
-            _context12.t0 = _context12['catch'](1);
+            _context12.t0 = _context12["catch"](1);
             throw _context12.t0;
           case 14:
-          case 'end':
+          case "end":
             return _context12.stop();
         }
       }
@@ -986,33 +992,33 @@ function workSaga() {
       switch (_context13.prev = _context13.next) {
         case 0:
           _context13.next = 2;
-          return Object(__WEBPACK_IMPORTED_MODULE_2_redux_saga__.takeLatest)(__WEBPACK_IMPORTED_MODULE_5__actions__.GET_CREATE_WORK_LIST_ACTION, handleGetCreateWorkList);
+          return __WEBPACK_IMPORTED_MODULE_2_redux_saga__.takeLatest(__WEBPACK_IMPORTED_MODULE_5__actions__.GET_CREATE_WORK_LIST_ACTION, handleGetCreateWorkList);
         case 2:
           _context13.next = 4;
-          return Object(__WEBPACK_IMPORTED_MODULE_2_redux_saga__.takeLatest)(__WEBPACK_IMPORTED_MODULE_5__actions__.GET_COLL_WORK_LIST_ACTION, handleGetCollWorkList);
+          return __WEBPACK_IMPORTED_MODULE_2_redux_saga__.takeLatest(__WEBPACK_IMPORTED_MODULE_5__actions__.GET_COLL_WORK_LIST_ACTION, handleGetCollWorkList);
         case 4:
           _context13.next = 6;
-          return Object(__WEBPACK_IMPORTED_MODULE_2_redux_saga__.takeLatest)(__WEBPACK_IMPORTED_MODULE_5__actions__.GET_DELETE_WORK_LIST_ACTION, handleGetDeleteWorkList);
+          return __WEBPACK_IMPORTED_MODULE_2_redux_saga__.takeLatest(__WEBPACK_IMPORTED_MODULE_5__actions__.GET_DELETE_WORK_LIST_ACTION, handleGetDeleteWorkList);
         case 6:
           _context13.next = 8;
-          return Object(__WEBPACK_IMPORTED_MODULE_2_redux_saga__.takeLatest)(__WEBPACK_IMPORTED_MODULE_5__actions__.QUIT_COLL_WORK_ACTION, handleQuitCollWork);
+          return __WEBPACK_IMPORTED_MODULE_2_redux_saga__.takeLatest(__WEBPACK_IMPORTED_MODULE_5__actions__.QUIT_COLL_WORK_ACTION, handleQuitCollWork);
         case 8:
           _context13.next = 10;
-          return Object(__WEBPACK_IMPORTED_MODULE_2_redux_saga__.takeLatest)(__WEBPACK_IMPORTED_MODULE_5__actions__.DELETE_WORK_ACTION, handleDeleteWork);
+          return __WEBPACK_IMPORTED_MODULE_2_redux_saga__.takeLatest(__WEBPACK_IMPORTED_MODULE_5__actions__.DELETE_WORK_ACTION, handleDeleteWork);
         case 10:
           _context13.next = 12;
-          return Object(__WEBPACK_IMPORTED_MODULE_2_redux_saga__.takeLatest)(__WEBPACK_IMPORTED_MODULE_5__actions__.RECOVER_DELETE_WORK_ACTION, handleRecoverDeleteWork);
+          return __WEBPACK_IMPORTED_MODULE_2_redux_saga__.takeLatest(__WEBPACK_IMPORTED_MODULE_5__actions__.RECOVER_DELETE_WORK_ACTION, handleRecoverDeleteWork);
         case 12:
           _context13.next = 14;
-          return Object(__WEBPACK_IMPORTED_MODULE_2_redux_saga__.takeLatest)(__WEBPACK_IMPORTED_MODULE_5__actions__.AGAIN_DELETE_WORK_ACTION, handleAgainDeleteWork);
+          return __WEBPACK_IMPORTED_MODULE_2_redux_saga__.takeLatest(__WEBPACK_IMPORTED_MODULE_5__actions__.AGAIN_DELETE_WORK_ACTION, handleAgainDeleteWork);
         case 14:
           _context13.next = 16;
-          return Object(__WEBPACK_IMPORTED_MODULE_2_redux_saga__.takeLatest)(__WEBPACK_IMPORTED_MODULE_5__actions__.CLEAR_DELETED_WORK_ACTION, handleClearDeleteWork);
+          return __WEBPACK_IMPORTED_MODULE_2_redux_saga__.takeLatest(__WEBPACK_IMPORTED_MODULE_5__actions__.CLEAR_DELETED_WORK_ACTION, handleClearDeleteWork);
         case 16:
           _context13.next = 18;
-          return Object(__WEBPACK_IMPORTED_MODULE_2_redux_saga__.takeLatest)(__WEBPACK_IMPORTED_MODULE_5__actions__.RENAME_WORK_ACTION, handleRenameWork);
+          return __WEBPACK_IMPORTED_MODULE_2_redux_saga__.takeLatest(__WEBPACK_IMPORTED_MODULE_5__actions__.RENAME_WORK_ACTION, handleRenameWork);
         case 18:
-        case 'end':
+        case "end":
           return _context13.stop();
       }
     }

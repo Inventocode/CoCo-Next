@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：99
+ */
+
 "use strict";
 
 export { g as b };
@@ -29,7 +35,7 @@ import u = require("../../../../src/shared/events/actions");
 import d = require("./9");
 import p = require("./26/index");
 import f = require("./5");
-import h = require("./98");
+import h = require("../../../../src/shared/widget/custom/storage");
 import m = require("./38/375");
 function g(e) {
   return _.apply(this, arguments);

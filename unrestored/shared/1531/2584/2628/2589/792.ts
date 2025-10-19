@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：792
+ */
+
 function n(e, t, n, r) {
   var i;
   var o = null == (i = r) || "number" === typeof i || "boolean" === typeof i ? r : n(r);

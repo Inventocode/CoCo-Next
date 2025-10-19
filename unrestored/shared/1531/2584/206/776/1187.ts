@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：1187
+ */
+
 (function (e) {
   function n(e, t) {
     for (var n = 0, r = e.length - 1; r >= 0; r--) {

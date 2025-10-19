@@ -3,7 +3,7 @@ export interface Exports {
   widget: Widget
 }
 
-export type Types = {
+export interface Types  {
     type: string
     title: string
     contentTextField?: string
@@ -23,7 +23,7 @@ export type Types = {
 
 export type Platforms = ("web" | "android" | "ios")[]
 
-export type PropertyTypes = {
+export interface PropertyTypes  {
     key: string
     label: string
     hidePropertyEditor?: boolean | undefined
@@ -55,13 +55,14 @@ export type PropertyTypes = {
     } | undefined
     readonly?: 0 | 1 | undefined
     unit?: string | undefined
-} & PropertyValueTypes
-
-export type PropertyValueTypes = {
+    valueType: ValueType
+    checkType?: CheckType | undefined
     editorType?: EditorType | undefined
-} & CommonAfferentValueTypes & DropdownTypes
+    dropdown?: DropdownItemTypes[] | undefined
+    defaultValue: number | string | boolean
+}
 
-export type PropertyBlockOptionsTypes = {
+export interface PropertyBlockOptionsTypes  {
     generateBlock?: boolean | undefined
     line?: string | undefined
     space?: number | undefined
@@ -70,7 +71,7 @@ export type PropertyBlockOptionsTypes = {
     setter?: PropertyCalculatorBlockOptionsTypes | undefined
 }
 
-export type PropertyCalculatorBlockOptionsTypes = {
+export interface PropertyCalculatorBlockOptionsTypes  {
     generateBlock?: boolean | undefined
     line?: string | undefined
     space?: number | undefined
@@ -78,15 +79,16 @@ export type PropertyCalculatorBlockOptionsTypes = {
     keys?: string[] | undefined
 }
 
-export type MethodTypes = {
+export interface MethodTypes  {
     key: string
     label?: string | undefined
     params: MethodParamTypes[]
     tooltip?: string | undefined
     blockOptions?: MethodBlockOptionsTypes | undefined
-} & MethodValueTypes
+    valueType?: ValueType | undefined
+}
 
-export type MethodParamTypes = {
+export interface MethodParamTypes  {
     key: string
     label?: string | undefined
     labelAfter?: string | undefined
@@ -100,15 +102,13 @@ export type MethodParamTypes = {
         leftText: string
         rightText: string
     }) | undefined
-} & MethodParamValueTypes
-
-export type MethodParamValueTypes = CommonAfferentValueTypes | DropdownTypes
-
-export type MethodValueTypes = {
-    valueType?: ValueType | undefined
+    valueType: ValueType
+    checkType?: CheckType | undefined
+    defaultValue: number | string | boolean
+    dropdown?: DropdownItemTypes[] | undefined
 }
 
-export type MethodBlockOptionsTypes = {
+export interface MethodBlockOptionsTypes  {
     generateBlock?: boolean | undefined
     line?: string | undefined
     space?: number | undefined
@@ -119,7 +119,7 @@ export type MethodBlockOptionsTypes = {
     callMethodLabel?: boolean | string | undefined
 }
 
-export type EventTypes = {
+export interface EventTypes  {
     key: string
     subTypes?: EventSubType[] | undefined
     label: string
@@ -128,20 +128,18 @@ export type EventTypes = {
     blockOptions?: EventBlockOptionsTypes | undefined
 }
 
-export type EventSubType = {
+export interface EventSubType  {
     key: string
-} & DropdownTypes
+    dropdown?: DropdownItemTypes[] | undefined
+}
 
-export type EventParamTypes = {
+export interface EventParamTypes  {
     key: string
     label: string
-} & EventParamValueTypes
-
-export type EventParamValueTypes = {
     valueType: ValueType
 }
 
-export type EventBlockOptionsTypes = {
+export interface EventBlockOptionsTypes  {
     generateBlock?: boolean | undefined
     line?: string | undefined
     space?: number | undefined
@@ -149,17 +147,7 @@ export type EventBlockOptionsTypes = {
     icon?: string | undefined
 }
 
-export type CommonAfferentValueTypes = {
-    valueType: ValueType
-    checkType?: CheckType | undefined
-    defaultValue: number | string | boolean
-}
-
-export type DropdownTypes = {
-    dropdown?: DropdownItemTypes[] | undefined
-}
-
-export type DropdownItemTypes = {
+export interface DropdownItemTypes  {
     label: string
     value: string
 }
@@ -174,7 +162,7 @@ export type EditorType = "Align" | "TextInput" | "InputNumber" | "Color" | "Visi
 
 import type { ReactNode } from "react"
 
-export type Utils = {
+export interface Utils {
 
     /**
      * 判断宿主是否为客户端
@@ -192,8 +180,6 @@ export type Utils = {
      */
     getWidgetImageUrl(fileName: string): string
 }
-
-export const widgetRequire: (id: string) => unknown
 
 interface WidgetInstance {
     widgetLog(this: this, message: string): void

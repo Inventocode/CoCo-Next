@@ -1,12 +1,18 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：nq58
+ */
+
 "use strict";
 
+/* harmony export (binding) */
 /* harmony export (binding) */
 export { THEME_PREFIX };
 /* harmony export (binding) */
 export { ThemeTypeEnum };
-/* harmony export (binding) */
 export { ColorEnum };
-var THEME_PREFIX = 'theme/';
+var THEME_PREFIX = "theme/";
 var ThemeTypeEnum;
 (function (ThemeTypeEnum) {
   ThemeTypeEnum["Orange"] = "orange";

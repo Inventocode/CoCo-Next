@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：115
+ */
+
 module.exports = {
   flexSC: "DialCall_flexSC__3qv_X",
   dialCall: "DialCall_dialCall__1qdGM",

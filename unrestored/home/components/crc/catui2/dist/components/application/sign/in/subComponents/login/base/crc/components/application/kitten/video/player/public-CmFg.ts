@@ -1,3 +1,9 @@
+/** 
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：CmFg
+ */
+
 "use strict";
 
 /* unused harmony export kittenVideoPlayer */
@@ -17,7 +23,7 @@ import __WEBPACK_IMPORTED_MODULE_3_react___default from "react";
 import * as __WEBPACK_IMPORTED_MODULE_4_react_dom__ from "react-dom";
 /* harmony import */
 import __WEBPACK_IMPORTED_MODULE_4_react_dom___default from "react-dom";
-var CONTAINER_ID = 'CUI-kitten-video-player-container';
+var CONTAINER_ID = "CUI-kitten-video-player-container";
 var videoPlayerContainer;
 var _isLoaded = false;
 var player;
@@ -27,7 +33,7 @@ var kittenVideoPlayer = {
    * @param options
    */
   load: function () {
-    var _load = Object(__WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_asyncToGenerator__.default)(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_2__babel_runtime_regenerator___default.mark(function _callee(options) {
+    var _load = __WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_asyncToGenerator__.default(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_2__babel_runtime_regenerator___default.mark(function _callee(options) {
       var KittenVideoPlayer;
       return __WEBPACK_IMPORTED_MODULE_2__babel_runtime_regenerator___default.wrap(function _callee$(_context) {
         while (1) {
@@ -46,12 +52,12 @@ var kittenVideoPlayer = {
                   };
                 });
               });
-              videoPlayerContainer = document.createElement('div');
+              videoPlayerContainer = document.createElement("div");
               videoPlayerContainer.id = CONTAINER_ID;
               document.body.appendChild(videoPlayerContainer);
               __WEBPACK_IMPORTED_MODULE_4_react_dom___default.render(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_3_react___default.createElement(__WEBPACK_IMPORTED_MODULE_3_react___default.Suspense, {
                 fallback: null
-              }, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_3_react___default.createElement(KittenVideoPlayer, Object(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_extends__.default)({
+              }, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_3_react___default.createElement(KittenVideoPlayer, __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_extends__.default({
                 getPlayerRef: function getPlayerRef(ref) {
                   return player = ref;
                 }
@@ -77,14 +83,14 @@ var kittenVideoPlayer = {
     return new Promise(function (resolve, reject) {
       var _closeAnimationPos;
       var _closeAnimationPos2;
-      var draggableRef = document.getElementsByClassName('CUI-kitten-video-player-draggable')[0];
+      var draggableRef = document.getElementsByClassName("CUI-kitten-video-player-draggable")[0];
       if (!draggableRef) {
         return;
       }
       var _draggableRef$getBoun = draggableRef.getBoundingClientRect();
       var width = _draggableRef$getBoun.width;
       var height = _draggableRef$getBoun.height;
-      draggableRef.style.transform += ' scale(1)';
+      draggableRef.style.transform += " scale(1)";
       var closeAnimationPos = {
         x: 0,
         y: 0
@@ -93,7 +99,7 @@ var kittenVideoPlayer = {
         closeAnimationPos = options.closeAnimationPos;
       }
       var ANIMATION = {
-        transition: 'transform 0.5s cubic-bezier(0.2, 0, 0.2, 1)',
+        transition: "transform 0.5s cubic-bezier(0.2, 0, 0.2, 1)",
         transform: "translate(".concat((((_closeAnimationPos = closeAnimationPos) === null || _closeAnimationPos === undefined ? undefined : _closeAnimationPos.x) || 0) - width / 2, "px, ").concat((((_closeAnimationPos2 = closeAnimationPos) === null || _closeAnimationPos2 === undefined ? undefined : _closeAnimationPos2.y) || 0) - height / 2, "px) scale(0)")
       };
       draggableRef.style.transition = ANIMATION.transition;
@@ -108,7 +114,7 @@ var kittenVideoPlayer = {
         resolve(undefined);
         _isLoaded = false;
       };
-      draggableRef.addEventListener('transitionend', close);
+      draggableRef.addEventListener("transitionend", close);
     });
   },
   /**
@@ -125,7 +131,7 @@ var kittenVideoPlayer = {
       _player.pause();
     }
     var videoPlayerElem = videoPlayerContainer.children[0];
-    videoPlayerElem.style.display = 'none';
+    videoPlayerElem.style.display = "none";
   },
   /**
    * 显示视频播放器（前提是已加载并处于隐藏状态）
@@ -135,7 +141,7 @@ var kittenVideoPlayer = {
       return;
     }
     var videoPlayerElem = videoPlayerContainer.children[0];
-    videoPlayerElem.style.display = 'block';
+    videoPlayerElem.style.display = "block";
   },
   /**
    * 是否已加载/使用中
