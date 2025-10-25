@@ -522,15 +522,13 @@ export async function loadCustomWidget(
     "InvisibleWidget",
     "VisibleWidget",
     "React",
-    ...restrict.objectKeys,
     code
   ).apply(undefined, [
     ExternalModule.requireExternalModule,
     {},
     class {},
     class {},
-    React,
-    ...restrict.objectValues
+    React
   ])
   const EXTERNAL_MODULE_BASE_URL: string = "https://static.codemao.cn/appcraft/modules/"
   await Promise.all(ExternalModule.getExternalModules().map(
@@ -548,15 +546,13 @@ export async function loadCustomWidget(
     "InvisibleWidget",
     "VisibleWidget",
     "React",
-    ...restrict.objectKeys,
     code
   ).apply(undefined, [
     widgetRequire,
     widgetExports,
     InvisibleWidget,
     VisibleWidget,
-    React,
-    ...restrict.objectValues
+    React
   ])
   const widgetTypes: t.Types = widgetExports.types!
   const widgetWidget: t.Widget = widgetExports.widget!
@@ -702,26 +698,37 @@ function z(e, t) {
  * @returns 控件的类型定义
  */
 async function importCustomWidget(code: string, isFromWidgetShop: boolean): Promise<t.Types> {
-  const { types, widget } = await loadCustomWidget(code, isFromWidgetShop)
-  return new Promise((resolve, reject): void => {
-    registerCustomWidget(
-      { types, widget },
-      (): void => {
-        const { type } = types
-        if (!isFromWidgetShop) {
-          Storage.addUnsafeExtension({ type, types, code })
-          O.oTHelper.extensionWidget?.clientOp.addUnsafeExtensionWidget(
-            { type, code }
-          )
+  try {
+    const { types, widget } = await loadCustomWidget(code, isFromWidgetShop)
+    return new Promise((resolve, reject): void => {
+      registerCustomWidget(
+        { types, widget },
+        (): void => {
+          const { type } = types
+          if (!isFromWidgetShop) {
+            Storage.addUnsafeExtension({ type, types, code })
+            O.oTHelper.extensionWidget?.clientOp.addUnsafeExtensionWidget(
+              { type, code }
+            )
+          }
+          Event.dispatch(Message.wrapUpdateExtensionWidgetList())
+          resolve(types)
+        },
+        (): void => {
+          reject("User cancel import widget")
         }
-        Event.dispatch(Message.wrapUpdateExtensionWidgetList())
-        resolve(types)
-      },
-      (): void => {
-        reject("User cancel import widget")
-      }
-    )
-  })
+      )
+    })
+  } catch (error) {
+    console.error(error)
+    const errorMessage = error instanceof Error ? error.message : String(error)
+    Event.dispatch(Message.wrapOpenConfirmDialog({
+      allowText: Language.format(Language.zh_CN, "cloudDb.know").toString(),
+      title: "导入自定义控件出错",
+      content: errorMessage + "\n\n详细错误信息请到浏览器控制台中查看",
+      cancelBtnVisible: false
+    }))
+  }
 }
 
 /**
@@ -742,35 +749,43 @@ export async function importCostumeWidgetFromBlob(blob: Blob, isFromWidgetShop: 
     }
   )
   if (!isFromWidgetShop) {
-    checkKeyWords(code)
+    await checkKeyWords(code)
   }
   return await importCustomWidget(code, isFromWidgetShop)
 }
 
 /**
- * 对控件代码进行关键词检查，如果检查不通过，则抛出异常
+ * 对控件代码进行关键词检查，如果存在危险关键词，则询问用户是否继续导入，如果用户拒绝，则抛出异常
  *
  * @param code 控件代码
  */
-function checkKeyWords(code: string): void {
-  if (/getElementsByClassName\([\s\S]*readonly[\s\S]*\)/i.test(code)) {
-    throw new Error("file getElementsByClassName(*readonly*) not allow")
-  }
-  const includedKeyWords: string[] = []
-  restrict.keyWords.forEach((keyWord): void => {
-    if (code.includes(keyWord)) {
-      includedKeyWords.push(keyWord)
+async function checkKeyWords(code: string) {
+  return new Promise<void>((resolve, reject) => {
+    const messages: string[] = []
+    if (/getElementsByClassName\([\s\S]*readonly[\s\S]*\)/i.test(code)) {
+      messages.push("CoCo 不允许 getElementsByClassName(*readonly*)，虽然 CoCo Next 允许它，但是可能导致作品在 CoCo 中出现异常")
+    }
+    const includedKeyWords: string[] = []
+    restrict.keyWords.forEach((keyWord): void => {
+      if (code.includes(keyWord)) {
+        includedKeyWords.push(keyWord)
+      }
+    })
+    if (includedKeyWords.length > 0) {
+      messages.push(`自定义控件存在危险关键词：${includedKeyWords.join("、")}，虽然 CoCo Next 允许自定义控件存在危险关键词，但是可能导致作品在 CoCo 中出现异常`)
+    }
+    if (messages.length > 0) {
+      Event.a(Message.zh({
+        onConfirm() { resolve() },
+        onCancel() { reject(new Error("User cancel import widget")) },
+        allowText: "确认导入",
+        title: messages.join("\n"),
+        isDangerous: true
+      }))
+    } else {
+      resolve()
     }
   })
-  if (includedKeyWords.length > 0) {
-    Event.dispatch(Message.wrapOpenConfirmDialog({
-      allowText: Language.format(Language.zh_CN, "cloudDb.know").toString(),
-      title: "error",
-      content: "自定义控件存在问题，不支持导入",
-      cancelBtnVisible: false
-    }))
-    throw new Error(`file ${includedKeyWords.join("，")} not allow`)
-  }
 }
 
 function Z(e, t) {

@@ -3907,7 +3907,6 @@ var an = function __importDefault(module) {
   return defaultExport;
 }(on);
 import sn = require("../shared/widget/custom/storage");
-import cn = require("../shared/widget/custom/restrict")
 import ln = require("../../unrestored/shared/1531/2584/177");
 import un = require("../../unrestored/shared/1531/2584/327");
 import dn = require("../../unrestored/shared/1531/2584/917");
@@ -7145,11 +7144,10 @@ var uo = React.memo(function (e) {
             id: "screeMaxSize"
           })
         }));
-      } else {
-        e.stopPropagation();
-        m(Y.vg(c));
-        m(Y.Df(t.id));
       }
+      e.stopPropagation();
+      m(Y.vg(c));
+      m(Y.Df(t.id));
     }
   }, React.createElement(z.j, {
     type: "icon-copy"
@@ -8338,10 +8336,9 @@ var ho = React.memo(function () {
             id: "screeMaxSize"
           })
         }));
-      } else {
-        x(Y.Hf());
-        c(r.size);
       }
+      x(Y.Hf());
+      c(r.size);
     }
   }, React.createElement(z.j, {
     type: "icon-add2",

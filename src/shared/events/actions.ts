@@ -2179,7 +2179,6 @@ var Tn = function __importDefault(module) {
 import Sn = require("../../../unrestored/shared/1531/2584/407");
 import In = require("../../../unrestored/shared/1531/2584/38/343");
 import An = require("../../../unrestored/shared/1531/2584/38/375");
-import jn = require("../widget/custom/restrict");
 import Nn = require("../../../unrestored/shared/1531/2584/143");
 import Rn = require("../../../unrestored/shared/1531/2584/391/index");
 import kn = require("../../../unrestored/shared/1531/2584/21/index");
@@ -8616,13 +8615,6 @@ function As(e) {
             var o = bn.f(r);
             if (r.includes(CustomWidgetType.UNSAFE_EXTENSION_PREFIX) && o) {
               var c = o;
-              jn.a.forEach(function (e) {
-                var t;
-                if (null === (t = c.code) || undefined === t ? undefined : t.includes(e)) {
-                  a.add(e);
-                  i.add(o.types.title);
-                }
-              });
             }
             if (null === o || undefined === o || null === (t = o.types) || undefined === t ? undefined : t.platforms) {
               var d = o.types.platforms.includes("web");
