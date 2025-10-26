@@ -34955,9 +34955,26 @@ var Pm = {
     iconId: "icon-widget-http-client",
     blocks: Wn.u
   },
-  getTemplate: function (e) {
-    var t = "<field name=\"WIDGET_ID\">".concat(e, "</field>");
-    return ["<block type=\"http_on_client_success\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"http_on_client_error\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), mp.d, "<block type=\"http_set_client_url\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"VALUE\">\n        <shadow type=\"text\">\n          <field name=\"TEXT\"></field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"http_set_client_header\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"VALUE\">\n        <shadow type=\"text\">\n          <field name=\"TEXT\"></field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"http_send_get_request\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"http_send_post_request\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"VALUE\">\n        <shadow type=\"text\">\n          <field name=\"TEXT\"></field>\n        </shadow>\n      </value>\n    </block>"), mp.d, "<block type=\"http_get_client_url\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), mp.d, "<block type=\"object_json_parse\" uncache=\"true\">\n      <value name=\"TEXT\">\n        <shadow type=\"text\">\n          <field name=\"TEXT\"></field>\n        </shadow>\n      </value>\n    </block>"];
+  getTemplate: function (e: string) {
+    const widgetField = `<field name="WIDGET_ID">${e}</field>`;
+    const textInput = (name) => `<value name="${name}"><shadow type="text"><field name="TEXT"></field></shadow></value>`;
+    const sep = mp.d;
+    return [
+      `<block type="http_on_client_success" uncache="true">${widgetField}</block>`,
+      `<block type="http_on_client_error" uncache="true">${widgetField}</block>`,
+      sep,
+      `<block type="http_set_client_url" uncache="true">${widgetField}${textInput('VALUE')}</block>`,
+      `<block type="http_set_client_header" uncache="true">${widgetField}${textInput('VALUE')}</block>`,
+      `<block type="http_send_get_request" uncache="true">${widgetField}</block>`,
+      `<block type="http_send_post_request" uncache="true">${widgetField}${textInput('VALUE')}</block>`,
+      `<block type="http_send_delete_request" uncache="true">${widgetField}</block>`,
+      `<block type="http_send_put_request" uncache="true">${widgetField}${textInput('VALUE')}</block>`,
+      `<block type="http_send_patch_request" uncache="true">${widgetField}${textInput('VALUE')}</block>`,
+      sep,
+      `<block type="http_get_client_url" uncache="true">${widgetField}</block>`,
+      sep,
+      `<block type="object_json_parse" uncache="true">${textInput('TEXT')}</block>`
+    ];
   },
   blockDeclareGroup: {
     setBlockGroupSnippet: function (e) {
