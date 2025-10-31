@@ -86,7 +86,12 @@ var c = {
     id: "toolbox-array",
     text: "%{BKY_ARRAY}",
     iconId: "icon-toolbox-list",
-    blocks: ["<label type=\"".concat(i.ARRAY, "\" width=\"10\" height=\"10\" align=\"center\"></label>"), "array_get", "lists_append", "lists_insert_value", "array_remove_item", "lists_replace", "array_copy", s, "array_get_item", "array_get_length", "lists_index_of", "lists_is_exist", s, "array_foreach"]
+    blocks: [
+      "<label type=\"".concat(i.ARRAY, "\" width=\"10\" height=\"10\" align=\"center\"></label>"),
+      // [CoCo Next] 在列表积木盒中添加 [临时列表 array_create]
+      "array_get", "array_create", "lists_append", "lists_insert_value", "array_remove_item", "lists_replace",
+      "array_copy", s, "array_get_item", "array_get_length", "lists_index_of", "lists_is_exist", s, "array_foreach"
+    ]
   },
   object: {
     id: "toolbox-object",
