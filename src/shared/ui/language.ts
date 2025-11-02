@@ -500,6 +500,7 @@ var u = r.a(r.a({}, {
   broadcastInvalid: "存在非法字符",
   addBroadcastOnlyCurrentScreenTips: "* 创建的广播只能在当前屏幕使用",
   screen: "屏幕",
+  // [CoCo Next] 移除屏幕数量上线
   screeMaxSize: "屏幕数量已达到 CoCo 上限，虽然 CoCo Next 允许你继续添加屏幕",
   changeIcon: "更换图标",
   blankInputValue: "输入不能为空",

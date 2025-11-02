@@ -8615,6 +8615,7 @@ function As(e) {
             var o = bn.f(r);
             if (r.includes(CustomWidgetType.UNSAFE_EXTENSION_PREFIX) && o) {
               var c = o;
+              // [CoCo Next] 移除运行作品时的控件关键词检查
             }
             if (null === o || undefined === o || null === (t = o.types) || undefined === t ? undefined : t.platforms) {
               var d = o.types.platforms.includes("web");

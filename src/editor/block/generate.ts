@@ -1020,6 +1020,15 @@ function W(e, t) {
     colour: "%{BKY_LISTS_HUE}",
     inputsInline: true
   });
+  // [CoCo Next] 定义积木 [临时列表 array_create]
+  e.insertBlockProfile("array_create", {
+    type: "array_create",
+    message0: "",
+    colour: "%{BKY_LISTS_HUE}",
+    inputsInline: true,
+    output: "Array",
+    mutator: "ARRAY_CREATE_MUTATOR"
+  });
   e.insertBlockProfile("lists_append", {
     type: "lists_append",
     message0: "%{BKY_LISTS_APPEND}",
@@ -1256,6 +1265,8 @@ function W(e, t) {
   });
 }
 function H(e) {
+  // [CoCo Next] 定义 [临时列表 array_create] 的XML
+  e.insertBlockXML("array_create", "<mutation items='1'></mutation>", true);
   e.insertBlockXML("lists_replace", "\n    <mutation pos='nth'></mutation>\n    <value name=\"ARRAY\">\n      <shadow type=\"array_get\"></shadow>\n    </value>\n    <value name=\"INDEX\">\n      <shadow type=\"math_number\">\n        <field name=\"NUM\" constraints=\"1,,1\">1</field>\n      </shadow>\n    </value>\n    <value name=\"VALUE\">\n      <shadow type=\"math_number\">\n        <field name=\"NUM\">0</field>\n      </shadow>\n    </value>\n    ", true);
   e.insertBlockXML("array_remove_item", "\n    <mutation pos='nth'></mutation>\n    <value name=\"ARRAY\">\n      <shadow type=\"array_get\"></shadow>\n    </value>\n    <value name=\"INDEX\">\n      <shadow type=\"math_number\">\n        <field name=\"NUM\" constraints='1,,1'>1</field>\n      </shadow>\n    </value>\n  ", true);
   e.insertBlockXML("array_get", undefined, true);
@@ -1273,6 +1284,20 @@ function V(e) {
     var r = t.blocks[n];
     var o = e.getFieldValue(r, "ARRAY") || "";
     return _.s("getVariableValue", [_.o(o)]);
+  });
+  // [CoCo Next] 定义 [临时列表 array_create] 的代码生成器
+  e.insertBlockSnippetGenerator("array_create", function (t, n) {
+    for (var r = 0, o = "[";;) {
+      var i = e.valueToCode(t, n, "ITEM".concat(r), e.ORDER_FUNCTION_CALL);
+      if (!i) {
+        break;
+      }
+      o += `${i},`;
+      r++;
+    }
+    o += "]";
+    var s = t.blocks[n];
+    return _.l(o, s, e, false, true);
   });
   var t = function (t, n) {
     var r = G.a(n);
@@ -1358,6 +1383,95 @@ function V(e) {
   });
 }
 function z(e) {
+  // [CoCo Next] 定义用于 [临时列表 array_create] 积木的变形器 [ARRAY_CREATE_MUTATOR]
+  e.extensions.register_mutator("ARRAY_CREATE_MUTATOR", {
+    itemCount_: 0,
+    updateShape_: function () {
+      e.events.disable();
+      if (!this.get_input("TITLE")) {
+        this.append_dummy_input("TITLE").append_field(e.Msg.NEXT_MARK, "TEXT");
+        this.append_dummy_input("TITLE").append_field(e.Msg.LIST, "TEXT");
+      }
+      if (this.get_input("MUTATE_REMOVE_BUTTON")) {
+        this.remove_input("MUTATE_REMOVE_BUTTON");
+      }
+      if (this.get_input("MUTATE_ADD_BUTTON")) {
+        this.remove_input("MUTATE_ADD_BUTTON");
+      }
+      for (var t = this.itemCount_;; t++) {
+        var n = "ITEM".concat(t);
+        if (!this.get_input(n)) {
+          break;
+        }
+        this.remove_input(n);
+      }
+      for (var o = 0; o < this.itemCount_; o++) {
+        var i = "ITEM".concat(o);
+        if (!this.get_input(i)) {
+          var a = this.append_shadow_input(i, "<shadow type=\"text\"><field name=\"TEXT\">item".concat(o + 1, "</field></shadow>"));
+          a.set_check(["Number", "String", "Array", "Boolean", "Object"]);
+          if (0 !== o) {
+            a.append_field(",");
+          }
+        }
+      }
+      if (0 === this.itemCount_) {
+        if (this.get_input("MUTATE_REMOVE_BUTTON")) {
+          this.remove_input("MUTATE_REMOVE_BUTTON");
+        }
+        this.append_dummy_input("MUTATE_ADD_BUTTON").append_field(_.p(), "MUTATE_ADD_BUTTON");
+      } else {
+        this.append_dummy_input("MUTATE_REMOVE_BUTTON").append_field(_.q(undefined), "MUTATE_REMOVE_BUTTON");
+        this.append_dummy_input("MUTATE_ADD_BUTTON").append_field(_.p(), "MUTATE_ADD_BUTTON");
+      }
+      e.events.enable();
+    },
+    addMutation: function (t) {
+      if (e.events.is_undoing()) {
+        if ("number" === typeof t) {
+          this.itemCount_ = t;
+          this.updateShape_();
+        }
+      } else {
+        var n = this.itemCount_;
+        this.itemCount_++;
+        this.updateShape_();
+        var r = _.c("mutation", {
+          block: this,
+          old_value: n,
+          new_value: this.itemCount_
+        });
+        e.events.fire(r);
+      }
+    },
+    removeMutation: function (t) {
+      if (e.events.is_undoing()) {
+        if ("number" === typeof t) {
+          this.itemCount_ = t;
+          this.updateShape_();
+        }
+      } else {
+        var n = this.itemCount_;
+        this.itemCount_--;
+        this.updateShape_();
+        var r = _.c("mutation", {
+          block: this,
+          old_value: n,
+          new_value: this.itemCount_
+        });
+        e.events.fire(r);
+      }
+    },
+    mutationToDom: function () {
+      var e = document.createElement("mutation");
+      e.setAttribute("items", String(this.itemCount_));
+      return e;
+    },
+    domToMutation: function (e) {
+      this.itemCount_ = parseInt(e.getAttribute("items"), 10);
+      this.updateShape_();
+    }
+  });
   e.extensions.register_mutator("ARRAY_ITEM_MUTATOR", {
     updateShape_: function (t) {
       var n = "add" === t;
@@ -1429,15 +1543,6 @@ function Y(e, t) {
     inputsInline: true,
     output: "Object",
     mutator: "OBJECT_CREATE_MUTATOR"
-  });
-  // [CoCo Next] 定义积木 [临时列表 array_create]
-  e.insertBlockProfile("array_create", {
-    type: "array_create",
-    message0: "",
-    colour: "%{BKY_LISTS_HUE}",
-    inputsInline: true,
-    output: "Array",
-    mutator: "ARRAY_CREATE_MUTATOR"
   });
   e.insertBlockProfile("object_set_item", {
     type: "object_set_item",
@@ -1537,8 +1642,6 @@ function Y(e, t) {
 function K(e) {
   e.insertBlockXML("object_get", undefined, true);
   e.insertBlockXML("object_create", "<mutation items='1'></mutation>", true);
-  // [CoCo Next] 定义 [临时列表 array_create] 的XML
-  e.insertBlockXML("array_create", "<mutation items='1'></mutation>", true);
   e.insertBlockXML("object_set_item", "<value name=\"OBJECT\">\n      <shadow type=\"object_get\"></shadow>\n    </value>\n    <value name=\"KEY\">\n      <shadow type=\"text\">\n        <field name=\"TEXT\">key</field>\n      </shadow>\n    </value>\n    <value name=\"VALUE\">\n      <shadow type=\"math_number\">\n        <field name=\"NUM\" allow_text=\"true\">0</field>\n      </shadow>\n    </value>", true);
   e.insertBlockXML("object_delete_item", "<value name=\"OBJECT\">\n      <shadow type=\"object_get\"></shadow>\n    </value>\n    <value name=\"KEY\">\n      <shadow type=\"text\">\n        <field name=\"TEXT\">key</field>\n      </shadow>\n    </value>", true);
   e.insertBlockXML("object_clear", "<value name=\"OBJECT\">\n      <shadow type=\"object_get\"></shadow>\n    </value>", true);
@@ -1571,20 +1674,6 @@ function q(e) {
     o += "]";
     var s = t.blocks[n];
     return _.l(_.s("createTempObject", [o]), s, e, false, true);
-  });
-  // [CoCo Next] 定义 [临时列表 array_create] 的代码生成器
-  e.insertBlockSnippetGenerator("array_create", function (t, n) {
-    for (var r = 0, o = "[";;) {
-      var i = e.valueToCode(t, n, "ITEM".concat(r), e.ORDER_FUNCTION_CALL);
-      if (!i) {
-        break;
-      }
-      o += `${i},`;
-      r++;
-    }
-    o += "]";
-    var s = t.blocks[n];
-    return _.l(o, s, e, false, true);
   });
   e.insertBlockSnippetGenerator("object_set_item", function (n, r) {
     var o = n.blocks[r];
@@ -1663,94 +1752,6 @@ function X(e) {
         var s = "VALUE".concat(o);
         if (!this.get_input(s)) {
           this.append_shadow_input(s, "<shadow type=\"math_number\"><field name=\"NUM\" allow_text=\"true\">0</field></shadow>").append_field(":");
-        }
-      }
-      if (0 === this.itemCount_) {
-        if (this.get_input("MUTATE_REMOVE_BUTTON")) {
-          this.remove_input("MUTATE_REMOVE_BUTTON");
-        }
-        this.append_dummy_input("MUTATE_ADD_BUTTON").append_field(_.p(), "MUTATE_ADD_BUTTON");
-      } else {
-        this.append_dummy_input("MUTATE_REMOVE_BUTTON").append_field(_.q(undefined), "MUTATE_REMOVE_BUTTON");
-        this.append_dummy_input("MUTATE_ADD_BUTTON").append_field(_.p(), "MUTATE_ADD_BUTTON");
-      }
-      e.events.enable();
-    },
-    addMutation: function (t) {
-      if (e.events.is_undoing()) {
-        if ("number" === typeof t) {
-          this.itemCount_ = t;
-          this.updateShape_();
-        }
-      } else {
-        var n = this.itemCount_;
-        this.itemCount_++;
-        this.updateShape_();
-        var r = _.c("mutation", {
-          block: this,
-          old_value: n,
-          new_value: this.itemCount_
-        });
-        e.events.fire(r);
-      }
-    },
-    removeMutation: function (t) {
-      if (e.events.is_undoing()) {
-        if ("number" === typeof t) {
-          this.itemCount_ = t;
-          this.updateShape_();
-        }
-      } else {
-        var n = this.itemCount_;
-        this.itemCount_--;
-        this.updateShape_();
-        var r = _.c("mutation", {
-          block: this,
-          old_value: n,
-          new_value: this.itemCount_
-        });
-        e.events.fire(r);
-      }
-    },
-    mutationToDom: function () {
-      var e = document.createElement("mutation");
-      e.setAttribute("items", String(this.itemCount_));
-      return e;
-    },
-    domToMutation: function (e) {
-      this.itemCount_ = parseInt(e.getAttribute("items"), 10);
-      this.updateShape_();
-    }
-  });
-  // [CoCo Next] 定义用于 [临时列表 array_create] 积木的变形器 [ARRAY_CREATE_MUTATOR]
-  e.extensions.register_mutator("ARRAY_CREATE_MUTATOR", {
-    itemCount_: 0,
-    updateShape_: function () {
-      e.events.disable();
-      if (!this.get_input("TITLE")) {
-        this.append_dummy_input("TITLE").append_field(e.Msg.LIST, "TEXT");
-      }
-      if (this.get_input("MUTATE_REMOVE_BUTTON")) {
-        this.remove_input("MUTATE_REMOVE_BUTTON");
-      }
-      if (this.get_input("MUTATE_ADD_BUTTON")) {
-        this.remove_input("MUTATE_ADD_BUTTON");
-      }
-      for (var t = this.itemCount_;; t++) {
-        var n = "ITEM".concat(t);
-        if (!this.get_input(n)) {
-          break;
-        }
-        this.remove_input(n);
-      }
-      for (var o = 0; o < this.itemCount_; o++) {
-        var i = "ITEM".concat(o);
-        if (!this.get_input(i)) {
-          var a = this.append_shadow_input(i, "<shadow type=\"text\"><field name=\"TEXT\">item".concat(o + 1, "</field></shadow>"));
-          a.set_check(["Number", "String", "Array", "Boolean", "Object"]);
-          if (0 !== o) {
-            a.append_field(",");
-          }
         }
       }
       if (0 === this.itemCount_) {
@@ -2716,6 +2717,9 @@ function getCustomWidgetBlockParamShadow(valueType: CustomWidgetTypes.ValueType,
   } else {
     defaultValueType = valueType
   }
+  if (defaultValueType != "string" && defaultValueType != "number" && defaultValueType != "boolean") {
+    defaultValue = String(defaultValue)
+  }
   let shadow = `<shadow type="text">\n    <field name="TEXT">${defaultValue}</field>\n  </shadow>`
   switch (defaultValueType) {
     case "number":
@@ -3265,7 +3269,7 @@ function _e(e, t) {
               this.set_field_value("".concat(t.Msg.WIDGET_OF, " ").concat(b, " ").concat(t.Msg.WIDGET_SET_TO), "PROPERTY");
             }
         }
-        var N = LoadCustomWidget.getCheckType(l, f);
+        var N = LoadCustomWidget.getCheckType(l, f, u);
         if ("__visible" !== r.key && "__disabled" !== r.key) {
           if (h) {
             var R = new ue.a({
@@ -3462,7 +3466,7 @@ function _e(e, t) {
           } else {
             const shadow = getCustomWidgetBlockParamShadow(valueType, defaultValue);
             var g = e.append_shadow_input(paramKey, shadow);
-            var _ = LoadCustomWidget.getCheckType(valueType, checkType);
+            var _ = LoadCustomWidget.getCheckType(valueType, checkType, defaultValue);
             g.set_check(_);
             if (u) {
               g.insert_field_at(0, u, "".concat(paramKey, "_LABEL"));
@@ -3908,6 +3912,7 @@ var be = {
     INVISIBLE_COMPONENTS: "屏幕功能",
     GLOBAL_COMPONENTS: "全局功能",
     ANY_COMPONENTS: "任意控件",
+    NEXT_MARK: "[N]",
     WHEN: "%1 当 %2 %3",
     REPEAT_FOREVER: "重复执行 %1 %2",
     REPEAT: "重复执行 %1 次 %2 %3",

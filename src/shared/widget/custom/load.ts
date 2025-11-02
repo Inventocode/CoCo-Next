@@ -529,6 +529,7 @@ export async function loadCustomWidget(
     class {},
     class {},
     React
+    // [CoCo Next] 移除自定义控件的全局变量访问限制
   ])
   const EXTERNAL_MODULE_BASE_URL: string = "https://static.codemao.cn/appcraft/modules/"
   await Promise.all(ExternalModule.getExternalModules().map(
@@ -553,6 +554,7 @@ export async function loadCustomWidget(
     InvisibleWidget,
     VisibleWidget,
     React
+    // [CoCo Next] 移除自定义控件的全局变量访问限制
   ])
   const widgetTypes: t.Types = widgetExports.types!
   const widgetWidget: t.Widget = widgetExports.widget!
@@ -698,6 +700,7 @@ function z(e, t) {
  * @returns 控件的类型定义
  */
 async function importCustomWidget(code: string, isFromWidgetShop: boolean): Promise<t.Types> {
+  // [CoCo Next] 导入自定义控件出错时提示
   try {
     const { types, widget } = await loadCustomWidget(code, isFromWidgetShop)
     return new Promise((resolve, reject): void => {
@@ -728,6 +731,7 @@ async function importCustomWidget(code: string, isFromWidgetShop: boolean): Prom
       content: errorMessage + "\n\n详细错误信息请到浏览器控制台中查看",
       cancelBtnVisible: false
     }))
+    throw error
   }
 }
 
@@ -755,6 +759,8 @@ export async function importCostumeWidgetFromBlob(blob: Blob, isFromWidgetShop: 
 }
 
 /**
+ * [CoCo Next] 移除导入控件时的关键词检查
+ *
  * 对控件代码进行关键词检查，如果存在危险关键词，则询问用户是否继续导入，如果用户拒绝，则抛出异常
  *
  * @param code 控件代码
@@ -1017,7 +1023,11 @@ function de(e, t) {
   }
 }
 
-export function getCheckType(valueType: t.ValueType, checkType: t.CheckType | undefined) {
+export function getCheckType(
+  valueType: t.ValueType,
+  checkType: t.CheckType | undefined,
+  defaultValue: string | number | boolean
+) {
   var result = new Set()
   let types = checkType || valueType
   types= Array.isArray(types) ? types : [types]
@@ -1026,6 +1036,18 @@ export function getCheckType(valueType: t.ValueType, checkType: t.CheckType | un
   }
   if (types.includes("color") || types.includes("image") || types.includes("icon") || types.includes("richTextString")) {
     types.push("string")
+  }
+  // [CoCo Next] 把默认值类型添加到检查类型中，防止默认值类型不在检查类型中导致积木被异常分离
+  const typeofDefaultValue = typeof defaultValue
+  switch (typeofDefaultValue) {
+    case "string":
+    case "number":
+    case "boolean":
+      types.push(typeofDefaultValue)
+      break
+    default:
+      types.push("string")
+      break
   }
   types.forEach(type => {
     result.add(_.upperFirst(`${type}`))

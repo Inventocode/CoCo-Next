@@ -7137,6 +7137,7 @@ var uo = React.memo(function (e) {
   })), !a && React.createElement("div", {
     className: ro.a.copy,
     onClick: function (e) {
+      // [CoCo Next] 移除屏幕数量上限
       if (l.size > 98) {
         m(Y.mj({
           showPrefixIcon: false,
@@ -8329,6 +8330,7 @@ var ho = React.memo(function () {
   }), !k && React.createElement("div", {
     className: ro.a.addScreen,
     onClick: function () {
+      // [CoCo Next] 移除屏幕数量上限
       if (r.size > 98) {
         x(Y.mj({
           showPrefixIcon: false,
