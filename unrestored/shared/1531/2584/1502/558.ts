@@ -4,10 +4,10 @@
  * 模块 ID：558
  */
 
-"use strict";
+"use strict"
 
 function r(e, t) {
-  return !!e && e.contains(t);
+  return !!e && e.contains(t)
 }
-export { r as a };
-export default r;
+export { r as a }
+export default r

@@ -4,6 +4,6 @@
  * 模块 ID：TkkK
  */
 
-module.exports = "https://creation.codemao.cn/coco/home/dist/" + "asset/close_mask_0d93e.png";
+module.exports = "https://creation.codemao.cn/coco/home/dist/" + "asset/close_mask_0d93e.png"
 
 /***/

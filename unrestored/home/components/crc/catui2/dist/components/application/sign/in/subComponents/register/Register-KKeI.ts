@@ -4,47 +4,47 @@
  * 模块 ID：KKeI
  */
 
-"use strict";
+"use strict"
 
 /* harmony export (binding) */
 /* harmony import */
-export { RegisterContainer };
-import * as __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__ from "@babel/runtime/helpers/esm/asyncToGenerator";
+export { RegisterContainer }
+import * as __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__ from "@babel/runtime/helpers/esm/asyncToGenerator"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__ from "@babel/runtime/helpers/esm/slicedToArray";
+import * as __WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__ from "@babel/runtime/helpers/esm/slicedToArray"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_2_babel_plugin_react_css_modules_dist_browser_getClassName__ from "babel-plugin-react-css-modules/dist/browser/getClassName";
+import * as __WEBPACK_IMPORTED_MODULE_2_babel_plugin_react_css_modules_dist_browser_getClassName__ from "babel-plugin-react-css-modules/dist/browser/getClassName"
 /* harmony import */
-import __WEBPACK_IMPORTED_MODULE_2_babel_plugin_react_css_modules_dist_browser_getClassName___default from "babel-plugin-react-css-modules/dist/browser/getClassName";
+import __WEBPACK_IMPORTED_MODULE_2_babel_plugin_react_css_modules_dist_browser_getClassName___default from "babel-plugin-react-css-modules/dist/browser/getClassName"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_3__babel_runtime_regenerator__ from "@babel/runtime/regenerator";
+import * as __WEBPACK_IMPORTED_MODULE_3__babel_runtime_regenerator__ from "@babel/runtime/regenerator"
 /* harmony import */
-import __WEBPACK_IMPORTED_MODULE_3__babel_runtime_regenerator___default from "@babel/runtime/regenerator";
+import __WEBPACK_IMPORTED_MODULE_3__babel_runtime_regenerator___default from "@babel/runtime/regenerator"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_4_react__ from "react";
+import * as __WEBPACK_IMPORTED_MODULE_4_react__ from "react"
 /* harmony import */
-import __WEBPACK_IMPORTED_MODULE_4_react___default from "react";
+import __WEBPACK_IMPORTED_MODULE_4_react___default from "react"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_5__def__ from "../../def-9+Hp";
+import * as __WEBPACK_IMPORTED_MODULE_5__def__ from "../../def-9+Hp"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_6__base_input__ from "./base/input-qXMC";
+import * as __WEBPACK_IMPORTED_MODULE_6__base_input__ from "./base/input-qXMC"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_7__base_button__ from "../../base/button-sg+3";
+import * as __WEBPACK_IMPORTED_MODULE_7__base_button__ from "../../base/button-sg+3"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_8__base_spinner__ from "./base/spinner-WvBG";
+import * as __WEBPACK_IMPORTED_MODULE_8__base_spinner__ from "./base/spinner-WvBG"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_9__auth__ from "../../auth-819E";
+import * as __WEBPACK_IMPORTED_MODULE_9__auth__ from "../../auth-819E"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_10__utils__ from "./utils-rEd4";
+import * as __WEBPACK_IMPORTED_MODULE_10__utils__ from "./utils-rEd4"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_11__i18n__ from "../../i18n-FsOf";
+import * as __WEBPACK_IMPORTED_MODULE_11__i18n__ from "../../i18n-FsOf"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_12__style_module_css__ from "../../style.module.css-VPet";
+import * as __WEBPACK_IMPORTED_MODULE_12__style_module_css__ from "../../style.module.css-VPet"
 /* harmony import */
-import __WEBPACK_IMPORTED_MODULE_12__style_module_css___default from "../../style.module.css-VPet";
+import __WEBPACK_IMPORTED_MODULE_12__style_module_css___default from "../../style.module.css-VPet"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_13__agreement__ from "./agreement-q2lc";
-var _this = this;
+import * as __WEBPACK_IMPORTED_MODULE_13__agreement__ from "./agreement-q2lc"
+var _this = this
 var _styleModuleImportMap = {
   "../../style_module.css": {
     "wrap": "CUI-sign-in-dialog-wrap",
@@ -86,225 +86,225 @@ var _styleModuleImportMap = {
     "text-main": "CUI-sign-in-dialog-text-main",
     "text-second": "CUI-sign-in-dialog-text-second"
   }
-};
-var phoneInputEl;
-var passwordInputEl;
-var smsCodeInputEl;
-var useState = __WEBPACK_IMPORTED_MODULE_4_react__.useState;
-var useEffect = __WEBPACK_IMPORTED_MODULE_4_react__.useEffect;
-var useCallback = __WEBPACK_IMPORTED_MODULE_4_react__.useCallback;
-var useRef = __WEBPACK_IMPORTED_MODULE_4_react__.useRef;
+}
+var phoneInputEl
+var passwordInputEl
+var smsCodeInputEl
+var useState = __WEBPACK_IMPORTED_MODULE_4_react__.useState
+var useEffect = __WEBPACK_IMPORTED_MODULE_4_react__.useEffect
+var useCallback = __WEBPACK_IMPORTED_MODULE_4_react__.useCallback
+var useRef = __WEBPACK_IMPORTED_MODULE_4_react__.useRef
 var RegisterContainer = function RegisterContainer(props) {
-  var isRequesting = props.isRequesting;
-  var setIsRequesting = props.setIsRequesting;
-  var smsTimeStamp = props.smsTimeStamp;
-  var setSmsTimeStamp = props.setSmsTimeStamp;
-  var switchView = props.switchView;
-  var setResetSuccess = props.setResetSuccess;
-  var _useState = useState(true);
-  var _useState2 = __WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default(_useState, 2);
-  var disableRegister = _useState2[0];
-  var setDisableRegister = _useState2[1];
-  var _useState3 = useState(0);
-  var _useState4 = __WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default(_useState3, 2);
-  var smsCountDown = _useState4[0];
-  var setSmsCountDown = _useState4[1];
-  var _useState5 = useState(undefined);
-  var _useState6 = __WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default(_useState5, 2);
-  var error = _useState6[0];
-  var setError = _useState6[1];
-  var isDestory = useRef(false);
-  var _useState7 = useState(false);
-  var _useState8 = __WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default(_useState7, 2);
-  var agreementChecked = _useState8[0];
-  var setAgreementChecked = _useState8[1];
+  var isRequesting = props.isRequesting
+  var setIsRequesting = props.setIsRequesting
+  var smsTimeStamp = props.smsTimeStamp
+  var setSmsTimeStamp = props.setSmsTimeStamp
+  var switchView = props.switchView
+  var setResetSuccess = props.setResetSuccess
+  var _useState = useState(true)
+  var _useState2 = __WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default(_useState, 2)
+  var disableRegister = _useState2[0]
+  var setDisableRegister = _useState2[1]
+  var _useState3 = useState(0)
+  var _useState4 = __WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default(_useState3, 2)
+  var smsCountDown = _useState4[0]
+  var setSmsCountDown = _useState4[1]
+  var _useState5 = useState(undefined)
+  var _useState6 = __WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default(_useState5, 2)
+  var error = _useState6[0]
+  var setError = _useState6[1]
+  var isDestory = useRef(false)
+  var _useState7 = useState(false)
+  var _useState8 = __WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default(_useState7, 2)
+  var agreementChecked = _useState8[0]
+  var setAgreementChecked = _useState8[1]
   var isPhoneErr = useCallback(function () {
-    return error && error.type === __WEBPACK_IMPORTED_MODULE_9__auth__.AuthErrorType.PHONE;
-  }, [error]);
+    return error && error.type === __WEBPACK_IMPORTED_MODULE_9__auth__.AuthErrorType.PHONE
+  }, [error])
   var isPasswordCodeErr = useCallback(function () {
-    return error && error.type === __WEBPACK_IMPORTED_MODULE_9__auth__.AuthErrorType.PWD;
-  }, [error]);
+    return error && error.type === __WEBPACK_IMPORTED_MODULE_9__auth__.AuthErrorType.PWD
+  }, [error])
   var isSmsCodeErr = useCallback(function () {
-    return error && error.type === __WEBPACK_IMPORTED_MODULE_9__auth__.AuthErrorType.SMS_CODE;
-  }, [error]);
+    return error && error.type === __WEBPACK_IMPORTED_MODULE_9__auth__.AuthErrorType.SMS_CODE
+  }, [error])
   var isOtherErr = function isOtherErr() {
-    return error && error.type === __WEBPACK_IMPORTED_MODULE_9__auth__.AuthErrorType.OTHER;
-  };
+    return error && error.type === __WEBPACK_IMPORTED_MODULE_9__auth__.AuthErrorType.OTHER
+  }
   useEffect(function () {
-    isDestory.current = false;
+    isDestory.current = false
     return function () {
-      isDestory.current = true;
-    };
-  });
+      isDestory.current = true
+    }
+  })
   useEffect(function () {
-    updateRegisterBtn();
-  }, [agreementChecked]);
+    updateRegisterBtn()
+  }, [agreementChecked])
   useEffect(function () {
     if (isPhoneErr()) {
-      phoneInputEl.focus();
+      phoneInputEl.focus()
     }
     if (isSmsCodeErr()) {
-      smsCodeInputEl.focus();
+      smsCodeInputEl.focus()
     }
-    var diffSecond = (Date.now() - smsTimeStamp) / 1000;
+    var diffSecond = (Date.now() - smsTimeStamp) / 1000
     if (diffSecond > __WEBPACK_IMPORTED_MODULE_5__def__.SMS_COUNT_DOWN) {
-      return;
+      return
     }
-    var remainSeconds = Math.ceil(__WEBPACK_IMPORTED_MODULE_5__def__.SMS_COUNT_DOWN - diffSecond);
-    setSmsCountDown(remainSeconds);
+    var remainSeconds = Math.ceil(__WEBPACK_IMPORTED_MODULE_5__def__.SMS_COUNT_DOWN - diffSecond)
+    setSmsCountDown(remainSeconds)
     var timer = setInterval(function () {
-      remainSeconds--;
-      setSmsCountDown(remainSeconds);
+      remainSeconds--
+      setSmsCountDown(remainSeconds)
       if (remainSeconds === 0) {
-        clearInterval(timer);
+        clearInterval(timer)
       }
-    }, 1000);
+    }, 1000)
     return function () {
-      clearInterval(timer);
-    };
-  }, [isSmsCodeErr, isPhoneErr, smsTimeStamp]);
+      clearInterval(timer)
+    }
+  }, [isSmsCodeErr, isPhoneErr, smsTimeStamp])
   var updateRegisterBtn = function updateRegisterBtn() {
-    setDisableRegister(phoneInputEl.value === "" || passwordInputEl.value.length < 6 || smsCodeInputEl.value === "" || !agreementChecked);
-  };
+    setDisableRegister(phoneInputEl.value === "" || passwordInputEl.value.length < 6 || smsCodeInputEl.value === "" || !agreementChecked)
+  }
   var onRegisterClick = /*#__PURE__*/function () {
     var _ref = __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_3__babel_runtime_regenerator___default.mark(function _callee() {
-      var phone;
-      var code;
-      var password;
-      var result;
+      var phone
+      var code
+      var password
+      var result
       return __WEBPACK_IMPORTED_MODULE_3__babel_runtime_regenerator___default.wrap(function _callee$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
             case 0:
               if (!disableRegister) {
-                _context.next = 2;
-                break;
+                _context.next = 2
+                break
               }
-              return _context.abrupt("return");
+              return _context.abrupt("return")
             case 2:
-              setError(undefined);
-              phone = phoneInputEl.value;
+              setError(undefined)
+              phone = phoneInputEl.value
               if (__WEBPACK_IMPORTED_MODULE_10__utils__.validatePhoneNumber(phone)) {
-                _context.next = 7;
-                break;
+                _context.next = 7
+                break
               }
               setError({
                 msg: __WEBPACK_IMPORTED_MODULE_11__i18n__.getLanguage("sign_in_dialog/error/phone/format"),
                 type: __WEBPACK_IMPORTED_MODULE_9__auth__.AuthErrorType.PHONE
-              });
-              return _context.abrupt("return");
+              })
+              return _context.abrupt("return")
             case 7:
-              code = smsCodeInputEl.value;
+              code = smsCodeInputEl.value
               if (__WEBPACK_IMPORTED_MODULE_10__utils__.validCode(code)) {
-                _context.next = 11;
-                break;
+                _context.next = 11
+                break
               }
               setError({
                 msg: __WEBPACK_IMPORTED_MODULE_11__i18n__.getLanguage("sign_in_dialog/error/sms_code/fail"),
                 type: __WEBPACK_IMPORTED_MODULE_9__auth__.AuthErrorType.SMS_CODE
-              });
-              return _context.abrupt("return");
+              })
+              return _context.abrupt("return")
             case 11:
-              setIsRequesting(true);
-              password = passwordInputEl.value;
-              _context.prev = 13;
-              _context.next = 16;
+              setIsRequesting(true)
+              password = passwordInputEl.value
+              _context.prev = 13
+              _context.next = 16
               return __WEBPACK_IMPORTED_MODULE_9__auth__.handleRegister({
                 phone: phone,
                 password: password,
                 code: code
-              });
+              })
             case 16:
-              result = _context.sent;
+              result = _context.sent
               if (isDestory.current) {
-                _context.next = 26;
-                break;
+                _context.next = 26
+                break
               }
-              setIsRequesting(false);
+              setIsRequesting(false)
               if (result.isSuccess) {
-                _context.next = 24;
-                break;
+                _context.next = 24
+                break
               }
-              setError(result.error);
-              throw result.error;
+              setError(result.error)
+              throw result.error
             case 24:
               if (props.onRegisterSuccess) {
-                props.onRegisterSuccess(result.authInfo);
+                props.onRegisterSuccess(result.authInfo)
               }
-              setResetSuccess(true);
+              setResetSuccess(true)
             case 26:
-              _context.next = 31;
-              break;
+              _context.next = 31
+              break
             case 28:
-              _context.prev = 28;
-              _context.t0 = _context["catch"](13);
+              _context.prev = 28
+              _context.t0 = _context["catch"](13)
               if (props.onRegisterFailure) {
                 props.onRegisterFailure({
                   source: "register",
                   isSuccess: false,
                   error: _context.t0
-                });
+                })
               }
             case 31:
             case "end":
-              return _context.stop();
+              return _context.stop()
           }
         }
-      }, _callee, null, [[13, 28]]);
-    }));
+      }, _callee, null, [[13, 28]])
+    }))
     return function onRegisterClick() {
-      return _ref.apply(this, arguments);
-    };
-  }();
+      return _ref.apply(this, arguments)
+    }
+  }()
   var getCaptchaFallback = function getCaptchaFallback() {
-    setIsRequesting(false);
-  };
+    setIsRequesting(false)
+  }
   var onGetCodeClick = /*#__PURE__*/function () {
     var _ref2 = __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_3__babel_runtime_regenerator___default.mark(function _callee2() {
-      var phone;
-      var e;
+      var phone
+      var /* [auto-meaningful-name] */_context2$sent
       return __WEBPACK_IMPORTED_MODULE_3__babel_runtime_regenerator___default.wrap(function _callee2$(_context2) {
         while (1) {
           switch (_context2.prev = _context2.next) {
             case 0:
               if (!smsCountDown) {
-                _context2.next = 2;
-                break;
+                _context2.next = 2
+                break
               }
-              return _context2.abrupt("return");
+              return _context2.abrupt("return")
             case 2:
-              setError(undefined);
-              phone = phoneInputEl.value;
+              setError(undefined)
+              phone = phoneInputEl.value
               if (__WEBPACK_IMPORTED_MODULE_10__utils__.validatePhoneNumber(phone)) {
-                _context2.next = 7;
-                break;
+                _context2.next = 7
+                break
               }
               setError({
                 msg: __WEBPACK_IMPORTED_MODULE_11__i18n__.getLanguage("sign_in_dialog/error/phone/format"),
                 type: __WEBPACK_IMPORTED_MODULE_9__auth__.AuthErrorType.PHONE
-              });
-              return _context2.abrupt("return");
+              })
+              return _context2.abrupt("return")
             case 7:
-              _context2.next = 9;
-              return __WEBPACK_IMPORTED_MODULE_9__auth__.handleSendSmsCode(phone, "register", getCaptchaFallback);
+              _context2.next = 9
+              return __WEBPACK_IMPORTED_MODULE_9__auth__.handleSendSmsCode(phone, "register", getCaptchaFallback)
             case 9:
-              e = _context2.sent;
-              if (e) {
-                setError(e);
+              _context2$sent = _context2.sent
+              if (_context2$sent) {
+                setError(_context2$sent)
               } else {
-                setSmsTimeStamp(Date.now());
+                setSmsTimeStamp(Date.now())
               }
             case 11:
             case "end":
-              return _context2.stop();
+              return _context2.stop()
           }
         }
-      }, _callee2);
-    }));
+      }, _callee2)
+    }))
     return function onGetCodeClick() {
-      return _ref2.apply(this, arguments);
-    };
-  }();
+      return _ref2.apply(this, arguments)
+    }
+  }()
   var renderGetCode = function renderGetCode() {
     return /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_4_react__.createElement("span", {
       onClick: onGetCodeClick,
@@ -313,8 +313,8 @@ var RegisterContainer = function RegisterContainer(props) {
         "autoResolveMultipleImports": true,
         "handleMissingStyleName": "throw"
       })
-    }, __WEBPACK_IMPORTED_MODULE_11__i18n__.getLanguage("sign_in_dialog/btn_code"), smsCountDown ? "(".concat(smsCountDown, ")") : "");
-  };
+    }, __WEBPACK_IMPORTED_MODULE_11__i18n__.getLanguage("sign_in_dialog/btn_code"), smsCountDown ? "(".concat(smsCountDown, ")") : "")
+  }
   return /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_4_react__.createElement(__WEBPACK_IMPORTED_MODULE_4_react__.Fragment, null, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_4_react__.createElement("div", {
     className: "CUI-sign-in-dialog-tab-wrap"
   }, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_4_react__.createElement("div", {
@@ -334,19 +334,19 @@ var RegisterContainer = function RegisterContainer(props) {
     maxLength: 100,
     isError: isPhoneErr(),
     onChange: function onChange() {
-      updateRegisterBtn();
+      updateRegisterBtn()
       if (isPhoneErr()) {
-        setError(undefined);
+        setError(undefined)
       }
     },
     label: __WEBPACK_IMPORTED_MODULE_11__i18n__.getLanguage("sign_in_dialog/placeholder/mobile_phone"),
     autoComplete: "on",
     getInputEl: function getInputEl(el) {
-      phoneInputEl = el;
+      phoneInputEl = el
     },
     onBlur: function onBlur() {
       if (props.reportMethod) {
-        props.reportMethod("用户信息-注册手机号");
+        props.reportMethod("用户信息-注册手机号")
       }
     }
   }), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_4_react__.createElement("div", {
@@ -364,26 +364,26 @@ var RegisterContainer = function RegisterContainer(props) {
     onEnterDown: onRegisterClick,
     isError: isPasswordCodeErr(),
     onChange: function onChange() {
-      updateRegisterBtn();
+      updateRegisterBtn()
       if (isPasswordCodeErr() && passwordInputEl.value) {
-        setError(undefined);
+        setError(undefined)
       }
     },
     type: "password",
     label: __WEBPACK_IMPORTED_MODULE_11__i18n__.getLanguage("sign_in_dialog/placeholder/password_n_tip"),
     autoComplete: "on",
     getInputEl: function getInputEl(el) {
-      passwordInputEl = el;
+      passwordInputEl = el
     },
     onBlur: function onBlur() {
       if ((passwordInputEl.value.length < 6 || passwordInputEl.value.length > 20) && passwordInputEl.value.length > 0) {
         setError({
           type: __WEBPACK_IMPORTED_MODULE_9__auth__.AuthErrorType.PWD,
           msg: __WEBPACK_IMPORTED_MODULE_11__i18n__.getLanguage("sign_in_dialog/error/password/format")
-        });
+        })
       }
       if (props.reportMethod) {
-        props.reportMethod("用户信息-注册设置密码");
+        props.reportMethod("用户信息-注册设置密码")
       }
     }
   }), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_4_react__.createElement("div", {
@@ -397,9 +397,9 @@ var RegisterContainer = function RegisterContainer(props) {
     onEnterDown: onRegisterClick,
     isError: isSmsCodeErr(),
     onChange: function onChange() {
-      updateRegisterBtn();
+      updateRegisterBtn()
       if (isSmsCodeErr()) {
-        setError(undefined);
+        setError(undefined)
       }
     },
     label: __WEBPACK_IMPORTED_MODULE_11__i18n__.getLanguage("sign_in_dialog/placeholder/code"),
@@ -407,13 +407,13 @@ var RegisterContainer = function RegisterContainer(props) {
     maxLength: 10,
     getInputEl: function getInputEl(el) {
       if (el) {
-        smsCodeInputEl = el;
+        smsCodeInputEl = el
       }
     },
     iconsSuffix: renderGetCode(),
     onBlur: function onBlur() {
       if (props.reportMethod) {
-        props.reportMethod("用户信息-注册验证码");
+        props.reportMethod("用户信息-注册验证码")
       }
     }
   }), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_4_react__.createElement("div", {
@@ -440,18 +440,18 @@ var RegisterContainer = function RegisterContainer(props) {
     style: {
       marginTop: "12px"
     }
-  }));
-};
+  }))
+}
 RegisterContainer.defaultProps = {
   onRegisterSuccess: function onRegisterSuccess() {
-    return undefined;
+    return undefined
   },
   onRegisterFailure: function onRegisterFailure() {
-    return undefined;
+    return undefined
   },
   reportMethod: function reportMethod() {
-    return undefined;
+    return undefined
   }
-};
+}
 
 /***/

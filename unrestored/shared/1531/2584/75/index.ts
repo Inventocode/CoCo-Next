@@ -4,16 +4,16 @@
  * 模块 ID：75
  */
 
-"use strict";
+"use strict"
 
 !function e() {
   if ("undefined" !== typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ && "function" === typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE) {
-    0;
+    0
     try {
-      __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE(e);
+      __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE(e)
     } catch (t) {
-      console.error(t);
+      console.error(t)
     }
   }
-}();
-module.exports = require("./1533/index");
+}()
+module.exports = require("./1533/index")

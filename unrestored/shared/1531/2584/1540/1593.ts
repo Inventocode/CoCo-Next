@@ -4,15 +4,15 @@
  * 模块 ID：1593
  */
 
-var r = require("./1623/86");
-var o = Math.floor;
-var i = Math.log;
-var a = Math.LOG2E;
+var r = require("./1623/86")
+var math$floor = Math.floor
+var math$log = Math.log
+var math$LOG2E = Math.LOG2E
 r({
   target: "Math",
   stat: true
 }, {
   clz32: function (e) {
-    return (e >>>= 0) ? 31 - o(i(e + .5) * a) : 32;
+    return (e >>>= 0) ? 31 - math$floor(math$log(e + .5) * math$LOG2E) : 32
   }
-});
+})

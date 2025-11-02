@@ -4,33 +4,33 @@
  * 模块 ID：3yDL
  */
 
-"use strict";
+"use strict"
 
 /* harmony export (binding) */
 /* harmony import */
-export { EntryDialog };
-import * as __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__ from "@babel/runtime/helpers/esm/slicedToArray";
+export { EntryDialog }
+import * as __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__ from "@babel/runtime/helpers/esm/slicedToArray"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_1_react__ from "react";
+import * as __WEBPACK_IMPORTED_MODULE_1_react__ from "react"
 /* harmony import */
-import __WEBPACK_IMPORTED_MODULE_1_react___default from "react";
+import __WEBPACK_IMPORTED_MODULE_1_react___default from "react"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_2__base_dialog__ from "../../../../../../../../base/dialog-ymrb";
+import * as __WEBPACK_IMPORTED_MODULE_2__base_dialog__ from "../../../../../../../../base/dialog-ymrb"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_3__base_button__ from "../../../../../../../../base/button-sg+3";
+import * as __WEBPACK_IMPORTED_MODULE_3__base_button__ from "../../../../../../../../base/button-sg+3"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_4__style_module_css__ from "./style.module.css-mGwM";
+import * as __WEBPACK_IMPORTED_MODULE_4__style_module_css__ from "./style.module.css-mGwM"
 /* harmony import */
-import __WEBPACK_IMPORTED_MODULE_4__style_module_css___default from "./style.module.css-mGwM";
+import __WEBPACK_IMPORTED_MODULE_4__style_module_css___default from "./style.module.css-mGwM"
 var EntryDialog = function EntryDialog(props) {
-  var children = props.children;
-  var onClose = props.onClose;
-  var onNextClick = props.onNextClick;
-  var entryDialogText = props.entryDialogText;
-  var _useState = __WEBPACK_IMPORTED_MODULE_1_react__.useState(true);
-  var _useState2 = __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default(_useState, 2);
-  var show = _useState2[0];
-  var setShow = _useState2[1];
+  var children = props.children
+  var onClose = props.onClose
+  var onNextClick = props.onNextClick
+  var entryDialogText = props.entryDialogText
+  var _useState = __WEBPACK_IMPORTED_MODULE_1_react__.useState(true)
+  var _useState2 = __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default(_useState, 2)
+  var show = _useState2[0]
+  var setShow = _useState2[1]
   return /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1_react___default.createElement(__WEBPACK_IMPORTED_MODULE_2__base_dialog__.Dialog, {
     show: show,
     closeBtn: true,
@@ -52,7 +52,7 @@ var EntryDialog = function EntryDialog(props) {
     type: "transparent-fb",
     className: "CUI-agreement-btn-cancel",
     onClick: function onClick() {
-      setShow(false);
+      setShow(false)
     },
     margin: "0 20px 0 0"
   }, "下次再说"), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1_react___default.createElement(__WEBPACK_IMPORTED_MODULE_3__base_button__.Button, {
@@ -60,7 +60,7 @@ var EntryDialog = function EntryDialog(props) {
     type: "transparent-fb",
     size: "md",
     onClick: onNextClick
-  }, "立即前往"))));
-};
+  }, "立即前往"))))
+}
 
 /***/

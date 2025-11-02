@@ -4,23 +4,23 @@
  * 模块 ID：412
  */
 
-"use strict";
+"use strict"
 
-var r = require("../63");
+var r = require("../63")
 var i = function () {
   function t() {}
   t.prototype.exp = function (t) {
-    return this.expTable[t];
-  };
+    return this.expTable[t]
+  }
   t.prototype.log = function (t) {
     if (0 === t) {
-      throw new r.a();
+      throw new r.a()
     }
-    return this.logTable[t];
-  };
+    return this.logTable[t]
+  }
   t.addOrSubtract = function (t, e) {
-    return t ^ e;
-  };
-  return t;
-}();
-exports.a = i;
+    return t ^ e
+  }
+  return t
+}()
+exports.a = i

@@ -1,196 +1,196 @@
-"use strict";
+"use strict"
 
-export { Qe as d };
-export { Ze as b };
-export { b as a } from "../../../unrestored/shared/1531/2584/46/index";
-export { d as c } from "../../../unrestored/shared/1531/2584/46/index";
-export { f as e } from "../../../unrestored/shared/1531/2584/46/index";
-var r = {};
+export { Qe as d }
+export { Ze as b }
+export { b as a } from "../../../unrestored/shared/1531/2584/46/index"
+export { d as c } from "../../../unrestored/shared/1531/2584/46/index"
+export { f as e } from "../../../unrestored/shared/1531/2584/46/index"
+var r = {}
 Object.defineProperty(r, "setBlockGroupProfile", {
   get: function () {
-    return v;
+    return v
   }
-});
+})
 Object.defineProperty(r, "setBlockGroupXML", {
   get: function () {
-    return b;
+    return b
   }
-});
+})
 Object.defineProperty(r, "setBlockGroupSnippet", {
   get: function () {
-    return y;
+    return y
   }
-});
-var o = {};
+})
+var o = {}
 Object.defineProperty(o, "setBlockGroupProfile", {
   get: function () {
-    return w;
+    return w
   }
-});
+})
 Object.defineProperty(o, "setBlockGroupXML", {
   get: function () {
-    return C;
+    return C
   }
-});
+})
 Object.defineProperty(o, "setBlockGroupSnippet", {
   get: function () {
-    return T;
+    return T
   }
-});
-var i = {};
+})
+var i = {}
 Object.defineProperty(i, "setBlockGroupProfile", {
   get: function () {
-    return S;
+    return S
   }
-});
+})
 Object.defineProperty(i, "setBlockGroupXML", {
   get: function () {
-    return I;
+    return I
   }
-});
+})
 Object.defineProperty(i, "setBlockGroupSnippet", {
   get: function () {
-    return A;
+    return A
   }
-});
+})
 Object.defineProperty(i, "setBlockGroupExtra", {
   get: function () {
-    return j;
+    return j
   }
-});
-var a = {};
+})
+var a = {}
 Object.defineProperty(a, "setBlockGroupProfile", {
   get: function () {
-    return N;
+    return N
   }
-});
+})
 Object.defineProperty(a, "setBlockGroupXML", {
   get: function () {
-    return R;
+    return R
   }
-});
+})
 Object.defineProperty(a, "setBlockGroupSnippet", {
   get: function () {
-    return k;
+    return k
   }
-});
-var s = {};
+})
+var s = {}
 Object.defineProperty(s, "setBlockGroupProfile", {
   get: function () {
-    return W;
+    return W
   }
-});
+})
 Object.defineProperty(s, "setBlockGroupXML", {
   get: function () {
-    return H;
+    return H
   }
-});
+})
 Object.defineProperty(s, "setBlockGroupSnippet", {
   get: function () {
-    return V;
+    return V
   }
-});
+})
 Object.defineProperty(s, "setBlockGroupExtra", {
   get: function () {
-    return z;
+    return z
   }
-});
-var c = {};
+})
+var c = {}
 Object.defineProperty(c, "setBlockGroupProfile", {
   get: function () {
-    return Y;
+    return Y
   }
-});
+})
 Object.defineProperty(c, "setBlockGroupXML", {
   get: function () {
-    return K;
+    return K
   }
-});
+})
 Object.defineProperty(c, "setBlockGroupSnippet", {
   get: function () {
-    return q;
+    return q
   }
-});
+})
 Object.defineProperty(c, "setBlockGroupExtra", {
   get: function () {
-    return X;
+    return X
   }
-});
-var l = {};
+})
+var l = {}
 Object.defineProperty(l, "setBlockGroupProfile", {
   get: function () {
-    return Q;
+    return Q
   }
-});
+})
 Object.defineProperty(l, "setBlockGroupXML", {
   get: function () {
-    return Z;
+    return Z
   }
-});
+})
 Object.defineProperty(l, "setBlockGroupSnippet", {
   get: function () {
-    return J;
+    return J
   }
-});
-var u = {};
+})
+var u = {}
 Object.defineProperty(u, "setBlockGroupProfile", {
   get: function () {
-    return $;
+    return $
   }
-});
+})
 Object.defineProperty(u, "setBlockGroupXML", {
   get: function () {
-    return ee;
+    return ee
   }
-});
+})
 Object.defineProperty(u, "setBlockGroupExtra", {
   get: function () {
-    return te;
+    return te
   }
-});
+})
 Object.defineProperty(u, "setBlockGroupSnippet", {
   get: function () {
-    return ne;
+    return ne
   }
-});
-var d = {};
+})
+var d = {}
 Object.defineProperty(d, "setBlockGroupProfile", {
   get: function () {
-    return oe;
+    return oe
   }
-});
+})
 Object.defineProperty(d, "setBlockGroupXML", {
   get: function () {
-    return ie;
+    return ie
   }
-});
+})
 Object.defineProperty(d, "setBlockGroupSnippet", {
   get: function () {
-    return ae;
+    return ae
   }
-});
-var p = {};
+})
+var p = {}
 Object.defineProperty(p, "setBlockGroupProfile", {
   get: function () {
-    return se;
+    return se
   }
-});
+})
 Object.defineProperty(p, "setBlockGroupSnippet", {
   get: function () {
-    return ce;
+    return ce
   }
-});
-var f = {};
+})
+var f = {}
 Object.defineProperty(f, "setBlockGroupProfile", {
   get: function () {
-    return _e;
+    return _e
   }
-});
+})
 Object.defineProperty(f, "setBlockGroupSnippet", {
   get: function () {
-    return ve;
+    return ve
   }
-});
+})
 import h = require("../../../unrestored/shared/1531/2584/25/index");
 import m = require("../../../unrestored/shared/1531/2584/17/index");
 import g = require("../../../unrestored/shared/1531/2584/9");
@@ -208,7 +208,7 @@ function v(e) {
     nextStatement: true,
     colour: "%{BKY_BLUE_6}",
     inputsInline: true
-  });
+  })
   e.insertBlockProfile("brightness_set_brightness", {
     type: "brightness_set_brightness",
     message0: "%{BKY_BRIGHTNESS_SET_BRIGHTNESS}",
@@ -221,14 +221,14 @@ function v(e) {
     nextStatement: true,
     colour: "%{BKY_BLUE_6}",
     inputsInline: true
-  });
+  })
   e.insertBlockProfile("brightness_get_brightness", {
     type: "brightness_get_brightness",
     message0: "%{BKY_BRIGHTNESS_GET_BRIGHTNESS}",
     output: ["Number"],
     colour: "%{BKY_BLUE_6}",
     inputsInline: true
-  });
+  })
   e.insertBlockProfile("brightness_set_keep_screen_on", {
     type: "brightness_set_keep_screen_on",
     message0: "%{BKY_BRIGHTNESS_SET_KEEP_SCREEN_ON}",
@@ -241,53 +241,53 @@ function v(e) {
     nextStatement: true,
     colour: "%{BKY_BLUE_6}",
     inputsInline: true
-  });
+  })
   e.insertBlockProfile("phone_battery_level", {
     type: "phone_battery_level",
     message0: "%{BKY_PHONE_BATTERY_LEVEL}",
     output: ["Number"],
     colour: "%{BKY_BLUE_6}",
     inputsInline: true
-  });
+  })
 }
 function b(e) {
-  e.insertBlockXML("phone_vibrate", "<value name=\"SECONDS\">\n      <shadow type=\"math_number\">\n        <field name=\"NUM\" constraints=\"0,,0.1\">1</field>\n      </shadow>\n    </value>");
-  e.insertBlockXML("date_get_current_date");
-  e.insertBlockXML("date_check_date_is_equal", "<value name=\"DATE_A\">\n      <shadow type=\"date_get_current_date\"></shadow>\n    </value>\n    <value name=\"DATE_B\">\n      <shadow type=\"date_get_current_date\"></shadow>\n    </value>");
-  e.insertBlockXML("date_get_date_minus_operation", "<value name=\"DATE_A\">\n      <shadow type=\"date_get_current_date\"></shadow>\n    </value>\n    <value name=\"DATE_B\">\n      <shadow type=\"date_get_current_date\"></shadow>\n    </value>");
-  e.insertBlockXML("brightness_set_brightness", "<value name=\"VALUE\">\n      <shadow type=\"math_number\">\n        <field name=\"NUM\" constraints=\"0,100,1\">50</field>\n      </shadow>\n    </value>");
-  e.insertBlockXML("brightness_get_brightness");
-  e.insertBlockXML("brightness_set_keep_screen_on", "<value name=\"VALUE\">\n      <shadow type=\"widget_boolean\">\n        <field name=\"BOOL\">TRUE</field>\n      </shadow>\n    </value>");
-  e.insertBlockXML("phone_battery_level");
+  e.insertBlockXML("phone_vibrate", "<value name=\"SECONDS\">\n      <shadow type=\"math_number\">\n        <field name=\"NUM\" constraints=\"0,,0.1\">1</field>\n      </shadow>\n    </value>")
+  e.insertBlockXML("date_get_current_date")
+  e.insertBlockXML("date_check_date_is_equal", "<value name=\"DATE_A\">\n      <shadow type=\"date_get_current_date\"></shadow>\n    </value>\n    <value name=\"DATE_B\">\n      <shadow type=\"date_get_current_date\"></shadow>\n    </value>")
+  e.insertBlockXML("date_get_date_minus_operation", "<value name=\"DATE_A\">\n      <shadow type=\"date_get_current_date\"></shadow>\n    </value>\n    <value name=\"DATE_B\">\n      <shadow type=\"date_get_current_date\"></shadow>\n    </value>")
+  e.insertBlockXML("brightness_set_brightness", "<value name=\"VALUE\">\n      <shadow type=\"math_number\">\n        <field name=\"NUM\" constraints=\"0,100,1\">50</field>\n      </shadow>\n    </value>")
+  e.insertBlockXML("brightness_get_brightness")
+  e.insertBlockXML("brightness_set_keep_screen_on", "<value name=\"VALUE\">\n      <shadow type=\"widget_boolean\">\n        <field name=\"BOOL\">TRUE</field>\n      </shadow>\n    </value>")
+  e.insertBlockXML("phone_battery_level")
 }
 function y(e) {
   e.insertBlockSnippetGenerator("phone_vibrate", function (t, n) {
-    var r = e.valueToCode(t, n, "SECONDS", e.ORDER_FUNCTION_CALL) || "0";
-    return _.n("startDeviceVibrating", [r + " * 1000"]);
-  });
+    var r = e.valueToCode(t, n, "SECONDS", e.ORDER_FUNCTION_CALL) || "0"
+    return _.n("startDeviceVibrating", [r + " * 1000"])
+  })
   e.insertBlockSnippetGenerator("brightness_set_brightness", function (t, n) {
-    var r = e.valueToCode(t, n, "VALUE", e.ORDER_FUNCTION_CALL);
-    var o = t.blocks[n];
-    return _.l(_.j("brightness.setBrightness", [r]), o, e, true);
-  });
+    var r = e.valueToCode(t, n, "VALUE", e.ORDER_FUNCTION_CALL)
+    var o = t.blocks[n]
+    return _.l(_.j("brightness.setBrightness", [r]), o, e, true)
+  })
   e.insertBlockSnippetGenerator("brightness_get_brightness", function (t, n) {
-    var r = t.blocks[n];
-    return _.l(_.r("brightness.getBrightness"), r, e, true, true);
-  });
+    var r = t.blocks[n]
+    return _.l(_.r("brightness.getBrightness"), r, e, true, true)
+  })
   e.insertBlockSnippetGenerator("brightness_set_keep_screen_on", function (t, n) {
-    var r = t.blocks[n];
-    var o = e.valueToCode(t, n, "VALUE", e.ORDER_FUNCTION_CALL);
-    return _.l(_.n("brightness.setKeepScreenOn", [o]), r, e);
-  });
+    var r = t.blocks[n]
+    var o = e.valueToCode(t, n, "VALUE", e.ORDER_FUNCTION_CALL)
+    return _.l(_.n("brightness.setKeepScreenOn", [o]), r, e)
+  })
   e.insertBlockSnippetGenerator("phone_battery_level", function (t, n) {
-    var r = t.blocks[n];
-    return _.l(_.r("device.getBatteryLevel"), r, e, true, true);
-  });
+    var r = t.blocks[n]
+    return _.l(_.r("device.getBatteryLevel"), r, e, true, true)
+  })
 }
-var E;
+var E
 import O = require("../../../unrestored/shared/1531/2584/46/index");
 function w(e, t) {
-  var n = "%{BKY_BLOCK_TAB_ICON}";
+  var n = "%{BKY_BLOCK_TAB_ICON}"
   e.insertBlockProfile("screen_on_open", {
     type: "screen_on_open",
     message0: "%{BKY_SCREEN_ON_OPEN}",
@@ -299,7 +299,7 @@ function w(e, t) {
     }],
     colour: "%{BKY_EVENTS_HUE}",
     inputsInline: true
-  });
+  })
   e.insertBlockProfile("screen_on_open_get_param_value", {
     type: "screen_on_open_get_param_value",
     message0: "%{BKY_SCREEN_PARAM}",
@@ -307,7 +307,7 @@ function w(e, t) {
     required_context: "screen_on_open_get_param_value_DO",
     colour: "%{BKY_PARAM_BLOCK_COLOR}",
     extensions: ["param_block"]
-  });
+  })
   e.insertBlockProfile("screen_on_open_get_param", {
     type: "screen_on_open_get_param",
     message0: "%{BKY_SCREEN_ON_OPEN_GET_PARAM}",
@@ -326,7 +326,7 @@ function w(e, t) {
     }],
     colour: "%{BKY_EVENTS_HUE}",
     inputsInline: true
-  });
+  })
   e.insertBlockProfile("screen_navigate_to", {
     type: "screen_navigate_to",
     message0: "%{BKY_SCREEN_NAVIGATE_TO}",
@@ -345,14 +345,14 @@ function w(e, t) {
           type: "basic",
           text: t.Msg.SCREEN_PREV,
           value: "prevScreen"
-        }]);
+        }])
       }
     }],
     previousStatement: true,
     nextStatement: true,
     colour: "%{BKY_EVENTS_HUE}",
     inputsInline: true
-  });
+  })
   e.insertBlockProfile("screen_navigate_to_by_value", {
     type: "screen_navigate_to_by_value",
     message0: "%{BKY_SCREEN_NAVIGATE_TO_BY_VALUE}",
@@ -371,7 +371,7 @@ function w(e, t) {
           type: "basic",
           text: t.Msg.SCREEN_PREV,
           value: "prevScreen"
-        }]);
+        }])
       }
     }, {
       type: "input_value",
@@ -381,7 +381,7 @@ function w(e, t) {
     nextStatement: true,
     colour: "%{BKY_EVENTS_HUE}",
     inputsInline: true
-  });
+  })
   e.insertBlockProfile("new_screen_navigate_to", {
     type: "new_screen_navigate_to",
     message0: "%{BKY_SCREEN_NAVIGATE_TO}",
@@ -394,7 +394,7 @@ function w(e, t) {
     nextStatement: true,
     colour: "%{BKY_EVENTS_HUE}",
     inputsInline: true
-  });
+  })
   e.insertBlockProfile("screen_input", {
     type: "screen_input",
     message0: "%1",
@@ -413,13 +413,13 @@ function w(e, t) {
           type: "basic",
           text: t.Msg.SCREEN_PREV,
           value: "prevScreen"
-        }]);
+        }])
       }
     }],
     colour: "#ffffff",
     output: "String",
     tooltip: "%{BKY_SCREEN_INPUT_TOOLTIP}"
-  });
+  })
   e.insertBlockProfile("new_screen_navigate_to_by_value", {
     type: "new_screen_navigate_to_by_value",
     message0: "%{BKY_SCREEN_NAVIGATE_TO_BY_VALUE}",
@@ -435,60 +435,60 @@ function w(e, t) {
     nextStatement: true,
     colour: "%{BKY_EVENTS_HUE}",
     inputsInline: true
-  });
+  })
 }
 function C(e) {
-  e.insertBlockXML("screen_on_open");
-  e.insertBlockXML("screen_on_open_get_param");
-  e.insertBlockXML("screen_input", undefined, true);
-  e.insertBlockXML("screen_navigate_to");
-  e.insertBlockXML("screen_navigate_to_by_value", "    <value name=\"PARAMETER\">\n  <shadow type=\"text\">\n    <field name=\"TEXT\">参数</field>\n  </shadow>\n</value>");
-  e.insertBlockXML("new_screen_navigate_to", "<value name=\"SCREEN_ID\">\n      <shadow type=\"screen_input\"></shadow>\n    </value>", true);
-  e.insertBlockXML("new_screen_navigate_to_by_value", "<value name=\"SCREEN_ID\">\n        <shadow type=\"screen_input\"></shadow>\n      </value>\n      <value name=\"PARAMETER\">\n    <shadow type=\"text\">\n      <field name=\"TEXT\">参数</field>\n    </shadow>\n  </value>", true);
-  e.insertBlockXML("broadcast_on_receive", "<value name=\"BROADCAST\">\n      <shadow type=\"broadcast_input\"></shadow>\n    </value>", true);
-  e.insertBlockXML("broadcast_send", "<value name=\"BROADCAST\">\n      <shadow type=\"broadcast_input\"></shadow>\n    </value>", true);
-  e.insertBlockXML("broadcast_send_and_wait", "<value name=\"BROADCAST\">\n      <shadow type=\"broadcast_input\"></shadow>\n    </value>", true);
+  e.insertBlockXML("screen_on_open")
+  e.insertBlockXML("screen_on_open_get_param")
+  e.insertBlockXML("screen_input", undefined, true)
+  e.insertBlockXML("screen_navigate_to")
+  e.insertBlockXML("screen_navigate_to_by_value", "    <value name=\"PARAMETER\">\n  <shadow type=\"text\">\n    <field name=\"TEXT\">参数</field>\n  </shadow>\n</value>")
+  e.insertBlockXML("new_screen_navigate_to", "<value name=\"SCREEN_ID\">\n      <shadow type=\"screen_input\"></shadow>\n    </value>", true)
+  e.insertBlockXML("new_screen_navigate_to_by_value", "<value name=\"SCREEN_ID\">\n        <shadow type=\"screen_input\"></shadow>\n      </value>\n      <value name=\"PARAMETER\">\n    <shadow type=\"text\">\n      <field name=\"TEXT\">参数</field>\n    </shadow>\n  </value>", true)
+  e.insertBlockXML("broadcast_on_receive", "<value name=\"BROADCAST\">\n      <shadow type=\"broadcast_input\"></shadow>\n    </value>", true)
+  e.insertBlockXML("broadcast_send", "<value name=\"BROADCAST\">\n      <shadow type=\"broadcast_input\"></shadow>\n    </value>", true)
+  e.insertBlockXML("broadcast_send_and_wait", "<value name=\"BROADCAST\">\n      <shadow type=\"broadcast_input\"></shadow>\n    </value>", true)
 }
 function T(e) {
   e.insertBlockSnippetGenerator("screen_input", function (t, n) {
-    var r = t.blocks[n];
-    return JSON.stringify(e.getFieldValue(r, "SCREEN_ID"));
-  });
+    var r = t.blocks[n]
+    return JSON.stringify(e.getFieldValue(r, "SCREEN_ID"))
+  })
   e.insertBlockSnippetGenerator("screen_on_open", function (t, n) {
-    var r = e.statementToCode(t, n, "DO");
-    return r ? _.m("onScreenOpen", [_.o(e.getDynamicValue("__CURRENT_SCREEN_ID__"))], r) : "";
-  });
+    var r = e.statementToCode(t, n, "DO")
+    return r ? _.m("onScreenOpen", [_.o(e.getDynamicValue("__CURRENT_SCREEN_ID__"))], r) : ""
+  })
   e.insertBlockSnippetGenerator("screen_on_open_get_param_value", function () {
-    return "screenOpenParamValue";
-  });
+    return "screenOpenParamValue"
+  })
   e.insertBlockSnippetGenerator("screen_on_open_get_param", function (t, n) {
-    var r = e.statementToCode(t, n, "DO");
+    var r = e.statementToCode(t, n, "DO")
     if (!r) {
-      return "";
+      return ""
     }
-    var o = e.valueToCode(t, n, "PARAMETER", e.ORDER_FUNCTION_CALL);
-    return _.n("onScreenOpen", [_.o(e.getDynamicValue("__CURRENT_SCREEN_ID__"))], r, [o]);
-  });
+    var o = e.valueToCode(t, n, "PARAMETER", e.ORDER_FUNCTION_CALL)
+    return _.n("onScreenOpen", [_.o(e.getDynamicValue("__CURRENT_SCREEN_ID__"))], r, [o])
+  })
   e.insertBlockSnippetGenerator("screen_navigate_to", function (t, n) {
-    var r = _.o(e.getFieldValue(t.blocks[n], "SCREEN_ID") || "");
-    return r === _.o("nextScreen") ? _.n("navigateToNextScreen", [_.o(e.getDynamicValue("__CURRENT_SCREEN_ID__"))]) : r === _.o("prevScreen") ? _.n("navigateToPrevScreen", [_.o(e.getDynamicValue("__CURRENT_SCREEN_ID__"))]) : _.n("navigateToScreen", [r]);
-  });
+    var r = _.o(e.getFieldValue(t.blocks[n], "SCREEN_ID") || "")
+    return r === _.o("nextScreen") ? _.n("navigateToNextScreen", [_.o(e.getDynamicValue("__CURRENT_SCREEN_ID__"))]) : r === _.o("prevScreen") ? _.n("navigateToPrevScreen", [_.o(e.getDynamicValue("__CURRENT_SCREEN_ID__"))]) : _.n("navigateToScreen", [r])
+  })
   e.insertBlockSnippetGenerator("screen_navigate_to_by_value", function (t, n) {
-    var r = _.o(e.getFieldValue(t.blocks[n], "SCREEN_ID") || "");
-    var o = e.valueToCode(t, n, "PARAMETER", e.ORDER_FUNCTION_CALL);
-    return r === _.o("nextScreen") ? _.n("navigateToNextScreen", [_.o(e.getDynamicValue("__CURRENT_SCREEN_ID__")), o]) : r === _.o("prevScreen") ? _.n("navigateToPrevScreen", [_.o(e.getDynamicValue("__CURRENT_SCREEN_ID__")), o]) : _.n("navigateToScreen", [r, o]);
-  });
+    var r = _.o(e.getFieldValue(t.blocks[n], "SCREEN_ID") || "")
+    var o = e.valueToCode(t, n, "PARAMETER", e.ORDER_FUNCTION_CALL)
+    return r === _.o("nextScreen") ? _.n("navigateToNextScreen", [_.o(e.getDynamicValue("__CURRENT_SCREEN_ID__")), o]) : r === _.o("prevScreen") ? _.n("navigateToPrevScreen", [_.o(e.getDynamicValue("__CURRENT_SCREEN_ID__")), o]) : _.n("navigateToScreen", [r, o])
+  })
   e.insertBlockSnippetGenerator("new_screen_navigate_to", function (t, n) {
-    var r = t.blocks[n];
-    var o = e.valueToCode(t, n, "SCREEN_ID", e.ORDER_FUNCTION_CALL);
-    return o.includes(_.o("nextScreen")) ? _.l(_.n("navigateToNextScreen", [_.o(e.getDynamicValue("__CURRENT_SCREEN_ID__"))]), r, e) : o.includes(_.o("prevScreen")) ? _.l(_.n("navigateToPrevScreen", [_.o(e.getDynamicValue("__CURRENT_SCREEN_ID__"))]), r, e) : _.l(_.n("navigateToScreen", [o]), r, e);
-  });
+    var r = t.blocks[n]
+    var o = e.valueToCode(t, n, "SCREEN_ID", e.ORDER_FUNCTION_CALL)
+    return o.includes(_.o("nextScreen")) ? _.l(_.n("navigateToNextScreen", [_.o(e.getDynamicValue("__CURRENT_SCREEN_ID__"))]), r, e) : o.includes(_.o("prevScreen")) ? _.l(_.n("navigateToPrevScreen", [_.o(e.getDynamicValue("__CURRENT_SCREEN_ID__"))]), r, e) : _.l(_.n("navigateToScreen", [o]), r, e)
+  })
   e.insertBlockSnippetGenerator("new_screen_navigate_to_by_value", function (t, n) {
-    var r = t.blocks[n];
-    var o = e.valueToCode(t, n, "SCREEN_ID", e.ORDER_FUNCTION_CALL);
-    var i = e.valueToCode(t, n, "PARAMETER", e.ORDER_FUNCTION_CALL);
-    return o.includes(_.o("nextScreen")) ? _.l(_.n("navigateToNextScreen", [_.o(e.getDynamicValue("__CURRENT_SCREEN_ID__")), i]), r, e) : o.includes(_.o("prevScreen")) ? _.l(_.n("navigateToPrevScreen", [_.o(e.getDynamicValue("__CURRENT_SCREEN_ID__")), i]), r, e) : _.l(_.n("navigateToScreen", [o, i]), r, e);
-  });
+    var r = t.blocks[n]
+    var o = e.valueToCode(t, n, "SCREEN_ID", e.ORDER_FUNCTION_CALL)
+    var i = e.valueToCode(t, n, "PARAMETER", e.ORDER_FUNCTION_CALL)
+    return o.includes(_.o("nextScreen")) ? _.l(_.n("navigateToNextScreen", [_.o(e.getDynamicValue("__CURRENT_SCREEN_ID__")), i]), r, e) : o.includes(_.o("prevScreen")) ? _.l(_.n("navigateToPrevScreen", [_.o(e.getDynamicValue("__CURRENT_SCREEN_ID__")), i]), r, e) : _.l(_.n("navigateToScreen", [o, i]), r, e)
+  })
 }
 function S(e, t) {
   e.insertBlockProfile("loop_finitely", {
@@ -510,7 +510,7 @@ function S(e, t) {
     nextStatement: true,
     colour: "%{BKY_CONTROL_HUE}",
     inputsInline: true
-  });
+  })
   e.insertBlockProfile("sleep", {
     type: "sleep",
     message0: "%{BKY_WAIT_SECS}",
@@ -524,7 +524,7 @@ function S(e, t) {
     nextStatement: true,
     colour: "%{BKY_CONTROL_HUE}",
     inputsInline: true
-  });
+  })
   e.insertBlockProfile("loop_conditionally", {
     type: "loop_conditionally",
     message0: "%{BKY_REPEAT_WHEN}",
@@ -545,7 +545,7 @@ function S(e, t) {
     colour: "%{BKY_CONTROL_HUE}",
     inputsInline: true,
     tooltip: "%{BKY_REPEAT_WHEN_TOOLTIP}"
-  });
+  })
   e.insertBlockProfile("loop_infinitely", {
     type: "loop_infinitely",
     message0: "%{BKY_REPEAT_FOREVER}",
@@ -560,7 +560,7 @@ function S(e, t) {
     nextStatement: true,
     colour: "%{BKY_CONTROL_HUE}",
     inputsInline: true
-  });
+  })
   e.insertBlockProfile("wait_until", {
     type: "wait_until",
     message0: "%{BKY_SLEEP_UTIL}",
@@ -574,7 +574,7 @@ function S(e, t) {
     nextStatement: true,
     colour: "%{BKY_CONTROL_HUE}",
     inputsInline: true
-  });
+  })
   e.insertBlockProfile("break_loop", {
     type: "break_loop",
     message0: "%{BKY_BREAK}",
@@ -584,7 +584,7 @@ function S(e, t) {
     colour: "%{BKY_CONTROL_HUE}",
     inputsInline: true,
     tooltip: "%{BKY_BREAK_TOOLTIP}"
-  });
+  })
   e.insertBlockProfile("continue_loop", {
     type: "continue_loop",
     message0: "%{BKY_CONTINUE}",
@@ -593,7 +593,7 @@ function S(e, t) {
     nextStatement: true,
     colour: "%{BKY_CONTROL_HUE}",
     inputsInline: true
-  });
+  })
   e.insertBlockProfile("console_log", {
     type: "console_log",
     message0: "%{BKY_CONSOLE_LOG}",
@@ -607,7 +607,7 @@ function S(e, t) {
     colour: "%{BKY_CONTROL_HUE}",
     inputsInline: true,
     mutator: "CONSOLE_MUTATOR"
-  });
+  })
   e.insertBlockProfile("new_console_log", {
     type: "new_console_log",
     message0: "%{BKY_NEW_CONSOLE_LOG}",
@@ -626,7 +626,7 @@ function S(e, t) {
     colour: "%{BKY_CONTROL_HUE}",
     inputsInline: true,
     mutator: "CONSOLE_MUTATOR"
-  });
+  })
   e.insertBlockProfile("console_error", {
     type: "console_error",
     message0: "%{BKY_CONSOLE_ERROR}",
@@ -640,7 +640,7 @@ function S(e, t) {
     colour: "%{BKY_CONTROL_HUE}",
     inputsInline: true,
     mutator: "CONSOLE_MUTATOR"
-  });
+  })
   e.insertBlockProfile("controls_for", {
     type: "controls_for",
     message0: "%{BKY_CONTROLS_FOR}",
@@ -673,7 +673,7 @@ function S(e, t) {
     colour: "%{BKY_CONTROL_HUE}",
     inputsInline: true,
     tooltip: "%{BKY_CONTROLS_FOR_TOOLTIP}"
-  });
+  })
   e.insertBlockProfile("controls_for_closed_range", {
     type: "controls_for_closed_range",
     message0: "%{BKY_CONTROLS_FOR_CLOSED_RANGE}",
@@ -706,7 +706,7 @@ function S(e, t) {
     colour: "%{BKY_CONTROL_HUE}",
     inputsInline: true,
     tooltip: "%{BKY_CONTROLS_FOR_CLOSED_RANGE_TOOLTIP}"
-  });
+  })
   e.insertBlockProfile("controls_for_value", {
     type: "controls_for_value",
     message0: "%{BKY_CONTROLS_NUMBER}",
@@ -714,171 +714,171 @@ function S(e, t) {
     required_context: "controls_for_DO",
     colour: "%{BKY_PARAM_BLOCK_COLOR}",
     extensions: ["param_block"]
-  });
+  })
 }
 function I(e, t) {
-  e.insertBlockXML("controls_if", ["\n    <value name=\"IF0\">\n      <empty type=\"logic_empty\">\n        <field name=\"BOOL\"></field>\n      </empty>\n    </value>\n  ", " \n    <mutation else=\"1\"></mutation>\n    <value name=\"IF0\">\n      <empty type=\"logic_empty\">\n        <field name=\"BOOL\"></field>\n      </empty>\n    </value>"]);
-  e.insertBlockXML("controls_for_closed_range", ["\n    <value name=\"FROM\">\n      <shadow type=\"math_number\">\n        <field name=\"NUM\" constraints=\",,1\">1</field>\n      </shadow>\n    </value>\n    <value name=\"TO\">\n      <shadow type=\"math_number\">\n        <field name=\"NUM\" constraints=\",,1\">10</field>\n      </shadow>\n    </value>\n    <value name=\"BY\">\n      <shadow type=\"math_number\">\n        <field name=\"NUM\" constraints=\",,1\">1</field>\n      </shadow>\n    </value>"]);
-  e.insertBlockXML("loop_finitely", "\n    <value name=\"TIMES\">\n      <shadow type=\"math_number\">\n        <field name=\"NUM\" constraints=\"1,,1\">20</field>\n      </shadow>\n    </value>\n    ");
-  e.insertBlockXML("sleep", "\n    <value name=\"SECONDS\">\n      <shadow type=\"math_number\">\n        <field name=\"NUM\" constraints=\"0\">1</field>\n      </shadow>\n    </value>\n    ");
-  e.insertBlockXML("loop_conditionally", "\n    <value name=\"CONDITION\">\n      <empty type=\"logic_empty\">\n        <field name=\"BOOL\"></field>\n      </empty>\n    </value>\n  ");
-  e.insertBlockXML("loop_infinitely");
-  e.insertBlockXML("wait_until", "\n    <value name=\"CONDITION\">\n      <empty type=\"logic_empty\">\n        <field name=\"BOOL\"></field>\n      </empty>\n    </value>\n    ");
-  e.insertBlockXML("console_log", "\n    <mutation items=\"0\"></mutation>\n    <value name=\"VALUE\">\n      <shadow type=\"text\">\n        <field name=\"TEXT\">".concat(t.Msg.CONSOLE_LOG_DEFAULT_VALUE, "</field>\n      </shadow>\n    </value>\n    "));
-  e.insertBlockXML("new_console_log", "\n    <mutation items=\"0\"></mutation>\n    <value name=\"VALUE\">\n      <shadow type=\"text\">\n        <field name=\"TEXT\">".concat(t.Msg.CONSOLE_LOG_DEFAULT_VALUE, "</field>\n      </shadow>\n    </value>\n    "));
-  e.insertBlockXML("console_error", "\n    <mutation items=\"0\"></mutation>\n    <value name=\"VALUE\">\n      <shadow type=\"text\">\n        <field name=\"TEXT\">".concat(t.Msg.CONSOLE_ERROR_DEFAULT_VALUE, "</field>\n      </shadow>\n    </value>\n    "));
-  e.insertBlockXML("break_loop");
-  e.insertBlockXML("continue_loop");
+  e.insertBlockXML("controls_if", ["\n    <value name=\"IF0\">\n      <empty type=\"logic_empty\">\n        <field name=\"BOOL\"></field>\n      </empty>\n    </value>\n  ", " \n    <mutation else=\"1\"></mutation>\n    <value name=\"IF0\">\n      <empty type=\"logic_empty\">\n        <field name=\"BOOL\"></field>\n      </empty>\n    </value>"])
+  e.insertBlockXML("controls_for_closed_range", ["\n    <value name=\"FROM\">\n      <shadow type=\"math_number\">\n        <field name=\"NUM\" constraints=\",,1\">1</field>\n      </shadow>\n    </value>\n    <value name=\"TO\">\n      <shadow type=\"math_number\">\n        <field name=\"NUM\" constraints=\",,1\">10</field>\n      </shadow>\n    </value>\n    <value name=\"BY\">\n      <shadow type=\"math_number\">\n        <field name=\"NUM\" constraints=\",,1\">1</field>\n      </shadow>\n    </value>"])
+  e.insertBlockXML("loop_finitely", "\n    <value name=\"TIMES\">\n      <shadow type=\"math_number\">\n        <field name=\"NUM\" constraints=\"1,,1\">20</field>\n      </shadow>\n    </value>\n    ")
+  e.insertBlockXML("sleep", "\n    <value name=\"SECONDS\">\n      <shadow type=\"math_number\">\n        <field name=\"NUM\" constraints=\"0\">1</field>\n      </shadow>\n    </value>\n    ")
+  e.insertBlockXML("loop_conditionally", "\n    <value name=\"CONDITION\">\n      <empty type=\"logic_empty\">\n        <field name=\"BOOL\"></field>\n      </empty>\n    </value>\n  ")
+  e.insertBlockXML("loop_infinitely")
+  e.insertBlockXML("wait_until", "\n    <value name=\"CONDITION\">\n      <empty type=\"logic_empty\">\n        <field name=\"BOOL\"></field>\n      </empty>\n    </value>\n    ")
+  e.insertBlockXML("console_log", "\n    <mutation items=\"0\"></mutation>\n    <value name=\"VALUE\">\n      <shadow type=\"text\">\n        <field name=\"TEXT\">".concat(t.Msg.CONSOLE_LOG_DEFAULT_VALUE, "</field>\n      </shadow>\n    </value>\n    "))
+  e.insertBlockXML("new_console_log", "\n    <mutation items=\"0\"></mutation>\n    <value name=\"VALUE\">\n      <shadow type=\"text\">\n        <field name=\"TEXT\">".concat(t.Msg.CONSOLE_LOG_DEFAULT_VALUE, "</field>\n      </shadow>\n    </value>\n    "))
+  e.insertBlockXML("console_error", "\n    <mutation items=\"0\"></mutation>\n    <value name=\"VALUE\">\n      <shadow type=\"text\">\n        <field name=\"TEXT\">".concat(t.Msg.CONSOLE_ERROR_DEFAULT_VALUE, "</field>\n      </shadow>\n    </value>\n    "))
+  e.insertBlockXML("break_loop")
+  e.insertBlockXML("continue_loop")
 }
 function A(e) {
   e.insertBlockSnippetGenerator("loop_conditionally", function (t, n) {
-    var r = e.valueToCode(t, n, "CONDITION", e.ORDER_FUNCTION_CALL) || "false";
-    var o = e.statementToCode(t, n, "DO");
-    return o ? _.i("asyncScheduler.loopConditionally", o, [_.g(r, true)]) : "";
-  });
+    var r = e.valueToCode(t, n, "CONDITION", e.ORDER_FUNCTION_CALL) || "false"
+    var o = e.statementToCode(t, n, "DO")
+    return o ? _.i("asyncScheduler.loopConditionally", o, [_.g(r, true)]) : ""
+  })
   e.insertBlockSnippetGenerator("break_loop", function () {
-    return _.i("asyncScheduler.breakLoop");
-  });
+    return _.i("asyncScheduler.breakLoop")
+  })
   e.insertBlockSnippetGenerator("continue_loop", function () {
-    return _.i("asyncScheduler.continueLoop");
-  });
+    return _.i("asyncScheduler.continueLoop")
+  })
   e.insertBlockSnippetGenerator("loop_finitely", function (t, n) {
-    var r = e.valueToCode(t, n, "TIMES", e.ORDER_FUNCTION_CALL);
-    var o = e.statementToCode(t, n, "DO");
-    return o ? _.i("asyncScheduler.loopFinitely", o, [r]) : "";
-  });
+    var r = e.valueToCode(t, n, "TIMES", e.ORDER_FUNCTION_CALL)
+    var o = e.statementToCode(t, n, "DO")
+    return o ? _.i("asyncScheduler.loopFinitely", o, [r]) : ""
+  })
   e.insertBlockSnippetGenerator("loop_infinitely", function (t, n) {
-    var r = e.statementToCode(t, n, "DO");
-    return r ? _.i("asyncScheduler.loopInfinitely", r) : "";
-  });
+    var r = e.statementToCode(t, n, "DO")
+    return r ? _.i("asyncScheduler.loopInfinitely", r) : ""
+  })
   e.insertBlockSnippetGenerator("sleep", function (t, n) {
-    var r = e.valueToCode(t, n, "SECONDS", e.ORDER_FUNCTION_CALL) || "0";
-    return "await AsyncScheduler.sleep(".concat(r, " * 1000);\n");
-  });
+    var r = e.valueToCode(t, n, "SECONDS", e.ORDER_FUNCTION_CALL) || "0"
+    return "await AsyncScheduler.sleep(".concat(r, " * 1000);\n")
+  })
   e.insertBlockSnippetGenerator("wait_until", function (t, n) {
-    var r = e.valueToCode(t, n, "CONDITION", e.ORDER_FUNCTION_CALL) || "false";
-    return _.i("asyncScheduler.waitUntil", undefined, [_.g(r, true)]);
-  });
+    var r = e.valueToCode(t, n, "CONDITION", e.ORDER_FUNCTION_CALL) || "false"
+    return _.i("asyncScheduler.waitUntil", undefined, [_.g(r, true)])
+  })
   e.insertBlockSnippetGenerator("console_log", function (t, n) {
-    for (var r = t.blocks[n], o = [e.valueToCode(t, n, "VALUE", e.ORDER_FUNCTION_CALL) || ""], i = r.mutation, a = m.Blink.xml.text_to_dom(i).getAttribute("items"), s = a ? parseInt(a) : 0, c = 0; c < s; c++) {
-      var l = e.valueToCode(t, n, "VALUE".concat(c), e.ORDER_FUNCTION_CALL);
+    for (var r = t.blocks[n], o = [e.valueToCode(t, n, "VALUE", e.ORDER_FUNCTION_CALL) || ""], r$mutation = r.mutation, a = m.Blink.xml.text_to_dom(r$mutation).getAttribute("items"), s = a ? parseInt(a) : 0, c = 0; c < s; c++) {
+      var l = e.valueToCode(t, n, "VALUE".concat(c), e.ORDER_FUNCTION_CALL)
       if (l) {
-        o.push(l);
+        o.push(l)
       }
     }
-    var u = e.getDynamicValue("__CURRENT_SCREEN_ID__");
-    return _.n("consoleLog", [_.o(u), _.o(r.id)].concat(o));
-  });
+    var u = e.getDynamicValue("__CURRENT_SCREEN_ID__")
+    return _.n("consoleLog", [_.o(u), _.o(r.id)].concat(o))
+  })
   e.insertBlockSnippetGenerator("new_console_log", function (t, n) {
-    for (var r = t.blocks[n], o = e.getFieldValue(r, "TYPE"), i = [e.valueToCode(t, n, "VALUE", e.ORDER_FUNCTION_CALL) || ""], a = r.mutation, s = m.Blink.xml.text_to_dom(a).getAttribute("items"), c = s ? parseInt(s) : 0, l = 0; l < c; l++) {
-      var u = e.valueToCode(t, n, "VALUE".concat(l), e.ORDER_FUNCTION_CALL);
+    for (var r = t.blocks[n], o = e.getFieldValue(r, "TYPE"), i = [e.valueToCode(t, n, "VALUE", e.ORDER_FUNCTION_CALL) || ""], r$mutation = r.mutation, s = m.Blink.xml.text_to_dom(r$mutation).getAttribute("items"), c = s ? parseInt(s) : 0, l = 0; l < c; l++) {
+      var u = e.valueToCode(t, n, "VALUE".concat(l), e.ORDER_FUNCTION_CALL)
       if (u) {
-        i.push(u);
+        i.push(u)
       }
     }
-    var d = "consoleLog";
+    var d = "consoleLog"
     if (o === E.ERROR) {
-      d = "consoleError";
+      d = "consoleError"
     } else {
       if (o === E.WARNING) {
-        d = "consoleWarning";
+        d = "consoleWarning"
       }
     }
-    var p = e.getDynamicValue("__CURRENT_SCREEN_ID__");
-    return _.n(d, [_.o(p), _.o(r.id)].concat(i));
-  });
+    var p = e.getDynamicValue("__CURRENT_SCREEN_ID__")
+    return _.n(d, [_.o(p), _.o(r.id)].concat(i))
+  })
   e.insertBlockSnippetGenerator("console_error", function (t, n) {
-    for (var r = t.blocks[n], o = [e.valueToCode(t, n, "VALUE", e.ORDER_FUNCTION_CALL) || ""], i = r.mutation, a = m.Blink.xml.text_to_dom(i).getAttribute("items"), s = a ? parseInt(a) : 0, c = 0; c < s; c++) {
-      var l = e.valueToCode(t, n, "VALUE".concat(c), e.ORDER_FUNCTION_CALL);
+    for (var r = t.blocks[n], o = [e.valueToCode(t, n, "VALUE", e.ORDER_FUNCTION_CALL) || ""], r$mutation = r.mutation, a = m.Blink.xml.text_to_dom(r$mutation).getAttribute("items"), s = a ? parseInt(a) : 0, c = 0; c < s; c++) {
+      var l = e.valueToCode(t, n, "VALUE".concat(c), e.ORDER_FUNCTION_CALL)
       if (l) {
-        o.push(l);
+        o.push(l)
       }
     }
-    var u = e.getDynamicValue("__CURRENT_SCREEN_ID__");
-    return _.n("consoleError", [_.o(u), _.o(r.id)].concat(o));
-  });
+    var u = e.getDynamicValue("__CURRENT_SCREEN_ID__")
+    return _.n("consoleError", [_.o(u), _.o(r.id)].concat(o))
+  })
   e.insertBlockSnippetGenerator("controls_for", function (t, n) {
-    var r = e.valueToCode(t, n, "FROM", e.ORDER_FUNCTION_CALL);
-    var o = e.valueToCode(t, n, "TO", e.ORDER_FUNCTION_CALL);
-    var i = e.valueToCode(t, n, "BY", e.ORDER_FUNCTION_CALL);
-    var a = e.valueToCode(t, n, "VALUE", e.ORDER_FUNCTION_CALL);
-    var s = e.statementToCode(t, n, "DO");
-    return s ? _.i("asyncScheduler.loopStep", s, [r, o, i], [a]) : "";
-  });
+    var r = e.valueToCode(t, n, "FROM", e.ORDER_FUNCTION_CALL)
+    var o = e.valueToCode(t, n, "TO", e.ORDER_FUNCTION_CALL)
+    var i = e.valueToCode(t, n, "BY", e.ORDER_FUNCTION_CALL)
+    var a = e.valueToCode(t, n, "VALUE", e.ORDER_FUNCTION_CALL)
+    var s = e.statementToCode(t, n, "DO")
+    return s ? _.i("asyncScheduler.loopStep", s, [r, o, i], [a]) : ""
+  })
   e.insertBlockSnippetGenerator("controls_for_closed_range", function (t, n) {
-    var r = e.valueToCode(t, n, "FROM", e.ORDER_FUNCTION_CALL);
-    var o = e.valueToCode(t, n, "TO", e.ORDER_FUNCTION_CALL);
-    var i = e.valueToCode(t, n, "BY", e.ORDER_FUNCTION_CALL);
-    var a = e.valueToCode(t, n, "VALUE", e.ORDER_FUNCTION_CALL);
-    var s = e.statementToCode(t, n, "DO");
-    return s ? _.i("asyncScheduler.loopStepClosedRange", s, [r, o, i], [a]) : "";
-  });
+    var r = e.valueToCode(t, n, "FROM", e.ORDER_FUNCTION_CALL)
+    var o = e.valueToCode(t, n, "TO", e.ORDER_FUNCTION_CALL)
+    var i = e.valueToCode(t, n, "BY", e.ORDER_FUNCTION_CALL)
+    var a = e.valueToCode(t, n, "VALUE", e.ORDER_FUNCTION_CALL)
+    var s = e.statementToCode(t, n, "DO")
+    return s ? _.i("asyncScheduler.loopStepClosedRange", s, [r, o, i], [a]) : ""
+  })
   e.insertBlockSnippetGenerator("controls_for_value", function () {
-    return "".concat(_.a, "value");
-  });
+    return "".concat(_.a, "value")
+  })
 }
 function j(e) {
-  var t = "<shadow type=\"text\"><field name=\"TEXT\"></field></shadow>";
+  var t = "<shadow type=\"text\"><field name=\"TEXT\"></field></shadow>"
   e.extensions.register_mutator("CONSOLE_MUTATOR", {
     updateShape_: function () {
-      e.events.disable();
+      e.events.disable()
       for (var n = 0; n < this.itemCount_; n++) {
-        var r = "VALUE".concat(n);
+        var r = "VALUE".concat(n)
         if (!this.get_input(r)) {
-          this.append_shadow_input(r, t);
+          this.append_shadow_input(r, t)
         }
       }
       if (0 === this.itemCount_) {
         if (this.get_input("MUTATE_REMOVE_BUTTON")) {
-          this.remove_input("MUTATE_REMOVE_BUTTON");
+          this.remove_input("MUTATE_REMOVE_BUTTON")
         }
         if (!this.get_input("MUTATE_ADD_BUTTON")) {
-          this.append_dummy_input("MUTATE_ADD_BUTTON").append_field(_.p(), "MUTATE_ADD_BUTTON");
+          this.append_dummy_input("MUTATE_ADD_BUTTON").append_field(_.p(), "MUTATE_ADD_BUTTON")
         }
       } else {
         if (!this.get_input("MUTATE_REMOVE_BUTTON")) {
-          this.append_dummy_input("MUTATE_REMOVE_BUTTON").append_field(_.q(undefined), "MUTATE_REMOVE_BUTTON");
+          this.append_dummy_input("MUTATE_REMOVE_BUTTON").append_field(_.q(undefined), "MUTATE_REMOVE_BUTTON")
         }
         if (!this.get_input("MUTATE_ADD_BUTTON")) {
-          this.append_dummy_input("MUTATE_ADD_BUTTON").append_field(_.p(), "MUTATE_ADD_BUTTON");
+          this.append_dummy_input("MUTATE_ADD_BUTTON").append_field(_.p(), "MUTATE_ADD_BUTTON")
         }
       }
-      e.events.enable();
+      e.events.enable()
     },
     addMutation: function (e) {
-      var n = this;
-      var r = "VALUE".concat(this.itemCount_);
+      var n = this
+      var r = "VALUE".concat(this.itemCount_)
       _.b.call(this, r, function () {
         if (!n.get_input("MUTATE_REMOVE_BUTTON")) {
-          n.append_dummy_input("MUTATE_REMOVE_BUTTON", "MUTATE_ADD_BUTTON").append_field(_.q(undefined), "MUTATE_REMOVE_BUTTON");
+          n.append_dummy_input("MUTATE_REMOVE_BUTTON", "MUTATE_ADD_BUTTON").append_field(_.q(undefined), "MUTATE_REMOVE_BUTTON")
         }
-        var e = n.append_value_input(r, "MUTATE_REMOVE_BUTTON");
-        n.itemCount_++;
-        return e;
-      }, t, e);
+        var e = n.append_value_input(r, "MUTATE_REMOVE_BUTTON")
+        n.itemCount_++
+        return e
+      }, t, e)
     },
     removeMutation: function () {
-      var e = this;
-      var t = "VALUE".concat(this.itemCount_ - 1);
+      var e = this
+      var t = "VALUE".concat(this.itemCount_ - 1)
       _.t.call(this, t, "TEXT", function () {
-        e.remove_input(t);
+        e.remove_input(t)
         if (1 === e.itemCount_) {
-          e.remove_input("MUTATE_REMOVE_BUTTON");
+          e.remove_input("MUTATE_REMOVE_BUTTON")
         }
-        e.itemCount_--;
-      });
+        e.itemCount_--
+      })
     },
     mutationToDom: function () {
-      var e = document.createElement("mutation");
-      e.setAttribute("items", String(this.itemCount_));
-      return e;
+      var e = document.createElement("mutation")
+      e.setAttribute("items", String(this.itemCount_))
+      return e
     },
     domToMutation: function (e) {
-      this.itemCount_ = parseInt(e.getAttribute("items"), 10);
-      this.cacheId = {};
-      this.updateShape_();
+      this.itemCount_ = parseInt(e.getAttribute("items"), 10)
+      this.cacheId = {}
+      this.updateShape_()
     }
-  });
+  })
 }
 function N(e, t) {
   e.insertBlockProfile("variables_get", {
@@ -889,13 +889,13 @@ function N(e, t) {
       name: "VAR",
       custom: true,
       advancedOptions: function () {
-        return O.c().getPrimitiveVariableList(this);
+        return O.c().getPrimitiveVariableList(this)
       }
     }],
     output: true,
     colour: "%{BKY_VARIABLES_HUE}",
     inputsInline: true
-  });
+  })
   e.insertBlockProfile("variables_set", {
     type: "variables_set",
     message0: "%{BKY_VARIABLES_SET}",
@@ -904,7 +904,7 @@ function N(e, t) {
       name: "VAR",
       custom: true,
       advancedOptions: function () {
-        return O.c().getPrimitiveVariableList(this);
+        return O.c().getPrimitiveVariableList(this)
       }
     }, {
       type: "input_value",
@@ -915,7 +915,7 @@ function N(e, t) {
     previousStatement: true,
     nextStatement: true,
     colour: "%{BKY_VARIABLES_HUE}"
-  });
+  })
   e.insertBlockProfile("variables_change", {
     type: "variables_change",
     message0: "%{BKY_CHANGE_VARIABLE}",
@@ -924,14 +924,14 @@ function N(e, t) {
       name: "VAR",
       custom: true,
       advancedOptions: function () {
-        return O.c().getPrimitiveVariableList(this);
+        return O.c().getPrimitiveVariableList(this)
       }
     }, {
       type: "field_coco_dropdown",
       name: "METHOD",
       custom: true,
       options: function () {
-        return [[t.Msg.INCREASE, "increase"], [t.Msg.DECREASE, "decrease"]];
+        return [[t.Msg.INCREASE, "increase"], [t.Msg.DECREASE, "decrease"]]
       }
     }, {
       type: "input_value",
@@ -943,64 +943,64 @@ function N(e, t) {
     nextStatement: true,
     colour: "%{BKY_VARIABLES_HUE}",
     inputsInline: true
-  });
+  })
 }
 function R(e) {
-  e.insertBlockXML("variables_get", "", true);
-  e.insertBlockXML("variables_set", "<value name=\"VALUE\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\">0</field>\n        </shadow>\n    </value>", true);
-  e.insertBlockXML("variables_change", "<value name=\"VALUE\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\">1</field>\n        </shadow>\n    </value>", true);
+  e.insertBlockXML("variables_get", "", true)
+  e.insertBlockXML("variables_set", "<value name=\"VALUE\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\">0</field>\n        </shadow>\n    </value>", true)
+  e.insertBlockXML("variables_change", "<value name=\"VALUE\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\">1</field>\n        </shadow>\n    </value>", true)
 }
 function k(e) {
   e.insertBlockSnippetGenerator("variables_get", function (t, n) {
-    var r = t.blocks[n];
-    var o = e.getFieldValue(r, "VAR");
-    return o !== g.h && o ? _.s("getVariableValue", [_.o(o)]) : "";
-  });
+    var r = t.blocks[n]
+    var o = e.getFieldValue(r, "VAR")
+    return o !== g.h && o ? _.s("getVariableValue", [_.o(o)]) : ""
+  })
   e.insertBlockSnippetGenerator("variables_set", function (t, n) {
-    var r = t.blocks[n];
-    var o = e.valueToCode(t, n, "VALUE", e.ORDER_ASSIGNMENT) || "0";
-    var i = e.getFieldValue(r, "VAR") || "";
-    return i !== g.h && i ? _.n("setVariableValue", [_.o(i), o]) : "";
-  });
+    var r = t.blocks[n]
+    var o = e.valueToCode(t, n, "VALUE", e.ORDER_ASSIGNMENT) || "0"
+    var i = e.getFieldValue(r, "VAR") || ""
+    return i !== g.h && i ? _.n("setVariableValue", [_.o(i), o]) : ""
+  })
   e.insertBlockSnippetGenerator("variables_change", function (t, n) {
-    var r = t.blocks[n];
-    var o = e.getFieldValue(r, "METHOD") || "";
-    var i = e.getFieldValue(r, "VAR") || "";
-    var a = e.valueToCode(t, n, "VALUE", e.ORDER_FUNCTION_CALL) || "0";
-    var s = Number(a);
+    var r = t.blocks[n]
+    var o = e.getFieldValue(r, "METHOD") || ""
+    var i = e.getFieldValue(r, "VAR") || ""
+    var a = e.valueToCode(t, n, "VALUE", e.ORDER_FUNCTION_CALL) || "0"
+    var s = Number(a)
     if (!isNaN(s)) {
-      a = s > 0 ? a : "(".concat(a, ")");
+      a = s > 0 ? a : "(".concat(a, ")")
     }
-    return "increase" === o ? _.n("increaseVariable", [_.o(i), a]) : "decrease" === o ? _.n("decreaseVariable", [_.o(i), a]) : "";
-  });
+    return "increase" === o ? _.n("increaseVariable", [_.o(i), a]) : "decrease" === o ? _.n("decreaseVariable", [_.o(i), a]) : ""
+  })
 }
 !function (e) {
-  e.LOG = "LOG";
-  e.ERROR = "ERROR";
-  e.WARNING = "WARNING";
-}(E || (E = {}));
-var x;
-var D;
-var M;
-var L;
-var P;
-var B;
-var F;
+  e.LOG = "LOG"
+  e.ERROR = "ERROR"
+  e.WARNING = "WARNING"
+}(E || (E = {}))
+var x
+var D
+var M
+var L
+var P
+var B
+var F
 import G = require("../../../unrestored/shared/1531/2584/323");
-var U = "<shadow type=\"math_number\"><field name=\"NUM\" constraints=\"1,,1\">1</field></shadow>";
+var U = "<shadow type=\"math_number\"><field name=\"NUM\" constraints=\"1,,1\">1</field></shadow>"
 function W(e, t) {
   function n(e) {
     if (!t.events.is_undoing()) {
-      var n;
-      var r;
-      var o = this.source_block;
-      if (o) {
+      var /* [auto-meaningful-name] */this$source_block$addMutation
+      var /* [auto-meaningful-name] */this$source_block$removeMutation
+      var this$source_block = this.source_block
+      if (this$source_block) {
         if ("nth" === e) {
-          if (!(null === (n = o.addMutation) || undefined === n)) {
-            n.call(o);
+          if (!(null === (this$source_block$addMutation = this$source_block.addMutation) || undefined === this$source_block$addMutation)) {
+            this$source_block$addMutation.call(this$source_block)
           }
-        } else if (!(null === (r = o.removeMutation) || undefined === r)) {
-          r.call(o);
+        } else if (!(null === (this$source_block$removeMutation = this$source_block.removeMutation) || undefined === this$source_block$removeMutation)) {
+          this$source_block$removeMutation.call(this$source_block)
         }
       }
     }
@@ -1013,13 +1013,13 @@ function W(e, t) {
       name: "ARRAY",
       custom: true,
       advancedOptions: function () {
-        return O.c().getArrayVariableList(this);
+        return O.c().getArrayVariableList(this)
       }
     }],
     output: "Array",
     colour: "%{BKY_LISTS_HUE}",
     inputsInline: true
-  });
+  })
   e.insertBlockProfile("lists_append", {
     type: "lists_append",
     message0: "%{BKY_LISTS_APPEND}",
@@ -1035,7 +1035,7 @@ function W(e, t) {
     inputsInline: true,
     previousStatement: true,
     nextStatement: true
-  });
+  })
   e.insertBlockProfile("lists_insert_value", {
     type: "lists_insert_value",
     message0: "%{BKY_INSERT_LISTS_ITEM_BY_INDEX}",
@@ -1057,7 +1057,7 @@ function W(e, t) {
     inputsInline: true,
     previousStatement: true,
     nextStatement: true
-  });
+  })
   e.insertBlockProfile("array_copy", {
     type: "array_copy",
     message0: "%{BKY_COPY_ARRAY}",
@@ -1074,7 +1074,7 @@ function W(e, t) {
     inputsInline: true,
     previousStatement: true,
     nextStatement: true
-  });
+  })
   e.insertBlockProfile("array_get_length", {
     type: "array_get_length",
     message0: "%{BKY_GET_ARRAY_LENGTH}",
@@ -1086,7 +1086,7 @@ function W(e, t) {
     output: "Number",
     colour: "%{BKY_LISTS_HUE}",
     inputsInline: true
-  });
+  })
   e.insertBlockProfile("lists_index_of", {
     type: "lists_index_of",
     message0: "%{BKY_GET_ARRAY_ITEM_INDEX}",
@@ -1102,7 +1102,7 @@ function W(e, t) {
     colour: "%{BKY_LISTS_HUE}",
     output: "Number",
     inputsInline: true
-  });
+  })
   e.insertBlockProfile("lists_is_exist", {
     type: "lists_is_exist",
     message0: "%{BKY_CHECK_ITEM_IN_ARRAY}",
@@ -1118,7 +1118,7 @@ function W(e, t) {
     colour: "%{BKY_LISTS_HUE}",
     output: "Boolean",
     inputsInline: true
-  });
+  })
   e.insertBlockProfile("array_remove_item", {
     type: "array_remove_item",
     message0: "%{BKY_REMOVE_ARRAY_ITEM}",
@@ -1132,7 +1132,7 @@ function W(e, t) {
       custom: true,
       optOnchange: n,
       options: function () {
-        return [[t.Msg.NTH, "nth"], [t.Msg.LAST_ITEM, "lastItem"], [t.Msg.ALL_ITEM, "allItem"]];
+        return [[t.Msg.NTH, "nth"], [t.Msg.LAST_ITEM, "lastItem"], [t.Msg.ALL_ITEM, "allItem"]]
       }
     }],
     message1: "%1",
@@ -1151,7 +1151,7 @@ function W(e, t) {
     previousStatement: true,
     nextStatement: true,
     mutator: "ARRAY_ITEM_MUTATOR"
-  });
+  })
   e.insertBlockProfile("lists_replace", {
     type: "lists_replace",
     message0: "%{BKY_LISTS_REPLACE}",
@@ -1165,7 +1165,7 @@ function W(e, t) {
       custom: true,
       optOnchange: n,
       options: function () {
-        return [[t.Msg.NTH, "nth"], [t.Msg.LAST_ITEM, "lastItem"]];
+        return [[t.Msg.NTH, "nth"], [t.Msg.LAST_ITEM, "lastItem"]]
       }
     }],
     message1: "%1",
@@ -1189,7 +1189,7 @@ function W(e, t) {
     previousStatement: true,
     nextStatement: true,
     mutator: "ARRAY_ITEM_MUTATOR"
-  });
+  })
   e.insertBlockProfile("array_get_item", {
     type: "array_get_item",
     message0: "%1 %2",
@@ -1203,7 +1203,7 @@ function W(e, t) {
       custom: true,
       optOnchange: n,
       options: function () {
-        return [[t.Msg.NTH, "nth"], [t.Msg.LAST_ITEM, "lastItem"]];
+        return [[t.Msg.NTH, "nth"], [t.Msg.LAST_ITEM, "lastItem"]]
       }
     }],
     message1: "%1",
@@ -1221,7 +1221,7 @@ function W(e, t) {
     output: true,
     inputsInline: true,
     mutator: "ARRAY_ITEM_MUTATOR"
-  });
+  })
   e.insertBlockProfile("array_current_item", {
     type: "array_current_item",
     message0: "%{BKY_ARRAY_CURRENT_ITEM}",
@@ -1229,7 +1229,7 @@ function W(e, t) {
     required_context: "array_foreach_DO",
     colour: "%{BKY_PARAM_BLOCK_COLOR}",
     extensions: ["param_block"]
-  });
+  })
   e.insertBlockProfile("array_foreach", {
     type: "array_foreach",
     message0: "%{BKY_ARRAY_FOREACH}",
@@ -1253,158 +1253,158 @@ function W(e, t) {
     nextStatement: true,
     colour: "%{BKY_LISTS_HUE}",
     inputsInline: true
-  });
+  })
 }
 function H(e) {
-  e.insertBlockXML("lists_replace", "\n    <mutation pos='nth'></mutation>\n    <value name=\"ARRAY\">\n      <shadow type=\"array_get\"></shadow>\n    </value>\n    <value name=\"INDEX\">\n      <shadow type=\"math_number\">\n        <field name=\"NUM\" constraints=\"1,,1\">1</field>\n      </shadow>\n    </value>\n    <value name=\"VALUE\">\n      <shadow type=\"math_number\">\n        <field name=\"NUM\">0</field>\n      </shadow>\n    </value>\n    ", true);
-  e.insertBlockXML("array_remove_item", "\n    <mutation pos='nth'></mutation>\n    <value name=\"ARRAY\">\n      <shadow type=\"array_get\"></shadow>\n    </value>\n    <value name=\"INDEX\">\n      <shadow type=\"math_number\">\n        <field name=\"NUM\" constraints='1,,1'>1</field>\n      </shadow>\n    </value>\n  ", true);
-  e.insertBlockXML("array_get", undefined, true);
-  e.insertBlockXML("lists_append", "\n    <value name=\"ARRAY\">\n      <shadow type=\"array_get\"></shadow>\n    </value>\n    <value name=\"VALUE\">\n      <shadow type=\"math_number\">\n        <field name=\"NUM\">0</field>\n      </shadow>\n    </value>\n  ", true);
-  e.insertBlockXML("lists_insert_value", "\n    <value name=\"ARRAY\">\n      <shadow type=\"array_get\"></shadow>\n    </value>\n    <value name=\"INDEX\">\n      <shadow type=\"math_number\">\n        <field name=\"NUM\" constraints='1,,1'>1</field>\n      </shadow>\n    </value>\n    <value name=\"VALUE\">\n      <shadow type=\"math_number\">\n        <field name=\"NUM\">0</field>\n      </shadow>\n    </value>\n  ", true);
-  e.insertBlockXML("array_copy", "\n    <value name=\"FROM\">\n      <shadow type=\"array_get\"></shadow>\n    </value>\n    <value name=\"TO\">\n      <shadow type=\"array_get\"></shadow>\n    </value>\n    ", true);
-  e.insertBlockXML("array_get_item", "\n    <mutation pos='nth'></mutation>\n    <value name=\"ARRAY\">\n      <shadow type=\"array_get\"></shadow>\n    </value>\n    <value name=\"INDEX\">\n      <shadow type=\"math_number\">\n        <field name=\"NUM\" constraints='1,,1'>1</field>\n      </shadow>\n    </value>\n  ", true);
-  e.insertBlockXML("array_get_length", "\n    <value name=\"ARRAY\">\n      <shadow type=\"array_get\"></shadow>\n    </value>\n    ", true);
-  e.insertBlockXML("lists_index_of", "\n    <value name=\"ARRAY\">\n      <shadow type=\"array_get\"></shadow>\n    </value>\n    <value name=\"VALUE\">\n      <shadow type=\"math_number\">\n        <field name=\"NUM\">0</field>\n      </shadow>\n    </value>\n  ", true);
-  e.insertBlockXML("lists_is_exist", "\n    <value name=\"ARRAY\">\n      <shadow type=\"array_get\"></shadow>\n    </value>\n    <value name=\"VALUE\">\n      <shadow type=\"math_number\">\n        <field name=\"NUM\">0</field>\n      </shadow>\n    </value>\n  ", true);
-  e.insertBlockXML("array_foreach", "<value name=\"ARRAY\">\n      <shadow type=\"array_get\"></shadow>\n    </value>", true);
+  e.insertBlockXML("lists_replace", "\n    <mutation pos='nth'></mutation>\n    <value name=\"ARRAY\">\n      <shadow type=\"array_get\"></shadow>\n    </value>\n    <value name=\"INDEX\">\n      <shadow type=\"math_number\">\n        <field name=\"NUM\" constraints=\"1,,1\">1</field>\n      </shadow>\n    </value>\n    <value name=\"VALUE\">\n      <shadow type=\"math_number\">\n        <field name=\"NUM\">0</field>\n      </shadow>\n    </value>\n    ", true)
+  e.insertBlockXML("array_remove_item", "\n    <mutation pos='nth'></mutation>\n    <value name=\"ARRAY\">\n      <shadow type=\"array_get\"></shadow>\n    </value>\n    <value name=\"INDEX\">\n      <shadow type=\"math_number\">\n        <field name=\"NUM\" constraints='1,,1'>1</field>\n      </shadow>\n    </value>\n  ", true)
+  e.insertBlockXML("array_get", undefined, true)
+  e.insertBlockXML("lists_append", "\n    <value name=\"ARRAY\">\n      <shadow type=\"array_get\"></shadow>\n    </value>\n    <value name=\"VALUE\">\n      <shadow type=\"math_number\">\n        <field name=\"NUM\">0</field>\n      </shadow>\n    </value>\n  ", true)
+  e.insertBlockXML("lists_insert_value", "\n    <value name=\"ARRAY\">\n      <shadow type=\"array_get\"></shadow>\n    </value>\n    <value name=\"INDEX\">\n      <shadow type=\"math_number\">\n        <field name=\"NUM\" constraints='1,,1'>1</field>\n      </shadow>\n    </value>\n    <value name=\"VALUE\">\n      <shadow type=\"math_number\">\n        <field name=\"NUM\">0</field>\n      </shadow>\n    </value>\n  ", true)
+  e.insertBlockXML("array_copy", "\n    <value name=\"FROM\">\n      <shadow type=\"array_get\"></shadow>\n    </value>\n    <value name=\"TO\">\n      <shadow type=\"array_get\"></shadow>\n    </value>\n    ", true)
+  e.insertBlockXML("array_get_item", "\n    <mutation pos='nth'></mutation>\n    <value name=\"ARRAY\">\n      <shadow type=\"array_get\"></shadow>\n    </value>\n    <value name=\"INDEX\">\n      <shadow type=\"math_number\">\n        <field name=\"NUM\" constraints='1,,1'>1</field>\n      </shadow>\n    </value>\n  ", true)
+  e.insertBlockXML("array_get_length", "\n    <value name=\"ARRAY\">\n      <shadow type=\"array_get\"></shadow>\n    </value>\n    ", true)
+  e.insertBlockXML("lists_index_of", "\n    <value name=\"ARRAY\">\n      <shadow type=\"array_get\"></shadow>\n    </value>\n    <value name=\"VALUE\">\n      <shadow type=\"math_number\">\n        <field name=\"NUM\">0</field>\n      </shadow>\n    </value>\n  ", true)
+  e.insertBlockXML("lists_is_exist", "\n    <value name=\"ARRAY\">\n      <shadow type=\"array_get\"></shadow>\n    </value>\n    <value name=\"VALUE\">\n      <shadow type=\"math_number\">\n        <field name=\"NUM\">0</field>\n      </shadow>\n    </value>\n  ", true)
+  e.insertBlockXML("array_foreach", "<value name=\"ARRAY\">\n      <shadow type=\"array_get\"></shadow>\n    </value>", true)
 }
 function V(e) {
   e.insertBlockSnippetGenerator("array_get", function (t, n) {
-    var r = t.blocks[n];
-    var o = e.getFieldValue(r, "ARRAY") || "";
-    return _.s("getVariableValue", [_.o(o)]);
-  });
+    var r = t.blocks[n]
+    var o = e.getFieldValue(r, "ARRAY") || ""
+    return _.s("getVariableValue", [_.o(o)])
+  })
   var t = function (t, n) {
-    var r = G.a(n);
-    var o = r.blockId && t.blocks[r.blockId];
-    return o && e.getFieldValue(o, "ARRAY") || "";
-  };
+    var r = G.a(n)
+    var o = r.blockId && t.blocks[r.blockId]
+    return o && e.getFieldValue(o, "ARRAY") || ""
+  }
   e.insertBlockSnippetGenerator("lists_append", function (n, r) {
-    var o = n.blocks[r];
-    var i = e.valueToCode(n, r, "ARRAY", e.ORDER_FUNCTION_CALL);
-    var a = t(n, i);
-    var s = e.valueToCode(n, r, "VALUE", e.ORDER_FUNCTION_CALL);
-    return _.l(_.n("pushArrayItem", [i, s, _.o(a)]), o, e);
-  });
+    var o = n.blocks[r]
+    var i = e.valueToCode(n, r, "ARRAY", e.ORDER_FUNCTION_CALL)
+    var a = t(n, i)
+    var s = e.valueToCode(n, r, "VALUE", e.ORDER_FUNCTION_CALL)
+    return _.l(_.n("pushArrayItem", [i, s, _.o(a)]), o, e)
+  })
   e.insertBlockSnippetGenerator("lists_insert_value", function (n, r) {
-    var o = n.blocks[r];
-    var i = e.valueToCode(n, r, "ARRAY", e.ORDER_FUNCTION_CALL);
-    var a = t(n, i);
-    var s = e.valueToCode(n, r, "VALUE", e.ORDER_FUNCTION_CALL);
-    var c = e.valueToCode(n, r, "INDEX", e.ORDER_FUNCTION_CALL);
-    return _.l(_.n("insertArrayItemByIndex", [i, s, c + " - 1", _.o(a)]), o, e);
-  });
+    var o = n.blocks[r]
+    var i = e.valueToCode(n, r, "ARRAY", e.ORDER_FUNCTION_CALL)
+    var a = t(n, i)
+    var s = e.valueToCode(n, r, "VALUE", e.ORDER_FUNCTION_CALL)
+    var c = e.valueToCode(n, r, "INDEX", e.ORDER_FUNCTION_CALL)
+    return _.l(_.n("insertArrayItemByIndex", [i, s, c + " - 1", _.o(a)]), o, e)
+  })
   e.insertBlockSnippetGenerator("array_remove_item", function (n, r) {
-    var o = e.valueToCode(n, r, "ARRAY", e.ORDER_FUNCTION_CALL);
-    var i = t(n, o);
-    var a = n.blocks[r];
-    var s = e.getFieldValue(a, "ITEM_POS") || "";
+    var o = e.valueToCode(n, r, "ARRAY", e.ORDER_FUNCTION_CALL)
+    var i = t(n, o)
+    var a = n.blocks[r]
+    var s = e.getFieldValue(a, "ITEM_POS") || ""
     if ("nth" === s) {
-      var c = e.valueToCode(n, r, "INDEX", e.ORDER_FUNCTION_CALL);
-      return _.l(_.n("removeArrayItemByIndex", [o, c + " - 1", _.o(i)]), a, e);
+      var c = e.valueToCode(n, r, "INDEX", e.ORDER_FUNCTION_CALL)
+      return _.l(_.n("removeArrayItemByIndex", [o, c + " - 1", _.o(i)]), a, e)
     }
-    return "lastItem" === s ? _.l(_.n("removeLastArrayItem", [o, _.o(i)]), a, e) : _.l(_.n("removeAllArrayItem", [o, _.o(i)]), a, e);
-  });
+    return "lastItem" === s ? _.l(_.n("removeLastArrayItem", [o, _.o(i)]), a, e) : _.l(_.n("removeAllArrayItem", [o, _.o(i)]), a, e)
+  })
   e.insertBlockSnippetGenerator("lists_replace", function (n, r) {
-    var o = n.blocks[r];
-    var i = e.valueToCode(n, r, "ARRAY", e.ORDER_FUNCTION_CALL);
-    var a = t(n, i);
-    var s = e.getFieldValue(o, "ITEM_POS") || "";
-    var c = e.valueToCode(n, r, "VALUE", e.ORDER_FUNCTION_CALL);
+    var o = n.blocks[r]
+    var i = e.valueToCode(n, r, "ARRAY", e.ORDER_FUNCTION_CALL)
+    var a = t(n, i)
+    var s = e.getFieldValue(o, "ITEM_POS") || ""
+    var c = e.valueToCode(n, r, "VALUE", e.ORDER_FUNCTION_CALL)
     if ("nth" === s) {
-      var l = e.valueToCode(n, r, "INDEX", e.ORDER_FUNCTION_CALL);
-      return _.l(_.n("setArrayItemByIndex", [i, c, l + " - 1", _.o(a)]), o, e);
+      var l = e.valueToCode(n, r, "INDEX", e.ORDER_FUNCTION_CALL)
+      return _.l(_.n("setArrayItemByIndex", [i, c, l + " - 1", _.o(a)]), o, e)
     }
-    return _.l(_.n("setArrayLastItem", [i, c, _.o(a)]), o, e);
-  });
+    return _.l(_.n("setArrayLastItem", [i, c, _.o(a)]), o, e)
+  })
   e.insertBlockSnippetGenerator("array_copy", function (n, r) {
-    var o = n.blocks[r];
-    var i = e.valueToCode(n, r, "FROM", e.ORDER_FUNCTION_CALL);
-    var a = e.valueToCode(n, r, "TO", e.ORDER_FUNCTION_CALL);
-    return _.l(_.n("copyArray", [i, a, _.o(t(n, a))]), o, e);
-  });
+    var o = n.blocks[r]
+    var i = e.valueToCode(n, r, "FROM", e.ORDER_FUNCTION_CALL)
+    var a = e.valueToCode(n, r, "TO", e.ORDER_FUNCTION_CALL)
+    return _.l(_.n("copyArray", [i, a, _.o(t(n, a))]), o, e)
+  })
   e.insertBlockSnippetGenerator("array_get_item", function (t, n) {
-    var r = t.blocks[n];
-    var o = e.valueToCode(t, n, "ARRAY", e.ORDER_FUNCTION_CALL);
+    var r = t.blocks[n]
+    var o = e.valueToCode(t, n, "ARRAY", e.ORDER_FUNCTION_CALL)
     if ("nth" === (e.getFieldValue(r, "ITEM_POS") || "")) {
-      var i = e.valueToCode(t, n, "INDEX", e.ORDER_FUNCTION_CALL);
-      return _.l(_.s("getArrayItemByIndex", [o, i + " - 1"]), r, e, false, true);
+      var i = e.valueToCode(t, n, "INDEX", e.ORDER_FUNCTION_CALL)
+      return _.l(_.s("getArrayItemByIndex", [o, i + " - 1"]), r, e, false, true)
     }
-    return _.l(_.s("getArrayLastItem", [o]), r, e, false, true);
-  });
+    return _.l(_.s("getArrayLastItem", [o]), r, e, false, true)
+  })
   e.insertBlockSnippetGenerator("array_get_length", function (t, n) {
-    var r = e.valueToCode(t, n, "ARRAY", e.ORDER_FUNCTION_CALL);
-    return _.s("getArrayLength", [r]);
-  });
+    var r = e.valueToCode(t, n, "ARRAY", e.ORDER_FUNCTION_CALL)
+    return _.s("getArrayLength", [r])
+  })
   e.insertBlockSnippetGenerator("lists_index_of", function (t, n) {
-    var r = t.blocks[n];
-    var o = e.valueToCode(t, n, "ARRAY", e.ORDER_FUNCTION_CALL);
-    var i = e.valueToCode(t, n, "VALUE", e.ORDER_FUNCTION_CALL);
-    return _.l(_.s("getArrayItemIndex", [o, i, "1"]), r, e, false, true);
-  });
+    var r = t.blocks[n]
+    var o = e.valueToCode(t, n, "ARRAY", e.ORDER_FUNCTION_CALL)
+    var i = e.valueToCode(t, n, "VALUE", e.ORDER_FUNCTION_CALL)
+    return _.l(_.s("getArrayItemIndex", [o, i, "1"]), r, e, false, true)
+  })
   e.insertBlockSnippetGenerator("lists_is_exist", function (t, n) {
-    var r = e.valueToCode(t, n, "ARRAY", e.ORDER_FUNCTION_CALL);
-    var o = e.valueToCode(t, n, "VALUE", e.ORDER_FUNCTION_CALL);
-    return _.s("checkItemInArray", [r, o]);
-  });
+    var r = e.valueToCode(t, n, "ARRAY", e.ORDER_FUNCTION_CALL)
+    var o = e.valueToCode(t, n, "VALUE", e.ORDER_FUNCTION_CALL)
+    return _.s("checkItemInArray", [r, o])
+  })
   e.insertBlockSnippetGenerator("array_current_item", function () {
-    return "arrayCurrentItem";
-  });
+    return "arrayCurrentItem"
+  })
   e.insertBlockSnippetGenerator("array_foreach", function (t, n) {
-    var r = e.valueToCode(t, n, "ARRAY", e.ORDER_FUNCTION_CALL);
-    var o = e.valueToCode(t, n, "ARRAY_CURRENT_ITEM", e.ORDER_FUNCTION_CALL);
-    var i = e.statementToCode(t, n, "DO");
-    return i ? _.l(_.i("asyncScheduler.listForEach", i, [r], [o]), t.blocks[n], e, true) : "";
-  });
+    var r = e.valueToCode(t, n, "ARRAY", e.ORDER_FUNCTION_CALL)
+    var o = e.valueToCode(t, n, "ARRAY_CURRENT_ITEM", e.ORDER_FUNCTION_CALL)
+    var i = e.statementToCode(t, n, "DO")
+    return i ? _.l(_.i("asyncScheduler.listForEach", i, [r], [o]), t.blocks[n], e, true) : ""
+  })
 }
 function z(e) {
   e.extensions.register_mutator("ARRAY_ITEM_MUTATOR", {
     updateShape_: function (t) {
-      var n = "add" === t;
-      var r = this.get_input("INDEX");
+      var n = "add" === t
+      var r = this.get_input("INDEX")
       if (n) {
         if (!r) {
-          var o = this.get_input_index("VALUE");
-          var i = -1 === o ? o : 2;
-          this.append_shadow_input("INDEX", U, i).set_check("Number");
-          this.append_dummy_input("ITEM", i + 1).append_field(e.Msg.ARRAY_ITEM);
+          var o = this.get_input_index("VALUE")
+          var i = -1 === o ? o : 2
+          this.append_shadow_input("INDEX", U, i).set_check("Number")
+          this.append_dummy_input("ITEM", i + 1).append_field(e.Msg.ARRAY_ITEM)
         }
       } else if (r) {
-        this.remove_input("INDEX");
-        this.remove_input("ITEM");
+        this.remove_input("INDEX")
+        this.remove_input("ITEM")
       }
     },
     addMutation: function (t) {
-      var n = this;
+      var n = this
       _.b.call(this, "INDEX", function () {
-        var t = n.get_input_index("VALUE");
-        var r = -1 === t ? 2 : t;
-        var o = n.append_value_input("INDEX", r).set_check("Number");
-        n.append_dummy_input("ITEM", r + 1).append_field(e.Msg.ARRAY_ITEM);
-        return o;
-      }, U, t);
+        var t = n.get_input_index("VALUE")
+        var r = -1 === t ? 2 : t
+        var o = n.append_value_input("INDEX", r).set_check("Number")
+        n.append_dummy_input("ITEM", r + 1).append_field(e.Msg.ARRAY_ITEM)
+        return o
+      }, U, t)
     },
     removeMutation: function () {
-      var e = this;
+      var e = this
       _.t.call(this, "INDEX", "NUM", function () {
-        e.remove_input("INDEX");
-        e.remove_input("ITEM");
-      });
+        e.remove_input("INDEX")
+        e.remove_input("ITEM")
+      })
     },
     domToMutation: function () {
-      var e;
-      this.cacheId = {};
-      var t = null === (e = this.get_field("ITEM_POS")) || undefined === e ? undefined : e.get_value();
-      this.updateShape_("nth" === t ? "add" : "remove");
+      var e
+      this.cacheId = {}
+      var t = null === (e = this.get_field("ITEM_POS")) || undefined === e ? undefined : e.get_value()
+      this.updateShape_("nth" === t ? "add" : "remove")
     },
     mutationToDom: function () {
-      var e;
-      var t = document.createElement("mutation");
-      var n = null === (e = this.get_field("ITEM_POS")) || undefined === e ? undefined : e.get_value();
-      t.setAttribute("pos", n || "");
-      return t;
+      var e
+      var t = document.createElement("mutation")
+      var n = null === (e = this.get_field("ITEM_POS")) || undefined === e ? undefined : e.get_value()
+      t.setAttribute("pos", n || "")
+      return t
     }
-  });
+  })
 }
 function Y(e, t) {
   e.insertBlockProfile("object_get", {
@@ -1415,13 +1415,13 @@ function Y(e, t) {
       name: "OBJECT",
       custom: true,
       advancedOptions: function () {
-        return O.c().getObjectVariableList(this);
+        return O.c().getObjectVariableList(this)
       }
     }],
     output: "Object",
     colour: "%{BKY_SOUND_HUE}",
     inputsInline: true
-  });
+  })
   e.insertBlockProfile("object_create", {
     type: "object_create",
     message0: "",
@@ -1429,7 +1429,7 @@ function Y(e, t) {
     inputsInline: true,
     output: "Object",
     mutator: "OBJECT_CREATE_MUTATOR"
-  });
+  })
   e.insertBlockProfile("object_set_item", {
     type: "object_set_item",
     message0: "%{BKY_OBJECT_SET_ITEM}",
@@ -1449,7 +1449,7 @@ function Y(e, t) {
     inputsInline: true,
     previousStatement: true,
     nextStatement: true
-  });
+  })
   e.insertBlockProfile("object_delete_item", {
     type: "object_delete_item",
     message0: "%{BKY_OBJECT_DELETE_ITEM}",
@@ -1466,7 +1466,7 @@ function Y(e, t) {
     inputsInline: true,
     previousStatement: true,
     nextStatement: true
-  });
+  })
   e.insertBlockProfile("object_clear", {
     type: "object_clear",
     message0: "%{BKY_OBJECT_CLEAR}",
@@ -1479,7 +1479,7 @@ function Y(e, t) {
     inputsInline: true,
     previousStatement: true,
     nextStatement: true
-  });
+  })
   e.insertBlockProfile("object_length", {
     type: "object_length",
     message0: "%{BKY_OBJECT_LENGTH}",
@@ -1491,7 +1491,7 @@ function Y(e, t) {
     colour: "%{BKY_SOUND_HUE}",
     inputsInline: true,
     output: "Number"
-  });
+  })
   e.insertBlockProfile("object_get_item", {
     type: "object_get_item",
     message0: "%{BKY_OBJECT_GET_ITEM}",
@@ -1507,7 +1507,7 @@ function Y(e, t) {
     colour: "%{BKY_SOUND_HUE}",
     inputsInline: true,
     output: true
-  });
+  })
   e.insertBlockProfile("object_include_key", {
     type: "object_include_key",
     message0: "%{BKY_OBJECT_INCLUDE_KEY}",
@@ -1523,183 +1523,183 @@ function Y(e, t) {
     colour: "%{BKY_SOUND_HUE}",
     inputsInline: true,
     output: "Boolean"
-  });
+  })
 }
 function K(e) {
-  e.insertBlockXML("object_get", undefined, true);
-  e.insertBlockXML("object_create", "<mutation items='1'></mutation>", true);
-  e.insertBlockXML("object_set_item", "<value name=\"OBJECT\">\n      <shadow type=\"object_get\"></shadow>\n    </value>\n    <value name=\"KEY\">\n      <shadow type=\"text\">\n        <field name=\"TEXT\">key</field>\n      </shadow>\n    </value>\n    <value name=\"VALUE\">\n      <shadow type=\"math_number\">\n        <field name=\"NUM\" allow_text=\"true\">0</field>\n      </shadow>\n    </value>", true);
-  e.insertBlockXML("object_delete_item", "<value name=\"OBJECT\">\n      <shadow type=\"object_get\"></shadow>\n    </value>\n    <value name=\"KEY\">\n      <shadow type=\"text\">\n        <field name=\"TEXT\">key</field>\n      </shadow>\n    </value>", true);
-  e.insertBlockXML("object_clear", "<value name=\"OBJECT\">\n      <shadow type=\"object_get\"></shadow>\n    </value>", true);
-  e.insertBlockXML("object_length", "<value name=\"OBJECT\">\n      <shadow type=\"object_get\"></shadow>\n    </value>", true);
-  e.insertBlockXML("object_get_item", "<value name=\"OBJECT\">\n      <shadow type=\"object_get\"></shadow>\n    </value>\n    <value name=\"KEY\">\n      <shadow type=\"text\">\n        <field name=\"TEXT\">key</field>\n      </shadow>\n    </value>", true);
-  e.insertBlockXML("object_include_key", "<value name=\"OBJECT\">\n      <shadow type=\"object_get\"></shadow>\n    </value>\n    <value name=\"KEY\">\n      <shadow type=\"text\">\n        <field name=\"TEXT\">key</field>\n      </shadow>\n    </value>", true);
+  e.insertBlockXML("object_get", undefined, true)
+  e.insertBlockXML("object_create", "<mutation items='1'></mutation>", true)
+  e.insertBlockXML("object_set_item", "<value name=\"OBJECT\">\n      <shadow type=\"object_get\"></shadow>\n    </value>\n    <value name=\"KEY\">\n      <shadow type=\"text\">\n        <field name=\"TEXT\">key</field>\n      </shadow>\n    </value>\n    <value name=\"VALUE\">\n      <shadow type=\"math_number\">\n        <field name=\"NUM\" allow_text=\"true\">0</field>\n      </shadow>\n    </value>", true)
+  e.insertBlockXML("object_delete_item", "<value name=\"OBJECT\">\n      <shadow type=\"object_get\"></shadow>\n    </value>\n    <value name=\"KEY\">\n      <shadow type=\"text\">\n        <field name=\"TEXT\">key</field>\n      </shadow>\n    </value>", true)
+  e.insertBlockXML("object_clear", "<value name=\"OBJECT\">\n      <shadow type=\"object_get\"></shadow>\n    </value>", true)
+  e.insertBlockXML("object_length", "<value name=\"OBJECT\">\n      <shadow type=\"object_get\"></shadow>\n    </value>", true)
+  e.insertBlockXML("object_get_item", "<value name=\"OBJECT\">\n      <shadow type=\"object_get\"></shadow>\n    </value>\n    <value name=\"KEY\">\n      <shadow type=\"text\">\n        <field name=\"TEXT\">key</field>\n      </shadow>\n    </value>", true)
+  e.insertBlockXML("object_include_key", "<value name=\"OBJECT\">\n      <shadow type=\"object_get\"></shadow>\n    </value>\n    <value name=\"KEY\">\n      <shadow type=\"text\">\n        <field name=\"TEXT\">key</field>\n      </shadow>\n    </value>", true)
 }
 function q(e) {
   var t = function (t, n) {
-    var r = G.a(n);
-    var o = r.blockId && t.blocks[r.blockId];
-    var i = o && e.getFieldValue(o, "OBJECT");
-    return JSON.stringify(i);
-  };
+    var r = G.a(n)
+    var o = r.blockId && t.blocks[r.blockId]
+    var i = o && e.getFieldValue(o, "OBJECT")
+    return JSON.stringify(i)
+  }
   e.insertBlockSnippetGenerator("object_get", function (t, n) {
-    var r = t.blocks[n];
-    var o = e.getFieldValue(r, "OBJECT") || "";
-    return _.s("getVariableValue", [_.o(o)]);
-  });
+    var r = t.blocks[n]
+    var o = e.getFieldValue(r, "OBJECT") || ""
+    return _.s("getVariableValue", [_.o(o)])
+  })
   e.insertBlockSnippetGenerator("object_create", function (t, n) {
     for (var r = 0, o = "[";;) {
-      var i = e.valueToCode(t, n, "KEY".concat(r), e.ORDER_FUNCTION_CALL);
-      var a = e.valueToCode(t, n, "VALUE".concat(r), e.ORDER_FUNCTION_CALL);
+      var i = e.valueToCode(t, n, "KEY".concat(r), e.ORDER_FUNCTION_CALL)
+      var a = e.valueToCode(t, n, "VALUE".concat(r), e.ORDER_FUNCTION_CALL)
       if (!i || !a) {
-        break;
+        break
       }
-      o += "[".concat(i, ", ").concat(a, "],");
-      r++;
+      o += "[".concat(i, ", ").concat(a, "],")
+      r++
     }
-    o += "]";
-    var s = t.blocks[n];
-    return _.l(_.s("createTempObject", [o]), s, e, false, true);
-  });
+    o += "]"
+    var s = t.blocks[n]
+    return _.l(_.s("createTempObject", [o]), s, e, false, true)
+  })
   e.insertBlockSnippetGenerator("object_set_item", function (n, r) {
-    var o = n.blocks[r];
-    var i = e.valueToCode(n, r, "OBJECT", e.ORDER_FUNCTION_CALL);
-    var a = e.valueToCode(n, r, "KEY", e.ORDER_FUNCTION_CALL);
-    var s = e.valueToCode(n, r, "VALUE", e.ORDER_FUNCTION_CALL);
-    var c = t(n, i);
-    return _.l(_.n("setObjectItem", [c, i, a, s]), o, e);
-  });
+    var o = n.blocks[r]
+    var i = e.valueToCode(n, r, "OBJECT", e.ORDER_FUNCTION_CALL)
+    var a = e.valueToCode(n, r, "KEY", e.ORDER_FUNCTION_CALL)
+    var s = e.valueToCode(n, r, "VALUE", e.ORDER_FUNCTION_CALL)
+    var c = t(n, i)
+    return _.l(_.n("setObjectItem", [c, i, a, s]), o, e)
+  })
   e.insertBlockSnippetGenerator("object_delete_item", function (n, r) {
-    var o = n.blocks[r];
-    var i = e.valueToCode(n, r, "OBJECT", e.ORDER_FUNCTION_CALL);
-    var a = e.valueToCode(n, r, "KEY", e.ORDER_FUNCTION_CALL);
-    var s = t(n, i);
-    return _.l(_.n("deleteObjectItem", [s, i, a]), o, e);
-  });
+    var o = n.blocks[r]
+    var i = e.valueToCode(n, r, "OBJECT", e.ORDER_FUNCTION_CALL)
+    var a = e.valueToCode(n, r, "KEY", e.ORDER_FUNCTION_CALL)
+    var s = t(n, i)
+    return _.l(_.n("deleteObjectItem", [s, i, a]), o, e)
+  })
   e.insertBlockSnippetGenerator("object_get_item", function (t, n) {
-    var r = e.valueToCode(t, n, "OBJECT", e.ORDER_FUNCTION_CALL);
-    var o = e.valueToCode(t, n, "KEY", e.ORDER_FUNCTION_CALL);
-    var i = t.blocks[n];
-    return _.l(_.s("getObjectItem", [r, o]), i, e, false, true);
-  });
+    var r = e.valueToCode(t, n, "OBJECT", e.ORDER_FUNCTION_CALL)
+    var o = e.valueToCode(t, n, "KEY", e.ORDER_FUNCTION_CALL)
+    var i = t.blocks[n]
+    return _.l(_.s("getObjectItem", [r, o]), i, e, false, true)
+  })
   e.insertBlockSnippetGenerator("object_clear", function (n, r) {
-    var o = n.blocks[r];
-    var i = e.valueToCode(n, r, "OBJECT", e.ORDER_FUNCTION_CALL);
-    var a = t(n, i);
-    return _.l(_.n("clearObject", [a, i]), o, e);
-  });
+    var o = n.blocks[r]
+    var i = e.valueToCode(n, r, "OBJECT", e.ORDER_FUNCTION_CALL)
+    var a = t(n, i)
+    return _.l(_.n("clearObject", [a, i]), o, e)
+  })
   e.insertBlockSnippetGenerator("object_length", function (t, n) {
-    var r = e.valueToCode(t, n, "OBJECT", e.ORDER_FUNCTION_CALL);
-    var o = t.blocks[n];
-    return _.l(_.s("getObjectLength", [r]), o, e, false, true);
-  });
+    var r = e.valueToCode(t, n, "OBJECT", e.ORDER_FUNCTION_CALL)
+    var o = t.blocks[n]
+    return _.l(_.s("getObjectLength", [r]), o, e, false, true)
+  })
   e.insertBlockSnippetGenerator("object_include_key", function (t, n) {
-    var r = e.valueToCode(t, n, "OBJECT", e.ORDER_FUNCTION_CALL);
-    var o = e.valueToCode(t, n, "KEY", e.ORDER_FUNCTION_CALL);
-    var i = t.blocks[n];
-    return _.l(_.s("checkKeyInObject", [r, o]), i, e, false, true);
-  });
+    var r = e.valueToCode(t, n, "OBJECT", e.ORDER_FUNCTION_CALL)
+    var o = e.valueToCode(t, n, "KEY", e.ORDER_FUNCTION_CALL)
+    var i = t.blocks[n]
+    return _.l(_.s("checkKeyInObject", [r, o]), i, e, false, true)
+  })
 }
 function X(e) {
   e.extensions.register_mutator("OBJECT_CREATE_MUTATOR", {
     itemCount_: 0,
     updateShape_: function () {
-      e.events.disable();
+      e.events.disable()
       if (!this.get_input("TITLE")) {
-        this.append_dummy_input("TITLE").append_field(e.Msg.OBJECT, "TEXT");
+        this.append_dummy_input("TITLE").append_field(e.Msg.OBJECT, "TEXT")
       }
       if (this.get_input("MUTATE_REMOVE_BUTTON")) {
-        this.remove_input("MUTATE_REMOVE_BUTTON");
+        this.remove_input("MUTATE_REMOVE_BUTTON")
       }
       if (this.get_input("MUTATE_ADD_BUTTON")) {
-        this.remove_input("MUTATE_ADD_BUTTON");
+        this.remove_input("MUTATE_ADD_BUTTON")
       }
-      for (var t = this.itemCount_;; t++) {
-        var n = "KEY".concat(t);
+      for (var this$itemCount_ = this.itemCount_;; this$itemCount_++) {
+        var n = "KEY".concat(this$itemCount_)
         if (!this.get_input(n)) {
-          break;
+          break
         }
-        this.remove_input(n);
-        var r = "VALUE".concat(t);
+        this.remove_input(n)
+        var r = "VALUE".concat(this$itemCount_)
         if (!this.get_input(r)) {
-          break;
+          break
         }
-        this.remove_input(r);
+        this.remove_input(r)
       }
       for (var o = 0; o < this.itemCount_; o++) {
-        var i = "KEY".concat(o);
+        var i = "KEY".concat(o)
         if (!this.get_input(i)) {
-          var a = this.append_shadow_input(i, "<shadow type=\"text\"><field name=\"TEXT\">key".concat(o + 1, "</field></shadow>"));
-          a.set_check(["Number", "String"]);
+          var a = this.append_shadow_input(i, "<shadow type=\"text\"><field name=\"TEXT\">key".concat(o + 1, "</field></shadow>"))
+          a.set_check(["Number", "String"])
           if (0 !== o) {
-            a.append_field(",");
+            a.append_field(",")
           }
         }
-        var s = "VALUE".concat(o);
+        var s = "VALUE".concat(o)
         if (!this.get_input(s)) {
-          this.append_shadow_input(s, "<shadow type=\"math_number\"><field name=\"NUM\" allow_text=\"true\">0</field></shadow>").append_field(":");
+          this.append_shadow_input(s, "<shadow type=\"math_number\"><field name=\"NUM\" allow_text=\"true\">0</field></shadow>").append_field(":")
         }
       }
       if (0 === this.itemCount_) {
         if (this.get_input("MUTATE_REMOVE_BUTTON")) {
-          this.remove_input("MUTATE_REMOVE_BUTTON");
+          this.remove_input("MUTATE_REMOVE_BUTTON")
         }
-        this.append_dummy_input("MUTATE_ADD_BUTTON").append_field(_.p(), "MUTATE_ADD_BUTTON");
+        this.append_dummy_input("MUTATE_ADD_BUTTON").append_field(_.p(), "MUTATE_ADD_BUTTON")
       } else {
-        this.append_dummy_input("MUTATE_REMOVE_BUTTON").append_field(_.q(undefined), "MUTATE_REMOVE_BUTTON");
-        this.append_dummy_input("MUTATE_ADD_BUTTON").append_field(_.p(), "MUTATE_ADD_BUTTON");
+        this.append_dummy_input("MUTATE_REMOVE_BUTTON").append_field(_.q(undefined), "MUTATE_REMOVE_BUTTON")
+        this.append_dummy_input("MUTATE_ADD_BUTTON").append_field(_.p(), "MUTATE_ADD_BUTTON")
       }
-      e.events.enable();
+      e.events.enable()
     },
     addMutation: function (t) {
       if (e.events.is_undoing()) {
         if ("number" === typeof t) {
-          this.itemCount_ = t;
-          this.updateShape_();
+          this.itemCount_ = t
+          this.updateShape_()
         }
       } else {
-        var n = this.itemCount_;
-        this.itemCount_++;
-        this.updateShape_();
+        var this$itemCount_ = this.itemCount_
+        this.itemCount_++
+        this.updateShape_()
         var r = _.c("mutation", {
           block: this,
-          old_value: n,
+          old_value: this$itemCount_,
           new_value: this.itemCount_
-        });
-        e.events.fire(r);
+        })
+        e.events.fire(r)
       }
     },
     removeMutation: function (t) {
       if (e.events.is_undoing()) {
         if ("number" === typeof t) {
-          this.itemCount_ = t;
-          this.updateShape_();
+          this.itemCount_ = t
+          this.updateShape_()
         }
       } else {
-        var n = this.itemCount_;
-        this.itemCount_--;
-        this.updateShape_();
+        var this$itemCount_ = this.itemCount_
+        this.itemCount_--
+        this.updateShape_()
         var r = _.c("mutation", {
           block: this,
-          old_value: n,
+          old_value: this$itemCount_,
           new_value: this.itemCount_
-        });
-        e.events.fire(r);
+        })
+        e.events.fire(r)
       }
     },
     mutationToDom: function () {
-      var e = document.createElement("mutation");
-      e.setAttribute("items", String(this.itemCount_));
-      return e;
+      var e = document.createElement("mutation")
+      e.setAttribute("items", String(this.itemCount_))
+      return e
     },
     domToMutation: function (e) {
-      this.itemCount_ = parseInt(e.getAttribute("items"), 10);
-      this.updateShape_();
+      this.itemCount_ = parseInt(e.getAttribute("items"), 10)
+      this.updateShape_()
     }
-  });
+  })
 }
 function Q(e, t) {
-  var n = "%{BKY_BLOCK_CLOUD_ICON}";
+  var n = "%{BKY_BLOCK_CLOUD_ICON}"
   e.insertBlockProfile("app_on_mount", {
     type: "app_on_mount",
     message0: "%{BKY_APP_ON_MOUNT}",
@@ -1712,7 +1712,7 @@ function Q(e, t) {
     }],
     colour: "%{BKY_EVENTS_HUE}",
     inputsInline: true
-  });
+  })
   e.insertBlockProfile("app_on_switch_background", {
     type: "app_on_switch_background",
     message0: "%{BKY_APP_ON_SWITCH}",
@@ -1721,7 +1721,7 @@ function Q(e, t) {
       name: "APP_STATE",
       custom: true,
       options: function () {
-        return [[t.Msg.APP_BACKGROUND, "background"], [t.Msg.APP_ACTIVE, "active"]];
+        return [[t.Msg.APP_BACKGROUND, "background"], [t.Msg.APP_ACTIVE, "active"]]
       }
     }, {
       type: "input_dummy",
@@ -1732,7 +1732,7 @@ function Q(e, t) {
     }],
     colour: "%{BKY_EVENTS_HUE}",
     inputsInline: true
-  });
+  })
   e.insertBlockProfile("broadcast_input", {
     type: "broadcast_input",
     message0: "%1",
@@ -1741,13 +1741,13 @@ function Q(e, t) {
       name: "BROADCAST",
       custom: true,
       advancedOptions: function () {
-        return O.c().getBroadcastList(this);
+        return O.c().getBroadcastList(this)
       }
     }],
     colour: "#ffffff",
     output: "String",
     tooltip: "%{BKY_BROADCAST_INPUT_TOOLTIP}"
-  });
+  })
   e.insertBlockProfile("broadcast_on_receive", {
     type: "broadcast_on_receive",
     message0: "%{BKY_BROADCAST_ON_RECEIVE}",
@@ -1764,7 +1764,7 @@ function Q(e, t) {
     }],
     colour: "%{BKY_EVENTS_HUE}",
     inputsInline: true
-  });
+  })
   e.insertBlockProfile("broadcast_send", {
     type: "broadcast_send",
     message0: "%{BKY_BROADCAST_SEND}",
@@ -1777,7 +1777,7 @@ function Q(e, t) {
     nextStatement: true,
     colour: "%{BKY_EVENTS_HUE}",
     inputsInline: true
-  });
+  })
   e.insertBlockProfile("broadcast_send_and_wait", {
     type: "broadcast_send_and_wait",
     message0: "%{BKY_BROADCAST_SEND_AND_WAIT}",
@@ -1790,43 +1790,43 @@ function Q(e, t) {
     nextStatement: true,
     colour: "%{BKY_EVENTS_HUE}",
     inputsInline: true
-  });
+  })
 }
 function Z(e) {
-  e.insertBlockXML("app_on_mount");
-  e.insertBlockXML("app_on_switch_background");
-  e.insertBlockXML("when", "\n      <value name=\"CONDITION\">\n        <empty type=\"logic_empty\">\n          <field name=\"BOOL\"></field>\n        </empty>\n      </value>\n      ");
-  e.insertBlockXML("broadcast_input", undefined, true);
+  e.insertBlockXML("app_on_mount")
+  e.insertBlockXML("app_on_switch_background")
+  e.insertBlockXML("when", "\n      <value name=\"CONDITION\">\n        <empty type=\"logic_empty\">\n          <field name=\"BOOL\"></field>\n        </empty>\n      </value>\n      ")
+  e.insertBlockXML("broadcast_input", undefined, true)
 }
 function J(e) {
   var t = function (t, n) {
-    var r = e.valueToCode(t, n, "BROADCAST", e.ORDER_FUNCTION_CALL);
-    var o = JSON.stringify(e.getDynamicValue("__CURRENT_SCREEN_ID__"));
-    return "".concat(o, " + ").concat(r);
-  };
+    var r = e.valueToCode(t, n, "BROADCAST", e.ORDER_FUNCTION_CALL)
+    var o = JSON.stringify(e.getDynamicValue("__CURRENT_SCREEN_ID__"))
+    return "".concat(o, " + ").concat(r)
+  }
   e.insertBlockSnippetGenerator("app_on_mount", function (t, n) {
-    var r = e.statementToCode(t, n, "DO");
-    return r ? _.m("onAppMount", undefined, r) : "";
-  });
+    var r = e.statementToCode(t, n, "DO")
+    return r ? _.m("onAppMount", undefined, r) : ""
+  })
   e.insertBlockSnippetGenerator("app_on_switch_background", function (t, n) {
-    var r = t.blocks[n];
-    var o = e.statementToCode(t, n, "DO");
-    return o ? "active" === (e.getFieldValue(r, "APP_STATE") || "") ? _.m("onAppActive", undefined, o) : _.m("onAppBackground", undefined, o) : "";
-  });
+    var r = t.blocks[n]
+    var o = e.statementToCode(t, n, "DO")
+    return o ? "active" === (e.getFieldValue(r, "APP_STATE") || "") ? _.m("onAppActive", undefined, o) : _.m("onAppBackground", undefined, o) : ""
+  })
   e.insertBlockSnippetGenerator("broadcast_input", function (t, n) {
-    var r = t.blocks[n];
-    return JSON.stringify(e.getFieldValue(r, "BROADCAST"));
-  });
+    var r = t.blocks[n]
+    return JSON.stringify(e.getFieldValue(r, "BROADCAST"))
+  })
   e.insertBlockSnippetGenerator("broadcast_on_receive", function (n, r) {
-    var o = e.statementToCode(n, r, "DO");
-    return o ? _.m("onCustomEvent", [t(n, r)], o) : "";
-  });
+    var o = e.statementToCode(n, r, "DO")
+    return o ? _.m("onCustomEvent", [t(n, r)], o) : ""
+  })
   e.insertBlockSnippetGenerator("broadcast_send", function (e, n) {
-    return _.n("emitCustomEvent", [t(e, n)]);
-  });
+    return _.n("emitCustomEvent", [t(e, n)])
+  })
   e.insertBlockSnippetGenerator("broadcast_send_and_wait", function (e, n) {
-    return _.j("emitCustomEventAndWait", [t(e, n)]);
-  });
+    return _.j("emitCustomEventAndWait", [t(e, n)])
+  })
 }
 function $(e) {
   e.insertBlockProfile("math_compare", {
@@ -1849,7 +1849,7 @@ function $(e) {
     inputsInline: true,
     output: "Boolean",
     colour: "%{BKY_LOGIC_HUE}"
-  });
+  })
   e.insertBlockProfile("math_operation", {
     type: "math_operation",
     message0: "%1 %2 %3",
@@ -1870,7 +1870,7 @@ function $(e) {
     inputsInline: true,
     output: "Number",
     colour: "%{BKY_MATH_HUE}"
-  });
+  })
   e.insertBlockProfile("math_random_integer", {
     type: "math_random_integer",
     message0: "%{BKY_RANDOM_NUM}",
@@ -1888,7 +1888,7 @@ function $(e) {
     output: "Number",
     colour: "%{BKY_LOGIC_HUE}",
     inputsInline: true
-  });
+  })
   e.insertBlockProfile("math_number_property", {
     type: "math_number_property",
     message0: "%1 %{BKY_MATH_IS} %2",
@@ -1906,7 +1906,7 @@ function $(e) {
     inputsInline: true,
     output: "Boolean",
     colour: "%{BKY_MATH_HUE}"
-  });
+  })
   e.insertBlockProfile("logic_operation", {
     type: "logic_operation",
     message0: "%1 %2 %3",
@@ -1927,7 +1927,7 @@ function $(e) {
     inputsInline: true,
     output: "Boolean",
     colour: "%{BKY_LOGIC_HUE}"
-  });
+  })
   e.insertBlockProfile("math_complex_operation", {
     type: "math_complex_operation",
     message0: "%1 %2",
@@ -1943,7 +1943,7 @@ function $(e) {
     }],
     output: "Number",
     colour: "%{BKY_MATH_HUE}"
-  });
+  })
   e.insertBlockProfile("math_round", {
     type: "math_round",
     message0: "%1 %2",
@@ -1961,7 +1961,7 @@ function $(e) {
     output: "Number",
     colour: "%{BKY_MATH_HUE}",
     tooltip: "%{BKY_MATH_ROUND_TOOLTIP}"
-  });
+  })
   e.insertBlockProfile("logic_boolean", {
     type: "logic_boolean",
     message0: "%1",
@@ -1974,7 +1974,7 @@ function $(e) {
     output: "Boolean",
     colour: "%{BKY_LOGIC_HUE}",
     tooltip: "%{BKY_LOGIC_BOOLEAN_TOOLTIP}"
-  });
+  })
   e.insertBlockProfile("math_check_divisible", {
     type: "math_check_divisible",
     message0: "%{BKY_DIVISIBLE_BY}",
@@ -1990,7 +1990,7 @@ function $(e) {
     output: "Boolean",
     colour: "%{BKY_LOGIC_HUE}",
     inputsInline: true
-  });
+  })
   e.insertBlockProfile("math_calculate_expression", {
     type: "math_calculate_expression",
     message0: "%{BKY_CALCULATE}",
@@ -2002,7 +2002,7 @@ function $(e) {
     output: "Number",
     colour: "%{BKY_LOGIC_HUE}",
     inputsInline: true
-  });
+  })
   e.insertBlockProfile("text_convert_type", {
     type: "text_convert_type",
     message0: "%{BKY_CONVERT_TYPE}",
@@ -2020,7 +2020,7 @@ function $(e) {
     output: ["String", "Number", "Boolean"],
     colour: "%{BKY_LOGIC_HUE}",
     inputsInline: true
-  });
+  })
   e.insertBlockProfile("text_get_length", {
     type: "text_get_length",
     message0: "%{BKY_TEXT_LENGTH}",
@@ -2032,7 +2032,7 @@ function $(e) {
     output: "Number",
     colour: "%{BKY_LOGIC_HUE}",
     inputsInline: true
-  });
+  })
   e.insertBlockProfile("text_slice", {
     type: "text_slice",
     message0: "%{BKY_TEXT_SLICE}",
@@ -2049,7 +2049,7 @@ function $(e) {
     inputsInline: true,
     colour: "%{BKY_LOGIC_HUE}",
     mutator: "TEXT_SLICE_MUTATOR"
-  });
+  })
   e.insertBlockProfile("text_check_contain", {
     type: "text_check_contain",
     message0: "%{BKY_TEXT_CONTAIN}",
@@ -2065,7 +2065,7 @@ function $(e) {
     output: "Boolean",
     colour: "%{BKY_LOGIC_HUE}",
     inputsInline: true
-  });
+  })
   e.insertBlockProfile("text_split_text", {
     type: "text_split_text",
     message0: "%{BKY_TEXT_SPLIT}",
@@ -2081,7 +2081,7 @@ function $(e) {
     output: "Array",
     colour: "%{BKY_LOGIC_HUE}",
     inputsInline: true
-  });
+  })
   e.insertBlockProfile("text_shadow", {
     type: "text_shadow",
     message0: "%1",
@@ -2093,7 +2093,7 @@ function $(e) {
     output: "String",
     colour: "%{BKY_LOGIC_HUE}",
     inputsInline: true
-  });
+  })
   e.insertBlockProfile("text_rich_text", {
     type: "text_rich_text",
     message0: "%1",
@@ -2106,7 +2106,7 @@ function $(e) {
     colour: "%{BKY_LOGIC_HUE}",
     inputsInline: true,
     extensions: ["text_quotes", "parent_tooltip_when_inline"]
-  });
+  })
   e.insertBlockProfile("math_shadow_number", {
     type: "math_shadow_number",
     message0: "%1",
@@ -2118,7 +2118,7 @@ function $(e) {
     output: "Number",
     colour: "%{BKY_LOGIC_HUE}",
     inputsInline: true
-  });
+  })
   e.insertBlockProfile("text_multiline", {
     type: "text_multiline",
     message0: "%1",
@@ -2131,126 +2131,126 @@ function $(e) {
     output: "String",
     colour: "%{BKY_TEXT_HUE}",
     extensions: ["text_quotes", "parent_tooltip_when_inline"]
-  });
+  })
 }
 function ee(e) {
-  e.insertBlockXML("math_shadow_number", "\n  <value name=\"VALUE\">\n    <shadow type=\"math_number\">\n      <field name=\"NUM\">0</field>\n    </shadow>\n  </value>\n");
-  e.insertBlockXML("math_calculate_expression", "\n  <value name=\"INPUT\">\n    <shadow type=\"text\">\n      <field name=\"TEXT\">1+2</field>\n    </shadow>\n  </value>\n  ");
-  e.insertBlockXML("math_operation", "\n  <value name=\"A\">\n    <shadow type=\"math_number\">\n      <field name=\"NUM\">0</field>\n    </shadow>\n  </value>\n  <value name=\"B\">\n    <shadow type=\"math_number\">\n      <field name=\"NUM\">0</field>\n    </shadow>\n  </value>\n");
-  e.insertBlockXML("math_random_integer", "\n  <value name=\"INPUT_A\">\n    <shadow type=\"math_number\">\n      <field name=\"NUM\">0</field>\n    </shadow>\n  </value>\n  <value name=\"INPUT_B\">\n    <shadow type=\"math_number\">\n      <field name=\"NUM\">5</field>\n    </shadow>\n  </value>\n  ");
-  e.insertBlockXML("math_number_property", "\n  <mutation divisor_input=\"false\"></mutation>\n  <field name=\"PROPERTY\">EVEN</field>\n  <value name=\"NUMBER_TO_CHECK\">\n    <shadow type=\"math_number\">\n      <field name=\"NUM\">0</field>\n    </shadow>\n  </value>\n");
-  e.insertBlockXML("math_check_divisible", "\n  <value name=\"NUMBER_TO_CHECK\">\n    <shadow type=\"math_number\">\n      <field name=\"NUM\">9</field>\n    </shadow>\n  </value>\n  <value name=\"DIVISOR\">\n    <shadow type=\"math_number\">\n      <field name=\"NUM\">3</field>\n    </shadow>\n  </value>\n");
-  e.insertBlockXML("logic_operation", "\n  <value name=\"A\">\n    <empty type=\"logic_empty\">\n      <field name=\"BOOL\"></field>\n    </empty>\n  </value>\n  <value name=\"B\">\n    <empty type=\"logic_empty\">\n      <field name=\"BOOL\"></field>\n    </empty>\n  </value>\n  ");
-  e.insertBlockXML("math_complex_operation", "\n  <value name=\"NUM\">\n    <shadow type=\"math_number\">\n      <field name=\"NUM\">0</field>\n    </shadow>\n  </value>\n");
-  e.insertBlockXML("math_modulo", "\n  <value name=\"DIVIDEND\">\n    <shadow type=\"math_number\">\n      <field name=\"NUM\">64</field>\n    </shadow>\n  </value>\n  <value name=\"DIVISOR\">\n    <shadow type=\"math_number\">\n      <field name=\"NUM\">10</field>\n    </shadow>\n  </value>\n");
-  e.insertBlockXML("math_trig", "\n  <field name=\"OP\">SIN</field>\n  <value name=\"NUM\">\n    <shadow type=\"math_number\">\n      <field name=\"NUM\">45</field>\n    </shadow>\n  </value>\n");
-  e.insertBlockXML("math_round", "\n  <field name=\"OP\">ROUND</field>\n  <value name=\"NUM\">\n    <shadow type=\"math_number\">\n      <field name=\"NUM\">3.1</field>\n    </shadow>\n  </value>\n  ");
-  e.insertBlockXML("math_compare", "\n  <value name=\"A\">\n    <shadow type=\"math_number\">\n      <field name=\"NUM\">0</field>\n    </shadow>\n  </value>\n  <value name=\"B\">\n    <shadow type=\"math_number\">\n      <field name=\"NUM\">0</field>\n    </shadow>\n  </value>\n");
-  e.insertBlockXML("logic_boolean");
-  e.insertBlockXML("logic_negate", "\n  <value name=\"BOOL\">\n    <empty type=\"logic_empty\">\n      <field name=\"BOOL\"></field>\n    </empty>\n  </value>\n");
-  e.insertBlockXML("text_shadow", "\n  <value name=\"VALUE\">\n    <shadow type=\"text\">\n      <field name=\"TEXT\">Hello</field>\n    </shadow>\n  </value>\n");
-  e.insertBlockXML("text_convert_type", "\n  <value name=\"ORIGINAL_VALUE\">\n    <shadow type=\"text\">\n      <field name=\"TEXT\">123</field>\n    </shadow>\n  </value>\n");
-  e.insertBlockXML("text_join", "\n  <mutation items=\"2\"></mutation>\n  <value name=\"ADD0\">\n    <shadow type=\"text\">\n      <field name=\"TEXT\">ab</field>\n    </shadow>\n  </value>\n  <value name=\"ADD1\">\n    <shadow type=\"text\">\n      <field name=\"TEXT\">c</field>\n    </shadow>\n  </value>\n");
-  e.insertBlockXML("text_get_length", "\n  <value name=\"VALUE\">\n    <shadow type=\"text\">\n      <field name=\"TEXT\">abc</field>\n    </shadow>\n  </value>\n");
-  e.insertBlockXML("text_slice", "\n      <mutation items=\"1\"></mutation>\n      <value name=\"STRING\">\n        <shadow type=\"text\">\n          <field name=\"TEXT\">abc</field>\n        </shadow>\n      </value>\n      <value name=\"NUM0\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints=\"1,,1\">1</field>\n        </shadow>\n      </value>\n    ");
-  e.insertBlockXML("text_check_contain", "\n  <value name=\"TEXT1\">\n    <shadow type=\"text\">\n      <field name=\"TEXT\">abc</field>\n    </shadow>\n  </value>\n  <value name=\"TEXT2\">\n    <shadow type=\"text\">\n      <field name=\"TEXT\">abc</field>\n    </shadow>\n  </value>\n");
-  e.insertBlockXML("text_split_text", "\n  <value name=\"STR_TO_SPLIT\">\n    <shadow type=\"text\">\n      <field name=\"TEXT\">1,2,3,4</field>\n    </shadow>\n  </value>\n  <value name=\"SPLIT_STR\">\n    <shadow type=\"text\">\n      <field name=\"TEXT\">,</field>\n    </shadow>\n  </value>\n");
+  e.insertBlockXML("math_shadow_number", "\n  <value name=\"VALUE\">\n    <shadow type=\"math_number\">\n      <field name=\"NUM\">0</field>\n    </shadow>\n  </value>\n")
+  e.insertBlockXML("math_calculate_expression", "\n  <value name=\"INPUT\">\n    <shadow type=\"text\">\n      <field name=\"TEXT\">1+2</field>\n    </shadow>\n  </value>\n  ")
+  e.insertBlockXML("math_operation", "\n  <value name=\"A\">\n    <shadow type=\"math_number\">\n      <field name=\"NUM\">0</field>\n    </shadow>\n  </value>\n  <value name=\"B\">\n    <shadow type=\"math_number\">\n      <field name=\"NUM\">0</field>\n    </shadow>\n  </value>\n")
+  e.insertBlockXML("math_random_integer", "\n  <value name=\"INPUT_A\">\n    <shadow type=\"math_number\">\n      <field name=\"NUM\">0</field>\n    </shadow>\n  </value>\n  <value name=\"INPUT_B\">\n    <shadow type=\"math_number\">\n      <field name=\"NUM\">5</field>\n    </shadow>\n  </value>\n  ")
+  e.insertBlockXML("math_number_property", "\n  <mutation divisor_input=\"false\"></mutation>\n  <field name=\"PROPERTY\">EVEN</field>\n  <value name=\"NUMBER_TO_CHECK\">\n    <shadow type=\"math_number\">\n      <field name=\"NUM\">0</field>\n    </shadow>\n  </value>\n")
+  e.insertBlockXML("math_check_divisible", "\n  <value name=\"NUMBER_TO_CHECK\">\n    <shadow type=\"math_number\">\n      <field name=\"NUM\">9</field>\n    </shadow>\n  </value>\n  <value name=\"DIVISOR\">\n    <shadow type=\"math_number\">\n      <field name=\"NUM\">3</field>\n    </shadow>\n  </value>\n")
+  e.insertBlockXML("logic_operation", "\n  <value name=\"A\">\n    <empty type=\"logic_empty\">\n      <field name=\"BOOL\"></field>\n    </empty>\n  </value>\n  <value name=\"B\">\n    <empty type=\"logic_empty\">\n      <field name=\"BOOL\"></field>\n    </empty>\n  </value>\n  ")
+  e.insertBlockXML("math_complex_operation", "\n  <value name=\"NUM\">\n    <shadow type=\"math_number\">\n      <field name=\"NUM\">0</field>\n    </shadow>\n  </value>\n")
+  e.insertBlockXML("math_modulo", "\n  <value name=\"DIVIDEND\">\n    <shadow type=\"math_number\">\n      <field name=\"NUM\">64</field>\n    </shadow>\n  </value>\n  <value name=\"DIVISOR\">\n    <shadow type=\"math_number\">\n      <field name=\"NUM\">10</field>\n    </shadow>\n  </value>\n")
+  e.insertBlockXML("math_trig", "\n  <field name=\"OP\">SIN</field>\n  <value name=\"NUM\">\n    <shadow type=\"math_number\">\n      <field name=\"NUM\">45</field>\n    </shadow>\n  </value>\n")
+  e.insertBlockXML("math_round", "\n  <field name=\"OP\">ROUND</field>\n  <value name=\"NUM\">\n    <shadow type=\"math_number\">\n      <field name=\"NUM\">3.1</field>\n    </shadow>\n  </value>\n  ")
+  e.insertBlockXML("math_compare", "\n  <value name=\"A\">\n    <shadow type=\"math_number\">\n      <field name=\"NUM\">0</field>\n    </shadow>\n  </value>\n  <value name=\"B\">\n    <shadow type=\"math_number\">\n      <field name=\"NUM\">0</field>\n    </shadow>\n  </value>\n")
+  e.insertBlockXML("logic_boolean")
+  e.insertBlockXML("logic_negate", "\n  <value name=\"BOOL\">\n    <empty type=\"logic_empty\">\n      <field name=\"BOOL\"></field>\n    </empty>\n  </value>\n")
+  e.insertBlockXML("text_shadow", "\n  <value name=\"VALUE\">\n    <shadow type=\"text\">\n      <field name=\"TEXT\">Hello</field>\n    </shadow>\n  </value>\n")
+  e.insertBlockXML("text_convert_type", "\n  <value name=\"ORIGINAL_VALUE\">\n    <shadow type=\"text\">\n      <field name=\"TEXT\">123</field>\n    </shadow>\n  </value>\n")
+  e.insertBlockXML("text_join", "\n  <mutation items=\"2\"></mutation>\n  <value name=\"ADD0\">\n    <shadow type=\"text\">\n      <field name=\"TEXT\">ab</field>\n    </shadow>\n  </value>\n  <value name=\"ADD1\">\n    <shadow type=\"text\">\n      <field name=\"TEXT\">c</field>\n    </shadow>\n  </value>\n")
+  e.insertBlockXML("text_get_length", "\n  <value name=\"VALUE\">\n    <shadow type=\"text\">\n      <field name=\"TEXT\">abc</field>\n    </shadow>\n  </value>\n")
+  e.insertBlockXML("text_slice", "\n      <mutation items=\"1\"></mutation>\n      <value name=\"STRING\">\n        <shadow type=\"text\">\n          <field name=\"TEXT\">abc</field>\n        </shadow>\n      </value>\n      <value name=\"NUM0\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints=\"1,,1\">1</field>\n        </shadow>\n      </value>\n    ")
+  e.insertBlockXML("text_check_contain", "\n  <value name=\"TEXT1\">\n    <shadow type=\"text\">\n      <field name=\"TEXT\">abc</field>\n    </shadow>\n  </value>\n  <value name=\"TEXT2\">\n    <shadow type=\"text\">\n      <field name=\"TEXT\">abc</field>\n    </shadow>\n  </value>\n")
+  e.insertBlockXML("text_split_text", "\n  <value name=\"STR_TO_SPLIT\">\n    <shadow type=\"text\">\n      <field name=\"TEXT\">1,2,3,4</field>\n    </shadow>\n  </value>\n  <value name=\"SPLIT_STR\">\n    <shadow type=\"text\">\n      <field name=\"TEXT\">,</field>\n    </shadow>\n  </value>\n")
 }
 function te(e, t) {
   e.Blocks.math_trig = {
     shadow: "<shadow type=\"math_number\"><field name=\"NUM\">45</field></shadow>",
     init: function () {
-      this.set_colour(e.theme.block_color.MATH_HUE.fill);
+      this.set_colour(e.theme.block_color.MATH_HUE.fill)
       var n = new t({
         type: "field_coco_dropdown",
         name: "OP",
         custom: true,
         options: [[e.Msg.MATH_TRIG_SIN, P.SIN], [e.Msg.MATH_TRIG_COS, P.COS], [e.Msg.MATH_TRIG_TAN, P.TAN], [e.Msg.MATH_TRIG_ASIN, P.ASIN], [e.Msg.MATH_TRIG_ACOS, P.ACOS], [e.Msg.MATH_TRIG_ATAN, P.ATAN]],
         optOnchange: function (e) {
-          var t;
-          var n = "SIN" === e || "COS" === e || "TAN" === e;
-          if (null === (t = this.source_block) || undefined === t ? undefined : t.updateShape_) {
-            this.source_block.updateShape_(n);
+          var /* [auto-meaningful-name] */this$source_block
+          var n = "SIN" === e || "COS" === e || "TAN" === e
+          if (null === (this$source_block = this.source_block) || undefined === this$source_block ? undefined : this$source_block.updateShape_) {
+            this.source_block.updateShape_(n)
           }
         }
-      });
-      this.append_dummy_input().append_field(n, "OP");
-      this.append_shadow_input("NUM", e.Blocks.math_trig.shadow).set_check("Number");
-      this.append_dummy_input("DEGREES").append_field(e.Msg.MATH_DEGREES);
-      this.set_inputs_inline(true);
-      this.set_output(true);
+      })
+      this.append_dummy_input().append_field(n, "OP")
+      this.append_shadow_input("NUM", e.Blocks.math_trig.shadow).set_check("Number")
+      this.append_dummy_input("DEGREES").append_field(e.Msg.MATH_DEGREES)
+      this.set_inputs_inline(true)
+      this.set_output(true)
     },
     updateShape_: function (t) {
-      var n = this.get_input("DEGREES");
+      var n = this.get_input("DEGREES")
       if (t) {
         if (!n) {
-          this.append_dummy_input("DEGREES").append_field(e.Msg.MATH_DEGREES);
+          this.append_dummy_input("DEGREES").append_field(e.Msg.MATH_DEGREES)
         }
       } else {
         if (n) {
-          this.remove_input("DEGREES");
+          this.remove_input("DEGREES")
         }
       }
     }
-  };
-  var n = "<shadow type=\"math_number\"><field name=\"NUM\" constraints=\"1,,1\">2</field></shadow>";
+  }
+  var n = "<shadow type=\"math_number\"><field name=\"NUM\" constraints=\"1,,1\">2</field></shadow>"
   e.extensions.register_mutator("TEXT_SLICE_MUTATOR", {
     updateShape_: function () {
-      e.events.disable();
+      e.events.disable()
       if (1 === this.itemCount_) {
-        this.append_dummy_input("TITLE_TAIL").append_field(e.Msg.OPERATORS_TEXT_SELECT_CHANGEABLE_END);
-        this.append_dummy_input("MUTATE_BUTTON").append_field(_.p(), "MUTATE_BUTTON");
+        this.append_dummy_input("TITLE_TAIL").append_field(e.Msg.OPERATORS_TEXT_SELECT_CHANGEABLE_END)
+        this.append_dummy_input("MUTATE_BUTTON").append_field(_.p(), "MUTATE_BUTTON")
       } else {
-        this.append_dummy_input("CONTENT_TO").append_field(e.Msg.OPERATORS_TEXT_SELECT_CHANGEABLE_TO);
-        this.append_shadow_input("NUM".concat(this.itemCount_ - 1), n);
-        this.append_dummy_input("TITLE_TAIL").append_field(e.Msg.OPERATORS_TEXT_SELECT_CHANGEABLE_END);
-        this.append_dummy_input("MUTATE_BUTTON").append_field(_.q(undefined), "MUTATE_BUTTON");
+        this.append_dummy_input("CONTENT_TO").append_field(e.Msg.OPERATORS_TEXT_SELECT_CHANGEABLE_TO)
+        this.append_shadow_input("NUM".concat(this.itemCount_ - 1), n)
+        this.append_dummy_input("TITLE_TAIL").append_field(e.Msg.OPERATORS_TEXT_SELECT_CHANGEABLE_END)
+        this.append_dummy_input("MUTATE_BUTTON").append_field(_.q(undefined), "MUTATE_BUTTON")
       }
-      e.events.enable();
+      e.events.enable()
     },
     addMutation: function (t) {
-      var r = this;
-      var o = "NUM".concat(this.itemCount_);
+      var r = this
+      var o = "NUM".concat(this.itemCount_)
       _.b.call(this, o, function () {
-        r.append_dummy_input("CONTENT_TO", "TITLE_TAIL").append_field(e.Msg.OPERATORS_TEXT_SELECT_CHANGEABLE_TO);
-        var t = r.append_value_input(o, "TITLE_TAIL");
-        r.itemCount_++;
+        r.append_dummy_input("CONTENT_TO", "TITLE_TAIL").append_field(e.Msg.OPERATORS_TEXT_SELECT_CHANGEABLE_TO)
+        var t = r.append_value_input(o, "TITLE_TAIL")
+        r.itemCount_++
         if (r.get_input("MUTATE_BUTTON")) {
-          r.remove_input("MUTATE_BUTTON");
+          r.remove_input("MUTATE_BUTTON")
         }
-        r.append_dummy_input("MUTATE_BUTTON").append_field(_.q(undefined), "MUTATE_BUTTON");
-        return t;
-      }, n, t);
+        r.append_dummy_input("MUTATE_BUTTON").append_field(_.q(undefined), "MUTATE_BUTTON")
+        return t
+      }, n, t)
     },
     removeMutation: function () {
-      var e = this;
-      var t = "NUM".concat(this.itemCount_ - 1);
+      var e = this
+      var t = "NUM".concat(this.itemCount_ - 1)
       _.t.call(this, t, "NUM", function () {
-        e.remove_input("CONTENT_TO");
-        e.remove_input(t);
-        e.itemCount_--;
+        e.remove_input("CONTENT_TO")
+        e.remove_input(t)
+        e.itemCount_--
         if (e.get_input("MUTATE_BUTTON")) {
-          e.remove_input("MUTATE_BUTTON");
+          e.remove_input("MUTATE_BUTTON")
         }
-        e.append_dummy_input("MUTATE_BUTTON").append_field(_.p(), "MUTATE_BUTTON");
-      });
+        e.append_dummy_input("MUTATE_BUTTON").append_field(_.p(), "MUTATE_BUTTON")
+      })
     },
     mutationToDom: function () {
-      var e = document.createElement("mutation");
-      e.setAttribute("items", String(this.itemCount_));
-      return e;
+      var e = document.createElement("mutation")
+      e.setAttribute("items", String(this.itemCount_))
+      return e
     },
     domToMutation: function (e) {
-      this.itemCount_ = parseInt(e.getAttribute("items"), 10);
-      this.cacheId = {};
-      this.updateShape_();
+      this.itemCount_ = parseInt(e.getAttribute("items"), 10)
+      this.cacheId = {}
+      this.updateShape_()
     }
-  });
+  })
 }
 function ne(e) {
   e.insertBlockSnippetGenerator("math_shadow_number", function (t, n) {
-    return e.valueToCode(t, n, "VALUE", e.ORDER_NONE);
-  });
+    return e.valueToCode(t, n, "VALUE", e.ORDER_NONE)
+  })
   e.insertBlockSnippetGenerator("math_operation", function (t, n) {
     var r = {
       ADD: e.ORDER_ADDITION,
@@ -2258,168 +2258,168 @@ function ne(e) {
       MULTIPLY: e.ORDER_MULTIPLICATION,
       DIVIDE: e.ORDER_DIVISION,
       POWER: e.ORDER_COMMA
-    };
-    var o = t.blocks[n];
-    var i = e.getFieldValue(o, "OP") || "";
-    var a = r[i];
-    var s = e.valueToCode(t, n, "A", a);
-    var c = e.valueToCode(t, n, "B", a);
-    return _.s("mathOperation", [_.o(i), s, c]);
-  });
-  e.insertBlockSnippetGenerator("math_random_integer", function (t, n) {
-    var r = e.valueToCode(t, n, "INPUT_A", e.ORDER_COMMA);
-    var o = e.valueToCode(t, n, "INPUT_B", e.ORDER_COMMA);
-    return _.s("getRandomInteger", [r, o]);
-  });
-  e.insertBlockSnippetGenerator("math_number_property", function (t, n) {
-    var r = t.blocks[n];
-    var o = e.valueToCode(t, n, "NUMBER_TO_CHECK", e.ORDER_MODULUS);
-    var i = e.getFieldValue(r, "PROPERTY") || "";
-    return _.s("determineNumberType", [_.o(i), o]);
-  });
-  e.insertBlockSnippetGenerator("math_check_divisible", function (t, n) {
-    var r = e.valueToCode(t, n, "NUMBER_TO_CHECK", e.ORDER_MODULUS);
-    var o = e.valueToCode(t, n, "DIVISOR", e.ORDER_MODULUS);
-    return _.s("checkDivisibility", [r, o]);
-  });
-  e.insertBlockSnippetGenerator("logic_operation", function (t, n) {
-    var r = t.blocks[n];
-    var o = e.getFieldValue(r, "OP") || "";
-    var i = "AND" === o ? e.ORDER_LOGICAL_AND : e.ORDER_LOGICAL_OR;
-    var a = e.valueToCode(t, n, "A", i) || "false";
-    var s = e.valueToCode(t, n, "B", i) || "false";
-    return _.s("logicOperation", [_.o(o), a, s]);
-  });
-  e.insertBlockSnippetGenerator("math_calculate_expression", function (t, n) {
-    var r = e.valueToCode(t, n, "INPUT", e.ORDER_MEMBER);
-    return _.s("calculateMathExpression", [r]);
-  });
-  e.insertBlockSnippetGenerator("math_complex_operation", function (t, n) {
-    var r = t.blocks[n];
-    var o = e.getFieldValue(r, "OP") || "";
-    var i = e.valueToCode(t, n, "NUM", e.ORDER_FUNCTION_CALL);
-    return _.s("complexMathOperation", [_.o(o), i]);
-  });
-  e.insertBlockSnippetGenerator("math_modulo", function (t, n) {
-    var r = e.valueToCode(t, n, "DIVIDEND", e.ORDER_MODULUS);
-    var o = e.valueToCode(t, n, "DIVISOR", e.ORDER_MODULUS);
-    return _.s("remainderOperation", [r, o]);
-  });
-  e.insertBlockSnippetGenerator("math_trig", function (t, n) {
-    var r = t.blocks[n];
-    var o = e.getFieldValue(r, "OP") || "";
-    var i = e.valueToCode(t, n, "NUM", e.ORDER_FUNCTION_CALL);
-    return _.s("mathTrig", [_.o(o), i]);
-  });
-  e.insertBlockSnippetGenerator("math_round", function (t, n) {
-    var r = t.blocks[n];
-    var o = e.getFieldValue(r, "OP") || "";
-    var i = e.valueToCode(t, n, "NUM", e.ORDER_FUNCTION_CALL);
-    return _.s("mathRound", [_.o(o), i]);
-  });
-  e.insertBlockSnippetGenerator("math_compare", function (t, n) {
-    var r = t.blocks[n];
-    var o = e.getFieldValue(r, "OP") || "";
-    var i = "EQ" === o || "NEQ" === o ? e.ORDER_EQUALITY : e.ORDER_RELATIONAL;
-    var a = e.valueToCode(t, n, "A", i);
-    var s = e.valueToCode(t, n, "B", i);
-    return _.s("compareNumbers", [_.o(o), a, s]);
-  });
-  e.insertBlockSnippetGenerator("text_convert_type", function (t, n) {
-    var r = t.blocks[n];
-    var o = e.getFieldValue(r, "TYPE") || "";
-    var i = e.valueToCode(t, n, "ORIGINAL_VALUE", e.ORDER_FUNCTION_CALL);
-    return i ? _.s("convertValueType", [i, _.o(o)]) : "";
-  });
-  e.insertBlockSnippetGenerator("text_slice", function (t, n) {
-    var r = e.valueToCode(t, n, "STRING", e.ORDER_MEMBER);
-    var o = e.valueToCode(t, n, "NUM0", e.ORDER_COMMA);
-    var i = e.valueToCode(t, n, "NUM1", e.ORDER_COMMA);
-    return i ? _.s("extractString", [r, o, i]) : _.s("extractString", [r, o]);
-  });
-  e.insertBlockSnippetGenerator("text_join", function (t, n) {
-    for (var r = Object.keys(t.connections[n]).length, o = new Array(r), i = 0; i < r; i++) {
-      o[i] = e.valueToCode(t, n, "ADD".concat(i), e.ORDER_COMMA) || "''";
     }
-    return _.s("concatStrings", o);
-  });
+    var o = t.blocks[n]
+    var i = e.getFieldValue(o, "OP") || ""
+    var a = r[i]
+    var s = e.valueToCode(t, n, "A", a)
+    var c = e.valueToCode(t, n, "B", a)
+    return _.s("mathOperation", [_.o(i), s, c])
+  })
+  e.insertBlockSnippetGenerator("math_random_integer", function (t, n) {
+    var r = e.valueToCode(t, n, "INPUT_A", e.ORDER_COMMA)
+    var o = e.valueToCode(t, n, "INPUT_B", e.ORDER_COMMA)
+    return _.s("getRandomInteger", [r, o])
+  })
+  e.insertBlockSnippetGenerator("math_number_property", function (t, n) {
+    var r = t.blocks[n]
+    var o = e.valueToCode(t, n, "NUMBER_TO_CHECK", e.ORDER_MODULUS)
+    var i = e.getFieldValue(r, "PROPERTY") || ""
+    return _.s("determineNumberType", [_.o(i), o])
+  })
+  e.insertBlockSnippetGenerator("math_check_divisible", function (t, n) {
+    var r = e.valueToCode(t, n, "NUMBER_TO_CHECK", e.ORDER_MODULUS)
+    var o = e.valueToCode(t, n, "DIVISOR", e.ORDER_MODULUS)
+    return _.s("checkDivisibility", [r, o])
+  })
+  e.insertBlockSnippetGenerator("logic_operation", function (t, n) {
+    var r = t.blocks[n]
+    var o = e.getFieldValue(r, "OP") || ""
+    var i = "AND" === o ? e.ORDER_LOGICAL_AND : e.ORDER_LOGICAL_OR
+    var a = e.valueToCode(t, n, "A", i) || "false"
+    var s = e.valueToCode(t, n, "B", i) || "false"
+    return _.s("logicOperation", [_.o(o), a, s])
+  })
+  e.insertBlockSnippetGenerator("math_calculate_expression", function (t, n) {
+    var r = e.valueToCode(t, n, "INPUT", e.ORDER_MEMBER)
+    return _.s("calculateMathExpression", [r])
+  })
+  e.insertBlockSnippetGenerator("math_complex_operation", function (t, n) {
+    var r = t.blocks[n]
+    var o = e.getFieldValue(r, "OP") || ""
+    var i = e.valueToCode(t, n, "NUM", e.ORDER_FUNCTION_CALL)
+    return _.s("complexMathOperation", [_.o(o), i])
+  })
+  e.insertBlockSnippetGenerator("math_modulo", function (t, n) {
+    var r = e.valueToCode(t, n, "DIVIDEND", e.ORDER_MODULUS)
+    var o = e.valueToCode(t, n, "DIVISOR", e.ORDER_MODULUS)
+    return _.s("remainderOperation", [r, o])
+  })
+  e.insertBlockSnippetGenerator("math_trig", function (t, n) {
+    var r = t.blocks[n]
+    var o = e.getFieldValue(r, "OP") || ""
+    var i = e.valueToCode(t, n, "NUM", e.ORDER_FUNCTION_CALL)
+    return _.s("mathTrig", [_.o(o), i])
+  })
+  e.insertBlockSnippetGenerator("math_round", function (t, n) {
+    var r = t.blocks[n]
+    var o = e.getFieldValue(r, "OP") || ""
+    var i = e.valueToCode(t, n, "NUM", e.ORDER_FUNCTION_CALL)
+    return _.s("mathRound", [_.o(o), i])
+  })
+  e.insertBlockSnippetGenerator("math_compare", function (t, n) {
+    var r = t.blocks[n]
+    var o = e.getFieldValue(r, "OP") || ""
+    var i = "EQ" === o || "NEQ" === o ? e.ORDER_EQUALITY : e.ORDER_RELATIONAL
+    var a = e.valueToCode(t, n, "A", i)
+    var s = e.valueToCode(t, n, "B", i)
+    return _.s("compareNumbers", [_.o(o), a, s])
+  })
+  e.insertBlockSnippetGenerator("text_convert_type", function (t, n) {
+    var r = t.blocks[n]
+    var o = e.getFieldValue(r, "TYPE") || ""
+    var i = e.valueToCode(t, n, "ORIGINAL_VALUE", e.ORDER_FUNCTION_CALL)
+    return i ? _.s("convertValueType", [i, _.o(o)]) : ""
+  })
+  e.insertBlockSnippetGenerator("text_slice", function (t, n) {
+    var r = e.valueToCode(t, n, "STRING", e.ORDER_MEMBER)
+    var o = e.valueToCode(t, n, "NUM0", e.ORDER_COMMA)
+    var i = e.valueToCode(t, n, "NUM1", e.ORDER_COMMA)
+    return i ? _.s("extractString", [r, o, i]) : _.s("extractString", [r, o])
+  })
+  e.insertBlockSnippetGenerator("text_join", function (t, n) {
+    for (var object$keysT$connectionsN$length = Object.keys(t.connections[n]).length, o = new Array(object$keysT$connectionsN$length), i = 0; i < object$keysT$connectionsN$length; i++) {
+      o[i] = e.valueToCode(t, n, "ADD".concat(i), e.ORDER_COMMA) || "''"
+    }
+    return _.s("concatStrings", o)
+  })
   e.insertBlockSnippetGenerator("text_shadow", function (t, n) {
-    return e.valueToCode(t, n, "VALUE", e.ORDER_NONE);
-  });
+    return e.valueToCode(t, n, "VALUE", e.ORDER_NONE)
+  })
   e.insertBlockSnippetGenerator("text_get_length", function (t, n) {
-    var r = e.valueToCode(t, n, "VALUE", e.ORDER_FUNCTION_CALL);
-    return _.s("getStringLength", [r]);
-  });
+    var r = e.valueToCode(t, n, "VALUE", e.ORDER_FUNCTION_CALL)
+    return _.s("getStringLength", [r])
+  })
   e.insertBlockSnippetGenerator("text_check_contain", function (t, n) {
-    var r = e.valueToCode(t, n, "TEXT1", e.ORDER_FUNCTION_CALL);
-    var o = e.valueToCode(t, n, "TEXT2", e.ORDER_COMMA);
-    return _.s("checkStringContain", [r, o]);
-  });
+    var r = e.valueToCode(t, n, "TEXT1", e.ORDER_FUNCTION_CALL)
+    var o = e.valueToCode(t, n, "TEXT2", e.ORDER_COMMA)
+    return _.s("checkStringContain", [r, o])
+  })
   e.insertBlockSnippetGenerator("text_split_text", function (t, n) {
-    var r = e.valueToCode(t, n, "STR_TO_SPLIT", e.ORDER_FUNCTION_CALL) || "''";
-    var o = e.valueToCode(t, n, "SPLIT_STR", e.ORDER_COMMA);
-    return _.s("splitString", [r, o]);
-  });
+    var r = e.valueToCode(t, n, "STR_TO_SPLIT", e.ORDER_FUNCTION_CALL) || "''"
+    var o = e.valueToCode(t, n, "SPLIT_STR", e.ORDER_COMMA)
+    return _.s("splitString", [r, o])
+  })
   e.insertBlockSnippetGenerator("text_multiline", function (t, n) {
-    var r = t.blocks[n];
-    var o = e.getFieldValue(r, "TEXT") || "";
-    return [JSON.stringify(o), e.ORDER_ATOMIC];
-  });
+    var r = t.blocks[n]
+    var o = e.getFieldValue(r, "TEXT") || ""
+    return [JSON.stringify(o), e.ORDER_ATOMIC]
+  })
   e.insertBlockSnippetGenerator("text_rich_text", function (t, n) {
-    var r = t.blocks[n];
-    var o = e.getFieldValue(r, "TEXT") || "";
-    return [JSON.stringify(o), e.ORDER_ATOMIC];
-  });
+    var r = t.blocks[n]
+    var o = e.getFieldValue(r, "TEXT") || ""
+    return [JSON.stringify(o), e.ORDER_ATOMIC]
+  })
 }
 !function (e) {
-  e.EVEN = "EVEN";
-  e.ODD = "ODD";
-  e.PRIME = "PRIME";
-  e.WHOLE = "WHOLE";
-  e.POSITIVE = "POSITIVE";
-  e.NEGATIVE = "NEGATIVE";
+  e.EVEN = "EVEN"
+  e.ODD = "ODD"
+  e.PRIME = "PRIME"
+  e.WHOLE = "WHOLE"
+  e.POSITIVE = "POSITIVE"
+  e.NEGATIVE = "NEGATIVE"
 }(x || (x = {}));
 (function (e) {
-  e.ADD = "ADD";
-  e.MINUS = "MINUS";
-  e.MULTIPLY = "MULTIPLY";
-  e.DIVIDE = "DIVIDE";
-  e.POWER = "POWER";
+  e.ADD = "ADD"
+  e.MINUS = "MINUS"
+  e.MULTIPLY = "MULTIPLY"
+  e.DIVIDE = "DIVIDE"
+  e.POWER = "POWER"
 })(D || (D = {}));
 (function (e) {
-  e.AND = "AND";
-  e.OR = "OR";
+  e.AND = "AND"
+  e.OR = "OR"
 })(M || (M = {}));
 (function (e) {
-  e.ROOT = "ROOT";
-  e.ABS = "ABS";
-  e.NEG = "NEG";
-  e.LN = "LN";
-  e.LOG10 = "LOG10";
-  e.EXP = "EXP";
-  e.POW10 = "POW10";
+  e.ROOT = "ROOT"
+  e.ABS = "ABS"
+  e.NEG = "NEG"
+  e.LN = "LN"
+  e.LOG10 = "LOG10"
+  e.EXP = "EXP"
+  e.POW10 = "POW10"
 })(L || (L = {}));
 (function (e) {
-  e.SIN = "SIN";
-  e.COS = "COS";
-  e.TAN = "TAN";
-  e.ASIN = "ASIN";
-  e.ACOS = "ACOS";
-  e.ATAN = "ATAN";
+  e.SIN = "SIN"
+  e.COS = "COS"
+  e.TAN = "TAN"
+  e.ASIN = "ASIN"
+  e.ACOS = "ACOS"
+  e.ATAN = "ATAN"
 })(P || (P = {}));
 (function (e) {
-  e.ROUND = "ROUND";
-  e.CEIL = "CEIL";
-  e.FLOOR = "FLOOR";
+  e.ROUND = "ROUND"
+  e.CEIL = "CEIL"
+  e.FLOOR = "FLOOR"
 })(B || (B = {}));
 (function (e) {
-  e.EQUAL = "EQ";
-  e.UNEQUAL = "NEQ";
-  e.LESS_THAN = "LT";
-  e.LESS_THAN_OR_EQUAL = "LTE";
-  e.GREATER_THAN = "GT";
-  e.GREATER_THAN_OR_EQUAL = "GTE";
-})(F || (F = {}));
+  e.EQUAL = "EQ"
+  e.UNEQUAL = "NEQ"
+  e.LESS_THAN = "LT"
+  e.LESS_THAN_OR_EQUAL = "LTE"
+  e.GREATER_THAN = "GT"
+  e.GREATER_THAN_OR_EQUAL = "GTE"
+})(F || (F = {}))
 import re = require("../../../unrestored/shared/1531/2584/301/173");
 function oe(e) {
   e.insertBlockProfile("procedures_2_param_block", {
@@ -2433,66 +2433,66 @@ function oe(e) {
     output: true,
     colour: "%{BKY_PARAM_BLOCK_COLOR}",
     extensions: ["param_block"]
-  });
+  })
 }
 function ie(e) {
-  e.insertBlockXML(re.PROCEDURE_BLOCK_TYPES.DEF, "", true);
-  e.insertBlockXML(re.PROCEDURE_BLOCK_TYPES.CALL_RETURN, "", true);
-  e.insertBlockXML(re.PROCEDURE_BLOCK_TYPES.CALL_NORETURN, "", true);
+  e.insertBlockXML(re.PROCEDURE_BLOCK_TYPES.DEF, "", true)
+  e.insertBlockXML(re.PROCEDURE_BLOCK_TYPES.CALL_RETURN, "", true)
+  e.insertBlockXML(re.PROCEDURE_BLOCK_TYPES.CALL_NORETURN, "", true)
 }
 function ae(e) {
   function t(t, n, r) {
-    var o = n.blocks[r];
-    var i = e.getDynamicValue("__CURRENT_SCREEN_ID__");
-    var a = e.getFieldValue(o, "NAME") || "";
-    var s = _.f(a, i);
+    var o = n.blocks[r]
+    var i = e.getDynamicValue("__CURRENT_SCREEN_ID__")
+    var a = e.getFieldValue(o, "NAME") || ""
+    var s = _.f(a, i)
     var c = Object.keys(o.shadows).filter(function (e) {
-      return e.startsWith("ARG");
+      return e.startsWith("ARG")
     }).map(function (t) {
-      return e.valueToCode(n, r, t, e.ORDER_ATOMIC);
-    });
+      return e.valueToCode(n, r, t, e.ORDER_ATOMIC)
+    })
     return _.l("(await Coco.tryExecute(".concat(["".concat(s), JSON.stringify({
       functionName: s,
       screenId: i
-    })].concat(h.a(c)).join(", "), "))"), o, e, true, true);
+    })].concat(h.a(c)).join(", "), "))"), o, e, true, true)
   }
   e.insertBlockSnippetGenerator("procedures_2_param_block", function (t, n) {
-    var r = t.blocks[n];
-    return e.getFieldValue(r, "param") || "";
-  });
+    var r = t.blocks[n]
+    return e.getFieldValue(r, "param") || ""
+  })
   e.insertBlockSnippetGenerator(re.PROCEDURE_BLOCK_TYPES.DEF, function (t, n) {
-    var r = t.blocks[n];
-    var o = e.getDynamicValue("__CURRENT_SCREEN_ID__");
-    var i = e.getFieldValue(r, "NAME") || "";
+    var r = t.blocks[n]
+    var o = e.getDynamicValue("__CURRENT_SCREEN_ID__")
+    var i = e.getFieldValue(r, "NAME") || ""
     var a = Object.keys(r.shadows).filter(function (e) {
-      return e.startsWith("PARAMS");
+      return e.startsWith("PARAMS")
     }).map(function (r) {
-      return e.valueToCode(t, n, r, e.ORDER_ATOMIC);
-    });
-    e.setDynamicValue("__DEFINING_PROCEDURE__", "true");
-    var s = e.statementToCode(t, n, "STACK");
-    e.deleteDynamicValue("__DEFINING_PROCEDURE__");
-    return "async function ".concat(_.f(i, o), "(").concat(a.join(", "), ") {\n").concat(s, "}\n");
-  });
+      return e.valueToCode(t, n, r, e.ORDER_ATOMIC)
+    })
+    e.setDynamicValue("__DEFINING_PROCEDURE__", "true")
+    var s = e.statementToCode(t, n, "STACK")
+    e.deleteDynamicValue("__DEFINING_PROCEDURE__")
+    return "async function ".concat(_.f(i, o), "(").concat(a.join(", "), ") {\n").concat(s, "}\n")
+  })
   e.insertBlockSnippetGenerator(re.PROCEDURE_BLOCK_TYPES.RETURN, function (t, n) {
-    var r = t.blocks[n];
-    return "return /* blockId=".concat(n, ";blockType=").concat(re.PROCEDURE_BLOCK_TYPES.RETURN, " */ ").concat(Object.keys(r.shadows).length + Object.keys(r.fields).length > 2 ? e.valueToCode(t, n, "VALUE", e.ORDER_NONE) : "", ";\n");
-  });
+    var r = t.blocks[n]
+    return "return /* blockId=".concat(n, ";blockType=").concat(re.PROCEDURE_BLOCK_TYPES.RETURN, " */ ").concat(Object.keys(r.shadows).length + Object.keys(r.fields).length > 2 ? e.valueToCode(t, n, "VALUE", e.ORDER_NONE) : "", ";\n")
+  })
   e.insertBlockSnippetGenerator(re.PROCEDURE_BLOCK_TYPES.CALL_NORETURN, function (e, n) {
-    return t(re.PROCEDURE_BLOCK_TYPES.CALL_NORETURN, e, n) + ";\n";
-  });
+    return t(re.PROCEDURE_BLOCK_TYPES.CALL_NORETURN, e, n) + ";\n"
+  })
   e.insertBlockSnippetGenerator(re.PROCEDURE_BLOCK_TYPES.CALL_RETURN, function (n, r) {
-    return [t(re.PROCEDURE_BLOCK_TYPES.CALL_RETURN, n, r), e.ORDER_FUNCTION_CALL];
-  });
+    return [t(re.PROCEDURE_BLOCK_TYPES.CALL_RETURN, n, r), e.ORDER_FUNCTION_CALL]
+  })
   e.insertBlockSnippetGenerator(re.PROCEDURE_BLOCK_TYPES.PARAM, function (t, n) {
-    var r = t.blocks[n];
-    var o = e.getFieldValue(r, "param_name");
-    return [o ? "".concat(o, " /* blockId=").concat(n, ";blockType=").concat(re.PROCEDURE_BLOCK_TYPES.PARAM, " */") : "", e.ORDER_ATOMIC];
-  });
+    var r = t.blocks[n]
+    var o = e.getFieldValue(r, "param_name")
+    return [o ? "".concat(o, " /* blockId=").concat(n, ";blockType=").concat(re.PROCEDURE_BLOCK_TYPES.PARAM, " */") : "", e.ORDER_ATOMIC]
+  })
   e.insertBlockSnippetGenerator(re.PROCEDURE_BLOCK_TYPES.PARAM_ON_BLOCK, function (t, n) {
-    var r = t.blocks[n];
-    return [e.getFieldValue(r, "param_name") || "", e.ORDER_ATOMIC];
-  });
+    var r = t.blocks[n]
+    return [e.getFieldValue(r, "param_name") || "", e.ORDER_ATOMIC]
+  })
 }
 function se(e, t) {
   e.insertBlockProfile("date_get_current_date", {
@@ -2503,14 +2503,14 @@ function se(e, t) {
       name: "DATE_TYPE",
       custom: true,
       options: function () {
-        return [[t.Msg.DATE_CURRENT_TIME, "time"], [t.Msg.DATE_CURRENT_YEAR, "year"], [t.Msg.DATE_CURRENT_MONTH, "month"], [t.Msg.DATE_CURRENT_DATE, "date"], [t.Msg.DATE_CURRENT_DAY_NAME, "dayName"], [t.Msg.DATE_CURRENT_DAY_NUM, "day"], [t.Msg.DATE_CURRENT_HOUR, "hour"], [t.Msg.DATE_CURRENT_MINUTE, "minute"], [t.Msg.DATE_CURRENT_SECOND, "second"]];
+        return [[t.Msg.DATE_CURRENT_TIME, "time"], [t.Msg.DATE_CURRENT_YEAR, "year"], [t.Msg.DATE_CURRENT_MONTH, "month"], [t.Msg.DATE_CURRENT_DATE, "date"], [t.Msg.DATE_CURRENT_DAY_NAME, "dayName"], [t.Msg.DATE_CURRENT_DAY_NUM, "day"], [t.Msg.DATE_CURRENT_HOUR, "hour"], [t.Msg.DATE_CURRENT_MINUTE, "minute"], [t.Msg.DATE_CURRENT_SECOND, "second"]]
       }
     }],
     output: ["Number", "String"],
     colour: "%{BKY_BLUE_6}",
     inputsInline: true,
     tooltip: "%{BKY_DATE_GET_CURRENT_DATE_TOOLTIP}"
-  });
+  })
   e.insertBlockProfile("date_check_date_is_equal", {
     type: "date_check_date_is_equal",
     message0: "%{BKY_DATE_CHECK_DATE_IS_EQUAL}",
@@ -2526,7 +2526,7 @@ function se(e, t) {
     output: "Boolean",
     colour: "%{BKY_BLUE_6}",
     inputsInline: true
-  });
+  })
   e.insertBlockProfile("date_get_date_minus_operation", {
     type: "date_get_date_minus_operation",
     message0: "%{BKY_DATE_GET_DATE_MINUS_OPERATION}",
@@ -2547,46 +2547,46 @@ function se(e, t) {
     output: "Number",
     colour: "%{BKY_BLUE_6}",
     inputsInline: true
-  });
+  })
 }
 function ce(e) {
   e.insertBlockSnippetGenerator("date_get_current_date", function (t, n) {
-    var r = t.blocks[n];
+    var r = t.blocks[n]
     switch (e.getFieldValue(r, "DATE_TYPE")) {
       case "time":
-        return _.s("getCurrentFormatDateTime");
+        return _.s("getCurrentFormatDateTime")
       case "year":
-        return _.s("getCurrentYear");
+        return _.s("getCurrentYear")
       case "month":
-        return _.s("getCurrentMonth");
+        return _.s("getCurrentMonth")
       case "date":
-        return _.s("getCurrentDate");
+        return _.s("getCurrentDate")
       case "dayName":
-        return _.s("getCurrentDayName");
+        return _.s("getCurrentDayName")
       case "day":
-        return _.s("getCurrentDay");
+        return _.s("getCurrentDay")
       case "hour":
-        return _.s("getCurrentHour");
+        return _.s("getCurrentHour")
       case "minute":
-        return _.s("getCurrentMinute");
+        return _.s("getCurrentMinute")
       case "second":
-        return _.s("getCurrentSecond");
+        return _.s("getCurrentSecond")
       default:
-        return "";
+        return ""
     }
-  });
+  })
   e.insertBlockSnippetGenerator("date_check_date_is_equal", function (t, n) {
-    var r = e.valueToCode(t, n, "DATE_A", e.ORDER_FUNCTION_CALL);
-    var o = e.valueToCode(t, n, "DATE_B", e.ORDER_FUNCTION_CALL);
-    return r && o ? _.s("checkDateIsEqual", [r, o]) : "";
-  });
+    var r = e.valueToCode(t, n, "DATE_A", e.ORDER_FUNCTION_CALL)
+    var o = e.valueToCode(t, n, "DATE_B", e.ORDER_FUNCTION_CALL)
+    return r && o ? _.s("checkDateIsEqual", [r, o]) : ""
+  })
   e.insertBlockSnippetGenerator("date_get_date_minus_operation", function (t, n) {
-    var r = e.valueToCode(t, n, "DATE_A", e.ORDER_FUNCTION_CALL);
-    var o = e.valueToCode(t, n, "DATE_B", e.ORDER_FUNCTION_CALL);
-    var i = t.blocks[n];
-    var a = e.getFieldValue(i, "OPERATION_TYPE");
-    return a && r && o ? _.s("getDateOperation", [r, o, _.o(a)]) : "";
-  });
+    var r = e.valueToCode(t, n, "DATE_A", e.ORDER_FUNCTION_CALL)
+    var o = e.valueToCode(t, n, "DATE_B", e.ORDER_FUNCTION_CALL)
+    var i = t.blocks[n]
+    var a = e.getFieldValue(i, "OPERATION_TYPE")
+    return a && r && o ? _.s("getDateOperation", [r, o, _.o(a)]) : ""
+  })
 }
 import LoadCustomWidget = require("../../shared/widget/custom/load");
 import ue = require("../../../unrestored/shared/1531/2584/121/index");
@@ -2607,24 +2607,24 @@ function getCustomWidgetBlockParamShadow(valueType: CustomWidgetTypes.ValueType,
   switch (defaultValueType) {
     case "number":
       shadow = `<shadow type="math_number">\n      <field name="NUM">${defaultValue}</field>\n    </shadow>`
-      break;
+      break
     case "boolean":
       shadow = `<shadow type="widget_boolean">\n      <field name="BOOL">${defaultValue ? "TRUE" : "FALSE"}</field>\n    </shadow>`
-      break;
+      break
     case "color":
       shadow = `<shadow type="color_picker">\n      <field name="COLOR_PALETTE">${de.i(defaultValue) ? "#ffffff" : defaultValue}</field>\n    </shadow>`
-      break;
+      break
     case "image":
       shadow = `<shadow type="image_file_list_dropdown">\n        <field name="IMAGE_FILE_ID">${g.h}</field>\n      </shadow>`
-      break;
+      break
     case "icon":
       shadow = `<shadow type="icon_file_list_dropdown">\n          <field name="ICON_FILE_ID">${g.h}</field>\n        </shadow>`
-      break;
+      break
     case "multilineString":
       shadow = `<shadow type="text_multiline">\n        <field name="TEXT">${defaultValue}</field>\n      </shadow>`
-      break;
+      break
     case "richTextString":
-      shadow = `<shadow type="text_rich_text">\n          <field name="TEXT">${(defaultValue => {
+      shadow = `<shadow type="text_rich_text">\n          <field name="TEXT">${((defaultValue) => {
         const ESECAP_MAP = {
           "&": "&amp;",
           "\"": "&quot;",
@@ -2632,16 +2632,16 @@ function getCustomWidgetBlockParamShadow(valueType: CustomWidgetTypes.ValueType,
           "<": "&lt;",
           ">": "&gt;"
         }
-        return defaultValue.replace(/[&"'<>]/g, char => ESECAP_MAP[(char as keyof typeof ESECAP_MAP)])
+        return defaultValue.replace(/[&"'<>]/g, (char) => ESECAP_MAP[char as keyof typeof ESECAP_MAP])
       })(defaultValue as string)}</field>\n        </shadow>`
   }
   return shadow
 }
 function he(e, t) {
   return t.map(function (t) {
-    var n = pe.a(e, t.label);
+    var n = pe.a(e, t.label)
     if (undefined === n) {
-      n = t.label;
+      n = t.label
     }
     return t.image ? [n, String(t.value), {
       src: t.image,
@@ -2649,8 +2649,8 @@ function he(e, t) {
       height: 30,
       margin_right: 4,
       is_hide: t.isHideFieldImage
-    }] : [n, String(t.value)];
-  });
+    }] : [n, String(t.value)]
+  })
 }
 import me = require("../../../unrestored/shared/1531/2584/301/541");
 import ge = require("../../../unrestored/shared/1531/2584/301/652");
@@ -2660,161 +2660,161 @@ function _e(e, t) {
       event: "event",
       widgetType: "",
       updateShape_: function () {
-        var e = this;
-        var n = LoadCustomWidget.h(this.widgetType, this.event);
+        var e = this
+        var n = LoadCustomWidget.h(this.widgetType, this.event)
         if (!n) {
-          console.error("WIDGET_EVENT_MUTATOR getWidgetEvent error", this.widgetType, this.event);
-          this.append_statement_input("DO", undefined);
-          this.set_disabled(true);
-          this.set_field_value(t.Msg.INVALID_BLOCK, "EVENT");
-          return void this.set_colour("#abafb6");
+          console.error("WIDGET_EVENT_MUTATOR getWidgetEvent error", this.widgetType, this.event)
+          this.append_statement_input("DO", undefined)
+          this.set_disabled(true)
+          this.set_field_value(t.Msg.INVALID_BLOCK, "EVENT")
+          return void this.set_colour("#abafb6")
         }
-        this.set_disabled(false);
-        var r = n.label;
-        var o = n.params;
-        var i = n.subTypes;
-        var a = n.tooltip;
-        var s = n.blockOptions;
-        var c = n.key;
-        var l = pe.a(this.widgetType, r);
+        this.set_disabled(false)
+        var n$label = n.label
+        var n$params = n.params
+        var n$subTypes = n.subTypes
+        var n$tooltip = n.tooltip
+        var n$blockOptions = n.blockOptions
+        var n$key = n.key
+        var l = pe.a(this.widgetType, n$label)
         if (this.isAnyWidget) {
-          var u;
-          var d = "任意" + LoadCustomWidget.getWidgetTitle(this.widgetType);
+          var u
+          var d = "任意" + LoadCustomWidget.getWidgetTitle(this.widgetType)
           if (!(null === (u = this.get_input("WIDGET_ID_CONTAINER")) || undefined === u)) {
-            u.append_field(d);
+            u.append_field(d)
           }
         } else {
-          var p;
+          var p
           var f = new ue.a({
             type: "field_coco_dropdown",
             name: "WIDGET_ID",
             custom: true,
             options: function () {
-              return O.c().getWidgetListByType(e.widgetType);
+              return O.c().getWidgetListByType(e.widgetType)
             }
-          });
+          })
           if (!(null === (p = this.get_input("WIDGET_ID_CONTAINER")) || undefined === p)) {
-            p.append_field(f, "WIDGET_ID");
+            p.append_field(f, "WIDGET_ID")
           }
         }
-        if (a) {
-          var h = pe.a(this.widgetType, a);
-          this.set_tooltip(h);
+        if (n$tooltip) {
+          var h = pe.a(this.widgetType, n$tooltip)
+          this.set_tooltip(h)
         }
-        if (null === s || undefined === s ? undefined : s.icon) {
-          var m = this.inputList[0].fieldRow[0];
+        if (null === n$blockOptions || undefined === n$blockOptions ? undefined : n$blockOptions.icon) {
+          var m = this.inputList[0].fieldRow[0]
           if (!m || "FieldIcon" !== m.field_type) {
-            return;
+            return
           }
-          m.set_value(t.utils.replace_message_references(s.icon));
+          m.set_value(t.utils.replace_message_references(n$blockOptions.icon))
         }
-        var g = LoadCustomWidget.i(this.widgetType, c);
-        this.append_statement_input("DO", undefined, g);
-        if (i) {
-          this.set_field_value(l, "EVENT");
-          i.forEach(function (t) {
-            var n = t.key;
-            var r = t.dropdown;
-            var o = "PARAM_".concat(n);
+        var g = LoadCustomWidget.i(this.widgetType, n$key)
+        this.append_statement_input("DO", undefined, g)
+        if (n$subTypes) {
+          this.set_field_value(l, "EVENT")
+          n$subTypes.forEach(function (t) {
+            var t$key = t.key
+            var t$dropdown = t.dropdown
+            var o = "PARAM_".concat(t$key)
             var i = new ue.a({
               type: "field_coco_dropdown",
               name: o,
               custom: true,
-              options: he(e.widgetType, r)
-            });
-            e.append_dummy_input("", "DO").append_field(i, o);
-          });
+              options: he(e.widgetType, t$dropdown)
+            })
+            e.append_dummy_input("", "DO").append_field(i, o)
+          })
         } else {
-          this.set_field_value(l + t.Msg.WIDGET_EVENT_SUFFIX, "EVENT");
+          this.set_field_value(l + t.Msg.WIDGET_EVENT_SUFFIX, "EVENT")
         }
-        o.forEach(function (t) {
-          var n = t.key;
-          var r = t.label;
-          var o = t.dropdown;
-          var i = "PARAM_".concat(n);
-          var a = pe.a(e.widgetType, r);
-          if (o) {
+        n$params.forEach(function (t) {
+          var t$key = t.key
+          var t$label = t.label
+          var t$dropdown = t.dropdown
+          var i = "PARAM_".concat(t$key)
+          var a = pe.a(e.widgetType, t$label)
+          if (t$dropdown) {
             var s = new ue.a({
               type: "field_coco_dropdown",
               name: i,
               custom: true,
-              options: he(e.widgetType, o)
-            });
-            var c = e.append_dummy_input("", "DO");
+              options: he(e.widgetType, t$dropdown)
+            })
+            var c = e.append_dummy_input("", "DO")
             if (a) {
-              c.append_field(a, "".concat(i, "_LABEL"));
+              c.append_field(a, "".concat(i, "_LABEL"))
             }
-            c.append_field(s, i);
+            c.append_field(s, i)
           } else {
-            e.append_shadow_input(i, "<shadow type=\"widget_event_param\">\n              <field name=\"PARAM_NAME\">".concat(a, "</field>\n              <mutation widget_type=\"").concat(e.widgetType, "\" event=\"").concat(e.event, "\" param=\"").concat(n, "\"></mutation>\n            </shadow>"), "DO");
+            e.append_shadow_input(i, "<shadow type=\"widget_event_param\">\n              <field name=\"PARAM_NAME\">".concat(a, "</field>\n              <mutation widget_type=\"").concat(e.widgetType, "\" event=\"").concat(e.event, "\" param=\"").concat(t$key, "\"></mutation>\n            </shadow>"), "DO")
           }
-        });
+        })
         if (this.isAnyWidget) {
-          var _ = LoadCustomWidget.a;
-          var v = "PARAM_".concat(_);
-          var b = LoadCustomWidget.b;
-          this.append_shadow_input(v, "<shadow type=\"widget_event_param\">\n          <field name=\"PARAM_NAME\">".concat(b, "</field>\n          <mutation widget_type=\"").concat(this.widgetType, "\" event=\"").concat(this.event, "\" param=\"").concat(_, "\"></mutation>\n        </shadow>"), "DO");
+          var loadCustomWidget$a = LoadCustomWidget.a
+          var v = "PARAM_".concat(loadCustomWidget$a)
+          var loadCustomWidget$b = LoadCustomWidget.b
+          this.append_shadow_input(v, "<shadow type=\"widget_event_param\">\n          <field name=\"PARAM_NAME\">".concat(loadCustomWidget$b, "</field>\n          <mutation widget_type=\"").concat(this.widgetType, "\" event=\"").concat(this.event, "\" param=\"").concat(loadCustomWidget$a, "\"></mutation>\n        </shadow>"), "DO")
         }
       },
       domToMutation: function (e) {
-        this.event = e.getAttribute("event") || this.event;
-        this.widgetType = e.getAttribute("widget_type") || this.widgetType;
-        this.isAnyWidget = "true" === e.getAttribute("is_any_widget");
-        this.updateShape_();
+        this.event = e.getAttribute("event") || this.event
+        this.widgetType = e.getAttribute("widget_type") || this.widgetType
+        this.isAnyWidget = "true" === e.getAttribute("is_any_widget")
+        this.updateShape_()
       },
       mutationToDom: function () {
-        var e = document.createElement("mutation");
-        e.setAttribute("event", this.event);
-        e.setAttribute("widget_type", this.widgetType);
-        e.setAttribute("is_any_widget", String(this.isAnyWidget));
-        return e;
+        var e = document.createElement("mutation")
+        e.setAttribute("event", this.event)
+        e.setAttribute("widget_type", this.widgetType)
+        e.setAttribute("is_any_widget", String(this.isAnyWidget))
+        return e
       }
-    };
+    }
     var r = {
       param: "",
       event: "",
       widgetType: "",
       domToMutation: function (e) {
-        var t = this;
-        this.param = e.getAttribute("param") || this.param;
-        this.event = e.getAttribute("event") || this.event;
-        this.widgetType = e.getAttribute("widget_type") || this.widgetType;
-        var n = LoadCustomWidget.h(this.widgetType, this.event);
+        var t = this
+        this.param = e.getAttribute("param") || this.param
+        this.event = e.getAttribute("event") || this.event
+        this.widgetType = e.getAttribute("widget_type") || this.widgetType
+        var n = LoadCustomWidget.h(this.widgetType, this.event)
         if (this.widgetType || this.event) {
           if (!n) {
-            console.error("WIDGET_EVENT_PARAM_MUTATOR getWidgetEvent error", this.widgetType, this.event, this.param);
-            this.set_output(true);
-            return void this.set_disabled(true);
+            console.error("WIDGET_EVENT_PARAM_MUTATOR getWidgetEvent error", this.widgetType, this.event, this.param)
+            this.set_output(true)
+            return void this.set_disabled(true)
           }
-          this.set_disabled(false);
-          var r = LoadCustomWidget.i(this.widgetType, this.event);
+          this.set_disabled(false)
+          var r = LoadCustomWidget.i(this.widgetType, this.event)
           if (this.param === LoadCustomWidget.a) {
-            this.set_output(true, "string", r);
+            this.set_output(true, "string", r)
           } else {
             var o = n.params.find(function (e) {
-              return e.key === t.param;
-            });
+              return e.key === t.param
+            })
             if (!o) {
-              return void console.error("WIDGET_EVENT_PARAM_MUTATOR get param error", this.widgetType, this.event, this.param);
+              return void console.error("WIDGET_EVENT_PARAM_MUTATOR get param error", this.widgetType, this.event, this.param)
             }
-            var i = o.valueType;
-            var a = LoadCustomWidget.g(i);
-            this.set_output(true, a, r);
+            var o$valueType = o.valueType
+            var a = LoadCustomWidget.g(o$valueType)
+            this.set_output(true, a, r)
           }
         } else {
-          this.set_output(true);
+          this.set_output(true)
         }
       },
       mutationToDom: function () {
-        var e = document.createElement("mutation");
-        e.setAttribute("param", this.param);
-        e.setAttribute("event", this.event);
-        e.setAttribute("widget_type", this.widgetType);
-        return e;
+        var e = document.createElement("mutation")
+        e.setAttribute("param", this.param)
+        e.setAttribute("event", this.event)
+        e.setAttribute("widget_type", this.widgetType)
+        return e
       }
-    };
-    t.extensions.register_mutator("widget_event_mutator", n);
-    t.extensions.register_mutator("widget_event_param_mutator", r);
+    }
+    t.extensions.register_mutator("widget_event_mutator", n)
+    t.extensions.register_mutator("widget_event_param_mutator", r)
     t.define_blocks_with_json_array([{
       type: "widget_event",
       message0: "%{BKY_WIDGET_EVENT_MSG}",
@@ -2829,7 +2829,7 @@ function _e(e, t) {
       colour: "%{BKY_EVENTS_HUE}",
       inputsInline: true,
       mutator: "widget_event_mutator"
-    }]);
+    }])
     t.define_blocks_with_json_array([{
       type: "widget_event_param",
       message0: "%{BKY_WIDGET_EVENT_PARAM_MSG}",
@@ -2842,75 +2842,75 @@ function _e(e, t) {
       colour: "%{BKY_PARAM_BLOCK_COLOR}",
       mutator: "widget_event_param_mutator",
       extensions: ["param_block"]
-    }]);
+    }])
   }(0, t);
   (function (e, t) {
     var n = {
       property: "",
       widgetType: "",
       updateShape_: function () {
-        var e;
-        var n = this;
-        var r = LoadCustomWidget.l(this.widgetType, this.property);
+        var e
+        var n = this
+        var r = LoadCustomWidget.l(this.widgetType, this.property)
         if (!r) {
-          console.error("WIDGET_GET_MUTATOR getWidgetProperty error", this.widgetType, this.property);
-          this.set_disabled(true);
-          this.set_output(true);
-          this.set_field_value(t.Msg.INVALID_BLOCK, "PROPERTY");
-          return void this.set_colour("#abafb6");
+          console.error("WIDGET_GET_MUTATOR getWidgetProperty error", this.widgetType, this.property)
+          this.set_disabled(true)
+          this.set_output(true)
+          this.set_field_value(t.Msg.INVALID_BLOCK, "PROPERTY")
+          return void this.set_colour("#abafb6")
         }
-        this.set_disabled(false);
-        var o;
-        var i;
-        var a = r.label;
-        var s = r.valueType;
-        var c = r.tooltip;
-        var l = r.blockOptions;
-        var u = undefined === l ? {} : l;
-        var d = pe.a(this.widgetType, a);
-        this.set_field_value(t.Msg.WIDGET_OF, "PROPERTY");
+        this.set_disabled(false)
+        var /* [auto-meaningful-name] */u$getter$keys
+        var i
+        var r$label = r.label
+        var r$valueType = r.valueType
+        var r$tooltip = r.tooltip
+        var r$blockOptions = r.blockOptions
+        var u = undefined === r$blockOptions ? {} : r$blockOptions
+        var d = pe.a(this.widgetType, r$label)
+        this.set_field_value(t.Msg.WIDGET_OF, "PROPERTY")
         if (this.isAnyWidget) {
-          var p;
-          var f = LoadCustomWidget.getWidgetTitle(this.widgetType);
+          var p
+          var f = LoadCustomWidget.getWidgetTitle(this.widgetType)
           if (!(null === (p = this.get_input("WIDGET_ID_CONTAINER")) || undefined === p)) {
-            p.append_field(f);
+            p.append_field(f)
           }
-          this.append_shadow_input("WIDGET_ID", "<empty type=\"widget_any_id\"></empty>", "PROPERTY");
+          this.append_shadow_input("WIDGET_ID", "<empty type=\"widget_any_id\"></empty>", "PROPERTY")
         } else {
-          var h;
+          var h
           var m = new ue.a({
             type: "field_coco_dropdown",
             name: "WIDGET_ID",
             custom: true,
             options: function () {
-              return O.c().getWidgetListByType(n.widgetType);
+              return O.c().getWidgetListByType(n.widgetType)
             }
-          });
+          })
           if (!(null === (h = this.get_input("WIDGET_ID_CONTAINER")) || undefined === h)) {
-            h.append_field(m, "WIDGET_ID");
+            h.append_field(m, "WIDGET_ID")
           }
         }
-        if ("object" === typeof u.getter && (null === (i = o = u.getter.keys) || undefined === i ? undefined : i.length)) {
-          var g = [];
-          o.forEach(function (e) {
-            var t = LoadCustomWidget.l(n.widgetType, e);
+        if ("object" === typeof u.getter && (null === (i = u$getter$keys = u.getter.keys) || undefined === i ? undefined : i.length)) {
+          var g = []
+          u$getter$keys.forEach(function (e) {
+            var t = LoadCustomWidget.l(n.widgetType, e)
             if (t) {
-              var r = pe.a(n.widgetType, t.label);
-              g.push([r, e]);
+              var r = pe.a(n.widgetType, t.label)
+              g.push([r, e])
             } else {
-              console.error("WIDGET_GET_MUTATOR getWidgetProperty error", n.widgetType, e);
+              console.error("WIDGET_GET_MUTATOR getWidgetProperty error", n.widgetType, e)
             }
-          });
+          })
           this.append_dummy_input().append_field(new ue.a({
             type: "field_coco_dropdown",
             name: "PROPERTY_KEY",
             custom: true,
             options: function () {
-              return g;
+              return g
             }
-          }), "PROPERTY_KEY");
+          }), "PROPERTY_KEY")
           if (d) {
-            this.append_dummy_input().append_field("".concat(d));
+            this.append_dummy_input().append_field("".concat(d))
           }
         }
         switch (r.key) {
@@ -2920,46 +2920,46 @@ function _e(e, t) {
               name: "POSITION_TYPE",
               custom: true,
               options: function () {
-                return [[t.Msg.POSITION_X, "positionX"], [t.Msg.POSITION_Y, "positionY"]];
+                return [[t.Msg.POSITION_X, "positionX"], [t.Msg.POSITION_Y, "positionY"]]
               }
-            }), "POSITION_TYPE");
-            break;
+            }), "POSITION_TYPE")
+            break
           case "__opacity":
-            this.set_field_value("".concat(t.Msg.WIDGET_OF, " ").concat(t.Msg.WIDGET_OPACITY), "PROPERTY");
-            break;
+            this.set_field_value("".concat(t.Msg.WIDGET_OF, " ").concat(t.Msg.WIDGET_OPACITY), "PROPERTY")
+            break
           case "__visible":
-            this.set_field_value(t.Msg.WIDGET_VISIBLE, "PROPERTY");
-            break;
+            this.set_field_value(t.Msg.WIDGET_VISIBLE, "PROPERTY")
+            break
           case "__disabled":
-            this.set_field_value(t.Msg.WIDGET_DISABLED, "PROPERTY");
-            break;
+            this.set_field_value(t.Msg.WIDGET_DISABLED, "PROPERTY")
+            break
           default:
-            if (!(null === (e = o) || undefined === e ? undefined : e.length)) {
-              this.set_field_value("".concat("boolean" === s ? "" : t.Msg.WIDGET_OF, " ").concat(d), "PROPERTY");
+            if (!(null === (e = u$getter$keys) || undefined === e ? undefined : e.length)) {
+              this.set_field_value("".concat("boolean" === r$valueType ? "" : t.Msg.WIDGET_OF, " ").concat(d), "PROPERTY")
             }
         }
-        var _ = LoadCustomWidget.g(s);
-        this.set_output(true, _);
-        if (c) {
-          var v = pe.a(this.widgetType, c);
-          this.set_tooltip(v);
+        var _ = LoadCustomWidget.g(r$valueType)
+        this.set_output(true, _)
+        if (r$tooltip) {
+          var v = pe.a(this.widgetType, r$tooltip)
+          this.set_tooltip(v)
         }
       },
       domToMutation: function (e) {
-        this.property = e.getAttribute("property") || this.property;
-        this.widgetType = e.getAttribute("widget_type") || this.widgetType;
-        this.isAnyWidget = "true" === e.getAttribute("is_any_widget");
-        this.updateShape_();
+        this.property = e.getAttribute("property") || this.property
+        this.widgetType = e.getAttribute("widget_type") || this.widgetType
+        this.isAnyWidget = "true" === e.getAttribute("is_any_widget")
+        this.updateShape_()
       },
       mutationToDom: function () {
-        var e = document.createElement("mutation");
-        e.setAttribute("property", this.property);
-        e.setAttribute("widget_type", this.widgetType);
-        e.setAttribute("is_any_widget", String(this.isAnyWidget));
-        return e;
+        var e = document.createElement("mutation")
+        e.setAttribute("property", this.property)
+        e.setAttribute("widget_type", this.widgetType)
+        e.setAttribute("is_any_widget", String(this.isAnyWidget))
+        return e
       }
-    };
-    t.extensions.register_mutator("widget_get_mutator", n);
+    }
+    t.extensions.register_mutator("widget_get_mutator", n)
     t.define_blocks_with_json_array([{
       type: "widget_get",
       message0: "%{BKY_WIDGET_GET_MSG}",
@@ -2975,234 +2975,234 @@ function _e(e, t) {
       colour: "%{BKY_APPEARANCE_HUE}",
       inputsInline: true,
       mutator: "widget_get_mutator"
-    }]);
+    }])
   })(0, t);
   (function (e, t) {
     var n = {
       property: "property",
       widgetType: "",
       updateShape_: function () {
-        var e;
-        var n = this;
-        var r = LoadCustomWidget.l(this.widgetType, this.property);
+        var e
+        var n = this
+        var r = LoadCustomWidget.l(this.widgetType, this.property)
         if (!r) {
-          console.error("WIDGET_SET_MUTATOR getWidgetProperty error", this.widgetType, this.property);
-          this.set_disabled(true);
-          this.set_field_value(t.Msg.INVALID_BLOCK, "PROPERTY");
-          return void this.set_colour("#abafb6");
+          console.error("WIDGET_SET_MUTATOR getWidgetProperty error", this.widgetType, this.property)
+          this.set_disabled(true)
+          this.set_field_value(t.Msg.INVALID_BLOCK, "PROPERTY")
+          return void this.set_colour("#abafb6")
         }
-        this.set_disabled(false);
-        var o;
-        var i;
-        var a;
-        var s;
-        var c;
-        var l = r.valueType;
-        var u = r.defaultValue;
-        var d = r.label;
-        var p = r.tooltip;
-        var f = r.checkType;
-        var h = r.dropdown;
-        var g = r.validators;
-        var _ = r.blockOptions;
-        var v = undefined === _ ? {} : _;
-        var b = pe.a(this.widgetType, d);
-        var y = false;
-        if (g && "number" === l) {
-          var E = g;
-          var w = E.isInteger;
-          y = !!w;
-          o = LoadCustomWidget.p(E);
-          i = LoadCustomWidget.n(E);
+        this.set_disabled(false)
+        var o
+        var i
+        var a
+        var /* [auto-meaningful-name] */v$setter$keys
+        var c
+        var r$valueType = r.valueType
+        var r$defaultValue = r.defaultValue
+        var r$label = r.label
+        var r$tooltip = r.tooltip
+        var r$checkType = r.checkType
+        var r$dropdown = r.dropdown
+        var r$validators = r.validators
+        var r$blockOptions = r.blockOptions
+        var v = undefined === r$blockOptions ? {} : r$blockOptions
+        var b = pe.a(this.widgetType, r$label)
+        var y = false
+        if (r$validators && "number" === r$valueType) {
+          var E = r$validators
+          var e$isInteger = E.isInteger
+          y = !!e$isInteger
+          o = LoadCustomWidget.p(E)
+          i = LoadCustomWidget.n(E)
         }
         if (!("__position" !== r.key && "__size" !== r.key)) {
-          y = true;
+          y = true
         }
         if ("__visible" !== r.key && "__disabled" !== r.key) {
           if (!(null === (a = this.get_input("WIDGET_ID_CONTAINER")) || undefined === a)) {
-            a.insert_field_at(0, t.Msg.WIDGET_SET);
+            a.insert_field_at(0, t.Msg.WIDGET_SET)
           }
         }
         if (this.isAnyWidget) {
-          var C;
-          var T = LoadCustomWidget.getWidgetTitle(this.widgetType);
+          var C
+          var T = LoadCustomWidget.getWidgetTitle(this.widgetType)
           if (!(null === (C = this.get_input("WIDGET_ID_CONTAINER")) || undefined === C)) {
-            C.append_field(T);
+            C.append_field(T)
           }
-          this.append_shadow_input("WIDGET_ID", "<empty type=\"widget_any_id\"></empty>", "PROPERTY");
+          this.append_shadow_input("WIDGET_ID", "<empty type=\"widget_any_id\"></empty>", "PROPERTY")
         } else {
-          var S;
+          var S
           var I = new ue.a({
             type: "field_coco_dropdown",
             name: "WIDGET_ID",
             custom: true,
             options: function () {
-              return O.c().getWidgetListByType(n.widgetType);
+              return O.c().getWidgetListByType(n.widgetType)
             }
-          });
+          })
           if (!(null === (S = this.get_input("WIDGET_ID_CONTAINER")) || undefined === S)) {
-            S.append_field(I, "WIDGET_ID");
+            S.append_field(I, "WIDGET_ID")
           }
         }
-        if ("object" === typeof v.setter && (null === (c = s = v.setter.keys) || undefined === c ? undefined : c.length)) {
-          var A = [];
-          s.forEach(function (e, t) {
-            var r = LoadCustomWidget.l(n.widgetType, e);
+        if ("object" === typeof v.setter && (null === (c = v$setter$keys = v.setter.keys) || undefined === c ? undefined : c.length)) {
+          var A = []
+          v$setter$keys.forEach(function (e, t) {
+            var r = LoadCustomWidget.l(n.widgetType, e)
             if (r) {
               if (0 === t && "number" === r.valueType) {
                 if (r.validators) {
-                  i = LoadCustomWidget.n(r.validators);
-                  o = LoadCustomWidget.p(r.validators);
+                  i = LoadCustomWidget.n(r.validators)
+                  o = LoadCustomWidget.p(r.validators)
                 }
                 if (!(undefined !== o || "__width" !== r.key && "__height" !== r.key)) {
-                  o = 0;
+                  o = 0
                 }
               }
-              var a = pe.a(n.widgetType, r.label);
-              A.push([a, e]);
+              var a = pe.a(n.widgetType, r.label)
+              A.push([a, e])
             } else {
-              console.error("WIDGET_GET_MUTATOR getWidgetProperty error", n.widgetType, e);
+              console.error("WIDGET_GET_MUTATOR getWidgetProperty error", n.widgetType, e)
             }
-          });
-          this.set_field_value(t.Msg.WIDGET_OF, "PROPERTY");
+          })
+          this.set_field_value(t.Msg.WIDGET_OF, "PROPERTY")
           this.append_dummy_input().append_field(new ue.a({
             type: "field_coco_dropdown",
             name: "PROPERTY_KEY",
             custom: true,
             options: function () {
-              return A;
+              return A
             },
             optOnchange: function (e) {
-              var t = LoadCustomWidget.l(n.widgetType, e);
+              var t = LoadCustomWidget.l(n.widgetType, e)
               if (t) {
-                var r;
+                var r
                 if ("color" === t.valueType) {
-                  r = "COLOR";
+                  r = "COLOR"
                 }
-                var o;
-                var i;
-                var a = n.get_shadow_field("VALUE", r);
+                var o
+                var i
+                var a = n.get_shadow_field("VALUE", r)
                 if (a) {
-                  a.set_value(String(t.defaultValue));
+                  a.set_value(String(t.defaultValue))
                   if ("number" === t.valueType) {
                     if (t.validators) {
-                      o = LoadCustomWidget.p(t.validators);
-                      i = LoadCustomWidget.n(t.validators);
+                      o = LoadCustomWidget.p(t.validators)
+                      i = LoadCustomWidget.n(t.validators)
                     }
                     if (!(undefined !== o || "__width" !== t.key && "__height" !== t.key)) {
-                      o = 0;
+                      o = 0
                     }
-                    a.set_constraints(o, i, y ? 1 : undefined);
+                    a.set_constraints(o, i, y ? 1 : undefined)
                   }
                 }
               }
             }
-          }), "PROPERTY_KEY");
-          var j = b ? "".concat(b, " ").concat(t.Msg.WIDGET_SET_TO) : t.Msg.WIDGET_SET_TO;
-          this.append_dummy_input().append_field(j);
+          }), "PROPERTY_KEY")
+          var j = b ? "".concat(b, " ").concat(t.Msg.WIDGET_SET_TO) : t.Msg.WIDGET_SET_TO
+          this.append_dummy_input().append_field(j)
         }
         switch (r.key) {
           case "__position":
-            this.set_field_value(t.Msg.WIDGET_OF, "PROPERTY");
+            this.set_field_value(t.Msg.WIDGET_OF, "PROPERTY")
             this.append_dummy_input().append_field(new ue.a({
               type: "field_coco_dropdown",
               name: "POSITION_TYPE",
               custom: true,
               options: function () {
-                return [[t.Msg.POSITION_X, "positionX"], [t.Msg.POSITION_Y, "positionY"]];
+                return [[t.Msg.POSITION_X, "positionX"], [t.Msg.POSITION_Y, "positionY"]]
               }
-            }), "POSITION_TYPE");
-            this.append_dummy_input().append_field(t.Msg.WIDGET_SET_TO);
-            break;
+            }), "POSITION_TYPE")
+            this.append_dummy_input().append_field(t.Msg.WIDGET_SET_TO)
+            break
           case "__opacity":
-            this.set_field_value("".concat(t.Msg.WIDGET_OF, " ").concat(t.Msg.WIDGET_OPACITY, " ").concat(t.Msg.WIDGET_SET_TO), "PROPERTY");
-            break;
+            this.set_field_value("".concat(t.Msg.WIDGET_OF, " ").concat(t.Msg.WIDGET_OPACITY, " ").concat(t.Msg.WIDGET_SET_TO), "PROPERTY")
+            break
           case "__visible":
             this.append_dummy_input("", 0).append_field(new ue.a({
               type: "field_coco_dropdown",
               name: "VALUE",
               custom: true,
               options: function () {
-                return [[t.Msg.SHOW, "show"], [t.Msg.HIDE, "hide"]];
+                return [[t.Msg.SHOW, "show"], [t.Msg.HIDE, "hide"]]
               }
-            }), "VALUE");
+            }), "VALUE")
             this.inputList.forEach(function (e) {
               if (e.get_field("PROPERTY")) {
-                e.remove_field("PROPERTY");
+                e.remove_field("PROPERTY")
               }
-            });
-            break;
+            })
+            break
           case "__disabled":
             this.append_dummy_input("", 0).append_field(new ue.a({
               type: "field_coco_dropdown",
               name: "VALUE",
               custom: true,
               options: function () {
-                return [[t.Msg.ABLE, "able"], [t.Msg.DISABLED, "disabled"]];
+                return [[t.Msg.ABLE, "able"], [t.Msg.DISABLED, "disabled"]]
               }
-            }), "VALUE");
+            }), "VALUE")
             this.inputList.forEach(function (e) {
               if (e.get_field("PROPERTY")) {
-                e.remove_field("PROPERTY");
+                e.remove_field("PROPERTY")
               }
-            });
-            break;
+            })
+            break
           default:
-            if (!(null === (e = s) || undefined === e ? undefined : e.length)) {
-              this.set_field_value("".concat(t.Msg.WIDGET_OF, " ").concat(b, " ").concat(t.Msg.WIDGET_SET_TO), "PROPERTY");
+            if (!(null === (e = v$setter$keys) || undefined === e ? undefined : e.length)) {
+              this.set_field_value("".concat(t.Msg.WIDGET_OF, " ").concat(b, " ").concat(t.Msg.WIDGET_SET_TO), "PROPERTY")
             }
         }
-        var N = LoadCustomWidget.getCheckType(l, f);
+        var N = LoadCustomWidget.getCheckType(r$valueType, r$checkType)
         if ("__visible" !== r.key && "__disabled" !== r.key) {
-          if (h) {
+          if (r$dropdown) {
             var R = new ue.a({
               type: "field_coco_dropdown",
               name: "VALUE",
               custom: true,
-              options: he(this.widgetType, h)
-            });
-            R.set_value(String(u));
-            this.append_dummy_input().append_field(R, "VALUE");
+              options: he(this.widgetType, r$dropdown)
+            })
+            R.set_value(String(r$defaultValue))
+            this.append_dummy_input().append_field(R, "VALUE")
           } else {
-            var k = "";
-            if ("string" === l) {
-              k = pe.a(this.widgetType, String(u));
+            var k = ""
+            if ("string" === r$valueType) {
+              k = pe.a(this.widgetType, String(r$defaultValue))
             }
-            var x = getCustomWidgetBlockParamShadow(l, k || u);
-            this.append_shadow_input("VALUE", x).set_check(N);
+            var x = getCustomWidgetBlockParamShadow(r$valueType, k || r$defaultValue)
+            this.append_shadow_input("VALUE", x).set_check(N)
           }
         }
-        if ("number" === l && (g || "__position" === r.key || "__size" === r.key)) {
-          var D = this.get_shadow_field("VALUE");
-          D.set_constraints(o, i, y ? 1 : undefined);
+        if ("number" === r$valueType && (r$validators || "__position" === r.key || "__size" === r.key)) {
+          var D = this.get_shadow_field("VALUE")
+          D.set_constraints(o, i, y ? 1 : undefined)
           if ("__opacity" === r.key) {
             D.set_controller_option({
               type: m.I.ControllerType.SLIDER,
               left_text: t.Msg["opacity.invisible"],
               right_text: t.Msg["opacity.visible"]
-            });
+            })
           }
         }
-        if (p) {
-          var M = pe.a(this.widgetType, p);
-          this.set_tooltip(M);
+        if (r$tooltip) {
+          var M = pe.a(this.widgetType, r$tooltip)
+          this.set_tooltip(M)
         }
       },
       domToMutation: function (e) {
-        this.property = e.getAttribute("property") || this.property;
-        this.widgetType = e.getAttribute("widget_type") || this.widgetType;
-        this.isAnyWidget = "true" === e.getAttribute("is_any_widget");
-        this.updateShape_();
+        this.property = e.getAttribute("property") || this.property
+        this.widgetType = e.getAttribute("widget_type") || this.widgetType
+        this.isAnyWidget = "true" === e.getAttribute("is_any_widget")
+        this.updateShape_()
       },
       mutationToDom: function () {
-        var e = document.createElement("mutation");
-        e.setAttribute("property", this.property);
-        e.setAttribute("widget_type", this.widgetType);
-        e.setAttribute("is_any_widget", String(this.isAnyWidget));
-        return e;
+        var e = document.createElement("mutation")
+        e.setAttribute("property", this.property)
+        e.setAttribute("widget_type", this.widgetType)
+        e.setAttribute("is_any_widget", String(this.isAnyWidget))
+        return e
       }
-    };
-    t.extensions.register_mutator("widget_set_mutator", n);
+    }
+    t.extensions.register_mutator("widget_set_mutator", n)
     t.define_blocks_with_json_array([{
       type: "widget_set",
       message0: "%{BKY_WIDGET_SET_MSG}",
@@ -3219,7 +3219,7 @@ function _e(e, t) {
       inputsInline: true,
       colour: "%{BKY_APPEARANCE_HUE}",
       mutator: "widget_set_mutator"
-    }]);
+    }])
   })(0, t);
   (function (e, t) {
     var n = {
@@ -3227,20 +3227,20 @@ function _e(e, t) {
       widgetType: "",
       isAnyWidget: false,
       updateShape_: function () {
-        var e = this;
-        var n = LoadCustomWidget.getWidgetMethodTypes(this.widgetType, this.method);
+        var e = this
+        var n = LoadCustomWidget.getWidgetMethodTypes(this.widgetType, this.method)
         if (!n) {
-          console.error("WIDGET_METHOD_MUTATOR getWidgetMethod error", this.widgetType, this.method);
-          this.set_disabled(true);
-          this.append_dummy_input().append_field(t.Msg.INVALID_BLOCK, "METHOD");
-          return void this.set_colour("#abafb6");
+          console.error("WIDGET_METHOD_MUTATOR getWidgetMethod error", this.widgetType, this.method)
+          this.set_disabled(true)
+          this.append_dummy_input().append_field(t.Msg.INVALID_BLOCK, "METHOD")
+          return void this.set_colour("#abafb6")
         }
-        this.set_disabled(false);
-        var r = this.get_input("WIDGET_ID_CONTAINER");
+        this.set_disabled(false)
+        var r = this.get_input("WIDGET_ID_CONTAINER")
         if (this.isAnyWidget) {
-          var o = LoadCustomWidget.getWidgetTitle(this.widgetType);
+          var o = LoadCustomWidget.getWidgetTitle(this.widgetType)
           if (!(null === r || undefined === r)) {
-            r.append_field(o);
+            r.append_field(o)
           }
           this.append_shadow_input("WIDGET_ID", `<empty type="widget_any_id"></empty>`)
           if ("__setVisible" === n.key) {
@@ -3249,10 +3249,10 @@ function _e(e, t) {
               name: "DISPLAY",
               custom: true,
               options: function () {
-                return [[t.Msg.SHOW, "show"], [t.Msg.HIDE, "hide"]];
+                return [[t.Msg.SHOW, "show"], [t.Msg.HIDE, "hide"]]
               }
-            });
-            this.append_dummy_input().append_field(i, "DISPLAY");
+            })
+            this.append_dummy_input().append_field(i, "DISPLAY")
           }
           if ("__setDisabled" === n.key) {
             var a = new ue.a({
@@ -3260,10 +3260,10 @@ function _e(e, t) {
               name: "DISABLED",
               custom: true,
               options: function () {
-                return [[t.Msg.ABLE, "able"], [t.Msg.DISABLED, "disabled"]];
+                return [[t.Msg.ABLE, "able"], [t.Msg.DISABLED, "disabled"]]
               }
-            });
-            this.append_dummy_input().append_field(a, "DISABLED");
+            })
+            this.append_dummy_input().append_field(a, "DISABLED")
           }
         } else {
           var s = new ue.a({
@@ -3271,58 +3271,58 @@ function _e(e, t) {
             name: "WIDGET_ID",
             custom: true,
             options: function () {
-              return O.c().getWidgetListByType(e.widgetType);
+              return O.c().getWidgetListByType(e.widgetType)
             }
-          });
+          })
           if (!(null === r || undefined === r)) {
-            r.append_field(s, "WIDGET_ID");
+            r.append_field(s, "WIDGET_ID")
           }
         }
-        var c;
-        var l = n.label;
-        var u = n.params;
-        var d = n.tooltip;
-        var p = n.blockOptions;
-        var f = undefined === p ? {} : p;
-        var h = n.valueType;
+        var c
+        var n$label = n.label
+        var n$params = n.params
+        var n$tooltip = n.tooltip
+        var n$blockOptions = n.blockOptions
+        var f = undefined === n$blockOptions ? {} : n$blockOptions
+        var n$valueType = n.valueType
         if (false !== f.callMethodLabel) {
-          var g;
-          var _ = (null === (g = f.callMethodLabel) || undefined === g ? undefined : g.toString()) || "";
-          var v = pe.a(this.widgetType, _) || t.Msg.WIDGET_METHOD_CALL_MSG;
+          var /* [auto-meaningful-name] */f$callMethodLabel
+          var _ = (null === (f$callMethodLabel = f.callMethodLabel) || undefined === f$callMethodLabel ? undefined : f$callMethodLabel.toString()) || ""
+          var v = pe.a(this.widgetType, _) || t.Msg.WIDGET_METHOD_CALL_MSG
           var b = new ge.FieldLabel({
             text: v
-          });
+          })
           if (!(null === r || undefined === r)) {
-            r.insert_field_at(0, b);
+            r.insert_field_at(0, b)
           }
         }
         if (f.icon && (t.Msg[f.icon] ? c = t.Msg[f.icon] : f.icon.startsWith("https://") && (c = f.icon), c)) {
           var y = new me.FieldImage({
             src: c
-          });
-          this.append_dummy_input("ICON_CONTAINER", "WIDGET_ID_CONTAINER").append_field(y);
+          })
+          this.append_dummy_input("ICON_CONTAINER", "WIDGET_ID_CONTAINER").append_field(y)
         }
         if (f.color) {
-          this.set_colour(f.color);
+          this.set_colour(f.color)
         }
-        if (h) {
-          this.set_next_statement(false);
-          this.set_previous_statement(false);
-          var E = LoadCustomWidget.g(h);
-          this.set_output(true, E);
+        if (n$valueType) {
+          this.set_next_statement(false)
+          this.set_previous_statement(false)
+          var E = LoadCustomWidget.g(n$valueType)
+          this.set_output(true, E)
         }
-        var w = pe.a(this.widgetType, l);
+        var w = pe.a(this.widgetType, n$label)
         if (w) {
-          this.append_dummy_input().append_field(w, "METHOD");
+          this.append_dummy_input().append_field(w, "METHOD")
         }
-        if (d) {
-          var C = pe.a(this.widgetType, d);
-          this.set_tooltip(C);
+        if (n$tooltip) {
+          var C = pe.a(this.widgetType, n$tooltip)
+          this.set_tooltip(C)
         }
         if (false === f.inputsInline) {
-          this.set_inputs_inline(f.inputsInline);
+          this.set_inputs_inline(f.inputsInline)
         }
-        u.forEach(({
+        n$params.forEach(({
           label,
           labelAfter,
           valueType,
@@ -3332,32 +3332,32 @@ function _e(e, t) {
           dropdown,
           controller
         }) => {
-          var u = pe.a(e.widgetType, label);
-          var paramKey = "PARAM_".concat(key);
+          var u = pe.a(e.widgetType, label)
+          var paramKey = "PARAM_".concat(key)
           if (dropdown) {
             var p = new ue.a({
               type: "field_coco_dropdown",
               name: paramKey,
               custom: true,
               options: he(e.widgetType, dropdown)
-            });
-            var f = e.append_dummy_input();
+            })
+            var f = e.append_dummy_input()
             if (u) {
-              f.append_field(u, "".concat(paramKey, "_LABEL"));
+              f.append_field(u, "".concat(paramKey, "_LABEL"))
             }
-            f.append_field(p, paramKey);
+            f.append_field(p, paramKey)
           } else {
-            const shadow = getCustomWidgetBlockParamShadow(valueType, defaultValue);
-            var g = e.append_shadow_input(paramKey, shadow);
-            var _ = LoadCustomWidget.getCheckType(valueType, checkType);
-            g.set_check(_);
+            const shadow = getCustomWidgetBlockParamShadow(valueType, defaultValue)
+            var g = e.append_shadow_input(paramKey, shadow)
+            var _ = LoadCustomWidget.getCheckType(valueType, checkType)
+            g.set_check(_)
             if (u) {
-              g.insert_field_at(0, u, "".concat(paramKey, "_LABEL"));
+              g.insert_field_at(0, u, "".concat(paramKey, "_LABEL"))
             }
             if ("number" === valueType && controller) {
-              var v = e.get_shadow_field(paramKey);
+              var v = e.get_shadow_field(paramKey)
               if (!(null === v || undefined === v)) {
-                v.set_constraints(controller.min, controller.max, 1);
+                v.set_constraints(controller.min, controller.max, 1)
               }
               if (controller.leftText && controller.rightText) {
                 if (!(null === v || undefined === v)) {
@@ -3365,32 +3365,32 @@ function _e(e, t) {
                     type: m.I.ControllerType.SLIDER,
                     left_text: controller.leftText,
                     right_text: controller.rightText
-                  });
+                  })
                 }
               }
             }
           }
           if (labelAfter) {
-            var b = pe.a(e.widgetType, labelAfter);
-            e.append_dummy_input("").append_field(b, "".concat(paramKey, "_LABEL_AFTER"));
+            var b = pe.a(e.widgetType, labelAfter)
+            e.append_dummy_input("").append_field(b, "".concat(paramKey, "_LABEL_AFTER"))
           }
-        });
+        })
       },
       domToMutation: function (e) {
-        this.method = e.getAttribute("method") || this.method;
-        this.widgetType = e.getAttribute("widget_type") || this.widgetType;
-        this.isAnyWidget = "true" === e.getAttribute("is_any_widget");
-        this.updateShape_();
+        this.method = e.getAttribute("method") || this.method
+        this.widgetType = e.getAttribute("widget_type") || this.widgetType
+        this.isAnyWidget = "true" === e.getAttribute("is_any_widget")
+        this.updateShape_()
       },
       mutationToDom: function () {
-        var e = document.createElement("mutation");
-        e.setAttribute("method", this.method);
-        e.setAttribute("widget_type", this.widgetType);
-        e.setAttribute("is_any_widget", String(this.isAnyWidget));
-        return e;
+        var e = document.createElement("mutation")
+        e.setAttribute("method", this.method)
+        e.setAttribute("widget_type", this.widgetType)
+        e.setAttribute("is_any_widget", String(this.isAnyWidget))
+        return e
       }
-    };
-    t.extensions.register_mutator("widget_method_mutator", n);
+    }
+    t.extensions.register_mutator("widget_method_mutator", n)
     t.define_blocks_with_json_array([{
       type: "widget_method",
       message0: "%{BKY_WIDGET_METHOD_MSG}",
@@ -3403,51 +3403,51 @@ function _e(e, t) {
       inputsInline: true,
       colour: "%{BKY_VARIABLES_HUE}",
       mutator: "widget_method_mutator"
-    }]);
-  })(0, t);
+    }])
+  })(0, t)
   var n = {
     property: "property",
     widgetType: "",
     updateShape_: function () {
-      var e = this;
-      var t = LoadCustomWidget.l(this.widgetType, this.property);
+      var e = this
+      var t = LoadCustomWidget.l(this.widgetType, this.property)
       if (t) {
-        var n = t.defaultValue;
-        var r = t.dropdown;
-        if (r) {
-          this.set_shadow(true);
+        var t$defaultValue = t.defaultValue
+        var t$dropdown = t.dropdown
+        if (t$dropdown) {
+          this.set_shadow(true)
           var o = new ue.a({
             type: "field_coco_dropdown",
             name: "VALUE",
             custom: true,
             options: function () {
-              return he(e.widgetType, r);
+              return he(e.widgetType, t$dropdown)
             }
-          });
+          })
           if (!this.get_field("VALUE")) {
-            this.append_dummy_input("").append_field(o, "VALUE");
-            o.set_value(String(n));
+            this.append_dummy_input("").append_field(o, "VALUE")
+            o.set_value(String(t$defaultValue))
           }
         } else {
-          console.error("WIDGET_DROPDOWN_MUTATOR dropdown is invalid", r);
+          console.error("WIDGET_DROPDOWN_MUTATOR dropdown is invalid", t$dropdown)
         }
       } else {
-        console.error("WIDGET_DROPDOWN_MUTATOR getWidgetProperty error", this.widgetType, this.property);
+        console.error("WIDGET_DROPDOWN_MUTATOR getWidgetProperty error", this.widgetType, this.property)
       }
     },
     domToMutation: function (e) {
-      this.property = e.getAttribute("property") || this.property;
-      this.widgetType = e.getAttribute("widget_type") || this.widgetType;
-      this.updateShape_();
+      this.property = e.getAttribute("property") || this.property
+      this.widgetType = e.getAttribute("widget_type") || this.widgetType
+      this.updateShape_()
     },
     mutationToDom: function () {
-      var e = document.createElement("mutation");
-      e.setAttribute("property", this.property);
-      e.setAttribute("widget_type", this.widgetType);
-      return e;
+      var e = document.createElement("mutation")
+      e.setAttribute("property", this.property)
+      e.setAttribute("widget_type", this.widgetType)
+      return e
     }
-  };
-  t.extensions.register_mutator("widget_dropdown_mutator", n);
+  }
+  t.extensions.register_mutator("widget_dropdown_mutator", n)
   t.define_blocks_with_json_array([{
     type: "widget_color",
     message0: "%{BKY_WIDGET_COLOR_MSG}",
@@ -3458,7 +3458,7 @@ function _e(e, t) {
     }],
     colour: "#ffffff",
     output: ["Color"]
-  }]);
+  }])
   t.define_blocks_with_json_array([{
     type: "widget_boolean",
     message0: "%{BKY_WIDGET_BOOLEAN_MSG}",
@@ -3470,7 +3470,7 @@ function _e(e, t) {
     }],
     output: "Boolean",
     colour: "%{BKY_LOGIC_HUE}"
-  }]);
+  }])
   t.define_blocks_with_json_array([{
     type: "widget_dropdown",
     message0: "",
@@ -3478,252 +3478,252 @@ function _e(e, t) {
     output: ["String", "Boolean", "Number"],
     colour: "%{BKY_APPEARANCE_HUE}",
     mutator: "widget_dropdown_mutator"
-  }]);
+  }])
   t.define_blocks_with_json_array([{
     type: "widget_any_id",
     message0: "",
     args0: [],
     output: "String"
-  }]);
+  }])
 }
 function ve(e) {
   e.insertBlockSnippetGenerator("widget_get", function (t, n) {
-    var r;
-    var o = t.blocks[n];
-    var i = o.mutation;
-    var a = m.Blink.xml.text_to_dom(i);
-    var s = a.getAttribute("property");
-    var c = a.getAttribute("widget_type");
-    var l = "true" === a.getAttribute("is_any_widget");
+    var /* [auto-meaningful-name] */h$getter
+    var o = t.blocks[n]
+    var o$mutation = o.mutation
+    var a = m.Blink.xml.text_to_dom(o$mutation)
+    var s = a.getAttribute("property")
+    var c = a.getAttribute("widget_type")
+    var l = "true" === a.getAttribute("is_any_widget")
     if (!s || !c) {
-      return "";
+      return ""
     }
-    var u = e.getFieldValue(o, "WIDGET_ID") || "";
-    u = _.o(u);
+    var u = e.getFieldValue(o, "WIDGET_ID") || ""
+    u = _.o(u)
     if (l) {
-      u = e.valueToCode(t, n, "WIDGET_ID", e.ORDER_FUNCTION_CALL);
+      u = e.valueToCode(t, n, "WIDGET_ID", e.ORDER_FUNCTION_CALL)
     }
-    var d = LoadCustomWidget.l(c, s);
+    var d = LoadCustomWidget.l(c, s)
     if (!d) {
-      return "";
+      return ""
     }
-    var p;
-    var f = d.blockOptions;
-    var h = undefined === f ? {} : f;
-    if ("object" === typeof h.getter && (null === (p = h.getter.keys) || undefined === p ? undefined : p.length)) {
-      s = e.getFieldValue(o, "PROPERTY_KEY") || "";
-      var g = LoadCustomWidget.l(c, s);
+    var /* [auto-meaningful-name] */h$getter$keys
+    var d$blockOptions = d.blockOptions
+    var h = undefined === d$blockOptions ? {} : d$blockOptions
+    if ("object" === typeof h.getter && (null === (h$getter$keys = h.getter.keys) || undefined === h$getter$keys ? undefined : h$getter$keys.length)) {
+      s = e.getFieldValue(o, "PROPERTY_KEY") || ""
+      var g = LoadCustomWidget.l(c, s)
       if (!g) {
-        return "";
+        return ""
       }
-      h = g.blockOptions || {};
+      h = g.blockOptions || {}
     }
-    var v = e.getFieldValue(o, "POSITION_TYPE") || "";
+    var v = e.getFieldValue(o, "POSITION_TYPE") || ""
     if ("__opacity" === s) {
-      return _.s("getWidgetOpacity", [u]);
+      return _.s("getWidgetOpacity", [u])
     }
     if ("__visible" === s) {
-      return _.s("getWidgetVisible", [u]);
+      return _.s("getWidgetVisible", [u])
     }
     if ("__disabled" === s) {
-      return _.s("getWidgetDisabled", [u]);
+      return _.s("getWidgetDisabled", [u])
     }
     if ("__width" === s || "__height" === s) {
-      var b = "__width" === s ? "getWidgetWidth" : "getWidgetHeight";
-      return _.s(b, [u]);
+      var b = "__width" === s ? "getWidgetWidth" : "getWidgetHeight"
+      return _.s(b, [u])
     }
     if (v) {
-      var y = "positionX" === v ? "getWidgetPositionX" : "getWidgetPositionY";
-      return _.s(y, [u]);
+      var y = "positionX" === v ? "getWidgetPositionX" : "getWidgetPositionY"
+      return _.s(y, [u])
     }
-    return "string" === typeof (null === (r = h.getter) || undefined === r ? undefined : r.func) ? _.s(h.getter.func, [u, _.o(s)]) : _.s("getProperty", [u, _.o(s)], LoadCustomWidget.q(c));
-  });
+    return "string" === typeof (null === (h$getter = h.getter) || undefined === h$getter ? undefined : h$getter.func) ? _.s(h.getter.func, [u, _.o(s)]) : _.s("getProperty", [u, _.o(s)], LoadCustomWidget.q(c))
+  })
   e.insertBlockSnippetGenerator("widget_set", function (t, n) {
-    var r;
-    var o = t.blocks[n];
-    var i = o.mutation;
-    var a = m.Blink.xml.text_to_dom(i);
-    var s = a.getAttribute("property");
-    var c = a.getAttribute("widget_type");
-    var l = "true" === a.getAttribute("is_any_widget");
+    var /* [auto-meaningful-name] */h$setter
+    var o = t.blocks[n]
+    var o$mutation = o.mutation
+    var a = m.Blink.xml.text_to_dom(o$mutation)
+    var s = a.getAttribute("property")
+    var c = a.getAttribute("widget_type")
+    var l = "true" === a.getAttribute("is_any_widget")
     if (!s || !c) {
-      return "";
+      return ""
     }
-    var u = e.getFieldValue(o, "WIDGET_ID") || "";
-    u = _.o(u);
+    var u = e.getFieldValue(o, "WIDGET_ID") || ""
+    u = _.o(u)
     if (l) {
-      u = e.valueToCode(t, n, "WIDGET_ID", e.ORDER_FUNCTION_CALL);
+      u = e.valueToCode(t, n, "WIDGET_ID", e.ORDER_FUNCTION_CALL)
     }
-    var d = LoadCustomWidget.l(c, s);
+    var d = LoadCustomWidget.l(c, s)
     if (!d) {
-      return "";
+      return ""
     }
-    var p;
-    var f = d.blockOptions;
-    var h = undefined === f ? {} : f;
-    if ("object" === typeof h.setter && (null === (p = h.setter.keys) || undefined === p ? undefined : p.length)) {
-      s = e.getFieldValue(o, "PROPERTY_KEY") || "";
-      var g = LoadCustomWidget.l(c, s);
+    var /* [auto-meaningful-name] */h$setter$keys
+    var d$blockOptions = d.blockOptions
+    var h = undefined === d$blockOptions ? {} : d$blockOptions
+    if ("object" === typeof h.setter && (null === (h$setter$keys = h.setter.keys) || undefined === h$setter$keys ? undefined : h$setter$keys.length)) {
+      s = e.getFieldValue(o, "PROPERTY_KEY") || ""
+      var g = LoadCustomWidget.l(c, s)
       if (!g) {
-        return "";
+        return ""
       }
-      h = g.blockOptions || {};
+      h = g.blockOptions || {}
     }
-    var v = e.valueToCode(t, n, "VALUE", e.ORDER_FUNCTION_CALL);
+    var v = e.valueToCode(t, n, "VALUE", e.ORDER_FUNCTION_CALL)
     if (d.dropdown) {
-      v = _.o(e.getFieldValue(o, "VALUE") || "");
+      v = _.o(e.getFieldValue(o, "VALUE") || "")
     }
-    var b = e.getFieldValue(o, "POSITION_TYPE") || "";
+    var b = e.getFieldValue(o, "POSITION_TYPE") || ""
     if ("__opacity" === s) {
-      return _.l(_.n("setWidgetOpacity", [u, v]), o, e);
+      return _.l(_.n("setWidgetOpacity", [u, v]), o, e)
     }
     if ("__visible" === s) {
-      var y = "show" === e.getFieldValue(o, "VALUE");
-      return _.l(_.n("setWidgetVisible", [u, y]), o, e);
+      var y = "show" === e.getFieldValue(o, "VALUE")
+      return _.l(_.n("setWidgetVisible", [u, y]), o, e)
     }
     if ("__disabled" === s) {
-      var E = "disabled" === e.getFieldValue(o, "VALUE");
-      return _.l(_.n("setWidgetAttribute", [u, _.o("disabled"), E]), o, e);
+      var E = "disabled" === e.getFieldValue(o, "VALUE")
+      return _.l(_.n("setWidgetAttribute", [u, _.o("disabled"), E]), o, e)
     }
     if ("__width" === s || "__height" === s) {
-      var O = "__width" === s ? "setWidgetWidth" : "setWidgetHeight";
-      return _.l(_.n(O, [u, v]), o, e);
+      var O = "__width" === s ? "setWidgetWidth" : "setWidgetHeight"
+      return _.l(_.n(O, [u, v]), o, e)
     }
     if (b) {
-      var w = "positionX" === b ? "setWidgetPositionX" : "setWidgetPositionY";
-      return _.l(_.n(w, [u, v]), o, e);
+      var w = "positionX" === b ? "setWidgetPositionX" : "setWidgetPositionY"
+      return _.l(_.n(w, [u, v]), o, e)
     }
-    return "string" === typeof (null === (r = h.setter) || undefined === r ? undefined : r.func) ? _.l(_.n(h.setter.func, [u, v]), o, e) : _.l(_.n("setProperty", [u, _.o(s), v], undefined, undefined, LoadCustomWidget.q(c)), o, e);
-  });
+    return "string" === typeof (null === (h$setter = h.setter) || undefined === h$setter ? undefined : h$setter.func) ? _.l(_.n(h.setter.func, [u, v]), o, e) : _.l(_.n("setProperty", [u, _.o(s), v], undefined, undefined, LoadCustomWidget.q(c)), o, e)
+  })
   e.insertBlockSnippetGenerator("widget_event", function (t, n) {
-    var r = t.blocks[n];
-    var o = e.getFieldValue(r, "WIDGET_ID") || "";
-    var i = r.mutation;
-    var a = m.Blink.xml.text_to_dom(i);
-    var s = a.getAttribute("event");
-    var c = e.getDynamicValue("__CURRENT_SCREEN_ID__");
-    var l = a.getAttribute("widget_type");
-    var u = "true" === a.getAttribute("is_any_widget");
+    var r = t.blocks[n]
+    var o = e.getFieldValue(r, "WIDGET_ID") || ""
+    var r$mutation = r.mutation
+    var a = m.Blink.xml.text_to_dom(r$mutation)
+    var s = a.getAttribute("event")
+    var c = e.getDynamicValue("__CURRENT_SCREEN_ID__")
+    var l = a.getAttribute("widget_type")
+    var u = "true" === a.getAttribute("is_any_widget")
     if (!s || !l) {
-      return "";
+      return ""
     }
-    var d = LoadCustomWidget.h(l, s);
+    var d = LoadCustomWidget.h(l, s)
     if (!d) {
-      return "";
+      return ""
     }
-    var p = d.params;
-    var f = d.subTypes;
-    var h = [];
-    if (!(null === f || undefined === f)) {
-      f.forEach(function (t) {
-        s += e.getFieldValue(r, "PARAM_".concat(t.key)) || "";
-      });
+    var d$params = d.params
+    var d$subTypes = d.subTypes
+    var h = []
+    if (!(null === d$subTypes || undefined === d$subTypes)) {
+      d$subTypes.forEach(function (t) {
+        s += e.getFieldValue(r, "PARAM_".concat(t.key)) || ""
+      })
     }
-    p.forEach(function (e) {
-      h.push("".concat(_.a).concat(e.key));
-    });
+    d$params.forEach(function (e) {
+      h.push("".concat(_.a).concat(e.key))
+    })
     if (u) {
-      h.push("".concat(_.a).concat(LoadCustomWidget.a));
+      h.push("".concat(_.a).concat(LoadCustomWidget.a))
     }
-    var g = e.statementToCode(t, n, "DO");
-    return g ? _.n("onWidgetEvent", [_.o(l), _.o(s), u ? _.o(c) : _.o(o)], g, h, LoadCustomWidget.q(l)) : "";
-  });
+    var g = e.statementToCode(t, n, "DO")
+    return g ? _.n("onWidgetEvent", [_.o(l), _.o(s), u ? _.o(c) : _.o(o)], g, h, LoadCustomWidget.q(l)) : ""
+  })
   e.insertBlockSnippetGenerator("widget_event_param", function (e, t) {
-    var n = e.blocks[t].mutation;
-    var r = m.Blink.xml.text_to_dom(n).getAttribute("param");
-    return "".concat(_.a).concat(r);
-  });
+    var e$blocksT$mutation = e.blocks[t].mutation
+    var r = m.Blink.xml.text_to_dom(e$blocksT$mutation).getAttribute("param")
+    return "".concat(_.a).concat(r)
+  })
   e.insertBlockSnippetGenerator("widget_method", function (t, n) {
-    var r = t.blocks[n];
-    var o = r.mutation;
-    var i = m.Blink.xml.text_to_dom(o);
-    var a = i.getAttribute("method");
-    var s = i.getAttribute("widget_type");
-    var c = "true" === i.getAttribute("is_any_widget");
+    var r = t.blocks[n]
+    var r$mutation = r.mutation
+    var i = m.Blink.xml.text_to_dom(r$mutation)
+    var a = i.getAttribute("method")
+    var s = i.getAttribute("widget_type")
+    var c = "true" === i.getAttribute("is_any_widget")
     if (!a || !s) {
-      return "";
+      return ""
     }
-    var l = LoadCustomWidget.j(s, a);
+    var l = LoadCustomWidget.j(s, a)
     if (!l) {
-      return "";
+      return ""
     }
-    var u = [];
-    var d = e.getFieldValue(r, "WIDGET_ID") || "";
+    var u = []
+    var d = e.getFieldValue(r, "WIDGET_ID") || ""
     if (c) {
-      d = e.valueToCode(t, n, "WIDGET_ID", e.ORDER_FUNCTION_CALL);
-      u.push(d);
+      d = e.valueToCode(t, n, "WIDGET_ID", e.ORDER_FUNCTION_CALL)
+      u.push(d)
     } else {
-      u.push(_.o(d));
+      u.push(_.o(d))
     }
-    u.push(_.o(a));
-    var p = l.params;
-    var f = l.valueType;
-    var h = [];
-    p.forEach(function (o) {
-      var i = o.key;
-      var a = o.dropdown;
-      var s = "PARAM_".concat(i);
-      var c = "''";
+    u.push(_.o(a))
+    var l$params = l.params
+    var l$valueType = l.valueType
+    var h = []
+    l$params.forEach(function (o) {
+      var o$key = o.key
+      var o$dropdown = o.dropdown
+      var s = "PARAM_".concat(o$key)
+      var c = "''"
       try {
-        c = e.valueToCode(t, n, s, e.ORDER_FUNCTION_CALL) || "''";
+        c = e.valueToCode(t, n, s, e.ORDER_FUNCTION_CALL) || "''"
       } catch (l) {
-        console.error("widget_method valueToCode error", l);
+        console.error("widget_method valueToCode error", l)
       }
-      if (a) {
-        c = _.o(e.getFieldValue(r, s) || "");
+      if (o$dropdown) {
+        c = _.o(e.getFieldValue(r, s) || "")
       }
-      u.push(c);
-      h.push(c);
-    });
+      u.push(c)
+      h.push(c)
+    })
     if ("__setVisible" === l.key) {
-      var g = "show" === e.getFieldValue(r, "DISPLAY");
-      return _.l(_.n("setWidgetVisible", [d, g]), r, e);
+      var g = "show" === e.getFieldValue(r, "DISPLAY")
+      return _.l(_.n("setWidgetVisible", [d, g]), r, e)
     }
     if ("__setDisabled" === l.key) {
-      var v = "disabled" === e.getFieldValue(r, "DISABLED");
-      return _.l(_.n("setWidgetAttribute", [d, _.o("disabled"), v]), r, e);
+      var v = "disabled" === e.getFieldValue(r, "DISABLED")
+      return _.l(_.n("setWidgetAttribute", [d, _.o("disabled"), v]), r, e)
     }
-    return f ? _.l(_.r("callMethod", u), r, e, true, true) : _.l(_.j("callMethod", u, undefined, undefined, LoadCustomWidget.q(s)), r, e);
-  });
+    return l$valueType ? _.l(_.r("callMethod", u), r, e, true, true) : _.l(_.j("callMethod", u, undefined, undefined, LoadCustomWidget.q(s)), r, e)
+  })
   e.insertBlockSnippetGenerator("widget_color", function (t, n) {
-    var r = t.blocks[n];
-    var o = e.getFieldValue(r, "COLOR");
-    return _.o(o);
-  });
+    var r = t.blocks[n]
+    var o = e.getFieldValue(r, "COLOR")
+    return _.o(o)
+  })
   e.insertBlockSnippetGenerator("color_picker", function (t, n) {
-    var r;
-    var o = t.blocks[n];
-    var i = m.Blink.xml.text_to_dom(o.mutation);
+    var r
+    var o = t.blocks[n]
+    var i = m.Blink.xml.text_to_dom(o.mutation)
     var a = function (r) {
-      return e.valueToCode(t, n, r, e.ORDER_COMMA);
-    };
+      return e.valueToCode(t, n, r, e.ORDER_COMMA)
+    }
     switch (Number(i.getAttribute("format"))) {
       case m.I.EColorFormat.ColorPalette:
-        r = _.s("getColorHex", [_.o(i.getAttribute("color") || "")]);
-        break;
+        r = _.s("getColorHex", [_.o(i.getAttribute("color") || "")])
+        break
       case m.I.EColorFormat.ColorString:
-        r = _.s("getColorHex", [a("COLOR_STRING")]);
-        break;
+        r = _.s("getColorHex", [a("COLOR_STRING")])
+        break
       case m.I.EColorFormat.HSVA:
-        r = _.s("getColorHsva", [a("H"), a("S"), a("V"), a("A")]);
-        break;
+        r = _.s("getColorHsva", [a("H"), a("S"), a("V"), a("A")])
+        break
       case m.I.EColorFormat.RGBA:
-        r = _.s("getColorRgba", [a("R"), a("G"), a("B"), a("A")]);
+        r = _.s("getColorRgba", [a("R"), a("G"), a("B"), a("A")])
     }
-    return r || "";
-  });
+    return r || ""
+  })
   e.insertBlockSnippetGenerator("widget_boolean", function (t, n) {
-    var r = t.blocks[n];
-    return ["TRUE" === e.getFieldValue(r, "BOOL") ? "true" : "false", e.ORDER_ATOMIC];
-  });
+    var r = t.blocks[n]
+    return ["TRUE" === e.getFieldValue(r, "BOOL") ? "true" : "false", e.ORDER_ATOMIC]
+  })
   e.insertBlockSnippetGenerator("widget_dropdown", function (t, n) {
-    var r = t.blocks[n];
-    var o = e.getFieldValue(r, "VALUE");
-    return _.o(o);
-  });
+    var r = t.blocks[n]
+    var o = e.getFieldValue(r, "VALUE")
+    return _.o(o)
+  })
   e.insertBlockSnippetGenerator("widget_any_id", function (e, t) {
-    return _.o("");
-  });
+    return _.o("")
+  })
 }
 var be = {
   "zh-CN": {
@@ -4435,7 +4435,7 @@ var be = {
     CLOUD_TABLE_CLEAR_ALL: "清空 %1 %2 %3 %4",
     CLOUD_TABLE_CLEAR_ALL_TOOLTIP: "清空云数据表所有数据，不可撤销。"
   }
-};
+}
 import ye = require("../../../unrestored/shared/1531/2584/6");
 import Ee = require("../../../unrestored/shared/1531/2584/27");
 import Oe = require("../../../unrestored/shared/1531/2584/40");
@@ -4447,227 +4447,227 @@ import Ie = require("../../../unrestored/shared/1531/2584/301/326");
 import Ae = require("../../../unrestored/shared/1531/2584/125/index");
 import je = require("../../../unrestored/shared/1531/2584/301/480");
 var Ne = function (e) {
-  Te.a(n, e);
-  var t = Se.a(n);
+  Te.a(n, e)
+  var t = Se.a(n)
   function n(e) {
-    var r;
-    var o;
+    var r
+    var o
     Ee.a(this, n);
     (o = t.call(this, ye.a(ye.a({}, e), {}, {
       opt_value: e.opt_value || (null === (r = e.get_options()[0]) || undefined === r ? undefined : r.value) || 0
-    }, e.numberOptions))).dropdownConfig = e;
-    o.arrow = undefined;
-    o.menu_items = [];
-    o.menu = undefined;
-    o.padding_x = 0;
-    o.text_margin = 0;
-    return o;
+    }, e.numberOptions))).dropdownConfig = e
+    o.arrow = undefined
+    o.menu_items = []
+    o.menu = undefined
+    o.padding_x = 0
+    o.text_margin = 0
+    return o
   }
   Oe.a(n, [{
     key: "render_text_element",
     value: function () {
       if (this.text_element && this.field_group) {
-        Ae.remove_children(this.text_element);
-        this.text_element.appendChild(document.createTextNode(this.get_display_text()));
-        var e = this.utils.get_cached_width(this.text_element);
-        this.text_margin = e < this.theme.renderer.TEXT_MIN_WIDTH_IN_FIELD ? (this.theme.renderer.TEXT_MIN_WIDTH_IN_FIELD - e) / 2 : 0;
-        this.size_.width += this.text_margin;
-        this.text_element.setAttribute("y", String(this.size_.height / 2));
-        this.text_element.setAttribute("x", String(this.size_.width - 3));
-        this.size_.width += e + this.text_margin;
+        Ae.remove_children(this.text_element)
+        this.text_element.appendChild(document.createTextNode(this.get_display_text()))
+        var e = this.utils.get_cached_width(this.text_element)
+        this.text_margin = e < this.theme.renderer.TEXT_MIN_WIDTH_IN_FIELD ? (this.theme.renderer.TEXT_MIN_WIDTH_IN_FIELD - e) / 2 : 0
+        this.size_.width += this.text_margin
+        this.text_element.setAttribute("y", String(this.size_.height / 2))
+        this.text_element.setAttribute("x", String(this.size_.width - 3))
+        this.size_.width += e + this.text_margin
       }
     }
   }, {
     key: "render_arrow",
     value: function () {
-      var e = this;
+      var e = this
       if (this.field_group && this.source_block) {
         if (!this.arrow) {
-          this.arrow = je.draw_arrow(this.source_block.workspace.options.dropdown.arrow_type);
-          this.field_group.appendChild(this.arrow);
+          this.arrow = je.draw_arrow(this.source_block.workspace.options.dropdown.arrow_type)
+          this.field_group.appendChild(this.arrow)
         }
-        this.size_.width += this.source_block.workspace.options.dropdown.padding;
-        this.arrow.setAttribute("transform", "translate(".concat(this.size_.width, ", ").concat(this.size_.height / 2 - 7, ")"));
-        this.size_.width += this.source_block.workspace.options.dropdown.padding - 2;
+        this.size_.width += this.source_block.workspace.options.dropdown.padding
+        this.arrow.setAttribute("transform", "translate(".concat(this.size_.width, ", ").concat(this.size_.height / 2 - 7, ")"))
+        this.size_.width += this.source_block.workspace.options.dropdown.padding - 2
         if (this.source_block.is_shadow()) {
           var t = function () {
-            var t;
-            var n = null === (t = e.source_block) || undefined === t ? undefined : t.get_parent();
+            var /* [auto-meaningful-name] */e$source_block
+            var n = null === (e$source_block = e.source_block) || undefined === e$source_block ? undefined : e$source_block.get_parent()
             if (n && e.arrow) {
-              e.arrow.style.fill = n.get_colour().toString();
+              e.arrow.style.fill = n.get_colour().toString()
             }
-          };
+          }
           if (this.events.is_record_undo()) {
-            t();
+            t()
           } else {
-            window.setTimeout(t);
+            window.setTimeout(t)
           }
         } else {
-          this.arrow.style.fill = this.source_block.get_colour().toString();
+          this.arrow.style.fill = this.source_block.get_colour().toString()
         }
       }
     }
   }, {
     key: "show_editor",
     value: function () {
-      var e = we.a(Ce.a(n.prototype), "show_editor", this).call(this);
+      var e = we.a(Ce.a(n.prototype), "show_editor", this).call(this)
       if (!this.source_block) {
-        return e;
+        return e
       }
-      var t = this.source_block.workspace.get_scale();
-      e.style.paddingLeft = "".concat((this.padding_x + this.text_margin) * t, "px");
-      e.style.textAlign = "start";
-      this.menu = this.create_dropdown_element();
-      return e;
+      var t = this.source_block.workspace.get_scale()
+      e.style.paddingLeft = "".concat((this.padding_x + this.text_margin) * t, "px")
+      e.style.textAlign = "start"
+      this.menu = this.create_dropdown_element()
+      return e
     }
   }, {
     key: "on_html_input_change",
     value: function () {
-      we.a(Ce.a(n.prototype), "on_html_input_change", this).call(this);
+      we.a(Ce.a(n.prototype), "on_html_input_change", this).call(this)
       if (this.html_input) {
-        var e;
-        var t = (null === (e = this.workspace_) || undefined === e ? undefined : e.get_scale()) || 1;
-        this.html_input.style.paddingLeft = "".concat((this.padding_x + this.text_margin) * t, "px");
+        var /* [auto-meaningful-name] */this$workspace_
+        var t = (null === (this$workspace_ = this.workspace_) || undefined === this$workspace_ ? undefined : this$workspace_.get_scale()) || 1
+        this.html_input.style.paddingLeft = "".concat((this.padding_x + this.text_margin) * t, "px")
       }
-      this.highlight_matched();
+      this.highlight_matched()
     }
   }, {
     key: "create_dropdown_element",
     value: function () {
-      var e = this;
-      this.menu_items = [];
-      var t = document.createElement("div");
-      t.classList.add("menu-wrapper");
+      var e = this
+      this.menu_items = []
+      var t = document.createElement("div")
+      t.classList.add("menu-wrapper")
       for (var n = this.dropdownConfig.get_options(), r = function (r) {
-          var o = n[r].value.toString();
-          var i = document.createElement("div");
-          i.classList.add("menu-item");
-          i.dataset.value = o;
-          i.innerText = o;
-          i.setAttribute("tabindex", "-1");
-          i.style.outline = "none";
+          var o = n[r].value.toString()
+          var i = document.createElement("div")
+          i.classList.add("menu-item")
+          i.dataset.value = o
+          i.innerText = o
+          i.setAttribute("tabindex", "-1")
+          i.style.outline = "none"
           if (o === e.get_value()) {
-            i.classList.add("menu_item_selected");
+            i.classList.add("menu_item_selected")
           }
-          t.appendChild(i);
-          i.style.minWidth = "".concat(172, "px");
+          t.appendChild(i)
+          i.style.minWidth = "".concat(172, "px")
           i.addEventListener("click", function () {
-            e.set_html_input_value(o);
-            e.set_value(o);
-            e.widget_div.hide();
-          });
-          e.menu_items.push(i);
+            e.set_html_input_value(o)
+            e.set_value(o)
+            e.widget_div.hide()
+          })
+          e.menu_items.push(i)
         }, o = 0; o < n.length; o++) {
-        r(o);
+        r(o)
       }
-      t.classList.add("blocklyDropdownMenu");
+      t.classList.add("blocklyDropdownMenu")
       var i = Ae.create_dom("div", {
         style: "position: fixed",
         class: "blocklyWidgetDiv"
-      });
-      i.appendChild(t);
-      document.body.appendChild(i);
-      i.style.display = "block";
-      var a = je.position_dropdown(t, this);
-      i.style.left = "".concat(a[0], "px");
-      i.style.top = "".concat(a[1], "px");
-      return i;
+      })
+      i.appendChild(t)
+      document.body.appendChild(i)
+      i.style.display = "block"
+      var a = je.position_dropdown(t, this)
+      i.style.left = "".concat(a[0], "px")
+      i.style.top = "".concat(a[1], "px")
+      return i
     }
   }, {
     key: "highlight_matched",
     value: function () {
-      var e = this;
+      var e = this
       if (this.menu) {
         for (var t = function (t, n) {
-            var r = e.menu_items[t];
+            var r = e.menu_items[t]
             if (e.get_value() === r.dataset.value) {
-              r.classList.add("menu-item-hover");
-              var o = r.getBoundingClientRect();
-              var i = e.menu.getBoundingClientRect();
-              var a = o.top < i.top;
-              var s = o.bottom > i.bottom;
+              r.classList.add("menu-item-hover")
+              var o = r.getBoundingClientRect()
+              var i = e.menu.getBoundingClientRect()
+              var a = o.top < i.top
+              var s = o.bottom > i.bottom
               if (a || s) {
                 requestAnimationFrame(function () {
                   if (e.menu) {
-                    r.scrollIntoView(a);
+                    r.scrollIntoView(a)
                     if (!e.menu.classList.contains("scroll-smooth")) {
-                      e.menu.classList.add("scroll-smooth");
+                      e.menu.classList.add("scroll-smooth")
                     }
                   }
-                });
+                })
               }
             } else {
-              r.classList.remove("menu-item-hover");
+              r.classList.remove("menu-item-hover")
             }
-          }, n = 0, r = this.menu_items.length; n < r; n++) {
-          t(n);
+          }, n = 0, this$menu_items$length = this.menu_items.length; n < this$menu_items$length; n++) {
+          t(n)
         }
       }
     }
   }, {
     key: "render_",
     value: function () {
-      this.size_.width = 0;
+      this.size_.width = 0
       if (this.visible_ && this.field_group && this.source_block) {
-        this.size_.width = this.padding_x;
-        this.update_height();
-        this.render_text_element();
-        this.render_arrow();
+        this.size_.width = this.padding_x
+        this.update_height()
+        this.render_text_element()
+        this.render_arrow()
       }
     }
   }, {
     key: "widget_dispose",
     value: function () {
-      var e = this;
+      var e = this
       return function () {
-        we.a(Ce.a(n.prototype), "widget_dispose", e).call(e)();
+        we.a(Ce.a(n.prototype), "widget_dispose", e).call(e)()
         if (e.menu) {
-          Ae.remove_node(e.menu);
+          Ae.remove_node(e.menu)
         }
-        e.menu_items = [];
-        e.menu = undefined;
-        e.widget_div.hide();
-      };
+        e.menu_items = []
+        e.menu = undefined
+        e.widget_div.hide()
+      }
     }
   }, {
     key: "dispose",
     value: function () {
-      we.a(Ce.a(n.prototype), "dispose", this).call(this);
+      we.a(Ce.a(n.prototype), "dispose", this).call(this)
       if (this.menu) {
-        Ae.remove_node(this.menu);
+        Ae.remove_node(this.menu)
       }
-      this.widget_div.hide_if_owner(this);
+      this.widget_div.hide_if_owner(this)
     }
-  }]);
-  return n;
-}(Ie.FieldNumber);
-Ne.field_type = "field_coco_number_dropdown";
+  }])
+  return n
+}(Ie.FieldNumber)
+Ne.field_type = "field_coco_number_dropdown"
 import Re = require("../../../unrestored/shared/1531/2584/135");
-var ke = Ie.FieldNumber.prototype.show_editor;
+var ie$FieldNumber$prototype$show_editor = Ie.FieldNumber.prototype.show_editor
 Ie.FieldNumber.prototype.show_editor = function () {
-  var e = this;
-  var t = m.BU.dom.create_dom("input", "blocklyHtmlInput");
+  var e = this
+  var t = m.BU.dom.create_dom("input", "blocklyHtmlInput")
   if (!this.source_block) {
-    return t;
+    return t
   }
-  ke.call(this);
-  var n = this.get_absolute_xy();
-  var r = this.source_block.is_shadow() && this.source_block.parent_block || this.source_block;
-  var o = r.workspace.get_scale();
-  var i = this.get_size().height;
-  var a = r.is_wrap_shape() ? 42 : r.height + 2;
-  var s = n[1] + i * o / 2 + a * o / 2;
-  var c = 0;
-  var l = 100;
-  var u = "";
-  var d = "";
+  ie$FieldNumber$prototype$show_editor.call(this)
+  var n = this.get_absolute_xy()
+  var r = this.source_block.is_shadow() && this.source_block.parent_block || this.source_block
+  var o = r.workspace.get_scale()
+  var this$get_size$height = this.get_size().height
+  var a = r.is_wrap_shape() ? 42 : r.height + 2
+  var s = n[1] + this$get_size$height * o / 2 + a * o / 2
+  var c = 0
+  var l = 100
+  var u = ""
+  var d = ""
   if ("audio_set_volume_or_rate" === r.type) {
-    var p = r.get_field_value("OP");
-    c = "SOUND_VOLUME" === p ? Re.g : Re.e;
-    l = "SOUND_VOLUME" === p ? Re.f : Re.d;
-    u = "SOUND_VOLUME" === p ? "小" : "慢";
-    d = "SOUND_VOLUME" === p ? "大" : "快";
-    this.set_constraints(c, l, 1);
+    var p = r.get_field_value("OP")
+    c = "SOUND_VOLUME" === p ? Re.g : Re.e
+    l = "SOUND_VOLUME" === p ? Re.f : Re.d
+    u = "SOUND_VOLUME" === p ? "小" : "慢"
+    d = "SOUND_VOLUME" === p ? "大" : "快"
+    this.set_constraints(c, l, 1)
     var f = {
       payload: {
         value: this.get_value(),
@@ -4678,221 +4678,221 @@ Ie.FieldNumber.prototype.show_editor = function () {
         minText: u,
         maxText: d,
         setValue: function (t) {
-          e.set_value(t);
+          e.set_value(t)
         }
       },
       type: "SHOW_BLOCKS_SLIDER"
-    };
-    O.c().dispatchAction(f);
+    }
+    O.c().dispatchAction(f)
   }
-  return t;
-};
-var xe = Ie.FieldNumber.prototype.set_value;
+  return t
+}
+var ie$FieldNumber$prototype$set_value = Ie.FieldNumber.prototype.set_value
 Ie.FieldNumber.prototype.set_value = function (e) {
-  xe.call(this, e);
+  ie$FieldNumber$prototype$set_value.call(this, e)
   if (O.c().getSliderVisible()) {
     if (!e || isNaN(Number(e))) {
-      return;
+      return
     }
     O.c().dispatchAction({
       payload: {
         value: e
       },
       type: "UPDATE_BLOCKS_SLIDER_VALUE"
-    });
+    })
   }
-};
+}
 import De = require("../../../unrestored/shared/1531/2584/301/374");
 import Me = require("../../../unrestored/shared/1531/2584/301/500");
 import Le = require("../../shared/events/actions");
 import Pe = require("../../shared/events/messages-wrapper");
 import Be = require("../../../unrestored/shared/1531/2584/28/index");
-var Fe = De.FieldTextInput.prototype.show_editor;
+var de$FieldTextInput$prototype$show_editor = De.FieldTextInput.prototype.show_editor
 De.FieldTextInput.prototype.show_editor = function () {
-  var e;
-  var t = this;
-  var n = Fe.call(this);
-  if ("text_rich_text" === (null === (e = this.source_block) || undefined === e ? undefined : e.type)) {
+  var /* [auto-meaningful-name] */this$source_block
+  var t = this
+  var n = de$FieldTextInput$prototype$show_editor.call(this)
+  if ("text_rich_text" === (null === (this$source_block = this.source_block) || undefined === this$source_block ? undefined : this$source_block.type)) {
     Le.a(Pe.Bh({
       content: this.get_value(),
       onConfirm: function (e) {
-        t.set_value(Be.i(e));
+        t.set_value(Be.i(e))
       }
-    }));
-    m.Blink.widget_div.hide();
+    }))
+    m.Blink.widget_div.hide()
   }
-  return n;
-};
+  return n
+}
 De.FieldTextInput.prototype.get_display_text = function () {
-  var e;
-  if ("text_rich_text" === (null === (e = this.source_block) || undefined === e ? undefined : e.type)) {
-    var t = this.get_value();
-    var n = document.createElement("div");
-    n.innerHTML = t;
-    var r = n.innerText;
-    return Be.i(r);
+  var /* [auto-meaningful-name] */this$source_block
+  if ("text_rich_text" === (null === (this$source_block = this.source_block) || undefined === this$source_block ? undefined : this$source_block.type)) {
+    var t = this.get_value()
+    var n = document.createElement("div")
+    n.innerHTML = t
+    var n$innerText = n.innerText
+    return Be.i(n$innerText)
   }
-  return Me.Field.prototype.get_display_text.call(this);
-};
+  return Me.Field.prototype.get_display_text.call(this)
+}
 import Ge = require("../../../unrestored/shared/1531/2584/301/726");
 Ge.FieldColour.prototype.show_editor = function () {
-  var e;
-  var t = this;
-  m.Blink.widget_div.hide();
-  this.widget_div.show(this, this.widget_dispose.bind(this));
-  var n = this.get_absolute_xy();
-  var r = (null === (e = this.source_block) || undefined === e ? undefined : e.workspace.get_scale()) || 1;
-  var o = this.get_value();
-  var i = window.innerWidth;
-  var a = window.innerHeight;
-  var s = 40 * r;
-  var c = -10 * r;
-  if (n[1] + s + 322 > a) {
-    n[1] -= 362;
+  var /* [auto-meaningful-name] */this$source_block
+  var t = this
+  m.Blink.widget_div.hide()
+  this.widget_div.show(this, this.widget_dispose.bind(this))
+  var n = this.get_absolute_xy()
+  var r = (null === (this$source_block = this.source_block) || undefined === this$source_block ? undefined : this$source_block.workspace.get_scale()) || 1
+  var o = this.get_value()
+  var window$innerWidth = window.innerWidth
+  var window$innerHeight = window.innerHeight
+  var s = 40 * r
+  var c = -10 * r
+  if (n[1] + s + 322 > window$innerHeight) {
+    n[1] -= 362
   }
-  if (n[0] + c + 288 > i) {
-    n[0] -= 288;
+  if (n[0] + c + 288 > window$innerWidth) {
+    n[0] -= 288
   }
-  var l = n[1] + s;
-  var u = n[0] + c;
+  var l = n[1] + s
+  var u = n[0] + c
   var d = Pe.hj({
     value: o,
     selectValue: function (e) {
-      var n;
-      if (!(null === (n = t.border_rect) || undefined === n)) {
-        n.setAttribute("fill", e);
+      var /* [auto-meaningful-name] */t$border_rect
+      if (!(null === (t$border_rect = t.border_rect) || undefined === t$border_rect)) {
+        t$border_rect.setAttribute("fill", e)
       }
     },
     setValue: function (e) {
-      t.set_value(de.nb(e));
+      t.set_value(de.nb(e))
     },
     top: l,
     left: u
-  });
-  O.c().dispatchAction(d);
-};
-var Ue;
+  })
+  O.c().dispatchAction(d)
+}
+var Ue
 import We = require("../../../unrestored/shared/1531/2584/21/index");
 function He() {
-  var e = this;
+  var e = this
   this.set_on_block_change(function (t) {
     if (!m.Blink.events.is_undoing() && t.type === m.I.BlockEventType.CHANGE && "WIDGET_ID" === t.get_name()) {
-      var n = e.get_shadow_field("DOC_KEYS_WRAPPER", "DOC_KEYS");
+      var n = e.get_shadow_field("DOC_KEYS_WRAPPER", "DOC_KEYS")
       if (n) {
-        var r;
-        var o = O.c().getLocalDocumentFieldList(null === (r = t.get_new_value()) || undefined === r ? undefined : r.toString(), n);
-        n.set_value(o[0].value);
+        var r
+        var o = O.c().getLocalDocumentFieldList(null === (r = t.get_new_value()) || undefined === r ? undefined : r.toString(), n)
+        n.set_value(o[0].value)
       }
     }
-  });
+  })
 }
 function Ve() {
-  var e = this;
+  var e = this
   this.set_on_block_change(function (t) {
     if (!m.Blink.events.is_undoing() && t.type === m.I.BlockEventType.CHANGE && "WIDGET_ID" === t.get_name()) {
-      var n = e.get_shadow_field("DOC_KEYS_WRAPPER", "DOC_KEYS");
+      var n = e.get_shadow_field("DOC_KEYS_WRAPPER", "DOC_KEYS")
       if (n) {
-        var r;
-        var o = O.c().getCloudDocumentFieldList(null === (r = t.get_new_value()) || undefined === r ? undefined : r.toString(), n);
-        n.set_value(o[0].value);
+        var r
+        var o = O.c().getCloudDocumentFieldList(null === (r = t.get_new_value()) || undefined === r ? undefined : r.toString(), n)
+        n.set_value(o[0].value)
       }
     }
-  });
+  })
 }
 function ze() {
-  var e = this;
+  var e = this
   this.set_on_block_change(function (t) {
     if (!m.Blink.events.is_undoing() && t.type === m.I.BlockEventType.CHANGE && "WIDGET_ID" === t.get_name()) {
-      var n = e.get_shadow_field("INPUT_COLUMN", "COLUMNS");
-      var r = e.get_shadow_field("UPDATE_COLUMN_VALUE", "COLUMNS");
+      var n = e.get_shadow_field("INPUT_COLUMN", "COLUMNS")
+      var r = e.get_shadow_field("UPDATE_COLUMN_VALUE", "COLUMNS")
       if (n) {
-        var o;
-        var i = O.c().getCloudDBColumnList(null === (o = t.get_new_value()) || undefined === o ? undefined : o.toString(), n);
-        n.set_value(i[0].value);
+        var o
+        var i = O.c().getCloudDBColumnList(null === (o = t.get_new_value()) || undefined === o ? undefined : o.toString(), n)
+        n.set_value(i[0].value)
       }
       if (r) {
-        var a;
-        var s = O.c().getCloudDBColumnList(null === (a = t.get_new_value()) || undefined === a ? undefined : a.toString(), r);
-        r.set_value(s[0].value);
+        var a
+        var s = O.c().getCloudDBColumnList(null === (a = t.get_new_value()) || undefined === a ? undefined : a.toString(), r)
+        r.set_value(s[0].value)
       }
     }
-  });
+  })
 }
 function Ye() {
-  var e = this;
+  var e = this
   this.set_on_block_change(function (t) {
     if (!m.Blink.events.is_undoing() && t.type === m.I.BlockEventType.CHANGE && "WIDGET_ID" === t.get_name()) {
-      var n = e.get_shadow_field("COLUMN_WRAPPER", "COLUMN");
+      var n = e.get_shadow_field("COLUMN_WRAPPER", "COLUMN")
       if (n) {
-        var r;
-        var o = O.c().getTableDataColumnList(null === (r = t.get_new_value()) || undefined === r ? undefined : r.toString());
-        n.set_value(o[0].value);
+        var r
+        var o = O.c().getTableDataColumnList(null === (r = t.get_new_value()) || undefined === r ? undefined : r.toString())
+        n.set_value(o[0].value)
       }
     }
-  });
+  })
 }
 function Ke() {
-  var e = this;
+  var e = this
   this.set_on_block_change(function (t) {
     if (!m.Blink.events.is_undoing() && t.type === m.I.BlockEventType.CHANGE && "WIDGET_ID" === t.get_name()) {
-      var n = We.getActorActionInputField(e);
+      var n = We.getActorActionInputField(e)
       if (n) {
-        var r = O.c().getActorActionList(t.get_new_value())[0].value || g.h;
+        var r = O.c().getActorActionList(t.get_new_value())[0].value || g.h
         if (!(null === n || undefined === n)) {
-          n.set_value(r);
+          n.set_value(r)
         }
       }
     }
-  });
+  })
 }
 function qe() {
-  var e = this;
+  var e = this
   this.set_on_block_change(function (t) {
     if (!m.Blink.events.is_undoing() && t.type === m.I.BlockEventType.CHANGE && "WIDGET_ID" === t.get_name()) {
-      var n = e.get_shadow_field("DICT_KEYS_WRAPPER", "KEYS");
+      var n = e.get_shadow_field("DICT_KEYS_WRAPPER", "KEYS")
       if (n) {
-        var r = O.c().getCloudDictKeyList(t.get_new_value());
-        n.set_value(r[0].value);
+        var r = O.c().getCloudDictKeyList(t.get_new_value())
+        n.set_value(r[0].value)
       }
     }
-  });
+  })
 }
 function Xe() {
-  var e = this;
+  var e = this
   this.set_on_block_change(function (t) {
     if (!m.Blink.events.is_undoing() && t.type === m.I.BlockEventType.CHANGE && "WIDGET_ID" === t.get_name()) {
-      var n = e.get_shadow_field("INPUT_COLUMN", "COLUMNS");
+      var n = e.get_shadow_field("INPUT_COLUMN", "COLUMNS")
       if (n) {
-        var r = O.c().getCloudTableColumnList(t.get_new_value());
-        n.set_value(r[0].value);
+        var r = O.c().getCloudTableColumnList(t.get_new_value())
+        n.set_value(r[0].value)
       }
     }
-  });
+  })
 }
 function Qe() {
-  m.Blink.extensions.register(Ue.UPDATE_KEY_AFTER_SELECTING_DOC, He);
-  m.Blink.extensions.register(Ue.UPDATE_KEY_AFTER_SELECTING_CLOUD_DOC, Ve);
-  m.Blink.extensions.register(Ue.UPDATE_COLUMN_AFTER_SELECT_CLOUD_DB, ze);
-  m.Blink.extensions.register(Ue.UPDATE_COLUMN_AFTER_SELECT_TABLE_DATA, Ye);
-  m.Blink.extensions.register(Ue.UPDATE_ACTION_AFTER_SELECT_ACTOR, Ke);
-  m.Blink.extensions.register(Ue.UPDATE_KEYS_AFTER_SELECT_CLOUD_DICT, qe);
-  m.Blink.extensions.register(Ue.UPDATE_COLUMNS_AFTER_SELECT_CLOUD_TABLE, Xe);
-  m.Blink.registry.field.register(ue.a.field_type, ue.a);
-  m.Blink.registry.field.register(Ne.field_type, Ne);
-  O.e.apply(undefined, [m.Blink, ue.a, s, c, o, i, u, r, a, d, l, p, f].concat(h.a(g.M())));
-  var e = O.a();
-  m.Blink.define_blocks_with_json_array(e);
+  m.Blink.extensions.register(Ue.UPDATE_KEY_AFTER_SELECTING_DOC, He)
+  m.Blink.extensions.register(Ue.UPDATE_KEY_AFTER_SELECTING_CLOUD_DOC, Ve)
+  m.Blink.extensions.register(Ue.UPDATE_COLUMN_AFTER_SELECT_CLOUD_DB, ze)
+  m.Blink.extensions.register(Ue.UPDATE_COLUMN_AFTER_SELECT_TABLE_DATA, Ye)
+  m.Blink.extensions.register(Ue.UPDATE_ACTION_AFTER_SELECT_ACTOR, Ke)
+  m.Blink.extensions.register(Ue.UPDATE_KEYS_AFTER_SELECT_CLOUD_DICT, qe)
+  m.Blink.extensions.register(Ue.UPDATE_COLUMNS_AFTER_SELECT_CLOUD_TABLE, Xe)
+  m.Blink.registry.field.register(ue.a.field_type, ue.a)
+  m.Blink.registry.field.register(Ne.field_type, Ne)
+  O.e.apply(undefined, [m.Blink, ue.a, s, c, o, i, u, r, a, d, l, p, f].concat(h.a(g.M())))
+  var e = O.a()
+  m.Blink.define_blocks_with_json_array(e)
 }
 function Ze() {
-  var e = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : "zh-CN";
-  return be[e];
+  var e = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : "zh-CN"
+  return be[e]
 }
 !function (e) {
-  e.UPDATE_KEY_AFTER_SELECTING_DOC = "UPDATE_KEY_AFTER_SELECTING_DOC";
-  e.UPDATE_KEY_AFTER_SELECTING_CLOUD_DOC = "UPDATE_KEY_AFTER_SELECTING_CLOUD_DOC";
-  e.UPDATE_COLUMN_AFTER_SELECT_CLOUD_DB = "UPDATE_COLUMN_AFTER_SELECT_CLOUD_DB";
-  e.UPDATE_COLUMN_AFTER_SELECT_TABLE_DATA = "UPDATE_COLUMN_AFTER_SELECT_TABLE_DATA";
-  e.UPDATE_ACTION_AFTER_SELECT_ACTOR = "UPDATE_ACTION_AFTER_SELECT_ACTOR";
-  e.UPDATE_KEYS_AFTER_SELECT_CLOUD_DICT = "UPDATE_KEYS_AFTER_SELECT_CLOUD_DICT";
-  e.UPDATE_COLUMNS_AFTER_SELECT_CLOUD_TABLE = "UPDATE_COLUMNS_AFTER_SELECT_CLOUD_TABLE";
-}(Ue || (Ue = {}));
+  e.UPDATE_KEY_AFTER_SELECTING_DOC = "UPDATE_KEY_AFTER_SELECTING_DOC"
+  e.UPDATE_KEY_AFTER_SELECTING_CLOUD_DOC = "UPDATE_KEY_AFTER_SELECTING_CLOUD_DOC"
+  e.UPDATE_COLUMN_AFTER_SELECT_CLOUD_DB = "UPDATE_COLUMN_AFTER_SELECT_CLOUD_DB"
+  e.UPDATE_COLUMN_AFTER_SELECT_TABLE_DATA = "UPDATE_COLUMN_AFTER_SELECT_TABLE_DATA"
+  e.UPDATE_ACTION_AFTER_SELECT_ACTOR = "UPDATE_ACTION_AFTER_SELECT_ACTOR"
+  e.UPDATE_KEYS_AFTER_SELECT_CLOUD_DICT = "UPDATE_KEYS_AFTER_SELECT_CLOUD_DICT"
+  e.UPDATE_COLUMNS_AFTER_SELECT_CLOUD_TABLE = "UPDATE_COLUMNS_AFTER_SELECT_CLOUD_TABLE"
+}(Ue || (Ue = {}))

@@ -4,10 +4,10 @@
  * 模块 ID：310
  */
 
-var r = require("../1541/749");
+var r = require("../1541/749")
 module.exports = function (e) {
   if (r(e)) {
-    throw TypeError("Cannot convert a Symbol value to a string");
+    throw TypeError("Cannot convert a Symbol value to a string")
   }
-  return String(e);
-};
+  return String(e)
+}

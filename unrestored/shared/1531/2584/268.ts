@@ -4,14 +4,14 @@
  * 模块 ID：268
  */
 
-"use strict";
+"use strict"
 
-var r;
+var r
 export { r as a };
 (function (e) {
-  e.SETTER = "SETTER";
-  e.DELETE = "DELETE";
-  e.QUERY = "QUERY";
-  e.CLEAR = "CLEAR";
-})(r || (r = {}));
-export default r;
+  e.SETTER = "SETTER"
+  e.DELETE = "DELETE"
+  e.QUERY = "QUERY"
+  e.CLEAR = "CLEAR"
+})(r || (r = {}))
+export default r

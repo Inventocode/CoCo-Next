@@ -54,4 +54,4 @@ module.exports = {
   smsContent: "Emulator_smsContent__3vSHs",
   receiveSmsHide: "Emulator_receiveSmsHide__eyRgQ",
   screenMask: "Emulator_screenMask__1AHM-"
-};
+}

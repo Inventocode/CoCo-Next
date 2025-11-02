@@ -57,4 +57,4 @@ module.exports = {
   imageBox: "style_imageBox__3JetC",
   edit: "style_edit__2jVB9",
   btn: "style_btn__30Y19"
-};
+}

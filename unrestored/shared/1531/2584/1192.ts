@@ -4,40 +4,40 @@
  * 模块 ID：1192
  */
 
-"use strict";
+"use strict"
 
-var r = require("react");
+var r = require("react")
 var o = function () {
   function e(e, t) {
     for (var n = 0; n < t.length; n++) {
-      var r = t[n];
-      r.enumerable = r.enumerable || false;
-      r.configurable = true;
+      var r = t[n]
+      r.enumerable = r.enumerable || false
+      r.configurable = true
       if ("value" in r) {
-        r.writable = true;
+        r.writable = true
       }
-      Object.defineProperty(e, r.key, r);
+      Object.defineProperty(e, r.key, r)
     }
   }
   return function (t, n, r) {
     if (n) {
-      e(t.prototype, n);
+      e(t.prototype, n)
     }
     if (r) {
-      e(t, r);
+      e(t, r)
     }
-    return t;
-  };
-}();
+    return t
+  }
+}()
 var i = Object.assign || function (e) {
   for (var t = 1; t < arguments.length; t++) {
-    var n = arguments[t];
+    var n = arguments[t]
     for (var r in n) if (Object.prototype.hasOwnProperty.call(n, r)) {
-      e[r] = n[r];
+      e[r] = n[r]
     }
   }
-  return e;
-};
+  return e
+}
 var a = {
   base: {
     position: "absolute",
@@ -104,62 +104,62 @@ var a = {
     top: "-10px",
     cursor: "nw-resize"
   }
-};
+}
 var s = function (e) {
   return r.createElement("div", {
     className: e.className,
     style: i({}, a.base, a[e.direction], e.replaceStyles || {}),
     onMouseDown: function (t) {
-      e.onResizeStart(t, e.direction);
+      e.onResizeStart(t, e.direction)
     },
     onTouchStart: function (t) {
-      e.onResizeStart(t, e.direction);
+      e.onResizeStart(t, e.direction)
     }
-  }, e.children);
-};
+  }, e.children)
+}
 var c = {
   userSelect: "none",
   MozUserSelect: "none",
   WebkitUserSelect: "none",
   MsUserSelect: "none"
-};
+}
 var l = {
   userSelect: "auto",
   MozUserSelect: "auto",
   WebkitUserSelect: "auto",
   MsUserSelect: "auto"
-};
+}
 var u = function (e, t, n) {
-  return Math.max(Math.min(e, n), t);
-};
+  return Math.max(Math.min(e, n), t)
+}
 var d = function (e, t) {
-  return Math.round(e / t) * t;
-};
+  return Math.round(e / t) * t
+}
 var p = function (e, t) {
   return t.reduce(function (t, n) {
-    return Math.abs(n - e) < Math.abs(t - e) ? n : t;
-  });
-};
+    return Math.abs(n - e) < Math.abs(t - e) ? n : t
+  })
+}
 var f = function (e, t) {
-  return e.substr(e.length - t.length, t.length) === t;
-};
+  return e.substr(e.length - t.length, t.length) === t
+}
 var h = function (e) {
-  return "auto" === e.toString() || f(e.toString(), "px") || f(e.toString(), "%") || f(e.toString(), "vh") || f(e.toString(), "vw") || f(e.toString(), "vmax") || f(e.toString(), "vmin") ? e.toString() : e + "px";
-};
-var m = ["style", "className", "grid", "snap", "bounds", "size", "defaultSize", "minWidth", "minHeight", "maxWidth", "maxHeight", "lockAspectRatio", "lockAspectRatioExtraWidth", "lockAspectRatioExtraHeight", "enable", "handleStyles", "handleClasses", "handleWrapperStyle", "handleWrapperClass", "children", "onResizeStart", "onResize", "onResizeStop", "handleComponent", "scale", "resizeRatio"];
+  return "auto" === e.toString() || f(e.toString(), "px") || f(e.toString(), "%") || f(e.toString(), "vh") || f(e.toString(), "vw") || f(e.toString(), "vmax") || f(e.toString(), "vmin") ? e.toString() : e + "px"
+}
+var m = ["style", "className", "grid", "snap", "bounds", "size", "defaultSize", "minWidth", "minHeight", "maxWidth", "maxHeight", "lockAspectRatio", "lockAspectRatioExtraWidth", "lockAspectRatioExtraHeight", "enable", "handleStyles", "handleClasses", "handleWrapperStyle", "handleWrapperClass", "children", "onResizeStart", "onResize", "onResizeStop", "handleComponent", "scale", "resizeRatio"]
 var g = function (e) {
   function t(e) {
     !function (e, t) {
       if (!(e instanceof t)) {
-        throw new TypeError("Cannot call a class as a function");
+        throw new TypeError("Cannot call a class as a function")
       }
-    }(this, t);
+    }(this, t)
     var n = function (e, t) {
       if (!e) {
-        throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+        throw new ReferenceError("this hasn't been initialised - super() hasn't been called")
       }
-      return !t || "object" !== typeof t && "function" !== typeof t ? e : t;
-    }(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this, e));
+      return !t || "object" !== typeof t && "function" !== typeof t ? e : t
+    }(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this, e))
     n.state = {
       isResizing: false,
       resizeCursor: "auto",
@@ -172,23 +172,23 @@ var g = function (e) {
         width: 0,
         height: 0
       }
-    };
-    n.updateExtendsProps(e);
-    n.onResizeStart = n.onResizeStart.bind(n);
-    n.onMouseMove = n.onMouseMove.bind(n);
-    n.onMouseUp = n.onMouseUp.bind(n);
-    if ("undefined" !== typeof window) {
-      window.addEventListener("mouseup", n.onMouseUp);
-      window.addEventListener("mousemove", n.onMouseMove);
-      window.addEventListener("mouseleave", n.onMouseUp);
-      window.addEventListener("touchmove", n.onMouseMove);
-      window.addEventListener("touchend", n.onMouseUp);
     }
-    return n;
+    n.updateExtendsProps(e)
+    n.onResizeStart = n.onResizeStart.bind(n)
+    n.onMouseMove = n.onMouseMove.bind(n)
+    n.onMouseUp = n.onMouseUp.bind(n)
+    if ("undefined" !== typeof window) {
+      window.addEventListener("mouseup", n.onMouseUp)
+      window.addEventListener("mousemove", n.onMouseMove)
+      window.addEventListener("mouseleave", n.onMouseUp)
+      window.addEventListener("touchmove", n.onMouseMove)
+      window.addEventListener("touchend", n.onMouseUp)
+    }
+    return n
   }
   (function (e, t) {
     if ("function" !== typeof t && null !== t) {
-      throw new TypeError("Super expression must either be null or a function, not " + typeof t);
+      throw new TypeError("Super expression must either be null or a function, not " + typeof t)
     }
     e.prototype = Object.create(t && t.prototype, {
       constructor: {
@@ -197,139 +197,139 @@ var g = function (e) {
         writable: true,
         configurable: true
       }
-    });
+    })
     if (t) {
       if (Object.setPrototypeOf) {
-        Object.setPrototypeOf(e, t);
+        Object.setPrototypeOf(e, t)
       } else {
-        e.__proto__ = t;
+        e.__proto__ = t
       }
     }
-  })(t, e);
+  })(t, e)
   o(t, [{
     key: "updateExtendsProps",
     value: function (e) {
       this.extendsProps = Object.keys(e).reduce(function (t, n) {
         if (!(-1 !== m.indexOf(n))) {
-          t[n] = e[n];
+          t[n] = e[n]
         }
-        return t;
-      }, {});
+        return t
+      }, {})
     }
   }, {
     key: "getParentSize",
     value: function () {
-      var e = this.base;
-      if (!e) {
+      var this$base = this.base
+      if (!this$base) {
         return {
           width: window.innerWidth,
           height: window.innerHeight
-        };
+        }
       }
-      var t = false;
-      var n = this.parentNode.style.flexWrap;
-      var r = e.style.minWidth;
-      if ("wrap" !== n) {
-        t = true;
-        this.parentNode.style.flexWrap = "wrap";
+      var t = false
+      var this$parentNode$style$flexWrap = this.parentNode.style.flexWrap
+      var this$base$style$minWidth = this$base.style.minWidth
+      if ("wrap" !== this$parentNode$style$flexWrap) {
+        t = true
+        this.parentNode.style.flexWrap = "wrap"
       }
-      e.style.position = "relative";
-      e.style.minWidth = "100%";
+      this$base.style.position = "relative"
+      this$base.style.minWidth = "100%"
       var o = {
-        width: e.offsetWidth,
-        height: e.offsetHeight
-      };
-      e.style.position = "absolute";
-      if (t) {
-        this.parentNode.style.flexWrap = n;
+        width: this$base.offsetWidth,
+        height: this$base.offsetHeight
       }
-      e.style.minWidth = r;
-      return o;
+      this$base.style.position = "absolute"
+      if (t) {
+        this.parentNode.style.flexWrap = this$parentNode$style$flexWrap
+      }
+      this$base.style.minWidth = this$base$style$minWidth
+      return o
     }
   }, {
     key: "componentDidMount",
     value: function () {
-      var e = this.size;
+      var this$size = this.size
       this.setState({
-        width: this.state.width || e.width,
-        height: this.state.height || e.height
-      });
-      var t = this.parentNode;
-      if (t instanceof HTMLElement && !this.base) {
-        var n = document.createElement("div");
-        n.style.width = "100%";
-        n.style.height = "100%";
-        n.style.position = "absolute";
-        n.style.transform = "scale(0, 0)";
-        n.style.left = "0";
-        n.style.flex = "0";
+        width: this.state.width || this$size.width,
+        height: this.state.height || this$size.height
+      })
+      var this$parentNode = this.parentNode
+      if (this$parentNode instanceof HTMLElement && !this.base) {
+        var n = document.createElement("div")
+        n.style.width = "100%"
+        n.style.height = "100%"
+        n.style.position = "absolute"
+        n.style.transform = "scale(0, 0)"
+        n.style.left = "0"
+        n.style.flex = "0"
         if (n.classList) {
-          n.classList.add("__resizable_base__");
+          n.classList.add("__resizable_base__")
         } else {
-          n.className += "__resizable_base__";
+          n.className += "__resizable_base__"
         }
-        t.appendChild(n);
+        this$parentNode.appendChild(n)
       }
     }
   }, {
     key: "componentWillReceiveProps",
     value: function (e) {
-      this.updateExtendsProps(e);
+      this.updateExtendsProps(e)
     }
   }, {
     key: "componentWillUnmount",
     value: function () {
       if ("undefined" !== typeof window) {
-        window.removeEventListener("mouseup", this.onMouseUp);
-        window.removeEventListener("mousemove", this.onMouseMove);
-        window.removeEventListener("mouseleave", this.onMouseUp);
-        window.removeEventListener("touchmove", this.onMouseMove);
-        window.removeEventListener("touchend", this.onMouseUp);
-        var e = this.parentNode;
-        var t = this.base;
-        if (!t || !e) {
-          return;
+        window.removeEventListener("mouseup", this.onMouseUp)
+        window.removeEventListener("mousemove", this.onMouseMove)
+        window.removeEventListener("mouseleave", this.onMouseUp)
+        window.removeEventListener("touchmove", this.onMouseMove)
+        window.removeEventListener("touchend", this.onMouseUp)
+        var this$parentNode = this.parentNode
+        var this$base = this.base
+        if (!this$base || !this$parentNode) {
+          return
         }
-        if (!(e instanceof HTMLElement) || !(t instanceof Node)) {
-          return;
+        if (!(this$parentNode instanceof HTMLElement) || !(this$base instanceof Node)) {
+          return
         }
-        e.removeChild(t);
+        this$parentNode.removeChild(this$base)
       }
     }
   }, {
     key: "calculateNewSize",
     value: function (e, t) {
-      var n = this.propsSize && this.propsSize[t];
-      return "auto" !== this.state[t] || this.state.original[t] !== e || "undefined" !== typeof n && "auto" !== n ? e : "auto";
+      var n = this.propsSize && this.propsSize[t]
+      return "auto" !== this.state[t] || this.state.original[t] !== e || "undefined" !== typeof n && "auto" !== n ? e : "auto"
     }
   }, {
     key: "onResizeStart",
     value: function (e, t) {
-      var n = 0;
-      var r = 0;
+      var n = 0
+      var r = 0
       if (e.nativeEvent instanceof MouseEvent) {
-        n = e.nativeEvent.clientX;
-        r = e.nativeEvent.clientY;
+        n = e.nativeEvent.clientX
+        r = e.nativeEvent.clientY
         if (3 === e.nativeEvent.which) {
-          return;
+          return
         }
       } else if (e.nativeEvent instanceof TouchEvent) {
-        n = e.nativeEvent.touches[0].clientX;
-        r = e.nativeEvent.touches[0].clientY;
+        n = e.nativeEvent.touches[0].clientX
+        r = e.nativeEvent.touches[0].clientY
       }
       if (this.props.onResizeStart) {
-        this.props.onResizeStart(e, t, this.resizable);
+        this.props.onResizeStart(e, t, this.resizable)
       }
       if (this.props.size) {
         if ("undefined" !== typeof this.props.size.height && this.props.size.height !== this.state.height) {
           this.setState({
             height: this.props.size.height
-          });
+          })
         }
         if ("undefined" !== typeof this.props.size.width && this.props.size.width !== this.state.width) {
           this.setState({
             width: this.props.size.width
-          });
+          })
         }
       }
       this.setState({
@@ -342,189 +342,189 @@ var g = function (e) {
         isResizing: true,
         resizeCursor: window.getComputedStyle(e.target).cursor,
         direction: t
-      });
+      })
     }
   }, {
     key: "onMouseMove",
     value: function (e) {
       if (this.state.isResizing) {
-        var t = e instanceof MouseEvent ? e.clientX : e.touches[0].clientX;
-        var n = e instanceof MouseEvent ? e.clientY : e.touches[0].clientY;
-        var r = this.state;
-        var o = r.direction;
-        var i = r.original;
-        var a = r.width;
-        var s = r.height;
-        var c = this.props;
-        var l = c.lockAspectRatio;
-        var h = c.lockAspectRatioExtraHeight;
-        var m = c.lockAspectRatioExtraWidth;
-        var g = this.props.scale || 1;
-        var _ = this.props;
-        var v = _.maxWidth;
-        var b = _.maxHeight;
-        var y = _.minWidth;
-        var E = _.minHeight;
-        var O = this.props.resizeRatio || 1;
-        var w = this.getParentSize();
-        if (v && "string" === typeof v && f(v, "%")) {
-          var C = Number(v.replace("%", "")) / 100;
-          v = w.width * C;
+        var t = e instanceof MouseEvent ? e.clientX : e.touches[0].clientX
+        var n = e instanceof MouseEvent ? e.clientY : e.touches[0].clientY
+        var this$state = this.state
+        var this$state$direction = this$state.direction
+        var this$state$original = this$state.original
+        var this$state$width = this$state.width
+        var this$state$height = this$state.height
+        var _this$props = this.props
+        var this$props$lockAspectRatio = _this$props.lockAspectRatio
+        var this$props$lockAspectRatioExtraHeight = _this$props.lockAspectRatioExtraHeight
+        var this$props$lockAspectRatioExtraWidth = _this$props.lockAspectRatioExtraWidth
+        var g = this.props.scale || 1
+        var this$props = this.props
+        var this$props$maxWidth = this$props.maxWidth
+        var this$props$maxHeight = this$props.maxHeight
+        var this$props$minWidth = this$props.minWidth
+        var this$props$minHeight = this$props.minHeight
+        var O = this.props.resizeRatio || 1
+        var w = this.getParentSize()
+        if (this$props$maxWidth && "string" === typeof this$props$maxWidth && f(this$props$maxWidth, "%")) {
+          var C = Number(this$props$maxWidth.replace("%", "")) / 100
+          this$props$maxWidth = w.width * C
         }
-        if (b && "string" === typeof b && f(b, "%")) {
-          var T = Number(b.replace("%", "")) / 100;
-          b = w.height * T;
+        if (this$props$maxHeight && "string" === typeof this$props$maxHeight && f(this$props$maxHeight, "%")) {
+          var T = Number(this$props$maxHeight.replace("%", "")) / 100
+          this$props$maxHeight = w.height * T
         }
-        if (y && "string" === typeof y && f(y, "%")) {
-          var S = Number(y.replace("%", "")) / 100;
-          y = w.width * S;
+        if (this$props$minWidth && "string" === typeof this$props$minWidth && f(this$props$minWidth, "%")) {
+          var S = Number(this$props$minWidth.replace("%", "")) / 100
+          this$props$minWidth = w.width * S
         }
-        if (E && "string" === typeof E && f(E, "%")) {
-          var I = Number(E.replace("%", "")) / 100;
-          E = w.height * I;
+        if (this$props$minHeight && "string" === typeof this$props$minHeight && f(this$props$minHeight, "%")) {
+          var I = Number(this$props$minHeight.replace("%", "")) / 100
+          this$props$minHeight = w.height * I
         }
-        v = "undefined" === typeof v ? undefined : Number(v);
-        b = "undefined" === typeof b ? undefined : Number(b);
-        y = "undefined" === typeof y ? undefined : Number(y);
-        E = "undefined" === typeof E ? undefined : Number(E);
-        var A = "number" === typeof l ? l : i.width / i.height;
-        var j = i.width;
-        var N = i.height;
-        if (/right/i.test(o)) {
-          j = i.width + (t - i.x) * O / g;
-          if (l) {
-            N = (j - m) / A + h;
+        this$props$maxWidth = "undefined" === typeof this$props$maxWidth ? undefined : Number(this$props$maxWidth)
+        this$props$maxHeight = "undefined" === typeof this$props$maxHeight ? undefined : Number(this$props$maxHeight)
+        this$props$minWidth = "undefined" === typeof this$props$minWidth ? undefined : Number(this$props$minWidth)
+        this$props$minHeight = "undefined" === typeof this$props$minHeight ? undefined : Number(this$props$minHeight)
+        var A = "number" === typeof this$props$lockAspectRatio ? this$props$lockAspectRatio : this$state$original.width / this$state$original.height
+        var this$state$original$width = this$state$original.width
+        var this$state$original$height = this$state$original.height
+        if (/right/i.test(this$state$direction)) {
+          this$state$original$width = this$state$original.width + (t - this$state$original.x) * O / g
+          if (this$props$lockAspectRatio) {
+            this$state$original$height = (this$state$original$width - this$props$lockAspectRatioExtraWidth) / A + this$props$lockAspectRatioExtraHeight
           }
         }
-        if (/left/i.test(o)) {
-          j = i.width - (t - i.x) * O / g;
-          if (l) {
-            N = (j - m) / A + h;
+        if (/left/i.test(this$state$direction)) {
+          this$state$original$width = this$state$original.width - (t - this$state$original.x) * O / g
+          if (this$props$lockAspectRatio) {
+            this$state$original$height = (this$state$original$width - this$props$lockAspectRatioExtraWidth) / A + this$props$lockAspectRatioExtraHeight
           }
         }
-        if (/bottom/i.test(o)) {
-          N = i.height + (n - i.y) * O / g;
-          if (l) {
-            j = (N - h) * A + m;
+        if (/bottom/i.test(this$state$direction)) {
+          this$state$original$height = this$state$original.height + (n - this$state$original.y) * O / g
+          if (this$props$lockAspectRatio) {
+            this$state$original$width = (this$state$original$height - this$props$lockAspectRatioExtraHeight) * A + this$props$lockAspectRatioExtraWidth
           }
         }
-        if (/top/i.test(o)) {
-          N = i.height - (n - i.y) * O / g;
-          if (l) {
-            j = (N - h) * A + m;
+        if (/top/i.test(this$state$direction)) {
+          this$state$original$height = this$state$original.height - (n - this$state$original.y) * O / g
+          if (this$props$lockAspectRatio) {
+            this$state$original$width = (this$state$original$height - this$props$lockAspectRatioExtraHeight) * A + this$props$lockAspectRatioExtraWidth
           }
         }
         if ("parent" === this.props.bounds) {
-          var R = this.parentNode;
-          if (R instanceof HTMLElement) {
-            var k = R.getBoundingClientRect();
-            var x = k.left;
-            var D = k.top;
-            var M = this.resizable.getBoundingClientRect();
-            var L = M.left;
-            var P = M.top;
-            var B = R.offsetWidth + (x - L);
-            var F = R.offsetHeight + (D - P);
-            v = v && v < B ? v : B;
-            b = b && b < F ? b : F;
+          var this$parentNode = this.parentNode
+          if (this$parentNode instanceof HTMLElement) {
+            var k = this$parentNode.getBoundingClientRect()
+            var k$left = k.left
+            var k$top = k.top
+            var M = this.resizable.getBoundingClientRect()
+            var m$left = M.left
+            var m$top = M.top
+            var B = this$parentNode.offsetWidth + (k$left - m$left)
+            var F = this$parentNode.offsetHeight + (k$top - m$top)
+            this$props$maxWidth = this$props$maxWidth && this$props$maxWidth < B ? this$props$maxWidth : B
+            this$props$maxHeight = this$props$maxHeight && this$props$maxHeight < F ? this$props$maxHeight : F
           }
         } else if ("window" === this.props.bounds) {
           if ("undefined" !== typeof window) {
-            var G = this.resizable.getBoundingClientRect();
-            var U = G.left;
-            var W = G.top;
-            var H = window.innerWidth - U;
-            var V = window.innerHeight - W;
-            v = v && v < H ? v : H;
-            b = b && b < V ? b : V;
+            var G = this.resizable.getBoundingClientRect()
+            var g$left = G.left
+            var g$top = G.top
+            var H = window.innerWidth - g$left
+            var V = window.innerHeight - g$top
+            this$props$maxWidth = this$props$maxWidth && this$props$maxWidth < H ? this$props$maxWidth : H
+            this$props$maxHeight = this$props$maxHeight && this$props$maxHeight < V ? this$props$maxHeight : V
           }
         } else if (this.props.bounds instanceof HTMLElement) {
-          var z = this.props.bounds.getBoundingClientRect();
-          var Y = z.left;
-          var K = z.top;
-          var q = this.resizable.getBoundingClientRect();
-          var X = q.left;
-          var Q = q.top;
+          var z = this.props.bounds.getBoundingClientRect()
+          var z$left = z.left
+          var z$top = z.top
+          var q = this.resizable.getBoundingClientRect()
+          var q$left = q.left
+          var q$top = q.top
           if (!(this.props.bounds instanceof HTMLElement)) {
-            return;
+            return
           }
-          var Z = this.props.bounds.offsetWidth + (Y - X);
-          var J = this.props.bounds.offsetHeight + (K - Q);
-          v = v && v < Z ? v : Z;
-          b = b && b < J ? b : J;
+          var Z = this.props.bounds.offsetWidth + (z$left - q$left)
+          var J = this.props.bounds.offsetHeight + (z$top - q$top)
+          this$props$maxWidth = this$props$maxWidth && this$props$maxWidth < Z ? this$props$maxWidth : Z
+          this$props$maxHeight = this$props$maxHeight && this$props$maxHeight < J ? this$props$maxHeight : J
         }
-        var $ = "undefined" === typeof y ? 10 : y;
-        var ee = "undefined" === typeof v || v < 0 ? j : v;
-        var te = "undefined" === typeof E ? 10 : E;
-        var ne = "undefined" === typeof b || b < 0 ? N : b;
-        if (l) {
-          var re = (te - h) * A + m;
-          var oe = (ne - h) * A + m;
-          var ie = ($ - m) / A + h;
-          var ae = (ee - m) / A + h;
-          var se = Math.max($, re);
-          var ce = Math.min(ee, oe);
-          var le = Math.max(te, ie);
-          var ue = Math.min(ne, ae);
-          j = u(j, se, ce);
-          N = u(N, le, ue);
+        var $ = "undefined" === typeof this$props$minWidth ? 10 : this$props$minWidth
+        var ee = "undefined" === typeof this$props$maxWidth || this$props$maxWidth < 0 ? this$state$original$width : this$props$maxWidth
+        var te = "undefined" === typeof this$props$minHeight ? 10 : this$props$minHeight
+        var ne = "undefined" === typeof this$props$maxHeight || this$props$maxHeight < 0 ? this$state$original$height : this$props$maxHeight
+        if (this$props$lockAspectRatio) {
+          var re = (te - this$props$lockAspectRatioExtraHeight) * A + this$props$lockAspectRatioExtraWidth
+          var oe = (ne - this$props$lockAspectRatioExtraHeight) * A + this$props$lockAspectRatioExtraWidth
+          var ie = ($ - this$props$lockAspectRatioExtraWidth) / A + this$props$lockAspectRatioExtraHeight
+          var ae = (ee - this$props$lockAspectRatioExtraWidth) / A + this$props$lockAspectRatioExtraHeight
+          var se = Math.max($, re)
+          var ce = Math.min(ee, oe)
+          var le = Math.max(te, ie)
+          var ue = Math.min(ne, ae)
+          this$state$original$width = u(this$state$original$width, se, ce)
+          this$state$original$height = u(this$state$original$height, le, ue)
         } else {
-          j = u(j, $, ee);
-          N = u(N, te, ne);
+          this$state$original$width = u(this$state$original$width, $, ee)
+          this$state$original$height = u(this$state$original$height, te, ne)
         }
         if (this.props.grid) {
-          j = d(j, this.props.grid[0]);
+          this$state$original$width = d(this$state$original$width, this.props.grid[0])
         }
         if (this.props.grid) {
-          N = d(N, this.props.grid[1]);
+          this$state$original$height = d(this$state$original$height, this.props.grid[1])
         }
         if (this.props.snap && this.props.snap.x) {
-          j = p(j, this.props.snap.x);
+          this$state$original$width = p(this$state$original$width, this.props.snap.x)
         }
         if (this.props.snap && this.props.snap.y) {
-          N = p(N, this.props.snap.y);
+          this$state$original$height = p(this$state$original$height, this.props.snap.y)
         }
         var de = {
-          width: j - i.width,
-          height: N - i.height
-        };
-        if (a && "string" === typeof a && f(a, "%")) {
-          j = j / w.width * 100 + "%";
+          width: this$state$original$width - this$state$original.width,
+          height: this$state$original$height - this$state$original.height
         }
-        if (s && "string" === typeof s && f(s, "%")) {
-          N = N / w.height * 100 + "%";
+        if (this$state$width && "string" === typeof this$state$width && f(this$state$width, "%")) {
+          this$state$original$width = this$state$original$width / w.width * 100 + "%"
+        }
+        if (this$state$height && "string" === typeof this$state$height && f(this$state$height, "%")) {
+          this$state$original$height = this$state$original$height / w.height * 100 + "%"
         }
         this.setState({
-          width: this.calculateNewSize(j, "width"),
-          height: this.calculateNewSize(N, "height")
-        });
+          width: this.calculateNewSize(this$state$original$width, "width"),
+          height: this.calculateNewSize(this$state$original$height, "height")
+        })
         if (this.props.onResize) {
-          this.props.onResize(e, o, this.resizable, de);
+          this.props.onResize(e, this$state$direction, this.resizable, de)
         }
       }
     }
   }, {
     key: "onMouseUp",
     value: function (e) {
-      var t = this.state;
-      var n = t.isResizing;
-      var r = t.direction;
-      var o = t.original;
-      if (n) {
+      var this$state = this.state
+      var this$state$isResizing = this$state.isResizing
+      var this$state$direction = this$state.direction
+      var this$state$original = this$state.original
+      if (this$state$isResizing) {
         var i = {
-          width: this.size.width - o.width,
-          height: this.size.height - o.height
-        };
+          width: this.size.width - this$state$original.width,
+          height: this.size.height - this$state$original.height
+        }
         if (this.props.onResizeStop) {
-          this.props.onResizeStop(e, r, this.resizable, i);
+          this.props.onResizeStop(e, this$state$direction, this.resizable, i)
         }
         if (this.props.size) {
-          this.setState(this.props.size);
+          this.setState(this.props.size)
         }
         this.setState({
           isResizing: false,
           resizeCursor: "auto"
-        });
+        })
       }
     }
   }, {
@@ -533,45 +533,45 @@ var g = function (e) {
       this.setState({
         width: e.width,
         height: e.height
-      });
+      })
     }
   }, {
     key: "renderResizer",
     value: function () {
-      var e = this;
-      var t = this.props;
-      var n = t.enable;
-      var o = t.handleStyles;
-      var i = t.handleClasses;
-      var a = t.handleWrapperStyle;
-      var c = t.handleWrapperClass;
-      var l = t.handleComponent;
-      if (!n) {
-        return null;
+      var e = this
+      var this$props = this.props
+      var this$props$enable = this$props.enable
+      var this$props$handleStyles = this$props.handleStyles
+      var this$props$handleClasses = this$props.handleClasses
+      var this$props$handleWrapperStyle = this$props.handleWrapperStyle
+      var this$props$handleWrapperClass = this$props.handleWrapperClass
+      var this$props$handleComponent = this$props.handleComponent
+      if (!this$props$enable) {
+        return null
       }
-      var u = Object.keys(n).map(function (t) {
-        return false !== n[t] ? r.createElement(s, {
+      var u = Object.keys(this$props$enable).map(function (t) {
+        return false !== this$props$enable[t] ? r.createElement(s, {
           key: t,
           direction: t,
           onResizeStart: e.onResizeStart,
-          replaceStyles: o && o[t],
-          className: i && i[t]
-        }, l && l[t] ? r.createElement(l[t]) : null) : null;
-      });
+          replaceStyles: this$props$handleStyles && this$props$handleStyles[t],
+          className: this$props$handleClasses && this$props$handleClasses[t]
+        }, this$props$handleComponent && this$props$handleComponent[t] ? r.createElement(this$props$handleComponent[t]) : null) : null
+      })
       return r.createElement("span", {
-        className: c,
-        style: a
-      }, u);
+        className: this$props$handleWrapperClass,
+        style: this$props$handleWrapperStyle
+      }, u)
     }
   }, {
     key: "render",
     value: function () {
-      var e = this;
-      var t = this.state.isResizing ? c : l;
+      var e = this
+      var t = this.state.isResizing ? c : l
       return r.createElement("div", i({
         ref: function (t) {
           if (t) {
-            e.resizable = t;
+            e.resizable = t
           }
         },
         style: i({
@@ -598,27 +598,27 @@ var g = function (e) {
           bottom: "0",
           right: "0"
         }
-      }), this.props.children, this.renderResizer());
+      }), this.props.children, this.renderResizer())
     }
   }, {
     key: "parentNode",
     get: function () {
-      return this.resizable.parentNode;
+      return this.resizable.parentNode
     }
   }, {
     key: "propsSize",
     get: function () {
-      return this.props.size || this.props.defaultSize;
+      return this.props.size || this.props.defaultSize
     }
   }, {
     key: "base",
     get: function () {
-      var e = this.parentNode;
-      if (e) {
-        for (var t = [].slice.call(e.children), n = 0; n < t.length; n += 1) {
-          var r = t[n];
+      var this$parentNode = this.parentNode
+      if (this$parentNode) {
+        for (var t = [].slice.call(this$parentNode.children), n = 0; n < t.length; n += 1) {
+          var r = t[n]
           if (r instanceof HTMLElement && r.classList.contains("__resizable_base__")) {
-            return r;
+            return r
           }
         }
       }
@@ -626,50 +626,50 @@ var g = function (e) {
   }, {
     key: "size",
     get: function () {
-      var e = 0;
-      var t = 0;
+      var e = 0
+      var t = 0
       if ("undefined" !== typeof window) {
-        var n = this.resizable.offsetWidth;
-        var r = this.resizable.offsetHeight;
-        var o = this.resizable.style.position;
-        if ("relative" !== o) {
-          this.resizable.style.position = "relative";
+        var this$resizable$offsetWidth = this.resizable.offsetWidth
+        var this$resizable$offsetHeight = this.resizable.offsetHeight
+        var this$resizable$style$position = this.resizable.style.position
+        if ("relative" !== this$resizable$style$position) {
+          this.resizable.style.position = "relative"
         }
-        e = "auto" !== this.resizable.style.width ? this.resizable.offsetWidth : n;
-        t = "auto" !== this.resizable.style.height ? this.resizable.offsetHeight : r;
-        this.resizable.style.position = o;
+        e = "auto" !== this.resizable.style.width ? this.resizable.offsetWidth : this$resizable$offsetWidth
+        t = "auto" !== this.resizable.style.height ? this.resizable.offsetHeight : this$resizable$offsetHeight
+        this.resizable.style.position = this$resizable$style$position
       }
       return {
         width: e,
         height: t
-      };
+      }
     }
   }, {
     key: "sizeStyle",
     get: function () {
-      var e = this;
-      var t = this.props.size;
+      var e = this
+      var this$props$size = this.props.size
       var n = function (t) {
         if ("undefined" === typeof e.state[t] || "auto" === e.state[t]) {
-          return "auto";
+          return "auto"
         }
         if (e.propsSize && e.propsSize[t] && f(e.propsSize[t].toString(), "%")) {
           if (f(e.state[t].toString(), "%")) {
-            return e.state[t].toString();
+            return e.state[t].toString()
           }
-          var n = e.getParentSize();
-          return Number(e.state[t].toString().replace("px", "")) / n[t] * 100 + "%";
+          var n = e.getParentSize()
+          return Number(e.state[t].toString().replace("px", "")) / n[t] * 100 + "%"
         }
-        return h(e.state[t]);
-      };
+        return h(e.state[t])
+      }
       return {
-        width: t && "undefined" !== typeof t.width && !this.state.isResizing ? h(t.width) : n("width"),
-        height: t && "undefined" !== typeof t.height && !this.state.isResizing ? h(t.height) : n("height")
-      };
+        width: this$props$size && "undefined" !== typeof this$props$size.width && !this.state.isResizing ? h(this$props$size.width) : n("width"),
+        height: this$props$size && "undefined" !== typeof this$props$size.height && !this.state.isResizing ? h(this$props$size.height) : n("height")
+      }
     }
-  }]);
-  return t;
-}(r.Component);
+  }])
+  return t
+}(r.Component)
 g.defaultProps = {
   onResizeStart: function () {},
   onResize: function () {},
@@ -691,5 +691,5 @@ g.defaultProps = {
   lockAspectRatioExtraHeight: 0,
   scale: 1,
   resizeRatio: 1
-};
-exports.a = g;
+}
+exports.a = g

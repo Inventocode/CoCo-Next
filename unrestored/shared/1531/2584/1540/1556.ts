@@ -4,4 +4,4 @@
  * 模块 ID：1556
  */
 
-require("./1541/438/index")("unscopables");
+require("./1541/438/index")("unscopables")

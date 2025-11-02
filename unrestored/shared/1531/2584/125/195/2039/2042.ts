@@ -4,8 +4,8 @@
  * 模块 ID：2042
  */
 
-"use strict";
+"use strict"
 
 Object.defineProperty(exports, "__esModule", {
   value: true
-});
+})

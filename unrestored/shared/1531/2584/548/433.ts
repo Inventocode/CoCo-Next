@@ -12,4 +12,4 @@ module.exports = {
   "coco-child-widget-full": "style_coco-child-widget-full__1FlYD",
   dataPicker: "style_dataPicker__3mfyV",
   mask: "style_mask__2u_y3"
-};
+}

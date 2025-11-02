@@ -66,6 +66,6 @@ module.exports = {
   "startBtn": "startBtn_1BREu",
   "startIcon": "startIcon_2wi8o",
   "startIconAnimation": "startIconAnimation_YBc83"
-};
+}
 
 /***/

@@ -4,135 +4,135 @@
  * 模块 ID：14
  */
 
-"use strict";
+"use strict"
 
-export { d as a };
+export { d as a }
 import r = require("./6");
 import o = require("../../../../src/shared/ui/language");
 import i = require("./21/index");
 import a = require("./28/index");
 import s = require("./55");
-var c = {};
+var c = {}
 function l(e, t) {
-  c[e] = t;
+  c[e] = t
 }
 function u(e) {
-  var t = e.type;
-  var n = e.messageId;
-  var r = e.message;
-  var o = e.values;
-  var c = e.widgetId;
-  var l = undefined === c ? "" : c;
-  var u = i.currentContext();
-  var d = r;
-  if (n) {
-    d = a.o(n);
+  var e$type = e.type
+  var e$messageId = e.messageId
+  var e$message = e.message
+  var e$values = e.values
+  var e$widgetId = e.widgetId
+  var l = undefined === e$widgetId ? "" : e$widgetId
+  var u = i.currentContext()
+  var d = e$message
+  if (e$messageId) {
+    d = a.o(e$messageId)
   }
   if (!d) {
-    throw new Error("message not set");
+    throw new Error("message not set")
   }
   s.b.push({
-    type: t || "warning",
+    type: e$type || "warning",
     message: d,
-    values: o,
+    values: e$values,
     widgetId: l,
     screenId: (null === u || undefined === u ? undefined : u.screenId) || "",
     blockId: (null === u || undefined === u ? undefined : u.blockId) || ""
-  });
+  })
 }
 l("string.notEmpty", function (e, t) {
-  t = String(t);
-  var n = "object" === typeof e ? e.value : e;
+  t = String(t)
+  var n = "object" === typeof e ? e.value : e
   if ("object" === typeof e && e.trim) {
-    t = t.trim();
+    t = t.trim()
   }
-  return 0 === t.length !== n;
-});
+  return 0 === t.length !== n
+})
 l("string.maxLength", function (e, t) {
-  t = String(t);
-  var n = "object" === typeof e ? e.value : e;
+  t = String(t)
+  var n = "object" === typeof e ? e.value : e
   if ("object" === typeof e && e.trim) {
-    t = t.trim();
+    t = t.trim()
   }
-  return t.length <= n;
-});
+  return t.length <= n
+})
 l("string.minLength", function (e, t) {
-  t = String(t);
-  var n = "object" === typeof e ? e.value : e;
+  t = String(t)
+  var n = "object" === typeof e ? e.value : e
   if ("object" === typeof e && e.trim) {
-    t = t.trim();
+    t = t.trim()
   }
-  return t.length >= n;
-});
+  return t.length >= n
+})
 l("number.greaterThan", function (e, t) {
-  return (t = Number(t)) >= ("object" === typeof e ? e.value : e);
-});
+  return (t = Number(t)) >= ("object" === typeof e ? e.value : e)
+})
 l("number.lessThan", function (e, t) {
-  return (t = Number(t)) <= ("object" === typeof e ? e.value : e);
-});
+  return (t = Number(t)) <= ("object" === typeof e ? e.value : e)
+})
 l("number.isInteger", function (e, t) {
-  return (t = Number(t)) % 1 === 0;
-});
+  return (t = Number(t)) % 1 === 0
+})
 var d = {
   range: function (e, t, n) {
-    var r = t.min;
-    var o = t.max;
-    return this.condition((undefined === r || e >= r) && (undefined === o || e <= o), n);
+    var t$min = t.min
+    var t$max = t.max
+    return this.condition((undefined === t$min || e >= t$min) && (undefined === t$max || e <= t$max), n)
   },
   condition: function (e, t) {
     if (!e) {
-      u(t);
+      u(t)
     }
-    return e;
+    return e
   },
   emptyContent: function (e, t) {
-    return this.condition(Boolean(e), t);
+    return this.condition(Boolean(e), t)
   },
   isNumber: function (e, t) {
-    return this.condition("number" === typeof e, t);
+    return this.condition("number" === typeof e, t)
   },
   validate: function (e) {
-    var t = e.ruleKey;
-    var n = e.ruleOptions;
-    var i = e.inputValue;
-    var a = e.values;
-    var s = undefined === a ? {} : a;
-    var l = e.widgetId;
-    var d = true;
-    var p = c[t];
+    var e$ruleKey = e.ruleKey
+    var e$ruleOptions = e.ruleOptions
+    var e$inputValue = e.inputValue
+    var e$values = e.values
+    var s = undefined === e$values ? {} : e$values
+    var e$widgetId = e.widgetId
+    var d = true
+    var p = c[e$ruleKey]
     if (!p) {
-      console.error("validator is not found", t);
-      return true;
+      console.error("validator is not found", e$ruleKey)
+      return true
     }
     var f = function (e) {
-      return "WidgetValidators.".concat(e);
-    }(t);
-    var h = "";
-    if ("object" === typeof n) {
-      h = n.value;
-      if (n.message) {
-        f = n.message;
+      return "WidgetValidators.".concat(e)
+    }(e$ruleKey)
+    var h = ""
+    if ("object" === typeof e$ruleOptions) {
+      h = e$ruleOptions.value
+      if (e$ruleOptions.message) {
+        f = e$ruleOptions.message
       }
     } else {
-      h = n;
+      h = e$ruleOptions
     }
     var m = r.a(r.a({}, s), {}, {
       ruleValue: h,
-      inputValue: i
-    });
+      inputValue: e$inputValue
+    })
     try {
-      if (!(d = p(n, i))) {
+      if (!(d = p(e$ruleOptions, e$inputValue))) {
         u({
-          widgetId: l,
+          widgetId: e$widgetId,
           type: "error",
           message: o.d(f, m)
-        });
+        })
       }
     } catch (g) {
-      console.error("validate error", g);
+      console.error("validate error", g)
     }
-    return d;
+    return d
   },
   log: u
-};
-export default d;
+}
+export default d

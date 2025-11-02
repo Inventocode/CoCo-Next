@@ -15,4 +15,4 @@ module.exports = {
   form: "style_form__1im9H",
   formItem: "style_formItem__1yS2r",
   placeholder: "style_placeholder__3RFbi"
-};
+}

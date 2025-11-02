@@ -4,10 +4,10 @@
  * 模块 ID：791
  */
 
-"use strict";
+"use strict"
 
-var r = require("./20");
-var i = require("react");
+var r = require("./20")
+var i = require("react")
 var o = {
   icon: {
     tag: "svg",
@@ -24,13 +24,13 @@ var o = {
   },
   name: "close",
   theme: "outlined"
-};
-var a = require("./223/index");
+}
+var a = require("./223/index")
 var s = function (e, t) {
   return i.createElement(a.a, r.a(r.a({}, e), {}, {
     ref: t,
     icon: o
-  }));
-};
-s.displayName = "CloseOutlined";
-exports.a = i.forwardRef(s);
+  }))
+}
+s.displayName = "CloseOutlined"
+exports.a = i.forwardRef(s)

@@ -4,28 +4,28 @@
  * 模块 ID：112
  */
 
-"use strict";
+"use strict"
 
-export { o as a };
-export { a as b };
+export { o as a }
+export { a as b }
 import r = require("./6");
 function o(e, t) {
-  var n = arguments.length > 2 && undefined !== arguments[2] ? arguments[2] : {};
+  var n = arguments.length > 2 && undefined !== arguments[2] ? arguments[2] : {}
   var o = r.a({
     isFold: true,
     screenId: "GLOBAL",
     isWatching: true,
     selected: true
-  }, n);
+  }, n)
   var i = r.a(r.a({
     type: e
-  }, o), t);
+  }, o), t)
   if (i.isWatching) {
-    i.selected = true;
+    i.selected = true
   } else {
-    i.selected = false;
+    i.selected = false
   }
-  return i;
+  return i
 }
 var i = {
   PRIMITIVE: {
@@ -84,8 +84,8 @@ var i = {
     foldIcon: "icon-open",
     unfoldIcon: "icon-fold-datawatch"
   }
-};
-function a(e) {
-  return i[e] ? i[e] : i.DEFAULT;
 }
-export default o;
+function a(e) {
+  return i[e] ? i[e] : i.DEFAULT
+}
+export default o

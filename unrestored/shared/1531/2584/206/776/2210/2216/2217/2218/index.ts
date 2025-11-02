@@ -4,18 +4,18 @@
  * 模块 ID：2218
  */
 
-"use strict";
+"use strict"
 
-var r = require("../1115/index");
-var i = require("../757/index");
-var o = require("../1117");
-var a = require("../1336");
-var s = require("./1337");
-var c = i.ucs2length;
-var u = require("../1115/1116");
-var l = o.Validation;
+var r = require("../1115/index")
+var i = require("../757/index")
+var o = require("../1117")
+var a = require("../1336")
+var s = require("./1337")
+var i$ucs2length = i.ucs2length
+var u = require("../1115/1116")
+var o$Validation = o.Validation
 function f(e, t, n) {
-  var r = h.call(this, e, t, n);
+  var r = h.call(this, e, t, n)
   return r >= 0 ? {
     index: r,
     compiling: true
@@ -26,97 +26,97 @@ function f(e, t, n) {
   }, {
     index: r,
     compiling: false
-  });
+  })
 }
 function d(e, t, n) {
-  var r = h.call(this, e, t, n);
+  var r = h.call(this, e, t, n)
   if (r >= 0) {
-    this._compilations.splice(r, 1);
+    this._compilations.splice(r, 1)
   }
 }
 function h(e, t, n) {
   for (var r = 0; r < this._compilations.length; r++) {
-    var i = this._compilations[r];
+    var i = this._compilations[r]
     if (i.schema == e && i.root == t && i.baseId == n) {
-      return r;
+      return r
     }
   }
-  return -1;
+  return -1
 }
 function p(e, t) {
-  return "var pattern" + e + " = new RegExp(" + i.toQuotedString(t[e]) + ");";
+  return "var pattern" + e + " = new RegExp(" + i.toQuotedString(t[e]) + ");"
 }
 function _(e) {
-  return "var default" + e + " = defaults[" + e + "];";
+  return "var default" + e + " = defaults[" + e + "];"
 }
 function A(e, t) {
-  return undefined === t[e] ? "" : "var refVal" + e + " = refVal[" + e + "];";
+  return undefined === t[e] ? "" : "var refVal" + e + " = refVal[" + e + "];"
 }
 function g(e) {
-  return "var customRule" + e + " = customRules[" + e + "];";
+  return "var customRule" + e + " = customRules[" + e + "];"
 }
 function v(e, t) {
   if (!e.length) {
-    return "";
+    return ""
   }
   for (var n = "", r = 0; r < e.length; r++) {
-    n += t(r, e);
+    n += t(r, e)
   }
-  return n;
+  return n
 }
 module.exports = function e(t, n, h, m) {
-  var y = this;
-  var b = this._opts;
-  var w = [undefined];
-  var E = {};
-  var x = [];
-  var C = {};
-  var O = [];
-  var k = {};
-  var S = [];
+  var y = this
+  var this$_opts = this._opts
+  var w = [undefined]
+  var E = {}
+  var x = []
+  var C = {}
+  var O = []
+  var k = {}
+  var S = []
   n = n || {
     schema: t,
     refVal: w,
     refs: E
-  };
-  var T = f.call(this, t, n, m);
-  var B = this._compilations[T.index];
+  }
+  var T = f.call(this, t, n, m)
+  var B = this._compilations[T.index]
   if (T.compiling) {
     return B.callValidate = function e() {
-      var t = B.validate;
-      var n = t.apply(this, arguments);
-      e.errors = t.errors;
-      return n;
-    };
+      var b$validate = B.validate
+      var n = b$validate.apply(this, arguments)
+      e.errors = b$validate.errors
+      return n
+    }
   }
-  var D = this._formats;
-  var I = this.RULES;
+  var this$_formats = this._formats
+  var this$RULES = this.RULES
   try {
-    var F = P(t, n, h, m);
-    B.validate = F;
-    var R = B.callValidate;
-    if (R) {
-      R.schema = F.schema;
-      R.errors = null;
-      R.refs = F.refs;
-      R.refVal = F.refVal;
-      R.root = F.root;
-      R.$async = F.$async;
-      if (b.sourceCode) {
-        R.source = F.source;
+    var F = P(t, n, h, m)
+    B.validate = F
+    var b$callValidate = B.callValidate
+    if (b$callValidate) {
+      b$callValidate.schema = F.schema
+      b$callValidate.errors = null
+      b$callValidate.refs = F.refs
+      b$callValidate.refVal = F.refVal
+      b$callValidate.root = F.root
+      b$callValidate.$async = F.$async
+      if (this$_opts.sourceCode) {
+        b$callValidate.source = F.source
       }
     }
-    return F;
+    return F
   } finally {
-    d.call(this, t, n, m);
+    d.call(this, t, n, m)
   }
   function P(t, a, f, d) {
-    var h = !a || a && a.schema == t;
+    var h = !a || a && a.schema == t
     if (a.schema != n.schema) {
-      return e.call(y, t, a, f, d);
+      return e.call(y, t, a, f, d)
     }
-    var m;
-    var C = true === t.$async;
+    var m
+    var C = true === t.$async
     var k = s({
       isTop: true,
       schema: t,
@@ -127,7 +127,7 @@ module.exports = function e(t, n, h, m) {
       errSchemaPath: "#",
       errorPath: "\"\"",
       MissingRefError: o.MissingRef,
-      RULES: I,
+      RULES: this$RULES,
       validate: s,
       util: i,
       resolve: r,
@@ -135,77 +135,77 @@ module.exports = function e(t, n, h, m) {
       usePattern: L,
       useDefault: U,
       useCustomRule: H,
-      opts: b,
-      formats: D,
+      opts: this$_opts,
+      formats: this$_formats,
       logger: y.logger,
       self: y
-    });
-    k = v(w, A) + v(x, p) + v(O, _) + v(S, g) + k;
-    if (b.processCode) {
-      k = b.processCode(k, t);
+    })
+    k = v(w, A) + v(x, p) + v(O, _) + v(S, g) + k
+    if (this$_opts.processCode) {
+      k = this$_opts.processCode(k, t)
     }
     try {
-      m = new Function("self", "RULES", "formats", "root", "refVal", "defaults", "customRules", "equal", "ucs2length", "ValidationError", k)(y, I, D, n, w, O, S, u, c, l);
-      w[0] = m;
+      m = new Function("self", "RULES", "formats", "root", "refVal", "defaults", "customRules", "equal", "ucs2length", "ValidationError", k)(y, this$RULES, this$_formats, n, w, O, S, u, i$ucs2length, o$Validation)
+      w[0] = m
     } catch (T) {
-      y.logger.error("Error compiling schema, function code:", k);
-      throw T;
+      y.logger.error("Error compiling schema, function code:", k)
+      throw T
     }
-    m.schema = t;
-    m.errors = null;
-    m.refs = E;
-    m.refVal = w;
-    m.root = h ? m : a;
+    m.schema = t
+    m.errors = null
+    m.refs = E
+    m.refVal = w
+    m.root = h ? m : a
     if (C) {
-      m.$async = true;
+      m.$async = true
     }
-    if (true === b.sourceCode) {
+    if (true === this$_opts.sourceCode) {
       m.source = {
         code: k,
         patterns: x,
         defaults: O
-      };
-    }
-    return m;
-  }
-  function N(t, i, o) {
-    i = r.url(t, i);
-    var a;
-    var s;
-    var c = E[i];
-    if (undefined !== c) {
-      return j(a = w[c], s = "refVal[" + c + "]");
-    }
-    if (!o && n.refs) {
-      var u = n.refs[i];
-      if (undefined !== u) {
-        return j(a = n.refVal[u], s = M(i, a));
       }
     }
-    s = M(i);
-    var l = r.call(y, P, n, i);
+    return m
+  }
+  function N(t, i, o) {
+    i = r.url(t, i)
+    var a
+    var s
+    var c = E[i]
+    if (undefined !== c) {
+      return j(a = w[c], s = "refVal[" + c + "]")
+    }
+    if (!o && n.refs) {
+      var u = n.refs[i]
+      if (undefined !== u) {
+        return j(a = n.refVal[u], s = M(i, a))
+      }
+    }
+    s = M(i)
+    var l = r.call(y, P, n, i)
     if (undefined === l) {
-      var f = h && h[i];
+      var f = h && h[i]
       if (f) {
-        l = r.inlineRef(f, b.inlineRefs) ? f : e.call(y, f, n, h, t);
+        l = r.inlineRef(f, this$_opts.inlineRefs) ? f : e.call(y, f, n, h, t)
       }
     }
     if (undefined !== l) {
       (function (e, t) {
-        var n = E[e];
-        w[n] = t;
-      })(i, l);
-      return j(l, s);
+        var n = E[e]
+        w[n] = t
+      })(i, l)
+      return j(l, s)
     }
     !function (e) {
-      delete E[e];
-    }(i);
+      delete E[e]
+    }(i)
   }
   function M(e, t) {
-    var n = w.length;
-    w[n] = t;
-    E[e] = n;
-    return "refVal" + n;
+    var w$length = w.length
+    w[w$length] = t
+    E[e] = w$length
+    return "refVal" + w$length
   }
   function j(e, t) {
     return "object" == typeof e || "boolean" == typeof e ? {
@@ -215,79 +215,79 @@ module.exports = function e(t, n, h, m) {
     } : {
       code: t,
       $async: e && !!e.$async
-    };
+    }
   }
   function L(e) {
-    var t = C[e];
+    var t = C[e]
     if (undefined === t) {
-      t = C[e] = x.length;
-      x[t] = e;
+      t = C[e] = x.length
+      x[t] = e
     }
-    return "pattern" + t;
+    return "pattern" + t
   }
   function U(e) {
     switch (typeof e) {
       case "boolean":
       case "number":
-        return "" + e;
+        return "" + e
       case "string":
-        return i.toQuotedString(e);
+        return i.toQuotedString(e)
       case "object":
         if (null === e) {
-          return "null";
+          return "null"
         }
         var t = a(e),
-          n = k[t];
+          n = k[t]
         if (undefined === n) {
-          n = k[t] = O.length;
-          O[n] = e;
+          n = k[t] = O.length
+          O[n] = e
         }
-        return "default" + n;
+        return "default" + n
     }
   }
   function H(e, t, n, r) {
     if (false !== y._opts.validateSchema) {
-      var i = e.definition.dependencies;
-      if (i && !i.every(function (e) {
-        return Object.prototype.hasOwnProperty.call(n, e);
+      var e$definition$dependencies = e.definition.dependencies
+      if (e$definition$dependencies && !e$definition$dependencies.every(function (e) {
+        return Object.prototype.hasOwnProperty.call(n, e)
       })) {
-        throw new Error("parent schema must have all required keywords: " + i.join(","));
+        throw new Error("parent schema must have all required keywords: " + e$definition$dependencies.join(","))
       }
-      var o = e.definition.validateSchema;
-      if (o) {
-        if (!o(t)) {
-          var a = "keyword schema is invalid: " + y.errorsText(o.errors);
+      var e$definition$validateSchema = e.definition.validateSchema
+      if (e$definition$validateSchema) {
+        if (!e$definition$validateSchema(t)) {
+          var a = "keyword schema is invalid: " + y.errorsText(e$definition$validateSchema.errors)
           if ("log" != y._opts.validateSchema) {
-            throw new Error(a);
+            throw new Error(a)
           }
-          y.logger.error(a);
+          y.logger.error(a)
         }
       }
     }
-    var s;
-    var c = e.definition.compile;
-    var u = e.definition.inline;
-    var l = e.definition.macro;
-    if (c) {
-      s = c.call(y, t, n, r);
-    } else if (l) {
-      s = l.call(y, t, n, r);
-      if (false !== b.validateSchema) {
-        y.validateSchema(s, true);
+    var s
+    var e$definition$compile = e.definition.compile
+    var e$definition$inline = e.definition.inline
+    var e$definition$macro = e.definition.macro
+    if (e$definition$compile) {
+      s = e$definition$compile.call(y, t, n, r)
+    } else if (e$definition$macro) {
+      s = e$definition$macro.call(y, t, n, r)
+      if (false !== this$_opts.validateSchema) {
+        y.validateSchema(s, true)
       }
-    } else if (u) {
-      s = u.call(y, r, e.keyword, t, n);
+    } else if (e$definition$inline) {
+      s = e$definition$inline.call(y, r, e.keyword, t, n)
     } else if (!(s = e.definition.validate)) {
-      return;
+      return
     }
     if (undefined === s) {
-      throw new Error("custom keyword \"" + e.keyword + "\"failed to compile");
+      throw new Error("custom keyword \"" + e.keyword + "\"failed to compile")
     }
-    var f = S.length;
-    S[f] = s;
+    var s$length = S.length
+    S[s$length] = s
     return {
-      code: "customRule" + f,
+      code: "customRule" + s$length,
       validate: s
-    };
+    }
   }
-};
+}

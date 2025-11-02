@@ -9,6 +9,6 @@ require("./1623/86")({
   stat: true
 }, {
   has: function (e, t) {
-    return t in e;
+    return t in e
   }
-});
+})

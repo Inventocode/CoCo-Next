@@ -48,4 +48,4 @@ module.exports = {
   saveTipsWrapper: "Header_saveTipsWrapper__3glFI",
   show: "Header_show__3Dvp-",
   closeSaveTips: "Header_closeSaveTips__3mSK4"
-};
+}

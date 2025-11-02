@@ -4,85 +4,85 @@
  * 模块 ID：2333
  */
 
-"use strict";
+"use strict"
 
 Object.defineProperty(exports, "__esModule", {
   value: true
-});
-var r = require("../1366/444");
+})
+var r = require("../1366/444")
 var i = function () {
   function e() {
-    this._map = new Map();
+    this._map = new Map()
   }
   e.prototype.getMap = function () {
-    return this._map;
-  };
+    return this._map
+  }
   e.prototype.add = function (e, t) {
     if (null === e || undefined === e) {
-      throw new Error(r.NULL_ARGUMENT);
+      throw new Error(r.NULL_ARGUMENT)
     }
     if (null === t || undefined === t) {
-      throw new Error(r.NULL_ARGUMENT);
+      throw new Error(r.NULL_ARGUMENT)
     }
-    var n = this._map.get(e);
+    var n = this._map.get(e)
     if (undefined !== n) {
-      n.push(t);
-      this._map.set(e, n);
+      n.push(t)
+      this._map.set(e, n)
     } else {
-      this._map.set(e, [t]);
+      this._map.set(e, [t])
     }
-  };
+  }
   e.prototype.get = function (e) {
     if (null === e || undefined === e) {
-      throw new Error(r.NULL_ARGUMENT);
+      throw new Error(r.NULL_ARGUMENT)
     }
-    var t = this._map.get(e);
+    var t = this._map.get(e)
     if (undefined !== t) {
-      return t;
+      return t
     }
-    throw new Error(r.KEY_NOT_FOUND);
-  };
+    throw new Error(r.KEY_NOT_FOUND)
+  }
   e.prototype.remove = function (e) {
     if (null === e || undefined === e) {
-      throw new Error(r.NULL_ARGUMENT);
+      throw new Error(r.NULL_ARGUMENT)
     }
     if (!this._map.delete(e)) {
-      throw new Error(r.KEY_NOT_FOUND);
+      throw new Error(r.KEY_NOT_FOUND)
     }
-  };
+  }
   e.prototype.removeByCondition = function (e) {
-    var t = this;
+    var t = this
     this._map.forEach(function (n, r) {
       var i = n.filter(function (t) {
-        return !e(t);
-      });
+        return !e(t)
+      })
       if (i.length > 0) {
-        t._map.set(r, i);
+        t._map.set(r, i)
       } else {
-        t._map.delete(r);
+        t._map.delete(r)
       }
-    });
-  };
+    })
+  }
   e.prototype.hasKey = function (e) {
     if (null === e || undefined === e) {
-      throw new Error(r.NULL_ARGUMENT);
+      throw new Error(r.NULL_ARGUMENT)
     }
-    return this._map.has(e);
-  };
+    return this._map.has(e)
+  }
   e.prototype.clone = function () {
-    var t = new e();
+    var t = new e()
     this._map.forEach(function (e, n) {
       e.forEach(function (e) {
-        return t.add(n, e.clone());
-      });
-    });
-    return t;
-  };
+        return t.add(n, e.clone())
+      })
+    })
+    return t
+  }
   e.prototype.traverse = function (e) {
     this._map.forEach(function (t, n) {
-      e(n, t);
-    });
-  };
-  return e;
-}();
-exports.Lookup = i;
+      e(n, t)
+    })
+  }
+  return e
+}()
+exports.Lookup = i

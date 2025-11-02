@@ -16,4 +16,4 @@ module.exports = {
   inner: "style_inner__2xD53",
   selected: "style_selected__2-LyX",
   checkboxSelected: "style_checkboxSelected__20TAs"
-};
+}

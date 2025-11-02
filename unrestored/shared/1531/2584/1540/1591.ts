@@ -4,15 +4,15 @@
  * 模块 ID：1591
  */
 
-var r = require("./1623/86");
-var o = Math.atanh;
-var i = Math.log;
+var r = require("./1623/86")
+var math$atanh = Math.atanh
+var math$log = Math.log
 r({
   target: "Math",
   stat: true,
-  forced: !(o && 1 / o(-0) < 0)
+  forced: !(math$atanh && 1 / math$atanh(-0) < 0)
 }, {
   atanh: function (e) {
-    return 0 == (e = +e) ? e : i((1 + e) / (1 - e)) / 2;
+    return 0 == (e = +e) ? e : math$log((1 + e) / (1 - e)) / 2
   }
-});
+})

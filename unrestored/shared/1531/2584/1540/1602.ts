@@ -4,14 +4,14 @@
  * 模块 ID：1602
  */
 
-var r = require("./1623/86");
-var o = Math.log;
-var i = Math.LN2;
+var r = require("./1623/86")
+var math$log = Math.log
+var math$LN2 = Math.LN2
 r({
   target: "Math",
   stat: true
 }, {
   log2: function (e) {
-    return o(e) / i;
+    return math$log(e) / math$LN2
   }
-});
+})

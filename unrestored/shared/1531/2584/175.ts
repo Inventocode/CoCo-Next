@@ -75,4 +75,4 @@ module.exports = {
   templateColor: "style_templateColor__37Lx3",
   templateMode: "style_templateMode__2BVKJ",
   backgroundTypeItem: "style_backgroundTypeItem__1MzY9"
-};
+}

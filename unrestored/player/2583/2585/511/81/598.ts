@@ -4,40 +4,40 @@
  * 模块 ID：598
  */
 
-"use strict";
+"use strict"
 
 var r = function () {
   function t() {}
   t.prototype.isCompact = function () {
-    return this.compact;
-  };
+    return this.compact
+  }
   t.prototype.setCompact = function (t) {
-    this.compact = t;
-  };
+    this.compact = t
+  }
   t.prototype.getSize = function () {
-    return this.size;
-  };
+    return this.size
+  }
   t.prototype.setSize = function (t) {
-    this.size = t;
-  };
+    this.size = t
+  }
   t.prototype.getLayers = function () {
-    return this.layers;
-  };
+    return this.layers
+  }
   t.prototype.setLayers = function (t) {
-    this.layers = t;
-  };
+    this.layers = t
+  }
   t.prototype.getCodeWords = function () {
-    return this.codeWords;
-  };
+    return this.codeWords
+  }
   t.prototype.setCodeWords = function (t) {
-    this.codeWords = t;
-  };
+    this.codeWords = t
+  }
   t.prototype.getMatrix = function () {
-    return this.matrix;
-  };
+    return this.matrix
+  }
   t.prototype.setMatrix = function (t) {
-    this.matrix = t;
-  };
-  return t;
-}();
-exports.a = r;
+    this.matrix = t
+  }
+  return t
+}()
+exports.a = r

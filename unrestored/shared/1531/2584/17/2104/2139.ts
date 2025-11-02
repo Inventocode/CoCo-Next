@@ -4,37 +4,37 @@
  * 模块 ID：2139
  */
 
-"use strict";
+"use strict"
 
 Object.defineProperty(exports, "__esModule", {
   value: true
-});
-exports.Registry = undefined;
-var r = require("tslib");
-var i = require("inversify");
+})
+exports.Registry = undefined
+var r = require("tslib")
+var i = require("inversify")
 var o = function () {
   function e() {
-    this.field_map = {};
+    this.field_map = {}
   }
   e.prototype.register = function (e, t) {
     if (!e) {
-      throw new Error("Invalid field type \"" + e + "\"");
+      throw new Error("Invalid field type \"" + e + "\"")
     }
-    this.field_map[e] = t;
-  };
+    this.field_map[e] = t
+  }
   e.prototype.from_json = function (e) {
-    var t = e.type;
-    if (!t || !this.field_map[t]) {
-      throw new Error("Custom field type \"" + t + "\" not found");
+    var e$type = e.type
+    if (!e$type || !this.field_map[e$type]) {
+      throw new Error("Custom field type \"" + e$type + "\" not found")
     }
-    return new this.field_map[t](e);
-  };
-  return e;
-}();
+    return new this.field_map[e$type](e)
+  }
+  return e
+}()
 var a = function () {
   function e() {
-    this.field = new o();
+    this.field = new o()
   }
-  return e = (0, r.__decorate)([(0, i.injectable)()], e);
-}();
-exports.Registry = a;
+  return e = (0, r.__decorate)([(0, i.injectable)()], e)
+}()
+exports.Registry = a

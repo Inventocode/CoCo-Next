@@ -10,5 +10,5 @@ module.exports = function (e, t) {
     configurable: !(2 & e),
     writable: !(4 & e),
     value: t
-  };
-};
+  }
+}

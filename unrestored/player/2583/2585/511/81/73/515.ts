@@ -4,14 +4,14 @@
  * 模块 ID：515
  */
 
-"use strict";
+"use strict"
 
 var r = function () {
   function t() {}
   t.floatToIntBits = function (t) {
-    return t;
-  };
-  t.MAX_VALUE = Number.MAX_SAFE_INTEGER;
-  return t;
-}();
-exports.a = r;
+    return t
+  }
+  t.MAX_VALUE = Number.MAX_SAFE_INTEGER
+  return t
+}()
+exports.a = r

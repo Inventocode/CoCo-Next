@@ -4,4 +4,4 @@
  * 模块 ID：530
  */
 
-module.exports = false;
+module.exports = false

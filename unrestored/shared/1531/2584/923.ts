@@ -10,4 +10,4 @@ module.exports = {
   icon: "Toast_icon__l9Zi2",
   textWrapper: "Toast_textWrapper__2WjbI",
   text: "Toast_text__zk2lK"
-};
+}

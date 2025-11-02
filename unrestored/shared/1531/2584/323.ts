@@ -4,46 +4,46 @@
  * 模块 ID：323
  */
 
-"use strict";
+"use strict"
 
-export { o as a };
+export { o as a }
 import r = require("./10/index");
 function o(e) {
   for (var t = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : {
       line: 1,
       column: 0
-    }, n = t.line, o = t.column, i = 0, a = 1; i >= 0 && i < e.length && a < n;) {
+    }, t$line = t.line, t$column = t.column, i = 0, a = 1; i >= 0 && i < e.length && a < t$line;) {
     if ((i = e.indexOf("\n", i + 1)) >= 0 && "\r" === e.charAt(i)) {
-      i++;
+      i++
     }
-    a++;
+    a++
   }
-  i = Math.min(i + o + 2, e.length - 1);
+  i = Math.min(i + t$column + 2, e.length - 1)
   for (var s = ""; i >= 0;) {
-    var c = e.charAt(i);
+    var c = e.charAt(i)
     if ("/" === c && "*" === s) {
-      break;
+      break
     }
-    s = c;
-    i--;
+    s = c
+    i--
   }
-  var l = {};
+  var l = {}
   if (-1 === i) {
-    return l;
+    return l
   }
-  var u = /\/\* ([^/*]+) \*\//.exec(e.substr(i));
+  var u = /\/\* ([^/*]+) \*\//.exec(e.substr(i))
   if (u) {
-    var d = u[1];
+    var d = u[1]
     d.split(";").forEach(function (e) {
-      var t = e.split("=");
-      var n = r.a(t, 2);
-      var o = n[0];
-      var i = n[1];
+      var t = e.split("=")
+      var n = r.a(t, 2)
+      var o = n[0]
+      var i = n[1]
       if (o && i) {
-        l[o] = i;
+        l[o] = i
       }
-    });
+    })
   }
-  return l;
+  return l
 }
-export default o;
+export default o

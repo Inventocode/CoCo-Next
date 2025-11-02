@@ -4,15 +4,15 @@
  * 模块 ID：1397
  */
 
-var n = Function.prototype.toString;
+var function$prototype$toString = Function.prototype.toString
 module.exports = function (e) {
   if (null != e) {
     try {
-      return n.call(e);
+      return function$prototype$toString.call(e)
     } catch (t) {}
     try {
-      return e + "";
+      return e + ""
     } catch (t) {}
   }
-  return "";
-};
+  return ""
+}

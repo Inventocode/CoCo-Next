@@ -13,4 +13,4 @@ module.exports = {
   textWidget: "style_textWidget__3r2dO",
   "coco-editable": "style_coco-editable__2C6ln",
   content: "style_content__1QoMj"
-};
+}

@@ -4,116 +4,116 @@
  * 模块 ID：2266
  */
 
-"use strict";
+"use strict"
 
-var r = require("../../../../36/2668/220");
-var i = require("../../../../36/2668/230");
-var o = require("./2267/index");
-var a = require("../1346");
+var r = require("../../../../36/2668/220")
+var i = require("../../../../36/2668/230")
+var o = require("./2267/index")
+var a = require("../1346")
 var s = function () {
   function e(t, n, i) {
-    r(this, e);
-    this.id = t;
-    this.upper = n;
-    this.childCodePaths = [];
+    r(this, e)
+    this.id = t
+    this.upper = n
+    this.childCodePaths = []
     Object.defineProperty(this, "internal", {
       value: new o(new a("".concat(t, "_")), i)
-    });
+    })
     if (n) {
-      n.childCodePaths.push(this);
+      n.childCodePaths.push(this)
     }
   }
   i(e, [{
     key: "initialSegment",
     get: function () {
-      return this.internal.initialSegment;
+      return this.internal.initialSegment
     }
   }, {
     key: "finalSegments",
     get: function () {
-      return this.internal.finalSegments;
+      return this.internal.finalSegments
     }
   }, {
     key: "returnedSegments",
     get: function () {
-      return this.internal.returnedForkContext;
+      return this.internal.returnedForkContext
     }
   }, {
     key: "thrownSegments",
     get: function () {
-      return this.internal.thrownForkContext;
+      return this.internal.thrownForkContext
     }
   }, {
     key: "currentSegments",
     get: function () {
-      return this.internal.currentSegments;
+      return this.internal.currentSegments
     }
   }, {
     key: "traverseSegments",
     value: function (e, t) {
-      var n;
-      var r;
+      var n
+      var r
       if ("function" === typeof e) {
-        r = e;
-        n = {};
+        r = e
+        n = {}
       } else {
-        n = e || {};
-        r = t;
+        n = e || {}
+        r = t
       }
-      var i = n.first || this.internal.initialSegment;
-      var o = n.last;
-      var a = null;
-      var s = 0;
-      var c = 0;
-      var u = null;
-      var l = Object.create(null);
-      var f = [[i, 0]];
-      var d = null;
-      var h = false;
+      var i = n.first || this.internal.initialSegment
+      var n$last = n.last
+      var a = null
+      var s = 0
+      var c = 0
+      var u = null
+      var l = Object.create(null)
+      var f = [[i, 0]]
+      var d = null
+      var h = false
       var p = {
         skip: function () {
           if (f.length <= 1) {
-            h = true;
+            h = true
           } else {
-            d = f[f.length - 2][0];
+            d = f[f.length - 2][0]
           }
         },
         break: function () {
-          h = true;
+          h = true
         }
-      };
+      }
       function _(e) {
-        return l[e.id] || u.isLoopedPrevSegment(e);
+        return l[e.id] || u.isLoopedPrevSegment(e)
       }
       for (; f.length > 0;) {
-        a = f[f.length - 1];
-        u = a[0];
+        a = f[f.length - 1]
+        u = a[0]
         if (0 === (s = a[1])) {
           if (l[u.id]) {
-            f.pop();
-            continue;
+            f.pop()
+            continue
           }
           if (u !== i && u.prevSegments.length > 0 && !u.prevSegments.every(_)) {
-            f.pop();
-            continue;
+            f.pop()
+            continue
           }
           if (d && -1 !== u.prevSegments.indexOf(d)) {
-            d = null;
+            d = null
           }
-          l[u.id] = true;
-          if (!d && (r.call(this, u, p), u === o && p.skip(), h)) {
-            break;
+          l[u.id] = true
+          if (!d && (r.call(this, u, p), u === n$last && p.skip(), h)) {
+            break
           }
         }
         if (s < (c = u.nextSegments.length - 1)) {
-          a[1] += 1;
-          f.push([u.nextSegments[s], 0]);
+          a[1] += 1
+          f.push([u.nextSegments[s], 0])
         } else {
           if (s === c) {
-            a[0] = u.nextSegments[s];
-            a[1] = 0;
+            a[0] = u.nextSegments[s]
+            a[1] = 0
           } else {
-            f.pop();
+            f.pop()
           }
         }
       }
@@ -121,9 +121,9 @@ var s = function () {
   }], [{
     key: "getState",
     value: function (e) {
-      return e.internal;
+      return e.internal
     }
-  }]);
-  return e;
-}();
-module.exports = s;
+  }])
+  return e
+}()
+module.exports = s

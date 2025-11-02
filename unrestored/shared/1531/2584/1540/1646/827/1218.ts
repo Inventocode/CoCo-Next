@@ -4,29 +4,29 @@
  * 模块 ID：1218
  */
 
-var r = require("../../1659/241");
+var r = require("../../1659/241")
 module.exports = function (e, t, n) {
-  var o;
-  var i;
-  r(e);
+  var o
+  var i
+  r(e)
   try {
     if (undefined === (o = e.return)) {
       if ("throw" === t) {
-        throw n;
+        throw n
       }
-      return n;
+      return n
     }
-    o = o.call(e);
+    o = o.call(e)
   } catch (a) {
-    i = true;
-    o = a;
+    i = true
+    o = a
   }
   if ("throw" === t) {
-    throw n;
+    throw n
   }
   if (i) {
-    throw o;
+    throw o
   }
-  r(o);
-  return n;
-};
+  r(o)
+  return n
+}

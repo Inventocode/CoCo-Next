@@ -4,8 +4,8 @@
  * 模块 ID：332
  */
 
-var r = require("../1623/309");
-var o = {}.hasOwnProperty;
+var r = require("../1623/309")
+var $hasOwnProperty = {}.hasOwnProperty
 module.exports = Object.hasOwn || function (e, t) {
-  return o.call(r(e), t);
-};
+  return $hasOwnProperty.call(r(e), t)
+}

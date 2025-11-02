@@ -11,4 +11,4 @@ module.exports = {
   iconDelete: "style_iconDelete__2QzDX",
   content: "style_content__3qxCd",
   fileItemName: "style_fileItemName__2QXUf"
-};
+}

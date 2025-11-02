@@ -24,6 +24,6 @@ module.exports = {
   "courseInfo": "courseInfo_wrVIX",
   "desc": "desc_16Cms",
   "btn": "btn_Xghow"
-};
+}
 
 /***/

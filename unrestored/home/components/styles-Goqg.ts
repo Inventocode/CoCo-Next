@@ -23,6 +23,6 @@ module.exports = {
   "workTime": "workTime_29J4A",
   "dropdown": "dropdown_32rRL",
   "dropdownItem": "dropdownItem_275zc"
-};
+}
 
 /***/

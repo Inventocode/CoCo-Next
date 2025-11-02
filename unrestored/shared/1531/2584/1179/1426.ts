@@ -4,17 +4,17 @@
  * 模块 ID：1426
  */
 
-"use strict";
+"use strict"
 
 Object.defineProperty(exports, "__esModule", {
   value: true
-});
-exports.init_tell_blocks = exports.is_controls_if = exports.init_control_blocks = undefined;
-var r = require("../4/127");
-var o = require("../17/497/387");
-var i = require("../1001/213/index");
-var a = require("./2555/579");
-var s = ["Boolean"];
+})
+exports.init_tell_blocks = exports.is_controls_if = exports.init_control_blocks = undefined
+var r = require("../4/127")
+var o = require("../17/497/387")
+var i = require("../1001/213/index")
+var a = require("./2555/579")
+var s = ["Boolean"]
 exports.init_control_blocks = function (e) {
   var t = [{
     type: "repeat_forever",
@@ -149,8 +149,8 @@ exports.init_control_blocks = function (e) {
     colour: (0, a.i18n)("BLUE_1"),
     mutator: "controls_if_mutator_codemao",
     extensions: ["controls_if_tooltip"]
-  }];
-  e.define_blocks_with_json_array(t);
+  }]
+  e.define_blocks_with_json_array(t)
   Object.assign(e.blocks_xml, {
     repeat_forever: "<block type=\"repeat_forever\"/>",
     repeat_n_times: "<block type=\"repeat_n_times\">\n      " + (0, a.number_value)("times", "20", "1,,1") + "\n    </block>",
@@ -162,7 +162,7 @@ exports.init_control_blocks = function (e) {
     destruct: "<block type=\"destruct\"/>",
     controls_if_no_else: "<block type=\"controls_if\">\n      " + (0, a.logic_value)("IF0") + "\n    </block>",
     controls_if: "<block type=\"controls_if\">\n      <mutation else=\"1\"></mutation>\n      " + (0, a.logic_value)("IF0") + "\n    </block>"
-  });
+  })
   var n = {
     elseCount_: 0,
     prevElseCount_: 0,
@@ -170,171 +170,171 @@ exports.init_control_blocks = function (e) {
     prevElseifCount_: 0,
     addMutation: function (t) {
       if (this.elseCount_ < 1) {
-        this.elseCount_ = 1;
+        this.elseCount_ = 1
       } else {
-        this.elseifCount_++;
+        this.elseifCount_++
       }
-      this.updateShape_(t);
-      var n = e.di_container;
-      var o = n.get(r.BINDING.events);
-      var i = n.get(r.BINDING.ChangeEvent);
+      this.updateShape_(t)
+      var e$di_container = e.di_container
+      var o = e$di_container.get(r.BINDING.events)
+      var i = e$di_container.get(r.BINDING.ChangeEvent)
       if (o.is_enabled()) {
         var a = i("mutation", {
           block: this,
           old_value: undefined,
           new_value: t || this.prevElseifCount_
-        });
-        o.fire(a);
+        })
+        o.fire(a)
       }
     },
     removeMutation: function (t) {
       if (this.elseifCount_ > 0) {
-        this.elseifCount_--;
+        this.elseifCount_--
       } else {
-        this.elseCount_ = 0;
+        this.elseCount_ = 0
       }
-      this.updateShape_(t);
-      var n = e.di_container;
-      var o = n.get(r.BINDING.events);
+      this.updateShape_(t)
+      var e$di_container = e.di_container
+      var o = e$di_container.get(r.BINDING.events)
       if (o.is_enabled()) {
-        var i = n.get(r.BINDING.ChangeEvent);
+        var i = e$di_container.get(r.BINDING.ChangeEvent)
         o.fire(i("mutation", {
           block: this,
           old_value: t || this.prevElseifCount_,
           new_value: undefined
-        }));
+        }))
       }
     },
     updateShape_: function (t) {
-      var n;
-      var c;
+      var /* [auto-meaningful-name] */w$connection
+      var c
       if (this.prevElseifCount_ !== this.elseifCount_ || this.prevElseCount_ !== this.elseCount_) {
-        var l = e.di_container;
-        var u = l.get(r.BINDING.Msg);
-        var d = l.get(r.BINDING.MutationAddButton);
-        var p = l.get(r.BINDING.MutationRemoveButton);
+        var e$di_container = e.di_container
+        var u = e$di_container.get(r.BINDING.Msg)
+        var d = e$di_container.get(r.BINDING.MutationAddButton)
+        var p = e$di_container.get(r.BINDING.MutationRemoveButton)
         if (this.prevElseCount_ !== this.elseCount_) {
           if (this.prevElseCount_ < this.elseCount_) {
-            this.remove_input("EXTRA_ADD_ELSE");
-            this.append_dummy_input("ELSE_TEXT").append_field(u.CONTROLS_IF_MSG_ELSE).append_field(p(1), "REMOVE_ELSE").append_field(d(), "ADD_ELSE_IF");
-            this.append_statement_input("ELSE");
+            this.remove_input("EXTRA_ADD_ELSE")
+            this.append_dummy_input("ELSE_TEXT").append_field(u.CONTROLS_IF_MSG_ELSE).append_field(p(1), "REMOVE_ELSE").append_field(d(), "ADD_ELSE_IF")
+            this.append_statement_input("ELSE")
           } else {
-            this.remove_input("ELSE");
-            this.remove_input("ELSE_TEXT");
-            this.append_dummy_input("EXTRA_ADD_ELSE").append_field(d(), "ADD_ELSE_IF");
+            this.remove_input("ELSE")
+            this.remove_input("ELSE_TEXT")
+            this.append_dummy_input("EXTRA_ADD_ELSE").append_field(d(), "ADD_ELSE_IF")
           }
-          this.prevElseCount_ = this.elseCount_;
+          this.prevElseCount_ = this.elseCount_
         }
         if (this.prevElseifCount_ !== this.elseifCount_) {
-          var f = l.get(r.BINDING.events);
+          var f = e$di_container.get(r.BINDING.events)
           if (this.elseifCount_ > this.prevElseifCount_) {
             if (this.elseifCount_ > 0) {
               if ((b = this.get_input("ELSE_TEXT")) && b.get_field("REMOVE_ELSE")) {
-                b.remove_field("REMOVE_ELSE");
+                b.remove_field("REMOVE_ELSE")
                 if (v = b.get_field("ADD_ELSE_IF")) {
-                  v.margin_left = 26;
+                  v.margin_left = 26
                 }
               }
             }
-            var h = t || this.prevElseifCount_ + 1;
-            var m = this.elseifCount_ - this.prevElseifCount_;
+            var h = t || this.prevElseifCount_ + 1
+            var m = this.elseifCount_ - this.prevElseifCount_
             this.inputList = this.inputList.map(function (e) {
-              var t = Number(e.name.match(/[0-9]+/));
+              var t = Number(e.name.match(/[0-9]+/))
               if (t >= h) {
-                e.name = e.name.replace(String(t), String(t + m));
-                var n = e.fieldRow[0];
+                e.name = e.name.replace(String(t), String(t + m))
+                var n = e.fieldRow[0]
                 if ((0, i.is_field_mutation)(n) && !n.is_add) {
-                  n.set_index(t + m);
+                  n.set_index(t + m)
                 }
               }
-              return e;
-            });
-            f.disable();
+              return e
+            })
+            f.disable()
             for (var g = h + m - 1; g >= h; g--) {
-              var _ = g === this.elseifCount_ ? "ELSE_TEXT" : "IF" + (g + 1);
-              this.append_logic_shadow("IF" + g, _).set_check(s).append_field((0, a.i18n)("CONTROLS_IF_MSG_ELSEIF"));
-              this.append_dummy_input("IF_TEXT" + g, _).append_field(p(g));
-              this.append_statement_input("DO" + g, _);
+              var _ = g === this.elseifCount_ ? "ELSE_TEXT" : "IF" + (g + 1)
+              this.append_logic_shadow("IF" + g, _).set_check(s).append_field((0, a.i18n)("CONTROLS_IF_MSG_ELSEIF"))
+              this.append_dummy_input("IF_TEXT" + g, _).append_field(p(g))
+              this.append_statement_input("DO" + g, _)
             }
-            f.enable();
+            f.enable()
           } else {
             if (0 === this.elseifCount_) {
-              var v;
+              var v
               var b = this.get_input("ELSE_TEXT");
-              (0, o.assert)(b);
-              b.insert_field_at(1, p(1), "REMOVE_ELSE");
+              (0, o.assert)(b)
+              b.insert_field_at(1, p(1), "REMOVE_ELSE")
               if (v = b.get_field("ADD_ELSE_IF")) {
-                v.margin_left = e.theme.renderer.SEP_SPACE_X;
+                v.margin_left = e.theme.renderer.SEP_SPACE_X
               }
             }
             for (var y = t || this.prevElseifCount_, E = new RegExp("[^0-9]" + y + "$"), O = this.inputList.length - 1; O >= 0; O--) {
-              var w = this.inputList[O];
+              var w = this.inputList[O]
               if (E.test(w.name)) {
-                if (null === (c = null === (n = w.connection) || undefined === n ? undefined : n.targetBlock()) || undefined === c ? undefined : c.is_shadow()) {
-                  f.disable();
-                  this.remove_input(w.name);
-                  f.enable();
+                if (null === (c = null === (w$connection = w.connection) || undefined === w$connection ? undefined : w$connection.targetBlock()) || undefined === c ? undefined : c.is_shadow()) {
+                  f.disable()
+                  this.remove_input(w.name)
+                  f.enable()
                 } else {
-                  this.remove_input(w.name);
+                  this.remove_input(w.name)
                 }
               }
             }
             this.inputList = this.inputList.map(function (e) {
-              var t = Number(e.name.match(/[0-9]+/));
+              var t = Number(e.name.match(/[0-9]+/))
               if (t > y) {
-                e.name = e.name.replace(String(t), String(t - 1));
-                var n = e.fieldRow[0];
+                e.name = e.name.replace(String(t), String(t - 1))
+                var n = e.fieldRow[0]
                 if ((0, i.is_field_mutation)(n) && !n.is_add) {
-                  n.set_index(t - 1);
+                  n.set_index(t - 1)
                 }
               }
-              return e;
-            });
+              return e
+            })
           }
-          this.prevElseifCount_ = this.elseifCount_;
-          this.render();
+          this.prevElseifCount_ = this.elseifCount_
+          this.render()
         } else {
-          this.render();
+          this.render()
         }
       }
     },
     domToMutation: function (e) {
-      this.elseifCount_ = parseInt(e.getAttribute("elseif"), 10) || 0;
-      this.elseCount_ = parseInt(e.getAttribute("else"), 10) || 0;
-      this.updateShape_();
+      this.elseifCount_ = parseInt(e.getAttribute("elseif"), 10) || 0
+      this.elseCount_ = parseInt(e.getAttribute("else"), 10) || 0
+      this.updateShape_()
     },
     mutationToDom: function () {
       if (this.elseifCount_ || this.elseCount_) {
-        var e = document.createElement("mutation");
+        var e = document.createElement("mutation")
         if (this.elseifCount_) {
-          e.setAttribute("elseif", String(this.elseifCount_));
+          e.setAttribute("elseif", String(this.elseifCount_))
         }
         if (this.elseCount_) {
-          e.setAttribute("else", String(1));
+          e.setAttribute("else", String(1))
         }
-        return e;
+        return e
       }
     }
-  };
+  }
   var c = Object.assign({}, n, {
     updateShape_: function () {}
-  });
+  })
   e.extensions.register("controls_if_tooltip", function () {
-    var t = this;
+    var t = this
     this.set_tooltip(function () {
-      var n = e.di_container.get(r.BINDING.utils);
+      var n = e.di_container.get(r.BINDING.utils)
       var o = function (e) {
-        return n.replace_message_references((0, a.i18n)("CONTROLS_IF_TOOLTIP_" + e));
-      };
-      return t.elseifCount_ || t.elseCount_ ? !t.elseifCount_ && t.elseCount_ ? o(2) : t.elseifCount_ && !t.elseCount_ ? o(3) : o(4) : o(1);
-    });
-  });
-  e.extensions.register_mutator("controls_if_mutator_codemao", n);
-  e.extensions.register_mutator("controls_if_one_else_mutator_codemao", c);
-};
+        return n.replace_message_references((0, a.i18n)("CONTROLS_IF_TOOLTIP_" + e))
+      }
+      return t.elseifCount_ || t.elseCount_ ? !t.elseifCount_ && t.elseCount_ ? o(2) : t.elseifCount_ && !t.elseCount_ ? o(3) : o(4) : o(1)
+    })
+  })
+  e.extensions.register_mutator("controls_if_mutator_codemao", n)
+  e.extensions.register_mutator("controls_if_one_else_mutator_codemao", c)
+}
 exports.is_controls_if = function (e) {
-  return "controls_if" === e.type;
-};
+  return "controls_if" === e.type
+}
 exports.init_tell_blocks = function (e, t) {
   var n = [{
     type: "tell",
@@ -343,11 +343,11 @@ exports.init_tell_blocks = function (e, t) {
       type: "field_dropdown",
       name: "sprite",
       options: function () {
-        var e = t();
+        var e = t()
         if (e.length > 1) {
-          e.shift();
+          e.shift()
         }
-        return e;
+        return e
       }
     }, {
       type: "input_dummy",
@@ -368,11 +368,11 @@ exports.init_tell_blocks = function (e, t) {
       type: "field_dropdown",
       name: "sprite",
       options: function () {
-        var e = t();
+        var e = t()
         if (e.length > 1) {
-          e.shift();
+          e.shift()
         }
-        return e;
+        return e
       }
     }, {
       type: "input_dummy",
@@ -386,10 +386,10 @@ exports.init_tell_blocks = function (e, t) {
     colour: (0, a.i18n)("BLUE_1"),
     inputsInline: true,
     extensions: ["disable_inside_warp_loop"]
-  }];
-  e.define_blocks_with_json_array(n);
+  }]
+  e.define_blocks_with_json_array(n)
   Object.assign(e.blocks_xml, {
     tell: "<block type=\"tell\"/>",
     sync_tell: "<block type=\"sync_tell\"/>"
-  });
-};
+  })
+}

@@ -4,13 +4,13 @@
  * 模块 ID：610
  */
 
-"use strict";
+"use strict"
 
-export { r as a };
+export { r as a }
 var r = function () {
-  for (var e = arguments.length, t = new Array(e), n = 0; n < e; n++) {
-    t[n] = arguments[n];
+  for (var arguments$length = arguments.length, t = new Array(arguments$length), n = 0; n < arguments$length; n++) {
+    t[n] = arguments[n]
   }
-  return t;
-};
-export default r;
+  return t
+}
+export default r

@@ -4,25 +4,25 @@
  * 模块 ID：70
  */
 
-"use strict";
+"use strict"
 
-export { i as c };
-export { r as b };
-export { o as a };
-export { a as d };
-var r;
-var o;
-var i = "PHONE_DIALER_WIDGET";
+export { i as c }
+export { r as b }
+export { o as a }
+export { a as d }
+var r
+var o
+var i = "PHONE_DIALER_WIDGET"
 !function (e) {
-  e.IDEL = "IDEL";
-  e.RINGING = "RINGING";
-  e.OFFHOOK = "OFFHOOK";
+  e.IDEL = "IDEL"
+  e.RINGING = "RINGING"
+  e.OFFHOOK = "OFFHOOK"
 }(r || (r = {}));
 (function (e) {
-  e[e.INCOMING_CALL_REFUSE_END = 1] = "INCOMING_CALL_REFUSE_END";
-  e[e.INCOMING_CALL_CONNECT_END = 2] = "INCOMING_CALL_CONNECT_END";
-  e[e.DIAL_OUT_CALL_END = 3] = "DIAL_OUT_CALL_END";
-})(o || (o = {}));
+  e[e.INCOMING_CALL_REFUSE_END = 1] = "INCOMING_CALL_REFUSE_END"
+  e[e.INCOMING_CALL_CONNECT_END = 2] = "INCOMING_CALL_CONNECT_END"
+  e[e.DIAL_OUT_CALL_END = 3] = "DIAL_OUT_CALL_END"
+})(o || (o = {}))
 var a = {
   type: i,
   icon: "icon-widget-phone-dialer",
@@ -88,5 +88,5 @@ var a = {
       icon: "%{BKY_BLOCK_PHONE_ICON}"
     }
   }]
-};
-export default o;
+}
+export default o

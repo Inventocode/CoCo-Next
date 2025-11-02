@@ -50,4 +50,4 @@ module.exports = {
   columnArea: "styles_columnArea__3W9To",
   columnIcon: "styles_columnIcon__2_84K",
   emptyContainer: "styles_emptyContainer__zCOfW"
-};
+}

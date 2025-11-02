@@ -4,11 +4,11 @@
  * 模块 ID：1191
  */
 
-"use strict";
+"use strict"
 
-var r = require("./1514/index");
-var o = r.default;
-var i = r.DraggableCore;
-module.exports = o;
-module.exports.default = o;
-module.exports.DraggableCore = i;
+var r = require("./1514/index")
+var r$default = r.default
+var r$DraggableCore = r.DraggableCore
+module.exports = r$default
+module.exports.default = r$default
+module.exports.DraggableCore = r$DraggableCore

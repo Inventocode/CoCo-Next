@@ -20,4 +20,4 @@ module.exports = {
   menuContent: "MyProject_menuContent__3Lead",
   menuPopover: "MyProject_menuPopover__AqL4D",
   badgeWrapper: "MyProject_badgeWrapper__uCS-w"
-};
+}

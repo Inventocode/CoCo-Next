@@ -4,17 +4,17 @@
  * 模块 ID：189
  */
 
-"use strict";
+"use strict"
 
-var r;
-export { r as b };
-export { o as a };
+var r
+export { r as b }
+export { o as a }
 export { i as c };
 (function (e) {
-  e.styleA = "styleA";
-  e.styleB = "styleB";
-})(r || (r = {}));
-var o = "DIALOG_WIDGET";
+  e.styleA = "styleA"
+  e.styleB = "styleB"
+})(r || (r = {}))
+var o = "DIALOG_WIDGET"
 var i = {
   type: o,
   icon: "icon-dialog",
@@ -227,5 +227,5 @@ var i = {
     label: "onCancelInput",
     params: []
   }]
-};
-export default o;
+}
+export default o

@@ -4,9 +4,9 @@
  * 模块 ID：1335
  */
 
-"use strict";
+"use strict"
 
-var r = require("./757/index");
+var r = require("./757/index")
 module.exports = function (e) {
-  r.copy(e, this);
-};
+  r.copy(e, this)
+}

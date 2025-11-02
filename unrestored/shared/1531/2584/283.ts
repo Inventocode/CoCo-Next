@@ -28,4 +28,4 @@ module.exports = {
   changePoster: "style_changePoster__3ZM2-",
   required: "style_required__niH7M",
   invisible: "style_invisible__2QnJV"
-};
+}

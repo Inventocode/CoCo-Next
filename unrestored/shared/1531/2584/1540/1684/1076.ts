@@ -4,16 +4,16 @@
  * 模块 ID：1076
  */
 
-var r = require("../1742/247/index")("match");
+var r = require("../1742/247/index")("match")
 module.exports = function (e) {
-  var t = /./;
+  var t = /./
   try {
-    "/./"[e](t);
+    "/./"[e](t)
   } catch (n) {
     try {
-      t[r] = false;
-      return "/./"[e](t);
+      t[r] = false
+      return "/./"[e](t)
     } catch (o) {}
   }
-  return false;
-};
+  return false
+}

@@ -14,4 +14,4 @@ module.exports = {
   content: "DataWatch_content___ZFJ9",
   shadowContent: "DataWatch_shadowContent__3NI1P",
   help: "DataWatch_help__2R_FM"
-};
+}

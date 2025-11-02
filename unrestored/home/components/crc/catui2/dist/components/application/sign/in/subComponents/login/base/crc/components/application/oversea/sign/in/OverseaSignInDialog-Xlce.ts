@@ -4,71 +4,71 @@
  * 模块 ID：Xlce
  */
 
-"use strict";
+"use strict"
 
 /* unused harmony export OverseaSignInDialog */
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__ from "@babel/runtime/helpers/esm/slicedToArray";
+import * as __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__ from "@babel/runtime/helpers/esm/slicedToArray"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_1_react__ from "react";
+import * as __WEBPACK_IMPORTED_MODULE_1_react__ from "react"
 /* harmony import */
-import __WEBPACK_IMPORTED_MODULE_1_react___default from "react";
+import __WEBPACK_IMPORTED_MODULE_1_react___default from "react"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_2__base_icon__ from "../../../../../../../../../base/icon-0d1w";
+import * as __WEBPACK_IMPORTED_MODULE_2__base_icon__ from "../../../../../../../../../base/icon-0d1w"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_3__base_dialog__ from "../../../../../../../../../base/dialog-ymrb";
+import * as __WEBPACK_IMPORTED_MODULE_3__base_dialog__ from "../../../../../../../../../base/dialog-ymrb"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_4__def__ from "./def-PqOj";
+import * as __WEBPACK_IMPORTED_MODULE_4__def__ from "./def-PqOj"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_5__subComponents_forget_password_page__ from "./subComponents/forget/password/page-18y6";
+import * as __WEBPACK_IMPORTED_MODULE_5__subComponents_forget_password_page__ from "./subComponents/forget/password/page-18y6"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_6__subComponents_login_page__ from "./subComponents/login/page-Ma8d";
+import * as __WEBPACK_IMPORTED_MODULE_6__subComponents_login_page__ from "./subComponents/login/page-Ma8d"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_7__subComponents_register_page__ from "./subComponents/register/page-0wKj";
+import * as __WEBPACK_IMPORTED_MODULE_7__subComponents_register_page__ from "./subComponents/register/page-0wKj"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_8__i18n__ from "./i18n-4U0O";
+import * as __WEBPACK_IMPORTED_MODULE_8__i18n__ from "./i18n-4U0O"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_9__style_module_css__ from "./style.module.css-YMKY";
+import * as __WEBPACK_IMPORTED_MODULE_9__style_module_css__ from "./style.module.css-YMKY"
 /* harmony import */
-import __WEBPACK_IMPORTED_MODULE_9__style_module_css___default from "./style.module.css-YMKY";
-var useState = __WEBPACK_IMPORTED_MODULE_1_react__.useState;
-var useEffect = __WEBPACK_IMPORTED_MODULE_1_react__.useEffect;
+import __WEBPACK_IMPORTED_MODULE_9__style_module_css___default from "./style.module.css-YMKY"
+var useState = __WEBPACK_IMPORTED_MODULE_1_react__.useState
+var useEffect = __WEBPACK_IMPORTED_MODULE_1_react__.useEffect
 var OverseaSignInDialog = function OverseaSignInDialog(props) {
-  var _useState = useState(__WEBPACK_IMPORTED_MODULE_4__def__.ContentView.LOGIN);
-  var _useState2 = __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default(_useState, 2);
-  var contentView = _useState2[0];
-  var setContentView = _useState2[1];
-  var _useState3 = useState(false);
-  var _useState4 = __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default(_useState3, 2);
-  var isRequesting = _useState4[0];
-  var setIsrequesting = _useState4[1];
-  var _useState5 = useState(props.show);
-  var _useState6 = __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default(_useState5, 2);
-  var show = _useState6[0];
-  var setShow = _useState6[1];
-  var onEmailLoginSuccess = props.onEmailLoginSuccess;
-  var onCloseAnimationEnd = props.onCloseAnimationEnd;
-  var reportMethod = props.reportMethod;
-  __WEBPACK_IMPORTED_MODULE_8__i18n__.setLanguage(props.language || "");
+  var _useState = useState(__WEBPACK_IMPORTED_MODULE_4__def__.ContentView.LOGIN)
+  var _useState2 = __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default(_useState, 2)
+  var contentView = _useState2[0]
+  var setContentView = _useState2[1]
+  var _useState3 = useState(false)
+  var _useState4 = __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default(_useState3, 2)
+  var isRequesting = _useState4[0]
+  var setIsrequesting = _useState4[1]
+  var _useState5 = useState(props.show)
+  var _useState6 = __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default(_useState5, 2)
+  var show = _useState6[0]
+  var setShow = _useState6[1]
+  var onEmailLoginSuccess = props.onEmailLoginSuccess
+  var onCloseAnimationEnd = props.onCloseAnimationEnd
+  var reportMethod = props.reportMethod
+  __WEBPACK_IMPORTED_MODULE_8__i18n__.setLanguage(props.language || "")
   useEffect(function () {
-    setShow(props.show);
-  }, [props.show]);
+    setShow(props.show)
+  }, [props.show])
   var switchView = function switchView(view) {
     if (reportMethod) {
-      reportMethod("用户信息-".concat(contentView === __WEBPACK_IMPORTED_MODULE_4__def__.ContentView.LOGIN ? "登录" : contentView === __WEBPACK_IMPORTED_MODULE_4__def__.ContentView.REGISTER ? "注册" : "找回密码"));
+      reportMethod("用户信息-".concat(contentView === __WEBPACK_IMPORTED_MODULE_4__def__.ContentView.LOGIN ? "登录" : contentView === __WEBPACK_IMPORTED_MODULE_4__def__.ContentView.REGISTER ? "注册" : "找回密码"))
     }
-    setContentView(view);
-  };
+    setContentView(view)
+  }
   var closeHandler = function closeHandler() {
     if (onCloseAnimationEnd) {
-      onCloseAnimationEnd();
+      onCloseAnimationEnd()
     } else {
-      console.log("close");
+      console.log("close")
     }
-  };
+  }
   var closeBtnHandler = function closeBtnHandler() {
-    setShow(false);
-  };
+    setShow(false)
+  }
   var renderHeader = function renderHeader() {
     return /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1_react__.createElement("div", {
       className: "CUI-oversea-sign-in-dialog-login-header"
@@ -78,13 +78,13 @@ var OverseaSignInDialog = function OverseaSignInDialog(props) {
     }, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1_react__.createElement(__WEBPACK_IMPORTED_MODULE_2__base_icon__.Icon, {
       id: "#cui_iconnor2",
       size: 10
-    })));
-  };
+    })))
+  }
   var renderFooter = function renderFooter() {
     return /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1_react__.createElement("div", {
       id: "captcha_container"
-    });
-  };
+    })
+  }
   return /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1_react__.createElement(__WEBPACK_IMPORTED_MODULE_3__base_dialog__.Dialog, {
     centerShowUp: true,
     show: show,
@@ -122,19 +122,19 @@ var OverseaSignInDialog = function OverseaSignInDialog(props) {
     switchView: switchView,
     reportMethod: reportMethod,
     handleClose: closeHandler
-  })));
-};
+  })))
+}
 OverseaSignInDialog.defaultProps = {
   language: "zh",
   onCloseAnimationEnd: function onCloseAnimationEnd() {
-    return undefined;
+    return undefined
   },
   onEmailLoginSuccess: function onEmailLoginSuccess() {
-    return undefined;
+    return undefined
   },
   reportMethod: function reportMethod() {
-    return undefined;
+    return undefined
   }
-};
+}
 
 /***/

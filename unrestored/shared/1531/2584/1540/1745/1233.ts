@@ -4,49 +4,49 @@
  * 模块 ID：1233
  */
 
-"use strict";
+"use strict"
 
-var r = require("../1623/272");
-var o = require("../1736/167");
-var i = require("../1541/820");
-var a = require("../1541/1061");
-var s = require("../1541/931");
-var c = require("../1623/309");
-var l = require("../1569/814");
-var u = Object.assign;
-var d = Object.defineProperty;
-module.exports = !u || o(function () {
-  if (r && 1 !== u({
+var r = require("../1623/272")
+var o = require("../1736/167")
+var i = require("../1541/820")
+var a = require("../1541/1061")
+var s = require("../1541/931")
+var c = require("../1623/309")
+var l = require("../1569/814")
+var object$assign = Object.assign
+var object$defineProperty = Object.defineProperty
+module.exports = !object$assign || o(function () {
+  if (r && 1 !== object$assign({
     b: 1
-  }, u(d({}, "a", {
+  }, object$assign(object$defineProperty({}, "a", {
     enumerable: true,
     get: function () {
-      d(this, "b", {
+      object$defineProperty(this, "b", {
         value: 3,
         enumerable: false
-      });
+      })
     }
   }), {
     b: 2
   })).b) {
-    return true;
+    return true
   }
-  var e = {};
-  var t = {};
-  var n = Symbol();
-  e[n] = 7;
+  var e = {}
+  var t = {}
+  var n = Symbol()
+  e[n] = 7
   "abcdefghijklmnopqrst".split("").forEach(function (e) {
-    t[e] = e;
-  });
-  return 7 != u({}, e)[n] || "abcdefghijklmnopqrst" != i(u({}, t)).join("");
+    t[e] = e
+  })
+  return 7 != object$assign({}, e)[n] || "abcdefghijklmnopqrst" != i(object$assign({}, t)).join("")
 }) ? function (e, t) {
-  for (var n = c(e), o = arguments.length, u = 1, d = a.f, p = s.f; o > u;) {
-    for (var f, h = l(arguments[u++]), m = d ? i(h).concat(d(h)) : i(h), g = m.length, _ = 0; g > _;) {
-      f = m[_++];
+  for (var n = c(e), arguments$length = arguments.length, u = 1, d = a.f, p = s.f; arguments$length > u;) {
+    for (var f, h = l(arguments[u++]), m = d ? i(h).concat(d(h)) : i(h), m$length = m.length, _ = 0; m$length > _;) {
+      f = m[_++]
       if (!(r && !p.call(h, f))) {
-        n[f] = h[f];
+        n[f] = h[f]
       }
     }
   }
-  return n;
-} : u;
+  return n
+} : object$assign

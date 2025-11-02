@@ -1,25 +1,25 @@
-"use strict";
+"use strict"
 
 export { getTemplate as e }
 export { loadCustomWidget as r }
 export { registerCustomWidget as v }
-export { z as s };
-export { Z as u };
-export { te as w };
-export { oe as l };
-export { ae as p };
-export { se as n };
-export { ce as m };
-export { le as o };
-export { getWidgetMethodTypes as j };
-export { de as h };
-export { fe as g };
-export { he as i };
+export { z as s }
+export { Z as u }
+export { te as w }
+export { oe as l }
+export { ae as p }
+export { se as n }
+export { ce as m }
+export { le as o }
+export { getWidgetMethodTypes as j }
+export { de as h }
+export { fe as g }
+export { he as i }
 export { InvisibleWidget as c }
 export { VisibleWidget as d }
 export { isExtensions as q } from "./type"
-export { me as a };
-export { ge as b };
+export { me as a }
+export { ge as b }
 
 import BabelRuntimeHelperRegeneratorRuntime from "regenerator-runtime"
 import l = require("../../../../unrestored/shared/1531/2584/7");
@@ -27,7 +27,7 @@ import u = require("../../../../unrestored/shared/1531/2584/6");
 import AntdMobile = require("antd-mobile");
 import Color from "color"
 import React, { ReactNode } from "react"
-import _ from "lodash"
+import Lodash from "lodash"
 import g = require("../../utils/network/axios-with-credentials");
 import v = require("../../../../unrestored/shared/1531/2584/227/index");
 import b = require("../../../../unrestored/shared/1531/2584/60");
@@ -60,7 +60,7 @@ class InvisibleWidget implements t.InvisibleWidget {
   }
 
   public emit(this: this, key: string, ...args: unknown[]): void {
-    R.emitWidgetEvent.apply(undefined, [this.__widgetType, key, this.__widgetId, ...args]);
+    R.emitWidgetEvent.apply(undefined, [this.__widgetType, key, this.__widgetId, ...args])
   }
 
   public widgetLog(this: this, message: string, values?: unknown): void {
@@ -111,7 +111,7 @@ enum BlockOlder {
   EVENTORDER = 1e4,
   METHODORDER = 2e4,
   SETORDER = 3e4,
-  GETORDER = 4e4
+  GETORDER = 4e4,
 }
 
 class VisibleWidget implements t.VisibleWidget {
@@ -129,7 +129,7 @@ class VisibleWidget implements t.VisibleWidget {
   }
 
   public emit(this: this, key: string, ...args: unknown[]): void {
-    R.emitWidgetEvent.apply(undefined, [this.__widgetType, key, this.__widgetId, ...args]);
+    R.emitWidgetEvent.apply(undefined, [this.__widgetType, key, this.__widgetId, ...args])
   }
 
   public widgetLog(this: this, message: string, values?: unknown): void {
@@ -171,10 +171,10 @@ class VisibleWidget implements t.VisibleWidget {
   public setProps(this: this, props: Record<string, unknown>): void {
     try {
       for (const key in props) {
-        R.setProperty(this.__widgetId, key, props[key]);
+        R.setProperty(this.__widgetId, key, props[key])
       }
     } catch (error) {
-      console.error("setProps error", error);
+      console.error("setProps error", error)
     }
   }
 
@@ -193,13 +193,13 @@ class VisibleWidget implements t.VisibleWidget {
  * @returns 积木模板
  */
 export function getTemplate(widgetID: string | null, type: string, types: t.Types, isAnyWidget: boolean): string[] {
-  const blocksOfPropertiesGetter: { xml: string, order: number }[] = []
-  const blocksOfVisibleOrDisabledGetter: { xml: string, order: number }[] = []
-  const blocksOfPropertiesSetter: { xml: string, order: number }[] = []
-  const blocksOfVisibleOrDisabledSetter: { xml: string, order: number }[] = []
-  const methodsBlock: { xml: string, order: number }[] = []
-  const eventsBlock: { xml: string, order: number }[] = []
-  const lines: { lineLabel: string, text: string }[] = []
+  const blocksOfPropertiesGetter: {xml: string;order: number;}[] = []
+  const blocksOfVisibleOrDisabledGetter: {xml: string;order: number;}[] = []
+  const blocksOfPropertiesSetter: {xml: string;order: number;}[] = []
+  const blocksOfVisibleOrDisabledSetter: {xml: string;order: number;}[] = []
+  const methodsBlock: {xml: string;order: number;}[] = []
+  const eventsBlock: {xml: string;order: number;}[] = []
+  const lines: {lineLabel: string;text: string;}[] = []
   types.methods.forEach(function ({ key, blockOptions = {} }): void {
     if (blockOptions.generateBlock !== false) {
       const order: number = blockOptions.order || BlockOlder.METHODORDER + methodsBlock.length + 1
@@ -219,7 +219,7 @@ export function getTemplate(widgetID: string | null, type: string, types: t.Type
   types.properties.forEach(function ({ key, blockOptions = {} }): void {
     if (false !== blockOptions.generateBlock && false !== blockOptions.getter?.generateBlock) {
       const order: number = blockOptions.getter?.order || BlockOlder.GETORDER + blocksOfPropertiesGetter.length + 1
-      let xml: string = "";
+      let xml: string = ""
       if (blockOptions.getter?.line) {
         const lineLabel: string = `flyout-line-${type}-property-${key}-getter`
         lines.push({ lineLabel, text: blockOptions.getter.line })
@@ -297,12 +297,12 @@ export function getTemplate(widgetID: string | null, type: string, types: t.Type
   }
   y.x(lines, type)
   return [
-    ...eventsBlock,
-    ...methodsBlock,
-    ...blocksOfPropertiesSetter,
-    ...blocksOfPropertiesGetter,
-    ...blocksOfVisibleOrDisabledGetter
-  ].sort(function (a, b): number {
+  ...eventsBlock,
+  ...methodsBlock,
+  ...blocksOfPropertiesSetter,
+  ...blocksOfPropertiesGetter,
+  ...blocksOfVisibleOrDisabledGetter].
+  sort(function (a, b): number {
     return a.order - b.order
   }).map(function (block): string {
     return block.xml
@@ -508,10 +508,10 @@ function defaultRequire(id: string): unknown {
  * @returns 控件的类型定义和实体定义
  */
 export async function loadCustomWidget(
-  code: string,
-  isFromWidgetShop: boolean,
-  widgetRequire: (id: string) => unknown = defaultRequire
-): Promise<t.Exports> {
+code: string,
+isFromWidgetShop: boolean,
+widgetRequire: (id: string) => unknown = defaultRequire)
+: Promise<t.Exports> {
   code = (await import("@babel/core")).transformSync(code, {
     presets: [(await import("@babel/preset-react")).default]
   })?.code || ""
@@ -525,13 +525,13 @@ export async function loadCustomWidget(
     ...restrict.objectKeys,
     code
   ).apply(undefined, [
-    ExternalModule.requireExternalModule,
-    {},
-    class {},
-    class {},
-    React,
-    ...restrict.objectValues
-  ])
+  ExternalModule.requireExternalModule,
+  {},
+  class {},
+  class {},
+  React,
+  ...restrict.objectValues]
+  )
   const EXTERNAL_MODULE_BASE_URL: string = "https://static.codemao.cn/appcraft/modules/"
   await Promise.all(ExternalModule.getExternalModules().map(
     async (url: string): Promise<void> => {
@@ -551,13 +551,13 @@ export async function loadCustomWidget(
     ...restrict.objectKeys,
     code
   ).apply(undefined, [
-    widgetRequire,
-    widgetExports,
-    InvisibleWidget,
-    VisibleWidget,
-    React,
-    ...restrict.objectValues
-  ])
+  widgetRequire,
+  widgetExports,
+  InvisibleWidget,
+  VisibleWidget,
+  React,
+  ...restrict.objectValues]
+  )
   const widgetTypes: t.Types = widgetExports.types!
   const widgetWidget: t.Widget = widgetExports.widget!
   if (!widgetTypes.isInvisibleWidget) {
@@ -612,10 +612,10 @@ export async function loadCustomWidget(
  * @param onCancel 用户取消导入控件时回调
  */
 export function registerCustomWidget(
-  exports: t.Exports,
-  onRegistered?: () => void,
-  onCancel?: () => void
-): void {
+exports: t.Exports,
+onRegistered?: () => void,
+onCancel?: () => void)
+: void {
   const { widget, types } = exports
   const { title, type } = types
   function registered(): void {
@@ -645,13 +645,13 @@ export function registerCustomWidget(
 }
 
 function z(e, t) {
-  var n = e.types;
-  var r = e.messages;
-  if (!n.isInvisibleWidget) {
-    if (!n.properties.some(function (e) {
-      return "__opacity" === e.key;
+  var e$types = e.types
+  var e$messages = e.messages
+  if (!e$types.isInvisibleWidget) {
+    if (!e$types.properties.some(function (e) {
+      return "__opacity" === e.key
     })) {
-      n.properties.push({
+      e$types.properties.push({
         key: "__opacity",
         label: "",
         valueType: "number",
@@ -661,37 +661,37 @@ function z(e, t) {
           lessThan: b.j,
           isInteger: true
         }
-      });
+      })
     }
-    if (!n.properties.some(function (e) {
-      return "__position" === e.key;
+    if (!e$types.properties.some(function (e) {
+      return "__position" === e.key
     })) {
-      n.properties.push({
+      e$types.properties.push({
         key: "__position",
         label: "",
         valueType: "number",
         defaultValue: 100
-      });
+      })
     }
-    if (!n.properties.some(function (e) {
-      return "__visible" === e.key;
+    if (!e$types.properties.some(function (e) {
+      return "__visible" === e.key
     })) {
-      n.properties.push({
+      e$types.properties.push({
         key: "__visible",
         label: "",
         valueType: "boolean",
         defaultValue: true
-      });
+      })
     }
   }
-  x.d(n, r);
-  var o = toInternalWidget(n, t);
+  x.d(e$types, e$messages)
+  var o = toInternalWidget(e$types, t)
   Storage.addUnsafeExtension({
-    types: n,
-    type: n.type,
+    types: e$types,
+    type: e$types.type,
     code: ""
-  });
-  return o;
+  })
+  return o
 }
 
 /**
@@ -733,13 +733,13 @@ async function importCustomWidget(code: string, isFromWidgetShop: boolean): Prom
  */
 export async function importCostumeWidgetFromBlob(blob: Blob, isFromWidgetShop: boolean): Promise<t.Types> {
   const code: string = await new Promise((resolve, reject): void => {
-      const fileReader = new FileReader()
-      fileReader.readAsText(blob)
-      fileReader.onload = (): void => {
-        resolve(fileReader.result as string)
-      }
-      fileReader.onerror = reject
+    const fileReader = new FileReader()
+    fileReader.readAsText(blob)
+    fileReader.onload = (): void => {
+      resolve(fileReader.result as string)
     }
+    fileReader.onerror = reject
+  }
   )
   if (!isFromWidgetShop) {
     checkKeyWords(code)
@@ -774,51 +774,51 @@ function checkKeyWords(code: string): void {
 }
 
 function Z(e, t) {
-  return J.apply(this, arguments);
+  return J.apply(this, arguments)
 }
 function J() {
   return (J = l.a(BabelRuntimeHelperRegeneratorRuntime.mark(function e(t, n) {
-    var r;
-    var o;
-    var a;
-    var s;
+    var r
+    var /* [auto-meaningful-name] */_e$sent2
+    var /* [auto-meaningful-name] */e$sent
+    var /* [auto-meaningful-name] */e$sent$type
     return BabelRuntimeHelperRegeneratorRuntime.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
             if (t.startsWith("https")) {
-              e.next = 2;
-              break;
+              e.next = 2
+              break
             }
-            return e.abrupt("return");
+            return e.abrupt("return")
           case 2:
-            r = "".concat(t, "?t=").concat(Math.random());
-            e.next = 5;
+            r = "".concat(t, "?t=").concat(Math.random())
+            e.next = 5
             return g.a.get(r, {
               responseType: "blob",
               withCredentials: false
-            });
+            })
           case 5:
-            o = e.sent;
-            e.next = 8;
-            return importCostumeWidgetFromBlob(o.data, true);
+            _e$sent2 = e.sent
+            e.next = 8
+            return importCostumeWidgetFromBlob(_e$sent2.data, true)
           case 8:
-            a = e.sent;
-            s = a.type;
+            e$sent = e.sent
+            e$sent$type = e$sent.type
             Storage.addSafeExtension({
               id: n,
-              type: s,
-              types: a,
+              type: e$sent$type,
+              types: e$sent,
               cdnUrl: t
-            });
-            return e.abrupt("return", a);
+            })
+            return e.abrupt("return", e$sent)
           case 12:
           case "end":
-            return e.stop();
+            return e.stop()
         }
       }
-    }, e);
-  }))).apply(this, arguments);
+    }, e)
+  }))).apply(this, arguments)
 }
 
 export async function loadWidgetFromStorage(safeWidgetStorage: SafeExtensionFileStorage[], unsafeWidgetsStorage: UnsafeExtensionFileStorage[]) {
@@ -834,9 +834,9 @@ export async function loadWidgetFromStorage(safeWidgetStorage: SafeExtensionFile
     await Promise.all(unsafeWidgetsStorage.map(({ code }): Promise<void> => importWidget(code)))
   }
   Event.dispatch(Message.wrapUpdateExtensionWidgetList())
-  const onlineWidgetsStorage = safeWidgetStorage.filter((widget) => (
-    widget.cdnUrl.startsWith("https") && widget.id
-  ))
+  const onlineWidgetsStorage = safeWidgetStorage.filter((widget) =>
+  widget.cdnUrl.startsWith("https") && widget.id
+  )
   if (!onlineWidgetsStorage.length) {
     return
   }
@@ -846,94 +846,94 @@ export async function loadWidgetFromStorage(safeWidgetStorage: SafeExtensionFile
 }
 
 function te(e, t, n) {
-  return ne.apply(this, arguments);
+  return ne.apply(this, arguments)
 }
 function ne() {
   return (ne = l.a(BabelRuntimeHelperRegeneratorRuntime.mark(function e(t, n, r) {
-    var o;
-    var a;
-    var s;
-    var c;
-    var l;
-    var u;
-    var d;
-    var p;
-    var f;
-    var h;
-    var m;
-    var g;
+    var o
+    var a
+    var s
+    var c
+    var l
+    var u
+    var d
+    var p
+    var /* [auto-meaningful-name] */_e$sent5
+    var h
+    var /* [auto-meaningful-name] */e$sent
+    var g
     return BabelRuntimeHelperRegeneratorRuntime.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
             o = {}
             for (a in n) {
-              s = n[a];
+              s = n[a]
               if (Type.isSafeExtensions(s.type)) {
-                o[s.type] = true;
+                o[s.type] = true
               }
             }
             for (c in r) {
-              l = r[c];
+              l = r[c]
               if (Type.isSafeExtensions(l.type)) {
-                o[l.type] = true;
+                o[l.type] = true
               }
             }
             t.forEach(function (e) {
-              o[e.type] = false;
-              delete o[e.type];
+              o[e.type] = false
+              delete o[e.type]
             })
             if (!(Object.keys(o).length > 0)) {
-              e.next = 26;
-              break;
+              e.next = 26
+              break
             }
-            u = [];
-            d = 1;
-            p = 100;
-            e.next = 10;
-            return A.e(d, p);
+            u = []
+            d = 1
+            p = 100
+            e.next = 10
+            return A.e(d, p)
           case 10:
-            if (f = e.sent, u = u.concat(f.items), !((h = Math.ceil(f.total / p)) > 1)) {
-              e.next = 23;
-              break;
+            if (_e$sent5 = e.sent, u = u.concat(_e$sent5.items), !((h = Math.ceil(_e$sent5.total / p)) > 1)) {
+              e.next = 23
+              break
             }
-            d += 1;
+            d += 1
           case 15:
             if (!(d <= h)) {
-              e.next = 23;
-              break;
+              e.next = 23
+              break
             }
-            e.next = 18;
-            return A.e(d, p);
+            e.next = 18
+            return A.e(d, p)
           case 18:
-            m = e.sent;
-            u = u.concat(m.items);
+            e$sent = e.sent
+            u = u.concat(e$sent.items)
           case 20:
-            d++;
-            e.next = 15;
-            break;
+            d++
+            e.next = 15
+            break
           case 23:
-            g = [];
+            g = []
             u.forEach(function (e) {
-              var t = "".concat(Type.SAFE_EXTENSION_PREFIX).concat(e.widget_code);
+              var t = "".concat(Type.SAFE_EXTENSION_PREFIX).concat(e.widget_code)
               if (o[t] && e.resource_url.startsWith("https")) {
                 g.push({
                   id: e.id,
                   type: t,
                   cdnUrl: e.resource_url
-                });
+                })
               }
-            });
+            })
             return e.abrupt("return", Promise.all(g.map(function (e) {
-              return Z(e.cdnUrl, e.id);
-            })));
+              return Z(e.cdnUrl, e.id)
+            })))
           case 26:
           case "end":
-            return e.stop();
+            return e.stop()
         }
       }
-    }, e);
-  }))).apply(this, arguments);
+    }, e)
+  }))).apply(this, arguments)
 }
 
 export function getWidgetTitle(type: string) {
@@ -941,96 +941,96 @@ export function getWidgetTitle(type: string) {
   return widget ? x.a(type, widget.types.title) : ""
 }
 function oe(e, t) {
-  var n = Storage.getExtension(e);
+  var n = Storage.getExtension(e)
   if (null === n || undefined === n ? undefined : n.types) {
     return n.types.properties.find(function (e) {
-      return e.key === t;
-    });
+      return e.key === t
+    })
   }
 }
 function ie(e, t) {
-  var n = Storage.getExtension(e);
+  var n = Storage.getExtension(e)
   if (null === n || undefined === n ? undefined : n.types) {
     var r = n.types.properties.find(function (e) {
-      return e.key === t;
-    });
+      return e.key === t
+    })
     if (r) {
       if ("number" === r.valueType && r.validators) {
-        return r.validators;
+        return r.validators
       }
     }
   }
 }
 function ae(e) {
-  var t;
+  var t
   if (undefined !== e.greaterThan) {
-    t = "number" === typeof e.greaterThan ? e.greaterThan : e.greaterThan.value;
+    t = "number" === typeof e.greaterThan ? e.greaterThan : e.greaterThan.value
   }
-  return t;
+  return t
 }
 function se(e) {
-  var t;
+  var t
   if (undefined !== e.lessThan) {
-    t = "number" === typeof e.lessThan ? e.lessThan : e.lessThan.value;
+    t = "number" === typeof e.lessThan ? e.lessThan : e.lessThan.value
   }
-  return t;
+  return t
 }
 function ce(e, t) {
-  var n = ie(e, t);
+  var n = ie(e, t)
   if (n) {
-    return se(n);
+    return se(n)
   }
 }
 function le(e, t) {
-  var n = ie(e, t);
+  var n = ie(e, t)
   if (n) {
-    return ae(n);
+    return ae(n)
   }
 }
 export function getWidgetMethodTypes(type: string, key: string): t.MethodTypes | void {
   var widget = Storage.getExtension(type)
   if (widget?.types) {
-    return widget.types.methods.find(method => method.key === key)
+    return widget.types.methods.find((method) => method.key === key)
   }
 }
 function de(e, t) {
-  var n = Storage.getExtension(e);
+  var n = Storage.getExtension(e)
   if (null === n || undefined === n ? undefined : n.types) {
     return n.types.events.find(function (e) {
-      return e.key === t;
-    });
+      return e.key === t
+    })
   }
 }
 
 export function getCheckType(valueType: t.ValueType, checkType: t.CheckType | undefined) {
   var result = new Set()
   let types = checkType || valueType
-  types= Array.isArray(types) ? types : [types]
+  types = Array.isArray(types) ? types : [types]
   if (types.includes("string")) {
     types.push("number", "boolean", "object", "array")
   }
   if (types.includes("color") || types.includes("image") || types.includes("icon") || types.includes("richTextString")) {
     types.push("string")
   }
-  types.forEach(type => {
-    result.add(_.upperFirst(`${type}`))
+  types.forEach((type) => {
+    result.add(Lodash.upperFirst(`${type}`))
   })
   return Array.from(result)
 }
 
 function fe(e) {
-  var t = new Set();
-  var n = Array.isArray(e) ? e : [e];
+  var t = new Set()
+  var n = Array.isArray(e) ? e : [e]
   if (n.includes("color") || n.includes("image")) {
-    n.push("string");
+    n.push("string")
   }
   n.forEach(function (e) {
-    t.add(_.upperFirst("".concat(e)));
-  });
-  return Array.from(t);
+    t.add(Lodash.upperFirst("".concat(e)))
+  })
+  return Array.from(t)
 }
 function he(e, t) {
-  return "".concat(e, "_").concat(t);
+  return "".concat(e, "_").concat(t)
 }
 var me = "widget"
 var ge = "控件"

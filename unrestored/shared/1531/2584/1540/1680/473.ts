@@ -4,8 +4,8 @@
  * 模块 ID：473
  */
 
-var n = Math.ceil;
-var r = Math.floor;
+var math$ceil = Math.ceil
+var math$floor = Math.floor
 module.exports = function (e) {
-  return isNaN(e = +e) ? 0 : (e > 0 ? r : n)(e);
-};
+  return isNaN(e = +e) ? 0 : (e > 0 ? math$floor : math$ceil)(e)
+}

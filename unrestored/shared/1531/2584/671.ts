@@ -4,10 +4,10 @@
  * 模块 ID：671
  */
 
-"use strict";
+"use strict"
 
-export { r as messages };
-export { o as types };
+export { r as messages }
+export { o as types }
 var r = {
   "zh-CN": {
     widgetNameMsg: "生成二维码",
@@ -25,7 +25,7 @@ var r = {
     textIsEmpty: "文本不能为空",
     tooLongText: "文本过长，无法生成二维码，请删减文本内容。"
   }
-};
+}
 var o = {
   type: "QRCODE_WIDGET",
   icon: "icon-widget-qrcode",
@@ -115,4 +115,4 @@ var o = {
       valueType: "string"
     }]
   }]
-};
+}

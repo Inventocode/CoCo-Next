@@ -4,47 +4,47 @@
  * 模块 ID：0eKj
  */
 
-"use strict";
+"use strict"
 
 /* harmony export (binding) */
 /* harmony import */
-export { LoginPageContainer };
-import * as __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__ from "@babel/runtime/helpers/esm/asyncToGenerator";
+export { LoginPageContainer }
+import * as __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__ from "@babel/runtime/helpers/esm/asyncToGenerator"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__ from "@babel/runtime/helpers/esm/slicedToArray";
+import * as __WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__ from "@babel/runtime/helpers/esm/slicedToArray"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_2_babel_plugin_react_css_modules_dist_browser_getClassName__ from "babel-plugin-react-css-modules/dist/browser/getClassName";
+import * as __WEBPACK_IMPORTED_MODULE_2_babel_plugin_react_css_modules_dist_browser_getClassName__ from "babel-plugin-react-css-modules/dist/browser/getClassName"
 /* harmony import */
-import __WEBPACK_IMPORTED_MODULE_2_babel_plugin_react_css_modules_dist_browser_getClassName___default from "babel-plugin-react-css-modules/dist/browser/getClassName";
+import __WEBPACK_IMPORTED_MODULE_2_babel_plugin_react_css_modules_dist_browser_getClassName___default from "babel-plugin-react-css-modules/dist/browser/getClassName"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_3__babel_runtime_regenerator__ from "@babel/runtime/regenerator";
+import * as __WEBPACK_IMPORTED_MODULE_3__babel_runtime_regenerator__ from "@babel/runtime/regenerator"
 /* harmony import */
-import __WEBPACK_IMPORTED_MODULE_3__babel_runtime_regenerator___default from "@babel/runtime/regenerator";
+import __WEBPACK_IMPORTED_MODULE_3__babel_runtime_regenerator___default from "@babel/runtime/regenerator"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_4_react__ from "react";
+import * as __WEBPACK_IMPORTED_MODULE_4_react__ from "react"
 /* harmony import */
-import __WEBPACK_IMPORTED_MODULE_4_react___default from "react";
+import __WEBPACK_IMPORTED_MODULE_4_react___default from "react"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_5__base_icon__ from "../../base/icon-0d1w";
+import * as __WEBPACK_IMPORTED_MODULE_5__base_icon__ from "../../base/icon-0d1w"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_6__base_toast__ from "./base/toast-pmLg";
+import * as __WEBPACK_IMPORTED_MODULE_6__base_toast__ from "./base/toast-pmLg"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_7__def__ from "../../def-9+Hp";
+import * as __WEBPACK_IMPORTED_MODULE_7__def__ from "../../def-9+Hp"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_8__auth__ from "../../auth-819E";
+import * as __WEBPACK_IMPORTED_MODULE_8__auth__ from "../../auth-819E"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_9__i18n__ from "../../i18n-FsOf";
+import * as __WEBPACK_IMPORTED_MODULE_9__i18n__ from "../../i18n-FsOf"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_10__cfg__ from "../../../../../../cfg-OT5r";
+import * as __WEBPACK_IMPORTED_MODULE_10__cfg__ from "../../../../../../cfg-OT5r"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_11__ByPassword__ from "./ByPassword-qDJt";
+import * as __WEBPACK_IMPORTED_MODULE_11__ByPassword__ from "./ByPassword-qDJt"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_12__BySMS__ from "./BySMS-c92C";
+import * as __WEBPACK_IMPORTED_MODULE_12__BySMS__ from "./BySMS-c92C"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_13__style_module_css__ from "../../style.module.css-VPet";
+import * as __WEBPACK_IMPORTED_MODULE_13__style_module_css__ from "../../style.module.css-VPet"
 /* harmony import */
-import __WEBPACK_IMPORTED_MODULE_13__style_module_css___default from "../../style.module.css-VPet";
-var _this = this;
+import __WEBPACK_IMPORTED_MODULE_13__style_module_css___default from "../../style.module.css-VPet"
+var _this = this
 var _styleModuleImportMap = {
   "../../style_module.css": {
     "wrap": "CUI-sign-in-dialog-wrap",
@@ -86,123 +86,123 @@ var _styleModuleImportMap = {
     "text-main": "CUI-sign-in-dialog-text-main",
     "text-second": "CUI-sign-in-dialog-text-second"
   }
-};
-var useState = __WEBPACK_IMPORTED_MODULE_4_react__.useState;
+}
+var useState = __WEBPACK_IMPORTED_MODULE_4_react__.useState
 var LoginMethod;
 (function (LoginMethod) {
-  LoginMethod[LoginMethod["BY_PASSWORD"] = 0] = "BY_PASSWORD";
-  LoginMethod[LoginMethod["BY_SMS"] = 1] = "BY_SMS";
-})(LoginMethod || (LoginMethod = {}));
+  LoginMethod[LoginMethod["BY_PASSWORD"] = 0] = "BY_PASSWORD"
+  LoginMethod[LoginMethod["BY_SMS"] = 1] = "BY_SMS"
+})(LoginMethod || (LoginMethod = {}))
 var LoginPageContainer = function LoginPageContainer(props) {
-  var isRequesting = props.isRequesting;
-  var setIsRequesting = props.setIsRequesting;
-  var switchView = props.switchView;
-  var smsTimeStamp = props.smsTimeStamp;
-  var setSmsTimeStamp = props.setSmsTimeStamp;
-  var onlyLogin = props.onlyLogin;
-  var onSmsLoginSuccess = props.onSmsLoginSuccess;
-  var onSmsLoginFailure = props.onSmsLoginFailure;
-  var onPasswordLoginSuccess = props.onPasswordLoginSuccess;
-  var onPasswordLoginFailure = props.onPasswordLoginFailure;
-  var reportMethod = props.reportMethod;
-  var disableThirdParty = props.disableThirdParty;
-  var _useState = useState(LoginMethod.BY_PASSWORD);
-  var _useState2 = __WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default(_useState, 2);
-  var loginMethod = _useState2[0];
-  var setLoginMethod = _useState2[1];
-  var _useState3 = useState(false);
-  var _useState4 = __WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default(_useState3, 2);
-  var agreementChecked = _useState4[0];
-  var setAgreementChecked = _useState4[1];
+  var isRequesting = props.isRequesting
+  var setIsRequesting = props.setIsRequesting
+  var switchView = props.switchView
+  var smsTimeStamp = props.smsTimeStamp
+  var setSmsTimeStamp = props.setSmsTimeStamp
+  var onlyLogin = props.onlyLogin
+  var onSmsLoginSuccess = props.onSmsLoginSuccess
+  var onSmsLoginFailure = props.onSmsLoginFailure
+  var onPasswordLoginSuccess = props.onPasswordLoginSuccess
+  var onPasswordLoginFailure = props.onPasswordLoginFailure
+  var reportMethod = props.reportMethod
+  var disableThirdParty = props.disableThirdParty
+  var _useState = useState(LoginMethod.BY_PASSWORD)
+  var _useState2 = __WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default(_useState, 2)
+  var loginMethod = _useState2[0]
+  var setLoginMethod = _useState2[1]
+  var _useState3 = useState(false)
+  var _useState4 = __WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default(_useState3, 2)
+  var agreementChecked = _useState4[0]
+  var setAgreementChecked = _useState4[1]
   var onTabClick = function onTabClick(nextLoginMethod) {
     if (loginMethod === nextLoginMethod) {
-      return;
+      return
     }
-    setLoginMethod(nextLoginMethod);
-  };
+    setLoginMethod(nextLoginMethod)
+  }
   var signinByQQ = function signinByQQ() {
     if (!agreementChecked) {
       __WEBPACK_IMPORTED_MODULE_6__base_toast__.message.custom({
         colorType: "dark",
         content: "请阅读并同意用户协议、隐私协议、儿童隐私保护协议"
-      });
-      return;
+      })
+      return
     }
     signinByThirdParty("qq").catch(function (err) {
-      return console.log(err);
-    });
-  };
+      return console.log(err)
+    })
+  }
   var signinByWechat = function signinByWechat() {
     if (!agreementChecked) {
       __WEBPACK_IMPORTED_MODULE_6__base_toast__.message.custom({
         colorType: "dark",
         content: "请阅读并同意用户协议、隐私协议、儿童隐私保护协议"
-      });
-      return;
+      })
+      return
     }
     signinByThirdParty("wechat").catch(function (err) {
-      return console.log(err);
-    });
-  };
+      return console.log(err)
+    })
+  }
   var signinByThirdParty = /*#__PURE__*/function () {
     var _ref = __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_3__babel_runtime_regenerator___default.mark(function _callee3(loginMethod) {
-      var prefix;
-      var redirectUrl;
-      var url;
-      var appid;
-      var pid;
-      var messageListener;
+      var prefix
+      var redirectUrl
+      var url
+      var appid
+      var pid
+      var messageListener
       return __WEBPACK_IMPORTED_MODULE_3__babel_runtime_regenerator___default.wrap(function _callee3$(_context3) {
         while (1) {
           switch (_context3.prev = _context3.next) {
             case 0:
-              prefix = __WEBPACK_IMPORTED_MODULE_10__cfg__.getConfig().thirdPartyLoginPrefix;
-              redirectUrl = __WEBPACK_IMPORTED_MODULE_10__cfg__.getConfig().redirectUrl;
-              url = "";
-              appid = "";
-              pid = __WEBPACK_IMPORTED_MODULE_8__auth__.getAuthModule().getPid();
+              prefix = __WEBPACK_IMPORTED_MODULE_10__cfg__.getConfig().thirdPartyLoginPrefix
+              redirectUrl = __WEBPACK_IMPORTED_MODULE_10__cfg__.getConfig().redirectUrl
+              url = ""
+              appid = ""
+              pid = __WEBPACK_IMPORTED_MODULE_8__auth__.getAuthModule().getPid()
               if (loginMethod === "qq") {
-                appid = __WEBPACK_IMPORTED_MODULE_10__cfg__.getConfig().qqAppId;
-                url = "".concat(prefix, "/get-qq-code.html?appid=").concat(appid, "&pid=").concat(pid, "&redirect_uri=").concat(redirectUrl, "/static/third_login-v3.html");
+                appid = __WEBPACK_IMPORTED_MODULE_10__cfg__.getConfig().qqAppId
+                url = "".concat(prefix, "/get-qq-code.html?appid=").concat(appid, "&pid=").concat(pid, "&redirect_uri=").concat(redirectUrl, "/static/third_login-v3.html")
               } else {
-                appid = __WEBPACK_IMPORTED_MODULE_10__cfg__.getConfig().wechatAppId;
-                url = "".concat(prefix, "/get-weixin-code.html?appid=").concat(appid, "&scope=snsapi_login&state=").concat(Date.now(), "&pid=").concat(pid, "&redirect_uri=").concat(redirectUrl, "/static/third_login-v3.html");
+                appid = __WEBPACK_IMPORTED_MODULE_10__cfg__.getConfig().wechatAppId
+                url = "".concat(prefix, "/get-weixin-code.html?appid=").concat(appid, "&scope=snsapi_login&state=").concat(Date.now(), "&pid=").concat(pid, "&redirect_uri=").concat(redirectUrl, "/static/third_login-v3.html")
               }
-              url = "".concat(url, "?product_code=kitten+from=").concat(location.origin);
-              window.open(url, "newwindow", "height=580, width=600, top=200, left=300, toolbar=no," + "menubar=no, scrollbars=no, resizable=no,location=no, status=no"); // 监听message事件
+              url = "".concat(url, "?product_code=kitten+from=").concat(location.origin)
+              window.open(url, "newwindow", "height=580, width=600, top=200, left=300, toolbar=no," + "menubar=no, scrollbars=no, resizable=no,location=no, status=no") // 监听message事件
               messageListener = /*#__PURE__*/function () {
                 var _ref2 = __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_3__babel_runtime_regenerator___default.mark(function _callee2(e) {
-                  var data;
-                  var _data;
+                  var data
+                  var _data
                   return __WEBPACK_IMPORTED_MODULE_3__babel_runtime_regenerator___default.wrap(function _callee2$(_context2) {
                     while (1) {
                       switch (_context2.prev = _context2.next) {
                         case 0:
-                          data = JSON.parse(e.data);
+                          data = JSON.parse(e.data)
                           if (data.existed) {
-                            _context2.next = 8;
-                            break;
+                            _context2.next = 8
+                            break
                           }
                           if (data.oauth_ticket) {
-                            _context2.next = 5;
-                            break;
+                            _context2.next = 5
+                            break
                           }
-                          window.removeEventListener("message", messageListener);
-                          return _context2.abrupt("return");
+                          window.removeEventListener("message", messageListener)
+                          return _context2.abrupt("return")
                         case 5:
                           __WEBPACK_IMPORTED_MODULE_8__auth__.getAuthModule().getAuth().create_user_for_third_party(data.oauth_ticket).then(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_3__babel_runtime_regenerator___default.mark(function _callee() {
-                            var data;
+                            var data
                             return __WEBPACK_IMPORTED_MODULE_3__babel_runtime_regenerator___default.wrap(function _callee$(_context) {
                               while (1) {
                                 switch (_context.prev = _context.next) {
                                   case 0:
-                                    _context.next = 2;
-                                    return __WEBPACK_IMPORTED_MODULE_8__auth__.getAuthModule().getProfile();
+                                    _context.next = 2
+                                    return __WEBPACK_IMPORTED_MODULE_8__auth__.getAuthModule().getProfile()
                                   case 2:
-                                    _context.next = 4;
-                                    return _context.sent.data;
+                                    _context.next = 4
+                                    return _context.sent.data
                                   case 4:
-                                    data = _context.sent;
+                                    data = _context.sent
                                     if (props.onThirdPartyLoginSuccess) {
                                       props.onThirdPartyLoginSuccess({
                                         nickname: data.nickname,
@@ -210,36 +210,36 @@ var LoginPageContainer = function LoginPageContainer(props) {
                                         avatar: data.avatar_url,
                                         authType: __WEBPACK_IMPORTED_MODULE_8__auth__.AuthType.CODEMAO,
                                         source: loginMethod === "qq" ? "qq-login" : "wc-login"
-                                      });
+                                      })
                                     }
-                                    window.removeEventListener("message", messageListener);
+                                    window.removeEventListener("message", messageListener)
                                   case 7:
                                   case "end":
-                                    return _context.stop();
+                                    return _context.stop()
                                 }
                               }
-                            }, _callee);
+                            }, _callee)
                           }))).catch(function (e) {
-                            console.error(e);
+                            console.error(e)
                             if (props.onThirdPartyLoginFailure) {
                               props.onThirdPartyLoginFailure({
                                 source: loginMethod === "qq" ? "qq-login" : "wc-login",
                                 isSuccess: false,
                                 error: e
-                              });
+                              })
                             }
-                          });
-                          _context2.next = 21;
-                          break;
+                          })
+                          _context2.next = 21
+                          break
                         case 8:
-                          _context2.prev = 8;
-                          _context2.next = 11;
-                          return __WEBPACK_IMPORTED_MODULE_8__auth__.getAuthModule().getProfile();
+                          _context2.prev = 8
+                          _context2.next = 11
+                          return __WEBPACK_IMPORTED_MODULE_8__auth__.getAuthModule().getProfile()
                         case 11:
-                          _context2.next = 13;
-                          return _context2.sent.data;
+                          _context2.next = 13
+                          return _context2.sent.data
                         case 13:
-                          _data = _context2.sent;
+                          _data = _context2.sent
                           if (props.onThirdPartyLoginSuccess) {
                             props.onThirdPartyLoginSuccess({
                               nickname: _data.nickname,
@@ -247,47 +247,47 @@ var LoginPageContainer = function LoginPageContainer(props) {
                               avatar: _data.avatar_url,
                               authType: __WEBPACK_IMPORTED_MODULE_8__auth__.AuthType.CODEMAO,
                               source: loginMethod === "qq" ? "qq-login" : "wc-login"
-                            });
+                            })
                           }
-                          window.removeEventListener("message", messageListener);
-                          _context2.next = 21;
-                          break;
+                          window.removeEventListener("message", messageListener)
+                          _context2.next = 21
+                          break
                         case 18:
-                          _context2.prev = 18;
-                          _context2.t0 = _context2["catch"](8);
+                          _context2.prev = 18
+                          _context2.t0 = _context2["catch"](8)
                           if (props.onThirdPartyLoginFailure) {
                             props.onThirdPartyLoginFailure({
                               source: loginMethod === "qq" ? "qq-login" : "wc-login",
                               isSuccess: false,
                               error: _context2.t0
-                            });
+                            })
                           }
                         case 21:
                         case "end":
-                          return _context2.stop();
+                          return _context2.stop()
                       }
                     }
-                  }, _callee2, null, [[8, 18]]);
-                }));
+                  }, _callee2, null, [[8, 18]])
+                }))
                 return function messageListener(_x2) {
-                  return _ref2.apply(this, arguments);
-                };
-              }();
-              window.addEventListener("message", messageListener);
+                  return _ref2.apply(this, arguments)
+                }
+              }()
+              window.addEventListener("message", messageListener)
             case 10:
             case "end":
-              return _context3.stop();
+              return _context3.stop()
           }
         }
-      }, _callee3);
-    }));
+      }, _callee3)
+    }))
     return function signinByThirdParty(_x) {
-      return _ref.apply(this, arguments);
-    };
-  }();
+      return _ref.apply(this, arguments)
+    }
+  }()
   var handleAgreementChange = function handleAgreementChange(agree) {
-    setAgreementChecked(agree);
-  };
+    setAgreementChecked(agree)
+  }
   return /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_4_react__.createElement(__WEBPACK_IMPORTED_MODULE_4_react__.Fragment, null, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_4_react__.createElement("div", {
     className: "CUI-sign-in-dialog-content"
   }, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_4_react__.createElement("div", {
@@ -353,31 +353,31 @@ var LoginPageContainer = function LoginPageContainer(props) {
   }, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_4_react__.createElement("span", {
     className: "CUI-sign-in-dialog-right CUI-sign-in-dialog-clickable CUI-sign-in-dialog-tab-text",
     onClick: switchView.bind(_this, __WEBPACK_IMPORTED_MODULE_7__def__.ContentView.REGISTER)
-  }, __WEBPACK_IMPORTED_MODULE_9__i18n__.getLanguage("sign_in_dialog/sign_up_account"))))));
-};
+  }, __WEBPACK_IMPORTED_MODULE_9__i18n__.getLanguage("sign_in_dialog/sign_up_account"))))))
+}
 LoginPageContainer.defaultProps = {
   onPasswordLoginSuccess: function onPasswordLoginSuccess() {
-    return undefined;
+    return undefined
   },
   onPasswordLoginFailure: function onPasswordLoginFailure() {
-    return undefined;
+    return undefined
   },
   onSmsLoginSuccess: function onSmsLoginSuccess() {
-    return undefined;
+    return undefined
   },
   onSmsLoginFailure: function onSmsLoginFailure() {
-    return undefined;
+    return undefined
   },
   onThirdPartyLoginSuccess: function onThirdPartyLoginSuccess() {
-    return undefined;
+    return undefined
   },
   onThirdPartyLoginFailure: function onThirdPartyLoginFailure() {
-    return undefined;
+    return undefined
   },
   reportMethod: function reportMethod() {
-    return undefined;
+    return undefined
   },
   disableThirdParty: false
-};
+}
 
 /***/

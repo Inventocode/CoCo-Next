@@ -5,8 +5,8 @@
  */
 
 module.exports = function (e, t) {
-  for (var n = 0, r = t.length, o = new e(r); r > n;) {
-    o[n] = t[n++];
+  for (var n = 0, t$length = t.length, o = new e(t$length); t$length > n;) {
+    o[n] = t[n++]
   }
-  return o;
-};
+  return o
+}

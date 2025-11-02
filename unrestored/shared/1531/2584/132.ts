@@ -525,4 +525,4 @@ module.exports = {
   columnIcon: "Grid_columnIcon__1CrMi",
   displayName: "Grid_displayName__1tWX5",
   cloudDBAddColumnMenuWrapper: "Grid_cloudDBAddColumnMenuWrapper__1DKGu"
-};
+}

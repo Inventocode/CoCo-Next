@@ -4,4 +4,4 @@
  * 模块 ID：512
  */
 
-module.exports = "https://creation.codemao.cn/coconut/web/1.22.0-0/" + "static/media/big-logo.06b80465.png";
+module.exports = "https://creation.codemao.cn/coconut/web/1.22.0-0/" + "static/media/big-logo.06b80465.png"

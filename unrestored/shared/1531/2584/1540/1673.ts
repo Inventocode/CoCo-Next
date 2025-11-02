@@ -4,23 +4,23 @@
  * 模块 ID：1673
  */
 
-var r = require("./1623/86");
-var o = require("./1735/706");
-var i = String.fromCharCode;
-var a = String.fromCodePoint;
+var r = require("./1623/86")
+var o = require("./1735/706")
+var string$fromCharCode = String.fromCharCode
+var string$fromCodePoint = String.fromCodePoint
 r({
   target: "String",
   stat: true,
-  forced: !!a && 1 != a.length
+  forced: !!string$fromCodePoint && 1 != string$fromCodePoint.length
 }, {
   fromCodePoint: function (e) {
-    for (var t, n = [], r = arguments.length, a = 0; r > a;) {
-      t = +arguments[a++];
+    for (var t, n = [], arguments$length = arguments.length, a = 0; arguments$length > a;) {
+      t = +arguments[a++]
       if (o(t, 1114111) !== t) {
-        throw RangeError(t + " is not a valid code point");
+        throw RangeError(t + " is not a valid code point")
       }
-      n.push(t < 65536 ? i(t) : i(55296 + ((t -= 65536) >> 10), t % 1024 + 56320));
+      n.push(t < 65536 ? string$fromCharCode(t) : string$fromCharCode(55296 + ((t -= 65536) >> 10), t % 1024 + 56320))
     }
-    return n.join("");
+    return n.join("")
   }
-});
+})

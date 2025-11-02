@@ -4,12 +4,12 @@
  * 模块 ID：1059
  */
 
-var r = require("../1664/472");
-var o = require("../1667/631/index");
-var i = require("../1541/1061");
-var a = require("../1659/241");
+var r = require("../1664/472")
+var o = require("../1667/631/index")
+var i = require("../1541/1061")
+var a = require("../1659/241")
 module.exports = r("Reflect", "ownKeys") || function (e) {
-  var t = o.f(a(e));
-  var n = i.f;
-  return n ? t.concat(n(e)) : t;
-};
+  var t = o.f(a(e))
+  var n = i.f
+  return n ? t.concat(n(e)) : t
+}

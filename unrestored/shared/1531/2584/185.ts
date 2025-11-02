@@ -80,4 +80,4 @@ module.exports = {
   loginBox: "style_loginBox__1mo_i",
   noData: "style_noData__3nEtQ",
   listBox: "style_listBox__cDalw"
-};
+}

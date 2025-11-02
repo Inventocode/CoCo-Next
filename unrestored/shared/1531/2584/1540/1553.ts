@@ -4,4 +4,4 @@
  * 模块 ID：1553
  */
 
-require("./1541/438/index")("split");
+require("./1541/438/index")("split")

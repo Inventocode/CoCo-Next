@@ -4,12 +4,12 @@
  * 模块 ID：106
  */
 
-"use strict";
+"use strict"
 
 function r(e, t) {
   if (t.length < e) {
-    throw new TypeError(e + " argument" + (e > 1 ? "s" : "") + " required, but only " + t.length + " present");
+    throw new TypeError(e + " argument" + (e > 1 ? "s" : "") + " required, but only " + t.length + " present")
   }
 }
-export { r as a };
-export default r;
+export { r as a }
+export default r

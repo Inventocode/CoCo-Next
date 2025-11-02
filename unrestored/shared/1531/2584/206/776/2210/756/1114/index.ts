@@ -4,12 +4,12 @@
  * 模块 ID：1114
  */
 
-"use strict";
+"use strict"
 
-var r = require("lodash");
-var i = require("./2212/index");
+var r = require("lodash")
+var i = require("./2212/index")
 function o(e) {
-  return !e.reachable;
+  return !e.reachable
 }
 module.exports = {
   meta: {
@@ -37,25 +37,25 @@ module.exports = {
     }
   },
   create: function (e) {
-    var t = true === (e.options[0] || {}).treatUndefinedAsUnspecified;
-    var n = null;
+    var t = true === (e.options[0] || {}).treatUndefinedAsUnspecified
+    var n = null
     function a(t) {
-      var r;
-      var a;
+      var r
+      var a
       if (!(!n.hasReturnValue || n.codePath.currentSegments.every(o) || i.isES5Constructor(t) || function (e) {
-        return "FunctionExpression" === e.type && e.parent && "MethodDefinition" === e.parent.type && "constructor" === e.parent.kind;
+        return "FunctionExpression" === e.type && e.parent && "MethodDefinition" === e.parent.type && "constructor" === e.parent.kind
       }(t))) {
         if ("Program" === t.type) {
           r = {
             line: 1,
             column: 0
-          };
-          a = "program";
+          }
+          a = "program"
         } else {
-          r = "ArrowFunctionExpression" === t.type ? e.getSourceCode().getTokenBefore(t.body, i.isArrowToken).loc.start : "MethodDefinition" === t.parent.type || "Property" === t.parent.type && t.parent.method ? t.parent.key.loc.start : (t.id || t).loc.start;
+          r = "ArrowFunctionExpression" === t.type ? e.getSourceCode().getTokenBefore(t.body, i.isArrowToken).loc.start : "MethodDefinition" === t.parent.type || "Property" === t.parent.type && t.parent.method ? t.parent.key.loc.start : (t.id || t).loc.start
         }
         if (!a) {
-          a = i.getFunctionNameWithKind(t);
+          a = i.getFunctionNameWithKind(t)
         }
         e.report({
           node: t,
@@ -64,7 +64,7 @@ module.exports = {
           data: {
             name: a
           }
-        });
+        })
       }
     }
     return {
@@ -76,18 +76,18 @@ module.exports = {
           hasReturnValue: false,
           messageId: "",
           node: t
-        };
+        }
       },
       onCodePathEnd: function () {
-        n = n.upper;
+        n = n.upper
       },
       ReturnStatement: function (o) {
-        var a = o.argument;
-        var s = Boolean(a);
+        var o$argument = o.argument
+        var s = Boolean(o$argument)
         if (t && s) {
           s = !function (e, t) {
-            return "Identifier" === e.type && e.name === t;
-          }(a, "undefined") && "void" !== a.operator;
+            return "Identifier" === e.type && e.name === t
+          }(o$argument, "undefined") && "void" !== o$argument.operator
         }
         if (n.hasReturn) {
           if (n.hasReturnValue !== s) {
@@ -95,21 +95,21 @@ module.exports = {
               node: o,
               messageId: n.messageId,
               data: n.data
-            });
+            })
           }
         } else {
-          n.hasReturn = true;
-          n.hasReturnValue = s;
-          n.messageId = s ? "missingReturnValue" : "unexpectedReturnValue";
+          n.hasReturn = true
+          n.hasReturnValue = s
+          n.messageId = s ? "missingReturnValue" : "unexpectedReturnValue"
           n.data = {
             name: "Program" === n.node.type ? "Program" : r.upperFirst(i.getFunctionNameWithKind(n.node))
-          };
+          }
         }
       },
       "Program:exit": a,
       "FunctionDeclaration:exit": a,
       "FunctionExpression:exit": a,
       "ArrowFunctionExpression:exit": a
-    };
+    }
   }
-};
+}

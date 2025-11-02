@@ -12,6 +12,6 @@ module.exports = {
   "menuIcon": "menuIcon_SvcXz",
   "discover": "discover_1lYjY",
   "menuArrow": "menuArrow_2ESgM"
-};
+}
 
 /***/

@@ -4,22 +4,22 @@
  * 模块 ID：dpNx
  */
 
-"use strict";
+"use strict"
 
 /* harmony export (immutable) */
 /* harmony export (immutable) */
-export { getEnvironment };
-export { config };
+export { getEnvironment }
+export { config }
 function getEnvironment() {
-  var hostname = window.location.hostname;
+  var hostname = window.location.hostname
   if (hostname.startsWith("dev") || hostname === "localhost") {
-    return "dev";
+    return "dev"
   } else if (hostname.startsWith("test")) {
-    return "test";
+    return "test"
   } else if (hostname.startsWith("staging")) {
-    return "staging";
+    return "staging"
   } else {
-    return "prod";
+    return "prod"
   }
 }
 /**
@@ -29,22 +29,22 @@ function getEnvironment() {
  * @return {IConfig} the loaded configuration
  */
 function config() {
-  var env = getEnvironment();
-  var prefix = undefined;
+  var env = getEnvironment()
+  var prefix = undefined
   switch (env) {
     case "test":
-      prefix = "test-";
-      break;
+      prefix = "test-"
+      break
     case "staging":
-      prefix = "staging-";
-      break;
+      prefix = "staging-"
+      break
     case "dev":
-      prefix = "dev-";
-      break;
+      prefix = "dev-"
+      break
     case "prod":
     default:
-      prefix = "";
-      break;
+      prefix = ""
+      break
   }
   return {
     env: env,
@@ -55,7 +55,7 @@ function config() {
     backendHost: "https://" + prefix + "api-creation.codemao.cn",
     oTServerHost: "https://" + prefix + "socketcoll.codemao.cn",
     openServiceHost: "https://" + prefix + "open-service.codemao.cn"
-  };
+  }
 }
 
 /***/

@@ -16,4 +16,4 @@ module.exports = {
   materialTypeIcon: "style_materialTypeIcon__28qGe",
   groupIcon: "style_groupIcon__Jton9",
   add: "style_add__2ckJQ"
-};
+}

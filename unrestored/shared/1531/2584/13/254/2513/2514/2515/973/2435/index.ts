@@ -4,21 +4,21 @@
  * 模块 ID：2435
  */
 
-var r = require("../974/index");
-var i = require("../../../../../../785/104/2483/2484/2485/978/1152");
-var o = require("./1153/index");
+var r = require("../974/index")
+var i = require("../../../../../../785/104/2483/2484/2485/978/1152")
+var o = require("./1153/index")
 module.exports = function (e, t) {
-  var n = this.__data__;
-  if (n instanceof r) {
-    var a = n.__data__;
-    if (!i || a.length < 199) {
-      a.push([e, t]);
-      this.size = ++n.size;
-      return this;
+  var this$__data__ = this.__data__
+  if (this$__data__ instanceof r) {
+    var this$__data__$__data__ = this$__data__.__data__
+    if (!i || this$__data__$__data__.length < 199) {
+      this$__data__$__data__.push([e, t])
+      this.size = ++this$__data__.size
+      return this
     }
-    n = this.__data__ = new o(a);
+    this$__data__ = this.__data__ = new o(this$__data__$__data__)
   }
-  n.set(e, t);
-  this.size = n.size;
-  return this;
-};
+  this$__data__.set(e, t)
+  this.size = this$__data__.size
+  return this
+}

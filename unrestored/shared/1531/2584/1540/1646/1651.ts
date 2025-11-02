@@ -4,4 +4,4 @@
  * 模块 ID：1651
  */
 
-module.exports = "object" == typeof window;
+module.exports = "object" == typeof window

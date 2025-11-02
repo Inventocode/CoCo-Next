@@ -4,22 +4,22 @@
  * 模块 ID：793
  */
 
-"use strict";
+"use strict"
 
-import r = require("react");
+import React = require("react");
 var i = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
-    return module.default;
+    return module.default
   } : function () {
-    return module;
-  };
+    return module
+  }
   Object.defineProperty(defaultExport, "a", {
     enumerable: true,
     get: defaultExport
-  });
-  return defaultExport;
-}(r);
-var _a;
-_a = i.a.createContext(null);
-export { _a as a };
-export default _a;
+  })
+  return defaultExport
+}(React)
+var _a
+_a = i.a.createContext(null)
+export { _a as a }
+export default _a

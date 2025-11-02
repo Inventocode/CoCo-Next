@@ -4,110 +4,110 @@
  * 模块 ID：2198
  */
 
-"use strict";
+"use strict"
 
-var r = require("../../../../36/2668/220");
-var i = require("../../../../36/2668/230");
-var o = require("../../../../38/607/356");
-var a = require("../../../../38/607/357/index");
-var s = require("../1328/1109/index").Syntax;
+var r = require("../../../../36/2668/220")
+var i = require("../../../../36/2668/230")
+var o = require("../../../../38/607/356")
+var a = require("../../../../38/607/357/index")
+var require$$13281109Index$Syntax = require("../1328/1109/index").Syntax
 var c = function (e) {
-  o(n, e);
-  var t = a(n);
+  o(n, e)
+  var t = a(n)
   function n(e, i, o) {
-    var a;
+    var a
     r(this, n);
-    (a = t.call(this, null, e)).rootPattern = i;
-    a.callback = o;
-    a.assignments = [];
-    a.rightHandNodes = [];
-    a.restElements = [];
-    return a;
+    (a = t.call(this, null, e)).rootPattern = i
+    a.callback = o
+    a.assignments = []
+    a.rightHandNodes = []
+    a.restElements = []
+    return a
   }
   i(n, [{
     key: "Identifier",
     value: function (e) {
-      var t;
-      var n = (t = this.restElements)[t.length - 1] || null;
+      var /* [auto-meaningful-name] */this$restElements
+      var n = (this$restElements = this.restElements)[this$restElements.length - 1] || null
       this.callback(e, {
         topLevel: e === this.rootPattern,
         rest: null !== n && undefined !== n && n.argument === e,
         assignments: this.assignments
-      });
+      })
     }
   }, {
     key: "Property",
     value: function (e) {
       if (e.computed) {
-        this.rightHandNodes.push(e.key);
+        this.rightHandNodes.push(e.key)
       }
-      this.visit(e.value);
+      this.visit(e.value)
     }
   }, {
     key: "ArrayPattern",
     value: function (e) {
-      for (var t = 0, n = e.elements.length; t < n; ++t) {
-        var r = e.elements[t];
-        this.visit(r);
+      for (var t = 0, e$elements$length = e.elements.length; t < e$elements$length; ++t) {
+        var r = e.elements[t]
+        this.visit(r)
       }
     }
   }, {
     key: "AssignmentPattern",
     value: function (e) {
-      this.assignments.push(e);
-      this.visit(e.left);
-      this.rightHandNodes.push(e.right);
-      this.assignments.pop();
+      this.assignments.push(e)
+      this.visit(e.left)
+      this.rightHandNodes.push(e.right)
+      this.assignments.pop()
     }
   }, {
     key: "RestElement",
     value: function (e) {
-      this.restElements.push(e);
-      this.visit(e.argument);
-      this.restElements.pop();
+      this.restElements.push(e)
+      this.visit(e.argument)
+      this.restElements.pop()
     }
   }, {
     key: "MemberExpression",
     value: function (e) {
       if (e.computed) {
-        this.rightHandNodes.push(e.property);
+        this.rightHandNodes.push(e.property)
       }
-      this.rightHandNodes.push(e.object);
+      this.rightHandNodes.push(e.object)
     }
   }, {
     key: "SpreadElement",
     value: function (e) {
-      this.visit(e.argument);
+      this.visit(e.argument)
     }
   }, {
     key: "ArrayExpression",
     value: function (e) {
-      e.elements.forEach(this.visit, this);
+      e.elements.forEach(this.visit, this)
     }
   }, {
     key: "AssignmentExpression",
     value: function (e) {
-      this.assignments.push(e);
-      this.visit(e.left);
-      this.rightHandNodes.push(e.right);
-      this.assignments.pop();
+      this.assignments.push(e)
+      this.visit(e.left)
+      this.rightHandNodes.push(e.right)
+      this.assignments.pop()
     }
   }, {
     key: "CallExpression",
     value: function (e) {
-      var t = this;
+      var t = this
       e.arguments.forEach(function (e) {
-        t.rightHandNodes.push(e);
-      });
-      this.visit(e.callee);
+        t.rightHandNodes.push(e)
+      })
+      this.visit(e.callee)
     }
   }], [{
     key: "isPattern",
     value: function (e) {
-      var t = e.type;
-      return t === s.Identifier || t === s.ObjectPattern || t === s.ArrayPattern || t === s.SpreadElement || t === s.RestElement || t === s.AssignmentPattern;
+      var e$type = e.type
+      return e$type === require$$13281109Index$Syntax.Identifier || e$type === require$$13281109Index$Syntax.ObjectPattern || e$type === require$$13281109Index$Syntax.ArrayPattern || e$type === require$$13281109Index$Syntax.SpreadElement || e$type === require$$13281109Index$Syntax.RestElement || e$type === require$$13281109Index$Syntax.AssignmentPattern
     }
-  }]);
-  return n;
-}(require("./1330/index").Visitor);
-module.exports = c;
+  }])
+  return n
+}(require("./1330/index").Visitor)
+module.exports = c

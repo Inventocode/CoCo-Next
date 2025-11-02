@@ -4,17 +4,17 @@
  * 模块 ID：3275
  */
 
-"use strict";
+"use strict"
 
-export { u as CodemaoApi };
-export { f as CodemaoError };
-export { O as CodemaoRequest };
-export { r as ERROR };
-export { et as U };
-export { ct as auth };
-export { Ot as captcha };
-export { bt as init };
-var r;
+export { u as CodemaoApi }
+export { f as CodemaoError }
+export { O as CodemaoRequest }
+export { r as ERROR }
+export { et as U }
+export { ct as auth }
+export { Ot as captcha }
+export { bt as init }
+var r
 var o = {
   dev: {
     env: "dev",
@@ -64,66 +64,66 @@ var o = {
     },
     domain: ".codemao.cn"
   }
-};
+}
 !function (t) {
-  t[t.INVALID_INIT_PARAMS = -1] = "INVALID_INIT_PARAMS";
-  t[t.INVALID_PHONE_NUMBER = 0] = "INVALID_PHONE_NUMBER";
-  t[t.INVALID_CAPTCHA = 1] = "INVALID_CAPTCHA";
-  t[t.INVALID_PASSWORD = 2] = "INVALID_PASSWORD";
-  t[t.INVALID_USERNAME = 3] = "INVALID_USERNAME";
-  t[t.INVALID_NICKNAME = 4] = "INVALID_NICKNAME";
-  t[t.INVALID_FULLNAME = 5] = "INVALID_FULLNAME";
-  t[t.INVALID_QQ = 6] = "INVALID_QQ";
-  t[t.INVALID_DESCRIPTION = 7] = "INVALID_DESCRIPTION";
-  t[t.INVALID_SEX = 8] = "INVALID_SEX";
-  t[t.INVALID_BIRTHDAY = 9] = "INVALID_BIRTHDAY";
-  t[t.PWD_IS_NOT_EQUAL_TO_CONFIRMED_PWD = 10] = "PWD_IS_NOT_EQUAL_TO_CONFIRMED_PWD";
-  t[t.NO_TOKEN = 11] = "NO_TOKEN";
-  t[t.REQUEST_TIMEOUT = 12] = "REQUEST_TIMEOUT";
-  t[t.REQUEST_ERROR = 13] = "REQUEST_ERROR";
-  t[t.PHONE_REGISTERED = 14] = "PHONE_REGISTERED";
-  t[t.PHONE_UNREGISTERED = 15] = "PHONE_UNREGISTERED";
-  t[t.USER_NOT_EXIST_OR_PWD_WRONG = 16] = "USER_NOT_EXIST_OR_PWD_WRONG";
-  t[t.USER_NOT_EXIST = 17] = "USER_NOT_EXIST";
-  t[t.CANNOT_SET_FUTURE_DATE = 18] = "CANNOT_SET_FUTURE_DATE";
-  t[t.CANNOT_SET_USERNAME_REPEATEDLY = 19] = "CANNOT_SET_USERNAME_REPEATEDLY";
-  t[t.USERNAME_EXIST = 20] = "USERNAME_EXIST";
-  t[t.NEED_TO_BIND_PHONE = 21] = "NEED_TO_BIND_PHONE";
-  t[t.USE_BOUND_PHONE_TO_RECEIVE_CAPTCHA = 22] = "USE_BOUND_PHONE_TO_RECEIVE_CAPTCHA";
-  t[t.WRONG_OLD_PWD = 23] = "WRONG_OLD_PWD";
-  t[t.PWDS_DO_NOT_MATCH = 24] = "PWDS_DO_NOT_MATCH";
-  t[t.INIT_PWD_CAN_SET_ONLY_ONCE = 25] = "INIT_PWD_CAN_SET_ONLY_ONCE";
-  t[t.NEED_PRIMARY_ACCOUNT = 26] = "NEED_PRIMARY_ACCOUNT";
-  t[t.VERIFY_CAPTCHA_FAIL = 27] = "VERIFY_CAPTCHA_FAIL";
-  t[t.USER_PHONE_BOUND = 28] = "USER_PHONE_BOUND";
-  t[t.OLD_PHONE_WRONG = 29] = "OLD_PHONE_WRONG";
-  t[t.ILLEGAL_OPERATION = 30] = "ILLEGAL_OPERATION";
-  t[t.CANNOT_BIND_OLD_PHONE = 31] = "CANNOT_BIND_OLD_PHONE";
-  t[t.ILLEGAL_OAUTH_TICKET = 32] = "ILLEGAL_OAUTH_TICKET";
-  t[t.ILLEGAL_AUTHORIZATION_CATEGORY = 33] = "ILLEGAL_AUTHORIZATION_CATEGORY";
-  t[t.THIRD_PARTY_ACCOUNT_BOUND = 34] = "THIRD_PARTY_ACCOUNT_BOUND";
-  t[t.AUTHORIZATION_ACCOUNT_BOUND = 35] = "AUTHORIZATION_ACCOUNT_BOUND";
-  t[t.BIND_PHONE_OR_SET_USERNAME_AND_PWD = 36] = "BIND_PHONE_OR_SET_USERNAME_AND_PWD";
-  t[t.SEND_CAPTCHA_TOO_FRUQUENTLY = 37] = "SEND_CAPTCHA_TOO_FRUQUENTLY";
-  t[t.ILLEGAL_PID = 38] = "ILLEGAL_PID";
-  t[t.NICKNAME_EXIST = 39] = "NICKNAME_EXIST";
-  t[t.PHONE_BOUND_BY_OTHER_ACCOUNT = 40] = "PHONE_BOUND_BY_OTHER_ACCOUNT";
-  t[t.QQ_ERROR_RECEIVED = 41] = "QQ_ERROR_RECEIVED";
-  t[t.WECHAR_ERROR_RECEIVED = 42] = "WECHAR_ERROR_RECEIVED";
-  t[t.TOKEN_INVALID = 43] = "TOKEN_INVALID";
-  t[t.REFRESH_TOKEN_INVALID = 44] = "REFRESH_TOKEN_INVALID";
-  t[t.WRONG_TICKET = 45] = "WRONG_TICKET";
-  t[t.COOKIE_INVALID = 46] = "COOKIE_INVALID";
-  t[t.Appid_NotFound = 47] = "Appid_NotFound";
-  t[t.Default_CaptchaRule_NotFound = 48] = "Default_CaptchaRule_NotFound";
-  t[t.TencentCaptcha_Exception = 49] = "TencentCaptcha_Exception";
-  t[t.GeetestCaptcha_Exception = 50] = "GeetestCaptcha_Exception";
-  t[t.INVALID_EMAIL_ADDRESS = 51] = "INVALID_EMAIL_ADDRESS";
-  t[t.EMAIL_HAS_REGISTERED = 52] = "EMAIL_HAS_REGISTERED";
-  t[t.ACCOUNT_HAS_BLOCKED = 53] = "ACCOUNT_HAS_BLOCKED";
-  t[t.RECEIVABLE_CAPTCHA_TIMES_LIMITTED = 54] = "RECEIVABLE_CAPTCHA_TIMES_LIMITTED";
-  t[t.AGREEMENT_IDS = 55] = "AGREEMENT_IDS";
-}(r || (r = {}));
+  t[t.INVALID_INIT_PARAMS = -1] = "INVALID_INIT_PARAMS"
+  t[t.INVALID_PHONE_NUMBER = 0] = "INVALID_PHONE_NUMBER"
+  t[t.INVALID_CAPTCHA = 1] = "INVALID_CAPTCHA"
+  t[t.INVALID_PASSWORD = 2] = "INVALID_PASSWORD"
+  t[t.INVALID_USERNAME = 3] = "INVALID_USERNAME"
+  t[t.INVALID_NICKNAME = 4] = "INVALID_NICKNAME"
+  t[t.INVALID_FULLNAME = 5] = "INVALID_FULLNAME"
+  t[t.INVALID_QQ = 6] = "INVALID_QQ"
+  t[t.INVALID_DESCRIPTION = 7] = "INVALID_DESCRIPTION"
+  t[t.INVALID_SEX = 8] = "INVALID_SEX"
+  t[t.INVALID_BIRTHDAY = 9] = "INVALID_BIRTHDAY"
+  t[t.PWD_IS_NOT_EQUAL_TO_CONFIRMED_PWD = 10] = "PWD_IS_NOT_EQUAL_TO_CONFIRMED_PWD"
+  t[t.NO_TOKEN = 11] = "NO_TOKEN"
+  t[t.REQUEST_TIMEOUT = 12] = "REQUEST_TIMEOUT"
+  t[t.REQUEST_ERROR = 13] = "REQUEST_ERROR"
+  t[t.PHONE_REGISTERED = 14] = "PHONE_REGISTERED"
+  t[t.PHONE_UNREGISTERED = 15] = "PHONE_UNREGISTERED"
+  t[t.USER_NOT_EXIST_OR_PWD_WRONG = 16] = "USER_NOT_EXIST_OR_PWD_WRONG"
+  t[t.USER_NOT_EXIST = 17] = "USER_NOT_EXIST"
+  t[t.CANNOT_SET_FUTURE_DATE = 18] = "CANNOT_SET_FUTURE_DATE"
+  t[t.CANNOT_SET_USERNAME_REPEATEDLY = 19] = "CANNOT_SET_USERNAME_REPEATEDLY"
+  t[t.USERNAME_EXIST = 20] = "USERNAME_EXIST"
+  t[t.NEED_TO_BIND_PHONE = 21] = "NEED_TO_BIND_PHONE"
+  t[t.USE_BOUND_PHONE_TO_RECEIVE_CAPTCHA = 22] = "USE_BOUND_PHONE_TO_RECEIVE_CAPTCHA"
+  t[t.WRONG_OLD_PWD = 23] = "WRONG_OLD_PWD"
+  t[t.PWDS_DO_NOT_MATCH = 24] = "PWDS_DO_NOT_MATCH"
+  t[t.INIT_PWD_CAN_SET_ONLY_ONCE = 25] = "INIT_PWD_CAN_SET_ONLY_ONCE"
+  t[t.NEED_PRIMARY_ACCOUNT = 26] = "NEED_PRIMARY_ACCOUNT"
+  t[t.VERIFY_CAPTCHA_FAIL = 27] = "VERIFY_CAPTCHA_FAIL"
+  t[t.USER_PHONE_BOUND = 28] = "USER_PHONE_BOUND"
+  t[t.OLD_PHONE_WRONG = 29] = "OLD_PHONE_WRONG"
+  t[t.ILLEGAL_OPERATION = 30] = "ILLEGAL_OPERATION"
+  t[t.CANNOT_BIND_OLD_PHONE = 31] = "CANNOT_BIND_OLD_PHONE"
+  t[t.ILLEGAL_OAUTH_TICKET = 32] = "ILLEGAL_OAUTH_TICKET"
+  t[t.ILLEGAL_AUTHORIZATION_CATEGORY = 33] = "ILLEGAL_AUTHORIZATION_CATEGORY"
+  t[t.THIRD_PARTY_ACCOUNT_BOUND = 34] = "THIRD_PARTY_ACCOUNT_BOUND"
+  t[t.AUTHORIZATION_ACCOUNT_BOUND = 35] = "AUTHORIZATION_ACCOUNT_BOUND"
+  t[t.BIND_PHONE_OR_SET_USERNAME_AND_PWD = 36] = "BIND_PHONE_OR_SET_USERNAME_AND_PWD"
+  t[t.SEND_CAPTCHA_TOO_FRUQUENTLY = 37] = "SEND_CAPTCHA_TOO_FRUQUENTLY"
+  t[t.ILLEGAL_PID = 38] = "ILLEGAL_PID"
+  t[t.NICKNAME_EXIST = 39] = "NICKNAME_EXIST"
+  t[t.PHONE_BOUND_BY_OTHER_ACCOUNT = 40] = "PHONE_BOUND_BY_OTHER_ACCOUNT"
+  t[t.QQ_ERROR_RECEIVED = 41] = "QQ_ERROR_RECEIVED"
+  t[t.WECHAR_ERROR_RECEIVED = 42] = "WECHAR_ERROR_RECEIVED"
+  t[t.TOKEN_INVALID = 43] = "TOKEN_INVALID"
+  t[t.REFRESH_TOKEN_INVALID = 44] = "REFRESH_TOKEN_INVALID"
+  t[t.WRONG_TICKET = 45] = "WRONG_TICKET"
+  t[t.COOKIE_INVALID = 46] = "COOKIE_INVALID"
+  t[t.Appid_NotFound = 47] = "Appid_NotFound"
+  t[t.Default_CaptchaRule_NotFound = 48] = "Default_CaptchaRule_NotFound"
+  t[t.TencentCaptcha_Exception = 49] = "TencentCaptcha_Exception"
+  t[t.GeetestCaptcha_Exception = 50] = "GeetestCaptcha_Exception"
+  t[t.INVALID_EMAIL_ADDRESS = 51] = "INVALID_EMAIL_ADDRESS"
+  t[t.EMAIL_HAS_REGISTERED = 52] = "EMAIL_HAS_REGISTERED"
+  t[t.ACCOUNT_HAS_BLOCKED = 53] = "ACCOUNT_HAS_BLOCKED"
+  t[t.RECEIVABLE_CAPTCHA_TIMES_LIMITTED = 54] = "RECEIVABLE_CAPTCHA_TIMES_LIMITTED"
+  t[t.AGREEMENT_IDS = 55] = "AGREEMENT_IDS"
+}(r || (r = {}))
 var i = {
   REGISTER_SEND_CAPTCHA: "/tiger/v3/web/accounts/captcha/register/phone/with-agreement",
   REGISTER: "/tiger/v3/web/accounts/register/phone/with-agreement",
@@ -170,7 +170,7 @@ var i = {
   SIGN_AGREEMENTS: "/tiger/v3/web/accounts/agreements/sign",
   VOICE_CAPTCHA: "/tiger/v3/web/accounts/voice/captcha/send",
   FIND_LATEST_PROTOCOL_LIST: "/tiger/v3/web/accounts/protocol/list"
-};
+}
 var c = {
   GET_RULE: "/captcha/rule/v3",
   GET_GEETEST_PARAMS: "/captcha/geetest/register",
@@ -179,16 +179,16 @@ var c = {
   CHECK_AND_GET_NEXTDATA_TICKET: "/captcha/nextdata",
   CHECK_AND_GET_NETEASE_TICKET: "/captcha/netease",
   CHECK_AND_GET_ALIYUN_TICKET: "/captcha/aliyun"
-};
+}
 var s = {
   REFRESH_TOKEN: "/tiger/v3/web/accounts/tokens/refresh",
   DELETE_TOKEN: "/tiger/v3/web/accounts/tokens",
   GET_TOKEN_FROM_OLD_COOKIE: "/tiger/v3/web/accounts/tokens/convert"
-};
+}
 var a = {
   Net: navigator.connection ? navigator.connection.effectiveType : "",
   "SDK-Account-Version": "0.16.0"
-};
+}
 var u = Object.freeze({
   __proto__: null,
   Api: i,
@@ -201,193 +201,193 @@ var u = Object.freeze({
   PLATFORM_CAPTCHA_API: c,
   TIGER_TOKEN_API: s,
   PUBLIC_HEADERS: a
-});
+})
 var _ = function (t, e) {
   return (_ = Object.setPrototypeOf || {
     __proto__: []
   } instanceof Array && function (t, e) {
-    t.__proto__ = e;
+    t.__proto__ = e
   } || function (t, e) {
     for (var n in e) if (e.hasOwnProperty(n)) {
-      t[n] = e[n];
+      t[n] = e[n]
     }
-  })(t, e);
-};
+  })(t, e)
+}
 function d(t, e) {
   function n() {
-    this.constructor = t;
+    this.constructor = t
   }
-  _(t, e);
-  t.prototype = null === e ? Object.create(e) : (n.prototype = e.prototype, new n());
+  _(t, e)
+  t.prototype = null === e ? Object.create(e) : (n.prototype = e.prototype, new n())
 }
 var h = function () {
   return (h = Object.assign || function (t) {
-    for (var e, n = 1, r = arguments.length; n < r; n++) {
+    for (var e, n = 1, arguments$length = arguments.length; n < arguments$length; n++) {
       for (var o in e = arguments[n]) if (Object.prototype.hasOwnProperty.call(e, o)) {
-        t[o] = e[o];
+        t[o] = e[o]
       }
     }
-    return t;
-  }).apply(this, arguments);
-};
+    return t
+  }).apply(this, arguments)
+}
 function p(t, e, n, r) {
   return new (n || (n = Promise))(function (o, i) {
     function c(t) {
       try {
-        a(r.next(t));
+        a(r.next(t))
       } catch (e) {
-        i(e);
+        i(e)
       }
     }
     function s(t) {
       try {
-        a(r.throw(t));
+        a(r.throw(t))
       } catch (e) {
-        i(e);
+        i(e)
       }
     }
     function a(t) {
-      var e;
+      var /* [auto-meaningful-name] */t$value
       if (t.done) {
-        o(t.value);
+        o(t.value)
       } else {
-        (e = t.value, e instanceof n ? e : new n(function (t) {
-          t(e);
-        })).then(c, s);
+        (t$value = t.value, t$value instanceof n ? t$value : new n(function (t) {
+          t(t$value)
+        })).then(c, s)
       }
     }
-    a((r = r.apply(t, e || [])).next());
-  });
+    a((r = r.apply(t, e || [])).next())
+  })
 }
 function l(t, e) {
-  var n;
-  var r;
-  var o;
-  var i;
+  var n
+  var r
+  var o
+  var i
   var c = {
     label: 0,
     sent: function () {
       if (1 & o[0]) {
-        throw o[1];
+        throw o[1]
       }
-      return o[1];
+      return o[1]
     },
     trys: [],
     ops: []
-  };
+  }
   i = {
     next: s(0),
     throw: s(1),
     return: s(2)
-  };
+  }
   if ("function" === typeof Symbol) {
     i[Symbol.iterator] = function () {
-      return this;
-    };
+      return this
+    }
   }
-  return i;
+  return i
   function s(i) {
     return function (s) {
       return function (i) {
         if (n) {
-          throw new TypeError("Generator is already executing.");
+          throw new TypeError("Generator is already executing.")
         }
         for (; c;) {
           try {
-            n = 1;
+            n = 1
             if (r && (o = 2 & i[0] ? r.return : i[0] ? r.throw || ((o = r.return) && o.call(r), 0) : r.next) && !(o = o.call(r, i[1])).done) {
-              return o;
+              return o
             }
             switch (r = 0, o && (i = [2 & i[0], o.value]), i[0]) {
               case 0:
               case 1:
-                o = i;
-                break;
+                o = i
+                break
               case 4:
-                c.label++;
+                c.label++
                 return {
                   value: i[1],
                   done: false
-                };
+                }
               case 5:
-                c.label++;
-                r = i[1];
-                i = [0];
-                continue;
+                c.label++
+                r = i[1]
+                i = [0]
+                continue
               case 7:
-                i = c.ops.pop();
-                c.trys.pop();
-                continue;
+                i = c.ops.pop()
+                c.trys.pop()
+                continue
               default:
                 if (!(o = (o = c.trys).length > 0 && o[o.length - 1]) && (6 === i[0] || 2 === i[0])) {
-                  c = 0;
-                  continue;
+                  c = 0
+                  continue
                 }
                 if (3 === i[0] && (!o || i[1] > o[0] && i[1] < o[3])) {
-                  c.label = i[1];
-                  break;
+                  c.label = i[1]
+                  break
                 }
                 if (6 === i[0] && c.label < o[1]) {
-                  c.label = o[1];
-                  o = i;
-                  break;
+                  c.label = o[1]
+                  o = i
+                  break
                 }
                 if (o && c.label < o[2]) {
-                  c.label = o[2];
-                  c.ops.push(i);
-                  break;
+                  c.label = o[2]
+                  c.ops.push(i)
+                  break
                 }
                 if (o[2]) {
-                  c.ops.pop();
+                  c.ops.pop()
                 }
-                c.trys.pop();
-                continue;
+                c.trys.pop()
+                continue
             }
-            i = e.call(t, c);
+            i = e.call(t, c)
           } catch (s) {
-            i = [6, s];
-            r = 0;
+            i = [6, s]
+            r = 0
           } finally {
-            n = o = 0;
+            n = o = 0
           }
         }
         if (5 & i[0]) {
-          throw i[1];
+          throw i[1]
         }
         return {
           value: i[0] ? i[1] : undefined,
           done: true
-        };
-      }([i, s]);
-    };
+        }
+      }([i, s])
+    }
   }
 }
-var E;
+var E
 var f = function (t) {
   function e(e) {
-    var n = t.call(this, e.message) || this;
-    var r = e.error_code;
-    var o = e.error_origin_response;
-    var i = undefined === o ? {
-      error_code: r,
+    var n = t.call(this, e.message) || this
+    var e$error_code = e.error_code
+    var e$error_origin_response = e.error_origin_response
+    var i = undefined === e$error_origin_response ? {
+      error_code: e$error_code,
       error_message: e.message,
-      error_number: r || null
-    } : o;
+      error_number: e$error_code || null
+    } : e$error_origin_response
     if (undefined !== e.error_code) {
-      n.error_code = r;
+      n.error_code = e$error_code
     }
     if (e.error_body) {
-      n.error_body = e.error_body;
+      n.error_body = e.error_body
     }
-    n.response = i;
-    return n;
+    n.response = i
+    return n
   }
-  d(e, t);
-  return e;
-}(Error);
+  d(e, t)
+  return e
+}(Error)
 var T = function (t) {
-  console.error("Iris SDK error: " + t);
-};
+  console.error("Iris SDK error: " + t)
+}
 var N = {
   AC3_0: {
     error_code: r.PHONE_REGISTERED,
@@ -553,7 +553,7 @@ var N = {
     error_code: r.GeetestCaptcha_Exception,
     message: "GeetestCaptchaException"
   }
-};
+}
 var v = {
   pid: {
     required: true,
@@ -567,135 +567,135 @@ var v = {
     required: true,
     types: ["string", "number"]
   }
-};
-var A = {};
+}
+var A = {}
 var m = function () {
-  return A;
-};
-var I = o.prod;
+  return A
+}
+var o$prod = o.prod
 var C = function () {
-  return I;
-};
+  return o$prod
+}
 var g = function () {
-  return E;
-};
+  return E
+}
 var O = function () {
   function t(t) {
-    this.hostType = t && t.hostType || "tiger";
-    this.timeout = t && t.timeout || 2e4;
-    this.public_headers = t && t.public_headers;
+    this.hostType = t && t.hostType || "tiger"
+    this.timeout = t && t.timeout || 2e4
+    this.public_headers = t && t.public_headers
   }
   t.prototype.get_complete_url = function (t, e) {
     var n = Object.keys(e).filter(function (t) {
-      return e[t];
+      return e[t]
     }).map(function (t) {
-      return t + "=" + e[t];
-    }).join("&");
-    return 0 === Object.keys(e).length ? "" + C().host[this.hostType] + t : "" + C().host[this.hostType] + t + "?" + n;
-  };
+      return t + "=" + e[t]
+    }).join("&")
+    return 0 === Object.keys(e).length ? "" + C().host[this.hostType] + t : "" + C().host[this.hostType] + t + "?" + n
+  }
   t.prototype.dispatch_request = function (t) {
     return p(this, undefined, undefined, function () {
-      var e = this;
+      var e = this
       return l(this, function (n) {
         return [2, new Promise(function (n, o) {
-          var i = t.url;
-          var c = t.method;
-          var s = t.data;
-          var a = t.without_base_url;
-          var u = t.params || {};
-          var _ = {};
+          var t$url = t.url
+          var t$method = t.method
+          var t$data = t.data
+          var t$without_base_url = t.without_base_url
+          var u = t.params || {}
+          var _ = {}
           if (m().auth_version) {
-            _["Auth-Version"] = m().auth_version;
+            _["Auth-Version"] = m().auth_version
           }
           if (m().client_id) {
-            _["Client-ID"] = m().client_id;
+            _["Client-ID"] = m().client_id
           }
-          var d = h(h(h({}, e.public_headers), t.headers), _);
-          var p = a ? i : e.get_complete_url(i, u);
-          var l = new XMLHttpRequest();
-          l.open(c.toUpperCase(), p, true);
-          if (s) {
-            l.setRequestHeader("Content-Type", "application/json;charset=utf-8");
+          var d = h(h(h({}, e.public_headers), t.headers), _)
+          var p = t$without_base_url ? t$url : e.get_complete_url(t$url, u)
+          var l = new XMLHttpRequest()
+          l.open(t$method.toUpperCase(), p, true)
+          if (t$data) {
+            l.setRequestHeader("Content-Type", "application/json;charset=utf-8")
           }
-          l.timeout = m().requestTimeout || e.timeout;
-          l.withCredentials = true;
+          l.timeout = m().requestTimeout || e.timeout
+          l.withCredentials = true
           l.onreadystatechange = function () {
-            var t;
+            var /* [auto-meaningful-name] */l$response$catastrophe
             if (l && 4 === l.readyState && (0 !== l.status || l.responseURL && 0 === l.responseURL.indexOf("file:"))) {
               if (l.status >= 200 && l.status <= 300) {
-                var e = l.response;
-                n(e ? {
+                var l$response = l.response
+                n(l$response ? {
                   status: l.status,
                   statusText: l.statusText,
-                  data: JSON.parse(e)
+                  data: JSON.parse(l$response)
                 } : {
                   status: l.status,
                   statusText: l.statusText,
                   data: null
-                });
+                })
               } else {
                 try {
-                  e = JSON.parse(l.response);
-                  var r = N[e.error_code];
+                  l$response = JSON.parse(l.response)
+                  var r = N[l$response.error_code]
                   o(new f(r ? h(h({}, r), {
-                    error_origin_response: e
+                    error_origin_response: l$response
                   }) : {
-                    error_code: e.error_code,
-                    error_body: (null === (t = e.catastrophe) || undefined === t ? undefined : t.error) || e,
-                    error_origin_response: e,
+                    error_code: l$response.error_code,
+                    error_body: (null === (l$response$catastrophe = l$response.catastrophe) || undefined === l$response$catastrophe ? undefined : l$response$catastrophe.error) || l$response,
+                    error_origin_response: l$response,
                     message: "Get error from " + p + "."
-                  }));
+                  }))
                 } catch (r) {
-                  o(r);
+                  o(r)
                 }
               }
             }
-          };
+          }
           l.onerror = function () {
             o(new f({
               error_code: r.REQUEST_ERROR,
               message: "Network error."
-            }));
-          };
+            }))
+          }
           l.ontimeout = function () {
             o(new f({
               error_code: r.REQUEST_TIMEOUT,
               message: "ECONNABORTED:timeout of " + l.timeout + " ms exceeded."
-            }));
-          };
+            }))
+          }
           try {
             if ("setRequestHeader" in l) {
               Object.keys(d).forEach(function (t) {
-                l.setRequestHeader(t, d[t]);
-              });
+                l.setRequestHeader(t, d[t])
+              })
             }
           } catch (E) {
-            console.error(E);
-            console.log("headers is ", d);
-            throw new Error("Iris Error: 设置请求头时出错，请检查请求头，不能含有中文");
+            console.error(E)
+            console.log("headers is ", d)
+            throw new Error("Iris Error: 设置请求头时出错，请检查请求头，不能含有中文")
           }
-          if (s) {
-            l.send(JSON.stringify(s));
+          if (t$data) {
+            l.send(JSON.stringify(t$data))
           } else {
-            l.send();
+            l.send()
           }
-        })];
-      });
-    });
-  };
-  return t;
-}();
-new O();
+        })]
+      })
+    })
+  }
+  return t
+}()
+new O()
 var b = new O({
   hostType: "platform"
-});
+})
 function R(t, e) {
   if (t) {
     Object.keys(t).map(function (t) {
       if (-1 === e.indexOf(t)) {
-        new T("请确认 " + t + " 参数是否合法");
+        new T("请确认 " + t + " 参数是否合法")
       }
-    });
+    })
   }
 }
 function w(t, e, n) {
@@ -704,24 +704,24 @@ function w(t, e, n) {
       throw new f({
         error_code: n,
         message: "Invalid " + t + " \"" + r + "\", it should match the RegExp " + e + "."
-      });
+      })
     }
-  };
+  }
 }
-var k = w("phone_number", /^1[3456789]\d{9}$/, r.INVALID_PHONE_NUMBER);
-var D = w("email_address", /^\w+@[a-z0-9]+\.[a-z]{2,4}/, r.INVALID_EMAIL_ADDRESS);
-var y = w("captcha", /^\d{6}$/, r.INVALID_CAPTCHA);
-var S = w("password", /^[a-zA-Z0-9\_\-@#?!~$^&\*\(\)\/%<>,\.;:"+=|\\{}\[\]]{6,20}$/, r.INVALID_PASSWORD);
-var P = w("username", /^[a-zA-Z]{1}\w{5,29}$/, r.INVALID_USERNAME);
-var L = w("nickname", /^[^\s\u2600\u2601\u2602\u03df\u2609\u263c\u263e\u263d\u2641\u2668\u2744\u2745\u2746\u2603\u2601\u2709\u2121\u213b\u260e\u260f\u2702\u2704\u2706\u270e\u270f\u2710\u2711\u2712\u2707\u2117\xa9\xae\ud83c\udd4f\ud83c\udd8f\u2690\u2691\u2686\u2687\u2688\u2689\u269e\u269f\u26a0\u26ac\u26ad\u26ae\u26af\u260a\u32c0\u32c1\u32c2\u32c3\u32c4\u32c5\u32c6\u32c7\u32c8\u32c9\u32ca\u32cb\u33e0\u33e1\u33e2\u33e3\u33e4\u33e5\u33e6\u33e7\u33e8\u33e9 \u33ea\u33eb\u33ec\u33ed\u33ee\u33ef\u33f0\u33f1\u33f2\u33f3\u33f4\u33f5\u33f6\u33f7\u33f8\u33f9\u33fa\u33fb\u33fc\u33fd\u33fe\u3358\u3359\u335a\u335b\u335c\u335d\u335e\u335f\u3360\u3361\u3362\u3363\u3364\u3365\u3366\u3367\u3368\u3369\u336a\u336b\u336c\u336d\u336e\u336f\u3370\u33c2\u33d8\u2673\u2674\u2675\u2676\u2677\u2678\u2679\u267a\u2672\u267b\u267c\u267d\u2680\u2681\u2682\u2683\u2684\u2685]{1,20}$/, r.INVALID_NICKNAME);
-var H = w("fullname", /^([\u4e00-\u9fa5]{2,20}|[a-zA-Z](\s?[a-zA-Z]){3,29})$/, r.INVALID_FULLNAME);
-var G = w("qq", /^\d{5,20}$/, r.INVALID_QQ);
+var k = w("phone_number", /^1[3456789]\d{9}$/, r.INVALID_PHONE_NUMBER)
+var D = w("email_address", /^\w+@[a-z0-9]+\.[a-z]{2,4}/, r.INVALID_EMAIL_ADDRESS)
+var y = w("captcha", /^\d{6}$/, r.INVALID_CAPTCHA)
+var S = w("password", /^[a-zA-Z0-9\_\-@#?!~$^&\*\(\)\/%<>,\.;:"+=|\\{}\[\]]{6,20}$/, r.INVALID_PASSWORD)
+var P = w("username", /^[a-zA-Z]{1}\w{5,29}$/, r.INVALID_USERNAME)
+var L = w("nickname", /^[^\s\u2600\u2601\u2602\u03df\u2609\u263c\u263e\u263d\u2641\u2668\u2744\u2745\u2746\u2603\u2601\u2709\u2121\u213b\u260e\u260f\u2702\u2704\u2706\u270e\u270f\u2710\u2711\u2712\u2707\u2117\xa9\xae\ud83c\udd4f\ud83c\udd8f\u2690\u2691\u2686\u2687\u2688\u2689\u269e\u269f\u26a0\u26ac\u26ad\u26ae\u26af\u260a\u32c0\u32c1\u32c2\u32c3\u32c4\u32c5\u32c6\u32c7\u32c8\u32c9\u32ca\u32cb\u33e0\u33e1\u33e2\u33e3\u33e4\u33e5\u33e6\u33e7\u33e8\u33e9 \u33ea\u33eb\u33ec\u33ed\u33ee\u33ef\u33f0\u33f1\u33f2\u33f3\u33f4\u33f5\u33f6\u33f7\u33f8\u33f9\u33fa\u33fb\u33fc\u33fd\u33fe\u3358\u3359\u335a\u335b\u335c\u335d\u335e\u335f\u3360\u3361\u3362\u3363\u3364\u3365\u3366\u3367\u3368\u3369\u336a\u336b\u336c\u336d\u336e\u336f\u3370\u33c2\u33d8\u2673\u2674\u2675\u2676\u2677\u2678\u2679\u267a\u2672\u267b\u267c\u267d\u2680\u2681\u2682\u2683\u2684\u2685]{1,20}$/, r.INVALID_NICKNAME)
+var H = w("fullname", /^([\u4e00-\u9fa5]{2,20}|[a-zA-Z](\s?[a-zA-Z]){3,29})$/, r.INVALID_FULLNAME)
+var G = w("qq", /^\d{5,20}$/, r.INVALID_QQ)
 function U(t) {
   if (t.length > 50) {
     throw new f({
       error_code: r.INVALID_DESCRIPTION,
       message: "Invalid description, it should contains only 0 - 50 characters."
-    });
+    })
   }
 }
 function q(t) {
@@ -729,7 +729,7 @@ function q(t) {
     throw new f({
       error_code: r.INVALID_SEX,
       message: "Invalid sex \"" + t + "\", it should be 0 or 1."
-    });
+    })
   }
 }
 function M(t) {
@@ -737,51 +737,51 @@ function M(t) {
     throw new f({
       error_code: r.INVALID_BIRTHDAY,
       message: "Invalid birthday \"" + t + "\", it should be a integer number."
-    });
+    })
   }
 }
 function B(t) {
-  var e = t.phone_number;
-  var n = t.password;
-  var r = t.captcha;
-  var o = t.agreement_ids;
-  k(e);
-  S(n);
-  y(r);
-  V(o);
+  var t$phone_number = t.phone_number
+  var t$password = t.password
+  var t$captcha = t.captcha
+  var t$agreement_ids = t.agreement_ids
+  k(t$phone_number)
+  S(t$password)
+  y(t$captcha)
+  V(t$agreement_ids)
 }
 function V(t) {
   if (!(null === t || undefined === t ? undefined : t.length)) {
     throw new f({
       error_code: r.AGREEMENT_IDS,
       message: "agreement_ids should not be an empty array."
-    });
+    })
   }
 }
 function K(t) {
-  var e = t.birthday;
-  var n = t.sex;
-  var r = t.fullname;
-  var o = t.nickname;
-  var i = t.qq;
-  var c = t.description;
-  if (e) {
-    M(e);
+  var t$birthday = t.birthday
+  var t$sex = t.sex
+  var t$fullname = t.fullname
+  var t$nickname = t.nickname
+  var i = t.qq
+  var t$description = t.description
+  if (t$birthday) {
+    M(t$birthday)
   }
-  if (n) {
-    q(n);
+  if (t$sex) {
+    q(t$sex)
   }
-  if (r) {
-    H(r);
+  if (t$fullname) {
+    H(t$fullname)
   }
-  if (o) {
-    L(o);
+  if (t$nickname) {
+    L(t$nickname)
   }
   if (i) {
-    G(i);
+    G(i)
   }
-  if (c) {
-    U(c);
+  if (t$description) {
+    U(t$description)
   }
 }
 function x(t, e) {
@@ -789,7 +789,7 @@ function x(t, e) {
     throw new f({
       error_code: r.PWD_IS_NOT_EQUAL_TO_CONFIRMED_PWD,
       message: "Password is not equal to confirmed password."
-    });
+    })
   }
 }
 function W(t, e) {
@@ -797,38 +797,38 @@ function W(t, e) {
     return l(this, function (n) {
       switch (n.label) {
         case 0:
-          n.trys.push([0, 2,, 3]);
-          return [4, e()];
+          n.trys.push([0, 2,, 3])
+          return [4, e()]
         case 1:
-          return [2, n.sent()];
+          return [2, n.sent()]
         case 2:
           if (n.sent(), t > 1) {
-            return [2, W(t - 1, e)];
+            return [2, W(t - 1, e)]
           }
           throw new f({
             message: "Get geetest init params fail, please reload the page or try again later."
-          });
+          })
         case 3:
-          return [2];
+          return [2]
       }
-    });
-  });
+    })
+  })
 }
 function F(t) {
-  var e = t.name + "=" + t.value + "; domain=" + t.domain + "; max-age=" + t.max_age + "; path=/;";
-  var n = e + " samesite=none; secure";
-  document.cookie = e;
-  document.cookie = n;
+  var e = t.name + "=" + t.value + "; domain=" + t.domain + "; max-age=" + t.max_age + "; path=/;"
+  var n = e + " samesite=none; secure"
+  document.cookie = e
+  document.cookie = n
 }
 function Y(t) {
-  var e = {};
+  var e = {}
   document.cookie.split(";").forEach(function (t) {
-    var n = t.indexOf("=");
-    var r = t.slice(0, n);
-    var o = t.slice(n + 1);
-    e[r.trim()] = o;
-  });
-  return e[t];
+    var n = t.indexOf("=")
+    var r = t.slice(0, n)
+    var o = t.slice(n + 1)
+    e[r.trim()] = o
+  })
+  return e[t]
 }
 function j(t, e) {
   F({
@@ -836,78 +836,78 @@ function j(t, e) {
     value: "",
     domain: e,
     max_age: -999999
-  });
+  })
 }
 function Q(t) {
-  var e = C().env;
-  var n = "prod" === e ? "" : e + "-";
-  return "token_type" === t ? n + "token-type" : "" + n + t + "-token";
+  var c$env = C().env
+  var n = "prod" === c$env ? "" : c$env + "-"
+  return "token_type" === t ? n + "token-type" : "" + n + t + "-token"
 }
 function X(t) {
-  return !(!t || "undefined" === t || "" === t);
+  return !(!t || "undefined" === t || "" === t)
 }
 function z(t, e, n) {
   return p(this, undefined, undefined, function () {
     return l(this, function (r) {
       return [2, new Promise(function (r, o) {
         if (document.getElementById(e)) {
-          r();
+          r()
         } else {
-          var i;
+          var i
           if (n) {
             i = setTimeout(function () {
-              r();
-              clearTimeout(i);
-            }, 1e3 * n);
+              r()
+              clearTimeout(i)
+            }, 1e3 * n)
           }
-          var c = document.createElement("script");
-          c.type = "text/javascript";
+          var c = document.createElement("script")
+          c.type = "text/javascript"
           c.onload = function () {
-            r();
+            r()
             if (i) {
-              clearTimeout(i);
+              clearTimeout(i)
             }
-          };
-          c.id = e;
-          c.src = t;
-          c.setAttribute("defer", "");
-          document.getElementsByTagName("head")[0].appendChild(c);
+          }
+          c.id = e
+          c.src = t
+          c.setAttribute("defer", "")
+          document.getElementsByTagName("head")[0].appendChild(c)
         }
-      })];
-    });
-  });
+      })]
+    })
+  })
 }
 function Z(t, e) {
-  return Object.prototype.hasOwnProperty.call(e, t);
+  return Object.prototype.hasOwnProperty.call(e, t)
 }
 function $(t, e, n) {
   return new Promise(function (r, o) {
-    var i = document.createElement(t);
+    var i = document.createElement(t)
     i.onload = function () {
-      r(true);
-    };
+      r(true)
+    }
     i.onerror = function () {
-      o(false);
-    };
+      o(false)
+    }
     if (e) {
       Object.keys(e).forEach(function (t) {
-        var n = e[t];
+        var n = e[t]
         if ("innerHTML" !== t && "style" !== t) {
-          i.setAttribute(t, "string" !== typeof n ? JSON.stringify(n) : n);
+          i.setAttribute(t, "string" !== typeof n ? JSON.stringify(n) : n)
         }
-      });
+      })
     }
-    i.innerHTML = e.innerHTML;
-    i.setAttribute("style", n || "");
-    document.body.appendChild(i);
-    r(true);
-  });
+    i.innerHTML = e.innerHTML
+    i.setAttribute("style", n || "")
+    document.body.appendChild(i)
+    r(true)
+  })
 }
 function J(t) {
-  var e = "" + new Date().getTime() / 1e3;
-  return "iris-" + t + "-" + parseInt(e, 10);
+  var e = "" + new Date().getTime() / 1e3
+  return "iris-" + t + "-" + parseInt(e, 10)
 }
-var tt;
+var tt
 var et = Object.freeze({
   __proto__: null,
   check_input_existence: R,
@@ -936,7 +936,7 @@ var et = Object.freeze({
   hasProperty: Z,
   appendDomNode: $,
   simpleHash: J
-});
+})
 var nt = function () {
   function t() {
     this.request = new O({
@@ -944,71 +944,71 @@ var nt = function () {
         "Product-Code": g().product_code,
         Platform: g().platform
       }, a)
-    });
+    })
   }
   t.prototype.dispatch_request = function (t) {
     return p(this, undefined, undefined, function () {
       return l(this, function (e) {
-        return [2, this.request.dispatch_request(t)];
-      });
-    });
-  };
+        return [2, this.request.dispatch_request(t)]
+      })
+    })
+  }
   t.prototype.get_complete_access_token = function () {
-    var t = Y(Q("token_type"));
-    var e = Y(Q("access"));
+    var t = Y(Q("token_type"))
+    var e = Y(Q("access"))
     if (X(t) && X(e)) {
-      return t + " " + e;
+      return t + " " + e
     }
-    var n = C().domain;
-    j(Q("access"), n);
-    j(Q("token_type"), n);
+    var c$domain = C().domain
+    j(Q("access"), c$domain)
+    j(Q("token_type"), c$domain)
     throw new f({
       error_code: r.NO_TOKEN,
       message: "NO Token(cookie might have been expired). Please login."
-    });
-  };
+    })
+  }
   t.prototype.get_access = function (t) {
     return p(this, undefined, undefined, function () {
-      var e;
+      var e
       return l(this, function (n) {
         switch (n.label) {
           case 0:
             switch (this.check()) {
               case "ACCESS_EXIST":
-                return [3, 1];
+                return [3, 1]
               case "REFRESH_EXIST":
-                return [3, 2];
+                return [3, 2]
               case "NO_TOKEN":
-                return [3, 4];
+                return [3, 4]
             }
-            return [3, 7];
+            return [3, 7]
           case 1:
-            return [2, this.get_complete_access_token()];
+            return [2, this.get_complete_access_token()]
           case 2:
-            return [4, this.refresh()];
+            return [4, this.refresh()]
           case 3:
-            n.sent();
-            return [2, this.get_complete_access_token()];
+            n.sent()
+            return [2, this.get_complete_access_token()]
           case 4:
-            n.trys.push([4, 6,, 7]);
-            return [4, this.convert_cookie_to_token(t)];
+            n.trys.push([4, 6,, 7])
+            return [4, this.convert_cookie_to_token(t)]
           case 5:
-            e = n.sent();
-            this.set(e.data);
-            return [2, this.get_complete_access_token()];
+            e = n.sent()
+            this.set(e.data)
+            return [2, this.get_complete_access_token()]
           case 6:
-            n.sent();
-            this.clear();
+            n.sent()
+            this.clear()
             throw new f({
               error_code: r.NO_TOKEN,
               message: "NO Token. Please login."
-            });
+            })
           case 7:
-            return [2];
+            return [2]
         }
-      });
-    });
-  };
+      })
+    })
+  }
   t.prototype.convert_cookie_to_token = function (t) {
     return p(this, undefined, undefined, function () {
       return l(this, function (e) {
@@ -1018,51 +1018,51 @@ var nt = function () {
           headers: t ? {
             Authorization: "Bearer " + t
           } : {}
-        })];
-      });
-    });
-  };
+        })]
+      })
+    })
+  }
   t.prototype.get_refresh = function () {
     if (m().auth_version && "NO_TOKEN" === this.check()) {
       throw new f({
         error_code: r.NO_TOKEN,
         message: "NO Token. Please login."
-      });
+      })
     }
-    return Y(Q("refresh"));
-  };
+    return Y(Q("refresh"))
+  }
   t.prototype.set = function (t) {
-    var e = t.access;
-    var n = t.refresh;
-    var r = C().domain;
-    if (e && e.token && e.type && e.expires_in) {
+    var t$access = t.access
+    var t$refresh = t.refresh
+    var c$domain = C().domain
+    if (t$access && t$access.token && t$access.type && t$access.expires_in) {
       F({
         name: Q("access"),
-        value: e.token,
-        domain: r,
-        max_age: e.expires_in
-      });
+        value: t$access.token,
+        domain: c$domain,
+        max_age: t$access.expires_in
+      })
       F({
         name: Q("token_type"),
-        value: e.type,
-        domain: r,
-        max_age: e.expires_in
-      });
+        value: t$access.type,
+        domain: c$domain,
+        max_age: t$access.expires_in
+      })
     } else {
-      console.warn("Unexpected access token response from back-end: ", e);
+      console.warn("Unexpected access token response from back-end: ", t$access)
     }
-    if (n) {
-      if (!(n.token && n.expires_in)) {
-        console.warn("Unexpected refresh token response from back-end: ", n);
+    if (t$refresh) {
+      if (!(t$refresh.token && t$refresh.expires_in)) {
+        console.warn("Unexpected refresh token response from back-end: ", t$refresh)
       }
       F({
         name: Q("refresh"),
-        value: n.token,
-        domain: r,
-        max_age: n.expires_in
-      });
+        value: t$refresh.token,
+        domain: c$domain,
+        max_age: t$refresh.expires_in
+      })
     }
-  };
+  }
   t.prototype.refresh_token = function () {
     return p(this, undefined, undefined, function () {
       return l(this, function (t) {
@@ -1072,114 +1072,114 @@ var nt = function () {
           data: {
             refresh_token: this.get_refresh()
           }
-        })];
-      });
-    });
-  };
+        })]
+      })
+    })
+  }
   t.prototype.refresh = function () {
     return p(this, undefined, undefined, function () {
-      var t;
-      var e;
+      var t
+      var e
       return l(this, function (n) {
         switch (n.label) {
           case 0:
-            n.trys.push([0, 2,, 3]);
-            return [4, this.refresh_token()];
+            n.trys.push([0, 2,, 3])
+            return [4, this.refresh_token()]
           case 1:
-            t = n.sent();
-            this.set(t.data);
-            return [3, 3];
+            t = n.sent()
+            this.set(t.data)
+            return [3, 3]
           case 2:
             if ((e = n.sent()).error_code === r.REFRESH_TOKEN_INVALID) {
-              this.clear();
+              this.clear()
             }
-            throw e;
+            throw e
           case 3:
-            return [2];
+            return [2]
         }
-      });
-    });
-  };
+      })
+    })
+  }
   t.prototype.check = function () {
-    return X(Y(Q("access"))) && X(Y(Q("token_type"))) ? "ACCESS_EXIST" : X(Y(Q("refresh"))) ? "REFRESH_EXIST" : "NO_TOKEN";
-  };
+    return X(Y(Q("access"))) && X(Y(Q("token_type"))) ? "ACCESS_EXIST" : X(Y(Q("refresh"))) ? "REFRESH_EXIST" : "NO_TOKEN"
+  }
   t.prototype.clear = function () {
-    var t = C().domain;
-    j(Q("access"), t);
-    j(Q("token_type"), t);
-    j(Q("refresh"), t);
-  };
-  return t;
-}();
+    var c$domain = C().domain
+    j(Q("access"), c$domain)
+    j(Q("token_type"), c$domain)
+    j(Q("refresh"), c$domain)
+  }
+  return t
+}()
 function rt(t, e) {
   return p(this, undefined, undefined, function () {
-    var n;
+    var n
     return l(this, function (o) {
       switch (o.label) {
         case 0:
-          o.trys.push([0, 2,, 5]);
-          return [4, e()];
+          o.trys.push([0, 2,, 5])
+          return [4, e()]
         case 1:
-          return [2, o.sent()];
+          return [2, o.sent()]
         case 2:
-          n = o.sent();
-          return n.error_code === r.TOKEN_INVALID && t > 1 ? [4, new nt().refresh()] : [3, 4];
+          n = o.sent()
+          return n.error_code === r.TOKEN_INVALID && t > 1 ? [4, new nt().refresh()] : [3, 4]
         case 3:
-          o.sent();
-          return [2, rt(t - 1, e)];
+          o.sent()
+          return [2, rt(t - 1, e)]
         case 4:
-          throw n;
+          throw n
         case 5:
-          return [2];
+          return [2]
       }
-    });
-  });
+    })
+  })
 }
 var ot = function (t, e, n) {
   return false !== e ? h(h(h({}, t), {
     "X-Captcha-Id": g().appid || ""
-  }), n) : t;
-};
+  }), n) : t
+}
 var it = function () {
   function t() {
-    var t;
+    var t
     this.request = new O({
       public_headers: h(h({
         "Product-Code": g().product_code,
         pid: g().pid,
         Platform: g().platform
       }, a), null === (t = m()) || undefined === t ? undefined : t.custom_headers)
-    });
-    this.token = new nt();
+    })
+    this.token = new nt()
   }
   t.prototype.dispatch_request = function (t) {
     return p(this, undefined, undefined, function () {
-      var e;
-      var n;
-      var r = this;
+      var /* [auto-meaningful-name] */t$headers
+      var n
+      var r = this
       return l(this, function (o) {
         switch (o.label) {
           case 0:
-            return t.with_token && m().auth_version ? (t.headers = t.headers || {}, e = t.headers, n = "Authorization", [4, this.token.get_access()]) : [3, 2];
+            return t.with_token && m().auth_version ? (t.headers = t.headers || {}, t$headers = t.headers, n = "Authorization", [4, this.token.get_access()]) : [3, 2]
           case 1:
-            e[n] = o.sent();
+            t$headers[n] = o.sent()
             return [2, rt(2, function () {
               return p(r, undefined, undefined, function () {
                 return l(this, function (e) {
-                  return [2, this.request.dispatch_request(t)];
-                });
-              });
-            })];
+                  return [2, this.request.dispatch_request(t)]
+                })
+              })
+            })]
           case 2:
-            return [2, this.request.dispatch_request(t)];
+            return [2, this.request.dispatch_request(t)]
         }
-      });
-    });
-  };
+      })
+    })
+  }
   t.prototype.email_register_send_captcha = function (t, e) {
     return p(this, undefined, undefined, function () {
       return l(this, function (n) {
-        D(t);
+        D(t)
         return [2, this.dispatch_request({
           url: i.SEND_EMAIL_REGISTERATION_CAPTCHA,
           method: "post",
@@ -1189,14 +1189,14 @@ var it = function () {
           headers: ot({
             "X-Captcha-Ticket": e
           })
-        })];
-      });
-    });
-  };
+        })]
+      })
+    })
+  }
   t.prototype.validate_email_register_captcha = function (t, e) {
     return p(this, undefined, undefined, function () {
       return l(this, function (n) {
-        D(t);
+        D(t)
         return [2, this.dispatch_request({
           url: i.VERIFY_EMAIL_REGISTERATION_CAPTCHA,
           method: "post",
@@ -1204,55 +1204,55 @@ var it = function () {
             email: t,
             captcha: e
           }
-        })];
-      });
-    });
-  };
+        })]
+      })
+    })
+  }
   t.prototype.register_email = function (t, e) {
     return p(this, undefined, undefined, function () {
-      var n;
-      var r;
-      var o;
+      var /* [auto-meaningful-name] */t$captchaTicket
+      var /* [auto-meaningful-name] */t$password
+      var /* [auto-meaningful-name] */t$rePassword
       return l(this, function (c) {
-        n = t.captchaTicket;
-        r = t.password;
-        o = t.rePassword;
-        S(r);
-        S(o);
-        x(r, o);
+        t$captchaTicket = t.captchaTicket
+        t$password = t.password
+        t$rePassword = t.rePassword
+        S(t$password)
+        S(t$rePassword)
+        x(t$password, t$rePassword)
         return [2, this.dispatch_request({
           url: i.REGISTER_BY_EMAIL,
           method: "post",
           data: {
-            captchaTicket: n,
-            password: r,
-            rePassword: o,
+            captchaTicket: t$captchaTicket,
+            password: t$password,
+            rePassword: t$rePassword,
             pid: e
           }
-        })];
-      });
-    });
-  };
+        })]
+      })
+    })
+  }
   t.prototype.get_agreements = function () {
     return p(this, undefined, undefined, function () {
       return l(this, function (t) {
         return [2, this.dispatch_request({
           url: i.GET_AGREEMENTS,
           method: "get"
-        })];
-      });
-    });
-  };
+        })]
+      })
+    })
+  }
   t.prototype.get_agreements_need_sign = function () {
     return p(this, undefined, undefined, function () {
       return l(this, function (t) {
         return [2, this.dispatch_request({
           url: i.GET_AGREEMENTS_NEED_SIGN,
           method: "get"
-        })];
-      });
-    });
-  };
+        })]
+      })
+    })
+  }
   t.prototype.sign_agreements = function (t, e) {
     return p(this, undefined, undefined, function () {
       return l(this, function (n) {
@@ -1263,10 +1263,10 @@ var it = function () {
             agreement_ids: t,
             pid: e
           }
-        })];
-      });
-    });
-  };
+        })]
+      })
+    })
+  }
   t.prototype.find_latest_protocol_list = function (t, e) {
     return p(this, undefined, undefined, function () {
       return l(this, function (n) {
@@ -1277,46 +1277,46 @@ var it = function () {
             codeList: t,
             pid: e
           }
-        })];
-      });
-    });
-  };
+        })]
+      })
+    })
+  }
   t.prototype.send_voice_captcha = function (t, e, n) {
     return p(this, undefined, undefined, function () {
-      var r;
-      var o;
-      var c;
+      var /* [auto-meaningful-name] */t$phone_number
+      var /* [auto-meaningful-name] */t$type
+      var c
       return l(this, function (s) {
         switch (s.label) {
           case 0:
-            r = t.phone_number;
-            o = t.type;
-            k(r);
+            t$phone_number = t.phone_number
+            t$type = t.type
+            k(t$phone_number)
             return [4, this.dispatch_request({
               url: i.VOICE_CAPTCHA,
               method: "post",
               data: {
-                phone_number: r,
-                type: o.toUpperCase(),
+                phone_number: t$phone_number,
+                type: t$type.toUpperCase(),
                 oauth_ticket: n
               },
               headers: ot({
                 "X-Captcha-Ticket": e
               })
-            })];
+            })]
           case 1:
             if (200 === (c = s.sent()).status) {
-              this.token.set(c.data.auth.token);
+              this.token.set(c.data.auth.token)
             }
-            return [2, c];
+            return [2, c]
         }
-      });
-    });
-  };
+      })
+    })
+  }
   t.prototype.register_send_captcha = function (t, e, n) {
     return p(this, undefined, undefined, function () {
       return l(this, function (r) {
-        k(t);
+        k(t)
         return [2, this.dispatch_request({
           url: i.REGISTER_SEND_CAPTCHA,
           method: "post",
@@ -1327,40 +1327,40 @@ var it = function () {
           headers: ot({
             "X-Captcha-Ticket": e
           })
-        })];
-      });
-    });
-  };
+        })]
+      })
+    })
+  }
   t.prototype.register = function (t, e) {
     return p(this, undefined, undefined, function () {
-      var n;
-      var r;
+      var n
+      var r
       return l(this, function (o) {
         switch (o.label) {
           case 0:
-            R(t, ["phone_number", "captcha", "password", "agreement_ids"]);
-            B(t);
-            n = e || g().pid;
+            R(t, ["phone_number", "captcha", "password", "agreement_ids"])
+            B(t)
+            n = e || g().pid
             return [4, this.dispatch_request({
               url: i.REGISTER,
               method: "post",
               data: h(h({}, t), {
                 pid: n
               })
-            })];
+            })]
           case 1:
             if (200 === (r = o.sent()).status) {
-              this.token.set(r.data.auth.token);
+              this.token.set(r.data.auth.token)
             }
-            return [2, r];
+            return [2, r]
         }
-      });
-    });
-  };
+      })
+    })
+  }
   t.prototype.login_captcha = function (t, e, n) {
     return p(this, undefined, undefined, function () {
       return l(this, function (r) {
-        k(t);
+        k(t)
         return [2, this.dispatch_request({
           url: i.LOGIN_CAPTCHA,
           method: "post",
@@ -1371,20 +1371,20 @@ var it = function () {
           headers: ot({
             "X-Captcha-Ticket": e
           })
-        })];
-      });
-    });
-  };
+        })]
+      })
+    })
+  }
   t.prototype.login_phone = function (t, e, n, r) {
     return p(this, undefined, undefined, function () {
-      var o;
-      var c;
+      var o
+      var c
       return l(this, function (s) {
         switch (s.label) {
           case 0:
-            k(t);
-            y(e);
-            o = n || g().pid;
+            k(t)
+            y(e)
+            o = n || g().pid
             return [4, this.dispatch_request({
               url: i.LOGIN_PHONE,
               method: "post",
@@ -1394,24 +1394,24 @@ var it = function () {
                 pid: o,
                 agreement_ids: r || [-1]
               }
-            })];
+            })]
           case 1:
             if (200 === (c = s.sent()).status) {
-              this.token.set(c.data.auth.token);
+              this.token.set(c.data.auth.token)
             }
-            return [2, c];
+            return [2, c]
         }
-      });
-    });
-  };
+      })
+    })
+  }
   t.prototype.login_account = function (t, e, n, r) {
     return p(this, undefined, undefined, function () {
-      var o;
-      var c;
+      var o
+      var c
       return l(this, function (s) {
         switch (s.label) {
           case 0:
-            o = n || g().pid;
+            o = n || g().pid
             return [4, this.dispatch_request({
               url: i.LOGIN_ACCOUNT,
               method: "post",
@@ -1421,24 +1421,24 @@ var it = function () {
                 pid: o,
                 agreement_ids: r || [-1]
               }
-            })];
+            })]
           case 1:
             if (200 === (c = s.sent()).status) {
-              this.token.set(c.data.auth.token);
+              this.token.set(c.data.auth.token)
             }
-            return [2, c];
+            return [2, c]
         }
-      });
-    });
-  };
+      })
+    })
+  }
   t.prototype.login_wechat = function (t, e, n, r) {
     return p(this, undefined, undefined, function () {
-      var o;
-      var c;
+      var o
+      var c
       return l(this, function (s) {
         switch (s.label) {
           case 0:
-            o = n || g().pid;
+            o = n || g().pid
             return [4, this.dispatch_request({
               url: i.LOGIN_WECHAT,
               method: "post",
@@ -1448,24 +1448,24 @@ var it = function () {
                 appid: r,
                 agreement_ids: e || [-1]
               }
-            })];
+            })]
           case 1:
             if (200 === (c = s.sent()).status && c.data.auth) {
-              this.token.set(c.data.auth.token);
+              this.token.set(c.data.auth.token)
             }
-            return [2, c];
+            return [2, c]
         }
-      });
-    });
-  };
+      })
+    })
+  }
   t.prototype.login_qq = function (t, e, n) {
     return p(this, undefined, undefined, function () {
-      var r;
-      var o;
+      var r
+      var o
       return l(this, function (c) {
         switch (c.label) {
           case 0:
-            r = n || g().pid;
+            r = n || g().pid
             return [4, this.dispatch_request({
               url: i.LOGIN_QQ,
               method: "post",
@@ -1474,20 +1474,20 @@ var it = function () {
                 pid: r,
                 agreement_ids: e || [-1]
               }
-            })];
+            })]
           case 1:
             if (200 === (o = c.sent()).status && o.data.auth) {
-              this.token.set(o.data.auth.token);
+              this.token.set(o.data.auth.token)
             }
-            return [2, o];
+            return [2, o]
         }
-      });
-    });
-  };
+      })
+    })
+  }
   t.prototype.bind_phone_for_third_party = function (t, e) {
     return p(this, undefined, undefined, function () {
       return l(this, function (n) {
-        k(t);
+        k(t)
         return [2, this.dispatch_request({
           url: i.BIND_PHONE_FOR_THIRD_PARTY,
           method: "post",
@@ -1495,18 +1495,18 @@ var it = function () {
             phone_number: t,
             oauth_ticket: e
           }
-        })];
-      });
-    });
-  };
+        })]
+      })
+    })
+  }
   t.prototype.create_user_for_third_party = function (t, e, n) {
     return p(this, undefined, undefined, function () {
-      var r;
+      var r
       return l(this, function (o) {
         switch (o.label) {
           case 0:
             if (e) {
-              y(e);
+              y(e)
             }
             return [4, this.dispatch_request({
               url: i.CREATE_USER_FOR_THIRD_PARTY,
@@ -1519,19 +1519,19 @@ var it = function () {
                 oauth_ticket: t,
                 agreement_ids: n || [-1]
               }
-            })];
+            })]
           case 1:
             if (200 === (r = o.sent()).status) {
-              this.token.set(r.data.auth.token);
+              this.token.set(r.data.auth.token)
             }
-            return [2, r];
+            return [2, r]
         }
-      });
-    });
-  };
+      })
+    })
+  }
   t.prototype.logout = function () {
     return p(this, undefined, undefined, function () {
-      var t;
+      var t
       return l(this, function (e) {
         switch (e.label) {
           case 0:
@@ -1542,20 +1542,20 @@ var it = function () {
                 refresh_token: this.token.get_refresh()
               },
               with_token: true
-            })];
+            })]
           case 1:
             if (t = e.sent()) {
-              this.token.clear();
+              this.token.clear()
             }
-            return [2, t];
+            return [2, t]
         }
-      });
-    });
-  };
+      })
+    })
+  }
   t.prototype.bind_phone_captcha = function (t, e, n) {
     return p(this, undefined, undefined, function () {
       return l(this, function (r) {
-        k(t);
+        k(t)
         return [2, this.dispatch_request({
           url: i.BIND_PHONE_CAPTCHA,
           method: "post",
@@ -1567,15 +1567,15 @@ var it = function () {
             "X-Captcha-Ticket": e
           }),
           with_token: true
-        })];
-      });
-    });
-  };
+        })]
+      })
+    })
+  }
   t.prototype.bind_phone = function (t, e) {
     return p(this, undefined, undefined, function () {
       return l(this, function (n) {
-        k(t);
-        y(e);
+        k(t)
+        y(e)
         return [2, this.dispatch_request({
           url: i.BIND_PHONE,
           method: "patch",
@@ -1584,14 +1584,14 @@ var it = function () {
             captcha: e
           },
           with_token: true
-        })];
-      });
-    });
-  };
+        })]
+      })
+    })
+  }
   t.prototype.bind_phone_check = function (t) {
     return p(this, undefined, undefined, function () {
       return l(this, function (e) {
-        k(t);
+        k(t)
         return [2, this.dispatch_request({
           url: i.BIND_PHONE_CHECK,
           method: "get",
@@ -1599,15 +1599,15 @@ var it = function () {
             phone_number: t
           },
           with_token: true
-        })];
-      });
-    });
-  };
+        })]
+      })
+    })
+  }
   t.prototype.rebind_phone_captcha = function (t, e, n) {
     return p(this, undefined, undefined, function () {
       return l(this, function (r) {
-        k(t);
-        k(e);
+        k(t)
+        k(e)
         return [2, this.dispatch_request({
           url: i.REBIND_PHONE_CAPTCHA,
           method: "post",
@@ -1617,15 +1617,15 @@ var it = function () {
             pid: n
           },
           with_token: true
-        })];
-      });
-    });
-  };
+        })]
+      })
+    })
+  }
   t.prototype.rebind_phone = function (t, e) {
     return p(this, undefined, undefined, function () {
       return l(this, function (n) {
-        k(t);
-        y(e);
+        k(t)
+        y(e)
         return [2, this.dispatch_request({
           url: i.REBIND_PHONE,
           method: "patch",
@@ -1634,14 +1634,14 @@ var it = function () {
             captcha: e
           },
           with_token: true
-        })];
-      });
-    });
-  };
+        })]
+      })
+    })
+  }
   t.prototype.reset_pwd_captcha = function (t, e, n) {
     return p(this, undefined, undefined, function () {
       return l(this, function (r) {
-        k(t);
+        k(t)
         return [2, this.dispatch_request({
           url: i.RESET_PWD_CAPTCHA,
           method: "post",
@@ -1652,15 +1652,15 @@ var it = function () {
           headers: ot({
             "X-Captcha-Ticket": e
           })
-        })];
-      });
-    });
-  };
+        })]
+      })
+    })
+  }
   t.prototype.reset_pwd_token = function (t, e) {
     return p(this, undefined, undefined, function () {
       return l(this, function (n) {
-        k(t);
-        y(e);
+        k(t)
+        y(e)
         return [2, this.dispatch_request({
           url: i.RESET_PWD_TOKEN,
           method: "post",
@@ -1668,20 +1668,20 @@ var it = function () {
             phone_number: t,
             captcha: e
           }
-        })];
-      });
-    });
-  };
+        })]
+      })
+    })
+  }
   t.prototype.reset_pwd = function (t, e, n) {
     return p(this, undefined, undefined, function () {
-      var r;
-      var o;
+      var r
+      var o
       return l(this, function (c) {
         switch (c.label) {
           case 0:
-            S(e);
-            S(n);
-            x(e, n);
+            S(e)
+            S(n)
+            x(e, n)
             r = {
               url: i.RESET_PWD,
               method: "patch",
@@ -1690,33 +1690,33 @@ var it = function () {
                 password: e,
                 confirm_password: n
               }
-            };
-            c.label = 1;
+            }
+            c.label = 1
           case 1:
-            c.trys.push([1, 3,, 4]);
-            return [4, this.token.get_access()];
+            c.trys.push([1, 3,, 4])
+            return [4, this.token.get_access()]
           case 2:
-            o = c.sent();
-            return [3, 4];
+            o = c.sent()
+            return [3, 4]
           case 3:
-            c.sent();
-            o = "";
-            return [3, 4];
+            c.sent()
+            o = ""
+            return [3, 4]
           case 4:
             if ("" !== o) {
               Object.assign(r, {
                 with_token: true
-              });
+              })
             }
-            return [2, this.dispatch_request(r)];
+            return [2, this.dispatch_request(r)]
         }
-      });
-    });
-  };
+      })
+    })
+  }
   t.prototype.send_universal_captcha = function (t, e, n) {
     return p(this, undefined, undefined, function () {
       return l(this, function (r) {
-        k(t);
+        k(t)
         return [2, this.dispatch_request({
           url: i.SEND_UNIVERSAL_CAPTCHA,
           method: "post",
@@ -1727,15 +1727,15 @@ var it = function () {
           headers: ot({
             "X-Captcha-Ticket": e
           })
-        })];
-      });
-    });
-  };
+        })]
+      })
+    })
+  }
   t.prototype.verify_universal_captcha = function (t, e) {
     return p(this, undefined, undefined, function () {
       return l(this, function (n) {
-        k(t);
-        y(e);
+        k(t)
+        y(e)
         return [2, this.dispatch_request({
           url: i.VERIFY_UNIVERSAL_CAPTCHA,
           method: "post",
@@ -1743,14 +1743,14 @@ var it = function () {
             phone_number: t,
             captcha: e
           }
-        })];
-      });
-    });
-  };
+        })]
+      })
+    })
+  }
   t.prototype.login_captcha_silence = function (t, e, n) {
     return p(this, undefined, undefined, function () {
       return l(this, function (r) {
-        k(t);
+        k(t)
         return [2, this.dispatch_request({
           url: i.LOGIN_CAPTCHA_SILENCE,
           method: "post",
@@ -1761,37 +1761,37 @@ var it = function () {
           headers: ot({
             "X-Captcha-Ticket": e
           })
-        })];
-      });
-    });
-  };
+        })]
+      })
+    })
+  }
   t.prototype.login_phone_silence = function (t, e, n, r) {
     return p(this, undefined, undefined, function () {
-      var o;
-      var c;
-      var s;
-      var a;
-      var u;
+      var o
+      var c
+      var s
+      var a
+      var u
       return l(this, function (_) {
         switch (_.label) {
           case 0:
-            o = "";
-            c = "";
-            s = "";
+            o = ""
+            c = ""
+            s = ""
             if ("string" === typeof t) {
-              o = t || "";
-              c = e || "";
-              s = n || "";
+              o = t || ""
+              c = e || ""
+              s = n || ""
             }
             if ("object" === typeof t) {
-              o = (null === t || undefined === t ? undefined : t.phone_number) || "";
-              c = (null === t || undefined === t ? undefined : t.captcha) || "";
-              r = null === t || undefined === t ? undefined : t.agreement_ids;
-              s = e || "";
+              o = (null === t || undefined === t ? undefined : t.phone_number) || ""
+              c = (null === t || undefined === t ? undefined : t.captcha) || ""
+              r = null === t || undefined === t ? undefined : t.agreement_ids
+              s = e || ""
             }
-            k(o);
-            y(c);
-            a = s || g().pid;
+            k(o)
+            y(c)
+            a = s || g().pid
             return [4, this.dispatch_request({
               url: i.LOGIN_PHONE_SILENCE,
               method: "post",
@@ -1801,39 +1801,39 @@ var it = function () {
                 pid: a,
                 agreement_ids: r || [-1]
               }
-            })];
+            })]
           case 1:
             if (200 === (u = _.sent()).status) {
-              this.token.set(u.data.auth.token);
+              this.token.set(u.data.auth.token)
             }
-            return [2, u];
+            return [2, u]
         }
-      });
-    });
-  };
+      })
+    })
+  }
   t.prototype.get_access_token = function (t) {
     return p(this, undefined, undefined, function () {
       return l(this, function (e) {
-        return [2, this.token.get_access(t)];
-      });
-    });
-  };
+        return [2, this.token.get_access(t)]
+      })
+    })
+  }
   t.prototype.request_with_token = function (t) {
     return p(this, undefined, undefined, function () {
-      var e;
+      var e
       return l(this, function (n) {
         e = {
           with_token: true,
           without_base_url: true
-        };
-        return [2, this.dispatch_request(Object.assign(t, e))];
-      });
-    });
-  };
+        }
+        return [2, this.dispatch_request(Object.assign(t, e))]
+      })
+    })
+  }
   t.prototype.set_username = function (t) {
     return p(this, undefined, undefined, function () {
       return l(this, function (e) {
-        P(t);
+        P(t)
         return [2, this.dispatch_request({
           url: i.SET_USERNAME,
           method: "patch",
@@ -1841,16 +1841,16 @@ var it = function () {
             username: t
           },
           with_token: true
-        })];
-      });
-    });
-  };
+        })]
+      })
+    })
+  }
   t.prototype.init_password = function (t, e) {
     return p(this, undefined, undefined, function () {
       return l(this, function (n) {
-        S(t);
-        S(e);
-        x(t, e);
+        S(t)
+        S(e)
+        x(t, e)
         return [2, this.dispatch_request({
           url: i.INIT_PASSWORD,
           method: "patch",
@@ -1859,19 +1859,19 @@ var it = function () {
             confirm_password: e
           },
           with_token: true
-        })];
-      });
-    });
-  };
+        })]
+      })
+    })
+  }
   t.prototype.change_pwd_by_old = function (t, e, n) {
     return p(this, undefined, undefined, function () {
-      var r;
+      var r
       return l(this, function (o) {
         switch (o.label) {
           case 0:
-            S(e);
-            S(n);
-            x(e, n);
+            S(e)
+            S(n)
+            x(e, n)
             return [4, this.dispatch_request({
               url: i.CHANGE_PWD_BY_OLD,
               method: "patch",
@@ -1881,20 +1881,20 @@ var it = function () {
                 confirm_password: n
               },
               with_token: true
-            })];
+            })]
           case 1:
             if (r = o.sent()) {
-              this.token.clear();
+              this.token.clear()
             }
-            return [2, r];
+            return [2, r]
         }
-      });
-    });
-  };
+      })
+    })
+  }
   t.prototype.change_pwd_by_phone_captcha = function (t, e) {
     return p(this, undefined, undefined, function () {
       return l(this, function (n) {
-        k(t);
+        k(t)
         return [2, this.dispatch_request({
           url: i.CHNAGE_PWD_BY_PHONE_CAPTCHA,
           method: "post",
@@ -1903,19 +1903,19 @@ var it = function () {
             pid: e
           },
           with_token: true
-        })];
-      });
-    });
-  };
+        })]
+      })
+    })
+  }
   t.prototype.change_pwd_by_phone = function (t, e, n) {
     return p(this, undefined, undefined, function () {
-      var r;
+      var r
       return l(this, function (o) {
         switch (o.label) {
           case 0:
-            k(t);
-            y(e);
-            S(n);
+            k(t)
+            y(e)
+            S(n)
             return [4, this.dispatch_request({
               url: i.CHANGE_PWD_BY_PHONE,
               method: "patch",
@@ -1925,32 +1925,32 @@ var it = function () {
                 password: n
               },
               with_token: true
-            })];
+            })]
           case 1:
             if (r = o.sent()) {
-              this.token.clear();
+              this.token.clear()
             }
-            return [2, r];
+            return [2, r]
         }
-      });
-    });
-  };
+      })
+    })
+  }
   t.prototype.set_profile = function (t) {
     return p(this, undefined, undefined, function () {
       return l(this, function (e) {
         if (t) {
-          R(t, ["nickname", "avatar_url", "fullname", "birthday", "sex", "qq", "description", "grade"]);
-          K(t);
+          R(t, ["nickname", "avatar_url", "fullname", "birthday", "sex", "qq", "description", "grade"])
+          K(t)
         }
         return [2, this.dispatch_request({
           url: i.SET_PROFILE,
           method: "patch",
           data: h({}, t),
           with_token: true
-        })];
-      });
-    });
-  };
+        })]
+      })
+    })
+  }
   t.prototype.check_bind_for_third_party = function () {
     return p(this, undefined, undefined, function () {
       return l(this, function (t) {
@@ -1958,10 +1958,10 @@ var it = function () {
           url: i.CHECK_BIND_FOR_THIRD_PARTY,
           method: "get",
           with_token: true
-        })];
-      });
-    });
-  };
+        })]
+      })
+    })
+  }
   t.prototype.bind_wechat = function (t, e) {
     return p(this, undefined, undefined, function () {
       return l(this, function (n) {
@@ -1973,10 +1973,10 @@ var it = function () {
             appid: e
           },
           with_token: true
-        })];
-      });
-    });
-  };
+        })]
+      })
+    })
+  }
   t.prototype.unbind_wechat = function () {
     return p(this, undefined, undefined, function () {
       return l(this, function (t) {
@@ -1984,10 +1984,10 @@ var it = function () {
           url: i.UNBIND_WECHAT,
           method: "patch",
           with_token: true
-        })];
-      });
-    });
-  };
+        })]
+      })
+    })
+  }
   t.prototype.bind_qq = function (t, e, n) {
     return p(this, undefined, undefined, function () {
       return l(this, function (e) {
@@ -1999,10 +1999,10 @@ var it = function () {
             agreement_ids: n
           },
           with_token: true
-        })];
-      });
-    });
-  };
+        })]
+      })
+    })
+  }
   t.prototype.unbind_qq = function () {
     return p(this, undefined, undefined, function () {
       return l(this, function (t) {
@@ -2010,10 +2010,10 @@ var it = function () {
           url: i.UNBIND_QQ,
           method: "patch",
           with_token: true
-        })];
-      });
-    });
-  };
+        })]
+      })
+    })
+  }
   t.prototype.get_profile = function () {
     return p(this, undefined, undefined, function () {
       return l(this, function (t) {
@@ -2021,10 +2021,10 @@ var it = function () {
           url: i.GET_PROFILE,
           method: "get",
           with_token: true
-        })];
-      });
-    });
-  };
+        })]
+      })
+    })
+  }
   t.prototype.get_auth = function () {
     return p(this, undefined, undefined, function () {
       return l(this, function (t) {
@@ -2032,13 +2032,13 @@ var it = function () {
           url: i.GET_AUTH,
           method: "get",
           with_token: true
-        })];
-      });
-    });
-  };
+        })]
+      })
+    })
+  }
   t.prototype.login_account_ticket = function (t, e, n, r, o) {
     return p(this, undefined, undefined, function () {
-      var c;
+      var c
       return l(this, function (s) {
         switch (s.label) {
           case 0:
@@ -2054,78 +2054,78 @@ var it = function () {
               headers: ot({
                 "X-Captcha-Ticket": r
               })
-            })];
+            })]
           case 1:
             if (200 === (c = s.sent()).status) {
-              this.token.set(c.data.auth.token);
+              this.token.set(c.data.auth.token)
             }
-            return [2, c];
+            return [2, c]
         }
-      });
-    });
-  };
+      })
+    })
+  }
   t.prototype.get_grade_list = function () {
     return p(this, undefined, undefined, function () {
       return l(this, function (t) {
         return [2, this.dispatch_request({
           url: i.GET_GRADE_LIST,
           method: "get"
-        })];
-      });
-    });
-  };
-  return t;
-}();
+        })]
+      })
+    })
+  }
+  return t
+}()
 var ct = Object.freeze({
   __proto__: null,
   init: function (t) {
     if (!t.appid) {
-      t.appid = "";
+      t.appid = ""
     }
     (function (t) {
       if (!t) {
-        throw new Error("you should specify a config to init Iris auth module");
+        throw new Error("you should specify a config to init Iris auth module")
       }
       Object.keys(v).forEach(function (e) {
         if ("platform" !== e) {
-          var n = t[e];
+          var n = t[e]
           if (v[e].required && !n && "" !== n) {
             throw new f({
               error_code: r.INVALID_INIT_PARAMS,
               message: e + " is required,but got null or undefined"
-            });
+            })
           }
-          var o = typeof t[e];
+          var o = typeof t[e]
           if (!v[e].types.includes(o)) {
             throw new f({
               error_code: r.INVALID_INIT_PARAMS,
               message: e + " should be type of " + v[e].type.join(" or ") + ",but got " + o
-            });
+            })
           }
         }
-      });
-    })(t);
-    E = t;
+      })
+    })(t)
+    E = t
     if (["pid", "appid", "product_code", "platform"].every(function (t) {
-      return Z(t, g());
+      return Z(t, g())
     })) {
-      return tt = new it();
+      return tt = new it()
     }
-    throw new Error("Auth init fail.Check init params.");
+    throw new Error("Auth init fail.Check init params.")
   },
   get_auth_instance: function () {
     if (!tt) {
       throw new f({
         message: "Iris SDK error: Please run init() correctly, before get_auth_instance()."
-      });
+      })
     }
-    return tt;
+    return tt
   },
   CodemaoAuth: it
-});
+})
 var st = function (t) {
-  this.options = t;
-};
+  this.options = t
+}
 var at = {
   FINGER_PRINT_2: "https://static.codemao.cn/iris/fingerprint2.min.js",
   GEETEST: "https://static.codemao.cn/arch/gt.js",
@@ -2133,29 +2133,29 @@ var at = {
   NEXTDATA: "https://static.codemao.cn/arch/smcp.min.js",
   NETEASE: "https://static.codemao.cn/arch/netease-load.min.js",
   ALIYUN: "https://g.alicdn.com/AWSC/AWSC/awsc.js"
-};
+}
 var ut = function (t, e) {
   return {
     message: t,
     error: e
-  };
-};
+  }
+}
 var _t = {
   product: "bind",
   width: "300px"
-};
+}
 var dt = function (t) {
   function e(e) {
-    var n = t.call(this, e) || this;
-    n.product_id = e.product_id || "";
-    n.dom_id = e.dom_id;
-    n.success_callback = e.success_callback;
-    n.init_options = e.init_options;
-    n.fail_callback = e.fail_callback;
-    n.close_callback = e.close_callback;
-    return n;
+    var n = t.call(this, e) || this
+    n.product_id = e.product_id || ""
+    n.dom_id = e.dom_id
+    n.success_callback = e.success_callback
+    n.init_options = e.init_options
+    n.fail_callback = e.fail_callback
+    n.close_callback = e.close_callback
+    return n
   }
-  d(e, t);
+  d(e, t)
   e.prototype.get_init_params = function () {
     return p(this, undefined, undefined, function () {
       return l(this, function (t) {
@@ -2165,109 +2165,109 @@ var dt = function (t) {
           data: {
             appid: this.product_id
           }
-        })];
-      });
-    });
-  };
+        })]
+      })
+    })
+  }
   e.prototype.init_geetest = function (t) {
     return p(this, undefined, undefined, function () {
-      var e;
-      var n;
-      var r = this;
+      var e
+      var /* [auto-meaningful-name] */e$data
+      var r = this
       return l(this, function (o) {
         switch (o.label) {
           case 0:
             return [4, W(3, function () {
               return p(r, undefined, undefined, function () {
                 return l(this, function (t) {
-                  return [2, this.get_init_params()];
-                });
-              });
-            })];
+                  return [2, this.get_init_params()]
+                })
+              })
+            })]
           case 1:
-            e = o.sent();
-            n = e.data;
+            e = o.sent()
+            e$data = e.data
             return [2, new Promise(function (e) {
               initGeetest(h({
-                gt: n.gt,
-                challenge: n.challenge,
-                offline: !n.success,
-                new_captcha: n.new_captcha
+                gt: e$data.gt,
+                challenge: e$data.challenge,
+                offline: !e$data.success,
+                new_captcha: e$data.new_captcha
               }, t), function (t) {
                 t.onReady(function () {
-                  e(t);
+                  e(t)
                 }).onSuccess(function () {
                   return p(r, undefined, undefined, function () {
-                    var t;
-                    var e;
+                    var t
+                    var e
                     return l(this, function (n) {
                       switch (n.label) {
                         case 0:
-                          n.trys.push([0, 2,, 3]);
-                          return [4, this.get_ticket()];
+                          n.trys.push([0, 2,, 3])
+                          return [4, this.get_ticket()]
                         case 1:
-                          t = n.sent();
-                          this.success_callback(t.data.ticket, this.product_id);
-                          return [3, 3];
+                          t = n.sent()
+                          this.success_callback(t.data.ticket, this.product_id)
+                          return [3, 3]
                         case 2:
-                          e = n.sent();
+                          e = n.sent()
                           if (this.fail_callback) {
-                            this.fail_callback(e);
+                            this.fail_callback(e)
                           }
-                          return [3, 3];
+                          return [3, 3]
                         case 3:
-                          return [2];
+                          return [2]
                       }
-                    });
-                  });
+                    })
+                  })
                 }).onError(function () {
                   if (r.fail_callback) {
-                    r.fail_callback();
+                    r.fail_callback()
                   }
-                  throw new Error("Got error in Geetest captcha.");
+                  throw new Error("Got error in Geetest captcha.")
                 }).onClose(function () {
                   if (!r.captcha_obj.getValidate() && r.close_callback) {
-                    r.close_callback();
+                    r.close_callback()
                   }
-                });
-              });
-            })];
+                })
+              })
+            })]
         }
-      });
-    });
-  };
+      })
+    })
+  }
   e.prototype.init = function () {
     return p(this, undefined, undefined, function () {
-      var t;
-      var e;
+      var t
+      var e
       return l(this, function (n) {
         switch (n.label) {
           case 0:
-            t = this.init_options || _t;
-            return [4, z(at.GEETEST, "geetest-captcha")];
+            t = this.init_options || _t
+            return [4, z(at.GEETEST, "geetest-captcha")]
           case 1:
-            n.sent();
-            e = this;
-            return [4, this.init_geetest(t)];
+            n.sent()
+            e = this
+            return [4, this.init_geetest(t)]
           case 2:
-            e.captcha_obj = n.sent();
-            return [2];
+            e.captcha_obj = n.sent()
+            return [2]
         }
-      });
-    });
-  };
+      })
+    })
+  }
   e.prototype.show = function () {
     if (this.init_options && "bind" !== this.init_options.product) {
-      this.captcha_obj.appendTo("#" + this.dom_id);
+      this.captcha_obj.appendTo("#" + this.dom_id)
     } else {
-      this.captcha_obj.verify();
+      this.captcha_obj.verify()
     }
-  };
+  }
   e.prototype.get_ticket = function () {
     return p(this, undefined, undefined, function () {
-      var t;
+      var t
       return l(this, function (e) {
-        t = this.captcha_obj.getValidate();
+        t = this.captcha_obj.getValidate()
         return [2, b.dispatch_request({
           url: c.CHECK_AND_GET_GEETEST_TICKET,
           method: "post",
@@ -2277,162 +2277,162 @@ var dt = function (t) {
             geetest_seccode: t.geetest_seccode,
             appid: this.product_id
           }
-        })];
-      });
-    });
-  };
+        })]
+      })
+    })
+  }
   e.create = function (t, n) {
-    var r = t.dom_id;
-    var o = t.success_callback;
-    var i = t.fail_callback;
-    var c = t.close_callback;
-    var s = t.product_id;
-    var a = t.init_options;
+    var t$dom_id = t.dom_id
+    var t$success_callback = t.success_callback
+    var t$fail_callback = t.fail_callback
+    var t$close_callback = t.close_callback
+    var t$product_id = t.product_id
+    var t$init_options = t.init_options
     return new e({
-      product_id: s || n.appid,
-      dom_id: r,
-      success_callback: o,
-      fail_callback: i,
-      close_callback: c,
-      init_options: a
-    });
-  };
-  return e;
-}(st);
+      product_id: t$product_id || n.appid,
+      dom_id: t$dom_id,
+      success_callback: t$success_callback,
+      fail_callback: t$fail_callback,
+      close_callback: t$close_callback,
+      init_options: t$init_options
+    })
+  }
+  return e
+}(st)
 var ht = {
   product: "popup",
   width: 300
-};
+}
 var pt = function (t) {
   function e(e) {
-    var n = t.call(this, e) || this;
-    n.instance = new Object();
-    n.options = e;
-    n.instance = new Object();
-    return n;
+    var n = t.call(this, e) || this
+    n.instance = new Object()
+    n.options = e
+    n.instance = new Object()
+    return n
   }
-  d(e, t);
+  d(e, t)
   e.prototype.init = function () {
     return p(this, undefined, undefined, function () {
-      var t;
+      var t
       return l(this, function (e) {
         switch (e.label) {
           case 0:
-            return "undefined" !== typeof initSMCaptcha ? [3, 2] : [4, z(at.NEXTDATA, "SM_GT")];
+            return "undefined" !== typeof initSMCaptcha ? [3, 2] : [4, z(at.NEXTDATA, "SM_GT")]
           case 1:
-            e.sent();
-            e.label = 2;
+            e.sent()
+            e.label = 2
           case 2:
-            t = this;
-            return [4, this.init_smCaptcha()];
+            t = this
+            return [4, this.init_smCaptcha()]
           case 3:
-            t.instance = e.sent();
-            return [2];
+            t.instance = e.sent()
+            return [2]
         }
-      });
-    });
-  };
+      })
+    })
+  }
   e.prototype.init_smCaptcha = function () {
     return p(this, undefined, undefined, function () {
-      var t;
-      var e;
-      var n;
-      var r;
-      var o;
-      var i;
-      var c = this;
+      var /* [auto-meaningful-name] */this$options
+      var /* [auto-meaningful-name] */this$options$dom_id
+      var /* [auto-meaningful-name] */this$options$success_callback
+      var /* [auto-meaningful-name] */this$options$fail_callback
+      var /* [auto-meaningful-name] */this$options$close_callback
+      var /* [auto-meaningful-name] */this$options$init_options
+      var c = this
       return l(this, function (s) {
-        t = this.options;
-        e = t.dom_id;
-        n = t.success_callback;
-        r = t.fail_callback;
-        o = t.close_callback;
-        i = t.init_options;
+        this$options = this.options
+        this$options$dom_id = this$options.dom_id
+        this$options$success_callback = this$options.success_callback
+        this$options$fail_callback = this$options.fail_callback
+        this$options$close_callback = this$options.close_callback
+        this$options$init_options = this$options.init_options
         return [2, new Promise(function (t, s) {
           initSMCaptcha(h(h(h({
-            appendTo: e && "#" + e,
+            appendTo: this$options$dom_id && "#" + this$options$dom_id,
             appid: c.options.product_id
-          }, ht), i), {
+          }, ht), this$options$init_options), {
             organization: "sXoTexBWs1dfyzt8eTev"
           }), function (e) {
             if (!e) {
-              throw new Error("shumei captcha init failed message: can not get instance");
+              throw new Error("shumei captcha init failed message: can not get instance")
             }
             e.onReady(function () {
-              t(e);
-            });
+              t(e)
+            })
             e.onSuccess(function (t) {
               return p(c, undefined, undefined, function () {
-                var e;
-                var o;
+                var e
+                var o
                 return l(this, function (i) {
                   switch (i.label) {
                     case 0:
                       if (!t.pass) {
-                        return [3, 5];
+                        return [3, 5]
                       }
-                      i.label = 1;
+                      i.label = 1
                     case 1:
-                      i.trys.push([1, 3,, 4]);
-                      return [4, this.get_ticket()];
+                      i.trys.push([1, 3,, 4])
+                      return [4, this.get_ticket()]
                     case 2:
-                      e = i.sent();
-                      if (!(null === n || undefined === n)) {
-                        n(e.data.ticket, this.options.product_id || "");
+                      e = i.sent()
+                      if (!(null === this$options$success_callback || undefined === this$options$success_callback)) {
+                        this$options$success_callback(e.data.ticket, this.options.product_id || "")
                       }
-                      return [3, 4];
+                      return [3, 4]
                     case 3:
-                      o = i.sent();
-                      if (!(null === r || undefined === r)) {
-                        r(ut("success_callback triggerd fatal error", o));
+                      o = i.sent()
+                      if (!(null === this$options$fail_callback || undefined === this$options$fail_callback)) {
+                        this$options$fail_callback(ut("success_callback triggerd fatal error", o))
                       }
-                      return [3, 4];
+                      return [3, 4]
                     case 4:
-                      return [3, 6];
+                      return [3, 6]
                     case 5:
-                      if (!(null === r || undefined === r)) {
-                        r(ut("incorrect captcha checking", t));
+                      if (!(null === this$options$fail_callback || undefined === this$options$fail_callback)) {
+                        this$options$fail_callback(ut("incorrect captcha checking", t))
                       }
-                      i.label = 6;
+                      i.label = 6
                     case 6:
-                      return [2];
+                      return [2]
                   }
-                });
-              });
-            });
+                })
+              })
+            })
             e.onError(function (t, e) {
               var n = ut("some error occurred", {
                 errType: t,
                 errMsg: e
-              });
-              if (!(null === r || undefined === r)) {
-                r(n);
+              })
+              if (!(null === this$options$fail_callback || undefined === this$options$fail_callback)) {
+                this$options$fail_callback(n)
               }
-              s(n);
-            });
+              s(n)
+            })
             e.onClose(function () {
-              if (!(null === o || undefined === o)) {
-                o();
+              if (!(null === this$options$close_callback || undefined === this$options$close_callback)) {
+                this$options$close_callback()
               }
-            });
-          });
-        })];
-      });
-    });
-  };
+            })
+          })
+        })]
+      })
+    })
+  }
   e.prototype.show = function () {
-    var t = this.options.init_options;
-    if (this.options && ["embed", "float"].includes((null === t || undefined === t ? undefined : t.product) || "")) {
-      this.instance.appendTo("#" + this.options.dom_id);
+    var this$options$init_options = this.options.init_options
+    if (this.options && ["embed", "float"].includes((null === this$options$init_options || undefined === this$options$init_options ? undefined : this$options$init_options.product) || "")) {
+      this.instance.appendTo("#" + this.options.dom_id)
     } else {
-      this.instance.verify();
+      this.instance.verify()
     }
-  };
+  }
   e.prototype.get_ticket = function (t) {
     return p(this, undefined, undefined, function () {
-      var t;
+      var t
       return l(this, function (e) {
-        t = this.instance.getValidate();
+        t = this.instance.getValidate()
         return [2, b.dispatch_request({
           url: c.CHECK_AND_GET_NEXTDATA_TICKET,
           method: "post",
@@ -2440,117 +2440,117 @@ var pt = function (t) {
             rid: t.rid,
             appid: this.options.product_id
           }
-        })];
-      });
-    });
-  };
+        })]
+      })
+    })
+  }
   e.create = function (t, n) {
-    var r = t.dom_id;
-    var o = t.success_callback;
-    var i = t.fail_callback;
-    var c = t.close_callback;
-    var s = t.init_options;
+    var t$dom_id = t.dom_id
+    var t$success_callback = t.success_callback
+    var t$fail_callback = t.fail_callback
+    var t$close_callback = t.close_callback
+    var t$init_options = t.init_options
     return new e({
       product_id: t.product_id || n.appid,
-      dom_id: r,
-      success_callback: o,
-      fail_callback: i,
-      close_callback: c,
-      init_options: s
-    });
-  };
-  return e;
-}(st);
-var lt = {};
+      dom_id: t$dom_id,
+      success_callback: t$success_callback,
+      fail_callback: t$fail_callback,
+      close_callback: t$close_callback,
+      init_options: t$init_options
+    })
+  }
+  return e
+}(st)
+var lt = {}
 var Et = function (t) {
   function e(e) {
-    var n = t.call(this, e) || this;
-    n.product_id = e.product_id || "";
-    n.dom_id = e.dom_id;
-    n.success_callback = e.success_callback;
-    n.fail_callback = e.fail_callback;
-    n.close_callback = e.close_callback;
-    n.request = new O();
-    return n;
+    var n = t.call(this, e) || this
+    n.product_id = e.product_id || ""
+    n.dom_id = e.dom_id
+    n.success_callback = e.success_callback
+    n.fail_callback = e.fail_callback
+    n.close_callback = e.close_callback
+    n.request = new O()
+    return n
   }
-  d(e, t);
+  d(e, t)
   e.prototype.init = function () {
     return p(this, undefined, undefined, function () {
       return l(this, function (t) {
         switch (t.label) {
           case 0:
-            return "undefined" !== typeof TencentCaptcha ? [3, 2] : [4, z(at.TENCENT, "TENCENT_GT")];
+            return "undefined" !== typeof TencentCaptcha ? [3, 2] : [4, z(at.TENCENT, "TENCENT_GT")]
           case 1:
-            t.sent();
-            t.label = 2;
+            t.sent()
+            t.label = 2
           case 2:
-            return [4, this.initTencentCaptcha(this.dom_id)];
+            return [4, this.initTencentCaptcha(this.dom_id)]
           case 3:
-            t.sent();
-            return [2];
+            t.sent()
+            return [2]
         }
-      });
-    });
-  };
+      })
+    })
+  }
   e.prototype.initTencentCaptcha = function (t) {
     return p(this, undefined, undefined, function () {
-      var e;
-      var n = this;
+      var e
+      var n = this
       return l(this, function (r) {
         e = function (t) {
           return p(n, undefined, undefined, function () {
-            var e;
-            var n;
+            var e
+            var n
             return l(this, function (r) {
               switch (r.label) {
                 case 0:
                   if (null == t) {
-                    return [2];
+                    return [2]
                   }
                   if (0 !== t.ret) {
-                    return [3, 5];
+                    return [3, 5]
                   }
-                  r.label = 1;
+                  r.label = 1
                 case 1:
-                  r.trys.push([1, 3,, 4]);
-                  return [4, this.get_ticket(t.ticket, t.randstr)];
+                  r.trys.push([1, 3,, 4])
+                  return [4, this.get_ticket(t.ticket, t.randstr)]
                 case 2:
-                  e = r.sent();
-                  this.success_callback(e.data.ticket, this.product_id);
-                  return [3, 4];
+                  e = r.sent()
+                  this.success_callback(e.data.ticket, this.product_id)
+                  return [3, 4]
                 case 3:
-                  n = r.sent();
+                  n = r.sent()
                   if (this.fail_callback) {
-                    this.fail_callback(n);
+                    this.fail_callback(n)
                   }
-                  return [3, 4];
+                  return [3, 4]
                 case 4:
-                  return [3, 6];
+                  return [3, 6]
                 case 5:
                   if (1 === t.ret) {
                     if (this.fail_callback) {
-                      this.fail_callback();
+                      this.fail_callback()
                     }
                   } else {
                     if (2 === t.ret && this.close_callback) {
-                      this.close_callback();
+                      this.close_callback()
                     }
                   }
-                  r.label = 6;
+                  r.label = 6
                 case 6:
-                  return [2];
+                  return [2]
               }
-            });
-          });
-        };
-        this.captcha_obj = t ? new TencentCaptcha(document.getElementById(t), this.product_id, e, lt) : new TencentCaptcha(this.product_id, e, lt);
-        return [2];
-      });
-    });
-  };
+            })
+          })
+        }
+        this.captcha_obj = t ? new TencentCaptcha(document.getElementById(t), this.product_id, e, lt) : new TencentCaptcha(this.product_id, e, lt)
+        return [2]
+      })
+    })
+  }
   e.prototype.show = function () {
-    this.captcha_obj.show();
-  };
+    this.captcha_obj.show()
+  }
   e.prototype.get_ticket = function (t, e) {
     return p(this, undefined, undefined, function () {
       return l(this, function (n) {
@@ -2562,163 +2562,163 @@ var Et = function (t) {
             tencentTicket: t,
             randomStr: e
           }
-        })];
-      });
-    });
-  };
+        })]
+      })
+    })
+  }
   e.create = function (t, n) {
-    var r = t.dom_id;
-    var o = t.success_callback;
-    var i = t.fail_callback;
-    var c = t.close_callback;
+    var t$dom_id = t.dom_id
+    var t$success_callback = t.success_callback
+    var t$fail_callback = t.fail_callback
+    var t$close_callback = t.close_callback
     return new e({
       product_id: t.product_id || n.appid,
-      dom_id: r,
-      success_callback: o,
-      fail_callback: i,
-      close_callback: c
-    });
-  };
-  return e;
-}(st);
+      dom_id: t$dom_id,
+      success_callback: t$success_callback,
+      fail_callback: t$fail_callback,
+      close_callback: t$close_callback
+    })
+  }
+  return e
+}(st)
 var ft = {
   mode: "popup",
   width: 300
-};
-var Tt = J("mask");
-var Nt = J("inner");
+}
+var Tt = J("mask")
+var Nt = J("inner")
 var vt = function (t) {
   function e(e) {
-    var n = t.call(this, e) || this;
-    n.instance = new Object();
-    n.options = e;
-    n.instance = new Object();
+    var n = t.call(this, e) || this
+    n.instance = new Object()
+    n.options = e
+    n.instance = new Object()
     var r = n;
     (function () {
-      var t;
-      var e;
+      var /* [auto-meaningful-name] */r$options
+      var e
       p(this, undefined, undefined, function () {
-        var n;
+        var n
         return l(this, function (o) {
           switch (o.label) {
             case 0:
-              n = 0 - ((null === (e = null === (t = r.options) || undefined === t ? undefined : t.init_options) || undefined === e ? undefined : e.width) || ft.width) / 2;
+              n = 0 - ((null === (e = null === (r$options = r.options) || undefined === r$options ? undefined : r$options.init_options) || undefined === e ? undefined : e.width) || ft.width) / 2
               return r.options.dom_id || document.getElementById(Tt) ? [3, 2] : [4, $("div", {
                 id: Tt,
                 innerHTML: "<div style=\"position: absolute; width: 2px; height: 2px; left: 50%; top: 50%; transform: translate(-50%, -50%); margin: " + n + "px 0 0 " + n + "px\" id=\"" + Nt + "\"/>"
-              }, "position: fixed;\n          left: 0px;\n          top: 0px;\n          height: 100vh;\n          width: 100vw;\n          background: rgba(0, 0, 0, .5);\n          z-index: 999;")];
+              }, "position: fixed;\n          left: 0px;\n          top: 0px;\n          height: 100vh;\n          width: 100vw;\n          background: rgba(0, 0, 0, .5);\n          z-index: 999;")]
             case 1:
-              o.sent();
-              o.label = 2;
+              o.sent()
+              o.label = 2
             case 2:
-              return [2];
+              return [2]
           }
-        });
-      });
-    })();
-    return n;
+        })
+      })
+    })()
+    return n
   }
-  d(e, t);
+  d(e, t)
   e.prototype.init = function () {
     return p(this, undefined, undefined, function () {
-      var t;
+      var t
       return l(this, function (e) {
         switch (e.label) {
           case 0:
-            return "undefined" !== typeof initNECaptcha ? [3, 2] : [4, z(at.NETEASE, "NETEASE_GT")];
+            return "undefined" !== typeof initNECaptcha ? [3, 2] : [4, z(at.NETEASE, "NETEASE_GT")]
           case 1:
-            e.sent();
-            e.label = 2;
+            e.sent()
+            e.label = 2
           case 2:
-            t = this;
-            return [4, this.init_NECaptcha()];
+            t = this
+            return [4, this.init_NECaptcha()]
           case 3:
-            t.instance = e.sent();
-            this.show();
-            return [2];
+            t.instance = e.sent()
+            this.show()
+            return [2]
         }
-      });
-    });
-  };
+      })
+    })
+  }
   e.prototype.init_NECaptcha = function () {
     return p(this, undefined, undefined, function () {
-      var t;
-      var e;
-      var n;
-      var r;
-      var o;
-      var i;
-      var c = this;
+      var /* [auto-meaningful-name] */this$options
+      var /* [auto-meaningful-name] */this$options$dom_id
+      var /* [auto-meaningful-name] */this$options$success_callback
+      var /* [auto-meaningful-name] */this$options$fail_callback
+      var /* [auto-meaningful-name] */this$options$close_callback
+      var /* [auto-meaningful-name] */this$options$init_options
+      var c = this
       return l(this, function (s) {
-        t = this.options;
-        e = t.dom_id;
-        n = t.success_callback;
-        r = t.fail_callback;
-        o = t.close_callback;
-        i = t.init_options;
+        this$options = this.options
+        this$options$dom_id = this$options.dom_id
+        this$options$success_callback = this$options.success_callback
+        this$options$fail_callback = this$options.fail_callback
+        this$options$close_callback = this$options.close_callback
+        this$options$init_options = this$options.init_options
         return [2, new Promise(function (t, s) {
           initNECaptcha(h(h(h({
             captchaId: c.options.product_id,
-            element: e ? "#" + e : "#" + Nt,
-            appendTo: e ? "#" + e : "#" + Nt
-          }, ft), i), {
+            element: this$options$dom_id ? "#" + this$options$dom_id : "#" + Nt,
+            appendTo: this$options$dom_id ? "#" + this$options$dom_id : "#" + Nt
+          }, ft), this$options$init_options), {
             onVerify: function (t, e) {
               return p(c, undefined, undefined, function () {
-                var o;
+                var o
                 return l(this, function (i) {
                   switch (i.label) {
                     case 0:
-                      return t ? (null === r || undefined === r || r(ut("incorrect captcha checking", t)), [3, 3]) : [3, 1];
+                      return t ? (null === this$options$fail_callback || undefined === this$options$fail_callback || this$options$fail_callback(ut("incorrect captcha checking", t)), [3, 3]) : [3, 1]
                     case 1:
-                      return [4, this.get_ticket(e.validate)];
+                      return [4, this.get_ticket(e.validate)]
                     case 2:
-                      o = i.sent();
-                      if (!(null === n || undefined === n)) {
-                        n(o.data.ticket, this.options.product_id || "");
+                      o = i.sent()
+                      if (!(null === this$options$success_callback || undefined === this$options$success_callback)) {
+                        this$options$success_callback(o.data.ticket, this.options.product_id || "")
                       }
-                      this.clearMask();
-                      i.label = 3;
+                      this.clearMask()
+                      i.label = 3
                     case 3:
-                      return [2];
+                      return [2]
                   }
-                });
-              });
+                })
+              })
             },
             onError: function (t) {
-              if (!(null === r || undefined === r)) {
-                r(ut("fatal error occurred", t));
+              if (!(null === this$options$fail_callback || undefined === this$options$fail_callback)) {
+                this$options$fail_callback(ut("fatal error occurred", t))
               }
             },
             onClose: function () {
-              if (!(null === o || undefined === o)) {
-                o();
+              if (!(null === this$options$close_callback || undefined === this$options$close_callback)) {
+                this$options$close_callback()
               }
-              c.clearMask();
+              c.clearMask()
             }
           }), function (e) {
-            t(e);
+            t(e)
           }, function (t) {
-            var e = ut("some error occurred", t);
-            if (!(null === r || undefined === r)) {
-              r(e);
+            var e = ut("some error occurred", t)
+            if (!(null === this$options$fail_callback || undefined === this$options$fail_callback)) {
+              this$options$fail_callback(e)
             }
-            s(e);
-          });
-        })];
-      });
-    });
-  };
+            s(e)
+          })
+        })]
+      })
+    })
+  }
   e.prototype.show = function () {
-    this.instance.popUp();
-  };
+    this.instance.popUp()
+  }
   e.prototype.clearMask = function () {
-    var t = document.getElementById(Tt);
+    var t = document.getElementById(Tt)
     if (t) {
       setTimeout(function () {
-        document.body.removeChild(t);
-      }, 600);
+        document.body.removeChild(t)
+      }, 600)
     }
-  };
+  }
   e.prototype.get_ticket = function (t) {
     return p(this, undefined, undefined, function () {
       return l(this, function (e) {
@@ -2729,144 +2729,144 @@ var vt = function (t) {
             validate: t,
             appid: this.options.product_id
           }
-        })];
-      });
-    });
-  };
+        })]
+      })
+    })
+  }
   e.create = function (t, n) {
-    var r = t.dom_id;
-    var o = t.success_callback;
-    var i = t.fail_callback;
-    var c = t.close_callback;
-    var s = t.init_options;
+    var t$dom_id = t.dom_id
+    var t$success_callback = t.success_callback
+    var t$fail_callback = t.fail_callback
+    var t$close_callback = t.close_callback
+    var t$init_options = t.init_options
     return new e({
       product_id: t.product_id || n.appid,
-      dom_id: r,
-      success_callback: o,
-      fail_callback: i,
-      close_callback: c,
-      init_options: s
-    });
-  };
-  return e;
-}(st);
+      dom_id: t$dom_id,
+      success_callback: t$success_callback,
+      fail_callback: t$fail_callback,
+      close_callback: t$close_callback,
+      init_options: t$init_options
+    })
+  }
+  return e
+}(st)
 var At = {
   appkey: "FFFF00000000017E8E25",
   scene: "nc_login_h5"
-};
+}
 var mt = function (t) {
   function e(e) {
-    var n = t.call(this, e) || this;
+    var n = t.call(this, e) || this
     n.handleOnCancel = function () {
       if (n.close_callback) {
-        n.close_callback();
+        n.close_callback()
       }
-      n.clearMask();
-    };
+      n.clearMask()
+    }
     n.initNCCaptcha = function (t) {
       AWSC.use("nc", function (e, r) {
         window.nc = r.init(h(h({}, t), {
           renderTo: "aliyun_captcha_dom_id",
           success: function (t) {
             return p(n, undefined, undefined, function () {
-              var e;
+              var e
               return l(this, function (n) {
                 switch (n.label) {
                   case 0:
-                    return [4, this.get_ticket(t)];
+                    return [4, this.get_ticket(t)]
                   case 1:
                     if (200 === (e = n.sent()).status) {
                       if (!(null === this || undefined === this)) {
-                        this.success_callback(e.data.ticket, e.data.appid);
+                        this.success_callback(e.data.ticket, e.data.appid)
                       }
                       if (!(null === this || undefined === this)) {
-                        this.clearMask();
+                        this.clearMask()
                       }
                     } else {
                       if (this.fail_callback) {
-                        this.fail_callback(e);
+                        this.fail_callback(e)
                       }
                     }
-                    return [2];
+                    return [2]
                 }
-              });
-            });
+              })
+            })
           },
           fail: function (t) {
             if (n.fail_callback) {
-              n.fail_callback(t);
+              n.fail_callback(t)
             }
-            throw new Error("验证失败");
+            throw new Error("验证失败")
           },
           error: function (t) {
             if (n.fail_callback) {
-              n.fail_callback(t);
+              n.fail_callback(t)
             }
-            throw new Error("验证异常");
+            throw new Error("验证异常")
           }
-        }));
-      });
-    };
-    n.product_id = e.product_id || "";
-    n.dom_id = e.dom_id;
-    n.success_callback = e.success_callback;
-    n.fail_callback = e.fail_callback;
-    n.close_callback = e.close_callback;
-    n.request = new O();
-    return n;
+        }))
+      })
+    }
+    n.product_id = e.product_id || ""
+    n.dom_id = e.dom_id
+    n.success_callback = e.success_callback
+    n.fail_callback = e.fail_callback
+    n.close_callback = e.close_callback
+    n.request = new O()
+    return n
   }
-  d(e, t);
+  d(e, t)
   e.prototype.init = function () {
     return p(this, undefined, undefined, function () {
       return l(this, function (t) {
         switch (t.label) {
           case 0:
-            return "undefined" !== typeof AWSC ? [3, 2] : [4, z(at.ALIYUN, "ALIYUN_GT")];
+            return "undefined" !== typeof AWSC ? [3, 2] : [4, z(at.ALIYUN, "ALIYUN_GT")]
           case 1:
-            t.sent();
-            t.label = 2;
+            t.sent()
+            t.label = 2
           case 2:
-            return [4, this.initAliyunCaptcha()];
+            return [4, this.initAliyunCaptcha()]
           case 3:
-            t.sent();
-            return [2];
+            t.sent()
+            return [2]
         }
-      });
-    });
-  };
+      })
+    })
+  }
   e.prototype.initAliyunCaptcha = function () {
     return p(this, undefined, undefined, function () {
-      var t;
+      var t
       return l(this, function (e) {
         switch (e.label) {
           case 0:
             return document.getElementById("aliyun_captcha_dom_id") ? [3, 2] : [4, $("div", {
               id: "aliyun_captcha_dom_wrapper_id",
               innerHTML: "\n            <div\n              style=\"position: absolute; display: flex; flex-direction: column; padding-top: 20px; justify-content: flex-start; align-items: center; width: 400px; height: 130px; background-color: #fff; left: 50%; top: 50%; transform: translate(-50%, -50%);\"\n            >\n              <div style=\"font-size: 20px\">拖动下方滑块完成验证</div>\n              <div\n                style=\"display: flex; justify-content: center; align-items: center; bottom: 20px\"\n                id=\"aliyun_captcha_dom_id\"\n              >\n              </div>\n              <div id=\"aliyun_captcha_dom_close_id\" style=\"cursor: pointer; color: blue; position: absolute; top: 20px; right: 20px\">关闭</div>\n            </div>\n          "
-            }, "position: fixed;\n        left: 0px;\n        top: 0px;\n        height: 100vh;\n        width: 100vw;\n        background: rgba(0, 0, 0, .5);\n        z-index: 999;")];
+            }, "position: fixed;\n        left: 0px;\n        top: 0px;\n        height: 100vh;\n        width: 100vw;\n        background: rgba(0, 0, 0, .5);\n        z-index: 999;")]
           case 1:
-            e.sent();
+            e.sent()
             if (!(null === (t = document.getElementById("aliyun_captcha_dom_close_id")) || undefined === t)) {
-              t.addEventListener("click", this.handleOnCancel);
+              t.addEventListener("click", this.handleOnCancel)
             }
-            e.label = 2;
+            e.label = 2
           case 2:
-            return [2];
+            return [2]
         }
-      });
-    });
-  };
+      })
+    })
+  }
   e.prototype.clearMask = function () {
-    var t = document.getElementById("aliyun_captcha_dom_wrapper_id");
+    var t = document.getElementById("aliyun_captcha_dom_wrapper_id")
     if (t) {
       setTimeout(function () {
-        document.body.removeChild(t);
-      }, 600);
+        document.body.removeChild(t)
+      }, 600)
     }
-  };
+  }
   e.prototype.show = function () {
-    this.initNCCaptcha(At);
-  };
+    this.initNCCaptcha(At)
+  }
   e.prototype.get_ticket = function (t) {
     return p(this, undefined, undefined, function () {
       return l(this, function (e) {
@@ -2877,42 +2877,42 @@ var mt = function (t) {
             appKey: At.appkey,
             scene: At.scene
           }, t)
-        })];
-      });
-    });
-  };
+        })]
+      })
+    })
+  }
   e.create = function (t, n) {
-    var r = t.dom_id;
-    var o = t.success_callback;
-    var i = t.fail_callback;
-    var c = t.close_callback;
+    var t$dom_id = t.dom_id
+    var t$success_callback = t.success_callback
+    var t$fail_callback = t.fail_callback
+    var t$close_callback = t.close_callback
     return new e({
       product_id: t.product_id || n.appid,
-      dom_id: r,
-      success_callback: o,
-      fail_callback: i,
-      close_callback: c
-    });
-  };
-  return e;
-}(st);
+      dom_id: t$dom_id,
+      success_callback: t$success_callback,
+      fail_callback: t$fail_callback,
+      close_callback: t$close_callback
+    })
+  }
+  return e
+}(st)
 var It = function () {
   function t(t) {
-    this.pid = t.pid;
+    this.pid = t.pid
   }
   t.prototype.get_rule_from_server = function (t, e) {
     if (undefined === e) {
-      e = "";
+      e = ""
     }
     return p(this, undefined, undefined, function () {
-      var n;
-      var r;
+      var n
+      var r
       return l(this, function (o) {
         switch (o.label) {
           case 0:
-            return [4, z(at.FINGER_PRINT_2, "finger-print", 10)];
+            return [4, z(at.FINGER_PRINT_2, "finger-print", 10)]
           case 1:
-            o.sent();
+            o.sent()
             return [4, p(undefined, undefined, undefined, function () {
               return l(this, function (t) {
                 return [2, new Promise(function (t) {
@@ -2920,25 +2920,25 @@ var It = function () {
                     if ("undefined" !== typeof Fingerprint2) {
                       Fingerprint2.get(function (e) {
                         var n = e.map(function (t) {
-                          return t.value;
-                        });
-                        t(Fingerprint2.x64hash128(n.join(""), 31));
-                      });
+                          return t.value
+                        })
+                        t(Fingerprint2.x64hash128(n.join(""), 31))
+                      })
                     } else {
-                      t("");
+                      t("")
                     }
-                  };
-                  if (window.requestIdleCallback) {
-                    window.requestIdleCallback(e);
-                  } else {
-                    setTimeout(e, 500);
                   }
-                })];
-              });
-            })];
+                  if (window.requestIdleCallback) {
+                    window.requestIdleCallback(e)
+                  } else {
+                    setTimeout(e, 500)
+                  }
+                })]
+              })
+            })]
           case 2:
-            n = o.sent();
-            r = "" + new Date().getTime() / 1e3;
+            n = o.sent()
+            r = "" + new Date().getTime() / 1e3
             return [4, b.dispatch_request({
               url: c.GET_RULE,
               method: "post",
@@ -2949,96 +2949,96 @@ var It = function () {
                 deviceId: n,
                 timestamp: parseInt(r, 10)
               }
-            })];
+            })]
           case 3:
-            return [2, o.sent().data];
+            return [2, o.sent().data]
         }
-      });
-    });
-  };
+      })
+    })
+  }
   t.prototype.get_captcha = function (t) {
-    var e;
+    var e
     return p(this, undefined, undefined, function () {
-      var n;
-      var r;
-      var o;
-      var i;
-      var c;
-      var s;
-      var a;
-      var u;
-      var _;
+      var /* [auto-meaningful-name] */t$identity
+      var /* [auto-meaningful-name] */t$scene
+      var o
+      var /* [auto-meaningful-name] */t$success_callback
+      var /* [auto-meaningful-name] */t$fail_callback
+      var s
+      var /* [auto-meaningful-name] */s$rule
+      var /* [auto-meaningful-name] */s$appid
+      var /* [auto-meaningful-name] */s$ticket
       return l(this, function (d) {
         switch (d.label) {
           case 0:
-            n = t.identity;
-            r = t.scene;
-            o = undefined === r ? "" : r;
-            i = t.success_callback;
-            c = t.fail_callback;
-            return [4, this.get_rule_from_server(n, o)];
+            t$identity = t.identity
+            t$scene = t.scene
+            o = undefined === t$scene ? "" : t$scene
+            t$success_callback = t.success_callback
+            t$fail_callback = t.fail_callback
+            return [4, this.get_rule_from_server(t$identity, o)]
           case 1:
             if (s = d.sent()) {
-              a = s.rule;
-              u = s.appid;
-              _ = s.ticket;
-              if (!Object.keys(at).includes(a)) {
-                return [2, new Ct(_, i, c)];
+              s$rule = s.rule
+              s$appid = s.appid
+              s$ticket = s.ticket
+              if (!Object.keys(at).includes(s$rule)) {
+                return [2, new Ct(s$ticket, t$success_callback, t$fail_callback)]
               }
-              if (u) {
-                return [2, null === (e = gt(a)) || undefined === e ? undefined : e.create(t, {
-                  appid: u
-                })];
+              if (s$appid) {
+                return [2, null === (e = gt(s$rule)) || undefined === e ? undefined : e.create(t, {
+                  appid: s$appid
+                })]
               }
             }
-            return [2];
+            return [2]
         }
-      });
-    });
-  };
-  return t;
-}();
+      })
+    })
+  }
+  return t
+}()
 var Ct = function () {
   function t(t, e, n) {
-    this.ticket = t;
-    this.success_callback = e;
-    this.fail_callback = n;
+    this.ticket = t
+    this.success_callback = e
+    this.fail_callback = n
   }
   t.prototype.init = function () {
     return p(this, undefined, undefined, function () {
       return l(this, function (t) {
-        console.log("DisableCaptcha init");
-        return [2];
-      });
-    });
-  };
+        console.log("DisableCaptcha init")
+        return [2]
+      })
+    })
+  }
   t.prototype.show = function () {
     if (this.ticket) {
-      this.success_callback(this.ticket, "");
+      this.success_callback(this.ticket, "")
     } else {
       if (this.fail_callback) {
-        this.fail_callback();
+        this.fail_callback()
       }
     }
-  };
-  return t;
-}();
+  }
+  return t
+}()
 var gt = function (t) {
   switch (t) {
     case "GEETEST":
-      return dt;
+      return dt
     case "TENCENT":
-      return Et;
+      return Et
     case "NETEASE":
-      return vt;
+      return vt
     case "NEXTDATA":
-      return pt;
+      return pt
     case "ALIYUN":
-      return mt;
+      return mt
     case "DEFAULT":
-      return Ct;
+      return Ct
   }
-};
+}
 var Ot = Object.freeze({
   __proto__: null,
   GeetestCaptcha: dt,
@@ -3047,29 +3047,29 @@ var Ot = Object.freeze({
   NeteaseCaptcha: vt,
   CodemaoCaptcha: It,
   DisableCaptcha: Ct
-});
+})
 function bt(t) {
-  var e = t.env;
-  var n = t.domain;
-  t.auth_version;
-  t.pid;
-  t.client_id;
-  t.requestTimeout;
-  var r = t.host;
-  if (e) {
-    if (o[e]) {
+  var t$env = t.env
+  var t$domain = t.domain
+  t.auth_version
+  t.pid
+  t.client_id
+  t.requestTimeout
+  var t$host = t.host
+  if (t$env) {
+    if (o[t$env]) {
       (function (t) {
-        I = t;
-      })(o[e]);
-      if (r) {
-        C().host = r;
+        o$prod = t
+      })(o[t$env])
+      if (t$host) {
+        C().host = t$host
       }
     } else {
-      console.warn("Unknown env \"" + e + "\", config has been set to default value.");
+      console.warn("Unknown env \"" + t$env + "\", config has been set to default value.")
     }
   }
-  if (undefined !== n) {
-    C().domain = n;
+  if (undefined !== t$domain) {
+    C().domain = t$domain
   }
-  A = t;
+  A = t
 }

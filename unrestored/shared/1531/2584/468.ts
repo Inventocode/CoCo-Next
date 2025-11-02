@@ -11,4 +11,4 @@ module.exports = {
   delete: "ContextMenu_delete__3euYT",
   screens: "ContextMenu_screens__ZT88-",
   screenSnapshot: "ContextMenu_screenSnapshot__16O01"
-};
+}

@@ -5,33 +5,33 @@
  */
 
 module.exports = function () {
-  var e = document.getSelection();
+  var e = document.getSelection()
   if (!e.rangeCount) {
-    return function () {};
+    return function () {}
   }
-  for (var t = document.activeElement, n = [], r = 0; r < e.rangeCount; r++) {
-    n.push(e.getRangeAt(r));
+  for (var document$activeElement = document.activeElement, n = [], r = 0; r < e.rangeCount; r++) {
+    n.push(e.getRangeAt(r))
   }
-  switch (t.tagName.toUpperCase()) {
+  switch (document$activeElement.tagName.toUpperCase()) {
     case "INPUT":
     case "TEXTAREA":
-      t.blur();
-      break;
+      document$activeElement.blur()
+      break
     default:
-      t = null;
+      document$activeElement = null
   }
-  e.removeAllRanges();
+  e.removeAllRanges()
   return function () {
     if ("Caret" === e.type) {
-      e.removeAllRanges();
+      e.removeAllRanges()
     }
     if (!e.rangeCount) {
       n.forEach(function (t) {
-        e.addRange(t);
-      });
+        e.addRange(t)
+      })
     }
-    if (t) {
-      t.focus();
+    if (document$activeElement) {
+      document$activeElement.focus()
     }
-  };
-};
+  }
+}

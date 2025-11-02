@@ -4,4 +4,4 @@
  * 模块 ID：650
  */
 
-module.exports = JSON.parse("{\"a\":\"1.22.0-0\"}");
+module.exports = JSON.parse("{\"a\":\"1.22.0-0\"}")

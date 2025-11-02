@@ -53,28 +53,29 @@ git clone https://github.com/glacier-studio/CoCo-Source-Code-Plan.git
 $ npm install --legacy-peer-deps
 ```
 
-### 2.解包代码
+### 2.自动还原代码
 
-仓库中已包含解包后的代码，无需解包即可使用。
+自动还原代码指使用自动化工具还原代码，包括以下几个步骤：
 
-当然你也可以重新解包代码。
+- 解包
+- 转换
+- 格式化
 
-解包代码的设备性能要求：
+仓库中已包含自动还原后的代码，无需还原即可使用。
+
+当然你也可以重新自动还原代码。
+
+自动还原代码的设备性能要求：
 
 - 有 4GiB 的行运行内存可用。
 
 提示：如果设备内存不多，Node.js 的内存限制会比较小，可以通过设置环境变量 `NODE_OPTIONS = "--max_old_space_size=4096"` 来调大内存限制。
 
 ```sh
-$ npm run unpack:home
-$ npm run unpack:shared
-$ npm run unpack:editor
-$ npm run unpack:editor-service-worker
-$ npm run unpack:editor-player
-$ npm run unpack:player
+$ npm run auto-reverse
 ```
 
-解包后有些代码有些小问题，请自行解决。
+自动还原后有些代码有些小问题，请自行解决。
 
 ### 3.以开发模式打包运行解包后的代码
 

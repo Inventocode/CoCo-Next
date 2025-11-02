@@ -53,4 +53,4 @@ module.exports = {
   selected: "style_selected__2n9rW",
   changeImageWrapper: "style_changeImageWrapper__2ewst",
   imageResizeMode: "style_imageResizeMode__15IPP"
-};
+}

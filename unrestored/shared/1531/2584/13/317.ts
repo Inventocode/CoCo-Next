@@ -11,4 +11,4 @@ module.exports = {
   visible: "Menu_visible__2iROs",
   placementRight: "Menu_placementRight__1-Ea-",
   placementLeft: "Menu_placementLeft__4hP3d"
-};
+}

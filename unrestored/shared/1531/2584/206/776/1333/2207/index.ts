@@ -4,6 +4,6 @@
  * 模块 ID：2207
  */
 
-"use strict";
+"use strict"
 
-module.exports = require("./2208");
+module.exports = require("./2208")

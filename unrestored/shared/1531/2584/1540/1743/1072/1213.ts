@@ -4,5 +4,5 @@
  * 模块 ID：1213
  */
 
-var r = require("../../1664/472");
-module.exports = r("document", "documentElement");
+var r = require("../../1664/472")
+module.exports = r("document", "documentElement")

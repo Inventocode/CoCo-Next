@@ -4,36 +4,36 @@
  * 模块 ID：7
  */
 
-"use strict";
+"use strict"
 
 function r(e, t, n, r, i, o, a) {
   try {
-    var s = e[o](a);
-    var c = s.value;
+    var s = e[o](a)
+    var s$value = s.value
   } catch (u) {
-    return void n(u);
+    return void n(u)
   }
   if (s.done) {
-    t(c);
+    t(s$value)
   } else {
-    Promise.resolve(c).then(r, i);
+    Promise.resolve(s$value).then(r, i)
   }
 }
 function i(e) {
   return function () {
-    var t = this;
-    var n = arguments;
+    var t = this
+    var n = arguments
     return new Promise(function (i, o) {
-      var a = e.apply(t, n);
+      var a = e.apply(t, n)
       function s(e) {
-        r(a, i, o, s, c, "next", e);
+        r(a, i, o, s, c, "next", e)
       }
       function c(e) {
-        r(a, i, o, s, c, "throw", e);
+        r(a, i, o, s, c, "throw", e)
       }
-      s(undefined);
-    });
-  };
+      s(undefined)
+    })
+  }
 }
-export { i as a };
-export default i;
+export { i as a }
+export default i

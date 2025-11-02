@@ -4,6 +4,6 @@
  * 模块 ID：0
  */
 
-module.exports = require("./unnamed-qMEF");
+module.exports = require("./unnamed-qMEF")
 
 /***/

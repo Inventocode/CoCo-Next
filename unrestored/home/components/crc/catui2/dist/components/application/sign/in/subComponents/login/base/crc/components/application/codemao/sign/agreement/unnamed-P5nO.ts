@@ -4,6 +4,6 @@
  * 模块 ID：P5nO
  */
 
-module.exports = "https://creation.codemao.cn/coco/home/dist/" + "asset/contract_tip_2f14d.png";
+module.exports = "https://creation.codemao.cn/coco/home/dist/" + "asset/contract_tip_2f14d.png"
 
 /***/

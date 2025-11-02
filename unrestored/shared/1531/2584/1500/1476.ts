@@ -4,8 +4,8 @@
  * 模块 ID：1476
  */
 
-"use strict";
+"use strict"
 
-export { r as a };
-var r = "RC_SELECT_INTERNAL_PROPS_MARK";
-export default r;
+export { r as a }
+var r = "RC_SELECT_INTERNAL_PROPS_MARK"
+export default r

@@ -31,4 +31,4 @@ module.exports = {
   actions: "BuckSelect_actions__1CIgm",
   empty: "BuckSelect_empty__2LDfx",
   nameText: "BuckSelect_nameText__1IexY"
-};
+}

@@ -4,32 +4,32 @@
  * 模块 ID：409
  */
 
-"use strict";
+"use strict"
 
 var r = function () {
   function t(t, e) {
-    this.value = t;
-    this.checksumPortion = e;
+    this.value = t
+    this.checksumPortion = e
   }
   t.prototype.getValue = function () {
-    return this.value;
-  };
+    return this.value
+  }
   t.prototype.getChecksumPortion = function () {
-    return this.checksumPortion;
-  };
+    return this.checksumPortion
+  }
   t.prototype.toString = function () {
-    return this.value + "(" + this.checksumPortion + ")";
-  };
+    return this.value + "(" + this.checksumPortion + ")"
+  }
   t.prototype.equals = function (e) {
     if (!(e instanceof t)) {
-      return false;
+      return false
     }
-    var n = e;
-    return this.value === n.value && this.checksumPortion === n.checksumPortion;
-  };
+    var n = e
+    return this.value === n.value && this.checksumPortion === n.checksumPortion
+  }
   t.prototype.hashCode = function () {
-    return this.value ^ this.checksumPortion;
-  };
-  return t;
-}();
-exports.a = r;
+    return this.value ^ this.checksumPortion
+  }
+  return t
+}()
+exports.a = r

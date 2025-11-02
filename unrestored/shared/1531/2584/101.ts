@@ -51,4 +51,4 @@ module.exports = {
   errorAnimationFrames: "BlockEditor_errorAnimationFrames__Tia_V",
   screenIconBox: "BlockEditor_screenIconBox__m_gi1",
   screenIconText: "BlockEditor_screenIconText__AtyEh"
-};
+}

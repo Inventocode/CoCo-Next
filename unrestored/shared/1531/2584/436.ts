@@ -17,4 +17,4 @@ module.exports = {
   footer: "style_footer__1ZIah",
   tips: "style_tips__3mn2P",
   save: "style_save__278Pv"
-};
+}

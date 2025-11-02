@@ -4,10 +4,10 @@
  * 模块 ID：qumQ
  */
 
-"use strict";
+"use strict"
 
 /* harmony export (binding) */
-export { themeSupColor };
+export { themeSupColor }
 var themeSupColor = {
   "sup-color-n1-0": "255,167,1",
   "sup-color-n1-1": "242,154,12",
@@ -36,6 +36,6 @@ var themeSupColor = {
   "sup-color-n9-0": "66,213,101",
   "sup-color-n9-1": "52,201,88",
   "sup-color-n9-2": "40,189,76"
-};
+}
 
 /***/

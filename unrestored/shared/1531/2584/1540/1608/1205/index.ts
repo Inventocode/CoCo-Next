@@ -4,28 +4,28 @@
  * 模块 ID：1205
  */
 
-var r = require("../../1738/231");
-var o = require("../../1541/749");
-var i = require("./1207");
-var a = require("../../1742/247/index")("toPrimitive");
+var r = require("../../1738/231")
+var o = require("../../1541/749")
+var i = require("./1207")
+var a = require("../../1742/247/index")("toPrimitive")
 module.exports = function (e, t) {
   if (!r(e) || o(e)) {
-    return e;
+    return e
   }
-  var n;
-  var s = e[a];
+  var n
+  var s = e[a]
   if (undefined !== s) {
     if (undefined === t) {
-      t = "default";
+      t = "default"
     }
-    n = s.call(e, t);
+    n = s.call(e, t)
     if (!r(n) || o(n)) {
-      return n;
+      return n
     }
-    throw TypeError("Can't convert object to primitive value");
+    throw TypeError("Can't convert object to primitive value")
   }
   if (undefined === t) {
-    t = "number";
+    t = "number"
   }
-  return i(e, t);
-};
+  return i(e, t)
+}

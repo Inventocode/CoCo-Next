@@ -4,11 +4,11 @@
  * 模块 ID：2013
  */
 
-"use strict";
+"use strict"
 
 Object.defineProperty(exports, "__esModule", {
   value: true
-});
+})
 var r = require("tslib");
 (0, r.__exportStar)(require("./2014"), exports);
 (0, r.__exportStar)(require("./2015"), exports);
@@ -28,4 +28,4 @@ var r = require("tslib");
 (0, r.__exportStar)(require("./2028"), exports);
 (0, r.__exportStar)(require("./2029"), exports);
 (0, r.__exportStar)(require("./2030/index"), exports);
-(0, r.__exportStar)(require("./2034"), exports);
+(0, r.__exportStar)(require("./2034"), exports)

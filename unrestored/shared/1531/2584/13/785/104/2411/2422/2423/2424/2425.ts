@@ -4,38 +4,38 @@
  * 模块 ID：2425
  */
 
-var r = require("../../../../../../254/2513/2514/2515/973/index");
-var i = require("../2468/1398/index");
+var r = require("../../../../../../254/2513/2514/2515/973/index")
+var i = require("../2468/1398/index")
 module.exports = function (e, t, n, o) {
-  var a = n.length;
-  var s = a;
-  var c = !o;
+  var n$length = n.length
+  var s = n$length
+  var c = !o
   if (null == e) {
-    return !s;
+    return !s
   }
-  for (e = Object(e); a--;) {
-    var u = n[a];
+  for (e = Object(e); n$length--;) {
+    var u = n[n$length]
     if (c && u[2] ? u[1] !== e[u[0]] : !(u[0] in e)) {
-      return false;
+      return false
     }
   }
-  for (; ++a < s;) {
-    var l = (u = n[a])[0];
-    var f = e[l];
-    var d = u[1];
+  for (; ++n$length < s;) {
+    var l = (u = n[n$length])[0]
+    var f = e[l]
+    var d = u[1]
     if (c && u[2]) {
       if (undefined === f && !(l in e)) {
-        return false;
+        return false
       }
     } else {
-      var h = new r();
+      var h = new r()
       if (o) {
-        var p = o(f, d, l, e, t, h);
+        var p = o(f, d, l, e, t, h)
       }
       if (!(undefined === p ? i(d, f, 3, o, h) : p)) {
-        return false;
+        return false
       }
     }
   }
-  return true;
-};
+  return true
+}

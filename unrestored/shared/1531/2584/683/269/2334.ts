@@ -4,19 +4,19 @@
  * 模块 ID：2334
  */
 
-"use strict";
+"use strict"
 
 Object.defineProperty(exports, "__esModule", {
   value: true
-});
-var r = require("./715");
+})
+var r = require("./715")
 var i = function (e) {
-  this.id = r.id();
-  this.registry = e;
-};
-exports.ContainerModule = i;
+  this.id = r.id()
+  this.registry = e
+}
+exports.ContainerModule = i
 var o = function (e) {
-  this.id = r.id();
-  this.registry = e;
-};
-exports.AsyncContainerModule = o;
+  this.id = r.id()
+  this.registry = e
+}
+exports.AsyncContainerModule = o

@@ -45,4 +45,4 @@ module.exports = {
   resourceMenuItem: "StorageDialog_resourceMenuItem__GYSQo",
   resourceMenuIcon: "StorageDialog_resourceMenuIcon__Kd6C_",
   deleteOption: "StorageDialog_deleteOption__2aNM_"
-};
+}

@@ -4,8 +4,8 @@
  * 模块 ID：2254
  */
 
-"use strict";
+"use strict"
 
 module.exports = {
   SourceCode: require("./2255/index")
-};
+}

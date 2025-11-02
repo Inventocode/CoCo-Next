@@ -52,4 +52,4 @@ module.exports = {
   disabled: "style_disabled__3VgCo",
   selected: "style_selected__1vCc3",
   headline: "style_headline__2jtK7"
-};
+}

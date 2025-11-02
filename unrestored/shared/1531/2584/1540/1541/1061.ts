@@ -4,4 +4,4 @@
  * 模块 ID：1061
  */
 
-exports.f = Object.getOwnPropertySymbols;
+exports.f = Object.getOwnPropertySymbols

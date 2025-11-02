@@ -4,12 +4,12 @@
  * 模块 ID：3QR9
  */
 
-"use strict";
+"use strict"
 
 /* harmony export (binding) */
 /* harmony import */
-export { themePinkColor };
-import * as __WEBPACK_IMPORTED_MODULE_0__supColor__ from "./supColor-qumQ";
+export { themePinkColor }
+import * as __WEBPACK_IMPORTED_MODULE_0__supColor__ from "./supColor-qumQ"
 var themePinkColor = {
   /* 色板主色：主色(0) —— +9 */
   "theme-color-0": "255,41,112",
@@ -71,6 +71,6 @@ var themePinkColor = {
 
   "theme-color-c2": __WEBPACK_IMPORTED_MODULE_0__supColor__.themeSupColor["sup-color-n9-2"]
   /* 提示线、运行按钮 -2 */
-};
+}
 
 /***/

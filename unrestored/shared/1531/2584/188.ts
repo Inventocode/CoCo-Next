@@ -4,146 +4,146 @@
  * 模块 ID：188
  */
 
-"use strict";
+"use strict"
 
-export { d as b };
-export { p as a };
-var r;
+export { d as b }
+export { p as a }
+var r
 import o = require("./27");
 import i = require("./40");
-import a = require("react");
+import React = require("react");
 var s = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
-    return module.default;
+    return module.default
   } : function () {
-    return module;
-  };
+    return module
+  }
   Object.defineProperty(defaultExport, "a", {
     enumerable: true,
     get: defaultExport
-  });
-  return defaultExport;
-}(a);
+  })
+  return defaultExport
+}(React)
 if (navigator.platform.match("Mac")) {
-  r = "osx";
+  r = "osx"
 } else {
   if (navigator.platform.match("Windows")) {
-    r = "windows";
+    r = "windows"
   } else {
     if (navigator.platform.match("Linux")) {
-      r = "linux";
+      r = "linux"
     }
   }
 }
 var c = function () {
   function e() {
-    o.a(this, e);
-    this.handlers = new Array();
+    o.a(this, e)
+    this.handlers = new Array()
   }
   i.a(e, [{
     key: "addHandler",
     value: function (e) {
-      this.handlers.push(e);
+      this.handlers.push(e)
     }
   }, {
     key: "removeHandler",
     value: function (e) {
-      var t = this.handlers.indexOf(e);
+      var t = this.handlers.indexOf(e)
       if (-1 !== t) {
-        this.handlers.splice(t, 1);
+        this.handlers.splice(t, 1)
       }
     }
   }, {
     key: "dispatch",
     value: function (e) {
-      var t = false;
+      var t = false
       this.handlers.forEach(function (n) {
         if (u(e, n.keys)) {
-          t = t || false !== n.callback();
+          t = t || false !== n.callback()
         }
-      });
-      return t;
+      })
+      return t
     }
-  }]);
-  return e;
-}();
-var l = s.a.createContext(new c());
+  }])
+  return e
+}()
+var l = s.a.createContext(new c())
 var u = function e(t, n) {
   if ("string" === typeof n) {
-    return t === n;
+    return t === n
   }
   if (Array.isArray(n)) {
-    return n.includes(t);
+    return n.includes(t)
   }
   if ("object" === typeof n) {
-    var o = n[r || "windows"];
-    return !!o && e(t, o);
+    var o = n[r || "windows"]
+    return !!o && e(t, o)
   }
-  return false;
-};
+  return false
+}
 function d(e) {
-  var t = e.keys;
-  var n = e.callback;
-  var r = e.disabled;
-  var o = a.useContext(l);
-  a.useEffect(function () {
-    if (!r) {
+  var e$keys = e.keys
+  var e$callback = e.callback
+  var e$disabled = e.disabled
+  var o = React.useContext(l)
+  React.useEffect(function () {
+    if (!e$disabled) {
       var e = {
-        keys: t,
-        callback: n
-      };
-      o.addHandler(e);
+        keys: e$keys,
+        callback: e$callback
+      }
+      o.addHandler(e)
       return function () {
-        return o.removeHandler(e);
-      };
+        return o.removeHandler(e)
+      }
     }
-  }, [t, n, r, o]);
-  return null;
+  }, [e$keys, e$callback, e$disabled, o])
+  return null
 }
 function p(e) {
-  var t = e.children;
-  var n = e.useCapture;
-  var r = e.emitter;
-  var o = a.useRef(new c());
-  a.useEffect(function () {
+  var e$children = e.children
+  var e$useCapture = e.useCapture
+  var e$emitter = e.emitter
+  var o = React.useRef(new c())
+  React.useEffect(function () {
     var e = function (e) {
-      var t = document.activeElement;
-      if (t) {
-        var n = t.tagName;
-        if ("INPUT" === n || "TEXTAREA" === n) {
-          return;
+      var document$activeElement = document.activeElement
+      if (document$activeElement) {
+        var document$activeElement$tagName = document$activeElement.tagName
+        if ("INPUT" === document$activeElement$tagName || "TEXTAREA" === document$activeElement$tagName) {
+          return
         }
-        if (t.getAttribute("contenteditable")) {
-          return;
+        if (document$activeElement.getAttribute("contenteditable")) {
+          return
         }
       }
-      var r = [];
+      var r = []
       if (e.altKey) {
-        r.push("alt");
+        r.push("alt")
       }
       if (e.ctrlKey) {
-        r.push("control");
+        r.push("control")
       }
       if (e.metaKey) {
-        r.push("command");
+        r.push("command")
       }
       if (e.key) {
-        r.push(e.key.toLowerCase());
+        r.push(e.key.toLowerCase())
       }
-      var i = r.join("+");
+      var i = r.join("+")
       if (false !== o.current.dispatch(i)) {
-        e.stopImmediatePropagation();
-        e.preventDefault();
+        e.stopImmediatePropagation()
+        e.preventDefault()
       }
-    };
-    var t = r || document;
-    t.addEventListener("keydown", e, n);
+    }
+    var t = e$emitter || document
+    t.addEventListener("keydown", e, e$useCapture)
     return function () {
-      return t.removeEventListener("keydown", e, n);
-    };
-  }, [n, r]);
+      return t.removeEventListener("keydown", e, e$useCapture)
+    }
+  }, [e$useCapture, e$emitter])
   return s.a.createElement(l.Provider, {
     value: o.current
-  }, t);
+  }, e$children)
 }
-export default p;
+export default p

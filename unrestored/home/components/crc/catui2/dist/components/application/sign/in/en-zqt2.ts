@@ -4,10 +4,10 @@
  * 模块 ID：zqt2
  */
 
-"use strict";
+"use strict"
 
 /* harmony export (binding) */
-export { en };
+export { en }
 var en = {
   "sign_in_dialog/error/password_confirm/not_same": "The two passwords did not match",
   "sign_in_dialog/error/phone/unregisterd": "Phone is not registered, ",
@@ -48,6 +48,6 @@ var en = {
   "sign_in_dialog/phone_bound_by_other_account": "This phone number has already been linked to another account",
   "sign_in_dialog/bind_phone": "Bind phone number",
   "sign_in_dialog/phone_bind/verify": "Some advanced features need to be bound to the phone before use"
-};
+}
 
 /***/

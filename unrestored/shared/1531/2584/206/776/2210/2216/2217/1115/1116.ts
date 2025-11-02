@@ -4,54 +4,54 @@
  * 模块 ID：1116
  */
 
-"use strict";
+"use strict"
 
 module.exports = function e(t, n) {
   if (t === n) {
-    return true;
+    return true
   }
   if (t && n && "object" == typeof t && "object" == typeof n) {
     if (t.constructor !== n.constructor) {
-      return false;
+      return false
     }
-    var r;
-    var i;
-    var o;
+    var r
+    var i
+    var o
     if (Array.isArray(t)) {
       if ((r = t.length) != n.length) {
-        return false;
+        return false
       }
       for (i = r; 0 !== i--;) {
         if (!e(t[i], n[i])) {
-          return false;
+          return false
         }
       }
-      return true;
+      return true
     }
     if (t.constructor === RegExp) {
-      return t.source === n.source && t.flags === n.flags;
+      return t.source === n.source && t.flags === n.flags
     }
     if (t.valueOf !== Object.prototype.valueOf) {
-      return t.valueOf() === n.valueOf();
+      return t.valueOf() === n.valueOf()
     }
     if (t.toString !== Object.prototype.toString) {
-      return t.toString() === n.toString();
+      return t.toString() === n.toString()
     }
     if ((r = (o = Object.keys(t)).length) !== Object.keys(n).length) {
-      return false;
+      return false
     }
     for (i = r; 0 !== i--;) {
       if (!Object.prototype.hasOwnProperty.call(n, o[i])) {
-        return false;
+        return false
       }
     }
     for (i = r; 0 !== i--;) {
-      var a = o[i];
+      var a = o[i]
       if (!e(t[a], n[a])) {
-        return false;
+        return false
       }
     }
-    return true;
+    return true
   }
-  return t !== t && n !== n;
-};
+  return t !== t && n !== n
+}

@@ -4,13 +4,13 @@
  * 模块 ID：2551
  */
 
-"use strict";
+"use strict"
 
 Object.defineProperty(exports, "__esModule", {
   value: true
-});
-exports.init_logic_blocks = undefined;
-var r = require("./2555/579");
+})
+exports.init_logic_blocks = undefined
+var r = require("./2555/579")
 exports.init_logic_blocks = function (e) {
   var t = [{
     type: "logic_negate",
@@ -73,8 +73,8 @@ exports.init_logic_blocks = function (e) {
     output: "Boolean",
     colour: (0, r.i18n)("ORANGE_3"),
     extensions: ["logic_op_tooltip"]
-  }];
-  e.define_blocks_with_json_array(t);
+  }]
+  e.define_blocks_with_json_array(t)
   var n = {
     EQ: (0, r.i18n)("LOGIC_COMPARE_TOOLTIP_EQ"),
     NEQ: (0, r.i18n)("LOGIC_COMPARE_TOOLTIP_NEQ"),
@@ -84,12 +84,12 @@ exports.init_logic_blocks = function (e) {
     GTE: (0, r.i18n)("LOGIC_COMPARE_TOOLTIP_GTE"),
     AND: (0, r.i18n)("LOGIC_OPERATION_TOOLTIP_AND"),
     OR: (0, r.i18n)("LOGIC_OPERATION_TOOLTIP_OR")
-  };
-  e.extensions.register("logic_op_tooltip", e.extensions.build_tooltip_for_dropdown("OP", n));
+  }
+  e.extensions.register("logic_op_tooltip", e.extensions.build_tooltip_for_dropdown("OP", n))
   Object.assign(e.blocks_xml, {
     logic_negate: "<block type=\"logic_negate\">\n      " + (0, r.logic_value)("BOOL") + "\n    </block>\n    ",
     logic_boolean: "<block type=\"logic_boolean\" />",
     logic_compare: "<block type=\"logic_compare\">\n      " + (0, r.number_value)("A", "0") + "\n      " + (0, r.number_value)("B", "0") + "\n    </block>\n    ",
     logic_operation: "<block type=\"logic_operation\">\n      " + (0, r.logic_value)("A") + "\n      " + (0, r.logic_value)("B") + "\n    </block>\n    "
-  });
-};
+  })
+}

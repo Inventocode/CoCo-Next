@@ -12,4 +12,4 @@ module.exports = {
   selected: "ProjectDialog_selected__1iBoA",
   icon: "ProjectDialog_icon__ZsRb7",
   content: "ProjectDialog_content__1nYQU"
-};
+}

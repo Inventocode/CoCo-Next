@@ -34,4 +34,4 @@ module.exports = {
   popoverWrapper: "WidgetTree_popoverWrapper__2B9qb",
   menuItem: "WidgetTree_menuItem__10bE5",
   delete: "WidgetTree_delete__1u4ut"
-};
+}

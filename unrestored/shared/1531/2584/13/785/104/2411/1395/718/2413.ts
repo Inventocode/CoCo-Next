@@ -4,25 +4,25 @@
  * 模块 ID：2413
  */
 
-var r = require("./849");
-var i = Object.prototype;
-var o = i.hasOwnProperty;
-var a = i.toString;
-var s = r ? r.toStringTag : undefined;
+var r = require("./849")
+var object$prototype = Object.prototype
+var object$prototype$hasOwnProperty = object$prototype.hasOwnProperty
+var object$prototype$toString = object$prototype.toString
+var s = r ? r.toStringTag : undefined
 module.exports = function (e) {
-  var t = o.call(e, s);
-  var n = e[s];
+  var t = object$prototype$hasOwnProperty.call(e, s)
+  var n = e[s]
   try {
-    e[s] = undefined;
-    var r = true;
+    e[s] = undefined
+    var r = true
   } catch (c) {}
-  var i = a.call(e);
+  var i = object$prototype$toString.call(e)
   if (r) {
     if (t) {
-      e[s] = n;
+      e[s] = n
     } else {
-      delete e[s];
+      delete e[s]
     }
   }
-  return i;
-};
+  return i
+}

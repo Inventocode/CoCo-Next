@@ -4,4 +4,4 @@
  * 模块 ID：661
  */
 
-module.exports = "https://creation.codemao.cn/coconut/web/1.22.0-0/" + "static/media/pedometer.08b217ab.svg";
+module.exports = "https://creation.codemao.cn/coconut/web/1.22.0-0/" + "static/media/pedometer.08b217ab.svg"

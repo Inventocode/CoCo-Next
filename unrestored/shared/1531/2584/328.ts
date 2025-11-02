@@ -22,4 +22,4 @@ module.exports = {
   itemSelected: "WidgetPanel_itemSelected__Hd23_",
   itemBlockIcon: "WidgetPanel_itemBlockIcon__HjUqN",
   spaceLine: "WidgetPanel_spaceLine__3c1yS"
-};
+}

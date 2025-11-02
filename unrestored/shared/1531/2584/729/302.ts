@@ -4,12 +4,12 @@
  * 模块 ID：302
  */
 
-"use strict";
+"use strict"
 
-export { o as press };
-import r = require("animejs");
+export { o as press }
+import Animejs = require("animejs");
 function o(e) {
-  return [r.default({
+  return [Animejs.default({
     targets: "#".concat(e),
     scale: [{
       value: .9,
@@ -18,5 +18,5 @@ function o(e) {
       value: 1,
       duration: 200
     }]
-  })];
+  })]
 }

@@ -4,12 +4,12 @@
  * 模块 ID：2179
  */
 
-"use strict";
+"use strict"
 
 Object.defineProperty(exports, "__esModule", {
   value: true
-});
-exports.Msg = undefined;
+})
+exports.Msg = undefined
 exports.Msg = {
   MATH_ADDITION_SYMBOL: "+",
   MATH_SUBTRACTION_SYMBOL: "-",
@@ -29,4 +29,4 @@ exports.Msg = {
   RELEASE_GROUP: "解除分组",
   HIDE_BLOCK_STACK: "隐藏积木块",
   SHOW_BLOCK_STACK: "取消隐藏积木块"
-};
+}

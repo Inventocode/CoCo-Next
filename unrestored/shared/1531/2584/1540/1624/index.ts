@@ -4,13 +4,13 @@
  * 模块 ID：1624
  */
 
-var r = require("../1623/86");
-var o = require("./1234").entries;
+var r = require("../1623/86")
+var require$1234$entries = require("./1234").entries
 r({
   target: "Object",
   stat: true
 }, {
   entries: function (e) {
-    return o(e);
+    return require$1234$entries(e)
   }
-});
+})

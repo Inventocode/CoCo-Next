@@ -4,15 +4,15 @@
  * 模块 ID：1043
  */
 
-"use strict";
+"use strict"
 
-var r = require("../../../19");
-var i = require("../../../54");
-var o = require("react");
-require("../../../50/index");
-var a = require("../100");
-var s = require("./153/index");
-var c = require("./234");
+var r = require("../../../19")
+var i = require("../../../54")
+var o = require("react")
+require("../../../50/index")
+var a = require("../100")
+var s = require("./153/index")
+var c = require("./234")
 var u = {
   h1: "h1",
   h2: "h2",
@@ -24,34 +24,34 @@ var u = {
   subtitle2: "h6",
   body1: "p",
   body2: "p"
-};
+}
 var l = o.forwardRef(function (e, t) {
-  var n = e.align;
-  var s = undefined === n ? "inherit" : n;
-  var l = e.classes;
-  var f = e.className;
-  var d = e.color;
-  var h = undefined === d ? "initial" : d;
-  var p = e.component;
-  var _ = e.display;
-  var A = undefined === _ ? "initial" : _;
-  var g = e.gutterBottom;
-  var v = undefined !== g && g;
-  var m = e.noWrap;
-  var y = undefined !== m && m;
-  var b = e.paragraph;
-  var w = undefined !== b && b;
-  var E = e.variant;
-  var x = undefined === E ? "body1" : E;
-  var C = e.variantMapping;
-  var O = undefined === C ? u : C;
-  var k = i.a(e, ["align", "classes", "className", "color", "component", "display", "gutterBottom", "noWrap", "paragraph", "variant", "variantMapping"]);
-  var S = p || (w ? "p" : O[x] || u[x]) || "span";
+  var e$align = e.align
+  var s = undefined === e$align ? "inherit" : e$align
+  var e$classes = e.classes
+  var e$className = e.className
+  var e$color = e.color
+  var h = undefined === e$color ? "initial" : e$color
+  var e$component = e.component
+  var e$display = e.display
+  var A = undefined === e$display ? "initial" : e$display
+  var e$gutterBottom = e.gutterBottom
+  var v = undefined !== e$gutterBottom && e$gutterBottom
+  var e$noWrap = e.noWrap
+  var y = undefined !== e$noWrap && e$noWrap
+  var e$paragraph = e.paragraph
+  var w = undefined !== e$paragraph && e$paragraph
+  var e$variant = e.variant
+  var x = undefined === e$variant ? "body1" : e$variant
+  var e$variantMapping = e.variantMapping
+  var O = undefined === e$variantMapping ? u : e$variantMapping
+  var k = i.a(e, ["align", "classes", "className", "color", "component", "display", "gutterBottom", "noWrap", "paragraph", "variant", "variantMapping"])
+  var S = e$component || (w ? "p" : O[x] || u[x]) || "span"
   return o.createElement(S, r.a({
-    className: a.a(l.root, f, "inherit" !== x && l[x], "initial" !== h && l["color".concat(c.a(h))], y && l.noWrap, v && l.gutterBottom, w && l.paragraph, "inherit" !== s && l["align".concat(c.a(s))], "initial" !== A && l["display".concat(c.a(A))]),
+    className: a.a(e$classes.root, e$className, "inherit" !== x && e$classes[x], "initial" !== h && e$classes["color".concat(c.a(h))], y && e$classes.noWrap, v && e$classes.gutterBottom, w && e$classes.paragraph, "inherit" !== s && e$classes["align".concat(c.a(s))], "initial" !== A && e$classes["display".concat(c.a(A))]),
     ref: t
-  }, k));
-});
+  }, k))
+})
 exports.a = s.a(function (e) {
   return {
     root: {
@@ -123,7 +123,7 @@ exports.a = s.a(function (e) {
     displayBlock: {
       display: "block"
     }
-  };
+  }
 }, {
   name: "MuiTypography"
-})(l);
+})(l)

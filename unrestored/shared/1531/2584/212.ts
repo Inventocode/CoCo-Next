@@ -79,4 +79,4 @@ module.exports = {
   circleProgressLoad_right: "style_circleProgressLoad_right__3mA43",
   leftCircle: "style_leftCircle__31jfk",
   circleProgressLoad_left: "style_circleProgressLoad_left__3AHWH"
-};
+}

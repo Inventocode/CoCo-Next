@@ -4,10 +4,10 @@
  * 模块 ID：1057
  */
 
-var r = require("../../1736/194");
-var o = require("../../1738/231");
-var i = r.document;
-var a = o(i) && o(i.createElement);
+var r = require("../../1736/194")
+var o = require("../../1738/231")
+var r$document = r.document
+var a = o(r$document) && o(r$document.createElement)
 module.exports = function (e) {
-  return a ? i.createElement(e) : {};
-};
+  return a ? r$document.createElement(e) : {}
+}

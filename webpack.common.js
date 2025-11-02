@@ -24,6 +24,15 @@ const config = {
     module: {
         rules: [
             {
+                test: /\.tsx?$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: "ts-loader",
+                    options: {
+                        transpileOnly: true
+                    }
+                }
+            }, {
                 test: /\.(t|j)sx?$/,
                 exclude: /node_modules|helper|home/,
                 use: {
@@ -38,15 +47,6 @@ const config = {
                                 replace: "\" + location.origin"
                             }
                         ]
-                    }
-                }
-            }, {
-                test: /\.tsx?$/,
-                exclude: /node_modules/,
-                use: {
-                    loader: "ts-loader",
-                    options: {
-                        transpileOnly: true
                     }
                 }
             }

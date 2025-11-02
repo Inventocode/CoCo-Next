@@ -4,5 +4,5 @@
  * 模块 ID：1542
  */
 
-var r = require("../../1736/194");
-module.exports = r;
+var r = require("../../1736/194")
+module.exports = r

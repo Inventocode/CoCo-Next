@@ -9,4 +9,4 @@ module.exports = {
   edit: "style_edit___tEij",
   btn: "style_btn__2DRDE",
   form: "style_form__2kuji"
-};
+}

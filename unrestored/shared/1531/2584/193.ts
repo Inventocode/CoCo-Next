@@ -39,4 +39,4 @@ module.exports = {
   hint: "historyDialog_hint__8LPEQ",
   empty: "historyDialog_empty__2jsfR",
   fixedBar: "historyDialog_fixedBar__1dQIc"
-};
+}

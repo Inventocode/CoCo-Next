@@ -4,10 +4,10 @@
  * 模块 ID：SWlx
  */
 
-"use strict";
+"use strict"
 
 /* harmony export (binding) */
-export { tw };
+export { tw }
 var tw = {
   "sign_in_dialog/placeholder/email": "郵箱",
   "sign_in_dialog/placeholder/password": "密碼：6-20位",
@@ -40,6 +40,6 @@ var tw = {
   "sign_in_dialog/error/email/not_exist": "賬號不存在",
   "sign_in_dialog/error/password/format": "密碼：6-20位數字或字母",
   "sign_in_dialog/error/password/simple": "密碼過於簡單，請重輸"
-};
+}
 
 /***/

@@ -28,4 +28,4 @@ module.exports = {
   authorName: "WidgetMallDialog_authorName__27JoW",
   selectedWidgetCard: "WidgetMallDialog_selectedWidgetCard__3j4WZ",
   networkError: "WidgetMallDialog_networkError__23eGw"
-};
+}

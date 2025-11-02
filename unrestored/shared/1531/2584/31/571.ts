@@ -6,30 +6,30 @@
 
 module.exports = function (e) {
   if (!e.webpackPolyfill) {
-    e.deprecate = function () {};
-    e.paths = [];
+    e.deprecate = function () {}
+    e.paths = []
     if (!e.children) {
-      e.children = [];
+      e.children = []
     }
     Object.defineProperty(e, "loaded", {
       enumerable: true,
       get: function () {
-        return e.l;
+        return e.l
       },
       set: function (value) {
-        return e.l = value;
+        return e.l = value
       }
-    });
+    })
     Object.defineProperty(e, "id", {
       enumerable: true,
       get: function () {
-        return e.i;
+        return e.i
       },
       set: function (value) {
-        e.i = value;
+        e.i = value
       }
-    });
-    e.webpackPolyfill = 1;
+    })
+    e.webpackPolyfill = 1
   }
-  return e;
-};
+  return e
+}

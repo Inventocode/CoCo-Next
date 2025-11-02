@@ -65,4 +65,4 @@ module.exports = {
   cursorArrow: "style_cursorArrow__r1Zmh",
   cursorCircle: "style_cursorCircle__2ftmh",
   cursorNone: "style_cursorNone__3e9DM"
-};
+}

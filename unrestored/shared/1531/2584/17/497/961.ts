@@ -4,34 +4,34 @@
  * 模块 ID：961
  */
 
-"use strict";
+"use strict"
 
 Object.defineProperty(exports, "__esModule", {
   value: true
-});
-exports.shortest_string_length = exports.equals = exports.remove = undefined;
-var r = require("../../1001/213/index");
+})
+exports.shortest_string_length = exports.equals = exports.remove = undefined
+var r = require("../../1001/213/index")
 exports.remove = function (e, t) {
-  var n = e.indexOf(t);
-  var r = n >= 0;
+  var n = e.indexOf(t)
+  var r = n >= 0
   if (r) {
-    e.splice(n, 1);
+    e.splice(n, 1)
   }
-  return r;
-};
+  return r
+}
 exports.equals = function (e, t) {
   if (!(0, r.is_array)(e) || !(0, r.is_array)(t) || e.length != t.length) {
-    return false;
+    return false
   }
   for (var n = 0; n < e.length; n++) {
     if (e[n] !== t[n]) {
-      return false;
+      return false
     }
   }
-  return true;
-};
+  return true
+}
 exports.shortest_string_length = function (e) {
   return e.length ? e.reduce(function (e, t) {
-    return e.length < t.length ? e : t;
-  }).length : 0;
-};
+    return e.length < t.length ? e : t
+  }).length : 0
+}

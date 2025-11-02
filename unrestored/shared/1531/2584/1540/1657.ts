@@ -4,15 +4,15 @@
  * 模块 ID：1657
  */
 
-var r = require("./1623/86");
-var o = require("./1659/241");
-var i = require("./1659/386/index").f;
+var r = require("./1623/86")
+var o = require("./1659/241")
+var require$1659386Index$f = require("./1659/386/index").f
 r({
   target: "Reflect",
   stat: true
 }, {
   deleteProperty: function (e, t) {
-    var n = i(o(e), t);
-    return !(n && !n.configurable) && delete e[t];
+    var n = require$1659386Index$f(o(e), t)
+    return !(n && !n.configurable) && delete e[t]
   }
-});
+})

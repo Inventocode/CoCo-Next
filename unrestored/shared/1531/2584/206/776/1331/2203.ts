@@ -4,7 +4,7 @@
  * 模块 ID：2203
  */
 
-"use strict";
+"use strict"
 
 module.exports = {
   AssignmentExpression: "AssignmentExpression",
@@ -84,4 +84,4 @@ module.exports = {
   ImportSpecifier: "ImportSpecifier",
   ImportDefaultSpecifier: "ImportDefaultSpecifier",
   ImportNamespaceSpecifier: "ImportNamespaceSpecifier"
-};
+}

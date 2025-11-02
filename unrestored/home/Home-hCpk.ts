@@ -4,18 +4,18 @@
  * 模块 ID：hCpk
  */
 
-"use strict";
+"use strict"
 
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_0_redux__ from "redux";
+import * as __WEBPACK_IMPORTED_MODULE_0_redux__ from "redux"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_1_react_redux__ from "react-redux";
+import * as __WEBPACK_IMPORTED_MODULE_1_react_redux__ from "react-redux"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_2__template__ from "./template-+DtV";
+import * as __WEBPACK_IMPORTED_MODULE_2__template__ from "./template-+DtV"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_3__model_actions__ from "./Home/model/actions-twBc";
+import * as __WEBPACK_IMPORTED_MODULE_3__model_actions__ from "./Home/model/actions-twBc"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_4__redux_main_actions__ from "./redux/main/actions-_FmP";
+import * as __WEBPACK_IMPORTED_MODULE_4__redux_main_actions__ from "./redux/main/actions-_FmP"
 var mapStateToProps = function mapStateToProps(state, ownProps) {
   return {
     userInfo: state.main_reducer.userInfo,
@@ -26,8 +26,8 @@ var mapStateToProps = function mapStateToProps(state, ownProps) {
     courseList: state.home_reducer.courseList,
     templateList: state.home_reducer.templateList,
     workList: state.home_reducer.workList
-  };
-};
+  }
+}
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return __WEBPACK_IMPORTED_MODULE_0_redux__.bindActionCreators({
     getBannerListAction: __WEBPACK_IMPORTED_MODULE_3__model_actions__.getBannerListAction,
@@ -39,8 +39,8 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
     setPlayCourseInfoAction: __WEBPACK_IMPORTED_MODULE_3__model_actions__.setPlayCourseInfoAction,
     setPreviewTemplateInfoAction: __WEBPACK_IMPORTED_MODULE_3__model_actions__.setPreviewTemplateInfoAction,
     setCommonToastAction: __WEBPACK_IMPORTED_MODULE_4__redux_main_actions__.setCommonToastAction
-  }, dispatch);
-};
+  }, dispatch)
+}
 /* harmony default export */
-export default __WEBPACK_IMPORTED_MODULE_1_react_redux__.connect(mapStateToProps, mapDispatchToProps)(__WEBPACK_IMPORTED_MODULE_2__template__.HomeView);
+export default __WEBPACK_IMPORTED_MODULE_1_react_redux__.connect(mapStateToProps, mapDispatchToProps)(__WEBPACK_IMPORTED_MODULE_2__template__.HomeView)
 /***/

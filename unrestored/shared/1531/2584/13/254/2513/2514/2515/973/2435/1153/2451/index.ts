@@ -4,11 +4,11 @@
  * 模块 ID：2451
  */
 
-var r = require("./977/index");
+var r = require("./977/index")
 module.exports = function (e, t) {
-  var n = r(this, e);
-  var i = n.size;
-  n.set(e, t);
-  this.size += n.size == i ? 0 : 1;
-  return this;
-};
+  var n = r(this, e)
+  var n$size = n.size
+  n.set(e, t)
+  this.size += n.size == n$size ? 0 : 1
+  return this
+}

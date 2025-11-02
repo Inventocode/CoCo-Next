@@ -12,6 +12,6 @@ module.exports = {
   "openTemplate": "openTemplate_2XCQQ",
   "templateName": "templateName_2ZQ2c",
   "templateDesc": "templateDesc_2rk92"
-};
+}
 
 /***/

@@ -4,18 +4,18 @@
  * 模块 ID：560
  */
 
-"use strict";
+"use strict"
 
-export { o as a };
-import r = require("react");
-var i = "undefined" !== typeof window ? r.useLayoutEffect : r.useEffect;
+export { o as a }
+import React = require("react");
+var i = "undefined" !== typeof window ? React.useLayoutEffect : React.useEffect
 function o(e) {
-  var t = r.useRef(e);
+  var t = React.useRef(e)
   i(function () {
-    t.current = e;
-  });
-  return r.useCallback(function () {
-    return t.current.apply(undefined, arguments);
-  }, []);
+    t.current = e
+  })
+  return React.useCallback(function () {
+    return t.current.apply(undefined, arguments)
+  }, [])
 }
-export default o;
+export default o

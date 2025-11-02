@@ -4,4 +4,4 @@
  * 模块 ID：656
  */
 
-module.exports = "https://creation.codemao.cn/coconut/web/1.22.0-0/" + "static/media/input.7cad9508.svg";
+module.exports = "https://creation.codemao.cn/coconut/web/1.22.0-0/" + "static/media/input.7cad9508.svg"

@@ -4,24 +4,24 @@
  * 模块 ID：v9Ep
  */
 
-"use strict";
+"use strict"
 
 /* harmony export (binding) */
 /* harmony export (binding) */
-export { api as CodemaoApi };
+export { api as CodemaoApi }
 /* harmony export (binding) */
-export { CodemaoError };
+export { CodemaoError }
 /* harmony export (binding) */
-export { CodemaoRequest };
+export { CodemaoRequest }
 /* harmony export (binding) */
-export { ERROR_TYPE as ERROR };
+export { ERROR_TYPE as ERROR }
 /* harmony export (binding) */
-export { utils as U };
+export { utils as U }
 /* harmony export (binding) */
-export { auth };
+export { auth }
 /* harmony export (binding) */
-export { index as captcha };
-export { init$1 as init };
+export { index as captcha }
+export { init$1 as init }
 var configs = {
   dev: {
     env: "dev",
@@ -71,7 +71,7 @@ var configs = {
     },
     domain: ".codemao.cn"
   }
-};
+}
 
 /**
  * 业务逻辑错误信息集合。
@@ -83,239 +83,239 @@ var ERROR_TYPE;
    *
    * 不符合要求的初始化参数
    */
-  ERROR_TYPE[ERROR_TYPE["INVALID_INIT_PARAMS"] = -1] = "INVALID_INIT_PARAMS";
+  ERROR_TYPE[ERROR_TYPE["INVALID_INIT_PARAMS"] = -1] = "INVALID_INIT_PARAMS"
   /**
    * Invalid phone number.
    * 不符合要求的电话号码。
    */
-  ERROR_TYPE[ERROR_TYPE["INVALID_PHONE_NUMBER"] = 0] = "INVALID_PHONE_NUMBER";
+  ERROR_TYPE[ERROR_TYPE["INVALID_PHONE_NUMBER"] = 0] = "INVALID_PHONE_NUMBER"
   /**
    * Invalid captcha.
    * 不符合要求的短信验证码。
    */
-  ERROR_TYPE[ERROR_TYPE["INVALID_CAPTCHA"] = 1] = "INVALID_CAPTCHA";
+  ERROR_TYPE[ERROR_TYPE["INVALID_CAPTCHA"] = 1] = "INVALID_CAPTCHA"
   /**
    * Invalid password.
    * 不符合要求的密码。
    */
-  ERROR_TYPE[ERROR_TYPE["INVALID_PASSWORD"] = 2] = "INVALID_PASSWORD";
+  ERROR_TYPE[ERROR_TYPE["INVALID_PASSWORD"] = 2] = "INVALID_PASSWORD"
   /**
    * Invalid username.
    * 不符合要求的用户名。
    */
-  ERROR_TYPE[ERROR_TYPE["INVALID_USERNAME"] = 3] = "INVALID_USERNAME";
+  ERROR_TYPE[ERROR_TYPE["INVALID_USERNAME"] = 3] = "INVALID_USERNAME"
   /**
    * Invalid nickname.
    * 不符合要求的昵称。
    */
-  ERROR_TYPE[ERROR_TYPE["INVALID_NICKNAME"] = 4] = "INVALID_NICKNAME";
+  ERROR_TYPE[ERROR_TYPE["INVALID_NICKNAME"] = 4] = "INVALID_NICKNAME"
   /**
    * Invalid fullname.
    * 不符合要求的全名。
    */
-  ERROR_TYPE[ERROR_TYPE["INVALID_FULLNAME"] = 5] = "INVALID_FULLNAME";
+  ERROR_TYPE[ERROR_TYPE["INVALID_FULLNAME"] = 5] = "INVALID_FULLNAME"
   /**
    * Invalid qq.
    * 不符合要求的qq号码。
    */
-  ERROR_TYPE[ERROR_TYPE["INVALID_QQ"] = 6] = "INVALID_QQ";
+  ERROR_TYPE[ERROR_TYPE["INVALID_QQ"] = 6] = "INVALID_QQ"
   /**
    * Invalid description.
    * 不符合要求的个人描述。
    */
-  ERROR_TYPE[ERROR_TYPE["INVALID_DESCRIPTION"] = 7] = "INVALID_DESCRIPTION";
+  ERROR_TYPE[ERROR_TYPE["INVALID_DESCRIPTION"] = 7] = "INVALID_DESCRIPTION"
   /**
    * Invalid sex.
    * 不符合要求的性别。
    */
-  ERROR_TYPE[ERROR_TYPE["INVALID_SEX"] = 8] = "INVALID_SEX";
+  ERROR_TYPE[ERROR_TYPE["INVALID_SEX"] = 8] = "INVALID_SEX"
   /**
    * Invalid birthday.
    * 不符合要求的生日时间戳。
    * 格林威治时间1970年01月01日00时00分00秒(北京时间1970年01月01日08时00分00秒)起至现在的
    * 总秒数, 如2018年1月1日，即birthday值为:1514736000
    */
-  ERROR_TYPE[ERROR_TYPE["INVALID_BIRTHDAY"] = 9] = "INVALID_BIRTHDAY";
+  ERROR_TYPE[ERROR_TYPE["INVALID_BIRTHDAY"] = 9] = "INVALID_BIRTHDAY"
   /**
    * Password not equals confirm password.
    * 密码与确认密码不一致。
    */
-  ERROR_TYPE[ERROR_TYPE["PWD_IS_NOT_EQUAL_TO_CONFIRMED_PWD"] = 10] = "PWD_IS_NOT_EQUAL_TO_CONFIRMED_PWD";
+  ERROR_TYPE[ERROR_TYPE["PWD_IS_NOT_EQUAL_TO_CONFIRMED_PWD"] = 10] = "PWD_IS_NOT_EQUAL_TO_CONFIRMED_PWD"
   /**
    * No access token when request authorized api.
    * Token 已过期或者没有 token
    * 通常需要重新登录。
    */
-  ERROR_TYPE[ERROR_TYPE["NO_TOKEN"] = 11] = "NO_TOKEN";
+  ERROR_TYPE[ERROR_TYPE["NO_TOKEN"] = 11] = "NO_TOKEN"
   /**
    * An error code only appears when the request timeout.
    * 当请求超时会出现的错误码。
    */
-  ERROR_TYPE[ERROR_TYPE["REQUEST_TIMEOUT"] = 12] = "REQUEST_TIMEOUT";
+  ERROR_TYPE[ERROR_TYPE["REQUEST_TIMEOUT"] = 12] = "REQUEST_TIMEOUT"
   /**
    * An error code only appears when request.onerror ran.
    * 当request.onerror方法被触发时捕获到的错误。
    */
-  ERROR_TYPE[ERROR_TYPE["REQUEST_ERROR"] = 13] = "REQUEST_ERROR";
+  ERROR_TYPE[ERROR_TYPE["REQUEST_ERROR"] = 13] = "REQUEST_ERROR"
   /**
    * 手机号已注册
    */
-  ERROR_TYPE[ERROR_TYPE["PHONE_REGISTERED"] = 14] = "PHONE_REGISTERED";
+  ERROR_TYPE[ERROR_TYPE["PHONE_REGISTERED"] = 14] = "PHONE_REGISTERED"
   /**
    * 手机号暂未注册
    */
-  ERROR_TYPE[ERROR_TYPE["PHONE_UNREGISTERED"] = 15] = "PHONE_UNREGISTERED";
+  ERROR_TYPE[ERROR_TYPE["PHONE_UNREGISTERED"] = 15] = "PHONE_UNREGISTERED"
   /**
    * 用户不存在或者密码错误
    */
-  ERROR_TYPE[ERROR_TYPE["USER_NOT_EXIST_OR_PWD_WRONG"] = 16] = "USER_NOT_EXIST_OR_PWD_WRONG";
+  ERROR_TYPE[ERROR_TYPE["USER_NOT_EXIST_OR_PWD_WRONG"] = 16] = "USER_NOT_EXIST_OR_PWD_WRONG"
   /**
    * 用户不存在
    */
-  ERROR_TYPE[ERROR_TYPE["USER_NOT_EXIST"] = 17] = "USER_NOT_EXIST";
+  ERROR_TYPE[ERROR_TYPE["USER_NOT_EXIST"] = 17] = "USER_NOT_EXIST"
   /**
    * 不能设置未来的日期
    */
-  ERROR_TYPE[ERROR_TYPE["CANNOT_SET_FUTURE_DATE"] = 18] = "CANNOT_SET_FUTURE_DATE";
+  ERROR_TYPE[ERROR_TYPE["CANNOT_SET_FUTURE_DATE"] = 18] = "CANNOT_SET_FUTURE_DATE"
   /**
    * 不能重复设置用户名
    */
-  ERROR_TYPE[ERROR_TYPE["CANNOT_SET_USERNAME_REPEATEDLY"] = 19] = "CANNOT_SET_USERNAME_REPEATEDLY";
+  ERROR_TYPE[ERROR_TYPE["CANNOT_SET_USERNAME_REPEATEDLY"] = 19] = "CANNOT_SET_USERNAME_REPEATEDLY"
   /**
    * 该用户名已经存在
    */
-  ERROR_TYPE[ERROR_TYPE["USERNAME_EXIST"] = 20] = "USERNAME_EXIST";
+  ERROR_TYPE[ERROR_TYPE["USERNAME_EXIST"] = 20] = "USERNAME_EXIST"
   /**
    * 用户需要绑定手机
    */
-  ERROR_TYPE[ERROR_TYPE["NEED_TO_BIND_PHONE"] = 21] = "NEED_TO_BIND_PHONE";
+  ERROR_TYPE[ERROR_TYPE["NEED_TO_BIND_PHONE"] = 21] = "NEED_TO_BIND_PHONE"
   /**
    * 需要用当前绑定手机发验证码
    */
-  ERROR_TYPE[ERROR_TYPE["USE_BOUND_PHONE_TO_RECEIVE_CAPTCHA"] = 22] = "USE_BOUND_PHONE_TO_RECEIVE_CAPTCHA";
+  ERROR_TYPE[ERROR_TYPE["USE_BOUND_PHONE_TO_RECEIVE_CAPTCHA"] = 22] = "USE_BOUND_PHONE_TO_RECEIVE_CAPTCHA"
   /**
    * 错误的旧密码
    */
-  ERROR_TYPE[ERROR_TYPE["WRONG_OLD_PWD"] = 23] = "WRONG_OLD_PWD";
+  ERROR_TYPE[ERROR_TYPE["WRONG_OLD_PWD"] = 23] = "WRONG_OLD_PWD"
   /**
    * 密码不一致
    */
-  ERROR_TYPE[ERROR_TYPE["PWDS_DO_NOT_MATCH"] = 24] = "PWDS_DO_NOT_MATCH";
+  ERROR_TYPE[ERROR_TYPE["PWDS_DO_NOT_MATCH"] = 24] = "PWDS_DO_NOT_MATCH"
   /**
    * 初始密码只能设置一次
    */
-  ERROR_TYPE[ERROR_TYPE["INIT_PWD_CAN_SET_ONLY_ONCE"] = 25] = "INIT_PWD_CAN_SET_ONLY_ONCE";
+  ERROR_TYPE[ERROR_TYPE["INIT_PWD_CAN_SET_ONLY_ONCE"] = 25] = "INIT_PWD_CAN_SET_ONLY_ONCE"
   /**
    * 需存在主账号(至少包含邮箱、用户名、手机其一)
    */
-  ERROR_TYPE[ERROR_TYPE["NEED_PRIMARY_ACCOUNT"] = 26] = "NEED_PRIMARY_ACCOUNT";
+  ERROR_TYPE[ERROR_TYPE["NEED_PRIMARY_ACCOUNT"] = 26] = "NEED_PRIMARY_ACCOUNT"
   /**
    * 校验码验证失败
    */
-  ERROR_TYPE[ERROR_TYPE["VERIFY_CAPTCHA_FAIL"] = 27] = "VERIFY_CAPTCHA_FAIL";
+  ERROR_TYPE[ERROR_TYPE["VERIFY_CAPTCHA_FAIL"] = 27] = "VERIFY_CAPTCHA_FAIL"
   /**
    * 用户已经绑定过手机
    */
-  ERROR_TYPE[ERROR_TYPE["USER_PHONE_BOUND"] = 28] = "USER_PHONE_BOUND";
+  ERROR_TYPE[ERROR_TYPE["USER_PHONE_BOUND"] = 28] = "USER_PHONE_BOUND"
   /**
    * 原手机号不正确
    */
-  ERROR_TYPE[ERROR_TYPE["OLD_PHONE_WRONG"] = 29] = "OLD_PHONE_WRONG";
+  ERROR_TYPE[ERROR_TYPE["OLD_PHONE_WRONG"] = 29] = "OLD_PHONE_WRONG"
   /**
    * 非法操作
    */
-  ERROR_TYPE[ERROR_TYPE["ILLEGAL_OPERATION"] = 30] = "ILLEGAL_OPERATION";
+  ERROR_TYPE[ERROR_TYPE["ILLEGAL_OPERATION"] = 30] = "ILLEGAL_OPERATION"
   /**
    * 不能绑定原手机号
    */
-  ERROR_TYPE[ERROR_TYPE["CANNOT_BIND_OLD_PHONE"] = 31] = "CANNOT_BIND_OLD_PHONE";
+  ERROR_TYPE[ERROR_TYPE["CANNOT_BIND_OLD_PHONE"] = 31] = "CANNOT_BIND_OLD_PHONE"
   /**
    * 不合法的oauth_ticket
    */
-  ERROR_TYPE[ERROR_TYPE["ILLEGAL_OAUTH_TICKET"] = 32] = "ILLEGAL_OAUTH_TICKET";
+  ERROR_TYPE[ERROR_TYPE["ILLEGAL_OAUTH_TICKET"] = 32] = "ILLEGAL_OAUTH_TICKET"
   /**
    * 不合法的授权类别
    */
-  ERROR_TYPE[ERROR_TYPE["ILLEGAL_AUTHORIZATION_CATEGORY"] = 33] = "ILLEGAL_AUTHORIZATION_CATEGORY";
+  ERROR_TYPE[ERROR_TYPE["ILLEGAL_AUTHORIZATION_CATEGORY"] = 33] = "ILLEGAL_AUTHORIZATION_CATEGORY"
   /**
    * 第三方授权账号已被绑定
    */
-  ERROR_TYPE[ERROR_TYPE["THIRD_PARTY_ACCOUNT_BOUND"] = 34] = "THIRD_PARTY_ACCOUNT_BOUND";
+  ERROR_TYPE[ERROR_TYPE["THIRD_PARTY_ACCOUNT_BOUND"] = 34] = "THIRD_PARTY_ACCOUNT_BOUND"
   /**
    * 账号已经绑定同类型授权账号
    */
-  ERROR_TYPE[ERROR_TYPE["AUTHORIZATION_ACCOUNT_BOUND"] = 35] = "AUTHORIZATION_ACCOUNT_BOUND";
+  ERROR_TYPE[ERROR_TYPE["AUTHORIZATION_ACCOUNT_BOUND"] = 35] = "AUTHORIZATION_ACCOUNT_BOUND"
   /**
    * 请先绑定手机或者设置用户名及密码
    */
-  ERROR_TYPE[ERROR_TYPE["BIND_PHONE_OR_SET_USERNAME_AND_PWD"] = 36] = "BIND_PHONE_OR_SET_USERNAME_AND_PWD";
+  ERROR_TYPE[ERROR_TYPE["BIND_PHONE_OR_SET_USERNAME_AND_PWD"] = 36] = "BIND_PHONE_OR_SET_USERNAME_AND_PWD"
   /**
    * 发送验证码过于频繁
    */
-  ERROR_TYPE[ERROR_TYPE["SEND_CAPTCHA_TOO_FRUQUENTLY"] = 37] = "SEND_CAPTCHA_TOO_FRUQUENTLY";
+  ERROR_TYPE[ERROR_TYPE["SEND_CAPTCHA_TOO_FRUQUENTLY"] = 37] = "SEND_CAPTCHA_TOO_FRUQUENTLY"
   /**
    * 不合法的pid
    */
-  ERROR_TYPE[ERROR_TYPE["ILLEGAL_PID"] = 38] = "ILLEGAL_PID";
+  ERROR_TYPE[ERROR_TYPE["ILLEGAL_PID"] = 38] = "ILLEGAL_PID"
   /**
    * 已经存在相同的昵称
    */
-  ERROR_TYPE[ERROR_TYPE["NICKNAME_EXIST"] = 39] = "NICKNAME_EXIST";
+  ERROR_TYPE[ERROR_TYPE["NICKNAME_EXIST"] = 39] = "NICKNAME_EXIST"
   /**
    * 该手机号已被其他帐号绑定
    */
-  ERROR_TYPE[ERROR_TYPE["PHONE_BOUND_BY_OTHER_ACCOUNT"] = 40] = "PHONE_BOUND_BY_OTHER_ACCOUNT";
+  ERROR_TYPE[ERROR_TYPE["PHONE_BOUND_BY_OTHER_ACCOUNT"] = 40] = "PHONE_BOUND_BY_OTHER_ACCOUNT"
   /**
    * QQ登录错误
    */
-  ERROR_TYPE[ERROR_TYPE["QQ_ERROR_RECEIVED"] = 41] = "QQ_ERROR_RECEIVED";
+  ERROR_TYPE[ERROR_TYPE["QQ_ERROR_RECEIVED"] = 41] = "QQ_ERROR_RECEIVED"
   /**
    * 微信登录错误
    */
-  ERROR_TYPE[ERROR_TYPE["WECHAR_ERROR_RECEIVED"] = 42] = "WECHAR_ERROR_RECEIVED";
+  ERROR_TYPE[ERROR_TYPE["WECHAR_ERROR_RECEIVED"] = 42] = "WECHAR_ERROR_RECEIVED"
   /**
    * access token 不合法
    */
-  ERROR_TYPE[ERROR_TYPE["TOKEN_INVALID"] = 43] = "TOKEN_INVALID";
+  ERROR_TYPE[ERROR_TYPE["TOKEN_INVALID"] = 43] = "TOKEN_INVALID"
   /**
    * refresh token 不合法
    */
-  ERROR_TYPE[ERROR_TYPE["REFRESH_TOKEN_INVALID"] = 44] = "REFRESH_TOKEN_INVALID";
+  ERROR_TYPE[ERROR_TYPE["REFRESH_TOKEN_INVALID"] = 44] = "REFRESH_TOKEN_INVALID"
   /**
    * 错误的 ticket
    */
-  ERROR_TYPE[ERROR_TYPE["WRONG_TICKET"] = 45] = "WRONG_TICKET";
+  ERROR_TYPE[ERROR_TYPE["WRONG_TICKET"] = 45] = "WRONG_TICKET"
   /**
    * 利用旧登录态的 cookie 去获取新登录态的 token的接口
    * 可能会出现的错误。
    */
-  ERROR_TYPE[ERROR_TYPE["COOKIE_INVALID"] = 46] = "COOKIE_INVALID";
-  ERROR_TYPE[ERROR_TYPE["Appid_NotFound"] = 47] = "Appid_NotFound";
-  ERROR_TYPE[ERROR_TYPE["Default_CaptchaRule_NotFound"] = 48] = "Default_CaptchaRule_NotFound";
-  ERROR_TYPE[ERROR_TYPE["TencentCaptcha_Exception"] = 49] = "TencentCaptcha_Exception";
-  ERROR_TYPE[ERROR_TYPE["GeetestCaptcha_Exception"] = 50] = "GeetestCaptcha_Exception";
+  ERROR_TYPE[ERROR_TYPE["COOKIE_INVALID"] = 46] = "COOKIE_INVALID"
+  ERROR_TYPE[ERROR_TYPE["Appid_NotFound"] = 47] = "Appid_NotFound"
+  ERROR_TYPE[ERROR_TYPE["Default_CaptchaRule_NotFound"] = 48] = "Default_CaptchaRule_NotFound"
+  ERROR_TYPE[ERROR_TYPE["TencentCaptcha_Exception"] = 49] = "TencentCaptcha_Exception"
+  ERROR_TYPE[ERROR_TYPE["GeetestCaptcha_Exception"] = 50] = "GeetestCaptcha_Exception"
   /**
    * 邮箱校验错误
    */
-  ERROR_TYPE[ERROR_TYPE["INVALID_EMAIL_ADDRESS"] = 51] = "INVALID_EMAIL_ADDRESS";
+  ERROR_TYPE[ERROR_TYPE["INVALID_EMAIL_ADDRESS"] = 51] = "INVALID_EMAIL_ADDRESS"
   /**
    * 邮箱应注册过了
    */
-  ERROR_TYPE[ERROR_TYPE["EMAIL_HAS_REGISTERED"] = 52] = "EMAIL_HAS_REGISTERED";
+  ERROR_TYPE[ERROR_TYPE["EMAIL_HAS_REGISTERED"] = 52] = "EMAIL_HAS_REGISTERED"
   /**
    * 账号被黑名单限制
    */
-  ERROR_TYPE[ERROR_TYPE["ACCOUNT_HAS_BLOCKED"] = 53] = "ACCOUNT_HAS_BLOCKED";
+  ERROR_TYPE[ERROR_TYPE["ACCOUNT_HAS_BLOCKED"] = 53] = "ACCOUNT_HAS_BLOCKED"
   /**
    * 账号被黑名单限制
    */
-  ERROR_TYPE[ERROR_TYPE["RECEIVABLE_CAPTCHA_TIMES_LIMITTED"] = 54] = "RECEIVABLE_CAPTCHA_TIMES_LIMITTED";
+  ERROR_TYPE[ERROR_TYPE["RECEIVABLE_CAPTCHA_TIMES_LIMITTED"] = 54] = "RECEIVABLE_CAPTCHA_TIMES_LIMITTED"
   /**
    * 必须传入协议id
    */
-  ERROR_TYPE[ERROR_TYPE["AGREEMENT_IDS"] = 55] = "AGREEMENT_IDS";
-})(ERROR_TYPE || (ERROR_TYPE = {}));
-var version = "0.16.0";
+  ERROR_TYPE[ERROR_TYPE["AGREEMENT_IDS"] = 55] = "AGREEMENT_IDS"
+})(ERROR_TYPE || (ERROR_TYPE = {}))
+var version = "0.16.0"
 
 // All Account 3.0 apis for web.
 var Api = {
@@ -373,13 +373,13 @@ var Api = {
   VOICE_CAPTCHA: "/tiger/v3/web/accounts/voice/captcha/send",
   // 查询最新协议-免登录开放接口
   FIND_LATEST_PROTOCOL_LIST: "/tiger/v3/web/accounts/protocol/list"
-};
+}
 var TIGER_CAPTCHA_API = {
   GET_RULE: "/tiger/captcha/graph/rule",
   GET_GEETEST_PARAMS: "/tiger/captcha/graph/geetest/register_slide",
   CHECK_AND_GET_GEETEST_TICKET: "/tiger/captcha/graph/tickets/geetest",
   CHECK_AND_GET_WATERPROOFWALL_TICKET: "/tiger/captcha/graph/tickets/waterproof-wall"
-};
+}
 var PLATFORM_CAPTCHA_API = {
   GET_RULE: "/captcha/rule/v3",
   GET_GEETEST_PARAMS: "/captcha/geetest/register",
@@ -388,16 +388,16 @@ var PLATFORM_CAPTCHA_API = {
   CHECK_AND_GET_NEXTDATA_TICKET: "/captcha/nextdata",
   CHECK_AND_GET_NETEASE_TICKET: "/captcha/netease",
   CHECK_AND_GET_ALIYUN_TICKET: "/captcha/aliyun"
-};
+}
 var TIGER_TOKEN_API = {
   REFRESH_TOKEN: "/tiger/v3/web/accounts/tokens/refresh",
   DELETE_TOKEN: "/tiger/v3/web/accounts/tokens",
   GET_TOKEN_FROM_OLD_COOKIE: "/tiger/v3/web/accounts/tokens/convert"
-};
+}
 var PUBLIC_HEADERS = {
   Net: navigator.connection ? navigator.connection.effectiveType : "",
   "SDK-Account-Version": version
-};
+}
 var api = /*#__PURE__*/Object.freeze({
   __proto__: null,
   Api: Api,
@@ -405,7 +405,7 @@ var api = /*#__PURE__*/Object.freeze({
   PLATFORM_CAPTCHA_API: PLATFORM_CAPTCHA_API,
   TIGER_TOKEN_API: TIGER_TOKEN_API,
   PUBLIC_HEADERS: PUBLIC_HEADERS
-});
+})
 
 /*! *****************************************************************************
 Copyright (c) Microsoft Corporation.
@@ -427,170 +427,170 @@ var extendStatics = function (d, b) {
   extendStatics = Object.setPrototypeOf || {
     __proto__: []
   } instanceof Array && function (d, b) {
-    d.__proto__ = b;
+    d.__proto__ = b
   } || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) {
-      d[p] = b[p];
+      d[p] = b[p]
     }
-  };
-  return extendStatics(d, b);
-};
-function __extends(d, b) {
-  extendStatics(d, b);
-  function __() {
-    this.constructor = d;
   }
-  d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  return extendStatics(d, b)
+}
+function __extends(d, b) {
+  extendStatics(d, b)
+  function __() {
+    this.constructor = d
+  }
+  d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __())
 }
 var __assign = function () {
   __assign = Object.assign || function __assign(t) {
-    for (var s, i = 1, n = arguments.length; i < n; i++) {
-      s = arguments[i];
+    for (var s, i = 1, arguments$length = arguments.length; i < arguments$length; i++) {
+      s = arguments[i]
       for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) {
-        t[p] = s[p];
+        t[p] = s[p]
       }
     }
-    return t;
-  };
-  return __assign.apply(this, arguments);
-};
+    return t
+  }
+  return __assign.apply(this, arguments)
+}
 function __awaiter(thisArg, _arguments, P, generator) {
   function adopt(value) {
     return value instanceof P ? value : new P(function (resolve) {
-      resolve(value);
-    });
+      resolve(value)
+    })
   }
   return new (P || (P = Promise))(function (resolve, reject) {
     function fulfilled(value) {
       try {
-        step(generator.next(value));
+        step(generator.next(value))
       } catch (e) {
-        reject(e);
+        reject(e)
       }
     }
     function rejected(value) {
       try {
-        step(generator["throw"](value));
+        step(generator["throw"](value))
       } catch (e) {
-        reject(e);
+        reject(e)
       }
     }
     function step(result) {
       if (result.done) {
-        resolve(result.value);
+        resolve(result.value)
       } else {
-        adopt(result.value).then(fulfilled, rejected);
+        adopt(result.value).then(fulfilled, rejected)
       }
     }
-    step((generator = generator.apply(thisArg, _arguments || [])).next());
-  });
+    step((generator = generator.apply(thisArg, _arguments || [])).next())
+  })
 }
 function __generator(thisArg, body) {
   var _ = {
     label: 0,
     sent: function () {
       if (t[0] & 1) {
-        throw t[1];
+        throw t[1]
       }
-      return t[1];
+      return t[1]
     },
     trys: [],
     ops: []
-  };
-  var f;
-  var y;
-  var t;
-  var g;
+  }
+  var f
+  var y
+  var t
+  var g
   g = {
     next: verb(0),
     "throw": verb(1),
     "return": verb(2)
-  };
+  }
   if (typeof Symbol === "function") {
     g[Symbol.iterator] = function () {
-      return this;
-    };
+      return this
+    }
   }
-  return g;
+  return g
   function verb(n) {
     return function (v) {
-      return step([n, v]);
-    };
+      return step([n, v])
+    }
   }
   function step(op) {
     if (f) {
-      throw new TypeError("Generator is already executing.");
+      throw new TypeError("Generator is already executing.")
     }
     while (_) {
       try {
-        f = 1;
+        f = 1
         if (y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) {
-          return t;
+          return t
         }
-        y = 0;
+        y = 0
         if (t) {
-          op = [op[0] & 2, t.value];
+          op = [op[0] & 2, t.value]
         }
         switch (op[0]) {
           case 0:
           case 1:
-            t = op;
-            break;
+            t = op
+            break
           case 4:
-            _.label++;
+            _.label++
             return {
               value: op[1],
               done: false
-            };
+            }
           case 5:
-            _.label++;
-            y = op[1];
-            op = [0];
-            continue;
+            _.label++
+            y = op[1]
+            op = [0]
+            continue
           case 7:
-            op = _.ops.pop();
-            _.trys.pop();
-            continue;
+            op = _.ops.pop()
+            _.trys.pop()
+            continue
           default:
             if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) {
-              _ = 0;
-              continue;
+              _ = 0
+              continue
             }
             if (op[0] === 3 && (!t || op[1] > t[0] && op[1] < t[3])) {
-              _.label = op[1];
-              break;
+              _.label = op[1]
+              break
             }
             if (op[0] === 6 && _.label < t[1]) {
-              _.label = t[1];
-              t = op;
-              break;
+              _.label = t[1]
+              t = op
+              break
             }
             if (t && _.label < t[2]) {
-              _.label = t[2];
-              _.ops.push(op);
-              break;
+              _.label = t[2]
+              _.ops.push(op)
+              break
             }
             if (t[2]) {
-              _.ops.pop();
+              _.ops.pop()
             }
-            _.trys.pop();
-            continue;
+            _.trys.pop()
+            continue
         }
-        op = body.call(thisArg, _);
+        op = body.call(thisArg, _)
       } catch (e) {
-        op = [6, e];
-        y = 0;
+        op = [6, e]
+        y = 0
       } finally {
-        f = t = 0;
+        f = t = 0
       }
     }
     if (op[0] & 5) {
-      throw op[1];
+      throw op[1]
     }
     return {
       value: op[0] ? op[1] : undefined,
       done: true
-    };
+    }
   }
 }
 
@@ -611,33 +611,33 @@ function __generator(thisArg, body) {
  * @param {string} response   Error original body.
  */
 var CodemaoError = /** @class */function (_super) {
-  __extends(CodemaoError, _super);
+  __extends(CodemaoError, _super)
   function CodemaoError(options) {
-    var _this = _super.call(this, options.message) || this;
-    var error_code = options.error_code;
-    var _a = options.error_origin_response;
-    var error_origin_response = _a === undefined ? {
+    var _this = _super.call(this, options.message) || this
+    var error_code = options.error_code
+    var options$error_origin_response = options.error_origin_response
+    var error_origin_response = options$error_origin_response === undefined ? {
       error_code: error_code,
       error_message: options.message,
       error_number: error_code || null
-    } : _a;
+    } : options$error_origin_response
     if (options.error_code !== undefined) {
-      _this.error_code = error_code;
+      _this.error_code = error_code
     }
     if (options.error_body) {
-      _this.error_body = options.error_body;
+      _this.error_body = options.error_body
     }
-    _this.response = error_origin_response;
-    return _this;
+    _this.response = error_origin_response
+    return _this
   }
-  return CodemaoError;
-}(Error);
+  return CodemaoError
+}(Error)
 var CodemaoConsoleError = /** @class */function () {
   function CodemaoConsoleError(message) {
-    console.error("Iris SDK error: " + message);
+    console.error("Iris SDK error: " + message)
   }
-  return CodemaoConsoleError;
-}();
+  return CodemaoConsoleError
+}()
 // Map the back-end error to iris error.
 var BackendError = {
   AC3_0: {
@@ -804,7 +804,7 @@ var BackendError = {
     error_code: ERROR_TYPE.GeetestCaptcha_Exception,
     message: "GeetestCaptchaException"
   }
-};
+}
 var initParamsRuleAlias = {
   pid: {
     required: true,
@@ -818,154 +818,154 @@ var initParamsRuleAlias = {
     required: true,
     types: ["string", "number"]
   }
-};
+}
 var initParamsValidateHelper = function ($config) {
   if (!$config) {
-    throw new Error("you should specify a config to init Iris auth module");
+    throw new Error("you should specify a config to init Iris auth module")
   }
   Object.keys(initParamsRuleAlias).forEach(function (rule_key) {
     if (rule_key !== "platform") {
-      var value = $config[rule_key];
+      var value = $config[rule_key]
       if (initParamsRuleAlias[rule_key].required && !value && value !== "") {
         throw new CodemaoError({
           error_code: ERROR_TYPE.INVALID_INIT_PARAMS,
           message: rule_key + " is required,but got null or undefined"
-        });
+        })
       }
-      var type = typeof $config[rule_key];
+      var type = typeof $config[rule_key]
       if (!initParamsRuleAlias[rule_key].types.includes(type)) {
         throw new CodemaoError({
           error_code: ERROR_TYPE.INVALID_INIT_PARAMS,
           message: rule_key + " should be type of " + initParamsRuleAlias[rule_key].type.join(" or ") + ",but got " + type
-        });
+        })
       }
     }
-  });
-  return true;
-};
+  })
+  return true
+}
 
 // IrisInitParams;
-var _initParams = {};
+var _initParams = {}
 var getInitParams = function () {
-  return _initParams;
-};
+  return _initParams
+}
 var setInitParams = function (initParams) {
-  _initParams = initParams;
-};
+  _initParams = initParams
+}
 // IrisConfig
-var _config = configs["prod"];
+var _config = configs["prod"]
 var getConfig = function () {
-  return _config;
-};
+  return _config
+}
 var setConfig = function (config) {
-  _config = config;
-};
+  _config = config
+}
 // AuthConfig
-var _authConfig;
+var _authConfig
 var getAuthConfig = function () {
-  return _authConfig;
-};
+  return _authConfig
+}
 var setAuthConfig = function (config) {
-  _authConfig = config;
-};
+  _authConfig = config
+}
 
 /**
  * Request module to send request.
  */
 var CodemaoRequest = /** @class */function () {
   function CodemaoRequest(config) {
-    this.hostType = config && config.hostType || "tiger";
-    this.timeout = config && config.timeout || 20000;
-    this.public_headers = config && config.public_headers;
+    this.hostType = config && config.hostType || "tiger"
+    this.timeout = config && config.timeout || 20000
+    this.public_headers = config && config.public_headers
   }
   CodemaoRequest.prototype.get_complete_url = function (url, params) {
     var params_str = Object.keys(params).filter(function (key) {
-      return params[key];
+      return params[key]
     }).map(function (key) {
-      return key + "=" + params[key];
-    }).join("&");
-    return Object.keys(params).length === 0 ? "" + getConfig().host[this.hostType] + url : "" + getConfig().host[this.hostType] + url + "?" + params_str;
-  };
+      return key + "=" + params[key]
+    }).join("&")
+    return Object.keys(params).length === 0 ? "" + getConfig().host[this.hostType] + url : "" + getConfig().host[this.hostType] + url + "?" + params_str
+  }
   CodemaoRequest.prototype.dispatch_request = function (options) {
     return __awaiter(this, undefined, undefined, function () {
-      var _this = this;
+      var _this = this
       return __generator(this, function (_a) {
         return [2 /*return*/, new Promise(function (resolve, reject) {
-          var url = options.url;
-          var method = options.method;
-          var data = options.data;
-          var without_base_url = options.without_base_url;
-          var params = options.params || {};
-          var compatibleHeaders = {};
+          var url = options.url
+          var method = options.method
+          var data = options.data
+          var without_base_url = options.without_base_url
+          var params = options.params || {}
+          var compatibleHeaders = {}
           if (getInitParams().auth_version) {
-            compatibleHeaders["Auth-Version"] = getInitParams().auth_version;
+            compatibleHeaders["Auth-Version"] = getInitParams().auth_version
           }
           if (getInitParams().client_id) {
-            compatibleHeaders["Client-ID"] = getInitParams().client_id;
+            compatibleHeaders["Client-ID"] = getInitParams().client_id
           }
-          var headers = __assign(__assign(__assign({}, _this.public_headers), options.headers), compatibleHeaders);
-          var request_url = without_base_url ? url : _this.get_complete_url(url, params);
+          var headers = __assign(__assign(__assign({}, _this.public_headers), options.headers), compatibleHeaders)
+          var request_url = without_base_url ? url : _this.get_complete_url(url, params)
           // [client_id和auth_version] 由 body 修改到 headers 中，所以删了原有assign逻辑❗️
-          var request = new XMLHttpRequest(); // 低版本IE？Nodejs？小程序？还是只考虑web端？
-          request.open(method.toUpperCase(), request_url, true);
+          var request = new XMLHttpRequest() // 低版本IE？Nodejs？小程序？还是只考虑web端？
+          request.open(method.toUpperCase(), request_url, true)
           // Data will be sent with json Content-Type
           if (data) {
-            request.setRequestHeader("Content-Type", "application/json;charset=utf-8");
+            request.setRequestHeader("Content-Type", "application/json;charset=utf-8")
           }
-          request.timeout = getInitParams().requestTimeout || _this.timeout;
-          request.withCredentials = true;
+          request.timeout = getInitParams().requestTimeout || _this.timeout
+          request.withCredentials = true
           request.onreadystatechange = function handle_loaded() {
-            var _a;
+            var /* [auto-meaningful-name] */response$catastrophe
             if (!request || request.readyState !== 4) {
-              return;
+              return
             }
             // The request errored out and we didn't get a response, this will be
             // handled by onerror instead
             // With one exception: request that using file: protocol, most browsers
             // will return status as 0 even though it's a successful request
             if (request.status === 0 && !(request.responseURL && request.responseURL.indexOf("file:") === 0)) {
-              return;
+              return
             }
             if (request.status >= 200 && request.status <= 300) {
-              var response = request.response;
+              var response = request.response
               if (response) {
                 // status
                 resolve({
                   status: request.status,
                   statusText: request.statusText,
                   data: JSON.parse(response)
-                });
+                })
               } else {
                 resolve({
                   status: request.status,
                   statusText: request.statusText,
                   data: null
-                });
+                })
               }
             } else {
               try {
-                var response = JSON.parse(request.response);
+                var response = JSON.parse(request.response)
                 // contains iris's error & request_with_token() back-end error.
-                var error = BackendError[response.error_code];
+                var error = BackendError[response.error_code]
                 if (error) {
                   reject(new CodemaoError(__assign(__assign({}, error), {
                     error_origin_response: response
-                  })));
+                  })))
                 } else {
                   reject(new CodemaoError({
                     error_code: response.error_code,
-                    error_body: ((_a = response.catastrophe) === null || _a === undefined ? undefined : _a.error) || response,
+                    error_body: ((response$catastrophe = response.catastrophe) === null || response$catastrophe === undefined ? undefined : response$catastrophe.error) || response,
                     error_origin_response: response,
                     message: "Get error from " + request_url + "."
-                  }));
+                  }))
                 }
               } catch (error) {
-                reject(error);
+                reject(error)
               }
             }
             // Clean up request.
             // request = null;
-          };
+          }
           // Handle low level network errors
           request.onerror = function () {
             // Real errors are hidden from us by the browser
@@ -973,66 +973,66 @@ var CodemaoRequest = /** @class */function () {
             reject(new CodemaoError({
               error_code: ERROR_TYPE.REQUEST_ERROR,
               message: "Network error."
-            }));
+            }))
             // Clean up request.
             // request = null;
-          };
+          }
           // Handle timeout
           request.ontimeout = function () {
             reject(new CodemaoError({
               error_code: ERROR_TYPE.REQUEST_TIMEOUT,
               message: "ECONNABORTED:timeout of " + request.timeout + " ms exceeded."
-            }));
+            }))
             // Clean up request.
             // request = null;
-          };
+          }
           try {
             if ("setRequestHeader" in request) {
               Object.keys(headers).forEach(function (val) {
-                request.setRequestHeader(val, headers[val]);
-              });
+                request.setRequestHeader(val, headers[val])
+              })
             }
           } catch (error) {
-            console.error(error);
-            console.log("headers is ", headers);
-            throw new Error("Iris Error: 设置请求头时出错，请检查请求头，不能含有中文");
+            console.error(error)
+            console.log("headers is ", headers)
+            throw new Error("Iris Error: 设置请求头时出错，请检查请求头，不能含有中文")
           }
           if (data) {
-            request.send(JSON.stringify(data));
+            request.send(JSON.stringify(data))
           } else {
-            request.send();
+            request.send()
           }
-        })];
-      });
-    });
-  };
-  return CodemaoRequest;
-}();
-var TigerApi = new CodemaoRequest();
+        })]
+      })
+    })
+  }
+  return CodemaoRequest
+}()
+var TigerApi = new CodemaoRequest()
 var PlatformApi = new CodemaoRequest({
   hostType: "platform"
-});
+})
 
 // Function to check if input params' properties are valid.
 function check_input_existence(obj, check_properties) {
   if (obj) {
     Object.keys(obj).map(function (property) {
       if (check_properties.indexOf(property) === -1) {
-        new CodemaoConsoleError("请确认 " + property + " 参数是否合法");
+        new CodemaoConsoleError("请确认 " + property + " 参数是否合法")
       }
-    });
+    })
   }
 }
 // All RegExp for validation
-var phone_number_pattern = /^1[3456789]\d{9}$/;
-var captcha_pattern = /^\d{6}$/;
-var password_pattern = /^[a-zA-Z0-9\_\-@#?!~$^&\*\(\)\/%<>,\.;:"+=|\\{}\[\]]{6,20}$/;
-var username_pattern = /^[a-zA-Z]{1}\w{5,29}$/;
-// eslint-disable-next-line no-misleading-character-class
-var nickname_pattern = /^[^\s☀☁☂ϟ☉☼☾☽♁♨❄❅❆☃☁✉℡℻☎☏✂✄✆✎✏✐✑✒✇℗©®🅏🆏⚐⚑⚆⚇⚈⚉⚞⚟⚠⚬⚭⚮⚯☊㋀㋁㋂㋃㋄㋅㋆㋇㋈㋉㋊㋋㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩ ㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾㍘㍙㍚㍛㍜㍝㍞㍟㍠㍡㍢㍣㍤㍥㍦㍧㍨㍩㍪㍫㍬㍭㍮㍯㍰㏂㏘♳♴♵♶♷♸♹♺♲♻♼♽⚀⚁⚂⚃⚄⚅]{1,20}$/;
-var fullname_pattern = /^([\u4e00-\u9fa5]{2,20}|[a-zA-Z](\s?[a-zA-Z]){3,29})$/;
-var qq_pattern = /^\d{5,20}$/;
-var email_address_pattern = /^\w+@[a-z0-9]+\.[a-z]{2,4}/;
+var phone_number_pattern = /^1[3456789]\d{9}$/
+var captcha_pattern = /^\d{6}$/
+var password_pattern = /^[a-zA-Z0-9\_\-@#?!~$^&\*\(\)\/%<>,\.;:"+=|\\{}\[\]]{6,20}$/
+var username_pattern = /^[a-zA-Z]{1}\w{5,29}$/
+ 
+var nickname_pattern = /^[^\s☀☁☂ϟ☉☼☾☽♁♨❄❅❆☃☁✉℡℻☎☏✂✄✆✎✏✐✑✒✇℗©®🅏🆏⚐⚑⚆⚇⚈⚉⚞⚟⚠⚬⚭⚮⚯☊㋀㋁㋂㋃㋄㋅㋆㋇㋈㋉㋊㋋㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩ ㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾㍘㍙㍚㍛㍜㍝㍞㍟㍠㍡㍢㍣㍤㍥㍦㍧㍨㍩㍪㍫㍬㍭㍮㍯㍰㏂㏘♳♴♵♶♷♸♹♺♲♻♼♽⚀⚁⚂⚃⚄⚅]{1,20}$/
+var fullname_pattern = /^([\u4e00-\u9fa5]{2,20}|[a-zA-Z](\s?[a-zA-Z]){3,29})$/
+var qq_pattern = /^\d{5,20}$/
+var email_address_pattern = /^\w+@[a-z0-9]+\.[a-z]{2,4}/
 //
 function check(property_name, pattern, error_code) {
   return function (property_value) {
@@ -1040,33 +1040,33 @@ function check(property_name, pattern, error_code) {
       throw new CodemaoError({
         error_code: error_code,
         message: "Invalid " + property_name + " \"" + property_value + "\", it should match the RegExp " + pattern + "."
-      });
+      })
     }
-  };
+  }
 }
 // Function to check phone number
-var check_phone_number = check("phone_number", phone_number_pattern, ERROR_TYPE.INVALID_PHONE_NUMBER);
+var check_phone_number = check("phone_number", phone_number_pattern, ERROR_TYPE.INVALID_PHONE_NUMBER)
 //
-var validate_email_address = check("email_address", email_address_pattern, ERROR_TYPE.INVALID_EMAIL_ADDRESS);
+var validate_email_address = check("email_address", email_address_pattern, ERROR_TYPE.INVALID_EMAIL_ADDRESS)
 // Function to check captcha
-var check_captcha = check("captcha", captcha_pattern, ERROR_TYPE.INVALID_CAPTCHA);
+var check_captcha = check("captcha", captcha_pattern, ERROR_TYPE.INVALID_CAPTCHA)
 // Function to check password
-var check_password = check("password", password_pattern, ERROR_TYPE.INVALID_PASSWORD);
+var check_password = check("password", password_pattern, ERROR_TYPE.INVALID_PASSWORD)
 // Function to check username
-var check_username = check("username", username_pattern, ERROR_TYPE.INVALID_USERNAME);
+var check_username = check("username", username_pattern, ERROR_TYPE.INVALID_USERNAME)
 // Function to check nickname
-var check_nickname = check("nickname", nickname_pattern, ERROR_TYPE.INVALID_NICKNAME);
+var check_nickname = check("nickname", nickname_pattern, ERROR_TYPE.INVALID_NICKNAME)
 // Function to check fullname
-var check_fullname = check("fullname", fullname_pattern, ERROR_TYPE.INVALID_FULLNAME);
+var check_fullname = check("fullname", fullname_pattern, ERROR_TYPE.INVALID_FULLNAME)
 // Function to check qq
-var check_qq = check("qq", qq_pattern, ERROR_TYPE.INVALID_QQ);
+var check_qq = check("qq", qq_pattern, ERROR_TYPE.INVALID_QQ)
 // Function to check description
 function check_description(description) {
   if (description.length > 50) {
     throw new CodemaoError({
       error_code: ERROR_TYPE.INVALID_DESCRIPTION,
       message: "Invalid description, it should contains only 0 - 50 characters."
-    });
+    })
   }
 }
 // Function to check sex
@@ -1075,7 +1075,7 @@ function check_sex(sex) {
     throw new CodemaoError({
       error_code: ERROR_TYPE.INVALID_SEX,
       message: "Invalid sex \"" + sex + "\", it should be 0 or 1."
-    });
+    })
   }
 }
 // Function to check birthday
@@ -1084,7 +1084,7 @@ function check_birthday(birthday) {
     throw new CodemaoError({
       error_code: ERROR_TYPE.INVALID_BIRTHDAY,
       message: "Invalid birthday \"" + birthday + "\", it should be a integer number."
-    });
+    })
   }
 }
 /**
@@ -1094,14 +1094,14 @@ function check_birthday(birthday) {
  * @param {RegisterOptions} options
  */
 function check_register_options(options) {
-  var phone_number = options.phone_number;
-  var password = options.password;
-  var captcha = options.captcha;
-  var agreement_ids = options.agreement_ids;
-  check_phone_number(phone_number);
-  check_password(password);
-  check_captcha(captcha);
-  check_agreement_ids(agreement_ids);
+  var phone_number = options.phone_number
+  var password = options.password
+  var captcha = options.captcha
+  var agreement_ids = options.agreement_ids
+  check_phone_number(phone_number)
+  check_password(password)
+  check_captcha(captcha)
+  check_agreement_ids(agreement_ids)
 }
 /**
  *
@@ -1112,7 +1112,7 @@ function check_agreement_ids(ids) {
     throw new CodemaoError({
       error_code: ERROR_TYPE.AGREEMENT_IDS,
       message: "agreement_ids should not be an empty array."
-    });
+    })
   }
 }
 /**
@@ -1122,29 +1122,29 @@ function check_agreement_ids(ids) {
  * @param {UserProfile} profile
  */
 function check_profile(profile) {
-  var birthday = profile.birthday;
-  var sex = profile.sex;
-  var fullname = profile.fullname;
-  var nickname = profile.nickname;
-  var qq = profile.qq;
-  var description = profile.description;
+  var birthday = profile.birthday
+  var sex = profile.sex
+  var fullname = profile.fullname
+  var nickname = profile.nickname
+  var profile$qq = profile.qq
+  var description = profile.description
   if (birthday) {
-    check_birthday(birthday);
+    check_birthday(birthday)
   }
   if (sex) {
-    check_sex(sex);
+    check_sex(sex)
   }
   if (fullname) {
-    check_fullname(fullname);
+    check_fullname(fullname)
   }
   if (nickname) {
-    check_nickname(nickname);
+    check_nickname(nickname)
   }
-  if (qq) {
-    check_qq(qq);
+  if (profile$qq) {
+    check_qq(profile$qq)
   }
   if (description) {
-    check_description(description);
+    check_description(description)
   }
 }
 /**
@@ -1159,7 +1159,7 @@ function check_if_pwd_equals_confirmed_pwd(pwd, pwd_confirm) {
     throw new CodemaoError({
       error_code: ERROR_TYPE.PWD_IS_NOT_EQUAL_TO_CONFIRMED_PWD,
       message: "Password is not equal to confirmed password."
-    });
+    })
   }
 }
 /**
@@ -1172,52 +1172,52 @@ function check_if_pwd_equals_confirmed_pwd(pwd, pwd_confirm) {
  */
 function retry(retries, fn) {
   return __awaiter(this, undefined, undefined, function () {
-    var result;
-    var err_1;
+    var result
+    var err_1
     return __generator(this, function (_a) {
       switch (_a.label) {
         case 0:
-          _a.trys.push([0, 2,, 3]);
-          return [4 /*yield*/, fn()];
+          _a.trys.push([0, 2,, 3])
+          return [4 /*yield*/, fn()]
         case 1:
-          result = _a.sent();
-          return [2 /*return*/, result];
+          result = _a.sent()
+          return [2 /*return*/, result]
         case 2:
-          err_1 = _a.sent();
+          err_1 = _a.sent()
           if (retries > 1) {
-            return [2 /*return*/, retry(retries - 1, fn)];
+            return [2 /*return*/, retry(retries - 1, fn)]
           } else {
             throw new CodemaoError({
               message: "Get geetest init params fail, please reload the page or try again later."
-            });
+            })
           }
         case 3:
-          return [2 /*return*/];
+          return [2 /*return*/]
       }
-    });
-  });
+    })
+  })
 }
 // Function to set cookie with options.
 function set_cookie(options) {
-  var name = options.name;
-  var value = options.value;
-  var domain = options.domain;
-  var max_age = options.max_age;
-  var cookieString = name + "=" + value + "; domain=" + domain + "; max-age=" + max_age + "; path=/;";
-  var sameSiteCookie = cookieString + " samesite=none; secure";
-  document.cookie = cookieString;
-  document.cookie = sameSiteCookie;
+  var name = options.name
+  var value = options.value
+  var domain = options.domain
+  var max_age = options.max_age
+  var cookieString = name + "=" + value + "; domain=" + domain + "; max-age=" + max_age + "; path=/;"
+  var sameSiteCookie = cookieString + " samesite=none; secure"
+  document.cookie = cookieString
+  document.cookie = sameSiteCookie
 }
 // Function to get cookie by name.
 function get_cookie(name) {
-  var cookies = {};
+  var cookies = {}
   document.cookie.split(";").forEach(function (cookie) {
-    var first_equal_mark_position = cookie.indexOf("=");
-    var key = cookie.slice(0, first_equal_mark_position);
-    var value = cookie.slice(first_equal_mark_position + 1);
-    cookies[key.trim()] = value;
-  });
-  return cookies[name];
+    var first_equal_mark_position = cookie.indexOf("=")
+    var key = cookie.slice(0, first_equal_mark_position)
+    var value = cookie.slice(first_equal_mark_position + 1)
+    cookies[key.trim()] = value
+  })
+  return cookies[name]
 }
 // Function to clear cookie by setting max-age to negative number.
 function clear_cookie(name, domain) {
@@ -1226,12 +1226,12 @@ function clear_cookie(name, domain) {
     value: "",
     domain: domain,
     max_age: -999999
-  });
+  })
 }
 // Function to generate the cookie name according to the env.
 function get_cookie_name(type) {
-  var env = getConfig().env;
-  var prefix = env === "prod" ? "" : env + "-";
+  var env = getConfig().env
+  var prefix = env === "prod" ? "" : env + "-"
   if (type === "token_type") {
     /**
      * All possible result
@@ -1240,7 +1240,7 @@ function get_cookie_name(type) {
      * 3. staging -- staging-token-type
      * 4. api-test -- api-test-token-type
      */
-    return prefix + "token-type";
+    return prefix + "token-type"
   }
   /**
    * All possible result
@@ -1249,71 +1249,71 @@ function get_cookie_name(type) {
    * 3. staging -- staging-${type}-token
    * 4. api-test -- api-test-${type}-token
    */
-  return "" + prefix + type + "-token";
+  return "" + prefix + type + "-token"
 }
 function is_cookie_exist(cookie) {
-  return cookie && cookie !== "undefined" && cookie !== "" ? true : false;
+  return cookie && cookie !== "undefined" && cookie !== "" ? true : false
 }
 function load_script(url, id, timeout) {
   return __awaiter(this, undefined, undefined, function () {
     return __generator(this, function (_a) {
       return [2 /*return*/, new Promise(function (resolve, reject) {
         if (!document.getElementById(id)) {
-          var timer_1;
+          var timer_1
           if (timeout) {
             timer_1 = setTimeout(function () {
-              resolve();
-              clearTimeout(timer_1);
-            }, timeout * 1000);
+              resolve()
+              clearTimeout(timer_1)
+            }, timeout * 1000)
           }
-          var script = document.createElement("script");
-          script.type = "text/javascript";
+          var script = document.createElement("script")
+          script.type = "text/javascript"
           script.onload = function () {
-            resolve();
+            resolve()
             if (timer_1) {
-              clearTimeout(timer_1);
+              clearTimeout(timer_1)
             }
-          };
-          script.id = id;
-          script.src = url;
-          script.setAttribute("defer", "");
-          document.getElementsByTagName("head")[0].appendChild(script);
+          }
+          script.id = id
+          script.src = url
+          script.setAttribute("defer", "")
+          document.getElementsByTagName("head")[0].appendChild(script)
         } else {
-          resolve();
+          resolve()
         }
-      })];
-    });
-  });
+      })]
+    })
+  })
 }
 function hasProperty(key, object) {
-  return Object.prototype.hasOwnProperty.call(object, key);
+  return Object.prototype.hasOwnProperty.call(object, key)
 }
 function appendDomNode(domNodeType, opts, style) {
   return new Promise(function (resolve, reject) {
-    var node = document.createElement(domNodeType);
+    var node = document.createElement(domNodeType)
     node.onload = function () {
-      resolve(!false);
-    };
+      resolve(!false)
+    }
     node.onerror = function () {
-      reject(!true);
-    };
+      reject(!true)
+    }
     if (opts) {
       Object.keys(opts).forEach(function (keyname) {
-        var value = opts[keyname];
+        var value = opts[keyname]
         if (keyname !== "innerHTML" && keyname !== "style") {
-          node.setAttribute(keyname, typeof value !== "string" ? JSON.stringify(value) : value);
+          node.setAttribute(keyname, typeof value !== "string" ? JSON.stringify(value) : value)
         }
-      });
+      })
     }
-    node.innerHTML = opts.innerHTML;
-    node.setAttribute("style", style || "");
-    document.body.appendChild(node);
-    resolve(!false);
-  });
+    node.innerHTML = opts.innerHTML
+    node.setAttribute("style", style || "")
+    document.body.appendChild(node)
+    resolve(!false)
+  })
 }
 function simpleHash(tag) {
-  var timestamp = "" + new Date().getTime() / 1000;
-  return "iris-" + tag + "-" + parseInt(timestamp, 10);
+  var timestamp = "" + new Date().getTime() / 1000
+  return "iris-" + tag + "-" + parseInt(timestamp, 10)
 }
 var utils = /*#__PURE__*/Object.freeze({
   __proto__: null,
@@ -1343,7 +1343,7 @@ var utils = /*#__PURE__*/Object.freeze({
   hasProperty: hasProperty,
   appendDomNode: appendDomNode,
   simpleHash: simpleHash
-});
+})
 
 // A class to manage token for CodemaoAuth and business parties.
 var CodemaoToken = /** @class */function () {
@@ -1353,82 +1353,82 @@ var CodemaoToken = /** @class */function () {
         "Product-Code": getAuthConfig().product_code,
         Platform: getAuthConfig().platform
       }, PUBLIC_HEADERS)
-    });
+    })
   }
   CodemaoToken.prototype.dispatch_request = function (options) {
     return __awaiter(this, undefined, undefined, function () {
       return __generator(this, function (_a) {
-        return [2 /*return*/, this.request.dispatch_request(options)];
-      });
-    });
-  };
+        return [2 /*return*/, this.request.dispatch_request(options)]
+      })
+    })
+  }
   // Get the full access token -- 'type access-token'
   CodemaoToken.prototype.get_complete_access_token = function () {
-    var token_type = get_cookie(get_cookie_name("token_type"));
-    var access_token = get_cookie(get_cookie_name("access"));
+    var token_type = get_cookie(get_cookie_name("token_type"))
+    var access_token = get_cookie(get_cookie_name("access"))
     if (is_cookie_exist(token_type) && is_cookie_exist(access_token)) {
-      return token_type + " " + access_token;
+      return token_type + " " + access_token
     } else {
       // Clear the previous access & type cookie.
-      var domain = getConfig().domain;
-      clear_cookie(get_cookie_name("access"), domain);
-      clear_cookie(get_cookie_name("token_type"), domain);
+      var domain = getConfig().domain
+      clear_cookie(get_cookie_name("access"), domain)
+      clear_cookie(get_cookie_name("token_type"), domain)
       throw new CodemaoError({
         error_code: ERROR_TYPE.NO_TOKEN,
         message: "NO Token(cookie might have been expired). Please login."
-      });
+      })
     }
-  };
+  }
   // Get local access token which stored in cookie.
   CodemaoToken.prototype.get_access = function (authorization) {
     return __awaiter(this, undefined, undefined, function () {
-      var _a;
-      var res;
-      var err_1;
+      var _a
+      var res
+      var err_1
       return __generator(this, function (_b) {
         switch (_b.label) {
           case 0:
-            _a = this.check();
+            _a = this.check()
             switch (_a) {
               case "ACCESS_EXIST":
-                return [3 /*break*/, 1];
+                return [3 /*break*/, 1]
               case "REFRESH_EXIST":
-                return [3 /*break*/, 2];
+                return [3 /*break*/, 2]
               case "NO_TOKEN":
-                return [3 /*break*/, 4];
+                return [3 /*break*/, 4]
             }
-            return [3 /*break*/, 7];
+            return [3 /*break*/, 7]
           case 1:
             // Get the access token directly.
-            return [2 /*return*/, this.get_complete_access_token()];
+            return [2 /*return*/, this.get_complete_access_token()]
           case 2:
             // Refresh firstly, then get access token.
-            return [4 /*yield*/, this.refresh()];
+            return [4 /*yield*/, this.refresh()]
           case 3:
             // Refresh firstly, then get access token.
-            _b.sent();
-            return [2 /*return*/, this.get_complete_access_token()];
+            _b.sent()
+            return [2 /*return*/, this.get_complete_access_token()]
           case 4:
-            _b.trys.push([4, 6,, 7]);
-            return [4 /*yield*/, this.convert_cookie_to_token(authorization)];
+            _b.trys.push([4, 6,, 7])
+            return [4 /*yield*/, this.convert_cookie_to_token(authorization)]
           case 5:
-            res = _b.sent();
-            this.set(res.data);
-            return [2 /*return*/, this.get_complete_access_token()];
+            res = _b.sent()
+            this.set(res.data)
+            return [2 /*return*/, this.get_complete_access_token()]
           case 6:
-            err_1 = _b.sent();
+            err_1 = _b.sent()
             // Case 2: no token and no cookie or get cookie_invalid
-            this.clear();
+            this.clear()
             throw new CodemaoError({
               error_code: ERROR_TYPE.NO_TOKEN,
               message: "NO Token. Please login."
-            });
+            })
           case 7:
-            return [2 /*return*/];
+            return [2 /*return*/]
         }
-      });
-    });
-  };
+      })
+    })
+  }
   CodemaoToken.prototype.convert_cookie_to_token = function (authorization) {
     return __awaiter(this, undefined, undefined, function () {
       return __generator(this, function (_a) {
@@ -1438,10 +1438,10 @@ var CodemaoToken = /** @class */function () {
           headers: authorization ? {
             Authorization: "Bearer " + authorization
           } : {}
-        })];
-      });
-    });
-  };
+        })]
+      })
+    })
+  }
   // Get local refresh token which stored in cookie.
   CodemaoToken.prototype.get_refresh = function () {
     if (getInitParams().auth_version) {
@@ -1449,17 +1449,17 @@ var CodemaoToken = /** @class */function () {
         throw new CodemaoError({
           error_code: ERROR_TYPE.NO_TOKEN,
           message: "NO Token. Please login."
-        });
+        })
       }
     }
-    return get_cookie(get_cookie_name("refresh"));
-  };
+    return get_cookie(get_cookie_name("refresh"))
+  }
   // Pass the token to cookie.
   // Every time after auth.login_xxx() & refresh().
   CodemaoToken.prototype.set = function (token) {
-    var access = token.access;
-    var refresh = token.refresh;
-    var domain = getConfig().domain;
+    var access = token.access
+    var refresh = token.refresh
+    var domain = getConfig().domain
     // Set access token to cookie.
     if (access && access.token && access.type && access.expires_in) {
       set_cookie({
@@ -1467,31 +1467,31 @@ var CodemaoToken = /** @class */function () {
         value: access.token,
         domain: domain,
         max_age: access.expires_in
-      });
+      })
       // Set token type to cookie.
       set_cookie({
         name: get_cookie_name("token_type"),
         value: access.type,
         domain: domain,
         max_age: access.expires_in
-      });
+      })
     } else {
-      console.warn("Unexpected access token response from back-end: ", access);
+      console.warn("Unexpected access token response from back-end: ", access)
     }
     // Check if refresh_token exists.
     // Set it to cookie if it exists.
     if (refresh) {
       if (!refresh.token || !refresh.expires_in) {
-        console.warn("Unexpected refresh token response from back-end: ", refresh);
+        console.warn("Unexpected refresh token response from back-end: ", refresh)
       }
       set_cookie({
         name: get_cookie_name("refresh"),
         value: refresh.token,
         domain: domain,
         max_age: refresh.expires_in
-      });
+      })
     }
-  };
+  }
   // Refresh token from back-end.
   CodemaoToken.prototype.refresh_token = function () {
     return __awaiter(this, undefined, undefined, function () {
@@ -1502,108 +1502,108 @@ var CodemaoToken = /** @class */function () {
           data: {
             refresh_token: this.get_refresh()
           }
-        })];
-      });
-    });
-  };
+        })]
+      })
+    })
+  }
   // Refresh token from back-end and pass it to cookie.
   CodemaoToken.prototype.refresh = function () {
     return __awaiter(this, undefined, undefined, function () {
-      var token_res;
-      var err_2;
+      var token_res
+      var err_2
       return __generator(this, function (_a) {
         switch (_a.label) {
           case 0:
-            _a.trys.push([0, 2,, 3]);
-            return [4 /*yield*/, this.refresh_token()];
+            _a.trys.push([0, 2,, 3])
+            return [4 /*yield*/, this.refresh_token()]
           case 1:
-            token_res = _a.sent();
-            this.set(token_res.data);
-            return [3 /*break*/, 3];
+            token_res = _a.sent()
+            this.set(token_res.data)
+            return [3 /*break*/, 3]
           case 2:
-            err_2 = _a.sent();
+            err_2 = _a.sent()
             // Clear cookie when refresh_token is invalid.
             if (err_2.error_code === ERROR_TYPE.REFRESH_TOKEN_INVALID) {
-              this.clear();
+              this.clear()
             }
-            throw err_2;
+            throw err_2
           case 3:
-            return [2 /*return*/];
+            return [2 /*return*/]
         }
-      });
-    });
-  };
+      })
+    })
+  }
   // Check if it's necessary to refresh token.
   CodemaoToken.prototype.check = function () {
     // access_token is not expired
     if (is_cookie_exist(get_cookie(get_cookie_name("access"))) && is_cookie_exist(get_cookie(get_cookie_name("token_type")))) {
-      return "ACCESS_EXIST";
+      return "ACCESS_EXIST"
     }
     // access_token expired, refresh_token is not expired.
     if (is_cookie_exist(get_cookie(get_cookie_name("refresh")))) {
-      return "REFRESH_EXIST";
+      return "REFRESH_EXIST"
     }
     // both of them are expired.
     // or,
     // someone tries to request the api without login.
-    return "NO_TOKEN";
-  };
+    return "NO_TOKEN"
+  }
   // Clear local token through setting cookie.
   CodemaoToken.prototype.clear = function () {
-    var domain = getConfig().domain;
-    clear_cookie(get_cookie_name("access"), domain);
-    clear_cookie(get_cookie_name("token_type"), domain);
-    clear_cookie(get_cookie_name("refresh"), domain);
-  };
-  return CodemaoToken;
-}();
+    var domain = getConfig().domain
+    clear_cookie(get_cookie_name("access"), domain)
+    clear_cookie(get_cookie_name("token_type"), domain)
+    clear_cookie(get_cookie_name("refresh"), domain)
+  }
+  return CodemaoToken
+}()
 function retry_when_token_err(retries, fn) {
   return __awaiter(this, undefined, undefined, function () {
-    var result;
-    var err_3;
-    var error_code;
-    var token;
+    var result
+    var err_3
+    var error_code
+    var token
     return __generator(this, function (_a) {
       switch (_a.label) {
         case 0:
-          _a.trys.push([0, 2,, 5]);
-          return [4 /*yield*/, fn()];
+          _a.trys.push([0, 2,, 5])
+          return [4 /*yield*/, fn()]
         case 1:
-          result = _a.sent();
-          return [2 /*return*/, result];
+          result = _a.sent()
+          return [2 /*return*/, result]
         case 2:
-          err_3 = _a.sent();
-          error_code = err_3.error_code;
+          err_3 = _a.sent()
+          error_code = err_3.error_code
           if (!(error_code === ERROR_TYPE.TOKEN_INVALID && retries > 1)) {
-            return [3 /*break*/, 4];
+            return [3 /*break*/, 4]
           }
-          token = new CodemaoToken();
-          return [4 /*yield*/, token.refresh()];
+          token = new CodemaoToken()
+          return [4 /*yield*/, token.refresh()]
         case 3:
-          _a.sent();
-          return [2 /*return*/, retry_when_token_err(retries - 1, fn)];
+          _a.sent()
+          return [2 /*return*/, retry_when_token_err(retries - 1, fn)]
         case 4:
-          throw err_3;
+          throw err_3
         case 5:
-          return [2 /*return*/];
+          return [2 /*return*/]
       }
-    });
-  });
+    })
+  })
 }
-var _instance;
+var _instance
 function init(params) {
   if (!params.appid) {
-    params.appid = "";
+    params.appid = ""
   }
-  initParamsValidateHelper(params);
-  setAuthConfig(params);
+  initParamsValidateHelper(params)
+  setAuthConfig(params)
   if (["pid", "appid", "product_code", "platform"].every(function (param) {
-    return hasProperty(param, getAuthConfig());
+    return hasProperty(param, getAuthConfig())
   })) {
-    _instance = new CodemaoAuth();
-    return _instance;
+    _instance = new CodemaoAuth()
+    return _instance
   } else {
-    throw new Error("Auth init fail.Check init params.");
+    throw new Error("Auth init fail.Check init params.")
   }
 }
 /**
@@ -1615,8 +1615,8 @@ function init(params) {
 var mergeHeaderConf = function (originalHeader, assertion, specifiedNewHeader) {
   return assertion !== false ? __assign(__assign(__assign({}, originalHeader), {
     "X-Captcha-Id": getAuthConfig().appid || ""
-  }), specifiedNewHeader) : originalHeader;
-};
+  }), specifiedNewHeader) : originalHeader
+}
 // TODO hi,buddys！后续希望大家不要再使用英文写注释了。
 /**
  *
@@ -1633,22 +1633,22 @@ function get_auth_instance() {
   if (!_instance) {
     throw new CodemaoError({
       message: "Iris SDK error: Please run init() correctly, before get_auth_instance()."
-    });
+    })
   }
-  return _instance;
+  return _instance
 }
-var retries_when_got_token_err = 2;
+var retries_when_got_token_err = 2
 var CodemaoAuth = /** @class */function () {
   function CodemaoAuth() {
-    var _a;
+    var _a
     this.request = new CodemaoRequest({
       public_headers: __assign(__assign({
         "Product-Code": getAuthConfig().product_code,
         pid: getAuthConfig().pid,
         Platform: getAuthConfig().platform
       }, PUBLIC_HEADERS), (_a = getInitParams()) === null || _a === undefined ? undefined : _a.custom_headers)
-    });
-    this.token = new CodemaoToken();
+    })
+    this.token = new CodemaoToken()
   }
   /**
    * Dispatch a request with options.
@@ -1658,36 +1658,36 @@ var CodemaoAuth = /** @class */function () {
    */
   CodemaoAuth.prototype.dispatch_request = function (options) {
     return __awaiter(this, undefined, undefined, function () {
-      var _a;
-      var _b;
-      var _this = this;
+      var /* [auto-meaningful-name] */options$headers
+      var _b
+      var _this = this
       return __generator(this, function (_c) {
         switch (_c.label) {
           case 0:
             if (!(options.with_token && getInitParams().auth_version)) {
-              return [3 /*break*/, 2];
+              return [3 /*break*/, 2]
             }
-            options.headers = options.headers || {};
-            // eslint-disable-next-line require-atomic-updates
-            _a = options.headers;
-            _b = "Authorization";
-            return [4 /*yield*/, this.token.get_access()];
+            options.headers = options.headers || {}
+             
+            options$headers = options.headers
+            _b = "Authorization"
+            return [4 /*yield*/, this.token.get_access()]
           case 1:
-            // eslint-disable-next-line require-atomic-updates
-            _a[_b] = _c.sent();
+             
+            options$headers[_b] = _c.sent()
             return [2 /*return*/, retry_when_token_err(retries_when_got_token_err, function () {
               return __awaiter(_this, undefined, undefined, function () {
                 return __generator(this, function (_a) {
-                  return [2 /*return*/, this.request.dispatch_request(options)];
-                });
-              });
-            })];
+                  return [2 /*return*/, this.request.dispatch_request(options)]
+                })
+              })
+            })]
           case 2:
-            return [2 /*return*/, this.request.dispatch_request(options)];
+            return [2 /*return*/, this.request.dispatch_request(options)]
         }
-      });
-    });
-  };
+      })
+    })
+  }
   /**
    * @function     发送邮箱注册验证码
    * @param email  待注册邮箱
@@ -1696,7 +1696,7 @@ var CodemaoAuth = /** @class */function () {
   CodemaoAuth.prototype.email_register_send_captcha = function (email, ticket) {
     return __awaiter(this, undefined, undefined, function () {
       return __generator(this, function (_a) {
-        validate_email_address(email);
+        validate_email_address(email)
         return [2 /*return*/, this.dispatch_request({
           url: Api.SEND_EMAIL_REGISTERATION_CAPTCHA,
           method: "post",
@@ -1706,10 +1706,10 @@ var CodemaoAuth = /** @class */function () {
           headers: mergeHeaderConf({
             "X-Captcha-Ticket": ticket
           })
-        })];
-      });
-    });
-  };
+        })]
+      })
+    })
+  }
   /**
    * @function        验证邮箱注册验证码
    * @param  email    待注册邮箱
@@ -1718,7 +1718,7 @@ var CodemaoAuth = /** @class */function () {
   CodemaoAuth.prototype.validate_email_register_captcha = function (email, captcha) {
     return __awaiter(this, undefined, undefined, function () {
       return __generator(this, function (_a) {
-        validate_email_address(email);
+        validate_email_address(email)
         return [2 /*return*/, this.dispatch_request({
           url: Api.VERIFY_EMAIL_REGISTERATION_CAPTCHA,
           method: "post",
@@ -1726,26 +1726,26 @@ var CodemaoAuth = /** @class */function () {
             email: email,
             captcha: captcha
           }
-        })];
-      });
-    });
-  };
+        })]
+      })
+    })
+  }
   /**
    * @function 邮箱注册账号
    * @param    request_body {captchaTicket: string, password: string, rePassword: string}  待注册邮箱
    */
   CodemaoAuth.prototype.register_email = function (register_params, pid) {
     return __awaiter(this, undefined, undefined, function () {
-      var captchaTicket;
-      var password;
-      var rePassword;
+      var captchaTicket
+      var password
+      var rePassword
       return __generator(this, function (_a) {
-        captchaTicket = register_params.captchaTicket;
-        password = register_params.password;
-        rePassword = register_params.rePassword;
-        check_password(password);
-        check_password(rePassword);
-        check_if_pwd_equals_confirmed_pwd(password, rePassword);
+        captchaTicket = register_params.captchaTicket
+        password = register_params.password
+        rePassword = register_params.rePassword
+        check_password(password)
+        check_password(rePassword)
+        check_if_pwd_equals_confirmed_pwd(password, rePassword)
         return [2 /*return*/, this.dispatch_request({
           url: Api.REGISTER_BY_EMAIL,
           method: "post",
@@ -1755,10 +1755,10 @@ var CodemaoAuth = /** @class */function () {
             rePassword: rePassword,
             pid: pid
           }
-        })];
-      });
-    });
-  };
+        })]
+      })
+    })
+  }
   /**
    * @function   获取所有协议列表
    */
@@ -1768,10 +1768,10 @@ var CodemaoAuth = /** @class */function () {
         return [2 /*return*/, this.dispatch_request({
           url: Api.GET_AGREEMENTS,
           method: "get"
-        })];
-      });
-    });
-  };
+        })]
+      })
+    })
+  }
   /**
    * @function   获取需签署的协议列表
    */
@@ -1781,10 +1781,10 @@ var CodemaoAuth = /** @class */function () {
         return [2 /*return*/, this.dispatch_request({
           url: Api.GET_AGREEMENTS_NEED_SIGN,
           method: "get"
-        })];
-      });
-    });
-  };
+        })]
+      })
+    })
+  }
   /**
    * @function   签署协议
    */
@@ -1798,10 +1798,10 @@ var CodemaoAuth = /** @class */function () {
             agreement_ids: agreement_ids,
             pid: pid
           }
-        })];
-      });
-    });
-  };
+        })]
+      })
+    })
+  }
   /**
    * @function  查询最新协议-免登录开放接口
    * @param     codeList 协议code集合
@@ -1817,10 +1817,10 @@ var CodemaoAuth = /** @class */function () {
             codeList: codeList,
             pid: pid
           }
-        })];
-      });
-    });
-  };
+        })]
+      })
+    })
+  }
   /**
    * @function  请求语音验证码
    * @param     phone_number 手机号码
@@ -1829,15 +1829,15 @@ var CodemaoAuth = /** @class */function () {
    */
   CodemaoAuth.prototype.send_voice_captcha = function (captcha_params, ticket, oauth_ticket) {
     return __awaiter(this, undefined, undefined, function () {
-      var phone_number;
-      var type;
-      var register_res;
+      var phone_number
+      var type
+      var register_res
       return __generator(this, function (_a) {
         switch (_a.label) {
           case 0:
-            phone_number = captcha_params.phone_number;
-            type = captcha_params.type;
-            check_phone_number(phone_number);
+            phone_number = captcha_params.phone_number
+            type = captcha_params.type
+            check_phone_number(phone_number)
             return [4 /*yield*/, this.dispatch_request({
               url: Api.VOICE_CAPTCHA,
               method: "post",
@@ -1849,17 +1849,17 @@ var CodemaoAuth = /** @class */function () {
               headers: mergeHeaderConf({
                 "X-Captcha-Ticket": ticket
               })
-            })];
+            })]
           case 1:
-            register_res = _a.sent();
+            register_res = _a.sent()
             if (register_res.status === 200) {
-              this.token.set(register_res.data.auth.token);
+              this.token.set(register_res.data.auth.token)
             }
-            return [2 /*return*/, register_res];
+            return [2 /*return*/, register_res]
         }
-      });
-    });
-  };
+      })
+    })
+  }
   /**
    * 发送手机号码注册验证码
    *
@@ -1870,7 +1870,7 @@ var CodemaoAuth = /** @class */function () {
   CodemaoAuth.prototype.register_send_captcha = function (phone_number, ticket, pid) {
     return __awaiter(this, undefined, undefined, function () {
       return __generator(this, function (_a) {
-        check_phone_number(phone_number);
+        check_phone_number(phone_number)
         return [2 /*return*/, this.dispatch_request({
           url: Api.REGISTER_SEND_CAPTCHA,
           method: "post",
@@ -1881,10 +1881,10 @@ var CodemaoAuth = /** @class */function () {
           headers: mergeHeaderConf({
             "X-Captcha-Ticket": ticket
           })
-        })];
-      });
-    });
-  };
+        })]
+      })
+    })
+  }
   /**
    * 手机号码注册
    *
@@ -1893,32 +1893,32 @@ var CodemaoAuth = /** @class */function () {
    */
   CodemaoAuth.prototype.register = function (options, specific_pid) {
     return __awaiter(this, undefined, undefined, function () {
-      var pid;
-      var register_res;
+      var pid
+      var register_res
       return __generator(this, function (_a) {
         switch (_a.label) {
           case 0:
             // TODO: 该方法主要校验存在性，check_register_options已做，不需要
-            check_input_existence(options, ["phone_number", "captcha", "password", "agreement_ids"]);
-            check_register_options(options);
-            pid = specific_pid || getAuthConfig().pid;
+            check_input_existence(options, ["phone_number", "captcha", "password", "agreement_ids"])
+            check_register_options(options)
+            pid = specific_pid || getAuthConfig().pid
             return [4 /*yield*/, this.dispatch_request({
               url: Api.REGISTER,
               method: "post",
               data: __assign(__assign({}, options), {
                 pid: pid
               })
-            })];
+            })]
           case 1:
-            register_res = _a.sent();
+            register_res = _a.sent()
             if (register_res.status === 200) {
-              this.token.set(register_res.data.auth.token);
+              this.token.set(register_res.data.auth.token)
             }
-            return [2 /*return*/, register_res];
+            return [2 /*return*/, register_res]
         }
-      });
-    });
-  };
+      })
+    })
+  }
   /**
    * 发送登录验证码
    *
@@ -1929,7 +1929,7 @@ var CodemaoAuth = /** @class */function () {
   CodemaoAuth.prototype.login_captcha = function (phone_number, ticket, pid) {
     return __awaiter(this, undefined, undefined, function () {
       return __generator(this, function (_a) {
-        check_phone_number(phone_number);
+        check_phone_number(phone_number)
         return [2 /*return*/, this.dispatch_request({
           url: Api.LOGIN_CAPTCHA,
           method: "post",
@@ -1940,10 +1940,10 @@ var CodemaoAuth = /** @class */function () {
           headers: mergeHeaderConf({
             "X-Captcha-Ticket": ticket
           })
-        })];
-      });
-    });
-  };
+        })]
+      })
+    })
+  }
   /**
    * 手机登录
    *
@@ -1953,14 +1953,14 @@ var CodemaoAuth = /** @class */function () {
    */
   CodemaoAuth.prototype.login_phone = function (phone_number, captcha, specific_pid, agreement_ids) {
     return __awaiter(this, undefined, undefined, function () {
-      var pid;
-      var login_res;
+      var pid
+      var login_res
       return __generator(this, function (_a) {
         switch (_a.label) {
           case 0:
-            check_phone_number(phone_number);
-            check_captcha(captcha);
-            pid = specific_pid || getAuthConfig().pid;
+            check_phone_number(phone_number)
+            check_captcha(captcha)
+            pid = specific_pid || getAuthConfig().pid
             return [4 /*yield*/, this.dispatch_request({
               url: Api.LOGIN_PHONE,
               method: "post",
@@ -1970,17 +1970,17 @@ var CodemaoAuth = /** @class */function () {
                 pid: pid,
                 agreement_ids: agreement_ids || [-1]
               }
-            })];
+            })]
           case 1:
-            login_res = _a.sent();
+            login_res = _a.sent()
             if (login_res.status === 200) {
-              this.token.set(login_res.data.auth.token);
+              this.token.set(login_res.data.auth.token)
             }
-            return [2 /*return*/, login_res];
+            return [2 /*return*/, login_res]
         }
-      });
-    });
-  };
+      })
+    })
+  }
   /**
    * 账号登录
    *
@@ -1990,12 +1990,12 @@ var CodemaoAuth = /** @class */function () {
    */
   CodemaoAuth.prototype.login_account = function (identity, password, specific_pid, agreement_ids) {
     return __awaiter(this, undefined, undefined, function () {
-      var pid;
-      var login_res;
+      var pid
+      var login_res
       return __generator(this, function (_a) {
         switch (_a.label) {
           case 0:
-            pid = specific_pid || getAuthConfig().pid;
+            pid = specific_pid || getAuthConfig().pid
             return [4 /*yield*/, this.dispatch_request({
               url: Api.LOGIN_ACCOUNT,
               method: "post",
@@ -2005,17 +2005,17 @@ var CodemaoAuth = /** @class */function () {
                 pid: pid,
                 agreement_ids: agreement_ids || [-1]
               }
-            })];
+            })]
           case 1:
-            login_res = _a.sent();
+            login_res = _a.sent()
             if (login_res.status === 200) {
-              this.token.set(login_res.data.auth.token);
+              this.token.set(login_res.data.auth.token)
             }
-            return [2 /*return*/, login_res];
+            return [2 /*return*/, login_res]
         }
-      });
-    });
-  };
+      })
+    })
+  }
   /**
    * 微信网页端登录
    *
@@ -2025,12 +2025,12 @@ var CodemaoAuth = /** @class */function () {
    */
   CodemaoAuth.prototype.login_wechat = function (code, agreement_ids, specific_pid, appid) {
     return __awaiter(this, undefined, undefined, function () {
-      var pid;
-      var login_res;
+      var pid
+      var login_res
       return __generator(this, function (_a) {
         switch (_a.label) {
           case 0:
-            pid = specific_pid || getAuthConfig().pid;
+            pid = specific_pid || getAuthConfig().pid
             return [4 /*yield*/, this.dispatch_request({
               url: Api.LOGIN_WECHAT,
               method: "post",
@@ -2040,17 +2040,17 @@ var CodemaoAuth = /** @class */function () {
                 appid: appid,
                 agreement_ids: agreement_ids || [-1]
               }
-            })];
+            })]
           case 1:
-            login_res = _a.sent();
+            login_res = _a.sent()
             if (login_res.status === 200 && login_res.data.auth) {
-              this.token.set(login_res.data.auth.token);
+              this.token.set(login_res.data.auth.token)
             }
-            return [2 /*return*/, login_res];
+            return [2 /*return*/, login_res]
         }
-      });
-    });
-  };
+      })
+    })
+  }
   /**
    * @function QQ网页端登录
    * @param code
@@ -2058,12 +2058,12 @@ var CodemaoAuth = /** @class */function () {
    */
   CodemaoAuth.prototype.login_qq = function (code, agreement_ids, specific_pid) {
     return __awaiter(this, undefined, undefined, function () {
-      var pid;
-      var login_res;
+      var pid
+      var login_res
       return __generator(this, function (_a) {
         switch (_a.label) {
           case 0:
-            pid = specific_pid || getAuthConfig().pid;
+            pid = specific_pid || getAuthConfig().pid
             return [4 /*yield*/, this.dispatch_request({
               url: Api.LOGIN_QQ,
               method: "post",
@@ -2072,17 +2072,17 @@ var CodemaoAuth = /** @class */function () {
                 pid: pid,
                 agreement_ids: agreement_ids || [-1]
               }
-            })];
+            })]
           case 1:
-            login_res = _a.sent();
+            login_res = _a.sent()
             if (login_res.status === 200 && login_res.data.auth) {
-              this.token.set(login_res.data.auth.token);
+              this.token.set(login_res.data.auth.token)
             }
-            return [2 /*return*/, login_res];
+            return [2 /*return*/, login_res]
         }
-      });
-    });
-  };
+      })
+    })
+  }
   /**
    * 发送第三方绑定手机验证码
    *
@@ -2092,7 +2092,7 @@ var CodemaoAuth = /** @class */function () {
   CodemaoAuth.prototype.bind_phone_for_third_party = function (phone_number, oauth_ticket) {
     return __awaiter(this, undefined, undefined, function () {
       return __generator(this, function (_a) {
-        check_phone_number(phone_number);
+        check_phone_number(phone_number)
         return [2 /*return*/, this.dispatch_request({
           url: Api.BIND_PHONE_FOR_THIRD_PARTY,
           method: "post",
@@ -2100,10 +2100,10 @@ var CodemaoAuth = /** @class */function () {
             phone_number: phone_number,
             oauth_ticket: oauth_ticket
           }
-        })];
-      });
-    });
-  };
+        })]
+      })
+    })
+  }
   /**
    * 第三方登录（激活）
    *
@@ -2112,12 +2112,12 @@ var CodemaoAuth = /** @class */function () {
    */
   CodemaoAuth.prototype.create_user_for_third_party = function (oauth_ticket, captcha, agreement_ids) {
     return __awaiter(this, undefined, undefined, function () {
-      var login_res;
+      var login_res
       return __generator(this, function (_a) {
         switch (_a.label) {
           case 0:
             if (captcha) {
-              check_captcha(captcha);
+              check_captcha(captcha)
             }
             return [4 /*yield*/, this.dispatch_request({
               url: Api.CREATE_USER_FOR_THIRD_PARTY,
@@ -2130,24 +2130,24 @@ var CodemaoAuth = /** @class */function () {
                 oauth_ticket: oauth_ticket,
                 agreement_ids: agreement_ids || [-1]
               }
-            })];
+            })]
           case 1:
-            login_res = _a.sent();
+            login_res = _a.sent()
             if (login_res.status === 200) {
-              this.token.set(login_res.data.auth.token);
+              this.token.set(login_res.data.auth.token)
             }
-            return [2 /*return*/, login_res];
+            return [2 /*return*/, login_res]
         }
-      });
-    });
-  };
+      })
+    })
+  }
   /**
    * 退出登录
    *
    */
   CodemaoAuth.prototype.logout = function () {
     return __awaiter(this, undefined, undefined, function () {
-      var res;
+      var res
       return __generator(this, function (_a) {
         switch (_a.label) {
           case 0:
@@ -2158,17 +2158,17 @@ var CodemaoAuth = /** @class */function () {
                 refresh_token: this.token.get_refresh()
               },
               with_token: true
-            })];
+            })]
           case 1:
-            res = _a.sent();
+            res = _a.sent()
             if (res) {
-              this.token.clear();
+              this.token.clear()
             }
-            return [2 /*return*/, res];
+            return [2 /*return*/, res]
         }
-      });
-    });
-  };
+      })
+    })
+  }
   /**
    * 发送绑定手机验证码
    *
@@ -2178,7 +2178,7 @@ var CodemaoAuth = /** @class */function () {
   CodemaoAuth.prototype.bind_phone_captcha = function (phone_number, ticket, pid) {
     return __awaiter(this, undefined, undefined, function () {
       return __generator(this, function (_a) {
-        check_phone_number(phone_number);
+        check_phone_number(phone_number)
         return [2 /*return*/, this.dispatch_request({
           url: Api.BIND_PHONE_CAPTCHA,
           method: "post",
@@ -2190,10 +2190,10 @@ var CodemaoAuth = /** @class */function () {
             "X-Captcha-Ticket": ticket
           }),
           with_token: true
-        })];
-      });
-    });
-  };
+        })]
+      })
+    })
+  }
   /**
    * 绑定手机
    *
@@ -2203,8 +2203,8 @@ var CodemaoAuth = /** @class */function () {
   CodemaoAuth.prototype.bind_phone = function (phone_number, captcha) {
     return __awaiter(this, undefined, undefined, function () {
       return __generator(this, function (_a) {
-        check_phone_number(phone_number);
-        check_captcha(captcha);
+        check_phone_number(phone_number)
+        check_captcha(captcha)
         return [2 /*return*/, this.dispatch_request({
           url: Api.BIND_PHONE,
           method: "patch",
@@ -2213,10 +2213,10 @@ var CodemaoAuth = /** @class */function () {
             captcha: captcha
           },
           with_token: true
-        })];
-      });
-    });
-  };
+        })]
+      })
+    })
+  }
   /**
    * 检测输入手机是否当前绑定手机
    *
@@ -2225,7 +2225,7 @@ var CodemaoAuth = /** @class */function () {
   CodemaoAuth.prototype.bind_phone_check = function (phone_number) {
     return __awaiter(this, undefined, undefined, function () {
       return __generator(this, function (_a) {
-        check_phone_number(phone_number);
+        check_phone_number(phone_number)
         return [2 /*return*/, this.dispatch_request({
           url: Api.BIND_PHONE_CHECK,
           method: "get",
@@ -2233,10 +2233,10 @@ var CodemaoAuth = /** @class */function () {
             phone_number: phone_number
           },
           with_token: true
-        })];
-      });
-    });
-  };
+        })]
+      })
+    })
+  }
   /**
    * 发送更新绑定手机的验证码
    *
@@ -2247,8 +2247,8 @@ var CodemaoAuth = /** @class */function () {
   CodemaoAuth.prototype.rebind_phone_captcha = function (phone_number, old_phone_number, pid) {
     return __awaiter(this, undefined, undefined, function () {
       return __generator(this, function (_a) {
-        check_phone_number(phone_number);
-        check_phone_number(old_phone_number);
+        check_phone_number(phone_number)
+        check_phone_number(old_phone_number)
         return [2 /*return*/, this.dispatch_request({
           url: Api.REBIND_PHONE_CAPTCHA,
           method: "post",
@@ -2258,10 +2258,10 @@ var CodemaoAuth = /** @class */function () {
             pid: pid
           },
           with_token: true
-        })];
-      });
-    });
-  };
+        })]
+      })
+    })
+  }
   /**
    * 更新绑定手机
    *
@@ -2271,8 +2271,8 @@ var CodemaoAuth = /** @class */function () {
   CodemaoAuth.prototype.rebind_phone = function (phone_number, captcha) {
     return __awaiter(this, undefined, undefined, function () {
       return __generator(this, function (_a) {
-        check_phone_number(phone_number);
-        check_captcha(captcha);
+        check_phone_number(phone_number)
+        check_captcha(captcha)
         return [2 /*return*/, this.dispatch_request({
           url: Api.REBIND_PHONE,
           method: "patch",
@@ -2281,10 +2281,10 @@ var CodemaoAuth = /** @class */function () {
             captcha: captcha
           },
           with_token: true
-        })];
-      });
-    });
-  };
+        })]
+      })
+    })
+  }
   /**
    * 发送重置密码的验证码
    *
@@ -2295,7 +2295,7 @@ var CodemaoAuth = /** @class */function () {
   CodemaoAuth.prototype.reset_pwd_captcha = function (phone_number, ticket, pid) {
     return __awaiter(this, undefined, undefined, function () {
       return __generator(this, function (_a) {
-        check_phone_number(phone_number);
+        check_phone_number(phone_number)
         return [2 /*return*/, this.dispatch_request({
           url: Api.RESET_PWD_CAPTCHA,
           method: "post",
@@ -2306,10 +2306,10 @@ var CodemaoAuth = /** @class */function () {
           headers: mergeHeaderConf({
             "X-Captcha-Ticket": ticket
           })
-        })];
-      });
-    });
-  };
+        })]
+      })
+    })
+  }
   /**
    * 检测并重置密码ticket
    *
@@ -2319,8 +2319,8 @@ var CodemaoAuth = /** @class */function () {
   CodemaoAuth.prototype.reset_pwd_token = function (phone_number, captcha) {
     return __awaiter(this, undefined, undefined, function () {
       return __generator(this, function (_a) {
-        check_phone_number(phone_number);
-        check_captcha(captcha);
+        check_phone_number(phone_number)
+        check_captcha(captcha)
         return [2 /*return*/, this.dispatch_request({
           url: Api.RESET_PWD_TOKEN,
           method: "post",
@@ -2328,10 +2328,10 @@ var CodemaoAuth = /** @class */function () {
             phone_number: phone_number,
             captcha: captcha
           }
-        })];
-      });
-    });
-  };
+        })]
+      })
+    })
+  }
   /**
    * 重置密码
    *
@@ -2341,15 +2341,15 @@ var CodemaoAuth = /** @class */function () {
    */
   CodemaoAuth.prototype.reset_pwd = function (ticket, pwd, pwd_confirm) {
     return __awaiter(this, undefined, undefined, function () {
-      var request_options;
-      var token;
-      var err_1;
+      var request_options
+      var token
+      var err_1
       return __generator(this, function (_a) {
         switch (_a.label) {
           case 0:
-            check_password(pwd);
-            check_password(pwd_confirm);
-            check_if_pwd_equals_confirmed_pwd(pwd, pwd_confirm);
+            check_password(pwd)
+            check_password(pwd_confirm)
+            check_if_pwd_equals_confirmed_pwd(pwd, pwd_confirm)
             request_options = {
               url: Api.RESET_PWD,
               method: "patch",
@@ -2358,29 +2358,29 @@ var CodemaoAuth = /** @class */function () {
                 password: pwd,
                 confirm_password: pwd_confirm
               }
-            };
-            _a.label = 1;
+            }
+            _a.label = 1
           case 1:
-            _a.trys.push([1, 3,, 4]);
-            return [4 /*yield*/, this.token.get_access()];
+            _a.trys.push([1, 3,, 4])
+            return [4 /*yield*/, this.token.get_access()]
           case 2:
-            token = _a.sent();
-            return [3 /*break*/, 4];
+            token = _a.sent()
+            return [3 /*break*/, 4]
           case 3:
-            err_1 = _a.sent();
-            token = "";
-            return [3 /*break*/, 4];
+            err_1 = _a.sent()
+            token = ""
+            return [3 /*break*/, 4]
           case 4:
             if (token !== "") {
               Object.assign(request_options, {
                 with_token: true
-              });
+              })
             }
-            return [2 /*return*/, this.dispatch_request(request_options)];
+            return [2 /*return*/, this.dispatch_request(request_options)]
         }
-      });
-    });
-  };
+      })
+    })
+  }
   /**
    * 通用验证码之发送验证码
    *
@@ -2391,7 +2391,7 @@ var CodemaoAuth = /** @class */function () {
   CodemaoAuth.prototype.send_universal_captcha = function (phone_number, ticket, pid) {
     return __awaiter(this, undefined, undefined, function () {
       return __generator(this, function (_a) {
-        check_phone_number(phone_number);
+        check_phone_number(phone_number)
         return [2 /*return*/, this.dispatch_request({
           url: Api.SEND_UNIVERSAL_CAPTCHA,
           method: "post",
@@ -2402,10 +2402,10 @@ var CodemaoAuth = /** @class */function () {
           headers: mergeHeaderConf({
             "X-Captcha-Ticket": ticket
           })
-        })];
-      });
-    });
-  };
+        })]
+      })
+    })
+  }
   /**
    * 通用验证码之校验验证码
    *
@@ -2415,8 +2415,8 @@ var CodemaoAuth = /** @class */function () {
   CodemaoAuth.prototype.verify_universal_captcha = function (phone_number, captcha) {
     return __awaiter(this, undefined, undefined, function () {
       return __generator(this, function (_a) {
-        check_phone_number(phone_number);
-        check_captcha(captcha);
+        check_phone_number(phone_number)
+        check_captcha(captcha)
         return [2 /*return*/, this.dispatch_request({
           url: Api.VERIFY_UNIVERSAL_CAPTCHA,
           method: "post",
@@ -2424,10 +2424,10 @@ var CodemaoAuth = /** @class */function () {
             phone_number: phone_number,
             captcha: captcha
           }
-        })];
-      });
-    });
-  };
+        })]
+      })
+    })
+  }
   /**
    * 发送登录验证码(静默注册版本)
    *
@@ -2438,7 +2438,7 @@ var CodemaoAuth = /** @class */function () {
   CodemaoAuth.prototype.login_captcha_silence = function (phone_number, ticket, pid) {
     return __awaiter(this, undefined, undefined, function () {
       return __generator(this, function (_a) {
-        check_phone_number(phone_number);
+        check_phone_number(phone_number)
         return [2 /*return*/, this.dispatch_request({
           url: Api.LOGIN_CAPTCHA_SILENCE,
           method: "post",
@@ -2449,10 +2449,10 @@ var CodemaoAuth = /** @class */function () {
           headers: mergeHeaderConf({
             "X-Captcha-Ticket": ticket
           })
-        })];
-      });
-    });
-  };
+        })]
+      })
+    })
+  }
   /**
    * 手机登录(静默注册版)
    *
@@ -2471,34 +2471,34 @@ var CodemaoAuth = /** @class */function () {
   // ): Promise<SilenceLoginResponse>;
   CodemaoAuth.prototype.login_phone_silence = function (first_param, second_param, third_param, agreement_ids) {
     return __awaiter(this, undefined, undefined, function () {
-      var phone_number;
-      var captcha;
+      var phone_number
+      var captcha
       var
       // agreement_ids = undefined,
-      specific_pid;
-      var pid;
-      var login_res;
+      specific_pid
+      var pid
+      var login_res
       return __generator(this, function (_a) {
         switch (_a.label) {
           case 0:
-            phone_number = "";
-            captcha = "";
-            specific_pid = "";
+            phone_number = ""
+            captcha = ""
+            specific_pid = ""
             if (typeof first_param === "string") {
-              phone_number = first_param || "";
-              captcha = second_param || "";
-              specific_pid = third_param || "";
+              phone_number = first_param || ""
+              captcha = second_param || ""
+              specific_pid = third_param || ""
             }
             if (typeof first_param === "object") {
-              phone_number = (first_param === null || first_param === undefined ? undefined : first_param.phone_number) || "";
-              captcha = (first_param === null || first_param === undefined ? undefined : first_param.captcha) || "";
+              phone_number = (first_param === null || first_param === undefined ? undefined : first_param.phone_number) || ""
+              captcha = (first_param === null || first_param === undefined ? undefined : first_param.captcha) || ""
               // agreement_ids = first_param?.agreement_ids || undefined;
-              agreement_ids = first_param === null || first_param === undefined ? undefined : first_param.agreement_ids;
-              specific_pid = second_param || "";
+              agreement_ids = first_param === null || first_param === undefined ? undefined : first_param.agreement_ids
+              specific_pid = second_param || ""
             }
-            check_phone_number(phone_number);
-            check_captcha(captcha);
-            pid = specific_pid || getAuthConfig().pid;
+            check_phone_number(phone_number)
+            check_captcha(captcha)
+            pid = specific_pid || getAuthConfig().pid
             return [4 /*yield*/, this.dispatch_request({
               url: Api.LOGIN_PHONE_SILENCE,
               method: "post",
@@ -2508,36 +2508,36 @@ var CodemaoAuth = /** @class */function () {
                 pid: pid,
                 agreement_ids: agreement_ids || [-1]
               }
-            })];
+            })]
           case 1:
-            login_res = _a.sent();
+            login_res = _a.sent()
             if (login_res.status === 200) {
-              this.token.set(login_res.data.auth.token);
+              this.token.set(login_res.data.auth.token)
             }
-            return [2 /*return*/, login_res];
+            return [2 /*return*/, login_res]
         }
-      });
-    });
-  };
+      })
+    })
+  }
   CodemaoAuth.prototype.get_access_token = function (authorization) {
     return __awaiter(this, undefined, undefined, function () {
       return __generator(this, function (_a) {
-        return [2 /*return*/, this.token.get_access(authorization)];
-      });
-    });
-  };
+        return [2 /*return*/, this.token.get_access(authorization)]
+      })
+    })
+  }
   CodemaoAuth.prototype.request_with_token = function (options) {
     return __awaiter(this, undefined, undefined, function () {
-      var token_options;
+      var token_options
       return __generator(this, function (_a) {
         token_options = {
           with_token: true,
           without_base_url: true
-        };
-        return [2 /*return*/, this.dispatch_request(Object.assign(options, token_options))];
-      });
-    });
-  };
+        }
+        return [2 /*return*/, this.dispatch_request(Object.assign(options, token_options))]
+      })
+    })
+  }
   /**
    * 设置用户名
    *
@@ -2546,7 +2546,7 @@ var CodemaoAuth = /** @class */function () {
   CodemaoAuth.prototype.set_username = function (username) {
     return __awaiter(this, undefined, undefined, function () {
       return __generator(this, function (_a) {
-        check_username(username);
+        check_username(username)
         return [2 /*return*/, this.dispatch_request({
           url: Api.SET_USERNAME,
           method: "patch",
@@ -2554,10 +2554,10 @@ var CodemaoAuth = /** @class */function () {
             username: username
           },
           with_token: true
-        })];
-      });
-    });
-  };
+        })]
+      })
+    })
+  }
   /**
    * 设置初始密码
    *
@@ -2567,9 +2567,9 @@ var CodemaoAuth = /** @class */function () {
   CodemaoAuth.prototype.init_password = function (pwd, pwd_confirm) {
     return __awaiter(this, undefined, undefined, function () {
       return __generator(this, function (_a) {
-        check_password(pwd);
-        check_password(pwd_confirm);
-        check_if_pwd_equals_confirmed_pwd(pwd, pwd_confirm);
+        check_password(pwd)
+        check_password(pwd_confirm)
+        check_if_pwd_equals_confirmed_pwd(pwd, pwd_confirm)
         return [2 /*return*/, this.dispatch_request({
           url: Api.INIT_PASSWORD,
           method: "patch",
@@ -2578,10 +2578,10 @@ var CodemaoAuth = /** @class */function () {
             confirm_password: pwd_confirm
           },
           with_token: true
-        })];
-      });
-    });
-  };
+        })]
+      })
+    })
+  }
   /**
    * 更新密码（通过提供旧密码）
    *
@@ -2591,14 +2591,14 @@ var CodemaoAuth = /** @class */function () {
    */
   CodemaoAuth.prototype.change_pwd_by_old = function (old_pwd, new_pwd, new_pwd_confirm) {
     return __awaiter(this, undefined, undefined, function () {
-      var res;
+      var res
       return __generator(this, function (_a) {
         switch (_a.label) {
           case 0:
             // U.check_password(old_pwd);
-            check_password(new_pwd);
-            check_password(new_pwd_confirm);
-            check_if_pwd_equals_confirmed_pwd(new_pwd, new_pwd_confirm);
+            check_password(new_pwd)
+            check_password(new_pwd_confirm)
+            check_if_pwd_equals_confirmed_pwd(new_pwd, new_pwd_confirm)
             return [4 /*yield*/, this.dispatch_request({
               url: Api.CHANGE_PWD_BY_OLD,
               method: "patch",
@@ -2608,17 +2608,17 @@ var CodemaoAuth = /** @class */function () {
                 confirm_password: new_pwd_confirm
               },
               with_token: true
-            })];
+            })]
           case 1:
-            res = _a.sent();
+            res = _a.sent()
             if (res) {
-              this.token.clear();
+              this.token.clear()
             }
-            return [2 /*return*/, res];
+            return [2 /*return*/, res]
         }
-      });
-    });
-  };
+      })
+    })
+  }
   /**
    * 发送更新密码的验证码
    *
@@ -2628,7 +2628,7 @@ var CodemaoAuth = /** @class */function () {
   CodemaoAuth.prototype.change_pwd_by_phone_captcha = function (phone_number, pid) {
     return __awaiter(this, undefined, undefined, function () {
       return __generator(this, function (_a) {
-        check_phone_number(phone_number);
+        check_phone_number(phone_number)
         return [2 /*return*/, this.dispatch_request({
           url: Api.CHNAGE_PWD_BY_PHONE_CAPTCHA,
           method: "post",
@@ -2637,10 +2637,10 @@ var CodemaoAuth = /** @class */function () {
             pid: pid
           },
           with_token: true
-        })];
-      });
-    });
-  };
+        })]
+      })
+    })
+  }
   /**
    * 更新密码（通过手机）
    *
@@ -2650,13 +2650,13 @@ var CodemaoAuth = /** @class */function () {
    */
   CodemaoAuth.prototype.change_pwd_by_phone = function (phone_number, captcha, pwd) {
     return __awaiter(this, undefined, undefined, function () {
-      var res;
+      var res
       return __generator(this, function (_a) {
         switch (_a.label) {
           case 0:
-            check_phone_number(phone_number);
-            check_captcha(captcha);
-            check_password(pwd);
+            check_phone_number(phone_number)
+            check_captcha(captcha)
+            check_password(pwd)
             return [4 /*yield*/, this.dispatch_request({
               url: Api.CHANGE_PWD_BY_PHONE,
               method: "patch",
@@ -2666,17 +2666,17 @@ var CodemaoAuth = /** @class */function () {
                 password: pwd
               },
               with_token: true
-            })];
+            })]
           case 1:
-            res = _a.sent();
+            res = _a.sent()
             if (res) {
-              this.token.clear();
+              this.token.clear()
             }
-            return [2 /*return*/, res];
+            return [2 /*return*/, res]
         }
-      });
-    });
-  };
+      })
+    })
+  }
   /**
    * 更新用户信息
    *
@@ -2686,18 +2686,18 @@ var CodemaoAuth = /** @class */function () {
     return __awaiter(this, undefined, undefined, function () {
       return __generator(this, function (_a) {
         if (profile) {
-          check_input_existence(profile, ["nickname", "avatar_url", "fullname", "birthday", "sex", "qq", "description", "grade"]);
-          check_profile(profile);
+          check_input_existence(profile, ["nickname", "avatar_url", "fullname", "birthday", "sex", "qq", "description", "grade"])
+          check_profile(profile)
         }
         return [2 /*return*/, this.dispatch_request({
           url: Api.SET_PROFILE,
           method: "patch",
           data: __assign({}, profile),
           with_token: true
-        })];
-      });
-    });
-  };
+        })]
+      })
+    })
+  }
   /**
    * 第三方服务绑定状态
    *
@@ -2709,10 +2709,10 @@ var CodemaoAuth = /** @class */function () {
           url: Api.CHECK_BIND_FOR_THIRD_PARTY,
           method: "get",
           with_token: true
-        })];
-      });
-    });
-  };
+        })]
+      })
+    })
+  }
   /**
    * 绑定微信
    *
@@ -2730,10 +2730,10 @@ var CodemaoAuth = /** @class */function () {
             appid: appid
           },
           with_token: true
-        })];
-      });
-    });
-  };
+        })]
+      })
+    })
+  }
   /**
    * 解绑微信
    *
@@ -2745,10 +2745,10 @@ var CodemaoAuth = /** @class */function () {
           url: Api.UNBIND_WECHAT,
           method: "patch",
           with_token: true
-        })];
-      });
-    });
-  };
+        })]
+      })
+    })
+  }
   /**
    * 绑定QQ
    *
@@ -2764,10 +2764,10 @@ var CodemaoAuth = /** @class */function () {
             agreement_ids: agreement_ids
           },
           with_token: true
-        })];
-      });
-    });
-  };
+        })]
+      })
+    })
+  }
   /**
    * 解绑QQ
    *
@@ -2779,10 +2779,10 @@ var CodemaoAuth = /** @class */function () {
           url: Api.UNBIND_QQ,
           method: "patch",
           with_token: true
-        })];
-      });
-    });
-  };
+        })]
+      })
+    })
+  }
   /**
    * 获取基本用户信息
    *
@@ -2794,10 +2794,10 @@ var CodemaoAuth = /** @class */function () {
           url: Api.GET_PROFILE,
           method: "get",
           with_token: true
-        })];
-      });
-    });
-  };
+        })]
+      })
+    })
+  }
   /**
    * 获取主账号信息（私密信息）
    */
@@ -2808,10 +2808,10 @@ var CodemaoAuth = /** @class */function () {
           url: Api.GET_AUTH,
           method: "get",
           with_token: true
-        })];
-      });
-    });
-  };
+        })]
+      })
+    })
+  }
   /**
    * 极验账号登录
    *
@@ -2823,7 +2823,7 @@ var CodemaoAuth = /** @class */function () {
    */
   CodemaoAuth.prototype.login_account_ticket = function (identity, password, pid, ticket, agreement_ids) {
     return __awaiter(this, undefined, undefined, function () {
-      var login_res;
+      var login_res
       return __generator(this, function (_a) {
         switch (_a.label) {
           case 0:
@@ -2839,35 +2839,35 @@ var CodemaoAuth = /** @class */function () {
               headers: mergeHeaderConf({
                 "X-Captcha-Ticket": ticket
               })
-            })];
+            })]
           case 1:
-            login_res = _a.sent();
+            login_res = _a.sent()
             if (login_res.status === 200) {
-              this.token.set(login_res.data.auth.token);
+              this.token.set(login_res.data.auth.token)
             }
-            return [2 /*return*/, login_res];
+            return [2 /*return*/, login_res]
         }
-      });
-    });
-  };
+      })
+    })
+  }
   CodemaoAuth.prototype.get_grade_list = function () {
     return __awaiter(this, undefined, undefined, function () {
       return __generator(this, function (_a) {
         return [2 /*return*/, this.dispatch_request({
           url: Api.GET_GRADE_LIST,
           method: "get"
-        })];
-      });
-    });
-  };
-  return CodemaoAuth;
-}();
+        })]
+      })
+    })
+  }
+  return CodemaoAuth
+}()
 var auth = /*#__PURE__*/Object.freeze({
   __proto__: null,
   init: init,
   get_auth_instance: get_auth_instance,
   CodemaoAuth: CodemaoAuth
-});
+})
 var getFingerPrint = function () {
   return __awaiter(undefined, undefined, undefined, function () {
     return __generator(this, function (_a) {
@@ -2876,29 +2876,29 @@ var getFingerPrint = function () {
           if (typeof Fingerprint2 !== "undefined") {
             Fingerprint2.get(function (components) {
               var values = components.map(function (component) {
-                return component.value;
-              });
-              resolve(Fingerprint2.x64hash128(values.join(""), 31));
-            });
+                return component.value
+              })
+              resolve(Fingerprint2.x64hash128(values.join(""), 31))
+            })
           } else {
-            resolve("");
+            resolve("")
           }
-        };
-        if (window.requestIdleCallback) {
-          window.requestIdleCallback(getHash);
-        } else {
-          setTimeout(getHash, 500);
         }
-      })];
-    });
-  });
-};
+        if (window.requestIdleCallback) {
+          window.requestIdleCallback(getHash)
+        } else {
+          setTimeout(getHash, 500)
+        }
+      })]
+    })
+  })
+}
 var BasicCaptcha = /** @class */function () {
   function BasicCaptcha(opt) {
-    this.options = opt;
+    this.options = opt
   }
-  return BasicCaptcha;
-}();
+  return BasicCaptcha
+}()
 var captchaResourceUrls = {
   FINGER_PRINT_2: "https://static.codemao.cn/iris/fingerprint2.min.js",
   // 极验
@@ -2913,28 +2913,28 @@ var captchaResourceUrls = {
   NETEASE: "https://static.codemao.cn/arch/netease-load.min.js",
   // 阿里云
   ALIYUN: "https://g.alicdn.com/AWSC/AWSC/awsc.js"
-};
+}
 var fallbackParamsMaker = function (reminder, errorObject) {
   return {
     message: reminder,
     error: errorObject
-  };
-};
+  }
+}
 var defaultGeetestInitOptions = {
   product: "bind",
   width: "300px"
-};
+}
 var GeetestCaptcha = /** @class */function (_super) {
-  __extends(GeetestCaptcha, _super);
+  __extends(GeetestCaptcha, _super)
   function GeetestCaptcha(options) {
-    var _this = _super.call(this, options) || this;
-    _this.product_id = options.product_id || "";
-    _this.dom_id = options.dom_id;
-    _this.success_callback = options.success_callback;
-    _this.init_options = options.init_options;
-    _this.fail_callback = options.fail_callback;
-    _this.close_callback = options.close_callback;
-    return _this;
+    var _this = _super.call(this, options) || this
+    _this.product_id = options.product_id || ""
+    _this.dom_id = options.dom_id
+    _this.success_callback = options.success_callback
+    _this.init_options = options.init_options
+    _this.fail_callback = options.fail_callback
+    _this.close_callback = options.close_callback
+    return _this
   }
   GeetestCaptcha.prototype.get_init_params = function () {
     return __awaiter(this, undefined, undefined, function () {
@@ -2945,28 +2945,28 @@ var GeetestCaptcha = /** @class */function (_super) {
           data: {
             appid: this.product_id
           }
-        })];
-      });
-    });
-  };
+        })]
+      })
+    })
+  }
   GeetestCaptcha.prototype.init_geetest = function (options) {
     return __awaiter(this, undefined, undefined, function () {
-      var params;
-      var data;
-      var _this = this;
+      var params
+      var data
+      var _this = this
       return __generator(this, function (_a) {
         switch (_a.label) {
           case 0:
             return [4 /*yield*/, retry(3, function () {
               return __awaiter(_this, undefined, undefined, function () {
                 return __generator(this, function (_a) {
-                  return [2 /*return*/, this.get_init_params()];
-                });
-              });
-            })];
+                  return [2 /*return*/, this.get_init_params()]
+                })
+              })
+            })]
           case 1:
-            params = _a.sent();
-            data = params.data;
+            params = _a.sent()
+            data = params.data
             return [2 /*return*/, new Promise(function (resolve) {
               initGeetest(__assign({
                 gt: data.gt,
@@ -2975,82 +2975,82 @@ var GeetestCaptcha = /** @class */function (_super) {
                 new_captcha: data.new_captcha
               }, options), function (captcha_obj) {
                 captcha_obj.onReady(function () {
-                  resolve(captcha_obj);
+                  resolve(captcha_obj)
                 }).onSuccess(function () {
                   return __awaiter(_this, undefined, undefined, function () {
-                    var ticket_res;
-                    var error_1;
+                    var ticket_res
+                    var error_1
                     return __generator(this, function (_a) {
                       switch (_a.label) {
                         case 0:
-                          _a.trys.push([0, 2,, 3]);
-                          return [4 /*yield*/, this.get_ticket()];
+                          _a.trys.push([0, 2,, 3])
+                          return [4 /*yield*/, this.get_ticket()]
                         case 1:
-                          ticket_res = _a.sent();
-                          this.success_callback(ticket_res.data.ticket, this.product_id);
-                          return [3 /*break*/, 3];
+                          ticket_res = _a.sent()
+                          this.success_callback(ticket_res.data.ticket, this.product_id)
+                          return [3 /*break*/, 3]
                         case 2:
-                          error_1 = _a.sent();
+                          error_1 = _a.sent()
                           if (this.fail_callback) {
-                            this.fail_callback(error_1);
+                            this.fail_callback(error_1)
                           }
-                          return [3 /*break*/, 3];
+                          return [3 /*break*/, 3]
                         case 3:
-                          return [2 /*return*/];
+                          return [2 /*return*/]
                       }
-                    });
-                  });
+                    })
+                  })
                 }).onError(function () {
                   if (_this.fail_callback) {
-                    _this.fail_callback();
+                    _this.fail_callback()
                   }
-                  throw new Error("Got error in Geetest captcha.");
+                  throw new Error("Got error in Geetest captcha.")
                 }).onClose(function () {
                   if (!_this.captcha_obj.getValidate() && _this.close_callback) {
-                    _this.close_callback();
+                    _this.close_callback()
                   }
-                });
-              });
-            })];
+                })
+              })
+            })]
         }
-      });
-    });
-  };
+      })
+    })
+  }
   GeetestCaptcha.prototype.init = function () {
     return __awaiter(this, undefined, undefined, function () {
-      var init_options;
-      var _a;
+      var init_options
+      var _a
       return __generator(this, function (_b) {
         switch (_b.label) {
           case 0:
-            init_options = this.init_options || defaultGeetestInitOptions;
-            return [4 /*yield*/, load_script(captchaResourceUrls.GEETEST, "geetest-captcha")];
+            init_options = this.init_options || defaultGeetestInitOptions
+            return [4 /*yield*/, load_script(captchaResourceUrls.GEETEST, "geetest-captcha")]
           case 1:
-            _b.sent();
-            _a = this;
-            return [4 /*yield*/, this.init_geetest(init_options)];
+            _b.sent()
+            _a = this
+            return [4 /*yield*/, this.init_geetest(init_options)]
           case 2:
-            _a.captcha_obj = _b.sent();
-            return [2 /*return*/];
+            _a.captcha_obj = _b.sent()
+            return [2 /*return*/]
         }
-      });
-    });
-  };
+      })
+    })
+  }
   GeetestCaptcha.prototype.show = function () {
     // Show the captcha.
     if (this.init_options && this.init_options.product !== "bind") {
-      this.captcha_obj.appendTo("#" + this.dom_id);
+      this.captcha_obj.appendTo("#" + this.dom_id)
       // When product is 'bind', it need to use verify() to show the captcha.
-      return;
+      return
     } else {
-      this.captcha_obj.verify();
+      this.captcha_obj.verify()
     }
-  };
+  }
   GeetestCaptcha.prototype.get_ticket = function () {
     return __awaiter(this, undefined, undefined, function () {
-      var result;
+      var result
       return __generator(this, function (_a) {
-        result = this.captcha_obj.getValidate();
+        result = this.captcha_obj.getValidate()
         return [2 /*return*/, PlatformApi.dispatch_request({
           url: PLATFORM_CAPTCHA_API.CHECK_AND_GET_GEETEST_TICKET,
           method: "post",
@@ -3060,17 +3060,17 @@ var GeetestCaptcha = /** @class */function (_super) {
             geetest_seccode: result.geetest_seccode,
             appid: this.product_id
           }
-        })];
-      });
-    });
-  };
+        })]
+      })
+    })
+  }
   GeetestCaptcha.create = function (create_options, extra) {
-    var dom_id = create_options.dom_id;
-    var success_callback = create_options.success_callback;
-    var fail_callback = create_options.fail_callback;
-    var close_callback = create_options.close_callback;
-    var specified_appid = create_options.product_id;
-    var init_options = create_options.init_options;
+    var dom_id = create_options.dom_id
+    var success_callback = create_options.success_callback
+    var fail_callback = create_options.fail_callback
+    var close_callback = create_options.close_callback
+    var specified_appid = create_options.product_id
+    var init_options = create_options.init_options
     return new GeetestCaptcha({
       product_id: specified_appid || extra.appid,
       dom_id: dom_id,
@@ -3078,66 +3078,66 @@ var GeetestCaptcha = /** @class */function (_super) {
       fail_callback: fail_callback,
       close_callback: close_callback,
       init_options: init_options
-    });
-  };
-  return GeetestCaptcha;
-}(BasicCaptcha);
+    })
+  }
+  return GeetestCaptcha
+}(BasicCaptcha)
 
 // 数美文档 📖 https://help.ishumei.com/docs/tw/captcha/WEB
 var defaultSMInitOptions = {
   product: "popup",
   width: 300
-};
+}
 var SMCaptcha = /** @class */function (_super) {
-  __extends(SMCaptcha, _super);
+  __extends(SMCaptcha, _super)
   function SMCaptcha(opts) {
-    var _this = _super.call(this, opts) || this;
-    _this.instance = new Object();
-    _this.options = opts;
-    _this.instance = new Object();
-    return _this;
+    var _this = _super.call(this, opts) || this
+    _this.instance = new Object()
+    _this.options = opts
+    _this.instance = new Object()
+    return _this
   }
   SMCaptcha.prototype.init = function () {
     return __awaiter(this, undefined, undefined, function () {
-      var _a;
+      var _a
       return __generator(this, function (_b) {
         switch (_b.label) {
           case 0:
             if (!(typeof initSMCaptcha === "undefined")) {
-              return [3 /*break*/, 2];
+              return [3 /*break*/, 2]
             }
-            return [4 /*yield*/, load_script(captchaResourceUrls.NEXTDATA, "SM_GT")];
+            return [4 /*yield*/, load_script(captchaResourceUrls.NEXTDATA, "SM_GT")]
           case 1:
-            _b.sent();
-            _b.label = 2;
+            _b.sent()
+            _b.label = 2
           case 2:
             // TODO: 需要校验dom_id等与产品模式的关系？
-            _a = this;
-            return [4 /*yield*/, this.init_smCaptcha()];
+            _a = this
+            return [4 /*yield*/, this.init_smCaptcha()]
           case 3:
             // TODO: 需要校验dom_id等与产品模式的关系？
-            _a.instance = _b.sent();
-            return [2 /*return*/];
+            _a.instance = _b.sent()
+            return [2 /*return*/]
         }
-      });
-    });
-  };
+      })
+    })
+  }
   SMCaptcha.prototype.init_smCaptcha = function () {
     return __awaiter(this, undefined, undefined, function () {
-      var _a;
-      var dom_id;
-      var success_callback;
-      var fail_callback;
-      var close_callback;
-      var init_options;
-      var _this = this;
+      var /* [auto-meaningful-name] */this$options
+      var dom_id
+      var success_callback
+      var fail_callback
+      var close_callback
+      var init_options
+      var _this = this
       return __generator(this, function (_b) {
-        _a = this.options;
-        dom_id = _a.dom_id;
-        success_callback = _a.success_callback;
-        fail_callback = _a.fail_callback;
-        close_callback = _a.close_callback;
-        init_options = _a.init_options;
+        this$options = this.options
+        dom_id = this$options.dom_id
+        success_callback = this$options.success_callback
+        fail_callback = this$options.fail_callback
+        close_callback = this$options.close_callback
+        init_options = this$options.init_options
         return [2 /*return*/, new Promise(function (resolve, reject) {
           initSMCaptcha(__assign(__assign(__assign({
             appendTo: dom_id && "#" + dom_id,
@@ -3146,93 +3146,93 @@ var SMCaptcha = /** @class */function (_super) {
             organization: "sXoTexBWs1dfyzt8eTev"
           }), function (instance) {
             if (!instance) {
-              throw new Error("shumei captcha init failed message: can not get instance");
+              throw new Error("shumei captcha init failed message: can not get instance")
             }
             instance.onReady(function () {
-              resolve(instance);
-            });
+              resolve(instance)
+            })
             instance.onSuccess(function (data) {
               return __awaiter(_this, undefined, undefined, function () {
-                var ticket_res;
-                var error_1;
+                var ticket_res
+                var error_1
                 return __generator(this, function (_a) {
                   switch (_a.label) {
                     case 0:
                       if (!data.pass) {
-                        return [3 /*break*/, 5];
+                        return [3 /*break*/, 5]
                       }
-                      _a.label = 1;
+                      _a.label = 1
                     case 1:
-                      _a.trys.push([1, 3,, 4]);
-                      return [4 /*yield*/, this.get_ticket()];
+                      _a.trys.push([1, 3,, 4])
+                      return [4 /*yield*/, this.get_ticket()]
                     case 2:
-                      ticket_res = _a.sent();
+                      ticket_res = _a.sent()
                       if (success_callback === null || success_callback === undefined) {
-                        undefined;
+                        undefined
                       } else {
-                        success_callback(ticket_res.data.ticket, this.options.product_id || "");
+                        success_callback(ticket_res.data.ticket, this.options.product_id || "")
                       }
-                      return [3 /*break*/, 4];
+                      return [3 /*break*/, 4]
                     case 3:
-                      error_1 = _a.sent();
+                      error_1 = _a.sent()
                       if (fail_callback === null || fail_callback === undefined) {
-                        undefined;
+                        undefined
                       } else {
-                        fail_callback(fallbackParamsMaker("success_callback triggerd fatal error", error_1));
+                        fail_callback(fallbackParamsMaker("success_callback triggerd fatal error", error_1))
                       }
-                      return [3 /*break*/, 4];
+                      return [3 /*break*/, 4]
                     case 4:
-                      return [3 /*break*/, 6];
+                      return [3 /*break*/, 6]
                     case 5:
                       if (fail_callback === null || fail_callback === undefined) {
-                        undefined;
+                        undefined
                       } else {
-                        fail_callback(fallbackParamsMaker("incorrect captcha checking", data));
+                        fail_callback(fallbackParamsMaker("incorrect captcha checking", data))
                       }
-                      _a.label = 6;
+                      _a.label = 6
                     case 6:
-                      return [2 /*return*/];
+                      return [2 /*return*/]
                   }
-                });
-              });
-            });
+                })
+              })
+            })
             instance.onError(function (errType, errMsg) {
               var errorObj = fallbackParamsMaker("some error occurred", {
                 errType: errType,
                 errMsg: errMsg
-              });
+              })
               if (fail_callback === null || fail_callback === undefined) {
-                undefined;
+                undefined
               } else {
-                fail_callback(errorObj);
+                fail_callback(errorObj)
               }
-              reject(errorObj);
-            });
+              reject(errorObj)
+            })
             instance.onClose(function () {
               if (close_callback === null || close_callback === undefined) {
-                undefined;
+                undefined
               } else {
-                close_callback();
+                close_callback()
               }
-            });
-          });
-        })];
-      });
-    });
-  };
+            })
+          })
+        })]
+      })
+    })
+  }
   SMCaptcha.prototype.show = function () {
-    var init_options = this.options.init_options;
+    var init_options = this.options.init_options
     if (this.options && ["embed", "float"].includes((init_options === null || init_options === undefined ? undefined : init_options.product) || "")) {
-      this.instance.appendTo("#" + this.options.dom_id);
-      return;
+      this.instance.appendTo("#" + this.options.dom_id)
+      return
     }
-    this.instance.verify();
-  };
+    this.instance.verify()
+  }
   SMCaptcha.prototype.get_ticket = function (rid) {
     return __awaiter(this, undefined, undefined, function () {
-      var result;
+      var result
       return __generator(this, function (_a) {
-        result = this.instance.getValidate();
+        result = this.instance.getValidate()
         return [2 /*return*/, PlatformApi.dispatch_request({
           url: PLATFORM_CAPTCHA_API.CHECK_AND_GET_NEXTDATA_TICKET,
           method: "post",
@@ -3240,17 +3240,17 @@ var SMCaptcha = /** @class */function (_super) {
             rid: result.rid,
             appid: this.options.product_id
           }
-        })];
-      });
-    });
-  };
+        })]
+      })
+    })
+  }
   SMCaptcha.create = function (create_options, extra) {
-    var dom_id = create_options.dom_id;
-    var success_callback = create_options.success_callback;
-    var fail_callback = create_options.fail_callback;
-    var close_callback = create_options.close_callback;
-    var init_options = create_options.init_options;
-    var specified_appid = create_options.product_id;
+    var dom_id = create_options.dom_id
+    var success_callback = create_options.success_callback
+    var fail_callback = create_options.fail_callback
+    var close_callback = create_options.close_callback
+    var init_options = create_options.init_options
+    var specified_appid = create_options.product_id
     return new SMCaptcha({
       product_id: specified_appid || extra.appid,
       dom_id: dom_id,
@@ -3258,24 +3258,24 @@ var SMCaptcha = /** @class */function (_super) {
       fail_callback: fail_callback,
       close_callback: close_callback,
       init_options: init_options
-    });
-  };
-  return SMCaptcha;
-}(BasicCaptcha);
+    })
+  }
+  return SMCaptcha
+}(BasicCaptcha)
 
 // 腾讯是智能模式，所以不需要初始化默认值
-var defaultTencentInitOptions = {};
+var defaultTencentInitOptions = {}
 var CmTencentCaptcha = /** @class */function (_super) {
-  __extends(CmTencentCaptcha, _super);
+  __extends(CmTencentCaptcha, _super)
   function CmTencentCaptcha(options) {
-    var _this = _super.call(this, options) || this;
-    _this.product_id = options.product_id || "";
-    _this.dom_id = options.dom_id;
-    _this.success_callback = options.success_callback;
-    _this.fail_callback = options.fail_callback;
-    _this.close_callback = options.close_callback;
-    _this.request = new CodemaoRequest();
-    return _this;
+    var _this = _super.call(this, options) || this
+    _this.product_id = options.product_id || ""
+    _this.dom_id = options.dom_id
+    _this.success_callback = options.success_callback
+    _this.fail_callback = options.fail_callback
+    _this.close_callback = options.close_callback
+    _this.request = new CodemaoRequest()
+    return _this
   }
   CmTencentCaptcha.prototype.init = function () {
     return __awaiter(this, undefined, undefined, function () {
@@ -3283,84 +3283,84 @@ var CmTencentCaptcha = /** @class */function (_super) {
         switch (_a.label) {
           case 0:
             if (!(typeof TencentCaptcha === "undefined")) {
-              return [3 /*break*/, 2];
+              return [3 /*break*/, 2]
             }
-            return [4 /*yield*/, load_script(captchaResourceUrls.TENCENT, "TENCENT_GT")];
+            return [4 /*yield*/, load_script(captchaResourceUrls.TENCENT, "TENCENT_GT")]
           case 1:
-            _a.sent();
-            _a.label = 2;
+            _a.sent()
+            _a.label = 2
           case 2:
-            return [4 /*yield*/, this.initTencentCaptcha(this.dom_id)];
+            return [4 /*yield*/, this.initTencentCaptcha(this.dom_id)]
           case 3:
-            _a.sent();
-            return [2 /*return*/];
+            _a.sent()
+            return [2 /*return*/]
         }
-      });
-    });
-  };
+      })
+    })
+  }
   CmTencentCaptcha.prototype.initTencentCaptcha = function (dom_id) {
     return __awaiter(this, undefined, undefined, function () {
-      var tencentCaptchaCallback;
-      var _this = this;
+      var tencentCaptchaCallback
+      var _this = this
       return __generator(this, function (_a) {
         tencentCaptchaCallback = function (res) {
           return __awaiter(_this, undefined, undefined, function () {
-            var ticket_res;
-            var error_1;
+            var ticket_res
+            var error_1
             return __generator(this, function (_a) {
               switch (_a.label) {
                 case 0:
                   if (res == null) {
-                    return [2 /*return*/];
+                    return [2 /*return*/]
                   }
                   if (!(res.ret === 0)) {
-                    return [3 /*break*/, 5];
+                    return [3 /*break*/, 5]
                   }
-                  _a.label = 1;
+                  _a.label = 1
                 case 1:
-                  _a.trys.push([1, 3,, 4]);
-                  return [4 /*yield*/, this.get_ticket(res.ticket, res.randstr)];
+                  _a.trys.push([1, 3,, 4])
+                  return [4 /*yield*/, this.get_ticket(res.ticket, res.randstr)]
                 case 2:
-                  ticket_res = _a.sent();
-                  this.success_callback(ticket_res.data.ticket, this.product_id);
-                  return [3 /*break*/, 4];
+                  ticket_res = _a.sent()
+                  this.success_callback(ticket_res.data.ticket, this.product_id)
+                  return [3 /*break*/, 4]
                 case 3:
-                  error_1 = _a.sent();
+                  error_1 = _a.sent()
                   if (this.fail_callback) {
-                    this.fail_callback(error_1);
+                    this.fail_callback(error_1)
                   }
-                  return [3 /*break*/, 4];
+                  return [3 /*break*/, 4]
                 case 4:
-                  return [3 /*break*/, 6];
+                  return [3 /*break*/, 6]
                 case 5:
                   if (res.ret === 1) {
                     if (this.fail_callback) {
-                      this.fail_callback();
+                      this.fail_callback()
                     }
                   } else if (res.ret === 2) {
                     if (this.close_callback) {
-                      this.close_callback();
+                      this.close_callback()
                     }
                   }
-                  _a.label = 6;
+                  _a.label = 6
                 case 6:
-                  return [2 /*return*/];
+                  return [2 /*return*/]
               }
-            });
-          });
-        };
-        if (dom_id) {
-          this.captcha_obj = new TencentCaptcha(document.getElementById(dom_id), this.product_id, tencentCaptchaCallback, defaultTencentInitOptions);
-        } else {
-          this.captcha_obj = new TencentCaptcha(this.product_id, tencentCaptchaCallback, defaultTencentInitOptions);
+            })
+          })
         }
-        return [2 /*return*/];
-      });
-    });
-  };
+        if (dom_id) {
+          this.captcha_obj = new TencentCaptcha(document.getElementById(dom_id), this.product_id, tencentCaptchaCallback, defaultTencentInitOptions)
+        } else {
+          this.captcha_obj = new TencentCaptcha(this.product_id, tencentCaptchaCallback, defaultTencentInitOptions)
+        }
+        return [2 /*return*/]
+      })
+    })
+  }
   CmTencentCaptcha.prototype.show = function () {
-    this.captcha_obj.show();
-  };
+    this.captcha_obj.show()
+  }
   CmTencentCaptcha.prototype.get_ticket = function (ticket, randstr) {
     return __awaiter(this, undefined, undefined, function () {
       return __generator(this, function (_a) {
@@ -3372,111 +3372,111 @@ var CmTencentCaptcha = /** @class */function (_super) {
             tencentTicket: ticket,
             randomStr: randstr
           }
-        })];
-      });
-    });
-  };
+        })]
+      })
+    })
+  }
   CmTencentCaptcha.create = function (create_options, extra) {
-    var dom_id = create_options.dom_id;
-    var success_callback = create_options.success_callback;
-    var fail_callback = create_options.fail_callback;
-    var close_callback = create_options.close_callback;
-    var specified_appid = create_options.product_id;
+    var dom_id = create_options.dom_id
+    var success_callback = create_options.success_callback
+    var fail_callback = create_options.fail_callback
+    var close_callback = create_options.close_callback
+    var specified_appid = create_options.product_id
     return new CmTencentCaptcha({
       product_id: specified_appid || extra.appid,
       dom_id: dom_id,
       success_callback: success_callback,
       fail_callback: fail_callback,
       close_callback: close_callback
-    });
-  };
-  return CmTencentCaptcha;
-}(BasicCaptcha);
+    })
+  }
+  return CmTencentCaptcha
+}(BasicCaptcha)
 
 // 网易文档 📖 https://support.dun.163.com/documents/15588062143475712?docId=294963579379175424&locale=zh-CN
 var defaultNeteaseInitOptions = {
   mode: "popup",
   width: 300
-};
-var WrapperId = simpleHash("mask");
-var InnerId = simpleHash("inner");
+}
+var WrapperId = simpleHash("mask")
+var InnerId = simpleHash("inner")
 var NeteaseCaptcha = /** @class */function (_super) {
-  __extends(NeteaseCaptcha, _super);
+  __extends(NeteaseCaptcha, _super)
   function NeteaseCaptcha(opts) {
-    var _this = _super.call(this, opts) || this;
-    _this.instance = new Object();
-    _this.options = opts;
-    _this.instance = new Object();
+    var _this = _super.call(this, opts) || this
+    _this.instance = new Object()
+    _this.options = opts
+    _this.instance = new Object()
     // 网易验证码使用popup模式必须要传入一个domNode，且根据它进行定位
     // 所以如果没有传入dom_id则需要为用户创建一个..
     var that = _this;
     (function () {
-      var _a;
-      var _b;
+      var /* [auto-meaningful-name] */that$options
+      var _b
       return __awaiter(this, undefined, undefined, function () {
-        var offset;
+        var offset
         return __generator(this, function (_c) {
           switch (_c.label) {
             case 0:
-              offset = 0 - (((_b = (_a = that.options) === null || _a === undefined ? undefined : _a.init_options) === null || _b === undefined ? undefined : _b.width) || defaultNeteaseInitOptions.width) / 2;
+              offset = 0 - (((_b = (that$options = that.options) === null || that$options === undefined ? undefined : that$options.init_options) === null || _b === undefined ? undefined : _b.width) || defaultNeteaseInitOptions.width) / 2
               if (!(!that.options.dom_id && !document.getElementById(WrapperId))) {
-                return [3 /*break*/, 2];
+                return [3 /*break*/, 2]
               }
               return [4 /*yield*/, appendDomNode("div", {
                 id: WrapperId,
                 innerHTML: "<div style=\"position: absolute; width: 2px; height: 2px; left: 50%; top: 50%; transform: translate(-50%, -50%); margin: " + offset + "px 0 0 " + offset + "px\" id=\"" + InnerId + "\"/>"
-              }, "position: fixed;\n          left: 0px;\n          top: 0px;\n          height: 100vh;\n          width: 100vw;\n          background: rgba(0, 0, 0, .5);\n          z-index: 999;")];
+              }, "position: fixed;\n          left: 0px;\n          top: 0px;\n          height: 100vh;\n          width: 100vw;\n          background: rgba(0, 0, 0, .5);\n          z-index: 999;")]
             case 1:
-              _c.sent();
-              _c.label = 2;
+              _c.sent()
+              _c.label = 2
             case 2:
-              return [2 /*return*/];
+              return [2 /*return*/]
           }
-        });
-      });
-    })();
-    return _this;
+        })
+      })
+    })()
+    return _this
   }
   NeteaseCaptcha.prototype.init = function () {
     return __awaiter(this, undefined, undefined, function () {
-      var _a;
+      var _a
       return __generator(this, function (_b) {
         switch (_b.label) {
           case 0:
             if (!(typeof initNECaptcha === "undefined")) {
-              return [3 /*break*/, 2];
+              return [3 /*break*/, 2]
             }
-            return [4 /*yield*/, load_script(captchaResourceUrls.NETEASE, "NETEASE_GT")];
+            return [4 /*yield*/, load_script(captchaResourceUrls.NETEASE, "NETEASE_GT")]
           case 1:
-            _b.sent();
-            _b.label = 2;
+            _b.sent()
+            _b.label = 2
           case 2:
-            _a = this;
-            return [4 /*yield*/, this.init_NECaptcha()];
+            _a = this
+            return [4 /*yield*/, this.init_NECaptcha()]
           case 3:
-            _a.instance = _b.sent();
-            this.show();
-            return [2 /*return*/];
+            _a.instance = _b.sent()
+            this.show()
+            return [2 /*return*/]
         }
-      });
-    });
-  };
+      })
+    })
+  }
   NeteaseCaptcha.prototype.init_NECaptcha = function () {
     return __awaiter(this, undefined, undefined, function () {
-      var _a;
-      var dom_id;
-      var success_callback;
-      var fail_callback;
-      var close_callback;
-      var init_options;
-      var _this = this;
+      var /* [auto-meaningful-name] */this$options
+      var dom_id
+      var success_callback
+      var fail_callback
+      var close_callback
+      var init_options
+      var _this = this
       return __generator(this, function (_b) {
-        _a = this.options;
-        dom_id = _a.dom_id;
-        success_callback = _a.success_callback;
-        fail_callback = _a.fail_callback;
-        close_callback = _a.close_callback;
-        init_options = _a.init_options;
+        this$options = this.options
+        dom_id = this$options.dom_id
+        success_callback = this$options.success_callback
+        fail_callback = this$options.fail_callback
+        close_callback = this$options.close_callback
+        init_options = this$options.init_options
         return [2 /*return*/, new Promise(function (resolve, reject) {
           initNECaptcha(__assign(__assign(__assign({
             captchaId: _this.options.product_id,
@@ -3485,77 +3485,77 @@ var NeteaseCaptcha = /** @class */function (_super) {
           }, defaultNeteaseInitOptions), init_options), {
             onVerify: function (err, data) {
               return __awaiter(_this, undefined, undefined, function () {
-                var ticket_res;
+                var ticket_res
                 return __generator(this, function (_a) {
                   switch (_a.label) {
                     case 0:
                       if (!err) {
-                        return [3 /*break*/, 1];
+                        return [3 /*break*/, 1]
                       }
                       if (fail_callback === null || fail_callback === undefined) {
-                        undefined;
+                        undefined
                       } else {
-                        fail_callback(fallbackParamsMaker("incorrect captcha checking", err));
+                        fail_callback(fallbackParamsMaker("incorrect captcha checking", err))
                       }
-                      return [3 /*break*/, 3];
+                      return [3 /*break*/, 3]
                     case 1:
-                      return [4 /*yield*/, this.get_ticket(data.validate)];
+                      return [4 /*yield*/, this.get_ticket(data.validate)]
                     case 2:
-                      ticket_res = _a.sent();
+                      ticket_res = _a.sent()
                       if (success_callback === null || success_callback === undefined) {
-                        undefined;
+                        undefined
                       } else {
-                        success_callback(ticket_res.data.ticket, this.options.product_id || "");
+                        success_callback(ticket_res.data.ticket, this.options.product_id || "")
                       }
-                      this.clearMask();
-                      _a.label = 3;
+                      this.clearMask()
+                      _a.label = 3
                     case 3:
-                      return [2 /*return*/];
+                      return [2 /*return*/]
                   }
-                });
-              });
+                })
+              })
             },
             onError: function (err) {
               if (fail_callback === null || fail_callback === undefined) {
-                undefined;
+                undefined
               } else {
-                fail_callback(fallbackParamsMaker("fatal error occurred", err));
+                fail_callback(fallbackParamsMaker("fatal error occurred", err))
               }
             },
             onClose: function () {
               if (close_callback === null || close_callback === undefined) {
-                undefined;
+                undefined
               } else {
-                close_callback();
+                close_callback()
               }
-              _this.clearMask();
+              _this.clearMask()
             }
           }), function (instance) {
-            resolve(instance);
+            resolve(instance)
           }, function (err) {
-            var errorObj = fallbackParamsMaker("some error occurred", err);
+            var errorObj = fallbackParamsMaker("some error occurred", err)
             if (fail_callback === null || fail_callback === undefined) {
-              undefined;
+              undefined
             } else {
-              fail_callback(errorObj);
+              fail_callback(errorObj)
             }
-            reject(errorObj);
-          });
-        })];
-      });
-    });
-  };
+            reject(errorObj)
+          })
+        })]
+      })
+    })
+  }
   NeteaseCaptcha.prototype.show = function () {
-    this.instance.popUp();
-  };
+    this.instance.popUp()
+  }
   NeteaseCaptcha.prototype.clearMask = function () {
-    var mask = document.getElementById(WrapperId);
+    var mask = document.getElementById(WrapperId)
     if (mask) {
       setTimeout(function () {
-        document.body.removeChild(mask);
-      }, 600);
+        document.body.removeChild(mask)
+      }, 600)
     }
-  };
+  }
   NeteaseCaptcha.prototype.get_ticket = function (validate) {
     return __awaiter(this, undefined, undefined, function () {
       return __generator(this, function (_a) {
@@ -3566,17 +3566,17 @@ var NeteaseCaptcha = /** @class */function (_super) {
             validate: validate,
             appid: this.options.product_id
           }
-        })];
-      });
-    });
-  };
+        })]
+      })
+    })
+  }
   NeteaseCaptcha.create = function (create_options, extra) {
-    var dom_id = create_options.dom_id;
-    var success_callback = create_options.success_callback;
-    var fail_callback = create_options.fail_callback;
-    var close_callback = create_options.close_callback;
-    var init_options = create_options.init_options;
-    var specified_appid = create_options.product_id;
+    var dom_id = create_options.dom_id
+    var success_callback = create_options.success_callback
+    var fail_callback = create_options.fail_callback
+    var close_callback = create_options.close_callback
+    var init_options = create_options.init_options
+    var specified_appid = create_options.product_id
     return new NeteaseCaptcha({
       product_id: specified_appid || extra.appid,
       dom_id: dom_id,
@@ -3584,27 +3584,27 @@ var NeteaseCaptcha = /** @class */function (_super) {
       fail_callback: fail_callback,
       close_callback: close_callback,
       init_options: init_options
-    });
-  };
-  return NeteaseCaptcha;
-}(BasicCaptcha);
+    })
+  }
+  return NeteaseCaptcha
+}(BasicCaptcha)
 var aliyun_config = {
   appkey: "FFFF00000000017E8E25",
   scene: "nc_login_h5"
-};
-var aliyun_captcha_dom_id = "aliyun_captcha_dom_id";
-var aliyun_captcha_dom_wrapper_id = "aliyun_captcha_dom_wrapper_id";
-var aliyun_captcha_dom_close_id = "aliyun_captcha_dom_close_id";
+}
+var aliyun_captcha_dom_id = "aliyun_captcha_dom_id"
+var aliyun_captcha_dom_wrapper_id = "aliyun_captcha_dom_wrapper_id"
+var aliyun_captcha_dom_close_id = "aliyun_captcha_dom_close_id"
 var AliyunCaptcha = /** @class */function (_super) {
-  __extends(AliyunCaptcha, _super);
+  __extends(AliyunCaptcha, _super)
   function AliyunCaptcha(options) {
-    var _this = _super.call(this, options) || this;
+    var _this = _super.call(this, options) || this
     _this.handleOnCancel = function () {
       if (_this.close_callback) {
-        _this.close_callback();
+        _this.close_callback()
       }
-      _this.clearMask();
-    };
+      _this.clearMask()
+    }
     // 滑块验证
     _this.initNCCaptcha = function (config) {
       AWSC.use("nc", function (state, module) {
@@ -3614,58 +3614,58 @@ var AliyunCaptcha = /** @class */function (_super) {
           // 前端滑动验证通过时会触发该回调参数。您可以在该回调参数中将会话ID（sessionId）、签名串（sig）、请求唯一标识（token）字段记录下来，随业务请求一同发送至您的服务端调用验签。
           success: function (data) {
             return __awaiter(_this, undefined, undefined, function () {
-              var ticketData;
+              var ticketData
               return __generator(this, function (_a) {
                 switch (_a.label) {
                   case 0:
-                    return [4 /*yield*/, this.get_ticket(data)];
+                    return [4 /*yield*/, this.get_ticket(data)]
                   case 1:
-                    ticketData = _a.sent();
+                    ticketData = _a.sent()
                     if (ticketData.status === 200) {
                       if (this === null || this === undefined) {
-                        undefined;
+                        undefined
                       } else {
-                        this.success_callback(ticketData.data.ticket, ticketData.data.appid);
+                        this.success_callback(ticketData.data.ticket, ticketData.data.appid)
                       }
                       if (this === null || this === undefined) {
-                        undefined;
+                        undefined
                       } else {
-                        this.clearMask();
+                        this.clearMask()
                       }
                     } else {
                       if (this.fail_callback) {
-                        this.fail_callback(ticketData);
+                        this.fail_callback(ticketData)
                       }
                     }
-                    return [2 /*return*/];
+                    return [2 /*return*/]
                 }
-              });
-            });
+              })
+            })
           },
           // 滑动验证失败时触发该回调参数。
           fail: function (failCode) {
             if (_this.fail_callback) {
-              _this.fail_callback(failCode);
+              _this.fail_callback(failCode)
             }
-            throw new Error("验证失败");
+            throw new Error("验证失败")
           },
           // 验证码加载出现异常时触发该回调参数。
           error: function (errorCode) {
             if (_this.fail_callback) {
-              _this.fail_callback(errorCode);
+              _this.fail_callback(errorCode)
             }
-            throw new Error("验证异常");
+            throw new Error("验证异常")
           }
-        }));
-      });
-    };
-    _this.product_id = options.product_id || "";
-    _this.dom_id = options.dom_id;
-    _this.success_callback = options.success_callback;
-    _this.fail_callback = options.fail_callback;
-    _this.close_callback = options.close_callback;
-    _this.request = new CodemaoRequest();
-    return _this;
+        }))
+      })
+    }
+    _this.product_id = options.product_id || ""
+    _this.dom_id = options.dom_id
+    _this.success_callback = options.success_callback
+    _this.fail_callback = options.fail_callback
+    _this.close_callback = options.close_callback
+    _this.request = new CodemaoRequest()
+    return _this
   }
   AliyunCaptcha.prototype.init = function () {
     return __awaiter(this, undefined, undefined, function () {
@@ -3673,60 +3673,60 @@ var AliyunCaptcha = /** @class */function (_super) {
         switch (_a.label) {
           case 0:
             if (!(typeof AWSC === "undefined")) {
-              return [3 /*break*/, 2];
+              return [3 /*break*/, 2]
             }
-            return [4 /*yield*/, load_script(captchaResourceUrls.ALIYUN, "ALIYUN_GT")];
+            return [4 /*yield*/, load_script(captchaResourceUrls.ALIYUN, "ALIYUN_GT")]
           case 1:
-            _a.sent();
-            _a.label = 2;
+            _a.sent()
+            _a.label = 2
           case 2:
-            return [4 /*yield*/, this.initAliyunCaptcha()];
+            return [4 /*yield*/, this.initAliyunCaptcha()]
           case 3:
-            _a.sent();
-            return [2 /*return*/];
+            _a.sent()
+            return [2 /*return*/]
         }
-      });
-    });
-  };
+      })
+    })
+  }
   AliyunCaptcha.prototype.initAliyunCaptcha = function () {
     return __awaiter(this, undefined, undefined, function () {
-      var aliyunCloseBtn;
+      var aliyunCloseBtn
       return __generator(this, function (_a) {
         switch (_a.label) {
           case 0:
             if (!!document.getElementById(aliyun_captcha_dom_id)) {
-              return [3 /*break*/, 2];
+              return [3 /*break*/, 2]
             }
             return [4 /*yield*/, appendDomNode("div", {
               id: aliyun_captcha_dom_wrapper_id,
               innerHTML: "\n            <div\n              style=\"position: absolute; display: flex; flex-direction: column; padding-top: 20px; justify-content: flex-start; align-items: center; width: 400px; height: 130px; background-color: #fff; left: 50%; top: 50%; transform: translate(-50%, -50%);\"\n            >\n              <div style=\"font-size: 20px\">拖动下方滑块完成验证</div>\n              <div\n                style=\"display: flex; justify-content: center; align-items: center; bottom: 20px\"\n                id=\"" + aliyun_captcha_dom_id + "\"\n              >\n              </div>\n              <div id=\"" + aliyun_captcha_dom_close_id + "\" style=\"cursor: pointer; color: blue; position: absolute; top: 20px; right: 20px\">关闭</div>\n            </div>\n          "
-            }, "position: fixed;\n        left: 0px;\n        top: 0px;\n        height: 100vh;\n        width: 100vw;\n        background: rgba(0, 0, 0, .5);\n        z-index: 999;")];
+            }, "position: fixed;\n        left: 0px;\n        top: 0px;\n        height: 100vh;\n        width: 100vw;\n        background: rgba(0, 0, 0, .5);\n        z-index: 999;")]
           case 1:
-            _a.sent();
-            aliyunCloseBtn = document.getElementById(aliyun_captcha_dom_close_id);
+            _a.sent()
+            aliyunCloseBtn = document.getElementById(aliyun_captcha_dom_close_id)
             if (aliyunCloseBtn === null || aliyunCloseBtn === undefined) {
-              undefined;
+              undefined
             } else {
-              aliyunCloseBtn.addEventListener("click", this.handleOnCancel);
+              aliyunCloseBtn.addEventListener("click", this.handleOnCancel)
             }
-            _a.label = 2;
+            _a.label = 2
           case 2:
-            return [2 /*return*/];
+            return [2 /*return*/]
         }
-      });
-    });
-  };
+      })
+    })
+  }
   AliyunCaptcha.prototype.clearMask = function () {
-    var mask = document.getElementById(aliyun_captcha_dom_wrapper_id);
+    var mask = document.getElementById(aliyun_captcha_dom_wrapper_id)
     if (mask) {
       setTimeout(function () {
-        document.body.removeChild(mask);
-      }, 600);
+        document.body.removeChild(mask)
+      }, 600)
     }
-  };
+  }
   AliyunCaptcha.prototype.show = function () {
-    this.initNCCaptcha(aliyun_config);
-  };
+    this.initNCCaptcha(aliyun_config)
+  }
   AliyunCaptcha.prototype.get_ticket = function (params) {
     return __awaiter(this, undefined, undefined, function () {
       return __generator(this, function (_a) {
@@ -3737,51 +3737,51 @@ var AliyunCaptcha = /** @class */function (_super) {
             appKey: aliyun_config.appkey,
             scene: aliyun_config.scene
           }, params)
-        })];
-      });
-    });
-  };
+        })]
+      })
+    })
+  }
   AliyunCaptcha.create = function (create_options, extra) {
-    var dom_id = create_options.dom_id;
-    var success_callback = create_options.success_callback;
-    var fail_callback = create_options.fail_callback;
-    var close_callback = create_options.close_callback;
-    var specified_appid = create_options.product_id;
+    var dom_id = create_options.dom_id
+    var success_callback = create_options.success_callback
+    var fail_callback = create_options.fail_callback
+    var close_callback = create_options.close_callback
+    var specified_appid = create_options.product_id
     return new AliyunCaptcha({
       product_id: specified_appid || extra.appid,
       dom_id: dom_id,
       success_callback: success_callback,
       fail_callback: fail_callback,
       close_callback: close_callback
-    });
-  };
-  return AliyunCaptcha;
-}(BasicCaptcha);
+    })
+  }
+  return AliyunCaptcha
+}(BasicCaptcha)
 
 // TODO 错误处理
 var CodemaoCaptcha = /** @class */function () {
   function CodemaoCaptcha(options) {
-    this.pid = options.pid;
+    this.pid = options.pid
   }
   // 从服务端确定用哪个验证码服务商
   CodemaoCaptcha.prototype.get_rule_from_server = function (identity, scene) {
     if (scene === undefined) {
-      scene = "";
+      scene = ""
     }
     return __awaiter(this, undefined, undefined, function () {
-      var deviceId;
-      var timestamp;
-      var res;
+      var deviceId
+      var timestamp
+      var res
       return __generator(this, function (_a) {
         switch (_a.label) {
           case 0:
-            return [4 /*yield*/, load_script(captchaResourceUrls.FINGER_PRINT_2, "finger-print", 10)];
+            return [4 /*yield*/, load_script(captchaResourceUrls.FINGER_PRINT_2, "finger-print", 10)]
           case 1:
-            _a.sent();
-            return [4 /*yield*/, getFingerPrint()];
+            _a.sent()
+            return [4 /*yield*/, getFingerPrint()]
           case 2:
-            deviceId = _a.sent();
-            timestamp = "" + new Date().getTime() / 1000;
+            deviceId = _a.sent()
+            timestamp = "" + new Date().getTime() / 1000
             return [4 /*yield*/, PlatformApi.dispatch_request({
               url: PLATFORM_CAPTCHA_API.GET_RULE,
               method: "post",
@@ -3792,105 +3792,105 @@ var CodemaoCaptcha = /** @class */function () {
                 deviceId: deviceId,
                 timestamp: parseInt(timestamp, 10)
               }
-            })];
+            })]
           case 3:
-            res = _a.sent();
-            return [2 /*return*/, res.data];
+            res = _a.sent()
+            return [2 /*return*/, res.data]
         }
-      });
-    });
-  };
+      })
+    })
+  }
   CodemaoCaptcha.prototype.get_captcha = function (options) {
-    var _a;
+    var _a
     return __awaiter(this, undefined, undefined, function () {
-      var identity;
-      var _b;
-      var scene;
-      var success_callback;
-      var fail_callback;
-      var res;
-      var rule;
-      var appid;
-      var ticket;
-      var disableCaptcha;
+      var identity
+      var /* [auto-meaningful-name] */options$scene
+      var scene
+      var success_callback
+      var fail_callback
+      var res
+      var rule
+      var appid
+      var ticket
+      var disableCaptcha
       return __generator(this, function (_c) {
         switch (_c.label) {
           case 0:
-            identity = options.identity;
-            _b = options.scene;
-            scene = _b === undefined ? "" : _b;
-            success_callback = options.success_callback;
-            fail_callback = options.fail_callback;
-            return [4 /*yield*/, this.get_rule_from_server(identity, scene)];
+            identity = options.identity
+            options$scene = options.scene
+            scene = options$scene === undefined ? "" : options$scene
+            success_callback = options.success_callback
+            fail_callback = options.fail_callback
+            return [4 /*yield*/, this.get_rule_from_server(identity, scene)]
           case 1:
-            res = _c.sent();
+            res = _c.sent()
             // TODO: single if ?
             if (res) {
-              rule = res.rule;
-              appid = res.appid;
-              ticket = res.ticket;
+              rule = res.rule
+              appid = res.appid
+              ticket = res.ticket
               if (Object.keys(captchaResourceUrls).includes(rule)) {
                 // TODO: single if x2 ?
                 if (appid) {
                   // 根据策略执行对应的算法
                   return [2 /*return*/, (_a = strategyTargetSelector(rule)) === null || _a === undefined ? undefined : _a.create(options, {
                     appid: appid
-                  })];
+                  })]
                 }
               } else {
-                disableCaptcha = new DisableCaptcha(ticket, success_callback, fail_callback);
-                return [2 /*return*/, disableCaptcha];
+                disableCaptcha = new DisableCaptcha(ticket, success_callback, fail_callback)
+                return [2 /*return*/, disableCaptcha]
               }
             }
-            return [2 /*return*/];
+            return [2 /*return*/]
         }
-      });
-    });
-  };
-  return CodemaoCaptcha;
-}();
+      })
+    })
+  }
+  return CodemaoCaptcha
+}()
 var DisableCaptcha = /** @class */function () {
   function DisableCaptcha(ticket, success_callback, fail_callback) {
-    this.ticket = ticket;
-    this.success_callback = success_callback;
-    this.fail_callback = fail_callback;
+    this.ticket = ticket
+    this.success_callback = success_callback
+    this.fail_callback = fail_callback
   }
   DisableCaptcha.prototype.init = function () {
     return __awaiter(this, undefined, undefined, function () {
       return __generator(this, function (_a) {
-        console.log("DisableCaptcha init");
-        return [2 /*return*/];
-      });
-    });
-  };
+        console.log("DisableCaptcha init")
+        return [2 /*return*/]
+      })
+    })
+  }
   DisableCaptcha.prototype.show = function () {
     if (this.ticket) {
-      this.success_callback(this.ticket, "");
+      this.success_callback(this.ticket, "")
     } else {
       if (this.fail_callback) {
-        this.fail_callback();
+        this.fail_callback()
       }
     }
-  };
-  return DisableCaptcha;
-}();
+  }
+  return DisableCaptcha
+}()
 // 策略分配
 var strategyTargetSelector = function (contextKeyWhoNamedRuleByBackend) {
   switch (contextKeyWhoNamedRuleByBackend) {
     case "GEETEST":
-      return GeetestCaptcha;
+      return GeetestCaptcha
     case "TENCENT":
-      return CmTencentCaptcha;
+      return CmTencentCaptcha
     case "NETEASE":
-      return NeteaseCaptcha;
+      return NeteaseCaptcha
     case "NEXTDATA":
-      return SMCaptcha;
+      return SMCaptcha
     case "ALIYUN":
-      return AliyunCaptcha;
+      return AliyunCaptcha
     case "DEFAULT":
-      return DisableCaptcha;
+      return DisableCaptcha
   }
-};
+}
 var index = /*#__PURE__*/Object.freeze({
   __proto__: null,
   GeetestCaptcha: GeetestCaptcha,
@@ -3899,31 +3899,31 @@ var index = /*#__PURE__*/Object.freeze({
   NeteaseCaptcha: NeteaseCaptcha,
   CodemaoCaptcha: CodemaoCaptcha,
   DisableCaptcha: DisableCaptcha
-});
+})
 function init$1(options) {
-  var env = options.env;
-  var domain = options.domain;
-  var _a = options.auth_version;
-  var _b = options.pid;
-  var _c = options.client_id;
-  var requestTimeout = options.requestTimeout;
-  var host = options.host;
+  var env = options.env
+  var domain = options.domain
+  var options$auth_version = options.auth_version
+  var options$pid = options.pid
+  var options$client_id = options.client_id
+  var requestTimeout = options.requestTimeout
+  var host = options.host
   if (env) {
     if (configs[env]) {
-      setConfig(configs[env]);
+      setConfig(configs[env])
       if (host) {
-        var config = getConfig();
-        config.host = host;
+        var config = getConfig()
+        config.host = host
       }
     } else {
-      console.warn("Unknown env \"" + env + "\", config has been set to default value.");
+      console.warn("Unknown env \"" + env + "\", config has been set to default value.")
     }
   }
   if (domain !== undefined) {
-    var config = getConfig();
-    config.domain = domain;
+    var config = getConfig()
+    config.domain = domain
   }
-  setInitParams(options);
+  setInitParams(options)
 }
 
 /***/

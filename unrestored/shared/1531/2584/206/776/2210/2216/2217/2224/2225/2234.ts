@@ -4,137 +4,137 @@
  * 模块 ID：2234
  */
 
-"use strict";
+"use strict"
 
 module.exports = function (e, t, n) {
-  var r = " ";
-  var i = e.level;
-  var o = e.dataLevel;
-  var a = e.schema[t];
-  var s = e.schemaPath + e.util.getProperty(t);
-  var c = e.errSchemaPath + "/" + t;
-  var u = !e.opts.allErrors;
-  var l = "data" + (o || "");
+  var r = " "
+  var e$level = e.level
+  var e$dataLevel = e.dataLevel
+  var a = e.schema[t]
+  var s = e.schemaPath + e.util.getProperty(t)
+  var c = e.errSchemaPath + "/" + t
+  var u = !e.opts.allErrors
+  var l = "data" + (e$dataLevel || "")
   if (false === e.opts.format) {
     if (u) {
-      r += " if (true) { ";
+      r += " if (true) { "
     }
-    return r;
+    return r
   }
-  var f;
-  var d = e.opts.$data && a && a.$data;
+  var f
+  var d = e.opts.$data && a && a.$data
   if (d) {
-    r += " var schema" + i + " = " + e.util.getData(a.$data, o, e.dataPathArr) + "; ";
-    f = "schema" + i;
+    r += " var schema" + e$level + " = " + e.util.getData(a.$data, e$dataLevel, e.dataPathArr) + "; "
+    f = "schema" + e$level
   } else {
-    f = a;
+    f = a
   }
-  var h = e.opts.unknownFormats;
-  var p = Array.isArray(h);
+  var e$opts$unknownFormats = e.opts.unknownFormats
+  var p = Array.isArray(e$opts$unknownFormats)
   if (d) {
-    r += " var " + (_ = "format" + i) + " = formats[" + f + "]; var " + (A = "isObject" + i) + " = typeof " + _ + " == 'object' && !(" + _ + " instanceof RegExp) && " + _ + ".validate; var " + (g = "formatType" + i) + " = " + A + " && " + _ + ".type || 'string'; if (" + A + ") { ";
+    r += " var " + (_ = "format" + e$level) + " = formats[" + f + "]; var " + (A = "isObject" + e$level) + " = typeof " + _ + " == 'object' && !(" + _ + " instanceof RegExp) && " + _ + ".validate; var " + (g = "formatType" + e$level) + " = " + A + " && " + _ + ".type || 'string'; if (" + A + ") { "
     if (e.async) {
-      r += " var async" + i + " = " + _ + ".async; ";
+      r += " var async" + e$level + " = " + _ + ".async; "
     }
-    r += " " + _ + " = " + _ + ".validate; } if (  ";
+    r += " " + _ + " = " + _ + ".validate; } if (  "
     if (d) {
-      r += " (" + f + " !== undefined && typeof " + f + " != 'string') || ";
+      r += " (" + f + " !== undefined && typeof " + f + " != 'string') || "
     }
-    r += " (";
-    if ("ignore" != h) {
-      r += " (" + f + " && !" + _ + " ";
+    r += " ("
+    if ("ignore" != e$opts$unknownFormats) {
+      r += " (" + f + " && !" + _ + " "
       if (p) {
-        r += " && self._opts.unknownFormats.indexOf(" + f + ") == -1 ";
+        r += " && self._opts.unknownFormats.indexOf(" + f + ") == -1 "
       }
-      r += ") || ";
+      r += ") || "
     }
-    r += " (" + _ + " && " + g + " == '" + n + "' && !(typeof " + _ + " == 'function' ? ";
+    r += " (" + _ + " && " + g + " == '" + n + "' && !(typeof " + _ + " == 'function' ? "
     if (e.async) {
-      r += " (async" + i + " ? await " + _ + "(" + l + ") : " + _ + "(" + l + ")) ";
+      r += " (async" + e$level + " ? await " + _ + "(" + l + ") : " + _ + "(" + l + ")) "
     } else {
-      r += " " + _ + "(" + l + ") ";
+      r += " " + _ + "(" + l + ") "
     }
-    r += " : " + _ + ".test(" + l + "))))) {";
+    r += " : " + _ + ".test(" + l + "))))) {"
   } else {
-    var _;
+    var _
     if (!(_ = e.formats[a])) {
-      if ("ignore" == h) {
-        e.logger.warn("unknown format \"" + a + "\" ignored in schema at path \"" + e.errSchemaPath + "\"");
+      if ("ignore" == e$opts$unknownFormats) {
+        e.logger.warn("unknown format \"" + a + "\" ignored in schema at path \"" + e.errSchemaPath + "\"")
         if (u) {
-          r += " if (true) { ";
+          r += " if (true) { "
         }
-        return r;
+        return r
       }
-      if (p && h.indexOf(a) >= 0) {
+      if (p && e$opts$unknownFormats.indexOf(a) >= 0) {
         if (u) {
-          r += " if (true) { ";
+          r += " if (true) { "
         }
-        return r;
+        return r
       }
-      throw new Error("unknown format \"" + a + "\" is used in schema at path \"" + e.errSchemaPath + "\"");
+      throw new Error("unknown format \"" + a + "\" is used in schema at path \"" + e.errSchemaPath + "\"")
     }
-    var A;
-    var g = (A = "object" == typeof _ && !(_ instanceof RegExp) && _.validate) && _.type || "string";
+    var A
+    var g = (A = "object" == typeof _ && !(_ instanceof RegExp) && _.validate) && _.type || "string"
     if (A) {
-      var v = true === _.async;
-      _ = _.validate;
+      var v = true === _.async
+      _ = _.validate
     }
     if (g != n) {
       if (u) {
-        r += " if (true) { ";
+        r += " if (true) { "
       }
-      return r;
+      return r
     }
     if (v) {
       if (!e.async) {
-        throw new Error("async format in sync schema");
+        throw new Error("async format in sync schema")
       }
-      r += " if (!(await " + (m = "formats" + e.util.getProperty(a) + ".validate") + "(" + l + "))) { ";
+      r += " if (!(await " + (m = "formats" + e.util.getProperty(a) + ".validate") + "(" + l + "))) { "
     } else {
-      r += " if (! ";
-      var m = "formats" + e.util.getProperty(a);
+      r += " if (! "
+      var m = "formats" + e.util.getProperty(a)
       if (A) {
-        m += ".validate";
+        m += ".validate"
       }
-      r += "function" == typeof _ ? " " + m + "(" + l + ") " : " " + m + ".test(" + l + ") ";
-      r += ") { ";
+      r += "function" == typeof _ ? " " + m + "(" + l + ") " : " " + m + ".test(" + l + ") "
+      r += ") { "
     }
   }
-  var y = y || [];
-  y.push(r);
-  r = "";
+  var y = y || []
+  y.push(r)
+  r = ""
   if (false !== e.createErrors) {
-    r += " { keyword: 'format' , dataPath: (dataPath || '') + " + e.errorPath + " , schemaPath: " + e.util.toQuotedString(c) + " , params: { format:  ";
-    r += d ? "" + f : "" + e.util.toQuotedString(a);
-    r += "  } ";
+    r += " { keyword: 'format' , dataPath: (dataPath || '') + " + e.errorPath + " , schemaPath: " + e.util.toQuotedString(c) + " , params: { format:  "
+    r += d ? "" + f : "" + e.util.toQuotedString(a)
+    r += "  } "
     if (false !== e.opts.messages) {
-      r += " , message: 'should match format \"";
-      r += d ? "' + " + f + " + '" : "" + e.util.escapeQuotes(a);
-      r += "\"' ";
+      r += " , message: 'should match format \""
+      r += d ? "' + " + f + " + '" : "" + e.util.escapeQuotes(a)
+      r += "\"' "
     }
     if (e.opts.verbose) {
-      r += " , schema:  ";
-      r += d ? "validate.schema" + s : "" + e.util.toQuotedString(a);
-      r += "         , parentSchema: validate.schema" + e.schemaPath + " , data: " + l + " ";
+      r += " , schema:  "
+      r += d ? "validate.schema" + s : "" + e.util.toQuotedString(a)
+      r += "         , parentSchema: validate.schema" + e.schemaPath + " , data: " + l + " "
     }
-    r += " } ";
+    r += " } "
   } else {
-    r += " {} ";
+    r += " {} "
   }
-  var b = r;
-  r = y.pop();
+  var b = r
+  r = y.pop()
   if (!e.compositeRule && u) {
     if (e.async) {
-      r += " throw new ValidationError([" + b + "]); ";
+      r += " throw new ValidationError([" + b + "]); "
     } else {
-      r += " validate.errors = [" + b + "]; return false; ";
+      r += " validate.errors = [" + b + "]; return false; "
     }
   } else {
-    r += " var err = " + b + ";  if (vErrors === null) vErrors = [err]; else vErrors.push(err); errors++; ";
+    r += " var err = " + b + ";  if (vErrors === null) vErrors = [err]; else vErrors.push(err); errors++; "
   }
-  r += " } ";
+  r += " } "
   if (u) {
-    r += " else { ";
+    r += " else { "
   }
-  return r;
-};
+  return r
+}

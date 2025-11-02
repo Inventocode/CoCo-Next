@@ -57,4 +57,4 @@ module.exports = {
   fontFamily: "style_fontFamily__1gW7L",
   fontSize: "style_fontSize__3m5TA",
   colorPicker: "style_colorPicker__iccYb"
-};
+}

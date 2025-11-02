@@ -10,71 +10,71 @@
   function r() {
     return (r = Object.assign || function (e) {
       for (var t = 1; t < arguments.length; t++) {
-        var n = arguments[t];
+        var n = arguments[t]
         for (var r in n) if (Object.prototype.hasOwnProperty.call(n, r)) {
-          e[r] = n[r];
+          e[r] = n[r]
         }
       }
-      return e;
-    }).apply(this, arguments);
+      return e
+    }).apply(this, arguments)
   }
   function i(e) {
     return (i = Object.setPrototypeOf ? Object.getPrototypeOf : function (e) {
-      return e.__proto__ || Object.getPrototypeOf(e);
-    })(e);
+      return e.__proto__ || Object.getPrototypeOf(e)
+    })(e)
   }
   function o(e, t) {
     return (o = Object.setPrototypeOf || function (e, t) {
-      e.__proto__ = t;
-      return e;
-    })(e, t);
+      e.__proto__ = t
+      return e
+    })(e, t)
   }
   function a() {
     if ("undefined" === typeof Reflect || !Reflect.construct) {
-      return false;
+      return false
     }
     if (Reflect.construct.sham) {
-      return false;
+      return false
     }
     if ("function" === typeof Proxy) {
-      return true;
+      return true
     }
     try {
-      Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {}));
-      return true;
+      Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {}))
+      return true
     } catch (e) {
-      return false;
+      return false
     }
   }
   function s(e, t, n) {
     return (s = a() ? Reflect.construct : function (e, t, n) {
-      var r = [null];
-      r.push.apply(r, t);
-      var i = new (Function.bind.apply(e, r))();
+      var r = [null]
+      r.push.apply(r, t)
+      var i = new (Function.bind.apply(e, r))()
       if (n) {
-        o(i, n.prototype);
+        o(i, n.prototype)
       }
-      return i;
-    }).apply(null, arguments);
+      return i
+    }).apply(null, arguments)
   }
   function c(e) {
-    var t = "function" === typeof Map ? new Map() : undefined;
+    var t = "function" === typeof Map ? new Map() : undefined
     return (c = function (e) {
       if (null === e || (n = e, -1 === Function.toString.call(n).indexOf("[native code]"))) {
-        return e;
+        return e
       }
-      var n;
+      var n
       if ("function" !== typeof e) {
-        throw new TypeError("Super expression must either be null or a function");
+        throw new TypeError("Super expression must either be null or a function")
       }
       if ("undefined" !== typeof t) {
         if (t.has(e)) {
-          return t.get(e);
+          return t.get(e)
         }
-        t.set(e, r);
+        t.set(e, r)
       }
       function r() {
-        return s(e, arguments, i(this).constructor);
+        return s(e, arguments, i(this).constructor)
       }
       r.prototype = Object.create(e.prototype, {
         constructor: {
@@ -83,88 +83,88 @@
           writable: true,
           configurable: true
         }
-      });
-      return o(r, e);
-    })(e);
+      })
+      return o(r, e)
+    })(e)
   }
   Object.defineProperty(exports, "a", {
     get: function () {
-      return k;
+      return k
     },
     enumerable: true
-  });
-  var u = /%[sdj%]/g;
-  var l = function () {};
+  })
+  var u = /%[sdj%]/g
+  var l = function () {}
   function f(e) {
     if (!e || !e.length) {
-      return null;
+      return null
     }
-    var t = {};
+    var t = {}
     e.forEach(function (e) {
-      var n = e.field;
-      t[n] = t[n] || [];
-      t[n].push(e);
-    });
-    return t;
+      var e$field = e.field
+      t[e$field] = t[e$field] || []
+      t[e$field].push(e)
+    })
+    return t
   }
   function d(e) {
-    for (var t = arguments.length, n = new Array(t > 1 ? t - 1 : 0), r = 1; r < t; r++) {
-      n[r - 1] = arguments[r];
+    for (var arguments$length = arguments.length, n = new Array(arguments$length > 1 ? arguments$length - 1 : 0), r = 1; r < arguments$length; r++) {
+      n[r - 1] = arguments[r]
     }
-    var i = 0;
-    var o = n.length;
+    var i = 0
+    var n$length = n.length
     if ("function" === typeof e) {
-      return e.apply(null, n);
+      return e.apply(null, n)
     }
     if ("string" === typeof e) {
       var a = e.replace(u, function (e) {
         if ("%%" === e) {
-          return "%";
+          return "%"
         }
-        if (i >= o) {
-          return e;
+        if (i >= n$length) {
+          return e
         }
         switch (e) {
           case "%s":
-            return String(n[i++]);
+            return String(n[i++])
           case "%d":
-            return Number(n[i++]);
+            return Number(n[i++])
           case "%j":
             try {
-              return JSON.stringify(n[i++]);
+              return JSON.stringify(n[i++])
             } catch (t) {
-              return "[Circular]";
+              return "[Circular]"
             }
-            break;
+            break
           default:
-            return e;
+            return e
         }
-      });
-      return a;
+      })
+      return a
     }
-    return e;
+    return e
   }
   function h(e, t) {
     return undefined === e || null === e || !("array" !== t || !Array.isArray(e) || e.length) || !(!function (e) {
-      return "string" === e || "url" === e || "hex" === e || "email" === e || "date" === e || "pattern" === e;
-    }(t) || "string" !== typeof e || e);
+      return "string" === e || "url" === e || "hex" === e || "email" === e || "date" === e || "pattern" === e
+    }(t) || "string" !== typeof e || e)
   }
   function p(e, t, n) {
-    var r = 0;
-    var i = e.length;
+    var r = 0
+    var e$length = e.length
     !function o(a) {
       if (a && a.length) {
-        n(a);
+        n(a)
       } else {
-        var s = r;
-        r += 1;
-        if (s < i) {
-          t(e[s], o);
+        var s = r
+        r += 1
+        if (s < e$length) {
+          t(e[s], o)
         } else {
-          n([]);
+          n([])
         }
       }
-    }([]);
+    }([])
   }
   if ("undefined" !== typeof e) {
     Object({
@@ -173,470 +173,470 @@
       WDS_SOCKET_HOST: undefined,
       WDS_SOCKET_PATH: undefined,
       WDS_SOCKET_PORT: undefined
-    });
+    })
   }
   var _ = function (e) {
-    var t;
-    var n;
+    var t
+    var n
     function r(t, n) {
       var r;
-      (r = e.call(this, "Async Validation Error") || this).errors = t;
-      r.fields = n;
-      return r;
+      (r = e.call(this, "Async Validation Error") || this).errors = t
+      r.fields = n
+      return r
     }
     n = e;
-    (t = r).prototype = Object.create(n.prototype);
-    t.prototype.constructor = t;
-    o(t, n);
-    return r;
-  }(c(Error));
+    (t = r).prototype = Object.create(n.prototype)
+    t.prototype.constructor = t
+    o(t, n)
+    return r
+  }(c(Error))
   function A(e, t, n, r, i) {
     if (t.first) {
       var o = new Promise(function (t, o) {
         p(function (e) {
-          var t = [];
+          var t = []
           Object.keys(e).forEach(function (n) {
-            t.push.apply(t, e[n] || []);
-          });
-          return t;
+            t.push.apply(t, e[n] || [])
+          })
+          return t
         }(e), n, function (e) {
-          r(e);
-          return e.length ? o(new _(e, f(e))) : t(i);
-        });
-      });
+          r(e)
+          return e.length ? o(new _(e, f(e))) : t(i)
+        })
+      })
       o.catch(function (e) {
-        return e;
-      });
-      return o;
+        return e
+      })
+      return o
     }
-    var a = true === t.firstFields ? Object.keys(e) : t.firstFields || [];
-    var s = Object.keys(e);
-    var c = s.length;
-    var u = 0;
-    var l = [];
+    var a = true === t.firstFields ? Object.keys(e) : t.firstFields || []
+    var s = Object.keys(e)
+    var s$length = s.length
+    var u = 0
+    var l = []
     var d = new Promise(function (t, o) {
       var d = function (e) {
-        l.push.apply(l, e);
-        if (++u === c) {
-          r(l);
-          return l.length ? o(new _(l, f(l))) : t(i);
+        l.push.apply(l, e)
+        if (++u === s$length) {
+          r(l)
+          return l.length ? o(new _(l, f(l))) : t(i)
         }
-      };
+      }
       if (!s.length) {
-        r(l);
-        t(i);
+        r(l)
+        t(i)
       }
       s.forEach(function (t) {
-        var r = e[t];
+        var r = e[t]
         if (-1 !== a.indexOf(t)) {
-          p(r, n, d);
+          p(r, n, d)
         } else {
           (function (e, t, n) {
-            var r = [];
-            var i = 0;
-            var o = e.length;
+            var r = []
+            var i = 0
+            var e$length = e.length
             function a(e) {
-              r.push.apply(r, e || []);
-              if (++i === o) {
-                n(r);
+              r.push.apply(r, e || [])
+              if (++i === e$length) {
+                n(r)
               }
             }
             e.forEach(function (e) {
-              t(e, a);
-            });
-          })(r, n, d);
+              t(e, a)
+            })
+          })(r, n, d)
         }
-      });
-    });
+      })
+    })
     d.catch(function (e) {
-      return e;
-    });
-    return d;
+      return e
+    })
+    return d
   }
   function g(e, t) {
     return function (n) {
-      var r;
-      var i;
+      var r
+      var i
       r = e.fullFields ? function (e, t) {
         for (var n = e, r = 0; r < t.length; r++) {
           if (undefined == n) {
-            return n;
+            return n
           }
-          n = n[t[r]];
+          n = n[t[r]]
         }
-        return n;
-      }(t, e.fullFields) : t[n.field || e.fullField];
+        return n
+      }(t, e.fullFields) : t[n.field || e.fullField]
       return (i = n) && undefined !== i.message ? (n.field = n.field || e.fullField, n.fieldValue = r, n) : {
         message: "function" === typeof n ? n() : n,
         fieldValue: r,
         field: n.field || e.fullField
-      };
-    };
+      }
+    }
   }
   function v(e, t) {
     if (t) {
       for (var n in t) if (t.hasOwnProperty(n)) {
-        var i = t[n];
+        var i = t[n]
         if ("object" === typeof i && "object" === typeof e[n]) {
-          e[n] = r({}, e[n], i);
+          e[n] = r({}, e[n], i)
         } else {
-          e[n] = i;
+          e[n] = i
         }
       }
     }
-    return e;
+    return e
   }
   var m = function (e, t, n, r, i, o) {
     if (!(!e.required || n.hasOwnProperty(e.field) && !h(t, o || e.type))) {
-      r.push(d(i.messages.required, e.fullField));
+      r.push(d(i.messages.required, e.fullField))
     }
-  };
+  }
   var y = {
     email: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+\.)+[a-zA-Z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]{2,}))$/,
     url: new RegExp("^(?!mailto:)(?:(?:http|https|ftp)://|//)(?:\\S+(?::\\S*)?@)?(?:(?:(?:[1-9]\\d?|1\\d\\d|2[01]\\d|22[0-3])(?:\\.(?:1?\\d{1,2}|2[0-4]\\d|25[0-5])){2}(?:\\.(?:[0-9]\\d?|1\\d\\d|2[0-4]\\d|25[0-4]))|(?:(?:[a-z\\u00a1-\\uffff0-9]+-*)*[a-z\\u00a1-\\uffff0-9]+)(?:\\.(?:[a-z\\u00a1-\\uffff0-9]+-*)*[a-z\\u00a1-\\uffff0-9]+)*(?:\\.(?:[a-z\\u00a1-\\uffff]{2,})))|localhost)(?::\\d{2,5})?(?:(/|\\?|#)[^\\s]*)?$", "i"),
     hex: /^#?([a-f0-9]{6}|[a-f0-9]{3})$/i
-  };
+  }
   var b = {
     integer: function (e) {
-      return b.number(e) && parseInt(e, 10) === e;
+      return b.number(e) && parseInt(e, 10) === e
     },
     float: function (e) {
-      return b.number(e) && !b.integer(e);
+      return b.number(e) && !b.integer(e)
     },
     array: function (e) {
-      return Array.isArray(e);
+      return Array.isArray(e)
     },
     regexp: function (e) {
       if (e instanceof RegExp) {
-        return true;
+        return true
       }
       try {
-        return !!new RegExp(e);
+        return !!new RegExp(e)
       } catch (t) {
-        return false;
+        return false
       }
     },
     date: function (e) {
-      return "function" === typeof e.getTime && "function" === typeof e.getMonth && "function" === typeof e.getYear && !isNaN(e.getTime());
+      return "function" === typeof e.getTime && "function" === typeof e.getMonth && "function" === typeof e.getYear && !isNaN(e.getTime())
     },
     number: function (e) {
-      return !isNaN(e) && "number" === typeof e;
+      return !isNaN(e) && "number" === typeof e
     },
     object: function (e) {
-      return "object" === typeof e && !b.array(e);
+      return "object" === typeof e && !b.array(e)
     },
     method: function (e) {
-      return "function" === typeof e;
+      return "function" === typeof e
     },
     email: function (e) {
-      return "string" === typeof e && e.length <= 320 && !!e.match(y.email);
+      return "string" === typeof e && e.length <= 320 && !!e.match(y.email)
     },
     url: function (e) {
-      return "string" === typeof e && e.length <= 2048 && !!e.match(y.url);
+      return "string" === typeof e && e.length <= 2048 && !!e.match(y.url)
     },
     hex: function (e) {
-      return "string" === typeof e && !!e.match(y.hex);
+      return "string" === typeof e && !!e.match(y.hex)
     }
-  };
+  }
   var w = {
     required: m,
     whitespace: function (e, t, n, r, i) {
       if (/^\s+$/.test(t) || "" === t) {
-        r.push(d(i.messages.whitespace, e.fullField));
+        r.push(d(i.messages.whitespace, e.fullField))
       }
     },
     type: function (e, t, n, r, i) {
       if (e.required && undefined === t) {
-        m(e, t, n, r, i);
+        m(e, t, n, r, i)
       } else {
-        var o = e.type;
-        if (["integer", "float", "array", "regexp", "object", "method", "email", "number", "date", "url", "hex"].indexOf(o) > -1) {
-          if (!b[o](t)) {
-            r.push(d(i.messages.types[o], e.fullField, e.type));
+        var e$type = e.type
+        if (["integer", "float", "array", "regexp", "object", "method", "email", "number", "date", "url", "hex"].indexOf(e$type) > -1) {
+          if (!b[e$type](t)) {
+            r.push(d(i.messages.types[e$type], e.fullField, e.type))
           }
         } else {
-          if (o && typeof t !== e.type) {
-            r.push(d(i.messages.types[o], e.fullField, e.type));
+          if (e$type && typeof t !== e.type) {
+            r.push(d(i.messages.types[e$type], e.fullField, e.type))
           }
         }
       }
     },
     range: function (e, t, n, r, i) {
-      var o = "number" === typeof e.len;
-      var a = "number" === typeof e.min;
-      var s = "number" === typeof e.max;
-      var c = t;
-      var u = null;
-      var l = "number" === typeof t;
-      var f = "string" === typeof t;
-      var h = Array.isArray(t);
+      var o = "number" === typeof e.len
+      var a = "number" === typeof e.min
+      var s = "number" === typeof e.max
+      var c = t
+      var u = null
+      var l = "number" === typeof t
+      var f = "string" === typeof t
+      var h = Array.isArray(t)
       if (l) {
-        u = "number";
+        u = "number"
       } else {
         if (f) {
-          u = "string";
+          u = "string"
         } else {
           if (h) {
-            u = "array";
+            u = "array"
           }
         }
       }
       if (!u) {
-        return false;
+        return false
       }
       if (h) {
-        c = t.length;
+        c = t.length
       }
       if (f) {
-        c = t.replace(/[\uD800-\uDBFF][\uDC00-\uDFFF]/g, "_").length;
+        c = t.replace(/[\uD800-\uDBFF][\uDC00-\uDFFF]/g, "_").length
       }
       if (o) {
         if (c !== e.len) {
-          r.push(d(i.messages[u].len, e.fullField, e.len));
+          r.push(d(i.messages[u].len, e.fullField, e.len))
         }
       } else {
         if (a && !s && c < e.min) {
-          r.push(d(i.messages[u].min, e.fullField, e.min));
+          r.push(d(i.messages[u].min, e.fullField, e.min))
         } else {
           if (s && !a && c > e.max) {
-            r.push(d(i.messages[u].max, e.fullField, e.max));
+            r.push(d(i.messages[u].max, e.fullField, e.max))
           } else {
             if (a && s && (c < e.min || c > e.max)) {
-              r.push(d(i.messages[u].range, e.fullField, e.min, e.max));
+              r.push(d(i.messages[u].range, e.fullField, e.min, e.max))
             }
           }
         }
       }
     },
     enum: function (e, t, n, r, i) {
-      e.enum = Array.isArray(e.enum) ? e.enum : [];
+      e.enum = Array.isArray(e.enum) ? e.enum : []
       if (-1 === e.enum.indexOf(t)) {
-        r.push(d(i.messages.enum, e.fullField, e.enum.join(", ")));
+        r.push(d(i.messages.enum, e.fullField, e.enum.join(", ")))
       }
     },
     pattern: function (e, t, n, r, i) {
       if (e.pattern) {
         if (e.pattern instanceof RegExp) {
-          e.pattern.lastIndex = 0;
+          e.pattern.lastIndex = 0
           if (!e.pattern.test(t)) {
-            r.push(d(i.messages.pattern.mismatch, e.fullField, t, e.pattern));
+            r.push(d(i.messages.pattern.mismatch, e.fullField, t, e.pattern))
           }
         } else if ("string" === typeof e.pattern) {
           if (!new RegExp(e.pattern).test(t)) {
-            r.push(d(i.messages.pattern.mismatch, e.fullField, t, e.pattern));
+            r.push(d(i.messages.pattern.mismatch, e.fullField, t, e.pattern))
           }
         }
       }
     }
-  };
+  }
   var E = function (e, t, n, r, i) {
-    var o = e.type;
-    var a = [];
+    var e$type = e.type
+    var a = []
     if (e.required || !e.required && r.hasOwnProperty(e.field)) {
-      if (h(t, o) && !e.required) {
-        return n();
+      if (h(t, e$type) && !e.required) {
+        return n()
       }
-      w.required(e, t, r, a, i, o);
-      if (!h(t, o)) {
-        w.type(e, t, r, a, i);
+      w.required(e, t, r, a, i, e$type)
+      if (!h(t, e$type)) {
+        w.type(e, t, r, a, i)
       }
     }
-    n(a);
-  };
+    n(a)
+  }
   var x = {
     string: function (e, t, n, r, i) {
-      var o = [];
+      var o = []
       if (e.required || !e.required && r.hasOwnProperty(e.field)) {
         if (h(t, "string") && !e.required) {
-          return n();
+          return n()
         }
-        w.required(e, t, r, o, i, "string");
+        w.required(e, t, r, o, i, "string")
         if (!h(t, "string")) {
-          w.type(e, t, r, o, i);
-          w.range(e, t, r, o, i);
-          w.pattern(e, t, r, o, i);
+          w.type(e, t, r, o, i)
+          w.range(e, t, r, o, i)
+          w.pattern(e, t, r, o, i)
           if (true === e.whitespace) {
-            w.whitespace(e, t, r, o, i);
+            w.whitespace(e, t, r, o, i)
           }
         }
       }
-      n(o);
+      n(o)
     },
     method: function (e, t, n, r, i) {
-      var o = [];
+      var o = []
       if (e.required || !e.required && r.hasOwnProperty(e.field)) {
         if (h(t) && !e.required) {
-          return n();
+          return n()
         }
-        w.required(e, t, r, o, i);
+        w.required(e, t, r, o, i)
         if (undefined !== t) {
-          w.type(e, t, r, o, i);
+          w.type(e, t, r, o, i)
         }
       }
-      n(o);
+      n(o)
     },
     number: function (e, t, n, r, i) {
-      var o = [];
+      var o = []
       if (e.required || !e.required && r.hasOwnProperty(e.field)) {
         if ("" === t) {
-          t = undefined;
+          t = undefined
         }
         if (h(t) && !e.required) {
-          return n();
+          return n()
         }
-        w.required(e, t, r, o, i);
+        w.required(e, t, r, o, i)
         if (undefined !== t) {
-          w.type(e, t, r, o, i);
-          w.range(e, t, r, o, i);
+          w.type(e, t, r, o, i)
+          w.range(e, t, r, o, i)
         }
       }
-      n(o);
+      n(o)
     },
     boolean: function (e, t, n, r, i) {
-      var o = [];
+      var o = []
       if (e.required || !e.required && r.hasOwnProperty(e.field)) {
         if (h(t) && !e.required) {
-          return n();
+          return n()
         }
-        w.required(e, t, r, o, i);
+        w.required(e, t, r, o, i)
         if (undefined !== t) {
-          w.type(e, t, r, o, i);
+          w.type(e, t, r, o, i)
         }
       }
-      n(o);
+      n(o)
     },
     regexp: function (e, t, n, r, i) {
-      var o = [];
+      var o = []
       if (e.required || !e.required && r.hasOwnProperty(e.field)) {
         if (h(t) && !e.required) {
-          return n();
+          return n()
         }
-        w.required(e, t, r, o, i);
+        w.required(e, t, r, o, i)
         if (!h(t)) {
-          w.type(e, t, r, o, i);
+          w.type(e, t, r, o, i)
         }
       }
-      n(o);
+      n(o)
     },
     integer: function (e, t, n, r, i) {
-      var o = [];
+      var o = []
       if (e.required || !e.required && r.hasOwnProperty(e.field)) {
         if (h(t) && !e.required) {
-          return n();
+          return n()
         }
-        w.required(e, t, r, o, i);
+        w.required(e, t, r, o, i)
         if (undefined !== t) {
-          w.type(e, t, r, o, i);
-          w.range(e, t, r, o, i);
+          w.type(e, t, r, o, i)
+          w.range(e, t, r, o, i)
         }
       }
-      n(o);
+      n(o)
     },
     float: function (e, t, n, r, i) {
-      var o = [];
+      var o = []
       if (e.required || !e.required && r.hasOwnProperty(e.field)) {
         if (h(t) && !e.required) {
-          return n();
+          return n()
         }
-        w.required(e, t, r, o, i);
+        w.required(e, t, r, o, i)
         if (undefined !== t) {
-          w.type(e, t, r, o, i);
-          w.range(e, t, r, o, i);
+          w.type(e, t, r, o, i)
+          w.range(e, t, r, o, i)
         }
       }
-      n(o);
+      n(o)
     },
     array: function (e, t, n, r, i) {
-      var o = [];
+      var o = []
       if (e.required || !e.required && r.hasOwnProperty(e.field)) {
         if ((undefined === t || null === t) && !e.required) {
-          return n();
+          return n()
         }
-        w.required(e, t, r, o, i, "array");
+        w.required(e, t, r, o, i, "array")
         if (undefined !== t && null !== t) {
-          w.type(e, t, r, o, i);
-          w.range(e, t, r, o, i);
+          w.type(e, t, r, o, i)
+          w.range(e, t, r, o, i)
         }
       }
-      n(o);
+      n(o)
     },
     object: function (e, t, n, r, i) {
-      var o = [];
+      var o = []
       if (e.required || !e.required && r.hasOwnProperty(e.field)) {
         if (h(t) && !e.required) {
-          return n();
+          return n()
         }
-        w.required(e, t, r, o, i);
+        w.required(e, t, r, o, i)
         if (undefined !== t) {
-          w.type(e, t, r, o, i);
+          w.type(e, t, r, o, i)
         }
       }
-      n(o);
+      n(o)
     },
     enum: function (e, t, n, r, i) {
-      var o = [];
+      var o = []
       if (e.required || !e.required && r.hasOwnProperty(e.field)) {
         if (h(t) && !e.required) {
-          return n();
+          return n()
         }
-        w.required(e, t, r, o, i);
+        w.required(e, t, r, o, i)
         if (undefined !== t) {
-          w.enum(e, t, r, o, i);
+          w.enum(e, t, r, o, i)
         }
       }
-      n(o);
+      n(o)
     },
     pattern: function (e, t, n, r, i) {
-      var o = [];
+      var o = []
       if (e.required || !e.required && r.hasOwnProperty(e.field)) {
         if (h(t, "string") && !e.required) {
-          return n();
+          return n()
         }
-        w.required(e, t, r, o, i);
+        w.required(e, t, r, o, i)
         if (!h(t, "string")) {
-          w.pattern(e, t, r, o, i);
+          w.pattern(e, t, r, o, i)
         }
       }
-      n(o);
+      n(o)
     },
     date: function (e, t, n, r, i) {
-      var o = [];
+      var o = []
       if (e.required || !e.required && r.hasOwnProperty(e.field)) {
         if (h(t, "date") && !e.required) {
-          return n();
+          return n()
         }
-        var a;
-        w.required(e, t, r, o, i);
+        var a
+        w.required(e, t, r, o, i)
         if (!h(t, "date")) {
-          a = t instanceof Date ? t : new Date(t);
-          w.type(e, a, r, o, i);
+          a = t instanceof Date ? t : new Date(t)
+          w.type(e, a, r, o, i)
           if (a) {
-            w.range(e, a.getTime(), r, o, i);
+            w.range(e, a.getTime(), r, o, i)
           }
         }
       }
-      n(o);
+      n(o)
     },
     url: E,
     hex: E,
     email: E,
     required: function (e, t, n, r, i) {
-      var o = [];
-      var a = Array.isArray(t) ? "array" : typeof t;
-      w.required(e, t, r, o, i, a);
-      n(o);
+      var o = []
+      var a = Array.isArray(t) ? "array" : typeof t
+      w.required(e, t, r, o, i, a)
+      n(o)
     },
     any: function (e, t, n, r, i) {
-      var o = [];
+      var o = []
       if (e.required || !e.required && r.hasOwnProperty(e.field)) {
         if (h(t) && !e.required) {
-          return n();
+          return n()
         }
-        w.required(e, t, r, o, i);
+        w.required(e, t, r, o, i)
       }
-      n(o);
+      n(o)
     }
-  };
+  }
   function C() {
     return {
       default: "Validation error on field %s",
@@ -685,188 +685,188 @@
         mismatch: "%s value %s does not match pattern %s"
       },
       clone: function () {
-        var e = JSON.parse(JSON.stringify(this));
-        e.clone = this.clone;
-        return e;
+        var e = JSON.parse(JSON.stringify(this))
+        e.clone = this.clone
+        return e
       }
-    };
+    }
   }
-  var O = C();
+  var O = C()
   var k = function () {
     function e(e) {
-      this.rules = null;
-      this._messages = O;
-      this.define(e);
+      this.rules = null
+      this._messages = O
+      this.define(e)
     }
-    var t = e.prototype;
-    t.define = function (e) {
-      var t = this;
+    var e$prototype = e.prototype
+    e$prototype.define = function (e) {
+      var t = this
       if (!e) {
-        throw new Error("Cannot configure a schema with no rules");
+        throw new Error("Cannot configure a schema with no rules")
       }
       if ("object" !== typeof e || Array.isArray(e)) {
-        throw new Error("Rules must be an object");
+        throw new Error("Rules must be an object")
       }
-      this.rules = {};
+      this.rules = {}
       Object.keys(e).forEach(function (n) {
-        var r = e[n];
-        t.rules[n] = Array.isArray(r) ? r : [r];
-      });
-    };
-    t.messages = function (e) {
+        var r = e[n]
+        t.rules[n] = Array.isArray(r) ? r : [r]
+      })
+    }
+    e$prototype.messages = function (e) {
       if (e) {
-        this._messages = v(C(), e);
+        this._messages = v(C(), e)
       }
-      return this._messages;
-    };
-    t.validate = function (t, n, i) {
-      var o = this;
+      return this._messages
+    }
+    e$prototype.validate = function (t, n, i) {
+      var o = this
       if (undefined === n) {
-        n = {};
+        n = {}
       }
       if (undefined === i) {
-        i = function () {};
+        i = function () {}
       }
-      var a = t;
-      var s = n;
-      var c = i;
+      var a = t
+      var s = n
+      var c = i
       if ("function" === typeof s) {
-        c = s;
-        s = {};
+        c = s
+        s = {}
       }
       if (!this.rules || 0 === Object.keys(this.rules).length) {
         if (c) {
-          c(null, a);
+          c(null, a)
         }
-        return Promise.resolve(a);
+        return Promise.resolve(a)
       }
       if (s.messages) {
-        var u = this.messages();
+        var u = this.messages()
         if (u === O) {
-          u = C();
+          u = C()
         }
-        v(u, s.messages);
-        s.messages = u;
+        v(u, s.messages)
+        s.messages = u
       } else {
-        s.messages = this.messages();
+        s.messages = this.messages()
       }
       var l = {};
       (s.keys || Object.keys(this.rules)).forEach(function (e) {
-        var n = o.rules[e];
-        var i = a[e];
+        var n = o.rules[e]
+        var i = a[e]
         n.forEach(function (n) {
-          var s = n;
+          var s = n
           if ("function" === typeof s.transform) {
             if (a === t) {
-              a = r({}, a);
+              a = r({}, a)
             }
-            i = a[e] = s.transform(i);
+            i = a[e] = s.transform(i)
           }
           (s = "function" === typeof s ? {
             validator: s
-          } : r({}, s)).validator = o.getValidationMethod(s);
+          } : r({}, s)).validator = o.getValidationMethod(s)
           if (s.validator) {
-            s.field = e;
-            s.fullField = s.fullField || e;
-            s.type = o.getType(s);
-            l[e] = l[e] || [];
+            s.field = e
+            s.fullField = s.fullField || e
+            s.type = o.getType(s)
+            l[e] = l[e] || []
             l[e].push({
               rule: s,
               value: i,
               source: a,
               field: e
-            });
+            })
           }
-        });
-      });
-      var h = {};
+        })
+      })
+      var h = {}
       return A(l, s, function (t, n) {
-        var i;
-        var o = t.rule;
-        var c = ("object" === o.type || "array" === o.type) && ("object" === typeof o.fields || "object" === typeof o.defaultField);
+        var i
+        var t$rule = t.rule
+        var c = ("object" === t$rule.type || "array" === t$rule.type) && ("object" === typeof t$rule.fields || "object" === typeof t$rule.defaultField)
         function u(e, t) {
           return r({}, t, {
-            fullField: o.fullField + "." + e,
-            fullFields: o.fullFields ? [].concat(o.fullFields, [e]) : [e]
-          });
+            fullField: t$rule.fullField + "." + e,
+            fullFields: t$rule.fullFields ? [].concat(t$rule.fullFields, [e]) : [e]
+          })
         }
         function l(i) {
           if (undefined === i) {
-            i = [];
+            i = []
           }
-          var l = Array.isArray(i) ? i : [i];
+          var l = Array.isArray(i) ? i : [i]
           if (!s.suppressWarning && l.length) {
-            e.warning("async-validator:", l);
+            e.warning("async-validator:", l)
           }
-          if (l.length && undefined !== o.message) {
-            l = [].concat(o.message);
+          if (l.length && undefined !== t$rule.message) {
+            l = [].concat(t$rule.message)
           }
-          var f = l.map(g(o, a));
+          var f = l.map(g(t$rule, a))
           if (s.first && f.length) {
-            h[o.field] = 1;
-            return n(f);
+            h[t$rule.field] = 1
+            return n(f)
           }
           if (c) {
-            if (o.required && !t.value) {
-              if (undefined !== o.message) {
-                f = [].concat(o.message).map(g(o, a));
+            if (t$rule.required && !t.value) {
+              if (undefined !== t$rule.message) {
+                f = [].concat(t$rule.message).map(g(t$rule, a))
               } else {
                 if (s.error) {
-                  f = [s.error(o, d(s.messages.required, o.field))];
+                  f = [s.error(t$rule, d(s.messages.required, t$rule.field))]
                 }
               }
-              return n(f);
+              return n(f)
             }
-            var p = {};
-            if (o.defaultField) {
+            var p = {}
+            if (t$rule.defaultField) {
               Object.keys(t.value).map(function (e) {
-                p[e] = o.defaultField;
-              });
+                p[e] = t$rule.defaultField
+              })
             }
-            p = r({}, p, t.rule.fields);
-            var _ = {};
+            p = r({}, p, t.rule.fields)
+            var _ = {}
             Object.keys(p).forEach(function (e) {
-              var t = p[e];
-              var n = Array.isArray(t) ? t : [t];
-              _[e] = n.map(u.bind(null, e));
-            });
-            var A = new e(_);
-            A.messages(s.messages);
+              var t = p[e]
+              var n = Array.isArray(t) ? t : [t]
+              _[e] = n.map(u.bind(null, e))
+            })
+            var A = new e(_)
+            A.messages(s.messages)
             if (t.rule.options) {
-              t.rule.options.messages = s.messages;
-              t.rule.options.error = s.error;
+              t.rule.options.messages = s.messages
+              t.rule.options.error = s.error
             }
             A.validate(t.value, t.rule.options || s, function (e) {
-              var t = [];
+              var t = []
               if (f && f.length) {
-                t.push.apply(t, f);
+                t.push.apply(t, f)
               }
               if (e && e.length) {
-                t.push.apply(t, e);
+                t.push.apply(t, e)
               }
-              n(t.length ? t : null);
-            });
+              n(t.length ? t : null)
+            })
           } else {
-            n(f);
+            n(f)
           }
         }
-        c = c && (o.required || !o.required && t.value);
-        o.field = t.field;
-        if (o.asyncValidator) {
-          i = o.asyncValidator(o, t.value, l, t.source, s);
+        c = c && (t$rule.required || !t$rule.required && t.value)
+        t$rule.field = t.field
+        if (t$rule.asyncValidator) {
+          i = t$rule.asyncValidator(t$rule, t.value, l, t.source, s)
         } else {
-          if (o.validator) {
-            if (true === (i = o.validator(o, t.value, l, t.source, s))) {
-              l();
+          if (t$rule.validator) {
+            if (true === (i = t$rule.validator(t$rule, t.value, l, t.source, s))) {
+              l()
             } else {
               if (false === i) {
-                l("function" === typeof o.message ? o.message(o.fullField || o.field) : o.message || (o.fullField || o.field) + " fails");
+                l("function" === typeof t$rule.message ? t$rule.message(t$rule.fullField || t$rule.field) : t$rule.message || (t$rule.fullField || t$rule.field) + " fails")
               } else {
                 if (i instanceof Array) {
-                  l(i);
+                  l(i)
                 } else {
                   if (i instanceof Error) {
-                    l(i.message);
+                    l(i.message)
                   }
                 }
               }
@@ -875,64 +875,64 @@
         }
         if (i && i.then) {
           i.then(function () {
-            return l();
+            return l()
           }, function (e) {
-            return l(e);
-          });
+            return l(e)
+          })
         }
       }, function (e) {
         !function (e) {
-          var t = [];
-          var n = {};
+          var t = []
+          var n = {}
           function r(e) {
-            var n;
+            var n
             if (Array.isArray(e)) {
-              t = (n = t).concat.apply(n, e);
+              t = (n = t).concat.apply(n, e)
             } else {
-              t.push(e);
+              t.push(e)
             }
           }
           for (var i = 0; i < e.length; i++) {
-            r(e[i]);
+            r(e[i])
           }
           if (t.length) {
-            n = f(t);
-            c(t, n);
+            n = f(t)
+            c(t, n)
           } else {
-            c(null, a);
+            c(null, a)
           }
-        }(e);
-      }, a);
-    };
-    t.getType = function (e) {
+        }(e)
+      }, a)
+    }
+    e$prototype.getType = function (e) {
       if (undefined === e.type && e.pattern instanceof RegExp) {
-        e.type = "pattern";
+        e.type = "pattern"
       }
       if ("function" !== typeof e.validator && e.type && !x.hasOwnProperty(e.type)) {
-        throw new Error(d("Unknown rule type %s", e.type));
+        throw new Error(d("Unknown rule type %s", e.type))
       }
-      return e.type || "string";
-    };
-    t.getValidationMethod = function (e) {
+      return e.type || "string"
+    }
+    e$prototype.getValidationMethod = function (e) {
       if ("function" === typeof e.validator) {
-        return e.validator;
+        return e.validator
       }
-      var t = Object.keys(e);
-      var n = t.indexOf("message");
+      var t = Object.keys(e)
+      var n = t.indexOf("message")
       if (-1 !== n) {
-        t.splice(n, 1);
+        t.splice(n, 1)
       }
-      return 1 === t.length && "required" === t[0] ? x.required : x[this.getType(e)] || undefined;
-    };
-    return e;
-  }();
+      return 1 === t.length && "required" === t[0] ? x.required : x[this.getType(e)] || undefined
+    }
+    return e
+  }()
   k.register = function (e, t) {
     if ("function" !== typeof t) {
-      throw new Error("Cannot register a validator by type, validator is not a function");
+      throw new Error("Cannot register a validator by type, validator is not a function")
     }
-    x[e] = t;
-  };
-  k.warning = l;
-  k.messages = O;
-  k.validators = x;
-}).call(this, require("../../710/368"));
+    x[e] = t
+  }
+  k.warning = l
+  k.messages = O
+  k.validators = x
+}).call(this, require("../../710/368"))

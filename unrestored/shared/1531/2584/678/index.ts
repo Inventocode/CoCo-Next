@@ -4,10 +4,10 @@
  * 模块 ID：678
  */
 
-"use strict";
+"use strict"
 
-export { r as messages };
-export { b as types } from "./360";
+export { r as messages }
+export { b as types } from "./360"
 var r = {
   "zh-CN": {
     widgetName: "短信",
@@ -25,5 +25,5 @@ var r = {
     sendSmsLog: "发送短信给{phoneNumber}",
     smsContentMinLength: "短信内容长度太短，当前值{inputValue}，最小长度{ruleValue}"
   }
-};
+}
 import o = require("./360");

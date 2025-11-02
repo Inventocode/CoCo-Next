@@ -10,6 +10,6 @@ module.exports = {
   "dialogButtons": "dialogButtons_1qXlG",
   "dialogSecondary": "dialogSecondary_2xQWr",
   "denyButton": "denyButton_EK65c"
-};
+}
 
 /***/

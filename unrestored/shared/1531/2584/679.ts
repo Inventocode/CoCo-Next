@@ -4,10 +4,10 @@
  * 模块 ID：679
  */
 
-"use strict";
+"use strict"
 
-export { r as messages };
-export { c as types } from "./189";
+export { r as messages }
+export { c as types } from "./189"
 var r = {
   "zh-CN": {
     widgetName: "对话框",
@@ -39,5 +39,5 @@ var r = {
     onCancelInput: "取消输入",
     buttonText: "按钮文案"
   }
-};
+}
 import o = require("./189");

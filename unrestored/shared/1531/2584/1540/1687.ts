@@ -4,14 +4,14 @@
  * 模块 ID：1687
  */
 
-"use strict";
+"use strict"
 
-var r = require("./1623/86");
-var o = require("./1686/753/index").start;
-var i = require("./1686/1078")("trimStart");
+var r = require("./1623/86")
+var require$1686753Index$start = require("./1686/753/index").start
+var i = require("./1686/1078")("trimStart")
 var a = i ? function () {
-  return o(this);
-} : "".trimStart;
+  return require$1686753Index$start(this)
+} : "".trimStart
 r({
   target: "String",
   proto: true,
@@ -19,4 +19,4 @@ r({
 }, {
   trimStart: a,
   trimLeft: a
-});
+})

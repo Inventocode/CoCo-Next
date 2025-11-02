@@ -4,9 +4,9 @@
  * 模块 ID：2249
  */
 
-"use strict";
+"use strict"
 
-var r = require("../1342");
+var r = require("../1342")
 module.exports = {
   $id: "https://github.com/ajv-validator/ajv/blob/master/lib/definition_schema.js",
   definitions: {
@@ -60,4 +60,4 @@ module.exports = {
       }]
     }
   }
-};
+}

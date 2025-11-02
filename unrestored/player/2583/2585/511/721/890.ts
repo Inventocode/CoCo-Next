@@ -4,33 +4,33 @@
  * 模块 ID：890
  */
 
-"use strict";
+"use strict"
 
-var r = require("../81/index");
-var i = require("./261");
+var r = require("../81/index")
+var i = require("./261")
 var o = function () {
   var t = function (e, n) {
     return (t = Object.setPrototypeOf || {
       __proto__: []
     } instanceof Array && function (t, e) {
-      t.__proto__ = e;
+      t.__proto__ = e
     } || function (t, e) {
       for (var n in e) if (e.hasOwnProperty(n)) {
-        t[n] = e[n];
+        t[n] = e[n]
       }
-    })(e, n);
-  };
+    })(e, n)
+  }
   return function (e, n) {
     function r() {
-      this.constructor = e;
+      this.constructor = e
     }
-    t(e, n);
-    e.prototype = null === n ? Object.create(n) : (r.prototype = n.prototype, new r());
-  };
-}();
+    t(e, n)
+    e.prototype = null === n ? Object.create(n) : (r.prototype = n.prototype, new r())
+  }
+}()
 !function (t) {
   function e(e, n) {
-    return t.call(this, new r.MultiFormatOneDReader(e), e, n) || this;
+    return t.call(this, new r.MultiFormatOneDReader(e), e, n) || this
   }
-  o(e, t);
-}(i.a);
+  o(e, t)
+}(i.a)

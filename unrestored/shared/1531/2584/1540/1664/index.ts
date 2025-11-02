@@ -4,24 +4,24 @@
  * 模块 ID：1664
  */
 
-var r = require("../1623/86");
-var o = require("./472");
-var i = require("../1659/241");
+var r = require("../1623/86")
+var o = require("./472")
+var i = require("../1659/241")
 r({
   target: "Reflect",
   stat: true,
   sham: !require("./826")
 }, {
   preventExtensions: function (e) {
-    i(e);
+    i(e)
     try {
-      var t = o("Object", "preventExtensions");
+      var t = o("Object", "preventExtensions")
       if (t) {
-        t(e);
+        t(e)
       }
-      return true;
+      return true
     } catch (n) {
-      return false;
+      return false
     }
   }
-});
+})

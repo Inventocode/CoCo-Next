@@ -4,40 +4,40 @@
  * 模块 ID：8
  */
 
-var r;
+var r
 !function () {
-  "use strict";
+  "use strict"
 
-  var n = {}.hasOwnProperty;
+  var $hasOwnProperty = {}.hasOwnProperty
   function i() {
     for (var e = [], t = 0; t < arguments.length; t++) {
-      var r = arguments[t];
+      var r = arguments[t]
       if (r) {
-        var o = typeof r;
+        var o = typeof r
         if ("string" === o || "number" === o) {
-          e.push(r);
+          e.push(r)
         } else if (Array.isArray(r) && r.length) {
-          var a = i.apply(null, r);
+          var a = i.apply(null, r)
           if (a) {
-            e.push(a);
+            e.push(a)
           }
         } else if ("object" === o) {
-          for (var s in r) if (n.call(r, s) && r[s]) {
-            e.push(s);
+          for (var s in r) if ($hasOwnProperty.call(r, s) && r[s]) {
+            e.push(s)
           }
         }
       }
     }
-    return e.join(" ");
+    return e.join(" ")
   }
   if (module.exports) {
-    i.default = i;
-    module.exports = i;
+    i.default = i
+    module.exports = i
   } else {
     if (!(undefined === (r = function () {
-      return i;
+      return i
     }.apply(exports, [])))) {
-      module.exports = r;
+      module.exports = r
     }
   }
-}();
+}()

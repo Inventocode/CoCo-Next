@@ -4,10 +4,10 @@
  * 模块 ID：VBU7
  */
 
-"use strict";
+"use strict"
 
 /* harmony export (binding) */
-export { zh };
+export { zh }
 var zh = {
   "sign_in_dialog/placeholder/email": "邮箱",
   "sign_in_dialog/placeholder/password": "密码：6-20位",
@@ -40,6 +40,6 @@ var zh = {
   "sign_in_dialog/error/email/not_exist": "账号不存在",
   "sign_in_dialog/error/password/format": "密码：6-20位数字或字母",
   "sign_in_dialog/error/password/simple": "密码过于简单，请重输"
-};
+}
 
 /***/

@@ -4,13 +4,13 @@
  * 模块 ID：205
  */
 
-"use strict";
+"use strict"
 
-var r;
+var r
 export { r as a };
 (function (e) {
-  e.CONTAIN = "contain";
-  e.COVER = "cover";
-  e.STRETCH = "stretch";
-})(r || (r = {}));
-export default r;
+  e.CONTAIN = "contain"
+  e.COVER = "cover"
+  e.STRETCH = "stretch"
+})(r || (r = {}))
+export default r

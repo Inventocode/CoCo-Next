@@ -4,9 +4,9 @@
  * 模块 ID：912
  */
 
-"use strict";
+"use strict"
 
-export { r as a };
+export { r as a }
 var r = {
   aliceblue: "#f0f8ff",
   antiquewhite: "#faebd7",
@@ -156,5 +156,5 @@ var r = {
   whitesmoke: "#f5f5f5",
   yellow: "#ffff00",
   yellowgreen: "#9acd32"
-};
-export default r;
+}
+export default r

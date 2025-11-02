@@ -11,6 +11,6 @@ module.exports = {
   "hidden": "hidden_2OzH5",
   "closeDialog": "closeDialog_3FIdc",
   "hideMask": "hideMask_1RjON"
-};
+}
 
 /***/

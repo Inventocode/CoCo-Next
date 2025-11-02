@@ -4,197 +4,197 @@
  * 模块 ID：1001
  */
 
-"use strict";
+"use strict"
 
 Object.defineProperty(exports, "__esModule", {
   value: true
-});
-exports.DARK_THEME_CONFIG = exports.DEFAULT_THEME_CONFIG = exports.RendererParams = exports.Theme = undefined;
-var r = require("tslib");
-var i = require("inversify");
-var o = require("../4/127");
-var a = require("./213/index");
-var s = require("./577");
+})
+exports.DARK_THEME_CONFIG = exports.DEFAULT_THEME_CONFIG = exports.RendererParams = exports.Theme = undefined
+var r = require("tslib")
+var i = require("inversify")
+var o = require("../4/127")
+var a = require("./213/index")
+var s = require("./577")
 var c = function () {
   function e() {
-    this.current_theme = "";
-    this.theme_list = {};
-    this.register(d, h);
-    this.register(p, _);
-    this._apply(d);
+    this.current_theme = ""
+    this.theme_list = {}
+    this.register(d, h)
+    this.register(p, _)
+    this._apply(d)
   }
   e.prototype.get_color = function (e) {
-    var t = e.match(/^%\{(BKY_)?([^}]+)\}$/);
-    e = (null === t || undefined === t ? undefined : t[2]) || e;
-    return this.block_color[e];
-  };
+    var t = e.match(/^%\{(BKY_)?([^}]+)\}$/)
+    e = (null === t || undefined === t ? undefined : t[2]) || e
+    return this.block_color[e]
+  }
   e.prototype.register = function (e, t) {
-    var n = (0, a.merge_deep)(h, t);
-    this.normalize_config(n);
+    var n = (0, a.merge_deep)(h, t)
+    this.normalize_config(n)
     if (this.theme_list[e]) {
-      console.warn("Theme " + e + " already exists and would be replaced.");
+      console.warn("Theme " + e + " already exists and would be replaced.")
     }
-    this.theme_list[e] = n;
-  };
+    this.theme_list[e] = n
+  }
   e.prototype.apply = function (e) {
-    this._apply(e);
+    this._apply(e)
     if (this.Blink.mainWorkspace) {
-      this.Blink.events.disable();
-      var t = this.Blink.xml.workspace_to_dom(this.Blink.mainWorkspace);
-      this.Blink.mainWorkspace.clear();
-      this.Blink.xml.dom_to_workspace(t, this.Blink.mainWorkspace);
-      this.Blink.events.enable();
-      var n = this.Blink.mainWorkspace.get_toolbox();
+      this.Blink.events.disable()
+      var t = this.Blink.xml.workspace_to_dom(this.Blink.mainWorkspace)
+      this.Blink.mainWorkspace.clear()
+      this.Blink.xml.dom_to_workspace(t, this.Blink.mainWorkspace)
+      this.Blink.events.enable()
+      var n = this.Blink.mainWorkspace.get_toolbox()
       if (n) {
-        n.flyout.hide();
-        n.flyout.clear_cached_blocks();
+        n.flyout.hide()
+        n.flyout.clear_cached_blocks()
       }
     }
-  };
+  }
   e.prototype._apply = function (e) {
     if (this.current_theme !== e) {
-      var t = this.theme_list[e];
+      var t = this.theme_list[e]
       if (t) {
-        this.current_theme = e;
-        Object.assign(this, t);
+        this.current_theme = e
+        Object.assign(this, t)
       } else {
-        console.error("Theme " + e + " not found.");
+        console.error("Theme " + e + " not found.")
       }
     }
-  };
+  }
   e.prototype.normalize_config = function (e) {
     for (var t in e.font.SIZE.match(/^\d*\.?\d+\s*[Pp][Tt]$/) || (console.warn("Font size " + e.font.SIZE + " replaced by default"), e.font.SIZE = h.font.SIZE), e.flyout.BACKGROUND_COLOR = new s.Color(e.flyout.BACKGROUND_COLOR, h.flyout.BACKGROUND_COLOR, "Flyout background color " + e.flyout.BACKGROUND_COLOR + " replaced by default"), e.insertion_marker.COLOR = new s.Color(e.insertion_marker.COLOR, h.insertion_marker.COLOR, "Insertion marker color " + e.insertion_marker.COLOR + " replaced by default"), (e.insertion_marker.OPACITY < 0 || e.insertion_marker.OPACITY > 1) && (console.warn("Insertion marker opacity " + e.insertion_marker.OPACITY + " replaced by default"), e.insertion_marker.OPACITY = h.insertion_marker.OPACITY), e.shadow_style.SHADOW_COLOR = new s.Color(e.shadow_style.SHADOW_COLOR, h.shadow_style.SHADOW_COLOR, "Shadow color " + e.shadow_style.SHADOW_COLOR + " replaced by default"), e.shadow_style.EMPTY_COLOR = new s.Color(e.shadow_style.EMPTY_COLOR, h.shadow_style.EMPTY_COLOR, "Invalid empty shadow color " + e.shadow_style.EMPTY_COLOR + " replaced by default"), e.shadow_style.BORDER.match(/^\d*\.?\d+\s*[Pp][Xx]$/) || (console.warn("Invalid shadow border " + e.shadow_style.BORDER + " replaced by default"), e.shadow_style.BORDER = h.shadow_style.BORDER), "0" !== e.shadow_style.NO_BORDER && (console.warn("Invalid shadow no_border " + e.shadow_style.NO_BORDER + " replaced by default"), e.shadow_style.NO_BORDER = h.shadow_style.NO_BORDER), e.block_group_color) {
-      var n = t;
-      e.block_group_color[n] = new s.Color(e.block_group_color[n], h.block_group_color[n], "Block group " + t + " replaced by default");
+      var n = t
+      e.block_group_color[n] = new s.Color(e.block_group_color[n], h.block_group_color[n], "Block group " + t + " replaced by default")
     }
     for (var r in e.block_color) {
-      var i = new s.Color();
-      var o = new s.Color();
+      var i = new s.Color()
+      var o = new s.Color()
       if (i.set(e.block_color[r].fill) && o.set(e.block_color[r].border)) {
-        e.block_color[r].fill = i;
-        e.block_color[r].border = o;
+        e.block_color[r].fill = i
+        e.block_color[r].border = o
         if (e.block_color[r].layer) {
           if (!new s.Color().set(e.block_color[r].layer)) {
-            console.warn("Illegal layer color " + e.block_color[r].layer + " of " + r + " deleted.");
-            delete e.block_color[r].layer;
+            console.warn("Illegal layer color " + e.block_color[r].layer + " of " + r + " deleted.")
+            delete e.block_color[r].layer
           }
         }
       } else {
-        console.warn("Block color " + r + " and all its related colors deleted.");
-        delete e.block_color[r];
+        console.warn("Block color " + r + " and all its related colors deleted.")
+        delete e.block_color[r]
       }
     }
-    e.disabled_color.fill = new s.Color(e.disabled_color.fill, h.disabled_color.fill, "Block disabled fill color " + e.disabled_color.fill + " replaced by default");
-    e.disabled_color.border = new s.Color(e.disabled_color.border, h.disabled_color.border, "Block disabled border color " + e.disabled_color.border + " replaced by default");
+    e.disabled_color.fill = new s.Color(e.disabled_color.fill, h.disabled_color.fill, "Block disabled fill color " + e.disabled_color.fill + " replaced by default")
+    e.disabled_color.border = new s.Color(e.disabled_color.border, h.disabled_color.border, "Block disabled border color " + e.disabled_color.border + " replaced by default")
   };
-  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.Blink)], e.prototype, "Blink", undefined);
-  return e = (0, r.__decorate)([(0, i.injectable)()], e);
-}();
-exports.Theme = c;
+  (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.Blink)], e.prototype, "Blink", undefined)
+  return e = (0, r.__decorate)([(0, i.injectable)()], e)
+}()
+exports.Theme = c
 var u = function () {
-  this.BLOCK_LEFT_TOP = [0, 0];
-  this.MIN_WIDTH = 110;
-  this.MIN_WIDTH_OUTPUT = 40;
-  this.MIN_WIDTH_SHADOW = this.MIN_WIDTH_OUTPUT;
-  this.MIN_WIDTH_SHADOW_HEXAGONAL = 54;
-  this.BLOCK_EDGE_WIDTH = 20;
-  this.BLOCK_EDGE_WIDTH_OUTPUT = 18;
-  this.BLOCK_EDGE_WIDTH_OUTPUT_HEXAGONAL = 12;
-  this.BLOCK_EDGE_WIDTH_SHADOW = 15;
-  this.BLOCK_EDGE_WIDTH_SHADOW_ROUND = 15;
-  this.BLOCK_EDGE_WIDTH_SHADOW_HEXAGONAL = 9;
-  this.MIN_HEIGHT = 40;
-  this.MIN_HEIGHT_OUTPUT = 36;
-  this.MIN_HEIGHT_SHADOW = 30;
-  this.HEAD_ICON_WRAP_WIDTH = 48;
-  this.HEAD_ICON_WIDTH = 38;
-  this.SEP_SPACE_X = 8;
-  this.CORNER_RADIUS = 2;
-  this.C_BLOCK_INNER_CORNOR_RADIUS = 2;
-  this.CORNER_RADIUS_END_BLOCK_WITHOUD_NOTCH = 12;
-  this.HEX_TOP_BOTTOM_CORNER_RADIUS = 3;
-  this.HEX_CENTER_CORNER_RADIUS = 2;
-  this.CORNER_OFFSET_X = 2;
-  this.CORNER_OFFSET_Y = 1;
-  this.CENTER_CORNER_OFFSET = 2;
-  this.C_BLOCK_INNER_CORNOR_LEFT_TOP = "a " + this.C_BLOCK_INNER_CORNOR_RADIUS + " " + this.C_BLOCK_INNER_CORNOR_RADIUS + " 0 0 0 -" + this.C_BLOCK_INNER_CORNOR_RADIUS + " " + this.C_BLOCK_INNER_CORNOR_RADIUS;
-  this.C_BLOCK_INNER_CORNOR_LEFT_BOTTOM = "a " + this.C_BLOCK_INNER_CORNOR_RADIUS + " " + this.C_BLOCK_INNER_CORNOR_RADIUS + " 0 0 0 " + this.C_BLOCK_INNER_CORNOR_RADIUS + " " + this.C_BLOCK_INNER_CORNOR_RADIUS;
-  this.COMMENT_PADDING_RIGHT = 8;
-  this.NTOCH_START_PADDING = 13;
-  this.NOTCH_HEIGHT = 4;
-  this.NOTCH_WIDTH = 20;
-  this.NOTCH_WIDTH_SHORT = 6;
-  this.NOTCH_CORNOR_RADIUS = 3;
-  this.NOTCH_WIDTH_SIDE = (this.NOTCH_WIDTH - this.NOTCH_WIDTH_SHORT - 2 * this.NOTCH_CORNOR_RADIUS) / 2;
-  this.NOTCH_OFFSET_BETWEEN_PADDING_AND_ROUND_CORNER = 2;
-  this.offset = this.NOTCH_OFFSET_BETWEEN_PADDING_AND_ROUND_CORNER;
-  this.NOTCH_CORNOR_LEFT_TOP_1 = "a " + this.NOTCH_CORNOR_RADIUS + "," + this.NOTCH_CORNOR_RADIUS + " 0 0 1 " + this.offset + ",1";
-  this.NOTCH_CORNOR_LEFT_BOTTOM_1 = "a " + this.NOTCH_CORNOR_RADIUS + "," + this.NOTCH_CORNOR_RADIUS + " 0 0 0 " + this.offset + ",1";
-  this.NOTCH_CORNOR_RIGHT_TOP_1 = "a " + this.NOTCH_CORNOR_RADIUS + "," + this.NOTCH_CORNOR_RADIUS + " 0 0 1 " + this.offset + ",-1";
-  this.NOTCH_CORNOR_RIGHT_BOTTOM_1 = "a " + this.NOTCH_CORNOR_RADIUS + "," + this.NOTCH_CORNOR_RADIUS + " 0 0 0 " + this.offset + ",-1";
-  this.NOTCH_PATH_LEFT = this.NOTCH_CORNOR_LEFT_TOP_1 + " l " + this.NOTCH_WIDTH_SIDE + "," + this.NOTCH_HEIGHT + " " + this.NOTCH_CORNOR_LEFT_BOTTOM_1 + " h " + this.NOTCH_WIDTH_SHORT + " " + this.NOTCH_CORNOR_RIGHT_BOTTOM_1 + " l " + this.NOTCH_WIDTH_SIDE + ",-" + this.NOTCH_HEIGHT + " " + this.NOTCH_CORNOR_RIGHT_TOP_1;
-  this.NOTCH_CORNOR_LEFT_TOP_2 = "a " + this.NOTCH_CORNOR_RADIUS + "," + this.NOTCH_CORNOR_RADIUS + " 0 0 0 -" + this.offset + ",-1";
-  this.NOTCH_CORNOR_LEFT_BOTTOM_2 = "a " + this.NOTCH_CORNOR_RADIUS + "," + this.NOTCH_CORNOR_RADIUS + " 0 0 1 -" + this.offset + ",-1";
-  this.NOTCH_CORNOR_RIGHT_TOP_2 = "a " + this.NOTCH_CORNOR_RADIUS + "," + this.NOTCH_CORNOR_RADIUS + " 0 0 0 -" + this.offset + ",1";
-  this.NOTCH_CORNOR_RIGHT_BOTTOM_2 = "a " + this.NOTCH_CORNOR_RADIUS + "," + this.NOTCH_CORNOR_RADIUS + " 0 0 1 -" + this.offset + ",1";
-  this.NOTCH_PATH_RIGHT = this.NOTCH_CORNOR_RIGHT_TOP_2 + " l -" + this.NOTCH_WIDTH_SIDE + "," + this.NOTCH_HEIGHT + " " + this.NOTCH_CORNOR_RIGHT_BOTTOM_2 + " h -" + this.NOTCH_WIDTH_SHORT + " " + this.NOTCH_CORNOR_LEFT_BOTTOM_2 + " l -" + this.NOTCH_WIDTH_SIDE + ",-" + this.NOTCH_HEIGHT + " " + this.NOTCH_CORNOR_LEFT_TOP_2;
-  this.ROW_PADDING = 16;
-  this.ROW_PADDING_OUTPUT = this.BLOCK_EDGE_WIDTH_OUTPUT;
-  this.ROW_PADDING_OUTPUT_WITH_INPUT = 16;
-  this.ROW_PADDING_OUTPUT_WITH_TEXT = 16;
-  this.ROW_PADDING_OUTPUT_NON_TEXT = 0;
-  this.ROW_PADDING_SHADOW = this.BLOCK_EDGE_WIDTH_SHADOW;
-  this.ROW_PADDING_HEAD = this.HEAD_ICON_WIDTH / 2;
-  this.STATEMENT_ROW_PADDING_Y_TO_FIELD = 5;
-  this.STATEMENT_ROW_PADDING_Y_TO_VALUE_BLOCK = 4;
-  this.STATEMENT_ROW_PADDING_Y_TO_STATEMENT_BLOCK = 0;
-  this.OUTPUT_ROW_PADDING_Y_TO_FIELD = 3;
-  this.OUTPUT_ROW_PADDING_Y_TO_VALUE_BLOCK = 2;
-  this.SHADOW_ROW_PADDING_Y_TO_FIELD = 0;
-  this.FIELD_HEIGHT = 30;
-  this.SHADOW_FIELD_HEIGHT = 17.5;
-  this.INPUT_MIN_HEIGHT_STATEMENT = 20;
-  this.INPUT_EXTRA_ROW_WIDTH = 86;
-  this.INPUT_EXTRA_ROW_HEIGHT = 20;
-  this.VALUE_SHAPE_WIDTH = 54;
-  this.VALUE_SHAPE_EDGE_WIDTH = this.BLOCK_EDGE_WIDTH_SHADOW;
-  this.VALUE_SHAPE_HEIGHT = 30;
-  this.INPUT_SHAPE_ROUND_WIDTH = 36;
-  this.INPUT_SHAPE_HEXAGONAL_WIDTH = 54;
-  this.INPUT_SHAPE_HEIGHT = 28;
-  this.INLINE_PADDING_Y = 2;
-  this.VALUE_SHAPE_HEXAGONAL = "M " + this.VALUE_SHAPE_EDGE_WIDTH + ",0  H " + (this.VALUE_SHAPE_WIDTH - this.VALUE_SHAPE_EDGE_WIDTH) + " L " + this.VALUE_SHAPE_WIDTH + "," + 4 * this.VALUE_SHAPE_HEIGHT / 2 + " l " + -this.VALUE_SHAPE_EDGE_WIDTH + "," + 4 * this.VALUE_SHAPE_HEIGHT / 2 + " H " + this.VALUE_SHAPE_EDGE_WIDTH + " L NaN" + this.VALUE_SHAPE_HEIGHT / 2 + " L " + this.VALUE_SHAPE_EDGE_WIDTH + ",0 z";
-  this.VALUE_SHAPE_ROUND = "M " + this.VALUE_SHAPE_EDGE_WIDTH + ",0 H " + (this.VALUE_SHAPE_WIDTH - this.VALUE_SHAPE_EDGE_WIDTH) + " a " + this.VALUE_SHAPE_EDGE_WIDTH + " " + this.VALUE_SHAPE_HEIGHT / 2 + " 0 0 1 0 " + this.VALUE_SHAPE_HEIGHT + " H " + this.VALUE_SHAPE_EDGE_WIDTH + " a " + this.VALUE_SHAPE_EDGE_WIDTH + " " + this.VALUE_SHAPE_HEIGHT / 2 + " 0 0 1 0 -" + this.VALUE_SHAPE_HEIGHT + " z";
-  this.STATEMENT_FIRST_ROW_MIN_WIDTH = 110;
-  this.STATEMENT_OTHER_ROW_MIN_WIDTH = 86;
-  this.STATEMENT_MIN_WIDTH = 16;
-  this.FLYOUT_CORNER_RADIUS = 0;
-  this.COLLAPSED_PATH = "l 8,0 0,4 8,4 -16,8 8,4";
-  this.COLLAPSED_HEIGHT = 20;
-  this.GROUP_RIGHT_EXTENDED_WIDTH = 16;
-  this.GROUP_RIGHT_EDGE_WIDTH = this.GROUP_RIGHT_EXTENDED_WIDTH + 8;
-  this.OUTPUT_GROUP_DECORATION_PADDING = 14;
-  this.OUTPUT_GROUP_DECORATION_OFFSET = 6;
-  this.EXECUTION_GROUP_DECORATION_WIDTH = 124;
-  this.EXECUTION_GROUP_DECORATION_RIGHT_MARGIN = 8;
-  this.GROUP_TOP_RIGHT_PATH = "a 4 4 0 0 1 3.7 5.5";
-  this.GROUP_BOTTOM_RIGHT_PATH = "a 4 4 0 0 1 -3.7 3.5";
-  this.GROUP_EXTRA_ROW_RIGHT = "\n    h " + (96 - this.STATEMENT_MIN_WIDTH - 12 - 7) + "\n    a 4 4 0 0 1 3.5 1.7\n    l 7 12\n    a 4 4 0 0 1 -3.5 6.3\n  ";
-  this.TEXT_PADDING_IN_FIELD = 8;
-  this.TEXT_MIN_WIDTH_IN_FIELD = 20;
-};
-exports.RendererParams = u;
+  this.BLOCK_LEFT_TOP = [0, 0]
+  this.MIN_WIDTH = 110
+  this.MIN_WIDTH_OUTPUT = 40
+  this.MIN_WIDTH_SHADOW = this.MIN_WIDTH_OUTPUT
+  this.MIN_WIDTH_SHADOW_HEXAGONAL = 54
+  this.BLOCK_EDGE_WIDTH = 20
+  this.BLOCK_EDGE_WIDTH_OUTPUT = 18
+  this.BLOCK_EDGE_WIDTH_OUTPUT_HEXAGONAL = 12
+  this.BLOCK_EDGE_WIDTH_SHADOW = 15
+  this.BLOCK_EDGE_WIDTH_SHADOW_ROUND = 15
+  this.BLOCK_EDGE_WIDTH_SHADOW_HEXAGONAL = 9
+  this.MIN_HEIGHT = 40
+  this.MIN_HEIGHT_OUTPUT = 36
+  this.MIN_HEIGHT_SHADOW = 30
+  this.HEAD_ICON_WRAP_WIDTH = 48
+  this.HEAD_ICON_WIDTH = 38
+  this.SEP_SPACE_X = 8
+  this.CORNER_RADIUS = 2
+  this.C_BLOCK_INNER_CORNOR_RADIUS = 2
+  this.CORNER_RADIUS_END_BLOCK_WITHOUD_NOTCH = 12
+  this.HEX_TOP_BOTTOM_CORNER_RADIUS = 3
+  this.HEX_CENTER_CORNER_RADIUS = 2
+  this.CORNER_OFFSET_X = 2
+  this.CORNER_OFFSET_Y = 1
+  this.CENTER_CORNER_OFFSET = 2
+  this.C_BLOCK_INNER_CORNOR_LEFT_TOP = "a " + this.C_BLOCK_INNER_CORNOR_RADIUS + " " + this.C_BLOCK_INNER_CORNOR_RADIUS + " 0 0 0 -" + this.C_BLOCK_INNER_CORNOR_RADIUS + " " + this.C_BLOCK_INNER_CORNOR_RADIUS
+  this.C_BLOCK_INNER_CORNOR_LEFT_BOTTOM = "a " + this.C_BLOCK_INNER_CORNOR_RADIUS + " " + this.C_BLOCK_INNER_CORNOR_RADIUS + " 0 0 0 " + this.C_BLOCK_INNER_CORNOR_RADIUS + " " + this.C_BLOCK_INNER_CORNOR_RADIUS
+  this.COMMENT_PADDING_RIGHT = 8
+  this.NTOCH_START_PADDING = 13
+  this.NOTCH_HEIGHT = 4
+  this.NOTCH_WIDTH = 20
+  this.NOTCH_WIDTH_SHORT = 6
+  this.NOTCH_CORNOR_RADIUS = 3
+  this.NOTCH_WIDTH_SIDE = (this.NOTCH_WIDTH - this.NOTCH_WIDTH_SHORT - 2 * this.NOTCH_CORNOR_RADIUS) / 2
+  this.NOTCH_OFFSET_BETWEEN_PADDING_AND_ROUND_CORNER = 2
+  this.offset = this.NOTCH_OFFSET_BETWEEN_PADDING_AND_ROUND_CORNER
+  this.NOTCH_CORNOR_LEFT_TOP_1 = "a " + this.NOTCH_CORNOR_RADIUS + "," + this.NOTCH_CORNOR_RADIUS + " 0 0 1 " + this.offset + ",1"
+  this.NOTCH_CORNOR_LEFT_BOTTOM_1 = "a " + this.NOTCH_CORNOR_RADIUS + "," + this.NOTCH_CORNOR_RADIUS + " 0 0 0 " + this.offset + ",1"
+  this.NOTCH_CORNOR_RIGHT_TOP_1 = "a " + this.NOTCH_CORNOR_RADIUS + "," + this.NOTCH_CORNOR_RADIUS + " 0 0 1 " + this.offset + ",-1"
+  this.NOTCH_CORNOR_RIGHT_BOTTOM_1 = "a " + this.NOTCH_CORNOR_RADIUS + "," + this.NOTCH_CORNOR_RADIUS + " 0 0 0 " + this.offset + ",-1"
+  this.NOTCH_PATH_LEFT = this.NOTCH_CORNOR_LEFT_TOP_1 + " l " + this.NOTCH_WIDTH_SIDE + "," + this.NOTCH_HEIGHT + " " + this.NOTCH_CORNOR_LEFT_BOTTOM_1 + " h " + this.NOTCH_WIDTH_SHORT + " " + this.NOTCH_CORNOR_RIGHT_BOTTOM_1 + " l " + this.NOTCH_WIDTH_SIDE + ",-" + this.NOTCH_HEIGHT + " " + this.NOTCH_CORNOR_RIGHT_TOP_1
+  this.NOTCH_CORNOR_LEFT_TOP_2 = "a " + this.NOTCH_CORNOR_RADIUS + "," + this.NOTCH_CORNOR_RADIUS + " 0 0 0 -" + this.offset + ",-1"
+  this.NOTCH_CORNOR_LEFT_BOTTOM_2 = "a " + this.NOTCH_CORNOR_RADIUS + "," + this.NOTCH_CORNOR_RADIUS + " 0 0 1 -" + this.offset + ",-1"
+  this.NOTCH_CORNOR_RIGHT_TOP_2 = "a " + this.NOTCH_CORNOR_RADIUS + "," + this.NOTCH_CORNOR_RADIUS + " 0 0 0 -" + this.offset + ",1"
+  this.NOTCH_CORNOR_RIGHT_BOTTOM_2 = "a " + this.NOTCH_CORNOR_RADIUS + "," + this.NOTCH_CORNOR_RADIUS + " 0 0 1 -" + this.offset + ",1"
+  this.NOTCH_PATH_RIGHT = this.NOTCH_CORNOR_RIGHT_TOP_2 + " l -" + this.NOTCH_WIDTH_SIDE + "," + this.NOTCH_HEIGHT + " " + this.NOTCH_CORNOR_RIGHT_BOTTOM_2 + " h -" + this.NOTCH_WIDTH_SHORT + " " + this.NOTCH_CORNOR_LEFT_BOTTOM_2 + " l -" + this.NOTCH_WIDTH_SIDE + ",-" + this.NOTCH_HEIGHT + " " + this.NOTCH_CORNOR_LEFT_TOP_2
+  this.ROW_PADDING = 16
+  this.ROW_PADDING_OUTPUT = this.BLOCK_EDGE_WIDTH_OUTPUT
+  this.ROW_PADDING_OUTPUT_WITH_INPUT = 16
+  this.ROW_PADDING_OUTPUT_WITH_TEXT = 16
+  this.ROW_PADDING_OUTPUT_NON_TEXT = 0
+  this.ROW_PADDING_SHADOW = this.BLOCK_EDGE_WIDTH_SHADOW
+  this.ROW_PADDING_HEAD = this.HEAD_ICON_WIDTH / 2
+  this.STATEMENT_ROW_PADDING_Y_TO_FIELD = 5
+  this.STATEMENT_ROW_PADDING_Y_TO_VALUE_BLOCK = 4
+  this.STATEMENT_ROW_PADDING_Y_TO_STATEMENT_BLOCK = 0
+  this.OUTPUT_ROW_PADDING_Y_TO_FIELD = 3
+  this.OUTPUT_ROW_PADDING_Y_TO_VALUE_BLOCK = 2
+  this.SHADOW_ROW_PADDING_Y_TO_FIELD = 0
+  this.FIELD_HEIGHT = 30
+  this.SHADOW_FIELD_HEIGHT = 17.5
+  this.INPUT_MIN_HEIGHT_STATEMENT = 20
+  this.INPUT_EXTRA_ROW_WIDTH = 86
+  this.INPUT_EXTRA_ROW_HEIGHT = 20
+  this.VALUE_SHAPE_WIDTH = 54
+  this.VALUE_SHAPE_EDGE_WIDTH = this.BLOCK_EDGE_WIDTH_SHADOW
+  this.VALUE_SHAPE_HEIGHT = 30
+  this.INPUT_SHAPE_ROUND_WIDTH = 36
+  this.INPUT_SHAPE_HEXAGONAL_WIDTH = 54
+  this.INPUT_SHAPE_HEIGHT = 28
+  this.INLINE_PADDING_Y = 2
+  this.VALUE_SHAPE_HEXAGONAL = "M " + this.VALUE_SHAPE_EDGE_WIDTH + ",0  H " + (this.VALUE_SHAPE_WIDTH - this.VALUE_SHAPE_EDGE_WIDTH) + " L " + this.VALUE_SHAPE_WIDTH + "," + 4 * this.VALUE_SHAPE_HEIGHT / 2 + " l " + -this.VALUE_SHAPE_EDGE_WIDTH + "," + 4 * this.VALUE_SHAPE_HEIGHT / 2 + " H " + this.VALUE_SHAPE_EDGE_WIDTH + " L NaN" + this.VALUE_SHAPE_HEIGHT / 2 + " L " + this.VALUE_SHAPE_EDGE_WIDTH + ",0 z"
+  this.VALUE_SHAPE_ROUND = "M " + this.VALUE_SHAPE_EDGE_WIDTH + ",0 H " + (this.VALUE_SHAPE_WIDTH - this.VALUE_SHAPE_EDGE_WIDTH) + " a " + this.VALUE_SHAPE_EDGE_WIDTH + " " + this.VALUE_SHAPE_HEIGHT / 2 + " 0 0 1 0 " + this.VALUE_SHAPE_HEIGHT + " H " + this.VALUE_SHAPE_EDGE_WIDTH + " a " + this.VALUE_SHAPE_EDGE_WIDTH + " " + this.VALUE_SHAPE_HEIGHT / 2 + " 0 0 1 0 -" + this.VALUE_SHAPE_HEIGHT + " z"
+  this.STATEMENT_FIRST_ROW_MIN_WIDTH = 110
+  this.STATEMENT_OTHER_ROW_MIN_WIDTH = 86
+  this.STATEMENT_MIN_WIDTH = 16
+  this.FLYOUT_CORNER_RADIUS = 0
+  this.COLLAPSED_PATH = "l 8,0 0,4 8,4 -16,8 8,4"
+  this.COLLAPSED_HEIGHT = 20
+  this.GROUP_RIGHT_EXTENDED_WIDTH = 16
+  this.GROUP_RIGHT_EDGE_WIDTH = this.GROUP_RIGHT_EXTENDED_WIDTH + 8
+  this.OUTPUT_GROUP_DECORATION_PADDING = 14
+  this.OUTPUT_GROUP_DECORATION_OFFSET = 6
+  this.EXECUTION_GROUP_DECORATION_WIDTH = 124
+  this.EXECUTION_GROUP_DECORATION_RIGHT_MARGIN = 8
+  this.GROUP_TOP_RIGHT_PATH = "a 4 4 0 0 1 3.7 5.5"
+  this.GROUP_BOTTOM_RIGHT_PATH = "a 4 4 0 0 1 -3.7 3.5"
+  this.GROUP_EXTRA_ROW_RIGHT = "\n    h " + (96 - this.STATEMENT_MIN_WIDTH - 12 - 7) + "\n    a 4 4 0 0 1 3.5 1.7\n    l 7 12\n    a 4 4 0 0 1 -3.5 6.3\n  "
+  this.TEXT_PADDING_IN_FIELD = 8
+  this.TEXT_MIN_WIDTH_IN_FIELD = 20
+}
+exports.RendererParams = u
 var l = function () {
-  this.DRAG_RADIUS = 5;
-  this.FLYOUT_DRAG_RADIUS = 10;
-  this.SNAP_RADIUS = 48;
-  this.CONNECTING_SNAP_RADIUS = 68;
-  this.CURRENT_CONNECTION_PREFERENCE = 20;
-  this.BUMP_DELAY = 250;
-  this.COLLAPSE_CHARS = 30;
-  this.LONGPRESS = 750;
-  this.SOUND_LIMIT = 100;
-};
+  this.DRAG_RADIUS = 5
+  this.FLYOUT_DRAG_RADIUS = 10
+  this.SNAP_RADIUS = 48
+  this.CONNECTING_SNAP_RADIUS = 68
+  this.CURRENT_CONNECTION_PREFERENCE = 20
+  this.BUMP_DELAY = 250
+  this.COLLAPSE_CHARS = 30
+  this.LONGPRESS = 750
+  this.SOUND_LIMIT = 100
+}
 var f = {
   INCOMPATIBLE_HUE: {
     fill: "#c7c7c7",
@@ -303,8 +303,8 @@ var f = {
     fill: "#007E8C",
     border: "#007E8C"
   }
-};
-var d = "default";
+}
+var d = "default"
 var h = {
   font: {
     SIZE: "12pt"
@@ -479,8 +479,8 @@ var h = {
   },
   renderer: new u(),
   blink_params: new l()
-};
-var p = "dark";
+}
+var p = "dark"
 var _ = {
   font: {
     SIZE: "12pt"
@@ -654,6 +654,6 @@ var _ = {
   },
   renderer: new u(),
   blink_params: new l()
-};
-exports.DEFAULT_THEME_CONFIG = (0, a.clone_deep)(h);
-exports.DARK_THEME_CONFIG = (0, a.clone_deep)(_);
+}
+exports.DEFAULT_THEME_CONFIG = (0, a.clone_deep)(h)
+exports.DARK_THEME_CONFIG = (0, a.clone_deep)(_)

@@ -12,4 +12,4 @@ module.exports = {
   name: "styles_name__kF7Z3",
   description: "styles_description__3X0Kc",
   actions: "styles_actions__2fhi8"
-};
+}

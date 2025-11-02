@@ -78,4 +78,4 @@ module.exports = {
   modeTemplate: "style_modeTemplate__1-qvN",
   modeImage: "style_modeImage__1cFtO",
   backgroundSelected: "style_backgroundSelected__1Fr3Q"
-};
+}

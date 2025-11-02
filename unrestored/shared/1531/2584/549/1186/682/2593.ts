@@ -4,24 +4,24 @@
  * 模块 ID：2593
  */
 
-"use strict";
+"use strict"
 
-export { a };
-import r = require("react");
+export { a }
+import React = require("react");
 var i = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
-    return module.default;
+    return module.default
   } : function () {
-    return module;
-  };
+    return module
+  }
   Object.defineProperty(defaultExport, "a", {
     enumerable: true,
     get: defaultExport
-  });
-  return defaultExport;
-}(r);
-var o = i.a.createContext(null);
+  })
+  return defaultExport
+}(React)
+var o = i.a.createContext(null)
 function a() {
-  return i.a.useContext(o);
+  return i.a.useContext(o)
 }
-export default a;
+export default a

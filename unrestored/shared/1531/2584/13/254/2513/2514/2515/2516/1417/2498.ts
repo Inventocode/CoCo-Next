@@ -4,21 +4,21 @@
  * 模块 ID：2498
  */
 
-var r = require("../../../../../2533/1420/475");
-var i = Object.create;
+var r = require("../../../../../2533/1420/475")
+var object$create = Object.create
 var o = function () {
   function e() {}
   return function (t) {
     if (!r(t)) {
-      return {};
+      return {}
     }
-    if (i) {
-      return i(t);
+    if (object$create) {
+      return object$create(t)
     }
-    e.prototype = t;
-    var n = new e();
-    e.prototype = undefined;
-    return n;
-  };
-}();
-module.exports = o;
+    e.prototype = t
+    var n = new e()
+    e.prototype = undefined
+    return n
+  }
+}()
+module.exports = o

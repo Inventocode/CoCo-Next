@@ -15,4 +15,4 @@ module.exports = {
   appUrlBtn: "styles_appUrlBtn__2S9g4",
   appUrlBtnImg: "styles_appUrlBtnImg__CdIWE",
   appUrlBtnIcon: "styles_appUrlBtnIcon__1UqOB"
-};
+}

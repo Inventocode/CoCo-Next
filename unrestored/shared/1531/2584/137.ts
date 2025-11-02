@@ -51,4 +51,4 @@ module.exports = {
   ctrlBtnBar: "StyleDialog_ctrlBtnBar__3xEWp",
   checkbox: "StyleDialog_checkbox__2ljwE",
   footer: "StyleDialog_footer__2M9OC"
-};
+}

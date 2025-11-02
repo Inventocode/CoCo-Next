@@ -4,8 +4,8 @@
  * 模块 ID：910
  */
 
-"use strict";
+"use strict"
 
-var r = require("react");
-var i = r.createContext(undefined);
-exports.a = i;
+var r = require("react")
+var i = r.createContext(undefined)
+exports.a = i

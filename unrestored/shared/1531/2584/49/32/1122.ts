@@ -4,160 +4,160 @@
  * 模块 ID：1122
  */
 
-"use strict";
+"use strict"
 
-var r = require("../../38/607/806/index");
-var i = require("../../36/2668/2689/703/index");
-var o = require("../../38/607/1970/529");
-var a = require("../../38/607/494");
-var s = require("regenerator-runtime");
-var c = require("../../38/607/356");
-var u = require("../../38/607/357/index");
-var l = require("../../36/2668/220");
-var f = require("../../36/2668/230");
+var r = require("../../38/607/806/index")
+var i = require("../../36/2668/2689/703/index")
+var o = require("../../38/607/1970/529")
+var a = require("../../38/607/494")
+var s = require("regenerator-runtime")
+var c = require("../../38/607/356")
+var u = require("../../38/607/357/index")
+var l = require("../../36/2668/220")
+var f = require("../../36/2668/230")
 Object.defineProperty(exports, "__esModule", {
   value: true
-});
-exports.eachChildOf = exports.advancer = exports.readCursor = exports.writeCursor = exports.WriteCursor = exports.ReadCursor = exports.isValidPathItem = undefined;
+})
+exports.eachChildOf = exports.advancer = exports.readCursor = exports.writeCursor = exports.WriteCursor = exports.ReadCursor = exports.isValidPathItem = undefined
 function d(e, t) {
   if (!e) {
-    throw new Error(t);
+    throw new Error(t)
   }
 }
 var h = function (e) {
-  return null != e && "object" === typeof e && !Array.isArray(e);
-};
+  return null != e && "object" === typeof e && !Array.isArray(e)
+}
 var p = function (e, t) {
-  return typeof e === typeof t ? e > t : "string" === typeof e && "number" === typeof t;
-};
+  return typeof e === typeof t ? e > t : "string" === typeof e && "number" === typeof t
+}
 function _(e, t) {
   for (var n in e) {
-    var r = n;
-    t.write(r, e[r]);
+    var r = n
+    t.write(r, e[r])
   }
 }
 exports.isValidPathItem = function (e) {
-  return "number" === typeof e || "string" === typeof e && "__proto__" !== e;
-};
+  return "number" === typeof e || "string" === typeof e && "__proto__" !== e
+}
 var A = function () {
   function e() {
-    var t = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : null;
-    l(this, e);
-    this.parents = [];
-    this.indexes = [];
-    this.lcIdx = -1;
-    this.idx = -1;
-    this.container = t;
+    var t = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : null
+    l(this, e)
+    this.parents = []
+    this.indexes = []
+    this.lcIdx = -1
+    this.idx = -1
+    this.container = t
   }
   f(e, [{
     key: "ascend",
     value: function () {
-      d(this.parents.length === this.indexes.length / 2);
+      d(this.parents.length === this.indexes.length / 2)
       if (0 === this.idx) {
         if (this.parents.length) {
-          this.lcIdx = this.indexes.pop();
-          this.container = this.parents.pop();
-          this.idx = this.indexes.pop();
+          this.lcIdx = this.indexes.pop()
+          this.container = this.parents.pop()
+          this.idx = this.indexes.pop()
         } else {
-          this.lcIdx = 0;
-          this.idx = -1;
+          this.lcIdx = 0
+          this.idx = -1
         }
       } else {
-        d(this.idx > 0);
-        this.idx--;
+        d(this.idx > 0)
+        this.idx--
         if (h(this.container[this.idx])) {
-          this.idx--;
+          this.idx--
         }
       }
     }
   }, {
     key: "getPath",
     value: function () {
-      for (var e = [], t = this.container, n = this.parents.length - 1, r = this.idx; r >= 0;) {
-        e.unshift(t[r]);
-        if (0 === r) {
-          r = this.indexes[2 * n];
-          t = this.parents[n--];
+      for (var e = [], this$container = this.container, n = this.parents.length - 1, this$idx = this.idx; this$idx >= 0;) {
+        e.unshift(this$container[this$idx])
+        if (0 === this$idx) {
+          this$idx = this.indexes[2 * n]
+          this$container = this.parents[n--]
         } else {
-          r -= h(t[r - 1]) ? 2 : 1;
+          this$idx -= h(this$container[this$idx - 1]) ? 2 : 1
         }
       }
-      return e;
+      return e
     }
-  }]);
-  return e;
-}();
+  }])
+  return e
+}()
 var g = function (e) {
-  c(n, e);
-  var t = u(n);
+  c(n, e)
+  var t = u(n)
   function n() {
-    l(this, n);
-    return t.apply(this, arguments);
+    l(this, n)
+    return t.apply(this, arguments)
   }
   f(n, [{
     key: "get",
     value: function () {
-      return this.container ? this.container.slice(this.idx + 1) : null;
+      return this.container ? this.container.slice(this.idx + 1) : null
     }
   }, {
     key: "getKey",
     value: function () {
-      d(null != this.container, "Invalid call to getKey before cursor descended");
-      return this.container[this.idx];
+      d(null != this.container, "Invalid call to getKey before cursor descended")
+      return this.container[this.idx]
     }
   }, {
     key: "getComponent",
     value: function () {
-      var e;
-      return this.container && this.container.length > this.idx + 1 && h(e = this.container[this.idx + 1]) ? e : null;
+      var e
+      return this.container && this.container.length > this.idx + 1 && h(e = this.container[this.idx + 1]) ? e : null
     }
   }, {
     key: "descendFirst",
     value: function () {
-      var e = this.idx + 1;
+      var e = this.idx + 1
       if (!this.container || e >= this.container.length || h(this.container[e]) && e + 1 >= this.container.length) {
-        return false;
+        return false
       }
       if (h(this.container[e])) {
-        e++;
+        e++
       }
-      var t = this.container[e];
+      var t = this.container[e]
       if (Array.isArray(t)) {
-        this.indexes.push(this.idx);
-        this.parents.push(this.container);
-        this.indexes.push(e);
-        this.idx = 0;
-        this.container = t;
+        this.indexes.push(this.idx)
+        this.parents.push(this.container)
+        this.indexes.push(e)
+        this.idx = 0
+        this.container = t
       } else {
-        this.idx = e;
+        this.idx = e
       }
-      return true;
+      return true
     }
   }, {
     key: "nextSibling",
     value: function () {
-      d(this.parents.length === this.indexes.length / 2);
+      d(this.parents.length === this.indexes.length / 2)
       if (this.idx > 0 || 0 === this.parents.length) {
-        return false;
+        return false
       }
-      var e = this.indexes[this.indexes.length - 1] + 1;
-      var t = this.parents[this.parents.length - 1];
-      return !(e >= t.length) && (d(!isNaN(e)), this.indexes[this.indexes.length - 1] = e, this.container = t[e], true);
+      var e = this.indexes[this.indexes.length - 1] + 1
+      var t = this.parents[this.parents.length - 1]
+      return !(e >= t.length) && (d(!isNaN(e)), this.indexes[this.indexes.length - 1] = e, this.container = t[e], true)
     }
   }, {
     key: "_init",
     value: function (e, t, n, r) {
-      this.container = e;
-      this.idx = t;
-      this.parents = n.slice();
-      this.indexes = r.slice();
+      this.container = e
+      this.idx = t
+      this.parents = n.slice()
+      this.indexes = r.slice()
     }
   }, {
     key: "clone",
     value: function () {
-      var e = new n();
-      e._init(this.container, this.idx, this.parents, this.indexes);
-      return e;
+      var e = new n()
+      e._init(this.container, this.idx, this.parents, this.indexes)
+      return e
     }
   }, {
     key: Symbol.iterator,
@@ -167,51 +167,51 @@ var g = function (e) {
           switch (e.prev = e.next) {
             case 0:
               if (this.descendFirst()) {
-                e.next = 2;
-                break;
+                e.next = 2
+                break
               }
-              return e.abrupt("return");
+              return e.abrupt("return")
             case 2:
-              e.next = 4;
-              return this.getKey();
+              e.next = 4
+              return this.getKey()
             case 4:
               if (this.nextSibling()) {
-                e.next = 2;
-                break;
+                e.next = 2
+                break
               }
             case 5:
-              this.ascend();
+              this.ascend()
             case 6:
             case "end":
-              return e.stop();
+              return e.stop()
           }
         }
-      }, e, this);
+      }, e, this)
     })
   }, {
     key: "traverse",
     value: function (e, t) {
-      var n = this.getComponent();
+      var n = this.getComponent()
       if (n) {
-        t(n, e);
+        t(n, e)
       }
-      var r;
-      var i = a(this);
+      var r
+      var i = a(this)
       try {
         for (i.s(); !(r = i.n()).done;) {
-          var o = r.value;
+          var r$value = r.value
           if (e) {
-            e.descend(o);
+            e.descend(r$value)
           }
-          this.traverse(e, t);
+          this.traverse(e, t)
           if (e) {
-            e.ascend();
+            e.ascend()
           }
         }
       } catch (s) {
-        i.e(s);
+        i.e(s)
       } finally {
-        i.f();
+        i.f()
       }
     }
   }, {
@@ -219,266 +219,266 @@ var g = function (e) {
     value: function (e, t) {
       this.traverse(e, function (e, n) {
         if (null != e.p) {
-          t(e.p, n);
+          t(e.p, n)
         }
-      });
+      })
     }
   }, {
     key: "eachDrop",
     value: function (e, t) {
       this.traverse(e, function (e, n) {
         if (null != e.d) {
-          t(e.d, n);
+          t(e.d, n)
         }
-      });
+      })
     }
-  }]);
-  return n;
-}(A);
-exports.ReadCursor = g;
+  }])
+  return n
+}(A)
+exports.ReadCursor = g
 var v = function (e) {
-  c(a, e);
-  var n = u(a);
+  c(a, e)
+  var n = u(a)
   function a() {
-    var e;
-    var t = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : null;
+    var e
+    var t = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : null
     l(this, a);
-    (e = n.call(this, t)).pendingDescent = [];
-    e._op = t;
-    return e;
+    (e = n.call(this, t)).pendingDescent = []
+    e._op = t
+    return e
   }
   f(a, [{
     key: "flushDescent",
     value: function () {
-      d(this.parents.length === this.indexes.length / 2);
+      d(this.parents.length === this.indexes.length / 2)
       if (null === this.container) {
-        this._op = this.container = [];
+        this._op = this.container = []
       }
       for (var e = 0; e < this.pendingDescent.length; e++) {
-        var t = this.pendingDescent[e];
-        var n = this.idx + 1;
+        var t = this.pendingDescent[e]
+        var n = this.idx + 1
         if (n < this.container.length && h(this.container[n])) {
-          n++;
+          n++
         }
-        d(n === this.container.length || !h(this.container[n]));
+        d(n === this.container.length || !h(this.container[n]))
         if (n === this.container.length) {
-          this.container.push(t);
-          this.idx = n;
+          this.container.push(t)
+          this.idx = n
         } else if (this.container[n] === t) {
-          this.idx = n;
+          this.idx = n
         } else {
           if (!Array.isArray(this.container[n])) {
-            var r = this.container.splice(n, this.container.length - n);
-            this.container.push(r);
+            var r = this.container.splice(n, this.container.length - n)
+            this.container.push(r)
             if (this.lcIdx > -1) {
-              this.lcIdx = n;
+              this.lcIdx = n
             }
           }
           for (this.indexes.push(this.idx), this.parents.push(this.container), -1 !== this.lcIdx && (d(p(t, this.container[this.lcIdx][0])), n = this.lcIdx + 1, this.lcIdx = -1); n < this.container.length && p(t, this.container[n][0]);) {
-            n++;
+            n++
           }
-          this.indexes.push(n);
-          this.idx = 0;
+          this.indexes.push(n)
+          this.idx = 0
           if (n < this.container.length && this.container[n][0] === t) {
-            this.container = this.container[n];
+            this.container = this.container[n]
           } else {
-            var i = [t];
-            this.container.splice(n, 0, i);
-            this.container = i;
+            var i = [t]
+            this.container.splice(n, 0, i)
+            this.container = i
           }
         }
       }
-      this.pendingDescent.length = 0;
+      this.pendingDescent.length = 0
     }
   }, {
     key: "reset",
     value: function () {
-      this.lcIdx = -1;
+      this.lcIdx = -1
     }
   }, {
     key: "getComponent",
     value: function () {
-      this.flushDescent();
-      var e = this.idx + 1;
+      this.flushDescent()
+      var e = this.idx + 1
       if (e < this.container.length && h(this.container[e])) {
-        return this.container[e];
+        return this.container[e]
       }
-      var t = {};
-      this.container.splice(e, 0, t);
-      return t;
+      var t = {}
+      this.container.splice(e, 0, t)
+      return t
     }
   }, {
     key: "write",
     value: function (e, t) {
-      var n = this.getComponent();
-      d(null == n[e] || n[e] === t, "Internal consistency error: Overwritten component. File a bug");
-      n[e] = t;
+      var n = this.getComponent()
+      d(null == n[e] || n[e] === t, "Internal consistency error: Overwritten component. File a bug")
+      n[e] = t
     }
   }, {
     key: "get",
     value: function () {
-      return this._op;
+      return this._op
     }
   }, {
     key: "descend",
     value: function (e) {
       if (!exports.isValidPathItem(e)) {
-        throw Error("Invalid JSON key");
+        throw Error("Invalid JSON key")
       }
-      this.pendingDescent.push(e);
+      this.pendingDescent.push(e)
     }
   }, {
     key: "descendPath",
     value: function (e) {
-      var t;
-      (t = this.pendingDescent).push.apply(t, r(e));
-      return this;
+      var /* [auto-meaningful-name] */this$pendingDescent;
+      (this$pendingDescent = this.pendingDescent).push.apply(this$pendingDescent, r(e))
+      return this
     }
   }, {
     key: "ascend",
     value: function () {
       if (this.pendingDescent.length) {
-        this.pendingDescent.pop();
+        this.pendingDescent.pop()
       } else {
-        i(o(a.prototype), "ascend", this).call(this);
+        i(o(a.prototype), "ascend", this).call(this)
       }
     }
   }, {
     key: "mergeTree",
     value: function (e) {
-      var t = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : _;
+      var t = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : _
       if (null !== e) {
-        d(Array.isArray(e));
+        d(Array.isArray(e))
         if (e === this._op) {
-          throw Error("Cannot merge into my own tree");
+          throw Error("Cannot merge into my own tree")
         }
-        for (var n = this.lcIdx, r = this.parents.length, i = 0, o = 0; o < e.length; o++) {
-          var a = e[o];
+        for (var this$lcIdx = this.lcIdx, this$parents$length = this.parents.length, i = 0, o = 0; o < e.length; o++) {
+          var a = e[o]
           if ("string" === typeof a || "number" === typeof a) {
-            i++;
-            this.descend(a);
+            i++
+            this.descend(a)
           } else {
             if (Array.isArray(a)) {
-              this.mergeTree(a, t);
+              this.mergeTree(a, t)
             } else {
               if ("object" === typeof a) {
-                t(a, this);
+                t(a, this)
               }
             }
           }
         }
         for (; i--;) {
-          this.ascend();
+          this.ascend()
         }
-        this.lcIdx = this.parents.length === r ? n : -1;
+        this.lcIdx = this.parents.length === this$parents$length ? this$lcIdx : -1
       }
     }
   }, {
     key: "at",
     value: function (e, t) {
-      this.descendPath(e);
-      t(this);
+      this.descendPath(e)
+      t(this)
       for (var n = 0; n < e.length; n++) {
-        this.ascend();
+        this.ascend()
       }
-      return this;
+      return this
     }
   }, {
     key: "writeAtPath",
     value: function (e, t, n) {
-      var r = this;
+      var r = this
       this.at(e, function () {
-        return r.write(t, n);
-      });
-      this.reset();
-      return this;
+        return r.write(t, n)
+      })
+      this.reset()
+      return this
     }
   }, {
     key: "writeMove",
     value: function (e, t) {
-      var n = arguments.length > 2 && undefined !== arguments[2] ? arguments[2] : 0;
-      return this.writeAtPath(e, "p", n).writeAtPath(t, "d", n);
+      var n = arguments.length > 2 && undefined !== arguments[2] ? arguments[2] : 0
+      return this.writeAtPath(e, "p", n).writeAtPath(t, "d", n)
     }
   }, {
     key: "getPath",
     value: function () {
-      var e = i(o(a.prototype), "getPath", this).call(this);
-      e.push.apply(e, r(this.pendingDescent));
-      return e;
+      var e = i(o(a.prototype), "getPath", this).call(this)
+      e.push.apply(e, r(this.pendingDescent))
+      return e
     }
-  }]);
-  return a;
-}(A);
-exports.WriteCursor = v;
+  }])
+  return a
+}(A)
+exports.WriteCursor = v
 exports.writeCursor = function () {
-  return new v();
-};
+  return new v()
+}
 exports.readCursor = function (e) {
-  return new g(e);
-};
+  return new g(e)
+}
 exports.advancer = function (e, t, n) {
-  var r;
-  var i;
+  var r
+  var i
   function o(r) {
     for (var o; i;) {
-      var a = o = e.getKey();
+      var a = o = e.getKey()
       if (null != r) {
-        var s = false;
+        var s = false
         if (t && "number" === typeof a && (o = t(a, e.getComponent())) < 0) {
-          o = ~o;
-          s = true;
+          o = ~o
+          s = true
         }
         if (p(o, r)) {
-          return null;
+          return null
         }
         if (o === r && !s) {
-          return e;
+          return e
         }
       }
       if (n && "number" === typeof o) {
-        n(o, e.getComponent());
+        n(o, e.getComponent())
       }
-      i = e.nextSibling();
+      i = e.nextSibling()
     }
-    return null;
+    return null
   }
-  i = r = !!e && e.descendFirst();
+  i = r = !!e && e.descendFirst()
   o.end = function () {
     if (r) {
-      e.ascend();
+      e.ascend()
     }
-  };
-  return o;
-};
+  }
+  return o
+}
 exports.eachChildOf = function (e, t, n) {
-  var r;
-  var i;
-  var o;
-  var a;
+  var r
+  var i
+  var o
+  var a
   for (r = i = e && e.descendFirst(), o = a = t && t.descendFirst(); r || o;) {
-    var s = r ? e.getKey() : null;
-    var c = o ? t.getKey() : null;
+    var s = r ? e.getKey() : null
+    var c = o ? t.getKey() : null
     if (null !== s && null !== c) {
       if (p(c, s)) {
-        c = null;
+        c = null
       } else {
         if (s !== c) {
-          s = null;
+          s = null
         }
       }
     }
-    n(null == s ? c : s, null != s ? e : null, null != c ? t : null);
+    n(null == s ? c : s, null != s ? e : null, null != c ? t : null)
     if (null != s && r) {
-      r = e.nextSibling();
+      r = e.nextSibling()
     }
     if (null != c && o) {
-      o = t.nextSibling();
+      o = t.nextSibling()
     }
   }
   if (i) {
-    e.ascend();
+    e.ascend()
   }
   if (a) {
-    t.ascend();
+    t.ascend()
   }
-};
+}

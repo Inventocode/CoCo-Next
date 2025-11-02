@@ -11,4 +11,4 @@ module.exports = {
   groupIcon: "style_groupIcon__v261K",
   content: "style_content__XT_DR",
   footer: "style_footer__ApzFD"
-};
+}

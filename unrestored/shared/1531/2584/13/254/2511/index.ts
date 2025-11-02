@@ -4,95 +4,95 @@
  * 模块 ID：2511
  */
 
-"use strict";
+"use strict"
 
 Object.defineProperty(exports, "__esModule", {
   value: true
-});
-exports.Hue = undefined;
+})
+exports.Hue = undefined
 var r = function () {
   function e(e, t) {
     for (var n = 0; n < t.length; n++) {
-      var r = t[n];
-      r.enumerable = r.enumerable || false;
-      r.configurable = true;
+      var r = t[n]
+      r.enumerable = r.enumerable || false
+      r.configurable = true
       if ("value" in r) {
-        r.writable = true;
+        r.writable = true
       }
-      Object.defineProperty(e, r.key, r);
+      Object.defineProperty(e, r.key, r)
     }
   }
   return function (t, n, r) {
     if (n) {
-      e(t.prototype, n);
+      e(t.prototype, n)
     }
     if (r) {
-      e(t, r);
+      e(t, r)
     }
-    return t;
-  };
-}();
-var i = require("react");
-var o = c(i);
-var a = c(require("../../785/104/index"));
+    return t
+  }
+}()
+var i = require("react")
+var o = c(i)
+var a = c(require("../../785/104/index"))
 var s = function (e) {
   if (e && e.__esModule) {
-    return e;
+    return e
   }
-  var t = {};
+  var t = {}
   if (null != e) {
     for (var n in e) if (Object.prototype.hasOwnProperty.call(e, n)) {
-      t[n] = e[n];
+      t[n] = e[n]
     }
   }
-  t.default = e;
-  return t;
-}(require("./2512"));
+  t.default = e
+  return t
+}(require("./2512"))
 function c(e) {
   return e && e.__esModule ? e : {
     default: e
-  };
+  }
 }
 function u(e, t) {
   if (!(e instanceof t)) {
-    throw new TypeError("Cannot call a class as a function");
+    throw new TypeError("Cannot call a class as a function")
   }
 }
 function l(e, t) {
   if (!e) {
-    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+    throw new ReferenceError("this hasn't been initialised - super() hasn't been called")
   }
-  return !t || "object" !== typeof t && "function" !== typeof t ? e : t;
+  return !t || "object" !== typeof t && "function" !== typeof t ? e : t
 }
 var f = exports.Hue = function (e) {
   function t() {
-    var e;
-    var n;
-    var r;
-    u(this, t);
-    for (var i = arguments.length, o = Array(i), a = 0; a < i; a++) {
-      o[a] = arguments[a];
+    var e
+    var n
+    var r
+    u(this, t)
+    for (var arguments$length = arguments.length, o = Array(arguments$length), a = 0; a < arguments$length; a++) {
+      o[a] = arguments[a]
     }
-    n = r = l(this, (e = t.__proto__ || Object.getPrototypeOf(t)).call.apply(e, [this].concat(o)));
+    n = r = l(this, (e = t.__proto__ || Object.getPrototypeOf(t)).call.apply(e, [this].concat(o)))
     r.handleChange = function (e) {
-      var t = s.calculateChange(e, r.props.direction, r.props.hsl, r.container);
+      var t = s.calculateChange(e, r.props.direction, r.props.hsl, r.container)
       if (t && "function" === typeof r.props.onChange) {
-        r.props.onChange(t, e);
+        r.props.onChange(t, e)
       }
-    };
+    }
     r.handleMouseDown = function (e) {
-      r.handleChange(e);
-      window.addEventListener("mousemove", r.handleChange);
-      window.addEventListener("mouseup", r.handleMouseUp);
-    };
+      r.handleChange(e)
+      window.addEventListener("mousemove", r.handleChange)
+      window.addEventListener("mouseup", r.handleMouseUp)
+    }
     r.handleMouseUp = function () {
-      r.unbindEventListeners();
-    };
-    return l(r, n);
+      r.unbindEventListeners()
+    }
+    return l(r, n)
   }
   (function (e, t) {
     if ("function" !== typeof t && null !== t) {
-      throw new TypeError("Super expression must either be null or a function, not " + typeof t);
+      throw new TypeError("Super expression must either be null or a function, not " + typeof t)
     }
     e.prototype = Object.create(t && t.prototype, {
       constructor: {
@@ -101,32 +101,32 @@ var f = exports.Hue = function (e) {
         writable: true,
         configurable: true
       }
-    });
+    })
     if (t) {
       if (Object.setPrototypeOf) {
-        Object.setPrototypeOf(e, t);
+        Object.setPrototypeOf(e, t)
       } else {
-        e.__proto__ = t;
+        e.__proto__ = t
       }
     }
-  })(t, e);
+  })(t, e)
   r(t, [{
     key: "componentWillUnmount",
     value: function () {
-      this.unbindEventListeners();
+      this.unbindEventListeners()
     }
   }, {
     key: "unbindEventListeners",
     value: function () {
-      window.removeEventListener("mousemove", this.handleChange);
-      window.removeEventListener("mouseup", this.handleMouseUp);
+      window.removeEventListener("mousemove", this.handleChange)
+      window.removeEventListener("mouseup", this.handleMouseUp)
     }
   }, {
     key: "render",
     value: function () {
-      var e = this;
-      var t = this.props.direction;
-      var n = undefined === t ? "horizontal" : t;
+      var e = this
+      var this$props$direction = this.props.direction
+      var n = undefined === this$props$direction ? "horizontal" : this$props$direction
       var r = (0, a.default)({
         default: {
           hue: {
@@ -162,14 +162,14 @@ var f = exports.Hue = function (e) {
         }
       }, {
         vertical: "vertical" === n
-      });
+      })
       return o.default.createElement("div", {
         style: r.hue
       }, o.default.createElement("div", {
         className: "hue-" + n,
         style: r.container,
         ref: function (t) {
-          return e.container = t;
+          return e.container = t
         },
         onMouseDown: this.handleMouseDown,
         onTouchMove: this.handleChange,
@@ -178,9 +178,9 @@ var f = exports.Hue = function (e) {
         style: r.pointer
       }, this.props.pointer ? o.default.createElement(this.props.pointer, this.props) : o.default.createElement("div", {
         style: r.slider
-      }))));
+      }))))
     }
-  }]);
-  return t;
-}(i.PureComponent || i.Component);
-exports.default = f;
+  }])
+  return t
+}(i.PureComponent || i.Component)
+exports.default = f

@@ -4,4 +4,4 @@
  * 模块 ID：613
  */
 
-module.exports = "https://creation.codemao.cn/coconut/web/1.22.0-0/" + "static/media/ic_light_on.3ae5972e.svg";
+module.exports = "https://creation.codemao.cn/coconut/web/1.22.0-0/" + "static/media/ic_light_on.3ae5972e.svg"

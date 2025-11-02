@@ -9,4 +9,4 @@ require("../1623/86")({
   stat: true
 }, {
   ownKeys: require("./1059")
-});
+})

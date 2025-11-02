@@ -4,9 +4,9 @@
  * 模块 ID：363
  */
 
-"use strict";
+"use strict"
 
-var r = require("./1164");
+var r = require("./1164")
 exports.a = function (e, t, n) {
-  r.a(e, "[antd: ".concat(t, "] ").concat(n));
-};
+  r.a(e, "[antd: ".concat(t, "] ").concat(n))
+}

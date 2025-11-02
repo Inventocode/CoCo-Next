@@ -4,10 +4,10 @@
  * 模块 ID：Rywz
  */
 
-"use strict";
+"use strict"
 
 /* harmony export (binding) */
-export { tw };
+export { tw }
 var tw = {
   "sign_in_dialog/error/password_confirm/not_same": "兩次輸入的密碼不一致，請重新輸入",
   "sign_in_dialog/error/phone/unregisterd": "手機號未註冊，",
@@ -53,6 +53,6 @@ var tw = {
   "sign_in_dialog/forget_password/entry": "忘記密碼？",
   "sign_in_dialog/already_has_account": "已經有賬號了？去登錄！",
   "sign_in_dialog/register/confirm": "確定"
-};
+}
 
 /***/

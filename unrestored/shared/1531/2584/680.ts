@@ -4,10 +4,10 @@
  * 模块 ID：680
  */
 
-"use strict";
+"use strict"
 
-export { r as messages };
-export { b as types } from "./539";
+export { r as messages }
+export { b as types } from "./539"
 var r = {
   "zh-CN": {
     widgetName: "计步器",
@@ -19,5 +19,5 @@ var r = {
     onPedometerNotAvailable: "检测不可用",
     onPedometerPermissionFail: "请求权限失败"
   }
-};
+}
 import o = require("./539");

@@ -4,4 +4,4 @@
  * 模块 ID：1165
  */
 
-module.exports = "https://creation.codemao.cn/coconut/web/1.22.0-0/" + "static/media/networkError.3103f5bb.png";
+module.exports = "https://creation.codemao.cn/coconut/web/1.22.0-0/" + "static/media/networkError.3103f5bb.png"

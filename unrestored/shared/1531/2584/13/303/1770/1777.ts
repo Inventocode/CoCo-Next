@@ -4,6 +4,6 @@
  * 模块 ID：1777
  */
 
-"use strict";
+"use strict"
 
-module.exports = 0;
+module.exports = 0

@@ -4,8 +4,8 @@
  * 模块 ID：2469
  */
 
-var r = require("./1407");
+var r = require("./1407")
 module.exports = function (e, t, n) {
-  var i = null == e ? undefined : r(e, t);
-  return undefined === i ? n : i;
-};
+  var i = null == e ? undefined : r(e, t)
+  return undefined === i ? n : i
+}

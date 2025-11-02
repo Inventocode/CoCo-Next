@@ -51,4 +51,4 @@ module.exports = {
   selectedIcon: "style_selectedIcon__32r_r",
   disabled: "style_disabled__1e_PY",
   selected: "style_selected__2viO2"
-};
+}

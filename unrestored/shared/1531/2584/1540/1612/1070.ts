@@ -4,8 +4,8 @@
  * 模块 ID：1070
  */
 
-var r = require("../1738/231");
-var o = Math.floor;
+var r = require("../1738/231")
+var math$floor = Math.floor
 module.exports = function (e) {
-  return !r(e) && isFinite(e) && o(e) === e;
-};
+  return !r(e) && isFinite(e) && math$floor(e) === e
+}

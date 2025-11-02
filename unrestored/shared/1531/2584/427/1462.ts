@@ -5,34 +5,34 @@
  */
 
 (function (t) {
-  var n = !!(t === t.window && t.URL && t.Blob && t.Worker);
+  var n = !!(t === t.window && t.URL && t.Blob && t.Worker)
   function r(e, r) {
-    var i;
-    var o = this;
-    r = r || {};
+    var i
+    var o = this
+    r = r || {}
     if (n) {
-      i = e.toString().trim().match(/^function\s*\w*\s*\([\w\s,]*\)\s*{([\w\W]*?)}$/)[1];
+      i = e.toString().trim().match(/^function\s*\w*\s*\([\w\s,]*\)\s*{([\w\W]*?)}$/)[1]
       return new t.Worker(t.URL.createObjectURL(new t.Blob([i], {
         type: "text/javascript"
-      })));
+      })))
     }
-    this.self = r;
+    this.self = r
     this.self.postMessage = function (e) {
       setTimeout(function () {
         o.onmessage({
           data: e
-        });
-      }, 0);
-    };
-    setTimeout(e.bind(r, r), 0);
+        })
+      }, 0)
+    }
+    setTimeout(e.bind(r, r), 0)
   }
   r.prototype.postMessage = function (e) {
-    var t = this;
+    var t = this
     setTimeout(function () {
       t.self.onmessage({
         data: e
-      });
-    }, 0);
-  };
-  module.exports = r;
-}).call(this, require("../710/251"));
+      })
+    }, 0)
+  }
+  module.exports = r
+}).call(this, require("../710/251"))

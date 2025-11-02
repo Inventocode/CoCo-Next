@@ -13,4 +13,4 @@ module.exports = {
   imgBox: "ImportFailToast_imgBox__sTGUb",
   errorMessage: "ImportFailToast_errorMessage__132t0",
   confirmButton: "ImportFailToast_confirmButton__3PFV7"
-};
+}

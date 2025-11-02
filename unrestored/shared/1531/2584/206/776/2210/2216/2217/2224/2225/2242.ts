@@ -4,78 +4,78 @@
  * 模块 ID：2242
  */
 
-"use strict";
+"use strict"
 
 module.exports = function (e, t, n) {
-  var r = " ";
-  var i = e.level;
-  var o = e.dataLevel;
-  var a = e.schema[t];
-  var s = e.schemaPath + e.util.getProperty(t);
-  var c = e.errSchemaPath + "/" + t;
-  var u = !e.opts.allErrors;
-  var l = "data" + (o || "");
-  var f = "errs__" + i;
-  var d = e.util.copy(e);
-  d.level++;
-  var h = "valid" + d.level;
-  r += "var " + f + " = errors;";
+  var r = " "
+  var e$level = e.level
+  var e$dataLevel = e.dataLevel
+  var a = e.schema[t]
+  var s = e.schemaPath + e.util.getProperty(t)
+  var c = e.errSchemaPath + "/" + t
+  var u = !e.opts.allErrors
+  var l = "data" + (e$dataLevel || "")
+  var f = "errs__" + e$level
+  var d = e.util.copy(e)
+  d.level++
+  var h = "valid" + d.level
+  r += "var " + f + " = errors;"
   if (e.opts.strictKeywords ? "object" == typeof a && Object.keys(a).length > 0 || false === a : e.util.schemaHasRules(a, e.RULES.all)) {
-    d.schema = a;
-    d.schemaPath = s;
-    d.errSchemaPath = c;
-    var p = "key" + i;
-    var _ = "idx" + i;
-    var A = "i" + i;
-    var g = "' + " + p + " + '";
-    var v = "data" + (d.dataLevel = e.dataLevel + 1);
-    var m = "dataProperties" + i;
-    var y = e.opts.ownProperties;
-    var b = e.baseId;
-    if (y) {
-      r += " var " + m + " = undefined; ";
+    d.schema = a
+    d.schemaPath = s
+    d.errSchemaPath = c
+    var p = "key" + e$level
+    var _ = "idx" + e$level
+    var A = "i" + e$level
+    var g = "' + " + p + " + '"
+    var v = "data" + (d.dataLevel = e.dataLevel + 1)
+    var m = "dataProperties" + e$level
+    var e$opts$ownProperties = e.opts.ownProperties
+    var e$baseId = e.baseId
+    if (e$opts$ownProperties) {
+      r += " var " + m + " = undefined; "
     }
-    r += y ? " " + m + " = " + m + " || Object.keys(" + l + "); for (var " + _ + "=0; " + _ + "<" + m + ".length; " + _ + "++) { var " + p + " = " + m + "[" + _ + "]; " : " for (var " + p + " in " + l + ") { ";
-    r += " var startErrs" + i + " = errors; ";
-    var w = p;
-    var E = e.compositeRule;
-    e.compositeRule = d.compositeRule = true;
-    var x = e.validate(d);
-    d.baseId = b;
+    r += e$opts$ownProperties ? " " + m + " = " + m + " || Object.keys(" + l + "); for (var " + _ + "=0; " + _ + "<" + m + ".length; " + _ + "++) { var " + p + " = " + m + "[" + _ + "]; " : " for (var " + p + " in " + l + ") { "
+    r += " var startErrs" + e$level + " = errors; "
+    var w = p
+    var e$compositeRule = e.compositeRule
+    e.compositeRule = d.compositeRule = true
+    var x = e.validate(d)
+    d.baseId = e$baseId
     if (e.util.varOccurences(x, v) < 2) {
-      r += " " + e.util.varReplace(x, v, w) + " ";
+      r += " " + e.util.varReplace(x, v, w) + " "
     } else {
-      r += " var " + v + " = " + w + "; " + x + " ";
+      r += " var " + v + " = " + w + "; " + x + " "
     }
-    e.compositeRule = d.compositeRule = E;
-    r += " if (!" + h + ") { for (var " + A + "=startErrs" + i + "; " + A + "<errors; " + A + "++) { vErrors[" + A + "].propertyName = " + p + "; }   var err =   ";
+    e.compositeRule = d.compositeRule = e$compositeRule
+    r += " if (!" + h + ") { for (var " + A + "=startErrs" + e$level + "; " + A + "<errors; " + A + "++) { vErrors[" + A + "].propertyName = " + p + "; }   var err =   "
     if (false !== e.createErrors) {
-      r += " { keyword: 'propertyNames' , dataPath: (dataPath || '') + " + e.errorPath + " , schemaPath: " + e.util.toQuotedString(c) + " , params: { propertyName: '" + g + "' } ";
+      r += " { keyword: 'propertyNames' , dataPath: (dataPath || '') + " + e.errorPath + " , schemaPath: " + e.util.toQuotedString(c) + " , params: { propertyName: '" + g + "' } "
       if (false !== e.opts.messages) {
-        r += " , message: 'property name \\'" + g + "\\' is invalid' ";
+        r += " , message: 'property name \\'" + g + "\\' is invalid' "
       }
       if (e.opts.verbose) {
-        r += " , schema: validate.schema" + s + " , parentSchema: validate.schema" + e.schemaPath + " , data: " + l + " ";
+        r += " , schema: validate.schema" + s + " , parentSchema: validate.schema" + e.schemaPath + " , data: " + l + " "
       }
-      r += " } ";
+      r += " } "
     } else {
-      r += " {} ";
+      r += " {} "
     }
-    r += ";  if (vErrors === null) vErrors = [err]; else vErrors.push(err); errors++; ";
+    r += ";  if (vErrors === null) vErrors = [err]; else vErrors.push(err); errors++; "
     if (!e.compositeRule && u) {
       if (e.async) {
-        r += " throw new ValidationError(vErrors); ";
+        r += " throw new ValidationError(vErrors); "
       } else {
-        r += " validate.errors = vErrors; return false; ";
+        r += " validate.errors = vErrors; return false; "
       }
     }
     if (u) {
-      r += " break; ";
+      r += " break; "
     }
-    r += " } }";
+    r += " } }"
   }
   if (u) {
-    r += "  if (" + f + " == errors) {";
+    r += "  if (" + f + " == errors) {"
   }
-  return r;
-};
+  return r
+}

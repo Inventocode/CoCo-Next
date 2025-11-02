@@ -5,10 +5,10 @@
  */
 
 module.exports = function (e, t) {
-  var n = -1;
-  var r = e.length;
-  for (t || (t = Array(r)); ++n < r;) {
-    t[n] = e[n];
+  var n = -1
+  var e$length = e.length
+  for (t || (t = Array(e$length)); ++n < e$length;) {
+    t[n] = e[n]
   }
-  return t;
-};
+  return t
+}

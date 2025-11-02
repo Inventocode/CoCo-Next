@@ -4,10 +4,10 @@
  * 模块 ID：55
  */
 
-"use strict";
+"use strict"
 
-export { u as a };
-export { d as b };
+export { u as a }
+export { d as b }
 import r = require("./6");
 import o = require("./27");
 import i = require("./40");
@@ -15,10 +15,10 @@ import a = require("./68");
 import s = require("./28/index");
 import c = require("./21/index");
 import l = require("./91");
-var u = "EXTENSION_WIDGET_MESSAGE_TYPE";
+var u = "EXTENSION_WIDGET_MESSAGE_TYPE"
 var d = new (function () {
   function e() {
-    o.a(this, e);
+    o.a(this, e)
   }
   i.a(e, [{
     key: "_pushMessage",
@@ -28,12 +28,12 @@ var d = new (function () {
         data: r.a({
           msgType: "WIDGET_MESSAGE_TYPE"
         }, e)
-      });
+      })
     }
   }, {
     key: "_pushWidgetMessage",
     value: function (e) {
-      var t = c.currentContext();
+      var t = c.currentContext()
       l.a({
         type: a.b.RUNTIME_LOG,
         data: r.a(r.a({}, e), {}, {
@@ -41,7 +41,7 @@ var d = new (function () {
           screenId: "log" === e.type ? "" : (null === t || undefined === t ? undefined : t.screenId) || "",
           blockId: "log" === e.type ? "" : (null === t || undefined === t ? undefined : t.blockId) || ""
         })
-      });
+      })
     }
   }, {
     key: "push",
@@ -49,7 +49,7 @@ var d = new (function () {
       l.a({
         type: a.b.RUNTIME_LOG,
         data: e
-      });
+      })
     }
   }, {
     key: "print",
@@ -60,7 +60,7 @@ var d = new (function () {
         screenId: e,
         message: n,
         values: r
-      });
+      })
     }
   }, {
     key: "log",
@@ -71,7 +71,7 @@ var d = new (function () {
         screenId: "",
         message: s.o(e),
         values: t
-      });
+      })
     }
   }, {
     key: "customError",
@@ -82,7 +82,7 @@ var d = new (function () {
         screenId: e,
         message: n,
         values: r
-      });
+      })
     }
   }, {
     key: "custom",
@@ -93,7 +93,7 @@ var d = new (function () {
         screenId: t,
         message: r,
         values: o
-      });
+      })
     }
   }, {
     key: "playerWidgetLog",
@@ -106,30 +106,30 @@ var d = new (function () {
         screenId: "",
         message: s.o(e.message),
         values: e.values
-      });
+      })
     }
   }, {
     key: "widgetLog",
     value: function (e) {
       this._pushWidgetMessage(r.a(r.a({}, e), {}, {
         type: "log"
-      }));
+      }))
     }
   }, {
     key: "widgetWarn",
     value: function (e) {
       this._pushWidgetMessage(r.a(r.a({}, e), {}, {
         type: "warning"
-      }));
+      }))
     }
   }, {
     key: "widgetError",
     value: function (e) {
       this._pushWidgetMessage(r.a(r.a({}, e), {}, {
         type: "error"
-      }));
+      }))
     }
-  }]);
-  return e;
-}())();
-export default u;
+  }])
+  return e
+}())()
+export default u

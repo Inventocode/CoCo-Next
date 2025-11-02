@@ -4,39 +4,39 @@
  * 模块 ID：140
  */
 
-"use strict";
+"use strict"
 
-export { o as a };
+export { o as a }
 import r = require("./273");
 import i = require("./322");
 function o(e) {
   var t = function () {
     if ("undefined" === typeof Reflect || !Reflect.construct) {
-      return false;
+      return false
     }
     if (Reflect.construct.sham) {
-      return false;
+      return false
     }
     if ("function" === typeof Proxy) {
-      return true;
+      return true
     }
     try {
-      Date.prototype.toString.call(Reflect.construct(Date, [], function () {}));
-      return true;
+      Date.prototype.toString.call(Reflect.construct(Date, [], function () {}))
+      return true
     } catch (e) {
-      return false;
+      return false
     }
-  }();
+  }()
   return function () {
-    var n;
-    var o = r.a(e);
+    var n
+    var o = r.a(e)
     if (t) {
-      var a = r.a(this).constructor;
-      n = Reflect.construct(o, arguments, a);
+      var r$aThis$constructor = r.a(this).constructor
+      n = Reflect.construct(o, arguments, r$aThis$constructor)
     } else {
-      n = o.apply(this, arguments);
+      n = o.apply(this, arguments)
     }
-    return i.a(this, n);
-  };
+    return i.a(this, n)
+  }
 }
-export default o;
+export default o

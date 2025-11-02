@@ -4,48 +4,48 @@
  * 模块 ID：545
  */
 
-"use strict";
+"use strict"
 
 import r = require("../11");
-import o = require("react");
+import React = require("react");
 var i = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
-    return module.default;
+    return module.default
   } : function () {
-    return module;
-  };
+    return module
+  }
   Object.defineProperty(defaultExport, "a", {
     enumerable: true,
     get: defaultExport
-  });
-  return defaultExport;
-}(o);
-import a = require("color");
+  })
+  return defaultExport
+}(React)
+import Color = require("color");
 var s = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
-    return module.default;
+    return module.default
   } : function () {
-    return module;
-  };
+    return module
+  }
   Object.defineProperty(defaultExport, "a", {
     enumerable: true,
     get: defaultExport
-  });
-  return defaultExport;
-}(a);
+  })
+  return defaultExport
+}(Color)
 import c = require("../8");
 var l = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
-    return module.default;
+    return module.default
   } : function () {
-    return module;
-  };
+    return module
+  }
   Object.defineProperty(defaultExport, "a", {
     enumerable: true,
     get: defaultExport
-  });
-  return defaultExport;
-}(c);
+  })
+  return defaultExport
+}(c)
 import u = require("../5");
 import d = require("../90");
 import p = require("../131");
@@ -56,41 +56,41 @@ import g = require("../162");
 import _ = require("./201");
 var v = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
-    return module.default;
+    return module.default
   } : function () {
-    return module;
-  };
+    return module
+  }
   Object.defineProperty(defaultExport, "a", {
     enumerable: true,
     get: defaultExport
-  });
-  return defaultExport;
-}(_);
-var _a;
+  })
+  return defaultExport
+}(_)
+var _a
 _a = function (e) {
-  var t = e.id;
-  var n = e.position;
-  var a = e.visible;
-  var c = e.opacity;
-  var _ = e.attributes;
-  var b = e.onSwitch;
-  var y = e.size;
-  var E = e.isEditState;
-  var O = _.mode;
-  var w = _.color;
-  var C = _.disabled;
-  var T = _.value;
-  var S = _.backgroundMode;
-  var I = _.backgroundOpenImage;
-  var A = _.backgroundCloseImage;
-  var j = _.imageResizeMode;
-  var N = i.a.useRef(null);
-  var R = i.a.useRef(null);
-  var k = i.a.useRef(false);
+  var t = e.id
+  var e$position = e.position
+  var e$visible = e.visible
+  var e$opacity = e.opacity
+  var e$attributes = e.attributes
+  var e$onSwitch = e.onSwitch
+  var e$size = e.size
+  var e$isEditState = e.isEditState
+  var e$attributes$mode = e$attributes.mode
+  var e$attributes$color = e$attributes.color
+  var e$attributes$disabled = e$attributes.disabled
+  var e$attributes$value = e$attributes.value
+  var e$attributes$backgroundMode = e$attributes.backgroundMode
+  var e$attributes$backgroundOpenImage = e$attributes.backgroundOpenImage
+  var e$attributes$backgroundCloseImage = e$attributes.backgroundCloseImage
+  var e$attributes$imageResizeMode = e$attributes.imageResizeMode
+  var N = i.a.useRef(null)
+  var R = i.a.useRef(null)
+  var k = i.a.useRef(false)
   var x = function () {
     var e = function (e, t) {
-      var n;
-      var o = s()(t).toString();
+      var n
+      var o = s()(t).toString()
       return (n = {}, r.a(n, g.c.DEFAULT, {
         turnOn: {
           backgroundColor: f.hb(o, .3),
@@ -117,36 +117,36 @@ _a = function (e) {
           backgroundColor: f.hb("#000", .1),
           handleColor: "#ffffff"
         }
-      }), n)[e];
-    }(O, w);
-    return C ? e.disabled : T ? e.turnOn : e.turnOff;
-  }();
-  var D = h.hb(I);
-  var M = f.U(I) ? I : D ? (null === D || undefined === D ? undefined : D.source) || (null === D || undefined === D ? undefined : D.cdnUrl) : p.b;
-  var L = h.hb(A);
-  var P = f.U(A) ? A : L ? (null === L || undefined === L ? undefined : L.source) || (null === L || undefined === L ? undefined : L.cdnUrl) : p.a;
+      }), n)[e]
+    }(e$attributes$mode, e$attributes$color)
+    return e$attributes$disabled ? e.disabled : e$attributes$value ? e.turnOn : e.turnOff
+  }()
+  var D = h.hb(e$attributes$backgroundOpenImage)
+  var M = f.U(e$attributes$backgroundOpenImage) ? e$attributes$backgroundOpenImage : D ? (null === D || undefined === D ? undefined : D.source) || (null === D || undefined === D ? undefined : D.cdnUrl) : p.b
+  var L = h.hb(e$attributes$backgroundCloseImage)
+  var P = f.U(e$attributes$backgroundCloseImage) ? e$attributes$backgroundCloseImage : L ? (null === L || undefined === L ? undefined : L.source) || (null === L || undefined === L ? undefined : L.cdnUrl) : p.a
   var B = i.a.createElement("div", {
     ref: R,
     style: {
-      backgroundSize: "contain" === j ? "contain" : "100% 100%",
+      backgroundSize: "contain" === e$attributes$imageResizeMode ? "contain" : "100% 100%",
       backgroundPosition: "center",
       backgroundRepeat: "no-repeat",
-      height: y.height,
-      width: y.width
+      height: e$size.height,
+      width: e$size.width
     }
-  });
-  o.useEffect(function () {
-    if (S === g.a.IMAGE && !k.current) {
-      var e = R.current;
-      if (!e) {
-        return;
+  })
+  React.useEffect(function () {
+    if (e$attributes$backgroundMode === g.a.IMAGE && !k.current) {
+      var r$current = R.current
+      if (!r$current) {
+        return
       }
-      e.style.backgroundImage = "url(".concat(T ? M : P, ")");
+      r$current.style.backgroundImage = "url(".concat(e$attributes$value ? M : P, ")")
       return function () {
-        e.style.backgroundImage = "none";
-      };
+        r$current.style.backgroundImage = "none"
+      }
     }
-  }, [M, P, S, T]);
+  }, [M, P, e$attributes$backgroundMode, e$attributes$value])
   return i.a.createElement("div", {
     id: t,
     "data-role": u.M,
@@ -155,97 +155,97 @@ _a = function (e) {
     "data-max-width": m.o,
     "data-min-height": p.i,
     "data-max-height": m.m,
-    className: l()(v.a.switchWidget, d.b, r.a({}, v.a.hide, !a)),
+    className: l()(v.a.switchWidget, d.b, r.a({}, v.a.hide, !e$visible)),
     style: {
-      top: n.y,
-      left: n.x,
-      height: y.height,
-      width: y.width,
+      top: e$position.y,
+      left: e$position.x,
+      height: e$size.height,
+      width: e$size.width,
       minWidth: "".concat(p.j, "px"),
       minHeight: "".concat(p.i, "px"),
       maxWidth: "".concat(m.o, "px"),
       maxHeight: "".concat(m.m, "px"),
-      opacity: undefined === c ? undefined : c / 100,
-      filter: C && S === g.a.IMAGE ? "saturate(0) brightness(1.1)" : undefined
+      opacity: undefined === e$opacity ? undefined : e$opacity / 100,
+      filter: e$attributes$disabled && e$attributes$backgroundMode === g.a.IMAGE ? "saturate(0) brightness(1.1)" : undefined
     },
     onClick: function (t) {
-      if (!C) {
-        if (b) {
-          b(!T);
+      if (!e$attributes$disabled) {
+        if (e$onSwitch) {
+          e$onSwitch(!e$attributes$value)
         }
-        if (S === g.a.TEMPLATE) {
-          var n;
-          if (!(null === (n = N.current) || undefined === n)) {
-            n.classList.add(v.a.leftAnimation);
+        if (e$attributes$backgroundMode === g.a.TEMPLATE) {
+          var /* [auto-meaningful-name] */_n$current
+          if (!(null === (_n$current = N.current) || undefined === _n$current)) {
+            _n$current.classList.add(v.a.leftAnimation)
           }
           setTimeout(function () {
-            var e;
-            if (!(null === (e = N.current) || undefined === e)) {
-              e.classList.remove(v.a.leftAnimation);
+            var /* [auto-meaningful-name] */n$current
+            if (!(null === (n$current = N.current) || undefined === n$current)) {
+              n$current.classList.remove(v.a.leftAnimation)
             }
-          }, 100);
+          }, 100)
         } else {
-          var r = R.current;
-          if (!h.s(e.id) && E || !r) {
-            return;
+          var r$current = R.current
+          if (!h.s(e.id) && e$isEditState || !r$current) {
+            return
           }
-          r.classList.add(v.a.imageAnimationFirstHalf);
-          k.current = true;
+          r$current.classList.add(v.a.imageAnimationFirstHalf)
+          k.current = true
           setTimeout(function () {
-            r.classList.remove(v.a.imageAnimationFirstHalf);
-            r.classList.add(v.a.imageAnimationSecondHalf);
-            r.style.backgroundImage = "url(".concat(T ? P : M, ")");
+            r$current.classList.remove(v.a.imageAnimationFirstHalf)
+            r$current.classList.add(v.a.imageAnimationSecondHalf)
+            r$current.style.backgroundImage = "url(".concat(e$attributes$value ? P : M, ")")
             setTimeout(function () {
-              r.classList.remove(v.a.imageAnimationSecondHalf);
-              k.current = false;
-            }, 100);
-          }, 100);
+              r$current.classList.remove(v.a.imageAnimationSecondHalf)
+              k.current = false
+            }, 100)
+          }, 100)
         }
       }
     }
-  }, S === g.a.IMAGE ? B : function () {
-    var e = y.width;
-    var t = y.height;
-    t = (e = Math.min(e, t * p.k)) / p.k;
+  }, e$attributes$backgroundMode === g.a.IMAGE ? B : function () {
+    var e$size$width = e$size.width
+    var e$size$height = e$size.height
+    e$size$height = (e$size$width = Math.min(e$size$width, e$size$height * p.k)) / p.k
     return i.a.createElement("div", {
       className: v.a.templateWrapper,
       style: {
-        width: e,
-        height: t
+        width: e$size$width,
+        height: e$size$height
       }
-    }, O === g.c.DEFAULT ? i.a.createElement("div", {
+    }, e$attributes$mode === g.c.DEFAULT ? i.a.createElement("div", {
       className: v.a.default,
       style: {
         backgroundColor: x.backgroundColor,
-        borderRadius: t / 2
+        borderRadius: e$size$height / 2
       }
     }, i.a.createElement("div", {
       ref: N,
       className: l()(v.a.handle),
       style: {
-        height: t,
-        width: t,
+        height: e$size$height,
+        width: e$size$height,
         backgroundColor: x.handleColor,
-        left: T ? "calc(100% - ".concat(t, "px)") : 0
+        left: e$attributes$value ? "calc(100% - ".concat(e$size$height, "px)") : 0
       }
     })) : i.a.createElement("div", {
       className: v.a.primary,
       style: {
-        borderRadius: t / 2,
+        borderRadius: e$size$height / 2,
         backgroundColor: x.backgroundColor,
-        height: t,
-        width: e
+        height: e$size$height,
+        width: e$size$width
       }
     }, i.a.createElement("div", {
       className: l()(v.a.handle),
       style: {
         backgroundColor: x.handleColor,
-        height: t,
-        width: t,
-        left: T ? "calc(100% - ".concat(t, "px)") : 0
+        height: e$size$height,
+        width: e$size$height,
+        left: e$attributes$value ? "calc(100% - ".concat(e$size$height, "px)") : 0
       }
-    })));
-  }());
-};
-export { _a as a };
-export default _a;
+    })))
+  }())
+}
+export { _a as a }
+export default _a

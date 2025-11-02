@@ -10,4 +10,4 @@ module.exports = {
   imageOnly: "Empty_imageOnly__1F1Zm",
   imageText: "Empty_imageText__2KmM3",
   text: "Empty_text__2yJWs"
-};
+}

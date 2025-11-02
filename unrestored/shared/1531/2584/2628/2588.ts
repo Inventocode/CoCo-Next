@@ -4,15 +4,15 @@
  * 模块 ID：2588
  */
 
-"use strict";
+"use strict"
 
 function r(e, t, n) {
   if (undefined === n) {
-    n = Error;
+    n = Error
   }
   if (!e) {
-    throw new n(t);
+    throw new n(t)
   }
 }
-export { r as a };
-export default r;
+export { r as a }
+export default r

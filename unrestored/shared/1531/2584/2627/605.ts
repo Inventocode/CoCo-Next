@@ -4,9 +4,9 @@
  * 模块 ID：605
  */
 
-"use strict";
+"use strict"
 
-var r = require("../19");
+var r = require("../19")
 var i = {
   locale: "en_US",
   today: "Today",
@@ -35,11 +35,11 @@ var i = {
   nextDecade: "Next decade",
   previousCentury: "Last century",
   nextCentury: "Next century"
-};
+}
 var o = {
   placeholder: "Select time",
   rangePlaceholder: ["Start time", "End time"]
-};
+}
 var a = {
   lang: r.a({
     placeholder: "Select date",
@@ -53,8 +53,8 @@ var a = {
     rangeWeekPlaceholder: ["Start week", "End week"]
   }, i),
   timePickerLocale: r.a({}, o)
-};
-var s = "${label} is not a valid ${type}";
+}
+var s = "${label} is not a valid ${type}"
 var c = {
   locale: "en",
   Pagination: {
@@ -191,5 +191,5 @@ var c = {
   Image: {
     preview: "Preview"
   }
-};
-exports.a = c;
+}
+exports.a = c

@@ -4,5 +4,5 @@
  * 模块 ID：1237
  */
 
-var r = require("../../1734/629/630");
-module.exports = /(?:ipad|iphone|ipod).*applewebkit/i.test(r);
+var r = require("../../1734/629/630")
+module.exports = /(?:ipad|iphone|ipod).*applewebkit/i.test(r)

@@ -4,16 +4,16 @@
  * 模块 ID：1562
  */
 
-"use strict";
+"use strict"
 
-var r = require("./1623/86");
-var o = require("./1733/399").findIndex;
-var i = require("./936/633");
-var a = true;
+var r = require("./1623/86")
+var require$1733399$findIndex = require("./1733/399").findIndex
+var i = require("./936/633")
+var a = true
 if ("findIndex" in []) {
   Array(1).findIndex(function () {
-    a = false;
-  });
+    a = false
+  })
 }
 r({
   target: "Array",
@@ -21,7 +21,7 @@ r({
   forced: a
 }, {
   findIndex: function (e) {
-    return o(this, e, arguments.length > 1 ? arguments[1] : undefined);
+    return require$1733399$findIndex(this, e, arguments.length > 1 ? arguments[1] : undefined)
   }
-});
-i("findIndex");
+})
+i("findIndex")

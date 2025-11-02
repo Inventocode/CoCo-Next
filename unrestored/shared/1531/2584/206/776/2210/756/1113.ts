@@ -4,7 +4,7 @@
  * 模块 ID：1113
  */
 
-"use strict";
+"use strict"
 
 module.exports = {
   meta: {
@@ -30,24 +30,24 @@ module.exports = {
     }
   },
   create: function (e) {
-    var t = e.options[0];
-    var n = t && true === t.typeof || false;
+    var t = e.options[0]
+    var n = t && true === t.typeof || false
     return {
       "Program:exit": function () {
         e.getScope().through.forEach(function (t) {
-          var r = t.identifier;
+          var t$identifier = t.identifier
           if (!(!n && function (e) {
-            var t = e.parent;
-            return "UnaryExpression" === t.type && "typeof" === t.operator;
-          }(r))) {
+            var e$parent = e.parent
+            return "UnaryExpression" === e$parent.type && "typeof" === e$parent.operator
+          }(t$identifier))) {
             e.report({
-              node: r,
+              node: t$identifier,
               messageId: "undef",
-              data: r
-            });
+              data: t$identifier
+            })
           }
-        });
+        })
       }
-    };
+    }
   }
-};
+}

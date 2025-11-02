@@ -4,15 +4,15 @@
  * 模块 ID：151
  */
 
-"use strict";
+"use strict"
 
 function r(t, e) {
   if (undefined === e) {
-    e = t.constructor;
+    e = t.constructor
   }
-  var n = Error.captureStackTrace;
-  if (n) {
-    n(t, e);
+  var error$captureStackTrace = Error.captureStackTrace
+  if (error$captureStackTrace) {
+    error$captureStackTrace(t, e)
   }
 }
 var i = function () {
@@ -20,78 +20,78 @@ var i = function () {
     return (t = Object.setPrototypeOf || {
       __proto__: []
     } instanceof Array && function (t, e) {
-      t.__proto__ = e;
+      t.__proto__ = e
     } || function (t, e) {
       for (var n in e) if (e.hasOwnProperty(n)) {
-        t[n] = e[n];
+        t[n] = e[n]
       }
-    })(e, n);
-  };
+    })(e, n)
+  }
   return function (e, n) {
     function r() {
-      this.constructor = e;
+      this.constructor = e
     }
-    t(e, n);
-    e.prototype = null === n ? Object.create(n) : (r.prototype = n.prototype, new r());
-  };
-}();
+    t(e, n)
+    e.prototype = null === n ? Object.create(n) : (r.prototype = n.prototype, new r())
+  }
+}()
 var o = function (t) {
   function e(e) {
-    var n = this.constructor;
-    var i = t.call(this, e) || this;
+    var this$constructor = this.constructor
+    var i = t.call(this, e) || this
     Object.defineProperty(i, "name", {
-      value: n.name,
+      value: this$constructor.name,
       enumerable: false,
       configurable: true
     });
     (function (t, e) {
-      var n = Object.setPrototypeOf;
-      if (n) {
-        n(t, e);
+      var object$setPrototypeOf = Object.setPrototypeOf
+      if (object$setPrototypeOf) {
+        object$setPrototypeOf(t, e)
       } else {
-        t.__proto__ = e;
+        t.__proto__ = e
       }
-    })(i, n.prototype);
-    r(i);
-    return i;
+    })(i, this$constructor.prototype)
+    r(i)
+    return i
   }
-  i(e, t);
-  return e;
-}(Error);
+  i(e, t)
+  return e
+}(Error)
 var a = function () {
   var t = function (e, n) {
     return (t = Object.setPrototypeOf || {
       __proto__: []
     } instanceof Array && function (t, e) {
-      t.__proto__ = e;
+      t.__proto__ = e
     } || function (t, e) {
       for (var n in e) if (e.hasOwnProperty(n)) {
-        t[n] = e[n];
+        t[n] = e[n]
       }
-    })(e, n);
-  };
+    })(e, n)
+  }
   return function (e, n) {
     function r() {
-      this.constructor = e;
+      this.constructor = e
     }
-    t(e, n);
-    e.prototype = null === n ? Object.create(n) : (r.prototype = n.prototype, new r());
-  };
-}();
+    t(e, n)
+    e.prototype = null === n ? Object.create(n) : (r.prototype = n.prototype, new r())
+  }
+}()
 var s = function (t) {
   function e(e) {
     if (undefined === e) {
-      e = undefined;
+      e = undefined
     }
-    var n = t.call(this, e) || this;
-    n.message = e;
-    return n;
+    var n = t.call(this, e) || this
+    n.message = e
+    return n
   }
-  a(e, t);
+  a(e, t)
   e.prototype.getKind = function () {
-    return this.constructor.kind;
-  };
-  e.kind = "Exception";
-  return e;
-}(o);
-exports.a = s;
+    return this.constructor.kind
+  }
+  e.kind = "Exception"
+  return e
+}(o)
+exports.a = s

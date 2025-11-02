@@ -29,4 +29,4 @@ module.exports = {
   canvasFlashAnimation: "PreviewArea_canvasFlashAnimation__3hYe-",
   guideLine: "PreviewArea_guideLine__1OIpg",
   stageReadOnlyMask: "PreviewArea_stageReadOnlyMask__SYAlA"
-};
+}

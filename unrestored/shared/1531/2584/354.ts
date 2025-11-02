@@ -20,4 +20,4 @@ module.exports = {
   footerBtn: "PackageQrCode_footerBtn__1zUNB",
   qrBtn: "PackageQrCode_qrBtn__DlhKh",
   iframeDownloader: "PackageQrCode_iframeDownloader__17lcv"
-};
+}

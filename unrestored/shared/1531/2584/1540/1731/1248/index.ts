@@ -4,11 +4,11 @@
  * 模块 ID：1248
  */
 
-var r = require("./1702");
+var r = require("./1702")
 module.exports = function (e, t) {
-  var n = r(e);
+  var n = r(e)
   if (n % t) {
-    throw RangeError("Wrong offset");
+    throw RangeError("Wrong offset")
   }
-  return n;
-};
+  return n
+}

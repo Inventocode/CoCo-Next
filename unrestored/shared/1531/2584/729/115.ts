@@ -24,4 +24,4 @@ module.exports = {
   receiveSmsBtn: "DialCall_receiveSmsBtn__2hP6Y",
   disabled: "DialCall_disabled__2tgXm",
   textAreaWarning: "DialCall_textAreaWarning__2taUh"
-};
+}

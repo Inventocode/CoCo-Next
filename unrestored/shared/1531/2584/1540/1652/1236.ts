@@ -4,5 +4,5 @@
  * 模块 ID：1236
  */
 
-var r = require("../1736/194");
-module.exports = r.Promise;
+var r = require("../1736/194")
+module.exports = r.Promise

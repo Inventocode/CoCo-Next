@@ -49,6 +49,6 @@ module.exports = {
   "clearRecoverBtn": "clearRecoverBtn_2b4DY",
   "recoverNoData": "recoverNoData_b2fEi",
   "recoverList": "recoverList_1o8Oq"
-};
+}
 
 /***/

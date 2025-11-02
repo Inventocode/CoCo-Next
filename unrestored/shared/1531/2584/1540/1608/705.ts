@@ -4,7 +4,7 @@
  * 模块 ID：705
  */
 
-var n = {}.toString;
+var $toString = {}.toString
 module.exports = function (e) {
-  return n.call(e).slice(8, -1);
-};
+  return $toString.call(e).slice(8, -1)
+}

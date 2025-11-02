@@ -4,18 +4,18 @@
  * 模块 ID：1164
  */
 
-"use strict";
+"use strict"
 
-var r = {};
+var r = {}
 function i(e, t) {
-  0;
+  0
 }
 function o(e, t, n) {
   if (!(t || r[n])) {
-    e(false, n);
-    r[n] = true;
+    e(false, n)
+    r[n] = true
   }
 }
 exports.a = function (e, t) {
-  o(i, e, t);
-};
+  o(i, e, t)
+}

@@ -17,4 +17,4 @@ module.exports = {
   action: "WatchItem_action__3HODB",
   foldAction: "WatchItem_foldAction__pdWxW",
   unFoldAction: "WatchItem_unFoldAction__3yVkr"
-};
+}

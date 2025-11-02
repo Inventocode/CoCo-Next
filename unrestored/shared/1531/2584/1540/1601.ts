@@ -9,4 +9,4 @@ require("./1623/86")({
   stat: true
 }, {
   log1p: require("./1589/1230")
-});
+})

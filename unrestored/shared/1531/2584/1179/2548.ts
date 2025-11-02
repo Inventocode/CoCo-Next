@@ -4,14 +4,14 @@
  * 模块 ID：2548
  */
 
-"use strict";
+"use strict"
 
 Object.defineProperty(exports, "__esModule", {
   value: true
-});
-exports.init_events_blocks = undefined;
-var r = require("./2555/579");
-var o = require("./2553/1425");
+})
+exports.init_events_blocks = undefined
+var r = require("./2555/579")
+var o = require("./2553/1425")
 exports.init_events_blocks = function (e) {
   var t = [{
     type: "start_on_click",
@@ -101,8 +101,8 @@ exports.init_events_blocks = function (e) {
     inputsInline: true,
     previousStatement: true,
     colour: (0, r.i18n)("BLUE_3")
-  }];
-  e.define_blocks_with_json_array(t);
+  }]
+  e.define_blocks_with_json_array(t)
   Object.assign(e.blocks_xml, {
     start_on_click: "<block type=\"start_on_click\"/>",
     start_on_click_2: "<block type=\"start_on_click_2\"/>",
@@ -112,5 +112,5 @@ exports.init_events_blocks = function (e) {
     self_broadcast_and_wait: "<block type=\"self_broadcast_and_wait\">\n      " + (0, r.text_value)("message", "Hi") + "\n    </block>",
     when: "<block type=\"when\">\n      " + (0, r.logic_value)("condition") + "\n    </block>",
     terminate: "<block type=\"terminate\"/>"
-  });
-};
+  })
+}

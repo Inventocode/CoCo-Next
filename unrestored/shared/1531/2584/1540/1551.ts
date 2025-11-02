@@ -4,4 +4,4 @@
  * 模块 ID：1551
  */
 
-require("./1541/438/index")("search");
+require("./1541/438/index")("search")

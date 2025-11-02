@@ -1,25 +1,25 @@
-"use strict";
+"use strict"
 
-export { zh_CN as b };
-export { p as e };
-export { f as a };
-export { format as c };
-export { g as f };
-export { _ as d };
+export { zh_CN as b }
+export { p as e }
+export { f as a }
+export { format as c }
+export { g as f }
+export { _ as d }
 import r = require("../../../unrestored/shared/1531/2584/6");
-import o = require("react");
+import React = require("react");
 var i = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
-    return module.default;
+    return module.default
   } : function () {
-    return module;
-  };
+    return module
+  }
   Object.defineProperty(defaultExport, "a", {
     enumerable: true,
     get: defaultExport
-  });
-  return defaultExport;
-}(o);
+  })
+  return defaultExport
+}(React)
 import a = require("../../../unrestored/shared/1531/2584/2628/index");
 import s = require("../../../unrestored/shared/1531/2584/10/index");
 var c = {
@@ -105,17 +105,17 @@ var c = {
   screenTitleNotExist: "切换的屏幕名称不存在",
   screenTypeNotNumberAndString: "嵌入积木的返回值不是数值/字符串类型",
   cloudTableDataSourceNotExist: "未绑定数据源"
-};
+}
 var l = function () {
-  var e = {};
+  var e = {}
   Object.entries(c).forEach(function (t) {
-    var n = s.a(t, 2);
-    var r = n[0];
-    var o = n[1];
-    return e["player/" + r] = o;
-  });
-  return e;
-}();
+    var n = s.a(t, 2)
+    var r = n[0]
+    var o = n[1]
+    return e["player/" + r] = o
+  })
+  return e
+}()
 var u = r.a(r.a({}, {
   run: "运行",
   save: "保存",
@@ -1009,9 +1009,9 @@ var u = r.a(r.a({}, {
   "material.materialNotFound": "没有找到相关素材，换个姿势再搜索一次吧～",
   "RichTextEditor.inputPlaceholder": "请输入内容",
   "RichTextEditor.editDialogTitle": "富文本编辑"
-}), l);
+}), l)
 
-export type Language = "zh-CN"
+export type Language = "zh-CN";
 
 export const zh_CN = "zh-CN"
 
@@ -1021,13 +1021,13 @@ var p: Record<Language, unknown> = {
 
 function f(e) {
   for (var t in e) if (p[t]) {
-    Object.assign(p[t], e[t]);
+    Object.assign(p[t], e[t])
   }
 }
 var h = a.a({
   locale: zh_CN,
   messages: p[zh_CN]
-});
+})
 
 export function format(language: Language, key: string, args?: Record<string, string>): string {
   let result: string = p[language]?.[key] || p[zh_CN]?.[key]
@@ -1041,32 +1041,32 @@ export function format(language: Language, key: string, args?: Record<string, st
 }
 
 function g(e, t, n) {
-  var r = /^%{COCO_([\w/]+)}$/.exec(t);
-  return r && r[1] ? format(e, r[1], n) : t;
+  var r = /^%{COCO_([\w/]+)}$/.exec(t)
+  return r && r[1] ? format(e, r[1], n) : t
 }
 function _(e, t) {
-  t = t || {};
+  t = t || {}
   return h.formatMessage({
     id: e
   }, r.a(r.a({}, t), {}, {
     p: function () {
-      for (var e = arguments.length, t = new Array(e), n = 0; n < e; n++) {
-        t[n] = arguments[n];
+      for (var arguments$length = arguments.length, t = new Array(arguments$length), n = 0; n < arguments$length; n++) {
+        t[n] = arguments[n]
       }
-      return i.a.createElement("p", null, t);
+      return i.a.createElement("p", null, t)
     },
     span: function () {
-      for (var e = arguments.length, t = new Array(e), n = 0; n < e; n++) {
-        t[n] = arguments[n];
+      for (var arguments$length = arguments.length, t = new Array(arguments$length), n = 0; n < arguments$length; n++) {
+        t[n] = arguments[n]
       }
-      return i.a.createElement("span", null, t);
+      return i.a.createElement("span", null, t)
     },
     b: function () {
-      for (var e = arguments.length, t = new Array(e), n = 0; n < e; n++) {
-        t[n] = arguments[n];
+      for (var arguments$length = arguments.length, t = new Array(arguments$length), n = 0; n < arguments$length; n++) {
+        t[n] = arguments[n]
       }
-      return i.a.createElement("b", null, t);
+      return i.a.createElement("b", null, t)
     }
-  }));
+  }))
 }
-export default f;
+export default f

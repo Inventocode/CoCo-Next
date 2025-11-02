@@ -4,19 +4,19 @@
  * 模块 ID：80
  */
 
-"use strict";
+"use strict"
 
-export { a };
+export { a }
 import r = require("./907");
 import i = require("./995");
 import o = require("../33/771");
 function a(e) {
   return function (e) {
     if (Array.isArray(e)) {
-      return r.a(e);
+      return r.a(e)
     }
   }(e) || i.a(e) || o.a(e) || function () {
-    throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
-  }();
+    throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")
+  }()
 }
-export default a;
+export default a

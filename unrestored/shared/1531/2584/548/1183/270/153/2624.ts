@@ -4,21 +4,21 @@
  * 模块 ID：2624
  */
 
-"use strict";
+"use strict"
 
 function r(e) {
-  var t = e.theme;
-  var n = e.name;
-  var r = e.props;
-  if (!t || !t.props || !t.props[n]) {
-    return r;
+  var e$theme = e.theme
+  var e$name = e.name
+  var e$props = e.props
+  if (!e$theme || !e$theme.props || !e$theme.props[e$name]) {
+    return e$props
   }
-  var i;
-  var o = t.props[n];
-  for (i in o) if (undefined === r[i]) {
-    r[i] = o[i];
+  var i
+  var o = e$theme.props[e$name]
+  for (i in o) if (undefined === e$props[i]) {
+    e$props[i] = o[i]
   }
-  return r;
+  return e$props
 }
-export { r as a };
-export default r;
+export { r as a }
+export default r

@@ -4,14 +4,14 @@
  * 模块 ID：708
  */
 
-"use strict";
+"use strict"
 
-var r = require("../1736/167");
+var r = require("../1736/167")
 module.exports = function (e, t) {
-  var n = [][e];
+  var n = [][e]
   return !!n && r(function () {
     n.call(null, t || function () {
-      throw 1;
-    }, 1);
-  });
-};
+      throw 1
+    }, 1)
+  })
+}

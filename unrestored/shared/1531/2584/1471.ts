@@ -7,152 +7,152 @@
 "use strict";
 
 (function (e) {
-  var r = require("./10/index");
-  var o = require("react");
+  var r = require("./10/index")
+  var o = require("react")
   var i = function __importDefault(module) {
     var defaultExport = module && module.__esModule ? function () {
-      return module.default;
+      return module.default
     } : function () {
-      return module;
-    };
+      return module
+    }
     Object.defineProperty(defaultExport, "a", {
       enumerable: true,
       get: defaultExport
-    });
-    return defaultExport;
-  }(o);
-  var a = require("./16/index");
-  var s = require("./8");
+    })
+    return defaultExport
+  }(o)
+  var a = require("./16/index")
+  var s = require("./8")
   var c = function __importDefault(module) {
     var defaultExport = module && module.__esModule ? function () {
-      return module.default;
+      return module.default
     } : function () {
-      return module;
-    };
+      return module
+    }
     Object.defineProperty(defaultExport, "a", {
       enumerable: true,
       get: defaultExport
-    });
-    return defaultExport;
-  }(s);
-  var l = require("./702");
-  var u = require("./13/index");
-  var d = require("../../../../src/shared/events/messages-wrapper");
-  var p = require("./468");
+    })
+    return defaultExport
+  }(s)
+  var l = require("./702")
+  var u = require("./13/index")
+  var d = require("../../../../src/shared/events/messages-wrapper")
+  var p = require("./468")
   var f = function __importDefault(module) {
     var defaultExport = module && module.__esModule ? function () {
-      return module.default;
+      return module.default
     } : function () {
-      return module;
-    };
+      return module
+    }
     Object.defineProperty(defaultExport, "a", {
       enumerable: true,
       get: defaultExport
-    });
-    return defaultExport;
-  }(p);
-  var h = require("./5");
-  var m = require("./9");
-  var g = require("./190");
-  var _ = require("./26/index");
-  var v = require("./239");
+    })
+    return defaultExport
+  }(p)
+  var h = require("./5")
+  var m = require("./9")
+  var g = require("./190")
+  var _ = require("./26/index")
+  var v = require("./239")
   exports.a = o.memo(function () {
-    var t;
-    var n = o.useRef();
-    var s = o.useRef(null);
-    var p = o.useState(false);
-    var b = r.a(p, 2);
-    var y = b[0];
-    var E = b[1];
-    var O = o.useRef(null);
+    var t
+    var n = o.useRef()
+    var s = o.useRef(null)
+    var p = o.useState(false)
+    var b = r.a(p, 2)
+    var y = b[0]
+    var E = b[1]
+    var O = o.useRef(null)
     var w = a.e(function (e) {
-      return e.project.contextMenuInfo;
-    }).toJS();
-    var C = w.position;
-    var T = w.visible;
-    var S = w.widgetId;
-    var I = m.Bb(S);
+      return e.project.contextMenuInfo
+    }).toJS()
+    var w$position = w.position
+    var w$visible = w.visible
+    var w$widgetId = w.widgetId
+    var I = m.Bb(w$widgetId)
     var A = a.e(function (e) {
-      return e.project.screens;
-    });
-    var j = null === (t = v.d()) || undefined === t ? undefined : t.id;
+      return e.project.screens
+    })
+    var j = null === (t = v.d()) || undefined === t ? undefined : t.id
     o.useLayoutEffect(function () {
-      var e = s.current;
-      if (T && e) {
-        var t = e.clientHeight;
-        var n = window.innerHeight - (C.y + t);
+      var s$current = s.current
+      if (w$visible && s$current) {
+        var s$current$clientHeight = s$current.clientHeight
+        var n = window.innerHeight - (w$position.y + s$current$clientHeight)
         if (n < 0) {
-          C.y += n;
+          w$position.y += n
         }
-        e.style.top = C.y + "px";
-        e.style.left = C.x + "px";
+        s$current.style.top = w$position.y + "px"
+        s$current.style.left = w$position.x + "px"
       }
-    }, [T, C]);
-    var N = l.a().formatMessage;
-    var R = a.d();
+    }, [w$visible, w$position])
+    var l$a$formatMessage = l.a().formatMessage
+    var R = a.d()
     o.useEffect(function () {
       var t = function t() {
         e(function () {
-          R(d.Wg());
-          document.removeEventListener("mousedown", t, true);
-        });
-      };
-      if (T) {
-        document.addEventListener("mousedown", t, true);
+          R(d.Wg())
+          document.removeEventListener("mousedown", t, true)
+        })
+      }
+      if (w$visible) {
+        document.addEventListener("mousedown", t, true)
       }
       return function () {
-        return document.removeEventListener("mousedown", t, true);
-      };
-    }, [R, T]);
-    var k = function (e) {
-      R(d.Ef(m.w(S), e));
-    };
-    var x = function () {
-      var e;
-      var t = null === (e = n.current) || undefined === e ? undefined : e.id;
-      if (j && t) {
-        R(d.Mf(t, j));
+        return document.removeEventListener("mousedown", t, true)
       }
-    };
+    }, [R, w$visible])
+    var k = function (e) {
+      R(d.Ef(m.w(w$widgetId), e))
+    }
+    var x = function () {
+      var /* [auto-meaningful-name] */n$current
+      var t = null === (n$current = n.current) || undefined === n$current ? undefined : n$current.id
+      if (j && t) {
+        R(d.Mf(t, j))
+      }
+    }
     var D = function () {
-      n.current = undefined;
-    };
+      n.current = undefined
+    }
     o.useLayoutEffect(function () {
-      var e = O.current;
-      if (e) {
+      var o$current = O.current
+      if (o$current) {
         if (y) {
-          var t = e.getClientRects()[0];
-          var n = t.height + t.y - window.innerHeight;
+          var t = o$current.getClientRects()[0]
+          var n = t.height + t.y - window.innerHeight
           if (n > 0) {
-            e.style.top = e.offsetTop - n + "px";
+            o$current.style.top = o$current.offsetTop - n + "px"
           }
         } else {
-          e.style.top = "10px";
+          o$current.style.top = "10px"
         }
       }
-    }, [y]);
+    }, [y])
     return i.a.createElement("div", {
       className: f.a.wrapper,
       ref: s,
       style: {
-        display: T ? "block" : "none"
+        display: w$visible ? "block" : "none"
       }
     }, i.a.createElement("div", {
       className: c()(f.a.menuItem),
       onMouseDown: function () {
-        R(d.Ef(m.w(S)));
+        R(d.Ef(m.w(w$widgetId)))
       }
-    }, N({
+    }, l$a$formatMessage({
       id: "copyAndPaste"
     })), ![h.a, h.c].includes((null === I || undefined === I ? undefined : I.type) || "") && i.a.createElement("div", {
       className: c()(f.a.menuItem, f.a.copyTo),
       onMouseEnter: function () {
-        E(true);
+        E(true)
       },
       onMouseLeave: function () {
-        E(false);
+        E(false)
       }
-    }, i.a.createElement("span", null, N({
+    }, i.a.createElement("span", null, l$a$formatMessage({
       id: "copyTo"
     })), " ", i.a.createElement(u.j, {
       type: "icon-right"
@@ -171,38 +171,38 @@
       }, i.a.createElement("img", {
         src: e.get("snapshot"),
         alt: ""
-      })), i.a.createElement("p", null, e.get("title")));
+      })), i.a.createElement("p", null, e.get("title")))
     }))), i.a.createElement("div", {
       onMouseDown: function () {
-        var e = m.Fb(S || "");
-        var t = N({
+        var e = m.Fb(w$widgetId || "")
+        var t = l$a$formatMessage({
           id: "deleteWidget"
-        }) + "“" + g.f(e, 10) + "”?";
-        var r = _.z.checkFieldValueIsSelected("WIDGET_ID", S);
-        var o = _.z.checkSomeFieldValueIsSelected("WIDGET_ID", m.U(S));
+        }) + "“" + g.f(e, 10) + "”?"
+        var r = _.z.checkFieldValueIsSelected("WIDGET_ID", w$widgetId)
+        var o = _.z.checkSomeFieldValueIsSelected("WIDGET_ID", m.U(w$widgetId))
         if (r || o) {
-          n.current = m.Bb(S);
+          n.current = m.Bb(w$widgetId)
           R(d.zh({
             onConfirm: x,
             onClose: D,
-            allowText: N({
+            allowText: l$a$formatMessage({
               id: "delete"
             }),
             title: t,
             isDangerous: true,
-            content: N({
+            content: l$a$formatMessage({
               id: o ? "deleteParentWidgetTips" : "deleteWidgetTips"
             })
-          }));
+          }))
         } else {
           if (j) {
-            R(d.Mf(S, j));
+            R(d.Mf(w$widgetId, j))
           }
         }
       },
       className: c()(f.a.menuItem, f.a.delete)
-    }, N({
+    }, l$a$formatMessage({
       id: "delete"
-    })));
-  });
-}).call(this, require("./795/625/index").setImmediate);
+    })))
+  })
+}).call(this, require("./795/625/index").setImmediate)

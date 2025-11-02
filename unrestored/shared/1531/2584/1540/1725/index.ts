@@ -4,11 +4,11 @@
  * 模块 ID：1725
  */
 
-"use strict";
+"use strict"
 
-var r = require("../1720/258/index");
-var o = require("./1222");
-var i = r.aTypedArray;
+var r = require("../1720/258/index")
+var o = require("./1222")
+var r$aTypedArray = r.aTypedArray;
 (0, r.exportTypedArrayMethod)("lastIndexOf", function (e) {
-  return o.apply(i(this), arguments);
-});
+  return o.apply(r$aTypedArray(this), arguments)
+})

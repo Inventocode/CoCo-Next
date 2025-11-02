@@ -10,4 +10,4 @@ module.exports = {
   footer: "RichTextEditor_footer__YU2WE",
   content: "RichTextEditor_content__2U42C",
   paletteTrigger: "RichTextEditor_paletteTrigger__2UNSe"
-};
+}

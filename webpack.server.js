@@ -13,7 +13,7 @@ const config = {
         historyApiFallback: {
             rewrites: [
                 {
-                    from: /^\/editor\/player\/\d+(\/(index(\.html)?)?)?$/,
+                    from: /^\/editor\/player\/\d+$/,
                     to: "/editor/player/index.html"
                 }
             ]

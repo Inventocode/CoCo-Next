@@ -4,7 +4,7 @@
  * 模块 ID：1241
  */
 
-var r = require("../1745/332");
+var r = require("../1745/332")
 module.exports = function (e) {
-  return undefined !== e && (r(e, "value") || r(e, "writable"));
-};
+  return undefined !== e && (r(e, "value") || r(e, "writable"))
+}

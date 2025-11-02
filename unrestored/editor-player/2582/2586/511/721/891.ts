@@ -4,33 +4,33 @@
  * 模块 ID：891
  */
 
-"use strict";
+"use strict"
 
-var n = require("../81/index");
-var o = require("./261");
+var n = require("../81/index")
+var o = require("./261")
 var i = function () {
   var t = function (e, r) {
     return (t = Object.setPrototypeOf || {
       __proto__: []
     } instanceof Array && function (t, e) {
-      t.__proto__ = e;
+      t.__proto__ = e
     } || function (t, e) {
       for (var r in e) if (e.hasOwnProperty(r)) {
-        t[r] = e[r];
+        t[r] = e[r]
       }
-    })(e, r);
-  };
+    })(e, r)
+  }
   return function (e, r) {
     function n() {
-      this.constructor = e;
+      this.constructor = e
     }
-    t(e, r);
-    e.prototype = null === r ? Object.create(r) : (n.prototype = r.prototype, new n());
-  };
-}();
+    t(e, r)
+    e.prototype = null === r ? Object.create(r) : (n.prototype = r.prototype, new n())
+  }
+}()
 !function (t) {
   function e(e, r) {
-    return t.call(this, new n.DataMatrixReader(), e, r) || this;
+    return t.call(this, new n.DataMatrixReader(), e, r) || this
   }
-  i(e, t);
-}(o.a);
+  i(e, t)
+}(o.a)

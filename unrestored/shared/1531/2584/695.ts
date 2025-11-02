@@ -53,4 +53,4 @@ module.exports = {
   selected: "style_selected__1P-rU",
   optionsFormItem: "style_optionsFormItem__1Af7J",
   count: "style_count__3dGW8"
-};
+}

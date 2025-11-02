@@ -4,7 +4,7 @@
  * 模块 ID：1768
  */
 
-var n = {}.toString;
+var $toString = {}.toString
 module.exports = Array.isArray || function (e) {
-  return "[object Array]" == n.call(e);
-};
+  return "[object Array]" == $toString.call(e)
+}

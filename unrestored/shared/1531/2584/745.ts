@@ -11,4 +11,4 @@ module.exports = {
   compatibility: "ChromeTips_compatibility__Yty34",
   chromeImg: "ChromeTips_chromeImg__2ygfX",
   close: "ChromeTips_close__3NM2r"
-};
+}

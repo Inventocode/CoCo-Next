@@ -4,77 +4,77 @@
  * 模块 ID：714
  */
 
-"use strict";
+"use strict"
 
 Object.defineProperty(exports, "__esModule", {
   value: true
-});
-exports.adjust_bboxes_for_rtl = exports.get_computed_style = exports.get_style = exports.get_size = exports.get_viewport_page_offset = undefined;
-var r = require("@kitten-team/gl-matrix");
-var i = require("./index");
-var o = require("./474");
+})
+exports.adjust_bboxes_for_rtl = exports.get_computed_style = exports.get_style = exports.get_size = exports.get_viewport_page_offset = undefined
+var r = require("@kitten-team/gl-matrix")
+var i = require("./index")
+var o = require("./474")
 function a(e) {
-  var t = e.offsetWidth;
-  var n = e.offsetHeight;
-  var r = o.is.webkit() && !t && !n;
-  if ((undefined != t || r) && e.getBoundingClientRect) {
-    var i = e.getBoundingClientRect();
+  var e$offsetWidth = e.offsetWidth
+  var e$offsetHeight = e.offsetHeight
+  var r = o.is.webkit() && !e$offsetWidth && !e$offsetHeight
+  if ((undefined != e$offsetWidth || r) && e.getBoundingClientRect) {
+    var i = e.getBoundingClientRect()
     return {
       width: i.right - i.left,
       height: i.bottom - i.top
-    };
+    }
   }
   return {
-    width: t,
-    height: n
-  };
+    width: e$offsetWidth,
+    height: e$offsetHeight
+  }
 }
 function s(e, t) {
   return c(e, t) || function (e, t) {
-    return e.currentStyle ? e.currentStyle[t] : undefined;
-  }(e, t) || e.style && e.style[Number(t)];
+    return e.currentStyle ? e.currentStyle[t] : undefined
+  }(e, t) || e.style && e.style[Number(t)]
 }
 function c(e, t) {
-  var n = (0, i.get_owner_document)(e);
+  var n = (0, i.get_owner_document)(e)
   if (n.defaultView && n.defaultView.getComputedStyle) {
-    var r = n.defaultView.getComputedStyle(e, undefined);
+    var r = n.defaultView.getComputedStyle(e, undefined)
     if (r) {
-      return r[Number(t)] || r.getPropertyValue(t) || "";
+      return r[Number(t)] || r.getPropertyValue(t) || ""
     }
   }
-  return "";
+  return ""
 }
 exports.get_viewport_page_offset = function (e) {
-  var t = e.body;
-  var n = e.documentElement;
-  var i = t.scrollLeft || n.scrollLeft;
-  var o = t.scrollTop || n.scrollTop;
-  return r.vec2.fromValues(i, o);
-};
+  var e$body = e.body
+  var e$documentElement = e.documentElement
+  var i = e$body.scrollLeft || e$documentElement.scrollLeft
+  var o = e$body.scrollTop || e$documentElement.scrollTop
+  return r.vec2.fromValues(i, o)
+}
 exports.get_size = function (e) {
   return function (e, t) {
     if ("none" != s(t, "display")) {
-      return e(t);
+      return e(t)
     }
-    var n = t.style;
-    var r = n.display;
-    var i = n.visibility;
-    var o = n.position;
-    n.visibility = "hidden";
-    n.position = "absolute";
-    n.display = "inline";
-    var a = e(t);
-    n.display = r;
-    n.position = o;
-    n.visibility = i;
-    return a;
-  }(a, e);
-};
-exports.get_style = s;
-exports.get_computed_style = c;
+    var t$style = t.style
+    var t$style$display = t$style.display
+    var t$style$visibility = t$style.visibility
+    var t$style$position = t$style.position
+    t$style.visibility = "hidden"
+    t$style.position = "absolute"
+    t$style.display = "inline"
+    var a = e(t)
+    t$style.display = t$style$display
+    t$style.position = t$style$position
+    t$style.visibility = t$style$visibility
+    return a
+  }(a, e)
+}
+exports.get_style = s
+exports.get_computed_style = c
 exports.adjust_bboxes_for_rtl = function (e, t, n) {
-  t.left += n.width;
-  t.right += n.width;
-  e.left += n.width;
-  e.right += n.width;
-};
+  t.left += n.width
+  t.right += n.width
+  e.left += n.width
+  e.right += n.width
+}

@@ -4,19 +4,19 @@
  * 模块 ID：982
  */
 
-"use strict";
+"use strict"
 
-var r = require("./229");
+var r = require("./229")
 exports.a = function (e, t) {
-  var n;
+  var n
   if (undefined === t) {
-    t = true;
+    t = true
   }
   var i = new Promise(function (r) {
-    n = setTimeout(r, e, t);
-  });
+    n = setTimeout(r, e, t)
+  })
   i[r.a] = function () {
-    clearTimeout(n);
-  };
-  return i;
-};
+    clearTimeout(n)
+  }
+  return i
+}

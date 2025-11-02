@@ -4,8 +4,8 @@
  * 模块 ID：257
  */
 
-var r = require("../1680/473");
-var o = Math.min;
+var r = require("../1680/473")
+var math$min = Math.min
 module.exports = function (e) {
-  return e > 0 ? o(r(e), 9007199254740991) : 0;
-};
+  return e > 0 ? math$min(r(e), 9007199254740991) : 0
+}

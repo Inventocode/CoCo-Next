@@ -4,10 +4,10 @@
  * 模块 ID：390
  */
 
-"use strict";
+"use strict"
 
 function r(e) {
-  return e && e.ownerDocument || document;
+  return e && e.ownerDocument || document
 }
-export { r as a };
-export default r;
+export { r as a }
+export default r

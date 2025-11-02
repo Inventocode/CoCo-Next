@@ -4,5 +4,5 @@
  * 模块 ID：1206
  */
 
-var r = require("../../1541/1054");
-module.exports = r && !Symbol.sham && "symbol" == typeof Symbol.iterator;
+var r = require("../../1541/1054")
+module.exports = r && !Symbol.sham && "symbol" == typeof Symbol.iterator

@@ -4,4 +4,4 @@
  * 模块 ID：50
  */
 
-module.exports = require("./1536/index")();
+module.exports = require("./1536/index")()

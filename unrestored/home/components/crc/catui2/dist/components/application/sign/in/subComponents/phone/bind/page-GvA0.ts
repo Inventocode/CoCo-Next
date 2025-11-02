@@ -4,26 +4,26 @@
  * 模块 ID：GvA0
  */
 
-"use strict";
+"use strict"
 
 /* harmony export (binding) */
 /* harmony import */
-export { PhoneBindPageContainer };
-import * as __WEBPACK_IMPORTED_MODULE_0_babel_plugin_react_css_modules_dist_browser_getClassName__ from "babel-plugin-react-css-modules/dist/browser/getClassName";
+export { PhoneBindPageContainer }
+import * as __WEBPACK_IMPORTED_MODULE_0_babel_plugin_react_css_modules_dist_browser_getClassName__ from "babel-plugin-react-css-modules/dist/browser/getClassName"
 /* harmony import */
-import __WEBPACK_IMPORTED_MODULE_0_babel_plugin_react_css_modules_dist_browser_getClassName___default from "babel-plugin-react-css-modules/dist/browser/getClassName";
+import __WEBPACK_IMPORTED_MODULE_0_babel_plugin_react_css_modules_dist_browser_getClassName___default from "babel-plugin-react-css-modules/dist/browser/getClassName"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_1_react__ from "react";
+import * as __WEBPACK_IMPORTED_MODULE_1_react__ from "react"
 /* harmony import */
-import __WEBPACK_IMPORTED_MODULE_1_react___default from "react";
+import __WEBPACK_IMPORTED_MODULE_1_react___default from "react"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_2__i18n__ from "../../../i18n-FsOf";
+import * as __WEBPACK_IMPORTED_MODULE_2__i18n__ from "../../../i18n-FsOf"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_3__VerifyPhone__ from "./VerifyPhone-BjHB";
+import * as __WEBPACK_IMPORTED_MODULE_3__VerifyPhone__ from "./VerifyPhone-BjHB"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_4__style_module_css__ from "../../../style.module.css-VPet";
+import * as __WEBPACK_IMPORTED_MODULE_4__style_module_css__ from "../../../style.module.css-VPet"
 /* harmony import */
-import __WEBPACK_IMPORTED_MODULE_4__style_module_css___default from "../../../style.module.css-VPet";
+import __WEBPACK_IMPORTED_MODULE_4__style_module_css___default from "../../../style.module.css-VPet"
 var _styleModuleImportMap = {
   "../../style_module.css": {
     "wrap": "CUI-sign-in-dialog-wrap",
@@ -65,14 +65,14 @@ var _styleModuleImportMap = {
     "text-main": "CUI-sign-in-dialog-text-main",
     "text-second": "CUI-sign-in-dialog-text-second"
   }
-};
+}
 var PhoneBindPageContainer = function PhoneBindPageContainer(props) {
-  var smsTimeStamp = props.smsTimeStamp;
-  var setSmsTimeStamp = props.setSmsTimeStamp;
-  var isRequesting = props.isRequesting;
-  var setIsRequesting = props.setIsRequesting;
-  var reportMethod = props.reportMethod;
-  var onSuccess = props.onSuccess;
+  var smsTimeStamp = props.smsTimeStamp
+  var setSmsTimeStamp = props.setSmsTimeStamp
+  var isRequesting = props.isRequesting
+  var setIsRequesting = props.setIsRequesting
+  var reportMethod = props.reportMethod
+  var onSuccess = props.onSuccess
   return /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1_react__.createElement(__WEBPACK_IMPORTED_MODULE_1_react__.Fragment, null, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1_react__.createElement("div", {
     className: __WEBPACK_IMPORTED_MODULE_0_babel_plugin_react_css_modules_dist_browser_getClassName___default("content", _styleModuleImportMap, {
       "autoResolveMultipleImports": true,
@@ -89,15 +89,15 @@ var PhoneBindPageContainer = function PhoneBindPageContainer(props) {
     setIsRequesting: setIsRequesting,
     reportMethod: reportMethod,
     onSuccess: onSuccess
-  })));
-};
+  })))
+}
 PhoneBindPageContainer.defaultProps = {
   reportMethod: function reportMethod() {
-    return undefined;
+    return undefined
   },
   onSuccess: function onSuccess() {
-    return undefined;
+    return undefined
   }
-};
+}
 
 /***/

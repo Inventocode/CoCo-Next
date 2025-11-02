@@ -37,4 +37,4 @@ module.exports = {
   next: "PackageEditor_next__358rQ",
   disable: "PackageEditor_disable__3Ns-h",
   packageSplashWrapper: "PackageEditor_packageSplashWrapper__pGzDh"
-};
+}

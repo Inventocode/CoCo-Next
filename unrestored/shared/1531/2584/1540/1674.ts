@@ -4,18 +4,18 @@
  * 模块 ID：1674
  */
 
-"use strict";
+"use strict"
 
-var r = require("./1623/86");
-var o = require("./1684/1075");
-var i = require("./1675/421");
-var a = require("./1745/310");
+var r = require("./1623/86")
+var o = require("./1684/1075")
+var i = require("./1675/421")
+var a = require("./1745/310")
 r({
   target: "String",
   proto: true,
   forced: !require("./1684/1076")("includes")
 }, {
   includes: function (e) {
-    return !!~a(i(this)).indexOf(a(o(e)), arguments.length > 1 ? arguments[1] : undefined);
+    return !!~a(i(this)).indexOf(a(o(e)), arguments.length > 1 ? arguments[1] : undefined)
   }
-});
+})

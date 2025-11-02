@@ -5,5 +5,5 @@
  */
 
 module.exports = function (e, t) {
-  return e === t || e !== e && t !== t;
-};
+  return e === t || e !== e && t !== t
+}

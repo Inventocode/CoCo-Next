@@ -4,7 +4,7 @@
  * 模块 ID：330
  */
 
-"use strict";
+"use strict"
 
 var r = {
   MAC_ENTER: 3,
@@ -113,11 +113,11 @@ var r = {
   MAC_FF_META: 224,
   WIN_IME: 229,
   isTextModifyingKeyEvent: function (e) {
-    var t = e.keyCode;
-    if (e.altKey && !e.ctrlKey || e.metaKey || t >= r.F1 && t <= r.F12) {
-      return false;
+    var e$keyCode = e.keyCode
+    if (e.altKey && !e.ctrlKey || e.metaKey || e$keyCode >= r.F1 && e$keyCode <= r.F12) {
+      return false
     }
-    switch (t) {
+    switch (e$keyCode) {
       case r.ALT:
       case r.CAPS_LOCK:
       case r.CONTEXT_MENU:
@@ -141,23 +141,23 @@ var r = {
       case r.UP:
       case r.WIN_KEY:
       case r.WIN_KEY_RIGHT:
-        return false;
+        return false
       default:
-        return true;
+        return true
     }
   },
   isCharacterKey: function (e) {
     if (e >= r.ZERO && e <= r.NINE) {
-      return true;
+      return true
     }
     if (e >= r.NUM_ZERO && e <= r.NUM_MULTIPLY) {
-      return true;
+      return true
     }
     if (e >= r.A && e <= r.Z) {
-      return true;
+      return true
     }
     if (-1 !== window.navigator.userAgent.indexOf("WebKit") && 0 === e) {
-      return true;
+      return true
     }
     switch (e) {
       case r.SPACE:
@@ -177,10 +177,10 @@ var r = {
       case r.OPEN_SQUARE_BRACKET:
       case r.BACKSLASH:
       case r.CLOSE_SQUARE_BRACKET:
-        return true;
+        return true
       default:
-        return false;
+        return false
     }
   }
-};
-exports.a = r;
+}
+exports.a = r

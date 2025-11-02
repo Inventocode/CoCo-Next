@@ -4,27 +4,27 @@
  * 模块 ID：197
  */
 
-"use strict";
+"use strict"
 
-export { _ as a };
-export { v as e };
-export { y as c };
-export { w as b };
-export { I as f };
-export { j as d };
-import r = require("regenerator-runtime");
+export { _ as a }
+export { v as e }
+export { y as c }
+export { w as b }
+export { I as f }
+export { j as d }
+import RegeneratorRuntime = require("regenerator-runtime");
 var o = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
-    return module.default;
+    return module.default
   } : function () {
-    return module;
-  };
+    return module
+  }
   Object.defineProperty(defaultExport, "a", {
     enumerable: true,
     get: defaultExport
-  });
-  return defaultExport;
-}(r);
+  })
+  return defaultExport
+}(RegeneratorRuntime)
 import i = require("../47");
 import a = require("../7");
 import s = require("../27");
@@ -43,341 +43,341 @@ var g = new d.a({
     pid: m.a.pid,
     api: m.a.openServiceHost
   }
-});
+})
 var _ = function (e) {
-  c.a(n, e);
-  var t = l.a(n);
+  c.a(n, e)
+  var t = l.a(n)
   function n(e, r) {
-    var o;
+    var o
     s.a(this, n);
-    (o = t.call(this, r)).uploadResult = e;
-    return o;
+    (o = t.call(this, r)).uploadResult = e
+    return o
   }
-  return n;
-}(u.a(Error));
+  return n
+}(u.a(Error))
 function v(e) {
-  return b.apply(this, arguments);
+  return b.apply(this, arguments)
 }
 function b() {
   return (b = a.a(o.a.mark(function e(t) {
-    var n;
-    var r;
-    var i;
-    var a = arguments;
+    var n
+    var r
+    var /* [auto-meaningful-name] */e$sent
+    var a = arguments
     return o.a.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
-            n = a.length > 1 && undefined !== a[1] ? a[1] : "IMAGE";
-            r = t instanceof File ? t.name : "";
-            e.next = 4;
+            n = a.length > 1 && undefined !== a[1] ? a[1] : "IMAGE"
+            r = t instanceof File ? t.name : ""
+            e.next = 4
             return new Promise(function (e, o) {
               g.create(t, {
                 filename: "".concat(m.a.productCode, "/").concat(f.a(n), "_").concat(Date.now()) + h.I(r),
                 onsuccess: function (t) {
-                  return e(t);
+                  return e(t)
                 },
                 onerror: function (e) {
-                  return o(e);
+                  return o(e)
                 }
               }).then(function (e) {
-                return null === e || undefined === e ? undefined : e.start();
+                return null === e || undefined === e ? undefined : e.start()
               }).catch(function (e) {
-                return o(e);
-              });
-            });
+                return o(e)
+              })
+            })
           case 4:
-            i = e.sent;
-            return e.abrupt("return", i);
+            e$sent = e.sent
+            return e.abrupt("return", e$sent)
           case 6:
           case "end":
-            return e.stop();
+            return e.stop()
         }
       }
-    }, e);
-  }))).apply(this, arguments);
+    }, e)
+  }))).apply(this, arguments)
 }
 function y(e, t) {
-  var n;
-  var r = [];
-  var o = i.a(e);
+  var n
+  var r = []
+  var o = i.a(e)
   try {
     for (o.s(); !(n = o.n()).done;) {
-      var a = n.value;
-      r.push(E(a, t));
+      var n$value = n.value
+      r.push(E(n$value, t))
     }
   } catch (s) {
-    o.e(s);
+    o.e(s)
   } finally {
-    o.f();
+    o.f()
   }
-  return Promise.all(r);
+  return Promise.all(r)
 }
 function E(e, t) {
-  return O.apply(this, arguments);
+  return O.apply(this, arguments)
 }
 function O() {
   return (O = a.a(o.a.mark(function e(t, n) {
-    var r;
-    var i;
-    var a;
-    var s;
-    var c;
+    var /* [auto-meaningful-name] */t$cdnUrl
+    var /* [auto-meaningful-name] */t$source
+    var a
+    var /* [auto-meaningful-name] */e$sent
+    var c
     return o.a.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
-            if (r = t.cdnUrl, i = t.source, !t || r || !i) {
-              e.next = 16;
-              break;
+            if (t$cdnUrl = t.cdnUrl, t$source = t.source, !t || t$cdnUrl || !t$source) {
+              e.next = 16
+              break
             }
-            if (a = null, !h.R(i)) {
-              e.next = 7;
-              break;
+            if (a = null, !h.R(t$source)) {
+              e.next = 7
+              break
             }
-            a = h.o(i, t.id);
-            e.next = 11;
-            break;
+            a = h.o(t$source, t.id)
+            e.next = 11
+            break
           case 7:
-            if (!h.P(i)) {
-              e.next = 11;
-              break;
+            if (!h.P(t$source)) {
+              e.next = 11
+              break
             }
-            e.next = 10;
-            return h.f(i, t.id);
+            e.next = 10
+            return h.f(t$source, t.id)
           case 10:
-            a = e.sent;
+            a = e.sent
           case 11:
             if (!a) {
-              e.next = 16;
-              break;
+              e.next = 16
+              break
             }
-            e.next = 14;
-            return v(a);
+            e.next = 14
+            return v(a)
           case 14:
-            if (s = e.sent) {
-              c = s.url.replace("https://static-creation.codemao.cn/", "https://creation.codemao.cn/");
-              p.bc(t.id, c);
+            if (e$sent = e.sent) {
+              c = e$sent.url.replace("https://static-creation.codemao.cn/", "https://creation.codemao.cn/")
+              p.bc(t.id, c)
               if (t.groupId && undefined !== t.groupImageIndex) {
-                p.cc(t.groupId, t.groupImageIndex, c);
+                p.cc(t.groupId, t.groupImageIndex, c)
               }
-              t.cdnUrl = c;
+              t.cdnUrl = c
               if (n) {
-                n(t);
+                n(t)
               }
             }
           case 16:
           case "end":
-            return e.stop();
+            return e.stop()
         }
       }
-    }, e);
-  }))).apply(this, arguments);
+    }, e)
+  }))).apply(this, arguments)
 }
 function w(e, t) {
-  return C.apply(this, arguments);
+  return C.apply(this, arguments)
 }
 function C() {
   return (C = a.a(o.a.mark(function e(t, n) {
-    var r;
-    var a;
-    var s;
-    var c;
+    var r
+    var a
+    var s
+    var /* [auto-meaningful-name] */s$value
     return o.a.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
-            r = [];
-            a = i.a(t);
+            r = []
+            a = i.a(t)
             try {
               for (a.s(); !(s = a.n()).done;) {
-                c = s.value;
-                r.push(T(c, n));
+                s$value = s.value
+                r.push(T(s$value, n))
               }
             } catch (o) {
-              a.e(o);
+              a.e(o)
             } finally {
-              a.f();
+              a.f()
             }
-            e.next = 5;
-            return Promise.all(r);
+            e.next = 5
+            return Promise.all(r)
           case 5:
-            return e.abrupt("return", e.sent);
+            return e.abrupt("return", e.sent)
           case 6:
           case "end":
-            return e.stop();
+            return e.stop()
         }
       }
-    }, e);
-  }))).apply(this, arguments);
+    }, e)
+  }))).apply(this, arguments)
 }
 function T(e, t) {
-  return S.apply(this, arguments);
+  return S.apply(this, arguments)
 }
 function S() {
   return (S = a.a(o.a.mark(function e(t, n) {
-    var r;
-    var i;
-    var a;
-    var s;
-    var c;
+    var /* [auto-meaningful-name] */t$cdnUrl
+    var /* [auto-meaningful-name] */t$source
+    var a
+    var /* [auto-meaningful-name] */e$sent
+    var c
     return o.a.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
-            if (r = t.cdnUrl, i = t.source, !t || r || !i) {
-              e.next = 16;
-              break;
+            if (t$cdnUrl = t.cdnUrl, t$source = t.source, !t || t$cdnUrl || !t$source) {
+              e.next = 16
+              break
             }
-            if (a = null, !h.R(i)) {
-              e.next = 7;
-              break;
+            if (a = null, !h.R(t$source)) {
+              e.next = 7
+              break
             }
-            a = h.o(i, t.id);
-            e.next = 11;
-            break;
+            a = h.o(t$source, t.id)
+            e.next = 11
+            break
           case 7:
-            if (!h.P(i)) {
-              e.next = 11;
-              break;
+            if (!h.P(t$source)) {
+              e.next = 11
+              break
             }
-            e.next = 10;
-            return h.g(i, t.id);
+            e.next = 10
+            return h.g(t$source, t.id)
           case 10:
-            a = e.sent;
+            a = e.sent
           case 11:
             if (!a) {
-              e.next = 16;
-              break;
+              e.next = 16
+              break
             }
-            e.next = 14;
-            return v(a);
+            e.next = 14
+            return v(a)
           case 14:
-            if (s = e.sent) {
-              c = s.url.replace("https://static-creation.codemao.cn/", "https://creation.codemao.cn/");
-              t.cdnUrl = c;
+            if (e$sent = e.sent) {
+              c = e$sent.url.replace("https://static-creation.codemao.cn/", "https://creation.codemao.cn/")
+              t.cdnUrl = c
               if (n) {
-                n(t);
+                n(t)
               }
             }
           case 16:
           case "end":
-            return e.stop();
+            return e.stop()
         }
       }
-    }, e);
-  }))).apply(this, arguments);
+    }, e)
+  }))).apply(this, arguments)
 }
 function I(e) {
-  return A.apply(this, arguments);
+  return A.apply(this, arguments)
 }
 function A() {
   return (A = a.a(o.a.mark(function e(t) {
-    var n;
-    var r;
-    var i;
-    var a;
+    var n
+    var r
+    var /* [auto-meaningful-name] */e$sent
+    var a
     return o.a.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
             if (n = h.m(t), "screenshot.png", !n) {
-              e.next = 10;
-              break;
+              e.next = 10
+              break
             }
             r = new File([n], "screenshot.png", {
               type: n.type
-            });
-            e.next = 6;
-            return v(r);
+            })
+            e.next = 6
+            return v(r)
           case 6:
-            if (!(i = e.sent)) {
-              e.next = 10;
-              break;
+            if (!(e$sent = e.sent)) {
+              e.next = 10
+              break
             }
-            a = i.url.replace("https://static-creation.codemao.cn/", "https://creation.codemao.cn/");
-            return e.abrupt("return", a);
+            a = e$sent.url.replace("https://static-creation.codemao.cn/", "https://creation.codemao.cn/")
+            return e.abrupt("return", a)
           case 10:
-            return e.abrupt("return", "");
+            return e.abrupt("return", "")
           case 11:
           case "end":
-            return e.stop();
+            return e.stop()
         }
       }
-    }, e);
-  }))).apply(this, arguments);
+    }, e)
+  }))).apply(this, arguments)
 }
 function j(e, t) {
-  var n;
-  var r = [];
-  var o = i.a(e);
+  var n
+  var r = []
+  var o = i.a(e)
   try {
     for (o.s(); !(n = o.n()).done;) {
-      var a = n.value;
-      r.push(N(a, t));
+      var n$value = n.value
+      r.push(N(n$value, t))
     }
   } catch (s) {
-    o.e(s);
+    o.e(s)
   } finally {
-    o.f();
+    o.f()
   }
-  return Promise.all(r);
+  return Promise.all(r)
 }
 function N(e, t) {
-  return R.apply(this, arguments);
+  return R.apply(this, arguments)
 }
 function R() {
   return (R = a.a(o.a.mark(function e(t, n) {
-    var r;
-    var i;
-    var a;
-    var s;
-    var c;
+    var /* [auto-meaningful-name] */t$cdnUrl
+    var /* [auto-meaningful-name] */t$source
+    var a
+    var /* [auto-meaningful-name] */e$sent
+    var c
     return o.a.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
-            if (r = t.cdnUrl, i = t.source, !t || r || !i) {
-              e.next = 16;
-              break;
+            if (t$cdnUrl = t.cdnUrl, t$source = t.source, !t || t$cdnUrl || !t$source) {
+              e.next = 16
+              break
             }
-            if (a = null, !h.R(i)) {
-              e.next = 7;
-              break;
+            if (a = null, !h.R(t$source)) {
+              e.next = 7
+              break
             }
-            a = h.o(i, t.name);
-            e.next = 11;
-            break;
+            a = h.o(t$source, t.name)
+            e.next = 11
+            break
           case 7:
-            if (!h.P(i)) {
-              e.next = 11;
-              break;
+            if (!h.P(t$source)) {
+              e.next = 11
+              break
             }
-            e.next = 10;
-            return h.f(i, t.name);
+            e.next = 10
+            return h.f(t$source, t.name)
           case 10:
-            a = e.sent;
+            a = e.sent
           case 11:
             if (!a) {
-              e.next = 16;
-              break;
+              e.next = 16
+              break
             }
-            e.next = 14;
-            return v(a, "SOUND");
+            e.next = 14
+            return v(a, "SOUND")
           case 14:
-            if (s = e.sent) {
-              c = s.url.replace("https://static-creation.codemao.cn/", "https://creation.codemao.cn/");
-              t.cdnUrl = c;
+            if (e$sent = e.sent) {
+              c = e$sent.url.replace("https://static-creation.codemao.cn/", "https://creation.codemao.cn/")
+              t.cdnUrl = c
               if (n) {
-                n(t);
+                n(t)
               }
             }
           case 16:
           case "end":
-            return e.stop();
+            return e.stop()
         }
       }
-    }, e);
-  }))).apply(this, arguments);
+    }, e)
+  }))).apply(this, arguments)
 }
-export default _;
+export default _

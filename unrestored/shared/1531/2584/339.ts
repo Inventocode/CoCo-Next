@@ -24,4 +24,4 @@ module.exports = {
   circleProgressLoad_left: "style_circleProgressLoad_left__2b_H8",
   fileItemName: "style_fileItemName__Y1rDI",
   soundDuration: "style_soundDuration__2MjES"
-};
+}

@@ -4,5 +4,5 @@
  * 模块 ID：1400
  */
 
-var r = require("../../../../../../../254/2533/1420/2530/499/index").Uint8Array;
-module.exports = r;
+var require$$$$$$$$$$$$$$254253314202530499Index$Uint8Array = require("../../../../../../../254/2533/1420/2530/499/index").Uint8Array
+module.exports = require$$$$$$$$$$$$$$254253314202530499Index$Uint8Array

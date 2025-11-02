@@ -4,84 +4,84 @@
  * 模块 ID：275
  */
 
-"use strict";
+"use strict"
 
-export { f as e };
-export { d as g };
-export { h as a };
-export { p as d };
-export { g as c };
-export { v as f };
-export { m as b };
-import r = require("react");
+export { f as e }
+export { d as g }
+export { h as a }
+export { p as d }
+export { g as c }
+export { v as f }
+export { m as b }
+import React = require("react");
 import i = require("./2589/index");
 import o = require("./2589/792");
 var a = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
-    return module.default;
+    return module.default
   } : function () {
-    return module;
-  };
+    return module
+  }
   Object.defineProperty(defaultExport, "a", {
     enumerable: true,
     get: defaultExport
-  });
-  return defaultExport;
-}(o);
+  })
+  return defaultExport
+}(o)
 import s = require("./2588");
 import c = require("./277");
 var u = function () {
   return (u = Object.assign || function (e) {
-    for (var t, n = 1, r = arguments.length; n < r; n++) {
+    for (var t, n = 1, arguments$length = arguments.length; n < arguments$length; n++) {
       for (var i in t = arguments[n]) if (Object.prototype.hasOwnProperty.call(t, i)) {
-        e[i] = t[i];
+        e[i] = t[i]
       }
     }
-    return e;
-  }).apply(this, arguments);
-};
+    return e
+  }).apply(this, arguments)
+}
 var l = function () {
-  for (var e = 0, t = 0, n = arguments.length; t < n; t++) {
-    e += arguments[t].length;
+  for (var e = 0, t = 0, arguments$length = arguments.length; t < arguments$length; t++) {
+    e += arguments[t].length
   }
-  var r = Array(e);
-  var i = 0;
-  for (t = 0; t < n; t++) {
-    for (var o = arguments[t], a = 0, s = o.length; a < s; a++, i++) {
-      r[i] = o[a];
+  var r = Array(e)
+  var i = 0
+  for (t = 0; t < arguments$length; t++) {
+    for (var o = arguments[t], a = 0, o$length = o.length; a < o$length; a++, i++) {
+      r[i] = o[a]
     }
   }
-  return r;
-};
+  return r
+}
 function f(e, t, n) {
   if (undefined === n) {
-    n = {};
+    n = {}
   }
   return t.reduce(function (t, r) {
     if (r in e) {
-      t[r] = e[r];
+      t[r] = e[r]
     } else {
       if (r in n) {
-        t[r] = n[r];
+        t[r] = n[r]
       }
     }
-    return t;
-  }, {});
+    return t
+  }, {})
 }
 function d(e) {
-  s.a(e, "[React Intl] Could not find required `intl` object. <IntlProvider> needs to exist in the component ancestry.");
+  s.a(e, "[React Intl] Could not find required `intl` object. <IntlProvider> needs to exist in the component ancestry.")
 }
 var h = {
   formats: {},
   messages: {},
   timeZone: undefined,
-  textComponent: r.Fragment,
+  textComponent: React.Fragment,
   defaultLocale: "en",
   defaultFormats: {},
   onError: function (e) {
-    0;
+    0
   }
-};
+}
 function p() {
   return {
     dateTime: {},
@@ -91,26 +91,26 @@ function p() {
     pluralRules: {},
     list: {},
     displayNames: {}
-  };
+  }
 }
 function _(e) {
   return {
     create: function () {
       return {
         has: function (t) {
-          return t in e;
+          return t in e
         },
         get: function (t) {
-          return e[t];
+          return e[t]
         },
         set: function (t, n) {
-          e[t] = n;
+          e[t] = n
         }
-      };
+      }
     }
-  };
+  }
 }
-var A = a.a || o;
+var A = a.a || o
 function g(e) {
   if (undefined === e) {
     e = {
@@ -121,38 +121,38 @@ function g(e) {
       pluralRules: {},
       list: {},
       displayNames: {}
-    };
-  }
-  var t = Intl.RelativeTimeFormat;
-  var n = Intl.ListFormat;
-  var r = Intl.DisplayNames;
-  var o = A(function () {
-    for (var e, t = [], n = 0; n < arguments.length; n++) {
-      t[n] = arguments[n];
     }
-    return new ((e = Intl.DateTimeFormat).bind.apply(e, l([undefined], t)))();
+  }
+  var intl$RelativeTimeFormat = Intl.RelativeTimeFormat
+  var intl$ListFormat = Intl.ListFormat
+  var intl$DisplayNames = Intl.DisplayNames
+  var o = A(function () {
+    for (var /* [auto-meaningful-name] */intl$DateTimeFormat, t = [], n = 0; n < arguments.length; n++) {
+      t[n] = arguments[n]
+    }
+    return new ((intl$DateTimeFormat = Intl.DateTimeFormat).bind.apply(intl$DateTimeFormat, l([undefined], t)))()
   }, {
     cache: _(e.dateTime),
     strategy: A.strategies.variadic
-  });
+  })
   var a = A(function () {
-    for (var e, t = [], n = 0; n < arguments.length; n++) {
-      t[n] = arguments[n];
+    for (var /* [auto-meaningful-name] */intl$NumberFormat, t = [], n = 0; n < arguments.length; n++) {
+      t[n] = arguments[n]
     }
-    return new ((e = Intl.NumberFormat).bind.apply(e, l([undefined], t)))();
+    return new ((intl$NumberFormat = Intl.NumberFormat).bind.apply(intl$NumberFormat, l([undefined], t)))()
   }, {
     cache: _(e.number),
     strategy: A.strategies.variadic
-  });
+  })
   var s = A(function () {
-    for (var e, t = [], n = 0; n < arguments.length; n++) {
-      t[n] = arguments[n];
+    for (var /* [auto-meaningful-name] */intl$PluralRules, t = [], n = 0; n < arguments.length; n++) {
+      t[n] = arguments[n]
     }
-    return new ((e = Intl.PluralRules).bind.apply(e, l([undefined], t)))();
+    return new ((intl$PluralRules = Intl.PluralRules).bind.apply(intl$PluralRules, l([undefined], t)))()
   }, {
     cache: _(e.pluralRules),
     strategy: A.strategies.variadic
-  });
+  })
   return {
     getDateTimeFormat: o,
     getNumberFormat: a,
@@ -163,16 +163,16 @@ function g(e) {
           getDateTimeFormat: o,
           getPluralRules: s
         }
-      }, r || {}));
+      }, r || {}))
     }, {
       cache: _(e.message),
       strategy: A.strategies.variadic
     }),
     getRelativeTimeFormat: A(function () {
       for (var e = [], n = 0; n < arguments.length; n++) {
-        e[n] = arguments[n];
+        e[n] = arguments[n]
       }
-      return new (t.bind.apply(t, l([undefined], e)))();
+      return new (intl$RelativeTimeFormat.bind.apply(intl$RelativeTimeFormat, l([undefined], e)))()
     }, {
       cache: _(e.relativeTime),
       strategy: A.strategies.variadic
@@ -180,38 +180,38 @@ function g(e) {
     getPluralRules: s,
     getListFormat: A(function () {
       for (var e = [], t = 0; t < arguments.length; t++) {
-        e[t] = arguments[t];
+        e[t] = arguments[t]
       }
-      return new (n.bind.apply(n, l([undefined], e)))();
+      return new (intl$ListFormat.bind.apply(intl$ListFormat, l([undefined], e)))()
     }, {
       cache: _(e.list),
       strategy: A.strategies.variadic
     }),
     getDisplayNames: A(function () {
       for (var e = [], t = 0; t < arguments.length; t++) {
-        e[t] = arguments[t];
+        e[t] = arguments[t]
       }
-      return new (r.bind.apply(r, l([undefined], e)))();
+      return new (intl$DisplayNames.bind.apply(intl$DisplayNames, l([undefined], e)))()
     }, {
       cache: _(e.displayNames),
       strategy: A.strategies.variadic
     })
-  };
+  }
 }
 function v(e, t, n, r) {
-  var i;
-  var o = e && e[t];
+  var i
+  var o = e && e[t]
   if (o) {
-    i = o[n];
+    i = o[n]
   }
   if (i) {
-    return i;
+    return i
   }
-  r(new c.f("No " + t + " format named: " + n));
+  r(new c.f("No " + t + " format named: " + n))
 }
 function m(e) {
   return function (t) {
-    return e(r.Children.toArray(t));
-  };
+    return e(React.Children.toArray(t))
+  }
 }
-export default h;
+export default h

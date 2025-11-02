@@ -4,8 +4,8 @@
  * 模块 ID：2490
  */
 
-var r = require("../2491/852");
-var i = require("./1154/index");
+var r = require("../2491/852")
+var i = require("./1154/index")
 module.exports = function (e, t) {
-  return r(e, i(e), t);
-};
+  return r(e, i(e), t)
+}

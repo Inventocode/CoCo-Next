@@ -4,10 +4,10 @@
  * 模块 ID：DnTb
  */
 
-"use strict";
+"use strict"
 
 /* harmony export (immutable) */
-export { getNewThemeColorName };
+export { getNewThemeColorName }
 var oldTheme2newThemeMap = {
   "s1": "theme-color-ys1",
   "s2": "theme-color-ys2",
@@ -37,10 +37,10 @@ var oldTheme2newThemeMap = {
   "8": "theme-color-8",
   "9": "theme-color-9",
   "10": "theme-color-10"
-};
+}
 function getNewThemeColorName(oldColor) {
-  var _oldTheme2newThemeMap;
-  return (_oldTheme2newThemeMap = oldTheme2newThemeMap[oldColor]) !== null && _oldTheme2newThemeMap !== undefined ? _oldTheme2newThemeMap : "theme-color-0";
+  var _oldTheme2newThemeMap
+  return (_oldTheme2newThemeMap = oldTheme2newThemeMap[oldColor]) !== null && _oldTheme2newThemeMap !== undefined ? _oldTheme2newThemeMap : "theme-color-0"
 }
 
 /***/

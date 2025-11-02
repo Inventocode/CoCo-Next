@@ -4,11 +4,11 @@
  * 模块 ID：360
  */
 
-"use strict";
+"use strict"
 
-export { r as a };
-export { o as b };
-var r = "SMS_SERVICE_WIDGET";
+export { r as a }
+export { o as b }
+var r = "SMS_SERVICE_WIDGET"
 var o = {
   type: r,
   icon: "icon-widget-sms-service",
@@ -99,5 +99,5 @@ var o = {
       icon: "%{BKY_BLOCK_SMS_ICON}"
     }
   }]
-};
-export default r;
+}
+export default r

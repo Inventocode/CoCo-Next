@@ -4,24 +4,24 @@
  * 模块 ID：1536
  */
 
-"use strict";
+"use strict"
 
-var r = require("./1537");
+var r = require("./1537")
 function i() {}
 function o() {}
-o.resetWarningCache = i;
+o.resetWarningCache = i
 module.exports = function () {
   function e(e, t, n, i, o, a) {
     if (a !== r) {
-      var s = new Error("Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types");
-      s.name = "Invariant Violation";
-      throw s;
+      var s = new Error("Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types")
+      s.name = "Invariant Violation"
+      throw s
     }
   }
   function t() {
-    return e;
+    return e
   }
-  e.isRequired = e;
+  e.isRequired = e
   var n = {
     array: e,
     bool: e,
@@ -43,7 +43,7 @@ module.exports = function () {
     exact: t,
     checkPropTypes: o,
     resetWarningCache: i
-  };
-  n.PropTypes = n;
-  return n;
-};
+  }
+  n.PropTypes = n
+  return n
+}

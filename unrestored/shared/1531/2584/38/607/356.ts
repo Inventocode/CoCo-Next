@@ -4,10 +4,10 @@
  * 模块 ID：356
  */
 
-var r = require("./1970/1099");
+var r = require("./1970/1099")
 module.exports = function (e, t) {
   if ("function" !== typeof t && null !== t) {
-    throw new TypeError("Super expression must either be null or a function");
+    throw new TypeError("Super expression must either be null or a function")
   }
   e.prototype = Object.create(t && t.prototype, {
     constructor: {
@@ -15,8 +15,8 @@ module.exports = function (e, t) {
       writable: true,
       configurable: true
     }
-  });
+  })
   if (t) {
-    r(e, t);
+    r(e, t)
   }
-};
+}

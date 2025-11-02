@@ -4,192 +4,192 @@
  * 模块 ID：554
  */
 
-"use strict";
+"use strict"
 
-var r = require("react");
-var o = require("./50/index");
+var r = require("react")
+var o = require("./50/index")
 var i = function (e, t) {
   return (i = Object.setPrototypeOf || {
     __proto__: []
   } instanceof Array && function (e, t) {
-    e.__proto__ = t;
+    e.__proto__ = t
   } || function (e, t) {
     for (var n in t) if (t.hasOwnProperty(n)) {
-      e[n] = t[n];
+      e[n] = t[n]
     }
-  })(e, t);
-};
-var a;
-var s;
-var c;
+  })(e, t)
+}
+var a
+var s
+var c
 var l = function () {
   return (l = Object.assign || function (e) {
-    for (var t, n = 1, r = arguments.length; n < r; n++) {
+    for (var t, n = 1, arguments$length = arguments.length; n < arguments$length; n++) {
       for (var o in t = arguments[n]) if (Object.prototype.hasOwnProperty.call(t, o)) {
-        e[o] = t[o];
+        e[o] = t[o]
       }
     }
-    return e;
-  }).apply(this, arguments);
-};
+    return e
+  }).apply(this, arguments)
+}
 !function (e) {
-  e.AUTO = "auto";
-  e.START = "start";
-  e.CENTER = "center";
-  e.END = "end";
+  e.AUTO = "auto"
+  e.START = "start"
+  e.CENTER = "center"
+  e.END = "end"
 }(a || (a = {}));
 (function (e) {
-  e.HORIZONTAL = "horizontal";
-  e.VERTICAL = "vertical";
+  e.HORIZONTAL = "horizontal"
+  e.VERTICAL = "vertical"
 })(s || (s = {}));
 (function (e) {
-  e.OBSERVED = "observed";
-  e.REQUESTED = "requested";
-})(c || (c = {}));
-var u;
-var d;
-var p;
-var f;
+  e.OBSERVED = "observed"
+  e.REQUESTED = "requested"
+})(c || (c = {}))
+var u
+var d
+var p
+var f
 var h;
-(u = {})[s.VERTICAL] = "scrollTop";
-u[s.HORIZONTAL] = "scrollLeft";
+(u = {})[s.VERTICAL] = "scrollTop"
+u[s.HORIZONTAL] = "scrollLeft"
 var m = u;
-(d = {})[s.VERTICAL] = "height";
-d[s.HORIZONTAL] = "width";
+(d = {})[s.VERTICAL] = "height"
+d[s.HORIZONTAL] = "width"
 var g = d;
-(p = {})[s.VERTICAL] = "top";
-p[s.HORIZONTAL] = "left";
+(p = {})[s.VERTICAL] = "top"
+p[s.HORIZONTAL] = "left"
 var _ = p;
-(f = {})[s.VERTICAL] = "marginTop";
-f[s.HORIZONTAL] = "marginLeft";
+(f = {})[s.VERTICAL] = "marginTop"
+f[s.HORIZONTAL] = "marginLeft"
 var v = f;
-(h = {})[s.VERTICAL] = "marginBottom";
-h[s.HORIZONTAL] = "marginRight";
-var b = h;
+(h = {})[s.VERTICAL] = "marginBottom"
+h[s.HORIZONTAL] = "marginRight"
+var b = h
 var y = function () {
   function e(e) {
-    var t = e.itemCount;
-    var n = e.itemSizeGetter;
-    var r = e.estimatedItemSize;
-    this.itemSizeGetter = n;
-    this.itemCount = t;
-    this.estimatedItemSize = r;
-    this.itemSizeAndPositionData = {};
-    this.lastMeasuredIndex = -1;
+    var e$itemCount = e.itemCount
+    var e$itemSizeGetter = e.itemSizeGetter
+    var e$estimatedItemSize = e.estimatedItemSize
+    this.itemSizeGetter = e$itemSizeGetter
+    this.itemCount = e$itemCount
+    this.estimatedItemSize = e$estimatedItemSize
+    this.itemSizeAndPositionData = {}
+    this.lastMeasuredIndex = -1
   }
   e.prototype.updateConfig = function (e) {
-    var t = e.itemCount;
-    var n = e.itemSizeGetter;
-    var r = e.estimatedItemSize;
-    if (null != t) {
-      this.itemCount = t;
+    var e$itemCount = e.itemCount
+    var e$itemSizeGetter = e.itemSizeGetter
+    var e$estimatedItemSize = e.estimatedItemSize
+    if (null != e$itemCount) {
+      this.itemCount = e$itemCount
     }
-    if (null != r) {
-      this.estimatedItemSize = r;
+    if (null != e$estimatedItemSize) {
+      this.estimatedItemSize = e$estimatedItemSize
     }
-    if (null != n) {
-      this.itemSizeGetter = n;
+    if (null != e$itemSizeGetter) {
+      this.itemSizeGetter = e$itemSizeGetter
     }
-  };
+  }
   e.prototype.getLastMeasuredIndex = function () {
-    return this.lastMeasuredIndex;
-  };
+    return this.lastMeasuredIndex
+  }
   e.prototype.getSizeAndPositionForIndex = function (e) {
     if (e < 0 || e >= this.itemCount) {
-      throw Error("Requested index " + e + " is outside of range 0.." + this.itemCount);
+      throw Error("Requested index " + e + " is outside of range 0.." + this.itemCount)
     }
     if (e > this.lastMeasuredIndex) {
       for (var t = this.getSizeAndPositionOfLastMeasuredItem(), n = t.offset + t.size, r = this.lastMeasuredIndex + 1; r <= e; r++) {
-        var o = this.itemSizeGetter(r);
+        var o = this.itemSizeGetter(r)
         if (null == o || isNaN(o)) {
-          throw Error("Invalid size returned for index " + r + " of value " + o);
+          throw Error("Invalid size returned for index " + r + " of value " + o)
         }
         this.itemSizeAndPositionData[r] = {
           offset: n,
           size: o
-        };
-        n += o;
+        }
+        n += o
       }
-      this.lastMeasuredIndex = e;
+      this.lastMeasuredIndex = e
     }
-    return this.itemSizeAndPositionData[e];
-  };
+    return this.itemSizeAndPositionData[e]
+  }
   e.prototype.getSizeAndPositionOfLastMeasuredItem = function () {
     return this.lastMeasuredIndex >= 0 ? this.itemSizeAndPositionData[this.lastMeasuredIndex] : {
       offset: 0,
       size: 0
-    };
-  };
-  e.prototype.getTotalSize = function () {
-    var e = this.getSizeAndPositionOfLastMeasuredItem();
-    return e.offset + e.size + (this.itemCount - this.lastMeasuredIndex - 1) * this.estimatedItemSize;
-  };
-  e.prototype.getUpdatedOffsetForIndex = function (e) {
-    var t = e.align;
-    var n = undefined === t ? a.START : t;
-    var r = e.containerSize;
-    var o = e.currentOffset;
-    var i = e.targetIndex;
-    if (r <= 0) {
-      return 0;
     }
-    var s;
-    var c = this.getSizeAndPositionForIndex(i);
-    var l = c.offset;
-    var u = l - r + c.size;
+  }
+  e.prototype.getTotalSize = function () {
+    var e = this.getSizeAndPositionOfLastMeasuredItem()
+    return e.offset + e.size + (this.itemCount - this.lastMeasuredIndex - 1) * this.estimatedItemSize
+  }
+  e.prototype.getUpdatedOffsetForIndex = function (e) {
+    var e$align = e.align
+    var n = undefined === e$align ? a.START : e$align
+    var e$containerSize = e.containerSize
+    var e$currentOffset = e.currentOffset
+    var e$targetIndex = e.targetIndex
+    if (e$containerSize <= 0) {
+      return 0
+    }
+    var s
+    var c = this.getSizeAndPositionForIndex(e$targetIndex)
+    var c$offset = c.offset
+    var u = c$offset - e$containerSize + c.size
     switch (n) {
       case a.END:
-        s = u;
-        break;
+        s = u
+        break
       case a.CENTER:
-        s = l - (r - c.size) / 2;
-        break;
+        s = c$offset - (e$containerSize - c.size) / 2
+        break
       case a.START:
-        s = l;
-        break;
+        s = c$offset
+        break
       default:
-        s = Math.max(u, Math.min(l, o));
+        s = Math.max(u, Math.min(c$offset, e$currentOffset))
     }
-    var d = this.getTotalSize();
-    return Math.max(0, Math.min(d - r, s));
-  };
+    var d = this.getTotalSize()
+    return Math.max(0, Math.min(d - e$containerSize, s))
+  }
   e.prototype.getVisibleRange = function (e) {
-    var t = e.containerSize;
-    var n = e.offset;
-    var r = e.overscanCount;
+    var e$containerSize = e.containerSize
+    var e$offset = e.offset
+    var e$overscanCount = e.overscanCount
     if (0 === this.getTotalSize()) {
-      return {};
+      return {}
     }
-    var o = n + t;
-    var i = this.findNearestItem(n);
+    var o = e$offset + e$containerSize
+    var i = this.findNearestItem(e$offset)
     if ("undefined" === typeof i) {
-      throw Error("Invalid offset " + n + " specified");
+      throw Error("Invalid offset " + e$offset + " specified")
     }
-    var a = this.getSizeAndPositionForIndex(i);
-    n = a.offset + a.size;
-    for (var s = i; n < o && s < this.itemCount - 1;) {
-      s++;
-      n += this.getSizeAndPositionForIndex(s).size;
+    var a = this.getSizeAndPositionForIndex(i)
+    e$offset = a.offset + a.size
+    for (var s = i; e$offset < o && s < this.itemCount - 1;) {
+      s++
+      e$offset += this.getSizeAndPositionForIndex(s).size
     }
-    if (r) {
-      i = Math.max(0, i - r);
-      s = Math.min(s + r, this.itemCount - 1);
+    if (e$overscanCount) {
+      i = Math.max(0, i - e$overscanCount)
+      s = Math.min(s + e$overscanCount, this.itemCount - 1)
     }
     return {
       start: i,
       stop: s
-    };
-  };
+    }
+  }
   e.prototype.resetItem = function (e) {
-    this.lastMeasuredIndex = Math.min(this.lastMeasuredIndex, e - 1);
-  };
+    this.lastMeasuredIndex = Math.min(this.lastMeasuredIndex, e - 1)
+  }
   e.prototype.findNearestItem = function (e) {
     if (isNaN(e)) {
-      throw Error("Invalid offset " + e + " specified");
+      throw Error("Invalid offset " + e + " specified")
     }
-    e = Math.max(0, e);
-    var t = this.getSizeAndPositionOfLastMeasuredItem();
-    var n = Math.max(0, this.lastMeasuredIndex);
+    e = Math.max(0, e)
+    var t = this.getSizeAndPositionOfLastMeasuredItem()
+    var n = Math.max(0, this.lastMeasuredIndex)
     return t.offset >= e ? this.binarySearch({
       high: n,
       low: 0,
@@ -197,269 +197,269 @@ var y = function () {
     }) : this.exponentialSearch({
       index: n,
       offset: e
-    });
-  };
+    })
+  }
   e.prototype.binarySearch = function (e) {
-    for (var t = e.low, n = e.high, r = e.offset, o = 0, i = 0; t <= n;) {
-      o = t + Math.floor((n - t) / 2);
-      if ((i = this.getSizeAndPositionForIndex(o).offset) === r) {
-        return o;
+    for (var e$low = e.low, e$high = e.high, e$offset = e.offset, o = 0, i = 0; e$low <= e$high;) {
+      o = e$low + Math.floor((e$high - e$low) / 2)
+      if ((i = this.getSizeAndPositionForIndex(o).offset) === e$offset) {
+        return o
       }
-      if (i < r) {
-        t = o + 1;
+      if (i < e$offset) {
+        e$low = o + 1
       } else {
-        if (i > r) {
-          n = o - 1;
+        if (i > e$offset) {
+          e$high = o - 1
         }
       }
     }
-    return t > 0 ? t - 1 : 0;
-  };
+    return e$low > 0 ? e$low - 1 : 0
+  }
   e.prototype.exponentialSearch = function (e) {
-    for (var t = e.index, n = e.offset, r = 1; t < this.itemCount && this.getSizeAndPositionForIndex(t).offset < n;) {
-      t += r;
-      r *= 2;
+    for (var e$index = e.index, e$offset = e.offset, r = 1; e$index < this.itemCount && this.getSizeAndPositionForIndex(e$index).offset < e$offset;) {
+      e$index += r
+      r *= 2
     }
     return this.binarySearch({
-      high: Math.min(t, this.itemCount - 1),
-      low: Math.floor(t / 2),
-      offset: n
-    });
-  };
-  return e;
-}();
+      high: Math.min(e$index, this.itemCount - 1),
+      low: Math.floor(e$index / 2),
+      offset: e$offset
+    })
+  }
+  return e
+}()
 var E = {
   overflow: "auto",
   willChange: "transform",
   WebkitOverflowScrolling: "touch"
-};
+}
 var O = {
   position: "relative",
   width: "100%",
   minHeight: "100%"
-};
+}
 var w = {
   position: "absolute",
   top: 0,
   left: 0,
   width: "100%"
-};
+}
 var C = l({}, w, {
   position: "sticky"
-});
+})
 var T = function (e) {
   function t() {
-    var t = null !== e && e.apply(this, arguments) || this;
+    var t = null !== e && e.apply(this, arguments) || this
     t.itemSizeGetter = function (e) {
       return function (n) {
-        return t.getSize(n, e);
-      };
-    };
+        return t.getSize(n, e)
+      }
+    }
     t.sizeAndPositionManager = new y({
       itemCount: t.props.itemCount,
       itemSizeGetter: t.itemSizeGetter(t.props.itemSize),
       estimatedItemSize: t.getEstimatedItemSize()
-    });
+    })
     t.state = {
       offset: t.props.scrollOffset || null != t.props.scrollToIndex && t.getOffsetForIndex(t.props.scrollToIndex) || 0,
       scrollChangeReason: c.REQUESTED
-    };
-    t.styleCache = {};
+    }
+    t.styleCache = {}
     t.getRef = function (e) {
-      t.rootNode = e;
-    };
+      t.rootNode = e
+    }
     t.handleScroll = function (e) {
-      var n = t.props.onScroll;
-      var r = t.getNodeOffset();
+      var t$props$onScroll = t.props.onScroll
+      var r = t.getNodeOffset()
       if (!(r < 0 || t.state.offset === r || e.target !== t.rootNode)) {
         t.setState({
           offset: r,
           scrollChangeReason: c.OBSERVED
-        });
-        if ("function" === typeof n) {
-          n(r, e);
+        })
+        if ("function" === typeof t$props$onScroll) {
+          t$props$onScroll(r, e)
         }
       }
-    };
-    return t;
+    }
+    return t
   }
   (function (e, t) {
     function n() {
-      this.constructor = e;
+      this.constructor = e
     }
-    i(e, t);
-    e.prototype = null === t ? Object.create(t) : (n.prototype = t.prototype, new n());
-  })(t, e);
+    i(e, t)
+    e.prototype = null === t ? Object.create(t) : (n.prototype = t.prototype, new n())
+  })(t, e)
   t.prototype.componentDidMount = function () {
-    var e = this.props;
-    var t = e.scrollOffset;
-    var n = e.scrollToIndex;
+    var this$props = this.props
+    var this$props$scrollOffset = this$props.scrollOffset
+    var this$props$scrollToIndex = this$props.scrollToIndex
     this.rootNode.addEventListener("scroll", this.handleScroll, {
       passive: true
-    });
-    if (null != t) {
-      this.scrollTo(t);
+    })
+    if (null != this$props$scrollOffset) {
+      this.scrollTo(this$props$scrollOffset)
     } else {
-      if (null != n) {
-        this.scrollTo(this.getOffsetForIndex(n));
+      if (null != this$props$scrollToIndex) {
+        this.scrollTo(this.getOffsetForIndex(this$props$scrollToIndex))
       }
     }
-  };
+  }
   t.prototype.componentWillReceiveProps = function (e) {
-    var t = this.props;
-    var n = t.estimatedItemSize;
-    var r = t.itemCount;
-    var o = t.itemSize;
-    var i = t.scrollOffset;
-    var a = t.scrollToAlignment;
-    var s = t.scrollToIndex;
-    var l = e.scrollToIndex !== s || e.scrollToAlignment !== a;
-    var u = e.itemCount !== r || e.itemSize !== o || e.estimatedItemSize !== n;
-    if (e.itemSize !== o) {
+    var this$props = this.props
+    var this$props$estimatedItemSize = this$props.estimatedItemSize
+    var this$props$itemCount = this$props.itemCount
+    var this$props$itemSize = this$props.itemSize
+    var this$props$scrollOffset = this$props.scrollOffset
+    var this$props$scrollToAlignment = this$props.scrollToAlignment
+    var this$props$scrollToIndex = this$props.scrollToIndex
+    var l = e.scrollToIndex !== this$props$scrollToIndex || e.scrollToAlignment !== this$props$scrollToAlignment
+    var u = e.itemCount !== this$props$itemCount || e.itemSize !== this$props$itemSize || e.estimatedItemSize !== this$props$estimatedItemSize
+    if (e.itemSize !== this$props$itemSize) {
       this.sizeAndPositionManager.updateConfig({
         itemSizeGetter: this.itemSizeGetter(e.itemSize)
-      });
+      })
     }
-    if (!(e.itemCount === r && e.estimatedItemSize === n)) {
+    if (!(e.itemCount === this$props$itemCount && e.estimatedItemSize === this$props$estimatedItemSize)) {
       this.sizeAndPositionManager.updateConfig({
         itemCount: e.itemCount,
         estimatedItemSize: this.getEstimatedItemSize(e)
-      });
+      })
     }
     if (u) {
-      this.recomputeSizes();
+      this.recomputeSizes()
     }
-    if (e.scrollOffset !== i) {
+    if (e.scrollOffset !== this$props$scrollOffset) {
       this.setState({
         offset: e.scrollOffset || 0,
         scrollChangeReason: c.REQUESTED
-      });
+      })
     } else {
       if ("number" === typeof e.scrollToIndex && (l || u)) {
         this.setState({
           offset: this.getOffsetForIndex(e.scrollToIndex, e.scrollToAlignment, e.itemCount),
           scrollChangeReason: c.REQUESTED
-        });
+        })
       }
     }
-  };
+  }
   t.prototype.componentDidUpdate = function (e, t) {
-    var n = this.state;
-    var r = n.offset;
-    var o = n.scrollChangeReason;
-    if (t.offset !== r && o === c.REQUESTED) {
-      this.scrollTo(r);
+    var this$state = this.state
+    var this$state$offset = this$state.offset
+    var this$state$scrollChangeReason = this$state.scrollChangeReason
+    if (t.offset !== this$state$offset && this$state$scrollChangeReason === c.REQUESTED) {
+      this.scrollTo(this$state$offset)
     }
-  };
+  }
   t.prototype.componentWillUnmount = function () {
-    this.rootNode.removeEventListener("scroll", this.handleScroll);
-  };
+    this.rootNode.removeEventListener("scroll", this.handleScroll)
+  }
   t.prototype.scrollTo = function (e) {
-    var t = this.props.scrollDirection;
-    var n = undefined === t ? s.VERTICAL : t;
-    this.rootNode[m[n]] = e;
-  };
+    var this$props$scrollDirection = this.props.scrollDirection
+    var n = undefined === this$props$scrollDirection ? s.VERTICAL : this$props$scrollDirection
+    this.rootNode[m[n]] = e
+  }
   t.prototype.getOffsetForIndex = function (e, t, n) {
     if (undefined === t) {
-      t = this.props.scrollToAlignment;
+      t = this.props.scrollToAlignment
     }
     if (undefined === n) {
-      n = this.props.itemCount;
+      n = this.props.itemCount
     }
-    var r = this.props.scrollDirection;
-    var o = undefined === r ? s.VERTICAL : r;
+    var this$props$scrollDirection = this.props.scrollDirection
+    var o = undefined === this$props$scrollDirection ? s.VERTICAL : this$props$scrollDirection
     if (e < 0 || e >= n) {
-      e = 0;
+      e = 0
     }
     return this.sizeAndPositionManager.getUpdatedOffsetForIndex({
       align: t,
       containerSize: this.props[g[o]],
       currentOffset: this.state && this.state.offset || 0,
       targetIndex: e
-    });
-  };
+    })
+  }
   t.prototype.recomputeSizes = function (e) {
     if (undefined === e) {
-      e = 0;
+      e = 0
     }
-    this.styleCache = {};
-    this.sizeAndPositionManager.resetItem(e);
-  };
+    this.styleCache = {}
+    this.sizeAndPositionManager.resetItem(e)
+  }
   t.prototype.render = function () {
-    var e;
-    var t = this;
-    var n = this.props;
-    n.estimatedItemSize;
-    var o = n.height;
-    var i = n.overscanCount;
-    var a = undefined === i ? 3 : i;
-    var c = n.renderItem;
-    n.itemCount;
-    n.itemSize;
-    var u = n.onItemsRendered;
-    n.onScroll;
-    var d = n.scrollDirection;
-    var p = undefined === d ? s.VERTICAL : d;
-    n.scrollOffset;
-    n.scrollToIndex;
-    n.scrollToAlignment;
-    var f = n.stickyIndices;
-    var h = n.style;
-    var m = n.width;
+    var e
+    var t = this
+    var this$props = this.props
+    this$props.estimatedItemSize
+    var this$props$height = this$props.height
+    var this$props$overscanCount = this$props.overscanCount
+    var a = undefined === this$props$overscanCount ? 3 : this$props$overscanCount
+    var this$props$renderItem = this$props.renderItem
+    this$props.itemCount
+    this$props.itemSize
+    var this$props$onItemsRendered = this$props.onItemsRendered
+    this$props.onScroll
+    var this$props$scrollDirection = this$props.scrollDirection
+    var p = undefined === this$props$scrollDirection ? s.VERTICAL : this$props$scrollDirection
+    this$props.scrollOffset
+    this$props.scrollToIndex
+    this$props.scrollToAlignment
+    var this$props$stickyIndices = this$props.stickyIndices
+    var this$props$style = this$props.style
+    var this$props$width = this$props.width
     var _ = function (e, t) {
-      var n = {};
+      var n = {}
       for (var r in e) if (Object.prototype.hasOwnProperty.call(e, r) && t.indexOf(r) < 0) {
-        n[r] = e[r];
+        n[r] = e[r]
       }
       if (null != e && "function" === typeof Object.getOwnPropertySymbols) {
-        var o = 0;
+        var o = 0
         for (r = Object.getOwnPropertySymbols(e); o < r.length; o++) {
           if (t.indexOf(r[o]) < 0) {
-            n[r[o]] = e[r[o]];
+            n[r[o]] = e[r[o]]
           }
         }
       }
-      return n;
-    }(n, ["estimatedItemSize", "height", "overscanCount", "renderItem", "itemCount", "itemSize", "onItemsRendered", "onScroll", "scrollDirection", "scrollOffset", "scrollToIndex", "scrollToAlignment", "stickyIndices", "style", "width"]);
-    var v = this.state.offset;
+      return n
+    }(this$props, ["estimatedItemSize", "height", "overscanCount", "renderItem", "itemCount", "itemSize", "onItemsRendered", "onScroll", "scrollDirection", "scrollOffset", "scrollToIndex", "scrollToAlignment", "stickyIndices", "style", "width"])
+    var this$state$offset = this.state.offset
     var b = this.sizeAndPositionManager.getVisibleRange({
       containerSize: this.props[g[p]] || 0,
-      offset: v,
+      offset: this$state$offset,
       overscanCount: a
-    });
-    var y = b.start;
-    var w = b.stop;
-    var C = [];
-    var T = l({}, E, h, {
-      height: o,
-      width: m
-    });
-    var S = l({}, O, ((e = {})[g[p]] = this.sizeAndPositionManager.getTotalSize(), e));
-    if (null != f && 0 !== f.length) {
-      f.forEach(function (e) {
-        return C.push(c({
+    })
+    var b$start = b.start
+    var b$stop = b.stop
+    var C = []
+    var T = l({}, E, this$props$style, {
+      height: this$props$height,
+      width: this$props$width
+    })
+    var S = l({}, O, ((e = {})[g[p]] = this.sizeAndPositionManager.getTotalSize(), e))
+    if (null != this$props$stickyIndices && 0 !== this$props$stickyIndices.length) {
+      this$props$stickyIndices.forEach(function (e) {
+        return C.push(this$props$renderItem({
           index: e,
           style: t.getStyle(e, true)
-        }));
-      });
+        }))
+      })
       if (p === s.HORIZONTAL) {
-        S.display = "flex";
+        S.display = "flex"
       }
     }
-    if ("undefined" !== typeof y && "undefined" !== typeof w) {
-      for (var I = y; I <= w; I++) {
-        if (!(null != f && f.includes(I))) {
-          C.push(c({
+    if ("undefined" !== typeof b$start && "undefined" !== typeof b$stop) {
+      for (var I = b$start; I <= b$stop; I++) {
+        if (!(null != this$props$stickyIndices && this$props$stickyIndices.includes(I))) {
+          C.push(this$props$renderItem({
             index: I,
             style: this.getStyle(I, false)
-          }));
+          }))
         }
       }
-      if ("function" === typeof u) {
-        u({
-          startIndex: y,
-          stopIndex: w
-        });
+      if ("function" === typeof this$props$onItemsRendered) {
+        this$props$onItemsRendered({
+          startIndex: b$start,
+          stopIndex: b$stop
+        })
       }
     }
     return r.createElement("div", l({
@@ -468,41 +468,41 @@ var T = function (e) {
       style: T
     }), r.createElement("div", {
       style: S
-    }, C));
-  };
+    }, C))
+  }
   t.prototype.getNodeOffset = function () {
-    var e = this.props.scrollDirection;
-    var t = undefined === e ? s.VERTICAL : e;
-    return this.rootNode[m[t]];
-  };
+    var this$props$scrollDirection = this.props.scrollDirection
+    var t = undefined === this$props$scrollDirection ? s.VERTICAL : this$props$scrollDirection
+    return this.rootNode[m[t]]
+  }
   t.prototype.getEstimatedItemSize = function (e) {
     if (undefined === e) {
-      e = this.props;
+      e = this.props
     }
-    return e.estimatedItemSize || "number" === typeof e.itemSize && e.itemSize || 50;
-  };
+    return e.estimatedItemSize || "number" === typeof e.itemSize && e.itemSize || 50
+  }
   t.prototype.getSize = function (e, t) {
-    return "function" === typeof t ? t(e) : Array.isArray(t) ? t[e] : t;
-  };
+    return "function" === typeof t ? t(e) : Array.isArray(t) ? t[e] : t
+  }
   t.prototype.getStyle = function (e, t) {
-    var n = this.styleCache[e];
+    var n = this.styleCache[e]
     if (n) {
-      return n;
+      return n
     }
-    var r;
-    var o;
-    var i = this.props.scrollDirection;
-    var a = undefined === i ? s.VERTICAL : i;
-    var c = this.sizeAndPositionManager.getSizeAndPositionForIndex(e);
-    var u = c.size;
-    var d = c.offset;
-    return this.styleCache[e] = t ? l({}, C, ((r = {})[g[a]] = u, r[v[a]] = d, r[b[a]] = -(d + u), r.zIndex = 1, r)) : l({}, w, ((o = {})[g[a]] = u, o[_[a]] = d, o));
-  };
+    var r
+    var o
+    var this$props$scrollDirection = this.props.scrollDirection
+    var a = undefined === this$props$scrollDirection ? s.VERTICAL : this$props$scrollDirection
+    var c = this.sizeAndPositionManager.getSizeAndPositionForIndex(e)
+    var c$size = c.size
+    var c$offset = c.offset
+    return this.styleCache[e] = t ? l({}, C, ((r = {})[g[a]] = c$size, r[v[a]] = c$offset, r[b[a]] = -(c$offset + c$size), r.zIndex = 1, r)) : l({}, w, ((o = {})[g[a]] = c$size, o[_[a]] = c$offset, o))
+  }
   t.defaultProps = {
     overscanCount: 3,
     scrollDirection: s.VERTICAL,
     width: "100%"
-  };
+  }
   t.propTypes = {
     estimatedItemSize: o.number,
     height: o.oneOfType([o.number, o.string]).isRequired,
@@ -519,7 +519,7 @@ var T = function (e) {
     stickyIndices: o.arrayOf(o.number),
     style: o.object,
     width: o.oneOfType([o.number, o.string])
-  };
-  return t;
-}(r.PureComponent);
-exports.a = T;
+  }
+  return t
+}(r.PureComponent)
+exports.a = T

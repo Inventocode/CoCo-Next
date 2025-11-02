@@ -4,4 +4,4 @@
  * 模块 ID：1555
  */
 
-require("./1541/438/index")("toStringTag");
+require("./1541/438/index")("toStringTag")

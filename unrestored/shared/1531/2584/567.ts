@@ -12,4 +12,4 @@ module.exports = {
   playMenu: "style_playMenu__3i1i-",
   menuIcon: "style_menuIcon__30Cs8",
   menuText: "style_menuText__AEm9f"
-};
+}

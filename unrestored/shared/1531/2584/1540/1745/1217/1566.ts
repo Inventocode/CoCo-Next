@@ -4,12 +4,12 @@
  * 模块 ID：1566
  */
 
-var r = require("../../1659/241");
-var o = require("../../1646/827/1218");
+var r = require("../../1659/241")
+var o = require("../../1646/827/1218")
 module.exports = function (e, t, n, i) {
   try {
-    return i ? t(r(n)[0], n[1]) : t(n);
+    return i ? t(r(n)[0], n[1]) : t(n)
   } catch (a) {
-    o(e, "throw", a);
+    o(e, "throw", a)
   }
-};
+}

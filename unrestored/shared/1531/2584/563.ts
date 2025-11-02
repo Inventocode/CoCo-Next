@@ -14,4 +14,4 @@ module.exports = {
   progressInner: "SaveProgress_progressInner__3CnxQ",
   main: "SaveProgress_main__lgYAm",
   container: "SaveProgress_container__1YkZ-"
-};
+}

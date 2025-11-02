@@ -4,4 +4,4 @@
  * 模块 ID：110
  */
 
-module.exports = require("./1/1053");
+module.exports = require("./1/1053")

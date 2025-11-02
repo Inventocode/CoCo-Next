@@ -64,4 +64,4 @@ module.exports = {
   editBtn: "style_editBtn__3FaP8",
   loadingArea: "style_loadingArea__2hesC",
   btnContent: "style_btnContent__2v1v5"
-};
+}

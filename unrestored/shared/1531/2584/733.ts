@@ -4,38 +4,38 @@
  * 模块 ID：733
  */
 
-"use strict";
+"use strict"
 
-import r = require("react");
+import React = require("react");
 import o = require("./8");
 var i = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
-    return module.default;
+    return module.default
   } : function () {
-    return module;
-  };
+    return module
+  }
   Object.defineProperty(defaultExport, "a", {
     enumerable: true,
     get: defaultExport
-  });
-  return defaultExport;
-}(o);
-var _a;
+  })
+  return defaultExport
+}(o)
+var _a
 _a = function (e) {
-  var t;
-  var n = e.className;
-  var o = e.customizeIcon;
-  var a = e.customizeIconProps;
-  var s = e.onMouseDown;
-  var c = e.onClick;
-  var l = e.children;
-  t = "function" === typeof o ? o(a) : o;
-  return r.createElement("span", {
-    className: n,
+  var t
+  var e$className = e.className
+  var e$customizeIcon = e.customizeIcon
+  var e$customizeIconProps = e.customizeIconProps
+  var e$onMouseDown = e.onMouseDown
+  var e$onClick = e.onClick
+  var e$children = e.children
+  t = "function" === typeof e$customizeIcon ? e$customizeIcon(e$customizeIconProps) : e$customizeIcon
+  return React.createElement("span", {
+    className: e$className,
     onMouseDown: function (e) {
-      e.preventDefault();
-      if (s) {
-        s(e);
+      e.preventDefault()
+      if (e$onMouseDown) {
+        e$onMouseDown(e)
       }
     },
     style: {
@@ -43,13 +43,13 @@ _a = function (e) {
       WebkitUserSelect: "none"
     },
     unselectable: "on",
-    onClick: c,
+    onClick: e$onClick,
     "aria-hidden": true
-  }, undefined !== t ? t : r.createElement("span", {
-    className: i()(n.split(/\s+/).map(function (e) {
-      return "".concat(e, "-icon");
+  }, undefined !== t ? t : React.createElement("span", {
+    className: i()(e$className.split(/\s+/).map(function (e) {
+      return "".concat(e, "-icon")
     }))
-  }, l));
-};
-export { _a as a };
-export default _a;
+  }, e$children))
+}
+export { _a as a }
+export default _a

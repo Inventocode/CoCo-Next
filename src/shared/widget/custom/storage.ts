@@ -1,4 +1,4 @@
-"use strict";
+"use strict"
 
 export { addUnsafeExtension as a }
 export { getExtension as f }
@@ -11,22 +11,22 @@ import * as t from "./types"
 import * as Type from "./type"
 
 export interface UnsafeExtensionStorage extends UnsafeExtensionFileStorage {
-  types: t.Types
+  types: t.Types;
 }
 
 export interface SafeExtensionStorage extends SafeExtensionFileStorage {
-  types: t.Types
+  types: t.Types;
 }
 
 export interface UnsafeExtensionFileStorage {
-  type: string
-  code: string
+  type: string;
+  code: string;
 }
 
 export interface SafeExtensionFileStorage {
-  id: number
-  type: string
-  cdnUrl: string
+  id: number;
+  type: string;
+  cdnUrl: string;
 }
 
 const safeExtensions = new Map<string, SafeExtensionStorage>()
@@ -49,9 +49,9 @@ export function getUnsafeExtension(type: string) {
 }
 
 export function unsafeExtensionsToFileStorage(): UnsafeExtensionFileStorage[] {
-  return Array.from(unsafeExtensions.values())
-    .filter(({ type }) => Type.isExtensions(type))
-    .map(({ type, code }) => ({ type, code }))
+  return Array.from(unsafeExtensions.values()).
+  filter(({ type }) => Type.isExtensions(type)).
+  map(({ type, code }) => ({ type, code }))
 }
 
 export function safeExtensionsToFileStorage() {
@@ -66,7 +66,7 @@ export function safeExtensionsToFileStorage() {
 }
 
 export function clear() {
-  Array.from(unsafeExtensions.keys()).forEach(type => {
+  Array.from(unsafeExtensions.keys()).forEach((type) => {
     if (Type.isExtensions(type)) {
       unsafeExtensions.delete(type)
     }

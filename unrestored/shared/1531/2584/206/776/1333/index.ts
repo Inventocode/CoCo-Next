@@ -4,26 +4,26 @@
  * 模块 ID：1333
  */
 
-"use strict";
+"use strict"
 
-var r = require("../842");
-var i = require("../../../38/607/624/index");
-var o = require("./2207/index");
+var r = require("../842")
+var i = require("../../../38/607/624/index")
+var o = require("./2207/index")
 var a = function (e, t) {
   for (var n = {}, r = 0, o = Object.entries(e); r < o.length; r++) {
-    var a = i(o[r], 2);
-    var s = a[0];
-    var c = a[1];
+    var a = i(o[r], 2)
+    var s = a[0]
+    var c = a[1]
     if (!Object.hasOwnProperty.call(t, s)) {
-      n[s] = c;
+      n[s] = c
     }
   }
-  return n;
-}(o.es2015, o.es5);
+  return n
+}(o.es2015, o.es5)
 var s = {
   Atomics: false,
   SharedArrayBuffer: false
-};
+}
 module.exports = new Map(Object.entries({
   builtin: {
     globals: o.es5
@@ -138,4 +138,4 @@ module.exports = new Map(Object.entries({
   greasemonkey: {
     globals: o.greasemonkey
   }
-}));
+}))

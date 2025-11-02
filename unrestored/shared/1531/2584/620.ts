@@ -11,4 +11,4 @@ module.exports = {
   playArea: "style_playArea__Bef48",
   infoArea: "style_infoArea__q5FsJ",
   selectedIconWrap: "style_selectedIconWrap__udtBb"
-};
+}

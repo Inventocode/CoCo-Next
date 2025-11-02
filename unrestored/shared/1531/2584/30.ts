@@ -44,4 +44,4 @@ module.exports = {
   bannerImgSlot: "style_bannerImgSlot__28S_8",
   descSlot1: "style_descSlot1__35eTr",
   descSlot2: "style_descSlot2__3wSkr"
-};
+}

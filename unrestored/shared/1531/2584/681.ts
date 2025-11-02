@@ -4,10 +4,10 @@
  * 模块 ID：681
  */
 
-"use strict";
+"use strict"
 
-export { r as messages };
-export { b as types } from "./540";
+export { r as messages }
+export { b as types } from "./540"
 var r = {
   "zh-CN": {
     widgetNameMsg: "识别二维码",
@@ -19,5 +19,5 @@ var r = {
     contentMsg: "识别结果",
     errorMsg: "失败原因"
   }
-};
+}
 import o = require("./540");

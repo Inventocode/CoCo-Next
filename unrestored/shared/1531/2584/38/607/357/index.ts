@@ -4,19 +4,19 @@
  * 模块 ID：357
  */
 
-var r = require("../1970/529");
-var i = require("./1298");
-var o = require("./1968/index");
+var r = require("../1970/529")
+var i = require("./1298")
+var o = require("./1968/index")
 module.exports = function (e) {
   return function () {
-    var t;
-    var n = r(e);
+    var t
+    var n = r(e)
     if (i()) {
-      var a = r(this).constructor;
-      t = Reflect.construct(n, arguments, a);
+      var rThis$constructor = r(this).constructor
+      t = Reflect.construct(n, arguments, rThis$constructor)
     } else {
-      t = n.apply(this, arguments);
+      t = n.apply(this, arguments)
     }
-    return o(this, t);
-  };
-};
+    return o(this, t)
+  }
+}

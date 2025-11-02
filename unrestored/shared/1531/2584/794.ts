@@ -9,4 +9,4 @@ module.exports = {
   saveBtn: "SaveFailedDialog_saveBtn__13Loc",
   cancelBtn: "SaveFailedDialog_cancelBtn__3UPNy",
   retryBtn: "SaveFailedDialog_retryBtn__iKdJm"
-};
+}

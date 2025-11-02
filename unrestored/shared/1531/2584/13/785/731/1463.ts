@@ -4,8 +4,8 @@
  * 模块 ID：1463
  */
 
-"use strict";
+"use strict"
 
 exports.a = function () {
-  return false;
-};
+  return false
+}

@@ -15,4 +15,4 @@ module.exports = {
   right: "ResizableLayout_right__SyQMU",
   row: "ResizableLayout_row__2ab31",
   col: "ResizableLayout_col__2i2MU"
-};
+}

@@ -4,12 +4,12 @@
  * 模块 ID：379
  */
 
-"use strict";
+"use strict"
 
-var r;
+var r
 export { r as a };
 (function (e) {
-  e.BUTTON = "BUTTON";
-  e.DEFAULT = "DEFAULT";
-})(r || (r = {}));
-export default r;
+  e.BUTTON = "BUTTON"
+  e.DEFAULT = "DEFAULT"
+})(r || (r = {}))
+export default r

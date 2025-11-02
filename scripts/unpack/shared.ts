@@ -104,6 +104,7 @@ unpack({
         98: "../../src/shared/widget/custom/storage",
         182: "../../src/shared/widget/custom/shop",
         233: "../../src/shared/widget/custom/restrict",
+        262: "../../src/editor/block/toolbox",
         301: "../../src/editor/block/generate",
         345: "../../src/shared/widget/custom/external-module",
         1531: ".",

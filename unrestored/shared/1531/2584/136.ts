@@ -53,4 +53,4 @@ module.exports = {
   avatarItem: "style_avatarItem__1t3I7",
   avatarImg: "style_avatarImg__3Geo7",
   itemName: "style_itemName__YxOUj"
-};
+}

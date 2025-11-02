@@ -47,4 +47,4 @@ module.exports = {
   btnConfirm: "style_btnConfirm__1ACj3",
   btnCancel: "style_btnCancel__1bVI5",
   uploadBtn: "style_uploadBtn__2jZy_"
-};
+}

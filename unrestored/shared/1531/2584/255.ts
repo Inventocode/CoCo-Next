@@ -71,4 +71,4 @@ module.exports = {
   modeTemplate: "style_modeTemplate__18Dvu",
   modeImage: "style_modeImage__2D1fs",
   backgroundSelected: "style_backgroundSelected__1Ntco"
-};
+}

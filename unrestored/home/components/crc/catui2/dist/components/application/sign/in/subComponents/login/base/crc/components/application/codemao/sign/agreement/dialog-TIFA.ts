@@ -4,48 +4,48 @@
  * 模块 ID：TIFA
  */
 
-"use strict";
+"use strict"
 
 /* harmony export (binding) */
 /* harmony import */
-export { SignAgreementDialog };
-import * as __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__ from "@babel/runtime/helpers/esm/asyncToGenerator";
+export { SignAgreementDialog }
+import * as __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__ from "@babel/runtime/helpers/esm/asyncToGenerator"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__ from "@babel/runtime/helpers/esm/slicedToArray";
+import * as __WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__ from "@babel/runtime/helpers/esm/slicedToArray"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_2__babel_runtime_regenerator__ from "@babel/runtime/regenerator";
+import * as __WEBPACK_IMPORTED_MODULE_2__babel_runtime_regenerator__ from "@babel/runtime/regenerator"
 /* harmony import */
-import __WEBPACK_IMPORTED_MODULE_2__babel_runtime_regenerator___default from "@babel/runtime/regenerator";
+import __WEBPACK_IMPORTED_MODULE_2__babel_runtime_regenerator___default from "@babel/runtime/regenerator"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_3_react__ from "react";
+import * as __WEBPACK_IMPORTED_MODULE_3_react__ from "react"
 /* harmony import */
-import __WEBPACK_IMPORTED_MODULE_3_react___default from "react";
+import __WEBPACK_IMPORTED_MODULE_3_react___default from "react"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_4__base_dialog__ from "../../../../../../../../../base/dialog-ymrb";
+import * as __WEBPACK_IMPORTED_MODULE_4__base_dialog__ from "../../../../../../../../../base/dialog-ymrb"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_5__base_button__ from "../../../../../../../../../base/button-sg+3";
+import * as __WEBPACK_IMPORTED_MODULE_5__base_button__ from "../../../../../../../../../base/button-sg+3"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_6__base_checkbox__ from "../../../../base/checkbox-Bqxa";
+import * as __WEBPACK_IMPORTED_MODULE_6__base_checkbox__ from "../../../../base/checkbox-Bqxa"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_7__api__ from "./api-d58N";
+import * as __WEBPACK_IMPORTED_MODULE_7__api__ from "./api-d58N"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_8__style_module_css__ from "./style.module.css-SxYT";
+import * as __WEBPACK_IMPORTED_MODULE_8__style_module_css__ from "./style.module.css-SxYT"
 /* harmony import */
-import __WEBPACK_IMPORTED_MODULE_8__style_module_css___default from "./style.module.css-SxYT";
-var isRequesting = false;
+import __WEBPACK_IMPORTED_MODULE_8__style_module_css___default from "./style.module.css-SxYT"
+var isRequesting = false
 var SignAgreementDialog = function SignAgreementDialog(props) {
-  var children = props.children;
-  var onClose = props.onClose;
-  var onSignSuccess = props.onSignSuccess;
-  var onSignError = props.onSignError;
-  var _useState = __WEBPACK_IMPORTED_MODULE_3_react__.useState(false);
-  var _useState2 = __WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default(_useState, 2);
-  var isAgreed = _useState2[0];
-  var setIsAgreed = _useState2[1];
-  var _useState3 = __WEBPACK_IMPORTED_MODULE_3_react__.useState(true);
-  var _useState4 = __WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default(_useState3, 2);
-  var show = _useState4[0];
-  var setShow = _useState4[1];
+  var children = props.children
+  var onClose = props.onClose
+  var onSignSuccess = props.onSignSuccess
+  var onSignError = props.onSignError
+  var _useState = __WEBPACK_IMPORTED_MODULE_3_react__.useState(false)
+  var _useState2 = __WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default(_useState, 2)
+  var isAgreed = _useState2[0]
+  var setIsAgreed = _useState2[1]
+  var _useState3 = __WEBPACK_IMPORTED_MODULE_3_react__.useState(true)
+  var _useState4 = __WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default(_useState3, 2)
+  var show = _useState4[0]
+  var setShow = _useState4[1]
   return /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_3_react___default.createElement(__WEBPACK_IMPORTED_MODULE_4__base_dialog__.Dialog, {
     show: show,
     closeBtn: {
@@ -100,38 +100,38 @@ var SignAgreementDialog = function SignAgreementDialog(props) {
         while (1) {
           switch (_context.prev = _context.next) {
             case 0:
-              _context.prev = 0;
+              _context.prev = 0
               if (!isRequesting) {
-                _context.next = 3;
-                break;
+                _context.next = 3
+                break
               }
-              return _context.abrupt("return");
+              return _context.abrupt("return")
             case 3:
-              isRequesting = true;
-              _context.next = 6;
-              return __WEBPACK_IMPORTED_MODULE_7__api__.signContract();
+              isRequesting = true
+              _context.next = 6
+              return __WEBPACK_IMPORTED_MODULE_7__api__.signContract()
             case 6:
-              onSignSuccess();
-              isRequesting = false;
-              setShow(false);
-              _context.next = 16;
-              break;
+              onSignSuccess()
+              isRequesting = false
+              setShow(false)
+              _context.next = 16
+              break
             case 11:
-              _context.prev = 11;
-              _context.t0 = _context["catch"](0);
-              console.error(_context.t0);
-              isRequesting = false;
+              _context.prev = 11
+              _context.t0 = _context["catch"](0)
+              console.error(_context.t0)
+              isRequesting = false
               if (onSignError) {
-                onSignError(_context.t0);
+                onSignError(_context.t0)
               }
             case 16:
             case "end":
-              return _context.stop();
+              return _context.stop()
           }
         }
-      }, _callee, null, [[0, 11]]);
+      }, _callee, null, [[0, 11]])
     }))
-  }, "确定签订")))));
-};
+  }, "确定签订")))))
+}
 
 /***/

@@ -4,14 +4,14 @@
  * 模块 ID：1010
  */
 
-"use strict";
+"use strict"
 
-export { o as a };
+export { o as a }
 var r = {
   adjustX: 1,
   adjustY: 1
-};
-var i = [0, 0];
+}
+var i = [0, 0]
 var o = {
   left: {
     points: ["cr", "cl"],
@@ -85,5 +85,5 @@ var o = {
     offset: [-4, 0],
     targetOffset: i
   }
-};
-export default o;
+}
+export default o

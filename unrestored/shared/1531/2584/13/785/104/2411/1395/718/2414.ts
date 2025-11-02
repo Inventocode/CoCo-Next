@@ -4,7 +4,7 @@
  * 模块 ID：2414
  */
 
-var n = Object.prototype.toString;
+var object$prototype$toString = Object.prototype.toString
 module.exports = function (e) {
-  return n.call(e);
-};
+  return object$prototype$toString.call(e)
+}

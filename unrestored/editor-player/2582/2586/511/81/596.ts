@@ -4,37 +4,37 @@
  * 模块 ID：596
  */
 
-"use strict";
+"use strict"
 
-var n = require("./166");
+var n = require("./166")
 var o = function () {
   var t = function (e, r) {
     return (t = Object.setPrototypeOf || {
       __proto__: []
     } instanceof Array && function (t, e) {
-      t.__proto__ = e;
+      t.__proto__ = e
     } || function (t, e) {
       for (var r in e) if (e.hasOwnProperty(r)) {
-        t[r] = e[r];
+        t[r] = e[r]
       }
-    })(e, r);
-  };
+    })(e, r)
+  }
   return function (e, r) {
     function n() {
-      this.constructor = e;
+      this.constructor = e
     }
-    t(e, r);
-    e.prototype = null === r ? Object.create(r) : (n.prototype = r.prototype, new n());
-  };
-}();
+    t(e, r)
+    e.prototype = null === r ? Object.create(r) : (n.prototype = r.prototype, new n())
+  }
+}()
 var i = function (t) {
   function e() {
-    return null !== t && t.apply(this, arguments) || this;
+    return null !== t && t.apply(this, arguments) || this
   }
-  o(e, t);
+  o(e, t)
   e.forName = function (t) {
-    return this.getCharacterSetECIByName(t);
-  };
-  return e;
-}(n.a);
-exports.a = i;
+    return this.getCharacterSetECIByName(t)
+  }
+  return e
+}(n.a)
+exports.a = i

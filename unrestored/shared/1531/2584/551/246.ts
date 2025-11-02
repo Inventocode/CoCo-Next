@@ -18,4 +18,4 @@ module.exports = {
   selected: "style_selected__3FX8T",
   defaultRadioSelected: "style_defaultRadioSelected__18jbk",
   buttonRadioInner: "style_buttonRadioInner__2ZxPf"
-};
+}

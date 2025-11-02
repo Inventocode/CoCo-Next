@@ -14,4 +14,4 @@ module.exports = {
   playArea: "style_playArea__1_n5F",
   nameArea: "style_nameArea__2OCq7",
   add: "style_add__24h7l"
-};
+}

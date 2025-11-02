@@ -4,11 +4,11 @@
  * 模块 ID：540
  */
 
-"use strict";
+"use strict"
 
-export { r as a };
-export { o as b };
-var r = "QR_SCANNER_WIDGET";
+export { r as a }
+export { o as b }
+var r = "QR_SCANNER_WIDGET"
 var o = {
   type: r,
   icon: "icon-scan-qr-code",
@@ -48,5 +48,5 @@ var o = {
       valueType: "string"
     }]
   }]
-};
-export default r;
+}
+export default r

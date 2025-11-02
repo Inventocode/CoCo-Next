@@ -4,21 +4,21 @@
  * 模块 ID：909
  */
 
-"use strict";
+"use strict"
 
 function r() {
-  for (var e = arguments.length, t = new Array(e), n = 0; n < e; n++) {
-    t[n] = arguments[n];
+  for (var _arguments$length = arguments.length, t = new Array(_arguments$length), n = 0; n < _arguments$length; n++) {
+    t[n] = arguments[n]
   }
   return t.reduce(function (e, t) {
     return null == t ? e : function () {
-      for (var n = arguments.length, r = new Array(n), i = 0; i < n; i++) {
-        r[i] = arguments[i];
+      for (var arguments$length = arguments.length, r = new Array(arguments$length), i = 0; i < arguments$length; i++) {
+        r[i] = arguments[i]
       }
-      e.apply(this, r);
-      t.apply(this, r);
-    };
-  }, function () {});
+      e.apply(this, r)
+      t.apply(this, r)
+    }
+  }, function () {})
 }
-export { r as a };
-export default r;
+export { r as a }
+export default r

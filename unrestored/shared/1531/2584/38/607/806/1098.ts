@@ -4,16 +4,16 @@
  * 模块 ID：1098
  */
 
-var r = require("./1965/1297");
+var r = require("./1965/1297")
 module.exports = function (e, t) {
   if (e) {
     if ("string" === typeof e) {
-      return r(e, t);
+      return r(e, t)
     }
-    var n = Object.prototype.toString.call(e).slice(8, -1);
+    var n = Object.prototype.toString.call(e).slice(8, -1)
     if ("Object" === n && e.constructor) {
-      n = e.constructor.name;
+      n = e.constructor.name
     }
-    return "Map" === n || "Set" === n ? Array.from(n) : "Arguments" === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n) ? r(e, t) : undefined;
+    return "Map" === n || "Set" === n ? Array.from(n) : "Arguments" === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n) ? r(e, t) : undefined
   }
-};
+}

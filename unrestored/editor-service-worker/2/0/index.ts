@@ -4,4 +4,4 @@
  * 模块 ID：0
  */
 
-module.exports = require("./1");
+module.exports = require("./1")

@@ -4,16 +4,16 @@
  * 模块 ID：689
  */
 
-"use strict";
+"use strict"
 
 function r(e, t) {
   if ("function" === typeof e) {
-    e(t);
+    e(t)
   } else {
     if (e) {
-      e.current = t;
+      e.current = t
     }
   }
 }
-export { r as a };
-export default r;
+export { r as a }
+export default r

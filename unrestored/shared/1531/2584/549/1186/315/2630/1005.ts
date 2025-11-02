@@ -4,7 +4,7 @@
  * 模块 ID：1005
  */
 
-"use strict";
+"use strict"
 
 exports.a = {
   mobileStepper: 1e3,
@@ -14,4 +14,4 @@ exports.a = {
   modal: 1300,
   snackbar: 1400,
   tooltip: 1500
-};
+}

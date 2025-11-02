@@ -4,12 +4,12 @@
  * 模块 ID：3MyY
  */
 
-"use strict";
+"use strict"
 
 /* harmony export (binding) */
 /* harmony import */
-export { themeVioletColor };
-import * as __WEBPACK_IMPORTED_MODULE_0__supColor__ from "./supColor-qumQ";
+export { themeVioletColor }
+import * as __WEBPACK_IMPORTED_MODULE_0__supColor__ from "./supColor-qumQ"
 var themeVioletColor = {
   /* 色板主色：主色(0) —— +9 */
   "theme-color-0": "148,41,255",
@@ -71,6 +71,6 @@ var themeVioletColor = {
 
   "theme-color-c2": __WEBPACK_IMPORTED_MODULE_0__supColor__.themeSupColor["sup-color-n1-2"]
   /* 提示线、运行按钮 -2 */
-};
+}
 
 /***/

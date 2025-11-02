@@ -4,12 +4,12 @@
  * 模块 ID：2145
  */
 
-"use strict";
+"use strict"
 
 Object.defineProperty(exports, "__esModule", {
   value: true
-});
-exports.zh_hant = undefined;
+})
+exports.zh_hant = undefined
 exports.zh_hant = {
   DUPLICATE_BLOCK: "複製",
   COPY_ALL: "複製所有積木（ %1 個)",
@@ -167,4 +167,4 @@ exports.zh_hant = {
   OPACITY: "不透明度",
   SELECT_COLOR_PARAM_TYPE: "選參方式",
   COLOR_PREVIEW: "顏色預覽"
-};
+}

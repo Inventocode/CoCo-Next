@@ -341,14 +341,14 @@ function n() {
     "wrap-through": false,
     "writing-mode": false,
     "z-index": false
-  };
-  return e;
+  }
+  return e
 }
-var r = /javascript\s*\:/gim;
-exports.whiteList = n();
-exports.getDefaultWhiteList = n;
-exports.onAttr = function (e, t, n) {};
-exports.onIgnoreAttr = function (e, t, n) {};
+var r = /javascript\s*\:/gim
+exports.whiteList = n()
+exports.getDefaultWhiteList = n
+exports.onAttr = function (e, t, n) {}
+exports.onIgnoreAttr = function (e, t, n) {}
 exports.safeAttrValue = function (e, t) {
-  return r.test(t) ? "" : t;
-};
+  return r.test(t) ? "" : t
+}
