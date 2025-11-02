@@ -51,7 +51,9 @@ CoCo Next 期望利用更加先进的技术，深度修改 CoCo。
     - [x] 移除屏幕数量上限
 - 体验
   - [x] 导入自定义控件出错时提示
-  - [ ] 自动更新控件商城控件的链接https://static.codemao.cn/appcraft/extension-widgets/production/xh-random-uuid.js
+  - [ ] 触屏优化
+  - [ ] 移除自定义控件
+  - [ ] 自动更新控件商城控件的链接
 - 问题修复
   - [x] Undefined 修复
 

@@ -6651,6 +6651,7 @@ function loadWorkFromJSON(workJSON) {
           return Tt.b(go)
         case 24:
           on.Qb(imageFileList)
+          removeAloneShadowBlocks(blockly)
           Jt.z.replaceWorkspaces(blockly)
           En.b()
           regeneratorContext.next = 29
@@ -6780,6 +6781,23 @@ function loadWorkFromJSON(workJSON) {
     }
   }, Di)
 }
+
+/**
+ * [CoCo Next] 移除孤立的影子积木（Undefined 修复）
+ */
+function removeAloneShadowBlocks(blockly) {
+  for (const { workspaceJson } of Object.values(blockly)) {
+    const { blocks, connections, comments } = workspaceJson
+    for (const [key, block] of Object.entries(blocks)) {
+      if (block.is_shadow && block.parent_id == null) {
+        delete blocks[key]
+        delete connections[key]
+        delete comments[key]
+      }
+    }
+  }
+}
+
 function os(e) {
   var /* [auto-meaningful-name] */e$payload
   var /* [auto-meaningful-name] */e$payload$screenId
