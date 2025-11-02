@@ -4,36 +4,36 @@
  * 模块 ID：428
  */
 
-"use strict";
+"use strict"
 
-export { o as b };
-export { a };
-export { s as c };
+export { o as b }
+export { a }
+export { s as c }
 import r = require("../108");
 import i = require("../242/index");
 function o(e, t) {
   if ("function" === typeof e) {
-    e(t);
+    e(t)
   } else {
     if ("object" === r.a(e) && e && "current" in e) {
-      e.current = t;
+      e.current = t
     }
   }
 }
 function a() {
-  for (var e = arguments.length, t = new Array(e), n = 0; n < e; n++) {
-    t[n] = arguments[n];
+  for (var arguments$length = arguments.length, t = new Array(arguments$length), n = 0; n < arguments$length; n++) {
+    t[n] = arguments[n]
   }
   return function (e) {
     t.forEach(function (t) {
-      o(t, e);
-    });
-  };
+      o(t, e)
+    })
+  }
 }
 function s(e) {
-  var t;
-  var n;
-  var r = i.isMemo(e) ? e.type.type : e.type;
-  return !("function" === typeof r && !(null === (t = r.prototype) || undefined === t ? undefined : t.render)) && !("function" === typeof e && !(null === (n = e.prototype) || undefined === n ? undefined : n.render));
+  var /* [auto-meaningful-name] */r$prototype
+  var /* [auto-meaningful-name] */e$prototype
+  var r = i.isMemo(e) ? e.type.type : e.type
+  return !("function" === typeof r && !(null === (r$prototype = r.prototype) || undefined === r$prototype ? undefined : r$prototype.render)) && !("function" === typeof e && !(null === (e$prototype = e.prototype) || undefined === e$prototype ? undefined : e$prototype.render))
 }
-export default a;
+export default a

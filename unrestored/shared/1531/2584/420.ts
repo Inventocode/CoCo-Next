@@ -15,4 +15,4 @@ module.exports = {
   styleItem: "style_styleItem__1Bo1l",
   styleImg: "style_styleImg__2k33y",
   styleEmptyImg: "style_styleEmptyImg__3tPDe"
-};
+}

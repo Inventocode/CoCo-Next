@@ -4,21 +4,21 @@
  * 模块 ID：2526
  */
 
-var n = Date.now;
+var date$now = Date.now
 module.exports = function (e) {
-  var t = 0;
-  var r = 0;
+  var t = 0
+  var r = 0
   return function () {
-    var i = n();
-    var o = 16 - (i - r);
-    r = i;
+    var i = date$now()
+    var o = 16 - (i - r)
+    r = i
     if (o > 0) {
       if (++t >= 800) {
-        return arguments[0];
+        return arguments[0]
       }
     } else {
-      t = 0;
+      t = 0
     }
-    return e.apply(undefined, arguments);
-  };
-};
+    return e.apply(undefined, arguments)
+  }
+}

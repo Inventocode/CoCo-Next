@@ -4,11 +4,11 @@
  * 模块 ID：1722
  */
 
-"use strict";
+"use strict"
 
-var r = require("./1720/258/index");
-var o = require("./1721/817").indexOf;
-var i = r.aTypedArray;
+var r = require("./1720/258/index")
+var require$1721817$indexOf = require("./1721/817").indexOf
+var r$aTypedArray = r.aTypedArray;
 (0, r.exportTypedArrayMethod)("indexOf", function (e) {
-  return o(i(this), e, arguments.length > 1 ? arguments[1] : undefined);
-});
+  return require$1721817$indexOf(r$aTypedArray(this), e, arguments.length > 1 ? arguments[1] : undefined)
+})

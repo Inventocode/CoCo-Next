@@ -4,7 +4,7 @@
  * 模块 ID：29
  */
 
-"use strict";
+"use strict"
 
 function r(e, t, n) {
   if (t in e) {
@@ -13,11 +13,11 @@ function r(e, t, n) {
       enumerable: true,
       configurable: true,
       writable: true
-    });
+    })
   } else {
-    e[t] = n;
+    e[t] = n
   }
-  return e;
+  return e
 }
-export { r as a };
-export default r;
+export { r as a }
+export default r

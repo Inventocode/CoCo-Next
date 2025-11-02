@@ -4,109 +4,109 @@
  * 模块 ID：2544
  */
 
-"use strict";
+"use strict"
 
 Object.defineProperty(exports, "__esModule", {
   value: true
-});
-exports.CopyToClipboard = undefined;
-var r = i(require("react"));
-var o = i(require("./2545/index"));
+})
+exports.CopyToClipboard = undefined
+var r = i(require("react"))
+var o = i(require("./2545/index"))
 function i(e) {
   return e && e.__esModule ? e : {
     default: e
-  };
+  }
 }
 function a(e) {
   return (a = "function" === typeof Symbol && "symbol" === typeof Symbol.iterator ? function (e) {
-    return typeof e;
+    return typeof e
   } : function (e) {
-    return e && "function" === typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype ? "symbol" : typeof e;
-  })(e);
+    return e && "function" === typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype ? "symbol" : typeof e
+  })(e)
 }
 function s(e, t) {
-  var n = Object.keys(e);
+  var n = Object.keys(e)
   if (Object.getOwnPropertySymbols) {
-    var r = Object.getOwnPropertySymbols(e);
+    var r = Object.getOwnPropertySymbols(e)
     if (t) {
       r = r.filter(function (t) {
-        return Object.getOwnPropertyDescriptor(e, t).enumerable;
-      });
+        return Object.getOwnPropertyDescriptor(e, t).enumerable
+      })
     }
-    n.push.apply(n, r);
+    n.push.apply(n, r)
   }
-  return n;
+  return n
 }
 function c(e, t) {
   if (null == e) {
-    return {};
+    return {}
   }
-  var n;
-  var r;
+  var n
+  var r
   var o = function (e, t) {
     if (null == e) {
-      return {};
+      return {}
     }
-    var n;
-    var r;
-    var o = {};
-    var i = Object.keys(e);
+    var n
+    var r
+    var o = {}
+    var i = Object.keys(e)
     for (r = 0; r < i.length; r++) {
-      n = i[r];
+      n = i[r]
       if (!(t.indexOf(n) >= 0)) {
-        o[n] = e[n];
+        o[n] = e[n]
       }
     }
-    return o;
-  }(e, t);
+    return o
+  }(e, t)
   if (Object.getOwnPropertySymbols) {
-    var i = Object.getOwnPropertySymbols(e);
+    var i = Object.getOwnPropertySymbols(e)
     for (r = 0; r < i.length; r++) {
-      n = i[r];
+      n = i[r]
       if (!(t.indexOf(n) >= 0)) {
         if (Object.prototype.propertyIsEnumerable.call(e, n)) {
-          o[n] = e[n];
+          o[n] = e[n]
         }
       }
     }
   }
-  return o;
+  return o
 }
 function l(e, t) {
   if (!(e instanceof t)) {
-    throw new TypeError("Cannot call a class as a function");
+    throw new TypeError("Cannot call a class as a function")
   }
 }
 function u(e, t) {
   for (var n = 0; n < t.length; n++) {
-    var r = t[n];
-    r.enumerable = r.enumerable || false;
-    r.configurable = true;
+    var r = t[n]
+    r.enumerable = r.enumerable || false
+    r.configurable = true
     if ("value" in r) {
-      r.writable = true;
+      r.writable = true
     }
-    Object.defineProperty(e, r.key, r);
+    Object.defineProperty(e, r.key, r)
   }
 }
 function d(e, t) {
-  return !t || "object" !== a(t) && "function" !== typeof t ? f(e) : t;
+  return !t || "object" !== a(t) && "function" !== typeof t ? f(e) : t
 }
 function p(e) {
   return (p = Object.setPrototypeOf ? Object.getPrototypeOf : function (e) {
-    return e.__proto__ || Object.getPrototypeOf(e);
-  })(e);
+    return e.__proto__ || Object.getPrototypeOf(e)
+  })(e)
 }
 function f(e) {
   if (undefined === e) {
-    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+    throw new ReferenceError("this hasn't been initialised - super() hasn't been called")
   }
-  return e;
+  return e
 }
 function h(e, t) {
   return (h = Object.setPrototypeOf || function (e, t) {
-    e.__proto__ = t;
-    return e;
-  })(e, t);
+    e.__proto__ = t
+    return e
+  })(e, t)
 }
 function m(e, t, n) {
   if (t in e) {
@@ -115,43 +115,43 @@ function m(e, t, n) {
       enumerable: true,
       configurable: true,
       writable: true
-    });
+    })
   } else {
-    e[t] = n;
+    e[t] = n
   }
-  return e;
+  return e
 }
 var g = function (e) {
   function t() {
-    var e;
-    var n;
-    l(this, t);
-    for (var i = arguments.length, a = new Array(i), s = 0; s < i; s++) {
-      a[s] = arguments[s];
+    var e
+    var n
+    l(this, t)
+    for (var arguments$length = arguments.length, a = new Array(arguments$length), s = 0; s < arguments$length; s++) {
+      a[s] = arguments[s]
     }
     m(f(n = d(this, (e = p(t)).call.apply(e, [this].concat(a)))), "onClick", function (e) {
-      var t = n.props;
-      var i = t.text;
-      var a = t.onCopy;
-      var s = t.children;
-      var c = t.options;
-      var l = r.default.Children.only(s);
-      var u = (0, o.default)(i, c);
-      if (a) {
-        a(i, u);
+      var n$props = n.props
+      var n$props$text = n$props.text
+      var n$props$onCopy = n$props.onCopy
+      var n$props$children = n$props.children
+      var n$props$options = n$props.options
+      var l = r.default.Children.only(n$props$children)
+      var u = (0, o.default)(n$props$text, n$props$options)
+      if (n$props$onCopy) {
+        n$props$onCopy(n$props$text, u)
       }
       if (l && l.props && "function" === typeof l.props.onClick) {
-        l.props.onClick(e);
+        l.props.onClick(e)
       }
-    });
-    return n;
+    })
+    return n
   }
-  var n;
-  var i;
+  var n
+  var i
   var a;
   (function (e, t) {
     if ("function" !== typeof t && null !== t) {
-      throw new TypeError("Super expression must either be null or a function");
+      throw new TypeError("Super expression must either be null or a function")
     }
     e.prototype = Object.create(t && t.prototype, {
       constructor: {
@@ -159,54 +159,54 @@ var g = function (e) {
         writable: true,
         configurable: true
       }
-    });
+    })
     if (t) {
-      h(e, t);
+      h(e, t)
     }
-  })(t, e);
-  n = t;
+  })(t, e)
+  n = t
   if (i = [{
     key: "render",
     value: function () {
-      var e = this.props;
-      e.text;
-      e.onCopy;
-      e.options;
-      var t = e.children;
-      var n = c(e, ["text", "onCopy", "options", "children"]);
-      var o = r.default.Children.only(t);
+      var this$props = this.props
+      this$props.text
+      this$props.onCopy
+      this$props.options
+      var this$props$children = this$props.children
+      var n = c(this$props, ["text", "onCopy", "options", "children"])
+      var o = r.default.Children.only(this$props$children)
       return r.default.cloneElement(o, function (e) {
         for (var t = 1; t < arguments.length; t++) {
-          var n = null != arguments[t] ? arguments[t] : {};
+          var n = null != arguments[t] ? arguments[t] : {}
           if (t % 2) {
             s(n, true).forEach(function (t) {
-              m(e, t, n[t]);
-            });
+              m(e, t, n[t])
+            })
           } else {
             if (Object.getOwnPropertyDescriptors) {
-              Object.defineProperties(e, Object.getOwnPropertyDescriptors(n));
+              Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
             } else {
               s(n).forEach(function (t) {
-                Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(n, t));
-              });
+                Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(n, t))
+              })
             }
           }
         }
-        return e;
+        return e
       }({}, n, {
         onClick: this.onClick
-      }));
+      }))
     }
   }]) {
-    u(n.prototype, i);
+    u(n.prototype, i)
   }
   if (a) {
-    u(n, a);
+    u(n, a)
   }
-  return t;
-}(r.default.PureComponent);
-exports.CopyToClipboard = g;
+  return t
+}(r.default.PureComponent)
+exports.CopyToClipboard = g
 m(g, "defaultProps", {
   onCopy: undefined,
   options: undefined
-});
+})

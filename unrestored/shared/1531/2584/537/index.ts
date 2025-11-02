@@ -4,134 +4,134 @@
  * 模块 ID：537
  */
 
-"use strict";
+"use strict"
 
 import r = require("../6");
 import o = require("../10/index");
 import i = require("../8");
 var a = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
-    return module.default;
+    return module.default
   } : function () {
-    return module;
-  };
+    return module
+  }
   Object.defineProperty(defaultExport, "a", {
     enumerable: true,
     get: defaultExport
-  });
-  return defaultExport;
-}(i);
-import s = require("react");
+  })
+  return defaultExport
+}(i)
+import React = require("react");
 var c = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
-    return module.default;
+    return module.default
   } : function () {
-    return module;
-  };
+    return module
+  }
   Object.defineProperty(defaultExport, "a", {
     enumerable: true,
     get: defaultExport
-  });
-  return defaultExport;
-}(s);
+  })
+  return defaultExport
+}(React)
 import l = require("../75/index");
 var u = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
-    return module.default;
+    return module.default
   } : function () {
-    return module;
-  };
+    return module
+  }
   Object.defineProperty(defaultExport, "a", {
     enumerable: true,
     get: defaultExport
-  });
-  return defaultExport;
-}(l);
-require("./856");
+  })
+  return defaultExport
+}(l)
+require("./856")
 import d = require("../94/index");
-var _a;
-_a = s.memo(function (e) {
-  var t = e.className;
-  var n = e.style;
-  var i = e.visible;
-  var l = e.maskClosable;
-  var p = undefined !== l && l;
-  var f = e.mask;
-  var h = undefined === f || f;
-  var m = e.onClose;
-  var g = e.children;
-  var _ = e.showCloseButton;
-  var v = undefined === _ || _;
-  var b = e.withPortal;
-  var y = undefined !== b && b;
-  var E = e.title;
-  var O = e.footer;
-  var w = s.useRef(null);
-  var C = s.useRef(null);
-  var T = s.useState(false);
-  var S = o.a(T, 2);
-  S[0];
-  var I = S[1];
-  var A = document.getElementById("_cocoDialogContainer");
+var _a
+_a = React.memo(function (e) {
+  var e$className = e.className
+  var e$style = e.style
+  var e$visible = e.visible
+  var e$maskClosable = e.maskClosable
+  var p = undefined !== e$maskClosable && e$maskClosable
+  var e$mask = e.mask
+  var h = undefined === e$mask || e$mask
+  var e$onClose = e.onClose
+  var e$children = e.children
+  var e$showCloseButton = e.showCloseButton
+  var v = undefined === e$showCloseButton || e$showCloseButton
+  var e$withPortal = e.withPortal
+  var y = undefined !== e$withPortal && e$withPortal
+  var e$title = e.title
+  var e$footer = e.footer
+  var w = React.useRef(null)
+  var C = React.useRef(null)
+  var T = React.useState(false)
+  var S = o.a(T, 2)
+  S[0]
+  var I = S[1]
+  var A = document.getElementById("_cocoDialogContainer")
   if (!A) {
-    (A = document.createElement("div")).id = "_cocoDialogContainer";
-    document.body.appendChild(A);
+    (A = document.createElement("div")).id = "_cocoDialogContainer"
+    document.body.appendChild(A)
   }
-  var j = s.useCallback(function () {
-    if (m) {
-      m();
+  var j = React.useCallback(function () {
+    if (e$onClose) {
+      e$onClose()
     }
-  }, [m]);
-  var N = s.useCallback(function () {
+  }, [e$onClose])
+  var N = React.useCallback(function () {
     if (p) {
-      j();
+      j()
     }
-  }, [j, p]);
-  s.useEffect(function () {
-    var e = w.current;
+  }, [j, p])
+  React.useEffect(function () {
+    var w$current = w.current
     var t = function (e) {
-      var t;
-      if (!(null === (t = C.current) || undefined === t ? undefined : t.contains(e.target))) {
-        e.stopPropagation();
+      var /* [auto-meaningful-name] */c$current
+      if (!(null === (c$current = C.current) || undefined === c$current ? undefined : c$current.contains(e.target))) {
+        e.stopPropagation()
       }
-    };
-    if (e) {
-      e.addEventListener("keydown", t);
+    }
+    if (w$current) {
+      w$current.addEventListener("keydown", t)
     }
     return function () {
-      if (!(null === e || undefined === e)) {
-        e.removeEventListener("keydown", t);
+      if (!(null === w$current || undefined === w$current)) {
+        w$current.removeEventListener("keydown", t)
       }
-    };
-  }, []);
-  s.useEffect(function () {
-    if (i) {
-      I(true);
     }
-  }, [i]);
+  }, [])
+  React.useEffect(function () {
+    if (e$visible) {
+      I(true)
+    }
+  }, [e$visible])
   var R = c.a.createElement("div", {
     "data-html2canvas-ignore": "true",
     ref: w,
     tabIndex: -1,
-    className: a()("coco-dialog", t),
+    className: a()("coco-dialog", e$className),
     style: r.a({
-      display: i ? "block" : "none"
-    }, n)
+      display: e$visible ? "block" : "none"
+    }, e$style)
   }, h && c.a.createElement("div", {
-    className: i ? "coco-dialog-mask" : a()("coco-dialog-mask", "hidden"),
+    className: e$visible ? "coco-dialog-mask" : a()("coco-dialog-mask", "hidden"),
     onClick: N
   }), c.a.createElement("div", {
     className: "coco-dialog-scroll"
   }, c.a.createElement("div", {
-    className: i ? a()("coco-dialog-wrapper", "show") : a()("coco-dialog-wrapper", "hidden"),
+    className: e$visible ? a()("coco-dialog-wrapper", "show") : a()("coco-dialog-wrapper", "hidden"),
     onAnimationEnd: function () {
-      if (!i) {
-        I(false);
+      if (!e$visible) {
+        I(false)
       }
     }
   }, c.a.createElement("div", {
-    className: E && v ? "coco-dialog-title" : ""
-  }, E && c.a.createElement("div", null, E), v && c.a.createElement("span", {
+    className: e$title && v ? "coco-dialog-title" : ""
+  }, e$title && c.a.createElement("div", null, e$title), v && c.a.createElement("span", {
     className: "coco-dialog-close",
     onClick: j
   }, c.a.createElement(d.a, {
@@ -139,10 +139,10 @@ _a = s.memo(function (e) {
   }))), c.a.createElement("div", {
     className: "coco-dialog-content",
     ref: C
-  }, g), O && c.a.createElement("div", {
+  }, e$children), e$footer && c.a.createElement("div", {
     className: "coco-dialog-footer"
-  }, O))));
-  return y ? u.a.createPortal(R, A) : R;
-});
-export { _a as a };
-export default _a;
+  }, e$footer))))
+  return y ? u.a.createPortal(R, A) : R
+})
+export { _a as a }
+export default _a

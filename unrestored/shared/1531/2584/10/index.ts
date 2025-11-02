@@ -4,39 +4,39 @@
  * 模块 ID：10
  */
 
-"use strict";
+"use strict"
 
-export { a };
+export { a }
 import r = require("./1438");
 import i = require("./768");
 import o = require("./1439");
 function a(e, t) {
   return r.a(e) || function (e, t) {
     if ("undefined" !== typeof Symbol && Symbol.iterator in Object(e)) {
-      var n = [];
-      var r = true;
-      var i = false;
-      var o = undefined;
+      var n = []
+      var r = true
+      var i = false
+      var o = undefined
       try {
         for (var a, s = e[Symbol.iterator](); !(r = (a = s.next()).done) && (n.push(a.value), !t || n.length !== t); r = true) {
           ;
         }
       } catch (c) {
-        i = true;
-        o = c;
+        i = true
+        o = c
       } finally {
         try {
           if (!(r || null == s.return)) {
-            s.return();
+            s.return()
           }
         } finally {
           if (i) {
-            throw o;
+            throw o
           }
         }
       }
-      return n;
+      return n
     }
-  }(e, t) || i.a(e, t) || o.a();
+  }(e, t) || i.a(e, t) || o.a()
 }
-export default a;
+export default a

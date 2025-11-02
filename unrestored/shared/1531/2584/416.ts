@@ -61,4 +61,4 @@ module.exports = {
   content: "UploadImage_content__36ZOw",
   contentTitle: "UploadImage_contentTitle__2TvNk",
   imageDelete: "UploadImage_imageDelete__3APqc"
-};
+}

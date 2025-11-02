@@ -4,11 +4,11 @@
  * 模块 ID：1718
  */
 
-"use strict";
+"use strict"
 
-var r = require("./1720/258/index");
-var o = require("./1733/399").findIndex;
-var i = r.aTypedArray;
+var r = require("./1720/258/index")
+var require$1733399$findIndex = require("./1733/399").findIndex
+var r$aTypedArray = r.aTypedArray;
 (0, r.exportTypedArrayMethod)("findIndex", function (e) {
-  return o(i(this), e, arguments.length > 1 ? arguments[1] : undefined);
-});
+  return require$1733399$findIndex(r$aTypedArray(this), e, arguments.length > 1 ? arguments[1] : undefined)
+})

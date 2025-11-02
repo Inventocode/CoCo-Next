@@ -52,4 +52,4 @@ module.exports = {
   disabled: "style_disabled__XRdan",
   selected: "style_selected__1O7KT",
   changeOpacity: "style_changeOpacity__3Xrqm"
-};
+}

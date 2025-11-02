@@ -4,11 +4,11 @@
  * 模块 ID：476
  */
 
-"use strict";
+"use strict"
 
-export { r as a };
-export { o as b };
-var r = "CONTACT_PICKER_WIDGET";
+export { r as a }
+export { o as b }
+var r = "CONTACT_PICKER_WIDGET"
 var o = {
   type: r,
   icon: "icon-widget-contact-picker",
@@ -61,5 +61,5 @@ var o = {
       valueType: "string"
     }]
   }]
-};
-export default r;
+}
+export default r

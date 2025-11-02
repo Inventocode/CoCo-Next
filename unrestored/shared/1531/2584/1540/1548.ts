@@ -4,4 +4,4 @@
  * 模块 ID：1548
  */
 
-require("./1541/438/index")("iterator");
+require("./1541/438/index")("iterator")

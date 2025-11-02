@@ -4,4 +4,4 @@
  * 模块 ID：1547
  */
 
-require("./1541/438/index")("isConcatSpreadable");
+require("./1541/438/index")("isConcatSpreadable")

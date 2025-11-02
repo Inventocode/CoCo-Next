@@ -4,16 +4,16 @@
  * 模块 ID：734
  */
 
-"use strict";
+"use strict"
 
 var n = function () {
   function t() {}
   t.parseLong = function (t, e) {
     if (undefined === e) {
-      e = undefined;
+      e = undefined
     }
-    return parseInt(t, e);
-  };
-  return t;
-}();
-exports.a = n;
+    return parseInt(t, e)
+  }
+  return t
+}()
+exports.a = n

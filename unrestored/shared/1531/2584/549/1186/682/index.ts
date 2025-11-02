@@ -4,13 +4,13 @@
  * 模块 ID：682
  */
 
-"use strict";
+"use strict"
 
-export { o as a };
+export { o as a }
 import r = require("./2593");
-require("react");
+require("react")
 import i = require("../../../548/1183/701/786/index");
 function o() {
-  return r.a() || i.a;
+  return r.a() || i.a
 }
-export default o;
+export default o

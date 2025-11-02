@@ -4,55 +4,55 @@
  * 模块 ID：427
  */
 
-"use strict";
+"use strict"
 
-export { Ae as a };
-var r = {};
+export { Ae as a }
+var r = {}
 Object.defineProperty(r, "notes", {
   get: function () {
-    return se;
+    return se
   }
-});
+})
 Object.defineProperty(r, "instruments", {
   get: function () {
-    return ce;
+    return ce
   }
-});
+})
 Object.defineProperty(r, "set_instrument_by_id", {
   get: function () {
-    return ue;
+    return ue
   }
-});
+})
 Object.defineProperty(r, "beats_to_duration", {
   get: function () {
-    return le;
+    return le
   }
-});
+})
 Object.defineProperty(r, "duration_to_beats", {
   get: function () {
-    return fe;
+    return fe
   }
-});
+})
 Object.defineProperty(r, "note_id_to_key", {
   get: function () {
-    return de;
+    return de
   }
-});
+})
 Object.defineProperty(r, "note_key_to_id", {
   get: function () {
-    return he;
+    return he
   }
-});
+})
 Object.defineProperty(r, "play", {
   get: function () {
-    return pe;
+    return pe
   }
-});
+})
 Object.defineProperty(r, "midi_stop", {
   get: function () {
-    return _e;
+    return _e
   }
-});
+})
 var i = {
   "sound_player/ios_webm_error": "该设备暂时不支持播放录音音频",
   "sound_player/block_no_network": "无网络连接，作品中一些积木无法正常运行",
@@ -72,223 +72,223 @@ var i = {
   "record_error/android_permission_error": "未获取到录音权限，建议用微信扫一扫打开",
   "record_error/android_other_case": "你的设备不支持录音",
   "say/not_support": "该浏览器不支持说此类语言"
-};
-function o(e) {
-  return i[e] ? i[e] : e;
 }
-var a;
-var s;
-import c = require("lodash");
+function o(e) {
+  return i[e] ? i[e] : e
+}
+var a
+var s
+import Lodash = require("lodash");
 function u(e, t) {
   if (a) {
     a({
       type: t,
       content: e
-    });
+    })
   }
 }
 function l() {
-  return "pc" === (navigator.userAgent.indexOf("iPad") >= 0 || navigator.userAgent.indexOf("iPhone") >= 0 ? "ios" : navigator.userAgent.indexOf("Android") >= 0 ? "android" : "pc");
+  return "pc" === (navigator.userAgent.indexOf("iPad") >= 0 || navigator.userAgent.indexOf("iPhone") >= 0 ? "ios" : navigator.userAgent.indexOf("Android") >= 0 ? "android" : "pc")
 }
 function f() {
-  return !l() && (screen.width < 425 || screen.height < 425 || navigator.userAgent.indexOf("iPhone") >= 0 || navigator.userAgent.indexOf("Android") >= 0 && navigator.userAgent.indexOf("Mobile") >= 0) && navigator.userAgent.indexOf("iPhone") >= 0;
+  return !l() && (screen.width < 425 || screen.height < 425 || navigator.userAgent.indexOf("iPhone") >= 0 || navigator.userAgent.indexOf("Android") >= 0 && navigator.userAgent.indexOf("Mobile") >= 0) && navigator.userAgent.indexOf("iPhone") >= 0
 }
 var d = {
   audio_recording: false
-};
+}
 function h() {
-  window.AudioContext = window.AudioContext || window.webkitAudioContext;
-  navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mediaDevices && navigator.mediaDevices.getUserMedia;
-  window.URL = window.URL || window.webkitURL;
+  window.AudioContext = window.AudioContext || window.webkitAudioContext
+  navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mediaDevices && navigator.mediaDevices.getUserMedia
+  window.URL = window.URL || window.webkitURL
   if (AudioContext && (navigator.getUserMedia || navigator.mediaDevices && navigator.mediaDevices.getUserMedia) && URL) {
-    d.audio_recording = true;
+    d.audio_recording = true
   }
-  return d;
+  return d
 }
 function p() {
-  return navigator.userAgent.indexOf("iPad") >= 0 || navigator.userAgent.indexOf("iPhone") >= 0 ? "ios" : navigator.userAgent.indexOf("Android") >= 0 ? "android" : "pc";
+  return navigator.userAgent.indexOf("iPad") >= 0 || navigator.userAgent.indexOf("iPhone") >= 0 ? "ios" : navigator.userAgent.indexOf("Android") >= 0 ? "android" : "pc"
 }
 function _() {
-  return "pc" === p();
+  return "pc" === p()
 }
 function A() {
-  return "ios" === p();
+  return "ios" === p()
 }
 function g() {
-  return "android" === p();
+  return "android" === p()
 }
 import v = require("./1462");
 function m() {
-  var e;
-  var t;
-  var n;
-  var r = 0;
-  var i = [];
-  var o = this;
+  var /* [auto-meaningful-name] */_u$data$config$record_sample_rate
+  var /* [auto-meaningful-name] */_u$data$config$target_sample_rate
+  var /* [auto-meaningful-name] */_u$data$config$num_channels
+  var r = 0
+  var i = []
+  var o = this
   function a() {
-    for (var e = 0; e < n; e++) {
-      i[e] = [];
+    for (var e = 0; e < _u$data$config$num_channels; e++) {
+      i[e] = []
     }
   }
   function s(e, t) {
     for (var n = new Float32Array(t), r = 0, i = 0; i < e.length; i++) {
-      n.set(e[i], r);
-      r += e[i].length;
+      n.set(e[i], r)
+      r += e[i].length
     }
-    return n;
+    return n
   }
   function c(e, t, n) {
     for (var r = 0; r < n.length; r++) {
-      e.setUint8(t + r, n.charCodeAt(r));
+      e.setUint8(t + r, n.charCodeAt(r))
     }
   }
   o.onmessage = function (u) {
     switch (u.data.command) {
       case "init":
-        l = u.data.config;
+        u$data$config = u.data.config
         if (__DEV__) {
-          console.log("WAV Encoding worker init:", l);
+          console.log("WAV Encoding worker init:", u$data$config)
         }
-        e = l.record_sample_rate;
-        n = l.num_channels;
-        t = l.target_sample_rate;
-        a();
-        break;
+        _u$data$config$record_sample_rate = u$data$config.record_sample_rate
+        _u$data$config$num_channels = u$data$config.num_channels
+        _u$data$config$target_sample_rate = u$data$config.target_sample_rate
+        a()
+        break
       case "record":
         !function (e) {
-          for (var t = 0; t < n; t++) {
-            i[t].push(e[t]);
+          for (var t = 0; t < _u$data$config$num_channels; t++) {
+            i[t].push(e[t])
           }
-          r += e[0].length;
-        }(u.data.buffer);
-        break;
+          r += e[0].length
+        }(u.data.buffer)
+        break
       case "exportWAV":
         !function (a) {
-          for (var u, l = [], f = 0; f < n; f++) {
-            l.push(s(i[f], r));
+          for (var u, l = [], f = 0; f < _u$data$config$num_channels; f++) {
+            l.push(s(i[f], r))
           }
-          u = 2 === n ? function (e, t) {
-            var n = e.length + t.length;
-            var r = new Float32Array(n);
-            var i = 0;
-            var o = 0;
+          u = 2 === _u$data$config$num_channels ? function (e, t) {
+            var n = e.length + t.length
+            var r = new Float32Array(n)
+            var i = 0
+            var o = 0
             for (; i < n;) {
-              r[i++] = e[o];
-              r[i++] = t[o];
-              o++;
+              r[i++] = e[o]
+              r[i++] = t[o]
+              o++
             }
-            return r;
-          }(l[0], l[1]) : l[0];
+            return r
+          }(l[0], l[1]) : l[0]
           var d = function (e) {
-            var r = new ArrayBuffer(44 + 2 * e.length);
-            var i = new DataView(r);
-            c(i, 0, "RIFF");
-            i.setUint32(4, 36 + 2 * e.length, true);
-            c(i, 8, "WAVE");
-            c(i, 12, "fmt ");
-            i.setUint32(16, 16, true);
-            i.setUint16(20, 1, true);
-            i.setUint16(22, n, true);
-            i.setUint32(24, t, true);
-            i.setUint32(28, 4 * t, true);
-            i.setUint16(32, 2 * n, true);
-            i.setUint16(34, 16, true);
-            c(i, 36, "data");
+            var r = new ArrayBuffer(44 + 2 * e.length)
+            var i = new DataView(r)
+            c(i, 0, "RIFF")
+            i.setUint32(4, 36 + 2 * e.length, true)
+            c(i, 8, "WAVE")
+            c(i, 12, "fmt ")
+            i.setUint32(16, 16, true)
+            i.setUint16(20, 1, true)
+            i.setUint16(22, _u$data$config$num_channels, true)
+            i.setUint32(24, _u$data$config$target_sample_rate, true)
+            i.setUint32(28, 4 * _u$data$config$target_sample_rate, true)
+            i.setUint16(32, 2 * _u$data$config$num_channels, true)
+            i.setUint16(34, 16, true)
+            c(i, 36, "data")
             i.setUint32(40, 2 * e.length, true);
             (function (e, t, n) {
               for (var r = 0; r < n.length; r++, t += 2) {
-                var i = Math.max(-1, Math.min(1, n[r]));
-                e.setInt16(t, i < 0 ? 32768 * i : 32767 * i, true);
+                var i = Math.max(-1, Math.min(1, n[r]))
+                e.setInt16(t, i < 0 ? 32768 * i : 32767 * i, true)
               }
-            })(i, 44, e);
-            return i;
+            })(i, 44, e)
+            return i
           }(function (n) {
-            if (t == e) {
-              return n;
+            if (_u$data$config$target_sample_rate == _u$data$config$record_sample_rate) {
+              return n
             }
-            if (t > e) {
-              throw new Error("downsampling rate show be smaller than original sample rate");
+            if (_u$data$config$target_sample_rate > _u$data$config$record_sample_rate) {
+              throw new Error("downsampling rate show be smaller than original sample rate")
             }
-            var r = e / t;
-            var i = Math.round(n.length / r);
-            var o = new Float32Array(i);
-            var a = 0;
-            var s = 0;
+            var r = _u$data$config$record_sample_rate / _u$data$config$target_sample_rate
+            var i = Math.round(n.length / r)
+            var o = new Float32Array(i)
+            var a = 0
+            var s = 0
             for (; a < o.length;) {
               for (var c = Math.round((a + 1) * r), u = 0, l = 0, f = s; f < c && f < n.length; f++) {
-                u += n[f];
-                l++;
+                u += n[f]
+                l++
               }
-              o[a] = u / l;
-              a++;
-              s = c;
+              o[a] = u / l
+              a++
+              s = c
             }
-            return o;
-          }(u));
+            return o
+          }(u))
           var h = new Blob([d], {
             type: a
-          });
+          })
           o.postMessage({
             command: "exportWAV",
             data: h
-          });
-        }(u.data.mime_type);
-        break;
+          })
+        }(u.data.mime_type)
+        break
       case "getBuffer":
         !function () {
-          for (var e = [], t = 0; t < n; t++) {
-            e.push(s(i[t], r));
+          for (var e = [], t = 0; t < _u$data$config$num_channels; t++) {
+            e.push(s(i[t], r))
           }
           o.postMessage({
             command: "getBuffer",
             data: e
-          });
-        }();
-        break;
+          })
+        }()
+        break
       case "clear":
-        r = 0;
-        i = [];
-        a();
+        r = 0
+        i = []
+        a()
     }
-    var l;
-  };
+    var /* [auto-meaningful-name] */u$data$config
+  }
 }
-var y;
-var b;
-var w;
-var E;
-var x;
+var y
+var b
+var w
+var E
+var x
 var C = function () {
   function e(e, t) {
-    var n = this;
+    var n = this
     this.config = {
       buffer_len: 4096,
       num_channels: 2,
       sample_rate: 44100,
       mime_type: "audio/wav"
-    };
-    this._state = "inactive";
+    }
+    this._state = "inactive"
     this.callbacks = {
       getBuffer: [],
       exportWAV: []
-    };
-    c.assign(this.config, t);
-    this.context = e.context;
-    this.node = (this.context.createScriptProcessor || this.context.createJavaScriptNode).call(this.context, this.config.buffer_len, this.config.num_channels, this.config.num_channels);
+    }
+    Lodash.assign(this.config, t)
+    this.context = e.context
+    this.node = (this.context.createScriptProcessor || this.context.createJavaScriptNode).call(this.context, this.config.buffer_len, this.config.num_channels, this.config.num_channels)
     this.node.onaudioprocess = function (e) {
       if ("recording" === n._state) {
         for (var t = [], r = 0; r < n.config.num_channels; r++) {
-          t.push(e.inputBuffer.getChannelData(r));
+          t.push(e.inputBuffer.getChannelData(r))
         }
         n.worker.postMessage({
           command: "record",
           buffer: t
-        });
+        })
       }
-    };
-    e.connect(this.node);
-    this.node.connect(this.context.destination);
-    this.worker = new v(m, {});
+    }
+    e.connect(this.node)
+    this.node.connect(this.context.destination)
+    this.worker = new v(m, {})
     this.worker.postMessage({
       command: "init",
       config: {
@@ -296,217 +296,217 @@ var C = function () {
         num_channels: this.config.num_channels,
         target_sample_rate: this.config.sample_rate
       }
-    });
+    })
     this.worker.onmessage = function (e) {
       if (__DEV__) {
-        console.log("WAV Recorder onmessage:", e.data);
+        console.log("WAV Recorder onmessage:", e.data)
       }
-      var t = n.callbacks[e.data.command].pop();
+      var t = n.callbacks[e.data.command].pop()
       if ("function" == typeof t) {
-        t(e.data.data);
+        t(e.data.data)
       }
-    };
+    }
   }
   Object.defineProperty(e.prototype, "state", {
     get: function () {
-      return this._state;
+      return this._state
     },
     enumerable: true,
     configurable: true
-  });
+  })
   e.prototype.start = function () {
-    this.clear();
-    this._state = "recording";
-    this.record();
-  };
+    this.clear()
+    this._state = "recording"
+    this.record()
+  }
   e.prototype.record = function () {
-    this._state = "recording";
-  };
+    this._state = "recording"
+  }
   e.prototype.stop = function (e) {
-    this._state = "inactive";
-    this.export_wav(e);
-  };
+    this._state = "inactive"
+    this.export_wav(e)
+  }
   e.prototype.clear = function () {
     this.worker.postMessage({
       command: "clear"
-    });
-  };
+    })
+  }
   e.prototype.getBuffer = function (e) {
     if (!(e = e || this.config.callback)) {
-      throw new Error("Callback not set");
+      throw new Error("Callback not set")
     }
-    this.callbacks.getBuffer.push(e);
+    this.callbacks.getBuffer.push(e)
     this.worker.postMessage({
       command: "getBuffer"
-    });
-  };
+    })
+  }
   e.prototype.export_wav = function (e, t) {
-    t = t || this.config.mime_type;
+    t = t || this.config.mime_type
     if (!(e = e || this.config.callback)) {
-      throw new Error("Callback not set");
+      throw new Error("Callback not set")
     }
-    this.callbacks.exportWAV.push(e);
+    this.callbacks.exportWAV.push(e)
     this.worker.postMessage({
       command: "exportWAV",
       mime_type: t
-    });
-  };
-  return e;
-}();
+    })
+  }
+  return e
+}()
 var O = function (e, t, n, r) {
   return new (n || (n = Promise))(function (i, o) {
     function a(e) {
       try {
-        c(r.next(e));
+        c(r.next(e))
       } catch (t) {
-        o(t);
+        o(t)
       }
     }
     function s(e) {
       try {
-        c(r.throw(e));
+        c(r.throw(e))
       } catch (t) {
-        o(t);
+        o(t)
       }
     }
     function c(e) {
       if (e.done) {
-        i(e.value);
+        i(e.value)
       } else {
         new n(function (t) {
-          t(e.value);
-        }).then(a, s);
+          t(e.value)
+        }).then(a, s)
       }
     }
-    c((r = r.apply(e, t || [])).next());
-  });
-};
+    c((r = r.apply(e, t || [])).next())
+  })
+}
 var k = function (e, t) {
-  var n;
-  var r;
-  var i;
-  var o;
+  var n
+  var r
+  var i
+  var o
   var a = {
     label: 0,
     sent: function () {
       if (1 & i[0]) {
-        throw i[1];
+        throw i[1]
       }
-      return i[1];
+      return i[1]
     },
     trys: [],
     ops: []
-  };
+  }
   o = {
     next: s(0),
     throw: s(1),
     return: s(2)
-  };
+  }
   if ("function" === typeof Symbol) {
     o[Symbol.iterator] = function () {
-      return this;
-    };
+      return this
+    }
   }
-  return o;
+  return o
   function s(o) {
     return function (s) {
       return function (o) {
         if (n) {
-          throw new TypeError("Generator is already executing.");
+          throw new TypeError("Generator is already executing.")
         }
         for (; a;) {
           try {
-            n = 1;
+            n = 1
             if (r && (i = 2 & o[0] ? r.return : o[0] ? r.throw || ((i = r.return) && i.call(r), 0) : r.next) && !(i = i.call(r, o[1])).done) {
-              return i;
+              return i
             }
             switch (r = 0, i && (o = [2 & o[0], i.value]), o[0]) {
               case 0:
               case 1:
-                i = o;
-                break;
+                i = o
+                break
               case 4:
-                a.label++;
+                a.label++
                 return {
                   value: o[1],
                   done: false
-                };
+                }
               case 5:
-                a.label++;
-                r = o[1];
-                o = [0];
-                continue;
+                a.label++
+                r = o[1]
+                o = [0]
+                continue
               case 7:
-                o = a.ops.pop();
-                a.trys.pop();
-                continue;
+                o = a.ops.pop()
+                a.trys.pop()
+                continue
               default:
                 if (!(i = (i = a.trys).length > 0 && i[i.length - 1]) && (6 === o[0] || 2 === o[0])) {
-                  a = 0;
-                  continue;
+                  a = 0
+                  continue
                 }
                 if (3 === o[0] && (!i || o[1] > i[0] && o[1] < i[3])) {
-                  a.label = o[1];
-                  break;
+                  a.label = o[1]
+                  break
                 }
                 if (6 === o[0] && a.label < i[1]) {
-                  a.label = i[1];
-                  i = o;
-                  break;
+                  a.label = i[1]
+                  i = o
+                  break
                 }
                 if (i && a.label < i[2]) {
-                  a.label = i[2];
-                  a.ops.push(o);
-                  break;
+                  a.label = i[2]
+                  a.ops.push(o)
+                  break
                 }
                 if (i[2]) {
-                  a.ops.pop();
+                  a.ops.pop()
                 }
-                a.trys.pop();
-                continue;
+                a.trys.pop()
+                continue
             }
-            o = t.call(e, a);
+            o = t.call(e, a)
           } catch (s) {
-            o = [6, s];
-            r = 0;
+            o = [6, s]
+            r = 0
           } finally {
-            n = i = 0;
+            n = i = 0
           }
         }
         if (5 & o[0]) {
-          throw o[1];
+          throw o[1]
         }
         return {
           value: o[0] ? o[1] : undefined,
           done: true
-        };
-      }([o, s]);
-    };
+        }
+      }([o, s])
+    }
   }
 };
 (function () {
   function e(e) {
-    this.stream = undefined;
-    this.audio_context = undefined;
-    this.on_stop = undefined;
-    this.sample_rate = 0;
-    this.num_channels = 0;
-    this.blob_chunks = [];
+    this.stream = undefined
+    this.audio_context = undefined
+    this.on_stop = undefined
+    this.sample_rate = 0
+    this.num_channels = 0
+    this.blob_chunks = []
     if (__DEV__) {
-      console.log("Recorder Init:", e);
+      console.log("Recorder Init:", e)
     }
-    c.assign(this, e);
+    Lodash.assign(this, e)
     if (__DEV__) {
-      console.log("Recorder Init with SampleRate:", this.sample_rate);
+      console.log("Recorder Init with SampleRate:", this.sample_rate)
     }
   }
   e.prototype.init = function (e) {
     return O(this, undefined, undefined, function () {
-      var t;
-      var n;
-      var r;
-      var i;
-      var o = this;
+      var t
+      var n
+      var r
+      var i
+      var o = this
       return k(this, function (a) {
         switch (a.label) {
           case 0:
@@ -514,750 +514,750 @@ var k = function (e, t) {
               audio: e || true
             }, !t.audio_recording) {
               if (_()) {
-                this.recorder_noticer("record_error/pc_browser_not_support");
+                this.recorder_noticer("record_error/pc_browser_not_support")
               } else {
                 if (g()) {
-                  this.recorder_noticer("record_error/android_permission_error");
+                  this.recorder_noticer("record_error/android_permission_error")
                 } else {
                   if (A()) {
-                    this.recorder_noticer("record_error/ios_permission_error");
+                    this.recorder_noticer("record_error/ios_permission_error")
                   }
                 }
               }
-              throw new ReferenceError("Browser not supported.");
+              throw new ReferenceError("Browser not supported.")
             }
             if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
-              return [3, 5];
+              return [3, 5]
             }
-            a.label = 1;
+            a.label = 1
           case 1:
-            a.trys.push([1, 3,, 4]);
-            return [4, navigator.mediaDevices.getUserMedia(n)];
+            a.trys.push([1, 3,, 4])
+            return [4, navigator.mediaDevices.getUserMedia(n)]
           case 2:
-            r = a.sent();
-            return [2, this.create_recorder(r)];
+            r = a.sent()
+            return [2, this.create_recorder(r)]
           case 3:
-            i = a.sent();
-            this.check_failed(i);
-            throw i;
+            i = a.sent()
+            this.check_failed(i)
+            throw i
           case 4:
-            return [3, 6];
+            return [3, 6]
           case 5:
             return [2, new Promise(function (e, t) {
               navigator.getUserMedia(n, function (t) {
-                e(o.create_recorder(t));
+                e(o.create_recorder(t))
               }, function (e) {
-                o.check_failed(e);
-                t(e);
-              });
-            })];
+                o.check_failed(e)
+                t(e)
+              })
+            })]
           case 6:
-            return [2];
+            return [2]
         }
-      });
-    });
-  };
+      })
+    })
+  }
   e.prototype.create_recorder = function (e, t) {
-    var n;
-    var r = this;
-    this.stream = e;
+    var n
+    var r = this
+    this.stream = e
     if ("undefined" === typeof MediaRecorder || this.sample_rate || this.num_channels) {
       if (__DEV__) {
-        console.log("Use fallback recorder.");
+        console.log("Use fallback recorder.")
       }
-      return this.create_fallback_recorder(e);
+      return this.create_fallback_recorder(e)
     }
     if (MediaRecorder.isTypeSupported("audio/webm")) {
-      n = "audio/webm";
+      n = "audio/webm"
     }
     var i = new MediaRecorder(e, {
       mimeType: n
-    });
-    this.media_stream_recorder = i;
+    })
+    this.media_stream_recorder = i
     this.media_stream_recorder.ondataavailable = function (e) {
-      r.blob_chunks.push(e.data);
-    };
+      r.blob_chunks.push(e.data)
+    }
     this.media_stream_recorder.onstop = function () {
       if (!r.media_stream_recorder) {
-        throw new Error("Recorder not found!");
+        throw new Error("Recorder not found!")
       }
       if (r.media_stream_recorder instanceof MediaRecorder) {
         if (r.on_stop) {
           var e = new Blob(r.blob_chunks, {
             type: r.media_stream_recorder.mimeType
-          });
-          r.on_stop(e);
-          r.blob_chunks.length = 0;
+          })
+          r.on_stop(e)
+          r.blob_chunks.length = 0
         }
-        delete r.media_stream_recorder;
+        delete r.media_stream_recorder
         r.dispose().then(function () {
           if (__DEV__) {
-            console.log("Stop Recording: Disposed");
+            console.log("Stop Recording: Disposed")
           }
         }).catch(function (e) {
-          throw e;
-        });
+          throw e
+        })
       }
-    };
-    return this.media_stream_recorder;
-  };
+    }
+    return this.media_stream_recorder
+  }
   e.prototype.create_fallback_recorder = function (e) {
-    var t = this;
-    this.audio_context = new AudioContext();
-    var n = this.audio_context.createMediaStreamSource(e);
+    var t = this
+    this.audio_context = new AudioContext()
+    var n = this.audio_context.createMediaStreamSource(e)
     var r = {
       num_channels: this.num_channels,
       sample_rate: this.sample_rate,
       callback: function (e) {
         if (t.on_stop) {
-          t.on_stop(e);
+          t.on_stop(e)
           if (t.media_stream_recorder instanceof C) {
             if (t.media_stream_recorder.worker) {
-              t.media_stream_recorder.worker.terminate();
+              t.media_stream_recorder.worker.terminate()
             }
             if (t.stream) {
-              t.stream.getTracks()[0].stop();
+              t.stream.getTracks()[0].stop()
             }
           }
         }
-        t.remove_recorder();
+        t.remove_recorder()
       }
-    };
-    this.media_stream_recorder = new C(n, r);
-    return this.media_stream_recorder;
-  };
+    }
+    this.media_stream_recorder = new C(n, r)
+    return this.media_stream_recorder
+  }
   e.prototype.start_recording = function () {
     return O(this, undefined, undefined, function () {
       return k(this, function (e) {
         switch (e.label) {
           case 0:
-            return this.media_stream_recorder ? [3, 2] : [4, this.init()];
+            return this.media_stream_recorder ? [3, 2] : [4, this.init()]
           case 1:
-            e.sent();
-            e.label = 2;
+            e.sent()
+            e.label = 2
           case 2:
-            return this.media_stream_recorder ? (this.media_stream_recorder.start(), [2]) : (console.warn("Recorder not prepared."), [2]);
+            return this.media_stream_recorder ? (this.media_stream_recorder.start(), [2]) : (console.warn("Recorder not prepared."), [2])
         }
-      });
-    });
-  };
+      })
+    })
+  }
   e.prototype.stop_recording = function () {
     if (this.media_stream_recorder) {
-      this.media_stream_recorder.stop();
+      this.media_stream_recorder.stop()
     } else {
-      console.warn("You are not recording.");
+      console.warn("You are not recording.")
     }
-  };
+  }
   e.prototype.check_failed = function (e) {
     switch (__DEV__ && console.warn(e.name), e.name) {
       case "DevicesNotFoundError":
       case "NotFoundError":
-        this.recorder_noticer("record_error/device_error");
-        break;
+        this.recorder_noticer("record_error/device_error")
+        break
       case "PermissionDeniedError":
       case "PermissionDismissedError":
       case "NotAllowedError":
         if (_()) {
-          this.recorder_noticer("record_error/pc_permission_error");
+          this.recorder_noticer("record_error/pc_permission_error")
         } else {
           if (g()) {
-            this.recorder_noticer("record_error/android_permission_error");
+            this.recorder_noticer("record_error/android_permission_error")
           } else {
             if (A()) {
-              this.recorder_noticer("record_error/ios_permission_error");
+              this.recorder_noticer("record_error/ios_permission_error")
             }
           }
         }
-        break;
+        break
       default:
         if (_()) {
-          this.recorder_noticer("record_error/pc_other_case");
+          this.recorder_noticer("record_error/pc_other_case")
         } else {
           if (g()) {
-            this.recorder_noticer("record_error/android_other_case");
+            this.recorder_noticer("record_error/android_other_case")
           } else {
             if (A()) {
-              this.recorder_noticer("record_error/ios_other_case");
+              this.recorder_noticer("record_error/ios_other_case")
             }
           }
         }
     }
-  };
+  }
   e.prototype.recorder_noticer = function (e) {
-    u(o(e), "error");
-  };
+    u(o(e), "error")
+  }
   e.prototype.if_recorder_work = function () {
-    return !!this.media_stream_recorder;
-  };
+    return !!this.media_stream_recorder
+  }
   e.prototype.is_recording = function () {
     if (this.media_stream_recorder) {
-      return "recording" === this.media_stream_recorder.state;
+      return "recording" === this.media_stream_recorder.state
     }
-  };
+  }
   e.prototype.dispose = function () {
     return O(this, undefined, undefined, function () {
       return k(this, function (e) {
         switch (e.label) {
           case 0:
-            return this.audio_context ? [4, this.audio_context.close()] : [3, 2];
+            return this.audio_context ? [4, this.audio_context.close()] : [3, 2]
           case 1:
-            e.sent();
-            delete this.audio_context;
-            e.label = 2;
+            e.sent()
+            delete this.audio_context
+            e.label = 2
           case 2:
             if (this.stream) {
-              this.stream.getTracks()[0].stop();
-              delete this.stream;
+              this.stream.getTracks()[0].stop()
+              delete this.stream
             }
-            return [2];
+            return [2]
         }
-      });
-    });
-  };
+      })
+    })
+  }
   e.prototype.remove_recorder = function () {
-    delete this.media_stream_recorder;
+    delete this.media_stream_recorder
     this.dispose().then(function () {
       if (__DEV__) {
-        console.log("Stop Recording: Disposed");
+        console.log("Stop Recording: Disposed")
       }
     }).catch(function (e) {
-      throw e;
-    });
-  };
-})();
+      throw e
+    })
+  }
+})()
 var S = function (e, t, n, r) {
   return new (n || (n = Promise))(function (i, o) {
     function a(e) {
       try {
-        c(r.next(e));
+        c(r.next(e))
       } catch (t) {
-        o(t);
+        o(t)
       }
     }
     function s(e) {
       try {
-        c(r.throw(e));
+        c(r.throw(e))
       } catch (t) {
-        o(t);
+        o(t)
       }
     }
     function c(e) {
       if (e.done) {
-        i(e.value);
+        i(e.value)
       } else {
         new n(function (t) {
-          t(e.value);
-        }).then(a, s);
+          t(e.value)
+        }).then(a, s)
       }
     }
-    c((r = r.apply(e, t || [])).next());
-  });
-};
+    c((r = r.apply(e, t || [])).next())
+  })
+}
 var T = function (e, t) {
-  var n;
-  var r;
-  var i;
-  var o;
+  var n
+  var r
+  var i
+  var o
   var a = {
     label: 0,
     sent: function () {
       if (1 & i[0]) {
-        throw i[1];
+        throw i[1]
       }
-      return i[1];
+      return i[1]
     },
     trys: [],
     ops: []
-  };
+  }
   o = {
     next: s(0),
     throw: s(1),
     return: s(2)
-  };
+  }
   if ("function" === typeof Symbol) {
     o[Symbol.iterator] = function () {
-      return this;
-    };
+      return this
+    }
   }
-  return o;
+  return o
   function s(o) {
     return function (s) {
       return function (o) {
         if (n) {
-          throw new TypeError("Generator is already executing.");
+          throw new TypeError("Generator is already executing.")
         }
         for (; a;) {
           try {
-            n = 1;
+            n = 1
             if (r && (i = 2 & o[0] ? r.return : o[0] ? r.throw || ((i = r.return) && i.call(r), 0) : r.next) && !(i = i.call(r, o[1])).done) {
-              return i;
+              return i
             }
             switch (r = 0, i && (o = [2 & o[0], i.value]), o[0]) {
               case 0:
               case 1:
-                i = o;
-                break;
+                i = o
+                break
               case 4:
-                a.label++;
+                a.label++
                 return {
                   value: o[1],
                   done: false
-                };
+                }
               case 5:
-                a.label++;
-                r = o[1];
-                o = [0];
-                continue;
+                a.label++
+                r = o[1]
+                o = [0]
+                continue
               case 7:
-                o = a.ops.pop();
-                a.trys.pop();
-                continue;
+                o = a.ops.pop()
+                a.trys.pop()
+                continue
               default:
                 if (!(i = (i = a.trys).length > 0 && i[i.length - 1]) && (6 === o[0] || 2 === o[0])) {
-                  a = 0;
-                  continue;
+                  a = 0
+                  continue
                 }
                 if (3 === o[0] && (!i || o[1] > i[0] && o[1] < i[3])) {
-                  a.label = o[1];
-                  break;
+                  a.label = o[1]
+                  break
                 }
                 if (6 === o[0] && a.label < i[1]) {
-                  a.label = i[1];
-                  i = o;
-                  break;
+                  a.label = i[1]
+                  i = o
+                  break
                 }
                 if (i && a.label < i[2]) {
-                  a.label = i[2];
-                  a.ops.push(o);
-                  break;
+                  a.label = i[2]
+                  a.ops.push(o)
+                  break
                 }
                 if (i[2]) {
-                  a.ops.pop();
+                  a.ops.pop()
                 }
-                a.trys.pop();
-                continue;
+                a.trys.pop()
+                continue
             }
-            o = t.call(e, a);
+            o = t.call(e, a)
           } catch (s) {
-            o = [6, s];
-            r = 0;
+            o = [6, s]
+            r = 0
           } finally {
-            n = i = 0;
+            n = i = 0
           }
         }
         if (5 & o[0]) {
-          throw o[1];
+          throw o[1]
         }
         return {
           value: o[0] ? o[1] : undefined,
           done: true
-        };
-      }([o, s]);
-    };
+        }
+      }([o, s])
+    }
   }
-};
-var B = false;
-var D = false;
-var I = undefined;
+}
+var B = false
+var D = false
+var I = undefined
 function F(e) {
   return S(this, undefined, undefined, function () {
-    var t;
+    var t
     return T(this, function (n) {
       if (!y) {
-        y = new AudioContext();
+        y = new AudioContext()
       }
       return e ? D ? (__DEV__ && console.warn("Volume measurement is already running."), [2]) : (D = true, E ? (E(e), [2]) : B ? (__DEV__ && console.warn("Volume measurement is already initialized."), [2, y.resume()]) : (t = {
         video: false,
         audio: true
       }, h().audio_recording ? (y && (w = (y.createScriptProcessor || y.createJavaScriptNode).call(y, 1024, 1, 1)).connect(y.destination), navigator.mediaDevices.getUserMedia(t).then(function (t) {
         if (y) {
-          b = y.createMediaStreamSource(t);
-          I = t;
-          var n = y.createAnalyser();
-          n.fftSize = 1024;
-          n.smoothingTimeConstant = .5;
+          b = y.createMediaStreamSource(t)
+          I = t
+          var n = y.createAnalyser()
+          n.fftSize = 1024
+          n.smoothingTimeConstant = .5
           w.onaudioprocess = function () {
-            var t = new Uint8Array(n.frequencyBinCount);
-            n.getByteFrequencyData(t);
+            var t = new Uint8Array(n.frequencyBinCount)
+            n.getByteFrequencyData(t)
             if (e) {
-              e(c.round(c.mean(t)));
+              e(Lodash.round(Lodash.mean(t)))
             }
-          };
-          b.connect(w);
-          b.connect(n);
-          B = true;
+          }
+          b.connect(w)
+          b.connect(n)
+          B = true
         }
       }).catch(function (e) {
         switch (e.name) {
           case "PermissionDeniedError":
           case "NotAllowedError":
             if (_()) {
-              u(o("voice_detection/pc_permission_error"), "notice");
+              u(o("voice_detection/pc_permission_error"), "notice")
             } else {
               if (g()) {
-                u(o("voice_detection/android_permission_error"), "notice");
+                u(o("voice_detection/android_permission_error"), "notice")
               } else {
                 if (A()) {
-                  u(o("voice_detection/ios_permission_error"), "notice");
+                  u(o("voice_detection/ios_permission_error"), "notice")
                 }
               }
             }
-            break;
+            break
           case "DevicesNotFoundError":
           case "NotFoundError":
-            u(o("voice_detection/not_found_error"), "notice");
-            break;
+            u(o("voice_detection/not_found_error"), "notice")
+            break
           default:
-            u(e.name, "notice");
+            u(e.name, "notice")
         }
         if (__DEV__) {
-          console.log(e.name);
+          console.log(e.name)
         }
       }), [2]) : (navigator.userAgent.indexOf("MicroMessenger") >= 0 ? u(o("voice_detection/ios_wechat_error"), "notice") : (f() || !f() && navigator.userAgent.indexOf("iPad") >= 0) && Number(function () {
-        var e = navigator.userAgent.toLowerCase().match(/cpu iphone os (.*?) like mac os/);
-        return e ? e[1].split("_")[0] : 0;
-      }()) < 11 ? u(o("voice_detection/ios_version_error"), "notice") : u(o("voice_detection/no_supported_error"), "notice"), __DEV__ && console.log("Browser not support getUserMedia."), [2]))) : [2];
-    });
-  });
+        var e = navigator.userAgent.toLowerCase().match(/cpu iphone os (.*?) like mac os/)
+        return e ? e[1].split("_")[0] : 0
+      }()) < 11 ? u(o("voice_detection/ios_version_error"), "notice") : u(o("voice_detection/no_supported_error"), "notice"), __DEV__ && console.log("Browser not support getUserMedia."), [2]))) : [2]
+    })
+  })
 }
 function R() {
   return S(this, undefined, undefined, function () {
     return T(this, function (e) {
       switch (e.label) {
         case 0:
-          D = false;
-          B = false;
-          return x ? (x(), [2]) : (I && I.getTracks()[0].stop(), b && (w && y && w.disconnect(y.destination), b.disconnect(), b = undefined), y ? [4, y.close()] : [3, 2]);
+          D = false
+          B = false
+          return x ? (x(), [2]) : (I && I.getTracks()[0].stop(), b && (w && y && w.disconnect(y.destination), b.disconnect(), b = undefined), y ? [4, y.close()] : [3, 2])
         case 1:
-          e.sent();
-          e.label = 2;
+          e.sent()
+          e.label = 2
         case 2:
-          y = undefined;
-          return [2];
+          y = undefined
+          return [2]
       }
-    });
-  });
+    })
+  })
 }
 import P = require("./779");
 import N = require("./516/index");
-var M = {};
-var j = {};
-var L = {};
+var M = {}
+var j = {}
+var L = {}
 function U(e, t, n) {
   if (undefined === n) {
-    n = false;
+    n = false
   }
   var r = new P.Howl({
     src: t,
     html5: false,
     format: ["mp3", "wav"]
-  });
+  })
   if (n) {
-    j[e] = r;
+    j[e] = r
   } else {
-    M[e] = r;
+    M[e] = r
   }
-  return r;
+  return r
 }
 function H(e, t, n, r) {
-  var i = N.v4();
-  L[i] = i;
-  var o = document.body;
-  var a = document.createElement("audio");
-  a.autoplay = true;
-  a.src = e;
-  a.style.display = "none";
-  a.setAttribute("id", "audio" + i);
-  o.appendChild(a);
+  var i = N.v4()
+  L[i] = i
+  var document$body = document.body
+  var a = document.createElement("audio")
+  a.autoplay = true
+  a.src = e
+  a.style.display = "none"
+  a.setAttribute("id", "audio" + i)
+  document$body.appendChild(a)
   a.addEventListener("error", function (e) {
     if (n) {
-      n(e);
+      n(e)
     }
-  });
+  })
   a.addEventListener("ended", function (e) {
     if (t) {
-      t(e);
+      t(e)
     }
-  });
+  })
   a.addEventListener("pause", function (e) {
     if (r) {
-      r();
+      r()
     }
-  });
+  })
 }
 function V(e) {
   if (!e) {
-    c.forEach(M, function (e) {
-      e.stop();
-    });
-    c.forEach(j, function (e) {
-      e.stop();
-      e.unload();
-    });
-    c.forEach(L, function (e, t) {
-      var n = document.getElementById("audio" + t);
+    Lodash.forEach(M, function (e) {
+      e.stop()
+    })
+    Lodash.forEach(j, function (e) {
+      e.stop()
+      e.unload()
+    })
+    Lodash.forEach(L, function (e, t) {
+      var n = document.getElementById("audio" + t)
       if (n) {
-        n.pause();
+        n.pause()
       }
-    });
-    return void (L = {});
+    })
+    return void (L = {})
   }
-  var t;
+  var t
   if (j[e]) {
-    (t = j[e]).stop();
-    return void t.unload();
+    (t = j[e]).stop()
+    return void t.unload()
   }
   if (M[e]) {
-    (t = M[e]).stop();
+    (t = M[e]).stop()
   } else {
-    console.warn("Howl not Found");
+    console.warn("Howl not Found")
   }
 }
 function G(e) {
   if (2 == e) {
-    u(o("sound_player/block_no_network"), "notice");
+    u(o("sound_player/block_no_network"), "notice")
   }
 }
-var z = {};
-var Q = {};
-var W = {};
+var z = {}
+var Q = {}
+var W = {}
 function K(e, t, n) {
   if (undefined === n) {
-    n = false;
+    n = false
   }
   var r = new P.Howl({
     src: t,
     html5: true,
     format: ["mp3", "wav"]
-  });
+  })
   if (n) {
-    Q[e] = r;
+    Q[e] = r
   } else {
-    z[e] = r;
+    z[e] = r
   }
-  return r;
+  return r
 }
 function X(e, t, n, r, i) {
-  var o = K(r || N.v4(), e, true);
+  var o = K(r || N.v4(), e, true)
   if (o) {
     if ("loaded" === o.state()) {
-      return void o.play();
+      return void o.play()
     }
     o.once("load", function () {
-      o.play();
-    });
+      o.play()
+    })
     o.once("loaderror", function (e, t) {
-      console.error("Howl Error when Add Sound to Store:", t);
-      q(t);
+      console.error("Howl Error when Add Sound to Store:", t)
+      q(t)
       if (n) {
-        n();
+        n()
       }
-    });
+    })
     o.on("end", function () {
       if (t) {
-        t();
+        t()
       }
-      o.unload();
-    });
+      o.unload()
+    })
     o.once("stop", function () {
       if (i) {
-        i();
+        i()
       }
-    });
+    })
   }
 }
 function Y(e) {
   if (!e) {
-    c.forEach(z, function (e) {
-      e.stop();
-    });
-    c.forEach(Q, function (e) {
-      e.stop();
-      e.unload();
-    });
-    c.forEach(W, function (e, t) {
-      var n = document.getElementById("audio" + t);
+    Lodash.forEach(z, function (e) {
+      e.stop()
+    })
+    Lodash.forEach(Q, function (e) {
+      e.stop()
+      e.unload()
+    })
+    Lodash.forEach(W, function (e, t) {
+      var n = document.getElementById("audio" + t)
       if (n) {
-        n.pause();
+        n.pause()
       }
-    });
-    return void (W = {});
+    })
+    return void (W = {})
   }
-  var t;
+  var t
   if (Q[e]) {
-    (t = Q[e]).stop();
-    return void t.unload();
+    (t = Q[e]).stop()
+    return void t.unload()
   }
   if (z[e]) {
-    (t = z[e]).stop();
+    (t = z[e]).stop()
   } else {
-    console.warn("Howl not Found");
+    console.warn("Howl not Found")
   }
 }
 function q(e) {
   if (2 == e) {
-    u(o("sound_player/block_no_network"), "notice");
+    u(o("sound_player/block_no_network"), "notice")
   }
 }
-var $ = {};
-var J = {};
-var Z = {};
+var $ = {}
+var J = {}
+var Z = {}
 function ee(e, t, n) {
   if (undefined === n) {
-    n = false;
+    n = false
   }
   var r = new P.Howl({
     src: t,
     html5: false,
     format: ["mp3", "wav"]
-  });
+  })
   if (n) {
-    J[e] = r;
+    J[e] = r
   } else {
-    $[e] = r;
+    $[e] = r
   }
-  return r;
+  return r
 }
 function te(e) {
   if (e) {
     if ("url" !== e) {
-      var t = $[e] || J[e];
+      var t = $[e] || J[e]
       if (t) {
-        t.unload();
-        delete $[e];
-        delete J[e];
+        t.unload()
+        delete $[e]
+        delete J[e]
       } else {
-        console.warn("Howl not Found");
+        console.warn("Howl not Found")
       }
     } else {
-      c.forEach(J, function (e, t) {
-        e.unload();
-        delete J[t];
-      });
+      Lodash.forEach(J, function (e, t) {
+        e.unload()
+        delete J[t]
+      })
     }
   } else {
-    console.warn("Sound id no found");
+    console.warn("Sound id no found")
   }
 }
 function ne(e) {
   if (!e) {
-    c.forEach($, function (e) {
-      e.stop();
-    });
-    c.forEach(J, function (e) {
-      e.stop();
-      e.unload();
-    });
-    c.forEach(Z, function (e, t) {
-      var n = document.getElementById("audio" + t);
+    Lodash.forEach($, function (e) {
+      e.stop()
+    })
+    Lodash.forEach(J, function (e) {
+      e.stop()
+      e.unload()
+    })
+    Lodash.forEach(Z, function (e, t) {
+      var n = document.getElementById("audio" + t)
       if (n) {
-        n.pause();
+        n.pause()
       }
-    });
-    return void (Z = {});
+    })
+    return void (Z = {})
   }
-  var t;
+  var t
   if (J[e]) {
-    (t = J[e]).unload();
-    return void t.stop();
+    (t = J[e]).unload()
+    return void t.stop()
   }
   if ($[e]) {
-    (t = $[e]).stop();
+    (t = $[e]).stop()
   } else {
-    console.warn("Howl not Found");
+    console.warn("Howl not Found")
   }
 }
 function re(e) {
   if (2 == e) {
-    u(o("sound_player/block_no_network"), "notice");
+    u(o("sound_player/block_no_network"), "notice")
   }
 }
 function ie(e, t) {
   return _() ? function (e, t) {
-    var n = $[e];
+    var n = $[e]
     if (n) {
-      return n.rate(t);
+      return n.rate(t)
     }
-    console.warn("Howl not Found");
+    console.warn("Howl not Found")
   }(e, t) : g() ? function (e, t) {
-    var n = M[e];
+    var n = M[e]
     if (!n) {
-      console.warn("Howl not Found");
+      console.warn("Howl not Found")
     }
-    return n.rate(t);
+    return n.rate(t)
   }(e, t) : A() ? function (e, t) {
-    var n = z[e];
+    var n = z[e]
     if (!n) {
-      console.warn("Howl not Found");
+      console.warn("Howl not Found")
     }
-    return n.rate(t);
-  }(e, t) : undefined;
+    return n.rate(t)
+  }(e, t) : undefined
 }
 function oe(e, t) {
   return _() ? function (e, t) {
-    var n = $[e];
+    var n = $[e]
     if (n) {
-      return n.volume(t);
+      return n.volume(t)
     }
-    console.warn("Howl not Found");
+    console.warn("Howl not Found")
   }(e, t) : g() ? function (e, t) {
-    var n = M[e];
+    var n = M[e]
     if (!n) {
-      console.warn("Howl not Found");
+      console.warn("Howl not Found")
     }
-    return n.volume(t);
+    return n.volume(t)
   }(e, t) : A() ? function (e, t) {
-    var n = z[e];
+    var n = z[e]
     if (!n) {
-      console.warn("Howl not Found");
+      console.warn("Howl not Found")
     }
-    return n.volume(t);
-  }(e, t) : undefined;
+    return n.volume(t)
+  }(e, t) : undefined
 }
 var ae = {
   load: function (e, t, n) {
     if (undefined === n) {
-      n = false;
+      n = false
     }
-    return _() ? ee(e, t, n) : g() ? U(e, t, n) : A() ? K(e, t, n) : undefined;
+    return _() ? ee(e, t, n) : g() ? U(e, t, n) : A() ? K(e, t, n) : undefined
   },
   unload: function (e) {
     if (_()) {
-      te(e);
+      te(e)
     } else {
       if (g()) {
         (function (e) {
           if (e) {
             if ("url" !== e) {
-              var t = M[e];
+              var t = M[e]
               if (t) {
-                t.unload();
-                delete M[e];
+                t.unload()
+                delete M[e]
               } else {
-                console.warn("Howl not Found");
+                console.warn("Howl not Found")
               }
             }
           } else {
-            console.warn("Sound id no found");
+            console.warn("Sound id no found")
           }
-        })(e);
+        })(e)
       } else {
         if (A()) {
           (function (e) {
             if (e) {
               if ("url" !== e) {
-                var t = z[e];
+                var t = z[e]
                 if (t) {
-                  t.unload();
-                  delete z[e];
+                  t.unload()
+                  delete z[e]
                 } else {
-                  console.warn("Howl not Found");
+                  console.warn("Howl not Found")
                 }
               }
             } else {
-              console.warn("Sound id no found");
+              console.warn("Sound id no found")
             }
-          })(e);
+          })(e)
         }
       }
     }
@@ -1265,100 +1265,100 @@ var ae = {
   play: function (e, t, n, r) {
     if (_()) {
       (function (e, t, n, r) {
-        var i = $[e];
+        var i = $[e]
         if (i) {
           if ("loaded" !== i.state()) {
-            console.warn("Howl load fail");
+            console.warn("Howl load fail")
             if (t) {
-              t();
+              t()
             }
           }
-          var o = i.play();
+          var o = i.play()
           i.once("end", function () {
             if (t) {
-              t();
+              t()
             }
-          }, o);
+          }, o)
           i.once("loaderror", function (e, t) {
-            console.error("Howler Load Error:", t);
-            re(t);
+            console.error("Howler Load Error:", t)
+            re(t)
             if (n) {
-              n();
+              n()
             }
-          });
+          })
           i.once("stop", function () {
             if (r) {
-              r();
+              r()
             }
-          });
+          })
         } else {
-          console.warn("Howl not found");
+          console.warn("Howl not found")
         }
-      })(e, t, n, r);
+      })(e, t, n, r)
     } else {
       if (g()) {
         (function (e, t, n, r) {
-          var i = M[e];
+          var i = M[e]
           if (!i) {
-            console.warn("Howl not found");
-            return void H(i._src, t, n, r);
+            console.warn("Howl not found")
+            return void H(i._src, t, n, r)
           }
           if ("loaded" !== i.state()) {
-            console.warn("Howl load fail");
-            return void H(i._src, t, n, r);
+            console.warn("Howl load fail")
+            return void H(i._src, t, n, r)
           }
-          var o = i.play();
+          var o = i.play()
           i.once("end", function () {
             if (t) {
-              t();
+              t()
             }
-          }, o);
+          }, o)
           i.once("stop", function () {
             if (r) {
-              r();
+              r()
             }
-          });
+          })
           i.once("loaderror", function (e) {
-            console.error("Howler Load Error:", e);
-            G(e);
+            console.error("Howler Load Error:", e)
+            G(e)
             if (n) {
-              n();
+              n()
             }
-            H(i._src, t, n);
-          });
-        })(e, t, n, r);
+            H(i._src, t, n)
+          })
+        })(e, t, n, r)
       } else {
         if (A()) {
           (function (e, t, n, r) {
-            console.log("play");
-            var i = z[e];
+            console.log("play")
+            var i = z[e]
             if (!i) {
-              X(i._src, t, n);
-              return void console.warn("Howl not found");
+              X(i._src, t, n)
+              return void console.warn("Howl not found")
             }
             if ("loaded" !== i.state()) {
-              console.warn("Howl load fail");
-              X(i._src, t, n, undefined, r);
+              console.warn("Howl load fail")
+              X(i._src, t, n, undefined, r)
             }
-            var o = i.play();
+            var o = i.play()
             i.once("end", function () {
               if (t) {
-                t();
+                t()
               }
-            }, o);
+            }, o)
             i.once("loaderror", function (e, o) {
-              q(o);
+              q(o)
               if (n) {
-                n();
+                n()
               }
-              X(i._src, t, n, undefined, r);
-            });
+              X(i._src, t, n, undefined, r)
+            })
             i.once("stop", function () {
               if (r) {
-                r();
+                r()
               }
-            });
-          })(e, t, n, r);
+            })
+          })(e, t, n, r)
         }
       }
     }
@@ -1366,79 +1366,79 @@ var ae = {
   play_url: function (e, t, n, r, i) {
     if (_()) {
       (function (e, t, n, r, i) {
-        var o = ee(r || N.v4(), e, true);
+        var o = ee(r || N.v4(), e, true)
         if ("loaded" === o.state()) {
-          o.play();
+          o.play()
         }
         o.once("load", function () {
-          o.play();
-        });
+          o.play()
+        })
         o.once("end", function () {
-          te(r);
+          te(r)
           if (t) {
-            t();
+            t()
           }
-        });
+        })
         o.once("stop", function () {
           if (i) {
-            i();
+            i()
           }
-        });
+        })
         o.once("loaderror", function (e, t) {
-          console.error("Howler Load Error:", t);
-          re(t);
+          console.error("Howler Load Error:", t)
+          re(t)
           if (n) {
-            n();
+            n()
           }
-        });
-      })(e, t, n, r, i);
+        })
+      })(e, t, n, r, i)
     } else {
       if (g()) {
         (function (e, t, n, r, i) {
-          var o = U(r || N.v4(), e, true);
+          var o = U(r || N.v4(), e, true)
           if (o) {
             if ("loaded" === o.state()) {
-              return void o.play();
+              return void o.play()
             }
             o.once("load", function () {
-              o.play();
-            });
+              o.play()
+            })
             o.once("loaderror", function (e, t) {
-              console.error("Howl Error when Add Sound to Store:", t);
-              G(t);
+              console.error("Howl Error when Add Sound to Store:", t)
+              G(t)
               if (n) {
-                n();
+                n()
               }
-            });
+            })
             o.on("end", function () {
               if (t) {
-                t();
+                t()
               }
-              o.unload();
-            });
+              o.unload()
+            })
             o.once("stop", function () {
               if (i) {
-                i();
+                i()
               }
-            });
+            })
           }
-        })(e, t, n, r, i);
+        })(e, t, n, r, i)
       } else {
         if (A()) {
-          X(e, t, n, r, i);
+          X(e, t, n, r, i)
         }
       }
     }
   },
   stop: function (e) {
     if (_()) {
-      ne(e);
+      ne(e)
     } else {
       if (g()) {
-        V(e);
+        V(e)
       } else {
         if (A()) {
-          Y(e);
+          Y(e)
         }
       }
     }
@@ -1446,167 +1446,167 @@ var ae = {
   is_playing: function (e) {
     return _() ? function (e) {
       if (!e) {
-        return c.find($, function (e) {
-          return e.playing();
-        });
+        return Lodash.find($, function (e) {
+          return e.playing()
+        })
       }
       if ("url" === e) {
-        return c.find(J, function (e) {
-          return e.playing();
-        });
+        return Lodash.find(J, function (e) {
+          return e.playing()
+        })
       }
-      var t = $[e];
+      var t = $[e]
       if (t) {
-        return t.playing();
+        return t.playing()
       }
-      console.warn("Howl not Found");
+      console.warn("Howl not Found")
     }(e) : g() ? function (e) {
       if (!e) {
-        return c.find(M, function (e) {
-          return e.playing();
-        });
+        return Lodash.find(M, function (e) {
+          return e.playing()
+        })
       }
       if ("url" !== e) {
-        var t = M[e];
+        var t = M[e]
         if (!t) {
-          console.warn("Howl not Found");
+          console.warn("Howl not Found")
         }
-        return t.playing();
+        return t.playing()
       }
     }(e) : A() ? function (e) {
       if (!e) {
-        return c.find(z, function (e) {
-          return e.playing();
-        });
+        return Lodash.find(z, function (e) {
+          return e.playing()
+        })
       }
       if ("url" !== e) {
-        var t = z[e];
+        var t = z[e]
         if (!t) {
-          console.warn("Howl not Found");
+          console.warn("Howl not Found")
         }
-        return t.playing();
+        return t.playing()
       }
-    }(e) : undefined;
+    }(e) : undefined
   },
   set_rate: ie,
   set_volume: oe,
   stop_all_audio: function () {
     if (_()) {
-      ne();
+      ne()
     } else {
       if (g()) {
-        V();
+        V()
       } else {
         if (A()) {
-          Y();
+          Y()
         }
       }
     }
     R().catch(function (e) {
-      console.error(e);
-    });
+      console.error(e)
+    })
   },
   reset_sound: function (e) {
     for (var t in e) {
-      oe(e[t].id, e[t].volume);
-      ie(e[t].id, e[t].playback_rate);
+      oe(e[t].id, e[t].volume)
+      ie(e[t].id, e[t].playback_rate)
     }
   },
   get_volume: function (e) {
     return _() ? function (e) {
-      return $[e].volume();
+      return $[e].volume()
     }(e) : g() ? function (e) {
-      return M[e].volume();
+      return M[e].volume()
     }(e) : A() ? function (e) {
-      return z[e].volume();
-    }(e) : 0;
+      return z[e].volume()
+    }(e) : 0
   },
   get_rate: function (e) {
     return _() ? function (e) {
-      return $[e].rate();
+      return $[e].rate()
     }(e) : g() ? function (e) {
-      return M[e].rate();
+      return M[e].rate()
     }(e) : A() ? function (e) {
-      return z[e].rate();
-    }(e) : 0;
+      return z[e].rate()
+    }(e) : 0
   },
   get_howl: function (e) {
     return _() ? function (e) {
       if (undefined != $[e]) {
-        return $[e];
+        return $[e]
       }
     }(e) : g() ? function (e) {
       if (undefined != M[e]) {
-        return M[e];
+        return M[e]
       }
     }(e) : A() ? function (e) {
       if (undefined != z[e]) {
-        return z[e];
+        return z[e]
       }
-    }(e) : undefined;
+    }(e) : undefined
   },
   check_sound: function (e) {
     return _() ? function (e) {
-      return undefined !== $[e];
+      return undefined !== $[e]
     }(e) : g() ? function (e) {
-      return undefined !== M[e];
+      return undefined !== M[e]
     }(e) : A() ? function (e) {
-      return undefined !== z[e];
-    }(e) : undefined;
+      return undefined !== z[e]
+    }(e) : undefined
   }
-};
-var se = ["A0", "Bb0", "B0", "C1", "Db1", "D1", "Eb1", "E1", "F1", "Gb1", "G1", "Ab1", "A1", "Bb1", "B1", "C2", "Db2", "D2", "Eb2", "E2", "F2", "Gb2", "G2", "Ab2", "A2", "Bb2", "B2", "C3", "Db3", "D3", "Eb3", "E3", "F3", "Gb3", "G3", "Ab3", "A3", "Bb3", "B3", "C4", "Db4", "D4", "Eb4", "E4", "F4", "Gb4", "G4", "Ab4", "A4", "Bb4", "B4", "C5", "Db5", "D5", "Eb5", "E5", "F5", "Gb5", "G5", "Ab5", "A5", "Bb5", "B5", "C6", "Db6", "D6", "Eb6", "E6", "F6", "Gb6", "G6", "Ab6", "A6", "Bb6", "B6", "C7", "Db7", "D7", "Eb7", "E7", "F7", "Gb7", "G7", "Ab7", "A7", "Bb7", "B7", "C8"];
-var ce = ["piano"];
+}
+var se = ["A0", "Bb0", "B0", "C1", "Db1", "D1", "Eb1", "E1", "F1", "Gb1", "G1", "Ab1", "A1", "Bb1", "B1", "C2", "Db2", "D2", "Eb2", "E2", "F2", "Gb2", "G2", "Ab2", "A2", "Bb2", "B2", "C3", "Db3", "D3", "Eb3", "E3", "F3", "Gb3", "G3", "Ab3", "A3", "Bb3", "B3", "C4", "Db4", "D4", "Eb4", "E4", "F4", "Gb4", "G4", "Ab4", "A4", "Bb4", "B4", "C5", "Db5", "D5", "Eb5", "E5", "F5", "Gb5", "G5", "Ab5", "A5", "Bb5", "B5", "C6", "Db6", "D6", "Eb6", "E6", "F6", "Gb6", "G6", "Ab6", "A6", "Bb6", "B6", "C7", "Db7", "D7", "Eb7", "E7", "F7", "Gb7", "G7", "Ab7", "A7", "Bb7", "B7", "C8"]
+var ce = ["piano"]
 function ue(e) {
-  e;
+  e
 }
 function le(e) {
-  return c.isNumber(e) ? 60 * e / 80 : 0;
+  return Lodash.isNumber(e) ? 60 * e / 80 : 0
 }
 function fe(e) {
-  return e / 60 * 80;
+  return e / 60 * 80
 }
 function de(e) {
-  return se[e];
+  return se[e]
 }
 function he(e) {
-  return c.indexOf(se, e);
+  return Lodash.indexOf(se, e)
 }
 function pe(e, t) {
-  var n = s + "/" + de(e) + ".mp3";
-  var r = c.uniqueId("midi");
-  var i = ae.load(r, n, true);
+  var n = s + "/" + de(e) + ".mp3"
+  var r = Lodash.uniqueId("midi")
+  var i = ae.load(r, n, true)
   if (i) {
     if ("loaded" === i.state()) {
-      var o = i.play();
+      var o = i.play()
       if (t) {
-        var a = le(t);
-        i.fade(1, .01, a < .2 ? 200 : 1e3 * a, o);
+        var a = le(t)
+        i.fade(1, .01, a < .2 ? 200 : 1e3 * a, o)
       }
-      return;
+      return
     }
     i.once("load", function () {
-      var e = i.play();
+      var e = i.play()
       if (t) {
-        var n = le(t);
-        i.fade(1, .01, n < .2 ? 200 : 1e3 * n, e);
+        var n = le(t)
+        i.fade(1, .01, n < .2 ? 200 : 1e3 * n, e)
       }
-    });
+    })
     i.once("loaderror", function (e, t) {
       if (__DEV__) {
-        console.error("Howl Error when Add Sound to Store:", t);
+        console.error("Howl Error when Add Sound to Store:", t)
       }
-    });
+    })
   }
-  return r;
+  return r
 }
 function _e(e) {
-  ae.stop(e);
+  ae.stop(e)
 }
 var Ae = {
   AudioPlayer: ae,
   MidiPlayer: r,
   start_volume_measuring: F,
   stop_volume_measuring: R
-};
-export default Ae;
+}
+export default Ae

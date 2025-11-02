@@ -4,14 +4,14 @@
  * 模块 ID：1686
  */
 
-"use strict";
+"use strict"
 
-var r = require("../1623/86");
-var o = require("./753/index").end;
-var i = require("./1078")("trimEnd");
+var r = require("../1623/86")
+var require$753Index$end = require("./753/index").end
+var i = require("./1078")("trimEnd")
 var a = i ? function () {
-  return o(this);
-} : "".trimEnd;
+  return require$753Index$end(this)
+} : "".trimEnd
 r({
   target: "String",
   proto: true,
@@ -19,4 +19,4 @@ r({
 }, {
   trimEnd: a,
   trimRight: a
-});
+})

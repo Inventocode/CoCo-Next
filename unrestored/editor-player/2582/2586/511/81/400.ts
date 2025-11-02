@@ -4,67 +4,67 @@
  * 模块 ID：400
  */
 
-"use strict";
+"use strict"
 
-var n = require("./150");
-var o = require("./74");
-var i = require("./124");
-var a = require("./169");
-var u = require("./117");
-var s = require("./501");
-var c = require("./449");
+var n = require("./150")
+var o = require("./74")
+var i = require("./124")
+var a = require("./169")
+var u = require("./117")
+var s = require("./501")
+var c = require("./449")
 var f = function () {
   function t() {}
   t.prototype.decode = function (t, e) {
     if (undefined === e) {
-      e = null;
+      e = null
     }
-    var r = null;
-    var i = new c.a(t.getBlackMatrix());
-    var f = null;
-    var h = null;
+    var r = null
+    var i = new c.a(t.getBlackMatrix())
+    var f = null
+    var h = null
     try {
-      f = (l = i.detectMirror(false)).getPoints();
-      this.reportFoundResultPoints(e, f);
-      h = new s.a().decode(l);
+      f = (l = i.detectMirror(false)).getPoints()
+      this.reportFoundResultPoints(e, f)
+      h = new s.a().decode(l)
     } catch (y) {
-      r = y;
+      r = y
     }
     if (null == h) {
       try {
-        var l;
-        f = (l = i.detectMirror(true)).getPoints();
-        this.reportFoundResultPoints(e, f);
-        h = new s.a().decode(l);
+        var l
+        f = (l = i.detectMirror(true)).getPoints()
+        this.reportFoundResultPoints(e, f)
+        h = new s.a().decode(l)
       } catch (y) {
         if (null != r) {
-          throw r;
+          throw r
         }
-        throw y;
+        throw y
       }
     }
-    var d = new n.a(h.getText(), h.getRawBytes(), h.getNumBits(), f, o.a.AZTEC, u.a.currentTimeMillis());
-    var p = h.getByteSegments();
+    var d = new n.a(h.getText(), h.getRawBytes(), h.getNumBits(), f, o.a.AZTEC, u.a.currentTimeMillis())
+    var p = h.getByteSegments()
     if (null != p) {
-      d.putMetadata(a.a.BYTE_SEGMENTS, p);
+      d.putMetadata(a.a.BYTE_SEGMENTS, p)
     }
-    var g = h.getECLevel();
+    var g = h.getECLevel()
     if (null != g) {
-      d.putMetadata(a.a.ERROR_CORRECTION_LEVEL, g);
+      d.putMetadata(a.a.ERROR_CORRECTION_LEVEL, g)
     }
-    return d;
-  };
+    return d
+  }
   t.prototype.reportFoundResultPoints = function (t, e) {
     if (null != t) {
-      var r = t.get(i.a.NEED_RESULT_POINT_CALLBACK);
+      var r = t.get(i.a.NEED_RESULT_POINT_CALLBACK)
       if (null != r) {
         e.forEach(function (t, e, n) {
-          r.foundPossibleResultPoint(t);
-        });
+          r.foundPossibleResultPoint(t)
+        })
       }
     }
-  };
-  t.prototype.reset = function () {};
-  return t;
-}();
-exports.a = f;
+  }
+  t.prototype.reset = function () {}
+  return t
+}()
+exports.a = f

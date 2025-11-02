@@ -4,29 +4,29 @@
  * 模块 ID：944
  */
 
-"use strict";
+"use strict"
 
-var r = require("../1659/241");
+var r = require("../1659/241")
 module.exports = function () {
-  var e = r(this);
-  var t = "";
+  var e = r(this)
+  var t = ""
   if (e.global) {
-    t += "g";
+    t += "g"
   }
   if (e.ignoreCase) {
-    t += "i";
+    t += "i"
   }
   if (e.multiline) {
-    t += "m";
+    t += "m"
   }
   if (e.dotAll) {
-    t += "s";
+    t += "s"
   }
   if (e.unicode) {
-    t += "u";
+    t += "u"
   }
   if (e.sticky) {
-    t += "y";
+    t += "y"
   }
-  return t;
-};
+  return t
+}

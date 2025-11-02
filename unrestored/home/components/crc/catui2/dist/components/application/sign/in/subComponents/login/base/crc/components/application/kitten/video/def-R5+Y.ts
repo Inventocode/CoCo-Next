@@ -4,7 +4,7 @@
  * 模块 ID：R5+Y
  */
 
-"use strict";
+"use strict"
 
 /* unused harmony export ScreenCase */
 /* unused harmony export VIDEO_DEFAULT_HEIGHT_IN_CASE */
@@ -12,73 +12,73 @@
 /* harmony export (binding) */
 /* unused harmony export videoDefaultPositionOffsetX */
 /* harmony export (binding) */
-export { videoExtraHeight };
+export { videoExtraHeight }
 /* harmony export (binding) */
-export { videoDefaultRatio };
+export { videoDefaultRatio }
 /* harmony export (binding) */
-export { videoDefaultHeight };
+export { videoDefaultHeight }
 /* harmony export (binding) */
-export { videoDefaultWidth };
+export { videoDefaultWidth }
 /* harmony export (binding) */
-export { videoDefaultPositionLeft };
+export { videoDefaultPositionLeft }
 /* harmony export (binding) */
-export { videoDefaultPositionTop };
+export { videoDefaultPositionTop }
 /* harmony export (binding) */
-export { videoMinHeight };
+export { videoMinHeight }
 /* unused harmony export videoMaxHeight */
 /* harmony import */
-export { videoMinWidth };
-import * as __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_defineProperty__ from "@babel/runtime/helpers/esm/defineProperty";
-var _VIDEO_DEFAULT_HEIGHT;
+export { videoMinWidth }
+import * as __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_defineProperty__ from "@babel/runtime/helpers/esm/defineProperty"
+var _VIDEO_DEFAULT_HEIGHT
 var ScreenCase;
 (function (ScreenCase) {
-  ScreenCase[ScreenCase["SMALL"] = 1] = "SMALL";
-  ScreenCase[ScreenCase["MID_SMALL"] = 2] = "MID_SMALL";
-  ScreenCase[ScreenCase["MID"] = 3] = "MID";
-  ScreenCase[ScreenCase["LARGE"] = 4] = "LARGE";
-})(ScreenCase || (ScreenCase = {}));
-_VIDEO_DEFAULT_HEIGHT = {};
-__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_defineProperty__.default(_VIDEO_DEFAULT_HEIGHT, ScreenCase.SMALL, 270);
-__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_defineProperty__.default(_VIDEO_DEFAULT_HEIGHT, ScreenCase.MID_SMALL, 324);
-__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_defineProperty__.default(_VIDEO_DEFAULT_HEIGHT, ScreenCase.MID, 385);
-__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_defineProperty__.default(_VIDEO_DEFAULT_HEIGHT, ScreenCase.LARGE, 450);
-var VIDEO_DEFAULT_HEIGHT_IN_CASE = _VIDEO_DEFAULT_HEIGHT;
+  ScreenCase[ScreenCase["SMALL"] = 1] = "SMALL"
+  ScreenCase[ScreenCase["MID_SMALL"] = 2] = "MID_SMALL"
+  ScreenCase[ScreenCase["MID"] = 3] = "MID"
+  ScreenCase[ScreenCase["LARGE"] = 4] = "LARGE"
+})(ScreenCase || (ScreenCase = {}))
+_VIDEO_DEFAULT_HEIGHT = {}
+__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_defineProperty__.default(_VIDEO_DEFAULT_HEIGHT, ScreenCase.SMALL, 270)
+__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_defineProperty__.default(_VIDEO_DEFAULT_HEIGHT, ScreenCase.MID_SMALL, 324)
+__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_defineProperty__.default(_VIDEO_DEFAULT_HEIGHT, ScreenCase.MID, 385)
+__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_defineProperty__.default(_VIDEO_DEFAULT_HEIGHT, ScreenCase.LARGE, 450)
+var VIDEO_DEFAULT_HEIGHT_IN_CASE = _VIDEO_DEFAULT_HEIGHT
 function getScreenCase() {
-  var avaliableWidth = window.innerWidth;
+  var avaliableWidth = window.innerWidth
   if (avaliableWidth <= 1024) {
-    return ScreenCase.SMALL;
+    return ScreenCase.SMALL
   }
   if (avaliableWidth <= 1440) {
-    return ScreenCase.MID_SMALL;
+    return ScreenCase.MID_SMALL
   }
   if (avaliableWidth <= 1660) {
-    return ScreenCase.MID;
+    return ScreenCase.MID
   }
-  return ScreenCase.LARGE;
+  return ScreenCase.LARGE
 } // 视频播放器多出来的高度(顶栏 + 进度条)
-var videoExtraHeight = 40; // 视频播放器默认padding
-var videoDefaultPositionOffsetX = -12; // 视频播放器默认比例
-var videoDefaultRatio = 16 / 9; // 视频播放器默认高度
+var videoExtraHeight = 40 // 视频播放器默认padding
+var videoDefaultPositionOffsetX = -12 // 视频播放器默认比例
+var videoDefaultRatio = 16 / 9 // 视频播放器默认高度
 var videoDefaultHeight = function videoDefaultHeight() {
-  return VIDEO_DEFAULT_HEIGHT_IN_CASE[getScreenCase()] + videoExtraHeight;
-}; // 视频播放器默认宽度
+  return VIDEO_DEFAULT_HEIGHT_IN_CASE[getScreenCase()] + videoExtraHeight
+} // 视频播放器默认宽度
 var videoDefaultWidth = function videoDefaultWidth() {
-  return (videoDefaultHeight() - videoExtraHeight) * videoDefaultRatio;
-}; // 视频播放器默认定位(left)
+  return (videoDefaultHeight() - videoExtraHeight) * videoDefaultRatio
+} // 视频播放器默认定位(left)
 var videoDefaultPositionLeft = function videoDefaultPositionLeft() {
-  return window.innerWidth - videoDefaultWidth();
-}; // 视频播放器默认定位(top)
+  return window.innerWidth - videoDefaultWidth()
+} // 视频播放器默认定位(top)
 var videoDefaultPositionTop = function videoDefaultPositionTop() {
-  return 52;
-}; // 视频播放器最小高度
+  return 52
+} // 视频播放器最小高度
 var videoMinHeight = function videoMinHeight() {
-  return Math.max(window.innerHeight * 0.3, 314);
-}; // 视频播放器最小宽度
+  return Math.max(window.innerHeight * 0.3, 314)
+} // 视频播放器最小宽度
 var videoMinWidth = function videoMinWidth() {
-  return (videoMinHeight() - videoExtraHeight) * videoDefaultRatio;
-}; // 视频播放器最大高度
+  return (videoMinHeight() - videoExtraHeight) * videoDefaultRatio
+} // 视频播放器最大高度
 var videoMaxHeight = function videoMaxHeight() {
-  return window.innerHeight;
-};
+  return window.innerHeight
+}
 
 /***/

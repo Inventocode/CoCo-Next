@@ -4,9 +4,9 @@
  * 模块 ID：1743
  */
 
-var r = require("../1623/86");
-var o = require("../1736/194");
-var i = require("./1072/index");
+var r = require("../1623/86")
+var o = require("../1736/194")
+var i = require("./1072/index")
 r({
   global: true,
   bind: true,
@@ -15,4 +15,4 @@ r({
 }, {
   setImmediate: i.set,
   clearImmediate: i.clear
-});
+})

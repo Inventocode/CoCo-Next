@@ -4,12 +4,12 @@
  * 模块 ID：2144
  */
 
-"use strict";
+"use strict"
 
 Object.defineProperty(exports, "__esModule", {
   value: true
-});
-exports.en = undefined;
+})
+exports.en = undefined
 exports.en = {
   DUPLICATE_BLOCK: "Copy",
   COPY_ALL: "Copy %1 Blocks",
@@ -167,4 +167,4 @@ exports.en = {
   OPACITY: "Opacity",
   SELECT_COLOR_PARAM_TYPE: "Select color selection method",
   COLOR_PREVIEW: "Color preview"
-};
+}

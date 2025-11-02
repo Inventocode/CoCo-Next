@@ -4,74 +4,74 @@
  * 模块 ID：94
  */
 
-"use strict";
+"use strict"
 
-import r = require("react");
+import React = require("react");
 var o = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
-    return module.default;
+    return module.default
   } : function () {
-    return module;
-  };
+    return module
+  }
   Object.defineProperty(defaultExport, "a", {
     enumerable: true,
     get: defaultExport
-  });
-  return defaultExport;
-}(r);
+  })
+  return defaultExport
+}(React)
 import i = require("../8");
 var a = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
-    return module.default;
+    return module.default
   } : function () {
-    return module;
-  };
+    return module
+  }
   Object.defineProperty(defaultExport, "a", {
     enumerable: true,
     get: defaultExport
-  });
-  return defaultExport;
-}(i);
-require("./830");
+  })
+  return defaultExport
+}(i)
+require("./830")
 var s = function (e) {
-  var t = e.type;
-  var n = e.className;
-  var r = e.spinning;
-  var i = e.subColor;
-  var s = e.subClassName;
-  var c = e.twoTone;
+  var e$type = e.type
+  var e$className = e.className
+  var e$spinning = e.spinning
+  var e$subColor = e.subColor
+  var e$subClassName = e.subClassName
+  var e$twoTone = e.twoTone
   var l = o.a.createElement("use", {
-    xlinkHref: "#".concat(t)
-  });
-  if (c) {
-    var u = [];
-    var d = document.getElementById(t);
+    xlinkHref: "#".concat(e$type)
+  })
+  if (e$twoTone) {
+    var u = []
+    var d = document.getElementById(e$type)
     if (d) {
       d.querySelectorAll("path").forEach(function (e) {
-        return u.push(e);
-      });
+        return u.push(e)
+      })
       l = o.a.createElement("svg", {
         viewBox: d.getAttribute("viewBox") || undefined
       }, u.map(function (e, t) {
         return o.a.createElement("path", {
-          fill: 0 === t && i ? i : undefined,
-          className: 0 === t && s ? s : undefined,
+          fill: 0 === t && e$subColor ? e$subColor : undefined,
+          className: 0 === t && e$subClassName ? e$subClassName : undefined,
           key: t,
           d: e.getAttribute("d") || undefined
-        });
-      }));
+        })
+      }))
     }
   }
   return o.a.createElement("i", {
-    className: a()("coco-iconfont", n, r && "coco-iconfont-spin")
+    className: a()("coco-iconfont", e$className, e$spinning && "coco-iconfont-spin")
   }, o.a.createElement("svg", {
     width: "1em",
     height: "1em",
     fill: "currentColor",
     "aria-hidden": "true",
     focusable: "false"
-  }, l));
-};
-s.displayName = "IconFont";
-export { s as a };
-export default s;
+  }, l))
+}
+s.displayName = "IconFont"
+export { s as a }
+export default s

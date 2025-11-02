@@ -15,4 +15,4 @@ module.exports = {
   IconLayoutEmpty: "style_IconLayoutEmpty__3mWN0",
   emptyContent: "style_emptyContent__3qIRv",
   isDragging: "style_isDragging__1ypNI"
-};
+}

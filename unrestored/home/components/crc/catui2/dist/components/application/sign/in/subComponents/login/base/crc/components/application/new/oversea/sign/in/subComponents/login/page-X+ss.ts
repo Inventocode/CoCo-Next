@@ -4,31 +4,31 @@
  * 模块 ID：X+ss
  */
 
-"use strict";
+"use strict"
 
 /* harmony export (binding) */
 /* harmony import */
-export { LoginPageContainer };
-import * as __WEBPACK_IMPORTED_MODULE_0_babel_plugin_react_css_modules_dist_browser_getClassName__ from "babel-plugin-react-css-modules/dist/browser/getClassName";
+export { LoginPageContainer }
+import * as __WEBPACK_IMPORTED_MODULE_0_babel_plugin_react_css_modules_dist_browser_getClassName__ from "babel-plugin-react-css-modules/dist/browser/getClassName"
 /* harmony import */
-import __WEBPACK_IMPORTED_MODULE_0_babel_plugin_react_css_modules_dist_browser_getClassName___default from "babel-plugin-react-css-modules/dist/browser/getClassName";
+import __WEBPACK_IMPORTED_MODULE_0_babel_plugin_react_css_modules_dist_browser_getClassName___default from "babel-plugin-react-css-modules/dist/browser/getClassName"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_1_react__ from "react";
+import * as __WEBPACK_IMPORTED_MODULE_1_react__ from "react"
 /* harmony import */
-import __WEBPACK_IMPORTED_MODULE_1_react___default from "react";
+import __WEBPACK_IMPORTED_MODULE_1_react___default from "react"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_2__def__ from "../../def-YMpR";
+import * as __WEBPACK_IMPORTED_MODULE_2__def__ from "../../def-YMpR"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_3__i18n__ from "../../i18n-K_kJ";
+import * as __WEBPACK_IMPORTED_MODULE_3__i18n__ from "../../i18n-K_kJ"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_4__base_button__ from "../../../../../../../../../../../../base/button-sg+3";
+import * as __WEBPACK_IMPORTED_MODULE_4__base_button__ from "../../../../../../../../../../../../base/button-sg+3"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_5__ByEmail__ from "./ByEmail-Qscg";
+import * as __WEBPACK_IMPORTED_MODULE_5__ByEmail__ from "./ByEmail-Qscg"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_6__style_module_css__ from "../../style.module.css-idDZ";
+import * as __WEBPACK_IMPORTED_MODULE_6__style_module_css__ from "../../style.module.css-idDZ"
 /* harmony import */
-import __WEBPACK_IMPORTED_MODULE_6__style_module_css___default from "../../style.module.css-idDZ";
-var _this = this;
+import __WEBPACK_IMPORTED_MODULE_6__style_module_css___default from "../../style.module.css-idDZ"
+var _this = this
 var _styleModuleImportMap = {
   "../../style_module.css": {
     "wrap": "CUI-new-oversea-sign-in-dialog-wrap",
@@ -69,13 +69,13 @@ var _styleModuleImportMap = {
     "text-main": "CUI-new-oversea-sign-in-dialog-text-main",
     "text-second": "CUI-new-oversea-sign-in-dialog-text-second"
   }
-};
+}
 var LoginPageContainer = function LoginPageContainer(props) {
-  var isRequesting = props.isRequesting;
-  var setIsRequesting = props.setIsRequesting;
-  var switchView = props.switchView;
-  var onEmailLoginSuccess = props.onEmailLoginSuccess;
-  var reportMethod = props.reportMethod;
+  var isRequesting = props.isRequesting
+  var setIsRequesting = props.setIsRequesting
+  var switchView = props.switchView
+  var onEmailLoginSuccess = props.onEmailLoginSuccess
+  var reportMethod = props.reportMethod
   return /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1_react__.createElement(__WEBPACK_IMPORTED_MODULE_1_react__.Fragment, null, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1_react__.createElement("div", {
     className: "CUI-new-oversea-sign-in-dialog-content"
   }, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_1_react__.createElement(__WEBPACK_IMPORTED_MODULE_5__ByEmail__.ByEmailComponent, {
@@ -102,15 +102,15 @@ var LoginPageContainer = function LoginPageContainer(props) {
     onClick: switchView.bind(_this, __WEBPACK_IMPORTED_MODULE_2__def__.ContentView.REGISTER),
     type: "transparent",
     className: "CUI-new-oversea-sign-in-dialog-switch-btn"
-  }, __WEBPACK_IMPORTED_MODULE_3__i18n__.getLanguage("sign_in_dialog/create_new_register"))));
-};
+  }, __WEBPACK_IMPORTED_MODULE_3__i18n__.getLanguage("sign_in_dialog/create_new_register"))))
+}
 LoginPageContainer.defaultProps = {
   onEmailLoginSuccess: function onEmailLoginSuccess() {
-    return undefined;
+    return undefined
   },
   reportMethod: function reportMethod() {
-    return undefined;
+    return undefined
   }
-};
+}
 
 /***/

@@ -4,20 +4,20 @@
  * 模块 ID：693
  */
 
-"use strict";
+"use strict"
 
-export { r as b };
-export { i as a };
+export { r as b }
+export { i as a }
 var r = function (e) {
-  return e.scrollTop;
-};
-function i(e, t) {
-  var n = e.timeout;
-  var r = e.style;
-  var i = undefined === r ? {} : r;
-  return {
-    duration: i.transitionDuration || "number" === typeof n ? n : n[t.mode] || 0,
-    delay: i.transitionDelay
-  };
+  return e.scrollTop
 }
-export default i;
+function i(e, t) {
+  var e$timeout = e.timeout
+  var e$style = e.style
+  var i = undefined === e$style ? {} : e$style
+  return {
+    duration: i.transitionDuration || "number" === typeof e$timeout ? e$timeout : e$timeout[t.mode] || 0,
+    delay: i.transitionDelay
+  }
+}
+export default i

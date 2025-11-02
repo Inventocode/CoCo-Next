@@ -4,280 +4,280 @@
  * 模块 ID：503
  */
 
-"use strict";
+"use strict"
 
-var n = require("./74");
-var o = require("./164");
-var i = require("./124");
-var a = require("./56");
-var u = require("./37");
-var s = require("./150");
-var c = require("./73/index");
-var f = require("./170");
+var n = require("./74")
+var o = require("./164")
+var i = require("./124")
+var a = require("./56")
+var u = require("./37")
+var s = require("./150")
+var c = require("./73/index")
+var f = require("./170")
 var h = function () {
   var t = function (e, r) {
     return (t = Object.setPrototypeOf || {
       __proto__: []
     } instanceof Array && function (t, e) {
-      t.__proto__ = e;
+      t.__proto__ = e
     } || function (t, e) {
       for (var r in e) if (e.hasOwnProperty(r)) {
-        t[r] = e[r];
+        t[r] = e[r]
       }
-    })(e, r);
-  };
+    })(e, r)
+  }
   return function (e, r) {
     function n() {
-      this.constructor = e;
+      this.constructor = e
     }
-    t(e, r);
-    e.prototype = null === r ? Object.create(r) : (n.prototype = r.prototype, new n());
-  };
-}();
+    t(e, r)
+    e.prototype = null === r ? Object.create(r) : (n.prototype = r.prototype, new n())
+  }
+}()
 var l = function (t) {
   function e() {
-    return null !== t && t.apply(this, arguments) || this;
+    return null !== t && t.apply(this, arguments) || this
   }
-  h(e, t);
+  h(e, t)
   e.findStartPattern = function (t) {
     for (var r = t.getSize(), n = t.getNextSet(0), o = 0, i = Int32Array.from([0, 0, 0, 0, 0, 0]), a = n, s = false, c = n; c < r; c++) {
       if (t.get(c) !== s) {
-        i[o]++;
+        i[o]++
       } else {
         if (5 === o) {
-          for (var h = e.MAX_AVG_VARIANCE, l = -1, d = e.CODE_START_A; d <= e.CODE_START_C; d++) {
-            var p = f.a.patternMatchVariance(i, e.CODE_PATTERNS[d], e.MAX_INDIVIDUAL_VARIANCE);
-            if (p < h) {
-              h = p;
-              l = d;
+          for (var e$MAX_AVG_VARIANCE = e.MAX_AVG_VARIANCE, l = -1, e$CODE_START_A = e.CODE_START_A; e$CODE_START_A <= e.CODE_START_C; e$CODE_START_A++) {
+            var p = f.a.patternMatchVariance(i, e.CODE_PATTERNS[e$CODE_START_A], e.MAX_INDIVIDUAL_VARIANCE)
+            if (p < e$MAX_AVG_VARIANCE) {
+              e$MAX_AVG_VARIANCE = p
+              l = e$CODE_START_A
             }
           }
           if (l >= 0 && t.isRange(Math.max(0, a - (c - a) / 2), a, false)) {
-            return Int32Array.from([a, c, l]);
+            return Int32Array.from([a, c, l])
           }
           a += i[0] + i[1];
-          (i = i.slice(2, i.length - 1))[o - 1] = 0;
-          i[o] = 0;
-          o--;
+          (i = i.slice(2, i.length - 1))[o - 1] = 0
+          i[o] = 0
+          o--
         } else {
-          o++;
+          o++
         }
-        i[o] = 1;
-        s = !s;
+        i[o] = 1
+        s = !s
       }
     }
-    throw new u.a();
-  };
+    throw new u.a()
+  }
   e.decodeCode = function (t, r, n) {
-    f.a.recordPattern(t, n, r);
-    for (var o = e.MAX_AVG_VARIANCE, i = -1, a = 0; a < e.CODE_PATTERNS.length; a++) {
-      var s = e.CODE_PATTERNS[a];
-      var c = this.patternMatchVariance(r, s, e.MAX_INDIVIDUAL_VARIANCE);
-      if (c < o) {
-        o = c;
-        i = a;
+    f.a.recordPattern(t, n, r)
+    for (var e$MAX_AVG_VARIANCE = e.MAX_AVG_VARIANCE, i = -1, a = 0; a < e.CODE_PATTERNS.length; a++) {
+      var s = e.CODE_PATTERNS[a]
+      var c = this.patternMatchVariance(r, s, e.MAX_INDIVIDUAL_VARIANCE)
+      if (c < e$MAX_AVG_VARIANCE) {
+        e$MAX_AVG_VARIANCE = c
+        i = a
       }
     }
     if (i >= 0) {
-      return i;
+      return i
     }
-    throw new u.a();
-  };
+    throw new u.a()
+  }
   e.prototype.decodeRow = function (t, r, f) {
-    var h;
-    var l = f && true === f.get(i.a.ASSUME_GS1);
-    var d = e.findStartPattern(r);
-    var p = d[2];
-    var g = 0;
-    var y = new Uint8Array(20);
+    var h
+    var l = f && true === f.get(i.a.ASSUME_GS1)
+    var d = e.findStartPattern(r)
+    var p = d[2]
+    var g = 0
+    var y = new Uint8Array(20)
     switch (y[g++] = p, p) {
       case e.CODE_START_A:
-        h = e.CODE_CODE_A;
-        break;
+        h = e.CODE_CODE_A
+        break
       case e.CODE_START_B:
-        h = e.CODE_CODE_B;
-        break;
+        h = e.CODE_CODE_B
+        break
       case e.CODE_START_C:
-        h = e.CODE_CODE_C;
-        break;
+        h = e.CODE_CODE_C
+        break
       default:
-        throw new a.a();
+        throw new a.a()
     }
     for (var w = false, v = false, _ = "", m = d[0], A = d[1], E = Int32Array.from([0, 0, 0, 0, 0, 0]), C = 0, I = 0, S = p, T = 0, O = true, b = false, R = false; !w;) {
-      var N = v;
+      var N = v
       switch (v = false, C = I, I = e.decodeCode(r, E, A), y[g++] = I, I !== e.CODE_STOP && (O = true), I !== e.CODE_STOP && (S += ++T * I), m = A, A += E.reduce(function (t, e) {
-        return t + e;
+        return t + e
       }, 0), I) {
         case e.CODE_START_A:
         case e.CODE_START_B:
         case e.CODE_START_C:
-          throw new a.a();
+          throw new a.a()
       }
       switch (h) {
         case e.CODE_CODE_A:
           if (I < 64) {
-            _ += R === b ? String.fromCharCode(" ".charCodeAt(0) + I) : String.fromCharCode(" ".charCodeAt(0) + I + 128);
-            R = false;
+            _ += R === b ? String.fromCharCode(" ".charCodeAt(0) + I) : String.fromCharCode(" ".charCodeAt(0) + I + 128)
+            R = false
           } else if (I < 96) {
-            _ += R === b ? String.fromCharCode(I - 64) : String.fromCharCode(I + 64);
-            R = false;
+            _ += R === b ? String.fromCharCode(I - 64) : String.fromCharCode(I + 64)
+            R = false
           } else {
             switch (I !== e.CODE_STOP && (O = false), I) {
               case e.CODE_FNC_1:
                 if (l) {
                   if (0 === _.length) {
-                    _ += "]C1";
+                    _ += "]C1"
                   } else {
-                    _ += String.fromCharCode(29);
+                    _ += String.fromCharCode(29)
                   }
                 }
-                break;
+                break
               case e.CODE_FNC_2:
               case e.CODE_FNC_3:
-                break;
+                break
               case e.CODE_FNC_4_A:
                 if (!b && R) {
-                  b = true;
-                  R = false;
+                  b = true
+                  R = false
                 } else {
                   if (b && R) {
-                    b = false;
-                    R = false;
+                    b = false
+                    R = false
                   } else {
-                    R = true;
+                    R = true
                   }
                 }
-                break;
+                break
               case e.CODE_SHIFT:
-                v = true;
-                h = e.CODE_CODE_B;
-                break;
+                v = true
+                h = e.CODE_CODE_B
+                break
               case e.CODE_CODE_B:
-                h = e.CODE_CODE_B;
-                break;
+                h = e.CODE_CODE_B
+                break
               case e.CODE_CODE_C:
-                h = e.CODE_CODE_C;
-                break;
+                h = e.CODE_CODE_C
+                break
               case e.CODE_STOP:
-                w = true;
+                w = true
             }
           }
-          break;
+          break
         case e.CODE_CODE_B:
           if (I < 96) {
-            _ += R === b ? String.fromCharCode(" ".charCodeAt(0) + I) : String.fromCharCode(" ".charCodeAt(0) + I + 128);
-            R = false;
+            _ += R === b ? String.fromCharCode(" ".charCodeAt(0) + I) : String.fromCharCode(" ".charCodeAt(0) + I + 128)
+            R = false
           } else {
             switch (I !== e.CODE_STOP && (O = false), I) {
               case e.CODE_FNC_1:
                 if (l) {
                   if (0 === _.length) {
-                    _ += "]C1";
+                    _ += "]C1"
                   } else {
-                    _ += String.fromCharCode(29);
+                    _ += String.fromCharCode(29)
                   }
                 }
-                break;
+                break
               case e.CODE_FNC_2:
               case e.CODE_FNC_3:
-                break;
+                break
               case e.CODE_FNC_4_B:
                 if (!b && R) {
-                  b = true;
-                  R = false;
+                  b = true
+                  R = false
                 } else {
                   if (b && R) {
-                    b = false;
-                    R = false;
+                    b = false
+                    R = false
                   } else {
-                    R = true;
+                    R = true
                   }
                 }
-                break;
+                break
               case e.CODE_SHIFT:
-                v = true;
-                h = e.CODE_CODE_A;
-                break;
+                v = true
+                h = e.CODE_CODE_A
+                break
               case e.CODE_CODE_A:
-                h = e.CODE_CODE_A;
-                break;
+                h = e.CODE_CODE_A
+                break
               case e.CODE_CODE_C:
-                h = e.CODE_CODE_C;
-                break;
+                h = e.CODE_CODE_C
+                break
               case e.CODE_STOP:
-                w = true;
+                w = true
             }
           }
-          break;
+          break
         case e.CODE_CODE_C:
           if (I < 100) {
             if (I < 10) {
-              _ += "0";
+              _ += "0"
             }
-            _ += I;
+            _ += I
           } else {
             switch (I !== e.CODE_STOP && (O = false), I) {
               case e.CODE_FNC_1:
                 if (l) {
                   if (0 === _.length) {
-                    _ += "]C1";
+                    _ += "]C1"
                   } else {
-                    _ += String.fromCharCode(29);
+                    _ += String.fromCharCode(29)
                   }
                 }
-                break;
+                break
               case e.CODE_CODE_A:
-                h = e.CODE_CODE_A;
-                break;
+                h = e.CODE_CODE_A
+                break
               case e.CODE_CODE_B:
-                h = e.CODE_CODE_B;
-                break;
+                h = e.CODE_CODE_B
+                break
               case e.CODE_STOP:
-                w = true;
+                w = true
             }
           }
       }
       if (N) {
-        h = h === e.CODE_CODE_A ? e.CODE_CODE_B : e.CODE_CODE_A;
+        h = h === e.CODE_CODE_A ? e.CODE_CODE_B : e.CODE_CODE_A
       }
     }
-    var D = A - m;
-    A = r.getNextUnset(A);
+    var D = A - m
+    A = r.getNextUnset(A)
     if (!r.isRange(A, Math.min(r.getSize(), A + (A - m) / 2), false)) {
-      throw new u.a();
+      throw new u.a()
     }
     if ((S -= T * C) % 103 !== C) {
-      throw new o.a();
+      throw new o.a()
     }
-    var M = _.length;
-    if (0 === M) {
-      throw new u.a();
+    var _$length = _.length
+    if (0 === _$length) {
+      throw new u.a()
     }
-    if (M > 0 && O) {
-      _ = h === e.CODE_CODE_C ? _.substring(0, M - 2) : _.substring(0, M - 1);
+    if (_$length > 0 && O) {
+      _ = h === e.CODE_CODE_C ? _.substring(0, _$length - 2) : _.substring(0, _$length - 1)
     }
-    for (var P = (d[1] + d[0]) / 2, B = m + D / 2, L = y.length, F = new Uint8Array(L), x = 0; x < L; x++) {
-      F[x] = y[x];
+    for (var P = (d[1] + d[0]) / 2, B = m + D / 2, y$length = y.length, F = new Uint8Array(y$length), x = 0; x < y$length; x++) {
+      F[x] = y[x]
     }
-    var k = [new c.a(P, t), new c.a(B, t)];
-    return new s.a(_, F, 0, k, n.a.CODE_128, new Date().getTime());
-  };
-  e.CODE_PATTERNS = [Int32Array.from([2, 1, 2, 2, 2, 2]), Int32Array.from([2, 2, 2, 1, 2, 2]), Int32Array.from([2, 2, 2, 2, 2, 1]), Int32Array.from([1, 2, 1, 2, 2, 3]), Int32Array.from([1, 2, 1, 3, 2, 2]), Int32Array.from([1, 3, 1, 2, 2, 2]), Int32Array.from([1, 2, 2, 2, 1, 3]), Int32Array.from([1, 2, 2, 3, 1, 2]), Int32Array.from([1, 3, 2, 2, 1, 2]), Int32Array.from([2, 2, 1, 2, 1, 3]), Int32Array.from([2, 2, 1, 3, 1, 2]), Int32Array.from([2, 3, 1, 2, 1, 2]), Int32Array.from([1, 1, 2, 2, 3, 2]), Int32Array.from([1, 2, 2, 1, 3, 2]), Int32Array.from([1, 2, 2, 2, 3, 1]), Int32Array.from([1, 1, 3, 2, 2, 2]), Int32Array.from([1, 2, 3, 1, 2, 2]), Int32Array.from([1, 2, 3, 2, 2, 1]), Int32Array.from([2, 2, 3, 2, 1, 1]), Int32Array.from([2, 2, 1, 1, 3, 2]), Int32Array.from([2, 2, 1, 2, 3, 1]), Int32Array.from([2, 1, 3, 2, 1, 2]), Int32Array.from([2, 2, 3, 1, 1, 2]), Int32Array.from([3, 1, 2, 1, 3, 1]), Int32Array.from([3, 1, 1, 2, 2, 2]), Int32Array.from([3, 2, 1, 1, 2, 2]), Int32Array.from([3, 2, 1, 2, 2, 1]), Int32Array.from([3, 1, 2, 2, 1, 2]), Int32Array.from([3, 2, 2, 1, 1, 2]), Int32Array.from([3, 2, 2, 2, 1, 1]), Int32Array.from([2, 1, 2, 1, 2, 3]), Int32Array.from([2, 1, 2, 3, 2, 1]), Int32Array.from([2, 3, 2, 1, 2, 1]), Int32Array.from([1, 1, 1, 3, 2, 3]), Int32Array.from([1, 3, 1, 1, 2, 3]), Int32Array.from([1, 3, 1, 3, 2, 1]), Int32Array.from([1, 1, 2, 3, 1, 3]), Int32Array.from([1, 3, 2, 1, 1, 3]), Int32Array.from([1, 3, 2, 3, 1, 1]), Int32Array.from([2, 1, 1, 3, 1, 3]), Int32Array.from([2, 3, 1, 1, 1, 3]), Int32Array.from([2, 3, 1, 3, 1, 1]), Int32Array.from([1, 1, 2, 1, 3, 3]), Int32Array.from([1, 1, 2, 3, 3, 1]), Int32Array.from([1, 3, 2, 1, 3, 1]), Int32Array.from([1, 1, 3, 1, 2, 3]), Int32Array.from([1, 1, 3, 3, 2, 1]), Int32Array.from([1, 3, 3, 1, 2, 1]), Int32Array.from([3, 1, 3, 1, 2, 1]), Int32Array.from([2, 1, 1, 3, 3, 1]), Int32Array.from([2, 3, 1, 1, 3, 1]), Int32Array.from([2, 1, 3, 1, 1, 3]), Int32Array.from([2, 1, 3, 3, 1, 1]), Int32Array.from([2, 1, 3, 1, 3, 1]), Int32Array.from([3, 1, 1, 1, 2, 3]), Int32Array.from([3, 1, 1, 3, 2, 1]), Int32Array.from([3, 3, 1, 1, 2, 1]), Int32Array.from([3, 1, 2, 1, 1, 3]), Int32Array.from([3, 1, 2, 3, 1, 1]), Int32Array.from([3, 3, 2, 1, 1, 1]), Int32Array.from([3, 1, 4, 1, 1, 1]), Int32Array.from([2, 2, 1, 4, 1, 1]), Int32Array.from([4, 3, 1, 1, 1, 1]), Int32Array.from([1, 1, 1, 2, 2, 4]), Int32Array.from([1, 1, 1, 4, 2, 2]), Int32Array.from([1, 2, 1, 1, 2, 4]), Int32Array.from([1, 2, 1, 4, 2, 1]), Int32Array.from([1, 4, 1, 1, 2, 2]), Int32Array.from([1, 4, 1, 2, 2, 1]), Int32Array.from([1, 1, 2, 2, 1, 4]), Int32Array.from([1, 1, 2, 4, 1, 2]), Int32Array.from([1, 2, 2, 1, 1, 4]), Int32Array.from([1, 2, 2, 4, 1, 1]), Int32Array.from([1, 4, 2, 1, 1, 2]), Int32Array.from([1, 4, 2, 2, 1, 1]), Int32Array.from([2, 4, 1, 2, 1, 1]), Int32Array.from([2, 2, 1, 1, 1, 4]), Int32Array.from([4, 1, 3, 1, 1, 1]), Int32Array.from([2, 4, 1, 1, 1, 2]), Int32Array.from([1, 3, 4, 1, 1, 1]), Int32Array.from([1, 1, 1, 2, 4, 2]), Int32Array.from([1, 2, 1, 1, 4, 2]), Int32Array.from([1, 2, 1, 2, 4, 1]), Int32Array.from([1, 1, 4, 2, 1, 2]), Int32Array.from([1, 2, 4, 1, 1, 2]), Int32Array.from([1, 2, 4, 2, 1, 1]), Int32Array.from([4, 1, 1, 2, 1, 2]), Int32Array.from([4, 2, 1, 1, 1, 2]), Int32Array.from([4, 2, 1, 2, 1, 1]), Int32Array.from([2, 1, 2, 1, 4, 1]), Int32Array.from([2, 1, 4, 1, 2, 1]), Int32Array.from([4, 1, 2, 1, 2, 1]), Int32Array.from([1, 1, 1, 1, 4, 3]), Int32Array.from([1, 1, 1, 3, 4, 1]), Int32Array.from([1, 3, 1, 1, 4, 1]), Int32Array.from([1, 1, 4, 1, 1, 3]), Int32Array.from([1, 1, 4, 3, 1, 1]), Int32Array.from([4, 1, 1, 1, 1, 3]), Int32Array.from([4, 1, 1, 3, 1, 1]), Int32Array.from([1, 1, 3, 1, 4, 1]), Int32Array.from([1, 1, 4, 1, 3, 1]), Int32Array.from([3, 1, 1, 1, 4, 1]), Int32Array.from([4, 1, 1, 1, 3, 1]), Int32Array.from([2, 1, 1, 4, 1, 2]), Int32Array.from([2, 1, 1, 2, 1, 4]), Int32Array.from([2, 1, 1, 2, 3, 2]), Int32Array.from([2, 3, 3, 1, 1, 1, 2])];
-  e.MAX_AVG_VARIANCE = .25;
-  e.MAX_INDIVIDUAL_VARIANCE = .7;
-  e.CODE_SHIFT = 98;
-  e.CODE_CODE_C = 99;
-  e.CODE_CODE_B = 100;
-  e.CODE_CODE_A = 101;
-  e.CODE_FNC_1 = 102;
-  e.CODE_FNC_2 = 97;
-  e.CODE_FNC_3 = 96;
-  e.CODE_FNC_4_A = 101;
-  e.CODE_FNC_4_B = 100;
-  e.CODE_START_A = 103;
-  e.CODE_START_B = 104;
-  e.CODE_START_C = 105;
-  e.CODE_STOP = 106;
-  return e;
-}(f.a);
-exports.a = l;
+    var k = [new c.a(P, t), new c.a(B, t)]
+    return new s.a(_, F, 0, k, n.a.CODE_128, new Date().getTime())
+  }
+  e.CODE_PATTERNS = [Int32Array.from([2, 1, 2, 2, 2, 2]), Int32Array.from([2, 2, 2, 1, 2, 2]), Int32Array.from([2, 2, 2, 2, 2, 1]), Int32Array.from([1, 2, 1, 2, 2, 3]), Int32Array.from([1, 2, 1, 3, 2, 2]), Int32Array.from([1, 3, 1, 2, 2, 2]), Int32Array.from([1, 2, 2, 2, 1, 3]), Int32Array.from([1, 2, 2, 3, 1, 2]), Int32Array.from([1, 3, 2, 2, 1, 2]), Int32Array.from([2, 2, 1, 2, 1, 3]), Int32Array.from([2, 2, 1, 3, 1, 2]), Int32Array.from([2, 3, 1, 2, 1, 2]), Int32Array.from([1, 1, 2, 2, 3, 2]), Int32Array.from([1, 2, 2, 1, 3, 2]), Int32Array.from([1, 2, 2, 2, 3, 1]), Int32Array.from([1, 1, 3, 2, 2, 2]), Int32Array.from([1, 2, 3, 1, 2, 2]), Int32Array.from([1, 2, 3, 2, 2, 1]), Int32Array.from([2, 2, 3, 2, 1, 1]), Int32Array.from([2, 2, 1, 1, 3, 2]), Int32Array.from([2, 2, 1, 2, 3, 1]), Int32Array.from([2, 1, 3, 2, 1, 2]), Int32Array.from([2, 2, 3, 1, 1, 2]), Int32Array.from([3, 1, 2, 1, 3, 1]), Int32Array.from([3, 1, 1, 2, 2, 2]), Int32Array.from([3, 2, 1, 1, 2, 2]), Int32Array.from([3, 2, 1, 2, 2, 1]), Int32Array.from([3, 1, 2, 2, 1, 2]), Int32Array.from([3, 2, 2, 1, 1, 2]), Int32Array.from([3, 2, 2, 2, 1, 1]), Int32Array.from([2, 1, 2, 1, 2, 3]), Int32Array.from([2, 1, 2, 3, 2, 1]), Int32Array.from([2, 3, 2, 1, 2, 1]), Int32Array.from([1, 1, 1, 3, 2, 3]), Int32Array.from([1, 3, 1, 1, 2, 3]), Int32Array.from([1, 3, 1, 3, 2, 1]), Int32Array.from([1, 1, 2, 3, 1, 3]), Int32Array.from([1, 3, 2, 1, 1, 3]), Int32Array.from([1, 3, 2, 3, 1, 1]), Int32Array.from([2, 1, 1, 3, 1, 3]), Int32Array.from([2, 3, 1, 1, 1, 3]), Int32Array.from([2, 3, 1, 3, 1, 1]), Int32Array.from([1, 1, 2, 1, 3, 3]), Int32Array.from([1, 1, 2, 3, 3, 1]), Int32Array.from([1, 3, 2, 1, 3, 1]), Int32Array.from([1, 1, 3, 1, 2, 3]), Int32Array.from([1, 1, 3, 3, 2, 1]), Int32Array.from([1, 3, 3, 1, 2, 1]), Int32Array.from([3, 1, 3, 1, 2, 1]), Int32Array.from([2, 1, 1, 3, 3, 1]), Int32Array.from([2, 3, 1, 1, 3, 1]), Int32Array.from([2, 1, 3, 1, 1, 3]), Int32Array.from([2, 1, 3, 3, 1, 1]), Int32Array.from([2, 1, 3, 1, 3, 1]), Int32Array.from([3, 1, 1, 1, 2, 3]), Int32Array.from([3, 1, 1, 3, 2, 1]), Int32Array.from([3, 3, 1, 1, 2, 1]), Int32Array.from([3, 1, 2, 1, 1, 3]), Int32Array.from([3, 1, 2, 3, 1, 1]), Int32Array.from([3, 3, 2, 1, 1, 1]), Int32Array.from([3, 1, 4, 1, 1, 1]), Int32Array.from([2, 2, 1, 4, 1, 1]), Int32Array.from([4, 3, 1, 1, 1, 1]), Int32Array.from([1, 1, 1, 2, 2, 4]), Int32Array.from([1, 1, 1, 4, 2, 2]), Int32Array.from([1, 2, 1, 1, 2, 4]), Int32Array.from([1, 2, 1, 4, 2, 1]), Int32Array.from([1, 4, 1, 1, 2, 2]), Int32Array.from([1, 4, 1, 2, 2, 1]), Int32Array.from([1, 1, 2, 2, 1, 4]), Int32Array.from([1, 1, 2, 4, 1, 2]), Int32Array.from([1, 2, 2, 1, 1, 4]), Int32Array.from([1, 2, 2, 4, 1, 1]), Int32Array.from([1, 4, 2, 1, 1, 2]), Int32Array.from([1, 4, 2, 2, 1, 1]), Int32Array.from([2, 4, 1, 2, 1, 1]), Int32Array.from([2, 2, 1, 1, 1, 4]), Int32Array.from([4, 1, 3, 1, 1, 1]), Int32Array.from([2, 4, 1, 1, 1, 2]), Int32Array.from([1, 3, 4, 1, 1, 1]), Int32Array.from([1, 1, 1, 2, 4, 2]), Int32Array.from([1, 2, 1, 1, 4, 2]), Int32Array.from([1, 2, 1, 2, 4, 1]), Int32Array.from([1, 1, 4, 2, 1, 2]), Int32Array.from([1, 2, 4, 1, 1, 2]), Int32Array.from([1, 2, 4, 2, 1, 1]), Int32Array.from([4, 1, 1, 2, 1, 2]), Int32Array.from([4, 2, 1, 1, 1, 2]), Int32Array.from([4, 2, 1, 2, 1, 1]), Int32Array.from([2, 1, 2, 1, 4, 1]), Int32Array.from([2, 1, 4, 1, 2, 1]), Int32Array.from([4, 1, 2, 1, 2, 1]), Int32Array.from([1, 1, 1, 1, 4, 3]), Int32Array.from([1, 1, 1, 3, 4, 1]), Int32Array.from([1, 3, 1, 1, 4, 1]), Int32Array.from([1, 1, 4, 1, 1, 3]), Int32Array.from([1, 1, 4, 3, 1, 1]), Int32Array.from([4, 1, 1, 1, 1, 3]), Int32Array.from([4, 1, 1, 3, 1, 1]), Int32Array.from([1, 1, 3, 1, 4, 1]), Int32Array.from([1, 1, 4, 1, 3, 1]), Int32Array.from([3, 1, 1, 1, 4, 1]), Int32Array.from([4, 1, 1, 1, 3, 1]), Int32Array.from([2, 1, 1, 4, 1, 2]), Int32Array.from([2, 1, 1, 2, 1, 4]), Int32Array.from([2, 1, 1, 2, 3, 2]), Int32Array.from([2, 3, 3, 1, 1, 1, 2])]
+  e.MAX_AVG_VARIANCE = .25
+  e.MAX_INDIVIDUAL_VARIANCE = .7
+  e.CODE_SHIFT = 98
+  e.CODE_CODE_C = 99
+  e.CODE_CODE_B = 100
+  e.CODE_CODE_A = 101
+  e.CODE_FNC_1 = 102
+  e.CODE_FNC_2 = 97
+  e.CODE_FNC_3 = 96
+  e.CODE_FNC_4_A = 101
+  e.CODE_FNC_4_B = 100
+  e.CODE_START_A = 103
+  e.CODE_START_B = 104
+  e.CODE_START_C = 105
+  e.CODE_STOP = 106
+  return e
+}(f.a)
+exports.a = l

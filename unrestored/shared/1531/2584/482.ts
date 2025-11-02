@@ -4,17 +4,17 @@
  * 模块 ID：482
  */
 
-"use strict";
+"use strict"
 
-export { i as a };
+export { i as a }
 import r = require("./20");
 function i(e, t) {
-  var n = r.a({}, e);
+  var n = r.a({}, e)
   if (Array.isArray(t)) {
     t.forEach(function (e) {
-      delete n[e];
-    });
+      delete n[e]
+    })
   }
-  return n;
+  return n
 }
-export default i;
+export default i

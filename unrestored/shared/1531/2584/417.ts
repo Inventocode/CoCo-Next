@@ -12,4 +12,4 @@ module.exports = {
   title: "WidgetEditor_title__2LiDO",
   close: "WidgetEditor_close__1oWnp",
   content: "WidgetEditor_content__1jTvH"
-};
+}

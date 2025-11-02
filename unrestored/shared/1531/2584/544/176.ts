@@ -23,4 +23,4 @@ module.exports = {
   loaderBox: "style_loaderBox__3QvTQ",
   loader: "style_loader__1TGFb",
   load2: "style_load2__2fRD8"
-};
+}

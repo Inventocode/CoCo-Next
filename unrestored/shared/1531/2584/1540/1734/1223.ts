@@ -4,30 +4,30 @@
  * 模块 ID：1223
  */
 
-var n = Math.floor;
+var math$floor = Math.floor
 var r = function (e, t) {
-  for (var n, r, o = e.length, i = 1; i < o;) {
+  for (var n, r, e$length = e.length, i = 1; i < e$length;) {
     for (r = i, n = e[i]; r && t(e[r - 1], n) > 0;) {
-      e[r] = e[--r];
+      e[r] = e[--r]
     }
     if (r !== i++) {
-      e[r] = n;
+      e[r] = n
     }
   }
-  return e;
-};
+  return e
+}
 var o = function (e, t, n) {
-  for (var r = e.length, o = t.length, i = 0, a = 0, s = []; i < r || a < o;) {
-    if (i < r && a < o) {
-      s.push(n(e[i], t[a]) <= 0 ? e[i++] : t[a++]);
+  for (var e$length = e.length, t$length = t.length, i = 0, a = 0, s = []; i < e$length || a < t$length;) {
+    if (i < e$length && a < t$length) {
+      s.push(n(e[i], t[a]) <= 0 ? e[i++] : t[a++])
     } else {
-      s.push(i < r ? e[i++] : t[a++]);
+      s.push(i < e$length ? e[i++] : t[a++])
     }
   }
-  return s;
-};
+  return s
+}
 module.exports = function e(t, i) {
-  var a = t.length;
-  var s = n(a / 2);
-  return a < 8 ? r(t, i) : o(e(t.slice(0, s), i), e(t.slice(s), i), i);
-};
+  var t$length = t.length
+  var s = math$floor(t$length / 2)
+  return t$length < 8 ? r(t, i) : o(e(t.slice(0, s), i), e(t.slice(s), i), i)
+}

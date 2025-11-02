@@ -4,33 +4,33 @@
  * 模块 ID：99
  */
 
-"use strict";
+"use strict"
 
-export { g as b };
-export { b as c };
-export { A as g };
-export { j as f };
-export { N as d };
-export { R as e };
-export { k as a };
-import r = require("regenerator-runtime");
+export { g as b }
+export { b as c }
+export { A as g }
+export { j as f }
+export { N as d }
+export { R as e }
+export { k as a }
+import RegeneratorRuntime = require("regenerator-runtime");
 var o = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
-    return module.default;
+    return module.default
   } : function () {
-    return module;
-  };
+    return module
+  }
   Object.defineProperty(defaultExport, "a", {
     enumerable: true,
     get: defaultExport
-  });
-  return defaultExport;
-}(r);
+  })
+  return defaultExport
+}(RegeneratorRuntime)
 import i = require("./10/index");
 import a = require("./6");
 import s = require("./25/index");
 import c = require("./7");
-import l = require("lodash");
+import Lodash = require("lodash");
 import u = require("../../../../src/shared/events/actions");
 import d = require("./9");
 import p = require("./26/index");
@@ -38,81 +38,81 @@ import f = require("./5");
 import h = require("../../../../src/shared/widget/custom/storage");
 import m = require("./38/375");
 function g(e) {
-  return _.apply(this, arguments);
+  return _.apply(this, arguments)
 }
 function _() {
   return (_ = c.a(o.a.mark(function e(t) {
-    var n;
-    var r;
-    var i;
-    var a;
-    var s;
-    var c;
-    var m;
-    var g;
-    var _;
-    var b;
-    var y;
-    var C;
-    var T;
-    var S;
-    var I;
-    var A;
-    var j;
-    var N;
-    var R;
+    var /* [auto-meaningful-name] */r$common$userInfo
+    var r
+    var /* [auto-meaningful-name] */r$project
+    var /* [auto-meaningful-name] */r$project$title
+    var /* [auto-meaningful-name] */r$project$globalVariableList
+    var /* [auto-meaningful-name] */r$project$globalArrayList
+    var /* [auto-meaningful-name] */r$project$globalWidgetIds
+    var /* [auto-meaningful-name] */r$project$globalObjectList
+    var /* [auto-meaningful-name] */r$project$version
+    var /* [auto-meaningful-name] */r$project$projectSource
+    var y
+    var C
+    var T
+    var S
+    var I
+    var A
+    var j
+    var N
+    var R
     return o.a.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
-            r = u.d.getState();
-            i = r.project;
-            a = i.title;
-            s = i.globalVariableList;
-            c = i.globalArrayList;
-            m = i.globalWidgetIds;
-            g = i.globalObjectList;
-            _ = i.version;
-            b = i.projectSource;
-            y = null === (n = r.common.userInfo) || undefined === n ? undefined : n.id;
-            C = w(r.project.screens);
+            r = u.d.getState()
+            r$project = r.project
+            r$project$title = r$project.title
+            r$project$globalVariableList = r$project.globalVariableList
+            r$project$globalArrayList = r$project.globalArrayList
+            r$project$globalWidgetIds = r$project.globalWidgetIds
+            r$project$globalObjectList = r$project.globalObjectList
+            r$project$version = r$project.version
+            r$project$projectSource = r$project.projectSource
+            y = null === (r$common$userInfo = r.common.userInfo) || undefined === r$common$userInfo ? undefined : r$common$userInfo.id
+            C = w(r.project.screens)
             T = r.project.screens.map(function (e) {
-              return e.id;
-            }).toJSON();
-            S = p.z.getWorkspacesRecord();
-            I = E(S, m);
-            A = l.cloneDeep(O(I));
-            j = h.d();
-            N = h.e();
-            e.t0 = l.cloneDeep;
-            e.t1 = y;
-            e.t2 = a;
-            e.t3 = _;
-            e.t4 = C;
-            e.t5 = T;
-            e.t6 = S;
-            e.next = 19;
-            return d.H();
+              return e.id
+            }).toJSON()
+            S = p.z.getWorkspacesRecord()
+            I = E(S, r$project$globalWidgetIds)
+            A = Lodash.cloneDeep(O(I))
+            j = h.d()
+            N = h.e()
+            e.t0 = Lodash.cloneDeep
+            e.t1 = y
+            e.t2 = r$project$title
+            e.t3 = r$project$version
+            e.t4 = C
+            e.t5 = T
+            e.t6 = S
+            e.next = 19
+            return d.H()
           case 19:
-            e.t7 = e.sent;
-            e.next = 22;
-            return d.I();
+            e.t7 = e.sent
+            e.next = 22
+            return d.I()
           case 22:
-            e.t8 = e.sent;
-            e.next = 25;
-            return d.G();
+            e.t8 = e.sent
+            e.next = 25
+            return d.G()
           case 25:
-            e.t9 = e.sent;
-            e.t10 = v();
-            e.t11 = s;
-            e.t12 = c;
-            e.t13 = g;
-            e.t14 = I;
-            e.t15 = A;
-            e.t16 = j;
-            e.t17 = N;
-            e.t18 = b.tag;
-            e.t19 = b.id;
+            e.t9 = e.sent
+            e.t10 = v()
+            e.t11 = r$project$globalVariableList
+            e.t12 = r$project$globalArrayList
+            e.t13 = r$project$globalObjectList
+            e.t14 = I
+            e.t15 = A
+            e.t16 = j
+            e.t17 = N
+            e.t18 = r$project$projectSource.tag
+            e.t19 = r$project$projectSource.id
             e.t20 = {
               authorId: e.t1,
               title: e.t2,
@@ -133,147 +133,147 @@ function _() {
               unsafeExtensionWidgetList: e.t17,
               sourceTag: e.t18,
               sourceId: e.t19
-            };
-            R = (0, e.t0)(e.t20);
+            }
+            R = (0, e.t0)(e.t20)
             if (!t) {
               Object.keys(R.globalWidgets).forEach(function (e) {
-                var t = R.globalWidgets[e];
+                var t = R.globalWidgets[e]
                 if (t.type === f.l) {
                   t.attributes.fields.forEach(function (e) {
-                    e.value = "";
-                  });
+                    e.value = ""
+                  })
                 }
-              });
+              })
             }
-            return e.abrupt("return", R);
+            return e.abrupt("return", R)
           case 40:
           case "end":
-            return e.stop();
+            return e.stop()
         }
       }
-    }, e);
-  }))).apply(this, arguments);
+    }, e)
+  }))).apply(this, arguments)
 }
 function v() {
-  var e = u.d.getState();
-  var t = e.resource.fontFileList;
-  var n = {};
-  var r = e.project.screens;
-  var o = [];
-  var i = {};
-  t.forEach(function (e) {
-    n[e.id] = e;
-  });
-  r.forEach(function (e) {
+  var e = u.d.getState()
+  var e$resource$fontFileList = e.resource.fontFileList
+  var n = {}
+  var e$project$screens = e.project.screens
+  var o = []
+  var i = {}
+  e$resource$fontFileList.forEach(function (e) {
+    n[e.id] = e
+  })
+  e$project$screens.forEach(function (e) {
     e.widgetIds.forEach(function (e) {
-      var t = d.Bb(e);
+      var t = d.Bb(e)
       if ((null === t || undefined === t ? undefined : t.type) === f.H || (null === t || undefined === t ? undefined : t.type) === f.z || (null === t || undefined === t ? undefined : t.type) === f.w) {
-        var r = t.attributes.fontFamily;
-        if (!i[r]) {
-          if (n[r].cdnUrl) {
-            o.push(n[r]);
+        var t$attributes$fontFamily = t.attributes.fontFamily
+        if (!i[t$attributes$fontFamily]) {
+          if (n[t$attributes$fontFamily].cdnUrl) {
+            o.push(n[t$attributes$fontFamily])
           }
-          i[r] = true;
+          i[t$attributes$fontFamily] = true
         }
       }
       if (t && t.attributes && "EXTENSION_QUILL_RICH_TEXT_WIDGET" === t.type) {
-        var a = t.attributes.content;
-        var s = undefined === a ? "" : a;
+        var t$attributes$content = t.attributes.content
+        var s = undefined === t$attributes$content ? "" : t$attributes$content
         m.a(s).forEach(function (e) {
           if (!i[e]) {
             if (n[e].cdnUrl) {
-              o.push(n[e]);
+              o.push(n[e])
             }
-            i[e] = true;
+            i[e] = true
           }
-        });
+        })
       }
-    });
-  });
-  return o;
+    })
+  })
+  return o
 }
 function b() {
-  return y.apply(this, arguments);
+  return y.apply(this, arguments)
 }
 function y() {
   return (y = c.a(o.a.mark(function e() {
-    var t;
-    var n;
-    var r;
-    var i;
-    var a;
-    var s;
-    var c;
-    var m;
-    var g;
-    var _;
-    var v;
-    var b;
-    var y;
-    var E;
-    var A;
-    var j;
-    var N;
-    var R;
-    var k;
-    var x;
-    var D;
+    var /* [auto-meaningful-name] */n$common$userInfo
+    var n
+    var /* [auto-meaningful-name] */n$project
+    var /* [auto-meaningful-name] */n$project$title
+    var /* [auto-meaningful-name] */n$project$globalVariableList
+    var /* [auto-meaningful-name] */n$project$globalArrayList
+    var /* [auto-meaningful-name] */n$project$globalWidgetIds
+    var /* [auto-meaningful-name] */n$project$version
+    var /* [auto-meaningful-name] */n$project$globalObjectList
+    var _
+    var v
+    var b
+    var y
+    var E
+    var A
+    var j
+    var N
+    var R
+    var k
+    var x
+    var D
     return o.a.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
-            n = u.d.getState();
-            r = n.project;
-            i = r.title;
-            a = r.globalVariableList;
-            s = r.globalArrayList;
-            c = r.globalWidgetIds;
-            m = r.version;
-            g = r.globalObjectList;
-            _ = null === (t = n.common.userInfo) || undefined === t ? undefined : t.id;
-            v = C(n.cloudSpace.cloudDictKeysList);
-            b = S(n.cloudSpace.cloudTableColumnList);
-            y = I(n.cloudSpace.cloudTableDataList);
-            E = T(n.cloudSpace.cloudDictList);
-            A = T(n.cloudSpace.cloudTableList);
-            j = w(n.project.screens);
+            n = u.d.getState()
+            n$project = n.project
+            n$project$title = n$project.title
+            n$project$globalVariableList = n$project.globalVariableList
+            n$project$globalArrayList = n$project.globalArrayList
+            n$project$globalWidgetIds = n$project.globalWidgetIds
+            n$project$version = n$project.version
+            n$project$globalObjectList = n$project.globalObjectList
+            _ = null === (n$common$userInfo = n.common.userInfo) || undefined === n$common$userInfo ? undefined : n$common$userInfo.id
+            v = C(n.cloudSpace.cloudDictKeysList)
+            b = S(n.cloudSpace.cloudTableColumnList)
+            y = I(n.cloudSpace.cloudTableDataList)
+            E = T(n.cloudSpace.cloudDictList)
+            A = T(n.cloudSpace.cloudTableList)
+            j = w(n.project.screens)
             N = n.project.screens.map(function (e) {
-              return e.id;
-            }).toJSON();
-            R = p.z.getWorkspacesRecord();
-            k = h.d();
-            x = h.e();
-            e.t0 = l.cloneDeep;
-            e.t1 = _;
-            e.t2 = i;
-            e.t3 = m;
-            e.t4 = j;
-            e.t5 = N;
-            e.t6 = R;
-            e.next = 22;
-            return d.H();
+              return e.id
+            }).toJSON()
+            R = p.z.getWorkspacesRecord()
+            k = h.d()
+            x = h.e()
+            e.t0 = Lodash.cloneDeep
+            e.t1 = _
+            e.t2 = n$project$title
+            e.t3 = n$project$version
+            e.t4 = j
+            e.t5 = N
+            e.t6 = R
+            e.next = 22
+            return d.H()
           case 22:
-            e.t7 = e.sent;
-            e.next = 25;
-            return d.I();
+            e.t7 = e.sent
+            e.next = 25
+            return d.I()
           case 25:
-            e.t8 = e.sent;
-            e.next = 28;
-            return d.G();
+            e.t8 = e.sent
+            e.next = 28
+            return d.G()
           case 28:
-            e.t9 = e.sent;
-            e.t10 = a;
-            e.t11 = s;
-            e.t12 = g;
-            e.t13 = c;
-            e.t14 = O(c);
-            e.t15 = k;
-            e.t16 = x;
-            e.t17 = v;
-            e.t18 = b;
-            e.t19 = y;
-            e.t20 = E;
-            e.t21 = A;
+            e.t9 = e.sent
+            e.t10 = n$project$globalVariableList
+            e.t11 = n$project$globalArrayList
+            e.t12 = n$project$globalObjectList
+            e.t13 = n$project$globalWidgetIds
+            e.t14 = O(n$project$globalWidgetIds)
+            e.t15 = k
+            e.t16 = x
+            e.t17 = v
+            e.t18 = b
+            e.t19 = y
+            e.t20 = E
+            e.t21 = A
             e.t22 = {
               authorId: e.t1,
               title: e.t2,
@@ -296,130 +296,130 @@ function y() {
               cloudTableDataList: e.t19,
               cloudDictList: e.t20,
               cloudTableList: e.t21
-            };
-            D = (0, e.t0)(e.t22);
+            }
+            D = (0, e.t0)(e.t22)
             Object.keys(D.globalWidgets).forEach(function (e) {
-              var t = D.globalWidgets[e];
+              var t = D.globalWidgets[e]
               if (t.type === f.l) {
                 t.attributes.fields.forEach(function (e) {
-                  e.value = "";
-                });
+                  e.value = ""
+                })
               }
-            });
-            return e.abrupt("return", D);
+            })
+            return e.abrupt("return", D)
           case 45:
           case "end":
-            return e.stop();
+            return e.stop()
         }
       }
-    }, e);
-  }))).apply(this, arguments);
+    }, e)
+  }))).apply(this, arguments)
 }
 function E(e, t) {
-  var n = [];
+  var n = []
   Object.keys(e).forEach(function (t) {
-    var r;
-    var o = null === (r = e[t].workspaceJson) || undefined === r ? undefined : r.blocks;
+    var /* [auto-meaningful-name] */eT$workspaceJson
+    var o = null === (eT$workspaceJson = e[t].workspaceJson) || undefined === eT$workspaceJson ? undefined : eT$workspaceJson.blocks
     if (o) {
       Object.keys(o).forEach(function (e) {
-        var t = o[e].fields.WIDGET_ID;
-        if (t && t.startsWith(f.l) && !n.includes(t)) {
-          n.push(t);
+        var oE$fields$WIDGET_ID = o[e].fields.WIDGET_ID
+        if (oE$fields$WIDGET_ID && oE$fields$WIDGET_ID.startsWith(f.l) && !n.includes(oE$fields$WIDGET_ID)) {
+          n.push(oE$fields$WIDGET_ID)
         }
-      });
+      })
     }
-  });
+  })
   return [].concat(s.a(t.filter(function (e) {
-    return !e.startsWith(f.l);
-  })), n);
+    return !e.startsWith(f.l)
+  })), n)
 }
 function O(e) {
-  var t = {};
+  var t = {}
   e.forEach(function (e) {
-    var n = d.Bb(e);
+    var n = d.Bb(e)
     if (n && n.type) {
-      t[e] = n;
+      t[e] = n
     }
-  });
-  return t;
+  })
+  return t
 }
 function w(e) {
-  var t = {};
+  var t = {}
   e.toJSON().forEach(function (e) {
-    var n = e.toJSON();
-    t[n.id] = A(n);
-  });
-  return t;
+    var n = e.toJSON()
+    t[n.id] = A(n)
+  })
+  return t
 }
 function C(e) {
-  var t = {};
+  var t = {}
   e.forEach(function (e) {
-    t[e.id] = e.data;
-  });
-  return t;
+    t[e.id] = e.data
+  })
+  return t
 }
 function T(e) {
-  return s.a(e);
+  return s.a(e)
 }
 function S(e) {
-  var t = {};
+  var t = {}
   e.forEach(function (e) {
-    t[e.id] = e.columns;
-  });
-  return t;
+    t[e.id] = e.columns
+  })
+  return t
 }
 function I(e) {
-  var t = {};
+  var t = {}
   e.forEach(function (e) {
-    t[e.id] = e.data;
-  });
-  return t;
+    t[e.id] = e.data
+  })
+  return t
 }
 function A(e) {
-  var t;
-  var n = l.cloneDeep(a.a(a.a({}, e), {}, {
+  var /* [auto-meaningful-name] */e$invisibleWidgetIds
+  var n = Lodash.cloneDeep(a.a(a.a({}, e), {}, {
     widgets: {}
-  }));
+  }))
   e.widgetIds.forEach(function (e) {
-    var t = d.Bb(e);
+    var t = d.Bb(e)
     if (t) {
-      n.widgets[e] = t;
+      n.widgets[e] = t
     }
-  });
-  if (!(null === (t = e.invisibleWidgetIds) || undefined === t)) {
-    t.forEach(function (e) {
-      var t = d.Bb(e);
+  })
+  if (!(null === (e$invisibleWidgetIds = e.invisibleWidgetIds) || undefined === e$invisibleWidgetIds)) {
+    e$invisibleWidgetIds.forEach(function (e) {
+      var t = d.Bb(e)
       if (t) {
-        n.widgets[e] = t;
+        n.widgets[e] = t
       }
-    });
+    })
   }
-  return n;
+  return n
 }
 function j(e) {
-  var t = {};
+  var t = {}
   Object.entries(e).forEach(function (e) {
-    var n = i.a(e, 2);
-    n[0];
-    var r = n[1];
-    t = a.a(a.a({}, t), r.widgets);
-  });
-  return t;
+    var n = i.a(e, 2)
+    n[0]
+    var r = n[1]
+    t = a.a(a.a({}, t), r.widgets)
+  })
+  return t
 }
 function N(e) {
-  var t = l.cloneDeep(e);
+  var t = Lodash.cloneDeep(e)
   if (!t.invisibleWidgetIds) {
-    t.invisibleWidgetIds = [];
+    t.invisibleWidgetIds = []
   }
-  delete t.widgets;
-  return t;
+  delete t.widgets
+  return t
 }
 function R(e, t) {
   return t.map(function (t) {
-    return N(e[t]);
-  });
+    return N(e[t])
+  })
 }
 function k(e) {
-  return !e.startsWith("PROJECT");
+  return !e.startsWith("PROJECT")
 }
-export default k;
+export default k

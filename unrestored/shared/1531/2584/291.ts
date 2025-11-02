@@ -19,4 +19,4 @@ module.exports = {
   inputWidgetUnderline: "style_inputWidgetUnderline__3D2HX",
   mask: "style_mask__b8gFz",
   errorMessage: "style_errorMessage__1xWp8"
-};
+}

@@ -4,7 +4,7 @@
  * 模块 ID：485
  */
 
-"use strict";
+"use strict"
 
 var r = {
   lessThanXSeconds: {
@@ -68,8 +68,8 @@ var r = {
     one: "将近 1 年",
     other: "将近 {{count}} 年"
   }
-};
-var i = require("./484/692");
+}
+var i = require("./484/692")
 var o = {
   date: i.a({
     formats: {
@@ -98,16 +98,16 @@ var o = {
     },
     defaultWidth: "full"
   })
-};
-var a = require("./484/432");
-var s = require("./484/106");
+}
+var a = require("./484/432")
+var s = require("./484/106")
 function c(e, t, n, r) {
   return function (e, t, n) {
-    s.a(2, arguments);
-    var r = a.a(e, n);
-    var i = a.a(t, n);
-    return r.getTime() === i.getTime();
-  }(e, t, n) ? r : e.getTime() > t.getTime() ? "'下个'" + r : "'上个'" + r;
+    s.a(2, arguments)
+    var r = a.a(e, n)
+    var i = a.a(t, n)
+    return r.getTime() === i.getTime()
+  }(e, t, n) ? r : e.getTime() > t.getTime() ? "'下个'" + r : "'上个'" + r
 }
 var u = {
   lastWeek: c,
@@ -116,22 +116,22 @@ var u = {
   tomorrow: "'明天' p",
   nextWeek: c,
   other: "PP p"
-};
-var l = require("./484/489");
+}
+var l = require("./484/489")
 var f = {
   ordinalNumber: function (e, t) {
-    var n = Number(e);
+    var n = Number(e)
     switch (String((t || {}).unit)) {
       case "date":
-        return n.toString() + "日";
+        return n.toString() + "日"
       case "hour":
-        return n.toString() + "时";
+        return n.toString() + "时"
       case "minute":
-        return n.toString() + "分";
+        return n.toString() + "分"
       case "second":
-        return n.toString() + "秒";
+        return n.toString() + "秒"
       default:
-        return "第 " + n.toString();
+        return "第 " + n.toString()
     }
   },
   era: l.a({
@@ -150,7 +150,7 @@ var f = {
     },
     defaultWidth: "wide",
     argumentCallback: function (e) {
-      return Number(e) - 1;
+      return Number(e) - 1
     }
   }),
   month: l.a({
@@ -238,21 +238,21 @@ var f = {
     },
     defaultFormattingWidth: "wide"
   })
-};
-var d = require("./484/1004");
-var h = require("./484/490");
+}
+var d = require("./484/1004")
+var h = require("./484/490")
 var p = {
   code: "zh-CN",
   formatDistance: function (e, t, n) {
-    var i;
-    n = n || {};
-    i = "string" === typeof r[e] ? r[e] : 1 === t ? r[e].one : r[e].other.replace("{{count}}", t);
-    return n.addSuffix ? n.comparison > 0 ? i + "内" : i + "前" : i;
+    var i
+    n = n || {}
+    i = "string" === typeof r[e] ? r[e] : 1 === t ? r[e].one : r[e].other.replace("{{count}}", t)
+    return n.addSuffix ? n.comparison > 0 ? i + "内" : i + "前" : i
   },
   formatLong: o,
   formatRelative: function (e, t, n, r) {
-    var i = u[e];
-    return "function" === typeof i ? i(t, n, r, "eeee p") : i;
+    var i = u[e]
+    return "function" === typeof i ? i(t, n, r, "eeee p") : i
   },
   localize: f,
   match: {
@@ -260,7 +260,7 @@ var p = {
       matchPattern: /^(\u7b2c\s*)?\d+(\u65e5|\u65f6|\u5206|\u79d2)?/i,
       parsePattern: /\d+/i,
       valueCallback: function (e) {
-        return parseInt(e, 10);
+        return parseInt(e, 10)
       }
     }),
     era: h.a({
@@ -287,7 +287,7 @@ var p = {
       },
       defaultParseWidth: "any",
       valueCallback: function (e) {
-        return e + 1;
+        return e + 1
       }
     }),
     month: h.a({
@@ -340,5 +340,5 @@ var p = {
     weekStartsOn: 1,
     firstWeekContainsDate: 4
   }
-};
-exports.a = p;
+}
+exports.a = p

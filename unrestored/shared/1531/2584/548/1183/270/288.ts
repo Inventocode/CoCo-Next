@@ -4,17 +4,17 @@
  * 模块 ID：288
  */
 
-"use strict";
+"use strict"
 
-export { o as a };
-import r = require("react");
+export { o as a }
+import React = require("react");
 import i = require("./689");
 function o(e, t) {
-  return r.useMemo(function () {
+  return React.useMemo(function () {
     return null == e && null == t ? null : function (n) {
-      i.a(e, n);
-      i.a(t, n);
-    };
-  }, [e, t]);
+      i.a(e, n)
+      i.a(t, n)
+    }
+  }, [e, t])
 }
-export default o;
+export default o

@@ -4,6 +4,6 @@
  * 模块 ID：1431
  */
 
-"use strict";
+"use strict"
 
-module.exports = require("./2561");
+module.exports = require("./2561")

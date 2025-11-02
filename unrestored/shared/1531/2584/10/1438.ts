@@ -4,12 +4,12 @@
  * 模块 ID：1438
  */
 
-"use strict";
+"use strict"
 
 function r(e) {
   if (Array.isArray(e)) {
-    return e;
+    return e
   }
 }
-export { r as a };
-export default r;
+export { r as a }
+export default r

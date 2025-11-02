@@ -4,84 +4,84 @@
  * 模块 ID：2327
  */
 
-"use strict";
+"use strict"
 
 Object.defineProperty(exports, "__esModule", {
   value: true
-});
-var r = require("../../1366/444");
-var i = require("../../580");
-var o = require("./1365");
-var a = require("../../846");
-var s = require("./2328");
+})
+var r = require("../../1366/444")
+var i = require("../../580")
+var o = require("./1365")
+var a = require("../../846")
+var s = require("./2328")
 var c = function (e, t, n) {
   try {
-    return n();
+    return n()
   } catch (i) {
-    throw o.isStackOverflowExeption(i) ? new Error(r.CIRCULAR_DEPENDENCY_IN_FACTORY(e, t.toString())) : i;
+    throw o.isStackOverflowExeption(i) ? new Error(r.CIRCULAR_DEPENDENCY_IN_FACTORY(e, t.toString())) : i
   }
-};
+}
 exports.resolve = function (e) {
   return function e(t) {
     return function (n) {
-      n.parentContext.setCurrentRequest(n);
-      var o = n.bindings;
-      var u = n.childRequests;
-      var l = n.target && n.target.isArray();
-      var f = !n.parentRequest || !n.parentRequest.target || !n.target || !n.parentRequest.target.matchesArray(n.target.serviceIdentifier);
+      n.parentContext.setCurrentRequest(n)
+      var n$bindings = n.bindings
+      var n$childRequests = n.childRequests
+      var l = n.target && n.target.isArray()
+      var f = !n.parentRequest || !n.parentRequest.target || !n.target || !n.parentRequest.target.matchesArray(n.target.serviceIdentifier)
       if (l && f) {
-        return u.map(function (n) {
-          return e(t)(n);
-        });
+        return n$childRequests.map(function (n) {
+          return e(t)(n)
+        })
       }
-      var d = null;
-      if (!n.target.isOptional() || 0 !== o.length) {
-        var h = o[0];
-        var p = h.scope === i.BindingScopeEnum.Singleton;
-        var _ = h.scope === i.BindingScopeEnum.Request;
+      var d = null
+      if (!n.target.isOptional() || 0 !== n$bindings.length) {
+        var h = n$bindings[0]
+        var p = h.scope === i.BindingScopeEnum.Singleton
+        var _ = h.scope === i.BindingScopeEnum.Request
         if (p && h.activated) {
-          return h.cache;
+          return h.cache
         }
         if (_ && null !== t && t.has(h.id)) {
-          return t.get(h.id);
+          return t.get(h.id)
         }
         if (h.type === i.BindingTypeEnum.ConstantValue) {
-          d = h.cache;
+          d = h.cache
         } else if (h.type === i.BindingTypeEnum.Function) {
-          d = h.cache;
+          d = h.cache
         } else if (h.type === i.BindingTypeEnum.Constructor) {
-          d = h.implementationType;
+          d = h.implementationType
         } else if (h.type === i.BindingTypeEnum.DynamicValue && null !== h.dynamicValue) {
           d = c("toDynamicValue", h.serviceIdentifier, function () {
-            return h.dynamicValue(n.parentContext);
-          });
+            return h.dynamicValue(n.parentContext)
+          })
         } else if (h.type === i.BindingTypeEnum.Factory && null !== h.factory) {
           d = c("toFactory", h.serviceIdentifier, function () {
-            return h.factory(n.parentContext);
-          });
+            return h.factory(n.parentContext)
+          })
         } else if (h.type === i.BindingTypeEnum.Provider && null !== h.provider) {
           d = c("toProvider", h.serviceIdentifier, function () {
-            return h.provider(n.parentContext);
-          });
+            return h.provider(n.parentContext)
+          })
         } else {
           if (h.type !== i.BindingTypeEnum.Instance || null === h.implementationType) {
-            var A = a.getServiceIdentifierAsString(n.serviceIdentifier);
-            throw new Error(r.INVALID_BINDING_TYPE + " " + A);
+            var A = a.getServiceIdentifierAsString(n.serviceIdentifier)
+            throw new Error(r.INVALID_BINDING_TYPE + " " + A)
           }
-          d = s.resolveInstance(h.implementationType, u, e(t));
+          d = s.resolveInstance(h.implementationType, n$childRequests, e(t))
         }
         if ("function" === typeof h.onActivation) {
-          d = h.onActivation(n.parentContext, d);
+          d = h.onActivation(n.parentContext, d)
         }
         if (p) {
-          h.cache = d;
-          h.activated = true;
+          h.cache = d
+          h.activated = true
         }
         if (_ && null !== t && !t.has(h.id)) {
-          t.set(h.id, d);
+          t.set(h.id, d)
         }
-        return d;
+        return d
       }
-    };
-  }(e.plan.rootRequest.requestScope)(e.plan.rootRequest);
-};
+    }
+  }(e.plan.rootRequest.requestScope)(e.plan.rootRequest)
+}

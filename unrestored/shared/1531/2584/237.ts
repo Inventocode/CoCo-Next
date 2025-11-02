@@ -32,4 +32,4 @@ module.exports = {
   nameInputWrapper: "VariablePanel_nameInputWrapper__IkIcv",
   value: "VariablePanel_value__2lmPP",
   valueInput: "VariablePanel_valueInput__1Kwqg"
-};
+}

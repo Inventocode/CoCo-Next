@@ -4,7 +4,7 @@
  * 模块 ID：819
  */
 
-var r = require("../1608/705");
+var r = require("../1608/705")
 module.exports = Array.isArray || function (e) {
-  return "Array" == r(e);
-};
+  return "Array" == r(e)
+}

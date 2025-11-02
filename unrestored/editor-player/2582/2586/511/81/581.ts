@@ -4,56 +4,56 @@
  * 模块 ID：581
  */
 
-"use strict";
+"use strict"
 
-var n = require("./63");
+var n = require("./63")
 var o = function () {
   function t(t) {
-    this.binarizer = t;
+    this.binarizer = t
     if (null === t) {
-      throw new n.a("Binarizer must be non-null.");
+      throw new n.a("Binarizer must be non-null.")
     }
   }
   t.prototype.getWidth = function () {
-    return this.binarizer.getWidth();
-  };
+    return this.binarizer.getWidth()
+  }
   t.prototype.getHeight = function () {
-    return this.binarizer.getHeight();
-  };
+    return this.binarizer.getHeight()
+  }
   t.prototype.getBlackRow = function (t, e) {
-    return this.binarizer.getBlackRow(t, e);
-  };
+    return this.binarizer.getBlackRow(t, e)
+  }
   t.prototype.getBlackMatrix = function () {
     if (!(null !== this.matrix && undefined !== this.matrix)) {
-      this.matrix = this.binarizer.getBlackMatrix();
+      this.matrix = this.binarizer.getBlackMatrix()
     }
-    return this.matrix;
-  };
+    return this.matrix
+  }
   t.prototype.isCropSupported = function () {
-    return this.binarizer.getLuminanceSource().isCropSupported();
-  };
+    return this.binarizer.getLuminanceSource().isCropSupported()
+  }
   t.prototype.crop = function (e, r, n, o) {
-    var i = this.binarizer.getLuminanceSource().crop(e, r, n, o);
-    return new t(this.binarizer.createBinarizer(i));
-  };
+    var i = this.binarizer.getLuminanceSource().crop(e, r, n, o)
+    return new t(this.binarizer.createBinarizer(i))
+  }
   t.prototype.isRotateSupported = function () {
-    return this.binarizer.getLuminanceSource().isRotateSupported();
-  };
+    return this.binarizer.getLuminanceSource().isRotateSupported()
+  }
   t.prototype.rotateCounterClockwise = function () {
-    var e = this.binarizer.getLuminanceSource().rotateCounterClockwise();
-    return new t(this.binarizer.createBinarizer(e));
-  };
+    var e = this.binarizer.getLuminanceSource().rotateCounterClockwise()
+    return new t(this.binarizer.createBinarizer(e))
+  }
   t.prototype.rotateCounterClockwise45 = function () {
-    var e = this.binarizer.getLuminanceSource().rotateCounterClockwise45();
-    return new t(this.binarizer.createBinarizer(e));
-  };
+    var e = this.binarizer.getLuminanceSource().rotateCounterClockwise45()
+    return new t(this.binarizer.createBinarizer(e))
+  }
   t.prototype.toString = function () {
     try {
-      return this.getBlackMatrix().toString();
+      return this.getBlackMatrix().toString()
     } catch (t) {
-      return "";
+      return ""
     }
-  };
-  return t;
-}();
-exports.a = o;
+  }
+  return t
+}()
+exports.a = o

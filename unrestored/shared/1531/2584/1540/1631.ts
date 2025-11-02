@@ -9,4 +9,4 @@ require("./1623/86")({
   stat: true
 }, {
   is: require("./1682/1235")
-});
+})

@@ -4,28 +4,28 @@
  * 模块 ID：54
  */
 
-"use strict";
+"use strict"
 
-export { i as a };
+export { i as a }
 import r = require("./337");
 function i(e, t) {
   if (null == e) {
-    return {};
+    return {}
   }
-  var n;
-  var i;
-  var o = r.a(e, t);
+  var n
+  var i
+  var o = r.a(e, t)
   if (Object.getOwnPropertySymbols) {
-    var a = Object.getOwnPropertySymbols(e);
+    var a = Object.getOwnPropertySymbols(e)
     for (i = 0; i < a.length; i++) {
-      n = a[i];
+      n = a[i]
       if (!(t.indexOf(n) >= 0)) {
         if (Object.prototype.propertyIsEnumerable.call(e, n)) {
-          o[n] = e[n];
+          o[n] = e[n]
         }
       }
     }
   }
-  return o;
+  return o
 }
-export default i;
+export default i

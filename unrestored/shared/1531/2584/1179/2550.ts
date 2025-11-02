@@ -4,16 +4,16 @@
  * 模块 ID：2550
  */
 
-"use strict";
+"use strict"
 
 Object.defineProperty(exports, "__esModule", {
   value: true
-});
-exports.init_math_blocks = undefined;
-var r = require("../4/127");
-var o = require("./2555/579");
+})
+exports.init_math_blocks = undefined
+var r = require("../4/127")
+var o = require("./2555/579")
 exports.init_math_blocks = function (e) {
-  var t = e.Blocks;
+  var e$Blocks = e.Blocks
   e.define_blocks_with_json_array([{
     type: "random",
     message0: (0, o.i18n)("random_num"),
@@ -141,7 +141,7 @@ exports.init_math_blocks = function (e) {
     output: "Boolean",
     colour: (0, o.i18n)("ORANGE_3"),
     tooltip: (0, o.i18n)("MATH_IS_TOOLTIP")
-  }]);
+  }])
   var n = {
     ADD: (0, o.i18n)("MATH_ARITHMETIC_TOOLTIP_ADD"),
     MINUS: (0, o.i18n)("MATH_ARITHMETIC_TOOLTIP_MINUS"),
@@ -155,64 +155,64 @@ exports.init_math_blocks = function (e) {
     LOG10: (0, o.i18n)("MATH_SINGLE_TOOLTIP_LOG10"),
     EXP: (0, o.i18n)("MATH_SINGLE_TOOLTIP_EXP"),
     POW10: (0, o.i18n)("MATH_SINGLE_TOOLTIP_POW10")
-  };
-  e.extensions.register("math_op_tooltip", e.extensions.build_tooltip_for_dropdown("OP", n));
-  t.math_trig = {
+  }
+  e.extensions.register("math_op_tooltip", e.extensions.build_tooltip_for_dropdown("OP", n))
+  e$Blocks.math_trig = {
     init: function () {
-      this.set_colour_by_key((0, o.i18n)("ORANGE_3"));
-      var t = this;
+      this.set_colour_by_key((0, o.i18n)("ORANGE_3"))
+      var t = this
       var n = e.di_container.get(r.BINDING.FieldDropdown)({
         menu_generator: [[(0, o.i18n)("MATH_TRIG_SIN"), "SIN"], [(0, o.i18n)("MATH_TRIG_COS"), "COS"], [(0, o.i18n)("MATH_TRIG_TAN"), "TAN"], [(0, o.i18n)("MATH_TRIG_ASIN"), "ASIN"], [(0, o.i18n)("MATH_TRIG_ACOS"), "ACOS"], [(0, o.i18n)("MATH_TRIG_ATAN"), "ATAN"]],
         opt_onchange: function (n) {
-          var o;
-          var i;
-          var a = "SIN" === n || "COS" === n || "TAN" === n;
-          var s = t.get_input("DEGREES");
-          var c = e.di_container.get(r.BINDING.events);
+          var /* [auto-meaningful-name] */t$addMutation
+          var /* [auto-meaningful-name] */t$removeMutation
+          var a = "SIN" === n || "COS" === n || "TAN" === n
+          var s = t.get_input("DEGREES")
+          var c = e.di_container.get(r.BINDING.events)
           if (a) {
-            if (!(s || c.is_undoing() || null === (o = t.addMutation) || undefined === o)) {
-              o.call(t);
+            if (!(s || c.is_undoing() || null === (t$addMutation = t.addMutation) || undefined === t$addMutation)) {
+              t$addMutation.call(t)
             }
           } else {
             if (s && !c.is_undoing()) {
-              if (!(null === (i = t.removeMutation) || undefined === i)) {
-                i.call(t);
+              if (!(null === (t$removeMutation = t.removeMutation) || undefined === t$removeMutation)) {
+                t$removeMutation.call(t)
               }
             }
           }
         }
-      });
-      this.append_dummy_input().append_field(n, "OP");
-      this.append_shadow_input("NUM", (0, o.number_shadow)("45")).set_check("Number");
-      this.append_dummy_input("DEGREES").append_field((0, o.i18n)("MATH_DEGREES"));
-      this.set_inputs_inline(true);
-      this.set_output(true);
+      })
+      this.append_dummy_input().append_field(n, "OP")
+      this.append_shadow_input("NUM", (0, o.number_shadow)("45")).set_check("Number")
+      this.append_dummy_input("DEGREES").append_field((0, o.i18n)("MATH_DEGREES"))
+      this.set_inputs_inline(true)
+      this.set_output(true)
     },
     addMutation: function () {
-      this.append_dummy_input("DEGREES").append_field((0, o.i18n)("MATH_DEGREES"));
-      var t = e.di_container.get(r.BINDING.events);
+      this.append_dummy_input("DEGREES").append_field((0, o.i18n)("MATH_DEGREES"))
+      var t = e.di_container.get(r.BINDING.events)
       if (t.is_enabled()) {
-        var n = e.di_container.get(r.BINDING.ChangeEvent);
+        var n = e.di_container.get(r.BINDING.ChangeEvent)
         t.fire(n("mutation", {
           block: this,
           old_value: undefined,
           new_value: "add"
-        }));
+        }))
       }
     },
     removeMutation: function () {
-      var t = e.di_container.get(r.BINDING.events);
-      this.remove_input("DEGREES");
+      var t = e.di_container.get(r.BINDING.events)
+      this.remove_input("DEGREES")
       if (t.is_enabled()) {
-        var n = e.di_container.get(r.BINDING.ChangeEvent);
+        var n = e.di_container.get(r.BINDING.ChangeEvent)
         t.fire(n("mutation", {
           block: this,
           old_value: "remove",
           new_value: undefined
-        }));
+        }))
       }
     }
-  };
+  }
   Object.assign(e.blocks_xml, {
     random: "<block type=\"random\">\n      " + (0, o.number_value)("a", "0") + "\n      " + (0, o.number_value)("b", "5") + "\n    </block>\n    ",
     divisible_by: "<block type=\"divisible_by\">\n      " + (0, o.number_value)("NUMBER_TO_CHECK", "9") + "\n      " + (0, o.number_value)("DIVISOR", "3") + "\n    </block>\n    ",
@@ -223,5 +223,5 @@ exports.init_math_blocks = function (e) {
     math_modulo: "<block type=\"math_modulo\">\n      " + (0, o.number_value)("DIVIDEND", "64") + "\n      " + (0, o.number_value)("DIVISOR", "10") + "\n    </block>\n    ",
     math_number_property: "<block type=\"math_number_property\">\n      " + (0, o.number_value)("NUMBER_TO_CHECK", "0") + "\n    </block>\n    ",
     math_trig: "<block type=\"math_trig\">\n      " + (0, o.number_value)("NUM", "45") + "\n    </block>\n    "
-  });
-};
+  })
+}

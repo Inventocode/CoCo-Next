@@ -4,19 +4,19 @@
  * 模块 ID：514
  */
 
-"use strict";
+"use strict"
 
-export { o as a };
-import r = require("react");
-var i = r.createContext(undefined);
+export { o as a }
+import React = require("react");
+var i = React.createContext(undefined)
 var o = function (e) {
-  var t = e.children;
-  var n = e.size;
-  return r.createElement(i.Consumer, null, function (e) {
-    return r.createElement(i.Provider, {
-      value: n || e
-    }, t);
-  });
-};
-export { i as b };
-export default o;
+  var e$children = e.children
+  var e$size = e.size
+  return React.createElement(i.Consumer, null, function (e) {
+    return React.createElement(i.Provider, {
+      value: e$size || e
+    }, e$children)
+  })
+}
+export { i as b }
+export default o

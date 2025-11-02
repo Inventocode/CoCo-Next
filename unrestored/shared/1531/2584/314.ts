@@ -4,15 +4,15 @@
  * 模块 ID：314
  */
 
-"use strict";
+"use strict"
 
-export { i as b };
-export { o as a };
-import r = require("react");
-var i = r.isValidElement;
+export { react$isValidElement as b }
+export { o as a }
+import React = require("react");
+var react$isValidElement = React.isValidElement
 function o(e, t) {
   return function (e, t, n) {
-    return i(e) ? r.cloneElement(e, "function" === typeof n ? n(e.props || {}) : n) : t;
-  }(e, e, t);
+    return react$isValidElement(e) ? React.cloneElement(e, "function" === typeof n ? n(e.props || {}) : n) : t
+  }(e, e, t)
 }
-export default o;
+export default o

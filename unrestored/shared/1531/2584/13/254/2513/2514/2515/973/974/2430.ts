@@ -4,15 +4,15 @@
  * 模块 ID：2430
  */
 
-var r = require("./2427/975");
+var r = require("./2427/975")
 module.exports = function (e, t) {
-  var n = this.__data__;
-  var i = r(n, e);
+  var this$__data__ = this.__data__
+  var i = r(this$__data__, e)
   if (i < 0) {
-    ++this.size;
-    n.push([e, t]);
+    ++this.size
+    this$__data__.push([e, t])
   } else {
-    n[i][1] = t;
+    this$__data__[i][1] = t
   }
-  return this;
-};
+  return this
+}

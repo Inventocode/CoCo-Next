@@ -4,6 +4,6 @@
  * 模块 ID：303
  */
 
-"use strict";
+"use strict"
 
-module.exports = require("./1770/index");
+module.exports = require("./1770/index")

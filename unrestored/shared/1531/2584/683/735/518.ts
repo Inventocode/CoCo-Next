@@ -4,27 +4,27 @@
  * 模块 ID：518
  */
 
-"use strict";
+"use strict"
 
-export { o as a };
+export { o as a }
 import r = require("../520/393");
 import i = require("../215/293");
 function o(e) {
   return function t(n, o) {
     switch (arguments.length) {
       case 0:
-        return t;
+        return t
       case 1:
         return i.a(n) ? t : r.a(function (t) {
-          return e(n, t);
-        });
+          return e(n, t)
+        })
       default:
         return i.a(n) && i.a(o) ? t : i.a(n) ? r.a(function (t) {
-          return e(t, o);
+          return e(t, o)
         }) : i.a(o) ? r.a(function (t) {
-          return e(n, t);
-        }) : e(n, o);
+          return e(n, t)
+        }) : e(n, o)
     }
-  };
+  }
 }
-export default o;
+export default o

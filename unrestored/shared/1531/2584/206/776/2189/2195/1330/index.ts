@@ -5,73 +5,73 @@
  */
 
 !function () {
-  "use strict";
+  "use strict"
 
-  var e = require("./2196");
+  var e = require("./2196")
   function r(e) {
-    return null != e && "object" === typeof e && "string" === typeof e.type;
+    return null != e && "object" === typeof e && "string" === typeof e.type
   }
   function i(t, n) {
-    n = n || {};
-    this.__visitor = t || this;
-    this.__childVisitorKeys = n.childVisitorKeys ? Object.assign({}, e.VisitorKeys, n.childVisitorKeys) : e.VisitorKeys;
+    n = n || {}
+    this.__visitor = t || this
+    this.__childVisitorKeys = n.childVisitorKeys ? Object.assign({}, e.VisitorKeys, n.childVisitorKeys) : e.VisitorKeys
     if ("iteration" === n.fallback) {
-      this.__fallback = Object.keys;
+      this.__fallback = Object.keys
     } else {
       if ("function" === typeof n.fallback) {
-        this.__fallback = n.fallback;
+        this.__fallback = n.fallback
       }
     }
   }
   i.prototype.visitChildren = function (t) {
-    var n;
-    var i;
-    var o;
-    var a;
-    var s;
-    var c;
-    var u;
+    var n
+    var i
+    var o
+    var /* [auto-meaningful-name] */i$length
+    var s
+    var /* [auto-meaningful-name] */u$length
+    var u
     if (null != t) {
-      n = t.type || e.Syntax.Property;
+      n = t.type || e.Syntax.Property
       if (!(i = this.__childVisitorKeys[n])) {
         if (!this.__fallback) {
-          throw new Error("Unknown node type " + n + ".");
+          throw new Error("Unknown node type " + n + ".")
         }
-        i = this.__fallback(t);
+        i = this.__fallback(t)
       }
-      for (o = 0, a = i.length; o < a; ++o) {
+      for (o = 0, i$length = i.length; o < i$length; ++o) {
         if (u = t[i[o]]) {
           if (Array.isArray(u)) {
-            for (s = 0, c = u.length; s < c; ++s) {
+            for (s = 0, u$length = u.length; s < u$length; ++s) {
               if (u[s]) {
                 if (!(!r(u[s]) && (l = n, f = i[o], l !== e.Syntax.ObjectExpression && l !== e.Syntax.ObjectPattern || "properties" !== f))) {
-                  this.visit(u[s]);
+                  this.visit(u[s])
                 }
               }
             }
           } else if (r(u)) {
-            this.visit(u);
+            this.visit(u)
           }
         }
       }
-      var l;
-      var f;
+      var l
+      var f
     }
-  };
+  }
   i.prototype.visit = function (t) {
-    var n;
+    var n
     if (null != t) {
-      n = t.type || e.Syntax.Property;
+      n = t.type || e.Syntax.Property
       if (this.__visitor[n]) {
-        this.__visitor[n].call(this, t);
+        this.__visitor[n].call(this, t)
       } else {
-        this.visitChildren(t);
+        this.visitChildren(t)
       }
     }
-  };
-  exports.version = require("./2197").version;
-  exports.Visitor = i;
+  }
+  exports.version = require("./2197").version
+  exports.Visitor = i
   exports.visit = function (e, t, n) {
-    new i(t, n).visit(e);
-  };
-}();
+    new i(t, n).visit(e)
+  }
+}()

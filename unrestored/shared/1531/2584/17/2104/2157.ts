@@ -4,86 +4,86 @@
  * 模块 ID：2157
  */
 
-"use strict";
+"use strict"
 
 Object.defineProperty(exports, "__esModule", {
   value: true
-});
-exports.Grid = undefined;
-var r = require("tslib");
-var i = require("inversify");
-var o = require("../../125/index");
-var a = require("../../125/474");
+})
+exports.Grid = undefined
+var r = require("tslib")
+var i = require("inversify")
+var o = require("../../125/index")
+var a = require("../../125/474")
 var s = function () {
   function e(e) {
-    this.scale = 1;
-    var t = e.svg_defs;
-    var n = e.svg_rnd;
-    var r = e.gridOptions;
-    this.spacing = r.spacing;
-    this.step = r.step;
-    this.snap_to_grid = r.snap;
+    this.scale = 1
+    var e$svg_defs = e.svg_defs
+    var e$svg_rnd = e.svg_rnd
+    var e$gridOptions = e.gridOptions
+    this.spacing = e$gridOptions.spacing
+    this.step = e$gridOptions.step
+    this.snap_to_grid = e$gridOptions.snap
     this.grid_pattern = (0, o.create_svg_element)("pattern", {
-      id: "blocklyGridPattern" + n,
+      id: "blocklyGridPattern" + e$svg_rnd,
       patternUnits: "userSpaceOnUse",
       fill: "transparent"
-    }, t);
+    }, e$svg_defs)
     this.bg_rect = (0, o.create_svg_element)("rect", {
       class: "blinkGridPatternBg",
       fill: "transparent"
-    }, this.grid_pattern);
+    }, this.grid_pattern)
     this.outer_rect = (0, o.create_svg_element)("path", {
       class: "blinkGridPatternOuter",
       stroke: "rgb(136, 136, 136)"
-    }, this.grid_pattern);
+    }, this.grid_pattern)
     this.inner_lines = (0, o.create_svg_element)("path", {
       class: "blinkGridPatternInner",
       stroke: "rgb(136, 136, 136)"
-    }, this.grid_pattern);
-    this.update();
+    }, this.grid_pattern)
+    this.update()
   }
   e.prototype.should_snap = function () {
-    return this.snap_to_grid;
-  };
+    return this.snap_to_grid
+  }
   e.prototype.move_to = function (e, t) {
-    this.grid_pattern.setAttribute("x", String(e));
-    this.grid_pattern.setAttribute("y", String(t));
+    this.grid_pattern.setAttribute("x", String(e))
+    this.grid_pattern.setAttribute("y", String(t))
     if (a.is.ie() || a.is.edge()) {
-      this.set_scale(this.scale);
+      this.set_scale(this.scale)
     }
-  };
+  }
   e.prototype.get_spacing = function () {
-    return this.spacing;
-  };
+    return this.spacing
+  }
   e.prototype.get_pattern_id = function () {
-    return this.grid_pattern.id;
-  };
+    return this.grid_pattern.id
+  }
   e.prototype.dispose = function () {
-    (0, o.remove_node)(this.grid_pattern);
-  };
+    (0, o.remove_node)(this.grid_pattern)
+  }
   e.prototype.update = function () {
-    var e = this.spacing * this.scale || 10;
-    var t = e * this.step;
-    this.grid_pattern.setAttribute("width", t.toString());
-    this.grid_pattern.setAttribute("height", t.toString());
-    this.bg_rect.setAttribute("width", t.toString());
-    this.bg_rect.setAttribute("height", t.toString());
-    this.outer_rect.setAttribute("d", "M " + t + " 0 L 0 0 0 " + t);
+    var e = this.spacing * this.scale || 10
+    var t = e * this.step
+    this.grid_pattern.setAttribute("width", t.toString())
+    this.grid_pattern.setAttribute("height", t.toString())
+    this.bg_rect.setAttribute("width", t.toString())
+    this.bg_rect.setAttribute("height", t.toString())
+    this.outer_rect.setAttribute("d", "M " + t + " 0 L 0 0 0 " + t)
     for (var n = [], r = [], i = 1; i < this.step; i++) {
-      n.push("M 0 " + i * e + " L " + t + " " + i * e);
-      r.push("M " + i * e + " 0 L " + i * e + " " + t);
+      n.push("M 0 " + i * e + " L " + t + " " + i * e)
+      r.push("M " + i * e + " 0 L " + i * e + " " + t)
     }
-    this.inner_lines.setAttribute("d", n.join(" ") + r.join(" "));
-  };
+    this.inner_lines.setAttribute("d", n.join(" ") + r.join(" "))
+  }
   e.prototype.set_scale = function (e) {
-    this.scale = e;
-    this.update();
-  };
+    this.scale = e
+    this.update()
+  }
   e.prototype.set_color = function (e, t) {
-    this.bg_rect.setAttribute("fill", e);
-    this.outer_rect.setAttribute("stroke", t);
-    this.inner_lines.setAttribute("stroke", t);
-  };
-  return e = (0, r.__decorate)([(0, i.injectable)()], e);
-}();
-exports.Grid = s;
+    this.bg_rect.setAttribute("fill", e)
+    this.outer_rect.setAttribute("stroke", t)
+    this.inner_lines.setAttribute("stroke", t)
+  }
+  return e = (0, r.__decorate)([(0, i.injectable)()], e)
+}()
+exports.Grid = s

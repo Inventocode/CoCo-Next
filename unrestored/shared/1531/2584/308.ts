@@ -29,4 +29,4 @@ module.exports = {
   duration: "style_duration__3TrsW",
   nameArea: "style_nameArea__KZyGn",
   add: "style_add__2mYND"
-};
+}

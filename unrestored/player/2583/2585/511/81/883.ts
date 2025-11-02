@@ -4,22 +4,22 @@
  * 模块 ID：883
  */
 
-"use strict";
+"use strict"
 
-var r = require("./595");
-var i = require("./74");
-var o = require("./63");
+var r = require("./595")
+var i = require("./74")
+var o = require("./63")
 !function () {
   function t() {}
   t.prototype.encode = function (t, e, n, a, s) {
-    var u;
+    var u
     switch (e) {
       case i.a.QR_CODE:
-        u = new r.a();
-        break;
+        u = new r.a()
+        break
       default:
-        throw new o.a("No encoder available for format " + e);
+        throw new o.a("No encoder available for format " + e)
     }
-    return u.encode(t, e, n, a, s);
-  };
-}();
+    return u.encode(t, e, n, a, s)
+  }
+}()

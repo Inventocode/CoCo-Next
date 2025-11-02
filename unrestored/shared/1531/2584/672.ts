@@ -4,10 +4,10 @@
  * 模块 ID：672
  */
 
-"use strict";
+"use strict"
 
-export { r as messages };
-export { u as types };
+export { r as messages }
+export { u as types }
 var r = {
   "zh-CN": {
     widget: "控件",
@@ -47,7 +47,7 @@ var r = {
     pressOutMsg: "松开",
     outOfRange: "嵌入积木数值超过取值范围"
   }
-};
+}
 import o = require("./6");
 import i = require("./5");
 import a = require("./60");
@@ -416,4 +416,4 @@ var u = {
       icon: "%{BKY_BLOCK_TAB_ICON}"
     }
   }]
-};
+}

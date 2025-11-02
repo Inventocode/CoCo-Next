@@ -4,12 +4,12 @@
  * 模块 ID：x7ro
  */
 
-"use strict";
+"use strict"
 
 /* harmony export (binding) */
 /* harmony import */
-export { themeYellowColor };
-import * as __WEBPACK_IMPORTED_MODULE_0__supColor__ from "./supColor-qumQ";
+export { themeYellowColor }
+import * as __WEBPACK_IMPORTED_MODULE_0__supColor__ from "./supColor-qumQ"
 var themeYellowColor = {
   /* 色板主色：主色(0) —— +9 */
   "theme-color-0": "255,219,41",
@@ -65,6 +65,6 @@ var themeYellowColor = {
   /* 提示线、运行按钮 -1 */
   "theme-color-c2": __WEBPACK_IMPORTED_MODULE_0__supColor__.themeSupColor["sup-color-n8-2"]
   /* 提示线、运行按钮 -2 */
-};
+}
 
 /***/

@@ -54,4 +54,4 @@ module.exports = {
   buttonRadio: "style_buttonRadio__14NJ3",
   defaultRadio: "style_defaultRadio__2NnwG",
   radioTypeSelector: "style_radioTypeSelector__6l2Gj"
-};
+}

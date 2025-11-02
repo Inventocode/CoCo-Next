@@ -4,12 +4,12 @@
  * 模块 ID：ljk1
  */
 
-"use strict";
+"use strict"
 
 /* harmony export (binding) */
 /* harmony import */
-export { themeGreenColor };
-import * as __WEBPACK_IMPORTED_MODULE_0__supColor__ from "./supColor-qumQ";
+export { themeGreenColor }
+import * as __WEBPACK_IMPORTED_MODULE_0__supColor__ from "./supColor-qumQ"
 var themeGreenColor = {
   /* 色板主色：主色(0) —— +9 */
   "theme-color-0": "30,184,108",
@@ -71,6 +71,6 @@ var themeGreenColor = {
 
   "theme-color-c2": __WEBPACK_IMPORTED_MODULE_0__supColor__.themeSupColor["sup-color-n4-2"]
   /* 提示线、运行按钮 -2 */
-};
+}
 
 /***/

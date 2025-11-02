@@ -4,60 +4,60 @@
  * 模块 ID：239
  */
 
-"use strict";
+"use strict"
 
-export { i as d };
-export { a as e };
-export { s as b };
-export { c };
-export { l as a };
+export { i as d }
+export { a as e }
+export { s as b }
+export { c }
+export { l as a }
 import r = require("./16/index");
 import o = require("./9");
 function i() {
   return r.e(function (e) {
-    var t = e.project;
-    var n = t.screens;
-    var r = t.currentScreenIndex;
-    var o = n.get(r);
-    if (r > -1 && o) {
-      return o;
+    var e$project = e.project
+    var e$project$screens = e$project.screens
+    var e$project$currentScreenIndex = e$project.currentScreenIndex
+    var o = e$project$screens.get(e$project$currentScreenIndex)
+    if (e$project$currentScreenIndex > -1 && o) {
+      return o
     }
-  });
+  })
 }
 function a(e) {
   return r.e(function (t) {
     return t.project.screens.findIndex(function (t) {
-      return t.id === e;
-    });
-  });
+      return t.id === e
+    })
+  })
 }
 function s() {
   return r.e(function (e) {
-    return e.common.editAreaUpdatedAt;
-  });
+    return e.common.editAreaUpdatedAt
+  })
 }
 function c() {
   return r.e(function (e) {
-    return e.common.extensionListUpdateAt;
-  });
+    return e.common.extensionListUpdateAt
+  })
 }
 function l() {
-  var e = i();
-  var t = [];
+  var e = i()
+  var t = []
   if (e) {
     e.widgetIds.forEach(function (e) {
-      var n = o.Bb(e);
+      var n = o.Bb(e)
       if (n) {
-        var r = n.type;
-        if (n && !t.includes(r)) {
-          var i = o.Db(n.type);
+        var n$type = n.type
+        if (n && !t.includes(n$type)) {
+          var i = o.Db(n.type)
           if (i && i.hasAnyWidget) {
-            t.push(n.type);
+            t.push(n.type)
           }
         }
       }
-    });
+    })
   }
-  return t;
+  return t
 }
-export default l;
+export default l

@@ -4,15 +4,15 @@
  * 模块 ID：1662
  */
 
-var r = require("./1623/86");
-var o = require("./1659/241");
-var i = Object.isExtensible;
+var r = require("./1623/86")
+var o = require("./1659/241")
+var object$isExtensible = Object.isExtensible
 r({
   target: "Reflect",
   stat: true
 }, {
   isExtensible: function (e) {
-    o(e);
-    return !i || i(e);
+    o(e)
+    return !object$isExtensible || object$isExtensible(e)
   }
-});
+})

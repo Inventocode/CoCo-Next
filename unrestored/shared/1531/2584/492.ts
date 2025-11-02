@@ -14,4 +14,4 @@ module.exports = {
   iconContainer: "CreateProject_iconContainer__cU2Ko",
   icon: "CreateProject_icon__2c3j6",
   text: "CreateProject_text__2ZExn"
-};
+}

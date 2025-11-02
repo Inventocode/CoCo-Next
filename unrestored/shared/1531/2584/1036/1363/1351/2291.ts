@@ -4,51 +4,51 @@
  * 模块 ID：2291
  */
 
-"use strict";
+"use strict"
 
 Object.defineProperty(exports, "__esModule", {
   value: true
-});
-var r = require("./1125");
-var i = require("./1124");
+})
+var r = require("./1125")
+var i = require("./1124")
 function o(e, t) {
   return {
     get: e,
     getLength: function () {
-      return e().length;
+      return e().length
     },
     insert: function (n, r, o) {
-      var a = i.strPosToUni(e(), n);
-      return t([a, r], o);
+      var a = i.strPosToUni(e(), n)
+      return t([a, r], o)
     },
     remove: function (n, r, o) {
-      var a = i.strPosToUni(e(), n);
+      var a = i.strPosToUni(e(), n)
       return t([a, {
         d: r
-      }], o);
+      }], o)
     },
     _onOp: function (e) {
-      var t = this;
+      var t = this
       r.eachOp(e, function (e, n, i) {
         switch (typeof e) {
           case "string":
             if (t.onInsert) {
-              t.onInsert(i, e);
+              t.onInsert(i, e)
             }
-            break;
+            break
           case "object":
-            var o = r.dlen(e.d);
+            var o = r.dlen(e.d)
             if (t.onRemove) {
-              t.onRemove(i, o);
+              t.onRemove(i, o)
             }
         }
-      });
+      })
     },
     onInsert: null,
     onRemove: null
-  };
+  }
 }
-exports.default = o;
+exports.default = o
 o.provides = {
   text: true
-};
+}

@@ -13,4 +13,4 @@ module.exports = {
   link: "style_link__LCCjv",
   overViewInfo: "style_overViewInfo__sq44x",
   iconLink: "style_iconLink__3bJrZ"
-};
+}

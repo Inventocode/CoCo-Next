@@ -4,4 +4,4 @@
  * 模块 ID：2582
  */
 
-module.exports = require("./2586/index");
+module.exports = require("./2586/index")

@@ -4,13 +4,13 @@
  * 模块 ID：2549
  */
 
-"use strict";
+"use strict"
 
 Object.defineProperty(exports, "__esModule", {
   value: true
-});
-exports.init_sensing_blocks = undefined;
-var r = require("./2555/579");
+})
+exports.init_sensing_blocks = undefined
+var r = require("./2555/579")
 exports.init_sensing_blocks = function (e) {
   var t = [{
     type: "get_time",
@@ -37,11 +37,11 @@ exports.init_sensing_blocks = function (e) {
     nextStatement: true,
     colour: (0, r.i18n)("GREEN_3"),
     inputsInline: true
-  }];
-  e.define_blocks_with_json_array(t);
+  }]
+  e.define_blocks_with_json_array(t)
   Object.assign(e.blocks_xml, {
     get_time: "<block type=\"get_time\"/>",
     get_timer: "<block type=\"get_timer\"/>",
     reset_timer: "<block type=\"reset_timer\"/>"
-  });
-};
+  })
+}

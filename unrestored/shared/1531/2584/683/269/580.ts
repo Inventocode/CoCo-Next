@@ -4,16 +4,16 @@
  * 模块 ID：580
  */
 
-"use strict";
+"use strict"
 
 Object.defineProperty(exports, "__esModule", {
   value: true
-});
+})
 exports.BindingScopeEnum = {
   Request: "Request",
   Singleton: "Singleton",
   Transient: "Transient"
-};
+}
 exports.BindingTypeEnum = {
   ConstantValue: "ConstantValue",
   Constructor: "Constructor",
@@ -23,9 +23,9 @@ exports.BindingTypeEnum = {
   Instance: "Instance",
   Invalid: "Invalid",
   Provider: "Provider"
-};
+}
 exports.TargetTypeEnum = {
   ClassProperty: "ClassProperty",
   ConstructorArgument: "ConstructorArgument",
   Variable: "Variable"
-};
+}

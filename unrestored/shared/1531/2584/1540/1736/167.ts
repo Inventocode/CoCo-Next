@@ -6,8 +6,8 @@
 
 module.exports = function (e) {
   try {
-    return !!e();
+    return !!e()
   } catch (t) {
-    return true;
+    return true
   }
-};
+}

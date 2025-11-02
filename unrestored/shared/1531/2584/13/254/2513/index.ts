@@ -4,28 +4,28 @@
  * 模块 ID：2513
  */
 
-"use strict";
+"use strict"
 
 Object.defineProperty(exports, "__esModule", {
   value: true
-});
-exports.Raised = undefined;
-var r = s(require("react"));
-var i = s(require("../../../50/index"));
-var o = s(require("../../785/104/index"));
-var a = s(require("./2514/index"));
+})
+exports.Raised = undefined
+var r = s(require("react"))
+var i = s(require("../../../50/index"))
+var o = s(require("../../785/104/index"))
+var a = s(require("./2514/index"))
 function s(e) {
   return e && e.__esModule ? e : {
     default: e
-  };
+  }
 }
 var c = exports.Raised = function (e) {
-  var t = e.zDepth;
-  var n = e.radius;
-  var i = e.background;
-  var s = e.children;
-  var c = e.styles;
-  var u = undefined === c ? {} : c;
+  var e$zDepth = e.zDepth
+  var e$radius = e.radius
+  var e$background = e.background
+  var e$children = e.children
+  var e$styles = e.styles
+  var u = undefined === e$styles ? {} : e$styles
   var l = (0, o.default)((0, a.default)({
     default: {
       wrap: {
@@ -37,9 +37,9 @@ var c = exports.Raised = function (e) {
       },
       bg: {
         absolute: "0px 0px 0px 0px",
-        boxShadow: "0 " + t + "px " + 4 * t + "px rgba(0,0,0,.24)",
-        borderRadius: n,
-        background: i
+        boxShadow: "0 " + e$zDepth + "px " + 4 * e$zDepth + "px rgba(0,0,0,.24)",
+        borderRadius: e$radius,
+        background: e$background
       }
     },
     "zDepth-0": {
@@ -83,26 +83,26 @@ var c = exports.Raised = function (e) {
       }
     }
   }, u), {
-    "zDepth-1": 1 === t
-  });
+    "zDepth-1": 1 === e$zDepth
+  })
   return r.default.createElement("div", {
     style: l.wrap
   }, r.default.createElement("div", {
     style: l.bg
   }), r.default.createElement("div", {
     style: l.content
-  }, s));
-};
+  }, e$children))
+}
 c.propTypes = {
   background: i.default.string,
   zDepth: i.default.oneOf([0, 1, 2, 3, 4, 5]),
   radius: i.default.number,
   styles: i.default.object
-};
+}
 c.defaultProps = {
   background: "#fff",
   zDepth: 1,
   radius: 2,
   styles: {}
-};
-exports.default = c;
+}
+exports.default = c

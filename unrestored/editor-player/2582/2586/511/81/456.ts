@@ -4,44 +4,44 @@
  * 模块 ID：456
  */
 
-"use strict";
+"use strict"
 
-var n = require("./274");
-var o = require("./117");
-var i = require("./63");
+var n = require("./274")
+var o = require("./117")
+var i = require("./63")
 var a = function () {
   function t(t) {
-    this.field = t;
-    this.cachedGenerators = [];
-    this.cachedGenerators.push(new n.a(t, Int32Array.from([1])));
+    this.field = t
+    this.cachedGenerators = []
+    this.cachedGenerators.push(new n.a(t, Int32Array.from([1])))
   }
   t.prototype.buildGenerator = function (t) {
-    var e = this.cachedGenerators;
-    if (t >= e.length) {
-      for (var r = e[e.length - 1], o = this.field, i = e.length; i <= t; i++) {
-        var a = r.multiply(new n.a(o, Int32Array.from([1, o.exp(i - 1 + o.getGeneratorBase())])));
-        e.push(a);
-        r = a;
+    var this$cachedGenerators = this.cachedGenerators
+    if (t >= this$cachedGenerators.length) {
+      for (var r = this$cachedGenerators[this$cachedGenerators.length - 1], this$field = this.field, this$cachedGenerators$length = this$cachedGenerators.length; this$cachedGenerators$length <= t; this$cachedGenerators$length++) {
+        var a = r.multiply(new n.a(this$field, Int32Array.from([1, this$field.exp(this$cachedGenerators$length - 1 + this$field.getGeneratorBase())])))
+        this$cachedGenerators.push(a)
+        r = a
       }
     }
-    return e[t];
-  };
+    return this$cachedGenerators[t]
+  }
   t.prototype.encode = function (t, e) {
     if (0 === e) {
-      throw new i.a("No error correction bytes");
+      throw new i.a("No error correction bytes")
     }
-    var r = t.length - e;
+    var r = t.length - e
     if (r <= 0) {
-      throw new i.a("No data bytes provided");
+      throw new i.a("No data bytes provided")
     }
-    var a = this.buildGenerator(e);
-    var u = new Int32Array(r);
-    o.a.arraycopy(t, 0, u, 0, r);
+    var a = this.buildGenerator(e)
+    var u = new Int32Array(r)
+    o.a.arraycopy(t, 0, u, 0, r)
     for (var s = new n.a(this.field, u), c = (s = s.multiplyByMonomial(e, 1)).divide(a)[1].getCoefficients(), f = e - c.length, h = 0; h < f; h++) {
-      t[r + h] = 0;
+      t[r + h] = 0
     }
-    o.a.arraycopy(c, 0, t, r + f, c.length);
-  };
-  return t;
-}();
-exports.a = a;
+    o.a.arraycopy(c, 0, t, r + f, c.length)
+  }
+  return t
+}()
+exports.a = a

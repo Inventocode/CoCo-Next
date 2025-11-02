@@ -11,4 +11,4 @@ module.exports = {
   gridNameEditor: "GridDialog_gridNameEditor__1Gl3Y",
   invalidGridName: "GridDialog_invalidGridName__3sVft",
   warningMessage: "GridDialog_warningMessage__1l5N3"
-};
+}

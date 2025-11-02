@@ -4,41 +4,41 @@
  * 模块 ID：2626
  */
 
-"use strict";
+"use strict"
 
-var r = require("../../../19");
-var i = require("../../../54");
-var o = require("react");
-require("../../../50/index");
-var a = require("../100");
-var s = require("./153/index");
-var c = require("./234");
+var r = require("../../../19")
+var i = require("../../../54")
+var o = require("react")
+require("../../../50/index")
+var a = require("../100")
+var s = require("./153/index")
+var c = require("./234")
 var u = o.forwardRef(function (e, t) {
-  var n = e.children;
-  var s = e.classes;
-  var u = e.className;
-  var l = e.color;
-  var f = undefined === l ? "inherit" : l;
-  var d = e.component;
-  var h = undefined === d ? "svg" : d;
-  var p = e.fontSize;
-  var _ = undefined === p ? "medium" : p;
-  var A = e.htmlColor;
-  var g = e.titleAccess;
-  var v = e.viewBox;
-  var m = undefined === v ? "0 0 24 24" : v;
-  var y = i.a(e, ["children", "classes", "className", "color", "component", "fontSize", "htmlColor", "titleAccess", "viewBox"]);
+  var e$children = e.children
+  var e$classes = e.classes
+  var e$className = e.className
+  var e$color = e.color
+  var f = undefined === e$color ? "inherit" : e$color
+  var e$component = e.component
+  var h = undefined === e$component ? "svg" : e$component
+  var e$fontSize = e.fontSize
+  var _ = undefined === e$fontSize ? "medium" : e$fontSize
+  var e$htmlColor = e.htmlColor
+  var e$titleAccess = e.titleAccess
+  var e$viewBox = e.viewBox
+  var m = undefined === e$viewBox ? "0 0 24 24" : e$viewBox
+  var y = i.a(e, ["children", "classes", "className", "color", "component", "fontSize", "htmlColor", "titleAccess", "viewBox"])
   return o.createElement(h, r.a({
-    className: a.a(s.root, u, "inherit" !== f && s["color".concat(c.a(f))], "default" !== _ && "medium" !== _ && s["fontSize".concat(c.a(_))]),
+    className: a.a(e$classes.root, e$className, "inherit" !== f && e$classes["color".concat(c.a(f))], "default" !== _ && "medium" !== _ && e$classes["fontSize".concat(c.a(_))]),
     focusable: "false",
     viewBox: m,
-    color: A,
-    "aria-hidden": !g || undefined,
-    role: g ? "img" : undefined,
+    color: e$htmlColor,
+    "aria-hidden": !e$titleAccess || undefined,
+    role: e$titleAccess ? "img" : undefined,
     ref: t
-  }, y), n, g ? o.createElement("title", null, g) : null);
-});
-u.muiName = "SvgIcon";
+  }, y), e$children, e$titleAccess ? o.createElement("title", null, e$titleAccess) : null)
+})
+u.muiName = "SvgIcon"
 exports.a = s.a(function (e) {
   return {
     root: {
@@ -77,7 +77,7 @@ exports.a = s.a(function (e) {
     fontSizeLarge: {
       fontSize: e.typography.pxToRem(35)
     }
-  };
+  }
 }, {
   name: "MuiSvgIcon"
-})(u);
+})(u)

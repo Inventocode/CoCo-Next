@@ -4,10 +4,10 @@
  * 模块 ID：674
  */
 
-"use strict";
+"use strict"
 
-export { r as messages };
-export { u as types };
+export { r as messages }
+export { u as types }
 var r = {
   "zh-CN": {
     widget: "控件",
@@ -34,7 +34,7 @@ var r = {
     outOfRange: "嵌入积木数值超过取值范围",
     set: "设置"
   }
-};
+}
 import o = require("./6");
 import i = require("./97");
 import a = require("./5");
@@ -223,4 +223,4 @@ var u = {
     }]
   }],
   events: []
-};
+}

@@ -4,12 +4,12 @@
  * 模块 ID：1320
  */
 
-"use strict";
+"use strict"
 
 Object.defineProperty(exports, "__esModule", {
   value: true
-});
-exports.zh_hans = undefined;
+})
+exports.zh_hans = undefined
 exports.zh_hans = {
   DUPLICATE_BLOCK: "复制",
   COPY_ALL: "复制所有积木（ %1 块）",
@@ -167,4 +167,4 @@ exports.zh_hans = {
   OPACITY: "不透明度",
   SELECT_COLOR_PARAM_TYPE: "选参方式",
   COLOR_PREVIEW: "颜色预览"
-};
+}

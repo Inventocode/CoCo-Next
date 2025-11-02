@@ -19,6 +19,6 @@ module.exports = {
   "subMenuArrow": "subMenuArrow_Bkbbi",
   "disabled": "disabled_310JS",
   "agreementDropdown": "agreementDropdown_2te5z"
-};
+}
 
 /***/

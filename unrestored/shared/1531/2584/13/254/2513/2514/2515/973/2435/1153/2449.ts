@@ -4,7 +4,7 @@
  * 模块 ID：2449
  */
 
-var r = require("./2451/977/index");
+var r = require("./2451/977/index")
 module.exports = function (e) {
-  return r(this, e).get(e);
-};
+  return r(this, e).get(e)
+}

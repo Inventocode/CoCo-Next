@@ -7,107 +7,107 @@
 "use strict";
 
 (function (e) {
-  var r = require("./10/index");
-  var o = require("react");
+  var r = require("./10/index")
+  var o = require("react")
   var i = function __importDefault(module) {
     var defaultExport = module && module.__esModule ? function () {
-      return module.default;
+      return module.default
     } : function () {
-      return module;
-    };
+      return module
+    }
     Object.defineProperty(defaultExport, "a", {
       enumerable: true,
       get: defaultExport
-    });
-    return defaultExport;
-  }(o);
-  var a = require("./702");
-  var s = require("./16/index");
-  var c = require("./8");
+    })
+    return defaultExport
+  }(o)
+  var a = require("./702")
+  var s = require("./16/index")
+  var c = require("./8")
   var l = function __importDefault(module) {
     var defaultExport = module && module.__esModule ? function () {
-      return module.default;
+      return module.default
     } : function () {
-      return module;
-    };
+      return module
+    }
     Object.defineProperty(defaultExport, "a", {
       enumerable: true,
       get: defaultExport
-    });
-    return defaultExport;
-  }(c);
-  var u = require("./13/index");
-  var d = require("../../../../src/shared/events/messages-wrapper");
-  var p = require("./101");
+    })
+    return defaultExport
+  }(c)
+  var u = require("./13/index")
+  var d = require("../../../../src/shared/events/messages-wrapper")
+  var p = require("./101")
   var f = function __importDefault(module) {
     var defaultExport = module && module.__esModule ? function () {
-      return module.default;
+      return module.default
     } : function () {
-      return module;
-    };
+      return module
+    }
     Object.defineProperty(defaultExport, "a", {
       enumerable: true,
       get: defaultExport
-    });
-    return defaultExport;
-  }(p);
-  var h = require("./188");
+    })
+    return defaultExport
+  }(p)
+  var h = require("./188")
   exports.a = o.memo(function () {
     var t = s.e(function (e) {
-      return e.block.get("commonInputDialog");
-    });
-    var n = t.visible;
-    var c = t.title;
-    var p = t.placeholder;
-    var m = t.defaultValue;
-    var g = t.maxLength;
-    var _ = undefined === g ? 1 / 0 : g;
-    var v = t.validator;
-    var b = t.confirmCallback;
-    var y = t.cancelCallback;
-    var E = a.a().formatMessage;
-    var O = o.useRef(null);
-    var w = s.d();
-    var C = o.useState("");
-    var T = r.a(C, 2);
-    var S = T[0];
-    var I = T[1];
-    var A = o.useState(m || "");
-    var j = r.a(A, 2);
-    var N = j[0];
-    var R = j[1];
+      return e.block.get("commonInputDialog")
+    })
+    var t$visible = t.visible
+    var t$title = t.title
+    var t$placeholder = t.placeholder
+    var t$defaultValue = t.defaultValue
+    var t$maxLength = t.maxLength
+    var _ = undefined === t$maxLength ? 1 / 0 : t$maxLength
+    var t$validator = t.validator
+    var t$confirmCallback = t.confirmCallback
+    var t$cancelCallback = t.cancelCallback
+    var a$a$formatMessage = a.a().formatMessage
+    var O = o.useRef(null)
+    var w = s.d()
+    var C = o.useState("")
+    var T = r.a(C, 2)
+    var S = T[0]
+    var I = T[1]
+    var A = o.useState(t$defaultValue || "")
+    var j = r.a(A, 2)
+    var N = j[0]
+    var R = j[1]
     o.useEffect(function () {
-      var t;
-      R(m || "");
-      if (n) {
-        if (!(null === (t = O.current) || undefined === t)) {
-          t.focus();
+      var /* [auto-meaningful-name] */_o$current
+      R(t$defaultValue || "")
+      if (t$visible) {
+        if (!(null === (_o$current = O.current) || undefined === _o$current)) {
+          _o$current.focus()
         }
         e(function () {
-          var e;
-          if (!(null === (e = O.current) || undefined === e)) {
-            e.select();
+          var /* [auto-meaningful-name] */o$current
+          if (!(null === (o$current = O.current) || undefined === o$current)) {
+            o$current.select()
           }
-        });
-        I("");
+        })
+        I("")
       }
-    }, [n, m]);
+    }, [t$visible, t$defaultValue])
     var k = function () {
-      if (!(null === y || undefined === y)) {
-        y.call(null);
+      if (!(null === t$cancelCallback || undefined === t$cancelCallback)) {
+        t$cancelCallback.call(null)
       }
-      w(d.jh());
-    };
+      w(d.jh())
+    }
     var x = function () {
       if (!S && N) {
-        if (!(null === b || undefined === b)) {
-          b.call(null, N);
+        if (!(null === t$confirmCallback || undefined === t$confirmCallback)) {
+          t$confirmCallback.call(null, N)
         }
-        w(d.jh());
+        w(d.jh())
       }
-    };
+    }
     return i.a.createElement(u.f, {
-      visible: n,
+      visible: t$visible,
       className: l()(f.a.nameDialog),
       onClose: k,
       withPortal: true
@@ -118,41 +118,41 @@
       callback: x
     })), i.a.createElement("p", {
       className: f.a.dialogTitle
-    }, c && E({
-      id: c
+    }, t$title && a$a$formatMessage({
+      id: t$title
     }) || ""), i.a.createElement("div", {
       className: f.a.inputWrapper
-    }, i.a.createElement("span", null, E({
+    }, i.a.createElement("span", null, a$a$formatMessage({
       id: "name"
     })), i.a.createElement(u.k, {
       ref: O,
       warning: !!S,
-      placeholder: p && E({
-        id: p
+      placeholder: t$placeholder && a$a$formatMessage({
+        id: t$placeholder
       }),
       onChange: function (e) {
-        var t = null === v || undefined === v ? undefined : v.call(null, e);
-        R(e);
-        I(t || "");
+        var t = null === t$validator || undefined === t$validator ? undefined : t$validator.call(null, e)
+        R(e)
+        I(t || "")
       },
       maxLength: _,
       value: N
     }), S && i.a.createElement("div", {
       className: f.a.warningTips
-    }, " ", E({
+    }, " ", a$a$formatMessage({
       id: S
     }))), i.a.createElement("div", {
       className: f.a.confirmBox
     }, i.a.createElement(u.d, {
       onClick: k
-    }, E({
+    }, a$a$formatMessage({
       id: "cancel"
     })), i.a.createElement(u.d, {
       onClick: x,
       type: "primary",
       disabled: !!S || !N
-    }, E({
+    }, a$a$formatMessage({
       id: "confirm"
-    }))));
-  });
-}).call(this, require("./795/625/index").setImmediate);
+    }))))
+  })
+}).call(this, require("./795/625/index").setImmediate)

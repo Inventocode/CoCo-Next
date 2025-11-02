@@ -4,9 +4,9 @@
  * 模块 ID：2480
  */
 
-var r = require("../2468/2469/1407");
+var r = require("../2468/2469/1407")
 module.exports = function (e) {
   return function (t) {
-    return r(t, e);
-  };
-};
+    return r(t, e)
+  }
+}

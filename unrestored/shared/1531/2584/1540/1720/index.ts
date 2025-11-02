@@ -4,7 +4,7 @@
  * 模块 ID：1720
  */
 
-"use strict";
+"use strict"
 
 var r = require("./1079");
-(0, require("./258/index").exportTypedArrayStaticMethod)("from", require("./1249/index"), r);
+(0, require("./258/index").exportTypedArrayStaticMethod)("from", require("./1249/index"), r)

@@ -4,30 +4,30 @@
  * 模块 ID：787
  */
 
-"use strict";
+"use strict"
 
-export { z as a };
-var r = {};
+export { z as a }
+var r = {}
 Object.defineProperty(r, "Express", {
   get: function () {
-    return P;
+    return P
   }
-});
+})
 Object.defineProperty(r, "Postgres", {
   get: function () {
-    return L;
+    return L
   }
-});
+})
 Object.defineProperty(r, "Mysql", {
   get: function () {
-    return U;
+    return U
   }
-});
+})
 Object.defineProperty(r, "Mongo", {
   get: function () {
-    return G;
+    return G
   }
-});
+})
 import i = require("../../36/483/39");
 import o = require("./265");
 import a = require("./364");
@@ -35,22 +35,22 @@ import s = require("./720/index");
 import c = require("./764/index");
 import u = require("./350");
 import l = require("./218");
-var f = a.b();
+var f = a.b()
 import d = require("./521");
 import h = require("./926");
 import p = require("./1168");
 var _ = function (e, t, n) {
-  var r;
+  var /* [auto-meaningful-name] */t$value
   return function (i) {
     if (t.value >= 0 && (i || n)) {
-      t.delta = t.value - (r || 0);
-      if (t.delta || undefined === r) {
-        r = t.value;
-        e(t);
+      t.delta = t.value - (t$value || 0)
+      if (t.delta || undefined === t$value) {
+        t$value = t.value
+        e(t)
       }
     }
-  };
-};
+  }
+}
 var A = function (e, t) {
   return {
     name: e,
@@ -58,91 +58,91 @@ var A = function (e, t) {
     delta: 0,
     entries: [],
     id: "v2-" + Date.now() + "-" + (Math.floor(8999999999999 * Math.random()) + 1e12)
-  };
-};
+  }
+}
 var g = function (e, t) {
   try {
     if (PerformanceObserver.supportedEntryTypes.includes(e)) {
       if ("first-input" === e && !("PerformanceEventTiming" in self)) {
-        return;
+        return
       }
       var n = new PerformanceObserver(function (e) {
-        return e.getEntries().map(t);
-      });
+        return e.getEntries().map(t)
+      })
       n.observe({
         type: e,
         buffered: true
-      });
-      return n;
+      })
+      return n
     }
   } catch (r) {}
-};
+}
 var v = function (e, t) {
   var n = function n(r) {
     if (!("pagehide" !== r.type && "hidden" !== document.visibilityState)) {
-      e(r);
+      e(r)
       if (t) {
-        removeEventListener("visibilitychange", n, true);
-        removeEventListener("pagehide", n, true);
+        removeEventListener("visibilitychange", n, true)
+        removeEventListener("pagehide", n, true)
       }
     }
-  };
-  addEventListener("visibilitychange", n, true);
-  addEventListener("pagehide", n, true);
-};
-var m = -1;
+  }
+  addEventListener("visibilitychange", n, true)
+  addEventListener("pagehide", n, true)
+}
+var m = -1
 var y = function () {
   if (m < 0) {
-    m = "hidden" === document.visibilityState ? 0 : 1 / 0;
+    m = "hidden" === document.visibilityState ? 0 : 1 / 0
     v(function (e) {
-      var t = e.timeStamp;
-      m = t;
-    }, true);
+      var e$timeStamp = e.timeStamp
+      m = e$timeStamp
+    }, true)
   }
   return {
     get firstHiddenTime() {
-      return m;
+      return m
     }
-  };
-};
-var b = {};
-var w = a.b();
+  }
+}
+var b = {}
+var w = a.b()
 var E = function () {
   function e() {
-    var e;
-    var t;
-    this._measurements = {};
-    this._performanceCursor = 0;
+    var e
+    var t
+    this._measurements = {}
+    this._performanceCursor = 0
     if (!d.b() && (null === (e = w) || undefined === e ? undefined : e.performance) && (null === (t = w) || undefined === t ? undefined : t.document)) {
       if (w.performance.mark) {
-        w.performance.mark("sentry-tracing-init");
+        w.performance.mark("sentry-tracing-init")
       }
-      this._trackCLS();
-      this._trackLCP();
-      this._trackFID();
+      this._trackCLS()
+      this._trackLCP()
+      this._trackFID()
     }
   }
   e.prototype.addPerformanceEntries = function (e) {
-    var t = this;
+    var t = this
     if (w && w.performance && w.performance.getEntries && h.a) {
-      o.a.log("[Tracing] Adding & adjusting spans using Performance API");
-      var n;
-      var r;
-      var i;
-      var a;
-      var s;
-      var c = l.d(h.a);
+      o.a.log("[Tracing] Adding & adjusting spans using Performance API")
+      var /* [auto-meaningful-name] */w$document$scriptsU$src
+      var r
+      var i
+      var a
+      var s
+      var c = l.d(h.a)
       if (w.document && w.document.scripts) {
         for (var u = 0; u < w.document.scripts.length; u++) {
           if ("true" === w.document.scripts[u].dataset.entry) {
-            n = w.document.scripts[u].src;
-            break;
+            w$document$scriptsU$src = w.document.scripts[u].src
+            break
           }
         }
       }
       w.performance.getEntries().slice(this._performanceCursor).forEach(function (u) {
-        var f = l.d(u.startTime);
-        var d = l.d(u.duration);
+        var f = l.d(u.startTime)
+        var d = l.d(u.duration)
         if (!("navigation" === e.op && c + f < e.startTimestamp)) {
           switch (u.entryType) {
             case "navigation":
@@ -152,31 +152,31 @@ var E = function () {
                   entry: t,
                   event: "unloadEvent",
                   timeOrigin: n
-                });
+                })
                 x({
                   transaction: e,
                   entry: t,
                   event: "redirect",
                   timeOrigin: n
-                });
+                })
                 x({
                   transaction: e,
                   entry: t,
                   event: "domContentLoadedEvent",
                   timeOrigin: n
-                });
+                })
                 x({
                   transaction: e,
                   entry: t,
                   event: "loadEvent",
                   timeOrigin: n
-                });
+                })
                 x({
                   transaction: e,
                   entry: t,
                   event: "connect",
                   timeOrigin: n
-                });
+                })
                 x({
                   transaction: e,
                   entry: t,
@@ -184,7 +184,7 @@ var E = function () {
                   timeOrigin: n,
                   eventEnd: "connectEnd",
                   description: "TLS/SSL"
-                });
+                })
                 x({
                   transaction: e,
                   entry: t,
@@ -192,7 +192,7 @@ var E = function () {
                   timeOrigin: n,
                   eventEnd: "domainLookupStart",
                   description: "cache"
-                });
+                })
                 x({
                   transaction: e,
                   entry: t,
@@ -206,354 +206,354 @@ var E = function () {
                     description: "request",
                     startTimestamp: n + l.d(t.requestStart),
                     endTimestamp: n + l.d(t.responseEnd)
-                  });
+                  })
                   C(e, {
                     op: "browser",
                     description: "response",
                     startTimestamp: n + l.d(t.responseStart),
                     endTimestamp: n + l.d(t.responseEnd)
-                  });
-                })(e, t, n);
-              }(e, u, c);
-              a = c + l.d(u.responseStart);
-              s = c + l.d(u.requestStart);
-              break;
+                  })
+                })(e, t, n)
+              }(e, u, c)
+              a = c + l.d(u.responseStart)
+              s = c + l.d(u.requestStart)
+              break
             case "mark":
             case "paint":
             case "measure":
               var h = function (e, t, n, r, i) {
-                var o = i + n;
-                var a = o + r;
+                var o = i + n
+                var a = o + r
                 C(e, {
                   description: t.name,
                   endTimestamp: a,
                   op: t.entryType,
                   startTimestamp: o
-                });
-                return o;
-              }(e, u, f, d, c);
+                })
+                return o
+              }(e, u, f, d, c)
               if (undefined === i && "sentry-tracing-init" === u.name) {
-                i = h;
+                i = h
               }
               var p = y(),
-                _ = u.startTime < p.firstHiddenTime;
+                _ = u.startTime < p.firstHiddenTime
               if ("first-paint" === u.name && _) {
-                o.a.log("[Measurements] Adding FP");
+                o.a.log("[Measurements] Adding FP")
                 t._measurements.fp = {
                   value: u.startTime
-                };
+                }
                 t._measurements["mark.fp"] = {
                   value: h
-                };
+                }
               }
               if ("first-contentful-paint" === u.name && _) {
-                o.a.log("[Measurements] Adding FCP");
+                o.a.log("[Measurements] Adding FCP")
                 t._measurements.fcp = {
                   value: u.startTime
-                };
+                }
                 t._measurements["mark.fcp"] = {
                   value: h
-                };
+                }
               }
-              break;
+              break
             case "resource":
               var A = u.name.replace(window.location.origin, ""),
                 g = function (e, t, n, r, i, o) {
                   if ("xmlhttprequest" === t.initiatorType || "fetch" === t.initiatorType) {
-                    return;
+                    return
                   }
-                  var a = {};
+                  var a = {}
                   if ("transferSize" in t) {
-                    a["Transfer Size"] = t.transferSize;
+                    a["Transfer Size"] = t.transferSize
                   }
                   if ("encodedBodySize" in t) {
-                    a["Encoded Body Size"] = t.encodedBodySize;
+                    a["Encoded Body Size"] = t.encodedBodySize
                   }
                   if ("decodedBodySize" in t) {
-                    a["Decoded Body Size"] = t.decodedBodySize;
+                    a["Decoded Body Size"] = t.decodedBodySize
                   }
-                  var s = o + r;
-                  var c = s + i;
+                  var s = o + r
+                  var c = s + i
                   C(e, {
                     description: n,
                     endTimestamp: c,
                     op: t.initiatorType ? "resource." + t.initiatorType : "resource",
                     startTimestamp: s,
                     data: a
-                  });
-                  return c;
-                }(e, u, A, f, d, c);
-              if (undefined === r && (n || "").indexOf(A) > -1) {
-                r = g;
+                  })
+                  return c
+                }(e, u, A, f, d, c)
+              if (undefined === r && (w$document$scriptsU$src || "").indexOf(A) > -1) {
+                r = g
               }
           }
         }
-      });
+      })
       if (undefined !== r && undefined !== i) {
         C(e, {
           description: "evaluation",
           endTimestamp: i,
           op: "script",
           startTimestamp: r
-        });
+        })
       }
-      this._performanceCursor = Math.max(performance.getEntries().length - 1, 0);
-      this._trackNavigator(e);
+      this._performanceCursor = Math.max(performance.getEntries().length - 1, 0)
+      this._trackNavigator(e)
       if ("pageload" === e.op) {
-        var f = l.d(h.a);
+        var f = l.d(h.a)
         if ("number" === typeof a) {
-          o.a.log("[Measurements] Adding TTFB");
+          o.a.log("[Measurements] Adding TTFB")
           this._measurements.ttfb = {
             value: 1e3 * (a - e.startTimestamp)
-          };
+          }
           if ("number" === typeof s && s <= a) {
             this._measurements["ttfb.requestTime"] = {
               value: 1e3 * (a - s)
-            };
+            }
           }
         }
         ["fcp", "fp", "lcp"].forEach(function (n) {
           if (t._measurements[n] && !(f >= e.startTimestamp)) {
-            var r = t._measurements[n].value;
-            var i = f + l.d(r);
-            var a = Math.abs(1e3 * (i - e.startTimestamp));
-            var s = a - r;
-            o.a.log("[Measurements] Normalized " + n + " from " + r + " to " + a + " (" + s + ")");
-            t._measurements[n].value = a;
+            var t$_measurementsN$value = t._measurements[n].value
+            var i = f + l.d(t$_measurementsN$value)
+            var a = Math.abs(1e3 * (i - e.startTimestamp))
+            var s = a - t$_measurementsN$value
+            o.a.log("[Measurements] Normalized " + n + " from " + t$_measurementsN$value + " to " + a + " (" + s + ")")
+            t._measurements[n].value = a
           }
-        });
+        })
         if (this._measurements["mark.fid"] && this._measurements.fid) {
           C(e, {
             description: "first input delay",
             endTimestamp: this._measurements["mark.fid"].value + l.d(this._measurements.fid.value),
             op: "web.vitals",
             startTimestamp: this._measurements["mark.fid"].value
-          });
+          })
         }
         if (!("fcp" in this._measurements)) {
-          delete this._measurements.cls;
+          delete this._measurements.cls
         }
-        e.setMeasurements(this._measurements);
-        this._tagMetricInfo(e);
+        e.setMeasurements(this._measurements)
+        this._tagMetricInfo(e)
       }
     }
-  };
+  }
   e.prototype._tagMetricInfo = function (e) {
     if (this._lcpEntry) {
-      o.a.log("[Measurements] Adding LCP Data");
+      o.a.log("[Measurements] Adding LCP Data")
       if (this._lcpEntry.element) {
-        e.setTag("lcp.element", p.a(this._lcpEntry.element));
+        e.setTag("lcp.element", p.a(this._lcpEntry.element))
       }
       if (this._lcpEntry.id) {
-        e.setTag("lcp.id", this._lcpEntry.id);
+        e.setTag("lcp.id", this._lcpEntry.id)
       }
       if (this._lcpEntry.url) {
-        e.setTag("lcp.url", this._lcpEntry.url.trim().slice(0, 200));
+        e.setTag("lcp.url", this._lcpEntry.url.trim().slice(0, 200))
       }
-      e.setTag("lcp.size", this._lcpEntry.size);
+      e.setTag("lcp.size", this._lcpEntry.size)
     }
     if (this._clsEntry && this._clsEntry.sources) {
-      o.a.log("[Measurements] Adding CLS Data");
+      o.a.log("[Measurements] Adding CLS Data")
       this._clsEntry.sources.forEach(function (t, n) {
-        return e.setTag("cls.source." + (n + 1), p.a(t.node));
-      });
+        return e.setTag("cls.source." + (n + 1), p.a(t.node))
+      })
     }
-  };
+  }
   e.prototype._trackCLS = function () {
-    var e = this;
+    var e = this
     !function (e, t) {
-      var n;
-      var r = A("CLS", 0);
-      var i = 0;
-      var o = [];
+      var n
+      var r = A("CLS", 0)
+      var i = 0
+      var o = []
       var a = function (e) {
         if (e && !e.hadRecentInput) {
-          var t = o[0];
-          var a = o[o.length - 1];
+          var t = o[0]
+          var a = o[o.length - 1]
           if (i && 0 !== o.length && e.startTime - a.startTime < 1e3 && e.startTime - t.startTime < 5e3) {
-            i += e.value;
-            o.push(e);
+            i += e.value
+            o.push(e)
           } else {
-            i = e.value;
-            o = [e];
+            i = e.value
+            o = [e]
           }
           if (i > r.value) {
-            r.value = i;
-            r.entries = o;
+            r.value = i
+            r.entries = o
             if (n) {
-              n();
+              n()
             }
           }
         }
-      };
-      var s = g("layout-shift", a);
+      }
+      var s = g("layout-shift", a)
       if (s) {
-        n = _(e, r, t);
+        n = _(e, r, t)
         v(function () {
-          s.takeRecords().map(a);
-          n(true);
-        });
+          s.takeRecords().map(a)
+          n(true)
+        })
       }
     }(function (t) {
-      var n = t.entries.pop();
+      var n = t.entries.pop()
       if (n) {
-        o.a.log("[Measurements] Adding CLS");
+        o.a.log("[Measurements] Adding CLS")
         e._measurements.cls = {
           value: t.value
-        };
-        e._clsEntry = n;
+        }
+        e._clsEntry = n
       }
-    });
-  };
+    })
+  }
   e.prototype._trackNavigator = function (e) {
-    var t = w.navigator;
-    if (t) {
-      var n = t.connection;
-      if (n) {
-        if (n.effectiveType) {
-          e.setTag("effectiveConnectionType", n.effectiveType);
+    var w$navigator = w.navigator
+    if (w$navigator) {
+      var w$navigator$connection = w$navigator.connection
+      if (w$navigator$connection) {
+        if (w$navigator$connection.effectiveType) {
+          e.setTag("effectiveConnectionType", w$navigator$connection.effectiveType)
         }
-        if (n.type) {
-          e.setTag("connectionType", n.type);
+        if (w$navigator$connection.type) {
+          e.setTag("connectionType", w$navigator$connection.type)
         }
-        if (O(n.rtt)) {
+        if (O(w$navigator$connection.rtt)) {
           this._measurements["connection.rtt"] = {
-            value: n.rtt
-          };
+            value: w$navigator$connection.rtt
+          }
         }
-        if (O(n.downlink)) {
+        if (O(w$navigator$connection.downlink)) {
           this._measurements["connection.downlink"] = {
-            value: n.downlink
-          };
+            value: w$navigator$connection.downlink
+          }
         }
       }
-      if (O(t.deviceMemory)) {
-        e.setTag("deviceMemory", String(t.deviceMemory));
+      if (O(w$navigator.deviceMemory)) {
+        e.setTag("deviceMemory", String(w$navigator.deviceMemory))
       }
-      if (O(t.hardwareConcurrency)) {
-        e.setTag("hardwareConcurrency", String(t.hardwareConcurrency));
+      if (O(w$navigator.hardwareConcurrency)) {
+        e.setTag("hardwareConcurrency", String(w$navigator.hardwareConcurrency))
       }
     }
-  };
+  }
   e.prototype._trackLCP = function () {
-    var e = this;
+    var e = this
     !function (e, t) {
-      var n;
-      var r = y();
-      var i = A("LCP");
+      var n
+      var r = y()
+      var i = A("LCP")
       var o = function (e) {
-        var t = e.startTime;
-        if (t < r.firstHiddenTime) {
-          i.value = t;
-          i.entries.push(e);
+        var e$startTime = e.startTime
+        if (e$startTime < r.firstHiddenTime) {
+          i.value = e$startTime
+          i.entries.push(e)
         }
         if (n) {
-          n();
+          n()
         }
-      };
-      var a = g("largest-contentful-paint", o);
+      }
+      var a = g("largest-contentful-paint", o)
       if (a) {
-        n = _(e, i, t);
+        n = _(e, i, t)
         var s = function () {
           if (!b[i.id]) {
-            a.takeRecords().map(o);
-            a.disconnect();
-            b[i.id] = true;
-            n(true);
+            a.takeRecords().map(o)
+            a.disconnect()
+            b[i.id] = true
+            n(true)
           }
         };
         ["keydown", "click"].forEach(function (e) {
           addEventListener(e, s, {
             once: true,
             capture: true
-          });
-        });
-        v(s, true);
+          })
+        })
+        v(s, true)
       }
     }(function (t) {
-      var n = t.entries.pop();
+      var n = t.entries.pop()
       if (n) {
-        var r = l.d(h.a);
-        var i = l.d(n.startTime);
-        o.a.log("[Measurements] Adding LCP");
+        var r = l.d(h.a)
+        var i = l.d(n.startTime)
+        o.a.log("[Measurements] Adding LCP")
         e._measurements.lcp = {
           value: t.value
-        };
+        }
         e._measurements["mark.lcp"] = {
           value: r + i
-        };
-        e._lcpEntry = n;
+        }
+        e._lcpEntry = n
       }
-    });
-  };
+    })
+  }
   e.prototype._trackFID = function () {
-    var e = this;
+    var e = this
     !function (e, t) {
-      var n;
-      var r = y();
-      var i = A("FID");
+      var n
+      var r = y()
+      var i = A("FID")
       var o = function (e) {
         if (n && e.startTime < r.firstHiddenTime) {
-          i.value = e.processingStart - e.startTime;
-          i.entries.push(e);
-          n(true);
+          i.value = e.processingStart - e.startTime
+          i.entries.push(e)
+          n(true)
         }
-      };
-      var a = g("first-input", o);
+      }
+      var a = g("first-input", o)
       if (a) {
-        n = _(e, i, t);
+        n = _(e, i, t)
         v(function () {
-          a.takeRecords().map(o);
-          a.disconnect();
-        }, true);
+          a.takeRecords().map(o)
+          a.disconnect()
+        }, true)
       }
     }(function (t) {
-      var n = t.entries.pop();
+      var n = t.entries.pop()
       if (n) {
-        var r = l.d(h.a);
-        var i = l.d(n.startTime);
-        o.a.log("[Measurements] Adding FID");
+        var r = l.d(h.a)
+        var i = l.d(n.startTime)
+        o.a.log("[Measurements] Adding FID")
         e._measurements.fid = {
           value: t.value
-        };
+        }
         e._measurements["mark.fid"] = {
           value: r + i
-        };
+        }
       }
-    });
-  };
-  return e;
-}();
+    })
+  }
+  return e
+}()
 function x(e) {
-  var t = e.transaction;
-  var n = e.entry;
-  var r = e.event;
-  var i = e.timeOrigin;
-  var o = e.eventEnd;
-  var a = e.description;
-  var s = o ? n[o] : n[r + "End"];
-  var c = n[r + "Start"];
+  var e$transaction = e.transaction
+  var e$entry = e.entry
+  var e$event = e.event
+  var e$timeOrigin = e.timeOrigin
+  var e$eventEnd = e.eventEnd
+  var e$description = e.description
+  var s = e$eventEnd ? e$entry[e$eventEnd] : e$entry[e$event + "End"]
+  var c = e$entry[e$event + "Start"]
   if (c && s) {
-    C(t, {
+    C(e$transaction, {
       op: "browser",
-      description: null !== a && undefined !== a ? a : r,
-      startTimestamp: i + l.d(c),
-      endTimestamp: i + l.d(s)
-    });
+      description: null !== e$description && undefined !== e$description ? e$description : e$event,
+      startTimestamp: e$timeOrigin + l.d(c),
+      endTimestamp: e$timeOrigin + l.d(s)
+    })
   }
 }
 function C(e, t) {
-  var n = t.startTimestamp;
-  var r = i.e(t, ["startTimestamp"]);
-  if (n && e.startTimestamp > n) {
-    e.startTimestamp = n;
+  var t$startTimestamp = t.startTimestamp
+  var r = i.e(t, ["startTimestamp"])
+  if (t$startTimestamp && e.startTimestamp > t$startTimestamp) {
+    e.startTimestamp = t$startTimestamp
   }
   return e.startChild(i.a({
-    startTimestamp: n
-  }, r));
+    startTimestamp: t$startTimestamp
+  }, r))
 }
 function O(e) {
-  return "number" === typeof e && isFinite(e);
+  return "number" === typeof e && isFinite(e)
 }
 import k = require("./736");
 import S = require("./1508");
@@ -562,42 +562,42 @@ var B = {
   traceFetch: true,
   traceXHR: true,
   tracingOrigins: ["localhost", /^\//]
-};
+}
 function D(e) {
-  var t = i.a(i.a({}, B), e);
-  var n = t.traceFetch;
-  var r = t.traceXHR;
-  var o = t.tracingOrigins;
-  var a = t.shouldCreateSpanForRequest;
-  var s = {};
+  var t = i.a(i.a({}, B), e)
+  var t$traceFetch = t.traceFetch
+  var t$traceXHR = t.traceXHR
+  var t$tracingOrigins = t.tracingOrigins
+  var t$shouldCreateSpanForRequest = t.shouldCreateSpanForRequest
+  var s = {}
   var c = function (e) {
     if (s[e]) {
-      return s[e];
+      return s[e]
     }
-    var t = o;
+    var t = t$tracingOrigins
     s[e] = t.some(function (t) {
-      return k.a(e, t);
-    }) && !k.a(e, "sentry_key");
-    return s[e];
-  };
-  var f = c;
-  if ("function" === typeof a) {
-    f = function (e) {
-      return c(e) && a(e);
-    };
+      return k.a(e, t)
+    }) && !k.a(e, "sentry_key")
+    return s[e]
   }
-  var d = {};
-  if (n) {
+  var f = c
+  if ("function" === typeof t$shouldCreateSpanForRequest) {
+    f = function (e) {
+      return c(e) && t$shouldCreateSpanForRequest(e)
+    }
+  }
+  var d = {}
+  if (t$traceFetch) {
     S.a({
       callback: function (e) {
         !function (e, t, n) {
           if (!l.c() || !e.fetchData || !t(e.fetchData.url)) {
-            return;
+            return
           }
           if (e.endTimestamp && e.fetchData.__span) {
-            return void ((o = n[e.fetchData.__span]) && (e.response ? o.setHttpStatus(e.response.status) : e.error && o.setStatus(u.a.InternalError), o.finish(), delete n[e.fetchData.__span]));
+            return void ((o = n[e.fetchData.__span]) && (e.response ? o.setHttpStatus(e.response.status) : e.error && o.setStatus(u.a.InternalError), o.finish(), delete n[e.fetchData.__span]))
           }
-          var r = l.b();
+          var r = l.b()
           if (r) {
             var o = r.startChild({
               data: i.a(i.a({}, e.fetchData), {
@@ -605,430 +605,430 @@ function D(e) {
               }),
               description: e.fetchData.method + " " + e.fetchData.url,
               op: "http.client"
-            });
-            e.fetchData.__span = o.spanId;
-            n[o.spanId] = o;
-            var a = e.args[0] = e.args[0];
-            var s = e.args[1] = e.args[1] || {};
-            var c = s.headers;
+            })
+            e.fetchData.__span = o.spanId
+            n[o.spanId] = o
+            var a = e.args[0] = e.args[0]
+            var s = e.args[1] = e.args[1] || {}
+            var s$headers = s.headers
             if (T.d(a, Request)) {
-              c = a.headers;
+              s$headers = a.headers
             }
-            if (c) {
-              if ("function" === typeof c.append) {
-                c.append("sentry-trace", o.toTraceparent());
+            if (s$headers) {
+              if ("function" === typeof s$headers.append) {
+                s$headers.append("sentry-trace", o.toTraceparent())
               } else {
-                c = Array.isArray(c) ? i.f(c, [["sentry-trace", o.toTraceparent()]]) : i.a(i.a({}, c), {
+                s$headers = Array.isArray(s$headers) ? i.f(s$headers, [["sentry-trace", o.toTraceparent()]]) : i.a(i.a({}, s$headers), {
                   "sentry-trace": o.toTraceparent()
-                });
+                })
               }
             } else {
-              c = {
+              s$headers = {
                 "sentry-trace": o.toTraceparent()
-              };
+              }
             }
-            s.headers = c;
+            s.headers = s$headers
           }
-        }(e, f, d);
+        }(e, f, d)
       },
       type: "fetch"
-    });
+    })
   }
-  if (r) {
+  if (t$traceXHR) {
     S.a({
       callback: function (e) {
         !function (e, t, n) {
-          var r;
-          var o;
-          if (!l.c() || (null === (r = e.xhr) || undefined === r ? undefined : r.__sentry_own_request__) || !(null === (o = e.xhr) || undefined === o ? undefined : o.__sentry_xhr__) || !t(e.xhr.__sentry_xhr__.url)) {
-            return;
+          var /* [auto-meaningful-name] */_e$xhr2
+          var /* [auto-meaningful-name] */e$xhr
+          if (!l.c() || (null === (_e$xhr2 = e.xhr) || undefined === _e$xhr2 ? undefined : _e$xhr2.__sentry_own_request__) || !(null === (e$xhr = e.xhr) || undefined === e$xhr ? undefined : e$xhr.__sentry_xhr__) || !t(e.xhr.__sentry_xhr__.url)) {
+            return
           }
-          var a = e.xhr.__sentry_xhr__;
+          var e$xhr$__sentry_xhr__ = e.xhr.__sentry_xhr__
           if (e.endTimestamp && e.xhr.__sentry_xhr_span_id__) {
-            return void ((c = n[e.xhr.__sentry_xhr_span_id__]) && (c.setHttpStatus(a.status_code), c.finish(), delete n[e.xhr.__sentry_xhr_span_id__]));
+            return void ((c = n[e.xhr.__sentry_xhr_span_id__]) && (c.setHttpStatus(e$xhr$__sentry_xhr__.status_code), c.finish(), delete n[e.xhr.__sentry_xhr_span_id__]))
           }
-          var s = l.b();
+          var s = l.b()
           if (s) {
             var c = s.startChild({
-              data: i.a(i.a({}, a.data), {
+              data: i.a(i.a({}, e$xhr$__sentry_xhr__.data), {
                 type: "xhr",
-                method: a.method,
-                url: a.url
+                method: e$xhr$__sentry_xhr__.method,
+                url: e$xhr$__sentry_xhr__.url
               }),
-              description: a.method + " " + a.url,
+              description: e$xhr$__sentry_xhr__.method + " " + e$xhr$__sentry_xhr__.url,
               op: "http.client"
-            });
-            e.xhr.__sentry_xhr_span_id__ = c.spanId;
-            n[e.xhr.__sentry_xhr_span_id__] = c;
+            })
+            e.xhr.__sentry_xhr_span_id__ = c.spanId
+            n[e.xhr.__sentry_xhr_span_id__] = c
             if (e.xhr.setRequestHeader) {
               try {
-                e.xhr.setRequestHeader("sentry-trace", c.toTraceparent());
+                e.xhr.setRequestHeader("sentry-trace", c.toTraceparent())
               } catch (u) {}
             }
           }
-        }(e, f, d);
+        }(e, f, d)
       },
       type: "xhr"
-    });
+    })
   }
 }
-var I = a.b();
+var I = a.b()
 var F = i.a({
   idleTimeout: c.a,
   markBackgroundTransactions: true,
   maxTransactionDuration: 600,
   routingInstrumentation: function (e, t, n) {
     if (undefined === t) {
-      t = true;
+      t = true
     }
     if (undefined === n) {
-      n = true;
+      n = true
     }
     if (I && I.location) {
-      var r;
-      var i = I.location.href;
+      var r
+      var i$location$href = I.location.href
       if (t) {
         r = e({
           name: I.location.pathname,
           op: "pageload"
-        });
+        })
       }
       if (n) {
         S.a({
           callback: function (t) {
-            var n = t.to;
-            var a = t.from;
-            if (undefined === a && i && -1 !== i.indexOf(n)) {
-              i = undefined;
+            var n = t.to
+            var t$from = t.from
+            if (undefined === t$from && i$location$href && -1 !== i$location$href.indexOf(n)) {
+              i$location$href = undefined
             } else {
-              if (a !== n) {
-                i = undefined;
+              if (t$from !== n) {
+                i$location$href = undefined
                 if (r) {
-                  o.a.log("[Tracing] Finishing current transaction with op: " + r.op);
-                  r.finish();
+                  o.a.log("[Tracing] Finishing current transaction with op: " + r.op)
+                  r.finish()
                 }
                 r = e({
                   name: I.location.pathname,
                   op: "navigation"
-                });
+                })
               }
             }
           },
           type: "history"
-        });
+        })
       }
     } else {
-      o.a.warn("Could not initialize routing instrumentation due to invalid location");
+      o.a.warn("Could not initialize routing instrumentation due to invalid location")
     }
   },
   startTransactionOnLocationChange: true,
   startTransactionOnPageLoad: true
-}, B);
+}, B)
 var R = function () {
   function e(t) {
-    this.name = e.id;
-    this._metrics = new E();
-    this._emitOptionsWarning = false;
-    var n = B.tracingOrigins;
+    this.name = e.id
+    this._metrics = new E()
+    this._emitOptionsWarning = false
+    var b$tracingOrigins = B.tracingOrigins
     if (t && t.tracingOrigins && Array.isArray(t.tracingOrigins) && 0 !== t.tracingOrigins.length) {
-      n = t.tracingOrigins;
+      b$tracingOrigins = t.tracingOrigins
     } else {
-      this._emitOptionsWarning = true;
+      this._emitOptionsWarning = true
     }
     this.options = i.a(i.a(i.a({}, F), t), {
-      tracingOrigins: n
-    });
+      tracingOrigins: b$tracingOrigins
+    })
   }
   e.prototype.setupOnce = function (e, t) {
-    var n = this;
-    this._getCurrentHub = t;
+    var n = this
+    this._getCurrentHub = t
     if (this._emitOptionsWarning) {
-      o.a.warn("[Tracing] You need to define `tracingOrigins` in the options. Set an array of urls or patterns to trace.");
-      o.a.warn("[Tracing] We added a reasonable default for you: " + B.tracingOrigins);
+      o.a.warn("[Tracing] You need to define `tracingOrigins` in the options. Set an array of urls or patterns to trace.")
+      o.a.warn("[Tracing] We added a reasonable default for you: " + B.tracingOrigins)
     }
-    var r = this.options;
-    var i = r.routingInstrumentation;
-    var a = r.startTransactionOnLocationChange;
-    var s = r.startTransactionOnPageLoad;
-    var c = r.markBackgroundTransactions;
-    var d = r.traceFetch;
-    var h = r.traceXHR;
-    var p = r.tracingOrigins;
-    var _ = r.shouldCreateSpanForRequest;
-    i(function (e) {
-      return n._createRouteTransaction(e);
-    }, s, a);
-    if (c) {
+    var this$options = this.options
+    var this$options$routingInstrumentation = this$options.routingInstrumentation
+    var this$options$startTransactionOnLocationChange = this$options.startTransactionOnLocationChange
+    var this$options$startTransactionOnPageLoad = this$options.startTransactionOnPageLoad
+    var this$options$markBackgroundTransactions = this$options.markBackgroundTransactions
+    var this$options$traceFetch = this$options.traceFetch
+    var this$options$traceXHR = this$options.traceXHR
+    var this$options$tracingOrigins = this$options.tracingOrigins
+    var this$options$shouldCreateSpanForRequest = this$options.shouldCreateSpanForRequest
+    this$options$routingInstrumentation(function (e) {
+      return n._createRouteTransaction(e)
+    }, this$options$startTransactionOnPageLoad, this$options$startTransactionOnLocationChange)
+    if (this$options$markBackgroundTransactions) {
       if (f && f.document) {
         f.document.addEventListener("visibilitychange", function () {
-          var e = l.b();
+          var e = l.b()
           if (f.document.hidden && e) {
-            o.a.log("[Tracing] Transaction: " + u.a.Cancelled + " -> since tab moved to the background, op: " + e.op);
+            o.a.log("[Tracing] Transaction: " + u.a.Cancelled + " -> since tab moved to the background, op: " + e.op)
             if (!e.status) {
-              e.setStatus(u.a.Cancelled);
+              e.setStatus(u.a.Cancelled)
             }
-            e.setTag("visibilitychange", "document.hidden");
-            e.finish();
+            e.setTag("visibilitychange", "document.hidden")
+            e.finish()
           }
-        });
+        })
       } else {
-        o.a.warn("[Tracing] Could not set up background tab detection due to lack of global document");
+        o.a.warn("[Tracing] Could not set up background tab detection due to lack of global document")
       }
     }
     D({
-      traceFetch: d,
-      traceXHR: h,
-      tracingOrigins: p,
-      shouldCreateSpanForRequest: _
-    });
-  };
+      traceFetch: this$options$traceFetch,
+      traceXHR: this$options$traceXHR,
+      tracingOrigins: this$options$tracingOrigins,
+      shouldCreateSpanForRequest: this$options$shouldCreateSpanForRequest
+    })
+  }
   e.prototype._createRouteTransaction = function (e) {
-    var t = this;
+    var t = this
     if (this._getCurrentHub) {
-      var n = this.options;
-      var r = n.beforeNavigate;
-      var c = n.idleTimeout;
-      var f = n.maxTransactionDuration;
+      var this$options = this.options
+      var this$options$beforeNavigate = this$options.beforeNavigate
+      var this$options$idleTimeout = this$options.idleTimeout
+      var this$options$maxTransactionDuration = this$options.maxTransactionDuration
       var d = "pageload" === e.op ? function () {
         var e = function (e) {
-          var t = document.querySelector("meta[name=" + e + "]");
-          return t ? t.getAttribute("content") : null;
-        }("sentry-trace");
+          var t = document.querySelector("meta[name=" + e + "]")
+          return t ? t.getAttribute("content") : null
+        }("sentry-trace")
         if (e) {
-          return l.a(e);
+          return l.a(e)
         }
-        return;
-      }() : undefined;
+        return
+      }() : undefined
       var h = i.a(i.a(i.a({}, e), d), {
         trimEnd: true
-      });
-      var p = "function" === typeof r ? r(h) : h;
+      })
+      var p = "function" === typeof this$options$beforeNavigate ? this$options$beforeNavigate(h) : h
       var _ = undefined === p ? i.a(i.a({}, h), {
         sampled: false
-      }) : p;
+      }) : p
       if (false === _.sampled) {
-        o.a.log("[Tracing] Will not send " + _.op + " transaction because of beforeNavigate.");
+        o.a.log("[Tracing] Will not send " + _.op + " transaction because of beforeNavigate.")
       }
-      o.a.log("[Tracing] Starting " + _.op + " transaction on scope");
-      var A = this._getCurrentHub();
-      var g = a.b().location;
-      var v = s.b(A, _, c, true, {
-        location: g
-      });
+      o.a.log("[Tracing] Starting " + _.op + " transaction on scope")
+      var A = this._getCurrentHub()
+      var a$b$location = a.b().location
+      var v = s.b(A, _, this$options$idleTimeout, true, {
+        location: a$b$location
+      })
       v.registerBeforeFinishCallback(function (e, n) {
         t._metrics.addPerformanceEntries(e);
         (function (e, t, n) {
-          var r = n - t.startTimestamp;
+          var r = n - t.startTimestamp
           if (n && (r > e || r < 0)) {
-            t.setStatus(u.a.DeadlineExceeded);
-            t.setTag("maxTransactionDurationExceeded", "true");
+            t.setStatus(u.a.DeadlineExceeded)
+            t.setTag("maxTransactionDurationExceeded", "true")
           }
-        })(l.e(f), e, n);
-      });
-      return v;
+        })(l.e(this$options$maxTransactionDuration), e, n)
+      })
+      return v
     }
-    o.a.warn("[Tracing] Did not create " + e.op + " transaction because _getCurrentHub is invalid.");
-  };
-  e.id = "BrowserTracing";
-  return e;
-}();
+    o.a.warn("[Tracing] Did not create " + e.op + " transaction because _getCurrentHub is invalid.")
+  }
+  e.id = "BrowserTracing"
+  return e
+}()
 var P = function () {
   function e(t) {
     if (undefined === t) {
-      t = {};
+      t = {}
     }
-    this.name = e.id;
-    this._router = t.router || t.app;
-    this._methods = (Array.isArray(t.methods) ? t.methods : []).concat("use");
+    this.name = e.id
+    this._router = t.router || t.app
+    this._methods = (Array.isArray(t.methods) ? t.methods : []).concat("use")
   }
   e.prototype.setupOnce = function () {
     if (this._router) {
       (function (e, t) {
         if (undefined === t) {
-          t = [];
+          t = []
         }
         t.forEach(function (t) {
           return function (e, t) {
-            var n = e[t];
+            var n = e[t]
             e[t] = function () {
               for (var e = [], r = 0; r < arguments.length; r++) {
-                e[r] = arguments[r];
+                e[r] = arguments[r]
               }
-              return n.call.apply(n, i.f([this], M(e, t)));
-            };
-            return e;
-          }(e, t);
-        });
-      })(this._router, this._methods);
+              return n.call.apply(n, i.f([this], M(e, t)))
+            }
+            return e
+          }(e, t)
+        })
+      })(this._router, this._methods)
     } else {
-      o.a.error("ExpressIntegration is missing an Express instance");
+      o.a.error("ExpressIntegration is missing an Express instance")
     }
-  };
-  e.id = "Express";
-  return e;
-}();
+  }
+  e.id = "Express"
+  return e
+}()
 function N(e, t) {
-  var n = e.length;
-  switch (n) {
+  var e$length = e.length
+  switch (e$length) {
     case 2:
       return function (n, r) {
-        var i = r.__sentry_transaction;
-        if (i) {
-          var o = i.startChild({
+        var r$__sentry_transaction = r.__sentry_transaction
+        if (r$__sentry_transaction) {
+          var o = r$__sentry_transaction.startChild({
             description: e.name,
             op: "middleware." + t
-          });
+          })
           r.once("finish", function () {
-            o.finish();
-          });
+            o.finish()
+          })
         }
-        return e.call(this, n, r);
-      };
+        return e.call(this, n, r)
+      }
     case 3:
       return function (n, r, o) {
-        var a;
-        var s = null === (a = r.__sentry_transaction) || undefined === a ? undefined : a.startChild({
+        var /* [auto-meaningful-name] */r$__sentry_transaction
+        var s = null === (r$__sentry_transaction = r.__sentry_transaction) || undefined === r$__sentry_transaction ? undefined : r$__sentry_transaction.startChild({
           description: e.name,
           op: "middleware." + t
-        });
+        })
         e.call(this, n, r, function () {
           for (var e, t = [], n = 0; n < arguments.length; n++) {
-            t[n] = arguments[n];
+            t[n] = arguments[n]
           }
           if (!(null === (e = s) || undefined === e)) {
-            e.finish();
+            e.finish()
           }
-          o.call.apply(o, i.f([this], t));
-        });
-      };
+          o.call.apply(o, i.f([this], t))
+        })
+      }
     case 4:
       return function (n, r, o, a) {
-        var s;
-        var c = null === (s = o.__sentry_transaction) || undefined === s ? undefined : s.startChild({
+        var /* [auto-meaningful-name] */o$__sentry_transaction
+        var c = null === (o$__sentry_transaction = o.__sentry_transaction) || undefined === o$__sentry_transaction ? undefined : o$__sentry_transaction.startChild({
           description: e.name,
           op: "middleware." + t
-        });
+        })
         e.call(this, n, r, o, function () {
           for (var e, t = [], n = 0; n < arguments.length; n++) {
-            t[n] = arguments[n];
+            t[n] = arguments[n]
           }
           if (!(null === (e = c) || undefined === e)) {
-            e.finish();
+            e.finish()
           }
-          a.call.apply(a, i.f([this], t));
-        });
-      };
+          a.call.apply(a, i.f([this], t))
+        })
+      }
     default:
-      throw new Error("Express middleware takes 2-4 arguments. Got: " + n);
+      throw new Error("Express middleware takes 2-4 arguments. Got: " + e$length)
   }
 }
 function M(e, t) {
   return e.map(function (e) {
     return "function" === typeof e ? N(e, t) : Array.isArray(e) ? e.map(function (e) {
-      return "function" === typeof e ? N(e, t) : e;
-    }) : e;
-  });
+      return "function" === typeof e ? N(e, t) : e
+    }) : e
+  })
 }
 import j = require("./435/index");
 var L = function () {
   function e(t) {
     if (undefined === t) {
-      t = {};
+      t = {}
     }
-    this.name = e.id;
-    this._usePgNative = !!t.usePgNative;
+    this.name = e.id
+    this._usePgNative = !!t.usePgNative
   }
   e.prototype.setupOnce = function (e, t) {
-    var n;
-    var r = d.c("pg");
+    var /* [auto-meaningful-name] */r$native
+    var r = d.c("pg")
     if (r) {
-      if (!this._usePgNative || (null === (n = r.native) || undefined === n ? undefined : n.Client)) {
-        var i = (this._usePgNative ? r.native : r).Client;
-        j.b(i.prototype, "query", function (e) {
+      if (!this._usePgNative || (null === (r$native = r.native) || undefined === r$native ? undefined : r$native.Client)) {
+        var this$_usePgNativeR$nativeR$Client = (this._usePgNative ? r.native : r).Client
+        j.b(this$_usePgNativeR$nativeR$Client.prototype, "query", function (e) {
           return function (n, r, i) {
-            var o;
-            var a;
-            var s;
+            var o
+            var a
+            var s
             var c = null === (a = null === (o = t().getScope()) || undefined === o ? undefined : o.getSpan()) || undefined === a ? undefined : a.startChild({
               description: "string" === typeof n ? n : n.text,
               op: "db"
-            });
+            })
             if ("function" === typeof i) {
               return e.call(this, n, r, function (e, t) {
-                var n;
+                var n
                 if (!(null === (n = c) || undefined === n)) {
-                  n.finish();
+                  n.finish()
                 }
-                i(e, t);
-              });
+                i(e, t)
+              })
             }
             if ("function" === typeof r) {
               return e.call(this, n, function (e, t) {
-                var n;
+                var n
                 if (!(null === (n = c) || undefined === n)) {
-                  n.finish();
+                  n.finish()
                 }
-                r(e, t);
-              });
+                r(e, t)
+              })
             }
-            var u = "undefined" !== typeof r ? e.call(this, n, r) : e.call(this, n);
+            var u = "undefined" !== typeof r ? e.call(this, n, r) : e.call(this, n)
             return T.j(u) ? u.then(function (e) {
-              var t;
+              var t
               if (!(null === (t = c) || undefined === t)) {
-                t.finish();
+                t.finish()
               }
-              return e;
-            }) : (null === (s = c) || undefined === s || s.finish(), u);
-          };
-        });
+              return e
+            }) : (null === (s = c) || undefined === s || s.finish(), u)
+          }
+        })
       } else {
-        o.a.error("Postgres Integration was unable to access 'pg-native' bindings.");
+        o.a.error("Postgres Integration was unable to access 'pg-native' bindings.")
       }
     } else {
-      o.a.error("Postgres Integration was unable to require `pg` package.");
+      o.a.error("Postgres Integration was unable to require `pg` package.")
     }
-  };
-  e.id = "Postgres";
-  return e;
-}();
+  }
+  e.id = "Postgres"
+  return e
+}()
 var U = function () {
   function e() {
-    this.name = e.id;
+    this.name = e.id
   }
   e.prototype.setupOnce = function (e, t) {
-    var n = d.c("mysql/lib/Connection.js");
+    var n = d.c("mysql/lib/Connection.js")
     if (n) {
       j.b(n, "createQuery", function (e) {
         return function (n, r, i) {
-          var o;
-          var a;
+          var o
+          var a
           var s = null === (a = null === (o = t().getScope()) || undefined === o ? undefined : o.getSpan()) || undefined === a ? undefined : a.startChild({
             description: "string" === typeof n ? n : n.sql,
             op: "db"
-          });
+          })
           return "function" === typeof i ? e.call(this, n, r, function (e, t, n) {
-            var r;
+            var r
             if (!(null === (r = s) || undefined === r)) {
-              r.finish();
+              r.finish()
             }
-            i(e, t, n);
+            i(e, t, n)
           }) : "function" === typeof r ? e.call(this, n, function (e, t, n) {
-            var i;
+            var i
             if (!(null === (i = s) || undefined === i)) {
-              i.finish();
+              i.finish()
             }
-            r(e, t, n);
-          }) : e.call(this, n, r, i);
-        };
-      });
+            r(e, t, n)
+          }) : e.call(this, n, r, i)
+        }
+      })
     } else {
-      o.a.error("Mysql Integration was unable to require `mysql` package.");
+      o.a.error("Mysql Integration was unable to require `mysql` package.")
     }
-  };
-  e.id = "Mysql";
-  return e;
-}();
-var H = ["aggregate", "bulkWrite", "countDocuments", "createIndex", "createIndexes", "deleteMany", "deleteOne", "distinct", "drop", "dropIndex", "dropIndexes", "estimatedDocumentCount", "find", "findOne", "findOneAndDelete", "findOneAndReplace", "findOneAndUpdate", "indexes", "indexExists", "indexInformation", "initializeOrderedBulkOp", "insertMany", "insertOne", "isCapped", "mapReduce", "options", "parallelCollectionScan", "rename", "replaceOne", "stats", "updateMany", "updateOne"];
+  }
+  e.id = "Mysql"
+  return e
+}()
+var H = ["aggregate", "bulkWrite", "countDocuments", "createIndex", "createIndexes", "deleteMany", "deleteOne", "distinct", "drop", "dropIndex", "dropIndexes", "estimatedDocumentCount", "find", "findOne", "findOneAndDelete", "findOneAndReplace", "findOneAndUpdate", "indexes", "indexExists", "indexInformation", "initializeOrderedBulkOp", "insertMany", "insertOne", "isCapped", "mapReduce", "options", "parallelCollectionScan", "rename", "replaceOne", "stats", "updateMany", "updateOne"]
 var V = {
   bulkWrite: ["operations"],
   countDocuments: ["query"],
@@ -1051,102 +1051,102 @@ var V = {
   replaceOne: ["filter", "doc"],
   updateMany: ["filter", "update"],
   updateOne: ["filter", "update"]
-};
+}
 var G = function () {
   function e(t) {
     if (undefined === t) {
-      t = {};
+      t = {}
     }
-    this.name = e.id;
-    this._operations = Array.isArray(t.operations) ? t.operations : H;
-    this._describeOperations = !("describeOperations" in t) || t.describeOperations;
-    this._useMongoose = !!t.useMongoose;
+    this.name = e.id
+    this._operations = Array.isArray(t.operations) ? t.operations : H
+    this._describeOperations = !("describeOperations" in t) || t.describeOperations
+    this._useMongoose = !!t.useMongoose
   }
   e.prototype.setupOnce = function (e, t) {
-    var n = this._useMongoose ? "mongoose" : "mongodb";
-    var r = d.c(n);
+    var n = this._useMongoose ? "mongoose" : "mongodb"
+    var r = d.c(n)
     if (r) {
-      this._instrumentOperations(r.Collection, this._operations, t);
+      this._instrumentOperations(r.Collection, this._operations, t)
     } else {
-      o.a.error("Mongo Integration was unable to require `" + n + "` package.");
+      o.a.error("Mongo Integration was unable to require `" + n + "` package.")
     }
-  };
+  }
   e.prototype._instrumentOperations = function (e, t, n) {
-    var r = this;
+    var r = this
     t.forEach(function (t) {
-      return r._patchOperation(e, t, n);
-    });
-  };
+      return r._patchOperation(e, t, n)
+    })
+  }
   e.prototype._patchOperation = function (e, t, n) {
     if (t in e.prototype) {
-      var r = this._getSpanContextFromOperationArguments.bind(this);
+      var r = this._getSpanContextFromOperationArguments.bind(this)
       j.b(e.prototype, t, function (e) {
         return function () {
           for (var o, a, s, c, u = [], l = 0; l < arguments.length; l++) {
-            u[l] = arguments[l];
+            u[l] = arguments[l]
           }
-          var f = u[u.length - 1];
-          var d = n().getScope();
-          var h = null === (o = d) || undefined === o ? undefined : o.getSpan();
+          var f = u[u.length - 1]
+          var d = n().getScope()
+          var h = null === (o = d) || undefined === o ? undefined : o.getSpan()
           if ("function" !== typeof f || "mapReduce" === t && 2 === u.length) {
-            var p = null === (a = h) || undefined === a ? undefined : a.startChild(r(this, t, u));
-            var _ = e.call.apply(e, i.f([this], u));
+            var p = null === (a = h) || undefined === a ? undefined : a.startChild(r(this, t, u))
+            var _ = e.call.apply(e, i.f([this], u))
             return T.j(_) ? _.then(function (e) {
-              var t;
+              var t
               if (!(null === (t = p) || undefined === t)) {
-                t.finish();
+                t.finish()
               }
-              return e;
-            }) : (null === (s = p) || undefined === s || s.finish(), _);
+              return e
+            }) : (null === (s = p) || undefined === s || s.finish(), _)
           }
-          var A = null === (c = h) || undefined === c ? undefined : c.startChild(r(this, t, u.slice(0, -1)));
+          var A = null === (c = h) || undefined === c ? undefined : c.startChild(r(this, t, u.slice(0, -1)))
           return e.call.apply(e, i.f([this], u.slice(0, -1), [function (e, t) {
-            var n;
+            var n
             if (!(null === (n = A) || undefined === n)) {
-              n.finish();
+              n.finish()
             }
-            f(e, t);
-          }]));
-        };
-      });
+            f(e, t)
+          }]))
+        }
+      })
     }
-  };
+  }
   e.prototype._getSpanContextFromOperationArguments = function (e, t, n) {
     var r = {
       collectionName: e.collectionName,
       dbName: e.dbName,
       namespace: e.namespace
-    };
+    }
     var o = {
       op: "db",
       description: t,
       data: r
-    };
-    var a = V[t];
-    var s = Array.isArray(this._describeOperations) ? this._describeOperations.includes(t) : this._describeOperations;
+    }
+    var a = V[t]
+    var s = Array.isArray(this._describeOperations) ? this._describeOperations.includes(t) : this._describeOperations
     if (!a || !s) {
-      return o;
+      return o
     }
     try {
       if ("mapReduce" === t) {
-        var c = i.d(n, 2);
-        var u = c[0];
-        var l = c[1];
-        r[a[0]] = "string" === typeof u ? u : u.name || "<anonymous>";
-        r[a[1]] = "string" === typeof l ? l : l.name || "<anonymous>";
+        var c = i.d(n, 2)
+        var u = c[0]
+        var l = c[1]
+        r[a[0]] = "string" === typeof u ? u : u.name || "<anonymous>"
+        r[a[1]] = "string" === typeof l ? l : l.name || "<anonymous>"
       } else {
         for (var f = 0; f < a.length; f++) {
-          r[a[f]] = JSON.stringify(n[f]);
+          r[a[f]] = JSON.stringify(n[f])
         }
       }
     } catch (d) {}
-    return o;
-  };
-  e.id = "Mongo";
-  return e;
-}();
+    return o
+  }
+  e.id = "Mongo"
+  return e
+}()
 var z = i.a(i.a({}, r), {
   BrowserTracing: R
-});
-s.a();
-export default z;
+})
+s.a()
+export default z

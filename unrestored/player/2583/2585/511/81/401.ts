@@ -4,174 +4,174 @@
  * 模块 ID：401
  */
 
-"use strict";
+"use strict"
 
-var r = require("./73/index");
-var i = require("./118");
-var o = require("./37");
+var r = require("./73/index")
+var i = require("./118")
+var o = require("./37")
 var a = function () {
   function t(e, n, r, i) {
-    this.image = e;
-    this.height = e.getHeight();
-    this.width = e.getWidth();
+    this.image = e
+    this.height = e.getHeight()
+    this.width = e.getWidth()
     if (!(undefined !== n && null !== n)) {
-      n = t.INIT_SIZE;
+      n = t.INIT_SIZE
     }
     if (!(undefined !== r && null !== r)) {
-      r = e.getWidth() / 2 | 0;
+      r = e.getWidth() / 2 | 0
     }
     if (!(undefined !== i && null !== i)) {
-      i = e.getHeight() / 2 | 0;
+      i = e.getHeight() / 2 | 0
     }
-    var a = n / 2 | 0;
-    this.leftInit = r - a;
-    this.rightInit = r + a;
-    this.upInit = i - a;
-    this.downInit = i + a;
+    var a = n / 2 | 0
+    this.leftInit = r - a
+    this.rightInit = r + a
+    this.upInit = i - a
+    this.downInit = i + a
     if (this.upInit < 0 || this.leftInit < 0 || this.downInit >= this.height || this.rightInit >= this.width) {
-      throw new o.a();
+      throw new o.a()
     }
   }
   t.prototype.detect = function () {
-    for (var t = this.leftInit, e = this.rightInit, n = this.upInit, r = this.downInit, i = false, a = true, s = false, u = false, c = false, l = false, d = false, f = this.width, h = this.height; a;) {
-      a = false;
-      for (var p = true; (p || !u) && e < f;) {
-        if (p = this.containsBlackPoint(n, r, e, false)) {
-          e++;
-          a = true;
-          u = true;
+    for (var this$leftInit = this.leftInit, this$rightInit = this.rightInit, this$upInit = this.upInit, this$downInit = this.downInit, i = false, a = true, s = false, u = false, c = false, l = false, d = false, this$width = this.width, this$height = this.height; a;) {
+      a = false
+      for (var p = true; (p || !u) && this$rightInit < this$width;) {
+        if (p = this.containsBlackPoint(this$upInit, this$downInit, this$rightInit, false)) {
+          this$rightInit++
+          a = true
+          u = true
         } else {
           if (!u) {
-            e++;
+            this$rightInit++
           }
         }
       }
-      if (e >= f) {
-        i = true;
-        break;
+      if (this$rightInit >= this$width) {
+        i = true
+        break
       }
-      for (var m = true; (m || !c) && r < h;) {
-        if (m = this.containsBlackPoint(t, e, r, true)) {
-          r++;
-          a = true;
-          c = true;
+      for (var m = true; (m || !c) && this$downInit < this$height;) {
+        if (m = this.containsBlackPoint(this$leftInit, this$rightInit, this$downInit, true)) {
+          this$downInit++
+          a = true
+          c = true
         } else {
           if (!c) {
-            r++;
+            this$downInit++
           }
         }
       }
-      if (r >= h) {
-        i = true;
-        break;
+      if (this$downInit >= this$height) {
+        i = true
+        break
       }
-      for (var b = true; (b || !l) && t >= 0;) {
-        if (b = this.containsBlackPoint(n, r, t, false)) {
-          t--;
-          a = true;
-          l = true;
+      for (var b = true; (b || !l) && this$leftInit >= 0;) {
+        if (b = this.containsBlackPoint(this$upInit, this$downInit, this$leftInit, false)) {
+          this$leftInit--
+          a = true
+          l = true
         } else {
           if (!l) {
-            t--;
+            this$leftInit--
           }
         }
       }
-      if (t < 0) {
-        i = true;
-        break;
+      if (this$leftInit < 0) {
+        i = true
+        break
       }
-      for (var g = true; (g || !d) && n >= 0;) {
-        if (g = this.containsBlackPoint(t, e, n, true)) {
-          n--;
-          a = true;
-          d = true;
+      for (var g = true; (g || !d) && this$upInit >= 0;) {
+        if (g = this.containsBlackPoint(this$leftInit, this$rightInit, this$upInit, true)) {
+          this$upInit--
+          a = true
+          d = true
         } else {
           if (!d) {
-            n--;
+            this$upInit--
           }
         }
       }
-      if (n < 0) {
-        i = true;
-        break;
+      if (this$upInit < 0) {
+        i = true
+        break
       }
       if (a) {
-        s = true;
+        s = true
       }
     }
     if (!i && s) {
-      for (var v = e - t, _ = null, y = 1; null === _ && y < v; y++) {
-        _ = this.getBlackPointOnSegment(t, r - y, t + y, r);
+      for (var v = this$rightInit - this$leftInit, _ = null, y = 1; null === _ && y < v; y++) {
+        _ = this.getBlackPointOnSegment(this$leftInit, this$downInit - y, this$leftInit + y, this$downInit)
       }
       if (null == _) {
-        throw new o.a();
+        throw new o.a()
       }
-      var w = null;
+      var w = null
       for (y = 1; null === w && y < v; y++) {
-        w = this.getBlackPointOnSegment(t, n + y, t + y, n);
+        w = this.getBlackPointOnSegment(this$leftInit, this$upInit + y, this$leftInit + y, this$upInit)
       }
       if (null == w) {
-        throw new o.a();
+        throw new o.a()
       }
-      var E = null;
+      var E = null
       for (y = 1; null === E && y < v; y++) {
-        E = this.getBlackPointOnSegment(e, n + y, e - y, n);
+        E = this.getBlackPointOnSegment(this$rightInit, this$upInit + y, this$rightInit - y, this$upInit)
       }
       if (null == E) {
-        throw new o.a();
+        throw new o.a()
       }
-      var O = null;
+      var O = null
       for (y = 1; null === O && y < v; y++) {
-        O = this.getBlackPointOnSegment(e, r - y, e - y, r);
+        O = this.getBlackPointOnSegment(this$rightInit, this$downInit - y, this$rightInit - y, this$downInit)
       }
       if (null == O) {
-        throw new o.a();
+        throw new o.a()
       }
-      return this.centerEdges(O, _, E, w);
+      return this.centerEdges(O, _, E, w)
     }
-    throw new o.a();
-  };
+    throw new o.a()
+  }
   t.prototype.getBlackPointOnSegment = function (t, e, n, o) {
-    for (var a = i.a.round(i.a.distance(t, e, n, o)), s = (n - t) / a, u = (o - e) / a, c = this.image, l = 0; l < a; l++) {
-      var d = i.a.round(t + l * s);
-      var f = i.a.round(e + l * u);
-      if (c.get(d, f)) {
-        return new r.a(d, f);
+    for (var a = i.a.round(i.a.distance(t, e, n, o)), s = (n - t) / a, u = (o - e) / a, this$image = this.image, l = 0; l < a; l++) {
+      var d = i.a.round(t + l * s)
+      var f = i.a.round(e + l * u)
+      if (this$image.get(d, f)) {
+        return new r.a(d, f)
       }
     }
-    return null;
-  };
+    return null
+  }
   t.prototype.centerEdges = function (e, n, i, o) {
-    var a = e.getX();
-    var s = e.getY();
-    var u = n.getX();
-    var c = n.getY();
-    var l = i.getX();
-    var d = i.getY();
-    var f = o.getX();
-    var h = o.getY();
-    var p = t.CORR;
-    return a < this.width / 2 ? [new r.a(f - p, h + p), new r.a(u + p, c + p), new r.a(l - p, d - p), new r.a(a + p, s - p)] : [new r.a(f + p, h + p), new r.a(u + p, c - p), new r.a(l - p, d + p), new r.a(a - p, s - p)];
-  };
+    var a = e.getX()
+    var s = e.getY()
+    var u = n.getX()
+    var c = n.getY()
+    var l = i.getX()
+    var d = i.getY()
+    var f = o.getX()
+    var h = o.getY()
+    var t$CORR = t.CORR
+    return a < this.width / 2 ? [new r.a(f - t$CORR, h + t$CORR), new r.a(u + t$CORR, c + t$CORR), new r.a(l - t$CORR, d - t$CORR), new r.a(a + t$CORR, s - t$CORR)] : [new r.a(f + t$CORR, h + t$CORR), new r.a(u + t$CORR, c - t$CORR), new r.a(l - t$CORR, d + t$CORR), new r.a(a - t$CORR, s - t$CORR)]
+  }
   t.prototype.containsBlackPoint = function (t, e, n, r) {
-    var i = this.image;
+    var this$image = this.image
     if (r) {
       for (var o = t; o <= e; o++) {
-        if (i.get(o, n)) {
-          return true;
+        if (this$image.get(o, n)) {
+          return true
         }
       }
     } else {
       for (var a = t; a <= e; a++) {
-        if (i.get(n, a)) {
-          return true;
+        if (this$image.get(n, a)) {
+          return true
         }
       }
     }
-    return false;
-  };
-  t.INIT_SIZE = 10;
-  t.CORR = 1;
-  return t;
-}();
-exports.a = a;
+    return false
+  }
+  t.INIT_SIZE = 10
+  t.CORR = 1
+  return t
+}()
+exports.a = a

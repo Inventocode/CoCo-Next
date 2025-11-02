@@ -4,19 +4,19 @@
  * 模块 ID：948
  */
 
-var r = require("../1608/705");
-var o = require("../1683/945");
+var r = require("../1608/705")
+var o = require("../1683/945")
 module.exports = function (e, t) {
-  var n = e.exec;
-  if ("function" === typeof n) {
-    var i = n.call(e, t);
+  var e$exec = e.exec
+  if ("function" === typeof e$exec) {
+    var i = e$exec.call(e, t)
     if ("object" !== typeof i) {
-      throw TypeError("RegExp exec method returned something other than an Object or null");
+      throw TypeError("RegExp exec method returned something other than an Object or null")
     }
-    return i;
+    return i
   }
   if ("RegExp" !== r(e)) {
-    throw TypeError("RegExp#exec called on incompatible receiver");
+    throw TypeError("RegExp#exec called on incompatible receiver")
   }
-  return o.call(e, t);
-};
+  return o.call(e, t)
+}

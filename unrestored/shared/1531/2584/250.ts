@@ -27,4 +27,4 @@ module.exports = {
   imagePopover: "styles_imagePopover__3Ofwf",
   content: "styles_content__3JDUx",
   contentTitle: "styles_contentTitle__QRQv9"
-};
+}

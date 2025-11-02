@@ -5,79 +5,79 @@
  */
 
 !function e(t) {
-  "use strict";
+  "use strict"
 
-  var n;
-  var r;
-  var i;
-  var o;
-  var a;
-  var s;
+  var n
+  var r
+  var i
+  var o
+  var a
+  var s
   function c(e) {
-    var t;
-    var n;
-    var r = {};
+    var t
+    var n
+    var r = {}
     for (t in e) if (e.hasOwnProperty(t)) {
-      n = e[t];
-      r[t] = "object" === typeof n && null !== n ? c(n) : n;
+      n = e[t]
+      r[t] = "object" === typeof n && null !== n ? c(n) : n
     }
-    return r;
+    return r
   }
   function u(e, t) {
-    this.parent = e;
-    this.key = t;
+    this.parent = e
+    this.key = t
   }
   function l(e, t, n, r) {
-    this.node = e;
-    this.path = t;
-    this.wrap = n;
-    this.ref = r;
+    this.node = e
+    this.path = t
+    this.wrap = n
+    this.ref = r
   }
   function f() {}
   function d(e) {
-    return null != e && "object" === typeof e && "string" === typeof e.type;
+    return null != e && "object" === typeof e && "string" === typeof e.type
   }
   function h(e, t) {
-    return (e === n.ObjectExpression || e === n.ObjectPattern) && "properties" === t;
+    return (e === n.ObjectExpression || e === n.ObjectPattern) && "properties" === t
   }
   function p(e, t) {
     for (var n = e.length - 1; n >= 0; --n) {
       if (e[n].node === t) {
-        return true;
+        return true
       }
     }
-    return false;
+    return false
   }
   function _(e, t) {
-    return new f().traverse(e, t);
+    return new f().traverse(e, t)
   }
   function A(e, t) {
-    var n;
+    var n
     n = function (e, t) {
-      var n;
-      var r;
-      var i;
-      var o;
+      var n
+      var r
+      var i
+      var o
       for (r = e.length, i = 0; r;) {
         if (t(e[o = i + (n = r >>> 1)])) {
-          r = n;
+          r = n
         } else {
-          i = o + 1;
-          r -= n + 1;
+          i = o + 1
+          r -= n + 1
         }
       }
-      return i;
+      return i
     }(t, function (t) {
-      return t.range[0] > e.range[0];
-    });
-    e.extendedRange = [e.range[0], e.range[1]];
+      return t.range[0] > e.range[0]
+    })
+    e.extendedRange = [e.range[0], e.range[1]]
     if (n !== t.length) {
-      e.extendedRange[1] = t[n].range[0];
+      e.extendedRange[1] = t[n].range[0]
     }
     if ((n -= 1) >= 0) {
-      e.extendedRange[0] = t[n].range[1];
+      e.extendedRange[0] = t[n].range[1]
     }
-    return e;
+    return e
   }
   n = {
     AssignmentExpression: "AssignmentExpression",
@@ -153,7 +153,7 @@
     WhileStatement: "WhileStatement",
     WithStatement: "WithStatement",
     YieldExpression: "YieldExpression"
-  };
+  }
   i = {
     AssignmentExpression: ["left", "right"],
     AssignmentPattern: ["left", "right"],
@@ -228,313 +228,313 @@
     WhileStatement: ["test", "body"],
     WithStatement: ["object", "body"],
     YieldExpression: ["argument"]
-  };
+  }
   r = {
     Break: o = {},
     Skip: a = {},
     Remove: s = {}
-  };
+  }
   u.prototype.replace = function (e) {
-    this.parent[this.key] = e;
-  };
+    this.parent[this.key] = e
+  }
   u.prototype.remove = function () {
-    return Array.isArray(this.parent) ? (this.parent.splice(this.key, 1), true) : (this.replace(null), false);
-  };
+    return Array.isArray(this.parent) ? (this.parent.splice(this.key, 1), true) : (this.replace(null), false)
+  }
   f.prototype.path = function () {
-    var e;
-    var t;
-    var n;
-    var r;
-    var i;
+    var e
+    var /* [auto-meaningful-name] */this$__leavelist$length
+    var n
+    var /* [auto-meaningful-name] */t$length
+    var i
     function o(e, t) {
       if (Array.isArray(t)) {
-        for (n = 0, r = t.length; n < r; ++n) {
-          e.push(t[n]);
+        for (n = 0, t$length = t.length; n < t$length; ++n) {
+          e.push(t[n])
         }
       } else {
-        e.push(t);
+        e.push(t)
       }
     }
     if (!this.__current.path) {
-      return null;
+      return null
     }
-    for (i = [], e = 2, t = this.__leavelist.length; e < t; ++e) {
-      o(i, this.__leavelist[e].path);
+    for (i = [], e = 2, this$__leavelist$length = this.__leavelist.length; e < this$__leavelist$length; ++e) {
+      o(i, this.__leavelist[e].path)
     }
-    o(i, this.__current.path);
-    return i;
-  };
+    o(i, this.__current.path)
+    return i
+  }
   f.prototype.type = function () {
-    return this.current().type || this.__current.wrap;
-  };
+    return this.current().type || this.__current.wrap
+  }
   f.prototype.parents = function () {
-    var e;
-    var t;
-    var n;
-    for (n = [], e = 1, t = this.__leavelist.length; e < t; ++e) {
-      n.push(this.__leavelist[e].node);
+    var e
+    var /* [auto-meaningful-name] */this$__leavelist$length
+    var n
+    for (n = [], e = 1, this$__leavelist$length = this.__leavelist.length; e < this$__leavelist$length; ++e) {
+      n.push(this.__leavelist[e].node)
     }
-    return n;
-  };
+    return n
+  }
   f.prototype.current = function () {
-    return this.__current.node;
-  };
+    return this.__current.node
+  }
   f.prototype.__execute = function (e, t) {
-    var n;
-    var r;
-    r = undefined;
-    n = this.__current;
-    this.__current = t;
-    this.__state = null;
+    var /* [auto-meaningful-name] */this$__current
+    var r
+    r = undefined
+    this$__current = this.__current
+    this.__current = t
+    this.__state = null
     if (e) {
-      r = e.call(this, t.node, this.__leavelist[this.__leavelist.length - 1].node);
+      r = e.call(this, t.node, this.__leavelist[this.__leavelist.length - 1].node)
     }
-    this.__current = n;
-    return r;
-  };
+    this.__current = this$__current
+    return r
+  }
   f.prototype.notify = function (e) {
-    this.__state = e;
-  };
+    this.__state = e
+  }
   f.prototype.skip = function () {
-    this.notify(a);
-  };
+    this.notify(a)
+  }
   f.prototype.break = function () {
-    this.notify(o);
-  };
+    this.notify(o)
+  }
   f.prototype.remove = function () {
-    this.notify(s);
-  };
+    this.notify(s)
+  }
   f.prototype.__initialize = function (e, t) {
-    this.visitor = t;
-    this.root = e;
-    this.__worklist = [];
-    this.__leavelist = [];
-    this.__current = null;
-    this.__state = null;
-    this.__fallback = null;
+    this.visitor = t
+    this.root = e
+    this.__worklist = []
+    this.__leavelist = []
+    this.__current = null
+    this.__state = null
+    this.__fallback = null
     if ("iteration" === t.fallback) {
-      this.__fallback = Object.keys;
+      this.__fallback = Object.keys
     } else {
       if ("function" === typeof t.fallback) {
-        this.__fallback = t.fallback;
+        this.__fallback = t.fallback
       }
     }
-    this.__keys = i;
+    this.__keys = i
     if (t.keys) {
-      this.__keys = Object.assign(Object.create(this.__keys), t.keys);
+      this.__keys = Object.assign(Object.create(this.__keys), t.keys)
     }
-  };
+  }
   f.prototype.traverse = function (e, t) {
-    var n;
-    var r;
-    var i;
-    var s;
-    var c;
-    var u;
-    var f;
-    var _;
-    var A;
-    var g;
-    var v;
-    var m;
-    for (this.__initialize(e, t), m = {}, n = this.__worklist, r = this.__leavelist, n.push(new l(e, null, null, null)), r.push(new l(null, null, null, null)); n.length;) {
-      if ((i = n.pop()) !== m) {
+    var /* [auto-meaningful-name] */this$__worklist
+    var /* [auto-meaningful-name] */this$__leavelist
+    var i
+    var /* [auto-meaningful-name] */i$node
+    var c
+    var u
+    var f
+    var _
+    var A
+    var g
+    var v
+    var m
+    for (this.__initialize(e, t), m = {}, this$__worklist = this.__worklist, this$__leavelist = this.__leavelist, this$__worklist.push(new l(e, null, null, null)), this$__leavelist.push(new l(null, null, null, null)); this$__worklist.length;) {
+      if ((i = this$__worklist.pop()) !== m) {
         if (i.node) {
-          u = this.__execute(t.enter, i);
+          u = this.__execute(t.enter, i)
           if (this.__state === o || u === o) {
-            return;
+            return
           }
-          n.push(m);
-          r.push(i);
+          this$__worklist.push(m)
+          this$__leavelist.push(i)
           if (this.__state === a || u === a) {
-            continue;
+            continue
           }
-          c = (s = i.node).type || i.wrap;
+          c = (i$node = i.node).type || i.wrap
           if (!(g = this.__keys[c])) {
             if (!this.__fallback) {
-              throw new Error("Unknown node type " + c + ".");
+              throw new Error("Unknown node type " + c + ".")
             }
-            g = this.__fallback(s);
+            g = this.__fallback(i$node)
           }
           for (_ = g.length; (_ -= 1) >= 0;) {
-            if (v = s[f = g[_]]) {
+            if (v = i$node[f = g[_]]) {
               if (Array.isArray(v)) {
                 for (A = v.length; (A -= 1) >= 0;) {
-                  if (v[A] && !p(r, v[A])) {
+                  if (v[A] && !p(this$__leavelist, v[A])) {
                     if (h(c, g[_])) {
-                      i = new l(v[A], [f, A], "Property", null);
+                      i = new l(v[A], [f, A], "Property", null)
                     } else {
                       if (!d(v[A])) {
-                        continue;
+                        continue
                       }
-                      i = new l(v[A], [f, A], null, null);
+                      i = new l(v[A], [f, A], null, null)
                     }
-                    n.push(i);
+                    this$__worklist.push(i)
                   }
                 }
               } else if (d(v)) {
-                if (p(r, v)) {
-                  continue;
+                if (p(this$__leavelist, v)) {
+                  continue
                 }
-                n.push(new l(v, f, null, null));
+                this$__worklist.push(new l(v, f, null, null))
               }
             }
           }
         }
-      } else if (i = r.pop(), u = this.__execute(t.leave, i), this.__state === o || u === o) {
-        return;
+      } else if (i = this$__leavelist.pop(), u = this.__execute(t.leave, i), this.__state === o || u === o) {
+        return
       }
     }
-  };
+  }
   f.prototype.replace = function (e, t) {
-    var n;
-    var r;
-    var i;
-    var c;
-    var f;
-    var p;
-    var _;
-    var A;
-    var g;
-    var v;
-    var m;
-    var y;
-    var b;
+    var /* [auto-meaningful-name] */this$__worklist
+    var /* [auto-meaningful-name] */this$__leavelist
+    var /* [auto-meaningful-name] */p$node
+    var c
+    var f
+    var p
+    var _
+    var A
+    var g
+    var v
+    var m
+    var y
+    var b
     function w(e) {
-      var t;
-      var r;
-      var i;
-      var o;
+      var t
+      var /* [auto-meaningful-name] */e$ref$key
+      var i
+      var /* [auto-meaningful-name] */e$ref$parent
       if (e.ref.remove()) {
-        for (r = e.ref.key, o = e.ref.parent, t = n.length; t--;) {
-          if ((i = n[t]).ref && i.ref.parent === o) {
-            if (i.ref.key < r) {
-              break;
+        for (e$ref$key = e.ref.key, e$ref$parent = e.ref.parent, t = this$__worklist.length; t--;) {
+          if ((i = this$__worklist[t]).ref && i.ref.parent === e$ref$parent) {
+            if (i.ref.key < e$ref$key) {
+              break
             }
-            --i.ref.key;
+            --i.ref.key
           }
         }
       }
     }
-    for (this.__initialize(e, t), m = {}, n = this.__worklist, r = this.__leavelist, p = new l(e, null, null, new u(y = {
+    for (this.__initialize(e, t), m = {}, this$__worklist = this.__worklist, this$__leavelist = this.__leavelist, p = new l(e, null, null, new u(y = {
       root: e
-    }, "root")), n.push(p), r.push(p); n.length;) {
-      if ((p = n.pop()) !== m) {
+    }, "root")), this$__worklist.push(p), this$__leavelist.push(p); this$__worklist.length;) {
+      if ((p = this$__worklist.pop()) !== m) {
         if (undefined !== (f = this.__execute(t.enter, p)) && f !== o && f !== a && f !== s) {
-          p.ref.replace(f);
-          p.node = f;
+          p.ref.replace(f)
+          p.node = f
         }
         if (!(this.__state !== s && f !== s)) {
-          w(p);
-          p.node = null;
+          w(p)
+          p.node = null
         }
         if (this.__state === o || f === o) {
-          return y.root;
+          return y.root
         }
-        if ((i = p.node) && (n.push(m), r.push(p), this.__state !== a && f !== a)) {
-          c = i.type || p.wrap;
+        if ((p$node = p.node) && (this$__worklist.push(m), this$__leavelist.push(p), this.__state !== a && f !== a)) {
+          c = p$node.type || p.wrap
           if (!(g = this.__keys[c])) {
             if (!this.__fallback) {
-              throw new Error("Unknown node type " + c + ".");
+              throw new Error("Unknown node type " + c + ".")
             }
-            g = this.__fallback(i);
+            g = this.__fallback(p$node)
           }
           for (_ = g.length; (_ -= 1) >= 0;) {
-            if (v = i[b = g[_]]) {
+            if (v = p$node[b = g[_]]) {
               if (Array.isArray(v)) {
                 for (A = v.length; (A -= 1) >= 0;) {
                   if (v[A]) {
                     if (h(c, g[_])) {
-                      p = new l(v[A], [b, A], "Property", new u(v, A));
+                      p = new l(v[A], [b, A], "Property", new u(v, A))
                     } else {
                       if (!d(v[A])) {
-                        continue;
+                        continue
                       }
-                      p = new l(v[A], [b, A], null, new u(v, A));
+                      p = new l(v[A], [b, A], null, new u(v, A))
                     }
-                    n.push(p);
+                    this$__worklist.push(p)
                   }
                 }
               } else if (d(v)) {
-                n.push(new l(v, b, null, new u(i, b)));
+                this$__worklist.push(new l(v, b, null, new u(p$node, b)))
               }
             }
           }
         }
-      } else if (p = r.pop(), undefined !== (f = this.__execute(t.leave, p)) && f !== o && f !== a && f !== s && p.ref.replace(f), this.__state !== s && f !== s || w(p), this.__state === o || f === o) {
-        return y.root;
+      } else if (p = this$__leavelist.pop(), undefined !== (f = this.__execute(t.leave, p)) && f !== o && f !== a && f !== s && p.ref.replace(f), this.__state !== s && f !== s || w(p), this.__state === o || f === o) {
+        return y.root
       }
     }
-    return y.root;
-  };
-  t.Syntax = n;
-  t.traverse = _;
+    return y.root
+  }
+  t.Syntax = n
+  t.traverse = _
   t.replace = function (e, t) {
-    return new f().replace(e, t);
-  };
+    return new f().replace(e, t)
+  }
   t.attachComments = function (e, t, n) {
-    var i;
-    var o;
-    var a;
-    var s;
-    var u = [];
+    var i
+    var o
+    var a
+    var s
+    var u = []
     if (!e.range) {
-      throw new Error("attachComments needs range information");
+      throw new Error("attachComments needs range information")
     }
     if (!n.length) {
       if (t.length) {
         for (a = 0, o = t.length; a < o; a += 1) {
-          (i = c(t[a])).extendedRange = [0, e.range[0]];
-          u.push(i);
+          (i = c(t[a])).extendedRange = [0, e.range[0]]
+          u.push(i)
         }
-        e.leadingComments = u;
+        e.leadingComments = u
       }
-      return e;
+      return e
     }
     for (a = 0, o = t.length; a < o; a += 1) {
-      u.push(A(c(t[a]), n));
+      u.push(A(c(t[a]), n))
     }
-    s = 0;
+    s = 0
     _(e, {
       enter: function (e) {
         for (var t; s < u.length && !((t = u[s]).extendedRange[1] > e.range[0]);) {
           if (t.extendedRange[1] === e.range[0]) {
             if (!e.leadingComments) {
-              e.leadingComments = [];
+              e.leadingComments = []
             }
-            e.leadingComments.push(t);
-            u.splice(s, 1);
+            e.leadingComments.push(t)
+            u.splice(s, 1)
           } else {
-            s += 1;
+            s += 1
           }
         }
-        return s === u.length ? r.Break : u[s].extendedRange[0] > e.range[1] ? r.Skip : undefined;
+        return s === u.length ? r.Break : u[s].extendedRange[0] > e.range[1] ? r.Skip : undefined
       }
-    });
-    s = 0;
+    })
+    s = 0
     _(e, {
       leave: function (e) {
         for (var t; s < u.length && (t = u[s], !(e.range[1] < t.extendedRange[0]));) {
           if (e.range[1] === t.extendedRange[0]) {
             if (!e.trailingComments) {
-              e.trailingComments = [];
+              e.trailingComments = []
             }
-            e.trailingComments.push(t);
-            u.splice(s, 1);
+            e.trailingComments.push(t)
+            u.splice(s, 1)
           } else {
-            s += 1;
+            s += 1
           }
         }
-        return s === u.length ? r.Break : u[s].extendedRange[0] > e.range[1] ? r.Skip : undefined;
+        return s === u.length ? r.Break : u[s].extendedRange[0] > e.range[1] ? r.Skip : undefined
       }
-    });
-    return e;
-  };
-  t.VisitorKeys = i;
-  t.VisitorOption = r;
-  t.Controller = f;
+    })
+    return e
+  }
+  t.VisitorKeys = i
+  t.VisitorOption = r
+  t.Controller = f
   t.cloneEnvironment = function () {
-    return e({});
-  };
-  return t;
-}(exports);
+    return e({})
+  }
+  return t
+}(exports)

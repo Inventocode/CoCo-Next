@@ -4,12 +4,12 @@
  * 模块 ID：DYHF
  */
 
-"use strict";
+"use strict"
 
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_0_react__ from "react";
+import * as __WEBPACK_IMPORTED_MODULE_0_react__ from "react"
 /* harmony import */
-import __WEBPACK_IMPORTED_MODULE_0_react___default from "react";
+import __WEBPACK_IMPORTED_MODULE_0_react___default from "react"
 var IconFontSVG = function IconFontSVG() {
   return __WEBPACK_IMPORTED_MODULE_0_react___default.createElement("svg", {
     "aria-hidden": "true",
@@ -219,8 +219,8 @@ var IconFontSVG = function IconFontSVG() {
     viewBox: "0 0 1024 1024"
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.createElement("path", {
     d: "M642.827505 31.609733a102.339926 102.339926 0 0 1 155.147329 132.939565l-8.391874 9.722293-338.028778 347.64873 335.981979 326.362025A102.339926 102.339926 0 0 1 797.974834 983.064029l-8.391874 9.824633a102.339926 102.339926 0 0 1-134.884023 10.438673l-9.824633-8.391874-409.359706-397.590614a102.339926 102.339926 0 0 1-10.438673-134.986363l8.391874-9.722293 409.359706-421.128798z"
-  })));
-};
+  })))
+}
 /* harmony default export */
-export default IconFontSVG;
+export default IconFontSVG
 /***/

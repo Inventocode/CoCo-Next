@@ -4,7 +4,7 @@
  * 模块 ID：1611
  */
 
-var r = require("../1736/194").isFinite;
+var require$$1736194$isFinite = require("../1736/194").isFinite
 module.exports = Number.isFinite || function (e) {
-  return "number" == typeof e && r(e);
-};
+  return "number" == typeof e && require$$1736194$isFinite(e)
+}

@@ -13,4 +13,4 @@ module.exports = {
   selected: "EditArea_selected__2MSnq",
   toolboxMask: "EditArea_toolboxMask__38J9F",
   hide: "EditArea_hide__tFiWO"
-};
+}

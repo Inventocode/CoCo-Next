@@ -4,30 +4,30 @@
  * 模块 ID：276
  */
 
-"use strict";
+"use strict"
 
-export { a };
+export { a }
 import r = require("../301/203");
 import i = require("../57/770");
 import o = require("../36/461");
 function a(e) {
-  var t = "function" === typeof Map ? new Map() : undefined;
+  var t = "function" === typeof Map ? new Map() : undefined
   return (a = function (e) {
     if (null === e || (n = e, -1 === Function.toString.call(n).indexOf("[native code]"))) {
-      return e;
+      return e
     }
-    var n;
+    var n
     if ("function" !== typeof e) {
-      throw new TypeError("Super expression must either be null or a function");
+      throw new TypeError("Super expression must either be null or a function")
     }
     if ("undefined" !== typeof t) {
       if (t.has(e)) {
-        return t.get(e);
+        return t.get(e)
       }
-      t.set(e, a);
+      t.set(e, a)
     }
     function a() {
-      return o.a(e, arguments, r.a(this).constructor);
+      return o.a(e, arguments, r.a(this).constructor)
     }
     a.prototype = Object.create(e.prototype, {
       constructor: {
@@ -36,8 +36,8 @@ function a(e) {
         writable: true,
         configurable: true
       }
-    });
-    return i.a(a, e);
-  })(e);
+    })
+    return i.a(a, e)
+  })(e)
 }
-export default a;
+export default a

@@ -4,62 +4,62 @@
  * 模块 ID：GoM7
  */
 
-"use strict";
+"use strict"
 
 /* harmony export (binding) */
 /* harmony import */
-export { IntlWrapperComponent };
-import * as __WEBPACK_IMPORTED_MODULE_0_intl__ from "intl";
+export { IntlWrapperComponent }
+import * as __WEBPACK_IMPORTED_MODULE_0_intl__ from "intl"
 /* harmony import */
-import __WEBPACK_IMPORTED_MODULE_0_intl___default from "intl";
+import __WEBPACK_IMPORTED_MODULE_0_intl___default from "intl"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_1_react__ from "react";
+import * as __WEBPACK_IMPORTED_MODULE_1_react__ from "react"
 /* harmony import */
-import __WEBPACK_IMPORTED_MODULE_1_react___default from "react";
+import __WEBPACK_IMPORTED_MODULE_1_react___default from "react"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_2_react_redux__ from "react-redux";
+import * as __WEBPACK_IMPORTED_MODULE_2_react_redux__ from "react-redux"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_3_redux__ from "redux";
+import * as __WEBPACK_IMPORTED_MODULE_3_redux__ from "redux"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_4_react_intl__ from "react-intl";
+import * as __WEBPACK_IMPORTED_MODULE_4_react_intl__ from "react-intl"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_5__i18n__ from "./i18n-4Hmg";
+import * as __WEBPACK_IMPORTED_MODULE_5__i18n__ from "./i18n-4Hmg"
 var _createClass = function () {
   function defineProperties(target, props) {
     for (var i = 0; i < props.length; i++) {
-      var descriptor = props[i];
-      descriptor.enumerable = descriptor.enumerable || false;
-      descriptor.configurable = true;
+      var descriptor = props[i]
+      descriptor.enumerable = descriptor.enumerable || false
+      descriptor.configurable = true
       if ("value" in descriptor) {
-        descriptor.writable = true;
+        descriptor.writable = true
       }
-      Object.defineProperty(target, descriptor.key, descriptor);
+      Object.defineProperty(target, descriptor.key, descriptor)
     }
   }
   return function (Constructor, protoProps, staticProps) {
     if (protoProps) {
-      defineProperties(Constructor.prototype, protoProps);
+      defineProperties(Constructor.prototype, protoProps)
     }
     if (staticProps) {
-      defineProperties(Constructor, staticProps);
+      defineProperties(Constructor, staticProps)
     }
-    return Constructor;
-  };
-}();
+    return Constructor
+  }
+}()
 function _classCallCheck(instance, Constructor) {
   if (!(instance instanceof Constructor)) {
-    throw new TypeError("Cannot call a class as a function");
+    throw new TypeError("Cannot call a class as a function")
   }
 }
 function _possibleConstructorReturn(self, call) {
   if (!self) {
-    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+    throw new ReferenceError("this hasn't been initialised - super() hasn't been called")
   }
-  return call && (typeof call === "object" || typeof call === "function") ? call : self;
+  return call && (typeof call === "object" || typeof call === "function") ? call : self
 }
 function _inherits(subClass, superClass) {
   if (typeof superClass !== "function" && superClass !== null) {
-    throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
+    throw new TypeError("Super expression must either be null or a function, not " + typeof superClass)
   }
   subClass.prototype = Object.create(superClass && superClass.prototype, {
     constructor: {
@@ -68,44 +68,44 @@ function _inherits(subClass, superClass) {
       writable: true,
       configurable: true
     }
-  });
+  })
   if (superClass) {
     if (Object.setPrototypeOf) {
-      Object.setPrototypeOf(subClass, superClass);
+      Object.setPrototypeOf(subClass, superClass)
     } else {
-      subClass.__proto__ = superClass;
+      subClass.__proto__ = superClass
     }
   }
 }
 var IntlWrapper = function (_React$Component) {
-  _inherits(IntlWrapper, _React$Component);
+  _inherits(IntlWrapper, _React$Component)
   function IntlWrapper(props) {
-    _classCallCheck(this, IntlWrapper);
+    _classCallCheck(this, IntlWrapper)
 
     // Codemao: use zh as the default language.
-    var _this = _possibleConstructorReturn(this, (IntlWrapper.__proto__ || Object.getPrototypeOf(IntlWrapper)).call(this, props));
-    var system_lang = "zh";
-    var init_language = system_lang;
-    var init_locale = __WEBPACK_IMPORTED_MODULE_5__i18n__.language_list[init_language].intl_lang_name;
-    var init_messages = __WEBPACK_IMPORTED_MODULE_5__i18n__.language_list[init_language].language;
+    var _this = _possibleConstructorReturn(this, (IntlWrapper.__proto__ || Object.getPrototypeOf(IntlWrapper)).call(this, props))
+    var system_lang = "zh"
+    var init_language = system_lang
+    var init_locale = __WEBPACK_IMPORTED_MODULE_5__i18n__.language_list[init_language].intl_lang_name
+    var init_messages = __WEBPACK_IMPORTED_MODULE_5__i18n__.language_list[init_language].language
     _this.state = {
       locale: init_locale,
       messages: init_messages
-    };
-    return _this;
+    }
+    return _this
   }
   _createClass(IntlWrapper, [{
     key: "componentWillReceiveProps",
     value: function componentWillReceiveProps(nextProps) {
       if (nextProps.language == this.props.language) {
-        return;
+        return
       }
-      var locale = __WEBPACK_IMPORTED_MODULE_5__i18n__.language_list[nextProps.language].intl_lang_name;
-      var messages = __WEBPACK_IMPORTED_MODULE_5__i18n__.language_list[nextProps.language].language;
+      var locale = __WEBPACK_IMPORTED_MODULE_5__i18n__.language_list[nextProps.language].intl_lang_name
+      var messages = __WEBPACK_IMPORTED_MODULE_5__i18n__.language_list[nextProps.language].language
       this.setState({
         locale: locale,
         messages: messages
-      });
+      })
     }
   }, {
     key: "render",
@@ -113,19 +113,19 @@ var IntlWrapper = function (_React$Component) {
       return __WEBPACK_IMPORTED_MODULE_1_react__.createElement(__WEBPACK_IMPORTED_MODULE_4_react_intl__.IntlProvider, {
         locale: this.state.locale,
         messages: this.state.messages
-      }, this.props.children);
+      }, this.props.children)
     }
-  }]);
-  return IntlWrapper;
-}(__WEBPACK_IMPORTED_MODULE_1_react__.Component);
+  }])
+  return IntlWrapper
+}(__WEBPACK_IMPORTED_MODULE_1_react__.Component)
 function mapStateToProps(state) {
   return {
     language: state.main_reducer.language
-  };
+  }
 }
 function mapDispatchToProps(dispatch) {
-  return __WEBPACK_IMPORTED_MODULE_3_redux__.bindActionCreators({}, dispatch);
+  return __WEBPACK_IMPORTED_MODULE_3_redux__.bindActionCreators({}, dispatch)
 }
-var IntlWrapperComponent = __WEBPACK_IMPORTED_MODULE_2_react_redux__.connect(mapStateToProps, mapDispatchToProps)(IntlWrapper);
+var IntlWrapperComponent = __WEBPACK_IMPORTED_MODULE_2_react_redux__.connect(mapStateToProps, mapDispatchToProps)(IntlWrapper)
 
 /***/

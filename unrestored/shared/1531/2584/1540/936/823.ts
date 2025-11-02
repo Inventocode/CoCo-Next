@@ -4,4 +4,4 @@
  * 模块 ID：823
  */
 
-module.exports = {};
+module.exports = {}

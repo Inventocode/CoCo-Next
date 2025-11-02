@@ -4,17 +4,17 @@
  * 模块 ID：1730
  */
 
-"use strict";
+"use strict"
 
-var r = require("./1720/258/index");
-var o = r.aTypedArray;
-var i = r.exportTypedArrayMethod;
-var a = Math.floor;
-i("reverse", function () {
-  for (var e, t = o(this).length, n = a(t / 2), r = 0; r < n;) {
-    e = this[r];
-    this[r++] = this[--t];
-    this[t] = e;
+var r = require("./1720/258/index")
+var r$aTypedArray = r.aTypedArray
+var r$exportTypedArrayMethod = r.exportTypedArrayMethod
+var math$floor = Math.floor
+r$exportTypedArrayMethod("reverse", function () {
+  for (var e, r$aTypedArrayThis$length = r$aTypedArray(this).length, n = math$floor(r$aTypedArrayThis$length / 2), r = 0; r < n;) {
+    e = this[r]
+    this[r++] = this[--r$aTypedArrayThis$length]
+    this[r$aTypedArrayThis$length] = e
   }
-  return this;
-});
+  return this
+})

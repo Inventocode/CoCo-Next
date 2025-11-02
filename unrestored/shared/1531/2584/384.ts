@@ -22,4 +22,4 @@ module.exports = {
   lineKeyText: "WatchItemDetail_lineKeyText__2IbV-",
   lineValue: "WatchItemDetail_lineValue__2UvXp",
   text: "WatchItemDetail_text__2xQ8V"
-};
+}

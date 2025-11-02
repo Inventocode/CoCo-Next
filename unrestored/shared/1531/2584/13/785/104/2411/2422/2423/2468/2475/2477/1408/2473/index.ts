@@ -4,7 +4,7 @@
  * 模块 ID：2473
  */
 
-var r = require("./2474");
+var r = require("./2474")
 module.exports = function (e) {
-  return null == e ? "" : r(e);
-};
+  return null == e ? "" : r(e)
+}

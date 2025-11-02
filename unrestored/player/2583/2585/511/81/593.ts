@@ -4,81 +4,81 @@
  * 模块 ID：593
  */
 
-"use strict";
+"use strict"
 
 var r = function () {
   function t() {
-    this.segmentCount = -1;
-    this.fileSize = -1;
-    this.timestamp = -1;
-    this.checksum = -1;
+    this.segmentCount = -1
+    this.fileSize = -1
+    this.timestamp = -1
+    this.checksum = -1
   }
   t.prototype.getSegmentIndex = function () {
-    return this.segmentIndex;
-  };
+    return this.segmentIndex
+  }
   t.prototype.setSegmentIndex = function (t) {
-    this.segmentIndex = t;
-  };
+    this.segmentIndex = t
+  }
   t.prototype.getFileId = function () {
-    return this.fileId;
-  };
+    return this.fileId
+  }
   t.prototype.setFileId = function (t) {
-    this.fileId = t;
-  };
+    this.fileId = t
+  }
   t.prototype.getOptionalData = function () {
-    return this.optionalData;
-  };
+    return this.optionalData
+  }
   t.prototype.setOptionalData = function (t) {
-    this.optionalData = t;
-  };
+    this.optionalData = t
+  }
   t.prototype.isLastSegment = function () {
-    return this.lastSegment;
-  };
+    return this.lastSegment
+  }
   t.prototype.setLastSegment = function (t) {
-    this.lastSegment = t;
-  };
+    this.lastSegment = t
+  }
   t.prototype.getSegmentCount = function () {
-    return this.segmentCount;
-  };
+    return this.segmentCount
+  }
   t.prototype.setSegmentCount = function (t) {
-    this.segmentCount = t;
-  };
+    this.segmentCount = t
+  }
   t.prototype.getSender = function () {
-    return this.sender || null;
-  };
+    return this.sender || null
+  }
   t.prototype.setSender = function (t) {
-    this.sender = t;
-  };
+    this.sender = t
+  }
   t.prototype.getAddressee = function () {
-    return this.addressee || null;
-  };
+    return this.addressee || null
+  }
   t.prototype.setAddressee = function (t) {
-    this.addressee = t;
-  };
+    this.addressee = t
+  }
   t.prototype.getFileName = function () {
-    return this.fileName;
-  };
+    return this.fileName
+  }
   t.prototype.setFileName = function (t) {
-    this.fileName = t;
-  };
+    this.fileName = t
+  }
   t.prototype.getFileSize = function () {
-    return this.fileSize;
-  };
+    return this.fileSize
+  }
   t.prototype.setFileSize = function (t) {
-    this.fileSize = t;
-  };
+    this.fileSize = t
+  }
   t.prototype.getChecksum = function () {
-    return this.checksum;
-  };
+    return this.checksum
+  }
   t.prototype.setChecksum = function (t) {
-    this.checksum = t;
-  };
+    this.checksum = t
+  }
   t.prototype.getTimestamp = function () {
-    return this.timestamp;
-  };
+    return this.timestamp
+  }
   t.prototype.setTimestamp = function (t) {
-    this.timestamp = t;
-  };
-  return t;
-}();
-exports.a = r;
+    this.timestamp = t
+  }
+  return t
+}()
+exports.a = r

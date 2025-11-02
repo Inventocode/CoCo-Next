@@ -4,24 +4,24 @@
  * 模块 ID：852
  */
 
-var r = require("../1411");
-var i = require("../../../../../../254/2513/2514/2515/1418/1156/index");
+var r = require("../1411")
+var i = require("../../../../../../254/2513/2514/2515/1418/1156/index")
 module.exports = function (e, t, n, o) {
-  var a = !n;
+  var a = !n
   if (!n) {
-    n = {};
+    n = {}
   }
-  for (var s = -1, c = t.length; ++s < c;) {
-    var u = t[s];
-    var l = o ? o(n[u], e[u], u, n, e) : undefined;
+  for (var s = -1, t$length = t.length; ++s < t$length;) {
+    var u = t[s]
+    var l = o ? o(n[u], e[u], u, n, e) : undefined
     if (undefined === l) {
-      l = e[u];
+      l = e[u]
     }
     if (a) {
-      i(n, u, l);
+      i(n, u, l)
     } else {
-      r(n, u, l);
+      r(n, u, l)
     }
   }
-  return n;
-};
+  return n
+}

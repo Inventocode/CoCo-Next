@@ -4,17 +4,17 @@
  * 模块 ID：611
  */
 
-"use strict";
+"use strict"
 
-export { a };
-export { s as b };
+export { a }
+export { s as b }
 import r = require("../19");
 import i = require("./605");
-var o = r.a({}, i.a.Modal);
+var o = r.a({}, i.a.Modal)
 function a(e) {
-  o = e ? r.a(r.a({}, o), e) : r.a({}, i.a.Modal);
+  o = e ? r.a(r.a({}, o), e) : r.a({}, i.a.Modal)
 }
 function s() {
-  return o;
+  return o
 }
-export default a;
+export default a

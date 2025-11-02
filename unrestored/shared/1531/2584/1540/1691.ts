@@ -4,16 +4,16 @@
  * 模块 ID：1691
  */
 
-"use strict";
+"use strict"
 
-var r = require("./1623/86");
-var o = require("./1698/440");
+var r = require("./1623/86")
+var o = require("./1698/440")
 r({
   target: "String",
   proto: true,
   forced: require("./1698/441")("bold")
 }, {
   bold: function () {
-    return o(this, "b", "", "");
+    return o(this, "b", "", "")
   }
-});
+})

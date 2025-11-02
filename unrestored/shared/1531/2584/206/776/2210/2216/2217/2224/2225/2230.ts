@@ -4,55 +4,55 @@
  * 模块 ID：2230
  */
 
-"use strict";
+"use strict"
 
 module.exports = function (e, t, n) {
-  var r = " ";
-  var i = e.level;
-  var o = e.dataLevel;
-  var a = e.schema[t];
-  var s = e.schemaPath + e.util.getProperty(t);
-  var c = e.errSchemaPath + "/" + t;
-  var u = !e.opts.allErrors;
-  var l = "data" + (o || "");
-  var f = "valid" + i;
-  var d = e.opts.$data && a && a.$data;
+  var r = " "
+  var e$level = e.level
+  var e$dataLevel = e.dataLevel
+  var a = e.schema[t]
+  var s = e.schemaPath + e.util.getProperty(t)
+  var c = e.errSchemaPath + "/" + t
+  var u = !e.opts.allErrors
+  var l = "data" + (e$dataLevel || "")
+  var f = "valid" + e$level
+  var d = e.opts.$data && a && a.$data
   if (d) {
-    r += " var schema" + i + " = " + e.util.getData(a.$data, o, e.dataPathArr) + "; ";
+    r += " var schema" + e$level + " = " + e.util.getData(a.$data, e$dataLevel, e.dataPathArr) + "; "
   }
   if (!d) {
-    r += " var schema" + i + " = validate.schema" + s + ";";
+    r += " var schema" + e$level + " = validate.schema" + s + ";"
   }
-  r += "var " + f + " = equal(" + l + ", schema" + i + "); if (!" + f + ") {   ";
-  var h = h || [];
-  h.push(r);
-  r = "";
+  r += "var " + f + " = equal(" + l + ", schema" + e$level + "); if (!" + f + ") {   "
+  var h = h || []
+  h.push(r)
+  r = ""
   if (false !== e.createErrors) {
-    r += " { keyword: 'const' , dataPath: (dataPath || '') + " + e.errorPath + " , schemaPath: " + e.util.toQuotedString(c) + " , params: { allowedValue: schema" + i + " } ";
+    r += " { keyword: 'const' , dataPath: (dataPath || '') + " + e.errorPath + " , schemaPath: " + e.util.toQuotedString(c) + " , params: { allowedValue: schema" + e$level + " } "
     if (false !== e.opts.messages) {
-      r += " , message: 'should be equal to constant' ";
+      r += " , message: 'should be equal to constant' "
     }
     if (e.opts.verbose) {
-      r += " , schema: validate.schema" + s + " , parentSchema: validate.schema" + e.schemaPath + " , data: " + l + " ";
+      r += " , schema: validate.schema" + s + " , parentSchema: validate.schema" + e.schemaPath + " , data: " + l + " "
     }
-    r += " } ";
+    r += " } "
   } else {
-    r += " {} ";
+    r += " {} "
   }
-  var p = r;
-  r = h.pop();
+  var p = r
+  r = h.pop()
   if (!e.compositeRule && u) {
     if (e.async) {
-      r += " throw new ValidationError([" + p + "]); ";
+      r += " throw new ValidationError([" + p + "]); "
     } else {
-      r += " validate.errors = [" + p + "]; return false; ";
+      r += " validate.errors = [" + p + "]; return false; "
     }
   } else {
-    r += " var err = " + p + ";  if (vErrors === null) vErrors = [err]; else vErrors.push(err); errors++; ";
+    r += " var err = " + p + ";  if (vErrors === null) vErrors = [err]; else vErrors.push(err); errors++; "
   }
-  r += " }";
+  r += " }"
   if (u) {
-    r += " else { ";
+    r += " else { "
   }
-  return r;
-};
+  return r
+}

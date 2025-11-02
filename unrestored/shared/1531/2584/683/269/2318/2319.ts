@@ -4,44 +4,44 @@
  * 模块 ID：2319
  */
 
-"use strict";
+"use strict"
 
 Object.defineProperty(exports, "__esModule", {
   value: true
-});
-var r = require("../580");
-var i = require("../715");
+})
+var r = require("../580")
+var i = require("../715")
 var o = function () {
   function e(e, t) {
-    this.id = i.id();
-    this.activated = false;
-    this.serviceIdentifier = e;
-    this.scope = t;
-    this.type = r.BindingTypeEnum.Invalid;
+    this.id = i.id()
+    this.activated = false
+    this.serviceIdentifier = e
+    this.scope = t
+    this.type = r.BindingTypeEnum.Invalid
     this.constraint = function (e) {
-      return true;
-    };
-    this.implementationType = null;
-    this.cache = null;
-    this.factory = null;
-    this.provider = null;
-    this.onActivation = null;
-    this.dynamicValue = null;
+      return true
+    }
+    this.implementationType = null
+    this.cache = null
+    this.factory = null
+    this.provider = null
+    this.onActivation = null
+    this.dynamicValue = null
   }
   e.prototype.clone = function () {
-    var t = new e(this.serviceIdentifier, this.scope);
-    t.activated = false;
-    t.implementationType = this.implementationType;
-    t.dynamicValue = this.dynamicValue;
-    t.scope = this.scope;
-    t.type = this.type;
-    t.factory = this.factory;
-    t.provider = this.provider;
-    t.constraint = this.constraint;
-    t.onActivation = this.onActivation;
-    t.cache = this.cache;
-    return t;
-  };
-  return e;
-}();
-exports.Binding = o;
+    var t = new e(this.serviceIdentifier, this.scope)
+    t.activated = false
+    t.implementationType = this.implementationType
+    t.dynamicValue = this.dynamicValue
+    t.scope = this.scope
+    t.type = this.type
+    t.factory = this.factory
+    t.provider = this.provider
+    t.constraint = this.constraint
+    t.onActivation = this.onActivation
+    t.cache = this.cache
+    return t
+  }
+  return e
+}()
+exports.Binding = o

@@ -16,4 +16,4 @@ module.exports = {
   orderArea: "styles_orderArea__GbwLV",
   round: "styles_round__z56ci",
   selected: "styles_selected__FDCES"
-};
+}

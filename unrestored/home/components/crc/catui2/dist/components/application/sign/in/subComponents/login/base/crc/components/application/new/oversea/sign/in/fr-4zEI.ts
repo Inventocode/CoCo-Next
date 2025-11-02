@@ -4,10 +4,10 @@
  * 模块 ID：4zEI
  */
 
-"use strict";
+"use strict"
 
 /* harmony export (binding) */
-export { fr };
+export { fr }
 var fr = {
   "sign_in_dialog/placeholder/email": "Email",
   "sign_in_dialog/placeholder/password": "Password:6-20 characters",
@@ -40,6 +40,6 @@ var fr = {
   "sign_in_dialog/error/email/not_exist": "Account does not exist",
   "sign_in_dialog/error/password/format": "6-20 characters,includes number and letter",
   "sign_in_dialog/error/password/simple": "New password is too simple"
-};
+}
 
 /***/

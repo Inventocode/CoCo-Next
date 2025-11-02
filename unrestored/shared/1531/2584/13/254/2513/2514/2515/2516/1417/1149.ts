@@ -4,8 +4,8 @@
  * 模块 ID：1149
  */
 
-var n = Object.prototype;
+var object$prototype = Object.prototype
 module.exports = function (e) {
-  var t = e && e.constructor;
-  return e === ("function" == typeof t && t.prototype || n);
-};
+  var t = e && e.constructor
+  return e === ("function" == typeof t && t.prototype || object$prototype)
+}

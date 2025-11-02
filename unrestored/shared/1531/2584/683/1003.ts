@@ -4,9 +4,9 @@
  * 模块 ID：1003
  */
 
-"use strict";
+"use strict"
 
-export { u as a };
+export { u as a }
 import r = require("./215/index");
 import i = require("./34/index");
 import o = require("./65");
@@ -15,298 +15,298 @@ var a = function () {
     return (e = Object.setPrototypeOf || {
       __proto__: []
     } instanceof Array && function (e, t) {
-      e.__proto__ = t;
+      e.__proto__ = t
     } || function (e, t) {
       for (var n in t) if (Object.prototype.hasOwnProperty.call(t, n)) {
-        e[n] = t[n];
+        e[n] = t[n]
       }
-    })(t, n);
-  };
+    })(t, n)
+  }
   return function (t, n) {
     function r() {
-      this.constructor = t;
+      this.constructor = t
     }
-    e(t, n);
-    t.prototype = null === n ? Object.create(n) : (r.prototype = n.prototype, new r());
-  };
-}();
+    e(t, n)
+    t.prototype = null === n ? Object.create(n) : (r.prototype = n.prototype, new r())
+  }
+}()
 var s = function (e, t, n, r) {
   return new (n || (n = Promise))(function (i, o) {
     function a(e) {
       try {
-        c(r.next(e));
+        c(r.next(e))
       } catch (t) {
-        o(t);
+        o(t)
       }
     }
     function s(e) {
       try {
-        c(r.throw(e));
+        c(r.throw(e))
       } catch (t) {
-        o(t);
+        o(t)
       }
     }
     function c(e) {
-      var t;
+      var /* [auto-meaningful-name] */e$value
       if (e.done) {
-        i(e.value);
+        i(e.value)
       } else {
-        (t = e.value, t instanceof n ? t : new n(function (e) {
-          e(t);
-        })).then(a, s);
+        (e$value = e.value, e$value instanceof n ? e$value : new n(function (e) {
+          e(e$value)
+        })).then(a, s)
       }
     }
-    c((r = r.apply(e, t || [])).next());
-  });
-};
+    c((r = r.apply(e, t || [])).next())
+  })
+}
 var c = function (e, t) {
-  var n;
-  var r;
-  var i;
-  var o;
+  var n
+  var r
+  var i
+  var o
   var a = {
     label: 0,
     sent: function () {
       if (1 & i[0]) {
-        throw i[1];
+        throw i[1]
       }
-      return i[1];
+      return i[1]
     },
     trys: [],
     ops: []
-  };
+  }
   o = {
     next: s(0),
     throw: s(1),
     return: s(2)
-  };
+  }
   if ("function" === typeof Symbol) {
     o[Symbol.iterator] = function () {
-      return this;
-    };
+      return this
+    }
   }
-  return o;
+  return o
   function s(o) {
     return function (s) {
       return function (o) {
         if (n) {
-          throw new TypeError("Generator is already executing.");
+          throw new TypeError("Generator is already executing.")
         }
         for (; a;) {
           try {
-            n = 1;
+            n = 1
             if (r && (i = 2 & o[0] ? r.return : o[0] ? r.throw || ((i = r.return) && i.call(r), 0) : r.next) && !(i = i.call(r, o[1])).done) {
-              return i;
+              return i
             }
             switch (r = 0, i && (o = [2 & o[0], i.value]), o[0]) {
               case 0:
               case 1:
-                i = o;
-                break;
+                i = o
+                break
               case 4:
-                a.label++;
+                a.label++
                 return {
                   value: o[1],
                   done: false
-                };
+                }
               case 5:
-                a.label++;
-                r = o[1];
-                o = [0];
-                continue;
+                a.label++
+                r = o[1]
+                o = [0]
+                continue
               case 7:
-                o = a.ops.pop();
-                a.trys.pop();
-                continue;
+                o = a.ops.pop()
+                a.trys.pop()
+                continue
               default:
                 if (!(i = (i = a.trys).length > 0 && i[i.length - 1]) && (6 === o[0] || 2 === o[0])) {
-                  a = 0;
-                  continue;
+                  a = 0
+                  continue
                 }
                 if (3 === o[0] && (!i || o[1] > i[0] && o[1] < i[3])) {
-                  a.label = o[1];
-                  break;
+                  a.label = o[1]
+                  break
                 }
                 if (6 === o[0] && a.label < i[1]) {
-                  a.label = i[1];
-                  i = o;
-                  break;
+                  a.label = i[1]
+                  i = o
+                  break
                 }
                 if (i && a.label < i[2]) {
-                  a.label = i[2];
-                  a.ops.push(o);
-                  break;
+                  a.label = i[2]
+                  a.ops.push(o)
+                  break
                 }
                 if (i[2]) {
-                  a.ops.pop();
+                  a.ops.pop()
                 }
-                a.trys.pop();
-                continue;
+                a.trys.pop()
+                continue
             }
-            o = t.call(e, a);
+            o = t.call(e, a)
           } catch (s) {
-            o = [6, s];
-            r = 0;
+            o = [6, s]
+            r = 0
           } finally {
-            n = i = 0;
+            n = i = 0
           }
         }
         if (5 & o[0]) {
-          throw o[1];
+          throw o[1]
         }
         return {
           value: o[0] ? o[1] : undefined,
           done: true
-        };
-      }([o, s]);
-    };
+        }
+      }([o, s])
+    }
   }
-};
+}
 var u = function (e) {
   function t(t, n, a, s) {
-    var c = e.call(this) || this;
-    c.is_draggable = true;
-    c.is_origin_in_center = false;
+    var c = e.call(this) || this
+    c.is_draggable = true
+    c.is_origin_in_center = false
     c.drag_start = function (e) {
       if (c.is_draggable) {
         c.drag_data = {
           event_data: e.data,
           old_pos: e.data.getLocalPosition(c.parent)
-        };
-        c.emit_event("drag_start", undefined);
+        }
+        c.emit_event("drag_start", undefined)
       }
-    };
+    }
     c.drag_move = function () {
       if (c.is_draggable && c.drag_data) {
-        var e = c.drag_data.event_data.getLocalPosition(c.parent);
-        var t = c.app.get_app().view;
-        var n = t.width;
-        var o = t.height;
-        e.set(r.a(-n / 2, n / 2, e.x), r.a(-o / 2, o / 2, e.y));
-        var a = new i.o(c.position.x + e.x - c.drag_data.old_pos.x, c.position.y + e.y - c.drag_data.old_pos.y);
-        c.drag_data.old_pos = e;
-        var s = c.getBounds();
+        var e = c.drag_data.event_data.getLocalPosition(c.parent)
+        var c$app$get_app$view = c.app.get_app().view
+        var c$app$get_app$view$width = c$app$get_app$view.width
+        var c$app$get_app$view$height = c$app$get_app$view.height
+        e.set(r.a(-c$app$get_app$view$width / 2, c$app$get_app$view$width / 2, e.x), r.a(-c$app$get_app$view$height / 2, c$app$get_app$view$height / 2, e.y))
+        var a = new i.o(c.position.x + e.x - c.drag_data.old_pos.x, c.position.y + e.y - c.drag_data.old_pos.y)
+        c.drag_data.old_pos = e
+        var s = c.getBounds()
         var u = {
           left: 0,
           right: -s.width,
           top: 0,
           bottom: -s.height
-        };
-        if (c.is_origin_in_center) {
-          u.left = s.width / 2;
-          u.right = -s.width / 2;
-          u.top = s.height / 2;
-          u.bottom = -s.height / 2;
         }
-        var l = -n / 2 + u.left;
-        var f = n / 2 + u.right;
-        var d = -o / 2 + u.top;
-        var h = o / 2 + u.bottom;
-        a.x = r.a(Math.min(l, f), Math.max(l, f), a.x);
-        a.y = r.a(Math.min(d, h), Math.max(d, h), a.y);
-        c.position.set(a.x, a.y);
+        if (c.is_origin_in_center) {
+          u.left = s.width / 2
+          u.right = -s.width / 2
+          u.top = s.height / 2
+          u.bottom = -s.height / 2
+        }
+        var l = -c$app$get_app$view$width / 2 + u.left
+        var f = c$app$get_app$view$width / 2 + u.right
+        var d = -c$app$get_app$view$height / 2 + u.top
+        var h = c$app$get_app$view$height / 2 + u.bottom
+        a.x = r.a(Math.min(l, f), Math.max(l, f), a.x)
+        a.y = r.a(Math.min(d, h), Math.max(d, h), a.y)
+        c.position.set(a.x, a.y)
         c.emit_event("change", {
           position: c.position
-        });
-        c.emit_event("drag_move", undefined);
-        c.app.render();
+        })
+        c.emit_event("drag_move", undefined)
+        c.app.render()
       }
-    };
+    }
     c.drag_end = function () {
       if (c.drag_data) {
-        c.drag_data = undefined;
-        c.app.render();
+        c.drag_data = undefined
+        c.app.render()
         if (c.is_draggable) {
-          c.emit_event("drag_end", undefined);
+          c.emit_event("drag_end", undefined)
         }
       }
-    };
+    }
     c.on_break = function (e) {
       if (!(e && e !== c.id)) {
-        c.drag_data = undefined;
+        c.drag_data = undefined
       }
-    };
-    c.app = a;
-    c.events = s;
-    c.id = t;
-    c.interactive = true;
-    c.setParent(n);
-    c.addListener("mousedown", c.drag_start);
-    c.addListener("mousemove", o.w(c.drag_move, o.a));
-    c.addListener("mouseup", c.drag_end);
-    c.addListener("mouseupoutside", c.drag_end);
-    c.addListener("touchstart", c.drag_start);
-    c.addListener("touchmove", o.w(c.drag_move, o.a));
-    c.addListener("touchend", c.drag_end);
-    c.addListener("touchendoutside", c.drag_end);
-    c.events.event_emitter.addListener("break", c.on_break);
-    c.app.get_app().stage.addListener("touchendoutside", c.drag_end);
-    return c;
+    }
+    c.app = a
+    c.events = s
+    c.id = t
+    c.interactive = true
+    c.setParent(n)
+    c.addListener("mousedown", c.drag_start)
+    c.addListener("mousemove", o.w(c.drag_move, o.a))
+    c.addListener("mouseup", c.drag_end)
+    c.addListener("mouseupoutside", c.drag_end)
+    c.addListener("touchstart", c.drag_start)
+    c.addListener("touchmove", o.w(c.drag_move, o.a))
+    c.addListener("touchend", c.drag_end)
+    c.addListener("touchendoutside", c.drag_end)
+    c.events.event_emitter.addListener("break", c.on_break)
+    c.app.get_app().stage.addListener("touchendoutside", c.drag_end)
+    return c
   }
-  a(t, e);
+  a(t, e)
   t.prototype.emit_event = function (e, t) {
-    this.emit(e, t);
-  };
+    this.emit(e, t)
+  }
   t.prototype.add_listener = function (e, t) {
-    this.on(e, t);
-  };
+    this.on(e, t)
+  }
   t.prototype.remove_listener = function (e, t) {
-    this.off(e, t);
-  };
+    this.off(e, t)
+  }
   t.prototype.load_texture = function (e) {
     return s(this, undefined, undefined, function () {
-      var t;
+      var t
       return c(this, function (n) {
         return e && i.B.TextureCache[e] ? [2, i.B.TextureCache[e]] : e && i.B.BaseTextureCache[e] ? [2, new i.y(i.B.BaseTextureCache[e])] : (t = e ? i.y.from(e) : i.y.EMPTY).valid ? [2, t] : [2, new Promise(function (e, n) {
           t.baseTexture.on("loaded", function () {
-            e(t);
-          });
+            e(t)
+          })
           t.baseTexture.on("update", function () {
-            e(t);
-          });
+            e(t)
+          })
           t.baseTexture.on("error", function (e) {
-            t.destroy(true);
-            n(e);
-          });
-        })];
-      });
-    });
-  };
+            t.destroy(true)
+            n(e)
+          })
+        })]
+      })
+    })
+  }
   t.prototype.set_origin_in_center = function (e) {
-    this.is_origin_in_center = e;
-  };
+    this.is_origin_in_center = e
+  }
   t.prototype.set_draggable = function (e) {
-    this.is_draggable = e;
+    this.is_draggable = e
     this.emit_event("change", {
       draggable: this.is_draggable
-    });
-  };
+    })
+  }
   t.prototype.set_visible = function (e) {
-    this.visible = e;
+    this.visible = e
     this.emit_event("change", {
       visible: this.visible
-    });
-  };
+    })
+  }
   t.prototype.get_draggable = function () {
-    return this.is_draggable;
-  };
+    return this.is_draggable
+  }
   t.prototype.get_visible = function () {
-    return this.visible;
-  };
+    return this.visible
+  }
   t.prototype.get_size = function () {
     return {
       width: this.width,
       height: this.height
-    };
-  };
+    }
+  }
   t.prototype.is_dragging = function () {
-    return !!this.drag_data;
-  };
+    return !!this.drag_data
+  }
   t.prototype.destroy = function (t) {
-    this.emit_event("destroy", undefined);
-    e.prototype.destroy.call(this, t);
-    this.events.event_emitter.removeListener("break", this.on_break);
-  };
-  return t;
-}(i.f);
-export default u;
+    this.emit_event("destroy", undefined)
+    e.prototype.destroy.call(this, t)
+    this.events.event_emitter.removeListener("break", this.on_break)
+  }
+  return t
+}(i.f)
+export default u

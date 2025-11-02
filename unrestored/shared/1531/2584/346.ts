@@ -27,4 +27,4 @@ module.exports = {
   prod: "styles_prod__2hPJE",
   btnContent: "styles_btnContent__1NAaL",
   importContent: "styles_importContent__r5jSN"
-};
+}

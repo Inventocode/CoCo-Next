@@ -4,75 +4,75 @@
  * 模块 ID：7CtK
  */
 
-"use strict";
+"use strict"
 
 /* harmony export (binding) */
 /* harmony import */
-export { WorkView };
-import * as __WEBPACK_IMPORTED_MODULE_0_react__ from "react";
+export { WorkView }
+import * as __WEBPACK_IMPORTED_MODULE_0_react__ from "react"
 /* harmony import */
-import __WEBPACK_IMPORTED_MODULE_0_react___default from "react";
+import __WEBPACK_IMPORTED_MODULE_0_react___default from "react"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_1_react_css_modules__ from "react-css-modules";
+import * as __WEBPACK_IMPORTED_MODULE_1_react_css_modules__ from "react-css-modules"
 /* harmony import */
-import __WEBPACK_IMPORTED_MODULE_1_react_css_modules___default from "react-css-modules";
+import __WEBPACK_IMPORTED_MODULE_1_react_css_modules___default from "react-css-modules"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_2_classnames__ from "classnames";
+import * as __WEBPACK_IMPORTED_MODULE_2_classnames__ from "classnames"
 /* harmony import */
-import __WEBPACK_IMPORTED_MODULE_2_classnames___default from "classnames";
+import __WEBPACK_IMPORTED_MODULE_2_classnames___default from "classnames"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_3__model_interface__ from "./Work/model/interface-hC2z";
+import * as __WEBPACK_IMPORTED_MODULE_3__model_interface__ from "./Work/model/interface-hC2z"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_4__components_WorkItem__ from "./components/WorkItem-FSbX";
+import * as __WEBPACK_IMPORTED_MODULE_4__components_WorkItem__ from "./components/WorkItem-FSbX"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_5__components_TemplateItem__ from "./components/TemplateItem-eseu";
+import * as __WEBPACK_IMPORTED_MODULE_5__components_TemplateItem__ from "./components/TemplateItem-eseu"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_6__components_IconFont__ from "./components/IconFont-zVV7";
+import * as __WEBPACK_IMPORTED_MODULE_6__components_IconFont__ from "./components/IconFont-zVV7"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_7__components_Input__ from "./components/Input-YqO9";
+import * as __WEBPACK_IMPORTED_MODULE_7__components_Input__ from "./components/Input-YqO9"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_8__cfg__ from "./cfg-dpNx";
+import * as __WEBPACK_IMPORTED_MODULE_8__cfg__ from "./cfg-dpNx"
 var _createClass = function () {
   function defineProperties(target, props) {
     for (var i = 0; i < props.length; i++) {
-      var descriptor = props[i];
-      descriptor.enumerable = descriptor.enumerable || false;
-      descriptor.configurable = true;
+      var descriptor = props[i]
+      descriptor.enumerable = descriptor.enumerable || false
+      descriptor.configurable = true
       if ("value" in descriptor) {
-        descriptor.writable = true;
+        descriptor.writable = true
       }
-      Object.defineProperty(target, descriptor.key, descriptor);
+      Object.defineProperty(target, descriptor.key, descriptor)
     }
   }
   return function (Constructor, protoProps, staticProps) {
     if (protoProps) {
-      defineProperties(Constructor.prototype, protoProps);
+      defineProperties(Constructor.prototype, protoProps)
     }
     if (staticProps) {
-      defineProperties(Constructor, staticProps);
+      defineProperties(Constructor, staticProps)
     }
-    return Constructor;
-  };
-}();
+    return Constructor
+  }
+}()
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) {
-  return typeof obj;
+  return typeof obj
 } : function (obj) {
-  return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
-};
+  return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj
+}
 function _classCallCheck(instance, Constructor) {
   if (!(instance instanceof Constructor)) {
-    throw new TypeError("Cannot call a class as a function");
+    throw new TypeError("Cannot call a class as a function")
   }
 }
 function _possibleConstructorReturn(self, call) {
   if (!self) {
-    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+    throw new ReferenceError("this hasn't been initialised - super() hasn't been called")
   }
-  return call && (typeof call === "object" || typeof call === "function") ? call : self;
+  return call && (typeof call === "object" || typeof call === "function") ? call : self
 }
 function _inherits(subClass, superClass) {
   if (typeof superClass !== "function" && superClass !== null) {
-    throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
+    throw new TypeError("Super expression must either be null or a function, not " + typeof superClass)
   }
   subClass.prototype = Object.create(superClass && superClass.prototype, {
     constructor: {
@@ -81,75 +81,75 @@ function _inherits(subClass, superClass) {
       writable: true,
       configurable: true
     }
-  });
+  })
   if (superClass) {
     if (Object.setPrototypeOf) {
-      Object.setPrototypeOf(subClass, superClass);
+      Object.setPrototypeOf(subClass, superClass)
     } else {
-      subClass.__proto__ = superClass;
+      subClass.__proto__ = superClass
     }
   }
 }
 var __decorate = this && this.__decorate || function (decorators, target, key, desc) {
-  var c = arguments.length;
-  var r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc;
-  var d;
+  var arguments$length = arguments.length
+  var r = arguments$length < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc
+  var d
   if ((typeof Reflect === "undefined" ? "undefined" : _typeof(Reflect)) === "object" && typeof Reflect.decorate === "function") {
-    r = Reflect.decorate(decorators, target, key, desc);
+    r = Reflect.decorate(decorators, target, key, desc)
   } else {
     for (var i = decorators.length - 1; i >= 0; i--) {
       if (d = decorators[i]) {
-        r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+        r = (arguments$length < 3 ? d(r) : arguments$length > 3 ? d(target, key, r) : d(target, key)) || r
       }
     }
   }
-  if (c > 3 && r) {
-    Object.defineProperty(target, key, r);
+  if (arguments$length > 3 && r) {
+    Object.defineProperty(target, key, r)
   }
-  return r;
-};
-import * as styles from "./styles-BDY2";
+  return r
+}
+import * as styles from "./styles-BDY2"
 var WorkView = function (_React$Component) {
-  _inherits(WorkView, _React$Component);
+  _inherits(WorkView, _React$Component)
   function WorkView(props) {
-    _classCallCheck(this, WorkView);
-    var _this = _possibleConstructorReturn(this, (WorkView.__proto__ || Object.getPrototypeOf(WorkView)).call(this, props));
-    _this.isCompositionEnd = true;
+    _classCallCheck(this, WorkView)
+    var _this = _possibleConstructorReturn(this, (WorkView.__proto__ || Object.getPrototypeOf(WorkView)).call(this, props))
+    _this.isCompositionEnd = true
     _this.state = {
       workType: __WEBPACK_IMPORTED_MODULE_3__model_interface__.EWorkType.CREATE,
       recoverVisible: false,
       keyword: ""
-    };
-    _this.handleLogin = _this.handleLogin.bind(_this);
-    _this.handleCreateScroll = _this.handleCreateScroll.bind(_this);
-    _this.handleCollScroll = _this.handleCollScroll.bind(_this);
-    _this.handleDeleteScroll = _this.handleDeleteScroll.bind(_this);
+    }
+    _this.handleLogin = _this.handleLogin.bind(_this)
+    _this.handleCreateScroll = _this.handleCreateScroll.bind(_this)
+    _this.handleCollScroll = _this.handleCollScroll.bind(_this)
+    _this.handleDeleteScroll = _this.handleDeleteScroll.bind(_this)
     // 作品
-    _this.handleSwitchWorkType = _this.handleSwitchWorkType.bind(_this);
+    _this.handleSwitchWorkType = _this.handleSwitchWorkType.bind(_this)
     // 搜索
-    _this.handleCompositionStart = _this.handleCompositionStart.bind(_this);
-    _this.handleCompositionEnd = _this.handleCompositionEnd.bind(_this);
-    _this.handleInputChange = _this.handleInputChange.bind(_this);
-    _this.handleClearInput = _this.handleClearInput.bind(_this);
+    _this.handleCompositionStart = _this.handleCompositionStart.bind(_this)
+    _this.handleCompositionEnd = _this.handleCompositionEnd.bind(_this)
+    _this.handleInputChange = _this.handleInputChange.bind(_this)
+    _this.handleClearInput = _this.handleClearInput.bind(_this)
     // 回收站
-    _this.handleToggleRecoverVisible = _this.handleToggleRecoverVisible.bind(_this);
-    _this.handleClearDeletedWork = _this.handleClearDeletedWork.bind(_this);
-    return _this;
+    _this.handleToggleRecoverVisible = _this.handleToggleRecoverVisible.bind(_this)
+    _this.handleClearDeletedWork = _this.handleClearDeletedWork.bind(_this)
+    return _this
   }
   _createClass(WorkView, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      var keyword = this.state.keyword;
-      var userInfo = this.props.userInfo;
+      var keyword = this.state.keyword
+      var userInfo = this.props.userInfo
       if (userInfo && !userInfo.isNewUser) {
         this.props.getCreateWorkListAction({
           name: keyword,
           offset: 0
-        });
+        })
         this.props.getCollWorkListAction({
           name: keyword,
           offset: 1
-        });
+        })
       }
     }
   }, {
@@ -158,63 +158,63 @@ var WorkView = function (_React$Component) {
   }, {
     key: "handleLogin",
     value: function handleLogin() {
-      this.props.setSignDialogVisibleAction(true);
+      this.props.setSignDialogVisibleAction(true)
     }
   }, {
     key: "handleSwitchWorkType",
     value: function handleSwitchWorkType(workType) {
-      var userInfo = this.props.userInfo;
-      var keyword = this.state.keyword;
+      var userInfo = this.props.userInfo
+      var keyword = this.state.keyword
       this.setState({
         workType: workType
-      });
+      })
       if (userInfo && !userInfo.isNewUser) {
         this.props.getCreateWorkListAction({
           name: keyword,
           offset: 0
-        });
+        })
         this.props.getCollWorkListAction({
           name: keyword,
           offset: 1
-        });
+        })
       }
     }
   }, {
     key: "handleInputChange",
     value: function handleInputChange(keyword) {
-      var userInfo = this.props.userInfo;
+      var userInfo = this.props.userInfo
       this.setState({
         keyword: keyword
-      });
+      })
       if (this.isCompositionEnd && userInfo && !userInfo.isNewUser) {
         if (this.state.workType === __WEBPACK_IMPORTED_MODULE_3__model_interface__.EWorkType.CREATE) {
           this.props.getCreateWorkListAction({
             name: keyword,
             offset: 0
-          });
+          })
         } else {
           this.props.getCollWorkListAction({
             name: keyword,
             offset: 1
-          });
+          })
         }
       }
     }
   }, {
     key: "handleClearInput",
     value: function handleClearInput() {
-      this.handleInputChange("");
+      this.handleInputChange("")
     }
   }, {
     key: "handleCompositionStart",
     value: function handleCompositionStart() {
-      this.isCompositionEnd = false;
+      this.isCompositionEnd = false
     }
   }, {
     key: "handleCompositionEnd",
     value: function handleCompositionEnd() {
-      this.isCompositionEnd = true;
-      this.handleInputChange(this.state.keyword);
+      this.isCompositionEnd = true
+      this.handleInputChange(this.state.keyword)
     }
   }, {
     key: "handleToggleRecoverVisible",
@@ -222,32 +222,32 @@ var WorkView = function (_React$Component) {
       if (recoverVisible) {
         this.props.getDeleteWorkListAction({
           offset: 0
-        });
+        })
       }
       this.setState({
         recoverVisible: recoverVisible
-      });
+      })
     }
   }, {
     key: "handleNavToCocoEditor",
     value: function handleNavToCocoEditor() {
-      var _config = __WEBPACK_IMPORTED_MODULE_8__cfg__.config();
-      var cocoEditorUrl = _config.cocoEditorUrl;
-      window.open(cocoEditorUrl, Date.now().toString());
+      var _config = __WEBPACK_IMPORTED_MODULE_8__cfg__.config()
+      var cocoEditorUrl = _config.cocoEditorUrl
+      window.open(cocoEditorUrl, Date.now().toString())
     }
     // 清空回收站
   }, {
     key: "handleClearDeletedWork",
     value: function handleClearDeletedWork() {
       if (this.props.deleteWorkList.length === 0) {
-        return;
+        return
       }
       this.props.setConfirmDialogInfoAction({
         visible: true,
         isDangerous: true,
         content: "清空回收站所有作品，删除后无法恢复。",
         onConfirm: this.props.clearDeletedWorkAction
-      });
+      })
     }
   }, {
     key: "prevTemplate",
@@ -255,7 +255,7 @@ var WorkView = function (_React$Component) {
       this.templateListRef.scrollBy({
         left: -240 * 4,
         behavior: "smooth"
-      });
+      })
     }
   }, {
     key: "nextTemplate",
@@ -263,120 +263,120 @@ var WorkView = function (_React$Component) {
       this.templateListRef.scrollBy({
         left: 240 * 4,
         behavior: "smooth"
-      });
+      })
     }
   }, {
     key: "handleCreateScroll",
     value: function handleCreateScroll(e) {
-      var _this2 = this;
-      var _props = this.props;
-      var createWorkOffset = _props.createWorkOffset;
-      var createWorkIsLoaded = _props.createWorkIsLoaded;
-      var keyword = this.state.keyword;
+      var _this2 = this
+      var _props = this.props
+      var createWorkOffset = _props.createWorkOffset
+      var createWorkIsLoaded = _props.createWorkIsLoaded
+      var keyword = this.state.keyword
       // 已加载全部数据
 
       if (createWorkIsLoaded) {
-        return;
+        return
       }
       if (this.scroll_clock) {
-        clearTimeout(this.scroll_clock);
+        clearTimeout(this.scroll_clock)
       }
-      var target = e.target;
+      var target = e.target
       this.scroll_clock = setTimeout(function () {
-        var wrap_client_height = target.clientHeight;
-        var wrap_scroll_height = target.scrollHeight;
-        var wrap_scroll_top = target.scrollTop;
-        var location = wrap_scroll_height - wrap_scroll_top;
+        var wrap_client_height = target.clientHeight
+        var wrap_scroll_height = target.scrollHeight
+        var wrap_scroll_top = target.scrollTop
+        var location = wrap_scroll_height - wrap_scroll_top
         // 倒数第二行时开始拉取分页数据
-        var is_scrolled_bottom = Math.abs(location - wrap_client_height) < 800 ? true : false;
+        var is_scrolled_bottom = Math.abs(location - wrap_client_height) < 800 ? true : false
         if (is_scrolled_bottom && wrap_scroll_top) {
           _this2.props.getCreateWorkListAction({
             name: keyword,
             offset: createWorkOffset + 1
-          });
+          })
         }
-      }, 100);
+      }, 100)
     }
   }, {
     key: "handleCollScroll",
     value: function handleCollScroll(e) {
-      var _this3 = this;
-      var _props2 = this.props;
-      var collWorkOffset = _props2.collWorkOffset;
-      var collWorkIsLoaded = _props2.collWorkIsLoaded;
-      var keyword = this.state.keyword;
+      var _this3 = this
+      var _props2 = this.props
+      var collWorkOffset = _props2.collWorkOffset
+      var collWorkIsLoaded = _props2.collWorkIsLoaded
+      var keyword = this.state.keyword
       // 已加载全部数据
 
       if (collWorkIsLoaded) {
-        return;
+        return
       }
       if (this.scroll_clock) {
-        clearTimeout(this.scroll_clock);
+        clearTimeout(this.scroll_clock)
       }
-      var target = e.target;
+      var target = e.target
       this.scroll_clock = setTimeout(function () {
-        var wrap_client_height = target.clientHeight;
-        var wrap_scroll_height = target.scrollHeight;
-        var wrap_scroll_top = target.scrollTop;
-        var location = wrap_scroll_height - wrap_scroll_top;
+        var wrap_client_height = target.clientHeight
+        var wrap_scroll_height = target.scrollHeight
+        var wrap_scroll_top = target.scrollTop
+        var location = wrap_scroll_height - wrap_scroll_top
         // 倒数第二行时开始拉取分页数据
-        var is_scrolled_bottom = Math.abs(location - wrap_client_height) < 800 ? true : false;
+        var is_scrolled_bottom = Math.abs(location - wrap_client_height) < 800 ? true : false
         if (is_scrolled_bottom && wrap_scroll_top) {
           _this3.props.getCollWorkListAction({
             name: keyword,
             offset: collWorkOffset + 1
-          });
+          })
         }
-      }, 100);
+      }, 100)
     }
   }, {
     key: "handleDeleteScroll",
     value: function handleDeleteScroll(e) {
-      var _this4 = this;
-      var _props3 = this.props;
-      var deleteWorkOffset = _props3.deleteWorkOffset;
-      var deleteWorkIsLoaded = _props3.deleteWorkIsLoaded; // 已加载全部数据
+      var _this4 = this
+      var _props3 = this.props
+      var deleteWorkOffset = _props3.deleteWorkOffset
+      var deleteWorkIsLoaded = _props3.deleteWorkIsLoaded // 已加载全部数据
       if (deleteWorkIsLoaded) {
-        return;
+        return
       }
       if (this.scroll_clock) {
-        clearTimeout(this.scroll_clock);
+        clearTimeout(this.scroll_clock)
       }
-      var target = e.target;
+      var target = e.target
       this.scroll_clock = setTimeout(function () {
-        var wrap_client_height = target.clientHeight;
-        var wrap_scroll_height = target.scrollHeight;
-        var wrap_scroll_top = target.scrollTop;
-        var location = wrap_scroll_height - wrap_scroll_top;
+        var wrap_client_height = target.clientHeight
+        var wrap_scroll_height = target.scrollHeight
+        var wrap_scroll_top = target.scrollTop
+        var location = wrap_scroll_height - wrap_scroll_top
         // 倒数第二行时开始拉取分页数据
-        var is_scrolled_bottom = Math.abs(location - wrap_client_height) < 800 ? true : false;
+        var is_scrolled_bottom = Math.abs(location - wrap_client_height) < 800 ? true : false
         if (is_scrolled_bottom && wrap_scroll_top) {
           _this4.props.getDeleteWorkListAction({
             offset: deleteWorkOffset + 1
-          });
+          })
         }
-      }, 100);
+      }, 100)
     }
     // 作品类型、搜索
   }, {
     key: "renderWorkFilter",
     value: function renderWorkFilter() {
-      var _this5 = this;
-      var _state = this.state;
-      var workType = _state.workType;
-      var keyword = _state.keyword;
+      var _this5 = this
+      var _state = this.state
+      var workType = _state.workType
+      var keyword = _state.keyword
       return __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
         styleName: "workCategory"
       }, __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
         styleName: "workType"
       }, __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
         onClick: function onClick() {
-          return _this5.handleSwitchWorkType(__WEBPACK_IMPORTED_MODULE_3__model_interface__.EWorkType.CREATE);
+          return _this5.handleSwitchWorkType(__WEBPACK_IMPORTED_MODULE_3__model_interface__.EWorkType.CREATE)
         },
         styleName: __WEBPACK_IMPORTED_MODULE_2_classnames___default("typeItem", workType === __WEBPACK_IMPORTED_MODULE_3__model_interface__.EWorkType.CREATE && "active")
       }, "我创建的"), __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
         onClick: function onClick() {
-          return _this5.handleSwitchWorkType(__WEBPACK_IMPORTED_MODULE_3__model_interface__.EWorkType.COLL);
+          return _this5.handleSwitchWorkType(__WEBPACK_IMPORTED_MODULE_3__model_interface__.EWorkType.COLL)
         },
         styleName: __WEBPACK_IMPORTED_MODULE_2_classnames___default("typeItem", workType === __WEBPACK_IMPORTED_MODULE_3__model_interface__.EWorkType.COLL && "active")
       }, "我参与的")), __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
@@ -384,7 +384,7 @@ var WorkView = function (_React$Component) {
       }, workType === __WEBPACK_IMPORTED_MODULE_3__model_interface__.EWorkType.CREATE && __WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_7__components_Input__.default, {
         value: keyword,
         ref: function ref(e) {
-          return _this5.keywordRef = e;
+          return _this5.keywordRef = e
         },
         onClearCallback: this.handleClearInput,
         styleName: "searchInput",
@@ -399,21 +399,21 @@ var WorkView = function (_React$Component) {
       }), __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
         styleName: "recoverBtn",
         onClick: function onClick() {
-          return _this5.handleToggleRecoverVisible(true);
+          return _this5.handleToggleRecoverVisible(true)
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_6__components_IconFont__.default, {
         type: "icon-deleted",
         styleName: "icon"
-      }), "回收站")));
+      }), "回收站")))
     }
     // 模版
   }, {
     key: "renderTemplate",
     value: function renderTemplate() {
-      var _this6 = this;
-      var _props4 = this.props;
-      var templateList = _props4.templateList;
-      var userInfo = _props4.userInfo;
+      var _this6 = this
+      var _props4 = this.props
+      var templateList = _props4.templateList
+      var userInfo = _props4.userInfo
       return __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
         styleName: __WEBPACK_IMPORTED_MODULE_2_classnames___default("templateBox", !userInfo && "notLogin")
       }, __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
@@ -430,7 +430,7 @@ var WorkView = function (_React$Component) {
       }, __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
         styleName: __WEBPACK_IMPORTED_MODULE_2_classnames___default("btnItem"),
         onClick: function onClick() {
-          return _this6.prevTemplate();
+          return _this6.prevTemplate()
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_6__components_IconFont__.default, {
         type: "icon-next",
@@ -438,40 +438,40 @@ var WorkView = function (_React$Component) {
       })), __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
         styleName: "btnItem",
         onClick: function onClick() {
-          return _this6.nextTemplate();
+          return _this6.nextTemplate()
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_6__components_IconFont__.default, {
         type: "icon-next"
       })))), __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
         styleName: "templateList",
         ref: function ref(e) {
-          return _this6.templateListRef = e;
+          return _this6.templateListRef = e
         }
       }, templateList.map(function (item) {
         return __WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_5__components_TemplateItem__.default, {
           key: item.id,
           item: item
-        });
-      })));
+        })
+      })))
     }
     // 用户作品
   }, {
     key: "renderUserContent",
     value: function renderUserContent() {
-      var _this7 = this;
-      var _state2 = this.state;
-      var workType = _state2.workType;
-      var keyword = _state2.keyword;
-      var _props5 = this.props;
-      var createWorkList = _props5.createWorkList;
-      var collWorkList = _props5.collWorkList;
-      var userInfo = _props5.userInfo;
+      var _this7 = this
+      var _state2 = this.state
+      var workType = _state2.workType
+      var keyword = _state2.keyword
+      var _props5 = this.props
+      var createWorkList = _props5.createWorkList
+      var collWorkList = _props5.collWorkList
+      var userInfo = _props5.userInfo
       createWorkList.forEach(function (item) {
-        return item.role = 1;
-      });
+        return item.role = 1
+      })
       collWorkList.forEach(function (item) {
-        return item.role = 2;
-      });
+        return item.role = 2
+      })
       return __WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_0_react__.Fragment, null, __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
         styleName: "userWorkBox"
       }, this.renderWorkFilter(), workType === __WEBPACK_IMPORTED_MODULE_3__model_interface__.EWorkType.CREATE && __WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_0_react__.Fragment, null, createWorkList.length > 0 && __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
@@ -483,9 +483,9 @@ var WorkView = function (_React$Component) {
           item: item,
           workType: __WEBPACK_IMPORTED_MODULE_3__model_interface__.EWorkType.CREATE,
           callback: function callback() {
-            return _this7.props.getCreateWorkListAction(keyword);
+            return _this7.props.getCreateWorkListAction(keyword)
           }
-        });
+        })
       })), createWorkList.length == 0 && __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
         styleName: __WEBPACK_IMPORTED_MODULE_2_classnames___default("noData", userInfo && !userInfo.isNewUser && "oldUser")
       }, keyword && __WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_0_react__.Fragment, null, __WEBPACK_IMPORTED_MODULE_0_react__.createElement("img", {
@@ -514,9 +514,9 @@ var WorkView = function (_React$Component) {
           item: item,
           workType: __WEBPACK_IMPORTED_MODULE_3__model_interface__.EWorkType.COLL,
           callback: function callback() {
-            return _this7.props.getCollWorkListAction(keyword);
+            return _this7.props.getCollWorkListAction(keyword)
           }
-        });
+        })
       })), collWorkList.length == 0 && __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
         styleName: __WEBPACK_IMPORTED_MODULE_2_classnames___default("noData", userInfo && !userInfo.isNewUser && "oldUser")
       }, keyword && __WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_0_react__.Fragment, null, __WEBPACK_IMPORTED_MODULE_0_react__.createElement("img", {
@@ -530,17 +530,17 @@ var WorkView = function (_React$Component) {
         alt: ""
       }), __WEBPACK_IMPORTED_MODULE_0_react__.createElement("span", {
         styleName: "noWorkTips"
-      }, "你还没有任何协作作品"))))), userInfo && userInfo.isNewUser && this.renderTemplate());
+      }, "你还没有任何协作作品"))))), userInfo && userInfo.isNewUser && this.renderTemplate())
     }
     // 回收站
   }, {
     key: "renderRecover",
     value: function renderRecover() {
-      var _this8 = this;
-      var _state3 = this.state;
-      var workType = _state3.workType;
-      var keyword = _state3.keyword;
-      var deleteWorkList = this.props.deleteWorkList;
+      var _this8 = this
+      var _state3 = this.state
+      var workType = _state3.workType
+      var keyword = _state3.keyword
+      var deleteWorkList = this.props.deleteWorkList
       return __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
         styleName: "content"
       }, __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
@@ -550,7 +550,7 @@ var WorkView = function (_React$Component) {
       }, __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
         styleName: "back",
         onClick: function onClick() {
-          return _this8.handleToggleRecoverVisible(false);
+          return _this8.handleToggleRecoverVisible(false)
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_6__components_IconFont__.default, {
         type: "icon-next",
@@ -578,32 +578,32 @@ var WorkView = function (_React$Component) {
               _this8.props.getCreateWorkListAction({
                 name: keyword,
                 offset: 0
-              });
+              })
             } else {
               _this8.props.getCollWorkListAction({
                 name: keyword,
                 offset: 1
-              });
+              })
             }
           }
-        });
-      })));
+        })
+      })))
     }
   }, {
     key: "render",
     value: function render() {
-      var recoverVisible = this.state.recoverVisible;
-      var _props6 = this.props;
-      var userInfo = _props6.userInfo;
-      var userInfoFetchDone = _props6.userInfoFetchDone;
+      var recoverVisible = this.state.recoverVisible
+      var _props6 = this.props
+      var userInfo = _props6.userInfo
+      var userInfoFetchDone = _props6.userInfoFetchDone
       if (!userInfoFetchDone) {
-        return null;
+        return null
       }
       // 显示回收站
       if (recoverVisible) {
         return __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
           styleName: "work"
-        }, this.renderRecover());
+        }, this.renderRecover())
       }
       return __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
         styleName: "work"
@@ -635,13 +635,13 @@ var WorkView = function (_React$Component) {
         onClick: this.handleLogin
       }, "去登录")), this.renderTemplate()), userInfo && __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
         styleName: "workContent"
-      }, this.renderUserContent()));
+      }, this.renderUserContent()))
     }
-  }]);
-  return WorkView;
-}(__WEBPACK_IMPORTED_MODULE_0_react__.Component);
+  }])
+  return WorkView
+}(__WEBPACK_IMPORTED_MODULE_0_react__.Component)
 WorkView = __decorate([__WEBPACK_IMPORTED_MODULE_1_react_css_modules__(styles, {
   allowMultiple: true
-})], WorkView);
+})], WorkView)
 
 /***/

@@ -4,25 +4,25 @@
  * 模块 ID：H1i2
  */
 
-"use strict";
+"use strict"
 
 /* unused harmony export PlayerLoader */
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__ from "@babel/runtime/helpers/esm/slicedToArray";
+import * as __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__ from "@babel/runtime/helpers/esm/slicedToArray"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_1_babel_plugin_react_css_modules_dist_browser_getClassName__ from "babel-plugin-react-css-modules/dist/browser/getClassName";
+import * as __WEBPACK_IMPORTED_MODULE_1_babel_plugin_react_css_modules_dist_browser_getClassName__ from "babel-plugin-react-css-modules/dist/browser/getClassName"
 /* harmony import */
-import __WEBPACK_IMPORTED_MODULE_1_babel_plugin_react_css_modules_dist_browser_getClassName___default from "babel-plugin-react-css-modules/dist/browser/getClassName";
+import __WEBPACK_IMPORTED_MODULE_1_babel_plugin_react_css_modules_dist_browser_getClassName___default from "babel-plugin-react-css-modules/dist/browser/getClassName"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_2_react__ from "react";
+import * as __WEBPACK_IMPORTED_MODULE_2_react__ from "react"
 /* harmony import */
-import __WEBPACK_IMPORTED_MODULE_2_react___default from "react";
+import __WEBPACK_IMPORTED_MODULE_2_react___default from "react"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_3__base_progress_bar_index__ from "../../base/progress/bar-ajTa";
+import * as __WEBPACK_IMPORTED_MODULE_3__base_progress_bar_index__ from "../../base/progress/bar-ajTa"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_4__style_module_css__ from "./style.module.css-6USV";
+import * as __WEBPACK_IMPORTED_MODULE_4__style_module_css__ from "./style.module.css-6USV"
 /* harmony import */
-import __WEBPACK_IMPORTED_MODULE_4__style_module_css___default from "./style.module.css-6USV";
+import __WEBPACK_IMPORTED_MODULE_4__style_module_css___default from "./style.module.css-6USV"
 var _styleModuleImportMap = {
   "./style_module.css": {
     "loader-wrapper": "CUI-player-loader-loader-wrapper",
@@ -45,7 +45,7 @@ var _styleModuleImportMap = {
     "cloud-5": "CUI-player-loader-cloud-5",
     "cloud-5-copy": "CUI-player-loader-cloud-5-copy"
   }
-};
+}
 var CLOUDS_MAP = {
   "cloud-1": 2.027,
   "cloud-2": 2.1428,
@@ -57,36 +57,36 @@ var CLOUDS_MAP = {
   "cloud-3-copy": 1.7045,
   "cloud-4-copy": 1.4423,
   "cloud-5-copy": 1.3157
-};
+}
 var PlayerLoader = function PlayerLoader(props) {
-  var percent = props.percent;
-  var promptText = props.promptText;
-  var style = props.style;
-  var status = props.status ? props.status : "loading";
-  var loader = __WEBPACK_IMPORTED_MODULE_2_react__.useRef(null);
-  var _useState = __WEBPACK_IMPORTED_MODULE_2_react__.useState(1);
-  var _useState2 = __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default(_useState, 2);
-  var animationDurRatio = _useState2[0];
-  var setAnimationDurRatio = _useState2[1];
+  var percent = props.percent
+  var promptText = props.promptText
+  var style = props.style
+  var status = props.status ? props.status : "loading"
+  var loader = __WEBPACK_IMPORTED_MODULE_2_react__.useRef(null)
+  var _useState = __WEBPACK_IMPORTED_MODULE_2_react__.useState(1)
+  var _useState2 = __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default(_useState, 2)
+  var animationDurRatio = _useState2[0]
+  var setAnimationDurRatio = _useState2[1]
   __WEBPACK_IMPORTED_MODULE_2_react__.useEffect(function () {
-    var loaderEl = loader.current;
+    var loaderEl = loader.current
     var updateAnimationDur = function updateAnimationDur() {
       if (!loaderEl) {
-        return;
+        return
       }
-      var ratio = loaderEl.getBoundingClientRect().width / 375;
+      var ratio = loaderEl.getBoundingClientRect().width / 375
       if (ratio !== animationDurRatio) {
-        setAnimationDurRatio(ratio);
+        setAnimationDurRatio(ratio)
       }
-    };
-    updateAnimationDur();
-    window.addEventListener("resize", updateAnimationDur);
+    }
+    updateAnimationDur()
+    window.addEventListener("resize", updateAnimationDur)
     return function () {
-      window.removeEventListener("resize", updateAnimationDur);
-    };
-  }, []);
+      window.removeEventListener("resize", updateAnimationDur)
+    }
+  }, [])
   var getClouds = function getClouds(CLOUDS_MAP) {
-    var res = [];
+    var res = []
     for (var cloudName in CLOUDS_MAP) {
       res.push(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_2_react___default.createElement("div", {
         key: cloudName,
@@ -97,10 +97,10 @@ var PlayerLoader = function PlayerLoader(props) {
           "autoResolveMultipleImports": true,
           "handleMissingStyleName": "throw"
         })
-      }));
+      }))
     }
-    return res;
-  };
+    return res
+  }
   return /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_2_react___default.createElement("div", {
     ref: loader,
     className: "CUI-player-loader-loader-wrapper",
@@ -108,7 +108,7 @@ var PlayerLoader = function PlayerLoader(props) {
   }, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_2_react___default.createElement("div", null, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_2_react___default.createElement("div", {
     className: "CUI-player-loader-animation"
   }, __WEBPACK_IMPORTED_MODULE_2_react__.useMemo(function () {
-    return getClouds(CLOUDS_MAP);
+    return getClouds(CLOUDS_MAP)
   }, [status]), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_2_react___default.createElement("div", {
     className: "CUI-player-loader-progress-bar"
   }, __WEBPACK_IMPORTED_MODULE_2_react__.useMemo(function () {
@@ -117,7 +117,7 @@ var PlayerLoader = function PlayerLoader(props) {
         "autoResolveMultipleImports": true,
         "handleMissingStyleName": "throw"
       })
-    });
+    })
   }, [status]), status === "loading" && /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_2_react___default.createElement(__WEBPACK_IMPORTED_MODULE_3__base_progress_bar_index__.ProgressBar, {
     width: 238,
     height: 4,
@@ -127,7 +127,7 @@ var PlayerLoader = function PlayerLoader(props) {
     noText: true
   }), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_2_react___default.createElement("div", {
     className: "CUI-player-loader-text"
-  }, promptText)))));
-};
+  }, promptText)))))
+}
 
 /***/

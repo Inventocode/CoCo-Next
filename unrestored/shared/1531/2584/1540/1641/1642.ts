@@ -4,10 +4,10 @@
  * 模块 ID：1642
  */
 
-"use strict";
+"use strict"
 
-var r = require("./1065");
-var o = require("../1253/825");
+var r = require("./1065")
+var o = require("../1253/825")
 module.exports = r ? {}.toString : function () {
-  return "[object " + o(this) + "]";
-};
+  return "[object " + o(this) + "]"
+}

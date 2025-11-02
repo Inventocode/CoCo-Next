@@ -5,8 +5,8 @@
  */
 
 module.exports = function (e) {
-  var t = this.__data__;
-  var n = t.delete(e);
-  this.size = t.size;
-  return n;
-};
+  var this$__data__ = this.__data__
+  var n = this$__data__.delete(e)
+  this.size = this$__data__.size
+  return n
+}

@@ -4,28 +4,28 @@
  * 模块 ID：397
  */
 
-"use strict";
+"use strict"
 
-export { s as b };
-var r = {};
+export { s as b }
+var r = {}
 function o(e, t) {
-  0;
+  0
 }
 function i(e, t) {
-  0;
+  0
 }
 function a(e, t, n) {
   if (!(t || r[n])) {
-    e(false, n);
-    r[n] = true;
+    e(false, n)
+    r[n] = true
   }
 }
 function s(e, t) {
-  a(i, e, t);
+  a(i, e, t)
 }
-var _a;
+var _a
 _a = function (e, t) {
-  a(o, e, t);
-};
-export { _a as a };
-export default _a;
+  a(o, e, t)
+}
+export { _a as a }
+export default _a

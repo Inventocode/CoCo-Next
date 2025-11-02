@@ -4,27 +4,27 @@
  * 模块 ID：1970
  */
 
-var r = require("./529");
-var i = require("./1099");
-var o = require("./1971");
-var a = require("./1972");
+var r = require("./529")
+var i = require("./1099")
+var o = require("./1971")
+var a = require("./1972")
 function s(t) {
-  var n = "function" === typeof Map ? new Map() : undefined;
+  var n = "function" === typeof Map ? new Map() : undefined
   module.exports = s = function (e) {
     if (null === e || !o(e)) {
-      return e;
+      return e
     }
     if ("function" !== typeof e) {
-      throw new TypeError("Super expression must either be null or a function");
+      throw new TypeError("Super expression must either be null or a function")
     }
     if ("undefined" !== typeof n) {
       if (n.has(e)) {
-        return n.get(e);
+        return n.get(e)
       }
-      n.set(e, t);
+      n.set(e, t)
     }
     function t() {
-      return a(e, arguments, r(this).constructor);
+      return a(e, arguments, r(this).constructor)
     }
     t.prototype = Object.create(e.prototype, {
       constructor: {
@@ -33,9 +33,9 @@ function s(t) {
         writable: true,
         configurable: true
       }
-    });
-    return i(t, e);
-  };
-  return s(t);
+    })
+    return i(t, e)
+  }
+  return s(t)
 }
-module.exports = s;
+module.exports = s

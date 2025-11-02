@@ -4,7 +4,7 @@
  * 模块 ID：612
  */
 
-"use strict";
+"use strict"
 
-var r = require("./2627/790/index");
-exports.a = r.b;
+var r = require("./2627/790/index")
+exports.a = r.b

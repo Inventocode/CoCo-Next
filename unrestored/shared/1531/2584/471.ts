@@ -17,4 +17,4 @@ module.exports = {
   courseMore: "styles_courseMore__2Prh3",
   moreImage: "styles_moreImage__2LeuN",
   moreTips: "styles_moreTips__18-Vk"
-};
+}

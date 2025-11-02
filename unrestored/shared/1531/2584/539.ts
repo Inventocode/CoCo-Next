@@ -4,11 +4,11 @@
  * 模块 ID：539
  */
 
-"use strict";
+"use strict"
 
-export { r as a };
-export { o as b };
-var r = "PEDOMETER_WIDGET";
+export { r as a }
+export { o as b }
+var r = "PEDOMETER_WIDGET"
 var o = {
   type: r,
   icon: "icon-widget-pedometer",
@@ -62,5 +62,5 @@ var o = {
       icon: "%{BKY_BLOCK_PEDOMETER_ICON}"
     }
   }]
-};
-export default r;
+}
+export default r

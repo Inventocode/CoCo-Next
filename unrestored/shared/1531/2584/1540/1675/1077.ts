@@ -4,9 +4,9 @@
  * 模块 ID：1077
  */
 
-"use strict";
+"use strict"
 
-var r = require("../1745/946").charAt;
+var require$$1745946$charAt = require("../1745/946").charAt
 module.exports = function (e, t, n) {
-  return t + (n ? r(e, t).length : 1);
-};
+  return t + (n ? require$$1745946$charAt(e, t).length : 1)
+}

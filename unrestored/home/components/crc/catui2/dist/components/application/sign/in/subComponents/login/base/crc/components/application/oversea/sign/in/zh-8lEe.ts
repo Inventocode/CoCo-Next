@@ -4,10 +4,10 @@
  * 模块 ID：8lEe
  */
 
-"use strict";
+"use strict"
 
 /* harmony export (binding) */
-export { zh };
+export { zh }
 var zh = {
   "sign_in_dialog/error/password_confirm/not_same": "两次输入的密码不一致，请重新输入",
   "sign_in_dialog/error/phone/unregisterd": "手机号未注册，",
@@ -54,6 +54,6 @@ var zh = {
   "sign_in_dialog/forget_password/entry": "忘记密码？",
   "sign_in_dialog/already_has_account": "已经有账号了？去登录！",
   "sign_in_dialog/register/confirm": "确定"
-};
+}
 
 /***/

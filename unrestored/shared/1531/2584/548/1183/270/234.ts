@@ -4,14 +4,14 @@
  * 模块 ID：234
  */
 
-"use strict";
+"use strict"
 
-export { i as a };
+export { i as a }
 import r = require("./1506");
 function i(e) {
   if ("string" !== typeof e) {
-    throw new Error(r.a(7));
+    throw new Error(r.a(7))
   }
-  return e.charAt(0).toUpperCase() + e.slice(1);
+  return e.charAt(0).toUpperCase() + e.slice(1)
 }
-export default i;
+export default i

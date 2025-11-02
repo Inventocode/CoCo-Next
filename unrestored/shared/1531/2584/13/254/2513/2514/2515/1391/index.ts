@@ -4,5 +4,5 @@
  * 模块 ID：1391
  */
 
-var r = require("./2415")();
-module.exports = r;
+var r = require("./2415")()
+module.exports = r

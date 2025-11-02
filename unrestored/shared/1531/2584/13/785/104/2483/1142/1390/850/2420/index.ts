@@ -4,16 +4,16 @@
  * 模块 ID：2420
  */
 
-var r = require("../../../../../../../254/2513/2514/2515/2516/1417/1149");
-var i = require("./2421");
-var o = Object.prototype.hasOwnProperty;
+var r = require("../../../../../../../254/2513/2514/2515/2516/1417/1149")
+var i = require("./2421")
+var object$prototype$hasOwnProperty = Object.prototype.hasOwnProperty
 module.exports = function (e) {
   if (!r(e)) {
-    return i(e);
+    return i(e)
   }
-  var t = [];
-  for (var n in Object(e)) if (o.call(e, n) && "constructor" != n) {
-    t.push(n);
+  var t = []
+  for (var n in Object(e)) if (object$prototype$hasOwnProperty.call(e, n) && "constructor" != n) {
+    t.push(n)
   }
-  return t;
-};
+  return t
+}

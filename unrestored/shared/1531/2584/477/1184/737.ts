@@ -4,63 +4,63 @@
  * 模块 ID：737
  */
 
-"use strict";
+"use strict"
 
-export { i as d };
-export { o as c };
-export { a as b };
-export { s as a };
+export { i as d }
+export { o as c }
+export { a as b }
+export { s as a }
 import r = require("./306");
 function i(e, t) {
   if (undefined === t) {
-    t = 0;
+    t = 0
   }
-  return "string" !== typeof e || 0 === t || e.length <= t ? e : e.substr(0, t) + "...";
+  return "string" !== typeof e || 0 === t || e.length <= t ? e : e.substr(0, t) + "..."
 }
 function o(e, t) {
-  var n = e;
-  var r = n.length;
-  if (r <= 150) {
-    return n;
+  var n = e
+  var n$length = n.length
+  if (n$length <= 150) {
+    return n
   }
-  if (t > r) {
-    t = r;
+  if (t > n$length) {
+    t = n$length
   }
-  var i = Math.max(t - 60, 0);
+  var i = Math.max(t - 60, 0)
   if (i < 5) {
-    i = 0;
+    i = 0
   }
-  var o = Math.min(i + 140, r);
-  if (o > r - 5) {
-    o = r;
+  var o = Math.min(i + 140, n$length)
+  if (o > n$length - 5) {
+    o = n$length
   }
-  if (o === r) {
-    i = Math.max(o - 140, 0);
+  if (o === n$length) {
+    i = Math.max(o - 140, 0)
   }
-  n = n.slice(i, o);
+  n = n.slice(i, o)
   if (i > 0) {
-    n = "'{snip} " + n;
+    n = "'{snip} " + n
   }
-  if (o < r) {
-    n += " {snip}";
+  if (o < n$length) {
+    n += " {snip}"
   }
-  return n;
+  return n
 }
 function a(e, t) {
   if (!Array.isArray(e)) {
-    return "";
+    return ""
   }
   for (var n = [], r = 0; r < e.length; r++) {
-    var i = e[r];
+    var i = e[r]
     try {
-      n.push(String(i));
+      n.push(String(i))
     } catch (o) {
-      n.push("[value cannot be serialized]");
+      n.push("[value cannot be serialized]")
     }
   }
-  return n.join(t);
+  return n.join(t)
 }
 function s(e, t) {
-  return !!r.k(e) && (r.j(t) ? t.test(e) : "string" === typeof t && -1 !== e.indexOf(t));
+  return !!r.k(e) && (r.j(t) ? t.test(e) : "string" === typeof t && -1 !== e.indexOf(t))
 }
-export default s;
+export default s

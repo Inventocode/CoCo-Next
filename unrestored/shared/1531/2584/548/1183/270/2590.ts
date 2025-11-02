@@ -4,45 +4,45 @@
  * 模块 ID：2590
  */
 
-"use strict";
+"use strict"
 
-var r = require("../../../19");
-var i = require("../../../54");
-var o = require("react");
-require("../../../50/index");
-var a = require("../100");
-var s = require("./153/index");
-var c = require("./395");
-var u = require("./2625/1507");
-var l = require("./234");
+var r = require("../../../19")
+var i = require("../../../54")
+var o = require("react")
+require("../../../50/index")
+var a = require("../100")
+var s = require("./153/index")
+var c = require("./395")
+var u = require("./2625/1507")
+var l = require("./234")
 var f = o.forwardRef(function (e, t) {
-  var n = e.edge;
-  var s = undefined !== n && n;
-  var c = e.children;
-  var f = e.classes;
-  var d = e.className;
-  var h = e.color;
-  var p = undefined === h ? "default" : h;
-  var _ = e.disabled;
-  var A = undefined !== _ && _;
-  var g = e.disableFocusRipple;
-  var v = undefined !== g && g;
-  var m = e.size;
-  var y = undefined === m ? "medium" : m;
-  var b = i.a(e, ["edge", "children", "classes", "className", "color", "disabled", "disableFocusRipple", "size"]);
+  var e$edge = e.edge
+  var s = undefined !== e$edge && e$edge
+  var e$children = e.children
+  var e$classes = e.classes
+  var e$className = e.className
+  var e$color = e.color
+  var p = undefined === e$color ? "default" : e$color
+  var e$disabled = e.disabled
+  var A = undefined !== e$disabled && e$disabled
+  var e$disableFocusRipple = e.disableFocusRipple
+  var v = undefined !== e$disableFocusRipple && e$disableFocusRipple
+  var e$size = e.size
+  var y = undefined === e$size ? "medium" : e$size
+  var b = i.a(e, ["edge", "children", "classes", "className", "color", "disabled", "disableFocusRipple", "size"])
   return o.createElement(u.a, r.a({
-    className: a.a(f.root, d, "default" !== p && f["color".concat(l.a(p))], A && f.disabled, "small" === y && f["size".concat(l.a(y))], {
-      start: f.edgeStart,
-      end: f.edgeEnd
+    className: a.a(e$classes.root, e$className, "default" !== p && e$classes["color".concat(l.a(p))], A && e$classes.disabled, "small" === y && e$classes["size".concat(l.a(y))], {
+      start: e$classes.edgeStart,
+      end: e$classes.edgeEnd
     }[s]),
     centerRipple: true,
     focusRipple: !v,
     disabled: A,
     ref: t
   }, b), o.createElement("span", {
-    className: f.label
-  }, c));
-});
+    className: e$classes.label
+  }, e$children))
+})
 exports.a = s.a(function (e) {
   return {
     root: {
@@ -111,7 +111,7 @@ exports.a = s.a(function (e) {
       alignItems: "inherit",
       justifyContent: "inherit"
     }
-  };
+  }
 }, {
   name: "MuiIconButton"
-})(f);
+})(f)

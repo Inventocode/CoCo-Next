@@ -4,19 +4,19 @@
  * 模块 ID：1543
  */
 
-var r = require("../../1738/231");
-var o = require("../../1541/819");
-var i = require("../../1742/247/index")("species");
+var r = require("../../1738/231")
+var o = require("../../1541/819")
+var i = require("../../1742/247/index")("species")
 module.exports = function (e) {
-  var t;
+  var t
   if (o(e)) {
     if ("function" != typeof (t = e.constructor) || t !== Array && !o(t.prototype)) {
       if (r(t) && null === (t = t[i])) {
-        t = undefined;
+        t = undefined
       }
     } else {
-      t = undefined;
+      t = undefined
     }
   }
-  return undefined === t ? Array : t;
-};
+  return undefined === t ? Array : t
+}

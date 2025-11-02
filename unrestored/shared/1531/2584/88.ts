@@ -51,4 +51,4 @@ module.exports = {
   selectedIcon: "StyleForm_selectedIcon__2QPjw",
   disabled: "StyleForm_disabled__bum6S",
   selected: "StyleForm_selected__1RiuQ"
-};
+}

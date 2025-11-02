@@ -4,7 +4,7 @@
  * 模块 ID：826
  */
 
-var r = require("../1736/167");
+var r = require("../1736/167")
 module.exports = !r(function () {
-  return Object.isExtensible(Object.preventExtensions({}));
-});
+  return Object.isExtensible(Object.preventExtensions({}))
+})

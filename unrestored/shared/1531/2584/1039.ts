@@ -13,4 +13,4 @@ module.exports = {
   expanded: "DevTools_expanded__TRAoa",
   iconContainer: "DevTools_iconContainer__3i-Fb",
   toolContent: "DevTools_toolContent__2_AQC"
-};
+}

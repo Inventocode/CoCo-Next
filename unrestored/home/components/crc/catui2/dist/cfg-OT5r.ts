@@ -4,19 +4,19 @@
  * 模块 ID：OT5r
  */
 
-"use strict";
+"use strict"
 
 /* harmony export (binding) */
 /* harmony export (binding) */
-export { setEnv };
-export { getConfig };
-var currentEnv = "production";
+export { setEnv }
+export { getConfig }
+var currentEnv = "production"
 // 通用配置
 var CONFIG = {
   thirdPartyLoginPrefix: "https://www.codemao.cn",
   wechatAppId: "wxeda82dc272f7fe92",
   qqAppId: "101253342"
-}; // 各环境配置
+} // 各环境配置
 var ENV_CONFIG = {
   development: {
     api: {
@@ -98,22 +98,22 @@ var ENV_CONFIG = {
     irisEnv: "prod",
     redirectUrl: "https://shequ.codemao.cn"
   }
-};
+}
 /**
  * 设置环境值（将会影响应用组件中使用到的后端域名等）
  * @param env 'dev' | 'test' | 'staging' | 'production'
  */
 var setEnv = function setEnv(env) {
   if (["development", "test", "staging", "production"].indexOf(env) < 0) {
-    return;
+    return
   }
-  currentEnv = env;
-};
+  currentEnv = env
+}
 /**
  * 获取当前环境配置
  */
 var getConfig = function getConfig() {
-  return Object.assign({}, CONFIG, ENV_CONFIG[currentEnv]);
-};
+  return Object.assign({}, CONFIG, ENV_CONFIG[currentEnv])
+}
 
 /***/

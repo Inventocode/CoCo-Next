@@ -5,5 +5,5 @@
  */
 
 module.exports = function (e) {
-  return e;
-};
+  return e
+}

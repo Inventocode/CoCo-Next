@@ -4,212 +4,212 @@
  * 模块 ID：261
  */
 
-"use strict";
+"use strict"
 
-export { l as a };
-import * as n from "../81/index";
-import * as o from "./599";
+export { l as a }
+import * as n from "../81/index"
+import * as o from "./599"
 function i() {
-  return "undefined" !== typeof navigator;
+  return "undefined" !== typeof navigator
 }
 function a() {
-  return !!(i() && navigator.mediaDevices && navigator.mediaDevices.enumerateDevices);
+  return !!(i() && navigator.mediaDevices && navigator.mediaDevices.enumerateDevices)
 }
 var u = function () {
   return (u = Object.assign || function (t) {
-    for (var e, r = 1, n = arguments.length; r < n; r++) {
+    for (var e, r = 1, arguments$length = arguments.length; r < arguments$length; r++) {
       for (var o in e = arguments[r]) if (Object.prototype.hasOwnProperty.call(e, o)) {
-        t[o] = e[o];
+        t[o] = e[o]
       }
     }
-    return t;
-  }).apply(this, arguments);
-};
+    return t
+  }).apply(this, arguments)
+}
 var s = function (t, e, r, n) {
   return new (r || (r = Promise))(function (o, i) {
     function a(t) {
       try {
-        s(n.next(t));
+        s(n.next(t))
       } catch (e) {
-        i(e);
+        i(e)
       }
     }
     function u(t) {
       try {
-        s(n.throw(t));
+        s(n.throw(t))
       } catch (e) {
-        i(e);
+        i(e)
       }
     }
     function s(t) {
-      var e;
+      var /* [auto-meaningful-name] */t$value
       if (t.done) {
-        o(t.value);
+        o(t.value)
       } else {
-        (e = t.value, e instanceof r ? e : new r(function (t) {
-          t(e);
-        })).then(a, u);
+        (t$value = t.value, t$value instanceof r ? t$value : new r(function (t) {
+          t(t$value)
+        })).then(a, u)
       }
     }
-    s((n = n.apply(t, e || [])).next());
-  });
-};
+    s((n = n.apply(t, e || [])).next())
+  })
+}
 var c = function (t, e) {
-  var r;
-  var n;
-  var o;
-  var i;
+  var r
+  var n
+  var o
+  var i
   var a = {
     label: 0,
     sent: function () {
       if (1 & o[0]) {
-        throw o[1];
+        throw o[1]
       }
-      return o[1];
+      return o[1]
     },
     trys: [],
     ops: []
-  };
+  }
   i = {
     next: u(0),
     throw: u(1),
     return: u(2)
-  };
+  }
   if ("function" === typeof Symbol) {
     i[Symbol.iterator] = function () {
-      return this;
-    };
+      return this
+    }
   }
-  return i;
+  return i
   function u(i) {
     return function (u) {
       return function (i) {
         if (r) {
-          throw new TypeError("Generator is already executing.");
+          throw new TypeError("Generator is already executing.")
         }
         for (; a;) {
           try {
-            r = 1;
+            r = 1
             if (n && (o = 2 & i[0] ? n.return : i[0] ? n.throw || ((o = n.return) && o.call(n), 0) : n.next) && !(o = o.call(n, i[1])).done) {
-              return o;
+              return o
             }
             switch (n = 0, o && (i = [2 & i[0], o.value]), i[0]) {
               case 0:
               case 1:
-                o = i;
-                break;
+                o = i
+                break
               case 4:
-                a.label++;
+                a.label++
                 return {
                   value: i[1],
                   done: false
-                };
+                }
               case 5:
-                a.label++;
-                n = i[1];
-                i = [0];
-                continue;
+                a.label++
+                n = i[1]
+                i = [0]
+                continue
               case 7:
-                i = a.ops.pop();
-                a.trys.pop();
-                continue;
+                i = a.ops.pop()
+                a.trys.pop()
+                continue
               default:
                 if (!(o = (o = a.trys).length > 0 && o[o.length - 1]) && (6 === i[0] || 2 === i[0])) {
-                  a = 0;
-                  continue;
+                  a = 0
+                  continue
                 }
                 if (3 === i[0] && (!o || i[1] > o[0] && i[1] < o[3])) {
-                  a.label = i[1];
-                  break;
+                  a.label = i[1]
+                  break
                 }
                 if (6 === i[0] && a.label < o[1]) {
-                  a.label = o[1];
-                  o = i;
-                  break;
+                  a.label = o[1]
+                  o = i
+                  break
                 }
                 if (o && a.label < o[2]) {
-                  a.label = o[2];
-                  a.ops.push(i);
-                  break;
+                  a.label = o[2]
+                  a.ops.push(i)
+                  break
                 }
                 if (o[2]) {
-                  a.ops.pop();
+                  a.ops.pop()
                 }
-                a.trys.pop();
-                continue;
+                a.trys.pop()
+                continue
             }
-            i = e.call(t, a);
+            i = e.call(t, a)
           } catch (u) {
-            i = [6, u];
-            n = 0;
+            i = [6, u]
+            n = 0
           } finally {
-            r = o = 0;
+            r = o = 0
           }
         }
         if (5 & i[0]) {
-          throw i[1];
+          throw i[1]
         }
         return {
           value: i[0] ? i[1] : undefined,
           done: true
-        };
-      }([i, u]);
-    };
+        }
+      }([i, u])
+    }
   }
-};
+}
 var f = function (t) {
-  var e = "function" === typeof Symbol && Symbol.iterator;
-  var r = e && t[e];
-  var n = 0;
+  var e = "function" === typeof Symbol && Symbol.iterator
+  var r = e && t[e]
+  var n = 0
   if (r) {
-    return r.call(t);
+    return r.call(t)
   }
   if (t && "number" === typeof t.length) {
     return {
       next: function () {
         if (t && n >= t.length) {
-          t = undefined;
+          t = undefined
         }
         return {
           value: t && t[n++],
           done: !t
-        };
+        }
       }
-    };
+    }
   }
-  throw new TypeError(e ? "Object is not iterable." : "Symbol.iterator is not defined.");
-};
+  throw new TypeError(e ? "Object is not iterable." : "Symbol.iterator is not defined.")
+}
 var h = {
   delayBetweenScanAttempts: 500,
   delayBetweenScanSuccess: 500,
   tryPlayVideoTimeout: 5e3
-};
+}
 var l = function () {
   function t(t, e, r) {
     if (undefined === e) {
-      e = new Map();
+      e = new Map()
     }
     if (undefined === r) {
-      r = {};
+      r = {}
     }
-    this.reader = t;
-    this.hints = e;
-    this.options = u(u({}, h), r);
+    this.reader = t
+    this.hints = e
+    this.options = u(u({}, h), r)
   }
   Object.defineProperty(t.prototype, "possibleFormats", {
     set: function (t) {
-      this.hints.set(n.DecodeHintType.POSSIBLE_FORMATS, t);
+      this.hints.set(n.DecodeHintType.POSSIBLE_FORMATS, t)
     },
     enumerable: false,
     configurable: true
-  });
+  })
   t.addVideoSource = function (t, e) {
     try {
-      t.srcObject = e;
+      t.srcObject = e
     } catch (r) {
-      t.src = URL.createObjectURL(e);
+      t.src = URL.createObjectURL(e)
     }
-  };
+  }
   t.mediaStreamSetTorch = function (t, e) {
     return s(this, undefined, undefined, function () {
       return c(this, function (r) {
@@ -220,573 +220,573 @@ var l = function () {
                 fillLightMode: e ? "flash" : "off",
                 torch: !!e
               }]
-            })];
+            })]
           case 1:
-            r.sent();
-            return [2];
+            r.sent()
+            return [2]
         }
-      });
-    });
-  };
+      })
+    })
+  }
   t.mediaStreamIsTorchCompatible = function (e) {
-    var r;
-    var n;
-    var o = e.getVideoTracks();
+    var r
+    var /* [auto-meaningful-name] */i$return
+    var o = e.getVideoTracks()
     try {
       for (var i = f(o), a = i.next(); !a.done; a = i.next()) {
-        var u = a.value;
-        if (t.mediaStreamIsTorchCompatibleTrack(u)) {
-          return true;
+        var a$value = a.value
+        if (t.mediaStreamIsTorchCompatibleTrack(a$value)) {
+          return true
         }
       }
     } catch (s) {
       r = {
         error: s
-      };
+      }
     } finally {
       try {
-        if (a && !a.done && (n = i.return)) {
-          n.call(i);
+        if (a && !a.done && (i$return = i.return)) {
+          i$return.call(i)
         }
       } finally {
         if (r) {
-          throw r.error;
+          throw r.error
         }
       }
     }
-    return false;
-  };
+    return false
+  }
   t.mediaStreamIsTorchCompatibleTrack = function (t) {
     try {
-      return "torch" in t.getCapabilities();
+      return "torch" in t.getCapabilities()
     } catch (e) {
-      console.error(e);
-      console.warn("Your browser may be not fully compatible with WebRTC and/or ImageCapture specs. Torch will not be available.");
-      return false;
+      console.error(e)
+      console.warn("Your browser may be not fully compatible with WebRTC and/or ImageCapture specs. Torch will not be available.")
+      return false
     }
-  };
+  }
   t.isVideoPlaying = function (t) {
-    return t.currentTime > 0 && !t.paused && t.readyState > 2;
-  };
+    return t.currentTime > 0 && !t.paused && t.readyState > 2
+  }
   t.getMediaElement = function (t, e) {
-    var r = document.getElementById(t);
+    var r = document.getElementById(t)
     if (!r) {
-      throw new n.ArgumentException("element with id '" + t + "' not found");
+      throw new n.ArgumentException("element with id '" + t + "' not found")
     }
     if (r.nodeName.toLowerCase() !== e.toLowerCase()) {
-      throw new n.ArgumentException("element with id '" + t + "' must be an " + e + " element");
+      throw new n.ArgumentException("element with id '" + t + "' must be an " + e + " element")
     }
-    return r;
-  };
+    return r
+  }
   t.createVideoElement = function (e) {
     if (e instanceof HTMLVideoElement) {
-      return e;
+      return e
     }
     if ("string" === typeof e) {
-      return t.getMediaElement(e, "video");
+      return t.getMediaElement(e, "video")
     }
     if (!e && "undefined" !== typeof document) {
-      var r = document.createElement("video");
-      r.width = 200;
-      r.height = 200;
-      return r;
+      var r = document.createElement("video")
+      r.width = 200
+      r.height = 200
+      return r
     }
-    throw new Error("Couldn't get videoElement from videoSource!");
-  };
+    throw new Error("Couldn't get videoElement from videoSource!")
+  }
   t.prepareImageElement = function (e) {
     if (e instanceof HTMLImageElement) {
-      return e;
+      return e
     }
     if ("string" === typeof e) {
-      return t.getMediaElement(e, "img");
+      return t.getMediaElement(e, "img")
     }
     if ("undefined" === typeof e) {
-      var r = document.createElement("img");
-      r.width = 200;
-      r.height = 200;
-      return r;
+      var r = document.createElement("img")
+      r.width = 200
+      r.height = 200
+      return r
     }
-    throw new Error("Couldn't get imageElement from imageSource!");
-  };
+    throw new Error("Couldn't get imageElement from imageSource!")
+  }
   t.prepareVideoElement = function (e) {
-    var r = t.createVideoElement(e);
-    r.setAttribute("autoplay", "true");
-    r.setAttribute("muted", "true");
-    r.setAttribute("playsinline", "true");
-    return r;
-  };
+    var r = t.createVideoElement(e)
+    r.setAttribute("autoplay", "true")
+    r.setAttribute("muted", "true")
+    r.setAttribute("playsinline", "true")
+    return r
+  }
   t.isImageLoaded = function (t) {
-    return !!t.complete && 0 !== t.naturalWidth;
-  };
+    return !!t.complete && 0 !== t.naturalWidth
+  }
   t.createBinaryBitmapFromCanvas = function (t) {
-    var e = new o.a(t);
-    var r = new n.HybridBinarizer(e);
-    return new n.BinaryBitmap(r);
-  };
+    var e = new o.a(t)
+    var r = new n.HybridBinarizer(e)
+    return new n.BinaryBitmap(r)
+  }
   t.drawImageOnCanvas = function (t, e) {
-    t.drawImage(e, 0, 0);
-  };
+    t.drawImage(e, 0, 0)
+  }
   t.getMediaElementDimensions = function (t) {
     if (t instanceof HTMLVideoElement) {
       return {
         height: t.videoHeight,
         width: t.videoWidth
-      };
+      }
     }
     if (t instanceof HTMLImageElement) {
       return {
         height: t.naturalHeight || t.height,
         width: t.naturalWidth || t.width
-      };
+      }
     }
-    throw new Error("Couldn't find the Source's dimensions!");
-  };
+    throw new Error("Couldn't find the Source's dimensions!")
+  }
   t.createCaptureCanvas = function (e) {
     if (!e) {
-      throw new n.ArgumentException("Cannot create a capture canvas without a media element.");
+      throw new n.ArgumentException("Cannot create a capture canvas without a media element.")
     }
     if ("undefined" === typeof document) {
-      throw new Error("The page \"Document\" is undefined, make sure you're running in a browser.");
+      throw new Error("The page \"Document\" is undefined, make sure you're running in a browser.")
     }
-    var r = document.createElement("canvas");
-    var o = t.getMediaElementDimensions(e);
-    var i = o.width;
-    var a = o.height;
-    r.style.width = i + "px";
-    r.style.height = a + "px";
-    r.width = i;
-    r.height = a;
-    return r;
-  };
+    var r = document.createElement("canvas")
+    var o = t.getMediaElementDimensions(e)
+    var o$width = o.width
+    var o$height = o.height
+    r.style.width = o$width + "px"
+    r.style.height = o$height + "px"
+    r.width = o$width
+    r.height = o$height
+    return r
+  }
   t.tryPlayVideo = function (e) {
     return s(this, undefined, undefined, function () {
-      var r;
+      var r
       return c(this, function (n) {
         switch (n.label) {
           case 0:
             if (null === e || undefined === e ? undefined : e.ended) {
-              console.error("Trying to play video that has ended.");
-              return [2, false];
+              console.error("Trying to play video that has ended.")
+              return [2, false]
             }
             if (t.isVideoPlaying(e)) {
-              console.warn("Trying to play video that is already playing.");
-              return [2, true];
+              console.warn("Trying to play video that is already playing.")
+              return [2, true]
             }
-            n.label = 1;
+            n.label = 1
           case 1:
-            n.trys.push([1, 3,, 4]);
-            return [4, e.play()];
+            n.trys.push([1, 3,, 4])
+            return [4, e.play()]
           case 2:
-            n.sent();
-            return [2, true];
+            n.sent()
+            return [2, true]
           case 3:
-            r = n.sent();
-            console.warn("It was not possible to play the video.", r);
-            return [2, false];
+            r = n.sent()
+            console.warn("It was not possible to play the video.", r)
+            return [2, false]
           case 4:
-            return [2];
+            return [2]
         }
-      });
-    });
-  };
+      })
+    })
+  }
   t.createCanvasFromMediaElement = function (e) {
-    var r = t.createCaptureCanvas(e);
-    var n = r.getContext("2d");
+    var r = t.createCaptureCanvas(e)
+    var n = r.getContext("2d")
     if (!n) {
-      throw new Error("Couldn't find Canvas 2D Context.");
+      throw new Error("Couldn't find Canvas 2D Context.")
     }
-    t.drawImageOnCanvas(n, e);
-    return r;
-  };
+    t.drawImageOnCanvas(n, e)
+    return r
+  }
   t.createBinaryBitmapFromMediaElem = function (e) {
-    var r = t.createCanvasFromMediaElement(e);
-    return t.createBinaryBitmapFromCanvas(r);
-  };
+    var r = t.createCanvasFromMediaElement(e)
+    return t.createBinaryBitmapFromCanvas(r)
+  }
   t.destroyImageElement = function (t) {
-    t.src = "";
-    t.removeAttribute("src");
-    t = undefined;
-  };
+    t.src = ""
+    t.removeAttribute("src")
+    t = undefined
+  }
   t.listVideoInputDevices = function () {
     return s(this, undefined, undefined, function () {
-      var t;
-      var e;
-      var r;
-      var n;
-      var o;
-      var u;
-      var s;
-      var h;
-      var l;
-      var d;
-      var p;
-      var g;
+      var t
+      var e
+      var r
+      var n
+      var /* [auto-meaningful-name] */n$value
+      var u
+      var s
+      var h
+      var /* [auto-meaningful-name] */n$value$groupId
+      var d
+      var p
+      var /* [auto-meaningful-name] */r$return
       return c(this, function (c) {
         switch (c.label) {
           case 0:
             if (!i()) {
-              throw new Error("Can't enumerate devices, navigator is not present.");
+              throw new Error("Can't enumerate devices, navigator is not present.")
             }
             if (!a()) {
-              throw new Error("Can't enumerate devices, method not supported.");
+              throw new Error("Can't enumerate devices, method not supported.")
             }
-            return [4, navigator.mediaDevices.enumerateDevices()];
+            return [4, navigator.mediaDevices.enumerateDevices()]
           case 1:
-            t = c.sent();
-            e = [];
+            t = c.sent()
+            e = []
             try {
               for (r = f(t), n = r.next(); !n.done; n = r.next()) {
-                o = n.value;
-                if ("videoinput" === (u = "video" === o.kind ? "videoinput" : o.kind)) {
-                  s = o.deviceId || o.id;
-                  h = o.label || "Video device " + (e.length + 1);
-                  l = o.groupId;
+                n$value = n.value
+                if ("videoinput" === (u = "video" === n$value.kind ? "videoinput" : n$value.kind)) {
+                  s = n$value.deviceId || n$value.id
+                  h = n$value.label || "Video device " + (e.length + 1)
+                  n$value$groupId = n$value.groupId
                   d = {
                     deviceId: s,
                     label: h,
                     kind: u,
-                    groupId: l
-                  };
-                  e.push(d);
+                    groupId: n$value$groupId
+                  }
+                  e.push(d)
                 }
               }
             } catch (y) {
               p = {
                 error: y
-              };
+              }
             } finally {
               try {
-                if (n && !n.done && (g = r.return)) {
-                  g.call(r);
+                if (n && !n.done && (r$return = r.return)) {
+                  r$return.call(r)
                 }
               } finally {
                 if (p) {
-                  throw p.error;
+                  throw p.error
                 }
               }
             }
-            return [2, e];
+            return [2, e]
         }
-      });
-    });
-  };
+      })
+    })
+  }
   t.findDeviceById = function (e) {
     return s(this, undefined, undefined, function () {
-      var r;
+      var r
       return c(this, function (n) {
         switch (n.label) {
           case 0:
-            return [4, t.listVideoInputDevices()];
+            return [4, t.listVideoInputDevices()]
           case 1:
             return (r = n.sent()) ? [2, r.find(function (t) {
-              return t.deviceId === e;
-            })] : [2];
+              return t.deviceId === e
+            })] : [2]
         }
-      });
-    });
-  };
+      })
+    })
+  }
   t.cleanVideoSource = function (t) {
     if (t) {
       try {
-        t.srcObject = null;
+        t.srcObject = null
       } catch (e) {
-        t.src = "";
+        t.src = ""
       }
       if (t) {
-        t.removeAttribute("src");
+        t.removeAttribute("src")
       }
     }
-  };
+  }
   t.releaseAllStreams = function () {
     if (0 !== t.streamTracker.length) {
       t.streamTracker.forEach(function (t) {
         t.getTracks().forEach(function (t) {
-          return t.stop();
-        });
-      });
+          return t.stop()
+        })
+      })
     }
-    t.streamTracker = [];
-  };
+    t.streamTracker = []
+  }
   t.playVideoOnLoadAsync = function (e, r) {
     return s(this, undefined, undefined, function () {
       return c(this, function (n) {
         switch (n.label) {
           case 0:
-            return [4, t.tryPlayVideo(e)];
+            return [4, t.tryPlayVideo(e)]
           case 1:
             return n.sent() ? [2, true] : [2, new Promise(function (n, o) {
               var i = setTimeout(function () {
                 if (!t.isVideoPlaying(e)) {
-                  o(false);
-                  e.removeEventListener("canplay", a);
+                  o(false)
+                  e.removeEventListener("canplay", a)
                 }
-              }, r);
+              }, r)
               var a = function r() {
                 t.tryPlayVideo(e).then(function (t) {
-                  clearTimeout(i);
-                  e.removeEventListener("canplay", r);
-                  n(t);
-                });
-              };
-              e.addEventListener("canplay", a);
-            })];
+                  clearTimeout(i)
+                  e.removeEventListener("canplay", r)
+                  n(t)
+                })
+              }
+              e.addEventListener("canplay", a)
+            })]
         }
-      });
-    });
-  };
+      })
+    })
+  }
   t.attachStreamToVideo = function (e, r, n) {
     if (undefined === n) {
-      n = 5e3;
+      n = 5e3
     }
     return s(this, undefined, undefined, function () {
-      var o;
+      var o
       return c(this, function (i) {
         switch (i.label) {
           case 0:
-            o = t.prepareVideoElement(r);
-            t.addVideoSource(o, e);
-            return [4, t.playVideoOnLoadAsync(o, n)];
+            o = t.prepareVideoElement(r)
+            t.addVideoSource(o, e)
+            return [4, t.playVideoOnLoadAsync(o, n)]
           case 1:
-            i.sent();
-            return [2, o];
+            i.sent()
+            return [2, o]
         }
-      });
-    });
-  };
+      })
+    })
+  }
   t._waitImageLoad = function (e) {
     return new Promise(function (r, n) {
       var o = setTimeout(function () {
         if (!t.isImageLoaded(e)) {
-          e.removeEventListener("load", i);
-          n();
+          e.removeEventListener("load", i)
+          n()
         }
-      }, 1e4);
+      }, 1e4)
       var i = function t() {
-        clearTimeout(o);
-        e.removeEventListener("load", t);
-        r();
-      };
-      e.addEventListener("load", i);
-    });
-  };
+        clearTimeout(o)
+        e.removeEventListener("load", t)
+        r()
+      }
+      e.addEventListener("load", i)
+    })
+  }
   t.checkCallbackFnOrThrow = function (t) {
     if (!t) {
-      throw new n.ArgumentException("`callbackFn` is a required parameter, you cannot capture results without it.");
+      throw new n.ArgumentException("`callbackFn` is a required parameter, you cannot capture results without it.")
     }
-  };
+  }
   t.disposeMediaStream = function (t) {
     t.getVideoTracks().forEach(function (t) {
-      return t.stop();
-    });
-    t = undefined;
-  };
+      return t.stop()
+    })
+    t = undefined
+  }
   t.prototype.decode = function (e) {
-    var r = t.createCanvasFromMediaElement(e);
-    return this.decodeFromCanvas(r);
-  };
+    var r = t.createCanvasFromMediaElement(e)
+    return this.decodeFromCanvas(r)
+  }
   t.prototype.decodeBitmap = function (t) {
-    return this.reader.decode(t, this.hints);
-  };
+    return this.reader.decode(t, this.hints)
+  }
   t.prototype.decodeFromCanvas = function (e) {
-    var r = t.createBinaryBitmapFromCanvas(e);
-    return this.decodeBitmap(r);
-  };
+    var r = t.createBinaryBitmapFromCanvas(e)
+    return this.decodeBitmap(r)
+  }
   t.prototype.decodeFromImageElement = function (e) {
     return s(this, undefined, undefined, function () {
-      var r;
+      var r
       return c(this, function (o) {
         switch (o.label) {
           case 0:
             if (!e) {
-              throw new n.ArgumentException("An image element must be provided.");
+              throw new n.ArgumentException("An image element must be provided.")
             }
-            r = t.prepareImageElement(e);
-            return [4, this._decodeOnLoadImage(r)];
+            r = t.prepareImageElement(e)
+            return [4, this._decodeOnLoadImage(r)]
           case 1:
-            return [2, o.sent()];
+            return [2, o.sent()]
         }
-      });
-    });
-  };
+      })
+    })
+  }
   t.prototype.decodeFromImageUrl = function (e) {
     return s(this, undefined, undefined, function () {
-      var r;
+      var r
       return c(this, function (o) {
         switch (o.label) {
           case 0:
             if (!e) {
-              throw new n.ArgumentException("An URL must be provided.");
+              throw new n.ArgumentException("An URL must be provided.")
             }
-            (r = t.prepareImageElement()).src = e;
-            o.label = 1;
+            (r = t.prepareImageElement()).src = e
+            o.label = 1
           case 1:
-            o.trys.push([1,, 3, 4]);
-            return [4, this.decodeFromImageElement(r)];
+            o.trys.push([1,, 3, 4])
+            return [4, this.decodeFromImageElement(r)]
           case 2:
-            return [2, o.sent()];
+            return [2, o.sent()]
           case 3:
-            t.destroyImageElement(r);
-            return [7];
+            t.destroyImageElement(r)
+            return [7]
           case 4:
-            return [2];
+            return [2]
         }
-      });
-    });
-  };
+      })
+    })
+  }
   t.prototype.decodeFromConstraints = function (e, r, n) {
     return s(this, undefined, undefined, function () {
-      var o;
-      var i;
+      var o
+      var i
       return c(this, function (a) {
         switch (a.label) {
           case 0:
-            t.checkCallbackFnOrThrow(n);
-            return [4, this.getUserMedia(e)];
+            t.checkCallbackFnOrThrow(n)
+            return [4, this.getUserMedia(e)]
           case 1:
-            o = a.sent();
-            a.label = 2;
+            o = a.sent()
+            a.label = 2
           case 2:
-            a.trys.push([2, 4,, 5]);
-            return [4, this.decodeFromStream(o, r, n)];
+            a.trys.push([2, 4,, 5])
+            return [4, this.decodeFromStream(o, r, n)]
           case 3:
-            return [2, a.sent()];
+            return [2, a.sent()]
           case 4:
-            i = a.sent();
-            t.disposeMediaStream(o);
-            throw i;
+            i = a.sent()
+            t.disposeMediaStream(o)
+            throw i
           case 5:
-            return [2];
+            return [2]
         }
-      });
-    });
-  };
+      })
+    })
+  }
   t.prototype.decodeFromStream = function (e, r, n) {
     return s(this, undefined, undefined, function () {
-      var o;
-      var i;
-      var a;
-      var h;
-      var l;
-      var d;
-      var p;
-      var g;
-      var y;
-      var w = this;
+      var /* [auto-meaningful-name] */this$options$tryPlayVideoTimeout
+      var i
+      var a
+      var h
+      var l
+      var d
+      var p
+      var g
+      var y
+      var w = this
       return c(this, function (v) {
         switch (v.label) {
           case 0:
-            t.checkCallbackFnOrThrow(n);
-            o = this.options.tryPlayVideoTimeout;
-            return [4, t.attachStreamToVideo(e, r, o)];
+            t.checkCallbackFnOrThrow(n)
+            this$options$tryPlayVideoTimeout = this.options.tryPlayVideoTimeout
+            return [4, t.attachStreamToVideo(e, r, this$options$tryPlayVideoTimeout)]
           case 1:
-            i = v.sent();
+            i = v.sent()
             a = function () {
-              t.disposeMediaStream(e);
-              t.cleanVideoSource(i);
-            };
-            h = this.scan(i, n, a);
-            l = e.getVideoTracks();
+              t.disposeMediaStream(e)
+              t.cleanVideoSource(i)
+            }
+            h = this.scan(i, n, a)
+            l = e.getVideoTracks()
             d = u(u({}, h), {
               stop: function () {
-                h.stop();
+                h.stop()
               },
               streamVideoConstraintsApply: function (t, e) {
                 return s(this, undefined, undefined, function () {
-                  var r;
-                  var n;
-                  var o;
-                  var i;
-                  var a;
-                  var u;
+                  var r
+                  var n
+                  var o
+                  var i
+                  var a
+                  var /* [auto-meaningful-name] */n$return
                   return c(this, function (s) {
                     switch (s.label) {
                       case 0:
-                        r = e ? l.filter(e) : l;
-                        s.label = 1;
+                        r = e ? l.filter(e) : l
+                        s.label = 1
                       case 1:
-                        s.trys.push([1, 6, 7, 8]);
-                        n = f(r);
-                        o = n.next();
-                        s.label = 2;
+                        s.trys.push([1, 6, 7, 8])
+                        n = f(r)
+                        o = n.next()
+                        s.label = 2
                       case 2:
-                        return o.done ? [3, 5] : [4, o.value.applyConstraints(t)];
+                        return o.done ? [3, 5] : [4, o.value.applyConstraints(t)]
                       case 3:
-                        s.sent();
-                        s.label = 4;
+                        s.sent()
+                        s.label = 4
                       case 4:
-                        o = n.next();
-                        return [3, 2];
+                        o = n.next()
+                        return [3, 2]
                       case 5:
-                        return [3, 8];
+                        return [3, 8]
                       case 6:
-                        i = s.sent();
+                        i = s.sent()
                         a = {
                           error: i
-                        };
-                        return [3, 8];
+                        }
+                        return [3, 8]
                       case 7:
                         try {
-                          if (o && !o.done && (u = n.return)) {
-                            u.call(n);
+                          if (o && !o.done && (n$return = n.return)) {
+                            n$return.call(n)
                           }
                         } finally {
                           if (a) {
-                            throw a.error;
+                            throw a.error
                           }
                         }
-                        return [7];
+                        return [7]
                       case 8:
-                        return [2];
+                        return [2]
                     }
-                  });
-                });
+                  })
+                })
               },
               streamVideoConstraintsGet: function (t) {
-                return l.find(t).getConstraints();
+                return l.find(t).getConstraints()
               },
               streamVideoSettingsGet: function (t) {
-                return l.find(t).getSettings();
+                return l.find(t).getSettings()
               },
               streamVideoCapabilitiesGet: function (t) {
-                return l.find(t).getCapabilities();
+                return l.find(t).getCapabilities()
               }
-            });
+            })
             if (t.mediaStreamIsTorchCompatible(e)) {
               p = null === l || undefined === l ? undefined : l.find(function (e) {
-                return t.mediaStreamIsTorchCompatibleTrack(e);
-              });
+                return t.mediaStreamIsTorchCompatibleTrack(e)
+              })
               g = function (e) {
                 return s(w, undefined, undefined, function () {
                   return c(this, function (r) {
                     switch (r.label) {
                       case 0:
-                        return [4, t.mediaStreamSetTorch(p, e)];
+                        return [4, t.mediaStreamSetTorch(p, e)]
                       case 1:
-                        r.sent();
-                        return [2];
+                        r.sent()
+                        return [2]
                     }
-                  });
-                });
-              };
-              d.switchTorch = g;
+                  })
+                })
+              }
+              d.switchTorch = g
               y = function () {
-                h.stop();
-                g(false);
-              };
-              d.stop = y;
+                h.stop()
+                g(false)
+              }
+              d.stop = y
             }
-            return [2, d];
+            return [2, d]
         }
-      });
-    });
-  };
+      })
+    })
+  }
   t.prototype.decodeFromVideoDevice = function (e, r, n) {
     return s(this, undefined, undefined, function () {
-      var o;
+      var o
       return c(this, function (i) {
         switch (i.label) {
           case 0:
-            t.checkCallbackFnOrThrow(n);
+            t.checkCallbackFnOrThrow(n)
             o = {
               video: e ? {
                 deviceId: {
@@ -795,105 +795,105 @@ var l = function () {
               } : {
                 facingMode: "environment"
               }
-            };
-            return [4, this.decodeFromConstraints(o, r, n)];
+            }
+            return [4, this.decodeFromConstraints(o, r, n)]
           case 1:
-            return [2, i.sent()];
+            return [2, i.sent()]
         }
-      });
-    });
-  };
+      })
+    })
+  }
   t.prototype.decodeFromVideoElement = function (e, r) {
     return s(this, undefined, undefined, function () {
-      var o;
-      var i;
+      var o
+      var /* [auto-meaningful-name] */this$options$tryPlayVideoTimeout
       return c(this, function (a) {
         switch (a.label) {
           case 0:
             if (t.checkCallbackFnOrThrow(r), !e) {
-              throw new n.ArgumentException("A video element must be provided.");
+              throw new n.ArgumentException("A video element must be provided.")
             }
-            o = t.prepareVideoElement(e);
-            i = this.options.tryPlayVideoTimeout;
-            return [4, t.playVideoOnLoadAsync(o, i)];
+            o = t.prepareVideoElement(e)
+            this$options$tryPlayVideoTimeout = this.options.tryPlayVideoTimeout
+            return [4, t.playVideoOnLoadAsync(o, this$options$tryPlayVideoTimeout)]
           case 1:
-            a.sent();
-            return [2, this.scan(o, r)];
+            a.sent()
+            return [2, this.scan(o, r)]
         }
-      });
-    });
-  };
+      })
+    })
+  }
   t.prototype.decodeFromVideoUrl = function (e, r) {
     return s(this, undefined, undefined, function () {
-      var o;
-      var i;
-      var a;
+      var o
+      var i
+      var /* [auto-meaningful-name] */this$options$tryPlayVideoTimeout
       return c(this, function (u) {
         switch (u.label) {
           case 0:
             if (t.checkCallbackFnOrThrow(r), !e) {
-              throw new n.ArgumentException("An URL must be provided.");
+              throw new n.ArgumentException("An URL must be provided.")
             }
-            (o = t.prepareVideoElement()).src = e;
+            (o = t.prepareVideoElement()).src = e
             i = function () {
-              t.cleanVideoSource(o);
-            };
-            a = this.options.tryPlayVideoTimeout;
-            return [4, t.playVideoOnLoadAsync(o, a)];
+              t.cleanVideoSource(o)
+            }
+            this$options$tryPlayVideoTimeout = this.options.tryPlayVideoTimeout
+            return [4, t.playVideoOnLoadAsync(o, this$options$tryPlayVideoTimeout)]
           case 1:
-            u.sent();
-            return [2, this.scan(o, r, i)];
+            u.sent()
+            return [2, this.scan(o, r, i)]
         }
-      });
-    });
-  };
+      })
+    })
+  }
   t.prototype.decodeOnceFromConstraints = function (t, e) {
     return s(this, undefined, undefined, function () {
-      var r;
+      var r
       return c(this, function (n) {
         switch (n.label) {
           case 0:
-            return [4, this.getUserMedia(t)];
+            return [4, this.getUserMedia(t)]
           case 1:
-            r = n.sent();
-            return [4, this.decodeOnceFromStream(r, e)];
+            r = n.sent()
+            return [4, this.decodeOnceFromStream(r, e)]
           case 2:
-            return [2, n.sent()];
+            return [2, n.sent()]
         }
-      });
-    });
-  };
+      })
+    })
+  }
   t.prototype.decodeOnceFromStream = function (e, r) {
     return s(this, undefined, undefined, function () {
-      var n;
-      var o;
+      var n
+      var o
       return c(this, function (i) {
         switch (i.label) {
           case 0:
-            n = Boolean(r);
-            return [4, t.attachStreamToVideo(e, r)];
+            n = Boolean(r)
+            return [4, t.attachStreamToVideo(e, r)]
           case 1:
-            o = i.sent();
-            i.label = 2;
+            o = i.sent()
+            i.label = 2
           case 2:
-            i.trys.push([2,, 4, 5]);
-            return [4, this.scanOneResult(o)];
+            i.trys.push([2,, 4, 5])
+            return [4, this.scanOneResult(o)]
           case 3:
-            return [2, i.sent()];
+            return [2, i.sent()]
           case 4:
             if (!n) {
-              t.cleanVideoSource(o);
+              t.cleanVideoSource(o)
             }
-            return [7];
+            return [7]
           case 5:
-            return [2];
+            return [2]
         }
-      });
-    });
-  };
+      })
+    })
+  }
   t.prototype.decodeOnceFromVideoDevice = function (t, e) {
     return s(this, undefined, undefined, function () {
-      var r;
+      var r
       return c(this, function (n) {
         switch (n.label) {
           case 0:
@@ -905,175 +905,175 @@ var l = function () {
               } : {
                 facingMode: "environment"
               }
-            };
-            return [4, this.decodeOnceFromConstraints(r, e)];
+            }
+            return [4, this.decodeOnceFromConstraints(r, e)]
           case 1:
-            return [2, n.sent()];
+            return [2, n.sent()]
         }
-      });
-    });
-  };
+      })
+    })
+  }
   t.prototype.decodeOnceFromVideoElement = function (e) {
     return s(this, undefined, undefined, function () {
-      var r;
-      var o;
+      var r
+      var /* [auto-meaningful-name] */this$options$tryPlayVideoTimeout
       return c(this, function (i) {
         switch (i.label) {
           case 0:
             if (!e) {
-              throw new n.ArgumentException("A video element must be provided.");
+              throw new n.ArgumentException("A video element must be provided.")
             }
-            r = t.prepareVideoElement(e);
-            o = this.options.tryPlayVideoTimeout;
-            return [4, t.playVideoOnLoadAsync(r, o)];
+            r = t.prepareVideoElement(e)
+            this$options$tryPlayVideoTimeout = this.options.tryPlayVideoTimeout
+            return [4, t.playVideoOnLoadAsync(r, this$options$tryPlayVideoTimeout)]
           case 1:
-            i.sent();
-            return [4, this.scanOneResult(r)];
+            i.sent()
+            return [4, this.scanOneResult(r)]
           case 2:
-            return [2, i.sent()];
+            return [2, i.sent()]
         }
-      });
-    });
-  };
+      })
+    })
+  }
   t.prototype.decodeOnceFromVideoUrl = function (e) {
     return s(this, undefined, undefined, function () {
-      var r;
-      var o;
+      var r
+      var o
       return c(this, function (i) {
         switch (i.label) {
           case 0:
             if (!e) {
-              throw new n.ArgumentException("An URL must be provided.");
+              throw new n.ArgumentException("An URL must be provided.")
             }
-            (r = t.prepareVideoElement()).src = e;
-            o = this.decodeOnceFromVideoElement(r);
-            i.label = 1;
+            (r = t.prepareVideoElement()).src = e
+            o = this.decodeOnceFromVideoElement(r)
+            i.label = 1
           case 1:
-            i.trys.push([1,, 3, 4]);
-            return [4, o];
+            i.trys.push([1,, 3, 4])
+            return [4, o]
           case 2:
-            return [2, i.sent()];
+            return [2, i.sent()]
           case 3:
-            t.cleanVideoSource(r);
-            return [7];
+            t.cleanVideoSource(r)
+            return [7]
           case 4:
-            return [2];
+            return [2]
         }
-      });
-    });
-  };
+      })
+    })
+  }
   t.prototype.scanOneResult = function (t, e, r, o) {
-    var i = this;
+    var i = this
     if (undefined === e) {
-      e = true;
+      e = true
     }
     if (undefined === r) {
-      r = true;
+      r = true
     }
     if (undefined === o) {
-      o = true;
+      o = true
     }
     return new Promise(function (a, u) {
       i.scan(t, function (t, i, s) {
         if (t) {
-          a(t);
-          return void s.stop();
+          a(t)
+          return void s.stop()
         }
         if (i) {
           if (i instanceof n.NotFoundException && e) {
-            return;
+            return
           }
           if (i instanceof n.ChecksumException && r) {
-            return;
+            return
           }
           if (i instanceof n.FormatException && o) {
-            return;
+            return
           }
-          s.stop();
-          u(i);
+          s.stop()
+          u(i)
         }
-      });
-    });
-  };
+      })
+    })
+  }
   t.prototype.scan = function (e, r, o) {
-    var i = this;
-    t.checkCallbackFnOrThrow(r);
-    var a = t.createCaptureCanvas(e);
-    var u = a.getContext("2d");
+    var i = this
+    t.checkCallbackFnOrThrow(r)
+    var a = t.createCaptureCanvas(e)
+    var u = a.getContext("2d")
     if (!u) {
-      throw new Error("Couldn't create canvas for visual element scan.");
+      throw new Error("Couldn't create canvas for visual element scan.")
     }
-    var s;
+    var s
     var c = function () {
-      u = undefined;
-      a = undefined;
-    };
-    var f = false;
+      u = undefined
+      a = undefined
+    }
+    var f = false
     var h = {
       stop: function () {
-        f = true;
-        clearTimeout(s);
-        c();
+        f = true
+        clearTimeout(s)
+        c()
         if (o) {
-          o();
+          o()
         }
       }
     };
     (function l() {
       if (!f) {
         try {
-          t.drawImageOnCanvas(u, e);
-          var d = i.decodeFromCanvas(a);
-          r(d, undefined, h);
-          s = setTimeout(l, i.options.delayBetweenScanSuccess);
+          t.drawImageOnCanvas(u, e)
+          var d = i.decodeFromCanvas(a)
+          r(d, undefined, h)
+          s = setTimeout(l, i.options.delayBetweenScanSuccess)
         } catch (w) {
-          r(undefined, w, h);
-          var p = w instanceof n.ChecksumException;
-          var g = w instanceof n.FormatException;
-          var y = w instanceof n.NotFoundException;
+          r(undefined, w, h)
+          var p = w instanceof n.ChecksumException
+          var g = w instanceof n.FormatException
+          var y = w instanceof n.NotFoundException
           if (p || g || y) {
-            return void (s = setTimeout(l, i.options.delayBetweenScanAttempts));
+            return void (s = setTimeout(l, i.options.delayBetweenScanAttempts))
           }
-          c();
+          c()
           if (o) {
-            o(w);
+            o(w)
           }
         }
       }
-    })();
-    return h;
-  };
+    })()
+    return h
+  }
   t.prototype._decodeOnLoadImage = function (e) {
     return s(this, undefined, undefined, function () {
       return c(this, function (r) {
         switch (r.label) {
           case 0:
-            return t.isImageLoaded(e) ? [3, 2] : [4, t._waitImageLoad(e)];
+            return t.isImageLoaded(e) ? [3, 2] : [4, t._waitImageLoad(e)]
           case 1:
-            r.sent();
-            r.label = 2;
+            r.sent()
+            r.label = 2
           case 2:
-            return [2, this.decode(e)];
+            return [2, this.decode(e)]
         }
-      });
-    });
-  };
+      })
+    })
+  }
   t.prototype.getUserMedia = function (e) {
     return s(this, undefined, undefined, function () {
-      var r;
+      var r
       return c(this, function (n) {
         switch (n.label) {
           case 0:
-            return [4, navigator.mediaDevices.getUserMedia(e)];
+            return [4, navigator.mediaDevices.getUserMedia(e)]
           case 1:
-            r = n.sent();
-            t.streamTracker.push(r);
-            return [2, r];
+            r = n.sent()
+            t.streamTracker.push(r)
+            return [2, r]
         }
-      });
-    });
-  };
-  t.streamTracker = [];
-  return t;
-}();
-export default l;
+      })
+    })
+  }
+  t.streamTracker = []
+  return t
+}()
+export default l

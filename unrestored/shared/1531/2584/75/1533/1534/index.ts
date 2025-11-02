@@ -4,6 +4,6 @@
  * 模块 ID：1534
  */
 
-"use strict";
+"use strict"
 
-module.exports = require("./1535");
+module.exports = require("./1535")

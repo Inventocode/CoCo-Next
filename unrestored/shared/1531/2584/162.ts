@@ -4,24 +4,24 @@
  * 模块 ID：162
  */
 
-"use strict";
+"use strict"
 
-var r;
-var o;
-var i;
-export { r as c };
-export { o as a };
+var r
+var o
+var i
+export { r as c }
+export { o as a }
 export { i as b };
 (function (e) {
-  e.DEFAULT = "DEFAULT";
-  e.PRIMARY = "PRIMARY";
+  e.DEFAULT = "DEFAULT"
+  e.PRIMARY = "PRIMARY"
 })(r || (r = {}));
 (function (e) {
-  e.TEMPLATE = "TEMPLATE";
-  e.IMAGE = "IMAGE";
+  e.TEMPLATE = "TEMPLATE"
+  e.IMAGE = "IMAGE"
 })(o || (o = {}));
 (function (e) {
-  e.CONTAIN = "contain";
-  e.STRETCH = "stretch";
-})(i || (i = {}));
-export default o;
+  e.CONTAIN = "contain"
+  e.STRETCH = "stretch"
+})(i || (i = {}))
+export default o

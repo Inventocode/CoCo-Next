@@ -4,8 +4,8 @@
  * 模块 ID：1467
  */
 
-"use strict";
+"use strict"
 
-var r = require("./2544/index").CopyToClipboard;
-r.CopyToClipboard = r;
-module.exports = r;
+var require$2544Index$CopyToClipboard = require("./2544/index").CopyToClipboard
+require$2544Index$CopyToClipboard.CopyToClipboard = require$2544Index$CopyToClipboard
+module.exports = require$2544Index$CopyToClipboard

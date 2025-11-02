@@ -4,44 +4,44 @@
  * 模块 ID：935
  */
 
-var r = require("../1742/247/index")("iterator");
-var o = false;
+var r = require("../1742/247/index")("iterator")
+var o = false
 try {
-  var i = 0;
+  var i = 0
   var a = {
     next: function () {
       return {
         done: !!i++
-      };
+      }
     },
     return: function () {
-      o = true;
+      o = true
     }
-  };
+  }
   a[r] = function () {
-    return this;
-  };
+    return this
+  }
   Array.from(a, function () {
-    throw 2;
-  });
+    throw 2
+  })
 } catch (s) {}
 module.exports = function (e, t) {
   if (!t && !o) {
-    return false;
+    return false
   }
-  var n = false;
+  var n = false
   try {
-    var i = {};
+    var i = {}
     i[r] = function () {
       return {
         next: function () {
           return {
             done: n = true
-          };
+          }
         }
-      };
-    };
-    e(i);
+      }
+    }
+    e(i)
   } catch (s) {}
-  return n;
-};
+  return n
+}

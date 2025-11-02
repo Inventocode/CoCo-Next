@@ -4,67 +4,67 @@
  * 模块 ID：1753
  */
 
-"use strict";
+"use strict"
 
-var r = require("./568");
+var r = require("./568")
 Object.defineProperty(exports, "__esModule", {
   value: true
-});
-exports.default = undefined;
-var i = r(require("./746"));
-var o = r(require("react"));
+})
+exports.default = undefined
+var i = r(require("./746"))
+var o = r(require("react"))
 function a(e, t) {
-  var n = Object.keys(e);
+  var n = Object.keys(e)
   if (Object.getOwnPropertySymbols) {
-    var r = Object.getOwnPropertySymbols(e);
+    var r = Object.getOwnPropertySymbols(e)
     if (t) {
       r = r.filter(function (t) {
-        return Object.getOwnPropertyDescriptor(e, t).enumerable;
-      });
+        return Object.getOwnPropertyDescriptor(e, t).enumerable
+      })
     }
-    n.push.apply(n, r);
+    n.push.apply(n, r)
   }
-  return n;
+  return n
 }
 function s(e) {
   for (var t = 1; t < arguments.length; t++) {
-    var n = null != arguments[t] ? arguments[t] : {};
+    var n = null != arguments[t] ? arguments[t] : {}
     if (t % 2) {
       a(Object(n), true).forEach(function (t) {
-        (0, i.default)(e, t, n[t]);
-      });
+        (0, i.default)(e, t, n[t])
+      })
     } else {
       if (Object.getOwnPropertyDescriptors) {
-        Object.defineProperties(e, Object.getOwnPropertyDescriptors(n));
+        Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
       } else {
         a(Object(n)).forEach(function (t) {
-          Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(n, t));
-        });
+          Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(n, t))
+        })
       }
     }
   }
-  return e;
+  return e
 }
 var c = function (e) {
-  var t;
-  var n;
-  var r = e.className;
-  var a = e.included;
-  var c = e.vertical;
-  var u = e.style;
-  var l = e.length;
-  var f = e.offset;
-  var d = e.reverse;
-  if (l < 0) {
-    d = !d;
-    l = Math.abs(l);
-    f = 100 - f;
+  var t
+  var n
+  var e$className = e.className
+  var e$included = e.included
+  var e$vertical = e.vertical
+  var e$style = e.style
+  var e$length = e.length
+  var e$offset = e.offset
+  var e$reverse = e.reverse
+  if (e$length < 0) {
+    e$reverse = !e$reverse
+    e$length = Math.abs(e$length)
+    e$offset = 100 - e$offset
   }
-  var h = c ? (t = {}, (0, i.default)(t, d ? "top" : "bottom", "".concat(f, "%")), (0, i.default)(t, d ? "bottom" : "top", "auto"), (0, i.default)(t, "height", "".concat(l, "%")), t) : (n = {}, (0, i.default)(n, d ? "right" : "left", "".concat(f, "%")), (0, i.default)(n, d ? "left" : "right", "auto"), (0, i.default)(n, "width", "".concat(l, "%")), n);
-  var p = s(s({}, u), h);
-  return a ? o.default.createElement("div", {
-    className: r,
+  var h = e$vertical ? (t = {}, (0, i.default)(t, e$reverse ? "top" : "bottom", "".concat(e$offset, "%")), (0, i.default)(t, e$reverse ? "bottom" : "top", "auto"), (0, i.default)(t, "height", "".concat(e$length, "%")), t) : (n = {}, (0, i.default)(n, e$reverse ? "right" : "left", "".concat(e$offset, "%")), (0, i.default)(n, e$reverse ? "left" : "right", "auto"), (0, i.default)(n, "width", "".concat(e$length, "%")), n)
+  var p = s(s({}, e$style), h)
+  return e$included ? o.default.createElement("div", {
+    className: e$className,
     style: p
-  }) : null;
-};
-exports.default = c;
+  }) : null
+}
+exports.default = c

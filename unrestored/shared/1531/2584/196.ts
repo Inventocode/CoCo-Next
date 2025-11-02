@@ -40,4 +40,4 @@ module.exports = {
   widgetImgBig: "WidgetList_widgetImgBig__1H8iX",
   imgWrapper: "WidgetList_imgWrapper__2Ly__",
   loading: "WidgetList_loading__2f1NA"
-};
+}

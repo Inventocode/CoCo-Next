@@ -4,35 +4,35 @@
  * 模块 ID：5bi6
  */
 
-"use strict";
+"use strict"
 
 /* harmony export (binding) */
 /* harmony import */
-export { ForgetPasswordPageContainer };
-import * as __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__ from "@babel/runtime/helpers/esm/slicedToArray";
+export { ForgetPasswordPageContainer }
+import * as __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__ from "@babel/runtime/helpers/esm/slicedToArray"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_1_babel_plugin_react_css_modules_dist_browser_getClassName__ from "babel-plugin-react-css-modules/dist/browser/getClassName";
+import * as __WEBPACK_IMPORTED_MODULE_1_babel_plugin_react_css_modules_dist_browser_getClassName__ from "babel-plugin-react-css-modules/dist/browser/getClassName"
 /* harmony import */
-import __WEBPACK_IMPORTED_MODULE_1_babel_plugin_react_css_modules_dist_browser_getClassName___default from "babel-plugin-react-css-modules/dist/browser/getClassName";
+import __WEBPACK_IMPORTED_MODULE_1_babel_plugin_react_css_modules_dist_browser_getClassName___default from "babel-plugin-react-css-modules/dist/browser/getClassName"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_2_react__ from "react";
+import * as __WEBPACK_IMPORTED_MODULE_2_react__ from "react"
 /* harmony import */
-import __WEBPACK_IMPORTED_MODULE_2_react___default from "react";
+import __WEBPACK_IMPORTED_MODULE_2_react___default from "react"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_3__def__ from "../../../def-9+Hp";
+import * as __WEBPACK_IMPORTED_MODULE_3__def__ from "../../../def-9+Hp"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_4__i18n__ from "../../../i18n-FsOf";
+import * as __WEBPACK_IMPORTED_MODULE_4__i18n__ from "../../../i18n-FsOf"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_5__SetPassword__ from "./SetPassword-Yt5v";
+import * as __WEBPACK_IMPORTED_MODULE_5__SetPassword__ from "./SetPassword-Yt5v"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_6__VerifyPhone__ from "./VerifyPhone-T7KT";
+import * as __WEBPACK_IMPORTED_MODULE_6__VerifyPhone__ from "./VerifyPhone-T7KT"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_7__Confirm__ from "./Confirm-tzRg";
+import * as __WEBPACK_IMPORTED_MODULE_7__Confirm__ from "./Confirm-tzRg"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_8__style_module_css__ from "../../../style.module.css-VPet";
+import * as __WEBPACK_IMPORTED_MODULE_8__style_module_css__ from "../../../style.module.css-VPet"
 /* harmony import */
-import __WEBPACK_IMPORTED_MODULE_8__style_module_css___default from "../../../style.module.css-VPet";
-var _this = this;
+import __WEBPACK_IMPORTED_MODULE_8__style_module_css___default from "../../../style.module.css-VPet"
+var _this = this
 var _styleModuleImportMap = {
   "../../style_module.css": {
     "wrap": "CUI-sign-in-dialog-wrap",
@@ -74,22 +74,22 @@ var _styleModuleImportMap = {
     "text-main": "CUI-sign-in-dialog-text-main",
     "text-second": "CUI-sign-in-dialog-text-second"
   }
-};
+}
 var ForgetPasswordPageContainer = function ForgetPasswordPageContainer(props) {
-  var smsTimeStamp = props.smsTimeStamp;
-  var setSmsTimeStamp = props.setSmsTimeStamp;
-  var isRequesting = props.isRequesting;
-  var setIsRequesting = props.setIsRequesting;
-  var switchView = props.switchView;
-  var reportMethod = props.reportMethod;
-  var _useState = __WEBPACK_IMPORTED_MODULE_2_react__.useState(undefined);
-  var _useState2 = __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default(_useState, 2);
-  var ticket = _useState2[0];
-  var setTicket = _useState2[1];
-  var _useState3 = __WEBPACK_IMPORTED_MODULE_2_react__.useState(false);
-  var _useState4 = __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default(_useState3, 2);
-  var resetSuccess = _useState4[0];
-  var setResetSuccess = _useState4[1];
+  var smsTimeStamp = props.smsTimeStamp
+  var setSmsTimeStamp = props.setSmsTimeStamp
+  var isRequesting = props.isRequesting
+  var setIsRequesting = props.setIsRequesting
+  var switchView = props.switchView
+  var reportMethod = props.reportMethod
+  var _useState = __WEBPACK_IMPORTED_MODULE_2_react__.useState(undefined)
+  var _useState2 = __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default(_useState, 2)
+  var ticket = _useState2[0]
+  var setTicket = _useState2[1]
+  var _useState3 = __WEBPACK_IMPORTED_MODULE_2_react__.useState(false)
+  var _useState4 = __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default(_useState3, 2)
+  var resetSuccess = _useState4[0]
+  var setResetSuccess = _useState4[1]
   return /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_2_react__.createElement(__WEBPACK_IMPORTED_MODULE_2_react__.Fragment, null, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_2_react__.createElement("div", {
     className: __WEBPACK_IMPORTED_MODULE_1_babel_plugin_react_css_modules_dist_browser_getClassName___default(resetSuccess ? "fully-content" : "content", _styleModuleImportMap, {
       "autoResolveMultipleImports": true,
@@ -124,12 +124,12 @@ var ForgetPasswordPageContainer = function ForgetPasswordPageContainer(props) {
   }, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_2_react__.createElement("span", {
     className: "CUI-sign-in-dialog-tab-text CUI-sign-in-dialog-center CUI-sign-in-dialog-clickable",
     onClick: switchView.bind(_this, __WEBPACK_IMPORTED_MODULE_3__def__.ContentView.LOGIN)
-  }, __WEBPACK_IMPORTED_MODULE_4__i18n__.getLanguage("sign_in_dialog/back_to_login"))))));
-};
+  }, __WEBPACK_IMPORTED_MODULE_4__i18n__.getLanguage("sign_in_dialog/back_to_login"))))))
+}
 ForgetPasswordPageContainer.defaultProps = {
   reportMethod: function reportMethod() {
-    return undefined;
+    return undefined
   }
-};
+}
 
 /***/

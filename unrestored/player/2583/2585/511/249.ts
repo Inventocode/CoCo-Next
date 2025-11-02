@@ -16,4 +16,4 @@ module.exports = {
   returnBtn: "style_returnBtn__1_puq",
   photoBtn: "style_photoBtn__2UIPM",
   lightBtn: "style_lightBtn__1rauq"
-};
+}

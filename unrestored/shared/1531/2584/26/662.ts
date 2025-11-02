@@ -4,4 +4,4 @@
  * 模块 ID：662
  */
 
-module.exports = "https://creation.codemao.cn/coconut/web/1.22.0-0/" + "static/media/list.08d415cb.svg";
+module.exports = "https://creation.codemao.cn/coconut/web/1.22.0-0/" + "static/media/list.08d415cb.svg"

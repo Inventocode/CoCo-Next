@@ -4,16 +4,16 @@
  * 模块 ID：hC2z
  */
 
-"use strict";
+"use strict"
 
 /* harmony export (binding) */
-export { EWorkType };
+export { EWorkType }
 var EWorkType;
 (function (EWorkType) {
-  EWorkType["CREATE"] = "CREATE";
-  EWorkType["COLL"] = "COLL";
-  EWorkType["HOME"] = "HOME";
-  EWorkType["DELETE"] = "DELETE";
-})(EWorkType || (EWorkType = {}));
+  EWorkType["CREATE"] = "CREATE"
+  EWorkType["COLL"] = "COLL"
+  EWorkType["HOME"] = "HOME"
+  EWorkType["DELETE"] = "DELETE"
+})(EWorkType || (EWorkType = {}))
 
 /***/

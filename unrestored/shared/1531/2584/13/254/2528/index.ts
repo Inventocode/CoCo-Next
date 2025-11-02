@@ -4,91 +4,91 @@
  * 模块 ID：2528
  */
 
-"use strict";
+"use strict"
 
 Object.defineProperty(exports, "__esModule", {
   value: true
-});
-exports.Saturation = undefined;
+})
+exports.Saturation = undefined
 var r = function () {
   function e(e, t) {
     for (var n = 0; n < t.length; n++) {
-      var r = t[n];
-      r.enumerable = r.enumerable || false;
-      r.configurable = true;
+      var r = t[n]
+      r.enumerable = r.enumerable || false
+      r.configurable = true
       if ("value" in r) {
-        r.writable = true;
+        r.writable = true
       }
-      Object.defineProperty(e, r.key, r);
+      Object.defineProperty(e, r.key, r)
     }
   }
   return function (t, n, r) {
     if (n) {
-      e(t.prototype, n);
+      e(t.prototype, n)
     }
     if (r) {
-      e(t, r);
+      e(t, r)
     }
-    return t;
-  };
-}();
-var i = require("react");
-var o = u(i);
-var a = u(require("../../785/104/index"));
-var s = u(require("./2529"));
+    return t
+  }
+}()
+var i = require("react")
+var o = u(i)
+var a = u(require("../../785/104/index"))
+var s = u(require("./2529"))
 var c = function (e) {
   if (e && e.__esModule) {
-    return e;
+    return e
   }
-  var t = {};
+  var t = {}
   if (null != e) {
     for (var n in e) if (Object.prototype.hasOwnProperty.call(e, n)) {
-      t[n] = e[n];
+      t[n] = e[n]
     }
   }
-  t.default = e;
-  return t;
-}(require("./2532"));
+  t.default = e
+  return t
+}(require("./2532"))
 function u(e) {
   return e && e.__esModule ? e : {
     default: e
-  };
+  }
 }
 var l = exports.Saturation = function (e) {
   function t(e) {
     !function (e, t) {
       if (!(e instanceof t)) {
-        throw new TypeError("Cannot call a class as a function");
+        throw new TypeError("Cannot call a class as a function")
       }
-    }(this, t);
+    }(this, t)
     var n = function (e, t) {
       if (!e) {
-        throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+        throw new ReferenceError("this hasn't been initialised - super() hasn't been called")
       }
-      return !t || "object" !== typeof t && "function" !== typeof t ? e : t;
-    }(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this, e));
+      return !t || "object" !== typeof t && "function" !== typeof t ? e : t
+    }(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this, e))
     n.handleChange = function (e) {
       if ("function" === typeof n.props.onChange) {
-        n.throttle(n.props.onChange, c.calculateChange(e, n.props.hsl, n.container), e);
+        n.throttle(n.props.onChange, c.calculateChange(e, n.props.hsl, n.container), e)
       }
-    };
+    }
     n.handleMouseDown = function (e) {
-      n.handleChange(e);
-      var t = n.getContainerRenderWindow();
-      t.addEventListener("mousemove", n.handleChange);
-      t.addEventListener("mouseup", n.handleMouseUp);
-    };
+      n.handleChange(e)
+      var t = n.getContainerRenderWindow()
+      t.addEventListener("mousemove", n.handleChange)
+      t.addEventListener("mouseup", n.handleMouseUp)
+    }
     n.handleMouseUp = function () {
-      n.unbindEventListeners();
-    };
+      n.unbindEventListeners()
+    }
     n.throttle = (0, s.default)(function (e, t, n) {
-      e(t, n);
-    }, 50);
-    return n;
+      e(t, n)
+    }, 50)
+    return n
   }
   (function (e, t) {
     if ("function" !== typeof t && null !== t) {
-      throw new TypeError("Super expression must either be null or a function, not " + typeof t);
+      throw new TypeError("Super expression must either be null or a function, not " + typeof t)
     }
     e.prototype = Object.create(t && t.prototype, {
       constructor: {
@@ -97,46 +97,46 @@ var l = exports.Saturation = function (e) {
         writable: true,
         configurable: true
       }
-    });
+    })
     if (t) {
       if (Object.setPrototypeOf) {
-        Object.setPrototypeOf(e, t);
+        Object.setPrototypeOf(e, t)
       } else {
-        e.__proto__ = t;
+        e.__proto__ = t
       }
     }
-  })(t, e);
+  })(t, e)
   r(t, [{
     key: "componentWillUnmount",
     value: function () {
-      this.throttle.cancel();
-      this.unbindEventListeners();
+      this.throttle.cancel()
+      this.unbindEventListeners()
     }
   }, {
     key: "getContainerRenderWindow",
     value: function () {
-      for (var e = this.container, t = window; !t.document.contains(e) && t.parent !== t;) {
-        t = t.parent;
+      for (var this$container = this.container, t = window; !t.document.contains(this$container) && t.parent !== t;) {
+        t = t.parent
       }
-      return t;
+      return t
     }
   }, {
     key: "unbindEventListeners",
     value: function () {
-      var e = this.getContainerRenderWindow();
-      e.removeEventListener("mousemove", this.handleChange);
-      e.removeEventListener("mouseup", this.handleMouseUp);
+      var e = this.getContainerRenderWindow()
+      e.removeEventListener("mousemove", this.handleChange)
+      e.removeEventListener("mouseup", this.handleMouseUp)
     }
   }, {
     key: "render",
     value: function () {
-      var e = this;
-      var t = this.props.style || {};
-      var n = t.color;
-      var r = t.white;
-      var i = t.black;
-      var s = t.pointer;
-      var c = t.circle;
+      var e = this
+      var t = this.props.style || {}
+      var t$color = t.color
+      var t$white = t.white
+      var t$black = t.black
+      var t$pointer = t.pointer
+      var t$circle = t.circle
       var u = (0, a.default)({
         default: {
           color: {
@@ -169,19 +169,19 @@ var l = exports.Saturation = function (e) {
           }
         },
         custom: {
-          color: n,
-          white: r,
-          black: i,
-          pointer: s,
-          circle: c
+          color: t$color,
+          white: t$white,
+          black: t$black,
+          pointer: t$pointer,
+          circle: t$circle
         }
       }, {
         custom: !!this.props.style
-      });
+      })
       return o.default.createElement("div", {
         style: u.color,
         ref: function (t) {
-          return e.container = t;
+          return e.container = t
         },
         onMouseDown: this.handleMouseDown,
         onTouchMove: this.handleChange,
@@ -196,9 +196,9 @@ var l = exports.Saturation = function (e) {
         style: u.pointer
       }, this.props.pointer ? o.default.createElement(this.props.pointer, this.props) : o.default.createElement("div", {
         style: u.circle
-      }))));
+      }))))
     }
-  }]);
-  return t;
-}(i.PureComponent || i.Component);
-exports.default = l;
+  }])
+  return t
+}(i.PureComponent || i.Component)
+exports.default = l

@@ -4,4 +4,4 @@
  * 模块 ID：1227
  */
 
-module.exports = "undefined" !== typeof ArrayBuffer && "undefined" !== typeof DataView;
+module.exports = "undefined" !== typeof ArrayBuffer && "undefined" !== typeof DataView

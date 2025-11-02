@@ -9,4 +9,4 @@ require("../1623/86")({
   stat: true
 }, {
   isFinite: require("./1611")
-});
+})

@@ -4,30 +4,30 @@
  * 模块 ID：24
  */
 
-"use strict";
+"use strict"
 
-var r;
-var o;
-import i = require("regenerator-runtime");
+var r
+var o
+import RegeneratorRuntime = require("regenerator-runtime");
 var a = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
-    return module.default;
+    return module.default
   } : function () {
-    return module;
-  };
+    return module
+  }
   Object.defineProperty(defaultExport, "a", {
     enumerable: true,
     get: defaultExport
-  });
-  return defaultExport;
-}(i);
+  })
+  return defaultExport
+}(RegeneratorRuntime)
 import s = require("../7");
 import c = require("../27");
 import l = require("../40");
-import u = require("ot-json1");
+import OtJson1 = require("ot-json1");
 import d = require("../15");
 import p = require("../38/66");
-import f = require("lodash");
+import Lodash = require("lodash");
 import h = require("../389");
 import m = require("../../../../../src/shared/ui/language");
 import g = require("../../../../../src/shared/events/messages-wrapper");
@@ -41,95 +41,95 @@ import w = require("../43");
 import C = require("../49/244");
 var T = function () {
   function e() {
-    c.a(this, e);
-    this._doc = null;
-    this._previousDoc = null;
+    c.a(this, e)
+    this._doc = null
+    this._previousDoc = null
   }
   l.a(e, [{
     key: "setDoc",
     value: function (e) {
-      this._previousDoc = this._doc;
-      this._doc = e;
+      this._previousDoc = this._doc
+      this._doc = e
     }
   }, {
     key: "getDoc",
     value: function () {
       if (this._doc) {
-        return this._doc;
+        return this._doc
       }
-      console.error("error:the doc is null");
+      console.error("error:the doc is null")
     }
   }, {
     key: "getPreviousDoc",
     value: function () {
-      return this._previousDoc;
+      return this._previousDoc
     }
   }, {
     key: "setPreviousDoc",
     value: function (e) {
-      return this._previousDoc = e;
+      return this._previousDoc = e
     }
   }, {
     key: "onGetSnapShort",
     value: function (e) {
-      w.f(f.cloneDeep(e));
+      w.f(Lodash.cloneDeep(e))
     }
   }, {
     key: "applyServerOp2IDE",
     value: function (e) {
-      var t = this;
+      var t = this
       if (C.c(e)) {
         e.forEach(function (e) {
-          t.handleServerOp2IDE(e);
-        });
+          t.handleServerOp2IDE(e)
+        })
       } else {
-        this.handleServerOp2IDE(e);
+        this.handleServerOp2IDE(e)
       }
     }
   }, {
     key: "handleServerOp2IDE",
     value: function (e) {
-      var t = this;
-      var n = u.type.apply(this._doc, e);
+      var t = this
+      var n = OtJson1.type.apply(this._doc, e)
       if (n && e) {
-        this.setDoc(n);
+        this.setDoc(n)
         if ("blockly" !== e[0]) {
-          var r = new Map();
-          var o = C.b(e);
-          var i = o.picks;
-          var a = o.drops;
-          i.forEach(function (e) {
+          var r = new Map()
+          var o = C.b(e)
+          var o$picks = o.picks
+          var o$drops = o.drops
+          o$picks.forEach(function (e) {
             if (C.f(e.op)) {
               r.set(e.op.p, E.a({
                 path: ["$"].concat(y.a(e.path)),
                 json: t._previousDoc
-              })[0]);
+              })[0])
             }
             Object.entries(O.oTHelper).forEach(function (t) {
-              var n = b.a(t, 2)[1];
+              var n = b.a(t, 2)[1]
               if (n && n.serverOp && n.serverOp.pick) {
-                n.serverOp.pick(e);
+                n.serverOp.pick(e)
               }
-            });
-          });
-          a.forEach(function (e) {
+            })
+          })
+          o$drops.forEach(function (e) {
             if (C.d(e.op)) {
-              var t = r.get(e.op.d);
+              var t = r.get(e.op.d)
               e.op = {
                 i: t
-              };
+              }
             }
             Object.entries(O.oTHelper).forEach(function (t) {
-              var n = b.a(t, 2)[1];
+              var n = b.a(t, 2)[1]
               if (n && n.serverOp && n.serverOp.drop) {
-                n.serverOp.drop(e);
+                n.serverOp.drop(e)
               }
-            });
-          });
+            })
+          })
         } else {
-          var s;
-          if (!(null === (s = O.oTHelper.blink) || undefined === s)) {
-            s.serverOp.applyServerOp(e);
+          var /* [auto-meaningful-name] */o$oTHelper$blink
+          if (!(null === (o$oTHelper$blink = O.oTHelper.blink) || undefined === o$oTHelper$blink)) {
+            o$oTHelper$blink.serverOp.applyServerOp(e)
           }
         }
       }
@@ -137,52 +137,52 @@ var T = function () {
   }, {
     key: "applyOpFromIDE",
     value: function (e) {
-      var t = u.type.apply(this._doc, e);
+      var t = OtJson1.type.apply(this._doc, e)
       if (t) {
-        this.setDoc(t);
+        this.setDoc(t)
       }
     }
-  }]);
-  return e;
-}();
-var S = "set_doc";
-var I = "set_doc_ack";
-var A = "join";
-var j = "join_ack";
-var N = "operation";
-var R = "operation_ack";
-var k = "operation_relay";
-var x = "get_online_user_list_ack";
-var D = "svr_user_status_change";
-var M = "svr_coll_user_change";
-var L = "svr_coll_user_eliminated";
-var P = "svr_save_work";
-var B = "svr_edit_permit_change";
-var F = "set_doc_relay";
-var G = "user_focus_on_pos";
-var U = "user_focus_on_pos_ack";
-var W = "user_focus_on_pos_relay";
+  }])
+  return e
+}()
+var S = "set_doc"
+var I = "set_doc_ack"
+var A = "join"
+var j = "join_ack"
+var N = "operation"
+var R = "operation_ack"
+var k = "operation_relay"
+var x = "get_online_user_list_ack"
+var D = "svr_user_status_change"
+var M = "svr_coll_user_change"
+var L = "svr_coll_user_eliminated"
+var P = "svr_save_work"
+var B = "svr_edit_permit_change"
+var F = "set_doc_relay"
+var G = "user_focus_on_pos"
+var U = "user_focus_on_pos_ack"
+var W = "user_focus_on_pos_relay"
 import H = require("../../../../../src/shared/events/actions");
-import V = require("socket.io-client");
+import Socket$ioClient = require("socket.io-client");
 var z = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
-    return module.default;
+    return module.default
   } : function () {
-    return module;
-  };
+    return module
+  }
   Object.defineProperty(defaultExport, "a", {
     enumerable: true,
     get: defaultExport
-  });
-  return defaultExport;
-}(V);
-var Y = require("../59/index").a.oTSocketHost;
+  })
+  return defaultExport
+}(Socket$ioClient)
+var require$$59Index$a$oTSocketHost = require("../59/index").a.oTSocketHost
 var K = function () {
   function e(t, n) {
-    c.a(this, e);
-    this.subject = undefined;
-    this.client = undefined;
-    this.subject = z()(Y, {
+    c.a(this, e)
+    this.subject = undefined
+    this.client = undefined
+    this.subject = z()(require$$59Index$a$oTSocketHost, {
       path: "/collaborate/",
       query: {
         work_id: n,
@@ -190,119 +190,119 @@ var K = function () {
       },
       upgrade: false,
       transports: ["websocket"]
-    });
-    this.client = t;
-    this.onSocketEvent(n);
+    })
+    this.client = t
+    this.onSocketEvent(n)
   }
   l.a(e, [{
     key: "onSocketEvent",
     value: function (e) {
-      var t = this;
+      var t = this
       this.subject.on(R, function (e) {
-        var n = e.code;
-        console.info("===OPERATION_ACK====");
-        if (1e7 === n) {
+        var e$code = e.code
+        console.info("===OPERATION_ACK====")
+        if (1e7 === e$code) {
           if (window.confirm("服务器响应错误，是否刷新页面？")) {
-            window.location.reload();
+            window.location.reload()
           }
         }
-        t.client.handleOperationAck();
+        t.client.handleOperationAck()
       }).on(k, function (e) {
-        console.info("===OPERATION_RELAY===", e);
-        t.client.handleApplyServer(e.op[0][0]);
+        console.info("===OPERATION_RELAY===", e)
+        t.client.handleApplyServer(e.op[0][0])
       }).on(j, function (e) {
-        console.info("===JOIN_ACK===", e);
-        t.client.handleJoinAck(e);
+        console.info("===JOIN_ACK===", e)
+        t.client.handleJoinAck(e)
       }).on(I, function (e) {
-        console.info("===SET_DOC_ACK===");
-        t.client.handleSetDocAck(e);
+        console.info("===SET_DOC_ACK===")
+        t.client.handleSetDocAck(e)
       }).on(x, function (e) {
-        console.info("===GET_ONLINE_USER_LIST_ACK===");
+        console.info("===GET_ONLINE_USER_LIST_ACK===")
       }).on(D, function (e) {
-        console.info("===SVR_USER_STATUS_CHANGE===");
-        t.client.handleServerUserStatusChanged(e);
+        console.info("===SVR_USER_STATUS_CHANGE===")
+        t.client.handleServerUserStatusChanged(e)
       }).on(M, function (e) {
-        t.client.handleUserCountChange(e);
-        console.info("===SVR_COLL_USER_CHANGE===");
+        t.client.handleUserCountChange(e)
+        console.info("===SVR_COLL_USER_CHANGE===")
       }).on(L, function (e) {
-        console.info("===SVR_COLL_USER_ELIMINATED===");
-        t.client.handleUserEliminated(e.eliminated_code);
+        console.info("===SVR_COLL_USER_ELIMINATED===")
+        t.client.handleUserEliminated(e.eliminated_code)
       }).on(U, function () {
-        console.info("===USER_FOCUS_ON_POS_ACK===");
+        console.info("===USER_FOCUS_ON_POS_ACK===")
       }).on(W, function (e) {
-        console.info("===USER_FOCUS_ON_POS_RELAY===", e);
-        t.client.handleCustomEventRelay(e);
+        console.info("===USER_FOCUS_ON_POS_RELAY===", e)
+        t.client.handleCustomEventRelay(e)
       }).on(P, function () {
-        t.client.handleSetCollAutoSave();
+        t.client.handleSetCollAutoSave()
       }).on(B, function (e) {
-        t.client.handleUserPermissionChange(e);
+        t.client.handleUserPermissionChange(e)
       }).on(F, function (e) {
-        t.client.collSetDoc(e);
+        t.client.collSetDoc(e)
       }).on("reconnect", function () {
-        t.client.handleServerReconnect();
+        t.client.handleServerReconnect()
       }).on("disconnect", function () {
-        t.client.handleDisconnect();
+        t.client.handleDisconnect()
       }).on("connect", function () {
-        t.subject.emit(A, e);
-      });
+        t.subject.emit(A, e)
+      })
     }
-  }]);
-  return e;
-}();
+  }])
+  return e
+}()
 var q = function () {
   function e() {
-    c.a(this, e);
+    c.a(this, e)
     this.applyClient = function (e, t) {
-      e.sendOperation(e.revision, t);
-      e.setState(new X(t));
-    };
+      e.sendOperation(e.revision, t)
+      e.setState(new X(t))
+    }
     this.serverAck = function (e) {
-      throw new Error("There is no pending operation.");
-    };
+      throw new Error("There is no pending operation.")
+    }
     this.transformSelection = function (e) {
-      return e;
-    };
+      return e
+    }
   }
   l.a(e, [{
     key: "applyServer",
     value: function (e, t) {
-      e.setState(this);
+      e.setState(this)
       return {
         op: t
-      };
+      }
     }
   }, {
     key: "resend",
     value: function (e) {}
-  }]);
-  return e;
-}();
+  }])
+  return e
+}()
 var X = function () {
   function e(t) {
-    c.a(this, e);
-    this.outstanding = undefined;
-    this.outstanding = t;
+    c.a(this, e)
+    this.outstanding = undefined
+    this.outstanding = t
   }
   l.a(e, [{
     key: "applyClient",
     value: function (e, t) {
-      e.setState(new Q(this.outstanding, t));
+      e.setState(new Q(this.outstanding, t))
     }
   }, {
     key: "applyServer",
     value: function (t, n) {
-      var r = [0, 0];
-      r[1] = u.type.transformNoConflict(n, this.outstanding, "left");
-      r[0] = u.type.transformNoConflict(this.outstanding, n, "right");
-      t.setState(new e(r[0]));
+      var r = [0, 0]
+      r[1] = OtJson1.type.transformNoConflict(n, this.outstanding, "left")
+      r[0] = OtJson1.type.transformNoConflict(this.outstanding, n, "right")
+      t.setState(new e(r[0]))
       return {
         op: r[1]
-      };
+      }
     }
   }, {
     key: "serverAck",
     value: function (e) {
-      e.setState(new q());
+      e.setState(new q())
     }
   }, {
     key: "transformSelection",
@@ -310,161 +310,161 @@ var X = function () {
   }, {
     key: "resend",
     value: function (e) {
-      e.sendOperation(e.revision, this.outstanding);
+      e.sendOperation(e.revision, this.outstanding)
     }
-  }]);
-  return e;
-}();
+  }])
+  return e
+}()
 var Q = function () {
   function e(t, n) {
-    c.a(this, e);
-    this.outstanding = undefined;
-    this.buffer = undefined;
-    this.outstanding = t;
-    this.buffer = n;
+    c.a(this, e)
+    this.outstanding = undefined
+    this.buffer = undefined
+    this.outstanding = t
+    this.buffer = n
   }
   l.a(e, [{
     key: "applyClient",
     value: function (t, n) {
-      var r = u.type.compose(this.buffer, n);
-      t.setState(new e(this.outstanding, r));
+      var r = OtJson1.type.compose(this.buffer, n)
+      t.setState(new e(this.outstanding, r))
     }
   }, {
     key: "applyServer",
     value: function (t, n) {
-      var r = [0, 0];
-      var o = [0, 0];
-      r[1] = u.type.transformNoConflict(n, this.outstanding, "left");
-      o[1] = u.type.transformNoConflict(r[1], this.buffer, "left");
-      r[0] = u.type.transformNoConflict(this.outstanding, n, "right");
-      o[0] = u.type.transformNoConflict(this.buffer, r[1], "right");
-      t.setState(new e(r[0], o[0]));
+      var r = [0, 0]
+      var o = [0, 0]
+      r[1] = OtJson1.type.transformNoConflict(n, this.outstanding, "left")
+      o[1] = OtJson1.type.transformNoConflict(r[1], this.buffer, "left")
+      r[0] = OtJson1.type.transformNoConflict(this.outstanding, n, "right")
+      o[0] = OtJson1.type.transformNoConflict(this.buffer, r[1], "right")
+      t.setState(new e(r[0], o[0]))
       return {
         op: o[1]
-      };
+      }
     }
   }, {
     key: "serverAck",
     value: function (e) {
-      e.setState(new X(this.buffer));
-      e.sendOperation(e.revision, this.buffer);
+      e.setState(new X(this.buffer))
+      e.sendOperation(e.revision, this.buffer)
     }
   }, {
     key: "transformSelection",
     value: function (e) {
-      return e.transform(this.outstanding).transform(this.buffer);
+      return e.transform(this.outstanding).transform(this.buffer)
     }
   }, {
     key: "resend",
     value: function (e) {
-      e.sendOperation(e.revision, this.outstanding);
+      e.sendOperation(e.revision, this.outstanding)
     }
-  }]);
-  return e;
-}();
+  }])
+  return e
+}()
 !function (e) {
-  e[e.RevertProject = 1] = "RevertProject";
+  e[e.RevertProject = 1] = "RevertProject"
 }(r || (r = {}));
 (function (e) {
-  e[e.UserOperation = 1] = "UserOperation";
-  e[e.ProjectRemove = 2] = "ProjectRemove";
-})(o || (o = {}));
+  e[e.UserOperation = 1] = "UserOperation"
+  e[e.ProjectRemove = 2] = "ProjectRemove"
+})(o || (o = {}))
 var Z = function () {
   function e(t) {
-    var n = this;
-    c.a(this, e);
-    this._socket = undefined;
-    this.revision = undefined;
-    this.adapter = undefined;
-    this.isSuccessfulCreateRoom = undefined;
-    this.state = undefined;
-    this.initDocData = undefined;
-    this._canRefreshUrl = true;
-    this.socketSuc = undefined;
+    var n = this
+    c.a(this, e)
+    this._socket = undefined
+    this.revision = undefined
+    this.adapter = undefined
+    this.isSuccessfulCreateRoom = undefined
+    this.state = undefined
+    this.initDocData = undefined
+    this._canRefreshUrl = true
+    this.socketSuc = undefined
     this.sendOperation = function (e, t) {
       n._socket.subject.emit(N, {
         revision: e,
         op: [[t]]
-      });
-    };
+      })
+    }
     this.applyOperation = function (e) {
-      n.adapter.applyServerOp2IDE(e);
-    };
+      n.adapter.applyServerOp2IDE(e)
+    }
     this.socketSuc = {
       resolve: function (e) {},
       reject: function (e) {},
       promise: Promise.resolve({
         status: "suc"
       })
-    };
+    }
     this.socketSuc.promise = new Promise(function (e, t) {
-      n.socketSuc.resolve = e;
-      n.socketSuc.reject = t;
-    });
-    this.revision = 0;
-    this._socket = new K(this, t);
-    this.adapter = new T();
-    this.state = new q();
-    this._canRefreshUrl = true;
+      n.socketSuc.resolve = e
+      n.socketSuc.reject = t
+    })
+    this.revision = 0
+    this._socket = new K(this, t)
+    this.adapter = new T()
+    this.state = new q()
+    this._canRefreshUrl = true
   }
   l.a(e, [{
     key: "disconnect",
     value: function () {
-      this._canRefreshUrl = false;
-      this._socket.subject.close();
+      this._canRefreshUrl = false
+      this._socket.subject.close()
     }
   }, {
     key: "waitInitial",
     value: function () {
-      return this.socketSuc.promise;
+      return this.socketSuc.promise
     }
   }, {
     key: "setState",
     value: function (e) {
-      this.state = e;
+      this.state = e
     }
   }, {
     key: "emitCustomEvent",
     value: function (e) {
-      console.info("======= USER_FOCUS_ON_POS=======");
-      this._socket.subject.emit(G, e);
+      console.info("======= USER_FOCUS_ON_POS=======")
+      this._socket.subject.emit(G, e)
     }
   }, {
     key: "applyClient",
     value: function (e) {
-      console.info("======= apply Client=======", e);
-      e = f.cloneDeep(e);
-      this.state.applyClient(this, e);
-      this.adapter.applyOpFromIDE(e);
+      console.info("======= apply Client=======", e)
+      e = Lodash.cloneDeep(e)
+      this.state.applyClient(this, e)
+      this.adapter.applyOpFromIDE(e)
     }
   }, {
     key: "transformSelection",
     value: function (e) {
-      return this.state.transformSelection(e);
+      return this.state.transformSelection(e)
     }
   }, {
     key: "handleApplyServer",
     value: function (e) {
-      console.info("================== accept Server op ==================");
+      console.info("================== accept Server op ==================")
       try {
-        this.revision++;
-        var t = this.state.applyServer(this, e).op;
-        this.applyOperation(t);
+        this.revision++
+        var this$state$applyServerThisE$op = this.state.applyServer(this, e).op
+        this.applyOperation(this$state$applyServerThisE$op)
       } catch (n) {
-        console.error("applyServer error", n);
+        console.error("applyServer error", n)
       }
     }
   }, {
     key: "handleNotifySnapshot",
     value: function (e) {
-      this.revision = e.revision;
-      this.adapter.onGetSnapShort(e.doc);
+      this.revision = e.revision
+      this.adapter.onGetSnapShort(e.doc)
     }
   }, {
     key: "handleServerReconnect",
     value: function () {
       if ("function" === typeof this.state.resend) {
-        this.state.resend(this);
+        this.state.resend(this)
       }
     }
   }, {
@@ -472,136 +472,136 @@ var Z = function () {
     value: function () {
       if (this._canRefreshUrl) {
         if (window.confirm("与后台连接断开，是否刷新页面？")) {
-          window.location.reload();
+          window.location.reload()
         }
       }
     }
   }, {
     key: "handleOperationAck",
     value: function () {
-      this.revision++;
-      this.state.serverAck(this);
+      this.revision++
+      this.state.serverAck(this)
     }
   }, {
     key: "handleJoinAck",
     value: function () {
       var e = s.a(a.a.mark(function e(t) {
-        var n;
-        var r;
+        var /* [auto-meaningful-name] */t$code
+        var /* [auto-meaningful-name] */t$data
         return a.a.wrap(function (e) {
           for (;;) {
             switch (e.prev = e.next) {
               case 0:
-                if (n = t.code, r = t.data, this.initDocData = undefined, 20000002 !== n) {
-                  e.next = 9;
-                  break;
+                if (t$code = t.code, t$data = t.data, this.initDocData = undefined, 20000002 !== t$code) {
+                  e.next = 9
+                  break
                 }
-                e.next = 5;
-                return w.b();
+                e.next = 5
+                return w.b()
               case 5:
-                this.initDocData = e.sent;
+                this.initDocData = e.sent
                 this._socket.subject.emit(S, {
                   doc: this.initDocData
-                });
-                e.next = 10;
-                break;
+                })
+                e.next = 10
+                break
               case 9:
-                if (20000001 === n) {
-                  console.error("sock 启动失败请重试");
+                if (20000001 === t$code) {
+                  console.error("sock 启动失败请重试")
                   this.socketSuc.resolve({
                     status: "fail"
-                  });
+                  })
                 } else {
-                  if (r) {
-                    this.initDocData = r.doc;
-                    this._setAdapterInitData();
-                    this.handleNotifySnapshot(r);
+                  if (t$data) {
+                    this.initDocData = t$data.doc
+                    this._setAdapterInitData()
+                    this.handleNotifySnapshot(t$data)
                     this.socketSuc.resolve({
                       status: "suc"
-                    });
+                    })
                   }
                 }
               case 10:
               case "end":
-                return e.stop();
+                return e.stop()
             }
           }
-        }, e, this);
-      }));
+        }, e, this)
+      }))
       return function (t) {
-        return e.apply(this, arguments);
-      };
+        return e.apply(this, arguments)
+      }
     }()
   }, {
     key: "_setAdapterInitData",
     value: function () {
       if (this.initDocData) {
-        this.adapter.setDoc(this.initDocData);
+        this.adapter.setDoc(this.initDocData)
       }
     }
   }, {
     key: "handleSetDocAck",
     value: function (e) {
       if (20000001 === e.code) {
-        this._socket.subject.emit(A);
+        this._socket.subject.emit(A)
       } else {
-        this._setAdapterInitData();
+        this._setAdapterInitData()
         this.socketSuc.resolve({
           status: "suc"
-        });
+        })
       }
     }
   }, {
     key: "_distributeUserColor",
     value: function (e) {
-      var t;
-      var n = w.c();
+      var /* [auto-meaningful-name] */o$oTHelper$customEvent
+      var n = w.c()
       Object.keys(n).forEach(function (t) {
         if (!e.some(function (e) {
-          return e.id === Number(t);
+          return e.id === Number(t)
         })) {
-          delete n[t];
+          delete n[t]
         }
-      });
-      var r = [];
+      })
+      var r = []
       e.forEach(function (e) {
         n[e.id] = function (e) {
           return h.b.find(function (t) {
-            return !e.includes(t.toUpperCase());
-          }) || h.a;
-        }(r);
-        r.push(n[e.id]);
-      });
-      if (!(null === (t = O.oTHelper.customEvent) || undefined === t)) {
-        t.emit.userColors(n);
+            return !e.includes(t.toUpperCase())
+          }) || h.a
+        }(r)
+        r.push(n[e.id])
+      })
+      if (!(null === (o$oTHelper$customEvent = O.oTHelper.customEvent) || undefined === o$oTHelper$customEvent)) {
+        o$oTHelper$customEvent.emit.userColors(n)
       }
-      H.a(_.t(n));
+      H.a(_.t(n))
     }
   }, {
     key: "handleServerUserStatusChanged",
     value: function (e) {
-      var t;
-      this._distributeUserColor(e);
-      this._updateUserFocusInfoList(e);
-      H.a(_.l(e));
-      if (!(null === (t = O.oTHelper.customEvent) || undefined === t)) {
-        t.emit.focusItem("widget");
+      var /* [auto-meaningful-name] */o$oTHelper$customEvent
+      this._distributeUserColor(e)
+      this._updateUserFocusInfoList(e)
+      H.a(_.l(e))
+      if (!(null === (o$oTHelper$customEvent = O.oTHelper.customEvent) || undefined === o$oTHelper$customEvent)) {
+        o$oTHelper$customEvent.emit.focusItem("widget")
       }
     }
   }, {
     key: "_updateUserFocusInfoList",
     value: function (e) {
-      var t = w.d();
+      var t = w.d()
       H.a(_.v(p.a.List(t.filter(function (t) {
         return e.some(function (e) {
-          return e.id === t.userId;
-        });
-      }))));
+          return e.id === t.userId
+        })
+      }))))
     }
   }, {
     key: "handleUserCountChange",
     value: function (e) {
-      var t = [];
+      var t = []
       e.forEach(function (e) {
         t.push({
           id: e.coll_user_id,
@@ -609,65 +609,65 @@ var Z = function () {
           avatar_url: e.avatar_url,
           is_author: e.is_author,
           edit_permission: e.edit_permission
-        });
-      });
-      H.a(_.s(t));
+        })
+      })
+      H.a(_.s(t))
     }
   }, {
     key: "handleUserEliminated",
     value: function (e) {
-      var t = H.b();
-      this.disconnect();
+      var t = H.b()
+      this.disconnect()
       H.a(g.zh({
         onConfirm: function () {
-          H.a(g.Gf());
+          H.a(g.Gf())
         },
         allowText: m.c(t, "confirm").toString(),
         onClose: function () {
-          H.a(g.Gf());
+          H.a(g.Gf())
         },
         title: m.c(t, e === o.ProjectRemove ? "OT.currentProjectBeDeleteTitle" : "OT.editPermissionLostTitle").toString(),
         content: m.c(t, e === o.ProjectRemove ? "OT.currentProjectBeDeleteDescription" : "OT.editPermissionLostDescription").toString(),
         cancelBtnVisible: false
-      }));
+      }))
     }
   }, {
     key: "handleCustomEventRelay",
     value: function (e) {
-      var t;
-      if (!(null === (t = O.oTHelper.customEvent) || undefined === t)) {
-        t.accept(e);
+      var /* [auto-meaningful-name] */o$oTHelper$customEvent
+      if (!(null === (o$oTHelper$customEvent = O.oTHelper.customEvent) || undefined === o$oTHelper$customEvent)) {
+        o$oTHelper$customEvent.accept(e)
       }
     }
   }, {
     key: "handleSetCollAutoSave",
     value: function () {
-      H.a(g.di(true));
+      H.a(g.di(true))
     }
   }, {
     key: "handleUserPermissionChange",
     value: function (e) {
-      var t;
-      var n = H.b();
-      var r = e.edit_permission === v.c.ReadOnly ? m.c(n, "OT.permissionChangeToReadOnly").toString() : m.c(n, "OT.permissionChangeToEdit").toString();
-      var o = null === (t = H.d.getState().common.userInfo) || undefined === t ? undefined : t.id;
-      var i = e.coll_user_id;
-      if (o === i) {
+      var /* [auto-meaningful-name] */h$d$getState$common$userInfo
+      var n = H.b()
+      var r = e.edit_permission === v.c.ReadOnly ? m.c(n, "OT.permissionChangeToReadOnly").toString() : m.c(n, "OT.permissionChangeToEdit").toString()
+      var o = null === (h$d$getState$common$userInfo = H.d.getState().common.userInfo) || undefined === h$d$getState$common$userInfo ? undefined : h$d$getState$common$userInfo.id
+      var e$coll_user_id = e.coll_user_id
+      if (o === e$coll_user_id) {
         H.a(g.mj({
           visible: true,
           message: r,
           duration: 2e3
-        }));
-        H.a(g.Ci(e.edit_permission === v.c.ReadOnly ? v.c.ReadOnly : v.c.Edit));
+        }))
+        H.a(g.Ci(e.edit_permission === v.c.ReadOnly ? v.c.ReadOnly : v.c.Edit))
       }
-      var a = Array.from(H.d.getState().oTState.cooperationUserList);
+      var a = Array.from(H.d.getState().oTState.cooperationUserList)
       var s = a.find(function (e) {
-        return e.id === i;
-      });
+        return e.id === e$coll_user_id
+      })
       if (s) {
-        s.edit_permission = e.edit_permission;
+        s.edit_permission = e.edit_permission
       }
-      H.a(_.s(a));
+      H.a(_.s(a))
     }
   }, {
     key: "forceSetDoc",
@@ -677,54 +677,54 @@ var Z = function () {
           for (;;) {
             switch (e.prev = e.next) {
               case 0:
-                e.next = 2;
-                return w.b();
+                e.next = 2
+                return w.b()
               case 2:
-                this.initDocData = e.sent;
-                this.adapter.setDoc(this.initDocData);
+                this.initDocData = e.sent
+                this.adapter.setDoc(this.initDocData)
                 this._socket.subject.emit(S, {
                   doc: this.initDocData,
                   force: 1,
                   business_type: r.RevertProject
-                });
-                this.revision = 0;
+                })
+                this.revision = 0
               case 6:
               case "end":
-                return e.stop();
+                return e.stop()
             }
           }
-        }, e, this);
-      }));
+        }, e, this)
+      }))
       return function () {
-        return e.apply(this, arguments);
-      };
+        return e.apply(this, arguments)
+      }
     }()
   }, {
     key: "collSetDoc",
     value: function (e) {
       if (e.business_type === r.RevertProject) {
-        var t = H.b();
+        var t = H.b()
         H.a(g.zh({
           allowText: m.c(t, "confirm").toString(),
           title: m.c(t, "OT.tips").toString(),
           content: m.c(t, "OT.revert").toString(),
           cancelBtnVisible: false
-        }));
+        }))
       }
-      this.initDocData = e.doc;
-      this._setAdapterInitData();
-      this.handleNotifySnapshot(e);
+      this.initDocData = e.doc
+      this._setAdapterInitData()
+      this.handleNotifySnapshot(e)
     }
-  }]);
-  return e;
-}();
+  }])
+  return e
+}()
 import J = require("../49/377/index");
 var $ = new (function () {
   function e() {
-    c.a(this, e);
-    this.client = undefined;
-    this.workerId = undefined;
-    this.workerId = "";
+    c.a(this, e)
+    this.client = undefined
+    this.workerId = undefined
+    this.workerId = ""
   }
   l.a(e, [{
     key: "init",
@@ -734,33 +734,33 @@ var $ = new (function () {
           for (;;) {
             switch (e.prev = e.next) {
               case 0:
-                this.disconnect();
-                this.workerId = t;
-                this.client = new Z(t);
-                e.next = 5;
-                return this.client.waitInitial();
+                this.disconnect()
+                this.workerId = t
+                this.client = new Z(t)
+                e.next = 5
+                return this.client.waitInitial()
               case 5:
                 if ("suc" !== e.sent.status) {
-                  e.next = 11;
-                  break;
+                  e.next = 11
+                  break
                 }
-                O.oTHelper.init();
-                J.blinkOTAdapter.start();
-                e.next = 13;
-                break;
+                O.oTHelper.init()
+                J.blinkOTAdapter.start()
+                e.next = 13
+                break
               case 11:
-                e.next = 13;
-                return this.reconnect();
+                e.next = 13
+                return this.reconnect()
               case 13:
               case "end":
-                return e.stop();
+                return e.stop()
             }
           }
-        }, e, this);
-      }));
+        }, e, this)
+      }))
       return function (t) {
-        return e.apply(this, arguments);
-      };
+        return e.apply(this, arguments)
+      }
     }()
   }, {
     key: "reconnect",
@@ -770,75 +770,75 @@ var $ = new (function () {
           for (;;) {
             switch (e.prev = e.next) {
               case 0:
-                e.next = 2;
-                return d.lb(500);
+                e.next = 2
+                return d.lb(500)
               case 2:
-                this.disconnect();
-                e.next = 5;
-                return this.init(this.workerId);
+                this.disconnect()
+                e.next = 5
+                return this.init(this.workerId)
               case 5:
               case "end":
-                return e.stop();
+                return e.stop()
             }
           }
-        }, e, this);
-      }));
+        }, e, this)
+      }))
       return function () {
-        return e.apply(this, arguments);
-      };
+        return e.apply(this, arguments)
+      }
     }()
   }, {
     key: "disconnect",
     value: function () {
       var e = s.a(a.a.mark(function e() {
-        var t;
+        var /* [auto-meaningful-name] */this$client
         return a.a.wrap(function (e) {
           for (;;) {
             switch (e.prev = e.next) {
               case 0:
-                if (!(null === (t = this.client) || undefined === t)) {
-                  t.disconnect();
+                if (!(null === (this$client = this.client) || undefined === this$client)) {
+                  this$client.disconnect()
                 }
-                this.client = undefined;
-                J.blinkOTAdapter.stop();
-                O.oTHelper.dispose();
+                this.client = undefined
+                J.blinkOTAdapter.stop()
+                O.oTHelper.dispose()
               case 4:
               case "end":
-                return e.stop();
+                return e.stop()
             }
           }
-        }, e, this);
-      }));
+        }, e, this)
+      }))
       return function () {
-        return e.apply(this, arguments);
-      };
+        return e.apply(this, arguments)
+      }
     }()
   }, {
     key: "applyClient",
     value: function (e) {
-      var t;
-      if (!(null === (t = this.client) || undefined === t)) {
-        t.applyClient(e);
+      var /* [auto-meaningful-name] */this$client
+      if (!(null === (this$client = this.client) || undefined === this$client)) {
+        this$client.applyClient(e)
       }
     }
   }, {
     key: "getDoc",
     value: function () {
-      var e;
-      var t;
-      return null === (e = this.client) || undefined === e || null === (t = e.adapter) || undefined === t ? undefined : t.getDoc();
+      var /* [auto-meaningful-name] */this$client
+      var /* [auto-meaningful-name] */this$client$adapter
+      return null === (this$client = this.client) || undefined === this$client || null === (this$client$adapter = this$client.adapter) || undefined === this$client$adapter ? undefined : this$client$adapter.getDoc()
     }
   }, {
     key: "getPreviousDoc",
     value: function () {
-      var e;
-      var t;
-      return null === (e = this.client) || undefined === e || null === (t = e.adapter) || undefined === t ? undefined : t.getPreviousDoc();
+      var /* [auto-meaningful-name] */this$client
+      var /* [auto-meaningful-name] */this$client$adapter
+      return null === (this$client = this.client) || undefined === this$client || null === (this$client$adapter = this$client.adapter) || undefined === this$client$adapter ? undefined : this$client$adapter.getPreviousDoc()
     }
-  }]);
-  return e;
-}())();
-window.oT = $;
-window.json = u;
-export { $ as a };
-export default $;
+  }])
+  return e
+}())()
+window.oT = $
+window.json = OtJson1
+export { $ as a }
+export default $

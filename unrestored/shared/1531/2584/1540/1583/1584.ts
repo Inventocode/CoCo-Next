@@ -4,16 +4,16 @@
  * 模块 ID：1584
  */
 
-"use strict";
+"use strict"
 
-var r = require("../1659/241");
-var o = require("../1608/1205/1207");
+var r = require("../1659/241")
+var o = require("../1608/1205/1207")
 module.exports = function (e) {
-  r(this);
+  r(this)
   if ("string" === e || "default" === e) {
-    e = "string";
+    e = "string"
   } else if ("number" !== e) {
-    throw TypeError("Incorrect hint");
+    throw TypeError("Incorrect hint")
   }
-  return o(this, e);
-};
+  return o(this, e)
+}

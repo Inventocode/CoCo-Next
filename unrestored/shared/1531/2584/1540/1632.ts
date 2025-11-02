@@ -4,18 +4,18 @@
  * 模块 ID：1632
  */
 
-var r = require("./1623/86");
-var o = require("./1736/167");
-var i = require("./1738/231");
-var a = Object.isExtensible;
+var r = require("./1623/86")
+var o = require("./1736/167")
+var i = require("./1738/231")
+var object$isExtensible = Object.isExtensible
 r({
   target: "Object",
   stat: true,
   forced: o(function () {
-    a(1);
+    object$isExtensible(1)
   })
 }, {
   isExtensible: function (e) {
-    return !!i(e) && (!a || a(e));
+    return !!i(e) && (!object$isExtensible || object$isExtensible(e))
   }
-});
+})

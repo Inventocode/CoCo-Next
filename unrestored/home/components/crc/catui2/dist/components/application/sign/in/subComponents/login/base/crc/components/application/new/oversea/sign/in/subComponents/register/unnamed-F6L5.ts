@@ -4,6 +4,6 @@
  * 模块 ID：F6L5
  */
 
-module.exports = "https://creation.codemao.cn/coco/home/dist/" + "asset/icon_success_83e49.png";
+module.exports = "https://creation.codemao.cn/coco/home/dist/" + "asset/icon_success_83e49.png"
 
 /***/

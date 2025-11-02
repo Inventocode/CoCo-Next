@@ -4,10 +4,10 @@
  * 模块 ID：677
  */
 
-"use strict";
+"use strict"
 
-export { r as messages };
-export { b as types } from "./476";
+export { r as messages }
+export { b as types } from "./476"
 var r = {
   "zh-CN": {
     widgetName: "通讯录",
@@ -20,5 +20,5 @@ var r = {
     pickContact: "进行选择",
     onContactPickerSelected: "完成选择"
   }
-};
+}
 import o = require("./476");

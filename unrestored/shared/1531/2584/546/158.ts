@@ -26,4 +26,4 @@ module.exports = {
   horizontalRotate: "style_horizontalRotate__23nkJ",
   verticalRotate: "style_verticalRotate__36-mC",
   handleNotSelected: "style_handleNotSelected__3Jy3L"
-};
+}

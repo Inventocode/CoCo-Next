@@ -11,9 +11,9 @@ module.exports = function (e, t, n) {
       enumerable: true,
       configurable: true,
       writable: true
-    });
+    })
   } else {
-    e[t] = n;
+    e[t] = n
   }
-  return e;
-};
+  return e
+}

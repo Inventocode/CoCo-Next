@@ -4,11 +4,11 @@
  * 模块 ID：1190
  */
 
-"use strict";
+"use strict"
 
 Object.defineProperty(exports, "__esModule", {
   value: true
-});
+})
 exports.default = function () {
-  undefined;
-};
+  undefined
+}

@@ -4,5 +4,5 @@
  * 模块 ID：849
  */
 
-var r = require("../../../../../254/2533/1420/2530/499/index").Symbol;
-module.exports = r;
+var require$$$$$$$$$$254253314202530499Index$Symbol = require("../../../../../254/2533/1420/2530/499/index").Symbol
+module.exports = require$$$$$$$$$$254253314202530499Index$Symbol

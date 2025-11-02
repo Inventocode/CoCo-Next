@@ -4,23 +4,23 @@
  * 模块 ID：478
  */
 
-"use strict";
+"use strict"
 
-export { o as a };
+export { o as a }
 import r = require("../75/index");
 var i = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
-    return module.default;
+    return module.default
   } : function () {
-    return module;
-  };
+    return module
+  }
   Object.defineProperty(defaultExport, "a", {
     enumerable: true,
     get: defaultExport
-  });
-  return defaultExport;
-}(r);
+  })
+  return defaultExport
+}(r)
 function o(e) {
-  return e instanceof HTMLElement ? e : i.a.findDOMNode(e);
+  return e instanceof HTMLElement ? e : i.a.findDOMNode(e)
 }
-export default o;
+export default o

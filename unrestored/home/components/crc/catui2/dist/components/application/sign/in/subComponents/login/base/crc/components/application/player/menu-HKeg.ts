@@ -4,25 +4,25 @@
  * 模块 ID：HKeg
  */
 
-"use strict";
+"use strict"
 
 /* unused harmony export PlayerMenu */
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__ from "@babel/runtime/helpers/esm/slicedToArray";
+import * as __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__ from "@babel/runtime/helpers/esm/slicedToArray"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_1_babel_plugin_react_css_modules_dist_browser_getClassName__ from "babel-plugin-react-css-modules/dist/browser/getClassName";
+import * as __WEBPACK_IMPORTED_MODULE_1_babel_plugin_react_css_modules_dist_browser_getClassName__ from "babel-plugin-react-css-modules/dist/browser/getClassName"
 /* harmony import */
-import __WEBPACK_IMPORTED_MODULE_1_babel_plugin_react_css_modules_dist_browser_getClassName___default from "babel-plugin-react-css-modules/dist/browser/getClassName";
+import __WEBPACK_IMPORTED_MODULE_1_babel_plugin_react_css_modules_dist_browser_getClassName___default from "babel-plugin-react-css-modules/dist/browser/getClassName"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_2_react__ from "react";
+import * as __WEBPACK_IMPORTED_MODULE_2_react__ from "react"
 /* harmony import */
-import __WEBPACK_IMPORTED_MODULE_2_react___default from "react";
+import __WEBPACK_IMPORTED_MODULE_2_react___default from "react"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_3__style_module_css__ from "./style.module.css-3pun";
+import * as __WEBPACK_IMPORTED_MODULE_3__style_module_css__ from "./style.module.css-3pun"
 /* harmony import */
-import __WEBPACK_IMPORTED_MODULE_3__style_module_css___default from "./style.module.css-3pun";
+import __WEBPACK_IMPORTED_MODULE_3__style_module_css___default from "./style.module.css-3pun"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_4__crc_catui2__ from "../../../catui2-TOtg";
+import * as __WEBPACK_IMPORTED_MODULE_4__crc_catui2__ from "../../../catui2-TOtg"
 var _styleModuleImportMap = {
   "./style_module.css": {
     "menu": "CUI-player-menu-menu",
@@ -33,30 +33,30 @@ var _styleModuleImportMap = {
     "item-on": "CUI-player-menu-item-on",
     "menu-wrapper": "CUI-player-menu-menu-wrapper"
   }
-};
+}
 var PlayerMenu = function PlayerMenu(props) {
-  var initMenuOn = props.initMenuOn;
-  var children = props.children;
-  var style = props.style;
-  var menuHeight = props.menuHeight ? props.menuHeight : 44;
-  var itemHeight = props.itemHeight ? props.itemHeight : 36;
-  var spaceBettwen = props.spaceBettwen ? props.spaceBettwen : 20;
-  var circleHeight = itemHeight;
-  var _useState = __WEBPACK_IMPORTED_MODULE_2_react__.useState(initMenuOn);
-  var _useState2 = __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default(_useState, 2);
-  var isMenuOn = _useState2[0];
-  var setMenuOn = _useState2[1];
-  var legalChildNum = 0;
-  var TOTALCHILDNUM = __WEBPACK_IMPORTED_MODULE_2_react___default.Children.count(children);
-  var TRANSITIONDURATION = 0.5;
+  var initMenuOn = props.initMenuOn
+  var children = props.children
+  var style = props.style
+  var menuHeight = props.menuHeight ? props.menuHeight : 44
+  var itemHeight = props.itemHeight ? props.itemHeight : 36
+  var spaceBettwen = props.spaceBettwen ? props.spaceBettwen : 20
+  var circleHeight = itemHeight
+  var _useState = __WEBPACK_IMPORTED_MODULE_2_react__.useState(initMenuOn)
+  var _useState2 = __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default(_useState, 2)
+  var isMenuOn = _useState2[0]
+  var setMenuOn = _useState2[1]
+  var legalChildNum = 0
+  var TOTALCHILDNUM = __WEBPACK_IMPORTED_MODULE_2_react___default.Children.count(children)
+  var TRANSITIONDURATION = 0.5
   var menuItems = __WEBPACK_IMPORTED_MODULE_2_react___default.Children.map(children, function (child, index) {
     if (!__WEBPACK_IMPORTED_MODULE_2_react___default.isValidElement(child)) {
-      return;
+      return
     }
     if (child.type !== __WEBPACK_IMPORTED_MODULE_4__crc_catui2__.PlayerMenuItem) {
-      console.error(["catUI2:The Menu component doesn't accept other element as a child.", "Consider providing a MenuItem instead."].join("\n"));
+      console.error(["catUI2:The Menu component doesn't accept other element as a child.", "Consider providing a MenuItem instead."].join("\n"))
     } else {
-      legalChildNum++;
+      legalChildNum++
       return child.type === __WEBPACK_IMPORTED_MODULE_4__crc_catui2__.PlayerMenuItem && /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_2_react___default.createElement("div", {
         key: index,
         style: {
@@ -69,11 +69,11 @@ var PlayerMenu = function PlayerMenu(props) {
           "autoResolveMultipleImports": true,
           "handleMissingStyleName": "throw"
         })
-      }, child);
+      }, child)
     }
-  });
-  var menuWidth = (legalChildNum + 1) * (menuHeight + spaceBettwen) - spaceBettwen;
-  var toolsWidth = menuWidth - circleHeight - (menuHeight - circleHeight) / 2;
+  })
+  var menuWidth = (legalChildNum + 1) * (menuHeight + spaceBettwen) - spaceBettwen
+  var toolsWidth = menuWidth - circleHeight - (menuHeight - circleHeight) / 2
   return /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_2_react___default.createElement("div", {
     className: "CUI-player-menu-menu-wrapper",
     style: style
@@ -95,7 +95,7 @@ var PlayerMenu = function PlayerMenu(props) {
       right: "".concat((menuHeight - circleHeight) / 2, "px")
     },
     onClick: function onClick() {
-      setMenuOn(!isMenuOn);
+      setMenuOn(!isMenuOn)
     },
     className: __WEBPACK_IMPORTED_MODULE_1_babel_plugin_react_css_modules_dist_browser_getClassName___default("button ".concat(isMenuOn ? "button-on" : ""), _styleModuleImportMap, {
       "autoResolveMultipleImports": true,
@@ -107,12 +107,12 @@ var PlayerMenu = function PlayerMenu(props) {
       width: "".concat(toolsWidth, "px"),
       marginLeft: "".concat((menuHeight - circleHeight) / 2, "px")
     }
-  }, menuItems)));
-};
+  }, menuItems)))
+}
 PlayerMenu.defaultProps = {
   initMenuOn: false,
   menuHeight: 44,
   spaceBettwen: 20
-};
+}
 
 /***/

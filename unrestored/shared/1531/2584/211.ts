@@ -42,4 +42,4 @@ module.exports = {
   editName: "ScreenList_editName__3zCBm",
   dragItem: "ScreenList_dragItem__1KjIZ",
   deleteScreenDialog: "ScreenList_deleteScreenDialog__3S9wI"
-};
+}

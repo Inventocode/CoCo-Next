@@ -9,4 +9,4 @@ require("./1623/86")({
   stat: true
 }, {
   MIN_SAFE_INTEGER: -9007199254740991
-});
+})

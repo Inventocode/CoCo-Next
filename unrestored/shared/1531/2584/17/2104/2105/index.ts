@@ -4,65 +4,65 @@
  * 模块 ID：2105
  */
 
-"use strict";
+"use strict"
 
 Object.defineProperty(exports, "__esModule", {
   value: true
-});
-exports.StartDragEvent = exports.MoveEvent = exports.EndDragEvent = exports.DragAreaChangeEvent = exports.DeleteEvent = exports.ChangeEvent = exports.CreateEvent = exports.BlockEvent = undefined;
-var r = require("./643");
+})
+exports.StartDragEvent = exports.MoveEvent = exports.EndDragEvent = exports.DragAreaChangeEvent = exports.DeleteEvent = exports.ChangeEvent = exports.CreateEvent = exports.BlockEvent = undefined
+var r = require("./643")
 Object.defineProperty(exports, "BlockEvent", {
   enumerable: true,
   get: function () {
-    return r.BlockEvent;
+    return r.BlockEvent
   }
-});
-var i = require("./2106");
+})
+var i = require("./2106")
 Object.defineProperty(exports, "CreateEvent", {
   enumerable: true,
   get: function () {
-    return i.CreateEvent;
+    return i.CreateEvent
   }
-});
-var o = require("./2111");
+})
+var o = require("./2111")
 Object.defineProperty(exports, "ChangeEvent", {
   enumerable: true,
   get: function () {
-    return o.ChangeEvent;
+    return o.ChangeEvent
   }
-});
-var a = require("./2112");
+})
+var a = require("./2112")
 Object.defineProperty(exports, "DeleteEvent", {
   enumerable: true,
   get: function () {
-    return a.DeleteEvent;
+    return a.DeleteEvent
   }
-});
-var s = require("./2113");
+})
+var s = require("./2113")
 Object.defineProperty(exports, "DragAreaChangeEvent", {
   enumerable: true,
   get: function () {
-    return s.DragAreaChangeEvent;
+    return s.DragAreaChangeEvent
   }
-});
-var c = require("./2114");
+})
+var c = require("./2114")
 Object.defineProperty(exports, "EndDragEvent", {
   enumerable: true,
   get: function () {
-    return c.EndDragEvent;
+    return c.EndDragEvent
   }
-});
-var u = require("./2115");
+})
+var u = require("./2115")
 Object.defineProperty(exports, "MoveEvent", {
   enumerable: true,
   get: function () {
-    return u.MoveEvent;
+    return u.MoveEvent
   }
-});
-var l = require("./2116");
+})
+var l = require("./2116")
 Object.defineProperty(exports, "StartDragEvent", {
   enumerable: true,
   get: function () {
-    return l.StartDragEvent;
+    return l.StartDragEvent
   }
-});
+})

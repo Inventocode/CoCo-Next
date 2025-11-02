@@ -4,11 +4,11 @@
  * 模块 ID：1719
  */
 
-"use strict";
+"use strict"
 
-var r = require("./1720/258/index");
-var o = require("./1733/399").forEach;
-var i = r.aTypedArray;
+var r = require("./1720/258/index")
+var require$1733399$forEach = require("./1733/399").forEach
+var r$aTypedArray = r.aTypedArray;
 (0, r.exportTypedArrayMethod)("forEach", function (e) {
-  o(i(this), e, arguments.length > 1 ? arguments[1] : undefined);
-});
+  require$1733399$forEach(r$aTypedArray(this), e, arguments.length > 1 ? arguments[1] : undefined)
+})

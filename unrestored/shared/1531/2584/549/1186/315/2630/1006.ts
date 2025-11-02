@@ -4,11 +4,11 @@
  * 模块 ID：1006
  */
 
-"use strict";
+"use strict"
 
-export { i as a };
+export { i as a }
 import r = require("../../../../548/1183/270/390");
 function i(e) {
-  return r.a(e).defaultView || window;
+  return r.a(e).defaultView || window
 }
-export default i;
+export default i

@@ -4,12 +4,12 @@
  * 模块 ID：yDaO
  */
 
-"use strict";
+"use strict"
 
 /* harmony export (binding) */
 /* harmony import */
-export { themeOrangeColor };
-import * as __WEBPACK_IMPORTED_MODULE_0__supColor__ from "./supColor-qumQ";
+export { themeOrangeColor }
+import * as __WEBPACK_IMPORTED_MODULE_0__supColor__ from "./supColor-qumQ"
 var themeOrangeColor = {
   /* 色板主色：主色(0) —— +9 */
   "theme-color-0": "255,120,41",
@@ -71,6 +71,6 @@ var themeOrangeColor = {
 
   "theme-color-c2": __WEBPACK_IMPORTED_MODULE_0__supColor__.themeSupColor["sup-color-n7-2"]
   /* 提示线、运行按钮 -2 */
-};
+}
 
 /***/

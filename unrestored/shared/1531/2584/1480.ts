@@ -4,42 +4,42 @@
  * 模块 ID：1480
  */
 
-"use strict";
+"use strict"
 
-export { i as a };
+export { i as a }
 import r = require("./33/index");
-import o = require("react");
+import React = require("react");
 function i(e, t) {
-  var n = t || {};
-  var i = n.defaultValue;
-  var a = n.value;
-  var s = n.onChange;
-  var c = n.postState;
-  var l = o.useState(function () {
-    return undefined !== a ? a : undefined !== i ? "function" === typeof i ? i() : i : "function" === typeof e ? e() : e;
-  });
-  var u = r.a(l, 2);
-  var d = u[0];
-  var p = u[1];
-  var f = undefined !== a ? a : d;
-  if (c) {
-    f = c(f);
+  var n = t || {}
+  var n$defaultValue = n.defaultValue
+  var n$value = n.value
+  var n$onChange = n.onChange
+  var n$postState = n.postState
+  var l = React.useState(function () {
+    return undefined !== n$value ? n$value : undefined !== n$defaultValue ? "function" === typeof n$defaultValue ? n$defaultValue() : n$defaultValue : "function" === typeof e ? e() : e
+  })
+  var u = r.a(l, 2)
+  var d = u[0]
+  var p = u[1]
+  var f = undefined !== n$value ? n$value : d
+  if (n$postState) {
+    f = n$postState(f)
   }
-  var h = o.useRef(true);
-  o.useEffect(function () {
+  var h = React.useRef(true)
+  React.useEffect(function () {
     if (h.current) {
-      h.current = false;
+      h.current = false
     } else {
-      if (undefined === a) {
-        p(a);
+      if (undefined === n$value) {
+        p(n$value)
       }
     }
-  }, [a]);
+  }, [n$value])
   return [f, function (e) {
-    p(e);
-    if (f !== e && s) {
-      s(e, f);
+    p(e)
+    if (f !== e && n$onChange) {
+      n$onChange(e, f)
     }
-  }];
+  }]
 }
-export default i;
+export default i

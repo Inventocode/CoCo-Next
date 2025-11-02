@@ -4,17 +4,17 @@
  * 模块 ID：675
  */
 
-"use strict";
+"use strict"
 
-export { r as messages };
-export { c as types };
+export { r as messages }
+export { c as types }
 var r = {
   "zh-CN": {
     widget: "控件",
     widgetName: "画布",
     backgroundColor: "背景颜色"
   }
-};
+}
 import o = require("./6");
 import i = require("./5");
 import a = require("./35");
@@ -34,4 +34,4 @@ var c = {
   }, o.a({}, a.i)],
   methods: [],
   events: []
-};
+}

@@ -6,27 +6,27 @@
 
 !function (e, a) {
   if (true) {
-    module.exports = a();
+    module.exports = a()
   } else {
     if ("function" == typeof define && define.amd) {
-      define(a);
+      define(a)
     } else {
-      e.ReactIntlLocaleData = e.ReactIntlLocaleData || {};
-      e.ReactIntlLocaleData.en = a();
+      e.ReactIntlLocaleData = e.ReactIntlLocaleData || {}
+      e.ReactIntlLocaleData.en = a()
     }
   }
 }(this, function () {
-  "use strict";
+  "use strict"
 
   return [{
     locale: "en",
     pluralRuleFunction: function (e, a) {
-      var t = String(e).split(".");
-      var o = !t[1];
-      var n = Number(t[0]) == e;
-      var r = n && t[0].slice(-1);
-      var i = n && t[0].slice(-2);
-      return a ? 1 == r && 11 != i ? "one" : 2 == r && 12 != i ? "two" : 3 == r && 13 != i ? "few" : "other" : 1 == e && o ? "one" : "other";
+      var t = String(e).split(".")
+      var o = !t[1]
+      var n = Number(t[0]) == e
+      var r = n && t[0].slice(-1)
+      var i = n && t[0].slice(-2)
+      return a ? 1 == r && 11 != i ? "one" : 2 == r && 12 != i ? "two" : 3 == r && 13 != i ? "few" : "other" : 1 == e && o ? "one" : "other"
     },
     fields: {
       year: {
@@ -930,7 +930,7 @@
   }, {
     locale: "en-Dsrt",
     pluralRuleFunction: function (e, a) {
-      return "other";
+      return "other"
     },
     fields: {
       year: {
@@ -1509,7 +1509,7 @@
   }, {
     locale: "en-Shaw",
     pluralRuleFunction: function (e, a) {
-      return "other";
+      return "other"
     },
     fields: {
       year: {
@@ -1744,7 +1744,7 @@
   }, {
     locale: "en-ZW",
     parentLocale: "en-001"
-  }];
-});
+  }]
+})
 
 /***/

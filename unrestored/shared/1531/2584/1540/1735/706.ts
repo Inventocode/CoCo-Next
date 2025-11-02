@@ -4,10 +4,10 @@
  * 模块 ID：706
  */
 
-var r = require("../1680/473");
-var o = Math.max;
-var i = Math.min;
+var r = require("../1680/473")
+var math$max = Math.max
+var math$min = Math.min
 module.exports = function (e, t) {
-  var n = r(e);
-  return n < 0 ? o(n + t, 0) : i(n, t);
-};
+  var n = r(e)
+  return n < 0 ? math$max(n + t, 0) : math$min(n, t)
+}

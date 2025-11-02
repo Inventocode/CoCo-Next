@@ -4,16 +4,16 @@
  * 模块 ID：1228
  */
 
-var r = require("../../1680/473");
-var o = require("../../1735/257");
+var r = require("../../1680/473")
+var o = require("../../1735/257")
 module.exports = function (e) {
   if (undefined === e) {
-    return 0;
+    return 0
   }
-  var t = r(e);
-  var n = o(t);
+  var t = r(e)
+  var n = o(t)
   if (t !== n) {
-    throw RangeError("Wrong length or index");
+    throw RangeError("Wrong length or index")
   }
-  return n;
-};
+  return n
+}

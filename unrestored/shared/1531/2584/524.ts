@@ -15,4 +15,4 @@ module.exports = {
   rotate: "style_rotate__3hT8r",
   body: "style_body__2rOfc",
   readonly: "style_readonly__kCdeZ"
-};
+}

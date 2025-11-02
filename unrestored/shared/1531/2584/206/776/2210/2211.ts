@@ -4,9 +4,9 @@
  * 模块 ID：2211
  */
 
-"use strict";
+"use strict"
 
-var r = require("../842");
+var r = require("../842")
 var i = {
   $schema: {
     type: "string"
@@ -54,7 +54,7 @@ var i = {
   ecmaFeatures: {
     type: "object"
   }
-};
+}
 var o = {
   definitions: {
     stringOrStrings: {
@@ -107,5 +107,5 @@ var o = {
     }
   },
   $ref: "#/definitions/objectConfig"
-};
-module.exports = o;
+}
+module.exports = o

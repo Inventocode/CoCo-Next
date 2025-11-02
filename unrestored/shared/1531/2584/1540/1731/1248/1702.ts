@@ -4,11 +4,11 @@
  * 模块 ID：1702
  */
 
-var r = require("../../1680/473");
+var r = require("../../1680/473")
 module.exports = function (e) {
-  var t = r(e);
+  var t = r(e)
   if (t < 0) {
-    throw RangeError("The argument can't be less than 0");
+    throw RangeError("The argument can't be less than 0")
   }
-  return t;
-};
+  return t
+}

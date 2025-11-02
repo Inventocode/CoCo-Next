@@ -4,11 +4,11 @@
  * 模块 ID：814
  */
 
-var r = require("../1736/167");
-var o = require("../1608/705");
-var i = "".split;
+var r = require("../1736/167")
+var o = require("../1608/705")
+var $split = "".split
 module.exports = r(function () {
-  return !Object("z").propertyIsEnumerable(0);
+  return !Object("z").propertyIsEnumerable(0)
 }) ? function (e) {
-  return "String" == o(e) ? i.call(e, "") : Object(e);
-} : Object;
+  return "String" == o(e) ? $split.call(e, "") : Object(e)
+} : Object

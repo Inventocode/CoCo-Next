@@ -4,88 +4,88 @@
  * 模块 ID：709
  */
 
-var r = require("../1623/86");
-var o = require("../1541/816");
-var i = require("./231");
-var a = require("../1745/332");
-var s = require("../1623/300").f;
-var c = require("../1667/631/index");
-var l = require("../1541/1062");
-var u = require("../1541/815");
-var d = require("../1664/826");
-var p = false;
-var f = u("meta");
-var h = 0;
+var r = require("../1623/86")
+var o = require("../1541/816")
+var i = require("./231")
+var a = require("../1745/332")
+var require$$1623300$f = require("../1623/300").f
+var c = require("../1667/631/index")
+var l = require("../1541/1062")
+var u = require("../1541/815")
+var d = require("../1664/826")
+var p = false
+var f = u("meta")
+var h = 0
 var m = Object.isExtensible || function () {
-  return true;
-};
+  return true
+}
 var g = function (e) {
-  s(e, f, {
+  require$$1623300$f(e, f, {
     value: {
       objectID: "O" + h++,
       weakData: {}
     }
-  });
-};
+  })
+}
 var _ = module.exports = {
   enable: function () {
-    _.enable = function () {};
-    p = true;
-    var e = c.f;
-    var t = [].splice;
-    var n = {};
-    n[f] = 1;
+    _.enable = function () {}
+    p = true
+    var e = c.f
+    var $splice = [].splice
+    var n = {}
+    n[f] = 1
     if (e(n).length) {
       c.f = function (n) {
-        for (var r = e(n), o = 0, i = r.length; o < i; o++) {
+        for (var r = e(n), o = 0, r$length = r.length; o < r$length; o++) {
           if (r[o] === f) {
-            t.call(r, o, 1);
-            break;
+            $splice.call(r, o, 1)
+            break
           }
         }
-        return r;
-      };
+        return r
+      }
       r({
         target: "Object",
         stat: true,
         forced: true
       }, {
         getOwnPropertyNames: l.f
-      });
+      })
     }
   },
   fastKey: function (e, t) {
     if (!i(e)) {
-      return "symbol" == typeof e ? e : ("string" == typeof e ? "S" : "P") + e;
+      return "symbol" == typeof e ? e : ("string" == typeof e ? "S" : "P") + e
     }
     if (!a(e, f)) {
       if (!m(e)) {
-        return "F";
+        return "F"
       }
       if (!t) {
-        return "E";
+        return "E"
       }
-      g(e);
+      g(e)
     }
-    return e[f].objectID;
+    return e[f].objectID
   },
   getWeakData: function (e, t) {
     if (!a(e, f)) {
       if (!m(e)) {
-        return true;
+        return true
       }
       if (!t) {
-        return false;
+        return false
       }
-      g(e);
+      g(e)
     }
-    return e[f].weakData;
+    return e[f].weakData
   },
   onFreeze: function (e) {
     if (d && p && m(e) && !a(e, f)) {
-      g(e);
+      g(e)
     }
-    return e;
+    return e
   }
-};
-o[f] = true;
+}
+o[f] = true

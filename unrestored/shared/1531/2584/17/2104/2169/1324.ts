@@ -4,131 +4,131 @@
  * 模块 ID：1324
  */
 
-"use strict";
+"use strict"
 
 Object.defineProperty(exports, "__esModule", {
   value: true
-});
-exports.OutputBlockRenderer = undefined;
-var r = require("tslib");
-var i = require("../../../125/195/index");
-var o = require("../../../125/index");
+})
+exports.OutputBlockRenderer = undefined
+var r = require("tslib")
+var i = require("../../../125/195/index")
+var o = require("../../../125/index")
 var a = function (e) {
   function t(t) {
-    var n = e.call(this, t) || this;
-    n.padding_l = n.theme.renderer.ROW_PADDING_OUTPUT;
-    n.padding_r = n.theme.renderer.ROW_PADDING_OUTPUT;
-    n.edge_width = n.theme.renderer.BLOCK_EDGE_WIDTH_OUTPUT;
-    n.min_height = n.theme.renderer.MIN_HEIGHT_OUTPUT;
+    var n = e.call(this, t) || this
+    n.padding_l = n.theme.renderer.ROW_PADDING_OUTPUT
+    n.padding_r = n.theme.renderer.ROW_PADDING_OUTPUT
+    n.edge_width = n.theme.renderer.BLOCK_EDGE_WIDTH_OUTPUT
+    n.min_height = n.theme.renderer.MIN_HEIGHT_OUTPUT
     if (t.get_output_shape() === i.OutputShape.HEXAGONAL) {
-      n.edge_width = n.theme.renderer.BLOCK_EDGE_WIDTH_OUTPUT_HEXAGONAL;
+      n.edge_width = n.theme.renderer.BLOCK_EDGE_WIDTH_OUTPUT_HEXAGONAL
     }
-    return n;
+    return n
   }
-  (0, r.__extends)(t, e);
+  (0, r.__extends)(t, e)
   t.prototype.min_width = function (e) {
-    return e && this.theme.renderer.MIN_WIDTH_OUTPUT;
-  };
+    return e && this.theme.renderer.MIN_WIDTH_OUTPUT
+  }
   t.prototype.render_path_start = function (e, t) {
     if (t) {
-      e.push("m " + this.edge_width + ",0");
+      e.push("m " + this.edge_width + ",0")
     }
-  };
+  }
   t.prototype.render_edge_shape_right = function (e, t) {
     switch (t.get_output_shape()) {
       case i.OutputShape.HEXAGONAL:
-        e.push("a " + this.theme.renderer.HEX_TOP_BOTTOM_CORNER_RADIUS + ", " + this.theme.renderer.HEX_TOP_BOTTOM_CORNER_RADIUS + " 0 0,1 \n          " + this.theme.renderer.CORNER_OFFSET_X + ", " + this.theme.renderer.CORNER_OFFSET_Y);
-        e.push("l " + this.edge_width + " " + (t.height / 2 - this.theme.renderer.CORNER_OFFSET_X));
-        e.push("a " + this.theme.renderer.HEX_CENTER_CORNER_RADIUS + ", " + this.theme.renderer.HEX_CENTER_CORNER_RADIUS + " 0 0,1 \n          0, " + this.theme.renderer.CENTER_CORNER_OFFSET);
-        e.push("l -" + this.edge_width + " " + (t.height / 2 - this.theme.renderer.CORNER_OFFSET_X));
-        e.push("a " + this.theme.renderer.HEX_TOP_BOTTOM_CORNER_RADIUS + "," + this.theme.renderer.HEX_TOP_BOTTOM_CORNER_RADIUS + " 0 0,1 \n          -" + this.theme.renderer.CORNER_OFFSET_X + ", " + this.theme.renderer.CORNER_OFFSET_Y);
-        break;
+        e.push("a " + this.theme.renderer.HEX_TOP_BOTTOM_CORNER_RADIUS + ", " + this.theme.renderer.HEX_TOP_BOTTOM_CORNER_RADIUS + " 0 0,1 \n          " + this.theme.renderer.CORNER_OFFSET_X + ", " + this.theme.renderer.CORNER_OFFSET_Y)
+        e.push("l " + this.edge_width + " " + (t.height / 2 - this.theme.renderer.CORNER_OFFSET_X))
+        e.push("a " + this.theme.renderer.HEX_CENTER_CORNER_RADIUS + ", " + this.theme.renderer.HEX_CENTER_CORNER_RADIUS + " 0 0,1 \n          0, " + this.theme.renderer.CENTER_CORNER_OFFSET)
+        e.push("l -" + this.edge_width + " " + (t.height / 2 - this.theme.renderer.CORNER_OFFSET_X))
+        e.push("a " + this.theme.renderer.HEX_TOP_BOTTOM_CORNER_RADIUS + "," + this.theme.renderer.HEX_TOP_BOTTOM_CORNER_RADIUS + " 0 0,1 \n          -" + this.theme.renderer.CORNER_OFFSET_X + ", " + this.theme.renderer.CORNER_OFFSET_Y)
+        break
       default:
-        e.push("a " + this.edge_width + " " + this.edge_width + " 0 0 1 " + this.edge_width + " " + this.edge_width);
-        var n = t.height - 2 * this.edge_width;
+        e.push("a " + this.edge_width + " " + this.edge_width + " 0 0 1 " + this.edge_width + " " + this.edge_width)
+        var n = t.height - 2 * this.edge_width
         if (n > 0) {
-          e.push("v " + n);
+          e.push("v " + n)
         }
-        e.push("a " + this.edge_width + " " + this.edge_width + " 0 0 1 -" + this.edge_width + " " + this.edge_width);
+        e.push("a " + this.edge_width + " " + this.edge_width + " 0 0 1 -" + this.edge_width + " " + this.edge_width)
     }
-  };
+  }
   t.prototype.render_path_end = function (e, t) {
     switch (t.get_output_shape()) {
       case i.OutputShape.HEXAGONAL:
-        e.push("H " + this.edge_width);
-        e.push("a " + this.theme.renderer.HEX_TOP_BOTTOM_CORNER_RADIUS + "," + this.theme.renderer.HEX_TOP_BOTTOM_CORNER_RADIUS + " 0 0,1 \n          -" + this.theme.renderer.CORNER_OFFSET_X + ", -" + this.theme.renderer.CORNER_OFFSET_Y);
-        e.push("l -" + this.edge_width + " -" + (t.height / 2 - this.theme.renderer.CORNER_OFFSET_X));
-        e.push("a " + this.theme.renderer.HEX_CENTER_CORNER_RADIUS + "," + this.theme.renderer.HEX_CENTER_CORNER_RADIUS + " 0 0,1 \n            0, -" + this.theme.renderer.CENTER_CORNER_OFFSET);
-        e.push("l " + this.edge_width + " -" + (t.height / 2 - this.theme.renderer.CORNER_OFFSET_X));
-        e.push("a " + this.theme.renderer.HEX_TOP_BOTTOM_CORNER_RADIUS + "," + this.theme.renderer.HEX_TOP_BOTTOM_CORNER_RADIUS + " 0 0,1 \n          " + this.theme.renderer.CORNER_OFFSET_X + ", -" + this.theme.renderer.CORNER_OFFSET_Y);
-        break;
+        e.push("H " + this.edge_width)
+        e.push("a " + this.theme.renderer.HEX_TOP_BOTTOM_CORNER_RADIUS + "," + this.theme.renderer.HEX_TOP_BOTTOM_CORNER_RADIUS + " 0 0,1 \n          -" + this.theme.renderer.CORNER_OFFSET_X + ", -" + this.theme.renderer.CORNER_OFFSET_Y)
+        e.push("l -" + this.edge_width + " -" + (t.height / 2 - this.theme.renderer.CORNER_OFFSET_X))
+        e.push("a " + this.theme.renderer.HEX_CENTER_CORNER_RADIUS + "," + this.theme.renderer.HEX_CENTER_CORNER_RADIUS + " 0 0,1 \n            0, -" + this.theme.renderer.CENTER_CORNER_OFFSET)
+        e.push("l " + this.edge_width + " -" + (t.height / 2 - this.theme.renderer.CORNER_OFFSET_X))
+        e.push("a " + this.theme.renderer.HEX_TOP_BOTTOM_CORNER_RADIUS + "," + this.theme.renderer.HEX_TOP_BOTTOM_CORNER_RADIUS + " 0 0,1 \n          " + this.theme.renderer.CORNER_OFFSET_X + ", -" + this.theme.renderer.CORNER_OFFSET_Y)
+        break
       default:
-        e.push("H " + this.edge_width);
-        e.push("a " + this.edge_width + " " + this.edge_width + " 0 0 1 -" + this.edge_width + " -" + this.edge_width);
-        var n = t.height - 2 * this.edge_width;
+        e.push("H " + this.edge_width)
+        e.push("a " + this.edge_width + " " + this.edge_width + " 0 0 1 -" + this.edge_width + " -" + this.edge_width)
+        var n = t.height - 2 * this.edge_width
         if (n > 0) {
-          e.push("v -" + n);
+          e.push("v -" + n)
         }
-        e.push("a " + this.edge_width + " " + this.edge_width + " 0 0 1 " + this.edge_width + " -" + this.edge_width);
+        e.push("a " + this.edge_width + " " + this.edge_width + " 0 0 1 " + this.edge_width + " -" + this.edge_width)
     }
-  };
+  }
   t.prototype.render_edge_shape_collapsed_right = function (e, t) {
-    var n = t.height;
-    e.push(this.theme.renderer.COLLAPSED_PATH);
-    e.push("v " + (n - this.min_height + t.height / 2 - this.theme.renderer.CORNER_OFFSET_X));
-  };
+    var t$height = t.height
+    e.push(this.theme.renderer.COLLAPSED_PATH)
+    e.push("v " + (t$height - this.min_height + t.height / 2 - this.theme.renderer.CORNER_OFFSET_X))
+  }
   t.prototype.get_layered_value_descendants = function (e, t) {
-    var n;
+    var /* [auto-meaningful-name] */a$connection
     if (undefined === t) {
-      t = true;
+      t = true
     }
     if (!e.output_connection) {
-      return [];
+      return []
     }
     for (var r = [], o = 0; o < e.inputList.length; o++) {
-      var a = e.inputList[o];
+      var a = e.inputList[o]
       if (a.type === i.InputType.VALUE) {
-        var s = null === (n = a.connection) || undefined === n ? undefined : n.targetBlock();
+        var s = null === (a$connection = a.connection) || undefined === a$connection ? undefined : a$connection.targetBlock()
         if (!(!s || t && s.is_shadow())) {
           for (var c = this.get_layered_value_descendants(s, t), u = 0; u < c.length; u++) {
-            r[u] = r[u] || [];
-            r[u] = r[u].concat(c[u]);
+            r[u] = r[u] || []
+            r[u] = r[u].concat(c[u])
           }
         }
       }
     }
-    r.unshift([e]);
-    return r;
-  };
+    r.unshift([e])
+    return r
+  }
   t.prototype.select_output_group_children = function (e) {
-    for (var t, n, r = e.origin_block, i = this.get_layered_value_descendants(r, true), o = [], a = 1; a < i.length; a++) {
-      o = o.concat(i[a]);
+    for (var t, n, e$origin_block = e.origin_block, i = this.get_layered_value_descendants(e$origin_block, true), o = [], a = 1; a < i.length; a++) {
+      o = o.concat(i[a])
     }
     var s = function (e) {
-      return e.get_original_colour() === r.get_original_colour();
-    };
+      return e.get_original_colour() === e$origin_block.get_original_colour()
+    }
     for (a = 0; a < o.length; a++) {
-      var c = o[a];
+      var c = o[a]
       if (t) {
         if (n) {
           if (!s(t) && !s(n)) {
-            break;
+            break
           }
           if (!s(n)) {
-            t = n;
+            t = n
           }
-          n = c;
+          n = c
         } else {
-          n = c;
+          n = c
         }
       } else {
-        t = c;
+        t = c
       }
     }
-    return [t, n];
-  };
+    return [t, n]
+  }
   t.prototype.render_decoration_block = function (e, t, n, r, a) {
-    var s = n;
+    var s = n
     switch (a) {
       case i.OutputShape.HEXAGONAL:
         return (0, o.create_svg_element)("path", {
@@ -136,50 +136,50 @@ var a = function (e) {
           fill: r.get_original_colour(),
           stroke: r.get_border_colour(),
           class: "decoration_for_collapsed_blocks"
-        });
+        })
       default:
         return (0, o.create_svg_element)("path", {
           d: "\n            m " + (t + e * this.theme.renderer.OUTPUT_GROUP_DECORATION_OFFSET) + " 6,\n            h " + s + ",\n            a " + this.edge_width + " " + this.edge_width + " 0 0 1 0 " + 2 * this.edge_width + ",\n            h -" + s + ",\n            a " + this.edge_width + " " + this.edge_width + " 0 0 1 0 -" + 2 * this.edge_width,
           fill: r.get_original_colour(),
           stroke: r.get_border_colour(),
           class: "decoration_for_collapsed_blocks"
-        });
+        })
     }
-  };
+  }
   t.prototype.render_group_decoration_blocks = function (e) {
-    e.decoration_block_paths.forEach(o.remove_node);
-    e.decoration_block_paths.length = 0;
-    var t = this.select_output_group_children(e);
-    var n = t[0];
-    var r = t[1];
-    var a = 0;
-    var s = e.get_field(i.BLOCK_GROUP_TAG_FIELD_NAME);
-    var c = this.theme.renderer.BLOCK_EDGE_WIDTH_OUTPUT + this.theme.renderer.SEP_SPACE_X + s.get_size().width + this.theme.renderer.SEP_SPACE_X + this.theme.renderer.OUTPUT_GROUP_DECORATION_PADDING;
-    var u = e.get_field(i.BLOCK_GROUP_NAME_FIELD_NAME).get_size().width;
-    var l = e.origin_block.get_output_shape() || i.OutputShape.ROUND;
-    var f = this.render_decoration_block(0, c, u, e.origin_block, l);
+    e.decoration_block_paths.forEach(o.remove_node)
+    e.decoration_block_paths.length = 0
+    var t = this.select_output_group_children(e)
+    var n = t[0]
+    var r = t[1]
+    var a = 0
+    var s = e.get_field(i.BLOCK_GROUP_TAG_FIELD_NAME)
+    var c = this.theme.renderer.BLOCK_EDGE_WIDTH_OUTPUT + this.theme.renderer.SEP_SPACE_X + s.get_size().width + this.theme.renderer.SEP_SPACE_X + this.theme.renderer.OUTPUT_GROUP_DECORATION_PADDING
+    var e$get_fieldI$BLOCK_GROUP_NAME_FIELD_NAME$get_size$width = e.get_field(i.BLOCK_GROUP_NAME_FIELD_NAME).get_size().width
+    var l = e.origin_block.get_output_shape() || i.OutputShape.ROUND
+    var f = this.render_decoration_block(0, c, e$get_fieldI$BLOCK_GROUP_NAME_FIELD_NAME$get_size$width, e.origin_block, l)
     if (r) {
-      var d = this.render_decoration_block(2, c, u, r, l);
-      e.decoration_block_paths.unshift(d);
-      e.svg_group.insertBefore(d, e.svg_group.lastChild);
-      a += this.theme.renderer.OUTPUT_GROUP_DECORATION_OFFSET;
+      var d = this.render_decoration_block(2, c, e$get_fieldI$BLOCK_GROUP_NAME_FIELD_NAME$get_size$width, r, l)
+      e.decoration_block_paths.unshift(d)
+      e.svg_group.insertBefore(d, e.svg_group.lastChild)
+      a += this.theme.renderer.OUTPUT_GROUP_DECORATION_OFFSET
     }
     if (n) {
-      var h = this.render_decoration_block(1, c, u, n, l);
-      e.decoration_block_paths.unshift(h);
-      e.svg_group.insertBefore(h, e.svg_group.lastChild);
-      a += this.theme.renderer.OUTPUT_GROUP_DECORATION_OFFSET;
+      var h = this.render_decoration_block(1, c, e$get_fieldI$BLOCK_GROUP_NAME_FIELD_NAME$get_size$width, n, l)
+      e.decoration_block_paths.unshift(h)
+      e.svg_group.insertBefore(h, e.svg_group.lastChild)
+      a += this.theme.renderer.OUTPUT_GROUP_DECORATION_OFFSET
     }
-    e.decoration_block_paths.unshift(f);
-    e.svg_group.insertBefore(f, e.svg_group.lastChild);
-    return a += this.theme.renderer.OUTPUT_GROUP_DECORATION_PADDING;
-  };
+    e.decoration_block_paths.unshift(f)
+    e.svg_group.insertBefore(f, e.svg_group.lastChild)
+    return a += this.theme.renderer.OUTPUT_GROUP_DECORATION_PADDING
+  }
   t.prototype.get_field_padding_y = function () {
-    return this.theme.renderer.OUTPUT_ROW_PADDING_Y_TO_FIELD;
-  };
+    return this.theme.renderer.OUTPUT_ROW_PADDING_Y_TO_FIELD
+  }
   t.prototype.get_block_padding_y = function () {
-    return this.theme.renderer.OUTPUT_ROW_PADDING_Y_TO_VALUE_BLOCK;
-  };
-  return t;
-}(require("./1107").BlockRenderer);
-exports.OutputBlockRenderer = a;
+    return this.theme.renderer.OUTPUT_ROW_PADDING_Y_TO_VALUE_BLOCK
+  }
+  return t
+}(require("./1107").BlockRenderer)
+exports.OutputBlockRenderer = a

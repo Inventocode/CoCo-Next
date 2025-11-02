@@ -4,39 +4,39 @@
  * 模块 ID：4
  */
 
-"use strict";
+"use strict"
 
-export { a as e };
-export { s as d };
-export { l as k };
-export { u as n };
-export { d as l };
-export { p as j };
-export { f as i };
-export { h };
-export { m as g };
-export { g as o };
-export { _ as s };
-export { v as r };
-export { b as m };
-export { y as f };
-export { E as a };
-export { O as p };
-export { w as q };
-export { C as c };
-export { T as b };
-export { S as t };
+export { a as e }
+export { s as d }
+export { l as k }
+export { u as n }
+export { d as l }
+export { p as j }
+export { f as i }
+export { h }
+export { m as g }
+export { g as o }
+export { _ as s }
+export { v as r }
+export { b as m }
+export { y as f }
+export { E as a }
+export { O as p }
+export { w as q }
+export { C as c }
+export { T as b }
+export { S as t }
 import r = require("../10/index");
 import o = require("../17/index");
 import i = require("./127");
 function a(e) {
-  var t = arguments.length > 1 && undefined !== arguments[1] && arguments[1];
+  var t = arguments.length > 1 && undefined !== arguments[1] && arguments[1]
   return {
     alt: "*",
     src: e,
     type: "field_icon",
     is_head: t
-  };
+  }
 }
 function s(e, t, n) {
   return {
@@ -44,179 +44,179 @@ function s(e, t, n) {
     src: "".concat(e),
     width: t || "%{BKY_BLOCK_TYPE_ICON_WIDTH}",
     height: n || "%{BKY_BLOCK_TYPE_ICON_WIDTH}"
-  };
+  }
 }
 function c(e) {
-  return e && e.length ? e.join(", ") : "";
+  return e && e.length ? e.join(", ") : ""
 }
 function l(e, t) {
   var n = e.map(function (e, t) {
-    return e || "_unset_".concat(t);
-  });
-  return "async function(".concat(c(n), ") {").concat(t, "}");
+    return e || "_unset_".concat(t)
+  })
+  return "async function(".concat(c(n), ") {").concat(t, "}")
 }
 function u(e, t, n, r) {
-  var o = arguments.length > 4 && undefined !== arguments[4] && arguments[4];
-  var i = c(t);
-  var a = c(r);
-  var s = o ? "CocoExtension." : "Coco.";
-  var l = "".concat(s).concat(e, "(").concat(i);
+  var o = arguments.length > 4 && undefined !== arguments[4] && arguments[4]
+  var i = c(t)
+  var a = c(r)
+  var s = o ? "CocoExtension." : "Coco."
+  var l = "".concat(s).concat(e, "(").concat(i)
   if (n && null !== n) {
-    var u = t && t.length ? ", " : "";
-    l += "".concat(u, " async function(").concat(a, ") {\n").concat(n, "}");
+    var u = t && t.length ? ", " : ""
+    l += "".concat(u, " async function(").concat(a, ") {\n").concat(n, "}")
   }
-  return l + ");\n";
+  return l + ");\n"
 }
 function d(e, t, n) {
-  var r = arguments.length > 4 && undefined !== arguments[4] && arguments[4];
+  var r = arguments.length > 4 && undefined !== arguments[4] && arguments[4]
   var o = JSON.stringify({
     blockId: t.id,
     blockType: t.type,
     screenId: n.getDynamicValue("__CURRENT_SCREEN_ID__")
-  });
-  var i = "await ".concat("Coco.", "withContextAsync(async ()=> { ").concat(r ? "return" : "", " ").concat(e, " }, ").concat(o, ")").concat(r ? "" : ";", " ");
+  })
+  var i = "await ".concat("Coco.", "withContextAsync(async ()=> { ").concat(r ? "return" : "", " ").concat(e, " }, ").concat(o, ")").concat(r ? "" : ";", " ")
   if (e.endsWith("\n")) {
-    i += "\n";
+    i += "\n"
   }
-  return i;
+  return i
 }
 function p(e, t, n, r) {
-  var o = arguments.length > 4 && undefined !== arguments[4] && arguments[4];
-  var i = t ? c(t) : "";
-  var a = o ? "CocoExtension." : "Coco.";
-  var s = "await ".concat(a).concat(e, "(").concat(i);
-  var l = c(r);
+  var o = arguments.length > 4 && undefined !== arguments[4] && arguments[4]
+  var i = t ? c(t) : ""
+  var a = o ? "CocoExtension." : "Coco."
+  var s = "await ".concat(a).concat(e, "(").concat(i)
+  var l = c(r)
   if (n && null !== n) {
-    var u = t && t.length ? ", " : "";
-    s += "".concat(u, " async function(").concat(l, ") {\n").concat(n, "}");
+    var u = t && t.length ? ", " : ""
+    s += "".concat(u, " async function(").concat(l, ") {\n").concat(n, "}")
   }
-  return s + ");\n";
+  return s + ");\n"
 }
 function f(e, t, n, r) {
-  var o = "await ".concat(e, "(");
+  var o = "await ".concat(e, "(")
   if (t) {
-    o += "async function(".concat(c(r), ") {\n").concat(t, "}");
+    o += "async function(".concat(c(r), ") {\n").concat(t, "}")
   }
   if (n) {
-    o += "".concat(t ? ", " : "").concat(c(n));
+    o += "".concat(t ? ", " : "").concat(c(n))
   }
-  return o + ");\n";
+  return o + ");\n"
 }
 function h(e, t) {
   return "/* ".concat(Object.entries(t).map(function (e) {
-    var t = r.a(e, 2);
-    var n = t[0];
-    var o = t[1];
-    return "".concat(n, "=").concat(o);
-  }).join(";"), " */ ").concat(e);
+    var t = r.a(e, 2)
+    var n = t[0]
+    var o = t[1]
+    return "".concat(n, "=").concat(o)
+  }).join(";"), " */ ").concat(e)
 }
 function m(e, t) {
-  return "async function () {\n    if (typeof (".concat(e, ") === \"boolean\") {\n      return ((").concat(e, ") === ").concat(t, ");\n    } else if (typeof (").concat(e, ") === \"number\" && ((").concat(e, ") === 0)) {\n      return (false === ").concat(t, ");\n    }\n    return (true === ").concat(t, ")\n  }");
+  return "async function () {\n    if (typeof (".concat(e, ") === \"boolean\") {\n      return ((").concat(e, ") === ").concat(t, ");\n    } else if (typeof (").concat(e, ") === \"number\" && ((").concat(e, ") === 0)) {\n      return (false === ").concat(t, ");\n    }\n    return (true === ").concat(t, ")\n  }")
 }
 function g(e) {
-  return JSON.stringify(e);
+  return JSON.stringify(e)
 }
 function _(e, t) {
-  var n = arguments.length > 2 && undefined !== arguments[2] && arguments[2];
-  var r = t ? c(t) : "";
-  var o = n ? "CocoExtension." : "Coco.";
-  return "".concat(o).concat(e, "(").concat(r, ")");
+  var n = arguments.length > 2 && undefined !== arguments[2] && arguments[2]
+  var r = t ? c(t) : ""
+  var o = n ? "CocoExtension." : "Coco."
+  return "".concat(o).concat(e, "(").concat(r, ")")
 }
 function v(e, t) {
-  var n = t ? c(t) : "";
-  return "await ".concat("Coco.").concat(e, "(").concat(n, ")");
+  var n = t ? c(t) : ""
+  return "await ".concat("Coco.").concat(e, "(").concat(n, ")")
 }
 function b(e, t, n) {
-  var r = t ? c(t) : "";
-  var o = "".concat("Coco.").concat(e, "(").concat(r);
+  var r = t ? c(t) : ""
+  var o = "".concat("Coco.").concat(e, "(").concat(r)
   if (n && null !== n) {
-    var i = t && t.length ? ", " : "";
-    o += "".concat(i, " asyncScheduler.plan(async function() {\n").concat(n, "})");
+    var i = t && t.length ? ", " : ""
+    o += "".concat(i, " asyncScheduler.plan(async function() {\n").concat(n, "})")
   }
-  return o + ");\n";
+  return o + ");\n"
 }
 function y(e, t) {
-  var n = encodeURI(e).replace(/%/g, "$");
-  return "$" + t.replace(/-/g, "$") + "_" + n;
+  var n = encodeURI(e).replace(/%/g, "$")
+  return "$" + t.replace(/-/g, "$") + "_" + n
 }
-var E = "_param_";
-var O = o.Blink.di_container.get(i.BINDING.MutationAddButton);
-var w = o.Blink.di_container.get(i.BINDING.MutationRemoveButton);
-var C = o.Blink.di_container.get(i.BINDING.ChangeEvent);
+var E = "_param_"
+var O = o.Blink.di_container.get(i.BINDING.MutationAddButton)
+var w = o.Blink.di_container.get(i.BINDING.MutationRemoveButton)
+var C = o.Blink.di_container.get(i.BINDING.ChangeEvent)
 function T(e, t, n, r) {
   if (!this.get_input(e)) {
-    var i = this.rendered;
-    this.rendered = false;
-    var a = t();
-    if (i) {
+    var this$rendered = this.rendered
+    this.rendered = false
+    var a = t()
+    if (this$rendered) {
       this.inputList.forEach(function (e) {
-        return e.init();
-      });
-      this.render(true);
+        return e.init()
+      })
+      this.render(true)
     }
     if (this.rendered) {
-      this.cacheId[e] = this.cacheId[e] || o.Blink.utils.gen_uid();
+      this.cacheId[e] = this.cacheId[e] || o.Blink.utils.gen_uid()
     }
     if (this.cacheId[e]) {
-      var s;
-      var c;
-      var l = o.Blink.utils.string_to_dom(n);
-      l.setAttribute("id", this.cacheId[e]);
+      var /* [auto-meaningful-name] */_a$connection2
+      var /* [auto-meaningful-name] */a$connection
+      var l = o.Blink.utils.string_to_dom(n)
+      l.setAttribute("id", this.cacheId[e])
       if (undefined !== r && l.firstElementChild) {
-        l.firstElementChild.textContent = r;
+        l.firstElementChild.textContent = r
       }
-      if (!(null === (s = a.connection) || undefined === s)) {
-        s.set_shadow_dom(l);
+      if (!(null === (_a$connection2 = a.connection) || undefined === _a$connection2)) {
+        _a$connection2.set_shadow_dom(l)
       }
-      if (!(null === (c = a.connection) || undefined === c)) {
-        c.respawn_shadow();
+      if (!(null === (a$connection = a.connection) || undefined === a$connection)) {
+        a$connection.respawn_shadow()
       }
       if (o.Blink.events.is_enabled()) {
         var u = C("mutation", {
           block: this,
           old_value: undefined,
           new_value: "1"
-        });
-        o.Blink.events.fire(u);
+        })
+        o.Blink.events.fire(u)
       }
-      this.rendered = i;
+      this.rendered = this$rendered
     }
   }
 }
 function S(e, t, n) {
-  var r;
-  var i = this.get_input(e);
+  var /* [auto-meaningful-name] */_i$connection2
+  var i = this.get_input(e)
   if (i) {
-    var a;
-    var s = null === (r = i.connection) || undefined === r ? undefined : r.targetBlock();
+    var a
+    var s = null === (_i$connection2 = i.connection) || undefined === _i$connection2 ? undefined : _i$connection2.targetBlock()
     if (s && s.is_shadow()) {
-      this.cacheId[e] = s.id;
-      a = s.get_field_value(t) || "1";
+      this.cacheId[e] = s.id
+      a = s.get_field_value(t) || "1"
     } else {
-      var c;
-      var l;
-      var u = null === (c = i.connection) || undefined === c ? undefined : c.get_shadow_dom();
-      this.cacheId[e] = (null === u || undefined === u ? undefined : u.getAttribute("id")) || o.Blink.utils.gen_uid();
-      a = (null === u || undefined === u || null === (l = u.querySelector("field[name=\"".concat(t, "\"]"))) || undefined === l ? undefined : l.textContent) || "1";
+      var /* [auto-meaningful-name] */i$connection
+      var l
+      var u = null === (i$connection = i.connection) || undefined === i$connection ? undefined : i$connection.get_shadow_dom()
+      this.cacheId[e] = (null === u || undefined === u ? undefined : u.getAttribute("id")) || o.Blink.utils.gen_uid()
+      a = (null === u || undefined === u || null === (l = u.querySelector("field[name=\"".concat(t, "\"]"))) || undefined === l ? undefined : l.textContent) || "1"
     }
-    var d = this.rendered;
-    this.rendered = false;
-    n();
-    if (d) {
+    var this$rendered = this.rendered
+    this.rendered = false
+    n()
+    if (this$rendered) {
       this.inputList.forEach(function (e) {
-        return e.init();
-      });
-      this.render(true);
+        return e.init()
+      })
+      this.render(true)
     }
     if (o.Blink.events.is_enabled()) {
       var p = C("mutation", {
         block: this,
         old_value: a,
         new_value: undefined
-      });
-      o.Blink.events.fire(p);
+      })
+      o.Blink.events.fire(p)
     }
-    this.rendered = d;
+    this.rendered = this$rendered
   }
 }
-export default E;
+export default E

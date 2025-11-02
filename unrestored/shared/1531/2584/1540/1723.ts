@@ -4,28 +4,28 @@
  * 模块 ID：1723
  */
 
-"use strict";
+"use strict"
 
-var r = require("./1736/194");
-var o = require("./1720/258/index");
-var i = require("./936/index");
-var a = require("./1742/247/index")("iterator");
-var s = r.Uint8Array;
-var c = i.values;
-var l = i.keys;
-var u = i.entries;
-var d = o.aTypedArray;
-var p = o.exportTypedArrayMethod;
-var f = s && s.prototype[a];
-var h = !!f && ("values" == f.name || undefined == f.name);
+var r = require("./1736/194")
+var o = require("./1720/258/index")
+var i = require("./936/index")
+var a = require("./1742/247/index")("iterator")
+var r$Uint8Array = r.Uint8Array
+var i$values = i.values
+var i$keys = i.keys
+var i$entries = i.entries
+var o$aTypedArray = o.aTypedArray
+var o$exportTypedArrayMethod = o.exportTypedArrayMethod
+var f = r$Uint8Array && r$Uint8Array.prototype[a]
+var h = !!f && ("values" == f.name || undefined == f.name)
 var m = function () {
-  return c.call(d(this));
-};
-p("entries", function () {
-  return u.call(d(this));
-});
-p("keys", function () {
-  return l.call(d(this));
-});
-p("values", m, !h);
-p(a, m, !h);
+  return i$values.call(o$aTypedArray(this))
+}
+o$exportTypedArrayMethod("entries", function () {
+  return i$entries.call(o$aTypedArray(this))
+})
+o$exportTypedArrayMethod("keys", function () {
+  return i$keys.call(o$aTypedArray(this))
+})
+o$exportTypedArrayMethod("values", m, !h)
+o$exportTypedArrayMethod(a, m, !h)

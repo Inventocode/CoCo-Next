@@ -10,4 +10,4 @@ module.exports = {
   actorSelectedBox: "style_actorSelectedBox__5dKzJ",
   actorAddon: "style_actorAddon__1tQxL",
   actorStar: "style_actorStar__h_A7S"
-};
+}

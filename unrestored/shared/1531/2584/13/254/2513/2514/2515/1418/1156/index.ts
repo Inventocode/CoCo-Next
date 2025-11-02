@@ -4,7 +4,7 @@
  * 模块 ID：1156
  */
 
-var r = require("./1412");
+var r = require("./1412")
 module.exports = function (e, t, n) {
   if ("__proto__" == t && r) {
     r(e, t, {
@@ -12,8 +12,8 @@ module.exports = function (e, t, n) {
       enumerable: true,
       value: n,
       writable: true
-    });
+    })
   } else {
-    e[t] = n;
+    e[t] = n
   }
-};
+}

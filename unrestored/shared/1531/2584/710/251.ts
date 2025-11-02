@@ -4,15 +4,15 @@
  * 模块 ID：251
  */
 
-var n;
+var n
 n = function () {
-  return this;
-}();
+  return this
+}()
 try {
-  n = n || new Function("return this")();
+  n = n || new Function("return this")()
 } catch (r) {
   if ("object" === typeof window) {
-    n = window;
+    n = window
   }
 }
-module.exports = n;
+module.exports = n

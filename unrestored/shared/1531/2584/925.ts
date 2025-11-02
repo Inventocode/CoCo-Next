@@ -22,4 +22,4 @@ module.exports = {
   isDragging: "style_isDragging__2FNEx",
   ImageLayoutEmpty: "style_ImageLayoutEmpty__2YToW",
   emptyContent: "style_emptyContent__3jBGM"
-};
+}

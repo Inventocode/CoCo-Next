@@ -4,28 +4,28 @@
  * 模块 ID：Gjqo
  */
 
-"use strict";
+"use strict"
 
 /* harmony export (binding) */
 /* harmony import */
-export { ConfirmComponent };
-import * as __WEBPACK_IMPORTED_MODULE_0_react__ from "react";
+export { ConfirmComponent }
+import * as __WEBPACK_IMPORTED_MODULE_0_react__ from "react"
 /* harmony import */
-import __WEBPACK_IMPORTED_MODULE_0_react___default from "react";
+import __WEBPACK_IMPORTED_MODULE_0_react___default from "react"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_1__base_button__ from "../../../../../../../../../../../base/button-sg+3";
+import * as __WEBPACK_IMPORTED_MODULE_1__base_button__ from "../../../../../../../../../../../base/button-sg+3"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_2__i18n__ from "../../i18n-4U0O";
+import * as __WEBPACK_IMPORTED_MODULE_2__i18n__ from "../../i18n-4U0O"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_3__style_module_css__ from "../../style.module.css-YMKY";
+import * as __WEBPACK_IMPORTED_MODULE_3__style_module_css__ from "../../style.module.css-YMKY"
 /* harmony import */
-import __WEBPACK_IMPORTED_MODULE_3__style_module_css___default from "../../style.module.css-YMKY";
-var Fragment = __WEBPACK_IMPORTED_MODULE_0_react__.Fragment;
+import __WEBPACK_IMPORTED_MODULE_3__style_module_css___default from "../../style.module.css-YMKY"
+var Fragment = __WEBPACK_IMPORTED_MODULE_0_react__.Fragment
 var ConfirmComponent = function ConfirmComponent(props) {
-  var handleClose = props.handleClose;
+  var handleClose = props.handleClose
   var onCompleteClick = function onCompleteClick() {
-    handleClose();
-  };
+    handleClose()
+  }
   return /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react__.createElement(Fragment, null, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
     className: "CUI-oversea-sign-in-dialog-fully-content"
   }, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
@@ -42,7 +42,7 @@ var ConfirmComponent = function ConfirmComponent(props) {
     onClick: onCompleteClick,
     type: "secondary",
     "data-report": "用户信息-注册成功确定"
-  }, __WEBPACK_IMPORTED_MODULE_2__i18n__.getLanguage("sign_in_dialog/register/confirm"))));
-};
+  }, __WEBPACK_IMPORTED_MODULE_2__i18n__.getLanguage("sign_in_dialog/register/confirm"))))
+}
 
 /***/

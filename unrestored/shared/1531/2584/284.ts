@@ -22,4 +22,4 @@ module.exports = {
   imageBox: "styles_imageBox__Qn60y",
   logoImage: "styles_logoImage__3ysAs",
   arrowImage: "styles_arrowImage__2vHZT"
-};
+}

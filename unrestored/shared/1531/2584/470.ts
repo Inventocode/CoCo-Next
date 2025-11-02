@@ -18,4 +18,4 @@ module.exports = {
   iconThin: "SearchInput_iconThin__n3_8c",
   iconMiddle: "SearchInput_iconMiddle__2kitu",
   tips: "SearchInput_tips__3jji_"
-};
+}

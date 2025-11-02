@@ -4,10 +4,10 @@
  * 模块 ID：477
  */
 
-"use strict";
+"use strict"
 
-export { c as a };
-export { l as b };
+export { c as a }
+export { l as b }
 import r = require("./1184/index");
 import o = require("./340/index");
 import i = require("./787/index");
@@ -17,10 +17,10 @@ function c(e, t) {
   o.b({
     id: e,
     name: t
-  });
+  })
 }
 function l() {
-  o.b(null);
+  o.b(null)
 }
 try {
   r.a({
@@ -29,8 +29,8 @@ try {
     integrations: [new i.a.BrowserTracing()],
     environment: s.b(),
     tracesSampleRate: 1
-  });
+  })
 } catch (u) {
-  console.error(u);
+  console.error(u)
 }
-export default c;
+export default c

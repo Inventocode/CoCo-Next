@@ -1,25 +1,25 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：262
  */
 
-"use strict";
+"use strict"
 
-export { i as b };
-export { a };
-export { s as c };
-export { c as f };
-export { l as e };
-export { u as d };
-import r = require("../9");
-import o = require("../../../../../src/editor/block/generate");
+export { i as b }
+export { a }
+export { s as c }
+export { c as f }
+export { l as e }
+export { u as d }
+import r = require("../../../unrestored/shared/1531/2584/9");
+import o = require("./generate");
 var i = {
   PRIMITIVE: "PRIMITIVE",
   ARRAY: "ARRAY",
   OBJECT: "OBJECT",
   STORAGE: "STORAGE"
-};
+}
 var a = {
   NUMBER: {
     id: "category_number",
@@ -49,8 +49,8 @@ var a = {
     id: "category_console",
     label: "控制台"
   }
-};
-var s = "-----";
+}
+var s = "-----"
 var c = {
   event: {
     id: "toolbox-event",
@@ -105,15 +105,15 @@ var c = {
     iconId: "icon-toolbox-function",
     blocks: "PROCEDURE"
   }
-};
+}
 var l = function () {
-  return r.O();
-};
+  return r.O()
+}
 var u = function (e) {
-  var t;
+  var /* [auto-meaningful-name] */cN$text
   for (var n in c) if (c[n].id === e) {
-    t = c[n].text;
+    cN$text = c[n].text
   }
-  return t ? o.b()[t.slice(6, -1)] : "";
-};
-export default a;
+  return cN$text ? o.b()[cN$text.slice(6, -1)] : ""
+}
+export default a

@@ -4,8 +4,8 @@
  * 模块 ID：977
  */
 
-var r = require("./2448");
+var r = require("./2448")
 module.exports = function (e, t) {
-  var n = e.__data__;
-  return r(t) ? n["string" == typeof t ? "string" : "hash"] : n.map;
-};
+  var e$__data__ = e.__data__
+  return r(t) ? e$__data__["string" == typeof t ? "string" : "hash"] : e$__data__.map
+}

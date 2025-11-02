@@ -4,37 +4,37 @@
  * 模块 ID：2117
  */
 
-"use strict";
+"use strict"
 
 Object.defineProperty(exports, "__esModule", {
   value: true
-});
-exports.GroupEvent = exports.ContextMenuOptionEvent = exports.BaseEvent = exports.UIEvent = undefined;
-var r = require("./2118");
+})
+exports.GroupEvent = exports.ContextMenuOptionEvent = exports.BaseEvent = exports.UIEvent = undefined
+var r = require("./2118")
 Object.defineProperty(exports, "UIEvent", {
   enumerable: true,
   get: function () {
-    return r.UIEvent;
+    return r.UIEvent
   }
-});
-var i = require("./840");
+})
+var i = require("./840")
 Object.defineProperty(exports, "BaseEvent", {
   enumerable: true,
   get: function () {
-    return i.BaseEvent;
+    return i.BaseEvent
   }
-});
-var o = require("./2119");
+})
+var o = require("./2119")
 Object.defineProperty(exports, "ContextMenuOptionEvent", {
   enumerable: true,
   get: function () {
-    return o.ContextMenuOptionEvent;
+    return o.ContextMenuOptionEvent
   }
-});
-var a = require("./2120");
+})
+var a = require("./2120")
 Object.defineProperty(exports, "GroupEvent", {
   enumerable: true,
   get: function () {
-    return a.GroupEvent;
+    return a.GroupEvent
   }
-});
+})

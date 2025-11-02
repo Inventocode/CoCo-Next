@@ -15,4 +15,4 @@ module.exports = {
   hideComponent: "RightSideMenu_hideComponent__5dZ0c",
   showComponent: "RightSideMenu_showComponent__2CMi3",
   searchInput: "RightSideMenu_searchInput__xW86M"
-};
+}

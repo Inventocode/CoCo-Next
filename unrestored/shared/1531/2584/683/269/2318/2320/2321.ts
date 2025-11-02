@@ -4,13 +4,13 @@
  * 模块 ID：2321
  */
 
-"use strict";
+"use strict"
 
 Object.defineProperty(exports, "__esModule", {
   value: true
-});
+})
 exports.BindingCount = {
   MultipleBindingsAvailable: 2,
   NoBindingsAvailable: 0,
   OnlyOneBindingAvailable: 1
-};
+}

@@ -4,26 +4,26 @@
  * 模块 ID：q2lc
  */
 
-"use strict";
+"use strict"
 
 /* harmony export (binding) */
 /* harmony import */
-export { AgreementContainer };
-import * as __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__ from "@babel/runtime/helpers/esm/slicedToArray";
+export { AgreementContainer }
+import * as __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__ from "@babel/runtime/helpers/esm/slicedToArray"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_1_babel_plugin_react_css_modules_dist_browser_getClassName__ from "babel-plugin-react-css-modules/dist/browser/getClassName";
+import * as __WEBPACK_IMPORTED_MODULE_1_babel_plugin_react_css_modules_dist_browser_getClassName__ from "babel-plugin-react-css-modules/dist/browser/getClassName"
 /* harmony import */
-import __WEBPACK_IMPORTED_MODULE_1_babel_plugin_react_css_modules_dist_browser_getClassName___default from "babel-plugin-react-css-modules/dist/browser/getClassName";
+import __WEBPACK_IMPORTED_MODULE_1_babel_plugin_react_css_modules_dist_browser_getClassName___default from "babel-plugin-react-css-modules/dist/browser/getClassName"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_2_react__ from "react";
+import * as __WEBPACK_IMPORTED_MODULE_2_react__ from "react"
 /* harmony import */
-import __WEBPACK_IMPORTED_MODULE_2_react___default from "react";
+import __WEBPACK_IMPORTED_MODULE_2_react___default from "react"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_3__base_icon__ from "../../base/icon-0d1w";
+import * as __WEBPACK_IMPORTED_MODULE_3__base_icon__ from "../../base/icon-0d1w"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_4__style_module_css__ from "../../style.module.css-VPet";
+import * as __WEBPACK_IMPORTED_MODULE_4__style_module_css__ from "../../style.module.css-VPet"
 /* harmony import */
-import __WEBPACK_IMPORTED_MODULE_4__style_module_css___default from "../../style.module.css-VPet";
+import __WEBPACK_IMPORTED_MODULE_4__style_module_css___default from "../../style.module.css-VPet"
 var _styleModuleImportMap = {
   "../../style_module.css": {
     "wrap": "CUI-sign-in-dialog-wrap",
@@ -65,18 +65,18 @@ var _styleModuleImportMap = {
     "text-main": "CUI-sign-in-dialog-text-main",
     "text-second": "CUI-sign-in-dialog-text-second"
   }
-};
+}
 var AgreementContainer = function AgreementContainer(props) {
-  var onCheckChange = props.onCheckChange;
-  var style = props.style;
-  var _useState = __WEBPACK_IMPORTED_MODULE_2_react__.useState(false);
-  var _useState2 = __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default(_useState, 2);
-  var agreementChecked = _useState2[0];
-  var setAgreementChecked = _useState2[1];
+  var onCheckChange = props.onCheckChange
+  var style = props.style
+  var _useState = __WEBPACK_IMPORTED_MODULE_2_react__.useState(false)
+  var _useState2 = __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default(_useState, 2)
+  var agreementChecked = _useState2[0]
+  var setAgreementChecked = _useState2[1]
   var handleCheckChange = function handleCheckChange() {
-    setAgreementChecked(!agreementChecked);
-    onCheckChange(!agreementChecked);
-  };
+    setAgreementChecked(!agreementChecked)
+    onCheckChange(!agreementChecked)
+  }
   return /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_2_react__.createElement(__WEBPACK_IMPORTED_MODULE_2_react__.Fragment, null, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_2_react__.createElement("div", {
     style: style,
     className: __WEBPACK_IMPORTED_MODULE_1_babel_plugin_react_css_modules_dist_browser_getClassName___default("agreement-container", _styleModuleImportMap, {
@@ -105,7 +105,7 @@ var AgreementContainer = function AgreementContainer(props) {
     href: "https://static-platform.codemao.cn/926/protocols/_childrenPrivacyProtectProtocol.html",
     target: "_blank",
     rel: "noreferrer"
-  }, "《儿童隐私保护协议》"))));
-};
+  }, "《儿童隐私保护协议》"))))
+}
 
 /***/

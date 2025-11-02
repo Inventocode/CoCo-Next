@@ -10,10 +10,10 @@ import * as Internal from "../internal/types"
 const baseURL: string = `${u.a.serverHost}/coconut`
 
 export interface Label {
-  id: number
-  name: string
-  code: string
-  sort: number
+  id: number;
+  name: string;
+  code: string;
+  sort: number;
 }
 
 export async function getLabels(): Promise<Label[]> {
@@ -25,23 +25,23 @@ export async function getLabels(): Promise<Label[]> {
 }
 
 export interface Info {
-  id: number
-  widget_name: string
-  icon: string
-  author_name: string
-  resource_url: string
-  intro: string
-  widget_code: string
-  widget_type: number
-  sort: number
-  if_have: number
+  id: number;
+  widget_name: string;
+  icon: string;
+  author_name: string;
+  resource_url: string;
+  intro: string;
+  widget_code: string;
+  widget_type: number;
+  sort: number;
+  if_have: number;
 }
 
 export async function getList(
-  currentPage: number,
-  pageSize: number,
-  labelID?: (/** TODO */ any)
-): Promise<PageResponse<Info>> {
+currentPage: number,
+pageSize: number,
+labelID?: (/** TODO */any))
+: Promise<PageResponse<Info>> {
   const { data } = await axiosWithCredentials.get<MyResponse<PageResponse<Info>>>(baseURL + "/web/widget/list", {
     params: {
       label_id: labelID,
@@ -57,29 +57,29 @@ export async function getList(
 export { getList as e }
 
 export interface BoughtInfoResponse {
-  id: number
-  widget_name: string
-  icon: string
-  resource_url: string
-  intro: string
-  widget_code: string
-  widget_type: number
+  id: number;
+  widget_name: string;
+  icon: string;
+  resource_url: string;
+  intro: string;
+  widget_code: string;
+  widget_type: number;
 }
 
 export interface BoughtInfo {
-  id: number
-  type: string
-  widgetName: string
-  icon: string
-  cdnUrl: string
-  isInvisibleWidget: boolean
+  id: number;
+  type: string;
+  widgetName: string;
+  icon: string;
+  cdnUrl: string;
+  isInvisibleWidget: boolean;
 }
 
 export async function boughtList(
-  currentPage: number,
-  pageSize: number,
-  widgetType: (/** TODO */ any)
-): Promise<{ list: BoughtInfo[], total: number }> {
+currentPage: number,
+pageSize: number,
+widgetType: (/** TODO */any))
+: Promise<{list: BoughtInfo[];total: number;}> {
   const { data } = await axiosWithCredentials.get<MyResponse<PageResponse<BoughtInfoResponse>>>(baseURL + "/web/user/widget/list", {
     params: {
       widget_type: widgetType,
@@ -159,10 +159,10 @@ export function reportUse(type: string, userID?: number | undefined): void {
 }
 
 export async function getUsedTimes<T extends string>(
-  widgetsType: T[]
-): Promise<Partial<Record<T, number>>> {
+widgetsType: T[])
+: Promise<Partial<Record<T, number>>> {
   const { data } = await axiosWithCredentials.get<MyResponse<{
-    totalList: Partial<Record<T, number>>
+    totalList: Partial<Record<T, number>>;
   }>>(u.a.serverHost + "/data-center/widget/total", {
     params: {
       widget_code_list: widgetsType.join(",")

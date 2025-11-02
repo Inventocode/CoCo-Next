@@ -5,5 +5,5 @@
  */
 
 (function (t) {
-  module.exports = t;
-}).call(this, {});
+  module.exports = t
+}).call(this, {})

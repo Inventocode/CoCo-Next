@@ -63,4 +63,4 @@ module.exports = {
   connected: "style_connected__2iJGN",
   popoverBox: "style_popoverBox__29gj0",
   popoverItem: "style_popoverItem__24j0H"
-};
+}

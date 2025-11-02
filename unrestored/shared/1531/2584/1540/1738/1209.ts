@@ -4,7 +4,7 @@
  * 模块 ID：1209
  */
 
-var r = require("../1736/194");
-var o = require("../1646/1058");
-var i = r.WeakMap;
-module.exports = "function" === typeof i && /native code/.test(o(i));
+var r = require("../1736/194")
+var o = require("../1646/1058")
+var r$WeakMap = r.WeakMap
+module.exports = "function" === typeof r$WeakMap && /native code/.test(o(r$WeakMap))

@@ -4,23 +4,23 @@
  * 模块 ID：6C/6
  */
 
-"use strict";
+"use strict"
 
 /* unused harmony export Slider */
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__ from "@babel/runtime/helpers/esm/slicedToArray";
+import * as __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__ from "@babel/runtime/helpers/esm/slicedToArray"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_1_babel_plugin_react_css_modules_dist_browser_getClassName__ from "babel-plugin-react-css-modules/dist/browser/getClassName";
+import * as __WEBPACK_IMPORTED_MODULE_1_babel_plugin_react_css_modules_dist_browser_getClassName__ from "babel-plugin-react-css-modules/dist/browser/getClassName"
 /* harmony import */
-import __WEBPACK_IMPORTED_MODULE_1_babel_plugin_react_css_modules_dist_browser_getClassName___default from "babel-plugin-react-css-modules/dist/browser/getClassName";
+import __WEBPACK_IMPORTED_MODULE_1_babel_plugin_react_css_modules_dist_browser_getClassName___default from "babel-plugin-react-css-modules/dist/browser/getClassName"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_2_react__ from "react";
+import * as __WEBPACK_IMPORTED_MODULE_2_react__ from "react"
 /* harmony import */
-import __WEBPACK_IMPORTED_MODULE_2_react___default from "react";
+import __WEBPACK_IMPORTED_MODULE_2_react___default from "react"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_3__style_module_css__ from "./style.module.css-C6yh";
+import * as __WEBPACK_IMPORTED_MODULE_3__style_module_css__ from "./style.module.css-C6yh"
 /* harmony import */
-import __WEBPACK_IMPORTED_MODULE_3__style_module_css___default from "./style.module.css-C6yh";
+import __WEBPACK_IMPORTED_MODULE_3__style_module_css___default from "./style.module.css-C6yh"
 var _styleModuleImportMap = {
   "./style_module.css": {
     "slider-wrap": "CUI-slider-slider-wrap",
@@ -29,34 +29,34 @@ var _styleModuleImportMap = {
     "sliding": "CUI-slider-sliding",
     "disabled": "CUI-slider-disabled"
   }
-};
+}
 var Slider = function Slider(props) {
-  var _props$width;
-  var _props$step;
-  var _useState = __WEBPACK_IMPORTED_MODULE_2_react__.useState("");
-  var _useState2 = __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default(_useState, 2);
-  var state = _useState2[0];
-  var setState = _useState2[1];
+  var _props$width
+  var _props$step
+  var _useState = __WEBPACK_IMPORTED_MODULE_2_react__.useState("")
+  var _useState2 = __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default(_useState, 2)
+  var state = _useState2[0]
+  var setState = _useState2[1]
   var handleChange = function handleChange(e) {
     if (props.onChange) {
-      props.onChange(Number(e.target.value));
+      props.onChange(Number(e.target.value))
     }
-  };
+  }
   var handleMouseDown = function handleMouseDown() {
-    return setState("sliding");
-  };
+    return setState("sliding")
+  }
   var handleMouseUp = function handleMouseUp() {
-    return setState("");
-  };
+    return setState("")
+  }
   var getPercentage = function getPercentage() {
-    var value = props.value;
-    var _props$min = props.min;
-    var min = _props$min === undefined ? 0 : _props$min;
-    var _props$max = props.max;
-    var max = _props$max === undefined ? 100 : _props$max;
-    return (value - min) / (max - min) * 100;
-  };
-  var percentage = getPercentage();
+    var value = props.value
+    var _props$min = props.min
+    var min = _props$min === undefined ? 0 : _props$min
+    var _props$max = props.max
+    var max = _props$max === undefined ? 100 : _props$max
+    return (value - min) / (max - min) * 100
+  }
+  var percentage = getPercentage()
   return /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_2_react___default.createElement("div", {
     style: {
       width: (_props$width = props.width) !== null && _props$width !== undefined ? _props$width : 136
@@ -85,13 +85,13 @@ var Slider = function Slider(props) {
       left: "".concat(percentage, "%"),
       transform: "translate(".concat(-percentage, "%, -25px)")
     }
-  }, props.value));
-};
+  }, props.value))
+}
 Slider.defaultProps = {
   width: 136,
   min: 0,
   max: 100,
   step: 1
-};
+}
 
 /***/

@@ -13,4 +13,4 @@ module.exports = {
   buttonWidget: "style_buttonWidget__eN_FA",
   inputWrapper: "style_inputWrapper__2Yvnz",
   text: "style_text__3Cvdx"
-};
+}

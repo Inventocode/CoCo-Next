@@ -12,4 +12,4 @@ module.exports = {
   mask: "Player_mask__ddLYZ",
   emulatorWrapper: "Player_emulatorWrapper__yJUdU",
   galaxy5: "Player_galaxy5__2u938"
-};
+}

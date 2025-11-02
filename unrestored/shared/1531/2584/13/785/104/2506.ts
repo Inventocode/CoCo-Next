@@ -4,29 +4,29 @@
  * 模块 ID：2506
  */
 
-"use strict";
+"use strict"
 
 Object.defineProperty(exports, "__esModule", {
   value: true
-});
+})
 exports.default = function (e, t) {
-  var n = {};
+  var n = {}
   var r = function (e) {
-    var t = !(arguments.length > 1 && undefined !== arguments[1]) || arguments[1];
-    n[e] = t;
-  };
+    var t = !(arguments.length > 1 && undefined !== arguments[1]) || arguments[1]
+    n[e] = t
+  }
   if (0 === e) {
-    r("first-child");
+    r("first-child")
   }
   if (e === t - 1) {
-    r("last-child");
+    r("last-child")
   }
   if (0 === e || e % 2 === 0) {
-    r("even");
+    r("even")
   }
   if (1 === Math.abs(e % 2)) {
-    r("odd");
+    r("odd")
   }
-  r("nth-child", e);
-  return n;
-};
+  r("nth-child", e)
+  return n
+}

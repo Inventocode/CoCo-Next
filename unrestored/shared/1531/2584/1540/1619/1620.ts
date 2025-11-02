@@ -4,7 +4,7 @@
  * 模块 ID：1620
  */
 
-var n = 1..valueOf;
+var _1$$valueOf = 1..valueOf
 module.exports = function (e) {
-  return n.call(e);
-};
+  return _1$$valueOf.call(e)
+}

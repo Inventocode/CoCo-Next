@@ -4,35 +4,35 @@
  * 模块 ID：177
  */
 
-"use strict";
+"use strict"
 
-export { d as c };
-export { p as l };
-export { h as a };
-export { g as e };
-export { v as d };
-export { y as i };
-export { O as b };
-export { C as h };
-export { S as k };
-export { A as m };
-export { N as j };
-export { k as g };
-export { D as n };
-export { L as f };
-import r = require("regenerator-runtime");
+export { d as c }
+export { p as l }
+export { h as a }
+export { g as e }
+export { v as d }
+export { y as i }
+export { O as b }
+export { C as h }
+export { S as k }
+export { A as m }
+export { N as j }
+export { k as g }
+export { D as n }
+export { L as f }
+import RegeneratorRuntime = require("regenerator-runtime");
 var o = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
-    return module.default;
+    return module.default
   } : function () {
-    return module;
-  };
+    return module
+  }
   Object.defineProperty(defaultExport, "a", {
     enumerable: true,
     get: defaultExport
-  });
-  return defaultExport;
-}(r);
+  })
+  return defaultExport
+}(RegeneratorRuntime)
 import i = require("./7");
 import a = require("./35");
 import s = require("../../../../src/shared/widget/custom/storage");
@@ -40,8 +40,8 @@ import c = require("./53");
 import l = require("./59/index");
 import u = require("../../../../src/shared/utils/network/axios-with-credentials");
 function d(e, t, n, r, o, i, l, u, d, p, f, h) {
-  var m = s.d();
-  var g = s.e();
+  var m = s.d()
+  var g = s.e()
   var _ = {
     id: e,
     version: c.e,
@@ -54,46 +54,46 @@ function d(e, t, n, r, o, i, l, u, d, p, f, h) {
     apiToken: p,
     extensionWidgetList: m,
     unsafeExtensionWidgetList: g
-  };
+  }
   r.forEach(function (e) {
-    return _.variableMap[e.id] = e.defaultValue;
-  });
+    return _.variableMap[e.id] = e.defaultValue
+  })
   o.forEach(function (e) {
-    return _.variableMap[e.id] = e.defaultValue;
-  });
+    return _.variableMap[e.id] = e.defaultValue
+  })
   h.forEach(function (e) {
-    return _.variableMap[e.id] = e.defaultValue;
-  });
+    return _.variableMap[e.id] = e.defaultValue
+  })
   f.forEach(function (e) {
-    var t = a.Cb(e);
+    var t = a.Cb(e)
     if (t) {
-      _.widgetMap[e] = t;
+      _.widgetMap[e] = t
     }
-  });
+  })
   n.forEach(function (e) {
-    var n;
+    var /* [auto-meaningful-name] */e$invisibleWidgetIds
     e.primitiveVariables.forEach(function (e) {
-      return _.variableMap[e.id] = e.defaultValue;
-    });
+      return _.variableMap[e.id] = e.defaultValue
+    })
     e.arrayVariables.forEach(function (e) {
-      return _.variableMap[e.id] = e.defaultValue;
-    });
+      return _.variableMap[e.id] = e.defaultValue
+    })
     e.objectVariables.forEach(function (e) {
-      return _.variableMap[e.id] = e.defaultValue;
-    });
+      return _.variableMap[e.id] = e.defaultValue
+    })
     e.widgetIds.forEach(function (e) {
-      var t = a.Cb(e);
+      var t = a.Cb(e)
       if (t) {
-        _.widgetMap[e] = t;
+        _.widgetMap[e] = t
       }
-    });
-    if (!(null === (n = e.invisibleWidgetIds) || undefined === n)) {
-      n.forEach(function (e) {
-        var t = a.Cb(e);
+    })
+    if (!(null === (e$invisibleWidgetIds = e.invisibleWidgetIds) || undefined === e$invisibleWidgetIds)) {
+      e$invisibleWidgetIds.forEach(function (e) {
+        var t = a.Cb(e)
         if (t) {
-          _.widgetMap[e] = t;
+          _.widgetMap[e] = t
         }
-      });
+      })
     }
     _.screenList.push({
       id: e.id,
@@ -106,29 +106,29 @@ function d(e, t, n, r, o, i, l, u, d, p, f, h) {
       backgroundColor: e.backgroundColor,
       backgroundImage: e.backgroundImage,
       backgroundImageResizeMode: e.backgroundImageResizeMode
-    });
-    var r = t.getWorkspaceDataByScreenId(e.id);
+    })
+    var r = t.getWorkspaceDataByScreenId(e.id)
     if (r) {
-      _.blockJsonMap[e.id] = r.getWorkspaceJson();
+      _.blockJsonMap[e.id] = r.getWorkspaceJson()
     }
-    _.imageFileMap = i;
-    _.soundFileMap = l;
-    _.iconFileMap = u;
-  });
-  return _;
+    _.imageFileMap = i
+    _.soundFileMap = l
+    _.iconFileMap = u
+  })
+  return _
 }
 function p(e, t) {
-  return f.apply(this, arguments);
+  return f.apply(this, arguments)
 }
 function f() {
   return (f = i.a(o.a.mark(function e(t, n) {
-    var r;
-    var i;
+    var /* [auto-meaningful-name] */_e$sent2
+    var /* [auto-meaningful-name] */e$sent
     return o.a.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
-            e.next = 2;
+            e.next = 2
             return fetch(l.a.serverHost + "/coconut/web/build", {
               method: "POST",
               credentials: "include",
@@ -142,169 +142,169 @@ function f() {
               headers: {
                 "Content-Type": "application/json"
               }
-            });
+            })
           case 2:
-            r = e.sent;
-            e.next = 5;
-            return r.json();
+            _e$sent2 = e.sent
+            e.next = 5
+            return _e$sent2.json()
           case 5:
-            i = e.sent;
-            return e.abrupt("return", i.data);
+            e$sent = e.sent
+            return e.abrupt("return", e$sent.data)
           case 7:
           case "end":
-            return e.stop();
+            return e.stop()
         }
       }
-    }, e);
-  }))).apply(this, arguments);
+    }, e)
+  }))).apply(this, arguments)
 }
 function h(e) {
-  return m.apply(this, arguments);
+  return m.apply(this, arguments)
 }
 function m() {
   return (m = i.a(o.a.mark(function e(t) {
-    var n;
-    var r;
+    var /* [auto-meaningful-name] */_e$sent4
+    var /* [auto-meaningful-name] */e$sent
     return o.a.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
-            e.next = 2;
+            e.next = 2
             return fetch(l.a.serverHost + "/coconut/web/build/progress?pack_label=" + t, {
               mode: "cors",
               method: "GET",
               cache: "no-cache",
               credentials: "include"
-            });
+            })
           case 2:
-            n = e.sent;
-            e.next = 5;
-            return n.json();
+            _e$sent4 = e.sent
+            e.next = 5
+            return _e$sent4.json()
           case 5:
-            r = e.sent;
-            return e.abrupt("return", r.data);
+            e$sent = e.sent
+            return e.abrupt("return", e$sent.data)
           case 7:
           case "end":
-            return e.stop();
+            return e.stop()
         }
       }
-    }, e);
-  }))).apply(this, arguments);
+    }, e)
+  }))).apply(this, arguments)
 }
 function g(e) {
-  return _.apply(this, arguments);
+  return _.apply(this, arguments)
 }
 function _() {
   return (_ = i.a(o.a.mark(function e(t) {
-    var n;
-    var r;
+    var /* [auto-meaningful-name] */_e$sent6
+    var /* [auto-meaningful-name] */e$sent
     return o.a.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
-            e.next = 2;
+            e.next = 2
             return fetch(l.a.serverHost + "/coconut/web/apk/info/latest?work_id=" + t, {
               mode: "cors",
               method: "GET",
               cache: "no-cache",
               credentials: "include"
-            });
+            })
           case 2:
-            n = e.sent;
-            e.next = 5;
-            return n.json();
+            _e$sent6 = e.sent
+            e.next = 5
+            return _e$sent6.json()
           case 5:
-            r = e.sent;
-            return e.abrupt("return", r.data);
+            e$sent = e.sent
+            return e.abrupt("return", e$sent.data)
           case 7:
           case "end":
-            return e.stop();
+            return e.stop()
         }
       }
-    }, e);
-  }))).apply(this, arguments);
+    }, e)
+  }))).apply(this, arguments)
 }
 function v(e) {
-  return b.apply(this, arguments);
+  return b.apply(this, arguments)
 }
 function b() {
   return (b = i.a(o.a.mark(function e(t) {
-    var n;
-    var r;
+    var /* [auto-meaningful-name] */_e$sent8
+    var /* [auto-meaningful-name] */e$sent
     return o.a.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
-            e.next = 2;
+            e.next = 2
             return fetch(l.a.serverHost + "/coconut/web/apk/pack/stop?pack_label=" + t, {
               mode: "cors",
               method: "put",
               cache: "no-cache",
               credentials: "include"
-            });
+            })
           case 2:
-            n = e.sent;
-            e.next = 5;
-            return n.json();
+            _e$sent8 = e.sent
+            e.next = 5
+            return _e$sent8.json()
           case 5:
-            r = e.sent;
-            return e.abrupt("return", r.success);
+            e$sent = e.sent
+            return e.abrupt("return", e$sent.success)
           case 7:
           case "end":
-            return e.stop();
+            return e.stop()
         }
       }
-    }, e);
-  }))).apply(this, arguments);
+    }, e)
+  }))).apply(this, arguments)
 }
 function y(e) {
-  return E.apply(this, arguments);
+  return E.apply(this, arguments)
 }
 function E() {
   return (E = i.a(o.a.mark(function e(t) {
-    var n;
-    var r;
+    var /* [auto-meaningful-name] */_e$sent10
+    var /* [auto-meaningful-name] */e$sent
     return o.a.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
-            e.next = 2;
+            e.next = 2
             return fetch(l.a.serverHost + "/coconut/web/apk/info?pack_label=" + encodeURIComponent(t), {
               mode: "cors",
               method: "GET",
               cache: "no-cache",
               credentials: "include"
-            });
+            })
           case 2:
-            n = e.sent;
-            e.next = 5;
-            return n.json();
+            _e$sent10 = e.sent
+            e.next = 5
+            return _e$sent10.json()
           case 5:
-            r = e.sent;
+            e$sent = e.sent
             return e.abrupt("return", {
-              url: r.data.apk_url,
-              version: r.data.version,
-              expireTime: r.data.apk_download_url_expire_time
-            });
+              url: e$sent.data.apk_url,
+              version: e$sent.data.version,
+              expireTime: e$sent.data.apk_download_url_expire_time
+            })
           case 7:
           case "end":
-            return e.stop();
+            return e.stop()
         }
       }
-    }, e);
-  }))).apply(this, arguments);
+    }, e)
+  }))).apply(this, arguments)
 }
 function O(e, t) {
-  return w.apply(this, arguments);
+  return w.apply(this, arguments)
 }
 function w() {
   return (w = i.a(o.a.mark(function e(t, n) {
-    var r;
+    var /* [auto-meaningful-name] */e$sent
     return o.a.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
-            e.next = 2;
+            e.next = 2
             return fetch("/editor/service/compile", {
               mode: "same-origin",
               method: "POST",
@@ -315,219 +315,219 @@ function w() {
               headers: {
                 "Content-Type": "application/json"
               }
-            });
+            })
           case 2:
-            r = e.sent;
-            return e.abrupt("return", r.status);
+            e$sent = e.sent
+            return e.abrupt("return", e$sent.status)
           case 4:
           case "end":
-            return e.stop();
+            return e.stop()
         }
       }
-    }, e);
-  }))).apply(this, arguments);
+    }, e)
+  }))).apply(this, arguments)
 }
 function C(e) {
-  return T.apply(this, arguments);
+  return T.apply(this, arguments)
 }
 function T() {
   return (T = i.a(o.a.mark(function e(t) {
-    var n;
-    var r;
+    var /* [auto-meaningful-name] */_e$sent14
+    var /* [auto-meaningful-name] */e$sent
     return o.a.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
-            e.next = 2;
+            e.next = 2
             return fetch("/editor/service/code?id=".concat(t), {
               method: "GET"
-            });
+            })
           case 2:
-            n = e.sent;
-            e.next = 5;
-            return n.text();
+            _e$sent14 = e.sent
+            e.next = 5
+            return _e$sent14.text()
           case 5:
-            r = e.sent;
-            return e.abrupt("return", r);
+            e$sent = e.sent
+            return e.abrupt("return", e$sent)
           case 7:
           case "end":
-            return e.stop();
+            return e.stop()
         }
       }
-    }, e);
-  }))).apply(this, arguments);
+    }, e)
+  }))).apply(this, arguments)
 }
 function S(e) {
-  return I.apply(this, arguments);
+  return I.apply(this, arguments)
 }
 function I() {
   return (I = i.a(o.a.mark(function e(t) {
-    var n;
-    var r;
+    var /* [auto-meaningful-name] */_e$sent19
+    var /* [auto-meaningful-name] */e$sent
     return o.a.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
-            e.next = 2;
+            e.next = 2
             return fetch(l.a.serverHost + "/coconut/web/token?work_id=".concat(t), {
               mode: "cors",
               method: "GET",
               credentials: "include"
-            });
+            })
           case 2:
-            n = e.sent;
-            e.next = 5;
-            return n.json();
+            _e$sent19 = e.sent
+            e.next = 5
+            return _e$sent19.json()
           case 5:
-            r = e.sent;
-            return e.abrupt("return", r.data);
+            e$sent = e.sent
+            return e.abrupt("return", e$sent.data)
           case 7:
           case "end":
-            return e.stop();
+            return e.stop()
         }
       }
-    }, e);
-  }))).apply(this, arguments);
+    }, e)
+  }))).apply(this, arguments)
 }
 function A(e) {
-  return j.apply(this, arguments);
+  return j.apply(this, arguments)
 }
 function j() {
   return (j = i.a(o.a.mark(function e(t) {
-    var n;
-    var r;
-    var i;
-    var a;
-    var s;
-    var c;
-    var d;
-    var p;
+    var /* [auto-meaningful-name] */t$name
+    var /* [auto-meaningful-name] */t$description
+    var /* [auto-meaningful-name] */t$operation
+    var /* [auto-meaningful-name] */t$coverUrl
+    var /* [auto-meaningful-name] */t$bcmcUrl
+    var /* [auto-meaningful-name] */t$playerUrl
+    var /* [auto-meaningful-name] */t$workId
+    var /* [auto-meaningful-name] */e$sent
     return o.a.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
-            n = t.name;
-            r = t.description;
-            i = t.operation;
-            a = t.coverUrl;
-            s = t.bcmcUrl;
-            c = t.playerUrl;
-            d = t.workId;
-            e.next = 3;
-            return u.a.put(l.a.serverHost + "/coconut/web/work/".concat(d, "/publish"), {
-              name: n,
-              description: r,
-              operation: i,
-              cover_url: a,
-              bcmc_url: s,
-              player_url: c
-            });
+            t$name = t.name
+            t$description = t.description
+            t$operation = t.operation
+            t$coverUrl = t.coverUrl
+            t$bcmcUrl = t.bcmcUrl
+            t$playerUrl = t.playerUrl
+            t$workId = t.workId
+            e.next = 3
+            return u.a.put(l.a.serverHost + "/coconut/web/work/".concat(t$workId, "/publish"), {
+              name: t$name,
+              description: t$description,
+              operation: t$operation,
+              cover_url: t$coverUrl,
+              bcmc_url: t$bcmcUrl,
+              player_url: t$playerUrl
+            })
           case 3:
-            p = e.sent;
-            return e.abrupt("return", p.data);
+            e$sent = e.sent
+            return e.abrupt("return", e$sent.data)
           case 5:
           case "end":
-            return e.stop();
+            return e.stop()
         }
       }
-    }, e);
-  }))).apply(this, arguments);
+    }, e)
+  }))).apply(this, arguments)
 }
 function N(e) {
-  return R.apply(this, arguments);
+  return R.apply(this, arguments)
 }
 function R() {
   return (R = i.a(o.a.mark(function e(t) {
-    var n;
+    var /* [auto-meaningful-name] */e$sent
     return o.a.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
-            e.next = 2;
-            return u.a.get(l.a.serverHost + "/coconut/web/work/".concat(t, "/info"));
+            e.next = 2
+            return u.a.get(l.a.serverHost + "/coconut/web/work/".concat(t, "/info"))
           case 2:
-            n = e.sent;
-            return e.abrupt("return", n.data);
+            e$sent = e.sent
+            return e.abrupt("return", e$sent.data)
           case 4:
           case "end":
-            return e.stop();
+            return e.stop()
         }
       }
-    }, e);
-  }))).apply(this, arguments);
+    }, e)
+  }))).apply(this, arguments)
 }
 function k(e) {
-  return x.apply(this, arguments);
+  return x.apply(this, arguments)
 }
 function x() {
   return (x = i.a(o.a.mark(function e(t) {
-    var n;
-    var r;
-    var i = arguments;
+    var n
+    var /* [auto-meaningful-name] */e$sent
+    var i = arguments
     return o.a.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
-            n = i.length > 1 && undefined !== i[1] ? i[1] : 1;
-            e.next = 3;
-            return u.a.get(l.a.serverHost + "/coconut/web/work/".concat(t, "/load?channel=").concat(n));
+            n = i.length > 1 && undefined !== i[1] ? i[1] : 1
+            e.next = 3
+            return u.a.get(l.a.serverHost + "/coconut/web/work/".concat(t, "/load?channel=").concat(n))
           case 3:
-            r = e.sent;
-            return e.abrupt("return", r.data);
+            e$sent = e.sent
+            return e.abrupt("return", e$sent.data)
           case 5:
           case "end":
-            return e.stop();
+            return e.stop()
         }
       }
-    }, e);
-  }))).apply(this, arguments);
+    }, e)
+  }))).apply(this, arguments)
 }
 function D(e, t) {
-  return M.apply(this, arguments);
+  return M.apply(this, arguments)
 }
 function M() {
   return (M = i.a(o.a.mark(function e(t, n) {
-    var r;
+    var /* [auto-meaningful-name] */e$sent
     return o.a.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
-            e.next = 2;
+            e.next = 2
             return u.a.put(l.a.serverHost + "/coconut/web/work/".concat(t, "/publish_h5"), {
               bcmc_url: n
-            });
+            })
           case 2:
-            r = e.sent;
-            return e.abrupt("return", r.data);
+            e$sent = e.sent
+            return e.abrupt("return", e$sent.data)
           case 4:
           case "end":
-            return e.stop();
+            return e.stop()
         }
       }
-    }, e);
-  }))).apply(this, arguments);
+    }, e)
+  }))).apply(this, arguments)
 }
 function L(e) {
-  return P.apply(this, arguments);
+  return P.apply(this, arguments)
 }
 function P() {
   return (P = i.a(o.a.mark(function e(t) {
-    var n;
+    var /* [auto-meaningful-name] */e$sent
     return o.a.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
-            e.next = 2;
-            return u.a.get(l.a.serverHost + "/coconut/web/work/archive/list/".concat(t, "?offset=0&limit=").concat(50));
+            e.next = 2
+            return u.a.get(l.a.serverHost + "/coconut/web/work/archive/list/".concat(t, "?offset=0&limit=").concat(50))
           case 2:
-            n = e.sent;
-            return e.abrupt("return", n.data.data.items);
+            e$sent = e.sent
+            return e.abrupt("return", e$sent.data.data.items)
           case 4:
           case "end":
-            return e.stop();
+            return e.stop()
         }
       }
-    }, e);
-  }))).apply(this, arguments);
+    }, e)
+  }))).apply(this, arguments)
 }
-export default h;
+export default h

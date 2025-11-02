@@ -4,9 +4,9 @@
  * 模块 ID：2445
  */
 
-var r = require("./2446/976");
-var i = Object.prototype.hasOwnProperty;
+var r = require("./2446/976")
+var object$prototype$hasOwnProperty = Object.prototype.hasOwnProperty
 module.exports = function (e) {
-  var t = this.__data__;
-  return r ? undefined !== t[e] : i.call(t, e);
-};
+  var this$__data__ = this.__data__
+  return r ? undefined !== this$__data__[e] : object$prototype$hasOwnProperty.call(this$__data__, e)
+}

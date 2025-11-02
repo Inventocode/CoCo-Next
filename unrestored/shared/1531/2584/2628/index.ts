@@ -4,378 +4,378 @@
  * 模块 ID：2628
  */
 
-"use strict";
+"use strict"
 
-export { W as a };
-import r = require("react");
+export { W as a }
+import React = require("react");
 import i = require("./988");
 import o = require("./275");
 import a = require("./277");
-var s = ["localeMatcher", "style", "currency", "currencyDisplay", "unit", "unitDisplay", "useGrouping", "minimumIntegerDigits", "minimumFractionDigits", "maximumFractionDigits", "minimumSignificantDigits", "maximumSignificantDigits", "compactDisplay", "currencyDisplay", "currencySign", "notation", "signDisplay", "unit", "unitDisplay"];
+var s = ["localeMatcher", "style", "currency", "currencyDisplay", "unit", "unitDisplay", "useGrouping", "minimumIntegerDigits", "minimumFractionDigits", "maximumFractionDigits", "minimumSignificantDigits", "maximumSignificantDigits", "compactDisplay", "currencyDisplay", "currencySign", "notation", "signDisplay", "unit", "unitDisplay"]
 function c(e, t, n) {
-  var r = e.locale;
-  var i = e.formats;
-  var a = e.onError;
+  var e$locale = e.locale
+  var e$formats = e.formats
+  var e$onError = e.onError
   if (undefined === n) {
-    n = {};
+    n = {}
   }
-  var c = n.format;
-  var u = c && o.f(i, "number", c, a) || {};
-  return t(r, o.e(n, s, u));
+  var n$format = n.format
+  var u = n$format && o.f(e$formats, "number", n$format, e$onError) || {}
+  return t(e$locale, o.e(n, s, u))
 }
 function u(e, t, n, r) {
   if (undefined === r) {
-    r = {};
+    r = {}
   }
   try {
-    return c(e, t, r).format(n);
+    return c(e, t, r).format(n)
   } catch (i) {
-    e.onError(new a.e("FORMAT_ERROR", "Error formatting number.", i));
+    e.onError(new a.e("FORMAT_ERROR", "Error formatting number.", i))
   }
-  return String(n);
+  return String(n)
 }
 function l(e, t, n, r) {
   if (undefined === r) {
-    r = {};
+    r = {}
   }
   try {
-    return c(e, t, r).formatToParts(n);
+    return c(e, t, r).formatToParts(n)
   } catch (i) {
-    e.onError(new a.e("FORMAT_ERROR", "Error formatting number.", i));
+    e.onError(new a.e("FORMAT_ERROR", "Error formatting number.", i))
   }
-  return [];
+  return []
 }
 import f = require("./796");
-var d = ["numeric", "style"];
+var d = ["numeric", "style"]
 function h(e, t, n, r, i) {
   if (undefined === i) {
-    i = {};
+    i = {}
   }
   if (!r) {
-    r = "second";
+    r = "second"
   }
   if (!Intl.RelativeTimeFormat) {
-    e.onError(new f.a("Intl.RelativeTimeFormat is not available in this environment.\nTry polyfilling it using \"@formatjs/intl-relativetimeformat\"\n", "MISSING_INTL_API"));
+    e.onError(new f.a("Intl.RelativeTimeFormat is not available in this environment.\nTry polyfilling it using \"@formatjs/intl-relativetimeformat\"\n", "MISSING_INTL_API"))
   }
   try {
     return function (e, t, n) {
-      var r = e.locale;
-      var i = e.formats;
-      var a = e.onError;
+      var e$locale = e.locale
+      var e$formats = e.formats
+      var e$onError = e.onError
       if (undefined === n) {
-        n = {};
+        n = {}
       }
-      var s = n.format;
-      var c = !!s && o.f(i, "relative", s, a) || {};
-      return t(r, o.e(n, d, c));
-    }(e, t, i).format(n, r);
+      var n$format = n.format
+      var c = !!n$format && o.f(e$formats, "relative", n$format, e$onError) || {}
+      return t(e$locale, o.e(n, d, c))
+    }(e, t, i).format(n, r)
   } catch (s) {
-    e.onError(new a.b("Error formatting relative time.", s));
+    e.onError(new a.b("Error formatting relative time.", s))
   }
-  return String(n);
+  return String(n)
 }
 var p = function () {
   return (p = Object.assign || function (e) {
-    for (var t, n = 1, r = arguments.length; n < r; n++) {
+    for (var t, n = 1, arguments$length = arguments.length; n < arguments$length; n++) {
       for (var i in t = arguments[n]) if (Object.prototype.hasOwnProperty.call(t, i)) {
-        e[i] = t[i];
+        e[i] = t[i]
       }
     }
-    return e;
-  }).apply(this, arguments);
-};
-var _ = ["localeMatcher", "formatMatcher", "timeZone", "hour12", "weekday", "era", "year", "month", "day", "hour", "minute", "second", "timeZoneName", "hourCycle", "dateStyle", "timeStyle", "fractionalSecondDigits", "calendar", "numberingSystem"];
+    return e
+  }).apply(this, arguments)
+}
+var _ = ["localeMatcher", "formatMatcher", "timeZone", "hour12", "weekday", "era", "year", "month", "day", "hour", "minute", "second", "timeZoneName", "hourCycle", "dateStyle", "timeStyle", "fractionalSecondDigits", "calendar", "numberingSystem"]
 function A(e, t, n, r) {
-  var i = e.locale;
-  var a = e.formats;
-  var s = e.onError;
-  var c = e.timeZone;
+  var e$locale = e.locale
+  var e$formats = e.formats
+  var e$onError = e.onError
+  var e$timeZone = e.timeZone
   if (undefined === r) {
-    r = {};
+    r = {}
   }
-  var u = r.format;
-  var l = p(p({}, c && {
-    timeZone: c
-  }), u && o.f(a, t, u, s));
-  var f = o.e(r, _, l);
+  var r$format = r.format
+  var l = p(p({}, e$timeZone && {
+    timeZone: e$timeZone
+  }), r$format && o.f(e$formats, t, r$format, e$onError))
+  var f = o.e(r, _, l)
   if (!("time" !== t || f.hour || f.minute || f.second)) {
     f = p(p({}, f), {
       hour: "numeric",
       minute: "numeric"
-    });
+    })
   }
-  return n(i, f);
+  return n(e$locale, f)
 }
 function g(e, t, n, r) {
   if (undefined === r) {
-    r = {};
+    r = {}
   }
-  var i = "string" === typeof n ? new Date(n || 0) : n;
+  var i = "string" === typeof n ? new Date(n || 0) : n
   try {
-    return A(e, "date", t, r).format(i);
+    return A(e, "date", t, r).format(i)
   } catch (o) {
-    e.onError(new a.e("FORMAT_ERROR", "Error formatting date.", o));
+    e.onError(new a.e("FORMAT_ERROR", "Error formatting date.", o))
   }
-  return String(i);
+  return String(i)
 }
 function v(e, t, n, r) {
   if (undefined === r) {
-    r = {};
+    r = {}
   }
-  var i = "string" === typeof n ? new Date(n || 0) : n;
+  var i = "string" === typeof n ? new Date(n || 0) : n
   try {
-    return A(e, "time", t, r).format(i);
+    return A(e, "time", t, r).format(i)
   } catch (o) {
-    e.onError(new a.e("FORMAT_ERROR", "Error formatting time.", o));
+    e.onError(new a.e("FORMAT_ERROR", "Error formatting time.", o))
   }
-  return String(i);
+  return String(i)
 }
 function m(e, t, n, r) {
   if (undefined === r) {
-    r = {};
+    r = {}
   }
-  var i = "string" === typeof n ? new Date(n || 0) : n;
+  var i = "string" === typeof n ? new Date(n || 0) : n
   try {
-    return A(e, "date", t, r).formatToParts(i);
+    return A(e, "date", t, r).formatToParts(i)
   } catch (o) {
-    e.onError(new a.e("FORMAT_ERROR", "Error formatting date.", o));
+    e.onError(new a.e("FORMAT_ERROR", "Error formatting date.", o))
   }
-  return [];
+  return []
 }
 function y(e, t, n, r) {
   if (undefined === r) {
-    r = {};
+    r = {}
   }
-  var i = "string" === typeof n ? new Date(n || 0) : n;
+  var i = "string" === typeof n ? new Date(n || 0) : n
   try {
-    return A(e, "time", t, r).formatToParts(i);
+    return A(e, "time", t, r).formatToParts(i)
   } catch (o) {
-    e.onError(new a.e("FORMAT_ERROR", "Error formatting time.", o));
+    e.onError(new a.e("FORMAT_ERROR", "Error formatting time.", o))
   }
-  return [];
+  return []
 }
-var b = ["localeMatcher", "type"];
+var b = ["localeMatcher", "type"]
 function w(e, t, n, r) {
-  var i = e.locale;
-  var s = e.onError;
+  var e$locale = e.locale
+  var e$onError = e.onError
   if (undefined === r) {
-    r = {};
+    r = {}
   }
   if (!Intl.PluralRules) {
-    s(new f.a("Intl.PluralRules is not available in this environment.\nTry polyfilling it using \"@formatjs/intl-pluralrules\"\n", "MISSING_INTL_API"));
+    e$onError(new f.a("Intl.PluralRules is not available in this environment.\nTry polyfilling it using \"@formatjs/intl-pluralrules\"\n", "MISSING_INTL_API"))
   }
-  var c = o.e(r, b);
+  var c = o.e(r, b)
   try {
-    return t(i, c).select(n);
+    return t(e$locale, c).select(n)
   } catch (u) {
-    s(new a.b("Error formatting plural.", u));
+    e$onError(new a.b("Error formatting plural.", u))
   }
-  return "other";
+  return "other"
 }
-var E;
-var x;
+var E
+var x
 import C = require("./2588");
 import O = require("./2589/index");
 import k = require("./1440/index");
 !function (e) {
-  e[e.literal = 0] = "literal";
-  e[e.argument = 1] = "argument";
-  e[e.number = 2] = "number";
-  e[e.date = 3] = "date";
-  e[e.time = 4] = "time";
-  e[e.select = 5] = "select";
-  e[e.plural = 6] = "plural";
-  e[e.pound = 7] = "pound";
-  e[e.tag = 8] = "tag";
+  e[e.literal = 0] = "literal"
+  e[e.argument = 1] = "argument"
+  e[e.number = 2] = "number"
+  e[e.date = 3] = "date"
+  e[e.time = 4] = "time"
+  e[e.select = 5] = "select"
+  e[e.plural = 6] = "plural"
+  e[e.pound = 7] = "pound"
+  e[e.tag = 8] = "tag"
 }(E || (E = {}));
 (function (e) {
-  e[e.number = 0] = "number";
-  e[e.dateTime = 1] = "dateTime";
-})(x || (x = {}));
+  e[e.number = 0] = "number"
+  e[e.dateTime = 1] = "dateTime"
+})(x || (x = {}))
 var S = function () {
   return (S = Object.assign || function (e) {
-    for (var t, n = 1, r = arguments.length; n < r; n++) {
+    for (var t, n = 1, arguments$length = arguments.length; n < arguments$length; n++) {
       for (var i in t = arguments[n]) if (Object.prototype.hasOwnProperty.call(t, i)) {
-        e[i] = t[i];
+        e[i] = t[i]
       }
     }
-    return e;
-  }).apply(this, arguments);
-};
+    return e
+  }).apply(this, arguments)
+}
 var T = function () {
-  for (var e = 0, t = 0, n = arguments.length; t < n; t++) {
-    e += arguments[t].length;
+  for (var e = 0, t = 0, arguments$length = arguments.length; t < arguments$length; t++) {
+    e += arguments[t].length
   }
-  var r = Array(e);
-  var i = 0;
-  for (t = 0; t < n; t++) {
-    for (var o = arguments[t], a = 0, s = o.length; a < s; a++, i++) {
-      r[i] = o[a];
+  var r = Array(e)
+  var i = 0
+  for (t = 0; t < arguments$length; t++) {
+    for (var o = arguments[t], a = 0, o$length = o.length; a < o$length; a++, i++) {
+      r[i] = o[a]
     }
   }
-  return r;
-};
+  return r
+}
 function B(e, t) {
   return Object.keys(e).reduce(function (n, r) {
     n[r] = S({
       timeZone: t
-    }, e[r]);
-    return n;
-  }, {});
+    }, e[r])
+    return n
+  }, {})
 }
 function D(e, t) {
   return Object.keys(S(S({}, e), t)).reduce(function (n, r) {
-    n[r] = S(S({}, e[r] || {}), t[r] || {});
-    return n;
-  }, {});
+    n[r] = S(S({}, e[r] || {}), t[r] || {})
+    return n
+  }, {})
 }
 function I(e, t) {
   if (!t) {
-    return e;
+    return e
   }
-  var n = O.a.formats;
-  return S(S(S({}, n), e), {
-    date: D(B(n.date, t), B(e.date || {}, t)),
-    time: D(B(n.time, t), B(e.time || {}, t))
-  });
+  var o$a$formats = O.a.formats
+  return S(S(S({}, o$a$formats), e), {
+    date: D(B(o$a$formats.date, t), B(e.date || {}, t)),
+    time: D(B(o$a$formats.time, t), B(e.time || {}, t))
+  })
 }
 function F(e, t) {
-  return Array.isArray(e) && t ? r.createElement.apply(r, T([r.Fragment, null], e)) : e;
+  return Array.isArray(e) && t ? React.createElement.apply(React, T([React.Fragment, null], e)) : e
 }
 function R(e, t, n, r) {
-  var i = e.locale;
-  var s = e.formats;
-  var c = e.messages;
-  var u = e.defaultLocale;
-  var l = e.defaultFormats;
-  var f = e.onError;
-  var d = e.timeZone;
-  var h = e.wrapRichTextChunksInFragment;
+  var e$locale = e.locale
+  var e$formats = e.formats
+  var e$messages = e.messages
+  var e$defaultLocale = e.defaultLocale
+  var e$defaultFormats = e.defaultFormats
+  var e$onError = e.onError
+  var e$timeZone = e.timeZone
+  var e$wrapRichTextChunksInFragment = e.wrapRichTextChunksInFragment
   if (undefined === n) {
     n = {
       id: ""
-    };
+    }
   }
-  var p = n.id;
-  var _ = n.defaultMessage;
-  C.a(!!p, "[React Intl] An `id` must be provided to format a message.");
-  var A = String(p);
-  var g = c && Object.prototype.hasOwnProperty.call(c, A) && c[A];
+  var p = n.id
+  var n$defaultMessage = n.defaultMessage
+  C.a(!!p, "[React Intl] An `id` must be provided to format a message.")
+  var A = String(p)
+  var g = e$messages && Object.prototype.hasOwnProperty.call(e$messages, A) && e$messages[A]
   if (Array.isArray(g) && 1 === g.length && g[0].type === E.literal) {
-    return g[0].value;
+    return g[0].value
   }
   if (!r && g && "string" === typeof g) {
-    return g.replace(/'\{(.*?)\}'/gi, "{$1}");
+    return g.replace(/'\{(.*?)\}'/gi, "{$1}")
   }
   var v = r && function (e) {
     return Object.keys(e).reduce(function (t, n) {
-      var r = e[n];
-      t[n] = k.b(r) ? o.b(r) : r;
-      return t;
-    }, {});
-  }(r);
-  s = I(s, d);
-  l = I(l, d);
+      var r = e[n]
+      t[n] = k.b(r) ? o.b(r) : r
+      return t
+    }, {})
+  }(r)
+  e$formats = I(e$formats, e$timeZone)
+  e$defaultFormats = I(e$defaultFormats, e$timeZone)
   if (!g) {
-    if (!_ || i && i.toLowerCase() !== u.toLowerCase()) {
-      f(new a.d(n, i));
+    if (!n$defaultMessage || e$locale && e$locale.toLowerCase() !== e$defaultLocale.toLowerCase()) {
+      e$onError(new a.d(n, e$locale))
     }
-    if (_) {
+    if (n$defaultMessage) {
       try {
-        return F(t.getMessageFormat(_, u, l).format(v), h);
+        return F(t.getMessageFormat(n$defaultMessage, e$defaultLocale, e$defaultFormats).format(v), e$wrapRichTextChunksInFragment)
       } catch (m) {
-        f(new a.b("Error formatting default message for: \"" + A + "\", rendering default message verbatim", i, n, m));
-        return _;
+        e$onError(new a.b("Error formatting default message for: \"" + A + "\", rendering default message verbatim", e$locale, n, m))
+        return n$defaultMessage
       }
     }
-    return A;
+    return A
   }
   try {
-    return F(t.getMessageFormat(g, i, s, {
+    return F(t.getMessageFormat(g, e$locale, e$formats, {
       formatters: t
-    }).format(v), h);
+    }).format(v), e$wrapRichTextChunksInFragment)
   } catch (m) {
-    f(new a.b("Error formatting message: \"" + A + "\", using " + (_ ? "default message" : "id") + " as fallback.", i, n, m));
+    e$onError(new a.b("Error formatting message: \"" + A + "\", using " + (n$defaultMessage ? "default message" : "id") + " as fallback.", e$locale, n, m))
   }
-  if (_) {
+  if (n$defaultMessage) {
     try {
-      return F(t.getMessageFormat(_, u, l).format(v), h);
+      return F(t.getMessageFormat(n$defaultMessage, e$defaultLocale, e$defaultFormats).format(v), e$wrapRichTextChunksInFragment)
     } catch (m) {
-      f(new a.b("Error formatting the default message for: \"" + A + "\", rendering message verbatim", i, n, m));
+      e$onError(new a.b("Error formatting the default message for: \"" + A + "\", rendering message verbatim", e$locale, n, m))
     }
   }
-  return g || _ || A;
+  return g || n$defaultMessage || A
 }
 import P = require("./1170");
 var N = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
-    return module.default;
+    return module.default
   } : function () {
-    return module;
-  };
+    return module
+  }
   Object.defineProperty(defaultExport, "a", {
     enumerable: true,
     get: defaultExport
-  });
-  return defaultExport;
-}(P);
-var M = ["localeMatcher", "type", "style"];
-var j = Date.now();
+  })
+  return defaultExport
+}(P)
+var M = ["localeMatcher", "type", "style"]
+var j = Date.now()
 function L(e, t, n, r) {
-  var i = e.locale;
-  var s = e.onError;
+  var e$locale = e.locale
+  var e$onError = e.onError
   if (undefined === r) {
-    r = {};
+    r = {}
   }
   if (!Intl.ListFormat) {
-    s(new f.a("Intl.ListFormat is not available in this environment.\nTry polyfilling it using \"@formatjs/intl-listformat\"\n", "MISSING_INTL_API"));
+    e$onError(new f.a("Intl.ListFormat is not available in this environment.\nTry polyfilling it using \"@formatjs/intl-listformat\"\n", "MISSING_INTL_API"))
   }
-  var c = o.e(r, M);
+  var c = o.e(r, M)
   try {
-    var u = {};
+    var u = {}
     var l = n.map(function (e, t) {
       if ("object" === typeof e) {
         var n = function (e) {
-          return j + "_" + e + "_" + j;
-        }(t);
-        u[n] = e;
-        return n;
+          return j + "_" + e + "_" + j
+        }(t)
+        u[n] = e
+        return n
       }
-      return String(e);
-    });
-    return Object.keys(u).length ? t(i, c).formatToParts(l).reduce(function (e, t) {
-      var n = t.value;
-      if (u[n]) {
-        e.push(u[n]);
+      return String(e)
+    })
+    return Object.keys(u).length ? t(e$locale, c).formatToParts(l).reduce(function (e, t) {
+      var t$value = t.value
+      if (u[t$value]) {
+        e.push(u[t$value])
       } else {
         if ("string" === typeof e[e.length - 1]) {
-          e[e.length - 1] += n;
+          e[e.length - 1] += t$value
         } else {
-          e.push(n);
+          e.push(t$value)
         }
       }
-      return e;
-    }, []) : t(i, c).format(l);
+      return e
+    }, []) : t(e$locale, c).format(l)
   } catch (d) {
-    s(new a.e("FORMAT_ERROR", "Error formatting list.", d));
+    e$onError(new a.e("FORMAT_ERROR", "Error formatting list.", d))
   }
-  return n;
+  return n
 }
-var U = ["localeMatcher", "style", "type", "fallback"];
+var U = ["localeMatcher", "style", "type", "fallback"]
 function H(e, t, n, r) {
-  var i = e.locale;
-  var s = e.onError;
+  var e$locale = e.locale
+  var e$onError = e.onError
   if (undefined === r) {
-    r = {};
+    r = {}
   }
   if (!Intl.DisplayNames) {
-    s(new f.a("Intl.DisplayNames is not available in this environment.\nTry polyfilling it using \"@formatjs/intl-displaynames\"\n", "MISSING_INTL_API"));
+    e$onError(new f.a("Intl.DisplayNames is not available in this environment.\nTry polyfilling it using \"@formatjs/intl-displaynames\"\n", "MISSING_INTL_API"))
   }
-  var c = o.e(r, U);
+  var c = o.e(r, U)
   try {
-    return t(i, c).of(n);
+    return t(e$locale, c).of(n)
   } catch (u) {
-    s(new a.e("FORMAT_ERROR", "Error formatting display name.", u));
+    e$onError(new a.e("FORMAT_ERROR", "Error formatting display name.", u))
   }
 }
 var V = function () {
@@ -383,32 +383,32 @@ var V = function () {
     return (e = Object.setPrototypeOf || {
       __proto__: []
     } instanceof Array && function (e, t) {
-      e.__proto__ = t;
+      e.__proto__ = t
     } || function (e, t) {
       for (var n in t) if (t.hasOwnProperty(n)) {
-        e[n] = t[n];
+        e[n] = t[n]
       }
-    })(t, n);
-  };
+    })(t, n)
+  }
   return function (t, n) {
     function r() {
-      this.constructor = t;
+      this.constructor = t
     }
-    e(t, n);
-    t.prototype = null === n ? Object.create(n) : (r.prototype = n.prototype, new r());
-  };
-}();
+    e(t, n)
+    t.prototype = null === n ? Object.create(n) : (r.prototype = n.prototype, new r())
+  }
+}()
 var G = function () {
   return (G = Object.assign || function (e) {
-    for (var t, n = 1, r = arguments.length; n < r; n++) {
+    for (var t, n = 1, arguments$length = arguments.length; n < arguments$length; n++) {
       for (var i in t = arguments[n]) if (Object.prototype.hasOwnProperty.call(t, i)) {
-        e[i] = t[i];
+        e[i] = t[i]
       }
     }
-    return e;
-  }).apply(this, arguments);
-};
-var z = N.a || P;
+    return e
+  }).apply(this, arguments)
+}
+var z = N.a || P
 function Q(e) {
   return {
     locale: e.locale,
@@ -420,27 +420,27 @@ function Q(e) {
     defaultFormats: e.defaultFormats,
     onError: e.onError,
     wrapRichTextChunksInFragment: e.wrapRichTextChunksInFragment
-  };
+  }
 }
 function W(e, t) {
-  var n = o.c(t);
-  var r = G(G({}, o.a), e);
-  var i = r.locale;
-  var s = r.defaultLocale;
-  var c = r.onError;
-  if (i) {
-    if (!Intl.NumberFormat.supportedLocalesOf(i).length && c) {
-      c(new a.c("Missing locale data for locale: \"" + i + "\" in Intl.NumberFormat. Using default locale: \"" + s + "\" as fallback. See https://formatjs.io/docs/react-intl#runtime-requirements for more details"));
+  var n = o.c(t)
+  var r = G(G({}, o.a), e)
+  var r$locale = r.locale
+  var r$defaultLocale = r.defaultLocale
+  var r$onError = r.onError
+  if (r$locale) {
+    if (!Intl.NumberFormat.supportedLocalesOf(r$locale).length && r$onError) {
+      r$onError(new a.c("Missing locale data for locale: \"" + r$locale + "\" in Intl.NumberFormat. Using default locale: \"" + r$defaultLocale + "\" as fallback. See https://formatjs.io/docs/react-intl#runtime-requirements for more details"))
     } else {
-      if (!Intl.DateTimeFormat.supportedLocalesOf(i).length && c) {
-        c(new a.c("Missing locale data for locale: \"" + i + "\" in Intl.DateTimeFormat. Using default locale: \"" + s + "\" as fallback. See https://formatjs.io/docs/react-intl#runtime-requirements for more details"));
+      if (!Intl.DateTimeFormat.supportedLocalesOf(r$locale).length && r$onError) {
+        r$onError(new a.c("Missing locale data for locale: \"" + r$locale + "\" in Intl.DateTimeFormat. Using default locale: \"" + r$defaultLocale + "\" as fallback. See https://formatjs.io/docs/react-intl#runtime-requirements for more details"))
       }
     }
   } else {
-    if (c) {
-      c(new a.a("\"locale\" was not configured, using \"" + s + "\" as fallback. See https://formatjs.io/docs/react-intl/api#intlshape for more details"));
+    if (r$onError) {
+      r$onError(new a.a("\"locale\" was not configured, using \"" + r$defaultLocale + "\" as fallback. See https://formatjs.io/docs/react-intl/api#intlshape for more details"))
     }
-    r.locale = r.defaultLocale || "en";
+    r.locale = r.defaultLocale || "en"
   }
   return G(G({}, r), {
     formatters: n,
@@ -455,38 +455,38 @@ function W(e, t) {
     formatMessage: R.bind(null, r, n),
     formatList: L.bind(null, r, n.getListFormat),
     formatDisplayName: H.bind(null, r, n.getDisplayNames)
-  });
+  })
 }
 var K = function (e) {
   function t() {
-    var t = null !== e && e.apply(this, arguments) || this;
-    t.cache = o.d();
+    var t = null !== e && e.apply(this, arguments) || this
+    t.cache = o.d()
     t.state = {
       cache: t.cache,
       intl: W(Q(t.props), t.cache),
       prevConfig: Q(t.props)
-    };
-    return t;
+    }
+    return t
   }
-  V(t, e);
+  V(t, e)
   t.getDerivedStateFromProps = function (e, t) {
-    var n = t.prevConfig;
-    var r = t.cache;
-    var i = Q(e);
-    return z(n, i) ? null : {
-      intl: W(i, r),
+    var t$prevConfig = t.prevConfig
+    var t$cache = t.cache
+    var i = Q(e)
+    return z(t$prevConfig, i) ? null : {
+      intl: W(i, t$cache),
       prevConfig: i
-    };
-  };
+    }
+  }
   t.prototype.render = function () {
-    o.g(this.state.intl);
-    return r.createElement(i.b, {
+    o.g(this.state.intl)
+    return React.createElement(i.b, {
       value: this.state.intl
-    }, this.props.children);
-  };
-  t.displayName = "IntlProvider";
-  t.defaultProps = o.a;
-  return t;
-}(r.PureComponent);
-export { K as b };
-export default W;
+    }, this.props.children)
+  }
+  t.displayName = "IntlProvider"
+  t.defaultProps = o.a
+  return t
+}(React.PureComponent)
+export { K as b }
+export default W

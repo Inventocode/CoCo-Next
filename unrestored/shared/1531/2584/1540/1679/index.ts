@@ -9,4 +9,4 @@ require("../1623/86")({
   proto: true
 }, {
   repeat: require("./1071")
-});
+})

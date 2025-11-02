@@ -9,4 +9,4 @@ module.exports = {
   M: 0,
   Q: 3,
   H: 2
-};
+}

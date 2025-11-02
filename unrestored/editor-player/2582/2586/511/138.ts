@@ -24,4 +24,4 @@ module.exports = {
   dialogInput: "style_dialogInput__1sPsX",
   styleA: "style_styleA__2Do3I",
   styleB: "style_styleB__RrE_U"
-};
+}

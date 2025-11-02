@@ -4,10 +4,10 @@
  * 模块 ID：X70f
  */
 
-"use strict";
+"use strict"
 
 /* harmony export (binding) */
-export { fr };
+export { fr }
 var fr = {
   "sign_in_dialog/error/password_confirm/not_same": "Les deux mots de passe saisis ne sont pas identiques. Veuillez les saisir à nouveau",
   "sign_in_dialog/error/phone/unregisterd": "Le numéro de portable n'est pas enregistré",
@@ -52,6 +52,6 @@ var fr = {
   "sign_in_dialog/forget_password/entry": "Oubliez le mot de passe?",
   "sign_in_dialog/already_has_account": "Vous avez un compte? Connectez-vous!",
   "sign_in_dialog/register/confirm": "D'accord"
-};
+}
 
 /***/

@@ -10,4 +10,4 @@ module.exports = {
   iconConsole: "MiniConsole_iconConsole__2KnRq",
   errorBox: "MiniConsole_errorBox__mu8gq",
   warningBox: "MiniConsole_warningBox__9pgHu"
-};
+}

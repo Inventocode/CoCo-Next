@@ -4,12 +4,12 @@
  * 模块 ID：975
  */
 
-var r = require("../../../../2519/2527/851");
+var r = require("../../../../2519/2527/851")
 module.exports = function (e, t) {
-  for (var n = e.length; n--;) {
-    if (r(e[n][0], t)) {
-      return n;
+  for (var e$length = e.length; e$length--;) {
+    if (r(e[e$length][0], t)) {
+      return e$length
     }
   }
-  return -1;
-};
+  return -1
+}

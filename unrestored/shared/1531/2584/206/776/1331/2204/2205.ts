@@ -4,139 +4,139 @@
  * 模块 ID：2205
  */
 
-"use strict";
+"use strict"
 
-var r = "Boolean";
-var i = "Identifier";
-var o = "Keyword";
-var a = "Null";
-var s = "Numeric";
-var c = "Punctuator";
-var u = "String";
-var l = "RegularExpression";
-var f = "Template";
-var d = "JSXIdentifier";
-var h = "JSXText";
+var r = "Boolean"
+var i = "Identifier"
+var o = "Keyword"
+var a = "Null"
+var s = "Numeric"
+var c = "Punctuator"
+var u = "String"
+var l = "RegularExpression"
+var f = "Template"
+var d = "JSXIdentifier"
+var h = "JSXText"
 function p(e, t) {
-  this._acornTokTypes = e;
-  this._tokens = [];
-  this._curlyBrace = null;
-  this._code = t;
+  this._acornTokTypes = e
+  this._tokens = []
+  this._curlyBrace = null
+  this._code = t
 }
 p.prototype = {
   constructor: p,
   translate: function (e, t) {
-    var n = e.type;
-    var f = this._acornTokTypes;
-    if (n === f.name) {
-      e.type = i;
+    var e$type = e.type
+    var this$_acornTokTypes = this._acornTokTypes
+    if (e$type === this$_acornTokTypes.name) {
+      e.type = i
       if ("static" === e.value) {
-        e.type = o;
+        e.type = o
       }
       if (t.ecmaVersion > 5 && ("yield" === e.value || "let" === e.value)) {
-        e.type = o;
+        e.type = o
       }
-    } else if (n === f.semi || n === f.comma || n === f.parenL || n === f.parenR || n === f.braceL || n === f.braceR || n === f.dot || n === f.bracketL || n === f.colon || n === f.question || n === f.bracketR || n === f.ellipsis || n === f.arrow || n === f.jsxTagStart || n === f.incDec || n === f.starstar || n === f.jsxTagEnd || n === f.prefix || n.binop && !n.keyword || n.isAssign) {
-      e.type = c;
-      e.value = this._code.slice(e.start, e.end);
-    } else if (n === f.jsxName) {
-      e.type = d;
-    } else if ("jsxText" === n.label || n === f.jsxAttrValueToken) {
-      e.type = h;
-    } else if (n.keyword) {
-      if ("true" === n.keyword || "false" === n.keyword) {
-        e.type = r;
+    } else if (e$type === this$_acornTokTypes.semi || e$type === this$_acornTokTypes.comma || e$type === this$_acornTokTypes.parenL || e$type === this$_acornTokTypes.parenR || e$type === this$_acornTokTypes.braceL || e$type === this$_acornTokTypes.braceR || e$type === this$_acornTokTypes.dot || e$type === this$_acornTokTypes.bracketL || e$type === this$_acornTokTypes.colon || e$type === this$_acornTokTypes.question || e$type === this$_acornTokTypes.bracketR || e$type === this$_acornTokTypes.ellipsis || e$type === this$_acornTokTypes.arrow || e$type === this$_acornTokTypes.jsxTagStart || e$type === this$_acornTokTypes.incDec || e$type === this$_acornTokTypes.starstar || e$type === this$_acornTokTypes.jsxTagEnd || e$type === this$_acornTokTypes.prefix || e$type.binop && !e$type.keyword || e$type.isAssign) {
+      e.type = c
+      e.value = this._code.slice(e.start, e.end)
+    } else if (e$type === this$_acornTokTypes.jsxName) {
+      e.type = d
+    } else if ("jsxText" === e$type.label || e$type === this$_acornTokTypes.jsxAttrValueToken) {
+      e.type = h
+    } else if (e$type.keyword) {
+      if ("true" === e$type.keyword || "false" === e$type.keyword) {
+        e.type = r
       } else {
-        if ("null" === n.keyword) {
-          e.type = a;
+        if ("null" === e$type.keyword) {
+          e.type = a
         } else {
-          e.type = o;
+          e.type = o
         }
       }
-    } else if (n === f.num) {
-      e.type = s;
-      e.value = this._code.slice(e.start, e.end);
-    } else if (n === f.string) {
+    } else if (e$type === this$_acornTokTypes.num) {
+      e.type = s
+      e.value = this._code.slice(e.start, e.end)
+    } else if (e$type === this$_acornTokTypes.string) {
       if (t.jsxAttrValueToken) {
-        t.jsxAttrValueToken = false;
-        e.type = h;
+        t.jsxAttrValueToken = false
+        e.type = h
       } else {
-        e.type = u;
+        e.type = u
       }
-      e.value = this._code.slice(e.start, e.end);
-    } else if (n === f.regexp) {
-      e.type = l;
-      var p = e.value;
+      e.value = this._code.slice(e.start, e.end)
+    } else if (e$type === this$_acornTokTypes.regexp) {
+      e.type = l
+      var e$value = e.value
       e.regex = {
-        flags: p.flags,
-        pattern: p.pattern
-      };
-      e.value = "/".concat(p.pattern, "/").concat(p.flags);
+        flags: e$value.flags,
+        pattern: e$value.pattern
+      }
+      e.value = "/".concat(e$value.pattern, "/").concat(e$value.flags)
     }
-    return e;
+    return e
   },
   onToken: function (e, t) {
-    var n = this;
-    var r = this._acornTokTypes;
-    var i = t.tokens;
-    var o = this._tokens;
+    var n = this
+    var this$_acornTokTypes = this._acornTokTypes
+    var t$tokens = t.tokens
+    var this$_tokens = this._tokens
     function a() {
-      i.push(function (e, t) {
-        var n = e[0];
-        var r = e[e.length - 1];
+      t$tokens.push(function (e, t) {
+        var n = e[0]
+        var r = e[e.length - 1]
         var i = {
           type: f,
           value: t.slice(n.start, r.end)
-        };
+        }
         if (n.loc) {
           i.loc = {
             start: n.loc.start,
             end: r.loc.end
-          };
+          }
         }
         if (n.range) {
-          i.start = n.range[0];
-          i.end = r.range[1];
-          i.range = [i.start, i.end];
+          i.start = n.range[0]
+          i.end = r.range[1]
+          i.range = [i.start, i.end]
         }
-        return i;
-      }(n._tokens, n._code));
-      n._tokens = [];
+        return i
+      }(n._tokens, n._code))
+      n._tokens = []
     }
-    if (e.type !== r.eof) {
-      if (e.type === r.backQuote) {
+    if (e.type !== this$_acornTokTypes.eof) {
+      if (e.type === this$_acornTokTypes.backQuote) {
         if (this._curlyBrace) {
-          i.push(this.translate(this._curlyBrace, t));
-          this._curlyBrace = null;
+          t$tokens.push(this.translate(this._curlyBrace, t))
+          this._curlyBrace = null
         }
-        o.push(e);
-        return void (o.length > 1 && a());
+        this$_tokens.push(e)
+        return void (this$_tokens.length > 1 && a())
       }
-      if (e.type === r.dollarBraceL) {
-        o.push(e);
-        return void a();
+      if (e.type === this$_acornTokTypes.dollarBraceL) {
+        this$_tokens.push(e)
+        return void a()
       }
-      if (e.type === r.braceR) {
+      if (e.type === this$_acornTokTypes.braceR) {
         if (this._curlyBrace) {
-          i.push(this.translate(this._curlyBrace, t));
+          t$tokens.push(this.translate(this._curlyBrace, t))
         }
-        return void (this._curlyBrace = e);
+        return void (this._curlyBrace = e)
       }
-      if (e.type === r.template || e.type === r.invalidTemplate) {
+      if (e.type === this$_acornTokTypes.template || e.type === this$_acornTokTypes.invalidTemplate) {
         if (this._curlyBrace) {
-          o.push(this._curlyBrace);
-          this._curlyBrace = null;
+          this$_tokens.push(this._curlyBrace)
+          this._curlyBrace = null
         }
-        return void o.push(e);
+        return void this$_tokens.push(e)
       }
       if (this._curlyBrace) {
-        i.push(this.translate(this._curlyBrace, t));
-        this._curlyBrace = null;
+        t$tokens.push(this.translate(this._curlyBrace, t))
+        this._curlyBrace = null
       }
-      i.push(this.translate(e, t));
+      t$tokens.push(this.translate(e, t))
     } else if (this._curlyBrace) {
-      i.push(this.translate(this._curlyBrace, t));
+      t$tokens.push(this.translate(this._curlyBrace, t))
     }
   }
-};
-module.exports = p;
+}
+module.exports = p

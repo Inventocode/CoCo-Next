@@ -4,24 +4,24 @@
  * 模块 ID：2317
  */
 
-"use strict";
+"use strict"
 
 function r() {
   if (!r.quiet) {
-    for (var e = require("../../206/776/2210/1108/index"), t = e.inspect, i = function (e) {
-        return "string" === typeof e ? e : t(e, {
+    for (var e = require("../../206/776/2210/1108/index"), e$inspect = e.inspect, i = function (e) {
+        return "string" === typeof e ? e : e$inspect(e, {
           depth: 10,
           colors: true
-        });
-      }, o = Array(r.prefix).fill("  ").join(""), a = arguments.length, s = new Array(a), c = 0; c < a; c++) {
-      s[c] = arguments[c];
+        })
+      }, o = Array(r.prefix).fill("  ").join(""), arguments$length = arguments.length, s = new Array(arguments$length), c = 0; c < arguments$length; c++) {
+      s[c] = arguments[c]
     }
-    console.log(o + s.map(i).join(" "));
+    console.log(o + s.map(i).join(" "))
   }
 }
 Object.defineProperty(exports, "__esModule", {
   value: true
-});
-exports.default = r;
-r.quiet = true;
-r.prefix = 0;
+})
+exports.default = r
+r.quiet = true
+r.prefix = 0

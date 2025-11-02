@@ -4,10 +4,10 @@
  * 模块 ID：676
  */
 
-"use strict";
+"use strict"
 
-export { r as messages };
-export { d as types } from "./70";
+export { r as messages }
+export { d as types } from "./70"
 var r = {
   "zh-CN": {
     widgetName: "电话",
@@ -26,5 +26,5 @@ var r = {
     callNumberRepeat: "不能调用多个拨打电话积木，仅执行第一个",
     dialNumberRepeat: "不能调用多个拨号界面积木，仅执行最后一个"
   }
-};
+}
 import o = require("./70");

@@ -4,51 +4,51 @@
  * 模块 ID：686
  */
 
-"use strict";
+"use strict"
 
-export { f as a };
+export { f as a }
 import r = require("../../19");
 import i = require("../../95");
 import o = require("../../96");
 import a = require("../../120");
 import s = require("../../140");
-import c = require("react");
-var u = require("../605").a;
+import React = require("react");
+var require$$605$a = require("../605").a
 import l = require("./910");
 var f = function (e) {
-  a.a(n, e);
-  var t = s.a(n);
+  a.a(n, e)
+  var t = s.a(n)
   function n() {
-    i.a(this, n);
-    return t.apply(this, arguments);
+    i.a(this, n)
+    return t.apply(this, arguments)
   }
   o.a(n, [{
     key: "getLocale",
     value: function () {
-      var e = this.props;
-      var t = e.componentName;
-      var n = e.defaultLocale || u[null !== t && undefined !== t ? t : "global"];
-      var i = this.context;
-      var o = t && i ? i[t] : {};
-      return r.a(r.a({}, n instanceof Function ? n() : n), o || {});
+      var this$props = this.props
+      var this$props$componentName = this$props.componentName
+      var n = this$props.defaultLocale || require$$605$a[null !== this$props$componentName && undefined !== this$props$componentName ? this$props$componentName : "global"]
+      var this$context = this.context
+      var o = this$props$componentName && this$context ? this$context[this$props$componentName] : {}
+      return r.a(r.a({}, n instanceof Function ? n() : n), o || {})
     }
   }, {
     key: "getLocaleCode",
     value: function () {
-      var e = this.context;
-      var t = e && e.locale;
-      return e && e.exist && !t ? u.locale : t;
+      var this$context = this.context
+      var t = this$context && this$context.locale
+      return this$context && this$context.exist && !t ? require$$605$a.locale : t
     }
   }, {
     key: "render",
     value: function () {
-      return this.props.children(this.getLocale(), this.getLocaleCode(), this.context);
+      return this.props.children(this.getLocale(), this.getLocaleCode(), this.context)
     }
-  }]);
-  return n;
-}(c.Component);
+  }])
+  return n
+}(React.Component)
 f.defaultProps = {
   componentName: "global"
-};
-f.contextType = l.a;
-export default f;
+}
+f.contextType = l.a
+export default f

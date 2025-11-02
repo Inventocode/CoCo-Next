@@ -4,51 +4,51 @@
  * 模块 ID：hVAD
  */
 
-"use strict";
+"use strict"
 
 /* harmony export (immutable) */
 /* unused harmony export getOriginPrefix */
 /* harmony export (immutable) */
-export { getUrlParams };
+export { getUrlParams }
 /* harmony import */
-export { getCommunityAccountSettingUrl };
-import * as __WEBPACK_IMPORTED_MODULE_0__cfg__ from "../cfg-dpNx";
+export { getCommunityAccountSettingUrl }
+import * as __WEBPACK_IMPORTED_MODULE_0__cfg__ from "../cfg-dpNx"
 function getUrlSearchParams(queryString) {
-  var searchParams = new URLSearchParams(queryString);
-  var key = "inviteCode";
-  var value = searchParams.get(key);
+  var searchParams = new URLSearchParams(queryString)
+  var key = "inviteCode"
+  var value = searchParams.get(key)
   // inviteCode字段内带有空格和描述型文字，在这里去掉
   if (value) {
-    searchParams.set(key, value.split(" ")[0]);
+    searchParams.set(key, value.split(" ")[0])
   }
-  return searchParams;
+  return searchParams
 }
 function getUrlParams(url) {
-  var obj = {};
-  var queryString = url.split("?")[1];
+  var obj = {}
+  var queryString = url.split("?")[1]
   if (!queryString) {
-    return {};
+    return {}
   }
-  var params = getUrlSearchParams(queryString);
+  var params = getUrlSearchParams(queryString)
   Array.from(params).forEach(function (item) {
-    obj[item[0]] = item[1];
-  });
-  return obj;
+    obj[item[0]] = item[1]
+  })
+  return obj
 }
 function getOriginPrefix() {
-  var evn = __WEBPACK_IMPORTED_MODULE_0__cfg__.config().env;
-  var prefix = "";
+  var evn = __WEBPACK_IMPORTED_MODULE_0__cfg__.config().env
+  var prefix = ""
   if (evn === "dev") {
-    prefix = "dev-";
+    prefix = "dev-"
   } else if (evn === "test") {
-    prefix = "test-";
+    prefix = "test-"
   } else if (evn === "staging") {
-    prefix = "staging-";
+    prefix = "staging-"
   }
-  return prefix;
+  return prefix
 }
 function getCommunityAccountSettingUrl() {
-  return "https://" + getOriginPrefix() + "shequ.codemao.cn/setting";
+  return "https://" + getOriginPrefix() + "shequ.codemao.cn/setting"
 }
 
 /***/

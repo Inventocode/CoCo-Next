@@ -4,8 +4,8 @@
  * 模块 ID：2475
  */
 
-var r = require("./2476");
-var i = require("./2477/index");
+var r = require("./2476")
+var i = require("./2477/index")
 module.exports = function (e, t) {
-  return null != e && i(e, t, r);
-};
+  return null != e && i(e, t, r)
+}

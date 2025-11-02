@@ -4,59 +4,59 @@
  * 模块 ID：1980
  */
 
-var r = require("../1304");
-var i = require("./1981");
-require("./1305");
+var r = require("../1304")
+var i = require("./1981")
+require("./1305")
 function o(e) {
-  return undefined === e || null === e;
+  return undefined === e || null === e
 }
 function a(e) {
   (e = function (e) {
-    var t = {};
-    for (var n in e) t[n] = e[n];
-    return t;
-  }(e || {})).whiteList = e.whiteList || r.whiteList;
-  e.onAttr = e.onAttr || r.onAttr;
-  e.onIgnoreAttr = e.onIgnoreAttr || r.onIgnoreAttr;
-  e.safeAttrValue = e.safeAttrValue || r.safeAttrValue;
-  this.options = e;
+    var t = {}
+    for (var n in e) t[n] = e[n]
+    return t
+  }(e || {})).whiteList = e.whiteList || r.whiteList
+  e.onAttr = e.onAttr || r.onAttr
+  e.onIgnoreAttr = e.onIgnoreAttr || r.onIgnoreAttr
+  e.safeAttrValue = e.safeAttrValue || r.safeAttrValue
+  this.options = e
 }
 a.prototype.process = function (e) {
   if (!(e = (e = e || "").toString())) {
-    return "";
+    return ""
   }
-  var t = this.options;
-  var n = t.whiteList;
-  var r = t.onAttr;
-  var a = t.onIgnoreAttr;
-  var s = t.safeAttrValue;
+  var this$options = this.options
+  var this$options$whiteList = this$options.whiteList
+  var this$options$onAttr = this$options.onAttr
+  var this$options$onIgnoreAttr = this$options.onIgnoreAttr
+  var this$options$safeAttrValue = this$options.safeAttrValue
   return i(e, function (e, t, i, c, u) {
-    var l = n[i];
-    var f = false;
+    var l = this$options$whiteList[i]
+    var f = false
     if (true === l) {
-      f = l;
+      f = l
     } else {
       if ("function" === typeof l) {
-        f = l(c);
+        f = l(c)
       } else {
         if (l instanceof RegExp) {
-          f = l.test(c);
+          f = l.test(c)
         }
       }
     }
     if (true !== f) {
-      f = false;
+      f = false
     }
-    if (c = s(i, c)) {
-      var d;
+    if (c = this$options$safeAttrValue(i, c)) {
+      var d
       var h = {
         position: t,
         sourcePosition: e,
         source: u,
         isWhite: f
-      };
-      return f ? o(d = r(i, c, h)) ? i + ":" + c : d : o(d = a(i, c, h)) ? undefined : d;
+      }
+      return f ? o(d = this$options$onAttr(i, c, h)) ? i + ":" + c : d : o(d = this$options$onIgnoreAttr(i, c, h)) ? undefined : d
     }
-  });
-};
-module.exports = a;
+  })
+}
+module.exports = a

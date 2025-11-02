@@ -58,4 +58,4 @@ module.exports = {
   connecting: "style_connecting__Fbq6I",
   device: "style_device__x_Xnz",
   connected: "style_connected__ViQjI"
-};
+}

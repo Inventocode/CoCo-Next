@@ -18,6 +18,6 @@ module.exports = {
   "courseMore": "courseMore_2m26I",
   "moreImage": "moreImage_3c8ZE",
   "moreTips": "moreTips_11GMJ"
-};
+}
 
 /***/

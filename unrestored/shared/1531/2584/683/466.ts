@@ -4,12 +4,12 @@
  * 模块 ID：466
  */
 
-"use strict";
+"use strict"
 
-var r;
+var r
 export { r as a };
 (function (e) {
-  e[e.NORMAL = 0] = "NORMAL";
-  e[e.ELASTIC = 1] = "ELASTIC";
-})(r || (r = {}));
-export default r;
+  e[e.NORMAL = 0] = "NORMAL"
+  e[e.ELASTIC = 1] = "ELASTIC"
+})(r || (r = {}))
+export default r

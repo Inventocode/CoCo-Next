@@ -4,15 +4,15 @@
  * 模块 ID：1239
  */
 
-var r = require("../1659/241");
-var o = require("../1738/231");
-var i = require("../1646/1240");
+var r = require("../1659/241")
+var o = require("../1738/231")
+var i = require("../1646/1240")
 module.exports = function (e, t) {
-  r(e);
+  r(e)
   if (o(t) && t.constructor === e) {
-    return t;
+    return t
   }
   var n = i.f(e);
-  (0, n.resolve)(t);
-  return n.promise;
-};
+  (0, n.resolve)(t)
+  return n.promise
+}

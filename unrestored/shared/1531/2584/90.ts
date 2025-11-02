@@ -4,12 +4,12 @@
  * 模块 ID：90
  */
 
-"use strict";
+"use strict"
 
-export { r as c };
-export { o as b };
-export { i as a };
-var r = "coco-unmovable";
-var o = "coco-selectable";
-var i = "coco-editable";
-export default i;
+export { r as c }
+export { o as b }
+export { i as a }
+var r = "coco-unmovable"
+var o = "coco-selectable"
+var i = "coco-editable"
+export default i

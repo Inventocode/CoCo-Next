@@ -4,97 +4,97 @@
  * 模块 ID：542
  */
 
-"use strict";
+"use strict"
 
 import r = require("./6");
 import o = require("./11");
-import i = require("react");
+import React = require("react");
 var a = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
-    return module.default;
+    return module.default
   } : function () {
-    return module;
-  };
+    return module
+  }
   Object.defineProperty(defaultExport, "a", {
     enumerable: true,
     get: defaultExport
-  });
-  return defaultExport;
-}(i);
-import s = require("color");
+  })
+  return defaultExport
+}(React)
+import Color = require("color");
 var c = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
-    return module.default;
+    return module.default
   } : function () {
-    return module;
-  };
+    return module
+  }
   Object.defineProperty(defaultExport, "a", {
     enumerable: true,
     get: defaultExport
-  });
-  return defaultExport;
-}(s);
+  })
+  return defaultExport
+}(Color)
 import l = require("./8");
 var u = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
-    return module.default;
+    return module.default
   } : function () {
-    return module;
-  };
+    return module
+  }
   Object.defineProperty(defaultExport, "a", {
     enumerable: true,
     get: defaultExport
-  });
-  return defaultExport;
-}(l);
+  })
+  return defaultExport
+}(l)
 import d = require("./5");
 import p = require("./90");
 import f = require("./240");
 var h = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
-    return module.default;
+    return module.default
   } : function () {
-    return module;
-  };
+    return module
+  }
   Object.defineProperty(defaultExport, "a", {
     enumerable: true,
     get: defaultExport
-  });
-  return defaultExport;
-}(f);
-var _a;
+  })
+  return defaultExport
+}(f)
+var _a
 _a = function (e) {
-  var t = e.id;
-  var n = e.visible;
-  var i = e.attributes;
-  var s = e.onClick;
-  var l = i.backgroundColor;
-  var f = i.content;
-  var m = i.color;
-  var g = i.fontFamily;
-  var _ = i.fontSize;
-  var v = i.textAlign;
-  var b = i.lineClamp;
+  var t = e.id
+  var e$visible = e.visible
+  var e$attributes = e.attributes
+  var e$onClick = e.onClick
+  var e$attributes$backgroundColor = e$attributes.backgroundColor
+  var e$attributes$content = e$attributes.content
+  var e$attributes$color = e$attributes.color
+  var e$attributes$fontFamily = e$attributes.fontFamily
+  var e$attributes$fontSize = e$attributes.fontSize
+  var e$attributes$textAlign = e$attributes.textAlign
+  var e$attributes$lineClamp = e$attributes.lineClamp
   var y = {
     minWidth: 16,
     minHeight: 16,
-    backgroundColor: c()(l).toString(),
-    color: c()(m).toString(),
-    fontFamily: g,
-    fontSize: _,
+    backgroundColor: c()(e$attributes$backgroundColor).toString(),
+    color: c()(e$attributes$color).toString(),
+    fontFamily: e$attributes$fontFamily,
+    fontSize: e$attributes$fontSize,
     justifyContent: "center",
-    textAlign: v,
+    textAlign: e$attributes$textAlign,
     padding: 0,
     overflow: "hidden"
-  };
+  }
   return a.a.createElement("div", {
     id: t,
     "data-widget-type": d.H,
     "data-role": d.M,
-    className: u()(p.b, h.a.textWidget, o.a({}, h.a.hide, !n)),
+    className: u()(p.b, h.a.textWidget, o.a({}, h.a.hide, !e$visible)),
     onClick: function () {
-      if (s) {
-        s();
+      if (e$onClick) {
+        e$onClick()
       }
     },
     style: r.a(r.a({}, y), {}, {
@@ -103,12 +103,12 @@ _a = function (e) {
   }, a.a.createElement("span", {
     className: h.a.content,
     style: {
-      display: b ? "-webkit-box" : undefined,
-      lineClamp: b || undefined,
-      WebkitLineClamp: b || undefined,
-      whiteSpace: b ? "break-spaces" : "pre"
+      display: e$attributes$lineClamp ? "-webkit-box" : undefined,
+      lineClamp: e$attributes$lineClamp || undefined,
+      WebkitLineClamp: e$attributes$lineClamp || undefined,
+      whiteSpace: e$attributes$lineClamp ? "break-spaces" : "pre"
     }
-  }, f));
-};
-export { _a as a };
-export default _a;
+  }, e$attributes$content))
+}
+export { _a as a }
+export default _a

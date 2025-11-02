@@ -16,4 +16,4 @@ module.exports = {
   SoundLayoutEmpty: "style_SoundLayoutEmpty__OS6qn",
   emptyContent: "style_emptyContent__1kRDs",
   isDragging: "style_isDragging__nY_3M"
-};
+}

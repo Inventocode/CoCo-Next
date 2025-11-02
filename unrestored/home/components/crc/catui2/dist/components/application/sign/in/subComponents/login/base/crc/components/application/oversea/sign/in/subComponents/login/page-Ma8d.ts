@@ -4,33 +4,33 @@
  * 模块 ID：Ma8d
  */
 
-"use strict";
+"use strict"
 
 /* harmony export (binding) */
 /* harmony import */
-export { LoginPageContainer };
-import * as __WEBPACK_IMPORTED_MODULE_0_react__ from "react";
+export { LoginPageContainer }
+import * as __WEBPACK_IMPORTED_MODULE_0_react__ from "react"
 /* harmony import */
-import __WEBPACK_IMPORTED_MODULE_0_react___default from "react";
+import __WEBPACK_IMPORTED_MODULE_0_react___default from "react"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_1__def__ from "../../def-PqOj";
+import * as __WEBPACK_IMPORTED_MODULE_1__def__ from "../../def-PqOj"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_2__i18n__ from "../../i18n-4U0O";
+import * as __WEBPACK_IMPORTED_MODULE_2__i18n__ from "../../i18n-4U0O"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_3__base_button__ from "../../../../../../../../../../../base/button-sg+3";
+import * as __WEBPACK_IMPORTED_MODULE_3__base_button__ from "../../../../../../../../../../../base/button-sg+3"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_4__ByEmail__ from "./ByEmail-j49N";
+import * as __WEBPACK_IMPORTED_MODULE_4__ByEmail__ from "./ByEmail-j49N"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_5__style_module_css__ from "../../style.module.css-YMKY";
+import * as __WEBPACK_IMPORTED_MODULE_5__style_module_css__ from "../../style.module.css-YMKY"
 /* harmony import */
-import __WEBPACK_IMPORTED_MODULE_5__style_module_css___default from "../../style.module.css-YMKY";
-var _this = this;
+import __WEBPACK_IMPORTED_MODULE_5__style_module_css___default from "../../style.module.css-YMKY"
+var _this = this
 var LoginPageContainer = function LoginPageContainer(props) {
-  var isRequesting = props.isRequesting;
-  var setIsRequesting = props.setIsRequesting;
-  var switchView = props.switchView;
-  var onEmailLoginSuccess = props.onEmailLoginSuccess;
-  var reportMethod = props.reportMethod;
+  var isRequesting = props.isRequesting
+  var setIsRequesting = props.setIsRequesting
+  var switchView = props.switchView
+  var onEmailLoginSuccess = props.onEmailLoginSuccess
+  var reportMethod = props.reportMethod
   return /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_0_react__.Fragment, null, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
     className: "CUI-oversea-sign-in-dialog-content"
   }, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_4__ByEmail__.ByEmailComponent, {
@@ -54,15 +54,15 @@ var LoginPageContainer = function LoginPageContainer(props) {
     width: "calc(100% - 80px)",
     onClick: switchView.bind(_this, __WEBPACK_IMPORTED_MODULE_1__def__.ContentView.REGISTER),
     type: "secondary"
-  }, __WEBPACK_IMPORTED_MODULE_2__i18n__.getLanguage("sign_in_dialog/create_account"))));
-};
+  }, __WEBPACK_IMPORTED_MODULE_2__i18n__.getLanguage("sign_in_dialog/create_account"))))
+}
 LoginPageContainer.defaultProps = {
   onEmailLoginSuccess: function onEmailLoginSuccess() {
-    return undefined;
+    return undefined
   },
   reportMethod: function reportMethod() {
-    return undefined;
+    return undefined
   }
-};
+}
 
 /***/

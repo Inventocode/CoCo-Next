@@ -9,6 +9,6 @@ require("./1623/86")({
   stat: true
 }, {
   isNaN: function (e) {
-    return e != e;
+    return e != e
   }
-});
+})

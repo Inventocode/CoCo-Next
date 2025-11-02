@@ -4,6 +4,6 @@
  * 模块 ID：D4iX
  */
 
-module.exports = "https://creation.codemao.cn/coco/home/dist/" + "asset/player_btn_a2920.svg";
+module.exports = "https://creation.codemao.cn/coco/home/dist/" + "asset/player_btn_a2920.svg"
 
 /***/

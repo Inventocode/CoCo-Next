@@ -4,13 +4,13 @@
  * 模块 ID：1154
  */
 
-var r = require("./2462");
-var i = require("./1404");
-var o = Object.prototype.propertyIsEnumerable;
-var a = Object.getOwnPropertySymbols;
-var s = a ? function (e) {
-  return null == e ? [] : (e = Object(e), r(a(e), function (t) {
-    return o.call(e, t);
-  }));
-} : i;
-module.exports = s;
+var r = require("./2462")
+var i = require("./1404")
+var object$prototype$propertyIsEnumerable = Object.prototype.propertyIsEnumerable
+var object$getOwnPropertySymbols = Object.getOwnPropertySymbols
+var s = object$getOwnPropertySymbols ? function (e) {
+  return null == e ? [] : (e = Object(e), r(object$getOwnPropertySymbols(e), function (t) {
+    return object$prototype$propertyIsEnumerable.call(e, t)
+  }))
+} : i
+module.exports = s

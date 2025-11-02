@@ -6,7 +6,7 @@
 
 if ("function" === typeof Object.create) {
   module.exports = function (e, t) {
-    e.super_ = t;
+    e.super_ = t
     e.prototype = Object.create(t.prototype, {
       constructor: {
         value: e,
@@ -14,14 +14,14 @@ if ("function" === typeof Object.create) {
         writable: true,
         configurable: true
       }
-    });
-  };
+    })
+  }
 } else {
   module.exports = function (e, t) {
-    e.super_ = t;
-    var n = function () {};
-    n.prototype = t.prototype;
-    e.prototype = new n();
-    e.prototype.constructor = e;
-  };
+    e.super_ = t
+    var n = function () {}
+    n.prototype = t.prototype
+    e.prototype = new n()
+    e.prototype.constructor = e
+  }
 }

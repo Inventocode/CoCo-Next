@@ -73,4 +73,4 @@ module.exports = {
   alignIcon: "style_alignIcon__18RjY",
   default: "style_default__2tInb",
   handle: "style_handle__3DcxS"
-};
+}

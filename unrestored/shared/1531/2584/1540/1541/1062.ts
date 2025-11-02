@@ -4,16 +4,16 @@
  * 模块 ID：1062
  */
 
-var r = require("../1678/437");
-var o = require("../1667/631/index").f;
-var i = {}.toString;
-var a = "object" == typeof window && window && Object.getOwnPropertyNames ? Object.getOwnPropertyNames(window) : [];
+var r = require("../1678/437")
+var require$$1667631Index$f = require("../1667/631/index").f
+var $toString = {}.toString
+var a = "object" == typeof window && window && Object.getOwnPropertyNames ? Object.getOwnPropertyNames(window) : []
 module.exports.f = function (e) {
-  return a && "[object Window]" == i.call(e) ? function (e) {
+  return a && "[object Window]" == $toString.call(e) ? function (e) {
     try {
-      return o(e);
+      return require$$1667631Index$f(e)
     } catch (t) {
-      return a.slice();
+      return a.slice()
     }
-  }(e) : o(r(e));
-};
+  }(e) : require$$1667631Index$f(r(e))
+}

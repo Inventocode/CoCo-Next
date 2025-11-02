@@ -4,23 +4,23 @@
  * 模块 ID：448
  */
 
-"use strict";
+"use strict"
 
-export { h as a };
-export { m as b };
-import r = require("react");
+export { h as a }
+export { m as b }
+import React = require("react");
 var o = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
-    return module.default;
+    return module.default
   } : function () {
-    return module;
-  };
+    return module
+  }
   Object.defineProperty(defaultExport, "a", {
     enumerable: true,
     get: defaultExport
-  });
-  return defaultExport;
-}(r);
+  })
+  return defaultExport
+}(React)
 import i = require("../5");
 import a = require("../42/index");
 import s = require("../64");
@@ -29,37 +29,37 @@ import l = require("../35");
 import u = require("./670");
 var d = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
-    return module.default;
+    return module.default
   } : function () {
-    return module;
-  };
+    return module
+  }
   Object.defineProperty(defaultExport, "a", {
     enumerable: true,
     get: defaultExport
-  });
-  return defaultExport;
-}(u);
+  })
+  return defaultExport
+}(u)
 import p = require("../76");
 function f(e) {
-  var t = e.id;
-  var n = e.widgetIds;
-  var r = e.position;
-  var s = e.size;
-  var u = e.backgroundColor;
-  var p = e.backgroundImage;
-  var f = e.backgroundImageResizeMode;
-  var h = [];
-  n.forEach(function (e, t) {
-    var n = a.g.get(e);
+  var t = e.id
+  var e$widgetIds = e.widgetIds
+  var e$position = e.position
+  var e$size = e.size
+  var e$backgroundColor = e.backgroundColor
+  var e$backgroundImage = e.backgroundImage
+  var e$backgroundImageResizeMode = e.backgroundImageResizeMode
+  var h = []
+  e$widgetIds.forEach(function (e, t) {
+    var n = a.g.get(e)
     if (n) {
-      n.zIndex = t;
-      h.push(n);
+      n.zIndex = t
+      h.push(n)
     }
-  });
-  var m = l.hb(p);
-  var g = (null === m || undefined === m ? undefined : m.source) || (null === m || undefined === m ? undefined : m.cdnUrl);
-  if (!(g || !p.includes("://") && !p.includes("data:image/"))) {
-    g = p;
+  })
+  var m = l.hb(e$backgroundImage)
+  var g = (null === m || undefined === m ? undefined : m.source) || (null === m || undefined === m ? undefined : m.cdnUrl)
+  if (!(g || !e$backgroundImage.includes("://") && !e$backgroundImage.includes("data:image/"))) {
+    g = e$backgroundImage
   }
   return o.a.createElement("div", {
     id: t,
@@ -67,19 +67,19 @@ function f(e) {
     "data-role": i.D,
     "data-widget-type": i.D,
     style: {
-      top: r.y,
-      left: r.x,
-      width: s.width,
-      height: s.height,
-      backgroundColor: u,
+      top: e$position.y,
+      left: e$position.x,
+      width: e$size.width,
+      height: e$size.height,
+      backgroundColor: e$backgroundColor,
       backgroundImage: g ? "url(".concat(g, ")") : "none",
-      backgroundSize: f === c.a.STRETCH ? "100% 100%" : f
+      backgroundSize: e$backgroundImageResizeMode === c.a.STRETCH ? "100% 100%" : e$backgroundImageResizeMode
     }
   }, h.map(function (e) {
     return a.f({
       widget: e
-    });
-  }));
+    })
+  }))
 }
 function h(e) {
   return {
@@ -105,25 +105,25 @@ function h(e) {
     arrayVariables: [],
     objectVariables: [],
     broadcasts: ["Hi"]
-  };
+  }
 }
 function m(e) {
-  var t = e.id;
-  var n = e.widgetIds;
-  var r = e.position;
-  var i = e.size;
-  var a = e.backgroundColor;
-  var s = e.backgroundImage;
-  var c = e.backgroundImageResizeMode;
+  var t = e.id
+  var e$widgetIds = e.widgetIds
+  var e$position = e.position
+  var e$size = e.size
+  var e$backgroundColor = e.backgroundColor
+  var e$backgroundImage = e.backgroundImage
+  var e$backgroundImageResizeMode = e.backgroundImageResizeMode
   return o.a.createElement(f, {
     id: t,
-    widgetIds: n,
-    position: r,
-    size: i,
+    widgetIds: e$widgetIds,
+    position: e$position,
+    size: e$size,
     key: t,
-    backgroundColor: a,
-    backgroundImage: s,
-    backgroundImageResizeMode: c
-  });
+    backgroundColor: e$backgroundColor,
+    backgroundImage: e$backgroundImage,
+    backgroundImageResizeMode: e$backgroundImageResizeMode
+  })
 }
-export default h;
+export default h

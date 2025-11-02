@@ -4,40 +4,40 @@
  * 模块 ID：141
  */
 
-"use strict";
+"use strict"
 
-export { u as a };
-export { d as b };
-var r;
+export { u as a }
+export { d as b }
+var /* [auto-meaningful-name] */window$location
 import o = require("./366");
 var i = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
-    return module.default;
+    return module.default
   } : function () {
-    return module;
-  };
+    return module
+  }
   Object.defineProperty(defaultExport, "a", {
     enumerable: true,
     get: defaultExport
-  });
-  return defaultExport;
-}(o);
+  })
+  return defaultExport
+}(o)
 import a = require("../28/index");
 import s = require("./311");
 import c = require("../59/index");
-var l = c.b();
+var l = c.b()
 function u(e, t) {
   i.a.track(e, function (e) {
     if (!e) {
-      return {};
+      return {}
     }
-    var t = {};
-    for (var n in e) t[n.replace(/([A-Z])/g, "_$1").toLowerCase()] = e[n];
-    return t;
-  }(t));
+    var t = {}
+    for (var n in e) t[n.replace(/([A-Z])/g, "_$1").toLowerCase()] = e[n]
+    return t
+  }(t))
 }
 function d(e) {
-  i.a.login(e + "");
+  i.a.login(e + "")
 }
 i.a.init({
   server_url: "development" === l || "test" === l ? "https://shence-data.codemao.cn/sa?project=default" : "https://shence-data.codemao.cn/sa?project=production",
@@ -50,19 +50,19 @@ i.a.init({
     clickmap: "default",
     scroll_notice_map: "default"
   }
-});
-var p = "editor";
+})
+var p = "editor"
 if (a.d()) {
-  p = "cordova-player";
+  p = "cordova-player"
 }
-if (null === (r = window.location) || undefined === r ? undefined : r.pathname.includes("/player/")) {
-  p = "h5-player";
+if (null === (window$location = window.location) || undefined === window$location ? undefined : window$location.pathname.includes("/player/")) {
+  p = "h5-player"
 }
 i.a.registerPage({
   $app_id: window.location.host,
   $app_name: "APP工匠",
   product_name: "APP工匠",
   page: p
-});
-i.a.quick("autoTrack");
-export default u;
+})
+i.a.quick("autoTrack")
+export default u

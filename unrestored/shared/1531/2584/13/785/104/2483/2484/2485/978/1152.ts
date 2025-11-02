@@ -4,5 +4,5 @@
  * 模块 ID：1152
  */
 
-var r = require("./2463/719/index")(require("../../../../../../254/2533/1420/2530/499/index"), "Map");
-module.exports = r;
+var r = require("./2463/719/index")(require("../../../../../../254/2533/1420/2530/499/index"), "Map")
+module.exports = r

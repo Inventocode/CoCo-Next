@@ -10,4 +10,4 @@ module.exports = {
   icon: "style_icon__1b_IQ",
   content: "style_content__3G9eC",
   footer: "style_footer__1rK5w"
-};
+}

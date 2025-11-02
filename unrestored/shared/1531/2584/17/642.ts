@@ -4,12 +4,12 @@
  * 模块 ID：642
  */
 
-"use strict";
+"use strict"
 
 Object.defineProperty(exports, "__esModule", {
   value: true
-});
-exports.BINDING = undefined;
+})
+exports.BINDING = undefined
 exports.BINDING = {
   Blink: Symbol("Blink"),
   block_animations: Symbol("block_animations"),
@@ -85,4 +85,4 @@ exports.BINDING = {
   BlockGroup: Symbol("BlockGroup"),
   SimplifiedCommentBubble: Symbol("SimplifiedCommentBubble"),
   workspace_db: Symbol("workspace_db")
-};
+}

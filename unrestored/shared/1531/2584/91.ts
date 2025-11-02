@@ -4,14 +4,14 @@
  * 模块 ID：91
  */
 
-"use strict";
+"use strict"
 
-export { i as a };
-export { a as b };
+export { i as a }
+export { a as b }
 import r = require("./68");
 import o = require("./28/index");
 function i(e) {
-  return (o.e() ? window.parent : window).postMessage(e, window.location.origin);
+  return (o.e() ? window.parent : window).postMessage(e, window.location.origin)
 }
 function a(e, t, n, o) {
   i({
@@ -22,6 +22,6 @@ function a(e, t, n, o) {
       id: n,
       value: o
     }
-  });
+  })
 }
-export default i;
+export default i

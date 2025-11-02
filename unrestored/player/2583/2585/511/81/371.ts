@@ -4,19 +4,19 @@
  * 模块 ID：371
  */
 
-"use strict";
+"use strict"
 
 var r = function () {
   function t(t, e) {
-    this.bits = t;
-    this.points = e;
+    this.bits = t
+    this.points = e
   }
   t.prototype.getBits = function () {
-    return this.bits;
-  };
+    return this.bits
+  }
   t.prototype.getPoints = function () {
-    return this.points;
-  };
-  return t;
-}();
-exports.a = r;
+    return this.points
+  }
+  return t
+}()
+exports.a = r

@@ -28,4 +28,4 @@ module.exports = {
   warningBreathe: "ConsolePanel_warningBreathe__3pVsh",
   errorBreath: "ConsolePanel_errorBreath__2eeu5",
   warningBreath: "ConsolePanel_warningBreath__1I76L"
-};
+}

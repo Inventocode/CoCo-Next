@@ -4,33 +4,33 @@
  * 模块 ID：HsGv
  */
 
-"use strict";
+"use strict"
 
 /* harmony export (binding) */
 /* harmony import */
-export { RegisterPageContainer };
-import * as __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__ from "@babel/runtime/helpers/esm/slicedToArray";
+export { RegisterPageContainer }
+import * as __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__ from "@babel/runtime/helpers/esm/slicedToArray"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_1_babel_plugin_react_css_modules_dist_browser_getClassName__ from "babel-plugin-react-css-modules/dist/browser/getClassName";
+import * as __WEBPACK_IMPORTED_MODULE_1_babel_plugin_react_css_modules_dist_browser_getClassName__ from "babel-plugin-react-css-modules/dist/browser/getClassName"
 /* harmony import */
-import __WEBPACK_IMPORTED_MODULE_1_babel_plugin_react_css_modules_dist_browser_getClassName___default from "babel-plugin-react-css-modules/dist/browser/getClassName";
+import __WEBPACK_IMPORTED_MODULE_1_babel_plugin_react_css_modules_dist_browser_getClassName___default from "babel-plugin-react-css-modules/dist/browser/getClassName"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_2_react__ from "react";
+import * as __WEBPACK_IMPORTED_MODULE_2_react__ from "react"
 /* harmony import */
-import __WEBPACK_IMPORTED_MODULE_2_react___default from "react";
+import __WEBPACK_IMPORTED_MODULE_2_react___default from "react"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_3__def__ from "../../def-9+Hp";
+import * as __WEBPACK_IMPORTED_MODULE_3__def__ from "../../def-9+Hp"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_4__i18n__ from "../../i18n-FsOf";
+import * as __WEBPACK_IMPORTED_MODULE_4__i18n__ from "../../i18n-FsOf"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_5__style_module_css__ from "../../style.module.css-VPet";
+import * as __WEBPACK_IMPORTED_MODULE_5__style_module_css__ from "../../style.module.css-VPet"
 /* harmony import */
-import __WEBPACK_IMPORTED_MODULE_5__style_module_css___default from "../../style.module.css-VPet";
+import __WEBPACK_IMPORTED_MODULE_5__style_module_css___default from "../../style.module.css-VPet"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_6__Confirm__ from "./Confirm-Tody";
+import * as __WEBPACK_IMPORTED_MODULE_6__Confirm__ from "./Confirm-Tody"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_7__Register__ from "./Register-KKeI";
-var _this = this;
+import * as __WEBPACK_IMPORTED_MODULE_7__Register__ from "./Register-KKeI"
+var _this = this
 var _styleModuleImportMap = {
   "../../style_module.css": {
     "wrap": "CUI-sign-in-dialog-wrap",
@@ -72,22 +72,22 @@ var _styleModuleImportMap = {
     "text-main": "CUI-sign-in-dialog-text-main",
     "text-second": "CUI-sign-in-dialog-text-second"
   }
-};
-var useState = __WEBPACK_IMPORTED_MODULE_2_react__.useState;
+}
+var useState = __WEBPACK_IMPORTED_MODULE_2_react__.useState
 var RegisterPageContainer = function RegisterPageContainer(props) {
-  var isRequesting = props.isRequesting;
-  var setIsRequesting = props.setIsRequesting;
-  var smsTimeStamp = props.smsTimeStamp;
-  var setSmsTimeStamp = props.setSmsTimeStamp;
-  var switchView = props.switchView;
-  var onRegisterSuccess = props.onRegisterSuccess;
-  var onRegisterFailure = props.onRegisterFailure;
-  var onRegisterConfirm = props.onRegisterConfirm;
-  var reportMethod = props.reportMethod;
-  var _useState = useState(false);
-  var _useState2 = __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default(_useState, 2);
-  var resetSuccess = _useState2[0];
-  var setResetSuccess = _useState2[1];
+  var isRequesting = props.isRequesting
+  var setIsRequesting = props.setIsRequesting
+  var smsTimeStamp = props.smsTimeStamp
+  var setSmsTimeStamp = props.setSmsTimeStamp
+  var switchView = props.switchView
+  var onRegisterSuccess = props.onRegisterSuccess
+  var onRegisterFailure = props.onRegisterFailure
+  var onRegisterConfirm = props.onRegisterConfirm
+  var reportMethod = props.reportMethod
+  var _useState = useState(false)
+  var _useState2 = __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_slicedToArray__.default(_useState, 2)
+  var resetSuccess = _useState2[0]
+  var setResetSuccess = _useState2[1]
   return /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_2_react__.createElement(__WEBPACK_IMPORTED_MODULE_2_react__.Fragment, null, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_2_react__.createElement("div", {
     className: __WEBPACK_IMPORTED_MODULE_1_babel_plugin_react_css_modules_dist_browser_getClassName___default(resetSuccess ? "fully-content" : "content", _styleModuleImportMap, {
       "autoResolveMultipleImports": true,
@@ -120,21 +120,21 @@ var RegisterPageContainer = function RegisterPageContainer(props) {
   }, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_2_react__.createElement("span", {
     className: "CUI-sign-in-dialog-center CUI-sign-in-dialog-clickable CUI-sign-in-dialog-tab-text",
     onClick: switchView.bind(_this, __WEBPACK_IMPORTED_MODULE_3__def__.ContentView.LOGIN)
-  }, __WEBPACK_IMPORTED_MODULE_4__i18n__.getLanguage("sign_in_dialog/back_to_login"))))));
-};
+  }, __WEBPACK_IMPORTED_MODULE_4__i18n__.getLanguage("sign_in_dialog/back_to_login"))))))
+}
 RegisterPageContainer.defaultProps = {
   onRegisterSuccess: function onRegisterSuccess() {
-    return undefined;
+    return undefined
   },
   onRegisterFailure: function onRegisterFailure() {
-    return undefined;
+    return undefined
   },
   onRegisterConfirm: function onRegisterConfirm() {
-    return undefined;
+    return undefined
   },
   reportMethod: function reportMethod() {
-    return undefined;
+    return undefined
   }
-};
+}
 
 /***/

@@ -4,49 +4,49 @@
  * 模块 ID：1985
  */
 
-var r = require("./1986/index");
+var r = require("./1986/index")
 r.prototype.toPostfix = function () {
-  "use strict";
+  "use strict"
 
-  for (var e, t, n, i, o, a = [], s = [{
+  for (var e, t, n, /* [auto-meaningful-name] */eThis$valueU$pre, o, a = [], s = [{
       value: "(",
       type: 4,
       pre: 0
-    }], c = this.value, u = 1; u < c.length; u++) {
-    if (1 === c[u].type || 3 === c[u].type || 13 === c[u].type) {
-      if (1 === c[u].type) {
-        c[u].value = Number(c[u].value);
+    }], this$value = this.value, u = 1; u < this$value.length; u++) {
+    if (1 === this$value[u].type || 3 === this$value[u].type || 13 === this$value[u].type) {
+      if (1 === this$value[u].type) {
+        this$value[u].value = Number(this$value[u].value)
       }
-      a.push(c[u]);
-    } else if (4 === c[u].type) {
-      s.push(c[u]);
-    } else if (5 === c[u].type) {
+      a.push(this$value[u])
+    } else if (4 === this$value[u].type) {
+      s.push(this$value[u])
+    } else if (5 === this$value[u].type) {
       for (; 4 !== (t = s.pop()).type;) {
-        a.push(t);
+        a.push(t)
       }
-    } else if (11 === c[u].type) {
+    } else if (11 === this$value[u].type) {
       for (; 4 !== (t = s.pop()).type;) {
-        a.push(t);
+        a.push(t)
       }
-      s.push(t);
+      s.push(t)
     } else {
-      i = (e = c[u]).pre;
-      n = (o = s[s.length - 1]).pre;
-      var l = "Math.pow" == o.value && "Math.pow" == e.value;
-      if (i > n) {
-        s.push(e);
+      eThis$valueU$pre = (e = this$value[u]).pre
+      n = (o = s[s.length - 1]).pre
+      var l = "Math.pow" == o.value && "Math.pow" == e.value
+      if (eThis$valueU$pre > n) {
+        s.push(e)
       } else {
-        for (; n >= i && !l || l && i < n;) {
-          t = s.pop();
-          o = s[s.length - 1];
-          a.push(t);
-          n = o.pre;
-          l = "Math.pow" == e.value && "Math.pow" == o.value;
+        for (; n >= eThis$valueU$pre && !l || l && eThis$valueU$pre < n;) {
+          t = s.pop()
+          o = s[s.length - 1]
+          a.push(t)
+          n = o.pre
+          l = "Math.pow" == e.value && "Math.pow" == o.value
         }
-        s.push(e);
+        s.push(e)
       }
     }
   }
-  return new r(a);
-};
-module.exports = r;
+  return new r(a)
+}
+module.exports = r

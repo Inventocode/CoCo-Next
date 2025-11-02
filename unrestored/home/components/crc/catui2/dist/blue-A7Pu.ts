@@ -4,12 +4,12 @@
  * 模块 ID：A7Pu
  */
 
-"use strict";
+"use strict"
 
 /* harmony export (binding) */
 /* harmony import */
-export { themeBlueColor };
-import * as __WEBPACK_IMPORTED_MODULE_0__supColor__ from "./supColor-qumQ";
+export { themeBlueColor }
+import * as __WEBPACK_IMPORTED_MODULE_0__supColor__ from "./supColor-qumQ"
 var themeBlueColor = {
   /* 色板主色：主色(0) —— +9 */
   "theme-color-0": "41,126,255",
@@ -72,6 +72,6 @@ var themeBlueColor = {
 
   "theme-color-c2": __WEBPACK_IMPORTED_MODULE_0__supColor__.themeSupColor["sup-color-n2-2"]
   /* 提示线、运行按钮 -2 */
-};
+}
 
 /***/

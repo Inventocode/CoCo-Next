@@ -4,114 +4,114 @@
  * 模块 ID：884
  */
 
-"use strict";
+"use strict"
 
-var r = require("./117");
-var i = require("./333");
-var o = require("./347");
-var a = require("./63");
+var r = require("./117")
+var i = require("./333")
+var o = require("./347")
+var a = require("./63")
 var s = function () {
   var t = function (e, n) {
     return (t = Object.setPrototypeOf || {
       __proto__: []
     } instanceof Array && function (t, e) {
-      t.__proto__ = e;
+      t.__proto__ = e
     } || function (t, e) {
       for (var n in e) if (e.hasOwnProperty(n)) {
-        t[n] = e[n];
+        t[n] = e[n]
       }
-    })(e, n);
-  };
+    })(e, n)
+  }
   return function (e, n) {
     function r() {
-      this.constructor = e;
+      this.constructor = e
     }
-    t(e, n);
-    e.prototype = null === n ? Object.create(n) : (r.prototype = n.prototype, new r());
-  };
-}();
+    t(e, n)
+    e.prototype = null === n ? Object.create(n) : (r.prototype = n.prototype, new r())
+  }
+}()
 !function (t) {
   function e(e, n, r, i, o, s, u, c) {
-    var l = t.call(this, s, u) || this;
-    l.yuvData = e;
-    l.dataWidth = n;
-    l.dataHeight = r;
-    l.left = i;
-    l.top = o;
+    var l = t.call(this, s, u) || this
+    l.yuvData = e
+    l.dataWidth = n
+    l.dataHeight = r
+    l.left = i
+    l.top = o
     if (i + s > n || o + u > r) {
-      throw new a.a("Crop rectangle does not fit within image data.");
+      throw new a.a("Crop rectangle does not fit within image data.")
     }
     if (c) {
-      l.reverseHorizontal(s, u);
+      l.reverseHorizontal(s, u)
     }
-    return l;
+    return l
   }
-  s(e, t);
+  s(e, t)
   e.prototype.getRow = function (t, e) {
     if (t < 0 || t >= this.getHeight()) {
-      throw new a.a("Requested row is outside the image: " + t);
+      throw new a.a("Requested row is outside the image: " + t)
     }
-    var n = this.getWidth();
+    var n = this.getWidth()
     if (null === e || undefined === e || e.length < n) {
-      e = new Uint8ClampedArray(n);
+      e = new Uint8ClampedArray(n)
     }
-    var i = (t + this.top) * this.dataWidth + this.left;
-    r.a.arraycopy(this.yuvData, i, e, 0, n);
-    return e;
-  };
+    var i = (t + this.top) * this.dataWidth + this.left
+    r.a.arraycopy(this.yuvData, i, e, 0, n)
+    return e
+  }
   e.prototype.getMatrix = function () {
-    var t = this.getWidth();
-    var e = this.getHeight();
+    var t = this.getWidth()
+    var e = this.getHeight()
     if (t === this.dataWidth && e === this.dataHeight) {
-      return this.yuvData;
+      return this.yuvData
     }
-    var n = t * e;
-    var i = new Uint8ClampedArray(n);
-    var o = this.top * this.dataWidth + this.left;
+    var n = t * e
+    var i = new Uint8ClampedArray(n)
+    var o = this.top * this.dataWidth + this.left
     if (t === this.dataWidth) {
-      r.a.arraycopy(this.yuvData, o, i, 0, n);
-      return i;
+      r.a.arraycopy(this.yuvData, o, i, 0, n)
+      return i
     }
     for (var a = 0; a < e; a++) {
-      var s = a * t;
-      r.a.arraycopy(this.yuvData, o, i, s, t);
-      o += this.dataWidth;
+      var s = a * t
+      r.a.arraycopy(this.yuvData, o, i, s, t)
+      o += this.dataWidth
     }
-    return i;
-  };
+    return i
+  }
   e.prototype.isCropSupported = function () {
-    return true;
-  };
+    return true
+  }
   e.prototype.crop = function (t, n, r, i) {
-    return new e(this.yuvData, this.dataWidth, this.dataHeight, this.left + t, this.top + n, r, i, false);
-  };
+    return new e(this.yuvData, this.dataWidth, this.dataHeight, this.left + t, this.top + n, r, i, false)
+  }
   e.prototype.renderThumbnail = function () {
-    for (var t = this.getWidth() / e.THUMBNAIL_SCALE_FACTOR, n = this.getHeight() / e.THUMBNAIL_SCALE_FACTOR, r = new Int32Array(t * n), i = this.yuvData, o = this.top * this.dataWidth + this.left, a = 0; a < n; a++) {
+    for (var t = this.getWidth() / e.THUMBNAIL_SCALE_FACTOR, n = this.getHeight() / e.THUMBNAIL_SCALE_FACTOR, r = new Int32Array(t * n), this$yuvData = this.yuvData, o = this.top * this.dataWidth + this.left, a = 0; a < n; a++) {
       for (var s = a * t, u = 0; u < t; u++) {
-        var c = 255 & i[o + u * e.THUMBNAIL_SCALE_FACTOR];
-        r[s + u] = 4278190080 | 65793 * c;
+        var c = 255 & this$yuvData[o + u * e.THUMBNAIL_SCALE_FACTOR]
+        r[s + u] = 4278190080 | 65793 * c
       }
-      o += this.dataWidth * e.THUMBNAIL_SCALE_FACTOR;
+      o += this.dataWidth * e.THUMBNAIL_SCALE_FACTOR
     }
-    return r;
-  };
+    return r
+  }
   e.prototype.getThumbnailWidth = function () {
-    return this.getWidth() / e.THUMBNAIL_SCALE_FACTOR;
-  };
+    return this.getWidth() / e.THUMBNAIL_SCALE_FACTOR
+  }
   e.prototype.getThumbnailHeight = function () {
-    return this.getHeight() / e.THUMBNAIL_SCALE_FACTOR;
-  };
+    return this.getHeight() / e.THUMBNAIL_SCALE_FACTOR
+  }
   e.prototype.reverseHorizontal = function (t, e) {
-    for (var n = this.yuvData, r = 0, i = this.top * this.dataWidth + this.left; r < e; r++, i += this.dataWidth) {
+    for (var this$yuvData = this.yuvData, r = 0, i = this.top * this.dataWidth + this.left; r < e; r++, i += this.dataWidth) {
       for (var o = i + t / 2, a = i, s = i + t - 1; a < o; a++, s--) {
-        var u = n[a];
-        n[a] = n[s];
-        n[s] = u;
+        var u = this$yuvData[a]
+        this$yuvData[a] = this$yuvData[s]
+        this$yuvData[s] = u
       }
     }
-  };
+  }
   e.prototype.invert = function () {
-    return new o.a(this);
-  };
-  e.THUMBNAIL_SCALE_FACTOR = 2;
-}(i.a);
+    return new o.a(this)
+  }
+  e.THUMBNAIL_SCALE_FACTOR = 2
+}(i.a)

@@ -4,9 +4,9 @@
  * 模块 ID：2592
  */
 
-"use strict";
+"use strict"
 
-export { _ as a };
+export { _ as a }
 import r = require("../../../36/483/39");
 import i = require("../../1184/2620");
 import o = require("../../1184/394");
@@ -17,89 +17,89 @@ import u = require("../../1184/1027");
 import l = require("../../1184/561/index");
 var f = function () {
   function e(e) {
-    this.errors = 0;
-    this.sid = o.i();
-    this.duration = 0;
-    this.status = i.a.Ok;
-    this.init = true;
-    this.ignoreDuration = false;
-    var t = a.b();
-    this.timestamp = t;
-    this.started = t;
+    this.errors = 0
+    this.sid = o.i()
+    this.duration = 0
+    this.status = i.a.Ok
+    this.init = true
+    this.ignoreDuration = false
+    var t = a.b()
+    this.timestamp = t
+    this.started = t
     if (e) {
-      this.update(e);
+      this.update(e)
     }
   }
   e.prototype.update = function (e) {
     if (undefined === e) {
-      e = {};
+      e = {}
     }
     if (e.user) {
       if (!this.ipAddress && e.user.ip_address) {
-        this.ipAddress = e.user.ip_address;
+        this.ipAddress = e.user.ip_address
       }
       if (!(this.did || e.did)) {
-        this.did = e.user.id || e.user.email || e.user.username;
+        this.did = e.user.id || e.user.email || e.user.username
       }
     }
-    this.timestamp = e.timestamp || a.b();
+    this.timestamp = e.timestamp || a.b()
     if (e.ignoreDuration) {
-      this.ignoreDuration = e.ignoreDuration;
+      this.ignoreDuration = e.ignoreDuration
     }
     if (e.sid) {
-      this.sid = 32 === e.sid.length ? e.sid : o.i();
+      this.sid = 32 === e.sid.length ? e.sid : o.i()
     }
     if (undefined !== e.init) {
-      this.init = e.init;
+      this.init = e.init
     }
     if (!this.did && e.did) {
-      this.did = "" + e.did;
+      this.did = "" + e.did
     }
     if ("number" === typeof e.started) {
-      this.started = e.started;
+      this.started = e.started
     }
     if (this.ignoreDuration) {
-      this.duration = undefined;
+      this.duration = undefined
     } else if ("number" === typeof e.duration) {
-      this.duration = e.duration;
+      this.duration = e.duration
     } else {
-      var t = this.timestamp - this.started;
-      this.duration = t >= 0 ? t : 0;
+      var t = this.timestamp - this.started
+      this.duration = t >= 0 ? t : 0
     }
     if (e.release) {
-      this.release = e.release;
+      this.release = e.release
     }
     if (e.environment) {
-      this.environment = e.environment;
+      this.environment = e.environment
     }
     if (!this.ipAddress && e.ipAddress) {
-      this.ipAddress = e.ipAddress;
+      this.ipAddress = e.ipAddress
     }
     if (!this.userAgent && e.userAgent) {
-      this.userAgent = e.userAgent;
+      this.userAgent = e.userAgent
     }
     if ("number" === typeof e.errors) {
-      this.errors = e.errors;
+      this.errors = e.errors
     }
     if (e.status) {
-      this.status = e.status;
+      this.status = e.status
     }
-  };
+  }
   e.prototype.close = function (e) {
     if (e) {
       this.update({
         status: e
-      });
+      })
     } else {
       if (this.status === i.a.Ok) {
         this.update({
           status: i.a.Exited
-        });
+        })
       } else {
-        this.update();
+        this.update()
       }
     }
-  };
+  }
   e.prototype.toJSON = function () {
     return l.a({
       sid: "" + this.sid,
@@ -116,347 +116,347 @@ var f = function () {
         ip_address: this.ipAddress,
         user_agent: this.userAgent
       })
-    });
-  };
-  return e;
-}();
+    })
+  }
+  return e
+}()
 var d = function () {
   function e(e, t, n) {
     if (undefined === t) {
-      t = new u.a();
+      t = new u.a()
     }
     if (undefined === n) {
-      n = 4;
+      n = 4
     }
-    this._version = n;
-    this._stack = [{}];
-    this.getStackTop().scope = t;
+    this._version = n
+    this._stack = [{}]
+    this.getStackTop().scope = t
     if (e) {
-      this.bindClient(e);
+      this.bindClient(e)
     }
   }
   e.prototype.isOlderThan = function (e) {
-    return this._version < e;
-  };
+    return this._version < e
+  }
   e.prototype.bindClient = function (e) {
-    this.getStackTop().client = e;
+    this.getStackTop().client = e
     if (e && e.setupIntegrations) {
-      e.setupIntegrations();
+      e.setupIntegrations()
     }
-  };
+  }
   e.prototype.pushScope = function () {
-    var e = u.a.clone(this.getScope());
+    var e = u.a.clone(this.getScope())
     this.getStack().push({
       client: this.getClient(),
       scope: e
-    });
-    return e;
-  };
+    })
+    return e
+  }
   e.prototype.popScope = function () {
-    return !(this.getStack().length <= 1) && !!this.getStack().pop();
-  };
+    return !(this.getStack().length <= 1) && !!this.getStack().pop()
+  }
   e.prototype.withScope = function (e) {
-    var t = this.pushScope();
+    var t = this.pushScope()
     try {
-      e(t);
+      e(t)
     } finally {
-      this.popScope();
+      this.popScope()
     }
-  };
+  }
   e.prototype.getClient = function () {
-    return this.getStackTop().client;
-  };
+    return this.getStackTop().client
+  }
   e.prototype.getScope = function () {
-    return this.getStackTop().scope;
-  };
+    return this.getStackTop().scope
+  }
   e.prototype.getStack = function () {
-    return this._stack;
-  };
+    return this._stack
+  }
   e.prototype.getStackTop = function () {
-    return this._stack[this._stack.length - 1];
-  };
+    return this._stack[this._stack.length - 1]
+  }
   e.prototype.captureException = function (e, t) {
-    var n = this._lastEventId = o.i();
-    var i = t;
+    var n = this._lastEventId = o.i()
+    var i = t
     if (!t) {
-      var a = undefined;
+      var a = undefined
       try {
-        throw new Error("Sentry syntheticException");
+        throw new Error("Sentry syntheticException")
       } catch (e) {
-        a = e;
+        a = e
       }
       i = {
         originalException: e,
         syntheticException: a
-      };
+      }
     }
     this._invokeClient("captureException", e, r.a(r.a({}, i), {
       event_id: n
-    }));
-    return n;
-  };
+    }))
+    return n
+  }
   e.prototype.captureMessage = function (e, t, n) {
-    var i = this._lastEventId = o.i();
-    var a = n;
+    var i = this._lastEventId = o.i()
+    var a = n
     if (!n) {
-      var s = undefined;
+      var s = undefined
       try {
-        throw new Error(e);
+        throw new Error(e)
       } catch (c) {
-        s = c;
+        s = c
       }
       a = {
         originalException: e,
         syntheticException: s
-      };
+      }
     }
     this._invokeClient("captureMessage", e, t, r.a(r.a({}, a), {
       event_id: i
-    }));
-    return i;
-  };
+    }))
+    return i
+  }
   e.prototype.captureEvent = function (e, t) {
-    var n = this._lastEventId = o.i();
+    var n = this._lastEventId = o.i()
     this._invokeClient("captureEvent", e, r.a(r.a({}, t), {
       event_id: n
-    }));
-    return n;
-  };
+    }))
+    return n
+  }
   e.prototype.lastEventId = function () {
-    return this._lastEventId;
-  };
+    return this._lastEventId
+  }
   e.prototype.addBreadcrumb = function (e, t) {
-    var n = this.getStackTop();
-    var i = n.scope;
-    var s = n.client;
-    if (i && s) {
-      var c = s.getOptions && s.getOptions() || {};
-      var u = c.beforeBreadcrumb;
-      var l = undefined === u ? null : u;
-      var f = c.maxBreadcrumbs;
-      var d = undefined === f ? 100 : f;
+    var n = this.getStackTop()
+    var n$scope = n.scope
+    var n$client = n.client
+    if (n$scope && n$client) {
+      var c = n$client.getOptions && n$client.getOptions() || {}
+      var c$beforeBreadcrumb = c.beforeBreadcrumb
+      var l = undefined === c$beforeBreadcrumb ? null : c$beforeBreadcrumb
+      var c$maxBreadcrumbs = c.maxBreadcrumbs
+      var d = undefined === c$maxBreadcrumbs ? 100 : c$maxBreadcrumbs
       if (!(d <= 0)) {
-        var h = a.a();
+        var h = a.a()
         var p = r.a({
           timestamp: h
-        }, e);
+        }, e)
         var _ = l ? o.c(function () {
-          return l(p, t);
-        }) : p;
+          return l(p, t)
+        }) : p
         if (null !== _) {
-          i.addBreadcrumb(_, d);
+          n$scope.addBreadcrumb(_, d)
         }
       }
     }
-  };
+  }
   e.prototype.setUser = function (e) {
-    var t = this.getScope();
+    var t = this.getScope()
     if (t) {
-      t.setUser(e);
+      t.setUser(e)
     }
-  };
+  }
   e.prototype.setTags = function (e) {
-    var t = this.getScope();
+    var t = this.getScope()
     if (t) {
-      t.setTags(e);
+      t.setTags(e)
     }
-  };
+  }
   e.prototype.setExtras = function (e) {
-    var t = this.getScope();
+    var t = this.getScope()
     if (t) {
-      t.setExtras(e);
+      t.setExtras(e)
     }
-  };
+  }
   e.prototype.setTag = function (e, t) {
-    var n = this.getScope();
+    var n = this.getScope()
     if (n) {
-      n.setTag(e, t);
+      n.setTag(e, t)
     }
-  };
+  }
   e.prototype.setExtra = function (e, t) {
-    var n = this.getScope();
+    var n = this.getScope()
     if (n) {
-      n.setExtra(e, t);
+      n.setExtra(e, t)
     }
-  };
+  }
   e.prototype.setContext = function (e, t) {
-    var n = this.getScope();
+    var n = this.getScope()
     if (n) {
-      n.setContext(e, t);
+      n.setContext(e, t)
     }
-  };
+  }
   e.prototype.configureScope = function (e) {
-    var t = this.getStackTop();
-    var n = t.scope;
-    var r = t.client;
-    if (n && r) {
-      e(n);
+    var t = this.getStackTop()
+    var t$scope = t.scope
+    var t$client = t.client
+    if (t$scope && t$client) {
+      e(t$scope)
     }
-  };
+  }
   e.prototype.run = function (e) {
-    var t = p(this);
+    var t = p(this)
     try {
-      e(this);
+      e(this)
     } finally {
-      p(t);
+      p(t)
     }
-  };
+  }
   e.prototype.getIntegration = function (e) {
-    var t = this.getClient();
+    var t = this.getClient()
     if (!t) {
-      return null;
+      return null
     }
     try {
-      return t.getIntegration(e);
+      return t.getIntegration(e)
     } catch (n) {
-      s.a.warn("Cannot retrieve integration " + e.id + " from the current Hub");
-      return null;
+      s.a.warn("Cannot retrieve integration " + e.id + " from the current Hub")
+      return null
     }
-  };
+  }
   e.prototype.startSpan = function (e) {
-    return this._callExtensionMethod("startSpan", e);
-  };
+    return this._callExtensionMethod("startSpan", e)
+  }
   e.prototype.startTransaction = function (e, t) {
-    return this._callExtensionMethod("startTransaction", e, t);
-  };
+    return this._callExtensionMethod("startTransaction", e, t)
+  }
   e.prototype.traceHeaders = function () {
-    return this._callExtensionMethod("traceHeaders");
-  };
+    return this._callExtensionMethod("traceHeaders")
+  }
   e.prototype.captureSession = function (e) {
     if (undefined === e) {
-      e = false;
+      e = false
     }
     if (e) {
-      return this.endSession();
+      return this.endSession()
     }
-    this._sendSessionUpdate();
-  };
+    this._sendSessionUpdate()
+  }
   e.prototype.endSession = function () {
-    var e;
-    var t;
-    var n;
-    var r;
-    var i;
+    var e
+    var t
+    var n
+    var r
+    var i
     if (!(null === (n = null === (t = null === (e = this.getStackTop()) || undefined === e ? undefined : e.scope) || undefined === t ? undefined : t.getSession()) || undefined === n)) {
-      n.close();
+      n.close()
     }
-    this._sendSessionUpdate();
+    this._sendSessionUpdate()
     if (!(null === (i = null === (r = this.getStackTop()) || undefined === r ? undefined : r.scope) || undefined === i)) {
-      i.setSession();
+      i.setSession()
     }
-  };
+  }
   e.prototype.startSession = function (e) {
-    var t = this.getStackTop();
-    var n = t.scope;
-    var a = t.client;
-    var s = a && a.getOptions() || {};
-    var c = s.release;
-    var u = s.environment;
-    var l = (o.e().navigator || {}).userAgent;
+    var t = this.getStackTop()
+    var t$scope = t.scope
+    var t$client = t.client
+    var s = t$client && t$client.getOptions() || {}
+    var s$release = s.release
+    var s$environment = s.environment
+    var o$e$navigator$userAgent = (o.e().navigator || {}).userAgent
     var d = new f(r.a(r.a(r.a({
-      release: c,
-      environment: u
-    }, n && {
-      user: n.getUser()
-    }), l && {
-      userAgent: l
-    }), e));
-    if (n) {
-      var h = n.getSession && n.getSession();
+      release: s$release,
+      environment: s$environment
+    }, t$scope && {
+      user: t$scope.getUser()
+    }), o$e$navigator$userAgent && {
+      userAgent: o$e$navigator$userAgent
+    }), e))
+    if (t$scope) {
+      var h = t$scope.getSession && t$scope.getSession()
       if (h && h.status === i.a.Ok) {
         h.update({
           status: i.a.Exited
-        });
+        })
       }
-      this.endSession();
-      n.setSession(d);
+      this.endSession()
+      t$scope.setSession(d)
     }
-    return d;
-  };
+    return d
+  }
   e.prototype._sendSessionUpdate = function () {
-    var e = this.getStackTop();
-    var t = e.scope;
-    var n = e.client;
-    if (t) {
-      var r = t.getSession && t.getSession();
-      if (r && n && n.captureSession) {
-        n.captureSession(r);
+    var e = this.getStackTop()
+    var e$scope = e.scope
+    var e$client = e.client
+    if (e$scope) {
+      var r = e$scope.getSession && e$scope.getSession()
+      if (r && e$client && e$client.captureSession) {
+        e$client.captureSession(r)
       }
     }
-  };
+  }
   e.prototype._invokeClient = function (e) {
     for (var t, n = [], i = 1; i < arguments.length; i++) {
-      n[i - 1] = arguments[i];
+      n[i - 1] = arguments[i]
     }
-    var o = this.getStackTop();
-    var a = o.scope;
-    var s = o.client;
-    if (s && s[e]) {
-      (t = s)[e].apply(t, r.f(n, [a]));
+    var o = this.getStackTop()
+    var o$scope = o.scope
+    var o$client = o.client
+    if (o$client && o$client[e]) {
+      (t = o$client)[e].apply(t, r.f(n, [o$scope]))
     }
-  };
+  }
   e.prototype._callExtensionMethod = function (e) {
     for (var t = [], n = 1; n < arguments.length; n++) {
-      t[n - 1] = arguments[n];
+      t[n - 1] = arguments[n]
     }
-    var r = h();
-    var i = r.__SENTRY__;
-    if (i && i.extensions && "function" === typeof i.extensions[e]) {
-      return i.extensions[e].apply(this, t);
+    var r = h()
+    var r$__SENTRY__ = r.__SENTRY__
+    if (r$__SENTRY__ && r$__SENTRY__.extensions && "function" === typeof r$__SENTRY__.extensions[e]) {
+      return r$__SENTRY__.extensions[e].apply(this, t)
     }
-    s.a.warn("Extension method " + e + " couldn't be found, doing nothing.");
-  };
-  return e;
-}();
+    s.a.warn("Extension method " + e + " couldn't be found, doing nothing.")
+  }
+  return e
+}()
 function h() {
-  var e = o.e();
+  var e = o.e()
   e.__SENTRY__ = e.__SENTRY__ || {
     extensions: {},
     hub: undefined
-  };
-  return e;
+  }
+  return e
 }
 function p(e) {
-  var t = h();
-  var n = g(t);
-  v(t, e);
-  return n;
+  var t = h()
+  var n = g(t)
+  v(t, e)
+  return n
 }
 function _() {
-  var e = h();
+  var e = h()
   if (!(A(e) && !g(e).isOlderThan(4))) {
-    v(e, new d());
+    v(e, new d())
   }
   return c.b() ? function (e) {
-    var t;
-    var n;
-    var r;
+    var /* [auto-meaningful-name] */h$__SENTRY__
+    var n
+    var r
     try {
-      var i = null === (r = null === (n = null === (t = h().__SENTRY__) || undefined === t ? undefined : t.extensions) || undefined === n ? undefined : n.domain) || undefined === r ? undefined : r.active;
+      var i = null === (r = null === (n = null === (h$__SENTRY__ = h().__SENTRY__) || undefined === h$__SENTRY__ ? undefined : h$__SENTRY__.extensions) || undefined === n ? undefined : n.domain) || undefined === r ? undefined : r.active
       if (!i) {
-        return g(e);
+        return g(e)
       }
       if (!A(i) || g(i).isOlderThan(4)) {
-        var o = g(e).getStackTop();
-        v(i, new d(o.client, u.a.clone(o.scope)));
+        var o = g(e).getStackTop()
+        v(i, new d(o.client, u.a.clone(o.scope)))
       }
-      return g(i);
+      return g(i)
     } catch (a) {
-      return g(e);
+      return g(e)
     }
-  }(e) : g(e);
+  }(e) : g(e)
 }
 function A(e) {
-  return !!(e && e.__SENTRY__ && e.__SENTRY__.hub);
+  return !!(e && e.__SENTRY__ && e.__SENTRY__.hub)
 }
 function g(e) {
   if (!(e && e.__SENTRY__ && e.__SENTRY__.hub)) {
-    e.__SENTRY__ = e.__SENTRY__ || {};
-    e.__SENTRY__.hub = new d();
+    e.__SENTRY__ = e.__SENTRY__ || {}
+    e.__SENTRY__.hub = new d()
   }
-  return e.__SENTRY__.hub;
+  return e.__SENTRY__.hub
 }
 function v(e, t) {
-  return !!e && (e.__SENTRY__ = e.__SENTRY__ || {}, e.__SENTRY__.hub = t, true);
+  return !!e && (e.__SENTRY__ = e.__SENTRY__ || {}, e.__SENTRY__.hub = t, true)
 }
-export default _;
+export default _

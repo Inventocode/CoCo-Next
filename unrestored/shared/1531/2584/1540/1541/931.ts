@@ -4,14 +4,14 @@
  * 模块 ID：931
  */
 
-"use strict";
+"use strict"
 
-var r = {}.propertyIsEnumerable;
-var o = Object.getOwnPropertyDescriptor;
-var i = o && !r.call({
+var $propertyIsEnumerable = {}.propertyIsEnumerable
+var object$getOwnPropertyDescriptor = Object.getOwnPropertyDescriptor
+var i = object$getOwnPropertyDescriptor && !$propertyIsEnumerable.call({
   1: 2
-}, 1);
+}, 1)
 exports.f = i ? function (e) {
-  var t = o(this, e);
-  return !!t && t.enumerable;
-} : r;
+  var t = object$getOwnPropertyDescriptor(this, e)
+  return !!t && t.enumerable
+} : $propertyIsEnumerable

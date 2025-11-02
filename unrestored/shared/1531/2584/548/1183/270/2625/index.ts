@@ -4,61 +4,61 @@
  * 模块 ID：2625
  */
 
-"use strict";
+"use strict"
 
-var r = require("../../../../54");
-var i = require("../../../../19");
-var o = require("react");
-require("../../../../50/index");
-var a = require("../../100");
-var s = require("../153/index");
-var c = require("../395");
-var u = require("./1507");
-var l = require("../234");
+var r = require("../../../../54")
+var i = require("../../../../19")
+var o = require("react")
+require("../../../../50/index")
+var a = require("../../100")
+var s = require("../153/index")
+var c = require("../395")
+var u = require("./1507")
+var l = require("../234")
 var f = o.forwardRef(function (e, t) {
-  var n = e.children;
-  var s = e.classes;
-  var c = e.className;
-  var f = e.color;
-  var d = undefined === f ? "default" : f;
-  var h = e.component;
-  var p = undefined === h ? "button" : h;
-  var _ = e.disabled;
-  var A = undefined !== _ && _;
-  var g = e.disableElevation;
-  var v = undefined !== g && g;
-  var m = e.disableFocusRipple;
-  var y = undefined !== m && m;
-  var b = e.endIcon;
-  var w = e.focusVisibleClassName;
-  var E = e.fullWidth;
-  var x = undefined !== E && E;
-  var C = e.size;
-  var O = undefined === C ? "medium" : C;
-  var k = e.startIcon;
-  var S = e.type;
-  var T = undefined === S ? "button" : S;
-  var B = e.variant;
-  var D = undefined === B ? "text" : B;
-  var I = r.a(e, ["children", "classes", "className", "color", "component", "disabled", "disableElevation", "disableFocusRipple", "endIcon", "focusVisibleClassName", "fullWidth", "size", "startIcon", "type", "variant"]);
-  var F = k && o.createElement("span", {
-    className: a.a(s.startIcon, s["iconSize".concat(l.a(O))])
-  }, k);
-  var R = b && o.createElement("span", {
-    className: a.a(s.endIcon, s["iconSize".concat(l.a(O))])
-  }, b);
+  var e$children = e.children
+  var e$classes = e.classes
+  var e$className = e.className
+  var e$color = e.color
+  var d = undefined === e$color ? "default" : e$color
+  var e$component = e.component
+  var p = undefined === e$component ? "button" : e$component
+  var e$disabled = e.disabled
+  var A = undefined !== e$disabled && e$disabled
+  var e$disableElevation = e.disableElevation
+  var v = undefined !== e$disableElevation && e$disableElevation
+  var e$disableFocusRipple = e.disableFocusRipple
+  var y = undefined !== e$disableFocusRipple && e$disableFocusRipple
+  var e$endIcon = e.endIcon
+  var e$focusVisibleClassName = e.focusVisibleClassName
+  var e$fullWidth = e.fullWidth
+  var x = undefined !== e$fullWidth && e$fullWidth
+  var e$size = e.size
+  var O = undefined === e$size ? "medium" : e$size
+  var e$startIcon = e.startIcon
+  var e$type = e.type
+  var T = undefined === e$type ? "button" : e$type
+  var e$variant = e.variant
+  var D = undefined === e$variant ? "text" : e$variant
+  var I = r.a(e, ["children", "classes", "className", "color", "component", "disabled", "disableElevation", "disableFocusRipple", "endIcon", "focusVisibleClassName", "fullWidth", "size", "startIcon", "type", "variant"])
+  var F = e$startIcon && o.createElement("span", {
+    className: a.a(e$classes.startIcon, e$classes["iconSize".concat(l.a(O))])
+  }, e$startIcon)
+  var R = e$endIcon && o.createElement("span", {
+    className: a.a(e$classes.endIcon, e$classes["iconSize".concat(l.a(O))])
+  }, e$endIcon)
   return o.createElement(u.a, i.a({
-    className: a.a(s.root, s[D], c, "inherit" === d ? s.colorInherit : "default" !== d && s["".concat(D).concat(l.a(d))], "medium" !== O && [s["".concat(D, "Size").concat(l.a(O))], s["size".concat(l.a(O))]], v && s.disableElevation, A && s.disabled, x && s.fullWidth),
+    className: a.a(e$classes.root, e$classes[D], e$className, "inherit" === d ? e$classes.colorInherit : "default" !== d && e$classes["".concat(D).concat(l.a(d))], "medium" !== O && [e$classes["".concat(D, "Size").concat(l.a(O))], e$classes["size".concat(l.a(O))]], v && e$classes.disableElevation, A && e$classes.disabled, x && e$classes.fullWidth),
     component: p,
     disabled: A,
     focusRipple: !y,
-    focusVisibleClassName: a.a(s.focusVisible, w),
+    focusVisibleClassName: a.a(e$classes.focusVisible, e$focusVisibleClassName),
     ref: t,
     type: T
   }, I), o.createElement("span", {
-    className: s.label
-  }, F, n, R));
-});
+    className: e$classes.label
+  }, F, e$children, R))
+})
 exports.a = s.a(function (e) {
   return {
     root: i.a({}, e.typography.button, {
@@ -271,7 +271,7 @@ exports.a = s.a(function (e) {
         fontSize: 22
       }
     }
-  };
+  }
 }, {
   name: "MuiButton"
-})(f);
+})(f)

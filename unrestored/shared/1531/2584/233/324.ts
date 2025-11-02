@@ -4,8 +4,8 @@
  * 模块 ID：324
  */
 
-"use strict";
+"use strict"
 
-export { r as a };
-var r = "rootPlayer";
-export default r;
+export { r as a }
+var r = "rootPlayer"
+export default r

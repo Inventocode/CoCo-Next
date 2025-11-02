@@ -4,18 +4,18 @@
  * 模块 ID：Pv6Z
  */
 
-"use strict";
+"use strict"
 
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_0_react_redux__ from "react-redux";
+import * as __WEBPACK_IMPORTED_MODULE_0_react_redux__ from "react-redux"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_1_redux__ from "redux";
+import * as __WEBPACK_IMPORTED_MODULE_1_redux__ from "redux"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_2__template__ from "./template-7CtK";
+import * as __WEBPACK_IMPORTED_MODULE_2__template__ from "./template-7CtK"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_3__model_actions__ from "./model/actions-HXaG";
+import * as __WEBPACK_IMPORTED_MODULE_3__model_actions__ from "./model/actions-HXaG"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_4__redux_main_actions__ from "./redux/main/actions-_FmP";
+import * as __WEBPACK_IMPORTED_MODULE_4__redux_main_actions__ from "./redux/main/actions-_FmP"
 function map_state(state) {
   return {
     userInfo: state.main_reducer.userInfo,
@@ -30,7 +30,7 @@ function map_state(state) {
     deleteWorkOffset: state.work_reducer.deleteWorkOffset,
     deleteWorkIsLoaded: state.work_reducer.deleteWorkIsLoaded,
     deleteWorkList: state.work_reducer.deleteWorkList
-  };
+  }
 }
 function map_dispatch(dispatch) {
   return __WEBPACK_IMPORTED_MODULE_1_redux__.bindActionCreators({
@@ -40,8 +40,8 @@ function map_dispatch(dispatch) {
     clearDeletedWorkAction: __WEBPACK_IMPORTED_MODULE_3__model_actions__.clearDeletedWorkAction,
     setSignDialogVisibleAction: __WEBPACK_IMPORTED_MODULE_4__redux_main_actions__.setSignDialogVisibleAction,
     setConfirmDialogInfoAction: __WEBPACK_IMPORTED_MODULE_4__redux_main_actions__.setConfirmDialogInfoAction
-  }, dispatch);
+  }, dispatch)
 }
 /* harmony default export */
-export default __WEBPACK_IMPORTED_MODULE_0_react_redux__.connect(map_state, map_dispatch)(__WEBPACK_IMPORTED_MODULE_2__template__.WorkView);
+export default __WEBPACK_IMPORTED_MODULE_0_react_redux__.connect(map_state, map_dispatch)(__WEBPACK_IMPORTED_MODULE_2__template__.WorkView)
 /***/

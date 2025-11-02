@@ -4,30 +4,30 @@
  * 模块 ID：1245
  */
 
-"use strict";
+"use strict"
 
-var r = require("./1745/946").charAt;
-var o = require("./1745/310");
-var i = require("./1745/423/index");
-var a = require("./936/1066");
-var s = i.set;
-var c = i.getterFor("String Iterator");
+var require$1745946$charAt = require("./1745/946").charAt
+var o = require("./1745/310")
+var i = require("./1745/423/index")
+var a = require("./936/1066")
+var i$set = i.set
+var c = i.getterFor("String Iterator")
 a(String, "String", function (e) {
-  s(this, {
+  i$set(this, {
     type: "String Iterator",
     string: o(e),
     index: 0
-  });
+  })
 }, function () {
-  var e;
-  var t = c(this);
-  var n = t.string;
-  var o = t.index;
-  return o >= n.length ? {
+  var e
+  var t = c(this)
+  var t$string = t.string
+  var t$index = t.index
+  return t$index >= t$string.length ? {
     value: undefined,
     done: true
-  } : (e = r(n, o), t.index += e.length, {
+  } : (e = require$1745946$charAt(t$string, t$index), t.index += e.length, {
     value: e,
     done: false
-  });
-});
+  })
+})

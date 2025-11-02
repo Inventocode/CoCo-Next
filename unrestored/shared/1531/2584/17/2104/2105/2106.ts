@@ -4,72 +4,72 @@
  * 模块 ID：2106
  */
 
-"use strict";
+"use strict"
 
 Object.defineProperty(exports, "__esModule", {
   value: true
-});
-exports.CreateEvent = undefined;
-var r = require("tslib");
-var i = require("inversify");
-var o = require("../../../125/195/index");
-var a = (0, r.__importStar)(require("../../497/index"));
-var s = require("../../../4/127");
+})
+exports.CreateEvent = undefined
+var r = require("tslib")
+var i = require("inversify")
+var o = require("../../../125/195/index")
+var a = (0, r.__importStar)(require("../../497/index"))
+var s = require("../../../4/127")
 var c = function (e) {
   function t(t) {
-    var n = e.call(this, t.block) || this;
-    n.type = o.BlockEventType.CREATE;
-    n.ids = [];
-    n.is_shadow = false;
-    n.source = t.source || "other";
-    var r = t.block;
-    var i = r.get_workspace();
+    var n = e.call(this, t.block) || this
+    n.type = o.BlockEventType.CREATE
+    n.ids = []
+    n.is_shadow = false
+    n.source = t.source || "other"
+    var t$block = t.block
+    var i = t$block.get_workspace()
     if (undefined != i && i.rendered) {
-      n._xml = n.xml.workspace_element_to_dom_with_xy(r);
+      n._xml = n.xml.workspace_element_to_dom_with_xy(t$block)
     } else {
-      n._xml = n.xml.workspace_element_to_dom(r);
+      n._xml = n.xml.workspace_element_to_dom(t$block)
     }
-    if (a.base.is_block_svg(r)) {
-      n.ids = r.get_descendant_ids();
-      n.is_shadow = r.is_shadow();
-      n._element_json = n.json.block_to_json(r);
+    if (a.base.is_block_svg(t$block)) {
+      n.ids = t$block.get_descendant_ids()
+      n.is_shadow = t$block.is_shadow()
+      n._element_json = n.json.block_to_json(t$block)
     } else {
-      if (!a.base.is_workspace_comment(r)) {
-        throw new Error("Trying to fire create event for unsupported workspace element.");
+      if (!a.base.is_workspace_comment(t$block)) {
+        throw new Error("Trying to fire create event for unsupported workspace element.")
       }
-      n.ids = [r.id];
+      n.ids = [t$block.id]
       n._element_json = {
         blocks: {},
         comments: {},
         connections: {}
-      };
-      n._element_json.comments[r.id] = n.json.comment_to_json(r);
+      }
+      n._element_json.comments[t$block.id] = n.json.comment_to_json(t$block)
     }
-    return n;
+    return n
   }
-  (0, r.__extends)(t, e);
+  (0, r.__extends)(t, e)
   t.prototype.run = function (e) {
-    var t = this._get_event_workspace();
+    var t = this._get_event_workspace()
     if (e) {
-      var n = a.dom.create_dom("xml");
-      n.appendChild(this._xml);
-      return void this.xml.dom_to_workspace(n, t);
+      var n = a.dom.create_dom("xml")
+      n.appendChild(this._xml)
+      return void this.xml.dom_to_workspace(n, t)
     }
     for (var r = 0; r < this.ids.length; r++) {
-      var i = this.ids[r];
-      var o = t.get_element_from_db(i);
+      var i = this.ids[r]
+      var o = t.get_element_from_db(i)
       if (o) {
-        o.dispose(false, false);
+        o.dispose(false, false)
       } else {
         if (i == this._block_id) {
-          this.is_shadow;
+          this.is_shadow
         }
       }
     }
-  };
+  }
   t.prototype.get_element_json = function () {
-    return this._element_json;
-  };
+    return this._element_json
+  }
   t.prototype.serialize = function () {
     if (this._element_json) {
       return {
@@ -77,11 +77,11 @@ var c = function (e) {
         blocks: this._element_json.blocks,
         comments: this._element_json.comments,
         connections: this._element_json.connections
-      };
+      }
     }
   };
   (0, r.__decorate)([(0, s.lazy_inject)(s.BINDING.events)], t.prototype, "events", undefined);
-  (0, r.__decorate)([(0, s.lazy_inject)(s.BINDING.xml)], t.prototype, "xml", undefined);
-  return t = (0, r.__decorate)([(0, i.injectable)()], t);
-}(require("./643").BlockEvent);
-exports.CreateEvent = c;
+  (0, r.__decorate)([(0, s.lazy_inject)(s.BINDING.xml)], t.prototype, "xml", undefined)
+  return t = (0, r.__decorate)([(0, i.injectable)()], t)
+}(require("./643").BlockEvent)
+exports.CreateEvent = c

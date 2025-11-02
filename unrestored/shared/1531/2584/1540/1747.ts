@@ -4,7 +4,7 @@
  * 模块 ID：1747
  */
 
-"use strict";
+"use strict"
 
 require("./1623/86")({
   target: "URL",
@@ -12,6 +12,6 @@ require("./1623/86")({
   enumerable: true
 }, {
   toJSON: function () {
-    return URL.prototype.toString.call(this);
+    return URL.prototype.toString.call(this)
   }
-});
+})

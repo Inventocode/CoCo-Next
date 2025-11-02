@@ -4,10 +4,10 @@
  * 模块 ID：UhM9
  */
 
-"use strict";
+"use strict"
 
 /* harmony export (binding) */
-export { themeGreyColor };
+export { themeGreyColor }
 var themeGreyColor = {
   "theme-color-grey-0": "255, 255, 255",
   "theme-color-grey-10": "230, 230, 230",
@@ -20,6 +20,6 @@ var themeGreyColor = {
   "theme-color-grey-80": "51, 51, 51",
   "theme-color-grey-90": "26, 26, 26",
   "theme-color-grey-100": "0, 0, 0"
-};
+}
 
 /***/

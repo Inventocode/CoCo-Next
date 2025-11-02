@@ -4,18 +4,18 @@
  * 模块 ID：1594
  */
 
-var r = require("../1623/86");
-var o = require("./940");
-var i = Math.cosh;
-var a = Math.abs;
-var s = Math.E;
+var r = require("../1623/86")
+var o = require("./940")
+var math$cosh = Math.cosh
+var math$abs = Math.abs
+var math$E = Math.E
 r({
   target: "Math",
   stat: true,
-  forced: !i || i(710) === 1 / 0
+  forced: !math$cosh || math$cosh(710) === 1 / 0
 }, {
   cosh: function (e) {
-    var t = o(a(e) - 1) + 1;
-    return (t + 1 / (t * s * s)) * (s / 2);
+    var t = o(math$abs(e) - 1) + 1
+    return (t + 1 / (t * math$E * math$E)) * (math$E / 2)
   }
-});
+})

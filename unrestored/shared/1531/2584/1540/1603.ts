@@ -9,4 +9,4 @@ require("./1623/86")({
   stat: true
 }, {
   sign: require("./1592/1069")
-});
+})

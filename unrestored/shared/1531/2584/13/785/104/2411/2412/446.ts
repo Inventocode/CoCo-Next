@@ -4,5 +4,5 @@
  * 模块 ID：446
  */
 
-var n = Array.isArray;
-module.exports = n;
+var array$isArray = Array.isArray
+module.exports = array$isArray

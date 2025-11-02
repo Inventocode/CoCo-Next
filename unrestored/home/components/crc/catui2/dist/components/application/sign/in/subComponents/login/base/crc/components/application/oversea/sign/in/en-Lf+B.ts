@@ -4,10 +4,10 @@
  * 模块 ID：Lf+B
  */
 
-"use strict";
+"use strict"
 
 /* harmony export (binding) */
-export { en };
+export { en }
 var en = {
   "sign_in_dialog/error/password_confirm/not_same": "The two passwords did not match",
   "sign_in_dialog/error/phone/unregisterd": "Phone is not registered, ",
@@ -53,6 +53,6 @@ var en = {
   "sign_in_dialog/forget_password/success": "Reset Password Success!",
   "sign_in_dialog/already_has_account": "Already has an Account? Log in!",
   "sign_in_dialog/register/confirm": "OK"
-};
+}
 
 /***/

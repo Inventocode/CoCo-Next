@@ -4,10 +4,10 @@
  * 模块 ID：DEy4
  */
 
-"use strict";
+"use strict"
 
 /* harmony export (binding) */
-export { zh };
+export { zh }
 var zh = {
   "sign_in_dialog/error/password_confirm/not_same": "两次输入的密码不一致，请重新输入",
   "sign_in_dialog/error/phone/unregisterd": "手机号未注册，",
@@ -49,6 +49,6 @@ var zh = {
   "sign_in_dialog/phone_bound_by_other_account": "该手机号已绑定其他帐号",
   "sign_in_dialog/bind_phone": "绑定手机号",
   "sign_in_dialog/phone_bind/verify": "部分高级功能需绑定手机后使用"
-};
+}
 
 /***/

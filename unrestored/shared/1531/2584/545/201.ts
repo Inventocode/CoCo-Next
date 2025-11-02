@@ -20,4 +20,4 @@ module.exports = {
   "image-animation-first-half": "style_image-animation-first-half__1oOJB",
   imageAnimationSecondHalf: "style_imageAnimationSecondHalf__23SxR",
   "image-animation-second-half": "style_image-animation-second-half__201nn"
-};
+}

@@ -6,22 +6,22 @@
 
 !function (e, t) {
   if (true) {
-    module.exports = t();
+    module.exports = t()
   } else {
     if ("function" == typeof define && define.amd) {
-      define(t);
+      define(t)
     } else {
-      e.ReactIntlLocaleData = e.ReactIntlLocaleData || {};
-      e.ReactIntlLocaleData.zh = t();
+      e.ReactIntlLocaleData = e.ReactIntlLocaleData || {}
+      e.ReactIntlLocaleData.zh = t()
     }
   }
 }(this, function () {
-  "use strict";
+  "use strict"
 
   return [{
     locale: "zh",
     pluralRuleFunction: function (e, t) {
-      return "other";
+      return "other"
     },
     fields: {
       year: {
@@ -782,7 +782,7 @@
   }, {
     locale: "zh-Hant",
     pluralRuleFunction: function (e, t) {
-      return "other";
+      return "other"
     },
     fields: {
       year: {
@@ -1162,7 +1162,7 @@
   }, {
     locale: "zh-Hant-MO",
     parentLocale: "zh-Hant-HK"
-  }];
-});
+  }]
+})
 
 /***/

@@ -4,94 +4,94 @@
  * 模块 ID：552
  */
 
-"use strict";
+"use strict"
 
 import r = require("../11");
-import o = require("react");
+import React = require("react");
 var i = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
-    return module.default;
+    return module.default
   } : function () {
-    return module;
-  };
+    return module
+  }
   Object.defineProperty(defaultExport, "a", {
     enumerable: true,
     get: defaultExport
-  });
-  return defaultExport;
-}(o);
-import a = require("color");
+  })
+  return defaultExport
+}(React)
+import Color = require("color");
 var s = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
-    return module.default;
+    return module.default
   } : function () {
-    return module;
-  };
+    return module
+  }
   Object.defineProperty(defaultExport, "a", {
     enumerable: true,
     get: defaultExport
-  });
-  return defaultExport;
-}(a);
+  })
+  return defaultExport
+}(Color)
 import c = require("../8");
 var l = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
-    return module.default;
+    return module.default
   } : function () {
-    return module;
-  };
+    return module
+  }
   Object.defineProperty(defaultExport, "a", {
     enumerable: true,
     get: defaultExport
-  });
-  return defaultExport;
-}(c);
+  })
+  return defaultExport
+}(c)
 import u = require("../5");
 import d = require("../90");
 import p = require("../199");
 import f = require("./290");
 var h = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
-    return module.default;
+    return module.default
   } : function () {
-    return module;
-  };
+    return module
+  }
   Object.defineProperty(defaultExport, "a", {
     enumerable: true,
     get: defaultExport
-  });
-  return defaultExport;
-}(f);
+  })
+  return defaultExport
+}(f)
 import m = require("../13/index");
 import g = require("../15");
 var _ = function (e) {
-  var t = e.text;
-  var n = e.isSelected;
-  var r = e.state;
-  var a = e.color;
-  var s = e.index;
-  var c = e.onClick;
-  var u = e.sizeType;
-  var d = e.disabled;
-  var f = o.useRef(null);
+  var e$text = e.text
+  var e$isSelected = e.isSelected
+  var e$state = e.state
+  var e$color = e.color
+  var e$index = e.index
+  var e$onClick = e.onClick
+  var e$sizeType = e.sizeType
+  var e$disabled = e.disabled
+  var f = React.useRef(null)
   var _ = function (e, t) {
-    var n = "";
+    var n = ""
     if ("correct" === e) {
-      n = "icon-radio-correct";
+      n = "icon-radio-correct"
     } else {
       if ("incorrect" === e) {
-        n = "icon-radio-incorrect";
+        n = "icon-radio-incorrect"
       } else {
         if (t) {
-          n = "icon-radio-correct";
+          n = "icon-radio-correct"
         }
       }
     }
     return n ? i.a.createElement(m.j, {
       type: n,
       className: h.a.selected
-    }) : null;
-  }(r, n);
+    }) : null
+  }(e$state, e$isSelected)
   var v = function () {
     var e = function (e) {
       return {
@@ -123,19 +123,19 @@ var _ = function (e) {
           borderColor: "#e6e6e6",
           borderWidth: 1
         }
-      };
-    }(a);
-    switch (r) {
+      }
+    }(e$color)
+    switch (e$state) {
       case "correct":
-        return e.correct;
+        return e.correct
       case "incorrect":
-        return e.inCorrect;
+        return e.inCorrect
       case "disabled":
-        return e.disabled;
+        return e.disabled
     }
-    return d ? e.disabled : n ? e.selected : e.default;
-  }();
-  var b = p.g[u];
+    return e$disabled ? e.disabled : e$isSelected ? e.selected : e.default
+  }()
+  var b = p.g[e$sizeType]
   return i.a.createElement("div", {
     style: {
       color: null === v || undefined === v ? undefined : v.color,
@@ -143,9 +143,9 @@ var _ = function (e) {
     },
     className: l()(h.a.defaultCheckbox, "checkbox-widget-box"),
     onClick: function (e) {
-      var t = f.current;
-      if (t && c) {
-        c(s, t);
+      var f$current = f.current
+      if (f$current && e$onClick) {
+        e$onClick(e$index, f$current)
       }
     }
   }, i.a.createElement("div", {
@@ -163,71 +163,71 @@ var _ = function (e) {
     style: {
       fontSize: b.optionFontSize
     }
-  }, t));
-};
-var _a;
+  }, e$text))
+}
+var _a
 _a = function (e) {
-  var t = e.id;
-  var n = e.position;
-  var o = e.visible;
-  var a = e.opacity;
-  var c = e.onHeadlineClick;
-  var f = e.onOptionClick;
-  var m = e.size;
-  var g = e.attributes;
-  var v = g.options;
-  var b = g.color;
-  var y = g.headline;
-  var E = g.sizeType;
-  var O = g.headlineVisible;
-  var w = g.disabled;
+  var t = e.id
+  var e$position = e.position
+  var e$visible = e.visible
+  var e$opacity = e.opacity
+  var e$onHeadlineClick = e.onHeadlineClick
+  var e$onOptionClick = e.onOptionClick
+  var e$size = e.size
+  var e$attributes = e.attributes
+  var e$attributes$options = e$attributes.options
+  var e$attributes$color = e$attributes.color
+  var e$attributes$headline = e$attributes.headline
+  var e$attributes$sizeType = e$attributes.sizeType
+  var e$attributes$headlineVisible = e$attributes.headlineVisible
+  var e$attributes$disabled = e$attributes.disabled
   var C = function (e, t) {
-    if (f) {
-      f(e, t);
+    if (e$onOptionClick) {
+      e$onOptionClick(e, t)
     }
-  };
-  var T = p.g[E];
+  }
+  var T = p.g[e$attributes$sizeType]
   return i.a.createElement("div", {
     id: t,
     "data-role": u.M,
     "data-widget-type": u.C,
     "data-min-width": T.minWidth,
     "data-max-width": T.maxWidth,
-    className: l()(h.a.checkboxWidget, d.b, r.a({}, h.a.hide, !o)),
+    className: l()(h.a.checkboxWidget, d.b, r.a({}, h.a.hide, !e$visible)),
     style: {
-      top: n.y,
-      left: n.x,
+      top: e$position.y,
+      left: e$position.x,
       height: "auto",
-      width: m.width,
+      width: e$size.width,
       minWidth: "".concat(T.minWidth, "px"),
       maxWidth: "".concat(T.maxWidth, "px"),
-      opacity: undefined === a ? undefined : a / 100
+      opacity: undefined === e$opacity ? undefined : e$opacity / 100
     },
     "data-lock-height": true
-  }, O && i.a.createElement("div", {
+  }, e$attributes$headlineVisible && i.a.createElement("div", {
     className: h.a.headline,
     onClick: function (e) {
-      if (c) {
-        c(e);
+      if (e$onHeadlineClick) {
+        e$onHeadlineClick(e)
       }
     },
     style: {
       fontSize: T.headlineFontSize
     }
-  }, y), i.a.createElement("ul", null, v.map(function (e, t) {
+  }, e$attributes$headline), i.a.createElement("ul", null, e$attributes$options.map(function (e, t) {
     return i.a.createElement("li", {
       key: t
     }, i.a.createElement(_, {
-      sizeType: E,
-      color: s()(b).toString(),
+      sizeType: e$attributes$sizeType,
+      color: s()(e$attributes$color).toString(),
       text: e.content,
       isSelected: !!e.isSelected,
       state: e.state,
       onClick: C,
       index: t,
-      disabled: w
-    }));
-  })));
-};
-export { _a as a };
-export default _a;
+      disabled: e$attributes$disabled
+    }))
+  })))
+}
+export { _a as a }
+export default _a

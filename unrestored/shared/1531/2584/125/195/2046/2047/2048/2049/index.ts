@@ -4,11 +4,11 @@
  * 模块 ID：2049
  */
 
-"use strict";
+"use strict"
 
 Object.defineProperty(exports, "__esModule", {
   value: true
-});
+})
 var r = require("tslib");
 (0, r.__exportStar)(require("./2050"), exports);
 (0, r.__exportStar)(require("./2051"), exports);
@@ -23,4 +23,4 @@ var r = require("tslib");
 (0, r.__exportStar)(require("./2060"), exports);
 (0, r.__exportStar)(require("./2061"), exports);
 (0, r.__exportStar)(require("./2062"), exports);
-(0, r.__exportStar)(require("./2063"), exports);
+(0, r.__exportStar)(require("./2063"), exports)

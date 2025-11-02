@@ -4,14 +4,14 @@
  * 模块 ID：986
  */
 
-"use strict";
+"use strict"
 
-export { r as a };
+export { r as a }
 function r(e) {
   try {
-    return e && "function" === typeof e && e.name || "<anonymous>";
+    return e && "function" === typeof e && e.name || "<anonymous>"
   } catch (t) {
-    return "<anonymous>";
+    return "<anonymous>"
   }
 }
-export default r;
+export default r

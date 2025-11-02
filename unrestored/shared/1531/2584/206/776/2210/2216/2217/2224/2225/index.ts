@@ -4,7 +4,7 @@
  * 模块 ID：2225
  */
 
-"use strict";
+"use strict"
 
 module.exports = {
   $ref: require("./2226"),
@@ -35,4 +35,4 @@ module.exports = {
   required: require("./2243"),
   uniqueItems: require("./2244"),
   validate: require("../../2218/1337")
-};
+}

@@ -4,4 +4,4 @@
  * 模块 ID：654
  */
 
-module.exports = "https://creation.codemao.cn/coconut/web/1.22.0-0/" + "static/media/cloudVariable.2e53464f.svg";
+module.exports = "https://creation.codemao.cn/coconut/web/1.22.0-0/" + "static/media/cloudVariable.2e53464f.svg"

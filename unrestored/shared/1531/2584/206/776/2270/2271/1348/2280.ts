@@ -5,133 +5,133 @@
  */
 
 (function () {
-  var t;
-  var r;
-  var i;
-  var o;
-  var a;
-  var s;
-  var c;
-  var u = {}.toString;
+  var t
+  var /* [auto-meaningful-name] */t$any
+  var /* [auto-meaningful-name] */t$all
+  var /* [auto-meaningful-name] */t$isItNaN
+  var a
+  var s
+  var c
+  var $toString = {}.toString
   function l(e, t) {
     if (!(e instanceof Object)) {
-      return false;
+      return false
     }
     switch (t.structure) {
       case "fields":
         return function (e, t) {
-          var n;
-          var r;
-          var i;
-          var o;
-          var a;
-          var s;
-          var c;
+          var n
+          var r
+          var i
+          var o
+          var a
+          var s
+          var c
           for (i in n = {}, r = 0, e) {
-            n[i] = true;
-            r++;
+            n[i] = true
+            r++
           }
           for (a in o = 0, s = t.of) {
-            c = s[a];
+            c = s[a]
             if (!d(e[a], c)) {
-              return false;
+              return false
             }
             if (n[a]) {
-              o++;
+              o++
             }
           }
-          return t.subset || r === o;
-        }(e, t);
+          return t.subset || r === o
+        }(e, t)
       case "array":
         return function (e, t) {
-          return i(function (e) {
-            return d(e, t.of);
-          }, e);
-        }(e, t);
+          return t$all(function (e) {
+            return d(e, t.of)
+          }, e)
+        }(e, t)
       case "tuple":
         return function (e, t) {
-          var n;
-          var r;
-          var i;
-          var o;
-          var a;
-          for (n = 0, r = 0, o = (i = t.of).length; r < o; ++r) {
-            a = i[r];
+          var n
+          var r
+          var i
+          var /* [auto-meaningful-name] */iT$of$length
+          var a
+          for (n = 0, r = 0, iT$of$length = (i = t.of).length; r < iT$of$length; ++r) {
+            a = i[r]
             if (!d(e[n], a)) {
-              return false;
+              return false
             }
-            n++;
+            n++
           }
-          return e.length <= n;
-        }(e, t);
+          return e.length <= n
+        }(e, t)
     }
   }
   function f(e, t) {
-    var n;
-    var r;
-    var i;
-    var o;
-    n = t.type;
-    r = t.structure;
-    if (n) {
-      return "*" === n || ((i = c[n] || a[n]) ? i.typeOf === u.call(e).slice(8, -1) && i.validate(e) : n === u.call(e).slice(8, -1) && (!r || l(e, t)));
+    var /* [auto-meaningful-name] */t$type
+    var /* [auto-meaningful-name] */t$structure
+    var i
+    var o
+    t$type = t.type
+    t$structure = t.structure
+    if (t$type) {
+      return "*" === t$type || ((i = c[t$type] || a[t$type]) ? i.typeOf === $toString.call(e).slice(8, -1) && i.validate(e) : t$type === $toString.call(e).slice(8, -1) && (!t$structure || l(e, t)))
     }
-    if (r) {
-      return (!(o = s[r]) || o === u.call(e).slice(8, -1)) && l(e, t);
+    if (t$structure) {
+      return (!(o = s[t$structure]) || o === $toString.call(e).slice(8, -1)) && l(e, t)
     }
-    throw new Error("No type defined. Input: " + e + ".");
+    throw new Error("No type defined. Input: " + e + ".")
   }
   function d(e, t) {
-    if ("Array" !== u.call(t).slice(8, -1)) {
-      throw new Error("Types must be in an array. Input: " + e + ".");
+    if ("Array" !== $toString.call(t).slice(8, -1)) {
+      throw new Error("Types must be in an array. Input: " + e + ".")
     }
-    return r(function (t) {
-      return f(e, t);
-    }, t);
+    return t$any(function (t) {
+      return f(e, t)
+    }, t)
   }
-  t = require("../2272/1347/index");
-  r = t.any;
-  i = t.all;
-  o = t.isItNaN;
+  t = require("../2272/1347/index")
+  t$any = t.any
+  t$all = t.all
+  t$isItNaN = t.isItNaN
   a = {
     Number: {
       typeOf: "Number",
       validate: function (e) {
-        return !o(e);
+        return !t$isItNaN(e)
       }
     },
     NaN: {
       typeOf: "Number",
-      validate: o
+      validate: t$isItNaN
     },
     Int: {
       typeOf: "Number",
       validate: function (e) {
-        return !o(e) && e % 1 === 0;
+        return !t$isItNaN(e) && e % 1 === 0
       }
     },
     Float: {
       typeOf: "Number",
       validate: function (e) {
-        return !o(e);
+        return !t$isItNaN(e)
       }
     },
     Date: {
       typeOf: "Date",
       validate: function (e) {
-        return !o(e.getTime());
+        return !t$isItNaN(e.getTime())
       }
     }
-  };
+  }
   s = {
     array: "Array",
     tuple: "Array"
-  };
+  }
   module.exports = function (e, t, n) {
     if (null == n) {
-      n = {};
+      n = {}
     }
-    c = n.customTypes || {};
-    return d(t, e);
-  };
-}).call(this);
+    c = n.customTypes || {}
+    return d(t, e)
+  }
+}).call(this)

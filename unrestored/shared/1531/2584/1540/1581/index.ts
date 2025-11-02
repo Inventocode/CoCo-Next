@@ -4,17 +4,17 @@
  * 模块 ID：1581
  */
 
-"use strict";
+"use strict"
 
-var r = require("../1623/86");
-var o = require("../1736/194");
-var i = require("./1226/index");
-var a = require("../1667/751");
-var s = i.ArrayBuffer;
+var r = require("../1623/86")
+var o = require("../1736/194")
+var i = require("./1226/index")
+var a = require("../1667/751")
+var i$ArrayBuffer = i.ArrayBuffer
 r({
   global: true,
-  forced: o.ArrayBuffer !== s
+  forced: o.ArrayBuffer !== i$ArrayBuffer
 }, {
-  ArrayBuffer: s
-});
-a("ArrayBuffer");
+  ArrayBuffer: i$ArrayBuffer
+})
+a("ArrayBuffer")

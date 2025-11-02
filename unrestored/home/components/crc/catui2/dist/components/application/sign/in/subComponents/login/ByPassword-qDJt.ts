@@ -4,177 +4,177 @@
  * 模块 ID：qDJt
  */
 
-"use strict";
+"use strict"
 
 /* harmony export (binding) */
 /* harmony import */
-export { ByPasswordComponent };
-import * as __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__ from "@babel/runtime/helpers/esm/asyncToGenerator";
+export { ByPasswordComponent }
+import * as __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__ from "@babel/runtime/helpers/esm/asyncToGenerator"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__ from "@babel/runtime/helpers/esm/slicedToArray";
+import * as __WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__ from "@babel/runtime/helpers/esm/slicedToArray"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_2__babel_runtime_regenerator__ from "@babel/runtime/regenerator";
+import * as __WEBPACK_IMPORTED_MODULE_2__babel_runtime_regenerator__ from "@babel/runtime/regenerator"
 /* harmony import */
-import __WEBPACK_IMPORTED_MODULE_2__babel_runtime_regenerator___default from "@babel/runtime/regenerator";
+import __WEBPACK_IMPORTED_MODULE_2__babel_runtime_regenerator___default from "@babel/runtime/regenerator"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_3_react__ from "react";
+import * as __WEBPACK_IMPORTED_MODULE_3_react__ from "react"
 /* harmony import */
-import __WEBPACK_IMPORTED_MODULE_3_react___default from "react";
+import __WEBPACK_IMPORTED_MODULE_3_react___default from "react"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_4__base_button__ from "../../base/button-sg+3";
+import * as __WEBPACK_IMPORTED_MODULE_4__base_button__ from "../../base/button-sg+3"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_5__base_input__ from "../register/base/input-qXMC";
+import * as __WEBPACK_IMPORTED_MODULE_5__base_input__ from "../register/base/input-qXMC"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_6__base_spinner__ from "../register/base/spinner-WvBG";
+import * as __WEBPACK_IMPORTED_MODULE_6__base_spinner__ from "../register/base/spinner-WvBG"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_7__auth__ from "../../auth-819E";
+import * as __WEBPACK_IMPORTED_MODULE_7__auth__ from "../../auth-819E"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_8__i18n__ from "../../i18n-FsOf";
+import * as __WEBPACK_IMPORTED_MODULE_8__i18n__ from "../../i18n-FsOf"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_9__style_module_css__ from "../../style.module.css-VPet";
+import * as __WEBPACK_IMPORTED_MODULE_9__style_module_css__ from "../../style.module.css-VPet"
 /* harmony import */
-import __WEBPACK_IMPORTED_MODULE_9__style_module_css___default from "../../style.module.css-VPet";
+import __WEBPACK_IMPORTED_MODULE_9__style_module_css___default from "../../style.module.css-VPet"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_10__agreement__ from "../register/agreement-q2lc";
-var useState = __WEBPACK_IMPORTED_MODULE_3_react__.useState;
-var useEffect = __WEBPACK_IMPORTED_MODULE_3_react__.useEffect;
-var useCallback = __WEBPACK_IMPORTED_MODULE_3_react__.useCallback;
-var Fragment = __WEBPACK_IMPORTED_MODULE_3_react__.Fragment;
-var useRef = __WEBPACK_IMPORTED_MODULE_3_react__.useRef;
-var phoneInputEl;
-var passwordInputEl;
-var clearPasswordInput;
+import * as __WEBPACK_IMPORTED_MODULE_10__agreement__ from "../register/agreement-q2lc"
+var useState = __WEBPACK_IMPORTED_MODULE_3_react__.useState
+var useEffect = __WEBPACK_IMPORTED_MODULE_3_react__.useEffect
+var useCallback = __WEBPACK_IMPORTED_MODULE_3_react__.useCallback
+var Fragment = __WEBPACK_IMPORTED_MODULE_3_react__.Fragment
+var useRef = __WEBPACK_IMPORTED_MODULE_3_react__.useRef
+var phoneInputEl
+var passwordInputEl
+var clearPasswordInput
 var ByPasswordComponent = function ByPasswordComponent(props) {
-  var isRequesting = props.isRequesting;
-  var setIsRequesting = props.setIsRequesting;
-  var handleAgreementChange = props.handleAgreementChange;
-  var _useState = useState(true);
-  var _useState2 = __WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default(_useState, 2);
-  var disableLogin = _useState2[0];
-  var setDisableLogin = _useState2[1];
-  var _useState3 = useState(undefined);
-  var _useState4 = __WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default(_useState3, 2);
-  var error = _useState4[0];
-  var setError = _useState4[1];
-  var isDestory = useRef(false);
-  var _useState5 = useState(false);
-  var _useState6 = __WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default(_useState5, 2);
-  var agreementChecked = _useState6[0];
-  var setAgreementChecked = _useState6[1];
+  var isRequesting = props.isRequesting
+  var setIsRequesting = props.setIsRequesting
+  var handleAgreementChange = props.handleAgreementChange
+  var _useState = useState(true)
+  var _useState2 = __WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default(_useState, 2)
+  var disableLogin = _useState2[0]
+  var setDisableLogin = _useState2[1]
+  var _useState3 = useState(undefined)
+  var _useState4 = __WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default(_useState3, 2)
+  var error = _useState4[0]
+  var setError = _useState4[1]
+  var isDestory = useRef(false)
+  var _useState5 = useState(false)
+  var _useState6 = __WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_slicedToArray__.default(_useState5, 2)
+  var agreementChecked = _useState6[0]
+  var setAgreementChecked = _useState6[1]
   var isPhoneErr = useCallback(function () {
-    return error && error.type === __WEBPACK_IMPORTED_MODULE_7__auth__.AuthErrorType.PHONE;
-  }, [error]);
+    return error && error.type === __WEBPACK_IMPORTED_MODULE_7__auth__.AuthErrorType.PHONE
+  }, [error])
   var isPasswordErr = useCallback(function () {
-    return error && error.type === __WEBPACK_IMPORTED_MODULE_7__auth__.AuthErrorType.PWD;
-  }, [error]);
+    return error && error.type === __WEBPACK_IMPORTED_MODULE_7__auth__.AuthErrorType.PWD
+  }, [error])
   var isOtherErr = useCallback(function () {
-    return error && error.type === __WEBPACK_IMPORTED_MODULE_7__auth__.AuthErrorType.OTHER;
-  }, [error]);
+    return error && error.type === __WEBPACK_IMPORTED_MODULE_7__auth__.AuthErrorType.OTHER
+  }, [error])
   useEffect(function () {
-    isDestory.current = false;
+    isDestory.current = false
     return function () {
-      isDestory.current = true;
-    };
-  });
-  useEffect(function () {
-    updateLoginBtn();
-    if (handleAgreementChange) {
-      handleAgreementChange(agreementChecked);
+      isDestory.current = true
     }
-  }, [agreementChecked]);
+  })
+  useEffect(function () {
+    updateLoginBtn()
+    if (handleAgreementChange) {
+      handleAgreementChange(agreementChecked)
+    }
+  }, [agreementChecked])
   useEffect(function () {
     if (isPhoneErr()) {
-      phoneInputEl.focus();
+      phoneInputEl.focus()
     }
     if (isPasswordErr() || error && error.msg === __WEBPACK_IMPORTED_MODULE_8__i18n__.getLanguage("sign_in_dialog/error/other/acc_or_pwd")) {
       if (clearPasswordInput) {
-        clearPasswordInput();
+        clearPasswordInput()
       }
     }
-  }, [error, isPasswordErr, isPhoneErr]);
+  }, [error, isPasswordErr, isPhoneErr])
   var getCaptchaFallback = function getCaptchaFallback() {
-    setIsRequesting(false);
-  };
+    setIsRequesting(false)
+  }
   var onLoginClick = /*#__PURE__*/function () {
     var _ref = __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_asyncToGenerator__.default(/*#__PURE__*/__WEBPACK_IMPORTED_MODULE_2__babel_runtime_regenerator___default.mark(function _callee() {
-      var username;
-      var password;
-      var result;
+      var username
+      var password
+      var result
       return __WEBPACK_IMPORTED_MODULE_2__babel_runtime_regenerator___default.wrap(function _callee$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
             case 0:
               if (!(isRequesting || disableLogin)) {
-                _context.next = 2;
-                break;
+                _context.next = 2
+                break
               }
-              return _context.abrupt("return");
+              return _context.abrupt("return")
             case 2:
-              username = phoneInputEl.value;
-              password = passwordInputEl.value;
+              username = phoneInputEl.value
+              password = passwordInputEl.value
               if (!(password.length < 6 || password.length > 20)) {
-                _context.next = 7;
-                break;
+                _context.next = 7
+                break
               }
               setError({
                 type: __WEBPACK_IMPORTED_MODULE_7__auth__.AuthErrorType.PWD,
                 msg: __WEBPACK_IMPORTED_MODULE_8__i18n__.getLanguage("sign_in_dialog/error/password/format")
-              });
-              return _context.abrupt("return");
+              })
+              return _context.abrupt("return")
             case 7:
-              setIsRequesting(true); // 密码登录的时候没有做前端校验是因为不知道用户用的是什么登录
-              _context.prev = 8;
-              _context.next = 11;
+              setIsRequesting(true) // 密码登录的时候没有做前端校验是因为不知道用户用的是什么登录
+              _context.prev = 8
+              _context.next = 11
               return __WEBPACK_IMPORTED_MODULE_7__auth__.handleLoginByPassword({
                 username: username,
                 password: password,
                 getCaptchaFallback: getCaptchaFallback
-              });
+              })
             case 11:
-              result = _context.sent;
+              result = _context.sent
               if (isDestory.current) {
-                _context.next = 20;
-                break;
+                _context.next = 20
+                break
               }
-              setIsRequesting(false);
+              setIsRequesting(false)
               if (result.isSuccess) {
-                _context.next = 19;
-                break;
+                _context.next = 19
+                break
               }
-              setError(result.error);
-              throw result.error;
+              setError(result.error)
+              throw result.error
             case 19:
               if (props.onPasswordLoginSuccess) {
-                props.onPasswordLoginSuccess(result.authInfo);
+                props.onPasswordLoginSuccess(result.authInfo)
               }
             case 20:
-              _context.next = 25;
-              break;
+              _context.next = 25
+              break
             case 22:
-              _context.prev = 22;
-              _context.t0 = _context["catch"](8);
+              _context.prev = 22
+              _context.t0 = _context["catch"](8)
               if (props.onPasswordLoginFailure) {
                 props.onPasswordLoginFailure({
                   source: "pwd-login",
                   isSuccess: false,
                   error: _context.t0
-                });
+                })
               }
             case 25:
             case "end":
-              return _context.stop();
+              return _context.stop()
           }
         }
-      }, _callee, null, [[8, 22]]);
-    }));
+      }, _callee, null, [[8, 22]])
+    }))
     return function onLoginClick() {
-      return _ref.apply(this, arguments);
-    };
-  }();
+      return _ref.apply(this, arguments)
+    }
+  }()
   var updateLoginBtn = function updateLoginBtn() {
     // 密码至少为6位
-    setDisableLogin(phoneInputEl.value === "" || passwordInputEl.value === "" || !agreementChecked);
-  };
+    setDisableLogin(phoneInputEl.value === "" || passwordInputEl.value === "" || !agreementChecked)
+  }
   return /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_3_react__.createElement(Fragment, null, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_3_react__.createElement("form", null, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_3_react__.createElement(__WEBPACK_IMPORTED_MODULE_5__base_input__.Input, {
     autofocus: true,
     clearBtn: true,
@@ -186,20 +186,20 @@ var ByPasswordComponent = function ByPasswordComponent(props) {
     maxLength: 100,
     isError: isPhoneErr(),
     onChange: function onChange() {
-      updateLoginBtn();
+      updateLoginBtn()
       if (isPhoneErr()) {
-        setError(undefined);
+        setError(undefined)
       }
     },
     label: __WEBPACK_IMPORTED_MODULE_8__i18n__.getLanguage("sign_in_dialog/placeholder/username"),
     autoComplete: "on",
     getInputEl: function getInputEl(el) {
-      phoneInputEl = el;
-      phoneInputEl.focus();
+      phoneInputEl = el
+      phoneInputEl.focus()
     },
     onBlur: function onBlur() {
       if (props.reportMethod) {
-        props.reportMethod("用户信息-输入账号");
+        props.reportMethod("用户信息-输入账号")
       }
     }
   }), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_3_react__.createElement("div", {
@@ -214,23 +214,23 @@ var ByPasswordComponent = function ByPasswordComponent(props) {
     onEnterDown: onLoginClick,
     isError: isPasswordErr(),
     onChange: function onChange() {
-      updateLoginBtn();
+      updateLoginBtn()
       if (isPasswordErr() && passwordInputEl.value) {
-        setError(undefined);
+        setError(undefined)
       }
     },
     type: "password",
     label: __WEBPACK_IMPORTED_MODULE_8__i18n__.getLanguage("sign_in_dialog/placeholder/password"),
     autoComplete: "on",
     getInputEl: function getInputEl(el) {
-      passwordInputEl = el;
+      passwordInputEl = el
     },
     getClearInputFn: function getClearInputFn(fn) {
-      return clearPasswordInput = fn;
+      return clearPasswordInput = fn
     },
     onBlur: function onBlur() {
       if (props.reportMethod) {
-        props.reportMethod("用户信息-输入账号密码");
+        props.reportMethod("用户信息-输入账号密码")
       }
     }
   }), /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_3_react__.createElement("div", {
@@ -253,18 +253,18 @@ var ByPasswordComponent = function ByPasswordComponent(props) {
     style: {
       marginTop: "12px"
     }
-  }));
-};
+  }))
+}
 ByPasswordComponent.defaultProps = {
   onPasswordLoginSuccess: function onPasswordLoginSuccess() {
-    return undefined;
+    return undefined
   },
   onPasswordLoginFailure: function onPasswordLoginFailure() {
-    return undefined;
+    return undefined
   },
   reportMethod: function reportMethod() {
-    return undefined;
+    return undefined
   }
-};
+}
 
 /***/

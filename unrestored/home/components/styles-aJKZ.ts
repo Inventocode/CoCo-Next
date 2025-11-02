@@ -26,6 +26,6 @@ module.exports = {
   "content": "content_3CGme",
   "dropdown": "dropdown_2Crxb",
   "qrcodeImage": "qrcodeImage_1cOkY"
-};
+}
 
 /***/

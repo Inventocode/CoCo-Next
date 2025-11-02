@@ -20,4 +20,4 @@ module.exports = {
   transform: "style_transform__1mcmj",
   "transform-scale": "style_transform-scale__2f_Wy",
   contentEditable: "style_contentEditable__27qir"
-};
+}

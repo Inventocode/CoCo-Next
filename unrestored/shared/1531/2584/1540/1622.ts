@@ -4,14 +4,14 @@
  * 模块 ID：1622
  */
 
-"use strict";
+"use strict"
 
-var r = require("./1623/86");
-var o = require("./1623/272");
-var i = require("./1623/942");
-var a = require("./1623/309");
-var s = require("./1623/439");
-var c = require("./1623/300");
+var r = require("./1623/86")
+var o = require("./1623/272")
+var i = require("./1623/942")
+var a = require("./1623/309")
+var s = require("./1623/439")
+var c = require("./1623/300")
 if (o) {
   r({
     target: "Object",
@@ -23,7 +23,7 @@ if (o) {
         get: s(t),
         enumerable: true,
         configurable: true
-      });
+      })
     }
-  });
+  })
 }

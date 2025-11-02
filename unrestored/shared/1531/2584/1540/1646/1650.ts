@@ -9,11 +9,11 @@ module.exports = function (e) {
     return {
       error: false,
       value: e()
-    };
+    }
   } catch (t) {
     return {
       error: true,
       value: t
-    };
+    }
   }
-};
+}

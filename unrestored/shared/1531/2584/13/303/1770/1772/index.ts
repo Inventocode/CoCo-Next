@@ -4,25 +4,25 @@
  * 模块 ID：1772
  */
 
-"use strict";
+"use strict"
 
-var r;
-var i;
-var o = require("./1773/index");
-require("../952/index");
+var r
+var i
+var o = require("./1773/index")
+require("../952/index")
 module.exports = function (e) {
-  var t = "";
-  var n = Math.floor(.001 * (Date.now() - 1567752802062));
+  var t = ""
+  var n = Math.floor(.001 * (Date.now() - 1567752802062))
   if (n === i) {
-    r++;
+    r++
   } else {
-    r = 0;
-    i = n;
+    r = 0
+    i = n
   }
-  t += o(7);
-  t += o(e);
+  t += o(7)
+  t += o(e)
   if (r > 0) {
-    t += o(r);
+    t += o(r)
   }
-  return t += o(n);
-};
+  return t += o(n)
+}

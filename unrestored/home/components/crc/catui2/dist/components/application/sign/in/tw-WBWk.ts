@@ -4,10 +4,10 @@
  * 模块 ID：WBWk
  */
 
-"use strict";
+"use strict"
 
 /* harmony export (binding) */
-export { tw };
+export { tw }
 var tw = {
   "sign_in_dialog/error/password_confirm/not_same": "兩次輸入的密碼不一致，請重新輸入",
   "sign_in_dialog/error/phone/unregisterd": "手機號未註冊，",
@@ -48,6 +48,6 @@ var tw = {
   "sign_in_dialog/phone_bound_by_other_account": "該手機號已綁定其他帳號",
   "sign_in_dialog/bind_phone": "綁定手機號",
   "sign_in_dialog/phone_bind/verify": "部分高級功能需綁定手機後使用"
-};
+}
 
 /***/

@@ -4,48 +4,48 @@
  * 模块 ID：736
  */
 
-"use strict";
+"use strict"
 
-export { i as c };
-export { o as b };
-export { a };
+export { i as c }
+export { o as b }
+export { a }
 import r = require("./316");
 function i(e, t) {
   if (undefined === t) {
-    t = 0;
+    t = 0
   }
-  return "string" !== typeof e || 0 === t || e.length <= t ? e : e.substr(0, t) + "...";
+  return "string" !== typeof e || 0 === t || e.length <= t ? e : e.substr(0, t) + "..."
 }
 function o(e, t) {
-  var n = e;
-  var r = n.length;
-  if (r <= 150) {
-    return n;
+  var n = e
+  var n$length = n.length
+  if (n$length <= 150) {
+    return n
   }
-  if (t > r) {
-    t = r;
+  if (t > n$length) {
+    t = n$length
   }
-  var i = Math.max(t - 60, 0);
+  var i = Math.max(t - 60, 0)
   if (i < 5) {
-    i = 0;
+    i = 0
   }
-  var o = Math.min(i + 140, r);
-  if (o > r - 5) {
-    o = r;
+  var o = Math.min(i + 140, n$length)
+  if (o > n$length - 5) {
+    o = n$length
   }
-  if (o === r) {
-    i = Math.max(o - 140, 0);
+  if (o === n$length) {
+    i = Math.max(o - 140, 0)
   }
-  n = n.slice(i, o);
+  n = n.slice(i, o)
   if (i > 0) {
-    n = "'{snip} " + n;
+    n = "'{snip} " + n
   }
-  if (o < r) {
-    n += " {snip}";
+  if (o < n$length) {
+    n += " {snip}"
   }
-  return n;
+  return n
 }
 function a(e, t) {
-  return !!r.h(e) && (r.g(t) ? t.test(e) : "string" === typeof t && -1 !== e.indexOf(t));
+  return !!r.h(e) && (r.g(t) ? t.test(e) : "string" === typeof t && -1 !== e.indexOf(t))
 }
-export default a;
+export default a

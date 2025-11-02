@@ -4,58 +4,58 @@
  * 模块 ID：538
  */
 
-"use strict";
+"use strict"
 
 import r = require("../10/index");
-import o = require("react");
+import React = require("react");
 var i = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
-    return module.default;
+    return module.default
   } : function () {
-    return module;
-  };
+    return module
+  }
   Object.defineProperty(defaultExport, "a", {
     enumerable: true,
     get: defaultExport
-  });
-  return defaultExport;
-}(o);
+  })
+  return defaultExport
+}(React)
 import a = require("../8");
 var s = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
-    return module.default;
+    return module.default
   } : function () {
-    return module;
-  };
+    return module
+  }
   Object.defineProperty(defaultExport, "a", {
     enumerable: true,
     get: defaultExport
-  });
-  return defaultExport;
-}(a);
-require("./866");
-var _a;
-_a = o.memo(function (e) {
-  var t = e.onChange;
-  var n = e.checked;
-  var a = o.useState(n);
-  var c = r.a(a, 2);
-  var l = c[0];
-  var u = c[1];
-  o.useEffect(function () {
-    u(!!n);
-  }, [n]);
+  })
+  return defaultExport
+}(a)
+require("./866")
+var _a
+_a = React.memo(function (e) {
+  var e$onChange = e.onChange
+  var e$checked = e.checked
+  var a = React.useState(e$checked)
+  var c = r.a(a, 2)
+  var l = c[0]
+  var u = c[1]
+  React.useEffect(function () {
+    u(!!e$checked)
+  }, [e$checked])
   return i.a.createElement("div", {
     className: s()("coco-switch", l && "coco-switch-checked"),
     onClick: function () {
-      u(!l);
-      if (t) {
-        t(!l);
+      u(!l)
+      if (e$onChange) {
+        e$onChange(!l)
       }
     }
   }, i.a.createElement("div", {
     className: s()("coco-switch-handle", l && "coco-switch-handle-checked")
-  }));
-});
-export { _a as a };
-export default _a;
+  }))
+})
+export { _a as a }
+export default _a

@@ -4,15 +4,15 @@
  * 模块 ID：586
  */
 
-"use strict";
+"use strict"
 
-export { n as a };
+export { n as a }
 var n = function () {
   function t(t, e, r) {
-    this.deviceId = t;
-    this.label = e;
-    this.kind = "videoinput";
-    this.groupId = r || undefined;
+    this.deviceId = t
+    this.label = e
+    this.kind = "videoinput"
+    this.groupId = r || undefined
   }
   t.prototype.toJSON = function () {
     return {
@@ -20,8 +20,8 @@ var n = function () {
       groupId: this.groupId,
       deviceId: this.deviceId,
       label: this.label
-    };
-  };
-  return t;
-}();
-export default n;
+    }
+  }
+  return t
+}()
+export default n

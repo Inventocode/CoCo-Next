@@ -11,4 +11,4 @@ module.exports = {
   "coco-child-widget-selected": "style_coco-child-widget-selected__2AQx0",
   "coco-child-widget-full": "style_coco-child-widget-full__DB-HI",
   screenView: "style_screenView__1wSrw"
-};
+}

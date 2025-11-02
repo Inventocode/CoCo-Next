@@ -5,131 +5,131 @@
  */
 
 (function () {
-  var t;
-  var r;
-  var i = {}.toString;
+  var /* [auto-meaningful-name] */require$1348Index$parsedTypeCheck
+  var r
+  var $toString = {}.toString
   function o(e, t, n) {
-    var r;
-    var o;
-    return "Array" !== i.call(e).slice(8, -1) ? {
+    var r
+    var o
+    return "Array" !== $toString.call(e).slice(8, -1) ? {
       type: "Nothing"
     } : (r = t.of, {
       type: "Just",
       value: function () {
-        var t;
-        var i;
-        var a;
-        var s = [];
-        for (t = 0, a = (i = e).length; t < a; ++t) {
-          o = i[t];
-          s.push(c(o, r, n));
+        var t
+        var i
+        var /* [auto-meaningful-name] */iE$length
+        var s = []
+        for (t = 0, iE$length = (i = e).length; t < iE$length; ++t) {
+          o = i[t]
+          s.push(c(o, r, n))
         }
-        return s;
+        return s
       }()
-    });
+    })
   }
   function a(e, t, n) {
-    var r;
-    var o;
-    var a;
-    return "Object" !== i.call(e).slice(8, -1) ? {
+    var r
+    var o
+    var a
+    return "Object" !== $toString.call(e).slice(8, -1) ? {
       type: "Nothing"
     } : (r = t.of, {
       type: "Just",
       value: function () {
-        var t;
-        var i = {};
+        var t
+        var i = {}
         for (o in t = e) {
-          a = t[o];
+          a = t[o]
           i[c(o, [{
             type: "String"
           }], n)] = c(a, r[o] || [{
             type: "*"
-          }], n);
+          }], n)
         }
-        return i;
+        return i
       }()
-    });
+    })
   }
   function s(e, t, n) {
-    var s;
-    var u;
-    var l;
-    var f;
-    s = t.type;
-    u = t.structure;
-    if (s) {
-      if (!(l = (null != (f = n.customTypes[s]) ? f.cast : undefined) || r[s])) {
-        throw new Error("Type not defined: " + s + ".");
+    var /* [auto-meaningful-name] */t$type
+    var /* [auto-meaningful-name] */t$structure
+    var l
+    var f
+    t$type = t.type
+    t$structure = t.structure
+    if (t$type) {
+      if (!(l = (null != (f = n.customTypes[t$type]) ? f.cast : undefined) || r[t$type])) {
+        throw new Error("Type not defined: " + t$type + ".")
       }
-      return l(e, n, c);
+      return l(e, n, c)
     }
-    switch (u) {
+    switch (t$structure) {
       case "array":
-        return o(e, t, n);
+        return o(e, t, n)
       case "tuple":
         return function (e, t, n) {
-          var r;
-          var o;
-          var a;
-          var s;
-          var u;
-          var l;
-          var f;
-          if ("Array" !== i.call(e).slice(8, -1)) {
+          var r
+          var o
+          var a
+          var s
+          var /* [auto-meaningful-name] */sT$of$length
+          var l
+          var f
+          if ("Array" !== $toString.call(e).slice(8, -1)) {
             return {
               type: "Nothing"
-            };
-          }
-          for (r = [], o = 0, a = 0, u = (s = t.of).length; a < u; ++a) {
-            l = s[a];
-            f = c(e[o], l, n);
-            if ("Undefined" !== i.call(f).slice(8, -1)) {
-              r.push(f);
             }
-            o++;
+          }
+          for (r = [], o = 0, a = 0, sT$of$length = (s = t.of).length; a < sT$of$length; ++a) {
+            l = s[a]
+            f = c(e[o], l, n)
+            if ("Undefined" !== $toString.call(f).slice(8, -1)) {
+              r.push(f)
+            }
+            o++
           }
           return e.length <= o ? {
             type: "Just",
             value: r
           } : {
             type: "Nothing"
-          };
-        }(e, t, n);
+          }
+        }(e, t, n)
       case "fields":
-        return a(e, t, n);
+        return a(e, t, n)
     }
   }
   function c(e, n, r) {
-    var i;
-    var o;
-    var a;
-    var c;
-    var u;
-    var l;
-    for (i = 0, o = n.length; i < o; ++i) {
-      u = (c = s(e, a = n[i], r)).type;
-      l = c.value;
-      if ("Nothing" !== u && t([a], l, {
+    var i
+    var /* [auto-meaningful-name] */n$length
+    var a
+    var c
+    var /* [auto-meaningful-name] */cSEANIR$type
+    var /* [auto-meaningful-name] */c$value
+    for (i = 0, n$length = n.length; i < n$length; ++i) {
+      cSEANIR$type = (c = s(e, a = n[i], r)).type
+      c$value = c.value
+      if ("Nothing" !== cSEANIR$type && require$1348Index$parsedTypeCheck([a], c$value, {
         customTypes: r.customTypes
       })) {
-        return l;
+        return c$value
       }
     }
-    throw new Error("Value " + JSON.stringify(e) + " does not type check against " + JSON.stringify(n) + ".");
+    throw new Error("Value " + JSON.stringify(e) + " does not type check against " + JSON.stringify(n) + ".")
   }
-  t = require("./1348/index").parsedTypeCheck;
+  require$1348Index$parsedTypeCheck = require("./1348/index").parsedTypeCheck
   r = {
     "*": function (e, t) {
-      switch (i.call(e).slice(8, -1)) {
+      switch ($toString.call(e).slice(8, -1)) {
         case "Array":
           return s(e, {
             type: "Array"
-          }, t);
+          }, t)
         case "Object":
           return s(e, {
             type: "Object"
-          }, t);
+          }, t)
         default:
           return {
             type: "Just",
@@ -154,7 +154,7 @@
             }, {
               type: "String"
             }], (t.explicit = true, t))
-          };
+          }
       }
     },
     Undefined: function (e) {
@@ -163,7 +163,7 @@
         value: undefined
       } : {
         type: "Nothing"
-      };
+      }
     },
     Null: function (e) {
       return "null" === e ? {
@@ -171,23 +171,23 @@
         value: null
       } : {
         type: "Nothing"
-      };
+      }
     },
     NaN: function (e) {
       function t(t) {
-        return e.apply(this, arguments);
+        return e.apply(this, arguments)
       }
       t.toString = function () {
-        return e.toString();
-      };
-      return t;
+        return e.toString()
+      }
+      return t
     }(function (e) {
       return "NaN" === e ? {
         type: "Just",
         value: NaN
       } : {
         type: "Nothing"
-      };
+      }
     }),
     Boolean: function (e) {
       return "true" === e ? {
@@ -198,36 +198,36 @@
         value: false
       } : {
         type: "Nothing"
-      };
+      }
     },
     Number: function (e) {
       return {
         type: "Just",
         value: +e
-      };
+      }
     },
     Int: function (e) {
       return {
         type: "Just",
         value: +e
-      };
+      }
     },
     Float: function (e) {
       return {
         type: "Just",
         value: +e
-      };
+      }
     },
     Date: function (e) {
       function t(t, n) {
-        return e.apply(this, arguments);
+        return e.apply(this, arguments)
       }
       t.toString = function () {
-        return e.toString();
-      };
-      return t;
+        return e.toString()
+      }
+      return t
     }(function (e, t) {
-      var n;
+      var n
       return (n = /^\#([\s\S]*)\#$/.exec(e)) ? {
         type: "Just",
         value: new Date(+n[1] || n[1])
@@ -236,18 +236,18 @@
       } : {
         type: "Just",
         value: new Date(+e || e)
-      };
+      }
     }),
     RegExp: function (e) {
       function t(t, n) {
-        return e.apply(this, arguments);
+        return e.apply(this, arguments)
       }
       t.toString = function () {
-        return e.toString();
-      };
-      return t;
+        return e.toString()
+      }
+      return t
     }(function (e, t) {
-      var n;
+      var n
       return (n = /^\/([\s\S]*)\/([gimy]*)$/.exec(e)) ? {
         type: "Just",
         value: new RegExp(n[1], n[2])
@@ -256,23 +256,23 @@
       } : {
         type: "Just",
         value: new RegExp(e)
-      };
+      }
     }),
     Array: function (e, t) {
       return o(e, {
         of: [{
           type: "*"
         }]
-      }, t);
+      }, t)
     },
     Object: function (e, t) {
       return a(e, {
         of: {}
-      }, t);
+      }, t)
     },
     String: function (e) {
-      var t;
-      return "String" !== i.call(e).slice(8, -1) ? {
+      var t
+      return "String" !== $toString.call(e).slice(8, -1) ? {
         type: "Nothing"
       } : (t = e.match(/^'([\s\S]*)'$/)) ? {
         type: "Just",
@@ -283,8 +283,8 @@
       } : {
         type: "Just",
         value: e
-      };
+      }
     }
-  };
-  module.exports = c;
-}).call(this);
+  }
+  module.exports = c
+}).call(this)

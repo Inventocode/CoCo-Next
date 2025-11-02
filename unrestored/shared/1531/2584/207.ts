@@ -68,4 +68,4 @@ module.exports = {
   listInput: "style_listInput__ltggy",
   addBtnBox: "style_addBtnBox__2qCU5",
   addBtn: "style_addBtn__20jxQ"
-};
+}

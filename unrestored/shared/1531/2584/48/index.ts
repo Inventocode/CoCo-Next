@@ -4,12 +4,12 @@
  * 模块 ID：48
  */
 
-"use strict";
+"use strict"
 
-export { oe as b };
-export { ie as a };
+export { oe as b }
+export { ie as a }
 import r = require("../38/66");
-import o = require("redux");
+import Redux = require("redux");
 import i = require("../38/486/index");
 import a = require("../38/343");
 import s = require("../11");
@@ -17,102 +17,102 @@ import c = require("../6");
 import l = require("../676/70");
 import u = require("./72");
 function d(e, t) {
-  var n = t.id;
-  var r = t.key;
-  var o = t.value;
+  var n = t.id
+  var t$key = t.key
+  var t$value = t.value
   var i = e.findIndex(function (e) {
-    return e.id === n;
-  });
+    return e.id === n
+  })
   return i > -1 ? e.update(i, function (e) {
-    return c.a(c.a({}, e), {}, s.a({}, r, o));
-  }) : e;
+    return c.a(c.a({}, e), {}, s.a({}, t$key, t$value))
+  }) : e
 }
-var p = window.localStorage.getItem("LANGUAGE") || navigator.language;
-var f = o.combineReducers({
+var p = window.localStorage.getItem("LANGUAGE") || navigator.language
+var f = Redux.combineReducers({
   widgetMap: function () {
-    var e = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : r.a.Map({});
-    var t = arguments.length > 1 ? arguments[1] : undefined;
+    var e = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : r.a.Map({})
+    var t = arguments.length > 1 ? arguments[1] : undefined
     switch (t.type) {
       case u.k:
-        return e.delete(t.payload.id);
+        return e.delete(t.payload.id)
       case u.j:
-        return e.set(t.payload.id, t.payload.widget);
+        return e.set(t.payload.id, t.payload.widget)
       default:
-        return e;
+        return e
     }
   },
   screenList: function () {
-    var e = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : r.a.List([]);
-    var t = arguments.length > 1 ? arguments[1] : undefined;
+    var e = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : r.a.List([])
+    var t = arguments.length > 1 ? arguments[1] : undefined
     switch (t.type) {
       case u.l:
-        return d(e, t.payload);
+        return d(e, t.payload)
       default:
-        return e;
+        return e
     }
   },
   variableMap: function () {
-    var e = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : new Map();
-    var t = arguments.length > 1 ? arguments[1] : undefined;
-    t.type;
-    return e;
+    var e = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : new Map()
+    var t = arguments.length > 1 ? arguments[1] : undefined
+    t.type
+    return e
   },
   imageFileMap: function () {
-    var e = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : new Map();
-    var t = arguments.length > 1 ? arguments[1] : undefined;
-    t.type;
-    return e;
+    var e = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : new Map()
+    var t = arguments.length > 1 ? arguments[1] : undefined
+    t.type
+    return e
   },
   soundFileMap: function () {
-    var e = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : new Map();
-    var t = arguments.length > 1 ? arguments[1] : undefined;
-    t.type;
-    return e;
+    var e = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : new Map()
+    var t = arguments.length > 1 ? arguments[1] : undefined
+    t.type
+    return e
   },
   iconFileMap: function () {
-    var e = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : new Map();
-    var t = arguments.length > 1 ? arguments[1] : undefined;
-    t.type;
-    return e;
+    var e = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : new Map()
+    var t = arguments.length > 1 ? arguments[1] : undefined
+    t.type
+    return e
   },
   currentScreenId: function () {
-    var e = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : "";
-    var t = arguments.length > 1 ? arguments[1] : undefined;
+    var e = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : ""
+    var t = arguments.length > 1 ? arguments[1] : undefined
     switch (t.type) {
       case u.h:
-        return t.payload.navigator;
+        return t.payload.navigator
       default:
-        return e;
+        return e
     }
   },
   currentScreenParam: function () {
-    var e = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : "";
-    var t = arguments.length > 1 ? arguments[1] : undefined;
+    var e = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : ""
+    var t = arguments.length > 1 ? arguments[1] : undefined
     switch (t.type) {
       case u.i:
-        return t.payload.param;
+        return t.payload.param
       default:
-        return e;
+        return e
     }
   },
   httpClientMap: function () {
-    var e = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : new Map();
-    var t = arguments.length > 1 ? arguments[1] : undefined;
-    t.type;
-    return e;
+    var e = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : new Map()
+    var t = arguments.length > 1 ? arguments[1] : undefined
+    t.type
+    return e
   },
   mediaMap: function () {
     var e = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : {
       cameraDirection: 0
-    };
-    var t = arguments.length > 1 ? arguments[1] : undefined;
+    }
+    var t = arguments.length > 1 ? arguments[1] : undefined
     switch (t.type) {
       case u.f:
         return c.a({
           state: e
-        }, t.payload);
+        }, t.payload)
       default:
-        return e;
+        return e
     }
   },
   emulatorPhoneInfo: function () {
@@ -132,35 +132,35 @@ var f = o.combineReducers({
       sendSmsContent: "",
       receiveSmsNumber: "",
       receiveSmsContent: ""
-    };
-    var t = arguments.length > 1 ? arguments[1] : undefined;
+    }
+    var t = arguments.length > 1 ? arguments[1] : undefined
     switch (t.type) {
       case u.g:
-        return c.a(c.a({}, e), t.payload);
+        return c.a(c.a({}, e), t.payload)
       default:
-        return e;
+        return e
     }
   },
   language: function () {
-    var e = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : p;
-    var t = arguments.length > 1 ? arguments[1] : undefined;
-    t.type;
-    return e;
+    var e = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : p
+    var t = arguments.length > 1 ? arguments[1] : undefined
+    t.type
+    return e
   }
-});
-import h = require("regenerator-runtime");
+})
+import RegeneratorRuntime = require("regenerator-runtime");
 var m = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
-    return module.default;
+    return module.default
   } : function () {
-    return module;
-  };
+    return module
+  }
   Object.defineProperty(defaultExport, "a", {
     enumerable: true,
     get: defaultExport
-  });
-  return defaultExport;
-}(h);
+  })
+  return defaultExport
+}(RegeneratorRuntime)
 import g = require("../38/3");
 import _ = require("../7");
 import v = require("./209");
@@ -169,168 +169,168 @@ import y = require("../14");
 import E = require("./87");
 import O = require("../28/index");
 import w = require("./119/index");
-var C = "".concat(b.a.serverHost, "/coconut");
-var T = O.e() ? 0 : 1;
+var C = "".concat(b.a.serverHost, "/coconut")
+var T = O.e() ? 0 : 1
 function S(e) {
-  return I.apply(this, arguments);
+  return I.apply(this, arguments)
 }
 function I() {
   return (I = _.a(m.a.mark(function e(t) {
-    var n;
-    var r;
-    var o;
-    var i;
-    var a;
+    var /* [auto-meaningful-name] */_e$sent2
+    var /* [auto-meaningful-name] */e$sent$sign
+    var /* [auto-meaningful-name] */e$sent$timestamp
+    var /* [auto-meaningful-name] */e$sent
+    var /* [auto-meaningful-name] */e$sent$data
     return m.a.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
-            e.prev = 0;
-            e.next = 3;
-            return w.a("dictId=".concat(t));
+            e.prev = 0
+            e.next = 3
+            return w.a("dictId=".concat(t))
           case 3:
-            n = e.sent;
-            r = n.sign;
-            o = n.timestamp;
-            e.next = 8;
+            _e$sent2 = e.sent
+            e$sent$sign = _e$sent2.sign
+            e$sent$timestamp = _e$sent2.timestamp
+            e.next = 8
             return v.a.get(C + "/webdb/try/dict/".concat(t, "/keys"), {
               headers: c.a({
                 env: T,
-                sign: r,
-                timestamp: o
+                sign: e$sent$sign,
+                timestamp: e$sent$timestamp
               }, E.a())
-            });
+            })
           case 8:
-            if (i = e.sent, 200 !== (a = i.data).code) {
-              e.next = 12;
-              break;
+            if (e$sent = e.sent, 200 !== (e$sent$data = e$sent.data).code) {
+              e.next = 12
+              break
             }
-            return e.abrupt("return", a.data);
+            return e.abrupt("return", e$sent$data.data)
           case 12:
             y.a.condition(false, {
               type: "error",
               message: "网络通讯异常，无法获取所有键或者键值对个数"
-            });
-            throw new TypeError(a.msg);
+            })
+            throw new TypeError(e$sent$data.msg)
           case 16:
             if (e.prev = 16, e.t0 = e.catch(0), !(e.t0 instanceof TypeError)) {
-              e.next = 20;
-              break;
+              e.next = 20
+              break
             }
-            throw e.t0;
+            throw e.t0
           case 20:
             y.a.condition(false, {
               type: "error",
               message: "网络通讯异常，无法获取所有键或者键值对个数"
-            });
-            throw new Error("网络错误");
+            })
+            throw new Error("网络错误")
           case 22:
           case "end":
-            return e.stop();
+            return e.stop()
         }
       }
-    }, e, null, [[0, 16]]);
-  }))).apply(this, arguments);
+    }, e, null, [[0, 16]])
+  }))).apply(this, arguments)
 }
 function A(e) {
-  return j.apply(this, arguments);
+  return j.apply(this, arguments)
 }
 function j() {
   return (j = _.a(m.a.mark(function e(t) {
-    var n;
-    var r;
-    var o;
-    var i;
-    var a;
+    var /* [auto-meaningful-name] */_e$sent4
+    var /* [auto-meaningful-name] */e$sent$sign
+    var /* [auto-meaningful-name] */e$sent$timestamp
+    var /* [auto-meaningful-name] */e$sent
+    var /* [auto-meaningful-name] */e$sent$data
     return m.a.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
-            e.prev = 0;
-            e.next = 3;
-            return w.a("dictId=".concat(t));
+            e.prev = 0
+            e.next = 3
+            return w.a("dictId=".concat(t))
           case 3:
-            n = e.sent;
-            r = n.sign;
-            o = n.timestamp;
-            e.next = 8;
+            _e$sent4 = e.sent
+            e$sent$sign = _e$sent4.sign
+            e$sent$timestamp = _e$sent4.timestamp
+            e.next = 8
             return v.a.delete(C + "/webdb/try/dict/clear/".concat(t), {
               headers: c.a({
                 env: T,
-                sign: r,
-                timestamp: o
+                sign: e$sent$sign,
+                timestamp: e$sent$timestamp
               }, E.a())
-            });
+            })
           case 8:
-            if (i = e.sent, 200 !== (a = i.data).code) {
-              e.next = 12;
-              break;
+            if (e$sent = e.sent, 200 !== (e$sent$data = e$sent.data).code) {
+              e.next = 12
+              break
             }
-            return e.abrupt("return", a.success);
+            return e.abrupt("return", e$sent$data.success)
           case 12:
             y.a.condition(false, {
               type: "error",
               message: "无法清空所有键值对"
-            });
-            throw new TypeError(a.msg);
+            })
+            throw new TypeError(e$sent$data.msg)
           case 16:
             if (e.prev = 16, e.t0 = e.catch(0), !(e.t0 instanceof TypeError)) {
-              e.next = 20;
-              break;
+              e.next = 20
+              break
             }
-            throw e.t0;
+            throw e.t0
           case 20:
             y.a.condition(false, {
               type: "error",
               message: "网络通讯异常，无法清空所有键值对"
-            });
-            throw new Error("网络错误");
+            })
+            throw new Error("网络错误")
           case 22:
           case "end":
-            return e.stop();
+            return e.stop()
         }
       }
-    }, e, null, [[0, 16]]);
-  }))).apply(this, arguments);
+    }, e, null, [[0, 16]])
+  }))).apply(this, arguments)
 }
 function N(e, t, n) {
-  return R.apply(this, arguments);
+  return R.apply(this, arguments)
 }
 function R() {
   return (R = _.a(m.a.mark(function e(t, n, r) {
-    var o;
-    var i;
-    var a;
-    var s;
-    var l;
+    var /* [auto-meaningful-name] */_e$sent6
+    var /* [auto-meaningful-name] */e$sent$sign
+    var /* [auto-meaningful-name] */e$sent$timestamp
+    var /* [auto-meaningful-name] */e$sent
+    var /* [auto-meaningful-name] */e$sent$data
     return m.a.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
-            e.prev = 0;
-            e.next = 3;
-            return w.a("dictId=".concat(t, "&key=").concat(n));
+            e.prev = 0
+            e.next = 3
+            return w.a("dictId=".concat(t, "&key=").concat(n))
           case 3:
-            o = e.sent;
-            i = o.sign;
-            a = o.timestamp;
-            e.next = 8;
+            _e$sent6 = e.sent
+            e$sent$sign = _e$sent6.sign
+            e$sent$timestamp = _e$sent6.timestamp
+            e.next = 8
             return v.a.get(C + "/webdb/try/dict/".concat(t, "/getvalue"), {
               params: {
                 key: n
               },
               headers: c.a({
                 env: T,
-                sign: i,
-                timestamp: a
+                sign: e$sent$sign,
+                timestamp: e$sent$timestamp
               }, E.a())
-            });
+            })
           case 8:
-            if (s = e.sent, 200 !== (l = s.data).code) {
-              e.next = 12;
-              break;
+            if (e$sent = e.sent, 200 !== (e$sent$data = e$sent.data).code) {
+              e.next = 12
+              break
             }
-            return e.abrupt("return", l.data);
+            return e.abrupt("return", e$sent$data.data)
           case 12:
             if (r && y.a.condition(false, {
               type: "error",
@@ -338,19 +338,19 @@ function R() {
               values: {
                 key: n
               }
-            }), 40400912 !== l.code) {
-              e.next = 15;
-              break;
+            }), 40400912 !== e$sent$data.code) {
+              e.next = 15
+              break
             }
-            return e.abrupt("return", []);
+            return e.abrupt("return", [])
           case 15:
-            throw new TypeError(l.msg);
+            throw new TypeError(e$sent$data.msg)
           case 18:
             if (e.prev = 18, e.t0 = e.catch(0), !(e.t0 instanceof TypeError)) {
-              e.next = 22;
-              break;
+              e.next = 22
+              break
             }
-            throw e.t0;
+            throw e.t0
           case 22:
             y.a.condition(false, {
               type: "error",
@@ -359,44 +359,44 @@ function R() {
                 type: "获取",
                 key: n
               }
-            });
-            throw new Error("网络错误");
+            })
+            throw new Error("网络错误")
           case 24:
           case "end":
-            return e.stop();
+            return e.stop()
         }
       }
-    }, e, null, [[0, 18]]);
-  }))).apply(this, arguments);
+    }, e, null, [[0, 18]])
+  }))).apply(this, arguments)
 }
 function k(e, t, n, r) {
-  return x.apply(this, arguments);
+  return x.apply(this, arguments)
 }
 function x() {
   return (x = _.a(m.a.mark(function e(t, n, r, o) {
-    var i;
-    var a;
-    var s;
-    var l;
-    var u;
-    var d;
+    var i
+    var /* [auto-meaningful-name] */_e$sent0
+    var /* [auto-meaningful-name] */e$sent$sign
+    var /* [auto-meaningful-name] */e$sent$timestamp
+    var /* [auto-meaningful-name] */e$sent
+    var /* [auto-meaningful-name] */e$sent$data
     return m.a.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
-            e.prev = 0;
+            e.prev = 0
             i = {
               key: n.toString(),
               type: o,
               value: r.toString()
-            };
-            e.next = 4;
-            return w.a("".concat(JSON.stringify(i)));
+            }
+            e.next = 4
+            return w.a("".concat(JSON.stringify(i)))
           case 4:
-            a = e.sent;
-            s = a.sign;
-            l = a.timestamp;
-            e.next = 9;
+            _e$sent0 = e.sent
+            e$sent$sign = _e$sent0.sign
+            e$sent$timestamp = _e$sent0.timestamp
+            e.next = 9
             return v.a.post(C + "/webdb/try/dict/".concat(t, "/set"), {
               key: n,
               type: o,
@@ -404,22 +404,22 @@ function x() {
             }, {
               headers: c.a({
                 env: T,
-                sign: s,
-                timestamp: l
+                sign: e$sent$sign,
+                timestamp: e$sent$timestamp
               }, E.a())
-            });
+            })
           case 9:
-            if (u = e.sent, 200 !== (d = u.data).code) {
-              e.next = 13;
-              break;
+            if (e$sent = e.sent, 200 !== (e$sent$data = e$sent.data).code) {
+              e.next = 13
+              break
             }
-            return e.abrupt("return", d.success);
+            return e.abrupt("return", e$sent$data.success)
           case 13:
-            if (40400914 === d.code) {
+            if (40400914 === e$sent$data.code) {
               y.a.condition(false, {
                 type: "error",
-                message: d.msg
-              });
+                message: e$sent$data.msg
+              })
             } else {
               y.a.condition(false, {
                 type: "error",
@@ -427,15 +427,15 @@ function x() {
                 values: {
                   key: n
                 }
-              });
+              })
             }
-            throw new TypeError(d.msg);
+            throw new TypeError(e$sent$data.msg)
           case 17:
             if (e.prev = 17, e.t0 = e.catch(0), !(e.t0 instanceof TypeError)) {
-              e.next = 21;
-              break;
+              e.next = 21
+              break
             }
-            throw e.t0;
+            throw e.t0
           case 21:
             y.a.condition(false, {
               type: "error",
@@ -444,51 +444,51 @@ function x() {
                 type: "添加或者更新",
                 key: n
               }
-            });
-            throw new Error("与服务器通讯出现错误时，通讯网络问题");
+            })
+            throw new Error("与服务器通讯出现错误时，通讯网络问题")
           case 23:
           case "end":
-            return e.stop();
+            return e.stop()
         }
       }
-    }, e, null, [[0, 17]]);
-  }))).apply(this, arguments);
+    }, e, null, [[0, 17]])
+  }))).apply(this, arguments)
 }
 function D(e, t, n) {
-  return M.apply(this, arguments);
+  return M.apply(this, arguments)
 }
 function M() {
   return (M = _.a(m.a.mark(function e(t, n, r) {
-    var o;
-    var i;
-    var a;
-    var s;
-    var l;
+    var /* [auto-meaningful-name] */_e$sent12
+    var /* [auto-meaningful-name] */e$sent$sign
+    var /* [auto-meaningful-name] */e$sent$timestamp
+    var /* [auto-meaningful-name] */e$sent
+    var /* [auto-meaningful-name] */e$sent$data
     return m.a.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
-            e.prev = 0;
-            e.next = 3;
-            return w.a("dictId=".concat(t, "&id=").concat(r, "&key=").concat(n));
+            e.prev = 0
+            e.next = 3
+            return w.a("dictId=".concat(t, "&id=").concat(r, "&key=").concat(n))
           case 3:
-            o = e.sent;
-            i = o.sign;
-            a = o.timestamp;
-            e.next = 8;
+            _e$sent12 = e.sent
+            e$sent$sign = _e$sent12.sign
+            e$sent$timestamp = _e$sent12.timestamp
+            e.next = 8
             return v.a.delete(C + "/webdb/try/dict/".concat(t, "/remove?key=").concat(n, "&id=").concat(r), {
               headers: c.a({
                 env: T,
-                sign: i,
-                timestamp: a
+                sign: e$sent$sign,
+                timestamp: e$sent$timestamp
               }, E.a())
-            });
+            })
           case 8:
-            if (s = e.sent, 200 !== (l = s.data).code) {
-              e.next = 12;
-              break;
+            if (e$sent = e.sent, 200 !== (e$sent$data = e$sent.data).code) {
+              e.next = 12
+              break
             }
-            return e.abrupt("return", l.success);
+            return e.abrupt("return", e$sent$data.success)
           case 12:
             y.a.condition(false, {
               type: "error",
@@ -496,14 +496,14 @@ function M() {
               values: {
                 key: n
               }
-            });
-            throw new TypeError(l.msg);
+            })
+            throw new TypeError(e$sent$data.msg)
           case 16:
             if (e.prev = 16, e.t0 = e.catch(0), !(e.t0 instanceof TypeError)) {
-              e.next = 20;
-              break;
+              e.next = 20
+              break
             }
-            throw e.t0;
+            throw e.t0
           case 20:
             y.a.condition(false, {
               type: "error",
@@ -512,188 +512,188 @@ function M() {
                 type: "删除",
                 key: n
               }
-            });
-            throw new Error("与服务器通讯出现错误时，通讯网络问题");
+            })
+            throw new Error("与服务器通讯出现错误时，通讯网络问题")
           case 22:
           case "end":
-            return e.stop();
+            return e.stop()
         }
       }
-    }, e, null, [[0, 16]]);
-  }))).apply(this, arguments);
+    }, e, null, [[0, 16]])
+  }))).apply(this, arguments)
 }
-var L = m.a.mark(V);
-var P = m.a.mark(z);
-var B = m.a.mark(Y);
-var F = m.a.mark(K);
-var G = m.a.mark(q);
-var U = m.a.mark(Q);
-var W = m.a.mark(Z);
-var H = m.a.mark(J);
+var L = m.a.mark(V)
+var P = m.a.mark(z)
+var B = m.a.mark(Y)
+var F = m.a.mark(K)
+var G = m.a.mark(q)
+var U = m.a.mark(Q)
+var W = m.a.mark(Z)
+var H = m.a.mark(J)
 function V(e) {
-  var t;
-  var n;
-  var r;
-  var o;
-  var i;
-  var a;
-  var s;
-  var c;
+  var /* [auto-meaningful-name] */e$resolve
+  var /* [auto-meaningful-name] */e$reject
+  var /* [auto-meaningful-name] */e$payload
+  var /* [auto-meaningful-name] */e$payload$documentId
+  var /* [auto-meaningful-name] */e$payload$key
+  var /* [auto-meaningful-name] */e$payload$value
+  var /* [auto-meaningful-name] */e$payload$fieldType
+  var /* [auto-meaningful-name] */l$sent
   return m.a.wrap(function (l) {
     for (;;) {
       switch (l.prev = l.next) {
         case 0:
-          t = e.resolve;
-          n = e.reject;
-          r = e.payload;
-          o = r.documentId;
-          i = r.key;
-          a = r.value;
-          s = r.fieldType;
-          l.prev = 2;
-          l.next = 5;
-          return g.b(k, o, i, a, s);
+          e$resolve = e.resolve
+          e$reject = e.reject
+          e$payload = e.payload
+          e$payload$documentId = e$payload.documentId
+          e$payload$key = e$payload.key
+          e$payload$value = e$payload.value
+          e$payload$fieldType = e$payload.fieldType
+          l.prev = 2
+          l.next = 5
+          return g.b(k, e$payload$documentId, e$payload$key, e$payload$value, e$payload$fieldType)
         case 5:
-          c = l.sent;
-          return l.abrupt("return", t(c));
+          l$sent = l.sent
+          return l.abrupt("return", e$resolve(l$sent))
         case 9:
-          l.prev = 9;
-          l.t0 = l.catch(2);
-          n(l.t0.message);
+          l.prev = 9
+          l.t0 = l.catch(2)
+          e$reject(l.t0.message)
         case 12:
         case "end":
-          return l.stop();
+          return l.stop()
       }
     }
-  }, L, null, [[2, 9]]);
+  }, L, null, [[2, 9]])
 }
 function z(e) {
-  var t;
-  var n;
-  var r;
-  var o;
-  var i;
-  var a;
-  var s;
+  var /* [auto-meaningful-name] */e$resolve
+  var /* [auto-meaningful-name] */e$reject
+  var /* [auto-meaningful-name] */e$payload
+  var /* [auto-meaningful-name] */e$payload$documentId
+  var /* [auto-meaningful-name] */e$payload$key
+  var /* [auto-meaningful-name] */e$payload$id
+  var /* [auto-meaningful-name] */c$sent
   return m.a.wrap(function (c) {
     for (;;) {
       switch (c.prev = c.next) {
         case 0:
-          t = e.resolve;
-          n = e.reject;
-          r = e.payload;
-          o = r.documentId;
-          i = r.key;
-          a = r.id;
-          c.prev = 2;
-          c.next = 5;
-          return g.b(D, o, i, a);
+          e$resolve = e.resolve
+          e$reject = e.reject
+          e$payload = e.payload
+          e$payload$documentId = e$payload.documentId
+          e$payload$key = e$payload.key
+          e$payload$id = e$payload.id
+          c.prev = 2
+          c.next = 5
+          return g.b(D, e$payload$documentId, e$payload$key, e$payload$id)
         case 5:
-          s = c.sent;
-          return c.abrupt("return", t(s));
+          c$sent = c.sent
+          return c.abrupt("return", e$resolve(c$sent))
         case 9:
-          c.prev = 9;
-          c.t0 = c.catch(2);
-          n(c.t0.message);
+          c.prev = 9
+          c.t0 = c.catch(2)
+          e$reject(c.t0.message)
         case 12:
         case "end":
-          return c.stop();
+          return c.stop()
       }
     }
-  }, P, null, [[2, 9]]);
+  }, P, null, [[2, 9]])
 }
 function Y(e) {
-  var t;
-  var n;
-  var r;
-  var o;
+  var /* [auto-meaningful-name] */e$resolve
+  var /* [auto-meaningful-name] */e$reject
+  var /* [auto-meaningful-name] */e$payload$documentId
+  var /* [auto-meaningful-name] */i$sent
   return m.a.wrap(function (i) {
     for (;;) {
       switch (i.prev = i.next) {
         case 0:
-          t = e.resolve;
-          n = e.reject;
-          r = e.payload.documentId;
-          i.prev = 2;
-          i.next = 5;
-          return g.b(A, r);
+          e$resolve = e.resolve
+          e$reject = e.reject
+          e$payload$documentId = e.payload.documentId
+          i.prev = 2
+          i.next = 5
+          return g.b(A, e$payload$documentId)
         case 5:
-          o = i.sent;
-          return i.abrupt("return", t(o));
+          i$sent = i.sent
+          return i.abrupt("return", e$resolve(i$sent))
         case 9:
-          i.prev = 9;
-          i.t0 = i.catch(2);
-          n(i.t0.message);
+          i.prev = 9
+          i.t0 = i.catch(2)
+          e$reject(i.t0.message)
         case 12:
         case "end":
-          return i.stop();
+          return i.stop()
       }
     }
-  }, B, null, [[2, 9]]);
+  }, B, null, [[2, 9]])
 }
 function K(e) {
-  var t;
-  var n;
-  var r;
-  var o;
-  var i;
-  var a;
-  var s;
+  var /* [auto-meaningful-name] */e$resolve
+  var /* [auto-meaningful-name] */e$reject
+  var /* [auto-meaningful-name] */e$payload
+  var /* [auto-meaningful-name] */e$payload$documentId
+  var /* [auto-meaningful-name] */e$payload$key
+  var /* [auto-meaningful-name] */e$payload$isConsole
+  var /* [auto-meaningful-name] */c$sent
   return m.a.wrap(function (c) {
     for (;;) {
       switch (c.prev = c.next) {
         case 0:
-          t = e.resolve;
-          n = e.reject;
-          r = e.payload;
-          o = r.documentId;
-          i = r.key;
-          a = r.isConsole;
-          c.prev = 2;
-          c.next = 5;
-          return g.b(N, o, i, a);
+          e$resolve = e.resolve
+          e$reject = e.reject
+          e$payload = e.payload
+          e$payload$documentId = e$payload.documentId
+          e$payload$key = e$payload.key
+          e$payload$isConsole = e$payload.isConsole
+          c.prev = 2
+          c.next = 5
+          return g.b(N, e$payload$documentId, e$payload$key, e$payload$isConsole)
         case 5:
-          s = c.sent;
-          return c.abrupt("return", t(s));
+          c$sent = c.sent
+          return c.abrupt("return", e$resolve(c$sent))
         case 9:
-          c.prev = 9;
-          c.t0 = c.catch(2);
-          n(c.t0.message);
+          c.prev = 9
+          c.t0 = c.catch(2)
+          e$reject(c.t0.message)
         case 12:
         case "end":
-          return c.stop();
+          return c.stop()
       }
     }
-  }, F, null, [[2, 9]]);
+  }, F, null, [[2, 9]])
 }
 function q(e) {
-  var t;
-  var n;
-  var r;
-  var o;
+  var /* [auto-meaningful-name] */e$resolve
+  var /* [auto-meaningful-name] */e$reject
+  var /* [auto-meaningful-name] */e$payload$documentId
+  var /* [auto-meaningful-name] */i$sent
   return m.a.wrap(function (i) {
     for (;;) {
       switch (i.prev = i.next) {
         case 0:
-          t = e.resolve;
-          n = e.reject;
-          r = e.payload.documentId;
-          i.prev = 2;
-          i.next = 5;
-          return g.b(S, r);
+          e$resolve = e.resolve
+          e$reject = e.reject
+          e$payload$documentId = e.payload.documentId
+          i.prev = 2
+          i.next = 5
+          return g.b(S, e$payload$documentId)
         case 5:
-          o = i.sent;
-          return i.abrupt("return", t(o));
+          i$sent = i.sent
+          return i.abrupt("return", e$resolve(i$sent))
         case 9:
-          i.prev = 9;
-          i.t0 = i.catch(2);
-          n(i.t0.message);
+          i.prev = 9
+          i.t0 = i.catch(2)
+          e$reject(i.t0.message)
         case 12:
         case "end":
-          return i.stop();
+          return i.stop()
       }
     }
-  }, G, null, [[2, 9]]);
+  }, G, null, [[2, 9]])
 }
 var X = {
   ASYNC_SET_CLOUD_DOC_FIELD_VALUE: V,
@@ -701,93 +701,93 @@ var X = {
   ASYNC_DELETE_CLOUD_DOC_FIELD_VALUE: z,
   ASYNC_GET_CLOUD_DOC_FIELD_VALUE: K,
   ASYNC_GET_CLOUD_DOC_ALL_FIELD_VALUE: q
-};
+}
 function Q() {
   return m.a.wrap(function (e) {
     for (;;) {
       switch (e.prev = e.next) {
         case 0:
-          e.next = 2;
-          return g.g([u.a, u.b, u.d, u.c, u.e], Z);
+          e.next = 2
+          return g.g([u.a, u.b, u.d, u.c, u.e], Z)
         case 2:
         case "end":
-          return e.stop();
+          return e.stop()
       }
     }
-  }, U);
+  }, U)
 }
 function Z(e) {
-  var t;
+  var t
   return m.a.wrap(function (n) {
     for (;;) {
       switch (n.prev = n.next) {
         case 0:
           if (!(t = X[e.type])) {
-            n.next = 4;
-            break;
+            n.next = 4
+            break
           }
-          n.next = 4;
-          return g.b(t, e);
+          n.next = 4
+          return g.b(t, e)
         case 4:
         case "end":
-          return n.stop();
+          return n.stop()
       }
     }
-  }, W);
+  }, W)
 }
 function J() {
   return m.a.wrap(function (e) {
     for (;;) {
       switch (e.prev = e.next) {
         case 0:
-          e.next = 2;
-          return g.a([g.d(Q)]);
+          e.next = 2
+          return g.a([g.d(Q)])
         case 2:
         case "end":
-          return e.stop();
+          return e.stop()
       }
     }
-  }, H);
+  }, H)
 }
-var $;
-var ee = i.a();
-var te = o.createStore(f);
-var ne = false;
+var $
+var ee = i.a()
+var te = Redux.createStore(f)
+var ne = false
 try {
-  $ = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || window.compose;
-  ne = false;
+  $ = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || window.compose
+  ne = false
 } catch (ae) {
-  $ = undefined;
+  $ = undefined
 }
 function re(e) {
-  var t = new Map();
-  for (var n in e) t.set(n, e[n]);
-  return t;
+  var t = new Map()
+  for (var n in e) t.set(n, e[n])
+  return t
 }
 function oe(e) {
-  var t = e.screenList;
-  var n = e.widgetMap;
-  var i = e.variableMap;
-  var s = e.imageFileMap;
-  var c = e.soundFileMap;
-  var l = e.iconFileMap;
-  var u = e.initialScreenId;
-  var d = e.version;
-  a.c(n, d);
+  var e$screenList = e.screenList
+  var e$widgetMap = e.widgetMap
+  var e$variableMap = e.variableMap
+  var e$imageFileMap = e.imageFileMap
+  var e$soundFileMap = e.soundFileMap
+  var e$iconFileMap = e.iconFileMap
+  var e$initialScreenId = e.initialScreenId
+  var e$version = e.version
+  a.c(e$widgetMap, e$version)
   var p = {
-    screenList: r.a.List(t),
-    widgetMap: r.a.Map(n),
-    variableMap: i ? re(i) : undefined,
-    imageFileMap: s ? re(s) : undefined,
-    soundFileMap: c ? re(c) : undefined,
-    iconFileMap: l ? re(l) : undefined,
-    currentScreenId: u
-  };
-  te = ne && $ ? o.createStore(f, p, $(o.applyMiddleware(ee))) : o.createStore(f, p, o.applyMiddleware(ee));
-  ee.run(J);
-  return te;
+    screenList: r.a.List(e$screenList),
+    widgetMap: r.a.Map(e$widgetMap),
+    variableMap: e$variableMap ? re(e$variableMap) : undefined,
+    imageFileMap: e$imageFileMap ? re(e$imageFileMap) : undefined,
+    soundFileMap: e$soundFileMap ? re(e$soundFileMap) : undefined,
+    iconFileMap: e$iconFileMap ? re(e$iconFileMap) : undefined,
+    currentScreenId: e$initialScreenId
+  }
+  te = ne && $ ? Redux.createStore(f, p, $(Redux.applyMiddleware(ee))) : Redux.createStore(f, p, Redux.applyMiddleware(ee))
+  ee.run(J)
+  return te
 }
 function ie() {
-  return te;
+  return te
 }
-export default ie;
+export default ie

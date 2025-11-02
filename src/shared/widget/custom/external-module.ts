@@ -1,127 +1,127 @@
-"use strict";
+"use strict"
 
 export { callMethod } from "../../../../unrestored/shared/1531/2584/21/index"
 export { getProperty } from "../../../../unrestored/shared/1531/2584/21/index"
 export { onWidgetEvent } from "../../../../unrestored/shared/1531/2584/21/index"
 export { setProperty } from "../../../../unrestored/shared/1531/2584/21/index"
-var HTTP = {};
+var HTTP = {}
 Object.defineProperty(HTTP, "setHeader", {
   get: function () {
-    return v;
+    return v
   }
-});
+})
 Object.defineProperty(HTTP, "setDataSerializer", {
   get: function () {
-    return b;
+    return b
   }
-});
+})
 Object.defineProperty(HTTP, "setRequestTimeout", {
   get: function () {
-    return y;
+    return y
   }
-});
+})
 Object.defineProperty(HTTP, "getCookieString", {
   get: function () {
-    return E;
+    return E
   }
-});
+})
 Object.defineProperty(HTTP, "setCookie", {
   get: function () {
-    return O;
+    return O
   }
-});
+})
 Object.defineProperty(HTTP, "clearCookies", {
   get: function () {
-    return w;
+    return w
   }
-});
+})
 Object.defineProperty(HTTP, "removeCookies", {
   get: function () {
-    return C;
+    return C
   }
-});
+})
 Object.defineProperty(HTTP, "post", {
   get: function () {
-    return S;
+    return S
   }
-});
+})
 Object.defineProperty(HTTP, "get", {
   get: function () {
-    return I;
+    return I
   }
-});
+})
 Object.defineProperty(HTTP, "put", {
   get: function () {
-    return A;
+    return A
   }
-});
+})
 Object.defineProperty(HTTP, "patch", {
   get: function () {
-    return j;
+    return j
   }
-});
+})
 Object.defineProperty(HTTP, "head", {
   get: function () {
-    return N;
+    return N
   }
-});
+})
 Object.defineProperty(HTTP, "options", {
   get: function () {
-    return R;
+    return R
   }
-});
+})
 Object.defineProperty(HTTP, "downloadFile", {
   get: function () {
-    return k;
+    return k
   }
-});
+})
 Object.defineProperty(HTTP, "uploadFile", {
   get: function () {
-    return x;
+    return x
   }
-});
+})
 Object.defineProperty(HTTP, "abort", {
   get: function () {
-    return D;
+    return D
   }
-});
-var WebSocket = {};
+})
+var WebSocket = {}
 Object.defineProperty(WebSocket, "wsConnect", {
   get: function () {
-    return G;
+    return G
   }
-});
+})
 Object.defineProperty(WebSocket, "wsSend", {
   get: function () {
-    return U;
+    return U
   }
-});
+})
 Object.defineProperty(WebSocket, "wsClose", {
   get: function () {
-    return W;
+    return W
   }
-});
-var Stepper = {};
+})
+var Stepper = {}
 Object.defineProperty(Stepper, "isStepCountingAvailable", {
   get: function () {
-    return V;
+    return V
   }
-});
+})
 Object.defineProperty(Stepper, "requestPermission", {
   get: function () {
-    return z;
+    return z
   }
-});
+})
 Object.defineProperty(Stepper, "startStepperUpdates", {
   get: function () {
-    return Y;
+    return Y
   }
-});
+})
 Object.defineProperty(Stepper, "stopStepperUpdates", {
   get: function () {
-    return K;
+    return K
   }
-});
+})
 import LoDash from "lodash"
 import QRCode from "qrcode"
 import { Vika } from "@vikadata/vika"
@@ -129,198 +129,198 @@ import Color from "color"
 import HTML2Canvas from "html2canvas"
 import * as AntdMobile from "antd-mobile"
 import * as Pedometer from "../../../../unrestored/shared/1531/2584/36/345/392"
-var _ = window.cordova && window.cordova.plugin && window.cordova.plugin.http || {};
+var _ = window.cordova && window.cordova.plugin && window.cordova.plugin.http || {}
 function v(e, t, n) {
-  _.setHeader(e, t, n);
+  _.setHeader(e, t, n)
 }
 function b(e) {
-  _.setDataSerializer(e);
+  _.setDataSerializer(e)
 }
 function y(e) {
-  _.setRequestTimeout(e);
+  _.setRequestTimeout(e)
 }
 function E(e) {
-  return _.getCookieString(e);
+  return _.getCookieString(e)
 }
 function O(e, t, n) {
-  _.setCookie(e, t, n || {});
+  _.setCookie(e, t, n || {})
 }
 function w() {
-  _.clearCookies();
+  _.clearCookies()
 }
 function C(e, t) {
-  _.removeCookies(e, t);
+  _.removeCookies(e, t)
 }
 function T() {}
 function S(e, t, n, r, o) {
-  return _.post(e, t, n, r || T, o || T);
+  return _.post(e, t, n, r || T, o || T)
 }
 function I(e, t, n, r, o) {
-  return _.get(e, t || {}, n || {}, r || T, o || T);
+  return _.get(e, t || {}, n || {}, r || T, o || T)
 }
 function A(e, t, n, r, o) {
-  return _.put(e, t, n, r || T, o || T);
+  return _.put(e, t, n, r || T, o || T)
 }
 function j(e, t, n, r, o) {
-  return _.patch(e, t, n, r || T, o || T);
+  return _.patch(e, t, n, r || T, o || T)
 }
 function N(e, t, n, r, o) {
-  return _.head(e, t, n, r || T, o || T);
+  return _.head(e, t, n, r || T, o || T)
 }
 function R(e, t, n, r, o) {
-  return _.options(e, t, n, r || T, o || T);
+  return _.options(e, t, n, r || T, o || T)
 }
 function k(e, t, n, r, o, i) {
-  return _.downloadFile(e, t, n, r, o || T, i || T);
+  return _.downloadFile(e, t, n, r, o || T, i || T)
 }
 function x(e, t, n, r, o, i, a) {
-  return _.uploadFile(e, t, n, r, o, i || T, a || T);
+  return _.uploadFile(e, t, n, r, o, i || T, a || T)
 }
 function D(e) {
-  return _.abort(e);
+  return _.abort(e)
 }
 import * as M from "../../../../unrestored/shared/1531/2584/28/index"
 if (!M.d()) {
-  var L = {};
+  var L = {}
   var P = function (e) {
-    var t = L[e];
-    t.onmessage = undefined;
-    t.onclose = undefined;
-    L[e] = undefined;
-  };
+    var t = L[e]
+    t.onmessage = undefined
+    t.onclose = undefined
+    L[e] = undefined
+  }
   var B = {
     wsConnect: function (e, t, n, r) {
-      var o;
-      var i = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
-      var a = new WebSocket(e.url);
+      var o
+      var i = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15)
+      var a = new WebSocket(e.url)
       if (e.timeout && e.timeout > 0) {
         o = setTimeout(function () {
-          a.close();
-        }, e.timeout);
+          a.close()
+        }, e.timeout)
       }
       a.onopen = function () {
         if (o) {
-          clearTimeout(o);
+          clearTimeout(o)
         }
         L[i] = a;
         (function (e, t, n) {
-          var r = L[e];
+          var r = L[e]
           r.onmessage = function (n) {
             t({
               webSocketId: e,
               message: n.data,
               callbackMethod: "onMessage"
-            });
-          };
+            })
+          }
           r.onclose = function (t) {
             n({
               webSocketId: e,
               code: t.code,
               reason: t.reason,
               callbackMethod: "onClose"
-            });
-            P(e);
-          };
-        })(i, t, t);
+            })
+            P(e)
+          }
+        })(i, t, t)
         n({
           webSocketId: i,
           code: 0
-        });
-      };
+        })
+      }
       a.onerror = function () {
         r({
           webSocketId: i,
           code: 1006,
           reason: "Error connecting to " + e.url,
           callbackMethod: "onFail"
-        });
-      };
+        })
+      }
     },
     wsSend: function (e, t) {
-      var n = L[e];
+      var n = L[e]
       if (n) {
-        n.send(t);
+        n.send(t)
       }
     },
     wsClose: function (e, t, n) {
-      var r = L[e];
+      var r = L[e]
       if (r) {
-        r.close(t, n);
-        P(e);
+        r.close(t, n)
+        P(e)
       }
     }
-  };
-  window.CordovaWebsocketPlugin = B;
+  }
+  window.CordovaWebsocketPlugin = B
 }
 import * as F from "../../../../unrestored/shared/1531/2584/15"
 function G(e, t, n, r) {
-  var o;
-  if (!((null === (o = e.url) || undefined === o ? undefined : o.includes("codemao.cn")) || F.O(e.url || ""))) {
+  var /* [auto-meaningful-name] */e$url
+  if (!((null === (e$url = e.url) || undefined === e$url ? undefined : e$url.includes("codemao.cn")) || F.O(e.url || ""))) {
     window.CordovaWebsocketPlugin.wsConnect(e, function (e) {
-      t(e);
+      t(e)
     }, function (e) {
-      n(e);
+      n(e)
     }, function (e) {
-      r(e);
-    });
+      r(e)
+    })
   }
 }
 function U(e, t) {
-  window.CordovaWebsocketPlugin.wsSend(e, t);
+  window.CordovaWebsocketPlugin.wsSend(e, t)
 }
 function W(e, t, n) {
-  t = t || 1e3;
-  n = n || "bye";
-  window.CordovaWebsocketPlugin.wsClose(e, t, n);
+  t = t || 1e3
+  n = n || "bye"
+  window.CordovaWebsocketPlugin.wsClose(e, t, n)
 }
 import * as Brightness from "../../../../unrestored/shared/1531/2584/36/345/344"
 function V() {
   return new Promise(function (e) {
     window.stepper.isStepCountingAvailable().then(function (t) {
       if (t) {
-        console.log("isStepCountingAvailable Available !");
-        e(true);
+        console.log("isStepCountingAvailable Available !")
+        e(true)
       } else {
-        console.log("isStepCountingAvailable Not available :-S");
-        e(false);
+        console.log("isStepCountingAvailable Not available :-S")
+        e(false)
       }
     }).catch(function (t) {
-      console.error("isStepCountingAvailable error", t);
-      e(false);
-    });
-  });
+      console.error("isStepCountingAvailable error", t)
+      e(false)
+    })
+  })
 }
 function z() {
   return new Promise(function (e) {
     window.stepper.requestPermission().then(function (t) {
       if (t) {
-        console.log("requestPermission Authorized !");
-        e(true);
+        console.log("requestPermission Authorized !")
+        e(true)
       } else {
-        console.log("requestPermission Denied :-S");
-        e(false);
+        console.log("requestPermission Denied :-S")
+        e(false)
       }
     }).catch(function (t) {
-      console.error("requestPermission error", t);
-      e(false);
-    });
-  });
+      console.error("requestPermission error", t)
+      e(false)
+    })
+  })
 }
 function Y(e, t, n) {
-  window.stepper.startStepperUpdates(e, t, n, {});
+  window.stepper.startStepperUpdates(e, t, n, {})
 }
 function K() {
-  window.stepper.stopStepperUpdates();
+  window.stepper.stopStepperUpdates()
 }
 import Axios from "axios"
 Axios.interceptors.request.use(function (e) {
-  var t = e.url || "";
+  var t = e.url || ""
   if (e.baseURL) {
-    t = e.baseURL + t.slice(1);
+    t = e.baseURL + t.slice(1)
   }
-  return F.Y(t) ? e : Promise.reject(new Error("auth failed"));
+  return F.Y(t) ? e : Promise.reject(new Error("auth failed"))
 }, function (e) {
-  return Promise.reject(e);
+  return Promise.reject(e)
 })
 import * as J from "../../../../unrestored/shared/1531/2584/36/345/114"
 var Utils = {
@@ -330,8 +330,8 @@ var Utils = {
 }
 export var modules: Map<string, string> = new Map()
 const MODULES_INFO: Record<string, {
-  url: string
-  ref: string
+  url: string;
+  ref: string;
 }> = {
   "crypto-js": {
     url: "https://static.codemao.cn/appcraft/modules/crypto-js/4.1.1/crypto-js.js",
@@ -354,7 +354,7 @@ export function require(id: string): unknown {
     case "http":
       return HTTP
     case "lodash":
-      return LoDash;
+      return LoDash
     case "qrcode":
       return QRCode
     case "pedometer":

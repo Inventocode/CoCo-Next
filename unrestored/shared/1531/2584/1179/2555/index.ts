@@ -4,13 +4,13 @@
  * 模块 ID：2555
  */
 
-"use strict";
+"use strict"
 
 Object.defineProperty(exports, "__esModule", {
   value: true
-});
-exports.init_data_blocks = undefined;
-var r = require("./579");
+})
+exports.init_data_blocks = undefined
+var r = require("./579")
 exports.init_data_blocks = function (e, t) {
   var n = [{
     type: "variables_get",
@@ -19,7 +19,7 @@ exports.init_data_blocks = function (e, t) {
       type: "field_dropdown",
       name: "VAR",
       options: function () {
-        return t("any", true);
+        return t("any", true)
       }
     }],
     output: true,
@@ -32,7 +32,7 @@ exports.init_data_blocks = function (e, t) {
       type: "field_dropdown",
       name: "VAR",
       options: function () {
-        return t("any");
+        return t("any")
       }
     }, {
       type: "input_value",
@@ -51,7 +51,7 @@ exports.init_data_blocks = function (e, t) {
       type: "field_dropdown",
       name: "valname",
       options: function () {
-        return t("any");
+        return t("any")
       }
     }, {
       type: "field_dropdown",
@@ -74,7 +74,7 @@ exports.init_data_blocks = function (e, t) {
       type: "field_dropdown",
       name: "VAR",
       options: function () {
-        return t("list", true);
+        return t("list", true)
       }
     }],
     output: "Array",
@@ -175,8 +175,8 @@ exports.init_data_blocks = function (e, t) {
     colour: (0, r.i18n)("ORANGE_1"),
     output: "Number",
     inputsInline: true
-  }];
-  e.define_blocks_with_json_array(n);
+  }]
+  e.define_blocks_with_json_array(n)
   Object.assign(e.blocks_xml, {
     variables_get: "<block type=\"variables_get\" />",
     variables_set: "<block type=\"variables_set\">\n      " + (0, r.number_value)("VALUE", "0") + "\n    </block>",
@@ -188,5 +188,5 @@ exports.init_data_blocks = function (e, t) {
     lists_length: "<block type=\"lists_length\">\n      <value name=\"VAR\">\n        <shadow type=\"lists_get\">\n        </shadow>\n      </value>\n    </block>",
     lists_is_exist: "<block type=\"lists_is_exist\">\n      <value name=\"VAR\">\n        <shadow type=\"lists_get\">\n        </shadow>\n      </value>\n      " + (0, r.number_value)("VALUE") + "\n    </block>",
     lists_index_of: "<block type=\"lists_index_of\">\n      " + (0, r.number_value)("VALUE") + "\n      <value name=\"VAR\">\n        <shadow type=\"lists_get\">\n        </shadow>\n      </value>\n    </block>"
-  });
-};
+  })
+}

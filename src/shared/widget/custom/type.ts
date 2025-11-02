@@ -1,4 +1,4 @@
-"use strict";
+"use strict"
 
 export { SAFE_EXTENSION_PREFIX as a }
 export { isSafeExtensions as e }
@@ -13,7 +13,7 @@ export function isSafeExtensions(type: string): boolean {
 }
 
 export function isExtensions(type: string): boolean {
-  return type.startsWith(UNSAFE_EXTENSION_PREFIX) || type.startsWith(SAFE_EXTENSION_PREFIX);
+  return type.startsWith(UNSAFE_EXTENSION_PREFIX) || type.startsWith(SAFE_EXTENSION_PREFIX)
 }
 
 export function standardize(type: string, isFromWidgetShop: boolean): string {

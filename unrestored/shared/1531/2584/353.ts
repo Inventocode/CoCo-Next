@@ -23,4 +23,4 @@ module.exports = {
   isDragging: "style_isDragging__14L9k",
   ImageLayoutEmpty: "style_ImageLayoutEmpty__3Mn_3",
   emptyContent: "style_emptyContent__1xRjS"
-};
+}

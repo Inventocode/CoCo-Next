@@ -12,4 +12,4 @@ module.exports = {
   category: "VariableList_category__2y773",
   categoryIcon: "VariableList_categoryIcon__3wVXV",
   categoryText: "VariableList_categoryText__1ARyd"
-};
+}

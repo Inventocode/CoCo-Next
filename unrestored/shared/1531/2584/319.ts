@@ -13,4 +13,4 @@ module.exports = {
   iconWrapper: "ZoomBox_iconWrapper__3iz-3",
   disable: "ZoomBox_disable__3hmXf",
   redo: "ZoomBox_redo__1BXVG"
-};
+}

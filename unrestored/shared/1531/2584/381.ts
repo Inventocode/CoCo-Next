@@ -13,4 +13,4 @@ module.exports = {
   radioActions: "Addon_radioActions__2yrbT",
   disabled: "Addon_disabled__3Yk2h",
   webViewAction: "Addon_webViewAction__1V6te"
-};
+}

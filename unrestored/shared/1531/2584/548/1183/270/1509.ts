@@ -4,10 +4,10 @@
  * 模块 ID：1509
  */
 
-"use strict";
+"use strict"
 
 function r(e) {
-  return e;
+  return e
 }
-export { r as a };
-export default r;
+export { r as a }
+export default r

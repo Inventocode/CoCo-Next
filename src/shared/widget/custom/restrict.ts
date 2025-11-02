@@ -1,9 +1,9 @@
-import r = require("../../../../unrestored/shared/1531/2584/233/324")
+import r = require("../../../../unrestored/shared/1531/2584/233/324");
 var object = {
   window: undefined,
   document: {
     getElementById: function (e) {
-      return e ? document.querySelector("#".concat(r.a, " #").concat(e)) : null;
+      return e ? document.querySelector("#".concat(r.a, " #").concat(e)) : null
     }
   },
   history: undefined,

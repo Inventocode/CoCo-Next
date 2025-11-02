@@ -4,62 +4,62 @@
  * 模块 ID：143
  */
 
-"use strict";
+"use strict"
 
-export { i };
-export { a as h };
-export { s as c };
-export { c as e };
-export { l as g };
-export { u as f };
-export { d as b };
-export { p as d };
-export { f as a };
-export { h as j };
+export { i }
+export { a as h }
+export { s as c }
+export { c as e }
+export { l as g }
+export { u as f }
+export { d as b }
+export { p as d }
+export { f as a }
+export { h as j }
 import r = require("./47");
 import o = require("./547");
-var i = "STYLE_DEFAULT_STYLE_ID";
+var i = "STYLE_DEFAULT_STYLE_ID"
 var a = {
   id: i,
   source: o.a
-};
-var s = 100;
-var c = .01;
-var l = false;
-var u = false;
-var d = 9999;
-var p = 10;
-var f = "ACTOR_ACTION";
+}
+var s = 100
+var c = .01
+var l = false
+var u = false
+var d = 9999
+var p = 10
+var f = "ACTOR_ACTION"
 function h(e, t) {
-  var n;
-  var o;
-  var i = r.a(e);
+  var n
+  var o
+  var i = r.a(e)
   try {
     for (i.s(); !(o = i.n()).done;) {
-      var s;
-      var c = o.value;
-      var l = r.a(c.styleList);
+      var s
+      var o$value = o.value
+      var l = r.a(o$value.styleList)
       try {
         for (l.s(); !(s = l.n()).done;) {
-          var u = s.value;
-          if (u.id === t) {
-            return u;
+          var s$value = s.value
+          if (s$value.id === t) {
+            return s$value
           }
           if (!n) {
-            n = u;
+            n = s$value
           }
         }
       } catch (d) {
-        l.e(d);
+        l.e(d)
       } finally {
-        l.f();
+        l.f()
       }
     }
   } catch (d) {
-    i.e(d);
+    i.e(d)
   } finally {
-    i.f();
+    i.f()
   }
-  return n || a;
+  return n || a
 }
-export default f;
+export default f

@@ -4,12 +4,12 @@
  * 模块 ID：95
  */
 
-"use strict";
+"use strict"
 
 function r(e, t) {
   if (!(e instanceof t)) {
-    throw new TypeError("Cannot call a class as a function");
+    throw new TypeError("Cannot call a class as a function")
   }
 }
-export { r as a };
-export default r;
+export { r as a }
+export default r

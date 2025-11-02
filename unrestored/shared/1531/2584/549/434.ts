@@ -12,4 +12,4 @@ module.exports = {
   "coco-child-widget-full": "style_coco-child-widget-full__2v-P3",
   timePicker: "style_timePicker__1-sYO",
   mask: "style_mask__2yghP"
-};
+}

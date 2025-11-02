@@ -4,74 +4,74 @@
  * 模块 ID：2537
  */
 
-"use strict";
+"use strict"
 
 Object.defineProperty(exports, "__esModule", {
   value: true
-});
-exports.Swatch = undefined;
+})
+exports.Swatch = undefined
 var r = Object.assign || function (e) {
   for (var t = 1; t < arguments.length; t++) {
-    var n = arguments[t];
+    var n = arguments[t]
     for (var r in n) if (Object.prototype.hasOwnProperty.call(n, r)) {
-      e[r] = n[r];
+      e[r] = n[r]
     }
   }
-  return e;
-};
-var i = c(require("react"));
-var o = c(require("../../785/104/index"));
-var a = require("./2538");
-var s = c(require("../1158/index"));
+  return e
+}
+var i = c(require("react"))
+var o = c(require("../../785/104/index"))
+var a = require("./2538")
+var s = c(require("../1158/index"))
 function c(e) {
   return e && e.__esModule ? e : {
     default: e
-  };
+  }
 }
 var u = exports.Swatch = function (e) {
-  var t = e.color;
-  var n = e.style;
-  var a = e.onClick;
-  var c = undefined === a ? function () {} : a;
-  var u = e.onHover;
-  var l = e.title;
-  var f = undefined === l ? t : l;
-  var d = e.children;
-  var h = e.focus;
-  var p = e.focusStyle;
-  var _ = undefined === p ? {} : p;
-  var A = "transparent" === t;
+  var e$color = e.color
+  var e$style = e.style
+  var e$onClick = e.onClick
+  var c = undefined === e$onClick ? function () {} : e$onClick
+  var e$onHover = e.onHover
+  var e$title = e.title
+  var f = undefined === e$title ? e$color : e$title
+  var e$children = e.children
+  var e$focus = e.focus
+  var e$focusStyle = e.focusStyle
+  var _ = undefined === e$focusStyle ? {} : e$focusStyle
+  var A = "transparent" === e$color
   var g = (0, o.default)({
     default: {
       swatch: r({
-        background: t,
+        background: e$color,
         height: "100%",
         width: "100%",
         cursor: "pointer",
         position: "relative",
         outline: "none"
-      }, n, h ? _ : {})
+      }, e$style, e$focus ? _ : {})
     }
-  });
-  var v = {};
-  if (u) {
+  })
+  var v = {}
+  if (e$onHover) {
     v.onMouseOver = function (e) {
-      return u(t, e);
-    };
+      return e$onHover(e$color, e)
+    }
   }
   return i.default.createElement("div", r({
     style: g.swatch,
     onClick: function (e) {
-      return c(t, e);
+      return c(e$color, e)
     },
     title: f,
     tabIndex: 0,
     onKeyDown: function (e) {
-      return 13 === e.keyCode && c(t, e);
+      return 13 === e.keyCode && c(e$color, e)
     }
-  }, v), d, A && i.default.createElement(s.default, {
+  }, v), e$children, A && i.default.createElement(s.default, {
     borderRadius: g.swatch.borderRadius,
     boxShadow: "inset 0 0 0 1px rgba(0,0,0,0.1)"
-  }));
-};
-exports.default = (0, a.handleFocus)(u);
+  }))
+}
+exports.default = (0, a.handleFocus)(u)

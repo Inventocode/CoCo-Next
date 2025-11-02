@@ -5,9 +5,9 @@
  */
 
 module.exports = function (e) {
-  var t = [];
+  var t = []
   if (null != e) {
-    for (var n in Object(e)) t.push(n);
+    for (var n in Object(e)) t.push(n)
   }
-  return t;
-};
+  return t
+}

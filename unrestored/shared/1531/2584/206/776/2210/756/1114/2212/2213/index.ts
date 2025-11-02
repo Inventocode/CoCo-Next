@@ -5,9 +5,9 @@
  */
 
 !function () {
-  "use strict";
+  "use strict"
 
-  exports.ast = require("./2214");
-  exports.code = require("./1334");
-  exports.keyword = require("./2215");
-}();
+  exports.ast = require("./2214")
+  exports.code = require("./1334")
+  exports.keyword = require("./2215")
+}()

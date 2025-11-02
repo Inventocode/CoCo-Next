@@ -4,24 +4,24 @@
  * 模块 ID：989
  */
 
-"use strict";
+"use strict"
 
 function r() {
   if ("undefined" === typeof Reflect || !Reflect.construct) {
-    return false;
+    return false
   }
   if (Reflect.construct.sham) {
-    return false;
+    return false
   }
   if ("function" === typeof Proxy) {
-    return true;
+    return true
   }
   try {
-    Date.prototype.toString.call(Reflect.construct(Date, [], function () {}));
-    return true;
+    Date.prototype.toString.call(Reflect.construct(Date, [], function () {}))
+    return true
   } catch (e) {
-    return false;
+    return false
   }
 }
-export { r as a };
-export default r;
+export { r as a }
+export default r

@@ -4,48 +4,48 @@
  * 模块 ID：549
  */
 
-"use strict";
+"use strict"
 
 import r = require("../11");
-import o = require("react");
+import React = require("react");
 var i = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
-    return module.default;
+    return module.default
   } : function () {
-    return module;
-  };
+    return module
+  }
   Object.defineProperty(defaultExport, "a", {
     enumerable: true,
     get: defaultExport
-  });
-  return defaultExport;
-}(o);
-import a = require("color");
+  })
+  return defaultExport
+}(React)
+import Color = require("color");
 var s = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
-    return module.default;
+    return module.default
   } : function () {
-    return module;
-  };
+    return module
+  }
   Object.defineProperty(defaultExport, "a", {
     enumerable: true,
     get: defaultExport
-  });
-  return defaultExport;
-}(a);
+  })
+  return defaultExport
+}(Color)
 import c = require("../8");
 var l = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
-    return module.default;
+    return module.default
   } : function () {
-    return module;
-  };
+    return module
+  }
   Object.defineProperty(defaultExport, "a", {
     enumerable: true,
     get: defaultExport
-  });
-  return defaultExport;
-}(c);
+  })
+  return defaultExport
+}(c)
 import u = require("../548/484/index");
 import d = require("../548/485");
 import p = require("../548/280");
@@ -59,52 +59,52 @@ import b = require("../53");
 import y = require("./434");
 var E = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
-    return module.default;
+    return module.default
   } : function () {
-    return module;
-  };
+    return module
+  }
   Object.defineProperty(defaultExport, "a", {
     enumerable: true,
     get: defaultExport
-  });
-  return defaultExport;
-}(y);
-var _a;
-_a = o.memo(function (e) {
-  var t = e.id;
-  var n = e.position;
-  var a = e.visible;
-  var c = e.attributes;
-  var y = e.size;
-  var O = e.onDatePickerChange;
-  var w = c.backgroundColor;
-  var C = c.color;
-  var T = c.fontSize;
-  var S = c.timeStamp;
-  var I = o.useRef(null);
-  var A = new Date(S);
+  })
+  return defaultExport
+}(y)
+var _a
+_a = React.memo(function (e) {
+  var t = e.id
+  var e$position = e.position
+  var e$visible = e.visible
+  var e$attributes = e.attributes
+  var e$size = e.size
+  var e$onDatePickerChange = e.onDatePickerChange
+  var e$attributes$backgroundColor = e$attributes.backgroundColor
+  var e$attributes$color = e$attributes.color
+  var e$attributes$fontSize = e$attributes.fontSize
+  var e$attributes$timeStamp = e$attributes.timeStamp
+  var I = React.useRef(null)
+  var A = new Date(e$attributes$timeStamp)
   var j = h.e(function (e) {
-    var t;
-    return null === e || undefined === e || null === (t = e.project) || undefined === t ? undefined : t.playing;
-  });
-  var N = o.useRef(false);
+    var /* [auto-meaningful-name] */e$project
+    return null === e || undefined === e || null === (e$project = e.project) || undefined === e$project ? undefined : e$project.playing
+  })
+  var N = React.useRef(false)
   var R = function (e) {
     if (N.current) {
-      e.preventDefault();
+      e.preventDefault()
     }
-  };
-  o.useEffect(function () {
+  }
+  React.useEffect(function () {
     if (v.b() && v.h()) {
       document.body.addEventListener("touchmove", R, {
         passive: false
-      });
+      })
     }
     return function () {
       if (v.b() && v.h()) {
-        document.body.removeEventListener("touchmove", R);
+        document.body.removeEventListener("touchmove", R)
       }
-    };
-  });
+    }
+  })
   return i.a.createElement("div", {
     id: t,
     "data-role": _.M,
@@ -113,16 +113,16 @@ _a = o.memo(function (e) {
     "data-max-width": g.j,
     "data-min-height": g.k,
     "data-max-height": g.i,
-    className: l()(m.b, r.a({}, E.a.hide, !a), E.a.timePicker),
+    className: l()(m.b, r.a({}, E.a.hide, !e$visible), E.a.timePicker),
     style: {
-      top: n.y,
-      left: n.x,
-      width: y.width,
-      height: y.height,
+      top: e$position.y,
+      left: e$position.x,
+      width: e$size.width,
+      height: e$size.height,
       textAlign: "center",
-      fontSize: T,
-      color: s()(C).toString(),
-      backgroundColor: s()(w).toString(),
+      fontSize: e$attributes$fontSize,
+      color: s()(e$attributes$color).toString(),
+      backgroundColor: s()(e$attributes$backgroundColor).toString(),
       borderRadius: "18px"
     },
     ref: I
@@ -132,17 +132,17 @@ _a = o.memo(function (e) {
   }, i.a.createElement(f.a, {
     value: A,
     onChange: function (e) {
-      if (e && O) {
-        O(e);
+      if (e && e$onDatePickerChange) {
+        e$onDatePickerChange(e)
       }
     },
     TextFieldComponent: function (e) {
       return i.a.createElement("div", {
         style: {
           textAlign: "center",
-          fontSize: T,
-          color: C,
-          backgroundColor: w,
+          fontSize: e$attributes$fontSize,
+          color: e$attributes$color,
+          backgroundColor: e$attributes$backgroundColor,
           overflow: "hidden",
           display: "flex",
           alignItems: "center",
@@ -152,33 +152,33 @@ _a = o.memo(function (e) {
         id: "time-picker-".concat(t),
         onClick: function () {
           if (null === e || undefined === e ? undefined : e.onClick) {
-            e.onClick();
+            e.onClick()
           }
         }
-      }, (null === e || undefined === e ? undefined : e.value) || "");
+      }, (null === e || undefined === e ? undefined : e.value) || "")
     },
     cancelLabel: "取消",
     okLabel: "确定",
     onOpen: function () {
-      N.current = true;
+      N.current = true
     },
     onClose: function () {
-      N.current = false;
+      N.current = false
     }
   })), undefined !== j && !j && i.a.createElement("div", {
     className: l()(E.a.mask),
     onClick: function () {
-      var e;
-      var n = I.current;
-      if (n) {
-        if (n.dataset.clickType === b.h.CLICK) {
+      var e
+      var i$current = I.current
+      if (i$current) {
+        if (i$current.dataset.clickType === b.h.CLICK) {
           if (!(null === (e = document.getElementById("time-picker-".concat(t))) || undefined === e)) {
-            e.click();
+            e.click()
           }
         }
       }
     }
-  }));
-});
-export { _a as a };
-export default _a;
+  }))
+})
+export { _a as a }
+export default _a

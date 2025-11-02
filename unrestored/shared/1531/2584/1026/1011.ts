@@ -4,65 +4,65 @@
  * 模块 ID：1011
  */
 
-"use strict";
+"use strict"
 
-export { s as a };
+export { s as a }
 import r = require("../2627/462");
 function i(e) {
-  return e.attachTo ? e.attachTo : document.querySelector("head") || document.body;
+  return e.attachTo ? e.attachTo : document.querySelector("head") || document.body
 }
 function o(e) {
-  var t;
-  var n = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : {};
+  var /* [auto-meaningful-name] */_n$csp2
+  var n = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : {}
   if (!r.a()) {
-    return null;
+    return null
   }
-  var o;
-  var a = document.createElement("style");
-  if (null === (t = n.csp) || undefined === t ? undefined : t.nonce) {
-    a.nonce = null === (o = n.csp) || undefined === o ? undefined : o.nonce;
+  var /* [auto-meaningful-name] */n$csp
+  var a = document.createElement("style")
+  if (null === (_n$csp2 = n.csp) || undefined === _n$csp2 ? undefined : _n$csp2.nonce) {
+    a.nonce = null === (n$csp = n.csp) || undefined === n$csp ? undefined : n$csp.nonce
   }
-  a.innerHTML = e;
-  var s = i(n);
-  var c = s.firstChild;
+  a.innerHTML = e
+  var s = i(n)
+  var s$firstChild = s.firstChild
   if (n.prepend && s.prepend) {
-    s.prepend(a);
+    s.prepend(a)
   } else {
-    if (n.prepend && c) {
-      s.insertBefore(a, c);
+    if (n.prepend && s$firstChild) {
+      s.insertBefore(a, s$firstChild)
     } else {
-      s.appendChild(a);
+      s.appendChild(a)
     }
   }
-  return a;
+  return a
 }
-var a = new Map();
+var a = new Map()
 function s(e, t) {
-  var n = arguments.length > 2 && undefined !== arguments[2] ? arguments[2] : {};
-  var r = i(n);
+  var n = arguments.length > 2 && undefined !== arguments[2] ? arguments[2] : {}
+  var r = i(n)
   if (!a.has(r)) {
-    var s = o("", n);
-    var c = s.parentNode;
-    a.set(r, c);
-    c.removeChild(s);
+    var s = o("", n)
+    var s$parentNode = s.parentNode
+    a.set(r, s$parentNode)
+    s$parentNode.removeChild(s)
   }
   var u = Array.from(a.get(r).children).find(function (e) {
-    return "STYLE" === e.tagName && e["rc-util-key"] === t;
-  });
+    return "STYLE" === e.tagName && e["rc-util-key"] === t
+  })
   if (u) {
-    var l;
-    var f;
-    var d;
-    if ((null === (l = n.csp) || undefined === l ? undefined : l.nonce) && u.nonce !== (null === (f = n.csp) || undefined === f ? undefined : f.nonce)) {
-      u.nonce = null === (d = n.csp) || undefined === d ? undefined : d.nonce;
+    var /* [auto-meaningful-name] */_n$csp4
+    var /* [auto-meaningful-name] */_n$csp6
+    var /* [auto-meaningful-name] */n$csp
+    if ((null === (_n$csp4 = n.csp) || undefined === _n$csp4 ? undefined : _n$csp4.nonce) && u.nonce !== (null === (_n$csp6 = n.csp) || undefined === _n$csp6 ? undefined : _n$csp6.nonce)) {
+      u.nonce = null === (n$csp = n.csp) || undefined === n$csp ? undefined : n$csp.nonce
     }
     if (u.innerHTML !== e) {
-      u.innerHTML = e;
+      u.innerHTML = e
     }
-    return u;
+    return u
   }
-  var h = o(e, n);
-  h["rc-util-key"] = t;
-  return h;
+  var h = o(e, n)
+  h["rc-util-key"] = t
+  return h
 }
-export default s;
+export default s
