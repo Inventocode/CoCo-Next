@@ -1,0 +1,50 @@
+name: 构建项目 & 部署到 GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+        
+      - name: 设置 Node.js 环境
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+          
+      - name: 安装依赖
+        run: npm install --legacy-peer-deps
+        
+      - name: 构建项目
+        run: npm run build
+        
+      - name: 移动文件到根目录
+        run: |
+          # 进入构建目录
+          cd dist
+          # 将 coco.codemao.cn 目录下的所有文件移动到当前目录
+          mv coco.codemao.cn/* ./
+          # 删除空的 coco.codemao.cn 目录
+          rm -rf coco.codemao.cn
+          # 返回上级目录
+          cd ..
+          
+      - name: 创建 CNAME 文件
+        run: |
+          # 在 dist 目录中创建 CNAME 文件并写入指定内容
+          echo "coco.ccwidget.top" > dist/CNAME
+        
+      - name: 部署到 GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          force_orphan: true
