@@ -953,26 +953,9 @@ var Re = React.memo(function (e) {
                 e.next = 16
                 break
               }
-              e.next = 8
-              return Ce.b()
-            case 8:
-              if (!(!e.sent.includes(Number(t)) && !e$sent$data.is_author && e$sent$data.is_coll_work && e$sent$data.content && e$sent$data.content.unsafeExtensionWidgetList && e$sent$data.content.unsafeExtensionWidgetList.length > 0)) {
-                e.next = 12
-                break
-              }
-              w(Message.zh({
-                allowText: a$a$formatMessage({
-                  id: "know"
-                }),
-                title: "",
-                content: React.createElement("div", null, "作品使用了未审核的自定义控件，需将控件提交至", React.createElement("a", {
-                  href: te.b,
-                  target: "__blank",
-                  rel: "noopener noreferrer"
-                }, "Coco控件商城-投稿"), "，并等待审核通过后才能进行协作。"),
-                cancelBtnVisible: false
-              }))
-              return e.abrupt("return")
+              // [CoCo Next] 移除打开协作作品时的自定义控件限制
+              e.next = 12
+              break
             case 12:
               e$importProjectJson({
                 json: e$sent$data.content,
@@ -2689,7 +2672,6 @@ var Ft = React.memo(function () {
   var M = x[1]
   function L() {
     return (L = BabelRuntimeHelperAsyncToGenerator(BabelRuntimeHelperRegenerator.mark(function e() {
-      var n
       var r
       var /* [auto-meaningful-name] */e$sent
       var a
@@ -2697,30 +2679,9 @@ var Ft = React.memo(function () {
         for (;;) {
           switch (e.prev = e.next) {
             case 0:
-              n = Lt.Eb(Lt.j.EXTENSION).filter(function (e) {
-                return !CustomWidgetType.isSafeExtensions(e.type)
-              })
-              e.next = 3
-              return Ce.b()
-            case 3:
-              if (e.sent.includes(Number(t)) || !(n.length > 0)) {
-                e.next = 8
-                break
-              }
-              y(false)
-              m(Message.zh({
-                allowText: a$a$formatMessage({
-                  id: "know"
-                }),
-                title: "",
-                content: React.createElement("div", null, "作品使用了未审核的自定义控件，需将控件提交至", React.createElement("a", {
-                  href: te.b,
-                  target: "__blank",
-                  rel: "noopener noreferrer"
-                }, "Coco控件商城-投稿"), "，并等待审核通过后才能进行协作。"),
-                cancelBtnVisible: false
-              }))
-              return e.abrupt("return")
+              // [CoCo Next] 移除发起协作时的自定义控件限制
+              e.next = 8
+              break
             case 8:
               if (r = t, y(true), !u || l) {
                 e.next = 14
@@ -5781,7 +5742,7 @@ var Ln = React.memo(function (e) {
       className: gt.a.itemContent
     }, a$a$formatMessage({
       id: "HeaderDropdown.history"
-    }))), !ge && React.createElement(z.m, {
+    }))), /* [CoCo Next] 移除协作导入自定义控件限制 */ React.createElement(z.m, {
       value: "IMPORT_EXTENSION_WIDGET"
     }, React.createElement(z.B, {
       onChange: Ae,
@@ -5800,7 +5761,7 @@ var Ln = React.memo(function (e) {
       className: N()(gt.a.itemUploadButton)
     }, a$a$formatMessage({
       id: "HeaderDropdown.openLocalFile"
-    }))), Re && React.createElement(z.m, {
+    }))), /* [CoCo Next] 移除保存作品限制 */ React.createElement(z.m, {
       value: "EXPORT_PROJECT_AS_JSON"
     }, React.createElement("div", {
       className: gt.a.itemContent
@@ -77804,29 +77765,9 @@ var cB = function () {
                 break
               }
               n$sent$data = n$sent.data
-              n.next = 10
-              return Ce.b()
-            case 10:
-              if (!(!n.sent.includes(Number(r)) && !n$sent$data.is_author && n$sent$data.is_coll_work && n$sent$data.content && n$sent$data.content.unsafeExtensionWidgetList && n$sent$data.content.unsafeExtensionWidgetList.length > 0)) {
-                n.next = 14
-                break
-              }
-              e(Message.zh({
-                onConfirm: function () {
-                  e(Message.warpAsyncCreateProject())
-                },
-                allowText: a$a$formatMessage({
-                  id: "know"
-                }),
-                title: "",
-                content: React.createElement("div", null, "作品使用了未审核的自定义控件，需将控件提交至", React.createElement("a", {
-                  href: te.b,
-                  target: "__blank",
-                  rel: "noopener noreferrer"
-                }, "Coco控件商城-投稿"), "，并等待审核通过后才能进行协作。"),
-                cancelBtnVisible: false
-              }))
-              return n.abrupt("return")
+              // [CoCo Next] 移除加入协作的自定义控件限制
+              n.next = 14
+              break
             case 14:
               e(Message.warpAsyncCreateProject({
                 json: n$sent$data.content,
